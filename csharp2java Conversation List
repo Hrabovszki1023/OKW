@@ -1,0 +1,19 @@
+
+
+Kovertierung C# nach Java
+
+Ersetzungslist:
+
+
+"string" -> "String"
+"bool" -> "Boolean"
+
+'string.Empty" -> '""'
+
+list[i] list.get(i)
+
+==============================================
+Folgende Zeilen sind für List<String> notwendig
+==============================================
+import Java.util.* 
+ArrayList<String>()
