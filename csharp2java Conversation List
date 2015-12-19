@@ -16,4 +16,4 @@ list[i] list.get(i)
 Folgende Zeilen sind für List<String> notwendig
 ==============================================
 import Java.util.* 
-ArrayList<String>()
+List<string> -> ArrayList<String>()

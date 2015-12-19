@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OKW_Ini xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <OKW_CustomSettings>
+    <Language>de</Language>
+    <PathSep>/</PathSep>
+    <TimeOutExists>30</TimeOutExists>
+    <TimeOutNotExists>30</TimeOutNotExists>
+  </OKW_CustomSettings>
+  <OKW_Enviroment>
+    <Folder_LogMessages>${Folder_XML}/LogMessages</Folder_LogMessages>
+    <File_OKW_Ini_xml>${Folder_XML}/OKW_Ini.xml</File_OKW_Ini_xml>
+    <File_OKW_Keymaps_xml>${Folder_XML}/OKW_Keymaps.xml</File_OKW_Keymaps_xml>
+    <File_OKW_Memorize_xml>${Folder_XML}/OKW_Memorize.xml</File_OKW_Memorize_xml>
+    <File_OKW_ImplementationMatrix_xml>${Folder_XML}/Results/OKW_ImplementationMatrix.xml</File_OKW_ImplementationMatrix_xml>
+    <File_OKW_Const_xml>${Folder_XML}/OKW_Const.xml</File_OKW_Const_xml>
+    <OKW_Docu.xml>${Folder_XML}/OKW_Docu.xml</OKW_Docu.xml>
+  </OKW_Enviroment>
+</OKW_Ini>

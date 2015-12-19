@@ -44,11 +44,11 @@ public class Logger {
 
 	private Boolean cvbDebugMode = false;
 
-	public Boolean getCvbDebugMode() {
+	public Boolean getDebugMode() {
 		return cvbDebugMode;
 	}
 
-	public void setCvbDebugMode(Boolean cvbDebugMode) {
+	public void setDebugMode(Boolean cvbDebugMode) {
 		this.cvbDebugMode = cvbDebugMode;
 	}
 

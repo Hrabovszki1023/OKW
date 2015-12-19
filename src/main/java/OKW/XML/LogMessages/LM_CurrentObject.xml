@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="okwlogs.xslt"?>
+<LogMessages>
+	<!-- Class: "CurrentObject" -->
+	<Class name="CurrentObject">
+		<!-- Method: "LogObjectData" -->
+		<Method name="LogObjectData">
+			<Text key="WindowName">
+				<en>        Window Name: '{0:}'</en>
+				<de>    Name des Fensters: '{0:}'</de>
+			</Text>
+			<Text key="ChildWindowName">
+				<en>      Name of Child: '{0:}'</en>
+				<de>Name des Kindobjektes: '{0:}'</de>
+			</Text>
+			<Text key="Class of Object">
+				<en>    Class of Object: '{0:}'</en>
+				<de>      Name der Klasse: '{0:}'</de>
+			</Text>
+			<Text key="FullNameOfObject">
+				<en>Full name of object: '{0:}'</en>
+				<de>Vollständiger Name des Objektes: '{0:}'</de>
+			</Text>
+		</Method>
+		<!-- Method: "SetChildName" -->
+		<Method name="SetChildName">
+			<Text key="GivenWindownameDebug">
+				<en>Is there a given Windowname?</en>
+				<de>Ist ein Fensterschon gesetzt?</de>
+			</Text>
+			<Text key="SetChildwindowNameDebug">
+				<en>Name of Window: '{0:}' -&gt; Save Childname: '{1:}'</en>
+				<de>Name des Fensters: '{0:}' -&gt; Kindobjekt: '{1:}' merken</de>
+			</Text>
+			<Text key="OKWFrameObjectWindowNotSetException">
+				<en>No Window is defined! Please select a Window first!</en>
+				<de>Es ist kein Fenster gewählt! Wählen Sie zunächst ein Fenster aus.</de>
+			</Text>
+		</Method>
+		<!-- Method: "ResetToWindow" -->
+		<Method name="ResetToWindow">
+			<Text key="ResetToWindowDebug">
+				<en>Delete child object names and update the object</en>
+				<de>Lösche Kindobjekt-Namen und aktualisiere das Object</de>
+			</Text>
+		</Method>
+		<!-- Method: "CheckCharacter" -->
+		<Method name="CheckCharacter">
+			<Text key="OKWFrameObjectIllegalNameCharacterException">
+				<en>Technical identifier '{0:}' contains illegal characters</en>
+				<de>Fachlicher Bezeichner '{0:}' enthält verbotene Zeichen</de>
+			</Text>
+		</Method>
+		<!-- Method: "CallMethod" -->
+		<Method name="CallMethod">
+			<Text key="IllegalCharacters_Exception">
+				<en>Technical identifier '{0:}' contains illegal characters</en>
+				<de>Fachlicher Bezeichner '{0:}' enthält verbotene Zeichen</de>
+			</Text>
+		</Method>
+		<!-- Method: "CallMethod" -->
+		<Method name="CallMethod">
+			<Text key="MethodNotDefined">
+				<en>Called OKW-Methode '{0:}' does not exists.</en>
+				<de>Aufgerufen OKW-Methode '{0:}' wurde nicht gefunden.</de>
+			</Text>
+		</Method>
+	</Class>
+</LogMessages>

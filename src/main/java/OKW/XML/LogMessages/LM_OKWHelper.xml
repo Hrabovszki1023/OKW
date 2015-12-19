@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="okwlogs.xslt"?>
+<LogMessages>
+	<!-- Class: "LogMessanger" -->
+	<Class name="OKWHelper">
+		<Method name="GetLeftFromDelimiterNumber">
+			<Text key="OKWDelimiterCountOutOfRangeException">
+				<en>The split-position(={0}) is outside of valid range [1...{1}]!</en>
+				<de>Die Position(={0}) des Trennens ist ausserhalb des gültigen Bereichs [ 1...{1}] der gefunden Trennzeichen! </de>
+			</Text>
+			<Text key="OKWDelimiterIsEmptyException">
+				<en>Delimiter is empty!</en>
+				<de>Das Trennzeichen ist leerer!</de>
+			</Text>
+		</Method>
+		<Method name="GetRightFromDelimiterNumber">
+			<Text key="OKWDelimiterCountOutOfRangeException">
+				<en>The split-position(={0}) is outside of valid range [1...{1}]!</en>
+				<de>Die Position(={0}) des Trennens ist ausserhalb des gültigen Bereichs [ 1...{1}] der gefunden Trennzeichen! </de>
+			</Text>
+			<Text key="OKWDelimiterIsEmptyException">
+				<en>Delimiter is empty!</en>
+				<de>Das Trennzeichen ist leerer!</de>
+			</Text>
+		</Method>
+		<Method name="String2Boolean">
+			<Text key="OKWNotAllowedValueException">
+				<en>Value '{0}' is not allowd here! Valid values are: 'true' or 'false'</en>
+				<de>Dieser Wert ist '{0}' nicht erlaubt! Möglich Werte: 'true' oder 'false'</de>
+			</Text>
+		</Method>
+	</Class>
+</LogMessages>

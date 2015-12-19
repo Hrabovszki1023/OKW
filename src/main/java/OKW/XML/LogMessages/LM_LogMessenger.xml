@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="okwlogs.xslt"?>
+<LogMessages>
+	<!-- Class: "LogMessanger" -->
+	<Class name="LogMessanger">
+		<Method name="GetConst4CurrentLanguage">
+			<Text key="TranslationNotFound">
+				<en>No Translation found for Const '{:0}' in OKWDOKU.xml</en>
+				<de>Keine Übrsetzung für die Konstante '{:0}' in der OKWDOKU.xml gefunden!</de>
+			</Text>
+		</Method>
+		<Method name="YesNo2Boolean">
+			<Text key="ValueNotAllowed">
+				<en>This Value '{:0}' is here not allowed</en>
+				<de>Dieser Wert '{:0}' ist hier nicht erlaubt!</de>
+			</Text>
+		</Method>
+	</Class>
+</LogMessages>

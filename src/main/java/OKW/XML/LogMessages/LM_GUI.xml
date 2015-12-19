@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="okwlogs.xslt"?>
+<!-- Allgemeine Meldungen für GUI Objekte
+-->
+<LogMessages>
+	<!-- Class: "OK" -->
+	<Class name="GUI">
+		<!-- Method: "Common"-->
+		<Method name="Common">
+			<!-- OKWGUIObjectNotFoundException -->
+			<Text key="OKWGUIObjectNotFoundException">
+				<en>GUI-object not found! -({0})</en>
+				<de>GUI-Objekt wurde nicht gefunden! -({0})</de>
+			</Text>
+		<!-- OKWNotAllowedValueException -->
+			<Text key="OKWNotAllowedValueException">
+				<en>Not allowed value: '{0}'</en>
+				<de>Wert Ist nicht erlaubt: '{0}'</de>
+			</Text>
+		</Method>
+	</Class>
+</LogMessages>

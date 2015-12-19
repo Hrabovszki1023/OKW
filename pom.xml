@@ -1,6 +1,44 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>de.openkeyword</groupId>
-  <artifactId>OKW</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.openkeyword</groupId>
+	<artifactId>OKW</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>OKW</name>
+	<url>www.openkeyword.de</url>
+	<build>
+		<!-- To define the plugin version in your parent POM -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.github.igoryeremin</groupId>
+					<artifactId>doxygen-report-maven-plugin</artifactId>
+					<version>1.0</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<!-- To use the plugin goals in your POM or parent POM -->
+		<plugins>
+			<plugin>
+				<groupId>com.github.igoryeremin</groupId>
+				<artifactId>doxygen-report-maven-plugin</artifactId>
+				<version>1.0</version>
+			</plugin>
+		</plugins>
+	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>com.github.igoryeremin</groupId>
+				<artifactId>doxygen-report-maven-plugin</artifactId>
+				<version>1.0</version>
+				<configuration>
+					<doxygenConf>${basedir}/src/doxygen/doxygen.config</doxygenConf>
+					<outputDirectory>${project.reporting.outputDirectory}/doxygen</outputDirectory>
+					<input>${basedir}/src</input>
+					<executableName>doxygen</executableName>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
 </project>

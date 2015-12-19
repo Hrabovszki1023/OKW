@@ -1,0 +1,2018 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="okwdocu.xslt"?>
+<okwdoc>
+	<!-- TypeKey -->
+	<okwentry keyword="TypeKey">
+		<keyword>
+			<en>Type Key</en>
+			<de>Gib Ein</de>
+		</keyword>
+		<purpose>
+			<en>Input of data via keyboard into the active window object</en>
+			<de>Tastatur-Eingabe von Daten in das aktive Fensterobjekt</de>
+		</purpose>
+		<description>
+			<en>The data is sent to the active window object via keyboard input. This also works for the input of hotkeys and function keys. If more than one value is given by using the value separator {SEP}, each value will be sent to the window objekt. The values are seperated by line breaks.</en>
+			<de>Die Daten werden als Tastureingaben an das Kindobjekt des aktiven Fenters gesendet. Dies ermöglicht die Verwendung von Hotkeys und Funktionstasten als Eingabedaten. Wenn mit Hilfe des Wertseparators {SEP} mehrere Werte im Parameter übergeben werden, dann werden alle Werte als Tastatureingabe an das Fensterobjekt gesendet, getrennt durch einen Zeilenumbruch.</de>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Simple Input</name>
+					<content>Type Key: "MyWindowObjekt", "InputValue"</content>
+				</sample>
+				<sample>
+					<name>Input of constant value</name>
+					<content>Type Key: "MainWindow", "{F2}"</content>
+				</sample>
+				<sample>
+					<name>Input of more than one value</name>
+					<content>Type Key: "MyWindowObjekt", "InputValue1{SEP}InputValue2"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Einfache Eingabe</name>
+					<content>Gib ein: "MeinFensterObjekt", "EingabeWert"</content>
+				</sample>
+				<sample>
+					<name>Eingabe einer Konstanten</name>
+					<content>Gib ein: "MeinFensterObjekt", "{F2}"</content>
+				</sample>
+				<sample>
+					<name>Eingabe mehrerer Werte</name>
+					<content>Gib ein: "MeinFensterObjekt", "Eingabewert1{SEP}Eingabewert2"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+		</notes>
+		<called_method>TypeKey</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<en>Functional name of the object.</en>
+					<de>Fachlic7,her Name des Objektes.</de>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsValue</name>
+				<type>STRING</type>
+				<description>
+					<de>Einzugebender Wert</de>
+					<en>Value to be typed in</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>---</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- TypeKeyWindow -->
+	<okwentry keyword="TypeKeyWindow">
+		<keyword>
+			<en>Type Key Window</en>
+			<de>Gib Ein Fenster</de>
+		</keyword>
+		<purpose>
+			<en>Input of data via keyboard into a given window object</en>
+			<de>Tastatur-Eingabe von Daten in ein bestimmtes Fensterobjekt</de>
+		</purpose>
+		<description>
+			<en>The data is sent to the window objekt via keyboard input. This also works for the input of hotkeys and function keys. Several values can be typed in by using the {SEP}-constant between the values (see examples). The values will then be seperated by line breaks during input.</en>
+			<de>Die Daten werden als Tastureingaben an das Fensterobjekt gesendet. Dies ermöglicht die Verwendung von Hotkeys und Funktionstasten als Eingabedaten. Mehrere Werte können mit Hilfe der Konstanten {SEP} eingegeben werden (siehe Beispiele). Die Werte werden dann bei der Eingabe durch Zeilenumbrüche getrennt.</de>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Simple Input</name>
+					<content>Type Key Window: "MyWindowObjekt", "InputValue"</content>
+				</sample>
+				<sample>
+					<name>Input of constant value</name>
+					<content>Type Key Window: "MainWindow", "{F2}"</content>
+				</sample>
+				<sample>
+					<name>Input of more than one value</name>
+					<content>Type Key Window: "MyWindowObjekt", "InputValue1{SEP}InputValue2"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Einfache Eingabe</name>
+					<content>Gib ein Fenster: "MeinFensterObjekt", "EingabeWert"</content>
+				</sample>
+				<sample>
+					<name>Eingabe einer Konstanten</name>
+					<content>Gib ein Fenster: "MeinFensterObjekt", "{F2}"</content>
+				</sample>
+				<sample>
+					<name>Eingabe mehrerer Werte</name>
+					<content>Gib ein Fenster: "MeinFensterObjekt", "Eingabewert1{SEP}Eingabewert2"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+		</notes>
+		<called_method>TypeKeyWindow</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<en>Functional name of the object.</en>
+					<de>Fachlicher Name des Objektes.</de>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsValue</name>
+				<type>STRING</type>
+				<description>
+					<de>Einzugebender Wert</de>
+					<en>Value to be typed in</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>---</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- TypeKeyTablecell -->
+	<okwentry keyword="TypeKeyTablecell">
+		<keyword>
+			<en>Type Key Tablecell</en>
+			<de>Gib Ein Tabellenzelle</de>
+		</keyword>
+		<purpose>
+			<en>Input of data into a given tablecell</en>
+			<de>Eingabe von Daten in eine gegebene Tabellenzelle über die Tastatur</de>
+		</purpose>
+		<description>
+			<en>The data is sent to the given tablecell object via keyboard input. This also works for the input of hotkeys and function keys.
+			The column and row positions are always entered as strings. If such a parameter is preceeded by a hash (#),
+			the string is interpreted as an index number (e. g. "#1"). If a hash sign should be interpreted as text it must be
+			preceeded by a backslash (eg. "\#1 Text With Preceeding Numer"). The header row is accessed by the index number 0. The first data row is
+			accessed by the index number 1. For tables with multiline headers the offset to the first data row can be set
+			as part of the object definition. The column index starts with the number 1.
+			</en>
+			<de>Die Daten werden als Tastureingaben an die gegebene Zelle einer Tabelle gesendet. Dies ermöglicht die Verwendung von Hotkeys und
+			Funktionstasten als Eingabedaten. Die Parameter für die Spaten- und Zeilenpositionen werden immer als Strings eingegeben.
+			Wenn ein Positionsparameter mit einem Hash (#) beginnt, dann wird er als Zahl interpretiert (z. B. "#1").
+			Wenn das Hashzeichen als Text interpretiert werden soll, dann muss dies über einen vorangestellten
+			Backslash gekennzeichnet werden (z. B. "#1 Text mit vorangestellter Nummer").
+			Die Kopfzeile der Tabelle wird über den Index "0" angesprochen. Die erste Datenzeile beginnt mit dem Index 1.
+			Für Tabellen mit mehrzeiligen Kopfzeilen kann im Objekt selbst der Offset zur ersten Datenzeile festgelegt werden.
+			Der Spaltenindex beginnt mit der Nummer 1.
+			</de>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Simple Input in cell at col 2 and row 5</name>
+					<content>Type Key Tablecell: "MyTable", 2, 5, "InputValue"</content>
+				</sample>
+				<sample>
+					<name>Simple Input in cell at first col with text "Toni" and row with name "Tester"</name>
+					<content>Type Key Tablecell: "MyTable", "Toni", "Tester", "InputValue"</content>
+				</sample>
+				<sample>
+					<name>Simple Input in cell at first col with text "Toni" and row with number 3</name>
+					<content>Type Key Tablecell: "MyTable", "Toni", 3, "InputValue"</content>
+				</sample>
+				<sample>
+					<name>Simple Input in cell at col with numer 1 and row with name "Address" </name>
+					<content>Type Key Tablecell: "MyTable", 1, "Address", "InputValue"</content>
+				</sample>
+				<sample>
+					<name>Input of constant value named "F2" in cell at col numer 1 and row 1</name>
+					<content>Type Key Tablecell: "MyTable", 1, 1, "{F2}"</content>
+				</sample>
+				<sample>
+					<name>Input of more than one value in cell at first col with text "Ernie" and third row</name>
+					<content>Type Key Tablecell: "MyTable", "Ernie", 3, "InputValue1{SEP}InputValue2"</content>
+				</sample>
+				<sample>
+					<name>Input of value "Hiho" into cell at col number 1 and first row with text "42"</name>
+					<content>Type Key Tablecell: "MyTable", "#1", "42", "HiHo"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Einfache Eingabe in Zelle an Spalte 2 und Zeile 5</name>
+					<content>Gib ein Tabellenzelle: "MeineTabelle", 2, 5, "Eingabewert"</content>
+				</sample>
+				<sample>
+					<name>Einfache Eingabe in Zelle an erster Spalte mit Text "Toni" und Zeile mit dem Namen "Tester"</name>
+					<content>Gib ein Tabellenzelle: "MeineTabelle", "Toni", "Tester", "Eingabewert"</content>
+				</sample>
+				<sample>
+					<name>Einfache Eingabe in Zelle an erster Spalte mit Text "Toni" und Zeile 3</name>
+					<content>Gib ein Tabellenzelle: "MeineTabelle": "MeineTabelle", "Toni", 3, "Eingabewert"</content>
+				</sample>
+				<sample>
+					<name>Einfache Eingabe in Zelle an Spalte 1 und Zeile mit Namen "Adresse"</name>
+					<content>Gib ein Tabellenzelle: "MeineTabelle", 1, "Adresse", "Eingabewert"</content>
+				</sample>
+				<sample>
+					<name>Eingabe der Konstanten "F2" in Zelle an Spalte 1 und Zeile 1</name>
+					<content>Gib ein Tabellenzelle: "MeineTabelle", 1, 1, "{F2}"</content>
+				</sample>
+				<sample>
+					<name>Eingabe mehrerer Werte in Zelle an erster Spalte mit Test "Ernie" und Zeile 3</name>
+					<content>Gib ein Tabellenzelle: "MeineTabelle", "Ernie", 3, "Wer1{SEP}Wert2"</content>
+				</sample>
+				<sample>
+					<name>Eingabe des Wertes "HiHo" in Zelle an Spalte 1 und erster Zeile mit Text "42"</name>
+					<content>Gib ein Tabellenzelle: "MeineTabelle", "#1", "42", "HiHo"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+		</notes>
+		<called_method>TypeKeyTableCell</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<en>Functional name of the object.</en>
+					<de>Fachlicher Name des Objektes.</de>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsCol</name>
+				<type>STRING</type>
+				<description>
+					<en>Column position of destination cell.</en>
+					<de>Spaltenosition der Zielzelle.</de>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsRow</name>
+				<type>STRING</type>
+				<description>
+					<en>Row position of destination cell</en>
+					<de>Zeilenposition der Zielzelle.</de>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsValue</name>
+				<type>STRING</type>
+				<description>
+					<de>Einzugebender Wert</de>
+					<en>Value to be entered</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>---</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- SelectWindow -->
+	<okwentry keyword="SelectWindow">
+		<keyword>
+			<en>Select Window</en>
+			<de>Wähle Aus Fenster</de>
+		</keyword>
+		<purpose>
+			<en>Sets the context to the given window. Ensures that the window active an in the foreground.</en>
+			<de>Setzt den Kontext auf das gegebene Fenster. Stellt sicher, dass das Fenster aktiv und im Vordergrund ist.</de>
+		</purpose>
+		<description>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Select window with name "MyWindow"</name>
+					<content>Select Window: "MyWindow"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Auswahl des Fensters mit dem Namen "MeinFenster"</name>
+					<content>Wähle aus Fenster: "MeinFenster"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+		</notes>
+		<called_method>SelectWindow</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<en>Functional name of the object.</en>
+					<de>Fachlicher Name des Objektes.</de>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>---</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- Select -->
+	<okwentry keyword="Select">
+		<keyword>
+			<en>Select</en>
+			<de>Wähle Aus</de>
+		</keyword>
+		<purpose>
+			<en>Select all rows in a list/table, which contain the given data.</en>
+			<de>Auswahl aller Zeilen einer Liste/Tabelle, welche die gegebenen Daten enthalten.</de>
+		</purpose>
+		<description>
+			<en>Table columns are merged to single values per line, so that lists and tables behave the same. The first row
+			which contains the given data will be selected. The line is selected by a single click.
+			To select with a doubleclick, use the additional parameter "Doubleclick". The {HSEP}-constant stands for a column and can be used to define required Values in given columns.</en>
+			<de>Tabellenspalten werden zeilenweise zusammengefasst, so dass Listen und Tabellen gleich verarbeitet
+			werden. Die erste Zeile, welche die gegebenen Daten enthält, wird ausgewählt. Die
+			Zeile wird über einen einfachen Klick angewählt. Die Übergabe des zusätzlichen Paremeters "Doppelklick" führt zur
+			Verwendung eines Doppelklicks. Die {HSEP}-Konstante kann verwendet werden, wenn definierte Werte in mehreren Spalten gefordert sind.</de>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Select all rows which contain the text "Value"</name>
+					<content>Select: "MyTable", "Value"</content>
+				</sample>
+				<sample>
+					<name>Select all rows which contain the text "Value1" in the first column, followed by the text "Value2" in any of the remaining columns.</name>
+					<content>Select: "MyTable", "Value1{HSEP}Value2"</content>
+				</sample>
+				<sample>
+					<name>Select all rows which contain the text "Value1", followed by any (or no) text in the first column, followed by an empty column, followed by the text "Value2" in the third  column.</name>
+					<content>Select: "MyTable", "Value1{HSEP}{HSEP}Value2"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Wähle alle Zeilen aus, die den Text "Wert" enthalten.</name>
+					<content>Wähle aus: "MeineTabelle", "Wert"</content>
+				</sample>
+				<sample>
+					<name>Wähle alle Zeilen aus, die mit dem Text "Wert1" beginnen und deren zweite Spalte den Text "Wert2" enthält.</name>
+					<content>Select: "MyTable", "Value1{HSEP}Value2"</content>
+				</sample>
+				<sample>
+					<name>Wähle alle Zeilen aus, die mit dem Text "Wert1" beginnen und deren dritte Spalte den Text "Wert2" enthält.</name>
+					<content>Select: "MyTable", "Value1{HSEP}{HSEP}Value2"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+		</notes>
+		<called_method>Select</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<en>Functional name of the object.</en>
+					<de>Fachlicher Name des Objektes.</de>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsValue</name>
+				<type>STRING</type>
+				<description>
+					<en>Values to be searched</en>
+					<de>Zu suchende Werte</de>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsClickType</name>
+				<type>STRING</type>
+				<description>
+					<en>"Doubleclick" to select via doubleclick, "Singleclick" to select via singleclick (default).</en>
+					<de>"Doppelklick" um mit Doppelklick auszuwählen, "Einfachklick" um mit einfachem Klick
+					auszuwählen (default).</de>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>---</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- SelectTablecell -->
+	<okwentry keyword="SelectTablecell">
+		<keyword>
+			<en>Select Tablecell</en>
+			<de>Wähle Aus Tabellenzelle</de>
+		</keyword>
+		<purpose>
+			<en>Selects the given table cell.</en>
+			<de>Wählt die gegebene Tabellenzelle aus.</de>
+		</purpose>
+		<description>
+			<en>The column and row positions are always entered as strings. If such a parameter is preceeded by a hash (#),
+			the string is interpreted as an index number (e. g. "#1"). If a hash sign should be interpreted as text it must be
+			preceeded by a backslash (eg. "\#1 Text With Preceeding Numer"). The header row is accessed by the index number 0. The first data row is
+			accessed by the index number 1. For tables with multiline headers the offset to the first data row can be set
+			as part of the object definition. The column index starts with the number 1.
+			</en>
+			<de>Die Parameter für die Spaten- und Zeilenpositionen werden immer als Strings eingegeben.
+			Wenn ein Positionsparameter mit einem Hash (#) beginnt, dann wird er als Zahl interpretiert (z. B. "#1").
+			Wenn das Hashzeichen als Text interpretiert werden soll, dann muss dies über einen vorangestellten
+			Backslash gekennzeichnet werden (z. B. "#1 Text mit vorangestellter Nummer").
+			Die Kopfzeile der Tabelle wird über den Index "0" angesprochen. Die erste Datenzeile beginnt mit dem Index 1.
+			Für Tabellen mit mehrzeiligen Kopfzeilen kann im Objekt selbst der Offset zur ersten Datenzeile festgelegt werden.
+			Der Spaltenindex beginnt mit der Nummer 1.
+			</de>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Select cell at first col with text "Toni" and row with number 3</name>
+					<content>Select Tablecell: "MyTable", "Toni", "#3"</content>
+				</sample>
+				<sample>
+					<name>Select cell at col with number 1 and row with name "Address" </name>
+					<content>Select Tablecell: "MyTable", "#1", "Address"</content>
+				</sample>
+				<sample>
+					<name>Select cell at col number 1 and row 1</name>
+					<content>Select Tablecell: "MyTable", "#1", "#1"</content>
+				</sample>
+				<sample>
+					<name>Select cell at col number 1 and first row with text "42"</name>
+					<content>Select Tablecell: "MyTable", "#1", "42"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Auswahl der Zelle in Spalte 2 und Zeile 5</name>
+					<content>Wähle aus Tabellenzelle: "MeineTabelle", "#2", "#5"</content>
+				</sample>
+				<sample>
+					<name>Auswahl der Zelle in erster Spalte mit Text "Toni" und Zeile mit dem Namen "Tester"</name>
+					<content>Wähle aus Tabellenzelle: "MeineTabelle", "Toni", "Tester"</content>
+				</sample>
+				<sample>
+					<name>Auswahl der Zelle in erster Spalte mit Text "Toni" und Zeile 3</name>
+					<content>Wähle aus Tabellenzelle: "MeineTabelle", "Toni", "#3"</content>
+				</sample>
+				<sample>
+					<name>Auswahl der Zelle in Spalte 1 und erster Zeile mit Text "42"</name>
+					<content>Wähle aus Tabellenzelle: "MeineTabelle", "#1", "42"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+		</notes>
+		<called_method>SelectTableCell</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<en>Functional name of the object.</en>
+					<de>Fachlicher Name des Objektes.</de>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsCol</name>
+				<type>STRING</type>
+				<description>
+					<en>Column number of cell to be selected, starting with 1.</en>
+					<de>Spaltennummer der zu wählenden Zelle, beginnend mit 1.</de>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsRow</name>
+				<type>STRING</type>
+				<description>
+					<en>Row number of cell to be selected, starting with 1.</en>
+					<de>Zeilennummer der zu wählenden Zelle, beginnend mit 1.</de>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsClickType</name>
+				<type>STRING</type>
+				<description>
+					<en>"Doubleclick" to select via doubleclick, "Singleclick" to select via singleclick (default).</en>
+					<de>"Doppelklick" um mit Doppelklick auszuwählen, "Einfachklick" um mit einfachem Klick auszuwählen (default).</de>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>---</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- SelectMenue -->
+	<okwentry keyword="SelectMenu">
+		<keyword>
+			<en>Select Menu</en>
+			<de>Wähle Aus Menü</de>
+		</keyword>
+		<purpose>
+			<en>Selects the given menue item.</en>
+			<de>Wählt den gegebenen Menüeintrag aus.</de>
+		</purpose>
+		<description>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Select menue item with name "MyMenueitem"</name>
+					<content>Select menue: "MyMenue"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Wähle Menüeintrag mit Namen "MeinMenü"</name>
+					<content>Wähle Aus Menü: "MeinMenü"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+		</notes>
+		<called_method>SelectMenue</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<en>Functional name of the object.</en>
+					<de>Fachlicher Name des Objektes.</de>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsValue</name>
+				<type>STRING</type>
+				<description>
+					<en>Optional: "CHECKED" or "UNCHECKED" to set the menu item to the given state.</en>
+					<de>Optional: "ANGEWÄHLT" oder "ABGEWÄHLT" um den Status des Menüeintrags zu setzen.</de>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>---</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- ClickOn -->
+	<okwentry keyword="ClickOn">
+		<keyword>
+			<en>Click On</en>
+			<de>Klicke Auf</de>
+		</keyword>
+		<purpose>
+			<en>Clicks on the given object.</en>
+			<de>Klickt auf das gegebene Objekt.</de>
+		</purpose>
+		<description>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Click on object with name "MyObject"</name>
+					<content>Click On: "MyObject"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>logexists</name>
+					<content>Klicke Auf: "MeinObjekt"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+		</notes>
+		<called_method>ClickOn</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<en>Functional name of the object.</en>
+					<de>Fachlicher Name des Objektes.</de>
+				</description>
+			</parameter>
+		</parameters>
+		<parameter>
+			<name>fpsClicktype</name>
+			<type>OKW_ClickType</type>
+			<description>
+				<en>
+				Default click type is a single leftclick. This is used when the fpsClicktype parameter is omitted.
+				Possible parameter values for alternative click types are defined in "OKW_Clicktype".
+				</en>
+				<de>
+				Der Standard-Klicktyp ist ein einfacher Linksklick und wird verwendet, wenn kein Parameter übergeben wird.
+				Mögliche Werte für alternative Klicktypen sind in "OKW_Clicktype" definiert.
+				</de>
+			</description>
+		</parameter>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- SetFocus -->
+	<okwentry keyword="SetFocus">
+		<keyword>
+			<en>Set Focus</en>
+			<de>Setze Fokus</de>
+		</keyword>
+		<purpose>
+			<en>Sets the focus to the given object.</en>
+			<de>Setzt den Fokus auf das gegebene Fensterobjekt.</de>
+		</purpose>
+		<description>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Set focus on window with name "MyWindow"</name>
+					<content>Set Focus: "MyWindow"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Setze Fokus auf das Fenster mit dem Namen "MeinFenster"</name>
+					<content>Setze Fokus: "MeinFenster"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+		</notes>
+		<called_method>SetFocus</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<en>Functional name of the object.</en>
+					<de>Fachlicher Name des Objektes.</de>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>---</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- SetValue -->
+	<okwentry keyword="SetValue">
+		<keyword>
+			<en>Set Value</en>
+			<de>Setze Wert</de>
+		</keyword>
+		<purpose>
+			<en>Sets the value of the given object to the given value.</en>
+			<de>Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert.</de>
+		</purpose>
+		<description>
+			<en>The value is not by simulating discrete keyboard inputs. Instead the value is sent to the object via high level setter methods.</en>
+			<de>Der Wert wird nicht durch die Simulation einzelner Tastatureingaben eingegeben, sondern durch High-Level Setter-Methoden der Objekte.</de>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Set the value of the objekt "MyWindow" to "Hello"</name>
+					<content>Set Value: "MyWindow", "Hello"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Setze den Wert des Objekts ""MeinObjekt" auf "Hallo"</name>
+					<content>Setze Wert: "MeinObjekt", "Hallo"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+		</notes>
+		<called_method>SetValue</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<en>Functional name of the object.</en>
+					<de>Fachlicher Name des Objektes.</de>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsValue</name>
+				<type>STRING</type>
+				<description>
+					<en>Value to be set.</en>
+					<de>Zu setzender Wert.</de>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>---</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- ==================================================================================== -->
+	<!--Schlüsslewörter für Prüfungen: CheckValue -->
+	<!-- VerifyValue -->
+	<okwentry keyword="VerifyValue">
+		<keyword>
+			<en>Varify Value</en>
+			<de>Prüfe Wert</de>
+		</keyword>
+		<purpose>
+			<en>Verifies the standard value of an object (this is the shown text in most of the cases) </en>
+			<de>Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)</de>
+		</purpose>
+		<description>
+			<de>
+			</de>
+			<en>
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Check if the value (text) of object "MyObject" equals the expected value "Django".</name>
+					<content>Verify Value: "MyObject", "Django"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten Wert "Django" entspricht.</name>
+					<content>Prüfe Wert: "MeinObjekt", "Django"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>VerifyValue</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsValue</name>
+				<type>STRING</type>
+				<description>
+					<de>Erwarteter Wert</de>
+					<en>Expected Value</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- Memorize -->
+	<okwentry keyword="MemorizeValue">
+		<keyword>
+			<en>Memorize Value</en>
+			<de>Merke Wert</de>
+		</keyword>
+		<purpose>
+			<en>Memorizes the standard value of an object.</en>
+			<de>Merkt sich den Standardwert eines Objektes.</de>
+		</purpose>
+		<description>
+			<de>Der Standardwert des Objektes (in den meisten Fällen ist dies der angezeigte Text) wird ausgelesen und
+			intern unter dem übergebenen Schlüssel gespeichert. Der Wert kann anschließend mit dem Schlüsselwort
+			XXXXX wieder ausgelesen werden.
+			</de>
+			<en>
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Memorize the value (text) of object "MyObject" under the key "MyKey".</name>
+					<content>Memorize Value: "MyObject", "MyKey"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Merkt sich den Wert (Text) des Objekts "MeinObjekt" unter dem Schlüssel "MeinSchlüssel" ab.</name>
+					<content>Merke Wert: "MeinObjekt", "MeinSchlüssel"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>MemorizeValue</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsMemKeyName</name>
+				<type>STRING</type>
+				<description>
+					<de>Name des Schlüssels.</de>
+					<en>Name of the key.</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- LogValue -->
+	<okwentry keyword="LogValue">
+		<keyword>
+			<en>Log Value</en>
+			<de>Logge Wert</de>
+		</keyword>
+		<purpose>
+			<en>Logs the standard value of an object.</en>
+			<de>Logt den Standardwert eines Objektes.</de>
+		</purpose>
+		<description>
+			<de>Der Standardwert des Objektes (in den meisten Fällen ist dies der angezeigte Text) wird ausgelesen und
+			in der aktuellen Log-Datei ausgegeben.
+			</de>
+			<en>
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Check if the value (text) of object "MyObject" equals the expected value "Django".</name>
+					<content>Verify Value: "MyObject", "Django"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten Wert "Django" entspricht.</name>
+					<content>Prüfe Wert: "MeinObjekt", "Django"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>VerifyValue</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsValue</name>
+				<type>STRING</type>
+				<description>
+					<de>Erwarteter Wert</de>
+					<en>expected Value</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- VerifyIsActive -->
+	<okwentry keyword="VerifyIsActive">
+		<keyword>
+			<en>Verify Is Active</en>
+			<de>Prüfe Ist Aktiv</de>
+		</keyword>
+		<purpose>
+			<en>Compares the state of the given object against the expected value. </en>
+			<de>Vergleicht den Status des gegebenen Objekts gegen den erwarteten Wert.</de>
+		</purpose>
+		<description>
+			<de>
+			</de>
+			<en>
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Verify if the object MyObject is in the state "active"</name>
+					<content>Verify Is Active: "MyObject", "YES"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Prüfe, ob das Objekt "MeinObjekt" sich im Status "aktiv" befindet.</name>
+					<content>Prüfe Ist Aktiv: "MeinObjekt", "JA"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>VerifyIsActive</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsValue</name>
+				<type>STRING</type>
+				<description>
+					<de>Erwarteter Wert</de>
+					<en>YES|NO</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- MemorizeIsActive -->
+	<okwentry keyword="MemorizeIsActive">
+		<keyword>
+			<en>Memorize Is Active</en>
+			<de>Merke Ist Aktiv</de>
+		</keyword>
+		<purpose>
+			<en>Memorizes the state of the given object. </en>
+			<de>Merkt sich den Status des gegebenen Objekts.</de>
+		</purpose>
+		<description>
+			<de>Der Wert wird unter dem als Parameter übergebenen Schlüssel gespeichert.
+			</de>
+			<en>The value is stored under the key which is given as parameter.
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Memorize the object-state of MyObject under the key "MyKey".</name>
+					<content>Memorize Is Active: "MyObject", "MyKey"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Merkt den Zustand des Objektes "MeinObjekt" unter dem Schlüssel "Mein Schlüssel".</name>
+					<content>Merke Ist Aktiv: "MeinObjekt", "Mein Schlüssel"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>MemorizeIsActive</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+			<parameter>
+				<type>STRING</type>
+				<description>
+					<de>Schlüssel für den gemerkten Wert.</de>
+					<en>Key for the memorized value</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- LogIsActive -->
+	<okwentry keyword="LogIsActive">
+		<keyword>
+			<en>Log Is Active</en>
+			<de>Logge Ist Aktiv</de>
+		</keyword>
+		<purpose>
+			<en>Logs the state of the given object. </en>
+			<de>Logt den Status des gegebenen Objekts.</de>
+		</purpose>
+		<description>
+			<de>
+			</de>
+			<en>
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Logs the acive-state of MyObject.</name>
+					<content>Log Is Active: "MyObject"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Logt den Aktiv-Zustand des Objektes "MeinObjekt".</name>
+					<content>Logge Ist Aktiv: "MeinObjekt"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>VerifyIsActive</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- VerifyHasFocus -->
+	<okwentry keyword="VerifyHasFocus">
+		<keyword>
+			<en>Verify Has Focus</en>
+			<de>Prüfe Hat Fokus</de>
+		</keyword>
+		<purpose>
+			<en>Compares the focus state of the given object against the expected value. </en>
+			<de>Vergleicht den Fokus-Status des gegebenen Objekts gegen den erwarteten Wert.</de>
+		</purpose>
+		<description>
+			<de>
+			</de>
+			<en>
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Verify if the object MyObject has the focus.</name>
+					<content>Verify Has Focus: "MyObject", "YES"</content>
+				</sample>
+				<sample>
+					<name>Verify if the object MyObject has NOT the focus.</name>
+					<content>Verify Has Focus: "MyObject", "NO"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Prüfe, ob das Objekt "MeinObjekt" den Fokus besitzt.</name>
+					<content>Prüfe Hat Fokus: "MeinObjekt", "JA"</content>
+				</sample>
+				<sample>
+					<name>Prüfe, ob das Objekt "MeinObjekt" den Fokus NICHT besitzt.</name>
+					<content>Prüfe Hat Fokus: "MeinObjekt", "NEIN"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>VerifyHasFocus</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsExpectedvalue</name>
+				<type>STRING</type>
+				<description>
+					<de>JA|NEIN</de>
+					<en>YES|NO</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- MemorizeHasFocus -->
+	<okwentry keyword="MemorizeHasFocus">
+		<keyword>
+			<en>Memorize Has Focus</en>
+			<de>Merke Hat Fokus</de>
+		</keyword>
+		<purpose>
+			<en>Memorize the focus-state the given object against the expected value.</en>
+			<de>Merke den Fokus-Status des gegebenen Objekts.</de>
+		</purpose>
+		<description>
+			<de>Der Wert wird unter dem als Parameter übergebenen Schlüssel gespeichert.
+			</de>
+			<en>The value is stored under the key which is given as parameter.
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Memorize the focus-state of the object "MyObject" und der the key "MyKey".</name>
+					<content>Memorize Has Focus: "MyObject", "MyKey"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Merkt sich in den Fokus-Status des Objektes "MeinObjekt" unter dem Schlüssel "Mein Schlüssel".</name>
+					<content>Merke Hat Fokus: "MeinObjekt", "Mein Schlüssel".</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>MemorizeHasFocus</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsKey</name>
+				<type>STRING</type>
+				<description>
+					<de>Schlüssel für den gemerkten Wert.</de>
+					<en>Key for the memorized value</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>Boolean</type>
+			<description>
+				<de>true, wenn das Objekt den Fokus hat, sonst false</de>
+				<en>true, if Object has the focus, else false</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- LogHasFocus -->
+	<okwentry keyword="LogHasFocus">
+		<keyword>
+			<en>Log Has Focus</en>
+			<de>Logge Hat Fokus</de>
+		</keyword>
+		<purpose>
+			<en>Logs the focus-state of the given object.</en>
+			<de>Logt den Fokus-Status des gegebenen Objekts.</de>
+		</purpose>
+		<description>
+			<de>
+			</de>
+			<en>
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Log the focus-state oft the object "MyObject".</name>
+					<content>Log Has Focus: "MyObject"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Logge den Fokus-Status des Objekts "MeinObjekt".</name>
+					<content>Logge Hat Fokus: "MeinObjekt"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>LogHasFocus</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- VerifyExists -->
+	<okwentry keyword="VerifyExists">
+		<keyword>
+			<en>Verify Exists</en>
+			<de>Prüfe Existiert</de>
+		</keyword>
+		<purpose>
+			<en>Checks if the given object exists. </en>
+			<de>Prüft, ob das gegebenen Objekts existiert.</de>
+		</purpose>
+		<description>
+			<de>
+			</de>
+			<en>
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Check if the object MyObject exists.</name>
+					<content>Verify Exists: "MyObject", "YES"</content>
+				</sample>
+				<sample>
+					<name>Check if the object MyObject does not exist.</name>
+					<content>Verify Exists: "MyObject", "NO"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Prüfe, ob das Objekt "MeinObjekt" existiert.</name>
+					<content> Prüfe Existiert: "MeinObjekt", "JA"</content>
+				</sample>
+				<sample>
+					<name>Prüfe, ob das Objekt "MeinObjekt" nicht existiert.</name>
+					<content> Prüfe Existiert: "MeinObjekt", "NEIN"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>VerifyExists</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsExpectedvalue</name>
+				<type>STRING</type>
+				<description>
+					<de>Erwarteter Wert (JA|NEIN)</de>
+					<en>Expected Value (YES|NO)</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- MemorizeExists -->
+	<okwentry keyword="MemorizeExists">
+		<keyword>
+			<en>Memorize Exists</en>
+			<de>Merke Existiert</de>
+		</keyword>
+		<purpose>
+			<en>Memorize the existance-state of the given object.</en>
+			<de>Merke den Existenz-Status des gegebenen Objekts.</de>
+		</purpose>
+		<description>
+			<de>Der Wert wird unter dem als Parameter übergebenen Schlüssel gespeichert.
+			</de>
+			<en>The value is stored under the key which is given as parameter.
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Memorize the existance-state of the object "MyObject" und der the key "MyKey".</name>
+					<content>Memorize Exists: "MyObject", "MyKey"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Merkt sich den Existenz-Status des Objektes "MeinObjekt" unter dem Schlüssel "Mein Schlüssel".</name>
+					<content>Merke Existiert: "MeinObjekt", "Mein Schlüssel".</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>MemorizeHasFocus</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsKey</name>
+				<type>STRING</type>
+				<description>
+					<de>Schlüssel für den gemerkten Wert.</de>
+					<en>Key for the memorized value</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- LogExists  TODO: Review für Manu, neuer Eintrag-->
+	<!-- AKTUELLE ZEILE -->
+	<okwentry keyword="LogExists">
+		<keyword>
+			<en>Log Exists</en>
+			<de>Logge Vorhanden</de>
+		</keyword>
+		<purpose>
+			<en>Logs whether the given object exists. </en>
+			<de>Logt, ob das gegebenen Objekt existiert.</de>
+		</purpose>
+		<description>
+			<de>
+			</de>
+			<en>
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Logs whether the object MyObject exists.</name>
+					<content>Log Exists: "MyObject", "YES"</content>
+				</sample>
+				<sample>
+					<name>Logs whether the object MyObject does not exist.</name>
+					<content>Verify Exists: "MyObject", "NO"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Logt, ob das Objekt "MeinObjekt" existiert.</name>
+					<content>Logge Vorhanden: "MeinObjekt", "JA"</content>
+				</sample>
+				<sample>
+					<name>Prüfe, ob das Objekt "MeinObjekt" nicht existiert.</name>
+					<content>Logge Vorhanden: "MeinObjekt", "NEIN"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>LogExists</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>void</type>
+			<description>
+				<en>
+				</en>
+				<de>
+				</de>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- VerifySelectedText TODO: Review für Manu, neuer Eintrag -->
+	<!-- MemorizeSelectedText TODO: Review für Manu, neuer Eintrag -->
+	<!-- LogSelectedText TODO: Review für Manu, neuer Eintrag -->
+	<okwentry keyword="LogSelectedText">
+		<keyword>
+			<en>Log Marked</en>
+			<de>Logge Markiert</de>
+		</keyword>
+		<purpose>
+			<en>Logs the marked text od the object. </en>
+			<de>Loggt den markierten Text des gegebenen Objektes.</de>
+		</purpose>
+		<description>
+			<de>
+			</de>
+			<en>
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Logs the marked text of the object "MyObject".</name>
+					<content>Log Marked: "MyObject", "Marked Text"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Logt den markierten Text des Objektes "MeinObjekt".</name>
+					<content>Logge Markiert: "MeinObjekt", "Markierter Text"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>LogSelected</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- VerifyTooltip TODO: Review für Manu, neuer Eintrag-->
+	<okwentry keyword="VerifyTooltip">
+		<keyword>
+			<en>Verify Tooltip</en>
+			<de>Prüfe Tooltip</de>
+		</keyword>
+		<purpose>
+			<en>Checks the tooltip values in the given object. </en>
+			<de>Prüft den Tooltip-Text des gegebenen Objektes.</de>
+		</purpose>
+		<description>
+			<de>
+			</de>
+			<en>
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Check the tooltip text of the object "MyObject".</name>
+					<content>Verify Tooltip: "MyObject", "expected text"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Prüfe den markierten Text des Objektes "MeinObjekt".</name>
+					<content>Prüfe Markiert: "MeinObjekt", "Markierter Text"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>VerifyTooltip</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsExpectedvalue</name>
+				<type>List STRING</type>
+				<description>
+					<de>Erwarteter Wert als Liste. Je Zeile ein Listen Eintrag</de>
+					<en>Expected Value</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- MemorizeTooltip Fehlt TODO: Review für Manu, neuer Eintrag -->
+	<!-- LogTooltip TODO: Review für Manu, neuer Eintrag -->
+	<okwentry keyword="LogTooltip">
+		<keyword>
+			<en>Log Tooltip</en>
+			<de>Logge Tooltip</de>
+		</keyword>
+		<purpose>
+			<en>Logs the Tooltip-text of the object. </en>
+			<de>Logt den Tooltip Text des gegebenen Objektes.</de>
+		</purpose>
+		<description>
+			<de>
+			</de>
+			<en>
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Logs the tooltip text of the object "MyObject".</name>
+					<content>Log Tooltip: "MyObject"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Logt den Tooltip-Text des Objektes "MeinObjekt".</name>
+					<content>Logge Tooltip: "MeinObjekt"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>LogTooltip</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- VerifyTablecellValue Name geändert um "Value" erweitert-->
+	<okwentry keyword="VerifyTableCell">
+		<keyword>
+			<en>Verify Table Cell</en>
+			<de>Prüfe Tabelle Zelle</de>
+		</keyword>
+		<purpose>
+			<en>Compares the content of the given table cell with the expected value. </en>
+			<de>Vergleicht den Inhalt der gegebenen Tabellenzeile mit dem erwarteten Wert.</de>
+		</purpose>
+		<description>
+			<de>
+			</de>
+			<en>
+			</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Check if the cell at row no 2, col no 3 in the table "MyTable" contains the value "Ernie".</name>
+					<content>Verify Table Cell: "MyTable", "2", "3", "Ernie"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Prüfe, ob die Zelle an Zeile 2, Spalte 3 in der Tabelle "MeineTabelle" den Wert "Ernie" enthält.</name>
+					<content>Prüfe Tabelle Zelle: "MeineTabelle", "2", "3", "Ernie"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>VerifyTableCell</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsRow</name>
+				<type>STRING</type>
+				<description>
+					<de>Zeilennummer (beginnend mit 1) </de>
+					<en>row number (starting with 1) </en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsCol</name>
+				<type>STRING</type>
+				<description>
+					<de>Spaltennummer (beginnend mit 1) </de>
+					<en>column number (starting with 1) </en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsExpectedvalue</name>
+				<type>STRING</type>
+				<description>
+					<de>Erwarteter Wert </de>
+					<en>Expected Value </en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- VerifySelectedValue -->
+	<okwentry keyword="VerifySelectedValue">
+		<keyword>
+			<en>Verify Selected Value</en>
+			<de>Prüfe Ausgewählter Wert</de>
+		</keyword>
+		<purpose>
+			<en>Compares the selected value of the given list object with the expected value. </en>
+			<de>Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert.</de>
+		</purpose>
+		<description>
+			<de>Eine Liste ist eine einfache Liste, eine Tabelle oder ein Treeviews. Bei erwarteten
+				Werten in Treeviews wird immer die gesamte Hierarchie angegeben zum Wert angegeben
+				(siehe Beispiel). Dabei werden die Hierarchie-Elemente über den Separator {SEP} getrennt.</de>
+			<en>A list can be a simple list, a table or a treeview. Expected values in treeviews are always
+				written out as a complete hierarchy (see sample). The hierachical elements are separated
+				via the separator {SEP}.</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Check if the list entry "Henry" is selected in the list "MyList".</name>
+					<content> Verify Selected Value: "MyList", "Henry"</content>
+				</sample>
+				<sample>
+					<name>Check if the entry "Names{SEP}Henry" is selected in the treeview "MyTreeview".</name>
+					<content>Verify Selected Value: "MyTreeview", "Names{SEP}Henry"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Prüfe, ob das Element "Henry" in der Liste "MeineListe" ausgewählt ist.</name>
+					<content> Prüfe Ausgewählter Wert: "MeineListe", "Henry"</content>
+				</sample>
+				<sample>
+					<name>Prüfe, ob das Element "Namen{SEP}Henry" im Treeview "MeinTreeview" ausgewählt ist.</name>
+					<content> Prüfe Ausgewählter Wert: "MeinTreeview", "Namen{SEP}Henry"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>VerifySelectedValue</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsExpectedvalue</name>
+				<type>STRING</type>
+				<description>
+					<de>Erwarteter Wert</de>
+					<en>Expected Value </en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- VerifySelectedElement In Frage zu stellen-->
+	<okwentry keyword="VerifySelectedElement">
+		<keyword>
+			<en>Verify Selected Element</en>
+			<de>Prüfe Ausgewähltes Element</de>
+		</keyword>
+		<purpose>
+			<en>Compares the selected element of the given list object with the expected element via the position in the list (starting with 1). </en>
+			<de>Vergleicht das ausgewählte Element des gegebenen Listenobjekts mit dem erwarteten Element über die Position in der Liste (beginnend bei 1).</de>
+		</purpose>
+		<description>
+			<de>Eine Liste ist eine einfache Liste, eine Tabelle oder ein Treeviews. Bei erwarteten
+				Werten in Treeviews wird immer die gesamte Hierarchie angegeben zum Wert angegeben
+				(siehe Beispiel). Dabei werden die Hierarchie-Elemente über den Separator {SEP} getrennt.</de>
+			<en>A list can be a simple list, a table or a treeview. Expected values in treeviews are always
+				written out as a complete hierarchy (see sample). The hierachical elements are separated
+				via the separator {SEP}.</en>
+		</description>
+		<examples>
+			<en>
+				<sample>
+					<name>Check if the second list entry is selected in the list "MyList".</name>
+					<content> Verify Selected Element: "MyList", "2"</content>
+				</sample>
+			</en>
+			<de>
+				<sample>
+					<name>Prüfe, ob das zweite Element in der Liste "MeineListe" ausgewählt ist.</name>
+					<content> Prüfe Ausgewähltes Element: "MeineListe", "2"</content>
+				</sample>
+			</de>
+		</examples>
+		<notes>
+			<de>
+			</de>
+			<en>
+			</en>
+		</notes>
+		<called_method>VerifySelectedValue</called_method>
+		<parameters>
+			<parameter>
+				<name>fpsFunctionalname</name>
+				<type>STRING</type>
+				<description>
+					<de>Fachlicher Name des Objektes.</de>
+					<en>Functional name of the object.</en>
+				</description>
+			</parameter>
+			<parameter>
+				<name>fpsExpectedvalue</name>
+				<type>STRING</type>
+				<description>
+					<de>Erwarteter Wert</de>
+					<en>Expected Value </en>
+				</description>
+			</parameter>
+		</parameters>
+		<returnvalue>
+			<type>VOID</type>
+			<description>
+				<en>
+				</en>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- ==================================================================================== -->
+	<!--Schlüsslewörter für Anwendungshandling -->
+	<!-- StartApp -->
+	<okwentry keyword="StartApp">
+		<keyword>
+			<en>Start App</en>
+			<de>Starte Anwendung</de>
+		</keyword>
+		<purpose>
+			<en>Starts an Application</en>
+			<de>Startet einen Anwendung.</de>
+		</purpose>
+		<description>
+			<de>TODO: Englische Beschreibung von StartApp</de>
+			<en>Description of the algorithm</en>
+		</description>
+		<notes>
+			<de>Zusätzliche Bemerkungen zum Schlüsselwort</de>
+			<en>Additional notes for the keyword</en>
+		</notes>
+		<called_method>StartApp ()</called_method>
+		<parameters>
+		</parameters>
+		<returnvalue>
+			<type>void</type>
+			<description>
+				<en>No return value</en>
+				<de>Kein Rückgabewert</de>
+			</description>
+		</returnvalue>
+		<!-- StartApp -->
+	</okwentry>
+	<!-- StopApp -->
+	<okwentry keyword="StopApp">
+		<keyword>
+			<en>Stop App</en>
+			<de>Beende Anwendung</de>
+		</keyword>
+		<purpose>
+			<en>Stops an Application</en>
+			<de>Beendet eine Anwendung</de>
+		</purpose>
+		<description>
+			<de>Beschreibung der Arbeitsweise</de>
+			<en>Description of the algorithm</en>
+		</description>
+		<notes>
+			<de>Zusätzliche Bemerkungen zum Schlüsselwort</de>
+			<en>Additional notes for the keyword</en>
+		</notes>
+		<called_method>StopApp ()</called_method>
+		<parameters>
+		</parameters>
+		<returnvalue>
+			<type>void</type>
+			<description>
+				<en>No return value</en>
+				<de>Kein Rückgabewerte</de>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- ====================================================================================
+	     Schlüssewörter für Anwendungshandling
+	     ==================================================================================== -->
+	<!-- TestBegin -->
+	<okwentry keyword="TestBegin">
+		<keyword>
+			<en>Begin Test</en>
+			<de>Beginne Test</de>
+		</keyword>
+		<purpose>
+			<en>Begins a Test</en>
+			<de>Fängt einen Test an.</de>
+		</purpose>
+		<description>
+			<de>TODO: Deutsche Beschreibung von BeginTest</de>
+			<en>Description of the algorithm</en>
+		</description>
+		<notes>
+			<de>Zusätzliche Bemerkungen zum Schlüsselwort</de>
+			<en>Additional notes for the keyword</en>
+		</notes>
+		<called_method>No FrameObject Method Calld</called_method>
+		<parameters>
+		</parameters>
+		<returnvalue>
+			<type>void</type>
+			<description>
+				<en>No return value</en>
+				<de>Kein Rückgabewert</de>
+			</description>
+		</returnvalue>
+	</okwentry>
+	<!-- TestEnd 
+	TODO MANU: Review Keyword-->
+	<okwentry keyword="TestEnd">
+		<keyword>
+			<en>End Test</en>
+			<de>Beende Test</de>
+		</keyword>
+		<purpose>
+			<en>End Testcase</en>
+			<de>Testfallende</de>
+		</purpose>
+		<description>
+			<de>Beschreibung der Arbeitsweise</de>
+			<en>Description of the algorithm</en>
+		</description>
+		<notes>
+			<de>Zusätzliche Bemerkungen zum Schlüsselwort</de>
+			<en>Additional notes for the keyword</en>
+		</notes>
+		<called_method>public virtual StopApp ()</called_method>
+		<parameters>
+		</parameters>
+		<returnvalue>
+			<type>void</type>
+			<description>
+				<en>No return value</en>
+				<de>Kein Rückgabewerte</de>
+			</description>
+		</returnvalue>
+	</okwentry>
+</okwdoc>

@@ -1370,8 +1370,8 @@ public interface IOKW_State
 
         /// \~german
         /// \brief
-        /// Keine Beschreibung zu "VerifyTooltip" verfügbar
-        /// 
+        /// \todo TODO: Keine Beschreibung zu "VerifyTooltip" verfügbar
+        ///
         /// \param fpsFunctionalname Funktionaler Name des Objekts 
         /// \param fpsExpectedValue Erwarteter Wert 
         ///
@@ -1384,8 +1384,7 @@ public interface IOKW_State
         ///
         /// \~
         /// \author Zoltan Hrabovszki
-        /// \date 2014-09-21/jnic
-        /// \todo TODO: jnic-->keine Beschreibung vorhanden
+        /// \date 2014-09-21
         void VerifyTooltip(String fpsFunctionalname, String fpsExpectedValue);
 
         /// \~german

@@ -1,0 +1,29 @@
+﻿<OKW>
+<LogMessanger>
+	<!-- Class: "Test" -->
+	<Class name="Test">
+		<Method name="Test">
+			<Text key="Message1">
+				<en>This is the first test message.</en>
+				<de>Das ist Testnachricht Nr. eins.</de>
+			</Text>
+			<Text key="Message2">
+				<en>This is the second test message.</en>
+				<de>Das ist die zweite Testnachricht.</de>
+			</Text>
+			<Text key="M1P1">
+				<en>This is the first Parameter: {0:} of this test message.</en>
+				<de>Das ist Parameter 1: {0:} der Testnachricht.</de>
+			</Text>
+			<Text key="M1P2">
+				<en>This is Parameter one: {0:} and this is Parmeter two: {1:}.</en>
+				<de>Das ist Parameter 1: {0:} und das ist Parameter 2: {1:} der Testnachricht.</de>
+			</Text>
+			<Text key="M1P2TOP2P1">
+				<en>This is Parameter one: '{0:}' and this is Parmeter two: '{1:}'.</en>
+				<de>Das ist Parameter zwei: '{1:}' und das ist Parameter eins: '{0:}' der Testnachricht.</de>
+			</Text>
+		</Method>
+	</Class>
+</LogMessanger>
+</OKW>

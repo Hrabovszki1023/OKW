@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="okwlogs.xslt"?>
+<LogMessages>
+	<!-- Class: "OK" -->
+	<Class name="OK">
+		<!-- Method: "VerifyTooltip"-->
+		<Method name="VerifyTooltip">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+			<Text key="VerifyListCount">
+				<en>Verify the List-Count of expected and actuel Values as List...</en>
+				<de>Sind die Anzahl der Werte in der Soll- und Ist-Liste gleich...</de>
+			</Text>
+			<Text key="VerifyValues">
+				<en>Compare values...</en>
+				<de>Vergleiche die Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "VerifyCaption"-->
+		<Method name="VerifyCaption">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+			<Text key="VerifyListCount">
+				<en>Verify the List-Count of expected and actuel Values as List...</en>
+				<de>Sind die Anzahl der Werte in der Soll- und Ist-Liste gleich...</de>
+			</Text>
+			<Text key="VerifyValues">
+				<en>Compare values...</en>
+				<de>Vergleiche die Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "VerifyLabel"-->
+		<Method name="VerifyLabel">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+			<Text key="VerifyListCount">
+				<en>Verify the List-Count of expected and actuel Values as List...</en>
+				<de>Sind die Anzahl der Werte in der Soll- und Ist-Liste gleich...</de>
+			</Text>
+			<Text key="VerifyValues">
+				<en>Compare values...</en>
+				<de>Vergleiche die Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "VerifyValue"-->
+		<Method name="VerifyValue">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+			<Text key="VerifyListCount">
+				<en>Verify the List-Count of expected and actuel Values as List...</en>
+				<de>Sind die Anzahl der Werte in der Soll- und Ist-Liste gleich...</de>
+			</Text>
+			<Text key="VerifyValues">
+				<en>Compare values...</en>
+				<de>Vergleiche die Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "VerifySelectedValue"-->
+		<Method name="VerifySelectedValue">
+			<!-- Meldungen zum Vergleich der List<T> Längen(count) -->
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+			<Text key="VerifyListCount">
+				<en>Verify the List-Count of expected and actuel Values as List...</en>
+				<de>Sind die Anzahl der Werte in der Soll- und Ist-Liste gleich...</de>
+			</Text>
+			<Text key="VerifyValues">
+				<en>Compare values...</en>
+				<de>Vergleiche die Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "VerifyTablecellValue"-->
+		<Method name="VerifyTablecellValue">
+			<!-- Meldungen zum Vergleich der List<T> Längen(count) -->
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+			<Text key="VerifyListCount">
+				<en>Verify the List-Count of expected and actuel Values as List...</en>
+				<de>Sind die Anzahl der Werte in der Soll- und Ist-Liste gleich...</de>
+			</Text>
+			<Text key="VerifyValues">
+				<en>Compare values...</en>
+				<de>Vergleiche die Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "VerifyIsActive"-->
+		<Method name="VerifyIsActive">
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+			<Text key="VerifyValue">
+				<en>Compare values...</en>
+				<de>Vergleiche Soll/Ist...</de>
+			</Text>
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+			</Text>
+		</Method>
+		<!-- Method: "VerifyHasFocus"-->
+		<Method name="VerifyHasFocus">
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+			<Text key="VerifyValue">
+				<en>Compare values...</en>
+				<de>Vergleiche Soll/Ist...</de>
+			</Text>
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+			</Text>
+		</Method>
+		<!-- Method: "VerifyExists"-->
+		<Method name="VerifyExists">
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+			<Text key="VerifyValue">
+				<en>Compare values...</en>
+				<de>Vergleiche Soll/Ist...</de>
+			</Text>
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+			</Text>
+		</Method>
+		<!--===============================================================-->
+		<!--= Input Keywords -->
+		<!--===============================================================-->
+		<Method name="SetValue">
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+		</Method>
+		<Method name="TypeKeyWindow">
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+		</Method>
+		<Method name="TypeKey">
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+		</Method>
+		<Method name="TypeKeyTablecell">
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+		</Method>
+		<!--===============================================================-->
+		<!--= Log -->
+		<!--===============================================================-->
+		<!-- Method: "LogTooltip"-->
+		<Method name="LogTooltip">
+			<Text key="LogValue">
+				<en>Values found...</en>
+				<de>Gefundene Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "LogCaption"-->
+		<Method name="LogCaption">
+			<Text key="LogValue">
+				<en>Values found...</en>
+				<de>Gefundene Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "LogLabel"-->
+		<Method name="LogLabel">
+			<Text key="LogValue">
+				<en>Values found...</en>
+				<de>Gefundene Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "LogCaption"-->
+		<Method name="LogCaption">
+			<Text key="LogValue">
+				<en>Values found...</en>
+				<de>Gefundene Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "LogLabel"-->
+		<Method name="LogLabel">
+			<Text key="LogValue">
+				<en>Values found...</en>
+				<de>Gefundene Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "LogValue"-->
+		<Method name="LogValue">
+			<Text key="LogValue">
+				<en>Values found...</en>
+				<de>Gefundene Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "LogSelectedValue"-->
+		<Method name="LogSelected">
+			<Text key="LogValue">
+				<en>Compare values...</en>
+				<de>Vergleiche die Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "LogTablecellValue"-->
+		<Method name="LogTablecellValue">
+			<Text key="LogValue">
+				<en>Values found...</en>
+				<de>Gefundene Werte...</de>
+			</Text>
+		</Method>
+		<!-- Method: "LogIsActive"-->
+		<Method name="LogIsActive">
+			<Text key="LogValue">
+				<en>Value found: '{0}'</en>
+				<de>Gefundener Wert: '{0}'</de>
+			</Text>
+		</Method>
+		<!-- Method: "LogHasFocus"-->
+		<Method name="LogHasFocus">
+			<Text key="LogValue">
+				<en>Value found: '{0}'</en>
+				<de>Gefundener Wert: '{0}'</de>
+			</Text>
+		</Method>
+		<!-- Method: "LogExists"-->
+		<Method name="LogExists">
+			<Text key="LogValue">
+				<en>Value found: '{0}'</en>
+				<de>Gefundener Wert: '{0}'</de>
+			</Text>
+		</Method>
+		<!--===============================================================-->
+		<!--= Memorize -->
+		<!--===============================================================-->
+		<!-- Method: "MemorizeExists"-->
+		<Method name="MemorizeExists">
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+		</Method>
+		<Method name="MemorizeHasFocus">
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+		</Method>
+		<!--===============================================================-->
+		<!--= Path and File Methods-->
+		<!--===============================================================-->
+		<!-- Method: "VerifyFileExist"-->
+		<Method name="VerifyFileExists">
+			<Text key="VerifyValue">
+				<en>Compare values...</en>
+				<de>Vergleiche Soll/Ist...</de>
+			</Text>
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+			<Text key="ResolvedPath">
+				<en>Resolved path and filename: '{0:}'</en>
+				<de>Aufgelöste Pfad und Datei: '{0:}'</de>
+			</Text>
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+			</Text>
+		</Method>
+		<!-- Method: "FileDelete"-->
+		<Method name="FileDelete">
+			<Text key="VerifyValue">
+				<en>Compare values...</en>
+				<de>Vergleiche Soll/Ist...</de>
+			</Text>
+			<Text key="Ignore">
+				<en>KeyWord was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+			<Text key="ResolvedPath">
+				<en>Resolved path and filename: '{0:}'</en>
+				<de>Aufgelöste Pfad und Datei: '{0:}'</de>
+			</Text>
+		</Method>
+		<!-- Method: "VerifyDirectoryExists"-->
+		<Method name="VerifyDirectoryExists">
+			<Text key="VerifyValue">
+				<en>Compare values...</en>
+				<de>Vergleiche Soll/Ist...</de>
+			</Text>
+			<Text key="Ignore">
+				<en>Keyword was ignored!</en>
+				<de>Schlüsselwort wurde ignoriert!</de>
+			</Text>
+			<Text key="ResolvedPath">
+				<en>Resolved path: '{0:}'</en>
+				<de>Aufgelöster Pfad: '{0:}'</de>
+			</Text>
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+			</Text>
+		</Method>
+	</Class>
+</LogMessages>

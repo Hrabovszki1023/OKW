@@ -40,10 +40,12 @@
 package OKW;
 
 import OKW.Exceptions.*;
-
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -51,6 +53,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.io.FileNotFoundException;
 
 import org.xml.sax.SAXException;
@@ -84,7 +87,7 @@ import org.xml.sax.SAXException;
 	/// - Je Textschlüssel können n-Überstezungen
 	/// definiert werden.
 	/// 
-	/// Die aktuelle Sprache kommt aus OKW.OKWLanguage.Instance.Language
+	/// Die aktuelle Sprache kommt aus OKW.OKWLanguage.getInstance.Language
 	/// 
 	/// \info
 	/// Die englische Üersetzung _muss_ immer vorhanden sein.
@@ -103,7 +106,7 @@ import org.xml.sax.SAXException;
 
 		private Boolean bInit = false;
 		private String cvsClassName = "";
-		private String __XMLFile = "";
+		private Path __XMLFile;
 		
 		private Document MyXPathDocument;
 		private DocumentBuilder builder = null;
@@ -286,11 +289,11 @@ import org.xml.sax.SAXException;
 			if (!this.bInit) {
 				try {
 					
-					this.__XMLFile = System.IO.Path.Combine(OKW_Ini.Instance.OKW_Enviroment.Folder_LogMessages, "LM_" + this.cvsClassName + ".xml");
+					this.__XMLFile = Paths( OKW_Ini.Instance.OKW_Enviroment.Folder_LogMessages, "LM_" + this.cvsClassName + ".xml" );
 
-					if (!System.io.File.Exists(this.XMLFile)) {
+					if (!OKW_FileHelper.FileExists(XMLFile)) {
 						System.out.println("============================================================================================================");
-						System.out.println("OKW Exception: File not found! -> '" + this.XMLFile + "'");
+						System.out.println("OKW Exception: File not found! -> '" + XMLFile + "'");
 						System.out.println("============================================================================================================");
 
 						throw new FileNotFoundException("File not found! The File was: '" + this.XMLFile + "'");
@@ -329,22 +332,25 @@ import org.xml.sax.SAXException;
 		/// \~
 		/// \author Zoltan Hrabovszki
 		/// \date 2013_12_22
-		private String ReadMessage(String ClassName, String MethodName, String TextKey)
+	private String ReadMessage(String ClassName, String MethodName, String TextKey)
 		{
 			String lvsReturn = "Message Not Found!";
-			String myPath = "//Class[@name='" + ClassName + "']/Method[@name='" + MethodName + "']/Text[@key='" + TextKey + "']/" + OKW.OKWLanguage.Instance.Language;
+			String myPath = "//Class[@name='" + ClassName + "']/Method[@name='" + MethodName + "']/Text[@key='" + TextKey + "']/" + OKW.OKWLanguage.getInstance().getLanguage();
 
-			XPathNodeIterator iter = this.MyXPathNavigator.Select(myPath);
+			
+			Node lv_node = (Node) MyXPath.compile(myPath).evaluate(MyXPathDocument, XPathConstants.NODE);
 
-			if (iter.Count < 1 || iter.Count > 1) {
+			if (lv_node == null) 
+			{
 				// Es wurde kein Wert gefunden -> Exception MsgNitFound auslösen...
 				throw new OKWMessageNotFoundException("Message not Found. Class: " + ClassName +
 				",  Method: " + MethodName +
-				", TextKey: " + TextKey,
-					", Gefunden Werte: " + iter.Count);
-			} else {
-				iter.MoveNext();
-				lvsReturn = iter.Current.Value;
+				", TextKey: " + TextKey);
+			}
+			else 
+			{
+				lv_node.MoveNext();
+				lvsReturn = lv_node.getFirstChild().;
 			}
             
 			return lvsReturn;

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="okwconst.xslt"?>
+<okwconstants>
+	<okwconst internalname="VSEP">
+		<name>
+			<en>VSEP</en>
+			<de>VSEP</de>
+		</name>
+		<description>
+			<en>Vertical seperator between input values.</en>
+			<de>Vetikaler Trenner zwischen Eingabewerten.</de>
+		</description>
+	</okwconst>
+	<okwconst internalname="HSEP">
+		<name>
+			<en>HSEP</en>
+			<de>HSEP</de>
+		</name>
+		<description>
+			<en>Horizontal seperator between input lines.</en>
+			<de>Horizontaler Trenner zwischen Eingabezeilen.</de>
+		</description>
+	</okwconst>
+	<okwconst internalname="SEP">
+		<name>
+			<en>SEP</en>
+			<de>SEP</de>
+		</name>
+		<description>
+			<en>Value seperator between several values.</en>
+			<de>Werttrenner zwischen mehreren Werten.</de>
+		</description>
+	</okwconst>
+	<okwconst internalname="YES">
+		<name>
+			<en>YES</en>
+			<de>JA</de>
+		</name>
+		<description>
+			<en>Represents the boolean value TRUE. Is being used in verfication functions (e. g. Verify Value ("MyObject", "Active", "YES") )</en>
+			<de>Repräsentiert den Wahrheitswert WAHR. Wird verwendet in Prüffunktionen (z. B. Prüfe Wert ("MeinObjekt", "Aktiv", "JA") )</de>
+		</description>
+	</okwconst>
+	<okwconst internalname="NO">
+		<name>
+			<en>NO</en>
+			<de>NEIN</de>
+		</name>
+		<description>
+			<en>Represents the boolean value FALSE. Is being used in verfication functions (e. g. Verify Value ("MyObject", "Active", "NO") )</en>
+			<de>Repräsentiert den Wahrheitswert FALSCH. Wird verwendet in Prüffunktionen (z. B. Prüfe Wert ("MeinObjekt", "Aktiv", "NEIN") )</de>
+		</description>
+	</okwconst>
+	<okwconst internalname="CHECKED">
+		<name>
+			<en>CHECKED</en>
+			<de>ANGEWÄHLT</de>
+		</name>
+		<description>
+			<en>A CheckBox has the state CHECKED when the check mark is set.</en>
+			<de>Eine CheckBox hat den Status ANGEWÄHLT wenn die Markierung (z. B. Haken) gesetzt ist.</de>
+		</description>
+	</okwconst>
+	<okwconst internalname="UNCHECKED">
+		<name>
+			<en>UNCHECKED</en>
+			<de>ABGEWÄHLT</de>
+		</name>
+		<description>
+			<en>A CheckBox has the state UNCHECKED when the check mark is NOT set.</en>
+			<de>Eine CheckBox hat den Status ABGEWÄHLT wenn die Markierung (z. B. Haken) NICHT gesetzt ist.</de>
+		</description>
+	</okwconst>
+	<okwconst internalname="DELETE">
+		<name>
+			<en>DELETE</en>
+			<de>LÖSCHEN</de>
+		</name>
+		<description>
+			<en>Deletes any existing Value in the given object. Can be used e. g. to delete existing entries in a textfield before entering new entries.</en>
+			<de>Löscht existierende Werte aus dem Objekt. Wird z. B. verwendet, um existierende Werte in einem Textfeld zu löschen, bevor neue Werte eingegeben werden.</de>
+		</description>
+	</okwconst>
+	<okwconst internalname="EMPTY">
+		<name>
+			<en>EMPTY</en>
+			<de>LEER</de>
+		</name>
+		<description>
+			<en>Represents an empty value. Used to check for oa given object if there is no value typed in or selected.</en>
+			<de>Repräsentiert einen leeren Wert. Wird verwendet, um für Objekte zu prüfen, ob kein Wert eingegeben oder ausgewählt wurde.</de>
+		</description>
+	</okwconst>
+	<okwconst internalname="IGNORE">
+		<name>
+			<en>IGNORE</en>
+			<de>IGNORIEREN</de>
+		</name>
+		<description>
+			<en>The value IGNORE as input value for an object means that the object will be ignored. This also means, if the the object has a given value, this value will not be deleted. The constant is used in the context of sequences and data driven testing only.</en>
+			<de>Der Wert IGNORIEREN als Eingabewert für ein Objekt bewirkt, dass dieses Objekt ignoriert wird. Ein vorhandener
+			Wert wird nicht überschrieben. Die Konstante IGNORIEREN wird ausschließlich im Kontext von Sequenzen und datengetriebenem
+			Testen verwendet.
+			</de>
+		</description>
+	</okwconst>
+	<okwconst internalname="LEFTBRACE">
+		<name>
+			<en>${</en>
+			<de>${</de>
+		</name>
+		<description>
+			<en>Left brace for usage of constant values.</en>
+			<de>Linke Klammer für die Nutzung von Konstanten.</de>
+		</description>
+	</okwconst>
+	<okwconst internalname="RIGHTBRACE">
+		<name>
+			<en>}</en>
+			<de>}</de>
+		</name>
+		<description>
+			<en>Right brace for usage of constant values.</en>
+			<de>Rechte Klammer für die Nutzung von Konstanten.</de>
+		</description>
+	</okwconst>
+</okwconstants>

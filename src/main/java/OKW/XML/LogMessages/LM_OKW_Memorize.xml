@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="okwlogs.xslt"?>
+<LogMessages>
+	<!-- Class: "OKW_Memorize" -->
+	<Class name="OKW_Memorize">
+		<Method name="Get">
+			<Text key="OKWMemorizeKeyNotExistsException">
+				<en>Key '{0}' does not exists!</en>
+				<de>Schlüssel '{0}' existiert nicht!</de>
+			</Text>
+		</Method>
+		<Method name="Set">
+			<Text key="OverwriteKeyWarning">
+				<en> Key '{0}' will be overwrited.</en>
+				<de> Schlüssel '{0}' wird überschrieben</de>
+			</Text>
+			<Text key="OldValue">
+				<en>Old Value: '{0}'</en>
+				<de>Alter Wert: '{0}'</de>
+			</Text>
+			<Text key="NewValue">
+				<en>New Value '{0}' will be overwrited.</en>
+				<de>Neuer Wert: '{0}'</de>
+			</Text>
+		</Method>
+	</Class>
+</LogMessages>

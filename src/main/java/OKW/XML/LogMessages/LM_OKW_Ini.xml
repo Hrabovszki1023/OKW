@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="okwlogs.xslt"?>
+<LogMessages>
+	<!-- Class: "OKWIni" -->
+	<Class name="OKWIni">
+		<Method name="Init">
+			<!-- Meldungen zu "SecurityException" -->
+			<!-- Hintergrund: Umgebunsvarable soll gelesen werden aber OKW hat nicht genügend rechte diese zu lesen.-->
+			<Text key="SecurityException">
+				<en>Cannot read Enviorment Varabel "OKWINI". Not enough rights!</en>
+				<de>Die Umgebungsvariable "OKWINI" konnte nicht gelesen werden: Zugriff verweigert!</de>
+			</Text>
+			<Text key="">
+			</Text>
+			<!-- Meldungen zum Vergleich der List<T> Längen(count) -->
+			<Text key="FileDoesNotExists">
+				<en>File OKW_Ini.xml not found: {:0} </en>
+				<de>Die Datei OKW_Ini.xml wurde nicht gefunden: {:0}</de>
+			</Text>
+		</Method>
+	</Class>
+</LogMessages>
