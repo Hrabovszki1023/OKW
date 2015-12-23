@@ -107,7 +107,7 @@ public class FrameObjectDictionary
 	/// \author Zoltan Hrabovszki
 	/// \date 2014.10.10
 	///
-	public FrameObjectDictionary() throws ClassNotFoundException, InstantiationException
+	private FrameObjectDictionary() throws ClassNotFoundException, InstantiationException
 	{
 		Log.LogFunctionStartDebug("FrameObjectDictionary.FrameObjectDictionary");
 
@@ -116,6 +116,33 @@ public class FrameObjectDictionary
 		Log.LogFunctionEndDebug();
 	}
 
+	private static FrameObjectDictionary Instance = null;
+	
+	public static FrameObjectDictionary getInstance()
+	{
+		Log.LogFunctionStartDebug("FrameObjectDictionary.getInstance");
+		
+		if (Instance == null)
+		{
+			try
+			{
+			Instance = new FrameObjectDictionary();
+			}
+			catch ( ClassNotFoundException  e)
+			{
+				
+			}
+			catch( InstantiationException e)
+			{
+				
+			}
+		}
+
+		Log.LogFunctionEndDebug();
+		return Instance;
+	}
+
+	
 	/// \~german
 	/// \brief
 	/// Die Methode liefert das Frame-Object des gegebenen Fensterobjektes
