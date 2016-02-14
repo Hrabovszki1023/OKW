@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import java.lang.reflect.Field;
 import java.nio.file.Paths;
-import java.util.Collections;
 import java.util.Map;
 
 import org.junit.*;
@@ -13,7 +12,6 @@ import org.junit.rules.TestName;
 import okw.exceptions.OKWFileDoesNotExistsException;
 import okw.log.Logger_Sngltn;
 
-@Ignore
 public class OKW_IniTest
 {
 	@Rule
@@ -61,20 +59,20 @@ public class OKW_IniTest
 	@BeforeClass
 	public static void MySetUp()
 	{
-		myOKW_Xml = System.getenv("OKW_Xml");
+/*		myOKW_Xml = System.getenv("OKW_Xml");
 
 		System.out.println(
 				"---------------------------------------------------------------------------------------------");
 		System.out.println("-" + name.getMethodName());
 		System.out.println(
 				"---------------------------------------------------------------------------------------------");
+*/
 	}
 
 	@AfterClass
 	public static void MyTearDown()
 	{
-		setEnv("OKW_Xml", myOKW_Xml);
-		System.getenv("OKW_Xml");
+
 	}
 
 	/// \~german
@@ -91,6 +89,7 @@ public class OKW_IniTest
 	/// \date 2013.11.25
 	// [Category("WIN")]
 	@Test
+	@Ignore
 	public void TC_Windows_OKW_Env_Set_XML_Exist()
 	{
 		String OKW_Xml = "";
@@ -142,6 +141,7 @@ public class OKW_IniTest
 	/// \date 2013.11.25
 	// [Category("WIN")]
 	@Test
+	@Ignore
 	public void TC_Check_All_Path_with_OKW_Xml()
 	{
 		String OKW_Xml_Path_Expected = "";
@@ -180,6 +180,7 @@ public class OKW_IniTest
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.11.25
 	@Test
+	@Ignore
 	public void TC_Check_All_Path_without_OKW_Xml()
 	{
 		String OKW_Xml_original = "";
@@ -262,6 +263,7 @@ public class OKW_IniTest
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.11.25
 	@Test
+	@Ignore
 	public void TC_Windows_OKW_Env_Set_XML_NotExist_Exception()
 	{
 		// 1. Merken wir den aktuellen OKW_Xml Wert
