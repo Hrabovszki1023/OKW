@@ -15,7 +15,7 @@ import okw.log.Logger_Sngltn;
 public class OKW_IniTest
 {
 	@Rule
-	public static TestName	name		= new TestName();
+	public TestName	name	= new TestName();
 
 	static String			myOKW_Xml	= "";
 
@@ -41,13 +41,13 @@ public class OKW_IniTest
 	}
 
 	@After
-	public static void myTestFixtureTearDown()
+	public void myTestFixtureTearDown()
 	{
 		// TODO: Add tear down code.
 	}
 
 	@Before
-	public static void myTestFixtureSetUp()
+	public void myTestFixtureSetUp()
 	{
 		// Reset des Loggers: Alle geladenen Instanzen löschen
 		// Logger_Sngltn.Instance.Init();
