@@ -400,51 +400,31 @@ public class OKW_Ini_Sngltn
 	 *
 	 * \~ \author Zoltán Hrabovszki \date 2014-10-25/jnic
 	 */
-	public void Init() throws JAXBException
+	public void Init()
 	{
 		Log.LogFunctionStart(this.getClass().getName() + ".Init");
-
-		// Klassen Variablen erst löschen...
-		this.OKW_Enviroment.setFile_OKW_Ini_xml("");
-		this.OKW_Enviroment.setFolder_XML("");
+		
+		//Get file from resources folder
+		ClassLoader classLoader = getClass().getClassLoader();
 
 		// ... und dann alles Initialisieren!
 		try
 		{
-			// 1. Lese OKWINI-Ümgebungsvariable
-			this.OKW_Enviroment.setFolder_XML(System.getenv("OKW_Xml"));
+			// 1. Lese OKWINI-Umgebungsvariable
+			OKW_Enviroment.setFolder_XML(classLoader.getResource("xml").getPath());
 
-			// Ist die Umgebungsvariable gesetzt?
-			if (OKW_Helper.StringIsNullOrEmpty(this.OKW_Enviroment.getFolder_XML()))
-			{
-				// OKW_Xml ist nicht gesetzt -> OKW_Ini_xml auf Assambly
-				// Verzeichnis setzen...
-				this.OKW_Enviroment.setFolder_XML(Paths.get(MyDirectory(), "XML").toString());
-			}
-
+			this.OKW_Enviroment.setFile_OKW_Ini_xml("");
+			
 			// Existiert die Datei?
 			Boolean bXML_Folder_Exists = OKW_FileHelper.DirectoryExists(this.OKW_Enviroment.getFolder_XML());
 
 			if (bXML_Folder_Exists)
 			{
-				this.OKW_Enviroment.setFolder_LogMessages(
-						Paths.get(this.OKW_Enviroment.getFolder_XML(), "LogMessages").toString());
-				this.OKW_Enviroment
-						.setFile_OKW_Ini_xml(Paths.get(this.OKW_Enviroment.getFolder_XML(), "OKW_Ini.xml").toString());
+				this.OKW_Enviroment.setFolder_LogMessages( this.OKW_Enviroment.getFolder_XML() + "/LogMessages" );
+				
+				this.OKW_Enviroment.setFile_OKW_Ini_xml(classLoader.getResource(this.OKW_Enviroment.getFolder_XML() + "/OKW_Ini.xml").getFile());
 						// Datei Existiert -> Lesen der Daten
 
-				// Existiert die Datei?
-				Boolean bFile_OKW_Ini_xml_Exists = OKW_FileHelper
-						.FileExists(this.OKW_Enviroment.getFile_OKW_Ini_xml());
-
-				if (bFile_OKW_Ini_xml_Exists)
-				{
-					Log.LogPrint("Folder_XML: >>" + this.OKW_Enviroment.getFolder_XML() + "<<");
-				}
-				else
-				{
-					this.Save();
-				}
 				this.LogAll();
 
 			}
@@ -609,5 +589,17 @@ public class OKW_Ini_Sngltn
 		}
 		return lvsReturn;
 
+	}
+	public static Boolean StringIsNullOrEmpty( String fpsString)
+	{
+		
+		Boolean lvbReturn = true;
+		
+		if(fpsString != null && !fpsString.isEmpty())
+		{
+			lvbReturn = false;
+		}	
+
+		return lvbReturn;
 	}
 }
