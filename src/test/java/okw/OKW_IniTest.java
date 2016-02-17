@@ -298,33 +298,35 @@ public class OKW_IniTest
 		}
 	}
 
-	/// \~german
+	/// \~german Prüft alle Pfade als gegen Ressorce verzeichniss.
 	/// \brief
-	/// Umgebungsvariable ist gesetzt, die gegeben OKW_Ini_Sngltn.xml existiert
-	/// jedoch nicht.
-	///
-	/// * Umgebungsvariable setzten
-	/// * Löschen der gegebene Datein date
-	/// * OKW_Ini Instanzieren.
-	/// * OKW_Ini_Sngltn.xml existiert nicht!
-	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen. ??
-	/// * OKW_Ini Eigenschaften Prüfen. Müssen auf default stehen
 	///
 	/// \~
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.11.25
-	// [Category("WIN")]
-	// [Category("OSX")]
 	@Test
-	public void TC_MyPath()
+	public void TC_VerifyAllFolders()
 	{
+		
+		//Get file from resources folder
+		ClassLoader classLoader = getClass().getClassLoader();
+		String xml_Folder = classLoader.getResource("xml").getPath();
+		
 		// Prüfling Zurücksetzten.
 		OKW_Ini_Sngltn.Reset();
 
 		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
 
-		String ExpectedDir = Paths.get(getJarExecutionDirectory(), "Test").toString();
-		String Actuell = Paths.get(myOKW_Ini.MyDirectory(), "Test").toString();
+		
+		// XML "Base-"Folder
+		String ExpectedDir = xml_Folder;
+		String Actuell = myOKW_Ini.OKW_Enviroment.getFolder_XML();
+
+		assertEquals(ExpectedDir, Actuell);
+
+		// XML "Base-"Folder
+		ExpectedDir = xml_Folder + "/logmessages";
+	    Actuell = myOKW_Ini.OKW_Enviroment.getFolder_LogMessages();
 
 		assertEquals(ExpectedDir, Actuell);
 

@@ -420,10 +420,11 @@ public class OKW_Ini_Sngltn
 
 			if (bXML_Folder_Exists)
 			{
-				this.OKW_Enviroment.setFolder_LogMessages( this.OKW_Enviroment.getFolder_XML() + "/LogMessages" );
+				this.OKW_Enviroment.setFolder_LogMessages( this.OKW_Enviroment.getFolder_XML() + "/logmessages" );
 				
-				this.OKW_Enviroment.setFile_OKW_Ini_xml(classLoader.getResource(this.OKW_Enviroment.getFolder_XML() + "/OKW_Ini.xml").getFile());
-						// Datei Existiert -> Lesen der Daten
+				this.OKW_Enviroment.setFile_OKW_Ini_xml(OKW_Enviroment.getFolder_XML() + "/OKW_Ini.xml");
+				
+				// Datei Existiert -> Lesen der Daten
 
 				this.LogAll();
 

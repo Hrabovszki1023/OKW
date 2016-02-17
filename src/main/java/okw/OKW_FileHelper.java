@@ -641,11 +641,13 @@ public class OKW_FileHelper
 
 		try
 		{
-			if (System.getProperty("file.separator") == "/")
+			String myFileSeparator =System.getProperty("file.separator");
+			
+			if (myFileSeparator.equals("/"))
 			{
 				lvsReturn = fpsPath.replace("\\", "/");
 			}
-			else if (System.getProperty("file.separator") == "\\")
+			else if (myFileSeparator.equals("||"))
 			{
 				lvsReturn = fpsPath.replace("/", "\\");
 			}

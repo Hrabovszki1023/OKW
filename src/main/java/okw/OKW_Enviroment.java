@@ -40,7 +40,7 @@
 package okw;
 
 import javax.xml.bind.annotation.*;
-//\todo TODO: ANTLR einbauen:  import OKW.ANTLR4;
+import okw.parser.*;;
 
 // \~german
 // \brief
@@ -68,6 +68,7 @@ import javax.xml.bind.annotation.*;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class OKW_Enviroment
 {
+	
 	// \~german
 	// \brief Variable hält den Pfad zum XML Verzeichniss vor
 	//
@@ -245,8 +246,7 @@ public class OKW_Enviroment
 	// [XmlElement("File_OKW_Ini_xml")]
 	public String getFile_OKW_Ini_xml()
 	{
-		// \todo TODO: ANTLR einbauen: String myPath = MyParser.ParseMe(this.File_OKW_Ini_xml);
-		String myPath = this.File_OKW_Ini_xml;
+		String myPath = Parser.ParseMe(this.File_OKW_Ini_xml);
 		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
 	}
 
@@ -267,8 +267,7 @@ public class OKW_Enviroment
 	// [XmlElement("File_OKW_Keymaps_xml")]
 	public String getFile_OKW_Keymaps_xml()
 	{
-		// \todo TODO: ANTLR einbauen: String myPath = MyParser.ParseMe(this.File_OKW_Keymaps_xml);
-		String myPath = this.File_OKW_Keymaps_xml;
+		String myPath = Parser.ParseMe(this.File_OKW_Keymaps_xml);
 		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
 	}
 
@@ -289,8 +288,7 @@ public class OKW_Enviroment
 	// [XmlElement("File_OKW_Memorize_xml")]
 	public String getFile_OKW_Memorize_xml()
 	{
-		// \todo TODO: ANTLR einbauen: String myPath = MyParser.ParseMe(this.File_OKW_Memorize_xml);
-		String myPath = this.File_OKW_Memorize_xml;
+		String myPath = Parser.ParseMe(this.File_OKW_Memorize_xml);
 		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
 	}
 
@@ -314,8 +312,7 @@ public class OKW_Enviroment
 	public String getFile_OKW_ImplementationMatrix_xml()
 
 	{
-		// \todo TODO: ANTLR einbauen: String myPath = MyParser.ParseMe(this.File_OKW_ImplementationMatrix_xml);
-		String myPath = this.File_OKW_ImplementationMatrix_xml;
+		String myPath = Parser.ParseMe(this.File_OKW_ImplementationMatrix_xml);
 		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
 	}
 
@@ -338,8 +335,8 @@ public class OKW_Enviroment
 	public String getFile_OKW_Const_xml()
 
 	{
-		// \todo TODO: ANTLR einbauen!: String myPath = MyParser.ParseMe(this.File_OKW_Const_xml);
-		String myPath = this.File_OKW_Const_xml;
+		String myPath = Parser.ParseMe(this.File_OKW_Const_xml);
+		
 		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
 	}
 
@@ -362,8 +359,8 @@ public class OKW_Enviroment
 	public String getFile_OKW_Docu_xml()
 
 	{
-		// \todo TODO: ANTLR einbauen: String myPath = MyParser.ParseMe(this.File_OKW_Docu_xml_);
-		String myPath = this.File_OKW_Docu_xml_;
+		String myPath = Parser.ParseMe(this.File_OKW_Docu_xml_);
+		
 		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
 	}
 
