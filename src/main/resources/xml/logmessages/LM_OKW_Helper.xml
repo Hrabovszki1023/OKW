@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="okwlogs.xslt"?>
 <LogMessages>
-	<!-- Class: "LogMessanger" -->
-	<Class name="OKWHelper">
+	<!-- Class: "OKW_Helper" -->
+	<Class name="OKW_Helper">
 		<Method name="GetLeftFromDelimiterNumber">
 			<Text key="OKWDelimiterCountOutOfRangeException">
 				<en>The split-position(={0}) is outside of valid range [1...{1}]!</en>

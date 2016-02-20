@@ -66,7 +66,7 @@ public class OKW_Helper
 	private static Logger_Sngltn		Log	= Logger_Sngltn.getInstance();
 
 	/// \copydoc CurrentObject::LM()
-	private static LogMessenger	LM	= new LogMessenger("OKWHelper");
+	private static LogMessenger	LM	= new LogMessenger("OKW_Helper");
 
 	/// \~german
 	/// \brief
@@ -95,7 +95,6 @@ public class OKW_Helper
 	public static String Boolean2String( Boolean fpbTrueOrFalse )
 	{
 		String lvsReturn = "";
-
 		Log.LogFunctionStartDebug("OKW_Helper.Boolean2String", "fpbTrueOrFalse", fpbTrueOrFalse.toString());
 
 		try
@@ -341,14 +340,14 @@ public class OKW_Helper
 				}
 				else
 				{
-					String lvsLM = LM.GetMessage("GetRigthFromDelimiterNumber", "OKWDelimiterCountOutOfRangeException",
+					String lvsLM = LM.GetMessage("GetRightFromDelimiterNumber", "OKWDelimiterCountOutOfRangeException",
 							fpiCount, RangeMax);
 					throw new IndexOutOfBoundsException(lvsLM);
 				}
 			}
 			else
 			{
-				String lvsLM = LM.GetMessage("GetRigthFromDelimiterNumber", "OKWDelimiterIsEmptyException");
+				String lvsLM = LM.GetMessage("GetRightFromDelimiterNumber", "OKWDelimiterIsEmptyException");
 				throw new IllegalArgumentException(lvsLM);
 			}
 
@@ -496,11 +495,15 @@ public class OKW_Helper
 		{
 
 			StringBuilder sb = new StringBuilder();
-			for (String s : fps_ListString2Concat)
+			
+			for (int i=0;  i<fps_ListString2Concat.size(); i++)
 			{
-				if (sb.length() > 0) sb.append(fps_Delimiter);
+				if (i > 0)
+				{
+					sb.append(fps_Delimiter);
+				}
 
-				sb.append(s);
+				sb.append(fps_ListString2Concat.get(i));
 			}
 
 			lvsReturn = sb.toString();
@@ -555,7 +558,7 @@ public class OKW_Helper
 			// beginning and a $ at the end
 			// c#:String pattern = "^" + Regex.Escape(fpsPattern).Replace("\\*",
 			// ".*").Replace("\\?", ".") + "$";
-			String pattern = "^" + fpsPattern.replace("\\*", ".*").replace("\\?", ".") + "$";
+			String pattern = "^" + fpsPattern.replace("*", ".*").replace("?", ".") + "$";
 
 			// c#: Regex regex;
 			// c#: regex = new Regex(pattern);
@@ -615,14 +618,14 @@ public class OKW_Helper
 			// beginning and a $ at the end
 			// c#:String pattern = "^" + Regex.Escape(fpsPattern).Replace("\\*",
 			// ".*").Replace("\\?", ".") + "$";
-			String pattern = "^" + fpsPattern.replace("\\*", ".*").replace("\\?", ".") + "$";
+			String pattern = "^" + fpsPattern.replace("*", ".*").replace("?", ".") + "$";
 
 			// Now, run the Regex as you already know
 			// c#: Regex regex;
 			// c#: regex = new Regex(pattern, RegexOptions.IgnoreCase);
 
 			// C#: lvb_Return = regex.IsMatch(fpsStringToMatch);
-			lvbReturn = fpsStringToMatch.matches(pattern);
+			lvbReturn = fpsStringToMatch.matches("(?i:" + pattern + ")");
 
 			bOK = true;
 		}
@@ -669,9 +672,7 @@ public class OKW_Helper
 	public static String RemoveBeginEndQuotations( String fps_StringinQuotations )
 	{
 
-		// String lvs_Return = Regex.Replace(fps_StringinQuotations, "^\"|\"$",
-		// "");
-		String lvsReturn = fps_StringinQuotations.replace("^\"|\"$", "");
+		String lvsReturn = fps_StringinQuotations.replaceAll("^\"|\"$", "");
 
 		return lvsReturn;
 	}
@@ -758,12 +759,12 @@ public class OKW_Helper
 
 		try
 		{
-			if (lvsTrueOrFalse == "true")
+			if (lvsTrueOrFalse.equals("true"))
 			{
 				lvbReturn = true;
 				bOK = true;
 			}
-			else if (lvsTrueOrFalse == "false")
+			else if (lvsTrueOrFalse.equals("false") )
 			{
 				lvbReturn = false;
 				bOK = true;
@@ -813,7 +814,7 @@ public class OKW_Helper
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.05.03
-	public static ArrayList<String> StrSplit( String fpsString2Split, String fpsSeparator )
+	public static ArrayList<String> StrSplit_old( String fpsString2Split, String fpsSeparator )
 	{
 		Boolean bOK = false;
 
@@ -844,6 +845,51 @@ public class OKW_Helper
 		return lvls_Splited;
 	}
 
+	
+	
+	public static ArrayList<String> StrSplit(String fpsString2Split, String fpsSeparator)
+	{
+		Boolean bOK = false;
+		ArrayList<String> SplitedList = new ArrayList<String>();
+	    int offset = 0;
+	    
+		Log.LogFunctionStartDebug("OKW_Helper.StrSplit", "fpsString2Split", fpsString2Split, "fpsSeparator",
+				fpsSeparator);
+
+		try
+		{	    
+	    while (true)
+	    {
+	        int index = fpsString2Split.indexOf(fpsSeparator, offset);
+	        if (index == -1)
+	        {
+	        	SplitedList.add(fpsString2Split.substring(offset));
+	            break;
+	        }
+	        else
+	        {
+	        	SplitedList.add(fpsString2Split.substring(offset, index));
+	            offset = (index + fpsSeparator.length());
+	        }
+	    }
+		bOK = true;
+	}
+	finally
+	{
+		if (bOK)
+		{
+			Log.LogFunctionEndDebug(SplitedList);
+		}
+		else
+		{
+			Log.LogFunctionEndDebug();
+		}
+	}
+	    
+	    return SplitedList;
+	}
+	
+	
 	/// \todo TODO: Methode Documentieren!
 	public static String StringRepeat( char c, Integer n )
 	{

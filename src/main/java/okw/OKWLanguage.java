@@ -47,10 +47,23 @@ import okw.exceptions.OKWLanguageNotImplemntedException;
 /// 
 public class OKWLanguage {
 
-	private static final OKWLanguage INSTANCE = new OKWLanguage();
+	private static OKWLanguage		Instance;
 
-	public static OKWLanguage getInstance() {
-		return INSTANCE;
+	public static OKWLanguage getInstance()
+	{
+		// Lazy Initialization (If required then only)
+		if (Instance == null)
+		{
+			// Thread Safe. Might be costly operation in some case
+			synchronized (OKW_Ini_Sngltn.class)
+			{
+				if (Instance == null)
+				{
+					Instance = new OKWLanguage();
+				}
+			}
+		}
+		return Instance;
 	}
 
 	/// \brief

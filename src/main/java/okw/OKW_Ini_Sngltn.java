@@ -426,7 +426,7 @@ public class OKW_Ini_Sngltn
 				
 				// Datei Existiert -> Lesen der Daten
 
-				this.LogAll();
+				//this.LogAll();
 
 			}
 			else

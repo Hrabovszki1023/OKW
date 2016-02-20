@@ -247,6 +247,7 @@ public class OKW_Enviroment
 	public String getFile_OKW_Ini_xml()
 	{
 		String myPath = Parser.ParseMe(this.File_OKW_Ini_xml);
+		
 		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
 	}
 

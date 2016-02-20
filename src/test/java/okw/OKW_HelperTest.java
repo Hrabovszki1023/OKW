@@ -44,8 +44,8 @@ import java.util.ArrayList;
 
 import javax.xml.xpath.XPathExpressionException;
 
-//import junit.framework.TestCase;
 import org.junit.*;
+import org.junit.rules.TestName;
 import static org.junit.Assert.*;
 
 import okw.exceptions.*;
@@ -56,14 +56,14 @@ import okw.log.*;
 //	[Category("WIN")]
 //	[Category("OSX")]
 //	[Category("Helper")]
-@Ignore
+
 public class OKW_HelperTest
     {
 
 	/// \copydoc CurrentObject::Log()
 	public static Logger_Sngltn Log;
 
-	@BeforeClass
+		//@BeforeClass
         public static void myTestFixtureSetUp()
         {
 			Log = Logger_Sngltn.getInstance();
@@ -131,7 +131,7 @@ public class OKW_HelperTest
             catch (IndexOutOfBoundsException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("The split-position(=3) is outside of valid range [1...2]!", e.getMessage());
+                Assert.assertEquals("The split-position(={0}) is outside of valid range [1...{1}]!", e.getMessage());
                 //Assert.Pass();
             }
             catch (Exception e)
@@ -153,7 +153,7 @@ public class OKW_HelperTest
             catch (IndexOutOfBoundsException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("The split-position(=0) is outside of valid range [1...2]!", e.getMessage());
+                Assert.assertEquals("The split-position(={0}) is outside of valid range [1...{1}]!", e.getMessage());
                 //Assert.pass();
             }
             catch (Exception e)
@@ -213,7 +213,7 @@ public class OKW_HelperTest
         }
 
         @Test
-        public void TC_GetRigthFromDelimiterNumber_ExceptionEmptyDelemiter()
+        public void TC_GetRightFromDelimiterNumber_ExceptionEmptyDelemiter()
         {
             try
             {
@@ -246,7 +246,7 @@ public class OKW_HelperTest
             catch (IndexOutOfBoundsException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("The split-position(=3) is outside of valid range [1...2]!", e.getMessage());
+                Assert.assertEquals("The split-position(={0}) is outside of valid range [1...{1}]!", e.getMessage());
                 //Assert.Pass();
             }
             catch (Exception e)
@@ -262,13 +262,13 @@ public class OKW_HelperTest
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
-                OKW_Helper.GetRigthFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 0);
+                OKW_Helper.GetRigthFromDelimiterNumber( "AAAAGGBBBBGGDDDD", "GG", 0 );
                 Assert.fail();
             }
             catch (IndexOutOfBoundsException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("The split-position(=0) is outside of valid range [1...2]!", e.getMessage());
+                Assert.assertEquals("The split-position(={0}) is outside of valid range [1...{1}]!", e.getMessage());
                 //Assert.Pass();
             }
             catch (Exception e)
@@ -696,7 +696,7 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.ListStringConcat(Input, "");
 
-            Assert.assertEquals("HaseFuchsBär", actual);
+            assertEquals("HaseFuchsBär", actual);
         }
 
         @Test
@@ -706,7 +706,7 @@ public class OKW_HelperTest
             Boolean expected = true;
 
             actual = OKW_Helper.MatchStrIgnoreCase("Fux, Hase*", "Fux, Hase, Bär");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
@@ -716,7 +716,7 @@ public class OKW_HelperTest
             Boolean expected = true;
 
             actual = OKW_Helper.MatchStrIgnoreCase("Fux*Bär", "Fux, Hase, Bär");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
@@ -786,7 +786,7 @@ public class OKW_HelperTest
             Boolean expected = true;
 
             actual = OKW_Helper.MatchStrIgnoreCase("*Hase*", "Fux, Hase, Bär");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
@@ -796,7 +796,7 @@ public class OKW_HelperTest
             Boolean expected = true;
 
             actual = OKW_Helper.MatchStrIgnoreCase("*Hase*", "Fux, hASE, bär");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
@@ -1046,7 +1046,7 @@ public class OKW_HelperTest
         @Test
         public void TC_String2Boolean_false_lower() throws XPathExpressionException
         {
-            Boolean actual = false;
+            Boolean actual = true;
             Boolean expected = false;
 
             actual = OKW_Helper.String2Boolean("False");
@@ -1093,8 +1093,11 @@ public class OKW_HelperTest
             {
                 OKWLanguage.getInstance().setLanguage("en");
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("Value 'Uschi' is not allowd here! Valid values are: 'true' or 'false'", e.getMessage());
-                //Assert.Pass();
+                
+                String Expected = "Value '{0}' is not allowd here! Valid values are: 'true' or 'false'";
+                String Actual = e.getMessage();
+                
+                Assert.assertEquals(Expected, Actual);
             }
             catch (Exception e)
             {

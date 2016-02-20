@@ -9,6 +9,17 @@
 		<!-- To define the plugin version in your parent POM -->
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.antlr</groupId>
+					<artifactId>antlr4-maven-plugin</artifactId>
+					<version>4.3</version>
+
+					<configuration>
+						<listener>true</listener>
+						<visitor>true</visitor>
+					</configuration>
+
+				</plugin>
 			</plugins>
 		</pluginManagement>
 		<!-- To use the plugin goals in your POM or parent POM -->
@@ -18,6 +29,7 @@
 				<artifactId>doxygen-report-maven-plugin</artifactId>
 				<version>1.0</version>
 			</plugin>
+
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.2</version>
@@ -26,21 +38,19 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.antlr</groupId>
 				<artifactId>antlr4-maven-plugin</artifactId>
-				<version>4.3</version>
 				<executions>
 					<execution>
-						<configuration>
-							<goals>
-								<goal>antlr4</goal>
-							</goals>
-							<visitor>true</visitor>
-						</configuration>
+						<goals>
+							<goal>antlr4</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
+
 		</plugins>
 	</build>
 	<reporting>
@@ -60,9 +70,9 @@
 	</reporting>
 	<dependencies>
 		<dependency>
-			<groupId>com.tunnelvisionlabs</groupId>
+			<groupId>org.antlr</groupId>
 			<artifactId>antlr4-runtime</artifactId>
-			<version>4.4</version>
+			<version>4.5.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.antlr</groupId>

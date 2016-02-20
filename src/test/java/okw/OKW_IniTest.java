@@ -1,6 +1,5 @@
-package okw;
 
-import static org.junit.Assert.*;
+package okw;
 
 import java.lang.reflect.Field;
 import java.nio.file.Paths;
@@ -8,6 +7,7 @@ import java.util.Map;
 
 import org.junit.*;
 import org.junit.rules.TestName;
+import static org.junit.Assert.*;
 
 import okw.exceptions.OKWFileDoesNotExistsException;
 import okw.log.Logger_Sngltn;
@@ -16,7 +16,9 @@ public class OKW_IniTest
 {
 	@Rule
 	public TestName	name	= new TestName();
-
+    
+	Logger_Sngltn Log = Logger_Sngltn.getInstance();
+    
 	static String			myOKW_Xml	= "";
 
 	protected static void setEnv( String fpsKey, String fpsValue )
@@ -305,7 +307,7 @@ public class OKW_IniTest
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.11.25
 	@Test
-	public void TC_VerifyAllFolders()
+	public void TC_VerifyFolder_XML()
 	{
 		
 		//Get file from resources folder
@@ -329,6 +331,194 @@ public class OKW_IniTest
 	    Actuell = myOKW_Ini.OKW_Enviroment.getFolder_LogMessages();
 
 		assertEquals(ExpectedDir, Actuell);
+
+	}
+	
+	/// \~german
+	/// \brief
+	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	/// * Umgebungsvariable setzten.
+	/// * OKW_Ini Instanzieren.
+	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	/// * OKW_Ini Eigenschaften Prüfen.
+	///
+	/// \~
+	/// \author Zoltan Hrabovszki
+	/// \date 2013.11.25
+	// [Category("WIN")]
+	@Test
+	public void TC_Check_Path_OKW_Const()
+	{
+		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
+		
+		String OKW_Xml_Path_Expected = myOKW_Ini.OKW_Enviroment.getFolder_XML();
+
+		
+       	String sActual = myOKW_Ini.OKW_Enviroment.getFile_OKW_Const_xml();
+    	String sExpected = Paths.get(OKW_Xml_Path_Expected, "OKW_Const.xml").toString();
+
+		Log.LogPrint( "  Aktual Value: " + sActual);
+        Log.LogPrint( "Expected Value: " + sExpected);
+
+        // Check Return
+        assertEquals(sExpected, sActual);
+
+	}
+
+	/// \~german
+	/// \brief
+	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	/// * Umgebungsvariable setzten.
+	/// * OKW_Ini Instanzieren.
+	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	/// * OKW_Ini Eigenschaften Prüfen.
+	///
+	/// \~
+	/// \author Zoltan Hrabovszki
+	/// \date 2013.11.25
+	// [Category("WIN")]
+	@Test
+	public void TC_Check_Path_OKW_Docu()
+	{
+		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
+		
+		String OKW_Xml_Path_Expected = myOKW_Ini.OKW_Enviroment.getFolder_XML();
+
+		
+       	String sActual = myOKW_Ini.OKW_Enviroment.getFile_OKW_Docu_xml();
+    	String sExpected = Paths.get(OKW_Xml_Path_Expected, "OKW_Docu.xml").toString();
+
+		Log.LogPrint( "  Aktual Value: " + sActual);
+        Log.LogPrint( "Expected Value: " + sExpected);
+
+        // Check Return
+        assertEquals(sExpected, sActual);
+	}
+	
+	/// \~german
+	/// \brief
+	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	/// * Umgebungsvariable setzten.
+	/// * OKW_Ini Instanzieren.
+	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	/// * OKW_Ini Eigenschaften Prüfen.
+	///
+	/// \~
+	/// \author Zoltan Hrabovszki
+	/// \date 2013.11.25
+	// [Category("WIN")]
+	@Test
+	public void TC_Check_Path_OKW_ImplementationMatrix()
+	{
+		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
+		
+		String OKW_Xml_Path_Expected = myOKW_Ini.OKW_Enviroment.getFolder_XML();
+
+       	String sActual = myOKW_Ini.OKW_Enviroment.getFile_OKW_ImplementationMatrix_xml();
+    	String sExpected = Paths.get(OKW_Xml_Path_Expected, "OKW_ImplementationMatrix.xml").toString();
+
+		Log.LogPrint( "  Aktual Value: " + sActual);
+        Log.LogPrint( "Expected Value: " + sExpected);
+
+        // Check Return
+        assertEquals(sExpected, sActual);
+
+	}
+
+	
+	/// \~german
+	/// \brief
+	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	/// * Umgebungsvariable setzten.
+	/// * OKW_Ini Instanzieren.
+	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	/// * OKW_Ini Eigenschaften Prüfen.
+	///
+	/// \~
+	/// \author Zoltan Hrabovszki
+	/// \date 2013.11.25
+	// [Category("WIN")]
+	@Test
+	public void TC_Check_Path_OKW_Ini()
+	{
+		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
+		
+		String OKW_Xml_Path_Expected = myOKW_Ini.OKW_Enviroment.getFolder_XML();
+
+       	String sActual = myOKW_Ini.OKW_Enviroment.getFile_OKW_Ini_xml();
+    	String sExpected = Paths.get(OKW_Xml_Path_Expected, "OKW_Ini.xml").toString();
+
+		Log.LogPrint( "  Aktual Value: " + sActual);
+        Log.LogPrint( "Expected Value: " + sExpected);
+
+        // Check Return
+        assertEquals(sExpected, sActual);
+        
+	}
+	
+	/// \~german
+	/// \brief
+	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	/// * Umgebungsvariable setzten.
+	/// * OKW_Ini Instanzieren.
+	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	/// * OKW_Ini Eigenschaften Prüfen.
+	///
+	/// \~
+	/// \author Zoltan Hrabovszki
+	/// \date 2013.11.25
+	// [Category("WIN")]
+	@Test
+	public void TC_Check_Path_OKW_Keymaps()
+	{
+		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
+		
+		String OKW_Xml_Path_Expected = myOKW_Ini.OKW_Enviroment.getFolder_XML();
+
+       	String sActual = myOKW_Ini.OKW_Enviroment.getFile_OKW_Keymaps_xml();
+    	String sExpected = Paths.get(OKW_Xml_Path_Expected, "OKW_Keymaps.xml").toString();
+
+		Log.LogPrint( "  Aktual Value: " + sActual);
+        Log.LogPrint( "Expected Value: " + sExpected);
+
+        // Check Return
+        assertEquals(sExpected, sActual);
+
+	}
+	
+	/// \~german
+	/// \brief
+	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	/// * Umgebungsvariable setzten.
+	/// * OKW_Ini Instanzieren.
+	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	/// * OKW_Ini Eigenschaften Prüfen.
+	///
+	/// \~
+	/// \author Zoltan Hrabovszki
+	/// \date 2013.11.25
+	// [Category("WIN")]
+	@Test
+	public void TC_Check_Path_OKW_Memorize()
+	{
+		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
+		
+		String OKW_Xml_Path_Expected = myOKW_Ini.OKW_Enviroment.getFolder_XML();
+
+       	String sActual = myOKW_Ini.OKW_Enviroment.getFile_OKW_Memorize_xml();
+    	String sExpected = Paths.get(OKW_Xml_Path_Expected, "OKW_Memorize.xml").toString();
+
+		Log.LogPrint( "  Aktual Value: " + sActual);
+        Log.LogPrint( "Expected Value: " + sExpected);
+
+        // Check Return
+        assertEquals(sExpected, sActual);
 
 	}
 

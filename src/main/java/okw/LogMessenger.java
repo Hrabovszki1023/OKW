@@ -108,21 +108,9 @@ public class LogMessenger
 	private Boolean					bInit			= false;
 	private String					cvsClassName	= "";
 
-	private Path					myXMLFile;
-	private Document				myXMLDocument;
-	private DocumentBuilderFactory	mydbFactory;
-	private DocumentBuilder			mydBuilder;
-	private XPath					myXPath;
 
-	public String getXMLFile()
-	{
-		return myXMLFile.toString();
-	}
-
-	public void setXMLFile( String xMLFile )
-	{
-		myXMLFile = Paths.get(xMLFile);
-	}
+	private OKW_XmlReader  			myXmlReader;
+	
 
 	/// \~german
 	/// \brief
@@ -321,7 +309,7 @@ public class LogMessenger
 			try
 			{
 
-				this.myXMLFile = Paths.get(OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFolder_LogMessages(),
+				Path myXMLFile = Paths.get(OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFolder_LogMessages(),
 						"LM_" + this.cvsClassName + ".xml");
 
 				if (!OKW_FileHelper.FileExists(myXMLFile.toString()))
@@ -333,14 +321,13 @@ public class LogMessenger
 							"============================================================================================================");
 
 					throw new FileNotFoundException(
-							"File not found! The File was: '" + this.myXMLFile.toString() + "'");
+							"File not found! The File was: '" + myXMLFile.toString() + "'");
 				}
 				else
 				{
-					this.mydbFactory = DocumentBuilderFactory.newInstance();
-					this.mydBuilder = mydbFactory.newDocumentBuilder();
-					this.myXMLDocument = mydBuilder.parse(this.myXMLFile.toFile());
-					this.myXPath = XPathFactory.newInstance().newXPath();
+
+					myXmlReader = new OKW_XmlReader(myXMLFile);
+					
 				}
 
 				this.bInit = true;
@@ -385,24 +372,20 @@ public class LogMessenger
 
 		try
 		{
-			String myXPathExpression = "//Class[@name='" + ClassName + "']/Method[@name='" + MethodName
-					+ "']/Text[@key='" + TextKey + "']/" + okw.OKWLanguage.getInstance().getLanguage();
+			String Language = OKWLanguage.getInstance().getLanguage();
+			
+			String myXPathExpression = "//Class[@name='" + ClassName + "']/Method[@name='" + MethodName + "']/Text[@key='" + TextKey + "']/" + Language;
+			
+			lvsReturn = myXmlReader.getTextContentSingleValue(myXPathExpression);
 
-			NodeList myNodeList = (NodeList) myXPath.compile(myXPathExpression).evaluate(this.myXMLDocument,
-					XPathConstants.NODESET);
+			if (lvsReturn.isEmpty())
+			{
 
-			if (myNodeList.getLength() > 0)
-			{
-				Node myNode = myNodeList.item(0);
-				lvsReturn = myNode.getTextContent();
-			}
-			else
-			{
 				throw new OKWMessageNotFoundException("Message not Found. Class: " + ClassName + ",  Method: "
 						+ MethodName + ", TextKey: " + TextKey);
 			}
 		}
-		catch (OKWMessageNotFoundException | XPathExpressionException e)
+		catch (OKWMessageNotFoundException e)
 		{
 			OKW_HandleException.StopRunning(e, this.getClass());
 		}
