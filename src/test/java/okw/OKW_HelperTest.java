@@ -51,11 +51,6 @@ import static org.junit.Assert.*;
 import okw.exceptions.*;
 import okw.log.*;
 
-//    [TestFixture]
-//    [Category("BaseTest")]
-//	[Category("WIN")]
-//	[Category("OSX")]
-//	[Category("Helper")]
 
 public class OKW_HelperTest
     {
@@ -116,7 +111,7 @@ public class OKW_HelperTest
         @Test
         public void TC_GetLeftFromDelimiterNumber_2a() throws XPathExpressionException
         {
-            Assert.assertEquals("AAAA", OKW_Helper.GetLeftFromDelimiterNumber("AAAACBBBBCDDDD", "C", 1));
+            assertEquals("AAAA", OKW_Helper.GetLeftFromDelimiterNumber("AAAACBBBBCDDDD", "C", 1));
         }
 
         @Test
@@ -137,7 +132,7 @@ public class OKW_HelperTest
             catch (Exception e)
             {
                 // Alle anderen Exvceptions sind Fail!
-                Assert.fail();
+                fail();
             }
         }
 

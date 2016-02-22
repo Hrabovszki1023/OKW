@@ -145,6 +145,8 @@ public class OKW_Const_Sngltn
 
 	/// \copydoc CurrentObject::Log()
 	private static Logger_Sngltn	Log				= Logger_Sngltn.getInstance();
+	
+	OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
 
 	private static OKW_Const_Sngltn	Instance;
 
@@ -175,28 +177,11 @@ public class OKW_Const_Sngltn
 	///
 	LogMessenger					LM				= null;
 
-	private Document				myXMLDocument;
-	private DocumentBuilderFactory	mydbFactory;
-	private DocumentBuilder			mydBuilder;
-	private XPath					myXPath;
+	/// \copydoc OKW_XmlReader
+	private OKW_XmlReader 			myXmlReader;
 
 	// \~german
-	// \brief Enthält den vollständigen Pfad und den Dateinamen zu der
-	// Datei OKW_Const.xml.
-	//
-	// Die Initialisierung erfolgt im Konstruktor OKW_Const.OKW_Const
-	//
-	// \~english
-	// \brief Contains the complete path and filename referring to the
-	// file OKW_Const.xml.
-	//
-	// \~
-	// \author Zoltan Hrabovszki
-	// \date 2013.12.22
-	//
-	String							OKW_Const_xml	= "";
-
-	// \~german \brief Privater Konstruktor ohne Parameter im Entwurfsmuster
+	// \brief Privater Konstruktor ohne Parameter im Entwurfsmuster
 	// Singelton initialisiert die Klasse OKW_Const.
 	//
 	// Die Initialisierung erfolgt wie folgt:
@@ -262,25 +247,20 @@ public class OKW_Const_Sngltn
 			// String myOKW_Const =
 			// OKW_Ini.getInstance().OKW_Enviroment.getFile_OKW_Const_xml();
 
-			this.OKW_Const_xml = Paths.get(OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFolder_XML(), "OKW_Const.xml")
-					.toString();
-
-			System.out.print("OKW_Const.xml: >>" + this.OKW_Const_xml + "<<");
+			String lvsOKW_Const_xml = myOKW_Ini.OKW_Enviroment.getFile_OKW_Const_xml();
 
 			LM = new LogMessenger("OKW_Const");
 
-			if (!OKW_FileHelper.FileExists(this.OKW_Const_xml))
+			if (OKW_FileHelper.FileExists(lvsOKW_Const_xml))
 			{
-				String lvsMessage = LM.GetMessage("OKW_Const", "FileNotFoundException", this.OKW_Const_xml);
-				throw new FileNotFoundException(lvsMessage);
+				myXmlReader = new OKW_XmlReader(lvsOKW_Const_xml);
 			}
 			else
 			{
-				this.mydbFactory = DocumentBuilderFactory.newInstance();
-				this.mydBuilder = mydbFactory.newDocumentBuilder();
-				this.myXMLDocument = mydBuilder.parse(this.OKW_Const_xml);
-				this.myXPath = XPathFactory.newInstance().newXPath();
+				String lvsMessage = LM.GetMessage("OKW_Const", "FileNotFoundException", lvsOKW_Const_xml);
+				throw new FileNotFoundException(lvsMessage);
 			}
+
 		}
 		catch (Exception e)
 		{
@@ -532,8 +512,9 @@ public class OKW_Const_Sngltn
 	// \return
 	//
 	//
-	// \~ \author Zoltan Hrabovszki \date 2013_12_22 <br/>
-	// Reviews:(2014_12_18_jnic, 2014_12_22_zh, 2014_12_26_jnic)
+	// \~
+	// \author Zoltan Hrabovszki 
+	// \date 2013-12-22
 	///
 	public String GetConst4Internalname( String fpsInternalname ) throws XPathExpressionException
 	{
@@ -543,24 +524,11 @@ public class OKW_Const_Sngltn
 
 		String myXPathExpression = "//okwconst[@internalname='" + fpsInternalname + "']/name/" + CL.getLanguage();
 
-		Log.LogPrintDebug("myXPath: " + myXPathExpression);
+		Log.LogPrintDebug("XPath: >>" + myXPathExpression + "<<" );
 
 		try
 		{
-			NodeList myNodeList = (NodeList) myXPath.compile(myXPathExpression).evaluate(this.myXMLDocument,
-					XPathConstants.NODESET);
-
-			if (myNodeList.getLength() > 0)
-			{
-				Node myNode = myNodeList.item(0);
-				lvsReturn = myNode.getTextContent();
-			}
-			else
-			{
-				String lvsMessage = LM.GetMessage("GetConst4Internalname", "ExceptionConst4Internalname",
-						fpsInternalname, CL.getLanguage(), this.LM.getXMLFile());
-				throw new OKWConst4InternalnameNotFoundException(lvsMessage);
-			}
+			myXmlReader.getTextContentSingleValue(myXPathExpression);
 		}
 		finally
 		{
