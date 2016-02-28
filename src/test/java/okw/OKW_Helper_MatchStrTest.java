@@ -53,9 +53,9 @@ import okw.exceptions.*;
 import okw.log.*;
 
 @RunWith(Parameterized.class)
-public class OKW_Helper__MatchStrIgnoreCaseTest
+public class OKW_Helper__MatchStrTest
     {
-    @Parameters
+    @Parameters( name = "{index}: {0} = MatchStr[\"{1}\", \"{2}\"] " )
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {     
         		{ false, "Hase",         "hase" },
@@ -71,9 +71,10 @@ public class OKW_Helper__MatchStrIgnoreCaseTest
         		
         		{ true, "Fux, Hase*",   "Fux, Hase, Bär" },
         		{ true, "Fux*Bär",      "Fux, Hase, Bär" },
-        		{ true, "Fux*Hase*Bär", "Fux, Hase, Bär" }
 
-           });
+        		{ false, "*Hase*",     "Fux, hASE, bär" },
+        		{ false, "*Hase, bär", "Fux, Hase, Bär" }
+        });
     }
     
     private Boolean ExpectedValue;
@@ -81,7 +82,7 @@ public class OKW_Helper__MatchStrIgnoreCaseTest
     private String InputValue_1;
     private String InputValue_2;
 
-    public OKW_Helper__MatchStrIgnoreCaseTest(Boolean ExpectedValue, String InputValue_1, String InputValue_2) {
+    public OKW_Helper__MatchStrTest(Boolean ExpectedValue, String InputValue_1, String InputValue_2) {
     	
     	   this.ExpectedValue = ExpectedValue;
     	    
@@ -113,113 +114,3 @@ public class OKW_Helper__MatchStrIgnoreCaseTest
             assertEquals(expected, actual);
         }
 }
-@Test
-public void TC_MatchStrIgnoreCase_MS()
-{
-    Boolean actual = false;
-    Boolean expected = true;
-
-    actual = OKW_Helper.MatchStrIgnoreCase("Fux, Hase*", "Fux, Hase, Bär");
-    assertEquals(expected, actual);
-}
-
-@Test
-public void TC_MatchStrIgnoreCase_MSM()
-{
-    Boolean actual = false;
-    Boolean expected = true;
-
-    actual = OKW_Helper.MatchStrIgnoreCase("Fux*Bär", "Fux, Hase, Bär");
-    assertEquals(expected, actual);
-}
-
-@Test
-public void TC_MatchStrIgnoreCase_MSMSM()
-{
-    Boolean actual = false;
-    Boolean expected = true;
-
-    actual = OKW_Helper.MatchStrIgnoreCase("Fux*Hase*Bär", "Fux, Hase, Bär");
-    Assert.assertEquals(expected, actual);
-}
-
-@Test
-public void TC_MatchStrIgnoreCase_MSMSM_CaseSensitve()
-{
-    Boolean actual = false;
-    Boolean expected = true;
-
-    actual = OKW_Helper.MatchStrIgnoreCase("Fux*Hase*Bär", "Fux, hase, bär");
-    Assert.assertEquals(expected, actual);
-}
-
-@Test
-public void TC_MatchStrIgnoreCase_MSM_CaseSensitve()
-{
-    Boolean actual = false;
-    Boolean expected = true;
-
-    actual = OKW_Helper.MatchStrIgnoreCase("Fux*Bär", "Fux, hase, bär");
-    Assert.assertEquals(expected, actual);
-}
-
-@Test
-public void TC_MatchStrIgnoreCase_MS_CaseSensitve()
-{
-    Boolean actual = false;
-    Boolean expected = true;
-
-    actual = OKW_Helper.MatchStrIgnoreCase("Fux, hase*", "Fux, Hase, Bär");
-    Assert.assertEquals(expected, actual);
-}
-
-@Test
-public void TC_MatchStrIgnoreCase_M_CaseSensitve()
-{
-    Boolean actual = false;
-    Boolean expected = true;
-
-    actual = OKW_Helper.MatchStrIgnoreCase("Hase", "hase");
-    Assert.assertEquals(expected, actual);
-}
-
-@Test
-public void TC_MatchStrIgnoreCase_SM()
-{
-    Boolean actual = false;
-    Boolean expected = true;
-
-    actual = OKW_Helper.MatchStrIgnoreCase("*Hase, Bär", "Fux, Hase, Bär");
-    Assert.assertEquals(expected, actual);
-}
-
-@Test
-public void TC_MatchStrIgnoreCase_SMS()
-{
-    Boolean actual = false;
-    Boolean expected = true;
-
-    actual = OKW_Helper.MatchStrIgnoreCase("*Hase*", "Fux, Hase, Bär");
-    assertEquals(expected, actual);
-}
-
-@Test
-public void TC_MatchStrIgnoreCase_SMS_CaseSensitve()
-{
-    Boolean actual = false;
-    Boolean expected = true;
-
-    actual = OKW_Helper.MatchStrIgnoreCase("*Hase*", "Fux, hASE, bär");
-    assertEquals(expected, actual);
-}
-
-@Test
-public void TC_MatchStrIgnoreCase_SM_CaseSensitve()
-{
-    Boolean actual = false;
-    Boolean expected = true;
-
-    actual = OKW_Helper.MatchStrIgnoreCase("*Hase, bär", "Fux, Hase, Bär");
-    Assert.assertEquals(expected, actual);
-}
-

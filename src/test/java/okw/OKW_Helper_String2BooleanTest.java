@@ -43,50 +43,46 @@ package okw;
 import java.util.Arrays;
 import java.util.Collection;
 
+import javax.xml.xpath.XPathExpressionException;
+
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import static org.junit.Assert.*;
-import okw.exceptions.*;
 import okw.log.*;
 
 @RunWith(Parameterized.class)
-public class OKW_Helper__MatchStrTest
+public class OKW_Helper_String2BooleanTest
     {
     @Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {     
-        		{ false, "Hase",         "hase" },
-        		{ false, "Fux*Bär",      "Fux, hase, bär" },
-        		{ false, "Fux, hase*",   "Fux, Hase, Bär" },
-        		{ false, "*Hase, bär",   "Fux, Hase, Bär" },
-        		{ false, "Fux*Hase*Bär", "Fux, hase, bär" },
+        		{ false, "false" },
+        		{ false, "False" }, 
+        		{ false, "fAlse" },
+        		{ false, "falsE" },
+        		{ false, "FaLsE" },
+        		{ false, "FALSE" },
 
-        		{ true, "Hase",         "Hase" },
-        		{ true, "Hase*",        "Hase" },
-        		{ true, "*Hase",        "Hase" },
-        		{ true, "*Hase*",       "Hase" },
-        		
-        		{ true, "Fux, Hase*",   "Fux, Hase, Bär" },
-        		{ true, "Fux*Bär",      "Fux, Hase, Bär" },
-        		{ true, "Fux*Hase*Bär", "Fux, Hase, Bär" }
-
+        		{ true, "true" },
+        		{ true, "True" },
+        		{ true, "tRue" },
+        		{ true, "truE" },
+        		{ true, "TruE" },
+        		{ true, "TRUE" }
            });
     }
     
     private Boolean ExpectedValue;
     
     private String InputValue_1;
-    private String InputValue_2;
 
-    public OKW_Helper__MatchStrTest(Boolean ExpectedValue, String InputValue_1, String InputValue_2) {
+    public OKW_Helper_String2BooleanTest(Boolean ExpectedValue, String InputValue_1 ) {
     	
     	   this.ExpectedValue = ExpectedValue;
-    	    
     	   this.InputValue_1 = InputValue_1;
-    	   this.InputValue_2 = InputValue_2;
     	   }
     
 	/// \copydoc CurrentObject::Log()
@@ -104,12 +100,13 @@ public class OKW_Helper__MatchStrTest
         }
 
         @Test
-        public void TC_MatchStr()
+        public void TC_MatchStr() throws XPathExpressionException
         {
             Boolean actual = false;
             Boolean expected = ExpectedValue;
 
-            actual = OKW_Helper.MatchStr( InputValue_1, InputValue_2);
+            actual = OKW_Helper.String2Boolean( InputValue_1 );
             assertEquals(expected, actual);
         }
 }
+

@@ -528,7 +528,7 @@ public class OKW_Const_Sngltn
 
 		try
 		{
-			myXmlReader.getTextContentSingleValue(myXPathExpression);
+			lvsReturn = myXmlReader.getTextContentSingleValue(myXPathExpression);
 		}
 		finally
 		{
@@ -814,14 +814,14 @@ public class OKW_Const_Sngltn
 
 		try
 		{
-			lvs_Yes = this.GetConst4Internalname("YES");
-			lvs_No = this.GetConst4Internalname("NO");
+			lvs_Yes = this.GetConst4Internalname("YES").toUpperCase();
+			lvs_No = this.GetConst4Internalname("NO").toUpperCase();
 
-			if (lvs_Yes.toUpperCase() == fpsYesOrNo.toUpperCase())
+			if ( lvs_Yes.equals(fpsYesOrNo.toUpperCase()))
 			{
 				lvb_Return = true;
 			}
-			else if (lvs_No.toUpperCase() == fpsYesOrNo.toUpperCase())
+			else if (lvs_No.equals( fpsYesOrNo.toUpperCase()))
 			{
 				lvb_Return = false;
 			}

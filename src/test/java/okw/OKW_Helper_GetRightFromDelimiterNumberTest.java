@@ -57,7 +57,7 @@ import okw.log.*;
 @RunWith(Parameterized.class)
 public class OKW_Helper_GetRightFromDelimiterNumberTest
     {
-    @Parameters
+    @Parameters( name = "{index}: {0} = GetRigthFromDelimiterNumber[\"{1}\", \"{2}\", \"{3}\"] " )
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {     
         		{ "BBBB",            "AAAACBBBB",           "C",  1 },

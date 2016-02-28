@@ -49,33 +49,41 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import static org.junit.Assert.*;
+import okw.exceptions.*;
 import okw.log.*;
 
 @RunWith(Parameterized.class)
-public class OKW_Helper__RemoveBeginQuotationsTest
+public class OKW_Helper__MatchStrIgnoreCaseTest
     {
-    @Parameters
+    @Parameters( name = "{index}: {0} = MatchStrIgnoreCase[\"{1}\", \"{2}\"] ")
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {     
-        		{ "",                     "\"\"" },
-        		{ "A",                    "\"A\"" },
-        		{ "ABC",                  "\"ABC\"" },
-        		{ "\"",                   "\"\"\"" },
-        		{ "A\"",                  "\"A\"\"" },
-        		{ "Fuchs \"liebt\" Hase", "Fuchs \"liebt\" Hase" },
-        		{ "Fuchs \"liebt\" Hase", "\"Fuchs \"liebt\" Hase\"" }
+        		{ true, "Fux, Hase*",   "Fux, Hase, Bär"},
+        		{ true, "Fux*Bär",      "Fux, Hase, Bär"},
+        		{ true, "Fux*Hase*Bär", "Fux, Hase, Bär"},
+        		{ true, "Fux*Hase*Bär", "Fux, hase, bär"},
+        		{ true, "Fux*Bär",      "Fux, hase, bär"},
+        		{ true, "Fux, hase*",   "Fux, Hase, Bär"},
+        		{ true, "Hase",         "hase"},
+        		{ true, "*Hase, Bär",   "Fux, Hase, Bär"},
+        		{ true, "*Hase*",       "Fux, Hase, Bär"},
+        		{ true, "*Hase*",       "Fux, hASE, bär"},
+        		{ true, "*Hase, bär",   "Fux, Hase, Bär"}
+
            });
     }
     
-    private String ExpectedValue;
+    private Boolean ExpectedValue;
     
     private String InputValue_1;
+    private String InputValue_2;
 
-    public OKW_Helper__RemoveBeginQuotationsTest(String ExpectedValue, String InputValue_1) {
+    public OKW_Helper__MatchStrIgnoreCaseTest(Boolean ExpectedValue, String InputValue_1, String InputValue_2) {
     	
     	   this.ExpectedValue = ExpectedValue;
     	    
     	   this.InputValue_1 = InputValue_1;
+    	   this.InputValue_2 = InputValue_2;
     	   }
     
 	/// \copydoc CurrentObject::Log()
@@ -95,13 +103,12 @@ public class OKW_Helper__RemoveBeginQuotationsTest
         @Test
         public void TC_MatchStr()
         {
-            String actual = "";
-            String expected = ExpectedValue;
+            Boolean actual = false;
+            Boolean expected = ExpectedValue;
 
-            actual = OKW_Helper.RemoveBeginEndQuotations( InputValue_1);
+            actual = OKW_Helper.MatchStrIgnoreCase( InputValue_1, InputValue_2);
             assertEquals(expected, actual);
         }
 }
-
 
 

@@ -43,46 +43,38 @@ package okw;
 import java.util.Arrays;
 import java.util.Collection;
 
-import javax.xml.xpath.XPathExpressionException;
-
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import static org.junit.Assert.*;
-import okw.exceptions.*;
 import okw.log.*;
 
 @RunWith(Parameterized.class)
-public class CopyOfOKW_Helper__String2BooleanTest
+public class OKW_Helper_RemoveBeginQuotationsTest
     {
-    @Parameters
+    @Parameters( name = "{index}: {0} = RemoveBeginEndQuotations[>>{1}<<] " )
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {     
-        		{ false, "false" },
-        		{ false, "False" }, 
-        		{ false, "fAlse" },
-        		{ false, "falsE" },
-        		{ false, "FaLsE" },
-        		{ false, "FALSE" },
-
-        		{ true, "true" },
-        		{ true, "True" },
-        		{ true, "tRue" },
-        		{ true, "truE" },
-        		{ true, "TruE" },
-        		{ true, "TRUE" }
+        		{ "",                     "\"\"" },
+        		{ "A",                    "\"A\"" },
+        		{ "ABC",                  "\"ABC\"" },
+        		{ "\"",                   "\"\"\"" },
+        		{ "A\"",                  "\"A\"\"" },
+        		{ "Fuchs \"liebt\" Hase", "Fuchs \"liebt\" Hase" },
+        		{ "Fuchs \"liebt\" Hase", "\"Fuchs \"liebt\" Hase\"" }
            });
     }
     
-    private Boolean ExpectedValue;
+    private String ExpectedValue;
     
     private String InputValue_1;
 
-    public CopyOfOKW_Helper__String2BooleanTest(Boolean ExpectedValue, String InputValue_1 ) {
+    public OKW_Helper_RemoveBeginQuotationsTest(String ExpectedValue, String InputValue_1) {
     	
     	   this.ExpectedValue = ExpectedValue;
+    	    
     	   this.InputValue_1 = InputValue_1;
     	   }
     
@@ -101,13 +93,15 @@ public class CopyOfOKW_Helper__String2BooleanTest
         }
 
         @Test
-        public void TC_MatchStr() throws XPathExpressionException
+        public void TC_MatchStr()
         {
-            Boolean actual = false;
-            Boolean expected = ExpectedValue;
+            String actual = "";
+            String expected = ExpectedValue;
 
-            actual = OKW_Helper.String2Boolean( InputValue_1 );
+            actual = OKW_Helper.RemoveBeginEndQuotations( InputValue_1);
             assertEquals(expected, actual);
         }
 }
+
+
 

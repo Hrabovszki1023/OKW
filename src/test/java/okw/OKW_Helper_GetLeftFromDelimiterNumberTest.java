@@ -40,9 +40,10 @@
 package okw;
 
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+
+import javax.xml.xpath.XPathExpressionException;
 
 import org.junit.*;
 import org.junit.runner.RunWith;
@@ -50,44 +51,44 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import static org.junit.Assert.*;
+import okw.exceptions.*;
 import okw.log.*;
 
 @RunWith(Parameterized.class)
-public class OKW_Helper_StringSplitTest
+public class OKW_Helper_GetLeftFromDelimiterNumberTest
     {
-    @Parameters
+    @Parameters( name = "{index}: {0} = GetRigthFromDelimiterNumber[\"{1}\", \"{2}\", \"{3}\"] " )
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {     
-        		
-        		{ new ArrayList<String>(Arrays.asList("")),                                      "",                             "/" },
-        		{ new ArrayList<String>(Arrays.asList("Root")),                                  "Root",                         "/" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "")),                              "Root/",                        "/" },
-        		{ new ArrayList<String>(Arrays.asList("", "SubDir_1")),                           "/SubDir_1",                    "/" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "SubDir_1")),                      "Root/SubDir_1",                "/" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "", "Datei")),                     "Root//Datei",                  "/" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "SubDir_1", "SubDir_2", "Datei")), "Root/SubDir_1/SubDir_2/Datei", "/" },
+        		{ "AAAA",       "AAAAGGBBBBGGDDDD", "GG", 1 },
+        		{ "AAAAGGBBBB", "AAAAGGBBBBGGDDDD", "GG", 2},
 
-        		{ new ArrayList<String>(Arrays.asList("")),                                      "",                                               "${WERT}" },
-        		{ new ArrayList<String>(Arrays.asList("Root")),                                  "Root",                                           "${WERT}" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "")),                              "Root${WERT}",                                    "${WERT}" },
-        		{ new ArrayList<String>(Arrays.asList("", "SubDir_1")),                          "${WERT}SubDir_1",                                "${WERT}" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "SubDir_1")),                      "Root${WERT}SubDir_1",                            "${WERT}" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "", "Datei")),                     "Root${WERT}${WERT}Datei",                        "${WERT}" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "SubDir_1", "SubDir_2", "Datei")), "Root${WERT}SubDir_1${WERT}SubDir_2${WERT}Datei", "${WERT}" }
+        		{ "AAAA",       "AAAACBBBB", "C", 1},
+
+        		{ "AAAACBBBB",  "AAAACBBBBCDDDD", "C", 2},
+        		{ "AAAA",       "AAAACBBBBCDDDD", "C", 1 },
+
+        		{ "AAA",             "AAA/BBB/CCC/DDD/EEE", "/", 1 },
+        		{ "AAA/BBB",         "AAA/BBB/CCC/DDD/EEE", "/", 2 },
+        		{ "AAA/BBB/CCC",    "AAA/BBB/CCC/DDD/EEE", "/", 3 },
+        		{ "AAA/BBB/CCC/DDD", "AAA/BBB/CCC/DDD/EEE", "/", 4 }
            });
     }
-    
-    private ArrayList<String> ExpectedValue;
-    
-    private String InputValue_1;
-    private String InputValue_2;
 
-    public OKW_Helper_StringSplitTest(ArrayList<String> ExpectedValue, String InputValue_1, String InputValue_2) {
+ 
+    private String ExpectedValue;
+    
+    private String InputSource;
+    private String InputDelimiter;
+    private int    InputCount;
+
+    public OKW_Helper_GetLeftFromDelimiterNumberTest(String ExpectedValue, String InputSource, String InputDelimiter, int InputCount) {
     	
-    	   this.ExpectedValue = ExpectedValue;
+    	   this.ExpectedValue  = ExpectedValue;
     	    
-    	   this.InputValue_1 = InputValue_1;
-    	   this.InputValue_2 = InputValue_2;
+    	   this.InputSource    = InputSource;
+    	   this.InputDelimiter = InputDelimiter;
+    	   this.InputCount     = InputCount;
     	   }
     
 	/// \copydoc CurrentObject::Log()
@@ -105,12 +106,16 @@ public class OKW_Helper_StringSplitTest
         }
 
         @Test
-        public void TC_MatchStr()
+        public void TC_MatchStr() throws XPathExpressionException
         {
-        	ArrayList<String> actual;
-            ArrayList<String> expected = ExpectedValue;
+            String actual = "";
+            String expected = ExpectedValue;
 
-            actual = OKW_Helper.StrSplit(InputValue_1, InputValue_2);
+            actual = OKW_Helper.GetLeftFromDelimiterNumber( InputSource, InputDelimiter, InputCount);
             assertEquals(expected, actual);
         }
 }
+
+
+
+
