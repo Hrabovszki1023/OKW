@@ -1,4 +1,3 @@
-﻿
 package okw.parser;
 
 import java.util.ArrayList;
@@ -6,11 +5,10 @@ import java.util.ArrayList;
 import javax.xml.xpath.XPathExpressionException;
 
 import okw.*;
-import okw.parser.Parser;
+// import okw.parser.*;
 import okw.log.*;
 
 import org.junit.*;
-import org.junit.rules.TestName;
 
 import static org.junit.Assert.*;
 

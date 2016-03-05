@@ -7,6 +7,9 @@ lexer grammar OKW_Lexer;
 /*
  * Lexer Rules
  */
+@header {
+package okw.parser.antlr4;
+}
 // mode DEFAULT_MODE;
 KLAMMERAUF : '${' -> mode(KLAMMER_MODE) ;
 
@@ -30,7 +33,7 @@ FILE_OKW_INI_XML      : 'File_OKW_Ini_xml' ;
 FILE_OKW_KEYMAPS_XML  : 'File_OKW_Keymaps_xml' ;
 FILE_OKW_MEMORIZE_XML : 'File_OKW_Memorize_xml' ;
 
-// Tastatur eingabe kürzel
+// Tastatureingabe kürzel
 KEYPREFIX    : 'Taste.' ;
 KEYVALUE     : 'Abbruch'
              | 'Return' ;

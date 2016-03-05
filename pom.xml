@@ -12,11 +12,12 @@
 				<plugin>
 					<groupId>org.antlr</groupId>
 					<artifactId>antlr4-maven-plugin</artifactId>
-					<version>4.3</version>
+					<version>4.5.2</version>
 
 					<configuration>
 						<listener>true</listener>
 						<visitor>true</visitor>
+						<outputDirectory>${basedir}/src/main/java/okw/parser/antlr4</outputDirectory>
 					</configuration>
 
 				</plugin>

@@ -53,7 +53,7 @@ import okw.exceptions.*;
 import okw.log.*;
 
 @RunWith(Parameterized.class)
-public class OKW_Helper__MatchStrTest
+public class OKW_Helper_MatchStrTest
     {
     @Parameters( name = "{index}: {0} = MatchStr[\"{1}\", \"{2}\"] " )
     public static Collection<Object[]> data() {
@@ -82,7 +82,7 @@ public class OKW_Helper__MatchStrTest
     private String InputValue_1;
     private String InputValue_2;
 
-    public OKW_Helper__MatchStrTest(Boolean ExpectedValue, String InputValue_1, String InputValue_2) {
+    public OKW_Helper_MatchStrTest(Boolean ExpectedValue, String InputValue_1, String InputValue_2) {
     	
     	   this.ExpectedValue = ExpectedValue;
     	    
