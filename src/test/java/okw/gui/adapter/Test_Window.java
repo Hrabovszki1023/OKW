@@ -1,9 +1,18 @@
 package okw.gui.adapter;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
-import okw.OKW_CurrentObject_Sngltn;
+import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
+
+import org.xml.sax.SAXException;
+
+import okw.OKW_FN;
 import okw.OKW_TestClipboard;
+import okw.core.OKW_CurrentObject_Sngltn;
 import okw.log.Logger_Sngltn;
 
     public class Test_Window
@@ -16,7 +25,6 @@ import okw.log.Logger_Sngltn;
 
     	Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
     	OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
-    	OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
 
         public Test_Window()
         {
@@ -28,11 +36,30 @@ import okw.log.Logger_Sngltn;
             this.Locator = fps_Locator;
         }
 
+        public String getFN()
+        {
+        	String lvsReturn = "";
+        	
+            try
+			{
+            	lvsReturn = okw.core.OKW_CurrentObject_Sngltn.getInstance().GetObjectFN() ;
+			}
+			catch (
+					XPathExpressionException | JAXBException
+					| ParserConfigurationException | SAXException | IOException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+            
+            return lvsReturn;
+        }
+        
         public void SelectWindow()
         {
             this.myLogger.LogFunctionStartDebug("SelectWindow");
             
-            String lvs_ObjectName = myCurrentObject.GetObjectName();
+            String lvs_ObjectName = getFN();
             
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("SelectWindow()");
@@ -46,7 +73,7 @@ import okw.log.Logger_Sngltn;
         public void StartApp()
         {
             this.myLogger.LogFunctionStartDebug("StartApp");
-            String lvs_ObjectName = myCurrentObject.GetObjectName();
+            String lvs_ObjectName = getFN();
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("StartApp()");
@@ -60,7 +87,7 @@ import okw.log.Logger_Sngltn;
         public void StopApp()
         {
             this.myLogger.LogFunctionStartDebug("StopApp");
-            String lvs_ObjectName = myCurrentObject.GetObjectName();
+            String lvs_ObjectName = getFN();
             
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("StopApp()");
@@ -71,13 +98,13 @@ import okw.log.Logger_Sngltn;
             return;
         }
 
-        public void TypeKey(List<String> fpLs_Value)
+        public void TypeKey(ArrayList<String> fpLs_Value)
         {
             this.myLogger.LogFunctionStartDebug("TypeKey");
 
             try
             {
-                String lvs_ObjectName = myCurrentObject.GetObjectName();
+                String lvs_ObjectName = getFN();
 
                 myClipBoard.setObjectName(lvs_ObjectName);
                 myClipBoard.setMethod("TypeKey(List<String> fpLs_Value)");

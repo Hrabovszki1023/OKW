@@ -36,7 +36,6 @@
 
 package okw.core;
 
-import okw.OKW_CurrentObject_Sngltn;
 import okw.OKWLanguage;
 import okw.OKW_Ini_Sngltn;
 import okw.log.*;

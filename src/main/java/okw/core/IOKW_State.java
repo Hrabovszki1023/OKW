@@ -363,7 +363,7 @@ public interface IOKW_State
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
         /// \todo jnic-->keine Beschreibung vorhanden
-        void MemorizeCaption(String fpsFunctionalname, String fpsMemKeyName)  throws Exception;
+        void MemorizeCaption(String fpsFunctionalname, String fpsMemKeyName) throws Exception;
 
         /// \~german
         /// \brief
@@ -843,7 +843,6 @@ public interface IOKW_State
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
         void SelectWindow(String fpsFunctionalname) throws Exception;
-
         /// \~german
         /// \brief
         /// Ruft die Sequenz eines Fensters auf.
@@ -1023,7 +1022,6 @@ public interface IOKW_State
         /// \date 2014-09-21/jnic
 		/// todo jnic-->Beschreibung angepasst 2014-10-26
         void StopApp(String fpsApplicationName) throws Exception;
-
         /// \~german
         /// \brief
         /// Tastatureingaben von Daten in das aktive Fensterobjekt.
@@ -1499,6 +1497,4 @@ public interface IOKW_State
 		/// \author Zoltan Hrabovszki
 		/// \date 2015-06-26
 		void VerifyDirectoryExists(String fpsPath, String fpsExpectedValue) throws Exception;
-
-
 	}

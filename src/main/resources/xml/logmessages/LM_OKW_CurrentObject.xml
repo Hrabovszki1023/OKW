@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="okwlogs.xslt"?>
 <LogMessages>
 	<!-- Class: "CurrentObject" -->
-	<Class name="CurrentObject">
+	<Class name="OKW_CurrentObject">
 		<!-- Method: "LogObjectData" -->
 		<Method name="LogObjectData">
 			<Text key="WindowName">

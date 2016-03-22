@@ -37,7 +37,7 @@
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
-package okw;
+package okw.core;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -50,6 +50,9 @@ import javax.xml.xpath.XPathExpressionException;
 
 import org.xml.sax.SAXException;
 
+import okw.FrameObjectDictionary_Sngltn;
+import okw.LogMessenger;
+import okw.OKW_Helper;
 import okw.exceptions.*;
 import okw.log.*;
 
@@ -95,7 +98,7 @@ public class OKW_CurrentObject_Sngltn
 	* 'sNameChildObject'.
 	*
 	 */
-	protected String		cvsChildName			= "";
+	protected String		cvsChildFN			= "";
 
 	/* \~german
 	* \brief
@@ -110,7 +113,7 @@ public class OKW_CurrentObject_Sngltn
 	* All GUI child Objects are relating to this window given mit
 	* "cvsChildName".
 	*/
-	protected String		cvsWindowName			= "";
+	protected String		cvsWindowFN			= "";
 
 	/* \~german
 	* \brief
@@ -142,7 +145,7 @@ public class OKW_CurrentObject_Sngltn
 	* * "Login.User" as reference to the child Object "User" of the window
 	* "Login"
 	*/
-	private String			cvsObjectFunctionalName	= "";
+	private String			cvsObjectFN	= "";
 
 	/* \~german
 	* \brief
@@ -179,7 +182,7 @@ public class OKW_CurrentObject_Sngltn
 	* \brief
 	* \todo TODO: für JN review
 	 */
-	private LogMessenger	LM						= null;
+	private LogMessenger	LM					= null;
 
 	/* \~german
 	* \brief
@@ -190,7 +193,7 @@ public class OKW_CurrentObject_Sngltn
 	* \brief
 	* \todo TODO: Translation to english
 	 */
-	private Logger_Sngltn			Log						= Logger_Sngltn.getInstance();
+	private Logger_Sngltn			Log			= Logger_Sngltn.getInstance();
 
 	/* \~german
 	* \brief
@@ -236,8 +239,7 @@ public class OKW_CurrentObject_Sngltn
 	 */
 	private OKW_CurrentObject_Sngltn() throws JAXBException, ParserConfigurationException, SAXException, IOException, XPathExpressionException
 	{
-		this.LM = new LogMessenger(this.getClass().getName());
-		myFrameObjectDictionary = FrameObjectDictionary_Sngltn.getInstance();
+		Init();
 	}
 
 	/* \~german
@@ -268,12 +270,23 @@ public class OKW_CurrentObject_Sngltn
 	* \author Zoltan Hrabovszki
 	* \date 2012.11.29
 	 */
-	private static OKW_CurrentObject_Sngltn instance;
+	private static OKW_CurrentObject_Sngltn Instance;
 
-	public static OKW_CurrentObject_Sngltn getInstance()
+	public static OKW_CurrentObject_Sngltn getInstance() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
 	{
-		return instance;
-	}
+		// Lazy Initialization (If required then only)
+		if (Instance == null)
+		{
+			// Thread Safe. Might be costly operation in some case
+			synchronized (OKW_CurrentObject_Sngltn.class)
+			{
+				if (Instance == null)
+				{
+					Instance = new OKW_CurrentObject_Sngltn();
+				}
+			}
+		}
+		return Instance;	}
 
 	/* \~german
 	* \brief
@@ -311,13 +324,11 @@ public class OKW_CurrentObject_Sngltn
 	{
 		Log.LogFunctionStartDebug("CallMethod", "String fpsMethod", fpsMethod);
 
-		Class<?>[] paramTypes = {};
-
 		Class<?> myFrame_Class = this.cvoObject.getClass();
 
 		try
 		{
-			Method myMethod = myFrame_Class.getMethod(fpsMethod, paramTypes);
+			Method myMethod = myFrame_Class.getMethod(fpsMethod);
 			myMethod.invoke(cvoObject);
 		}
 		catch (NoSuchMethodException e)
@@ -377,9 +388,11 @@ public class OKW_CurrentObject_Sngltn
 		Class<?>[] paramTypes = { ArrayList.class };
 
 		Class<?> myFrame_Class = this.cvoObject.getClass();
-
+		
 		try
 		{
+			System.out.println( myFrame_Class.getDeclaredMethods().length );
+			
 			Method myMethod = myFrame_Class.getMethod(fpsMethod, paramTypes);
 			myMethod.invoke(cvoObject, fpLsParameter);
 		}
@@ -500,8 +513,7 @@ public class OKW_CurrentObject_Sngltn
 	public void CallMethod( String fpsMethod, String fpsParameter_1 )
 			throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException
 	{
-		Log.LogFunctionStartDebug("CallMethod", "String fpsMethod", fpsMethod, "String fps_Parameter_1",
-				fpsParameter_1);
+		Log.LogFunctionStartDebug("CallMethod", "String fpsMethod", fpsMethod, "String fps_Parameter_1", fpsParameter_1);
 
 		Class<?>[] paramTypes = { String.class };
 
@@ -509,7 +521,7 @@ public class OKW_CurrentObject_Sngltn
 
 		try
 		{
-			Method myMethod = myFrame_Class.getMethod(fpsMethod, paramTypes);
+			Method myMethod = myFrame_Class.getDeclaredMethod(fpsMethod, paramTypes);
 			myMethod.invoke(cvoObject, fpsParameter_1);
 		}
 		catch (NoSuchMethodException e)
@@ -593,6 +605,7 @@ public class OKW_CurrentObject_Sngltn
 		return;
 	}
 
+	
 	/* \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
@@ -639,7 +652,6 @@ public class OKW_CurrentObject_Sngltn
 				"String fpsParameter_2", fpsParameter_2, "String fpsParameter_3", fpsParameter_3);
 
 		Class<?>[] paramTypes = { String.class, String.class, String.class };
-
 		Class<?> myFrame_Class = this.cvoObject.getClass();
 
 		try
@@ -1366,6 +1378,7 @@ public class OKW_CurrentObject_Sngltn
 		Log.LogFunctionStartDebug("CallMethodWithReturn", 
 								  "String fpsMethod", fpsMethod,
 								  "String fpsParameter_1", fpsParameter_1);
+
 		Class<?>[] paramTypes = {String.class};
 		Class<?> myFrame_Class = this.cvoObject.getClass();
 
@@ -1519,15 +1532,15 @@ public class OKW_CurrentObject_Sngltn
 	* \author Zoltan Hrabovszki
 	* \date 2012.11.01
 	 */
-	public String GetObjectName()
+	public String GetObjectFN()
         {
             String lvsReturn = "";;
             Boolean bOK = false;
             Log.LogFunctionStartDebug("CurrentObject.GetObjectName");
             try
             {
-                lvsReturn = this.cvsObjectName;
-                bOK = true;
+                lvsReturn = this.cvsObjectFN;
+                bOK = true;	
             }
             finally
             {
@@ -1564,10 +1577,10 @@ public class OKW_CurrentObject_Sngltn
 		Log.LogFunctionStartDebug("CurrentObject.Init");
 		try
 		{
-			this.LM = new LogMessenger(this.getClass().getName());
+			this.LM = new LogMessenger("OKW_CurrentObject");
 			this.cvoObject = null;
-			this.cvsChildName = "";
-			this.cvsWindowName = "";
+			this.cvsWindowFN = "";
+			this.cvsWindowFN = "";
 			this.cvsObjectName = "";
 			this.myFrameObjectDictionary = null;
 			this.myFrameObjectDictionary = FrameObjectDictionary_Sngltn.getInstance();
@@ -1615,8 +1628,8 @@ public class OKW_CurrentObject_Sngltn
 		try
 		{
 			Log.ResOpenList("Object Data:");
-			Log.LogPrint(this.LM.GetMessage("LogObjectData", "WindowName", this.cvsWindowName));
-			Log.LogPrint(this.LM.GetMessage("LogObjectData", "ChildWindowName", this.cvsChildName));
+			Log.LogPrint(this.LM.GetMessage("LogObjectData", "WindowName", this.cvsWindowFN));
+			Log.LogPrint(this.LM.GetMessage("LogObjectData", "ChildWindowName", this.cvsChildFN));
 			Log.LogPrint(this.LM.GetMessage("LogObjectData", "Class of Object", this.cvoObject.getClass().getName()));
 			Log.LogPrint(this.LM.GetMessage("LogObjectData", "FullNameOfObject", this.cvsObjectName));
 		}
@@ -1667,11 +1680,11 @@ public class OKW_CurrentObject_Sngltn
 		Log.LogPrintDebug(LM.GetMessage("SetChildName", "GivenWindownameDebug"));
 		try
 		{
-			if ( !OKW_Helper.StringIsNullOrEmpty(this.cvsWindowName))
+			if ( !OKW_Helper.StringIsNullOrEmpty(this.cvsWindowFN))
 			{
-				Log.LogPrintDebug(LM.GetMessage("SetChildName", "SetChildwindowNameDebug", this.cvsWindowName,
-						this.cvsChildName));
-				this.cvsChildName = fpsChildName;
+				Log.LogPrintDebug(LM.GetMessage("SetChildName", "SetChildwindowNameDebug", this.cvsWindowFN,
+						this.cvsChildFN));
+				this.cvsChildFN = fpsChildName;
 				this.UpdateObject();
 				bOK = true;
 			}
@@ -1727,8 +1740,8 @@ public class OKW_CurrentObject_Sngltn
 		Log.LogFunctionStartDebug("CurrentObject.SetWindowName", "String fpsWindowName", fpsWindowName);
 		try
 		{
-			this.cvsWindowName = fpsWindowName;
-			this.cvsChildName = "";
+			this.cvsWindowFN = fpsWindowName;
+			this.cvsChildFN = "";
 			this.UpdateObject();
 			lvoReturn = this.cvoObject;
 			bOK = true;
@@ -1772,7 +1785,7 @@ public class OKW_CurrentObject_Sngltn
 		Log.LogPrintDebug(LM.GetMessage("ResetToWindow", "ResetToWindowDebug"));
 		try
 		{
-			this.cvsChildName = "";
+			this.cvsChildFN = "";
 			this.UpdateObject();
 			bOK = true;
 		}
@@ -1824,21 +1837,25 @@ public class OKW_CurrentObject_Sngltn
 		Log.LogFunctionStartDebug("CurrentObject.UpdateObject");
 		try
 		{
-			if (this.cvsChildName == "")
+			if (this.cvsChildFN == "")
 			{
-				// < 2. Get the Window-Object...
-				this.cvoObject = myFrameObjectDictionary.GetParentObjectByName(this.cvsWindowName);
-				// "frm_" + this.cvsWindowName; //< 1. Set the cvsObjectName for
-				// a window-Object.
+				// -> 2. Get the Window-Object...
+				this.cvoObject = myFrameObjectDictionary.GetParentObjectByName(this.cvsWindowFN);
 				this.cvsObjectName = this.cvoObject.getClass().getName();
+				this.cvsObjectFN = this.cvsWindowFN;
+				
 			}
 			else
 			{
 				// < 1. Set the cvsObjectName for a child-Object.
-				this.cvsObjectName = this.cvsWindowName + "." + this.cvsChildName;
-				// < 2. Now get the Window-Object...
-				this.cvoObject = myFrameObjectDictionary.GetChildObjectByName(this.cvsWindowName,
-						this.cvsChildName);
+				this.cvsObjectFN = this.cvsWindowFN + "." + this.cvsChildFN;
+
+				// < 2. Now get the Object-Instance...
+				this.cvoObject = null;
+				this.cvoObject = myFrameObjectDictionary.GetChildObjectByName(this.cvsWindowFN, this.cvsChildFN);
+
+				// < 3. Set tecnicalname of Object-Instance...
+				this.cvsObjectName = this.cvoObject.getClass().getName();
 			}
 		}
 		finally

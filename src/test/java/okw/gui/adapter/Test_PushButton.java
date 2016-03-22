@@ -38,10 +38,18 @@
 */
 package okw.gui.adapter;
 
+import java.io.IOException;
 import java.util.List;
 
-import okw.OKW_CurrentObject_Sngltn;
+import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
+
+import org.xml.sax.SAXException;
+
+import okw.OKW_FN;
 import okw.OKW_TestClipboard;
+import okw.core.OKW_CurrentObject_Sngltn;
 import okw.log.*;
 
     // TODO Implemetierung einschalten : IOKW_LinkObj
@@ -53,10 +61,29 @@ import okw.log.*;
         String Locator;
         
         Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
-        OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
+        //OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
         OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
 
         String myValue = "";
+        
+        public String getFN()
+        {
+            String lvsReturn = "";
+            
+            try
+			{
+				lvsReturn = okw.core.OKW_CurrentObject_Sngltn.getInstance().GetObjectFN();
+			}
+			catch (
+					XPathExpressionException | JAXBException
+					| ParserConfigurationException | SAXException | IOException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+            
+            return lvsReturn;
+        }
         
         /// \~german
         /// \brief GUI-TestObjekt für ein Pushbotton
@@ -97,7 +124,9 @@ import okw.log.*;
         public void ClickOn()
         {
             this.myValue = "NO VALUE";
-            String lvs_ObjectName = myCurrentObject.GetObjectName();
+            
+            //String lvs_ObjectName = myCurrentObject.GetObjectName();
+            String lvs_ObjectName = getFN();
             
             this.myLogger.LogFunctionStartDebug("ClickOn");
 
@@ -125,7 +154,7 @@ import okw.log.*;
             this.myValue = "NO VALUE";
             this.myLogger.LogFunctionStartDebug("ClickOn_DOUBLECLICK");
             
-            String lvs_ObjectName = myCurrentObject.GetObjectName();
+            String lvs_ObjectName = getFN();;
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("ClickOn_DOUBLECLICK()");
@@ -159,7 +188,7 @@ import okw.log.*;
             this.myValue = fpLsValue.get(0);
             myLogger.LogFunctionStartDebug("TypeKey");
             
-            String lvs_ObjectName = myCurrentObject.GetObjectName();
+            String lvs_ObjectName = getFN();;
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("TypeKey()");

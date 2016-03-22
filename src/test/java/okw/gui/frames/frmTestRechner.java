@@ -30,7 +30,6 @@ public class frmTestRechner extends Test_Window
     {
 	Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
 	OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
-	OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
 
         /// \brief
         /// Test Objekt mit allen OKW-Methoden,
@@ -109,13 +108,14 @@ public class frmTestRechner extends Test_Window
             return;
         }
 
-        public void TestSequence(String SEQID)
+        public void TestSequence(String SEQID) throws Exception
         {
             EN.SelectWindow("Rechner");
             EN.ClickOn("Taste_3");
             EN.ClickOn("Taste_2");
         }
 
+        
         // Kindobjekt >>mit<< Anpassung
         public class __Taste_3 extends Test_PushButton
         {
@@ -142,5 +142,12 @@ public class frmTestRechner extends Test_Window
                 myLogger.LogFunctionEndDebug();
                 return;
             }
-}
+            
+            @Override
+            public String getFN()
+            {
+                return "Rechner";
+            }
+
+        }
     }

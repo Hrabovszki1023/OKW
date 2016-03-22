@@ -1,4 +1,5 @@
-// Generated from OKW_Lexer.g4 by ANTLR 4.5.2
+// Generated from OKW_Lexer.g4 by ANTLR 4.3
+
 package okw.parser.antlr4;
 
 import org.antlr.v4.runtime.Lexer;
@@ -12,7 +13,7 @@ import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class OKW_Lexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.5.2", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.3", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -27,57 +28,17 @@ public class OKW_Lexer extends Lexer {
 		"DEFAULT_MODE", "KLAMMER_MODE"
 	};
 
+	public static final String[] tokenNames = {
+		"'\\u0000'", "'\\u0001'", "'\\u0002'", "'\\u0003'", "'\\u0004'", "'\\u0005'", 
+		"'\\u0006'", "'\\u0007'", "'\b'", "'\t'", "'\n'", "'\\u000B'", "'\f'", 
+		"'\r'", "'\\u000E'", "'\\u000F'", "'\\u0010'"
+	};
 	public static final String[] ruleNames = {
 		"KLAMMERAUF", "TEXT", "WS", "KLAMMERZU", "FOLDER_LOGMESSAGES", "FOLDER_XML", 
 		"FILE_OKW_CONST_XML", "FILE_OKW_DOCU_XML", "FILE_OKW_IMPLEMENTATIONMATRIX_XML", 
 		"FILE_OKW_INI_XML", "FILE_OKW_KEYMAPS_XML", "FILE_OKW_MEMORIZE_XML", "KEYPREFIX", 
 		"KEYVALUE", "ENVVAL", "VALUE"
 	};
-
-	private static final String[] _LITERAL_NAMES = {
-		null, "'${'", null, null, "'}'", "'Folder_LogMessages'", "'Folder_XML'", 
-		"'File_OKW_Const_xml'", "'File_OKW_Docu_xml'", "'File_OKW_ImplementationMatrix_xml'", 
-		"'File_OKW_Ini_xml'", "'File_OKW_Keymaps_xml'", "'File_OKW_Memorize_xml'", 
-		"'Taste.'"
-	};
-	private static final String[] _SYMBOLIC_NAMES = {
-		null, "KLAMMERAUF", "TEXT", "WS", "KLAMMERZU", "FOLDER_LOGMESSAGES", "FOLDER_XML", 
-		"FILE_OKW_CONST_XML", "FILE_OKW_DOCU_XML", "FILE_OKW_IMPLEMENTATIONMATRIX_XML", 
-		"FILE_OKW_INI_XML", "FILE_OKW_KEYMAPS_XML", "FILE_OKW_MEMORIZE_XML", "KEYPREFIX", 
-		"KEYVALUE", "ENVVAL", "VALUE"
-	};
-	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
-
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	@Deprecated
-	public static final String[] tokenNames;
-	static {
-		tokenNames = new String[_SYMBOLIC_NAMES.length];
-		for (int i = 0; i < tokenNames.length; i++) {
-			tokenNames[i] = VOCABULARY.getLiteralName(i);
-			if (tokenNames[i] == null) {
-				tokenNames[i] = VOCABULARY.getSymbolicName(i);
-			}
-
-			if (tokenNames[i] == null) {
-				tokenNames[i] = "<INVALID>";
-			}
-		}
-	}
-
-	@Override
-	@Deprecated
-	public String[] getTokenNames() {
-		return tokenNames;
-	}
-
-	@Override
-
-	public Vocabulary getVocabulary() {
-		return VOCABULARY;
-	}
 
 
 	public OKW_Lexer(CharStream input) {
@@ -87,6 +48,9 @@ public class OKW_Lexer extends Lexer {
 
 	@Override
 	public String getGrammarFileName() { return "OKW_Lexer.g4"; }
+
+	@Override
+	public String[] getTokenNames() { return tokenNames; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }

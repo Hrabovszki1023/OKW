@@ -46,6 +46,21 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // \todo TODO: ANTLR einbauen import OKW.ANTLR4;
 import okw.*;
 import okw.exceptions.*;
@@ -67,7 +82,7 @@ public class OK implements IOKW_State
 	private static OKWLanguage		CL;
 
 	/// \copydoc Logger
-	private static Logger_Sngltn			Log;
+	private static Logger_Sngltn	Log;
 
 	/// \copydoc LogMessenger
 	private static LogMessenger		LM;
@@ -768,7 +783,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE") || fpsValue == "")
+			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> Abbrechen...
 				// \todo TODO: Meldung sprachabhägig auslagern!
@@ -809,7 +824,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE") || fpsValue == "")
+			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> Abbrechen...
 				// \todo TODO: Meldung sprachabhägig auslagern!
@@ -872,10 +887,19 @@ public class OK implements IOKW_State
 
 		try
 		{
-			ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(fpsValue);
+			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
+			{
+				// Wenn der 1. Wert = IGNORE ist -> Abbrechen...
+				// \todo TODO: Meldung sprachabhägig auslagern!
+				Log.LogPrintDebug("Ignore...");
+			}
+			else
+			{
+				ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(fpsValue);
 
-			CO.SetChildName(fpsFunctionalname);
-			CO.CallMethod("SelectMenu_Value", lvlsValue);
+				CO.SetChildName(fpsFunctionalname);
+				CO.CallMethod("SelectMenu_Value", lvlsValue);
+			}
 		}
 		catch (Exception e)
 		{
@@ -980,7 +1004,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (SEQ_ID == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE") || SEQ_ID == "")
+			if ( SEQ_ID.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || SEQ_ID.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> Abbrechen...
 				// \todo TODO: Meldung sprachabhägig auslagern!
@@ -1050,7 +1074,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE") || fpsValue == "")
+			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrint(LM.GetMessage("SetValue", "Ignore"));
@@ -1137,7 +1161,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE") || fpsValue == "")
+			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrint(LM.GetMessage("TypeKey", "Ignore"));
@@ -1178,7 +1202,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE") || fpsValue == "")
+			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrint(LM.GetMessage("TypeKeyTablecell", "Ignore"));
@@ -1216,7 +1240,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE") || fpsValue == "")
+			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrint(LM.GetMessage("TypeKeyWindow", "Ignore"));
@@ -1309,15 +1333,14 @@ public class OK implements IOKW_State
 			// Hier sind nur drei werte erlaubt: YES/NO/IGNORE
 
 			// Prüfen ob ignoriert werden muss...
-			if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")
-					|| fpsExpectedValue == "")
+			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrint(LM.GetMessage("VerifyExists", "Ignore"));
 			}
 			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-			else if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES")
-					|| fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))
+			else if (fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES") )
+					|| fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO") ))
 			{
 				// Sprachabhängiges YES/NO nach Boolean transformieren
 				Boolean lvsbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(fpsExpectedValue);
@@ -1365,15 +1388,14 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")
-					|| fpsExpectedValue == "")
+			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrint(LM.GetMessage("VerifyHasFocus", "Ignore"));
 			}
 			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-			else if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES")
-					|| fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))
+			else if (fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
+					|| fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO")) )
 			{
 				// Sprachabhängiges YES/NO nach Boolean transformieren
 				Boolean lvsbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(fpsExpectedValue);
@@ -1420,15 +1442,13 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")
-					|| fpsExpectedValue == "")
+			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrint(LM.GetMessage("VerifyIsActive", "Ignore"));
 			}
 			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-			else if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES")
-					|| fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))
+			else if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES") ) || fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO")) )
 			{
 				CO.SetChildName(fpsFunctionalname);
 
@@ -1476,8 +1496,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")
-					|| fpsExpectedValue == "")
+			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrint(LM.GetMessage("VerifyLabel", "Ignore"));
@@ -1530,8 +1549,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")
-					|| fpsExpectedValue == "")
+			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrint(LM.GetMessage("VerifySelectedValue", "Ignore"));
@@ -1585,8 +1603,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")
-					|| fpsExpectedValue == "")
+			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrint(LM.GetMessage("VerifyTablecellValue", "Ignore"));
@@ -1638,8 +1655,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")
-					|| fpsExpectedValue == "")
+			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrint(LM.GetMessage("VerifyTooltip", "Ignore"));
@@ -1691,8 +1707,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")
-					|| fpsExpectedValue == "")
+			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrint(LM.GetMessage("VerifyValue", "Ignore"));
@@ -1785,8 +1800,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsPathAndFileName == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")
-					|| fpsPathAndFileName == "")
+			if ( fpsPathAndFileName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsPathAndFileName.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("FileDelete", "Ignore"));
@@ -1826,8 +1840,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")
-					|| fpsExpectedValue == "")
+			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyFileExists", "Ignore"));
@@ -1884,8 +1897,7 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")
-					|| fpsExpectedValue == "")
+			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyDirectoryExists", "Ignore"));
@@ -1934,7 +1946,7 @@ public class OK implements IOKW_State
 	}
 
 	@Override
-	public void CopyFile( String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName )
+	public void CopyFile( String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName ) throws Exception
 	{
 		// TODO Auto-generated method stub
 

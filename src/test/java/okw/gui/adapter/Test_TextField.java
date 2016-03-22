@@ -43,7 +43,7 @@ package okw.gui.adapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import okw.OKW_CurrentObject_Sngltn;
+import okw.OKW_FN;
 import okw.OKW_TestClipboard;
 import okw.log.*;
 
@@ -54,7 +54,6 @@ import okw.log.*;
         String Locator;
         
         Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
-        OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
         OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
 
         String myValue = "";
@@ -64,12 +63,16 @@ import okw.log.*;
             this.Locator = fps_Locator;
         }
 
+        public String getFN()
+        {
+            return Test_PushButton.class.getAnnotation(OKW_FN.class).FN();
+        }
 
         public void ClickOn()
         {
             this.myValue = "NO VALUE";
             this.myLogger.LogFunctionStartDebug("ClickOn");
-            String lvs_ObjectName = myCurrentObject.GetObjectName();
+            String lvs_ObjectName = getFN();
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("ClickOn()");
@@ -83,7 +86,7 @@ import okw.log.*;
         {
             this.myValue = "NO VALUE";
             this.myLogger.LogFunctionStartDebug("ClickOn_DOUBLECLICK");
-            String lvs_ObjectName = myCurrentObject.GetObjectName();
+            String lvs_ObjectName = getFN();
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("ClickOn_DOUBLECLICK()");
@@ -100,7 +103,7 @@ import okw.log.*;
             myLogger.LogFunctionStartDebug(this.getClass().getName() + ".GetValue");
             lvLsReturn.add(this.myValue);
 
-            String lvs_ObjectName = myCurrentObject.GetObjectName();
+            String lvs_ObjectName = getFN();
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("OKW_GetValue()");
@@ -119,7 +122,7 @@ import okw.log.*;
             myLogger.LogFunctionStartDebug(this.getClass().getName() + ".GetValue_TOOLTIP");
             lvLsReturn.add(this.myValue);
 
-            String lvs_ObjectName = myCurrentObject.GetObjectName();
+            String lvs_ObjectName = getFN();
             
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("OKW_GetValue_TOOLTIP()");
@@ -135,7 +138,7 @@ import okw.log.*;
         {
             this.myValue = "";
             myLogger.LogFunctionStartDebug(this.getClass().getName() + ".Set_Focus");
-            String lvs_ObjectName = myCurrentObject.GetObjectName();
+            String lvs_ObjectName = getFN();
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("Set_Focus()");
@@ -150,7 +153,7 @@ import okw.log.*;
             this.myValue = fpLs_Value.get(0);
             myLogger.LogFunctionStartDebug(this.getClass().getName() + ".TypeKey");
             
-            String lvs_ObjectName = myCurrentObject.GetObjectName();
+            String lvs_ObjectName = getFN();
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("OKW_TypeKey(List<String> fpLs_Value)");

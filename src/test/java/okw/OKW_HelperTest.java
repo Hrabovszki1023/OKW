@@ -105,7 +105,7 @@ public class OKW_HelperTest
         @Test
         public void TC_GetLeftFromDelimiterNumber_2() throws XPathExpressionException
         {
-            Assert.assertEquals("AAAACBBBB", OKW_Helper.GetLeftFromDelimiterNumber("AAAACBBBBCDDDD", "C", 2));
+            assertEquals("AAAACBBBB", OKW_Helper.GetLeftFromDelimiterNumber("AAAACBBBBCDDDD", "C", 2));
         }
 
         @Test
