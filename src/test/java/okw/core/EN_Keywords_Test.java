@@ -11,10 +11,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class EN_Keywords
+public class EN_Keywords_Test
 {
-
-	
 	static Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
 	static OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
 
