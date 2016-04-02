@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import okw.OKW_Memorize_Sngltn;
 import okw.OKW_TestClipboard;
 import okw.log.Logger_Sngltn;
+import okw.log.log2html.Log2HTML;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -15,28 +16,28 @@ public class EN_Keywords_Test
 {
 	static Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
 	static OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
-
+	static Log2HTML myLog2HTML = null;
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception
 	{
- 
         // Reset des Loggers: Alle Geladenen Instanzen löschen
+		Core.Init();
         myLogger.Init();
-        //myLogger.AddLogger(new Log2Console());
-
+        myLog2HTML = new Log2HTML("EN_Keywords_Test.html");
+        myLogger.AddLogger(myLog2HTML);
         myLogger.setDebugMode(false);
-
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception
 	{
+		myLog2HTML.Result2HTML( "EN_Keywords_Test.html" );
 	}
 
 	@Before
 	public void setUp() throws Exception
 	{
-        EN.BeginTest("");
 	}
 
 	@After
@@ -58,7 +59,8 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_ClickOn() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	            EN.BeginTest("TC_ClickOn");
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -86,7 +88,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_ClickOn_Clicktype() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+
+	        	EN.BeginTest("TC_ClickOn_Clicktype");
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -115,7 +119,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_LogExists() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+
+	        	EN.BeginTest("TC_LogExists");
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -143,7 +149,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_LogHasFocus() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_LogHasFocus");
+	        	
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -171,7 +179,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_LogIsActive() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_LogIsActive");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -199,7 +209,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_LogSelected() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_LogSelected");
+
+	        	EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
 	            // Check the Name, Called Method and Value of Actuel object
@@ -226,7 +238,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_LogTablecellValue() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_LogTablecellValue");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -255,7 +269,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_LogTooltip() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_LogTooltip");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -283,7 +299,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_LogValue() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_LogValue");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -311,7 +329,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_MemorizeExists() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_MemorizeExists");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -341,7 +361,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_MemorizeHasFocus() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_MemorizeHasFocus");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -371,7 +393,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_MemorizeIsActive() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_MemorizeIsActive");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -401,7 +425,10 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_MemorizeSelectedValue() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+
+	        	EN.BeginTest("TC_MemorizeSelectedValue");
+	        	
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -431,7 +458,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_MemorizeTablecellValue() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_MemorizeTablecellValue");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -463,7 +492,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_MemorizeTooltip() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_MemorizeTooltip");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -493,7 +524,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_MemorizeValue() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_MemorizeValue");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -523,7 +556,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_SelectMenu() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_SelectMenu");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -551,7 +586,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_SelectMenu_Value_MV() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_SelectMenu_Value_MV");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -581,7 +618,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_SelectMenu_Value_SV() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_SelectMenu_Value_SV");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -609,7 +648,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_SelectTablecell() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_SelectTablecell");
+
+	        	EN.SelectWindow("Rechner");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("Rechner", myClipBoard.getObjectName());
@@ -636,7 +677,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_SelectTablecell_Clicktype() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_SelectTablecell_Clicktype");
+
+	        	EN.SelectWindow("Rechner");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("Rechner", myClipBoard.getObjectName());
@@ -664,7 +707,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_SelectWindow() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_SelectWindow");
+
+	        	EN.SelectWindow("Rechner");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("Rechner", myClipBoard.getObjectName());
@@ -685,7 +730,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_SelectWindow_MV() throws Exception
 	        {
-	            EN.TypeKeyWindow("Rechner", "Wert 1${SEP}Wert 2${SEP}Wert 3");
+	        	EN.BeginTest("TC_SelectWindow_MV");
+
+	        	EN.TypeKeyWindow("Rechner", "Wert 1${SEP}Wert 2${SEP}Wert 3");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("Rechner", myClipBoard.getObjectName());
@@ -708,7 +755,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_SelectWindow_SV() throws Exception
 	        {
-	            EN.TypeKeyWindow("Rechner", "Wert");
+	        	EN.BeginTest("TC_SelectWindow_SV");
+
+	        	EN.TypeKeyWindow("Rechner", "Wert");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("Rechner", myClipBoard.getObjectName());
@@ -729,7 +778,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_Select_Clicktype() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_Select_Clicktype");
+
+	        	EN.SelectWindow("Rechner");
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("Rechner", myClipBoard.getObjectName());
 	            assertEquals("SelectWindow()", myClipBoard.getMethod());
@@ -737,7 +788,7 @@ public class EN_Keywords_Test
 	            assertEquals(1, myClipBoard.getValue().size());
 	            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
 
-	            EN.Select("All_MethodsObj", "Hanna", "DOUBLEClick");
+	        	EN.Select("All_MethodsObj", "Hanna", "DOUBLEClick");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
@@ -760,7 +811,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_Select_MultipleValue() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_Select_MultipleValue");
+
+	        	EN.SelectWindow("Rechner");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("Rechner", myClipBoard.getObjectName());
@@ -790,7 +843,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_Select_SingleValue() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_Select_SingleValue");
+
+	        	EN.SelectWindow("Rechner");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("Rechner", myClipBoard.getObjectName());
@@ -818,7 +873,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_Sequence() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_Sequence");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -846,7 +903,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_SetFocus() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_SetFocus");
+
+	        	EN.SelectWindow("Rechner");
 	            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
 	            assertEquals("Rechner", myClipBoard.getObjectName());
 	            assertEquals("SelectWindow()", myClipBoard.getMethod());
@@ -869,10 +928,8 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_SetValue_MultipleValues() throws Exception
 	        {
-	        	myLogger.LogFunctionStart("TC_SetValue_MultipleValues");
+	        	EN.BeginTest("TC_SetValue_MultipleValues");
 
-	            try
-	            {
 	                EN.BeginTest("TC_SetValue_MultipleValues");
 
 	                EN.SelectWindow("Rechner");
@@ -889,11 +946,6 @@ public class EN_Keywords_Test
 	                assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
 	                assertEquals("SetValue()", myClipBoard.getMethod());
 	                EN.EndTest();
-	            }
-	            finally
-	            {
-	            	myLogger.LogFunctionEnd();
-	            }
 	        }
 
 	        /// \~german
@@ -907,7 +959,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_SetValue_SV() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_SetValue_SV");
+
+	        	EN.SelectWindow("Rechner");
 	            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
 	            assertEquals("Rechner", myClipBoard.getObjectName());
 	            assertEquals("SelectWindow()", myClipBoard.getMethod());
@@ -931,7 +985,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_StartApp() throws Exception
 	        {
-	            EN.StartApp("Rechner");
+	        	EN.BeginTest("TC_StartApp");
+
+	        	EN.StartApp("Rechner");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
@@ -950,7 +1006,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_StopApp() throws Exception
 	        {
-	            EN.StopApp("Rechner");
+	        	EN.BeginTest("TC_StopApp");
+
+	        	EN.StopApp("Rechner");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
@@ -969,7 +1027,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_TypeKeyTablecell_MultipleValues() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_TypeKeyTablecell_MultipleValues");
+
+	        	EN.SelectWindow("Rechner");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("Rechner", myClipBoard.getObjectName());
@@ -997,7 +1057,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_TypeKeyTablecell_SingelValue() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_TypeKeyTablecell_SingelValue");
+
+	        	EN.SelectWindow("Rechner");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("Rechner", myClipBoard.getObjectName());
@@ -1026,7 +1088,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_TypeKey_MultipleValues() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_TypeKey_MultipleValues");
+
+	        	EN.SelectWindow("Rechner");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("Rechner", myClipBoard.getObjectName());
@@ -1054,7 +1118,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_TypeKey_SingelValue() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_TypeKey_SingelValue");
+
+	        	EN.SelectWindow("Rechner");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("Rechner", myClipBoard.getObjectName());
@@ -1081,7 +1147,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_VerifyExists() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_VerifyExists");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1116,7 +1184,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_VerifyHasFocus() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_VerifyHasFocus");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1144,7 +1214,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_VerifyIsActive() throws Exception
 	        {
-	            EN.SelectWindow("Rechner");
+	        	EN.BeginTest("TC_VerifyIsActive");
+
+	        	EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
 	            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
@@ -1177,7 +1249,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_VerifySelectedValue() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_VerifySelectedValue");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1215,7 +1289,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_VerifyTablecellValue() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_VerifyTablecellValue");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 	            
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1261,7 +1337,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_VerifyTooltip() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_VerifyTooltip");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1298,7 +1376,9 @@ public class EN_Keywords_Test
 	        @Test
 	        public void TC_VerifyValue() throws Exception
 	        {
-	            // Testscript in Schlüsselwort-Notation
+	        	EN.BeginTest("TC_VerifyValue");
+
+	        	// Testscript in Schlüsselwort-Notation
 	            EN.SelectWindow("Rechner");
 	            
 	            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?

@@ -656,7 +656,7 @@ public class OKW_FileHelper
 		}
 		finally
 		{
-			Log.LogFunctionStartDebug(lvsReturn);
+			Log.LogFunctionEndDebug(lvsReturn);
 		}
 
 		return lvsReturn;

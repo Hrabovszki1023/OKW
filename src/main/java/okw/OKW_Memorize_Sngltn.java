@@ -262,7 +262,7 @@ public class OKW_Memorize_Sngltn
 		String lvsReturn = "";
 		Boolean bOK = false;
 
-		this.Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Get", "String fpsKey", fpsKey);
+		Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Get", "String fpsKey", fpsKey);
 
 		try
 		{
@@ -282,11 +282,11 @@ public class OKW_Memorize_Sngltn
 		{
 			if (bOK)
 			{
-				this.Log.LogFunctionEndDebug();
+				Log.LogFunctionEndDebug();
 			}
 			else
 			{
-				this.Log.LogFunctionEndDebug(lvsReturn);
+				Log.LogFunctionEndDebug(lvsReturn);
 			}
 		}
 
@@ -327,7 +327,7 @@ public class OKW_Memorize_Sngltn
 	/// \date 2013.11.28
 	public void Init()
 	{
-		this.Log.LogFunctionStartDebug(this.getClass().getName() + ".Init");
+		Log.LogFunctionStartDebug(this.getClass().getName() + ".Init");
 
 		// Klassen Variablen erst löschen...
 		Instance.OKW_Memorize_xml = "";
@@ -348,15 +348,16 @@ public class OKW_Memorize_Sngltn
 			else
 			{
 				// Deafault Werte Lesen.
-				this.Log.LogWarning("Datei: >>" + this.OKW_Memorize_xml + "<< nicht gefunden.");
+				Log.LogWarning("Datei: >>" + this.OKW_Memorize_xml + "<< nicht gefunden.");
 			}
 		}
 		else
 		{
-			this.Log.LogWarning("Enviroment variable 'OKWIni' not set!");
+			Log.LogWarning("Enviroment variable 'OKWIni' not set!");
 		}
 
-		this.Log.LogFunctionEndDebug();
+		Log.LogFunctionEndDebug();
+		
 		return;
 	}
 
@@ -373,7 +374,7 @@ public class OKW_Memorize_Sngltn
 	/// \date 2013.11.28
 	public void Read()
 	{
-		this.Log.LogFunctionStartDebug(Instance.getClass().getName() + "Read()");
+		Log.LogFunctionStartDebug(Instance.getClass().getName() + "Read()");
 
 		try
 		{
@@ -385,7 +386,7 @@ public class OKW_Memorize_Sngltn
 		}
 		finally
 		{
-			this.Log.LogFunctionEndDebug();
+			Log.LogFunctionEndDebug();
 		}
 
 		return;
@@ -408,7 +409,7 @@ public class OKW_Memorize_Sngltn
 	/// \date 2013.11.28
 	public void Save()
 	{
-		this.Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Save");
+		Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Save");
 
 		try
 		{
@@ -426,7 +427,7 @@ public class OKW_Memorize_Sngltn
 		}
 		finally
 		{
-			this.Log.LogFunctionEndDebug();
+			Log.LogFunctionEndDebug();
 		}
 
 		return;
@@ -441,7 +442,7 @@ public class OKW_Memorize_Sngltn
 	/// \date 2014.12.27
 	public void Set( String fpsKey, String fpsValue ) throws XPathExpressionException
 	{
-		this.Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Set", "String fpsKey", fpsKey,
+		Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Set", "String fpsKey", fpsKey,
 				"String fpsValue", fpsValue);
 
 		try
@@ -452,9 +453,10 @@ public class OKW_Memorize_Sngltn
 				String lvsOldValue = LM.GetMessage("Set", "OldValue", _Value.get(fpsKey));
 				String lvsNewValue = LM.GetMessage("Set", "NewValue", fpsValue);
 
-				this.Log.LogWarning(lvsOverwriteKey);
-				this.Log.LogPrint(lvsOldValue);
-				this.Log.LogPrint(lvsNewValue);
+				Log.LogWarning(lvsOverwriteKey);
+				Log.LogPrint(lvsOldValue);
+				Log.LogPrint(lvsNewValue);
+				
 				Instance._Value.put(fpsKey, fpsValue);
 			}
 			else

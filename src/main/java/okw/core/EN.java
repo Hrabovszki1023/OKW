@@ -75,6 +75,7 @@ import okw.log.*;
 
         private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
         
+        
         /// \~german
         /// \copydoc IOKW_State::BeginTest()
         /// 
@@ -83,12 +84,11 @@ import okw.log.*;
         /// 
         public static void BeginTest(String Testname) throws Exception
         {
-            Log.LogKeyWordStart("Begin Test", Testname);
+            Log.LogTestcaseStart( Testname);
 
             myKernel.SetLanguage(Language);
             myKernel.BeginTest(Testname);
 
-            Log.LogKeyWordEnd();
         }
 
         /// \~german
@@ -131,12 +131,11 @@ import okw.log.*;
         /// 
         public static void EndTest() throws Exception
         {
-            Log.LogKeyWordStart("End Test");
 
             myKernel.SetLanguage(Language);
             myKernel.EndTest();
 
-            Log.LogKeyWordEnd();
+            Log.LogTestcaseEnd();
         }
 
         /// \~german
@@ -547,12 +546,12 @@ import okw.log.*;
         /// 
         public static void Sequence(String fpsObjectName, String fpsSequenceName, String SEQID) throws Exception
         {
-            Log.LogKeyWordStart("Sequece", fpsObjectName, fpsSequenceName, SEQID);
+            Log.LogSequenceStart("Sequece", fpsObjectName, fpsSequenceName, SEQID);
 
             myKernel.SetLanguage(Language);
             myKernel.Sequence(fpsObjectName, fpsSequenceName, SEQID);
 
-            Log.LogKeyWordEnd();
+            Log.LogSequenceEnd();
         }
 
         /// \~german

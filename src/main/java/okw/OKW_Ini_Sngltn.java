@@ -40,7 +40,6 @@
 package okw;
 
 import java.io.File;
-import java.nio.file.Paths;
 import java.security.CodeSource;
 
 import javax.xml.bind.JAXBContext;
@@ -51,7 +50,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import okw.exceptions.OKWFileDoesNotExistsException;
-import okw.log.Logger_Sngltn;
 
 /*
 * \brief
@@ -235,9 +233,7 @@ public class OKW_Ini_Sngltn
 	 */
 	private static OKW_Ini_Sngltn		Instance;
 
-	// \copydoc CurrentObject::Log()
-	private static Logger_Sngltn		Log					= Logger_Sngltn.getInstance();
-
+	
 	/*
 	 * \brief Diese Klasse ist ein Singelton.
 	 *
@@ -402,14 +398,12 @@ public class OKW_Ini_Sngltn
 	 */
 	public void Init()
 	{
-		Log.LogFunctionStart(this.getClass().getName() + ".Init");
+		System.out.print(this.getClass().getName() + ".Init...");
 		
 		//Get file from resources folder
 		ClassLoader classLoader = getClass().getClassLoader();
 
 		// ... und dann alles Initialisieren!
-		try
-		{
 			// 1. Lese OKWINI-Umgebungsvariable
 			OKW_Enviroment.setFolder_XML(classLoader.getResource("xml").getPath());
 
@@ -435,12 +429,7 @@ public class OKW_Ini_Sngltn
 				throw new OKWFileDoesNotExistsException(
 						"Directory not found: >>" + this.OKW_Enviroment.getFolder_XML() + "<<");
 			}
-		}
-		finally
-		{
-			Log.LogFunctionEnd();
-		}
-
+			System.out.println(" - OK.");
 		return;
 	}
 
@@ -459,64 +448,46 @@ public class OKW_Ini_Sngltn
 	 */
 	public void Read() throws JAXBException
 	{
-		Log.LogFunctionStartDebug(this.getClass().getName() + ".Read()");
+		File file = new File(OKW_Enviroment.getFile_OKW_Ini_xml());
+		JAXBContext jaxbContext = JAXBContext.newInstance(OKW_Ini_Sngltn.class);
 
-		try
-		{
-
-			File file = new File(OKW_Enviroment.getFile_OKW_Ini_xml());
-			JAXBContext jaxbContext = JAXBContext.newInstance(OKW_Ini_Sngltn.class);
-
-			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-			OKW_Ini_Sngltn customer = (OKW_Ini_Sngltn) jaxbUnmarshaller.unmarshal(file);
-			System.out.println(customer);
-
-		}
-		finally
-		{
-			Log.LogFunctionEndDebug();
-		}
+		Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+		OKW_Ini_Sngltn customer = (OKW_Ini_Sngltn) jaxbUnmarshaller.unmarshal(file);
+		
+		System.out.println(customer);
 
 		return;
 	}
 
 	public void LogAll()
 	{
+		System.out.println("Enviroment:");
 
-		Log.ResOpenList("Enviroment...");
-
-		try
-		{
-
-			Log.LogPrint("----------------------------------------------------------------");
-			Log.LogPrint("        Assambly Path: " + this.MyDirectory());
-			Log.LogPrint("----------------------------------------------------------------");
-			Log.LogPrint("     OKW_Ini.xml Path: " + this.OKW_Enviroment.getFile_OKW_Ini_xml());
-			Log.LogPrint("   OKW_Const.xml Path: " + this.OKW_Enviroment.getFile_OKW_Const_xml());
-			Log.LogPrint("    OKW_Docu.xml Path: " + this.OKW_Enviroment.getFile_OKW_Docu_xml());
-			Log.LogPrint("  OKW_Keymap.xml Path: " + this.OKW_Enviroment.getFile_OKW_Keymaps_xml());
-			Log.LogPrint("OKW_Memorize.xml Path: " + this.OKW_Enviroment.getFile_OKW_Memorize_xml());
-			Log.LogPrint("----------------------------------------------------------------");
-			Log.LogPrint(
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("        Assambly Path: " + this.MyDirectory());
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("     OKW_Ini.xml Path: " + this.OKW_Enviroment.getFile_OKW_Ini_xml());
+		System.out.println("   OKW_Const.xml Path: " + this.OKW_Enviroment.getFile_OKW_Const_xml());
+		System.out.println("    OKW_Docu.xml Path: " + this.OKW_Enviroment.getFile_OKW_Docu_xml());
+		System.out.println("  OKW_Keymap.xml Path: " + this.OKW_Enviroment.getFile_OKW_Keymaps_xml());
+		System.out.println("OKW_Memorize.xml Path: " + this.OKW_Enviroment.getFile_OKW_Memorize_xml());
+		System.out.println("----------------------------------------------------------------");
+		System.out.println(
 					"OKW_ImplementationMatrix.xml Path: " + this.OKW_Enviroment.getFile_OKW_ImplementationMatrix_xml());
-			Log.LogPrint("----------------------------------------------------------------");
-			Log.LogPrint("  XML Verzechnis: " + this.OKW_Enviroment.getFolder_XML());
-			Log.LogPrint("    LogMessanges: " + this.OKW_Enviroment.getFolder_LogMessages());
-			Log.LogPrint("----------------------------------------------------------------");
-			Log.LogPrint("        Language: " + this.OKW_CustomSettings.getLanguage());
-			Log.LogPrint("         PathSep: " + this.OKW_CustomSettings.getPathSep());
-			Log.LogPrint("   TimeOutExists: " + this.OKW_CustomSettings.getTimeOutExists());
-			Log.LogPrint("TimeOutNotExists: " + this.OKW_CustomSettings.getTimeOutNotExists());
-			Log.LogPrint("----------------------------------------------------------------");
-		}
-		finally
-		{
-			Log.ResCloseList();
-		}
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("  XML Verzechnis: " + this.OKW_Enviroment.getFolder_XML());
+		System.out.println("    LogMessanges: " + this.OKW_Enviroment.getFolder_LogMessages());
+		System.out.println("----------------------------------------------------------------");
+		System.out.println("        Language: " + this.OKW_CustomSettings.getLanguage());
+		System.out.println("         PathSep: " + this.OKW_CustomSettings.getPathSep());
+		System.out.println("   TimeOutExists: " + this.OKW_CustomSettings.getTimeOutExists());
+		System.out.println("TimeOutNotExists: " + this.OKW_CustomSettings.getTimeOutNotExists());
+		System.out.println("----------------------------------------------------------------");
 
 		return;
 	}
 
+	
 	/*
 	 * \brief Schreibt die Eigenschaften der Klasse OKW_Ini in eine Datei,
 	 * gegeben in OKW.OKW_Ini.Xml_Ini_xml. Es wird eine XML Datei geschrieben.
@@ -534,28 +505,19 @@ public class OKW_Ini_Sngltn
 	 */
 	public void Save() throws JAXBException
 	{
-		Log.LogFunctionStartDebug(this.getClass().getName() + ".Save()");
+		File file = new File(OKW_Enviroment.getFile_OKW_Ini_xml());
+		JAXBContext jaxbContext = JAXBContext.newInstance(OKW_Ini_Sngltn.class);
+		Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
-		try
-		{
-			File file = new File(OKW_Enviroment.getFile_OKW_Ini_xml());
-			JAXBContext jaxbContext = JAXBContext.newInstance(OKW_Ini_Sngltn.class);
-			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+		// output pretty printed
+		jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-			// output pretty printed
-			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
-			jaxbMarshaller.marshal(this, file);
-			jaxbMarshaller.marshal(this, System.out);
-		}
-		finally
-		{
-			Log.LogFunctionEndDebug();
-		}
-
+		jaxbMarshaller.marshal(this, file);
+		jaxbMarshaller.marshal(this, System.out);
 		return;
 	}
 
+	
 	/*
 	 * \brief Ermittelt den Pfad zu assambly _OKW.dll_.
 	 *
@@ -568,29 +530,22 @@ public class OKW_Ini_Sngltn
 	{
 		String lvsReturn = "";
 
-		Log.LogFunctionStartDebug(this.getClass().getName() + ".MyDirectory()");
+		final CodeSource source = this.getClass().getProtectionDomain().getCodeSource();
 
-		try
+		if (source != null)
 		{
-			final CodeSource source = this.getClass().getProtectionDomain().getCodeSource();
+			lvsReturn = source.getLocation().getPath();
+		}
+		else
+		{
+			// \todo TODO: Hier Ausnahme auslösen Pfad nicht ermittelt...
+			lvsReturn = "";
+		}
 
-			if (source != null)
-			{
-				lvsReturn = source.getLocation().getPath();
-			}
-			else
-			{
-				// \todo TODO: Hier Ausnahme auslösen Pfad nicht ermittelt...
-				lvsReturn = "";
-			}
-		}
-		finally
-		{
-			Log.LogFunctionEndDebug(lvsReturn);
-		}
 		return lvsReturn;
-
 	}
+	
+	
 	public static Boolean StringIsNullOrEmpty( String fpsString)
 	{
 		

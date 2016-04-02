@@ -2,7 +2,7 @@
 ==============================================================================
   Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
-  Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+  Copyright © 2012, 2013, 2014, 2015, 2016 IT-Beratung Hrabovszki
   www.OpenKeyWord.de
 ============================================================================== 
 
@@ -45,25 +45,23 @@ import java.util.*;
 /// Debug Logs are not a part of Interface. This methods are implemented in Logger.cs
 /// a Log*Debug function calls after checking the log-conditions(debug=true) the Log*-Funktion(without "Debug")
 /// void LogPrintDebug();
-///
-/// FunktionLogs...
-/// void LogFunctionStartDebug(string fps_FunctionName);
-/// void LogFunctionStartDebug(string fps_FunctionName, string P1_Name, string P1_Value);
-/// void LogFunctionStartDebug(string fps_FunctionName, string P1_Name, string P1_Value, string P2_Name, string P2_Value);
-/// void LogFunctionStartDebug(string fps_FunctionName, string P1_Name, string P1_Value, string P2_Name, string P2_Value, string P3_Name, string P3_Value);
-/// void LogFunctionStartDebug(string fps_FunctionName, string P1_Name, string P1_Value, string P2_Name, string P2_Value, string P3_Name, string P3_Value, string P4_Name, string P4_Value);
-/// void LogFunctionEndDebug();
-/// void LogFunctionEndDebug(string fps_Return);
 /// 
 
 public interface ILogger
 {
+    // KeyWord Logging...
+    void LogTestcaseStart(String fps_TestcaseName);
 
+    void LogTestcaseEnd();
+	
     // KeyWord Logging...
     void LogKeyWordStart(String fps_KeyWordName, String... fpsParameter);
-
     void LogKeyWordEnd();
 
+    // Sequence Logging...    
+    void LogSequenceStart(String fpsWindowFN, String fps_SequenceName, String... fpsParameter);
+    void LogSequenceEnd();
+    
     /// \brief
     /// LogError Function:
     /// Logs an error message to the results file.

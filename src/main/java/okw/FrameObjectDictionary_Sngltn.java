@@ -150,7 +150,7 @@ public class FrameObjectDictionary_Sngltn
 			}
 		}
 
-		Log.LogFunctionEnd( "FrameObjectDictionary.getInstance" );
+		Log.LogFunctionEndDebug( "FrameObjectDictionary.getInstance" );
 
 		return Instance;
 	}
@@ -338,7 +338,7 @@ public class FrameObjectDictionary_Sngltn
 		{
 			LM = new LogMessenger( "FrameObjectDictionary" );
 
-			Log.LogPrint( LM.GetMessage( "Init", "InitClear", this.getClass()
+			Log.LogPrintDebug( LM.GetMessage( "Init", "InitClear", this.getClass()
 					.getName() ) );
 			myFrameObjectDictionary.clear();
 
@@ -456,21 +456,22 @@ public class FrameObjectDictionary_Sngltn
 				{
 					String lvsKey = lvsFunktionalname;
 
-					Log.ResOpenList( "\n Window Frame: >>" + lvsKey + "<<" );
-					Log.LogPrint( "     Technisches Objekt: >>"
+					Log.ResOpenListDebug( "\n Window Frame: >>" + lvsKey + "<<" );
+					Log.LogPrintDebug( "     Technisches Objekt: >>"
 							+ lvTypeInstanceAsObject.getClass().getName()
 							+ "<<" );
 
 					myFrameObjectDictionary.put( lvsFunktionalname,
 							lvTypeInstanceAsObject );
 
-					Log.LogPrint( LM.GetMessage( "CreateInstanceByObjectName",
+					Log.LogPrintDebug( LM.GetMessage( "CreateInstanceByObjectName",
 							"InstanceWasCreated", lvTypeInstanceAsObject
 									.getClass().getName() ) );
-
+					
 					// nun Rekursive die Kinder (=Felder) des Frames durchgehen
 					// und ggf. einlesen.
 					Scanfields( lvTypeInstanceAsObject, lvsFunktionalname );
+					Log.ResCloseListDebug();
 				}
 			}
 		}
@@ -508,8 +509,8 @@ public class FrameObjectDictionary_Sngltn
 
 					String lvsKey = fpsWindowName + "." + myFN.FN();
 
-					Log.LogPrint( "\n   Child: >>" + lvsKey + "<<" );
-					Log.LogPrint( "Technisches Objekt: >>" + FieldType + "<<" );
+					Log.LogPrintDebug( "\n   Child: >>" + lvsKey + "<<" );
+					Log.LogPrintDebug( "Technisches Objekt: >>" + FieldType + "<<" );
 
 					myFrameObjectDictionary.put( lvsKey,
 							lvField.get( fpoWindowAsObject ) );

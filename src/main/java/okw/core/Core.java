@@ -111,18 +111,9 @@ import okw.*;
         /// \date 09.01.2014
         public Core()
         {
-        	try{
-        		// Init all Singelton...
-        		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
-        		Logger_Sngltn Log = Logger_Sngltn.getInstance();
-
-        		OKW_Const_Sngltn myOKW_Const = OKW_Const_Sngltn.getInstance();
-        		OKWLanguage CL = OKWLanguage.getInstance();
-        		OKW_Memorize_Sngltn myOKW_Memorize = OKW_Memorize_Sngltn.getInstance();
-        		
-        		FrameObjectDictionary_Sngltn myFrameObjectDictionary = FrameObjectDictionary_Sngltn.getInstance();
-        		
-        		OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
+        	try
+        	{
+        		Init();
         		
         		this.SetCurrentState(new OK(this));
         	}
@@ -132,7 +123,30 @@ import okw.*;
         	}
         }
 
+        public static void Init()
+        {
+        	try{
+		
+        		// Init all Singelton...
+        		Logger_Sngltn Log        = Logger_Sngltn.getInstance();
 
+        		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
+        		
+        		OKW_Const_Sngltn myOKW_Const = OKW_Const_Sngltn.getInstance();
+        		OKWLanguage CL = OKWLanguage.getInstance();
+        		OKW_Memorize_Sngltn myOKW_Memorize = OKW_Memorize_Sngltn.getInstance();
+		
+        		FrameObjectDictionary_Sngltn myFrameObjectDictionary = FrameObjectDictionary_Sngltn.getInstance();
+		
+        		OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
+		
+        	}
+        	catch (Exception e)
+        	{
+        		OKW_HandleException.StopRunning(e, Core.class);
+        	}
+	}
+        
 		/// \copydoc IOKW_State::BeginTest(String)
 		public void BeginTest(String Testname) throws Exception
         {

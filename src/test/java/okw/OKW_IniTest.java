@@ -7,17 +7,21 @@ import java.util.Map;
 
 import org.junit.*;
 import org.junit.rules.TestName;
-import static org.junit.Assert.*;
 
+import static org.junit.Assert.*;
+import okw.core.EN;
 import okw.exceptions.OKWFileDoesNotExistsException;
 import okw.log.Logger_Sngltn;
+import okw.log.log2html.Log2HTML;
 
 public class OKW_IniTest
 {
 	@Rule
 	public TestName	name	= new TestName();
     
-	Logger_Sngltn Log = Logger_Sngltn.getInstance();
+	static Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
+	static OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
+	static Log2HTML myLog2HTML = null;
     
 	static String			myOKW_Xml	= "";
 
@@ -43,37 +47,31 @@ public class OKW_IniTest
 	}
 
 	@After
-	public void myTestFixtureTearDown()
+	public void myTestFixtureTearDown() throws Exception
 	{
-		// TODO: Add tear down code.
+		EN.EndTest();
 	}
 
 	@Before
-	public void myTestFixtureSetUp()
+	public void myTestFixtureSetUp() throws Exception
 	{
-		// Reset des Loggers: Alle geladenen Instanzen löschen
-		// Logger_Sngltn.Instance.Init();
-
-		// Logger_Sngltn.Instance.DebugMode = true;
-		// Logger_Sngltn.Instance.AddLogger(new Log2Console());
+		EN.BeginTest( name.getMethodName() );
 	}
 
 	@BeforeClass
 	public static void MySetUp()
 	{
-/*		myOKW_Xml = System.getenv("OKW_Xml");
-
-		System.out.println(
-				"---------------------------------------------------------------------------------------------");
-		System.out.println("-" + name.getMethodName());
-		System.out.println(
-				"---------------------------------------------------------------------------------------------");
-*/
+        // Reset des Loggers: Alle Instanzen löschen
+        myLogger.Init();
+        myLog2HTML = new Log2HTML("OKW_IniTest.html");
+        myLogger.AddLogger(myLog2HTML);
+        myLogger.setDebugMode(false);
 	}
 
 	@AfterClass
 	public static void MyTearDown()
 	{
+		myLog2HTML.Result2HTML( "OKW_IniTest.html" );
 
 	}
 
@@ -358,8 +356,8 @@ public class OKW_IniTest
        	String sActual = myOKW_Ini.OKW_Enviroment.getFile_OKW_Const_xml();
     	String sExpected = Paths.get(OKW_Xml_Path_Expected, "OKW_Const.xml").toString();
 
-		Log.LogPrint( "  Aktual Value: " + sActual);
-        Log.LogPrint( "Expected Value: " + sExpected);
+    	myLogger.LogPrint( "  Aktual Value: " + sActual);
+    	myLogger.LogPrint( "Expected Value: " + sExpected);
 
         // Check Return
         assertEquals(sExpected, sActual);
@@ -390,8 +388,8 @@ public class OKW_IniTest
        	String sActual = myOKW_Ini.OKW_Enviroment.getFile_OKW_Docu_xml();
     	String sExpected = Paths.get(OKW_Xml_Path_Expected, "OKW_Docu.xml").toString();
 
-		Log.LogPrint( "  Aktual Value: " + sActual);
-        Log.LogPrint( "Expected Value: " + sExpected);
+    	myLogger.LogPrint( "  Aktual Value: " + sActual);
+    	myLogger.LogPrint( "Expected Value: " + sExpected);
 
         // Check Return
         assertEquals(sExpected, sActual);
@@ -420,8 +418,8 @@ public class OKW_IniTest
        	String sActual = myOKW_Ini.OKW_Enviroment.getFile_OKW_ImplementationMatrix_xml();
     	String sExpected = Paths.get(OKW_Xml_Path_Expected, "OKW_ImplementationMatrix.xml").toString();
 
-		Log.LogPrint( "  Aktual Value: " + sActual);
-        Log.LogPrint( "Expected Value: " + sExpected);
+    	myLogger.LogPrint( "  Aktual Value: " + sActual);
+    	myLogger.LogPrint( "Expected Value: " + sExpected);
 
         // Check Return
         assertEquals(sExpected, sActual);
@@ -452,8 +450,8 @@ public class OKW_IniTest
        	String sActual = myOKW_Ini.OKW_Enviroment.getFile_OKW_Ini_xml();
     	String sExpected = Paths.get(OKW_Xml_Path_Expected, "OKW_Ini.xml").toString();
 
-		Log.LogPrint( "  Aktual Value: " + sActual);
-        Log.LogPrint( "Expected Value: " + sExpected);
+    	myLogger.LogPrint( "  Aktual Value: " + sActual);
+    	myLogger.LogPrint( "Expected Value: " + sExpected);
 
         // Check Return
         assertEquals(sExpected, sActual);
@@ -483,8 +481,8 @@ public class OKW_IniTest
        	String sActual = myOKW_Ini.OKW_Enviroment.getFile_OKW_Keymaps_xml();
     	String sExpected = Paths.get(OKW_Xml_Path_Expected, "OKW_Keymaps.xml").toString();
 
-		Log.LogPrint( "  Aktual Value: " + sActual);
-        Log.LogPrint( "Expected Value: " + sExpected);
+    	myLogger.LogPrint( "  Aktual Value: " + sActual);
+    	myLogger.LogPrint( "Expected Value: " + sExpected);
 
         // Check Return
         assertEquals(sExpected, sActual);
@@ -514,8 +512,8 @@ public class OKW_IniTest
        	String sActual = myOKW_Ini.OKW_Enviroment.getFile_OKW_Memorize_xml();
     	String sExpected = Paths.get(OKW_Xml_Path_Expected, "OKW_Memorize.xml").toString();
 
-		Log.LogPrint( "  Aktual Value: " + sActual);
-        Log.LogPrint( "Expected Value: " + sExpected);
+    	myLogger.LogPrint( "  Aktual Value: " + sActual);
+    	myLogger.LogPrint( "Expected Value: " + sExpected);
 
         // Check Return
         assertEquals(sExpected, sActual);

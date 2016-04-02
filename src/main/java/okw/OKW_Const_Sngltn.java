@@ -144,9 +144,9 @@ public class OKW_Const_Sngltn
 {
 
 	/// \copydoc CurrentObject::Log()
-	private static Logger_Sngltn	Log				= Logger_Sngltn.getInstance();
+	private static Logger_Sngltn	Log		= Logger_Sngltn.getInstance();
 	
-	OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
+	OKW_Ini_Sngltn myOKW_Ini 				= OKW_Ini_Sngltn.getInstance();
 
 	private static OKW_Const_Sngltn	Instance;
 

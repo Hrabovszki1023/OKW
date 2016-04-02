@@ -253,6 +253,24 @@ public class Logger_Sngltn
 		}
 	}
 
+	public void LogSequenceEnd()
+	{
+		for (ILogger myLogger : this.LoggerList)
+		{
+			myLogger.LogSequenceEnd( );
+		}
+	}
+
+
+	public void LogTestcaseEnd()
+	{
+		for (ILogger myLogger : this.LoggerList)
+		{
+			myLogger.LogTestcaseEnd();
+		}
+	}
+
+	
 	/// \~german
 	/// \brief Ausgabe eines Schlüsselwortes
 	///
@@ -277,6 +295,42 @@ public class Logger_Sngltn
 		for (ILogger myLogger : this.LoggerList)
 		{
 			myLogger.LogKeyWordStart(fpsKeyWordName, fpsParameter);
+		}
+	}
+
+	public void LogSequenceStart(String fpsWinowFN, String fps_SequensName, String... fpsParameter)
+	{
+		for (ILogger myLogger : this.LoggerList)
+		{
+			myLogger.LogSequenceStart( fpsWinowFN, fps_SequensName, fpsParameter );
+		}
+	}
+
+	
+	/// \~german
+	/// \brief Ausgabe des Testfalls
+	///
+	/// \todo TODO: Ausführliche Beschreibung
+	///
+	/// \param Parameterbezeichner \todo TODO: Beschreibung
+	/// \return
+	///
+	/// \~english
+	/// \brief \todo TODO: Brief Description.
+	///
+	/// \todo TODO: Detailed Description
+	///
+	/// \param fpbTrueOrFalse
+	/// \return
+	///
+	/// \~
+	/// \author Zoltán Hrabovszki
+	/// \date 2015.05.01
+	public void LogTestcaseStart( String fps_TestcaseName )
+	{
+		for (ILogger myLogger : this.LoggerList)
+		{
+			myLogger.LogTestcaseStart( fps_TestcaseName );
 		}
 	}
 
