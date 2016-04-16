@@ -84,7 +84,7 @@ import okw.log.*;
         /// 
         public static void BeginTest(String Testname) throws Exception
         {
-            Log.LogTestcaseStart( Testname);
+            Log.LogTestcaseStart( Testname );
 
             myKernel.SetLanguage(Language);
             myKernel.BeginTest(Testname);

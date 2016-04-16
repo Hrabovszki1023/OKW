@@ -233,8 +233,15 @@ public class FrameObjectDictionary_Sngltn
 			}
 		}
 		finally
-		{
-			Log.LogFunctionEndDebug( lvo_Return.toString() );
+		{ 
+			if (lvo_Return != null )
+			{
+				Log.LogFunctionEndDebug( lvo_Return.toString() );
+			}
+			else
+			{
+				Log.LogFunctionEndDebug( );
+			}
 		}
 
 		return lvo_Return;
@@ -346,6 +353,14 @@ public class FrameObjectDictionary_Sngltn
 			ArrayList<Class<?>> lvOKWGuiClasses = GetListOfOKWGuiClasses();
 
 			this.AddFrameInstancesToDictionary( lvOKWGuiClasses );
+			
+			Set<String> Keys = myFrameObjectDictionary.keySet();
+			
+			for (String Key : Keys)
+			{
+				System.out.println(Key);
+			}
+			
 		}
 		finally
 		{
@@ -386,14 +401,14 @@ public class FrameObjectDictionary_Sngltn
 		ClassLoader classLoader = FrameObjectDictionary_Sngltn.class
 				.getClassLoader();
 
-		// 1. Hole Alle namen der Classen, die sich im Package "okw.frames"
+		// 1. Hole Alle namen der Classen, die sich im Package "okw.gui.frames"
 		// befinden
 		ArrayList<String> lvALClassNames = OKW_GetJavaClass
 				.getClasses( lvsNamespace );
 
 		try
 		{
-			// 2. Hole alle Klassen, die Annotoation "OKWGUI" haben.
+			// 2. Hole alle Klassen, die Annotoation "OKW_FN" haben.
 			for ( String lvsClass : lvALClassNames )
 			{
 				Class<?> aClass = classLoader.loadClass( lvsClass );

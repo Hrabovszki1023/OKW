@@ -28,24 +28,7 @@ public class OKW_ConstExceptionTest {
 		// [TestFixtureSetUp]
 		public void MySetUp() {
 
-			try {
-				myOKW_Const = OKW_Const_Sngltn.getInstance();
-			} catch (XPathExpressionException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (JAXBException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (ParserConfigurationException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SAXException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			myOKW_Const = OKW_Const_Sngltn.getInstance();
 
 			// Reset des Loggers: Alle geladenen Instanzen löschen
 			Log.Init();
@@ -66,7 +49,8 @@ public class OKW_ConstExceptionTest {
 	
 			OKWLanguage.getInstance().setLanguage("en");
 
-			try {
+			try
+			{
 				
 				// Call with expected Exception...
 				myOKW_Const.GetConst4Internalname("NotExist");

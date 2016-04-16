@@ -284,7 +284,7 @@ public class OKW_Const_Sngltn
 	// \date 2013.12.22
 	//
 	public static OKW_Const_Sngltn getInstance()
-			throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+			//throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
 	{
 		// Lazy Initialization (If required then only)
 		if (Instance == null)
@@ -516,18 +516,19 @@ public class OKW_Const_Sngltn
 	// \author Zoltan Hrabovszki 
 	// \date 2013-12-22
 	///
-	public String GetConst4Internalname( String fpsInternalname ) throws XPathExpressionException
+	public String GetConst4Internalname( String fpsInternalname )
 	{
 		Log.LogFunctionStartDebug(this.getClass().getName() + ".ReadConst", "fpsInternalname", fpsInternalname);
 
 		String lvsReturn = "";
 
+		try
+		{
+
 		String myXPathExpression = "//okwconst[@internalname='" + fpsInternalname + "']/name/" + CL.getLanguage();
 
 		Log.LogPrintDebug("XPath: >>" + myXPathExpression + "<<" );
 
-		try
-		{
 			lvsReturn = myXmlReader.getTextContentSingleValue(myXPathExpression);
 		}
 		finally
@@ -589,7 +590,7 @@ public class OKW_Const_Sngltn
 	// \~ \author Zoltan Hrabovszki \date 2013_12_22 <br/>
 	// Reviews:(2014_12_18_jnic, 2014_12_22_zh, 2014_12_26_jnic)
 	///
-	public String GetOKWConst4Internalname( String fpsInternalname ) throws XPathExpressionException
+	public String GetOKWConst4Internalname( String fpsInternalname ) 
 	{
 		String lvsReturn = "";
 
