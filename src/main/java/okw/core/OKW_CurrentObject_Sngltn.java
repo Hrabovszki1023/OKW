@@ -325,19 +325,42 @@ public class OKW_CurrentObject_Sngltn
 		Log.LogFunctionStartDebug("CallMethod", "String fpsMethod", fpsMethod);
 
 		Class<?> myFrame_Class = this.cvoObject.getClass();
+		Method myMethod = null;
 
+		// Schenwir 
 		try
 		{
-			Method myMethod = myFrame_Class.getMethod(fpsMethod);
+			myMethod = myFrame_Class.getMethod(fpsMethod);
 			myMethod.invoke(cvoObject);
 		}
 		catch (NoSuchMethodException e)
 		{
-			// Existiert die Methode des Objektes?
-			// Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
-			// aussteigen...
-			String errorText = LM.GetMessage("CallMethod", "MethodNotDefined", fpsMethod);
-			throw new OKWFrameObjectMethodNotFoundException(errorText);
+			// Dann 2. Versuch: Schauen wir in die Superklasse...
+			
+			try
+			{
+				myMethod = myFrame_Class.getSuperclass().getDeclaredMethod(fpsMethod);
+				myMethod.invoke(cvoObject);
+			}
+			catch (NoSuchMethodException | SecurityException e1)
+			{
+				// Existiert die Methode des Objektes?
+				// Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+				// aussteigen...
+				String errorText = LM.GetMessage("CallMethod", "MethodNotDefined", fpsMethod);
+				throw new OKWFrameObjectMethodNotFoundException(errorText);
+			}
+			catch(Exception e2)
+			{
+				String myMessage = e2.getMessage();
+				System.out.println( myMessage );
+			}
+
+		}		
+		catch(Exception e)
+		{
+			String myMessage = e.getMessage();
+			System.out.println( myMessage );
 		}
 		finally
 		{

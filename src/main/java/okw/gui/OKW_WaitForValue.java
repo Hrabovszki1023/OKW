@@ -39,6 +39,7 @@ public class OKW_WaitForValue
                                 {
                                         Thread.sleep(SleepForMillis);
                                 }
+                                Count++;
                         }
  
                         return ALReturn;
@@ -64,6 +65,8 @@ public class OKW_WaitForValue
                                 {
                                         Thread.sleep(SleepForMillis);
                                 }
+                                
+                                Count++;
                         }
  
                 return ALReturn;
@@ -89,6 +92,8 @@ public class OKW_WaitForValue
                                 {
                                         Thread.sleep(SleepForMillis);
                                 }
+                                
+                                Count++;
                         }
  
                 return bReturn;
@@ -114,6 +119,8 @@ public class OKW_WaitForValue
                                 {
                                         Thread.sleep(SleepForMillis);
                                 }
+                                
+                                Count++;
                         }
  
                 return bReturn;
@@ -139,6 +146,8 @@ public class OKW_WaitForValue
                                 {
                                         Thread.sleep(SleepForMillis);
                                 }
+                                
+                                Count++;
                         }
  
                 return bReturn;
@@ -164,6 +173,8 @@ public class OKW_WaitForValue
                                 {
                                         Thread.sleep(SleepForMillis);
                                 }
+                                
+                                Count++;
                         }
  
                 return bReturn;
@@ -190,6 +201,8 @@ public class OKW_WaitForValue
                                 {
                                         Thread.sleep(SleepForMillis);
                                 }
+                                
+                                Count++;
                         }
  
                         return ALReturn;
@@ -216,6 +229,8 @@ public class OKW_WaitForValue
                                 {
                                         Thread.sleep(SleepForMillis);
                                 }
+                                
+                                Count++;
                         }
  
                         return ALReturn;

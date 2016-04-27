@@ -42,6 +42,7 @@ package okw;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -356,11 +357,27 @@ public class FrameObjectDictionary_Sngltn
 			
 			Set<String> Keys = myFrameObjectDictionary.keySet();
 			
+			ArrayList<String> myList= new ArrayList<String>();
+			
 			for (String Key : Keys)
 			{
-				System.out.println(Key);
+				myList.add(Key);
 			}
 			
+			Collections.sort( myList );
+
+			System.out.println("-----------------------------------------------");
+			System.out.println("- Frames: -");
+			System.out.println("-----------------------------------------------");
+			Log.ResOpenListDebug( "Frames" );
+			for (String Element : myList)
+			{
+				Log.LogPrintDebug( Element );
+				System.out.println(Element);
+			}
+			
+			System.out.println("-----------------------------------------------");
+			Log.ResCloseListDebug();
 		}
 		finally
 		{
@@ -796,7 +813,7 @@ public class FrameObjectDictionary_Sngltn
 		return lvo_Return;
 	}
 
-	public void PrintObjectDictionary()
+	public void Print_ObjectDictionary()
 	{
 
 		Set<String> mySet = this.myFrameObjectDictionary.keySet();
