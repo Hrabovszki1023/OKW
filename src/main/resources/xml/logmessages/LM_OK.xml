@@ -254,17 +254,67 @@
 		<!--===============================================================-->
 		<!--= Memorize -->
 		<!--===============================================================-->
-		<!-- Method: "MemorizeExists"-->
-		<Method name="MemorizeExists">
-			<Text key="Ignore">
-				<en>KeyWord was ignored!</en>
-				<de>Schlüsselwort wurde ignoriert!</de>
+		<!-- Method: "MemorizeCaption"-->
+		<Method name="MemorizeCaption">
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here!</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
 			</Text>
 		</Method>
+		<!-- Method: "MemorizeExists"-->
+		<Method name="MemorizeExists">
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here!</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+			</Text>
+		</Method>
+		<!-- Method: "MemorizeHasFocus"-->
 		<Method name="MemorizeHasFocus">
-			<Text key="Ignore">
-				<en>KeyWord was ignored!</en>
-				<de>Schlüsselwort wurde ignoriert!</de>
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here!</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+			</Text>
+		</Method>
+		<!-- Method: "MemorizeIsActive"-->
+		<Method name="MemorizeIsActive">
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here!</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+			</Text>
+		</Method>
+		<!-- Method: "MemorizeLabel"-->
+		<Method name="MemorizeLabel">
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here!</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+			</Text>
+		</Method>
+		<!-- Method: "MemorizeSelectedValue"-->
+		<Method name="MemorizeSelectedValue">
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here!</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+			</Text>
+		</Method>
+		<!-- Method: "MemorizeTablecellValue"-->
+		<Method name="MemorizeTablecellValue">
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here!</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+			</Text>
+		</Method>
+		<!-- Method: "MemorizeTooltip"-->
+		<Method name="MemorizeTooltip">
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here!</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+			</Text>
+		</Method>
+		<!-- Method: "MemorizeValue"-->
+		<Method name="MemorizeValue">
+			<Text key="OKWNotAllowedValueException">
+				<en>This value '{0:}' not allowed here!</en>
+				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
 			</Text>
 		</Method>
 		<!--===============================================================-->

@@ -497,19 +497,27 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::MemorizeCaption(string,string)
 	///
-	public void MemorizeCaption( String fpsFunctionalname, String fps_MemKeyName ) throws Exception
+	public void MemorizeCaption( String fpsFunctionalname, String fpsMemKeyName ) throws Exception
 	{
-		Log.LogFunctionStart("MemorizeCaption", "fpsFunctionalname", fpsFunctionalname, "fps_MemKeyName",
-				fps_MemKeyName);
+		Log.LogFunctionStart("MemorizeCaption", "fpsFunctionalname", fpsFunctionalname, "fpsMemKeyName",
+				fpsMemKeyName);
 
 		try
 		{
-			CO.SetChildName(fpsFunctionalname);
-			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeCaption");
+			if ( fpsMemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsMemKeyName.equals( "" ))
+			{
+				// Wenn fpsMemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeCaption", "OKWNotAllowedValueException") );
+			}
+			else
+			{
+				CO.SetChildName(fpsFunctionalname);
+				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeCaption");
 
-			String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
+				String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
 
-			OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
+				OKW_Memorize_Sngltn.getInstance().Set(fpsMemKeyName, lvsToMemorize);
+			}
 		}
 		catch (Exception e)
 		{
@@ -526,20 +534,19 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::MemorizeExists(string,string)
 	///
-	public void MemorizeExists( String fpsFunctionalname, String fps_MemKeyName ) throws Exception
+	public void MemorizeExists( String fpsFunctionalname, String fpsMemKeyName ) throws Exception
 	{
-		Log.LogFunctionStart("MemorizeExists", "fpsFunctionalname", fpsFunctionalname, "fps_MemKeyName",
-				fps_MemKeyName);
+		Log.LogFunctionStart("MemorizeExists", "fpsFunctionalname", fpsFunctionalname, "fpsMemKeyName",
+				fpsMemKeyName);
 
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fps_MemKeyName == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE") || fps_MemKeyName == "")
+			if ( fpsMemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsMemKeyName.equals( "" ))
 			{
-				// Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
-				Log.LogPrintDebug(LM.GetMessage("MemorizeExists", "Ignore"));
+				// Wenn fpsMemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeExists", "OKWNotAllowedValueException", fpsMemKeyName) );
 			}
-			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
 			else
 			{
 				CO.SetChildName(fpsFunctionalname);
@@ -547,7 +554,7 @@ public class OK implements IOKW_State
 
 				String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
 
-				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsActual);
+				OKW_Memorize_Sngltn.getInstance().Set(fpsMemKeyName, lvsActual);
 			}
 		}
 		catch (Exception e)
@@ -573,12 +580,11 @@ public class OK implements IOKW_State
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (fps_MemKeyName == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE") || fps_MemKeyName == "")
+			if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fps_MemKeyName.equals( "" ))
 			{
-				// Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
-				Log.LogPrintDebug(LM.GetMessage("MemorizeHasFocus", "Ignore"));
+				// Wenn fps_MemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeHasFocus", "OKWNotAllowedValueException", fps_MemKeyName) );
 			}
-			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
 			else
 			{
 				CO.SetChildName(fpsFunctionalname);
@@ -611,12 +617,22 @@ public class OK implements IOKW_State
 
 		try
 		{
-			CO.SetChildName(fpsFunctionalname);
-			Boolean lvbActual = CO.CallMethodReturn_Boolean("MemorizeIsActive");
+			// Prüfen ob ignoriert werden muss...
+			if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fps_MemKeyName.equals( "" ))
+			{
+				// Wenn fpsMemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeIsActive", "OKWNotAllowedValueException", fps_MemKeyName) );
+			}
+			else
+			{
 
-			String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
+				CO.SetChildName(fpsFunctionalname);
+				Boolean lvbActual = CO.CallMethodReturn_Boolean("MemorizeIsActive");
 
-			OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsActual);
+				String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
+
+				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsActual);
+			}
 		}
 		catch (Exception e)
 		{
@@ -639,12 +655,20 @@ public class OK implements IOKW_State
 
 		try
 		{
-			CO.SetChildName(fpsFunctionalname);
-			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeLabel");
+			if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fps_MemKeyName.equals( "" ))
+			{
+				// Wenn fps_MemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeLabel", "OKWNotAllowedValueException", fps_MemKeyName) );
+			}
+			else
+			{
+				CO.SetChildName(fpsFunctionalname);
+				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeLabel");
 
-			String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
+				String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
 
-			OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
+				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
+			}
 		}
 		catch (Exception e)
 		{
@@ -668,12 +692,20 @@ public class OK implements IOKW_State
 
 		try
 		{
-			CO.SetChildName(fpsFunctionalname);
-			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeSelectedValue");
+			if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fps_MemKeyName.equals( "" ))
+			{
+				// Wenn fps_MemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeSelectedValue", "OKWNotAllowedValueException", fps_MemKeyName) );
+			}
+			else
+			{
+				CO.SetChildName(fpsFunctionalname);
+				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeSelectedValue");
 
-			String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
+				String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);	
 
-			OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
+				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
+			}
 		}
 		catch (Exception e)
 		{
@@ -698,12 +730,21 @@ public class OK implements IOKW_State
 
 		try
 		{
-			CO.SetChildName(fpsFunctionalname);
-			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeTablecellValue", fpsCol, fpsRow);
+			
+			if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fps_MemKeyName.equals( "" ))
+			{
+				// Wenn fpsMemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeTablecellValue", "OKWNotAllowedValueException", fps_MemKeyName) );
+			}
+			else
+			{
+				CO.SetChildName(fpsFunctionalname);
+				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeTablecellValue", fpsCol, fpsRow);
 
-			String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
+				String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
 
-			OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
+				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
+			}
 		}
 		catch (Exception e)
 		{
@@ -727,12 +768,20 @@ public class OK implements IOKW_State
 
 		try
 		{
-			CO.SetChildName(fpsFunctionalname);
-			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeTooltip");
+			if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fps_MemKeyName.equals( "" ))
+			{
+				// Wenn fpsMemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeTooltip", "OKWNotAllowedValueException", fps_MemKeyName) );
+			}
+			else
+			{
+				CO.SetChildName(fpsFunctionalname);
+				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeTooltip");
 
-			String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
+				String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
 
-			OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
+				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
+			}
 		}
 		catch (Exception e)
 		{
@@ -749,18 +798,28 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::MemorizeLabel(string,string)
 	///
-	public void MemorizeValue( String fpsFunctionalname, String fps_MemKeyName ) throws Exception
+	public void MemorizeValue( String fpsFunctionalname, String fpsMemKeyName ) throws Exception
 	{
-		Log.LogFunctionStart("MemorizeValue", "fpsFunctionalname", fpsFunctionalname, "fpsMemKeyName", fps_MemKeyName);
+		Log.LogFunctionStart("MemorizeValue", "fpsFunctionalname", fpsFunctionalname, "fpsMemKeyName", fpsMemKeyName);
 
 		try
 		{
-			CO.SetChildName(fpsFunctionalname);
-			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeValue");
+			
+			if ( fpsMemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsMemKeyName.equals( "" ))
+			{
+				// Wenn fpsMemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeValue", "OKWNotAllowedValueException", fpsMemKeyName) );
+			}
+			else
+			{
 
-			String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
+				CO.SetChildName(fpsFunctionalname);
+				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeValue");
 
-			OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
+				String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
+
+				OKW_Memorize_Sngltn.getInstance().Set(fpsMemKeyName, lvsToMemorize);
+			}
 		}
 		catch (Exception e)
 		{

@@ -120,10 +120,10 @@ public class OKW_TestClipboard {
 	        /// 
 	        public void Clear()
 	        {
-	            cvLs_Value.clear();
 	            this.cvs_ObjectName = "";
 	            this.cvs_Method = "";
 
+	            cvLs_Value.clear();
 	            cvLs_LogValue.clear();
 	        }
 
