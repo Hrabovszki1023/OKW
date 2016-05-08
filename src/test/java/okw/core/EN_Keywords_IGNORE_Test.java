@@ -30,15 +30,21 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestName;
 import org.omg.CORBA.SystemException;
 
-public class EN_IGNORE_Test
+public class EN_Keywords_IGNORE_Test
 {
 
 	static Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
 	static OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
 
+   @Rule
+   public TestName name = new TestName();
+	
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception
 	{
@@ -63,7 +69,7 @@ public class EN_IGNORE_Test
 	@Before
 	public void setUp() throws Exception
 	{
-        EN.BeginTest( "TestContext.CurrentContext.Test.Name" );
+
 	}
 
     /// \~german
@@ -87,6 +93,9 @@ public class EN_IGNORE_Test
 	@Test
     public void TC_MemorizeCaption_IGNORE() throws Exception
     {
+
+		EN.BeginTest( name.getMethodName() );
+		
 		// Löschen des Clipboards
 		myClipBoard.Clear();
 		// Testscript in Schlüsselwort-Notation
@@ -130,6 +139,8 @@ public class EN_IGNORE_Test
 	@Test
 	public void TC_MemorizeCaption_IGNORE_StringEmpty() throws Exception
 	{
+		EN.BeginTest( name.getMethodName() );
+
 		// Löschen des Clipboards
 		myClipBoard.Clear();
 		// Testscript in Schlüsselwort-Notation
@@ -174,7 +185,9 @@ public class EN_IGNORE_Test
     	@Test
         public void TC_MemorizeExists_IGNORE() throws Exception
         {
-			// Löschen des Clipboards
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Löschen des Clipboards
 			myClipBoard.Clear();
 			// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
@@ -218,7 +231,9 @@ public class EN_IGNORE_Test
     	@Test
     	public void TC_MemorizeExists_IGNORE_StringEmpty() throws Exception
 		{
-			// Löschen des Clipboards
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Löschen des Clipboards
 			myClipBoard.Clear();
 			// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
@@ -261,7 +276,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_MemorizeHasFocus_IGNORE() throws Exception
         {
-			// Löschen des Clipboards
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Löschen des Clipboards
 			myClipBoard.Clear();
 			// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
@@ -305,6 +322,8 @@ public class EN_IGNORE_Test
 		@Test
 		public void TC_MemorizeHasFocus_IGNORE_StringEmpty() throws Exception
 		{
+			EN.BeginTest( name.getMethodName() );
+
 			// Löschen des Clipboards
 			myClipBoard.Clear();
 			// Testscript in Schlüsselwort-Notation
@@ -349,7 +368,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_MemorizeIsActive_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -389,6 +410,8 @@ public class EN_IGNORE_Test
 		@Test
 		public void TC_MemorizeIsActive_IGNORE_StringEmpty() throws Exception
 		{
+			EN.BeginTest( name.getMethodName() );
+
 			// Testscript in Schlüsselwort-Notation
 			EN.SelectWindow("Rechner");
 
@@ -429,7 +452,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_MemorizeLabel_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -469,6 +494,8 @@ public class EN_IGNORE_Test
 		@Test
 		public void TC_MemorizeLabel_IGNORE_StringEmpty() throws Exception
 		{
+			EN.BeginTest( name.getMethodName() );
+
 			// Testscript in Schlüsselwort-Notation
 			EN.SelectWindow("Rechner");
 
@@ -510,7 +537,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_MemorizeSelectedValue_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -550,6 +579,8 @@ public class EN_IGNORE_Test
 		@Test
 		public void TC_MemorizeSelectedValue_IGNORE_StringEmpty() throws Exception
 		{
+			EN.BeginTest( name.getMethodName() );
+
 			// Testscript in Schlüsselwort-Notation
 			EN.SelectWindow("Rechner");
 
@@ -591,7 +622,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_MemorizeTablecellValue_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -631,6 +664,8 @@ public class EN_IGNORE_Test
 		@Test
 		public void TC_MemorizeTablecellValue_IGNORE_StringEmpty() throws Exception
 		{
+			EN.BeginTest( name.getMethodName() );
+
 			// Testscript in Schlüsselwort-Notation
 			EN.SelectWindow("Rechner");
 
@@ -671,7 +706,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_MemorizeTooltip_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+        	// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -711,6 +748,8 @@ public class EN_IGNORE_Test
 		@Test
 		public void TC_MemorizeTooltip_IGNORE_StringEmpty() throws Exception
 		{
+			EN.BeginTest( name.getMethodName() );
+
 			// Testscript in Schlüsselwort-Notation
 			EN.SelectWindow("Rechner");
 
@@ -751,7 +790,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_MemorizeValue_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -792,7 +833,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_MemorizeValue_IGNORE_StringEmpty() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -832,7 +875,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_SelectMenu_Value_MV_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -862,7 +907,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_SelectMenu_Value_MV_IGNORE_EmptyString() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -891,7 +938,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_SelectMenu_Value_SV_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -920,7 +969,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_SelectMenu_Value_SV_IGNORE_EmptyString() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -950,7 +1001,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_Select_Clicktype_IGNORE() throws Exception
         {
-            EN.SelectWindow("Rechner");
+    		EN.BeginTest( name.getMethodName() );
+
+    		EN.SelectWindow("Rechner");
 
             // Check the Name, Called Method and Value of Actuel object
             assertEquals("Rechner", myClipBoard.getObjectName());
@@ -979,7 +1032,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_Select_Clicktype_IGNORE_EmptyString() throws Exception
         {
-            EN.SelectWindow("Rechner");
+    		EN.BeginTest( name.getMethodName() );
+
+    		EN.SelectWindow("Rechner");
 
             // Check the Name, Called Method and Value of Actuel object
             assertEquals("Rechner", myClipBoard.getObjectName());
@@ -1010,7 +1065,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_Select_IGNORE() throws Exception
         {
-            EN.SelectWindow("Rechner");
+    		EN.BeginTest( name.getMethodName() );
+
+    		EN.SelectWindow("Rechner");
 
             // Check the Name, Called Method and Value of Actuel object
             assertEquals("Rechner", myClipBoard.getObjectName());
@@ -1041,7 +1098,9 @@ public class EN_IGNORE_Test
         @Test
 		public void TC_Select_IGNORE_EmptyString() throws Exception
         {
-            EN.SelectWindow("Rechner");
+    		EN.BeginTest( name.getMethodName() );
+
+    		EN.SelectWindow("Rechner");
 
             // Check the Name, Called Method and Value of Actuel object
             assertEquals("Rechner", myClipBoard.getObjectName());
@@ -1071,7 +1130,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_Sequence_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1100,7 +1161,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_Sequence_IGNORE_EmptyString() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1124,13 +1187,14 @@ public class EN_IGNORE_Test
         @Test
         public void TC_SetValue_IGNORE() throws Exception
         {
+    		EN.BeginTest( name.getMethodName() );
 
-                EN.SelectWindow("Rechner");
-                assertEquals("NO VALUE", myClipBoard.getValue().get(0));
-                assertEquals("Rechner", myClipBoard.getObjectName());
-                assertEquals("SelectWindow()", myClipBoard.getMethod());
+            EN.SelectWindow("Rechner");
+            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+            assertEquals("Rechner", myClipBoard.getObjectName());
+            assertEquals("SelectWindow()", myClipBoard.getMethod());
 
-                EN.SetValue( "All_MethodsObj", "${IGNORE}");
+            EN.SetValue( "All_MethodsObj", "${IGNORE}");
 
         }
 
@@ -1146,8 +1210,10 @@ public class EN_IGNORE_Test
         public void TC_SetValue_IGNORE_EmptyString() throws Exception
         {
 
-                EN.SelectWindow("Rechner");
-                assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+    		EN.BeginTest( name.getMethodName() );
+
+    		EN.SelectWindow("Rechner");
+    		assertEquals("NO VALUE", myClipBoard.getValue().get(0));
                 assertEquals("Rechner", myClipBoard.getObjectName());
                 assertEquals("SelectWindow()", myClipBoard.getMethod());
 
@@ -1167,7 +1233,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_TypeKeyTablecell_IGNORE() throws Exception
         {
-            EN.SelectWindow("Rechner");
+    		EN.BeginTest( name.getMethodName() );
+
+    		EN.SelectWindow("Rechner");
 
             // Check the Name, Called Method and Value of Actuel object
             assertEquals("Rechner", myClipBoard.getObjectName());
@@ -1188,7 +1256,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_TypeKeyTablecell_IGNORE_EmptyString() throws Exception
         {
-            EN.SelectWindow("Rechner");
+    		EN.BeginTest( name.getMethodName() );
+
+    		EN.SelectWindow("Rechner");
 
             // Check the Name, Called Method and Value of Actuel object
             assertEquals("Rechner", myClipBoard.getObjectName());
@@ -1209,7 +1279,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_TypeKey_IGNORE() throws Exception
         {
-            EN.SelectWindow("Rechner");
+    		EN.BeginTest( name.getMethodName() );
+
+    		EN.SelectWindow("Rechner");
 
             // Check the Name, Called Method and Value of Actuel object
             assertEquals("Rechner", myClipBoard.getObjectName());
@@ -1232,7 +1304,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_TypeKey_IGNORE_EmptyString() throws Exception
         {
-            EN.SelectWindow("Rechner");
+    		EN.BeginTest( name.getMethodName() );
+
+    		EN.SelectWindow("Rechner");
 
             // Check the Name, Called Method and Value of Actuel object
             assertEquals("Rechner", myClipBoard.getObjectName());
@@ -1254,7 +1328,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifyExists_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1278,7 +1354,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifyExists_IGNORE_EmptyString() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1302,7 +1380,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifyHasFocus_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1326,7 +1406,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifyHasFocus_IGNORE_EmptyString() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1350,7 +1432,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifyIsActive_IGNORE() throws Exception
         {
-            EN.SelectWindow("Rechner");
+    		EN.BeginTest( name.getMethodName() );
+
+    		EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
             assertEquals("NO VALUE", myClipBoard.getValue().get(0));
@@ -1374,7 +1458,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifyIsActive_IGNORE_EmptyString() throws Exception
         {
-            EN.SelectWindow("Rechner");
+    		EN.BeginTest( name.getMethodName() );
+
+    		EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
             assertEquals("NO VALUE", myClipBoard.getValue().get(0));
@@ -1396,7 +1482,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifySelectedValue_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1422,7 +1510,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifySelectedValue_IGNORE_EMptyString() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1446,7 +1536,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifyTablecellValue_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
             
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1470,7 +1562,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifyTablecellValue_IGNORE_EmptyString() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
             
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1495,7 +1589,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifyTooltip_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1518,7 +1614,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifyTooltip_IGNORE_EmptyString() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
 
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1542,7 +1640,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifyValue_IGNORE() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
             
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
@@ -1567,7 +1667,9 @@ public class EN_IGNORE_Test
         @Test
         public void TC_VerifyValue_IGNORE_EmptyString() throws Exception
         {
-            // Testscript in Schlüsselwort-Notation
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
             EN.SelectWindow("Rechner");
             
             // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?

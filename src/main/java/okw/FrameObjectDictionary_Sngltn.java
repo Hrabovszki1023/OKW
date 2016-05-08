@@ -314,7 +314,14 @@ public class FrameObjectDictionary_Sngltn
 		}
 		finally
 		{
-			Log.LogFunctionEndDebug( lvo_Return.toString() );
+			if (lvo_Return == null)
+			{
+				Log.LogFunctionEndDebug( );
+			}
+			else
+			{
+				Log.LogFunctionEndDebug( lvo_Return.toString() );
+			}
 		}
 		return lvo_Return;
 	}
