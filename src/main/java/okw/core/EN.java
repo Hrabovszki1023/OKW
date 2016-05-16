@@ -101,10 +101,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Click on", fpsFunctionalName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.ClickOn(fpsFunctionalName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.ClickOn(fpsFunctionalName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -117,10 +122,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Click on", fpsFunctionalName, fpsClickType);
 
-            myKernel.SetLanguage(Language);
-            myKernel.ClickOn(fpsFunctionalName, fpsClickType);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.ClickOn(fpsFunctionalName, fpsClickType);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -131,11 +141,15 @@ import okw.log.*;
         /// 
         public static void EndTest() throws Exception
         {
-
-            myKernel.SetLanguage(Language);
-            myKernel.EndTest();
-
-            Log.LogTestcaseEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.EndTest();
+            }
+            finally
+            {
+            	Log.LogTestcaseEnd();
+            }
         }
 
         /// \~german
@@ -148,10 +162,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Log Caption", fpsFunctionalName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.LogCaption(fpsFunctionalName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.LogCaption(fpsFunctionalName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -164,10 +183,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Log exists", fpsFunctionalName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.LogExists(fpsFunctionalName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.LogExists(fpsFunctionalName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -180,10 +204,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Log has focus", fpsFunctionalName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.LogHasFocus(fpsFunctionalName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.LogHasFocus(fpsFunctionalName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -196,10 +225,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Log is activ", fpsFunctionalName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.LogIsActive(fpsFunctionalName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.LogIsActive(fpsFunctionalName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -212,10 +246,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Log label", fpsFunctionalName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.LogLabel(fpsFunctionalName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.LogLabel(fpsFunctionalName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -228,10 +267,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Log selected", fpsFunctionalName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.LogSelected(fpsFunctionalName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.LogSelected(fpsFunctionalName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -244,10 +288,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Log tablecell value", fpsFunctionalName, fpsCol, fpsRow);
 
-            myKernel.SetLanguage(Language);
-            myKernel.LogTablecellValue(fpsFunctionalName, fpsCol, fpsRow);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.LogTablecellValue(fpsFunctionalName, fpsCol, fpsRow);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -260,10 +309,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Log tooltip", fpsFunctionalName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.LogTooltip(fpsFunctionalName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.LogTooltip(fpsFunctionalName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -276,10 +330,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Log value", fpsFunctionalName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.LogValue(fpsFunctionalName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.LogValue(fpsFunctionalName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -292,10 +351,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Memorize caption", fpsFunctionalName, fpsKeyName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.MemorizeCaption(fpsFunctionalName, fpsKeyName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.MemorizeCaption(fpsFunctionalName, fpsKeyName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -308,10 +372,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Memorize exists", fpsFunctionalName, fpsKeyName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.MemorizeExists(fpsFunctionalName, fpsKeyName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.MemorizeExists(fpsFunctionalName, fpsKeyName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -324,10 +393,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Memorize has focus", fpsFunctionalName, fpsKeyName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.MemorizeHasFocus(fpsFunctionalName, fpsKeyName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.MemorizeHasFocus(fpsFunctionalName, fpsKeyName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -340,10 +414,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Memorize is activ", fpsFunctionalName, fpsKeyName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.MemorizeIsActive(fpsFunctionalName, fpsKeyName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.MemorizeIsActive(fpsFunctionalName, fpsKeyName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -356,10 +435,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Memorize label", fpsFunctionalName, fpsKeyName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.MemorizeLabel(fpsFunctionalName, fpsKeyName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.MemorizeLabel(fpsFunctionalName, fpsKeyName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -372,10 +456,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Memorize selecte value", fpsFunctionalName, fpsKeyName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.MemorizeSelectedValue(fpsFunctionalName, fpsKeyName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.MemorizeSelectedValue(fpsFunctionalName, fpsKeyName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -387,11 +476,15 @@ import okw.log.*;
         public static void MemorizeTablecellValue(String fpsFunctionalName, String fpsCol, String fpsRow, String fpsKeyName) throws Exception
         {
             Log.LogKeyWordStart("Memorize tablecell value", fpsFunctionalName, fpsCol, fpsRow, fpsKeyName);
-
-            myKernel.SetLanguage(Language);
-            myKernel.MemorizeTablecellValue(fpsFunctionalName, fpsCol, fpsRow, fpsKeyName);
-
-            Log.LogKeyWordEnd();
+            
+            try{
+            	myKernel.SetLanguage(Language);
+            	myKernel.MemorizeTablecellValue(fpsFunctionalName, fpsCol, fpsRow, fpsKeyName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -404,10 +497,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Memorize tooltip", fpsFunctionalName, fpsKeyName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.MemorizeTooltip(fpsFunctionalName, fpsKeyName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.MemorizeTooltip(fpsFunctionalName, fpsKeyName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -420,10 +518,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Memorize value", fpsFunctionalName, fpsKeyName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.MemorizeValue(fpsFunctionalName, fpsKeyName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.MemorizeValue(fpsFunctionalName, fpsKeyName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -436,10 +539,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Select", fpsFunctionalName, fpsValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.Select(fpsFunctionalName, fpsValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.Select(fpsFunctionalName, fpsValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -452,10 +560,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Select", fpsFunctionalName, fpsValue, fpsClickType);
 
-            myKernel.SetLanguage(Language);
-            myKernel.Select(fpsFunctionalName, fpsValue, fpsClickType);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.Select(fpsFunctionalName, fpsValue, fpsClickType);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -468,10 +581,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Select menu", fpsFunctionalName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.SelectMenu(fpsFunctionalName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.SelectMenu(fpsFunctionalName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -484,10 +602,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Select menu", fpsFunctionalName, fpsValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.SelectMenu(fpsFunctionalName, fpsValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.SelectMenu(fpsFunctionalName, fpsValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -500,10 +623,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Select Tablecell", fpsFunctionalName, fpsCol, fpsRow);
 
-            myKernel.SetLanguage(Language);
-            myKernel.SelectTablecell(fpsFunctionalName, fpsCol, fpsRow);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.SelectTablecell(fpsFunctionalName, fpsCol, fpsRow);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -516,10 +644,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Select Tablecell", fpsFunctionalName, fpsCol, fpsRow, fpsClickType);
 
-            myKernel.SetLanguage(Language);
-            myKernel.SelectTablecell(fpsFunctionalName, fpsCol, fpsRow, fpsClickType);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.SelectTablecell(fpsFunctionalName, fpsCol, fpsRow, fpsClickType);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -532,10 +665,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Select window", fpsFunctionalName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.SelectWindow(fpsFunctionalName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.SelectWindow(fpsFunctionalName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -548,10 +686,15 @@ import okw.log.*;
         {
             Log.LogSequenceStart("Sequece", fpsObjectName, fpsSequenceName, SEQID);
 
-            myKernel.SetLanguage(Language);
-            myKernel.Sequence(fpsObjectName, fpsSequenceName, SEQID);
-
-            Log.LogSequenceEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.Sequence(fpsObjectName, fpsSequenceName, SEQID);
+            }
+            finally
+            {
+            	Log.LogSequenceEnd();
+            }
         }
 
         /// \~german
@@ -564,10 +707,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Set focus", fpsFunctionalName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.SetFocus(fpsFunctionalName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.SetFocus(fpsFunctionalName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -580,10 +728,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Set value", fpsFunctionalName, fpsValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.SetValue(fpsFunctionalName, fpsValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.SetValue(fpsFunctionalName, fpsValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -596,10 +749,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Start app", fpsApplicationName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.StartApp(fpsApplicationName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.StartApp(fpsApplicationName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -612,10 +770,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Stop app", fpsApplicationName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.StopApp(fpsApplicationName);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.StopApp(fpsApplicationName);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -628,10 +791,16 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Typekey", fpsFunctionalName);
 
-            myKernel.SetLanguage(Language);
-            myKernel.TypeKey(fpsFunctionalName, fpsValue);
+            try
+            {
 
-            Log.LogKeyWordEnd();
+            	myKernel.SetLanguage(Language);
+            	myKernel.TypeKey(fpsFunctionalName, fpsValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -644,10 +813,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Typekey tablecell", fpsFunctionalName, fpsCol, fpsRow, fpsValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.TypeKeyTablecell(fpsFunctionalName, fpsCol, fpsRow, fpsValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.TypeKeyTablecell(fpsFunctionalName, fpsCol, fpsRow, fpsValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -660,10 +834,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Typekey window", fpsFunctionalName, fpsValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.TypeKeyWindow(fpsFunctionalName, fpsValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.TypeKeyWindow(fpsFunctionalName, fpsValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -676,10 +855,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Verify caption", fpsFunctionalName, fpsValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.VerifyCaption(fpsFunctionalName, fpsValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.VerifyCaption(fpsFunctionalName, fpsValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -692,10 +876,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Verify exists", fpsFunctionalName, fpsValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.VerifyExists(fpsFunctionalName, fpsValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.VerifyExists(fpsFunctionalName, fpsValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -708,10 +897,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Verify has focus", fpsFunctionalName, fpsExpectedValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.VerifyHasFocus(fpsFunctionalName, fpsExpectedValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.VerifyHasFocus(fpsFunctionalName, fpsExpectedValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -724,10 +918,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Verify is active", fpsFunctionalName, fpsExpectedValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.VerifyIsActive(fpsFunctionalName, fpsExpectedValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.VerifyIsActive(fpsFunctionalName, fpsExpectedValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -740,10 +939,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Verify label", fpsFunctionalName, fpsExpectedValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.VerifyLabel(fpsFunctionalName, fpsExpectedValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.VerifyLabel(fpsFunctionalName, fpsExpectedValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -756,10 +960,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Verify selected value", fpsFunctionalName, fpsExpectedValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.VerifySelectedValue(fpsFunctionalName, fpsExpectedValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.VerifySelectedValue(fpsFunctionalName, fpsExpectedValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -772,10 +981,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Verify table cell value", fpsFunctionalName, fpsCol, fpsRow, fpsExpectedValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.VerifyTablecellValue(fpsFunctionalName, fpsCol, fpsRow, fpsExpectedValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.VerifyTablecellValue(fpsFunctionalName, fpsCol, fpsRow, fpsExpectedValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -788,10 +1002,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Verify tooltip", fpsFunctionalName, fpsExpectedValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.VerifyTooltip(fpsFunctionalName, fpsExpectedValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.VerifyTooltip(fpsFunctionalName, fpsExpectedValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
         /// \~german
@@ -804,10 +1023,15 @@ import okw.log.*;
         {
             Log.LogKeyWordStart("Verify value", fpsFunctionalName, fpsExpectedValue);
 
-            myKernel.SetLanguage(Language);
-            myKernel.VerifyValue(fpsFunctionalName, fpsExpectedValue);
-
-            Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.VerifyValue(fpsFunctionalName, fpsExpectedValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
         }
 
 		/// \~german
@@ -817,10 +1041,15 @@ import okw.log.*;
 		{
 			Log.LogKeyWordStart("Verify file exists", fpsPathAndFileName, fpsExpectedValue);
 
-			myKernel.SetLanguage(Language);
-			myKernel.VerifyFileExists(fpsPathAndFileName, fpsExpectedValue);
-
-			Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.VerifyFileExists(fpsPathAndFileName, fpsExpectedValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
 		}
 
 		/// \~german
@@ -830,9 +1059,14 @@ import okw.log.*;
 		{
 			Log.LogKeyWordStart("Verify directory exists", fpsPath, fpsExpectedValue);
 
-			myKernel.SetLanguage(Language);
-			myKernel.VerifyDirectoryExists(fpsPath, fpsExpectedValue);
-
-			Log.LogKeyWordEnd();
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.VerifyDirectoryExists(fpsPath, fpsExpectedValue);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
 		}
 	}

@@ -59,7 +59,7 @@ public interface ILogger
     void LogKeyWordEnd();
 
     // Sequence Logging...    
-    void LogSequenceStart(String fpsWindowFN, String fps_SequenceName, String... fpsParameter);
+    void LogSequenceStart(String fps_KeyWordName, String fpsWindowFN, String fps_SequenceName, String... fpsParameter);
     void LogSequenceEnd();
     
     /// \brief
@@ -117,4 +117,7 @@ public interface ILogger
     /// 
     void ResCloseList();
     void ResCloseListDebug();
+    
+	void setDebugMode( Boolean fpbDebugMode );
+
 }

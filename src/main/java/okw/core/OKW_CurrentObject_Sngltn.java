@@ -414,8 +414,6 @@ public class OKW_CurrentObject_Sngltn
 		
 		try
 		{
-			System.out.println( myFrame_Class.getDeclaredMethods().length );
-			
 			Method myMethod = myFrame_Class.getMethod(fpsMethod, paramTypes);
 			myMethod.invoke(cvoObject, fpLsParameter);
 		}

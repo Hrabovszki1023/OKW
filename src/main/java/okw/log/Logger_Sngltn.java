@@ -46,19 +46,25 @@ import okw.OKW_Const_Sngltn;
 public class Logger_Sngltn
 {
 
-	private Boolean cvbDebugMode = false;
+	private static Boolean cvbDebugMode = false;
 
 	public Boolean getDebugMode()
 	{
 		return cvbDebugMode;
 	}
 
-	public void setDebugMode( Boolean cvbDebugMode )
+	public void setDebugMode( Boolean fpbDebugMode )
 	{
-		this.cvbDebugMode = cvbDebugMode;
+		cvbDebugMode = fpbDebugMode;
+		
+		for (ILogger myLogger : LoggerList)
+		{
+			myLogger.setDebugMode(cvbDebugMode);
+		}
+
 	}
 
-	private ArrayList<ILogger>		LoggerList;
+	private static ArrayList<ILogger>		LoggerList;
 
 	private static Logger_Sngltn	Instance;
 
@@ -74,6 +80,8 @@ public class Logger_Sngltn
 				if (Instance == null)
 				{
 					Instance = new Logger_Sngltn();
+					Init();
+
 				}
 			}
 		}
@@ -112,7 +120,7 @@ public class Logger_Sngltn
 	/// \date 2015.05.01
 	public void AddLogger( ILogger fpLogger )
 	{
-		this.LoggerList.add(fpLogger);
+		LoggerList.add(fpLogger);
 	}
 
 	/// \~german
@@ -120,6 +128,7 @@ public class Logger_Sngltn
 	///
 	/// - Löscht die Liste LoggerList
 	/// - Schaltet den DebugMode aus.
+	/// - Fügt Log2Console hinzu
 	///
 	/// \todo TODO: Ausführliche Beschreibung
 	///
@@ -131,10 +140,12 @@ public class Logger_Sngltn
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2015.05.01
-	public void Init()
+	public static void Init()
 	{
-		this.LoggerList.clear();
-		this.cvbDebugMode = false;
+		LoggerList.clear();
+		
+		LoggerList.add( new Log2Console() );
+		cvbDebugMode = false;
 	}
 
 	/// \brief
@@ -144,7 +155,7 @@ public class Logger_Sngltn
 	/// \param fps_Message
 	public void LogError( String fps_Message )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogError(fps_Message);
 		}
@@ -157,7 +168,7 @@ public class Logger_Sngltn
 	/// \param fps_Message
 	public void LogException( String fps_Message )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogException(fps_Message);
 		}
@@ -165,7 +176,7 @@ public class Logger_Sngltn
 
 	public void LogFunctionEnd( String fps_Return )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogFunctionEnd(fps_Return);
 		}
@@ -173,7 +184,7 @@ public class Logger_Sngltn
 
 	public void LogFunctionEnd( Boolean fpb_Return )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogFunctionEnd(fpb_Return);
 		}
@@ -181,7 +192,7 @@ public class Logger_Sngltn
 
 	public void LogFunctionEnd( List<String> fpls_Return )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogFunctionEnd(fpls_Return);
 		}
@@ -189,7 +200,7 @@ public class Logger_Sngltn
 
 	public void LogFunctionEnd()
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogFunctionEnd();
 		}
@@ -198,7 +209,7 @@ public class Logger_Sngltn
 	public void LogFunctionEndDebug()
 	{
 
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogFunctionEndDebug();
 		}
@@ -206,7 +217,7 @@ public class Logger_Sngltn
 
 	public void LogFunctionEndDebug( String fps_Return )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogFunctionEndDebug(fps_Return);
 		}
@@ -214,7 +225,7 @@ public class Logger_Sngltn
 
 	public void LogFunctionEndDebug( List<String> fps_Return )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogFunctionEndDebug(fps_Return);
 		}
@@ -222,7 +233,7 @@ public class Logger_Sngltn
 
 	public void LogFunctionEndDebug( Boolean fpb_Return )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogFunctionEndDebug(fpb_Return);
 		}
@@ -230,7 +241,7 @@ public class Logger_Sngltn
 
 	public void LogFunctionStart( String fps_FunctionName, String... fpsParameter )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogFunctionStart(fps_FunctionName, fpsParameter);
 		}
@@ -239,7 +250,7 @@ public class Logger_Sngltn
 	public void LogFunctionStartDebug( String fps_FunctionName, String... fpsParameter )
 	{
 
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogFunctionStartDebug(fps_FunctionName, fpsParameter);
 		}
@@ -247,7 +258,7 @@ public class Logger_Sngltn
 
 	public void LogKeyWordEnd()
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogKeyWordEnd();
 		}
@@ -255,7 +266,7 @@ public class Logger_Sngltn
 
 	public void LogSequenceEnd()
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogSequenceEnd( );
 		}
@@ -264,7 +275,7 @@ public class Logger_Sngltn
 
 	public void LogTestcaseEnd()
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogTestcaseEnd();
 		}
@@ -292,17 +303,17 @@ public class Logger_Sngltn
 	/// \date 2015.05.01
 	public void LogKeyWordStart( String fpsKeyWordName, String... fpsParameter )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogKeyWordStart(fpsKeyWordName, fpsParameter);
 		}
 	}
 
-	public void LogSequenceStart(String fpsWinowFN, String fps_SequensName, String... fpsParameter)
+	public void LogSequenceStart(String fps_KeyWordName, String fpsWinowFN, String fps_SequensName, String... fpsParameter)
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
-			myLogger.LogSequenceStart( fpsWinowFN, fps_SequensName, fpsParameter );
+			myLogger.LogSequenceStart( fps_KeyWordName, fpsWinowFN, fps_SequensName, fpsParameter );
 		}
 	}
 
@@ -328,7 +339,7 @@ public class Logger_Sngltn
 	/// \date 2015.05.01
 	public void LogTestcaseStart( String fps_TestcaseName )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogTestcaseStart( fps_TestcaseName );
 		}
@@ -341,7 +352,7 @@ public class Logger_Sngltn
 	/// \param fps_Message
 	public void LogPrint( String fps_Message )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogPrint(fps_Message);
 		}
@@ -372,7 +383,7 @@ public class Logger_Sngltn
 	/// \param fps_Message Message to Print
 	public void LogPrintDebug( String fpsMessage )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogPrintDebug(fpsMessage);
 		}
@@ -400,7 +411,7 @@ public class Logger_Sngltn
 	/// \date 2015.05.01
 	public void LogVerify( String fpsActual, String fpsExpected )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogVerify(fpsActual, fpsExpected);
 		}
@@ -413,7 +424,7 @@ public class Logger_Sngltn
 	/// \param fps_Message
 	public void LogWarning( String fps_Message )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogWarning(fps_Message);
 		}
@@ -431,7 +442,7 @@ public class Logger_Sngltn
 	///
 	public void ResCloseList()
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.ResCloseList();
 		}
@@ -449,7 +460,7 @@ public class Logger_Sngltn
 	///
 	public void ResCloseListDebug()
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.ResCloseListDebug();
 		}
@@ -467,7 +478,7 @@ public class Logger_Sngltn
 	/// \param fps_Name
 	public void ResOpenList( String fps_Name )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.ResOpenList(fps_Name);
 		}
@@ -498,7 +509,7 @@ public class Logger_Sngltn
 	/// \date 2015.05.01
 	public void ResOpenListDebug( String fpsListCaption )
 	{
-		for (ILogger myLogger : this.LoggerList)
+		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.ResOpenListDebug(fpsListCaption);
 		}

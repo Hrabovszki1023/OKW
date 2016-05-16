@@ -62,9 +62,11 @@ public class OKW_IniTest
 	public static void MySetUp()
 	{
         // Reset des Loggers: Alle Instanzen löschen
-        myLogger.Init();
+        //Logger_Sngltn.Init();
+        
         myLog2HTML = new Log2HTML("OKW_IniTest.html");
         myLogger.AddLogger(myLog2HTML);
+        
         myLogger.setDebugMode(false);
 	}
 

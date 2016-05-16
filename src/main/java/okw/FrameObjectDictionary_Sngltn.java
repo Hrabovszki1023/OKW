@@ -374,13 +374,13 @@ public class FrameObjectDictionary_Sngltn
 			Collections.sort( myList );
 
 			System.out.println("-----------------------------------------------");
-			System.out.println("- Frames: -");
-			System.out.println("-----------------------------------------------");
+			System.out.println(" Frames:");
 			Log.ResOpenListDebug( "Frames" );
+
 			for (String Element : myList)
 			{
 				Log.LogPrintDebug( Element );
-				System.out.println(Element);
+				System.out.println( "\t" + Element );
 			}
 			
 			System.out.println("-----------------------------------------------");
@@ -537,10 +537,6 @@ public class FrameObjectDictionary_Sngltn
 				String FieldName = lvField.getName();
 				String FieldType = lvField.getType().getName();
 
-				System.out.println( "\nScanne das Objekt: >>" + FieldName
-						+ "<<" );
-				System.out.println( "           Type  : >>" + FieldType + "<<" );
-
 				if ( lvField.isAnnotationPresent( OKW_FN.class ) )
 				{
 					OKW_FN myFN = lvField.getAnnotation( OKW_FN.class );
@@ -559,16 +555,10 @@ public class FrameObjectDictionary_Sngltn
 				}
 				else
 				{
-
 					if ( FieldType.startsWith( "okw.gui." ) )
 					{
 						Scanfields( lvField.get( fpoWindowAsObject ),
 								fpsWindowName );
-					}
-					else
-					{
-						System.out
-								.println( " - kein element des Paketes >>okw.gui.<<" );
 					}
 				}
 			}

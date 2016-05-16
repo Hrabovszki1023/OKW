@@ -73,7 +73,7 @@ import okw.log.Logger_Sngltn;
 
         public boolean LogExists()
         {
-            this.myLogger.LogFunctionStart("LogExists");
+            this.myLogger.LogFunctionStartDebug("LogExists");
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
@@ -82,14 +82,14 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("LogExists()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd(true);
+            this.myLogger.LogFunctionEndDebug(true);
 
             return true;
         }
 
         public boolean LogHasFocus()
         {
-            this.myLogger.LogFunctionStart("LogHasFocus");
+            this.myLogger.LogFunctionStartDebug("LogHasFocus");
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
@@ -98,14 +98,14 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("LogHasFocus()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd(true);
+            this.myLogger.LogFunctionEndDebug(true);
 
             return true;
         }
 
         public boolean LogIsActive()
         {
-            this.myLogger.LogFunctionStart("LogIsActive");
+            this.myLogger.LogFunctionStartDebug("LogIsActive");
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
@@ -114,7 +114,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("LogIsActive()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd(true);
+            this.myLogger.LogFunctionEndDebug(true);
 
             return true;
         }
@@ -123,7 +123,7 @@ import okw.log.Logger_Sngltn;
         {
         	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("LogSelected");
+            this.myLogger.LogFunctionStartDebug("LogSelected");
             lvLsReturn.add("Wert_1");
             lvLsReturn.add("Wert_2");
             lvLsReturn.add("Wert_3");
@@ -135,7 +135,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("LogSelected()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd(lvLsReturn);
+            this.myLogger.LogFunctionEndDebug(lvLsReturn);
 
             return lvLsReturn;
         }
@@ -144,7 +144,7 @@ import okw.log.Logger_Sngltn;
         {
         	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("LogTablecellValue");
+            this.myLogger.LogFunctionStartDebug("LogTablecellValue");
             lvLsReturn.add(Coll);
             lvLsReturn.add(Row);
 
@@ -156,7 +156,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(Coll);
             myClipboard.getValue().add(Row);
 
-            this.myLogger.LogFunctionEnd(lvLsReturn);
+            this.myLogger.LogFunctionEndDebug(lvLsReturn);
 
             return lvLsReturn;
         }
@@ -165,7 +165,7 @@ import okw.log.Logger_Sngltn;
         {
         	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("LogTooltip");
+            this.myLogger.LogFunctionStartDebug("LogTooltip");
             lvLsReturn.add("Tooltip Rückgabewert 1");
             lvLsReturn.add("Tooltip Rückgabewert 2");
             lvLsReturn.add("Tooltip Rückgabewert 3");
@@ -177,7 +177,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("LogTooltip()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd(lvLsReturn);
+            this.myLogger.LogFunctionEndDebug(lvLsReturn);
 
             return lvLsReturn;
         }
@@ -186,7 +186,7 @@ import okw.log.Logger_Sngltn;
         {
         	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("LogCaption");
+            this.myLogger.LogFunctionStartDebug("LogCaption");
             lvLsReturn.add("Caption Rückgabewert 1");
             lvLsReturn.add("Caption Rückgabewert 2");
             lvLsReturn.add("Caption Rückgabewert 3");
@@ -198,7 +198,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("LogCaption()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd(lvLsReturn);
+            this.myLogger.LogFunctionEndDebug(lvLsReturn);
 
             return lvLsReturn;
         }
@@ -207,7 +207,7 @@ import okw.log.Logger_Sngltn;
         {
         	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("LogLabel");
+            this.myLogger.LogFunctionStartDebug("LogLabel");
             lvLsReturn.add("Label Rückgabewert 1");
             lvLsReturn.add("Label Rückgabewert 2");
             lvLsReturn.add("Label Rückgabewert 3");
@@ -219,7 +219,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("LogLabel()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd(lvLsReturn);
+            this.myLogger.LogFunctionEndDebug(lvLsReturn);
 
             return lvLsReturn;
         }
@@ -228,7 +228,7 @@ import okw.log.Logger_Sngltn;
         {
         	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("LogValue");
+            this.myLogger.LogFunctionStartDebug("LogValue");
             lvLsReturn.add("Return Value 1");
             lvLsReturn.add("Return Value 2");
             lvLsReturn.add("Return Value 3");
@@ -240,14 +240,14 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("LogValue()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd(lvLsReturn);
+            this.myLogger.LogFunctionEndDebug(lvLsReturn);
 
             return lvLsReturn;
         }
 
         public boolean MemorizeExists()
         {
-            this.myLogger.LogFunctionStart("MemorizeExists");
+            this.myLogger.LogFunctionStartDebug("MemorizeExists");
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
@@ -256,14 +256,14 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("MemorizeExists()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return true;
         }
 
         public boolean MemorizeHasFocus()
         {
-            this.myLogger.LogFunctionStart("MemorizeHasFocus");
+            this.myLogger.LogFunctionStartDebug("MemorizeHasFocus");
 
             myClipboard.Clear();
            String lvs_ObjectName = getFN();
@@ -272,14 +272,14 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("MemorizeHasFocus()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return true;
         }
 
         public boolean MemorizeIsActive()
         {
-            this.myLogger.LogFunctionStart("MemorizeIsActive");
+            this.myLogger.LogFunctionStartDebug("MemorizeIsActive");
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
@@ -288,7 +288,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("MemorizeIsActive()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return true;
         }
@@ -297,7 +297,7 @@ import okw.log.Logger_Sngltn;
         {
         	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("MemorizeSelectedValue");
+            this.myLogger.LogFunctionStartDebug("MemorizeSelectedValue");
             lvLsReturn.add("MemorizeSelectedValue_Return_1");
             lvLsReturn.add("MemorizeSelectedValue_Return_2");
 
@@ -308,7 +308,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("MemorizeSelectedValue()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
@@ -317,7 +317,7 @@ import okw.log.Logger_Sngltn;
         {
         	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("MemorizeTablecellValue");
+            this.myLogger.LogFunctionStartDebug("MemorizeTablecellValue");
             lvLsReturn.add("MemorizeTablecellValue_1");
 
             myClipboard.Clear();
@@ -328,7 +328,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(Col);
             myClipboard.getValue().add(Row);
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
@@ -337,7 +337,7 @@ import okw.log.Logger_Sngltn;
         {
         	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("MemorizeTooltip");
+            this.myLogger.LogFunctionStartDebug("MemorizeTooltip");
             lvLsReturn.add("MemorizeTooltip_Return_1");
             lvLsReturn.add("MemorizeTooltip_Return_2");
 
@@ -348,7 +348,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("MemorizeTooltip()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
@@ -357,7 +357,7 @@ import okw.log.Logger_Sngltn;
         {
         	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("MemorizeCaption");
+            this.myLogger.LogFunctionStartDebug("MemorizeCaption");
             lvLsReturn.add("MemorizeCaption_Return_1");
             lvLsReturn.add("MemorizeCaption_Return_2");
 
@@ -368,7 +368,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("MemorizeCaption()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
@@ -377,7 +377,7 @@ import okw.log.Logger_Sngltn;
         {
         	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("MemorizeLabel");
+            this.myLogger.LogFunctionStartDebug("MemorizeLabel");
             lvLsReturn.add("MemorizeLabel_Return_1");
             lvLsReturn.add("MemorizeLabel_Return_2");
 
@@ -388,7 +388,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("MemorizeLabel()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
@@ -397,7 +397,7 @@ import okw.log.Logger_Sngltn;
         {
         	ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("MemorizeValue");
+            this.myLogger.LogFunctionStartDebug("MemorizeValue");
             lvLsReturn.add("MemorizeValue_Return_1");
 
             myClipboard.Clear();
@@ -407,7 +407,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("MemorizeValue()");
             myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
@@ -651,7 +651,7 @@ import okw.log.Logger_Sngltn;
 
         public boolean VerifyExists(Boolean fpbExpectedValue) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
         {
-            this.myLogger.LogFunctionStart("VerifyExists", "fpbExpectedValue", fpbExpectedValue.toString());
+            this.myLogger.LogFunctionStartDebug("VerifyExists", "fpbExpectedValue", fpbExpectedValue.toString());
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
@@ -660,7 +660,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("VerifyExists()");
             myClipboard.getValue().add(OKW_Const_Sngltn.getInstance().Boolean2YesNo(fpbExpectedValue));
 
-            this.myLogger.LogFunctionEnd(fpbExpectedValue);
+            this.myLogger.LogFunctionEndDebug(fpbExpectedValue);
 
             return fpbExpectedValue;
         }
@@ -668,7 +668,7 @@ import okw.log.Logger_Sngltn;
 
         public Boolean VerifyHasFocus(Boolean fpbExpectedValue)
         {
-            myLogger.LogFunctionStart("VerifyHasFocus", "fpbExpectedValue", fpbExpectedValue.toString());
+            myLogger.LogFunctionStartDebug("VerifyHasFocus", "fpbExpectedValue", fpbExpectedValue.toString());
 
             myClipboard.Clear();
             
@@ -679,14 +679,14 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.getValue().add(fpbExpectedValue.toString());
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return fpbExpectedValue;
         }
 
         public boolean VerifyIsActive(Boolean fpbExpectedValue) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
         {
-            this.myLogger.LogFunctionStart("VerifyIsActive");
+            this.myLogger.LogFunctionStartDebug("VerifyIsActive");
 
             myClipboard.Clear();   
             String lvs_ObjectName = getFN();
@@ -695,7 +695,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("VerifyIsActive()");
             myClipboard.getValue().add(OKW_Const_Sngltn.getInstance().Boolean2YesNo(fpbExpectedValue));
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return fpbExpectedValue;
         }
@@ -704,7 +704,7 @@ import okw.log.Logger_Sngltn;
         {
             List<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("VerifySelectedValue");
+            this.myLogger.LogFunctionStartDebug("VerifySelectedValue");
             lvLsReturn.addAll(fpLsExpectedValue);
 
             myClipboard.Clear();
@@ -715,7 +715,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("VerifySelectedValue()");
             myClipboard.getValue().addAll(fpLsExpectedValue);
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
@@ -724,7 +724,7 @@ import okw.log.Logger_Sngltn;
         {
             List<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("VerifyTablecellValue");
+            this.myLogger.LogFunctionStartDebug("VerifyTablecellValue");
             lvLsReturn.addAll(fpLsExpectedValue);
 
             myClipboard.Clear();
@@ -737,7 +737,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(Row);
             myClipboard.getValue().addAll(fpLsExpectedValue);
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
@@ -746,7 +746,7 @@ import okw.log.Logger_Sngltn;
         {
             List<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("VerifyTooltip");
+            this.myLogger.LogFunctionStartDebug("VerifyTooltip");
             lvLsReturn.addAll(fpLsExpectedValue);
 
             myClipboard.Clear();
@@ -756,7 +756,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("VerifyTooltip()");
             myClipboard.getValue().addAll(fpLsExpectedValue);
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
@@ -765,7 +765,7 @@ import okw.log.Logger_Sngltn;
         {
             List<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("VerifyCaption");
+            this.myLogger.LogFunctionStartDebug("VerifyCaption");
             lvLsReturn.addAll(fpLsExpectedValue);
 
             myClipboard.Clear();
@@ -775,7 +775,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("VerifyCaption()");
             myClipboard.getValue().addAll(fpLsExpectedValue);
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
@@ -784,7 +784,8 @@ import okw.log.Logger_Sngltn;
         {
             List<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("VerifyLabel");
+            this.myLogger.LogFunctionStartDebug("VerifyLabel");
+            
             lvLsReturn.addAll(fpLsExpectedValue);
 
             myClipboard.Clear();
@@ -794,7 +795,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("VerifyLabel()");
             myClipboard.getValue().addAll(fpLsExpectedValue);
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
@@ -803,7 +804,7 @@ import okw.log.Logger_Sngltn;
         {
             List<String> lvLsReturn = new ArrayList<String>();
 
-            this.myLogger.LogFunctionStart("VerifyValue");
+            this.myLogger.LogFunctionStartDebug("VerifyValue");
             lvLsReturn.addAll(fpLsExpectedValue);
 
             myClipboard.Clear();
@@ -813,7 +814,7 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.getValue().addAll(fpLsExpectedValue);
 
-            this.myLogger.LogFunctionEnd();
+            this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }

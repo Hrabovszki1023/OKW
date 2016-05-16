@@ -901,6 +901,19 @@ public class OKW_Helper
 		return lvsReturn.toString();
 	}
 	
+
+	/// \todo TODO: Methode Documentieren!
+	public static String StringRepeat( String c, Integer n )
+	{
+		StringBuilder lvsReturn = new StringBuilder();
+		
+		for (Integer x = 0; x < n; x++)
+			lvsReturn.append(c);
+		
+		return lvsReturn.toString();
+	}
+
+	
 	/// \todo TODO: Methode Documentieren!
 	public static Boolean StringIsNullOrEmpty( String fpsString)
 	{

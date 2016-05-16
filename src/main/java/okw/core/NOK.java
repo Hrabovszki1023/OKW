@@ -83,7 +83,7 @@ import okw.log.*;
 			// TODO: Prüfen ob hier ein catchbloch bnötigt wird
 			try
 			{
-				Log.LogFunctionStart("BeginTest",
+				Log.LogFunctionStartDebug("BeginTest",
 					"fpsTestname", fpsTestname);
 
 				// Alles Initialisieren
@@ -100,7 +100,7 @@ import okw.log.*;
 			finally
 			{
 				// Gute Frage was alles hier hingehört...
-				Log.LogFunctionEnd();
+				Log.LogFunctionEndDebug();
 			}
 		}
 
@@ -111,10 +111,10 @@ import okw.log.*;
 		/// 
 		public void ClickOn(String fpsFunctionalname)
 		{
-			Log.LogFunctionStart("ClickOn", 
+			Log.LogFunctionStartDebug("ClickOn", 
 				"fpsFunctionalname", fpsFunctionalname);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -124,11 +124,11 @@ import okw.log.*;
 		/// 
 		public void ClickOn(String fpsFunctionalname, String fpsClickType)
 		{
-			Log.LogFunctionStart("ClickOn", 
+			Log.LogFunctionStartDebug("ClickOn", 
 				"fpsFunctionalname", fpsFunctionalname, 
 				"fpsClickType", fpsClickType);
             
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -139,9 +139,9 @@ import okw.log.*;
 		public void EndTest()
 		{
 			// TODO: Aufräumen  Kill... usw aufrufen
-			Log.LogFunctionStart("EndTest");
+			Log.LogFunctionStartDebug("EndTest");
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -151,9 +151,9 @@ import okw.log.*;
 		/// 
 		public void LogCaption(String fpsFunctionalname)
 		{
-			Log.LogFunctionStart("LogCaption", "fpsFunctionalname", fpsFunctionalname);
+			Log.LogFunctionStartDebug("LogCaption", "fpsFunctionalname", fpsFunctionalname);
             
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -163,10 +163,10 @@ import okw.log.*;
 		/// 
 		public void LogExists(String fpsFunctionalname)
 		{
-			Log.LogFunctionStart("LogExists",
+			Log.LogFunctionStartDebug("LogExists",
 				"fpsFunctionalname", fpsFunctionalname);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -176,10 +176,10 @@ import okw.log.*;
 		/// 
 		public void LogHasFocus(String fpsFunctionalname)
 		{
-			Log.LogFunctionStart("LogHasFocus",
+			Log.LogFunctionStartDebug("LogHasFocus",
 				"fpsFunctionalname", fpsFunctionalname);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -189,10 +189,10 @@ import okw.log.*;
 		/// 
 		public void LogIsActive(String fpsFunctionalname)
 		{
-			Log.LogFunctionStart("LogIsActive",
+			Log.LogFunctionStartDebug("LogIsActive",
 				"fpsFunctionalname", fpsFunctionalname);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -202,10 +202,10 @@ import okw.log.*;
 		/// 
 		public void LogLabel(String fpsFunctionalname)
 		{
-			Log.LogFunctionStart("LogLabel",
+			Log.LogFunctionStartDebug("LogLabel",
 				"fpsFunctionalname", fpsFunctionalname);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -214,10 +214,10 @@ import okw.log.*;
 		/// \copydoc IOKW_State::LogSelected(String)
 		public void LogSelected(String fpsFunctionalname)
 		{
-			Log.LogFunctionStart("LogSelected",
+			Log.LogFunctionStartDebug("LogSelected",
 				"fpsFunctionalname", fpsFunctionalname);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -227,12 +227,12 @@ import okw.log.*;
 		/// 
 		public void LogTablecellValue(String fpsFunctionalname, String fpsCol, String fpsRow)
 		{
-			Log.LogFunctionStart("LogTablecellValue",
+			Log.LogFunctionStartDebug("LogTablecellValue",
 				"fpsCol", fpsCol,
 				"fpsRow", fpsRow, 
 				"fpsFunctionalname", fpsFunctionalname);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -242,10 +242,10 @@ import okw.log.*;
 		/// 
 		public void LogTooltip(String fpsFunctionalname)
 		{
-			Log.LogFunctionStart("LogTooltip",
+			Log.LogFunctionStartDebug("LogTooltip",
 				"fpsFunctionalname", fpsFunctionalname);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -255,10 +255,10 @@ import okw.log.*;
 		/// 
 		public void LogValue(String fpsFunctionalname)
 		{
-			Log.LogFunctionStart("LogValue",
+			Log.LogFunctionStartDebug("LogValue",
 				"fpsFunctionalname", fpsFunctionalname);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -268,11 +268,11 @@ import okw.log.*;
 		/// 
 		public void MemorizeCaption(String fpsFunctionalname, String fpsMemKeyName)
 		{
-			Log.LogFunctionStart("MemorizeCaption",
+			Log.LogFunctionStartDebug("MemorizeCaption",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsMemKeyName", fpsMemKeyName);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -281,11 +281,11 @@ import okw.log.*;
 		/// \copydoc IOKW_State::MemorizeExists(String,String)
 		public void MemorizeExists(String fpsFunctionalname, String fpsMemKeyName)
 		{
-			Log.LogFunctionStart("MemorizeExists",
+			Log.LogFunctionStartDebug("MemorizeExists",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsMemKeyName", fpsMemKeyName);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -295,11 +295,11 @@ import okw.log.*;
 		/// 
 		public void MemorizeHasFocus(String fpsFunctionalname, String fpsMemKeyName)
 		{
-			Log.LogFunctionStart("MemorizeHasFocus",
+			Log.LogFunctionStartDebug("MemorizeHasFocus",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsMemKeyName", fpsMemKeyName);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -309,11 +309,11 @@ import okw.log.*;
 		/// 
 		public void MemorizeIsActive(String fpsFunctionalname, String fpsMemKeyName)
 		{
-			Log.LogFunctionStart("MemorizeIsActive",
+			Log.LogFunctionStartDebug("MemorizeIsActive",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsMemKeyName", fpsMemKeyName);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -323,11 +323,11 @@ import okw.log.*;
 		/// 
 		public void MemorizeLabel(String fpsFunctionalname, String fpsMemKeyName)
 		{
-			Log.LogFunctionStart("MemorizeLabel",
+			Log.LogFunctionStartDebug("MemorizeLabel",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsMemKeyName", fpsMemKeyName);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -337,11 +337,11 @@ import okw.log.*;
 		/// 
 		public void MemorizeSelectedValue(String fpsFunctionalname, String fpsMemKeyName)
 		{
-			Log.LogFunctionStart("MemorizeSelectedValue",
+			Log.LogFunctionStartDebug("MemorizeSelectedValue",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsMemKeyName", fpsMemKeyName);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -351,12 +351,12 @@ import okw.log.*;
 		/// 
 		public void MemorizeTablecellValue(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsMemKeyName)
 		{
-			Log.LogFunctionStart("MemorizeTablecellValue",
+			Log.LogFunctionStartDebug("MemorizeTablecellValue",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsCol", fpsCol,
 				"fpsRow", fpsRow,
 				"fpsMemKeyName", fpsMemKeyName);
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -366,11 +366,11 @@ import okw.log.*;
 		/// 
 		public void MemorizeTooltip(String fpsFunctionalname, String fpsMemKeyName)
 		{
-			Log.LogFunctionStart("MemorizeTooltip",
+			Log.LogFunctionStartDebug("MemorizeTooltip",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsMemKeyName", fpsMemKeyName);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -380,11 +380,11 @@ import okw.log.*;
 		/// 
 		public void MemorizeValue(String fpsFunctionalname, String fpsMemKeyName)
 		{
-			Log.LogFunctionStart("MemorizeValue",
+			Log.LogFunctionStartDebug("MemorizeValue",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsMemKeyName", fpsMemKeyName);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -393,11 +393,11 @@ import okw.log.*;
 		/// \copydoc IOKW_State::Select(String,String)
 		public void Select(String fpsFunctionalname, String fpsValue)
 		{
-			Log.LogFunctionStart("Select",
+			Log.LogFunctionStartDebug("Select",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsValue", fpsValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -406,12 +406,12 @@ import okw.log.*;
 		/// \copydoc IOKW_State::Select(String,String,String)
 		public void Select(String fpsFunctionalname, String fpsValue, String fpsClickType)
 		{
-			Log.LogFunctionStart("Select",
+			Log.LogFunctionStartDebug("Select",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsValue", fpsValue,
 				"fpsClickType", fpsClickType);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -421,10 +421,10 @@ import okw.log.*;
 		/// 
 		public void SelectMenu(String fpsFunctionalname)
 		{
-			Log.LogFunctionStart("SelectMenu",
+			Log.LogFunctionStartDebug("SelectMenu",
 				"fpsFunctionalname", fpsFunctionalname);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -434,11 +434,11 @@ import okw.log.*;
 		/// 
 		public void SelectMenu(String fpsFunctionalname, String fpsValue)
 		{
-			Log.LogFunctionStart("SelectMenu", 
+			Log.LogFunctionStartDebug("SelectMenu", 
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsValue", fpsValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -448,12 +448,12 @@ import okw.log.*;
 		/// 
 		public void SelectTablecell(String fpsFunctionalname, String fpsCol, String fpsRow)
 		{
-			Log.LogFunctionStart("SelectTablecell", 
+			Log.LogFunctionStartDebug("SelectTablecell", 
 				"fpsFunctionalname", fpsFunctionalname, 
 				"fpsCol", fpsCol, 
 				"fpsRow", fpsRow);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -463,14 +463,14 @@ import okw.log.*;
 		/// 
 		public void SelectTablecell(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsClickType)
 		{
-			Log.LogFunctionStart(
+			Log.LogFunctionStartDebug(
 				"SelectTablecell",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsCol", fpsCol,
 				"fpsRow", fpsRow,
 				"fpsClickType", fpsClickType);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -480,10 +480,10 @@ import okw.log.*;
 		/// 
 		public void SelectWindow(String fpsFunctionalname)
 		{
-			Log.LogFunctionStart("SelectWindow",
+			Log.LogFunctionStartDebug("SelectWindow",
 				"fpsFunctionalname", fpsFunctionalname);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -492,12 +492,12 @@ import okw.log.*;
 		/// \copydoc IOKW_State::Sequence(String,String,String)
 		public void Sequence(String fpsObjectName, String fpsSequenceName, String SEQ_ID)
 		{
-			Log.LogFunctionStart("Sequence",
+			Log.LogFunctionStartDebug("Sequence",
 				"fpsObjectName", fpsObjectName,
 				"fpsSequenceName", fpsSequenceName,
 				"SEQ_ID", SEQ_ID);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -507,10 +507,10 @@ import okw.log.*;
 		/// 
 		public void SetFocus(String fpsFunctionalname)
 		{
-			Log.LogFunctionStart("SetFocus",
+			Log.LogFunctionStartDebug("SetFocus",
 				"fpsFunctionalname", fpsFunctionalname);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -531,10 +531,10 @@ import okw.log.*;
 		/// 
 		public void SetValue(String fpsFunctionalname, String fpsValue)
 		{
-			Log.LogFunctionStart("SetValue", 
+			Log.LogFunctionStartDebug("SetValue", 
 				"fpsFunctionalname", fpsFunctionalname);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -544,10 +544,10 @@ import okw.log.*;
 		/// 
 		public void StartApp(String fpsApplikationName)
 		{
-			Log.LogFunctionStart("StartApp", 
+			Log.LogFunctionStartDebug("StartApp", 
 				"fps_ApplikationName", fpsApplikationName);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -557,10 +557,10 @@ import okw.log.*;
 		/// 
 		public void StopApp(String fpsApplikationName)
 		{
-			Log.LogFunctionStart("StopApp",
+			Log.LogFunctionStartDebug("StopApp",
 				"fps_ApplikationName", fpsApplikationName);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -570,11 +570,11 @@ import okw.log.*;
 		/// 
 		public void TypeKey(String fpsFunctionalname, String fpsValue)
 		{
-			Log.LogFunctionStart("TypeKey", 
+			Log.LogFunctionStartDebug("TypeKey", 
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsValue", fpsValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -584,13 +584,13 @@ import okw.log.*;
 		/// 
 		public void TypeKeyTablecell(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsValue)
 		{
-			Log.LogFunctionStart("TypeKeyTablecell",
+			Log.LogFunctionStartDebug("TypeKeyTablecell",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsColl", fpsCol,
 				"fpsRow", fpsRow,
 				"fpsValue", fpsValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -599,11 +599,11 @@ import okw.log.*;
 		/// \copydoc IOKW_State::TypeKeyWindow(String,String)
 		public void TypeKeyWindow(String fpsFunctionalname, String fpsValue)
 		{
-			Log.LogFunctionStart("TypeKeyWindow",
+			Log.LogFunctionStartDebug("TypeKeyWindow",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsValue", fpsValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -612,11 +612,11 @@ import okw.log.*;
 		/// \copydoc IOKW_State::VerifyCaption(String,String)
 		public void VerifyCaption(String fpsFunctionalname, String fpsExpectedValue)
 		{
-			Log.LogFunctionStart("VerifyCaption",
+			Log.LogFunctionStartDebug("VerifyCaption",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsExpectedValue", fpsExpectedValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -625,11 +625,11 @@ import okw.log.*;
 		/// \copydoc IOKW_State::VerifyExists(String,String)
 		public void VerifyExists(String fpsFunctionalname, String fpsExpectedValue)
 		{
-			Log.LogFunctionStart("VerifyExists",
+			Log.LogFunctionStartDebug("VerifyExists",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsExpectedValue", fpsExpectedValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -638,11 +638,11 @@ import okw.log.*;
 		/// \copydoc IOKW_State::VerifyHasFocus(String,String)
 		public void VerifyHasFocus(String fpsFunctionalname, String fpsExpectedValue)
 		{
-			Log.LogFunctionStart("VerifyHasFocus",
+			Log.LogFunctionStartDebug("VerifyHasFocus",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsExpectedValue", fpsExpectedValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -651,11 +651,11 @@ import okw.log.*;
 		/// \copydoc IOKW_State::VerifyIsActive(String,String)
 		public void VerifyIsActive(String fpsFunctionalname, String fpsExpectedValue)
 		{
-			Log.LogFunctionStart("VerifyIsActive",
+			Log.LogFunctionStartDebug("VerifyIsActive",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsExpectedValue", fpsExpectedValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -664,11 +664,11 @@ import okw.log.*;
 		/// \copydoc IOKW_State::VerifyLabel(String,String)
 		public void VerifyLabel(String fpsFunctionalname, String fpsExpectedValue)
 		{
-			Log.LogFunctionStart("VerifyLabel",
+			Log.LogFunctionStartDebug("VerifyLabel",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsExpectedValue", fpsExpectedValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -677,11 +677,11 @@ import okw.log.*;
 		/// \copydoc IOKW_State::VerifySelectedValue(String,String)
 		public void VerifySelectedValue(String fpsFunctionalname, String fpsExpectedValue)
 		{
-			Log.LogFunctionStart("VerifySelectedValue",
+			Log.LogFunctionStartDebug("VerifySelectedValue",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsExpectedValue", fpsExpectedValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -690,13 +690,13 @@ import okw.log.*;
 		/// \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
 		public void VerifyTablecellValue(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsExpectedValue)
 		{
-			Log.LogFunctionStart("VerifyTablecellValue",
+			Log.LogFunctionStartDebug("VerifyTablecellValue",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsCol", fpsCol,
 				"fpsRow", fpsRow,
 				"fpsExpectedValue", fpsExpectedValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -705,11 +705,11 @@ import okw.log.*;
 		/// \copydoc IOKW_State::VerifyTooltip(String,String)
 		public void VerifyTooltip(String fpsFunctionalname, String fpsExpectedValue)
 		{
-			Log.LogFunctionStart("VerifyTooltip",
+			Log.LogFunctionStartDebug("VerifyTooltip",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsExpectedValue", fpsExpectedValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \~german
@@ -718,40 +718,40 @@ import okw.log.*;
 		/// \copydoc IOKW_State::VerifyValue(String,String)
 		public void VerifyValue(String fpsFunctionalname, String fpsExpectedValue)
 		{
-			Log.LogFunctionStart("VerifyValue",
+			Log.LogFunctionStartDebug("VerifyValue",
 				"fpsFunctionalname", fpsFunctionalname,
 				"fpsExpectedValue", fpsExpectedValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 
 		/// \copydoc IOKW_State::FileDelete(String)
 		public void FileDelete(String fpsPathAndFileName)
 		{
-			Log.LogFunctionStart("FileDelete", "fpsPathAndFileName", fpsPathAndFileName);
+			Log.LogFunctionStartDebug("FileDelete", "fpsPathAndFileName", fpsPathAndFileName);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \copydoc IOKW_State::VerifyFileExists(String,String)
 		public void VerifyFileExists(String fpsPathAndFileName, String fpsExpectedValue)
 		{
-			Log.LogFunctionStart("VerifyFileExists",
+			Log.LogFunctionStartDebug("VerifyFileExists",
 				"fpsPathAndFileName", fpsPathAndFileName,
 				"fpsExpectedValue", fpsExpectedValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 		/// \copydoc IOKW_State::VerifyDirectoryExists(String,String)
 		public void VerifyDirectoryExists(String fpsPath, String fpsExpectedValue)
 		{
-			Log.LogFunctionStart("VerifyDirectoryExists",
+			Log.LogFunctionStartDebug("VerifyDirectoryExists",
 				"fpsPath", fpsPath,
 				"fpsExpectedValue", fpsExpectedValue);
 
-			Log.LogFunctionEnd();
+			Log.LogFunctionEndDebug();
 		}
 
 

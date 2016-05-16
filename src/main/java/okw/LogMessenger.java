@@ -334,7 +334,7 @@ public class LogMessenger
 			}
 			finally
 			{
-				System.out.println("");
+				//System.out.println("");
 			}
 		}
 	}

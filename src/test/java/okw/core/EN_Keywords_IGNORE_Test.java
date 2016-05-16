@@ -48,10 +48,8 @@ public class EN_Keywords_IGNORE_Test
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception
 	{
-        Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
-
         // Reset des Loggers: Alle Geladenen Instanzen löschen
-        myLogger.Init();
+        Logger_Sngltn.Init();
         //myLogger.AddLogger(new Log2Console());
 
         myLogger.setDebugMode(false);

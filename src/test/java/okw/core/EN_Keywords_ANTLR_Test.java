@@ -41,8 +41,7 @@ public class EN_Keywords_ANTLR_Test
 	public static void setUpBeforeClass() throws Exception
 	{
         // Reset des Loggers: Alle geladenen Instanzen löschen
-		Core.Init();
-        myLogger.Init();
+        Logger_Sngltn.Init();
         
         myLog2HTML = new Log2HTML("EN_Keywords_ANTLR_Test.html");
         myLogger.AddLogger(myLog2HTML);

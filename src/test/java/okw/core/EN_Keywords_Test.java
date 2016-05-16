@@ -3,6 +3,7 @@ package okw.core;
 import static org.junit.Assert.*;
 import okw.OKW_Memorize_Sngltn;
 import okw.OKW_TestClipboard;
+import okw.log.Log2Console;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
@@ -18,8 +19,9 @@ public class EN_Keywords_Test
 {
 	static Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
 	static OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
-	static Log2HTML myLog2HTML = null;
+    static Log2HTML myLog2HTML = null;
 
+    
     @Rule
     public TestName name = new TestName();
 	
@@ -27,11 +29,15 @@ public class EN_Keywords_Test
 	public static void setUpBeforeClass() throws Exception
 	{
         // Reset des Loggers: Alle geladenen Instanzen löschen
-		Core.Init();
-        myLogger.Init();
+		Logger_Sngltn.Init();
         
-        myLog2HTML = new Log2HTML("EN_Keywords_Test.html");
-        myLogger.AddLogger(myLog2HTML);
+        //Log2Console myLog2Console = null;
+        //myLog2Console = new Log2Console();
+        //myLogger.AddLogger(myLog2Console);
+        
+        
+        //myLog2HTML = new Log2HTML("EN_Keywords_Test.html");
+        myLogger.AddLogger(new Log2HTML("EN_Keywords_Test.html"));
         myLogger.setDebugMode(false);
 	}
 
@@ -41,9 +47,8 @@ public class EN_Keywords_Test
 		System.out.println( "===========================================================================" );
 		System.out.println( "= Ausgabe in die Datei: 'EN_Keywords_Test.html'" );
 		System.out.println( "===========================================================================" );
-		myLog2HTML.Result2HTML( "EN_Keywords_Test.html" );
+		// myLog2HTML.Result2HTML( "EN_Keywords_Test.html" );
 		System.out.println( "===========================================================================" );
-
 	}
 
 	@Before
@@ -58,8 +63,7 @@ public class EN_Keywords_Test
 	}
 
 
-
-	        /// \~german
+	/// \~german
 	        /// \brief
 	        /// Prüft methoden aufruf für einen einfachen Click.
 	        /// 
@@ -940,22 +944,20 @@ public class EN_Keywords_Test
 	        {
 	            EN.BeginTest( name.getMethodName() );
 
-	                EN.BeginTest("TC_SetValue_MultipleValues");
+	            EN.SelectWindow("Rechner");
+	            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+	            assertEquals("Rechner", myClipBoard.getObjectName());
+	            assertEquals("SelectWindow()", myClipBoard.getMethod());
 
-	                EN.SelectWindow("Rechner");
-	                assertEquals("NO VALUE", myClipBoard.getValue().get(0));
-	                assertEquals("Rechner", myClipBoard.getObjectName());
-	                assertEquals("SelectWindow()", myClipBoard.getMethod());
+	            EN.SetValue("All_MethodsObj", "Wert 1${SEP}Wert 2${SEP}Wert 3");
 
-	                EN.SetValue("All_MethodsObj", "Wert 1${SEP}Wert 2${SEP}Wert 3");
-
-	                assertEquals(3, myClipBoard.getValue().size());
-	                assertEquals("Wert 1", myClipBoard.getValue().get(0));
-	                assertEquals("Wert 2", myClipBoard.getValue().get(1));
-	                assertEquals("Wert 3", myClipBoard.getValue().get(2));
-	                assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
-	                assertEquals("SetValue()", myClipBoard.getMethod());
-	                EN.EndTest();
+	            assertEquals(3, myClipBoard.getValue().size());
+	            assertEquals("Wert 1", myClipBoard.getValue().get(0));
+	            assertEquals("Wert 2", myClipBoard.getValue().get(1));
+	            assertEquals("Wert 3", myClipBoard.getValue().get(2));
+	            assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+	            assertEquals("SetValue()", myClipBoard.getMethod());
+	            
 	        }
 
 	        /// \~german

@@ -1,4 +1,3 @@
-//  OKW__Test__AllMethodCalls.cs
 //
 //  Author:
 //       zoltan <${AuthorEmail}>
@@ -48,7 +47,7 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test
 	{
         Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 
-        // Reset des Loggers: Alle Geladenen Instanzen löschen
+        // Reset/init the Logger
         myLogger.Init();
         //myLogger.AddLogger(new Log2Console());
 
