@@ -101,11 +101,6 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>de.openkeyword.log2html</groupId>
-			<artifactId>log2html</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-core</artifactId>
 			<version>2.2.11</version>
@@ -140,4 +135,10 @@
 		<system>github</system>
 	</issueManagement>
 	<name>okw</name>
+	<packaging>pom</packaging>
+	<modules>
+		<module>core</module>
+		<module>log2html</module>
+		<module>Se</module>
+	</modules>
 </project>
