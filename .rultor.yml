@@ -6,4 +6,4 @@ release:
   script: |
     mvn versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
-    mvn clean deploy -Pfoo --settings /home/r/settings.xml -DpomFile=/core/pom.xml
+    mvn clean -pl core deploy -Pfoo --settings /home/r/settings.xml
