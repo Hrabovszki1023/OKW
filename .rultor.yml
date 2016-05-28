@@ -7,5 +7,6 @@ decrypt:
 release:
   script: |
     mvn versions:set "-DnewVersion=${tag}"
+    ls -a
     git commit -am "${tag}"
     mvn clean -pl core deploy -Pfoo --settings /home/r/settings.xml
