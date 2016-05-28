@@ -7,9 +7,10 @@ decrypt:
 release:
   script: |
     find -name pubring.gpg
+    find -name pubring.gpg.asc    
     find -name secring.gpg
     find -name settings.xml 	
     mvn versions:set "-DnewVersion=${tag}"
-    ls -a
+    ls -a -sl
     git commit -am "${tag}"
     mvn clean -pl core deploy -Pfoo --settings /home/r/settings.xml
