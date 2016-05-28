@@ -11,7 +11,7 @@ release:
     find -name secring.gpg
     find -name settings.xml 	
     mvn versions:set "-DnewVersion=${tag}"
-    pwd
+    ls -a -sl /home/r
     ls -a -sl
     git commit -am "${tag}"
     mvn clean -pl core deploy -Pfoo --settings /home/r/settings.xml
