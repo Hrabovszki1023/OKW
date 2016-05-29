@@ -6,12 +6,8 @@ decrypt:
   secring.gpg: "repo/secring.gpg.asc"
 release:
   script: |
-    find -name pubring.gpg
-    find -name pubring.gpg.asc    
-    find -name secring.gpg
-    find -name settings.xml 	
     mvn versions:set "-DnewVersion=${tag}"
-    ls -a -sl /home/r
+    cat /home/r/settings.xml
     ls -a -sl
     git commit -am "${tag}"
     mvn clean -pl core deploy -Pfoo --settings /home/r/settings.xml
