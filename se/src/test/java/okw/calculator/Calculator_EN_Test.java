@@ -35,8 +35,11 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
+
 package okw.calculator;
+
+import okw.core.EN;
 
 import org.junit.After;
 import org.junit.Ignore;
@@ -44,125 +47,123 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 
-import okw.OKW_Memorize_Sngltn;
-import okw.core.EN;
+@Ignore( "Ignore the whole testfixture" )
+public class Calculator_EN_Test {
 
+  // OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
 
-    @Ignore("Ignore the whole testfixture")
-    public class Calculator_EN_Test
-    {
-    	OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
-    	
-    	protected static String ApplicationName;
-    	
-        @Rule
-        public TestName name = new TestName();
-    	
-        @After
-        public void myAfter() throws Exception
-        {
-            EN.StopApp( ApplicationName );
-            EN.EndTest();
-        }
+  protected static String ApplicationName;
 
-    	
-        @Test
-        public void TC_Calculator_Addition_EN() throws Exception
-        {
-            EN.BeginTest( name.getMethodName() );
-            EN.StartApp( ApplicationName );
-            EN.SetValue("URL", "https://www2.informatik.hu-berlin.de/Themen/www/selfhtml/javascript/beispiele/anzeige/taschenrechner.htm");
+  @Rule
+  public TestName         name = new TestName();
 
-            EN.SelectWindow("Calculator");
-            EN.ClickOn("1");
-            EN.ClickOn("+");
-            EN.ClickOn("1");
-            EN.ClickOn("=");
+  @After
+  public void myAfter() throws Exception {
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+  }
 
-            EN.VerifyValue("Display", "2");
-        }
+  @Test
+  public void tc_Calculator_Addition_EN() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+    EN.StartApp( ApplicationName );
+    EN.SetValue(
+        "URL",
+        "https://www2.informatik.hu-berlin.de/Themen/www/selfhtml/javascript/beispiele/anzeige/taschenrechner.htm" );
 
-        @Test
-        public void AA_Calculator_Subtraktion_EN() throws Exception
-        {
-            EN.BeginTest( name.getMethodName() );
-            EN.StartApp( ApplicationName );
-            EN.TypeKey("URL", "https://www2.informatik.hu-berlin.de/Themen/www/selfhtml/javascript/beispiele/anzeige/taschenrechner.htm");
+    EN.SelectWindow( "Calculator" );
+    EN.ClickOn( "1" );
+    EN.ClickOn( "+" );
+    EN.ClickOn( "1" );
+    EN.ClickOn( "=" );
 
-            EN.SelectWindow("Calculator");
-            EN.ClickOn("1");
-            EN.ClickOn("0");
-            EN.ClickOn("0");
-            EN.ClickOn("-");
-            EN.ClickOn("1");
-            EN.ClickOn("=");
+    EN.VerifyValue( "Display", "2" );
+  }
 
-            EN.VerifyValue("Display", "99");
-        }
+  @Test
+  public void tc_Calculator_Subtraktion_EN() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+    EN.StartApp( ApplicationName );
+    EN.TypeKey(
+        "URL",
+        "https://www2.informatik.hu-berlin.de/Themen/www/selfhtml/javascript/beispiele/anzeige/taschenrechner.htm" );
 
-        @Test
-        public void TC_Calculator_Multiplikation_EN() throws Exception
-        {
-            EN.BeginTest( name.getMethodName() );
-            EN.StartApp( ApplicationName );
-            EN.TypeKey("URL", "https://www2.informatik.hu-berlin.de/Themen/www/selfhtml/javascript/beispiele/anzeige/taschenrechner.htm");
+    EN.SelectWindow( "Calculator" );
+    EN.ClickOn( "1" );
+    EN.ClickOn( "0" );
+    EN.ClickOn( "0" );
+    EN.ClickOn( "-" );
+    EN.ClickOn( "1" );
+    EN.ClickOn( "=" );
 
-            EN.SelectWindow("Calculator");
-            EN.ClickOn("1");
-            EN.ClickOn("2");
-            EN.ClickOn("3");
-            EN.ClickOn("*");
-            EN.ClickOn("1");
-            EN.ClickOn("2");
-            EN.ClickOn("3");
-            EN.ClickOn("=");
+    EN.VerifyValue( "Display", "99" );
+  }
 
-            EN.VerifyValue("Display", "15129");
-        }
+  @Test
+  public void tc_Calculator_Multiplikation_en() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+    EN.StartApp( ApplicationName );
+    EN.TypeKey(
+        "URL",
+        "https://www2.informatik.hu-berlin.de/Themen/www/selfhtml/javascript/beispiele/anzeige/taschenrechner.htm" );
 
-        
-        @Test
-        public void TC_Calculator_AllKeys_EN() throws Exception
-        {
-            EN.BeginTest( name.getMethodName() );
-            EN.StartApp( ApplicationName );
-            EN.TypeKey("URL", "https://www2.informatik.hu-berlin.de/Themen/www/selfhtml/javascript/beispiele/anzeige/taschenrechner.htm");
+    EN.SelectWindow( "Calculator" );
+    EN.ClickOn( "1" );
+    EN.ClickOn( "2" );
+    EN.ClickOn( "3" );
+    EN.ClickOn( "*" );
+    EN.ClickOn( "1" );
+    EN.ClickOn( "2" );
+    EN.ClickOn( "3" );
+    EN.ClickOn( "=" );
 
-            EN.SelectWindow("Calculator");
-            EN.ClickOn("1");
-            EN.ClickOn("2");
-            EN.ClickOn("3");
-            EN.ClickOn("4");
-            EN.ClickOn("5");
-            EN.ClickOn("6");
-            EN.ClickOn("7");
-            EN.ClickOn("8");
-            EN.ClickOn("9");
-            EN.ClickOn("0");
+    EN.VerifyValue( "Display", "15129" );
+  }
 
-            EN.VerifyValue("Display", "1234567890");
-        }
-        
-        // 
-        @Test
-        public void Taschenrechner_AllKeyExists_EN() throws Exception
-        {
-            EN.BeginTest( name.getMethodName() );
-            EN.StartApp( ApplicationName );
-            EN.TypeKey("URL", "https://www2.informatik.hu-berlin.de/Themen/www/selfhtml/javascript/beispiele/anzeige/taschenrechner.htm");
+  @Test
+  public void tc_Calculator_allkeys_en() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+    EN.StartApp( ApplicationName );
+    EN.TypeKey(
+        "URL",
+        "https://www2.informatik.hu-berlin.de/Themen/www/selfhtml/javascript/beispiele/anzeige/taschenrechner.htm" );
 
-            EN.SelectWindow("Calculator");
-            EN.VerifyExists("1", "YES");
-            EN.VerifyExists("2", "YES");
-            EN.VerifyExists("3", "YES");
-            EN.VerifyExists("4", "YES");
-            EN.VerifyExists("5", "YES");
-            EN.VerifyExists("6", "YES");
-            EN.VerifyExists("7", "YES");
-            EN.VerifyExists("8", "YES");
-            EN.VerifyExists("9", "YES");
-            EN.VerifyExists("0", "YES");
+    EN.SelectWindow( "Calculator" );
+    EN.ClickOn( "1" );
+    EN.ClickOn( "2" );
+    EN.ClickOn( "3" );
+    EN.ClickOn( "4" );
+    EN.ClickOn( "5" );
+    EN.ClickOn( "6" );
+    EN.ClickOn( "7" );
+    EN.ClickOn( "8" );
+    EN.ClickOn( "9" );
+    EN.ClickOn( "0" );
 
-            EN.VerifyExists("Display", "YES");
-        }
+    EN.VerifyValue( "Display", "1234567890" );
+  }
+
+  //
+  @Test
+  public void tc_Taschenrechner_allkeyexists_en() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+    EN.StartApp( ApplicationName );
+    EN.TypeKey(
+        "URL",
+        "https://www2.informatik.hu-berlin.de/Themen/www/selfhtml/javascript/beispiele/anzeige/taschenrechner.htm" );
+
+    EN.SelectWindow( "Calculator" );
+    EN.VerifyExists( "1", "YES" );
+    EN.VerifyExists( "2", "YES" );
+    EN.VerifyExists( "3", "YES" );
+    EN.VerifyExists( "4", "YES" );
+    EN.VerifyExists( "5", "YES" );
+    EN.VerifyExists( "6", "YES" );
+    EN.VerifyExists( "7", "YES" );
+    EN.VerifyExists( "8", "YES" );
+    EN.VerifyExists( "9", "YES" );
+    EN.VerifyExists( "0", "YES" );
+
+    EN.VerifyExists( "Display", "YES" );
+  }
 }
