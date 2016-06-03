@@ -3,15 +3,15 @@
   <parent>
     <groupId>de.openkeyword</groupId>
     <artifactId>okw</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.4</version>
   </parent>
   <artifactId>log2html</artifactId>
   <dependencies>
   	<dependency>
   		<groupId>de.openkeyword</groupId>
   		<artifactId>core</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
+  		<version>0.0.4</version>
   	</dependency>
   </dependencies>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.4</version>
 </project>
