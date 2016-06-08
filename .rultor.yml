@@ -9,3 +9,4 @@ release:
     mvn versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
     mvn clean -pl core deploy -Pfoo -Psonatype --settings /home/r/settings.xml
+    mvn clean -pl log2html deploy -Pfoo -Psonatype --settings /home/r/settings.xml

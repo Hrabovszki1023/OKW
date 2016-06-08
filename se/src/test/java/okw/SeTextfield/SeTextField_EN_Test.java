@@ -475,7 +475,7 @@ public class SeTextField_EN_Test {
   }
 
   @Test
-  public void TC_TypeKey_en() throws Exception {
+  public void tc_TypeKey_en() throws Exception {
     try {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
@@ -493,16 +493,15 @@ public class SeTextField_EN_Test {
 
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "TypeKey", "P");
-    }
-    catch (Exception e) {
+    } catch (Exception ex) {
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "TypeKey", "F");
-      throw e;
+      throw ex;
     }
   }
 
   @Test
-  public void tc_TypeKey_IGNORE_en() throws Exception {
+  public void tc_TypeKey_ignore_en() throws Exception {
     try {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
@@ -533,8 +532,7 @@ public class SeTextField_EN_Test {
 
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "TypeKey", "P");
-    }
-    catch (Exception ex) {
+    } catch (Exception ex) {
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "TypeKey", "F");
       throw ex;
