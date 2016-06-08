@@ -493,7 +493,8 @@ public class SeTextField_EN_Test {
 
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "TypeKey", "P");
-    } catch (Exception ex) {
+    }
+    catch (Exception ex) {
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "TypeKey", "F");
       throw ex;
@@ -532,7 +533,8 @@ public class SeTextField_EN_Test {
 
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "TypeKey", "P");
-    } catch (Exception ex) {
+    }
+    catch (Exception ex) {
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "TypeKey", "F");
       throw ex;
@@ -544,7 +546,7 @@ public class SeTextField_EN_Test {
   // / Erwartet wird das das objekt nicht existiert.
   // /
   @Test
-  public void TC_VerifyExists_NO_en() throws Exception {
+  public void tc_VerifyExists_No_en() throws Exception {
     try {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
@@ -556,10 +558,10 @@ public class SeTextField_EN_Test {
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "VerifyExists", "P");
     }
-    catch (Exception e) {
+    catch (Exception ex) {
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "VerifyExists", "F");
-      throw e;
+      throw ex;
     }
   }
 
@@ -631,7 +633,7 @@ public class SeTextField_EN_Test {
   // worden.
   // /
   @Test
-  public void TC_VerifyExists_IGNORE_en() throws Exception {
+  public void tc_VerifyExists_IGNORE_en() throws Exception {
     try {
       EN.BeginTest( name.getMethodName() );
 
@@ -644,10 +646,10 @@ public class SeTextField_EN_Test {
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "VerifyExists", "P");
     }
-    catch (Exception e) {
+    catch (Exception ex) {
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "VerifyExists", "F");
-      throw e;
+      throw ex;
     }
   }
 
@@ -659,7 +661,7 @@ public class SeTextField_EN_Test {
   // /
   @Test
   @Ignore
-  public void TC_VerifyExists_YES_NoObject_en() throws Exception {
+  public void tc_VerifyExists_YES_NoObject_en() throws Exception {
     try {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
@@ -674,7 +676,7 @@ public class SeTextField_EN_Test {
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "VerifyExists", "F");
     }
-    catch (Exception e) {
+    catch (Exception ex) {
       okw.log.Logger_Sngltn.getInstance().LogPrint(
           "Erwartetet Exception wurde ausgelöst! - OK!" );
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
@@ -701,10 +703,10 @@ public class SeTextField_EN_Test {
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "VerifyHasFocus", "P");
     }
-    catch (Exception e) {
+    catch (Exception ex) {
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "VerifyHasFocus", "F");
-      throw e;
+      throw ex;
     }
   }
 

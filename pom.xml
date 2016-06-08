@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.openkeyword</groupId>
 	<artifactId>okw</artifactId>
-	<version>0.0.7</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<url>www.openkeyword.de</url>
 	<build>
 		<!-- To define the plugin version in your parent POM -->
@@ -200,4 +200,8 @@
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
+	<organization>
+		<url>www.openkeyword.de</url>
+		<name>OpenKeyWord</name>
+	</organization>
 </project>
