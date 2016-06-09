@@ -5,6 +5,7 @@
 	<artifactId>okw</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<url>www.openkeyword.de</url>
+	<description>OKW - OpenKeyWord is a Keyword-framework for Keyword-driven testing</description>
 	<build>
 		<!-- To define the plugin version in your parent POM -->
 		<pluginManagement>
@@ -182,6 +183,7 @@
 	</dependencies>
 	<issueManagement>
 		<system>github</system>
+		<url>https://github.com/Hrabovszki1023/OKW/issues</url>
 	</issueManagement>
 	<name>okw</name>
 	<packaging>pom</packaging>
@@ -204,4 +206,23 @@
 		<url>www.openkeyword.de</url>
 		<name>OpenKeyWord</name>
 	</organization>
+	<licenses>
+		<license>
+			<name>GNU General Public License, Version 3.0</name>
+			<url>https://www.gnu.org/licenses/gpl-3.0</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>Zoltan Hrabovszki</name>
+			<email>zh@openkeyword.de</email>
+			<organization>OpenKeyWord</organization>
+			<organizationUrl>http://www.openkeyword.de</organizationUrl>
+		</developer>
+	</developers>
+	<scm>
+		<url>https://github.com/Hrabovszki1023/OKW.git</url>
+		<connection>scm:git:git@github.com:Hrabovszki1023/OKW.git</connection>
+		<developerConnection>scm:git:git@github.com:Hrabovszki1023/OKW.git</developerConnection>
+	</scm>
 </project>
