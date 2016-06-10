@@ -16,15 +16,17 @@ Here you can find all [OKW modules in Maven repository](https://search.maven.org
 
 The fastest and easiest way is:
 
+
 * to create a Maven Project
 * add your unittest-framework like junit as maven dependency
-* add an openkeyword GUI-Adapter (e.g. se for Selenium) as maven dependency to your project.
+* add an openkeyword GUI-Adapter (e.g. se for Selenium) as maven dependency to your project
 * update maven
- 
- <dependency>
+
+```xml 
+<dependency>
     <groupId>de.openkeyword</groupId>
     <artifactId>se</artifactId>
-    <version>0.0.12</version>
- </dependency>
-
+    <version>?.?.?</version>
+  </dependency>
+```
 Now you can basically start with GUI-Test description with OKW-Keywords.
