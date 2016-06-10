@@ -20,13 +20,11 @@ The fastest and easiest way is:
 * add your unittest-framework like junit as maven dependency
 * add an openkeyword GUI-Adapter (e.g. se for Selenium) as maven dependency to your project.
 * update maven
-
-<syntaxhighlight lang="xml">
-<dependency>
+ 
+ <dependency>
     <groupId>de.openkeyword</groupId>
     <artifactId>se</artifactId>
     <version>0.0.12</version>
-</dependency>
-</syntaxhighlight>
+ </dependency>
 
 Now you can basically start with GUI-Test description with OKW-Keywords.
