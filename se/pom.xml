@@ -18,4 +18,10 @@
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
   </dependencies>
+  <description>This is the OpenKeyWord Selenium GUI-Adapter-module. Se defines default  GUI-Adapter ( Pushbutton, Link, Textfield...)
+
+Add this module in to your maven Project to automate Web-GUI.
+See Dependency Information.
+
+You can also use -Se- as a base-class in your own Project or Product specific GUI-Adapter.</description>
 </project>

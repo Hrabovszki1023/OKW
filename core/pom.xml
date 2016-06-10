@@ -6,5 +6,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>core</artifactId>
-  <description>OpenKeyWord Core-Module</description>
+  <description>This is the Core-Module of OpenKeyWord. This module will autmaticaly included by the GUI-Adapter module e.g. Se.
+
+In GUI-automation you onle include the GUI-Adapter you need.</description>
+  <name>OKW - OpenKeyWord</name>
+  <url>www.openkeyword.de</url>
 </project>

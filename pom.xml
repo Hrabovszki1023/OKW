@@ -5,7 +5,7 @@
 	<artifactId>okw</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<url>www.openkeyword.de</url>
-	<description>OKW - OpenKeyWord is a Keyword-framework for Keyword-driven testing</description>
+	<description>OKW - OpenKeyWord is a Keyword-framework for Keyword-driven testing.</description>
 	<build>
 		<!-- To define the plugin version in your parent POM -->
 		<pluginManagement>
