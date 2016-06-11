@@ -15,8 +15,9 @@ Here you can find all [OKW modules in Maven repository](https://search.maven.org
 The fastest and easiest way is:
 
 * to create a Maven Project
-* add your unittest-framework like junit as maven dependency
-* add an openkeyword GUI-Adapter (e.g. se for Selenium) as maven dependency to your project
+* add your unit test framework like junit as maven dependency
+* add an OpenKeyWord GUI-Adapter - At this moment OKW support only Selenium.
+  But OpenKeyWord is open for all GUI-testing-tools with a java-API. You only have to define GUI-adapter for your testing-tool
 
 ```xml 
 <dependency>
@@ -28,5 +29,130 @@ The fastest and easiest way is:
 * maven: update project 
 
 Now you can basically start with GUI-Test description with OKW-Keywords.
+
+## The OKW Frame
+The OKW-frame describes your GUI and is a technical-functional mapping.
+See the simple example "Calculator".
+
+The  Steps you have to do are:
+
+* Define for all test relevant GUI-Element a functional name (FN). 
+* Find the Locators which identifies for a GUI-Object. The goal is: OKW has to identify the GUI-Objects clearly. The
+  Selenium GUI-adapter uses XPATH as Locator.
+* Add GUI-Adapter (e.g. SeTextField) for the specific GUI-Object to the Frame.
+** define functional name with OKW annotation like this: '@OKW_FN( FN = "Display" )'
+** assign the GUI-Adapter with the specific locator 
+
+
+### The Calculator Example
+Here is a simple OKW-frame as example. 
+
+```java
+package okw.gui.frames.frmCalculator;
+
+import okw.OKW_FN;
+import okw.gui.adapter.selenium.*;
+
+@OKW_FN(FN = "Calculator")
+public class frmCalculator extends SeBrowserChild {
+
+  @OKW_FN( FN = "Display" )
+  public SeTextField  Display = new SeTextField( "//INPUT[@name='Display']" );
+
+  @OKW_FN( FN = "1" )
+  public SePushButton N1 = new SePushButton( "//input[@value='  1   ']");
+
+  @OKW_FN( FN = "2" )
+  public SePushButton N2 = new SePushButton( "//input[@value='  2   ']");
+
+  @OKW_FN( FN = "3" )
+  public SePushButton N3 = new SePushButton( "//input[@value='  3   ']");
+
+  @OKW_FN( FN = "4" )
+  public SePushButton N4 = new SePushButton( "//input[@value='  4   ']");
+
+  @OKW_FN( FN = "5" )
+  public SePushButton N5 = new SePushButton( "//input[@value='  5   ']");
+
+  @OKW_FN( FN = "6" )
+  public SePushButton N6 = new SePushButton( "//input[@value='  6   ']");
+
+  @OKW_FN( FN = "7" )
+  public SePushButton N7 = new SePushButton( "//input[@value='  7   ']");
+
+  @OKW_FN( FN = "8" )
+  public SePushButton N8 = new SePushButton( "//input[@value='  8   ']");
+
+  @OKW_FN( FN = "9" )
+  public SePushButton N9 = new SePushButton( "//input[@value='  9   ']");
+
+  @OKW_FN( FN = "0" )
+  public SePushButton N0 = new SePushButton( "//input[@value='  0   ']");
+
+  @OKW_FN( FN = "." )
+  public SePushButton Punkt = new SePushButton( "//INPUT[@type='button' and @value='*.*']" );
+
+  @OKW_FN( FN = "+" )
+  public SePushButton Plus = new SePushButton( "//input[@type='button' and @value='  +   ']" );
+
+  @OKW_FN( FN = "-" )
+  public SePushButton Minus = new SePushButton( "//input[@type='button' and @value='  -   ']" );
+
+  @OKW_FN( FN = "/" )
+  public SePushButton Durch = new SePushButton( "//input[@type='button' and @value='  /   ']" );
+
+  @OKW_FN( FN = "*" )
+  public SePushButton Mal  = new SePushButton( "//input[@type='button' and @value='  *   ']" );
+
+  @OKW_FN( FN = "=" )
+  public SePushButton Gleich = new SePushButton( "//input[@type='button' and @value='  =   ']" );
+
+  @OKW_FN( FN = "C" )
+  public SePushButton Clear  = new SePushButton( "//input[@type='reset' and @value='  C  ']" );
+
+  @OKW_FN( FN = "sqrt" )
+  public SePushButton Sqrt = new SePushButton( "//input[class='button'] type='button' value='sqrt '" );
+
+  public frmCalculator() {
+    
+    // define Locator for Calculator Main-Window
+    super( "//title[text()='Taschenrechner']/../.." );
+
+  }
+}
+```
+
+
+## The Testcase with OKW Keywords
+
+A test case with OKW-Keywords is simple and easy to understand. You understand every single step.
+The test case is not littered with unnecessary things like incomprehensible technical terms.
+This terrible technical matters are outsourced to the GUI-frame and GUI-adapter. 
+
+```java
+  @Test
+  public void tc_Calculator_Addition() throws Exception
+  {
+
+   EN.BeginTest( "tc_Calculator_Addition" );
+   
+   EN.StartApp( "Firefox" );
+   EN.SetValue( "URL", "https://www2.informatik.hu-berlin.de/Themen/www/selfhtml/javascript/beispiele/anzeige/taschenrechner.htm" );
+
+   EN.SelectWindow( "Calculator" );
+   EN.ClickOn( "1" );
+   EN.ClickOn( "+" );
+   EN.ClickOn( "1" );
+   EN.ClickOn( "=" );
+
+   EN.VerifyValue( "Display", "2" );
+   
+   EN.StopApp( ApplicationName );
+   EN.EndTest();
+   
+  }
+
+```
+
 
 

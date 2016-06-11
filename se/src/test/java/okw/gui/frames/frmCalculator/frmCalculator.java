@@ -35,117 +35,76 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 package okw.gui.frames.frmCalculator;
 
 import okw.OKW_FN;
 import okw.gui.adapter.selenium.*;
 
-	@OKW_FN (FN="Calculator")
-    public class frmCalculator extends SeBrowserChild
-    {
-        // http://de.selfhtml.org/javascript/beispiele/anzeige/taschenrechner.htm
-	@OKW_FN (FN="Display")
-        public SeTextField Anzeige;
-        
-	@OKW_FN (FN="1")
-        public SePushButton N1 = null;
-        
-        @OKW_FN (FN="2")
-        public SePushButton N2;
-        
-        @OKW_FN (FN="3")
-        public SePushButton N3;
-        
-        @OKW_FN (FN="4")
-        public SePushButton N4;
-        
-        @OKW_FN (FN="5")
-        public SePushButton N5;
-        
-        @OKW_FN (FN="6")
-        public SePushButton N6;
-        
-        @OKW_FN (FN="7")
-        public SePushButton N7;
-        
-        @OKW_FN (FN="8")
-        public SePushButton N8;
-        
-        @OKW_FN (FN="9")
-        public SePushButton N9;
-        
-        @OKW_FN (FN="0")
-        public SePushButton N0;
-        
-        @OKW_FN (FN=".")
-        public SePushButton Punkt;
+@OKW_FN(FN = "Calculator")
+public class frmCalculator extends SeBrowserChild {
+  
+  @OKW_FN( FN = "Display" )
+  public SeTextField  Display = new SeTextField( "//INPUT[@name='Display']" );
 
-        @OKW_FN (FN="+")
-        public SePushButton Plus;
-        
-        @OKW_FN (FN="-")
-        public SePushButton Minus;
-        
-        @OKW_FN (FN="/")
-        public SePushButton Durch;
-        
-        @OKW_FN (FN="*")
-        public SePushButton Mal;
-        
-        
-        @OKW_FN (FN="=")
-        public SePushButton Gleich;
+  @OKW_FN( FN = "1" )
+  public SePushButton N1 = new SePushButton( "//input[@value='  1   ']");
 
-        @OKW_FN (FN="C")
-        public SePushButton Clear;
-        
-        @OKW_FN (FN="sqrt")
-        public SePushButton Sqrt;
-        
-        @OKW_FN (FN="pow")
-        public SePushButton Pow;
-        
-        @OKW_FN (FN="ln")
-        public SePushButton Ln;
+  @OKW_FN( FN = "2" )
+  public SePushButton N2 = new SePushButton( "//input[@value='  2   ']");
 
-        public frmCalculator()
-        {
-        	super("//title[text()='Taschenrechner']/../..");
-        	
-            Anzeige = new SeTextField("//INPUT[@name='Display']");
-            
-            //Zahlenblock
-            N1 = new SePushButton("%1$s//input[@value='  1   ']", getLOCATOR());
-            N2 = new SePushButton("%1$s//input[@value='  2   ']", getLOCATOR());
-            N3 = new SePushButton("%1$s//input[@value='  3   ']", getLOCATOR());
-            N4 = new SePushButton("%1$s//input[@value='  4   ']", getLOCATOR());
-            N5 = new SePushButton("%1$s//input[@value='  5   ']", getLOCATOR());
-            N6 = new SePushButton("%1$s//input[@value='  6   ']", getLOCATOR());
-            N7 = new SePushButton("%1$s//input[@value='  7   ']", getLOCATOR());
-            N8 = new SePushButton("%1$s//input[@value='  8   ']", getLOCATOR());
-            N9 = new SePushButton("%1$s//input[@value='  9   ']", getLOCATOR());
-            N0 = new SePushButton("%1$s//input[@value='  0   ']", getLOCATOR());
-            
-            Punkt = new SePushButton("%1$s//INPUT[@type='button' and @value='*.*']", getLOCATOR());
-            
-            // Grundrechenarten
-            Plus  = new SePushButton("%1$s//input[@type='button' and @value='  +   ']", getLOCATOR());
-            Minus = new SePushButton("%1$s//input[@type='button' and @value='  -   ']", getLOCATOR());
-            Durch = new SePushButton("%1$s//input[@type='button' and @value='*/*']", getLOCATOR());
-            Mal   = new SePushButton("%1$s//input[@type='button' and @value='  *   ']", getLOCATOR());
-            
-            Gleich = new SePushButton("%1$s//input[@value='  =   ']", getLOCATOR());
-            
-            // Funktionen
-            Clear = new SePushButton("%1$s//input[@type='reset' and @value='  C  ']", getLOCATOR());
-            
-            // <input class="button" onclick="Sonderfunktion('sqrt')" type="button" value="sqrt "/>
-            Sqrt = new SePushButton("%1$s//input[class='button'] type='button' value='sqrt '", getLOCATOR());
-            Pow = new SePushButton("%1$s", getLOCATOR());
-            Ln = new SePushButton("%1$s", getLOCATOR());
-            
-        }
-    }
+  @OKW_FN( FN = "3" )
+  public SePushButton N3 = new SePushButton( "//input[@value='  3   ']");
 
+  @OKW_FN( FN = "4" )
+  public SePushButton N4 = new SePushButton( "//input[@value='  4   ']");
 
+  @OKW_FN( FN = "5" )
+  public SePushButton N5 = new SePushButton( "//input[@value='  5   ']");
+
+  @OKW_FN( FN = "6" )
+  public SePushButton N6 = new SePushButton( "//input[@value='  6   ']");
+
+  @OKW_FN( FN = "7" )
+  public SePushButton N7 = new SePushButton( "//input[@value='  7   ']");
+
+  @OKW_FN( FN = "8" )
+  public SePushButton N8 = new SePushButton( "//input[@value='  8   ']");
+
+  @OKW_FN( FN = "9" )
+  public SePushButton N9 = new SePushButton( "//input[@value='  9   ']");
+
+  @OKW_FN( FN = "0" )
+  public SePushButton N0 = new SePushButton( "//input[@value='  0   ']");
+
+  @OKW_FN( FN = "." )
+  public SePushButton Punkt = new SePushButton( "//INPUT[@type='button' and @value='*.*']" );
+
+  @OKW_FN( FN = "+" )
+  public SePushButton Plus = new SePushButton( "//input[@type='button' and @value='  +   ']" );
+
+  @OKW_FN( FN = "-" )
+  public SePushButton Minus = new SePushButton( "//input[@type='button' and @value='  -   ']" );
+
+  @OKW_FN( FN = "/" )
+  public SePushButton Durch = new SePushButton( "//input[@type='button' and @value='  /   ']" );
+
+  @OKW_FN( FN = "*" )
+  public SePushButton Mal  = new SePushButton( "//input[@type='button' and @value='  *   ']" );
+
+  @OKW_FN( FN = "=" )
+  public SePushButton Gleich = new SePushButton( "//input[@type='button' and @value='  =   ']" );
+
+  @OKW_FN( FN = "C" )
+  public SePushButton Clear  = new SePushButton( "//input[@type='reset' and @value='  C  ']" );
+
+  @OKW_FN( FN = "sqrt" )
+  public SePushButton Sqrt = new SePushButton( "//input[class='button'] type='button' value='sqrt '" );
+
+  public frmCalculator() {
+    
+    // define Locator for Calculator Main-Window
+    super( "//title[text()='Taschenrechner']/../.." );
+
+  }
+}

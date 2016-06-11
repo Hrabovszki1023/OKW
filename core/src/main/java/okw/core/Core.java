@@ -372,9 +372,9 @@ import okw.*;
 		}
 
 		/// \copydoc IOKW_State::StartApp(String)
-		public void StartApp(String fpsApplikationName) throws Exception
+		public void StartApp(String fpsApplicationName) throws Exception
 		{
-			this.CurrentState.StartApp(fpsApplikationName);
+			this.CurrentState.StartApp(fpsApplicationName);
 		}
 
 		/// \copydoc IOKW_State::StopApp(String)

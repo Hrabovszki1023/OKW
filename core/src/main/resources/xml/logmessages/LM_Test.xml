@@ -12,16 +12,16 @@
 				<de>Das ist die zweite Testnachricht.</de>
 			</Text>
 			<Text key="M1P1">
-				<en>This is the first Parameter: {0:} of this test message.</en>
-				<de>Das ist Parameter 1: {0:} der Testnachricht.</de>
+				<en>This is the first Parameter: $P1$ of this test message.</en>
+				<de>Das ist Parameter 1: $P1$ der Testnachricht.</de>
 			</Text>
 			<Text key="M1P2">
-				<en>This is Parameter one: {0:} and this is Parmeter two: {1:}.</en>
-				<de>Das ist Parameter 1: {0:} und das ist Parameter 2: {1:} der Testnachricht.</de>
+				<en>This is Parameter one: $P1$ and this is Parmeter two: $P2$.</en>
+				<de>Das ist Parameter 1: $P1$ und das ist Parameter 2: $P2$ der Testnachricht.</de>
 			</Text>
 			<Text key="M1P2TOP2P1">
-				<en>This is Parameter one: '{0:}' and this is Parmeter two: '{1:}'.</en>
-				<de>Das ist Parameter zwei: '{1:}' und das ist Parameter eins: '{0:}' der Testnachricht.</de>
+				<en>This is Parameter one: '$P1$' and this is Parmeter two: '$P2$'.</en>
+				<de>Das ist Parameter zwei: '$P2$' und das ist Parameter eins: '$P1$' der Testnachricht.</de>
 			</Text>
 		</Method>
 	</Class>

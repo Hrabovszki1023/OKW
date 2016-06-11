@@ -5,8 +5,8 @@
 	<Class name="OKW_Helper">
 		<Method name="GetLeftFromDelimiterNumber">
 			<Text key="OKWDelimiterCountOutOfRangeException">
-				<en>The split-position(={0}) is outside of valid range [1...{1}]!</en>
-				<de>Die Position(={0}) des Trennens ist ausserhalb des gültigen Bereichs [ 1...{1}] der gefunden Trennzeichen! </de>
+				<en>The split-position(=$P1$) is outside of valid range [1...$P2$]!</en>
+				<de>Die Position(=$P1$) des Trennens ist ausserhalb des gültigen Bereichs [ 1...$P2$] der gefunden Trennzeichen! </de>
 			</Text>
 			<Text key="OKWDelimiterIsEmptyException">
 				<en>Delimiter is empty!</en>
@@ -15,8 +15,8 @@
 		</Method>
 		<Method name="GetRightFromDelimiterNumber">
 			<Text key="OKWDelimiterCountOutOfRangeException">
-				<en>The split-position(={0}) is outside of valid range [1...{1}]!</en>
-				<de>Die Position(={0}) des Trennens ist ausserhalb des gültigen Bereichs [ 1...{1}] der gefunden Trennzeichen! </de>
+				<en>The split-position(=$P1$) is outside of valid range [1...$P2$]!</en>
+				<de>Die Position(=$P1$) des Trennens ist ausserhalb des gültigen Bereichs [ 1...$P2$] der gefunden Trennzeichen! </de>
 			</Text>
 			<Text key="OKWDelimiterIsEmptyException">
 				<en>Delimiter is empty!</en>
@@ -25,8 +25,8 @@
 		</Method>
 		<Method name="String2Boolean">
 			<Text key="OKWNotAllowedValueException">
-				<en>Value '{0}' is not allowd here! Valid values are: 'true' or 'false'</en>
-				<de>Dieser Wert ist '{0}' nicht erlaubt! Möglich Werte: 'true' oder 'false'</de>
+				<en>Value '$P1$' is not allowd here! Valid values are: 'true' or 'false'</en>
+				<de>Dieser Wert ist '$P1$' nicht erlaubt! Möglich Werte: 'true' oder 'false'</de>
 			</Text>
 		</Method>
 	</Class>

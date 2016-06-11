@@ -4,20 +4,20 @@
 	<Class name="OKW_Const">
 		<Method name="OKWConst">
 			<Text key="ExceptionFileNotFound">
-				<en>The file '{0:}' was not found!</en>
-				<de>Die Datei '{0:}' wurde nicht gefunden!</de>
+				<en>The file '$P1$' was not found!</en>
+				<de>Die Datei '$P1$' wurde nicht gefunden!</de>
 			</Text>
 		</Method>
 		<Method name="GetConst4Internalname">
 			<Text key="ExceptionConst4Internalname">
-				<en>Const not Found! Check internalname='{0:}', language '{1:}' in file '{2:}'!</en>
-				<de>Konstante wurde nicht gefunden! Siehe internalname='{0:}' und die Sprache '{1:}' in der Datei '{2:}'!</de>
+				<en>Const not Found! Check internalname='$P1$', language '$P2$' in file '$P3$'!</en>
+				<de>Konstante wurde nicht gefunden! Siehe internalname='$P1$' und die Sprache '$P2$' in der Datei '$P3$'!</de>
 			</Text>
 		</Method>
 		<Method name="YesNo2Boolean">
 			<Text key="ValueNotAllowed">
-				<en>This value is not allowed here: '{0:}'! - Following values are possible: '{1:}'</en>
-				<de>Dieser Wert ist hier nicht erlaubt: '{0:}'! - Folgende Werte sind erlaubt: '{1:}'</de>
+				<en>This value is not allowed here: '$P1$'! - Following values are possible: '$P2$'</en>
+				<de>Dieser Wert ist hier nicht erlaubt: '$P1$'! - Folgende Werte sind erlaubt: '$P2$'</de>
 			</Text>
 		</Method>
 	</Class>

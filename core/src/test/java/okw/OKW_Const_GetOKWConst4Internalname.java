@@ -67,16 +67,16 @@ public static Collection<Object[]> data() {
     		{ "${HSEP}",       "de",   "HSEP" },
     		{ "${HSEP}",       "en",   "HSEP" },
 
-    		{ "NEIN",          "de",   "NO" },
-    		{ "NO",            "en",   "NO" },
+    		//{ "NEIN",          "de",   "NO" },
+    		//{ "NO",            "en",   "NO" },
     		{ "${SEP}",        "de",   "SEP"  },
     		{ "${SEP}",        "en", "SEP"  },
-    		{ "ABGEWÄHLT",     "de", "UNCHECKED"},
-    		{ "UNCHECKED",     "en", "UNCHECKED"},
-    		{ "ANGEWÄHLT",    "de", "CHECKED"},
-    		{ "CHECKED",       "en", "CHECKED"},
-    		{ "JA",            "de", "YES"},
-    		{ "YES",           "en", "YES"},
+    		//{ "ABGEWÄHLT",     "de", "UNCHECKED"},
+    		//{ "UNCHECKED",     "en", "UNCHECKED"},
+    		//{ "ANGEWÄHLT",     "de", "CHECKED"},
+    		//{ "CHECKED",       "en", "CHECKED"},
+    		//{ "JA",            "de", "YES"},
+    		//{ "YES",           "en", "YES"},
     		{ "${LÖSCHEN}",    "de", "DELETE"},
     		{ "${DELETE}",     "en", "DELETE"},
     		{ "${IGNORIEREN}", "de", "IGNORE"},
@@ -107,7 +107,7 @@ public static Logger_Sngltn Log;
     {
 		Log = Logger_Sngltn.getInstance();
         // Reset des Loggers: Alle geladenen Instanzen löschen
-        Log.Init();
+        Logger_Sngltn.Init();
 
         //Log.AddLogger(new Log2Console());
         Log.setDebugMode(false);
@@ -121,6 +121,6 @@ public static Logger_Sngltn Log;
         
 		OKWLanguage.getInstance().setLanguage(SelectLanguage);
         actual = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( InputValue_1);
-        assertEquals(expected, actual);
+    assertEquals( expected, actual );
     }
 }

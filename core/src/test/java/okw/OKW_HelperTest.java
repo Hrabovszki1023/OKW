@@ -126,7 +126,7 @@ public class OKW_HelperTest
             catch (IndexOutOfBoundsException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("The split-position(={0}) is outside of valid range [1...{1}]!", e.getMessage());
+                Assert.assertEquals("The split-position(=3) is outside of valid range [1...2]!", e.getMessage());
                 //Assert.Pass();
             }
             catch (Exception e)
@@ -148,7 +148,7 @@ public class OKW_HelperTest
             catch (IndexOutOfBoundsException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("The split-position(={0}) is outside of valid range [1...{1}]!", e.getMessage());
+                Assert.assertEquals("The split-position(=0) is outside of valid range [1...2]!", e.getMessage());
                 //Assert.pass();
             }
             catch (Exception e)
@@ -214,7 +214,7 @@ public class OKW_HelperTest
             catch (IndexOutOfBoundsException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("The split-position(={0}) is outside of valid range [1...{1}]!", e.getMessage());
+                Assert.assertEquals("The split-position(=3) is outside of valid range [1...2]!", e.getMessage());
                 //Assert.Pass();
             }
             catch (Exception e)
@@ -236,7 +236,7 @@ public class OKW_HelperTest
             catch (IndexOutOfBoundsException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("The split-position(={0}) is outside of valid range [1...{1}]!", e.getMessage());
+                Assert.assertEquals("The split-position(=0) is outside of valid range [1...2]!", e.getMessage());
                 //Assert.Pass();
             }
             catch (Exception e)
@@ -854,7 +854,7 @@ public class OKW_HelperTest
                 OKWLanguage.getInstance().setLanguage("en");
                 // Richtige Exception wurde ausgeloest daher Pass!
                 
-                String Expected = "Value '{0}' is not allowd here! Valid values are: 'true' or 'false'";
+                String Expected = "Value 'Uschi' is not allowd here! Valid values are: 'true' or 'false'";
                 String Actual = e.getMessage();
                 
                 Assert.assertEquals(Expected, Actual);

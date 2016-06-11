@@ -70,7 +70,7 @@ public class Log2Console implements ILogger
 	        String BlanksBefore = "";
 	        int LevelCounter = 0;
 	        
-	        private Boolean cvbDebugMode;
+	        private Boolean cvbDebugMode = false;
 
 	        /// \~german
 	        /// \copydoc ILogger::LogError(String)

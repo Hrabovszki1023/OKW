@@ -110,8 +110,8 @@
 				<de>Vergleiche Soll/Ist...</de>
 			</Text>
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+				<en>This value '$P1$' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
 			</Text>
 		</Method>
 		<!-- Method: "VerifyHasFocus"-->
@@ -125,8 +125,8 @@
 				<de>Vergleiche Soll/Ist...</de>
 			</Text>
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+				<en>This value '$P1$' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
 			</Text>
 		</Method>
 		<!-- Method: "VerifyExists"-->
@@ -140,8 +140,8 @@
 				<de>Vergleiche Soll/Ist...</de>
 			</Text>
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+				<en>This value '$P1$' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
 			</Text>
 		</Method>
 		<!--===============================================================-->
@@ -257,64 +257,64 @@
 		<!-- Method: "MemorizeCaption"-->
 		<Method name="MemorizeCaption">
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here!</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+				<en>This value '$P1$' not allowed here!</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt!</de>
 			</Text>
 		</Method>
 		<!-- Method: "MemorizeExists"-->
 		<Method name="MemorizeExists">
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here!</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+				<en>This value '$P1$' not allowed here!</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt!</de>
 			</Text>
 		</Method>
 		<!-- Method: "MemorizeHasFocus"-->
 		<Method name="MemorizeHasFocus">
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here!</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+				<en>This value '$P1$' not allowed here!</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt!</de>
 			</Text>
 		</Method>
 		<!-- Method: "MemorizeIsActive"-->
 		<Method name="MemorizeIsActive">
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here!</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+				<en>This value '$P1$' not allowed here!</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt!</de>
 			</Text>
 		</Method>
 		<!-- Method: "MemorizeLabel"-->
 		<Method name="MemorizeLabel">
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here!</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+				<en>This value '$P1$' not allowed here!</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt!</de>
 			</Text>
 		</Method>
 		<!-- Method: "MemorizeSelectedValue"-->
 		<Method name="MemorizeSelectedValue">
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here!</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+				<en>This value '$P1$' not allowed here!</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt!</de>
 			</Text>
 		</Method>
 		<!-- Method: "MemorizeTablecellValue"-->
 		<Method name="MemorizeTablecellValue">
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here!</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+				<en>This value '$P1$' not allowed here!</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt!</de>
 			</Text>
 		</Method>
 		<!-- Method: "MemorizeTooltip"-->
 		<Method name="MemorizeTooltip">
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here!</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+				<en>This value '$P1$' not allowed here!</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt!</de>
 			</Text>
 		</Method>
 		<!-- Method: "MemorizeValue"-->
 		<Method name="MemorizeValue">
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here!</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt!</de>
+				<en>This value '$P1$' not allowed here!</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt!</de>
 			</Text>
 		</Method>
 		<!--===============================================================-->
@@ -331,12 +331,12 @@
 				<de>Schlüsselwort wurde ignoriert!</de>
 			</Text>
 			<Text key="ResolvedPath">
-				<en>Resolved path and filename: '{0:}'</en>
-				<de>Aufgelöste Pfad und Datei: '{0:}'</de>
+				<en>Resolved path and filename: '$P1$'</en>
+				<de>Aufgelöste Pfad und Datei: '$P1$'</de>
 			</Text>
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+				<en>This value '$P1$' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
 			</Text>
 		</Method>
 		<!-- Method: "FileDelete"-->
@@ -350,8 +350,8 @@
 				<de>Schlüsselwort wurde ignoriert!</de>
 			</Text>
 			<Text key="ResolvedPath">
-				<en>Resolved path and filename: '{0:}'</en>
-				<de>Aufgelöste Pfad und Datei: '{0:}'</de>
+				<en>Resolved path and filename: '$P1$'</en>
+				<de>Aufgelöste Pfad und Datei: '$P1$'</de>
 			</Text>
 		</Method>
 		<!-- Method: "VerifyDirectoryExists"-->
@@ -365,12 +365,12 @@
 				<de>Schlüsselwort wurde ignoriert!</de>
 			</Text>
 			<Text key="ResolvedPath">
-				<en>Resolved path: '{0:}'</en>
-				<de>Aufgelöster Pfad: '{0:}'</de>
+				<en>Resolved path: '$P1$'</en>
+				<de>Aufgelöster Pfad: '$P1$'</de>
 			</Text>
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+				<en>This value '$P1$' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
 			</Text>
 		</Method>
 	</Class>

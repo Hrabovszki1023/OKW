@@ -65,7 +65,8 @@ import okw.log.*;
 
         public String getFN()
         {
-            return Test_PushButton.class.getAnnotation(OKW_FN.class).FN();
+            // return Test_PushButton.class.getAnnotation(OKW_FN.class).FN();
+            return "Test_Textfield";
         }
 
         public void ClickOn()
@@ -163,6 +164,35 @@ import okw.log.*;
             myLogger.LogFunctionEndDebug();
 
             return;
+        }
+
+
+        /**
+         *  \brief
+         *  Testmethode liefert als Ergebnis fplsExpectedValue, also den erwarteten Wert, zurück.
+         *           *  
+         *  \return
+         *  Rückgabe fplsExpectedValue.
+         *  
+         *  \author Zoltan Hrabovszki
+         *  \date 2016.06.14
+         */
+        public ArrayList<String> VerifyValue(ArrayList<String> fplsExpectedValue) throws InterruptedException
+        {
+
+          this.myValue = fplsExpectedValue.get(0);
+          myLogger.LogFunctionStartDebug(this.getClass().getName() + ".VerifyValue");
+          
+          String lvs_ObjectName = getFN();
+
+          myClipBoard.setObjectName(lvs_ObjectName);
+          myClipBoard.setMethod("VerifyValue(ArrayList<String> fplsExpectedValue)");
+          myClipBoard.getValue().clear();
+          myClipBoard.getValue().add(fplsExpectedValue.get(0));
+          
+          myLogger.LogFunctionEndDebug();
+
+          return fplsExpectedValue;
         }
 
     }

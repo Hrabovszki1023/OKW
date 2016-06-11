@@ -14,8 +14,8 @@
 			</Text>
 			<!-- Meldungen zum Vergleich der List<T> Längen(count) -->
 			<Text key="FileDoesNotExists">
-				<en>File OKW_Ini.xml not found: {:0} </en>
-				<de>Die Datei OKW_Ini.xml wurde nicht gefunden: {:0}</de>
+				<en>File OKW_Ini.xml not found: $P1$ </en>
+				<de>Die Datei OKW_Ini.xml wurde nicht gefunden: $P1$</de>
 			</Text>
 		</Method>
 	</Class>

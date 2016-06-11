@@ -88,7 +88,7 @@ public static Collection<Object[]> data() {
     		{ "ABGEWÄHLT",     "de", "UNCHECKED"},
     		{ "UNCHECKED",     "en", "UNCHECKED"},
     		
-    		{ "ANGEWÄHLT",    "de", "CHECKED"},
+    		{ "ANGEWÄHLT",     "de", "CHECKED"},
     		{ "CHECKED",       "en", "CHECKED"},
 
     		
@@ -125,7 +125,7 @@ public static Logger_Sngltn Log;
     {
 		Log = Logger_Sngltn.getInstance();
         // Reset des Loggers: Alle geladenen Instanzen löschen
-        Log.Init();
+        Logger_Sngltn.Init();
 
         //Log.AddLogger(new Log2Console());
         Log.setDebugMode(false);

@@ -137,7 +137,7 @@ public class OK implements IOKW_State
 	public void BeginTest( String fpsTestname )
 	{
 		Log.LogFunctionStartDebug("BeginTest", "fpsTestname", fpsTestname);
-
+		
 		Log.LogFunctionEndDebug();
 	}
 
@@ -1163,13 +1163,13 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::StartApp(string)
 	///
-	public void StartApp( String fps_ApplikationName ) throws Exception
+	public void StartApp( String fpsApplicationName ) throws Exception
 	{
-		Log.LogFunctionStartDebug("StartApp", "fps_ApplikationName", fps_ApplikationName);
+		Log.LogFunctionStartDebug("StartApp", "fpsApplicationName", fpsApplicationName);
 
 		try
 		{
-			CO.SetWindowName(fps_ApplikationName);
+			CO.SetWindowName(fpsApplicationName);
 			CO.CallMethod("StartApp");
 		}
 		catch (Exception e)
@@ -1187,13 +1187,13 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::StopApp(string)
 	///
-	public void StopApp( String fps_ApplikationName ) throws Exception
+	public void StopApp( String fpsApplicationName ) throws Exception
 	{
-		Log.LogFunctionStartDebug("StopApp", "fps_ApplikationName", fps_ApplikationName);
+		Log.LogFunctionStartDebug("StopApp", "fps_ApplikationName", fpsApplicationName);
 
 		try
 		{
-			CO.SetWindowName(fps_ApplikationName);
+			CO.SetWindowName(fpsApplicationName);
 			CO.CallMethod("StopApp");
 		}
 		catch (Exception e)
@@ -1773,9 +1773,16 @@ public class OK implements IOKW_State
 			}
 			else
 			{
+			  if (fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY") ) )
+			  {
+			    fpsExpectedValue = "";
+			  }
+			  
 				// Split giveneExpected Value
 				ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(fpsExpectedValue);
 
+				lvlsExpected = Parser.ParseMe(lvlsExpected);
+				
 				CO.SetChildName(fpsFunctionalname);
 				ArrayList<String> Actual = CO.CallMethodReturn_ListString("VerifyValue", lvlsExpected);
 

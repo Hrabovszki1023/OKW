@@ -542,10 +542,10 @@ import okw.log.*;
 		/// \~english
 		/// \copydoc IOKW_State::StartApp(String)
 		/// 
-		public void StartApp(String fpsApplikationName)
+		public void StartApp(String fpsApplicationName)
 		{
 			Log.LogFunctionStartDebug("StartApp", 
-				"fps_ApplikationName", fpsApplikationName);
+				"fpsApplicationName", fpsApplicationName);
 
 			Log.LogFunctionEndDebug();
 		}
@@ -555,10 +555,10 @@ import okw.log.*;
 		/// \~english
 		/// \copydoc IOKW_State::StopApp(String)
 		/// 
-		public void StopApp(String fpsApplikationName)
+		public void StopApp(String fpsApplicationName)
 		{
 			Log.LogFunctionStartDebug("StopApp",
-				"fps_ApplikationName", fpsApplikationName);
+				"fpsApplicationName", fpsApplicationName);
 
 			Log.LogFunctionEndDebug();
 		}

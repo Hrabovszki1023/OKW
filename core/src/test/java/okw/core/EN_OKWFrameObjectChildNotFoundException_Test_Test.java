@@ -17,7 +17,6 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-
 package okw.core;
 
 import okw.OKW_TestClipboard;
@@ -33,101 +32,116 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 
-public class EN_OKWFrameObjectChildNotFoundException_Test_Test
-{
+public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
 
-	static Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
-	static OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
+  static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
+  static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
-    @Rule
-    public TestName name = new TestName();
-	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception
-	{
-        Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
+  @Rule
+  public TestName          name        = new TestName();
 
-        // Reset/init the Logger
-        myLogger.Init();
-        //myLogger.AddLogger(new Log2Console());
+  @BeforeClass
+  public static void setUpBeforeClass() throws Exception {
+    Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 
-        myLogger.setDebugMode(false);
-	}
+    // Reset/init the Logger
+    myLogger.Init();
+    // myLogger.AddLogger(new Log2Console());
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception
-	{
-	}
+    myLogger.setDebugMode( false );
+  }
 
-    /// \~german
-    /// \brief
-    /// Diese Methode wird immer vor jedem Test(fall) ausgeführt.
-    /// 
-	@Before
-	public void setUp() throws Exception
-	{
+  @AfterClass
+  public static void tearDownAfterClass() throws Exception {
+  }
 
-	}
+  // / \~german
+  // / \brief
+  // / Diese Methode wird immer vor jedem Test(fall) ausgeführt.
+  // /
+  @Before
+  public void setUp() throws Exception {
 
-    /// \~german
-    /// \brief
-    /// Diese Methode wird immer nach jedem Test(fall) ausgeführt.
-    /// 
-	@After
-	public void tearDown() throws Exception
-	{
-        EN.EndTest();
-	}
+  }
 
-	/// \~german
-	/// \brief
-	/// Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch Select ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
-	/// 
-	/// \~english
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2016.05.07
-	@Test(expected = OKWFrameObjectChildNotFoundException.class)
-    public void TC_ClickOn_OKWFrameObjectMethodNotFoundException() throws Exception
-    {
-        EN.BeginTest( name.getMethodName() );
-		
-		EN.SelectWindow( "Rechner" );
-		EN.ClickOn( "IsNotDefindeInRechner" );
-    }
+  // / \~german
+  // / \brief
+  // / Diese Methode wird immer nach jedem Test(fall) ausgeführt.
+  // /
+  @After
+  public void tearDown() throws Exception {
+    EN.EndTest();
+  }
 
-	/// \~german
-	/// \brief
-	/// Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die LFC-Select ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
-	/// 
-	/// \~english
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2016.05.07
-	@Test(expected = OKWFrameObjectChildNotFoundException.class)
-    public void TC_Select_OKWFrameObjectMethodNotFoundException() throws Exception
-    {
-        EN.BeginTest( name.getMethodName() );
-		
-		EN.SelectWindow( "Rechner" );
-		EN.Select( "IsNotDefindeInRechner", "Value" );
-    }
+  // / \~german
+  // / \brief
+  // / Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch Select
+  // ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
+  // /
+  // / \~english
+  // / \~
+  // / \author Zoltan Hrabovszki
+  // / \date 2016.05.07
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_ClickOn_OKWFrameObjectMethodNotFoundException()
+      throws Exception {
+    EN.BeginTest( name.getMethodName() );
 
-	/// \~german
-	/// \brief
-	/// Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die LFC-TypeKey ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
-	/// 
-	/// \~english
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2016.05.07
-	@Test(expected = OKWFrameObjectChildNotFoundException.class)
-    public void TC_TypeKey_OKWFrameObjectMethodNotFoundException() throws Exception
-    {
-        EN.BeginTest( name.getMethodName() );
-		
-		EN.SelectWindow( "Rechner" );
-		EN.TypeKey( "IsNotDefindeInRechner", "Value" );
-    }
+    EN.SelectWindow( "Rechner" );
+    EN.ClickOn( "IsNotDefindeInRechner" );
+  }
+
+  // / \~german
+  // / \brief
+  // / Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+  // LFC-Select ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
+  // /
+  // / \~english
+  // / \~
+  // / \author Zoltan Hrabovszki
+  // / \date 2016.05.07
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_Select_OKWFrameObjectMethodNotFoundException()
+      throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.Select( "IsNotDefindeInRechner", "Value" );
+  }
+
+  // / \~german
+  // / \brief
+  // / Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+  // LFC-TypeKey ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
+  // /
+  // / \~english
+  // / \~
+  // / \author Zoltan Hrabovszki
+  // / \date 2016.05.07
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_TypeKey_OKWFrameObjectMethodNotFoundException()
+      throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.TypeKey( "IsNotDefindeInRechner", "Value" );
+  }
+
+  // / \~german
+  // / \brief
+  // / Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+  // LFC-TypeKey ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
+  // /
+  // / \~english
+  // / \~
+  // / \author Zoltan Hrabovszki
+  // / \date 2016.05.07
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VeryfyValue_OKWFrameObjectMethodNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyValue( "IsNotDefindeInRechner", "Value" );
+  }
+
 }
-	

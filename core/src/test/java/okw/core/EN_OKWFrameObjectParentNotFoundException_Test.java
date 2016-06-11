@@ -76,20 +76,61 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
         EN.EndTest();
 	}
 
-	/// \~german
-	/// \brief
-	/// Prüft "IGNORIEREN" für das Schlüsslewort MemorizeCaption(strng,string)
-	/// 
-	/// \~english
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.12.26
+	/**
+   * \~german
+   * \brief Prüft ob die Ausnahme OKWFrameObjectParentNotFoundException ausgelöst wird,
+   *        wenn das FensterObjekt zum FN nicht gefunden wird. 
+   *  
+   * \~english
+   * \~
+   * \author Zoltan Hrabovszki
+	 * \date 2013.12.26
+   * 
+	 * @throws Exception
+	 */
 	@Test(expected = OKWFrameObjectParentNotFoundException.class)
     public void TC_Select_Window_OKWFrameObjectParentNotFoundException_Test() throws Exception
     {
         EN.BeginTest( "TC_Select_Window_OKWFrameObjectParentNotFoundException_Test" );
-        
-		EN.SelectWindow( "WindowDoesNotExists" );
+        EN.SelectWindow( "WindowDoesNotExists" );
+    }
+
+	/**
+   * \~german
+   * \brief Prüft ob die Ausnahme OKWFrameObjectParentNotFoundException ausgelöst wird,
+   *        wenn das FensterObjekt zum FN nicht gefunden wird. 
+   *  
+   * \~english
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2013.12.26
+   * 
+   * @throws Exception
+   */
+  @Test(expected = OKWFrameObjectParentNotFoundException.class)
+    public void TC_StartApp_OKWFrameObjectParentNotFoundException_Test() throws Exception
+    {
+        EN.BeginTest( "TC_Select_Window_OKWFrameObjectParentNotFoundException_Test" );
+        EN.StartApp( "WindowDoesNotExists" );
+    }
+
+  /**
+   * \~german
+   * \brief Prüft ob die Ausnahme OKWFrameObjectParentNotFoundException ausgelöst wird,
+   *        wenn das Frame zur gegebenen FN nicht gefunden wird. 
+   *  
+   * \~english
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2013.12.26
+   * 
+   * @throws Exception
+   */
+  @Test(expected = OKWFrameObjectParentNotFoundException.class)
+    public void TC_StopApp_OKWFrameObjectParentNotFoundException_Test() throws Exception
+    {
+        EN.BeginTest( "TC_Select_Window_OKWFrameObjectParentNotFoundException_Test" );
+        EN.StopApp( "WindowDoesNotExists" );
     }
 }
 	

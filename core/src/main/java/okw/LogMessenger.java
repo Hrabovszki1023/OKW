@@ -40,17 +40,8 @@
 package okw;
 
 import okw.exceptions.*;
-import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
 import javax.xml.bind.JAXBException;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import java.io.IOException;
@@ -59,6 +50,8 @@ import java.nio.file.Paths;
 import java.io.FileNotFoundException;
 
 import org.xml.sax.SAXException;
+
+import org.stringtemplate.v4.*;
 
 /// \~german
 /// \brief
@@ -195,19 +188,23 @@ public class LogMessenger
 	/// \date 2013.12.22
 	public String GetMessage( String MethodName, String TextKey, Object Parameter_1 )
 	{
-		String lvs_Return = "";
-
+		String lvsReturn = "";
+    String lvsTemplate = "";
 		try
 		{
-			lvs_Return = this.ReadMessage(this.cvsClassName, MethodName, TextKey);
-			lvs_Return = String.format(lvs_Return, Parameter_1);
+		  lvsTemplate = this.ReadMessage(this.cvsClassName, MethodName, TextKey);
+			
+			ST st = new ST(lvsTemplate, '$', '$');
+			st.add("P1", Parameter_1);
+			lvsReturn = st.render();
+			
 		}
 		catch (Exception e)
 		{
 			OKW_HandleException.StopRunning(e, this.getClass());
 		}
 
-		return lvs_Return;
+		return lvsReturn;
 	}
 
 	/// \~german
@@ -235,15 +232,26 @@ public class LogMessenger
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.12.22
 	public String GetMessage( String MethodName, String TextKey, Object Parameter_1, Object Parameter_2 )
-			throws XPathExpressionException
-	{
-		String lvs_Return = "Message Not Found!";
+  {
+    String lvsReturn = "";
+    String lvsTemplate = "";
+    try
+    {
+      lvsTemplate = this.ReadMessage(this.cvsClassName, MethodName, TextKey);
+      
+      ST st = new ST(lvsTemplate, '$', '$');
+      st.add("P1", Parameter_1);
+      st.add("P2", Parameter_2);
+      lvsReturn = st.render();
+      
+    }
+    catch (Exception e)
+    {
+      OKW_HandleException.StopRunning(e, this.getClass());
+    }
 
-		lvs_Return = this.ReadMessage(this.cvsClassName, MethodName, TextKey);
-		lvs_Return = String.format(lvs_Return, Parameter_1, Parameter_2);
-
-		return lvs_Return;
-	}
+    return lvsReturn;
+  }
 
 	/// \~german
 	/// \brief
@@ -272,21 +280,27 @@ public class LogMessenger
 	/// \date 2013.12.22
 	public String GetMessage( String MethodName, String TextKey, Object Parameter_1, Object Parameter_2,
 			Object Parameter_3 )
-	{
-		String lvs_Return = "Message Not Found!";
-		
-		try
-		{
-			lvs_Return = this.ReadMessage(this.cvsClassName, MethodName, TextKey);
-			lvs_Return = String.format(lvs_Return, Parameter_1, Parameter_2, Parameter_3);
-		}
-		catch (Exception e)
-		{
-			OKW_HandleException.StopRunning(e, this.getClass());
-		}
+  {
+    String lvsReturn = "";
+    String lvsTemplate = "";
+    try
+    {
+      lvsTemplate = this.ReadMessage(this.cvsClassName, MethodName, TextKey);
+      
+      ST st = new ST(lvsTemplate, '$', '$');
+      st.add("P1", Parameter_1);
+      st.add("P2", Parameter_2);
+      st.add("P3", Parameter_3);
+      lvsReturn = st.render();
+      
+    }
+    catch (Exception e)
+    {
+      OKW_HandleException.StopRunning(e, this.getClass());
+    }
 
-		return lvs_Return;
-	}
+    return lvsReturn;
+  }
 
 	/// \~german
 	/// \brief

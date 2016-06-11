@@ -82,8 +82,8 @@
 				<de>Vergleiche Soll/Ist...</de>
 			</Text>
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+				<en>This value '$P1$' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
 			</Text>
 		</Method>
 		<!-- Method: "VerifyHasFocus"-->
@@ -93,8 +93,8 @@
 				<de>Vergleiche Soll/Ist...</de>
 			</Text>
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+				<en>This value '$P1$' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
 			</Text>
 		</Method>
 		<!-- Method: "VerifyExists"-->
@@ -104,8 +104,8 @@
 				<de>Vergleiche Soll/Ist...</de>
 			</Text>
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+				<en>This value '$P1$' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
 			</Text>
 		</Method>
 		<!--===============================================================-->
@@ -198,8 +198,8 @@
 				<de>Schlüsselwort wurde ignoriert!</de>
 			</Text>
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+				<en>This value '$P1$' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
 			</Text>
 		</Method>
 		<!-- Method: "FileDelete"-->
@@ -216,8 +216,8 @@
 				<de>Schlüsselwort wurde ignoriert!</de>
 			</Text>
 			<Text key="OKWNotAllowedValueException">
-				<en>This value '{0:}' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
-				<de>Dieser Wert '{0:}' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
+				<en>This value '$P1$' not allowed here! Only YES/NO/IGNORE are a possible values.</en>
+				<de>Dieser Wert '$P1$' ist hier nicht erlaubt! Mögliche Werte sind JA/NEIN/IGNORIEREN.</de>
 			</Text>
 		</Method>
 	</Class>

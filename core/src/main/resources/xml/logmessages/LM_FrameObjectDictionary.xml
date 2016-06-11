@@ -6,8 +6,8 @@
 		<!-- GetObjectByName -->
 		<Method name="GetParentObjectByName">
 			<Text key="M1">
-				<en>Does the key {0:} exist in FrameObjectDictionary? That means: Exsists an instace of the Frame?</en>
-				<de>Existiert der Schlüssel {0:} im FrameObjectDictionary? - D.h. Gibt es schon eine Instanz des Objektes im Speicher?</de>
+				<en>Does the key $P1$ exist in FrameObjectDictionary? That means: Exsists an instace of the Frame?</en>
+				<de>Existiert der Schlüssel $P1$ im FrameObjectDictionary? - D.h. Gibt es schon eine Instanz des Objektes im Speicher?</de>
 			</Text>
 			<Text key="M2">
 				<en>Yes, object exists.</en>
@@ -18,15 +18,15 @@
 				<de>DENein -&gt; 1. Objekt erzeugen, 2. im Dictionary ablegen und 3. zurückliefern...</de>
 			</Text>
 			<Text key="OKWFrameObjectParentNotFoundException">
-				<en>Exception 'OKWFrameObjectParentNotFoundException' was thrown: Parent-object not found: '{0:}' not found!</en>
-				<de>Die Ausnahme 'OKWFrameObjectParentNotFoundException' wurde ausgelöst: Eltern-Objekt '{0:}' wurde nicht gefunden.</de>
+				<en>Exception 'OKWFrameObjectParentNotFoundException' was thrown: Parent-object not found: '$P1$' not found!</en>
+				<de>Die Ausnahme 'OKWFrameObjectParentNotFoundException' wurde ausgelöst: Eltern-Objekt '$P1$' wurde nicht gefunden.</de>
 			</Text>
 		</Method>
 		<!-- GetChildObjectByName -->
 		<Method name="GetChildObjectByName">
 			<Text key="M1">
-				<en>Is there child object {0:} in the parent-object  {1:}?</en>
-				<de>Existiert es das Kindobjekt {0:} im Eltern-Objekt {1:}?</de>
+				<en>Is there child object $P1$ in the parent-object  $P2$?</en>
+				<de>Existiert es das Kindobjekt $P1$ im Eltern-Objekt $P2$?</de>
 			</Text>
 			<Text key="M2">
 				<en>Yes, object exists.</en>
@@ -37,30 +37,30 @@
 				<de>Nein -&gt; Exception auslösen und alles beenden</de>
 			</Text>
 			<Text key="OKWFrameObjectChildNotFoundException">
-				<en>Exception 'OKWFrameObjectChildNotFoundException' was thrown: Child-object not found: '{0:}' not found!</en>
-				<de>Die Ausnahme 'OKWFrameObjectChildNotFoundException' wurde ausgelöst: Kind-Objekt '{0:}' wurde nicht gefunden.</de>
+				<en>Exception 'OKWFrameObjectChildNotFoundException' was thrown: Child-object not found: '$P1$' not found!</en>
+				<de>Die Ausnahme 'OKWFrameObjectChildNotFoundException' wurde ausgelöst: Kind-Objekt '$P1$' wurde nicht gefunden.</de>
 			</Text>
 		</Method>
 		<!-- CreateInstanceByObjectName -->
 		<Method name="CreateInstanceByObjectName">
 			<Text key="FrameWindowIsNotDefined_Exception">
-				<en>Frame-Object not Found: Defintion of Window '{0:}' does not exists!</en>
-				<de>Frame-Objekt nicht gefunden: Definition des Fenters '{0:}' fehlt!.</de>
+				<en>Frame-Object not Found: Defintion of Window '$P1$' does not exists!</en>
+				<de>Frame-Objekt nicht gefunden: Definition des Fenters '$P1$' fehlt!.</de>
 			</Text>
 			<Text key="InstanceWasCreated">
-				<en>'{0:}' Instance was created.</en>
-				<de>'{0:}' Instanz wurde angelegt.</de>
+				<en>'$P1$' Instance was created.</en>
+				<de>'$P1$' Instanz wurde angelegt.</de>
 			</Text>
 			<Text key="ClassObjectNotFound">
-				<en>The class/object'{0:}' was not found.</en>
-				<de>Die Klasse/das Objekt '{0:}' wurde nicht gefunden.</de>
+				<en>The class/object'$P1$' was not found.</en>
+				<de>Die Klasse/das Objekt '$P1$' wurde nicht gefunden.</de>
 			</Text>
 		</Method>
 		<!-- Init -->
 		<Method name="Init">
 			<Text key="InitClear">
-				<en>'{0:}' is initialized...</en>
-				<de>'{0:}' wird initialisiert...</de>
+				<en>'$P1$' is initialized...</en>
+				<de>'$P1$' wird initialisiert...</de>
 			</Text>
 		</Method>
 	</Class>

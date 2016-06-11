@@ -1022,6 +1022,7 @@ public interface IOKW_State
         /// \date 2014-09-21/jnic
 		/// todo jnic-->Beschreibung angepasst 2014-10-26
         void StopApp(String fpsApplicationName) throws Exception;
+        
         /// \~german
         /// \brief
         /// Tastatureingaben von Daten in das aktive Fensterobjekt.
