@@ -17,7 +17,9 @@ The fastest and easiest way is:
 * to create a Maven Project
 * add your unit test framework like junit as maven dependency
 * add an OpenKeyWord GUI-Adapter - At this moment OKW support only Selenium.
-  But OpenKeyWord is open for all GUI-testing-tools with a java-API. You only have to define GUI-adapter for your testing-tool
+   But OpenKeyWord is open for all GUI-testing-tools with a java-API.
+
+   You have to define GUI-adapter for your testing-tool only.
 
 ```xml 
 <dependency>
@@ -36,12 +38,11 @@ See the simple example "Calculator".
 
 The  Steps you have to do are:
 
-* Define for all test relevant GUI-Element a functional name (FN). 
-* Find the Locators which identifies for a GUI-Object. The goal is: OKW has to identify the GUI-Objects clearly. The
-  Selenium GUI-adapter uses XPATH as Locator.
-* Add GUI-Adapter (e.g. SeTextField) for the specific GUI-Object to the Frame.
-** define functional name with OKW annotation like this: '@OKW_FN( FN = "Display" )'
-** assign the GUI-Adapter with the specific locator 
+1. Define for all test relevant GUI-Element a functional name (FN). 
+2. Find the locators which identifies a GUI-Object. The goal is: OKW has to identify the GUI-Objects clearly. The OKW Selenium GUI-adapter uses XPATH as Locator.
+3. Add GUI-Adapter (e.g. SeTextField) for the specific GUI-Object to the Frame.
+   * Define functional name with OKW annotation like this: '@OKW_FN( FN = "Display" )'.
+   * Assign the GUI-Adapter with the specific locator.
 
 
 ### The Calculator Example
