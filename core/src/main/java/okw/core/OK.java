@@ -1458,7 +1458,9 @@ public class OK implements IOKW_State {
 					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyValue", "Ignore"));
-			} else {
+			} 
+			else 
+			{
 				if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY"))) {
 					fpsExpectedValue = "";
 				}

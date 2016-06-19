@@ -127,6 +127,27 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
     EN.TypeKey( "IsNotDefindeInRechner", "Value" );
   }
 
+  
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyCaption ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyCaption_OKWFrameObjectMethodNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyCaption( "IsNotDefindeInRechner", "Value" );
+  }
+  
+  
   /**
    * \~german
    *  \brief
