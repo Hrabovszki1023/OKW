@@ -2,7 +2,7 @@
 
 # OKW
 
-OKW - OpenKeyWord is not a replacement, but rather a powerful extension to your existing test-framework, like junit or TestNG.
+OKW - OpenKeyWord is not a replacement, but rather a powerful extension to your existing test-framework, like JUnit or TestNG.
 
 OKW is absolutely free, both for open source and commercial projects.
 
@@ -14,10 +14,10 @@ Here you can find all [OKW modules in Maven repository](https://search.maven.org
 
 The fastest and easiest way is:
 
-* to create a Maven Project
-* add your unit test framework like junit as maven dependency
-* add an OpenKeyWord GUI-Adapter - At this moment OKW support only Selenium.
-   But OpenKeyWord is open for all GUI-testing-tools with a java-API.
+* Create a Maven Project.
+* Add your unit test framework like JUnit as Maven dependency.
+* Add an OpenKeyWord GUI-Adapter - At this moment OKW support Selenium only.
+   But OKW is basically open for all GUI-testing-tools with a java-API.
 
    You have to define GUI-adapter for your testing-tool only.
 
@@ -28,9 +28,9 @@ The fastest and easiest way is:
     <version>?.?.?</version>
 </dependency>
 ```
-* maven: update project 
+* Maven: update project.
 
-Now you can basically start with GUI-Test description with OKW-Keywords.
+Now you can start with GUI-Test description with OKW-Keywords.
 
 ## The OKW Frame
 The OKW-frame describes your GUI and is a technical-functional mapping.
@@ -40,7 +40,7 @@ The  Steps you have to do are:
 
 1. Define for all test relevant GUI-Element a functional name (FN). 
 2. Find the locators which identifies a GUI-Object. The goal is: OKW has to identify the GUI-Objects clearly. The OKW Selenium GUI-adapter uses XPATH as Locator.
-3. Add GUI-Adapter (e.g. SeTextField) for the specific GUI-Object to the Frame.
+3. Add GUI-Adapter (e.g. SeBrowserChild or SeTextField) for the specific GUI-Object to the Frame.
    * Define functional name with OKW annotation like this: '@OKW_FN( FN = "Display" )'.
    * Assign the GUI-Adapter with the specific locator.
 
@@ -116,7 +116,7 @@ public class frmCalculator extends SeBrowserChild {
 
   public frmCalculator() {
     
-    // define Locator for Calculator Main-Window
+    // define Locator for Calculator main-window
     super( "//title[text()='Taschenrechner']/../.." );
 
   }
