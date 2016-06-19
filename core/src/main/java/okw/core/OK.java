@@ -46,21 +46,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // \todo TODO: ANTLR einbauen import OKW.ANTLR4;
 import okw.*;
 import okw.exceptions.*;
@@ -75,24 +60,23 @@ import okw.exceptions.*;
 /// \~
 /// \author Zoltán Hrabovszki
 /// \date 2013.03.02
-public class OK implements IOKW_State
-{
+public class OK implements IOKW_State {
 
 	/// \copydoc OKWLanguage
-	private static OKWLanguage		CL;
+	private static OKWLanguage CL;
 
 	/// \copydoc Logger
-	private static Logger_Sngltn	Log;
+	private static Logger_Sngltn Log;
 
 	/// \copydoc LogMessenger
-	private static LogMessenger		LM;
+	private static LogMessenger LM;
 
 	/// \copydoc CurrentObject
-	private static OKW_CurrentObject_Sngltn	CO;
+	private static OKW_CurrentObject_Sngltn CO;
 
-	Boolean							UNITTEST	= true;
+	Boolean UNITTEST = true;
 
-	Core							_Kernel;
+	Core _Kernel;
 
 	/// \~german
 	/// \brief
@@ -104,19 +88,15 @@ public class OK implements IOKW_State
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 09.01.2014
-	public OK(Core fp_OKW)
-	{
-		try
-		{
-			CL  = OKWLanguage.getInstance();
-			Log	= Logger_Sngltn.getInstance();
-			LM  = new LogMessenger("OK");
-			CO  = OKW_CurrentObject_Sngltn.getInstance();
-			
+	public OK(Core fp_OKW) {
+		try {
+			CL = OKWLanguage.getInstance();
+			Log = Logger_Sngltn.getInstance();
+			LM = new LogMessenger("OK");
+			CO = OKW_CurrentObject_Sngltn.getInstance();
+
 			this._Kernel = fp_OKW;
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			final ByteArrayOutputStream stream = new ByteArrayOutputStream();
 			e.printStackTrace(new PrintStream(stream));
 
@@ -134,10 +114,9 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::BeginTest()
 	///
-	public void BeginTest( String fpsTestname )
-	{
+	public void BeginTest(String fpsTestname) {
 		Log.LogFunctionStartDebug("BeginTest", "fpsTestname", fpsTestname);
-		
+
 		Log.LogFunctionEndDebug();
 	}
 
@@ -146,21 +125,15 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::ClickOn(string)
 	///
-	public void ClickOn( String fpsFunctionalname ) throws Exception
-	{
+	public void ClickOn(String fpsFunctionalname) throws Exception {
 		Log.LogFunctionStartDebug("ClickOn", "fpsFunctionalname", fpsFunctionalname);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			CO.CallMethod("ClickOn");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -170,21 +143,15 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::ClickOn(string,string)
 	///
-	public void ClickOn( String fpsFunctionalname, String fpsClickType ) throws Exception
-	{
+	public void ClickOn(String fpsFunctionalname, String fpsClickType) throws Exception {
 		Log.LogFunctionStartDebug("ClickOn", "fpsFunctionalname", fpsFunctionalname, "fpsClickType", fpsClickType);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			CO.CallMethod("ClickOn_Clicktype", fpsClickType);
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -194,8 +161,7 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::EndTest()
 	///
-	public void EndTest()
-	{
+	public void EndTest() {
 		Log.LogFunctionStartDebug("EndTest");
 
 		Log.LogFunctionEndDebug();
@@ -206,30 +172,23 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::LogCaption(string)
 	///
-	public void LogCaption( String fpsFunctionalname ) throws Exception
-	{
+	public void LogCaption(String fpsFunctionalname) throws Exception {
 		Log.LogFunctionStartDebug("LogCaption", "fpsFunctionalname", fpsFunctionalname);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("LogCaption");
 
 			Log.ResOpenListDebug("Log... ");
 
-			for (String Value : ActualValues)
-			{
+			for (String Value : ActualValues) {
 				Log.LogPrintDebug(">>" + Value + "<<");
 			}
 
 			Log.ResCloseListDebug();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -239,12 +198,10 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::LogExists(string)
 	///
-	public void LogExists( String fpsFunctionalname ) throws Exception
-	{
+	public void LogExists(String fpsFunctionalname) throws Exception {
 		Log.LogFunctionStartDebug("LogExists", "fpsFunctionalname", fpsFunctionalname);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			Boolean lvbActual = CO.CallMethodReturn_Boolean("LogExists");
 			String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
@@ -252,13 +209,9 @@ public class OK implements IOKW_State
 			String lvsLM = LM.GetMessage("LogExists", "LogValue", lvsActual);
 
 			Log.LogPrintDebug(lvsLM);
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -268,12 +221,10 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::LogHasFocus(string)
 	///
-	public void LogHasFocus( String fpsFunctionalname ) throws Exception
-	{
+	public void LogHasFocus(String fpsFunctionalname) throws Exception {
 		Log.LogFunctionStartDebug("LogHasFocus", "fpsFunctionalname", fpsFunctionalname);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			Boolean lvbActual = CO.CallMethodReturn_Boolean("LogHasFocus");
 			String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
@@ -281,13 +232,9 @@ public class OK implements IOKW_State
 			String lvsLM = LM.GetMessage("LogIsActive", "LogValue", lvsActual);
 
 			Log.LogPrintDebug(lvsLM);
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -297,12 +244,10 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::LogIsActive(string)
 	///
-	public void LogIsActive( String fpsFunctionalname ) throws Exception
-	{
+	public void LogIsActive(String fpsFunctionalname) throws Exception {
 		Log.LogFunctionStartDebug("LogIsActive", "fpsFunctionalname", fpsFunctionalname);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			Boolean lvbActual = CO.CallMethodReturn_Boolean("LogIsActive");
 
@@ -311,13 +256,9 @@ public class OK implements IOKW_State
 			String lvsLM = LM.GetMessage("LogIsActive", "LogValue", lvsActual);
 
 			Log.LogPrintDebug(lvsLM);
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -327,30 +268,23 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::LogLabel(string)
 	///
-	public void LogLabel( String fpsFunctionalname ) throws Exception
-	{
+	public void LogLabel(String fpsFunctionalname) throws Exception {
 		Log.LogFunctionStartDebug("LogLabel", "fpsFunctionalname", fpsFunctionalname);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("LogLabel");
 
 			Log.ResOpenListDebug("Log... ");
 
-			for (String Value : ActualValues)
-			{
+			for (String Value : ActualValues) {
 				Log.LogPrintDebug(">>" + Value + "<<");
 			}
 
 			Log.ResCloseListDebug();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -360,12 +294,10 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::LogSelected(string)
 	///
-	public void LogSelected( String fpsFunctionalname ) throws Exception
-	{
+	public void LogSelected(String fpsFunctionalname) throws Exception {
 		Log.LogFunctionStartDebug("LogSelected", "fpsFunctionalname", fpsFunctionalname);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			ArrayList<String> actualValues = CO.CallMethodReturn_ListString("LogSelected");
 
@@ -375,19 +307,14 @@ public class OK implements IOKW_State
 
 			Log.ResOpenListDebug(lvsLM);
 
-			for (String Value : actualValues)
-			{
+			for (String Value : actualValues) {
 				Log.LogPrintDebug("'" + Value + "'");
 			}
 
 			Log.ResCloseListDebug();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -397,31 +324,24 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::LogTablecellValue(string,string,string)
 	///
-	public void LogTablecellValue( String fpsFunctionalname, String fpsCol, String fpsRow ) throws Exception
-	{
+	public void LogTablecellValue(String fpsFunctionalname, String fpsCol, String fpsRow) throws Exception {
 		Log.LogFunctionStartDebug("LogTablecellValue", "fpsCol", fpsCol, "fpsRow", fpsRow, "fpsFunctionalname",
 				fpsFunctionalname);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("LogTablecellValue", fpsCol, fpsRow);
 
 			Log.ResOpenListDebug("Log... ");
 
-			for (String Value : ActualValues)
-			{
+			for (String Value : ActualValues) {
 				Log.LogPrintDebug(">>" + Value + "<<");
 			}
 
 			Log.ResCloseListDebug();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -431,30 +351,23 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::LogTooltip(string)
 	///
-	public void LogTooltip( String fpsFunctionalname ) throws Exception
-	{
+	public void LogTooltip(String fpsFunctionalname) throws Exception {
 		Log.LogFunctionStartDebug("LogTooltip", "fpsFunctionalname", fpsFunctionalname);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("LogTooltip");
 
 			Log.ResOpenListDebug("Log... ");
 
-			for (String Value : ActualValues)
-			{
+			for (String Value : ActualValues) {
 				Log.LogPrintDebug(">>" + Value + "<<");
 			}
 
 			Log.ResCloseListDebug();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -464,30 +377,23 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::LogValue(string)
 	///
-	public void LogValue( String fpsFunctionalname ) throws Exception
-	{
+	public void LogValue(String fpsFunctionalname) throws Exception {
 		Log.LogFunctionStartDebug("LogValue", "fpsFunctionalname", fpsFunctionalname);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("LogValue");
 
 			Log.ResOpenListDebug("Log... ");
 
-			for (String Value : ActualValues)
-			{
+			for (String Value : ActualValues) {
 				Log.LogPrintDebug(">>" + Value + "<<");
 			}
 
 			Log.ResCloseListDebug();
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -497,20 +403,18 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::MemorizeCaption(string,string)
 	///
-	public void MemorizeCaption( String fpsFunctionalname, String fpsMemKeyName ) throws Exception
-	{
+	public void MemorizeCaption(String fpsFunctionalname, String fpsMemKeyName) throws Exception {
 		Log.LogFunctionStartDebug("MemorizeCaption", "fpsFunctionalname", fpsFunctionalname, "fpsMemKeyName",
 				fpsMemKeyName);
 
-		try
-		{
-			if ( fpsMemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsMemKeyName.equals( "" ))
-			{
-				// Wenn fpsMemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
-				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeCaption", "OKWNotAllowedValueException") );
-			}
-			else
-			{
+		try {
+			if (fpsMemKeyName.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsMemKeyName.equals("")) {
+				// Wenn fpsMemKeyName = IGNORE oder "" ist ->
+				// OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException(
+						LM.GetMessage("MemorizeCaption", "OKWNotAllowedValueException"));
+			} else {
 				CO.SetChildName(fpsFunctionalname);
 				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeCaption");
 
@@ -518,13 +422,9 @@ public class OK implements IOKW_State
 
 				OKW_Memorize_Sngltn.getInstance().Set(fpsMemKeyName, lvsToMemorize);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -534,21 +434,19 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::MemorizeExists(string,string)
 	///
-	public void MemorizeExists( String fpsFunctionalname, String fpsMemKeyName ) throws Exception
-	{
+	public void MemorizeExists(String fpsFunctionalname, String fpsMemKeyName) throws Exception {
 		Log.LogFunctionStartDebug("MemorizeExists", "fpsFunctionalname", fpsFunctionalname, "fpsMemKeyName",
 				fpsMemKeyName);
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsMemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsMemKeyName.equals( "" ))
-			{
-				// Wenn fpsMemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
-				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeExists", "OKWNotAllowedValueException", fpsMemKeyName) );
-			}
-			else
-			{
+			if (fpsMemKeyName.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsMemKeyName.equals("")) {
+				// Wenn fpsMemKeyName = IGNORE oder "" ist ->
+				// OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException(
+						LM.GetMessage("MemorizeExists", "OKWNotAllowedValueException", fpsMemKeyName));
+			} else {
 				CO.SetChildName(fpsFunctionalname);
 				Boolean lvbActual = CO.CallMethodReturn_Boolean("MemorizeExists");
 
@@ -556,13 +454,9 @@ public class OK implements IOKW_State
 
 				OKW_Memorize_Sngltn.getInstance().Set(fpsMemKeyName, lvsActual);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -572,21 +466,19 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::MemorizeHasFocus(string,string)
 	///
-	public void MemorizeHasFocus( String fpsFunctionalname, String fps_MemKeyName ) throws Exception
-	{
+	public void MemorizeHasFocus(String fpsFunctionalname, String fps_MemKeyName) throws Exception {
 		Log.LogFunctionStartDebug("MemorizeHasFocus", "fpsFunctionalname", fpsFunctionalname, "fps_MemKeyName",
 				fps_MemKeyName);
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fps_MemKeyName.equals( "" ))
-			{
-				// Wenn fps_MemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
-				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeHasFocus", "OKWNotAllowedValueException", fps_MemKeyName) );
-			}
-			else
-			{
+			if (fps_MemKeyName.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fps_MemKeyName.equals("")) {
+				// Wenn fps_MemKeyName = IGNORE oder "" ist ->
+				// OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException(
+						LM.GetMessage("MemorizeHasFocus", "OKWNotAllowedValueException", fps_MemKeyName));
+			} else {
 				CO.SetChildName(fpsFunctionalname);
 				Boolean lvbActual = CO.CallMethodReturn_Boolean("MemorizeHasFocus");
 
@@ -594,13 +486,9 @@ public class OK implements IOKW_State
 
 				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsActual);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -610,21 +498,19 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::MemorizeIsActive(string,string)
 	///
-	public void MemorizeIsActive( String fpsFunctionalname, String fps_MemKeyName ) throws Exception
-	{
+	public void MemorizeIsActive(String fpsFunctionalname, String fps_MemKeyName) throws Exception {
 		Log.LogFunctionStartDebug("MemorizeIsActive", "fpsFunctionalname", fpsFunctionalname, "fps_MemKeyName",
 				fps_MemKeyName);
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fps_MemKeyName.equals( "" ))
-			{
-				// Wenn fpsMemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
-				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeIsActive", "OKWNotAllowedValueException", fps_MemKeyName) );
-			}
-			else
-			{
+			if (fps_MemKeyName.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fps_MemKeyName.equals("")) {
+				// Wenn fpsMemKeyName = IGNORE oder "" ist ->
+				// OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException(
+						LM.GetMessage("MemorizeIsActive", "OKWNotAllowedValueException", fps_MemKeyName));
+			} else {
 
 				CO.SetChildName(fpsFunctionalname);
 				Boolean lvbActual = CO.CallMethodReturn_Boolean("MemorizeIsActive");
@@ -633,13 +519,9 @@ public class OK implements IOKW_State
 
 				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsActual);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -649,19 +531,18 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::MemorizeLabel(string,string)
 	///
-	public void MemorizeLabel( String fpsFunctionalname, String fps_MemKeyName ) throws Exception
-	{
-		Log.LogFunctionStartDebug("MemorizeLabel", "fpsFunctionalname", fpsFunctionalname, "fps_MemKeyName", fps_MemKeyName);
+	public void MemorizeLabel(String fpsFunctionalname, String fps_MemKeyName) throws Exception {
+		Log.LogFunctionStartDebug("MemorizeLabel", "fpsFunctionalname", fpsFunctionalname, "fps_MemKeyName",
+				fps_MemKeyName);
 
-		try
-		{
-			if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fps_MemKeyName.equals( "" ))
-			{
-				// Wenn fps_MemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
-				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeLabel", "OKWNotAllowedValueException", fps_MemKeyName) );
-			}
-			else
-			{
+		try {
+			if (fps_MemKeyName.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fps_MemKeyName.equals("")) {
+				// Wenn fps_MemKeyName = IGNORE oder "" ist ->
+				// OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException(
+						LM.GetMessage("MemorizeLabel", "OKWNotAllowedValueException", fps_MemKeyName));
+			} else {
 				CO.SetChildName(fpsFunctionalname);
 				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeLabel");
 
@@ -669,13 +550,9 @@ public class OK implements IOKW_State
 
 				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -685,73 +562,62 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::MemorizeSelectedValue(string,string)
 	///
-	public void MemorizeSelectedValue( String fpsFunctionalname, String fps_MemKeyName ) throws Exception
-	{
+	public void MemorizeSelectedValue(String fpsFunctionalname, String fps_MemKeyName) throws Exception {
 		Log.LogFunctionStartDebug("MemorizeSelectedValue", "fpsFunctionalname", fpsFunctionalname, "fps_MemKeyName",
 				fps_MemKeyName);
 
-		try
-		{
-			if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fps_MemKeyName.equals( "" ))
-			{
-				// Wenn fps_MemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
-				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeSelectedValue", "OKWNotAllowedValueException", fps_MemKeyName) );
-			}
-			else
-			{
+		try {
+			if (fps_MemKeyName.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fps_MemKeyName.equals("")) {
+				// Wenn fps_MemKeyName = IGNORE oder "" ist ->
+				// OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException(
+						LM.GetMessage("MemorizeSelectedValue", "OKWNotAllowedValueException", fps_MemKeyName));
+			} else {
 				CO.SetChildName(fpsFunctionalname);
 				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeSelectedValue");
-
-				String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);	
-
-				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
-			}
-		}
-		catch (Exception e)
-		{
-			this.HandleException(e);
-		}
-		finally
-		{
-			Log.LogFunctionEndDebug();
-		}
-	}
-
-	/// \~german
-	/// \copydoc IOKW_State::MemorizeTablecellValue(string,string,string,string)
-	/// \~english
-	/// \copydoc IOKW_State::MemorizeTablecellValue(string,string,string,string)
-	///
-	public void MemorizeTablecellValue( String fpsFunctionalname, String fpsCol, String fpsRow, String fps_MemKeyName )
-			throws Exception
-	{
-		Log.LogFunctionStartDebug("MemorizeTablecellValue", "fpsFunctionalname", fpsFunctionalname, "fpsCol", fpsCol,
-				"fpsRow", fpsRow, "fps_MemKeyName", fps_MemKeyName);
-
-		try
-		{
-			
-			if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fps_MemKeyName.equals( "" ))
-			{
-				// Wenn fpsMemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
-				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeTablecellValue", "OKWNotAllowedValueException", fps_MemKeyName) );
-			}
-			else
-			{
-				CO.SetChildName(fpsFunctionalname);
-				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeTablecellValue", fpsCol, fpsRow);
 
 				String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
 
 				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
+		} finally {
+			Log.LogFunctionEndDebug();
 		}
-		finally
-		{
+	}
+
+	/// \~german
+	/// \copydoc IOKW_State::MemorizeTablecellValue(string,string,string,string)
+	/// \~english
+	/// \copydoc IOKW_State::MemorizeTablecellValue(string,string,string,string)
+	///
+	public void MemorizeTablecellValue(String fpsFunctionalname, String fpsCol, String fpsRow, String fps_MemKeyName)
+			throws Exception {
+		Log.LogFunctionStartDebug("MemorizeTablecellValue", "fpsFunctionalname", fpsFunctionalname, "fpsCol", fpsCol,
+				"fpsRow", fpsRow, "fps_MemKeyName", fps_MemKeyName);
+
+		try {
+
+			if (fps_MemKeyName.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fps_MemKeyName.equals("")) {
+				// Wenn fpsMemKeyName = IGNORE oder "" ist ->
+				// OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException(
+						LM.GetMessage("MemorizeTablecellValue", "OKWNotAllowedValueException", fps_MemKeyName));
+			} else {
+				CO.SetChildName(fpsFunctionalname);
+				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeTablecellValue", fpsCol,
+						fpsRow);
+
+				String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
+
+				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
+			}
+		} catch (Exception e) {
+			this.HandleException(e);
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -761,20 +627,18 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::MemorizeTooltip(string,string)
 	///
-	public void MemorizeTooltip( String fpsFunctionalname, String fps_MemKeyName ) throws Exception
-	{
+	public void MemorizeTooltip(String fpsFunctionalname, String fps_MemKeyName) throws Exception {
 		Log.LogFunctionStartDebug("MemorizeTooltip", "fpsFunctionalname", fpsFunctionalname, "fps_MemKeyName",
 				fps_MemKeyName);
 
-		try
-		{
-			if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fps_MemKeyName.equals( "" ))
-			{
-				// Wenn fpsMemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
-				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeTooltip", "OKWNotAllowedValueException", fps_MemKeyName) );
-			}
-			else
-			{
+		try {
+			if (fps_MemKeyName.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fps_MemKeyName.equals("")) {
+				// Wenn fpsMemKeyName = IGNORE oder "" ist ->
+				// OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException(
+						LM.GetMessage("MemorizeTooltip", "OKWNotAllowedValueException", fps_MemKeyName));
+			} else {
 				CO.SetChildName(fpsFunctionalname);
 				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeTooltip");
 
@@ -782,13 +646,9 @@ public class OK implements IOKW_State
 
 				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -798,20 +658,19 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::MemorizeLabel(string,string)
 	///
-	public void MemorizeValue( String fpsFunctionalname, String fpsMemKeyName ) throws Exception
-	{
-		Log.LogFunctionStartDebug("MemorizeValue", "fpsFunctionalname", fpsFunctionalname, "fpsMemKeyName", fpsMemKeyName);
+	public void MemorizeValue(String fpsFunctionalname, String fpsMemKeyName) throws Exception {
+		Log.LogFunctionStartDebug("MemorizeValue", "fpsFunctionalname", fpsFunctionalname, "fpsMemKeyName",
+				fpsMemKeyName);
 
-		try
-		{
-			
-			if ( fpsMemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsMemKeyName.equals( "" ))
-			{
-				// Wenn fpsMemKeyName = IGNORE oder "" ist -> OKWNotAllowedValueException auslösen...
-				throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage("MemorizeValue", "OKWNotAllowedValueException", fpsMemKeyName) );
-			}
-			else
-			{
+		try {
+
+			if (fpsMemKeyName.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsMemKeyName.equals("")) {
+				// Wenn fpsMemKeyName = IGNORE oder "" ist ->
+				// OKWNotAllowedValueException auslösen...
+				throw new okw.exceptions.OKWNotAllowedValueException(
+						LM.GetMessage("MemorizeValue", "OKWNotAllowedValueException", fpsMemKeyName));
+			} else {
 
 				CO.SetChildName(fpsFunctionalname);
 				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeValue");
@@ -820,13 +679,9 @@ public class OK implements IOKW_State
 
 				OKW_Memorize_Sngltn.getInstance().Set(fpsMemKeyName, lvsToMemorize);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -836,20 +691,16 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::Select(string,string)
 	///
-	public void Select( String fpsFunctionalname, String fpsValue ) throws Exception
-	{
+	public void Select(String fpsFunctionalname, String fpsValue) throws Exception {
 		Log.LogFunctionStartDebug("Select", "fpsFunctionalname", fpsFunctionalname, "fpsValue", fpsValue);
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
-			{
+			if (fpsValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> Abbrechen...
 				// \todo TODO: Meldung sprachabhägig auslagern!
 				Log.LogPrintDebug("Ignore...");
-			}
-			else
-			{
+			} else {
 				// Sonst Methode des Objektes aufrufen....
 				ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(fpsValue);
 
@@ -858,13 +709,9 @@ public class OK implements IOKW_State
 				CO.SetChildName(fpsFunctionalname);
 				CO.CallMethod("Select", lvlsValue);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 
@@ -876,21 +723,17 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::Select(string,string,string)
 	///
-	public void Select( String fpsFunctionalname, String fpsValue, String fpsClickType ) throws Exception
-	{
-		Log.LogFunctionStartDebug("Select", "fpsFunctionalname", fpsFunctionalname, "fpsValue", fpsValue, "fpsClickType",
-				fpsClickType);
-		try
-		{
+	public void Select(String fpsFunctionalname, String fpsValue, String fpsClickType) throws Exception {
+		Log.LogFunctionStartDebug("Select", "fpsFunctionalname", fpsFunctionalname, "fpsValue", fpsValue,
+				"fpsClickType", fpsClickType);
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
-			{
+			if (fpsValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> Abbrechen...
 				// \todo TODO: Meldung sprachabhägig auslagern!
 				Log.LogPrintDebug("Ignore...");
-			}
-			else
-			{
+			} else {
 				ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(fpsValue);
 
 				lvlsValue = Parser.ParseMe(lvlsValue);
@@ -900,13 +743,9 @@ public class OK implements IOKW_State
 				// TODO: Select - Sprachabhängigkeit von KlickType einbauen...
 				CO.CallMethod("Select_Clicktype", lvlsValue, fpsClickType);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -916,21 +755,15 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::SelectMenu(string)
 	///
-	public void SelectMenu( String fpsFunctionalname ) throws Exception
-	{
+	public void SelectMenu(String fpsFunctionalname) throws Exception {
 		Log.LogFunctionStartDebug("SelectMenu", "fpsFunctionalname", fpsFunctionalname);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			CO.CallMethod("SelectMenu");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -940,32 +773,24 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::SelectMenu(string,string)
 	///
-	public void SelectMenu( String fpsFunctionalname, String fpsValue ) throws Exception
-	{
+	public void SelectMenu(String fpsFunctionalname, String fpsValue) throws Exception {
 		Log.LogFunctionStartDebug("SelectMenu", "fpsFunctionalname", fpsFunctionalname, "fpsValue", fpsValue);
 
-		try
-		{
-			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
-			{
+		try {
+			if (fpsValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> Abbrechen...
 				// \todo TODO: Meldung sprachabhägig auslagern!
 				Log.LogPrintDebug("Ignore...");
-			}
-			else
-			{
+			} else {
 				ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(fpsValue);
 
 				CO.SetChildName(fpsFunctionalname);
 				CO.CallMethod("SelectMenu_Value", lvlsValue);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -975,25 +800,19 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::SelectTablecell(string,string,string)
 	///
-	public void SelectTablecell( String fpsFunctionalname, String fpsCol, String fpsRow ) throws Exception
-	{
+	public void SelectTablecell(String fpsFunctionalname, String fpsCol, String fpsRow) throws Exception {
 		Log.LogFunctionStartDebug("SelectTablecell", "fpsFunctionalname", fpsFunctionalname, "fpsCol", fpsCol, "fpsRow",
 				fpsRow);
 
 		//// ArrayList<String> lvls_Cell =
 		//// LogMessenger.Instance.SplitSEP(fpsCell);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			CO.CallMethod("SelectTablecell", fpsCol, fpsRow);
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1003,23 +822,17 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::SelectTablecell(string,string,string,string)
 	///
-	public void SelectTablecell( String fpsFunctionalname, String fpsCol, String fpsRow, String fpsClickType )
-			throws Exception
-	{
+	public void SelectTablecell(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsClickType)
+			throws Exception {
 		Log.LogFunctionStartDebug("SelectTablecell", "fpsFunctionalname", fpsFunctionalname, "fpsCol", fpsCol, "fpsRow",
 				fpsRow, "fpsClickType", fpsClickType);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			CO.CallMethod("SelectTablecell_Clicktype", fpsCol, fpsRow, fpsClickType);
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1029,21 +842,15 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::SelectWindow(string)
 	///
-	public void SelectWindow( String fpsFunctionalname ) throws Exception
-	{
+	public void SelectWindow(String fpsFunctionalname) throws Exception {
 		Log.LogFunctionStartDebug("SelectWindow", "fpsFunctionalname", fpsFunctionalname);
 
-		try
-		{
+		try {
 			CO.SetWindowName(fpsFunctionalname);
 			CO.CallMethod("SelectWindow");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 
@@ -1055,32 +862,23 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::Sequence(string,string,string)
 	///
-	public void Sequence( String fpsObjectName, String fpsSequenceName, String SEQ_ID ) throws Exception
-	{
-		Log.LogFunctionStartDebug("Sequence", "fpsObjectName", fpsObjectName, "fpsSequenceName", fpsSequenceName, "SEQ_ID",
-				SEQ_ID);
+	public void Sequence(String fpsObjectName, String fpsSequenceName, String SEQ_ID) throws Exception {
+		Log.LogFunctionStartDebug("Sequence", "fpsObjectName", fpsObjectName, "fpsSequenceName", fpsSequenceName,
+				"SEQ_ID", SEQ_ID);
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( SEQ_ID.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || SEQ_ID.equals( "" ))
-			{
+			if (SEQ_ID.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || SEQ_ID.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> Abbrechen...
 				// \todo TODO: Meldung sprachabhägig auslagern!
 				Log.LogPrintDebug("Ignore...");
-			}
-			else
-			{
+			} else {
 				CO.SetWindowName(fpsObjectName);
 				CO.CallMethod(fpsSequenceName, SEQ_ID);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1090,21 +888,15 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::SetFocus(string)
 	///
-	public void SetFocus( String fpsFunctionalname ) throws Exception
-	{
+	public void SetFocus(String fpsFunctionalname) throws Exception {
 		Log.LogFunctionStartDebug("SetFocus", "fpsFunctionalname", fpsFunctionalname);
 
-		try
-		{
+		try {
 			CO.SetChildName(fpsFunctionalname);
 			CO.CallMethod("SetFocus");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1114,8 +906,7 @@ public class OK implements IOKW_State
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 02.03.2013
-	public void SetLanguage( String Language )
-	{
+	public void SetLanguage(String Language) {
 		CL.setLanguage(Language);
 	}
 
@@ -1124,22 +915,18 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::SetValue(string,string)
 	///
-	public void SetValue( String fpsFunctionalname, String fpsValue ) throws Exception
-	{
+	public void SetValue(String fpsFunctionalname, String fpsValue) throws Exception {
 		Log.LogFunctionStartDebug("SetValue", "fpsFunctionalname", fpsFunctionalname);
 
 		ArrayList<String> lvlsValue;
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
-			{
+			if (fpsValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("SetValue", "Ignore"));
-			}
-			else
-			{
+			} else {
 				lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(fpsValue);
 
 				lvlsValue = Parser.ParseMe(lvlsValue);
@@ -1147,13 +934,9 @@ public class OK implements IOKW_State
 				CO.SetChildName(fpsFunctionalname);
 				CO.CallMethod("SetValue", lvlsValue);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1163,21 +946,15 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::StartApp(string)
 	///
-	public void StartApp( String fpsApplicationName ) throws Exception
-	{
+	public void StartApp(String fpsApplicationName) throws Exception {
 		Log.LogFunctionStartDebug("StartApp", "fpsApplicationName", fpsApplicationName);
 
-		try
-		{
+		try {
 			CO.SetWindowName(fpsApplicationName);
 			CO.CallMethod("StartApp");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1187,21 +964,15 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::StopApp(string)
 	///
-	public void StopApp( String fpsApplicationName ) throws Exception
-	{
+	public void StopApp(String fpsApplicationName) throws Exception {
 		Log.LogFunctionStartDebug("StopApp", "fps_ApplikationName", fpsApplicationName);
 
-		try
-		{
+		try {
 			CO.SetWindowName(fpsApplicationName);
 			CO.CallMethod("StopApp");
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1211,22 +982,18 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::TypeKey(string,string)
 	///
-	public void TypeKey( String fpsFunctionalname, String fpsValue ) throws Exception
-	{
+	public void TypeKey(String fpsFunctionalname, String fpsValue) throws Exception {
 		Log.LogFunctionStartDebug("TypeKey", "fpsFunctionalname", fpsFunctionalname, "fpsValue", fpsValue);
 
 		ArrayList<String> lvlsValue;
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
-			{
+			if (fpsValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("TypeKey", "Ignore"));
-			}
-			else
-			{
+			} else {
 				lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(fpsValue);
 
 				lvlsValue = Parser.ParseMe(lvlsValue);
@@ -1234,13 +1001,9 @@ public class OK implements IOKW_State
 				CO.SetChildName(fpsFunctionalname);
 				CO.CallMethod("TypeKey", lvlsValue);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1250,24 +1013,20 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::TypeKeyTablecell(string,string,string,string)
 	///
-	public void TypeKeyTablecell( String fpsFunctionalname, String fpsCol, String fpsRow, String fpsValue )
-			throws Exception
-	{
-		Log.LogFunctionStartDebug("TypeKeyTablecell", "fpsFunctionalname", fpsFunctionalname, "fpsColl", fpsCol, "fpsRow",
-				fpsRow, "fpsValue", fpsValue);
+	public void TypeKeyTablecell(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsValue)
+			throws Exception {
+		Log.LogFunctionStartDebug("TypeKeyTablecell", "fpsFunctionalname", fpsFunctionalname, "fpsColl", fpsCol,
+				"fpsRow", fpsRow, "fpsValue", fpsValue);
 
 		ArrayList<String> lvlsValue;
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
-			{
+			if (fpsValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("TypeKeyTablecell", "Ignore"));
-			}
-			else
-			{
+			} else {
 				// Werte in fpsValue separieren
 				lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(fpsValue);
 
@@ -1276,13 +1035,9 @@ public class OK implements IOKW_State
 				CO.SetChildName(fpsFunctionalname);
 				CO.CallMethod("TypeKeyTablecell", fpsCol, fpsRow, lvlsValue);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1292,60 +1047,50 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::TypeKeyWindow(string,string)
 	///
-	public void TypeKeyWindow( String fpsFunctionalname, String fpsValue ) throws Exception
-	{
+	public void TypeKeyWindow(String fpsFunctionalname, String fpsValue) throws Exception {
 		Log.LogFunctionStartDebug("TypeKeyWindow", "fpsFunctionalname", fpsFunctionalname, "fpsValue", fpsValue);
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsValue.equals( "" ))
-			{
+			if (fpsValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("TypeKeyWindow", "Ignore"));
-			}
-			else
-			{
+			} else {
 				ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(fpsValue);
 				lvlsValue = Parser.ParseMe(lvlsValue);
 
 				CO.SetWindowName(fpsFunctionalname);
 				CO.CallMethod("TypeKey", lvlsValue);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::VerifyCaption(string,string)
-	/// \~english
-	/// \copydoc IOKW_State::VerifyCaption(string,string)
-	///
-	public void VerifyCaption( String fpsFunctionalname, String fpsExpectedValue ) throws Exception
-	{
+	/**
+	 *  \~german
+	 *  \copydoc IOKW_State::VerifyCaption(string,string)
+	 *  \~english
+	 *  \copydoc IOKW_State::VerifyCaption(string,string)
+	 */ 
+	public void VerifyCaption(String fpsFunctionalname, String fpsExpectedValue) throws Exception {
 		Log.LogFunctionStartDebug("VerifyCaption", "fpsFunctionalname", fpsFunctionalname, "fpsExpectedValue",
 				fpsExpectedValue);
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")
-					|| fpsExpectedValue == "")
-			{
+			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsExpectedValue.equals("")){
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyCaption", "Ignore"));
-			}
-			else
-			{
+			} else {
 				// Split giveneExpected Value
 				ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(fpsExpectedValue);
+
+				lvlsExpected = Parser.ParseMe(lvlsExpected);
 
 				// Get the actuel value from object
 				CO.SetChildName(fpsFunctionalname);
@@ -1361,18 +1106,13 @@ public class OK implements IOKW_State
 
 				Log.LogPrintDebug(LM.GetMessage("VerifyCaption", "VerifyValues"));
 
-				for (int i = 0; i < Actual.size(); i++)
-				{
+				for (int i = 0; i < Actual.size(); i++) {
 					Log.LogVerify(Actual.get(i), lvlsExpected.get(i));
 				}
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1382,54 +1122,52 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::VerifyExists(string,string)
 	///
-	public void VerifyExists( String fpsFunctionalname, String fpsExpectedValue ) throws Exception
-	{
+	public void VerifyExists(String fpsFunctionalname, String fpsExpectedValue) throws Exception {
 		Log.LogFunctionStartDebug("VerifyExists", "fpsFunctionalname", fpsFunctionalname, "fpsExpectedValue",
 				fpsExpectedValue);
 
-		try
-		{
+		try {
 			// Hier sind nur drei werte erlaubt: YES/NO/IGNORE
 
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
-			{
+			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyExists", "Ignore"));
+			} else {
+				
+				String lvlsExpected = Parser.ParseMe(fpsExpectedValue);
+				
+				// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
+				if (lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
+						|| lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
+
+					// Sprachabhängiges YES/NO nach Boolean transformieren
+					Boolean lvsbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(lvlsExpected);
+
+					CO.SetChildName(fpsFunctionalname);
+					Boolean lvbActual = CO.CallMethodReturn_BooleanPb("VerifyExists", lvsbExpectedValue);
+
+					String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
+
+					// Soll/Ist Vergleich...
+					Log.LogPrintDebug(LM.GetMessage("VerifyExists", "VerifyValue"));
+
+					// LANGUAGE: Prüfen: Sprachabhängigen string-vergleich
+					// durchführen...
+					Log.LogVerify(lvsActual, fpsExpectedValue);
+				}
+				// Beide Bedingungen sind nicht erfüllt -> Exception da
+				// keinanderer
+				// Wert hier erlaubt ist.
+				else {
+					String ExceptionLog = LM.GetMessage("VerifyExists", "OKWNotAllowedValueException",
+							fpsExpectedValue);
+					throw new OKWNotAllowedValueException(ExceptionLog);
+				}
 			}
-			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-			else if (fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES") )
-					|| fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO") ))
-			{
-				// Sprachabhängiges YES/NO nach Boolean transformieren
-				Boolean lvsbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(fpsExpectedValue);
-
-				CO.SetChildName(fpsFunctionalname);
-				Boolean lvbActual = CO.CallMethodReturn_BooleanPb("VerifyExists", lvsbExpectedValue);
-
-				String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
-
-				// Soll/Ist Vergleich...
-				Log.LogPrintDebug(LM.GetMessage("VerifyExists", "VerifyValue"));
-
-				// LANGUAGE: Prüfen: Sprachabhängigen string-vergleich
-				// durchführen...
-				Log.LogVerify(lvsActual, fpsExpectedValue);
-			}
-			// Beide Bedingungen sind nicht erfüllt -> Exception da keinanderer
-			// Wert hier erlaubt ist.
-			else
-			{
-				String ExceptionLog = LM.GetMessage("VerifyExists", "OKWNotAllowedValueException", fpsExpectedValue);
-				throw new OKWNotAllowedValueException(ExceptionLog);
-			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1439,23 +1177,20 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::VerifyHasFocus(string,string)
 	///
-	public void VerifyHasFocus( String fpsFunctionalname, String fpsExpectedValue ) throws Exception
-	{
+	public void VerifyHasFocus(String fpsFunctionalname, String fpsExpectedValue) throws Exception {
 		Log.LogFunctionStartDebug("VerifyHasFocus", "fpsFunctionalname", fpsFunctionalname, "fpsExpectedValue",
 				fpsExpectedValue);
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
-			{
+			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyHasFocus", "Ignore"));
 			}
 			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-			else if (fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
-					|| fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO")) )
-			{
+			else if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
+					|| fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
 				// Sprachabhängiges YES/NO nach Boolean transformieren
 				Boolean lvsbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(fpsExpectedValue);
 
@@ -1473,18 +1208,13 @@ public class OK implements IOKW_State
 			}
 			// Beide Bedingungen sind nicht erfüllt -> Exception da keinanderer
 			// Wert hier erlaubt ist.
-			else
-			{
+			else {
 				String ExceptionLog = LM.GetMessage("VerifyExists", "OKWNotAllowedValueException", fpsExpectedValue);
 				throw new OKWNotAllowedValueException(ExceptionLog);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1494,21 +1224,19 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::VerifyIsActive(string,string)
 	///
-	public void VerifyIsActive( String fpsFunctionalname, String fpsExpectedValue ) throws Exception
-	{
+	public void VerifyIsActive(String fpsFunctionalname, String fpsExpectedValue) throws Exception {
 		Log.LogFunctionStartDebug("VerifyIsActive", "fpsFunctionalname", fpsFunctionalname, "fpsExpectedValue",
 				fpsExpectedValue);
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
-			{
+			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyIsActive", "Ignore"));
 			}
 			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-			else if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES") ) || fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO")) )
-			{
+			else if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
+					|| fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
 				CO.SetChildName(fpsFunctionalname);
 
 				// Erwarteten Wert(YES/NO, Sprachabhänging) nach Boolean
@@ -1527,18 +1255,13 @@ public class OK implements IOKW_State
 			}
 			// Beide Bedingungen sind nicht erfüllt -> Exception da kein anderer
 			// Wert hier erlaubt ist.
-			else
-			{
+			else {
 				String ExceptionLog = LM.GetMessage("VerifyExists", "OKWNotAllowedValueException", fpsExpectedValue);
 				throw new OKWNotAllowedValueException(ExceptionLog);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1548,20 +1271,17 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::VerifyLabel(string,string)
 	///
-	public void VerifyLabel( String fpsFunctionalname, String fpsExpectedValue ) throws Exception
-	{
-		Log.LogFunctionStartDebug("VerifyLabel", "fpsFunctionalname", fpsFunctionalname, "fpsExpected", fpsExpectedValue);
+	public void VerifyLabel(String fpsFunctionalname, String fpsExpectedValue) throws Exception {
+		Log.LogFunctionStartDebug("VerifyLabel", "fpsFunctionalname", fpsFunctionalname, "fpsExpected",
+				fpsExpectedValue);
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
-			{
+			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyLabel", "Ignore"));
-			}
-			else
-			{
+			} else {
 				// Split giveneExpected Value
 				ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(fpsExpectedValue);
 
@@ -1579,18 +1299,13 @@ public class OK implements IOKW_State
 
 				Log.LogPrintDebug(LM.GetMessage("VerifyLabel", "VerifyValues"));
 
-				for (int i = 0; i < Actual.size(); i++)
-				{
+				for (int i = 0; i < Actual.size(); i++) {
 					Log.LogVerify(Actual.get(i), lvlsExpected.get(i));
 				}
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1600,21 +1315,17 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::VerifySelectedValue(string,string)
 	///
-	public void VerifySelectedValue( String fpsFunctionalname, String fpsExpectedValue ) throws Exception
-	{
+	public void VerifySelectedValue(String fpsFunctionalname, String fpsExpectedValue) throws Exception {
 		Log.LogFunctionStartDebug("VerifySelectedValue", "fpsFunctionalname", fpsFunctionalname, "fpsExpected",
 				fpsExpectedValue);
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
-			{
+			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifySelectedValue", "Ignore"));
-			}
-			else
-			{
+			} else {
 				// Split giveneExpected Value
 				ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(fpsExpectedValue);
 
@@ -1632,18 +1343,13 @@ public class OK implements IOKW_State
 
 				Log.LogPrintDebug(LM.GetMessage("VerifySelectedValue", "VerifyValues"));
 
-				for (int i = 0; i < Actual.size(); i++)
-				{
+				for (int i = 0; i < Actual.size(); i++) {
 					Log.LogVerify(Actual.get(i), lvlsExpected.get(i));
 				}
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1653,22 +1359,18 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::VerifyTablecellValue(string,string,string,string)
 	///
-	public void VerifyTablecellValue( String fpsFunctionalname, String fpsCol, String fpsRow, String fpsExpectedValue )
-			throws Exception
-	{
-		Log.LogFunctionStartDebug("VerifyTablecellValue", "fpsFunctionalname", fpsFunctionalname, "fpsCol", fpsCol, "fpsRow",
-				fpsRow, "fpsExpected", fpsExpectedValue);
+	public void VerifyTablecellValue(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsExpectedValue)
+			throws Exception {
+		Log.LogFunctionStartDebug("VerifyTablecellValue", "fpsFunctionalname", fpsFunctionalname, "fpsCol", fpsCol,
+				"fpsRow", fpsRow, "fpsExpected", fpsExpectedValue);
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
-			{
+			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyTablecellValue", "Ignore"));
-			}
-			else
-			{
+			} else {
 				// Split giveneExpected Value
 				ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(fpsExpectedValue);
 
@@ -1686,18 +1388,13 @@ public class OK implements IOKW_State
 
 				Log.LogPrintDebug(LM.GetMessage("VerifyTablecellValue", "VerifyValues"));
 
-				for (int i = 0; i < Actual.size(); i++)
-				{
+				for (int i = 0; i < Actual.size(); i++) {
 					Log.LogVerify(Actual.get(i), lvlsExpected.get(i));
 				}
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1707,20 +1404,17 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::VerifyTooltip(string,string)
 	///
-	public void VerifyTooltip( String fpsFunctionalname, String fpsExpectedValue ) throws Exception
-	{
-		Log.LogFunctionStartDebug("VerifyTooltip", "fpsFunctionalname", fpsFunctionalname, "fpsExpected", fpsExpectedValue);
+	public void VerifyTooltip(String fpsFunctionalname, String fpsExpectedValue) throws Exception {
+		Log.LogFunctionStartDebug("VerifyTooltip", "fpsFunctionalname", fpsFunctionalname, "fpsExpected",
+				fpsExpectedValue);
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
-			{
+			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyTooltip", "Ignore"));
-			}
-			else
-			{
+			} else {
 				// Split giveneExpected Value
 				ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(fpsExpectedValue);
 
@@ -1738,18 +1432,13 @@ public class OK implements IOKW_State
 
 				Log.LogPrintDebug(LM.GetMessage("VerifyTooltip", "VerifyValues"));
 
-				for (int i = 0; i < Actual.size(); i++)
-				{
+				for (int i = 0; i < Actual.size(); i++) {
 					Log.LogVerify(Actual.get(i), lvlsExpected.get(i));
 				}
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1759,30 +1448,26 @@ public class OK implements IOKW_State
 	/// \~english
 	/// \copydoc IOKW_State::VerifyValue(string,string)
 	///
-	public void VerifyValue( String fpsFunctionalname, String fpsExpectedValue ) throws Exception
-	{
-		Log.LogFunctionStartDebug("VerifyValue", "fpsFunctionalname", fpsFunctionalname, "fpsExpected", fpsExpectedValue);
+	public void VerifyValue(String fpsFunctionalname, String fpsExpectedValue) throws Exception {
+		Log.LogFunctionStartDebug("VerifyValue", "fpsFunctionalname", fpsFunctionalname, "fpsExpected",
+				fpsExpectedValue);
 
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
-			{
+			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyValue", "Ignore"));
-			}
-			else
-			{
-			  if (fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY") ) )
-			  {
-			    fpsExpectedValue = "";
-			  }
-			  
+			} else {
+				if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY"))) {
+					fpsExpectedValue = "";
+				}
+
 				// Split giveneExpected Value
 				ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(fpsExpectedValue);
 
 				lvlsExpected = Parser.ParseMe(lvlsExpected);
-				
+
 				CO.SetChildName(fpsFunctionalname);
 				ArrayList<String> Actual = CO.CallMethodReturn_ListString("VerifyValue", lvlsExpected);
 
@@ -1796,18 +1481,13 @@ public class OK implements IOKW_State
 
 				Log.LogPrintDebug(LM.GetMessage("VerifyValue", "VerifyValues"));
 
-				for (int i = 0; i < Actual.size(); i++)
-				{
+				for (int i = 0; i < Actual.size(); i++) {
 					Log.LogVerify(Actual.get(i), lvlsExpected.get(i));
 				}
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1829,8 +1509,7 @@ public class OK implements IOKW_State
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 02.03.2013
-	private void HandleException( Exception e ) throws Exception
-	{
+	private void HandleException(Exception e) throws Exception {
 		Log.LogPrint("==========================================================================");
 		Log.LogException(e.getMessage());
 		Log.LogPrintDebug("--------");
@@ -1851,29 +1530,25 @@ public class OK implements IOKW_State
 		// Change State to NOK
 		this._Kernel.SetCurrentState(new NOK(this._Kernel));
 
-		if (this.UNITTEST)
-		{
+		if (this.UNITTEST) {
 			throw e;
 		}
 	}
 
 	/// \copydoc IOKW_State::FileDelete(string)
-	public void FileDelete( String fpsPathAndFileName ) throws Exception
-	{
+	public void FileDelete(String fpsPathAndFileName) throws Exception {
 		String lvsPathAndFileName = "";
 
 		Log.LogFunctionStartDebug("FileDelete", "fpsPathAndFileName", fpsPathAndFileName);
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsPathAndFileName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsPathAndFileName.equals( "" ))
-			{
+			if (fpsPathAndFileName.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsPathAndFileName.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("FileDelete", "Ignore"));
 			}
 			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-			else
-			{
+			else {
 				// 1. Parsen der Pfad-Eingabe
 				lvsPathAndFileName = Parser.ParseMe(fpsPathAndFileName);
 				// 2. Konvertieren des Pfad separators.
@@ -1885,36 +1560,29 @@ public class OK implements IOKW_State
 				// Basis-Funktion aufrufen...
 				OKW_FileHelper.FilesDelete(lvsPathAndFileName);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
 
 	/// \copydoc IOKW_State::VerifyFileExists(string,string)
-	public void VerifyFileExists( String fpsPathAndFileName, String fpsExpectedValue ) throws Exception
-	{
+	public void VerifyFileExists(String fpsPathAndFileName, String fpsExpectedValue) throws Exception {
 		String lvsPathAndFileName = "";
 
 		Log.LogFunctionStartDebug("VerifyFileExist", "fpsPathAndFileName", fpsPathAndFileName, "fpsExpectedValue",
 				fpsExpectedValue);
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
-			{
+			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyFileExists", "Ignore"));
 			}
 			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
 			else if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES")
-					|| fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))
-			{
+					|| fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO")) {
 				// Aktuellen Wert holen...
 
 				// 1. Parsen der Pfad-Eingabe
@@ -1937,41 +1605,33 @@ public class OK implements IOKW_State
 			}
 			// Beide Bedingungen sind nicht erfüllt -> Exception da kein anderer
 			// Wert hier erlaubt ist.
-			else
-			{
+			else {
 				String ExceptionLog = LM.GetMessage("VerifyFileExists", "OKWNotAllowedValueException",
 						fpsExpectedValue);
 				throw new OKWNotAllowedValueException(ExceptionLog);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
 
 	/// \copydoc IOKW_State::VerifyDirectoryExists(string,string)
-	public void VerifyDirectoryExists( String fpsPath, String fpsExpectedValue ) throws Exception
-	{
+	public void VerifyDirectoryExists(String fpsPath, String fpsExpectedValue) throws Exception {
 		String lvsPath = "";
 
 		Log.LogFunctionStartDebug("VerifyDirectoryExists", "fpsPath", fpsPath, "fpsExpectedValue", fpsExpectedValue);
-		try
-		{
+		try {
 			// Prüfen ob ignoriert werden muss...
-			if ( fpsExpectedValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals( "" ))
-			{
+			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyDirectoryExists", "Ignore"));
 			}
 			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
 			else if (fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES")
-					|| fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))
-			{
+					|| fpsExpectedValue == OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO")) {
 				// Aktuellen Wert holen...
 
 				// 1. Parsen der Pfad-Eingabe
@@ -1994,26 +1654,20 @@ public class OK implements IOKW_State
 			}
 			// Beide Bedingungen sind nicht erfüllt -> Exception da kein anderer
 			// Wert hier erlaubt ist.
-			else
-			{
+			else {
 				String ExceptionLog = LM.GetMessage("VerifyDirectoryExists", "OKWNotAllowedValueException",
 						fpsExpectedValue);
 				throw new OKWNotAllowedValueException(ExceptionLog);
 			}
-		}
-		catch (Exception e)
-		{
+		} catch (Exception e) {
 			this.HandleException(e);
-		}
-		finally
-		{
+		} finally {
 			Log.LogFunctionEndDebug();
 		}
 	}
 
 	@Override
-	public void CopyFile( String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName ) throws Exception
-	{
+	public void CopyFile(String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName) throws Exception {
 		// TODO Auto-generated method stub
 
 	}

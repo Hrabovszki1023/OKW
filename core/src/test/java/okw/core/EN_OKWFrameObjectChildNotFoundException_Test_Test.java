@@ -45,7 +45,7 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
     Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 
     // Reset/init the Logger
-    myLogger.Init();
+    Logger_Sngltn.Init();
     // myLogger.AddLogger(new Log2Console());
 
     myLogger.setDebugMode( false );
@@ -127,17 +127,39 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
     EN.TypeKey( "IsNotDefindeInRechner", "Value" );
   }
 
-  // / \~german
-  // / \brief
-  // / Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
-  // LFC-TypeKey ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2016.05.07
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyValue ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
   @Test( expected = OKWFrameObjectChildNotFoundException.class )
-  public void TC_VeryfyValue_OKWFrameObjectMethodNotFoundException() throws Exception {
+  public void TC_VerifyExists_OKWFrameObjectMethodNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyExists( "IsNotDefindeInRechner", "YES" );
+  }
+  
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyValue ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyValue_OKWFrameObjectMethodNotFoundException() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );

@@ -1313,16 +1313,90 @@ public class EN_Keywords_IGNORE_Test
 
             EN.TypeKey("All_MethodsObj", "");
         }
+        /**
+         *  \~german
+         *  \brief
+         *  
+         *  
+         *  \~english
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2013.12.26
+         */
+        @Test
+        public void TC_VerifyCaption_IGNORE() throws Exception
+        {
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
+            EN.SelectWindow("Rechner");
+            
+            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+            assertEquals(1, myClipBoard.getValue().size());
+            assertEquals("Rechner", myClipBoard.getObjectName());
+            assertEquals("SelectWindow()", myClipBoard.getMethod());
+           
+            myClipBoard.Clear();
+
+            EN.VerifyCaption("All_MethodsObj", "${IGNORE}");
+
+            // Check the Name, Called Method and Value of Actual object
+            assertEquals("", myClipBoard.getObjectName());
+            assertEquals("", myClipBoard.getMethod());
+
+            assertEquals(0, myClipBoard.getValue().size());
+        }
 
 
-        /// \~german
-        /// \brief
-        /// 
-        /// 
-        /// \~english
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.12.26
+        /**
+         *  \~german
+         *  \brief
+         *  
+         *  
+         *  \~english
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2013.12.26
+         */
+        @Test
+        public void TC_VerifyCaption_IGNORE_EmptyString() throws Exception
+        {
+    		EN.BeginTest( name.getMethodName() );
+
+    		// Testscript in Schlüsselwort-Notation
+            EN.SelectWindow("Rechner");
+            
+            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+            assertEquals(1, myClipBoard.getValue().size());
+            assertEquals("Rechner", myClipBoard.getObjectName());
+            assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+            myClipBoard.Clear();
+
+            EN.VerifyCaption("All_MethodsObj", "");
+
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("", myClipBoard.getObjectName());
+            assertEquals("", myClipBoard.getMethod());
+
+            assertEquals(0, myClipBoard.getValue().size());
+        }
+
+        
+        /**
+         *  \~german
+         *  \brief Prüft ob das Schlüsselwort beim Sollwert "${IGNORE}" die Ausführung ignoriert
+         *  
+         *  
+         *  \~english
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2013.12.26
+         */
         @Test
         public void TC_VerifyExists_IGNORE() throws Exception
         {
@@ -1337,19 +1411,29 @@ public class EN_Keywords_IGNORE_Test
             assertEquals("Rechner", myClipBoard.getObjectName());
             assertEquals("SelectWindow()", myClipBoard.getMethod());
 
+            myClipBoard.Clear();
+
             EN.VerifyExists("All_MethodsObj", "${IGNORE}");
+            
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("", myClipBoard.getObjectName());
+            assertEquals("", myClipBoard.getMethod());
+
+            assertEquals(0, myClipBoard.getValue().size());
         }
 
         
-        /// \~german
-        /// \brief
-        /// 
-        /// 
-        /// \~english
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.12.26
-        @Test
+        /**
+         *  \~german
+         *  \brief Prüft ob das Schlüsselwort beim Sollwert "" die Ausführung ignoriert
+         *  
+         *  
+         *  \~english
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2013.12.26
+         */
+         @Test
         public void TC_VerifyExists_IGNORE_EmptyString() throws Exception
         {
     		EN.BeginTest( name.getMethodName() );
@@ -1363,7 +1447,15 @@ public class EN_Keywords_IGNORE_Test
             assertEquals("Rechner", myClipBoard.getObjectName());
             assertEquals("SelectWindow()", myClipBoard.getMethod());
 
+            myClipBoard.Clear();
+
             EN.VerifyExists("All_MethodsObj", "");
+            
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("", myClipBoard.getObjectName());
+            assertEquals("", myClipBoard.getMethod());
+
+            assertEquals(0, myClipBoard.getValue().size());
         }
         
         
@@ -1627,14 +1719,17 @@ public class EN_Keywords_IGNORE_Test
             EN.VerifyTooltip("All_MethodsObj", "");
         }
 
-        /// \~german
-        /// \brief
-        /// 
-        /// 
-        /// \~english
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.12.26
+        
+        /**
+         *  \~german
+         *  \brief
+         *  
+         *  
+         *  \~english
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2013.12.26
+         */
         @Test
         public void TC_VerifyValue_IGNORE() throws Exception
         {
@@ -1660,15 +1755,18 @@ public class EN_Keywords_IGNORE_Test
 
             assertEquals(0, myClipBoard.getValue().size());
         }
-        
-        /// \~german
-        /// \brief
-        /// 
-        /// 
-        /// \~english
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.12.26
+
+
+        /**
+         *  \~german
+         *  \brief
+         *  
+         *  
+         *  \~english
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2013.12.26
+         */
         @Test
         public void TC_VerifyValue_IGNORE_EmptyString() throws Exception
         {

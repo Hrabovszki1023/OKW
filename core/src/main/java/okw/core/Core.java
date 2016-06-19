@@ -437,7 +437,9 @@ import okw.*;
 			this.CurrentState.VerifyTooltip(fpsFunctionalname, fpsExpectedValue);
 		}
 
-		/// \copydoc IOKW_State::VerifyCaption(String,String)
+		/**
+		 *  \copydoc IOKW_State::VerifyCaption(String,String)
+		 */  
 		public void VerifyCaption(String fpsFunctionalname, String fpsExpectedValue) throws Exception
 		{
 			this.CurrentState.VerifyCaption(fpsFunctionalname, fpsExpectedValue);

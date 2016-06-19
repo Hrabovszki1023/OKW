@@ -211,14 +211,131 @@ public class EN_Keywords_ANTLR_Test
 		assertEquals( "TypeKey(List<String> fpLs_Value)", myClipBoard.getMethod() );
 	}
 
+	   /**
+	   * \~german
+	   * \brief
+	   *
+	   * \~english
+	   * \~
+	   * \author Zoltan Hrabovszki
+	   * \date 2013.12.26
+	   */
+	  @Test
+	  public void tc_VerifyExists_MemorizedValue() throws Exception {
+	    EN.BeginTest( name.getMethodName() );
+	  
+	    // Testscript in Schlüsselwort-Notation
+	    EN.SelectWindow( "Rechner" );
+	  
+	    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+	    // Check the Name, Called Method and Value of Actuel object
+	    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+	    assertEquals( 1, myClipBoard.getValue().size() );
+	    assertEquals( "Rechner", myClipBoard.getObjectName() );
+	    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+	  
+	    // Set Value in "Memory"
+	    okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "YES" );
+	    
+	    // Kommen auch mehrere Sollwerte im Objekt ab?
+	    EN.VerifyExists( "All_MethodsObj", "${Key1}" );
+	  
+	    // Check the Name, Called Method and Value of Actuel object
+	    assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
+	    assertEquals( 1, myClipBoard.getValue().size() );
+	  
+	    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+	    assertEquals( "VerifyExists()", myClipBoard.getMethod() );
+	  }
 
-  // / \~german
-  // / \brief
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+	  
+	  /**
+       *  \~german
+       *  \brief
+       * 
+       *  \~english
+       *  \~
+       *  \author Zoltan Hrabovszki
+       *  \date 2013.12.26
+       *  */
+  @Test
+  public void tc_VerifyCaption_EnviromentValue() throws Exception {
+
+    // Set Memorize Values
+    String myUser = System.getenv( "USER" );
+
+    
+    EN.BeginTest( name.getMethodName() );
+  
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+  
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+      
+    // Umgebungsvariable eingeben
+    EN.VerifyCaption( "All_MethodsObj", "${USER}" );
+  
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( myUser, myClipBoard.getValue().get( 0 ) );
+    assertEquals( 1, myClipBoard.getValue().size() );
+  
+    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+    assertEquals( "VerifyCaption()", myClipBoard.getMethod() );
+  }
+
+   /**
+   * \~german
+   * \brief
+   *
+   * \~english
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifyCaption_MemorizedValue() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+  
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+  
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+    
+    okw.OKW_Memorize_Sngltn.getInstance();
+	// Set Value in "Memory"
+    OKW_Memorize_Sngltn.Reset();
+    okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "Wert 1" );
+    
+    // Kommen auch mehrere Sollwerte im Objekt ab?
+    EN.VerifyCaption( "All_MethodsObj", "${Key1}" );
+  
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+    assertEquals( 1, myClipBoard.getValue().size() );
+  
+    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+    assertEquals( "VerifyCaption()", myClipBoard.getMethod() );
+  }	  
+	  
+	  /**
+       *  \~german
+       *  \brief
+       * 
+       *  \~english
+       *  \~
+       *  \author Zoltan Hrabovszki
+       *  \date 2013.12.26
+       *  */
   @Test
   public void tc_VerifyValue_EnviromentValue() throws Exception {
 
@@ -249,14 +366,15 @@ public class EN_Keywords_ANTLR_Test
     assertEquals( "VerifyValue()", myClipBoard.getMethod() );
   }
 
-
-  // / \~german
-  // / \brief
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+   /**
+   * \~german
+   * \brief
+   *
+   * \~english
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2013.12.26
+   */
   @Test
   public void tc_VerifyValue_MemorizedValue() throws Exception {
     EN.BeginTest( name.getMethodName() );

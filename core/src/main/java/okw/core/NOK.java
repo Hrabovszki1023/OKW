@@ -606,10 +606,12 @@ import okw.log.*;
 			Log.LogFunctionEndDebug();
 		}
 
-		/// \~german
-		/// \copydoc IOKW_State::VerifyCaption(String,String)
-		/// \~english
-		/// \copydoc IOKW_State::VerifyCaption(String,String)
+		/**
+		 *  \~german
+		 *  \copydoc IOKW_State::VerifyCaption(String,String)
+		 *  \~english
+		 *  \copydoc IOKW_State::VerifyCaption(String,String)
+		 */
 		public void VerifyCaption(String fpsFunctionalname, String fpsExpectedValue)
 		{
 			Log.LogFunctionStartDebug("VerifyCaption",

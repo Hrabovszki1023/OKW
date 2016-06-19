@@ -1187,24 +1187,26 @@ public interface IOKW_State
         /// \date 2014-09-21/jnic
         void TypeKeyWindow(String fpsFunctionalname, String fpsValue) throws Exception;
 
-        /// \~german
-        /// \brief
-        /// Keine Beschreibung zu "VerifyCaption" verfügbar
-        /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsExpectedValue Erwarteter Wert 
-        ///
-        /// \~english
-        /// \brief
-        /// No description for "VerifyCaption" available
-        /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsExpectedValue Expected value 
-        ///
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014-09-21/jnic
-        /// \todo jnic-->keine Beschreibung vorhanden
+        /**
+         *  \~german
+         *  \brief
+         *  Überprüft die Überschrift des Objektes.
+         *  
+         *  \param fpsFunctionalname Funktionaler Name des Objekts 
+         *  \param fpsExpectedValue Erwarteter Wert 
+         * 
+         *  \~english
+         *  \brief
+         *  No description for "VerifyCaption" available
+         *  
+         *  \param fpsFunctionalname Functional name of the object 
+         *  \param fpsExpectedValue Expected value 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21/jnic
+         *  \todo jnic-->keine Beschreibung vorhanden
+         */
         void VerifyCaption(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
 
         /// \~german
@@ -1305,7 +1307,7 @@ public interface IOKW_State
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-21/jnic
-        /// \todo TODO: keine Beschreibung vorhande
+        /// \todo TODO: keine Beschreibung vorhanden
         void VerifyLabel(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
 
         /// \~german
