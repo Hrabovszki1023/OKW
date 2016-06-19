@@ -23,7 +23,7 @@ public class OKW_ConstExceptionTest {
 			myOKW_Const = OKW_Const_Sngltn.getInstance();
 
 			// Reset des Loggers: Alle geladenen Instanzen löschen
-			Log.Init();
+			Logger_Sngltn.Init();
 
 			// Logger.Instance.AddLogger(new Log2Console());
 			Log.setDebugMode(true);

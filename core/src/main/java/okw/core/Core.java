@@ -123,7 +123,8 @@ import okw.*;
         	}
         }
 
-        public static void Init()
+        @SuppressWarnings("unused")
+		public static void Init()
         {
         	try{
 		
@@ -159,7 +160,9 @@ import okw.*;
             this.CurrentState.ClickOn(fpsFunctionalname);
         }
 
-		/// \copydoc IOKW_State::ClickOn(String,String)
+	     /**
+		  * \copydoc IOKW_State::ClickOn(string,string)
+	      */
 		public void ClickOn(String fpsFunctionalname, String fpsClickType) throws Exception
         {
             this.CurrentState.ClickOn(fpsFunctionalname, fpsClickType);

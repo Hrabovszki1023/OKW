@@ -15,8 +15,9 @@ public class SeLink_EN_HTMLUnitDriver_Test extends SeLink_EN_Test
 	{
 		ApplicationName = "HTMLUnit";
 		
-        // Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.getInstance().Init();
+        Logger_Sngltn.getInstance();
+		// Reset des Loggers: Alle geladenen Instanzen löschen
+        Logger_Sngltn.Init();
 
         myLog2HTML = new Log2HTML("SeLink_EN_HTMLUnitDriver_Test.html");
         Logger_Sngltn.getInstance().AddLogger(myLog2HTML);

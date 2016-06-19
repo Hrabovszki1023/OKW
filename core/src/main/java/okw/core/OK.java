@@ -138,11 +138,9 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::ClickOn(string,string)
-	/// \~english
-	/// \copydoc IOKW_State::ClickOn(string,string)
-	///
+     /**
+	  * \copydoc IOKW_State::ClickOn(string,string)
+      */
 	public void ClickOn(String fpsFunctionalname, String fpsClickType) throws Exception {
 		Log.LogFunctionStartDebug("ClickOn", "fpsFunctionalname", fpsFunctionalname, "fpsClickType", fpsClickType);
 

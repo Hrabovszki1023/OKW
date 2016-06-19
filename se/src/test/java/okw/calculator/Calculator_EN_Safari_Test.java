@@ -15,8 +15,9 @@ public class Calculator_EN_Safari_Test extends Calculator_EN_Test
 	{
 		ApplicationName = "Safari";
 		
-        // Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.getInstance().Init();
+        Logger_Sngltn.getInstance();
+		// Reset des Loggers: Alle geladenen Instanzen löschen
+        Logger_Sngltn.Init();
 
         myLog2HTML = new Log2HTML("Calculator_EN_Safari_Test.html");
         Logger_Sngltn.getInstance().AddLogger(myLog2HTML);

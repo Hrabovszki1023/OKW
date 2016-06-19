@@ -181,6 +181,7 @@ public class OKW_IniTest
 	public void TC_Check_All_Path_without_OKW_Xml()
 	{
 		String OKW_Xml_original = "";
+		@SuppressWarnings("unused")
 		String OKW_Xml_Path = "";
 		Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 
@@ -277,6 +278,7 @@ public class OKW_IniTest
 
 		try
 		{
+			@SuppressWarnings("unused")
 			OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
 			Assert.fail("Exception wurde nicht ausgelöst");
 		}

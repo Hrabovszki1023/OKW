@@ -22,7 +22,6 @@ package okw.core;
 
 import static org.junit.Assert.*;
 import okw.OKW_TestClipboard;
-import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
 import org.junit.After;
@@ -32,7 +31,6 @@ import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
-import org.omg.CORBA.SystemException;
 
 public class EN_Keywords_Empty_Test {
 

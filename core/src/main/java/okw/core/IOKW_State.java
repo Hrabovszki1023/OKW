@@ -127,8 +127,8 @@ public interface IOKW_State
         ///
         /// \~
         /// \author Zoltan Hrabovszki
-        /// \date 2014-09-18/jnic
-        void ClickOn(String fpsFunctionalname, String fpsClicktype) throws Exception;
+        /// \date 2014-09-18
+        void ClickOn(String fpsFunctionalname, String fpsClickType) throws Exception;
 
         /// \~german
         /// \brief

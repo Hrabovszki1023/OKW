@@ -51,7 +51,6 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import static org.junit.Assert.*;
-import okw.exceptions.*;
 import okw.log.*;
 
 @RunWith(Parameterized.class)
@@ -99,7 +98,7 @@ public class OKW_Helper_GetLeftFromDelimiterNumberTest
         {
 			Log = Logger_Sngltn.getInstance();
             // Reset des Loggers: Alle geladenen Instanzen löschen
-            Log.Init();
+            Logger_Sngltn.Init();
 
             //Log.AddLogger(new Log2Console());
             Log.setDebugMode(false);

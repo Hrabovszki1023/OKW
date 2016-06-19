@@ -72,18 +72,21 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
   public void tearDown() throws Exception {
     EN.EndTest();
   }
-
-  // / \~german
-  // / \brief
-  // / Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch Select
-  // ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2016.05.07
+  
+  
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch Select
+   *  ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+  */
   @Test( expected = OKWFrameObjectChildNotFoundException.class )
-  public void TC_ClickOn_OKWFrameObjectMethodNotFoundException()
+  public void TC_ClickOn_OKWFrameObjectChildNotFoundException()
       throws Exception {
     EN.BeginTest( name.getMethodName() );
 
@@ -91,6 +94,28 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
     EN.ClickOn( "IsNotDefindeInRechner" );
   }
 
+  
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch Select
+   *  ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_ClickOn_ClickType_OKWFrameObjectChildNotFoundException()
+      throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.ClickOn( "IsNotDefindeInRechner", "DOUBLECLICK" );
+  }
+
+  
   // / \~german
   // / \brief
   // / Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
@@ -101,7 +126,7 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
   // / \author Zoltan Hrabovszki
   // / \date 2016.05.07
   @Test( expected = OKWFrameObjectChildNotFoundException.class )
-  public void TC_Select_OKWFrameObjectMethodNotFoundException()
+  public void TC_Select_OKWFrameObjectChildNotFoundException()
       throws Exception {
     EN.BeginTest( name.getMethodName() );
 
@@ -119,7 +144,7 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
   // / \author Zoltan Hrabovszki
   // / \date 2016.05.07
   @Test( expected = OKWFrameObjectChildNotFoundException.class )
-  public void TC_TypeKey_OKWFrameObjectMethodNotFoundException()
+  public void TC_TypeKey_OKWFrameObjectChildNotFoundException()
       throws Exception {
     EN.BeginTest( name.getMethodName() );
 
@@ -140,7 +165,7 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWFrameObjectChildNotFoundException.class )
-  public void TC_VerifyCaption_OKWFrameObjectMethodNotFoundException() throws Exception {
+  public void TC_VerifyCaption_OKWFrameObjectChildNotFoundException() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -160,7 +185,7 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWFrameObjectChildNotFoundException.class )
-  public void TC_VerifyExists_OKWFrameObjectMethodNotFoundException() throws Exception {
+  public void TC_VerifyExists_OKWFrameObjectChildNotFoundException() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -180,7 +205,7 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWFrameObjectChildNotFoundException.class )
-  public void TC_VerifyValue_OKWFrameObjectMethodNotFoundException() throws Exception {
+  public void TC_VerifyValue_OKWFrameObjectChildNotFoundException() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );

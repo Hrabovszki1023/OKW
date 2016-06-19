@@ -94,7 +94,7 @@ public static Logger_Sngltn Log;
     {
 		Log = Logger_Sngltn.getInstance();
         // Reset des Loggers: Alle geladenen Instanzen löschen
-        Log.Init();
+        Logger_Sngltn.Init();
 
         //Log.AddLogger(new Log2Console());
         Log.setDebugMode(false);

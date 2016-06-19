@@ -1,4 +1,4 @@
-/*
+/**
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
@@ -56,7 +56,8 @@ import okw.OKW_Helper;
 import okw.exceptions.*;
 import okw.log.*;
 
-/* \~german
+/**
+ *  \~german
 * \brief
 * Diese Klasse verwaltet das aktuelle GUI-Objekt.
 * 
@@ -82,7 +83,8 @@ import okw.log.*;
 public class OKW_CurrentObject_Sngltn
 {
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Die Eigenschaft enthält den fachlichen Namen des aktuellen Kindobjektes.
 	*
@@ -100,7 +102,8 @@ public class OKW_CurrentObject_Sngltn
 	 */
 	protected String		cvsChildFN			= "";
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Eigenschaft enthält den fachlichen Namen des aktuellen Fensters.
 	* Auf dieses Fenster beziehen sich alle GUI Kind-Objekte, die mit
@@ -115,7 +118,8 @@ public class OKW_CurrentObject_Sngltn
 	*/
 	protected String		cvsWindowFN			= "";
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Das Feld cvoObject enthält die Referenzierung auf das
 	* aktuelle Objekt im OKW_FrameObjectDictionary "myFrameObjectDictionary".
@@ -128,7 +132,8 @@ public class OKW_CurrentObject_Sngltn
 	*/
 	private Object			cvoObject				= null;
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Vollständiger "funktionaler Name" des aktuellen Objektes
 	* "WindowName.ChildObjectName"
@@ -147,7 +152,8 @@ public class OKW_CurrentObject_Sngltn
 	*/
 	private String			cvsObjectFN	= "";
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Vollständiger "technischer Name" des aktuellen Objektes
 	* "WindowName.ChildObjectName"
@@ -166,7 +172,8 @@ public class OKW_CurrentObject_Sngltn
 	*/
 	private String			cvsObjectName			= "";
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Hält eine Referenz auf die Klasse LogMessenger für die sprachabhängige
 	* Log-Ausgabe vor.
@@ -184,7 +191,8 @@ public class OKW_CurrentObject_Sngltn
 	 */
 	private LogMessenger	LM					= null;
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Hält eine Referenz auf die Klasse Logger vor.
 	*
@@ -195,7 +203,8 @@ public class OKW_CurrentObject_Sngltn
 	 */
 	private Logger_Sngltn			Log			= Logger_Sngltn.getInstance();
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Diese Übersicht enthält alle besuchten/ genutzten "Frame Objects".
 	*
@@ -217,7 +226,9 @@ public class OKW_CurrentObject_Sngltn
 	*/
 	FrameObjectDictionary_Sngltn	myFrameObjectDictionary	= null;
 
-	/* \~german
+	
+	/**
+	 *  \~german
 	* \brief
 	* Initialisiert eine neue Instanz der <see cref="OKW.CurrentObject"/>
 	* Klasse
@@ -242,7 +253,8 @@ public class OKW_CurrentObject_Sngltn
 		Init();
 	}
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Gibt die Instanz für die einzige Instanz dieser Klasse zurück.<br/>
 	* __Hinweis:__
@@ -288,7 +300,8 @@ public class OKW_CurrentObject_Sngltn
 		}
 		return Instance;	}
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -369,7 +382,8 @@ public class OKW_CurrentObject_Sngltn
 		return;
 	}
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -433,7 +447,8 @@ public class OKW_CurrentObject_Sngltn
 		return;
 	}
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -500,7 +515,8 @@ public class OKW_CurrentObject_Sngltn
 		return;
 	}
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -560,7 +576,8 @@ public class OKW_CurrentObject_Sngltn
 		return;
 	}
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -627,7 +644,8 @@ public class OKW_CurrentObject_Sngltn
 	}
 
 	
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -696,7 +714,8 @@ public class OKW_CurrentObject_Sngltn
 		return;
 	}
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -766,7 +785,8 @@ public class OKW_CurrentObject_Sngltn
 		return;
 	}
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -828,7 +848,7 @@ public class OKW_CurrentObject_Sngltn
 		return lvbReturn;
 	}
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -897,7 +917,7 @@ public class OKW_CurrentObject_Sngltn
 		return lvbReturn;
 	}
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -969,7 +989,7 @@ public class OKW_CurrentObject_Sngltn
 
 	}
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -1041,7 +1061,7 @@ public class OKW_CurrentObject_Sngltn
 		return lvLsReturn;
 	}
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -1120,7 +1140,7 @@ public class OKW_CurrentObject_Sngltn
 		return lvLsReturn;
 	}
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -1196,7 +1216,7 @@ public class OKW_CurrentObject_Sngltn
             return lvLsReturn;
         }
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -1285,7 +1305,7 @@ public class OKW_CurrentObject_Sngltn
 		return lvLsReturn;
 	}
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -1356,7 +1376,8 @@ public class OKW_CurrentObject_Sngltn
 		return lvsReturn;
 	}
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
 	* auf.
@@ -1431,7 +1452,7 @@ public class OKW_CurrentObject_Sngltn
 		return lvsReturn;
 	}
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Diese Methode prüft den fachlichen Objektnamen auf "erlaubte" Zeichen.
 	*
@@ -1493,7 +1514,7 @@ public class OKW_CurrentObject_Sngltn
 	}
 */
 	
-	/* \~german
+	/** \~german
 	* \brief
 	* Liefert die Referenz zum aktuellen Frame-Object. Referenz ist im Feld
 	* cvoObject abgelegt.
@@ -1535,7 +1556,7 @@ public class OKW_CurrentObject_Sngltn
             return lvoReturn;
         }
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Ermittelt den ObjektNamen des aktuellen Objektes.
 	*
@@ -1577,7 +1598,7 @@ public class OKW_CurrentObject_Sngltn
             return lvsReturn;
         }
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Führt die Initialisierung der Klasse durch: Es werden alle Felder der
 	* Klasse auf einen definierten Anfangszustand zurükgesetzt;
@@ -1613,7 +1634,7 @@ public class OKW_CurrentObject_Sngltn
 		return;
 	}
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Methode gibt alle wichtigen Informationen zum aktuellen Objekt aus.
 	* Diese soll im Fehler- oder Ausnahmefall bei der Fehlersuche durch
@@ -1665,7 +1686,7 @@ public class OKW_CurrentObject_Sngltn
 		Log.LogFunctionEndDebug();
 	}
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Setzt das Kindobjekt.
 	*
@@ -1730,7 +1751,7 @@ public class OKW_CurrentObject_Sngltn
 		return this.cvoObject;
 	}
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Hier wird der Kontext auf ein Fenster gesetzt.
 	* * Der Bezeichner des letzten Kindobjektes wird gelöscht.
@@ -1781,7 +1802,8 @@ public class OKW_CurrentObject_Sngltn
 		return lvoReturn;
 	}
 
-	/* \~german
+	/**
+	 *  \~german
 	* \brief
 	* Das aktuelle Objekt wird auf das Fenster zurückgesetzt. Kindobjekt wird
 	* gelöscht.
@@ -1824,7 +1846,7 @@ public class OKW_CurrentObject_Sngltn
 		return this.cvoObject;
 	}
 
-	/* \~german
+	/** \~german
 	* \brief
 	* Methode aktualisert zwei Werte:
 	* * OKW.CurrentObject.cvsObjectName wird aktualisiert und

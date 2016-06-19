@@ -2,17 +2,13 @@ package okw.gui.adapter;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
-
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.xml.sax.SAXException;
 
-import okw.OKW_FN;
 import okw.OKW_TestClipboard;
-import okw.core.OKW_CurrentObject_Sngltn;
 import okw.log.Logger_Sngltn;
 
     public class Test_Window
