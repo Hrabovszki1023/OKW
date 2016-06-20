@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>de.openkeyword</groupId>
 		<artifactId>okw</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.15</version>
 	</parent>
 	<artifactId>autoit</artifactId>
 	<!-- http://mvnrepository.com/artifact/net.sf.jacob-project/jacob -->
