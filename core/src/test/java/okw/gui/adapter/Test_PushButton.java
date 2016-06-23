@@ -47,9 +47,7 @@ import javax.xml.xpath.XPathExpressionException;
 
 import org.xml.sax.SAXException;
 
-import okw.OKW_FN;
 import okw.OKW_TestClipboard;
-import okw.core.OKW_CurrentObject_Sngltn;
 import okw.log.*;
 
     // TODO Implemetierung einschalten : IOKW_LinkObj

@@ -1,6 +1,6 @@
 package okw.gui.adapter.selenium;
 
-import okw.OKW_FN;
+import okw.OKW;
 import okw.gui.AnyWinBase;
 import okw.gui.OKWLocator;
 
@@ -53,7 +53,7 @@ import okw.gui.OKWLocator;
         // The class for the window that contains the contents of the Web page.
         public OKWLocator locator;
         
-        @OKW_FN(FN="URL")
+        @OKW(FN="URL")
         public SeURL URL = new SeURL();
 
 

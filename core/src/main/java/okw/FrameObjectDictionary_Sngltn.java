@@ -439,7 +439,7 @@ public class FrameObjectDictionary_Sngltn
 
 				// Wenn die Klasse die Annotaion OKW_FN hat, dann in die
 				// Rückgabe-Liste eintrage
-				if ( aClass.isAnnotationPresent( OKW_FN.class ) )
+				if ( aClass.isAnnotationPresent( OKW.class ) )
 				{
 					lvALReturn.add( aClass );
 				}
@@ -537,9 +537,9 @@ public class FrameObjectDictionary_Sngltn
 				String FieldName = lvField.getName();
 				String FieldType = lvField.getType().getName();
 
-				if ( lvField.isAnnotationPresent( OKW_FN.class ) )
+				if ( lvField.isAnnotationPresent( OKW.class ) )
 				{
-					OKW_FN myFN = lvField.getAnnotation( OKW_FN.class );
+					OKW myFN = lvField.getAnnotation( OKW.class );
 					// Get the value from property.
 
 					String lvsKey = fpsWindowName + "." + myFN.FN();
@@ -577,9 +577,9 @@ public class FrameObjectDictionary_Sngltn
 	{
 		String lvsReturn = "";
 
-		if ( fpObject.getClass().isAnnotationPresent( OKW_FN.class ) )
+		if ( fpObject.getClass().isAnnotationPresent( OKW.class ) )
 		{
-			lvsReturn = fpObject.getClass().getAnnotation( OKW_FN.class ).FN();
+			lvsReturn = fpObject.getClass().getAnnotation( OKW.class ).FN();
 		}
 
 		return lvsReturn;

@@ -1,18 +1,18 @@
 package okw.gui.frames.SeTextField;
 
-import okw.OKW_FN;
+import okw.OKW;
 import okw.gui.adapter.selenium.*;
 
-@OKW_FN (FN="SeTextField")
+@OKW (FN="SeTextField")
 public class frmSeTextField extends SeBrowserChild
 {
-	@OKW_FN (FN="NichtVorhanden")
+	@OKW (FN="NichtVorhanden")
     public SeTextField NichtVorhanden = new SeTextField("//*[@name='NichtVorhanden']");
 
-    @OKW_FN (FN="Vorname")
+    @OKW (FN="Vorname")
     public SeTextField Vorname = new SeTextField("//*[@name='Vorname']");
 
-    @OKW_FN (FN="Name")
+    @OKW (FN="Name")
     public SeTextField Zuname = new SeTextField("//*[@name='Name']");
 
 

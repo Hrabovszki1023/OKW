@@ -43,7 +43,6 @@ package okw.gui.adapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import okw.OKW_FN;
 import okw.OKW_TestClipboard;
 import okw.log.*;
 

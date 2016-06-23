@@ -22,7 +22,7 @@ import okw.gui.adapter.*;
 /// Sie ist basis für etliche OKW-Unittests. **ZH**
 /// \copyright CC-OPENKEYWORD
 
-@OKW_FN(FN="WindowWithoutMethods")
+@OKW(FN="WindowWithoutMethods")
 public class frmWindowWithOutMethods
 {
 

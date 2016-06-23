@@ -1,13 +1,13 @@
 package okw.gui.frames;
 
-import okw.OKW_FN;
+import okw.OKW;
 import okw.gui.adapter.selenium.SeURL;
 import okw.gui.adapter.selenium.webdriver.SeHtmlUnitDriver;
 
-@OKW_FN (FN="HTMLUnit")
+@OKW (FN="HTMLUnit")
 public class frmHTMLUnit extends SeHtmlUnitDriver
 {
-    @OKW_FN(FN="URL")
+    @OKW(FN="URL")
     public SeURL URL = new SeURL();
 	
 }

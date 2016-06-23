@@ -43,7 +43,7 @@ import java.util.ArrayList;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import okw.OKW_FN;
+import okw.OKW;
 import okw.gui.adapter.selenium.*;
 import okw.log.*;
 
@@ -59,7 +59,7 @@ import okw.log.*;
         // =========================================================================
         // ChildObject of Firefox...
         // =========================================================================
-        @OKW_FN(FN="URL")
+        @OKW(FN="URL")
         public SeURL URL = new SeURL();
 
         public SeFirefoxApp()

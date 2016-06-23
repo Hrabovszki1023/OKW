@@ -25,7 +25,7 @@ import okw.log.*;
     /// Sie ist basis für etliche OKW-Unittests. **ZH**
     /// \copyright */
 
-@OKW_FN(FN="Rechner")
+@OKW(FN="Rechner")
 public class frmTestRechner extends Test_Window
     {
 	Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
@@ -33,7 +33,7 @@ public class frmTestRechner extends Test_Window
 
         /// \brief
         /// Test Objekt mit allen OKW-Methoden,
-        @OKW_FN(FN="All_MethodsObj")
+        @OKW(FN="All_MethodsObj")
         public AllMethods All_MethodsObj = new AllMethods("Locator_All_MethodsObj");
 
         /// \brief
@@ -42,12 +42,12 @@ public class frmTestRechner extends Test_Window
         /// 
         /// \author Zoltan Hrabovszki
         /// \date 2012.12.26
-        @OKW_FN(FN="Anzeige")
+        @OKW(FN="Anzeige")
         public Test_TextField Anzeige = new Test_TextField("Neuer Locator Anzeige");
 
         /// \brief
         /// Test Objekt ohne einer einzigen OKW-Methoden. -> Unittest für Exceptionauslösung OKWFrameObjectMethodNotFoundException
-        @OKW_FN(FN="NoMethodObj")
+        @OKW(FN="NoMethodObj")
         public Test_NoMethod_Object NoMethodObj = new Test_NoMethod_Object("Locator_NoMethodObj");
 
         /// \brief
@@ -56,7 +56,7 @@ public class frmTestRechner extends Test_Window
         /// 
         /// \author Zoltan Hrabovszki
         /// \date 2012.12.26
-        @OKW_FN(FN="Taste_1")
+        @OKW(FN="Taste_1")
         public Test_PushButton Taste_1 = new Test_PushButton("1");
 
         /// \brief
@@ -65,7 +65,7 @@ public class frmTestRechner extends Test_Window
         /// 
         /// \author Zoltan Hrabovszki
         /// \date 2012.12.26
-        @OKW_FN(FN="Taste_2")
+        @OKW(FN="Taste_2")
         public Test_PushButton Taste_2 = new Test_PushButton("2");
 
         /// \brief
@@ -75,7 +75,7 @@ public class frmTestRechner extends Test_Window
         /// 
         /// \author Zoltan Hrabovszki
         /// \date 2012.12.26
-        @OKW_FN(FN="Taste_3")
+        @OKW(FN="Taste_3")
         public __Taste_3 Taste_3 = new __Taste_3("3");
 
         /// \brief

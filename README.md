@@ -41,7 +41,7 @@ The  Steps you have to do are:
 1. Define for all test relevant GUI-Element a functional name (FN). 
 2. Find the locators which identifies a GUI-Object. The goal is: OKW has to identify the GUI-Objects clearly. The OKW Selenium GUI-adapter uses XPATH as Locator.
 3. Add GUI-Adapter (e.g. SeBrowserChild or SeTextField) for the specific GUI-Object to the Frame.
-   * Define functional name with OKW annotation like this: '@OKW_FN( FN = "Display" )'.
+   * Define functional name with OKW annotation like this: '@OKW( FN = "Display" )'.
    * Assign the GUI-Adapter with the specific locator.
 
 
@@ -51,67 +51,67 @@ Here is a simple OKW-frame as example.
 ```java
 package okw.gui.frames.frmCalculator;
 
-import okw.OKW_FN;
+import okw.OKW;
 import okw.gui.adapter.selenium.*;
 
-@OKW_FN(FN = "Calculator")
+@OKW(FN = "Calculator")
 public class frmCalculator extends SeBrowserChild {
 
-  @OKW_FN( FN = "Display" )
+  @OKW( FN = "Display" )
   public SeTextField  Display = new SeTextField( "//INPUT[@name='Display']" );
 
-  @OKW_FN( FN = "1" )
+  @OKW( FN = "1" )
   public SePushButton N1 = new SePushButton( "//input[@value='  1   ']");
 
-  @OKW_FN( FN = "2" )
+  @OKW( FN = "2" )
   public SePushButton N2 = new SePushButton( "//input[@value='  2   ']");
 
-  @OKW_FN( FN = "3" )
+  @OKW( FN = "3" )
   public SePushButton N3 = new SePushButton( "//input[@value='  3   ']");
 
-  @OKW_FN( FN = "4" )
+  @OKW( FN = "4" )
   public SePushButton N4 = new SePushButton( "//input[@value='  4   ']");
 
-  @OKW_FN( FN = "5" )
+  @OKW( FN = "5" )
   public SePushButton N5 = new SePushButton( "//input[@value='  5   ']");
 
-  @OKW_FN( FN = "6" )
+  @OKW( FN = "6" )
   public SePushButton N6 = new SePushButton( "//input[@value='  6   ']");
 
-  @OKW_FN( FN = "7" )
+  @OKW( FN = "7" )
   public SePushButton N7 = new SePushButton( "//input[@value='  7   ']");
 
-  @OKW_FN( FN = "8" )
+  @OKW( FN = "8" )
   public SePushButton N8 = new SePushButton( "//input[@value='  8   ']");
 
-  @OKW_FN( FN = "9" )
+  @OKW( FN = "9" )
   public SePushButton N9 = new SePushButton( "//input[@value='  9   ']");
 
-  @OKW_FN( FN = "0" )
+  @OKW( FN = "0" )
   public SePushButton N0 = new SePushButton( "//input[@value='  0   ']");
 
-  @OKW_FN( FN = "." )
+  @OKW( FN = "." )
   public SePushButton Punkt = new SePushButton( "//INPUT[@type='button' and @value='*.*']" );
 
-  @OKW_FN( FN = "+" )
+  @OKW( FN = "+" )
   public SePushButton Plus = new SePushButton( "//input[@type='button' and @value='  +   ']" );
 
-  @OKW_FN( FN = "-" )
+  @OKW( FN = "-" )
   public SePushButton Minus = new SePushButton( "//input[@type='button' and @value='  -   ']" );
 
-  @OKW_FN( FN = "/" )
+  @OKW( FN = "/" )
   public SePushButton Durch = new SePushButton( "//input[@type='button' and @value='  /   ']" );
 
-  @OKW_FN( FN = "*" )
+  @OKW( FN = "*" )
   public SePushButton Mal  = new SePushButton( "//input[@type='button' and @value='  *   ']" );
 
-  @OKW_FN( FN = "=" )
+  @OKW( FN = "=" )
   public SePushButton Gleich = new SePushButton( "//input[@type='button' and @value='  =   ']" );
 
-  @OKW_FN( FN = "C" )
+  @OKW( FN = "C" )
   public SePushButton Clear  = new SePushButton( "//input[@type='reset' and @value='  C  ']" );
 
-  @OKW_FN( FN = "sqrt" )
+  @OKW( FN = "sqrt" )
   public SePushButton Sqrt = new SePushButton( "//input[class='button'] type='button' value='sqrt '" );
 
   public frmCalculator() {

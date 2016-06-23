@@ -2,7 +2,7 @@ package okw.gui.adapter.selenium.webdriver;
 
 import java.util.ArrayList;
 
-import okw.OKW_FN;
+import okw.OKW;
 import okw.gui.adapter.selenium.SeDriver;
 import okw.gui.adapter.selenium.SeURL;
 import okw.log.Logger_Sngltn;
@@ -57,7 +57,7 @@ import okw.log.Logger_Sngltn;
         // =========================================================================
         // ChildObject of InternetExplorer...
         // =========================================================================
-        @OKW_FN(FN="URL")
+        @OKW(FN="URL")
         public SeURL URL = new SeURL();
 
         public SeChromeApp()

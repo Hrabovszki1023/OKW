@@ -1,18 +1,18 @@
 package okw.gui.frames.SeLink;
 
-import okw.OKW_FN;
+import okw.OKW;
 import okw.gui.adapter.selenium.*;
 
 /// \~german
 /// \brief
 /// Selenium-Frame zur [Link-TestSeite](http://test.openkeyword.de/Link/Link.htm)
 
-@OKW_FN( FN = "SeLink" )
+@OKW( FN = "SeLink" )
 public class frmSeLink extends SeBrowserChild {
 
     // @todo TODO: WorkAround for inherited object: Scanner doesnt collect
     // inherited objects.
-    @OKW_FN( FN = "URL" )
+    @OKW( FN = "URL" )
     public SeURL  url           = new SeURL();
 
     // / \~german
@@ -20,7 +20,7 @@ public class frmSeLink extends SeBrowserChild {
     // / Dieses Objekt dient zur Existenzprüfung eines _nicht_
     // / vorhandenen SeLink-Objektes.
     // /
-    @OKW_FN( FN = "LinkNotExists" )
+    @OKW( FN = "LinkNotExists" )
     public SeLink LinkNotExists = new SeLink( "//*[@value='upss']" );
 
     // / \~german
@@ -30,7 +30,7 @@ public class frmSeLink extends SeBrowserChild {
     // / <code><a href="http://www.google.de"
     // name="Google_Link">Google...</a></code>
     // /
-    @OKW_FN( FN = "Google" )
+    @OKW( FN = "Google" )
     public SeLink Google;
 
     // / \~german
@@ -40,7 +40,7 @@ public class frmSeLink extends SeBrowserChild {
     // / <code><a href="http://www.yahoo.de"
     // name="Yahoo_Link">Yahoo...</a></code>
     // /
-    @OKW_FN( FN = "Yahoo" )
+    @OKW( FN = "Yahoo" )
     public SeLink Yahoo;
 
     public frmSeLink() {

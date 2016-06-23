@@ -42,10 +42,10 @@ package okw.gui.adapter.selenium.webdriver;
 
 import java.util.ArrayList;
 
-import okw.OKW_FN;
 import okw.gui.adapter.selenium.SeDriver;
 import okw.gui.adapter.selenium.SeURL;
 import okw.log.Logger_Sngltn;
+import okw.OKW;
 
 
     /// \~german
@@ -70,7 +70,7 @@ import okw.log.Logger_Sngltn;
         // =========================================================================
         // ChildObject of InternetExplorer...
         // =========================================================================
-        @OKW_FN(FN="URL")
+        @OKW(FN="URL")
         public SeURL URL = new SeURL();
 
         /// \~german

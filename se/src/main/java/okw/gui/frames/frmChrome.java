@@ -1,12 +1,12 @@
 package okw.gui.frames;
 
-import okw.OKW_FN;
+import okw.OKW;
 import okw.gui.adapter.selenium.SeURL;
 import okw.gui.adapter.selenium.webdriver.SeChromeApp;
 
-@OKW_FN (FN="Chrome")
+@OKW (FN="Chrome")
 public class frmChrome extends SeChromeApp
 {
-    @OKW_FN(FN="URL")
+    @OKW(FN="URL")
     public SeURL URL = new SeURL();
 }

@@ -1,25 +1,25 @@
 package okw.gui.frames.SeCheckBox;
 
-import okw.OKW_FN;
+import okw.OKW;
 import okw.gui.adapter.selenium.*;
 
-@OKW_FN(FN="SeCheckBox")
+@OKW(FN="SeCheckBox")
 public class frmSeCheckBox extends SeBrowserChild
 {
 
     /// \brief
     /// Der Sinn dieses Objektes ist die ExistenzPrüfung eines nicht vorhandenen Kindobjektes
     ///
-    @OKW_FN (FN="NotExists")
+    @OKW (FN="NotExists")
     public SeCheckBox NotExists = new SeCheckBox("//*[@value='upss']");
 
-    @OKW_FN (FN="Pilze")
+    @OKW (FN="Pilze")
     public SeCheckBox Pilze = new SeCheckBox("//*[@value='pilze']");
 
-    @OKW_FN (FN="Salami")
+    @OKW (FN="Salami")
     public SeCheckBox Salami = new SeCheckBox("//*[@value='salami']");
 
-    @OKW_FN (FN="Sardellen")
+    @OKW (FN="Sardellen")
     public SeCheckBox Sardellen = new SeCheckBox("//*[@value='sardellen']");
 
     public frmSeCheckBox()

@@ -1,8 +1,8 @@
 package okw.gui.frames;
 
-import okw.OKW_FN;
+import okw.OKW;
 
-@OKW_FN (FN="InternetExplorer")
+@OKW (FN="InternetExplorer")
 public class frmInternetExplorer
 {
 }

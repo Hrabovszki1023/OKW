@@ -7,7 +7,7 @@ import okw.*;
 import okw.log.*;
 import okw.gui.adapter.*;
 
-@OKW_FN(FN="CurrentObjectWindow")
+@OKW(FN="CurrentObjectWindow")
 public class frmCurrentObjectWindow extends Test_Window
 {
 
@@ -40,10 +40,10 @@ public class frmCurrentObjectWindow extends Test_Window
 	    /// 
 	    /// \author Zoltan Hrabovszki
 	    /// \date 2014.01.14
-	    @OKW_FN(FN="CurrentObjectAllMethodCallTypes")
+	    @OKW(FN="CurrentObjectAllMethodCallTypes")
 	    public CurrentChildObject_Allmethods CurrentObjectAllMethodCallTypes = new CurrentChildObject_Allmethods("Locator_CurrentObjectAllMethodCallTypes");
 	    
-	    @OKW_FN(FN="AllMethod 2")
+	    @OKW(FN="AllMethod 2")
 	    public AllMethods myAllMethod = new AllMethods("Locator_CurrentObjectAllMethodCallTypes");    	    
 	        	    
 		    /// \brief

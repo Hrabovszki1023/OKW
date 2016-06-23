@@ -2,11 +2,11 @@ package okw.gui.frames;
 
 import okw.gui.adapter.selenium.SeURL;
 import okw.gui.adapter.selenium.webdriver.SeFirefoxApp;
-import okw.OKW_FN;
+import okw.OKW;
 
-@OKW_FN (FN="Firefox")
+@OKW (FN="Firefox")
 public class frmFirefox extends SeFirefoxApp
 {
-    @OKW_FN(FN="URL")
+    @OKW(FN="URL")
     public SeURL URL = new SeURL();
 }
