@@ -1,17 +1,8 @@
 package okw.log.log2html;
 
-import static org.junit.Assert.*;
-
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.omg.CORBA.SystemException;
-
-import junit.framework.Assert;
 import okw.log.log2html.Log2HTML;
 
 public class Log2HTMLTest {

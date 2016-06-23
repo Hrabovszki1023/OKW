@@ -22,7 +22,6 @@ package okw.core;
 
 import static org.junit.Assert.*;
 import okw.OKW_TestClipboard;
-import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
 import org.junit.After;
@@ -32,7 +31,6 @@ import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
-import org.omg.CORBA.SystemException;
 
 public class EN_Keywords_Empty_Test {
 
@@ -73,14 +71,57 @@ public class EN_Keywords_Empty_Test {
     EN.EndTest();
   }
 
-  // / \~german
-  // / \brief
-  // / Prüft "IGNORIEREN" für das Schlüsslewort MemorizeCaption(strng,string)
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft "IGNORIEREN" für das Schlüsslewort VerifyValue(strng,string)
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifyCaption_Empty() throws Exception {
+
+    EN.BeginTest( name.getMethodName() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+    
+    EN.VerifyCaption("Anzeige", "${EMPTY}");
+    
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals("Test_Textfield", myClipBoard.getObjectName());
+    assertEquals("VerifyCaption(ArrayList<String> fplsExpectedValue)", myClipBoard.getMethod());
+
+  }
+ 
+
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft "IGNORIEREN" für das Schlüsslewort VerifyValue(strng,string)
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
   @Test
   public void tc_VerifyValue_Empty() throws Exception {
 
@@ -103,9 +144,9 @@ public class EN_Keywords_Empty_Test {
     
     EN.VerifyValue("Anzeige", "${EMPTY}");
     
+    assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Test_Textfield", myClipBoard.getObjectName());
     assertEquals("VerifyValue(ArrayList<String> fplsExpectedValue)", myClipBoard.getMethod());
-
   }
 }

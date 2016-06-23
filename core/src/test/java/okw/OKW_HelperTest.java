@@ -45,7 +45,6 @@ import java.util.ArrayList;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.junit.*;
-import org.junit.rules.TestName;
 import static org.junit.Assert.*;
 
 import okw.exceptions.*;
@@ -63,7 +62,7 @@ public class OKW_HelperTest
         {
 			Log = Logger_Sngltn.getInstance();
             // Reset des Loggers: Alle geladenen Instanzen löschen
-            Log.Init();
+            Logger_Sngltn.Init();
 
             //Log.AddLogger(new Log2Console());
             Log.setDebugMode(false);

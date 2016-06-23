@@ -21,10 +21,8 @@
 
 package okw.core;
 
-import static org.junit.Assert.*;
 import okw.OKW_TestClipboard;
 import okw.exceptions.OKWFrameObjectParentNotFoundException;
-import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
 import org.junit.After;
@@ -45,7 +43,7 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
         Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 
         // Reset des Loggers: Alle Geladenen Instanzen löschen
-        myLogger.Init();
+        Logger_Sngltn.Init();
         //myLogger.AddLogger(new Log2Console());
 
         myLogger.setDebugMode(false);

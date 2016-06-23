@@ -2,19 +2,11 @@ package okw;
 
 import static org.junit.Assert.*;
 
-import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
-
 import okw.exceptions.*;
 import okw.log.Logger_Sngltn;
 
 import org.junit.Test;
-import org.xml.sax.SAXException;
 
 public class OKW_ConstExceptionTest {
 
@@ -31,7 +23,7 @@ public class OKW_ConstExceptionTest {
 			myOKW_Const = OKW_Const_Sngltn.getInstance();
 
 			// Reset des Loggers: Alle geladenen Instanzen löschen
-			Log.Init();
+			Logger_Sngltn.Init();
 
 			// Logger.Instance.AddLogger(new Log2Console());
 			Log.setDebugMode(true);

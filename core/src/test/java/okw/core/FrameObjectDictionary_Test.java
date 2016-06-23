@@ -32,8 +32,9 @@ public class FrameObjectDictionary_Test
 	public static void setUpBeforeClass() throws Exception
 	{
 
+		Logger_Sngltn.getInstance();
 		// Reset des Loggers: Alle geladenen Instanzen löschen
-		Logger_Sngltn.getInstance().Init();
+		Logger_Sngltn.Init();
 
 		// Logger_Sngltn.getInstance().AddLogger(new Log2Console());
 		Logger_Sngltn.getInstance().setDebugMode( false );

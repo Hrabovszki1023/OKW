@@ -117,11 +117,9 @@ import okw.log.*;
 			Log.LogFunctionEndDebug();
 		}
 
-		/// \~german
-		/// \copydoc IOKW_State::ClickOn(String,String)
-		/// \~english
-		/// \copydoc IOKW_State::ClickOn(String,String)
-		/// 
+	     /**
+		  * \copydoc IOKW_State::ClickOn(string,string)
+	      */
 		public void ClickOn(String fpsFunctionalname, String fpsClickType)
 		{
 			Log.LogFunctionStartDebug("ClickOn", 
@@ -606,10 +604,12 @@ import okw.log.*;
 			Log.LogFunctionEndDebug();
 		}
 
-		/// \~german
-		/// \copydoc IOKW_State::VerifyCaption(String,String)
-		/// \~english
-		/// \copydoc IOKW_State::VerifyCaption(String,String)
+		/**
+		 *  \~german
+		 *  \copydoc IOKW_State::VerifyCaption(String,String)
+		 *  \~english
+		 *  \copydoc IOKW_State::VerifyCaption(String,String)
+		 */
 		public void VerifyCaption(String fpsFunctionalname, String fpsExpectedValue)
 		{
 			Log.LogFunctionStartDebug("VerifyCaption",

@@ -1,17 +1,9 @@
 package okw.gui.adapter;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
-
-import org.xml.sax.SAXException;
-
 import okw.*;
-import okw.core.OKW_CurrentObject_Sngltn;
 import okw.log.Logger_Sngltn;
 
 

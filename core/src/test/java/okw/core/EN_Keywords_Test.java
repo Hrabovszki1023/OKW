@@ -1119,15 +1119,53 @@ public class EN_Keywords_Test {
     assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "CTRL A", myClipBoard.getValue().get( 0 ) );
   }
+  
+  /**
+   * \~german
+   * \brief "Normaler" Testfall für das Schlüsselwort VerifyCaption. 
+   * 
+   * Prüft beide möglichen erwarteten Werte ab (YES/NO). 
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void TC_VerifyCaption() throws Exception {
+    EN.BeginTest( name.getMethodName() );
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    EN.VerifyCaption( "All_MethodsObj", "My Caption" );
+
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "My Caption", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+    assertEquals( "VerifyCaption()", myClipBoard.getMethod() );
+
+  }
+  
+  
+  /**
+   * \~german
+   * \brief "Normaler" Testfall für das Schlüsselwort VerifyExists. 
+   * 
+   * Prüft beide möglichen erwarteten Werte ab (YES/NO). 
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
   @Test
   public void TC_VerifyExists() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -1144,6 +1182,7 @@ public class EN_Keywords_Test {
     EN.VerifyExists( "All_MethodsObj", "YES" );
 
     // Check the Name, Called Method and Value of Actuel object
+    assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyExists()", myClipBoard.getMethod() );
@@ -1151,6 +1190,7 @@ public class EN_Keywords_Test {
     EN.VerifyExists( "All_MethodsObj", "NO" );
 
     // Check the Name, Called Method and Value of Actuel object
+    assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "NO", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyExists()", myClipBoard.getMethod() );

@@ -50,7 +50,6 @@ import org.junit.runners.Parameterized.Parameters;
 
 import static org.junit.Assert.*;
 import okw.OKW_Helper;
-import okw.exceptions.*;
 import okw.log.*;
 
 @RunWith(Parameterized.class)
