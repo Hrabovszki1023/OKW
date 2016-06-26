@@ -1225,14 +1225,16 @@ public class EN_Keywords_Test {
     assertEquals( "VerifyHasFocus()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  /**
+   *  \~german
+   *  \brief
+   * 
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
   @Test
   public void TC_VerifyIsActive() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -1244,12 +1246,17 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    myClipBoard.Clear();
+    
     EN.VerifyIsActive( "All_MethodsObj", "YES" );
 
     // Check the Name, Called Method and Value of Actuel object
     assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyIsActive()", myClipBoard.getMethod() );
+    assertEquals( 1, myClipBoard.getValue().size() );
+
+    myClipBoard.Clear();
 
     EN.VerifyIsActive( "All_MethodsObj", "NO" );
 
@@ -1257,6 +1264,8 @@ public class EN_Keywords_Test {
     assertEquals( "NO", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyIsActive()", myClipBoard.getMethod() );
+    assertEquals( 1, myClipBoard.getValue().size() );
+  
   }
 
   // / \~german

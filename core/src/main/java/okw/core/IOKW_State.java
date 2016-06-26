@@ -1265,31 +1265,35 @@ public interface IOKW_State
         /// \date 2014-09-21/jnic
         void VerifyHasFocus(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
 
-        /// \~german
-        /// \brief
-        /// Vergleicht den Fokus-Status des gegebenen Objekts mit dem erwarteten Wert.
-        /// 
-        /// _Beispiel: Prüfe, ob das Objekt "MeinObjekt" sich im Status "aktiv" befindet:_ <br/>
-        /// \verbatim Prüfe Ist Aktiv: "MeinObjekt", "JA" \endverbatim
-        /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsExpectedValue Erwarteter Wert. Erlaubte Werte sind: "JA", "NEIN" und "IGNORIEREN". 
-        ///
-        /// \~english
-        /// \brief
-        /// Compares the focus status of the given object with the expected value.
-        /// 
-        /// _Example: Verify if the object MyObject is in the state "active":_ <br/>
-        /// \verbatim Verify Is Active: "MyObject", "YES" \endverbatim
-        /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsExpectedValue Expected value. Following values are Allowed here: "YES, "NO", and "IGNORE". 
-        ///
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014-09-21/jnic
+        
+        /**
+         *  \~german
+         *  \brief
+         *  Vergleicht den Fokus-Status des gegebenen Objekts mit dem erwarteten Wert.
+         * 
+         *  _Beispiel: Prüfe, ob das Objekt "MeinObjekt" sich im Status "aktiv" befindet:_ <br/>
+         *  \verbatim Prüfe Ist Aktiv: "MeinObjekt", "JA" \endverbatim
+         * 
+         *  \param fpsFunctionalname Funktionaler Name des Objekts 
+         *  \param fpsExpectedValue Erwarteter Wert. Erlaubte Werte sind: "JA", "NEIN" und "IGNORIEREN". 
+         *
+         *  \~english
+         *  \brief
+         *  Compares the focus status of the given object with the expected value.
+         * 
+         *  _Example: Verify if the object MyObject is in the state "active":_ <br/>
+         *  \verbatim Verify Is Active: "MyObject", "YES" \endverbatim
+         * 
+         *  \param fpsFunctionalname Functional name of the object 
+         *  \param fpsExpectedValue Expected value. Following values are Allowed here: "YES, "NO", and "IGNORE". 
+         *
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21/jnic
+        */
         void VerifyIsActive(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
 
+        
         /// \~german
         /// \brief
         /// Keine Beschreibung zu "VerifyLabel" verfügbar

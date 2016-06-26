@@ -36,15 +36,10 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 
 package okw.SePushButton;
 
-import static org.junit.Assert.*;
-import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 
-import org.junit.After;
 import org.junit.Ignore;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.TestName;
 
     /// \~german
     /// \brief

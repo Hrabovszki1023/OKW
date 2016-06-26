@@ -1821,6 +1821,7 @@ public class OKW_CurrentObject_Sngltn
 	* \author Zoltan Hrabovszki
 	* \date 2012.11.01
 	 */
+	@SuppressWarnings("unused")
 	private Object ResetToWindow() throws XPathExpressionException
 	{
 		Boolean bOK = false;

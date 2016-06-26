@@ -1,6 +1,5 @@
 package okw.parser;
 
-import java.io.StringReader;
 import java.util.ArrayList;
 
 import org.antlr.v4.runtime.*;

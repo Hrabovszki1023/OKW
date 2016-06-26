@@ -40,7 +40,6 @@
 package okw;
 
 import okw.exceptions.*;
-import javax.xml.xpath.XPathExpressionException;
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 

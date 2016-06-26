@@ -1531,8 +1531,15 @@ public class EN_Keywords_IGNORE_Test
             assertEquals("Rechner", myClipBoard.getObjectName());
             assertEquals("SelectWindow()", myClipBoard.getMethod());
 
+            myClipBoard.Clear();
+            
             EN.VerifyIsActive( "All_MethodsObj", "${IGNORE}");
+            
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("", myClipBoard.getObjectName());
+            assertEquals("", myClipBoard.getMethod());
 
+            assertEquals(0, myClipBoard.getValue().size());
 
         }
         
@@ -1557,7 +1564,16 @@ public class EN_Keywords_IGNORE_Test
             assertEquals("Rechner", myClipBoard.getObjectName());
             assertEquals("SelectWindow()", myClipBoard.getMethod());
 
+            myClipBoard.Clear();
+            
             EN.VerifyIsActive( "All_MethodsObj", "");
+            
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("", myClipBoard.getObjectName());
+            assertEquals("", myClipBoard.getMethod());
+
+            assertEquals(0, myClipBoard.getValue().size());
+
         }
         
         

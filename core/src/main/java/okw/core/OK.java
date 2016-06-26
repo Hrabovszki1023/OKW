@@ -1232,14 +1232,20 @@ public class OK implements IOKW_State {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyIsActive", "Ignore"));
 			}
+			else
+			{
+			
+				String lvlsExpected = Parser.ParseMe(fpsExpectedValue);
+				
 			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-			else if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
-					|| fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
+			if (lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
+					|| lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) 
+			{
 				CO.SetChildName(fpsFunctionalname);
 
 				// Erwarteten Wert(YES/NO, Sprachabhänging) nach Boolean
 				// wandelen
-				Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(fpsExpectedValue);
+				Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(lvlsExpected);
 
 				// Aktuellen Wert holen...
 				Boolean lvbActual = CO.CallMethodReturn_BooleanPb("VerifyIsActive", lvbExpectedValue);
@@ -1253,10 +1259,13 @@ public class OK implements IOKW_State {
 			}
 			// Beide Bedingungen sind nicht erfüllt -> Exception da kein anderer
 			// Wert hier erlaubt ist.
-			else {
+			else
+			{
 				String ExceptionLog = LM.GetMessage("VerifyExists", "OKWNotAllowedValueException", fpsExpectedValue);
 				throw new OKWNotAllowedValueException(ExceptionLog);
 			}
+			}
+
 		} catch (Exception e) {
 			this.HandleException(e);
 		} finally {

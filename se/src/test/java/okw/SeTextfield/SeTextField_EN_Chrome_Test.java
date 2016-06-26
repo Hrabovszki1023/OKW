@@ -15,8 +15,9 @@ public class SeTextField_EN_Chrome_Test extends SeTextField_EN_Test
 	{
 		ApplicationName = "Chrome";
 
-        // Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.getInstance().Init();
+        Logger_Sngltn.getInstance();
+		// Reset des Loggers: Alle geladenen Instanzen löschen
+        Logger_Sngltn.Init();
 
         myLog2HTML = new Log2HTML("SeTextField_EN_Chrome_Test.html");
         Logger_Sngltn.getInstance().AddLogger(myLog2HTML);

@@ -2,14 +2,10 @@ package okw;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.URL;
-import java.net.URLClassLoader;
-import java.net.URLDecoder;
 import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.HashMap;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
@@ -263,6 +259,7 @@ public class OKW_GetJavaClass
 	 * @param jarPath
 	 *
 	 */
+	@SuppressWarnings("unused")
 	private static ArrayList<String> getClassesFromJar( String jarPath, String packageName )
 	{
 		JarFile jarFile = null;

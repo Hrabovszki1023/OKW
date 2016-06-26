@@ -687,6 +687,7 @@ public class FrameObjectDictionary_Sngltn
 	// / \date 2014-10-10
 	// / FIXME: Prüfen, ob diese Methoden namentlich ok sind. Wird das Eltern
 	// / Obejkt angelegt?
+	@SuppressWarnings("unused")
 	private Object CreateInstanceByObjectName( String fps_ParentObject,
 			String fps_ChildObject ) throws XPathExpressionException
 	{
