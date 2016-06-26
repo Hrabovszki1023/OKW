@@ -1217,12 +1217,27 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    myClipBoard.Clear();
+    
     EN.VerifyHasFocus( "All_MethodsObj", "YES" );
 
     // Check the Name, Called Method and Value of Actuel object
     assertEquals( "true", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyHasFocus()", myClipBoard.getMethod() );
+    assertEquals( 1, myClipBoard.getValue().size() );
+
+    myClipBoard.Clear();
+    
+    EN.VerifyHasFocus( "All_MethodsObj", "NO" );
+
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "false", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+    assertEquals( "VerifyHasFocus()", myClipBoard.getMethod() );
+    assertEquals( 1, myClipBoard.getValue().size() );
+
+  
   }
 
   /**

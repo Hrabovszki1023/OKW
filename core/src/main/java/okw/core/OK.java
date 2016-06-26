@@ -138,9 +138,9 @@ public class OK implements IOKW_State {
 		}
 	}
 
-     /**
-	  * \copydoc IOKW_State::ClickOn(string,string)
-      */
+	/**
+	 * \copydoc IOKW_State::ClickOn(string,string)
+	 */
 	public void ClickOn(String fpsFunctionalname, String fpsClickType) throws Exception {
 		Log.LogFunctionStartDebug("ClickOn", "fpsFunctionalname", fpsFunctionalname, "fpsClickType", fpsClickType);
 
@@ -1069,11 +1069,9 @@ public class OK implements IOKW_State {
 	}
 
 	/**
-	 *  \~german
-	 *  \copydoc IOKW_State::VerifyCaption(string,string)
-	 *  \~english
-	 *  \copydoc IOKW_State::VerifyCaption(string,string)
-	 */ 
+	 * \~german \copydoc IOKW_State::VerifyCaption(string,string) \~english
+	 * \copydoc IOKW_State::VerifyCaption(string,string)
+	 */
 	public void VerifyCaption(String fpsFunctionalname, String fpsExpectedValue) throws Exception {
 		Log.LogFunctionStartDebug("VerifyCaption", "fpsFunctionalname", fpsFunctionalname, "fpsExpectedValue",
 				fpsExpectedValue);
@@ -1081,7 +1079,7 @@ public class OK implements IOKW_State {
 		try {
 			// Prüfen ob ignoriert werden muss...
 			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
-					|| fpsExpectedValue.equals("")){
+					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyCaption", "Ignore"));
 			} else {
@@ -1128,13 +1126,14 @@ public class OK implements IOKW_State {
 			// Hier sind nur drei werte erlaubt: YES/NO/IGNORE
 
 			// Prüfen ob ignoriert werden muss...
-			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || fpsExpectedValue.equals("")) {
+			if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyExists", "Ignore"));
 			} else {
-				
+
 				String lvlsExpected = Parser.ParseMe(fpsExpectedValue);
-				
+
 				// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
 				if (lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
 						|| lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
@@ -1185,30 +1184,37 @@ public class OK implements IOKW_State {
 					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyHasFocus", "Ignore"));
-			}
-			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-			else if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
-					|| fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
-				// Sprachabhängiges YES/NO nach Boolean transformieren
-				Boolean lvsbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(fpsExpectedValue);
+			} else {
+				
+				String lvlsExpected = Parser.ParseMe(fpsExpectedValue);
+				
+				// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
+				if (lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
+						|| lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
+					// Sprachabhängiges YES/NO nach Boolean transformieren
+					
+					Boolean lvsbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(lvlsExpected);
 
-				CO.SetChildName(fpsFunctionalname);
-				Boolean lvbActual = CO.CallMethodReturn_BooleanPb("VerifyHasFocus", lvsbExpectedValue);
+					CO.SetChildName(fpsFunctionalname);
+					Boolean lvbActual = CO.CallMethodReturn_BooleanPb("VerifyHasFocus", lvsbExpectedValue);
 
-				String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
+					String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
 
-				// Soll/Ist Vergleich...
-				Log.LogPrintDebug(LM.GetMessage("VerifyHasFocus", "VerifyValue"));
-				Log.LogVerify(lvsActual, fpsExpectedValue);
+					// Soll/Ist Vergleich...
+					Log.LogPrintDebug(LM.GetMessage("VerifyHasFocus", "VerifyValue"));
+					Log.LogVerify(lvsActual, fpsExpectedValue);
 
-				// \todo LANGUAGE: Püfen aws dieser eintrag soll:
-				// Sprachabhängigen string-vergleich durchführen...
-			}
-			// Beide Bedingungen sind nicht erfüllt -> Exception da keinanderer
-			// Wert hier erlaubt ist.
-			else {
-				String ExceptionLog = LM.GetMessage("VerifyExists", "OKWNotAllowedValueException", fpsExpectedValue);
-				throw new OKWNotAllowedValueException(ExceptionLog);
+					// \todo LANGUAGE: Püfen aws dieser eintrag soll:
+					// Sprachabhängigen string-vergleich durchführen...
+				}
+				// Beide Bedingungen sind nicht erfüllt -> Exception da
+				// keinanderer
+				// Wert hier erlaubt ist.
+				else {
+					String ExceptionLog = LM.GetMessage("VerifyExists", "OKWNotAllowedValueException",
+							fpsExpectedValue);
+					throw new OKWNotAllowedValueException(ExceptionLog);
+				}
 			}
 		} catch (Exception e) {
 			this.HandleException(e);
@@ -1231,39 +1237,37 @@ public class OK implements IOKW_State {
 					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyIsActive", "Ignore"));
-			}
-			else
-			{
-			
+			} else {
+
 				String lvlsExpected = Parser.ParseMe(fpsExpectedValue);
-				
-			// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-			if (lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
-					|| lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) 
-			{
-				CO.SetChildName(fpsFunctionalname);
 
-				// Erwarteten Wert(YES/NO, Sprachabhänging) nach Boolean
-				// wandelen
-				Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(lvlsExpected);
+				// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
+				if (lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
+						|| lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
+					CO.SetChildName(fpsFunctionalname);
 
-				// Aktuellen Wert holen...
-				Boolean lvbActual = CO.CallMethodReturn_BooleanPb("VerifyIsActive", lvbExpectedValue);
+					// Erwarteten Wert(YES/NO, Sprachabhänging) nach Boolean
+					// wandelen
+					Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(lvlsExpected);
 
-				// Aktuellen Wert nach YES/NO, Sprachabhänging, wandel...
-				String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
+					// Aktuellen Wert holen...
+					Boolean lvbActual = CO.CallMethodReturn_BooleanPb("VerifyIsActive", lvbExpectedValue);
 
-				// Soll/Ist Vergleich...
-				Log.LogPrintDebug(LM.GetMessage("VerifyIsActive", "VerifyValue"));
-				Log.LogVerify(lvsActual, fpsExpectedValue);
-			}
-			// Beide Bedingungen sind nicht erfüllt -> Exception da kein anderer
-			// Wert hier erlaubt ist.
-			else
-			{
-				String ExceptionLog = LM.GetMessage("VerifyExists", "OKWNotAllowedValueException", fpsExpectedValue);
-				throw new OKWNotAllowedValueException(ExceptionLog);
-			}
+					// Aktuellen Wert nach YES/NO, Sprachabhänging, wandel...
+					String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
+
+					// Soll/Ist Vergleich...
+					Log.LogPrintDebug(LM.GetMessage("VerifyIsActive", "VerifyValue"));
+					Log.LogVerify(lvsActual, fpsExpectedValue);
+				}
+				// Beide Bedingungen sind nicht erfüllt -> Exception da kein
+				// anderer
+				// Wert hier erlaubt ist.
+				else {
+					String ExceptionLog = LM.GetMessage("VerifyExists", "OKWNotAllowedValueException",
+							fpsExpectedValue);
+					throw new OKWNotAllowedValueException(ExceptionLog);
+				}
 			}
 
 		} catch (Exception e) {
@@ -1465,9 +1469,7 @@ public class OK implements IOKW_State {
 					|| fpsExpectedValue.equals("")) {
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyValue", "Ignore"));
-			} 
-			else 
-			{
+			} else {
 				if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY"))) {
 					fpsExpectedValue = "";
 				}

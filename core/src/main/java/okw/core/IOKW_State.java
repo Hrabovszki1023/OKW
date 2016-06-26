@@ -1236,33 +1236,36 @@ public interface IOKW_State
         /// \date 2014-09-21/jnic
         void VerifyExists(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
 
-        /// \~german
-        /// \brief
-        /// Vergleicht den Fokus-Zustand des gegebenen Objekts mit dem erwarteten Wert.
-        /// 
-        /// _Beispiel 1: Prüfe, ob das Objekt "MeinObjekt" den Fokus besitzt:_ <br/>
-        /// \verbatim Prüfe Hat Fokus: "MeinObjekt", "JA" \endverbatim
-        /// _Beispiel 2: Prüfe, ob das Objekt "MeinObjekt" den Fokus NICHT besitzt:_ <br/>
-        /// \verbatim Prüfe Hat Fokus: "MeinObjekt", "NEIN" \endverbatim
-        /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsExpectedValue Erwarteter Wert. Erlaubte Werte sind: "JA", "NEIN" und "IGNORIEREN". 
-        ///
-        /// \~english
-        /// \brief
-        /// Compares the focus status of the given object with the expected value.
-        /// 
-        /// _Example #1: Verify if the object MyObject has the focus:_ <br/>
-        /// \verbatim Verify Has Focus: "MyObject", "YES" \endverbatim
-        /// _Example #2: Verify if the object MyObject has NOT the focus:_ <br/>
-        /// \verbatim Verify Has Focus: "MyObject", "NO" \endverbatim
-        /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsExpectedValue Expected value. Following values are Allowed here: "YES, "NO", and "IGNORE".  
-        ///
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014-09-21/jnic
+        
+        /**
+         *  \~german
+         *  \brief
+         *  Vergleicht den Fokus-Zustand des gegebenen Objekts mit dem erwarteten Wert.
+         *  
+         *  _Beispiel 1: Prüfe, ob das Objekt "MeinObjekt" den Fokus besitzt:_ <br/>
+         *  \verbatim Prüfe Hat Fokus: "MeinObjekt", "JA" \endverbatim
+         *  _Beispiel 2: Prüfe, ob das Objekt "MeinObjekt" den Fokus NICHT besitzt:_ <br/>
+         *  \verbatim Prüfe Hat Fokus: "MeinObjekt", "NEIN" \endverbatim
+         *  
+         *  \param fpsFunctionalname Funktionaler Name des Objekts 
+         *  \param fpsExpectedValue Erwarteter Wert. Erlaubte Werte sind: "JA", "NEIN" und "IGNORIEREN". 
+         * 
+         *  \~english
+         *  \brief
+         *  Compares the focus status of the given object with the expected value.
+         *  
+         *  _Example #1: Verify if the object MyObject has the focus:_ <br/>
+         *  \verbatim Verify Has Focus: "MyObject", "YES" \endverbatim
+         *  _Example #2: Verify if the object MyObject has NOT the focus:_ <br/>
+         *  \verbatim Verify Has Focus: "MyObject", "NO" \endverbatim
+         *  
+         *  \param fpsFunctionalname Functional name of the object 
+         *  \param fpsExpectedValue Expected value. Following values are Allowed here: "YES, "NO", and "IGNORE".  
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21/jnic
+         */
         void VerifyHasFocus(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
 
         

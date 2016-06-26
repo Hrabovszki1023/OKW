@@ -106,6 +106,26 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWNotAllowedValueException.class )
+  public void TC_VerifyHasFocus_OKWFrameObjectMethodNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyHasFocus( "IsNotDefindeInRechner", "Bandersnatch" );
+  }
+
+  
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWNotAllowedValueException durch die
+   *  LFC-VerifyIsActive ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
   public void TC_VerifyIsActive_OKWFrameObjectMethodNotFoundException() throws Exception {
     EN.BeginTest( name.getMethodName() );
 

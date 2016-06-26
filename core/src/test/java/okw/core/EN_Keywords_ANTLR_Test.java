@@ -260,6 +260,57 @@ public class EN_Keywords_ANTLR_Test
 	   * \date 2013.12.26
 	   */
 	  @Test
+	  public void tc_VerifyHasFocus_MemorizedValue() throws Exception {
+	    EN.BeginTest( name.getMethodName() );
+	  
+	    // Testscript in Schlüsselwort-Notation
+	    EN.SelectWindow( "Rechner" );
+	  
+	    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+	    // Check the Name, Called Method and Value of Actuel object
+	    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+	    assertEquals( 1, myClipBoard.getValue().size() );
+	    assertEquals( "Rechner", myClipBoard.getObjectName() );
+	    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+	  
+	    // Set Value in "Memory"
+	    okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "YES" );
+	    
+	    // Kommen auch mehrere Sollwerte im Objekt ab?
+	    EN.VerifyHasFocus( "All_MethodsObj", "${Key1}" );
+	  
+	    // Check the Name, Called Method and Value of Actuel object
+	    assertEquals( "true", myClipBoard.getValue().get( 0 ) );
+	    assertEquals( 1, myClipBoard.getValue().size() );
+	  
+	    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+	    assertEquals( "VerifyHasFocus()", myClipBoard.getMethod() );
+	    
+	    // Set Value in "Memory"
+	    okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "NO" );
+	    
+	    // Kommen auch mehrere Sollwerte im Objekt ab?
+	    EN.VerifyHasFocus( "All_MethodsObj", "${Key1}" );
+	  
+	    // Check the Name, Called Method and Value of Actuel object
+	    assertEquals( "false", myClipBoard.getValue().get( 0 ) );
+	    assertEquals( 1, myClipBoard.getValue().size() );
+	  
+	    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+	    assertEquals( "VerifyHasFocus()", myClipBoard.getMethod() );
+	  }		  
+	  
+	  
+	   /**
+	   * \~german
+	   * \brief
+	   *
+	   * \~english
+	   * \~
+	   * \author Zoltan Hrabovszki
+	   * \date 2013.12.26
+	   */
+	  @Test
 	  public void tc_VerifyIsActive_MemorizedValue() throws Exception {
 	    EN.BeginTest( name.getMethodName() );
 	  

@@ -191,8 +191,28 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
     EN.SelectWindow( "Rechner" );
     EN.VerifyExists( "IsNotDefindeInRechner", "YES" );
   }
-  
 
+  
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyHasFocus ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyHasFocus_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyHasFocus( "IsNotDefindeInRechner", "YES" );
+  }  
+
+  
   /**
    * \~german
    *  \brief
@@ -211,8 +231,8 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
     EN.SelectWindow( "Rechner" );
     EN.VerifyIsActive( "IsNotDefindeInRechner", "YES" );
   }
-  
 
+  
   /**
    * \~german
    *  \brief

@@ -239,6 +239,27 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWFrameObjectMethodNotFoundException.class )
+  public void TC_VerifyHasFocus_OKWFrameObjectMethodNotFoundException()
+      throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyHasFocus( "NoMethodObj", "YES" );
+  }
+
+  
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
+   *  VerifyIsActive ausgelöst wird.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectMethodNotFoundException.class )
   public void TC_VerifyIsActive_OKWFrameObjectMethodNotFoundException()
       throws Exception {
     EN.BeginTest( name.getMethodName() );
