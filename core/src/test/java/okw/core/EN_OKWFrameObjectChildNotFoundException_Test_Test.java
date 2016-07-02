@@ -133,7 +133,29 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
     EN.SelectWindow( "Rechner" );
     EN.Select( "IsNotDefindeInRechner", "Value" );
   }
+  
+  
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch SetFocus
+   *  ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_SetFocus_OKWFrameObjectChildNotFoundException()
+      throws Exception {
+    EN.BeginTest( name.getMethodName() );
 
+    EN.SelectWindow( "Rechner" );
+    EN.SetFocus( "IsNotDefindeInRechner" );
+  }
+
+  
   // / \~german
   // / \brief
   // / Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die

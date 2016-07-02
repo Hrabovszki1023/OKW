@@ -150,6 +150,28 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
     EN.Select( "NoMethodObj", "NoValue" );
   }
 
+
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
+   *  SelectWindow ausgelöst wird.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test( expected = OKWFrameObjectMethodNotFoundException.class )
+  public void TC_SetFocus_OKWFrameObjectMethodNotFoundException()
+      throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.SetFocus( "NoMethodObj" );
+  }
+
+
   /**
    * \~german \brief Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException
    * von SelectWindow ausgelöst wird.

@@ -346,7 +346,9 @@ import okw.*;
             this.CurrentState = fp_CurrentState;
         }
 
-		/// \copydoc IOKW_State::SetFocus(String)
+		/**
+    \copydoc IOKW_State::SetFocus(String)
+		*/
 		public void SetFocus(String fpsFunctionalname) throws Exception
 		{
 			this.CurrentState.SetFocus(fpsFunctionalname);

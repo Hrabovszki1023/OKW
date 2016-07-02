@@ -898,11 +898,15 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    myClipBoard.Clear();
+    
     EN.SetFocus( "All_MethodsObj" );
 
     assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "SetFocus()", myClipBoard.getMethod() );
+    assertEquals( 0, myClipBoard.getValue().size() );
+
   }
 
   // / \~german

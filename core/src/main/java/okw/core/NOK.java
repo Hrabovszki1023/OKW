@@ -498,11 +498,9 @@ import okw.log.*;
 			Log.LogFunctionEndDebug();
 		}
 
-		/// \~german
-		/// \copydoc IOKW_State::SetFocus(String)
-		/// \~english
-		/// \copydoc IOKW_State::SetFocus(String)
-		/// 
+    /**
+    /// \copydoc IOKW_State::SetFocus(String)
+    */
 		public void SetFocus(String fpsFunctionalname)
 		{
 			Log.LogFunctionStartDebug("SetFocus",
