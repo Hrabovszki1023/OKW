@@ -520,15 +520,12 @@ import okw.log.*;
 			this.AL.setLanguage(Language);
 		}
 
-		/// \~german
-		/// \copydoc IOKW_State::SetValue(String,String)
-		/// \~english
-		/// \copydoc IOKW_State::SetValue(String,String)
-		/// 
+        /**
+		 *  \copydoc IOKW_State::SetValue(String,String)
+		 */ 
 		public void SetValue(String fpsFunctionalname, String fpsValue)
 		{
-			Log.LogFunctionStartDebug("SetValue", 
-				"fpsFunctionalname", fpsFunctionalname);
+			Log.LogFunctionStartDebug("SetValue", "fpsFunctionalname", fpsFunctionalname);
 
 			Log.LogFunctionEndDebug();
 		}

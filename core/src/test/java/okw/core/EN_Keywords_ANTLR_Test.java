@@ -492,5 +492,79 @@ public class EN_Keywords_ANTLR_Test
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyValue()", myClipBoard.getMethod() );
   }
+
+
+/// \~german
+/// \brief
+/// Prüft das Keyword Select mit dem Ziel ob gemerkte Werte richtig eingesetzt werden.
+///
+/// \~english
+/// \~
+/// \author Zoltan Hrabovszki
+/// \date 2016.05.07
+@Test
+public void TC_SetValue_MemorizedValue() throws Exception
+{
+	
+	EN.BeginTest( name.getMethodName() );
+
+	// Set Memorize Values
+	OKW_Memorize_Sngltn.getInstance().Set( "myValue", "ValueToFind" );
+
+	// Testscript in Schlüsselwort-Notation
+	EN.SelectWindow("Rechner");
+
+	// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+	// Check the Name, Called Method and Value of Actuel object
+	assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+	assertEquals("Rechner", myClipBoard.getObjectName());
+	assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+	EN.SetValue("All_MethodsObj", "${myValue}");
+
+	// Check the Name, Called Method and Value of Actuel object
+	assertEquals( 1, myClipBoard.getValue().size());
+	assertEquals("ValueToFind", myClipBoard.getValue().get(0));
+	assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+	assertEquals("SetValue()", myClipBoard.getMethod());
+}
+
+
+/// \~german
+/// \brief
+/// Prüft das Keyword Typekey mit dem Ziel, ob Umgebungsvariablen richtig eingesetzt werden.
+///
+/// Als umgebungsvariable wird 'USER' verwendet.
+///
+/// \~english
+/// \~
+/// \author Zoltan Hrabovszki
+/// \date 2016.05.07
+@Test
+public void TC_SetValue_EnviromentVar() throws Exception
+{
+	
+	EN.BeginTest( name.getMethodName() );
+
+	// Set Memorize Values
+	String myUser = System.getenv( "USER" );
+
+	// Testscript in Schlüsselwort-Notation
+	EN.SelectWindow("Rechner");
+
+	// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+	// Check the Name, Called Method and Value of Actuel object
+	assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+	assertEquals("Rechner", myClipBoard.getObjectName());
+	assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+	EN.SetValue( "All_MethodsObj", "${USER}");
+
+	// Check the Name, Called Method and Value of Actuel object
+	assertEquals( 1, myClipBoard.getValue().size() );
+	assertEquals( myUser, myClipBoard.getValue().get(0) );
+	assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+	assertEquals( "SetValue()", myClipBoard.getMethod() );
+}
 }
 	

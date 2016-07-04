@@ -370,7 +370,9 @@ import okw.*;
             this.CurrentState.SetLanguage(Language);
         }
 
-		/// \copydoc IOKW_State::SetValue(String,String)
+		/**
+		 *  \copydoc IOKW_State::SetValue(String,String)
+		 */
 		public void SetValue(String fpsFunctionalname, String fpsValue) throws Exception
 		{
 			this.CurrentState.SetValue(fpsFunctionalname, fpsValue);
