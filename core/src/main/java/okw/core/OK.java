@@ -908,23 +908,26 @@ public class OK implements IOKW_State {
 		CL.setLanguage(Language);
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::SetValue(string,string)
-	/// \~english
-	/// \copydoc IOKW_State::SetValue(string,string)
-	///
-	public void SetValue(String fpsFunctionalname, String fpsValue) throws Exception {
+    /**
+	 *  \copydoc IOKW_State::SetValue(string,string)
+	 */
+	public void SetValue(String fpsFunctionalname, String fpsValue) throws Exception
+	{
 		Log.LogFunctionStartDebug("SetValue", "fpsFunctionalname", fpsFunctionalname);
 
 		ArrayList<String> lvlsValue;
 
-		try {
+		try
+		{
 			// Prüfen ob ignoriert werden muss...
 			if (fpsValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
-					|| fpsValue.equals("")) {
+					|| fpsValue.equals(""))
+			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("SetValue", "Ignore"));
-			} else {
+			}
+			else
+			{
 				lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(fpsValue);
 
 				lvlsValue = Parser.ParseMe(lvlsValue);
@@ -932,9 +935,13 @@ public class OK implements IOKW_State {
 				CO.SetChildName(fpsFunctionalname);
 				CO.CallMethod("SetValue", lvlsValue);
 			}
-		} catch (Exception e) {
+		} 
+		catch (Exception e)
+		{
 			this.HandleException(e);
-		} finally {
+		}
+		finally
+		{
 			Log.LogFunctionEndDebug();
 		}
 	}

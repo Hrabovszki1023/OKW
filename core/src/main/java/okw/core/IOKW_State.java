@@ -918,39 +918,40 @@ public interface IOKW_State
         /// \todo jnic-->Beschreibung erledigt 2014-10-26
         void SetLanguage(String Language);
 
-        /// \~german
-        /// \brief
-        /// Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert.
-        ///
-        /// Der Wert wird nicht durch die Simulation einzelner Tastatureingaben
-        /// eingegeben, sondern direkt ins Objekte geschrieben:<br/>
-        /// Sollte z.B. in einem TextFeld bereits ein Wert vorhanden sein,
-		/// dann wird dieser mit _fpsValue_ überschrieben.
-        /// 
-        /// __Beispiel:__ Setze den Wert des Objekts "MeinObjekt" auf "Hallo": <br/>
-        /// \verbatim Setze Wert: "MeinObjekt", "Hallo" \endverbatim
-        /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsValue Sich ergebender Wert 
-        ///
-        /// \~english
-        /// \brief
-        /// Setting the value of the given window object to the given value.
-		///
-        /// The input is not working with the simulation of single keyboard inputs,
-		/// but with High-Level Setter-Methods of the objects:<br/>
-        /// Inputs of the object are written over with "fpsValue".
-		///
-        /// _Example: Set the value of the objekt "MyWindow" to "Hello":_ <br/>
-        /// \verbatim Set Value: "MyWindow", "Hello" \endverbatim
-        /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsValue Resulting value 
-        ///
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014-09-21/jnic
-		/// \todo -->jnic - Beschreibung bearbeitet 2014-10-26
+        /**
+         *  \~german
+         *  \brief
+         *  Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert.
+         * 
+         *  Der Wert wird nicht durch die Simulation einzelner Tastatureingaben
+         *  eingegeben, sondern direkt ins Objekte geschrieben:<br/>
+         *  Sollte z.B. in einem TextFeld bereits ein Wert vorhanden sein,
+		 *  dann wird dieser mit _fpsValue_ überschrieben.
+         *  
+         *  __Beispiel:__ Setze den Wert des Objekts "MeinObjekt" auf "Hallo": <br/>
+         *  \verbatim Setze Wert: "Name", "Zoltan" \endverbatim
+         *  
+         *  \param fpsFunctionalname Funktionaler Name des Objekts 
+         *  \param fpsValue Sich ergebender Wert 
+         * 
+         *  \~english
+         *  \brief
+         *  Setting the value of the given window object to the given value.
+		 * 
+         *  The input is not working with the simulation of single keyboard inputs,
+		 *  but with High-Level Setter-Methods of the objects:<br/>
+         *  Inputs of the object are written over with "fpsValue".
+		 * 
+         *  _Example: Set the value of the objekt "MyWindow" to "Hello":_ <br/>
+         *  \verbatim Set Value: "Name", "Zoltan" \endverbatim
+         *  
+         *  \param fpsFunctionalname Functional name of the object 
+         *  \param fpsValue Resulting value 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+        /// \date 2014-09-21
+		 */
         void SetValue(String fpsFunctionalname, String fpsValue) throws Exception;
         
         /// \~german
