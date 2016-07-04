@@ -163,7 +163,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
    *  \date 2013.12.26
    */
   @Test( expected = OKWFrameObjectMethodNotFoundException.class )
-  public void TC_SetFocus_OKWFrameObjectMethodNotFoundException()
+  public void tc_SetFocus_OKWFrameObjectMethodNotFoundException()
       throws Exception {
     EN.BeginTest( name.getMethodName() );
 
@@ -179,13 +179,14 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
    * \~english \~ \author Zoltan Hrabovszki \date 2013.12.26
    */
   @Test( expected = OKWFrameObjectMethodNotFoundException.class )
-  public void TC_TypeKey_OKWFrameObjectMethodNotFoundException()
+  public void tc_SetValue_OKWFrameObjectMethodNotFoundException()
       throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.TypeKey( "NoMethodObj", "NoValue" );
+    EN.SetValue( "NoMethodObj", "NoValue" );
   }
+
 
   /**
    * \~german
@@ -207,6 +208,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
     EN.StartApp( "WindowWithoutMethods" );
   }
 
+
   /**
    * \~german
    *  \brief
@@ -227,25 +229,20 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
     EN.StopApp( "WindowWithoutMethods" );
   }
 
-  
+
   /**
-   * \~german
-   *  \brief
-   *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  VerifyExists ausgelöst wird.
+   * \~german \brief Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException
+   * von SelectWindow ausgelöst wird.
    * 
-   *  \~english
-   *  \~
-   *  \author Zoltan Hrabovszki
-   *  \date 2016.05.07
+   * \~english \~ \author Zoltan Hrabovszki \date 2013.12.26
    */
   @Test( expected = OKWFrameObjectMethodNotFoundException.class )
-  public void TC_VerifyExists_OKWFrameObjectMethodNotFoundException()
+  public void tc_TypeKey_OKWFrameObjectMethodNotFoundException()
       throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyExists( "NoMethodObj", "YES" );
+    EN.TypeKey( "NoMethodObj", "NoValue" );
   }
   
   

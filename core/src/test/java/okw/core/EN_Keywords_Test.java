@@ -934,17 +934,19 @@ public class EN_Keywords_Test {
     assertEquals( "Wert 3", myClipBoard.getValue().get( 2 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "SetValue()", myClipBoard.getMethod() );
-
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  
+  /**
+   * \~german
+   * \brief
+   * 
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
   @Test
   public void TC_SetValue_SV() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -961,6 +963,7 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "SetValue()", myClipBoard.getMethod() );
   }
+
 
   // / \~german
   // / \brief
