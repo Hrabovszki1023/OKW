@@ -2,16 +2,17 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
+import java.util.*;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.By;
-
-import okw.LogMessenger;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.*;
 import okw.log.Logger_Sngltn;
+import okw.LogMessenger;
 
-import java.util.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+
 
 public class SeAnyWin extends AnyWinBase implements IGUI
 {
@@ -1293,7 +1294,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
 
         try
         {
-            this.LogFunctionStartDebug("GetValue");
+            this.LogFunctionStartDebug("getValue");
 
             // Get Value from TextField and put this into the return ArrayList<String>
             lvLsReturn.add(this.Me().getAttribute("textContent"));
@@ -1314,16 +1315,17 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         return lvLsReturn;
     }
 
-    /// \brief
-    /// Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der markierten Textes.
-    /// \return
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.14
+    /**
+     *  \brief
+     *  Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert.
+     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen
+     *  durch Methoden überschreibung.
+     *  \return
+     *  Rückgabe des Textuellen Inhaltes der markierten Textes.
+     *  \return
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.14
+     */
     public ArrayList<String> LogValue()
     {
         Boolean bOK = false;
@@ -1398,9 +1400,9 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     /// \return
     /// Rückgabe des Textuellen Inhaltes der markierten Textes.
     /// Es wird immer der aktuelle Wert des Objektes zurückgeliefert.
-    /// \return
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.14
+    @Deprecated
     public ArrayList<String> VerifyValue(ArrayList<String> fplsExpectedValue) throws InterruptedException
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
@@ -1429,5 +1431,44 @@ public class SeAnyWin extends AnyWinBase implements IGUI
 
         return lvLsReturn;
     }
-}
 
+    /// \brief
+    /// Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
+    /// 
+    /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+    /// 
+    /// \return
+    /// Rückgabe des Textuellen Inhaltes der markierten Textes.
+    /// Es wird (immer) der aktuelle Wert des Objektes zurückgeliefert.
+    /// \author Zoltan Hrabovszki
+    /// \date 2013.12.14
+    public ArrayList<String> VerifyValue( ) throws InterruptedException
+    {
+        ArrayList<String> lvLsReturn = null;
+        Boolean bOK = false;
+
+        try
+        {
+            MyLogger.LogFunctionStartDebug("VerifyValue");
+
+            // get the Actual Value.
+            lvLsReturn = this.getValue(  );
+
+            bOK = true;
+        }
+        finally
+        {
+            if (bOK)
+            {
+                MyLogger.LogFunctionEndDebug(lvLsReturn);
+            }
+            else
+            {
+                MyLogger.LogFunctionEndDebug();
+            }
+        }
+
+        return lvLsReturn;
+    }
+
+}
