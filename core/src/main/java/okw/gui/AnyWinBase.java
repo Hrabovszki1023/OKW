@@ -110,7 +110,7 @@ public abstract class AnyWinBase
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2014.04.27/ jnic_2014_11_26
-    public void LogFunctionStartDebug(String fpsMethodName, String P1_Name, String P1_Value)
+    protected void LogFunctionStartDebug(String fpsMethodName, String P1_Name, String P1_Value)
     {
     	myLogger.LogFunctionStartDebug(this.getClass().getName() + "." + fpsMethodName, P1_Name, P1_Value);
     }

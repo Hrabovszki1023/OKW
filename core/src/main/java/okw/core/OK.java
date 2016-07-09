@@ -881,20 +881,23 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::SetFocus(string)
-	/// \~english
-	/// \copydoc IOKW_State::SetFocus(string)
-	///
+/**
+	 *  \copydoc IOKW_State::SetFocus(string)
+  */
 	public void SetFocus(String fpsFunctionalname) throws Exception {
 		Log.LogFunctionStartDebug("SetFocus", "fpsFunctionalname", fpsFunctionalname);
 
-		try {
+		try 
+		{
 			CO.SetChildName(fpsFunctionalname);
 			CO.CallMethod("SetFocus");
-		} catch (Exception e) {
+		} 
+		catch (Exception e)
+		{
 			this.HandleException(e);
-		} finally {
+		} 
+		finally
+		{
 			Log.LogFunctionEndDebug();
 		}
 	}

@@ -877,23 +877,27 @@ public interface IOKW_State
         /// \todo jnic-->Beschreibung erledigt 2014-10-26
         void Sequence(String fpsFunctionalname, String fpsSequenceName, String SEQ_ID) throws Exception;
 
-        /// \~german
-        /// \brief
-        /// Setzt den Fokus auf das gegebene Fensterobjekt.
-        /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        ///
-        /// \~english
-        /// \brief
-        /// Setting the focus to the given window object.
-        /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        ///
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014-09-21/jnic
+
+        /**
+         *  \~german
+         *  \brief
+         *  Setzt den Fokus auf das gegebene Fensterobjekt.
+         *  
+         *  \param fpsFunctionalname Funktionaler Name des Objekts 
+         * 
+         *  \~english
+         *  \brief
+         *  Setting the focus to the given window object.
+         *  
+         *  \param fpsFunctionalname Functional name of the object 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21
+         */
         void SetFocus(String fpsFunctionalname) throws Exception;
-        
+
+
         /// \~german
         /// \brief
         /// Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log).
