@@ -72,30 +72,31 @@ public class Log2Console implements ILogger
 	        
 	        private Boolean cvbDebugMode = false;
 
-	        /// \~german
-	        /// \copydoc ILogger::LogError(String)
-	        /// \~english
-	        /// \copydoc ILogger::LogError(String)
-	        ///
+	        
+			/**
+	         * \copydoc ILogger::LogError(String)
+			 */
 			@Override
 	        public void LogError(String fps_Message)
 	        {
-	            System.out.print(this.BlanksBefore + "Error: ");
-	            System.out.println(fps_Message);
+				System.out.println(this.BlanksBefore + okw.OKW_Helper.StringRepeat("-", 80));
+				System.out.println(this.BlanksBefore + " ERROR:");
+				System.out.println(this.BlanksBefore + okw.OKW_Helper.StringRepeat("-", 80));      
+				System.out.println(this.BlanksBefore + fps_Message);
+				System.out.println(this.BlanksBefore + okw.OKW_Helper.StringRepeat("-", 80));
 	        }
 
-	        /// \~german
-	        /// \copydoc ILogger::LogException(String)
-	        /// \~english
-	        /// \copydoc ILogger::LogException(String)
-	        ///
-			@Override
+
+			/**
+	         * \copydoc ILogger::LogException(String)
+			 */			@Override
 			public void LogException(String fps_Message)
 	        {
 	            System.out.print(this.BlanksBefore + "Exception: ");
 	            System.out.println(fps_Message);
 	        }
 
+	
 	        /// \~german
 	        /// \copydoc ILogger::LogFunctionEnd()
 	        /// \~english
@@ -235,22 +236,35 @@ public class Log2Console implements ILogger
 	            return;
 	        }
 
-	        /// \~german
-	        /// \copydoc ILogger::LogPrint(String)
-	        /// \~english
-	        /// \copydoc ILogger::LogPrint(String)
-	        /// 
+			
+			/**
+	         * \copydoc ILogger::LogPass(String)
+			 */
+			@Override
+	        public void LogPass( String fps_Message )
+	        {
+					System.out.println(this.BlanksBefore + okw.OKW_Helper.StringRepeat("-", 80));
+					System.out.println(this.BlanksBefore + " ERROR:");
+					System.out.println(this.BlanksBefore + okw.OKW_Helper.StringRepeat("-", 80));      
+					System.out.println(this.BlanksBefore + fps_Message);
+					System.out.println(this.BlanksBefore + okw.OKW_Helper.StringRepeat("-", 80));
+		    }
+
+			
+			/**
+	         *  \copydoc ILogger::LogPrint(String)
+			 */
 			@Override
 	        public void LogPrint(String fps_Message)
 	        {
 	            System.out.println(this.BlanksBefore + fps_Message);
 	        }
 
-	        /// \~german
-	        /// \copydoc ILogger::LogVerify(String,String)
-	        /// \~english
-	        /// \copydoc ILogger::LogVerify(String,String)
-	        ///
+			
+            /**
+	         *  \copydoc ILogger::LogVerify(String,String)
+	        */
+			@Deprecated
 			@Override
 	        public void LogVerify(String fps_Actual, String fps_Expected)
 	        {
@@ -269,22 +283,25 @@ public class Log2Console implements ILogger
 	            System.out.println(this.BlanksBefore + "-------------------------------------------------------");
 	        }
 
-	        /// \~german
-	        /// \copydoc ILogger::LogWarning(String)
-	        /// \~english
-	        /// \copydoc ILogger::LogWarning(String)
-	        /// 
+
+			
+			/**
+	         *  \copydoc ILogger::LogWarning(String)
+			 */
 			@Override
 	        public void LogWarning(String fps_Message)
 	        {	            
-	            System.out.println(this.BlanksBefore + "Warning: " + fps_Message);
+						System.out.println(this.BlanksBefore + okw.OKW_Helper.StringRepeat("-", 80));
+						System.out.println(this.BlanksBefore + " WARNING:");
+						System.out.println(this.BlanksBefore + okw.OKW_Helper.StringRepeat("-", 80));      
+						System.out.println(this.BlanksBefore + fps_Message);
+						System.out.println(this.BlanksBefore + okw.OKW_Helper.StringRepeat("-", 80));
 	        }
 
-	        /// \~german
-	        /// \copydoc ILogger::ResCloseList()
-	        /// \~english
-	        /// \copydoc ILogger::ResCloseList()
-	        ///
+			
+			/**
+	         *  \copydoc ILogger::ResCloseList()
+			 */
 			@Override
 	        public void ResCloseList()
 	        {
@@ -300,6 +317,7 @@ public class Log2Console implements ILogger
 	            this.BlankBefore();
 	        }
 
+			
 	        /// \~german
 	        /// \copydoc ILogger::ResOpenList(String)
 	        /// \~english

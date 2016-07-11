@@ -62,20 +62,30 @@ public interface ILogger
     void LogSequenceStart(String fps_KeyWordName, String fpsWindowFN, String fps_SequenceName, String... fpsParameter);
     void LogSequenceEnd();
     
-    /// \brief
-    /// LogError Function:
-    /// Logs an error message to the results file.
-    /// 
-    /// \param fps_Message 
+    /**
+     *  \brief  LogError: Logs an error message to the result.
+     *  
+     *  \param fps_Message Error message
+     */
     void LogError(String fps_Message);
 
-    /// \brief
-    /// LogWarning Function:
-    /// Logs a warning to the results file.
-    /// 
-    /// \param fps_Message 
+    
+    /**
+     *  \brief  LogPass: Logs an error message to the result.
+     *  
+     *  \param fps_Message Pass message
+     */
+    void LogPass(String fps_Message);
+
+    
+    /**
+     *  \brief  LogWarning: Logs an error message to the result.
+     *  
+     *  \param fps_Message Warning message
+     */
     void LogWarning(String fps_Message);
 
+	@Deprecated
     void LogVerify(String fps_Actual, String fps_Expected);
 
     /// \brief
@@ -101,11 +111,12 @@ public interface ILogger
     void LogFunctionEnd(List<String> fps_Return);    
     void LogFunctionEndDebug(List<String> fps_Return);
     
-    /// \brief
-    /// LogPrint Function:
-    /// Prints the values of expressions to the results file.
-    /// 
-    /// \param fps_Message 
+    
+    /**
+     *  \brief LogPrint: Prints an message to the result.
+     *  
+     *  \param fps_Message Message to print.
+     */
     void LogPrint(String fps_Message);
     void LogPrintDebug(String fps_Message);
     

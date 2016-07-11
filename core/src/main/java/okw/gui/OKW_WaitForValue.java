@@ -19,6 +19,7 @@ public class OKW_WaitForValue
     myObject = GUIObject;
   }
 
+  
   public ArrayList<String> getCaption( ArrayList<String> Expected,
       Integer SleepForMillis, Integer MaxWaitMilis )
       throws InterruptedException
@@ -133,6 +134,7 @@ public class OKW_WaitForValue
     return bReturn;
   }
 
+  
   public Boolean getHasActive( Boolean Expected, Integer SleepForMillis,
       Integer MaxWaitMilis ) throws InterruptedException
   {
@@ -161,6 +163,7 @@ public class OKW_WaitForValue
     return bReturn;
   }
 
+  
   public Boolean getHasFocus( Boolean Expected, Integer SleepForMillis,
       Integer MaxWaitMilis ) throws InterruptedException
   {

@@ -1,5 +1,6 @@
 package okw.log.log2html;
 
+@Deprecated
 public class LogVerify extends LogBase
 {
 	

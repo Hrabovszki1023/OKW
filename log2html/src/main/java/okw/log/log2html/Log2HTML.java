@@ -52,6 +52,14 @@ public class Log2HTML extends LogBase implements ILogger
 			Result2HTML();
 		}
 	}
+
+	public void LogPass(String fpsMessage)
+	{
+		PrintCount++;
+		AllCount++;
+		
+		Point2LogObject.myLogs.add( new LogPass(Point2LogObject, fpsMessage) ); 	
+	}
 	
 	public void LogPrint(String fpsMessage)
 	{

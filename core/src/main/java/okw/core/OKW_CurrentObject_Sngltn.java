@@ -300,6 +300,15 @@ public class OKW_CurrentObject_Sngltn
 		}
 		return Instance;	}
 
+
+	private static Integer CalculateLoopCount( Integer SleepForMillis,
+		      Integer MaxWaitMilis )
+		  {
+		    Integer lviReturn = MaxWaitMilis / SleepForMillis;
+
+		    return lviReturn;
+		  }
+	
 	/**
 	 *  \~german
 	* \brief
@@ -1142,7 +1151,7 @@ public class OKW_CurrentObject_Sngltn
 
 	/** \~german
 	* \brief
-	* Ruft eine Methode des aktuellen Objektes via "late bound function call"
+	* Ruft eine Methode des aktuellen Objektes via "latebound function call"
 	* auf.
 	* Die aufgerufene Methode hat die Signatur:
 	*
@@ -1908,4 +1917,207 @@ public class OKW_CurrentObject_Sngltn
 		}
 		return;
 	}
+	
+	/**
+	 * \~german
+	 * \brief
+	 * Ruft eine Methode VerifyValue des aktuellen Objektes via "latebound function call" auf.<br/>
+	 * Die aufgerufene Methode hat die Signatur:<br/>
+	 *
+	 * | Parameter/Return | Type |
+	 * | :----------------|:-------------------|
+	 * | 1. Parameter | List&lt;String&gt; |
+	 * | Rückgabewert | List&lt;String&gt; |
+	 *
+	 * @param fpLsParameter_1 Parameter als List&lt;String&gt;.
+	 * @return ArrayList&lt;String&gt; .
+	 *
+ 	 * \~english 
+	 * \brief
+	 * Calls a method of the current Object with "late bound function call".
+	 * The called method has the signature:
+	 *
+	 * | Parameter/Return | Type |
+	 * | :----------------|:-------------------|
+	 * | 1st Parameter | List&lt;String&gt; |
+	 * | Return | List&lt;String&gt; |
+	 *
+	 *
+	 * param fpLsParameter_1 parameter as list&lt;String&gt;.
+	 * @return List&lt;String&gt; .
+	 *
+	 * \~
+	 * @author Zoltan Hrabovszki
+	 * @throws InterruptedException 
+	 * @date 2012.11.01
+	 */
+	@SuppressWarnings("unchecked")
+	public ArrayList<String> VerifyValue( ArrayList<String> fpALExpectedValues) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException, InterruptedException
+        {
+		
+	    Integer MaxCount = 0;
+	    Integer Count = 0;
+        Integer VerifyValue_PT;
+        Integer VerifyValue_TO;
+		
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
+            Boolean bOK = false;
+
+            Log.LogFunctionStartDebug("CallMethodWithReturn",
+                                           "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString());
+
+    		Class<?>[] paramTypes = {ArrayList.class};
+    		Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    		try
+    		{
+    			Method myMethod = myFrame_Class.getMethod("VerifyValue", paramTypes);
+    			lvLsReturn = (ArrayList<String>) myMethod.invoke(cvoObject, fpALExpectedValues);
+    			
+    			VerifyValue_PT = cvoObject.getClass().getAnnotation(okw.OKW.class).VerifyValue_PT();
+    			VerifyValue_TO = cvoObject.getClass().getAnnotation(okw.OKW.class).VerifyValue_TO();
+    		    MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
+    		    Count = 0;
+
+    		    while ( Count <= MaxCount )
+    		    {
+    		    	lvLsReturn = (ArrayList<String>) myMethod.invoke(cvoObject, fpALExpectedValues);;
+
+    		      if ( fpALExpectedValues.equals( lvLsReturn ) )
+    		      {
+    		        break;
+    		      }
+    		      else
+    		      {
+    		        Thread.sleep( VerifyValue_PT );
+    		      }
+
+    		      Count++;
+    		    }
+
+    			bOK = true;
+    		}
+    		catch (NoSuchMethodException e)
+    		{
+    			// Existiert die Methode des Objektes?
+    			// Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+    			// aussteigen...
+    			String errorText = LM.GetMessage("CallMethod", "MethodNotDefined", "VerifyValue");
+    			throw new OKWFrameObjectMethodNotFoundException(errorText);
+    		}
+            finally
+            {
+                if (bOK)
+                {
+                    Log.LogFunctionEndDebug(lvLsReturn);
+                }
+                else
+                {
+                    Log.LogFunctionEndDebug();
+                }
+            }
+            return lvLsReturn;
+        }
+	
+	/**
+	 * \~german
+	 * \brief
+	 * Ruft eine Methode VerifyValue des aktuellen Objektes via "latebound function call" auf.<br/>
+	 * Die aufgerufene Methode hat die Signatur:<br/>
+	 *
+	 * | Parameter/Return | Type |
+	 * | :----------------|:-------------------|
+	 * | 1. Parameter | List&lt;String&gt; |
+	 * | Rückgabewert | List&lt;String&gt; |
+	 *
+	 * @param fpLsParameter_1 Parameter als List&lt;String&gt;.
+	 * @return ArrayList&lt;String&gt; .
+	 *
+ 	 * \~english 
+	 * \brief
+	 * Calls a method of the current Object with "late bound function call".
+	 * The called method has the signature:
+	 *
+	 * | Parameter/Return | Type |
+	 * | :----------------|:-------------------|
+	 * | 1st Parameter | List&lt;String&gt; |
+	 * | Return | List&lt;String&gt; |
+	 *
+	 *
+	 * param fpLsParameter_1 parameter as list&lt;String&gt;.
+	 * @return List&lt;String&gt; .
+	 *
+	 * \~
+	 * @author Zoltan Hrabovszki
+	 * @throws InterruptedException 
+	 * @date 2012.11.01
+	 */
+	@SuppressWarnings("unchecked")
+	public ArrayList<String> VerifyValueREGX( ArrayList<String> fpALExpectedValues) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException, InterruptedException
+        {
+		
+	    Integer MaxCount = 0;
+	    Integer Count = 0;
+        Integer VerifyValue_PT;
+        Integer VerifyValue_TO;
+		
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
+            Boolean bOK = false;
+
+            Log.LogFunctionStartDebug("CallMethodWithReturn",
+                                           "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString());
+
+    		Class<?>[] paramTypes = {ArrayList.class};
+    		Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    		try
+    		{
+    			Method myMethod = myFrame_Class.getMethod("VerifyValue", paramTypes);
+    			lvLsReturn = (ArrayList<String>) myMethod.invoke(cvoObject, fpALExpectedValues);
+    			
+    			VerifyValue_PT = cvoObject.getClass().getAnnotation(okw.OKW.class).VerifyValue_PT();
+    			VerifyValue_TO = cvoObject.getClass().getAnnotation(okw.OKW.class).VerifyValue_TO();
+    		    MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
+    		    Count = 0;
+
+    		    while ( Count <= MaxCount )
+    		    {
+    		    	lvLsReturn = (ArrayList<String>) myMethod.invoke(cvoObject, fpALExpectedValues);;
+
+    		      if ( Matcher.RegexMatch(lvLsReturn, fpALExpectedValues))
+    		      {
+    		        break;
+    		      }
+    		      else
+    		      {
+    		        Thread.sleep( VerifyValue_PT );
+    		      }
+
+    		      Count++;
+    		    }
+
+    			bOK = true;
+    		}
+    		catch (NoSuchMethodException e)
+    		{
+    			// Existiert die Methode des Objektes?
+    			// Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+    			// aussteigen...
+    			String errorText = LM.GetMessage("CallMethod", "MethodNotDefined", "VerifyValue");
+    			throw new OKWFrameObjectMethodNotFoundException(errorText);
+    		}
+            finally
+            {
+                if (bOK)
+                {
+                    Log.LogFunctionEndDebug(lvLsReturn);
+                }
+                else
+                {
+                    Log.LogFunctionEndDebug();
+                }
+            }
+            return lvLsReturn;
+        }
+	
 }
