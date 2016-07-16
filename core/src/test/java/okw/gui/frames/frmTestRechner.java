@@ -33,7 +33,7 @@ public class frmTestRechner extends Test_Window
 
         /// \brief
         /// Test Objekt mit allen OKW-Methoden,
-        @OKW(FN="All_MethodsObj")
+        @OKW(FN="All_MethodsObj", VerifyValue_PT=1000, VerifyValue_TO=3)
         public AllMethods All_MethodsObj = new AllMethods("Locator_All_MethodsObj");
 
         /// \brief

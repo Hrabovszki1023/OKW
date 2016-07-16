@@ -185,7 +185,7 @@ public class OKW_HelperTest
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
-                OKW_Helper.GetRigthFromDelimiterNumber("AAAAGGBBBBGGDDDD", "", 1);
+                OKW_Helper.GetRightFromDelimiterNumber("AAAAGGBBBBGGDDDD", "", 1);
                 Assert.fail();
             }
             catch (IllegalArgumentException e)
@@ -207,7 +207,7 @@ public class OKW_HelperTest
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
-                OKW_Helper.GetRigthFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 3);
+                OKW_Helper.GetRightFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 3);
                 Assert.fail();
             }
             catch (IndexOutOfBoundsException e)
@@ -229,7 +229,7 @@ public class OKW_HelperTest
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
-                OKW_Helper.GetRigthFromDelimiterNumber( "AAAAGGBBBBGGDDDD", "GG", 0 );
+                OKW_Helper.GetRightFromDelimiterNumber( "AAAAGGBBBBGGDDDD", "GG", 0 );
                 Assert.fail();
             }
             catch (IndexOutOfBoundsException e)

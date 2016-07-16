@@ -21,303 +21,280 @@ import okw.log.*;
 public class FrameObjectDictionary_Test
 {
 
-	// / \brief
-	// / This is a test class for FrameObjectDictionaryTest and is intended
-	// / to contain all FrameObjectDictionaryTest Unit Tests
-	// /
-	static FrameObjectDictionary_Sngltn target; // = new
-												// FrameObjectDictionary();
-	
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception
-	{
+  // / \brief
+  // / This is a test class for FrameObjectDictionaryTest and is intended
+  // / to contain all FrameObjectDictionaryTest Unit Tests
+  // /
+  static FrameObjectDictionary_Sngltn target; // = new
 
-		Logger_Sngltn.getInstance();
-		// Reset des Loggers: Alle geladenen Instanzen löschen
-		Logger_Sngltn.Init();
+  // FrameObjectDictionary();
 
-		// Logger_Sngltn.getInstance().AddLogger(new Log2Console());
-		Logger_Sngltn.getInstance().setDebugMode( false );
+  @BeforeClass
+  public static void setUpBeforeClass() throws Exception
+  {
 
-		// System.out.Printline( "OKW_XML: " +
-		// Environment.GetEnvironmentVariable("OKW_Xml"));
+    Logger_Sngltn.getInstance();
+    // Reset des Loggers: Alle geladenen Instanzen löschen
+    Logger_Sngltn.Init();
 
-		target = FrameObjectDictionary_Sngltn.getInstance();
-	}
+    // Logger_Sngltn.getInstance().AddLogger(new Log2Console());
+    Logger_Sngltn.getInstance().setDebugMode( true );
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception
-	{
-	}
+    // System.out.Printline( "OKW_XML: " +
+    // Environment.GetEnvironmentVariable("OKW_Xml"));
 
-	@Before
-	public void setUp() throws Exception
-	{
-	}
+    target = FrameObjectDictionary_Sngltn.getInstance();
+  }
 
-	@After
-	public void tearDown() throws Exception
-	{
-	}
+  @AfterClass
+  public static void tearDownAfterClass() throws Exception
+  {
+  }
 
-	// / \brief
-	// / A test for CreateInstanceByObjectName
-	// /
-	@Test
-	public void GetObjectByName_Window()
-	{
-		Object actual = null;
+  @Before
+  public void setUp() throws Exception
+  {
+  }
 
-		try
-		{
-			actual = target.GetParentObjectByName( "Rechner" );
-		}
-		catch (XPathExpressionException e)
-		{
-			fail( e.getMessage() );
-		}
+  @After
+  public void tearDown() throws Exception
+  {
+  }
 
-		// Does the "Rechner" exists?
-		Boolean object_Exists = target.myFrameObjectDictionary
-				.containsKey( "Rechner" );
-		assertEquals( true, object_Exists );
+  // / \brief
+  // / A test for CreateInstanceByObjectName
+  // /
+  @Test
+  public void GetObjectByName_Window()
+  {
+    Object actual = null;
 
-		// We get the <<right>> object?
-		Object expected = target.myFrameObjectDictionary.get( "Rechner" );
+    try
+    {
+      actual = target.GetParentObjectByName( "Rechner" );
+    }
+    catch (XPathExpressionException e)
+    {
+      fail( e.getMessage() );
+    }
 
-		Logger_Sngltn.getInstance().LogPrint( "Objekt Prüfung:" );
-		Logger_Sngltn.getInstance().LogVerify( expected.toString(),
-				actual.toString() );
+    // Does the "Rechner" exists?
+    Boolean object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner" );
+    assertEquals( true, object_Exists );
 
-		assertEquals( expected, actual );
-	}
+    // We get the <<right>> object?
+    Object expected = target.myFrameObjectDictionary.get( "Rechner" );
 
-	// / \brief
-	// / A test for CreateInstanceByObjectName
-	// /
-	@Test
-	public void GetObjectByName_WindowAndChild()
-	{
-		Object actual = null;
+    Logger_Sngltn.getInstance().LogPrint( "Objekt Prüfung:" );
+    Logger_Sngltn.getInstance().LogVerify( expected.toString(), actual.toString() );
 
-		try
-		{
-			actual = target.GetChildObjectByName( "Rechner", "Taste_3" );
-		}
-		catch (XPathExpressionException e)
-		{
-			fail( e.getMessage() );
-		}
+    assertEquals( expected, actual );
+  }
 
-		// Does the "Rechner" exists?
-		Boolean object_Exists = target.myFrameObjectDictionary
-				.containsKey( "Rechner" );
-		assertEquals( true, object_Exists );
+  // / \brief
+  // / A test for CreateInstanceByObjectName
+  // /
+  @Test
+  public void GetObjectByName_WindowAndChild()
+  {
+    Object actual = null;
 
-		// Child is Also there?
-		object_Exists = target.myFrameObjectDictionary
-				.containsKey( "Rechner.Taste_3" );
-		assertEquals( true, object_Exists );
+    try
+    {
+      actual = target.GetChildObjectByName( "Rechner", "Taste_3" );
+    }
+    catch (XPathExpressionException | IllegalArgumentException | IllegalAccessException e)
+    {
+      fail( e.getMessage() );
+    }
 
-		// We get the <<right>> object?
-		Object expected = target.myFrameObjectDictionary
-				.get( "Rechner.Taste_3" );
+    // Does the "Rechner" exists?
+    Boolean object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner" );
+    assertEquals( true, object_Exists );
 
-		Logger_Sngltn.getInstance().LogPrint( "Objekt Prüfung:" );
-		Logger_Sngltn.getInstance().LogVerify( expected.toString(),
-				actual.toString() );
-		assertEquals( expected, actual );
-	}
+    // Child is Also there?
+    object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner.Taste_3" );
+    assertEquals( true, object_Exists );
 
-	// / \~german
-	// / \brief
-	// / Prüft die Initialisierung der Klasse FrameObjectDictionary.
-	// /
-	// / Vorgehen: Klasse wird im ersten Schritt mit Frames geladen,
-	// /
-	// / \~german
-	// / \brief
-	// /
-	// / \~
-	// / \author Zoltan Hrabovszki
-	// / \date 2014-09-28
-	@Test
-	public void InitTest()
-	{
+    // We get the <<right>> object?
+    Object expected = target.myFrameObjectDictionary.get( "Rechner.Taste_3" );
 
-		// ------------------------------------------------------------------------------------
-		//
-		// Frame laden.
-		try
-		{
-			target.GetChildObjectByName( "Rechner", "Taste_3" );
-		}
-		catch (XPathExpressionException e)
-		{
+    Logger_Sngltn.getInstance().LogPrint( "Objekt Prüfung:" );
+    Logger_Sngltn.getInstance().LogVerify( expected.toString(), actual.toString() );
+    assertEquals( expected, actual );
+  }
 
-			fail( e.getMessage() );
-		}
+  // / \~german
+  // / \brief
+  // / Prüft die Initialisierung der Klasse FrameObjectDictionary.
+  // /
+  // / Vorgehen: Klasse wird im ersten Schritt mit Frames geladen,
+  // /
+  // / \~german
+  // / \brief
+  // /
+  // / \~
+  // / \author Zoltan Hrabovszki
+  // / \date 2014-09-28
+  @Test
+  public void InitTest()
+  {
 
-		// Prüfen ob die erwarteten Elemente Rechner, Taste_3 vorhanden sind.
-		// Does the "Rechner" exists?
-		Boolean object_Exists = target.myFrameObjectDictionary
-				.containsKey( "Rechner" );
-		assertEquals( true, object_Exists );
+    // ------------------------------------------------------------------------------------
+    //
+    // Frame laden.
+    try
+    {
+      target.GetChildObjectByName( "Rechner", "Taste_3" );
+    }
+    catch (XPathExpressionException | IllegalArgumentException | IllegalAccessException e)
+    {
 
-		// Is the Child also there?
-		object_Exists = target.myFrameObjectDictionary
-				.containsKey( "Rechner.Taste_3" );
-		assertEquals( true, object_Exists );
+      fail( e.getMessage() );
+    }
 
-		// ------------------------------------------------------------------------------------
-		// Nach der Initialisiserung müssen die Objekte "Rechner" und Taste_3
-		// erneut existieren.
-		try
-		{
-			target.Init();
-		}
-		catch (Exception e)
-		{
+    // Prüfen ob die erwarteten Elemente Rechner, Taste_3 vorhanden sind.
+    // Does the "Rechner" exists?
+    Boolean object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner" );
+    assertEquals( true, object_Exists );
 
-			fail( e.getMessage() );
-		}
+    // Is the Child also there?
+    object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner.Taste_3" );
+    assertEquals( true, object_Exists );
 
-		object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner" );
-		assertEquals( true, object_Exists );
+    // ------------------------------------------------------------------------------------
+    // Nach der Initialisiserung müssen die Objekte "Rechner" und Taste_3
+    // erneut existieren.
+    try
+    {
+      target.Init();
+    }
+    catch (Exception e)
+    {
 
-		// Is the Child also there?
-		object_Exists = target.myFrameObjectDictionary
-				.containsKey( "Rechner.Taste_3" );
-		assertEquals( true, object_Exists );
-	}
+      fail( e.getMessage() );
+    }
 
-	// / \~german
-	// / \brief
-	// / Prüft ob eine OKWFrameObjectWindowNotFoundException ausgelöst wird,
-	// wenn das Fensterobjekt nicht existiert.
-	// /
-	// / Bedingung für das auslösen:
-	// / -# Das Fenster-Objekt _existiert nicht_.
-	// /
-	// / Das Kind-Objekt wird als parameter nicht angegeben.
-	// /
-	// /
-	// / \~german
-	// / \brief
-	// /
-	// / \~
-	// / \author Zoltan Hrabovszki
-	// / \date 2014-09-28
-	@Test
-	public void TC_CreatInstanceByObjectName_OKWFrameObjectWindowNotFoundException_1()
-	{
-		try
-		{
-			target.GetParentObjectByName( "RechnerNotExists" );
-			fail();
+    object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner" );
+    assertEquals( true, object_Exists );
 
-		}
-		catch (OKWFrameObjectParentNotFoundException e)
-		{
-			Logger_Sngltn
-					.getInstance()
-					.LogPrint(
-							"OKWFrameObjectParentNotFoundException wurde ausgelöst, das ist für diesen Test OK!" );
-		}
-		catch (Exception e)
-		{
-			Logger_Sngltn.getInstance().LogPrint(
-					"Exception: " + e.getClass().getName() );
-			Logger_Sngltn.getInstance().LogPrint(
-					"Nachricht: " + e.getMessage() );
-			fail( "Falsche Exception: " + e.getMessage() );
-		}
-	}
+    // Is the Child also there?
+    object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner.Taste_3" );
+    assertEquals( true, object_Exists );
+  }
 
-	// / \~german
-	// / \brief
-	// / Prüft ob eine OKWFrameObjectWindowNotFoundException ausgelöst wird,
-	// wenn das Fensterobjekt nicht existiert.
-	// /
-	// / Bedingung für das auslösen:
-	// / -# Das Fenster-Objekt _existiert nicht_.
-	// / -# Das Kind-Objekt _existiert_ dann auch _nicht_.
-	// /
-	// / Das Kind-Objekt wird als parameter nicht angegeben.
-	// /
-	// /
-	// / \~german
-	// / \brief
-	// /
-	// / \~
-	// / \author Zoltan Hrabovszki
-	// / \date 2014-09-28
-	@Test
-	public void TC_CreatInstanceByObjectName__OKWFrameObjectWindowNotFoundException()
-	{
+  // / \~german
+  // / \brief
+  // / Prüft ob eine OKWFrameObjectWindowNotFoundException ausgelöst wird,
+  // wenn das Fensterobjekt nicht existiert.
+  // /
+  // / Bedingung für das auslösen:
+  // / -# Das Fenster-Objekt _existiert nicht_.
+  // /
+  // / Das Kind-Objekt wird als parameter nicht angegeben.
+  // /
+  // /
+  // / \~german
+  // / \brief
+  // /
+  // / \~
+  // / \author Zoltan Hrabovszki
+  // / \date 2014-09-28
+  @Test
+  public void TC_CreatInstanceByObjectName_OKWFrameObjectWindowNotFoundException_1()
+  {
+    try
+    {
+      target.GetParentObjectByName( "RechnerNotExists" );
+      fail();
 
-		try
-		{
-			target.GetChildObjectByName( "RechnerNotExists", "Taste_3" );
-			fail();
+    }
+    catch (OKWFrameObjectParentNotFoundException e)
+    {
+      Logger_Sngltn.getInstance().LogPrint( "OKWFrameObjectParentNotFoundException wurde ausgelöst, das ist für diesen Test OK!" );
+    }
+    catch (Exception e)
+    {
+      Logger_Sngltn.getInstance().LogPrint( "Exception: " + e.getClass().getName() );
+      Logger_Sngltn.getInstance().LogPrint( "Nachricht: " + e.getMessage() );
+      fail( "Falsche Exception: " + e.getMessage() );
+    }
+  }
 
-		}
-		catch (OKWFrameObjectChildNotFoundException e)
-		{
-			Logger_Sngltn
-					.getInstance()
-					.LogPrint(
-							"OKWFrameObjectChildNotFoundException wurde ausgelöst, das ist für diesen Test OK!" );
-		}
-		catch (Exception e)
-		{
-			Logger_Sngltn.getInstance().LogPrint(
-					"Exception: " + e.getClass().getName() );
-			Logger_Sngltn.getInstance().LogPrint(
-					"Nachricht: " + e.getMessage() );
-			fail( "Falsche Exception: " + e.getMessage() );
-		}
-	}
+  // / \~german
+  // / \brief
+  // / Prüft ob eine OKWFrameObjectWindowNotFoundException ausgelöst wird,
+  // wenn das Fensterobjekt nicht existiert.
+  // /
+  // / Bedingung für das auslösen:
+  // / -# Das Fenster-Objekt _existiert nicht_.
+  // / -# Das Kind-Objekt _existiert_ dann auch _nicht_.
+  // /
+  // / Das Kind-Objekt wird als parameter nicht angegeben.
+  // /
+  // /
+  // / \~german
+  // / \brief
+  // /
+  // / \~
+  // / \author Zoltan Hrabovszki
+  // / \date 2014-09-28
+  @Test
+  public void TC_CreatInstanceByObjectName__OKWFrameObjectWindowNotFoundException()
+  {
 
-	// / \~german
-	// / \brief
-	// / Prüft ob eine OKWFrameObjectChildNotFoundException ausgelöst wird
-	// /
-	// / Bedingung für das auslösen:
-	// / -# Das Fenster-Objekt _existiert_.
-	// / -# Das Kind-Objekt _existiert nicht_.
-	// /
-	// /
-	// /
-	// / \~german
-	// / \brief
-	// /
-	// / \~
-	// / \author Zoltan Hrabovszki
-	// / \date 2014-09-28
-	@Test
-	public void TC_CreatInstanceByObjectName_OKWFrameObjectChildNotFoundException()
-	{
+    try
+    {
+      target.GetChildObjectByName( "RechnerNotExists", "Taste_3" );
+      fail();
 
-		try
-		{
-			target.GetChildObjectByName( "Rechner", "TasteNotExists" );
-			fail();
-		}
-		catch (OKWFrameObjectChildNotFoundException e)
-		{
-			Logger_Sngltn
-					.getInstance()
-					.LogPrint(
-							"OKWFrameObjectChildNotFoundException wurde ausgelöst, das ist für diesen Test OK!" );
-		}
-		catch (Exception e)
-		{
-			Logger_Sngltn.getInstance().LogPrint(
-					"Exception: " + e.getClass().getName() );
-			Logger_Sngltn.getInstance().LogPrint(
-					"Nachricht: " + e.getMessage() );
-			fail( "Falsche Exception: " + e.getMessage() );
-		}
-	}
+    }
+    catch (OKWFrameObjectChildNotFoundException e)
+    {
+      Logger_Sngltn.getInstance().LogPrint( "OKWFrameObjectChildNotFoundException wurde ausgelöst, das ist für diesen Test OK!" );
+    }
+    catch (Exception e)
+    {
+      Logger_Sngltn.getInstance().LogPrint( "Exception: " + e.getClass().getName() );
+      Logger_Sngltn.getInstance().LogPrint( "Nachricht: " + e.getMessage() );
+      fail( "Falsche Exception: " + e.getMessage() );
+    }
+  }
+
+  // / \~german
+  // / \brief
+  // / Prüft ob eine OKWFrameObjectChildNotFoundException ausgelöst wird
+  // /
+  // / Bedingung für das auslösen:
+  // / -# Das Fenster-Objekt _existiert_.
+  // / -# Das Kind-Objekt _existiert nicht_.
+  // /
+  // /
+  // /
+  // / \~german
+  // / \brief
+  // /
+  // / \~
+  // / \author Zoltan Hrabovszki
+  // / \date 2014-09-28
+  @Test
+  public void TC_CreatInstanceByObjectName_OKWFrameObjectChildNotFoundException()
+  {
+
+    try
+    {
+      target.GetChildObjectByName( "Rechner", "TasteNotExists" );
+      fail();
+    }
+    catch (OKWFrameObjectChildNotFoundException e)
+    {
+      Logger_Sngltn.getInstance().LogPrint( "OKWFrameObjectChildNotFoundException wurde ausgelöst, das ist für diesen Test OK!" );
+    }
+    catch (Exception e)
+    {
+      Logger_Sngltn.getInstance().LogPrint( "Exception: " + e.getClass().getName() );
+      Logger_Sngltn.getInstance().LogPrint( "Nachricht: " + e.getMessage() );
+      fail( "Falsche Exception: " + e.getMessage() );
+    }
+  }
 }

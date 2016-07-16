@@ -23,8 +23,6 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     // Logger Instance holen
     protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
     
-    protected OKW_WaitForValue MyWaitForValue = new OKW_WaitForValue(this);
-
     protected LogMessenger LM = new LogMessenger("GUI");
 
     public SeAnyWin(String Locator, OKWLocator... fpLocators)
@@ -532,12 +530,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         try
         {
             // Nun mit dem erwarteten Sollwert und GetExists ggf. auf den erwartetetn Wert warten.
-            lvbReturn = this.MyWaitForValue.getExists( fpbExpectedValue, SleepForMillis, MaxWaitMilis );
-
-            if (fpbExpectedValue == true && lvbReturn != fpbExpectedValue )
-            {
-                this.MyLogger.LogPrint( String.format( "Locator: >>{0}<<", this.getLocator()) );
-            }
+            lvbReturn = this.getExists( );
             
             bOK = true;
         }
@@ -578,7 +571,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         {
 
             // Nun mit dem erwarteten Sollwert und GetIsActive ggf. auf den erwarteten Wert warten.
-            lvbReturn = this.MyWaitForValue.getIsActive( fpbExpectedValue, SleepForMillis, MaxWaitMilis );
+            lvbReturn = this.getIsActive( );
 
             bOK = true;
         }
@@ -621,7 +614,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         try
         {
             // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
-            lvLsReturn = MyWaitForValue.getTooltip( fplsExpectedValue, SleepForMillis, MaxWaitMilis );
+            lvLsReturn = this.getTooltip( );
 
             bOK = true;
         }
@@ -668,7 +661,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         try
         {
             // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
-            lvLsReturn = MyWaitForValue.getLabel( fplsExpectedValue, SleepForMillis, MaxWaitMilis );
+            lvLsReturn = this.getLabel( );
 
             bOK = true;
         }
@@ -1091,7 +1084,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
             MyLogger.LogFunctionStartDebug("VerifyHasFocus", "fpbExpectedValue", fpbExpectedValue.toString());
 
             // Nun mit dem erwarteten Sollwert und GetHasFocus ggf. auf den Wert Warten.
-            lvbReturn = MyWaitForValue.getHasFocus( fpbExpectedValue, SleepForMillis, MaxWaitMilis );
+            lvbReturn = this.getHasFocus( );
             bOK = true;
         }
         finally
@@ -1134,7 +1127,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         {
 
             // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
-            lvLsReturn = MyWaitForValue.getCaption( fplsExpectedValue, SleepForMillis, MaxWaitMilis );
+            lvLsReturn = this.getCaption( );
 
             bOK = true;
         }
@@ -1413,7 +1406,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
             MyLogger.LogFunctionStartDebug("Memorize", "fplsExpectedValue", fplsExpectedValue.get(0));
 
             // Nun mit dem erwarteten Sollwert und GetValue ggf. auf den Wert Warten.
-            lvLsReturn = MyWaitForValue.getValue( fplsExpectedValue, SleepForMillis, MaxWaitMilis );
+            lvLsReturn = this.getValue( );
 
             bOK = true;
         }

@@ -98,7 +98,7 @@ import okw.gui.OKWLocator;
             try
             {
                 // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
-                lvLsReturn = MyWaitForValue.getCaption( fplsExpectedValue, SleepForMillis, MaxWaitMilis );
+                lvLsReturn = this.getCaption( );
 
                 bOK = true;
             }

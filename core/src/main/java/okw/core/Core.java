@@ -464,6 +464,18 @@ import okw.*;
 			this.CurrentState.VerifyValue(fpsFunctionalname, fpsExpectedValue);
 		}
 
+		/// \copydoc IOKW_State::VerifyValue(String,String,String)
+    public void VerifyValue(String fpsFunctionalname, String fpsVerifictionType, String fpsExpectedValue) throws Exception
+    {
+      this.CurrentState.VerifyValue(fpsFunctionalname, fpsExpectedValue);
+    }
+
+    /// \copydoc IOKW_State::VerifyValue(String,String,String,String)
+    public void VerifyValue(String fpsFunctionalname, String fpsVerifictionType, String fpsVerificationParam, String fpsExpectedValue) throws Exception
+    {
+      this.CurrentState.VerifyValue(fpsFunctionalname, fpsExpectedValue);
+    }
+
 		/// \copydoc IOKW_State::FileDelete(String)
 		public void FileDelete(String fpsPathAndFileName) throws Exception
 		{

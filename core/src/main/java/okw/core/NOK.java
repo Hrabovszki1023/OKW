@@ -707,10 +707,9 @@ import okw.log.*;
 			Log.LogFunctionEndDebug();
 		}
 
-		/// \~german
+		/**
 		/// \copydoc IOKW_State::VerifyValue(String,String)
-		/// \~english
-		/// \copydoc IOKW_State::VerifyValue(String,String)
+		*/
 		public void VerifyValue(String fpsFunctionalname, String fpsExpectedValue)
 		{
 			Log.LogFunctionStartDebug("VerifyValue",
@@ -720,6 +719,32 @@ import okw.log.*;
 			Log.LogFunctionEndDebug();
 		}
 
+    /**
+    /// \copydoc IOKW_State::VerifyValue(String,String)
+    */
+    public void VerifyValue(String fpsFunctionalname, String fpsVerifictionType, String fpsExpectedValue)
+    {
+      Log.LogFunctionStartDebug("VerifyValue",
+        "fpsFunctionalname", fpsFunctionalname,
+        "fpsVerifictionType", fpsVerifictionType,
+        "fpsExpectedValue", fpsExpectedValue);
+
+      Log.LogFunctionEndDebug();
+    }
+
+    /**
+    /// \copydoc IOKW_State::VerifyValue(String,String)
+    */
+    public void VerifyValue(String fpsFunctionalname, String fpsVerifictionType, String fpsVerifictionParam, String fpsExpectedValue)
+    {
+      Log.LogFunctionStartDebug("VerifyValue",
+        "fpsFunctionalname",   fpsFunctionalname,
+        "fpsVerifictionType",  fpsVerifictionType,
+        "fpsVerifictionParam", fpsVerifictionParam,
+        "fpsExpectedValue",    fpsExpectedValue);
+
+      Log.LogFunctionEndDebug();
+    }
 
 		/// \copydoc IOKW_State::FileDelete(String)
 		public void FileDelete(String fpsPathAndFileName)
@@ -753,7 +778,10 @@ import okw.log.*;
 		@Override
 		public void CopyFile( String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName )
 		{
-			// TODO Auto-generated method stub
-			
+      Log.LogFunctionStartDebug("CopyFile",
+              "fpsSourcePathAndFileName", fpsSourcePathAndFileName,
+              "fpsDestinationPathAndFileName", fpsDestinationPathAndFileName);
+
+      Log.LogFunctionEndDebug();
 		}
 	}

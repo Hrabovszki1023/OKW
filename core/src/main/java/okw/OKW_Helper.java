@@ -307,7 +307,7 @@ public class OKW_Helper
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.05.03
-	public static String GetRigthFromDelimiterNumber( String fpsSource, String fpsDelimiter, Integer fpiCount ) throws XPathExpressionException
+	public static String GetRightFromDelimiterNumber( String fpsSource, String fpsDelimiter, Integer fpiCount ) throws XPathExpressionException
 	{
 		String lvsReturn = "";
 		List<String> lvLsSplitedSource = null;

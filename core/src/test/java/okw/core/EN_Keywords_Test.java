@@ -1437,10 +1437,10 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-    EN.VerifyValue( "All_MethodsObj", "Sollwert_1" );
+    EN.VerifyValue( "All_MethodsObj", "ReturnValue VerifyValue()" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "ReturnValue VerifyValue()", myClipBoard.getValue().get( 0 ) );
     assertEquals( 1, myClipBoard.getValue().size() );
 
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );

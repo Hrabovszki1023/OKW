@@ -700,7 +700,7 @@ public class CurrentObject_Test {
 	        /// \author Zoltan Hrabovszki
 	        /// \date 2012.12.16
 	    	@Test
-	        public void TC_SetChildName() throws XPathExpressionException
+	        public void TC_SetChildName() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
 	        {
 	            // Setzen wir den Namen des Fensters
 	            CO.SetWindowName("Rechner");
@@ -753,7 +753,7 @@ public class CurrentObject_Test {
 	        /// Es wird geprüft ob CurrentObject.cvs_ObjectName richtig gesetz ist.
 	        /// \date 2012.12.16
 	    	@Test
-	        public void TC_SetWindowName() throws XPathExpressionException
+	        public void TC_SetWindowName() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
 	        {
 	            // Setzen wir den Namen des Fensters
 	            CO.SetWindowName("Rechner");
@@ -771,7 +771,7 @@ public class CurrentObject_Test {
 	        /// Es wird geprüft ob CurrentObject.cvs_ObjectName richtig gesetz ist.
 	        /// \date 2012.12.16
 	    	@Test
-	        public void TC_SetWindowName_AfterChildWasSetted() throws XPathExpressionException
+	        public void TC_SetWindowName_AfterChildWasSetted() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
 	        {
 	            // Setzen wir den Namen des Fensters
 	            CO.SetWindowName("Rechner");

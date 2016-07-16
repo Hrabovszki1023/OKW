@@ -1400,32 +1400,104 @@ public interface IOKW_State
         /// \date 2014-09-21
         void VerifyTooltip(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
 
-        /// \~german
-        /// \brief
-        /// Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text).
-        /// 
-        /// _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
-        /// Wert "Django" entspricht:_ <br/>
-        /// \verbatim Prüfe Wert: "MeinObjekt", "Django" \endverbatim
-        /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsExpectedValue Erwarteter Wert 
-        ///
-        /// \~english
-        /// \brief
-        /// Checks the standard value of an object (in most cases this is the displayed text).
-        /// 
-        /// _Example: Check if the value (text) of object "MyObject" equals the expected value "Django":_<br/>
-        /// \verbatim Verify Value: "MyObject", "Django" \endverbatim
-        /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsExpectedValue Expected value 
-        ///
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014-09-21
+        /**
+         *  \~german
+         *  \brief
+         *  Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text).
+         *  
+         *  _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
+         *  Wert "Django" entspricht:_ <br/>
+         *  
+         *  \verbatim Prüfe Wert: "MeinObjekt", "Django" \endverbatim
+         *  
+         *  Dieses Schlüsselwort prüft die exakte Übereinstimmung. Wildkards sind nicht möglich. 
+         *  
+         *  \param fpsFunctionalname Funktionaler Name des Objekts 
+         *  \param fpsExpectedValue Erwarteter Wert 
+         * 
+         *  \~english
+         *  \brief
+         *  Checks the standard value of an object (in most cases this is the displayed text).
+         *  
+         *  _Example: Check if the value (text) of object "MyObject" equals the expected value "Django":_<br/>
+         *  \verbatim Verify Value: "MyObject", "Django" \endverbatim
+         *  
+         *  \param fpsFunctionalname Functional name of the object 
+         *  \param fpsExpectedValue Expected value 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21
+         */
         void VerifyValue(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
-		
+
+        /**
+         *  \~german
+         *  \brief
+         *  Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text).
+         *  
+         *  _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
+         *  Wert "Django" entspricht:_ <br/>
+         *  
+         *  \verbatim Prüfe Wert: "MeinObjekt", "WCM" "*jango" \endverbatim
+         *  \verbatim Prüfe Wert: "MeinObjekt", "REGX" "$Django" \endverbatim
+         *           
+         *  \param fpsFunctionalname Funktionaler Name des Objekts 
+         *  \param fpsVerifictionType Erlaubte Werte sind: "REGX" für Regulärenausdruck und "WCM"-"Wildcard match"
+         *  \param fpsExpectedValue Erwarteter Wert 
+         * 
+         *  \~english
+         *  \brief
+         *  Checks the standard value of an object (in most cases this is the displayed text).
+         *  
+         *  _Example: Check if the value (text) of object "MyObject" equals the expected value "Django":_<br/>
+         *  \verbatim Verify Value: "MyObject", "Django" \endverbatim
+         *  
+         *  \param fpsFunctionalname Functional name of the object 
+         *  \param fpsVerifictionType Allowed values: "REGX"-Regularexpression and "WCM"-Wildcard match 
+         *  \param fpsExpectedValue Expected value 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21
+         */
+        void VerifyValue(String fpsFunctionalname, String fpsVerifictionType, String fpsExpectedValue) throws Exception;
+
+        /**
+         *  \~german
+         *  \brief
+         *  Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text).
+         *  
+         *  _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
+         *  Wert "Django" entspricht:_ <br/>
+         *  
+         *  \verbatim Prüfe Wert: "MeinObjekt", "Django" \endverbatim
+         *  
+         *  Dieses Schlüsselwort prüft die exakte Übereinstimmung. Wildkards sind nicht möglich. 
+         *  
+         *  \param fpsFunctionalname Funktionaler Name des Objekts 
+         *  \param fpsVerifictionType Erlaubte Werte sind: "REGX" für Regulärenausdruck und "WCM"-"Wildcard match"
+         *  \param fpsVerifictionParam ein Paramter zu VerificationType
+         *  \param fpsExpectedValue Erwarteter Wert 
+         * 
+         *  \~english
+         *  \brief
+         *  Checks the standard value of an object (in most cases this is the displayed text).
+         *  
+         *  _Example: Check if the value (text) of object "MyObject" equals the expected value "Django":_<br/>
+         *  \verbatim Verify Value: "MyObject", "Django" \endverbatim
+         *  
+         *  \param fpsFunctionalname Functional name of the object 
+         *  \param fpsVerifictionType Allowed values: "FD"-Regularexpression and "WCM"-Wildcard match 
+         *  \param fpsVerifictionParam ein Paramter zu VerificationType
+         *  \param fpsExpectedValue Expected value 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21
+         */
+        void VerifyValue(String fpsFunctionalname, String fpsVerifictionType, String fpsVerifictionParam, String fpsExpectedValue) throws Exception;
+
 
         ///
 		void CopyFile(String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName) throws Exception;

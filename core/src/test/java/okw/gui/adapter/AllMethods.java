@@ -800,19 +800,19 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-        public List<String> VerifyValue(ArrayList<String> fpLsExpectedValue)
+        public List<String> VerifyValue()
         {
             List<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyValue");
-            lvLsReturn.addAll(fpLsExpectedValue);
+            lvLsReturn.add("ReturnValue VerifyValue()");
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyValue()");
 
-            myClipboard.getValue().addAll(fpLsExpectedValue);
+            myClipboard.getValue().add("ReturnValue VerifyValue()");
 
             this.myLogger.LogFunctionEndDebug();
 

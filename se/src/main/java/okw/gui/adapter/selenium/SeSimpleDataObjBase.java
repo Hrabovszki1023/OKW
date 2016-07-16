@@ -161,7 +161,7 @@ import okw.gui.*;
 
 
                 // Nun mit dem erwarteten Sollwert und GetValue ggf. auf den Wert Warten.
-                lvLsReturn = MyWaitForValue.getValue(fplsExpectedValue, SleepForMillis, MaxWaitMilis);
+                lvLsReturn = this.getValue( );
 
                 bOK = true;
             }
