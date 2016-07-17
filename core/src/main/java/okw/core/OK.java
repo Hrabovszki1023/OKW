@@ -1470,6 +1470,9 @@ public class OK implements IOKW_State {
 	 *  \copydoc IOKW_State::VerifyValue(string,string)
 	 */
 	public void VerifyValue(String fpsFunctionalname, String fpsExpectedValue) throws Exception {
+
+	    Boolean bFail = false;
+	    
 		Log.LogFunctionStartDebug("VerifyValue", "fpsFunctionalname", fpsFunctionalname, "fpsExpected",
 				fpsExpectedValue);
 
@@ -1515,27 +1518,34 @@ public class OK implements IOKW_State {
             }
             else
             {
-              Log.LogError( Actual.get(i) + " \u2260 " + lvlsExpected.get(i) );
-              Log.ResOpenList( "Details..." );
-              Log.LogPrint( "  Actual: " + Actual.get(i) );
-              Log.LogPrint( "Expected: " + lvlsExpected.get(i) );
-              Log.ResCloseList();
+                bFail = true;
+                
+                Log.LogError( Actual.get(i) + " \u2260 " + lvlsExpected.get(i) );
+                Log.ResOpenList( "Details..." );
+                Log.LogPrint( "  Actual: " + Actual.get(i) );
+                Log.LogPrint( "Expected: " + lvlsExpected.get(i) );
+                Log.ResCloseList();
             }
           }
         }
         else
         {
-          Log.LogPass( "Size Error!" );
-          Log.LogError( Actual.size() + " \u2260 " + lvlsExpected.size() );
-          Log.ResOpenList( "Details..." );
-          Log.LogPrint( "  Actual: " + Actual.size() );
-          Log.LogPrint( "Expected: " + lvlsExpected.size() );
-          Log.ResCloseList();
+            bFail = true;
+        	
+            Log.LogError( Actual.size() + " \u2260 " + lvlsExpected.size() );
+            Log.ResOpenList( "Details..." );
+            Log.LogPrint( "  Actual: " + Actual.size() );
+            Log.LogPrint( "Expected: " + lvlsExpected.size() );
+            Log.ResCloseList();
         }
         
-				Log.LogPrintDebug(LM.GetMessage("VerifyValue", "VerifyValues"));
+        if (bFail)
+        {
+        	// Fehler Ausnahme auslösen
+        	throw new OKWVerifyingFailsException();  	
+        }
 
-			}
+	}
 		} 
 		catch (Exception e) 
 		{
@@ -1551,8 +1561,45 @@ public class OK implements IOKW_State {
    *  \copydoc IOKW_State::VerifyValue(String,String,String)
    */
   public void VerifyValue(String fpsFunctionalname, String fpsVeryficytionType, String fpsExpectedValue) throws Exception {
+    
+    Log.LogFunctionStartDebug("VerifyValue", "fpsFunctionalname", fpsFunctionalname, "fpsVeryficytionType ", fpsVeryficytionType, "fpsExpected", fpsExpectedValue);
+
+    try
+    {
+        switch (fpsVeryficytionType)
+        {
+          case "REGX":
+            this.VerifyValueREGX( fpsFunctionalname, fpsExpectedValue );
+            break;
+
+          case "WCM":
+            this.VerifyValueWCM( fpsFunctionalname, fpsExpectedValue );            
+            break;
+            
+          default:
+        	
+        	  // TODO: /todo In Sprachdatei auslagern
+            throw new OKWNotAllowedValueException( "Value " + fpsVeryficytionType + " is Notallow here.");
+            // break;
+        }
+    }
+	catch (Exception e) 
+	{
+		this.HandleException(e);
+	} 
+    finally 
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
+  
+  /**
+   *  \copydoc IOKW_State::VerifyValue(String,String,String)
+   */
+  private void VerifyValueWCM(String fpsFunctionalname, String fpsExpectedValue) throws Exception {
 
     ArrayList<String> Actual = null;
+    Boolean bFail = false;
     
     Log.LogFunctionStartDebug("VerifyValue", "fpsFunctionalname", fpsFunctionalname, "fpsExpected",
         fpsExpectedValue);
@@ -1578,28 +1625,12 @@ public class OK implements IOKW_State {
 
         CO.SetChildName(fpsFunctionalname);
         
-        switch (fpsVeryficytionType)
-        {
-          case "REGX":
-            Actual = CO.VerifyValueREGX( lvlsExpected );
-            break;
-
-          case "WCM":
-            Actual = CO.VerifyValueWCM( lvlsExpected );            
-            break;
-            
-          default:
-            throw new OKWNotAllowedValueException( "Value " + fpsVeryficytionType + " is Notallow here.");
-            // break;
-        }
+        Actual = CO.VerifyValueWCM( lvlsExpected );            
         
-        // Verify:
-        // 1. are the List length equal?
-        Log.LogPrintDebug(LM.GetMessage("VerifyValue", "VerifyListCount"));
-
         Integer ActualSize = new Integer(Actual.size());
         Integer ExpectedSize = new Integer(lvlsExpected.size());
 
+     
         if( ActualSize.equals( ExpectedSize ))
         {
           Log.LogPass( "Size is OK!" );
@@ -1607,12 +1638,14 @@ public class OK implements IOKW_State {
           for (int i = 0; i < Actual.size(); i++)
           {
             
-            if (Actual.get(i).equals( lvlsExpected.get(i)))
+            if (Matcher.WildcardMatch(Actual.get(i), lvlsExpected.get(i)) )
             {
               Log.LogPass( Actual.get(i) + " = " + lvlsExpected.get(i) );
             }
             else
             {
+              bFail = true;
+                
               Log.LogError( Actual.get(i) + " \u2260 " + lvlsExpected.get(i) );
               Log.ResOpenList( "Details..." );
               Log.LogPrint( "  Actual: " + Actual.get(i) );
@@ -1623,7 +1656,8 @@ public class OK implements IOKW_State {
         }
         else
         {
-          Log.LogPass( "Size Error!" );
+          bFail = true;
+
           Log.LogError( Actual.size() + " \u2260 " + lvlsExpected.size() );
           Log.ResOpenList( "Details..." );
           Log.LogPrint( "  Actual: " + Actual.size() );
@@ -1631,13 +1665,12 @@ public class OK implements IOKW_State {
           Log.ResCloseList();
         }
         
-        Log.LogPrintDebug(LM.GetMessage("VerifyValue", "VerifyValues"));
-
+        if (bFail)
+        {
+        	// Fehler Ausnahme auslösen
+        	throw new OKWVerifyingFailsException();  	
+        }
       }
-    } 
-    catch (Exception e) 
-    {
-      this.HandleException(e);
     } 
     finally 
     {
@@ -1645,6 +1678,95 @@ public class OK implements IOKW_State {
     }
   }
 
+  /**
+   *  \copydoc IOKW_State::VerifyValue(String,String,String)
+   */
+  private void VerifyValueREGX(String fpsFunctionalname, String fpsExpectedValue) throws Exception {
+
+    ArrayList<String> Actual = null;
+    Boolean bFail = false;
+    
+    Log.LogFunctionStartDebug("VerifyValue", "fpsFunctionalname", fpsFunctionalname, "fpsExpected",
+        fpsExpectedValue);
+
+    try
+    {
+      // Prüfen ob ignoriert werden muss...
+      if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+          || fpsExpectedValue.equals("")) {
+        // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+        Log.LogPrintDebug(LM.GetMessage("VerifyValue", "Ignore"));
+      }
+      else 
+      {
+        if (fpsExpectedValue.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY")))
+        {
+          fpsExpectedValue = "";
+        }
+
+        // Split giveneExpected Value
+        ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(fpsExpectedValue);
+
+        lvlsExpected = Parser.ParseMe(lvlsExpected);
+
+        CO.SetChildName(fpsFunctionalname);
+        
+        Actual = CO.VerifyValueREGX(lvlsExpected );            
+        
+        Integer ActualSize = new Integer(Actual.size());
+        Integer ExpectedSize = new Integer(lvlsExpected.size());
+
+     
+        if( ActualSize.equals( ExpectedSize ))
+        {
+          Log.LogPass( "Array Sizes are Equal: OK!" );
+          
+          for (int i = 0; i < Actual.size(); i++)
+          {
+            
+            if (Matcher.RegexMatch(Actual.get(i), lvlsExpected.get(i)) )
+            {
+              Log.LogPass( Actual.get(i) + " = " + lvlsExpected.get(i) );
+            }
+            else
+            {
+              bFail = true;
+
+              Log.LogError( Actual.get(i) + " \u2260 " + lvlsExpected.get(i) );
+              Log.ResOpenList( "Details..." );
+              Log.LogPrint( "  Actual: " + Actual.get(i) );
+              Log.LogPrint( "Expected: " + lvlsExpected.get(i) );
+              Log.ResCloseList();
+            }
+          }
+        }
+        else
+        {
+ 
+            bFail = true;
+            
+            Log.LogError( Actual.size() + " \u2260 " + lvlsExpected.size() );
+            Log.ResOpenList( "Details..." );
+            Log.LogPrint( "  Actual: " + Actual.size() );
+            Log.LogPrint( "Expected: " + lvlsExpected.size() );
+            Log.ResCloseList();
+                  }
+        
+        if (bFail)
+        {
+        	// Ausnahme auslösen Fehler
+        	throw new OKWVerifyingFailsException();  	
+        }
+        
+      }
+    } 
+    finally 
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
+
+  
   /**
    *  \copydoc IOKW_State::VerifyValue(String,String,String,String)
    */

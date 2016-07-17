@@ -467,7 +467,7 @@ import okw.*;
 		/// \copydoc IOKW_State::VerifyValue(String,String,String)
     public void VerifyValue(String fpsFunctionalname, String fpsVerifictionType, String fpsExpectedValue) throws Exception
     {
-      this.CurrentState.VerifyValue(fpsFunctionalname, fpsExpectedValue);
+      this.CurrentState.VerifyValue(fpsFunctionalname, fpsVerifictionType, fpsExpectedValue);
     }
 
     /// \copydoc IOKW_State::VerifyValue(String,String,String,String)

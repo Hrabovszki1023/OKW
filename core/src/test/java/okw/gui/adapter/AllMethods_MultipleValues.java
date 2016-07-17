@@ -14,7 +14,7 @@ import okw.*;
 import okw.log.Logger_Sngltn;
 
 
-    public class AllMethods // : IOKW_SimpleDataObj
+    public class AllMethods_MultipleValues
     {
 
         protected String Locator;
@@ -27,7 +27,7 @@ import okw.log.Logger_Sngltn;
         String myValue = "";
 
 
-        public AllMethods(String fps_Locator)
+        public AllMethods_MultipleValues(String fps_Locator)
         {
             this.Locator = fps_Locator;
         }
@@ -805,14 +805,16 @@ import okw.log.Logger_Sngltn;
             List<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyValue");
-            lvLsReturn.add("ReturnValue VerifyValue()");
-
+            lvLsReturn.add("1. Value");
+            lvLsReturn.add("2. Value");
+            lvLsReturn.add("3. Value");
+            
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyValue()");
 
-            myClipboard.getValue().add("ReturnValue VerifyValue()");
+            myClipboard.getValue().addAll(lvLsReturn);
 
             this.myLogger.LogFunctionEndDebug();
 

@@ -33,9 +33,15 @@ public class frmTestRechner extends Test_Window
 
         /// \brief
         /// Test Objekt mit allen OKW-Methoden,
-        @OKW(FN="All_MethodsObj", VerifyValue_PT=1000, VerifyValue_TO=3)
-        public AllMethods All_MethodsObj = new AllMethods("Locator_All_MethodsObj");
+        @OKW(FN="All_MethodsObj", VerifyValue_PT=500, VerifyValue_TO=1)
+        public AllMethods_SingleValue All_MethodsObj_SingleValue = new AllMethods_SingleValue("Locator_AllMethods_SingleValue");
 
+        /// \brief
+        /// Test Objekt mit allen OKW-Methoden,
+        @OKW(FN="AllMethods_MultipleValues", VerifyValue_PT=500, VerifyValue_TO=1)
+        public AllMethods_MultipleValues All_MethodsObj_MultipleValues = new AllMethods_MultipleValues("Locator_AllMethods_MultipleValues");
+
+        
         /// \brief
         /// Anzeige ist ein GUI-Objekt ohne weitere Veränderung der Basisklasse Test_TextField.
         /// D.h. das Objekt verhält sich *normal*, also wie in der Basisklasse angenommen.

@@ -41,7 +41,7 @@ public class frmCurrentObjectWindow extends Test_Window
 	    public CurrentChildObject_Allmethods CurrentObjectAllMethodCallTypes = new CurrentChildObject_Allmethods("Locator_CurrentObjectAllMethodCallTypes");
 	    
 	    @OKW(FN="AllMethod 2")
-	    public AllMethods myAllMethod = new AllMethods("Locator_CurrentObjectAllMethodCallTypes");    	    
+	    public AllMethods_SingleValue myAllMethods_SingleValue = new AllMethods_SingleValue("Locator_CurrentObjectAllMethodCallTypes");    	    
 	        	    
 		    /// \brief
 		    /// Konstruktor der Klasse frm_CurrentObjectWindow

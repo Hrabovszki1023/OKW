@@ -1013,12 +1013,10 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::VerifyValue()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::VerifyValue()
-        /// 
+        /**
+         *
+         *  \copydoc IOKW_State::VerifyValue()
+         */ 
         public static void VerifyValue(String fpsFunctionalName, String fpsExpectedValue) throws Exception
         {
             Log.LogKeyWordStart("Verify value", fpsFunctionalName, fpsExpectedValue);
@@ -1034,6 +1032,27 @@ import okw.log.*;
             }
         }
 
+
+        /**
+        *
+        *  \copydoc IOKW_State::VerifyValue()
+        */ 
+       public static void VerifyValue(String fpsFunctionalName, String fpsVeryficationType, String fpsExpectedValue) throws Exception
+       {
+           Log.LogKeyWordStart("Verify value", fpsFunctionalName, fpsVeryficationType, fpsExpectedValue);
+
+           try
+           {
+           	myKernel.SetLanguage(Language);
+           	myKernel.VerifyValue(fpsFunctionalName, fpsVeryficationType, fpsExpectedValue);
+           }
+           finally
+           {
+           	Log.LogKeyWordEnd();
+           }
+       }
+
+       
 		/// \~german
 		/// \copydoc IOKW_State::VerifyFileExists(String,String)
 		/// 

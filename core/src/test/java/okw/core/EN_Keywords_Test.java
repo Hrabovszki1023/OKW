@@ -1416,13 +1416,15 @@ public class EN_Keywords_Test {
     assertEquals( "VerifyTooltip()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  /**
+   * \~german
+   * \brief
+   *
+   * \~english
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2013.12.26
+   */
   @Test
   public void TC_VerifyValue() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -1437,10 +1439,10 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-    EN.VerifyValue( "All_MethodsObj", "ReturnValue VerifyValue()" );
+    EN.VerifyValue( "All_MethodsObj", "The one and only Value" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "ReturnValue VerifyValue()", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
     assertEquals( 1, myClipBoard.getValue().size() );
 
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
@@ -1469,14 +1471,88 @@ public class EN_Keywords_Test {
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
     // Kommen auch mehrere Sollwerte im Objekt ab?
-    EN.VerifyValue( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
+    EN.VerifyValue( "AllMethods_MultipleValues", "1. Value${SEP}2. Value${SEP}3. Value" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
-    assertEquals( "Sollwert_2", myClipBoard.getValue().get( 1 ) );
-    assertEquals( 2, myClipBoard.getValue().size() );
+    assertEquals( 3, myClipBoard.getValue().size() );
+
+    assertEquals( "1. Value", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "2. Value", myClipBoard.getValue().get( 1 ) );
+    assertEquals( "3. Value", myClipBoard.getValue().get( 2 ) );
 
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyValue()", myClipBoard.getMethod() );
+  }
+  
+  /**
+   * \~german
+   * \brief
+   *
+   * \~english
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2013.12.26
+   */
+  @Test
+  public void TC_VerifyValue_WCM() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    EN.VerifyValue( "All_MethodsObj", "WCM","??? one and only Value" );
+
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
+    assertEquals( 1, myClipBoard.getValue().size() );
+
+    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+    assertEquals( "VerifyValue()", myClipBoard.getMethod() );
+    
+    EN.VerifyValue( "All_MethodsObj", "WCM","The one and only Value" );
+    EN.VerifyValue( "All_MethodsObj", "WCM","??? ??? ??? ???? ?????" );
+    EN.VerifyValue( "All_MethodsObj", "WCM","* * * * *" );
+    
+  }
+  
+  /**
+   * \~german
+   * \brief
+   *
+   * \~english
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2013.12.26
+   */
+  @Test
+  public void TC_VerifyValue_REGX() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    EN.VerifyValue( "All_MethodsObj", "REGX","??? one and only Value" );
+
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
+    assertEquals( 1, myClipBoard.getValue().size() );
+
+    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+    assertEquals( "VerifyValue()", myClipBoard.getMethod() );
+    
   }
 }

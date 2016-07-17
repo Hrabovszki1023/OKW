@@ -1,5 +1,7 @@
 package okw.core;
 
+import java.util.ArrayList;
+
 public class Matcher {
   
   public static int LevenshteinDistance(String a, String b) {
@@ -45,8 +47,45 @@ public class Matcher {
    */
   public static boolean WildcardMatch(String fpsActuell, String fpsExpected)
   {
-    return fpsActuell.matches(fpsExpected.replace("?", ".").replace("*", ".*").replace("#", "\\d"));
+    boolean lvb_Return = false;
+    
+    lvb_Return = fpsActuell.matches(fpsExpected.replace("?", ".").replace("*", ".*").replace("#", "\\d"));
+   
+    return lvb_Return;
   }
+
+  /**
+   * @param fpsActuell Text to test
+   * @param fpsExpected (Wildcard) pattern to test
+   * @return True if the text matches the wildcard pattern
+   */
+  public static boolean WildcardMatch(ArrayList<String> fpALActuell, ArrayList<String> fpALExpected)
+  {
+    boolean lvb_Return = true;
+
+    Integer ActualSize = (Integer)fpALActuell.size();
+    Integer ExpectedSize = (Integer)fpALExpected.size();
+    
+    if( ActualSize.equals( ExpectedSize ))
+    {
+      
+      for (int i = 0; i < fpALActuell.size(); i++)
+      {
+        if ( ! Matcher.WildcardMatch(fpALActuell.get(i), fpALExpected.get(i)) )
+        {
+        	lvb_Return = false;
+        	break;
+        }
+      }
+    }
+    else
+    {
+    	lvb_Return = false;
+    }
+    
+    return lvb_Return;
+  }  
+  
   
   public static boolean RegexMatch(String fpsActuell, String fpsExpectedRegex)
   {
@@ -56,4 +95,36 @@ public class Matcher {
       
        return lvb_Return;
   }
+  
+  /**
+   * @param fpsActuell Text to test
+   * @param fpsExpected (Wildcard) pattern to test
+   * @return True if the text matches the wildcard pattern
+   */
+  public static boolean RegexMatch(ArrayList<String> fpALActuell, ArrayList<String> fpALExpected)
+  {
+    boolean lvb_Return = true;
+
+    Integer ActualSize = (Integer)fpALActuell.size();
+    Integer ExpectedSize = (Integer)fpALExpected.size();
+    
+    if( ActualSize.equals( ExpectedSize ))
+    {
+      
+      for (int i = 0; i < fpALActuell.size(); i++)
+      {
+        if ( ! Matcher.RegexMatch(fpALActuell.get(i), fpALExpected.get(i)) )
+        {
+        	lvb_Return = false;
+        	break;
+        }
+      }
+    }
+    else
+    {
+    	lvb_Return = false;
+    }
+    
+    return lvb_Return;
+  }  
 }

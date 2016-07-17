@@ -241,9 +241,9 @@ public class OKW_CurrentObject_Sngltn
     return Instance;
   }
 
-  private static Integer CalculateLoopCount( Integer SleepForMillis, Integer MaxWaitMilis )
+  private static Integer CalculateLoopCount( Integer SleepForInMillis, Integer MaxWaitInSeconds )
   {
-    Integer lviReturn = MaxWaitMilis / SleepForMillis;
+    Integer lviReturn = MaxWaitInSeconds * 1000 / SleepForInMillis;
 
     return lviReturn;
   }
@@ -1634,11 +1634,17 @@ public class OKW_CurrentObject_Sngltn
       VerifyValue_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyValue_PT();
       VerifyValue_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyValue_TO();
 
+      Log.LogPrintDebug("VerifyValue_PT: " + VerifyValue_PT.toString() );
+      Log.LogPrintDebug("VerifyValue_TO: " + VerifyValue_TO.toString() );
+      
       MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
       Count = 0;
-
+      
+      Log.LogPrintDebug("MaxCount: " + MaxCount.toString() );
+      
       while ( Count <= MaxCount )
       {
+        Log.LogPrintDebug("  Count: " + Count.toString() );
         lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
 
         if ( fpALExpectedValues.equals( lvLsReturn ) )
@@ -1736,7 +1742,7 @@ public class OKW_CurrentObject_Sngltn
       {
         lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
 
-        if ( Matcher.RegexMatch( lvLsReturn.get( 0 ), fpALExpectedREGXs.get( 0 ) ) )
+        if ( Matcher.RegexMatch( lvLsReturn, fpALExpectedREGXs ) )
         {
           break;
         }
@@ -1832,7 +1838,7 @@ public class OKW_CurrentObject_Sngltn
       {
         lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
 
-        if ( Matcher.WildcardMatch( lvLsReturn.get( 0 ), fpALExpectedWCMs.get( 0 ) ) )
+        if ( Matcher.WildcardMatch( lvLsReturn, fpALExpectedWCMs ) )
         {
           break;
         }
