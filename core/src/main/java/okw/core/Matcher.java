@@ -38,6 +38,38 @@ public class Matcher {
     
     return lvbReturn;
   }
+  
+  /**
+   * @param fpsActuell Text to test
+   * @param fpsExpected (Wildcard) pattern to test
+   * @return True if the text matches the LevenshteinMatch pattern
+   */
+  public static boolean LevenshteinMatch(ArrayList<String> fpALActuell, ArrayList<String> fpALExpected, int fpiDistance)
+  {
+    boolean lvb_Return = true;
+
+    Integer ActualSize = (Integer)fpALActuell.size();
+    Integer ExpectedSize = (Integer)fpALExpected.size();
+    
+    if( ActualSize.equals( ExpectedSize ))
+    {
+      
+      for (int i = 0; i < fpALActuell.size(); i++)
+      {
+        if ( ! Matcher.LevenshteinMatch(fpALActuell.get(i), fpALExpected.get(i), fpiDistance ) )
+        {
+          lvb_Return = false;
+          break;
+        }
+      }
+    }
+    else
+    {
+      lvb_Return = false;
+    }
+    
+    return lvb_Return;
+  }  
 
   
   /**
@@ -54,6 +86,7 @@ public class Matcher {
     return lvb_Return;
   }
 
+  
   /**
    * @param fpsActuell Text to test
    * @param fpsExpected (Wildcard) pattern to test

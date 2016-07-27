@@ -116,6 +116,18 @@ public @interface OKW
   /**
    * TimeOut in [s]
    */
+  public int VerifyCaption_TO() default 30;
+
+  /**
+   * Polling Time in [ms].
+   *
+   * Die Periodendauer des Pollens wird in Millisekunden angegeben.
+   */
+  public int VerifyCaption_PT() default 1000;
+
+  /**
+   * TimeOut in [s]
+   */
   public int VerifyExists_TO() default 30;
 
   /**

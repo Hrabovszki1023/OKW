@@ -295,11 +295,34 @@ import static org.junit.Assert.*;
  
             Log.LogPrint( "  Aktual Value 1: " + LsActual.get(0));
             Log.LogPrint( "Expected Value 1: " + sExpected_1);
-
             
             // Check Return
             assertEquals(1, LsActual.size());
             assertEquals(sExpected_1, LsActual.get(0));
         }
-        
-    }
+
+  /// \brief
+  /// Testziel: OKW-Variable _File_OKWConst_xml_ auslesen.
+  /// 
+  /// \author Zoltan Hrabovszki
+  /// \date 2014.10.14
+  @Test
+  public void TC_ParseMe_ArrayListString_Empty()
+  {
+      ArrayList<String> LsInput = new ArrayList<String>();
+
+      LsInput.add("");
+                  
+      ArrayList<String> LsActual = Parser.ParseMe(LsInput);
+
+      String sExpected_1 = "";
+
+      Log.LogPrint( "  Aktual Value 1: " + LsActual.get(0));
+      Log.LogPrint( "Expected Value 1: " + sExpected_1);
+      
+      // Check Return
+      assertEquals(1, LsActual.size());
+      assertEquals(sExpected_1, LsActual.get(0));
+  }
+}
+	

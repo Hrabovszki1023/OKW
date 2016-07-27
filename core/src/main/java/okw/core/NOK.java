@@ -600,9 +600,6 @@ import okw.log.*;
 		}
 
 		/**
-		 *  \~german
-		 *  \copydoc IOKW_State::VerifyCaption(String,String)
-		 *  \~english
 		 *  \copydoc IOKW_State::VerifyCaption(String,String)
 		 */
 		public void VerifyCaption(String fpsFunctionalname, String fpsExpectedValue)
@@ -613,6 +610,30 @@ import okw.log.*;
 
 			Log.LogFunctionEndDebug();
 		}
+    /**
+     *  \copydoc IOKW_State::VerifyCaption(String,String)
+     */
+
+		public void VerifyCaptionWCM(String fpsFunctionalname, String fpsExpectedValue)
+    {
+      Log.LogFunctionStartDebug("VerifyCaption",
+        "fpsFunctionalname", fpsFunctionalname,
+        "fpsExpectedValue", fpsExpectedValue);
+
+      Log.LogFunctionEndDebug();
+    }
+
+    /**
+     *  \copydoc IOKW_State::VerifyCaption(String,String)
+     */
+    public void VerifyCaptionREGX(String fpsFunctionalname, String fpsExpectedValue)
+    {
+      Log.LogFunctionStartDebug("VerifyCaption",
+        "fpsFunctionalname", fpsFunctionalname,
+        "fpsExpectedValue", fpsExpectedValue);
+
+      Log.LogFunctionEndDebug();
+    }
 
 		/// \~german
 		/// \copydoc IOKW_State::VerifyExists(String,String)
@@ -720,27 +741,24 @@ import okw.log.*;
 		}
 
     /**
-    /// \copydoc IOKW_State::VerifyValue(String,String)
+    /// \copydoc IOKW_State::VerifyValueWCM(String,String)
     */
-    public void VerifyValue(String fpsFunctionalname, String fpsVerifictionType, String fpsExpectedValue)
+    public void VerifyValueWCM(String fpsFunctionalname, String fpsExpectedValue)
     {
-      Log.LogFunctionStartDebug("VerifyValue",
+      Log.LogFunctionStartDebug("VerifyValueWCM",
         "fpsFunctionalname", fpsFunctionalname,
-        "fpsVerifictionType", fpsVerifictionType,
         "fpsExpectedValue", fpsExpectedValue);
 
       Log.LogFunctionEndDebug();
     }
 
     /**
-    /// \copydoc IOKW_State::VerifyValue(String,String)
+    /// \copydoc IOKW_State::VerifyValueREGX(String,String)
     */
-    public void VerifyValue(String fpsFunctionalname, String fpsVerifictionType, String fpsVerifictionParam, String fpsExpectedValue)
+    public void VerifyValueREGX(String fpsFunctionalname, String fpsExpectedValue)
     {
       Log.LogFunctionStartDebug("VerifyValue",
         "fpsFunctionalname",   fpsFunctionalname,
-        "fpsVerifictionType",  fpsVerifictionType,
-        "fpsVerifictionParam", fpsVerifictionParam,
         "fpsExpectedValue",    fpsExpectedValue);
 
       Log.LogFunctionEndDebug();

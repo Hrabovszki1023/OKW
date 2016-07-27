@@ -1623,7 +1623,7 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "CallMethodWithReturn", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
+    Log.LogFunctionStartDebug( "VerifyValue", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
 
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
@@ -1724,7 +1724,7 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "CallMethodWithReturn", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
+    Log.LogFunctionStartDebug( "VerifyValueREGX", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
 
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
@@ -1903,39 +1903,43 @@ public class OKW_CurrentObject_Sngltn
    * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> VerifyValueLEVD( ArrayList<String> fpALExpectedLEVD, Integer fpiLEVDistance ) throws IllegalAccessException,
-          IllegalArgumentException, InvocationTargetException, XPathExpressionException, InterruptedException
+  public ArrayList<String> VerifyCaption( ArrayList<String> fpALExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
+          InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
     Integer MaxCount = 0;
     Integer Count = 0;
-    Integer VerifyValue_PT;
-    Integer VerifyValue_TO;
+    Integer VerifyValue_PT = 1000;
+    Integer VerifyValue_TO = 30;
 
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyValueLEVD", "ArrayList<String> fpALExpectedLEVD", fpALExpectedLEVD.toString(), "Integer fpiLEVDistance",
-            fpiLEVDistance.toString() );
+    Log.LogFunctionStartDebug( "VerifyCaption", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
+
+    Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
     {
-      Class<?> myFrame_Class = this.cvoObject.getClass();
+      Method myMethod = myFrame_Class.getMethod( "VerifyCaption" );
+
+      VerifyValue_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyCaption_PT();
+      VerifyValue_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyCaption_TO();
+
+      Log.LogPrintDebug("VerifyValue_PT: " + VerifyValue_PT.toString() );
+      Log.LogPrintDebug("VerifyValue_TO: " + VerifyValue_TO.toString() );
       
-      Method myMethod = myFrame_Class.getMethod( "VerifyValue" );
-
-      VerifyValue_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyValue_PT();
-      VerifyValue_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyValue_TO();
-
       MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
       Count = 0;
-
+      
+      Log.LogPrintDebug("MaxCount: " + MaxCount.toString() );
+      
       while ( Count <= MaxCount )
       {
+        Log.LogPrintDebug("  Count: " + Count.toString() );
         lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
-        ;
 
-        if ( Matcher.LevenshteinMatch( lvLsReturn.get( 0 ), fpALExpectedLEVD.get( 0 ), fpiLEVDistance ) )
+        if ( fpALExpectedValues.equals( lvLsReturn ) )
         {
           break;
         }
@@ -1951,8 +1955,9 @@ public class OKW_CurrentObject_Sngltn
     }
     catch (NoSuchMethodException e)
     {
-      // Die Methode ist in der Klasse des Objektes nicht definiert:
-      // -> Mit einem OKWFrameObjectMethodNotFoundException aussteigen...
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
       String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyValue" );
       throw new OKWFrameObjectMethodNotFoundException( errorText );
     }
@@ -1968,6 +1973,269 @@ public class OKW_CurrentObject_Sngltn
       }
     }
     return lvLsReturn;
+  }
+
+  /**
+   * \~german \brief Ruft eine Methode VerifyCaption des aktuellen Objektes via
+   * "latebound function call" auf.<br/>
+   * Die aufgerufene Methode hat die Signatur:<br/>
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------------| | 1.
+   * Parameter | List&lt;String&gt; | | Rückgabewert | List&lt;String&gt; |
+   *
+   * @param fpLsParameter_1
+   *          Parameter als List&lt;String&gt;.
+   * @return ArrayList&lt;String&gt; .
+   *
+   *         \~english \brief Calls a method of the current Object with
+   *         "late bound function call". The called method has the signature:
+   *
+   *         | Parameter/Return | Type | |
+   *         :----------------|:-------------------| | 1st Parameter |
+   *         List&lt;String&gt; | | Return | List&lt;String&gt; |
+   *
+   *
+   *         param fpLsParameter_1 parameter as list&lt;String&gt;.
+   * @return List&lt;String&gt; .
+   *
+   *         \~
+   * @author Zoltan Hrabovszki
+   * @throws InterruptedException
+   * @date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> VerifyCaptionREGX( ArrayList<String> fpALExpectedREGXs ) throws IllegalAccessException, IllegalArgumentException,
+          InvocationTargetException, XPathExpressionException, InterruptedException
+  {
+
+    Integer MaxCount = 0;
+    Integer Count = 0;
+    Integer VerifyValue_PT;
+    Integer VerifyValue_TO;
+
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+
+    Log.LogFunctionStartDebug( "VerifyCaptionREGX", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
+
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "VerifyCaption" );
+
+      VerifyValue_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyCaption_PT();
+      VerifyValue_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyCaption_TO();
+
+      MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
+      Count = 0;
+
+      while ( Count <= MaxCount )
+      {
+        lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
+
+        if ( Matcher.RegexMatch( lvLsReturn, fpALExpectedREGXs ) )
+        {
+          break;
+        }
+        else
+        {
+          Thread.sleep( VerifyValue_PT );
+        }
+
+        Count++;
+      }
+
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyValue" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }
+
+  /**
+   * \~german \brief Ruft eine Methode VerifyCaptionWCM des aktuellen Objektes via
+   * "latebound function call" auf.<br/>
+   * Die aufgerufene Methode hat die Signatur:<br/>
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------------| | 1.
+   * Parameter | List&lt;String&gt; | | Rückgabewert | List&lt;String&gt; |
+   *
+   * @param fpLsParameter_1
+   *          Parameter als List&lt;String&gt;.
+   * @return ArrayList&lt;String&gt; .
+   *
+   * \~english 
+   * \brief Calls a method of the current Object with
+   *         "late bound function call". The called method has the signature:
+   *
+   *         | Parameter/Return | Type | |
+   *         :----------------|:-------------------| | 1st Parameter |
+   *         List&lt;String&gt; | | Return | List&lt;String&gt; |
+   *
+   *
+   *         param fpLsParameter_1 parameter as list&lt;String&gt;.
+   * @return List&lt;String&gt; .
+   *
+   *         \~
+   * @author Zoltan Hrabovszki
+   * @throws InterruptedException
+   * @date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> VerifyCaptionWCM( ArrayList<String> fpALExpectedWCMs ) throws IllegalAccessException, IllegalArgumentException,
+          InvocationTargetException, XPathExpressionException, InterruptedException
+  {
+
+    Integer MaxCount = 0;
+    Integer Count = 0;
+    Integer VerifyValue_PT;
+    Integer VerifyValue_TO;
+
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+
+    Log.LogFunctionStartDebug( "VerifyCaptionWCM", "ArrayList<String> fpALExpectedValues", fpALExpectedWCMs.toString() );
+
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "VerifyCaption" );
+
+      VerifyValue_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyCaption_PT();
+      VerifyValue_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyCaption_TO();
+
+      MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
+      Count = 0;
+
+      while ( Count <= MaxCount )
+      {
+        lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
+
+        if ( Matcher.WildcardMatch( lvLsReturn, fpALExpectedWCMs ) )
+        {
+          break;
+        }
+        else
+        {
+          Thread.sleep( VerifyValue_PT );
+        }
+
+        Count++;
+      }
+
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyValue" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }
+
+  /**
+   * \~german \brief Ruft eine Methode des aktuellen Objektes via
+   * "late bound function call" auf.
+   *
+   * Die aufgerufene Methode hat die Signatur:
+   *
+   * | Parameter/Return | Type | | :----------------|:------| | Parameter |
+   * keine | | Rückgabewert | kein |
+   *
+   * \param fpsMethod Name der Methode, die aufgerufen werden soll.
+   *
+   * \~english \brief Calls a method of the current Object with
+   * "late bound function call".
+   *
+   * The called method has the signature:
+   *
+   * | Parameter/Return | Type | | :----------------|:------| | Parameter | none
+   * | | Return | none |
+   *
+   * \param fpsMethod name of method to be called.
+   *
+   * \~ \author Zoltan Hrabovszki \date 2014.01.14
+   */
+  public void SelectMenu( ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException
+  {
+    Log.LogFunctionStartDebug( "SelectMenu" );
+  
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Method myMethod = null;
+  
+    // Schenwir
+    try
+    {
+      myMethod = myFrame_Class.getMethod( "SelectMenu" );
+      myMethod.invoke( cvoObject );
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Dann 2. Versuch: Schauen wir in die Superklasse...
+  
+      try
+      {
+        myMethod = myFrame_Class.getSuperclass().getDeclaredMethod( "SelectMenu" );
+        myMethod.invoke( cvoObject );
+      }
+      catch (NoSuchMethodException | SecurityException e1)
+      {
+        // Existiert die Methode des Objektes?
+        // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+        // aussteigen...
+        String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "SelectMenu" );
+        throw new OKWFrameObjectMethodNotFoundException( errorText );
+      }
+      catch (Exception e2)
+      {
+        String myMessage = e2.getMessage();
+        System.out.println( myMessage );
+      }
+  
+    }
+    catch (Exception e)
+    {
+      String myMessage = e.getMessage();
+      System.out.println( myMessage );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+    return;
   }
 
 }

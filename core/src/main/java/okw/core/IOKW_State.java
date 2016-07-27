@@ -83,7 +83,7 @@ public interface IOKW_State
         /// _Beispiel: Klicke auf das Objekt mit Namen "MeinObjekt":_<br/>
         /// \verbatim Klicke auf: "MeinObjekt" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         ///
         /// \~english
         /// \brief
@@ -92,7 +92,7 @@ public interface IOKW_State
         /// _Example: Click on the object with the name "My Object":_<br/>
         /// \verbatim click on: "MyObject" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         ///
         /// _Example: Click on "My Object":_
         /// 
@@ -103,7 +103,7 @@ public interface IOKW_State
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-18/jnic
-        void ClickOn(String fpsFunctionalname) throws Exception;
+        void ClickOn(String FN) throws Exception;
 
         /// \~german
         /// \brief
@@ -112,7 +112,7 @@ public interface IOKW_State
         /// _Beispiel: Klicke auf das Objekt mit Namen "MeinObjekt":_<br/>
         /// \verbatim Klicke auf: "MeinObjekt" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         /// \param fpsClickType Doppelklick" um mit Doppelklick auszuwählen, "Einfachklick" um mit einfachem Klick 
         ///
         /// \~english
@@ -122,13 +122,13 @@ public interface IOKW_State
         /// _Example: Click on the object with the name "My Object":_<br/>
         /// \verbatim click on: "MyObject" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsClickType Doubleclick" to select via doubleclick, "Singleclick" to select via singleclick (default) 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-18
-        void ClickOn(String fpsFunctionalname, String fpsClickType) throws Exception;
+        void ClickOn(String FN, String fpsClickType) throws Exception;
 
         /// \~german
         /// \brief
@@ -155,19 +155,19 @@ public interface IOKW_State
         /// \brief
         /// Keine Beschreibung zu "LogCaption" verfügbar
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         ///
         /// \~english
         /// \brief
         /// No description for "LogCaption" available
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-18/jnic
         /// \todo jnic-->keine Beschreibung vorhanden
-        void LogCaption(String fpsFunctionalname) throws Exception;
+        void LogCaption(String FN) throws Exception;
 
         /// \~german
         /// \brief
@@ -176,7 +176,7 @@ public interface IOKW_State
         /// _Beispiel: Protokolliert, ob das Objekt mit Namen "Mein Objekt" vorhanden ist:_<br/>
         /// \verbatim logge vorhanden: "MeinObjekt" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         ///
         /// \~english
         /// \brief
@@ -185,12 +185,12 @@ public interface IOKW_State
         /// _Example: Logs whether the object with the name "My Object" is existing:_<br/>
         /// \verbatim log exists: "MyObject" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-18/jnic
-        void LogExists(String fpsFunctionalname) throws Exception;
+        void LogExists(String FN) throws Exception;
 
         /// \~german
         /// \brief
@@ -199,7 +199,7 @@ public interface IOKW_State
         /// _Beispiel: Protokolliert den Fokus-Zustand von "Mein Objekt":_<br/>
         /// \verbatim Logge hat Fokus: "MeinObjekt" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         ///
         /// \~english
         /// \brief
@@ -208,12 +208,12 @@ public interface IOKW_State
         /// _Example: Logs the focus status of "My Object":_<br/>
         /// \verbatim LoghasFocus: "MyObject" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void LogHasFocus(String fpsFunctionalname) throws Exception;
+        void LogHasFocus(String FN) throws Exception;
 
         /// \~german
         /// \brief
@@ -222,7 +222,7 @@ public interface IOKW_State
         /// _Beispiel: Protokolliert den Aktivzustand von "Mein Objekt":_<br/>
         /// \verbatim LoggeIstAktiv: "MeinObjekt" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         ///
         /// \~english
         /// \brief
@@ -231,53 +231,53 @@ public interface IOKW_State
         /// _Example: Logs the active status of "My Object":_<br/>
         /// \verbatim LogIsActive: "MyObject" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void LogIsActive(String fpsFunctionalname) throws Exception;
+        void LogIsActive(String FN) throws Exception;
 
         /// \~german
         /// \brief
         /// Keine Beschreibung zu "LogLabel" verfügbar
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         ///
         /// \~english
         /// \brief
         /// No description for "LogLabel" available
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
         /// \todo jnic-->keine Beschreibung vorhanden
-        void LogLabel(String fpsFunctionalname) throws Exception;
+        void LogLabel(String FN) throws Exception;
 
         /// \~german
         /// \brief
         /// Dokumentiert den markierten Text des gegebenen Objekts.
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         ///
         /// \~english
         /// \brief
         /// Logs the marked text of the given object.
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void LogSelected(String fpsFunctionalname) throws Exception;
+        void LogSelected(String FN) throws Exception;
 
         /// \~german
         /// \brief
         /// Dokumentiert den Wert der ausgewählten Zelle.
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         /// \param fpsCol Spaltennummer der zu wählenden Zelle, beginnend mit 1. 
         /// \param fpsRow Zeilennummer der zu wählenden Zelle, beginnend mit 1. 
         ///
@@ -285,7 +285,7 @@ public interface IOKW_State
         /// \brief
         /// Logs the value of the selected tablecell.
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsCol Column number of cell to be selected, starting with 1. 
         /// \param fpsRow Row number of cell to be selected, starting with 1. 
         ///
@@ -293,7 +293,7 @@ public interface IOKW_State
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
         /// \todo jnic-->Beschreibung überprüfen
-        void LogTablecellValue(String fpsFunctionalname, String fpsCol, String fpsRow) throws Exception;
+        void LogTablecellValue(String FN, String fpsCol, String fpsRow) throws Exception;
 
         /// \~german
         /// \brief
@@ -302,7 +302,7 @@ public interface IOKW_State
         /// _Beispiel: Protokolliert den Kurzinformationstext (Tooltip) von "Mein Objekt":_<br/>
         /// \verbatim LoggeTooltip: "MeinObjekt" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         ///
         /// \~english
         /// \brief
@@ -311,12 +311,12 @@ public interface IOKW_State
         /// _Example: Logs the tooltip text of "My Object":_<br/>
         /// \verbatim LogToolip: "MyObject" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void LogTooltip(String fpsFunctionalname) throws Exception;
+        void LogTooltip(String FN) throws Exception;
 
         /// \~german
         /// \brief
@@ -327,7 +327,7 @@ public interface IOKW_State
         /// _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten Wert "Django" entspricht:_<br/>
         /// \verbatim Prüfe Wert: "MeinObjekt", "Django" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         ///
         /// \~english
         /// \brief
@@ -338,32 +338,32 @@ public interface IOKW_State
         /// _Example: Check if the value (text) of object "MyObject" equals the expected value "Django":_<br/>
         /// \verbatim Verify Value: "MyObject", "Django" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void LogValue(String fpsFunctionalname) throws Exception;
+        void LogValue(String FN) throws Exception;
 
         /// \~german
         /// \brief
         /// Keine Beschreibung zu "MemorizeCaption" verfügbar
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         /// \param fpsMemKeyName Name des Schlüssels 
         ///
         /// \~english
         /// \brief
         /// No description for "MemorizeCaptione" available
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsMemKeyName Name of the key 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
         /// \todo jnic-->keine Beschreibung vorhanden
-        void MemorizeCaption(String fpsFunctionalname, String fpsMemKeyName) throws Exception;
+        void MemorizeCaption(String FN, String fpsMemKeyName) throws Exception;
 
         /// \~german
         /// \brief
@@ -374,7 +374,7 @@ public interface IOKW_State
         /// Schlüssel "Mein Schlüssel".:_<br/>
         /// \verbatim Merke Existiert: "MeinObjekt", "Mein Schlüssel" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         /// \param fpsMemKeyName Name des Schlüssels 
         ///
         /// \~english
@@ -385,33 +385,33 @@ public interface IOKW_State
         /// _Example: Memorizes the existent state of the object "My Object" under the key "My Key":_<br/>
         /// \verbatim Memorize Exists: "MyObject", "MyKey" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsMemKeyName Name of the key 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void MemorizeExists(String fpsFunctionalname, String fpsMemKeyName) throws Exception;
+        void MemorizeExists(String FN, String fpsMemKeyName) throws Exception;
 
         /// \~german
         /// \brief
         /// Keine Beschreibung zu "MemorizeHasFocus" verfügbar
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         /// \param fpsMemKeyName Name des Schlüssels 
         ///
         /// \~english
         /// \brief
         /// No description for "MemorizeHasFocus" available
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsMemKeyName Name of the key 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
         /// \todo jnic-->keine Beschreibung vorhanden
-        void MemorizeHasFocus(String fpsFunctionalname, String fpsMemKeyName) throws Exception;
+        void MemorizeHasFocus(String FN, String fpsMemKeyName) throws Exception;
 
         /// \~german
         /// \brief
@@ -421,7 +421,7 @@ public interface IOKW_State
         /// _Beispiel: Merkt den Zustand des Objektes "MeinObjekt" unter dem Schlüssel "Mein Schlüssel":_<br/>
         /// \verbatim Merke Ist Aktiv: "MeinObjekt", "Mein Schlüssel" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         /// \param fpsMemKeyName Name des Schlüssels 
         ///
         /// \~english
@@ -432,59 +432,59 @@ public interface IOKW_State
         /// _Example Memorizes the object-state of MyObject under the key "MyKey":_<br/>
         /// \verbatim Memorize Is Active: "MyObject", "MyKey" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsMemKeyName Name of the key 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void MemorizeIsActive(String fpsFunctionalname, String fpsMemKeyName) throws Exception;
+        void MemorizeIsActive(String FN, String fpsMemKeyName) throws Exception;
 
         /// \~german
         /// \brief
         /// Keine Beschreibung zu "MemorizeLabel" verfügbar
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         /// \param fpsMemKeyName Name des Schlüssels 
         ///
         /// \~english
         /// \brief
         /// No description for "MemorizeLabel" available
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsMemKeyName Name of the key 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
         /// \todo jnic-->keine Beschreibung vorhanden
-        void MemorizeLabel(String fpsFunctionalname, String fpsMemKeyName) throws Exception;
+        void MemorizeLabel(String FN, String fpsMemKeyName) throws Exception;
 
         /// \~german
         /// \brief
         /// Keine Beschreibung zu "MemorizeSelectedValue" verfügbar
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         /// \param fpsMemKeyName Name des Schlüssels 
         ///
         /// \~english
         /// \brief
         /// No description for "MemorizeSelectedValue" available
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsMemKeyName Name of the key 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
         /// \todo jnic-->keine Beschreibung vorhanden
-        void MemorizeSelectedValue(String fpsFunctionalname, String fpsMemKeyName) throws Exception;
+        void MemorizeSelectedValue(String FN, String fpsMemKeyName) throws Exception;
 
         /// \~german
         /// \brief
         /// Merkt sich den Wert der gegebenen Zelle in der Tabelle.
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         /// \param fpsMemKeyName Name des Schlüssels 
         /// \param fpsCol Spaltennummer der zu wählenden Zelle, beginnend mit 1. 
         /// \param fpsRow Zeilennummer der zu wählenden Zelle, beginnend mit 1. 
@@ -493,7 +493,7 @@ public interface IOKW_State
         /// \brief
         /// Memorizes the value of the given tablecell.
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsMemKeyName Name of the key 
         /// \param fpsCol Column number of cell to be selected, starting with 1. 
         /// \param fpsRow Row number of cell to be selected, starting with 1. 
@@ -501,7 +501,7 @@ public interface IOKW_State
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void MemorizeTablecellValue(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsMemKeyName) throws Exception;
+        void MemorizeTablecellValue(String FN, String fpsCol, String fpsRow, String fpsMemKeyName) throws Exception;
 
         /// \~german
         /// \brief
@@ -510,7 +510,7 @@ public interface IOKW_State
         /// _Beispiel Dokumentiert den Tooltip-Text des Objektes "MeinObjekt":_<br/>
         /// \verbatim Logge Tooltip: "MeinObjekt" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         /// \param fpsMemKeyName Name des Schlüssels 
         ///
         /// \~english
@@ -520,13 +520,13 @@ public interface IOKW_State
         /// _Example logs the tooltip text of the given object "my object"_<br/>
         /// \verbatim Logge Tooltip: "MeinObjekt" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsMemKeyName Name of the key 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void MemorizeTooltip(String fpsFunctionalname, String fpsMemKeyName) throws Exception;
+        void MemorizeTooltip(String FN, String fpsMemKeyName) throws Exception;
 
         /// \~german
         /// \brief
@@ -538,7 +538,7 @@ public interface IOKW_State
         /// _Beispiel: Legt sich den Wert (Text) des Objekts "MeinObjekt" unter dem Schlüssel "MeinSchlüssel" ab:_<br/>
         /// \verbatim Merke Wert: "MeinObjekt", "MeinSchlüssel" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         /// \param fpsMemKeyName Name des Schlüssels 
         ///
         /// \~english
@@ -550,13 +550,13 @@ public interface IOKW_State
         /// _Example Memorizes the value (text) of object "MyObject" under the key "MyKey":_<br/>
         /// \verbatim Memorize the value (text) of object "MyObject" under the key "MyKey" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsMemKeyName Name of the key 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void MemorizeValue(String fpsFunctionalname, String fpsMemKeyName) throws Exception;
+        void MemorizeValue(String FN, String fpsMemKeyName) throws Exception;
         
         /// \~german
         /// \brief
@@ -577,8 +577,8 @@ public interface IOKW_State
         /// deren dritte Spalte den Text "Wert2" enthält:_<br/>
         /// \verbatim Wähle aus: "MeineTabelle", "Wert1{HSEP}{HSEP}Wert2" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsValue Sich ergebender Wert 
+        /// \param FN Funktionaler Name des Objekts 
+        /// \param Val Sich ergebender Wert 
         ///
         /// \~english
         /// \brief
@@ -598,13 +598,13 @@ public interface IOKW_State
         /// in the third  column:_ <br/>
         /// \verbatim Select: "MyTable", "Value1{HSEP}{HSEP}Value2" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsValue Resulting value 
+        /// \param FN Functional name of the object 
+        /// \param Val Resulting value 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19
-        void Select(String fpsFunctionalname, String fpsValue) throws Exception;
+        void Select(String FN, String Val) throws Exception;
 
         /// \~german
         /// \brief
@@ -624,8 +624,8 @@ public interface IOKW_State
         /// deren dritte Spalte den Text "Wert2" enthält:_<br/>
         /// \verbatim Wähle aus: "MeineTabelle", "Wert1{HSEP}{HSEP}Wert2" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsValue Sich ergebender Wert 
+        /// \param FN Funktionaler Name des Objekts 
+        /// \param Val Sich ergebender Wert 
         /// \param fpsClickType Doppelklick" um mit Doppelklick,
         /// "Einfachklick" um mit einfachem Klick auszuwählen. 
         ///
@@ -647,14 +647,14 @@ public interface IOKW_State
         /// in the third  column:_ <br/>
         /// \verbatim Select: "MyTable", "Value1{HSEP}{HSEP}Value2" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsValue Resulting value 
+        /// \param FN Functional name of the object 
+        /// \param Val Resulting value 
         /// \param fpsClickType Doubleclick" to select via doubleclick, "Singleclick" to select via singleclick (default) 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void Select(String fpsFunctionalname, String fpsValue, String fpsClickType) throws Exception;
+        void Select(String FN, String Val, String fpsClickType) throws Exception;
 
         /// \~german
         /// \brief
@@ -663,7 +663,7 @@ public interface IOKW_State
         /// _Beispiel: Wähle Menüeintrag mit Namen "MeinMenü":_<br/>
         /// \verbatim Wähle Aus Menü: "MeinMenü" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         ///
         /// \~english
         /// \brief
@@ -672,12 +672,12 @@ public interface IOKW_State
         /// _Example Select menu item with name "MyMenu":_ <br/>
         /// \verbatim Select menu: "MyMenu" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void SelectMenu(String fpsFunctionalname) throws Exception;
+        void SelectMenu(String FN) throws Exception;
 
         /// \~german
         /// \brief
@@ -686,8 +686,8 @@ public interface IOKW_State
         /// _Beispiel: Wähle Menüeintrag mit Namen "MeinMenü":_<br/>
         /// \verbatim Wähle Aus Menü: "MeinMenü" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsValue Sich ergebender Wert 
+        /// \param FN Funktionaler Name des Objekts 
+        /// \param Val Sich ergebender Wert 
         ///
         /// \~english
         /// \brief
@@ -696,13 +696,13 @@ public interface IOKW_State
         /// _Example Select menu item with name "MyMenu":_ <br/>
         /// \verbatim Select menu: "MyMenu" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsValue Resulting value 
+        /// \param FN Functional name of the object 
+        /// \param Val Resulting value 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void SelectMenu(String fpsFunctionalname, String fpsValue) throws Exception;
+        void SelectMenu(String FN, String Val) throws Exception;
 
         /// \~german
         /// \brief
@@ -725,7 +725,7 @@ public interface IOKW_State
         /// _Beispiel 4: Auswahl der Zelle in Spalte 1 und erster Zeile mit Text "42":_<br/>
         /// \verbatim Wähle aus Tabellenzelle: "MeineTabelle", "#1", "42" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         /// \param fpsCol Spaltennummer der zu wählenden Zelle, beginnend mit 1. 
         /// \param fpsRow Zeilennummer der zu wählenden Zelle, beginnend mit 1. 
         ///
@@ -750,14 +750,14 @@ public interface IOKW_State
         /// _Example #4: Select cell at col number 1 and first row with text "42":_ <br/>
         /// \verbatim Select Tablecell: "MyTable", "#1", "42" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsCol Column number of cell to be selected, starting with 1. 
         /// \param fpsRow Row number of cell to be selected, starting with 1. 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void SelectTablecell(String fpsFunctionalname, String fpsCol, String fpsRow) throws Exception;
+        void SelectTablecell(String FN, String fpsCol, String fpsRow) throws Exception;
 
         /// \~german
         /// \brief
@@ -779,7 +779,7 @@ public interface IOKW_State
         /// _Beispiel 4: Auswahl der Zelle in Spalte 1 und erster Zeile mit Text "42":_<br/>
         /// \verbatim Wähle aus Tabellenzelle: "MeineTabelle", "#1", "42" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         /// \param fpsClickType Doppelklick" um mit Doppelklick auszuwählen, "Einfachklick" um mit einfachem Klick 
         /// \param fpsRow Zeilennummer der zu wählenden Zelle, beginnend mit 1. 
         /// \param fpsCol Spaltennummer der zu wählenden Zelle, beginnend mit 1. 
@@ -804,7 +804,7 @@ public interface IOKW_State
         /// _Example #4: Select cell at col number 1 and first row with text "42":_ <br/>
         /// \verbatim Select Tablecell: "MyTable", "#1", "42" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsClickType Doubleclick" to select via doubleclick, "Singleclick" to select via singleclick (default) 
         /// \param fpsRow Row number of cell to be selected, starting with 1. 
         /// \param fpsCol Column number of cell to be selected, starting with 1. 
@@ -812,7 +812,7 @@ public interface IOKW_State
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void SelectTablecell(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsClickType) throws Exception;
+        void SelectTablecell(String FN, String fpsCol, String fpsRow, String fpsClickType) throws Exception;
 
         /// \~german
         /// \brief
@@ -827,7 +827,7 @@ public interface IOKW_State
         /// _Beispiel: Auswahl des Fensters mit dem Namen "MeinFenster":_ <br/>
         /// \verbatim Wähle aus Fenster: "MeinFenster" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
+        /// \param FN Funktionaler Name des Objekts 
         ///
         /// \~english
         /// \brief
@@ -837,12 +837,12 @@ public interface IOKW_State
         /// _Example: Select window with name "MyWindow":_ <br/>
         /// \verbatim Select Window: "MyWindow" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
-        void SelectWindow(String fpsFunctionalname) throws Exception;
+        void SelectWindow(String FN) throws Exception;
         /// \~german
         /// \brief
         /// Ruft die Sequenz eines Fensters auf.
@@ -853,7 +853,7 @@ public interface IOKW_State
         /// _Beispiel: Aufrufen der Sequenz _Anmelden_ des Fensters _Login_ mit dem Datensatz _Administrator_:_ <br/>
         /// \verbatim Sequenz: "Login", "Anmelden" = "Administrator" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Fensterobjekts, in der die Sequenz definiert ist. 
+        /// \param FN Funktionaler Name des Fensterobjekts, in der die Sequenz definiert ist. 
         /// \param fpsSequenceName Name der Sequenz, die aufgerufen werden soll. 
         /// \param SEQ_ID Sequenz ID des Datensatzes, die als Eingabe verwendet werden soll. 
         ///
@@ -867,7 +867,7 @@ public interface IOKW_State
         /// _Example: Calling the sequence _Login_ of the window _Login_ with the record _Administrator_:_ <br/>
         /// \verbatim Sequence: "Login", "Login" = "Administrator" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
+        /// \param FN Functional name of the object 
         /// \param fpsSequenceName No explanation available 
         /// \param SEQ_ID No explanation available 
         ///
@@ -875,7 +875,7 @@ public interface IOKW_State
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-21/jnic
         /// \todo jnic-->Beschreibung erledigt 2014-10-26
-        void Sequence(String fpsFunctionalname, String fpsSequenceName, String SEQ_ID) throws Exception;
+        void Sequence(String FN, String fpsSequenceName, String SEQ_ID) throws Exception;
 
 
         /**
@@ -883,19 +883,19 @@ public interface IOKW_State
          *  \brief
          *  Setzt den Fokus auf das gegebene Fensterobjekt.
          *  
-         *  \param fpsFunctionalname Funktionaler Name des Objekts 
+         *  \param FN Funktionaler Name des Objekts 
          * 
          *  \~english
          *  \brief
          *  Setting the focus to the given window object.
          *  
-         *  \param fpsFunctionalname Functional name of the object 
+         *  \param FN Functional name of the object 
          * 
          *  \~
          *  \author Zoltan Hrabovszki
          *  \date 2014-09-21
          */
-        void SetFocus(String fpsFunctionalname) throws Exception;
+        void SetFocus(String FN) throws Exception;
 
 
         /// \~german
@@ -935,8 +935,8 @@ public interface IOKW_State
          *  __Beispiel:__ Setze den Wert des Objekts "MeinObjekt" auf "Hallo": <br/>
          *  \verbatim Setze Wert: "Name", "Zoltan" \endverbatim
          *  
-         *  \param fpsFunctionalname Funktionaler Name des Objekts 
-         *  \param fpsValue Sich ergebender Wert 
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param Val Sich ergebender Wert 
          * 
          *  \~english
          *  \brief
@@ -944,19 +944,19 @@ public interface IOKW_State
 		 * 
          *  The input is not working with the simulation of single keyboard inputs,
 		 *  but with High-Level Setter-Methods of the objects:<br/>
-         *  Inputs of the object are written over with "fpsValue".
+         *  Inputs of the object are written over with "Val".
 		 * 
          *  _Example: Set the value of the objekt "MyWindow" to "Hello":_ <br/>
          *  \verbatim Set Value: "Name", "Zoltan" \endverbatim
          *  
-         *  \param fpsFunctionalname Functional name of the object 
-         *  \param fpsValue Resulting value 
+         *  \param FN Functional name of the object 
+         *  \param Val Resulting value 
          * 
          *  \~
          *  \author Zoltan Hrabovszki
         /// \date 2014-09-21
 		 */
-        void SetValue(String fpsFunctionalname, String fpsValue) throws Exception;
+        void SetValue(String FN, String Val) throws Exception;
         
         /// \~german
         /// \brief
@@ -1048,8 +1048,8 @@ public interface IOKW_State
         ///
         /// \verbatim Gib ein: "MeinFensterObjekt", "Eingabewert1{SEP}Eingabewert2" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsValue Sich ergebender Wert 
+        /// \param FN Funktionaler Name des Objekts 
+        /// \param Val Sich ergebender Wert 
         ///
         /// \~english
         /// \brief
@@ -1069,13 +1069,13 @@ public interface IOKW_State
         /// __Example: "Input of more than one value":__<br/>
         /// \verbatim Type Key: "MyWindowObjekt", "InputValue1{SEP}InputValue2" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsValue Resulting value 
+        /// \param FN Functional name of the object 
+        /// \param Val Resulting value 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-21/jnic
-        void TypeKey(String fpsFunctionalname, String fpsValue) throws Exception;
+        void TypeKey(String FN, String Val) throws Exception;
 
         /// \~german
         /// \brief
@@ -1107,8 +1107,8 @@ public interface IOKW_State
         /// _Beispiel 7: Eingabe des Wertes "HiHo" in Zelle an Spalte 1 und erster Zeile mit Text "42":_ <br/>
         /// \verbatim Gib ein Tabellenzelle: "MeineTabelle", "#1", "42", "HiHo" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsValue Sich ergebender Wert 
+        /// \param FN Funktionaler Name des Objekts 
+        /// \param Val Sich ergebender Wert 
         /// \param fpsRow Zeilennummer der zu wählenden Zelle, beginnend mit 1. 
         /// \param fpsCol Spaltennummer der zu wählenden Zelle, beginnend mit 1. 
         ///
@@ -1141,15 +1141,15 @@ public interface IOKW_State
         /// _Example #7: Input of value "Hiho" into cell at column number 1 and first row with text "42":_ <br/>
         /// \verbatim Type Key Tablecell: "MyTable", "#1", "42", "HiHo" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsValue Resulting value 
+        /// \param FN Functional name of the object 
+        /// \param Val Resulting value 
         /// \param fpsRow Row number of cell to be selected, starting with 1. 
         /// \param fpsCol Column number of cell to be selected, starting with 1. 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-21/jnic
-        void TypeKeyTablecell(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsValue) throws Exception;
+        void TypeKeyTablecell(String FN, String fpsCol, String fpsRow, String Val) throws Exception;
 
         /// \~german
         /// \brief
@@ -1166,8 +1166,8 @@ public interface IOKW_State
         /// _Beispiel 3: Eingabe mehrerer Werte:_Beispiel
         /// \verbatim Gib ein Fenster: "MeinFensterObjekt", "Eingabewert1{SEP}Eingabewert2" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsValue Sich ergebender Wert 
+        /// \param FN Funktionaler Name des Objekts 
+        /// \param Val Sich ergebender Wert 
         ///
         /// \~english
         /// \brief
@@ -1184,35 +1184,94 @@ public interface IOKW_State
         /// _Example #3: Input of more than one value:_ <br/>
         /// \verbatim Type Key Window: "MyWindowObjekt", "InputValue1{SEP}InputValue2" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsValue Resulting value 
+        /// \param FN Functional name of the object 
+        /// \param Val Resulting value 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-21/jnic
-        void TypeKeyWindow(String fpsFunctionalname, String fpsValue) throws Exception;
+        void TypeKeyWindow(String FN, String Val) throws Exception;
 
         /**
          *  \~german
          *  \brief
          *  Überprüft die Überschrift des Objektes.
          *  
-         *  \param fpsFunctionalname Funktionaler Name des Objekts 
-         *  \param fpsExpectedValue Erwarteter Wert 
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert 
          * 
          *  \~english
          *  \brief
          *  No description for "VerifyCaption" available
          *  
-         *  \param fpsFunctionalname Functional name of the object 
-         *  \param fpsExpectedValue Expected value 
+         *  \param FN Functional name of the object 
+         *  \param ExpVal Expected value 
          * 
          *  \~
          *  \author Zoltan Hrabovszki
          *  \date 2014-09-21/jnic
          *  \todo jnic-->keine Beschreibung vorhanden
          */
-        void VerifyCaption(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
+        void VerifyCaption(String FN, String ExpVal) throws Exception;
+
+        /**
+         *  \~german
+         *  \brief
+         *  Überprüft die Überschrift des Objektes.
+         *  Der Sollwert wird als Wildcard-Match angegeben.
+         *  
+         *  Folgende Platzhalter sind möglich:
+         *  * "?" - genau ein beliebiges Zeichen wird Maskiert
+         *  * "*" - (0-n) beliebiges Zeichen wird Maskiert
+         *  * "#" - genau eine Ziffer [0..9] kann maskiert werden
+         *  _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
+         *  Wert "\\.jango" entspricht:_ <br/>
+         *  
+        *  
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert 
+         * 
+         *  \~english
+         *  \brief
+         *  No description for "VerifyCaption" available
+         *  
+         *  \param FN Functional name of the object 
+         *  \param ExpVal Expected value 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21/jnic
+         *  \todo jnic-->keine Beschreibung vorhanden
+         */
+        void VerifyCaptionWCM(String FN, String ExpVal) throws Exception;
+
+        /**
+         *  \~german
+         *  \brief
+         *  Überprüft die Überschrift des Objektes.
+         *  Reguläre aus drücke als sollwert sind erlaubt.
+         *  
+         *  _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
+         *  Wert "\\.jango" entspricht:_ <br/>
+         *  
+         *  \verbatim PrüfeWertREGX: "MeinObjekt", "$Django" \endverbatim
+         *  
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert 
+         * 
+         *  \~english
+         *  \brief
+         *  No description for "VerifyCaption" available
+         *  
+         *  \param FN Functional name of the object 
+         *  \param ExpVal Expected value 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21/jnic
+         *  \todo jnic-->keine Beschreibung vorhanden
+         */
+        void VerifyCaptionREGX(String FN, String ExpVal) throws Exception;
 
         /// \~german
         /// \brief
@@ -1222,8 +1281,8 @@ public interface IOKW_State
         /// _Beispiel 2: Prüfe, ob das Objekt "MeinObjekt" nicht existiert: <br/>
         /// \verbatim Prüfe Existiert: "MeinObjekt", "NEIN" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsExpectedValue Erwarteter Wert 
+        /// \param FN Funktionaler Name des Objekts 
+        /// \param ExpVal Erwarteter Wert 
         ///
         /// \~english
         /// \brief
@@ -1233,13 +1292,13 @@ public interface IOKW_State
         /// _Example #2: Check if the object MyObject does not exist:_ <br/>
         /// \verbatim Verify Exists: "MyObject", "NO" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsExpectedValue Expected value 
+        /// \param FN Functional name of the object 
+        /// \param ExpVal Expected value 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-21/jnic
-        void VerifyExists(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
+        void VerifyExists(String FN, String ExpVal) throws Exception;
 
         
         /**
@@ -1252,8 +1311,8 @@ public interface IOKW_State
          *  _Beispiel 2: Prüfe, ob das Objekt "MeinObjekt" den Fokus NICHT besitzt:_ <br/>
          *  \verbatim Prüfe Hat Fokus: "MeinObjekt", "NEIN" \endverbatim
          *  
-         *  \param fpsFunctionalname Funktionaler Name des Objekts 
-         *  \param fpsExpectedValue Erwarteter Wert. Erlaubte Werte sind: "JA", "NEIN" und "IGNORIEREN". 
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert. Erlaubte Werte sind: "JA", "NEIN" und "IGNORIEREN". 
          * 
          *  \~english
          *  \brief
@@ -1264,14 +1323,14 @@ public interface IOKW_State
          *  _Example #2: Verify if the object MyObject has NOT the focus:_ <br/>
          *  \verbatim Verify Has Focus: "MyObject", "NO" \endverbatim
          *  
-         *  \param fpsFunctionalname Functional name of the object 
-         *  \param fpsExpectedValue Expected value. Following values are Allowed here: "YES, "NO", and "IGNORE".  
+         *  \param FN Functional name of the object 
+         *  \param ExpVal Expected value. Following values are Allowed here: "YES, "NO", and "IGNORE".  
          * 
          *  \~
          *  \author Zoltan Hrabovszki
          *  \date 2014-09-21/jnic
          */
-        void VerifyHasFocus(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
+        void VerifyHasFocus(String FN, String ExpVal) throws Exception;
 
         
         /**
@@ -1282,8 +1341,8 @@ public interface IOKW_State
          *  _Beispiel: Prüfe, ob das Objekt "MeinObjekt" sich im Status "aktiv" befindet:_ <br/>
          *  \verbatim Prüfe Ist Aktiv: "MeinObjekt", "JA" \endverbatim
          * 
-         *  \param fpsFunctionalname Funktionaler Name des Objekts 
-         *  \param fpsExpectedValue Erwarteter Wert. Erlaubte Werte sind: "JA", "NEIN" und "IGNORIEREN". 
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert. Erlaubte Werte sind: "JA", "NEIN" und "IGNORIEREN". 
          *
          *  \~english
          *  \brief
@@ -1292,35 +1351,35 @@ public interface IOKW_State
          *  _Example: Verify if the object MyObject is in the state "active":_ <br/>
          *  \verbatim Verify Is Active: "MyObject", "YES" \endverbatim
          * 
-         *  \param fpsFunctionalname Functional name of the object 
-         *  \param fpsExpectedValue Expected value. Following values are Allowed here: "YES, "NO", and "IGNORE". 
+         *  \param FN Functional name of the object 
+         *  \param ExpVal Expected value. Following values are Allowed here: "YES, "NO", and "IGNORE". 
          *
          *  \~
          *  \author Zoltan Hrabovszki
          *  \date 2014-09-21/jnic
         */
-        void VerifyIsActive(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
+        void VerifyIsActive(String FN, String ExpVal) throws Exception;
 
         
         /// \~german
         /// \brief
         /// Keine Beschreibung zu "VerifyLabel" verfügbar
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsExpectedValue Erwarteter Wert. Erlaubte Werte sind: "JA", "NEIN" und "IGNORIEREN". 
+        /// \param FN Funktionaler Name des Objekts 
+        /// \param ExpVal Erwarteter Wert. Erlaubte Werte sind: "JA", "NEIN" und "IGNORIEREN". 
         ///
         /// \~english
         /// \brief
         /// No description for "VerifyLabel" available
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsExpectedValue Expected value. Following values are Allowed here: "YES, "NO", and "IGNORE". 
+        /// \param FN Functional name of the object 
+        /// \param ExpVal Expected value. Following values are Allowed here: "YES, "NO", and "IGNORE". 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-21/jnic
         /// \todo TODO: keine Beschreibung vorhanden
-        void VerifyLabel(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
+        void VerifyLabel(String FN, String ExpVal) throws Exception;
 
         /// \~german
         /// \brief
@@ -1335,8 +1394,8 @@ public interface IOKW_State
         /// _Beispiel 2: Prüfe, ob das Element "Namen{SEP}Henry" in der Baumansicht "MeinTreeview" ausgewählt ist:_ <br/>
         /// \verbatim Prüfe Ausgewählter Wert: "MeinTreeview", "Namen{SEP}Henry" \endverbatim
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsExpectedValue Erwarteter Wert 
+        /// \param FN Funktionaler Name des Objekts 
+        /// \param ExpVal Erwarteter Wert 
         ///
         /// \~english
         /// \brief
@@ -1350,20 +1409,20 @@ public interface IOKW_State
         /// _Example #2: Check if the entry "Names{SEP}Henry" is selected in the treeview "MyTreeview":_ <br/>
         /// \verbatim Verify Selected Value: "MyTreeview", "Names{SEP}Henry" \endverbatim
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsExpectedValue Expected value 
+        /// \param FN Functional name of the object 
+        /// \param ExpVal Expected value 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-21/jnic
-        void VerifySelectedValue(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
+        void VerifySelectedValue(String FN, String ExpVal) throws Exception;
 
         /// \~german
         /// \brief
         /// Vergleicht den Inhalt der gegebenen Tabellenzeile mit dem erwarteten Wert.
         /// 
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsExpectedValue Erwarteter Wert 
+        /// \param FN Funktionaler Name des Objekts 
+        /// \param ExpVal Erwarteter Wert 
         /// \param fpsRow Zeilennummer der zu wählenden Zelle, beginnend mit 1. 
         /// \param fpsCol Spaltennummer der zu wählenden Zelle, beginnend mit 1. 
         ///
@@ -1371,34 +1430,34 @@ public interface IOKW_State
         /// \brief
         /// Compares the content of the given table cell with the expected value.
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsExpectedValue Expected value 
+        /// \param FN Functional name of the object 
+        /// \param ExpVal Expected value 
         /// \param fpsRow Row number of cell to be selected, starting with 1. 
         /// \param fpsCol Column number of cell to be selected, starting with 1. 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-21/jnic
-        void VerifyTablecellValue(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsExpectedValue) throws Exception;
+        void VerifyTablecellValue(String FN, String fpsCol, String fpsRow, String ExpVal) throws Exception;
 
         /// \~german
         /// \brief
         /// \todo TODO: Keine Beschreibung zu "VerifyTooltip" verfügbar
         ///
-        /// \param fpsFunctionalname Funktionaler Name des Objekts 
-        /// \param fpsExpectedValue Erwarteter Wert 
+        /// \param FN Funktionaler Name des Objekts 
+        /// \param ExpVal Erwarteter Wert 
         ///
         /// \~english
         /// \brief
         /// No description for "VerifyTooltip" available
         /// 
-        /// \param fpsFunctionalname Functional name of the object 
-        /// \param fpsExpectedValue Expected value 
+        /// \param FN Functional name of the object 
+        /// \param ExpVal Expected value 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-21
-        void VerifyTooltip(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
+        void VerifyTooltip(String FN, String ExpVal) throws Exception;
 
         /**
          *  \~german
@@ -1412,8 +1471,8 @@ public interface IOKW_State
          *  
          *  Dieses Schlüsselwort prüft die exakte Übereinstimmung. Wildkards sind nicht möglich. 
          *  
-         *  \param fpsFunctionalname Funktionaler Name des Objekts 
-         *  \param fpsExpectedValue Erwarteter Wert 
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert 
          * 
          *  \~english
          *  \brief
@@ -1422,82 +1481,80 @@ public interface IOKW_State
          *  _Example: Check if the value (text) of object "MyObject" equals the expected value "Django":_<br/>
          *  \verbatim Verify Value: "MyObject", "Django" \endverbatim
          *  
-         *  \param fpsFunctionalname Functional name of the object 
-         *  \param fpsExpectedValue Expected value 
+         *  \param FN Functional name of the object 
+         *  \param ExpVal Expected value 
          * 
          *  \~
          *  \author Zoltan Hrabovszki
          *  \date 2014-09-21
          */
-        void VerifyValue(String fpsFunctionalname, String fpsExpectedValue) throws Exception;
+        void VerifyValue(String FN, String ExpVal) throws Exception;
 
         /**
          *  \~german
          *  \brief
-         *  Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text).
+         *  Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text). 
+         *  Der Sollwert wird als RegulererAusdruck angegeben.
          *  
          *  _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
-         *  Wert "Django" entspricht:_ <br/>
+         *  Wert "\\.jango" entspricht:_ <br/>
          *  
-         *  \verbatim Prüfe Wert: "MeinObjekt", "WCM" "*jango" \endverbatim
-         *  \verbatim Prüfe Wert: "MeinObjekt", "REGX" "$Django" \endverbatim
+         *  \verbatim PrüfeWertREGX: "MeinObjekt", "$Django" \endverbatim
          *           
-         *  \param fpsFunctionalname Funktionaler Name des Objekts 
-         *  \param fpsVerifictionType Erlaubte Werte sind: "REGX" für Regulärenausdruck und "WCM"-"Wildcard match"
-         *  \param fpsExpectedValue Erwarteter Wert 
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert 
          * 
          *  \~english
          *  \brief
-         *  Checks the standard value of an object (in most cases this is the displayed text).
+         *  Checks the standard value of an object (in most cases this is the displayed text). The expected Value is givan as Regularexpression
          *  
          *  _Example: Check if the value (text) of object "MyObject" equals the expected value "Django":_<br/>
          *  \verbatim Verify Value: "MyObject", "Django" \endverbatim
          *  
-         *  \param fpsFunctionalname Functional name of the object 
+         *  \param FN Functional name of the object 
          *  \param fpsVerifictionType Allowed values: "REGX"-Regularexpression and "WCM"-Wildcard match 
-         *  \param fpsExpectedValue Expected value 
+         *  \param ExpVal Expected value 
          * 
          *  \~
          *  \author Zoltan Hrabovszki
          *  \date 2014-09-21
          */
-        void VerifyValue(String fpsFunctionalname, String fpsVerifictionType, String fpsExpectedValue) throws Exception;
+        void VerifyValueREGX(String FN, String ExpVal) throws Exception;
 
         /**
          *  \~german
          *  \brief
-         *  Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text).
+         *  Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text). 
+         *  Der Sollwert wird als Wildcard-Match angegeben.
          *  
+         *  Folgende Platzhalter sind möglich:
+         *  * "?" - genau ein beliebiges Zeichen wird Maskiert
+         *  * "*" - (0-n) beliebiges Zeichen wird Maskiert
+         *  * "#" - genau eine Ziffer [0..9] kann maskiert werden
          *  _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
-         *  Wert "Django" entspricht:_ <br/>
+         *  Wert "\\.jango" entspricht:_ <br/>
          *  
-         *  \verbatim Prüfe Wert: "MeinObjekt", "Django" \endverbatim
-         *  
-         *  Dieses Schlüsselwort prüft die exakte Übereinstimmung. Wildkards sind nicht möglich. 
-         *  
-         *  \param fpsFunctionalname Funktionaler Name des Objekts 
-         *  \param fpsVerifictionType Erlaubte Werte sind: "REGX" für Regulärenausdruck und "WCM"-"Wildcard match"
-         *  \param fpsVerifictionParam ein Paramter zu VerificationType
-         *  \param fpsExpectedValue Erwarteter Wert 
+         *  \verbatim PrüfeWertWCM: "MeinObjekt", "$Django" \endverbatim
+         *           
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert / Sollwert.
          * 
          *  \~english
          *  \brief
-         *  Checks the standard value of an object (in most cases this is the displayed text).
+         *  Checks the standard value of an object (in most cases this is the displayed text). The expected Value is givan as Regularexpression
          *  
          *  _Example: Check if the value (text) of object "MyObject" equals the expected value "Django":_<br/>
          *  \verbatim Verify Value: "MyObject", "Django" \endverbatim
          *  
-         *  \param fpsFunctionalname Functional name of the object 
-         *  \param fpsVerifictionType Allowed values: "FD"-Regularexpression and "WCM"-Wildcard match 
-         *  \param fpsVerifictionParam ein Paramter zu VerificationType
-         *  \param fpsExpectedValue Expected value 
+         *  \param FN Functional name of the object 
+         *  \param fpsVerifictionType Allowed values: "REGX"-Regularexpression and "WCM"-Wildcard match 
+         *  \param ExpVal Expected value 
          * 
          *  \~
          *  \author Zoltan Hrabovszki
          *  \date 2014-09-21
          */
-        void VerifyValue(String fpsFunctionalname, String fpsVerifictionType, String fpsVerifictionParam, String fpsExpectedValue) throws Exception;
-
+        void VerifyValueWCM(String FN, String ExpVal) throws Exception;
 
         ///
 		void CopyFile(String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName) throws Exception;
@@ -1552,7 +1609,7 @@ public interface IOKW_State
         /// Prüft, ob die gegebene Datei existiert.
         /// 
         /// \param fpsPathAndFileName Pfad und Name der Datei, die Geprüft werden soll 
-        /// \param fpsExpectedValue Erwarteter Wert. Möglich Werte sind: "JA"/"NEIN"/"${IGNORIERE}"
+        /// \param ExpVal Erwarteter Wert. Möglich Werte sind: "JA"/"NEIN"/"${IGNORIERE}"
         ///
         /// /exception OKWFileDoesNotExistsException
         ///            Wenn die gegeben Datei ein Verzeichniss ist, also eben keine Datei, dann wird ein OKWFileDoesNotExistsException ausgelöst.
@@ -1560,28 +1617,28 @@ public interface IOKW_State
         /// \brief
         /// 
         /// \param fpsPath Path and name of the file. 
-        /// \param fpsExpectedValue Expected value. fpsExpectedValue: "YES"/"NO"/"${IGNORE}"
+        /// \param ExpVal Expected value. ExpVal: "YES"/"NO"/"${IGNORE}"
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2015-06-26
-		void VerifyFileExists(String fpsPathAndFileName, String fpsExpectedValue) throws Exception;
+		void VerifyFileExists(String fpsPathAndFileName, String ExpVal) throws Exception;
 
 		/// \~german
 		/// \brief
 		/// Prüft, ob das gegebene Verzeichnis existiert.
 		/// 
 		/// \param fpsPathA Pfad des Verzeichnisses, die Geprüft werden soll 
-		/// \param fpsExpectedValue Erwarteter Wert. Möglich Werte sind: "JA"/"NEIN"/"${IGNORIERE}"
+		/// \param ExpVal Erwarteter Wert. Möglich Werte sind: "JA"/"NEIN"/"${IGNORIERE}"
 		///
 		/// \~english
 		/// \brief
 		/// 
 		/// \param fpsPathAndFileName Functional name of the object 
-		/// \param fpsExpectedValue Expected value. fpsExpectedValue: "YES"/"NO"/"${IGNORE}"
+		/// \param ExpVal Expected value. ExpVal: "YES"/"NO"/"${IGNORE}"
 		///
 		/// \~
 		/// \author Zoltan Hrabovszki
 		/// \date 2015-06-26
-		void VerifyDirectoryExists(String fpsPath, String fpsExpectedValue) throws Exception;
+		void VerifyDirectoryExists(String fpsPath, String ExpVal) throws Exception;
 	}

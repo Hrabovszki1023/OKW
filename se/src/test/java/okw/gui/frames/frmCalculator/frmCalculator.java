@@ -77,7 +77,6 @@ public class frmCalculator extends SeBrowserChild {
 
   @OKW( FN = "0" )
   public SePushButton n0 = new SePushButton( "//input[@value='  0   ']");
-
   @OKW( FN = "." )
   public SePushButton punkt = new SePushButton( "//INPUT[@type='button' and @value='*.*']" );
 

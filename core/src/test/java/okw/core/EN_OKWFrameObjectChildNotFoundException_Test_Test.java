@@ -94,6 +94,27 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
     EN.ClickOn( "IsNotDefindeInRechner" );
   }
 
+
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch Select
+   *  ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_SelectMenu_OKWFrameObjectChildNotFoundException()
+      throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.SelectMenu( "IsNotDefindeInRechner" );
+  }
+
   
   /**
    *  \~german
@@ -218,7 +239,44 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
     EN.VerifyCaption( "IsNotDefindeInRechner", "Value" );
   }
   
-  
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyCaption ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyCaptionWCM_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyCaptionWCM( "IsNotDefindeInRechner", "Value" );
+  }
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyCaption ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyCaptionREGX_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyCaptionREGX( "IsNotDefindeInRechner", "Value" );
+  }
+
   /**
    * \~german
    *  \brief
@@ -277,7 +335,6 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
     EN.SelectWindow( "Rechner" );
     EN.VerifyIsActive( "IsNotDefindeInRechner", "YES" );
   }
-
   
   /**
    * \~german
@@ -296,6 +353,43 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValue( "IsNotDefindeInRechner", "Value" );
+  }
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyValue ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyValueWCM_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyValueWCM( "IsNotDefindeInRechner", "Value" );
+  }
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyValue ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyValueREGX_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyValueREGX( "IsNotDefindeInRechner", "Value" );
   }
 
 }

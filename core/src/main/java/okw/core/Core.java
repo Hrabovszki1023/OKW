@@ -155,17 +155,17 @@ import okw.*;
         }
 
 		/// \copydoc IOKW_State::ClickOn(String)
-		public void ClickOn(String fpsFunctionalname) throws Exception
+		public void ClickOn(String FN) throws Exception
         {
-            this.CurrentState.ClickOn(fpsFunctionalname);
+            this.CurrentState.ClickOn(FN);
         }
 
 	     /**
 		  * \copydoc IOKW_State::ClickOn(string,string)
 	      */
-		public void ClickOn(String fpsFunctionalname, String fpsClickType) throws Exception
+		public void ClickOn(String FN, String fpsClickType) throws Exception
         {
-            this.CurrentState.ClickOn(fpsFunctionalname, fpsClickType);
+            this.CurrentState.ClickOn(FN, fpsClickType);
         }
 
 		/// \copydoc IOKW_State::EndTest()
@@ -175,159 +175,159 @@ import okw.*;
 		}
 
 		/// \copydoc IOKW_State::LogExists(String)
-		public void LogExists(String fpsFunctionalname) throws Exception
+		public void LogExists(String FN) throws Exception
 		{
-			this.CurrentState.LogExists(fpsFunctionalname);
+			this.CurrentState.LogExists(FN);
 		}
 
 		/// \copydoc IOKW_State::LogHasFocus(String)
-		public void LogHasFocus(String fpsFunctionalname) throws Exception
+		public void LogHasFocus(String FN) throws Exception
 		{
-			this.CurrentState.LogHasFocus(fpsFunctionalname);
+			this.CurrentState.LogHasFocus(FN);
 		}
 
 		/// \copydoc IOKW_State::LogIsActive(String)
-		public void LogIsActive(String fpsFunctionalname) throws Exception
+		public void LogIsActive(String FN) throws Exception
         {
-            this.CurrentState.LogIsActive(fpsFunctionalname);
+            this.CurrentState.LogIsActive(FN);
         }
 
 		/// \copydoc IOKW_State::LogSelected(String)
-		public void LogSelected(String fpsFunctionalname) throws Exception
+		public void LogSelected(String FN) throws Exception
 		{
-			this.CurrentState.LogSelected(fpsFunctionalname);
+			this.CurrentState.LogSelected(FN);
 		}
 
 		/// \copydoc IOKW_State::LogTablecellValue(String,String,String)
-		public void LogTablecellValue(String fpsFunctionalname, String fpsCol, String fpsRow) throws Exception
+		public void LogTablecellValue(String FN, String fpsCol, String fpsRow) throws Exception
         {
-            this.CurrentState.LogTablecellValue(fpsFunctionalname, fpsCol, fpsRow);
+            this.CurrentState.LogTablecellValue(FN, fpsCol, fpsRow);
         }
 
 		/// \copydoc IOKW_State::LogTooltip(String)
-		public void LogTooltip(String fpsFunctionalname) throws Exception
+		public void LogTooltip(String FN) throws Exception
 		{
-			this.CurrentState.LogTooltip(fpsFunctionalname);
+			this.CurrentState.LogTooltip(FN);
 		}
 
 		/// \copydoc IOKW_State::LogCaption(String)
-		public void LogCaption(String fpsFunctionalname) throws Exception
+		public void LogCaption(String FN) throws Exception
 		{
-			this.CurrentState.LogCaption(fpsFunctionalname);
+			this.CurrentState.LogCaption(FN);
 		}
 
 		/// \copydoc IOKW_State::LogLabel(String)
-		public void LogLabel(String fpsFunctionalname) throws Exception
+		public void LogLabel(String FN) throws Exception
 		{
-			this.CurrentState.LogLabel(fpsFunctionalname);
+			this.CurrentState.LogLabel(FN);
 		}
 
 		/// \copydoc IOKW_State::LogValue(String)
-		public void LogValue(String fpsFunctionalname) throws Exception
+		public void LogValue(String FN) throws Exception
 		{
-			this.CurrentState.LogValue(fpsFunctionalname);
+			this.CurrentState.LogValue(FN);
 		}
 
 		/// \copydoc IOKW_State::MemorizeExists(String,String)
-		public void MemorizeExists(String fpsFunctionalname, String fpsValue) throws Exception
+		public void MemorizeExists(String FN, String Val) throws Exception
 		{
-			this.CurrentState.MemorizeExists(fpsFunctionalname, fpsValue);
+			this.CurrentState.MemorizeExists(FN, Val);
 		}
 
 		/// \copydoc IOKW_State::MemorizeHasFocus(String,String)
-		public void MemorizeHasFocus(String fpsFunctionalname, String fpsValue) throws Exception
+		public void MemorizeHasFocus(String FN, String Val) throws Exception
 		{
-			this.CurrentState.MemorizeHasFocus(fpsFunctionalname, fpsValue);
+			this.CurrentState.MemorizeHasFocus(FN, Val);
 		}
 
 		/// \copydoc IOKW_State::MemorizeIsActive(String,String)
-		public void MemorizeIsActive(String fpsFunctionalname, String fpsValue) throws Exception
+		public void MemorizeIsActive(String FN, String Val) throws Exception
 		{
-			this.CurrentState.MemorizeIsActive(fpsFunctionalname, fpsValue);
+			this.CurrentState.MemorizeIsActive(FN, Val);
 		}
 
 		/// \copydoc IOKW_State::MemorizeSelectedValue(String,String)
-		public void MemorizeSelectedValue(String fpsFunctionalname, String fpsValue) throws Exception
+		public void MemorizeSelectedValue(String FN, String Val) throws Exception
 		{
-		this.CurrentState.MemorizeSelectedValue(fpsFunctionalname, fpsValue);
+		this.CurrentState.MemorizeSelectedValue(FN, Val);
 		}
 
 		/// \copydoc IOKW_State::MemorizeTablecellValue(String,String,String,String)
-		public void MemorizeTablecellValue(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsKeyName) throws Exception
+		public void MemorizeTablecellValue(String FN, String fpsCol, String fpsRow, String fpsKeyName) throws Exception
 		{
-			this.CurrentState.MemorizeTablecellValue(fpsFunctionalname, fpsCol, fpsRow, fpsKeyName);
+			this.CurrentState.MemorizeTablecellValue(FN, fpsCol, fpsRow, fpsKeyName);
 		}
 
 		/// \copydoc IOKW_State::MemorizeTooltip(String,String)
-		public void MemorizeTooltip(String fpsFunctionalname, String fpsValue) throws Exception
+		public void MemorizeTooltip(String FN, String Val) throws Exception
 		{
-			this.CurrentState.MemorizeTooltip(fpsFunctionalname, fpsValue);
+			this.CurrentState.MemorizeTooltip(FN, Val);
 		}
 
 		/// \copydoc IOKW_State::MemorizeLabel(String,String)
-		public void MemorizeLabel(String fpsFunctionalname, String fpsValue) throws Exception
+		public void MemorizeLabel(String FN, String Val) throws Exception
 		{
-			this.CurrentState.MemorizeLabel(fpsFunctionalname, fpsValue);
+			this.CurrentState.MemorizeLabel(FN, Val);
 		}
 
 		/// \copydoc IOKW_State::MemorizeCaption(String,String)
-		public void MemorizeCaption(String fpsFunctionalname, String fpsValue) throws Exception
+		public void MemorizeCaption(String FN, String Val) throws Exception
 		{
-			this.CurrentState.MemorizeCaption(fpsFunctionalname, fpsValue);
+			this.CurrentState.MemorizeCaption(FN, Val);
 		}
 
 		/// \copydoc IOKW_State::MemorizeValue(String,String)
-		public void MemorizeValue(String fpsFunctionalname, String fpsValue) throws Exception
+		public void MemorizeValue(String FN, String Val) throws Exception
 		{
-			this.CurrentState.MemorizeValue(fpsFunctionalname, fpsValue);
+			this.CurrentState.MemorizeValue(FN, Val);
 		}
 
 		/// \copydoc IOKW_State::Select(String,String)
-		public void Select(String fpsFunctionalname, String fpsValue) throws Exception
+		public void Select(String FN, String Val) throws Exception
 		{
-			this.CurrentState.Select(fpsFunctionalname, fpsValue);
+			this.CurrentState.Select(FN, Val);
 		}
 
 		/// \copydoc IOKW_State::Select(String,String,String)
-		public void Select(String fpsFunctionalname, String fpsValue, String fpsClickType) throws Exception
+		public void Select(String FN, String Val, String fpsClickType) throws Exception
 		{
-			this.CurrentState.Select(fpsFunctionalname, fpsValue, fpsClickType);
+			this.CurrentState.Select(FN, Val, fpsClickType);
+		}
+
+		/// \copydoc IOKW_State::SelectMenu(String)
+		public void SelectMenu(String FN) throws Exception
+		{
+			this.CurrentState.SelectMenu(FN);
 		}
 
 		/// \copydoc IOKW_State::SelectMenu(String,String)
-		public void SelectMenu(String fpsFunctionalname) throws Exception
+		public void SelectMenu(String FN, String Val) throws Exception
 		{
-			this.CurrentState.SelectMenu(fpsFunctionalname);
-		}
-
-		/// \copydoc IOKW_State::SelectMenu(String,String)
-		public void SelectMenu(String fpsFunctionalname, String fpsValue) throws Exception
-		{
-			this.CurrentState.SelectMenu(fpsFunctionalname, fpsValue);
+			this.CurrentState.SelectMenu(FN, Val);
 		}
 
 		/// \copydoc IOKW_State::SelectTablecell(String,String,String)
-		public void SelectTablecell(String fpsFunctionalname, String fpsCol, String fpsRow) throws Exception
+		public void SelectTablecell(String FN, String fpsCol, String fpsRow) throws Exception
 		{
-			this.CurrentState.SelectTablecell(fpsFunctionalname, fpsCol, fpsRow);
+			this.CurrentState.SelectTablecell(FN, fpsCol, fpsRow);
 		}
 
 		/// \copydoc IOKW_State::SelectTablecell(String,String,String,String)
-		public void SelectTablecell(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsClickType) throws Exception
+		public void SelectTablecell(String FN, String fpsCol, String fpsRow, String fpsClickType) throws Exception
 		{
-			this.CurrentState.SelectTablecell(fpsFunctionalname, fpsCol, fpsRow, fpsClickType);
+			this.CurrentState.SelectTablecell(FN, fpsCol, fpsRow, fpsClickType);
 		}
 
 		/// \copydoc IOKW_State::SelectWindow(String)
-		public void SelectWindow(String fpsFunctionalname) throws Exception
+		public void SelectWindow(String FN) throws Exception
 		{
-			this.CurrentState.SelectWindow(fpsFunctionalname);
+			this.CurrentState.SelectWindow(FN);
 		}
 
 		/// \copydoc IOKW_State::Sequence(String,String,String)
-		public void Sequence(String fpsFunctionalname, String fpsSequenName, String SEQID) throws Exception
+		public void Sequence(String FN, String fpsSequenName, String SEQID) throws Exception
 		{
-			this.CurrentState.Sequence(fpsFunctionalname, fpsSequenName, SEQID);
+			this.CurrentState.Sequence(FN, fpsSequenName, SEQID);
 		}
 
         /// \~german
@@ -349,9 +349,9 @@ import okw.*;
 		/**
     \copydoc IOKW_State::SetFocus(String)
 		*/
-		public void SetFocus(String fpsFunctionalname) throws Exception
+		public void SetFocus(String FN) throws Exception
 		{
-			this.CurrentState.SetFocus(fpsFunctionalname);
+			this.CurrentState.SetFocus(FN);
 		}
 
         /// \~german
@@ -373,9 +373,9 @@ import okw.*;
 		/**
 		 *  \copydoc IOKW_State::SetValue(String,String)
 		 */
-		public void SetValue(String fpsFunctionalname, String fpsValue) throws Exception
+		public void SetValue(String FN, String Val) throws Exception
 		{
-			this.CurrentState.SetValue(fpsFunctionalname, fpsValue);
+			this.CurrentState.SetValue(FN, Val);
 		}
 
 		/// \copydoc IOKW_State::StartApp(String)
@@ -391,89 +391,105 @@ import okw.*;
 		}
 
 		/// \copydoc IOKW_State::TypeKey(String,String)
-		public void TypeKey(String fpsFunctionalname, String fpsValue) throws Exception
+		public void TypeKey(String FN, String Val) throws Exception
 		{
-			this.CurrentState.TypeKey(fpsFunctionalname, fpsValue);
+			this.CurrentState.TypeKey(FN, Val);
 		}
 
 		/// \copydoc IOKW_State::TypeKeyTablecell(String,String,String,String)
-		public void TypeKeyTablecell(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsValue) throws Exception
+		public void TypeKeyTablecell(String FN, String fpsCol, String fpsRow, String Val) throws Exception
 		{
-			this.CurrentState.TypeKeyTablecell(fpsFunctionalname, fpsCol, fpsRow, fpsValue);
+			this.CurrentState.TypeKeyTablecell(FN, fpsCol, fpsRow, Val);
 		}
 
 		/// \copydoc IOKW_State::TypeKeyWindow(String,String)
-		public void TypeKeyWindow(String fpsFunctionalname, String fpsValue) throws Exception
+		public void TypeKeyWindow(String FN, String Val) throws Exception
 		{
-			this.CurrentState.TypeKeyWindow(fpsFunctionalname, fpsValue);
+			this.CurrentState.TypeKeyWindow(FN, Val);
 		}
 
 		/// \copydoc IOKW_State::VerifyExists(String,String)
-		public void VerifyExists(String fpsFunctionalname, String fpsExpectedValue) throws Exception
+		public void VerifyExists(String FN, String ExpVal) throws Exception
 		{
-			this.CurrentState.VerifyExists(fpsFunctionalname, fpsExpectedValue);
+			this.CurrentState.VerifyExists(FN, ExpVal);
 		}
 
 		/// \copydoc IOKW_State::VerifyHasFocus(String,String)
-		public void VerifyHasFocus(String fpsFunctionalname, String fpsExpectedValue) throws Exception
+		public void VerifyHasFocus(String FN, String ExpVal) throws Exception
 		{
-			this.CurrentState.VerifyHasFocus(fpsFunctionalname, fpsExpectedValue);
+			this.CurrentState.VerifyHasFocus(FN, ExpVal);
 		}
 
 		/// \copydoc IOKW_State::VerifyIsActive(String,String)
-		public void VerifyIsActive(String fpsFunctionalname, String fpsExpectedValue) throws Exception
+		public void VerifyIsActive(String FN, String ExpVal) throws Exception
 		{
-		this.CurrentState.VerifyIsActive(fpsFunctionalname, fpsExpectedValue);
+		this.CurrentState.VerifyIsActive(FN, ExpVal);
 		}
 
 		/// \copydoc IOKW_State::VerifySelectedValue(String,String)
-		public void VerifySelectedValue(String fpsFunctionalname, String fpsExpectedValue) throws Exception
+		public void VerifySelectedValue(String FN, String ExpVal) throws Exception
 		{
-			this.CurrentState.VerifySelectedValue(fpsFunctionalname, fpsExpectedValue);
+			this.CurrentState.VerifySelectedValue(FN, ExpVal);
 		}
 
 		/// \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
-		public void VerifyTablecellValue(String fpsFunctionalname, String fpsCol, String fpsRow, String fpsExpectedValue) throws Exception
+		public void VerifyTablecellValue(String FN, String fpsCol, String fpsRow, String ExpVal) throws Exception
 		{
-			this.CurrentState.VerifyTablecellValue(fpsFunctionalname, fpsCol, fpsRow, fpsExpectedValue);
+			this.CurrentState.VerifyTablecellValue(FN, fpsCol, fpsRow, ExpVal);
 		}
 
 		/// \copydoc IOKW_State::VerifyTooltip(String,String)
-		public void VerifyTooltip(String fpsFunctionalname, String fpsExpectedValue) throws Exception
+		public void VerifyTooltip(String FN, String ExpVal) throws Exception
 		{
-			this.CurrentState.VerifyTooltip(fpsFunctionalname, fpsExpectedValue);
+			this.CurrentState.VerifyTooltip(FN, ExpVal);
 		}
 
 		/**
 		 *  \copydoc IOKW_State::VerifyCaption(String,String)
 		 */  
-		public void VerifyCaption(String fpsFunctionalname, String fpsExpectedValue) throws Exception
+		public void VerifyCaption(String FN, String ExpVal) throws Exception
 		{
-			this.CurrentState.VerifyCaption(fpsFunctionalname, fpsExpectedValue);
+			this.CurrentState.VerifyCaption(FN, ExpVal);
 		}
 
-		/// \copydoc IOKW_State::VerifyLabel(String,String)
-		public void VerifyLabel(String fpsFunctionalname, String fpsExpectedValue) throws Exception
+    /**
+     *  \copydoc IOKW_State::VerifyCaption(String,String)
+     */  
+    public void VerifyCaptionWCM(String FN, String ExpVal) throws Exception
+    {
+      this.CurrentState.VerifyCaptionWCM(FN, ExpVal);
+    }
+
+    /**
+     *  \copydoc IOKW_State::VerifyCaption(String,String)
+     */  
+    public void VerifyCaptionREGX(String FN, String ExpVal) throws Exception
+    {
+      this.CurrentState.VerifyCaptionREGX(FN, ExpVal);
+    }
+
+    /// \copydoc IOKW_State::VerifyLabel(String,String)
+		public void VerifyLabel(String FN, String ExpVal) throws Exception
 		{
-			this.CurrentState.VerifyLabel(fpsFunctionalname, fpsExpectedValue);
+			this.CurrentState.VerifyLabel(FN, ExpVal);
 		}
 
 		/// \copydoc IOKW_State::VerifyValue(String,String)
-		public void VerifyValue(String fpsFunctionalname, String fpsExpectedValue) throws Exception
+		public void VerifyValue(String FN, String ExpVal) throws Exception
 		{
-			this.CurrentState.VerifyValue(fpsFunctionalname, fpsExpectedValue);
+			this.CurrentState.VerifyValue(FN, ExpVal);
 		}
 
-		/// \copydoc IOKW_State::VerifyValue(String,String,String)
-    public void VerifyValue(String fpsFunctionalname, String fpsVerifictionType, String fpsExpectedValue) throws Exception
+		/// \copydoc IOKW_State::VerifyValueREGX(String,String)
+    public void VerifyValueREGX(String FN, String ExpVal) throws Exception
     {
-      this.CurrentState.VerifyValue(fpsFunctionalname, fpsVerifictionType, fpsExpectedValue);
+      this.CurrentState.VerifyValueREGX(FN, ExpVal);
     }
 
-    /// \copydoc IOKW_State::VerifyValue(String,String,String,String)
-    public void VerifyValue(String fpsFunctionalname, String fpsVerifictionType, String fpsVerificationParam, String fpsExpectedValue) throws Exception
+    /// \copydoc IOKW_State::VerifyValueWCM(String,String)
+    public void VerifyValueWCM(String FN, String ExpVal) throws Exception
     {
-      this.CurrentState.VerifyValue(fpsFunctionalname, fpsExpectedValue);
+      this.CurrentState.VerifyValueWCM(FN, ExpVal);
     }
 
 		/// \copydoc IOKW_State::FileDelete(String)
@@ -483,15 +499,15 @@ import okw.*;
 		}
 
 		/// \copydoc IOKW_State::VerifyFileExists(String,String)
-		public void VerifyFileExists(String fpsPathAndFileName, String fpsExpectedValue) throws Exception
+		public void VerifyFileExists(String fpsPathAndFileName, String ExpVal) throws Exception
 		{
-			this.CurrentState.VerifyFileExists(fpsPathAndFileName, fpsExpectedValue);
+			this.CurrentState.VerifyFileExists(fpsPathAndFileName, ExpVal);
 		}
 
 		/// \copydoc IOKW_State::VerifyDirectoryExists(String,String)
-		public void VerifyDirectoryExists(String fpsPathAndFileName, String fpsExpectedValue) throws Exception
+		public void VerifyDirectoryExists(String fpsPathAndFileName, String ExpVal) throws Exception
 		{
-			this.CurrentState.VerifyDirectoryExists(fpsPathAndFileName, fpsExpectedValue);
+			this.CurrentState.VerifyDirectoryExists(fpsPathAndFileName, ExpVal);
 		}
 
 		/// \copydoc IOKW_State::CopyFile(String,String)

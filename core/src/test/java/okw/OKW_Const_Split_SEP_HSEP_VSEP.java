@@ -61,8 +61,8 @@ import okw.log.*;
 @RunWith(Parameterized.class)
 public class OKW_Const_Split_SEP_HSEP_VSEP
     {
-    @Parameters
-    public static Collection<Object[]> data() {
+  @Parameters( name = "{index}: Language={1}, \"{0}\" = Split{2}(\"{3}\") " )
+  public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {     
         		
            		// ------------------------------------------------------------------------------------------------------------------------

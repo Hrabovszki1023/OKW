@@ -49,14 +49,14 @@ import org.junit.Test;
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2015.02.28
-    @Ignore("Ignoring the whole fixture")
+    //@Ignore("Ignoring the whole fixture")
     public class SePushButtonCalculator_EN_Test
     {
 
         @Test
         public void AA_Taschenrechner_DE() throws Exception
         {
-            EN.TypeKey( "URL", "http://de.selfhtml.org/javascript/beispiele/anzeige/taschenrechner.htm");
+            EN.TypeKey( "URL", "http://www.schulferien.org/taschenrechner/taschenrechner.html");
             EN.SelectWindow("Taschenrechner");
             EN.ClickOn("1");
             EN.ClickOn("+");

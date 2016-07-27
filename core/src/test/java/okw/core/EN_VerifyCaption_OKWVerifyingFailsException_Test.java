@@ -33,7 +33,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 
-public class EN_OKWVerify_Test {
+public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
 
   static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
   static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
@@ -74,26 +74,7 @@ public class EN_OKWVerify_Test {
     EN.EndTest();
   }
   
-  
-  /**
-   * \~german
-   *  \brief
-   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
-   *  LFC-VerifyCaption ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
-   * 
-   *  \~english
-   *  \~
-   *  \author Zoltan Hrabovszki
-   *  \date 2016.05.07
-   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
-  public void TC_VerifyCaption_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
-
-    EN.SelectWindow( "Rechner" );
-    EN.VerifyCaption( "IsNotDefindeInRechner", "Value" );
-  }
- 
+   
   /**
    * \~german
    *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
@@ -113,7 +94,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "All_MethodsObj", "Tha one and only Value" );
+    EN.VerifyCaption( "All_MethodsObj", "Tha one and only Value" );
   }
   
   /**
@@ -135,7 +116,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "All_MethodsObj", "The one andX only Value" );
+    EN.VerifyCaption( "All_MethodsObj", "The one andX only Value" );
   }
  
   
@@ -158,7 +139,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "All_MethodsObj", "The one an only Value" );
+    EN.VerifyCaption( "All_MethodsObj", "The one an only Value" );
   }
 
   
@@ -181,7 +162,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "AllMethods_MultipleValues", "1. Value${SEP}X. Value${SEP}3. Value" );
+    EN.VerifyCaption( "AllMethods_MultipleValues", "1. Value${SEP}X. Value${SEP}3. Value" );
   }
 
 
@@ -204,7 +185,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "AllMethods_MultipleValues", "1. Value${SEP}2. Value" );
+    EN.VerifyCaption( "AllMethods_MultipleValues", "1. Value${SEP}2. Value" );
   }
 
   /**
@@ -226,7 +207,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "AllMethods_MultipleValues", "1. Value${SEP}2. Value${SEP}3. Value${SEP}4. Value" );
+    EN.VerifyCaption( "AllMethods_MultipleValues", "1. Value${SEP}2. Value${SEP}3. Value${SEP}4. Value" );
   }
   
   /**
@@ -248,7 +229,8 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "All_MethodsObj", "WCM","Tha one and only Value" );
+    EN.VerifyCaptionWCM( "All_MethodsObj", "Tha one and only Value" );
+//  EN.VerifyCaptionWCM( "All_MethodsObj", "Tha one and only Value" );
   }
   
   
@@ -271,7 +253,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "All_MethodsObj", "WCM","Tha one and only Value" );
+    EN.VerifyCaptionWCM( "All_MethodsObj","Tha one and only Value" );
   }
 
   /**
@@ -293,7 +275,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "All_MethodsObj", "WCM","The oneX and only Value" );
+    EN.VerifyCaptionWCM( "All_MethodsObj","The oneX and only Value" );
   }
   
   /**
@@ -315,7 +297,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "All_MethodsObj", "WCM", "The one and only Value${SEP}The one and only Value" );
+    EN.VerifyCaptionWCM( "All_MethodsObj", "The one and only Value${SEP}The one and only Value" );
   }
   
   /**
@@ -337,7 +319,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "AllMethods_MultipleValues", "WCM", "?. Value${SEP}X. Value${SEP}?. Value" );
+    EN.VerifyCaptionWCM( "AllMethods_MultipleValues", "?. Value${SEP}X. Value${SEP}?. Value" );
   }
   
   /**
@@ -359,7 +341,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "AllMethods_MultipleValues", "WCM", "?. XValue${SEP}?. X Value${SEP}?. XValue" );
+    EN.VerifyCaptionWCM( "AllMethods_MultipleValues", "?. XValue${SEP}?. X Value${SEP}?. XValue" );
   }
   
   /**
@@ -381,7 +363,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "AllMethods_MultipleValues", "WCM", "?. Value${SEP}?. Value" );
+    EN.VerifyCaptionWCM( "AllMethods_MultipleValues", "?. Value${SEP}?. Value" );
   }
   
   /**
@@ -403,7 +385,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "AllMethods_MultipleValues", "WCM", "?. Value${SEP}?. Value${SEP}?. Value${SEP}?. Value" );
+    EN.VerifyCaptionWCM( "AllMethods_MultipleValues", "?. Value${SEP}?. Value${SEP}?. Value${SEP}?. Value" );
   }
   
   
@@ -426,7 +408,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "All_MethodsObj", "REGX","Tha one and only Value" );
+    EN.VerifyCaptionREGX( "All_MethodsObj", "Tha one and only Value" );
   }
 
   /**
@@ -448,7 +430,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "All_MethodsObj", "REGX","The oneX and only Value" );
+    EN.VerifyCaptionREGX( "All_MethodsObj", "The oneX and only Value" );
   }
   
   /**
@@ -470,7 +452,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "All_MethodsObj", "REGX", "The one and only Value${SEP}The one and only Value" );
+    EN.VerifyCaptionREGX( "All_MethodsObj", "The one and only Value${SEP}The one and only Value" );
   }
   
   /**
@@ -492,7 +474,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "AllMethods_MultipleValues", "REGX", ".\\. Value${SEP}X. Value${SEP}.\\. Value" );
+    EN.VerifyCaptionREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}X. Value${SEP}.\\. Value" );
   }
   
   /**
@@ -514,7 +496,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "AllMethods_MultipleValues", "REGX", ".\\. XValue${SEP}.\\. X Value${SEP}.\\. XValue" );
+    EN.VerifyCaptionREGX( "AllMethods_MultipleValues", ".\\. XValue${SEP}.\\. X Value${SEP}.\\. XValue" );
   }
   
   /**
@@ -536,7 +518,7 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "AllMethods_MultipleValues", "REGX", ".\\. Value${SEP}.\\. Value" );
+    EN.VerifyCaptionREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}.\\. Value" );
   }
   
   /**
@@ -558,6 +540,6 @@ public class EN_OKWVerify_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValue( "AllMethods_MultipleValues", "REGX", ".\\. Value${SEP}.\\. Value${SEP}.\\. Value${SEP}.\\. Value" );
+    EN.VerifyCaptionREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}.\\. Value${SEP}.\\. Value${SEP}.\\. Value" );
   }
 }

@@ -113,6 +113,25 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
     EN.ClickOn( "NoMethodObj" );
   }
 
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
+   *  SelectWindow ausgelöst wird.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test( expected = OKWFrameObjectMethodNotFoundException.class )
+  public void TC_SelectMenu_OKWFrameObjectMethodNotFoundException()
+      throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.SelectMenu( "NoMethodObj" );
+  }
   
   /**
    *  \~german
@@ -288,11 +307,11 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
   }
 
   
-    /**
+   /**
    * \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  VerifyCaption ausgelöst wird.
+   *  VerifyCaption(String,String) ausgelöst wird.
    * 
    *  \~english
    *  \~
@@ -307,12 +326,55 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
     EN.SelectWindow( "Rechner" );
     EN.VerifyCaption( "NoMethodObj", "NoValue" );
   }
+
   
+  /**
+  * \~german
+  *  \brief
+  *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
+  *  VerifyCaptionREGX(String,String) ausgelöst wird.
+  * 
+  *  \~english
+  *  \~
+  *  \author Zoltan Hrabovszki
+  *  \date 2016.05.07
+  */
+ @Test( expected = OKWFrameObjectMethodNotFoundException.class )
+ public void TC_VerifyCaptionREGX_OKWFrameObjectMethodNotFoundException()
+     throws Exception {
+   EN.BeginTest( name.getMethodName() );
+
+   EN.SelectWindow( "Rechner" );
+   EN.VerifyCaptionREGX( "NoMethodObj", "NoValue" );
+ }
+
+ 
+ /**
+ * \~german
+ *  \brief
+ *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
+ *  VerifyCaptionWCM(String,String) ausgelöst wird.
+ * 
+ *  \~english
+ *  \~
+ *  \author Zoltan Hrabovszki
+ *  \date 2016.05.07
+ */
+@Test( expected = OKWFrameObjectMethodNotFoundException.class )
+public void TC_VerifyCaptionWCM_OKWFrameObjectMethodNotFoundException()
+    throws Exception {
+  EN.BeginTest( name.getMethodName() );
+
+  EN.SelectWindow( "Rechner" );
+  EN.VerifyCaptionWCM( "NoMethodObj", "NoValue" );
+}
+
+
   /**
    * \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  VerifyValue ausgelöst wird.
+   *  VerifyValue(String,String) ausgelöst wird.
    * 
    *  \~english
    *  \~
@@ -326,6 +388,47 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValue( "NoMethodObj", "NoValue" );
+  }
+
+  
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
+   *  VerifyValueREGX(String,String) ausgelöst wird.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectMethodNotFoundException.class )
+  public void TC_VerifyValueREGX_OKWFrameObjectMethodNotFoundException()
+      throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyValueREGX( "NoMethodObj", "NoValue" );
+  }
+  
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
+   *  VerifyValueWCM(String,String) ausgelöst wird.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectMethodNotFoundException.class )
+  public void TC_VerifyValueWCM_OKWFrameObjectMethodNotFoundException()
+      throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyValueWCM( "NoMethodObj", "NoValue" );
   }
 
 }

@@ -1,10 +1,12 @@
 package okw.SePushButton;
 
+import okw.core.EN;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Test;
 
 public class SePushButton_EN_Firefox_Test extends SePushButton_EN_Test
 {
@@ -29,4 +31,21 @@ public class SePushButton_EN_Firefox_Test extends SePushButton_EN_Test
 	{
 		myLog2HTML.Result2HTML();
 	}
+	
+  @Test
+  public void AA_Taschenrechner_DE() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+    EN.StartApp( ApplicationName );
+
+    EN.TypeKey( "URL", "http://www.schulferien.org/taschenrechner/taschenrechner.html");
+      EN.SelectWindow("Taschenrechner");
+      EN.ClickOn("1");
+      EN.ClickOn("+");
+      EN.ClickOn("1");
+      EN.ClickOn("=");
+
+      EN.VerifyValue("Anzeige", "2");
+  }
+	
 }

@@ -34,7 +34,14 @@ import okw.parser.antlr4.OKW_Parser.RootContext;
             
             for (String Value : fpLsString2Parse )
             {
-                lvLsReturn.add(ParseMe(Value));
+                if (Value.equals( "" ))
+                {
+                  lvLsReturn.add("");
+                }
+                else
+                {
+                  lvLsReturn.add(ParseMe(Value));
+                }
             }
             
             return lvLsReturn;
