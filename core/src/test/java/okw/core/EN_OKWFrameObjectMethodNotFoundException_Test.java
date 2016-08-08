@@ -431,4 +431,23 @@ public void TC_VerifyCaptionWCM_OKWFrameObjectMethodNotFoundException()
     EN.VerifyValueWCM( "NoMethodObj", "NoValue" );
   }
 
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
+   *  SelectWindow ausgelöst wird.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test( expected = OKWFrameObjectMethodNotFoundException.class )
+  public void TC_Sequence_OKWFrameObjectMethodNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+  
+    EN.SelectWindow( "Rechner" );
+    EN.Sequence( "Rechner", "NoMethodObj", "SEQ_ID" );
+  }
+
 }

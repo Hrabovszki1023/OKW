@@ -873,12 +873,15 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-    EN.Sequence( "Rechner", "TestSequence", "SEQID_Test" );
+    myClipBoard.Clear();
+    EN.Sequence( "Rechner", "TestSequence_1", "SEQID_Test" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-    assertEquals( "Rechner.Taste_2", myClipBoard.getObjectName() );
-    // assertEquals("OKW_SetFocus()", myClipBoard.getMethod());
+    
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "SEQID_Test", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "TestSequence_1()", myClipBoard.getMethod());
   }
 
   // / \~german

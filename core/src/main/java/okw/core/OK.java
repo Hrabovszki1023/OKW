@@ -862,28 +862,34 @@ public class OK implements IOKW_State {
 		return;
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::Sequence(string,string,string)
-	/// \~english
-	/// \copydoc IOKW_State::Sequence(string,string,string)
-	///
-	public void Sequence(String fpsObjectName, String fpsSequenceName, String SEQ_ID) throws Exception {
-		Log.LogFunctionStartDebug("Sequence", "fpsObjectName", fpsObjectName, "fpsSequenceName", fpsSequenceName,
+	/**
+	 *  \copydoc IOKW_State::Sequence(string,string,string)
+	 */
+	public void Sequence(String FN, String SEQ_Name, String SEQ_ID) throws Exception {
+		Log.LogFunctionStartDebug("Sequence", "FN", FN, "SEQ_Name", SEQ_Name,
 				"SEQ_ID", SEQ_ID);
 
-		try {
+		try
+		{
 			// Prüfen ob ignoriert werden muss...
-			if (SEQ_ID.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || SEQ_ID.equals("")) {
+			if (SEQ_ID.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || SEQ_ID.equals(""))
+			{
 				// Wenn der 1. Wert = IGNORE ist -> Abbrechen...
 				// \todo TODO: Meldung sprachabhägig auslagern!
 				Log.LogPrintDebug("Ignore...");
-			} else {
-				CO.SetWindowName(fpsObjectName);
-				CO.CallMethod(fpsSequenceName, SEQ_ID);
 			}
-		} catch (Exception e) {
+			else
+			{
+				CO.SetWindowName(FN);
+				CO.CallMethod(SEQ_Name, SEQ_ID);
+			}
+		}
+		catch (Exception e)
+		{
 			this.HandleException(e);
-		} finally {
+		}
+		finally
+		{
 			Log.LogFunctionEndDebug();
 		}
 	}

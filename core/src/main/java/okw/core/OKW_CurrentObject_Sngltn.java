@@ -1875,6 +1875,57 @@ public class OKW_CurrentObject_Sngltn
   }
 
   /**
+   * \~german \brief Ruft eine Methode des aktuellen Objektes via
+   * "late bound function call" auf. Die aufgerufene Methode hat die Signatur:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------| | 1.
+   * Parameter | String | | Rückgabewert | kein |
+   *
+   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
+   * fpsParameter_1 1. Parameter als Type-String.
+   *
+   * \~english \brief Calls a method of the current Object with
+   * "late bound function call". The called method has the signature:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------| | 1st
+   * Parameter | String | | Return | none |
+   *
+   * \param fpsMethod name of method to be called. \param fpsParameter_1 1st
+   * parameter as type-String.
+   *
+   * \~ \author Zoltan Hrabovszki \date 2012.11.01
+   */
+  public void Sequence( String fpsMethodName, String fpsParameter_1 ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+          XPathExpressionException
+  {
+    Log.LogFunctionStartDebug( "Sequence", "String fpsMethodName", fpsMethodName, "String fps_Parameter_1", fpsParameter_1 );
+
+    Class<?>[] paramTypes = { String.class };
+
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getDeclaredMethod( fpsMethodName, paramTypes );
+      myMethod.invoke( cvoObject, fpsParameter_1 );
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", fpsMethodName );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+    return;
+  }
+
+  
+  /**
    * \~german \brief Ruft eine Methode VerifyValue des aktuellen Objektes via
    * "latebound function call" auf.<br/>
    * Die aufgerufene Methode hat die Signatur:<br/>

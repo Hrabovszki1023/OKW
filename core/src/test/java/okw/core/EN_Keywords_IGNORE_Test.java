@@ -1139,12 +1139,12 @@ public class EN_Keywords_IGNORE_Test
             assertEquals("Rechner", myClipBoard.getObjectName());
             assertEquals("SelectWindow()", myClipBoard.getMethod());
 
+            myClipBoard.Clear();
             EN.Sequence("Rechner", "TestSequence", "${IGNORE}");
 
-            // Check the Name, Called Method and Value of Actuel object
-            //          assertEquals("NO VALUE", myClipBoard.getValue().get(0));
-            //          assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
-            //          assertEquals("OKW_SetFocus()", myClipBoard.getMethod());
+            assertEquals(0, myClipBoard.getValue().size());
+            assertEquals("", myClipBoard.getObjectName());
+            assertEquals("", myClipBoard.getMethod());
         }
 
         
@@ -1170,7 +1170,12 @@ public class EN_Keywords_IGNORE_Test
             assertEquals("Rechner", myClipBoard.getObjectName());
             assertEquals("SelectWindow()", myClipBoard.getMethod());
 
+            myClipBoard.Clear();
             EN.Sequence("Rechner", "TestSequence", "");
+
+            assertEquals(0, myClipBoard.getValue().size());
+            assertEquals("", myClipBoard.getObjectName());
+            assertEquals("", myClipBoard.getMethod());
 
         }
         

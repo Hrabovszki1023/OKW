@@ -484,16 +484,15 @@ import okw.log.*;
 			Log.LogFunctionEndDebug();
 		}
 
-		/// \~german
-		/// \copydoc IOKW_State::Sequence(String,String,String)
-		/// \~english
-		/// \copydoc IOKW_State::Sequence(String,String,String)
-		public void Sequence(String fpsObjectName, String fpsSequenceName, String SEQ_ID)
+		/**
+		 *  \copydoc IOKW_State::Sequence(String,String,String)
+		 */
+		public void Sequence(String FN, String SeqName, String SEQ_ID)
 		{
 			Log.LogFunctionStartDebug("Sequence",
-				"fpsObjectName", fpsObjectName,
-				"fpsSequenceName", fpsSequenceName,
-				"SEQ_ID", SEQ_ID);
+				                        "FN", FN,
+				                        "fpsSequenceName", SeqName,
+				                        "SEQ_ID", SEQ_ID);
 
 			Log.LogFunctionEndDebug();
 		}

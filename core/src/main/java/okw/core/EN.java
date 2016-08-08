@@ -676,15 +676,12 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::Sequence()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::Sequence()
-        /// 
+        /**
+         *  \copydoc IOKW_State::Sequence(String,String,String)
+         */
         public static void Sequence(String fpsObjectName, String fpsSequenceName, String SEQID) throws Exception
         {
-            Log.LogSequenceStart("Sequece", fpsObjectName, fpsSequenceName, SEQID);
+            Log.LogSequenceStart("Sequence", fpsObjectName, fpsSequenceName, SEQID);
 
             try
             {

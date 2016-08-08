@@ -843,38 +843,41 @@ public interface IOKW_State
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-19/jnic
         void SelectWindow(String FN) throws Exception;
-        /// \~german
-        /// \brief
-        /// Ruft die Sequenz eines Fensters auf.
-        /// 
-        /// Sequenzen sind je Fenster definiert und haben innerhalb des Fenster einen eindeutigen Sequenznamen.
-        /// Einzugebende Datensätze werden mit der Sequenz-ID referenziert.
-        /// 
-        /// _Beispiel: Aufrufen der Sequenz _Anmelden_ des Fensters _Login_ mit dem Datensatz _Administrator_:_ <br/>
-        /// \verbatim Sequenz: "Login", "Anmelden" = "Administrator" \endverbatim
-        /// 
-        /// \param FN Funktionaler Name des Fensterobjekts, in der die Sequenz definiert ist. 
-        /// \param fpsSequenceName Name der Sequenz, die aufgerufen werden soll. 
-        /// \param SEQ_ID Sequenz ID des Datensatzes, die als Eingabe verwendet werden soll. 
-        ///
-        /// \~english
-        /// \brief
-        /// Calls the sequence of the window.
-        /// 
-        /// Sequences are defined per window and have a unique sequence name within the window.
-        /// Entered records are referenced with the sequence ID.
-        /// 
-        /// _Example: Calling the sequence _Login_ of the window _Login_ with the record _Administrator_:_ <br/>
-        /// \verbatim Sequence: "Login", "Login" = "Administrator" \endverbatim
-        /// 
-        /// \param FN Functional name of the object 
-        /// \param fpsSequenceName No explanation available 
-        /// \param SEQ_ID No explanation available 
-        ///
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014-09-21/jnic
-        /// \todo jnic-->Beschreibung erledigt 2014-10-26
+
+        
+        /** \~german
+         *  \brief
+         *  Ruft die Sequenz eines Fensters auf.
+         *  
+         *  Sequenzen sind je Fenster definiert und haben innerhalb des Fenster einen eindeutigen Sequenznamen.
+         *  Einzugebende Datensätze werden mit der Sequenz-ID referenziert.
+         *  
+         *  _Beispiel: Aufrufen der Sequenz _Anmelden_ des Fensters _Login_ mit dem Datensatz _Administrator_:_ <br/>
+         *  \verbatim Sequenz: "Login", "Anmelden" = "Administrator" \endverbatim
+         *  
+         *  \param FN Funktionaler Name des Fensterobjekts, in der die Sequenz definiert ist. 
+         *  \param fpsSequenceName Name der Sequenz, die aufgerufen werden soll. 
+         *  \param SEQ_ID Sequenz ID des Datensatzes, die als Eingabe verwendet werden soll. 
+         * 
+         *  \~english
+         *  \brief
+         *  Calls the sequence of the window.
+         *  
+         *  Sequences are defined per window and have a unique sequence name within the window.
+         *  Entered records are referenced with the sequence ID.
+         *  
+         *  _Example: Calling the sequence _Login_ of the window _Login_ with the record _Administrator_:_ <br/>
+         *  \verbatim Sequence: "Login", "Login" = "Administrator" \endverbatim
+         *  
+         *  \param FN Functional name of the object 
+         *  \param fpsSequenceName No explanation available 
+         *  \param SEQ_ID No explanation available 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21/jnic
+         *  \todo jnic-->Beschreibung erledigt 2014-10-26
+         */
         void Sequence(String FN, String fpsSequenceName, String SEQ_ID) throws Exception;
 
 

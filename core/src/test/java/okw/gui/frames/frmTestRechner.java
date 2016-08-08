@@ -132,6 +132,15 @@ public class frmTestRechner extends Test_Window
             EN.ClickOn("Taste_2");
         }
 
+
+        public void TestSequence_1(String SEQID) throws Exception
+        {
+          myClipBoard.setObjectName("Rechner");
+          myClipBoard.setMethod("TestSequence_1()");
+          myClipBoard.getValue().clear();
+          myClipBoard.getValue().add(SEQID);
+        }
+
         
         // Kindobjekt >>mit<< Anpassung
         public class __Taste_3 extends Test_PushButton
