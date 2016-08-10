@@ -2,9 +2,9 @@
 
 # OKW
 
-OKW - OpenKeyWord is not a replacement, but rather a powerful extension to your existing test-framework, like JUnit or TestNG.
+OKW - OpenKeyWord is a powerful extension to your existing test-framework such as JUnit or TestNG.
 
-OKW is absolutely free, both for open source and commercial projects.
+OKW is absolutely free, both for open source projects and commercial projects.
 
 ## Maven POM files
 
@@ -16,10 +16,7 @@ The fastest and easiest way is:
 
 * Create a Maven Project.
 * Add your unit test framework like JUnit as Maven dependency.
-* Add an OpenKeyWord GUI-Adapter - At this moment OKW support Selenium only.
-   But OKW is basically open for all GUI-testing-tools with a java-API.
-
-   You have to define GUI-adapter for your testing-tool only.
+* Add an OpenKeyWord GUI-Adapter: At the moment OKW supports Selenium only, but OKW is basically open for all GUI-testing-tools with a java-API and can be adapted easily.
 
 ```xml 
 <dependency>
