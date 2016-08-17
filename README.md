@@ -2,7 +2,11 @@
 
 # OKW
 
-OKW - OpenKeyWord is a powerful extension to your existing test-framework such as JUnit or TestNG or * Cucumber ( [Cucumber Calculator Example](https://github.com/Hrabovszki1023/OKW/wiki/Cucumber-Calculator-Example) )
+OKW - OpenKeyWord is a powerful extension to your existing test-framework such as 
+
+* JUnit 
+* TestNG
+* Cucumber ( [Cucumber Calculator Example](https://github.com/Hrabovszki1023/OKW/wiki/Cucumber-Calculator-Example) )
 
 OKW is absolutely free, both for open source projects and commercial projects.
 

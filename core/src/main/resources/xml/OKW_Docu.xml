@@ -1581,8 +1581,8 @@
 			</en>
 			<de>
 				<sample>
-					<name>Prüfe den markierten Text des Objektes "MeinObjekt".</name>
-					<content>Prüfe Markiert: "MeinObjekt", "Markierter Text"</content>
+					<name>Prüfe den Tooltip-Text des Objektes "MeinObjekt".</name>
+					<content>Prüfe Tooltip: "MeinObjekt", "Erwarteter Text"</content>
 				</sample>
 			</de>
 		</examples>
@@ -1606,7 +1606,7 @@
 				<name>fpsExpectedvalue</name>
 				<type>List STRING</type>
 				<description>
-					<de>Erwarteter Wert als Liste. Je Zeile ein Listen Eintrag</de>
+					<de>Erwarteter Wert als Liste. Je Zeile ein Listeneintrag</de>
 					<en>Expected Value</en>
 				</description>
 			</parameter>
