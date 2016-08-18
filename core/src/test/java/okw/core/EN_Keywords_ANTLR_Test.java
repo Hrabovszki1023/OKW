@@ -495,7 +495,120 @@ public void tc_VerifyCaptionWCM_MemorizedValue() throws Exception {
   assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
   assertEquals( "VerifyCaption()", myClipBoard.getMethod() );
 }   
-  
+
+/**
+* \~german
+* \brief
+*
+* \~english
+* \~
+* \author Zoltan Hrabovszki
+* \date 2013.12.26
+*/
+@Test
+public void tc_VerifyTooltip_MemorizedValue() throws Exception {
+ EN.BeginTest( name.getMethodName() );
+
+ // Testscript in Schlüsselwort-Notation
+ EN.SelectWindow( "Rechner" );
+
+ // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+ // Check the Name, Called Method and Value of Actuel object
+ assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+ assertEquals( 1, myClipBoard.getValue().size() );
+ assertEquals( "Rechner", myClipBoard.getObjectName() );
+ assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+ // Set Value in "Memory"
+ okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "The one and only Value" );
+ 
+ // Kommen auch mehrere Sollwerte im Objekt ab?
+ EN.VerifyTooltip( "All_MethodsObj", "${Key1}" );
+
+ // Check the Name, Called Method and Value of Actuel object
+ //assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+ assertEquals( 1, myClipBoard.getValue().size() );
+
+ assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+ assertEquals( "VerifyTooltip()", myClipBoard.getMethod() );
+}
+
+/**
+* \~german
+* \brief
+*
+* \~english
+* \~
+* \author Zoltan Hrabovszki
+* \date 2013.12.26
+*/
+@Test
+public void tc_VerifyTooltipWCM_MemorizedValue() throws Exception {
+EN.BeginTest( name.getMethodName() );
+
+// Testscript in Schlüsselwort-Notation
+EN.SelectWindow( "Rechner" );
+
+// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+// Check the Name, Called Method and Value of Actuel object
+assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+assertEquals( 1, myClipBoard.getValue().size() );
+assertEquals( "Rechner", myClipBoard.getObjectName() );
+assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+// Set Value in "Memory"
+okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "* one and * Value" );
+
+// Kommen auch mehrere Sollwerte im Objekt ab?
+EN.VerifyTooltipWCM( "All_MethodsObj", "${Key1}" );
+
+// Check the Name, Called Method and Value of Actuel object
+//assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+assertEquals( 1, myClipBoard.getValue().size() );
+
+assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+assertEquals( "VerifyTooltip()", myClipBoard.getMethod() );
+}
+
+/**
+* \~german
+* \brief
+*
+* \~english
+* \~
+* \author Zoltan Hrabovszki
+* \date 2013.12.26
+*/
+@Test
+public void tc_VerifyTooltipREGX_MemorizedValue() throws Exception {
+EN.BeginTest( name.getMethodName() );
+
+// Testscript in Schlüsselwort-Notation
+EN.SelectWindow( "Rechner" );
+
+// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+// Check the Name, Called Method and Value of Actuel object
+assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+assertEquals( 1, myClipBoard.getValue().size() );
+assertEquals( "Rechner", myClipBoard.getObjectName() );
+assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+// Set Value in "Memory"
+okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", ".* one and .* Value" );
+
+// Kommen auch mehrere Sollwerte im Objekt ab?
+EN.VerifyTooltipREGX( "All_MethodsObj", "${Key1}" );
+
+// Check the Name, Called Method and Value of Actuel object
+//assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+assertEquals( 1, myClipBoard.getValue().size() );
+
+assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+assertEquals( "VerifyTooltip()", myClipBoard.getMethod() );
+}
+
+
+
   /**
        *  \~german
        *  \brief
@@ -534,6 +647,45 @@ public void tc_VerifyCaptionWCM_MemorizedValue() throws Exception {
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyValue()", myClipBoard.getMethod() );
   }
+
+  /**
+   *  \~german
+   *  \brief
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   *  */
+@Test
+public void tc_VerifyValueREGX_EnviromentValue() throws Exception {
+
+// Set Memorize Values
+String myUser = System.getenv( "USER" );
+
+
+EN.BeginTest( name.getMethodName() );
+
+// Testscript in Schlüsselwort-Notation
+EN.SelectWindow( "Rechner" );
+
+// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+// Check the Name, Called Method and Value of Actuel object
+assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+assertEquals( 1, myClipBoard.getValue().size() );
+assertEquals( "Rechner", myClipBoard.getObjectName() );
+assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+  
+// Umgebungsvariable eingeben
+EN.VerifyValueREGX( "All_MethodsObj", "${USER}" );
+
+// Check the Name, Called Method and Value of Actuel object
+assertEquals( myUser, myClipBoard.getValue().get( 0 ) );
+assertEquals( 1, myClipBoard.getValue().size() );
+
+assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+assertEquals( "VerifyValue()", myClipBoard.getMethod() );
+}
 
    /**
    * \~german

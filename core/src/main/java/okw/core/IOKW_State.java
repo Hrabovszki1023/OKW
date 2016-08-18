@@ -814,34 +814,35 @@ public interface IOKW_State
         /// \date 2014-09-19/jnic
         void SelectTablecell(String FN, String fpsCol, String fpsRow, String fpsClickType) throws Exception;
 
-        /// \~german
-        /// \brief
-        /// Setzt den Kontext auf das gegebene Fenster.
-        /// 
-        /// Das Fenster wird aktiviert und in den Vordergrund geholt.
-        /// Alle nachfolgen GUI-Schlüssleworte (z.B. Gib ein) beziehen sich auf das gegeben Fenster.
-        /// Der Kontext wechselt erst mit dem nächsten _Wähle aus Fenster_ auf ein anderes Fenster.
-        /// 
-        /// \todo zh: jnic die englische Beschreibung für Selectwindow anpassen.
-        /// 
-        /// _Beispiel: Auswahl des Fensters mit dem Namen "MeinFenster":_ <br/>
-        /// \verbatim Wähle aus Fenster: "MeinFenster" \endverbatim
-        /// 
-        /// \param FN Funktionaler Name des Objekts 
-        ///
-        /// \~english
-        /// \brief
-        /// Setting the context for the given window and ensuring that the window
-        /// is active and in the foreground.
-        /// 
-        /// _Example: Select window with name "MyWindow":_ <br/>
-        /// \verbatim Select Window: "MyWindow" \endverbatim
-        /// 
-        /// \param FN Functional name of the object 
-        ///
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014-09-19/jnic
+        /** \~german
+         *  \brief
+         *  Setzt den Kontext auf das gegebene Fenster.
+         *  
+         *  Das Fenster wird aktiviert und in den Vordergrund geholt.
+         *  Alle nachfolgen GUI-Schlüssleworte (z.B. Gib ein) beziehen sich auf das gegeben Fenster.
+         *  Der Kontext wechselt erst mit dem nächsten _Wähle aus Fenster_ auf ein anderes Fenster.
+         *  
+         *  \todo zh: jnic die englische Beschreibung für Selectwindow anpassen.
+         *  
+         *  _Beispiel: Auswahl des Fensters mit dem Namen "MeinFenster":_ <br/>
+         *  \verbatim Wähle aus Fenster: "MeinFenster" \endverbatim
+         *  
+         *  \param FN Funktionaler Name des Objekts 
+         * 
+         *  \~english
+         *  \brief
+         *  Setting the context for the given window and ensuring that the window
+         *  is active and in the foreground.
+         *  
+         *  _Example: Select window with name "MyWindow":_ <br/>
+         *  \verbatim Select Window: "MyWindow" \endverbatim
+         *  
+         *  \param FN Functionalname of the object 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-19/jnic
+         */
         void SelectWindow(String FN) throws Exception;
 
         
@@ -1208,7 +1209,7 @@ public interface IOKW_State
          *  No description for "VerifyCaption" available
          *  
          *  \param FN Functional name of the object 
-         *  \param ExpVal Expected value 
+         *  \param ExpVal Expected Value 
          * 
          *  \~
          *  \author Zoltan Hrabovszki
@@ -1239,7 +1240,7 @@ public interface IOKW_State
          *  No description for "VerifyCaption" available
          *  
          *  \param FN Functional name of the object 
-         *  \param ExpVal Expected value 
+         *  \param ExpVal Expected Value 
          * 
          *  \~
          *  \author Zoltan Hrabovszki
@@ -1267,7 +1268,7 @@ public interface IOKW_State
          *  No description for "VerifyCaption" available
          *  
          *  \param FN Functional name of the object 
-         *  \param ExpVal Expected value 
+         *  \param ExpVal Expected Value 
          * 
          *  \~
          *  \author Zoltan Hrabovszki
@@ -1296,7 +1297,7 @@ public interface IOKW_State
         /// \verbatim Verify Exists: "MyObject", "NO" \endverbatim
         /// 
         /// \param FN Functional name of the object 
-        /// \param ExpVal Expected value 
+        /// \param ExpVal Expected Value 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
@@ -1327,7 +1328,7 @@ public interface IOKW_State
          *  \verbatim Verify Has Focus: "MyObject", "NO" \endverbatim
          *  
          *  \param FN Functional name of the object 
-         *  \param ExpVal Expected value. Following values are Allowed here: "YES, "NO", and "IGNORE".  
+         *  \param ExpVal Expected Value. Following values are Allowed here: "YES, "NO", and "IGNORE".  
          * 
          *  \~
          *  \author Zoltan Hrabovszki
@@ -1355,7 +1356,7 @@ public interface IOKW_State
          *  \verbatim Verify Is Active: "MyObject", "YES" \endverbatim
          * 
          *  \param FN Functional name of the object 
-         *  \param ExpVal Expected value. Following values are Allowed here: "YES, "NO", and "IGNORE". 
+         *  \param ExpVal Expected Value. Following values are Allowed here: "YES, "NO", and "IGNORE". 
          *
          *  \~
          *  \author Zoltan Hrabovszki
@@ -1376,7 +1377,7 @@ public interface IOKW_State
         /// No description for "VerifyLabel" available
         /// 
         /// \param FN Functional name of the object 
-        /// \param ExpVal Expected value. Following values are Allowed here: "YES, "NO", and "IGNORE". 
+        /// \param ExpVal Expected Value. Following values are Allowed here: "YES, "NO", and "IGNORE". 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
@@ -1405,7 +1406,7 @@ public interface IOKW_State
         /// Compares the selected value of the given listobject with the expected value.
         ///
         /// A list can be a simple list, a table or a tree-view.
-        /// Expected values in tree-views are indicated with the whole hierarchy (see example).
+        /// Expected Values in tree-views are indicated with the whole hierarchy (see example).
         /// With this the hierarchical elements are divided with the separator {SEP}.<br/>
         /// _Example #1: Check if the list entry "Henry" is selected in the list "MyList":_ <br/>
         /// \verbatim Verify Selected Value: "MyList", "Henry" \endverbatim
@@ -1413,7 +1414,7 @@ public interface IOKW_State
         /// \verbatim Verify Selected Value: "MyTreeview", "Names{SEP}Henry" \endverbatim
         /// 
         /// \param FN Functional name of the object 
-        /// \param ExpVal Expected value 
+        /// \param ExpVal Expected Value 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
@@ -1434,7 +1435,7 @@ public interface IOKW_State
         /// Compares the content of the given table cell with the expected value.
         /// 
         /// \param FN Functional name of the object 
-        /// \param ExpVal Expected value 
+        /// \param ExpVal Expected Value 
         /// \param fpsRow Row number of cell to be selected, starting with 1. 
         /// \param fpsCol Column number of cell to be selected, starting with 1. 
         ///
@@ -1443,24 +1444,98 @@ public interface IOKW_State
         /// \date 2014-09-21/jnic
         void VerifyTablecellValue(String FN, String fpsCol, String fpsRow, String ExpVal) throws Exception;
 
-        /// \~german
-        /// \brief
-        /// \todo TODO: Keine Beschreibung zu "VerifyTooltip" verfügbar
-        ///
-        /// \param FN Funktionaler Name des Objekts 
-        /// \param ExpVal Erwarteter Wert 
-        ///
-        /// \~english
-        /// \brief
-        /// No description for "VerifyTooltip" available
-        /// 
-        /// \param FN Functional name of the object 
-        /// \param ExpVal Expected value 
-        ///
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014-09-21
+        /** \~german
+         *  \brief
+         *  Prüft den Tooltip-Text eines Objektes. 
+         *  Der Sollwert wird exakt, d.h ohne Platzhalter, angegeben.
+         * 
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert 
+         * 
+         *  \~english
+         *  \brief
+         *  Checks the tooltip-text of an object.
+         *  The expected value is exactly, i.e. without wildcards, specified.
+         *  
+         *  \param FN Functional name of the object 
+         *  \param ExpVal Expected Value 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21
+         */
         void VerifyTooltip(String FN, String ExpVal) throws Exception;
+
+        /**
+         *  \~german
+         *  \brief
+         *  Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text). 
+         *  Der Sollwert wird als RegulererAusdruck angegeben.
+         *  
+         *  _Beispiel: Prüfe, ob der Tooltip-Text des Objekts "MeinObjekt" dem erwarteten
+         *  Wert "\\.jango" entspricht:_ <br/>
+         *  
+         *  \verbatim PrüfeTooltipREGX: "MeinObjekt", "\\.jango" \endverbatim
+         *           
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert, gegegebn als Regulärerausdruck.
+         * 
+         *  \~english
+         *  \brief
+         *  Checks the tooltip-text of an object. The expected tooltip text is givan as Regularexpression.
+         *  
+         *  _Example: Check if the tooltip text of object "MyObject" equals the expected tooltip text "\\.jango":_<br/>
+         *  \verbatim VerifyTooltipREGX( "MyObject", "\\.jango" ) \endverbatim
+         *  
+         *  \param FN Functional name of the object 
+         *  \param ExpVal Expected Value 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21
+         */
+        void VerifyTooltipREGX(String FN, String ExpVal) throws Exception;
+
+        /**
+         *  \~german
+         *  \brief
+         *  Prüft den Tooltip-Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text). 
+         *  Der Sollwert wird als Wildcard-Match angegeben.
+         *  
+         *  Folgende Platzhalter sind möglich:
+         *  * "?" - genau ein beliebiges Zeichen wird Maskiert
+         *  * "*" - (0-n) beliebig viele Zeichen werden Maskiert
+         *  * "#" - genau eine Ziffer [0..9] wird maskiert
+         *  
+         *  _Beispiel: Prüfe, ob der Tooltip Text des Objekts "MeinObjekt" dem erwarteten
+         *  Wert "?jango" entspricht:_ <br/>
+         *  
+         *  \verbatim PrüfeTooltipWCM: "MeinObjekt", "?jango" \endverbatim
+         *           
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert als Wildcardmatch.
+         * 
+         *  \~english
+         *  \brief
+         *  Checks the tooltip text of an object. The expected Value is givan as WildCardMatch
+         *  
+         *  The following wildcards can be used:
+         *  * "?" - exactly one character is masked
+         *  * "*" - (0-n) any number of characters to be masked
+         *  * "#" - exactly one number [0..9] is masked
+         *  
+         *  _Example: Check if the tooltip text of object "MyObject" equals the expected value "?jango":_<br/>
+         *  \verbatim VerifyTooltipWCM( "MyObject", "?jango" ) \endverbatim
+         *  
+         *  \param FN Functional name of the object 
+         *  \param ExpVal Expected Value as WildCardMatch
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21
+         */
+        void VerifyTooltipWCM(String FN, String ExpVal) throws Exception;
+
 
         /**
          *  \~german
@@ -1480,12 +1555,13 @@ public interface IOKW_State
          *  \~english
          *  \brief
          *  Checks the standard value of an object (in most cases this is the displayed text).
+         *  The expected value is exactly, i.e. without wildcards, specified.
          *  
          *  _Example: Check if the value (text) of object "MyObject" equals the expected value "Django":_<br/>
-         *  \verbatim Verify Value: "MyObject", "Django" \endverbatim
+         *  \verbatim VerifyValue( "MyObject", "Django" ) \endverbatim
          *  
          *  \param FN Functional name of the object 
-         *  \param ExpVal Expected value 
+         *  \param ExpVal Expected Value 
          * 
          *  \~
          *  \author Zoltan Hrabovszki
@@ -1512,11 +1588,10 @@ public interface IOKW_State
          *  Checks the standard value of an object (in most cases this is the displayed text). The expected Value is givan as Regularexpression
          *  
          *  _Example: Check if the value (text) of object "MyObject" equals the expected value "Django":_<br/>
-         *  \verbatim Verify Value: "MyObject", "Django" \endverbatim
+         *  \verbatim VerifyValueREGX( "MyObject", "$Django" ) \endverbatim
          *  
          *  \param FN Functional name of the object 
-         *  \param fpsVerifictionType Allowed values: "REGX"-Regularexpression and "WCM"-Wildcard match 
-         *  \param ExpVal Expected value 
+         *  \param ExpVal Expected Value 
          * 
          *  \~
          *  \author Zoltan Hrabovszki
@@ -1537,7 +1612,7 @@ public interface IOKW_State
          *  _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
          *  Wert "\\.jango" entspricht:_ <br/>
          *  
-         *  \verbatim PrüfeWertWCM: "MeinObjekt", "$Django" \endverbatim
+         *  \verbatim PrüfeWertWCM( "MeinObjekt", "$Django" ) \endverbatim
          *           
          *  \param FN Funktionaler Name des Objekts 
          *  \param ExpVal Erwarteter Wert / Sollwert.
@@ -1546,12 +1621,16 @@ public interface IOKW_State
          *  \brief
          *  Checks the standard value of an object (in most cases this is the displayed text). The expected Value is givan as Regularexpression
          *  
+         *  The following wildcards can be used:
+         *  * "?" - exactly one character is masked
+         *  * "*" - (0-n) any number of characters to be masked
+         *  * "#" - exactly one number [0..9] is masked
+         *  
          *  _Example: Check if the value (text) of object "MyObject" equals the expected value "Django":_<br/>
-         *  \verbatim Verify Value: "MyObject", "Django" \endverbatim
+         *  \verbatim VerifyValueWCM( "MyObject", "Django" ) \endverbatim
          *  
          *  \param FN Functional name of the object 
-         *  \param fpsVerifictionType Allowed values: "REGX"-Regularexpression and "WCM"-Wildcard match 
-         *  \param ExpVal Expected value 
+         *  \param ExpVal Expected Value 
          * 
          *  \~
          *  \author Zoltan Hrabovszki
@@ -1620,7 +1699,7 @@ public interface IOKW_State
         /// \brief
         /// 
         /// \param fpsPath Path and name of the file. 
-        /// \param ExpVal Expected value. ExpVal: "YES"/"NO"/"${IGNORE}"
+        /// \param ExpVal Expected Value. ExpVal: "YES"/"NO"/"${IGNORE}"
         ///
         /// \~
         /// \author Zoltan Hrabovszki
@@ -1638,7 +1717,7 @@ public interface IOKW_State
 		/// \brief
 		/// 
 		/// \param fpsPathAndFileName Functional name of the object 
-		/// \param ExpVal Expected value. ExpVal: "YES"/"NO"/"${IGNORE}"
+		/// \param ExpVal Expected Value. ExpVal: "YES"/"NO"/"${IGNORE}"
 		///
 		/// \~
 		/// \author Zoltan Hrabovszki

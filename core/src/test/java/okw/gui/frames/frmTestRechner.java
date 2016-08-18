@@ -35,6 +35,7 @@ public class frmTestRechner extends Test_Window
         /// Test Objekt mit allen OKW-Methoden,
         @OKW(FN="All_MethodsObj", 
                 VerifyValue_PT=500, VerifyValue_TO=1,
+                VerifyTooltip_PT=500, VerifyTooltip_TO=1,
                 VerifyCaption_PT=500, VerifyCaption_TO=1)
         public AllMethods_SingleValue All_MethodsObj_SingleValue = new AllMethods_SingleValue("Locator_AllMethods_SingleValue");
 
@@ -42,6 +43,7 @@ public class frmTestRechner extends Test_Window
         /// Test Objekt mit allen OKW-Methoden,
         @OKW(FN="AllMethods_MultipleValues", 
                 VerifyValue_PT=500, VerifyValue_TO=1,
+                VerifyTooltip_PT=500, VerifyTooltip_TO=1,
                 VerifyCaption_PT=500, VerifyCaption_TO=1)
         public AllMethods_MultipleValues All_MethodsObj_MultipleValues = new AllMethods_MultipleValues("Locator_AllMethods_MultipleValues");
 
@@ -49,6 +51,7 @@ public class frmTestRechner extends Test_Window
         /// Test Objekt mit allen OKW-Methoden,
         @OKW(FN="All_MethodsObj_VerifyEmpty", 
                 VerifyValue_PT=500, VerifyValue_TO=1,
+                VerifyTooltip_PT=500, VerifyTooltip_TO=1,
                 VerifyCaption_PT=500, VerifyCaption_TO=1)
         public AllMethods_VerifyEmpty All_MethodsObj_VerifyEmpty= new AllMethods_VerifyEmpty("Locator_AllMethods_VerifyEmpty");
 

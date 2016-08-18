@@ -1348,8 +1348,7 @@ public class OK implements IOKW_State {
 	/// \~english
 	/// \copydoc IOKW_State::VerifyTablecellValue(string,string,string,string)
 	///
-	public void VerifyTablecellValue(String FN, String fpsCol, String fpsRow, String ExpVal)
-			throws Exception {
+	public void VerifyTablecellValue(String FN, String fpsCol, String fpsRow, String ExpVal) throws Exception {
 		Log.LogFunctionStartDebug("VerifyTablecellValue", "FN", FN, "fpsCol", fpsCol,
 				"fpsRow", fpsRow, "fpsExpected", ExpVal);
 
@@ -1388,50 +1387,272 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::VerifyTooltip(string,string)
-	/// \~english
-	/// \copydoc IOKW_State::VerifyTooltip(string,string)
-	///
-	public void VerifyTooltip(String FN, String ExpVal) throws Exception {
-		Log.LogFunctionStartDebug("VerifyTooltip", "FN", FN, "fpsExpected",
-				ExpVal);
+	/**
+	 *  \copydoc IOKW_State::VerifyTooltip(string,string)
+	 */
+  public void VerifyTooltip(String FN, String ExpVal) throws Exception
+  {
 
-		try {
-			// Prüfen ob ignoriert werden muss...
-			if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
-					|| ExpVal.equals("")) {
-				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-				Log.LogPrintDebug(LM.GetMessage("VerifyTooltip", "Ignore"));
-			} else {
-				// Split giveneExpected Value
-				ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(ExpVal);
+    Boolean bFail = false;
+    
+    Log.LogFunctionStartDebug("VerifyTooltip", "FN", FN, "ExpVal", ExpVal);
 
-				// Get the actuel value from object
-				CO.SetChildName(FN);
-				ArrayList<String> Actual = CO.CallMethodReturn_ListString("VerifyTooltip", lvlsExpected);
+    try {
+      // Prüfen ob ignoriert werden muss...
+      if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || ExpVal.equals(""))
+      {
+        // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+        Log.LogPrintDebug(LM.GetMessage("VerifyValue", "Ignore"));
+      }
+      else 
+      {
+        if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY")))
+        {
+          ExpVal = "";
+        }
 
-				// Verify:
-				// 1. are the List length equal?
-				Log.LogPrintDebug(LM.GetMessage("VerifyTooltip", "VerifyListCount"));
+      // Split giveneExpected Value
+      ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(ExpVal);
 
-				Integer ActualSize = new Integer(Actual.size());
-				Integer ExpectedSize = new Integer(lvlsExpected.size());
-				Log.LogVerify(ActualSize.toString(), ExpectedSize.toString());
+      lvlsExpected = Parser.ParseMe(lvlsExpected);
 
-				Log.LogPrintDebug(LM.GetMessage("VerifyTooltip", "VerifyValues"));
+      CO.SetChildName(FN);
+      ArrayList<String> Actual = CO.VerifyTooltip( lvlsExpected );
 
-				for (int i = 0; i < Actual.size(); i++) {
-					Log.LogVerify(Actual.get(i), lvlsExpected.get(i));
-				}
-			}
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+      // Verify:
+      // 1. are the List length equal?
+      Log.LogPrintDebug(LM.GetMessage("VerifyTooltip", "VerifyListCount"));
 
+      Integer ActualSize = new Integer(Actual.size());
+      Integer ExpectedSize = new Integer(lvlsExpected.size());
+
+      if( ActualSize.equals( ExpectedSize ))
+      {
+        Log.LogPass( "Size is OK!" );
+        
+        for (int i = 0; i < Actual.size(); i++)
+        {
+          
+          if (Actual.get(i).equals( lvlsExpected.get(i)))
+          {
+            Log.LogPass( Actual.get(i) + " = " + lvlsExpected.get(i) );
+          }
+          else
+          {
+              bFail = true;
+              
+              Log.LogError( Actual.get(i) + " \u2260 " + lvlsExpected.get(i) );
+              Log.ResOpenList( "Details..." );
+              Log.LogPrint( "  Actual: " + Actual.get(i) );
+              Log.LogPrint( "Expected: " + lvlsExpected.get(i) );
+              Log.ResCloseList();
+          }
+        }
+      }
+      else
+      {
+          bFail = true;
+        
+          Log.LogError( Actual.size() + " \u2260 " + lvlsExpected.size() );
+          Log.ResOpenList( "Details..." );
+          Log.LogPrint( "  Actual: " + Actual.size() );
+          Log.LogPrint( "Expected: " + lvlsExpected.size() );
+          Log.ResCloseList();
+      }
+      
+      if (bFail)
+      {
+        // Fehler Ausnahme auslösen
+        throw new OKWVerifyingFailsException();   
+      }
+  }
+    } 
+    catch (Exception e) 
+    {
+     this.HandleException(e);
+    } 
+    finally 
+    {
+     Log.LogFunctionEndDebug();
+    }
+  }
+
+
+  
+  /**
+   *  \copydoc IOKW_State::VerifyTooltipWCM(String,String)
+   */
+  public void VerifyTooltipWCM(String FN, String ExpVal) throws Exception {
+
+    ArrayList<String> Actual = null;
+    Boolean bFail = false;
+    
+    Log.LogFunctionStartDebug("VerifyTooltipWCM", "FN", FN, "ExpVal",
+        ExpVal);
+
+    try {
+      // Prüfen ob ignoriert werden muss...
+      if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+          || ExpVal.equals("")) {
+        // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+        Log.LogPrintDebug(LM.GetMessage("VerifyTooltip", "Ignore"));
+      }
+      else 
+      {
+        if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY")))
+        {
+          ExpVal = "";
+        }
+
+        // Split giveneExpected Value
+        ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(ExpVal);
+
+        lvlsExpected = Parser.ParseMe(lvlsExpected);
+
+        CO.SetChildName(FN);
+        
+        Actual = CO.VerifyTooltipWCM( lvlsExpected );            
+        
+        Integer ActualSize = new Integer(Actual.size());
+        Integer ExpectedSize = new Integer(lvlsExpected.size());
+
+     
+        if( ActualSize.equals( ExpectedSize ))
+        {
+          Log.LogPass( "Size is OK!" );
+          
+          for (int i = 0; i < Actual.size(); i++)
+          {
+            
+            if (Matcher.WildcardMatch(Actual.get(i), lvlsExpected.get(i)) )
+            {
+              Log.LogPass( Actual.get(i) + " = " + lvlsExpected.get(i) );
+            }
+            else
+            {
+              bFail = true;
+                
+              Log.LogError( Actual.get(i) + " \u2260 " + lvlsExpected.get(i) );
+              Log.ResOpenList( "Details..." );
+              Log.LogPrint( "  Actual: " + Actual.get(i) );
+              Log.LogPrint( "Expected: " + lvlsExpected.get(i) );
+              Log.ResCloseList();
+            }
+          }
+        }
+        else
+        {
+          bFail = true;
+
+          Log.LogError( Actual.size() + " \u2260 " + lvlsExpected.size() );
+          Log.ResOpenList( "Details..." );
+          Log.LogPrint( "  Actual: " + Actual.size() );
+          Log.LogPrint( "Expected: " + lvlsExpected.size() );
+          Log.ResCloseList();
+        }
+        
+        if (bFail)
+        {
+          // Fehler Ausnahme auslösen
+          throw new OKWVerifyingFailsException();   
+        }
+      }
+    } 
+    finally 
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
+
+  /**
+   *  \copydoc IOKW_State::VerifyTooltipREGX(String,String)
+   */
+  public void VerifyTooltipREGX(String FN, String ExpVal) throws Exception {
+
+    ArrayList<String> Actual = null;
+    Boolean bFail = false;
+    
+    Log.LogFunctionStartDebug("VerifyTooltipREGX", "FN", FN, "ExpVal",
+        ExpVal);
+
+    try
+    {
+      // Prüfen ob ignoriert werden muss...
+      if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+          || ExpVal.equals("")) {
+        // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+        Log.LogPrintDebug(LM.GetMessage("VerifyTooltip", "Ignore"));
+      }
+      else 
+      {
+        if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY")))
+        {
+          ExpVal = "";
+        }
+
+        // Split giveneExpected Value
+        ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(ExpVal);
+
+        lvlsExpected = Parser.ParseMe(lvlsExpected);
+
+        CO.SetChildName(FN);
+        
+        Actual = CO.VerifyTooltipREGX(lvlsExpected );            
+        
+        Integer ActualSize = new Integer(Actual.size());
+        Integer ExpectedSize = new Integer(lvlsExpected.size());
+
+     
+        if( ActualSize.equals( ExpectedSize ))
+        {
+          Log.LogPass( "Array Sizes are Equal: OK!" );
+          
+          for (int i = 0; i < Actual.size(); i++)
+          {
+            
+            if (Matcher.RegexMatch(Actual.get(i), lvlsExpected.get(i)) )
+            {
+              Log.LogPass( Actual.get(i) + " = " + lvlsExpected.get(i) );
+            }
+            else
+            {
+              bFail = true;
+
+              Log.LogError( Actual.get(i) + " \u2260 " + lvlsExpected.get(i) );
+              Log.ResOpenList( "Details..." );
+              Log.LogPrint( "  Actual: " + Actual.get(i) );
+              Log.LogPrint( "Expected: " + lvlsExpected.get(i) );
+              Log.ResCloseList();
+            }
+          }
+        }
+        else
+        {
+ 
+            bFail = true;
+            
+            Log.LogError( Actual.size() + " \u2260 " + lvlsExpected.size() );
+            Log.ResOpenList( "Details..." );
+            Log.LogPrint( "  Actual: " + Actual.size() );
+            Log.LogPrint( "Expected: " + lvlsExpected.size() );
+            Log.ResCloseList();
+                  }
+        
+        if (bFail)
+        {
+          // Ausnahme auslösen Fehler
+          throw new OKWVerifyingFailsException();   
+        }
+        
+      }
+    } 
+    finally 
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
+
+		
 	 /**
 	 *  \copydoc IOKW_State::VerifyValue(string,string)
 	 */
@@ -1439,13 +1660,12 @@ public class OK implements IOKW_State {
 
 	    Boolean bFail = false;
 	    
-		Log.LogFunctionStartDebug("VerifyValue", "FN", FN, "fpsExpected",
-				ExpVal);
+		Log.LogFunctionStartDebug("VerifyValue", "FN", FN, "ExpVal", ExpVal);
 
 		try {
 			// Prüfen ob ignoriert werden muss...
-			if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
-					|| ExpVal.equals("")) {
+			if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || ExpVal.equals(""))
+			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("VerifyValue", "Ignore"));
 			}
@@ -1510,7 +1730,6 @@ public class OK implements IOKW_State {
         	// Fehler Ausnahme auslösen
         	throw new OKWVerifyingFailsException();  	
         }
-
 	}
 		} 
 		catch (Exception e) 

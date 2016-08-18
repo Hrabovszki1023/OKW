@@ -443,10 +443,28 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyTablecellValue( FN, fpsCol, fpsRow, ExpVal );
   }
 
-  // / \copydoc IOKW_State::VerifyTooltip(String,String)
+  /**
+   *  \copydoc IOKW_State::VerifyTooltip(String,String)
+   */
   public void VerifyTooltip( String FN, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifyTooltip( FN, ExpVal );
+  }
+
+  /**
+   *  \copydoc IOKW_State::VerifyTooltipREGX(String,String)
+   */
+  public void VerifyTooltipREGX( String FN, String ExpVal ) throws Exception
+  {
+    this.CurrentState.VerifyTooltipREGX( FN, ExpVal );
+  }
+
+  /**
+   * \copydoc IOKW_State::VerifyTooltipWCM(String,String)
+   */
+  public void VerifyTooltipWCM( String FN, String ExpVal ) throws Exception
+  {
+    this.CurrentState.VerifyTooltipWCM( FN, ExpVal );
   }
 
   /**
@@ -479,19 +497,25 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyLabel( FN, ExpVal );
   }
 
-  // / \copydoc IOKW_State::VerifyValue(String,String)
+  /**
+   *  \copydoc IOKW_State::VerifyValue(String,String)
+   */
   public void VerifyValue( String FN, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifyValue( FN, ExpVal );
   }
 
-  // / \copydoc IOKW_State::VerifyValueREGX(String,String)
+  /**
+   *  \copydoc IOKW_State::VerifyValueREGX(String,String)
+   */
   public void VerifyValueREGX( String FN, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifyValueREGX( FN, ExpVal );
   }
 
-  // / \copydoc IOKW_State::VerifyValueWCM(String,String)
+  /**
+   * \copydoc IOKW_State::VerifyValueWCM(String,String)
+   */
   public void VerifyValueWCM( String FN, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifyValueWCM( FN, ExpVal );

@@ -742,38 +742,42 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-        public List<String> VerifyTooltip(ArrayList<String> fpLsExpectedValue)
+        public List<String> VerifyTooltip()
         {
             List<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyTooltip");
-            lvLsReturn.addAll(fpLsExpectedValue);
-
+            lvLsReturn.add("1. Value");
+            lvLsReturn.add("2. Value");
+            lvLsReturn.add("3. Value");
+            
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
-
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyTooltip()");
-            myClipboard.getValue().addAll(fpLsExpectedValue);
+
+            myClipboard.getValue().addAll(lvLsReturn);
 
             this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
 
-        public List<String> VerifyCaption(ArrayList<String> fpLsExpectedValue)
+        public List<String> VerifyCaption()
         {
             List<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyCaption");
-            lvLsReturn.addAll(fpLsExpectedValue);
-
+            lvLsReturn.add("1. Value");
+            lvLsReturn.add("2. Value");
+            lvLsReturn.add("3. Value");
+            
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
-
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyCaption()");
-            myClipboard.getValue().addAll(fpLsExpectedValue);
+
+            myClipboard.getValue().addAll(lvLsReturn);
 
             this.myLogger.LogFunctionEndDebug();
 

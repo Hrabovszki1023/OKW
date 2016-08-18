@@ -131,19 +131,19 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-        public List<String> VerifyTooltip(ArrayList<String> fpLsExpectedValue)
+        public List<String> VerifyTooltip()
         {
             List<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyTooltip");
-            lvLsReturn.addAll(fpLsExpectedValue);
+            lvLsReturn.add("");
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
-
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyTooltip()");
-            myClipboard.getValue().addAll(fpLsExpectedValue);
+
+            myClipboard.getValue().add("");
 
             this.myLogger.LogFunctionEndDebug();
 

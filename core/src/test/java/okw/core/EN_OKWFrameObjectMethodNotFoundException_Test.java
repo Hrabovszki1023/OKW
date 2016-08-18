@@ -369,6 +369,67 @@ public void TC_VerifyCaptionWCM_OKWFrameObjectMethodNotFoundException()
   EN.VerifyCaptionWCM( "NoMethodObj", "NoValue" );
 }
 
+/**
+ * \~german
+ *  \brief
+ *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
+ *  VerifyTooltip(String,String) ausgelöst wird.
+ * 
+ *  \~english
+ *  \~
+ *  \author Zoltan Hrabovszki
+ *  \date 2016.05.07
+ */
+@Test( expected = OKWFrameObjectMethodNotFoundException.class )
+public void TC_VerifyTooltip_OKWFrameObjectMethodNotFoundException()
+    throws Exception {
+  EN.BeginTest( name.getMethodName() );
+
+  EN.SelectWindow( "Rechner" );
+  EN.VerifyTooltip( "NoMethodObj", "NoValue" );
+}
+
+
+/**
+ * \~german
+ *  \brief
+ *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
+ *  VerifyTooltipREGX(String,String) ausgelöst wird.
+ * 
+ *  \~english
+ *  \~
+ *  \author Zoltan Hrabovszki
+ *  \date 2016.05.07
+ */
+@Test( expected = OKWFrameObjectMethodNotFoundException.class )
+public void TC_VerifyTooltipREGX_OKWFrameObjectMethodNotFoundException()
+    throws Exception {
+  EN.BeginTest( name.getMethodName() );
+
+  EN.SelectWindow( "Rechner" );
+  EN.VerifyTooltipREGX( "NoMethodObj", "NoValue" );
+}
+
+/**
+ * \~german
+ *  \brief
+ *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
+ *  VerifyTooltipWCM(String,String) ausgelöst wird.
+ * 
+ *  \~english
+ *  \~
+ *  \author Zoltan Hrabovszki
+ *  \date 2016.05.07
+ */
+@Test( expected = OKWFrameObjectMethodNotFoundException.class )
+public void TC_VerifyTooltipWCM_OKWFrameObjectMethodNotFoundException()
+    throws Exception {
+  EN.BeginTest( name.getMethodName() );
+
+  EN.SelectWindow( "Rechner" );
+  EN.VerifyTooltipWCM( "NoMethodObj", "NoValue" );
+}
+
 
   /**
    * \~german

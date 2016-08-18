@@ -97,14 +97,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::ClickOn(String)
         /// 
-        public static void ClickOn(String fpsFunctionalName) throws Exception
+        public static void ClickOn(String FN) throws Exception
         {
-            Log.LogKeyWordStart("Click on", fpsFunctionalName);
+            Log.LogKeyWordStart("Click on", FN);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.ClickOn(fpsFunctionalName);
+            	myKernel.ClickOn(FN);
             }
             finally
             {
@@ -118,14 +118,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::ClickOn(String,String)
         /// 
-        public static void ClickOn(String fpsFunctionalName, String fpsClickType) throws Exception
+        public static void ClickOn(String FN, String fpsClickType) throws Exception
         {
-            Log.LogKeyWordStart("Click on", fpsFunctionalName, fpsClickType);
+            Log.LogKeyWordStart("Click on", FN, fpsClickType);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.ClickOn(fpsFunctionalName, fpsClickType);
+            	myKernel.ClickOn(FN, fpsClickType);
             }
             finally
             {
@@ -158,14 +158,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::LogCaption()
         /// 
-        public static void LogCaption(String fpsFunctionalName) throws Exception
+        public static void LogCaption(String FN) throws Exception
         {
-            Log.LogKeyWordStart("Log Caption", fpsFunctionalName);
+            Log.LogKeyWordStart("Log Caption", FN);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.LogCaption(fpsFunctionalName);
+            	myKernel.LogCaption(FN);
             }
             finally
             {
@@ -179,14 +179,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::LogExists()
         /// 
-        public static void LogExists(String fpsFunctionalName) throws Exception
+        public static void LogExists(String FN) throws Exception
         {
-            Log.LogKeyWordStart("Log exists", fpsFunctionalName);
+            Log.LogKeyWordStart("Log exists", FN);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.LogExists(fpsFunctionalName);
+            	myKernel.LogExists(FN);
             }
             finally
             {
@@ -200,14 +200,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::LogHasFocus()
         /// 
-        public static void LogHasFocus(String fpsFunctionalName) throws Exception
+        public static void LogHasFocus(String FN) throws Exception
         {
-            Log.LogKeyWordStart("Log has focus", fpsFunctionalName);
+            Log.LogKeyWordStart("Log has focus", FN);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.LogHasFocus(fpsFunctionalName);
+            	myKernel.LogHasFocus(FN);
             }
             finally
             {
@@ -221,14 +221,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::LogIsActive()
         /// 
-        public static void LogIsActive(String fpsFunctionalName) throws Exception
+        public static void LogIsActive(String FN) throws Exception
         {
-            Log.LogKeyWordStart("Log is activ", fpsFunctionalName);
+            Log.LogKeyWordStart("Log is activ", FN);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.LogIsActive(fpsFunctionalName);
+            	myKernel.LogIsActive(FN);
             }
             finally
             {
@@ -242,14 +242,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::LogLabel()
         /// 
-        public static void LogLabel(String fpsFunctionalName) throws Exception
+        public static void LogLabel(String FN) throws Exception
         {
-            Log.LogKeyWordStart("Log label", fpsFunctionalName);
+            Log.LogKeyWordStart("Log label", FN);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.LogLabel(fpsFunctionalName);
+            	myKernel.LogLabel(FN);
             }
             finally
             {
@@ -263,14 +263,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::LogSelected()
         /// 
-        public static void LogSelected(String fpsFunctionalName) throws Exception
+        public static void LogSelected(String FN) throws Exception
         {
-            Log.LogKeyWordStart("Log selected", fpsFunctionalName);
+            Log.LogKeyWordStart("Log selected", FN);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.LogSelected(fpsFunctionalName);
+            	myKernel.LogSelected(FN);
             }
             finally
             {
@@ -284,14 +284,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::LogTablecellValue()
         /// 
-        public static void LogTablecellValue(String fpsFunctionalName, String fpsCol, String fpsRow) throws Exception
+        public static void LogTablecellValue(String FN, String fpsCol, String fpsRow) throws Exception
         {
-            Log.LogKeyWordStart("Log tablecell value", fpsFunctionalName, fpsCol, fpsRow);
+            Log.LogKeyWordStart("Log tablecell value", FN, fpsCol, fpsRow);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.LogTablecellValue(fpsFunctionalName, fpsCol, fpsRow);
+            	myKernel.LogTablecellValue(FN, fpsCol, fpsRow);
             }
             finally
             {
@@ -305,14 +305,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::LogTooltip()
         /// 
-        public static void LogTooltip(String fpsFunctionalName) throws Exception
+        public static void LogTooltip(String FN) throws Exception
         {
-            Log.LogKeyWordStart("Log tooltip", fpsFunctionalName);
+            Log.LogKeyWordStart("Log tooltip", FN);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.LogTooltip(fpsFunctionalName);
+            	myKernel.LogTooltip(FN);
             }
             finally
             {
@@ -326,14 +326,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::LogValue()
         /// 
-        public static void LogValue(String fpsFunctionalName) throws Exception
+        public static void LogValue(String FN) throws Exception
         {
-            Log.LogKeyWordStart("Log value", fpsFunctionalName);
+            Log.LogKeyWordStart("Log value", FN);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.LogValue(fpsFunctionalName);
+            	myKernel.LogValue(FN);
             }
             finally
             {
@@ -347,14 +347,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::MemorizeCaption()
         /// 
-        public static void MemorizeCaption(String fpsFunctionalName, String fpsKeyName) throws Exception
+        public static void MemorizeCaption(String FN, String fpsKeyName) throws Exception
         {
-            Log.LogKeyWordStart("Memorize caption", fpsFunctionalName, fpsKeyName);
+            Log.LogKeyWordStart("Memorize caption", FN, fpsKeyName);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.MemorizeCaption(fpsFunctionalName, fpsKeyName);
+            	myKernel.MemorizeCaption(FN, fpsKeyName);
             }
             finally
             {
@@ -368,14 +368,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::MemorizeExists()
         /// 
-        public static void MemorizeExists(String fpsFunctionalName, String fpsKeyName) throws Exception
+        public static void MemorizeExists(String FN, String fpsKeyName) throws Exception
         {
-            Log.LogKeyWordStart("Memorize exists", fpsFunctionalName, fpsKeyName);
+            Log.LogKeyWordStart("Memorize exists", FN, fpsKeyName);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.MemorizeExists(fpsFunctionalName, fpsKeyName);
+            	myKernel.MemorizeExists(FN, fpsKeyName);
             }
             finally
             {
@@ -389,14 +389,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::MemorizeHasFocus()
         /// 
-        public static void MemorizeHasFocus(String fpsFunctionalName, String fpsKeyName) throws Exception
+        public static void MemorizeHasFocus(String FN, String fpsKeyName) throws Exception
         {
-            Log.LogKeyWordStart("Memorize has focus", fpsFunctionalName, fpsKeyName);
+            Log.LogKeyWordStart("Memorize has focus", FN, fpsKeyName);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.MemorizeHasFocus(fpsFunctionalName, fpsKeyName);
+            	myKernel.MemorizeHasFocus(FN, fpsKeyName);
             }
             finally
             {
@@ -410,14 +410,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::MemorizeIsActive()
         /// 
-        public static void MemorizeIsActive(String fpsFunctionalName, String fpsKeyName) throws Exception
+        public static void MemorizeIsActive(String FN, String fpsKeyName) throws Exception
         {
-            Log.LogKeyWordStart("Memorize is activ", fpsFunctionalName, fpsKeyName);
+            Log.LogKeyWordStart("Memorize is activ", FN, fpsKeyName);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.MemorizeIsActive(fpsFunctionalName, fpsKeyName);
+            	myKernel.MemorizeIsActive(FN, fpsKeyName);
             }
             finally
             {
@@ -431,14 +431,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::MemorizeLabel()
         /// 
-        public static void MemorizeLabel(String fpsFunctionalName, String fpsKeyName) throws Exception
+        public static void MemorizeLabel(String FN, String fpsKeyName) throws Exception
         {
-            Log.LogKeyWordStart("Memorize label", fpsFunctionalName, fpsKeyName);
+            Log.LogKeyWordStart("Memorize label", FN, fpsKeyName);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.MemorizeLabel(fpsFunctionalName, fpsKeyName);
+            	myKernel.MemorizeLabel(FN, fpsKeyName);
             }
             finally
             {
@@ -452,14 +452,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::MemorizeSelectedValue()
         /// 
-        public static void MemorizeSelectedValue(String fpsFunctionalName, String fpsKeyName) throws Exception
+        public static void MemorizeSelectedValue(String FN, String fpsKeyName) throws Exception
         {
-            Log.LogKeyWordStart("Memorize selecte value", fpsFunctionalName, fpsKeyName);
+            Log.LogKeyWordStart("Memorize selecte value", FN, fpsKeyName);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.MemorizeSelectedValue(fpsFunctionalName, fpsKeyName);
+            	myKernel.MemorizeSelectedValue(FN, fpsKeyName);
             }
             finally
             {
@@ -473,13 +473,13 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::MemorizeTablecellValue()
         /// 
-        public static void MemorizeTablecellValue(String fpsFunctionalName, String fpsCol, String fpsRow, String fpsKeyName) throws Exception
+        public static void MemorizeTablecellValue(String FN, String fpsCol, String fpsRow, String fpsKeyName) throws Exception
         {
-            Log.LogKeyWordStart("Memorize tablecell value", fpsFunctionalName, fpsCol, fpsRow, fpsKeyName);
+            Log.LogKeyWordStart("Memorize tablecell value", FN, fpsCol, fpsRow, fpsKeyName);
             
             try{
             	myKernel.SetLanguage(Language);
-            	myKernel.MemorizeTablecellValue(fpsFunctionalName, fpsCol, fpsRow, fpsKeyName);
+            	myKernel.MemorizeTablecellValue(FN, fpsCol, fpsRow, fpsKeyName);
             }
             finally
             {
@@ -493,14 +493,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::MemorizeTooltip()
         /// 
-        public static void MemorizeTooltip(String fpsFunctionalName, String fpsKeyName) throws Exception
+        public static void MemorizeTooltip(String FN, String fpsKeyName) throws Exception
         {
-            Log.LogKeyWordStart("Memorize tooltip", fpsFunctionalName, fpsKeyName);
+            Log.LogKeyWordStart("Memorize tooltip", FN, fpsKeyName);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.MemorizeTooltip(fpsFunctionalName, fpsKeyName);
+            	myKernel.MemorizeTooltip(FN, fpsKeyName);
             }
             finally
             {
@@ -514,14 +514,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::MemorizeValue()
         /// 
-        public static void MemorizeValue(String fpsFunctionalName, String fpsKeyName) throws Exception
+        public static void MemorizeValue(String FN, String fpsKeyName) throws Exception
         {
-            Log.LogKeyWordStart("Memorize value", fpsFunctionalName, fpsKeyName);
+            Log.LogKeyWordStart("Memorize value", FN, fpsKeyName);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.MemorizeValue(fpsFunctionalName, fpsKeyName);
+            	myKernel.MemorizeValue(FN, fpsKeyName);
             }
             finally
             {
@@ -535,14 +535,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::Select(String)
         /// 
-        public static void Select(String fpsFunctionalName, String fpsValue) throws Exception
+        public static void Select(String FN, String fpsValue) throws Exception
         {
-            Log.LogKeyWordStart("Select", fpsFunctionalName, fpsValue);
+            Log.LogKeyWordStart("Select", FN, fpsValue);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.Select(fpsFunctionalName, fpsValue);
+            	myKernel.Select(FN, fpsValue);
             }
             finally
             {
@@ -556,14 +556,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::Select(String)
         /// 
-        public static void Select(String fpsFunctionalName, String fpsValue, String fpsClickType) throws Exception
+        public static void Select(String FN, String fpsValue, String fpsClickType) throws Exception
         {
-            Log.LogKeyWordStart("Select", fpsFunctionalName, fpsValue, fpsClickType);
+            Log.LogKeyWordStart("Select", FN, fpsValue, fpsClickType);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.Select(fpsFunctionalName, fpsValue, fpsClickType);
+            	myKernel.Select(FN, fpsValue, fpsClickType);
             }
             finally
             {
@@ -577,14 +577,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::SelectMenu(String)
         /// 
-        public static void SelectMenu(String fpsFunctionalName) throws Exception
+        public static void SelectMenu(String FN) throws Exception
         {
-            Log.LogKeyWordStart("Select menu", fpsFunctionalName);
+            Log.LogKeyWordStart("Select menu", FN);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.SelectMenu(fpsFunctionalName);
+            	myKernel.SelectMenu(FN);
             }
             finally
             {
@@ -598,14 +598,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::SelectMenu(String,String)
         /// 
-        public static void SelectMenu(String fpsFunctionalName, String fpsValue) throws Exception
+        public static void SelectMenu(String FN, String fpsValue) throws Exception
         {
-            Log.LogKeyWordStart("Select menu", fpsFunctionalName, fpsValue);
+            Log.LogKeyWordStart("Select menu", FN, fpsValue);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.SelectMenu(fpsFunctionalName, fpsValue);
+            	myKernel.SelectMenu(FN, fpsValue);
             }
             finally
             {
@@ -619,14 +619,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::SelectTablecell(String,String,String)
         /// 
-        public static void SelectTablecell(String fpsFunctionalName, String fpsCol, String fpsRow) throws Exception
+        public static void SelectTablecell(String FN, String fpsCol, String fpsRow) throws Exception
         {
-            Log.LogKeyWordStart("Select Tablecell", fpsFunctionalName, fpsCol, fpsRow);
+            Log.LogKeyWordStart("Select Tablecell", FN, fpsCol, fpsRow);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.SelectTablecell(fpsFunctionalName, fpsCol, fpsRow);
+            	myKernel.SelectTablecell(FN, fpsCol, fpsRow);
             }
             finally
             {
@@ -640,14 +640,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::SelectTablecell(String,String,String,String)
         /// 
-        public static void SelectTablecell(String fpsFunctionalName, String fpsCol, String fpsRow, String fpsClickType) throws Exception
+        public static void SelectTablecell(String FN, String fpsCol, String fpsRow, String fpsClickType) throws Exception
         {
-            Log.LogKeyWordStart("Select Tablecell", fpsFunctionalName, fpsCol, fpsRow, fpsClickType);
+            Log.LogKeyWordStart("Select Tablecell", FN, fpsCol, fpsRow, fpsClickType);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.SelectTablecell(fpsFunctionalName, fpsCol, fpsRow, fpsClickType);
+            	myKernel.SelectTablecell(FN, fpsCol, fpsRow, fpsClickType);
             }
             finally
             {
@@ -661,14 +661,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::SelectWindow()
         /// 
-        public static void SelectWindow(String fpsFunctionalName) throws Exception
+        public static void SelectWindow(String FN) throws Exception
         {
-            Log.LogKeyWordStart("Select window", fpsFunctionalName);
+            Log.LogKeyWordStart("Select window", FN);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.SelectWindow(fpsFunctionalName);
+            	myKernel.SelectWindow(FN);
             }
             finally
             {
@@ -700,14 +700,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::SetFocus()
         /// 
-        public static void SetFocus(String fpsFunctionalName) throws Exception
+        public static void SetFocus(String FN) throws Exception
         {
-            Log.LogKeyWordStart("Set focus", fpsFunctionalName);
+            Log.LogKeyWordStart("Set focus", FN);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.SetFocus(fpsFunctionalName);
+            	myKernel.SetFocus(FN);
             }
             finally
             {
@@ -721,14 +721,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::SetValue()
         /// 
-        public static void SetValue(String fpsFunctionalName, String fpsValue) throws Exception
+        public static void SetValue(String FN, String fpsValue) throws Exception
         {
-            Log.LogKeyWordStart("Set value", fpsFunctionalName, fpsValue);
+            Log.LogKeyWordStart("Set value", FN, fpsValue);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.SetValue(fpsFunctionalName, fpsValue);
+            	myKernel.SetValue(FN, fpsValue);
             }
             finally
             {
@@ -784,15 +784,15 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::TypeKey()
         /// 
-        public static void TypeKey(String fpsFunctionalName, String fpsValue) throws Exception
+        public static void TypeKey(String FN, String fpsValue) throws Exception
         {
-            Log.LogKeyWordStart("Typekey", fpsFunctionalName, fpsValue);
+            Log.LogKeyWordStart("Typekey", FN, fpsValue);
 
             try
             {
 
             	myKernel.SetLanguage(Language);
-            	myKernel.TypeKey(fpsFunctionalName, fpsValue);
+            	myKernel.TypeKey(FN, fpsValue);
             }
             finally
             {
@@ -806,14 +806,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::TypeKeyTablecell()
         /// 
-        public static void TypeKeyTablecell(String fpsFunctionalName, String fpsCol, String fpsRow, String fpsValue) throws Exception
+        public static void TypeKeyTablecell(String FN, String fpsCol, String fpsRow, String fpsValue) throws Exception
         {
-            Log.LogKeyWordStart("Typekey tablecell", fpsFunctionalName, fpsCol, fpsRow, fpsValue);
+            Log.LogKeyWordStart("Typekey tablecell", FN, fpsCol, fpsRow, fpsValue);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.TypeKeyTablecell(fpsFunctionalName, fpsCol, fpsRow, fpsValue);
+            	myKernel.TypeKeyTablecell(FN, fpsCol, fpsRow, fpsValue);
             }
             finally
             {
@@ -827,14 +827,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::TypeKeyWindow()
         /// 
-        public static void TypeKeyWindow(String fpsFunctionalName, String fpsValue) throws Exception
+        public static void TypeKeyWindow(String FN, String fpsValue) throws Exception
         {
-            Log.LogKeyWordStart("Typekey window", fpsFunctionalName, fpsValue);
+            Log.LogKeyWordStart("Typekey window", FN, fpsValue);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.TypeKeyWindow(fpsFunctionalName, fpsValue);
+            	myKernel.TypeKeyWindow(FN, fpsValue);
             }
             finally
             {
@@ -848,14 +848,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::VerifyCaption()
         /// 
-        public static void VerifyCaption(String fpsFunctionalName, String fpsValue) throws Exception
+        public static void VerifyCaption(String FN, String fpsValue) throws Exception
         {
-            Log.LogKeyWordStart("Verify caption", fpsFunctionalName, fpsValue);
+            Log.LogKeyWordStart("Verify caption", FN, fpsValue);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.VerifyCaption(fpsFunctionalName, fpsValue);
+            	myKernel.VerifyCaption(FN, fpsValue);
             }
             finally
             {
@@ -869,14 +869,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::VerifyCaption()
         /// 
-        public static void VerifyCaptionREGX(String fpsFunctionalName, String fpsValue) throws Exception
+        public static void VerifyCaptionREGX(String FN, String fpsValue) throws Exception
         {
-            Log.LogKeyWordStart("Verify caption REGX", fpsFunctionalName, fpsValue);
+            Log.LogKeyWordStart("Verify caption REGX", FN, fpsValue);
 
             try
             {
               myKernel.SetLanguage(Language);
-              myKernel.VerifyCaptionREGX(fpsFunctionalName, fpsValue);
+              myKernel.VerifyCaptionREGX(FN, fpsValue);
             }
             finally
             {
@@ -890,14 +890,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::VerifyCaption()
         /// 
-        public static void VerifyCaptionWCM(String fpsFunctionalName, String fpsValue) throws Exception
+        public static void VerifyCaptionWCM(String FN, String fpsValue) throws Exception
         {
-            Log.LogKeyWordStart("Verify caption", fpsFunctionalName, fpsValue);
+            Log.LogKeyWordStart("Verify caption", FN, fpsValue);
 
             try
             {
               myKernel.SetLanguage(Language);
-              myKernel.VerifyCaptionWCM(fpsFunctionalName, fpsValue);
+              myKernel.VerifyCaptionWCM(FN, fpsValue);
             }
             finally
             {
@@ -911,14 +911,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::VerifyExists()
         /// 
-        public static void VerifyExists(String fpsFunctionalName, String fpsValue) throws Exception
+        public static void VerifyExists(String FN, String fpsValue) throws Exception
         {
-            Log.LogKeyWordStart("Verify exists", fpsFunctionalName, fpsValue);
+            Log.LogKeyWordStart("Verify exists", FN, fpsValue);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.VerifyExists(fpsFunctionalName, fpsValue);
+            	myKernel.VerifyExists(FN, fpsValue);
             }
             finally
             {
@@ -932,14 +932,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::VerifyHasFocus()
         /// 
-        public static void VerifyHasFocus(String fpsFunctionalName, String fpsExpectedValue) throws Exception
+        public static void VerifyHasFocus(String FN, String ExpVal) throws Exception
         {
-            Log.LogKeyWordStart("Verify has focus", fpsFunctionalName, fpsExpectedValue);
+            Log.LogKeyWordStart("Verify has focus", FN, ExpVal);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.VerifyHasFocus(fpsFunctionalName, fpsExpectedValue);
+            	myKernel.VerifyHasFocus(FN, ExpVal);
             }
             finally
             {
@@ -953,14 +953,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::VerifyIsActive()
         /// 
-        public static void VerifyIsActive(String fpsFunctionalName, String fpsExpectedValue) throws Exception
+        public static void VerifyIsActive(String FN, String ExpVal) throws Exception
         {
-            Log.LogKeyWordStart("Verify is active", fpsFunctionalName, fpsExpectedValue);
+            Log.LogKeyWordStart("Verify is active", FN, ExpVal);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.VerifyIsActive(fpsFunctionalName, fpsExpectedValue);
+            	myKernel.VerifyIsActive(FN, ExpVal);
             }
             finally
             {
@@ -974,14 +974,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::VerifyLabel()
         /// 
-        public static void VerifyLabel(String fpsFunctionalName, String fpsExpectedValue) throws Exception
+        public static void VerifyLabel(String FN, String ExpVal) throws Exception
         {
-            Log.LogKeyWordStart("Verify label", fpsFunctionalName, fpsExpectedValue);
+            Log.LogKeyWordStart("Verify label", FN, ExpVal);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.VerifyLabel(fpsFunctionalName, fpsExpectedValue);
+            	myKernel.VerifyLabel(FN, ExpVal);
             }
             finally
             {
@@ -995,14 +995,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::VerifySelectedValue()
         /// 
-        public static void VerifySelectedValue(String fpsFunctionalName, String fpsExpectedValue) throws Exception
+        public static void VerifySelectedValue(String FN, String ExpVal) throws Exception
         {
-            Log.LogKeyWordStart("Verify selected value", fpsFunctionalName, fpsExpectedValue);
+            Log.LogKeyWordStart("Verify selected value", FN, ExpVal);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.VerifySelectedValue(fpsFunctionalName, fpsExpectedValue);
+            	myKernel.VerifySelectedValue(FN, ExpVal);
             }
             finally
             {
@@ -1016,35 +1016,14 @@ import okw.log.*;
         /// \~english
         /// \copydoc IOKW_State::VerifyTablecellValue()
         /// 
-        public static void VerifyTablecellValue(String fpsFunctionalName, String fpsCol, String fpsRow, String fpsExpectedValue) throws Exception
+        public static void VerifyTablecellValue(String FN, String fpsCol, String fpsRow, String ExpVal) throws Exception
         {
-            Log.LogKeyWordStart("Verify table cell value", fpsFunctionalName, fpsCol, fpsRow, fpsExpectedValue);
+            Log.LogKeyWordStart("Verify table cell value", FN, fpsCol, fpsRow, ExpVal);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.VerifyTablecellValue(fpsFunctionalName, fpsCol, fpsRow, fpsExpectedValue);
-            }
-            finally
-            {
-            	Log.LogKeyWordEnd();
-            }
-        }
-
-        /// \~german
-        /// \copydoc IOKW_State::VerifyTooltip()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::VerifyTooltip()
-        /// 
-        public static void VerifyTooltip(String fpsFunctionalName, String fpsExpectedValue) throws Exception
-        {
-            Log.LogKeyWordStart("Verify tooltip", fpsFunctionalName, fpsExpectedValue);
-
-            try
-            {
-            	myKernel.SetLanguage(Language);
-            	myKernel.VerifyTooltip(fpsFunctionalName, fpsExpectedValue);
+            	myKernel.VerifyTablecellValue(FN, fpsCol, fpsRow, ExpVal);
             }
             finally
             {
@@ -1053,17 +1032,74 @@ import okw.log.*;
         }
 
         /**
-         *
-         *  \copydoc IOKW_State::VerifyValue(String,String)
-         */ 
-        public static void VerifyValue(String fpsFunctionalName, String fpsExpectedValue) throws Exception
+         *  \copydoc IOKW_State::VerifyTooltip()
+         */
+        public static void VerifyTooltip(String FN, String ExpVal) throws Exception
         {
-            Log.LogKeyWordStart("Verify value", fpsFunctionalName, fpsExpectedValue);
+            Log.LogKeyWordStart("VerifyTooltip", FN, ExpVal);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.VerifyValue(fpsFunctionalName, fpsExpectedValue);
+            	myKernel.VerifyTooltip(FN, ExpVal);
+            }
+            finally
+            {
+            	Log.LogKeyWordEnd();
+            }
+        }
+
+
+        /**
+        *
+        *  \copydoc IOKW_State::VerifyTooltipWCM(String,String)
+        */ 
+       public static void VerifyTooltipWCM(String FN, String ExpVal) throws Exception
+       {
+           Log.LogKeyWordStart("VerifyTooltipWCM", FN, ExpVal);
+
+           try
+           {
+            myKernel.SetLanguage(Language);
+            myKernel.VerifyTooltipWCM(FN, ExpVal);
+           }
+           finally
+           {
+            Log.LogKeyWordEnd();
+           }
+       }
+
+       /**
+       *
+       *  \copydoc IOKW_State::VerifyTooltipREGX(String,String)
+       */ 
+      public static void VerifyTooltipREGX(String FN, String ExpVal) throws Exception
+      {
+          Log.LogKeyWordStart("VerifyTooltipREGX", FN, ExpVal);
+
+          try
+          {
+            myKernel.SetLanguage(Language);
+            myKernel.VerifyTooltipREGX(FN, ExpVal);
+          }
+          finally
+          {
+            Log.LogKeyWordEnd();
+          }
+      }
+
+        /**
+         *
+         *  \copydoc IOKW_State::VerifyValue(String,String)
+         */ 
+        public static void VerifyValue(String FN, String ExpVal) throws Exception
+        {
+            Log.LogKeyWordStart("Verify value", FN, ExpVal);
+
+            try
+            {
+            	myKernel.SetLanguage(Language);
+            	myKernel.VerifyValue(FN, ExpVal);
             }
             finally
             {
@@ -1076,14 +1112,14 @@ import okw.log.*;
         *
         *  \copydoc IOKW_State::VerifyValueWCM(String,String)
         */ 
-       public static void VerifyValueWCM(String fpsFunctionalName, String fpsExpectedValue) throws Exception
+       public static void VerifyValueWCM(String FN, String ExpVal) throws Exception
        {
-           Log.LogKeyWordStart("Verify value WCM", fpsFunctionalName, fpsExpectedValue);
+           Log.LogKeyWordStart("Verify value WCM", FN, ExpVal);
 
            try
            {
            	myKernel.SetLanguage(Language);
-           	myKernel.VerifyValueWCM(fpsFunctionalName, fpsExpectedValue);
+           	myKernel.VerifyValueWCM(FN, ExpVal);
            }
            finally
            {
@@ -1095,32 +1131,33 @@ import okw.log.*;
        *
        *  \copydoc IOKW_State::VerifyValueREGX(String,String)
        */ 
-      public static void VerifyValueREGX(String fpsFunctionalName, String fpsExpectedValue) throws Exception
+      public static void VerifyValueREGX(String FN, String ExpVal) throws Exception
       {
-          Log.LogKeyWordStart("Verify value REGX", fpsFunctionalName, fpsExpectedValue);
+          Log.LogKeyWordStart("Verify value REGX", FN, ExpVal);
 
           try
           {
            myKernel.SetLanguage(Language);
-           myKernel.VerifyValueREGX(fpsFunctionalName, fpsExpectedValue);
+           myKernel.VerifyValueREGX(FN, ExpVal);
           }
           finally
           {
            Log.LogKeyWordEnd();
           }
       }
-       
-		/// \~german
-		/// \copydoc IOKW_State::VerifyFileExists(String,String)
-		/// 
-		public static void VerifyFileExists(String fpsPathAndFileName, String fpsExpectedValue) throws Exception
+
+      
+		/**
+		 *  \copydoc IOKW_State::VerifyFileExists(String,String)
+		 */
+		public static void VerifyFileExists(String fpsPathAndFileName, String ExpVal) throws Exception
 		{
-			Log.LogKeyWordStart("Verify file exists", fpsPathAndFileName, fpsExpectedValue);
+			Log.LogKeyWordStart("Verify file exists", fpsPathAndFileName, ExpVal);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.VerifyFileExists(fpsPathAndFileName, fpsExpectedValue);
+            	myKernel.VerifyFileExists(fpsPathAndFileName, ExpVal);
             }
             finally
             {
@@ -1128,17 +1165,17 @@ import okw.log.*;
             }
 		}
 
-		/// \~german
-		/// \copydoc IOKW_State::VerifyDirectoyExists(String,String)
-		/// 
-		public static void VerifyDirectoryExists(String fpsPath, String fpsExpectedValue) throws Exception
+		/**
+		 *  \copydoc IOKW_State::VerifyDirectoyExists(String,String)
+		 */
+		public static void VerifyDirectoryExists(String fpsPath, String ExpVal) throws Exception
 		{
-			Log.LogKeyWordStart("Verify directory exists", fpsPath, fpsExpectedValue);
+			Log.LogKeyWordStart("Verify directory exists", fpsPath, ExpVal);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.VerifyDirectoryExists(fpsPath, fpsExpectedValue);
+            	myKernel.VerifyDirectoryExists(fpsPath, ExpVal);
             }
             finally
             {

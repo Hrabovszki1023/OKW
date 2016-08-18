@@ -1134,8 +1134,6 @@ public class EN_Keywords_Test {
    * \~german
    * \brief "Normaler" Testfall für das Schlüsselwort VerifyCaption. 
    * 
-   * Prüft beide möglichen erwarteten Werte ab (YES/NO). 
-   * 
    *  \~english
    *  \~
    *  \author Zoltan Hrabovszki
@@ -1167,8 +1165,6 @@ public class EN_Keywords_Test {
    * \~german
    * \brief "Normaler" Testfall für das Schlüsselwort VerifyCaptionREGX. 
    * 
-   * Prüft beide möglichen erwarteten Werte ab (YES/NO). 
-   * 
    *  \~english
    *  \~
    *  \author Zoltan Hrabovszki
@@ -1199,8 +1195,6 @@ public class EN_Keywords_Test {
   /**
    * \~german
    * \brief "Normaler" Testfall für das Schlüsselwort VerifyCaptionWCM(String, String). 
-   * 
-   * Prüft beide möglichen erwarteten Werte ab (YES/NO). 
    * 
    *  \~english
    *  \~
@@ -1444,14 +1438,16 @@ public class EN_Keywords_Test {
     assertEquals( "VerifyTablecellValue()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  
+  /**
+   * \~german
+   * \brief "Normaler" Testfall für das Schlüsselwort VerifyCaption. 
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
   @Test
   public void tc_VerifyTooltip() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -1465,24 +1461,78 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-    // Ein eintzelner Wert
-    EN.VerifyTooltip( "All_MethodsObj", "Wert_1" );
+    EN.VerifyTooltip( "All_MethodsObj", "The one and only Value" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "Wert_1", myClipBoard.getValue().get( 0 ) );
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyTooltip()", myClipBoard.getMethod() );
+  }
+  
+  /**
+   * \~german
+   * \brief "Normaler" Testfall für das Schlüsselwort VerifyTooltipREGX. 
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifyTooltipREGX() throws Exception {
+    EN.BeginTest( name.getMethodName() );
 
-    // Ein eintzelner Wert
-    EN.VerifyTooltip( "All_MethodsObj", "Wert_1${SEP}WERT_2" );
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    EN.VerifyTooltipREGX( "All_MethodsObj", "\\w{3} one and only Value" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "Wert_1", myClipBoard.getValue().get( 0 ) );
-    assertEquals( "WERT_2", myClipBoard.getValue().get( 1 ) );
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyTooltip()", myClipBoard.getMethod() );
   }
 
+  /**
+   * \~german
+   * \brief "Normaler" Testfall für das Schlüsselwort VerifyTootip WCM(String, String). 
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifyTooltipWCM() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    EN.VerifyTooltipWCM( "All_MethodsObj", "??? one and only Value" );
+
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+    assertEquals( "VerifyTooltip()", myClipBoard.getMethod() );
+  }
+  
+  
   /**
    * \~german
    * \brief
