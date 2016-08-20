@@ -107,8 +107,8 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
    *  \date 2016.05.07
   */
   @Test( expected = OKWFrameObjectChildNotFoundException.class )
-  public void TC_SelectMenu_OKWFrameObjectChildNotFoundException()
-      throws Exception {
+  public void TC_SelectMenu_OKWFrameObjectChildNotFoundException() throws Exception
+  {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
