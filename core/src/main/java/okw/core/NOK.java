@@ -117,23 +117,19 @@ import okw.log.*;
 			Log.LogFunctionEndDebug();
 		}
 
-	     /**
-		  * \copydoc IOKW_State::ClickOn(string,string)
-	      */
-		public void ClickOn(String FN, String fpsClickType)
+	   /**
+		  * \copydoc IOKW_State::DoubleClickOn(string)
+	    */
+		public void DoubleClickOn(String FN)
 		{
-			Log.LogFunctionStartDebug("ClickOn", 
-				"FN", FN, 
-				"fpsClickType", fpsClickType);
+			Log.LogFunctionStartDebug("DoubleClickOn", "FN", FN );
             
 			Log.LogFunctionEndDebug();
 		}
 
-		/// \~german
-		/// \copydoc IOKW_State::EndTest()
-		/// \~english
-		/// \copydoc IOKW_State::EndTest()
-		/// 
+		/**
+		 *  \copydoc IOKW_State::EndTest()
+		 */
 		public void EndTest()
 		{
 			// TODO: Aufräumen  Kill... usw aufrufen

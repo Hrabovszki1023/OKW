@@ -97,7 +97,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
    *  \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  SelectWindow ausgelöst wird.
+   *  ClickOn() ausgelöst wird.
    * 
    *  \~english
    *  \~
@@ -117,7 +117,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
    *  \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  SelectWindow ausgelöst wird.
+   *  SelectMenu() ausgelöst wird.
    * 
    *  \~english
    *  \~
@@ -137,7 +137,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
    *  \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  SelectWindow ausgelöst wird.
+   *  DoubleClickOn() ausgelöst wird.
    * 
    *  \~english
    *  \~
@@ -145,18 +145,18 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
    *  \date 2013.12.26
    */
   @Test( expected = OKWFrameObjectMethodNotFoundException.class )
-  public void TC_ClickOn_ClickType_OKWFrameObjectMethodNotFoundException()
+  public void tc_DoubleClickOn_OKWFrameObjectMethodNotFoundException()
       throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.ClickOn( "NoMethodObj", "DOUBLECLICK" );
+    EN.DoubleClickOn( "NoMethodObj" );
   }
 
   
   /**
    * \~german \brief Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException
-   * von SelectWindow ausgelöst wird.
+   * von Select() ausgelöst wird.
    * 
    * \~english \~ \author Zoltan Hrabovszki \date 2013.12.26
    */
@@ -174,7 +174,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
    *  \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  SelectWindow ausgelöst wird.
+   *  SetFocus( FN ) ausgelöst wird.
    * 
    *  \~english
    *  \~
@@ -193,7 +193,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
 
   /**
    * \~german \brief Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException
-   * von SelectWindow ausgelöst wird.
+   * von SetValue( FN, Val ) ausgelöst wird.
    * 
    * \~english \~ \author Zoltan Hrabovszki \date 2013.12.26
    */
@@ -211,7 +211,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
    * \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  StartApp ausgelöst wird, wenn die Methode StartApp im 
+   *  StartApp( AppName ) ausgelöst wird, wenn die Methode StartApp im 
    *  Window-GUI-Adapter nicht definiert ist.
    * 
    *  \~english
@@ -232,7 +232,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
    * \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  StopApp ausgelöst wird, wenn die Methode StopApp im 
+   *  StopApp( AppName ) ausgelöst wird, wenn die Methode StopApp im 
    *  Window-GUI-Adapter nicht definiert ist.
    * 
    *  \~english
@@ -251,7 +251,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
 
   /**
    * \~german \brief Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException
-   * von SelectWindow ausgelöst wird.
+   * von TypeKey( FN, Val ) ausgelöst wird.
    * 
    * \~english \~ \author Zoltan Hrabovszki \date 2013.12.26
    */
@@ -269,7 +269,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
    * \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  VerifyIsActive ausgelöst wird.
+   *  VerifyHasFocus( FN, ExpVal ) ausgelöst wird.
    * 
    *  \~english
    *  \~
@@ -290,7 +290,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
    * \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  VerifyIsActive ausgelöst wird.
+   *  VerifyIsActive( FN, ExpVal ) ausgelöst wird.
    * 
    *  \~english
    *  \~
@@ -311,7 +311,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
    * \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  VerifyCaption(String,String) ausgelöst wird.
+   *  VerifyCaption( FN, ExpVal ) ausgelöst wird.
    * 
    *  \~english
    *  \~
@@ -332,7 +332,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
   * \~german
   *  \brief
   *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-  *  VerifyCaptionREGX(String,String) ausgelöst wird.
+  *  VerifyCaptionREGX( FN, ExpVal ) ausgelöst wird.
   * 
   *  \~english
   *  \~
@@ -353,7 +353,7 @@ public class EN_OKWFrameObjectMethodNotFoundException_Test {
  * \~german
  *  \brief
  *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
- *  VerifyCaptionWCM(String,String) ausgelöst wird.
+ *  VerifyCaptionWCM( FN, ExpVal ) ausgelöst wird.
  * 
  *  \~english
  *  \~
@@ -373,7 +373,7 @@ public void TC_VerifyCaptionWCM_OKWFrameObjectMethodNotFoundException()
  * \~german
  *  \brief
  *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
- *  VerifyTooltip(String,String) ausgelöst wird.
+ *  VerifyTooltip( FN, ExpVal ) ausgelöst wird.
  * 
  *  \~english
  *  \~
@@ -394,7 +394,7 @@ public void TC_VerifyTooltip_OKWFrameObjectMethodNotFoundException()
  * \~german
  *  \brief
  *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
- *  VerifyTooltipREGX(String,String) ausgelöst wird.
+ *  VerifyTooltipREGX( FN, ExpVal ) ausgelöst wird.
  * 
  *  \~english
  *  \~
@@ -414,7 +414,7 @@ public void TC_VerifyTooltipREGX_OKWFrameObjectMethodNotFoundException()
  * \~german
  *  \brief
  *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
- *  VerifyTooltipWCM(String,String) ausgelöst wird.
+ *  VerifyTooltipWCM( FN, ExpVal ) ausgelöst wird.
  * 
  *  \~english
  *  \~
@@ -435,7 +435,7 @@ public void TC_VerifyTooltipWCM_OKWFrameObjectMethodNotFoundException()
    * \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  VerifyValue(String,String) ausgelöst wird.
+   *  VerifyValue( FN, ExpVal ) ausgelöst wird.
    * 
    *  \~english
    *  \~
@@ -456,7 +456,7 @@ public void TC_VerifyTooltipWCM_OKWFrameObjectMethodNotFoundException()
    * \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  VerifyValueREGX(String,String) ausgelöst wird.
+   *  VerifyValueREGX( FN, ExpVal ) ausgelöst wird.
    * 
    *  \~english
    *  \~
@@ -476,7 +476,7 @@ public void TC_VerifyTooltipWCM_OKWFrameObjectMethodNotFoundException()
    * \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  VerifyValueWCM(String,String) ausgelöst wird.
+   *  VerifyValueWCM( FN, ExpVal ) ausgelöst wird.
    * 
    *  \~english
    *  \~
@@ -496,7 +496,7 @@ public void TC_VerifyTooltipWCM_OKWFrameObjectMethodNotFoundException()
    *  \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotFoundException von
-   *  SelectWindow ausgelöst wird.
+   *  Sequence( FN, SEQ_NAME, SEQ_ID ) ausgelöst wird.
    * 
    *  \~english
    *  \~

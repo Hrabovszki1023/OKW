@@ -90,7 +90,7 @@ public class EN_Keywords_Test {
   // / \author Zoltan Hrabovszki
   // / \date 2013.12.26
   @Test
-  public void tc_ClickOn_Clicktype() throws Exception {
+  public void tc_DoubleClickOn() throws Exception {
 
     EN.BeginTest( name.getMethodName() );
     // Testscript in Schlüsselwort-Notation
@@ -102,13 +102,13 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-    EN.ClickOn( "All_MethodsObj", "DOUBLEKLICK" );
+    EN.DoubleClickOn( "All_MethodsObj" );
 
     // Check the Name, Called Method and Value of Actuel object
     assertEquals( 1, myClipBoard.getValue().size() );
-    assertEquals( "DOUBLEKLICK", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-    assertEquals( "ClickOn_Clicktype()", myClipBoard.getMethod() );
+    assertEquals( "DoubleClickOn()", myClipBoard.getMethod() );
   }
 
   // / \~german

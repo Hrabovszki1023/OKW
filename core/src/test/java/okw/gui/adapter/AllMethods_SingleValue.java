@@ -54,17 +54,18 @@ import okw.log.Logger_Sngltn;
             return;
         }
 
-        public void ClickOn_Clicktype(String fpsClickType)
+        public void DoubleClickOn()
         {
-            this.myLogger.LogFunctionStartDebug("ClickOn_Clicktype");
+          this.myValue = "NO VALUE";
+          this.myLogger.LogFunctionStartDebug("ClickOn_Clicktype");
             
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
 
             myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("ClickOn_Clicktype()");
+            myClipboard.setMethod("DoubleClickOn()");
             
-            myClipboard.getValue().add( fpsClickType );
+            myClipboard.getValue().add(this.myValue);
 
             this.myLogger.LogFunctionEndDebug();
             

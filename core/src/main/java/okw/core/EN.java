@@ -112,20 +112,17 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::ClickOn(String,String)
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::ClickOn(String,String)
-        /// 
-        public static void ClickOn(String FN, String fpsClickType) throws Exception
+        /**
+         *  \copydoc IOKW_State::DoubleClickOn(String)
+         */
+        public static void DoubleClickOn(String FN) throws Exception
         {
-            Log.LogKeyWordStart("Click on", FN, fpsClickType);
+            Log.LogKeyWordStart("DoubleClickOn", FN);
 
             try
             {
             	myKernel.SetLanguage(Language);
-            	myKernel.ClickOn(FN, fpsClickType);
+            	myKernel.DoubleClickOn(FN);
             }
             finally
             {

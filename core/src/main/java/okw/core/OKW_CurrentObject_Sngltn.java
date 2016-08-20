@@ -1228,7 +1228,152 @@ public class OKW_CurrentObject_Sngltn
     return lvsReturn;
   }
 
+  /**
+   * \~german \brief Ruft eine Methode des aktuellen Objektes via
+   * "late bound function call" auf.
+   *
+   * Die aufgerufene Methode hat die Signatur:
+   *
+   * | Parameter/Return | Type | | :----------------|:------| | Parameter |
+   * keine | | Rückgabewert | kein |
+   *
+   * \param fpsMethod Name der Methode, die aufgerufen werden soll.
+   *
+   * \~english \brief Calls a method of the current Object with
+   * "late bound function call".
+   *
+   * The called method has the signature:
+   *
+   * | Parameter/Return | Type | | :----------------|:------| | Parameter | none
+   * | | Return | none |
+   *
+   * \param fpsMethod name of method to be called.
+   *
+   * \~ \author Zoltan Hrabovszki \date 2014.01.14
+   */
+  public void ClickOn( ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException
+  {
+    Log.LogFunctionStartDebug( "SelectMenu" );
+  
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Method myMethod = null;
+  
+    // Schenwir
+    try
+    {
+      myMethod = myFrame_Class.getMethod( "ClickOn" );
+      myMethod.invoke( cvoObject );
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Dann 2. Versuch: Schauen wir in die Superklasse...
+  
+      try
+      {
+        myMethod = myFrame_Class.getSuperclass().getDeclaredMethod( "ClickOn" );
+        myMethod.invoke( cvoObject );
+      }
+      catch (NoSuchMethodException | SecurityException e1)
+      {
+        // Existiert die Methode des Objektes?
+        // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+        // aussteigen...
+        String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "ClickOn" );
+        throw new OKWFrameObjectMethodNotFoundException( errorText );
+      }
+      catch (Exception e2)
+      {
+        String myMessage = e2.getMessage();
+        System.out.println( myMessage );
+      }
+  
+    }
+    catch (Exception e)
+    {
+      String myMessage = e.getMessage();
+      System.out.println( myMessage );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+    return;
+  }
 
+  /**
+   * \~german \brief Ruft eine Methode des aktuellen Objektes via
+   * "late bound function call" auf.
+   *
+   * Die aufgerufene Methode hat die Signatur:
+   *
+   * | Parameter/Return | Type | | :----------------|:------| | Parameter |
+   * keine | | Rückgabewert | kein |
+   *
+   * \param fpsMethod Name der Methode, die aufgerufen werden soll.
+   *
+   * \~english \brief Calls a method of the current Object with
+   * "late bound function call".
+   *
+   * The called method has the signature:
+   *
+   * | Parameter/Return | Type | | :----------------|:------| | Parameter | none
+   * | | Return | none |
+   *
+   * \param fpsMethod name of method to be called.
+   *
+   * \~ \author Zoltan Hrabovszki \date 2014.01.14
+   */
+  public void DoubleClickOn( ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException
+  {
+    Log.LogFunctionStartDebug( "DoubleClickOn" );
+  
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Method myMethod = null;
+  
+    // Schenwir
+    try
+    {
+      myMethod = myFrame_Class.getMethod( "DoubleClickOn" );
+      myMethod.invoke( cvoObject );
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Dann 2. Versuch: Schauen wir in die Superklasse...
+  
+      try
+      {
+        myMethod = myFrame_Class.getSuperclass().getDeclaredMethod( "DoubleClickOn" );
+        myMethod.invoke( cvoObject );
+      }
+      catch (NoSuchMethodException | SecurityException e1)
+      {
+        // Existiert die Methode des Objektes?
+        // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+        // aussteigen...
+        String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "DoubleClickOn" );
+        throw new OKWFrameObjectMethodNotFoundException( errorText );
+      }
+      catch (Exception e2)
+      {
+        String myMessage = e2.getMessage();
+        System.out.println( myMessage );
+      }
+  
+    }
+    catch (Exception e)
+    {
+      String myMessage = e.getMessage();
+      System.out.println( myMessage );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+    return;
+  }
+
+  
+  
   /**
    * \~german \brief Liefert die Referenz zum aktuellen Frame-Object. Referenz
    * ist im Feld cvoObject abgelegt.

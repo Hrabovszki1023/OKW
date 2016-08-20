@@ -162,11 +162,11 @@ public class Core implements IOKW_State
   }
 
   /**
-   * \copydoc IOKW_State::ClickOn(string,string)
+   * \copydoc IOKW_State::DoubleClickOn(string)
    */
-  public void ClickOn( String FN, String fpsClickType ) throws Exception
+  public void DoubleClickOn( String FN ) throws Exception
   {
-    this.CurrentState.ClickOn( FN, fpsClickType );
+    this.CurrentState.DoubleClickOn( FN );
   }
 
   // / \copydoc IOKW_State::EndTest()

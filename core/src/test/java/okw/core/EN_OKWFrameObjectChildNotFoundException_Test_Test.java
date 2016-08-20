@@ -77,8 +77,8 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
   /**
    *  \~german
    *  \brief
-   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch Select
-   *  ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch ClickOn
+   *  ausgelöst wird, wenn das Kindobjekt nicht vorhanden ist.
    * 
    *  \~english
    *  \~
@@ -98,8 +98,8 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
   /**
    *  \~german
    *  \brief
-   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch Select
-   *  ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch SelectMenu
+   *  ausgelöst wird, wenn das Kindobjekt nicht vorhanden ist.
    * 
    *  \~english
    *  \~
@@ -119,8 +119,8 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
   /**
    *  \~german
    *  \brief
-   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch Select
-   *  ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch DoubleClickOn()
+   *  ausgelöst wird, wenn das Kindobjekt nicht vorhanden ist.
    * 
    *  \~english
    *  \~
@@ -128,12 +128,12 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
    *  \date 2016.05.07
   */
   @Test( expected = OKWFrameObjectChildNotFoundException.class )
-  public void TC_ClickOn_ClickType_OKWFrameObjectChildNotFoundException()
+  public void tc_DoubleClickOn_OKWFrameObjectChildNotFoundException()
       throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.ClickOn( "IsNotDefindeInRechner", "DOUBLECLICK" );
+    EN.DoubleClickOn( "IsNotDefindeInRechner" );
   }
 
   

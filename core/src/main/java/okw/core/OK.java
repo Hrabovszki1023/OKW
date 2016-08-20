@@ -123,36 +123,46 @@ public class OK implements IOKW_State {
 		Log.LogFunctionEndDebug();
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::ClickOn(string)
-	/// \~english
-	/// \copydoc IOKW_State::ClickOn(string)
-	///
-	public void ClickOn(String FN) throws Exception {
+	/**
+	 *  \copydoc IOKW_State::ClickOn(string)
+	 */
+	public void ClickOn(String FN) throws Exception
+	{
 		Log.LogFunctionStartDebug("ClickOn", "FN", FN);
 
-		try {
+		try
+		{
 			CO.SetChildName(FN);
 			CO.CallMethod("ClickOn");
-		} catch (Exception e) {
+		}
+		catch (Exception e)
+		{
 			this.HandleException(e);
-		} finally {
+		}
+		finally
+		{
 			Log.LogFunctionEndDebug();
 		}
 	}
 
 	/**
-	 * \copydoc IOKW_State::ClickOn(string,string)
+	 * \copydoc IOKW_State::DoubleClickOn(string)
 	 */
-	public void ClickOn(String FN, String fpsClickType) throws Exception {
-		Log.LogFunctionStartDebug("ClickOn", "FN", FN, "fpsClickType", fpsClickType);
+	public void DoubleClickOn(String FN) throws Exception
+	{
+		Log.LogFunctionStartDebug("DoubleClickOn", "FN", FN);
 
-		try {
+		try
+		{
 			CO.SetChildName(FN);
-			CO.CallMethod("ClickOn_Clicktype", fpsClickType);
-		} catch (Exception e) {
+			CO.DoubleClickOn();
+		}
+		catch (Exception e)
+		{
 			this.HandleException(e);
-		} finally {
+		}
+		finally
+		{
 			Log.LogFunctionEndDebug();
 		}
 	}

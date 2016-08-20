@@ -110,25 +110,23 @@ public interface IOKW_State
         /// Klickt auf das gegebene Objekt.
         /// 
         /// _Beispiel: Klicke auf das Objekt mit Namen "MeinObjekt":_<br/>
-        /// \verbatim Klicke auf: "MeinObjekt" \endverbatim
+        /// \verbatim DoppelKlickeAuf( "MeinObjekt" ) \endverbatim
         /// 
         /// \param FN Funktionaler Name des Objekts 
-        /// \param fpsClickType Doppelklick" um mit Doppelklick auszuwählen, "Einfachklick" um mit einfachem Klick 
         ///
         /// \~english
         /// \brief
         /// Clicks on given object.
         /// 
         /// _Example: Click on the object with the name "My Object":_<br/>
-        /// \verbatim click on: "MyObject" \endverbatim
+        /// \verbatim DoubleClickOn( "MyObject" ) \endverbatim
         /// 
-        /// \param FN Functional name of the object 
-        /// \param fpsClickType Doubleclick" to select via doubleclick, "Singleclick" to select via singleclick (default) 
+        /// \param FN Functional Name of the object 
         ///
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014-09-18
-        void ClickOn(String FN, String fpsClickType) throws Exception;
+        void DoubleClickOn(String FN) throws Exception;
 
         /// \~german
         /// \brief
@@ -656,27 +654,28 @@ public interface IOKW_State
         /// \date 2014-09-19/jnic
         void Select(String FN, String Val, String fpsClickType) throws Exception;
 
-        /// \~german
-        /// \brief
-        /// Wählt den gegebenen Menüeintrag aus
-        /// 
-        /// _Beispiel: Wähle Menüeintrag mit Namen "MeinMenü":_<br/>
-        /// \verbatim Wähle Aus Menü: "MeinMenü" \endverbatim
-        /// 
-        /// \param FN Funktionaler Name des Objekts 
-        ///
-        /// \~english
-        /// \brief
-        /// Selects the given menu item.
-        /// 
-        /// _Example Select menu item with name "MyMenu":_ <br/>
-        /// \verbatim Select menu: "MyMenu" \endverbatim
-        /// 
-        /// \param FN Functional name of the object 
-        ///
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014-09-19/jnic
+        /** \~german
+         *  \brief
+         *  Wählt den gegebenen Menü-Eintrag aus
+         *  
+         *  _Beispiel: Wähle Menüeintrag mit Namen "MeinMenü":_<br/>
+         *  \verbatim Wähle Aus Menü: "MeinMenü" \endverbatim
+         *  
+         *  \param FN Funktionaler Name des Objekts 
+         * 
+         *  \~english
+         *  \brief
+         *  Selects the given menu item.
+         *  
+         *  _Example Select menu item with name "MyMenu":_ <br/>
+         *  \verbatim Select menu: "MyMenu" \endverbatim
+         *  
+         *  \param FN Functional name of the object 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014.09.19
+         */
         void SelectMenu(String FN) throws Exception;
 
         /// \~german
