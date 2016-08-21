@@ -1225,6 +1225,100 @@ public class EN_Keywords_Test {
 
   /**
    * \~german
+   * \brief "Normaler" Testfall für das Schlüsselwort EN.VerifyLabel(String,String).
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifyLabel() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    EN.VerifyLabel( "All_MethodsObj", "The one and only Value" );
+
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+    assertEquals( "VerifyLabel()", myClipBoard.getMethod() );
+  }
+  
+  /**
+   * \~german
+   * \brief "Normaler" Testfall für das Schlüsselwort EN.VerifyLabelREGX(String,String).
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifyLabelREGX() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    EN.VerifyLabelREGX( "All_MethodsObj", "\\w{3} one and only Value" );
+
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+    assertEquals( "VerifyLabel()", myClipBoard.getMethod() );
+  }
+
+  /**
+   * \~german
+   * \brief "Normaler" Testfall für das Schlüsselwort EN.VerifyLabelWCM(String,String). 
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifyLabelWCM() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    EN.VerifyLabelWCM( "All_MethodsObj", "??? one and only Value" );
+
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+    assertEquals( "VerifyLabel()", myClipBoard.getMethod() );
+  }
+
+  
+  /**
+   * \~german
    * \brief "Normaler" Testfall für das Schlüsselwort VerifyExists. 
    * 
    * Prüft beide möglichen erwarteten Werte ab (YES/NO). 

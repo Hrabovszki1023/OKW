@@ -784,20 +784,21 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-        public List<String> VerifyLabel(ArrayList<String> fpLsExpectedValue)
+        public List<String> VerifyLabel()
         {
             List<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyLabel");
+            lvLsReturn.add("1. Value");
+            lvLsReturn.add("2. Value");
+            lvLsReturn.add("3. Value");
             
-            lvLsReturn.addAll(fpLsExpectedValue);
-
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
-
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyLabel()");
-            myClipboard.getValue().addAll(fpLsExpectedValue);
+
+            myClipboard.getValue().addAll(lvLsReturn);
 
             this.myLogger.LogFunctionEndDebug();
 

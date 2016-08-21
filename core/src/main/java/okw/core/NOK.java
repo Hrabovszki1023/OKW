@@ -669,18 +669,41 @@ import okw.log.*;
 			Log.LogFunctionEndDebug();
 		}
 
-		/// \~german
-		/// \copydoc IOKW_State::VerifyLabel(String,String)
-		/// \~english
-		/// \copydoc IOKW_State::VerifyLabel(String,String)
-		public void VerifyLabel(String FN, String ExpVal)
-		{
-			Log.LogFunctionStartDebug("VerifyLabel",
-				"FN", FN,
-				"ExpVal", ExpVal);
+    /**
+    /// \copydoc IOKW_State::VerifyValue(String,String)
+    */
+    public void VerifyLabel(String FN, String ExpVal)
+    {
+      Log.LogFunctionStartDebug("VerifyLabel",
+        "FN", FN,
+        "ExpVal", ExpVal);
 
-			Log.LogFunctionEndDebug();
-		}
+      Log.LogFunctionEndDebug();
+    }
+
+    /**
+     * \copydoc IOKW_State::VerifyLabelWCM(String,String)
+     */
+    public void VerifyLabelWCM(String FN, String ExpVal)
+    {
+      Log.LogFunctionStartDebug("VerifyLabelWCM",
+        "FN", FN,
+        "ExpVal", ExpVal);
+
+      Log.LogFunctionEndDebug();
+    }
+
+    /**
+     * \copydoc IOKW_State::VerifyLabelREGX(String,String)
+     */
+    public void VerifyLabelREGX(String FN, String ExpVal)
+    {
+      Log.LogFunctionStartDebug("VerifyLabelREGX",
+        "FN", FN,
+        "ExpVal", ExpVal);
+
+      Log.LogFunctionEndDebug();
+    }
 
 		/// \~german
 		/// \copydoc IOKW_State::VerifySelectedValue(String,String)

@@ -1364,25 +1364,85 @@ public interface IOKW_State
         void VerifyIsActive(String FN, String ExpVal) throws Exception;
 
         
-        /// \~german
-        /// \brief
-        /// Keine Beschreibung zu "VerifyLabel" verfügbar
-        /// 
-        /// \param FN Funktionaler Name des Objekts 
-        /// \param ExpVal Erwarteter Wert. Erlaubte Werte sind: "JA", "NEIN" und "IGNORIEREN". 
-        ///
-        /// \~english
-        /// \brief
-        /// No description for "VerifyLabel" available
-        /// 
-        /// \param FN Functional name of the object 
-        /// \param ExpVal Expected Value. Following values are Allowed here: "YES, "NO", and "IGNORE". 
-        ///
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014-09-21/jnic
-        /// \todo TODO: keine Beschreibung vorhanden
+        /**
+         *  \~german
+         *  \brief
+         *  Überprüft die Beschreibung des Objektes.
+         *  
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert 
+         * 
+         *  \~english
+         *  \brief
+         *  Verifies the Label of a GUI-object.
+         *  
+         *  \param FN Functional name of the object 
+         *  \param ExpVal Expected Value 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014.09.21
+         */
         void VerifyLabel(String FN, String ExpVal) throws Exception;
+
+        /**
+         *  \~german
+         *  \brief
+         *  Überprüft die Beschreibung des Objektes.
+         *  Der Sollwert wird als Wildcard-Match angegeben.
+         *  
+         *  Folgende Platzhalter sind möglich:
+         *  * "?" - genau ein beliebiges Zeichen wird Maskiert
+         *  * "*" - (0-n) beliebiges Zeichen wird Maskiert
+         *  * "#" - genau eine Ziffer [0..9] kann maskiert werden
+         *  _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
+         *  Wert "\\.jango" entspricht:_ <br/>
+         *  
+         *  
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert 
+         * 
+         *  \~english
+         *  \brief
+         *  Verifies the Label of a GUI-object.
+         *  
+         *  \param FN Functional name of the object 
+         *  \param ExpVal Expected Value 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21/jnic
+         *  \todo jnic-->keine Beschreibung vorhanden
+         */
+        void VerifyLabelWCM(String FN, String ExpVal) throws Exception;
+
+        /**
+         *  \~german
+         *  \brief
+         *  Überprüft die Überschrift des Objektes.
+         *  Reguläre aus drücke als sollwert sind erlaubt.
+         *  
+         *  _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
+         *  Wert "\\.jango" entspricht:_ <br/>
+         *  
+         *  \verbatim PrüfeWertREGX: "MeinObjekt", "$Django" \endverbatim
+         *  
+         *  \param FN Funktionaler Name des Objekts 
+         *  \param ExpVal Erwarteter Wert 
+         * 
+         *  \~english
+         *  \brief
+         *  Verifies the Label of a GUI-object.
+         *  
+         *  \param FN Functional name of the object 
+         *  \param ExpVal Expected Value 
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21/jnic
+         *  \todo jnic-->keine Beschreibung vorhanden
+         */
+        void VerifyLabelREGX(String FN, String ExpVal) throws Exception;
 
         /// \~german
         /// \brief

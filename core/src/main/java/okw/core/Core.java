@@ -476,7 +476,7 @@ public class Core implements IOKW_State
   }
 
   /**
-   * \copydoc IOKW_State::VerifyCaption(String,String)
+   * \copydoc IOKW_State::VerifyCaptionWCM(String,String)
    */
   public void VerifyCaptionWCM( String FN, String ExpVal ) throws Exception
   {
@@ -484,17 +484,35 @@ public class Core implements IOKW_State
   }
 
   /**
-   * \copydoc IOKW_State::VerifyCaption(String,String)
+   * \copydoc IOKW_State::VerifyCaptionREGX(String,String)
    */
   public void VerifyCaptionREGX( String FN, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifyCaptionREGX( FN, ExpVal );
   }
 
-  // / \copydoc IOKW_State::VerifyLabel(String,String)
+  /**
+   *  \copydoc IOKW_State::VerifyLabel(String,String)
+   */
   public void VerifyLabel( String FN, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifyLabel( FN, ExpVal );
+  }
+
+  /**
+   * \copydoc IOKW_State::VerifyLabelWCM(String,String)
+   */
+  public void VerifyLabelWCM( String FN, String ExpVal ) throws Exception
+  {
+    this.CurrentState.VerifyLabelWCM( FN, ExpVal );
+  }
+
+  /**
+   * \copydoc IOKW_State::VerifyLabelREGX(String,String)
+   */
+  public void VerifyLabelREGX( String FN, String ExpVal ) throws Exception
+  {
+    this.CurrentState.VerifyLabelREGX( FN, ExpVal );
   }
 
   /**

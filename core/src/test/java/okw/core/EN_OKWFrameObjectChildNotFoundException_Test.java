@@ -32,7 +32,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 
-public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
+public class EN_OKWFrameObjectChildNotFoundException_Test {
 
   static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
   static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
@@ -217,8 +217,6 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
     EN.SelectWindow( "Rechner" );
     EN.TypeKey( "IsNotDefindeInRechner", "Value" );
   }
-
-
   
   /**
    * \~german
@@ -275,6 +273,63 @@ public class EN_OKWFrameObjectChildNotFoundException_Test_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyCaptionREGX( "IsNotDefindeInRechner", "Value" );
+  }
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyCaption ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyLabel_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyLabel( "IsNotDefindeInRechner", "Value" );
+  }
+  
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyCaption ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyLabelWCM_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyLabelWCM( "IsNotDefindeInRechner", "Value" );
+  }
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyCaption ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyLabelREGX_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyLabelREGX( "IsNotDefindeInRechner", "Value" );
   }
 
   /**

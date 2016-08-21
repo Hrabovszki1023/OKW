@@ -34,6 +34,7 @@ public class frmTestRechner extends Test_Window
         /// \brief
         /// Test Objekt mit allen OKW-Methoden,
         @OKW(FN="All_MethodsObj", 
+                VerifyLabel_PT=500, VerifyLabel_TO=1,
                 VerifyValue_PT=500, VerifyValue_TO=1,
                 VerifyTooltip_PT=500, VerifyTooltip_TO=1,
                 VerifyCaption_PT=500, VerifyCaption_TO=1)
@@ -42,6 +43,7 @@ public class frmTestRechner extends Test_Window
         /// \brief
         /// Test Objekt mit allen OKW-Methoden,
         @OKW(FN="AllMethods_MultipleValues", 
+                VerifyLabel_PT=500, VerifyLabel_TO=1,
                 VerifyValue_PT=500, VerifyValue_TO=1,
                 VerifyTooltip_PT=500, VerifyTooltip_TO=1,
                 VerifyCaption_PT=500, VerifyCaption_TO=1)
@@ -50,6 +52,7 @@ public class frmTestRechner extends Test_Window
         /// \brief
         /// Test Objekt mit allen OKW-Methoden,
         @OKW(FN="All_MethodsObj_VerifyEmpty", 
+                VerifyLabel_PT=500, VerifyLabel_TO=1,
                 VerifyValue_PT=500, VerifyValue_TO=1,
                 VerifyTooltip_PT=500, VerifyTooltip_TO=1,
                 VerifyCaption_PT=500, VerifyCaption_TO=1)

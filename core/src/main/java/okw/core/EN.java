@@ -965,15 +965,12 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::VerifyLabel()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::VerifyLabel()
-        /// 
+        /**
+         *  \copydoc IOKW_State::VerifyLabel()
+         */
         public static void VerifyLabel(String FN, String ExpVal) throws Exception
         {
-            Log.LogKeyWordStart("Verify label", FN, ExpVal);
+            Log.LogKeyWordStart("VerifyLabel", FN, ExpVal);
 
             try
             {
@@ -983,6 +980,41 @@ import okw.log.*;
             finally
             {
             	Log.LogKeyWordEnd();
+            }
+        }
+
+        /**
+         *  \copydoc IOKW_State::VerifyLabelREGX()
+         */
+        public static void VerifyLabelREGX(String FN, String ExpVal) throws Exception
+        {
+            Log.LogKeyWordStart("VerifyLabelREGX", FN, ExpVal);
+
+            try
+            {
+              myKernel.SetLanguage(Language);
+              myKernel.VerifyLabelREGX(FN, ExpVal);
+            }
+            finally
+            {
+              Log.LogKeyWordEnd();
+            }
+        }
+        /**
+         *  \copydoc IOKW_State::VerifyLabelWCM()
+         */
+        public static void VerifyLabelWCM(String FN, String ExpVal) throws Exception
+        {
+            Log.LogKeyWordStart("VerifyLabelWCM", FN, ExpVal);
+
+            try
+            {
+              myKernel.SetLanguage(Language);
+              myKernel.VerifyLabelWCM(FN, ExpVal);
+            }
+            finally
+            {
+              Log.LogKeyWordEnd();
             }
         }
 
