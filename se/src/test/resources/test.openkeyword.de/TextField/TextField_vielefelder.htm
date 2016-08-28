@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Einzeilige Eingabefelder</title>
+<link href="../okw.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<img src="../Images/okw_color_msoffice_nobackground.png" width="300" alt="OpenKeyWord Logo">
+<p>Sie befinden sich auf einer Testseite von OpenKeyWord.</p>
+
+<h1>Testobjekt: Textfelder</h1>
+<h2>Beschreibung</h2>
+<p>Textbereich ist beschreibar.</p>
+<p>tag: input<br/>
+type="text"</p>
+
+<h2>Testobjekt</h2>
+
+<form action="input_text.htm">
+	<p><label for="ID_Anrede">Anrede:</label><br/>
+		<input name="Anrede" id="ID_Anrede" title="Wie soll die Person Angesprocehn werden? Herr/Frau" type="text" size="30" maxlength="40"></p>
+	<p><label for="ID_Vorname">Vorname:</label><br/>
+		<input name="Vorname" id="ID_Vorname" title="Geben Sie bitte den Vornamen ein." type="text" size="30" maxlength="30"></p>
+	<p><label for="ID_Name">Name:</label><br/>
+		<input name="Name" id="ID_Name" title="Geben Sie bitte den Vornamen ein." type="text" size="30" maxlength="40"></p>
+	<p><label for="ID_Titel">Titel:</label><br/>
+		<input name="Titel" id="ID_Titel" title="Geben Sie bitte den Titel ein. Dr./Dr.-Ing./Prof. " type="text" size="30" maxlength="40"></p>
+	<p/>
+	<p><label for="ID_Strasse">Straße:</label><br/>
+		<input name="Strasse" id="ID_Strasse" title="Geben Sie bitte die Strasse ein." type="text" size="30" maxlength="40">
+	<label for="ID_Haus_Nr">Nr:</label>
+		<input name="Haus_Nr" id="ID_Haus_Nr" title="Geben Sie bitte die Hausnummer ein." type="text" size="5" maxlength="5"></p>
+	<p><label for="ID_PLZ">PLZ:</label><br/>
+		<input name="PLZ" id="ID_PLZ" title="Geben Sie bitte die PLZ ein." type="text" size="5" maxlength="5">
+	<label for="ID_Ort">Nr:</label>
+		<input name="Ort" id="ID_Ort" title="Geben Sie bitte den Ort ein." type="text" size="30" maxlength="30"></p>
+		
+    <textarea cols="20" rows="4" name="Anzeige"></textarea>
+    <input type="button"
+           name="Speichern"
+           title="Speichern..."
+           value="Speichern"
+           onclick="this.form.Anzeige.value =this.form.Anrede.value 
+                                            + ' ' + this.form.Vorname.value
+                                            + ' ' + this.form.Name.value
+                                            + ' ' + this.form.Strasse.value
+                                            + ' ' + this.form.Haus_Nr.value
+                                            + ' ' + this.form.PLZ.value
+                                            + ' ' + this.form.Ort.value">
+
+</form>
+</body>
+</html>
+

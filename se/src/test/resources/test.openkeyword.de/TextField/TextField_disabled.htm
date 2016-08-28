@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+       "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Eingabefeld Disabled</title>
+    <link href="okw.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+
+    <img src="Images/okw_color_msoffice_nobackground.png" width="300" alt="OpenKeyWord Logo">
+    <p>Sie befinden sich auf einer Entwicklungstestseite von OpenKeyWord.</p>
+
+    <h1>Testobjekt: Textfeld (input type="Text")</h1>
+	<h2>Beschreibung</h2>
+	<h3>Textfeld Preis</h3>
+      <p>Textfeld Preis ist disabled.</p>
+      <p>Tag: input,<br/> Attribute: type= "text", size= "8", disabled
+    <h3>Textfeld MwSt</h3>
+      <p>Textfeld MwSt ist XHTM-kompatible disabled.</p>
+      <p>Tag: input,<br/> Attribute: type= "text", size= "8", disabled="disabled"
+
+    <h2>Testobjekt</h2>
+
+      <form action="input_text_value.htm">
+        <p><label for="ID_preis">Preis:</label><br><input name="preis"
+        					type="text" 
+        					id="ID_preis"
+        					size="8" 
+        					value="&euro; 699.-" disabled></p>
+        <p><label for="ID_mwst">MwSt:</label><br><input name="mwst" 
+        					type="text"
+        					id="ID_mwst"
+        					size="8" 
+        					value="&euro; 132.81" disabled='disabled'></p>
+ 
+ </form>
+  </body>
+</html>
+

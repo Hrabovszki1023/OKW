@@ -1,0 +1,43 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+       "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>Absendewert von Einträgen bestimmen</title>
+    <link href="../okw.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <img src="../Images/okw_color_msoffice_nobackground.png" width="300" alt="OpenKeyWord Logo">
+  <p>
+    Sie befinden sich auf einer Entwicklungstestseite von OpenKeyWord.
+  </p>
+
+  <h1>Testobjekt: Auswahliste (select)</h1>
+  <h2>Beschreibung</h2>
+  <p>Auswahlliste mit einem ausgew&auml;hltem Wert.</p>
+
+  <h2>Testobjekt</h2>
+
+<p>Pizzeria Fantasia</p>
+
+<form action="select.htm">
+  <p>Ihre Pizza-Bestellung:</p>
+  <p>
+    <select name="Pizza" size="8"
+        onchange="alert(this.form.Pizza.options[this.form.Pizza.selectedIndex].value)">
+      <option value="P101">Pizza Napoli</option>
+      <option value="P102">Pizza Funghi</option>
+      <option value="P103">Pizza Mare</option>
+      <option value="P104">Pizza Tonno</option>
+      <option value="P105">Pizza Mexicana</option>
+      <option value="P106">Pizza Regina</option>
+      <option value="P107">Pizza de la Casa</option>
+      <option value="P108">Pizza Calzone</option>
+      <option value="P109">Pizza con tutti</option>
+    </select>
+  </p>
+</form>
+
+</body>
+</html>
+

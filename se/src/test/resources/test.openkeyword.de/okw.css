@@ -1,0 +1,14 @@
+﻿h1, h2, h3
+{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+	font-weight: 100;
+    color: #000066;
+    border-bottom: 1px solid #000066;
+}
+
+p
+{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+	font-weight: 100;
+    color: #000066;
+}
