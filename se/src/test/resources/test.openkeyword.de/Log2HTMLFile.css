@@ -1,0 +1,97 @@
+﻿/* ... hier sind dateispezifische Formate erlaubt ... */ 
+/*body {background-color:#00c4de;} */
+
+blockquote.KeyWord  
+{
+    background-color:#F8F8F8;
+    font:12px "Lucida Console", Monospace;
+    padding:1px; 
+    border:1pt solid lightgray; 
+    margin-top:1px;
+    margin-bottom:1px;
+    margin-right:0px; 
+    margin-left:10px;
+}
+
+blockquote.Method  
+{
+    background-color:#BBBBBB;
+    font:12px "Lucida Console", Monospace;
+    padding:1px; 
+    border:1pt solid gray; 
+    margin-top:1px;
+    margin-bottom:1px;
+    margin-right:0px; 
+    margin-left:10px;
+}
+
+
+blockquote.Sequenz  
+{
+    background-color:#CCFFCC;
+    font:12px "Lucida Console", Monospace;
+    padding:1px; 
+    border:1pt solid lightgray; 
+    margin-top:1px;
+    margin-bottom:1px;
+    margin-right:0px; 
+    margin-left:10px;
+}
+
+blockquote.Error  
+{
+    background-color:white;
+    font:12px "Lucida Console", Monospace;
+    padding:1px; 
+    border:2pt solid red; 
+    margin-top:1px;
+    margin-bottom:1px;
+    margin-right:0px; 
+    margin-left:10px;
+}
+
+blockquote.Passed  
+{
+    background-color:white;
+    font:12px "Lucida Console", Monospace;
+    padding:1px; 
+    border:2pt solid green; 
+    margin-top:1px;
+    margin-bottom:1px;
+    margin-right:0px; 
+    margin-left:10px;
+}
+
+blockquote.Warning  
+{
+    background-color:white;
+    font:12px "Lucida Console", Monospace;
+    padding:1px; 
+    border:2pt solid yellow; 
+    margin-top:1px;
+    margin-bottom:1px;
+    margin-right:0px; 
+    margin-left:10px;
+}
+
+blockquote.Exception
+{
+    background-color:white;
+    font:12px "Lucida Console", Monospace;
+    padding:1px; 
+    border:2pt solid magenta; 
+    margin-top:1px;
+    margin-bottom:1px;
+    margin-right:0px; 
+    margin-left:10px;
+}
+
+p
+{
+    font:12px "Lucida Console", Monospace;
+    padding:1px; 
+    margin-top:1px;
+    margin-bottom:1px;
+    margin-right:0px; 
+    margin-left:10px;
+}

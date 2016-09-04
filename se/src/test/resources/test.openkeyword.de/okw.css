@@ -6,7 +6,7 @@
     border-bottom: 1px solid #000066;
 }
 
-p
+p, label, input
 {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
 	font-weight: 100;
