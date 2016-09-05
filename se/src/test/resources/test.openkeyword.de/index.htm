@@ -1,37 +1,37 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>TestPage Titel</title>
+    <title>This is the page-title of index.htm</title>
+   	<meta charset="utf-8"/>
+   	<meta name="author" content="Zoltán Hrabovszki">
     <link href="okw.css" type="text/css" rel="stylesheet">
 </head>
-<body>
 
-<img src="Images/okw_color_msoffice_nobackground.png" width="300" alt="OpenKeyWord Logo">
-<p>
-Willkommen auf den Entwicklungstestseiten von OpenKeyWord.
-</p>
+<body>
+    <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png"
+         width="150"
+         alt="OpenKeyWord Logo">
+    <p>Sie befinden sich auf einer Entwicklungstestseite von OpenKeyWord.</p>
 
 <h1>Textfelder</h1>
-<h2>Einzeilige Textfelder</h2>
+<h2>&lt;input_type-text&gt;</h2>
 <p>
-  <a href="./TextField/TextField.htm">Eingabefelder</a><br>
-  <a href="./TextField/TextField_password.htm">Eingabefelder für Passwörter</a><br>
-  <a href="./TextField/TextField_readonly.htm">Eingabefelder für schreibgeschützt/readonly</a><br>
-  <a href="./TextField/TextField_tabelle.htm">Eingabefelder in einer Tabelle formatiert</a><br>
-  <a href="./TextField/TextField_value.htm">Eingabefelder mit Textvorbelegung (einzeilige Eingabefelder)</a><br>
-  <a href="./TextField/TextField_vielefelder.htm">Viele Eingabefelder auf einer Seite</a><br>
+  <a href="./InputText/input_type-text_value.htm">&lt;select type="text"&gt;</a><br>
+  <a href="./InputText/input_type-password.htm">&lt;select type="password"&gt;</a><br>
+  <a href="./InputText/input_type-readonly.htm">&lt;select type="readonly"&gt;</a><br>
+  <a href="./InputText/TextField_vielefelder.htm">Page with multiple textfields</a><br>
 </p>
 
-<h2>Textbereiche (textarea)</h2>
+<h2 id="textarea">Textbereiche (textarea)</h2>
 <p>
-  <a href="./TextArea/TextArea.htm">Mehrzeiliger Eingabefelder</a><br>
-  <a href="./TextArea/TextArea_readonly.htm">Schreibgeschützter mehrzeiliger Eingabebereich</a><br>
-  <a href="./TextArea/TextArea_vorbelegt.htm">Mehrzeilige Eingabebereiche mit Text vorbelegen</a><br>
-  <a href="./TextArea/TextArea_wrap.htm">Textumbruch in mehrzeiligen Eingabebereichen</a><br>
+  <a href="./TextArea/textarea.htm">&lt;textarea&gt;</a><br>
+  <a href="./TextArea/textarea_readonly.htm">&lt;textarea readonly&gt;</a><br>
+  <a href="./TextArea/textarea_initialized.htm">&lt;textarea&gt; - Initialized</a><br>
+  <a href="./TextArea/textarea_wrap.htm">&lt;textarea wrap="*"&gt;</a><br>
 </p>
 
 <h1>Auswahllisten, Radio-Buttons und Checkboxen</h1>
-<h2>Auswahllisten</h2>
+<h2 id="select">Auswahllisten</h2>
 <p>
   <a href="Select/Select.htm">Auswahllisten definieren</a><br>
   <a href="Select/Select_multiple.htm">Auswahllisten mit Mehrfachauswahl</a><br>
@@ -40,17 +40,17 @@ Willkommen auf den Entwicklungstestseiten von OpenKeyWord.
   <a href="Select/Select_optgroup.htm">Verschachtelte Auswahllisten (Menüstruktur) definieren</a><br>
 </p>
 
-<h2>Radio-Buttons, CheckBoxes</h2>
+<h2 id="input_type-radio">Radio-Buttons, CheckBoxes</h2>
 <p>
   <a href="./RadioList/RadioButton_auswahlliste.htm">Radio-Buttons definieren</a><br>
   <a href="./Checkbox/Checkbox.htm">Checkboxen definieren</a><br>
 </p>
 
-<h2>Klick-Objekte</h2>
+<h2 id="input_type-button">&lt;input type="button"&gt;</h2>
 <p>
-  <a href="./PushButton/PushButton.htm">PushButton</a><br>
-  <a href="./PushButton/PushButton_disabled.htm">PushButton disabeled</a><br>
-  <a href="./PushButton/PushButton_image.htm">PushButton mit Bild</a><br>
+  <a href="./InputButton/input_type-button.htm">&lt;input type="button"&gt;</a><br>
+  <a href="./InputButton/PushButton_disabled.htm">&lt;input type="button" disabeled&gt;</a><br>
+  <a href="./InputButton/PushButton_image.htm">&lt;input type="button"&gt;&lt;&gt;</a><br>
 </p>
 <p>
   <a href="./Link/Link.htm">PushButton</a><br>
