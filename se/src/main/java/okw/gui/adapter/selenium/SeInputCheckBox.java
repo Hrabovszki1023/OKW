@@ -55,7 +55,7 @@ import okw.gui.*;
     /// 
     /// \author Zoltan Hrabovszki
     /// \date 2013.04.11
-    public class SeCheckBox extends SeSimpleDataObjBase
+    public class SeInputCheckBox extends SeSimpleDataObjBase
     {
     	
     	OKW_Const_Sngltn myOKW_Const = null;
@@ -69,7 +69,7 @@ import okw.gui.*;
         /// des Objektes und wird als XPATH angegeben.<br/>
         /// <bf>Beispiel:</bf><tt>//input[@value='salami']</tt>
         ///         
-        public SeCheckBox( String fpsLocator, OKWLocator... fpLocators )
+        public SeInputCheckBox( String fpsLocator, OKWLocator... fpLocators )
         {
             super(fpsLocator, fpLocators);
             this.LM = new LogMessenger("GUI");

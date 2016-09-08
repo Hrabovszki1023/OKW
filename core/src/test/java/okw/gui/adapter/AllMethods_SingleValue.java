@@ -650,20 +650,20 @@ import okw.log.Logger_Sngltn;
         }
 
 
-        public boolean VerifyExists(Boolean fpbExpectedValue) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+        public boolean VerifyExists() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
         {
-            this.myLogger.LogFunctionStartDebug("VerifyExists", "fpbExpectedValue", fpbExpectedValue.toString());
+            this.myLogger.LogFunctionStartDebug("VerifyExists");
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyExists()");
-            myClipboard.getValue().add(OKW_Const_Sngltn.getInstance().Boolean2YesNo(fpbExpectedValue));
+            myClipboard.getValue().add( "TRUE" );
 
-            this.myLogger.LogFunctionEndDebug(fpbExpectedValue);
+            this.myLogger.LogFunctionEndDebug(true);
 
-            return fpbExpectedValue;
+            return true;
         }
 
 

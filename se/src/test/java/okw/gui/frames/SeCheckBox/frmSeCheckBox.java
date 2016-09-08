@@ -11,16 +11,16 @@ public class frmSeCheckBox extends SeBrowserChild
     /// Der Sinn dieses Objektes ist die ExistenzPrüfung eines nicht vorhandenen Kindobjektes
     ///
     @OKW (FN="NotExists")
-    public SeCheckBox NotExists = new SeCheckBox("//*[@value='upss']");
+    public SeInputCheckBox NotExists = new SeInputCheckBox("//*[@value='upss']");
 
     @OKW (FN="Pilze")
-    public SeCheckBox Pilze = new SeCheckBox("//*[@value='pilze']");
+    public SeInputCheckBox Pilze = new SeInputCheckBox("//*[@value='pilze']");
 
     @OKW (FN="Salami")
-    public SeCheckBox Salami = new SeCheckBox("//*[@value='salami']");
+    public SeInputCheckBox Salami = new SeInputCheckBox("//*[@value='salami']");
 
     @OKW (FN="Sardellen")
-    public SeCheckBox Sardellen = new SeCheckBox("//*[@value='sardellen']");
+    public SeInputCheckBox Sardellen = new SeInputCheckBox("//*[@value='sardellen']");
 
     public frmSeCheckBox()
     {

@@ -125,7 +125,7 @@ import okw.gui.OKWLocator;
         }
 
         @Override
-        public Boolean VerifyIsActive(Boolean fpbExpected)
+        public Boolean VerifyIsActive()
         {
             throw new UnsupportedOperationException("Link cannot be Active");
         }

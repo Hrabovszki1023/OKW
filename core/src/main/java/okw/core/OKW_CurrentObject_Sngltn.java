@@ -767,6 +767,281 @@ public class OKW_CurrentObject_Sngltn
   }
 
   /**
+   * \~german \brief Ruft eine Methode VerifyExists des aktuellen Objektes via
+   * "latebound function call" auf.<br/>
+   * Die aufgerufene Methode hat die Signatur:<br/>
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------------| | 1.
+   * Parameter | List&lt;String&gt; | | Rückgabewert | List&lt;String&gt; |
+   *
+   * @param fpLsParameter_1
+   *          Parameter als List&lt;String&gt;.
+   * @return ArrayList&lt;String&gt; .
+   *
+   *         \~english \brief Calls a method of the current Object with
+   *         "late bound function call". The called method has the signature:
+   *
+   *         | Parameter/Return | Type | |
+   *         :----------------|:-------------------| | 1st Parameter |
+   *         List&lt;String&gt; | | Return | List&lt;String&gt; |
+   *
+   *
+   *         param fpLsParameter_1 parameter as list&lt;String&gt;.
+   * @return List&lt;String&gt; .
+   *
+   *         \~
+   * @author Zoltan Hrabovszki
+   * @throws InterruptedException
+   * @date 2012.11.01
+   */
+  public Boolean VerifyExists( Boolean fpbExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
+          InvocationTargetException, XPathExpressionException, InterruptedException
+  {
+
+    Integer MaxCount = 0;
+    Integer Count = 0;
+    Integer VerifyExists_PT = 1000;
+    Integer VerifyExists_TO = 30;
+
+    Boolean lvbReturn = false;
+    Boolean bOK = false;
+
+    Log.LogFunctionStartDebug( "VerifyExists", "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
+
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "VerifyExists" );
+
+      VerifyExists_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyExists_PT();
+      VerifyExists_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyExists_TO();
+
+      Log.LogPrintDebug("VerifyExists_PT: " + VerifyExists_PT.toString() );
+      Log.LogPrintDebug("VerifyExists_TO: " + VerifyExists_TO.toString() );
+      
+      MaxCount = CalculateLoopCount( VerifyExists_PT, VerifyExists_TO );
+      Count = 0;
+      
+      Log.LogPrintDebug("MaxCount: " + MaxCount.toString() );
+      
+      while ( Count <= MaxCount )
+      {
+        Log.LogPrintDebug("  Count: " + Count.toString() );
+        lvbReturn = ( Boolean ) myMethod.invoke( cvoObject );
+
+        if ( fpbExpectedValues.equals( lvbReturn ) )
+        {
+          break;
+        }
+        else
+        {
+          Thread.sleep( VerifyExists_PT );
+        }
+
+        Count++;
+      }
+
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyExists" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvbReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvbReturn;
+  }
+
+  
+  /**
+   * \~german \brief Ruft eine Methode VerifyHasFocus des aktuellen Objektes via
+   * "latebound function call" auf.<br/>
+   * Die aufgerufene Methode hat die Signatur:<br/>
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------------| | 1.
+   * Parameter | List&lt;String&gt; | | Rückgabewert | List&lt;String&gt; |
+   *
+   * @param fpLsParameter_1
+   *          Parameter als List&lt;String&gt;.
+   * @return ArrayList&lt;String&gt; .
+   *
+   *         \~english \brief Calls a method of the current Object with
+   *         "late bound function call". The called method has the signature:
+   *
+   *         | Parameter/Return | Type | |
+   *         :----------------|:-------------------| | 1st Parameter |
+   *         List&lt;String&gt; | | Return | List&lt;String&gt; |
+   *
+   *
+   *         param fpLsParameter_1 parameter as list&lt;String&gt;.
+   * @return List&lt;String&gt; .
+   *
+   *         \~
+   * @author Zoltan Hrabovszki
+   * @throws InterruptedException
+   * @date 2012.11.01
+   */
+  public Boolean VerifyHasFocus( Boolean fpbExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
+          InvocationTargetException, XPathExpressionException, InterruptedException
+  {
+
+    Integer MaxCount = 0;
+    Integer Count = 0;
+    Integer VerifyHasFocus_PT = 1000;
+    Integer VerifyHasFocus_TO = 30;
+
+    Boolean lvbReturn = false;
+    Boolean bOK = false;
+
+    Log.LogFunctionStartDebug( "VerifyHasFocus", "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
+
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "VerifyHasFocus" );
+
+      VerifyHasFocus_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyHasFocus_PT();
+      VerifyHasFocus_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyHasFocus_TO();
+
+      Log.LogPrintDebug("VerifyExists_PT: " + VerifyHasFocus_PT.toString() );
+      Log.LogPrintDebug("VerifyExists_TO: " + VerifyHasFocus_TO.toString() );
+      
+      MaxCount = CalculateLoopCount( VerifyHasFocus_PT, VerifyHasFocus_TO );
+      Count = 0;
+      
+      Log.LogPrintDebug("MaxCount: " + MaxCount.toString() );
+      
+      while ( Count <= MaxCount )
+      {
+        Log.LogPrintDebug("  Count: " + Count.toString() );
+        lvbReturn = ( Boolean ) myMethod.invoke( cvoObject );
+
+        if ( fpbExpectedValues.equals( lvbReturn ) )
+        {
+          break;
+        }
+        else
+        {
+          Thread.sleep( VerifyHasFocus_PT );
+        }
+
+        Count++;
+      }
+
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyExists" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvbReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvbReturn;
+  }
+
+  
+  public Boolean VerifyIsActive( Boolean fpbExpectedValues ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+          XPathExpressionException, InterruptedException
+  {
+
+    Integer MaxCount = 0;
+    Integer Count = 0;
+    Integer VerifyIsActive_PT = 1000;
+    Integer VerifyIsActive_TO = 30;
+
+    Boolean lvbReturn = false;
+    Boolean bOK = false;
+
+    Log.LogFunctionStartDebug( "VerifyIsActive", "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
+
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "VerifyIsActive" );
+
+      VerifyIsActive_PT = ( ( Field ) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN ) ).getAnnotation( OKW.class ).VerifyIsActive_PT();
+      VerifyIsActive_TO = ( ( Field ) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN ) ).getAnnotation( OKW.class ).VerifyIsActive_TO();
+
+      Log.LogPrintDebug( "VerifyExists_PT: " + VerifyIsActive_PT.toString() );
+      Log.LogPrintDebug( "VerifyExists_TO: " + VerifyIsActive_TO.toString() );
+
+      MaxCount = CalculateLoopCount( VerifyIsActive_PT, VerifyIsActive_TO );
+      Count = 0;
+
+      Log.LogPrintDebug( "MaxCount: " + MaxCount.toString() );
+
+      while ( Count <= MaxCount )
+      {
+        Log.LogPrintDebug( "  Count: " + Count.toString() );
+        lvbReturn = ( Boolean ) myMethod.invoke( cvoObject );
+
+        if ( fpbExpectedValues.equals( lvbReturn ) )
+        {
+          break;
+        }
+        else
+        {
+          Thread.sleep( VerifyIsActive_PT );
+        }
+
+        Count++;
+      }
+
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyExists" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvbReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvbReturn;
+  }
+
+  
+  /**
    * \~german \brief Ruft eine Methode des aktuellen Objektes via
    * "late bound function call" auf.
    *
@@ -832,31 +1107,31 @@ public class OKW_CurrentObject_Sngltn
 
   }
 
-  /**
-   * \~german \brief Ruft eine Methode des aktuellen Objektes via
-   * "late bound function call" auf.
-   *
-   * Die aufgerufene Methode hat die Signatur:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------| | Parameter
-   * | keine | | Rückgabewert | List&lt;String&gt; |
-   *
-   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \return
-   * Rückgabewert ist vom Typ List&lt;String&gt;.
-   *
-   * \~english \brief Calls a method of the current Object with
-   * "late bound function call".
-   *
-   * The called Object has the signature:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------| | Parameter
-   * | none | | Return | List&lt;String&gt; |
-   *
-   * \param fpsMethod Name of the method to be called. \return Return is of the
-   * type List&lt;String&gt;
-   *
-   * \~ \author Zoltan Hrabovszki \date 2012.11.01
-   */
+   //
+   // \~german \brief Ruft eine Methode des aktuellen Objektes via
+   // "late bound function call" auf.
+   //
+   // Die aufgerufene Methode hat die Signatur:
+   //
+   // | Parameter/Return | Type | | :----------------|:-------------| | Parameter
+   // | keine | | Rückgabewert | List&lt;String&gt; |
+   //
+   // \param fpsMethod Name der Methode, die aufgerufen werden soll. \return
+   // Rückgabewert ist vom Typ List&lt;String&gt;.
+   //
+   // \~english \brief Calls a method of the current Object with
+   // "late bound function call".
+   //
+   // The called Object has the signature:
+   //
+   // | Parameter/Return | Type | | :----------------|:-------------| | Parameter
+   // | none | | Return | List&lt;String&gt; |
+   //
+   // \param fpsMethod Name of the method to be called. \return Return is of the
+   // type List&lt;String&gt;
+   //
+   // \~ \author Zoltan Hrabovszki \date 2012.11.01
+  //
   @SuppressWarnings( "unchecked" )
   public ArrayList<String> CallMethodReturn_ListString( String fpsMethod ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
           XPathExpressionException
@@ -865,8 +1140,7 @@ public class OKW_CurrentObject_Sngltn
     Boolean bOK = false;
     Log.LogFunctionStartDebug( "CallMethodReturn_ListString", "String fpsMethod", fpsMethod );
 
-    Class<?>[] paramTypes =
-    {};
+    Class<?>[] paramTypes ={};
 
     Class<?> myFrame_Class = this.cvoObject.getClass();
 

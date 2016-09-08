@@ -51,7 +51,7 @@ import okw.gui.OKWLocator;
     /// SeListBox ist ein Selenium GUI-Objekt.
     /// Erbt von SeAnyWin
     /// 
-    public class SeListBox extends SeAnyWin // , IOKW_ListDataObj, I
+    public class SeSelect extends SeAnyWin // , IOKW_ListDataObj, I
     {
 
         /// \brief
@@ -60,7 +60,7 @@ import okw.gui.OKWLocator;
         /// \param Locator definiert die Objekterkennungseigenschaft des Objektes und wird als XPATH angegeben.
         /// \author Zoltán Hrabovszki
         /// \date 2013.04.18
-        public SeListBox(String Locator, OKWLocator... fpLocators)
+        public SeSelect(String Locator, OKWLocator... fpLocators)
         {
         	super(Locator, fpLocators);
         }

@@ -7,13 +7,13 @@ import okw.gui.adapter.selenium.*;
 public class frmSeTextField extends SeBrowserChild
 {
 	@OKW (FN="NichtVorhanden")
-    public SeTextField NichtVorhanden = new SeTextField("//*[@name='NichtVorhanden']");
+    public SeInputText NichtVorhanden = new SeInputText("//*[@name='NichtVorhanden']");
 
     @OKW (FN="Vorname")
-    public SeTextField Vorname = new SeTextField("//*[@name='Vorname']");
+    public SeInputText Vorname = new SeInputText("//*[@name='Vorname']");
 
     @OKW (FN="Name")
-    public SeTextField Zuname = new SeTextField("//*[@name='Name']");
+    public SeInputText Zuname = new SeInputText("//*[@name='Name']");
 
 
     public frmSeTextField( )

@@ -34,11 +34,10 @@ Sie sollten eine Kopie der GNU General Public License zusammen mit
 OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
-package okw.SePushButton;
+package okw.SeInputButton;
 
 import okw.core.EN;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
     /// \~german
@@ -50,7 +49,7 @@ import org.junit.Test;
     /// \author Zoltán Hrabovszki
     /// \date 2015.02.28
     //@Ignore("Ignoring the whole fixture")
-    public class SePushButtonCalculator_EN_Test
+    public class SeInputButtonCalculator_EN_Test
     {
 
         @Test

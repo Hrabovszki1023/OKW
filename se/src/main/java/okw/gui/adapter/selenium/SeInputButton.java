@@ -45,21 +45,24 @@ import okw.gui.OKWLocator;
 */
 
     /// \~german
-    /// TODO: Description of SePushButton.
+    /// SeInputButton ist die GUI-Adapter Klasse für html tags vom typ <input type='button'> 
     /// 
+    /// <a href="http://test.penkeyword.de/index.htm#input_type-button">InputButton Testseiten</a>
     /// \~english
     /// \brief
     /// 
     /// \~
+    /// \sa https://github.com/Hrabovszki1023/OKW/wiki/SeInputButton
+    /// \sa https://github.com/Hrabovszki1023/OKW/issues/108
     /// \author Zoltán Hrabovszki
-    /// \date 2013.05.03
-    public class SePushButton extends SeAnyWin // , ILinkObj
+    /// \date 2016.09.05
+    public class SeInputButton extends SeAnyWin // , ILinkObj
     {
         /// \~german
         /// \brief
         /// 
-        /// \param fpsLocator Definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
-        /// \param fpParams Locatoren von Elternobjekten, diese Werden zu einem gesamt Locator verkettet werden.
+        /// \param fpsLocator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
+        /// \param fpParams Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.
         /// 
         /// \~english
         /// \brief
@@ -67,7 +70,7 @@ import okw.gui.OKWLocator;
         /// \~
         /// \author Zoltán Hrabovszki
         /// \date 2013.05.03
-        public SePushButton(String Locator, OKWLocator... fpLocators)
+        public SeInputButton(String Locator, OKWLocator... fpLocators)
         {
         	super(Locator, fpLocators);
         }
@@ -75,7 +78,7 @@ import okw.gui.OKWLocator;
 
         /// \~german
         /// \brief
-        /// Ermittelt den textuellen Inhalt des ToolTips für Prüfewert.
+        /// Ermittelt den textuellen Inhalt des Caption für Prüfewert.
         /// 
         /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
         /// 
@@ -88,9 +91,9 @@ import okw.gui.OKWLocator;
         /// \author Zoltán Hrabovszki
         /// \date 2013.12.07
         @Override
-        public ArrayList<String> VerifyCaption(ArrayList<String> fplsExpectedValue) throws InterruptedException
+        public ArrayList<String> VerifyCaption() throws InterruptedException
         {
-            MyLogger.LogFunctionStartDebug("VerifyCaption", "fplsExpectedValue", fplsExpectedValue.get(0));
+            MyLogger.LogFunctionStartDebug("VerifyCaption");
 
             ArrayList<String> lvLsReturn = new ArrayList<String>();
             Boolean bOK = false;

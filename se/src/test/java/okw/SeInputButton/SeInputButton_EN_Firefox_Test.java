@@ -1,4 +1,4 @@
-package okw.SePushButton;
+package okw.SeInputButton;
 
 import okw.core.EN;
 import okw.log.Logger_Sngltn;
@@ -8,7 +8,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class SePushButton_EN_Firefox_Test extends SePushButton_EN_Test
+public class SeInputButton_EN_Firefox_Test extends SeInputButton_EN_Test
 {
 	static Log2HTML myLog2HTML = null;
 

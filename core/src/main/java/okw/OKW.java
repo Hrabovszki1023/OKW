@@ -135,6 +135,6 @@ public @interface OKW
    *
    * Die Periodendauer des Pollens wird in Millisekunden angegeben.
    */
-  public int VerifyExist_PT() default 1000;
+  public int VerifyExists_PT() default 1000;
 
 }

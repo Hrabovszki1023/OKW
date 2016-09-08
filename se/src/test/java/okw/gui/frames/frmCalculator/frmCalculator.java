@@ -46,60 +46,60 @@ import okw.gui.adapter.selenium.*;
 public class frmCalculator extends SeBrowserChild {
   
   @OKW( FN = "Display" )
-  public SeTextField  display = new SeTextField( "//INPUT[@name='Display']" );
+  public SeInputText  display = new SeInputText( "//INPUT[@name='Display']" );
 
   @OKW( FN = "1" )
-  public SePushButton n1 = new SePushButton( "//input[@value='  1   ']");
+  public SeInputButton n1 = new SeInputButton( "//input[@value='  1   ']");
 
   @OKW( FN = "2" )
-  public SePushButton n2 = new SePushButton( "//input[@value='  2   ']");
+  public SeInputButton n2 = new SeInputButton( "//input[@value='  2   ']");
 
   @OKW( FN = "3" )
-  public SePushButton n3 = new SePushButton( "//input[@value='  3   ']");
+  public SeInputButton n3 = new SeInputButton( "//input[@value='  3   ']");
 
   @OKW( FN = "4" )
-  public SePushButton n4 = new SePushButton( "//input[@value='  4   ']");
+  public SeInputButton n4 = new SeInputButton( "//input[@value='  4   ']");
 
   @OKW( FN = "5" )
-  public SePushButton n5 = new SePushButton( "//input[@value='  5   ']");
+  public SeInputButton n5 = new SeInputButton( "//input[@value='  5   ']");
 
   @OKW( FN = "6" )
-  public SePushButton n6 = new SePushButton( "//input[@value='  6   ']");
+  public SeInputButton n6 = new SeInputButton( "//input[@value='  6   ']");
 
   @OKW( FN = "7" )
-  public SePushButton n7 = new SePushButton( "//input[@value='  7   ']");
+  public SeInputButton n7 = new SeInputButton( "//input[@value='  7   ']");
 
   @OKW( FN = "8" )
-  public SePushButton n8 = new SePushButton( "//input[@value='  8   ']");
+  public SeInputButton n8 = new SeInputButton( "//input[@value='  8   ']");
 
   @OKW( FN = "9" )
-  public SePushButton n9 = new SePushButton( "//input[@value='  9   ']");
+  public SeInputButton n9 = new SeInputButton( "//input[@value='  9   ']");
 
   @OKW( FN = "0" )
-  public SePushButton n0 = new SePushButton( "//input[@value='  0   ']");
+  public SeInputButton n0 = new SeInputButton( "//input[@value='  0   ']");
   @OKW( FN = "." )
-  public SePushButton punkt = new SePushButton( "//INPUT[@type='button' and @value='*.*']" );
+  public SeInputButton punkt = new SeInputButton( "//INPUT[@type='button' and @value='*.*']" );
 
   @OKW( FN = "+" )
-  public SePushButton plus = new SePushButton( "//input[@type='button' and @value='  +   ']" );
+  public SeInputButton plus = new SeInputButton( "//input[@type='button' and @value='  +   ']" );
 
   @OKW( FN = "-" )
-  public SePushButton minus = new SePushButton( "//input[@type='button' and @value='  -   ']" );
+  public SeInputButton minus = new SeInputButton( "//input[@type='button' and @value='  -   ']" );
 
   @OKW( FN = "/" )
-  public SePushButton durch = new SePushButton( "//input[@type='button' and @value='  /   ']" );
+  public SeInputButton durch = new SeInputButton( "//input[@type='button' and @value='  /   ']" );
 
   @OKW( FN = "*" )
-  public SePushButton mal  = new SePushButton( "//input[@type='button' and @value='  *   ']" );
+  public SeInputButton mal  = new SeInputButton( "//input[@type='button' and @value='  *   ']" );
 
   @OKW( FN = "=" )
-  public SePushButton gleich = new SePushButton( "//input[@type='button' and @value='  =   ']" );
+  public SeInputButton gleich = new SeInputButton( "//input[@type='button' and @value='  =   ']" );
 
   @OKW( FN = "C" )
-  public SePushButton clear  = new SePushButton( "//input[@type='reset' and @value='  C  ']" );
+  public SeInputButton clear  = new SeInputButton( "//input[@type='reset' and @value='  C  ']" );
 
   @OKW( FN = "sqrt" )
-  public SePushButton sqrt = new SePushButton( "//input[class='button'] type='button' value='sqrt '" );
+  public SeInputButton sqrt = new SeInputButton( "//input[class='button'] type='button' value='sqrt '" );
 
   public frmCalculator() {
     

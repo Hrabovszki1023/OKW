@@ -33,7 +33,8 @@ public class frmTestRechner extends Test_Window
 
         /// \brief
         /// Test Objekt mit allen OKW-Methoden,
-        @OKW(FN="All_MethodsObj", 
+        @OKW(FN="All_MethodsObj",
+                VerifyExists_PT=500, VerifyExists_TO=1,
                 VerifyLabel_PT=500, VerifyLabel_TO=1,
                 VerifyValue_PT=500, VerifyValue_TO=1,
                 VerifyTooltip_PT=500, VerifyTooltip_TO=1,

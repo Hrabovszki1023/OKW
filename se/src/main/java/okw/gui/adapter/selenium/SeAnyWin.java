@@ -520,9 +520,9 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.12.07
-    public Boolean VerifyExists(Boolean fpbExpectedValue) throws InterruptedException
+    public Boolean VerifyExists() throws InterruptedException
     {
-        this.MyLogger.LogFunctionStartDebug("VerifyExists", "fpbExpectedValue", fpbExpectedValue.toString());
+        this.MyLogger.LogFunctionStartDebug("VerifyExists");
 
         Boolean lvbReturn = true;
         Boolean bOK = false;
@@ -560,9 +560,9 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.12.07
-    public Boolean VerifyIsActive(Boolean fpbExpectedValue) throws InterruptedException
+    public Boolean VerifyIsActive( ) throws InterruptedException
     {
-        this.MyLogger.LogFunctionStartDebug("VerifyIsActive", "fpbExpectedValue", fpbExpectedValue.toString());
+        this.MyLogger.LogFunctionStartDebug("VerifyIsActive");
 
         Boolean lvbReturn = true;
         Boolean bOK = false;
@@ -604,9 +604,9 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.12.07
-    public ArrayList<String> VerifyTooltip(ArrayList<String> fplsExpectedValue) throws InterruptedException
+    public ArrayList<String> VerifyTooltip() throws InterruptedException
     {
-        MyLogger.LogFunctionStartDebug("VerifyTooltip", "fplsExpectedValue", fplsExpectedValue.get(0));
+        MyLogger.LogFunctionStartDebug("VerifyTooltip");
 
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;
@@ -651,9 +651,9 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.12.07
-    public ArrayList<String> VerifyLabel(ArrayList<String> fplsExpectedValue) throws InterruptedException
+    public ArrayList<String> VerifyLabel() throws InterruptedException
     {
-        MyLogger.LogFunctionStartDebug("VerifyLabel", "fplsExpectedValue", fplsExpectedValue.get(0));
+        MyLogger.LogFunctionStartDebug("VerifyLabel");
 
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;
@@ -1064,24 +1064,29 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         return lvbReturn;
     }
 
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des ToolTips.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für Prüfewert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \return
-    ///  true falls Objekt den Fokus hat, sonst false.
-    /// \return
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.04.11
-    public Boolean VerifyHasFocus(Boolean fpbExpectedValue) throws InterruptedException
+    // \~german
+    // \brief
+    // Ermittelt ob das GUI-Objekt den Fokus hat.
+    // 
+    // Dies ist der Einstiegspunkt für die Anpassung der Methote VerifyHasFocus (Methodenüberschreibung).
+    // 
+    // \return
+    //  true falls Objekt den Fokus hat, sonst false.
+    // \~english
+    // \brief Determines whether the GUI object has the focus.
+    //
+    // This is the entry point for the adaptation of the method Verify Has Focus (method override).
+    // \~
+    // \author Zoltán Hrabovszki
+    // \date 2013.12.07
+    public Boolean VerifyHasFocus() throws InterruptedException
     {
         Boolean lvbReturn = false;
         Boolean bOK = false;
 
         try
         {
-            MyLogger.LogFunctionStartDebug("VerifyHasFocus", "fpbExpectedValue", fpbExpectedValue.toString());
+            MyLogger.LogFunctionStartDebug("VerifyHasFocus");
 
             // Nun mit dem erwarteten Sollwert und GetHasFocus ggf. auf den Wert Warten.
             lvbReturn = this.getHasFocus( );
@@ -1116,9 +1121,9 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.12.07
-    public ArrayList<String> VerifyCaption(ArrayList<String> fplsExpectedValue) throws InterruptedException
+    public ArrayList<String> VerifyCaption() throws InterruptedException
     {
-        MyLogger.LogFunctionStartDebug("VerifyCaption", "fplsExpectedValue", fplsExpectedValue.get(0));
+        MyLogger.LogFunctionStartDebug("VerifyCaption");
 
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;

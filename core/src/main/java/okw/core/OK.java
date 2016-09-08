@@ -537,36 +537,38 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::MemorizeLabel(string,string)
-	/// \~english
-	/// \copydoc IOKW_State::MemorizeLabel(string,string)
-	///
-	public void MemorizeLabel(String FN, String fps_MemKeyName) throws Exception {
-		Log.LogFunctionStartDebug("MemorizeLabel", "FN", FN, "fps_MemKeyName",
-				fps_MemKeyName);
+  // \copydoc IOKW_State::MemorizeLabel(string,string)
+  public void MemorizeLabel( String FN, String fps_MemKeyName ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "MemorizeLabel", "FN", FN, "fps_MemKeyName", fps_MemKeyName );
 
-		try {
-			if (fps_MemKeyName.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
-					|| fps_MemKeyName.equals("")) {
-				// Wenn fps_MemKeyName = IGNORE oder "" ist ->
-				// OKWNotAllowedValueException auslösen...
-				throw new okw.exceptions.OKWNotAllowedValueException(
-						LM.GetMessage("MemorizeLabel", "OKWNotAllowedValueException", fps_MemKeyName));
-			} else {
-				CO.SetChildName(FN);
-				ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("MemorizeLabel");
+    try
+    {
+      if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || fps_MemKeyName.equals( "" ) )
+      {
+        // Wenn fps_MemKeyName = IGNORE oder "" ist ->
+        // OKWNotAllowedValueException auslösen...
+        throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeLabel", "OKWNotAllowedValueException", fps_MemKeyName ) );
+      }
+      else
+      {
+        CO.SetChildName( FN );
+        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( "MemorizeLabel" );
 
-				String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP(ActualValues);
+        String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-				OKW_Memorize_Sngltn.getInstance().Set(fps_MemKeyName, lvsToMemorize);
-			}
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+        OKW_Memorize_Sngltn.getInstance().Set( fps_MemKeyName, lvsToMemorize );
+      }
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
 	/// \~german
 	/// \copydoc IOKW_State::MemorizeSelectedValue(string,string)
@@ -1101,15 +1103,16 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::VerifyExists(string,string)
-	/// \~english
-	/// \copydoc IOKW_State::VerifyExists(string,string)
-	///
-	public void VerifyExists(String FN, String ExpVal) throws Exception {
-		Log.LogFunctionStartDebug("VerifyExists", "FN", FN, "ExpVal",
-				ExpVal);
+	/**
+	 *  \copydoc IOKW_State::VerifyExists(string,string)
+	 */
+	public void VerifyExists(String FN, String ExpVal) throws Exception
+	{
 
+    Boolean bFail = false;
+
+	  Log.LogFunctionStartDebug("VerifyExists", "FN", FN, "ExpVal",	ExpVal);
+    
 		try {
 			// Hier sind nur drei werte erlaubt: YES/NO/IGNORE
 
@@ -1120,31 +1123,49 @@ public class OK implements IOKW_State {
 				Log.LogPrintDebug(LM.GetMessage("VerifyExists", "Ignore"));
 			} else {
 
-				String lvlsExpected = Parser.ParseMe(ExpVal);
+				String lvsExpected = Parser.ParseMe(ExpVal);
 
 				// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-				if (lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
-						|| lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
+				if (lvsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
+						|| lvsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
 
 					// Sprachabhängiges YES/NO nach Boolean transformieren
-					Boolean lvsbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(lvlsExpected);
+					Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(lvsExpected);
 
 					CO.SetChildName(FN);
-					Boolean lvbActual = CO.CallMethodReturn_BooleanPb("VerifyExists", lvsbExpectedValue);
-
+					Boolean lvbActual = CO.VerifyExists( lvbExpectedValue );
 					String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
 
 					// Soll/Ist Vergleich...
 					Log.LogPrintDebug(LM.GetMessage("VerifyExists", "VerifyValue"));
 
-					// LANGUAGE: Prüfen: Sprachabhängigen string-vergleich
-					// durchführen...
-					Log.LogVerify(lvsActual, ExpVal);
+          if (lvsActual.equals( lvsExpected ))
+          {
+            Log.LogPass( lvsActual + " = " + lvsExpected );
+          }
+          else
+          {
+              bFail = true;
+              
+              Log.LogError( lvsActual + " \u2260 " + lvsExpected );
+              Log.ResOpenList( "Details..." );
+              Log.LogPrint( "  Actual: " + lvsActual );
+              Log.LogPrint( "Expected: " + lvsExpected );
+              Log.ResCloseList();
+          }
+
+          if (bFail)
+          {
+            // Fehler! - Trigger OKWVerifyingFailsException!
+            throw new OKWVerifyingFailsException();   
+          }
+
 				}
 				// Beide Bedingungen sind nicht erfüllt -> Exception da
 				// keinanderer
 				// Wert hier erlaubt ist.
-				else {
+				else
+				{
 					String ExceptionLog = LM.GetMessage("VerifyExists", "OKWNotAllowedValueException",
 							ExpVal);
 					throw new OKWNotAllowedValueException(ExceptionLog);
@@ -1157,66 +1178,164 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::VerifyHasFocus(string,string)
-	/// \~english
-	/// \copydoc IOKW_State::VerifyHasFocus(string,string)
-	///
-	public void VerifyHasFocus(String FN, String ExpVal) throws Exception {
-		Log.LogFunctionStartDebug("VerifyHasFocus", "FN", FN, "ExpVal",
-				ExpVal);
+	  /**
+	   *  \copydoc IOKW_State::VerifyHasFocus(string,string)
+	   */
+    public void VerifyHasFocus(String FN, String ExpVal) throws Exception
+	  {
 
-		try {
-			// Prüfen ob ignoriert werden muss...
-			if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
-					|| ExpVal.equals("")) {
-				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-				Log.LogPrintDebug(LM.GetMessage("VerifyHasFocus", "Ignore"));
-			} else {
-				
-				String lvlsExpected = Parser.ParseMe(ExpVal);
-				
-				// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-				if (lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
-						|| lvlsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
-					// Sprachabhängiges YES/NO nach Boolean transformieren
-					
-					Boolean lvsbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(lvlsExpected);
+	    Boolean bFail = false;
 
-					CO.SetChildName(FN);
-					Boolean lvbActual = CO.CallMethodReturn_BooleanPb("VerifyHasFocus", lvsbExpectedValue);
+	    Log.LogFunctionStartDebug("VerifyHasFocus", "FN", FN, "ExpVal", ExpVal);
+	    
+	    try {
+	      // Hier sind nur drei werte erlaubt: YES/NO/IGNORE
 
-					String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
+	      // Prüfen ob ignoriert werden muss...
+	      if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
+	          || ExpVal.equals("")) {
+	        // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+	        Log.LogPrintDebug(LM.GetMessage("VerifyHasFocus", "Ignore"));
+	      } else {
 
-					// Soll/Ist Vergleich...
-					Log.LogPrintDebug(LM.GetMessage("VerifyHasFocus", "VerifyValue"));
-					Log.LogVerify(lvsActual, ExpVal);
+	        String lvsExpected = Parser.ParseMe(ExpVal);
 
-					// \todo LANGUAGE: Püfen aws dieser eintrag soll:
-					// Sprachabhängigen string-vergleich durchführen...
-				}
-				// Beide Bedingungen sind nicht erfüllt -> Exception da
-				// keinanderer
-				// Wert hier erlaubt ist.
-				else {
-					String ExceptionLog = LM.GetMessage("VerifyExists", "OKWNotAllowedValueException",
-							ExpVal);
-					throw new OKWNotAllowedValueException(ExceptionLog);
-				}
-			}
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+	        // Püfen ob YES/NO als Sollwert vorgegeben worden ist.
+	        if (lvsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
+	            || lvsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
 
-	/// \~german
-	/// \copydoc IOKW_State::VerifyIsActive(string,string)
-	/// \~english
-	/// \copydoc IOKW_State::VerifyIsActive(string,string)
-	///
-	public void VerifyIsActive(String FN, String ExpVal) throws Exception {
+	          // Sprachabhängiges YES/NO nach Boolean transformieren
+	          Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(lvsExpected);
+
+	          CO.SetChildName(FN);
+	          Boolean lvbActual = CO.VerifyHasFocus( lvbExpectedValue );
+	          String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
+
+	          // Soll/Ist Vergleich...
+	          Log.LogPrintDebug(LM.GetMessage("VerifyHasFocus", "VerifyValue"));
+
+	          if (lvsActual.equals( lvsExpected ))
+	          {
+	            Log.LogPass( lvsActual + " = " + lvsExpected );
+	          }
+	          else
+	          {
+	              bFail = true;
+	              
+	              Log.LogError( lvsActual + " \u2260 " + lvsExpected );
+	              Log.ResOpenList( "Details..." );
+	              Log.LogPrint( "  Actual: " + lvsActual );
+	              Log.LogPrint( "Expected: " + lvsExpected );
+	              Log.ResCloseList();
+	          }
+
+	          if (bFail)
+	          {
+	            // Fehler! - Trigger OKWVerifyingFailsException!
+	            throw new OKWVerifyingFailsException();   
+	          }
+
+	        }
+	        // Beide Bedingungen sind nicht erfüllt -> Exception da
+	        // keinanderer
+	        // Wert hier erlaubt ist.
+	        else
+	        {
+	          String ExceptionLog = LM.GetMessage("VerifyHasFocus", "OKWNotAllowedValueException", ExpVal);
+	          throw new OKWNotAllowedValueException(ExceptionLog);
+	        }
+	      }
+	    }
+	    catch (Exception e)
+	    {
+	      this.HandleException(e);
+	    }
+	    finally
+	    {
+	      Log.LogFunctionEndDebug();
+	    }
+	  }
+
+	  
+    // copydoc IOKW_State::VerifyHasFocus(string,string)
+    public void VerifyIsActive(String FN, String ExpVal) throws Exception
+    {
+
+      Boolean bFail = false;
+
+      Log.LogFunctionStartDebug("VerifyIsActive", "FN", FN, "ExpVal", ExpVal);
+      
+      try {
+        // Hier sind nur drei werte erlaubt: YES/NO/IGNORE
+
+        // Prüfen ob ignoriert werden muss...
+        if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || ExpVal.equals(""))
+        {
+          // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+          Log.LogPrintDebug(LM.GetMessage("VerifyHasFocus", "Ignore"));
+        } 
+        else
+        {
+
+          String lvsExpected = Parser.ParseMe(ExpVal);
+
+          // Püfen ob YES/NO als Sollwert vorgegeben worden ist.
+          if (lvsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
+              || lvsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
+
+            // Sprachabhängiges YES/NO nach Boolean transformieren
+            Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(lvsExpected);
+
+            CO.SetChildName(FN);
+            Boolean lvbActual = CO.VerifyIsActive( lvbExpectedValue );
+            String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
+
+            // Soll/Ist Vergleich...
+            Log.LogPrintDebug(LM.GetMessage("VerifyIsActive", "VerifyValue"));
+
+            if (lvsActual.equals( lvsExpected ))
+            {
+              Log.LogPass( lvsActual + " = " + lvsExpected );
+            }
+            else
+            {
+                bFail = true;
+                
+                Log.LogError( lvsActual + " \u2260 " + lvsExpected );
+                Log.ResOpenList( "Details..." );
+                Log.LogPrint( "  Actual: " + lvsActual );
+                Log.LogPrint( "Expected: " + lvsExpected );
+                Log.ResCloseList();
+            }
+
+            if (bFail)
+            {
+              // Fehler! - Trigger OKWVerifyingFailsException!
+              throw new OKWVerifyingFailsException();   
+            }
+
+          }
+          // Beide Bedingungen sind nicht erfüllt -> Exception da
+          // keinanderer
+          // Wert hier erlaubt ist.
+          else
+          {
+            String ExceptionLog = LM.GetMessage("VerifyIsActive", "OKWNotAllowedValueException", ExpVal);
+            throw new OKWNotAllowedValueException(ExceptionLog);
+          }
+        }
+      }
+      catch (Exception e)
+      {
+        this.HandleException(e);
+      }
+      finally
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+
+	public void VerifyIsActiveOLd(String FN, String ExpVal) throws Exception {
 		Log.LogFunctionStartDebug("VerifyIsActive", "FN", FN, "ExpVal",
 				ExpVal);
 		try {

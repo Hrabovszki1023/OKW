@@ -1,7 +1,7 @@
 
 /*
     ==============================================================================
-    Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+    Copyright © 2012, 2013, 2014, 2015,2016 IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -46,21 +46,22 @@
     /// IOKW_state is the Interface of OKW-Class.
     /// The OKW-Class is derived from the State-Design-Pattern
     /// 
+
 package okw.core;
 
 public interface IOKW_State
     {
 
-		/// \~german
+        /// \~german
         /// \brief
         /// Markiert den Anfang eines neuen Testfalls. 
         ///
         /// Beschreibung des Handlungsablaufes
         /// 
-		/// \note Alle Testfälle sollten mit BeginneTest afangen: 
-		/// Dieses Schlüsselwort initialisiert OKW und versetz diesen in einen initialen Zustand, d.h. als wäre OKW neu gestartet.
+        /// \note Alle Testfälle sollten mit BeginneTest afangen: 
+        /// Dieses Schlüsselwort initialisiert OKW und versetz diesen in einen initialen Zustand, d.h. als wäre OKW neu gestartet.
         /// 
-		/// \param fpsTestname Name oder Bezeichnung des Testfalls.
+        /// \param fpsTestname Name oder Bezeichnung des Testfalls.
         ///
         /// \~english
         /// \brief

@@ -56,14 +56,14 @@ import okw.gui.OKWLocator;
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2014.06.2014
-    public class SeTextField extends SeSimpleDataObjBase
+    public class SeInputText extends SeSimpleDataObjBase
     {
 
         /// \brief
         /// 
         /// 
         /// \param Locator definiert die Objekterkennungseigenschaft des Objektes und wird als XPATH angegeben.
-        public SeTextField(String Locator, OKWLocator... fpLocators)
+        public SeInputText(String Locator, OKWLocator... fpLocators)
         {
         	super(Locator, fpLocators);
         }

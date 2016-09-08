@@ -16,7 +16,7 @@ public class SeListBox_EN_HTMLUnitDriver_Test extends SeListBox_EN_Test
 		ApplicationName = "HTMLUnit";
 		
         Logger_Sngltn.getInstance();
-		// Reset des Loggers: Alle geladenen Instanzen löschen
+		    // Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.Init();
 
         myLog2HTML = new Log2HTML("SeTextField_EN_HTMLUnitDriver_Test.html");

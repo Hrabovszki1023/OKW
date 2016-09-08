@@ -43,10 +43,10 @@ import okw.gui.adapter.selenium.*;
 public class frmSeInputTextDisabled extends SeBrowserChild
     {
 	@OKW (FN="MwSt")
-	public SeTextField MwSt = new SeTextField("//*[@name='mwst']");
+	public SeInputText MwSt = new SeInputText("//*[@name='mwst']");
 
 	@OKW (FN="Preis")
-    public SeTextField Preis = new SeTextField("//*[@name='preis']");
+    public SeInputText Preis = new SeInputText("//*[@name='preis']");
 
 
     public frmSeInputTextDisabled()

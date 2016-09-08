@@ -43,7 +43,8 @@ import okw.gui.OKWLocator;
 
     /// \brief
     /// TODO: Description of SeList.
-    /// 
+    ///
+    @Deprecated
     public class SeList extends SeAnyWin
     {
 
