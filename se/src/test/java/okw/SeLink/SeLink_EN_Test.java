@@ -37,14 +37,14 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.ClickOn("Google");
-	                EN.VerifyValue("URL", "https://www.google.de/?gws_rd=ssl");
+	                EN.VerifyValue("URL", "http://www.google.de/");
 
 
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 	                EN.ClickOn("Yahoo");
 	                EN.VerifyValue("URL", "https://de.yahoo.com/");
 
@@ -65,7 +65,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.LogCaption("Google");
@@ -83,6 +83,34 @@ public class SeLink_EN_Test
 	            }
 	        }
 
+	        
+	         @Test
+	          public void TC_LogLabel() throws Exception
+	          {
+	              try
+	              {
+	                  EN.BeginTest( name.getMethodName() );
+
+	                  EN.StartApp( ApplicationName );
+	                  EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
+
+	                  EN.SelectWindow("SeLink");
+	                  EN.LogLabel("Google");
+	                  EN.LogLabel("Yahoo");
+
+	                  // TODO ZH, 2014.06 Logging Prüfen
+
+	                  //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "LogCaption", "P");
+
+	              }
+	              catch ( Exception e )
+	              {
+	                  //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "LogCaption", "F");
+	                  throw e;
+	              }
+	          }
+
+	         
 	        @Test
 	        public void TC_LogValue() throws Exception
 	        {
@@ -91,7 +119,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 
@@ -122,7 +150,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 
@@ -150,7 +178,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 
@@ -175,7 +203,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 
@@ -200,7 +228,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.MemorizeCaption("Google", "SeLink_MemorizeCaption_1");
@@ -219,6 +247,33 @@ public class SeLink_EN_Test
 	            }
 	        }
 
+	         @Test
+	          public void TC_MemorizeLabel() throws Exception
+	          {
+	              try
+	              {
+	                  EN.BeginTest( name.getMethodName() );
+
+	                  EN.StartApp( ApplicationName );
+	                  EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
+
+	                  EN.SelectWindow("SeLink");
+	                  EN.MemorizeLabel("Google", "SeLink_MemorizeLabel_1");
+	                  assertEquals("Label Google:", myMM.Get("SeLink_MemorizeLabel_1"));
+
+	                  EN.MemorizeLabel("Yahoo", "SeLink_MemorizeLabel_1");
+	                  assertEquals("Label Yahoo:", myMM.Get("SeLink_MemorizeLabel_1"));
+
+	                  //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "MemorizeCaption", "P");
+
+	              }
+	              catch ( Exception e )
+	              {
+	                  //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "MemorizeCaption", "F");
+	                  throw e;
+	              }
+	          }
+  
 	        @Test
 	        public void TC_MemorizeValue() throws Exception
 	        {
@@ -227,19 +282,19 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.MemorizeValue("Google", "SeLink_MemorizeValue_1");
 	                
 	                String actuel = myMM.Get("SeLink_MemorizeValue_1");
-	                assertEquals("http://www.google.de/", actuel);
+	                assertEquals("http://www.google.de", actuel);
 
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.MemorizeValue("Yahoo", "SeLink_MemorizeValue_1");
-	                assertEquals("http://www.yahoo.de/", myMM.Get("SeLink_MemorizeValue_1"));
+	                assertEquals("http://www.yahoo.de", myMM.Get("SeLink_MemorizeValue_1"));
 
 	                //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "MemorizeValue", "P");
 
@@ -263,7 +318,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.MemorizeExists("Google", "SeLink_MemorizeExists_1");
@@ -295,7 +350,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.MemorizeHasFocus("Yahoo", "SeLink_MemorizeHasFocus");
@@ -328,7 +383,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.MemorizeTooltip("Google", "SeLink_MemorizeTooltip_1");
@@ -354,7 +409,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.SetFocus("Google");
@@ -387,7 +442,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.VerifyCaption("Google", "Google...");
@@ -403,6 +458,161 @@ public class SeLink_EN_Test
 	            }
 	        }
 
+	         @Test
+	          public void TC_VerifyCaptionWCM() throws Exception
+	          {
+	              try
+	              {
+	                  EN.BeginTest( name.getMethodName() );
+
+	                  EN.StartApp( ApplicationName );
+	                  EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
+
+	                  EN.SelectWindow("SeLink");
+	                  EN.VerifyCaptionWCM("Google", "Google???");
+	                  EN.VerifyCaptionWCM("Yahoo", "Yahoo???");
+
+	                  //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyCaption", "P");
+
+	              }
+	              catch ( Exception e )
+	              {
+	                  //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyCaption", "F");
+	                  throw e;
+	              }
+	          }
+
+           @Test
+           public void TC_VerifyCaptionREGX() throws Exception
+           {
+               try
+               {
+                   EN.BeginTest( name.getMethodName() );
+
+                   EN.StartApp( ApplicationName );
+                   EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
+
+                   EN.SelectWindow("SeLink");
+                   EN.VerifyCaptionREGX("Google", "Google\\W{3}");
+                   EN.VerifyCaptionREGX("Yahoo", "Yahoo\\W{3}");
+
+                   //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyCaption", "P");
+
+               }
+               catch ( Exception e )
+               {
+                   //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyCaption", "F");
+                   throw e;
+               }
+           }
+
+           // \~german
+           // \brief
+           // Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeInputButton.
+           // 
+           // Button 1 ist active (_nicht_ "disabled")
+           // Button 1 ist inactive (also "disabled")
+           /// 
+           /// \~
+           /// \author Zoltán Hrabovszki
+           /// \date 2015.02.28
+           @Test
+           public void tc_VerifyIsActive() throws Exception
+           {
+               try
+               {
+                   EN.BeginTest( name.getMethodName() );
+                   EN.StartApp( ApplicationName );
+                   EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link_disabled.htm");
+
+                 // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
+                   EN.SelectWindow("InputButton");
+
+                   EN.VerifyIsActive("Text_1", "YES");
+                   EN.VerifyIsActive("Text_2", "NO");
+                   
+                   //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "P");
+               }
+               catch (Exception e)
+               {
+                   //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "F");
+                   throw e;
+               }
+           }
+
+           
+           @Test
+           public void TC_VerifyLabel() throws Exception
+           {
+               try
+               {
+                   EN.BeginTest( name.getMethodName() );
+
+                   EN.StartApp( ApplicationName );
+                   EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
+
+                   EN.SelectWindow("SeLink");
+                   EN.VerifyLabel("Google", "Label Google:");
+                   EN.VerifyLabel("Yahoo", "Label Yahoo:");
+
+                   //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyCaption", "P");
+
+               }
+               catch ( Exception e )
+               {
+                   //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyCaption", "F");
+                   throw e;
+               }
+           }
+
+            @Test
+             public void TC_VerifyLabelWCM() throws Exception
+             {
+                 try
+                 {
+                     EN.BeginTest( name.getMethodName() );
+
+                     EN.StartApp( ApplicationName );
+                     EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
+
+                     EN.SelectWindow("SeLink");
+                     EN.VerifyLabelWCM("Google", "Label Google?");
+                     EN.VerifyLabelWCM("Yahoo", "Label Yahoo?");
+
+                     //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyCaption", "P");
+
+                 }
+                 catch ( Exception e )
+                 {
+                     //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyCaption", "F");
+                     throw e;
+                 }
+             }
+
+            @Test
+            public void TC_VerifyLabelREGX() throws Exception
+            {
+                try
+                {
+                    EN.BeginTest( name.getMethodName() );
+
+                    EN.StartApp( ApplicationName );
+                    EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
+
+                    EN.SelectWindow("SeLink");
+                    EN.VerifyLabelREGX("Google", "Label Google:");
+                    EN.VerifyLabelREGX("Yahoo", "Label Yahoo:");
+
+                    //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyCaption", "P");
+
+                }
+                catch ( Exception e )
+                {
+                    //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyCaption", "F");
+                    throw e;
+                }
+            }
+           
 	        @Test
 	        public void TC_VerifyValue() throws Exception
 	        {
@@ -411,7 +621,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.VerifyValue("Google", "http://www.google.de");
@@ -427,6 +637,57 @@ public class SeLink_EN_Test
 	            }
 	        }
 
+	        
+	        @Test
+          public void TC_VerifyValueWCM() throws Exception
+          {
+              try
+              {
+                  EN.BeginTest( name.getMethodName() );
+
+                  EN.StartApp( ApplicationName );
+                  EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
+
+                  EN.SelectWindow("SeLink");
+                  EN.VerifyValueWCM("Google", "http?//www.google.de");
+                  EN.VerifyValueWCM("Yahoo", "http?//www.yahoo.de");
+
+                  //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyValue", "P");
+
+              }
+              catch ( Exception e )
+              {
+                  //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyValue", "F");
+                  throw e;
+              }
+          }
+
+	        
+	         @Test
+	          public void TC_VerifyValueREGX() throws Exception
+	          {
+	              try
+	              {
+	                  EN.BeginTest( name.getMethodName() );
+
+	                  EN.StartApp( ApplicationName );
+	                  EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
+
+	                  EN.SelectWindow("SeLink");
+	                  EN.VerifyValueREGX("Google", "http\\W//www.google.de");
+	                  EN.VerifyValueREGX("Yahoo", "http\\W//www.yahoo.de");
+
+	                  //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyValue", "P");
+
+	              }
+	              catch ( Exception e )
+	              {
+	                  //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyValue", "F");
+	                  throw e;
+	              }
+	          }
+
+	         
 	        /// \brief
 	        /// Prüft die Methode SeLink.MemorizeToolTip.
 	        /// 
@@ -440,7 +701,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.VerifyExists("LinkNotExists", "NO");
@@ -470,7 +731,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-		            EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+		            EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 		            
 		            EN.SelectWindow("SeLink");
 	                EN.VerifyExists("Google", "NO");
@@ -499,7 +760,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 	                
 	                EN.SelectWindow("SeLink");
 	                EN.VerifyExists("Google", "YES");
@@ -529,7 +790,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 	                
 	                EN.SelectWindow("SeLink");
 	            	EN.VerifyExists("LinkNotExists", "YES");
@@ -552,7 +813,7 @@ public class SeLink_EN_Test
 	                EN.BeginTest( name.getMethodName() );
 
 	                EN.StartApp( ApplicationName );
-	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/Link.htm");
+	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.VerifyTooltip("Google", "Title: Google");
@@ -566,6 +827,52 @@ public class SeLink_EN_Test
 	                throw e;
 	            }
 	        }
+
+	         @Test
+	          public void TC_VerifyToolTipWCM() throws Exception
+	          {
+	              try
+	              {
+	                  EN.BeginTest( name.getMethodName() );
+
+	                  EN.StartApp( ApplicationName );
+	                  EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
+
+	                  EN.SelectWindow("SeLink");
+	                  EN.VerifyTooltipWCM("Google", "Title? Google");
+	                  EN.VerifyTooltipWCM("Yahoo", "Title? Yahoo");
+
+	                  //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyTooltip", "P");
+	              }
+	              catch ( Exception e )
+	              {
+	                  //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyTooltip", "P");
+	                  throw e;
+	              }
+	          }
+
+           @Test
+           public void TC_VerifyToolTipREGX() throws Exception
+           {
+               try
+               {
+                   EN.BeginTest( name.getMethodName() );
+
+                   EN.StartApp( ApplicationName );
+                   EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
+
+                   EN.SelectWindow("SeLink");
+                   EN.VerifyTooltipREGX("Google", "Title\\W Google");
+                   EN.VerifyTooltipREGX("Yahoo", "Title\\W Yahoo");
+
+                   //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyTooltip", "P");
+               }
+               catch ( Exception e )
+               {
+                   //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyTooltip", "P");
+                   throw e;
+               }
+           }
 
 	        /*
 	        /// \brief

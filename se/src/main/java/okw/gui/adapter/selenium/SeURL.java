@@ -310,16 +310,16 @@ import org.openqa.selenium.*;
         /// 
         /// \author Zoltan Hrabovszki
         /// \date 2013.12.14
-        public ArrayList<String> VerifyValue(ArrayList<String> fplsExpectedValue)
+        public ArrayList<String> VerifyValue()
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
             Boolean bOK = false;
 
             try
             {
-                MyLogger.LogFunctionStartDebug("VerifyValue", "fplsExpectedValue", fplsExpectedValue.get(0));
+                MyLogger.LogFunctionStartDebug("VerifyValue");
 
-                SeDriver.getInstance().driver.getCurrentUrl();
+                lvLsReturn.add( SeDriver.getInstance().driver.getCurrentUrl() );
                 
                 bOK = true;
             }

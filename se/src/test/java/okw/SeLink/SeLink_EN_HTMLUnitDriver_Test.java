@@ -21,7 +21,7 @@ public class SeLink_EN_HTMLUnitDriver_Test extends SeLink_EN_Test
 
         myLog2HTML = new Log2HTML("SeLink_EN_HTMLUnitDriver_Test.html");
         Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(true);
+        Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
 	@AfterClass
