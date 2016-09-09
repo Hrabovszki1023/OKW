@@ -10,6 +10,13 @@ OKW - OpenKeyWord is a powerful extension to your existing test-framework such a
 
 OKW is absolutely free, both for open source projects and commercial projects.
 
+## OKW Wiki-Pages 
+Here you can find the OKW Wiki-Pages:
+
+* [Wiki-Home](https://github.com/Hrabovszki1023/OKW/wiki)
+* [List of OKW KeyWords](https://github.com/Hrabovszki1023/OKW/wiki/List-of-OKW-Keywords)
+* [List of OKW Constants](https://github.com/Hrabovszki1023/OKW/wiki/List-of-OKW-Constants)
+
 ## Maven POM files
 
 Here you can find all [OKW modules in Maven repository](https://search.maven.org/#search%7Cga%7C1%7Copenkeyword).
