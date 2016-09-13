@@ -11,7 +11,7 @@ import okw.gui.OKWLocator;
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+      Copyright © 2012, 2013, 2014, 2015, 2016 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -49,7 +49,7 @@ import okw.gui.OKWLocator;
     // , IOKW_SimpleDataObj
     /// \~german
     /// \brief
-    /// Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein DOM-Texfield<br/>.
+    /// Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld<br/>.
     /// GUI-Automatisierungswerkzeug: Selenium.<br/>
     /// Die meisten Methoden werden aus der abtrakten Klasse SeSimpleDataObjekt geerbt.
     /// 
@@ -123,23 +123,24 @@ import okw.gui.OKWLocator;
 
         }
 
-        /// \~german
-        public void setValue(ArrayList<String> fpsValues)
-        {
-            this.LogFunctionStartDebug("SetValue", "fps_Values", fpsValues.toString());
+  // / \~german
+  public void SetValue( ArrayList<String> Val )
+  {
+    this.LogFunctionStartDebug( "SetValue", "Val", Val.toString() );
 
-            try
-            {
-                WebElement lvWebElement = this.Me();
+    try
+    {
 
-                this.setAttribute(lvWebElement, fpsValues.get(0));
-            }
-            finally
-            {
-                this.LogFunctionEndDebug();
-            }
+      WebElement myMe = this.Me();
+      myMe.clear();
+      myMe.sendKeys( Val.get( 0 ) );
+    }
+    finally
+    {
+      this.LogFunctionEndDebug();
+    }
 
-            return;
-        }
+    return;
+  }
 
 }

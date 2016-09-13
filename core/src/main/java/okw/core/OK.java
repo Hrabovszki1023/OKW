@@ -936,9 +936,9 @@ public class OK implements IOKW_State {
 		CL.setLanguage(Language);
 	}
 
-    /**
-	 *  \copydoc IOKW_State::SetValue(string,string)
-	 */
+   //
+   //  \copydoc IOKW_State::SetValue(string,string)
+	 //
 	public void SetValue(String FN, String Val) throws Exception
 	{
 		Log.LogFunctionStartDebug("SetValue", "FN", FN);
@@ -961,7 +961,7 @@ public class OK implements IOKW_State {
 				lvlsValue = Parser.ParseMe(lvlsValue);
 
 				CO.SetChildName(FN);
-				CO.CallMethod("SetValue", lvlsValue);
+				CO.SetValue( lvlsValue );
 			}
 		} 
 		catch (Exception e)

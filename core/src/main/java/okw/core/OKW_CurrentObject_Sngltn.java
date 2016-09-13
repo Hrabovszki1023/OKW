@@ -350,8 +350,7 @@ public class OKW_CurrentObject_Sngltn
   {
     Log.LogFunctionStartDebug( "CallMethod", "String fpsMethod", fpsMethod, "ArrayList<String> fplsParameter", fpLsParameter.toString() );
 
-    Class<?>[] paramTypes =
-    { ArrayList.class };
+    Class<?>[] paramTypes = { ArrayList.class };
 
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
@@ -1856,6 +1855,71 @@ public class OKW_CurrentObject_Sngltn
     return this.cvoObject;
   }
 
+  //
+  // \~german
+  // \brief Ruft eine Methode SetValue des aktuellen Objektes via
+  // "Latebound Function Call" auf.<br/>
+  // Die aufgerufene Methode hat die Signatur:<br/>
+  //
+  // | Parameter/Return | Type | | :----------------|:-------------------| | 1.
+  // Parameter | List&lt;String&gt; | | Rückgabewert | List&lt;String&gt; |
+  //
+  // @param fpLsParameter_1
+  //          Parameter als List&lt;String&gt;.
+  // @return ArrayList&lt;String&gt; .
+  //
+  //         
+  // \~english
+  // \brief Calls a method of the current Object with
+  //         "late bound function call". The called method has the signature:
+  //
+  //         | Parameter/Return | Type | |
+  //         :----------------|:-------------------| | 1st Parameter |
+  //         List&lt;String&gt; | | Return | List&lt;String&gt; |
+  //
+  //
+  //         param fpLsParameter_1 parameter as list&lt;String&gt;.
+  // @return List&lt;String&gt; .
+  //         
+  // \~
+  // @author Zoltan Hrabovszki
+  // @throws InterruptedException
+  // @date 2012.11.01
+  //
+  @SuppressWarnings( "unchecked" )
+  public void SetValue( ArrayList<String> fpALExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
+          InvocationTargetException, XPathExpressionException, InterruptedException
+  {
+
+    Log.LogFunctionStartDebug( "SetValue", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
+
+    Class<?>[] paramTypes = { ArrayList.class };
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "SetValue", paramTypes );
+
+      myMethod.invoke( cvoObject, fpALExpectedValues );
+
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "SetValue" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+        Log.LogFunctionEndDebug();
+    }
+    return;
+  }
+
+  
+  
   /**
    * \~german \brief Hier wird der Kontext auf ein Fenster gesetzt. * Der
    * Bezeichner des letzten Kindobjektes wird gelöscht. * Frame-Klasse mit
