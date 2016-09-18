@@ -4,7 +4,7 @@ package okw.gui.adapter.selenium;
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+      Copyright © 2012, 2013, 2014, 2015, 2016 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -55,7 +55,7 @@ import okw.gui.*;
     /// 
     /// \author Zoltan Hrabovszki
     /// \date 2013.04.11
-    public class SeInputCheckBox extends SeSimpleDataObjBase
+    public class SeInputCheckbox extends SeSimpleDataObjBase
     {
     	
     	OKW_Const_Sngltn myOKW_Const = null;
@@ -69,7 +69,7 @@ import okw.gui.*;
         /// des Objektes und wird als XPATH angegeben.<br/>
         /// <bf>Beispiel:</bf><tt>//input[@value='salami']</tt>
         ///         
-        public SeInputCheckBox( String fpsLocator, OKWLocator... fpLocators )
+        public SeInputCheckbox( String fpsLocator, OKWLocator... fpLocators )
         {
             super(fpsLocator, fpLocators);
             this.LM = new LogMessenger("GUI");
@@ -130,8 +130,6 @@ import okw.gui.*;
                 // Hab ich ein Häckchen?
                 if (!this.IsSelected())
                 {
-                    // Nö, Häckchensetzen
-                    //this.Me().Click();
                     this.ClickOn();
                 }
             }
@@ -143,13 +141,11 @@ import okw.gui.*;
             return;
         }
 
-        /// \brief
-        /// Ermittelt den aktuellen Wert der CheckBox.
-        /// 
-        /// \returnLiefert im ersten Wert des List-String Sprachabhänig
-        /// CHECKED/UNCHECKED</String>\return
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.04.11
+        // \brief Ermittelt den aktuellen Wert der CheckBox.
+        // 
+        // \return Liefert im ersten Wert des List-String Sprachabhänig CHECKED/UNCHECKED
+        // \author Zoltan Hrabovszki
+        // \date 2013.04.11
         @Override
         public ArrayList<String> getValue()
         {
@@ -193,11 +189,52 @@ import okw.gui.*;
 
             return lvls_Return;
         }
+        
+        // \author Zoltan Hrabovszki
+        // \date 2013.04.11
+        //@Override
+        public void SetValue(ArrayList<String> fps_Values) throws XPathExpressionException
+        {
+            this.LogFunctionStartDebug("SetValue", "fps_Values", fps_Values.toString());
 
-        // public virtual void TypeKey(ArrayList<String> Values) -> SeAnyWin.TypeKey()
-        // public virtual void Set Focus -> SeAnyWin.Set_Focus()
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.04.11
+            try
+            {
+                // Wenn das Objekt nicht existiert mit Exception beenden...
+                if (!this.getExists())
+                {
+                    String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "Select()");
+                    throw new OKWGUIObjectNotFoundException(lvsLM + "\\Locator: >>" + this.getLocator() + "<<");
+                }
+
+                // Sprachabhängige Werte holen
+                String lvsCHECKED = myOKW_Const.GetConst4Internalname("CHECKED");
+                String lvsUNCHECKED = myOKW_Const.GetConst4Internalname("UNCHECKED");
+
+                if (fps_Values.get(0).toUpperCase().equals( lvsCHECKED.toUpperCase()) )
+                {
+                    this.Checking();
+                }
+                else if (fps_Values.get(0).toUpperCase().equals(lvsUNCHECKED.toUpperCase()) )
+                {
+                    this.UnChecking();
+                }
+                else
+                {
+                    // LANGUAGE: Exceptionmeldungen in eine Eigene xml Auslagern.
+                    String lvsLM = this.LM.GetMessage("Common", "OKWNotAllowedValueException", fps_Values.get(0));
+                    throw new OKWNotAllowedValueException(lvsLM);
+                }
+            }
+            finally
+            {
+                this.LogFunctionEndDebug();
+            }
+
+            return;
+        }
+
+        // \author Zoltan Hrabovszki
+        // \date 2013.04.11
         //@Override
         public void Select(ArrayList<String> fps_Values) throws XPathExpressionException
         {

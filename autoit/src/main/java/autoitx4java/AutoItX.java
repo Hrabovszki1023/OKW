@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package src.main.java.autoitx4java;
+package autoitx4java;
 
 import com.jacob.activeX.ActiveXComponent;
 import com.jacob.com.SafeArray;
