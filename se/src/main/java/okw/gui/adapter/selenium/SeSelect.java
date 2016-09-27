@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import okw.OKW_Const_Sngltn;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
 
@@ -92,7 +93,14 @@ import okw.gui.OKWLocator;
                 
                 for (String lvsValue : fps_Values )
                 {
+                  if(lvsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("DELETE") ))
+                  {
+                    SelectList.deselectAll();
+                  }
+                  else
+                  {
                     SelectList.selectByVisibleText(lvsValue);
+                  }
                 }
             }
             finally
@@ -118,6 +126,7 @@ import okw.gui.OKWLocator;
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2013.04.11
+        //@Override
         public void SetValue( ArrayList<String> fpsValues)
         {
             this.LogFunctionStartDebug("SetValue", "fpsValues", fpsValues.toString());

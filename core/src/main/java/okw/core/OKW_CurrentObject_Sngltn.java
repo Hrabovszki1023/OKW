@@ -3281,6 +3281,61 @@ public class OKW_CurrentObject_Sngltn
     }
     return lvLsReturn;
   }
+  
+  /**
+   * \~german \brief Ruft eine Methode des aktuellen Objektes via
+   * "late bound function call" auf.
+   *
+   * Die aufgerufene Methode hat die Signatur:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------| | Parameter
+   * | List &lt; String &gt; | | Rückgabewert | kein |
+   *
+   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
+   * fpLsParameter 1. Parameter als List-String.
+   *
+   * \~english \brief Calls a method of the current Object with
+   * "late bound function call".
+   *
+   * The called method has the signature:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------| | Parameter
+   * | List&lt; String &gt; | | Return | none |
+   *
+   * \param fpsMethod name of method to be called. \param fpLsParameter 1st
+   * parameter as list-String.
+   *
+   * \~ \author Zoltan Hrabovszki \date 2014.01.14
+   */
+  public void Select( ArrayList<String> fpLsParameter ) throws IllegalAccessException, IllegalArgumentException,
+          InvocationTargetException, XPathExpressionException
+  {
+    Log.LogFunctionStartDebug( "Select", "ArrayList<String> fplsParameter", fpLsParameter.toString() );
+
+    Class<?>[] paramTypes = { ArrayList.class };
+
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "Select", paramTypes );
+      myMethod.invoke( cvoObject, fpLsParameter );
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "Select" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+
+    return;
+  }
 
 
   /**

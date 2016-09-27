@@ -70,21 +70,33 @@ public class SeInputField_Test {
   // /
   @Test
   public void tcLogExists() throws Exception {
-    try {
+
+    EN.BeginTest( name.getMethodName() );
+    EN.StartApp( ApplicationName );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+
+    EN.SelectWindow( "SeTextField" );
+    EN.LogExists( "Name" );
+  }
+
+  
+  // \brief
+  // Teste das Schlüsselwort ClickOn( FN ) eines SeInputText Prüfen.
+  // 
+  @Test
+  public void tcClickOn() throws Exception {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
 
       EN.SelectWindow( "SeTextField" );
-      EN.LogExists( "Name" );
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "LogExists", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "LogExists", "F");
-      throw e;
-    }
+      EN.ClickOn( "Name" );
+      EN.VerifyHasFocus( "Name", "YES" );
+      EN.VerifyHasFocus( "Vorname", "NO" );
+
+      EN.ClickOn( "Vorname" );
+      EN.VerifyHasFocus( "Name", "NO" );
+      EN.VerifyHasFocus( "Vorname", "YES" );
   }
 
   // / \brief

@@ -17,8 +17,8 @@ import org.openqa.selenium.WebElement;
 public class SeAnyWin extends AnyWinBase implements IGUI
 {
 
-	protected Integer SleepForMillis =  1000; 
-	protected Integer MaxWaitMilis   = 30000;     
+	//protected Integer SleepForMillis =  1000; 
+	//protected Integer MaxWaitMilis   = 30000;     
 	
     // Logger Instance holen
     protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();

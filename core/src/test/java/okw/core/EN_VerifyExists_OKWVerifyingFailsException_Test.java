@@ -90,7 +90,7 @@ public class EN_VerifyExists_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void tc_VerifyExists_OKWVerifyingFailsException_NO() throws Exception {
+  public void tc_VerifyExists_ExistsYESExpectedNO_OKWVerifyingFailsException() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -112,7 +112,7 @@ public class EN_VerifyExists_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValue_OKWVerifyingFailsException_YES() throws Exception {
+  public void tcVerifyExist_ExuistsNOExpextedYES_OKWVerifyingFailsException() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );

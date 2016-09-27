@@ -517,7 +517,7 @@ public class OKW_Const_Sngltn
 		}
 		finally
 		{
-			if (lvsReturn == "")
+			if (lvsReturn.equals( "" ) )
 			{
 				Log.LogFunctionEndDebug();
 			}

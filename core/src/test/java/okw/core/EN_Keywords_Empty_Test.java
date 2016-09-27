@@ -91,10 +91,10 @@ public class EN_Keywords_Empty_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-    EN.SetValue( "All_MethodsObj", "${EMPTY}" );
+    EN.SetValue( "All_MethodsObj", "${DELETE}" );
 
     assertEquals( 1, myClipBoard.getValue().size() );
-    assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "SetValue()", myClipBoard.getMethod() );
   }
@@ -119,12 +119,12 @@ public class EN_Keywords_Empty_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-    EN.SetValue( "All_MethodsObj", "${EMPTY}" );
+    EN.TypeKey( "All_MethodsObj", "${DELETE}" );
 
     assertEquals( 1, myClipBoard.getValue().size() );
-    assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-    assertEquals( "SetValue()", myClipBoard.getMethod() );
+    assertEquals( "TypeKey(List<String> fpLs_Value)", myClipBoard.getMethod() );
   }
 
 

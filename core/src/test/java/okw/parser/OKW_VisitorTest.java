@@ -90,23 +90,41 @@ import static org.junit.Assert.*;
             assertEquals(sExpected, sActual);
         }
 
-        /// \brief String ohne Ersätzung, Länge Größer "0"
-        /// 
-        /// \author Zoltan Hrabovszki
-        /// \date 2014.10.14
-        @Test
-        public void TC_ParseMe_Without_Substitution()
-        {
-        	String sActual = Parser.ParseMe("Einfach nur Text.");            
-            String sExpected = "Einfach nur Text.";
-            
-            Log.LogPrint( "  Aktual Value: " + sActual);
-            Log.LogPrint( "Expected Value: " + sExpected);
-            
-            // Check Return
-            assertEquals(sExpected, sActual);
-        }
-        
+  // \brief String ohne Ersätzung, Länge Größer "0"
+  //
+  // \author Zoltan Hrabovszki
+  // \date 2014.10.14
+  @Test
+  public void TC_ParseMe_Without_Substitution()
+  {
+    String sActual = Parser.ParseMe( "Einfach nur Text." );
+    String sExpected = "Einfach nur Text.";
+
+    Log.LogPrint( "  Aktual Value: " + sActual );
+    Log.LogPrint( "Expected Value: " + sExpected );
+
+    // Check Return
+    assertEquals( sExpected, sActual );
+  }
+
+  // \brief Prüft ob die OKW-Constanten nicht verändert werden.
+  // Die OKW 
+  //
+  // \author Zoltan Hrabovszki
+  // \date 2014.10.14
+  @Test
+  public void TC_ParseMe_OKW_Consts()
+  {
+    String sActual = Parser.ParseMe( "${IGNORE}${DELETE}${EMPTY}${SEP}${VSEP}${HSEP}" );
+    String sExpected = "${IGNORE}${DELETE}${EMPTY}${SEP}${VSEP}${HSEP}";
+
+    Log.LogPrint( "  Aktual Value: " + sActual );
+    Log.LogPrint( "Expected Value: " + sExpected );
+
+    // Check Return
+    assertEquals( sExpected, sActual );
+  }
+  
         /// \brief Prüft, ob ein leerer String verarbeitet wird.
         /// 
         /// \author Zoltan Hrabovszki

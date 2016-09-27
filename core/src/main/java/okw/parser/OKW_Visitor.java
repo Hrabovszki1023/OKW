@@ -5,7 +5,6 @@ package okw.parser;
 //import org.omg.CORBA.Environment;
 
 import okw.*;
-import okw.OKW_Memorize_Sngltn;
 import okw.parser.antlr4.*;
 
 
@@ -20,8 +19,36 @@ import okw.parser.antlr4.*;
             if (OKW_Memorize_Sngltn.getInstance().Exists( lvsReturn ))
                 lvsReturn = OKW_Memorize_Sngltn.getInstance().Get( lvsReturn);
             else
+            {
+              if( lvsReturn.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "DELETE" )) )
+              {
+                lvsReturn = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" );
+              }
+              else if ( lvsReturn.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "EMPTY" )) )
+              {
+                lvsReturn = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" );
+              }
+              else if ( lvsReturn.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "IGNORE" )) )
+              {
+                lvsReturn = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" );
+              }
+              else if ( lvsReturn.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "SEP" )) )
+              {
+                lvsReturn = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "SEP" );
+              }
+              else if ( lvsReturn.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "VSEP" )) )
+              {
+                lvsReturn = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "VSEP" );
+              }
+              else if ( lvsReturn.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "HSEP" )) )
+              {
+                lvsReturn = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "HSEP" );
+              }
+              else
+              {
                 lvsReturn = System.getenv( lvsReturn );
-            
+              }
+            }
             return lvsReturn;
         }
 

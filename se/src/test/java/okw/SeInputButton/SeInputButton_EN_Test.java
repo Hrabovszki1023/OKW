@@ -39,6 +39,7 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 import static org.junit.Assert.*;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
+import okw.exceptions.OKWVerifyingFailsException;
 
 import org.junit.After;
 import org.junit.Ignore;
@@ -569,143 +570,91 @@ import org.junit.rules.TestName;
             }
         }
 
-        /// \~german
-        /// \brief
-        /// Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
-        /// 
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2015.02.28
+        // \~german
+        // \brief
+        // Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
+        // \~
+        // \author Zoltán Hrabovszki
+        // \date 2015.02.28
         @Test
-        public void tc_VerifyExists_NO() throws Exception
+        public void tc_VerifyExists_ExsistsNOExpectedNO() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
                 EN.SelectWindow("InputButton");
                 EN.VerifyExists("Does Not Exists", "NO");
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyExists", "P");
-            }
-            catch ( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyExists", "F");
-                throw e;
-            }
         }
 
-        /// \~german
-        /// \brief
-        /// Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
-        /// 
-        /// Prüfung: Sollwert Nein  Istwert Ja.
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2015.02.28
-        /// TODO Zeitmessung einbauen
-        /// 
-        @Test
-        public void tc_VerifyExists_NO_YesObject() throws Exception
+        // \~german
+        // \brief
+        // Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
+        // \~
+        // \author Zoltán Hrabovszki
+        // \date 2015.02.28
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tc_VerifyExists_ExistsNOExpectedYES() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                
+                EN.SelectWindow("InputButton");
+                EN.VerifyExists("Does Not Exists", "YES");
+        }
+
+        // \~german
+        // \brief
+        // Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
+        // 
+        // Prüfung: Sollwert Nein  Istwert Ja.
+        // \~
+        // \author Zoltán Hrabovszki
+        // \date 2015.02.28
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tc_VerifyExists_ExistsYESExpectedNO() throws Exception
         {
             EN.BeginTest( name.getMethodName() );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
             
             EN.SelectWindow("InputButton");
-            
-            try
-            {
-                EN.VerifyExists("Test_1", "NO");
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyExists", "F");
-
-                fail("Exception ist nicht ausgelöst worden");
-            }
-            catch( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyExists", "P");
-                //Assert.Pass("Exception wurde ausgelöst worden");
-            }
+            EN.VerifyExists("Test_1", "NO");
         }
 
-        /// \~german
-        /// \brief
-        /// Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
-        /// 
-        /// Prüfung: Sollwert Ja.  Istwert Ja.
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2015.02.28
-        /// TODO Zeitmessung einbauen
-        /// 
+        // \~german
+        // \brief
+        // Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
+        // 
+        // Prüfung: Sollwert Ja.  Istwert Ja.
+        // \~
+        // \author Zoltán Hrabovszki
+        // \date 2015.02.28
         @Test
-        public void tc_VerifyExists_YES() throws Exception
+        public void tc_VerifyExists_ExistsYESExpectedYES() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
                 EN.SelectWindow("InputButton");
                 EN.VerifyExists("Text_1", "YES");
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyExists", "P");
-            }
-            catch ( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyExists", "F");
-                throw e;
-            }
         }
 
-        /// \~german
-        /// \brief
-        /// Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
-        /// 
-        /// Prüfung: Sollwert Ja.  Istwert Nein.
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2015.02.28
-        /// TODO Zeitmessung einbauen
-        @Test
-        public void tc_VerifyExists_YES_NoObject() throws Exception
-        {
-            EN.BeginTest( name.getMethodName() );
-            EN.StartApp( ApplicationName );
-            EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
-
-            EN.SelectWindow("InputButton");
-
-            try
-            {
-                EN.VerifyExists("NichtVorhanden", "YES");
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyExists", "F");
-
-                fail("Exception ist nicht ausgelöst worden");
-            }
-            catch ( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyExists", "P");
-                //Assert.Pass("Exception wurde ausgelöst worden");
-            }
-        }
 
         // \~german
         // \brief
         // Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeInputButton.
         // 
         // Button 1 ist active (_nicht_ "disabled")
-        // Button 1 ist inactive (also "disabled")
-        /// 
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2015.02.28
+        // 
+        // \~
+        // \author Zoltán Hrabovszki
+        // \date 2015.02.28
         @Test
-        public void tc_VerifyIsActive() throws Exception
+        public void tc_VerifyIsActive_ActiveYESExpectedYES() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
@@ -714,15 +663,72 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
 
                 EN.VerifyIsActive("Text_1", "YES");
-                EN.VerifyIsActive("Text_2", "NO");
                 
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "F");
-                throw e;
-            }
+        }
+
+        // \~german
+        // \brief
+        // Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeInputButton.
+        // 
+        // Button 1 ist active (_nicht_ "disabled")
+        // 
+        // \~
+        // \author Zoltán Hrabovszki
+        // \date 2015.02.28
+        @Test
+        public void tc_VerifyIsActive_ActiveYESExpectedNO() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+
+              // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
+                EN.SelectWindow("InputButton");
+
+                EN.VerifyIsActive("Text_1", "NO");
+                
+        }
+        
+        // \~german
+        // \brief
+        // Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeInputButton.
+        // 
+        // 
+        // \~
+        // \author Zoltán Hrabovszki
+        // \date 2015.02.28
+        @Test
+        public void tc_VerifyIsActive_ActiveNOExpectedNO() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+
+              // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
+                EN.SelectWindow("InputButton");
+
+                EN.VerifyIsActive("Text_2", "NO");
+        }
+
+        // \~german
+        // \brief
+        // Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeInputButton.
+        // 
+        // 
+        // \~
+        // \author Zoltán Hrabovszki
+        // \date 2015.02.28
+        @Test
+        public void tc_VerifyIsActive_ActiveNOExpectedYES() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+
+              // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
+                EN.SelectWindow("InputButton");
+
+                EN.VerifyIsActive("Text_2", "YES");
         }
 
         // \~german
