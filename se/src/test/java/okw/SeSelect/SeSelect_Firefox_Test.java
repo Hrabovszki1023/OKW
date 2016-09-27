@@ -1,4 +1,4 @@
-package okw.SeListBox;
+package okw.SeSelect;
 
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
@@ -6,7 +6,7 @@ import okw.log.log2html.Log2HTML;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
-public class SeSeListBox_EN_Firefox_Test extends SeListBox_EN_Test
+public class SeSelect_Firefox_Test extends SeSelect_Test
 {
 	static Log2HTML myLog2HTML = null;
 
