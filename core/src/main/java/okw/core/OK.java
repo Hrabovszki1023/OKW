@@ -274,31 +274,34 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::LogLabel(string)
-	/// \~english
-	/// \copydoc IOKW_State::LogLabel(string)
-	///
-	public void LogLabel(String FN) throws Exception {
-		Log.LogFunctionStartDebug("LogLabel", "FN", FN);
+  // \copydoc IOKW_State::LogLabel(string)
+  public void LogLabel( String FN ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "LogLabel", "FN", FN );
 
-		try {
-			CO.SetChildName(FN);
-			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("LogLabel");
+    try
+    {
+      CO.SetChildName( FN );
+      ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( "LogLabel" );
 
-			Log.ResOpenListDebug("Log... ");
+      Log.ResOpenListDebug( "Log... " );
 
-			for (String Value : ActualValues) {
-				Log.LogPrintDebug(">>" + Value + "<<");
-			}
+      for ( String Value : ActualValues )
+      {
+        Log.LogPrintDebug( ">>" + Value + "<<" );
+      }
 
-			Log.ResCloseListDebug();
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+      Log.ResCloseListDebug();
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
 	/// \~german
 	/// \copydoc IOKW_State::LogSelected(string)

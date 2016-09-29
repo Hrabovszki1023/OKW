@@ -68,16 +68,48 @@ public class frmInputButton extends SeBrowserChild
   //\~english
   // \brief 
   // Not existing text box to verify the non-existence.
-  @OKW( FN = "Does Not Exists" )
+  @OKW( FN = "Does Not Exists",
+          VerifyLabel_PT=500, VerifyLabel_TO=1,
+          VerifyIsActive_PT=500, VerifyIsActive_TO=1,
+          VerifyValue_PT=500, VerifyValue_TO=1,
+          VerifyTooltip_PT=500, VerifyTooltip_TO=1,
+          VerifyCaption_PT=500, VerifyCaption_TO=1,
+          VerifyExists_PT=500, VerifyExists_TO=1,
+          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
+           )
   public SeInputButton NichtVorhanden = new SeInputButton( "//*[@name='NichtVorhanden']" );
 
-  @OKW( FN = "Text_1" )
+  @OKW( FN = "Text_1",
+          VerifyLabel_PT=500, VerifyLabel_TO=1,
+          VerifyIsActive_PT=500, VerifyIsActive_TO=1,
+          VerifyValue_PT=500, VerifyValue_TO=1,
+          VerifyTooltip_PT=500, VerifyTooltip_TO=1,
+          VerifyCaption_PT=500, VerifyCaption_TO=1,
+          VerifyExists_PT=500, VerifyExists_TO=1,
+          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
+          )
   public SeInputButton Text_1         = new SeInputButton( "//*[@name='Button 1']" );
 
-  @OKW( FN = "Text_2" )
+  @OKW( FN = "Text_2",
+          VerifyLabel_PT=500, VerifyLabel_TO=1,
+          VerifyIsActive_PT=500, VerifyIsActive_TO=1,
+          VerifyValue_PT=500, VerifyValue_TO=1,
+          VerifyTooltip_PT=500, VerifyTooltip_TO=1,
+          VerifyCaption_PT=500, VerifyCaption_TO=1,
+          VerifyExists_PT=500, VerifyExists_TO=1,
+          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
+          )
   public SeInputButton Text_2         = new SeInputButton( "//*[@name='Button 2']" );
 
-  @OKW( FN = "Button_3" )
+  @OKW( FN = "Button_3",
+          VerifyLabel_PT=500, VerifyLabel_TO=1,
+          VerifyIsActive_PT=500, VerifyIsActive_TO=1,
+          VerifyValue_PT=500, VerifyValue_TO=1,
+          VerifyTooltip_PT=500, VerifyTooltip_TO=1,
+          VerifyCaption_PT=500, VerifyCaption_TO=1,
+          VerifyExists_PT=500, VerifyExists_TO=1,
+          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
+           )
   public SeInputButton Button_3       = new SeInputButton( "//*[@name='Button 3']" );
 
   // / \brief

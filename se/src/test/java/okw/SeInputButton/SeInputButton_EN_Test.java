@@ -620,28 +620,27 @@ import org.junit.rules.TestName;
             EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
             
             EN.SelectWindow("InputButton");
-            EN.VerifyExists("Test_1", "NO");
+            EN.VerifyExists("Text_1", "NO");
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
-        // 
-        // Prüfung: Sollwert Ja.  Istwert Ja.
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
-        @Test
-        public void tc_VerifyExists_ExistsYESExpectedYES() throws Exception
-        {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
-                
-                EN.SelectWindow("InputButton");
-                EN.VerifyExists("Text_1", "YES");
-        }
+  // \~german
+  // \brief
+  // Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
+  //
+  // Prüfung: Sollwert Ja. Istwert Ja.
+  // \~
+  // \author Zoltán Hrabovszki
+  // \date 2015.02.28
+  @Test
+  public void tc_VerifyExists_ExistsYESExpectedYES() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+    EN.StartApp( ApplicationName );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/InputButton/input_type-button.htm" );
 
+    EN.SelectWindow( "InputButton" );
+    EN.VerifyExists( "Text_1", "YES" );
+  }
 
         // \~german
         // \brief
@@ -657,7 +656,7 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
 
             	// Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
                 EN.SelectWindow("InputButton");
@@ -680,7 +679,7 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
                 EN.SelectWindow("InputButton");

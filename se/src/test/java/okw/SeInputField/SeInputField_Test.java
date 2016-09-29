@@ -1068,7 +1068,7 @@ public class SeInputField_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
       EN.SelectWindow( "SeTextField" );
 
-      EN.VerifyValue( "Name", "Soltan" );
+      EN.VerifyTooltip( "Name", "Soltan" );
 
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "VerifyValue", "P");
@@ -1125,7 +1125,7 @@ public class SeInputField_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
       EN.SelectWindow( "SeTextField" );
 
-      EN.VerifyValueWCM( "Name", "#oltan" );
+      EN.VerifyTooltipWCM( "Name", "#oltan" );
 
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "VerifyValue", "P");
@@ -1182,7 +1182,7 @@ public class SeInputField_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
       EN.SelectWindow( "SeTextField" );
 
-      EN.VerifyValueREGX( "Name", "#oltan" );
+      EN.VerifyTooltipREGX( "Name", "#oltan" );
 
       // ImplementationMatrix.Instance.SetImplementation("SeTextField",
       // "VerifyValue", "P");

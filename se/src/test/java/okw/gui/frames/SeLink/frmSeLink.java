@@ -20,13 +20,15 @@ public class frmSeLink extends SeBrowserChild {
     // / Dieses Objekt dient zur Existenzprüfung eines _nicht_
     // / vorhandenen SeLink-Objektes.
     // /
-    @OKW( FN = "LinkNotExists", 
+    @OKW( FN = "LinkNotExists",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
+            VerifyIsActive_PT=500, VerifyIsActive_TO=1,
             VerifyValue_PT=500, VerifyValue_TO=1,
             VerifyTooltip_PT=500, VerifyTooltip_TO=1,
             VerifyCaption_PT=500, VerifyCaption_TO=1,
             VerifyExists_PT=500, VerifyExists_TO=1,
-            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1 )
+            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
+            )
     public SeLink LinkNotExists = new SeLink( "//*[@value='upss']" );
 
     // / \~german
@@ -36,13 +38,15 @@ public class frmSeLink extends SeBrowserChild {
     // / <code><a href="http://www.google.de"
     // name="Google_Link">Google...</a></code>
     // /
-    @OKW( FN = "Google", 
+    @OKW( FN = "Google",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
+            VerifyIsActive_PT=500, VerifyIsActive_TO=1,
             VerifyValue_PT=500, VerifyValue_TO=1,
             VerifyTooltip_PT=500, VerifyTooltip_TO=1,
             VerifyCaption_PT=500, VerifyCaption_TO=1,
             VerifyExists_PT=500, VerifyExists_TO=1,
-            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1 )
+            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
+            )
     public SeLink Google;
 
     // / \~german
@@ -52,13 +56,15 @@ public class frmSeLink extends SeBrowserChild {
     // / <code><a href="http://www.yahoo.de"
     // name="Yahoo_Link">Yahoo...</a></code>
     // /
-    @OKW( FN = "Yahoo", 
+    @OKW( FN = "Yahoo",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
+            VerifyIsActive_PT=500, VerifyIsActive_TO=1,
             VerifyValue_PT=500, VerifyValue_TO=1,
             VerifyTooltip_PT=500, VerifyTooltip_TO=1,
             VerifyCaption_PT=500, VerifyCaption_TO=1,
             VerifyExists_PT=500, VerifyExists_TO=1,
-            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1 )
+            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
+            )
     public SeLink Yahoo;
 
     public frmSeLink() {

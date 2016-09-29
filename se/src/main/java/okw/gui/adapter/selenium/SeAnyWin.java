@@ -1,13 +1,12 @@
 package okw.gui.adapter.selenium;
 
-import java.util.ArrayList;
-import java.util.NoSuchElementException;
 import java.util.*;
 
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.*;
 import okw.log.Logger_Sngltn;
 import okw.LogMessenger;
+import okw.OKW_Const_Sngltn;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -487,10 +486,18 @@ public class SeAnyWin extends AnyWinBase implements IGUI
             WebElement lv_WebElement = this.Me();
 
             // Loop through all List-Values with foreach...
-            for (String lvsValue : fps_Values)
+            for (String Value : fps_Values)
             {
-                Logger_Sngltn.getInstance().LogPrintDebug(">>" + lvsValue + "<<");
-                lv_WebElement.sendKeys(lvsValue);
+              Logger_Sngltn.getInstance().LogPrintDebug(">>" + Value + "<<");
+              
+              if (Value.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
+              {
+                lv_WebElement.clear();
+              }
+              else
+              {
+                lv_WebElement.sendKeys( Value );
+              }
             }
         }
         finally
