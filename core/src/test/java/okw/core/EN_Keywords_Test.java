@@ -53,14 +53,14 @@ public class EN_Keywords_Test {
     EN.EndTest();
   }
 
-  // / \~german
-  // / \brief
-  // / Prüft methoden aufruf für einen einfachen Click.
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  // Prüft methoden aufruf für einen einfachen Click.
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_ClickOn() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -81,14 +81,14 @@ public class EN_Keywords_Test {
     assertEquals( "ClickOn()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // / Prüft den Methodenaufruf für einen Click mit ClickType.
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  // Prüft den Methodenaufruf für einen Click mit ClickType.
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_DoubleClickOn() throws Exception {
 
@@ -111,14 +111,14 @@ public class EN_Keywords_Test {
     assertEquals( "DoubleClickOn()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_LogExists() throws Exception {
 
@@ -140,14 +140,14 @@ public class EN_Keywords_Test {
     assertEquals( "LogExists()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_LogHasFocus() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -169,14 +169,14 @@ public class EN_Keywords_Test {
     assertEquals( "LogHasFocus()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_LogIsActive() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -198,14 +198,14 @@ public class EN_Keywords_Test {
     assertEquals( "LogIsActive()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_LogSelected() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -226,14 +226,14 @@ public class EN_Keywords_Test {
     assertEquals( "LogSelected()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_LogTablecellValue() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -256,14 +256,14 @@ public class EN_Keywords_Test {
     assertEquals( "LogTablecellValue()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_LogTooltip() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -285,14 +285,14 @@ public class EN_Keywords_Test {
     assertEquals( "LogTooltip()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_LogValue() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -314,14 +314,14 @@ public class EN_Keywords_Test {
     assertEquals( "LogValue()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_MemorizeExists() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -346,14 +346,14 @@ public class EN_Keywords_Test {
         OKW_Memorize_Sngltn.getInstance().Get( "Key_TC_MemorizeExists" ) );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_MemorizeHasFocus() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -378,14 +378,14 @@ public class EN_Keywords_Test {
         OKW_Memorize_Sngltn.getInstance().Get( "Key_TC_Memorize_Focus" ) );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2014.01.04
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2014.01.04
   @Test
   public void tc_MemorizeIsActive() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -410,14 +410,14 @@ public class EN_Keywords_Test {
         OKW_Memorize_Sngltn.getInstance().Get( "TC_MemorizeIsActive" ) );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_MemorizeSelectedValue() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -445,14 +445,14 @@ public class EN_Keywords_Test {
             .Get( "TC_MemorizeSelectedValue_Key_1" ) );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_MemorizeTablecellValue() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -480,14 +480,14 @@ public class EN_Keywords_Test {
         .Get( "TC_MemorizeTablecellVelue_Key_1" ) );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_MemorizeTooltip() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -512,14 +512,14 @@ public class EN_Keywords_Test {
         OKW_Memorize_Sngltn.getInstance().Get( "TC_MemorizeTooltip_Key_1" ) );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_MemorizeValue() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -544,14 +544,14 @@ public class EN_Keywords_Test {
         .Get( "TC_Memorize_Key_1" ) );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_SelectMenu() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -573,14 +573,14 @@ public class EN_Keywords_Test {
     assertEquals( "SelectMenu()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_SelectMenu_Value_MV() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -604,14 +604,14 @@ public class EN_Keywords_Test {
     assertEquals( "SelectMenu_Value()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_SelectMenu_Value_SV() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -633,14 +633,14 @@ public class EN_Keywords_Test {
     assertEquals( "SelectMenu_Value()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_SelectTablecell() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -661,14 +661,14 @@ public class EN_Keywords_Test {
     assertEquals( "ROW", myClipBoard.getValue().get( 1 ) );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_SelectTablecell_Clicktype() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -690,14 +690,14 @@ public class EN_Keywords_Test {
     assertEquals( "DOUBLECLICK", myClipBoard.getValue().get( 2 ) );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2014.03.19
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2014.03.19
   @Test
   public void tc_SelectWindow() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -712,60 +712,14 @@ public class EN_Keywords_Test {
     assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2014.03.19
-  @Test
-  public void tc_SelectWindow_MV() throws Exception {
-    EN.BeginTest( name.getMethodName() );
-
-    EN.TypeKeyWindow( "Rechner", "Wert 1${SEP}Wert 2${SEP}Wert 3" );
-
-    // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "Rechner", myClipBoard.getObjectName() );
-    assertEquals( "TypeKey(List<String> fpLs_Value)", myClipBoard.getMethod() );
-
-    assertEquals( 3, myClipBoard.getValue().size() );
-    assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
-    assertEquals( "Wert 2", myClipBoard.getValue().get( 1 ) );
-    assertEquals( "Wert 3", myClipBoard.getValue().get( 2 ) );
-  }
-
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2014.03.19
-  @Test
-  public void tc_SelectWindow_SV() throws Exception {
-    EN.BeginTest( name.getMethodName() );
-
-    EN.TypeKeyWindow( "Rechner", "Wert" );
-
-    // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "Rechner", myClipBoard.getObjectName() );
-    assertEquals( "TypeKey(List<String> fpLs_Value)", myClipBoard.getMethod() );
-
-    assertEquals( 1, myClipBoard.getValue().size() );
-    assertEquals( "Wert", myClipBoard.getValue().get( 0 ) );
-  }
-
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_Select_Clicktype() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -789,16 +743,16 @@ public class EN_Keywords_Test {
     assertEquals( "DOUBLEClick", myClipBoard.getValue().get( 1 ) );
   }
 
-  // / \~german
-  // / \brief
-  // / Prüft den Methodenaufruf Select mit einem einzelnen Wert.
-  // / Prüft Ziel es darf nur ein Wert im List of string übergabe Parameter
+  // \~german
+  // \brief
+  // Prüft den Methodenaufruf Select mit einem einzelnen Wert.
+  // Prüft Ziel es darf nur ein Wert im List of string übergabe Parameter
   // enthalten sein.
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_Select_MultipleValue() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -821,16 +775,16 @@ public class EN_Keywords_Test {
     assertEquals( "Zoltan", myClipBoard.getValue().get( 1 ) );
   }
 
-  // / \~german
-  // / \brief
-  // / Prüft den Methodenaufruf Select mit einem einzelnen Wert.
-  // / Prüft Ziel es darf nur ein Wert im List of string übergabe Parameter
+  // \~german
+  // \brief
+  // Prüft den Methodenaufruf Select mit einem einzelnen Wert.
+  // Prüft Ziel es darf nur ein Wert im List of string übergabe Parameter
   // enthalten sein.
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_Select_SingleValue() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -852,14 +806,14 @@ public class EN_Keywords_Test {
     assertEquals( "Hanna", myClipBoard.getValue().get( 0 ) );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_Sequence() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -884,14 +838,14 @@ public class EN_Keywords_Test {
     assertEquals( "TestSequence_1()", myClipBoard.getMethod());
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_SetFocus() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -912,14 +866,14 @@ public class EN_Keywords_Test {
 
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_SetValue_MultipleValues() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -968,14 +922,14 @@ public class EN_Keywords_Test {
   }
 
 
-  // / \~german
-  // / \brief
-  // / Prüft den Methodenaufruf StartApp.
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  // Prüft den Methodenaufruf StartApp.
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_StartApp() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -988,14 +942,14 @@ public class EN_Keywords_Test {
     assertEquals( "StartApp()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // / Prüft den Methodenaufruf StopApp.
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  // Prüft den Methodenaufruf StopApp.
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_StopApp() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -1008,15 +962,15 @@ public class EN_Keywords_Test {
     assertEquals( "StopApp()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // / Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Typekey
+  // \~german
+  // \brief
+  // Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Typekey
   // Übertragen wird.
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_TypeKeyTablecell_MultipleValues() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -1038,15 +992,15 @@ public class EN_Keywords_Test {
     assertEquals( "CTRL-V", myClipBoard.getValue().get( 1 ) );
   }
 
-  // / \~german
-  // / \brief
-  // / Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Type key
+  // \~german
+  // \brief
+  // Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Type key
   // Übertragen wird.
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_TypeKeyTablecell_SingelValue() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -1071,15 +1025,15 @@ public class EN_Keywords_Test {
     assertEquals( "CTRL A", myClipBoard.getValue().get( 2 ) );
   }
 
-  // / \~german
-  // / \brief
-  // / Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Typekey
+  // \~german
+  // \brief
+  // Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Typekey
   // Übertragen wird.
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_TypeKey_MultipleValues() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -1101,15 +1055,15 @@ public class EN_Keywords_Test {
     assertEquals( "CTRL-V", myClipBoard.getValue().get( 1 ) );
   }
 
-  // / \~german
-  // / \brief
-  // / Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Type key
+  // \~german
+  // \brief
+  // Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Type key
   // Übertragen wird.
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_TypeKey_SingelValue() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -1130,6 +1084,52 @@ public class EN_Keywords_Test {
     assertEquals( "CTRL A", myClipBoard.getValue().get( 0 ) );
   }
   
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2014.03.19
+  @Test
+  public void tc_TypeKeyWindow_MV() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+  
+    EN.TypeKeyWindow( "Rechner", "Wert 1${SEP}Wert 2${SEP}Wert 3" );
+  
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "TypeKey(List<String> fpLs_Value)", myClipBoard.getMethod() );
+  
+    assertEquals( 3, myClipBoard.getValue().size() );
+    assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Wert 2", myClipBoard.getValue().get( 1 ) );
+    assertEquals( "Wert 3", myClipBoard.getValue().get( 2 ) );
+  }
+
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2014.03.19
+  @Test
+  public void tc_TypeKeyWindowWindow_SV() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+  
+    EN.TypeKeyWindow( "Rechner", "Wert" );
+  
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "TypeKey(List<String> fpLs_Value)", myClipBoard.getMethod() );
+  
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "Wert", myClipBoard.getValue().get( 0 ) );
+  }
+
   /**
    * \~german
    * \brief "Normaler" Testfall für das Schlüsselwort VerifyCaption. 
@@ -1350,14 +1350,14 @@ public class EN_Keywords_Test {
     assertEquals( "VerifyExists()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_VerifyHasFocus() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -1376,20 +1376,20 @@ public class EN_Keywords_Test {
     EN.VerifyHasFocus( "All_MethodsObj", "YES" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "true", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "TRUE", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyHasFocus()", myClipBoard.getMethod() );
     assertEquals( 1, myClipBoard.getValue().size() );
 
-    myClipBoard.Clear();
-    
-    EN.VerifyHasFocus( "All_MethodsObj", "NO" );
-
-    // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "false", myClipBoard.getValue().get( 0 ) );
-    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-    assertEquals( "VerifyHasFocus()", myClipBoard.getMethod() );
-    assertEquals( 1, myClipBoard.getValue().size() );
+//    myClipBoard.Clear();
+//    
+//    EN.VerifyHasFocus( "All_MethodsObj", "NO" );
+//
+//    // Check the Name, Called Method and Value of Actuel object
+//    assertEquals( "false", myClipBoard.getValue().get( 0 ) );
+//    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+//    assertEquals( "VerifyHasFocus()", myClipBoard.getMethod() );
+//    assertEquals( 1, myClipBoard.getValue().size() );
 
   
   }
@@ -1420,31 +1420,32 @@ public class EN_Keywords_Test {
     EN.VerifyIsActive( "All_MethodsObj", "YES" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "TRUE", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyIsActive()", myClipBoard.getMethod() );
     assertEquals( 1, myClipBoard.getValue().size() );
 
-    myClipBoard.Clear();
+    // 
+//    myClipBoard.Clear();
 
-    EN.VerifyIsActive( "All_MethodsObj", "NO" );
+//    EN.VerifyIsActive( "All_MethodsObj", "NO" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO", myClipBoard.getValue().get( 0 ) );
-    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-    assertEquals( "VerifyIsActive()", myClipBoard.getMethod() );
-    assertEquals( 1, myClipBoard.getValue().size() );
+//    assertEquals( "NO", myClipBoard.getValue().get( 0 ) );
+//    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+//    assertEquals( "VerifyIsActive()", myClipBoard.getMethod() );
+//    assertEquals( 1, myClipBoard.getValue().size() );
   
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_VerifySelectedValue() throws Exception {
     EN.BeginTest( name.getMethodName() );
@@ -1476,19 +1477,18 @@ public class EN_Keywords_Test {
     assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
   @Test
   public void tc_VerifyTablecellValue() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
-    // Testscript in Schlüsselwort-Notation
     EN.SelectWindow( "Rechner" );
 
     // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?

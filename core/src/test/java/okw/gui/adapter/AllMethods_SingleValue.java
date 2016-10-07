@@ -667,9 +667,9 @@ import okw.log.Logger_Sngltn;
         }
 
 
-        public Boolean VerifyHasFocus(Boolean fpbExpectedValue)
+        public Boolean VerifyHasFocus()
         {
-            myLogger.LogFunctionStartDebug("VerifyHasFocus", "fpbExpectedValue", fpbExpectedValue.toString());
+            myLogger.LogFunctionStartDebug("VerifyHasFocus");
 
             myClipboard.Clear();
             
@@ -678,14 +678,14 @@ import okw.log.Logger_Sngltn;
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyHasFocus()");
 
-            myClipboard.getValue().add(fpbExpectedValue.toString());
+            myClipboard.getValue().add("TRUE");
 
             this.myLogger.LogFunctionEndDebug();
 
-            return fpbExpectedValue;
+            return true;
         }
 
-        public boolean VerifyIsActive(Boolean fpbExpectedValue) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+        public boolean VerifyIsActive() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
         {
             this.myLogger.LogFunctionStartDebug("VerifyIsActive");
 
@@ -694,11 +694,11 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyIsActive()");
-            myClipboard.getValue().add(OKW_Const_Sngltn.getInstance().Boolean2YesNo(fpbExpectedValue));
-
+            myClipboard.getValue().add( "TRUE" );
+            
             this.myLogger.LogFunctionEndDebug();
 
-            return fpbExpectedValue;
+            return true;
         }
 
         public List<String> VerifySelectedValue(ArrayList<String> fpLsExpectedValue)

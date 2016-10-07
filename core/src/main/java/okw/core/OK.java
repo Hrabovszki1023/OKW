@@ -44,7 +44,10 @@ import okw.parser.Parser;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+
+
 
 
 
@@ -1253,9 +1256,13 @@ public class OK implements IOKW_State {
 					throw new OKWNotAllowedValueException(ExceptionLog);
 				}
 			}
-		} catch (Exception e) {
+		}
+		catch (Exception e)
+		{
 			this.HandleException(e);
-		} finally {
+		}
+		finally
+		{
 			Log.LogFunctionEndDebug();
 		}
 	}
@@ -1648,6 +1655,10 @@ public class OK implements IOKW_State {
        }
      }
    } 
+   catch (Exception e)
+   {
+     this.HandleException( e );
+   }
    finally 
    {
      Log.LogFunctionEndDebug();
@@ -1739,6 +1750,10 @@ public class OK implements IOKW_State {
        
      }
    } 
+   catch (Exception e)
+   {
+     this.HandleException( e );
+   }
    finally 
    {
      Log.LogFunctionEndDebug();
@@ -2028,6 +2043,10 @@ public class OK implements IOKW_State {
         }
       }
     } 
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
     finally 
     {
       Log.LogFunctionEndDebug();
@@ -2119,6 +2138,10 @@ public class OK implements IOKW_State {
         
       }
     } 
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
     finally 
     {
       Log.LogFunctionEndDebug();
@@ -2308,6 +2331,10 @@ public class OK implements IOKW_State {
         }
       }
     }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
     finally
     {
       Log.LogFunctionEndDebug();
@@ -2402,6 +2429,10 @@ public class OK implements IOKW_State {
 
       }
     }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
     finally
     {
       Log.LogFunctionEndDebug();
@@ -2427,7 +2458,16 @@ public class OK implements IOKW_State {
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 02.03.2013
-	private void HandleException(Exception e) throws Exception {
+	private void HandleException(Exception e) throws Exception
+	{	  
+	  
+	  // if we have an InvocationTargetException...
+	  if ( e instanceof InvocationTargetException )
+	  {
+	    // ... then get the origin exception.
+	    e = ( Exception ) e.getCause();
+	  }
+	  
 		Log.LogPrint("==========================================================================");
 		Log.LogException(e.getMessage());
 		Log.LogPrintDebug("--------");
@@ -2781,6 +2821,10 @@ public class OK implements IOKW_State {
         }
       }
     }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
     finally
     {
       Log.LogFunctionEndDebug();
@@ -2870,6 +2914,10 @@ public class OK implements IOKW_State {
         }
       }
     } 
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
     finally 
     {
       Log.LogFunctionEndDebug();

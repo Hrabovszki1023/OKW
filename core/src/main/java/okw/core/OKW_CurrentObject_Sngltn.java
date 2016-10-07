@@ -848,7 +848,7 @@ public class OKW_CurrentObject_Sngltn
       // Existiert die Methode des Objektes?
       // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
       // aussteigen...
-      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyExists" );
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyExists()" );
       throw new OKWFrameObjectMethodNotFoundException( errorText );
     }
     finally
@@ -949,7 +949,7 @@ public class OKW_CurrentObject_Sngltn
       // Existiert die Methode des Objektes?
       // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
       // aussteigen...
-      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyExists" );
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyHasFocus()" );
       throw new OKWFrameObjectMethodNotFoundException( errorText );
     }
     finally
@@ -1022,7 +1022,7 @@ public class OKW_CurrentObject_Sngltn
       // Existiert die Methode des Objektes?
       // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
       // aussteigen...
-      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyExists" );
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyIsActive()" );
       throw new OKWFrameObjectMethodNotFoundException( errorText );
     }
     finally

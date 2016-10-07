@@ -22,6 +22,7 @@ package okw.core;
 
 import static org.junit.Assert.*;
 import okw.OKW_TestClipboard;
+import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
 import org.junit.After;
@@ -586,5 +587,39 @@ public class EN_Keywords_Empty_Test {
     assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyValue()", myClipBoard.getMethod());
+  }
+
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2016.09.24
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tc_VerifyExists_EMPTY_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+  
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyExists( "All_MethodsObj", "${EMPTY}" );
+  }
+
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2016.09.24
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tc_VerifyIsActive_EMPTY_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+  
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyIsActive( "All_MethodsObj", "${EMPTY}" );
   }
 }

@@ -2,6 +2,7 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 
+import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
 
@@ -250,4 +251,36 @@ import okw.gui.OKWLocator;
             
             return lvLsReturn;
         }
+
+  // \~german
+  // \brief
+  // Ein SeInputButton hat keinen Wert! -> OKWFrameObjectMethodNotImplemented
+  // Auslösen!
+  //
+  // \return
+  // \~english
+  // \brief
+  // A SeInputButton has no value! -> Trigger
+  // OKWFrameObjectMethodNotImplemented!
+  // \~
+  // \author Zoltán Hrabovszki
+  // \date 2016.10.06
+  @Override
+  public ArrayList<String> getValue()
+  {
+    // ArrayList<String> lvLsReturn = new ArrayList<String>();
+    try
+    {
+      MyLogger.LogFunctionStartDebug( "GetValue" );
+
+      String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "GetCaption()" );
+      throw new OKWFrameObjectMethodNotImplemented( lvsLM );
+    }
+    finally
+    {
+      MyLogger.LogFunctionEndDebug();
+    }
+
+    // return lvLsReturn;
+  }
 }

@@ -87,7 +87,7 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
 	 * @throws Exception
 	 */
 	@Test(expected = OKWFrameObjectParentNotFoundException.class)
-    public void TC_Select_Window_OKWFrameObjectParentNotFoundException_Test() throws Exception
+    public void tcSelectWindow_OKWFrameObjectParentNotFoundException_Test() throws Exception
     {
         EN.BeginTest( "TC_Select_Window_OKWFrameObjectParentNotFoundException_Test" );
         EN.SelectWindow( "WindowDoesNotExists" );
@@ -106,7 +106,7 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
    * @throws Exception
    */
   @Test(expected = OKWFrameObjectParentNotFoundException.class)
-    public void TC_StartApp_OKWFrameObjectParentNotFoundException_Test() throws Exception
+    public void tcStartApp_OKWFrameObjectParentNotFoundException_Test() throws Exception
     {
         EN.BeginTest( "TC_Select_Window_OKWFrameObjectParentNotFoundException_Test" );
         EN.StartApp( "WindowDoesNotExists" );
@@ -125,7 +125,7 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
    * @throws Exception
    */
   @Test(expected = OKWFrameObjectParentNotFoundException.class)
-    public void TC_StopApp_OKWFrameObjectParentNotFoundException_Test() throws Exception
+    public void tcStopApp_OKWFrameObjectParentNotFoundException_Test() throws Exception
     {
         EN.BeginTest( "TC_Select_Window_OKWFrameObjectParentNotFoundException_Test" );
         EN.StopApp( "WindowDoesNotExists" );

@@ -39,6 +39,7 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 import static org.junit.Assert.*;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
+import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWVerifyingFailsException;
 
 import org.junit.After;
@@ -674,7 +675,7 @@ import org.junit.rules.TestName;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test
+        @Test(expected=OKWVerifyingFailsException.class)
         public void tc_VerifyIsActive_ActiveYESExpectedNO() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
@@ -717,7 +718,7 @@ import org.junit.rules.TestName;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test
+        @Test(expected=OKWVerifyingFailsException.class)
         public void tc_VerifyIsActive_ActiveNOExpectedYES() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
@@ -805,8 +806,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_VerifyLabelREGX() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
@@ -816,14 +815,6 @@ import org.junit.rules.TestName;
 
                 EN.VerifyLabelREGX("Text_1", "Label für Button1: ");
                 EN.VerifyLabelREGX("Text_2", "Label für Button2: ");
-                
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "F");
-                throw e;
-            }
         }
 
         /// \~german
@@ -836,8 +827,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_VerifyToolTip() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
@@ -846,14 +835,6 @@ import org.junit.rules.TestName;
 
                 EN.VerifyTooltip("Text_1", "Button 1 Tooltip/title");
                 EN.VerifyTooltip("Text_2", "Button 2 Tooltip/title");
-
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyTooltip", "P");
-            }
-            catch ( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyTooltip", "P");
-                throw e;
-            }
         }
  
         /// \~german
@@ -866,8 +847,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_VerifyToolTipWCM() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
@@ -876,14 +855,6 @@ import org.junit.rules.TestName;
 
                 EN.VerifyTooltipWCM("Text_1", "?utton # Tooltip/title");
                 EN.VerifyTooltipWCM("Text_2", "?utton # Tooltip/title");
-
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyTooltip", "P");
-            }
-            catch ( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyTooltip", "P");
-                throw e;
-            }
         }
 
         /// \~german
@@ -896,8 +867,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_VerifyToolTipREGX() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
@@ -906,43 +875,66 @@ import org.junit.rules.TestName;
 
                 EN.VerifyTooltipREGX("Text_1", "Button 1 Tooltip/title");
                 EN.VerifyTooltipREGX("Text_2", "Button 2 Tooltip/title");
-
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyTooltip", "P");
-            }
-            catch ( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyTooltip", "P");
-                throw e;
-            }
         }
-        /*
+
+        
         /// \~german
         /// \brief
-        /// Kein Test! Methoden werden im Inplementaion Matrix als nicht implementiert eingetragen.
+        /// Test des Schlüsselwortes VerifyValue für den GUI-Adapter SeInputButton.
         /// 
         /// \~
         /// \author Zoltán Hrabovszki
         /// \date 2015.02.28
-        @Test
-        public void __NotImplemented_en()
+        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        public void tc_VerifyValue_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogValue", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogLabel", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogTablecellValue", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeValue", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeLabel", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeTablecellValue", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "SelectMenu", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "SelectTablecell", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "StopApp", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "StartApp", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyValue", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyLabel", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyTablecellValue", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "SelectWindow", "N");
-            //ImplementationMatrix.Instance.SetImplementation("SePushButton", "SetValue", "N");
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
 
+                EN.SelectWindow("InputButton");
+
+                EN.VerifyValue("Text_1", "Button 1 Tooltip/title");
         }
-        */
+
+        
+        /// \~german
+        /// \brief
+        /// Test des Schlüsselwortes VerifyValueWCM für den GUI-Adapter SeInputButton.
+        /// 
+        /// \~
+        /// \author Zoltán Hrabovszki
+        /// \date 2015.02.28
+        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        public void tc_VerifyValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+
+                EN.SelectWindow("InputButton");
+
+                EN.VerifyValueWCM("Text_1", "?utton # Tooltip/title");
+        }
+
+
+        /// \~german
+        /// \brief
+        /// Test des Schlüsselwortes VerifyValueTEGX für den GUI-Adapter SeInputButton.
+        /// 
+        /// \~
+        /// \author Zoltán Hrabovszki
+        /// \date 2015.02.28
+        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        public void tc_VerifyValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+
+                EN.SelectWindow("InputButton");
+
+                EN.VerifyValueREGX("Text_1", "Button 1 Tooltip/title");
+        }
     }
 

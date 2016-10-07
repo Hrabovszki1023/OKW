@@ -242,7 +242,7 @@ public class EN_Keywords_ANTLR_Test
 	    EN.VerifyExists( "All_MethodsObj", "${Key1}" );
 	  
 	    // Check the Name, Called Method and Value of Actuel object
-	    assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
+	    assertEquals( "TRUE", myClipBoard.getValue().get( 0 ) );
 	    assertEquals( 1, myClipBoard.getValue().size() );
 	  
 	    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
@@ -280,7 +280,7 @@ public class EN_Keywords_ANTLR_Test
 	    EN.VerifyHasFocus( "All_MethodsObj", "${Key1}" );
 	  
 	    // Check the Name, Called Method and Value of Actuel object
-	    assertEquals( "true", myClipBoard.getValue().get( 0 ) );
+	    assertEquals( "TRUE", myClipBoard.getValue().get( 0 ) );
 	    assertEquals( 1, myClipBoard.getValue().size() );
 	  
 	    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
@@ -331,7 +331,7 @@ public class EN_Keywords_ANTLR_Test
 	    EN.VerifyIsActive( "All_MethodsObj", "${Key1}" );
 	  
 	    // Check the Name, Called Method and Value of Actuel object
-	    assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
+	    assertEquals( "TRUE", myClipBoard.getValue().get( 0 ) );
 	    assertEquals( 1, myClipBoard.getValue().size() );
 	  
 	    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
