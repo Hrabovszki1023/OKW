@@ -793,7 +793,7 @@ public class OKW_CurrentObject_Sngltn
    * @throws InterruptedException
    * @date 2012.11.01
    */
-  public Boolean VerifyExists( Boolean fpbExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
+  public Boolean VerifyExists( String FN, Boolean fpbExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -805,8 +805,9 @@ public class OKW_CurrentObject_Sngltn
     Boolean lvbReturn = false;
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyExists", "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
+    Log.LogFunctionStartDebug( "VerifyExists", "String", "FN", "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -894,7 +895,7 @@ public class OKW_CurrentObject_Sngltn
    * @throws InterruptedException
    * @date 2012.11.01
    */
-  public Boolean VerifyHasFocus( Boolean fpbExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
+  public Boolean VerifyHasFocus( String FN, Boolean fpbExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -906,8 +907,9 @@ public class OKW_CurrentObject_Sngltn
     Boolean lvbReturn = false;
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyHasFocus", "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
-
+    Log.LogFunctionStartDebug( "VerifyHasFocus", "String", "FN", "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
+    
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -967,7 +969,7 @@ public class OKW_CurrentObject_Sngltn
   }
 
   
-  public Boolean VerifyIsActive( Boolean fpbExpectedValues ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+  public Boolean VerifyIsActive( String FN, Boolean fpbExpectedValues ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
           XPathExpressionException, InterruptedException
   {
 
@@ -979,8 +981,9 @@ public class OKW_CurrentObject_Sngltn
     Boolean lvbReturn = false;
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyIsActive", "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
+    Log.LogFunctionStartDebug( "VerifyIsActive", "String", "FN", "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -1886,7 +1889,6 @@ public class OKW_CurrentObject_Sngltn
   // @throws InterruptedException
   // @date 2012.11.01
   //
-  @SuppressWarnings( "unchecked" )
   public void SetValue( ArrayList<String> fpALExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
@@ -2093,7 +2095,7 @@ public class OKW_CurrentObject_Sngltn
    * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> VerifyLabel( ArrayList<String> fpALExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
+  public ArrayList<String> VerifyLabel( String FN, ArrayList<String> fpALExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -2105,8 +2107,9 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyLabel", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
+    Log.LogFunctionStartDebug( "VerifyLabel", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -2194,7 +2197,7 @@ public class OKW_CurrentObject_Sngltn
    * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> VerifyLabelREGX( ArrayList<String> fpALExpectedREGXs ) throws IllegalAccessException, IllegalArgumentException,
+  public ArrayList<String> VerifyLabelREGX( String FN,  ArrayList<String> fpALExpectedREGXs ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -2206,8 +2209,9 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyValueREGX", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
+    Log.LogFunctionStartDebug( "VerifyValueREGX", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -2290,7 +2294,7 @@ public class OKW_CurrentObject_Sngltn
    * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> VerifyLabelWCM( ArrayList<String> fpALExpectedWCMs ) throws IllegalAccessException, IllegalArgumentException,
+  public ArrayList<String> VerifyLabelWCM( String FN, ArrayList<String> fpALExpectedWCMs ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -2302,8 +2306,9 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyLabelWCM", "ArrayList<String> fpALExpectedValues", fpALExpectedWCMs.toString() );
+    Log.LogFunctionStartDebug( "VerifyLabelWCM", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedWCMs.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -2385,7 +2390,7 @@ public class OKW_CurrentObject_Sngltn
    * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> VerifyValue( ArrayList<String> fpALExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
+  public ArrayList<String> VerifyValue( String FN, ArrayList<String> fpALExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -2397,8 +2402,9 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyValue", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
+    Log.LogFunctionStartDebug( "VerifyValue", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -2486,7 +2492,7 @@ public class OKW_CurrentObject_Sngltn
    * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> VerifyValueREGX( ArrayList<String> fpALExpectedREGXs ) throws IllegalAccessException, IllegalArgumentException,
+  public ArrayList<String> VerifyValueREGX( String FN, ArrayList<String> fpALExpectedREGXs ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -2498,8 +2504,9 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyValueREGX", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
+    Log.LogFunctionStartDebug( "VerifyValueREGX", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -2582,7 +2589,7 @@ public class OKW_CurrentObject_Sngltn
    * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> VerifyValueWCM( ArrayList<String> fpALExpectedWCMs ) throws IllegalAccessException, IllegalArgumentException,
+  public ArrayList<String> VerifyValueWCM( String FN, ArrayList<String> fpALExpectedWCMs ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -2594,8 +2601,9 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyValueWCM", "ArrayList<String> fpALExpectedValues", fpALExpectedWCMs.toString() );
+    Log.LogFunctionStartDebug( "VerifyValueWCM", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedWCMs.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -2728,7 +2736,7 @@ public class OKW_CurrentObject_Sngltn
    * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> VerifyCaption( ArrayList<String> fpALExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
+  public ArrayList<String> VerifyCaption( String FN, ArrayList<String> fpALExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -2740,8 +2748,9 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyCaption", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
+    Log.LogFunctionStartDebug( "VerifyCaption", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -2829,7 +2838,7 @@ public class OKW_CurrentObject_Sngltn
    * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> VerifyCaptionREGX( ArrayList<String> fpALExpectedREGXs ) throws IllegalAccessException, IllegalArgumentException,
+  public ArrayList<String> VerifyCaptionREGX( String FN, ArrayList<String> fpALExpectedREGXs ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -2841,8 +2850,9 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyCaptionREGX", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
+    Log.LogFunctionStartDebug( "VerifyCaptionREGX", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -2925,7 +2935,7 @@ public class OKW_CurrentObject_Sngltn
    * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> VerifyCaptionWCM( ArrayList<String> fpALExpectedWCMs ) throws IllegalAccessException, IllegalArgumentException,
+  public ArrayList<String> VerifyCaptionWCM( String FN, ArrayList<String> fpALExpectedWCMs ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -2937,8 +2947,9 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyCaptionWCM", "ArrayList<String> fpALExpectedValues", fpALExpectedWCMs.toString() );
+    Log.LogFunctionStartDebug( "VerifyCaptionWCM", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedWCMs.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -3019,7 +3030,7 @@ public class OKW_CurrentObject_Sngltn
    * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> VerifyTooltip( ArrayList<String> fpALExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
+  public ArrayList<String> VerifyTooltip( String FN, ArrayList<String> fpALExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -3031,8 +3042,9 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyTooltip", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
+    Log.LogFunctionStartDebug( "VerifyTooltip", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -3120,7 +3132,7 @@ public class OKW_CurrentObject_Sngltn
    * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> VerifyTooltipREGX( ArrayList<String> fpALExpectedREGXs ) throws IllegalAccessException, IllegalArgumentException,
+  public ArrayList<String> VerifyTooltipREGX( String FN, ArrayList<String> fpALExpectedREGXs ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -3132,8 +3144,9 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyTooltipREGX", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
+    Log.LogFunctionStartDebug( "VerifyTooltipREGX", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -3216,7 +3229,7 @@ public class OKW_CurrentObject_Sngltn
    * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> VerifyTooltipWCM( ArrayList<String> fpALExpectedWCMs ) throws IllegalAccessException, IllegalArgumentException,
+  public ArrayList<String> VerifyTooltipWCM( String FN, ArrayList<String> fpALExpectedWCMs ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
@@ -3228,8 +3241,9 @@ public class OKW_CurrentObject_Sngltn
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyTooltipWCM", "ArrayList<String> fpALExpectedValues", fpALExpectedWCMs.toString() );
+    Log.LogFunctionStartDebug( "VerifyTooltipWCM", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedWCMs.toString() );
 
+    this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try
@@ -3361,13 +3375,13 @@ public class OKW_CurrentObject_Sngltn
    *
    * \~ \author Zoltan Hrabovszki \date 2014.01.14
    */
-  public void SelectMenu( ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException
+  public void SelectMenu() throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException
   {
     Log.LogFunctionStartDebug( "SelectMenu" );
-  
+
     Class<?> myFrame_Class = this.cvoObject.getClass();
     Method myMethod = null;
-  
+
     // Schenwir
     try
     {
@@ -3376,32 +3390,11 @@ public class OKW_CurrentObject_Sngltn
     }
     catch (NoSuchMethodException e)
     {
-      // Dann 2. Versuch: Schauen wir in die Superklasse...
-  
-      try
-      {
-        myMethod = myFrame_Class.getSuperclass().getDeclaredMethod( "SelectMenu" );
-        myMethod.invoke( cvoObject );
-      }
-      catch (NoSuchMethodException | SecurityException e1)
-      {
-        // Existiert die Methode des Objektes?
-        // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
-        // aussteigen...
-        String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "SelectMenu" );
-        throw new OKWFrameObjectMethodNotFoundException( errorText );
-      }
-      catch (Exception e2)
-      {
-        String myMessage = e2.getMessage();
-        System.out.println( myMessage );
-      }
-  
-    }
-    catch (Exception e)
-    {
-      String myMessage = e.getMessage();
-      System.out.println( myMessage );
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "SelectMenu" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
     }
     finally
     {

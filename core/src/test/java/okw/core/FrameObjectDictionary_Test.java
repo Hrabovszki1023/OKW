@@ -85,8 +85,7 @@ public class FrameObjectDictionary_Test
     // We get the <<right>> object?
     Object expected = target.myFrameObjectDictionary.get( "Rechner" );
 
-    Logger_Sngltn.getInstance().LogPrint( "Objekt Prüfung:" );
-    Logger_Sngltn.getInstance().LogVerify( expected.toString(), actual.toString() );
+    assertEquals( expected.toString(), actual.toString() );
 
     assertEquals( expected, actual );
   }
@@ -119,8 +118,7 @@ public class FrameObjectDictionary_Test
     // We get the <<right>> object?
     Object expected = target.myFrameObjectDictionary.get( "Rechner.Taste_3" );
 
-    Logger_Sngltn.getInstance().LogPrint( "Objekt Prüfung:" );
-    Logger_Sngltn.getInstance().LogVerify( expected.toString(), actual.toString() );
+    assertEquals( expected.toString(), actual.toString() );
     assertEquals( expected, actual );
   }
 

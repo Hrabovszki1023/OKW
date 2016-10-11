@@ -192,7 +192,7 @@ import okw.gui.*;
         
         // \author Zoltan Hrabovszki
         // \date 2013.04.11
-        //@Override
+        @Override
         public void SetValue(ArrayList<String> fps_Values) throws XPathExpressionException
         {
             this.LogFunctionStartDebug("SetValue", "fps_Values", fps_Values.toString());
@@ -235,7 +235,7 @@ import okw.gui.*;
 
         // \author Zoltan Hrabovszki
         // \date 2013.04.11
-        //@Override
+        @Override
         public void Select(ArrayList<String> fps_Values) throws XPathExpressionException
         {
             this.LogFunctionStartDebug("Select", "fps_Values", fps_Values.toString());

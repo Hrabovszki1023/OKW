@@ -21,7 +21,6 @@ package okw.core;
 
 import okw.OKW_TestClipboard;
 import okw.core.EN;
-import okw.exceptions.OKWFrameObjectChildNotFoundException;
 import okw.exceptions.OKWVerifyingFailsException;
 import okw.log.Logger_Sngltn;
 

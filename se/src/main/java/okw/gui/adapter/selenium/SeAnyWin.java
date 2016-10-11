@@ -2,6 +2,9 @@ package okw.gui.adapter.selenium;
 
 import java.util.*;
 
+import javax.xml.xpath.XPathExpressionException;
+
+import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.*;
 import okw.log.Logger_Sngltn;
@@ -459,6 +462,117 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         return;
     }
 
+    
+    // \~german
+    // \brief
+    // Muss in den Menü-Objekten Implementiert werden!
+    // Daher wird hier ein OKWFrameObjectMethodNotImplemented ausgelöst!
+    //
+    // \return
+    // \~english
+    // \brief
+    // A SeInputButton has no value! -> Trigger
+    // OKWFrameObjectMethodNotImplemented!
+    // \~
+    // \author Zoltán Hrabovszki
+    // \date 2016.10.06
+    public void SelectMenu_Value(ArrayList<String> Values)
+    {
+      // ArrayList<String> lvLsReturn = new ArrayList<String>();
+      try
+      {
+        MyLogger.LogFunctionStartDebug( "SelectMenu_Value" );
+
+        String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "SelectMenu_Value()" );
+        throw new OKWFrameObjectMethodNotImplemented( lvsLM );
+      }
+      finally
+      {
+        MyLogger.LogFunctionEndDebug();
+      }
+    }
+
+    
+    // \~
+    // \author Zoltán Hrabovszki
+    // \date 2016.10.06
+    public void Select(ArrayList<String> Values)  throws XPathExpressionException
+    {
+      // ArrayList<String> lvLsReturn = new ArrayList<String>();
+      try
+      {
+        MyLogger.LogFunctionStartDebug( "Select" );
+
+        String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "Select( ArrayList<String> )" );
+        throw new OKWFrameObjectMethodNotImplemented( lvsLM );
+      }
+      finally
+      {
+        MyLogger.LogFunctionEndDebug();
+      }
+    }    
+
+    
+    // \~german
+      // \brief
+      // Muss in den Menü-Objekten Implementiert werden!
+      // Daher wird hier ein OKWFrameObjectMethodNotImplemented ausgelöst!
+      //
+      // \return
+      // \~english
+      // \brief
+      // A SeInputButton has no value! -> Trigger
+      // OKWFrameObjectMethodNotImplemented!
+      // \~
+      // \author Zoltán Hrabovszki
+      // \date 2016.10.06
+      public void SelectMenu()
+      {
+        // ArrayList<String> lvLsReturn = new ArrayList<String>();
+        try
+        {
+          MyLogger.LogFunctionStartDebug( "SelectMenu" );
+
+          String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "SelectMenu()" );
+          throw new OKWFrameObjectMethodNotImplemented( lvsLM );
+        }
+        finally
+        {
+          MyLogger.LogFunctionEndDebug();
+        }
+      }
+
+      
+    // \~german
+    // \brief
+    // Ein SeInputButton IstkeinMenüobject! -> OKWFrameObjectMethodNotImplemented
+    // Auslösen!
+    //
+    // \return
+    // \~english
+    // \brief
+    // A SeInputButton has no value! -> Trigger
+    // OKWFrameObjectMethodNotImplemented!
+    // \~
+    // \author Zoltán Hrabovszki
+    // \date 2016.10.06
+    public void SetValue( ArrayList<String> Values ) throws XPathExpressionException
+    {
+      // ArrayList<String> lvLsReturn = new ArrayList<String>();
+      try
+      {
+        MyLogger.LogFunctionStartDebug( "SetValue" );
+
+        String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "SelectMenu()" );
+        throw new OKWFrameObjectMethodNotImplemented( lvsLM );
+      }
+      finally
+      {
+        MyLogger.LogFunctionEndDebug();
+      }
+    }
+    
+    
     /// \~german
     /// \brief
     /// Tastatur Eingabe an das Objekt

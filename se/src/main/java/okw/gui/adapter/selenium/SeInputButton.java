@@ -229,7 +229,7 @@ import okw.gui.OKWLocator;
                 // Wenn das Objekt nicht existiert mit Exception beenden...
                 if (!this.getExists())
                 {
-                    String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
+                    String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getCaption()");
                     throw new OKWGUIObjectNotFoundException(lvsLM);
                 }
                 
@@ -273,7 +273,7 @@ import okw.gui.OKWLocator;
     {
       MyLogger.LogFunctionStartDebug( "GetValue" );
 
-      String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "GetCaption()" );
+      String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "getValue()" );
       throw new OKWFrameObjectMethodNotImplemented( lvsLM );
     }
     finally
@@ -283,4 +283,5 @@ import okw.gui.OKWLocator;
 
     // return lvLsReturn;
   }
+  
 }

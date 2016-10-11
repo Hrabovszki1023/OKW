@@ -3,7 +3,7 @@
 <!-- Allgemeine Meldungen für GUI Objekte
 -->
 <LogMessages>
-	<!-- Class: "OK" -->
+	<!-- Class: "GUI" -->
 	<Class name="GUI">
 		<!-- Method: "Common"-->
 		<Method name="Common">
@@ -14,8 +14,13 @@
 			</Text>
 		<!-- OKWNotAllowedValueException -->
 			<Text key="OKWNotAllowedValueException">
-				<en>Not allowed value: '$P1$'</en>
+				<en>This Value is not allowed: '$P1$'</en>
 				<de>Wert Ist nicht erlaubt: '$P1$'</de>
+			</Text>
+		<!-- OKWNotAllowedValueException -->
+			<Text key="OKWFrameObjectMethodNotImplemented">
+				<en>The Method '$P1$' is not implemented for this GUI-Adatpter!</en>
+				<de>Die Methode '$P1$' ist für diesen GUI-Adapter nicht implementiert!</de>
 			</Text>
 		</Method>
 	</Class>
