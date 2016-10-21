@@ -76,12 +76,7 @@ import okw.log.*;
         private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
         
         
-        /// \~german
-        /// \copydoc IOKW_State::BeginTest()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::BeginTest()
-        /// 
+        /// \copydoc IOKW_State::BeginTest(String)
         public static void BeginTest(String Testname) throws Exception
         {
             Log.LogTestcaseStart( Testname );
@@ -91,12 +86,7 @@ import okw.log.*;
 
         }
 
-        /// \~german
         /// \copydoc IOKW_State::ClickOn(String)
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::ClickOn(String)
-        /// 
         public static void ClickOn(String FN) throws Exception
         {
             Log.LogKeyWordStart("Click on", FN);
@@ -130,12 +120,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
         /// \copydoc IOKW_State::EndTest()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::EndTest()
-        /// 
         public static void EndTest() throws Exception
         {
             try
@@ -149,12 +134,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::LogCaption()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::LogCaption()
-        /// 
+        /// \copydoc IOKW_State::LogCaption(String)
         public static void LogCaption(String FN) throws Exception
         {
             Log.LogKeyWordStart("Log Caption", FN);
@@ -170,12 +150,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::LogExists()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::LogExists()
-        /// 
+        /// \copydoc IOKW_State::LogExists(String)
         public static void LogExists(String FN) throws Exception
         {
             Log.LogKeyWordStart("Log exists", FN);
@@ -191,12 +166,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::LogHasFocus()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::LogHasFocus()
-        /// 
+        /// \copydoc IOKW_State::LogHasFocus(String)
         public static void LogHasFocus(String FN) throws Exception
         {
             Log.LogKeyWordStart("Log has focus", FN);
@@ -212,12 +182,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::LogIsActive()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::LogIsActive()
-        /// 
+        /// \copydoc IOKW_State::LogIsActive(String)
         public static void LogIsActive(String FN) throws Exception
         {
             Log.LogKeyWordStart("Log is activ", FN);
@@ -233,12 +198,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::LogLabel()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::LogLabel()
-        /// 
+        /// \copydoc IOKW_State::LogLabel(String)
         public static void LogLabel(String FN) throws Exception
         {
             Log.LogKeyWordStart("Log label", FN);
@@ -254,12 +214,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::LogSelected()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::LogSelected()
-        /// 
+        /// \copydoc IOKW_State::LogSelected(String)
         public static void LogSelected(String FN) throws Exception
         {
             Log.LogKeyWordStart("Log selected", FN);
@@ -275,12 +230,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::LogTablecellValue()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::LogTablecellValue()
-        /// 
+        /// \copydoc IOKW_State::LogTablecellValue(String,String,String)
         public static void LogTablecellValue(String FN, String fpsCol, String fpsRow) throws Exception
         {
             Log.LogKeyWordStart("Log tablecell value", FN, fpsCol, fpsRow);
@@ -296,12 +246,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::LogTooltip()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::LogTooltip()
-        /// 
+        /// \copydoc IOKW_State::LogTooltip(String)
         public static void LogTooltip(String FN) throws Exception
         {
             Log.LogKeyWordStart("Log tooltip", FN);
@@ -317,12 +262,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::LogValue()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::LogValue()
-        /// 
+         /// \copydoc IOKW_State::LogValue(String)
         public static void LogValue(String FN) throws Exception
         {
             Log.LogKeyWordStart("Log value", FN);
@@ -338,12 +278,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::MemorizeCaption()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::MemorizeCaption()
-        /// 
+        /// \copydoc IOKW_State::MemorizeCaption(String,String)
         public static void MemorizeCaption(String FN, String fpsKeyName) throws Exception
         {
             Log.LogKeyWordStart("Memorize caption", FN, fpsKeyName);
@@ -359,12 +294,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::MemorizeExists()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::MemorizeExists()
-        /// 
+        /// \copydoc IOKW_State::MemorizeExists(String,String)
         public static void MemorizeExists(String FN, String fpsKeyName) throws Exception
         {
             Log.LogKeyWordStart("Memorize exists", FN, fpsKeyName);
@@ -380,12 +310,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::MemorizeHasFocus()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::MemorizeHasFocus()
-        /// 
+        /// \copydoc IOKW_State::MemorizeHasFocus(String,String)
         public static void MemorizeHasFocus(String FN, String fpsKeyName) throws Exception
         {
             Log.LogKeyWordStart("Memorize has focus", FN, fpsKeyName);
@@ -401,12 +326,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::MemorizeIsActive()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::MemorizeIsActive()
-        /// 
+        /// \copydoc IOKW_State::MemorizeIsActive(String,String)
         public static void MemorizeIsActive(String FN, String fpsKeyName) throws Exception
         {
             Log.LogKeyWordStart("Memorize is activ", FN, fpsKeyName);
@@ -422,12 +342,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::MemorizeLabel()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::MemorizeLabel()
-        /// 
+        /// \copydoc IOKW_State::MemorizeLabel(String,String)
         public static void MemorizeLabel(String FN, String fpsKeyName) throws Exception
         {
             Log.LogKeyWordStart("Memorize label", FN, fpsKeyName);
@@ -443,12 +358,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::MemorizeSelectedValue()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::MemorizeSelectedValue()
-        /// 
+        /// \copydoc IOKW_State::MemorizeSelectedValue(String,String)
         public static void MemorizeSelectedValue(String FN, String fpsKeyName) throws Exception
         {
             Log.LogKeyWordStart("Memorize selecte value", FN, fpsKeyName);
@@ -464,12 +374,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::MemorizeTablecellValue()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::MemorizeTablecellValue()
-        /// 
+        /// \copydoc IOKW_State::MemorizeTablecellValue(String,String,String,String)
         public static void MemorizeTablecellValue(String FN, String fpsCol, String fpsRow, String fpsKeyName) throws Exception
         {
             Log.LogKeyWordStart("Memorize tablecell value", FN, fpsCol, fpsRow, fpsKeyName);
@@ -484,12 +389,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::MemorizeTooltip()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::MemorizeTooltip()
-        /// 
+        /// \copydoc IOKW_State::MemorizeTooltip(String,String)
         public static void MemorizeTooltip(String FN, String fpsKeyName) throws Exception
         {
             Log.LogKeyWordStart("Memorize tooltip", FN, fpsKeyName);
@@ -505,12 +405,8 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::MemorizeValue()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::MemorizeValue()
-        /// 
+
+        /// \copydoc IOKW_State::MemorizeValue(String,String)
         public static void MemorizeValue(String FN, String fpsKeyName) throws Exception
         {
             Log.LogKeyWordStart("Memorize value", FN, fpsKeyName);
@@ -526,12 +422,8 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::Select(String)
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::Select(String)
-        /// 
+
+        /// \copydoc IOKW_State::Select(String,String)
         public static void Select(String FN, String fpsValue) throws Exception
         {
             Log.LogKeyWordStart("Select", FN, fpsValue);
@@ -547,12 +439,8 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::Select(String)
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::Select(String)
-        /// 
+        
+        /// \copydoc IOKW_State::Select(String,String,String)
         public static void Select(String FN, String fpsValue, String fpsClickType) throws Exception
         {
             Log.LogKeyWordStart("Select", FN, fpsValue, fpsClickType);
@@ -568,12 +456,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
         /// \copydoc IOKW_State::SelectMenu(String)
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::SelectMenu(String)
-        /// 
         public static void SelectMenu(String FN) throws Exception
         {
             Log.LogKeyWordStart("Select menu", FN);
@@ -589,12 +472,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
         /// \copydoc IOKW_State::SelectMenu(String,String)
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::SelectMenu(String,String)
-        /// 
         public static void SelectMenu(String FN, String fpsValue) throws Exception
         {
             Log.LogKeyWordStart("Select menu", FN, fpsValue);
@@ -610,12 +488,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
         /// \copydoc IOKW_State::SelectTablecell(String,String,String)
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::SelectTablecell(String,String,String)
-        /// 
         public static void SelectTablecell(String FN, String fpsCol, String fpsRow) throws Exception
         {
             Log.LogKeyWordStart("Select Tablecell", FN, fpsCol, fpsRow);
@@ -631,12 +504,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
         /// \copydoc IOKW_State::SelectTablecell(String,String,String,String)
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::SelectTablecell(String,String,String,String)
-        /// 
         public static void SelectTablecell(String FN, String fpsCol, String fpsRow, String fpsClickType) throws Exception
         {
             Log.LogKeyWordStart("Select Tablecell", FN, fpsCol, fpsRow, fpsClickType);
@@ -652,12 +520,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::SelectWindow()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::SelectWindow()
-        /// 
+         /// \copydoc IOKW_State::SelectWindow(String)
         public static void SelectWindow(String FN) throws Exception
         {
             Log.LogKeyWordStart("Select window", FN);
@@ -691,12 +554,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::SetFocus()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::SetFocus()
-        /// 
+        /// \copydoc IOKW_State::SetFocus(String)
         public static void SetFocus(String FN) throws Exception
         {
             Log.LogKeyWordStart("Set focus", FN);
@@ -712,12 +570,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::SetValue()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::SetValue()
-        /// 
+        /// \copydoc IOKW_State::SetValue(String,String)
         public static void SetValue(String FN, String fpsValue) throws Exception
         {
             Log.LogKeyWordStart("Set value", FN, fpsValue);
@@ -733,12 +586,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::StartApp()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::StartApp()
-        /// 
+        /// \copydoc IOKW_State::StartApp(String)
         public static void StartApp(String fpsApplicationName) throws Exception
         {
             Log.LogKeyWordStart("Start app", fpsApplicationName);
@@ -754,12 +602,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::StopApp()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::StopApp()
-        /// 
+        /// \copydoc IOKW_State::StopApp(String)
         public static void StopApp(String fpsApplicationName) throws Exception
         {
             Log.LogKeyWordStart("Stop app", fpsApplicationName);
@@ -775,12 +618,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::TypeKey()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::TypeKey()
-        /// 
+        /// \copydoc IOKW_State::TypeKey(String,String)
         public static void TypeKey(String FN, String fpsValue) throws Exception
         {
             Log.LogKeyWordStart("Typekey", FN, fpsValue);
@@ -797,12 +635,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::TypeKeyTablecell()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::TypeKeyTablecell()
-        /// 
+        /// \copydoc IOKW_State::TypeKeyTablecell(String,String,String,String)
         public static void TypeKeyTablecell(String FN, String fpsCol, String fpsRow, String fpsValue) throws Exception
         {
             Log.LogKeyWordStart("Typekey tablecell", FN, fpsCol, fpsRow, fpsValue);
@@ -818,12 +651,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::TypeKeyWindow()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::TypeKeyWindow()
-        /// 
+        /// \copydoc IOKW_State::TypeKeyWindow(String,String)
         public static void TypeKeyWindow(String FN, String fpsValue) throws Exception
         {
             Log.LogKeyWordStart("Typekey window", FN, fpsValue);
@@ -839,12 +667,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::VerifyCaption()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::VerifyCaption()
-        /// 
+        /// \copydoc IOKW_State::VerifyCaption(String,String)
         public static void VerifyCaption(String FN, String fpsValue) throws Exception
         {
             Log.LogKeyWordStart("Verify caption", FN, fpsValue);
@@ -860,12 +683,7 @@ import okw.log.*;
             }
         }
  
-        /// \~german
-        /// \copydoc IOKW_State::VerifyCaption()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::VerifyCaption()
-        /// 
+        /// \copydoc IOKW_State::VerifyCaption(String,String)
         public static void VerifyCaptionREGX(String FN, String fpsValue) throws Exception
         {
             Log.LogKeyWordStart("Verify caption REGX", FN, fpsValue);
@@ -881,12 +699,8 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::VerifyCaption()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::VerifyCaption()
-        /// 
+        
+        /// \copydoc IOKW_State::VerifyCaption(String,String)
         public static void VerifyCaptionWCM(String FN, String fpsValue) throws Exception
         {
             Log.LogKeyWordStart("Verify caption", FN, fpsValue);
@@ -902,12 +716,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::VerifyExists()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::VerifyExists()
-        /// 
+        /// \copydoc IOKW_State::VerifyExists(String,String)
         public static void VerifyExists(String FN, String fpsValue) throws Exception
         {
             Log.LogKeyWordStart("Verify exists", FN, fpsValue);
@@ -923,12 +732,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::VerifyHasFocus()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::VerifyHasFocus()
-        /// 
+        /// \copydoc IOKW_State::VerifyHasFocus(String,String)
         public static void VerifyHasFocus(String FN, String ExpVal) throws Exception
         {
             Log.LogKeyWordStart("Verify has focus", FN, ExpVal);
@@ -944,12 +748,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::VerifyIsActive()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::VerifyIsActive()
-        /// 
+        /// \copydoc IOKW_State::VerifyIsActive(String,String)
         public static void VerifyIsActive(String FN, String ExpVal) throws Exception
         {
             Log.LogKeyWordStart("Verify is active", FN, ExpVal);
@@ -966,7 +765,7 @@ import okw.log.*;
         }
 
         /**
-         *  \copydoc IOKW_State::VerifyLabel()
+         *  \copydoc IOKW_State::VerifyLabel(String,String)
          */
         public static void VerifyLabel(String FN, String ExpVal) throws Exception
         {
@@ -984,7 +783,7 @@ import okw.log.*;
         }
 
         /**
-         *  \copydoc IOKW_State::VerifyLabelREGX()
+         *  \copydoc IOKW_State::VerifyLabelREGX(String,String)
          */
         public static void VerifyLabelREGX(String FN, String ExpVal) throws Exception
         {
@@ -1001,7 +800,7 @@ import okw.log.*;
             }
         }
         /**
-         *  \copydoc IOKW_State::VerifyLabelWCM()
+         *  \copydoc IOKW_State::VerifyLabelWCM(String,String)
          */
         public static void VerifyLabelWCM(String FN, String ExpVal) throws Exception
         {
@@ -1018,12 +817,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::VerifySelectedValue()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::VerifySelectedValue()
-        /// 
+        /// \copydoc IOKW_State::VerifySelectedValue(String,String)
         public static void VerifySelectedValue(String FN, String ExpVal) throws Exception
         {
             Log.LogKeyWordStart("Verify selected value", FN, ExpVal);
@@ -1039,12 +833,7 @@ import okw.log.*;
             }
         }
 
-        /// \~german
-        /// \copydoc IOKW_State::VerifyTablecellValue()
-        /// 
-        /// \~english
-        /// \copydoc IOKW_State::VerifyTablecellValue()
-        /// 
+        /// \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
         public static void VerifyTablecellValue(String FN, String fpsCol, String fpsRow, String ExpVal) throws Exception
         {
             Log.LogKeyWordStart("Verify table cell value", FN, fpsCol, fpsRow, ExpVal);
@@ -1061,7 +850,7 @@ import okw.log.*;
         }
 
         /**
-         *  \copydoc IOKW_State::VerifyTooltip()
+         *  \copydoc IOKW_State::VerifyTooltip(String,String)
          */
         public static void VerifyTooltip(String FN, String ExpVal) throws Exception
         {
