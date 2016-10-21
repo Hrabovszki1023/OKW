@@ -56,44 +56,44 @@ import java.util.ArrayList;
 import okw.*;
 import okw.exceptions.*;
 
-/// \~german
-/// \brief
-/// Klasse OK representiert den Core Zustand OK.
-/// 
-/// Testausführung mit GUI-Aktivität und es ist keine Exception ausgelöst worden.
-/// 
-/// \~english
-/// \~
-/// \author Zoltán Hrabovszki
-/// \date 2013.03.02
+// \~german
+// \brief
+// Klasse OK representiert den Core Zustand OK.
+// 
+// Testausführung mit GUI-Aktivität und es ist keine Exception ausgelöst worden.
+// 
+// \~english
+// \~
+// \author Zoltán Hrabovszki
+// \date 2013.03.02
 public class OK implements IOKW_State {
 
-	/// \copydoc OKWLanguage
+	// \copydoc OKWLanguage
 	private static OKWLanguage CL;
 
-	/// \copydoc Logger
+	// \copydoc Logger
 	private static Logger_Sngltn Log;
 
-	/// \copydoc LogMessenger
+	// \copydoc LogMessenger
 	private static LogMessenger LM;
 
-	/// \copydoc CurrentObject
+	// \copydoc CurrentObject
 	private static OKW_CurrentObject_Sngltn CO;
 
 	Boolean UNITTEST = true;
 
 	Core _Kernel;
 
-	/// \~german
-	/// \brief
-	/// Klasse representiert den Zustand "OK" des OKW-Kerns im Ausführungsmodus.
-	///
-	/// \~english
-	/// \brief
-	///
-	/// \~
-	/// \author Zoltán Hrabovszki
-	/// \date 09.01.2014
+	// \~german
+	// \brief
+	// Klasse representiert den Zustand "OK" des OKW-Kerns im Ausführungsmodus.
+	//
+	// \~english
+	// \brief
+	//
+	// \~
+	// \author Zoltán Hrabovszki
+	// \date 09.01.2014
 	public OK(Core fp_OKW) {
 		try {
 			CL = OKWLanguage.getInstance();
@@ -115,28 +115,22 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::BeginTest()
-	/// \~english
-	/// \copydoc IOKW_State::BeginTest()
-	///
-	public void BeginTest(String fpsTestname) {
-		Log.LogFunctionStartDebug("BeginTest", "fpsTestname", fpsTestname);
+  // \copydoc IOKW_State::BeginTest()
+  public void BeginTest( String fpsTestname )
+  {
+    Log.LogFunctionStartDebug( "BeginTest", "fpsTestname", fpsTestname );
 
-		Log.LogFunctionEndDebug();
-	}
+    Log.LogFunctionEndDebug();
+  }
 
-	/**
-	 *  \copydoc IOKW_State::ClickOn(string)
-	 */
+	 //  \copydoc IOKW_State::ClickOn(String)
 	public void ClickOn(String FN) throws Exception
 	{
 		Log.LogFunctionStartDebug("ClickOn", "FN", FN);
 
 		try
 		{
-			CO.SetChildName(FN);
-			CO.CallMethod("ClickOn");
+			CO.ClickOn( FN );
 		}
 		catch (Exception e)
 		{
@@ -149,7 +143,7 @@ public class OK implements IOKW_State {
 	}
 
 	/**
-	 * \copydoc IOKW_State::DoubleClickOn(string)
+	 * \copydoc IOKW_State::DoubleClickOn(String)
 	 */
 	public void DoubleClickOn(String FN) throws Exception
 	{
@@ -157,8 +151,7 @@ public class OK implements IOKW_State {
 
 		try
 		{
-			CO.SetChildName(FN);
-			CO.DoubleClickOn();
+			CO.DoubleClickOn( FN );
 		}
 		catch (Exception e)
 		{
@@ -170,128 +163,27 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::EndTest()
-	/// \~english
-	/// \copydoc IOKW_State::EndTest()
-	///
+	// \copydoc IOKW_State::EndTest()
 	public void EndTest() {
 		Log.LogFunctionStartDebug("EndTest");
 
 		Log.LogFunctionEndDebug();
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::LogCaption(string)
-	/// \~english
-	/// \copydoc IOKW_State::LogCaption(string)
-	///
-	public void LogCaption(String FN) throws Exception {
-		Log.LogFunctionStartDebug("LogCaption", "FN", FN);
-
-		try {
-			CO.SetChildName(FN);
-			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("LogCaption");
-
-			Log.ResOpenListDebug("Log... ");
-
-			for (String Value : ActualValues) {
-				Log.LogPrintDebug(">>" + Value + "<<");
-			}
-
-			Log.ResCloseListDebug();
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
-
-	/// \~german
-	/// \copydoc IOKW_State::LogExists(string)
-	/// \~english
-	/// \copydoc IOKW_State::LogExists(string)
-	///
-	public void LogExists(String FN) throws Exception {
-		Log.LogFunctionStartDebug("LogExists", "FN", FN);
-
-		try {
-			CO.SetChildName(FN);
-			Boolean lvbActual = CO.CallMethodReturn_Boolean("LogExists");
-			String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
-
-			String lvsLM = LM.GetMessage("LogExists", "LogValue", lvsActual);
-
-			Log.LogPrintDebug(lvsLM);
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
-
-	/// \~german
-	/// \copydoc IOKW_State::LogHasFocus(string)
-	/// \~english
-	/// \copydoc IOKW_State::LogHasFocus(string)
-	///
-	public void LogHasFocus(String FN) throws Exception {
-		Log.LogFunctionStartDebug("LogHasFocus", "FN", FN);
-
-		try {
-			CO.SetChildName(FN);
-			Boolean lvbActual = CO.CallMethodReturn_Boolean("LogHasFocus");
-			String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
-
-			String lvsLM = LM.GetMessage("LogIsActive", "LogValue", lvsActual);
-
-			Log.LogPrintDebug(lvsLM);
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
-
-	/// \~german
-	/// \copydoc IOKW_State::LogIsActive(string)
-	/// \~english
-	/// \copydoc IOKW_State::LogIsActive(string)
-	///
-	public void LogIsActive(String FN) throws Exception {
-		Log.LogFunctionStartDebug("LogIsActive", "FN", FN);
-
-		try {
-			CO.SetChildName(FN);
-			Boolean lvbActual = CO.CallMethodReturn_Boolean("LogIsActive");
-
-			String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
-
-			String lvsLM = LM.GetMessage("LogIsActive", "LogValue", lvsActual);
-
-			Log.LogPrintDebug(lvsLM);
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
-
-  // \copydoc IOKW_State::LogLabel(string)
-  public void LogLabel( String FN ) throws Exception
+  // \copydoc IOKW_State::LogCaption(String)
+  public void LogCaption( String FN ) throws Exception
   {
-    Log.LogFunctionStartDebug( "LogLabel", "FN", FN );
+    Log.LogFunctionStartDebug( "LogCaption", "FN", FN );
 
     try
     {
-      CO.SetChildName( FN );
-      ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( "LogLabel" );
+      ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "LogCaption" );
 
       Log.ResOpenListDebug( "Log... " );
 
       for ( String Value : ActualValues )
       {
-        Log.LogPrintDebug( ">>" + Value + "<<" );
+        Log.LogPrint( ">>" + Value + "<<" );
       }
 
       Log.ResCloseListDebug();
@@ -306,41 +198,139 @@ public class OK implements IOKW_State {
     }
   }
 
-	/// \~german
-	/// \copydoc IOKW_State::LogSelected(string)
-	/// \~english
-	/// \copydoc IOKW_State::LogSelected(string)
-	///
-	public void LogSelected(String FN) throws Exception {
-		Log.LogFunctionStartDebug("LogSelected", "FN", FN);
+  // \copydoc IOKW_State::LogExists(String)
+  public void LogExists( String FN ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "LogExists", "FN", FN );
 
-		try {
-			CO.SetChildName(FN);
-			ArrayList<String> actualValues = CO.CallMethodReturn_ListString("LogSelected");
+    try
+    {
+      Boolean lvbActual = CO.LogExists( FN );
+      String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-			String lvsLM = LM.GetMessage("LogSelected", "LogValue");
+      String lvsLM = LM.GetMessage( "LogExists", "LogValue", lvsActual );
 
-			Log.LogPrintDebug(lvsLM);
+      Log.LogPrint( lvsLM );
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
-			Log.ResOpenListDebug(lvsLM);
+  // \copydoc IOKW_State::LogHasFocus(String)
+  public void LogHasFocus( String FN ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "LogHasFocus", "FN", FN );
 
-			for (String Value : actualValues) {
-				Log.LogPrintDebug("'" + Value + "'");
-			}
+    try
+    {
+      Boolean lvbActual = CO.LogIsActive( FN );
+      String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-			Log.ResCloseListDebug();
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+      String lvsLM = LM.GetMessage( "LogIsActive", "LogValue", lvsActual );
 
-	/// \~german
-	/// \copydoc IOKW_State::LogTablecellValue(string,string,string)
-	/// \~english
-	/// \copydoc IOKW_State::LogTablecellValue(string,string,string)
-	///
+      Log.LogPrint( lvsLM );
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
+
+  // \copydoc IOKW_State::LogIsActive(String)
+  public void LogIsActive( String FN ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "LogIsActive", "FN", FN );
+
+    try
+    {
+
+      Boolean lvbActual = CO.LogIsActive( FN );
+      String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
+      String lvsLM = LM.GetMessage( "LogIsActive", "LogValue", lvsActual );
+
+      Log.LogPrint( lvsLM );
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
+
+  // \copydoc IOKW_State::LogLabel(String)
+  public void LogLabel( String FN ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "LogLabel", "FN", FN );
+
+    try
+    {
+      ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "LogLabel" );
+
+      Log.ResOpenList( "Log... " );
+
+      for ( String Value : ActualValues )
+      {
+        Log.LogPrint( "'" + Value + "'" );
+      }
+
+      Log.ResCloseList();
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
+
+  // \copydoc IOKW_State::LogSelected(String)
+  public void LogSelected( String FN ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "LogSelected", "FN", FN );
+
+    try
+    {
+      ArrayList<String> actualValues = CO.CallMethodReturn_ListString( FN, "LogSelected" );
+
+      String lvsLM = LM.GetMessage( "LogSelected", "LogValue" );
+
+      Log.LogPrintDebug( lvsLM );
+
+      Log.ResOpenList( lvsLM );
+
+      for ( String Value : actualValues )
+      {
+        Log.LogPrint( ">>" + Value + "<<" );
+      }
+
+      Log.ResCloseList();
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
+
+	// \copydoc IOKW_State::LogTablecellValue(String,String,String)
 	public void LogTablecellValue(String FN, String fpsCol, String fpsRow) throws Exception {
 		Log.LogFunctionStartDebug("LogTablecellValue", "fpsCol", fpsCol, "fpsRow", fpsRow, "FN",
 				FN);
@@ -363,59 +353,63 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::LogTooltip(string)
-	/// \~english
-	/// \copydoc IOKW_State::LogTooltip(string)
-	///
-	public void LogTooltip(String FN) throws Exception {
-		Log.LogFunctionStartDebug("LogTooltip", "FN", FN);
+  // \copydoc IOKW_State::LogTooltip(String)
+  public void LogTooltip( String FN ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "LogTooltip", "FN", FN );
 
-		try {
-			CO.SetChildName(FN);
-			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("LogTooltip");
+    try
+    {
+      ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "LogTooltip" );
 
-			Log.ResOpenListDebug("Log... ");
+      Log.ResOpenList( "Log... " );
 
-			for (String Value : ActualValues) {
-				Log.LogPrintDebug(">>" + Value + "<<");
-			}
+      for ( String Value : ActualValues )
+      {
+        Log.LogPrint( ">>" + Value + "<<" );
+      }
 
-			Log.ResCloseListDebug();
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+      Log.ResCloseList();
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
-	/// \~german
-	/// \copydoc IOKW_State::LogValue(string)
-	/// \~english
-	/// \copydoc IOKW_State::LogValue(string)
-	///
-	public void LogValue(String FN) throws Exception {
-		Log.LogFunctionStartDebug("LogValue", "FN", FN);
+  // \copydoc IOKW_State::LogValue(String)
+  public void LogValue( String FN ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "LogValue", "FN", FN );
 
-		try {
-			CO.SetChildName(FN);
-			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("LogValue");
+    try
+    {
+      ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "LogValue" );
 
-			Log.ResOpenListDebug("Log... ");
+      Log.ResOpenList( "Log... " );
 
-			for (String Value : ActualValues) {
-				Log.LogPrintDebug(">>" + Value + "<<");
-			}
+      for ( String Value : ActualValues )
+      {
+        Log.LogPrint( ">>" + Value + "<<" );
+      }
 
-			Log.ResCloseListDebug();
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+      Log.ResCloseList();
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
-  // \copydoc IOKW_State::MemorizeCaption(string,string)
+  // \copydoc IOKW_State::MemorizeCaption(String,String)
   public void MemorizeCaption( String FN, String fpsMemKeyName ) throws Exception
   {
     Log.LogFunctionStartDebug( "MemorizeCaption", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
@@ -436,8 +430,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        CO.SetChildName( FN );
-        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( "MemorizeCaption" );
+        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "MemorizeCaption" );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -454,7 +447,7 @@ public class OK implements IOKW_State {
     }
   }
 
-  // \copydoc IOKW_State::MemorizeExists(string,string)
+  // \copydoc IOKW_State::MemorizeExists(String,String)
   public void MemorizeExists( String FN, String fpsMemKeyName ) throws Exception
   {
     Log.LogFunctionStartDebug( "MemorizeExists", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
@@ -476,8 +469,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        CO.SetChildName( FN );
-        Boolean lvbActual = CO.CallMethodReturn_Boolean( "MemorizeExists" );
+        Boolean lvbActual = CO.MemorizeExists( FN );
 
         String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
@@ -494,7 +486,7 @@ public class OK implements IOKW_State {
     }
   }
 
-  // \copydoc IOKW_State::MemorizeHasFocus(string,string)
+  // \copydoc IOKW_State::MemorizeHasFocus(String,String)
   public void MemorizeHasFocus( String FN, String fps_MemKeyName ) throws Exception
   {
     Log.LogFunctionStartDebug( "MemorizeHasFocus", "FN", FN, "fps_MemKeyName", fps_MemKeyName );
@@ -517,8 +509,7 @@ public class OK implements IOKW_State {
 
       else
       {
-        CO.SetChildName( FN );
-        Boolean lvbActual = CO.CallMethodReturn_Boolean( "MemorizeHasFocus" );
+        Boolean lvbActual = CO.MemorizeHasFocus( FN );
 
         String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
@@ -535,7 +526,7 @@ public class OK implements IOKW_State {
     }
   }
 
-  // \copydoc IOKW_State::MemorizeIsActive(string,string)
+  // \copydoc IOKW_State::MemorizeIsActive(String,String)
   public void MemorizeIsActive( String FN, String fps_MemKeyName ) throws Exception
   {
     Log.LogFunctionStartDebug( "MemorizeIsActive", "FN", FN, "fps_MemKeyName", fps_MemKeyName );
@@ -557,8 +548,7 @@ public class OK implements IOKW_State {
       else
       {
 
-        CO.SetChildName( FN );
-        Boolean lvbActual = CO.CallMethodReturn_Boolean( "MemorizeIsActive" );
+        Boolean lvbActual = CO.MemorizeIsActive( FN );
 
         String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
@@ -575,7 +565,7 @@ public class OK implements IOKW_State {
     }
   }
 
-  // \copydoc IOKW_State::MemorizeLabel(string,string)
+  // \copydoc IOKW_State::MemorizeLabel(String,String)
   public void MemorizeLabel( String FN, String fps_MemKeyName ) throws Exception
   {
     Log.LogFunctionStartDebug( "MemorizeLabel", "FN", FN, "fps_MemKeyName", fps_MemKeyName );
@@ -596,8 +586,7 @@ public class OK implements IOKW_State {
 
       else
       {
-        CO.SetChildName( FN );
-        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( "MemorizeLabel" );
+        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "MemorizeLabel" );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -614,7 +603,7 @@ public class OK implements IOKW_State {
     }
   }
 
-  // \copydoc IOKW_State::MemorizeSelectedValue(string,string)
+  // \copydoc IOKW_State::MemorizeSelectedValue(String,String)
   public void MemorizeSelectedValue( String FN, String fps_MemKeyName ) throws Exception
   {
     Log.LogFunctionStartDebug( "MemorizeSelectedValue", "FN", FN, "fps_MemKeyName", fps_MemKeyName );
@@ -635,8 +624,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        CO.SetChildName( FN );
-        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( "MemorizeSelectedValue" );
+        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "MemorizeSelectedValue" );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -653,7 +641,7 @@ public class OK implements IOKW_State {
     }
   }
 
-  // \copydoc IOKW_State::MemorizeTablecellValue(string,string,string,string)
+  // \copydoc IOKW_State::MemorizeTablecellValue(String,String,String,String)
   public void MemorizeTablecellValue( String FN, String fpsCol, String fpsRow, String fps_MemKeyName ) throws Exception
   {
     Log.LogFunctionStartDebug( "MemorizeTablecellValue", "FN", FN, "fpsCol", fpsCol, "fpsRow", fpsRow, "fps_MemKeyName", fps_MemKeyName );
@@ -692,7 +680,7 @@ public class OK implements IOKW_State {
     }
   }
 
-  // \copydoc IOKW_State::MemorizeTooltip(string,string)
+  // \copydoc IOKW_State::MemorizeTooltip(String,String)
   public void MemorizeTooltip( String FN, String fps_MemKeyName ) throws Exception
   {
     Log.LogFunctionStartDebug( "MemorizeTooltip", "FN", FN, "fps_MemKeyName", fps_MemKeyName );
@@ -712,8 +700,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        CO.SetChildName( FN );
-        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( "MemorizeTooltip" );
+        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "MemorizeTooltip" );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -730,7 +717,8 @@ public class OK implements IOKW_State {
     }
   }
 
-  // \copydoc IOKW_State::MemorizeLabel(string,string)
+  
+  // \copydoc IOKW_State::MemorizeLabel(String,String)
   public void MemorizeValue( String FN, String fpsMemKeyName ) throws Exception
   {
     Log.LogFunctionStartDebug( "MemorizeValue", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
@@ -751,9 +739,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-
-        CO.SetChildName( FN );
-        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( "MemorizeValue" );
+        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "MemorizeValue" );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -770,7 +756,8 @@ public class OK implements IOKW_State {
     }
   }
 
-  // \copydoc IOKW_State::Select(string,string)
+  
+  // \copydoc IOKW_State::Select(String,String)
   public void Select( String FN, String Val ) throws Exception
   {
     Log.LogFunctionStartDebug( "Select", "FN", FN, "Val", Val );
@@ -781,7 +768,7 @@ public class OK implements IOKW_State {
       {
         // Wenn der 1. Wert = IGNORE ist -> Abbrechen...
         // \todo TODO: Meldung sprachabhägig auslagern!
-        Log.LogPrintDebug( "Ignore..." );
+        Log.LogPrint( "Ignore..." );
       }
       else
       {
@@ -806,40 +793,42 @@ public class OK implements IOKW_State {
     return;
   }
 
-	/// \~german
-	/// \copydoc IOKW_State::Select(string,string,string)
-	/// \~english
-	/// \copydoc IOKW_State::Select(string,string,string)
-	///
-	public void Select(String FN, String Val, String fpsClickType) throws Exception {
-		Log.LogFunctionStartDebug("Select", "FN", FN, "Val", Val,
-				"fpsClickType", fpsClickType);
-		try {
-			// Prüfen ob ignoriert werden muss...
-			if (Val.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
-					|| Val.equals("")) {
-				// Wenn der 1. Wert = IGNORE ist -> Abbrechen...
-				// \todo TODO: Meldung sprachabhägig auslagern!
-				Log.LogPrintDebug("Ignore...");
-			} else {
-				ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(Val);
+  // \copydoc IOKW_State::Select(String,String,String)
+  @Deprecated
+  public void Select( String FN, String Val, String fpsClickType ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "Select", "FN", FN, "Val", Val, "fpsClickType", fpsClickType );
+    try
+    {
+      // Prüfen ob ignoriert werden muss...
+      if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || Val.equals( "" ) )
+      {
+        // Wenn der 1. Wert = IGNORE ist -> Abbrechen...
+        // \todo TODO: Meldung sprachabhägig auslagern!
+        Log.LogPrint( "Ignore..." );
+      }
+      else
+      {
+        ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
 
-				lvlsValue = Parser.ParseMe(lvlsValue);
+        lvlsValue = Parser.ParseMe( lvlsValue );
 
-				CO.SetChildName(FN);
-
-				// TODO: Select - Sprachabhängigkeit von KlickType einbauen...
-				CO.CallMethod("Select_Clicktype", lvlsValue, fpsClickType);
-			}
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+        // TODO: Select - Sprachabhängigkeit von KlickType einbauen...
+        CO.CallMethod( FN, "Select_Clicktype", lvlsValue, fpsClickType );
+      }
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
 	/**
-	 *  \copydoc IOKW_State::SelectMenu(string)
+	 *  \copydoc IOKW_State::SelectMenu(String)
 	 */
 	public void SelectMenu(String FN) throws Exception
 	{
@@ -860,11 +849,7 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::SelectMenu(string,string)
-	/// \~english
-	/// \copydoc IOKW_State::SelectMenu(string,string)
-	///
+	// \copydoc IOKW_State::SelectMenu(String,String)
 	public void SelectMenu(String FN, String Val) throws Exception {
 		Log.LogFunctionStartDebug("SelectMenu", "FN", FN, "Val", Val);
 
@@ -877,8 +862,7 @@ public class OK implements IOKW_State {
 			} else {
 				ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(Val);
 
-				CO.SetChildName(FN);
-				CO.CallMethod("SelectMenu_Value", lvlsValue);
+				CO.CallMethod( FN, "SelectMenu_Value", lvlsValue);
 			}
 		} catch (Exception e) {
 			this.HandleException(e);
@@ -887,17 +871,13 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::SelectTablecell(string,string,string)
-	/// \~english
-	/// \copydoc IOKW_State::SelectTablecell(string,string,string)
-	///
+	// \copydoc IOKW_State::SelectTablecell(String,String,String)
 	public void SelectTablecell(String FN, String fpsCol, String fpsRow) throws Exception {
 		Log.LogFunctionStartDebug("SelectTablecell", "FN", FN, "fpsCol", fpsCol, "fpsRow",
 				fpsRow);
 
-		//// ArrayList<String> lvls_Cell =
-		//// LogMessenger.Instance.SplitSEP(fpsCell);
+		// ArrayList<String> lvls_Cell =
+		// LogMessenger.Instance.SplitSEP(fpsCell);
 
 		try {
 			CO.SetChildName(FN);
@@ -909,11 +889,7 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::SelectTablecell(string,string,string,string)
-	/// \~english
-	/// \copydoc IOKW_State::SelectTablecell(string,string,string,string)
-	///
+	// \copydoc IOKW_State::SelectTablecell(String,String,String,String)
 	public void SelectTablecell(String FN, String fpsCol, String fpsRow, String fpsClickType)
 			throws Exception {
 		Log.LogFunctionStartDebug("SelectTablecell", "FN", FN, "fpsCol", fpsCol, "fpsRow",
@@ -929,96 +905,94 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::SelectWindow(string)
-	/// \~english
-	/// \copydoc IOKW_State::SelectWindow(string)
-	///
-	public void SelectWindow(String FN) throws Exception {
-		Log.LogFunctionStartDebug("SelectWindow", "FN", FN);
+	
+  // \copydoc IOKW_State::SelectWindow(String)
+  public void SelectWindow( String FN ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "SelectWindow", "FN", FN );
 
-		try {
-			CO.SetWindowName(FN);
-			CO.CallMethod("SelectWindow");
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
+    try
+    {
+      CO.CallParentMethod( FN, "SelectWindow" );
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
 
-		return;
-	}
+    return;
+  }
 
-	/**
-	 *  \copydoc IOKW_State::Sequence(string,string,string)
-	 */
-	public void Sequence(String FN, String SEQ_Name, String SEQ_ID) throws Exception {
-		Log.LogFunctionStartDebug("Sequence", "FN", FN, "SEQ_Name", SEQ_Name,
-				"SEQ_ID", SEQ_ID);
+  // \copydoc IOKW_State::Sequence(String,String,String)
+  public void Sequence( String FN, String SEQ_Name, String SEQ_ID ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "Sequence", "FN", FN, "SEQ_Name", SEQ_Name, "SEQ_ID", SEQ_ID );
 
-		try
-		{
-			// Prüfen ob ignoriert werden muss...
-			if (SEQ_ID.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || SEQ_ID.equals(""))
-			{
-				// Wenn der 1. Wert = IGNORE ist -> Abbrechen...
-				// \todo TODO: Meldung sprachabhägig auslagern!
-				Log.LogPrintDebug("Ignore...");
-			}
+    try
+    {
+      // Prüfen ob ignoriert werden muss...
+      if ( SEQ_ID.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || SEQ_ID.equals( "" ) )
+      {
+        // Wenn der 1. Wert = IGNORE ist -> Abbrechen...
+        // \todo TODO: Meldung sprachabhägig auslagern!
+        Log.LogPrint( "Ignore" );
+      }
       else if ( SEQ_ID.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
       {
         // Wenn SEQ_ID = DELETE enthält ist ->
         // OKWNotAllowedValueException auslösen...
         throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", SEQ_ID ) );
       }
-			else
-			{
-				CO.SetWindowName(FN);
-				CO.CallMethod(SEQ_Name, SEQ_ID);
-			}
-		}
-		catch (Exception e)
-		{
-			this.HandleException(e);
-		}
-		finally
-		{
-			Log.LogFunctionEndDebug();
-		}
-	}
+      else
+      {
+        CO.CallMethod( FN, SEQ_Name, SEQ_ID );
+      }
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
-/**
-	 *  \copydoc IOKW_State::SetFocus(string)
-  */
-	public void SetFocus(String FN) throws Exception {
-		Log.LogFunctionStartDebug("SetFocus", "FN", FN);
 
-		try 
-		{
-			CO.SetChildName(FN);
-			CO.CallMethod("SetFocus");
-		} 
-		catch (Exception e)
-		{
-			this.HandleException(e);
-		} 
-		finally
-		{
-			Log.LogFunctionEndDebug();
-		}
-	}
+  // \copydoc IOKW_State::SetFocus(String)
+  public void SetFocus( String FN ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "SetFocus", "FN", FN );
 
-	/// \~german
-	/// \~english
-	/// \~
-	/// \author Zoltán Hrabovszki
-	/// \date 02.03.2013
+    try
+    {
+      CO.CallMethod( FN, "SetFocus" );
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
+
+	// \~german
+	// \~english
+	// \~
+	// \author Zoltán Hrabovszki
+	// \date 02.03.2013
 	public void SetLanguage(String Language) {
 		CL.setLanguage(Language);
 	}
 
    //
-   //  \copydoc IOKW_State::SetValue(string,string)
+   //  \copydoc IOKW_State::SetValue(String,String)
 	 //
 	public void SetValue(String FN, String Val) throws Exception
 	{
@@ -1055,136 +1029,150 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \~german
-	/// \copydoc IOKW_State::StartApp(string)
-	/// \~english
-	/// \copydoc IOKW_State::StartApp(string)
-	///
-	public void StartApp(String fpsApplicationName) throws Exception {
-		Log.LogFunctionStartDebug("StartApp", "fpsApplicationName", fpsApplicationName);
+	
+  // \copydoc IOKW_State::StartApp(String)
+  public void StartApp( String AppName ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "StartApp", "AppName", AppName );
 
-		try {
-			CO.SetWindowName(fpsApplicationName);
-			CO.CallMethod("StartApp");
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+    try
+    {
+      CO.CallParentMethod( AppName, "StartApp" );
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
-	/// \~german
-	/// \copydoc IOKW_State::StopApp(string)
-	/// \~english
-	/// \copydoc IOKW_State::StopApp(string)
-	///
-	public void StopApp(String fpsApplicationName) throws Exception {
-		Log.LogFunctionStartDebug("StopApp", "fps_ApplikationName", fpsApplicationName);
+  
+  // \copydoc IOKW_State::StopApp(String)
+  public void StopApp( String AppName ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "StopApp", "AppName", AppName );
 
-		try {
-			CO.SetWindowName(fpsApplicationName);
-			CO.CallMethod("StopApp");
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+    try
+    {
+      CO.CallParentMethod( AppName, "StopApp" );
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
-	/// \~german
-	/// \copydoc IOKW_State::TypeKey(string,string)
-	/// \~english
-	/// \copydoc IOKW_State::TypeKey(string,string)
-	///
-	public void TypeKey(String FN, String Val) throws Exception {
-		Log.LogFunctionStartDebug("TypeKey", "FN", FN, "Val", Val);
+  
+  // \copydoc IOKW_State::TypeKey(String,String)
+  public void TypeKey( String FN, String Val ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "TypeKey", "FN", FN, "Val", Val );
 
-		ArrayList<String> lvlsValue;
+    ArrayList<String> lvlsValue;
 
-		try {
-			// Prüfen ob ignoriert werden muss...
-			if (Val.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
-					|| Val.equals("")) {
-				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-				Log.LogPrintDebug(LM.GetMessage("TypeKey", "Ignore"));
-			} else {
-				lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(Val);
+    try
+    {
+      // Prüfen ob ignoriert werden muss...
+      if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || Val.equals( "" ) )
+      {
+        // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+        Log.LogPrintDebug( LM.GetMessage( "TypeKey", "Ignore" ) );
+      }
+      else
+      {
+        lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
 
-				lvlsValue = Parser.ParseMe(lvlsValue);
+        lvlsValue = Parser.ParseMe( lvlsValue );
 
-				CO.SetChildName(FN);
-				CO.CallMethod("TypeKey", lvlsValue);
-			}
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+        CO.CallMethod( FN, "TypeKey", lvlsValue );
+      }
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
-	/// \~german
-	/// \copydoc IOKW_State::TypeKeyTablecell(string,string,string,string)
-	/// \~english
-	/// \copydoc IOKW_State::TypeKeyTablecell(string,string,string,string)
-	///
-	public void TypeKeyTablecell(String FN, String fpsCol, String fpsRow, String Val)
-			throws Exception {
-		Log.LogFunctionStartDebug("TypeKeyTablecell", "FN", FN, "fpsColl", fpsCol,
-				"fpsRow", fpsRow, "Val", Val);
+  
+  // \copydoc IOKW_State::TypeKeyTablecell(String,String,String,String)
+  public void TypeKeyTablecell( String FN, String fpsCol, String fpsRow, String Val ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "TypeKeyTablecell", "FN", FN, "fpsColl", fpsCol, "fpsRow", fpsRow, "Val", Val );
 
-		ArrayList<String> lvlsValue;
+    ArrayList<String> lvlsValue;
 
-		try {
-			// Prüfen ob ignoriert werden muss...
-			if (Val.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
-					|| Val.equals("")) {
-				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-				Log.LogPrintDebug(LM.GetMessage("TypeKeyTablecell", "Ignore"));
-			} else {
-				// Werte in Val separieren
-				lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(Val);
+    try
+    {
+      // Prüfen ob ignoriert werden muss...
+      if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || Val.equals( "" ) )
+      {
+        // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+        Log.LogPrintDebug( LM.GetMessage( "TypeKeyTablecell", "Ignore" ) );
+      }
+      else
+      {
+        // Werte in Val separieren
+        lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
 
-				lvlsValue = Parser.ParseMe(lvlsValue);
+        lvlsValue = Parser.ParseMe( lvlsValue );
 
-				CO.SetChildName(FN);
-				CO.CallMethod("TypeKeyTablecell", fpsCol, fpsRow, lvlsValue);
-			}
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+        CO.CallMethod( FN, "TypeKeyTablecell", fpsCol, fpsRow, lvlsValue );
+      }
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
-	/// \~german
-	/// \copydoc IOKW_State::TypeKeyWindow(string,string)
-	/// \~english
-	/// \copydoc IOKW_State::TypeKeyWindow(string,string)
-	///
-	public void TypeKeyWindow(String FN, String Val) throws Exception {
-		Log.LogFunctionStartDebug("TypeKeyWindow", "FN", FN, "Val", Val);
+  
+  // \copydoc IOKW_State::TypeKeyWindow(String,String)
+  public void TypeKeyWindow( String FN, String Val ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "TypeKeyWindow", "FN", FN, "Val", Val );
 
-		try {
-			// Prüfen ob ignoriert werden muss...
-			if (Val.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
-					|| Val.equals("")) {
-				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-				Log.LogPrintDebug(LM.GetMessage("TypeKeyWindow", "Ignore"));
-			} else {
-				ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(Val);
-				lvlsValue = Parser.ParseMe(lvlsValue);
+    try
+    {
+      // Prüfen ob ignoriert werden muss...
+      if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || Val.equals( "" ) )
+      {
+        // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+        Log.LogPrintDebug( LM.GetMessage( "TypeKeyWindow", "Ignore" ) );
+      }
+      else
+      {
+        ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
+        lvlsValue = Parser.ParseMe( lvlsValue );
 
-				CO.SetWindowName(FN);
-				CO.CallMethod("TypeKey", lvlsValue);
-			}
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+        CO.CallParentMethod( FN, "TypeKey", lvlsValue );
+      }
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
-	//  \copydoc IOKW_State::VerifyExists(string,string)
+	//  \copydoc IOKW_State::VerifyExists(String,String)
 	public void VerifyExists(String FN, String ExpVal) throws Exception
 	{
 
@@ -1241,7 +1229,7 @@ public class OK implements IOKW_State {
 		}
 	}
 
-  // \copydoc IOKW_State::VerifyHasFocus(string,string)
+  // \copydoc IOKW_State::VerifyHasFocus(String,String)
   public void VerifyHasFocus( String FN, String ExpVal ) throws Exception
   {
 
@@ -1301,7 +1289,7 @@ public class OK implements IOKW_State {
     }
   }
 	  
-    // copydoc IOKW_State::VerifyHasFocus(string,string)
+    // copydoc IOKW_State::VerifyHasFocus(String,String)
     public void VerifyIsActive(String FN, String ExpVal) throws Exception
     {
       Log.LogFunctionStartDebug("VerifyIsActive", "FN", FN, "ExpVal", ExpVal);
@@ -1374,7 +1362,7 @@ public class OK implements IOKW_State {
     }
 
     
-  // \copydoc IOKW_State::VerifyLabel(string,string)
+  // \copydoc IOKW_State::VerifyLabel(String,String)
   public void VerifyLabel( String FN, String ExpVal ) throws Exception
   {
 
@@ -1564,7 +1552,7 @@ public class OK implements IOKW_State {
    }
  }
 
-  // \copydoc IOKW_State::VerifySelectedValue(string,string)
+  // \copydoc IOKW_State::VerifySelectedValue(String,String)
   public void VerifySelectedValue( String FN, String ExpVal ) throws Exception
   {
     Log.LogFunctionStartDebug( "VerifySelectedValue", "FN", FN, "fpsExpected", ExpVal );
@@ -1605,7 +1593,7 @@ public class OK implements IOKW_State {
     }
   }
 
-  // \copydoc IOKW_State::VerifyTablecellValue(string,string,string,string)
+  // \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
   public void VerifyTablecellValue( String FN, String fpsCol, String fpsRow, String ExpVal ) throws Exception
   {
     Log.LogFunctionStartDebug( "VerifyTablecellValue", "FN", FN, "fpsCol", fpsCol, "fpsRow", fpsRow, "fpsExpected", ExpVal );
@@ -1644,7 +1632,7 @@ public class OK implements IOKW_State {
     }
   }
 
-	//  \copydoc IOKW_State::VerifyTooltip(string,string)
+	//  \copydoc IOKW_State::VerifyTooltip(String,String)
   public void VerifyTooltip(String FN, String ExpVal) throws Exception
   {
 
@@ -1787,7 +1775,7 @@ public class OK implements IOKW_State {
   }
 
 		
-   // \copydoc IOKW_State::VerifyValue(string,string)
+   // \copydoc IOKW_State::VerifyValue(String,String)
   public void VerifyValue( String FN, String ExpVal ) throws Exception
   {
     ArrayList<String> lvlsExpected = null;
@@ -1941,23 +1929,23 @@ public class OK implements IOKW_State {
 
    
   
-	/// \~german
-	/// \brief
-	/// Zentrale Exception-Behandlung.
-	///
-	/// Methode führt folge Aktivitäten aus:
-	/// -# Exception wird als Log ausgegeben.
-	/// -# Daten des aktuellen Objektes werden für eine Fehler-Analyse
-	/// ausgegeben (CO.LogObjectData()).
-	/// -# Wechselt den Zustand auf NOK.
-	/// -# Wenn OKW in NUNIT/UNIT aufgerufen wird (this.UNITTEST = true sein)
-	/// dann wird an das Unittest-Framework die Exception weitergereicht.
-	///
-	/// \param e Exception aus der OK-Schlüsselwort-Methode
-	/// \~english
-	/// \~
-	/// \author Zoltán Hrabovszki
-	/// \date 02.03.2013
+	// \~german
+	// \brief
+	// Zentrale Exception-Behandlung.
+	//
+	// Methode führt folge Aktivitäten aus:
+	// -# Exception wird als Log ausgegeben.
+	// -# Daten des aktuellen Objektes werden für eine Fehler-Analyse
+	// ausgegeben (CO.LogObjectData()).
+	// -# Wechselt den Zustand auf NOK.
+	// -# Wenn OKW in NUNIT/UNIT aufgerufen wird (this.UNITTEST = true sein)
+	// dann wird an das Unittest-Framework die Exception weitergereicht.
+	//
+	// \param e Exception aus der OK-Schlüsselwort-Methode
+	// \~english
+	// \~
+	// \author Zoltán Hrabovszki
+	// \date 02.03.2013
 	private void HandleException(Exception e) throws Exception
 	{	  
 	  
@@ -1993,7 +1981,7 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \copydoc IOKW_State::FileDelete(string)
+	// \copydoc IOKW_State::FileDelete(String)
 	public void FileDelete(String fpsPathAndFileName) throws Exception {
 		String lvsPathAndFileName = "";
 
@@ -2025,7 +2013,7 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	/// \copydoc IOKW_State::VerifyFileExists(string,string)
+	// \copydoc IOKW_State::VerifyFileExists(String,String)
 	public void VerifyFileExists(String fpsPathAndFileName, String ExpVal) throws Exception {
 		String lvsPathAndFileName = "";
 
@@ -2075,7 +2063,7 @@ public class OK implements IOKW_State {
 		}
 	}
 
-  // / \copydoc IOKW_State::VerifyDirectoryExists(string,string)
+  // \copydoc IOKW_State::VerifyDirectoryExists(String,String)
   public void VerifyDirectoryExists( String fpsPath, String ExpVal ) throws Exception
   {
     String lvsPath = "";
@@ -2142,7 +2130,7 @@ public class OK implements IOKW_State {
 
 	}
 
-  // \copydoc IOKW_State::VerifyValue(string,string)
+  // \copydoc IOKW_State::VerifyValue(String,String)
   public void VerifyCaption( String FN, String ExpVal ) throws Exception
   {
 
