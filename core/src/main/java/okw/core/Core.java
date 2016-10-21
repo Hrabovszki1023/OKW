@@ -161,7 +161,7 @@ public class Core implements IOKW_State
     this.CurrentState.ClickOn( FN );
   }
 
-  // \copydoc IOKW_State::DoubleClickOn(string)
+  // \copydoc IOKW_State::DoubleClickOn(String)
   public void DoubleClickOn( String FN ) throws Exception
   {
     this.CurrentState.DoubleClickOn( FN );
@@ -173,7 +173,7 @@ public class Core implements IOKW_State
     this.CurrentState.EndTest();
   }
 
-  // \copydoc IOKW_State::LogExists(string)
+  // \copydoc IOKW_State::LogExists(String)
   public void LogExists( String FN ) throws Exception
   {
     this.CurrentState.LogExists( FN );
@@ -429,13 +429,13 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyIsActive( FN, ExpVal );
   }
 
-  // / \copydoc IOKW_State::VerifySelectedValue(String,String)
+  // \copydoc IOKW_State::VerifySelectedValue(String,String)
   public void VerifySelectedValue( String FN, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifySelectedValue( FN, ExpVal );
   }
 
-  // / \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
+  // \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
   public void VerifyTablecellValue( String FN, String fpsCol, String fpsRow, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifyTablecellValue( FN, fpsCol, fpsRow, ExpVal );
