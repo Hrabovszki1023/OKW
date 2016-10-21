@@ -741,7 +741,7 @@ WARN_FORMAT = "$text: $file: $line"
 # messages should be written. If left blank the output is written to standard
 # error (stderr).
 
-WARN_LOGFILE = ${WORKSPACE)/DOXYGEN.log
+WARN_LOGFILE = $(WORKSPACE)/DOXYGEN.log
 
 #---------------------------------------------------------------------------
 # Configuration options related to the input files
@@ -841,8 +841,7 @@ EXAMPLE_RECURSIVE = NO
 # that contain images that are to be included in the documentation (see the
 # \image command).
 
-IMAGE_PATH = $(WORKSPACE)/Documentation/OKW_Logo/150x78/OKW_Color_MSOffice_noBackground.png
-
+IMAGE_PATH = $(WORKSPACE)/se/src/test/resources/test.openkeyword.de/Images/OKW_Color_MSOffice_noBackground.png	
 # The INPUT_FILTER tag can be used to specify a program that doxygen should
 # invoke to filter for each input file. Doxygen will invoke the filter program
 # by executing (via popen()) the command:
@@ -1064,7 +1063,7 @@ HTML_FILE_EXTENSION = .html
 # of the possible markers and block names see the documentation.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_HEADER = ${WORKSPACE}/src/doxygen/HTML_HEADER.html
+HTML_HEADER = $(WORKSPACE)/src/doxygen/HTML_HEADER.html
 
 # The HTML_FOOTER tag can be used to specify a user-defined HTML footer for each
 # generated HTML page. If the tag is left blank doxygen will generate a standard
@@ -1074,7 +1073,7 @@ HTML_HEADER = ${WORKSPACE}/src/doxygen/HTML_HEADER.html
 # that doxygen normally uses.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_FOOTER = ${WORKSPACE}/src/doxygen/HTML_FOOTER.html
+HTML_FOOTER = $(WORKSPACE)/src/doxygen/HTML_FOOTER.html
 
 # The HTML_STYLESHEET tag can be used to specify a user-defined cascading style
 # sheet that is used by each HTML page. It can be used to fine-tune the look of
@@ -1099,7 +1098,7 @@ HTML_STYLESHEET =
 # list). For an example see the documentation.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_EXTRA_STYLESHEET = ${WORKSPACE}/src/doxygen/OKW_doxygen.css
+HTML_EXTRA_STYLESHEET = $(WORKSPACE)/src/doxygen/OKW_doxygen.css
 
 # The HTML_EXTRA_FILES tag can be used to specify one or more extra images or
 # other source files which should be copied to the HTML output directory. Note
