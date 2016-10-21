@@ -155,27 +155,25 @@ public class Core implements IOKW_State
     this.CurrentState.BeginTest( Testname );
   }
 
-  // / \copydoc IOKW_State::ClickOn(String)
+  //  \copydoc IOKW_State::ClickOn(String)
   public void ClickOn( String FN ) throws Exception
   {
     this.CurrentState.ClickOn( FN );
   }
 
-  /**
-   * \copydoc IOKW_State::DoubleClickOn(string)
-   */
+  // \copydoc IOKW_State::DoubleClickOn(string)
   public void DoubleClickOn( String FN ) throws Exception
   {
     this.CurrentState.DoubleClickOn( FN );
   }
 
-  // / \copydoc IOKW_State::EndTest()
+  // \copydoc IOKW_State::EndTest()
   public void EndTest() throws Exception
   {
     this.CurrentState.EndTest();
   }
 
-  // / \copydoc IOKW_State::LogExists(String)
+  // \copydoc IOKW_State::LogExists(string)
   public void LogExists( String FN ) throws Exception
   {
     this.CurrentState.LogExists( FN );

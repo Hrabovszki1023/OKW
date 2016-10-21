@@ -106,27 +106,28 @@ public interface IOKW_State
         // \date 2014-09-18/jnic
         void ClickOn(String FN) throws Exception;
 
-        // \~german
-        // \brief
-        // Klickt auf das gegebene Objekt.
-        // 
-        // _Beispiel: Klicke auf das Objekt mit Namen "MeinObjekt":_<br/>
-        // \verbatim DoppelKlickeAuf( "MeinObjekt" ) \endverbatim
-        // 
-        // \param FN Funktionaler Name des Objekts 
-        //
-        // \~english
-        // \brief
-        // Clicks on given object.
-        // 
-        // _Example: Click on the object with the name "My Object":_<br/>
-        // \verbatim DoubleClickOn( "MyObject" ) \endverbatim
-        // 
-        // \param FN Functional Name of the object 
-        //
-        // \~
-        // \author Zoltan Hrabovszki
-        // \date 2014-09-18
+        /** \~german
+         * \brief
+         * Klickt auf das gegebene Objekt.
+         * 
+         * _Beispiel: Klicke auf das Objekt mit Namen "MeinObjekt":_<br/>
+         * \verbatim DoppelKlickeAuf( "MeinObjekt" ) \endverbatim
+         * 
+         * \param FN Funktionaler Name des Objekts 
+         *
+         * \~english
+         * \brief
+         * Clicks on given object.
+         * 
+         * _Example: Click on the object with the name "My Object":_<br/>
+         * \verbatim DoubleClickOn( "MyObject" ) \endverbatim
+         * 
+         * \param FN Functional Name of the object 
+         *
+         * \~
+         * \author Zoltan Hrabovszki
+         * \date 2014-09-18
+         */
         void DoubleClickOn(String FN) throws Exception;
 
         // \~german
@@ -655,6 +656,7 @@ public interface IOKW_State
         // \date 2014-09-19/jnic
         void Select(String FN, String Val, String fpsClickType) throws Exception;
 
+        
         /** \~german
          *  \brief
          *  Wählt den gegebenen Menü-Eintrag aus
