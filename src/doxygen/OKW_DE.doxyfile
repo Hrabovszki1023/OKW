@@ -753,7 +753,7 @@ WARN_LOGFILE = $(WORKSPACE)/DOXYGEN.log
 # spaces.
 # Note: If this tag is empty the current directory is searched.
 
-INPUT = $(WORKSPACE)/core/main $(WORKSPACE)/se/main $(WORKSPACE)/log2html/main
+INPUT = $(WORKSPACE)/core/src/main $(WORKSPACE)/se/src/main $(WORKSPACE)/src/log2html/main
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
