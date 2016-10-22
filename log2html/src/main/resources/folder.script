@@ -1,0 +1,10 @@
+<script language='JavaScript'>
+	function div_change()
+	{
+		for (i = 0; i < div_change.arguments.length; i++)
+		{
+			var _id = div_change.arguments[i];
+			document.getElementById(_id).style.display = (document.getElementById(_id).style.display == 'none' ) ? 'block' : 'none';
+		}
+	}
+</script>

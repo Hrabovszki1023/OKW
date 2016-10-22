@@ -20,7 +20,7 @@ public class Log2HTMLTest {
 	public void TC_LogPrint_Test()
 	{	
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "LogPrint_Test.html" );
+		myLog.setHTML_File( "target/LogPrint_Test.html" );
 				
 		myLog.LogTestcaseStart( "TC_LogPrint_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -37,7 +37,7 @@ public class Log2HTMLTest {
 	public void TC_LogPrintDebug_Test()
 	{	
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "LogPrintDebug_Test.html" );
+		myLog.setHTML_File( "target/LogPrintDebug_Test.html" );
 				
 		myLog.LogTestcaseStart( "TC_LogPrintDebug_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -54,7 +54,7 @@ public class Log2HTMLTest {
 	public void TC_ResultList_Test()
 	{	
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "ResultListPrint_Test.html" );
+		myLog.setHTML_File( "target/ResultListPrint_Test.html" );
 				
 		myLog.LogTestcaseStart( "TC_ResultListPrint_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -73,7 +73,7 @@ public class Log2HTMLTest {
 	public void TC_ResultListDebug_Test()
 	{	
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "ResultListDebug_Test.html" );
+		myLog.setHTML_File( "target/ResultListDebug_Test.html" );
 				
 		myLog.LogTestcaseStart( "TC_ResultListDebug_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -92,7 +92,7 @@ public class Log2HTMLTest {
 	public void TC_LogException_Test()
 	{	
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "LogException_Test.html" );
+		myLog.setHTML_File( "target/LogException_Test.html" );
 				
 		myLog.LogTestcaseStart( "TC_LogException_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -107,7 +107,7 @@ public class Log2HTMLTest {
 	public void TC_LogError_Test()
 	{	
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "LogError_Test.html" );
+		myLog.setHTML_File( "target/LogError_Test.html" );
 				
 		myLog.LogTestcaseStart( "TC_LogError_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -122,7 +122,7 @@ public class Log2HTMLTest {
 	public void TC_LogWarning_Test()
 	{	
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "LogWarning_Test.html" );
+		myLog.setHTML_File( "target/LogWarning_Test.html" );
 				
 		myLog.LogTestcaseStart( "TC_LogWarning_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -137,7 +137,7 @@ public class Log2HTMLTest {
 	public void TC_LogFunktion_Test() {
 
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "LogFunktion_Test.html" );
+		myLog.setHTML_File( "target/LogFunktion_Test.html" );
 
 		myLog.LogTestcaseStart( "TC_LogFunktion_Test" );
 		
@@ -156,7 +156,7 @@ public class Log2HTMLTest {
 	public void TC_LogFunktion2_Test() {
 
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "LogFunktion2_Test.html" );
+		myLog.setHTML_File( "target/LogFunktion2_Test.html" );
 
 		myLog.LogTestcaseStart( "TC_LogFunktion2_Test" );
 		
@@ -175,7 +175,7 @@ public class Log2HTMLTest {
 	public void TC_LogFunktion_ReturnBoolean_Test() {
 
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "LogFunktion_ReturnBoolean_Test.html" );
+		myLog.setHTML_File( "target/LogFunktion_ReturnBoolean_Test.html" );
 
 		myLog.LogTestcaseStart( "TC_LogFunktion_ReturnBoolean_Test" );
 		
@@ -194,7 +194,7 @@ public class Log2HTMLTest {
 	public void TC_LogFunktionDebug_Test() {
 
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "LogFunktionDebug_Test.html" );
+		myLog.setHTML_File( "target/LogFunktionDebug_Test.html" );
 
 		myLog.LogTestcaseStart( "TC_LogFunktionDebug_Test" );
 		
@@ -219,7 +219,7 @@ public class Log2HTMLTest {
 	public void TC_LogSequence_Test() {
 
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "LogSequence_Test.html" );
+		myLog.setHTML_File( "target/LogSequence_Test.html" );
 
 		myLog.LogTestcaseStart( "TC_LogSequence_Test" );
 		
@@ -255,7 +255,7 @@ public class Log2HTMLTest {
 	public void TC_LogKeyWord_Test() {
 
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "LogKeyWord_Test.html" );
+		myLog.setHTML_File( "target/LogKeyWord_Test.html" );
 
 		myLog.LogTestcaseStart( "TC_LogSequence_Test" );
 		
@@ -277,7 +277,7 @@ public class Log2HTMLTest {
 	public void TC_LogVerify_Test() {
 
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "LogVerify_Test.html" );
+		myLog.setHTML_File( "target/LogVerify_Test.html" );
 
 		myLog.LogTestcaseStart( "TC_LogSequence_Test" );
 		

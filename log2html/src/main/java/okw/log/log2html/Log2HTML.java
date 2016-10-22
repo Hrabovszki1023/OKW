@@ -392,7 +392,8 @@ public class Log2HTML extends LogBase implements ILogger
     	// insert Log2HTML.css direct into the HTML-Code: No link-refernce!
         
     	myResult.append( "\t<style>\n" );
-    	myResult.append( getStyleSheet());
+    	myResult.append( getStyleSheet() );
+    	myResult.append( getFoldScript() );
     	myResult.append( "\t</style>\n" );
     	
     	// -----------------------------------------
@@ -431,6 +432,26 @@ public class Log2HTML extends LogBase implements ILogger
     	    	
     	return myResult.toString();
     }
+
+    private String getFoldScript() throws IOException
+    {
+      StringBuilder myResult = new StringBuilder();
+              
+      ClassLoader loader = Thread.currentThread().getContextClassLoader();
+      InputStream is = loader.getResourceAsStream("folder.script");
+      
+        byte[] buffer = new byte[2048];
+        int length;
+        
+        while ((length = is.read(buffer)) != -1) 
+        {
+          myResult.append(new String(buffer, 0, length));
+        }
+        is.close();
+            
+      return myResult.toString();
+    }
+
     
     private String getStatistics()
     {
