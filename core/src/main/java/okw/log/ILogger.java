@@ -41,94 +41,325 @@ package okw.log;
 
 import java.util.*;
 
-/// \brief
-/// Debug Logs are not a part of Interface. This methods are implemented in Logger.cs
-/// a Log*Debug function calls after checking the log-conditions(debug=true) the Log*-Funktion(without "Debug")
-/// void LogPrintDebug();
-/// 
+/**
+ * Debug Logs are not a part of Interface. This methods are implemented in Logger.cs
+ * a Log*Debug function calls after checking the log-conditions(debug=true) the Log*-Funktion(without "Debug")
+ * void LogPrintDebug();
+ * \~
+ * @author Zoltan Hrabovszki
+ * @date 2016-10-23
+ */
+
 
 public interface ILogger
 {
-    // KeyWord Logging...
-    void LogTestcaseStart(String fps_TestcaseName);
 
+  /**
+   * LogTestcaseStart: @todo TODO: Add description to LogTestcaseStart
+   *  
+   * @param fpsTestcaseName
+   * \~
+   * @author Zoltan Hrabovszki
+   * @date 2016-10-23
+   */
+   void LogTestcaseStart(String fpsTestcaseName);
+
+   /**
+    * LogTestcaseEnd: @todo TODO: Add description to LogTestcaseEnd
+    *  
+    * \~
+    * @author Zoltan Hrabovszki
+    * @date 2016-10-23
+    */
     void LogTestcaseEnd();
 	
-    // KeyWord Logging...
-    void LogKeyWordStart(String fps_KeyWordName, String... fpsParameter);
+    /**
+     * LogKeyWordStart: @todo TODO: Add description to LogKeyWordStart
+     *
+     *  @param KeyWordName
+     *  @param Params
+     *  
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */
+    void LogKeyWordStart(String KeyWordName, String... Params);
+
+    /**
+     * LogKeyWordEnd: @todo TODO: Add description to LogKeyWordEnd
+     *  
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */
     void LogKeyWordEnd();
 
-    // Sequence Logging...    
-    void LogSequenceStart(String fps_KeyWordName, String fpsWindowFN, String fps_SequenceName, String... fpsParameter);
+    
+    /**
+     *  LogSequenceStart: Begin of a Sequence. This log is used by the Sequence-keyword.
+     *  
+     *  @param KeyWordName In this case "Sequence" - language depended Log e.g. "Sequenz" in german.
+     *  @param FN Funktionalname of the Window. 
+     *  @param SEQName Name of the Sequence of the given Window.
+     *  @param Params Optional Parameter of the Sequence
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */
+    void LogSequenceStart(String KeyWordName, String FN, String SEQName, String... Params);
+
+
+    /**
+     * LogSequenceEnd: @todo TODO: Add description to LogSequenceEnd.
+     *  
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */
     void LogSequenceEnd();
     
     /**
-     *  \brief  LogError: Logs an error message to the result.
+     *  LogError: Logs an error message to the result.  @todo TODO: Add description.
      *  
-     *  \param fps_Message Error message
+     *  @param fps_Message Error message text.
+     *  
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
      */
-    void LogError(String fps_Message);
+    void LogError(String Message);
 
     
     /**
-     *  \brief  LogPass: Logs an error message to the result.
+     *  LogPass: Logs an error message to the result. @todo TODO: Add description.
      *  
-     *  \param fps_Message Pass message
+     *  @param Message Pass message
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
      */
-    void LogPass(String fps_Message);
+    void LogPass(String Message);
+
+    
+   /**
+    *  LogWarning: Logs an error message to the result.  @todo TODO: Add description.
+    *  
+    *  @param Message Warning message.
+    * \~
+    * @author Zoltan Hrabovszki
+    * @date 2016-10-23
+    */
+    void LogWarning(String Message);
+
+
+    @Deprecated
+   /**
+    * LogVerify: Logs an error message to the result.
+    * 
+    * @todo TODO: Add description to LogFunctionStart.
+    *  
+    * @param ActualValue   The actual value.
+    * @param ExpectedValue The expected Value.
+    * \~
+    * @author Zoltan Hrabovszki
+    * @date 2016-10-23
+    */
+    void LogVerify(String ActualValue, String ExpectedValue);
+
+
+    /**
+     *  LogException: Logs an exception to the results.
+     *  
+     * @todo TODO: Add description to LogFunctionStart.
+     * 
+     *  @param Message
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */
+    void LogException(String Message);
 
     
     /**
-     *  \brief  LogWarning: Logs an error message to the result.
-     *  
-     *  \param fps_Message Warning message
+     * LogFunctionStart: @todo TODO: Add description to LogFunctionStart.
+     * 
+     *  @param FunctionName
+     *  @param Params
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
      */
-    void LogWarning(String fps_Message);
+    void LogFunctionStart(String FunctionName, String... Params);
 
-	@Deprecated
-    void LogVerify(String fps_Actual, String fps_Expected);
 
-    /// \brief
-    /// LogException Function:
-    /// Logs a Script Exception to the results file.
-    /// 
-    /// \param fps_Message 
-    void LogException(String fps_Message);
+    /**
+     *  LogFunctionStartDebug: @todo TODO: Add description to LogFunctionStartDebug.
+     * 
+     *  @param FunctionName
+     *  @param Params
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */    
+    void LogFunctionStartDebug(String FunctionName, String... Params);
 
-    // FunktionLogs...
-    void LogFunctionStart(String fps_FunctionName, String... fpsParameter);
-    void LogFunctionStartDebug(String fps_FunctionName, String... fpsParameter);
-
+    /**
+     *  LogFunctionEnd: @todo TODO: Add description to LogFunctionEnd.
+     * 
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */    
     void LogFunctionEnd();
+
+    /**
+     * LogFunctionEndDebug: @todo TODO: Add description to LogFunctionEndDebug.
+     * 
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */    
     void LogFunctionEndDebug();
 
-    void LogFunctionEnd(Boolean fpb_Return);
-    void LogFunctionEndDebug(Boolean fpb_Return);
+    /**
+     * LogFunctionEnd(Boolean): @todo TODO: Add description to LogFunctionEnd(Boolean).
+     * 
+     * @param Message
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */    
+    void LogFunctionEnd(Boolean Message);
 
-    void LogFunctionEnd(String fps_Return);
-    void LogFunctionEndDebug(String fps_Return);
 
-    void LogFunctionEnd(List<String> fps_Return);    
-    void LogFunctionEndDebug(List<String> fps_Return);
+    /**
+     * LogFunctionEndDebug(Boolean): @todo TODO: Add description to LogFunctionEndDebug(Boolean).
+     * 
+     * @param Message
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */    
+     void LogFunctionEndDebug(Boolean Message);
+
+
+     /**
+      * LogFunctionEnd(String): @todo TODO: Add description to LogFunctionEnd(String).
+      * 
+      * @param Message
+      * \~
+      * @author Zoltan Hrabovszki
+      * @date 2016-10-23
+      */    
+      void LogFunctionEnd(String Message);
+
+
+      /**
+       *  LogFunctionEndDebug(String): @todo TODO: Add description to LogFunctionEndDebug(String).
+       * 
+       *  @param Message
+       * \~
+       * @author Zoltan Hrabovszki
+       * @date 2016-10-23
+       */    
+      void LogFunctionEndDebug(String Message);
+
+
+      /**
+       *  LogFunctionEnd: @todo TODO: Add description to LogFunctionEnd.
+       * 
+       *  @param Message
+       * \~
+       * @author Zoltan Hrabovszki
+       * @date 2016-10-23
+       */    
+    void LogFunctionEnd(List<String> Message);    
+
+
+    /**
+     *  LogFunctionEndDebug: @todo TODO: Add description to LogFunctionEndDebug.
+     * 
+     *  @param Message
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */    
+    void LogFunctionEndDebug(List<String> Message);
     
     
     /**
-     *  \brief LogPrint: Prints an message to the result.
+     * LogPrint: Prints the given message to the results.
      *  
-     *  \param fps_Message Message to print.
+     * @param Message Message to print.
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
      */
-    void LogPrint(String fps_Message);
-    void LogPrintDebug(String fps_Message);
+    void LogPrint(String Message);
+
+
+    /**
+     *  LogPrintDebug: @todo TODO: Add description to LogPrintDebug.
+     * 
+     *  @param Message
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */    
+    void LogPrintDebug(String Message);
     
-    void ResOpenList(String fps_Name);
-    void ResOpenListDebug(String fps_Name); 
+    /**
+     *  LogFunctionStartDebug: Opens a debug outline level with the .
+     *  @todo TODO: Add description to LogFunctionStartDebug.
+     * 
+     *  @param LevelHeader
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */    
+    void ResOpenList(String LevelHeader);
+
+    /**
+     *  LogFunctionStartDebug: Opens a debug outline level with the .
+     *  @todo TODO: Add description to LogFunctionStartDebug.
+     * 
+     *  @param LevelHeader
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */    
+    void ResOpenListDebug(String LevelHeader); 
     
-    /// \brief
-    /// Closes the outline level.
-    /// 
+
+    /**
+     *  ResCloseList: Closes the outline level.
+     *  @todo TODO: Add description to ResCloseList.
+     * 
+     *  @param fps_Message
+     *  @param fpsParameter
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */    
     void ResCloseList();
+
+    /**
+     *  ResCloseListDebug: @todo TODO: Add description to ResCloseListDebug.
+     * 
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */    
     void ResCloseListDebug();
     
-	void setDebugMode( Boolean fpbDebugMode );
+    /**
+     *  setDebugMode: @todo TODO: Add description to setDebugMode.
+     * 
+     *  @param fpbDebugMode If true the DebugMode ist on. Else if false the DebugMode is off. 
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */    
+    void setDebugMode( Boolean fpbDebugMode );
 
 }
