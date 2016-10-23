@@ -44,15 +44,15 @@ PROJECT_NUMBER = "Version:  $(BUILD_ID), Datum: $(DATE)"
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF = 
+PROJECT_BRIEF = Don’t repeat yourself. - Do it once and only once!
 
 # With the PROJECT_LOGO tag one can specify an logo or icon that is included in
 # the documentation. The maximum height of the logo should not exceed 55 pixels
 # and the maximum width should not exceed 200 pixels. Doxygen will copy the logo
 # to the output directory.
 
-PROJECT_LOGO = $(WORKSPACE)/Documentation/OKW_Logo/200x105/OKW_Color_MSOffice_noBackground.png
-
+PROJECT_LOGO = $(WORKSPACE)/se/src/test/resources/test.openkeyword.de/Images/OKW_Color_MSOffice_noBackground.png
+ 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
 # entered, it will be relative to the location where doxygen was started. If
@@ -177,7 +177,7 @@ SHORT_NAMES = NO
 # description.)
 # The default value is: NO.
 
-JAVADOC_AUTOBRIEF = NO
+JAVADOC_AUTOBRIEF = YES
 
 # If the QT_AUTOBRIEF tag is set to YES then doxygen will interpret the first
 # line (until the first dot) of a Qt-style comment as the brief description. If
