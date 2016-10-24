@@ -51,7 +51,7 @@ PROJECT_BRIEF = "Don’t repeat yourself. - Do it once and only once!"
 # and the maximum width should not exceed 200 pixels. Doxygen will copy the logo
 # to the output directory.
 
-PROJECT_LOGO = $(WORKSPACE)/se/src/test/resources/test.openkeyword.de/Images/OKW_Color_MSOffice_noBackground.png
+PROJECT_LOGO = $(WORKSPACE)/src/doxygen/OKW_200x105.png
  
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
