@@ -2,8 +2,8 @@
 <LogMessanger>
 	<!-- Class: "Test" -->
 	<Class name="OKW_Const">
-		<Method name="OKWConst">
-			<Text key="ExceptionFileNotFound">
+		<Method name="OKW_Const">
+			<Text key="FileNotFoundException">
 				<en>The file '$P1$' was not found!</en>
 				<de>Die Datei '$P1$' wurde nicht gefunden!</de>
 			</Text>

@@ -40,6 +40,7 @@ package okw;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -47,16 +48,10 @@ import java.util.ArrayList;
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 
+
 //import junit.framework.TestCase;
 import org.junit.*;
 import org.xml.sax.SAXException;
-
-/*	[TestFixture]
-	[Category("BaseTest")]
-	[Category("WIN")]
-	[Category("OSX")]
-	[Category("Helper")]
-*/
 
 public class OKW_XmlReaderTest
 {
@@ -79,6 +74,16 @@ public class OKW_XmlReaderTest
 		}
 	}
 
+	 @Test(expected=FileNotFoundException.class)
+	  public void TC_getXMLFile_FileNotFoundException() throws JAXBException, ParserConfigurationException, SAXException, IOException
+	  {
+	      OKW_XmlReader myXlReader = new OKW_XmlReader("DoesNotExists.xml");
+
+	      String Actuell = myXlReader.getXMLFile();
+
+	      Assert.assertEquals("Ein Wert wird erwartet:", "OKW_XmlReaderTestXML.xml", Actuell);
+	  }
+
 	// Test
 	@Test
 	public void TC_getTextContentAsList()
@@ -97,6 +102,24 @@ public class OKW_XmlReaderTest
 			Assert.fail(e.getMessage());
 		}
 	}
+
+	@Test
+  public void TC_getTextContentAsList_Subfolder()
+  {
+    try
+    {
+      OKW_XmlReader myXlReader = new OKW_XmlReader("SubFolder4Test/OKW_XmlReaderTestXML2.xml");
+
+      ArrayList<String> Actuell = myXlReader.getTextContentAsList("//value");
+      Assert.assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell.get(0));
+      Assert.assertEquals("Ein Wert wird erwartet:", "Wert 2", Actuell.get(1));
+      Assert.assertEquals("Ein Wert wird erwartet:", "Wert 3", Actuell.get(2));
+    }
+    catch (JAXBException | ParserConfigurationException | SAXException | IOException e)
+    {
+      Assert.fail(e.getMessage());
+    }
+  }
 
 	@Test
 	public void TC_getTextContentSingleValue()
@@ -121,6 +144,27 @@ public class OKW_XmlReaderTest
 	}
 
 	
+  @Test
+  public void TC_getTextContentSingleValue_Subfolder()
+  {
+    try
+    {
+      OKW_XmlReader myXlReader = new OKW_XmlReader("SubFolder4Test/OKW_XmlReaderTestXML2.xml");
+
+      String Actuell = myXlReader.getTextContentSingleValue("//value[1]");
+      Assert.assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell);
+      
+      Actuell = myXlReader.getTextContentSingleValue("//value[2]");
+      Assert.assertEquals("Ein Wert wird erwartet:", "Wert 2", Actuell);
+
+      Actuell = myXlReader.getTextContentSingleValue("//value[3]");
+      Assert.assertEquals("Ein Wert wird erwartet:", "Wert 3", Actuell);
+    }
+    catch (JAXBException | ParserConfigurationException | SAXException | IOException e)
+    {
+      Assert.fail(e.getMessage());
+    }
+  }	
 	@BeforeClass
 	public static void MyTestFixtureSetUp()
 	{

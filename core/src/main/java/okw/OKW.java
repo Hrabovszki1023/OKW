@@ -21,8 +21,10 @@ import java.lang.annotation.Target;
 /// \date 2015-11-28
 
 @Target(
-{ ElementType.TYPE, // Usable in Class-es
-        ElementType.FIELD } )
+{ 
+  ElementType.TYPE, // Usable in Class-es
+  ElementType.FIELD } )
+
 // Usable in Field-s
 @Inherited
 @Retention( RetentionPolicy.RUNTIME )

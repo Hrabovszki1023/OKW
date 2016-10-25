@@ -927,7 +927,6 @@ import okw.log.*;
 
 
         /**
-        *
         *  \copydoc IOKW_State::VerifyValueWCM(String,String)
         */ 
        public static void VerifyValueWCM(String FN, String ExpVal) throws Exception
@@ -946,7 +945,6 @@ import okw.log.*;
        }
 
        /**
-       *
        *  \copydoc IOKW_State::VerifyValueREGX(String,String)
        */ 
       public static void VerifyValueREGX(String FN, String ExpVal) throws Exception

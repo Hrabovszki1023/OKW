@@ -2,6 +2,7 @@ package okw;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ import org.xml.sax.SAXException;
 
 import okw.exceptions.OKWMessageNotFoundException;
 
-public class OKW_XmlReader
+public class OKW_XmlReader extends ClassLoader 
 {
 
 	private Document				myXMLDocument;
@@ -37,11 +38,13 @@ public class OKW_XmlReader
 		return myXMLFile.toString();
 	}
 
+/*	@Deprecated
 	public OKW_XmlReader(Path fpsXMLFile) throws JAXBException, ParserConfigurationException, SAXException, IOException
 	{
 		myXMLFile = fpsXMLFile;
 		Init();
 	}
+*/
 	
 	public OKW_XmlReader(String fpsXMLFile) throws JAXBException, ParserConfigurationException, SAXException, IOException
 	{
@@ -66,10 +69,9 @@ public class OKW_XmlReader
 	private void Init() throws JAXBException, ParserConfigurationException, SAXException, IOException
 	{
 
-		try
-		{
-
-			if (!OKW_FileHelper.FileExists(myXMLFile.toString()))
+		  InputStream is = this.getResourceAsStream( myXMLFile.toString() );
+		  
+			if ( is == null )
 			{
 				System.out.println(
 						"============================================================================================================");
@@ -83,15 +85,9 @@ public class OKW_XmlReader
 			{
 				this.mydbFactory = DocumentBuilderFactory.newInstance();
 				this.mydBuilder = mydbFactory.newDocumentBuilder();
-				this.myXMLDocument = mydBuilder.parse(this.myXMLFile.toFile());
+				this.myXMLDocument = mydBuilder.parse(is);
 				this.myXPath = XPathFactory.newInstance().newXPath();
 			}
-
-		}
-		finally
-		{
-			System.out.println("");
-		}
 	}
 
 	/// \~german
@@ -131,7 +127,7 @@ public class OKW_XmlReader
 			}
 			else
 			{
-				throw new OKWMessageNotFoundException("TextContent not Found!");
+				throw new OKWMessageNotFoundException("TextContent not Found!: " + fpsXPathExpression );
 			}
 		}
 		catch (OKWMessageNotFoundException | XPathExpressionException e)

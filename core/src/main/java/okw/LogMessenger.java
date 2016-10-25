@@ -97,11 +97,8 @@ import org.stringtemplate.v4.*;
 public class LogMessenger
 {
 
-	private Boolean					bInit			= false;
 	private String					cvsClassName	= "";
-
-
-	private OKW_XmlReader  			myXmlReader;
+	private OKW_XmlReader  	myXmlReader;
 	
 
 	/// \~german
@@ -121,7 +118,8 @@ public class LogMessenger
 		try
 		{
 			this.cvsClassName = fpsClassname;
-			this.Init();
+	    String myXMLFile = "xml/logmessages/LM_" + this.cvsClassName + ".xml";
+	    myXmlReader = new OKW_XmlReader(myXMLFile);
 		}
 		catch (Exception e)
 		{
@@ -252,6 +250,7 @@ public class LogMessenger
     return lvsReturn;
   }
 
+
 	/// \~german
 	/// \brief
 	/// Holt die Log-Meldung für MethodeNmae/Textkey und drei Parameter.
@@ -301,56 +300,6 @@ public class LogMessenger
     return lvsReturn;
   }
 
-	/// \~german
-	/// \brief
-	/// Initialisiert die Klasse:
-	///
-	/// * LM- Dateinamen als ermitteln
-	///
-	/// \~english
-	/// \brief
-	/// This constructor has no Parameter and uses the default values for the
-	/// config-file and Actual/default language(=EN)
-	///
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013_12_22
-	private void Init() throws JAXBException, ParserConfigurationException, SAXException, IOException
-	{
-		if (!this.bInit)
-		{
-			try
-			{
-
-				Path myXMLFile = Paths.get(OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFolder_LogMessages(),
-						"LM_" + this.cvsClassName + ".xml");
-
-				if (!OKW_FileHelper.FileExists(myXMLFile.toString()))
-				{
-					System.out.println(
-							"============================================================================================================");
-					System.out.println("OKW Exception: File not found! -> '" + myXMLFile.toString() + "'");
-					System.out.println(
-							"============================================================================================================");
-
-					throw new FileNotFoundException(
-							"File not found! The File was: '" + myXMLFile.toString() + "'");
-				}
-				else
-				{
-
-					myXmlReader = new OKW_XmlReader(myXMLFile);
-					
-				}
-
-				this.bInit = true;
-			}
-			finally
-			{
-				//System.out.println("");
-			}
-		}
-	}
 
 	/// \~german
 	/// \brief
@@ -393,7 +342,6 @@ public class LogMessenger
 
 			if (lvsReturn.isEmpty())
 			{
-
 				throw new OKWMessageNotFoundException("Message not Found. Class: " + ClassName + ",  Method: "
 						+ MethodName + ", TextKey: " + TextKey);
 			}

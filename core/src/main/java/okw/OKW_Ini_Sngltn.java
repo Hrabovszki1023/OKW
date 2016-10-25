@@ -40,6 +40,7 @@
 package okw;
 
 import java.io.File;
+import java.net.URL;
 import java.security.CodeSource;
 
 import javax.xml.bind.JAXBContext;
@@ -400,30 +401,26 @@ public class OKW_Ini_Sngltn
 	 */
 	public void Init()
 	{
-		System.out.print(this.getClass().getName() + ".Init...");
+	  System.out.println(this.getClass().getName() + ".Init...");
 		
 		//Get file from resources folder
 		ClassLoader classLoader = getClass().getClassLoader();
 
 		// ... und dann alles Initialisieren!
-			// 1. Lese OKWINI-Umgebungsvariable
-			OKW_Enviroment.setFolder_XML(classLoader.getResource("xml").getPath());
+			// 1. Ermittle xml-Verzeciniss in der Resource
+		
+		  URL xml_resource_path = classLoader.getResource("xml/logmessages");
+		  
+		  if(xml_resource_path != null)
+		  {
+		    OKW_Enviroment.setFolder_XML(xml_resource_path.getPath());
+		    System.out.println( "Path to resource/xml: '" + xml_resource_path + "'");
+	    
+		    this.OKW_Enviroment.setFile_OKW_Ini_xml( xml_resource_path.getPath() );
 
-			this.OKW_Enviroment.setFile_OKW_Ini_xml("");
-			
-			// Existiert die Datei?
-			Boolean bXML_Folder_Exists = OKW_FileHelper.DirectoryExists(this.OKW_Enviroment.getFolder_XML());
-
-			if (bXML_Folder_Exists)
-			{
-				this.OKW_Enviroment.setFolder_LogMessages( this.OKW_Enviroment.getFolder_XML() + "/logmessages" );
+		    this.OKW_Enviroment.setFolder_LogMessages( this.OKW_Enviroment.getFolder_XML() + "/logmessages" );
 				
 				this.OKW_Enviroment.setFile_OKW_Ini_xml(OKW_Enviroment.getFolder_XML() + "/OKW_Ini.xml");
-				
-				// Datei Existiert -> Lesen der Daten
-
-				//this.LogAll();
-
 			}
 			else
 			{
@@ -431,8 +428,9 @@ public class OKW_Ini_Sngltn
 				throw new OKWFileDoesNotExistsException(
 						"Directory not found: >>" + this.OKW_Enviroment.getFolder_XML() + "<<");
 			}
+		  
 			System.out.println(" - OK.");
-		return;
+			return;
 	}
 
 	/*

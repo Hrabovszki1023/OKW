@@ -378,7 +378,7 @@ public class OKW_Memorize_Sngltn
 
 		try
 		{
-			OKW_XmlReader myXMLReader = new OKW_XmlReader(OKW_Memorize_xml);			
+			OKW_XmlReader myXMLReader = new OKW_XmlReader("xml/OKW_Memorize.xml");			
 		}
 		catch(Exception e)
 		{

@@ -3,9 +3,10 @@ package okw;
 import static org.junit.Assert.*;
 
 import java.nio.file.Paths;
-import okw.exceptions.*;
-import okw.log.Logger_Sngltn;
 
+import okw.exceptions.*;
+import okw.log.Log2Console;
+import okw.log.Logger_Sngltn;
 import org.junit.Test;
 
 public class OKW_ConstExceptionTest {
@@ -25,7 +26,7 @@ public class OKW_ConstExceptionTest {
 			// Reset des Loggers: Alle geladenen Instanzen löschen
 			Logger_Sngltn.Init();
 
-			// Logger.Instance.AddLogger(new Log2Console());
+			// Log.AddLogger(new Log2Console());
 			Log.setDebugMode(true);
 		}
 

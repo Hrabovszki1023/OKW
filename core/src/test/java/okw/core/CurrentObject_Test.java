@@ -75,7 +75,7 @@ public class CurrentObject_Test {
 	    	   myLogger.LogFunctionEnd();
 	        }
 
-	        /// \brief
+/*	        /// \brief
 	        /// Prüft die Aufrufbarkeit der Methode _int CallMethodReturn_Boolean(String MethodName)_
 	        /// 
 	        /// \author Zoltan Hrabovszki
@@ -90,10 +90,9 @@ public class CurrentObject_Test {
 	            
 	            // GUI-Object definieren: Fenster und Kindobjekt setzten
 	            CO.SetWindowName("CurrentObjectWindow");
-	            CO.SetChildName("CurrentObjectAllMethodCallTypes");
 
 	            // Objekt existiert...
-	            Boolean bActuel = CO.CallMethodReturn_Boolean("CallMethodReturn_rB_pMN");
+	            Boolean bActuel = CO.CallMethodReturn_Boolean("CurrentObjectAllMethodCallTypes", "CallMethodReturn_rB_pMN");
 
 	            // Check Return
 	            assertEquals(bExpected, bActuel);
@@ -104,7 +103,7 @@ public class CurrentObject_Test {
 	            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
 	            // assertEquals("CurrentObjectWindow.CurrentObjectAllMethodCallTypes", myClipBoard.getObjectName());
 	            assertEquals("CallMethodReturn_rB_pMN", myClipBoard.getMethod());
-	        }
+	        }*/
 
 	        /// \brief
 	        /// Prüft die Aufrufbarkeit der Methode _int CallMethodReturn_Boolean(String MethodName, Boolean Parameter)_
@@ -177,10 +176,9 @@ public class CurrentObject_Test {
 
 	            // GUI-Object definieren: Fenster und Kindobjekt setzten
 	            CO.SetWindowName("CurrentObjectWindow");
-	            CO.SetChildName("CurrentObjectAllMethodCallTypes");
 
 	            // Objekt existiert...
-	            ArrayList<String> LsActuel = CO.CallMethodReturn_ListString("CallMethodReturn_rLS_pMN");
+	            ArrayList<String> LsActuel = CO.CallMethodReturn_ListString("CurrentObjectAllMethodCallTypes", "CallMethodReturn_rLS_pMN");
 
 	            // Check Return
 	            assertEquals(LsExpected, LsActuel);
@@ -357,10 +355,9 @@ public class CurrentObject_Test {
 	        {
 	            // GUI-Object definieren: Fenster und Kindobjekt setzten
 	            CO.SetWindowName("CurrentObjectWindow");
-	            CO.SetChildName("CurrentObjectAllMethodCallTypes");
 
 	            // Objekt existiert...
-	            CO.CallMethod("CallMethod_pMN");
+	            CO.CallMethod("CurrentObjectAllMethodCallTypes", "CallMethod_pMN");
 
 	            // Check the Name, Called Method and Value of Actuel object
 	            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
@@ -412,10 +409,9 @@ public class CurrentObject_Test {
 
 	            // GUI-Object definieren: Fenster und Kindobjekt setzten
 	            CO.SetWindowName("CurrentObjectWindow");
-	            CO.SetChildName("CurrentObjectAllMethodCallTypes");
 
 	            // Objekt existiert...
-	            CO.CallMethod("CallMethod_pMN_pLS", LsExpected);
+	            CO.CallMethod("CurrentObjectAllMethodCallTypes", "CallMethod_pMN_pLS", LsExpected);
 
 	            // Den Namen des der aufgerufenen Methode prüfen.
 	            assertEquals(3, myClipBoard.getValue().size());
@@ -444,10 +440,9 @@ public class CurrentObject_Test {
 
 	            // GUI-Object definieren: Fenster und Kindobjekt setzten
 	            CO.SetWindowName("CurrentObjectWindow");
-	            CO.SetChildName("CurrentObjectAllMethodCallTypes");
 
 	            // Objekt existiert...
-	            CO.CallMethod("CallMethod_pMN_pLS_pS", LsExpected, sOption);
+	            CO.CallMethod("CurrentObjectAllMethodCallTypes", "CallMethod_pMN_pLS_pS", LsExpected, sOption);
 
 	            // Kein Return
 
@@ -544,10 +539,9 @@ public class CurrentObject_Test {
 
 	            // GUI-Object definieren: Fenster und Kindobjekt setzten
 	            CO.SetWindowName("CurrentObjectWindow");
-	            CO.SetChildName("CurrentObjectAllMethodCallTypes");
 
 	            // Objekt existiert...
-	            CO.CallMethod("CallMethod_pMN_pS_pS_pLS", sParameter_1, sParameter_2, lvLsWerte);
+	            CO.CallMethod("CurrentObjectAllMethodCallTypes", "CallMethod_pMN_pS_pS_pLS", sParameter_1, sParameter_2, lvLsWerte);
 
 	            // Kein Return
 
