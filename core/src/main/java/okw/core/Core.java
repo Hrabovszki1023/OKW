@@ -1,6 +1,6 @@
 /*
     ==============================================================================
-    Copyright © 2012, 2013, 2014, 2015, 2016 IT-Beratung Hrabovszki
+    Copyright © 2012 - 2016 IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -32,7 +32,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
- */
+*/
 
 package okw.core;
 
@@ -287,35 +287,31 @@ public class Core implements IOKW_State
     this.CurrentState.Select( FN, Val );
   }
 
-  // / \copydoc IOKW_State::Select(String,String,String)
-  public void Select( String FN, String Val, String fpsClickType ) throws Exception
-  {
-    this.CurrentState.Select( FN, Val, fpsClickType );
-  }
-
-  // / \copydoc IOKW_State::SelectMenu(String)
+  
+  /**
+   *  \copydoc IOKW_State::SelectMenu(String)
+   */
   public void SelectMenu( String FN ) throws Exception
   {
     this.CurrentState.SelectMenu( FN );
   }
 
-  // / \copydoc IOKW_State::SelectMenu(String,String)
+  /**
+   *  \copydoc IOKW_State::SelectMenu(String,String)
+   */
   public void SelectMenu( String FN, String Val ) throws Exception
   {
     this.CurrentState.SelectMenu( FN, Val );
   }
 
-  // / \copydoc IOKW_State::SelectTablecell(String,String,String)
+  /**
+   *  \copydoc IOKW_State::SelectTablecell(String,String,String)
+   */
   public void SelectTablecell( String FN, String fpsCol, String fpsRow ) throws Exception
   {
     this.CurrentState.SelectTablecell( FN, fpsCol, fpsRow );
   }
 
-  // / \copydoc IOKW_State::SelectTablecell(String,String,String,String)
-  public void SelectTablecell( String FN, String fpsCol, String fpsRow, String fpsClickType ) throws Exception
-  {
-    this.CurrentState.SelectTablecell( FN, fpsCol, fpsRow, fpsClickType );
-  }
 
   /**
    * \copydoc IOKW_State::SelectWindow(String)

@@ -604,7 +604,7 @@ public class Log2HTML extends LogBase implements ILogger
 	{
 	}
 
-	
+	@Deprecated
 	public void LogVerify( String fps_Actual, String fps_Expected )
 	{
 		AllCount++;

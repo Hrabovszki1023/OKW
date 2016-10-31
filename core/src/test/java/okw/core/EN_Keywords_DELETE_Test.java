@@ -475,6 +475,7 @@ public class EN_Keywords_DELETE_Test
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
     myClipBoard.Clear();
+    
     EN.SelectMenu( "All_MethodsObj", "${DELETE}" );
 
     // Check the Name, Called Method and Value of Actuel object
@@ -485,14 +486,16 @@ public class EN_Keywords_DELETE_Test
 
   }
 
-  // / \~german
-  // / \brief
-  // /
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2013.12.26
+  /**
+   *  \~german
+   * \brief
+   * 
+   *
+   * \~english
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2013.12.26
+   */
   @Test
   public void tcSelectMenu_Value_MV_DELETE_EmptyString() throws Exception
   {

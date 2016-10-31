@@ -110,17 +110,17 @@
 	</build>
 	<reporting>
 		<plugins>
-			<plugin>
-				<groupId>com.github.igoryeremin</groupId>
-				<artifactId>doxygen-report-maven-plugin</artifactId>
-				<version>1.0</version>
-				<configuration>
-					<doxygenConf>${basedir}/src/doxygen/doxygen.config</doxygenConf>
-					<outputDirectory>${project.reporting.outputDirectory}/doxygen</outputDirectory>
-					<input>${basedir}/src</input>
-					<executableName>doxygen</executableName>
-				</configuration>
-			</plugin>
+<!-- 			<plugin> -->
+<!-- 				<groupId>com.github.igoryeremin</groupId> -->
+<!-- 				<artifactId>doxygen-report-maven-plugin</artifactId> -->
+<!-- 				<version>1.0</version> -->
+<!-- 				<configuration> -->
+<!-- 					<doxygenConf>${basedir}/src/doxygen/OKW_EN.doxyfile</doxygenConf> -->
+<!-- 					<outputDirectory>${project.reporting.outputDirectory}/doxygen</outputDirectory> -->
+<!-- 					<input>${basedir}/src</input> -->
+<!-- 					<executableName>doxygen</executableName> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

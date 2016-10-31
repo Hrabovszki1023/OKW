@@ -506,17 +506,21 @@ public class SeLink_EN_Test
                }
            }
 
-           // \~german
-           // \brief
-           // Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeInputButton.
-           // 
-           // Button 1 ist active (_nicht_ "disabled")
-           // Button 1 ist inactive (also "disabled")
-           /// 
-           /// \~
-           /// \author Zoltán Hrabovszki
-           /// \date 2015.02.28
+           /** \~german
+            * Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeLink.
+            * 
+            * Anmerkung: Das ist ein Prototyp für den Test. - Links sind im Standard HTML immer aktive.
+            * Daher wird dieser Testfall aktuell ignoriert.
+            *
+            * Link 1 ist active (_nicht_ "disabled")
+            * Link 2 ist inactive (also "disabled")
+            * 
+            * \~
+            * \author Zoltán Hrabovszki
+            * \date 2015.02.28
+            */
            @Test
+           @Ignore
            public void tc_VerifyIsActive() throws Exception
            {
                try

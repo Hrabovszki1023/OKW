@@ -378,10 +378,10 @@ public class CurrentObject_Test {
 
 	            // GUI-Object definieren: Fenster und Kindobjekt setzten
 	            CO.SetWindowName("CurrentObjectWindow");
-	            CO.SetChildName("CurrentObjectAllMethodCallTypes");
+	            // CO.SetChildName("CurrentObjectAllMethodCallTypes");
 
 	            // Objekt existiert...
-	            CO.CallMethod("CallMethod_pMN_pS", sParameter_1);
+	            CO.CallMethod("CurrentObjectAllMethodCallTypes", "CallMethod_pMN_pS", sParameter_1);
 
 	            // Kein Return
 
@@ -472,10 +472,9 @@ public class CurrentObject_Test {
 
 	            // GUI-Object definieren: Fenster und Kindobjekt setzten
 	            CO.SetWindowName("CurrentObjectWindow");
-	            CO.SetChildName("CurrentObjectAllMethodCallTypes");
 
 	            // Objekt existiert...
-	            CO.CallMethod("CallMethod_pMN_pS_pS", sParameter_1, sParameter_2);
+	            CO.CallMethod("CurrentObjectAllMethodCallTypes", "CallMethod_pMN_pS_pS", sParameter_1, sParameter_2);
 
 	            // Kein Return
 
@@ -503,10 +502,9 @@ public class CurrentObject_Test {
 
 	            // GUI-Object definieren: Fenster und Kindobjekt setzten
 	            CO.SetWindowName("CurrentObjectWindow");
-	            CO.SetChildName("CurrentObjectAllMethodCallTypes");
 
 	            // Objekt existiert...
-	            CO.CallMethod("CallMethod_pMN_pS_pS_pS", sParameter_1, sParameter_2, sParameter_3);
+	            CO.CallMethod("CurrentObjectAllMethodCallTypes", "CallMethod_pMN_pS_pS_pS", sParameter_1, sParameter_2, sParameter_3);
 
 	            // Kein Return
 

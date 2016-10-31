@@ -24,7 +24,7 @@ import okw.log.Logger_Sngltn;
         protected OKW_TestClipboard        myClipboard     = OKW_TestClipboard.getInstance();
         
         
-        String myValue = "";
+        ArrayList<String> myALValue = new ArrayList<String>();
 
 
         public AllMethods_SingleValue(String fps_Locator)
@@ -40,15 +40,16 @@ import okw.log.Logger_Sngltn;
         
         public void ClickOn()
         {
-            this.myValue = "NO VALUE";
-            this.myLogger.LogFunctionStartDebug("ClickOn");
+
+          this.myLogger.LogFunctionStartDebug("ClickOn");
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("ClickOn()");
-            myClipboard.getValue().add(this.myValue);
+            myClipboard.getValue().addAll(this.myALValue);
+            
             this.myLogger.LogFunctionEndDebug();
             
             return;
@@ -56,7 +57,6 @@ import okw.log.Logger_Sngltn;
 
         public void DoubleClickOn()
         {
-          this.myValue = "NO VALUE";
           this.myLogger.LogFunctionStartDebug("ClickOn_Clicktype");
             
             myClipboard.Clear();
@@ -65,7 +65,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("DoubleClickOn()");
             
-            myClipboard.getValue().add(this.myValue);
+            myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
             
@@ -74,6 +74,7 @@ import okw.log.Logger_Sngltn;
 
         public boolean LogExists()
         {
+          
             this.myLogger.LogFunctionStartDebug("LogExists");
 
             myClipboard.Clear();
@@ -81,27 +82,49 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("LogExists()");
-            myClipboard.getValue().add("NO VALUE");
 
-            this.myLogger.LogFunctionEndDebug(true);
+            myClipboard.getValue().addAll(this.myALValue);
 
-            return true;
-        }
+            Boolean lvbReturn = false;  
+
+            try
+            {
+              lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean(this.myALValue.get( 0 ));
+            }
+            catch (XPathExpressionException e)
+            {
+              // TODO Auto-generated catch block
+              e.printStackTrace();
+            }
+            
+            this.myLogger.LogFunctionEndDebug(lvbReturn);
+            return lvbReturn;        }
 
         public boolean LogHasFocus()
         {
-            this.myLogger.LogFunctionStartDebug("LogHasFocus");
+          this.myLogger.LogFunctionStartDebug("LogHasFocus");
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("LogHasFocus()");
-            myClipboard.getValue().add("NO VALUE");
+            myClipboard.getValue().addAll(this.myALValue);
 
-            this.myLogger.LogFunctionEndDebug(true);
+            Boolean lvbReturn = false;  
 
-            return true;
+            try
+            {
+              lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean(this.myALValue.get( 0 ));
+            }
+            catch (XPathExpressionException e)
+            {
+              // TODO Auto-generated catch block
+              e.printStackTrace();
+            }
+            
+            this.myLogger.LogFunctionEndDebug(lvbReturn);
+            return lvbReturn;
         }
 
         public boolean LogIsActive()
@@ -113,11 +136,22 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("LogIsActive()");
-            myClipboard.getValue().add("NO VALUE");
+            myClipboard.getValue().addAll(this.myALValue);
 
-            this.myLogger.LogFunctionEndDebug(true);
+            Boolean lvbReturn = false;  
 
-            return true;
+            try
+            {
+              lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean(this.myALValue.get( 0 ));
+            }
+            catch (XPathExpressionException e)
+            {
+              // TODO Auto-generated catch block
+              e.printStackTrace();
+            }
+            
+            this.myLogger.LogFunctionEndDebug(lvbReturn);
+            return lvbReturn;
         }
 
         public ArrayList<String> LogSelected()
@@ -271,7 +305,7 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("MemorizeHasFocus()");
-            myClipboard.getValue().add("NO VALUE");
+            myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
 
@@ -419,18 +453,22 @@ import okw.log.Logger_Sngltn;
 
             try
             {
-                myClipboard.Clear();             
+              // myALValue Löschen + setzen...
+              this.myALValue.clear();
+              this.myALValue.addAll( fpLs_Value );
+
+              myClipboard.Clear();             
             	String lvs_ObjectName = getFN();
 
-                myClipboard.setObjectName(lvs_ObjectName);
-                myClipboard.setMethod("Select()");
+              myClipboard.setObjectName(lvs_ObjectName);
+              myClipboard.setMethod("Select()");
 
-                // Eingabewerte auf den TestClipboard packen...
+              // Eingabewerte auf den TestClipboard packen...
 
-                for (String lsValue : fpLs_Value)
-                {
-                    myClipboard.getValue().add(lsValue);
-                }
+              for (String lsValue : fpLs_Value)
+              {
+                 myClipboard.getValue().add(lsValue);
+              }
             }
             finally
             {
@@ -442,15 +480,15 @@ import okw.log.Logger_Sngltn;
 
         public void SelectMenu()
         {
-            this.myValue = "NO VALUE";
-            this.myLogger.LogFunctionStartDebug("SelectMenu");
+
+          this.myLogger.LogFunctionStartDebug("SelectMenu");
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("SelectMenu()");
-            myClipboard.getValue().add(this.myValue);
+            myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
             return;
@@ -460,16 +498,17 @@ import okw.log.Logger_Sngltn;
         {
             this.myLogger.LogFunctionStartDebug("SelectMenu_Value");
 
+            // myALValue Löschen + setzen...
+            this.myALValue.clear();
+            this.myALValue.addAll( fpLsValue );
+            
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("SelectMenu_Value()");
 
-            for (String lsValue : fpLsValue)
-            {
-                myClipboard.getValue().add(lsValue);
-            }
+            myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
             return;
@@ -477,7 +516,6 @@ import okw.log.Logger_Sngltn;
 
         public void SelectTablecell(String COL, String ROW)
         {
-            this.myValue = "NO VALUE";
             this.myLogger.LogFunctionStartDebug("SelectTablecell", "String COL", COL, "String ROW", ROW);
 
             myClipboard.Clear();
@@ -485,8 +523,11 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("SelectTablecell()");
+            
             myClipboard.getValue().add(COL);
             myClipboard.getValue().add(ROW);
+            
+            myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
             return;
@@ -504,6 +545,10 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(COL);
             myClipboard.getValue().add(ROW);
             myClipboard.getValue().add(fpsClickType);
+
+            myClipboard.getValue().addAll(this.myALValue);
+           
+            
             this.myLogger.LogFunctionEndDebug();
             
             return;
@@ -513,9 +558,9 @@ import okw.log.Logger_Sngltn;
         {
         }
 
+/*        @Override
         public void Select_Clicktype(ArrayList<String> fpLs_Value, String fpsClicktype)
         {
-            this.myValue = fpLs_Value.get(0);
             this.myLogger.LogFunctionStartDebug("Select_Clicktype");
 
             myClipboard.Clear();
@@ -523,16 +568,16 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("Select_Clicktype()");
+            
             myClipboard.getValue().add(fpLs_Value.get(0));
             myClipboard.getValue().add(fpsClicktype);
             this.myLogger.LogFunctionEndDebug();
             
             return;
-        }
+        }*/
 
         public void Select_TABLE(ArrayList<String> fpLs_Value)
         {
-            this.myValue = fpLs_Value.get(0);
             this.myLogger.LogFunctionStartDebug("OKW_Select");
             String lvs_ObjectName = getFN();
 
@@ -547,7 +592,6 @@ import okw.log.Logger_Sngltn;
 
         public void SetFocus()
         {
-            this.myValue = "NO VALUE";
             this.myLogger.LogFunctionStartDebug("SetFocus");
 
             myClipboard.Clear();
@@ -555,37 +599,39 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("SetFocus()");
-            myClipboard.getValue().add(this.myValue);
+            myClipboard.getValue().addAll(this.myALValue);
+
             this.myLogger.LogFunctionEndDebug();
             
             return;
         }
 
-        public void SetValue(ArrayList<String> fpLs_Value)
-        {
-            this.myLogger.LogFunctionStartDebug("SetValue");
+  public void SetValue( ArrayList<String> fpLs_Value )
+  {
+    this.myLogger.LogFunctionStartDebug( "SetValue" );
 
-            try
-            {
-                myClipboard.Clear();
-                String lvs_ObjectName = getFN();
+    try
+    {
+      // myALValue Löschen + setzen...
+      this.myALValue.clear();
+      this.myALValue.addAll( fpLs_Value );
 
-                myClipboard.setObjectName(lvs_ObjectName);
-                myClipboard.setMethod("SetValue()");
+      // Clipboard löschen und Werte setzen...
+      myClipboard.Clear();
+      String lvs_ObjectName = getFN();
 
-                // Eingabe werte auf den TestClipboard packen
-                for (String lsValue : fpLs_Value)
-                {
-                    myClipboard.getValue().add(lsValue);
-                }
-            }
-            finally
-            {
-                this.myLogger.LogFunctionEndDebug();
-            }
+      myClipboard.setObjectName( lvs_ObjectName );
+      myClipboard.setMethod( "SetValue()" );
 
-            return;
-        }
+      myClipboard.getValue().addAll( myALValue );
+    }
+    finally
+    {
+      this.myLogger.LogFunctionEndDebug();
+    }
+
+    return;
+  }
 
         public void TypeKey(ArrayList<String> fpLs_Value)
         {
@@ -593,7 +639,12 @@ import okw.log.Logger_Sngltn;
 
             try
             {
-                myClipboard.Clear();
+
+              // myALValue Löschen + setzen...
+              this.myALValue.clear();
+              this.myALValue.addAll( fpLs_Value );
+
+              myClipboard.Clear();
                 
                 String lvs_ObjectName = getFN();
 
@@ -654,52 +705,90 @@ import okw.log.Logger_Sngltn;
         {
             this.myLogger.LogFunctionStartDebug("VerifyExists");
 
+            boolean lvbReturn = false;
+
+            try
+            {
+              lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean( this.myALValue.get( 0 ));
+            }
+            catch (XPathExpressionException e)
+            {
+              // TODO Auto-generated catch block
+              e.printStackTrace();
+            }
+
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyExists()");
-            myClipboard.getValue().add( "TRUE" );
+            myClipboard.getValue().addAll(this.myALValue);;
 
             this.myLogger.LogFunctionEndDebug(true);
 
-            return true;
+            return lvbReturn;
         }
 
 
         public Boolean VerifyHasFocus()
         {
-            myLogger.LogFunctionStartDebug("VerifyHasFocus");
+          Boolean lvbReturn = false;
+          
+          myLogger.LogFunctionStartDebug("VerifyHasFocus");
 
             myClipboard.Clear();
+            
+            try
+            {
+              lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean( this.myALValue.get( 0 ));
+            }
+            catch (XPathExpressionException e)
+            {
+              // TODO Auto-generated catch block
+              e.printStackTrace();
+            }
             
             String lvs_ObjectName = getFN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyHasFocus()");
 
-            myClipboard.getValue().add("TRUE");
+            myClipboard.getValue().addAll(this.myALValue);;
 
             this.myLogger.LogFunctionEndDebug();
 
-            return true;
+            return lvbReturn;
         }
+
 
         public boolean VerifyIsActive() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
         {
+          boolean lvbReturn = false;
+          
             this.myLogger.LogFunctionStartDebug("VerifyIsActive");
+
+            try
+            {
+              lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean( this.myALValue.get( 0 ));
+            }
+            catch (XPathExpressionException e)
+            {
+              // TODO Auto-generated catch block
+              e.printStackTrace();
+            }
 
             myClipboard.Clear();   
             String lvs_ObjectName = getFN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyIsActive()");
-            myClipboard.getValue().add( "TRUE" );
+            myClipboard.getValue().addAll(this.myALValue);;
             
             this.myLogger.LogFunctionEndDebug();
 
-            return true;
+            return lvbReturn;
         }
+
 
         public List<String> VerifySelectedValue(ArrayList<String> fpLsExpectedValue)
         {
@@ -767,14 +856,14 @@ import okw.log.Logger_Sngltn;
             List<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyCaption");
-            lvLsReturn.add("The one and only Value");
+            lvLsReturn.addAll(this.myALValue);
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyCaption()");
 
-            myClipboard.getValue().add("The one and only Value");
+            myClipboard.getValue().addAll(this.myALValue);;
 
             this.myLogger.LogFunctionEndDebug();
 
@@ -786,14 +875,16 @@ import okw.log.Logger_Sngltn;
             List<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyLabel");
-            lvLsReturn.add("The one and only Value");
+            
+            
+            lvLsReturn.addAll(this.myALValue);
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyLabel()");
 
-            myClipboard.getValue().add("The one and only Value");
+            myClipboard.getValue().addAll(this.myALValue);;
 
             this.myLogger.LogFunctionEndDebug();
 
@@ -805,14 +896,15 @@ import okw.log.Logger_Sngltn;
             List<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyValue");
-            lvLsReturn.add("The one and only Value");
+            
+            lvLsReturn.addAll(myALValue);
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyValue()");
 
-            myClipboard.getValue().add("The one and only Value");
+            myClipboard.getValue().addAll(myALValue);
 
             this.myLogger.LogFunctionEndDebug();
 

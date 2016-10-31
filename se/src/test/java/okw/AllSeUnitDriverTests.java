@@ -13,7 +13,7 @@ import org.junit.runners.Suite.SuiteClasses;
                 okw.SeSelect.SeSelect_HTMLUnitDriver_Test.class,
                 okw.SeTextarea.SeTextarea_HTMLUnitDriver_Test.class
               } )
-public class AllUnitDriverTests
+public class AllSeUnitDriverTests
 {
 
 }

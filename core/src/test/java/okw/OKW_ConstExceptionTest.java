@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 import java.nio.file.Paths;
 
 import okw.exceptions.*;
-import okw.log.Log2Console;
 import okw.log.Logger_Sngltn;
 import org.junit.Test;
 

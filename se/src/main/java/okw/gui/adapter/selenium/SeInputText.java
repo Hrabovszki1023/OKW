@@ -94,8 +94,12 @@ import okw.gui.OKWLocator;
                 this.LogFunctionStartDebug("GetValue");
 
                 // Get Value from TextField and put this into the return List<string>
-                lvLsReturn.add(this.Me().getAttribute("value"));
-                //lvLsReturn.add(this.Me().getText());
+                String myValue = this.Me().getAttribute("value");
+                
+                if(!myValue.isEmpty())
+                {
+                  lvLsReturn.add(this.Me().getAttribute("value"));
+                }
                 bOK = true;
             }
             finally
@@ -130,10 +134,16 @@ import okw.gui.OKWLocator;
 
     try
     {
-
       WebElement myMe = this.Me();
       myMe.clear();
-      myMe.sendKeys( Val.get( 0 ) );
+      if( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
+      {
+        myMe.clear();
+      }
+      else
+      {
+        myMe.sendKeys( Val.get( 0 ) );
+      }
     }
     finally
     {

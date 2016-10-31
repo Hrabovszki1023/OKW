@@ -322,13 +322,6 @@ public class OKW_IniTest
 		String Actuell = myOKW_Ini.OKW_Enviroment.getFolder_XML();
 
 		assertEquals(ExpectedDir, Actuell);
-
-		// XML "Base-"Folder
-		ExpectedDir = xml_Folder + "/logmessages";
-	    Actuell = myOKW_Ini.OKW_Enviroment.getFolder_LogMessages();
-
-		assertEquals(ExpectedDir, Actuell);
-
 	}
 	
 	/// \~german

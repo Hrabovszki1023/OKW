@@ -111,10 +111,11 @@ import okw.log.Logger_Sngltn;
 
         public List<String> VerifyTablecellValue(String Col, String Row, ArrayList<String> fpLsExpectedValue)
         {
-            List<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyTablecellValue");
-            lvLsReturn.addAll(fpLsExpectedValue);
+
+            List<String> lvLsReturn = new ArrayList<String>();
+            // empty => Empty ArrayList
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
@@ -124,7 +125,6 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.getValue().add(Col);
             myClipboard.getValue().add(Row);
-            myClipboard.getValue().addAll(fpLsExpectedValue);
 
             this.myLogger.LogFunctionEndDebug();
 
@@ -133,17 +133,18 @@ import okw.log.Logger_Sngltn;
 
         public List<String> VerifyTooltip()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyTooltip");
-            lvLsReturn.add("");
+
+            List<String> lvLsReturn = new ArrayList<String>();
+            // empty => Empty ArrayList
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyTooltip()");
 
-            myClipboard.getValue().add("");
+            myClipboard.getValue().clear();
 
             this.myLogger.LogFunctionEndDebug();
 
@@ -152,55 +153,58 @@ import okw.log.Logger_Sngltn;
 
         public List<String> VerifyCaption()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyCaption");
-            lvLsReturn.add("");
+
+            List<String> lvLsReturn = new ArrayList<String>();
+            // empty => Empty ArrayList
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyCaption()");
-            myClipboard.getValue().add("");
+            myClipboard.getValue().clear();
 
             this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
+
 
         public List<String> VerifyLabel()
         {
             List<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyLabel");
-            lvLsReturn.add("");
+            // empty => Empty ArrayList
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyLabel()");
 
-            myClipboard.getValue().add("");
+            myClipboard.getValue().clear();
 
             this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
 
+
         public List<String> VerifyValue()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
-
             this.myLogger.LogFunctionStartDebug("VerifyValue");
-            lvLsReturn.add("");
+
+            List<String> lvLsReturn = new ArrayList<String>();
+            // empty => Empty ArrayList
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyValue()");
 
-            myClipboard.getValue().add("");
+            myClipboard.getValue().clear();
 
             this.myLogger.LogFunctionEndDebug();
 

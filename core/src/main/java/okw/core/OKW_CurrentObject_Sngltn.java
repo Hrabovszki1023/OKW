@@ -1,9 +1,6 @@
-/**
+/*
     ==============================================================================
-      Author: Zoltan Hrabovszki <zh@openkeyword.de>
-
-      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
-      www.OpenKeyWord.de
+    Copyright © 2012 - 2016 IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -35,7 +32,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
- */
+*/
 
 package okw.core;
 
@@ -762,6 +759,62 @@ public class OKW_CurrentObject_Sngltn
     return;
   }
 
+  
+  /**
+   * \~german \brief Ruft eine Methode des aktuellen Objektes via
+   * "late bound function call" auf.
+   *
+   * Die aufgerufene Methode hat die Signatur:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------| | 1.
+   * Parameter | String | | 2. Parameter | String | | Rückgabewert | kein |
+   *
+   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
+   * fpsParameter_1 1. Parameter als Type-String. \param fpsParameter_2 2.
+   * Parameter als Type-String.
+   *
+   * \~english \brief Calls a method of the current Object with
+   * "late bound function call". The called method has the signature:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------| | 1st
+   * Parameter | String | | 2nd Parameter | String | | Return | none |
+   *
+   * \param fpsMethod name of method to be called. \param fpsParameter_1 1st
+   * parameter as type-String. \param fpsParameter_2 2nd parameter as
+   * type-String.
+   *
+   * \~ \author Zoltan Hrabovszki \date 2012.11.01
+   */
+  public void SelectTablecell( String FN, String fpsParameter_1, String fpsParameter_2 ) throws IllegalAccessException, IllegalArgumentException,
+          InvocationTargetException, XPathExpressionException
+  {
+    Log.LogFunctionStartDebug( "SelectTablecell", "String FN", FN, "String fps_Parameter_1", fpsParameter_1, "String fps_Parameter_2", fpsParameter_2 );
+
+    this.SetChildName( FN );
+    
+    Class<?>[] paramTypes = { String.class, String.class };
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "SelectTablecell", paramTypes );
+      myMethod.invoke( cvoObject, fpsParameter_1, fpsParameter_2 );
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "SelectTablecell" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+    return;
+  }
+  
   /**
    * \~german \brief Ruft eine Methode des aktuellen Objektes via
    * "late bound function call" auf. Die aufgerufene Methode hat die Signatur:
@@ -1001,7 +1054,7 @@ public class OKW_CurrentObject_Sngltn
   {
     Boolean lvbReturn = false;
 
-    Log.LogFunctionStartDebug( "MemorizeExists", "String", FN );
+    Log.LogFunctionStartDebug( "MemorizeHasFocus", "String", FN );
 
     Class<?>[] paramTypes = {};
 
@@ -1010,7 +1063,7 @@ public class OKW_CurrentObject_Sngltn
 
     try
     {
-      Method myMethod = myFrame_Class.getMethod( "MemorizeExists", paramTypes );
+      Method myMethod = myFrame_Class.getMethod( "MemorizeHasFocus", paramTypes );
       lvbReturn = ( Boolean ) myMethod.invoke( cvoObject );
     }
     catch (NoSuchMethodException e)
@@ -1018,7 +1071,7 @@ public class OKW_CurrentObject_Sngltn
       // Existiert die Methode des Objektes?
       // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
       // aussteigen...
-      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "MemorizeExists" );
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "MemorizeHasFocus" );
       throw new OKWFrameObjectMethodNotFoundException( errorText );
     }
     finally
@@ -1284,7 +1337,7 @@ public class OKW_CurrentObject_Sngltn
     Boolean lvbReturn = false;
     Boolean bOK = false;
 
-    Log.LogFunctionStartDebug( "VerifyExists", "String", "FN", "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
+    Log.LogFunctionStartDebug( "VerifyExists", "String FN", FN, "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
 
     this.SetChildName( FN );
     Class<?> myFrame_Class = this.cvoObject.getClass();
@@ -1649,7 +1702,8 @@ public class OKW_CurrentObject_Sngltn
   
   
   /**
-   * \~german \brief Ruft eine Methode des aktuellen Objektes via
+   * \~german
+   * \brief Ruft eine Methode des aktuellen Objektes via
    * "late bound function call" auf.
    *
    * Die aufgerufene Methode hat die Signatur:
@@ -1719,6 +1773,149 @@ public class OKW_CurrentObject_Sngltn
   }
 
   /**
+   * \~german
+   * \brief Ruft eine Methode des aktuellen Objektes via
+   * "late bound function call" auf.
+   *
+   * Die aufgerufene Methode hat die Signatur:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------| | 1.
+   * Parameter | String | | 2. Parameter | String | | Rückgabewert |
+   * List&lt;String&gt; |
+   *
+   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
+   * fpsParam1 1. Parameter als Type-String. \param fpsParam2 2. Parameter als
+   * Type-String. \return List&lt;String&gt;.
+   *
+   * \~english \brief Calls a method of the current Object
+   * "late bound function call". The calles method has the signature:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------| | 1st
+   * Parameter | String | | 2nd Parameter | String | | Return |
+   * List&lt;String&gt; |
+   *
+   *
+   * \param fpsMethod Name of the method to be called \param fpsParam1 1st
+   * paramarameter as type-String. \param fpsParam2 2nd parameter as
+   * type-String. \return List&lt;String&gt; .
+   *
+   * \~ \author Zoltan Hrabovszki \date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> MemorizeTablecellValue( String FN, String Col, String Row ) throws IllegalAccessException,
+          IllegalArgumentException, InvocationTargetException, XPathExpressionException
+  {
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+
+    Log.LogFunctionStartDebug( "MemorizeTablecellValue", "String FN", FN, "String Col", Col, "String Row", Row );
+
+    this.SetChildName( FN );
+    
+    Class<?>[] paramTypes = { String.class, String.class };
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "MemorizeTablecellValue", paramTypes );
+      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject, Col, Row );
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "MemorizeTablecellValue" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }
+
+  /**
+   * \~german
+   * \brief Ruft eine Methode des aktuellen Objektes via
+   * "late bound function call" auf.
+   *
+   * Die aufgerufene Methode hat die Signatur:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------| | 1.
+   * Parameter | String | | 2. Parameter | String | | Rückgabewert |
+   * List&lt;String&gt; |
+   *
+   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
+   * fpsParam1 1. Parameter als Type-String. \param fpsParam2 2. Parameter als
+   * Type-String. \return List&lt;String&gt;.
+   *
+   * \~english \brief Calls a method of the current Object
+   * "late bound function call". The calles method has the signature:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------| | 1st
+   * Parameter | String | | 2nd Parameter | String | | Return |
+   * List&lt;String&gt; |
+   *
+   *
+   * \param fpsMethod Name of the method to be called \param fpsParam1 1st
+   * paramarameter as type-String. \param fpsParam2 2nd parameter as
+   * type-String. \return List&lt;String&gt; .
+   *
+   * \~ \author Zoltan Hrabovszki \date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> LogTablecellValue( String FN, String Col, String Row ) throws IllegalAccessException,
+          IllegalArgumentException, InvocationTargetException, XPathExpressionException
+  {
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+
+    Log.LogFunctionStartDebug( "LogTablecellValue", "String FN", FN, "String Col", Col, "String Row", Row );
+
+    this.SetChildName( FN );
+    
+    Class<?>[] paramTypes = { String.class, String.class };
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "LogTablecellValue", paramTypes );
+      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject, Col, Row );
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "LogTablecellValue" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }
+  
+  
+  /**
    * \~german \brief Ruft eine Methode des aktuellen Objektes via
    * "latebound function call" auf. Die aufgerufene Methode hat die Signatur:
    *
@@ -1784,6 +1981,73 @@ public class OKW_CurrentObject_Sngltn
     return lvLsReturn;
   }
 
+  
+  /**
+   * \~german \brief Ruft eine Methode des aktuellen Objektes via
+   * "latebound function call" auf. Die aufgerufene Methode hat die Signatur:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------------| | 1.
+   * Parameter | List&lt;String&gt; | | Rückgabewert | List&lt;String&gt; |
+   *
+   *
+   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
+   * fpLsParameter_1 1. Parameter als List&lt;String&gt;. \return
+   * List&lt;String&gt; .
+   *
+   * \~english \brief Calls a method of the current Object with
+   * "late bound function call". The called method has the signature:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------------| | 1st
+   * Parameter | List&lt;String&gt; | | Return | List&lt;String&gt; |
+   *
+   *
+   * \param fpsMethod Name of the method to be called \param fpLsParameter_1 1st
+   * parameter as list&lt;String&gt;. \return List&lt;String&gt; .
+   *
+   * \~ \author Zoltan Hrabovszki \date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> VerifySelectedValue( String FN, ArrayList<String> fpLsParameter_1 ) throws IllegalAccessException,
+          IllegalArgumentException, InvocationTargetException, XPathExpressionException
+  {
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+
+    Log.LogFunctionStartDebug( "VerifySelectedValue", "String FN", FN, "ArrayList<String> fpLsParameter_1", fpLsParameter_1.toString() );
+
+    this.SetChildName( FN );
+    Class<?>[] paramTypes = { ArrayList.class };
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "VerifySelectedValue", paramTypes );
+      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject, fpLsParameter_1 );
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifySelectedValue" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }  
+
+  
   /**
    * \~german \brief Ruft eine Methode des aktuellen Objektes via
    * "late bound function call" auf. Die aufgerufene Methode hat die Signatur:
@@ -1856,6 +2120,81 @@ public class OKW_CurrentObject_Sngltn
     return lvLsReturn;
   }
 
+  
+  /**
+   * \~german \brief Ruft eine Methode des aktuellen Objektes via
+   * "late bound function call" auf. Die aufgerufene Methode hat die Signatur:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------------| | 1.
+   * Parameter | String | | 2. Parameter | String | | 3. Parameter |
+   * List&lt;String&gt; | | Rückgabewert | List&lt;String&gt; |
+   *
+   *
+   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
+   * fpsParameter_1 1. Parameter als String. \param fpsParameter_2 2. Parameter
+   * als String. \param fpLsParameter_3 3. Parameter als List&lt;String&gt;.
+   * \return List&lt;String&gt; .
+   *
+   * \~english \brief Calls a method of the current Object with
+   * "late bound function call". The called method has the signature:
+   *
+   * | Parameter/Return | Type | | :----------------|:-------------------| | 1st
+   * Parameter | String | | 2nd Parameter | String | | 3rd Parameter |
+   * List&lt;String&gt; | | Return | List&lt;String&gt; |
+   *
+   *
+   * \param fpsMethod Name of the method to be called \param fpsParameter_1 1st
+   * parameter as String. \param fpsParameter_2 2nd parameter as String. \param
+   * fpLsParameter_3 3rd parameter as list&lt;String&gt;. \return
+   * List&lt;String&gt; .
+   *
+   * \~ \author Zoltan Hrabovszki \date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> VerifyTablecellValue( String FN, String fpsCol, String fpsRow, ArrayList<String> fpLsExpVal )
+          throws Exception, SecurityException
+  {
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+
+    Log.LogFunctionStartDebug( "VerifyTablecellValue", "String FN", FN, "String Col", fpsCol, "String fpsRow",
+            fpsRow, "ArrayList<String> fpLsExpVal", fpLsExpVal.toString() );
+
+    
+    this.SetChildName( FN );
+    Class<?>[] paramTypes =
+    { String.class, String.class, ArrayList.class };
+    Class<?> myFrame_Class = this.cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "VerifyTablecellValue", paramTypes );
+      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject, fpsCol, fpsRow, fpLsExpVal );
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Existiert die Methode des Objektes?
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = this.LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyTablecellValue" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }  
+
+  
   /**
    * \~german \brief Ruft eine Methode des aktuellen Objektes via
    * "late bound function call" auf. Die aufgerufene Methode hat die Signatur:
@@ -3053,7 +3392,7 @@ public class OKW_CurrentObject_Sngltn
    *         param fpLsParameter_1 parameter as list&lt;String&gt;.
    * @return List&lt;String&gt; .
    *
-   *         \~
+   * \~
    * @author Zoltan Hrabovszki
    * @throws InterruptedException
    * @date 2012.11.01
@@ -3147,13 +3486,14 @@ public class OKW_CurrentObject_Sngltn
    *
    * \~ \author Zoltan Hrabovszki \date 2012.11.01
    */
-  public void Sequence( String fpsMethodName, String fpsParameter_1 ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+  public void Sequence( String FN, String fpsMethodName, String fpsParameter_1 ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
           XPathExpressionException
   {
     Log.LogFunctionStartDebug( "Sequence", "String fpsMethodName", fpsMethodName, "String fps_Parameter_1", fpsParameter_1 );
 
+    this.SetWindowName( FN );
+    
     Class<?>[] paramTypes = { String.class };
-
     Class<?> myFrame_Class = this.cvoObject.getClass();
 
     try

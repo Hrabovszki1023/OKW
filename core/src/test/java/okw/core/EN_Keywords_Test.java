@@ -73,6 +73,7 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "NO VALUE" );
     EN.ClickOn( "All_MethodsObj" );
 
     // Check the Name, Called Method and Value of Actuel object
@@ -102,6 +103,7 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "NO VALUE" );
     EN.DoubleClickOn( "All_MethodsObj" );
 
     // Check the Name, Called Method and Value of Actuel object
@@ -132,10 +134,11 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "YES" );
     EN.LogExists( "All_MethodsObj" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "LogExists()", myClipBoard.getMethod() );
   }
@@ -161,10 +164,11 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "YES" );
     EN.LogHasFocus( "All_MethodsObj" );
 
     // Check the Name, Called Method and Parameter
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "LogHasFocus()", myClipBoard.getMethod() );
   }
@@ -190,10 +194,11 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "No" );
     EN.LogIsActive( "All_MethodsObj" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "No", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "LogIsActive()", myClipBoard.getMethod() );
   }
@@ -367,10 +372,11 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "YES" );
     EN.MemorizeHasFocus( "All_MethodsObj", "Key_TC_Memorize_Focus" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "MemorizeHasFocus()", myClipBoard.getMethod() );
 
@@ -565,10 +571,11 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "No Value" );
     EN.SelectMenu( "All_MethodsObj" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "No Value", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "SelectMenu()", myClipBoard.getMethod() );
   }
@@ -652,43 +659,19 @@ public class EN_Keywords_Test {
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
     assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
 
+    EN.SetValue( "All_MethodsObj", "tc_SelectTablecell" );
     EN.SelectTablecell( "All_MethodsObj", "COL", "ROW" );
 
     // Check the Name, Called Method and Value of Actuel object
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "SelectTablecell()", myClipBoard.getMethod() );
+    
+    assertEquals( 3, myClipBoard.getValue().size() );    
     assertEquals( "COL", myClipBoard.getValue().get( 0 ) );
     assertEquals( "ROW", myClipBoard.getValue().get( 1 ) );
+    assertEquals( "tc_SelectTablecell", myClipBoard.getValue().get( 2 ) );
   }
 
-  // \~german
-  // \brief
-  //
-  //
-  // \~english
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2013.12.26
-  @Test
-  public void tc_SelectTablecell_Clicktype() throws Exception {
-    EN.BeginTest( name.getMethodName() );
-
-    EN.SelectWindow( "Rechner" );
-
-    // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "Rechner", myClipBoard.getObjectName() );
-    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-
-    EN.SelectTablecell( "All_MethodsObj", "COL", "ROW", "DOUBLECLICK" );
-
-    // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-    assertEquals( "SelectTablecellClicktype()", myClipBoard.getMethod() );
-    assertEquals( "COL", myClipBoard.getValue().get( 0 ) );
-    assertEquals( "ROW", myClipBoard.getValue().get( 1 ) );
-    assertEquals( "DOUBLECLICK", myClipBoard.getValue().get( 2 ) );
-  }
 
   // \~german
   // \brief
@@ -712,36 +695,6 @@ public class EN_Keywords_Test {
     assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
   }
 
-  // \~german
-  // \brief
-  //
-  //
-  // \~english
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2013.12.26
-  @Test
-  public void tc_Select_Clicktype() throws Exception {
-    EN.BeginTest( name.getMethodName() );
-
-    EN.SelectWindow( "Rechner" );
-    // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "Rechner", myClipBoard.getObjectName() );
-    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-    assertEquals( 1, myClipBoard.getValue().size() );
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-
-    EN.Select( "All_MethodsObj", "Hanna", "DOUBLEClick" );
-
-    // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-    assertEquals( "Select_Clicktype()", myClipBoard.getMethod() );
-
-    assertEquals( 2, myClipBoard.getValue().size() );
-    assertEquals( "Hanna", myClipBoard.getValue().get( 0 ) );
-    assertEquals( "DOUBLEClick", myClipBoard.getValue().get( 1 ) );
-  }
 
   // \~german
   // \brief
@@ -806,6 +759,7 @@ public class EN_Keywords_Test {
     assertEquals( "Hanna", myClipBoard.getValue().get( 0 ) );
   }
 
+  
   // \~german
   // \brief
   //
@@ -838,6 +792,7 @@ public class EN_Keywords_Test {
     assertEquals( "TestSequence_1()", myClipBoard.getMethod());
   }
 
+  
   // \~german
   // \brief
   //
@@ -857,14 +812,16 @@ public class EN_Keywords_Test {
 
     myClipBoard.Clear();
     
+    EN.SetValue( "All_MethodsObj", "YES" );
     EN.SetFocus( "All_MethodsObj" );
 
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "SetFocus()", myClipBoard.getMethod() );
     assertEquals( 1, myClipBoard.getValue().size() );
 
   }
+
 
   // \~german
   // \brief
@@ -1148,10 +1105,10 @@ public class EN_Keywords_Test {
 
     // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "The one and only Value" );
     EN.VerifyCaption( "All_MethodsObj", "The one and only Value" );
 
     // Check the Name, Called Method and Value of Actuel object
@@ -1179,10 +1136,10 @@ public class EN_Keywords_Test {
 
     // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "The one and only Value" );
     EN.VerifyCaptionREGX( "All_MethodsObj", "\\w{3} one and only Value" );
 
     // Check the Name, Called Method and Value of Actuel object
@@ -1214,6 +1171,7 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "The one and only Value" );
     EN.VerifyCaptionWCM( "All_MethodsObj", "??? one and only Value" );
 
     // Check the Name, Called Method and Value of Actuel object
@@ -1241,10 +1199,10 @@ public class EN_Keywords_Test {
 
     // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "The one and only Value" );
     EN.VerifyLabel( "All_MethodsObj", "The one and only Value" );
 
     // Check the Name, Called Method and Value of Actuel object
@@ -1272,10 +1230,10 @@ public class EN_Keywords_Test {
 
     // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "The one and only Value" );
     EN.VerifyLabelREGX( "All_MethodsObj", "\\w{3} one and only Value" );
 
     // Check the Name, Called Method and Value of Actuel object
@@ -1307,6 +1265,8 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+
+    EN.SetValue( "All_MethodsObj", "The one and only Value" );
     EN.VerifyLabelWCM( "All_MethodsObj", "??? one and only Value" );
 
     // Check the Name, Called Method and Value of Actuel object
@@ -1341,11 +1301,12 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "YES" );
     EN.VerifyExists( "All_MethodsObj", "YES" );
 
     // Check the Name, Called Method and Value of Actuel object
     assertEquals( 1, myClipBoard.getValue().size() );
-    assertEquals( "TRUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyExists()", myClipBoard.getMethod() );
   }
@@ -1367,16 +1328,16 @@ public class EN_Keywords_Test {
 
     // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
     myClipBoard.Clear();
     
+    EN.SetValue( "All_MethodsObj", "YES" );
     EN.VerifyHasFocus( "All_MethodsObj", "YES" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "TRUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyHasFocus()", myClipBoard.getMethod() );
     assertEquals( 1, myClipBoard.getValue().size() );
@@ -1415,12 +1376,12 @@ public class EN_Keywords_Test {
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-    myClipBoard.Clear();
-    
+    // myClipBoard.Clear();
+    EN.SetValue( "All_MethodsObj", "YES" );    
     EN.VerifyIsActive( "All_MethodsObj", "YES" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "TRUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "VerifyIsActive()", myClipBoard.getMethod() );
     assertEquals( 1, myClipBoard.getValue().size() );
@@ -1637,11 +1598,10 @@ public class EN_Keywords_Test {
 
     // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-    assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "The one and only Value" );
     EN.VerifyValue( "All_MethodsObj", "The one and only Value" );
 
     // Check the Name, Called Method and Value of Actuel object
@@ -1707,11 +1667,10 @@ public class EN_Keywords_Test {
 
     // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-    assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "The one and only Value" );
     EN.VerifyValueWCM( "All_MethodsObj", "??? one and only Value" );
 
     // Check the Name, Called Method and Value of Actuel object
@@ -1781,11 +1740,10 @@ public class EN_Keywords_Test {
 
     // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-    assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "Rechner", myClipBoard.getObjectName() );
     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+    EN.SetValue( "All_MethodsObj", "The one and only Value" );
     EN.VerifyValueREGX( "All_MethodsObj","\\w{3} one and only Value" );
 
     // Check the Name, Called Method and Value of Actuel object

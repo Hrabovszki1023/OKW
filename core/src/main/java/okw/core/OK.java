@@ -1,9 +1,6 @@
 /*
     ==============================================================================
-      Author: Zoltan Hrabovszki <zh@openkeyword.de>
-
-      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
-      www.OpenKeyWord.de
+    Copyright © 2012 - 2016 IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -46,6 +43,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+
 
 
 
@@ -229,10 +227,10 @@ public class OK implements IOKW_State {
 
     try
     {
-      Boolean lvbActual = CO.LogIsActive( FN );
+      Boolean lvbActual = CO.LogHasFocus( FN );
       String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-      String lvsLM = LM.GetMessage( "LogIsActive", "LogValue", lvsActual );
+      String lvsLM = LM.GetMessage( "LogHasFocus", "LogValue", lvsActual );
 
       Log.LogPrint( lvsLM );
     }
@@ -330,28 +328,35 @@ public class OK implements IOKW_State {
     }
   }
 
-	// \copydoc IOKW_State::LogTablecellValue(String,String,String)
-	public void LogTablecellValue(String FN, String fpsCol, String fpsRow) throws Exception {
-		Log.LogFunctionStartDebug("LogTablecellValue", "fpsCol", fpsCol, "fpsRow", fpsRow, "FN",
-				FN);
+	/**
+	 *  \copydoc IOKW_State::LogTablecellValue(String,String,String)
+	 */
+  public void LogTablecellValue( String FN, String fpsCol, String fpsRow ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "LogTablecellValue", "String FN", FN, "fpsCol", fpsCol, "fpsRow", fpsRow );
 
-		try {
-			CO.SetChildName(FN);
-			ArrayList<String> ActualValues = CO.CallMethodReturn_ListString("LogTablecellValue", fpsCol, fpsRow);
+    try
+    {
+      ArrayList<String> ActualValues = CO.LogTablecellValue( FN, fpsCol, fpsRow );
 
-			Log.ResOpenListDebug("Log... ");
+      Log.ResOpenListDebug( "Log... " );
 
-			for (String Value : ActualValues) {
-				Log.LogPrintDebug(">>" + Value + "<<");
-			}
+      for ( String Value : ActualValues )
+      {
+        Log.LogPrintDebug( ">>" + Value + "<<" );
+      }
 
-			Log.ResCloseListDebug();
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+      Log.ResCloseListDebug();
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
   // \copydoc IOKW_State::LogTooltip(String)
   public void LogTooltip( String FN ) throws Exception
@@ -663,7 +668,7 @@ public class OK implements IOKW_State {
       else
       {
         CO.SetChildName( FN );
-        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( "MemorizeTablecellValue", fpsCol, fpsRow );
+        ArrayList<String> ActualValues = CO.MemorizeTablecellValue( FN, fpsCol, fpsRow );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -793,39 +798,6 @@ public class OK implements IOKW_State {
     return;
   }
 
-  // \copydoc IOKW_State::Select(String,String,String)
-  @Deprecated
-  public void Select( String FN, String Val, String fpsClickType ) throws Exception
-  {
-    Log.LogFunctionStartDebug( "Select", "FN", FN, "Val", Val, "fpsClickType", fpsClickType );
-    try
-    {
-      // Prüfen ob ignoriert werden muss...
-      if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || Val.equals( "" ) )
-      {
-        // Wenn der 1. Wert = IGNORE ist -> Abbrechen...
-        // \todo TODO: Meldung sprachabhägig auslagern!
-        Log.LogPrint( "Ignore..." );
-      }
-      else
-      {
-        ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
-
-        lvlsValue = Parser.ParseMe( lvlsValue );
-
-        // TODO: Select - Sprachabhängigkeit von KlickType einbauen...
-        CO.CallMethod( FN, "Select_Clicktype", lvlsValue, fpsClickType );
-      }
-    }
-    catch (Exception e)
-    {
-      this.HandleException( e );
-    }
-    finally
-    {
-      Log.LogFunctionEndDebug();
-    }
-  }
 
 	/**
 	 *  \copydoc IOKW_State::SelectMenu(String)
@@ -872,38 +844,27 @@ public class OK implements IOKW_State {
 	}
 
 	// \copydoc IOKW_State::SelectTablecell(String,String,String)
-	public void SelectTablecell(String FN, String fpsCol, String fpsRow) throws Exception {
-		Log.LogFunctionStartDebug("SelectTablecell", "FN", FN, "fpsCol", fpsCol, "fpsRow",
-				fpsRow);
+  public void SelectTablecell( String FN, String fpsCol, String fpsRow ) throws Exception
+  {
+    Log.LogFunctionStartDebug( "SelectTablecell", "FN", FN, "fpsCol", fpsCol, "fpsRow", fpsRow );
 
-		// ArrayList<String> lvls_Cell =
-		// LogMessenger.Instance.SplitSEP(fpsCell);
+    // ArrayList<String> lvls_Cell =
+    // LogMessenger.Instance.SplitSEP(fpsCell);
 
-		try {
-			CO.SetChildName(FN);
-			CO.CallMethod("SelectTablecell", fpsCol, fpsRow);
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
-
-	// \copydoc IOKW_State::SelectTablecell(String,String,String,String)
-	public void SelectTablecell(String FN, String fpsCol, String fpsRow, String fpsClickType)
-			throws Exception {
-		Log.LogFunctionStartDebug("SelectTablecell", "FN", FN, "fpsCol", fpsCol, "fpsRow",
-				fpsRow, "fpsClickType", fpsClickType);
-
-		try {
-			CO.SetChildName(FN);
-			CO.CallMethod("SelectTablecell_Clicktype", fpsCol, fpsRow, fpsClickType);
-		} catch (Exception e) {
-			this.HandleException(e);
-		} finally {
-			Log.LogFunctionEndDebug();
-		}
-	}
+    try
+    {
+      //CO.CallMethod( FN, "SelectTablecell", fpsCol, fpsRow );
+      CO.SelectTablecell( FN, fpsCol, fpsRow );
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
 
 	
   // \copydoc IOKW_State::SelectWindow(String)
@@ -949,7 +910,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        CO.CallMethod( FN, SEQ_Name, SEQ_ID );
+        CO.Sequence( FN, SEQ_Name, SEQ_ID );
       }
     }
     catch (Exception e)
@@ -1362,53 +1323,6 @@ public class OK implements IOKW_State {
     }
 
     
-  // \copydoc IOKW_State::VerifyLabel(String,String)
-  public void VerifyLabel( String FN, String ExpVal ) throws Exception
-  {
-
-    Log.LogFunctionStartDebug( "VerifyLabel", "FN", FN, "ExpVal", ExpVal );
-
-    try
-    {
-      // Prüfen ob ignoriert werden muss...
-      if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
-      {
-        // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-        Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-      }
-      else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-      {
-        // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
-        // auslösen...
-        throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-      }
-      else
-      {
-        if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
-        {
-          ExpVal = "";
-        }
-
-        // Split giveneExpected Value
-        ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
-
-        lvlsExpected = Parser.ParseMe( lvlsExpected );
-
-        ArrayList<String> Actual = CO.VerifyLabel( FN, lvlsExpected );
-
-        Verification( Actual, lvlsExpected );
-      }
-    }
-    catch (Exception e)
-    {
-      this.HandleException( e );
-    }
-    finally
-    {
-      Log.LogFunctionEndDebug();
-    }
-  }
-
   private void Verification( ArrayList<String> Actual, ArrayList<String> Expected )
   {
 
@@ -1457,10 +1371,157 @@ public class OK implements IOKW_State {
       throw new OKWVerifyingFailsException();
     }
   }
+  private void VerificationWCM( ArrayList<String> Actual, ArrayList<String> Expected )
+  {
+
+    Boolean bFail = false;
+    
+    Integer ActualSize = new Integer( Actual.size() );
+    Integer ExpectedSize = new Integer( Expected.size() );
+
+    if ( ActualSize.equals( ExpectedSize ) )
+    {
+      Log.LogPass( "Size is OK!" );
+
+      for ( int i = 0; i < Actual.size(); i++ )
+      {
+
+        if ( Matcher.WildcardMatch( Actual.get( i ), Expected.get( i ) )  )
+        {
+          Log.LogPass( Actual.get( i ) + " = " + Expected.get( i ) );
+        }
+        else
+        {
+          Log.LogError( Actual.get( i ) + " \u2260 " + Expected.get( i ) );
+          Log.ResOpenList( "Details..." );
+          Log.LogPrint( "  Actual: " + Actual.get( i ) );
+          Log.LogPrint( "Expected: " + Expected.get( i ) );
+          Log.ResCloseList();
+          
+          bFail = true;
+        }
+      }
+    }
+    else
+    {
+      Log.LogError( Actual.size() + " \u2260 " + Expected.size() );
+      Log.ResOpenList( "Details..." );
+      Log.LogPrint( "  Actual: " + Actual.size() );
+      Log.LogPrint( "Expected: " + Expected.size() );
+      Log.ResCloseList();
+      
+      bFail=true;
+    }
+    
+    if (bFail)
+    {
+      // Fehler Ausnahme auslösen
+      throw new OKWVerifyingFailsException();
+    }
+  }
+  private void VerificationREGX( ArrayList<String> Actual, ArrayList<String> Expected )
+  {
+
+    Boolean bFail = false;
+    
+    Integer ActualSize = new Integer( Actual.size() );
+    Integer ExpectedSize = new Integer( Expected.size() );
+
+    if ( ActualSize.equals( ExpectedSize ) )
+    {
+      Log.LogPass( "Size is OK!" );
+
+      for ( int i = 0; i < Actual.size(); i++ )
+      {
+
+        if ( Matcher.RegexMatch(  Actual.get( i ), Expected.get( i ) )  )
+        {
+          Log.LogPass( Actual.get( i ) + " = " + Expected.get( i ) );
+        }
+        else
+        {
+          Log.LogError( Actual.get( i ) + " \u2260 " + Expected.get( i ) );
+          Log.ResOpenList( "Details..." );
+          Log.LogPrint( "  Actual: " + Actual.get( i ) );
+          Log.LogPrint( "Expected: " + Expected.get( i ) );
+          Log.ResCloseList();
+          
+          bFail = true;
+        }
+      }
+    }
+    else
+    {
+      Log.LogError( Actual.size() + " \u2260 " + Expected.size() );
+      Log.ResOpenList( "Details..." );
+      Log.LogPrint( "  Actual: " + Actual.size() );
+      Log.LogPrint( "Expected: " + Expected.size() );
+      Log.ResCloseList();
+      
+      bFail=true;
+    }
+    
+    if (bFail)
+    {
+      // Fehler Ausnahme auslösen
+      throw new OKWVerifyingFailsException();
+    }
+  }
  
+
+  // \copydoc IOKW_State::VerifyLabel(String,String)
+  public void VerifyLabel( String FN, String ExpVal ) throws Exception
+  {
+  
+    ArrayList<String> lvlsExpected = null;
+    Log.LogFunctionStartDebug( "VerifyLabel", "FN", FN, "ExpVal", ExpVal );
+  
+    try
+    {
+      // Prüfen ob ignoriert werden muss...
+      if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
+      {
+        // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+        Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
+      }
+      else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+      {
+        // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
+        // auslösen...
+        throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+      }
+      else
+      {
+        if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+        {
+
+          lvlsExpected = new ArrayList<String>();
+        }
+        else
+        {
+          // Split giveneExpected Value
+          lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+          lvlsExpected = Parser.ParseMe( lvlsExpected );
+        }
+  
+        ArrayList<String> Actual = CO.VerifyLabel( FN, lvlsExpected );
+        Verification( Actual, lvlsExpected );
+      }
+    }
+    catch (Exception e)
+    {
+      this.HandleException( e );
+    }
+    finally
+    {
+      Log.LogFunctionEndDebug();
+    }
+  }
+
  //  \copydoc IOKW_State::VerifyLabelWCM(String,String)
  public void VerifyLabelWCM(String FN, String ExpVal) throws Exception {
 
+   ArrayList<String> lvlsExpected = null;
    ArrayList<String> Actual = null;
    
    Log.LogFunctionStartDebug("VerifyLabelWCM", "FN", FN, "fpsExpected",
@@ -1480,19 +1541,20 @@ public class OK implements IOKW_State {
      }
      else 
      {
-       if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY")))
+       if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
        {
-         ExpVal = "";
+         lvlsExpected = new ArrayList<String>();
        }
-
-       // Split giveneExpected Value
-       ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(ExpVal);
-
-       lvlsExpected = Parser.ParseMe(lvlsExpected);
+       else
+       {
+         // Split giveneExpected Value
+         lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+         lvlsExpected = Parser.ParseMe( lvlsExpected );
+       }
 
        Actual = CO.VerifyLabelWCM( FN, lvlsExpected );            
        
-       Verification( Actual, lvlsExpected );
+       VerificationWCM( Actual, lvlsExpected );
      }
    } 
    catch (Exception e)
@@ -1508,6 +1570,7 @@ public class OK implements IOKW_State {
  //  \copydoc IOKW_State::VerifyLabelREGX(String,String)
  public void VerifyLabelREGX(String FN, String ExpVal) throws Exception {
 
+   ArrayList<String> lvlsExpected = null;
    ArrayList<String> Actual = null;
    
    Log.LogFunctionStartDebug("VerifyLabelREGX", "FN", FN, "fpsExpected", ExpVal);
@@ -1527,19 +1590,20 @@ public class OK implements IOKW_State {
      }
      else 
      {
-       if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY")))
+       if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
        {
-         ExpVal = "";
+
+         lvlsExpected = new ArrayList<String>();
        }
-
-       // Split giveneExpected Value
-       ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(ExpVal);
-
-       lvlsExpected = Parser.ParseMe(lvlsExpected);
-
+       else
+       {
+         // Split giveneExpected Value
+         lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+         lvlsExpected = Parser.ParseMe( lvlsExpected );
+       }
        Actual = CO.VerifyLabelREGX( FN, lvlsExpected );            
        
-       Verification( Actual, lvlsExpected );
+       VerificationREGX( Actual, lvlsExpected );
      }
    } 
    catch (Exception e)
@@ -1577,8 +1641,7 @@ public class OK implements IOKW_State {
         ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
 
         // Get the actuel value from object
-        CO.SetChildName( FN );
-        ArrayList<String> Actual = CO.CallMethodReturn_ListString( "VerifySelectedValue", lvlsExpected );
+        ArrayList<String> Actual = CO.VerifySelectedValue( FN, lvlsExpected );
 
         Verification( Actual, lvlsExpected );
       }
@@ -1592,7 +1655,9 @@ public class OK implements IOKW_State {
       Log.LogFunctionEndDebug();
     }
   }
-
+  
+  
+  
   // \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
   public void VerifyTablecellValue( String FN, String fpsCol, String fpsRow, String ExpVal ) throws Exception
   {
@@ -1616,8 +1681,7 @@ public class OK implements IOKW_State {
         // Split giveneExpected Value
         ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
 
-        CO.SetChildName( FN );
-        ArrayList<String> Actual = CO.CallMethodReturn_ListString( "VerifyTablecellValue", fpsCol, fpsRow, lvlsExpected );
+        ArrayList<String> Actual = CO.VerifyTablecellValue( FN, fpsCol, fpsRow, lvlsExpected );
 
         Verification( Actual, lvlsExpected );
       }
@@ -1633,47 +1697,51 @@ public class OK implements IOKW_State {
   }
 
 	//  \copydoc IOKW_State::VerifyTooltip(String,String)
-  public void VerifyTooltip(String FN, String ExpVal) throws Exception
+  public void VerifyTooltip( String FN, String ExpVal ) throws Exception
   {
+    ArrayList<String> lvlsExpected = null;
 
-    Log.LogFunctionStartDebug("VerifyTooltip", "FN", FN, "ExpVal", ExpVal);
+    Log.LogFunctionStartDebug( "VerifyTooltip", "FN", FN, "ExpVal", ExpVal );
 
-    try {
+    try
+    {
       // Prüfen ob ignoriert werden muss...
-      if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || ExpVal.equals(""))
+      if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
       {
         // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-        Log.LogPrintDebug(LM.GetMessage("VerifyValue", "Ignore"));
+        Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
       }
       else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
       {
-        // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+        // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
+        // auslösen...
         throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
       }
-      else 
+      else
       {
-        if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY")))
+        if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
         {
-          ExpVal = "";
+
+          lvlsExpected = new ArrayList<String>();
+        }
+        else
+        {
+          // Split giveneExpected Value
+          lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+          lvlsExpected = Parser.ParseMe( lvlsExpected );
         }
 
-      // Split giveneExpected Value
-      ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(ExpVal);
-
-      lvlsExpected = Parser.ParseMe(lvlsExpected);
-
-      ArrayList<String> Actual = CO.VerifyTooltip( FN, lvlsExpected );
-      
-      Verification( Actual, lvlsExpected );
-  }
-    } 
-    catch (Exception e) 
+        ArrayList<String> Actual = CO.VerifyTooltip( FN, lvlsExpected );
+        Verification( Actual, lvlsExpected );
+      }
+    }
+    catch (Exception e)
     {
-     this.HandleException(e);
-    } 
-    finally 
+      this.HandleException( e );
+    }
+    finally
     {
-     Log.LogFunctionEndDebug();
+      Log.LogFunctionEndDebug();
     }
   }
 
@@ -1683,6 +1751,7 @@ public class OK implements IOKW_State {
   public void VerifyTooltipWCM(String FN, String ExpVal) throws Exception {
 
     ArrayList<String> Actual = null;
+    ArrayList<String> lvlsExpected = null;
     
     Log.LogFunctionStartDebug("VerifyTooltipWCM", "FN", FN, "ExpVal",
         ExpVal);
@@ -1701,18 +1770,21 @@ public class OK implements IOKW_State {
       }
       else 
       {
-        if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY")))
+        if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
         {
-          ExpVal = "";
+
+          lvlsExpected = new ArrayList<String>();
         }
-
-        // Split giveneExpected Value
-        ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(ExpVal);
-
-        lvlsExpected = Parser.ParseMe(lvlsExpected);
-
+        else
+        {
+          // Split giveneExpected Value
+          lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+          lvlsExpected = Parser.ParseMe( lvlsExpected );
+        }
+        
         Actual = CO.VerifyTooltipWCM( FN, lvlsExpected );            
-        Verification( Actual, lvlsExpected );
+        VerificationWCM( Actual, lvlsExpected );
+        
       }
     } 
     catch (Exception e)
@@ -1730,6 +1802,7 @@ public class OK implements IOKW_State {
   {
 
     ArrayList<String> Actual = null;
+    ArrayList<String> lvlsExpected = null;
     
     Log.LogFunctionStartDebug("VerifyTooltipREGX", "FN", FN, "ExpVal",
         ExpVal);
@@ -1749,19 +1822,20 @@ public class OK implements IOKW_State {
       }
       else 
       {
-        if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY")))
+        if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
         {
-          ExpVal = "";
+          lvlsExpected = new ArrayList<String>();
+        }
+        else
+        {
+          // Split giveneExpected Value
+          lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+          lvlsExpected = Parser.ParseMe( lvlsExpected );
         }
 
-        // Split giveneExpected Value
-        ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(ExpVal);
-
-        lvlsExpected = Parser.ParseMe(lvlsExpected);
-
         Actual = CO.VerifyTooltipREGX( FN, lvlsExpected );            
-
-        Verification( Actual, lvlsExpected );
+        VerificationREGX( Actual, lvlsExpected );
+        
       }
     } 
     catch (Exception e)
@@ -1775,7 +1849,9 @@ public class OK implements IOKW_State {
   }
 
 		
-   // \copydoc IOKW_State::VerifyValue(String,String)
+  /**
+   *  \copydoc IOKW_State::VerifyValue(String,String)
+   */
   public void VerifyValue( String FN, String ExpVal ) throws Exception
   {
     ArrayList<String> lvlsExpected = null;
@@ -1809,7 +1885,6 @@ public class OK implements IOKW_State {
         }
 
         ArrayList<String> Actual = CO.VerifyValue( FN, lvlsExpected );
-
         Verification( Actual, lvlsExpected );
       }
     }
@@ -1862,7 +1937,7 @@ public class OK implements IOKW_State {
         CO.SetChildName( FN );
 
         Actual = CO.VerifyValueWCM( FN, lvlsExpected );
-        Verification( Actual, lvlsExpected );
+        VerificationWCM( Actual, lvlsExpected );
       }
     }
     catch (Exception e)
@@ -1875,7 +1950,11 @@ public class OK implements IOKW_State {
     }
   }
 
-  // \copydoc IOKW_State::VerifyValueREGX(String,String)
+  /**
+   * _Wichtig:_ Ein "EMPTY"-Wert ist ein ArrayList String welche keine Array-Elemte enthält, also ArrayList.Size() = 0!
+   * \~
+   * \copydoc IOKW_State::VerifyValueREGX(String,String)
+   */
   public void VerifyValueREGX( String FN, String ExpVal ) throws Exception
   {
 
@@ -1914,7 +1993,7 @@ public class OK implements IOKW_State {
 
         Actual = CO.VerifyValueREGX( FN, lvlsExpected );
 
-        Verification( Actual, lvlsExpected );
+        VerificationREGX( Actual, lvlsExpected );
       }
     }
     catch (Exception e)
@@ -1929,23 +2008,24 @@ public class OK implements IOKW_State {
 
    
   
-	// \~german
-	// \brief
-	// Zentrale Exception-Behandlung.
-	//
-	// Methode führt folge Aktivitäten aus:
-	// -# Exception wird als Log ausgegeben.
-	// -# Daten des aktuellen Objektes werden für eine Fehler-Analyse
-	// ausgegeben (CO.LogObjectData()).
-	// -# Wechselt den Zustand auf NOK.
-	// -# Wenn OKW in NUNIT/UNIT aufgerufen wird (this.UNITTEST = true sein)
-	// dann wird an das Unittest-Framework die Exception weitergereicht.
-	//
-	// \param e Exception aus der OK-Schlüsselwort-Methode
-	// \~english
-	// \~
-	// \author Zoltán Hrabovszki
-	// \date 02.03.2013
+	/**
+	 *  \~german
+	 * Zentrale Exception-Behandlung.
+	 *
+	 * Methode führt folge Aktivitäten aus:
+	 * -# Exception wird als Log ausgegeben.
+	 * -# Daten des aktuellen Objektes werden für eine Fehler-Analyse
+	 * ausgegeben (CO.LogObjectData()).
+	 * -# Wechselt den Zustand auf NOK.
+	 * -# Wenn OKW in NUNIT/UNIT aufgerufen wird (this.UNITTEST = true sein)
+	 * dann wird an das Unittest-Framework die Exception weitergereicht.
+	 *
+	 * \param e Exception aus der OK-Schlüsselwort-Methode
+	 * \~english
+	 * \~
+	 * \author Zoltán Hrabovszki
+	 * \date 02.03.2013
+	 */
 	private void HandleException(Exception e) throws Exception
 	{	  
 	  
@@ -2134,6 +2214,8 @@ public class OK implements IOKW_State {
   public void VerifyCaption( String FN, String ExpVal ) throws Exception
   {
 
+    ArrayList<String> lvlsExpected = null;
+
     Log.LogFunctionStartDebug( "VerifyCaption", "FN", FN, "fpsExpected", ExpVal );
 
     try
@@ -2154,16 +2236,16 @@ public class OK implements IOKW_State {
       {
         if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
         {
-          ExpVal = "";
+
+          lvlsExpected = new ArrayList<String>();
         }
-
-        // Split giveneExpected Value
-        ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
-
-        lvlsExpected = Parser.ParseMe( lvlsExpected );
-
+        else
+        {
+          // Split giveneExpected Value
+          lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+          lvlsExpected = Parser.ParseMe( lvlsExpected );
+        }
         ArrayList<String> Actual = CO.VerifyCaption( FN, lvlsExpected );
-
         Verification( Actual, lvlsExpected );
       }
     }
@@ -2181,6 +2263,7 @@ public class OK implements IOKW_State {
   public void VerifyCaptionWCM( String FN, String ExpVal ) throws Exception
   {
 
+    ArrayList<String> lvlsExpected = null;
     ArrayList<String> Actual = null;
 
     Log.LogFunctionStartDebug( "VerifyCaptionWCM", "FN", FN, "fpsExpected", ExpVal );
@@ -2203,16 +2286,18 @@ public class OK implements IOKW_State {
       {
         if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
         {
-          ExpVal = "";
+
+          lvlsExpected = new ArrayList<String>();
+        }
+        else
+        {
+          // Split giveneExpected Value
+          lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+          lvlsExpected = Parser.ParseMe( lvlsExpected );
         }
 
-        // Split giveneExpected Value
-        ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
-
-        lvlsExpected = Parser.ParseMe( lvlsExpected );
-
         Actual = CO.VerifyCaptionWCM( FN, lvlsExpected );
-        Verification( Actual, lvlsExpected );
+        VerificationWCM( Actual, lvlsExpected );
       }
     }
     catch (Exception e)
@@ -2229,6 +2314,7 @@ public class OK implements IOKW_State {
   public void VerifyCaptionREGX(String FN, String ExpVal) throws Exception 
   {
   
+    ArrayList<String> lvlsExpected = null;
     ArrayList<String> Actual = null;
     
     Log.LogFunctionStartDebug("VerifyCaptionREGX", "FN", FN, "fpsExpected",
@@ -2250,18 +2336,19 @@ public class OK implements IOKW_State {
       }
       else 
       {
-        if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("EMPTY")))
+        if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
         {
-          ExpVal = "";
+
+          lvlsExpected = new ArrayList<String>();
         }
-  
-        // Split giveneExpected Value
-        ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP(ExpVal);
-  
-        lvlsExpected = Parser.ParseMe(lvlsExpected);
-          
+        else
+        {
+          // Split giveneExpected Value
+          lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+          lvlsExpected = Parser.ParseMe( lvlsExpected );
+        }
         Actual = CO.VerifyCaptionREGX( FN, lvlsExpected );            
-        Verification( Actual, lvlsExpected );
+        VerificationREGX( Actual, lvlsExpected );
       }
     } 
     catch (Exception e)

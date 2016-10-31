@@ -93,6 +93,7 @@ public class EN_VerifyExists_OKWVerifyingFailsException_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
+    EN.SetValue( "All_MethodsObj", "YES" );
     EN.VerifyExists( "All_MethodsObj", "NO" );
   }
   
@@ -115,6 +116,7 @@ public class EN_VerifyExists_OKWVerifyingFailsException_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
+    EN.SetValue( "All_MethodsObj", "NO" );
     EN.VerifyExists( "All_MethodsObj", "YES" );
   }
 }

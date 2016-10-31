@@ -1,6 +1,6 @@
-/**
+/*
     ==============================================================================
-    Copyright © 2012, 2013, 2014, 2015,2016 IT-Beratung Hrabovszki
+    Copyright © 2012 - 2016 IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -648,57 +648,6 @@ public interface IOKW_State
          */
         void Select(String FN, String Val) throws Exception;
 
-        /**
-        * \~german
-        * \brief
-        * Auswahl aller Zeilen einer Liste/Tabelle, welche die gegebenen Daten enthalten.
-        *
-        * Tabellenspalten werden zeilenweise zusammengefasst, so dass Listen und Tabellen identisch verarbeitet
-        *	werden. Die erste Zeile, welche die gegebenen Daten enthält, wird ausgewählt. Die
-        *	Zeile wird über einen einfachen Klick angewählt. Die Übergabe des zusätzlichen Parameters
-        *	"Doppelklick" führt zur Verwendung eines Doppelklicks.
-        * Die {HSEP}-Konstante kann verwendet werden, wenn definierte Werte in mehreren Spalten gefordert sind.<br/>
-        * _Beispiel 1: Wähle alle Zeilen aus, die den Text "Wert" enthalten:_<br/>
-        * \verbatim Wähle aus: "MeineTabelle", "Wert" \endverbatim <br/>
-        * _Beispiel 2: Wähle alle Zeilen aus, die mit dem Text "Wert1" beginnen und
-        * deren zweite Spalte den Text "Wert2" enthält:_<br/>
-        * \verbatim Wähle aus: "MeineTabelle", "Wert1{HSEP}, Wert2" \endverbatim <br/>
-        * _Beispiel 3: Wähle alle Zeilen aus, die mit dem Text "Wert1" beginnen und
-        * deren dritte Spalte den Text "Wert2" enthält:_<br/>
-        * \verbatim Wähle aus: "MeineTabelle", "Wert1{HSEP}{HSEP}Wert2" \endverbatim
-        * 
-        * @param FN Funktionaler Name des Objekts 
-        * @param Val Sich ergebender Wert 
-        * @param fpsClickType Doppelklick" um mit Doppelklick,
-        * "Einfachklick" um mit einfachem Klick auszuwählen. 
-        *
-        * \~english
-        * \brief
-        * Select all rows in a list/chart, which contain the given data.
-        *
-        * Chart columns are merged row by row to process lists and charts identical.
-        *	The first row which contains the given data will be selected. The row is selected by a single click.
-        * The delivery of an additional parameter "Doubleclick" leads to the use of a doubleclick.
-        * The {HSEP}-constant can be used, if defined values in multiple columns are required.<br/>
-        * _Example #1: Select all rows which contain the text "Value":_<br/>
-        * \verbatim Select: "MyTable", "Value" \endverbatim <br/>
-        * _Example #2: Select all rows which contain the text "Value1" in the first column,
-        * followed by the text "Value2" in any of the remaining columns:_ <br/>
-        * \verbatim Select: "MyTable", "Value1{HSEP}Value2" \endverbatim <br/>
-        * _Example #3: Select all rows which contain the text "Value1", followed by any (or no)
-        * text in the first column, followed by an empty column, followed by the text "Value2"
-        * in the third  column:_ <br/>
-        * \verbatim Select: "MyTable", "Value1{HSEP}{HSEP}Value2" \endverbatim
-        * 
-        * @param FN Functional name of the object 
-        * @param Val Resulting value 
-        * @param fpsClickType Doubleclick" to select via doubleclick, "Singleclick" to select via singleclick (default) 
-        *
-        * \~
-        * @author Zoltan Hrabovszki
-         */
-        void Select(String FN, String Val, String fpsClickType) throws Exception;
-
         
         /** 
          * \~german
@@ -808,61 +757,6 @@ public interface IOKW_State
          */
         void SelectTablecell(String FN, String fpsCol, String fpsRow) throws Exception;
 
-        /**
-        * \~german
-        * \brief
-        * Wählt die gegebene Tabellenzelle aus.
-        *
-        * Die Parameter für die Spalten- und Zeilenpositionen werden immer als Strings eingegeben.
-        *	Wenn ein Positionsparameter mit einem Hash (#) beginnt, dann wird er als Zahl interpretiert, z.B. "#1".
-        *	Wenn das Hashzeichen als Text interpretiert werden soll, dann muss dies über einen vorangestellten
-        *	Backslash gekennzeichnet werden, z.B. "#1 Text mit vorangestellter Nummer".
-        *	Die Kopfzeile der Tabelle wird über den Index "0" angesprochen. Die erste Datenzeile beginnt
-        * mit dem Index 1. Für Tabellen mit mehrzeiligen Kopfzeilen kann im Objekt selbst der Offset
-        * zur ersten Datenzeile festgelegt werden. Der Spaltenindex beginnt mit der Nummer 1.<br/>
-        * _Beispiel 1: Auswahl der Zelle in Spalte 2 und Zeile 5:_ <br/>
-        * \verbatim Wähle aus Tabellenzelle: "MeineTabelle", "#2", "#5" \endverbatim
-        * _Beispiel 2: Auswahl der Zelle in erster Spalte mit Text "Toni" und Zeile mit dem Namen "Tester":_ <br/>
-        * \verbatim Wähle aus Tabellenzelle: "MeineTabelle", "Toni", "Tester" \endverbatim
-        * _Beispiel 3: Auswahl der Zelle in erster Spalte mit Text "Toni" und Zeile 3:_<br/>
-        * \verbatim Wähle aus Tabellenzelle: "MeineTabelle", "Toni", "#3" \endverbatim
-        * _Beispiel 4: Auswahl der Zelle in Spalte 1 und erster Zeile mit Text "42":_<br/>
-        * \verbatim Wähle aus Tabellenzelle: "MeineTabelle", "#1", "42" \endverbatim
-        * 
-        * @param FN Funktionaler Name des Objekts 
-        * @param fpsClickType Doppelklick" um mit Doppelklick auszuwählen, "Einfachklick" um mit einfachem Klick 
-        * @param fpsRow Zeilennummer der zu wählenden Zelle, beginnend mit 1. 
-        * @param fpsCol Spaltennummer der zu wählenden Zelle, beginnend mit 1. 
-        *
-        * \~english
-        * \brief
-        * Selects the given table cell.
-        *
-        * The column and row positions are always entered as strings.
-        * If such a parameter is starting with a hash (#) the String is interpreted as an index number, e.g. "#1").
-        * If a hash sign should be interpreted as text it must signed with a backslash,
-        * e.g. "\#1 text with leading number").
-        * The header row is addressed with the index "0". The first data row starts with the index 1.
-        * For tables with multiline headers the offset to the first data row can be set
-        * The column index starts with the number 1.<br/>
-        * _Example #1: Select cell at first column with text "Toni" and row with number 3:_ <br/>
-        * \verbatim Select Tablecell: "MyTable", "Toni", "#3" \endverbatim
-        * _Example #2: Select cell at column with number 1 and row with name "Address":_ <br/>
-        * \verbatim Select Tablecell: "MyTable", "#1", "Address" \endverbatim
-        * _Example #3: Select cell at column number 1 and row 1:_ <br/>
-        * \verbatim Select Tablecell: "MyTable", "#1", "#1" \endverbatim
-        * _Example #4: Select cell at col number 1 and first row with text "42":_ <br/>
-        * \verbatim Select Tablecell: "MyTable", "#1", "42" \endverbatim
-        * 
-        * @param FN Functional name of the object 
-        * @param fpsClickType Doubleclick" to select via doubleclick, "Singleclick" to select via singleclick (default) 
-        * @param fpsRow Row number of cell to be selected, starting with 1. 
-        * @param fpsCol Column number of cell to be selected, starting with 1. 
-        *
-        * \~
-        * @author Zoltan Hrabovszki
-         */
-        void SelectTablecell(String FN, String fpsCol, String fpsRow, String fpsClickType) throws Exception;
 
         /** 
          * \~german

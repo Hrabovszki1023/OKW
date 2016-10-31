@@ -1,6 +1,6 @@
 /*
     ==============================================================================
-    Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+    Copyright © 2012 - 2016 IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -360,19 +360,6 @@ import okw.log.*;
 			Log.LogFunctionEndDebug();
 		}
 
-		/**
-		 *  \copydoc IOKW_State::Select(String,String,String)
-		 */
-		public void Select(String FN, String fpsValue, String fpsClickType)
-		{
-			Log.LogFunctionStartDebug("Select",
-				"FN", FN,
-				"fpsValue", fpsValue,
-				"fpsClickType", fpsClickType);
-
-			Log.LogFunctionEndDebug();
-		}
-
 
 		/**
 		 *  \copydoc IOKW_State::SelectMenu(String)
@@ -407,22 +394,6 @@ import okw.log.*;
 			Log.LogFunctionEndDebug();
 		}
 
-		/// \~german
-		/// \copydoc IOKW_State::SelectTablecell(String,String,String,String)
-		/// \~english
-		/// \copydoc IOKW_State::SelectTablecell(String,String,String,String)
-		/// 
-		public void SelectTablecell(String FN, String fpsCol, String fpsRow, String fpsClickType)
-		{
-			Log.LogFunctionStartDebug(
-				"SelectTablecell",
-				"FN", FN,
-				"fpsCol", fpsCol,
-				"fpsRow", fpsRow,
-				"fpsClickType", fpsClickType);
-
-			Log.LogFunctionEndDebug();
-		}
 
 		/**
 		 *  \copydoc IOKW_State::SelectWindow(String)

@@ -987,69 +987,6 @@ public class EN_Keywords_IGNORE_Test
             assertEquals("", myClipBoard.getMethod());
         }
 
-        
-        /// \~german
-        /// \brief
-        /// 
-        /// 
-        /// \~english
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.12.26
-        @Test
-		public void TC_Select_Clicktype_IGNORE() throws Exception
-        {
-    		EN.BeginTest( name.getMethodName() );
-
-    		EN.SelectWindow("Rechner");
-
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals("Rechner", myClipBoard.getObjectName());
-            assertEquals("SelectWindow()", myClipBoard.getMethod());
-
-            assertEquals(1, myClipBoard.getValue().size());
-            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
-
-            myClipBoard.Clear();
-			EN.Select("All_MethodsObj", "${IGNORE}", "DOUBLEClick");
-
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals("", myClipBoard.getObjectName());
-            assertEquals("", myClipBoard.getMethod());
-            assertEquals(0, myClipBoard.getValue().size());
-        }
-
-        /// \~german
-        /// \brief
-        /// 
-        /// 
-        /// \~english
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.12.26
-        @Test
-		public void TC_Select_Clicktype_IGNORE_EmptyString() throws Exception
-        {
-    		EN.BeginTest( name.getMethodName() );
-
-    		EN.SelectWindow("Rechner");
-
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals("Rechner", myClipBoard.getObjectName());
-            assertEquals("SelectWindow()", myClipBoard.getMethod());
-
-            assertEquals(1, myClipBoard.getValue().size());
-            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
-
-            myClipBoard.Clear();
-			EN.Select("All_MethodsObj", "", "DOUBLEClick");
-
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals("", myClipBoard.getObjectName());
-            assertEquals("", myClipBoard.getMethod());
-            assertEquals( 0, myClipBoard.getValue().size());
-
-        }
 
         /// \~german
         /// \brief
