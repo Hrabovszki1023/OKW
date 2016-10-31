@@ -3,19 +3,19 @@
   <parent>
     <groupId>de.openkeyword</groupId>
     <artifactId>okw</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.16</version>
   </parent>
   <artifactId>se</artifactId>
   <dependencies>
   	<dependency>
   		<groupId>de.openkeyword</groupId>
   		<artifactId>core</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
+  		<version>0.0.16</version>
   	</dependency>
   	<dependency>
   		<groupId>de.openkeyword</groupId>
   		<artifactId>log2html</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
+  		<version>0.0.16</version>
   	</dependency>
   </dependencies>
   <description>This is the OpenKeyWord Selenium GUI-Adapter-module. Se defines default  GUI-Adapter ( Pushbutton, Link, Textfield...)
