@@ -14,12 +14,15 @@
     <h1>&lt;input type="radio"&gt;</h1>
 
     <form action="input_radio.htm">
-      <p>Geben Sie Ihre Zahlungsweise an:</p>
-      <p>
-        <input type="radio" name="Zahlmethode" value="Mastercard" title="Mastercard"> Mastercard<br>
-        <input type="radio" name="Zahlmethode" value="Visa" title="Visa"> Visa<br>
-        <input type="radio" name="Zahlmethode" value="AmericanExpress" title="American Express"> American Express
-      </p>
+    <fieldset>
+      <legend>Geben Sie Ihre Zahlungsweise an:</legend>
+        <input type="radio" name="Zahlmethode" value="Mastercard" title="Mastercard">
+        <label for="vorname">Mastercard</label><br/>
+        <input type="radio" name="Zahlmethode" value="Visa" title="Visa">
+        <label for="vorname">Visa</label><br/>
+        <input type="radio" name="Zahlmethode" value="AmericanExpress" title="American Express">
+        <label for="vorname">American Express</label>
+      </fieldset>
     </form>
   </body>
 </html>
