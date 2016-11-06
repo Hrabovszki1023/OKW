@@ -2,26 +2,28 @@
        "http://www.w3.org/TR/html4/strict.dtd">
 <html>
   <head>
-    <title>&lt;input type="radio"&gt;</title>
+    <title id='id_RadioList'>&lt;input type="radio"&gt;</title>
     <link href="../okw.css" type="text/css" rel="stylesheet">
   </head>
   <body>
     <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png"
          width="150"
          alt="OpenKeyWord Logo">
-    <p>Sie befinden sich auf einer Entwicklungstestseite von OpenKeyWord.</p>
+    <p>You are on a test page of the OpenKeyWord project.</p>
 
     <h1>&lt;input type="radio"&gt;</h1>
 
     <form action="input_radio.htm">
-    <fieldset>
-      <legend>Geben Sie Ihre Zahlungsweise an:</legend>
-        <input type="radio" name="Zahlmethode" value="Mastercard" title="Mastercard">
-        <label for="vorname">Mastercard</label><br/>
-        <input type="radio" name="Zahlmethode" value="Visa" title="Visa">
-        <label for="vorname">Visa</label><br/>
-        <input type="radio" name="Zahlmethode" value="AmericanExpress" title="American Express">
-        <label for="vorname">American Express</label>
+    <fieldset title="fieldset-title">
+      <legend>Pay with:</legend>
+        <input type="radio" id='id_mastercard' name="PayMethode" value="Mastercard" title="title-Mastercard">
+        <label for="id_mastercard">Mastercard</label><br/>
+        
+        <input type="radio" id='id_visa' name="PayMethode" value="Visa" title="title-Visa">
+        <label for="id_visa">Visa</label><br/>
+        
+        <input type="radio" id='id_amarican_express' name="PayMethode" value="American Express" title="titel-American Express">
+        <label for="id_amarican_express">American Express</label>
       </fieldset>
     </form>
   </body>
