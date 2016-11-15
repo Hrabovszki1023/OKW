@@ -1,6 +1,7 @@
 package okw.core;
 
 import static org.junit.Assert.*;
+
 import javax.xml.xpath.XPathExpressionException;
 
 import org.junit.After;
@@ -37,7 +38,7 @@ public class FrameObjectDictionary_Test
     Logger_Sngltn.Init();
 
     // Logger_Sngltn.getInstance().AddLogger(new Log2Console());
-    Logger_Sngltn.getInstance().setDebugMode( true );
+    Logger_Sngltn.getInstance().setDebugMode( false );
 
     // System.out.Printline( "OKW_XML: " +
     // Environment.GetEnvironmentVariable("OKW_Xml"));
@@ -91,11 +92,11 @@ public class FrameObjectDictionary_Test
   
     // Prüfen ob die erwarteten Elemente Rechner, Taste_3 vorhanden sind.
     // Does the "Rechner" exists?
-    Boolean object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner" );
+    Boolean object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "Rechner" );
     assertEquals( true, object_Exists );
   
     // Is the Child also there?
-    object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner.Taste_3" );
+    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "Rechner.Taste_3" );
     assertEquals( true, object_Exists );
   
     // ------------------------------------------------------------------------------------
@@ -103,7 +104,7 @@ public class FrameObjectDictionary_Test
     // erneut existieren.
     try
     {
-      target.Init();
+      FrameObjectDictionary_Sngltn.Init();
     }
     catch (Exception e)
     {
@@ -111,11 +112,11 @@ public class FrameObjectDictionary_Test
       fail( e.getMessage() );
     }
   
-    object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner" );
+    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "Rechner" );
     assertEquals( true, object_Exists );
   
     // Is the Child also there?
-    object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner.Taste_3" );
+    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "Rechner.Taste_3" );
     assertEquals( true, object_Exists );
   }
 
@@ -137,11 +138,11 @@ public class FrameObjectDictionary_Test
     }
 
     // Does the "Rechner" exists?
-    Boolean object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner" );
+    Boolean object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "Rechner" );
     assertEquals( true, object_Exists );
 
     // We get the <<right>> object?
-    Object expected = target.myFrameObjectDictionary.get( "Rechner" );
+    Object expected = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.get( "Rechner" );
 
     assertEquals( expected.toString(), actual.toString() );
 
@@ -156,15 +157,52 @@ public class FrameObjectDictionary_Test
   {
 
     // Does the "Rechner" exists?
-    Boolean object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner" );
+    Boolean object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "Rechner" );
     assertEquals( true, object_Exists );
 
     // Child is Also there?
-    object_Exists = target.myFrameObjectDictionary.containsKey( "Rechner.Taste_3" );
+    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "Rechner.Taste_3" );
     assertEquals( true, object_Exists );
-
   }
 
+
+  /**
+   * \brief A test for CreateInstanceByObjectName
+   */
+  @Test
+  public void tc_GetObjectByName_WindowAndChild_GuiContainer()
+  {
+    // Does the "Rechner" exists?
+    Boolean object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "frmObjDictTest" );
+    assertEquals( true, object_Exists );
+
+    // Child is Also there?
+    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "frmObjDictTest.Anzeige" );
+    assertEquals( true, object_Exists );
+  }
+  
+  
+  /**
+   * \brief A test for a Inline Class definition
+   */
+  @Test
+  public void tc_GetObjectByName_WindowAndChild_InlineClassDef()
+  {
+    // Does the "Rechner" exists?
+    Boolean object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "frmObjDictTest" );
+    assertEquals( true, object_Exists );
+
+    // Are the Child loaded?
+    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "frmObjDictTest.Tastatur" );
+    assertEquals( true, object_Exists );
+
+    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "frmObjDictTest.Taste_2" );
+    assertEquals( true, object_Exists );
+
+    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "frmObjDictTest.Taste_2" );
+    assertEquals( true, object_Exists );
+  }  
+  
   /**
    * \~german
    * \brief

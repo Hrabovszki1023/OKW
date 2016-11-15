@@ -43,9 +43,10 @@ import java.util.ArrayList;
 
 import okw.log.*;
 	
-	/// <summary>
-	/// Description of OKWLocator.
-	/// </summary>
+	/** <summary>
+	 * Description of OKWLocator.
+	 * </summary>
+	 */
 	public class OKWLocator //: IOKWLocator
 	{
 		String _locator = "";
@@ -73,13 +74,17 @@ import okw.log.*;
                 
 				ArrayList<String> myLocatoren = new ArrayList<String>();
                 
-				if (_Locatoren != null) {
-					for (OKWLocator Locator : _Locatoren) {
+				if (_Locatoren != null)
+				{
+					for (OKWLocator Locator : _Locatoren)
+					{
 						myLocatoren.add(Locator.getLocator());
 					}
                     
 					lvsReturn = String.format(_locator, myLocatoren.toArray());
-				} else {
+				}
+				else
+				{
 					lvsReturn = _locator;
 				}
                 

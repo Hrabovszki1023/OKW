@@ -59,7 +59,7 @@ public abstract class AnyWinBase
 
     public AnyWinBase(String fpsLocator, OKWLocator... fpLocators )
     {
-        if ( fpLocators != null )
+        if ( fpLocators.length != 0 )
         {
             this._locator = new OKWLocator(fpsLocator, fpLocators);
         }
@@ -70,22 +70,23 @@ public abstract class AnyWinBase
     }
 
 
-    /// \~german
-    /// \brief
-    /// Locator enthält die Objekterkennungseigenschaft.
-    /// 
-    /// \~english
-    /// \brief
-    /// \todo TODO:  Übersetzung ins Englische fehlt...
-    /// 
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2014.04.27/ jnic_2014_11_26
+    /** \~german
+     *  Locator enthält die Objekterkennungseigenschaft.
+     *  
+     *  \~english
+     *  \brief
+     *  \todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  \~
+     *  \author Zoltán Hrabovszki
+     *  \date 2014.04.27
+     */
     public String getLocator()
     {
             return this._locator.getLocator();
     }
 
+    
     public OKWLocator getLOCATOR()
     {
             return this._locator;

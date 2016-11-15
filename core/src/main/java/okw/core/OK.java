@@ -161,7 +161,9 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	// \copydoc IOKW_State::EndTest()
+	/**
+	 *  \copydoc IOKW_State::EndTest()
+	 */
 	public void EndTest() {
 		Log.LogFunctionStartDebug("EndTest");
 
@@ -175,7 +177,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "LogCaption" );
+      ArrayList<String> ActualValues = CO.LogCaption( FN );
 
       Log.ResOpenListDebug( "Log... " );
 
@@ -220,7 +222,9 @@ public class OK implements IOKW_State {
     }
   }
 
-  // \copydoc IOKW_State::LogHasFocus(String)
+  /**
+   *  \copydoc IOKW_State::LogHasFocus(String)
+   */
   public void LogHasFocus( String FN ) throws Exception
   {
     Log.LogFunctionStartDebug( "LogHasFocus", "FN", FN );
@@ -275,7 +279,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "LogLabel" );
+      ArrayList<String> ActualValues = CO.LogLabel( FN );
 
       Log.ResOpenList( "Log... " );
 
@@ -303,7 +307,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      ArrayList<String> actualValues = CO.CallMethodReturn_ListString( FN, "LogSelected" );
+      ArrayList<String> actualValues = CO.LogSelected( FN );
 
       String lvsLM = LM.GetMessage( "LogSelected", "LogValue" );
 
@@ -313,7 +317,7 @@ public class OK implements IOKW_State {
 
       for ( String Value : actualValues )
       {
-        Log.LogPrint( ">>" + Value + "<<" );
+        Log.LogPrint( "'" + Value + "'" );
       }
 
       Log.ResCloseList();
@@ -365,13 +369,13 @@ public class OK implements IOKW_State {
 
     try
     {
-      ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "LogTooltip" );
+      ArrayList<String> ActualValues = CO.LogTooltip( FN );
 
       Log.ResOpenList( "Log... " );
 
       for ( String Value : ActualValues )
       {
-        Log.LogPrint( ">>" + Value + "<<" );
+        Log.LogPrint( "'" + Value + "'" );
       }
 
       Log.ResCloseList();
@@ -393,13 +397,13 @@ public class OK implements IOKW_State {
 
     try
     {
-      ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "LogValue" );
+      ArrayList<String> ActualValues = CO.LogValue( FN );
 
       Log.ResOpenList( "Log... " );
 
       for ( String Value : ActualValues )
       {
-        Log.LogPrint( ">>" + Value + "<<" );
+        Log.LogPrint( "'" + Value + "'" );
       }
 
       Log.ResCloseList();
@@ -435,7 +439,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "MemorizeCaption" );
+        ArrayList<String> ActualValues = CO.MemorizeCaption( FN );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -591,7 +595,7 @@ public class OK implements IOKW_State {
 
       else
       {
-        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "MemorizeLabel" );
+        ArrayList<String> ActualValues = CO.MemorizeLabel( FN );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -629,7 +633,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "MemorizeSelectedValue" );
+        ArrayList<String> ActualValues = CO.MemorizeSelectedValue( FN );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -705,7 +709,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "MemorizeTooltip" );
+        ArrayList<String> ActualValues = CO.MemorizeTooltip( FN );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -744,7 +748,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        ArrayList<String> ActualValues = CO.CallMethodReturn_ListString( FN, "MemorizeValue" );
+        ArrayList<String> ActualValues = CO.MemorizeValue( FN );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -931,7 +935,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      CO.CallMethod( FN, "SetFocus" );
+      CO.SetFocus( FN );
     }
     catch (Exception e)
     {
@@ -976,8 +980,7 @@ public class OK implements IOKW_State {
 
 				lvlsValue = Parser.ParseMe(lvlsValue);
 
-				CO.SetChildName(FN);
-				CO.SetValue( lvlsValue );
+				CO.SetValue( FN, lvlsValue );
 			}
 		} 
 		catch (Exception e)
@@ -2061,7 +2064,9 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	// \copydoc IOKW_State::FileDelete(String)
+	/**
+	 *  \copydoc IOKW_State::FileDelete(String)
+	 */
 	public void FileDelete(String fpsPathAndFileName) throws Exception {
 		String lvsPathAndFileName = "";
 

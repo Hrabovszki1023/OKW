@@ -86,7 +86,8 @@ import okw.log.*;
 
 				// Alles Initialisieren
 				OKW_Ini_Sngltn.getInstance().Init();
-				OKW_CurrentObject_Sngltn.getInstance().Init();
+				OKW_CurrentObject_Sngltn.getInstance();
+        OKW_CurrentObject_Sngltn.Init();
 
 				Log.LogPrint("NOK -> OK");
 				this._Kernel.SetCurrentState(new OK(this._Kernel));

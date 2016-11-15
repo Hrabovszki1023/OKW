@@ -92,7 +92,7 @@ public class OKW_CurrentObject_Sngltn
    * 'sNameChildObject'.
    *
    */
-  protected String             cvsChildFN              = "";
+  protected static String             cvsChildFN              = "";
 
   /**
    * \~german \brief Eigenschaft enthält den fachlichen Namen des aktuellen
@@ -104,7 +104,7 @@ public class OKW_CurrentObject_Sngltn
    * window.<br/>
    * All GUI child Objects are relating to this window given mit "cvsChildName".
    */
-  protected String             cvsWindowFN             = "";
+  protected static String             cvsWindowFN             = "";
 
   /**
    * \~german \brief Das Feld cvoObject enthält die Referenzierung auf das
@@ -114,7 +114,7 @@ public class OKW_CurrentObject_Sngltn
    * \~english \brief The field cvoObject contains the reference of the current
    * Object in OKW_FrameObjectDictionary "myFrameObjectDictionary".
    */
-  private Object               cvoObject               = null;
+  private static Object               cvoObject               = null;
 
   /**
    * \~german \brief Vollständiger "funktionaler Name" des aktuellen Objektes
@@ -126,21 +126,23 @@ public class OKW_CurrentObject_Sngltn
    * "WindowName.ChildObjectName" * "Login" is a WindowObject * "Login.User" as
    * reference to the child Object "User" of the window "Login"
    */
-  private String               cvsObjectFN             = "";
+  private static  String               cvsFullObjectFN             = "";
 
   /**
-   * \~german \brief Vollständiger "technischer Name" des aktuellen Objektes
+   * \~german
+   * \brief Vollständiger "technischer Name" des aktuellen Objektes
    * "WindowName.ChildObjectName" * "frm_Login" ist ein FensterObjekt. *
    * "Frm_Login.User" als Refernz auf das Kindobjekt "User" des fachlichen
    * Fensters "Login"
    *
    *
-   * \~english \brief Full "technical name" of the current Object
+   * \~english
+   * \brief Full "technical name" of the current Object
    * "WindowsName.ChildObject.Name" * "frm_Login" is a WindowObject. *
    * "frm_Login.User" as reference to the child Object "User" of the
    * professional window "Login"
    */
-  private String               cvsObjectName           = "";
+  private static String               cvsObjectName           = "";
 
   /**
    * \~german \brief Hält eine Referenz auf die Klasse LogMessenger für die
@@ -154,18 +156,21 @@ public class OKW_CurrentObject_Sngltn
    *
    * \~english \brief \todo TODO: für JN review
    */
-  private LogMessenger         LM                      = null;
+  private static LogMessenger         LM                      = null;
 
   /**
-   * \~german \brief Hält eine Referenz auf die Klasse Logger vor.
+   * \~german
+   * \brief Hält eine Referenz auf die Klasse Logger vor.
    *
    *
-   * \~english \brief \todo TODO: Translation to english
+   * \~english
+   * \brief \todo TODO: Translation to english
    */
   private Logger_Sngltn        Log                     = Logger_Sngltn.getInstance();
 
   /**
-   * \~german \brief Diese Übersicht enthält alle besuchten/ genutzten
+   * \~german
+   * \brief Diese Übersicht enthält alle besuchten/ genutzten
    * "Frame Objects".
    *
    * Wichtig: Die "Frame Klasse" muss mit "using" einbezogen werden Arbeiten in
@@ -174,13 +179,14 @@ public class OKW_CurrentObject_Sngltn
    * aktuelle Fenster- oder Kindobjekt.
    *
    *
-   * \~english \brief This Dictionary holds all visited/used "Frame Objects".
+   * \~english
+   * \brief This Dictionary holds all visited/used "Frame Objects".
    *
    * Important: The Frame-Class Must be included with "using" Works in an
    * automatized call: The right class is given after input of the frame Object
    * Function contains the reference to the current window or child Object
    */
-  FrameObjectDictionary_Sngltn myFrameObjectDictionary = null;
+   static FrameObjectDictionary_Sngltn myFrameObjectDictionary = null;
 
   /**
    * \~german \brief Initialisiert eine neue Instanz der <see
@@ -189,16 +195,19 @@ public class OKW_CurrentObject_Sngltn
    * zu erhalten
    *
    *
-   * \~english \brief Initializes a new instance of the <see
+   * \~english 
+   * \brief Initializes a new instance of the <see
    * cref="OKW.CurrentObject"/> class. No public constructor: Use the <see
    * cref="OKW.CurrentObject.Instance"/> to obtain the instance of this class
    *
    *
-   * \~ \author Zoltan Hrabovszki \date 2012.12.02
+   * \~
+   * @author Zoltan Hrabovszki
+   * @date 2012.12.02
    */
-  private OKW_CurrentObject_Sngltn() throws JAXBException, ParserConfigurationException, SAXException, IOException, XPathExpressionException
+  private OKW_CurrentObject_Sngltn()
   {
-    Init();
+
   }
 
   /**
@@ -217,7 +226,9 @@ public class OKW_CurrentObject_Sngltn
    *
    * <value> The instance of CurrentObject. </value>
    *
-   * \~ \author Zoltan Hrabovszki \date 2012.11.29
+   * \~ 
+   * @author Zoltan Hrabovszki
+   * @date 2012.11.29
    */
   private static OKW_CurrentObject_Sngltn Instance;
 
@@ -232,6 +243,7 @@ public class OKW_CurrentObject_Sngltn
         if ( Instance == null )
         {
           Instance = new OKW_CurrentObject_Sngltn();
+          Init();
         }
       }
     }
@@ -245,40 +257,41 @@ public class OKW_CurrentObject_Sngltn
     return lviReturn;
   }
 
-  //
-  // \~german
-  // \brief Ruft eine Methode des Objektes FN via "late bound function call" auf.
-  //
-  // Die aufgerufene Methode hat die Signatur:
-  //
-  // | Parameter/Return | Type  | 
-  // | :----------------|:------|
-  // | Parameter        | keine | 
-  // | Rückgabewert     | kein  |
-  //
-  // \param fpsMethod Name der Methode, die aufgerufen werden soll.
-  //
-  // \~english \brief Calls a method of the current Object with
-  // "late bound function call".
-  //
-  // The called method has the signature:
-  //
-  // | Parameter/Return | Type  |
-  // | :----------------|:------| 
-  // | Parameter        | none  | 
-  // | Return           | none  |
-  //
-  // \param fpsMethod name of method to be called.
-  //
-  // \~
-  // \author Zoltan Hrabovszki \date 2014.01.14
-  //
+  /**
+   * \~german
+   * \brief Ruft eine Methode des Objektes FN via "late bound function call" auf.
+   *
+   * Die aufgerufene Methode hat die Signatur:
+   *
+   * | Parameter/Return | Type  | 
+   * | :----------------|:------|
+   * | Parameter        | keine | 
+   * | Rückgabewert     | kein  |
+   *
+   * @param fpsMethod Name der Methode, die aufgerufen werden soll.
+   *
+   * \~english \brief Calls a method of the current Object with
+   * "late bound function call".
+   *
+   * The called method has the signature:
+   *
+   * | Parameter/Return | Type  |
+   * | :----------------|:------| 
+   * | Parameter        | none  | 
+   * | Return           | none  |
+   *
+   * @param fpsMethod name of method to be called.
+   *
+   * \~
+   * @author Zoltan Hrabovszki
+   * @date 2014.01.14
+  */
   public void CallParentMethod( String FN, String fpsMethod ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException
   {
     Log.LogFunctionStartDebug( "CallMethod", "String fpsMethod", fpsMethod );
 
     this.SetWindowName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
     Method myMethod = null;
 
     // Schenwir
@@ -324,47 +337,39 @@ public class OKW_CurrentObject_Sngltn
   }
   
   
-  //
-  // \~german
-  // \brief Ruft eine Methode des Objektes FN via
-  // "late bound function call" auf.
-  //
-  // Die aufgerufene Methode hat die Signatur:
-  //
-  // | Parameter/Return | Type  | 
-  // | :----------------|:------|
-  // | Parameter        | keine | 
-  // | Rückgabewert     | kein  |
-  //
-  // \param fpsMethod Name der Methode, die aufgerufen werden soll.
-  //
-  // \~english \brief Calls a method of the current Object with
-  // "late bound function call".
-  //
-  // The called method has the signature:
-  //
-  // | Parameter/Return | Type  |
-  // | :----------------|:------| 
-  // | Parameter        | none  | 
-  // | Return           | none  |
-  //
-  // \param fpsMethod name of method to be called.
-  //
-  // \~
-  // \author Zoltan Hrabovszki \date 2014.01.14
-  //
-  public void CallMethod( String FN, String fpsMethod ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException
+  /**
+   * \~german
+   * Ruft eine Methode des Objektes FN via "late bound function call" auf.
+   *
+   * Die aufgerufene Methode hat die Signatur: void SetFocus(String)
+   *
+   * @param fpsMethod Name der Methode, die aufgerufen werden soll.
+   *
+   * \~english 
+   * Calls a method of the current Object with "late bound function call".
+   *
+   * The called method has the signature: void SetFocus(String)
+   *
+   * @param FN name of method to be called.
+   *
+   * \~
+   * @author Zoltan Hrabovszki 
+   * @date 2016.11.10
+   */
+  public void SetFocus( String FN ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException
   {
-    Log.LogFunctionStartDebug( "CallMethod", "String fpsMethod", fpsMethod );
+    
+    String lvsMethod = "SetFocus";
+    
+    Log.LogFunctionStartDebug( "SetFocus" );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
     Method myMethod = null;
 
-    // Schenwir
     try
     {
-      myMethod = myFrame_Class.getMethod( fpsMethod );
+      myMethod = myFrame_Class.getMethod( lvsMethod );
       myMethod.invoke( cvoObject );
     }
     catch (NoSuchMethodException e)
@@ -373,7 +378,7 @@ public class OKW_CurrentObject_Sngltn
 
       try
       {
-        myMethod = myFrame_Class.getSuperclass().getDeclaredMethod( fpsMethod );
+        myMethod = myFrame_Class.getSuperclass().getDeclaredMethod( lvsMethod );
         myMethod.invoke( cvoObject );
       }
       catch (NoSuchMethodException | SecurityException e1)
@@ -381,7 +386,7 @@ public class OKW_CurrentObject_Sngltn
         // Existiert die Methode des Objektes?
         // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
         // aussteigen...
-        String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", fpsMethod );
+        String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", lvsMethod );
         throw new OKWFrameObjectMethodNotFoundException( errorText );
       }
       catch (Exception e2)
@@ -390,11 +395,6 @@ public class OKW_CurrentObject_Sngltn
         System.out.println( myMessage );
       }
 
-    }
-    catch (Exception e)
-    {
-      String myMessage = e.getMessage();
-      System.out.println( myMessage );
     }
     finally
     {
@@ -431,7 +431,7 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "CallMethod", "String FN", FN );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
     Method myMethod = null;
 
     // Schenwir
@@ -514,7 +514,7 @@ public class OKW_CurrentObject_Sngltn
     Class<?>[] paramTypes = { ArrayList.class };
 
     this.SetWindowName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -570,7 +570,7 @@ public class OKW_CurrentObject_Sngltn
     Class<?>[] paramTypes = { ArrayList.class };
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -629,7 +629,7 @@ public class OKW_CurrentObject_Sngltn
     Class<?>[] paramTypes = { ArrayList.class, String.class };
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -681,7 +681,7 @@ public class OKW_CurrentObject_Sngltn
     Class<?>[] paramTypes = { String.class };
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -703,61 +703,6 @@ public class OKW_CurrentObject_Sngltn
     return;
   }
 
-  /**
-   * \~german \brief Ruft eine Methode des aktuellen Objektes via
-   * "late bound function call" auf.
-   *
-   * Die aufgerufene Methode hat die Signatur:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------| | 1.
-   * Parameter | String | | 2. Parameter | String | | Rückgabewert | kein |
-   *
-   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
-   * fpsParameter_1 1. Parameter als Type-String. \param fpsParameter_2 2.
-   * Parameter als Type-String.
-   *
-   * \~english \brief Calls a method of the current Object with
-   * "late bound function call". The called method has the signature:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------| | 1st
-   * Parameter | String | | 2nd Parameter | String | | Return | none |
-   *
-   * \param fpsMethod name of method to be called. \param fpsParameter_1 1st
-   * parameter as type-String. \param fpsParameter_2 2nd parameter as
-   * type-String.
-   *
-   * \~ \author Zoltan Hrabovszki \date 2012.11.01
-   */
-  @Deprecated
-  public void CallMethod( String FN, String fpsMethod, String fpsParameter_1, String fpsParameter_2 ) throws IllegalAccessException, IllegalArgumentException,
-          InvocationTargetException, XPathExpressionException
-  {
-    Log.LogFunctionStartDebug( "CallMethod", "String fpsMethod", fpsMethod, "String fps_Parameter_1", fpsParameter_1, "String fps_Parameter_2", fpsParameter_2 );
-
-    Class<?>[] paramTypes = { String.class, String.class };
-
-    this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
-
-    try
-    {
-      Method myMethod = myFrame_Class.getMethod( fpsMethod, paramTypes );
-      myMethod.invoke( cvoObject, fpsParameter_1, fpsParameter_2 );
-    }
-    catch (NoSuchMethodException e)
-    {
-      // Existiert die Methode des Objektes?
-      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
-      // aussteigen...
-      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", fpsMethod );
-      throw new OKWFrameObjectMethodNotFoundException( errorText );
-    }
-    finally
-    {
-      Log.LogFunctionEndDebug();
-    }
-    return;
-  }
 
   
   /**
@@ -793,7 +738,7 @@ public class OKW_CurrentObject_Sngltn
     this.SetChildName( FN );
     
     Class<?>[] paramTypes = { String.class, String.class };
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -814,64 +759,7 @@ public class OKW_CurrentObject_Sngltn
     }
     return;
   }
-  
-  /**
-   * \~german \brief Ruft eine Methode des aktuellen Objektes via
-   * "late bound function call" auf. Die aufgerufene Methode hat die Signatur:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------| | 1.
-   * Parameter | String | | 2. Parameter | String | | 3. Parameter | String | |
-   * Rückgabewert | kein |
-   *
-   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
-   * fpsParameter_1 1. Parameter als Type-String. \param fpsParameter_2 2.
-   * Parameter als Type-String. \param fpsParameter_3 3. Parameter als
-   * Type-String.
-   *
-   * \~english \brief Calls a method of the current Object with
-   * "late bound function call". The called method has the signature:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------| | 1st
-   * Parameter | String | | 2nd Parameter | String | | 3rd Parameter | String |
-   * | Return | none |
-   *
-   * \param fpsMethod name of method to be called. \param fpsParameter_1 1st
-   * paramarameter as type-String. \param fpsParameter_2 2nd parameter as
-   * type-String. \param fpsParameter_3 3rd parameter as type-String.
-   *
-   * \~ \author Zoltan Hrabovszki \date 2012.11.01
-   */
-  @Deprecated
-  public void CallMethod( String FN, String fpsMethod, String fpsParameter_1, String fpsParameter_2, String fpsParameter_3 ) throws IllegalAccessException,
-          IllegalArgumentException, InvocationTargetException, XPathExpressionException
-  {
-    Log.LogFunctionStartDebug( "CallMethod", "String fpsMethod", fpsMethod, "String fpsParameter_1", fpsParameter_1, "String fpsParameter_2", fpsParameter_2,
-            "String fpsParameter_3", fpsParameter_3 );
 
-    Class<?>[] paramTypes = { String.class, String.class, String.class };
-    this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
-
-    try
-    {
-      Method myMethod = myFrame_Class.getMethod( fpsMethod, paramTypes );
-      myMethod.invoke( cvoObject, fpsParameter_1, fpsParameter_2, fpsParameter_3 );
-    }
-    catch (NoSuchMethodException e)
-    {
-      // Existiert die Methode des Objektes?
-      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
-      // aussteigen...
-      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", fpsMethod );
-      throw new OKWFrameObjectMethodNotFoundException( errorText );
-    }
-    finally
-    {
-      Log.LogFunctionEndDebug();
-    }
-
-    return;
-  }
 
   /**
    * \~german \brief Ruft eine Methode des aktuellen Objektes via
@@ -908,7 +796,7 @@ public class OKW_CurrentObject_Sngltn
     Class<?>[] paramTypes = { String.class, String.class, ArrayList.class };
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -963,7 +851,7 @@ public class OKW_CurrentObject_Sngltn
     Class<?>[] paramTypes = {};
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -1012,7 +900,7 @@ public class OKW_CurrentObject_Sngltn
     Class<?>[] paramTypes = {};
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -1059,7 +947,7 @@ public class OKW_CurrentObject_Sngltn
     Class<?>[] paramTypes = {};
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -1106,7 +994,7 @@ public class OKW_CurrentObject_Sngltn
     Class<?>[] paramTypes = {};
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -1161,7 +1049,7 @@ public class OKW_CurrentObject_Sngltn
     Class<?>[] paramTypes = {};
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -1216,7 +1104,7 @@ public class OKW_CurrentObject_Sngltn
     Class<?>[] paramTypes = {};
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -1237,65 +1125,7 @@ public class OKW_CurrentObject_Sngltn
     }
     return lvbReturn;
   }
-  
-  /**
-   * \~german \brief Ruft eine Methode des aktuellen Objektes via
-   * "late bound function call" auf.
-   *
-   * Die aufgerufene Methode hat die Signatur:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------| | 1.
-   * Parameter | String | | 2. Parameter | Boolean | | Rückgabewert | Boolean |
-   *
-   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
-   * fpbParameter_1 2. Parameter als Type-Boolean. \return Rückgabewert ist vom
-   * Typ Boolean.
-   *
-   * \~english \brief Calls a method of the current Object with
-   * "late bound function call".
-   *
-   * The called method has the signature:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------| | 1st
-   * Parameter | String | | 2nd Parameter | Boolean | | Return | Boolean |
-   *
-   * \param fpsMethod Name of the method to be called. \param fpbParameter_1 2nd
-   * parameter as a Boolean type. \return Return is a Boolean type.
-   *
-   * \~ \author Zoltan Hrabovszki \date 2012.11.01
-   */
-  @Deprecated
-  public Boolean CallMethodReturn_BooleanPb( String fpsMethod, Boolean fpbParameter_1 ) throws IllegalAccessException, IllegalArgumentException,
-          InvocationTargetException, XPathExpressionException
-  {
-    Boolean lvbReturn = false;
 
-    Log.LogFunctionStartDebug( "CallMethodReturn_BooleanPb", "String fpsMethod", fpsMethod, "Boolean fpsParameter_1", fpbParameter_1.toString() );
-
-    Class<?>[] paramTypes =
-    { Boolean.class };
-
-    Class<?> myFrame_Class = this.cvoObject.getClass();
-
-    try
-    {
-      Method myMethod = myFrame_Class.getMethod( fpsMethod, paramTypes );
-      lvbReturn = ( Boolean ) myMethod.invoke( cvoObject, fpbParameter_1 );
-    }
-    catch (NoSuchMethodException e)
-    {
-      // Existiert die Methode des Objektes?
-      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
-      // aussteigen...
-      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", fpsMethod );
-      throw new OKWFrameObjectMethodNotFoundException( errorText );
-    }
-    finally
-    {
-      Log.LogFunctionEndDebug( lvbReturn );
-    }
-    return lvbReturn;
-  }
 
   /**
    * \~german \brief Ruft eine Methode VerifyExists des aktuellen Objektes via
@@ -1340,14 +1170,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyExists", "String FN", FN, "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyExists" );
 
-      VerifyExists_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyExists_PT();
-      VerifyExists_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyExists_TO();
+      VerifyExists_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyExists_PT();
+      VerifyExists_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyExists_TO();
 
       Log.LogPrintDebug("VerifyExists_PT: " + VerifyExists_PT.toString() );
       Log.LogPrintDebug("VerifyExists_TO: " + VerifyExists_TO.toString() );
@@ -1442,14 +1272,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyHasFocus", "String", "FN", "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
     
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyHasFocus" );
 
-      VerifyHasFocus_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyHasFocus_PT();
-      VerifyHasFocus_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyHasFocus_TO();
+      VerifyHasFocus_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyHasFocus_PT();
+      VerifyHasFocus_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyHasFocus_TO();
 
       Log.LogPrintDebug("VerifyExists_PT: " + VerifyHasFocus_PT.toString() );
       Log.LogPrintDebug("VerifyExists_TO: " + VerifyHasFocus_TO.toString() );
@@ -1516,14 +1346,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyIsActive", "String", "FN", "Boolean fpbExpectedValues", fpbExpectedValues.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyIsActive" );
 
-      VerifyIsActive_PT = ( ( Field ) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN ) ).getAnnotation( OKW.class ).VerifyIsActive_PT();
-      VerifyIsActive_TO = ( ( Field ) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN ) ).getAnnotation( OKW.class ).VerifyIsActive_TO();
+      VerifyIsActive_PT = ( ( Field ) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ) ).getAnnotation( OKW.class ).VerifyIsActive_PT();
+      VerifyIsActive_TO = ( ( Field ) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ) ).getAnnotation( OKW.class ).VerifyIsActive_TO();
 
       Log.LogPrintDebug( "VerifyExists_PT: " + VerifyIsActive_PT.toString() );
       Log.LogPrintDebug( "VerifyExists_TO: " + VerifyIsActive_TO.toString() );
@@ -1575,115 +1405,49 @@ public class OKW_CurrentObject_Sngltn
   }
 
   
-  /**
-   * \~german \brief Ruft eine Methode des aktuellen Objektes via
+  /** \~german
+   * \brief  Ruft die Methode LogCaption(FN) des aktuellen GUI-Objektes via
    * "late bound function call" auf.
    *
-   * Die aufgerufene Methode hat die Signatur:
+   * @param FN  Funktionlare Name des GUI-Objektes
+   * @return Rückgabewert ist vom Typ List&lt;String&gt;.
    *
-   * | Parameter/Return | Type | | :----------------|:-------------| | Parameter
-   * | keine | | Rückgabewert | int |
-   *
-   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \return
-   * Rückgabewert ist vom Typ int.
-   *
-   * \~english \brief Calls a method of the current Object with
+   * \~english 
+   * \brief Calls the method LogCaption(FN) of the current GUI-Object
    * "late bound function call".
    *
-   * The called method has the signature:
+   * @param fpsMethod Name of the method to be called.
+   * @return Result is a List&lt;String&gt; type.
    *
-   * | Parameter/Return | Type | | :----------------|:-------------| | Parameter
-   * | none | | Return | int |
-   *
-   * \param fpsMethod Name of the method to be called. \return Return is an int
-   * type.
-   *
-   * \~ \author Zoltan Hrabovszki \date 2012.11.01
+   * \~ 
+   * @author Zoltan Hrabovszki
+   * @date 2012.11.01
    */
-  @Deprecated
-  public int CallMethodReturn_Int( String fpsMethod ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
-          XPathExpressionException
-  {
-    Integer lviReturn = 0;
-    Boolean bOK = false;
-    Log.LogFunctionStartDebug( "CallMethodReturn_Int", "String fpsMethod", fpsMethod );
-
-    Class<?>[] paramTypes =
-    {};
-
-    Class<?> myFrame_Class = this.cvoObject.getClass();
-
-    try
-    {
-      Method myMethod = myFrame_Class.getMethod( fpsMethod, paramTypes );
-      lviReturn = ( Integer ) myMethod.invoke( cvoObject );
-      bOK = true;
-    }
-    catch (NoSuchMethodException e)
-    {
-      // Existiert die Methode des Objektes?
-      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
-      // aussteigen...
-      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", fpsMethod );
-      throw new OKWFrameObjectMethodNotFoundException( errorText );
-    }
-    finally
-    {
-      if ( bOK )
-      {
-        Log.LogFunctionEndDebug( lviReturn.toString() );
-      }
-      else
-      {
-        Log.LogFunctionEndDebug();
-      }
-    }
-    return lviReturn;
-
-  }
-
-  // \~german
-  // \brief  Ruft die Methode LogCaption(FN) des aktuellen GUI-Objektes via
-  // "late bound function call" auf.
-  //
-  // \param FN  Funktionlare Name des GUI-Objektes
-  // \return Rückgabewert ist vom Typ List&lt;String&gt;.
-  //
-  // \~english 
-  // \brief Calls the method LogCaption(FN) of the current GUI-Object
-  // "late bound function call".
-  //
-  // \param fpsMethod Name of the method to be called.
-  // \return Result is a List&lt;String&gt; type.
-  //
-  // \~ 
-  // \author Zoltan Hrabovszki
-  // \date 2012.11.01
   @SuppressWarnings( "unchecked" )
-  public ArrayList<String> CallMethodReturn_ListString( String FN, String fpsMethodName ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+  public ArrayList<String> LogCaption( String FN ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
           XPathExpressionException
   {
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
-    Log.LogFunctionStartDebug( fpsMethodName, "String", FN );
+    Log.LogFunctionStartDebug( "LogCaption", "String", FN );
 
     Class<?>[] paramTypes ={};
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
-      Method myMethod = myFrame_Class.getMethod( fpsMethodName, paramTypes );
+      Method myMethod = myFrame_Class.getMethod( "LogCaption", paramTypes );
       lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
       bOK = true;
     }
     catch (NoSuchMethodException e)
     {
-      // Existiert die Methode des Objektes?
+      // Die Methode des Objektes existiert nicht:
       // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
       // aussteigen...
-      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", fpsMethodName );
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "LogCaption" );
       throw new OKWFrameObjectMethodNotFoundException( errorText );
     }
     finally
@@ -1699,63 +1463,51 @@ public class OKW_CurrentObject_Sngltn
     }
     return lvLsReturn;
   }
-  
-  
-  /**
-   * \~german
-   * \brief Ruft eine Methode des aktuellen Objektes via
+
+  /** \~german
+   * \brief  Ruft die Methode LogLabel(FN) des aktuellen GUI-Objektes via
    * "late bound function call" auf.
    *
-   * Die aufgerufene Methode hat die Signatur:
+   * @param FN  Funktionlare Name des GUI-Objektes
+   * @return Rückgabewert ist vom Typ List&lt;String&gt;.
    *
-   * | Parameter/Return | Type | | :----------------|:-------------| | 1.
-   * Parameter | String | | 2. Parameter | String | | Rückgabewert |
-   * List&lt;String&gt; |
+   * \~english 
+   * \brief Calls the method LogLabel(FN) of the current GUI-Object as
+   * "late bound function call".
    *
-   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
-   * fpsParam1 1. Parameter als Type-String. \param fpsParam2 2. Parameter als
-   * Type-String. \return List&lt;String&gt;.
+   * @param fpsMethod Name of the method to be called.
+   * @return Result is a List&lt;String&gt; type.
    *
-   * \~english \brief Calls a method of the current Object
-   * "late bound function call". The calles method has the signature:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------| | 1st
-   * Parameter | String | | 2nd Parameter | String | | Return |
-   * List&lt;String&gt; |
-   *
-   *
-   * \param fpsMethod Name of the method to be called \param fpsParam1 1st
-   * paramarameter as type-String. \param fpsParam2 2nd parameter as
-   * type-String. \return List&lt;String&gt; .
-   *
-   * \~ \author Zoltan Hrabovszki \date 2012.11.01
+   * \~ 
+   * @author Zoltan Hrabovszki
+   * @date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  @Deprecated
-  public ArrayList<String> CallMethodReturn_ListString( String fpsMethod, String fpsParam_1, String fpsParam_2 ) throws IllegalAccessException,
-          IllegalArgumentException, InvocationTargetException, XPathExpressionException
+  public ArrayList<String> LogLabel( String FN ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+          XPathExpressionException
   {
     ArrayList<String> lvLsReturn = new ArrayList<String>();
     Boolean bOK = false;
+    Log.LogFunctionStartDebug( "LogLabel", "String", FN );
 
-    Log.LogFunctionStartDebug( "CallMethodReturn_ListString", "String fpsMethod", fpsMethod, "String fpsParam_1", fpsParam_1, "String fpsParam_2", fpsParam_2 );
+    Class<?>[] paramTypes ={};
 
-    Class<?>[] paramTypes =
-    { String.class, String.class };
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    this.SetChildName( FN );
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
-      Method myMethod = myFrame_Class.getMethod( fpsMethod, paramTypes );
-      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject, fpsParam_1, fpsParam_2 );
+      Method myMethod = myFrame_Class.getMethod( "LogLabel", paramTypes );
+      
+      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
       bOK = true;
     }
     catch (NoSuchMethodException e)
     {
-      // Existiert die Methode des Objektes?
+      // Die Methode des Objektes existiert nicht:
       // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
       // aussteigen...
-      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", fpsMethod );
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "LogLabel" );
       throw new OKWFrameObjectMethodNotFoundException( errorText );
     }
     finally
@@ -1771,6 +1523,495 @@ public class OKW_CurrentObject_Sngltn
     }
     return lvLsReturn;
   }
+
+  
+  /** \~german
+   * \brief  Ruft die Methode LogSelected(FN) des aktuellen GUI-Objektes via
+   * "late bound function call" auf.
+   *
+   * @param FN  Funktionlare Name des GUI-Objektes
+   * @return Rückgabewert ist vom Typ List&lt;String&gt;.
+   *
+   * \~english 
+   * \brief Calls the method LogSelected(FN) of the current GUI-Object as
+   * "late bound function call".
+   *
+   * @param fpsMethod Name of the method to be called.
+   * @return Result is a List&lt;String&gt; type.
+   *
+   * \~ 
+   * @author Zoltan Hrabovszki
+   * @date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> LogSelected( String FN ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+          XPathExpressionException
+  {
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+    Log.LogFunctionStartDebug( "LogSelected", "String", FN );
+
+    Class<?>[] paramTypes ={};
+
+    this.SetChildName( FN );
+    Class<?> myFrame_Class = cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "LogSelected", paramTypes );
+      
+      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Die Methode des Objektes existiert nicht:
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "LogSelected" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }
+
+  
+  /** \~german
+   * \brief  Ruft die Methode LogTooltip(FN) des aktuellen GUI-Objektes via
+   * "late bound function call" auf.
+   *
+   * @param FN  Funktionaler Name des GUI-Objektes
+   * @return Rückgabewert ist vom Typ List&lt;String&gt;.
+   *
+   * \~english 
+   * \brief Calls the method LogTooltip(FN) of the current GUI-Object as
+   * "late bound function call".
+   *
+   * @param fpsMethod Name of the method to be called.
+   * @return Result is a List&lt;String&gt; type.
+   *
+   * \~ 
+   * @author Zoltan Hrabovszki
+   * @date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> LogTooltip( String FN ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+          XPathExpressionException
+  {
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+    Log.LogFunctionStartDebug( "LogTooltip", "String", FN );
+
+    Class<?>[] paramTypes ={};
+
+    this.SetChildName( FN );
+    Class<?> myFrame_Class = cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "LogTooltip", paramTypes );
+      
+      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Die Methode des Objektes existiert nicht:
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "LogTooltip" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }
+
+  
+  /** \~german
+   * \brief  Ruft die Methode LogValue(FN) des aktuellen GUI-Objektes via
+   * "late bound function call" auf.
+   *
+   * @param FN  Funktionaler Name des GUI-Objektes
+   * @return Rückgabewert ist vom Typ List&lt;String&gt;.
+   *
+   * \~english 
+   * \brief Calls the method LogValue(FN) of the current GUI-Object as
+   * "late bound function call".
+   *
+   * @param fpsMethod Name of the method to be called.
+   * @return Result is a List&lt;String&gt; type.
+   *
+   * \~ 
+   * @author Zoltan Hrabovszki
+   * @date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> LogValue( String FN ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+          XPathExpressionException
+  {
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+    Log.LogFunctionStartDebug( "LogValue", "String", FN );
+
+    Class<?>[] paramTypes ={};
+
+    this.SetChildName( FN );
+    Class<?> myFrame_Class = cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "LogValue", paramTypes );
+      
+      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Die Methode des Objektes existiert nicht:
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "LogValue" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }
+
+  
+  /** \~german
+   * \brief  Ruft die Methode MemorizeCaption(FN) des aktuellen GUI-Objektes via
+   * "late bound function call" auf.
+   *
+   * @param FN  Funktionaler Name des GUI-Objektes
+   * @return Rückgabewert ist vom Typ List&lt;String&gt;.
+   *
+   * \~english 
+   * \brief Calls the method MemorizeCaption(FN) of the current GUI-Object as
+   * "late bound function call".
+   *
+   * @param fpsMethod Name of the method to be called.
+   * @return Result is a List&lt;String&gt; type.
+   *
+   * \~ 
+   * @author Zoltan Hrabovszki
+   * @date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> MemorizeCaption( String FN ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+          XPathExpressionException
+  {
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+    Log.LogFunctionStartDebug( "MemorizeCaption", "String", FN );
+
+    Class<?>[] paramTypes ={};
+
+    this.SetChildName( FN );
+    Class<?> myFrame_Class = cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "MemorizeCaption", paramTypes );
+      
+      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Die Methode des Objektes existiert nicht:
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "MemorizeCaption" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }
+
+  
+  /** \~german
+   * \brief  Ruft die Methode MemorizeLabel(FN) des aktuellen GUI-Objektes via
+   * "late bound function call" auf.
+   *
+   * @param FN  Funktionaler Name des GUI-Objektes
+   * @return Rückgabewert ist vom Typ List&lt;String&gt;.
+   *
+   * \~english 
+   * \brief Calls the method MemorizeLabel(FN) of the current GUI-Object as
+   * "late bound function call".
+   *
+   * @param fpsMethod Name of the method to be called.
+   * @return Result is a List&lt;String&gt; type.
+   *
+   * \~ 
+   * @author Zoltan Hrabovszki
+   * @date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> MemorizeLabel( String FN ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+          XPathExpressionException
+  {
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+    Log.LogFunctionStartDebug( "MemorizeLabel", "String", FN );
+
+    Class<?>[] paramTypes ={};
+
+    this.SetChildName( FN );
+    Class<?> myFrame_Class = cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "MemorizeLabel", paramTypes );
+      
+      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Die Methode des Objektes existiert nicht:
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "MemorizeLabel" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }
+
+  
+  /** \~german
+   * \brief  Ruft die Methode MemorizeSelectedValue(FN) des aktuellen GUI-Objektes via
+   * "late bound function call" auf.
+   *
+   * @param FN  Funktionaler Name des GUI-Objektes
+   * @return Rückgabewert ist vom Typ List&lt;String&gt;.
+   *
+   * \~english 
+   * \brief Calls the method MemorizeSelectedValue(FN) of the current GUI-Object as
+   * "late bound function call".
+   *
+   * @param fpsMethod Name of the method to be called.
+   * @return Result is a List&lt;String&gt; type.
+   *
+   * \~ 
+   * @author Zoltan Hrabovszki
+   * @date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> MemorizeSelectedValue( String FN ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+          XPathExpressionException
+  {
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+    Log.LogFunctionStartDebug( "MemorizeSelectedValue", "String", FN );
+
+    Class<?>[] paramTypes ={};
+
+    this.SetChildName( FN );
+    Class<?> myFrame_Class = cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "MemorizeSelectedValue", paramTypes );
+      
+      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Die Methode des Objektes existiert nicht:
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "MemorizeSelectedValue" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }
+
+  
+  /** \~german
+   * \brief  Ruft die Methode MemorizeTooltip(FN) des aktuellen GUI-Objektes via
+   * "late bound function call" auf.
+   *
+   * @param FN  Funktionaler Name des GUI-Objektes
+   * @return Rückgabewert ist vom Typ List&lt;String&gt;.
+   *
+   * \~english 
+   * \brief Calls the method MemorizeTooltip(FN) of the current GUI-Object as
+   * "late bound function call".
+   *
+   * @param FN Functional Name of the GUI-Object.
+   * @return Result is a List&lt;String&gt; type.
+   *
+   * \~ 
+   * @author Zoltan Hrabovszki
+   * @date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> MemorizeTooltip( String FN ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+          XPathExpressionException
+  {
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+    Log.LogFunctionStartDebug( "MemorizeTooltip", "String", FN );
+
+    Class<?>[] paramTypes ={};
+
+    this.SetChildName( FN );
+    Class<?> myFrame_Class = cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "MemorizeTooltip", paramTypes );
+      
+      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Die Methode des Objektes existiert nicht:
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "MemorizeTooltip" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }
+
+  
+  /** \~german
+   * \brief  Ruft die Methode MemorizeValue(FN) des aktuellen GUI-Objektes via
+   * "late bound function call" auf.
+   *
+   * @param FN  Funktionaler Name des GUI-Objektes
+   * @return Rückgabewert ist vom Typ List&lt;String&gt;.
+   *
+   * \~english 
+   * \brief Calls the method MemorizeValue(FN) of the current GUI-Object as
+   * "late bound function call".
+   *
+   * @param FN Functional Name of the GUI-Object.
+   * @return Result is a List&lt;String&gt; type.
+   *
+   * \~ 
+   * @author Zoltan Hrabovszki
+   * @date 2012.11.01
+   */
+  @SuppressWarnings( "unchecked" )
+  public ArrayList<String> MemorizeValue( String FN ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
+          XPathExpressionException
+  {
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+    Boolean bOK = false;
+    Log.LogFunctionStartDebug( "MemorizeValue", "String", FN );
+
+    Class<?>[] paramTypes ={};
+
+    this.SetChildName( FN );
+    Class<?> myFrame_Class = cvoObject.getClass();
+
+    try
+    {
+      Method myMethod = myFrame_Class.getMethod( "MemorizeValue", paramTypes );
+      
+      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject );
+      bOK = true;
+    }
+    catch (NoSuchMethodException e)
+    {
+      // Die Methode des Objektes existiert nicht:
+      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
+      // aussteigen...
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "MemorizeValue" );
+      throw new OKWFrameObjectMethodNotFoundException( errorText );
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvLsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvLsReturn;
+  }
+ 
 
   /**
    * \~german
@@ -1813,7 +2054,7 @@ public class OKW_CurrentObject_Sngltn
     this.SetChildName( FN );
     
     Class<?>[] paramTypes = { String.class, String.class };
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -1843,6 +2084,7 @@ public class OKW_CurrentObject_Sngltn
     return lvLsReturn;
   }
 
+  
   /**
    * \~german
    * \brief Ruft eine Methode des aktuellen Objektes via
@@ -1884,7 +2126,7 @@ public class OKW_CurrentObject_Sngltn
     this.SetChildName( FN );
     
     Class<?>[] paramTypes = { String.class, String.class };
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -1898,73 +2140,6 @@ public class OKW_CurrentObject_Sngltn
       // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
       // aussteigen...
       String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "LogTablecellValue" );
-      throw new OKWFrameObjectMethodNotFoundException( errorText );
-    }
-    finally
-    {
-      if ( bOK )
-      {
-        Log.LogFunctionEndDebug( lvLsReturn );
-      }
-      else
-      {
-        Log.LogFunctionEndDebug();
-      }
-    }
-    return lvLsReturn;
-  }
-  
-  
-  /**
-   * \~german \brief Ruft eine Methode des aktuellen Objektes via
-   * "latebound function call" auf. Die aufgerufene Methode hat die Signatur:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------------| | 1.
-   * Parameter | List&lt;String&gt; | | Rückgabewert | List&lt;String&gt; |
-   *
-   *
-   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
-   * fpLsParameter_1 1. Parameter als List&lt;String&gt;. \return
-   * List&lt;String&gt; .
-   *
-   * \~english \brief Calls a method of the current Object with
-   * "late bound function call". The called method has the signature:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------------| | 1st
-   * Parameter | List&lt;String&gt; | | Return | List&lt;String&gt; |
-   *
-   *
-   * \param fpsMethod Name of the method to be called \param fpLsParameter_1 1st
-   * parameter as list&lt;String&gt;. \return List&lt;String&gt; .
-   *
-   * \~ \author Zoltan Hrabovszki \date 2012.11.01
-   */
-  @SuppressWarnings( "unchecked" )
-  @Deprecated
-  public ArrayList<String> CallMethodReturn_ListString( String fpsMethod, ArrayList<String> fpLsParameter_1 ) throws IllegalAccessException,
-          IllegalArgumentException, InvocationTargetException, XPathExpressionException
-  {
-    ArrayList<String> lvLsReturn = new ArrayList<String>();
-    Boolean bOK = false;
-
-    Log.LogFunctionStartDebug( "CallMethodWithReturn", "String fpsMethod", fpsMethod, "ArrayList<String> fpLsParameter_1", fpLsParameter_1.toString() );
-
-    Class<?>[] paramTypes =
-    { ArrayList.class };
-    Class<?> myFrame_Class = this.cvoObject.getClass();
-
-    try
-    {
-      Method myMethod = myFrame_Class.getMethod( fpsMethod, paramTypes );
-      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject, fpLsParameter_1 );
-      bOK = true;
-    }
-    catch (NoSuchMethodException e)
-    {
-      // Existiert die Methode des Objektes?
-      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
-      // aussteigen...
-      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", fpsMethod );
       throw new OKWFrameObjectMethodNotFoundException( errorText );
     }
     finally
@@ -2017,7 +2192,7 @@ public class OKW_CurrentObject_Sngltn
 
     this.SetChildName( FN );
     Class<?>[] paramTypes = { ArrayList.class };
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -2078,79 +2253,6 @@ public class OKW_CurrentObject_Sngltn
    * \~ \author Zoltan Hrabovszki \date 2012.11.01
    */
   @SuppressWarnings( "unchecked" )
-  @Deprecated
-  public ArrayList<String> CallMethodReturn_ListString( String fpsMethod, String fpsParameter_1, String fpsParameter_2, ArrayList<String> fpLsParameter_3 )
-          throws Exception, SecurityException
-  {
-    ArrayList<String> lvLsReturn = new ArrayList<String>();
-    Boolean bOK = false;
-
-    Log.LogFunctionStartDebug( "CallMethodReturn_ListString", "String fpsMethod", fpsMethod, "String fpsParam1", fpsParameter_1, "String fpsParameter_2",
-            fpsParameter_2, "ArrayList<String> fpLsParameter_3", fpLsParameter_3.toString() );
-
-    Class<?>[] paramTypes =
-    { String.class, String.class, ArrayList.class };
-    Class<?> myFrame_Class = this.cvoObject.getClass();
-
-    try
-    {
-      Method myMethod = myFrame_Class.getMethod( fpsMethod, paramTypes );
-      lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject, fpsParameter_1, fpsParameter_2, fpLsParameter_3 );
-      bOK = true;
-    }
-    catch (NoSuchMethodException e)
-    {
-      // Existiert die Methode des Objektes?
-      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
-      // aussteigen...
-      String errorText = this.LM.GetMessage( "CallMethod", "MethodNotDefined", fpsMethod );
-      throw new OKWFrameObjectMethodNotFoundException( errorText );
-    }
-    finally
-    {
-      if ( bOK )
-      {
-        Log.LogFunctionEndDebug( lvLsReturn );
-      }
-      else
-      {
-        Log.LogFunctionEndDebug();
-      }
-    }
-    return lvLsReturn;
-  }
-
-  
-  /**
-   * \~german \brief Ruft eine Methode des aktuellen Objektes via
-   * "late bound function call" auf. Die aufgerufene Methode hat die Signatur:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------------| | 1.
-   * Parameter | String | | 2. Parameter | String | | 3. Parameter |
-   * List&lt;String&gt; | | Rückgabewert | List&lt;String&gt; |
-   *
-   *
-   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
-   * fpsParameter_1 1. Parameter als String. \param fpsParameter_2 2. Parameter
-   * als String. \param fpLsParameter_3 3. Parameter als List&lt;String&gt;.
-   * \return List&lt;String&gt; .
-   *
-   * \~english \brief Calls a method of the current Object with
-   * "late bound function call". The called method has the signature:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------------| | 1st
-   * Parameter | String | | 2nd Parameter | String | | 3rd Parameter |
-   * List&lt;String&gt; | | Return | List&lt;String&gt; |
-   *
-   *
-   * \param fpsMethod Name of the method to be called \param fpsParameter_1 1st
-   * parameter as String. \param fpsParameter_2 2nd parameter as String. \param
-   * fpLsParameter_3 3rd parameter as list&lt;String&gt;. \return
-   * List&lt;String&gt; .
-   *
-   * \~ \author Zoltan Hrabovszki \date 2012.11.01
-   */
-  @SuppressWarnings( "unchecked" )
   public ArrayList<String> VerifyTablecellValue( String FN, String fpsCol, String fpsRow, ArrayList<String> fpLsExpVal )
           throws Exception, SecurityException
   {
@@ -2164,7 +2266,7 @@ public class OKW_CurrentObject_Sngltn
     this.SetChildName( FN );
     Class<?>[] paramTypes =
     { String.class, String.class, ArrayList.class };
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -2177,7 +2279,7 @@ public class OKW_CurrentObject_Sngltn
       // Existiert die Methode des Objektes?
       // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
       // aussteigen...
-      String errorText = this.LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyTablecellValue" );
+      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifyTablecellValue" );
       throw new OKWFrameObjectMethodNotFoundException( errorText );
     }
     finally
@@ -2192,135 +2294,8 @@ public class OKW_CurrentObject_Sngltn
       }
     }
     return lvLsReturn;
-  }  
-
-  
-  /**
-   * \~german \brief Ruft eine Methode des aktuellen Objektes via
-   * "late bound function call" auf. Die aufgerufene Methode hat die Signatur:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------------| |
-   * Parameter | keine | | Rückgabewert | String |
-   *
-   *
-   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \return
-   * String.
-   *
-   * \~english \brief Calls a method of the current Object
-   * "late bound function call". The called method has the signature:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------------| |
-   * Parameter | none | | Return | String |
-   *
-   *
-   * \param fpsMethod Name of the method to be called. \return String.
-   *
-   * \~ \author Zoltan Hrabovszki \date 2012.11.01
-   */
-  @Deprecated
-  public String CallMethodReturn_String( String fpsMethod ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException,
-          XPathExpressionException
-  {
-    String lvsReturn = "";
-    Boolean bOK = false;
-
-    Log.LogFunctionStartDebug( "CallMethodWithReturn", "String fpsMethod", fpsMethod );
-
-    Class<?>[] paramTypes =
-    {};
-    Class<?> myFrame_Class = this.cvoObject.getClass();
-
-    try
-    {
-      Method myMethod = myFrame_Class.getMethod( fpsMethod, paramTypes );
-      lvsReturn = ( String ) myMethod.invoke( cvoObject );
-      bOK = true;
-    }
-    catch (NoSuchMethodException e)
-    {
-      // Existiert die Methode des Objektes?
-      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
-      // aussteigen...
-      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", fpsMethod );
-      throw new OKWFrameObjectMethodNotFoundException( errorText );
-    }
-    finally
-    {
-      if ( bOK )
-      {
-        Log.LogFunctionEndDebug( lvsReturn );
-      }
-      else
-      {
-        Log.LogFunctionEndDebug();
-      }
-    }
-    return lvsReturn;
   }
-
-  /**
-   * \~german \brief Ruft eine Methode des aktuellen Objektes via
-   * "late bound function call" auf. Die aufgerufene Methode hat die Signatur:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------------| | 1.
-   * Parameter | String | | Rückgabewert | String |
-   *
-   *
-   * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
-   * fpsParameter_1 1. Parameter als String. \return String.
-   *
-   * \~english \brief Calls a method of the current Object with
-   * "late bound function call". The called method has the signature:
-   *
-   * | Parameter/Return | Type | | :----------------|:-------------------| | 1st
-   * Parameter | String | | Return | String |
-   *
-   *
-   * \param fpsMethod Name of the method to be called. \param fpsParameter_1 1st
-   * parameter as String. \return String.
-   *
-   * \~ \author Zoltan Hrabovszki \date 2013.05.17
-   */
-  @Deprecated
-  public String CallMethodReturn_String( String fpsMethod, String fpsParameter_1 ) throws IllegalAccessException, IllegalArgumentException,
-          InvocationTargetException, XPathExpressionException
-  {
-    String lvsReturn = "";
-    Boolean bOK = false;
-
-    Log.LogFunctionStartDebug( "CallMethodWithReturn", "String fpsMethod", fpsMethod, "String fpsParameter_1", fpsParameter_1 );
-
-    Class<?>[] paramTypes =
-    { String.class };
-    Class<?> myFrame_Class = this.cvoObject.getClass();
-
-    try
-    {
-      Method myMethod = myFrame_Class.getMethod( fpsMethod, paramTypes );
-      lvsReturn = ( String ) myMethod.invoke( cvoObject, fpsParameter_1 );
-      bOK = true;
-    }
-    catch (NoSuchMethodException e)
-    {
-      // Existiert die Methode des Objektes?
-      // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
-      // aussteigen...
-      String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", fpsMethod );
-      throw new OKWFrameObjectMethodNotFoundException( errorText );
-    }
-    finally
-    {
-      if ( bOK )
-      {
-        Log.LogFunctionEndDebug( lvsReturn );
-      }
-      else
-      {
-        Log.LogFunctionEndDebug();
-      }
-    }
-    return lvsReturn;
-  }
+ 
 
   // \~german
   // \brief  Ruft die Methode ClickOn( ) des aktuellen GUI-Objektes via
@@ -2344,7 +2319,7 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "ClickOn", "String", FN );
   
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
     Method myMethod = null;
   
     // Schenwir
@@ -2375,12 +2350,6 @@ public class OKW_CurrentObject_Sngltn
         String myMessage = e2.getMessage();
         System.out.println( myMessage );
       }
-  
-    }
-    catch (Exception e)
-    {
-      String myMessage = e.getMessage();
-      System.out.println( myMessage );
     }
     finally
     {
@@ -2412,7 +2381,7 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "DoubleClickOn" );
   
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
     Method myMethod = null;
   
     // Schenwir
@@ -2443,12 +2412,6 @@ public class OKW_CurrentObject_Sngltn
         String myMessage = e2.getMessage();
         System.out.println( myMessage );
       }
-  
-    }
-    catch (Exception e)
-    {
-      String myMessage = e.getMessage();
-      System.out.println( myMessage );
     }
     finally
     {
@@ -2457,7 +2420,6 @@ public class OKW_CurrentObject_Sngltn
     return;
   }
 
-  
   
   /**
    * \~german \brief Liefert die Referenz zum aktuellen Frame-Object. Referenz
@@ -2479,14 +2441,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "CurrentObject.GetCurrentObject" );
     try
     {
-      lvoReturn = this.cvoObject;
+      lvoReturn = cvoObject;
       bOK = true;
     }
     finally
     {
       if ( bOK )
       {
-        Log.LogFunctionEndDebug( this.cvoObject.getClass().getName() );
+        Log.LogFunctionEndDebug( cvoObject.getClass().getName() );
       }
       else
       {
@@ -2496,6 +2458,7 @@ public class OKW_CurrentObject_Sngltn
     return lvoReturn;
   }
 
+  
   /**
    * \~german \brief Ermittelt den ObjektNamen des aktuellen Objektes.
    *
@@ -2517,7 +2480,7 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "CurrentObject.GetObjectName" );
     try
     {
-      lvsReturn = this.cvsObjectFN;
+      lvsReturn = cvsFullObjectFN;
       bOK = true;
     }
     finally
@@ -2534,6 +2497,84 @@ public class OKW_CurrentObject_Sngltn
     return lvsReturn;
   }
 
+  
+  /**
+   * \~german \brief Ermittelt den FN des des aktuellen Fenster-Objektes.
+   *
+   * \return Liefert den Objektnamen in der Form "WindowName" oder
+   * "WindowName".
+   *
+   * \~english \brief Detecting the ObejctName of the current Object
+   *
+   * \return Gives the ObjectName in the form "WindowName.ChildName" or
+   * "WindowName".
+   *
+   * \~ \author Zoltan Hrabovszki \date 2012.11.01
+   */
+  public String GetWindowFN()
+  {
+    String lvsReturn = "";
+    ;
+    Boolean bOK = false;
+    Log.LogFunctionStartDebug( "CurrentObject.GetWindowFN" );
+    try
+    {
+      lvsReturn = cvsWindowFN;
+      bOK = true;
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvsReturn;
+  }
+
+  
+  /**
+   * \~german \brief Ermittelt den FN des des aktuellen Kind-Objektes.
+   *
+   * \return Liefert den Objektnamen in der Form "ChildName".
+   *
+   * \~english \brief Detecting the ObejctName of the current Object
+   *
+   * \return Gives the ObjectName in the form "WindowName.ChildName" or
+   * "WindowName".
+   *
+   * \~ \author Zoltan Hrabovszki \date 2012.11.01
+   */
+  public String GetChildFN()
+  {
+    String lvsReturn = "";
+    ;
+    Boolean bOK = false;
+    Log.LogFunctionStartDebug( "CurrentObject.GetChildFN" );
+    try
+    {
+      lvsReturn = cvsChildFN;
+      bOK = true;
+    }
+    finally
+    {
+      if ( bOK )
+      {
+        Log.LogFunctionEndDebug( lvsReturn );
+      }
+      else
+      {
+        Log.LogFunctionEndDebug();
+      }
+    }
+    return lvsReturn;
+  }
+
+  
   /**
    * \~german \brief Führt die Initialisierung der Klasse durch: Es werden alle
    * Felder der Klasse auf einen definierten Anfangszustand zurükgesetzt;
@@ -2545,21 +2586,22 @@ public class OKW_CurrentObject_Sngltn
    *
    * \~ \author Zoltan Hrabovszki \date 2012.12.15
    */
-  public void Init() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+  public static void Init() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
   {
-    Log.LogFunctionStartDebug( "CurrentObject.Init" );
+    //Log.LogFunctionStartDebug( "CurrentObject.Init" );
     try
     {
-      this.LM = new LogMessenger( "OKW_CurrentObject" );
-      this.cvoObject = null;
-      this.cvsWindowFN = "";
-      this.cvsObjectName = "";
-      this.myFrameObjectDictionary = null;
-      this.myFrameObjectDictionary = FrameObjectDictionary_Sngltn.getInstance();
+      LM = new LogMessenger( "OKW_CurrentObject" );
+      cvoObject = null;
+      cvsWindowFN = "";
+      cvsChildFN = "";
+      cvsObjectName = "";
+      myFrameObjectDictionary = null;
+      myFrameObjectDictionary = FrameObjectDictionary_Sngltn.getInstance();
     }
     finally
     {
-      Log.LogFunctionEndDebug();
+      //Log.LogFunctionEndDebug();
     }
     return;
   }
@@ -2570,7 +2612,7 @@ public class OKW_CurrentObject_Sngltn
    * Objekt aus. Diese soll im Fehler- oder Ausnahmefall bei der Fehlersuche
    * durch Ausgabe der aktuellen Objektdaten helfen. <br/>
    * Diese Daten werden ausgegeben: * Window Name: cvsWindowName * Name des
-   * Kindes: cvsChildName * Objektklasse: this.cvoObject.getClass().Name *
+   * Kindes: cvsChildName * Objektklasse: cvoObject.getClass().Name *
    * Voller Name des Objektes: cvsObjectName
    *
    * \note Methode wird während der Ausnahmebehandlung aufgerufen.
@@ -2579,7 +2621,7 @@ public class OKW_CurrentObject_Sngltn
    * current Object. This should help in error or exception when debugging by
    * outputting the current data Object.<br/>
    * These data will be returned: * Window Name: cvsWindowName * Name of Child:
-   * cvsChildName * Class of Object: this.cvoObject.getClass().Name * Fullname
+   * cvsChildName * Class of Object: cvoObject.getClass().Name * Fullname
    * of Object: cvsObjectName
    *
    * \note Method is called during exception handling.
@@ -2592,10 +2634,10 @@ public class OKW_CurrentObject_Sngltn
     try
     {
       Log.ResOpenList( "Object Data:" );
-      Log.LogPrint( this.LM.GetMessage( "LogObjectData", "WindowName", this.cvsWindowFN ) );
-      Log.LogPrint( this.LM.GetMessage( "LogObjectData", "ChildWindowName", this.cvsChildFN ) );
-      Log.LogPrint( this.LM.GetMessage( "LogObjectData", "Class of Object", this.cvoObject.getClass().getSimpleName() ) );
-      Log.LogPrint( this.LM.GetMessage( "LogObjectData", "FullNameOfObject", this.cvsObjectName ) );
+      Log.LogPrint( LM.GetMessage( "LogObjectData", "WindowName", cvsWindowFN ) );
+      Log.LogPrint( LM.GetMessage( "LogObjectData", "ChildWindowName", cvsChildFN ) );
+      Log.LogPrint( LM.GetMessage( "LogObjectData", "Class of Object", cvoObject.getClass().getSimpleName() ) );
+      Log.LogPrint( LM.GetMessage( "LogObjectData", "FullNameOfObject", cvsObjectName ) );
     }
     catch (Exception e)
     {
@@ -2610,25 +2652,31 @@ public class OKW_CurrentObject_Sngltn
 
   
   /**
-   * \~german \brief Setzt das Kindobjekt.
+   * \~german
+   * Setzt das Kindobjekt.
    *
-   * \return Liefert die Objektreferenz auf das aktuelle Objekt this.cvoObject
-   * aus dem Rückgabewert. \param fpsChildName Fachlicher Name des
+   * @return Liefert die Objektreferenz auf das aktuelle Objekt cvoObject
+   * aus dem Rückgabewert.
+   * @param fpsChildName Fachlicher Name des
    * Kind-Objektes.
    *
    * \note Wichtig! Das Fenster-Objekt muss gesetzt sein!<br/>
    * Ist dies nicht der Fall, wird eine OKW.OKW_Kernel_Exception Exception
    * ausgelöst
    *
-   * \~english \brief Setting the Child Object.
+   * \~english
+   * Setting the Child Object.
    *
-   * \return Returns the Object reference to the current Object this.cvoObject
-   * with the return. \param fpsChildName Professional name of the Child Object
+   * @param fpsChildName Funktional name of the Child Object.
+   * @return Returns the Object reference to the current Object cvoObject
+   * with the return. 
    *
    * \note Notice! The Windows Object must be set!<br/>
    * If not, a OKW.OKW_Kernel_Exception Exception will be triggered.
    *
-   * \~ \author Zoltan Hrabovszki \date 2012.11.01
+   * \~
+   * @author Zoltan Hrabovszki
+   * @date 2012.11.01
    * @throws IllegalAccessException 
    * @throws IllegalArgumentException 
    */
@@ -2639,17 +2687,17 @@ public class OKW_CurrentObject_Sngltn
     Log.LogPrintDebug( LM.GetMessage( "SetChildName", "GivenWindownameDebug" ) );
     try
     {
-      if ( !OKW_Helper.StringIsNullOrEmpty( this.cvsWindowFN ) )
+      if ( !OKW_Helper.StringIsNullOrEmpty( cvsWindowFN ) )
       {
-        Log.LogPrintDebug( LM.GetMessage( "SetChildName", "SetChildwindowNameDebug", this.cvsWindowFN, this.cvsChildFN ) );
-        this.cvsChildFN = fpsChildName;
+        Log.LogPrintDebug( LM.GetMessage( "SetChildName", "SetChildwindowNameDebug", cvsWindowFN, cvsChildFN ) );
+        cvsChildFN = fpsChildName;
         this.UpdateObject();
         bOK = true;
       }
       else
       {
         // Fenster Objekt wurde nicht gesetzt, Exception auslösen...
-        String ErrorText = this.LM.GetMessage( "SetChildName", "OKWFrameObjectWindowNotSetException" );
+        String ErrorText = LM.GetMessage( "SetChildName", "OKWFrameObjectWindowNotSetException" );
         throw new OKWFrameObjectWindowNotSetException( ErrorText );
       }
     }
@@ -2657,61 +2705,55 @@ public class OKW_CurrentObject_Sngltn
     {
       if ( bOK )
       {
-        Log.LogFunctionEndDebug( this.cvoObject.getClass().getName() );
+        Log.LogFunctionEndDebug( cvoObject.getClass().getName() );
       }
       else
       {
         Log.LogFunctionEndDebug();
       }
     }
-    return this.cvoObject;
+    return cvoObject;
   }
 
-  //
-  // \~german
-  // \brief Ruft eine Methode SetValue des aktuellen Objektes via
-  // "Latebound Function Call" auf.<br/>
-  // Die aufgerufene Methode hat die Signatur:<br/>
-  //
-  // | Parameter/Return | Type | | :----------------|:-------------------| | 1.
-  // Parameter | List&lt;String&gt; | | Rückgabewert | List&lt;String&gt; |
-  //
-  // @param fpLsParameter_1
-  //          Parameter als List&lt;String&gt;.
-  // @return ArrayList&lt;String&gt; .
-  //
-  //         
-  // \~english
-  // \brief Calls a method of the current Object with
-  //         "late bound function call". The called method has the signature:
-  //
-  //         | Parameter/Return | Type | |
-  //         :----------------|:-------------------| | 1st Parameter |
-  //         List&lt;String&gt; | | Return | List&lt;String&gt; |
-  //
-  //
-  //         param fpLsParameter_1 parameter as list&lt;String&gt;.
-  // @return List&lt;String&gt; .
-  //         
-  // \~
-  // @author Zoltan Hrabovszki
-  // @throws InterruptedException
-  // @date 2012.11.01
-  //
-  public void SetValue( ArrayList<String> fpALExpectedValues ) throws IllegalAccessException, IllegalArgumentException,
+  /**
+   * \~german
+   * Ruft eine Methode SetValue( Val ) des aktuellen Objektes via "Latebound Function Call" auf.
+   * Die aufgerufene Methode hat die Signatur: void SetValue( ArrayList<String> Val )
+   *
+   * @param FN Funktionaler Name des GUI-Objektes.
+   * @param Val Werte die gestzt werden sollen.
+   * @return Kein Rückgabewert.
+   *
+   *         
+   * \~english
+   * Calls a method of the current Object as "late bound function call". 
+   * 
+   * The called method has the signature: void SetValue( ArrayList<String> Val )
+   * 
+   * @param FN Functional name of the GUI-Objec.
+   * @param Val Values to set.
+   * @return Kein Rückgabewert.
+   *         
+   * \~
+   * @author Zoltan Hrabovszki
+   * @throws InterruptedException
+   * @date 2012.11.01
+   */
+  public void SetValue( String FN, ArrayList<String> Val ) throws IllegalAccessException, IllegalArgumentException,
           InvocationTargetException, XPathExpressionException, InterruptedException
   {
 
-    Log.LogFunctionStartDebug( "SetValue", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
+    Log.LogFunctionStartDebug( "SetValue", "ArrayList<String> fpVal", Val.toString() );
 
+    this.SetChildName( FN );
     Class<?>[] paramTypes = { ArrayList.class };
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "SetValue", paramTypes );
 
-      myMethod.invoke( cvoObject, fpALExpectedValues );
+      myMethod.invoke( cvoObject, Val );
 
     }
     catch (NoSuchMethodException e)
@@ -2757,10 +2799,10 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "CurrentObject.SetWindowName", "String fpsWindowName", fpsWindowName );
     try
     {
-      this.cvsWindowFN = fpsWindowName;
-      this.cvsChildFN = "";
+      cvsWindowFN = fpsWindowName;
+      cvsChildFN = "";
       this.UpdateObject();
-      lvoReturn = this.cvoObject;
+      lvoReturn = cvoObject;
       bOK = true;
     }
     finally
@@ -2800,7 +2842,7 @@ public class OKW_CurrentObject_Sngltn
     Log.LogPrintDebug( LM.GetMessage( "ResetToWindow", "ResetToWindowDebug" ) );
     try
     {
-      this.cvsChildFN = "";
+      cvsChildFN = "";
       this.UpdateObject();
       bOK = true;
     }
@@ -2808,16 +2850,17 @@ public class OKW_CurrentObject_Sngltn
     {
       if ( bOK )
       {
-        Log.LogFunctionEndDebug( this.cvoObject.getClass().getName() );
+        Log.LogFunctionEndDebug( cvoObject.getClass().getName() );
       }
       else
       {
         Log.LogFunctionEndDebug();
       }
     }
-    return this.cvoObject;
+    return cvoObject;
   }
 
+  
   /**
    * \~german \brief Methode aktualisert zwei Werte: *
    * OKW.CurrentObject.cvsObjectName wird aktualisiert und *
@@ -2848,25 +2891,25 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "CurrentObject.UpdateObject" );
     try
     {
-      if ( this.cvsChildFN == "" )
+      if ( cvsChildFN == "" )
       {
         // -> 2. Get the Window-Object...
-        this.cvoObject = myFrameObjectDictionary.GetParentObjectByName( this.cvsWindowFN );
-        this.cvsObjectName = this.cvoObject.getClass().getName();
-        this.cvsObjectFN = this.cvsWindowFN;
+        cvoObject = myFrameObjectDictionary.GetParentObjectByName( cvsWindowFN );
+        cvsObjectName = cvoObject.getClass().getName();
+        cvsFullObjectFN = cvsWindowFN;
 
       }
       else
       {
         // < 1. Set the cvsObjectName for a child-Object.
-        this.cvsObjectFN = this.cvsWindowFN + "." + this.cvsChildFN;
+        cvsFullObjectFN = cvsWindowFN + "." + cvsChildFN;
 
         // < 2. Now get the Object-Instance...
-        this.cvoObject = null;
-        this.cvoObject = myFrameObjectDictionary.GetChildObjectByName( this.cvsWindowFN, this.cvsChildFN );
+        cvoObject = null;
+        cvoObject = myFrameObjectDictionary.GetChildObjectByName( cvsWindowFN, cvsChildFN );
 
         // < 3. Set tecnicalname of Object-Instance...
-        this.cvsObjectName = this.cvoObject.getClass().getName();
+        cvsObjectName = cvoObject.getClass().getName();
       }
     }
     finally
@@ -2875,6 +2918,8 @@ public class OKW_CurrentObject_Sngltn
     }
     return;
   }
+  
+  
   /**
    * \~german \brief Ruft eine Methode VerifyLabel des aktuellen Objektes via
    * "latebound function call" auf.<br/>
@@ -2919,14 +2964,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyLabel", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyLabel" );
 
-      VerifyLabel_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyLabel_PT();
-      VerifyLabel_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyLabel_TO();
+      VerifyLabel_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyLabel_PT();
+      VerifyLabel_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyLabel_TO();
 
       Log.LogPrintDebug("VerifyValue_PT: " + VerifyLabel_PT.toString() );
       Log.LogPrintDebug("VerifyValue_TO: " + VerifyLabel_TO.toString() );
@@ -3021,14 +3066,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyValueREGX", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyLabel" );
 
-      VerifyLabel_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyLabel_PT();
-      VerifyLabel_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyLabel_TO();
+      VerifyLabel_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyLabel_PT();
+      VerifyLabel_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyLabel_TO();
 
       MaxCount = CalculateLoopCount( VerifyLabel_PT, VerifyLabel_TO );
       Count = 0;
@@ -3118,14 +3163,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyLabelWCM", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedWCMs.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyLabel" );
 
-      VerifyLabel_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyLabel_PT();
-      VerifyLabel_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyLabel_TO();
+      VerifyLabel_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyLabel_PT();
+      VerifyLabel_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyLabel_TO();
 
       MaxCount = CalculateLoopCount( VerifyLabel_PT, VerifyLabel_TO );
       Count = 0;
@@ -3170,6 +3215,7 @@ public class OKW_CurrentObject_Sngltn
     return lvLsReturn;
   }
 
+  
   /**
    * \~german \brief Ruft eine Methode VerifyValue des aktuellen Objektes via
    * "latebound function call" auf.<br/>
@@ -3214,15 +3260,15 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyValue", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyValue" );
-
-      VerifyValue_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyValue_PT();
-      VerifyValue_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyValue_TO();
-
+      
+      VerifyValue_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyValue_PT();
+      VerifyValue_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyValue_TO();
+      
       Log.LogPrintDebug("VerifyValue_PT: " + VerifyValue_PT.toString() );
       Log.LogPrintDebug("VerifyValue_TO: " + VerifyValue_TO.toString() );
       
@@ -3272,6 +3318,7 @@ public class OKW_CurrentObject_Sngltn
     return lvLsReturn;
   }
 
+  
   /**
    * \~german \brief Ruft eine Methode VerifyValue des aktuellen Objektes via
    * "latebound function call" auf.<br/>
@@ -3316,14 +3363,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyValueREGX", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyValue" );
 
-      VerifyValue_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyValue_PT();
-      VerifyValue_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyValue_TO();
+      VerifyValue_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyValue_PT();
+      VerifyValue_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyValue_TO();
 
       MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
       Count = 0;
@@ -3368,6 +3415,7 @@ public class OKW_CurrentObject_Sngltn
     return lvLsReturn;
   }
 
+  
   /**
    * \~german \brief Ruft eine Methode VerifyValue des aktuellen Objektes via
    * "latebound function call" auf.<br/>
@@ -3413,14 +3461,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyValueWCM", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedWCMs.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyValue" );
 
-      VerifyValue_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyValue_PT();
-      VerifyValue_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyValue_TO();
+      VerifyValue_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyValue_PT();
+      VerifyValue_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyValue_TO();
 
       MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
       Count = 0;
@@ -3465,6 +3513,7 @@ public class OKW_CurrentObject_Sngltn
     return lvLsReturn;
   }
 
+  
   /**
    * \~german \brief Ruft eine Methode des aktuellen Objektes via
    * "late bound function call" auf. Die aufgerufene Methode hat die Signatur:
@@ -3494,7 +3543,7 @@ public class OKW_CurrentObject_Sngltn
     this.SetWindowName( FN );
     
     Class<?>[] paramTypes = { String.class };
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -3561,14 +3610,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyCaption", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyCaption" );
 
-      VerifyValue_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyCaption_PT();
-      VerifyValue_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyCaption_TO();
+      VerifyValue_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyCaption_PT();
+      VerifyValue_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyCaption_TO();
 
       Log.LogPrintDebug("VerifyValue_PT: " + VerifyValue_PT.toString() );
       Log.LogPrintDebug("VerifyValue_TO: " + VerifyValue_TO.toString() );
@@ -3663,14 +3712,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyCaptionREGX", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyCaption" );
 
-      VerifyValue_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyCaption_PT();
-      VerifyValue_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyCaption_TO();
+      VerifyValue_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyCaption_PT();
+      VerifyValue_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyCaption_TO();
 
       MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
       Count = 0;
@@ -3760,14 +3809,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyCaptionWCM", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedWCMs.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyCaption" );
 
-      VerifyValue_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyCaption_PT();
-      VerifyValue_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyCaption_TO();
+      VerifyValue_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyCaption_PT();
+      VerifyValue_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyCaption_TO();
 
       MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
       Count = 0;
@@ -3811,6 +3860,8 @@ public class OKW_CurrentObject_Sngltn
     }
     return lvLsReturn;
   }
+
+  
   /**
    * \~german \brief Ruft eine Methode VerifyCaption des aktuellen Objektes via
    * "Latebound Function Call" auf.<br/>
@@ -3855,14 +3906,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyTooltip", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedValues.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyTooltip" );
 
-      VerifyTooltip_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyTooltip_PT();
-      VerifyTooltip_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyTooltip_TO();
+      VerifyTooltip_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyTooltip_PT();
+      VerifyTooltip_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyTooltip_TO();
 
       Log.LogPrintDebug("VerifyTooltip_PT: " + VerifyTooltip_PT.toString() );
       Log.LogPrintDebug("VerifyTooltip_TO: " + VerifyTooltip_TO.toString() );
@@ -3913,6 +3964,7 @@ public class OKW_CurrentObject_Sngltn
     return lvLsReturn;
   }
 
+
   /**
    * \~german \brief Ruft eine Methode VerifyCaption des aktuellen Objektes via
    * "latebound function call" auf.<br/>
@@ -3957,14 +4009,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyTooltipREGX", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyTooltip" );
 
-      VerifyTooltip_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyTooltip_PT();
-      VerifyTooltip_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyTooltip_TO();
+      VerifyTooltip_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyTooltip_PT();
+      VerifyTooltip_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyTooltip_TO();
 
       MaxCount = CalculateLoopCount( VerifyTooltip_PT, VerifyTooltip_TO );
       Count = 0;
@@ -4009,6 +4061,7 @@ public class OKW_CurrentObject_Sngltn
     return lvLsReturn;
   }
 
+  
   /**
    * \~german \brief Ruft eine Methode VerifyTooltipWCM des aktuellen Objektes via
    * "latebound function call" auf.<br/>
@@ -4054,14 +4107,14 @@ public class OKW_CurrentObject_Sngltn
     Log.LogFunctionStartDebug( "VerifyTooltipWCM", "String", "FN", "ArrayList<String> fpALExpectedValues", fpALExpectedWCMs.toString() );
 
     this.SetChildName( FN );
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyTooltip" );
 
-      VerifyTooltip_PT = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyTooltip_PT();
-      VerifyTooltip_TO = ((Field) this.myFrameObjectDictionary.myFrameObjectDictionary.get( cvsObjectFN )).getAnnotation(OKW.class).VerifyTooltip_TO();
+      VerifyTooltip_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyTooltip_PT();
+      VerifyTooltip_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyTooltip_TO();
 
       MaxCount = CalculateLoopCount( VerifyTooltip_PT, VerifyTooltip_TO );
       Count = 0;
@@ -4105,7 +4158,8 @@ public class OKW_CurrentObject_Sngltn
     }
     return lvLsReturn;
   }
-  
+
+
   /**
    * \~german \brief Ruft eine Methode des aktuellen Objektes via
    * "late bound function call" auf.
@@ -4138,7 +4192,7 @@ public class OKW_CurrentObject_Sngltn
 
     Class<?>[] paramTypes = { ArrayList.class };
 
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
 
     try
     {
@@ -4189,7 +4243,7 @@ public class OKW_CurrentObject_Sngltn
   {
     Log.LogFunctionStartDebug( "SelectMenu" );
 
-    Class<?> myFrame_Class = this.cvoObject.getClass();
+    Class<?> myFrame_Class = cvoObject.getClass();
     Method myMethod = null;
 
     // Schenwir

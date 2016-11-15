@@ -125,7 +125,7 @@ public class OKW_GetJavaClass
 			}
 			else if ( file.getName().endsWith( ".class" ) )
 			{
-				System.out.println( ">>Class: " + file.getName() );
+				// System.out.println( ">>Class: " + file.getName() );
 				classes.add( packageName
 						+ '.'
 						+ file.getName().substring( 0,

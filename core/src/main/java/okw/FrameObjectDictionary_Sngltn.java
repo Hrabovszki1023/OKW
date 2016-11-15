@@ -93,41 +93,35 @@ public class FrameObjectDictionary_Sngltn
   // / \date 2014.10.10
   // / \todo TODO: Bedingte Kompilierung einfügen für "Test" Feld muss Public
   // / sein, wenn unittets durchgeführt werden soll.
-  public Map<String, Object>   myFrameObjectDictionary = new HashMap<String, Object>();
+  public static Map<String, Object>   myFrameObjectDictionary = new HashMap<String, Object>();
 
-  // / \copydoc CurrentObject::Log()
-  private static Logger_Sngltn Log                     = Logger_Sngltn.getInstance();
+  public static Map<String, Object>   myAnnotationDictionary = new HashMap<String, Object>();
+  
+  /**
+   *  \copydoc CurrentObject::Log()
+   */
+  private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
-  // / \copydoc CurrentObject::LM()
+  /**
+   *  \copydoc CurrentObject::LM()
+   */
   private static LogMessenger  LM;
 
-  // / \~german
-  // / \brief
-  // / Konstuktor der Klasse. Es wird die Methode FrameObjectDictionary.Init()
-  // / aufgerufen.
-  // /
-  // / \~english
-  // / \brief
-  // /
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2014.10.10
-  // /
+  private static Integer n = 0;
+  
+  /** \~german
+   *  \brief
+   *  Konstuktor der Klasse. Es wird die Methode
+   *  aufgerufen.
+   * 
+   *  \~english
+   * 
+   *  \~
+   *  @author Zoltan Hrabovszki
+   *  @date 2014.10.10
+   */
   private FrameObjectDictionary_Sngltn()
   {
-    Log.LogFunctionStartDebug( "FrameObjectDictionary.FrameObjectDictionary" );
-    try
-    {
-      this.Init();
-    }
-    catch (Exception e)
-    {
-      OKW_HandleException.StopRunning( e, Instance.getClass() );
-    }
-    finally
-    {
-      Log.LogFunctionEndDebug();
-    }
   }
 
   private static FrameObjectDictionary_Sngltn Instance = null;
@@ -146,6 +140,14 @@ public class FrameObjectDictionary_Sngltn
         if ( Instance == null )
         {
           Instance = new FrameObjectDictionary_Sngltn();
+          try
+          {
+            Init();
+          }
+          catch (Exception e)
+          {
+            OKW_HandleException.StopRunning( e, Instance.getClass() );
+          }
         }
       }
     }
@@ -283,8 +285,8 @@ public class FrameObjectDictionary_Sngltn
         Log.LogPrintDebug( LM.GetMessage( "GetChildObjectByName", "M2" ) );
         
         // Hole die Referenz auf das Objekt aus dem Dictionary 
-        Field myField = (Field) myFrameObjectDictionary.get( lvs_ObjectName );
-        lvo_Return = myField.get( this.GetParentObjectByName( fps_ParentObject ) );
+        lvo_Return = myFrameObjectDictionary.get( lvs_ObjectName );
+        // lvo_Return = myField.get( this.GetParentObjectByName( fps_ParentObject ) );
       }
       else
       {
@@ -325,7 +327,7 @@ public class FrameObjectDictionary_Sngltn
    * @author Zoltan Hrabovszki
    * @date 2014.10.10
    */
-  public void Init() throws ClassNotFoundException, InstantiationException, JAXBException, ParserConfigurationException, SAXException, IOException,
+  public static void Init() throws ClassNotFoundException, InstantiationException, JAXBException, ParserConfigurationException, SAXException, IOException,
           XPathExpressionException, IllegalArgumentException, IllegalAccessException
   {
     Log.LogFunctionStartDebug( "FrameObjectDictionary.Init" );
@@ -334,11 +336,11 @@ public class FrameObjectDictionary_Sngltn
     {
       LM = new LogMessenger( "FrameObjectDictionary" );
 
-      Log.LogPrintDebug( LM.GetMessage( "Init", "InitClear", this.getClass().getName() ) );
+      Log.LogPrintDebug( LM.GetMessage( "Init", "InitClear", "FrameObjectDictionary" ) );
 
       myFrameObjectDictionary.clear();
 
-      this.FrameScan( );
+      FrameScan( );
 
       Set<String> Keys = myFrameObjectDictionary.keySet();
 
@@ -391,14 +393,14 @@ public class FrameObjectDictionary_Sngltn
   // / \author Zoltan Hrabovszki
   // / \date 2014.10.10
   // /
-  public ArrayList<Class<?>> GetListOfOKWGuiClasses() throws ClassNotFoundException
+  public static ArrayList<Class<?>> GetListOfOKWGuiClasses() throws ClassNotFoundException
   {
     String lvsNamespace = "okw.gui.frames";
     ArrayList<Class<?>> lvALReturn = new ArrayList<Class<?>>();
 
     ClassLoader classLoader = FrameObjectDictionary_Sngltn.class.getClassLoader();
 
-    // 1. Hole Alle namen der Classen, die sich im Package "okw.gui.frames" befinden
+    // 1. Hole alle Klassen, die sich im Package "okw.gui.frames" befinden
     ArrayList<String> lvALClassNames = OKW_GetJavaClass.getClasses( lvsNamespace );
 
     try
@@ -424,28 +426,29 @@ public class FrameObjectDictionary_Sngltn
     return lvALReturn;
   }
 
-  // / \~german
-  // / \brief
-  // / \return
-  // / Liefert die Instanz der Klasse.
-  // /
-  // / \param fps_ParentClassName Name der Klasse
-  // /
-  // / \~english
-  // / \brief
-
-  // / \param fps_ParentClassName Name of the class
-  // /
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2015.01.28
-  // /
-  private void FrameScan(  ) throws InstantiationException, XPathExpressionException,
+  
+  /** \~german
+   *  \brief
+   *  \return
+   *  Liefert die Instanz der Klasse.
+   * 
+   *  \param fps_ParentClassName Name der Klasse
+   * 
+   *  \~english
+   *  \brief
+   *
+   *  \param fps_ParentClassName Name of the class
+   * 
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2015.01.28
+   */
+  private static void FrameScan(  ) throws InstantiationException, XPathExpressionException,
           IllegalArgumentException, IllegalAccessException, ClassNotFoundException
   {
     Object lvTypeInstanceAsObject = null;
 
-    Log.LogFunctionStartDebug( "FrameObjectDictionary.AddFrameInstancesToDictionary" );
+    Log.LogFunctionStartDebug( "FrameObjectDictionary.FrameScan" );
 
     try
     {
@@ -455,17 +458,17 @@ public class FrameObjectDictionary_Sngltn
       // Für jede Klasse in der Liste...
       for ( Class<?> lvOKWGuiClass : lvOKWGuiClasses )
       {
-        // Erzeuge eine Instanz der Klasse
+        // Erzeuge eine Instanz der Window-Klasse
         lvTypeInstanceAsObject = CreateInstanceByType( lvOKWGuiClass );
 
         // Fachlichen Namen der Klasse aus der die Annotiation OKW.FN() auslesen.
-        String lvsFN = this.GetFunktionlanameFromObjekt( lvTypeInstanceAsObject );
+        String lvsFN = GetFunktionlanameFromObjekt( lvTypeInstanceAsObject );
 
         // Wenn Attribute vorhanden (!=null) und nicht Leer dann ins Dictionary einfügen.
         if ( lvsFN != null && !lvsFN.isEmpty() )
         {
-          Log.ResOpenListDebug( "\n Window-Frame: >>" + lvsFN + "<<" );
-          Log.LogPrintDebug( "     Class-Name: >>" + lvTypeInstanceAsObject.getClass().getName() + "<<" );
+          Log.ResOpenList( "Window: '" + lvsFN + "'" );
+          Log.LogPrint( "Class: >>" + lvTypeInstanceAsObject.getClass().getName() + "<<" );
 
           myFrameObjectDictionary.put( lvsFN, lvTypeInstanceAsObject );
 
@@ -478,52 +481,67 @@ public class FrameObjectDictionary_Sngltn
           for ( Field lvField : lvFields )
           {
 
-            String FieldType = lvField.getType().getName();
-
-            if ( FieldType.startsWith( "okw.gui." ) )
-
-              if ( lvField.isAnnotationPresent( OKW.class ) )
+            String myFieldType   = lvField.getType().getName();
+            
+            // Die Instance des Feldes holen...
+            Object lvFieldInstance = lvField.get( lvTypeInstanceAsObject );
+                   
+                    
+            Log.ResOpenList( "Child: '" + myFieldType + "'" );
+              
+            if ( lvField.isAnnotationPresent( OKW.class ) )
               {
                 OKW myFN = lvField.getAnnotation( OKW.class );
                 // Get the value from property.
 
                 String lvsKey = lvsFN + "." + myFN.FN();
 
-                Log.LogPrintDebug( "\n Child: >>" + lvsKey + "<<" );
-                Log.LogPrintDebug( "  Type: >>" + FieldType + "<<" );
+                Log.LogPrint( "  FN: '" + lvsKey + "'" );
 
-                // myFrameObjectDictionary.put( lvsKey, lvField.get( lvTypeInstanceAsObject ) );
-                myFrameObjectDictionary.put( lvsKey, lvField );
-
+                myAnnotationDictionary.put( lvsKey, lvField );
+                myFrameObjectDictionary.put( lvsKey, lvFieldInstance );
               }
+            else
+            {
+              Log.LogPrint( "-GUI-Container-" );              
+            }
 
-            FrameScanFieldsRecursively( lvField, lvsFN );
+            FrameScanFieldsRecursively( lvField, lvFieldInstance, lvsFN );
+            
+            Log.ResCloseList();
           }
         }
-        Log.ResCloseListDebug();
+        Log.ResCloseList();
       }
     }
     finally
     {
       Log.LogFunctionEndDebug();
     }
-
     return;
   }
 
-  private void FrameScanFieldsRecursively( Field fpFieldToScan, String fpsWindowName )
+  
+  private static void FrameScanFieldsRecursively( Field fpParentField, Object fpParentFieldInstance, String fpsWindowName )
   {
-
+    n++;
+    String myintend = okw.OKW_Helper.StringRepeat( "  ", n );
+    
     try
     {
+
       // Get all Fields within fpFieldToScan
-      Field[] lvFields = fpFieldToScan.getType().getFields();
+      Field[] lvFields = fpParentField.getType().getFields();
 
       for ( Field lvField : lvFields )
       {
 
         String FieldType = lvField.getType().getName();
-
+        
+        // Die Instance des Feldes holen...
+        Object lvFieldInstance = lvField.get( fpParentFieldInstance );
+        
+        
         if ( FieldType.startsWith( "okw.gui." ) )
         {
           if ( lvField.isAnnotationPresent( OKW.class ) )
@@ -532,16 +550,22 @@ public class FrameObjectDictionary_Sngltn
             // Get the value from property.
 
             String lvsKey = fpsWindowName + "." + myFN.FN();
+            
+            if ( myFrameObjectDictionary.containsKey( lvsKey ) )
+            {
+              // \todo TODO: Meldung in Sprachabhängige datei auslagern.
+              throw new OKWFrameObjectDictionaryDuplicateFNException( "There is another Object with the same FN!" + lvsKey );
+            }
+            else
+            {
+              Log.LogPrint( myintend + "Child: '" + lvsKey + "'" );
+              Log.LogPrint( myintend + " Type: '" + FieldType + "'" );
 
-            Log.LogPrintDebug( "\n   Child: >>" + lvsKey + "<<" );
-            Log.LogPrintDebug( "    Type: >>" + FieldType + "<<" );
-
-            // myFrameObjectDictionary.put( lvsKey, lvField.get(
-            // fpoWindowAsObject ) );
-            myFrameObjectDictionary.put( lvsKey, lvField );
-
+              myAnnotationDictionary.put( lvsKey, lvField );
+              myFrameObjectDictionary.put( lvsKey, lvFieldInstance );
+            }
           }
-          FrameScanFieldsRecursively( lvField, fpsWindowName );
+          FrameScanFieldsRecursively( lvField, lvFieldInstance, fpsWindowName );
         }
       }
     }
@@ -549,13 +573,17 @@ public class FrameObjectDictionary_Sngltn
     {
       Log.LogException( e.getMessage() );
     }
+    finally
+    {
+      n--;
+    }
   }
 
   // / \brief List das Attribute Funktionalname das übergeben Objektes aus.
   // /
   // / <param name="fpObject"></param>
   // / \return Wert aus Funtionalname
-  private String GetFunktionlanameFromObjekt( Object fpObject )
+  private static String GetFunktionlanameFromObjekt( Object fpObject )
   {
     String lvsReturn = "";
 
@@ -594,7 +622,7 @@ public class FrameObjectDictionary_Sngltn
   // / \author Zoltan Hrabovszki
   // / \date 2014.10.10
   // /
-  private Object CreateInstanceByType( Class<?> fpParentType ) throws InstantiationException, XPathExpressionException
+  private static Object CreateInstanceByType( Class<?> fpParentType ) throws InstantiationException, XPathExpressionException
   {
     Object lvo_Obj = null;
     Boolean bOK = false;
@@ -777,7 +805,7 @@ public class FrameObjectDictionary_Sngltn
   public void Print_ObjectDictionary()
   {
 
-    Set<String> mySet = this.myFrameObjectDictionary.keySet();
+    Set<String> mySet = myFrameObjectDictionary.keySet();
 
     for ( String myKey : mySet )
     {
