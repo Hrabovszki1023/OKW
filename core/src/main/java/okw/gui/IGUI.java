@@ -10,5 +10,5 @@ public interface IGUI
         Boolean getIsActive();
         ArrayList<String> getLabel();
         ArrayList<String> getTooltip();
-        ArrayList<String> getValue();       
+        ArrayList<String> getValue() throws Exception;       
 }

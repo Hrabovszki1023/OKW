@@ -137,15 +137,17 @@ import okw.gui.*;
             {
                 this.LogFunctionEndDebug();
             }
-
             return;
         }
 
-        // \brief Ermittelt den aktuellen Wert der CheckBox.
-        // 
-        // \return Liefert im ersten Wert des List-String Sprachabhänig CHECKED/UNCHECKED
-        // \author Zoltan Hrabovszki
-        // \date 2013.04.11
+        /** Ermittelt den aktuellen Wert der CheckBox.
+         * 
+         * Mögliche Werte sind Sprachabhängig CHECKED/UNCHECKED
+         * 
+         * @return Liefert im ersten Wert des ArrayList&lt;String&gt; sprachabhängig CHECKED/UNCHECKED zurück.
+         * @author Zoltan Hrabovszki
+         * @date 2013.04.11
+         */
         @Override
         public ArrayList<String> getValue()
         {

@@ -260,7 +260,8 @@ import okw.gui.OKWLocator;
         /// \author Zoltan Hrabovszki
         /// \date 2013.12.14
         @Override
-        public ArrayList<String> VerifyValue(ArrayList<String> fplsExpectedValue) throws InterruptedException
+        @Deprecated
+        public ArrayList<String> __VerifyValue(ArrayList<String> fplsExpectedValue) throws InterruptedException
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
             Boolean bOK = false;

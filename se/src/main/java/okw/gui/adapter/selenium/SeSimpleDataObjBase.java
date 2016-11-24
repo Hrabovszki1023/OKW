@@ -71,7 +71,7 @@ import okw.gui.*;
         /// \author Zoltan Hrabovszki
         /// \date 2013.12.14
         @Override
-        public ArrayList<String> LogValue()
+        public ArrayList<String> LogValue() throws Exception
         {
             Boolean bOK = false;
             ArrayList<String> lvLsReturn = new ArrayList<String>();
@@ -97,22 +97,21 @@ import okw.gui.*;
             return lvLsReturn;
         }
 
-        /// \~german
-        /// \brief
-        /// Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes
-        /// für das Schlüsselwort MerkeWert.
-        /// 
-        /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
-        /// 
-        /// \return
-        /// Rückgabe des Textuellen Inhaltes des aktuellen Objektes.
-        /// \return
-        /// \~english
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2013.12.14
+        /**  \~german
+         *  Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes
+         *  für das Schlüsselwort MerkeWert.
+         *  
+         *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
+         *  
+         *  @return Rückgabe des Textuellen Inhaltes des aktuellen Objektes.
+         *  \~english
+         *  @return
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2013.12.14
+         */
         @Override
-        public ArrayList<String> MemorizeValue()
+        public ArrayList<String> MemorizeValue() throws Exception
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
             Boolean bOK = false;
@@ -138,19 +137,23 @@ import okw.gui.*;
             return lvLsReturn;
         }
 
-        /// \brief
-        /// Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
-        /// 
-        /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-        /// 
-        /// \return
-        /// Rückgabe des Textuellen Inhaltes der markierten Textes.
-        /// Es wird immer der aktuelle Wert des Objektes zurückgeliefert.
-        /// \return
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.12.14
+        /**
+         *  Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
+         *  
+         *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+         *  
+         *  @return
+         *  Rückgabe des Textuellen Inhaltes der markierten Textes.
+         *  Es wird immer der aktuelle Wert des Objektes zurückgeliefert.
+         *  @return
+         *  @author Zoltan Hrabovszki
+         *  @date 2013.12.14
+         *  @throws Exception 
+         *
+         */
         @Override
-        public ArrayList<String> VerifyValue(ArrayList<String> fplsExpectedValue) throws InterruptedException
+        @Deprecated
+        public ArrayList<String> __VerifyValue(ArrayList<String> fplsExpectedValue) throws Exception
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
             Boolean bOK = false;
@@ -158,7 +161,6 @@ import okw.gui.*;
             try
             {
                 MyLogger.LogFunctionStartDebug("Memorize", "fplsExpectedValue", fplsExpectedValue.get(0));
-
 
                 // Nun mit dem erwarteten Sollwert und GetValue ggf. auf den Wert Warten.
                 lvLsReturn = this.getValue( );

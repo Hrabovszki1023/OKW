@@ -53,6 +53,7 @@ import javax.xml.xpath.XPathExpressionException;
 
 import org.xml.sax.SAXException;
 
+import okw.core.IOKW_FN;
 import okw.exceptions.*;
 import okw.log.Logger_Sngltn;
 
@@ -241,6 +242,39 @@ public class FrameObjectDictionary_Sngltn
     return lvo_Return;
   }
 
+  /** \~english
+   *  \~german
+   *  \brief
+   *  Methode Ermittelt alle FN´s der Kinder des gegebene Fensters (Parent).<br/>
+   *  
+   *  _Hinweis:_ Methode filtert alle FNs aus myFarmeObjectDictionary heraus, die mit FN_Parent Anfangen.<br/>
+   *  D.h. Es kann auch auch die Kinder eines Radiolist ermitteln. Siehe auch SeRadioList.
+   *  
+   *  @param FN_Parent Funktionaler Name des Fenster welches Durchsucht werden soll.
+   *  @return Liste der gefunden Child-Keys´s, 
+   *  \~
+   *  @author Zoltan Hrabovszki
+   *  @date 2016.11.18
+   */
+  public ArrayList<String>GetAllChildKeysOfParent(String FN_Parent)
+  {
+    ArrayList<String> lvAlReturn = new ArrayList<String>();
+    
+    Set<String> lvKeys = myFrameObjectDictionary.keySet();
+    
+    for ( Object lvoKey : lvKeys )
+    {
+      String lvsKey = (String)lvoKey;
+      
+      if (lvsKey.startsWith( FN_Parent ) )
+      {
+          lvAlReturn.add( lvsKey );
+      }
+    }    
+    return lvAlReturn;
+  }
+  
+  
   /**
    * \~german \brief Die Methode liefert das Objekt des gegebenen
    * Kindobjekttests zurück.
@@ -428,8 +462,6 @@ public class FrameObjectDictionary_Sngltn
 
   
   /** \~german
-   *  \brief
-   *  \return
    *  Liefert die Instanz der Klasse.
    * 
    *  \param fps_ParentClassName Name der Klasse
@@ -437,11 +469,11 @@ public class FrameObjectDictionary_Sngltn
    *  \~english
    *  \brief
    *
-   *  \param fps_ParentClassName Name of the class
    * 
    *  \~
-   *  \author Zoltan Hrabovszki
-   *  \date 2015.01.28
+   *  @author Zoltan Hrabovszki
+   *  @date 2015.01.28
+   *  \todo TODO: rename lvsFNParent to lvsFNWindow (Parent is not correct in all cases)
    */
   private static void FrameScan(  ) throws InstantiationException, XPathExpressionException,
           IllegalArgumentException, IllegalAccessException, ClassNotFoundException
@@ -452,7 +484,7 @@ public class FrameObjectDictionary_Sngltn
 
     try
     {
-      // Alle Fenster Klassen mit Annotation ermitteln...
+      // Alle Fenster Klassen, die eine Annotation ermitteln...
       ArrayList<Class<?>> lvOKWGuiClasses = GetListOfOKWGuiClasses();
 
       // Für jede Klasse in der Liste...
@@ -461,16 +493,17 @@ public class FrameObjectDictionary_Sngltn
         // Erzeuge eine Instanz der Window-Klasse
         lvTypeInstanceAsObject = CreateInstanceByType( lvOKWGuiClass );
 
-        // Fachlichen Namen der Klasse aus der die Annotiation OKW.FN() auslesen.
-        String lvsFN = GetFunktionlanameFromObjekt( lvTypeInstanceAsObject );
+        // FN (Fachlichen Namen) der Klasse aus der die Annotiation OKW.FN() auslesen.
+        // Hierbei handelt es sich um des  ParentObject = Fenster
+        String lvsFNParent = GetFunktionlanameFromObjekt( lvTypeInstanceAsObject );
 
         // Wenn Attribute vorhanden (!=null) und nicht Leer dann ins Dictionary einfügen.
-        if ( lvsFN != null && !lvsFN.isEmpty() )
+        if ( lvsFNParent != null && !lvsFNParent.isEmpty() )
         {
-          Log.ResOpenList( "Window: '" + lvsFN + "'" );
+          Log.ResOpenList( "Window: '" + lvsFNParent + "'" );
           Log.LogPrint( "Class: >>" + lvTypeInstanceAsObject.getClass().getName() + "<<" );
 
-          myFrameObjectDictionary.put( lvsFN, lvTypeInstanceAsObject );
+          myFrameObjectDictionary.put( lvsFNParent, lvTypeInstanceAsObject );
 
           Log.LogPrintDebug( LM.GetMessage( "CreateInstanceByObjectName", "InstanceWasCreated", lvTypeInstanceAsObject.getClass().getName() ) );
 
@@ -494,19 +527,25 @@ public class FrameObjectDictionary_Sngltn
                 OKW myFN = lvField.getAnnotation( OKW.class );
                 // Get the value from property.
 
-                String lvsKey = lvsFN + "." + myFN.FN();
+                String lvsFNChild  = myFN.FN();
+                String lvsChildKey = lvsFNParent + "." + lvsFNChild;
 
-                Log.LogPrint( "  FN: '" + lvsKey + "'" );
+                Log.LogPrint( "  FN: '" + lvsChildKey + "'" );
 
-                myAnnotationDictionary.put( lvsKey, lvField );
-                myFrameObjectDictionary.put( lvsKey, lvFieldInstance );
+                // Add child-object to the dictionary
+                myAnnotationDictionary.put( lvsChildKey, lvField );
+                
+                (( IOKW_FN ) lvFieldInstance).SetFN( lvsFNChild );
+                (( IOKW_FN ) lvFieldInstance).SetParentFN( lvsFNParent );
+
+                myFrameObjectDictionary.put( lvsChildKey, lvFieldInstance );
               }
             else
             {
               Log.LogPrint( "-GUI-Container-" );              
             }
 
-            FrameScanFieldsRecursively( lvField, lvFieldInstance, lvsFN );
+            FrameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNParent );
             
             Log.ResCloseList();
           }
@@ -562,7 +601,12 @@ public class FrameObjectDictionary_Sngltn
               Log.LogPrint( myintend + " Type: '" + FieldType + "'" );
 
               myAnnotationDictionary.put( lvsKey, lvField );
+              
+              (( IOKW_FN ) lvFieldInstance).SetFN( lvsKey );
+              (( IOKW_FN ) lvFieldInstance).SetParentFN( fpsWindowName );
+              
               myFrameObjectDictionary.put( lvsKey, lvFieldInstance );
+              
             }
           }
           FrameScanFieldsRecursively( lvField, lvFieldInstance, fpsWindowName );

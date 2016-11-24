@@ -33,14 +33,14 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     }
 
 
-    /// \~german
-    /// \brief
-    /// Klickt auf das aktuelle Objekt.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.11.11
+    /** \~german
+     *  Klickt auf das aktuelle Objekt.
+     *  
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.11.11
+     */
     public void ClickOn()
     {
         try
@@ -260,12 +260,13 @@ public class SeAnyWin extends AnyWinBase implements IGUI
 
         try
         {
-            //me = SeDriver.Instance.driver.FindElement(By.XPath(this.Locator));
-            meme = SeDriver.getInstance().driver.findElements(By.xpath(this.getLocator()));
+          String myLocator = this.getLocator();
+          
+            meme = SeDriver.getInstance().driver.findElements(By.xpath(myLocator));
             
             if (meme.size() == 0)
             {
-                String lvsPrintMe = "GUI-Objekt wurde nicht gefunden: Locator: >>" + this.getLocator() + "<<";
+                String lvsPrintMe = "GUI-Objekt wurde nicht gefunden: Locator: >>" + myLocator + "<<";
                 
                 this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
                 this.MyLogger.LogPrint( lvsPrintMe );
@@ -288,6 +289,12 @@ public class SeAnyWin extends AnyWinBase implements IGUI
                 me = meme.get(0);
             }
         }
+        /*
+         catch( Exception e )
+        {
+          System.out.println( e.getMessage() );
+        }
+        */
         finally
         {
             if (me != null)
@@ -496,7 +503,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     // \~
     // \author Zoltán Hrabovszki
     // \date 2016.10.06
-    public void Select(ArrayList<String> Values)  throws XPathExpressionException
+    public void Select(ArrayList<String> Values)  throws Exception
     {
       // ArrayList<String> lvLsReturn = new ArrayList<String>();
       try
@@ -556,7 +563,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     // \~
     // \author Zoltán Hrabovszki
     // \date 2016.10.06
-    public void SetValue( ArrayList<String> Values ) throws XPathExpressionException
+    public void SetValue( ArrayList<String> Values ) throws XPathExpressionException, Exception
     {
       // ArrayList<String> lvLsReturn = new ArrayList<String>();
       try
@@ -1399,14 +1406,18 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         
         return lvLsReturn;
     }
+
     
-    /// \brief
-    /// Holt den aktuellen Text aus einem HTML-Tag.
-    /// 
-    /// Standardmäßig wird "innerText" ausgelesen.
-    /// 
-    /// \return
-    public ArrayList<String> getValue()
+    /**
+     *  Liest den aktuellen Wert/Text aus dem HTML-Tag.
+     * 
+     *  Standardmäßig wird "textContent" ausgelesen.
+     *
+     *  @return
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.14
+     */
+    public ArrayList<String> getValue() throws Exception
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;
@@ -1434,6 +1445,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         return lvLsReturn;
     }
 
+    
     /**
      *  \brief
      *  Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert.
@@ -1444,8 +1456,9 @@ public class SeAnyWin extends AnyWinBase implements IGUI
      *  \return
      *  \author Zoltan Hrabovszki
      *  \date 2013.12.14
+     * @throws Exception 
      */
-    public ArrayList<String> LogValue()
+    public ArrayList<String> LogValue() throws Exception
     {
         Boolean bOK = false;
         ArrayList<String> lvLsReturn = new ArrayList<String>();
@@ -1485,7 +1498,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.12.14
-    public ArrayList<String> MemorizeValue()
+    public ArrayList<String> MemorizeValue() throws Exception
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;
@@ -1522,7 +1535,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.14
     @Deprecated
-    public ArrayList<String> VerifyValue(ArrayList<String> fplsExpectedValue) throws InterruptedException
+    public ArrayList<String> __VerifyValue(ArrayList<String> fplsExpectedValue) throws Exception
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;
@@ -1561,7 +1574,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     /// Es wird (immer) der aktuelle Wert des Objektes zurückgeliefert.
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.14
-    public ArrayList<String> VerifyValue( ) throws InterruptedException
+    public ArrayList<String> VerifyValue( ) throws Exception
     {
         ArrayList<String> lvLsReturn = null;
         Boolean bOK = false;

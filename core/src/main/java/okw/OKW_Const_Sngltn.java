@@ -461,47 +461,48 @@ public class OKW_Const_Sngltn
 		return lvs_Return;
 	}
 
-	// \~german \brief Methode ermittelt für __Internalname__ und der aktuell
-	// eingestellten Sprache den Wert für __Const__.
-	//
-	// GetConst4Internalname ist die Kernmethode dieser Klasse und ermittelt für
-	//
-	// - fpsInternalname und - CL.Language enstpricht
-	// OKWLanguage.Instance.Language
-	//
-	// die sprachabhängige Konstante.
-	//
-	// \exception Wird für fpsInternalname kein Wert gefunden, dann wird die
-	// Ausnahme OKWConst4InternalnameNotFoundException ausgelöst.
-	//
-	// \param fpsInternalname Interner Bezeichner einer Konstante, die in eine
-	// sprachabhängige Konstante umgestetzt wird. (_Internalname_ -> _Const_)
-	//
-	// \return
-	//
-	// \~english \brief Method detects the value for __Const__ for the
-	// __internalname__ and the actual selected language.
-	//
-	// GetConst4Internalname is the core method of this class and detects for
-	//
-	// - fpsInternalname and - CL.Language corresponds to
-	// OKWLanguage.Instance.Language
-	//
-	// the language dependent constant.
-	//
-	// \exception If no value is found for fpsInternalname, then the exception
-	// OKWConst4InternalnameNotFoundException is triggered.
-	//
-	// \param fpsInternalname Internal identifier of a constant, which is
-	// converted to a language dependent constant. (_Internalname_ -> _Const_)
-	//
-	// \return
-	//
-	//
-	// \~
-	// \author Zoltan Hrabovszki 
-	// \date 2013-12-22
-	///
+	/** \~german
+	 *  Methode ermittelt für __Internalname__ und der aktuell eingestellten Sprache den Wert für __Const__.
+	 * 
+	 *  GetConst4Internalname ist die Kernmethode dieser Klasse und ermittelt für
+	 *  
+	 *  <ul>
+	 *    <li>fpsInternalname und - CL.Language enstpricht OKWLanguage.Instance.Language</li>
+	 *  </ul>
+	 *  
+	 *  die sprachabhängige Konstante.
+	 * 
+	 *  @param fpsInternalname Interner Bezeichner einer Konstante, die in eine
+	 *  sprachabhängige Konstante umgestetzt wird. (_Internalname_ -> _Const_)
+	 * 
+	 *  @return Liefert die Sprachabhängige Konstante des 
+   *  @exception Wird für fpsInternalname kein Wert gefunden, dann wird die
+   *  Ausnahme OKWConst4InternalnameNotFoundException ausgelöst.
+   *
+	 *  \~english
+	 *  Method detects the value for __Const__ for the __internalname__ and the actual selected language.
+	 * 
+	 *  GetConst4Internalname is the core method of this class and detects for
+   *  <ul>
+   *    <li>fpsInternalname and - CL.Language corresponds to</li>
+   *  </ul>
+	 *  OKWLanguage.Instance.Language
+	 * 
+	 *  the language dependent constant.
+	 * 
+	 *  @exception If no value is found for fpsInternalname, then the exception
+	 *  OKWConst4InternalnameNotFoundException is triggered.
+	 * 
+	 *  @param fpsInternalname Internal identifier of a constant, which is
+	 *  converted to a language dependent constant. (_Internalname_ -> _Const_)
+	 * 
+	 *  @return
+	 * 
+	 * 
+	 *  \~
+	 *  @author Zoltan Hrabovszki 
+	 *  @date 2013-12-22
+	*/
 	public String GetConst4Internalname( String fpsInternalname )
 	{
 		Log.LogFunctionStartDebug(this.getClass().getName() + ".ReadConst", "fpsInternalname", fpsInternalname);

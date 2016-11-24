@@ -537,6 +537,12 @@ public class OKW_CurrentObject_Sngltn
     return;
   }
   
+  public ArrayList<String> GetAllChildFNsOfParent( String FN )
+  {
+    return myFrameObjectDictionary.GetAllChildKeysOfParent( FN );
+  }
+  
+  
   /*
    * \~german \brief Ruft eine Methode des aktuellen Objektes via
    * "late bound function call" auf.

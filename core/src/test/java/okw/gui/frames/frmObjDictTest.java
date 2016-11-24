@@ -4,16 +4,14 @@ import okw.*;
 import okw.gui.adapter.*;
 import okw.log.*;
 
-    /** \~german
-     *  Die Klasse frmObjDictTest ist eine Test-Frame-Klasse. Diese Klasse ist ein OKW-Unittest-Objekt.<br/>
-     *  
-     *  @author Zoltan Hrabovszki
-     *  \date 2012.12.26
-     *  @warning **Diese Frame-Klasse nicht ohne Grund verändern!**
-     *  Sie ist basis für etliche OKW-Unittests. **ZH**
-     *  @copyright
-     */
-
+/** \~german
+ *  frmObjDictTest ist eine Test-Frame-Klasse. Diese Klasse ist ein OKW-Unittest-Objekt.<br/>
+ *  
+ *  @author Zoltan Hrabovszki
+ *  @date 2012.12.26
+ *  @warning Diese Frame-Klasse nicht ohne Grund verändern!
+ *  @copyright
+ */
 @OKW(FN="frmObjDictTest")
 public class frmObjDictTest extends Test_Window
   {
@@ -21,11 +19,14 @@ public class frmObjDictTest extends Test_Window
 	OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
 
 
-        /** \~german
+        /**
+         * \~german
          * Test für einen GUI-Container.
          * 
-         * Element zur Prüfung einer GUI-Container-Klasse mit dem Test Ziel:
-         *  - wird das Feld instanziert und im ObjectDictionary abgelegt wird.
+         * Object/Element zur Prüfung des ObjectDictionary-Scanner-Methoden
+         * Test Ziel:
+         *  - wird ein GUI-Container instanziert
+         *  - und im ObjectDictionary abgelegt wird.
          * 
          * Keine Annotaion für die Container-Klasse selbst!
          * 
@@ -36,6 +37,7 @@ public class frmObjDictTest extends Test_Window
 
         
         /**
+         * \~german
          * Test für eine Inline Klasse, die als GUI-Container dient.
          * 
          * Dient zur Prüfung, ob ein GUI-Container-Class instanziert und im ObjectDictionary abgelegt wird.
@@ -48,44 +50,50 @@ public class frmObjDictTest extends Test_Window
         public myTestbutton myInlineClassDef = this.new myTestbutton("locator");
         
         
-        public class myTestbutton extends Test_PushButton
+        public class myTestbutton
         {
 
           public myTestbutton( String fpsLocator )
           {
-            super( fpsLocator );
-            // TODO Auto-generated constructor stub
           }
 
-          /// \brief
-          /// Taste_1 ist ein GUI-Objekt ohne weitere Veränderung der Basisklasse Test_PushButton.
-          /// D.h. das Objekt verhält sich *normal*, also wie in der Basisklasse angenommen.
-          /// 
-          /// \author Zoltan Hrabovszki
-          /// \date 2012.12.26
+          /**
+           * \~german
+           * Taste_1 ist ein GUI-Objekt ohne weitere Veränderung/anpassungen der Basisklasse Test_PushButton.
+           * D.h. das Objekt verhält sich *normal*, also wie in der Basisklasse angenommen.
+           * 
+           * @author Zoltan Hrabovszki
+           * @date 2012.12.26
+           */
           @OKW(FN="Taste_1")
           public Test_PushButton Taste_1 = new Test_PushButton("1");
 
-          /// \brief
-          /// Taste_2 ist ein GUI-Objekt ohne weitere Veränderung der Basisklasse Test_PushButton.
-          /// D.h. das Objekt verhält sich *normal*, also wie in der Basisklasse angenommen.
-          /// 
-          /// \author Zoltan Hrabovszki
-          /// \date 2012.12.26
+
+          /**
+           * \~german
+           *  Taste_2 ist ein GUI-Objekt ohne weitere Veränderung der Basisklasse Test_PushButton.
+           *  D.h. das Objekt verhält sich *normal*, also wie in der Basisklasse angenommen.
+           *  
+           *  @author Zoltan Hrabovszki
+           *  @date 2012.12.26
+           */
           @OKW(FN="Taste_2")
           public Test_PushButton Taste_2 = new Test_PushButton("2");
 
         };
         
         
-        /// \brief
-        /// Konstruktor der Klasse Rechner: Hier wird angegeben, wie das Objekt "Rechner" erkannt wird.<br/>
-        /// Da diese Klasse eine Testklasse ist ohne irgen dein ein GUI-Objekt,
-        /// ist das setzten des Wertes "Neuer Locator Rechner" nur für den Unittest relevant.<br/>
-        /// Also hier den Locator für das Fenster setzen...
-        /// 
-        /// \author Zoltan Hrabovszki
-        /// \date 2012.12.26
+        /**
+         * \~german
+         * Konstruktor der Klasse Rechner: Definition des Locators: mit welchen characteristischen Eigenschaften 
+         * wird das Objekt "Rechner" erkannt wird.<br/>
+         * Da diese Klasse eine Testklasse ist ohne irgen dein ein GUI-Objekt,
+         * ist das setzten des Wertes "Neuer Locator Rechner" nur für den Unittest relevant.<br/>
+         * Also hier den Locator für das Fenster setzen...
+         * 
+         * @author Zoltan Hrabovszki
+         * @date 2012.12.26
+         */
         public frmObjDictTest()
         {
         	super("Neuer Locator Rechner");

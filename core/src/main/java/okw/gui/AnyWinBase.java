@@ -40,17 +40,132 @@ package okw.gui;
 
 import java.util.ArrayList;
 
+import okw.core.IOKW_FN;
 import okw.log.*;
 
 /// \brief
 /// Description of AnyWin.
 /// 
-public abstract class AnyWinBase
+public abstract class AnyWinBase implements IOKW_FN
 {
 	Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 	
 	private OKWLocator _locator;
+	
+	/** \~german
+   *  Holt den vollständig (rekursiv) aufgelösten  (z.B. XPath-Wert) des Locators.
+   *  
+   *  Beim Aufruf dieser Methode wird der Locator vollständig neu berechnet und der aktuelle Wert Zurückgeliefert.
+   *  (Dynamischer Locator)
+   *  
+   *  @return Aktueller Wert des Locators
+   *  
+   *  \~english
+   *  \brief
+   *  @todo TODO:  Übersetzung ins Englische fehlt...
+   *  
+   *  \~
+   *  @author Zoltán Hrabovszki
+   *  @date 2014.04.27
+   */
+  public String getLocator()
+  {
+          return this._locator.getLocator();
+  }
 
+  /** \~german
+   *  Holt die Refrenz auf den (OKWLocator) den Locator selbst.
+   *   
+   *  \~english
+   *  \brief
+   *  @todo TODO:  Übersetzung ins Englische fehlt...
+   *  
+   *  \~
+   *  @author Zoltán Hrabovszki
+   *  @date 2014.04.27
+   */  
+  public OKWLocator getLOCATOR()
+  {
+          return this._locator;
+  }
+
+  /** \~german
+   *  FN - Funktionaler Name des aktuellen GUI-Objektes.
+   *  
+   *  Wert wird 
+   *  
+   *  \~english
+   *  \brief
+   *  @todo TODO:  Übersetzung ins Englische fehlt...
+   *  
+   *  \~
+   *  @author Zoltán Hrabovszki
+   *  @date 2014.04.27
+   */    
+  private String myFN = "";
+	
+  public void SetFN(String fpsFN)
+  {
+    this.myFN =  fpsFN;
+  }
+
+  public String GetFN( )
+  {
+    return this.myFN;
+  }
+
+  
+  /** \~german
+   *  Parent-Objekt FN des aktuellen GUI-Objektes.
+   *  
+   *  \~english
+   *  \brief
+   *  @todo TODO:  Übersetzung ins Englische fehlt...
+   *  
+   *  \~
+   *  @author Zoltán Hrabovszki
+   *  @date 2016.11.20
+   */    
+  private String myParentFN = "";
+
+  
+  /** \~german
+   *  Setzten des Parent-Objekt FN.
+   *  
+   *  @fpsParentFN FN des Parent-Objektes
+   *  
+   *  \~english
+   *  \brief
+   *  @todo TODO:  Übersetzung ins Englische fehlt...
+   *  
+   *  \~
+   *  @author Zoltán Hrabovszki
+   *  @date 2016.11.20
+   */    
+  public void SetParentFN(String fpsParentFN)
+  {
+    this.myParentFN =  fpsParentFN;
+  }
+
+  /** \~german
+   *  Setzten des Parent-Objekt FN.
+   *  
+   *  @return FN des Parent-Objektes.
+   *  
+   *  \~english
+   *  \brief
+   *  @todo TODO:  Übersetzung ins Englische fehlt...
+   *  
+   *  \~
+   *  @author Zoltán Hrabovszki
+   *  @date 2016.11.20
+   */ 
+  public String GetParentFN( )
+  {
+    return this.myParentFN;
+  }
+
+  
     public AnyWinBase()
     {
         this._locator = new OKWLocator("");
@@ -68,128 +183,8 @@ public abstract class AnyWinBase
             this._locator = new OKWLocator(fpsLocator);
         }
     }
-
-
-    /** \~german
-     *  Locator enthält die Objekterkennungseigenschaft.
-     *  
-     *  \~english
-     *  \brief
-     *  \todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  \~
-     *  \author Zoltán Hrabovszki
-     *  \date 2014.04.27
-     */
-    public String getLocator()
-    {
-            return this._locator.getLocator();
-    }
-
+   
     
-    public OKWLocator getLOCATOR()
-    {
-            return this._locator;
-    }
-
-    /// \~german
-    /// \brief
-    /// Diese Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(string,string,string),
-    /// und erweitert den gegebenen Methodenname in fps_FunctionName mit this.GetType().FullName um den Klassenbezeichner.
-    /// 
-    /// \param fpsMethodName Name der Method ohne Volle referenz.
-    /// \param P1_Name Bezechnung des(ersten) Parameters.
-    /// \param P1_Value Wert des Ersten Parameters.
-    /// 
-    /// \~english
-    /// \brief
-    /// \todo TODO:  Übersetzung ins Englische fehlt...
-    /// 
-    /// \param fpsMethodName
-    /// \param P1_Name Bezechnung des(ersten) Parameters.
-    /// \param P1_Value Wert des Ersten Parameters.
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2014.04.27/ jnic_2014_11_26
-    protected void LogFunctionStartDebug(String fpsMethodName, String P1_Name, String P1_Value)
-    {
-    	myLogger.LogFunctionStartDebug(this.getClass().getName() + "." + fpsMethodName, P1_Name, P1_Value);
-    }
-
-    /// \~german
-    /// \brief
-    /// Diese Methode ruft die Methode Logger.Instance.LogFunctionEndDebug() auf.
-    /// 
-    /// \~english
-    /// \brief
-    /// \todo TODO:  Übersetzung ins Englische fehlt...
-    /// 
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2015.01.18
-    protected void LogFunctionEndDebug()
-    {
-    	myLogger.LogFunctionEndDebug();
-    }
-
-    
-    /// \~german
-    /// \brief
-    /// Diese Methode ruft die Methode Logger.Instance.LogFunctionEndDebug(string) auf.
-    /// 
-    /// \param fpsReturn Zu loggender Rückgabewert.
-    /// 
-    /// \~english
-    /// \brief
-    /// \todo TODO:  Übersetzung ins Englische fehlt...
-    /// 
-    /// \param fpsReturn
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2015.01.18
-    protected void LogFunctionEndDebug(String fpsReturn)
-    {
-    	myLogger.LogFunctionEndDebug(fpsReturn);
-    }
-
-    
-    /// \~german
-    /// \brief
-    /// Diese Methode ruft die Methode Logger.Instance.LogFunctionEndDebug(bool) auf.
-    /// 
-    /// \param fpbReturn Zu loggender Rückgabewert.
-    /// 
-    /// \~english
-    /// \brief
-    /// \todo TODO:  Übersetzung ins Englische fehlt...
-    /// 
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2015.01.18
-    protected void LogFunctionEndDebug(Boolean fpbReturn)
-    {
-    	myLogger.LogFunctionEndDebug(fpbReturn);
-    }
-
-    /// \~german
-    /// \brief
-    /// Diese Methode ruft die Methode Logger.Instance.LogFunctionEndDebug(List&gt;string&lt;) auf.
-    /// 
-    /// \param fpLsReturn Zu loggender Rückgabewert.
-    /// 
-    /// \~english
-    /// \brief
-    /// \todo TODO:  Übersetzung ins Englische fehlt...
-    /// 
-    /// \param fpLsReturn
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2015.01.18
-    protected void LogFunctionEndDebug(ArrayList<String> fpLsReturn)
-    {
-    	myLogger.LogFunctionEndDebug(fpLsReturn);
-    }
-
     /// \~german
     /// \brief
     /// Diese Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(fps_FunctionName),
@@ -208,5 +203,102 @@ public abstract class AnyWinBase
     protected void LogFunctionStartDebug(String fpsMethodName)
     {
     	myLogger.LogFunctionStartDebug(this.getClass().getName() + "." + fpsMethodName);
+    }
+
+    /** \~german
+     *  \brief
+     *  Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(string,string,string),
+     *  erweitert den gegebenen Methodenname in fps_FunctionName mit this.GetType().FullName um den Klassenbezeichner.
+     *  
+     *  @param fpsMethodName Name der Method, aber ohne Paket Angabe.
+     *  @param P1_Name Name/Bezeichnung des (ersten) Parameters.
+     *  @param P1_Value Wert des ersten Parameters.
+     * 
+     *  \~english
+     *  @todo TODO: LogFunctionStartDebug(String fpsMethodName, String P1_Name, String P1_Value) Übersetzung ins Englische fehlt...
+     * 
+     *  @param fpsMethodName
+     *  @param P1_Name Name/Bezeichnung des ersten Parameters.
+     *  @param P1_Value Wert des ersten Parameters.
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2014.04.27
+     */
+    protected void LogFunctionStartDebug(String fpsMethodName, String P1_Name, String P1_Value)
+    {
+    	myLogger.LogFunctionStartDebug(this.getClass().getName() + "." + fpsMethodName, P1_Name, P1_Value);
+    }
+
+    /** \~german
+     *  Methode ruft die Methode Logger.Instance.LogFunctionEndDebug() auf.
+     *  
+     *  \~english
+     *  \brief
+     *  @todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2015.01.18
+     */
+    protected void LogFunctionEndDebug()
+    {
+    	myLogger.LogFunctionEndDebug();
+    }
+
+    
+    /** \~german
+     *  \brief
+     *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEndDebug(string) auf.
+     *  
+     *  @param fpsReturn Zu loggender Rückgabewert.
+     *  
+     *  \~english
+     *  @todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  @param fpsReturn
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2015.01.18
+     */
+    protected void LogFunctionEndDebug(String fpsReturn)
+    {
+    	myLogger.LogFunctionEndDebug(fpsReturn);
+    }
+
+    
+    /** \~german
+     *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEndDebug(bool) auf.
+     *  
+     *  @param fpbReturn Zu loggender Rückgabewert.
+     *  
+     *  \~english
+     *  \brief
+     *  \todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2015.01.18
+     */
+    protected void LogFunctionEndDebug(Boolean fpbReturn)
+    {
+    	myLogger.LogFunctionEndDebug(fpbReturn);
+    }
+
+    /**
+     *  \~german
+     *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEndDebug(ArrayList&lt;string&gt;) auf.
+     *  
+     *  @param fpLsReturn Zu loggender Rückgabeert.
+     *  
+     *  \~english
+     *  @todo TODO:  Übersetzung ins Englische...
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2015.01.18
+     */
+    protected void LogFunctionEndDebug(ArrayList<String> fpLsReturn)
+    {
+    	myLogger.LogFunctionEndDebug(fpLsReturn);
     }
 }

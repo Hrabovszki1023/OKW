@@ -62,11 +62,12 @@ import org.openqa.selenium.*;
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2014.04.19
-    public class SeURL
+    public class SeURL extends SeAnyWin
     {
 
         public SeURL()
         {
+          super("SeURL");
         }
 
  
