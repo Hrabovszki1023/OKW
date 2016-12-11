@@ -41,8 +41,6 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 
-import javax.xml.xpath.XPathExpressionException;
-
 import okw.FrameObjectDictionary_Sngltn;
 import okw.OKW_Const_Sngltn;
 import okw.core.Core;

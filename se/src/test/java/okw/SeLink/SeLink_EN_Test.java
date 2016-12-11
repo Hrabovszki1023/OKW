@@ -41,7 +41,7 @@ public class SeLink_EN_Test
 
 	                EN.SelectWindow("SeLink");
 	                EN.ClickOn("Google");
-	                EN.VerifyValue("URL", "http://www.google.de/");
+	                EN.VerifyValue("URL", "https://www.google.de/?gws_rd=ssl");
 
 
 	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
@@ -288,13 +288,13 @@ public class SeLink_EN_Test
 	                EN.MemorizeValue("Google", "SeLink_MemorizeValue_1");
 	                
 	                String actuel = myMM.Get("SeLink_MemorizeValue_1");
-	                assertEquals("http://www.google.de", actuel);
+	                assertEquals("http://www.google.de/", actuel);
 
 	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
 	                EN.MemorizeValue("Yahoo", "SeLink_MemorizeValue_1");
-	                assertEquals("http://www.yahoo.de", myMM.Get("SeLink_MemorizeValue_1"));
+	                assertEquals("http://www.yahoo.de/", myMM.Get("SeLink_MemorizeValue_1"));
 
 	                //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "MemorizeValue", "P");
 
@@ -628,8 +628,8 @@ public class SeLink_EN_Test
 	                EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                EN.SelectWindow("SeLink");
-	                EN.VerifyValue("Google", "http://www.google.de");
-	                EN.VerifyValue("Yahoo", "http://www.yahoo.de");
+	                EN.VerifyValue("Google", "http://www.google.de/");
+	                EN.VerifyValue("Yahoo", "http://www.yahoo.de/");
 
 	                //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyValue", "P");
 
@@ -653,8 +653,8 @@ public class SeLink_EN_Test
                   EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
                   EN.SelectWindow("SeLink");
-                  EN.VerifyValueWCM("Google", "http?//www.google.de");
-                  EN.VerifyValueWCM("Yahoo", "http?//www.yahoo.de");
+                  EN.VerifyValueWCM("Google", "http?//www.google.de/");
+                  EN.VerifyValueWCM("Yahoo", "http?//www.yahoo.de/");
 
                   //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyValue", "P");
 
@@ -678,8 +678,8 @@ public class SeLink_EN_Test
 	                  EN.TypeKey("URL", "http://test.openkeyword.de/Link/a.htm");
 
 	                  EN.SelectWindow("SeLink");
-	                  EN.VerifyValueREGX("Google", "http\\W//www.google.de");
-	                  EN.VerifyValueREGX("Yahoo", "http\\W//www.yahoo.de");
+	                  EN.VerifyValueREGX("Google", "http\\W//www.google.de/");
+	                  EN.VerifyValueREGX("Yahoo", "http\\W//www.yahoo.de/");
 
 	                  //ImplementationMatrix.Instance.SetImplementation(cvOKWObject, "VerifyValue", "P");
 

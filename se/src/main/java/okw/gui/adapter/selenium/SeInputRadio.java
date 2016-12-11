@@ -3,6 +3,7 @@ package okw.gui.adapter.selenium;
 import java.util.ArrayList;
 
 import okw.OKW_Const_Sngltn;
+import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
 
@@ -99,5 +100,29 @@ public class SeInputRadio extends SeSimpleDataObjBase
           }
       }
       return lvbReturn;
+  }
+
+  /** \~german
+   *  \brief
+   *  Ermittelt den textuellen Inhalt der Überschrift eines HTML-Tags anhand des Attributee "textContent".
+   *   
+   *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+   *  \~english
+   *  \~
+   *  @author Zoltán Hrabovszki
+   *  @date 2013.12.07
+   */
+  public ArrayList<String> getCaption()
+  {
+      try
+      {
+          this.LogFunctionStartDebug("getCaption");
+          // String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
+    	  throw new OKWFrameObjectMethodNotImplemented("Radiobutton/SeInputRadion has no Caption! - See Label...");
+      }
+      finally
+      {      
+          this.LogFunctionEndDebug( );
+      }
   }
 }

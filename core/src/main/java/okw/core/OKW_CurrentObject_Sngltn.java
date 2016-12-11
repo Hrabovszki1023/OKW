@@ -317,17 +317,6 @@ public class OKW_CurrentObject_Sngltn
         String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", fpsMethod );
         throw new OKWFrameObjectMethodNotFoundException( errorText );
       }
-      catch (Exception e2)
-      {
-        String myMessage = e2.getMessage();
-        System.out.println( myMessage );
-      }
-
-    }
-    catch (Exception e)
-    {
-      String myMessage = e.getMessage();
-      System.out.println( myMessage );
     }
     finally
     {

@@ -87,6 +87,7 @@ import okw.log.*;
         {
         	MyLogger.LogFunctionStartDebug("StartApp");
 
+        	System.setProperty("webdriver.gecko.driver", "/Users/zoltanhrabovszki/Applications/geckodriver");
             SeDriver.getInstance().driver = new FirefoxDriver();
             this.Init();
 

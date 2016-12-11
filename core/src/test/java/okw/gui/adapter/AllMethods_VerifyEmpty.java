@@ -11,10 +11,11 @@ import javax.xml.xpath.XPathExpressionException;
 import org.xml.sax.SAXException;
 
 import okw.*;
+import okw.gui.AnyWinBase;
 import okw.log.Logger_Sngltn;
 
 
-    public class AllMethods_VerifyEmpty
+    public class AllMethods_VerifyEmpty extends AnyWinBase
     {
 
         protected String Locator;

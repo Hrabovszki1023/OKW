@@ -2,7 +2,6 @@ package okw.SeSelect;
 
 import static org.junit.Assert.*;
 import okw.core.EN;
-import okw.exceptions.OKWOnlySingleValueAllowedException;
 import okw.exceptions.OKWVerifyingFailsException;
 
 import org.junit.After;

@@ -1,6 +1,7 @@
 package okw.gui.frames;
 
 import okw.*;
+import okw.gui.AnyWinBase;
 import okw.gui.adapter.*;
 import okw.log.*;
 

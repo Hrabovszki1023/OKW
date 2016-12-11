@@ -44,10 +44,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import okw.OKW_TestClipboard;
+import okw.gui.AnyWinBase;
 import okw.log.*;
 
     // : IOKW_SimpleDataObj
-    public class Test_TextField
+    public class Test_TextField extends AnyWinBase
     {
 
         String Locator;

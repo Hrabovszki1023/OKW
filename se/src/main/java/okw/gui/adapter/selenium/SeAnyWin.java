@@ -1362,17 +1362,16 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         return lvLsReturn;
     }
     
-    /// \~german
-    /// \brief
-    /// Ermittelt den textuellen Inhalt der Caption/Überschrift des Objektes.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  \brief
+     *  Ermittelt den textuellen Inhalt der Überschrift eines HTML-Tags anhand des Attributee "textContent".
+     *   
+     *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public ArrayList<String> getCaption()
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();

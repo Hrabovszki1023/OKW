@@ -2,16 +2,12 @@ package okw.core;
 
 import static org.junit.Assert.*;
 
-import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.junit.*;
-import org.xml.sax.SAXException;
 
 import okw.*;
 import okw.exceptions.OKWFrameObjectWindowNotSetException;

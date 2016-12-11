@@ -183,7 +183,7 @@ public class OK implements IOKW_State {
 
       for ( String Value : ActualValues )
       {
-        Log.LogPrint( ">>" + Value + "<<" );
+        Log.LogPrint( "'" + Value + "'" );
       }
 
       Log.ResCloseListDebug();

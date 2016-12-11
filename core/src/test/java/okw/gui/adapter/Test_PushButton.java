@@ -48,10 +48,11 @@ import javax.xml.xpath.XPathExpressionException;
 import org.xml.sax.SAXException;
 
 import okw.OKW_TestClipboard;
+import okw.gui.AnyWinBase;
 import okw.log.*;
 
     // TODO Implemetierung einschalten : IOKW_LinkObj
-    public class Test_PushButton
+    public class Test_PushButton extends AnyWinBase
     {
         /// \brief
         /// Hier eventuell virtuelle Eigenschaft einfügen

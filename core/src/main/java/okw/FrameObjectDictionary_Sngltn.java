@@ -244,17 +244,16 @@ public class FrameObjectDictionary_Sngltn
 
   /** \~english
    *  \~german
-   *  \brief
-   *  Methode Ermittelt alle FN´s der Kinder des gegebene Fensters (Parent).<br/>
+   *  Methode Ermittelt alle FN´s der Kinder des gegebene Fensters (Parent).<br>
    *  
-   *  _Hinweis:_ Methode filtert alle FNs aus myFarmeObjectDictionary heraus, die mit FN_Parent Anfangen.<br/>
+   *  _Hinweis:_ Methode filtert alle FNs aus myFarmeObjectDictionary heraus, die mit FN_Parent Anfangen.<br>
    *  D.h. Es kann auch auch die Kinder eines Radiolist ermitteln. Siehe auch SeRadioList.
    *  
    *  @param FN_Parent Funktionaler Name des Fenster welches Durchsucht werden soll.
    *  @return Liste der gefunden Child-Keys´s, 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.11.18
+   *  \date 2016.11.18
    */
   public ArrayList<String>GetAllChildKeysOfParent(String FN_Parent)
   {
@@ -282,23 +281,25 @@ public class FrameObjectDictionary_Sngltn
    * \see Für das Fensterobjekt existiert eine zweite Ausprägung dieser Methode.
    * FrameObjectDictionary.GetObjectByName(String,String)
    * 
-   * \param fps_ParentObject Name des Fenster-Objektes = Elternobjekt. \param
+   * @param fps_ParentObject Name des Fenster-Objektes = Elternobjekt. \param
    * fps_ChildObject Name des Kindobjektes-Objektes.
    * 
-   * \return Frame-Objekt-Referenz auf das Kindobjekt.
+   * @return Frame-Objekt-Referenz auf das Kindobjekt.
    * 
-   * \~english \brief The method delivers the Object of the given
-   * ChildObjecttest.
+   * \~english
+   * The method delivers the Object of the given ChildObjecttest.
    * 
    * \see For the window Object another markedness is existing.
    * FrameObjectDictionary.GetObjectByName(String,String)
    * 
-   * \param fps_ParentObject Name des Fenster-Objektes = Elternobjekt. \param
-   * fps_ChildObject Name des Kindobjektes-Objektes. \return \todo TODO: JN
-   * Rückgabewert übersetzen/review
+   * @param fps_ParentObject Name des Fenster-Objektes = Elternobjekt. \param
+   * fps_ChildObject Name des Kindobjektes-Objektes.
+   * @return \todo TODO: Rückgabewert übersetzen/review
    * 
-   * \~ \author Zoltan Hrabovszki \date 2014.10.10 \todo TODO:
-   * Exception/Try/Except/Finaly einbauen
+   * \~
+   * @author Zoltan Hrabovszki
+   * \date 2014.10.10 
+   * \todo TODO:
    * @throws IllegalAccessException 
    * @throws IllegalArgumentException 
    */
@@ -535,10 +536,16 @@ public class FrameObjectDictionary_Sngltn
                 // Add child-object to the dictionary
                 myAnnotationDictionary.put( lvsChildKey, lvField );
                 
-                (( IOKW_FN ) lvFieldInstance).SetFN( lvsFNChild );
-                (( IOKW_FN ) lvFieldInstance).SetParentFN( lvsFNParent );
-
-                myFrameObjectDictionary.put( lvsChildKey, lvFieldInstance );
+                try
+                {
+                   (( IOKW_FN ) lvFieldInstance).SetFN( lvsFNChild );
+                   (( IOKW_FN ) lvFieldInstance).SetParentFN( lvsFNParent );
+                   myFrameObjectDictionary.put( lvsChildKey, lvFieldInstance );
+                }
+                catch (java.lang.ClassCastException e)
+                {
+                   System.out.print("Hopla");
+                }
               }
             else
             {

@@ -11,10 +11,11 @@ import javax.xml.xpath.XPathExpressionException;
 import org.xml.sax.SAXException;
 
 import okw.*;
+import okw.gui.AnyWinBase;
 import okw.log.Logger_Sngltn;
 
 
-    public class AllMethods_MultipleValues
+    public class AllMethods_MultipleValues extends AnyWinBase
     {
 
         protected String Locator;
@@ -37,6 +38,7 @@ import okw.log.Logger_Sngltn;
         {
             return "Rechner.All_MethodsObj";
         }
+        
         
         public void ClickOn()
         {

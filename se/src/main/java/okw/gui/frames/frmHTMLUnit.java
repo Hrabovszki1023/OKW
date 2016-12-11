@@ -9,5 +9,4 @@ public class frmHTMLUnit extends SeHtmlUnitDriver
 {
     @OKW(FN="URL")
     public SeURL URL = new SeURL();
-	
 }

@@ -125,7 +125,6 @@ import okw.OKW;
         /// \~
         /// \author Zoltán Hrabovszki
         /// \date 2015.05.12
-
         public void StartApp()
         {
         	MyLogger.LogFunctionStartDebug("StartApp");

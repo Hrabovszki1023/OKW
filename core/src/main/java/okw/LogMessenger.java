@@ -40,15 +40,7 @@
 package okw;
 
 import okw.exceptions.*;
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
 
-import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.io.FileNotFoundException;
-
-import org.xml.sax.SAXException;
 
 import org.stringtemplate.v4.*;
 

@@ -233,22 +233,22 @@
 		<!-- Method: "LogIsActive"-->
 		<Method name="LogIsActive">
 			<Text key="LogValue">
-				<en>Value found: '{0}'</en>
-				<de>Gefundener Wert: '{0}'</de>
+				<en>Value found: '$P1$'</en>
+				<de>Gefundener Wert: '$P1$'</de>
 			</Text>
 		</Method>
 		<!-- Method: "LogHasFocus"-->
 		<Method name="LogHasFocus">
 			<Text key="LogValue">
-				<en>Value found: '{0}'</en>
-				<de>Gefundener Wert: '{0}'</de>
+				<en>Value found: '$P1$'</en>
+				<de>Gefundener Wert: '$P1$'</de>
 			</Text>
 		</Method>
 		<!-- Method: "LogExists"-->
 		<Method name="LogExists">
 			<Text key="LogValue">
-				<en>Value found: '{0}'</en>
-				<de>Gefundener Wert: '{0}'</de>
+				<en>Value found: '$P1$'</en>
+				<de>Gefundener Wert: '$P1$'</de>
 			</Text>
 		</Method>
 		<!--===============================================================-->
