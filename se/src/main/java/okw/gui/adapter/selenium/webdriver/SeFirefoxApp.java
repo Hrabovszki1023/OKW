@@ -48,10 +48,10 @@ import okw.gui.adapter.selenium.*;
 import okw.log.*;
 
 
-    ///
-    /// \brief
-    /// OKW Selenium FireFox BrowserWindow Klasse
-    /// 
+    /**
+     *  \brief
+     *  OKW Selenium FireFox BrowserWindow Klasse
+     */ 
     public class SeFirefoxApp
     {
         protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
@@ -87,7 +87,7 @@ import okw.log.*;
         {
         	MyLogger.LogFunctionStartDebug("StartApp");
 
-        	System.setProperty("webdriver.gecko.driver", "/Users/zoltanhrabovszki/Applications/geckodriver");
+        	System.setProperty("webdriver.gecko.driver", "/Applications/geckodriver");
             SeDriver.getInstance().driver = new FirefoxDriver();
             this.Init();
 

@@ -40,6 +40,7 @@ import static org.junit.Assert.*;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
+import okw.exceptions.OKWNotAllowedValueException;
 import okw.exceptions.OKWVerifyingFailsException;
 
 import org.junit.After;
@@ -67,12 +68,12 @@ import org.junit.rules.TestName;
         @Rule
         public TestName name = new TestName();
     	
-        @After
-        public void myAfter() throws Exception
-        {
-            EN.StopApp( ApplicationName );
-            EN.EndTest();
-        }
+//        @After
+//        public void myAfter() throws Exception
+//        {
+//            EN.StopApp( ApplicationName );
+//            EN.EndTest();
+//        }
 
         
         /** \~german
@@ -94,18 +95,21 @@ import org.junit.rules.TestName;
 
                 EN.ClickOn("Visa");
                 EN.VerifyValue("Visa", "CHECKED");
-                EN.VerifyValue("Amarican Express", "UNCHECKED");
+                EN.VerifyValue("American Express", "UNCHECKED");
                 EN.VerifyValue("Mastercard", "UNCHECKED");
                 
-                EN.ClickOn("Amarican Express");
+                EN.ClickOn("American Express");
                 EN.VerifyValue("Visa", "UNCHECKED");
-                EN.VerifyValue("Amarican Express", "CHECKED");
+                EN.VerifyValue("American Express", "CHECKED");
                 EN.VerifyValue("Mastercard", "UNCHECKED");
 
                 EN.ClickOn("Mastercard");
                 EN.VerifyValue("Visa", "UNCHECKED");
-                EN.VerifyValue("Amarican Express", "UNCHECKED");
+                EN.VerifyValue("American Express", "UNCHECKED");
                 EN.VerifyValue("Mastercard", "CHECKED");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
 
         }
 
@@ -129,6 +133,9 @@ import org.junit.rules.TestName;
                 
            EN.SelectWindow("SeInputRadioTestFrame");
            EN.LogCaption("Visa");
+
+           EN.StopApp( ApplicationName );
+           EN.EndTest();
         }
 
         
@@ -149,6 +156,10 @@ import org.junit.rules.TestName;
                      
             EN.SelectWindow("SeInputRadioTestFrame");
             EN.LogExists("Visa");
+            
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
+
         }
 
         /** \~german
@@ -159,25 +170,15 @@ import org.junit.rules.TestName;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test
-        @Ignore
-        public void tc_LogHasFocus() throws Exception
+        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        public void tc_LogHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
-                EN.SelectWindow("InputButton");
-                EN.LogHasFocus("Text_1");
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogHasFocus", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogHasFocus", "F");
-                throw e;
-            }
+                EN.SelectWindow("SeInputRadioTestFrame");
+                EN.LogHasFocus("Visa");
         }
 
         /** \~german
@@ -189,15 +190,19 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test
-        @Ignore
         public void tc_LogToolTip() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
-                EN.SelectWindow("InputButton");
-                EN.LogTooltip("Text_1");
+                EN.SelectWindow("SeInputRadioTestFrame");
+
+                EN.LogTooltip("Visa");
+                EN.LogTooltip("Inactive");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         /** \~german
@@ -208,16 +213,21 @@ import org.junit.rules.TestName;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
-        @Ignore
-        public void tc_LogValue_OKWFrameObjectMethodNotImplemented() throws Exception
+        @Test
+        public void tc_LogValue() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
-                EN.SelectWindow("InputButton");
-                EN.LogValue("Text_1");
+                EN.SelectWindow("SeInputRadioTestFrame");
+
+                EN.SetValue("Visa", "CHECKED");
+                EN.LogValue("Visa");
+                EN.LogValue("Inactive");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         /** \~german
@@ -229,19 +239,26 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test
-        @Ignore
         public void tc_LogIsActive() throws Exception
         {
             try
             {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
-                EN.SelectWindow("InputButton");
-                EN.LogIsActive("Text_1");
+                EN.SelectWindow("SeInputRadioTestFrame");
+
+                EN.LogIsActive("Visa");
+                EN.LogIsActive("Inactive");
+                
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
 
                 //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogIsActive", "P");
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+
             }
             catch (Exception e)
             {
@@ -269,41 +286,40 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("SeInputRadioTestFrame");
 
                 EN.MemorizeCaption("Visa", "SeInputRadio_MemorizeCaption_1" );
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+
         }
 
         /** \~german
-         * \brief
-         * Test des Schlüsselwortes MemorizeCaption für den GUI-Adapter SeInputRadio.
+         * Test des Schlüsselwortes MemorizeLabel für den GUI-Adapter SeInputRadio.
          * 
          * \~
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
         @Test
-        @Ignore
         public void tc_MemorizeLabel() throws Exception
         {
-            try
-            {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
-                
-                EN.SelectWindow("InputButton");
+                    EN.BeginTest( name.getMethodName() );
+                    EN.StartApp( ApplicationName );
+                    EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                             
+                    EN.SelectWindow("SeInputRadioTestFrame");
 
-                EN.MemorizeLabel("Text_1", "SeInputRadio_MemorizeLabel_1" );
-                assertEquals("Label für Button1: ", myMM.Get("SeInputRadio_MemorizeLabel_1"));
+                    EN.MemorizeLabel("Visa", "SeInputRadio_MemorizeLabel_1");
+                    assertEquals("Visa", myMM.Get("SeInputRadio_MemorizeLabel_1"));
+                    
+                    EN.MemorizeLabel("American Express", "SeInputRadio_MemorizeLabel_2");
+                    assertEquals("American Express", myMM.Get("SeInputRadio_MemorizeLabel_2"));
+                    
+                    EN.MemorizeLabel("Mastercard", "SeInputRadio_MemorizeLabel_3");
+                    assertEquals("Mastercard", myMM.Get("SeInputRadio_MemorizeLabel_3"));
+                    
+                    EN.StopApp( ApplicationName );
+                    EN.EndTest();
 
-                EN.MemorizeLabel("Text_2", "SeInputRadio_MemorizeLabel_2");
-                assertEquals("Label für Button2: ", myMM.Get("SeInputRadio_MemorizeLabel_2"));
-
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeCaption", "P");
-            }
-            catch ( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeCaption", "F");
-                throw e;
-            }
         }
 
         
@@ -318,8 +334,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_MemorizeExists() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
@@ -329,13 +343,9 @@ import org.junit.rules.TestName;
                 EN.MemorizeExists("Visa", "SeInputRadio_MemorizeExists_1");
 
                 assertEquals("YES", myMM.Get("SeInputRadio_MemorizeExists_1"));
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeExists", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeExists", "F");
-                throw e;
-            }
+                
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         /** \~german
@@ -346,27 +356,15 @@ import org.junit.rules.TestName;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test
-        @Ignore
-        public void tc_MemorizeHasFocus() throws Exception
+        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        public void tc_MemorizeHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
-                EN.SelectWindow("InputButton");
-                EN.MemorizeHasFocus("Text_1", "SePushButton_MemorizeHasFocus");
-
-                assertEquals("NO", myMM.Get("SePushButton_MemorizeHasFocus"));
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeHasFocus", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeHasFocus", "F");
-                throw e;
-            }
+                EN.SelectWindow("SeInputRadioTestFrame");
+                EN.MemorizeHasFocus("Visa", "SeInputRadio_MemorizeHasFocus");
         }
 
         
@@ -379,26 +377,23 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test
-        @Ignore
         public void tc_MemorizeIsActive() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
-                EN.SelectWindow("InputButton");
-                EN.MemorizeIsActive("Text_1", "SePushButton_MemorizeIsActive");
+                EN.SelectWindow("SeInputRadioTestFrame");
 
-                assertEquals("YES", myMM.Get("SePushButton_MemorizeIsActive"));
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeIsActive", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeIsActive", "F");
-                throw e;
-            }
+                EN.MemorizeIsActive("Visa", "SeInputRadio_MemorizeIsActive_Visa");
+                EN.MemorizeIsActive("Inactive", "SeInputRadio_MemorizeIsActive_Inactive");
+                
+                
+                assertEquals("NO", myMM.Get("SeInputRadio_MemorizeIsActive_Inactive"));
+                
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+
         }
 
 
@@ -411,30 +406,22 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test
-        @Ignore
         public void tc_MemorizeTooltip() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
-                EN.SelectWindow("InputButton");
-                EN.MemorizeTooltip("Text_1", "SePushButton_MemorizeTooltip_1");
-                EN.MemorizeTooltip("Text_2", "SePushButton_MemorizeTooltip_2");
+                EN.SelectWindow("SeInputRadioTestFrame");
 
-                assertEquals("Button 1 Tooltip/title", myMM.Get("SePushButton_MemorizeTooltip_1"));
-                assertEquals("Button 2 Tooltip/title", myMM.Get("SePushButton_MemorizeTooltip_2"));
+                EN.MemorizeTooltip("Visa", "SeInputRadio_MemorizeTooltip_Visa");
+                EN.MemorizeTooltip("Inactive", "SeInputRadio_MemorizeTooltip_Inactive");
 
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeToolTip", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeToolTip", "F");
-                throw e;
-            }
+                assertEquals("title-Visa", myMM.Get("SeInputRadio_MemorizeTooltip_Visa"));
+                assertEquals("title-Disabled", myMM.Get("SeInputRadio_MemorizeTooltip_Inactive"));
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         /** \~german
@@ -445,17 +432,25 @@ import org.junit.rules.TestName;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
-        @Ignore
-        public void tc_MemorizeValue_OKWFrameObjectMethodNotImplemented() throws Exception
+        @Test
+        public void tc_MemorizeValue() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
-                EN.SelectWindow("InputButton");
-                EN.MemorizeValue("Text_1", "SePushButton_MemorizeTooltip_1");
+                EN.SelectWindow("SeInputRadioTestFrame");
+
+                EN.SetValue("Visa", "CHECKED");
+                
+                EN.MemorizeValue("Visa", "SeInputRadio_MemorizeValue_Visa");
+                EN.MemorizeValue("American Express", "SeInputRadio_MemorizeValue_AmericanExpress");
+                
+                assertEquals("CHECKED", myMM.Get("SeInputRadio_MemorizeValue_Visa"));
+                assertEquals("UNCHECKED", myMM.Get("SeInputRadio_MemorizeValue_AmericanExpress"));
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         
@@ -467,27 +462,39 @@ import org.junit.rules.TestName;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
 		*/
-        @Test
-        @Ignore
-        public void tc_SetFocus_VerifyHasFocus() throws Exception
+        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        public void tc_VerifyHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("SeInputRadioTestFrame");
                 
-                EN.SetFocus("Text_1");
-
-                EN.VerifyHasFocus( "Text_1", "YES" );
-                EN.VerifyHasFocus( "Text_2", "NO" );
-
-                EN.SetFocus("Text_2");
-
-                EN.VerifyHasFocus( "Text_2", "YES" );
-                EN.VerifyHasFocus( "Text_1", "NO" );
+                EN.VerifyHasFocus( "Visa", "YES" );
         }
 
+        
+        /** \~german
+         * \brief
+         * Test des Schlüsselwortes SetFocus und VerifyHasFocus für den GUI-Adapter SeInputRadio.
+         * 
+         * \~
+         * @author Zoltán Hrabovszki
+         * @date 2016.12.11
+		*/
+        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        public void tc_SetFocus_OKWFrameObjectMethodNotImplemented() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                
+                EN.SelectWindow("SeInputRadioTestFrame");
+                
+                EN.SetFocus( "Visa" );
+        }
+        
         
         /** \~german
          * \brief
@@ -498,16 +505,15 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test(expected=OKWFrameObjectMethodNotImplemented.class)
-        @Ignore
         public void tc_SelectMenu_OKWFrameObjectMethodNotImplemented() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("SeInputRadioTestFrame");
 
-                EN.SelectMenu("Text_1");
+                EN.SelectMenu("Visa");
         }
 
         
@@ -520,16 +526,15 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test(expected=OKWFrameObjectMethodNotImplemented.class)
-        @Ignore
         public void tc_SelectMenu2_OKWFrameObjectMethodNotImplemented() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("SeInputRadioTestFrame");
 
-                EN.SelectMenu("Text_1", "What ever...");
+                EN.SelectMenu("Visa", "What ever...");
         }
 
 
@@ -541,39 +546,103 @@ import org.junit.rules.TestName;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
-        @Ignore
-        public void tc_SetValue_OKWFrameObjectMethodNotImplemented() throws Exception
+        @Test
+        public void tc_SetValue() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("SeInputRadioTestFrame");
 
-                EN.SetValue("Text_1", "What ever...");
+                EN.SetValue("Visa", "CHECKED");
+                EN.VerifyValue("Visa", "CHECKED");
+                EN.VerifyValue("American Express", "UNCHECKED");
+                EN.VerifyValue("Mastercard", "UNCHECKED");
+
+                EN.SetValue("Mastercard", "CHECKED");
+                EN.VerifyValue("Visa", "UNCHECKED");
+                EN.VerifyValue("American Express", "UNCHECKED");
+                EN.VerifyValue("Mastercard", "CHECKED");
+
+                EN.SetValue("American Express", "CHECKED");
+                EN.VerifyValue("Visa", "UNCHECKED");
+                EN.VerifyValue("American Express", "CHECKED");
+                EN.VerifyValue("Mastercard", "UNCHECKED");
+                
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
+        
         /** \~german
          * \brief
-         * Test des Schlüsselwortes Select( FN, Val ) für den GUI-Adapter SeInputRadio.
+         * Test des Schlüsselwortes SetValue( FN, Val ) für den GUI-Adapter SeInputRadio.
+         * 
+         * UNCHECKED is not allowed and causes an OKWNotAllowedValueException
          * 
          * \~
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
+        @Test(expected=OKWNotAllowedValueException.class)
+        public void tc_SetValue_OKWNotAllowedValueException_UNCHECKED() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                
+                EN.SelectWindow("SeInputRadioTestFrame");
+
+                EN.SetValue("Visa", "UNCHECKED");
+        }
+ 
+        /** \~german
+         * \brief
+         * Test des Schlüsselwortes SetValue( FN, Val ) für den GUI-Adapter SeInputRadio.
+         * 
+         * Only CHECKED is allowed and all other values causes an OKWNotAllowedValueException
+         * 
+         * \~
+         * @author Zoltán Hrabovszki
+         * @date 2016.12.11
+        */
+        @Test(expected=OKWNotAllowedValueException.class)
+        public void tc_SetValue_OKWNotAllowedValueException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                
+                EN.SelectWindow("SeInputRadioTestFrame");
+
+                EN.SetValue("Visa", "Ajhdttg");
+        }
+        
+        /** \~german
+         * \brief
+         * Test des Schlüsselwortes Select( FN, Val ) für den GUI-Adapter SeInputRadio.
+         * 
+         * Ein SeRadioButton hat keine Caption -> OKWFrameObjectMethodNotImplemented
+         *         
+         * \~
+         * @author Zoltán Hrabovszki
+         * @date 2016.12.11
+        */
         @Test(expected=OKWFrameObjectMethodNotImplemented.class)
-        @Ignore
         public void tc_Select_OKWFrameObjectMethodNotImplemented() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("SeInputRadioTestFrame");
 
-                EN.Select("Text_1", "What ever...");
-        }
+                EN.Select("Visa", "CHECKED");
+                
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+}
 
         /** \~german
          * \brief
@@ -596,6 +665,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("SeInputRadioTestFrame");
                 
                 EN.VerifyCaption("Visa", "ABC");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         
@@ -620,6 +692,9 @@ import org.junit.rules.TestName;
             EN.SelectWindow("SeInputRadioTestFrame");
 
             EN.VerifyCaptionWCM("Visa", "?ABC#");
+
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
 
         
@@ -644,6 +719,9 @@ import org.junit.rules.TestName;
             EN.SelectWindow("SeInputRadioTestFrame");
                 
             EN.VerifyCaptionREGX("Visa", "ABC");
+
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
 
         /** \~german
@@ -662,6 +740,9 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("SeInputRadioTestFrame");
                 EN.VerifyExists("Does Not Exists", "NO");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         /** \~german
@@ -680,6 +761,9 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("SeInputRadioTestFrame");
                 EN.VerifyExists("Does Not Exists", "YES");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         /** \~german
@@ -700,6 +784,9 @@ import org.junit.rules.TestName;
             
             EN.SelectWindow("SeInputRadioTestFrame");
             EN.VerifyExists("Visa", "NO");
+
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
 
   /** \~german
@@ -720,6 +807,9 @@ import org.junit.rules.TestName;
     
     EN.SelectWindow("SeInputRadioTestFrame");
     EN.VerifyExists( "Visa", "YES" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
         /** \~german
@@ -733,17 +823,18 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test
-        @Ignore
         public void tc_VerifyIsActive_ActiveYESExpectedYES() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+            EN.BeginTest( name.getMethodName() );
+            EN.StartApp( ApplicationName );
+            EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                     
+            EN.SelectWindow("SeInputRadioTestFrame");
+
+            EN.VerifyIsActive("Visa", "YES");
                 
-                EN.SelectWindow("SeInputRadioTestFrame");
-                
-                EN.VerifyIsActive("Text_1", "YES");
-                
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
 
         
@@ -751,24 +842,25 @@ import org.junit.rules.TestName;
          * \brief
          * Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeInputRadio.
          * 
-         * Button 1 ist active (_nicht_ "disabled")
+         * RadioButton Visa ist active (_nicht_ "disabled")
          * 
          * \~
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
         @Test(expected=OKWVerifyingFailsException.class)
-        @Ignore
         public void tc_VerifyIsActive_ActiveYESExpectedNO() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
-                
-                EN.SelectWindow("SeInputRadioTestFrame");
-                
-                EN.VerifyIsActive("Text_1", "NO");
-                
+            EN.BeginTest( name.getMethodName() );
+            EN.StartApp( ApplicationName );
+            EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                     
+            EN.SelectWindow("SeInputRadioTestFrame");
+
+            EN.VerifyIsActive("Visa", "NO");
+
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
         
         /** \~german
@@ -781,17 +873,18 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test
-        @Ignore
         public void tc_VerifyIsActive_ActiveNOExpectedNO() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+            EN.BeginTest( name.getMethodName() );
+            EN.StartApp( ApplicationName );
+            EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                     
+            EN.SelectWindow("SeInputRadioTestFrame");
 
-              // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton");
+            EN.VerifyIsActive("Inactive", "NO");
 
-                EN.VerifyIsActive("Text_2", "NO");
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
 
         /** \~german
@@ -804,21 +897,21 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test(expected=OKWVerifyingFailsException.class)
-        @Ignore
         public void tc_VerifyIsActive_ActiveNOExpectedYES() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+            EN.BeginTest( name.getMethodName() );
+            EN.StartApp( ApplicationName );
+            EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                     
+            EN.SelectWindow("SeInputRadioTestFrame");
 
-              // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton");
+            EN.VerifyIsActive("Inactive", "YES");
 
-                EN.VerifyIsActive("Text_2", "YES");
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
 
         /** \~german
-         * \brief
          * Test des Schlüsselwortes VerifyLabel für den GUI-Adapter SeInputRadio.
          * 
          * 
@@ -827,67 +920,49 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test
-        @Ignore
         public void tc_VerifyLabel() throws Exception
         {
-            try
-            {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+            EN.BeginTest( name.getMethodName() );
+            EN.StartApp( ApplicationName );
+            EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                     
+            EN.SelectWindow("SeInputRadioTestFrame");
 
-              // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton");
+            EN.VerifyLabel("Visa", "Visa");
+            EN.VerifyLabel("American Express", "American Express");
+            EN.VerifyLabel("Mastercard", "Mastercard");               
 
-                EN.VerifyLabel("Text_1", "Label für Button1: ");
-                EN.VerifyLabel("Text_2", "Label für Button2: ");
-                
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "F");
-                throw e;
-            }
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
 
         /** \~german
-         * \brief
          * Test des Schlüsselwortes VerifyLabel für den GUI-Adapter SeInputRadio.
-         * 
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * @date 2016.12.16
         */
         @Test
-        @Ignore
         public void tc_VerifyLabelWCM() throws Exception
         {
-            try
-            {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+            EN.BeginTest( name.getMethodName() );
+            EN.StartApp( ApplicationName );
+            EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                     
+            EN.SelectWindow("SeInputRadioTestFrame");
 
-              // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton");
+            EN.VerifyLabelWCM("Visa", "Vis*");
+            EN.VerifyLabelWCM("American Express", "American Express");
+            EN.VerifyLabelWCM("Mastercard", "Mastercard");               
 
-                EN.VerifyLabelWCM("Text_1", "Label für Button#: ");
-                EN.VerifyLabelWCM("Text_2", "Label für Button#: ");
-                
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "F");
-                throw e;
-            }
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
 
         /** \~german
          * \brief
-         * Test des Schlüsselwortes VerifyLabel für den GUI-Adapter SeInputRadio.
+         * Test des Schlüsselwortes VerifyLabelREGX für den GUI-Adapter SeInputRadio.
          * 
          * 
          * \~
@@ -895,18 +970,20 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test
-        @Ignore
         public void tc_VerifyLabelREGX() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+            EN.BeginTest( name.getMethodName() );
+            EN.StartApp( ApplicationName );
+            EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                     
+            EN.SelectWindow("SeInputRadioTestFrame");
 
-              // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton");
+            EN.VerifyLabelREGX("Visa", "Vis.");
+            EN.VerifyLabelREGX("American Express", "American Express");
+            EN.VerifyLabelREGX("Mastercard", "Mastercard");               
 
-                EN.VerifyLabelREGX("Text_1", "Label für Button1: ");
-                EN.VerifyLabelREGX("Text_2", "Label für Button2: ");
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
 
         
@@ -919,17 +996,20 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test
-        @Ignore
         public void tc_VerifyToolTip() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+            EN.BeginTest( name.getMethodName() );
+            EN.StartApp( ApplicationName );
+            EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+            
+            EN.SelectWindow("SeInputRadioTestFrame");
 
-                EN.SelectWindow("InputButton");
-
-                EN.VerifyTooltip("Text_1", "Button 1 Tooltip/title");
-                EN.VerifyTooltip("Text_2", "Button 2 Tooltip/title");
+            EN.VerifyTooltip("Visa", "title-Visa");
+            EN.VerifyTooltip("American Express", "title-American Express");
+            EN.VerifyTooltip("Mastercard", "title-Mastercard");
+            
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
  
         
@@ -942,17 +1022,20 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test
-        @Ignore
         public void tc_VerifyToolTipWCM() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                
+                EN.SelectWindow("SeInputRadioTestFrame");
 
-                EN.SelectWindow("InputButton");
-
-                EN.VerifyTooltipWCM("Text_1", "?utton # Tooltip/title");
-                EN.VerifyTooltipWCM("Text_2", "?utton # Tooltip/title");
+                EN.VerifyTooltipWCM("Visa", "title?Visa");
+                EN.VerifyTooltipWCM("American Express", "title?American Express");
+                EN.VerifyTooltipWCM("Mastercard", "title?Mastercard");
+                
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         
@@ -965,17 +1048,20 @@ import org.junit.rules.TestName;
          * @date 2016.12.11
         */
         @Test
-        @Ignore
         public void tc_VerifyToolTipREGX() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+            EN.BeginTest( name.getMethodName() );
+            EN.StartApp( ApplicationName );
+            EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+            
+            EN.SelectWindow("SeInputRadioTestFrame");
 
-                EN.SelectWindow("InputButton");
-
-                EN.VerifyTooltipREGX("Text_1", "Button 1 Tooltip/title");
-                EN.VerifyTooltipREGX("Text_2", "Button 2 Tooltip/title");
+            EN.VerifyTooltipREGX("Visa", "title.Visa");
+            EN.VerifyTooltipREGX("American Express", "title.American Express");
+            EN.VerifyTooltipREGX("Mastercard", "title.Mastercard");
+            
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
 
         
@@ -987,17 +1073,10 @@ import org.junit.rules.TestName;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
-        @Ignore
-        public void tc_VerifyValue_OKWFrameObjectMethodNotImplemented() throws Exception
+        @Test
+        public void tc_VerifyValue() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
-
-                EN.SelectWindow("InputButton");
-
-                EN.VerifyValue("Text_1", "Button 1 Tooltip/title");
+        	tc_ClickOn();
         }
 
         
@@ -1009,38 +1088,68 @@ import org.junit.rules.TestName;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
-        @Ignore
-        public void tc_VerifyValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
+        @Test
+        public void tc_VerifyValueWCM() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+            EN.BeginTest( name.getMethodName() );
+            EN.StartApp( ApplicationName );
+            EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+            
+            EN.SelectWindow("SeInputRadioTestFrame");
 
-                EN.SelectWindow("InputButton");
+            EN.ClickOn("Visa");
+            EN.VerifyValueWCM("Visa", "CH*");
+            EN.VerifyValueWCM("American Express", "UNCH*");
+            EN.VerifyValueWCM("Mastercard", "UNCH*");
+            
+            EN.ClickOn("American Express");
+            EN.VerifyValueWCM("Visa", "UNCH*");
+            EN.VerifyValueWCM("American Express", "CH*");
+            EN.VerifyValueWCM("Mastercard", "UNCH*");
 
-                EN.VerifyValueWCM("Text_1", "?utton # Tooltip/title");
+            EN.ClickOn("Mastercard");
+            EN.VerifyValueWCM("Visa", "UNCH*");
+            EN.VerifyValueWCM("American Express", "UNCH*");
+            EN.VerifyValueWCM("Mastercard", "CH*");
+
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
 
 
         /** \~german
          * \brief
-         * Test des Schlüsselwortes VerifyValueTEGX für den GUI-Adapter SeInputRadio.
+         * Test des Schlüsselwortes VerifyValueREGX für den GUI-Adapter SeInputRadio.
          * 
          * \~
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
-        @Ignore
-        public void tc_VerifyValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
+        @Test
+        public void tc_VerifyValueREGX() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
-                EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+            EN.BeginTest( name.getMethodName() );
+            EN.StartApp( ApplicationName );
+            EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+            
+            EN.SelectWindow("SeInputRadioTestFrame");
 
-                EN.SelectWindow("InputButton");
+            EN.ClickOn("Visa");
+            EN.VerifyValueWCM("Visa", "CH.+");
+            EN.VerifyValueWCM("American Express", "UNCH.+");
+            EN.VerifyValueWCM("Mastercard", "UNCH.+");
+            
+            EN.ClickOn("American Express");
+            EN.VerifyValueWCM("Visa", "UNCH.+");
+            EN.VerifyValueWCM("American Express", "CH.+");
+            EN.VerifyValueWCM("Mastercard", "UNCH.+");
 
-                EN.VerifyValueREGX("Text_1", "Button 1 Tooltip/title");
+            EN.ClickOn("Mastercard");
+            EN.VerifyValueWCM("Visa", "UNCH.+");
+            EN.VerifyValueWCM("American Express", "UNCH.+");
+            EN.VerifyValueWCM("Mastercard", "CH.+");
+
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
     }

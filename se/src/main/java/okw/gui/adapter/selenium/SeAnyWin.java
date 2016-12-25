@@ -107,7 +107,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
 
     /// \~german
     /// \brief
-    /// Prüft, ob das aktuellen Objekt aktiv ist.
+    /// Ermittelt, ob das aktuellen Objekt aktiv ist.
     /// 
     /// \returntrue, falls das Objekt aktive ist, sonst false\return
     /// \~
@@ -117,7 +117,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     {
         Boolean lvbReturn = false;
         Boolean bOK = false;
-        String lvDisabled = "";
+        String lvDisabled = null;
 
         try
         {
@@ -132,13 +132,13 @@ public class SeAnyWin extends AnyWinBase implements IGUI
 
             lvDisabled = this.Me().getAttribute("disabled");
 
-            if (lvDisabled == null || lvDisabled != "true")
+            if (lvDisabled != null)
             {
-                lvbReturn = true;
+            	if (lvDisabled.equals("true")) lvbReturn = false;
             }
             else
             {
-                lvbReturn = false;
+                lvbReturn = true;
             }
 
             bOK = true;
@@ -552,14 +552,9 @@ public class SeAnyWin extends AnyWinBase implements IGUI
       
     // \~german
     // \brief
-    // Ein SeInputButton IstkeinMenüobject! -> OKWFrameObjectMethodNotImplemented
-    // Auslösen!
-    //
     // \return
     // \~english
     // \brief
-    // A SeInputButton has no value! -> Trigger
-    // OKWFrameObjectMethodNotImplemented!
     // \~
     // \author Zoltán Hrabovszki
     // \date 2016.10.06
@@ -570,7 +565,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
       {
         MyLogger.LogFunctionStartDebug( "SetValue" );
 
-        String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "SelectMenu()" );
+        String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "SetValue()" );
         throw new OKWFrameObjectMethodNotImplemented( lvsLM );
       }
       finally
