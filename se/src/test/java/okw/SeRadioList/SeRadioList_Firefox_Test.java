@@ -2,6 +2,7 @@ package okw.SeRadioList;
 
 import okw.log.Logger_Sngltn;
 
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
@@ -30,4 +31,14 @@ public class SeRadioList_Firefox_Test extends SeRadioList_Test
 	{
 		//myLog2HTML.Result2HTML();
 	}
+	
+    @After
+    public void FirefoxAfter() throws Exception
+    {
+    	Runtime rt = Runtime.getRuntime();
+    	  if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) 
+    	     rt.exec("taskkill firefox");
+    	   else
+    	     rt.exec("pkill -f firefox");
+    }
 }

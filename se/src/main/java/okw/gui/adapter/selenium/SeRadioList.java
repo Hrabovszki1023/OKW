@@ -41,10 +41,14 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import okw.FrameObjectDictionary_Sngltn;
 import okw.OKW_Const_Sngltn;
 import okw.core.Core;
 import okw.core.OKW_CurrentObject_Sngltn;
+import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
 
 
@@ -84,6 +88,16 @@ import okw.gui.OKWLocator;
 
     if ( Val.size() == 1 )
     {
+
+    	String DELETE = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("DELETE");
+    	
+    	if (Val.get(0).equals(DELETE))
+    	{
+    	      // \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
+    	      throw new okw.exceptions.OKWNotAllowedValueException( "SeRadioList: This Value is Not Aloowd here: " + Val.get(0));
+    	}
+    		
+    	else{
       // Get my FN
       String myFN = CO.GetChildFN();
 
@@ -95,6 +109,7 @@ import okw.gui.OKWLocator;
 
       // Set the Current Radiobutton-object back to the RadioList..
       CO.SetChildName( myFN );
+    	}
     }
     else
     {
@@ -151,9 +166,14 @@ import okw.gui.OKWLocator;
 
       for ( String lvsRadioButtonFN : myRadioButtonKeys )
       {
-        if ( isChecked.equals( ( ( SeInputRadio ) FOD.GetParentObjectByName( lvsRadioButtonFN ) ).getValue() ) )
+
+    	 ArrayList<String> Actuel = ( ( SeInputRadio ) FOD.GetParentObjectByName( lvsRadioButtonFN ) ).getValue(); 
+        
+    	if ( isChecked.equals( Actuel.get(0) ))
         {
-          lvLsReturn.add( lvsRadioButtonFN );
+    		
+    	  String CurrentValue = okw.OKW_Helper.GetRightFromDelimiterNumber(lvsRadioButtonFN, this.GetFN() + ".", 1);
+          lvLsReturn.add( CurrentValue );
           break;
         }
       }
@@ -169,6 +189,54 @@ import okw.gui.OKWLocator;
               this.LogFunctionEndDebug();
           }
       }
+      return lvLsReturn;
+  }
+  
+  
+  /** \~german
+   *  Ermittelt den textuellen Inhalt des Labels.
+   *  
+   *  Beim RadioList ist das Label die "Legende"
+   *  @return  Rückgabe des Textuellen Inhaltes der Labels.
+   *
+   *  \~english
+   *  \~
+   *  \author Zoltán Hrabovszki
+   *  \date 2016.12.20
+   */
+  @Override
+  public ArrayList<String> getLabel()
+  {
+      ArrayList<String> lvLsReturn = new ArrayList<String>();
+      Boolean bOK = false;
+      try
+      {
+          MyLogger.LogFunctionStartDebug("GetLabel");
+
+          // Wenn das Objekt nicht existiert mit Exception beenden...
+          if (!this.getExists())
+          {
+              String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetLabel()");
+              throw new OKWGUIObjectNotFoundException(lvsLM);
+          }
+          
+          // 2.schritt nun den Tag-label finden und den Textinhalt ermitteln.
+          WebElement label = SeDriver.getInstance().driver.findElement(By.xpath( this.getLocator() + "//legend" ));
+          lvLsReturn.add(label.getAttribute("textContent"));
+          bOK = true;
+      }
+      finally
+      {
+          if (bOK)
+          {
+              MyLogger.LogFunctionEndDebug(lvLsReturn);
+          }
+          else
+          {
+              MyLogger.LogFunctionEndDebug();
+          }
+      }
+      
       return lvLsReturn;
   }
 }

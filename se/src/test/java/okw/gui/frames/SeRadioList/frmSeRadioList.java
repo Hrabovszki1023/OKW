@@ -11,7 +11,7 @@ import okw.gui.adapter.selenium.SeRadioList;
   public class frmSeRadioList extends SeBrowserChild
   {
 
-      @OKW(FN="DoesNotExist", 
+      @OKW(FN="Does Not Exist", 
               VerifyLabel_PT=500, VerifyLabel_TO=1,
               VerifyValue_PT=500, VerifyValue_TO=1,
               VerifyTooltip_PT=500, VerifyTooltip_TO=1,
@@ -44,8 +44,8 @@ import okw.gui.adapter.selenium.SeRadioList;
     @OKW( FN = "Pay Method.Visa" )
     public SeInputRadio myVisa            = new SeInputRadio( "%1$s//input[@id='id_visa']", this.getLOCATOR() );
 
-    @OKW( FN = "Pay Method.Amarican Express" )
-    public SeInputRadio myAmaricanExpress = new SeInputRadio( "%1$s//input[@id='id_amarican_express']", this.getLOCATOR() );
+    @OKW( FN = "Pay Method.American Express" )
+    public SeInputRadio myAmericanExpress = new SeInputRadio( "%1$s//input[@id='id_american_express']", this.getLOCATOR() );
 
     @OKW( FN = "Pay Method.Mastercard" )
     public SeInputRadio myMastercard      = new SeInputRadio( "%1$s//input[@id='id_mastercard']", this.getLOCATOR() );

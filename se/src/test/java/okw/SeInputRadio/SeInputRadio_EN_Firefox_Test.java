@@ -3,6 +3,7 @@ package okw.SeInputRadio;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
@@ -30,4 +31,14 @@ public class SeInputRadio_EN_Firefox_Test extends SeInputRadio_EN_Test
 		//myLog2HTML.Result2HTML();
 	}
 	
+	
+    @After
+    public void FirefoxAfter() throws Exception
+    {
+    	Runtime rt = Runtime.getRuntime();
+    	  if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) 
+    	     rt.exec("taskkill firefox");
+    	   else
+    	     rt.exec("pkill -f firefox");
+    }
 }

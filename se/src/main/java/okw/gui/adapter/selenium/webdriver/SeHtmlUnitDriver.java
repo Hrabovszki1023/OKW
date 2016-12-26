@@ -42,6 +42,8 @@ package okw.gui.adapter.selenium.webdriver;
 
 import java.util.ArrayList;
 
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import okw.gui.adapter.selenium.SeDriver;
 import okw.gui.adapter.selenium.SeURL;
 import okw.log.Logger_Sngltn;
@@ -67,12 +69,6 @@ import okw.OKW;
     {
         protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
 
-        // =========================================================================
-        // ChildObject of InternetExplorer...
-        // =========================================================================
-        @OKW(FN="URL")
-        public SeURL URL = new SeURL();
-
         /// \~german
         /// \brief Konstruktor der Klasse, aktuell keine MethodenAufrufe.
         /// 
@@ -95,8 +91,6 @@ import okw.OKW;
         public void Init()
         {
         	MyLogger.LogFunctionStartDebug("Init()");
-
-            //// this.URL.mydriver = this.driver;
 
         	MyLogger.LogFunctionEndDebug();
         }
@@ -129,8 +123,9 @@ import okw.OKW;
         {
         	MyLogger.LogFunctionStartDebug("StartApp");
 
+        	
             SeDriver.getInstance().DriveUnitDriver();
-            this.Init();
+            // this.Init();
 
             MyLogger.LogFunctionEndDebug();
         }
