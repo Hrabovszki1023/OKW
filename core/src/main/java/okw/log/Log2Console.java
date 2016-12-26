@@ -40,9 +40,6 @@
 package okw.log;
 
 import java.util.List;
-
-import org.apache.commons.lang3.ArrayUtils;
-
 import okw.OKW_Helper;
 
 /// \~german
@@ -355,11 +352,20 @@ public class Log2Console implements ILogger
 			public void LogSequenceStart( String fps_KeyWordName, String fpsWindowFN,
 					String fps_SequenceName, String... fpsParameter )
 			{
-				String[] myParameter = {fpsWindowFN, fps_SequenceName};
+			    int i = fpsParameter.length;  
+			    int n = i + 3;
+			    
+			    String[] newArray = new String[n];
+			    
+			    newArray[0] =  fpsWindowFN;
+			    newArray[1] =  fps_SequenceName;
+			    
+			    for(int cnt=2; cnt<i; cnt++)
+			    {  
+			        newArray[cnt] = fpsParameter[cnt-2];
+			    }
 				
-				myParameter = (String[])ArrayUtils.addAll(myParameter, fpsParameter);
-				
-				LogKeyWordStart( fps_KeyWordName, myParameter );
+				LogKeyWordStart( fps_KeyWordName, newArray );
 			}
 
 			@Override

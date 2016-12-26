@@ -1,6 +1,6 @@
 package okw;
 import java.util.HashMap;
-import org.openqa.selenium.Keys;
+//import org.openqa.selenium.Keys;
  
  
 // http://blog.reallysimplethoughts.com/2013/09/25/using-special-keys-in-selenium-ide-part-2/
@@ -8,7 +8,7 @@ import org.openqa.selenium.Keys;
 // https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/Keys.html
 public class seKeys {
  
-        HashMap<String, Keys> keyName = new HashMap<String, Keys>();
+/*        HashMap<String, Keys> keyName = new HashMap<String, Keys>();
                
         // Supported Modifier Keys
         seKeys(){
@@ -122,6 +122,6 @@ public class seKeys {
         keyName.put( "KEY_F10", Keys.F10 );
         keyName.put( "KEY_F11", Keys.F11 );
         keyName.put( "KEY_F12", Keys.F12 );
-       
         };
+*/
 }
