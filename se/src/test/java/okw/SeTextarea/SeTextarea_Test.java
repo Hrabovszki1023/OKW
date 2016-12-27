@@ -41,7 +41,6 @@ import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
 
-import org.junit.After;
 import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
@@ -57,12 +56,6 @@ public class SeTextarea_Test {
   @Rule
   public TestName         name  = new TestName();
 
-  @After
-  public void myAfter() throws Exception
-  {
-    EN.StopApp( ApplicationName );
-    EN.EndTest();
-  }
 
   // / \brief
   // / Prüft ob ein vorhandenes objekt existiert.
@@ -77,7 +70,10 @@ public class SeTextarea_Test {
 
     EN.SelectWindow( "SeTextarea" );
     EN.LogExists( "Textarea 1" );
-  }
+    
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+    }
 
   
   // \brief
@@ -97,7 +93,10 @@ public class SeTextarea_Test {
       EN.ClickOn( "Textarea 2" );
       EN.VerifyHasFocus( "Textarea 1", "NO" );
       EN.VerifyHasFocus( "Textarea 2", "YES" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // / \brief
   // / Focus eines Textfeldes loggen.
@@ -111,7 +110,10 @@ public class SeTextarea_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
       EN.SelectWindow( "SeTextarea" );
       EN.LogHasFocus( "Textarea 1" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Teste das Schlüsselwort LogLabel( FN ) eines SeInputText Prüfen.
@@ -125,7 +127,10 @@ public class SeTextarea_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
       EN.SelectWindow( "SeTextarea" );
       EN.LogIsActive( "Textarea 1" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Teste das Schlüsselwort LogLabel( FN ) eines SeInputText Prüfen.
@@ -138,7 +143,10 @@ public class SeTextarea_Test {
 
       EN.SelectWindow( "SeTextarea" );
       EN.LogLabel( "Textarea 1" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Teste das Schlüsselwort LogLogToolTip( FN ) eines SeInputText Prüfen.
@@ -151,7 +159,10 @@ public class SeTextarea_Test {
 
       EN.SelectWindow( "SeTextarea" );
       EN.LogTooltip( "Textarea 1" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Teste das Schlüsselwort LogLogValue( FN ) eines SeInputText Prüfen.
@@ -168,8 +179,10 @@ public class SeTextarea_Test {
 
       EN.TypeKey( "Textarea 1", "Zoltan" );
       EN.LogValue( "Textarea 1" );
-
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Teste das Schlüsselwort MemorizeExists( FN, MemKey ) eines SeInputText Prüfen.
@@ -188,8 +201,13 @@ public class SeTextarea_Test {
           "YES",
           okw.OKW_Memorize_Sngltn.getInstance().Get(
               "SeTextarea_MemorizeExists_1" ) );
-  }
 
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
+
+  
   // \brief
   // Teste das Schlüsselwort MemorizeHasFocus( FN, MemKey ) eines SeInputText Prüfen.
   //
@@ -204,7 +222,10 @@ public class SeTextarea_Test {
       EN.MemorizeHasFocus( "Textarea 1", "SeTextarea_MemorizeHasFocus" );
 
       assertEquals( "NO", myMem.Get( "SeTextarea_MemorizeHasFocus" ) );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \brief
@@ -221,7 +242,10 @@ public class SeTextarea_Test {
       EN.MemorizeIsActive( "Textarea 1", "SeTextarea_MemorizeIsActive" );
 
       assertEquals( "YES", myMem.Get( "SeTextarea_MemorizeIsActive" ) );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \brief
@@ -241,7 +265,10 @@ public class SeTextarea_Test {
 
       assertEquals( "Label Textarea 1:", myMem.Get( "SeTextarea_MemorizeLabel_1" ) );
       assertEquals( "Label Textarea 2:", myMem.Get( "SeTextarea_MemorizeLabel_2" ) );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Teste das Schlüsselwort MemorizeToolTip( FN, MemKey ) eines SeInputText Prüfen.
@@ -259,7 +286,10 @@ public class SeTextarea_Test {
       assertEquals( "Title Textarea 1",
       myMem.Get( "SeTextarea_MemorizeTooltip" ) );
 
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
 
   // \brief
@@ -280,7 +310,9 @@ public class SeTextarea_Test {
       assertEquals( "", myMem.Get( "SeTextarea_LogValue_1" ) );
       assertEquals( "Zoltan", myMem.Get( "SeTextarea_LogValue_2" ) );
 
-  }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \brief
@@ -301,8 +333,10 @@ public class SeTextarea_Test {
       EN.SetFocus( "Textarea 2" );
       EN.VerifyHasFocus( "Textarea 1", "NO" );
       EN.VerifyHasFocus( "Textarea 2", "YES" );
-
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Teste das Schlüsselwort SetFocus( FN ) eines readonly aber nicht disabled SeInputText prüfen.
@@ -328,7 +362,10 @@ public class SeTextarea_Test {
       EN.SetFocus( "Textarea 2" );
       EN.VerifyHasFocus( "Textarea 1", "NO" );
       EN.VerifyHasFocus( "Textarea 2", "YES" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Testet das Schlüsselwort SetValue( FN ) eines SeInputText-es.
@@ -354,7 +391,10 @@ public class SeTextarea_Test {
       EN.VerifyValue( "Textarea 1", "Becker" );
       EN.SetValue( "Textarea 2", "Manu" );
       EN.VerifyValue( "Textarea 2", "Manu" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Testet das Schlüsselwort SetValue( FN ) mit ${IGNORE} eines SeInputText-es.
@@ -379,7 +419,10 @@ public class SeTextarea_Test {
       EN.VerifyValue( "Textarea 1", "Hrabovszki" );
       EN.SetValue( "Textarea 2", "${IGNORE}" );
       EN.VerifyValue( "Textarea 2", "Zoltan" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Testet das Schlüsselwort TypeKey( FN ) eines SeInputText-es.
@@ -400,7 +443,10 @@ public class SeTextarea_Test {
       // Text wird hinten agehängt 
       EN.TypeKey( "Textarea 1", " Zoltan" );
       EN.VerifyValue( "Textarea 1", "Hrabovszki Zoltan" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Testet das Schlüsselwort TypeKey( FN ) mit ${IGNORE} eines SeInputText-es.
@@ -434,7 +480,10 @@ public class SeTextarea_Test {
 
       EN.VerifyValue( "Textarea 1", "Hrabovszki" );
       EN.VerifyValue( "Textarea 2", "Zoltan" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Prüft ob ein tatsächlich _nicht_ vorhandenes Objekt _nicht_ existiert.
@@ -466,7 +515,10 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
   
       EN.VerifyExists( "ObjectNotExists", "YES" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Prüft ob ein vorhandenes Objekt nicht existiert.
@@ -482,7 +534,10 @@ public class SeTextarea_Test {
 
       EN.SelectWindow( "SeTextarea" );
       EN.VerifyExists( "Textarea 1", "NO" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // / \brief
   // / Prüft ob ein vorhandenes objekt existiert.
@@ -497,7 +552,10 @@ public class SeTextarea_Test {
 
       EN.SelectWindow( "SeTextarea" );
       EN.VerifyExists( "Textarea 1", "YES" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brife
   // Prüft, ob die OKW-Konstante ${IGNORE} implementiert ist.
@@ -518,7 +576,10 @@ public class SeTextarea_Test {
 
       EN.SelectWindow( "SeTextarea" );
       EN.VerifyExists( "ObjectNotExists", "${IGNORE}" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \brief
@@ -536,7 +597,10 @@ public class SeTextarea_Test {
       EN.VerifyHasFocus( "Textarea 2", "NO" );
       EN.SetFocus( "Textarea 2" );
       EN.VerifyHasFocus( "Textarea 2", "YES" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Focus eines Textfeldes prüfen.
@@ -553,7 +617,10 @@ public class SeTextarea_Test {
       EN.VerifyHasFocus( "Textarea 2", "NO" );
       EN.SetFocus( "Textarea 2" );
       EN.VerifyHasFocus( "Textarea 2", "NO" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \brief
   // Focus eines Textfeldes prüfen.
@@ -569,7 +636,10 @@ public class SeTextarea_Test {
 
       EN.SetFocus( "Textarea 2" );
       EN.VerifyHasFocus( "Textarea 1", "YES" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \~german
@@ -594,7 +664,10 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
 
       EN.VerifyHasFocus( "NichtVorhanden", "${IGNORE}" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \~german
   // \brief
@@ -629,7 +702,10 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea Readonly" );
 
       EN.VerifyIsActive( "Textarea 1", "YES" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \~german
@@ -650,7 +726,10 @@ public class SeTextarea_Test {
 
       EN.VerifyLabel( "Textarea 1", "Label Textarea 1:" );
       EN.VerifyLabel( "Textarea 2", "Label Textarea 2:" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \~german
@@ -670,7 +749,10 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
 
       EN.VerifyLabel( "Textarea 1", "Xxxx:" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \~german
@@ -691,7 +773,10 @@ public class SeTextarea_Test {
 
       EN.VerifyLabelWCM( "Textarea 1", "Label Textarea 1?" );
       EN.VerifyLabelWCM( "Textarea 2", "Label Textarea 2?" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \~german
@@ -711,7 +796,10 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
 
       EN.VerifyLabelWCM( "Textarea 1", "####:" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \~german
@@ -732,7 +820,10 @@ public class SeTextarea_Test {
 
       EN.VerifyLabelREGX( "Textarea 1", "Label Textarea 1\\W" );
 
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \~german
@@ -753,7 +844,10 @@ public class SeTextarea_Test {
 
       EN.VerifyLabelREGX( "Textarea 1", "Label Textarea\\w" );
 
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \~german
@@ -773,7 +867,10 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
 
       EN.VerifyTooltip( "Textarea 1", "Title Textarea 1" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \~german
   // \brief
@@ -793,8 +890,10 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
 
       EN.VerifyTooltip( "Textarea 1", "Soltan" );
-
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \~german
@@ -814,8 +913,10 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
   
       EN.VerifyTooltipWCM( "Textarea 1", "Title Textarea #" );
-
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \~german
   // \brief
@@ -834,8 +935,10 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
 
       EN.VerifyTooltipWCM( "Textarea 1", "#oltan" );
-
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \~german
@@ -855,8 +958,10 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
   
       EN.VerifyTooltipREGX( "Textarea 1", "\\witle Textarea 1" );
-
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \~german
   // \brief
@@ -875,8 +980,10 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
 
       EN.VerifyTooltipREGX( "Textarea 1", "\\Witle Textarea 1" );
-
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
   
   
   // \~german
@@ -900,8 +1007,10 @@ public class SeTextarea_Test {
       
       EN.SetValue( "Textarea 1", "Zoltan" );
       EN.VerifyValue( "Textarea 1", "Zoltan" );
-
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
   
   
   // \~german
@@ -927,8 +1036,10 @@ public class SeTextarea_Test {
   
       EN.SetValue( "Textarea 1", "${DELETE}" );
       EN.VerifyValue( "Textarea 1", "${EMPTY}" );
-
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \~german
   // \brief
@@ -951,8 +1062,10 @@ public class SeTextarea_Test {
       
       EN.SetValue( "Textarea 1", "Zoltan" );
       EN.VerifyValue( "Textarea 1", "Soltan" );
-
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
 
   // \~german
@@ -977,8 +1090,10 @@ public class SeTextarea_Test {
       EN.SetValue( "Textarea 1", "Zoltan" );
       EN.VerifyValueWCM( "Textarea 1", "??????" );
       EN.VerifyValueWCM( "Textarea 1", "Z????n" );
-
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
   
   
   // \~german
@@ -1004,8 +1119,10 @@ public class SeTextarea_Test {
   
       EN.SetValue( "Textarea 1", "${DELETE}" );
       EN.VerifyValueWCM( "Textarea 1", "${EMPTY}" );
-  
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \~german
   // \brief
@@ -1028,8 +1145,10 @@ public class SeTextarea_Test {
       
       EN.SetValue( "Textarea 1", "Zoltan" );
       EN.VerifyValueWCM( "Textarea 1", "#oltan" );
-
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   
   // \~german
@@ -1053,8 +1172,10 @@ public class SeTextarea_Test {
       
       EN.SetValue( "Textarea 1", "Zoltan" );
       EN.VerifyValueREGX( "Textarea 1", ".oltan" );
-
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
   
   
   // \~german
@@ -1080,8 +1201,10 @@ public class SeTextarea_Test {
   
       EN.SetValue( "Textarea 1", "${DELETE}" );
       EN.VerifyValueREGX( "Textarea 1", "${EMPTY}" );
-  
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+      }
 
   // \~german
   // \brief
@@ -1104,5 +1227,8 @@ public class SeTextarea_Test {
       
       EN.SetValue( "Textarea 1", "Zoltan" );
       EN.VerifyValueREGX( "Textarea 1", "Soltan" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+        }
 }

@@ -4,9 +4,6 @@ import java.util.ArrayList;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 import okw.OKW_Const_Sngltn;
 import okw.core.Core;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;

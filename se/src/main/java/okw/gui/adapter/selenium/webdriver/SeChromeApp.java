@@ -1,17 +1,8 @@
-package okw.gui.adapter.selenium.webdriver;
-
-import java.util.ArrayList;
-
-import okw.OKW;
-import okw.gui.adapter.selenium.SeDriver;
-import okw.gui.adapter.selenium.SeURL;
-import okw.log.Logger_Sngltn;
-
 /*
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -46,6 +37,17 @@ import okw.log.Logger_Sngltn;
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
+package okw.gui.adapter.selenium.webdriver;
+
+import java.util.ArrayList;
+
+import okw.OKW;
+import okw.gui.adapter.selenium.SeDriver;
+import okw.gui.adapter.selenium.SeURL;
+import okw.log.Logger_Sngltn;
+
+
+
     /// \brief
     /// TODO: class SeChromeApp dokumentieren...
     /// 
@@ -53,12 +55,6 @@ import okw.log.Logger_Sngltn;
     {
     	
         protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
-        
-        // =========================================================================
-        // ChildObject of InternetExplorer...
-        // =========================================================================
-        @OKW(FN="URL")
-        public SeURL URL = new SeURL();
 
         public SeChromeApp()
         {
@@ -77,9 +73,11 @@ import okw.log.Logger_Sngltn;
         	MyLogger.LogFunctionEndDebug();
         }
 
+
         public void SelectWindow()
         {
         }
+
 
         public void StartApp()
         {
@@ -87,6 +85,7 @@ import okw.log.Logger_Sngltn;
 
             try
             {
+            	System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
                 SeDriver.getInstance().DriveChrome();
                 this.Init();
             }

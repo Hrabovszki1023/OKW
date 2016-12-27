@@ -43,7 +43,6 @@ import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.exceptions.OKWVerifyingFailsException;
 
-import org.junit.After;
 import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
@@ -232,7 +231,7 @@ import org.junit.rules.TestName;
 
         /** \~german
          * \brief
-         * Test des Schlüsselwortes LogIsaCTIVE für den GUI-Adapter SeInputRadio.
+         * Test des Schlüsselwortes LogIsActive für den GUI-Adapter SeInputRadio.
          * 
          * \~
          * @author Zoltán Hrabovszki
@@ -241,8 +240,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_LogIsActive() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
@@ -254,17 +251,6 @@ import org.junit.rules.TestName;
                 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
-
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogIsActive", "P");
-                EN.StopApp( ApplicationName );
-                EN.EndTest();
-
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogIsActive", "F");
-                throw e;
-            }
         }
 
         

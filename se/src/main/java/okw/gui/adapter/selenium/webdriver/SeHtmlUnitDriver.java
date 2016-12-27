@@ -41,13 +41,8 @@ package okw.gui.adapter.selenium.webdriver;
 
 
 import java.util.ArrayList;
-
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 import okw.gui.adapter.selenium.SeDriver;
-import okw.gui.adapter.selenium.SeURL;
 import okw.log.Logger_Sngltn;
-import okw.OKW;
 
 
     /// \~german

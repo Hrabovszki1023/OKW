@@ -56,11 +56,6 @@ import okw.log.*;
     {
         protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
 
-        // =========================================================================
-        // ChildObject of Firefox...
-        // =========================================================================
-        @OKW(FN="URL")
-        public SeURL URL = new SeURL();
 
         public SeFirefoxApp()
         {
