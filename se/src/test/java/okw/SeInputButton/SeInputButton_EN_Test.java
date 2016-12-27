@@ -66,12 +66,7 @@ import org.junit.rules.TestName;
         @Rule
         public TestName name = new TestName();
     	
-        @After
-        public void myAfter() throws Exception
-        {
-            EN.StopApp( ApplicationName );
-            EN.EndTest();
-        }
+
         
         // \~german
         // \brief
@@ -94,7 +89,10 @@ import org.junit.rules.TestName;
 
                 EN.ClickOn("Text_2");
                 EN.VerifyValue("Display", "Ich bin Button 2 - ganz normal");
-        }
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+         }
 
         // \~german
         // \brief
@@ -106,8 +104,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_LogCaption() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
 
                 EN.StartApp( ApplicationName );
@@ -117,16 +113,9 @@ import org.junit.rules.TestName;
                 EN.LogCaption("Text_1");
                 EN.LogCaption("Text_2");
 
-                // TODO ZH, 2014.06 Logging Prüfen
 
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogCaption", "P");
-
-            }
-            catch ( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogCaption", "F");
-                throw e;
-            }
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -139,21 +128,17 @@ import org.junit.rules.TestName;
         @Test
         public void tc_LogExists() throws Exception
         {
-            try
-            {
+
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
                 EN.SelectWindow("InputButton");
                 EN.LogExists("Text_1");
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogExists", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogExists", "F");
-                throw e;
-            }
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+
         }
 
         // \~german
@@ -166,8 +151,7 @@ import org.junit.rules.TestName;
         @Test
         public void tc_LogHasFocus() throws Exception
         {
-            try
-            {
+
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
@@ -175,12 +159,10 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
                 EN.LogHasFocus("Text_1");
                 //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogHasFocus", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogHasFocus", "F");
-                throw e;
-            }
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+
         }
 
         // \~german
@@ -199,6 +181,9 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("InputButton");
                 EN.LogTooltip("Text_1");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -217,6 +202,9 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("InputButton");
                 EN.LogValue("Text_1");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -229,8 +217,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_LogIsActive() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
@@ -238,13 +224,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
                 EN.LogIsActive("Text_1");
 
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogIsActive", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogIsActive", "F");
-                throw e;
-            }
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         
@@ -258,8 +240,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_MemorizeCaption() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
@@ -272,13 +252,9 @@ import org.junit.rules.TestName;
                 EN.MemorizeCaption("Text_2", "SePushButton_MemorizeCaption_2");
                 assertEquals("Button 2", myMM.Get("SePushButton_MemorizeCaption_2"));
 
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeCaption", "P");
-            }
-            catch ( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeCaption", "F");
-                throw e;
-            }
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+
         }
 
         // \~german
@@ -291,8 +267,7 @@ import org.junit.rules.TestName;
         @Test
         public void tc_MemorizeLabel() throws Exception
         {
-            try
-            {
+
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
@@ -305,13 +280,9 @@ import org.junit.rules.TestName;
                 EN.MemorizeLabel("Text_2", "SeInputButton_MemorizeLabel_2");
                 assertEquals("Label für Button2: ", myMM.Get("SeInputButton_MemorizeLabel_2"));
 
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeCaption", "P");
-            }
-            catch ( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeCaption", "F");
-                throw e;
-            }
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         
@@ -325,8 +296,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_MemorizeExists() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
@@ -335,13 +304,9 @@ import org.junit.rules.TestName;
                 EN.MemorizeExists("Text_1", "SePushButton_MemorizeExists_1");
 
                 assertEquals("YES", myMM.Get("SePushButton_MemorizeExists_1"));
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeExists", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeExists", "F");
-                throw e;
-            }
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -354,9 +319,7 @@ import org.junit.rules.TestName;
         @Test
         public void tc_MemorizeHasFocus() throws Exception
         {
-            try
-            {
-                EN.BeginTest( name.getMethodName() );
+               EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -364,13 +327,9 @@ import org.junit.rules.TestName;
                 EN.MemorizeHasFocus("Text_1", "SePushButton_MemorizeHasFocus");
 
                 assertEquals("NO", myMM.Get("SePushButton_MemorizeHasFocus"));
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeHasFocus", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeHasFocus", "F");
-                throw e;
-            }
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -383,8 +342,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_MemorizeIsActive() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
@@ -393,13 +350,10 @@ import org.junit.rules.TestName;
                 EN.MemorizeIsActive("Text_1", "SePushButton_MemorizeIsActive");
 
                 assertEquals("YES", myMM.Get("SePushButton_MemorizeIsActive"));
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeIsActive", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeIsActive", "F");
-                throw e;
-            }
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+
         }
 
 
@@ -413,8 +367,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_MemorizeTooltip() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
@@ -427,13 +379,9 @@ import org.junit.rules.TestName;
                 assertEquals("Button 1 Tooltip/title", myMM.Get("SePushButton_MemorizeTooltip_1"));
                 assertEquals("Button 2 Tooltip/title", myMM.Get("SePushButton_MemorizeTooltip_2"));
 
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeToolTip", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "MemorizeToolTip", "F");
-                throw e;
-            }
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -453,6 +401,9 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("InputButton");
                 EN.MemorizeValue("Text_1", "SePushButton_MemorizeTooltip_1");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         
@@ -482,6 +433,9 @@ import org.junit.rules.TestName;
 
                 EN.VerifyHasFocus( "Text_2", "YES" );
                 EN.VerifyHasFocus( "Text_1", "NO" );
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -501,6 +455,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
 
                 EN.SelectMenu("Text_1");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -520,6 +477,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
 
                 EN.SelectMenu("Text_1", "What ever...");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
 
@@ -540,6 +500,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
 
                 EN.SetValue("Text_1", "What ever...");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -559,6 +522,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
 
                 EN.Select("Text_1", "What ever...");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -571,8 +537,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_VerifyCaption() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
@@ -582,14 +546,9 @@ import org.junit.rules.TestName;
                 EN.VerifyCaption("Text_1", "Button 1");
                 EN.VerifyCaption("Text_2", "Button 2");
 
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyCaption", "P");
 
-            }
-            catch ( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyCaption", "F");
-                throw e;
-            }
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -602,8 +561,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_VerifyCaptionWCM() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
@@ -613,14 +570,9 @@ import org.junit.rules.TestName;
                 EN.VerifyCaptionWCM("Text_1", "?utton #");
                 EN.VerifyCaptionWCM("Text_2", "?utton #");
 
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyCaption", "P");
 
-            }
-            catch ( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyCaption", "F");
-                throw e;
-            }
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -633,8 +585,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_VerifyCaptionREGX() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
@@ -644,14 +594,9 @@ import org.junit.rules.TestName;
                 EN.VerifyCaptionREGX("Text_1", "Button 1");
                 EN.VerifyCaptionREGX("Text_2", "Button 2");
 
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyCaption", "P");
 
-            }
-            catch ( Exception e )
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyCaption", "F");
-                throw e;
-            }
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -724,6 +669,9 @@ import org.junit.rules.TestName;
 
     EN.SelectWindow( "InputButton" );
     EN.VerifyExists( "Text_1", "YES" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
         // \~german
@@ -747,6 +695,8 @@ import org.junit.rules.TestName;
 
                 EN.VerifyIsActive("Text_1", "YES");
                 
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -769,7 +719,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
 
                 EN.VerifyIsActive("Text_1", "NO");
-                
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
         
         // \~german
@@ -791,6 +743,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
 
                 EN.VerifyIsActive("Text_2", "NO");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -812,6 +767,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
 
                 EN.VerifyIsActive("Text_2", "YES");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -825,8 +783,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_VerifyLabel() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
@@ -836,14 +792,9 @@ import org.junit.rules.TestName;
 
                 EN.VerifyLabel("Text_1", "Label für Button1: ");
                 EN.VerifyLabel("Text_2", "Label für Button2: ");
-                
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "F");
-                throw e;
-            }
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -857,8 +808,6 @@ import org.junit.rules.TestName;
         @Test
         public void tc_VerifyLabelWCM() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
@@ -869,13 +818,8 @@ import org.junit.rules.TestName;
                 EN.VerifyLabelWCM("Text_1", "Label für Button#: ");
                 EN.VerifyLabelWCM("Text_2", "Label für Button#: ");
                 
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "P");
-            }
-            catch (Exception e)
-            {
-                //ImplementationMatrix.Instance.SetImplementation("SePushButton", "VerifyIsActive", "F");
-                throw e;
-            }
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -898,6 +842,9 @@ import org.junit.rules.TestName;
 
                 EN.VerifyLabelREGX("Text_1", "Label für Button1: ");
                 EN.VerifyLabelREGX("Text_2", "Label für Button2: ");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -918,6 +865,9 @@ import org.junit.rules.TestName;
 
                 EN.VerifyTooltip("Text_1", "Button 1 Tooltip/title");
                 EN.VerifyTooltip("Text_2", "Button 2 Tooltip/title");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
  
         // \~german
@@ -938,6 +888,9 @@ import org.junit.rules.TestName;
 
                 EN.VerifyTooltipWCM("Text_1", "?utton # Tooltip/title");
                 EN.VerifyTooltipWCM("Text_2", "?utton # Tooltip/title");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         // \~german
@@ -958,6 +911,9 @@ import org.junit.rules.TestName;
 
                 EN.VerifyTooltipREGX("Text_1", "Button 1 Tooltip/title");
                 EN.VerifyTooltipREGX("Text_2", "Button 2 Tooltip/title");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         
@@ -978,6 +934,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
 
                 EN.VerifyValue("Text_1", "Button 1 Tooltip/title");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         
@@ -998,6 +957,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
 
                 EN.VerifyValueWCM("Text_1", "?utton # Tooltip/title");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
 
@@ -1018,6 +980,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
 
                 EN.VerifyValueREGX("Text_1", "Button 1 Tooltip/title");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
     }
 

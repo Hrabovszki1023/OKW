@@ -8,7 +8,7 @@ import org.junit.BeforeClass;
 
 public class SeInputRadio_EN_HTMLUnitDriver_Test extends SeInputRadio_EN_Test
 {
-	static Log2HTML myLog2HTML = null;
+	//static Log2HTML myLog2HTML = null;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception
@@ -19,14 +19,14 @@ public class SeInputRadio_EN_HTMLUnitDriver_Test extends SeInputRadio_EN_Test
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.Init();
 
-        myLog2HTML = new Log2HTML("SeInputButton_EN_HTMLUnitDriver_Test.html");
-        Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
+        //myLog2HTML = new Log2HTML("SeInputButton_EN_HTMLUnitDriver_Test.html");
+        //Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception
 	{
-		myLog2HTML.Result2HTML();
+		//myLog2HTML.Result2HTML();
 	}
 }

@@ -1,4 +1,4 @@
-package okw.SeRadioList;
+package okw.SeInputRadio;
 
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
@@ -7,23 +7,22 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
-public class SeRadioList_Chrome_Test extends SeRadioList_Test
+public class SeInputRadio_EN_Chrome_Test extends SeInputRadio_EN_Test
 {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception
 	{
-	ApplicationName = "Chrome";
+		ApplicationName = "Chrome";
 
         Logger_Sngltn.getInstance();
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.Init();
 
-
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
-	
-	
+
+
     @After
     public void FirefoxAfter() throws Exception
     {

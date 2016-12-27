@@ -16,12 +16,6 @@ public class SeSelect_Test
   @Rule
   public TestName         name = new TestName();
 
-  @After
-  public void myAfter() throws Exception
-  {
-    EN.StopApp( ApplicationName );
-    EN.EndTest();
-  }
 
   // \~german
   // \brief
@@ -45,6 +39,9 @@ public class SeSelect_Test
 
     EN.Select( "Blumen", "Lilie" );
     EN.VerifyValue( "Blumen", "Lilie" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
   
   
@@ -66,7 +63,10 @@ public class SeSelect_Test
 
     EN.Select( "Künstler", "Heino${SEP}Marianne Rosenberg" );
     EN.VerifyValue( "Künstler", "Heino${SEP}Marianne Rosenberg" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   // \~german
   // \brief
@@ -92,6 +92,9 @@ public class SeSelect_Test
 
     EN.Select( "Künstler", "${DELETE}" );
     EN.VerifyValue( "Künstler", "${EMPTY}" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   // \~german
@@ -124,6 +127,9 @@ public class SeSelect_Test
     // "" ändert auch nichts an den eingestellten Werten
     EN.Select( "Künstler", "" );
     EN.VerifyValue( "Künstler", "Heino${SEP}Marianne Rosenberg" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   // \~german
@@ -148,7 +154,10 @@ public class SeSelect_Test
 
     EN.SetValue( "Blumen", "Lilie" );
     EN.VerifyValue( "Blumen", "Lilie" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
   
   
 
@@ -185,7 +194,10 @@ public class SeSelect_Test
 
     EN.SetValue( "Blumen", "" );
     EN.VerifyValue( "Blumen", "Lilie" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   // \~german
   // \brief
@@ -208,6 +220,8 @@ public class SeSelect_Test
     EN.VerifyExists( "Künstler", "YES" );
     EN.VerifyExists( "Blumen", "YES" );
 
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   // \~german
@@ -232,6 +246,8 @@ public class SeSelect_Test
 
     EN.VerifyExists( "NichtVorhanden", "NO" );
 
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   // \~german
@@ -253,6 +269,9 @@ public class SeSelect_Test
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
     EN.VerifyExists( "Künstler", "NO" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   // \~german
@@ -274,6 +293,9 @@ public class SeSelect_Test
     EN.SelectWindow( "SeListBox" );
 
     EN.VerifyExists( "NichtVorhanden", "YES" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   // \~german
@@ -296,7 +318,10 @@ public class SeSelect_Test
 
     EN.VerifyIsActive( "Künstler", "YES" );
     EN.VerifyIsActive( "Blumen", "YES" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   // \~german
   // \brief
@@ -320,6 +345,8 @@ public class SeSelect_Test
 
     EN.VerifyIsActive( "Fahrzeug", "NO" );
 
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   // \~german
@@ -337,9 +364,13 @@ public class SeSelect_Test
     EN.BeginTest( name.getMethodName() );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
+
     EN.SelectWindow( "SeListBox" );
     EN.VerifyIsActive( "Künstler", "NO" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   // \~german
   // \brief
@@ -359,6 +390,9 @@ public class SeSelect_Test
     EN.SelectWindow( "SeListBox" );
 
     EN.VerifyIsActive( "Fahrzeug", "YES" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   @Test
@@ -371,7 +405,10 @@ public class SeSelect_Test
 
     EN.VerifyTooltip( "Künstler", "Wähle Interpret aus" );
     EN.VerifyTooltip( "Blumen", "Wähle eine Blume aus" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   @Test( expected = OKWVerifyingFailsException.class )
   public void tcVerifyToolTip_Fail_OKWVerifyingFailsException() throws Exception
@@ -383,6 +420,9 @@ public class SeSelect_Test
 
     // Actuall Value: "Wähle eine Blume aus"
     EN.VerifyTooltip( "Künstler", "Wähle Interpret" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   @Test
@@ -395,6 +435,9 @@ public class SeSelect_Test
 
     EN.VerifyTooltipWCM( "Künstler", "Wähle Interpret aus" );
     EN.VerifyTooltipWCM( "Blumen", "Wähle eine Blume aus" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   @Test( expected = OKWVerifyingFailsException.class )
@@ -407,7 +450,10 @@ public class SeSelect_Test
 
     // Actuall Value: "Wähle eine Blume aus"
     EN.VerifyTooltipWCM( "Künstler", "Wähle Interpret" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   @Test
   public void tcVerifyToolTipREGX() throws Exception
@@ -419,7 +465,10 @@ public class SeSelect_Test
 
     EN.VerifyTooltipREGX( "Künstler", "Wähle Interpret aus" );
     EN.VerifyTooltipREGX( "Blumen", "Wähle eine Blume aus" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   @Test( expected = OKWVerifyingFailsException.class )
   public void tcVerifyToolTipREGX_Fail_OKWVerifyingFailsException() throws Exception
@@ -431,6 +480,9 @@ public class SeSelect_Test
 
     // Actuall Value: "Wähle eine Blume aus"
     EN.VerifyTooltipREGX( "Künstler", "Wähle Interpret" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   @Test
@@ -443,6 +495,9 @@ public class SeSelect_Test
 
     EN.VerifyLabel( "Künstler", "Künstler" );
     EN.VerifyLabel( "Blumen", "Blumen" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   @Test( expected = OKWVerifyingFailsException.class )
@@ -455,7 +510,10 @@ public class SeSelect_Test
 
     // Actuall Value: "Wähle eine Blume aus"
     EN.VerifyLabel( "Künstler", "Wähle Interpret" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   @Test
   public void tcVerifyLabelWCM() throws Exception
@@ -467,7 +525,10 @@ public class SeSelect_Test
 
     EN.VerifyLabelWCM( "Künstler", "*ünstler" );
     EN.VerifyLabelWCM( "Blumen", "Blume?" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   @Test( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabelWCM_Fail_OKWVerifyingFailsException() throws Exception
@@ -479,7 +540,10 @@ public class SeSelect_Test
 
     // Actuall Value: "Wähle eine Blume aus"
     EN.VerifyTooltipWCM( "Künstler", "Wähle Interpret" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   @Test
   public void tcVerifyLabelREGX() throws Exception
@@ -491,7 +555,10 @@ public class SeSelect_Test
 
     EN.VerifyLabelREGX( "Künstler", ".ünstler" );
     EN.VerifyLabelREGX( "Blumen", ".lumen" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   @Test( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabelREGX_Fail_OKWVerifyingFailsException() throws Exception
@@ -503,7 +570,10 @@ public class SeSelect_Test
 
     // Actuall Value: "Wähle eine Blume aus"
     EN.VerifyLabelREGX( "Künstler", "Wähle Interpret" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   // / \brief
   // / Prüft die Methode SeLink.MemorizeToolTip.
@@ -522,6 +592,8 @@ public class SeSelect_Test
     EN.MemorizeTooltip( "Blumen", "SeListBox_MemorizeTooltip_1" );
     assertEquals( "Wähle eine Blume aus", okw.OKW_Memorize_Sngltn.getInstance().Get( "SeListBox_MemorizeTooltip_1" ) );
 
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   // / \brief
@@ -537,6 +609,8 @@ public class SeSelect_Test
 
     EN.LogTooltip( "Künstler" );
     EN.LogTooltip( "Blumen" );
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   @Test
@@ -549,6 +623,9 @@ public class SeSelect_Test
 
     EN.VerifyValue( "Künstler", "${EMPTY}" );
     EN.VerifyValue( "Blumen", "Tulpe" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   @Test( expected = OKWVerifyingFailsException.class )
@@ -561,6 +638,9 @@ public class SeSelect_Test
 
     // Actuall Value: "Wähle eine Blume aus"
     EN.VerifyValue( "Künstler", "Wähle Interpret" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   @Test
@@ -573,7 +653,10 @@ public class SeSelect_Test
 
     EN.VerifyValueWCM( "Künstler", "${EMPTY}" );
     EN.VerifyValueWCM( "Blumen", "?ulpe" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   @Test( expected = OKWVerifyingFailsException.class )
   public void tcVerifyValueWCM_Fail_OKWVerifyingFailsException() throws Exception
@@ -585,7 +668,10 @@ public class SeSelect_Test
 
     // Actuall Value: "Wähle eine Blume aus"
     EN.VerifyValueWCM( "Künstler", "Wähle Interpret" );
-  }
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+}
 
   @Test
   public void tcVerifyValueREGX() throws Exception
@@ -597,6 +683,9 @@ public class SeSelect_Test
 
     EN.VerifyValueREGX( "Künstler", "${EMPTY}" );
     EN.VerifyValueREGX( "Blumen", ".ulpe" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   @Test( expected = OKWVerifyingFailsException.class )
@@ -609,6 +698,8 @@ public class SeSelect_Test
 
     // Actuall Value: "Wähle eine Blume aus"
     EN.VerifyValueREGX( "Künstler", "Wähle Interpret" );
-  }
 
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+  }
 }

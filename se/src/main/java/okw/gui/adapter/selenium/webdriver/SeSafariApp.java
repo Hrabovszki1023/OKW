@@ -56,12 +56,6 @@ import okw.log.*;
     {
         protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
 
-        // =========================================================================
-        // ChildObject of Safari...
-        // =========================================================================
-        @OKW(FN="URL")
-        public SeURL URL = new SeURL();
-
         public SeSafariApp()
         {
         	MyLogger.LogFunctionStartDebug("SeFirefoxApp()");

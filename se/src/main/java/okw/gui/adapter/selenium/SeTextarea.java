@@ -84,15 +84,15 @@ import okw.gui.OKWLocator;
         /// \~
         /// \author Zoltan Hrabovszki
         /// \date 2014.06.2014
-        @Override
-        public ArrayList<String> getValue()
+        //@Override
+        public ArrayList<String> igetValue()
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
             Boolean bOK = false;
 
             try
             {
-                this.LogFunctionStartDebug("GetValue");
+                this.LogFunctionStartDebug("getValue");
 
                 // Get Value from TextField and put this into the return List<string>
                 // lvLsReturn.add(this.Me().getAttribute("value"));
@@ -129,6 +129,55 @@ import okw.gui.OKWLocator;
 
         }
 
+        /// \~german
+        /// \brief
+        /// Ermittelt den textuellen Inhalt eines Textfeldes.<br/>.
+        /// GUI-Automatisierungswerkzeug: Selenium.<br/>
+        /// 
+        /// \return
+        /// Gibt den Textuellen Inhaltes eines DOM-TextField-s zurück.
+        /// Es korrespondieren je eine Zeile des GUI-Objektes mit jeweil einem Listen-Element.<br/>
+        /// Ein Textfield besteht aus einerZeile: Daher wird der Wert des Textfield-s im ListenElement[0] abgelegt.
+        /// Zurückgegeben.
+        /// \return
+        /// \~
+        /// \author Zoltan Hrabovszki
+        /// \date 2014.06.2014
+        @Override
+        public ArrayList<String> getValue()
+        {
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
+            Boolean bOK = false;
+
+            try
+            {
+                this.LogFunctionStartDebug("GetValue");
+
+                // Get Value from TextField and put this into the return List<string>
+                String myValue = this.Me().getAttribute("value");
+                
+                if(!myValue.isEmpty())
+                {
+                  lvLsReturn.add(this.Me().getAttribute("value"));
+                }
+                bOK = true;
+            }
+            finally
+            {
+                if (bOK)
+                {
+                    this.LogFunctionEndDebug(lvLsReturn.toString());
+                }
+                else
+                {
+                    this.LogFunctionEndDebug();
+                }
+            }
+
+            return lvLsReturn;
+        }
+        
+        
   // / \~german
   public void SetValue( ArrayList<String> Values )
   {
