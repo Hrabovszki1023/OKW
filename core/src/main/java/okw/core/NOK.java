@@ -36,8 +36,17 @@
 
 package okw.core;
 
+import java.io.IOException;
+
+import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
+
+import org.xml.sax.SAXException;
+
 import okw.OKWLanguage;
 import okw.OKW_Ini_Sngltn;
+import okw.OKW_Memorize_Sngltn;
 import okw.log.*;
 
 	/// \~german
@@ -75,10 +84,14 @@ import okw.log.*;
 
 		/**
 		 *  \copydoc IOKW_State::BeginTest(String)
+		 * @throws IOException 
+		 * @throws SAXException 
+		 * @throws ParserConfigurationException 
+		 * @throws JAXBException 
+		 * @throws XPathExpressionException 
 		 */
-		public void BeginTest(String fpsTestname)
+		public void BeginTest(String fpsTestname) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
 		{
-			// TODO: Prüfen ob hier ein catchbloch bnötigt wird
 			try
 			{
 				Log.LogFunctionStartDebug("BeginTest",
@@ -87,14 +100,12 @@ import okw.log.*;
 				// Alles Initialisieren
 				OKW_Ini_Sngltn.getInstance().Init();
 				OKW_CurrentObject_Sngltn.getInstance();
-        OKW_CurrentObject_Sngltn.Init();
+				OKW_CurrentObject_Sngltn.Init();
+
+				OKW_Memorize_Sngltn.getInstance().Set( "TCN", fpsTestname );
 
 				Log.LogPrint("NOK -> OK");
 				this._Kernel.SetCurrentState(new OK(this._Kernel));
-			}
-			catch (Exception e)
-			{
-				// this.HandleException(e);
 			}
 			finally
 			{

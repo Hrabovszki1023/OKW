@@ -44,11 +44,7 @@ import java.io.PrintStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
-
-
-
-
-
+import javax.xml.xpath.XPathExpressionException;
 
 // \todo TODO: ANTLR einbauen import OKW.ANTLR4;
 import okw.*;
@@ -114,10 +110,12 @@ public class OK implements IOKW_State {
 	}
 
   // \copydoc IOKW_State::BeginTest()
-  public void BeginTest( String fpsTestname )
+  public void BeginTest( String fpsTestname ) throws XPathExpressionException
   {
     Log.LogFunctionStartDebug( "BeginTest", "fpsTestname", fpsTestname );
-
+    
+    OKW_Memorize_Sngltn.getInstance().Set( "TCN", fpsTestname );
+    
     Log.LogFunctionEndDebug();
   }
 

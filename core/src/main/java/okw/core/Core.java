@@ -149,139 +149,208 @@ public class Core implements IOKW_State
     }
   }
 
-  // / \copydoc IOKW_State::BeginTest(String)
+  
+  /** 
+   * \copydoc IOKW_State::BeginTest(String)
+   */
   public void BeginTest( String Testname ) throws Exception
   {
     this.CurrentState.BeginTest( Testname );
   }
 
-  //  \copydoc IOKW_State::ClickOn(String)
+  
+  /**
+   *   \copydoc IOKW_State::ClickOn(String)
+   */
   public void ClickOn( String FN ) throws Exception
   {
     this.CurrentState.ClickOn( FN );
   }
 
-  // \copydoc IOKW_State::DoubleClickOn(String)
+  
+  /**
+   *  \copydoc IOKW_State::DoubleClickOn(String)
+   */
   public void DoubleClickOn( String FN ) throws Exception
   {
     this.CurrentState.DoubleClickOn( FN );
   }
 
-  // \copydoc IOKW_State::EndTest()
+  
+  /**
+   *  \copydoc IOKW_State::EndTest()
+   */
   public void EndTest() throws Exception
   {
     this.CurrentState.EndTest();
   }
 
-  // \copydoc IOKW_State::LogExists(String)
+  
+  /**
+   *  \copydoc IOKW_State::LogExists(String)
+   */
   public void LogExists( String FN ) throws Exception
   {
     this.CurrentState.LogExists( FN );
   }
 
-  // / \copydoc IOKW_State::LogHasFocus(String)
+  
+  /**
+   *  \copydoc IOKW_State::LogHasFocus(String)
+   */
   public void LogHasFocus( String FN ) throws Exception
   {
     this.CurrentState.LogHasFocus( FN );
   }
 
-  // / \copydoc IOKW_State::LogIsActive(String)
+  
+  /**
+   *  \copydoc IOKW_State::LogIsActive(String)
+   */
   public void LogIsActive( String FN ) throws Exception
   {
     this.CurrentState.LogIsActive( FN );
   }
 
-  // / \copydoc IOKW_State::LogSelected(String)
+  
+  /**
+   *  \copydoc IOKW_State::LogSelected(String)
+   */
   public void LogSelected( String FN ) throws Exception
   {
     this.CurrentState.LogSelected( FN );
   }
 
-  // / \copydoc IOKW_State::LogTablecellValue(String,String,String)
+  
+  /**
+   *  \copydoc IOKW_State::LogTablecellValue(String,String,String)
+   */
   public void LogTablecellValue( String FN, String fpsCol, String fpsRow ) throws Exception
   {
     this.CurrentState.LogTablecellValue( FN, fpsCol, fpsRow );
   }
 
-  // / \copydoc IOKW_State::LogTooltip(String)
+  
+  /**
+   *  \copydoc IOKW_State::LogTooltip(String)
+   */
   public void LogTooltip( String FN ) throws Exception
   {
     this.CurrentState.LogTooltip( FN );
   }
 
-  // / \copydoc IOKW_State::LogCaption(String)
+  
+  /**
+   *  \copydoc IOKW_State::LogCaption(String)
+   */
   public void LogCaption( String FN ) throws Exception
   {
     this.CurrentState.LogCaption( FN );
   }
 
-  // / \copydoc IOKW_State::LogLabel(String)
+  
+  /**
+   *  \copydoc IOKW_State::LogLabel(String)
+   */
   public void LogLabel( String FN ) throws Exception
   {
     this.CurrentState.LogLabel( FN );
   }
 
-  // / \copydoc IOKW_State::LogValue(String)
+  
+  /**
+   *  \copydoc IOKW_State::LogValue(String)
+   */
   public void LogValue( String FN ) throws Exception
   {
     this.CurrentState.LogValue( FN );
   }
 
-  // / \copydoc IOKW_State::MemorizeExists(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::MemorizeExists(String,String)
+   */
   public void MemorizeExists( String FN, String Val ) throws Exception
   {
     this.CurrentState.MemorizeExists( FN, Val );
   }
 
-  // / \copydoc IOKW_State::MemorizeHasFocus(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::MemorizeHasFocus(String,String)
+   */
   public void MemorizeHasFocus( String FN, String Val ) throws Exception
   {
     this.CurrentState.MemorizeHasFocus( FN, Val );
   }
 
-  // / \copydoc IOKW_State::MemorizeIsActive(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::MemorizeIsActive(String,String)
+   */
   public void MemorizeIsActive( String FN, String Val ) throws Exception
   {
     this.CurrentState.MemorizeIsActive( FN, Val );
   }
 
-  // / \copydoc IOKW_State::MemorizeSelectedValue(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::MemorizeSelectedValue(String,String)
+   */
   public void MemorizeSelectedValue( String FN, String Val ) throws Exception
   {
     this.CurrentState.MemorizeSelectedValue( FN, Val );
   }
 
-  // / \copydoc IOKW_State::MemorizeTablecellValue(String,String,String,String)
+  
+  /**
+   *  \copydoc IOKW_State::MemorizeTablecellValue(String,String,String,String)
+   */
   public void MemorizeTablecellValue( String FN, String fpsCol, String fpsRow, String fpsKeyName ) throws Exception
   {
     this.CurrentState.MemorizeTablecellValue( FN, fpsCol, fpsRow, fpsKeyName );
   }
 
-  // / \copydoc IOKW_State::MemorizeTooltip(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::MemorizeTooltip(String,String)
+   */
   public void MemorizeTooltip( String FN, String Val ) throws Exception
   {
     this.CurrentState.MemorizeTooltip( FN, Val );
   }
 
-  // / \copydoc IOKW_State::MemorizeLabel(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::MemorizeLabel(String,String)
+   */
   public void MemorizeLabel( String FN, String Val ) throws Exception
   {
     this.CurrentState.MemorizeLabel( FN, Val );
   }
 
-  // / \copydoc IOKW_State::MemorizeCaption(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::MemorizeCaption(String,String)
+   */
   public void MemorizeCaption( String FN, String Val ) throws Exception
   {
     this.CurrentState.MemorizeCaption( FN, Val );
   }
 
-  // / \copydoc IOKW_State::MemorizeValue(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::MemorizeValue(String,String)
+   */
   public void MemorizeValue( String FN, String Val ) throws Exception
   {
     this.CurrentState.MemorizeValue( FN, Val );
   }
 
-  // / \copydoc IOKW_State::Select(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::Select(String,String)
+   */
   public void Select( String FN, String Val ) throws Exception
   {
     this.CurrentState.Select( FN, Val );
@@ -321,6 +390,7 @@ public class Core implements IOKW_State
     this.CurrentState.SelectWindow( FN );
   }
 
+  
   /**
    * \copydoc IOKW_State::Sequence(String,String,String)
    */
@@ -329,6 +399,7 @@ public class Core implements IOKW_State
     this.CurrentState.Sequence( FN, fpsSequenName, SEQID );
   }
 
+  
   /**
    * \~german 
    * \brief Setter zum Setzen des aktuellen Zustandes.
@@ -337,14 +408,15 @@ public class Core implements IOKW_State
    * \brief
    * 
    * \~ 
-   * \author Zoltán Hrabovszki
-   * \date 09.01.2014
+   * @author Zoltán Hrabovszki
+   * @date 09.01.2014
    */
   public void SetCurrentState( IOKW_State fp_CurrentState )
   {
     this.CurrentState = fp_CurrentState;
   }
 
+  
   /**
    * \copydoc IOKW_State::SetFocus(String)
    */
@@ -353,17 +425,19 @@ public class Core implements IOKW_State
     this.CurrentState.SetFocus( FN );
   }
 
-  // / \~german
-  // / \brief
-  // / Setzt die aktuelle Sprache.
-  // /
-  // / \~english
-  // / \brief
-  // /
-  // /
-  // / \~
-  // / \author Zoltán Hrabovszki
-  // / \date 09.01.2014
+  /**
+   *  \~german
+   *  \brief
+   *  Setzt die Sprache auf den gegebenen wert Language.
+   *
+   *  \~english
+   *  \brief
+   *
+   *
+   * \~
+   * @author Zoltán Hrabovszki
+   * @date 09.01.2014
+   */
   public void SetLanguage( String Language )
   {
     this.CurrentState.SetLanguage( Language );
@@ -377,66 +451,90 @@ public class Core implements IOKW_State
     this.CurrentState.SetValue( FN, Val );
   }
 
-  // / \copydoc IOKW_State::StartApp(String)
+  /**
+   *  \copydoc IOKW_State::StartApp(String)
+   */
   public void StartApp( String fpsApplicationName ) throws Exception
   {
     this.CurrentState.StartApp( fpsApplicationName );
   }
 
-  // / \copydoc IOKW_State::StopApp(String)
+  /**
+   *  \copydoc IOKW_State::StopApp(String)
+   */
   public void StopApp( String fpsApplicationName ) throws Exception
   {
     this.CurrentState.StopApp( fpsApplicationName );
   }
 
-  // / \copydoc IOKW_State::TypeKey(String,String)
+  /**
+   *  \copydoc IOKW_State::TypeKey(String,String)
+   */
   public void TypeKey( String FN, String Val ) throws Exception
   {
     this.CurrentState.TypeKey( FN, Val );
   }
 
-  // / \copydoc IOKW_State::TypeKeyTablecell(String,String,String,String)
+  /**
+   *  \copydoc IOKW_State::TypeKeyTablecell(String,String,String,String)
+   */
   public void TypeKeyTablecell( String FN, String fpsCol, String fpsRow, String Val ) throws Exception
   {
     this.CurrentState.TypeKeyTablecell( FN, fpsCol, fpsRow, Val );
   }
 
-  // / \copydoc IOKW_State::TypeKeyWindow(String,String)
+  /**
+   *  \copydoc IOKW_State::TypeKeyWindow(String,String)
+   */
   public void TypeKeyWindow( String FN, String Val ) throws Exception
   {
     this.CurrentState.TypeKeyWindow( FN, Val );
   }
 
-  // / \copydoc IOKW_State::VerifyExists(String,String)
+  /**
+   *  \copydoc IOKW_State::VerifyExists(String,String)
+   */
   public void VerifyExists( String FN, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifyExists( FN, ExpVal );
   }
 
-  // / \copydoc IOKW_State::VerifyHasFocus(String,String)
+  /**
+   *  \copydoc IOKW_State::VerifyHasFocus(String,String)
+   */
   public void VerifyHasFocus( String FN, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifyHasFocus( FN, ExpVal );
   }
 
-  // / \copydoc IOKW_State::VerifyIsActive(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::VerifyIsActive(String,String)
+   */
   public void VerifyIsActive( String FN, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifyIsActive( FN, ExpVal );
   }
 
-  // \copydoc IOKW_State::VerifySelectedValue(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::VerifySelectedValue(String,String)
+   */
   public void VerifySelectedValue( String FN, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifySelectedValue( FN, ExpVal );
   }
 
-  // \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
+  
+  /**
+   *  \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
+   */
   public void VerifyTablecellValue( String FN, String fpsCol, String fpsRow, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifyTablecellValue( FN, fpsCol, fpsRow, ExpVal );
   }
 
+  
   /**
    *  \copydoc IOKW_State::VerifyTooltip(String,String)
    */
@@ -445,6 +543,7 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyTooltip( FN, ExpVal );
   }
 
+  
   /**
    *  \copydoc IOKW_State::VerifyTooltipREGX(String,String)
    */
@@ -453,6 +552,7 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyTooltipREGX( FN, ExpVal );
   }
 
+  
   /**
    * \copydoc IOKW_State::VerifyTooltipWCM(String,String)
    */
@@ -461,6 +561,7 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyTooltipWCM( FN, ExpVal );
   }
 
+  
   /**
    * \copydoc IOKW_State::VerifyCaption(String,String)
    */
@@ -469,6 +570,7 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyCaption( FN, ExpVal );
   }
 
+  
   /**
    * \copydoc IOKW_State::VerifyCaptionWCM(String,String)
    */
@@ -477,6 +579,7 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyCaptionWCM( FN, ExpVal );
   }
 
+  
   /**
    * \copydoc IOKW_State::VerifyCaptionREGX(String,String)
    */
@@ -485,6 +588,7 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyCaptionREGX( FN, ExpVal );
   }
 
+  
   /**
    *  \copydoc IOKW_State::VerifyLabel(String,String)
    */
@@ -493,6 +597,7 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyLabel( FN, ExpVal );
   }
 
+  
   /**
    * \copydoc IOKW_State::VerifyLabelWCM(String,String)
    */
@@ -501,6 +606,7 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyLabelWCM( FN, ExpVal );
   }
 
+  
   /**
    * \copydoc IOKW_State::VerifyLabelREGX(String,String)
    */
@@ -509,6 +615,7 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyLabelREGX( FN, ExpVal );
   }
 
+  
   /**
    *  \copydoc IOKW_State::VerifyValue(String,String)
    */
@@ -517,6 +624,7 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyValue( FN, ExpVal );
   }
 
+  
   /**
    *  \copydoc IOKW_State::VerifyValueREGX(String,String)
    */
@@ -525,6 +633,7 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyValueREGX( FN, ExpVal );
   }
 
+  
   /**
    * \copydoc IOKW_State::VerifyValueWCM(String,String)
    */
@@ -533,25 +642,37 @@ public class Core implements IOKW_State
     this.CurrentState.VerifyValueWCM( FN, ExpVal );
   }
 
-  // / \copydoc IOKW_State::FileDelete(String)
+  
+  /**
+   *  \copydoc IOKW_State::FileDelete(String)
+   */
   public void FileDelete( String fpsPathAndFileName ) throws Exception
   {
     this.CurrentState.FileDelete( fpsPathAndFileName );
   }
 
-  // / \copydoc IOKW_State::VerifyFileExists(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::VerifyFileExists(String,String)
+   */
   public void VerifyFileExists( String fpsPathAndFileName, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifyFileExists( fpsPathAndFileName, ExpVal );
   }
 
-  // / \copydoc IOKW_State::VerifyDirectoryExists(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::VerifyDirectoryExists(String,String)
+   */
   public void VerifyDirectoryExists( String fpsPathAndFileName, String ExpVal ) throws Exception
   {
     this.CurrentState.VerifyDirectoryExists( fpsPathAndFileName, ExpVal );
   }
 
-  // / \copydoc IOKW_State::CopyFile(String,String)
+  
+  /**
+   *  \copydoc IOKW_State::CopyFile(String,String)
+   */
   public void CopyFile( String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName ) throws Exception
   {
     this.CurrentState.CopyFile( fpsSourcePathAndFileName, fpsDestinationPathAndFileName );

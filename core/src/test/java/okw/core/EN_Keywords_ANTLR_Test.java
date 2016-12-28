@@ -65,15 +65,30 @@ public class EN_Keywords_ANTLR_Test
         EN.EndTest();
 	}
 
+	/** \~german
+	 *  \brief
+	 *  Prüft das Schlüsselwort "BeginTest" mit dem Testziel, dass der aktuelle Testfallname unter dem MemKey "TCN" (TestCaseName) gespeichert wird.
+	 * 
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  @date 2016.05.07
+	 */ 
+	@Test
+	public void tc_BeginTest_TestCaseName() throws Exception
+	{
+		EN.BeginTest( name.getMethodName() );
+		assertEquals( name.getMethodName(), OKW_Memorize_Sngltn.getInstance().Get( "TCN" ));
+	}
 
-	/// \~german
-	/// \brief
-	/// Prüft das Keyword Select mit dem Ziel ob gemerkte Werte richtig eingesetzt werden.
-	///
-	/// \~english
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2016.05.07
+	/** \~german
+	 *  Prüft das Keyword Select mit dem Testziel ob gemerkte Werte richtig eingesetzt werden.
+	 * 
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  @date 2016.05.07
+	 */
 	@Test
 	public void tc_Select_MemorizedValue() throws Exception
 	{
