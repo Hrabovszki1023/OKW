@@ -54,6 +54,16 @@ import java.util.*;
 public interface ILogger
 {
 
+	  /**
+	   * Method resets .
+	   * 
+	   * \~
+	   * @author Zoltan Hrabovszki
+	   * @date 2016-10-23
+	   */
+   void reset();
+
+   
   /**
    * LogTestcaseStart: @todo TODO: Add description to LogTestcaseStart
    *  
