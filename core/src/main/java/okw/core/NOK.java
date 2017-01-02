@@ -84,11 +84,6 @@ import okw.log.*;
 
 		/**
 		 *  \copydoc IOKW_State::BeginTest(String)
-		 * @throws IOException 
-		 * @throws SAXException 
-		 * @throws ParserConfigurationException 
-		 * @throws JAXBException 
-		 * @throws XPathExpressionException 
 		 */
 		public void BeginTest(String fpsTestname) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
 		{
@@ -99,9 +94,11 @@ import okw.log.*;
 
 				// Alles Initialisieren
 				OKW_Ini_Sngltn.getInstance().Init();
+			    
 				OKW_CurrentObject_Sngltn.getInstance();
 				OKW_CurrentObject_Sngltn.Init();
 
+				// Memorize TestCaseName
 				OKW_Memorize_Sngltn.getInstance().Set( "TCN", fpsTestname );
 
 				Log.LogPrint("NOK -> OK");

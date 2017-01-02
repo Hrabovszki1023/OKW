@@ -112,10 +112,11 @@ public class OK implements IOKW_State {
   // \copydoc IOKW_State::BeginTest()
   public void BeginTest( String fpsTestname ) throws XPathExpressionException
   {
-    Log.LogFunctionStartDebug( "BeginTest", "fpsTestname", fpsTestname );
     
     OKW_Memorize_Sngltn.getInstance().Set( "TCN", fpsTestname );
-    
+
+    Log.LogFunctionStartDebug( "BeginTest", "fpsTestname", fpsTestname );
+        
     Log.LogFunctionEndDebug();
   }
 
@@ -1420,6 +1421,8 @@ public class OK implements IOKW_State {
       throw new OKWVerifyingFailsException();
     }
   }
+  
+  
   private void VerificationREGX( ArrayList<String> Actual, ArrayList<String> Expected )
   {
 

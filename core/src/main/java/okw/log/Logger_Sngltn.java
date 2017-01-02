@@ -424,38 +424,6 @@ public class Logger_Sngltn
 		}
 	}
 
-
-	/**
-	 *  \~german
-	 *  \brief Logt Soll-Ist Vergeleich.
-	 * 
-	 *  \todo TODO: Ausführliche Beschreibung erstellen
-	 * 
-	 *  \param fpsActual Ist-Wert, welche geprüft werden soll.
-	 *  \param fpsExpected Erwarteter Soll-Wert, gegen den geprüft wird.
-	 *  \return
-	 * 
-	 *  \~english
-	 *  \brief \todo TODO: Brief Description.
-	 * 
-	 *  \todo TODO: Detailed Description
-	 * 
-	 *  \param fpbTrueOrFalse
-	 *  \return
-	 * 
-	 *  \~
-	 *  \author Zoltán Hrabovszki
-	 *  \date 2015.05.01
-	 */
-	@Deprecated
-	public void LogVerify( String fpsActual, String fpsExpected )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogVerify(fpsActual, fpsExpected);
-		}
-	}
-
 	
 	/**
 	 *  \brief

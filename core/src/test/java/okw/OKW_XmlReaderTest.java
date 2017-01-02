@@ -103,6 +103,7 @@ public class OKW_XmlReaderTest
 		}
 	}
 
+	
 	@Test
   public void TC_getTextContentAsList_Subfolder()
   {

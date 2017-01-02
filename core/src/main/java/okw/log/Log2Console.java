@@ -237,29 +237,6 @@ public class Log2Console implements ILogger
 	        }
 
 			
-            /**
-	         *  \copydoc ILogger::LogVerify(String,String)
-	        */
-			@Deprecated
-	        public void LogVerify(String fps_Actual, String fps_Expected)
-	        {
-	            System.out.println( this.BlanksBefore + "-------------------------------------------------------");
-	            if (fps_Actual.equals( fps_Expected ))
-	            {
-		            System.out.println( this.BlanksBefore + "  Pass:");
-	            }
-	            else
-	            {
-		            System.out.println( this.BlanksBefore + "  Fail:");
-	            }
-	            // System.out.println(this.BlanksBefore + "-------------------------------------------------------");
-	            System.out.println(this.BlanksBefore + "  Expected = >>" + fps_Expected + "<<");
-	            System.out.println(this.BlanksBefore + "    Actual = >>" + fps_Actual + "<<");
-	            System.out.println(this.BlanksBefore + "-------------------------------------------------------");
-	        }
-
-
-			
 			/**
 	         *  \copydoc ILogger::LogWarning(String)
 			 */

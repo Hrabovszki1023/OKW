@@ -162,21 +162,6 @@ public interface ILogger
     void LogWarning(String Message);
 
 
-    @Deprecated
-   /**
-    * LogVerify: Logs an error message to the result.
-    * 
-    * @todo TODO: Add description to LogFunctionStart.
-    *  
-    * @param ActualValue   The actual value.
-    * @param ExpectedValue The expected Value.
-    * \~
-    * @author Zoltan Hrabovszki
-    * @date 2016-10-23
-    */
-    void LogVerify(String ActualValue, String ExpectedValue);
-
-
     /**
      *  LogException: Logs an exception to the results.
      *  
