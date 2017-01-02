@@ -1,5 +1,7 @@
 package okw.log.log2html;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -267,30 +269,30 @@ public class Log2HTMLTest {
 			myLog.LogPrint("Das ist ein LogPrint...");
 			myLog.LogKeyWordEnd();
 
-			
 		myLog.LogTestcaseEnd();
-
+		
 		myLog.Result2HTML();
 	}
 
+	
 	@Test
-	public void TC_LogVerify_Test() {
+	public void TC_Reset_Test() {
 
 		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "target/LogVerify_Test.html" );
+		myLog.setHTML_File( "target/Reset_Test.html" );
 
-		myLog.LogTestcaseStart( "TC_LogSequence_Test" );
+		myLog.LogTestcaseStart( "TC_Reset_Test" );
 		
-		myLog.LogKeyWordStart( "Verify Value", "Name", "Zoltan" );
-			myLog.LogVerify( "Zoltan", "Zoltan" );
+		myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan");
+			myLog.LogPrint("Das ist ein LogPrint...");
+			myLog.LogKeyWordEnd();
+			
+		myLog.LogKeyWordStart( "Mehrere Werte", "Name", "Zoltan", "Nachname", "Uschi");
+			myLog.LogPrint("Das ist ein LogPrint...");
 			myLog.LogKeyWordEnd();
 
-		myLog.LogKeyWordStart( "Verify Value", "Name", "Uschi" );
-			myLog.LogVerify( "Uschi", "Zoltan" );
-			myLog.LogKeyWordEnd();
-
-		myLog.LogTestcaseEnd();
-
+		myLog.LogTestcaseStart( "This Test" );			
+	
 		myLog.Result2HTML();
 	}
 

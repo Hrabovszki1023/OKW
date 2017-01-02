@@ -24,10 +24,12 @@ public class LogFunctionDebug extends LogBase
 		this.Info = StrBuilder.toString();
 	}
 
+	
 	public void setReturn(String fpsReturn)
 	{
 		myReturn = fpsReturn;
 	}
+
 	
 	protected void SetFail()
 	{
@@ -38,6 +40,7 @@ public class LogFunctionDebug extends LogBase
 	{
 		FunctionPass++;
 	}
+
 	
 	@Override
 	protected String getResult()
@@ -104,5 +107,4 @@ public class LogFunctionDebug extends LogBase
 		
 		return sbResult.toString();
 	}
-
 }

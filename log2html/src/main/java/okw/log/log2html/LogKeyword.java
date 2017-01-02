@@ -30,7 +30,11 @@ public class LogKeyword extends LogBase
 
 	protected void SetFail()
 	{
-		KeyWordFail++;
+		//Nur Inkrementieren wenn dieser testfall noch nicht als Fail markiert wurde.
+		if(!(this.bError || this.bException) )
+		{
+			KeyWordFail++;
+		}
 	}
 
 	protected void SetPass()

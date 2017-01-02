@@ -9,17 +9,13 @@ public abstract class LogBase {
 	Integer myID = 0;
 
 	// Statistics
-	static Integer ErrorCount = 0;
-	static Integer ErrorFail = 0;
-	static Integer ErrorPass = 0;
-	
-	static Integer ExceptionCount = 0;
-	static Integer ExceptionFail = 0;
-	static Integer ExceptionPass = 0;
-	
+	static Integer ErrorCount = 0;	
+	static Integer ExceptionCount = 0;	
 	static Integer WarningCount = 0;
-	static Integer WarningFail = 0;
-	static Integer WarningPass = 0;
+	static Integer PassedCount = 0;
+	static Integer PrintCount = 0;
+	
+	
 	
 	static Integer TestcaseCount = 0;
 	static Integer TestcaseFail = 0;
@@ -36,9 +32,7 @@ public abstract class LogBase {
 	static Integer SequensCount = 0;
 	static Integer SequensFail = 0;
 	static Integer SequensPass = 0;
-	
-	static Integer PrintCount = 0;	
-	
+		
 	String Info = "";
 	
 	LogTimer myDuration = new LogTimer();
@@ -55,14 +49,52 @@ public abstract class LogBase {
 		myParent = fpParent;
 	}
 
+	protected void abort()
+	{
+		setError();
+	}
+	
+	public void reset()
+	{
+		AllCount = 0;
+		myID = 0;
+
+		// Statistics
+		ErrorCount     = 0;
+		ExceptionCount = 0;
+		WarningCount   = 0;
+		PassedCount    = 0;
+		PrintCount     = 0;
+		
+		TestcaseCount = 0;
+		TestcaseFail = 0;
+		TestcasePass = 0;
+
+		FunctionCount = 0;
+		FunctionFail = 0;
+		FunctionPass = 0;
+		
+		KeyWordCount = 0;
+		KeyWordFail = 0;
+		KeyWordPass = 0;
+		
+		SequensCount = 0;
+		SequensFail = 0;
+		SequensPass = 0;
+		
+		PrintCount = 0;
+	}
+
 	
 	public LogBase getParent()
 	{
 		return myParent;
 	}
+
 	
 	int Level = -1;
 	String myIndentionBase = "  ";
+
 	
 	protected int getLevel()
 	{
@@ -109,12 +141,15 @@ public abstract class LogBase {
 	
 	protected void setWarning()
 	{
-		bWarning = true;
-		
-		
-		if (myParent != null)
+		if (!bWarning)
 		{
-			myParent.setWarning();
+			bWarning = true;
+		
+		
+			if (myParent != null)
+			{
+				myParent.setWarning();
+			}
 		}
 	}
 
@@ -124,18 +159,19 @@ public abstract class LogBase {
 	}
 	
 	
-	
 	Boolean bException = false;
 
 	protected void setException()
 	{
-		bException = true;
-		SetFail();
-		
-		
-		if (myParent != null)
+		if (!bException)
 		{
-			myParent.setException();
+			SetFail();
+			bException = true;
+		
+			if (myParent != null)
+			{
+				myParent.setException();
+			}
 		}
 	}
 
@@ -150,13 +186,15 @@ public abstract class LogBase {
 	
 	protected void setError()
 	{
-		bError = true;
-		
-		SetFail();
-		
-		if (myParent != null)
-		{
-			myParent.setError();
+		if (!bError)
+		{			
+			SetFail();
+			bError = true;
+
+			if (myParent != null)
+			{
+				myParent.setError();
+			}
 		}
 	}
 

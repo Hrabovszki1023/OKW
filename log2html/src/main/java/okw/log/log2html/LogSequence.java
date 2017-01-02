@@ -39,7 +39,12 @@ public class LogSequence  extends LogBase
 	
 	protected void SetFail()
 	{
-		SequensFail++;
+		//Nur Inkrementieren wenn dieser testfall noch nicht als Fail markiert wurde.
+		if(!(this.bError || this.bException) )
+		{
+			SequensFail++;
+		}
+
 	}
 
 	protected void SetPass()

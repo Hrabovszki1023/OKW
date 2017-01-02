@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 import java.util.Locale;
+import java.util.Stack;
 
 import okw.log.ILogger;
 
@@ -15,8 +16,10 @@ import okw.log.ILogger;
 public class Log2HTML extends LogBase implements ILogger
 {
 
-	// Das ist as Root Objekt, der Pointer wird initial auf root gestzt
-	LogBase Point2LogObject;
+	// Das ist das Root-Objekt, der Pointer wird im Konstruktor zunächst drauf gesetzt,
+	//LogBase Point2LogObject;
+	
+	private Stack<LogBase> Pointer2LogBaseStack = new Stack<LogBase>();
 	
 	// Wo soll das ergebnissingescrieben werden
 	private String HTML_File = "";
@@ -30,51 +33,63 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void setHTML_File( String hTML_File )
 	{
+		// Alle Zähler auf "0" setzen
+		this.reset();
 		HTML_File = hTML_File;
 	}
 
 	public Log2HTML()
 	{
-		Point2LogObject = this;
+		this.myDuration.StartTimer();;
+		Pointer2LogBaseStack.push(this);
 	}
 
 	public Log2HTML(String fpsOutputFilename)
 	{
 		bFinalize = true;
-		Point2LogObject = this;
+		this.myDuration.StartTimer();;
+		Pointer2LogBaseStack.push(this);
 		setHTML_File( fpsOutputFilename );
 	}
 
+	
 	protected void finalize( )
 	{
+		StopAllTimerAndEmptyStack();
+		
 		if (bFinalize)
 		{
 			Result2HTML();
 		}
 	}
 
+	
 	public void LogPass(String fpsMessage)
 	{
-		PrintCount++;
+		PassedCount++;
 		AllCount++;
 		
-		Point2LogObject.myLogs.add( new LogPass(Point2LogObject, fpsMessage) ); 	
+		Pointer2LogBaseStack.peek().myLogs.add( new LogPass(Pointer2LogBaseStack.peek(), fpsMessage) ); 	
 	}
 	
+
 	public void LogPrint(String fpsMessage)
 	{
 		PrintCount++;
 		AllCount++;
 		
-		Point2LogObject.myLogs.add( new LogPrint(Point2LogObject, fpsMessage) ); 	
+		Pointer2LogBaseStack.peek().myLogs.add( new LogPrint(Pointer2LogBaseStack.peek(), fpsMessage) ); 	
 	}
+
 
 	public void LogPrintDebug( String fpsMessage )
 	{
+		/*
 		PrintCount++;
 		AllCount++;
 		
-		Point2LogObject.myLogs.add( new LogPrintDebug(Point2LogObject, fpsMessage) ); 	
+		Pointer2LogBaseStack.peek().myLogs.add( new LogPrintDebug(Pointer2LogBaseStack.peek(), fpsMessage) );
+		*/	
 	}
 
 
@@ -83,221 +98,239 @@ public class Log2HTML extends LogBase implements ILogger
 		WarningCount++;
 		AllCount++;
 		
-		Point2LogObject.myLogs.add( new LogWarning(Point2LogObject, fpsMessage) ); 	
+		Pointer2LogBaseStack.peek().myLogs.add( new LogWarning(Pointer2LogBaseStack.peek(), fpsMessage) ); 	
 	}
+
 
 	public void LogError(String fpsMessage)
 	{
 		ErrorCount++;
 		AllCount++;
 		
-		Point2LogObject.myLogs.add( new LogError(Point2LogObject, fpsMessage) );
+		Pointer2LogBaseStack.peek().myLogs.add( new LogError(Pointer2LogBaseStack.peek(), fpsMessage) );
 	}
+
 
 	public void LogException(String fpsMessage)
 	{
 		ExceptionCount++;
 		AllCount++;
 		
-		Point2LogObject.myLogs.add( new LogException(Point2LogObject, fpsMessage) ); 	
+		Pointer2LogBaseStack.peek().myLogs.add( new LogException(Pointer2LogBaseStack.peek(), fpsMessage) ); 	
 	}
 
-	// TODO: Hierher
-    public void LogFunctionStart(String fps_FunctionName, String... fpsParameter)
+
+	public void LogFunctionStart(String fps_FunctionName, String... fpsParameter)
     {
-		FunctionCount++;
+		/*FunctionCount++;
 		AllCount++;
 		
-    	LogBase myLog = new LogFunction( Point2LogObject, fps_FunctionName, fpsParameter);
+    	LogBase myLog = new LogFunction( Pointer2LogBaseStack.peek(), fps_FunctionName, fpsParameter);
 
     	// Timer starten
     	myLog.myDuration.StartTimer();
     	
-    	Point2LogObject.myLogs.add(myLog);
-    	Point2LogObject = myLog;
+    	Pointer2LogBaseStack.peek().myLogs.add(myLog);
+    	Pointer2LogBaseStack.push(myLog);
+    	*/
     }
 
 
 	public void LogFunctionStartDebug( String fps_FunctionName, String... fpsParameter )
 	{
-		FunctionCount++;
+		/* FunctionCount++;
 		AllCount++;
 		
-    	LogBase myLog = new LogFunctionDebug( Point2LogObject, fps_FunctionName, fpsParameter);
+    	LogBase myLog = new LogFunctionDebug( Pointer2LogBaseStack.peek(), fps_FunctionName, fpsParameter);
 
     	// Timer starten
     	myLog.myDuration.StartTimer();
     	
-    	Point2LogObject.myLogs.add(myLog);
-    	Point2LogObject = myLog;
+    	Pointer2LogBaseStack.peek().myLogs.add(myLog);
+    	Pointer2LogBaseStack.push(myLog);
+    	*/
 	}
 
 
-    public void LogTestcaseStart(String fps_FunctionName)
-    {
-		TestcaseCount++;
-		AllCount++;
-		
-    	LogBase myLog = new LogTestcase( Point2LogObject, fps_FunctionName);
-    	
-    	// Timer starten
-    	myLog.myDuration.StartTimer();
-
-    	Point2LogObject.myLogs.add(myLog);
-    	Point2LogObject = myLog;
-    }
-    
-
-	public void LogFunctionEnd()
+    public void LogFunctionEnd()
 	{
+		/*
+		LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	Point2LogObject.myDuration.StopTimer();
+    	myLog.myDuration.StopTimer();
 
     	@SuppressWarnings( "unused" )
-		LogFunction myLogFunction = (LogFunction)Point2LogObject;
+		LogFunction myLogFunction = (LogFunction)myLog;
     	
-    	if ( (!Point2LogObject.bError)  || (!Point2LogObject.bException))
+    	if ( (!myLog.bError)  || (!myLog.bException))
     	{
     		FunctionPass++;
     	}
-
-    	Point2LogObject = Point2LogObject.getParent();
+    	*/
 	}
 
 
 	public void LogFunctionEndDebug()
 	{
+		/*
+		LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	Point2LogObject.myDuration.StopTimer();
+    	myLog.myDuration.StopTimer();
 
     	@SuppressWarnings( "unused" )
-		LogFunctionDebug myLogFunction = (LogFunctionDebug)Point2LogObject;
+		LogFunctionDebug myLogFunction = (LogFunctionDebug)myLog;
     	
-    	if ( (!Point2LogObject.bError)  || (!Point2LogObject.bException))
+    	if ( (!myLog.bError)  || (!myLog.bException))
     	{
     		FunctionPass++;
     	}
-
-    	Point2LogObject = Point2LogObject.getParent();
+    	*/
 	}
 
 
 	public void LogFunctionEndDebug( Boolean fpb_Return )
 	{
+		/*
+		LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	Point2LogObject.myDuration.StopTimer();
+    	myLog.myDuration.StopTimer();
     	
-    	LogFunctionDebug myLogFunction = (LogFunctionDebug)Point2LogObject;
+    	LogFunctionDebug myLogFunction = (LogFunctionDebug)myLog;
     	myLogFunction.setReturn( fpb_Return.toString());
 
-    	if ( (!Point2LogObject.bError)  || (!Point2LogObject.bException))
+    	if ( (!myLog.bError)  || (!myLog.bException))
     	{
     		FunctionPass++;
     	}
-
-    	Point2LogObject = Point2LogObject.getParent();
+    	*/
 	}
 	
 
 	public void LogFunctionEnd(Boolean Return)
     {
+		/*
+		LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	Point2LogObject.myDuration.StopTimer();
+    	myLog.myDuration.StopTimer();
     	
-    	LogFunction myLogFunction = (LogFunction)Point2LogObject;
+    	LogFunction myLogFunction = (LogFunction)myLog;
     	myLogFunction.setReturn( Return.toString());
 
-    	if ( (!Point2LogObject.bError)  || (!Point2LogObject.bException))
+    	if ( (!myLog.bError)  || (!myLog.bException))
     	{
     		FunctionPass++;
     	}
-
-    	Point2LogObject = Point2LogObject.getParent();
+    	*/
     }
 
 
 	public void LogFunctionEnd( String fps_Return )
 	{
+		/*
+		LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	Point2LogObject.myDuration.StopTimer();
+    	myLog.myDuration.StopTimer();
     	
-    	LogFunction myLogFunction = (LogFunction)Point2LogObject;
+    	LogFunction myLogFunction = (LogFunction)myLog;
     	myLogFunction.setReturn( fps_Return);
 
-    	if ( (!Point2LogObject.bError)  || (!Point2LogObject.bException))
+    	if ( (!myLog.bError)  || (!myLog.bException))
     	{
     		FunctionPass++;
     	}
-
-    	Point2LogObject = Point2LogObject.getParent();
+    	*/
 	}
 
+	
 	public void LogFunctionEndDebug( String fps_Return )
 	{
-	   	// Timer Stoppen...
-    	Point2LogObject.myDuration.StopTimer();
+		/*
+		LogBase myLog = Pointer2LogBaseStack.pop();
+    	// Timer Stoppen...
+    	myLog.myDuration.StopTimer();
     	
-    	LogFunctionDebug myLogFunction = (LogFunctionDebug)Point2LogObject;
+    	LogFunctionDebug myLogFunction = (LogFunctionDebug)myLog;
     	myLogFunction.setReturn( fps_Return);
 
-    	if ( (!Point2LogObject.bError)  || (!Point2LogObject.bException))
+    	if ( (!myLog.bError)  || (!myLog.bException))
     	{
     		FunctionPass++;
     	}
-
-    	Point2LogObject = Point2LogObject.getParent();
+    	*/
     }
 
 	
 	public void LogFunctionEnd( List<String> fps_Return )
 	{
-	   	// Timer Stoppen...
-    	Point2LogObject.myDuration.StopTimer();
+		/*
+		LogBase myLog = Pointer2LogBaseStack.pop();
+    	// Timer Stoppen...
+    	myLog.myDuration.StopTimer();
     	
-    	LogFunction myLogFunction = (LogFunction)Point2LogObject;
+    	LogFunction myLogFunction = (LogFunction)myLog;
     	
     	// TODO: ein ResultListstring hier einhängen
     	myLogFunction.setReturn( fps_Return.toString());
 
-    	if ( (!Point2LogObject.bError)  || (!Point2LogObject.bException))
+    	if ( (!myLog.bError)  || (!myLog.bException))
     	{
     		FunctionPass++;
     	}
-
-    	Point2LogObject = Point2LogObject.getParent();
+    	*/
 	}
 
 	public void LogFunctionEndDebug( List<String> fps_Return )
 	{
-	   	// Timer Stoppen...
-    	Point2LogObject.myDuration.StopTimer();
+		/*
+		LogBase myLog = Pointer2LogBaseStack.pop();
+    	// Timer Stoppen...
+    	myLog.myDuration.StopTimer();
     	
-    	LogFunctionDebug myLogFunction = (LogFunctionDebug)Point2LogObject;
+    	LogFunctionDebug myLogFunction = (LogFunctionDebug)myLog;
     	
     	// TODO: ein ResultListstring hier einhängen
     	myLogFunction.setReturn( fps_Return.toString());
 
-    	if ( (!Point2LogObject.bError)  || (!Point2LogObject.bException))
+    	if ( (!myLog.bError)  || (!myLog.bException))
     	{
     		FunctionPass++;
     	}
-
-    	Point2LogObject = Point2LogObject.getParent();
+    	*/
 	}
 
-    public void LogTestcaseEnd()
+	
+    public void LogTestcaseStart(String fps_FunctionName)
+	{
+		TestcaseCount++;
+		AllCount++;
+		
+		StopAllTimerAndEmptyStack();
+		Pointer2LogBaseStack.push( this );
+		
+		LogBase myLog = new LogTestcase( Pointer2LogBaseStack.peek(), fps_FunctionName);
+		
+		// Timer starten
+		myLog.myDuration.StartTimer();
+	
+		Pointer2LogBaseStack.peek().myLogs.add(myLog);
+		Pointer2LogBaseStack.push(myLog);
+	}
+
+	public void LogTestcaseEnd()
     {
+    	LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	Point2LogObject.myDuration.StopTimer();
+    	myLog.myDuration.StopTimer();
 
     	@SuppressWarnings( "unused" )
-		LogTestcase myCheck = (LogTestcase)Point2LogObject;
+		LogTestcase myCheck = (LogTestcase)myLog;
 
-    	if ( !(Point2LogObject.bError  || Point2LogObject.bException))
+    	if ( !(myLog.bError || myLog.bException))
     	{
     		TestcasePass++;
     	}
-    	Point2LogObject = Point2LogObject.getParent();
+    	
+		StopAllTimerAndEmptyStack();
     }
 
     
@@ -306,30 +339,32 @@ public class Log2HTML extends LogBase implements ILogger
 		KeyWordCount++;
 		AllCount++;
 		
-    	LogBase myLog = new LogKeyword( Point2LogObject, fps_FunctionName, fpsParameter);
+    	LogBase myLog = new LogKeyword( Pointer2LogBaseStack.peek(), fps_FunctionName, fpsParameter);
     	
     	// Timer starten
     	myLog.myDuration.StartTimer();
 
-    	Point2LogObject.myLogs.add(myLog);
-    	Point2LogObject = myLog;
-    }
+    	Pointer2LogBaseStack.peek().myLogs.add(myLog);
+    	Pointer2LogBaseStack.push(myLog);
+   }
 
     
     public void LogKeyWordEnd()
     {
+		LogBase myLog = Pointer2LogBaseStack.peek();
     	// Timer Stoppen...
-    	Point2LogObject.myDuration.StopTimer();
+    	myLog.myDuration.StopTimer();
 
     	@SuppressWarnings( "unused" )
-		LogKeyword myCheck = (LogKeyword)Point2LogObject;
+		LogKeyword myCheck = (LogKeyword)myLog;
 
-    	if ( !(Point2LogObject.bError  || Point2LogObject.bException))
+    	if ( !(myLog.bError  || myLog.bException))
     	{
     		KeyWordPass++;
     	}
 
-    	Point2LogObject = Point2LogObject.getParent();
+		Pointer2LogBaseStack.pop();
+
     }
 
     public void LogSequenceStart( String fpsKeywordName, String fpsWindowFN, String fps_SequensName, String... fpsParameter)
@@ -337,30 +372,31 @@ public class Log2HTML extends LogBase implements ILogger
 		SequensCount++;
 		AllCount++;
 		
-    	LogBase myLog = new LogSequence( Point2LogObject, fpsWindowFN, fps_SequensName, fpsParameter);
+    	LogBase myLog = new LogSequence( Pointer2LogBaseStack.peek(), fpsWindowFN, fps_SequensName, fpsParameter);
     	
     	// Timer starten
     	myLog.myDuration.StartTimer();
 
-    	Point2LogObject.myLogs.add(myLog);
-    	Point2LogObject = myLog;
+    	Pointer2LogBaseStack.peek().myLogs.add(myLog);
+    	Pointer2LogBaseStack.push(myLog);
     }
 
     
     public void LogSequenceEnd()
     {
+		LogBase myLog = Pointer2LogBaseStack.peek();
     	// Timer Stoppen...
-    	Point2LogObject.myDuration.StopTimer();
+    	myLog.myDuration.StopTimer();
 
     	@SuppressWarnings( "unused" )
-		LogSequence myCheck = (LogSequence)Point2LogObject;
+		LogSequence myCheck = (LogSequence)myLog;
 
-    	if ( !(Point2LogObject.bError  || Point2LogObject.bException))
+    	if ( !(myLog.bError  || myLog.bException))
     	{
     		SequensPass++;
     	}
 
-    	Point2LogObject = Point2LogObject.getParent();
+		Pointer2LogBaseStack.pop();
     }
     
     
@@ -465,10 +501,8 @@ public class Log2HTML extends LogBase implements ILogger
     	myResult.append("\t<thead  class='statistics'>\n");
     	myResult.append("\t\t<tr class='statistics'>\n");    	
     	myResult.append("\t\t\t<th></th>\n");
-    	myResult.append("\t\t\t<th width='60px'>Count</th>\n");
-    	myResult.append("\t\t\t<th width='60px'>Pass</th>\n");
-    	myResult.append("\t\t\t<th width='60px'>Fail</th>\n");
-    	myResult.append("\t\t\t<th>Pass-Fail-Rate</th>\n");
+    	myResult.append("\t\t\t<th>Count</th>\n");
+    	myResult.append("\t\t\t<th colspan='3'></th>\n");
     	myResult.append("\t\t</tr>\n");
     	myResult.append("\t</thead>\n");
 
@@ -478,29 +512,37 @@ public class Log2HTML extends LogBase implements ILogger
     	myResult.append("\t\t<tr>\n");    	
     	myResult.append("\t\t\t<td align='right'>Errors:</td>\n");
     	myResult.append("\t\t\t<td align='center'>" + ErrorCount.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td> </td>\n");
-    	myResult.append("\t\t\t<td> </td>\n");
-    	myResult.append("\t\t\t<td> </td>\n");
+    	myResult.append("\t\t\t<td colspan='3'></td>\n");
     	myResult.append("\t\t</tr>\n");
     	
     	myResult.append("\t\t<tr>\n");    	
     	myResult.append("\t\t\t<td align='right'>Exceptions:</td>\n");
     	myResult.append("\t\t\t<td align='center'>" + ExceptionCount.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td> </td>\n");
-    	myResult.append("\t\t\t<td> </td>\n");
-    	myResult.append("\t\t\t<td> </td>\n");
-    	myResult.append("\t\t</tr>\n");
+       	myResult.append("\t\t\t<td colspan='3'></td>\n");    	myResult.append("\t\t</tr>\n");
 
     	myResult.append("\t\t<tr>\n");    	
     	myResult.append("\t\t\t<td align='right'>Warnings:</td>\n");
     	myResult.append("\t\t\t<td align='center'>" + WarningCount.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td> </td>\n");
-    	myResult.append("\t\t\t<td> </td>\n");
-    	myResult.append("\t\t\t<td> </td>\n");
+       	myResult.append("\t\t\t<td colspan='3'></td>\n");    	myResult.append("\t\t</tr>\n");
+
+    	myResult.append("\t\t<tr>\n");    	
+    	myResult.append("\t\t\t<td align='right'>Passed:</td>\n");
+    	myResult.append("\t\t\t<td align='center'>" + PassedCount.toString() + "</td>\n");
+       	myResult.append("\t\t\t<td colspan='3'></td>\n");    	myResult.append("\t\t</tr>\n");
+
+       	
+    	myResult.append("\t<thead  class='statistics'>\n");
+    	myResult.append("\t\t<tr class='statistics'>\n");    	
+    	myResult.append("\t\t\t<th></th>\n");
+    	myResult.append("\t\t\t<th width='60px'>Count</th>\n");
+    	myResult.append("\t\t\t<th width='60px'>Pass</th>\n");
+    	myResult.append("\t\t\t<th width='60px'>Fail</th>\n");
+    	myResult.append("\t\t\t<th>Pass-Fail-Rate</th>\n");
     	myResult.append("\t\t</tr>\n");
+    	myResult.append("\t</thead>\n");
     	
     	myResult.append("\t\t<tr>\n");    	
-    	myResult.append("\t\t\t<td align='right'>Testcases:</td>\n");
+    	myResult.append("\t\t\t<td align='right'>Test cases:</td>\n");
     	myResult.append("\t\t\t<td align='center'>" + TestcaseCount.toString() + "</td>\n");
     	myResult.append("\t\t\t<td align='center'>" + TestcasePass.toString() + "</td>\n");
     	myResult.append("\t\t\t<td align='center'>" + TestcaseFail.toString() + "</td>\n");
@@ -524,7 +566,20 @@ public class Log2HTML extends LogBase implements ILogger
     	myResult.append("\t\t\t<td>" + getFailPassBar(KeyWordFail, KeyWordCount-KeyWordFail) + "</td>\n");
     	myResult.append("\t\t</tr>\n");
 
-    	myResult.append("\t</tbody>\n");
+    	myResult.append("\t\t<tr class='statistics'>\n");    	
+    	myResult.append("\t\t\t<th  colspan='5'>Timer</th>\n");
+    	myResult.append("\t\t</tr>\n");
+    	
+    	
+    	myResult.append("\t\t<tr>\n");    	
+    	myResult.append("\t\t\t<td align='right'>Start time:</td>\n");
+    	myResult.append("\t\t\t<td align='center' colspan='4'>" + this.myDuration.getStartTime() + "</td>\n");
+    	myResult.append("\t\t</tr>\n");
+    	
+    	myResult.append("\t\t<tr>\n");    	
+    	myResult.append("\t\t\t<td align='right'>End time:</td>\n");
+    	myResult.append("\t\t\t<td align='center' colspan='4'>" + this.myDuration.getEndTime() + "</td>\n");
+    	myResult.append("\t\t</tr>\n");
     	myResult.append("</table></p>\n");
     	
        	return myResult.toString();
@@ -535,14 +590,17 @@ public class Log2HTML extends LogBase implements ILogger
     {
     	StringBuilder myResult = new StringBuilder();
 
-    	float lfFailRate = FailCount * 100f / (FailCount + PassCount );
-    	float lfPassRate = 100f - lfFailRate;
+    	if (FailCount+PassCount > 0)
+    	{
+    		float lfFailRate = FailCount * 100f / (FailCount + PassCount );
+    		float lfPassRate = 100f - lfFailRate;
     	
-    	myResult.append("<div class='pass-fail-graph'>\n");
-    	myResult.append("\t<div class='pass-bar' style='width: " + String.format (Locale.ENGLISH, "%.2f", lfPassRate) + "%'></div>\n");
-    	myResult.append("\t<div class='fail-bar' style='width: " + String.format (Locale.ENGLISH, "%.2f", lfFailRate) + "%'></div>\n");
-    	myResult.append("</div>\n");
-    	
+    		myResult.append("<div class='pass-fail-graph'>\n");
+    		myResult.append("\t<div class='pass-bar' style='width: " + String.format (Locale.ENGLISH, "%.2f", lfPassRate) + "%'></div>\n");
+    		myResult.append("\t<div class='fail-bar' style='width: " + String.format (Locale.ENGLISH, "%.2f", lfFailRate) + "%'></div>\n");
+    		myResult.append("</div>\n");
+    	}
+
     	return myResult.toString();
     }
     
@@ -559,6 +617,8 @@ public class Log2HTML extends LogBase implements ILogger
     	StringBuilder myResult = new StringBuilder();
     	
 		try{
+			
+			StopAllTimerAndEmptyStack();
 			
 			myResult.append(getHTMLHeader());
 			myResult.append(getStatistics());
@@ -603,78 +663,89 @@ public class Log2HTML extends LogBase implements ILogger
 	protected void SetPass()
 	{
 	}
-
-	@Deprecated
-	public void LogVerify( String fps_Actual, String fps_Expected )
+	
+	protected void abort()
 	{
-		AllCount++;
-		
-    	LogBase myLog = new LogVerify( Point2LogObject, fps_Actual, fps_Expected);
-
-    	Point2LogObject.myLogs.add(myLog);
-    	
- 	}
+	}
 
 	
 	public void ResOpenList( String fps_ListHeader )
 	{
 		AllCount++;
 		
-    	LogBase myLog = new ResultList( Point2LogObject, fps_ListHeader);
+    	LogBase myLog = new ResultList( Pointer2LogBaseStack.peek(), fps_ListHeader);
 
     	// Timer starten
     	myLog.myDuration.StartTimer();
     	
-    	Point2LogObject.myLogs.add(myLog);
-    	Point2LogObject = myLog;
+    	Pointer2LogBaseStack.push(myLog);
 	}
 
 	public void ResOpenListDebug( String fps_ListHeader )
 	{
+		/*
 		AllCount++;
 		
-    	LogBase myLog = new ResultListDebug( Point2LogObject, fps_ListHeader);
+    	LogBase myLog = new ResultListDebug( Pointer2LogBaseStack.peek(), fps_ListHeader);
 
     	// Timer starten
     	myLog.myDuration.StartTimer();
     	
-    	Point2LogObject.myLogs.add(myLog);
-    	Point2LogObject = myLog;
+    	Pointer2LogBaseStack.push(myLog);
+    	*/
 	}
 
 	
+	private void StopAllTimerAndEmptyStack()
+	{		
+		
+		if (Pointer2LogBaseStack.size() > 1 )
+		{
+			Pointer2LogBaseStack.peek().abort();
+		}
+		
+	    while (!Pointer2LogBaseStack.isEmpty()) 
+	    {
+	    	Pointer2LogBaseStack.pop().myDuration.StopTimer();	
+		}
+	}
+	
+	
 	public void ResCloseList()
 	{
+		LogBase myLog = Pointer2LogBaseStack.pop();
+		
     	// Timer Stoppen...
-    	Point2LogObject.myDuration.StopTimer();
+		myLog.myDuration.StopTimer();
     	
     	@SuppressWarnings( "unused" )
-		ResultList myResultList = (ResultList)Point2LogObject;
+		ResultList myResultList = (ResultList)myLog;
 
-    	if ( (!Point2LogObject.bError)  || (!Point2LogObject.bException))
+    	if ( (!myLog.bError)  || (!myLog.bException))
     	{
     		FunctionPass++;
     	}
-
-    	Point2LogObject = Point2LogObject.getParent();
-    	}
+    }
 
 	
 	public void ResCloseListDebug()
 	{
+		/*
+		LogBase myLog = Pointer2LogBaseStack.peek();
     	// Timer Stoppen...
-    	Point2LogObject.myDuration.StopTimer();
+    	myLog.myDuration.StopTimer();
     	
     	@SuppressWarnings( "unused" )
-		ResultListDebug myResultList = (ResultListDebug)Point2LogObject;
+		ResultListDebug myResultList = (ResultListDebug)myLog;
  
-    	if ( (!Point2LogObject.bError)  || (!Point2LogObject.bException))
+    	if ( (!myLog.bError)  || (!myLog.bException))
     	{
     		FunctionPass++;
     	}
 
-    	Point2LogObject = Point2LogObject.getParent();
-    	}
+		Pointer2LogBaseStack.pop();
+		*/
+    }
 
 
 	public void setDebugMode( Boolean fpbDebugMode )
