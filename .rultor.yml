@@ -1,7 +1,11 @@
 env:
   USER: "Zoltan"
-docker:
-  image: "mostalive/ubuntu-14.04-oracle-jdk8"
+install:
+  - 'sudo apt-get install texlive'
+  - 'sudo update-alternatives --install "/usr/bin/java" "java" "/opt/Oracle_Java/jdk1.8.0_111/bin/java" 1'
+  - 'sudo update-alternatives --install "/usr/bin/javac" "javac" "/opt/Oracle_Java/jdk1.8.0_111/bin/javac" 1'
+  - 'update-alternatives --install "/usr/bin/javaws" "javaws" "/opt/Oracle_Java/jdk1.8.0_111/bin/javaws" 1'
+  - 'update-alternatives --install "/usr/bin/jar" "jar" "/opt/Oracle_Java/jdk1.8.0_111/bin/jar" 1'
 decrypt:
   settings.xml: "repo/settings.xml.asc"
   pubring.gpg: "repo/pubring.gpg.asc"
