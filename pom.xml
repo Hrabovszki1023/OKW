@@ -60,6 +60,9 @@
 			<plugin>
 				<!-- Generate -javadoc.jar artifact, required by Maven Central. -->
 				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<additionalparam>-Xdoclint:none</additionalparam>
+				</configuration>
 				<executions>
 					<execution>
 						<id>jcabi-javadoc</id>
