@@ -1,5 +1,5 @@
 docker:
-  image: "mostalive/ubuntu-14.04-oracle-jdk8"
+  image: "yegor256/java8"
 env:
   USER: "Zoltan"
 decrypt:
