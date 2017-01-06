@@ -134,7 +134,6 @@ public class EN_Keywords_ANTLR_Test
 		EN.BeginTest( name.getMethodName() );
 
 		// Set Memorize Values
-		String myUser = System.getenv( "USER" );
 
 		// Testscript in Schlüsselwort-Notation
 		EN.SelectWindow("Rechner");
@@ -148,11 +147,11 @@ public class EN_Keywords_ANTLR_Test
     // Wert in "All_MethodsObj" setzen.
 		EN.SetValue( "All_MethodsObj", "The one and only Value" );
 		// Prüfung des Schlüsselwortes?
-		EN.Select("All_MethodsObj", "${USER}");
+		EN.Select("All_MethodsObj", "${TCN}");
 
 		// Check the Name, Called Method and Value of Actuel object
 		assertEquals( 1, myClipBoard.getValue().size());
-		assertEquals( myUser, myClipBoard.getValue().get(0));
+		assertEquals( name.getMethodName(), myClipBoard.getValue().get(0));
 		assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
 		assertEquals("Select()", myClipBoard.getMethod());
 	}
