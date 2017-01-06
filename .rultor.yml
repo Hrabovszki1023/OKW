@@ -1,7 +1,7 @@
-docker:
-  image: "dockerfile/java:oracle-java8"
 env:
   USER: "Zoltan"
+install:
+  - 'sudo apt-get install openjdk-8-jdk openjdk-8-doc openjdk-8-jre-headless'
 decrypt:
   settings.xml: "repo/settings.xml.asc"
   pubring.gpg: "repo/pubring.gpg.asc"
