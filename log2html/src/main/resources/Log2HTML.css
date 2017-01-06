@@ -176,7 +176,7 @@ p.LogError
 p.LogPassed  
 {
 	clear:both;
-    background-color: magenta;
+    background-color: white;
     padding:1px; 
     border:2pt solid green; 
     margin-top:1px;
@@ -245,7 +245,7 @@ p.LogPrintDebug
 
 
 /* -----------------------------------------*/
-/* Header and Body of foldable Loggs        */
+/* Header and Body of foldable Logs        */
 /* -----------------------------------------*/
 
 div.Header{

@@ -7,7 +7,7 @@ public class LogPass extends LogBase{
 		Info = fpsInfo;
 		myID = AllCount;
 		this.setParent(fpParent);		
-		setError();	
+		//setPass();	
 	}
 
 	protected String getResult()
@@ -16,7 +16,7 @@ public class LogPass extends LogBase{
 		
 		String lvsIndention = this.getLevelIndention();
 		
-		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogPass'>" + this.Info + "</p>\n" );
+		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogPassed'>" + this.Info + "</p>\n" );
 		
 		return sbResult.toString();
 	}

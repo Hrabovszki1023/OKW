@@ -23,7 +23,7 @@ public class EN_Keywords_Test {
   @BeforeClass
   public static void setUpBeforeClass() throws Exception {
     // Reset des Loggers: Alle geladenen Instanzen löschen
-    Logger_Sngltn.Init();
+    Logger_Sngltn.getInstance().Init();
 
     // Log2Console myLog2Console = null;
     // myLog2Console = new Log2Console();

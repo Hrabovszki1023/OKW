@@ -38,35 +38,35 @@ package okw.core;
 
 import okw.log.*;
 
-    /// \~german
-    /// \brief
-    /// OKW.EN ist die deutschsprachige Implementation der OKW-Schlüsselwörter.
-    /// 
-    /// Diese Klasse bildet ausschliesslich ein Mapping der
-    /// englischsprachigen Schlüsselwörter auf die korrespondierende Core-Methoden.
-    /// 
-    /// Alle Schlüsselwort-Methoden dieser Klasse setzten zunächst die Spracheinstellung der Klasse OKW.Core auf "EN"
-    /// Danach erfolgt der Aufruf der korrespondierenden Core-Methode.
-    /// 
-    /// UseCase
-    /// -------
-    /// 
-    /// @startuml{OKW_UseCase_Keyword_de.png}
-    /// :Fachtester: -right-> (Testfall in Schlüsselwortnotation) : erstellt
-    /// @enduml
-    /// 
-    /// \section secLoginEN Beispiel: Login
-    /// Das folgende Beispiel zeigt die Beschreibung eines Login-Vorganges in Schlüsslewort-Notation.
-    /// 
-    /// \code
-    /// EN.SelectWindow("Login")
-    /// EN.SetValue("Benutzer", "Zoltan")
-    /// EN.SetValue("Passwort", "gEHeim")
-    /// EN.ClickOn("Weiter")
-    /// \endcode
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.05.03
+    /** \~german
+     *  okw.core.EN ist die englische Implementation von OKW.
+     *  
+     *  Diese Klasse bildet ausschliesslich ein Mapping der
+     *  englischsprachigen Schlüsselwörter auf die korrespondierende Core-Methoden.<br>
+     *  
+     *  Alle Schlüsselwort-Methoden dieser Klasse setzten zunächst die Spracheinstellung der Klasse OKW.Core auf "EN"
+     *  Danach erfolgt der Aufruf der korrespondierenden Core-Methode.<br>
+     *  
+     *  UseCase
+     *  -------
+     *  
+     *  @startuml{OKW_UseCase_Keyword_de.png}
+     *  :Fachtester: -right-> (Testfall in Schlüsselwortnotation) : erstellt
+     *  @enduml
+     *  
+     *  \section secLoginEN Beispiel: Login
+     *  Das folgende Beispiel zeigt die Beschreibung eines Login-Vorganges in Schlüsslewort-Notation.
+     *  
+     *  \code
+     *  EN.SelectWindow("Login")
+     *  EN.SetValue("Benutzer", "Zoltan")
+     *  EN.SetValue("Passwort", "gEHeim")
+     *  EN.ClickOn("Weiter")
+     *  \endcode
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.05.03
+     */
     public class EN
     {
 

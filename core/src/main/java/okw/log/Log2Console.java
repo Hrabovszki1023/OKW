@@ -42,33 +42,35 @@ package okw.log;
 import java.util.List;
 import okw.OKW_Helper;
 
-/// \~german
-/// \brief Klasse zur Ausgabe in die System.out.
-/// 
-/// Ausgaben werden auf der Konsele farbig ausgegeben: Implementiert das Interface ILogger für eine Konsolen-Ausgabe:
-/// - Normaler Log ist weiß/schwarz.
-/// - Warning wird gelb,
-/// - Error wird rot
-/// - Passed wird grün und 
-/// - Exception in pink
-/// ausgegeben.
-/// Quelle: https://stackoverflow.com/questions/1448858/how-to-color-system-out-println-output
-/// \~english
-/// \brief \todo TODO: Brief Description.
-/// 
-/// \todo TODO: Detailed Description
-/// 
-/// \~
-/// \author Zoltán Hrabovszki
-/// \date 2015.05.02
+/** \~german
+ *  Klasse zur Ausgabe in die System.out.
+ *  
+ *  \~english
+ *  \brief \todo TODO: Brief Description.
+ *  
+ *  \todo TODO: Detailed Description
+ *  
+ *  \~
+ *  \author Zoltán Hrabovszki
+ *  \date 2015.05.02
+ */
 public class Log2Console implements ILogger
 {
 
-	        String BlanksBefore = "";
-	        int LevelCounter = 0;
+	        private String BlanksBefore = "";
+	        private int LevelCounter = 0;
 	        
 	        private Boolean cvbDebugMode = false;
 
+	        
+	        public void reset()
+	        {
+		        LevelCounter = 0;
+		        BlanksBefore = "";
+		        
+		        this.BlankBefore();
+	        }
+	        
 	        
 			/**
 	         * \copydoc ILogger::LogError(String)
@@ -92,24 +94,18 @@ public class Log2Console implements ILogger
 	        }
 
 	
-	        /// \~german
-	        /// \copydoc ILogger::LogFunctionEnd()
-	        /// \~english
-	        /// \copydoc ILogger::LogFunctionEnd()
-	        ///
-			@Override
+	        /**
+	         *  \copydoc ILogger::LogFunctionEnd()
+	         */
 			public void LogFunctionEnd()
 	        {
 	            this.LogPrint("-------");
 	            this.ResCloseList();
 	        }
 
-	        /// \~german
-	        /// \copydoc ILogger::LogFunctionEnd(String)
-	        /// \~english
-	        /// \copydoc ILogger::LogFunctionEnd(String)
-	        ///
-			@Override
+	        /**
+	         *  \copydoc ILogger::LogFunctionEnd(String)
+	         */
 			public void LogFunctionEnd(String fps_Return)
 	        {
 	            this.ResOpenList("Return...");
@@ -119,12 +115,9 @@ public class Log2Console implements ILogger
 	            this.ResCloseList();
 	        }
 
-	        /// \~german
-	        /// \copydoc ILogger::LogFunctionEnd(Boolean)
-	        /// \~english
-	        /// \copydoc ILogger::LogFunctionEnd(Boolean)
-	        ///
-			@Override
+	        /**
+	         *  \copydoc ILogger::LogFunctionEnd(Boolean)
+	         */
 	        public void LogFunctionEnd(Boolean fpb_Return)
 	        {
 	            this.ResOpenList("Return...");
@@ -134,12 +127,10 @@ public class Log2Console implements ILogger
 	            this.ResCloseList();
 	        }
 
-	        /// \~german
-	        /// \copydoc ILogger::LogFunctionEnd(List)
-	        /// \~english
-	        /// \copydoc ILogger::LogFunctionEnd(List)
-	        ///
-			@Override
+
+	        /**
+	         *  \copydoc ILogger::LogFunctionEnd(List)
+	         */
 	        public void LogFunctionEnd(List<String> fpls_Return)
 	        {
 	            this.ResOpenList("Return...");
@@ -154,12 +145,10 @@ public class Log2Console implements ILogger
 	            this.ResCloseList();
 	        }
 
-	        /// \~german
-	        /// \copydoc ILogger::LogFunctionStart(String,params)
-	        /// \~english
-	        /// \copydoc ILogger::LogFunctionStart(String,params)
-	        ///
-			@Override
+
+	        /**
+	         *  \copydoc ILogger::LogFunctionStart(String,params)
+	         */
 			public void LogFunctionStart(String fps_FunctionName, String... fpsParameter)
 	        {
 	            this.ResOpenList(fps_FunctionName);
@@ -176,23 +165,19 @@ public class Log2Console implements ILogger
 	            return;
 	        }
 
-	        /// \~german
-	        /// \copydoc ILogger::LogKeyWordEnd()
-	        /// \~english
-	        /// \copydoc ILogger::LogKeyWordEnd()
-	        ///
-			@Override
+			
+	        /**
+	         *  \copydoc ILogger::LogKeyWordEnd()
+	         */
 	        public void LogKeyWordEnd()
 	        {
 	            this.ResCloseList();
 	        }
 
-	        /// \~german
-	        /// \copydoc ILogger::LogKeyWordStart(String,params)
-	        /// \~english
-	        /// \copydoc ILogger::LogKeyWordStart(String,params)
-	        /// 
-			@Override
+	        
+	        /**
+	         *  \copydoc ILogger::LogKeyWordStart(String,params)
+	         */
 	        public void LogKeyWordStart(String fps_KeyWordName, String... fpsParameter)
 	        {
 	            String String2Print = fps_KeyWordName;
@@ -235,7 +220,6 @@ public class Log2Console implements ILogger
 			/**
 	         * \copydoc ILogger::LogPass(String)
 			 */
-			@Override
 	        public void LogPass( String fps_Message )
 	        {
 					System.out.println(this.BlanksBefore + okw.OKW_Helper.StringRepeat("-", 80));
@@ -247,41 +231,15 @@ public class Log2Console implements ILogger
 			/**
 	         *  \copydoc ILogger::LogPrint(String)
 			 */
-			@Override
 	        public void LogPrint(String fps_Message)
 	        {
 	            System.out.println(this.BlanksBefore + fps_Message);
 	        }
 
 			
-            /**
-	         *  \copydoc ILogger::LogVerify(String,String)
-	        */
-			@Deprecated
-			@Override
-	        public void LogVerify(String fps_Actual, String fps_Expected)
-	        {
-	            System.out.println( this.BlanksBefore + "-------------------------------------------------------");
-	            if (fps_Actual.equals( fps_Expected ))
-	            {
-		            System.out.println( this.BlanksBefore + "  Pass:");
-	            }
-	            else
-	            {
-		            System.out.println( this.BlanksBefore + "  Fail:");
-	            }
-	            // System.out.println(this.BlanksBefore + "-------------------------------------------------------");
-	            System.out.println(this.BlanksBefore + "  Expected = >>" + fps_Expected + "<<");
-	            System.out.println(this.BlanksBefore + "    Actual = >>" + fps_Actual + "<<");
-	            System.out.println(this.BlanksBefore + "-------------------------------------------------------");
-	        }
-
-
-			
 			/**
 	         *  \copydoc ILogger::LogWarning(String)
 			 */
-			@Override
 	        public void LogWarning(String fps_Message)
 	        {	            
 						System.out.println(this.BlanksBefore + okw.OKW_Helper.StringRepeat("-", 80));
@@ -293,7 +251,6 @@ public class Log2Console implements ILogger
 			/**
 	         *  \copydoc ILogger::ResCloseList()
 			 */
-			@Override
 	        public void ResCloseList()
 	        {
 	            if (this.LevelCounter > 0) 
@@ -309,12 +266,9 @@ public class Log2Console implements ILogger
 	        }
 
 			
-	        /// \~german
-	        /// \copydoc ILogger::ResOpenList(String)
-	        /// \~english
-	        /// \copydoc ILogger::ResOpenList(String)
-	        ///
-			@Override
+	        /**
+	         *  \copydoc ILogger::ResOpenList(String)
+	         */
 	        public void ResOpenList(String fps_Name)
 	        {
 	            this.LogPrint(fps_Name);
@@ -322,33 +276,41 @@ public class Log2Console implements ILogger
 	            this.BlankBefore();
 	        }
 
-	        /// \~german
-	        /// \copydoc ILogger::BlankBefore()
-	        /// \~english
-	        /// \copydoc ILogger::BlankBefore()
-	        ///
+	        
+	        /**
+	         *  \copydoc ILogger::BlankBefore()
+	         */
 	        private void BlankBefore()
 	        {
 	            this.BlanksBefore = OKW_Helper.StringRepeat( "  ", this.LevelCounter);
 	        }
 
-			@Override
+	        /**
+	         *  \copydoc ILogger::LogTestcaseStart(String)
+	         */
 			public void LogTestcaseStart( String fps_TestcaseName )
 			{
+				// Reset Log2Console
+				reset(); // Reset LevelCounter, BlanksBefor
+				
 				LogPrint("");
 				LogPrint("-------------------------------------------------------------------------");
 				LogKeyWordStart( "Testcase", fps_TestcaseName );
 			}
 
-			@Override
+			
+	        /**
+	         *  \copydoc ILogger::LogTestcaseEnd()
+	         */
 			public void LogTestcaseEnd()
 			{
 				this.ResCloseList();
 				LogPrint("-------------------------------------------------------------------------");
 			}
 
-
-			@Override
+	        /**
+	         *  \copydoc ILogger::LogSequenceStart(String,String,String,String)
+	         */
 			public void LogSequenceStart( String fps_KeyWordName, String fpsWindowFN,
 					String fps_SequenceName, String... fpsParameter )
 			{
@@ -368,13 +330,18 @@ public class Log2Console implements ILogger
 				LogKeyWordStart( fps_KeyWordName, newArray );
 			}
 
-			@Override
+	        /**
+	         *  \copydoc ILogger::LogSequenceEnd()
+	         */
 			public void LogSequenceEnd()
 			{
 	            this.ResCloseList();
 			}
 
-			@Override
+			
+	        /**
+	         *  \copydoc ILogger::LogFunctionStartDebug(String,String)
+	         */
 			public void LogFunctionStartDebug( String fps_FunctionName, String... fpsParameter )
 			{
 				if (this.cvbDebugMode)
@@ -383,7 +350,10 @@ public class Log2Console implements ILogger
 				}
 			}
 
-			@Override
+			
+	        /**
+	         *  \copydoc ILogger::LogFunctionEndDebug()
+	         */
 			public void LogFunctionEndDebug()
 			{
 				if (this.cvbDebugMode)
@@ -393,7 +363,9 @@ public class Log2Console implements ILogger
 			}
 
 
-			@Override
+	        /**
+	         *  \copydoc ILogger::LogFunctionEndDebug(Boolean)
+	         */
 			public void LogFunctionEndDebug( Boolean fpb_Return )
 			{
 				if (this.cvbDebugMode)
@@ -402,7 +374,9 @@ public class Log2Console implements ILogger
 				}
 			}
 
-			@Override
+	        /**
+	         *  \copydoc ILogger::LogFunctionEndDebug(String)
+	         */
 			public void LogFunctionEndDebug( String fps_Return )
 			{
 				if (this.cvbDebugMode)
@@ -411,7 +385,9 @@ public class Log2Console implements ILogger
 				}
 			}
 
-			@Override
+	        /**
+	         *  \copydoc ILogger::LogFunctionEndDebug(List<String>)
+	         */
 			public void LogFunctionEndDebug( List<String> fpLs_Return )
 			{
 				if (this.cvbDebugMode)
@@ -420,7 +396,10 @@ public class Log2Console implements ILogger
 				}
 			}
 
-			@Override
+
+			/**
+	         *  \copydoc ILogger::LogPrintDebug(String)
+	         */
 			public void LogPrintDebug( String fps_Message )
 			{
 				if (this.cvbDebugMode)
@@ -429,7 +408,10 @@ public class Log2Console implements ILogger
 				}
 			}
 
-			@Override
+
+			/**
+	         *  \copydoc ILogger::ResOpenListDebug(String)
+	         */
 			public void ResOpenListDebug( String fps_Name )
 			{
 				if (this.cvbDebugMode)
@@ -438,7 +420,10 @@ public class Log2Console implements ILogger
 				}
 			}
 
-			@Override
+
+	        /**
+	         *  \copydoc ILogger::ResCloseListDebug()
+	         */
 			public void ResCloseListDebug()
 			{
 				if (this.cvbDebugMode)
@@ -447,6 +432,9 @@ public class Log2Console implements ILogger
 				}
 			}
 			
+	        /**
+	         *  \copydoc ILogger::setDebugMode(Boolean)
+	         */
 			public void setDebugMode( Boolean cvbDebugMode )
 			{
 				this.cvbDebugMode = cvbDebugMode;

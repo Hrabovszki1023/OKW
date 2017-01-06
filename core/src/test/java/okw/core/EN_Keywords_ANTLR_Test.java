@@ -40,7 +40,7 @@ public class EN_Keywords_ANTLR_Test
 	public static void setUpBeforeClass() throws Exception
 	{
         // Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.Init();
+        Logger_Sngltn.getInstance().Init();
         
         myLogger.setDebugMode(false);
 	}

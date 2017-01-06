@@ -14,7 +14,11 @@ public class LogTestcase extends LogBase
 	
 	protected void SetFail()
 	{
-		TestcaseFail++;
+		//Nur Inkrementieren wenn dieser testfall noch nicht als Fail markiert wurde.
+		if(!(this.bError || this.bException) )
+		{
+			TestcaseFail++;
+		}
 	}
 
 	protected void SetPass()

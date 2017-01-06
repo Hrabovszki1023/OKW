@@ -81,7 +81,6 @@ public class Logger_Sngltn
 				{
 					Instance = new Logger_Sngltn();
 					Init();
-
 				}
 			}
 		}
@@ -89,6 +88,15 @@ public class Logger_Sngltn
 
 	}
 
+	
+	public static void Init()
+	{
+		LoggerList.clear();
+		LoggerList.add( new Log2Console() );
+		
+		Instance.setDebugMode(false);
+	}
+	
 	private Logger_Sngltn()
 	{
 		try
@@ -127,13 +135,8 @@ public class Logger_Sngltn
 
 	/**
 	 *  \~german
-	 *  \brief Initialisiert die Klasse.
+	 *  \brief Initialisi.
 	 * 
-	 *  - Löscht die Liste LoggerList
-	 *  - Schaltet den DebugMode aus.
-	 *  - Fügt Log2Console hinzu
-	 * 
-	 *  \todo TODO: Ausführliche Beschreibung
 	 * 
 	 *  \~english
 	 *  \brief \todo TODO: Brief Description.
@@ -141,15 +144,15 @@ public class Logger_Sngltn
 	 *  \todo TODO: Detailed Description
 	 * 
 	 *  \~
-	 *  \author Zoltán Hrabovszki
-	 *  \date 2015.05.01
+	 *  @author Zoltán Hrabovszki
+	 *  @date 2015.05.01
 	 */
-	public static void Init()
+	public void reset()
 	{
-		LoggerList.clear();
-		
-		LoggerList.add( new Log2Console() );
-		cvbDebugMode = false;
+		for (ILogger myLogger : LoggerList)
+		{
+			myLogger.reset();
+		}
 	}
 
 	/**
@@ -418,38 +421,6 @@ public class Logger_Sngltn
 		for (ILogger myLogger : LoggerList)
 		{
 			myLogger.LogPrintDebug(fpsMessage);
-		}
-	}
-
-
-	/**
-	 *  \~german
-	 *  \brief Logt Soll-Ist Vergeleich.
-	 * 
-	 *  \todo TODO: Ausführliche Beschreibung erstellen
-	 * 
-	 *  \param fpsActual Ist-Wert, welche geprüft werden soll.
-	 *  \param fpsExpected Erwarteter Soll-Wert, gegen den geprüft wird.
-	 *  \return
-	 * 
-	 *  \~english
-	 *  \brief \todo TODO: Brief Description.
-	 * 
-	 *  \todo TODO: Detailed Description
-	 * 
-	 *  \param fpbTrueOrFalse
-	 *  \return
-	 * 
-	 *  \~
-	 *  \author Zoltán Hrabovszki
-	 *  \date 2015.05.01
-	 */
-	@Deprecated
-	public void LogVerify( String fpsActual, String fpsExpected )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogVerify(fpsActual, fpsExpected);
 		}
 	}
 
