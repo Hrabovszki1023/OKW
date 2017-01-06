@@ -1,7 +1,7 @@
-env:
-  USER: "Zoltan"
 docker:
   image: "dockerfile/java:oracle-java8"
+env:
+  USER: "Zoltan"
 decrypt:
   settings.xml: "repo/settings.xml.asc"
   pubring.gpg: "repo/pubring.gpg.asc"
