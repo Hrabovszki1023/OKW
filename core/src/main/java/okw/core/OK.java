@@ -109,14 +109,16 @@ public class OK implements IOKW_State {
 		}
 	}
 
-  // \copydoc IOKW_State::BeginTest()
+  /**
+   *  \copydoc IOKW_State::BeginTest()
+   */
   public void BeginTest( String fpsTestname ) throws XPathExpressionException
   {
     
-    OKW_Memorize_Sngltn.getInstance().Set( "TCN", fpsTestname );
-
     Log.LogFunctionStartDebug( "BeginTest", "fpsTestname", fpsTestname );
-        
+    
+    OKW_Memorize_Sngltn.getInstance().Set( "TCN", fpsTestname );
+    
     Log.LogFunctionEndDebug();
   }
 

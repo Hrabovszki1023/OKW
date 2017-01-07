@@ -462,7 +462,9 @@ public class OKW_Memorize_Sngltn
 			else
 			{
 				Instance._Value.put(fpsKey, fpsValue);
-				Log.LogPrint("Wert: " + fpsValue + " wird gespeichert");
+
+				String Message = LM.GetMessage("Set", "SetKeyAndValue", fpsKey, fpsValue);
+				Log.LogPrint("Message");
 			}
 
 			// persistentes Speichern aller Daten...

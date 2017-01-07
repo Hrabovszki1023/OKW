@@ -22,6 +22,10 @@
 				<en>New Value '$P1$' will be overwrited.</en>
 				<de>Neuer Wert: '$P1$'</de>
 			</Text>
+			<Text key="SetKeyAndValue">
+				<en>Set Key '$P1$' = Value: '$P2$'.</en>
+				<de>Setzte Schlüssel: '$P1$' = Wert: '$P2$'.</de>
+			</Text>
 		</Method>
 	</Class>
 </LogMessages>
