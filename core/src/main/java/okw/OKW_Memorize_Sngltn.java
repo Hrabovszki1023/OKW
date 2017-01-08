@@ -447,9 +447,10 @@ public class OKW_Memorize_Sngltn
 
 		try
 		{
+			// Are we overwriting an existing MemKey?
 			if (_Value.containsKey(fpsKey))
 			{
-				String lvsOverwriteKey = LM.GetMessage("Set", "OverwriteKeyWarning", fpsKey);
+				String lvsOverwriteKey = LM.GetMessage("Set", "OverwriteKey", fpsKey);
 				String lvsOldValue = LM.GetMessage("Set", "OldValue", _Value.get(fpsKey));
 				String lvsNewValue = LM.GetMessage("Set", "NewValue", fpsValue);
 
