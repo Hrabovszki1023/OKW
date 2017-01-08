@@ -60,7 +60,7 @@ public class Log2HTMLTest {
 				
 		myLog.LogTestcaseStart( "TC_ResultListPrint_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
-				myLog.ResOpenList( "ResultOpenList" );
+				myLog.ResOpenList( "ResultOpenList..." );
 					myLog.LogPrint( "Print im Schlüsselwort");
 					myLog.LogPrint( "Das hier ist ein weiterern Print-Absatz im Schlüsselwort.");
 					myLog.ResCloseList();

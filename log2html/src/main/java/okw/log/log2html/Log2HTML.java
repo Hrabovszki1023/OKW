@@ -678,9 +678,11 @@ public class Log2HTML extends LogBase implements ILogger
     	// Timer starten
     	myLog.myDuration.StartTimer();
     	
+    	Pointer2LogBaseStack.peek().myLogs.add(myLog);    	
     	Pointer2LogBaseStack.push(myLog);
 	}
-
+	
+	
 	public void ResOpenListDebug( String fps_ListHeader )
 	{
 		/*
