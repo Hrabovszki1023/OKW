@@ -11,20 +11,24 @@
 		</Method>
 		<Method name="Set">
 			<Text key="OverwriteKeyWarning">
-				<en> Key '$P1$' will be overwrited.</en>
-				<de> Schlüssel '$P1$' wird überschrieben</de>
+				<en>The MemKey '$P1$' has been overwritten...</en>
+				<de>Der Schlüssel '$P1$' wurde überschrieben...</de>
 			</Text>
 			<Text key="OldValue">
 				<en>Old Value: '$P1$'</en>
 				<de>Alter Wert: '$P1$'</de>
 			</Text>
 			<Text key="NewValue">
-				<en>New Value '$P1$' will be overwrited.</en>
+				<en>New Value: '$P1$'</en>
 				<de>Neuer Wert: '$P1$'</de>
 			</Text>
+			<Text key="SetValue">
+				<en>Memorize Value...</en>
+				<de>Merke Wert...</de>
+			</Text>
 			<Text key="SetKeyAndValue">
-				<en>Set Key '$P1$' = Value: '$P2$'.</en>
-				<de>Setzte Schlüssel: '$P1$' = Wert: '$P2$'.</de>
+				<en>Value('$P1$') = '$P2$'</en>
+				<de>Wert('$P1$') = '$P2$'</de>
 			</Text>
 		</Method>
 	</Class>

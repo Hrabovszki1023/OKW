@@ -453,18 +453,20 @@ public class OKW_Memorize_Sngltn
 				String lvsOldValue = LM.GetMessage("Set", "OldValue", _Value.get(fpsKey));
 				String lvsNewValue = LM.GetMessage("Set", "NewValue", fpsValue);
 
-				Log.LogWarning(lvsOverwriteKey);
+				Log.ResOpenList(lvsOverwriteKey);
 				Log.LogPrint(lvsOldValue);
 				Log.LogPrint(lvsNewValue);
-				
+				Log.ResCloseList();
 				Instance._Value.put(fpsKey, fpsValue);
 			}
 			else
 			{
 				Instance._Value.put(fpsKey, fpsValue);
 
-				String Message = LM.GetMessage("Set", "SetKeyAndValue", fpsKey, fpsValue);
-				Log.LogPrint("Message");
+				Log.ResOpenList(LM.GetMessage("Set", "SetValue", fpsKey, fpsValue));
+				String lvsMessage = LM.GetMessage("Set", "SetKeyAndValue", fpsKey, fpsValue);
+				Log.LogPrint( lvsMessage);
+				Log.ResCloseList();
 			}
 
 			// persistentes Speichern aller Daten...

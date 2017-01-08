@@ -5,6 +5,7 @@ import okw.log.log2html.Log2HTML;
 
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
 
 public class SeRadioList_Chrome_Test extends SeRadioList_Test
@@ -22,7 +23,6 @@ public class SeRadioList_Chrome_Test extends SeRadioList_Test
 
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
-	
 	
     @After
     public void FirefoxAfter() throws Exception
