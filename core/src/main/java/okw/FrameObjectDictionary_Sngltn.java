@@ -404,31 +404,32 @@ public class FrameObjectDictionary_Sngltn
     }
   }
 
-  // / \~german
-  // / \brief
-  // / Methode erstellt eine Liste aller OKWGUI-Rahmenklassen (Frame class),
-  // / die in der aktuell ausgeführten Assambly
-  // / definiert sind.
-  // /
-  // / \note __WICHTIG:__ Es werden Klassen in die Liste aufgenommen, die
-  // / -# dem Namepsace OKW.Frames zugeordent sind
-  // / -# und mit dem Annotiation OKWGUIAttribute "geschmückt" ist.
-  // /
-  // / \return
-  // / Liefert die Liste der Klasse, die der Namespace OKW.Frames und mit dem
-  // / Attribute OKWGUI vershen sind.
-  // /
-  // / \~english
-  // / \brief
-  // / \note __IMPORTANT:__ the class is forced to be exactly, as specified.
-  // / Here is no 'frame prefix' added.
-  // / \return
-  // /
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2014.10.10
-  // /
-  public static ArrayList<Class<?>> GetListOfOKWGuiClasses() throws ClassNotFoundException
+  /** \~german
+   *  \brief
+   *  Methode erstellt eine Liste aller OKWGUI-Rahmenklassen (Frame class),
+   *  die in der aktuell ausgeführten Assambly
+   *  definiert sind.
+   * 
+   *  \note __WICHTIG:__ Es werden Klassen in die Liste aufgenommen, die
+   *  -# dem Namepsace OKW.Frames zugeordent sind
+   *  -# und mit dem Annotiation OKWGUIAttribute "geschmückt" ist.
+   * 
+   *  \return
+   *  Liefert die Liste der Klasse, die der Namespace OKW.Frames und mit dem
+   *  Attribute OKWGUI vershen sind.
+   * 
+   *  \~english
+   *  \brief
+   *  \note __IMPORTANT:__ the class is forced to be exactly, as specified.
+   *  Here is no 'frame prefix' added.
+   *  \return
+   * 
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2014.10.10
+ * @throws XPathExpressionException 
+   */
+  public static ArrayList<Class<?>> GetListOfOKWGuiClasses() throws ClassNotFoundException, IOException, XPathExpressionException
   {
     String lvsNamespace = "okw.gui.frames";
     ArrayList<Class<?>> lvALReturn = new ArrayList<Class<?>>();
@@ -473,11 +474,12 @@ public class FrameObjectDictionary_Sngltn
    * 
    *  \~
    *  @author Zoltan Hrabovszki
+ * @throws IOException 
    *  @date 2015.01.28
    *  \todo TODO: rename lvsFNParent to lvsFNWindow (Parent is not correct in all cases)
    */
   private static void FrameScan(  ) throws InstantiationException, XPathExpressionException,
-          IllegalArgumentException, IllegalAccessException, ClassNotFoundException
+          IllegalArgumentException, IllegalAccessException, ClassNotFoundException, IOException
   {
     Object lvTypeInstanceAsObject = null;
 
