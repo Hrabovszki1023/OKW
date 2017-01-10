@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.openkeyword</groupId>
 	<artifactId>okw</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.25</version>
 	<url>www.openkeyword.de</url>
 	<description>OKW - OpenKeyWord is a framework for keyword-driven testing. OKW is like a glue: it is the link between the test case description and the user activity on GUI. OKW dramatically reduces the cost of creating and maintaining test cases.</description>
 	<build>
