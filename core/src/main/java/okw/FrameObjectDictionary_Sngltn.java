@@ -483,7 +483,7 @@ public class FrameObjectDictionary_Sngltn
   {
     Object lvTypeInstanceAsObject = null;
 
-    Log.ResOpenList( "List of Frames...'" );
+    Log.ResOpenList( "List of Frames..." );
     
     try
     {
@@ -523,7 +523,7 @@ public class FrameObjectDictionary_Sngltn
             Object lvFieldInstance = lvField.get( lvTypeInstanceAsObject );
               
             if ( lvField.isAnnotationPresent( OKW.class ) )
-              {
+            {
                 OKW myFN = lvField.getAnnotation( OKW.class );
                 // Get the value from property.
 
@@ -543,20 +543,23 @@ public class FrameObjectDictionary_Sngltn
                    (( IOKW_FN ) lvFieldInstance).SetFN( lvsFNChild );
                    (( IOKW_FN ) lvFieldInstance).SetParentFN( lvsFNParent );
                    myFrameObjectDictionary.put( lvsChildKey, lvFieldInstance );
+                   
+                   FrameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNParent );
                 }
                 catch (java.lang.ClassCastException e)
                 {
                    System.out.print("Uuupps! There is a ClassCastException... ");
                 }
+                finally
+                {
+                    Log.ResCloseList(); // Close Child	
+				}
               }
-            else
-            {
-              Log.LogPrint( "-GUI-Container-" );              
-            }
-
-            FrameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNParent );
-            
-            Log.ResCloseList();
+              else
+              {
+                Log.LogPrint( "-GUI-Container-" );              
+                FrameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNParent );
+              }
           }
         }
         Log.ResCloseList();
@@ -577,7 +580,6 @@ public class FrameObjectDictionary_Sngltn
     
     try
     {
-
       // Get all Fields within fpFieldToScan
       Field[] lvFields = fpParentField.getType().getFields();
 
@@ -588,8 +590,7 @@ public class FrameObjectDictionary_Sngltn
         
         // Die Instance des Feldes holen...
         Object lvFieldInstance = lvField.get( fpParentFieldInstance );
-        
-        
+                
         if ( FieldType.startsWith( "okw.gui." ) )
         {
           if ( lvField.isAnnotationPresent( OKW.class ) )
@@ -597,7 +598,8 @@ public class FrameObjectDictionary_Sngltn
             OKW myFN = lvField.getAnnotation( OKW.class );
             // Get the value from property.
 
-            String lvsKey = fpsWindowName + "." + myFN.FN();
+            String lvsFNChild =  myFN.FN();
+            String lvsKey = fpsWindowName + "." + lvsFNChild;
             
             if ( myFrameObjectDictionary.containsKey( lvsKey ) )
             {
@@ -605,9 +607,11 @@ public class FrameObjectDictionary_Sngltn
               throw new OKWFrameObjectDictionaryDuplicateFNException( "There is another Object with the same FN!" + lvsKey );
             }
             else
-            {
-              Log.LogPrint( myintend + "Child: '" + lvsKey + "'" );
-              Log.LogPrint( myintend + " Type: '" + FieldType + "'" );
+            { 
+
+              Log.ResOpenList( "Child: '" + lvsFNChild + "'" );
+              Log.LogPrint( "  Key: '" + lvsKey + "'" );
+              Log.LogPrint( " Type: '" + FieldType + "'" );
 
               myAnnotationDictionary.put( lvsKey, lvField );
               
@@ -615,10 +619,15 @@ public class FrameObjectDictionary_Sngltn
               (( IOKW_FN ) lvFieldInstance).SetParentFN( fpsWindowName );
               
               myFrameObjectDictionary.put( lvsKey, lvFieldInstance );
-              
+        	  
+              FrameScanFieldsRecursively( lvField, lvFieldInstance, fpsWindowName );
+        	  Log.ResCloseList();
             }
           }
-          FrameScanFieldsRecursively( lvField, lvFieldInstance, fpsWindowName );
+          else
+          {
+        	  FrameScanFieldsRecursively( lvField, lvFieldInstance, fpsWindowName );
+          }
         }
       }
     }
