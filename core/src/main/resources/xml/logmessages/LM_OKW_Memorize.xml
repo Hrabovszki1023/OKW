@@ -5,13 +5,13 @@
 	<Class name="OKW_Memorize">
 		<Method name="Get">
 			<Text key="OKWMemorizeKeyNotExistsException">
-				<en>Key '$P1$' does not exists!</en>
+				<en>MemKey '$P1$' does not exists!</en>
 				<de>Schlüssel '$P1$' existiert nicht!</de>
 			</Text>
 		</Method>
 		<Method name="Set">
 			<Text key="OverwriteKey">
-				<en>The Value of MemKey '$P1$' will be overwritten...</en>
+				<en>Overwriting value of MemKey '$P1$'...</en>
 				<de>Der Wert des Schlüssels '$P1$' wird überschrieben...</de>
 			</Text>
 			<Text key="OldValue">
@@ -23,7 +23,7 @@
 				<de>Neuer Wert: '$P1$'</de>
 			</Text>
 			<Text key="SetValue">
-				<en>Memorize the Value of the MemKey '$P1$'...</en>
+				<en>Memorize value of MemKey '$P1$'...</en>
 				<de>Merke den Wert für den Schlüssel '$P1$'...</de>
 			</Text>
 			<Text key="SetKeyAndValue">

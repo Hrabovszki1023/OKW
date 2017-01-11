@@ -483,8 +483,8 @@ public class FrameObjectDictionary_Sngltn
   {
     Object lvTypeInstanceAsObject = null;
 
-    Log.LogFunctionStartDebug( "FrameObjectDictionary.FrameScan" );
-
+    Log.ResOpenList( "List of Frames...'" );
+    
     try
     {
       // Alle Fenster Klassen, die eine Annotation ermitteln...
@@ -503,8 +503,8 @@ public class FrameObjectDictionary_Sngltn
         // Wenn Attribute vorhanden (!=null) und nicht Leer dann ins Dictionary einfügen.
         if ( lvsFNParent != null && !lvsFNParent.isEmpty() )
         {
-          Log.ResOpenList( "Window: '" + lvsFNParent + "'" );
-          Log.LogPrint( "Class: >>" + lvTypeInstanceAsObject.getClass().getName() + "<<" );
+          Log.ResOpenList( "Parent: '" + lvsFNParent + "'" );
+          Log.LogPrint( "Type: '" + lvTypeInstanceAsObject.getClass().getName() + "'" );
 
           myFrameObjectDictionary.put( lvsFNParent, lvTypeInstanceAsObject );
 
@@ -521,9 +521,6 @@ public class FrameObjectDictionary_Sngltn
             
             // Die Instance des Feldes holen...
             Object lvFieldInstance = lvField.get( lvTypeInstanceAsObject );
-                   
-                    
-            Log.ResOpenList( "Child: '" + myFieldType + "'" );
               
             if ( lvField.isAnnotationPresent( OKW.class ) )
               {
@@ -533,20 +530,23 @@ public class FrameObjectDictionary_Sngltn
                 String lvsFNChild  = myFN.FN();
                 String lvsChildKey = lvsFNParent + "." + lvsFNChild;
 
-                Log.LogPrint( "  FN: '" + lvsChildKey + "'" );
+                Log.ResOpenList( "Child: '" + lvsFNChild + "'" );
+                Log.LogPrint( "  Key: '" + lvsChildKey + "'" );
+                Log.LogPrint( " Type: '" + myFieldType + "'" );
 
                 // Add child-object to the dictionary
                 myAnnotationDictionary.put( lvsChildKey, lvField );
                 
                 try
                 {
+                	// Now here we tell the GUI-Adapter his FN and his Parent-FN...
                    (( IOKW_FN ) lvFieldInstance).SetFN( lvsFNChild );
                    (( IOKW_FN ) lvFieldInstance).SetParentFN( lvsFNParent );
                    myFrameObjectDictionary.put( lvsChildKey, lvFieldInstance );
                 }
                 catch (java.lang.ClassCastException e)
                 {
-                   System.out.print("Hopla");
+                   System.out.print("Uuupps! There is a ClassCastException... ");
                 }
               }
             else
@@ -564,7 +564,7 @@ public class FrameObjectDictionary_Sngltn
     }
     finally
     {
-      Log.LogFunctionEndDebug();
+      Log.ResCloseList();
     }
     return;
   }
