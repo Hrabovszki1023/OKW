@@ -20,15 +20,15 @@ public class SeInputRadio_EN_Firefox_Test extends SeInputRadio_EN_Test
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.Init();
 
-        //myLog2HTML = new Log2HTML("SePushButton_EN_Firefox_Test.html");
-        //Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
-        //Logger_Sngltn.getInstance().setDebugMode(true);
+        myLog2HTML = new Log2HTML("target/SeInputRadio_EN_Firefox_Test.html");
+        Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
+        Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception
 	{
-		//myLog2HTML.Result2HTML();
+		myLog2HTML.Result2HTML();
 	}
 	
 	
