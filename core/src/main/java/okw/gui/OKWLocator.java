@@ -50,23 +50,40 @@ import okw.log.*;
 	public class OKWLocator //: IOKWLocator
 	{
 		String _locator = "";
+		
 		OKWLocator[] _Locatoren;
         
 		Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
         
 		
-		public OKWLocator(String fpsLocatorRAW, OKWLocator... fpLocators)
+		public OKWLocator(String fpsLocator, OKWLocator... fpLocators)
 		{
-			if (fpLocators != null) {
-				_locator = fpsLocatorRAW;
+      _locator = fpsLocator;
+
+		  if (fpLocators != null)
+			{
 				_Locatoren = fpLocators;
 			}
-			else
-			{
-				_locator = fpsLocatorRAW;
-			}
 		}
-        
+    
+		
+	  /** \~german
+	   *  Holt den vollständig (rekursiv) aufgelösten  (z.B. XPath-Wert) des Locators.
+	   *  
+	   *  Beim Aufruf dieser Methode wird der Locator jeweils vollständig neu berechnet 
+	   *  und der aktuelle Wert zurückgeliefert.
+	   *  (Dynamischer Locator)
+	   *  
+	   *  @return Aktueller Wert des Locators
+	   *  
+	   *  \~english
+	   *  \brief
+	   *  @todo TODO:  Übersetzung ins Englische fehlt...
+	   *  
+	   *  \~
+	   *  @author Zoltán Hrabovszki
+	   *  @date 2014.04.27
+	   */		
 		public String getLocator()
 		{
 			myLogger.LogFunctionStartDebug("getLocator()");
@@ -92,6 +109,19 @@ import okw.log.*;
 				return lvsReturn;
 		}
 		
+		
+	  /** \~german
+	   *  Setzt den Wert (z.B. XPath-Wert) des Locators.
+	   *  
+	   *  
+	   *  \~english
+	   *  \brief
+	   *  @todo TODO:  Übersetzung ins Englische fehlt...
+	   *  
+	   *  \~
+	   *  @author Zoltán Hrabovszki
+	   *  @date 2014.04.27
+	   */
 		public void setLocator(String value)
 		{
 				myLogger.LogFunctionStartDebug("Get locator");

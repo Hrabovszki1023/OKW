@@ -95,11 +95,11 @@ public class OKWLocatorTest
 	@Test
     public void TC_Kombiniert_2in1_Multiple()
     {
-		OKWLocator Locator_1 = new OKWLocator(">Locator1<");
-		OKWLocator Locator_2 = new OKWLocator(">Locator2<");
-		OKWLocator Locator_Summe = new OKWLocator("Locator2=%2$s//Locator1=%1$s//Locator2=%2$s//Locator1=%1$s", Locator_1, Locator_2);
+		  OKWLocator Locator_1 = new OKWLocator("L1");
+		  OKWLocator Locator_2 = new OKWLocator("L2");
+		  OKWLocator Locator = new OKWLocator("L2=%2$s, L1=%1$s, L2=%2$s, L1=%1$s", Locator_1, Locator_2);
         
-		assertEquals("Locator2=>Locator2<//Locator1=>Locator1<//Locator2=>Locator2<//Locator1=>Locator1<", Locator_Summe.getLocator());
+		  assertEquals("L2=L2, L1=L1, L2=L2, L1=L1", Locator.getLocator());
     }
     
 	@Test

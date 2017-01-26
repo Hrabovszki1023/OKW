@@ -29,7 +29,7 @@ import okw.gui.adapter.selenium.SeRadioList;
               VerifyIsActive_PT=500, VerifyIsActive_TO=1,
               VerifyExists_PT=500, VerifyExists_TO=1,
               VerifyHasFocus_PT=500, VerifyHasFocus_TO=1)
-      public PayMethod mySeRadioList = this.new PayMethod( "//fieldset[@title='fieldset-title']" );
+      public PayMethod mySeRadioList = new PayMethod( "//fieldset[@title='fieldset-title']", this.getLOCATOR() );
       
       
   public class PayMethod extends SeRadioList
@@ -38,7 +38,6 @@ import okw.gui.adapter.selenium.SeRadioList;
     public PayMethod( String Locator, OKWLocator... fpLocators ) throws Exception
     {
       super( Locator, fpLocators );
-      // TODO Auto-generated constructor stub
     }
 
     @OKW( FN = "Pay Method.Visa" )

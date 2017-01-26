@@ -59,10 +59,10 @@ import okw.gui.OKWLocator;
     {
       
       // Instance of OKW_CurrentObject
-        OKW_CurrentObject_Sngltn CO = OKW_CurrentObject_Sngltn.getInstance();
+        OKW_CurrentObject_Sngltn CO = null;
 
         // Instance of OKW_CurrentObject
-        FrameObjectDictionary_Sngltn FOD = FrameObjectDictionary_Sngltn.getInstance();
+        FrameObjectDictionary_Sngltn FOD = null;
         
         /**
          *  Holds the FNs of all RadionButton ChildObjects of this RadioList.<br/>
@@ -70,16 +70,25 @@ import okw.gui.OKWLocator;
          */
         ArrayList<String> myRadioButtonFNs = null;
         
-        /// TODO: Konstuktor Beschreiben
-        /// \brief
-        /// 
-        /// 
-        /// @param Locator definiert die Objekterkennungseigenschaft des Objektes und wird als XPATH angegeben.
-        public SeRadioList(String Locator, OKWLocator... fpLocators) throws Exception
+        /**
+         *  \brief
+         * 
+         * @param Locator Definiert die Objekterkennungseigenschaft des Objektes und muss als XPATH angegeben.
+         * @param fpLocators Refernz auf ein bis N 
+         */
+        public SeRadioList(String Locator, OKWLocator... fpLocators)
         {
         	super(Locator, fpLocators);
-     
-        	
+          
+        	try
+        	{
+        	   CO  = OKW_CurrentObject_Sngltn.getInstance();
+             FOD = FrameObjectDictionary_Sngltn.getInstance();
+        	}
+        	catch (Exception e)
+        	{
+        	  System.exit(0);
+        	}
         }
         
   @Override
