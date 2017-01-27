@@ -553,7 +553,7 @@ public class FrameObjectDictionary_Sngltn
                 finally
                 {
                     Log.ResCloseList(); // Close Child	
-				}
+                }
               }
               else
               {
