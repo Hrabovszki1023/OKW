@@ -104,12 +104,29 @@ public abstract class AnyWinBase implements IOKW_FN
    */    
   private String myFN = "";
 	
-  public void SetFN(String fpsFN)
+  public void setFN(String fpsFN)
   {
     this.myFN =  fpsFN;
   }
 
-  public String GetFN( )
+  
+  /** \~german
+   *  Holt den funktionalen Name dws GUI-Objektes.
+   * 
+   *  Hinweis: Jeder GUI-Adapter kennt seinen eigenen funktionalen Namen.
+   *  Dieser wird beim instanzieren der Frame-Objecte währen des Frame-Classen-Scans in der Methode FrameObjectDictionary_Sngltn.FrameScan()
+   *  mitgeteilt.
+   *  Wert wird 
+   *  
+   *  \~english
+   *  \brief
+   *  @todo TODO:  Übersetzung ins Englische fehlt...
+   *  
+   *  \~
+   *  @author Zoltán Hrabovszki
+   *  @date 2014.04.27
+   */  
+  public String getFN( )
   {
     return this.myFN;
   }
@@ -142,7 +159,7 @@ public abstract class AnyWinBase implements IOKW_FN
    *  @author Zoltán Hrabovszki
    *  @date 2016.11.20
    */    
-  public void SetParentFN(String fpsParentFN)
+  public void setParentFN(String fpsParentFN)
   {
     this.myParentFN =  fpsParentFN;
   }
@@ -160,7 +177,7 @@ public abstract class AnyWinBase implements IOKW_FN
    *  @author Zoltán Hrabovszki
    *  @date 2016.11.20
    */ 
-  public String GetParentFN( )
+  public String getParentFN( )
   {
     return this.myParentFN;
   }

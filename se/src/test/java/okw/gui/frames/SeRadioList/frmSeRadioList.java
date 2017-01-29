@@ -35,7 +35,7 @@ import okw.gui.adapter.selenium.SeRadioList;
   public class PayMethod extends SeRadioList
   {
 
-    public PayMethod( String Locator, OKWLocator... fpLocators ) throws Exception
+    public PayMethod( String Locator, OKWLocator... fpLocators )
     {
       super( Locator, fpLocators );
     }

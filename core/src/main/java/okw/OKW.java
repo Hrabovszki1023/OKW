@@ -31,15 +31,15 @@ import java.lang.annotation.Target;
 public @interface OKW
 {
 
-  // / \~german
-  // / \brief _F_untionaler _N_ame des GUI-Objektes
-  // /
-  // / \~english
-  // / \brief Holds the Functional Name of the GUI-Object.
-  // /
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2015-11-28
+  /** \~german
+   *  _F_untionaler _N_ame des GUI-Objektes.
+   * 
+   *  \~english
+   *  Functional Name of the GUI-Object.
+   * 
+   *  \~
+   *  @author Zoltan Hrabovszki
+   *  @date 2015-11-28
   public String FN() default "";
 
   /**

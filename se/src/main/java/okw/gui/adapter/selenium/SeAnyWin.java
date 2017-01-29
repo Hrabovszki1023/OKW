@@ -60,7 +60,52 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         return;
     }
 
-    /// \~german
+    /** \~german
+	 *  \brief
+	 *  Ermittelt den textuellen Inhalt der Überschrift eines HTML-Tags anhand des Attributee "textContent".
+	 *   
+	 *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+	 *  \~english
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  @date 2013.12.07
+	 */
+	public ArrayList<String> getCaption()
+	{
+	    ArrayList<String> lvLsReturn = new ArrayList<String>();
+	    Boolean bOK = false;
+	    try
+	    {
+	        MyLogger.LogFunctionStartDebug("GetCaption");
+	
+	        // Wenn das Objekt nicht existiert mit Exception beenden...
+	        if (!this.getExists())
+	        {
+	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
+	            throw new OKWGUIObjectNotFoundException(lvsLM);
+	        }
+	        
+	        // The Attribute "value" wird als Beschriftung angezeigt...
+	        lvLsReturn.add(this.Me().getAttribute("textContent"));
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            MyLogger.LogFunctionEndDebug(lvLsReturn);
+	        }
+	        else
+	        {
+	            MyLogger.LogFunctionEndDebug();
+	        }
+	    }
+	    
+	    return lvLsReturn;
+	}
+
+
+	/// \~german
     /// \brief
     /// Prüft die Existenz des Aktuellen Objektes.
     /// 
@@ -102,6 +147,52 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     }
 
     /// \~german
+	/// \brief
+	/// Methode liefert den aktuellen Zustand Wert des Focus.
+	/// Quelle: http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
+	/// 
+	/// \return\return
+	/// \~
+	/// \author Zoltán Hrabovszki
+	/// \date 2013.11.11
+	public Boolean getHasFocus()
+	{
+	    Boolean lvbReturn = false;
+	    Boolean bOK = false;
+	
+	    try
+	    {
+	        this.LogFunctionStartDebug("getHasFocus");
+	
+	        // Wenn das Objekt nicht existiert mit Exception beenden...
+	        if (!this.getExists())
+	        {
+	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getHasFocus()");
+	            throw new OKWGUIObjectNotFoundException(lvsLM);
+	        }
+	
+	        WebElement currentElement = SeDriver.getInstance().driver.switchTo().activeElement();
+	
+	        lvbReturn = currentElement.equals(this.Me());
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            MyLogger.LogFunctionEndDebug(lvbReturn);
+	        }
+	        else
+	        {
+	            MyLogger.LogFunctionEndDebug();
+	        }
+	    }
+	
+	    return lvbReturn;
+	}
+
+
+	/// \~german
     /// \brief
     /// Ermittelt, ob das aktuellen Objekt aktiv ist.
     /// 
@@ -155,6 +246,140 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     }
 
     /// \~german
+	/// \brief
+	/// Ermittelt den textuellen Inhalt des Labels.
+	/// 
+	/// \return
+	/// Rückgabe des Textuellen Inhaltes der Labels.
+	/// \return
+	/// \~english
+	/// \~
+	/// \author Zoltán Hrabovszki
+	/// \date 2014.06.17
+	public ArrayList<String> getLabel()
+	{
+	    ArrayList<String> lvLsReturn = new ArrayList<String>();
+	    Boolean bOK = false;
+	    try
+	    {
+	        MyLogger.LogFunctionStartDebug("GetLabel");
+	
+	        // Wenn das Objekt nicht existiert mit Exception beenden...
+	        if (!this.getExists())
+	        {
+	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetLabel()");
+	            throw new OKWGUIObjectNotFoundException(lvsLM);
+	        }
+	        
+	        // 1. Schritt: Attribute "id" is shown as Tooltip...
+	        String lvsID = this.Me().getAttribute("id");
+	        
+	        // 2.schritt nun Tag Label mit for= "${lvsID}" finden.
+	        WebElement label = SeDriver.getInstance().driver.findElement(By.xpath( "//label[@for='" + lvsID + "']" ));
+	        lvLsReturn.add(label.getAttribute("textContent"));
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            MyLogger.LogFunctionEndDebug(lvLsReturn);
+	        }
+	        else
+	        {
+	            MyLogger.LogFunctionEndDebug();
+	        }
+	    }
+	    
+	    return lvLsReturn;
+	}
+
+
+	/// \~german
+	/// \brief
+	/// Ermittelt den textuellen Inhalt des ToolTips.
+	/// 
+	/// \return
+	/// Rückgabe des Textuellen Inhaltes der Tooltips.
+	/// \return
+	/// \~english
+	/// \~
+	/// \author Zoltán Hrabovszki
+	/// \date 2013.12.07
+	public ArrayList<String> getTooltip()
+	{
+	    ArrayList<String> lvLsReturn = new ArrayList<String>();
+	    Boolean bOK = false;
+	    try
+	    {
+	        MyLogger.LogFunctionStartDebug("GetTooltip");
+	
+	        // Wenn das Objekt nicht existiert mit Exception beenden...
+	        if (!this.getExists())
+	        {
+	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetTooltip()");
+	            throw new OKWGUIObjectNotFoundException(lvsLM);
+	        }
+	        
+	        // The Attribute "Title" is shown as Tooltip...
+	        lvLsReturn.add(this.Me().getAttribute("title"));
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            MyLogger.LogFunctionEndDebug(lvLsReturn);
+	        }
+	        else
+	        {
+	            MyLogger.LogFunctionEndDebug();
+	        }
+	    }
+	    
+	    return lvLsReturn;
+	}
+
+
+	/**
+	 *  Liest den aktuellen Wert/Text aus dem HTML-Tag.
+	 * 
+	 *  Standardmäßig wird "textContent" ausgelesen.
+	 *
+	 *  @return
+	 *  @author Zoltán Hrabovszki
+	 *  @date 2013.12.14
+	 */
+	public ArrayList<String> getValue() throws Exception
+	{
+	    ArrayList<String> lvLsReturn = new ArrayList<String>();
+	    Boolean bOK = false;
+	
+	    try
+	    {
+	        this.LogFunctionStartDebug("getValue");
+	
+	        // Get Value from TextField and put this into the return ArrayList<String>
+	        lvLsReturn.add(this.Me().getAttribute("textContent"));
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            this.LogFunctionEndDebug(lvLsReturn.toString());
+	        }
+	        else
+	        {
+	            this.LogFunctionEndDebug();
+	        }
+	    }
+	
+	    return lvLsReturn;
+	}
+
+
+	/// \~german
     /// \brief
     /// Ermittelt den textuellen Inhalt des ToolTips.
     /// 
@@ -399,7 +624,7 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     /// \date 2013.11.11
     public Boolean NotExists()
     {
-        this.MyLogger.LogFunctionStartDebug("Exists");
+        this.MyLogger.LogFunctionStartDebug("NotExists");
         Boolean lvb_Return = false;
         Boolean bOK = false;
 
@@ -571,331 +796,88 @@ public class SeAnyWin extends AnyWinBase implements IGUI
     }
     
     
-    /// \~german
     /// \brief
-    /// Tastatur Eingabe an das Objekt
-    /// 
-    /// \param fps_Values'>
-    /// Werte, die via Tastatur eingegeben werden sollen.
-    /// 
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.04.11
-    public void TypeKey(ArrayList<String> fps_Values)
-    {
-        try
-        {
-            this.LogFunctionStartDebug("TypeKey", "fps_Values", fps_Values.toString());
+	/// Ermittelt für LoggeWert, ob das aktuelle Objekt den Fokus hat.
+	/// 
+	/// Diese Methode ist der Einstiegspunkt für Loggewert-Anpassungen durch Methodenüberschreibung.
+	/// 
+	/// \return
+	/// true falls Objekt den Fokus hat, sonst false
+	/// \return
+	/// \author Zoltan Hrabovszki
+	/// \date 2013.04.11
+	public Boolean LogHasFocus()
+	{
+	    Boolean lvbReturn = false;
+	    Boolean bOK = false;
+	
+	    try
+	    {
+	        this.LogFunctionStartDebug("LogHasFocus");
+	
+	        lvbReturn = this.getHasFocus();
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            MyLogger.LogFunctionEndDebug(lvbReturn);
+	        }
+	        else
+	        {
+	            MyLogger.LogFunctionEndDebug();
+	        }
+	    }
+	
+	    return lvbReturn;
+	}
 
-            // Wenn das Objekt nicht existiert mit Exception beenden...
-            if (!this.getExists())
-            {
-                String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "SeAnyWin.TypeKey()");
-                throw new OKWGUIObjectNotFoundException(lvsLM);
-            }
 
-            // We are using a local-Variable to prevent multiple call of Me() in foreach-loop
-            WebElement lv_WebElement = this.Me();
+	/// \~german
+	/// \brief
+	/// Logt den textuellen Inhalt des Labels eines Objektes.
+	/// 
+	/// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
+	/// 
+	/// \return
+	/// Rückgabe des Textuellen Inhaltes der Tooltips.
+	/// Interface schreibt ein Listen-Element als Rückgabewert vor.
+	/// \return
+	/// \~english
+	/// \~
+	/// \author Zoltán Hrabovszki
+	/// \date 2013.12.07
+	public ArrayList<String> LogLabel()
+	{
+	    ArrayList<String> lvLsReturn = new ArrayList<String>();
+	    Boolean bOK = false;
+	
+	    try
+	    {
+	        MyLogger.LogFunctionStartDebug("LogLabel");
+	
+	        lvLsReturn = this.getLabel();
+	
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            MyLogger.LogFunctionEndDebug(lvLsReturn);
+	        }
+	        else
+	        {
+	            MyLogger.LogFunctionEndDebug();
+	        }
+	    }
+	
+	    return lvLsReturn;
+	}
 
-            // Loop through all List-Values with foreach...
-            for (String Value : fps_Values)
-            {
-              Logger_Sngltn.getInstance().LogPrintDebug(">>" + Value + "<<");
-              
-              if (Value.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
-              {
-                lv_WebElement.clear();
-              }
-              else
-              {
-                lv_WebElement.sendKeys( Value );
-              }
-            }
-        }
-        finally
-        {
-            this.LogFunctionEndDebug();
-        }
-        
-        return;
-    }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt/Prüft, ob das aktuelle Objekt existiert.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \param fpbExpectedValue Erwarteter Wert.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// 
-    /// \param fpbExpectedValue Erwarteter Wert.
-    /// 
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
-    public Boolean VerifyExists() throws InterruptedException
-    {
-        this.MyLogger.LogFunctionStartDebug("VerifyExists");
-
-        Boolean lvbReturn = true;
-        Boolean bOK = false;
-
-        try
-        {
-            // Nun mit dem erwarteten Sollwert und GetExists ggf. auf den erwartetetn Wert warten.
-            lvbReturn = this.getExists( );
-            
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                this.MyLogger.LogFunctionEndDebug(lvbReturn);
-            }
-            else
-            {
-                this.MyLogger.LogFunctionEndDebug();
-            }
-        }
-
-        return lvbReturn;
-    }
-
-    /// \~german
-    /// \brief
-    /// Ermittelt/Prüft, ob das aktuelle Objekt aktiv ist.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für PrüfeIstAktive-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \returntrue, falls das Objekt aktiv ist sonst false\return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
-    public Boolean VerifyIsActive( ) throws InterruptedException
-    {
-        this.MyLogger.LogFunctionStartDebug("VerifyIsActive");
-
-        Boolean lvbReturn = true;
-        Boolean bOK = false;
-
-        try
-        {
-
-            // Nun mit dem erwarteten Sollwert und GetIsActive ggf. auf den erwarteten Wert warten.
-            lvbReturn = this.getIsActive( );
-
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                this.MyLogger.LogFunctionEndDebug(lvbReturn);
-            }
-            else
-            {
-                this.MyLogger.LogFunctionEndDebug();
-            }
-        }
-
-        return lvbReturn;
-    }
-
-    /// \~german
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des ToolTips für Prüfewert.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
-    public ArrayList<String> VerifyTooltip() throws InterruptedException
-    {
-        MyLogger.LogFunctionStartDebug("VerifyTooltip");
-
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-        Boolean bOK = false;
-
-        try
-        {
-            // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
-            lvLsReturn = this.getTooltip( );
-
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                MyLogger.LogFunctionEndDebug(lvLsReturn);
-            }
-            else
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
-        }
-
-        return lvLsReturn;
-    }
-
-    /// \~german
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des Labels für Prüfewert.
-    /// 
-    /// \remark Sollte der Erwartetet Wert zunächt nicht mit dem aktuellen Wert nicht übereinstimmen,
-    /// dann wird gewartet bis entweder der erwartete Wert sich im GUI objekt einstellt
-    /// oder der TimeOut erreicht wird.<br/>
-    /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \param fplsExpectedValue'>Erwarteter Wert, auf den ggf. bis zum TimeOut gewartet wird.
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes des Labels.
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
-    public ArrayList<String> VerifyLabel() throws InterruptedException
-    {
-        MyLogger.LogFunctionStartDebug("VerifyLabel");
-
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-        Boolean bOK = false;
-
-        try
-        {
-            // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
-            lvLsReturn = this.getLabel( );
-
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                MyLogger.LogFunctionEndDebug(lvLsReturn);
-            }
-            else
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
-        }
-
-        return lvLsReturn;
-    }
-
-    
-    /// \~german
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des ToolTips.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
-    public ArrayList<String> getTooltip()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-        Boolean bOK = false;
-        try
-        {
-            MyLogger.LogFunctionStartDebug("GetTooltip");
-
-            // Wenn das Objekt nicht existiert mit Exception beenden...
-            if (!this.getExists())
-            {
-                String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetTooltip()");
-                throw new OKWGUIObjectNotFoundException(lvsLM);
-            }
-            
-            // The Attribute "Title" is shown as Tooltip...
-            lvLsReturn.add(this.Me().getAttribute("title"));
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                MyLogger.LogFunctionEndDebug(lvLsReturn);
-            }
-            else
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
-        }
-        
-        return lvLsReturn;
-    }
-
-    
-    /// \~german
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des Labels.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Labels.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2014.06.17
-    public ArrayList<String> getLabel()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-        Boolean bOK = false;
-        try
-        {
-            MyLogger.LogFunctionStartDebug("GetLabel");
-
-            // Wenn das Objekt nicht existiert mit Exception beenden...
-            if (!this.getExists())
-            {
-                String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetLabel()");
-                throw new OKWGUIObjectNotFoundException(lvsLM);
-            }
-            
-            // 1. Schritt: Attribute "id" is shown as Tooltip...
-            String lvsID = this.Me().getAttribute("id");
-            
-            // 2.schritt nun Tag Label mit for= "${lvsID}" finden.
-            WebElement label = SeDriver.getInstance().driver.findElement(By.xpath( "//label[@for='" + lvsID + "']" ));
-            lvLsReturn.add(label.getAttribute("textContent"));
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                MyLogger.LogFunctionEndDebug(lvLsReturn);
-            }
-            else
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
-        }
-        
-        return lvLsReturn;
-    }
-
-    /// \~german
+	/// \~german
     /// \brief
     /// Logt den textuellen Inhalt des ToolTips.
     /// 
@@ -919,48 +901,6 @@ public class SeAnyWin extends AnyWinBase implements IGUI
             MyLogger.LogFunctionStartDebug("LogTooltip");
 
             lvLsReturn = this.getTooltip();
-
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                MyLogger.LogFunctionEndDebug(lvLsReturn);
-            }
-            else
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
-        }
-
-        return lvLsReturn;
-    }
-
-    /// \~german
-    /// \brief
-    /// Logt den textuellen Inhalt des Labels eines Objektes.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips.
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
-    public ArrayList<String> LogLabel()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-        Boolean bOK = false;
-
-        try
-        {
-            MyLogger.LogFunctionStartDebug("LogLabel");
-
-            lvLsReturn = this.getLabel();
 
             bOK = true;
         }
@@ -1063,88 +1003,6 @@ public class SeAnyWin extends AnyWinBase implements IGUI
 
     /// \~german
     /// \brief
-    /// Methode liefert den aktuellen Zustand Wert des Focus.
-    /// Quelle: http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
-    /// 
-    /// \return\return
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.11.11
-    public Boolean getHasFocus()
-    {
-        Boolean lvbReturn = false;
-        Boolean bOK = false;
-
-        try
-        {
-            this.LogFunctionStartDebug("getHasFocus");
-
-            // Wenn das Objekt nicht existiert mit Exception beenden...
-            if (!this.getExists())
-            {
-                String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getHasFocus()");
-                throw new OKWGUIObjectNotFoundException(lvsLM);
-            }
-
-            WebElement currentElement = SeDriver.getInstance().driver.switchTo().activeElement();
-
-            lvbReturn = currentElement.equals(this.Me());
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                MyLogger.LogFunctionEndDebug(lvbReturn);
-            }
-            else
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
-        }
-
-        return lvbReturn;
-    }
-
-    /// \brief
-    /// Ermittelt für LoggeWert, ob das aktuelle Objekt den Fokus hat.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für Loggewert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \return
-    /// true falls Objekt den Fokus hat, sonst false
-    /// \return
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.04.11
-    public Boolean LogHasFocus()
-    {
-        Boolean lvbReturn = false;
-        Boolean bOK = false;
-
-        try
-        {
-            this.LogFunctionStartDebug("LogHasFocus");
-
-            lvbReturn = this.getHasFocus();
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                MyLogger.LogFunctionEndDebug(lvbReturn);
-            }
-            else
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
-        }
-
-        return lvbReturn;
-    }
-
-    /// \~german
-    /// \brief
     /// Ermittelt ob das Objekt den Fokus besitz und liefert diesen für das Schlüsselwort MerkeWert.
     /// 
     /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
@@ -1181,93 +1039,6 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         }
 
         return lvbReturn;
-    }
-
-    // \~german
-    // \brief
-    // Ermittelt ob das GUI-Objekt den Fokus hat.
-    // 
-    // Dies ist der Einstiegspunkt für die Anpassung der Methote VerifyHasFocus (Methodenüberschreibung).
-    // 
-    // \return
-    //  true falls Objekt den Fokus hat, sonst false.
-    // \~english
-    // \brief Determines whether the GUI object has the focus.
-    //
-    // This is the entry point for the adaptation of the method Verify Has Focus (method override).
-    // \~
-    // \author Zoltán Hrabovszki
-    // \date 2013.12.07
-    public Boolean VerifyHasFocus() throws InterruptedException
-    {
-        Boolean lvbReturn = false;
-        Boolean bOK = false;
-
-        try
-        {
-            MyLogger.LogFunctionStartDebug("VerifyHasFocus");
-
-            // Nun mit dem erwarteten Sollwert und GetHasFocus ggf. auf den Wert Warten.
-            lvbReturn = this.getHasFocus( );
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                MyLogger.LogFunctionEndDebug(lvbReturn);
-            }
-            else
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
-        }
-
-        return lvbReturn;
-    }
-
-    /// \~german
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des ToolTips für Prüfewert.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
-    public ArrayList<String> VerifyCaption() throws InterruptedException
-    {
-        MyLogger.LogFunctionStartDebug("VerifyCaption");
-
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-        Boolean bOK = false;
-
-        try
-        {
-
-            // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
-            lvLsReturn = this.getCaption( );
-
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                MyLogger.LogFunctionEndDebug(lvLsReturn);
-            }
-            else
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
-        }
-
-        return lvLsReturn;
     }
 
     /// \~german
@@ -1312,7 +1083,46 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         return lvLsReturn;
     }
 
-    /// \~german
+    /**
+	 *  \brief
+	 *  Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert.
+	 *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen
+	 *  durch Methoden überschreibung.
+	 *  \return
+	 *  Rückgabe des Textuellen Inhaltes der markierten Textes.
+	 *  \return
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2013.12.14
+	 * @throws Exception 
+	 */
+	public ArrayList<String> LogValue() throws Exception
+	{
+	    Boolean bOK = false;
+	    ArrayList<String> lvLsReturn = new ArrayList<String>();
+	
+	    try
+	    {
+	        MyLogger.LogFunctionStartDebug("LogValue");
+	        lvLsReturn = this.getValue();
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            MyLogger.LogFunctionEndDebug(lvLsReturn);
+	        }
+	        else
+	        {
+	            MyLogger.LogFunctionEndDebug();
+	        }
+	    }
+	
+	    return lvLsReturn;
+	}
+
+
+	/// \~german
     /// \brief
     /// Ermittelt den textuellen Inhalt des Caption/Überschrift für das Schlüsselwort MerkeWert.
     /// 
@@ -1353,127 +1163,6 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         return lvLsReturn;
     }
     
-    /** \~german
-     *  \brief
-     *  Ermittelt den textuellen Inhalt der Überschrift eines HTML-Tags anhand des Attributee "textContent".
-     *   
-     *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
-     *  \~english
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
-     */
-    public ArrayList<String> getCaption()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-        Boolean bOK = false;
-        try
-        {
-            MyLogger.LogFunctionStartDebug("GetCaption");
-
-            // Wenn das Objekt nicht existiert mit Exception beenden...
-            if (!this.getExists())
-            {
-                String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
-                throw new OKWGUIObjectNotFoundException(lvsLM);
-            }
-            
-            // The Attribute "value" wird als Beschriftung angezeigt...
-            lvLsReturn.add(this.Me().getAttribute("textContent"));
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                MyLogger.LogFunctionEndDebug(lvLsReturn);
-            }
-            else
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
-        }
-        
-        return lvLsReturn;
-    }
-
-    
-    /**
-     *  Liest den aktuellen Wert/Text aus dem HTML-Tag.
-     * 
-     *  Standardmäßig wird "textContent" ausgelesen.
-     *
-     *  @return
-     *  @author Zoltán Hrabovszki
-     *  @date 2013.12.14
-     */
-    public ArrayList<String> getValue() throws Exception
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-        Boolean bOK = false;
-
-        try
-        {
-            this.LogFunctionStartDebug("getValue");
-
-            // Get Value from TextField and put this into the return ArrayList<String>
-            lvLsReturn.add(this.Me().getAttribute("textContent"));
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                this.LogFunctionEndDebug(lvLsReturn.toString());
-            }
-            else
-            {
-                this.LogFunctionEndDebug();
-            }
-        }
-
-        return lvLsReturn;
-    }
-
-    
-    /**
-     *  \brief
-     *  Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert.
-     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen
-     *  durch Methoden überschreibung.
-     *  \return
-     *  Rückgabe des Textuellen Inhaltes der markierten Textes.
-     *  \return
-     *  \author Zoltan Hrabovszki
-     *  \date 2013.12.14
-     * @throws Exception 
-     */
-    public ArrayList<String> LogValue() throws Exception
-    {
-        Boolean bOK = false;
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-
-        try
-        {
-            MyLogger.LogFunctionStartDebug("LogValue");
-            lvLsReturn = this.getValue();
-            bOK = true;
-        }
-        finally
-        {
-            if (bOK)
-            {
-                MyLogger.LogFunctionEndDebug(lvLsReturn);
-            }
-            else
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
-        }
-
-        return lvLsReturn;
-    }
-
     /// \~german
     /// \brief
     /// Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes
@@ -1514,7 +1203,285 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         return lvLsReturn;
     }
 
-    /// \brief
+    /// \~german
+	/// \brief
+	/// Tastatur Eingabe an das Objekt
+	/// 
+	/// \param fps_Values'>
+	/// Werte, die via Tastatur eingegeben werden sollen.
+	/// 
+	/// \~
+	/// \author Zoltan Hrabovszki
+	/// \date 2013.04.11
+	public void TypeKey(ArrayList<String> fps_Values)
+	{
+	    try
+	    {
+	        this.LogFunctionStartDebug("TypeKey", "fps_Values", fps_Values.toString());
+	
+	        // Wenn das Objekt nicht existiert mit Exception beenden...
+	        if (!this.getExists())
+	        {
+	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "SeAnyWin.TypeKey()");
+	            throw new OKWGUIObjectNotFoundException(lvsLM);
+	        }
+	
+	        // We are using a local-Variable to prevent multiple call of Me() in foreach-loop
+	        WebElement lv_WebElement = this.Me();
+	
+	        // Loop through all List-Values with foreach...
+	        for (String Value : fps_Values)
+	        {
+	          Logger_Sngltn.getInstance().LogPrintDebug(">>" + Value + "<<");
+	          
+	          if (Value.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
+	          {
+	            lv_WebElement.clear();
+	          }
+	          else
+	          {
+	            lv_WebElement.sendKeys( Value );
+	          }
+	        }
+	    }
+	    finally
+	    {
+	        this.LogFunctionEndDebug();
+	    }
+	    
+	    return;
+	}
+
+
+	/// \~german
+	/// \brief
+	/// Ermittelt den textuellen Inhalt des ToolTips für Prüfewert.
+	/// 
+	/// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+	/// 
+	/// \return
+	/// Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
+	/// Interface schreibt ein Listen-Element als Rückgabewert vor.
+	/// \return
+	/// \~english
+	/// \~
+	/// \author Zoltán Hrabovszki
+	/// \date 2013.12.07
+	public ArrayList<String> VerifyCaption() throws InterruptedException
+	{
+	    MyLogger.LogFunctionStartDebug("VerifyCaption");
+	
+	    ArrayList<String> lvLsReturn = new ArrayList<String>();
+	    Boolean bOK = false;
+	
+	    try
+	    {
+	
+	        // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
+	        lvLsReturn = this.getCaption( );
+	
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            MyLogger.LogFunctionEndDebug(lvLsReturn);
+	        }
+	        else
+	        {
+	            MyLogger.LogFunctionEndDebug();
+	        }
+	    }
+	
+	    return lvLsReturn;
+	}
+
+
+	/// \~german
+	/// \brief
+	/// Ermittelt/Prüft, ob das aktuelle Objekt existiert.
+	/// 
+	/// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+	/// 
+	/// \param fpbExpectedValue Erwarteter Wert.
+	/// 
+	/// \return
+	/// Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
+	/// Interface schreibt ein Listen-Element als Rückgabewert vor.
+	/// 
+	/// \param fpbExpectedValue Erwarteter Wert.
+	/// 
+	/// \return
+	/// \~english
+	/// \~
+	/// \author Zoltán Hrabovszki
+	/// \date 2013.12.07
+	public Boolean VerifyExists() throws InterruptedException
+	{
+	    this.MyLogger.LogFunctionStartDebug("VerifyExists");
+	
+	    Boolean lvbReturn = true;
+	    Boolean bOK = false;
+	
+	    try
+	    {
+	        // Nun mit dem erwarteten Sollwert und GetExists ggf. auf den erwartetetn Wert warten.
+	        lvbReturn = this.getExists( );
+	        
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            this.MyLogger.LogFunctionEndDebug(lvbReturn);
+	        }
+	        else
+	        {
+	            this.MyLogger.LogFunctionEndDebug();
+	        }
+	    }
+	
+	    return lvbReturn;
+	}
+
+
+	/// \~german
+	/// \brief
+	/// Ermittelt/Prüft, ob das aktuelle Objekt aktiv ist.
+	/// 
+	/// Diese Methode ist der Einstiegspunkt für PrüfeIstAktive-Anpassungen durch Methodenüberschreibung.
+	/// 
+	/// \returntrue, falls das Objekt aktiv ist sonst false\return
+	/// \~english
+	/// \~
+	/// \author Zoltán Hrabovszki
+	/// \date 2013.12.07
+	public Boolean VerifyIsActive( ) throws InterruptedException
+	{
+	    this.MyLogger.LogFunctionStartDebug("VerifyIsActive");
+	
+	    Boolean lvbReturn = true;
+	    Boolean bOK = false;
+	
+	    try
+	    {
+	
+	        // Nun mit dem erwarteten Sollwert und GetIsActive ggf. auf den erwarteten Wert warten.
+	        lvbReturn = this.getIsActive( );
+	
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            this.MyLogger.LogFunctionEndDebug(lvbReturn);
+	        }
+	        else
+	        {
+	            this.MyLogger.LogFunctionEndDebug();
+	        }
+	    }
+	
+	    return lvbReturn;
+	}
+
+
+	// \~german
+	// \brief
+	// Ermittelt ob das GUI-Objekt den Fokus hat.
+	// 
+	// Dies ist der Einstiegspunkt für die Anpassung der Methote VerifyHasFocus (Methodenüberschreibung).
+	// 
+	// \return
+	//  true falls Objekt den Fokus hat, sonst false.
+	// \~english
+	// \brief Determines whether the GUI object has the focus.
+	//
+	// This is the entry point for the adaptation of the method Verify Has Focus (method override).
+	// \~
+	// \author Zoltán Hrabovszki
+	// \date 2013.12.07
+	public Boolean VerifyHasFocus() throws InterruptedException
+	{
+	    Boolean lvbReturn = false;
+	    Boolean bOK = false;
+	
+	    try
+	    {
+	        MyLogger.LogFunctionStartDebug("VerifyHasFocus");
+	
+	        // Nun mit dem erwarteten Sollwert und GetHasFocus ggf. auf den Wert Warten.
+	        lvbReturn = this.getHasFocus( );
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            MyLogger.LogFunctionEndDebug(lvbReturn);
+	        }
+	        else
+	        {
+	            MyLogger.LogFunctionEndDebug();
+	        }
+	    }
+	
+	    return lvbReturn;
+	}
+
+
+	/// \~german
+	/// \brief
+	/// Ermittelt den textuellen Inhalt des Labels für Prüfewert.
+	/// 
+	/// \remark Sollte der Erwartetet Wert zunächt nicht mit dem aktuellen Wert nicht übereinstimmen,
+	/// dann wird gewartet bis entweder der erwartete Wert sich im GUI objekt einstellt
+	/// oder der TimeOut erreicht wird.<br/>
+	/// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+	/// 
+	/// \param fplsExpectedValue'>Erwarteter Wert, auf den ggf. bis zum TimeOut gewartet wird.
+	/// \return
+	/// Rückgabe des Textuellen Inhaltes des Labels.
+	/// Interface schreibt ein Listen-Element als Rückgabewert vor.
+	/// \return
+	/// \~english
+	/// \~
+	/// \author Zoltán Hrabovszki
+	/// \date 2013.12.07
+	public ArrayList<String> VerifyLabel() throws InterruptedException
+	{
+	    MyLogger.LogFunctionStartDebug("VerifyLabel");
+	
+	    ArrayList<String> lvLsReturn = new ArrayList<String>();
+	    Boolean bOK = false;
+	
+	    try
+	    {
+	        // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
+	        lvLsReturn = this.getLabel( );
+	
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            MyLogger.LogFunctionEndDebug(lvLsReturn);
+	        }
+	        else
+	        {
+	            MyLogger.LogFunctionEndDebug();
+	        }
+	    }
+	
+	    return lvLsReturn;
+	}
+
+
+	/// \brief
     /// Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
     /// 
     /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
@@ -1554,7 +1521,51 @@ public class SeAnyWin extends AnyWinBase implements IGUI
         return lvLsReturn;
     }
 
-    /// \brief
+    /// \~german
+	/// \brief
+	/// Ermittelt den textuellen Inhalt des ToolTips für Prüfewert.
+	/// 
+	/// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+	/// 
+	/// \return
+	/// Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
+	/// Interface schreibt ein Listen-Element als Rückgabewert vor.
+	/// \return
+	/// \~english
+	/// \~
+	/// \author Zoltán Hrabovszki
+	/// \date 2013.12.07
+	public ArrayList<String> VerifyTooltip() throws InterruptedException
+	{
+	    MyLogger.LogFunctionStartDebug("VerifyTooltip");
+	
+	    ArrayList<String> lvLsReturn = new ArrayList<String>();
+	    Boolean bOK = false;
+	
+	    try
+	    {
+	        // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
+	        lvLsReturn = this.getTooltip( );
+	
+	        bOK = true;
+	    }
+	    finally
+	    {
+	        if (bOK)
+	        {
+	            MyLogger.LogFunctionEndDebug(lvLsReturn);
+	        }
+	        else
+	        {
+	            MyLogger.LogFunctionEndDebug();
+	        }
+	    }
+	
+	    return lvLsReturn;
+	}
+
+
+	/// \brief
     /// Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
     /// 
     /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.

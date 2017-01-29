@@ -540,8 +540,8 @@ public class FrameObjectDictionary_Sngltn
                 try
                 {
                 	// Now here we tell the GUI-Adapter his FN and his Parent-FN...
-                   (( IOKW_FN ) lvFieldInstance).SetFN( lvsFNChild );
-                   (( IOKW_FN ) lvFieldInstance).SetParentFN( lvsFNParent );
+                   (( IOKW_FN ) lvFieldInstance).setFN( lvsFNChild );
+                   (( IOKW_FN ) lvFieldInstance).setParentFN( lvsFNParent );
                    myFrameObjectDictionary.put( lvsChildKey, lvFieldInstance );
                    
                    FrameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNParent );

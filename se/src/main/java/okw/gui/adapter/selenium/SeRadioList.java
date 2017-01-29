@@ -171,7 +171,7 @@ import okw.gui.OKWLocator;
       String isChecked = OKW_Const_Sngltn.getInstance().GetConst4Internalname( "CHECKED" );
 
       // 1. Get the List of
-      myRadioButtonKeys = OKW_CurrentObject_Sngltn.getInstance().GetAllChildFNsOfParent( this.GetParentFN() + "." + this.GetFN() + "." );
+      myRadioButtonKeys = OKW_CurrentObject_Sngltn.getInstance().GetAllChildFNsOfParent( this.getParentFN() + "." + this.getFN() + "." );
 
       for ( String lvsRadioButtonFN : myRadioButtonKeys )
       {
@@ -181,7 +181,7 @@ import okw.gui.OKWLocator;
     	if ( isChecked.equals( Actuel.get(0) ))
         {
     		
-    	  String CurrentValue = okw.OKW_Helper.GetRightFromDelimiterNumber(lvsRadioButtonFN, this.GetFN() + ".", 1);
+    	  String CurrentValue = okw.OKW_Helper.GetRightFromDelimiterNumber(lvsRadioButtonFN, this.getFN() + ".", 1);
           lvLsReturn.add( CurrentValue );
           break;
         }

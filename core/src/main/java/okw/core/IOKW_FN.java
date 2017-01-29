@@ -2,9 +2,9 @@ package okw.core;
 
 public interface IOKW_FN
 {
-   void SetFN(String FN);
-   void SetParentFN(String FN);
+   void setFN(String FN);
+   void setParentFN(String FN);
    
-   String GetFN();
-   String GetParentFN();
+   String getFN();
+   String getParentFN();
 }

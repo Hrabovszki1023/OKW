@@ -165,7 +165,7 @@ public class SeInputRadio extends SeSimpleDataObjBase
       if ( Value.equals(myCHECKED) )
       {
           Core myCore = new Core();
-          myCore.ClickOn( this.GetFN() ); // 
+          myCore.ClickOn( this.getFN() ); // 
       }
       else if ( Value.equals(myUNCHECKED) )
       {

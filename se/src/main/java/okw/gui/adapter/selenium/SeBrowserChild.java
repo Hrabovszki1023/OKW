@@ -1,9 +1,3 @@
-package okw.gui.adapter.selenium;
-
-import okw.OKW;
-import okw.gui.AnyWinBase;
-import okw.gui.OKWLocator;
-
 /*
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
@@ -43,6 +37,11 @@ import okw.gui.OKWLocator;
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
+package okw.gui.adapter.selenium;
+
+import okw.OKW;
+import okw.gui.AnyWinBase;
+import okw.gui.OKWLocator;
 
     /// \brief
     /// TODO: class SeBrowserChild dokumentieren...
@@ -71,6 +70,7 @@ import okw.gui.OKWLocator;
 
         public void SelectWindow()
         {
+        	
         }
 
     }
