@@ -615,8 +615,8 @@ public class FrameObjectDictionary_Sngltn
 
               myAnnotationDictionary.put( lvsKey, lvField );
               
-              (( IOKW_FN ) lvFieldInstance).SetFN( lvsKey );
-              (( IOKW_FN ) lvFieldInstance).SetParentFN( fpsWindowName );
+              (( IOKW_FN ) lvFieldInstance).setFN( lvsKey );
+              (( IOKW_FN ) lvFieldInstance).setParentFN( fpsWindowName );
               
               myFrameObjectDictionary.put( lvsKey, lvFieldInstance );
         	  
