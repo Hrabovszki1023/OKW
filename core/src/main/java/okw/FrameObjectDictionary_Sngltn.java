@@ -500,12 +500,15 @@ public class FrameObjectDictionary_Sngltn
         // Hierbei handelt es sich um des  ParentObject = Fenster
         String lvsFNParent = GetFunktionlanameFromObjekt( lvTypeInstanceAsObject );
 
-        // Wenn Attribute vorhanden (!=null) und nicht Leer dann ins Dictionary einfügen.
+        // Wenn Attribute vorhanden (!=null) und nicht Leer (!= "") dann ins Dictionary einfügen.
         if ( lvsFNParent != null && !lvsFNParent.isEmpty() )
         {
           Log.ResOpenList( "Parent: '" + lvsFNParent + "'" );
           Log.LogPrint( "Type: '" + lvTypeInstanceAsObject.getClass().getName() + "'" );
 
+          ((IOKW_FN)lvTypeInstanceAsObject).setFN( lvsFNParent );
+          ((IOKW_FN)lvTypeInstanceAsObject).setKN( lvsFNParent );
+          
           myFrameObjectDictionary.put( lvsFNParent, lvTypeInstanceAsObject );
 
           Log.LogPrintDebug( LM.GetMessage( "CreateInstanceByObjectName", "InstanceWasCreated", lvTypeInstanceAsObject.getClass().getName() ) );
@@ -539,7 +542,8 @@ public class FrameObjectDictionary_Sngltn
                 
                 try
                 {
-                	// Now here we tell the GUI-Adapter his FN and his Parent-FN...
+                	 // Now here we tell the GUI-Adapter his FN and his Parent-FN...
+                   (( IOKW_FN ) lvFieldInstance).setKN( lvsChildKey );
                    (( IOKW_FN ) lvFieldInstance).setFN( lvsFNChild );
                    (( IOKW_FN ) lvFieldInstance).setParentFN( lvsFNParent );
                    myFrameObjectDictionary.put( lvsChildKey, lvFieldInstance );
@@ -615,7 +619,8 @@ public class FrameObjectDictionary_Sngltn
 
               myAnnotationDictionary.put( lvsKey, lvField );
               
-              (( IOKW_FN ) lvFieldInstance).setFN( lvsKey );
+              (( IOKW_FN ) lvFieldInstance).setKN( lvsKey );
+              (( IOKW_FN ) lvFieldInstance).setFN( lvsFNChild );
               (( IOKW_FN ) lvFieldInstance).setParentFN( fpsWindowName );
               
               myFrameObjectDictionary.put( lvsKey, lvFieldInstance );
@@ -864,6 +869,7 @@ public class FrameObjectDictionary_Sngltn
     return lvo_Return;
   }
 
+  
   public void Print_ObjectDictionary()
   {
 
@@ -880,5 +886,18 @@ public class FrameObjectDictionary_Sngltn
     return;
 
   }
+  
+  
+  /**
+   *  
+   */
+  public OKW_TimeOut getTimeOutWaitForMe( String fpKN )
+  {  
+      OKW_TimeOut Return = new OKW_TimeOut();
+      
+      Return.setPT( ((Field) myAnnotationDictionary.get( fpKN )).getAnnotation(OKW.class).WaitForMe_PT());
+      Return.setTO( ((Field) myAnnotationDictionary.get( fpKN )).getAnnotation(OKW.class).WaitForMe_TO());
 
+      return Return;
+  }
 }

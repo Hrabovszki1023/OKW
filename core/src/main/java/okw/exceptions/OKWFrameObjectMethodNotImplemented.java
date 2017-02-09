@@ -2,7 +2,7 @@
 ==============================================================================
   Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
-  Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+  Copyright © 2012 - 2017 IT-Beratung Hrabovszki
   www.OpenKeyWord.de
 ============================================================================== 
 
@@ -38,29 +38,30 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 package okw.exceptions;
 
-// \~german
-// \brief
-// Die Ausnahme <code>OKWFrameObjectMethodNotImplemented</code> wird ausgelöst, 
-// wenn im Frame Objekt eine gegebene Methode zwar exsitiert aber die implementierung
-// für das GUI-Objekt nicht sinnvoll ist.
-// \details
-// 
-// \~english
-// \brief
-// The exeption <code>OKWFrameObjectMethodNotFoundException</code> is triggered, 
-// if a given method is existent but the implementation make nosense for the GUI-Object.
-// \details 
-// An OKW-Methode can be missed, if 
-// -# a project specific object is to be defined...
-// -# a method is not implemented in the OKW-GUI-classes
-// \todo TODO: jnic text was not logical and was corrected - please proove it
-// 
-// The missing method must bei possibly implemented. The Exception gives hints about
-// _what_ method is missing and to be implemented.
-// 
-// \~
-// \author Zoltán Hrabovszki
-// \date 2016.10.06
+/** \~german
+ * \brief
+ * Die Ausnahme <code>OKWFrameObjectMethodNotImplemented</code> wird ausgelöst, 
+ * wenn im Frame Objekt eine gegebene Methode zwar vorhanden ist aber die Implementierung
+ * nur als Dummy-Methode in der Basis-Klasse angelegt ist.
+ * \details
+ * 
+ * \~english
+ * \brief
+ * The exeption <code>OKWFrameObjectMethodNotFoundException</code> is triggered, 
+ * if a given method is existent but it is a dummy implementation of the base-class.
+ * \details 
+ * An OKW-Methode can be missed, if 
+ * -# a project specific object is to be defined...
+ * -# a method is not implemented in the OKW-GUI-classes
+ * \todo TODO: jnic text was not logical and was corrected - please proove it
+ * 
+ * The missing method must bei possibly implemented. The Exception gives hints about
+ * _what_ method is missing and to be implemented.
+ * 
+ * \~
+ * \author Zoltán Hrabovszki
+ * \date 2016.10.06
+ */
 public class OKWFrameObjectMethodNotImplemented extends RuntimeException 
 {
 

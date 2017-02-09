@@ -1,10 +1,8 @@
-package okw.gui.adapter.selenium;
-
 /*
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -39,22 +37,24 @@ package okw.gui.adapter.selenium;
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
+package okw.gui.adapter.selenium;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
-    /// \brief
-    /// Pattern Singelton
-    /// 
+     /**  \brief
+     *  Pattern Singelton
+     */  
     public class SeDriver
     {
 
         public WebDriver driver;
 
-        /// \brief
-        /// Singelton-Class: instanz hold the Object-Referenc of CurrentObject
-        /// 
+        /** \brief
+         *  Singelton-Class: instanz hold the Object-Referenc of CurrentObject
+         */  
         private static SeDriver instance = new SeDriver();
 
         private SeDriver()
@@ -62,19 +62,20 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
         }
 
 
-        /// \brief
-        /// Gibt die Instance für die einzige Instanz dieser Klasse zurück.<br/>
-        /// __Hinweis:__
-        /// * Diese Klasse ist ein Singelton.
-        ///   - Higylander Prinzip: Es kann nur eine Instanz von dieser Klasse geben!
-        ///   - Verwenden Sie diese Eigenschaft um die Instance dieser Klasse zu erhalten.
-        ///   - Es gibt keinen öffentlichen Konstruktor für Methode!
-        /// 
-        /// <value>
-        /// The instance of CurrentObject.
-        /// </value>
-        /// \author Zoltan Hrabovszki
-        /// \date 2012.11.29
+         /**  \brief
+         *  Gibt die Instance für die einzige Instanz dieser Klasse zurück.<br/>
+         *  __Hinweis:__
+         *  * Diese Klasse ist ein Singelton.
+         *    - Higylander Prinzip: Es kann nur eine Instanz von dieser Klasse geben!
+         *    - Verwenden Sie diese Eigenschaft um die Instance dieser Klasse zu erhalten.
+         *    - Es gibt keinen öffentlichen Konstruktor für Methode!
+         *  
+         *  <value>
+         *  The instance of CurrentObject.
+         *  </value>
+         *  \author Zoltan Hrabovszki
+         *  \date 2012.11.29
+         */
         public static SeDriver getInstance()
         {
             return instance;
@@ -86,6 +87,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
             this.driver = new ChromeDriver();
         }
 
+        
         public void DriveFireFox()
         {
             this.driver = new FirefoxDriver();
@@ -96,25 +98,28 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
             this.driver = new InternetExplorerDriver();
         }*/
 
+        
         public void DriveUnitDriver()
         {
             this.driver = new HtmlUnitDriver(true);
         }
 
-/*
-        /// \~german
-        /// \brief Erzeugt eine Instanz des HTMLnitDrivers
-        /// 
-        /// Wetergehende Dokumentaion sind hier zu finden: http://docs.seleniumhq.org/docs/03_webdriver.jsp#htmlunit-driver
-        /// 
-        /// \~english
-        /// \brief \todo TODO: Brief Description.
-        /// 
-        /// \todo TODO: Detailed Description
-        ///         ///
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2015.05.12
+
+        /*
+        /** \~german
+         *  Erzeugt eine Instanz des HTMLnitDrivers
+         *  
+         *  Wetergehende Dokumentaion sind hier zu finden: http://docs.seleniumhq.org/docs/03_webdriver.jsp#htmlunit-driver
+         *  
+         *  \~english
+         *  \todo TODO: Brief Description.
+         *  
+         *  \todo TODO: Detailed Description
+         *  
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2015.05.12
+         * /
         public void DriveRemote()
         {
             

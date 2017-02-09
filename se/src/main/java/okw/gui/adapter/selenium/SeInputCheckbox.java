@@ -49,26 +49,23 @@ import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.gui.*;
 
-    /// \brief
-    /// Diese Klasse representiert eine CheckBox,
-    /// die mit Selenium angsteuert wird.
-    /// 
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.04.11
-    public class SeInputCheckbox extends SeSimpleDataObjBase
+    /** \brief
+     *  Diese Klasse representiert eine CheckBox,
+     *  die mit Selenium angsteuert wird.
+     *  
+     *  @author Zoltan Hrabovszki
+     *  @date 2013.04.11
+     */
+    public class SeInputCheckbox extends SeAnyChildWindow
     {
     	
     	OKW_Const_Sngltn myOKW_Const = null;
 
-        /// TODO: Konstuktor Beschreiben
-        /// \brief
-        /// Konstruktor der Klasse SeCheckBox.
-        /// 
-        /// \param Locator
-        /// definiert die Objekterkennungseigenschaft
-        /// des Objektes und wird als XPATH angegeben.<br/>
-        /// <bf>Beispiel:</bf><tt>//input[@value='salami']</tt>
-        ///         
+        /** TODO: Konstuktor Beschreiben
+         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+         *
+         *  Konstruktor der Klasse SeCheckBox.
+         */         
         public SeInputCheckbox( String fpsLocator, OKWLocator... fpLocators )
         {
             super(fpsLocator, fpLocators);
@@ -76,20 +73,20 @@ import okw.gui.*;
             myOKW_Const  = OKW_Const_Sngltn.getInstance();
         }
 
-        /// \brief
-        /// Method ermittel oder liefert den aktuellen zustend der Checkbox,
-        /// also ob die angehakt oder Nicht angehakt.
-        /// 
-        /// Alle OKW Checkbox methoden
-        /// Laufen über diese methode um den aktuellen zustand zu ermiietl.
-        ///         angehakt war oder nicht.
-        /// Diese Methode ist die Anpassungstelle für Projekspezifische Anpassungen.
-        /// 
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.04.11
+        /** \brief
+         *  Method ermittel oder liefert den aktuellen zustend der Checkbox,
+         *  also ob die angehakt oder Nicht angehakt.
+         *  
+         *  Alle OKW Checkbox methoden
+         *  Laufen über diese methode um den aktuellen zustand zu ermiietl.
+         *          angehakt war oder nicht.
+         *  Diese Methode ist die Anpassungstelle für Projekspezifische Anpassungen.
+         *  
+         *  @author Zoltan Hrabovszki
+         *  @date 2013.04.11
+         */
         public Boolean IsSelected()
         {
-            Boolean bOK = false;
             Boolean lvbReturn = false;
             
             this.LogFunctionStartDebug("IsSelected");
@@ -98,29 +95,21 @@ import okw.gui.*;
             {
                 // Hole Zusand: Häckchen oder kein Häckchen, das ist hier die Frage?
                 lvbReturn = this.Me().isSelected();
-                bOK = true;
             }
             finally
             {
-                if (bOK)
-                {
-                    this.LogFunctionEndDebug(lvbReturn);
-                }
-                else
-                {
-                    this.LogFunctionEndDebug( );
-                }
+                this.LogFunctionEndDebug(lvbReturn);
             }
-
             return lvbReturn;
         }
         
 
-        /// \brief
-        /// Method verlässt die Checkbox angehakt, egal ob diese vorher angehakt war oder nicht.
-        /// 
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.04.11
+        /** \brief
+         *  Method verlässt die Checkbox angehakt, egal ob diese vorher angehakt war oder nicht.
+         *  
+         *  @author Zoltan Hrabovszki
+         *  @date 2013.04.11
+         */
         public void Checking()
         {
             this.LogFunctionStartDebug("Checking");
@@ -152,7 +141,6 @@ import okw.gui.*;
         public ArrayList<String> getValue()
         {
             ArrayList<String> lvls_Return = new ArrayList<String>();
-            Boolean bOK = false;
             try
             {
                 this.LogFunctionStartDebug("getValue");
@@ -174,26 +162,19 @@ import okw.gui.*;
                     String lvsValue = myOKW_Const.GetConst4Internalname("UNCHECKED");
                     lvls_Return.add(lvsValue);
                 }
-
-                bOK = true;
             }
             finally
             {
-                if (bOK)
-                {
-                    this.LogFunctionEndDebug();
-                }
-                else
-                {
                     this.LogFunctionEndDebug(lvls_Return);
-                }
             }
 
             return lvls_Return;
         }
         
-        // \author Zoltan Hrabovszki
-        // \date 2013.04.11
+        /**
+         *  @author Zoltan Hrabovszki
+         *  @date 2013.04.11
+         */
         @Override
         public void SetValue(ArrayList<String> fps_Values) throws XPathExpressionException
         {
@@ -278,15 +259,15 @@ import okw.gui.*;
             return;
         }
 
-        /// \brief
-        /// Method verlässt die Checkbox unangehakt, egal ob sie vorher angehakt
-        /// war oder nicht.<br/>
-        /// __Anmerkung:__ Die Eigenschaft Elemen.Selected ist nicht beschreibar.
-        /// Daher
-        /// 
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.04.11
-
+        /** \brief
+         *  Method verlässt die Checkbox unangehakt, egal ob sie vorher angehakt
+         *  war oder nicht.<br/>
+         *  __Anmerkung:__ Die Eigenschaft Elemen.Selected ist nicht beschreibar.
+         *  Daher
+         *  
+         *  @author Zoltan Hrabovszki
+         *  @date 2013.04.11
+         */
         public void UnChecking()
         {
             this.LogFunctionStartDebug("UnChecking");

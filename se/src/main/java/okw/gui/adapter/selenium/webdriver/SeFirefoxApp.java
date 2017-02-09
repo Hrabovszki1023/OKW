@@ -43,7 +43,7 @@ import java.util.ArrayList;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import okw.OKW;
+import okw.gui.AnyWindow;
 import okw.gui.adapter.selenium.*;
 import okw.log.*;
 
@@ -52,7 +52,7 @@ import okw.log.*;
      *  \brief
      *  OKW Selenium FireFox BrowserWindow Klasse
      */ 
-    public class SeFirefoxApp
+    public class SeFirefoxApp extends AnyWindow
     {
         protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
 
@@ -74,10 +74,12 @@ import okw.log.*;
         	MyLogger.LogFunctionEndDebug();
         }
 
+        @Override
         public void SelectWindow()
         {
         }
 
+        
         public void StartApp()
         {
         	MyLogger.LogFunctionStartDebug("StartApp");
@@ -89,6 +91,7 @@ import okw.log.*;
             MyLogger.LogFunctionEndDebug();
         }
 
+        
         public void StopApp()
         {
         	MyLogger.LogFunctionStartDebug("StopApp");

@@ -39,11 +39,8 @@
 
 package okw.gui.adapter.selenium.webdriver;
 
-import java.util.ArrayList;
-
-import okw.OKW;
+import okw.gui.AnyWindow;
 import okw.gui.adapter.selenium.SeDriver;
-import okw.gui.adapter.selenium.SeURL;
 import okw.log.Logger_Sngltn;
 
 
@@ -51,7 +48,7 @@ import okw.log.Logger_Sngltn;
     /// \brief
     /// TODO: class SeChromeApp dokumentieren...
     /// 
-    public class SeChromeApp
+    public class SeChromeApp extends AnyWindow
     {
     	
         protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
@@ -73,7 +70,7 @@ import okw.log.Logger_Sngltn;
         	MyLogger.LogFunctionEndDebug();
         }
 
-
+        @Override
         public void SelectWindow()
         {
         }
@@ -98,9 +95,5 @@ import okw.log.Logger_Sngltn;
         public void StopApp()
         {
             SeDriver.getInstance().driver.close();
-        }
-
-        public void TypeKey(ArrayList<String> fps_Values)
-        {
         }
     }

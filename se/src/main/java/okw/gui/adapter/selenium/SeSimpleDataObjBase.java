@@ -46,7 +46,7 @@ import okw.gui.*;
     /// \brief
     /// Description of SeSimpleDataObjBase.
     /// 
-    public class SeSimpleDataObjBase extends SeAnyWin // , IOKW_SimpleDataObj
+    public class SeSimpleDataObjBase extends SeAnyWin
     {
 
         public SeSimpleDataObjBase(String Locator)
@@ -120,51 +120,6 @@ import okw.gui.*;
             {
                 MyLogger.LogFunctionStartDebug("Memorize");
                 lvLsReturn = this.getValue();
-                bOK = true;
-            }
-            finally
-            {
-                if (bOK)
-                {
-                    MyLogger.LogFunctionEndDebug(lvLsReturn);
-                }
-                else
-                {
-                    MyLogger.LogFunctionEndDebug();
-                }
-            }
-
-            return lvLsReturn;
-        }
-
-        /**
-         *  Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
-         *  
-         *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-         *  
-         *  @return
-         *  Rückgabe des Textuellen Inhaltes der markierten Textes.
-         *  Es wird immer der aktuelle Wert des Objektes zurückgeliefert.
-         *  @return
-         *  @author Zoltan Hrabovszki
-         *  @date 2013.12.14
-         *  @throws Exception 
-         *
-         */
-        @Override
-        @Deprecated
-        public ArrayList<String> __VerifyValue(ArrayList<String> fplsExpectedValue) throws Exception
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-            Boolean bOK = false;
-
-            try
-            {
-                MyLogger.LogFunctionStartDebug("Memorize", "fplsExpectedValue", fplsExpectedValue.get(0));
-
-                // Nun mit dem erwarteten Sollwert und GetValue ggf. auf den Wert Warten.
-                lvLsReturn = this.getValue( );
-
                 bOK = true;
             }
             finally

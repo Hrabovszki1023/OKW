@@ -56,13 +56,12 @@ import okw.gui.OKWLocator;
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2014.06.2014
-    public class SeInputText extends SeSimpleDataObjBase
+    public class SeInputText extends SeAnyChildWindow
     {
 
-        /// \brief
-        /// 
-        /// 
-        /// \param Locator definiert die Objekterkennungseigenschaft des Objektes und wird als XPATH angegeben.
+      /**
+       *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+       */         
         public SeInputText(String Locator, OKWLocator... fpLocators)
         {
         	super(Locator, fpLocators);

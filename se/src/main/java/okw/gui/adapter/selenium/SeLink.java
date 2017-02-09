@@ -47,22 +47,27 @@ import okw.gui.OKWLocator;
     /// \brief
     /// TODO: Describe SeLink!
     /// 
-    public class SeLink extends SeAnyWin // , IOKW_Clickable
+    public class SeLink extends SeAnyChildWindow
     {
 
+      /**
+       *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+       */
         public SeLink(String Locator, OKWLocator... fpLocators)
         {
         	super(Locator, fpLocators);
         }
 
-        /// \~german
-        /// \brief
-        /// Klickt auf das aktuelle Objekt.
-        /// 
-        /// \~english
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2013.11.11
+        /** \~german
+         *  \brief
+         *  Klickt auf das aktuelle Objekt.
+         *  
+         *  \~english
+         * 
+         *  \~
+         *  \author Zoltán Hrabovszki
+         *  \date 2013.11.11
+         */
         @Override
         public void ClickOn()
         {
@@ -139,10 +144,9 @@ import okw.gui.OKWLocator;
         {
             
             ArrayList<String> lvLsReturn = new ArrayList<String>();
-            Boolean bOK = false;
             try
             {
-                MyLogger.LogFunctionStartDebug("GetCaption");
+                this.LogFunctionStartDebug("GetCaption");
 
                 // Wenn das Objekt nicht existiert mit Exception beenden...
                 if (!this.getExists())
@@ -153,18 +157,10 @@ import okw.gui.OKWLocator;
                 
                 // The Attribute "value" wird als Beschriftung angezeigt...
                 lvLsReturn.add(this.Me().getAttribute("href"));
-                bOK = true;
             }
             finally
             {
-                if (bOK)
-                {
-                    MyLogger.LogFunctionEndDebug(lvLsReturn);
-                }
-                else
-                {
-                    MyLogger.LogFunctionEndDebug();
-                }
+                this.LogFunctionEndDebug(lvLsReturn);
             }
             
             return lvLsReturn;
@@ -183,25 +179,16 @@ import okw.gui.OKWLocator;
         @Override
         public ArrayList<String> LogValue()
         {
-            Boolean bOK = false;
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             try
             {
-                MyLogger.LogFunctionStartDebug("LogValue");
+                this.LogFunctionStartDebug("LogValue");
                 lvLsReturn = this.getValue();
-                bOK = true;
             }
             finally
             {
-                if (bOK)
-                {
-                    MyLogger.LogFunctionEndDebug(lvLsReturn);
-                }
-                else
-                {
-                    MyLogger.LogFunctionEndDebug();
-                }
+                 this.LogFunctionEndDebug(lvLsReturn);
             }
 
             return lvLsReturn;
@@ -235,56 +222,7 @@ import okw.gui.OKWLocator;
             }
             finally
             {
-                if (bOK)
-                {
-                    MyLogger.LogFunctionEndDebug(lvLsReturn);
-                }
-                else
-                {
-                    MyLogger.LogFunctionEndDebug();
-                }
-            }
-
-            return lvLsReturn;
-        }
-
-        /// \brief
-        /// Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
-        /// 
-        /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-        /// 
-        /// \return
-        /// Rückgabe des Textuellen Inhaltes der markierten Textes.
-        /// Es wird immer der aktuelle Wert des Objektes zurückgeliefert.
-        /// \return
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.12.14
-        @Override
-        @Deprecated
-        public ArrayList<String> __VerifyValue(ArrayList<String> fplsExpectedValue) throws InterruptedException
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-            Boolean bOK = false;
-
-            try
-            {
-                MyLogger.LogFunctionStartDebug("Memorize", "fplsExpectedValue", fplsExpectedValue.get(0) );
-
-                // Nun mit dem erwarteten Sollwert und GetValue ggf. auf den Wert Warten.
-                lvLsReturn = this.getValue();
-
-                bOK = true;
-            }
-            finally
-            {
-                if (bOK)
-                {
-                    MyLogger.LogFunctionEndDebug(lvLsReturn);
-                }
-                else
-                {
-                    MyLogger.LogFunctionEndDebug();
-                }
+                 this.LogFunctionEndDebug(lvLsReturn);
             }
 
             return lvLsReturn;

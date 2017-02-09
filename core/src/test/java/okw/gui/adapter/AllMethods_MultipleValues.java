@@ -12,10 +12,11 @@ import org.xml.sax.SAXException;
 
 import okw.*;
 import okw.gui.AnyWinBase;
+import okw.gui.AnyWindow;
 import okw.log.Logger_Sngltn;
 
 
-    public class AllMethods_MultipleValues extends AnyWinBase
+    public class AllMethods_MultipleValues extends AnyWindow
     {
 
         protected String Locator;
@@ -34,11 +35,6 @@ import okw.log.Logger_Sngltn;
         }
 
         
-        public String getFN()
-        {
-            return "Rechner.All_MethodsObj";
-        }
-        
         
         public void ClickOn()
         {
@@ -46,7 +42,7 @@ import okw.log.Logger_Sngltn;
             this.myLogger.LogFunctionStartDebug("ClickOn");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = this.getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("ClickOn()");
@@ -61,7 +57,7 @@ import okw.log.Logger_Sngltn;
             this.myLogger.LogFunctionStartDebug("ClickOn_Clicktype");
             
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = this.getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("ClickOn_Clicktype()");

@@ -48,33 +48,34 @@ import okw.gui.OKWLocator;
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
     
-    /// \brief
-    /// SeListBox ist ein Selenium GUI-Objekt.
-    /// Erbt von SeAnyWin
-    /// 
-    public class SeSelect extends SeAnyWin // , IOKW_ListDataObj, I
+    /** \brief
+     *  SeListBox ist ein Selenium GUI-Objekt.
+     *  Erbt von SeAnyChildWindow
+     */ 
+    public class SeSelect extends SeAnyChildWindow
     {
 
-        /// \brief
-        /// TODO: Konstruktor des SeListBoxs.
-        /// 
-        /// \param Locator definiert die Objekterkennungseigenschaft des Objektes und wird als XPATH angegeben.
-        /// \author Zoltán Hrabovszki
-        /// \date 2013.04.18
+      /**
+       *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+       *  
+       *  @author Zoltán Hrabovszki
+       *  @date 2013.04.18
+       */
         public SeSelect(String Locator, OKWLocator... fpLocators)
         {
         	super(Locator, fpLocators);
         }
         
-        /// \~german
-        /// \brief
-        /// Methode wählt einen oder mehrere Werte in einer ListBox aus.
-        /// 
-        /// Die Methode Select löscht bereits ausgewählte _nicht_.
-        /// 
-        /// \param fps_Values Ein oder mehrere Werte, die ausgewählt werden sollen.
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.04.11
+        /** \~german
+         *  Methode wählt einen oder mehrere Werte in einer ListBox aus.
+         *  
+         *  Die Methode Select löscht bereits ausgewählte _nicht_.
+         *  
+         *  @param fps_Values Ein oder mehrere Werte, die ausgewählt werden sollen.
+         *  @author Zoltan Hrabovszki
+         *  @date 2013.04.11
+         */
+        @Override
         public void Select(ArrayList<String> fps_Values)
         {
             this.LogFunctionStartDebug("Select", "fps_Values", fps_Values.toString());
@@ -107,26 +108,27 @@ import okw.gui.OKWLocator;
             {
                 this.LogFunctionEndDebug();
             }
-
             return;
         }
 
-        /// \~german
-        /// \brief
-        /// Methode setzt einen oder mehrere Werte in einer ListBox.
-        /// 
-        /// Die Methode löscht zunächst  alle ausgewählten Werte in der Liste, wenn eine Mehrfachauswahl möglich ist
-        /// ( Attribut _multiple_ ist gestzt.
-        /// 
-        /// Danach werden die gegebenen Werte ausgewählt.
-        /// 
-        /// Unterschied zu Select: Nach SetValue sind nur die gegebenen Werte ausgewählt.
-        /// (Select wählt bereits ausgewählte werde einer Listbox nicht ab sonder ergeänzt diese um die gegebenen Werte.)
-        /// \param fpsValues Werte, die in der Listbox ausgwählt werden sollen.
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.04.11
-        //@Override
+        
+        /** \~german
+         *  Methode setzt einen oder mehrere Werte in einer ListBox.
+         *  
+         *  Die Methode löscht zunächst  alle ausgewählten Werte in der Liste, wenn eine Mehrfachauswahl möglich ist
+         *  ( Attribut _multiple_ ist gestzt.
+         *  
+         *  Danach werden die gegebenen Werte ausgewählt.
+         *  
+         *  Unterschied zu Select: Nach SetValue sind nur die gegebenen Werte ausgewählt.
+         *  (Select wählt bereits ausgewählte werde einer Listbox nicht ab sonder ergeänzt diese um die gegebenen Werte.)
+         *  
+         *  @param fpsValues Werte, die in der Listbox ausgwählt werden sollen.
+         *  \~
+         *  @author Zoltan Hrabovszki
+         *  @date 2013.04.11
+         */
+        @Override
         public void SetValue( ArrayList<String> fpsValues)
         {
             this.LogFunctionStartDebug("SetValue", "fpsValues", fpsValues.toString());
@@ -171,26 +173,32 @@ import okw.gui.OKWLocator;
         }
 
 
-        /// \~german
-        /// \brief
-        /// Holt die aktuell _ausgewählten_ Werte aus der ListBox.
-        /// 
-        /// Die ausgewählten Werte werden in der Reihenfolge _oben nach unten_ inder Rückgabe-Liste abgelegt.
-        /// Sind keine Werte ausgewählt, dann ist die Rückgabe-Liste leer.
-        /// leer und List.Count = 0.
-        /// \returnListe der ausgewählten Werte\return
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014.12.04
+        /** \~german
+         *  Holt die aktuell _ausgewählten_ Werte aus der ListBox.
+         *  
+         *  Die ausgewählten Werte werden in der Reihenfolge _oben nach unten_ inder Rückgabe-Liste abgelegt.
+         *  Sind keine Werte ausgewählt, dann ist die Rückgabe-Liste leer.
+         *  leer und List.Count = 0.
+         *  @return Liste der ausgewählten Werte\return
+         *  \~
+         *  @author Zoltan Hrabovszki
+         *  @date 2014.12.04
+         */
         @Override
         public ArrayList<String> getValue()
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
-            Boolean bOK = false;
             
             try
             {
-                MyLogger.LogFunctionStartDebug("GetValue");
+                this.LogFunctionStartDebug("GetValue");
+
+                // Wenn das Objekt nicht existiert mit Exception beenden...
+                if (!this.getExists())
+                {
+                    String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "Select()");
+                    throw new OKWGUIObjectNotFoundException(lvsLM);
+                }
 
                 Select SelectList = new Select(this.Me());
                 
@@ -198,19 +206,10 @@ import okw.gui.OKWLocator;
                 {
                     lvLsReturn.add( Option.getAttribute("textContent") );
                 }
-
-                bOK = true;
             }
             finally
             {
-                if (bOK)
-                {
-                    MyLogger.LogFunctionEndDebug(lvLsReturn);
-                }
-                else
-                {
-                    MyLogger.LogFunctionEndDebug();
-                }
+                this.LogFunctionEndDebug(lvLsReturn);
             }
             
             return lvLsReturn;

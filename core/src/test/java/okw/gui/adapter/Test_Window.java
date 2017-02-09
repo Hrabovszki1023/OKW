@@ -1,17 +1,12 @@
 package okw.gui.adapter;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
-
-import org.xml.sax.SAXException;
 
 import okw.OKW_TestClipboard;
+import okw.gui.AnyWindow;
 import okw.log.Logger_Sngltn;
 
-    public class Test_Window
+    public class Test_Window extends AnyWindow
     {
 
         /// \brief
@@ -32,25 +27,7 @@ import okw.log.Logger_Sngltn;
             this.Locator = fps_Locator;
         }
 
-        public String getFN()
-        {
-        	String lvsReturn = "";
-        	
-            try
-			{
-            	lvsReturn = okw.core.OKW_CurrentObject_Sngltn.getInstance().GetObjectFN() ;
-			}
-			catch (
-					XPathExpressionException | JAXBException
-					| ParserConfigurationException | SAXException | IOException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-            
-            return lvsReturn;
-        }
-        
+        @Override
         public void SelectWindow()
         {
             this.myLogger.LogFunctionStartDebug("SelectWindow");
@@ -119,5 +96,149 @@ import okw.log.Logger_Sngltn;
             }
             
             return;
+        }
+
+        /** \~german
+         *  Parent-Objekt FN des aktuellen GUI-Objektes.
+         *  
+         *  \~english
+         *  \brief
+         *  @todo TODO:  Übersetzung ins Englische fehlt...
+         *  
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2016.11.20
+         */    
+        private String myKN = "";
+
+        
+        /** \~german
+         *  Setzten des Keyname FN.
+         *  
+         *  @fpsParentFN KN des Objektes
+         *  
+         *  \~english
+         *  \brief
+         *  @todo TODO:  Übersetzung ins Englische fehlt...
+         *  
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2016.11.20
+         */    
+        public void setKN(String fpsKN)
+        {
+          this.myKN =  fpsKN;
+        }
+
+        
+        /** \~german
+         *  Setzten des Objekt KN.
+         *  
+         *  @return KN des Objektes.
+         *  
+         *  \~english
+         *  \brief
+         *  @todo TODO:  Übersetzung ins Englische fehlt...
+         *  
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2016.11.20
+         */ 
+        public String getKN( )
+        {
+          return this.myKN;
+        }
+        
+        /** \~german
+         *  FN - Funktionaler Name des aktuellen GUI-Objektes.
+         *  
+         *  Wert wird 
+         *  
+         *  \~english
+         *  \brief
+         *  @todo TODO:  Übersetzung ins Englische fehlt...
+         *  
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2014.04.27
+         */    
+        private String myFN = "";
+        
+        public void setFN(String fpsFN)
+        {
+          this.myFN =  fpsFN;
+        }
+
+        
+        /** \~german
+         *  Holt den funktionalen Name dws GUI-Objektes.
+         * 
+         *  Hinweis: Jeder GUI-Adapter kennt seinen eigenen funktionalen Namen.
+         *  Dieser wird beim instanzieren der Frame-Objecte währen des Frame-Classen-Scans in der Methode FrameObjectDictionary_Sngltn.FrameScan()
+         *  mitgeteilt.
+         *  Wert wird 
+         *  
+         *  \~english
+         *  \brief
+         *  @todo TODO:  Übersetzung ins Englische fehlt...
+         *  
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2014.04.27
+         */  
+        public String getFN( )
+        {
+          return this.myFN;
+        }
+
+        
+        /** \~german
+         *  Parent-Objekt FN des aktuellen GUI-Objektes.
+         *  
+         *  \~english
+         *  \brief
+         *  @todo TODO:  Übersetzung ins Englische fehlt...
+         *  
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2016.11.20
+         */    
+        private String myParentFN = "";
+
+        
+        /** \~german
+         *  Setzten des Parent-Objekt FN.
+         *  
+         *  @fpsParentFN FN des Parent-Objektes
+         *  
+         *  \~english
+         *  \brief
+         *  @todo TODO:  Übersetzung ins Englische fehlt...
+         *  
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2016.11.20
+         */    
+        public void setParentFN(String fpsParentFN)
+        {
+          this.myParentFN =  fpsParentFN;
+        }
+
+        /** \~german
+         *  Setzten des Parent-Objekt FN.
+         *  
+         *  @return FN des Parent-Objektes.
+         *  
+         *  \~english
+         *  \brief
+         *  @todo TODO:  Übersetzung ins Englische fehlt...
+         *  
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2016.11.20
+         */ 
+        public String getParentFN( )
+        {
+          return this.myParentFN;
         }
 }

@@ -176,11 +176,12 @@ public class frmTestRechner extends Test_Window
                 return;
             }
             
-            @Override
+/**            @Override
             public String getFN()
             {
                 return "Rechner";
             }
+            */
 
         }
     }

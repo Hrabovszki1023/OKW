@@ -1,10 +1,8 @@
-package okw.gui.adapter.selenium.webdriver;
-
 /*
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -39,11 +37,11 @@ package okw.gui.adapter.selenium.webdriver;
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
+package okw.gui.adapter.selenium.webdriver;
+
 import java.util.ArrayList;
-
 import org.openqa.selenium.safari.*;
-
-import okw.OKW;
+import okw.gui.AnyWindow;
 import okw.gui.adapter.selenium.*;
 import okw.log.*;
 
@@ -52,7 +50,7 @@ import okw.log.*;
     /// \brief
     /// OKW Selenium FireFox BrowserWindow Klasse
     /// 
-    public class SeSafariApp
+    public class SeSafariApp extends AnyWindow
     {
         protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
 
@@ -104,5 +102,4 @@ import okw.log.*;
         public void TypeKey(ArrayList<String> fps_Values)
         {
         }
-
     }

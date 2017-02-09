@@ -1,13 +1,3 @@
-package okw.gui.adapter.selenium;
-
-import java.util.ArrayList;
-
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-
-import okw.OKW_Const_Sngltn;
-import okw.gui.OKWLocator;
-
 /*
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
@@ -46,49 +36,58 @@ import okw.gui.OKWLocator;
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
+package okw.gui.adapter.selenium;
 
-    // , IOKW_SimpleDataObj
-    /// \~german
-    /// \brief
-    /// Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld<br/>.
-    /// GUI-Automatisierungswerkzeug: Selenium.<br/>
-    /// Die meisten Methoden werden aus der abtrakten Klasse SeSimpleDataObjekt geerbt.
-    /// 
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2014.06.2014
-    public class SeTextarea extends SeSimpleDataObjBase
+import java.util.ArrayList;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import okw.OKW_Const_Sngltn;
+import okw.gui.OKWLocator;
+
+
+    /**  IOKW_SimpleDataObj
+     *  \~german
+     *  Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld<br/>.
+     *  GUI-Automatisierungswerkzeug: Selenium.<br/>
+     *  Die meisten Methoden werden aus der abtrakten Klasse SeSimpleDataObjekt geerbt.
+     *  
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2014.06.2014
+     */
+    public class SeTextarea extends SeAnyChildWindow
     {
 
-        /// \brief
-        /// 
-        /// 
-        /// \param Locator definiert die Objekterkennungseigenschaft des Objektes und wird als XPATH angegeben.
-        public SeTextarea(String Locator, OKWLocator... fpLocators)
+      /**
+       *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+       */         
+       public SeTextarea(String Locator, OKWLocator... fpLocators)
         {
         	super(Locator, fpLocators);
         }
 
 
-        /// \~german
-        /// \brief
-        /// Ermittelt den textuellen Inhalt eines Textfeldes.<br/>.
-        /// GUI-Automatisierungswerkzeug: Selenium.<br/>
-        /// 
-        /// \return
-        /// Gibt den Textuellen Inhaltes eines DOM-TextField-s zurück.
-        /// Es korrespondieren je eine Zeile des GUI-Objektes mit jeweil einem Listen-Element.<br/>
-        /// Ein Textfield besteht aus einerZeile: Daher wird der Wert des Textfield-s im ListenElement[0] abgelegt.
-        /// Zurückgegeben.
-        /// \return
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014.06.2014
+        /** \~german
+         *  \brief
+         *  Ermittelt den textuellen Inhalt eines Textfeldes.<br/>.
+         *  GUI-Automatisierungswerkzeug: Selenium.<br/>
+         *  
+         *  \return
+         *  Gibt den Textuellen Inhaltes eines DOM-TextField-s zurück.
+         *  Es korrespondieren je eine Zeile des GUI-Objektes mit jeweil einem Listen-Element.<br/>
+         *  Ein Textfield besteht aus einerZeile: Daher wird der Wert des Textfield-s im ListenElement[0] abgelegt.
+         *  Zurückgegeben.
+         *  \return
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014.06.2014
+         */
         //@Override
         public ArrayList<String> igetValue()
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
-            Boolean bOK = false;
 
             try
             {
@@ -102,18 +101,10 @@ import okw.gui.OKWLocator;
                 {
                 lvLsReturn.add(myText);
                 }
-                bOK = true;
             }
             finally
             {
-                if (bOK)
-                {
                     this.LogFunctionEndDebug(lvLsReturn.toString());
-                }
-                else
-                {
-                    this.LogFunctionEndDebug();
-                }
             }
 
             return lvLsReturn;
@@ -129,25 +120,26 @@ import okw.gui.OKWLocator;
 
         }
 
-        /// \~german
-        /// \brief
-        /// Ermittelt den textuellen Inhalt eines Textfeldes.<br/>.
-        /// GUI-Automatisierungswerkzeug: Selenium.<br/>
-        /// 
-        /// \return
-        /// Gibt den Textuellen Inhaltes eines DOM-TextField-s zurück.
-        /// Es korrespondieren je eine Zeile des GUI-Objektes mit jeweil einem Listen-Element.<br/>
-        /// Ein Textfield besteht aus einerZeile: Daher wird der Wert des Textfield-s im ListenElement[0] abgelegt.
-        /// Zurückgegeben.
-        /// \return
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014.06.2014
+
+        /** \~german
+         *  \brief
+         *  Ermittelt den textuellen Inhalt eines Textfeldes.<br/>.
+         *  GUI-Automatisierungswerkzeug: Selenium.<br/>
+         *  
+         *  \return
+         *  Gibt den Textuellen Inhaltes eines DOM-TextField-s zurück.
+         *  Es korrespondieren je eine Zeile des GUI-Objektes mit jeweil einem Listen-Element.<br/>
+         *  Ein Textfield besteht aus einerZeile: Daher wird der Wert des Textfield-s im ListenElement[0] abgelegt.
+         *  Zurückgegeben.
+         *  \return
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014.06.2014
+         */
         @Override
         public ArrayList<String> getValue()
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
-            Boolean bOK = false;
 
             try
             {
@@ -160,18 +152,10 @@ import okw.gui.OKWLocator;
                 {
                   lvLsReturn.add(this.Me().getAttribute("value"));
                 }
-                bOK = true;
             }
             finally
             {
-                if (bOK)
-                {
-                    this.LogFunctionEndDebug(lvLsReturn.toString());
-                }
-                else
-                {
-                    this.LogFunctionEndDebug();
-                }
+                this.LogFunctionEndDebug(lvLsReturn.toString());
             }
 
             return lvLsReturn;

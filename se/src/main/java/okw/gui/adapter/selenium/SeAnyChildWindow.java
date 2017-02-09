@@ -15,15 +15,26 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-@Deprecated
-public class SeAnyWin extends AnyWinBase
+
+public class SeAnyChildWindow extends AnyChildwindow
 {	
     // Logger Instance holen
     protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
     
     protected LogMessenger LM = new LogMessenger("GUI");
 
-    public SeAnyWin(String Locator, OKWLocator... fpLocators)
+    /**  \~german
+    *  
+    *  @param fpsLocator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
+    *  @param fpParams Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.
+    *  
+    *  \~english
+    *  
+    *  \~
+    *  @author Zoltán Hrabovszki
+    *  @date 2013.05.03
+    */
+    public SeAnyChildWindow(String Locator, OKWLocator... fpLocators)
     {
     	super(Locator, fpLocators);
     }
@@ -60,16 +71,16 @@ public class SeAnyWin extends AnyWinBase
         return;
     }
 
-    /** \~german
-	 *  \brief
-	 *  Ermittelt den textuellen Inhalt der Überschrift eines HTML-Tags anhand des Attributee "textContent".
-	 *   
-	 *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
-	 *  \~english
-	 *  \~
-	 *  @author Zoltán Hrabovszki
-	 *  @date 2013.12.07
-	 */
+    
+   /** \~german
+	  *  Ermittelt den textuellen Inhalt der Überschrift eines HTML-Tags anhand des Attributee "textContent".
+	  *   
+	  *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+	  *  \~english
+	  *  \~
+	  *  @author Zoltán Hrabovszki
+	  *  @date 2013.12.07
+	  */
 	public ArrayList<String> getCaption()
 	{
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
@@ -91,16 +102,8 @@ public class SeAnyWin extends AnyWinBase
 	    }
 	    finally
 	    {
-	        if (bOK)
-	        {
-	            MyLogger.LogFunctionEndDebug(lvLsReturn);
-	        }
-	        else
-	        {
-	            MyLogger.LogFunctionEndDebug();
-	        }
+	        this.LogFunctionEndDebug(lvLsReturn);
 	    }
-	    
 	    return lvLsReturn;
 	}
 

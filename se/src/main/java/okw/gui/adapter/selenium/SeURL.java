@@ -1,10 +1,8 @@
-package okw.gui.adapter.selenium;
-
 /*
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -39,30 +37,28 @@ package okw.gui.adapter.selenium;
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
+package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
-
-import okw.log.*;
-
 import org.openqa.selenium.*;
 
-    // : IOKW_SimpleDataObj
-    /// \~german
-    /// \brief
-    /// Klasse Implementiert das URL-Eingabefeld der Browser.
-    /// Die Klasse besitz keinen <tt>locator</tt>.
-    /// Die URL wird via <tt>SeDriver.Instance.driver.Url</tt> gelesen und geschrieben.
-    /// Die Menge der Verwendbaren Schlüsselwörter ist begrenzt, weil die Selenium WebDriver API
-    /// nur beschränkt an alle Funktionalitäten und Eigenschaften des
-    /// URL-TextFeldes eines Browser herankommt.
-    /// 
-    /// __Wichtig:__ Klasse kann nur zusammen mit Selenium WebBrowser Klassen verwendet werden.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2014.04.19
-    public class SeURL extends SeAnyWin
+    /** : IOKW_SimpleDataObj
+     *  \~german
+     *  Klasse Implementiert das URL-Eingabefeld der Browser.
+     *  Die Klasse besitz keinen <tt>locator</tt>.
+     *  Die URL wird via <tt>SeDriver.Instance.driver.Url</tt> gelesen und geschrieben.
+     *  Die Menge der Verwendbaren Schlüsselwörter ist begrenzt, weil die Selenium WebDriver API
+     *  nur beschränkt an alle Funktionalitäten und Eigenschaften des
+     *  URL-TextFeldes eines Browser herankommt.
+     *  
+     *  __Wichtig:__ Klasse kann nur zusammen mit Selenium WebBrowser Klassen verwendet werden.
+     *  
+     *  \~english
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2014.04.19
+     */
+    public class SeURL extends SeAnyChildWindow
     {
 
         public SeURL()
@@ -70,26 +66,24 @@ import org.openqa.selenium.*;
           super("SeURL");
         }
 
- 
-        protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
- 
-        /// \~german
-        /// \brief
-        /// Liest den aktuellen Tooltip-Wert der URL aus.
-        /// 
-        /// __Diese Methode wird von dieser Klasse nicht unterstützt.__
-        /// 
-        /// \return Tooltip-Wert des aktuellen URL-Textfeldes im aktiven Browser.
-        /// \~english
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014.04.19
+  
+        /** \~german
+         *  \brief
+         *  Liest den aktuellen Tooltip-Wert der URL aus.
+         *  
+         *  __Diese Methode wird von dieser Klasse nicht unterstützt.__
+         *  
+         *  @return Tooltip-Wert des aktuellen URL-Textfeldes im aktiven Browser.
+         *  \~english
+         *  \~
+         *  @author Zoltan Hrabovszki
+         *  @date 2014.04.19
+         */
         public ArrayList<String> getTooltip()
         {
-            Boolean bOK = false;
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            MyLogger.LogFunctionStartDebug("GetTooltip");
+            this.LogFunctionStartDebug("GetTooltip");
 
             try
             {
@@ -98,141 +92,110 @@ import org.openqa.selenium.*;
             }
             finally
             {
-                if (bOK)
-                {
-                    MyLogger.LogFunctionEndDebug(lvLsReturn);
-                }
-                else
-                {
-                    MyLogger.LogFunctionEndDebug();
-                }
+                this.LogFunctionEndDebug(lvLsReturn);
             }
             // return lvLsReturn;
         }
 
-        /// \~german
-        /// \brief
-        /// Liest den aktuellen Wert der URL aus.
-        /// 
-        /// \return Sichtbarer Wert der URL im Aktiven Browser.
-        /// \~english
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014.04.19
+         /**
+          * \~german
+          *  Liest den aktuellen Wert der URL aus.
+          *  
+          *  @return Sichtbarer Wert der URL im Aktiven Browser.
+          *  \~english
+          *  \~
+          *  @author Zoltan Hrabovszki
+          *  @date 2014.04.19
+          */
         public ArrayList<String> GetValue()
         {
-            Boolean bOK = false;
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            MyLogger.LogFunctionStartDebug("GetValue");
+            this.LogFunctionStartDebug("GetValue");
 
             try
             {
                 // Get Value from TextField and Putt this into theReturn ArrayList<String>
                 lvLsReturn.add(SeDriver.getInstance().driver.getCurrentUrl());
-                bOK = true;
             }
             finally
             {
-                if (bOK)
-                {
-                    MyLogger.LogFunctionEndDebug(lvLsReturn);
-                }
-                else
-                {
-                    MyLogger.LogFunctionEndDebug();
-                }
+               this.LogFunctionEndDebug(lvLsReturn);
             }
 
             return lvLsReturn;
         }
 
-        /// \brief
-        /// Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert.
-        /// 
-        /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
-        /// 
-        /// \return Rückgabe des Textuellen Inhaltes der markierten Textes.
-        /// 
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.12.14
+         /** 
+         *  Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert.
+         *  
+         *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
+         *  
+         *  @return Rückgabe des Textuellen Inhaltes der markierten Textes.
+         *  
+         *  @author Zoltan Hrabovszki
+         *  @date 2013.12.14
+         */
         public ArrayList<String> LogValue()
         {
-            Boolean bOK = false;
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             try
             {
-                MyLogger.LogFunctionStartDebug("LogValue");
+                this.LogFunctionStartDebug("LogValue");
                 lvLsReturn = this.GetValue();
-                bOK = true;
             }
             finally
             {
-                if (bOK)
-                {
-                    MyLogger.LogFunctionEndDebug(lvLsReturn);
-                }
-                else
-                {
-                    MyLogger.LogFunctionEndDebug();
-                }
+                this.LogFunctionEndDebug(lvLsReturn);
             }
 
             return lvLsReturn;
         }
 
-        /// \~german
-        /// \brief
-        /// Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes
-        /// für das Schlüsselwort MerkeWert.
-        /// 
-        /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
-        /// 
-        /// \return Rückgabe des Textuellen Inhaltes des aktuellen Objektes.
-        /// 
-        /// \~english
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2013.12.14
+        /**  \~german
+         *  Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes
+         *  für das Schlüsselwort MerkeWert.
+         *  
+         *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
+         *  
+         *  @return Rückgabe des Textuellen Inhaltes des aktuellen Objektes.
+         *  
+         *  \~english
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2013.12.14
+         */
         public ArrayList<String> MemorizeValue()
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
-            Boolean bOK = false;
 
             try
             {
-                MyLogger.LogFunctionStartDebug("Memorize");
+                this.LogFunctionStartDebug("MemorizeValue");
                 lvLsReturn = this.GetValue();
-                bOK = true;
             }
             finally
             {
-                if (bOK)
-                {
-                    MyLogger.LogFunctionEndDebug(lvLsReturn);
-                }
-                else
-                {
-                    MyLogger.LogFunctionEndDebug();
-                }
+               this.LogFunctionEndDebug(lvLsReturn);
             }
 
             return lvLsReturn;
         }
 
-        /// \~german
-        /// \brief Setzt den Focus in das aktuelle URL-TextFeld.
-        /// 
-        /// __Diese Methode wird von dieser Klasse nicht unterstützt.__
-        /// 
-        /// \~english
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014.04.19
+         /**  \~german
+         *  Setzt den Focus in das aktuelle URL-TextFeld.
+         *  
+         *  __Diese Methode wird von dieser Klasse nicht unterstützt.__
+         *  
+         *  \~english
+         *  \~
+         *  @author Zoltan Hrabovszki
+         *  @date 2014.04.19
+         */
         public void SetFocus()
         {
-            MyLogger.LogFunctionStartDebug("SetFocus");
+            this.LogFunctionStartDebug("SetFocus");
 
             try
             {
@@ -241,23 +204,23 @@ import org.openqa.selenium.*;
             }
             finally
             {
-                MyLogger.LogFunctionEndDebug();
+                this.LogFunctionEndDebug();
             }
         }
 
-        /// \~german
-        /// \brief
-        /// Setzt den Wert der URL im aktiven Browser und navigiert zur gegebene Seite.
-        /// 
-        /// Ctrl-Eingaben funktionieren nicht bei Set Value nicht (z.B. <tt>CTRL-C</tt>).
-        /// 
-        /// \~english
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014.04.19
+         /**  \~german
+         *  Setzt den Wert der URL im aktiven Browser und navigiert zur gegebene Seite.
+         *  
+         *  Ctrl-Eingaben funktionieren nicht bei Set Value nicht (z.B. <tt>CTRL-C</tt>).
+         *  
+         *  \~english
+         *  \~
+         *  @author Zoltan Hrabovszki
+         *  @date 2014.04.19
+         */
         public void SetValue(ArrayList<String> fps_Values)
         {
-            MyLogger.LogFunctionStartDebug("SetValue", "fps_Values", fps_Values.get(0));
+            this.LogFunctionStartDebug("SetValue", "fps_Values", fps_Values.get(0));
 
             try
             {
@@ -265,27 +228,27 @@ import org.openqa.selenium.*;
             }
             finally
             {
-                MyLogger.LogFunctionEndDebug();
+                this.LogFunctionEndDebug();
             }
 
             return;
         }
 
-        /// \~german
-        /// \brief
-        /// Setzt den Wert der URL im aktiven Browser/BrowserChild und navigiert zur gegebenen Seite.
-        /// 
-        /// __Wichtig:__ Die URL wird in dieser Klasse technisch nicht über die Tastatur eigegeben. Implementierung erfolg 
-        /// aus Kompfort- und Kompatinilitätsgründen.
-        /// Dass heißt Ctrl-Eingaben funktionieren nicht(z.B. <tt>CTRL-C</tt>).
-        /// 
-        /// \~english
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014.04.19
+         /**  \~german
+         *  Setzt den Wert der URL im aktiven Browser/BrowserChild und navigiert zur gegebenen Seite.
+         *  
+         *  __Wichtig:__ Die URL wird in dieser Klasse technisch nicht über die Tastatur eigegeben. Implementierung erfolg 
+         *  aus Kompfort- und Kompatinilitätsgründen.
+         *  Dass heißt Ctrl-Eingaben funktionieren nicht(z.B. <tt>CTRL-C</tt>).
+         *  
+         *  \~english
+         *  \~
+         *  @author Zoltan Hrabovszki
+         *  @date 2014.04.19
+         */
         public void TypeKey(ArrayList<String> fps_Values)
         {
-            MyLogger.LogFunctionStartDebug("TypeKey", "fps_Values", fps_Values.get(0));
+            this.LogFunctionStartDebug("TypeKey", "fps_Values", fps_Values.get(0));
 
             try
             {
@@ -294,49 +257,40 @@ import org.openqa.selenium.*;
             }
             finally
             {
-                MyLogger.LogFunctionEndDebug();
+                this.LogFunctionEndDebug();
             }
 
             return;
         }
 
-        /// \brief
-        /// Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
-        /// 
-        /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-        /// 
-        /// \return
-        /// Rückgabe des Textuellen Inhaltes der markierten Textes.
-        /// Es wird immer der aktuelle Wert des Objektes zurückgeliefert.
-        /// 
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.12.14
+         /**
+          *  Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
+          *  
+          *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+          *  
+          *  \return
+          *  Rückgabe des Textuellen Inhaltes der markierten Textes.
+          *  Es wird immer der aktuelle Wert des Objektes zurückgeliefert.
+          *  
+          *  @author Zoltan Hrabovszki
+          *  @date 2013.12.14
+          */
         public ArrayList<String> VerifyValue()
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
-            Boolean bOK = false;
 
             try
             {
-                MyLogger.LogFunctionStartDebug("VerifyValue");
+                this.LogFunctionStartDebug("VerifyValue");
 
                 lvLsReturn.add( SeDriver.getInstance().driver.getCurrentUrl() );
                 
-                bOK = true;
             }
             finally
             {
-                if (bOK)
-                {
-                    MyLogger.LogFunctionEndDebug(lvLsReturn);
-                }
-                else
-                {
-                    MyLogger.LogFunctionEndDebug();
-                }
+                    this.LogFunctionEndDebug(lvLsReturn);
             }
 
             return lvLsReturn;
         }
-
 }

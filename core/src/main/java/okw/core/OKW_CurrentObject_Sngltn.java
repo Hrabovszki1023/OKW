@@ -250,6 +250,7 @@ public class OKW_CurrentObject_Sngltn
     return Instance;
   }
 
+  @Deprecated
   private static Integer CalculateLoopCount( Integer SleepForInMillis, Integer MaxWaitInSeconds )
   {
     Integer lviReturn = MaxWaitInSeconds * 1000 / SleepForInMillis;
@@ -780,7 +781,9 @@ public class OKW_CurrentObject_Sngltn
    * parameter as type-String. \param fpsParameter_2 2nd parameter as
    * type-String. \param fpLsValue 3rd parameter as type-List&lt;String&gt;.
    *
-   * \~ \author Zoltan Hrabovszki \date 2012.11.01
+   * \~
+   * @author Zoltan Hrabovszki
+   * @date 2012.11.01
    */
   public void CallMethod( String FN, String fpsMethod, String fpsParameter_1, String fpsParameter_2, ArrayList<String> fpLsValue ) throws IllegalAccessException,
           IllegalArgumentException, InvocationTargetException, XPathExpressionException

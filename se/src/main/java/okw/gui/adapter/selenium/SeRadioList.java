@@ -55,7 +55,7 @@ import okw.gui.OKWLocator;
     /** \brief
      *  TODO: Description of SeRadioList.
      */ 
-    public class SeRadioList extends SeSimpleDataObjBase // : IOKW_ListDataObj
+    public class SeRadioList extends SeAnyChildWindow
     {
       
       // Instance of OKW_CurrentObject
@@ -71,11 +71,8 @@ import okw.gui.OKWLocator;
         ArrayList<String> myRadioButtonFNs = null;
         
         /**
-         *  \brief
-         * 
-         * @param Locator Definiert die Objekterkennungseigenschaft des Objektes und muss als XPATH angegeben.
-         * @param fpLocators Refernz auf ein bis N 
-         */
+         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+         */         
         public SeRadioList(String Locator, OKWLocator... fpLocators)
         {
         	super(Locator, fpLocators);

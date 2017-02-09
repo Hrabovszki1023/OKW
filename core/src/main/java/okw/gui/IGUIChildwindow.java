@@ -2,7 +2,7 @@ package okw.gui;
  
 import java.util.ArrayList;
  
-public interface IGUI 
+public interface IGUIChildwindow 
 {
         ArrayList<String> getCaption();
         Boolean getExists();

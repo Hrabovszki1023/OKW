@@ -41,6 +41,8 @@ package okw.gui.adapter.selenium.webdriver;
 
 
 import java.util.ArrayList;
+
+import okw.gui.AnyWindow;
 import okw.gui.adapter.selenium.SeDriver;
 import okw.log.Logger_Sngltn;
 
@@ -60,7 +62,7 @@ import okw.log.Logger_Sngltn;
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2015.05.12
-    public class SeHtmlUnitDriver
+    public class SeHtmlUnitDriver extends AnyWindow
     {
         protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
 

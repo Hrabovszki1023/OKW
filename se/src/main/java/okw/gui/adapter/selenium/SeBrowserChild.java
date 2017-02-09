@@ -39,14 +39,22 @@
 
 package okw.gui.adapter.selenium;
 
+import java.io.IOException;
+
+import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
+
+import org.xml.sax.SAXException;
+
 import okw.OKW;
-import okw.gui.AnyWinBase;
+import okw.gui.AnyWindow;
 import okw.gui.OKWLocator;
 
-    /// \brief
-    /// TODO: class SeBrowserChild dokumentieren...
-    /// 
-    public class SeBrowserChild extends AnyWinBase
+    /** \brief
+     * TODO: class SeBrowserChild dokumentieren...
+     */ 
+    public class SeBrowserChild extends AnyWindow
     {
 
         // The class for the window that contains the contents of the Web page.
@@ -55,11 +63,13 @@ import okw.gui.OKWLocator;
         @OKW(FN="URL")
         public SeURL URL = new SeURL();
 
-
+        /**
+         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+         */
         public SeBrowserChild(String fpsLocator, OKWLocator... fpLocators )
         {
         	super( fpsLocator, fpLocators);
-            this.locator = new OKWLocator( getLocator() );
+          this.locator = new OKWLocator( getLocator() );
         }
 
         public SeBrowserChild()
@@ -67,10 +77,17 @@ import okw.gui.OKWLocator;
             // ;
         }
 
-
+        @Override
         public void SelectWindow()
         {
-        	
+        	  try
+            {
+              this.WaitForMe();
+            }
+            catch (XPathExpressionException | InterruptedException | JAXBException | ParserConfigurationException | SAXException | IOException e)
+            {
+              // TODO Auto-generated catch block
+              e.printStackTrace();
+            }
         }
-
     }

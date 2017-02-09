@@ -11,14 +11,18 @@ import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.gui.OKWLocator;
 
-public class SeInputRadio extends SeSimpleDataObjBase
+public class SeInputRadio extends SeAnyChildWindow
 {
 
+  /**
+   *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+   */         
   public SeInputRadio( String Locator, OKWLocator... fpLocators )
   {
     super(Locator, fpLocators);// TODO Auto-generated constructor stub
   }
 
+  
   /** Ermittelt den aktuellen Wert des RadioButtons.
    * 
    * Mögliche Werte sind sprachabhängig CHECKED/UNCHECKED
@@ -31,7 +35,6 @@ public class SeInputRadio extends SeSimpleDataObjBase
   public ArrayList<String> getValue()
   {
       ArrayList<String> lvls_Return = new ArrayList<String>();
-      Boolean bOK = false;
       try
       {
           this.LogFunctionStartDebug("getValue");
@@ -53,21 +56,12 @@ public class SeInputRadio extends SeSimpleDataObjBase
               String lvsValue = OKW_Const_Sngltn.getInstance().GetConst4Internalname("UNCHECKED");
               lvls_Return.add(lvsValue);
           }
-
-          bOK = true;
       }
       finally
       {
-          if (bOK)
-          {
-              this.LogFunctionEndDebug();
-          }
-          else
-          {
-              this.LogFunctionEndDebug(lvls_Return);
-          }
+          this.LogFunctionEndDebug(lvls_Return);
       }
-
+      
       return lvls_Return;
   }
   
@@ -81,7 +75,6 @@ public class SeInputRadio extends SeSimpleDataObjBase
    */
   public Boolean IsSelected()
   {
-      Boolean bOK = false;
       Boolean lvbReturn = false;
       
       this.LogFunctionStartDebug("IsSelected");
@@ -90,18 +83,10 @@ public class SeInputRadio extends SeSimpleDataObjBase
       {
           // Hole Zusand: Häckchen oder kein Häckchen, das ist hier die Frage?
           lvbReturn = this.Me().isSelected();
-          bOK = true;
       }
       finally
       {
-          if (bOK)
-          {
-              this.LogFunctionEndDebug(lvbReturn);
-          }
-          else
-          {
-              this.LogFunctionEndDebug( );
-          }
+          this.LogFunctionEndDebug(lvbReturn);
       }
       return lvbReturn;
   }
@@ -121,9 +106,9 @@ public class SeInputRadio extends SeSimpleDataObjBase
   {
       try
       {
-          this.LogFunctionStartDebug("getCaption");
-          // String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
-    	  throw new OKWFrameObjectMethodNotImplemented("Radiobutton/SeInputRadion has no Caption! - See Label...");
+         this.LogFunctionStartDebug("getCaption");
+         // String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
+    	   throw new OKWFrameObjectMethodNotImplemented("Radiobutton/SeInputRadion has no Caption! - See Label...");
       }
       finally
       {      
@@ -207,6 +192,7 @@ public class SeInputRadio extends SeSimpleDataObjBase
 	          this.LogFunctionEndDebug( );
 	      }
 	  }
+
   
   /** \~german
    *  Diese Implemnetierung geht davon aus das ein RadioButten 

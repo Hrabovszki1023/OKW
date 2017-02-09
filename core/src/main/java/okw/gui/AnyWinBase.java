@@ -38,19 +38,29 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 package okw.gui;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
+
+import org.xml.sax.SAXException;
+
+import okw.FrameObjectDictionary_Sngltn;
+import okw.OKW_TimeOut;
 import okw.core.IOKW_FN;
+import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.log.*;
 
-/// \brief
-/// Description of AnyWin.
-/// 
-public abstract class AnyWinBase implements IOKW_FN
+/** \brief
+ * Description of AnyWin.
+ */ 
+public abstract class AnyWinBase
 {
 	Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 	
-	private OKWLocator _locator;
+	protected OKWLocator _locator;
 	
 	/** \~german
    *  Holt den vollständig (rekursiv) aufgelösten  (z.B. XPath-Wert) des Locators.
@@ -89,101 +99,33 @@ public abstract class AnyWinBase implements IOKW_FN
           return this._locator;
   }
 
-  /** \~german
-   *  FN - Funktionaler Name des aktuellen GUI-Objektes.
-   *  
-   *  Wert wird 
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2014.04.27
-   */    
-  private String myFN = "";
-	
-  public void setFN(String fpsFN)
-  {
-    this.myFN =  fpsFN;
-  }
-
   
   /** \~german
-   *  Holt den funktionalen Name dws GUI-Objektes.
-   * 
-   *  Hinweis: Jeder GUI-Adapter kennt seinen eigenen funktionalen Namen.
-   *  Dieser wird beim instanzieren der Frame-Objecte währen des Frame-Classen-Scans in der Methode FrameObjectDictionary_Sngltn.FrameScan()
-   *  mitgeteilt.
-   *  Wert wird 
+   *  Prüft die Existenz des aktuellen Objektes.
    *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
+   *  - Methode kann hier nicht implementiert werden.
+   *  - Hier wird die Ausnahme OKWFrameObjectMethodNotImplemented ausgelöst.
    *  
+   *  Hinweis zur Implementierung:
+   *  - Implementierung durcg Methoden überschreiung in den GUI-Klassen.
+   *  - Ist eine elementare Funktion, muss Werkzeugspezifisch (für Selenium, AutoIt, SilkTets usw.) defiert sein/werden.
+   *  - Warten nicht auf die Existenz eines Objektes!
+   *  - Es wird nur ein eiziges mal die Existenz geprüft.
+   *  - Es wird keine Ausnahme ausgelöst, wenn das Object nicht vorhanden ist!
+   *  
+   *  @return true, falls das eindeutig Objekt gefunden worden ist ist, sonst false.
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2014.04.27
+   *  @date 2017.01.31
    */  
-  public String getFN( )
+  public Boolean getExists()
   {
-    return this.myFN;
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method getExists() is not definden for you GUI-Object. Please define first the methode!");
   }
 
   
-  /** \~german
-   *  Parent-Objekt FN des aktuellen GUI-Objektes.
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2016.11.20
-   */    
-  private String myParentFN = "";
-
-  
-  /** \~german
-   *  Setzten des Parent-Objekt FN.
-   *  
-   *  @fpsParentFN FN des Parent-Objektes
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2016.11.20
-   */    
-  public void setParentFN(String fpsParentFN)
-  {
-    this.myParentFN =  fpsParentFN;
-  }
-
-  /** \~german
-   *  Setzten des Parent-Objekt FN.
-   *  
-   *  @return FN des Parent-Objektes.
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2016.11.20
-   */ 
-  public String getParentFN( )
-  {
-    return this.myParentFN;
-  }
-
-  
-    public AnyWinBase()
+  public AnyWinBase()
     {
         this._locator = new OKWLocator("");
     }
@@ -262,7 +204,6 @@ public abstract class AnyWinBase implements IOKW_FN
     	myLogger.LogFunctionEndDebug();
     }
 
-    
     /** \~german
      *  \brief
      *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEndDebug(string) auf.
@@ -277,9 +218,10 @@ public abstract class AnyWinBase implements IOKW_FN
      *  @author Zoltán Hrabovszki
      *  @date 2015.01.18
      */
-    protected void LogFunctionEndDebug(String fpsReturn)
+    protected void LogFunctionEndDebug(String fpReturn)
     {
-    	myLogger.LogFunctionEndDebug(fpsReturn);
+      if( fpReturn != null) myLogger.LogFunctionEndDebug(fpReturn);
+      else myLogger.LogFunctionEnd();
     }
 
     
@@ -296,9 +238,11 @@ public abstract class AnyWinBase implements IOKW_FN
      *  @author Zoltán Hrabovszki
      *  @date 2015.01.18
      */
-    protected void LogFunctionEndDebug(Boolean fpbReturn)
+    protected void LogFunctionEndDebug(Boolean fpReturn)
     {
-    	myLogger.LogFunctionEndDebug(fpbReturn);
+      if( fpReturn != null) myLogger.LogFunctionEndDebug(fpReturn);
+      else myLogger.LogFunctionEnd();
+
     }
 
     /**
@@ -314,8 +258,9 @@ public abstract class AnyWinBase implements IOKW_FN
      *  @author Zoltán Hrabovszki
      *  @date 2015.01.18
      */
-    protected void LogFunctionEndDebug(ArrayList<String> fpLsReturn)
+    protected void LogFunctionEndDebug(ArrayList<String> fpReturn)
     {
-    	myLogger.LogFunctionEndDebug(fpLsReturn);
+      if( fpReturn != null) myLogger.LogFunctionEndDebug(fpReturn);
+      else myLogger.LogFunctionEnd();
     }
 }

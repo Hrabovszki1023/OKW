@@ -1,7 +1,3 @@
-package okw.gui.adapter.selenium;
-
-import okw.gui.OKWLocator;
-
 /*
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
@@ -40,17 +36,20 @@ import okw.gui.OKWLocator;
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
+package okw.gui.adapter.selenium;
+
+import okw.gui.OKWLocator;
+
 
     /// \brief
     /// TODO: Description of SePopupList.
     /// 
-    public class SePopupList extends SeAnyWin
+    public class SePopupList extends SeAnyChildWindow
     {
 
-        /// \brief
-        /// TODO: Description of SePopupList.Constructor.
-        /// 
-        /// \param Locator definiert die Objekterkennungseigenschaft des Objektes und wird als XPATH angegeben
+      /**
+       *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+       */         
     public SePopupList(String Locator, OKWLocator... fpLocators)
     {
     	super(Locator, fpLocators);
