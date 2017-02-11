@@ -55,6 +55,7 @@ import org.xml.sax.SAXException;
 
 import okw.core.IOKW_FN;
 import okw.exceptions.*;
+import okw.gui.IGUIWindow;
 import okw.log.Logger_Sngltn;
 
 /// \~german

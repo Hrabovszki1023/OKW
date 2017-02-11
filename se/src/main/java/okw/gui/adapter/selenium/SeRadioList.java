@@ -39,10 +39,16 @@
 
 package okw.gui.adapter.selenium;
 
+import java.io.IOException;
 import java.util.ArrayList;
+
+import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.xml.sax.SAXException;
 
 import okw.FrameObjectDictionary_Sngltn;
 import okw.OKW_Const_Sngltn;
@@ -154,7 +160,7 @@ import okw.gui.OKWLocator;
    *  @author Zoltan Hrabovszki
    *  @date 2013.12.14
    */
-  public ArrayList<String> getValue( ) throws Exception
+  public ArrayList<String> getValue( )
   {
       ArrayList<String> lvLsReturn = new ArrayList<String>();
       
@@ -183,6 +189,31 @@ import okw.gui.OKWLocator;
           break;
         }
       }
+    }
+    catch (XPathExpressionException e)
+    {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    catch (JAXBException e)
+    {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    catch (ParserConfigurationException e)
+    {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    catch (SAXException e)
+    {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    catch (IOException e)
+    {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
     }
       finally
       {

@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import okw.*;
-import okw.gui.AnyWinBase;
+import okw.gui.AnyChildwindow;
 import okw.log.Logger_Sngltn;
 
 
-    public class CurrentChildObject_Allmethods extends AnyWinBase // : IOKW_SimpleDataObj
+    public class CurrentChildObject_Allmethods extends AnyChildwindow // : IOKW_SimpleDataObj
     {
 
         protected String Locator;

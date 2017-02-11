@@ -38,13 +38,13 @@
 */
 package okw.gui.adapter;
 
-import okw.gui.AnyWinBase;
+import okw.gui.AnyChildwindow;
 
 /// \brief
     /// Dieses GUI-Objekt enthält keine OKW-Methoden und
     /// dient damit der Überprüfung des "OKWFrameObjectMethodNotFoundException"-s.
     /// 
-    public class Test_NoMethod_Object  extends AnyWinBase// : IOKW_SimpleDataObj
+    public class Test_NoMethod_Object  extends AnyChildwindow// : IOKW_SimpleDataObj
     {
 
         String Locator;

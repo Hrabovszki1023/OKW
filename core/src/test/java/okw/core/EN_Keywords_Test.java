@@ -1645,7 +1645,7 @@ public class EN_Keywords_Test {
     assertEquals( "2. Value", myClipBoard.getValue().get( 1 ) );
     assertEquals( "3. Value", myClipBoard.getValue().get( 2 ) );
 
-    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+    assertEquals( "Rechner.AllMethods_MultipleValues", myClipBoard.getObjectName() );
     assertEquals( "VerifyValue()", myClipBoard.getMethod() );
   }
   
@@ -1718,7 +1718,7 @@ public class EN_Keywords_Test {
     assertEquals( "2. Value", myClipBoard.getValue().get( 1 ) );
     assertEquals( "3. Value", myClipBoard.getValue().get( 2 ) );
 
-    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+    assertEquals( "Rechner.AllMethods_MultipleValues", myClipBoard.getObjectName() );
     assertEquals( "VerifyValue()", myClipBoard.getMethod() );
   }
   
@@ -1788,7 +1788,7 @@ public class EN_Keywords_Test {
     assertEquals( "2. Value", myClipBoard.getValue().get( 1 ) );
     assertEquals( "3. Value", myClipBoard.getValue().get( 2 ) );
 
-    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+    assertEquals( "Rechner.AllMethods_MultipleValues", myClipBoard.getObjectName() );
     assertEquals( "VerifyValue()", myClipBoard.getMethod() );
   }
 

@@ -61,6 +61,47 @@ public abstract class AnyWinBase
 	Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 	
 	protected OKWLocator _locator;
+
+  /** \~german
+   *  FN - Funktionaler Name des aktuellen GUI-Objektes.
+   *  
+   *  Wert wird 
+   *  
+   *  \~english
+   *  \brief
+   *  @todo TODO:  Übersetzung ins Englische fehlt...
+   *  
+   *  \~
+   *  @author Zoltán Hrabovszki
+   *  @date 2014.04.27
+   */    
+  private String myFN = "";
+
+  /** \~german
+   *  Parent-Objekt FN des aktuellen GUI-Objektes.
+   *  
+   *  \~english
+   *  \brief
+   *  @todo TODO:  Übersetzung ins Englische fehlt...
+   *  
+   *  \~
+   *  @author Zoltán Hrabovszki
+   *  @date 2016.11.20
+   */    
+  private String myKN = "";
+
+  /** \~german
+   *  Parent-Objekt FN des aktuellen GUI-Objektes.
+   *  
+   *  \~english
+   *  \brief
+   *  @todo TODO:  Übersetzung ins Englische fehlt...
+   *  
+   *  \~
+   *  @author Zoltán Hrabovszki
+   *  @date 2016.11.20
+   */    
+  private String myParentFN = "";
 	
 	/** \~german
    *  Holt den vollständig (rekursiv) aufgelösten  (z.B. XPath-Wert) des Locators.
@@ -262,5 +303,103 @@ public abstract class AnyWinBase
     {
       if( fpReturn != null) myLogger.LogFunctionEndDebug(fpReturn);
       else myLogger.LogFunctionEnd();
+    }
+
+    /** \~german
+     *  Holt den funktionalen Name dws GUI-Objektes.
+     * 
+     *  Hinweis: Jeder GUI-Adapter kennt seinen eigenen funktionalen Namen.
+     *  Dieser wird beim instanzieren der Frame-Objecte währen des Frame-Classen-Scans in der Methode FrameObjectDictionary_Sngltn.FrameScan()
+     *  mitgeteilt.
+     *  Wert wird 
+     *  
+     *  \~english
+     *  \brief
+     *  @todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2014.04.27
+     */  
+    public String getFN( )
+    {
+      return this.myFN;
+    }
+
+    /** \~german
+     *  Setzten des Objekt KN.
+     *  
+     *  @return KN des Objektes.
+     *  
+     *  \~english
+     *  \brief
+     *  @todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2016.11.20
+     */ 
+    public String getKN( )
+    {
+      return this.myKN;
+    }
+
+    /** \~german
+     *  Setzten des Parent-Objekt FN.
+     *  
+     *  @return FN des Parent-Objektes.
+     *  
+     *  \~english
+     *  \brief
+     *  @todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2016.11.20
+     */ 
+    public String getParentFN( )
+    {
+      return this.myParentFN;
+    }
+
+    public void setFN(String fpsFN)
+    {
+      this.myFN =  fpsFN;
+    }
+
+    /** \~german
+     *  Setzten des Keyname FN.
+     *  
+     *  @fpsParentFN KN des Objektes
+     *  
+     *  \~english
+     *  \brief
+     *  @todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2016.11.20
+     */    
+    public void setKN(String fpsKN)
+    {
+      this.myKN =  fpsKN;
+    }
+
+    /** \~german
+     *  Setzten des Parent-Objekt FN.
+     *  
+     *  @fpsParentFN FN des Parent-Objektes
+     *  
+     *  \~english
+     *  \brief
+     *  @todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2016.11.20
+     */    
+    public void setParentFN(String fpsParentFN)
+    {
+      this.myParentFN =  fpsParentFN;
     }
 }

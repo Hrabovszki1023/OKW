@@ -175,13 +175,5 @@ public class frmTestRechner extends Test_Window
                 myLogger.LogFunctionEndDebug();
                 return;
             }
-            
-/**            @Override
-            public String getFN()
-            {
-                return "Rechner";
-            }
-            */
-
         }
     }

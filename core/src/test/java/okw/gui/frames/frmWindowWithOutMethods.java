@@ -4,7 +4,6 @@ import okw.*;
 import okw.core.IOKW_FN;
 
 
-
 /// \brief
 /// Test-Frame-Klasse: Diese Klasse dient als Unittest-Objekt.<br/>
 /// Dieser Klasse dient(e) als als TestFenster um zu zeigen/testen<br/>

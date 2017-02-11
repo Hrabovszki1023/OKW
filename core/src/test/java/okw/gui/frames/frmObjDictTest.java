@@ -1,6 +1,7 @@
 package okw.gui.frames;
 
 import okw.*;
+import okw.gui.AnyChildwindow;
 import okw.gui.adapter.*;
 import okw.log.*;
 
@@ -50,7 +51,7 @@ public class frmObjDictTest extends Test_Window
         public myTestbutton myInlineClassDef = this.new myTestbutton("locator");
         
         
-        public class myTestbutton
+        public class myTestbutton extends AnyChildwindow
         {
 
           public myTestbutton( String fpsLocator )

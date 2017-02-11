@@ -56,35 +56,8 @@ import okw.log.*;
 /** \brief
  * Description of AnyWin.
  */ 
-public abstract class AnyWindow extends AnyWinBase implements IGUIWindow
+public abstract class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_FN
 {
-	  
-  /** \~german
-   *  FN - Funktionaler Name des aktuellen GUI-Objektes.
-   *  
-   *  Wert wird 
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2014.04.27
-   */    
-  private String myFN = "";
-  /** \~german
-   *  Parent-Objekt FN des aktuellen GUI-Objektes.
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2016.11.20
-   */    
-  private String myKN = "";
 
   
   /** \~german
@@ -215,71 +188,5 @@ public abstract class AnyWindow extends AnyWinBase implements IGUIWindow
         Count++;
       }
       return lvbReturn;
-    }
-
-
-    /** \~german
-     *  Holt den funktionalen Name dws GUI-Objektes.
-     * 
-     *  Hinweis: Jeder GUI-Adapter kennt seinen eigenen funktionalen Namen.
-     *  Dieser wird beim instanzieren der Frame-Objecte währen des Frame-Classen-Scans in der Methode FrameObjectDictionary_Sngltn.FrameScan()
-     *  mitgeteilt.
-     *  Wert wird 
-     *  
-     *  \~english
-     *  \brief
-     *  @todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  @date 2014.04.27
-     */  
-    public String getFN( )
-    {
-      return this.myFN;
-    }
-
-
-    /** \~german
-     *  Setzten des Objekt KN.
-     *  
-     *  @return KN des Objektes.
-     *  
-     *  \~english
-     *  \brief
-     *  @todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  @date 2016.11.20
-     */ 
-    public String getKN( )
-    {
-      return this.myKN;
-    }
-
-
-    public void setFN(String fpsFN)
-    {
-      this.myFN =  fpsFN;
-    }
-
-
-    /** \~german
-     *  Setzten des Keyname FN.
-     *  
-     *  @fpsParentFN KN des Objektes
-     *  
-     *  \~english
-     *  \brief
-     *  @todo TODO:  Übersetzung ins Englische fehlt...
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  @date 2016.11.20
-     */    
-    public void setKN(String fpsKN)
-    {
-      this.myKN =  fpsKN;
     }
 }

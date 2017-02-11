@@ -18,6 +18,7 @@ public class frmObjDictGuiContainer1
   VerifyCaption_PT=500, VerifyCaption_TO=1)
 
   public Test_TextField myName = new Test_TextField("New Locator Name");
+
   
   /** \brief
    *  Anzeige ist ein GUI-Objekt ohne weitere Veränderung der Basisklasse Test_TextField.

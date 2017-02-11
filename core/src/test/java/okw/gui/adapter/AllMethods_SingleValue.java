@@ -11,11 +11,11 @@ import javax.xml.xpath.XPathExpressionException;
 import org.xml.sax.SAXException;
 
 import okw.*;
-import okw.gui.AnyWinBase;
+import okw.gui.AnyChildwindow;
 import okw.log.Logger_Sngltn;
 
 
-    public class AllMethods_SingleValue extends AnyWinBase
+    public class AllMethods_SingleValue extends AnyChildwindow
     {
 
         protected String Locator;
@@ -33,11 +33,12 @@ import okw.log.Logger_Sngltn;
             this.Locator = fps_Locator;
         }
 
-        
+        /**
         public String getFN()
         {
             return "Rechner.All_MethodsObj";
         }
+        */
         
         public void ClickOn()
         {
@@ -45,7 +46,7 @@ import okw.log.Logger_Sngltn;
           this.myLogger.LogFunctionStartDebug("ClickOn");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = this.getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("ClickOn()");
@@ -61,7 +62,7 @@ import okw.log.Logger_Sngltn;
           this.myLogger.LogFunctionStartDebug("ClickOn_Clicktype");
             
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("DoubleClickOn()");
@@ -79,7 +80,7 @@ import okw.log.Logger_Sngltn;
             this.myLogger.LogFunctionStartDebug("LogExists");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("LogExists()");
@@ -106,7 +107,7 @@ import okw.log.Logger_Sngltn;
           this.myLogger.LogFunctionStartDebug("LogHasFocus");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("LogHasFocus()");
@@ -133,7 +134,7 @@ import okw.log.Logger_Sngltn;
             this.myLogger.LogFunctionStartDebug("LogIsActive");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("LogIsActive()");
@@ -165,7 +166,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add("Wert_3");
 
             myClipboard.Clear();
-           String lvs_ObjectName = getFN();
+           String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("LogSelected()");
@@ -185,7 +186,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add(Row);
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("LogTablecellValue()");
@@ -207,7 +208,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add("Tooltip Rückgabewert 3");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("LogTooltip()");
@@ -228,7 +229,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add("Caption Rückgabewert 3");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("LogCaption()");
@@ -249,7 +250,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add("Label Rückgabewert 3");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("LogLabel()");
@@ -270,7 +271,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add("Return Value 3");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("LogValue()");
@@ -286,7 +287,7 @@ import okw.log.Logger_Sngltn;
             this.myLogger.LogFunctionStartDebug("MemorizeExists");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("MemorizeExists()");
@@ -302,7 +303,7 @@ import okw.log.Logger_Sngltn;
             this.myLogger.LogFunctionStartDebug("MemorizeHasFocus");
 
             myClipboard.Clear();
-           String lvs_ObjectName = getFN();
+           String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("MemorizeHasFocus()");
@@ -318,7 +319,7 @@ import okw.log.Logger_Sngltn;
             this.myLogger.LogFunctionStartDebug("MemorizeIsActive");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("MemorizeIsActive()");
@@ -338,7 +339,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add("MemorizeSelectedValue_Return_2");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("MemorizeSelectedValue()");
@@ -357,7 +358,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add("MemorizeTablecellValue_1");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("MemorizeTablecellValue()");
@@ -378,7 +379,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add("MemorizeTooltip_Return_2");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("MemorizeTooltip()");
@@ -398,7 +399,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add("MemorizeCaption_Return_2");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("MemorizeCaption()");
@@ -418,7 +419,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add("MemorizeLabel_Return_2");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("MemorizeLabel()");
@@ -437,7 +438,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add("MemorizeValue_Return_1");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("MemorizeValue()");
@@ -459,7 +460,7 @@ import okw.log.Logger_Sngltn;
               this.myALValue.addAll( fpLs_Value );
 
               myClipboard.Clear();             
-            	String lvs_ObjectName = getFN();
+            	String lvs_ObjectName = getKN();
 
               myClipboard.setObjectName(lvs_ObjectName);
               myClipboard.setMethod("Select()");
@@ -485,7 +486,7 @@ import okw.log.Logger_Sngltn;
           this.myLogger.LogFunctionStartDebug("SelectMenu");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("SelectMenu()");
@@ -504,7 +505,7 @@ import okw.log.Logger_Sngltn;
             this.myALValue.addAll( fpLsValue );
             
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("SelectMenu_Value()");
@@ -520,7 +521,7 @@ import okw.log.Logger_Sngltn;
             this.myLogger.LogFunctionStartDebug("SelectTablecell", "String COL", COL, "String ROW", ROW);
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("SelectTablecell()");
@@ -538,7 +539,7 @@ import okw.log.Logger_Sngltn;
         {
             this.myLogger.LogFunctionStartDebug("SelectTablecell", "String COL", COL, "String ROW", ROW, "String ClickType", fpsClickType);
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("SelectTablecellClicktype()");
@@ -565,7 +566,7 @@ import okw.log.Logger_Sngltn;
             this.myLogger.LogFunctionStartDebug("Select_Clicktype");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("Select_Clicktype()");
@@ -580,7 +581,7 @@ import okw.log.Logger_Sngltn;
         public void Select_TABLE(ArrayList<String> fpLs_Value)
         {
             this.myLogger.LogFunctionStartDebug("OKW_Select");
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("OKW_Select_TABLE()");
@@ -596,7 +597,7 @@ import okw.log.Logger_Sngltn;
             this.myLogger.LogFunctionStartDebug("SetFocus");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("SetFocus()");
@@ -619,7 +620,7 @@ import okw.log.Logger_Sngltn;
 
       // Clipboard löschen und Werte setzen...
       myClipboard.Clear();
-      String lvs_ObjectName = getFN();
+      String lvs_ObjectName = getKN();
 
       myClipboard.setObjectName( lvs_ObjectName );
       myClipboard.setMethod( "SetValue()" );
@@ -647,7 +648,7 @@ import okw.log.Logger_Sngltn;
 
               myClipboard.Clear();
                 
-                String lvs_ObjectName = getFN();
+                String lvs_ObjectName = getKN();
 
                 myClipboard.setObjectName(lvs_ObjectName);
                 myClipboard.setMethod("TypeKey(List<String> fpLs_Value)");
@@ -674,7 +675,7 @@ import okw.log.Logger_Sngltn;
             {
                 myClipboard.Clear();
                 
-                String lvs_ObjectName = getFN();
+                String lvs_ObjectName = getKN();
 
                 myClipboard.setObjectName(lvs_ObjectName);
                 myClipboard.setMethod("TypeKeyTablecell(String COL, String ROW, List<String> Values)");
@@ -719,7 +720,7 @@ import okw.log.Logger_Sngltn;
             }
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyExists()");
@@ -749,7 +750,7 @@ import okw.log.Logger_Sngltn;
               e.printStackTrace();
             }
             
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyHasFocus()");
@@ -779,7 +780,7 @@ import okw.log.Logger_Sngltn;
             }
 
             myClipboard.Clear();   
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyIsActive()");
@@ -800,7 +801,7 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.Clear();
             
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifySelectedValue()");
@@ -819,7 +820,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.addAll(fpLsExpectedValue);
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyTablecellValue()");
@@ -841,7 +842,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add("The one and only Value");
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyTooltip()");
 
@@ -860,7 +861,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.addAll(this.myALValue);
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyCaption()");
 
@@ -881,7 +882,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.addAll(this.myALValue);
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyLabel()");
 
@@ -901,7 +902,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.addAll(myALValue);
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyValue()");
 

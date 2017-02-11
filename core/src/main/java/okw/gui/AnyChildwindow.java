@@ -56,7 +56,7 @@ import okw.log.*;
 /** \brief
  * Description of AnyWin.
  */ 
-public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwindow
+public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwindow, IOKW_FN
 {
 	Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 	
@@ -85,155 +85,45 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
     throw new OKWFrameObjectMethodNotImplemented("The method getExists() is not defined for you GUI-Object. Please define first the methode!");
   }
 
-  
-  /** \~german
-   *  Parent-Objekt FN des aktuellen GUI-Objektes.
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2016.11.20
-   */    
-  private String myKN = "";
-
-  
-  /** \~german
-   *  Setzten des Keyname FN.
-   *  
-   *  @fpsParentFN KN des Objektes
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2016.11.20
-   */    
-  public void setKN(String fpsKN)
+  public Boolean getHasFocus()
   {
-    this.myKN =  fpsKN;
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method getHasFocus() is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public Boolean getIsActive()
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method getIsActive() is not defined for you GUI-Object. Please define first the methode!");
   }
 
   
-  /** \~german
-   *  Setzten des Objekt KN.
-   *  
-   *  @return KN des Objektes.
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2016.11.20
-   */ 
-  public String getKN( )
+  public ArrayList<String> getCaption()
   {
-    return this.myKN;
-  }
-
-
-  
-  /** \~german
-   *  FN - Funktionaler Name des aktuellen GUI-Objektes.
-   *  
-   *  Wert wird 
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2014.04.27
-   */    
-  private String myFN = "";
-	
-  public void setFN(String fpsFN)
-  {
-    this.myFN =  fpsFN;
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method getCaption() is not defined for you GUI-Object. Please define first the methode!");
   }
 
   
-  /** \~german
-   *  Holt den funktionalen Name dws GUI-Objektes.
-   * 
-   *  Hinweis: Jeder GUI-Adapter kennt seinen eigenen funktionalen Namen.
-   *  Dieser wird beim instanzieren der Frame-Objecte währen des Frame-Classen-Scans in der Methode FrameObjectDictionary_Sngltn.FrameScan()
-   *  mitgeteilt.
-   *  Wert wird 
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2014.04.27
-   */  
-  public String getFN( )
+  public ArrayList<String> getTooltip()
   {
-    return this.myFN;
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method getTooltip() is not defined for you GUI-Object. Please define first the methode!");
   }
 
-  
-  /** \~german
-   *  Parent-Objekt FN des aktuellen GUI-Objektes.
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2016.11.20
-   */    
-  private String myParentFN = "";
-
-  
-  /** \~german
-   *  Setzten des Parent-Objekt FN.
-   *  
-   *  @fpsParentFN FN des Parent-Objektes
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2016.11.20
-   */    
-  public void setParentFN(String fpsParentFN)
+  public ArrayList<String> getLabel()
   {
-    this.myParentFN =  fpsParentFN;
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method getLabel() is not defined for you GUI-Object. Please define first the methode!");
   }
 
-  /** \~german
-   *  Setzten des Parent-Objekt FN.
-   *  
-   *  @return FN des Parent-Objektes.
-   *  
-   *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
-   *  
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2016.11.20
-   */ 
-  public String getParentFN( )
+  public ArrayList<String> getValue()
   {
-    return this.myParentFN;
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method getLabel() is not defined for you GUI-Object. Please define first the methode!");
   }
-
   
-    public AnyChildwindow()
+  public AnyChildwindow()
     {
         this._locator = new OKWLocator("");
     }

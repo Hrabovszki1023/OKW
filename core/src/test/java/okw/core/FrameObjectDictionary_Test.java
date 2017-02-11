@@ -177,7 +177,7 @@ public class FrameObjectDictionary_Test
     assertEquals( true, object_Exists );
 
     // Child is also there?
-    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "frmObjDictTest.Anzeige" );
+    object_Exists = FrameObjectDictionary_Sngltn.myFrameObjectDictionary.containsKey( "frmObjDictTest.Name" );
     assertEquals( true, object_Exists );
   }
   

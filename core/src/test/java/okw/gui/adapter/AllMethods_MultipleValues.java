@@ -11,12 +11,11 @@ import javax.xml.xpath.XPathExpressionException;
 import org.xml.sax.SAXException;
 
 import okw.*;
-import okw.gui.AnyWinBase;
-import okw.gui.AnyWindow;
+import okw.gui.AnyChildwindow;
 import okw.log.Logger_Sngltn;
 
 
-    public class AllMethods_MultipleValues extends AnyWindow
+    public class AllMethods_MultipleValues extends AnyChildwindow
     {
 
         protected String Locator;
@@ -813,7 +812,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add("3. Value");
             
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getKN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyValue()");
 
