@@ -39,8 +39,9 @@ public class EN_Keywords_ANTLR_Test
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception
 	{
-        // Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.getInstance().Init();
+        Logger_Sngltn.getInstance();
+		// Reset des Loggers: Alle geladenen Instanzen löschen
+        Logger_Sngltn.Init();
         
         myLogger.setDebugMode(false);
 	}

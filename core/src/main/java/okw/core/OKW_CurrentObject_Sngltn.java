@@ -1174,8 +1174,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyExists" );
 
-      VerifyExists_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyExists_PT();
-      VerifyExists_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyExists_TO();
+      VerifyExists_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyExists_PT();
+      VerifyExists_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyExists_TO();
 
       Log.LogPrintDebug("VerifyExists_PT: " + VerifyExists_PT.toString() );
       Log.LogPrintDebug("VerifyExists_TO: " + VerifyExists_TO.toString() );
@@ -1276,8 +1276,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyHasFocus" );
 
-      VerifyHasFocus_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyHasFocus_PT();
-      VerifyHasFocus_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyHasFocus_TO();
+      VerifyHasFocus_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyHasFocus_PT();
+      VerifyHasFocus_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyHasFocus_TO();
 
       Log.LogPrintDebug("VerifyExists_PT: " + VerifyHasFocus_PT.toString() );
       Log.LogPrintDebug("VerifyExists_TO: " + VerifyHasFocus_TO.toString() );
@@ -1350,8 +1350,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyIsActive" );
 
-      VerifyIsActive_PT = ( ( Field ) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ) ).getAnnotation( OKW.class ).VerifyIsActive_PT();
-      VerifyIsActive_TO = ( ( Field ) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ) ).getAnnotation( OKW.class ).VerifyIsActive_TO();
+      VerifyIsActive_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyIsActive_PT();
+      VerifyIsActive_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyIsActive_TO();
 
       Log.LogPrintDebug( "VerifyExists_PT: " + VerifyIsActive_PT.toString() );
       Log.LogPrintDebug( "VerifyExists_TO: " + VerifyIsActive_TO.toString() );
@@ -2968,8 +2968,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyLabel" );
 
-      VerifyLabel_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyLabel_PT();
-      VerifyLabel_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyLabel_TO();
+      VerifyLabel_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyLabel_PT();
+      VerifyLabel_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyLabel_TO();
 
       Log.LogPrintDebug("VerifyValue_PT: " + VerifyLabel_PT.toString() );
       Log.LogPrintDebug("VerifyValue_TO: " + VerifyLabel_TO.toString() );
@@ -3070,8 +3070,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyLabel" );
 
-      VerifyLabel_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyLabel_PT();
-      VerifyLabel_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyLabel_TO();
+      VerifyLabel_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyLabel_PT();
+      VerifyLabel_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyLabel_TO();
 
       MaxCount = CalculateLoopCount( VerifyLabel_PT, VerifyLabel_TO );
       Count = 0;
@@ -3167,8 +3167,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyLabel" );
 
-      VerifyLabel_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyLabel_PT();
-      VerifyLabel_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyLabel_TO();
+      VerifyLabel_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyLabel_PT();
+      VerifyLabel_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyLabel_TO();
 
       MaxCount = CalculateLoopCount( VerifyLabel_PT, VerifyLabel_TO );
       Count = 0;
@@ -3264,8 +3264,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyValue" );
       
-      VerifyValue_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyValue_PT();
-      VerifyValue_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyValue_TO();
+      VerifyValue_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyValue_PT();
+      VerifyValue_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyValue_TO();
       
       Log.LogPrintDebug("VerifyValue_PT: " + VerifyValue_PT.toString() );
       Log.LogPrintDebug("VerifyValue_TO: " + VerifyValue_TO.toString() );
@@ -3367,8 +3367,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyValue" );
 
-      VerifyValue_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyValue_PT();
-      VerifyValue_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyValue_TO();
+      VerifyValue_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyValue_PT();
+      VerifyValue_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyValue_TO();
 
       MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
       Count = 0;
@@ -3465,8 +3465,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyValue" );
 
-      VerifyValue_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyValue_PT();
-      VerifyValue_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyValue_TO();
+      VerifyValue_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyValue_PT();
+      VerifyValue_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyValue_TO();
 
       MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
       Count = 0;
@@ -3614,8 +3614,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyCaption" );
 
-      VerifyValue_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyCaption_PT();
-      VerifyValue_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyCaption_TO();
+      VerifyValue_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyCaption_PT();
+      VerifyValue_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyCaption_TO();
 
       Log.LogPrintDebug("VerifyValue_PT: " + VerifyValue_PT.toString() );
       Log.LogPrintDebug("VerifyValue_TO: " + VerifyValue_TO.toString() );
@@ -3716,8 +3716,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyCaption" );
 
-      VerifyValue_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyCaption_PT();
-      VerifyValue_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyCaption_TO();
+      VerifyValue_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyCaption_PT();
+      VerifyValue_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyCaption_TO();
 
       MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
       Count = 0;
@@ -3813,8 +3813,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyCaption" );
 
-      VerifyValue_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyCaption_PT();
-      VerifyValue_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyCaption_TO();
+      VerifyValue_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyCaption_PT();
+      VerifyValue_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyCaption_TO();
 
       MaxCount = CalculateLoopCount( VerifyValue_PT, VerifyValue_TO );
       Count = 0;
@@ -3910,8 +3910,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyTooltip" );
 
-      VerifyTooltip_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyTooltip_PT();
-      VerifyTooltip_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyTooltip_TO();
+      VerifyTooltip_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyTooltip_PT();
+      VerifyTooltip_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyTooltip_TO();
 
       Log.LogPrintDebug("VerifyTooltip_PT: " + VerifyTooltip_PT.toString() );
       Log.LogPrintDebug("VerifyTooltip_TO: " + VerifyTooltip_TO.toString() );
@@ -4013,8 +4013,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyTooltip" );
 
-      VerifyTooltip_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyTooltip_PT();
-      VerifyTooltip_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyTooltip_TO();
+      VerifyTooltip_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyTooltip_PT();
+      VerifyTooltip_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyTooltip_TO();
 
       MaxCount = CalculateLoopCount( VerifyTooltip_PT, VerifyTooltip_TO );
       Count = 0;
@@ -4111,8 +4111,8 @@ public class OKW_CurrentObject_Sngltn
     {
       Method myMethod = myFrame_Class.getMethod( "VerifyTooltip" );
 
-      VerifyTooltip_PT = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyTooltip_PT();
-      VerifyTooltip_TO = ((Field) FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN )).getAnnotation(OKW.class).VerifyTooltip_TO();
+      VerifyTooltip_PT = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyTooltip_PT();
+      VerifyTooltip_TO = FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( cvsFullObjectFN ).VerifyTooltip_TO();
 
       MaxCount = CalculateLoopCount( VerifyTooltip_PT, VerifyTooltip_TO );
       Count = 0;

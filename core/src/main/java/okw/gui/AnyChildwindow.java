@@ -48,6 +48,7 @@ import javax.xml.xpath.XPathExpressionException;
 import org.xml.sax.SAXException;
 
 import okw.FrameObjectDictionary_Sngltn;
+import okw.OKW;
 import okw.OKW_TimeOut;
 import okw.core.IOKW_FN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
@@ -161,7 +162,14 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
       Boolean lvbReturn = false;
     
       Integer Count = 0;
-      OKW_TimeOut timeout = FrameObjectDictionary_Sngltn.getInstance().getTimeOutWaitForMe( this.getKN() );
+
+	  OKW MyOKW = FrameObjectDictionary_Sngltn.getInstance().GetOKW( this.getKN() );
+		
+	  // TimeOut-Werte Ermitteln
+	  OKW_TimeOut timeout = new OKW_TimeOut();
+	  
+	  timeout.setPT( MyOKW.WaitForMe_PT() );
+	  timeout.setTO( MyOKW.WaitForMe_TO() );
       
       Count = 0;
       

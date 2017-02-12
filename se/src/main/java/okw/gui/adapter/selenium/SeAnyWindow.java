@@ -15,15 +15,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-@Deprecated
-public class SeAnyWin extends AnyWinBase
+public class SeAnyWindow extends AnyWindow
 {	
     // Logger Instance holen
     protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
     
     protected LogMessenger LM = new LogMessenger("GUI");
 
-    public SeAnyWin(String Locator, OKWLocator... fpLocators)
+    public SeAnyWindow(String Locator, OKWLocator... fpLocators)
     {
     	super(Locator, fpLocators);
     }

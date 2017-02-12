@@ -55,6 +55,7 @@ import org.xml.sax.SAXException;
 
 import okw.core.IOKW_FN;
 import okw.exceptions.*;
+import okw.gui.AnyWindow;
 import okw.gui.IGUIWindow;
 import okw.log.Logger_Sngltn;
 
@@ -97,7 +98,7 @@ public class FrameObjectDictionary_Sngltn
   // / sein, wenn unittets durchgeführt werden soll.
   public static Map<String, Object>   myFrameObjectDictionary = new HashMap<String, Object>();
 
-  public static Map<String, Object>   myAnnotationDictionary = new HashMap<String, Object>();
+  public static Map<String, OKW>   myAnnotationDictionary = new HashMap<String, OKW>();
   
   /**
    *  \copydoc CurrentObject::Log()
@@ -159,63 +160,55 @@ public class FrameObjectDictionary_Sngltn
     return Instance;
   }
 
-  // / \~german
-  // / \brief
-  // / Die Methode liefert das Frame-Object des gegebenen Fensterobjektes
-  // / zurück.
-  // /
-  // / Dabei kann das Objekt bereits erzeugt (instanziert) sein,
-  // / in diesem Fall wird der Bezug aus der Dictionary
-  // / OKW_FrameObjectDictionary.cv_FrameObjectDictionary
-  // / geholt oder das Objekt wurde noch nicht erzeugt,
-  // / dann wird eine Instanz angelegt und ein Bezug auf das Objekt
-  // / gespeichert.
-  // /
-  // / \see Für das Kindobjekt existiert eine zweite Ausprägung dieser
-  // Methode:
-  // / FrameObjectDictionary.GetObjectByName(String,String)
-  // /
-  // / \param fpsParentObject Fachlicher Name des Fenster Objektes =
-  // / Elternobjekt.
-  // /
-  // / \return Frame-Objekt-Referenz auf das Fenstre-Objekt.
-  // /
-  // / \~english
-  // / \brief
-  // / The method delivers the frame Object of the given window Object.
-  // /
-  // / Here the Object can already be instantiated,
-  // / in this case the reference will be taken from the Dictionary
-  // / OKW_FrameObjectDictionary.cv_FrameObjectDictionary
-  // / or the Object is not yet instantiated,
-  // / then an instance is to be laid and a reference to the Object is stored.
-  // /
-  // / \see For the child Object another markedness ist existing.:
-  // / FrameObjectDictionary.GetObjectByName(String,String)
-  // /
-  // / \param fpsParentObject Fachlicher Name des Fenster Objektes =
-  // / Elternobjekt
-  // /
-  // / \return \todo TODO: ZH Rückgabewert beschreiben
-  // /
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2014.10.10
-  public Object GetParentObjectByName( String fpsParentObject ) throws XPathExpressionException
+  /** \~german
+   *  Die Methode liefert das Frame-Object des gegebenen FN eines Fensterobjektes zurück.
+   * 
+   *  Das Objekt ist bereits erzeugt (instanziert),
+   *  und liegt im FrameObjectDictionary 
+   *  FrameObjectDictionary_Sngltn.myFrameObjectDictionary.
+   * 
+   *  Wenn das Object nicht im FrameObjectDictionary vorhanden ist, dann wird 
+   *  die Ausnahme OKWFrameObjectParentNotFoundException ausgelöst.
+   *  \see Für das Kindobjekt existiert eine zweite Ausprägung dieser
+   *  Methode: FrameObjectDictionary.GetObjectByName(String,String)
+   * 
+   *  @param fpsParentObject FN des Fenster Objektes = Elternobjekt.
+   *  @return Rückgabe des instantierten Fenster-Objektes.
+   * 
+   *  \~english
+   *  The method delivers the frame Object of the given window Object.
+   * 
+   *  Here the Object can already be instantiated,
+   *  in this case the reference will be taken from the Dictionary
+   *  OKW_FrameObjectDictionary.cv_FrameObjectDictionary
+   *  or the Object is not yet instantiated,
+   *  then an instance is to be laid and a reference to the Object is stored.
+   * 
+   *  \see For the child Object another markedness ist existing.:
+   *  FrameObjectDictionary.GetObjectByName(String,String)
+   * 
+   *  @param fpsParentObject Fachlicher Name des Fenster Objektes = Elternobjekt
+   *  @return \todo TODO: ZH Rückgabewert beschreiben
+   * 
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2014.10.10
+   */
+  public Object GetParentObjectByName( String FNParentObject ) throws XPathExpressionException
   {
     Object lvo_Return = null;
 
-    Log.LogFunctionStartDebug( "FrameObjectDictionary.GetParentObjectByName", "fpsFunctionalnameOfWindow", fpsParentObject );
+    Log.LogFunctionStartDebug( "FrameObjectDictionary.GetParentObjectByName", "FNParentObject", FNParentObject );
     try
     {
       // Gibt es den Schlüssel im Dictinary? - D.h. Gibt es schon eine
       // Instanz des Objektes im Speicher?
-      Log.LogPrintDebug( LM.GetMessage( "GetParentObjectByName", "M1", fpsParentObject ) );
-      if ( myFrameObjectDictionary.containsKey( fpsParentObject ) )
+      Log.LogPrintDebug( LM.GetMessage( "GetParentObjectByName", "M1", FNParentObject ) );
+      if ( myFrameObjectDictionary.containsKey( FNParentObject ) )
       {
         // Ja, das Objekt existiert.
         Log.LogPrintDebug( LM.GetMessage( "GetParentObjectByName", "M2" ) );
-        lvo_Return = myFrameObjectDictionary.get( fpsParentObject );
+        lvo_Return = myFrameObjectDictionary.get( FNParentObject );
       }
       else
       {
@@ -224,7 +217,7 @@ public class FrameObjectDictionary_Sngltn
         // \todo TODO: Fehlermeldung einbauen...
         Log.LogPrintDebug( LM.GetMessage( "GetParentObjectByName", "M3" ) );
 
-        String lvsMessage = LM.GetMessage( "GetParentObjectByName", "OKWFrameObjectParentNotFoundException", fpsParentObject );
+        String lvsMessage = LM.GetMessage( "GetParentObjectByName", "OKWFrameObjectParentNotFoundException", FNParentObject );
         throw new OKWFrameObjectParentNotFoundException( lvsMessage );
       }
     }
@@ -475,7 +468,7 @@ public class FrameObjectDictionary_Sngltn
    * 
    *  \~
    *  @author Zoltan Hrabovszki
- * @throws IOException 
+   *  @throws IOException 
    *  @date 2015.01.28
    *  \todo TODO: rename lvsFNParent to lvsFNWindow (Parent is not correct in all cases)
    */
@@ -499,18 +492,20 @@ public class FrameObjectDictionary_Sngltn
 
         // FN (Fachlichen Namen) der Klasse aus der die Annotiation OKW.FN() auslesen.
         // Hierbei handelt es sich um des  ParentObject = Fenster
-        String lvsFNParent = GetFunktionlanameFromObjekt( lvTypeInstanceAsObject );
-
+        OKW lvOKWWindow = getOKWFromObjekt( lvTypeInstanceAsObject );
+        String lvsFNWindow = lvOKWWindow.FN();
+        
         // Wenn Attribute vorhanden (!=null) und nicht Leer (!= "") dann ins Dictionary einfügen.
-        if ( lvsFNParent != null && !lvsFNParent.isEmpty() )
+        if ( lvsFNWindow != null && !lvsFNWindow.isEmpty() )
         {
-          Log.ResOpenList( "Parent: '" + lvsFNParent + "'" );
+          Log.ResOpenList( "Parent: '" + lvsFNWindow + "'" );
           Log.LogPrint( "Type: '" + lvTypeInstanceAsObject.getClass().getName() + "'" );
 
-          ((IOKW_FN)lvTypeInstanceAsObject).setFN( lvsFNParent );
-          ((IOKW_FN)lvTypeInstanceAsObject).setKN( lvsFNParent );
+          ((IOKW_FN)lvTypeInstanceAsObject).setFN( lvsFNWindow );
+          ((IOKW_FN)lvTypeInstanceAsObject).setKN( lvsFNWindow );
           
-          myFrameObjectDictionary.put( lvsFNParent, lvTypeInstanceAsObject );
+          myFrameObjectDictionary.put( lvsFNWindow, lvTypeInstanceAsObject );
+          myAnnotationDictionary.put( lvsFNWindow, lvOKWWindow );
 
           Log.LogPrintDebug( LM.GetMessage( "CreateInstanceByObjectName", "InstanceWasCreated", lvTypeInstanceAsObject.getClass().getName() ) );
 
@@ -532,24 +527,24 @@ public class FrameObjectDictionary_Sngltn
                 // Get the value from property.
 
                 String lvsFNChild  = myFN.FN();
-                String lvsChildKey = lvsFNParent + "." + lvsFNChild;
+                String lvsChildKey = lvsFNWindow + "." + lvsFNChild;
 
                 Log.ResOpenList( "Child: '" + lvsFNChild + "'" );
                 Log.LogPrint( "  Key: '" + lvsChildKey + "'" );
                 Log.LogPrint( " Type: '" + myFieldType + "'" );
 
                 // Add child-object to the dictionary
-                myAnnotationDictionary.put( lvsChildKey, lvField );
+                myAnnotationDictionary.put( lvsChildKey, myFN );
                 
                 try
                 {
                 	 // Now here we tell the GUI-Adapter his FN and his Parent-FN...
                    (( IOKW_FN ) lvFieldInstance).setKN( lvsChildKey );
                    (( IOKW_FN ) lvFieldInstance).setFN( lvsFNChild );
-                   (( IOKW_FN ) lvFieldInstance).setParentFN( lvsFNParent );
+                   (( IOKW_FN ) lvFieldInstance).setParentFN( lvsFNWindow );
                    myFrameObjectDictionary.put( lvsChildKey, lvFieldInstance );
                    
-                   FrameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNParent );
+                   FrameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNWindow );
                 }
                 catch (java.lang.ClassCastException e)
                 {
@@ -563,7 +558,7 @@ public class FrameObjectDictionary_Sngltn
               else
               {
                 Log.LogPrint( "-GUI-Container-" );              
-                FrameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNParent );
+                FrameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNWindow );
               }
           }
         }
@@ -581,7 +576,6 @@ public class FrameObjectDictionary_Sngltn
   private static void FrameScanFieldsRecursively( Field fpParentField, Object fpParentFieldInstance, String fpsWindowName )
   {
     n++;
-    String myintend = okw.OKW_Helper.StringRepeat( "  ", n );
     
     try
     {
@@ -618,7 +612,7 @@ public class FrameObjectDictionary_Sngltn
               Log.LogPrint( "  Key: '" + lvsKey + "'" );
               Log.LogPrint( " Type: '" + FieldType + "'" );
 
-              myAnnotationDictionary.put( lvsKey, lvField );
+              myAnnotationDictionary.put( lvsKey, myFN );
               
               (( IOKW_FN ) lvFieldInstance).setKN( lvsKey );
               (( IOKW_FN ) lvFieldInstance).setFN( lvsFNChild );
@@ -647,17 +641,19 @@ public class FrameObjectDictionary_Sngltn
     }
   }
 
-  // / \brief List das Attribute Funktionalname das übergeben Objektes aus.
-  // /
-  // / <param name="fpObject"></param>
-  // / \return Wert aus Funtionalname
-  private static String GetFunktionlanameFromObjekt( Object fpObject )
+  /** \~german
+   * Holt die Referenz auf die Annotation des gegebenen Objektes.
+   *
+   * @param  fpObject
+   * @return Refernz auf die OKW-Annotaion des Objectes
+   */
+  private static OKW getOKWFromObjekt( Object fpObject )
   {
-    String lvsReturn = "";
+    OKW lvsReturn = null;
 
     if ( fpObject.getClass().isAnnotationPresent( OKW.class ) )
     {
-      lvsReturn = fpObject.getClass().getAnnotation( OKW.class ).FN();
+      lvsReturn = fpObject.getClass().getAnnotation( OKW.class );
     }
 
     return lvsReturn;
@@ -809,26 +805,27 @@ public class FrameObjectDictionary_Sngltn
     return myChildObject;
   }
 
-  // / \~german
-  // / \brief
-  // / Holt sich einen <b>öffentlichen</b> Feld Wert über den Namen
-  // /
-  // / \param fpo_ParentObject Frame des Fensters als Objekt.
-  // / \param fps_ChildName Fachlicher Name des Kindobjektes, welches als
-  // / Objekt zurückgegeben werden soll.
-  // / \return Eigenschaftswert
-  // /
-  // / \~english
-  // / Gets a <b>public</b> field value given its name
-  // /
-  // / \param fpo_ParentObject Object to inspect
-  // / \param fps_ChildName Name of the field to retrieve the value from
-  // / \return property value
-  // /
-  // /
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2014-10-10
+  
+  /** \~german
+   *  Holt sich einen <b>öffentlichen</b> Feld Wert über den Namen
+   * 
+   *  @param fpo_ParentObject Frame des Fensters als Objekt.
+   *  @param fps_ChildName Fachlicher Name des Kindobjektes, welches als
+   *  Objekt zurückgegeben werden soll.
+   *  @return Eigenschaftswert
+   * 
+   *  \~english
+   *  Gets a <b>public</b> field value given its name
+   * 
+   *  @param fpo_ParentObject Object to inspect
+   *  @param fps_ChildName Name of the field to retrieve the value from
+   *  @return property value
+   *  \~
+   *  @author Zoltan Hrabovszki
+   *  @date 2014-10-10
+   * 
+   * @throws XPathExpressionException
+   */
   private Object GetChildObjectByName( Object fpo_ParentObject, String fps_ChildName ) throws XPathExpressionException
   {
     Object lvo_Return = null;
@@ -887,18 +884,35 @@ public class FrameObjectDictionary_Sngltn
     return;
 
   }
-  
-  
-  /**
-   *  
-   */
-  public OKW_TimeOut getTimeOutWaitForMe( String fpKN )
-  {  
-      OKW_TimeOut Return = new OKW_TimeOut();
-      
-      Return.setPT( ((Field) myAnnotationDictionary.get( fpKN )).getAnnotation(OKW.class).WaitForMe_PT());
-      Return.setTO( ((Field) myAnnotationDictionary.get( fpKN )).getAnnotation(OKW.class).WaitForMe_TO());
 
+
+  /** \~german
+   *  Holt für einen GUI-Object die angehängte Annotation
+   * 
+   *  @param fpKN Frame Objekt Schlüssel "FensterFN" oder "FensterFN.KindObjectFN".
+   *  @return OKW-Annotation des Objektes.
+   * 
+   *  \~english
+   * 
+   *  @param fpKN Object to inspect
+   *  @param fps_ChildName Name of the field to retrieve the value from
+   *  @return property value
+   *  \~
+   *  @author Zoltan Hrabovszki
+   *  @date 2017-02-11
+   * 
+   * @throws XPathExpressionException
+   */
+  public OKW GetOKW( String fpKN )
+
+  {  
+      OKW Return = null;
+      
+      if (myAnnotationDictionary.containsKey(fpKN) )
+      {
+    	  Return = myAnnotationDictionary.get( fpKN );
+      }
+      
       return Return;
   }
 }

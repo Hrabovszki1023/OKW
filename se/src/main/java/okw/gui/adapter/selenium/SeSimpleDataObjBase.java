@@ -46,7 +46,7 @@ import okw.gui.*;
     /// \brief
     /// Description of SeSimpleDataObjBase.
     /// 
-    public class SeSimpleDataObjBase extends SeAnyWin
+    public class SeSimpleDataObjBase extends SeAnyWindow
     {
 
         public SeSimpleDataObjBase(String Locator)

@@ -45,7 +45,7 @@ import okw.gui.OKWLocator;
     /// \brief
     /// TODO: Description of SeTable.
     /// 
-    public class SeTable extends SeAnyWin
+    public class SeTable extends SeAnyWindow
     {
 
         /// TODO: Konstuktor Beschreiben

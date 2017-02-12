@@ -37,7 +37,6 @@
 package okw.gui.frames.SeInputButton;
 
 import okw.OKW;
-import okw.gui.OKWLocator;
 import okw.gui.adapter.selenium.SeBrowserChild;
 import okw.gui.adapter.selenium.SeInputButton;
 import okw.gui.adapter.selenium.SeInputText;
@@ -117,7 +116,7 @@ public class frmInputButton extends SeBrowserChild
   // /
   public frmInputButton()
   {
-    // <title>Klick-Buttons definieren(herkömmlich)</title>
-    this.locator = new OKWLocator( "//*[@title='This is the page-title of input_type-button.htm']" );
+    // 
+    super( "//title[contains(text(),'This is the page-title of input_type-button.htm')]/../.." );
   }
 }

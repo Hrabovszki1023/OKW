@@ -272,7 +272,7 @@ import org.junit.rules.TestName;
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("InputButton not Active");
 
                 EN.MemorizeLabel("Text_1", "SeInputButton_MemorizeLabel_1" );
                 assertEquals("Label für Button1: ", myMM.Get("SeInputButton_MemorizeLabel_1"));
@@ -370,8 +370,7 @@ import org.junit.rules.TestName;
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
-                
+               
                 EN.SelectWindow("InputButton");
                 EN.MemorizeTooltip("Text_1", "SePushButton_MemorizeTooltip_1");
                 EN.MemorizeTooltip("Text_2", "SePushButton_MemorizeTooltip_2");
@@ -396,7 +395,6 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
                 EN.SelectWindow("InputButton");
@@ -740,7 +738,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("InputButton not Active");
 
                 EN.VerifyIsActive("Text_2", "NO");
 
@@ -764,7 +762,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("InputButton not Active");
 
                 EN.VerifyIsActive("Text_2", "YES");
 
@@ -788,7 +786,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("InputButton not Active");
 
                 EN.VerifyLabel("Text_1", "Label für Button1: ");
                 EN.VerifyLabel("Text_2", "Label für Button2: ");
@@ -813,7 +811,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("InputButton not Active");
 
                 EN.VerifyLabelWCM("Text_1", "Label für Button#: ");
                 EN.VerifyLabelWCM("Text_2", "Label für Button#: ");
@@ -838,7 +836,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("InputButton not Active");
 
                 EN.VerifyLabelREGX("Text_1", "Label für Button1: ");
                 EN.VerifyLabelREGX("Text_2", "Label für Button2: ");

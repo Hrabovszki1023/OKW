@@ -32,21 +32,4 @@ public class SeInputButton_EN_Chrome_Test extends SeInputButton_EN_Test
     	   else
     	     rt.exec("pkill -f Chrome");
     }
-	
-  @Test
-  public void AA_Taschenrechner_DE() throws Exception
-  {
-    EN.BeginTest( name.getMethodName() );
-    EN.StartApp( ApplicationName );
-
-    EN.TypeKey( "URL", "http://www.schulferien.org/taschenrechner/taschenrechner.html");
-      EN.SelectWindow("Taschenrechner");
-      EN.ClickOn("1");
-      EN.ClickOn("+");
-      EN.ClickOn("1");
-      EN.ClickOn("=");
-
-      EN.VerifyValue("Anzeige", "2");
-  }
-	
 }

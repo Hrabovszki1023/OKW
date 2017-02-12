@@ -66,6 +66,6 @@ public class frmSeCheckBox extends SeBrowserChild
 
     public frmSeCheckBox()
     {
-    	super("//*[@titel='Checkboxen definieren']");
+    	super("//title[contains(text(),'Checkbox TestGUI 1')]/../..");
     }
 }

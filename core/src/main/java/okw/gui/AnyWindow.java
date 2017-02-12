@@ -48,6 +48,7 @@ import javax.xml.xpath.XPathExpressionException;
 import org.xml.sax.SAXException;
 
 import okw.FrameObjectDictionary_Sngltn;
+import okw.OKW;
 import okw.OKW_TimeOut;
 import okw.core.IOKW_FN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
@@ -56,11 +57,28 @@ import okw.log.*;
 /** \brief
  * Description of AnyWin.
  */ 
-public abstract class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_FN
+public class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_FN
 {
 
   
-  /** \~german
+  public AnyWindow()
+	{
+	    this._locator = new OKWLocator("");
+	}
+
+public AnyWindow(String fpsLocator, OKWLocator... fpLocators )
+{
+    if ( fpLocators.length != 0 )
+    {
+        this._locator = new OKWLocator(fpsLocator, fpLocators);
+    }
+    else
+    {
+        this._locator = new OKWLocator(fpsLocator);
+    }
+}
+
+/** \~german
    *  Prüft die Existenz des aktuellen Objektes.
    *  
    *  - Methode kann hier nicht implementiert werden.
@@ -81,7 +99,7 @@ public abstract class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_F
   public Boolean getExists()
   {
     // TODO: /todo Meldung in xml-Auslagern
-    throw new OKWFrameObjectMethodNotImplemented("The method getExists() is not definden for you GUI-Object. Please define first the methode!");
+    throw new OKWFrameObjectMethodNotImplemented("The method getExists() is not definden for the current GUI-Object. Please define first this method in your GUI-Class!");
   }
 
   /** \~german
@@ -129,64 +147,58 @@ public abstract class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_F
   public Boolean getIsActive()
   {
     // TODO: /todo Meldung in xml-Auslagern
-    throw new OKWFrameObjectMethodNotImplemented("The method getIsActive() is not definden for you GUI-Object. Please define first the methode!");
+    throw new OKWFrameObjectMethodNotImplemented("The method getIsActive() is not definden for this GUI-Object. Please define first this methode!");
   }  
   
-  public AnyWindow()
+  public void SelectWindow() throws Exception
     {
-        this._locator = new OKWLocator("");
+	    // TODO: /todo Meldung in xml-Auslagern
+	    throw new OKWFrameObjectMethodNotImplemented("The method SelectWindow() is not definden for this GUI-Object. Please define first this methode!");
     }
 
+	/** \~german
+	 *  Ermittelt aus dem gegebenen Locator das DOM-Elelement, welches das Objekt representiert.
+	 *  
+	 *  @return true, wenn das Objekt vorhanden ist.
+	 *  \~
+	 * @author Zoltán Hrabovszki
+	 * @throws InterruptedException 
+	 * @throws IOException 
+	 * @throws SAXException 
+	 * @throws ParserConfigurationException 
+	 * @throws JAXBException 
+	 * @throws XPathExpressionException 
+	 * @date 2017.01.31
+	 */
+	public Boolean WaitForMe() throws InterruptedException, XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+	{
+	  Boolean lvbReturn = false;
+	
+	  Integer Count = 0;
 
-    public AnyWindow(String fpsLocator, OKWLocator... fpLocators )
-    {
-        if ( fpLocators.length != 0 )
-        {
-            this._locator = new OKWLocator(fpsLocator, fpLocators);
-        }
-        else
-        {
-            this._locator = new OKWLocator(fpsLocator);
-        }
-    }
-   
-    
-    /** \~german
-     *  Ermittelt aus dem gegebenen Locator das DOM-Elelement, welches das Objekt representiert.
-     *  
-     *  @return true, wenn das Objekt vorhanden ist.
-     *  \~
-     * @author Zoltán Hrabovszki
-     * @throws InterruptedException 
-     * @throws IOException 
-     * @throws SAXException 
-     * @throws ParserConfigurationException 
-     * @throws JAXBException 
-     * @throws XPathExpressionException 
-     * @date 2017.01.31
-     */
-    public Boolean WaitForMe() throws InterruptedException, XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
-    {
-      Boolean lvbReturn = false;
-    
-      Integer Count = 0;
-      OKW_TimeOut timeout = FrameObjectDictionary_Sngltn.getInstance().getTimeOutWaitForMe( this.getKN() );
-      
-      Count = 0;
-      
-      while ( Count <= timeout.getMaxCount() )
-      {
-        if ( this.getExists() )
-        {
-          lvbReturn = true;
-          break;
-        }
-        else
-        {
-          Thread.sleep( timeout.getPollingTime() );
-        }
-        Count++;
-      }
-      return lvbReturn;
-    }
+	  OKW MyOKW = FrameObjectDictionary_Sngltn.getInstance().GetOKW( this.getKN() );
+	
+	  // TimeOut-Werte Ermitteln
+	  OKW_TimeOut timeout = new OKW_TimeOut();
+	  
+	  timeout.setPT( MyOKW.WaitForMe_PT() );
+	  timeout.setTO( MyOKW.WaitForMe_TO() );
+	  
+	  Count = 0;
+	
+	  while ( Count <= timeout.getMaxCount() )
+	  {
+	    if ( this.getExists() )
+	    {
+	      lvbReturn = true;
+	      break;
+	    }
+	    else
+	    {
+	      Thread.sleep( timeout.getPollingTime() );
+	    }
+	    Count++;
+	  }
+	  return lvbReturn;
+	}
 }
