@@ -67,6 +67,6 @@ public class frmSeInputTextDisabled extends SeBrowserChild
 
     public frmSeInputTextDisabled()
     {
-    	super("//@title='Einzeilige Eingabefelder']");
+    	super("//title[contains(text(),'Textfield TestGUI 3 input_type-text_disabled')]/../..");
     }
 }

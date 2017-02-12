@@ -1,8 +1,6 @@
-package okw.SeInputField;
-
 /*
  ==============================================================================
- Copyright © 2012, 2013, 2014, 2015, 2016 IT-Beratung Hrabovszki
+ Copyright © 2012 - 2017 IT-Beratung Hrabovszki
  ============================================================================== 
 
  This file is part of OpenKeyWord.
@@ -36,15 +34,14 @@ package okw.SeInputField;
  OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
 
-import static org.junit.Assert.*;
+package okw.SeInputField;
+
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
 
-import org.junit.After;
-import org.junit.Ignore;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.*;
+import static org.junit.Assert.*;
 import org.junit.rules.TestName;
 
 @Ignore
@@ -57,17 +54,10 @@ public class SeInputField_Test {
   @Rule
   public TestName         name  = new TestName();
 
-  @After
-  public void myAfter() throws Exception
-  {
-    EN.StopApp( ApplicationName );
-    EN.EndTest();
-  }
-
-  // / \brief
-  // / Prüft ob ein vorhandenes objekt existiert.
-  // / Erwartet wird, dass das Objekt existiert.
-  // /
+  
+  /**
+   * Testet das Schlüsselwort LogExists( FN ) eines SeInputField Prüfen.
+   */ 
   @Test
   public void tcLogExists() throws Exception {
 
@@ -77,14 +67,18 @@ public class SeInputField_Test {
 
     EN.SelectWindow( "SeTextField" );
     EN.LogExists( "Name" );
+  
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   
-  // \brief
-  // Teste das Schlüsselwort ClickOn( FN ) eines SeInputText Prüfen.
-  // 
+  /**
+   * Testet das Schlüsselwort ClickOn( FN ) eines SeInputField Prüfen.
+   */ 
   @Test
-  public void tcClickOn() throws Exception {
+  public void tcClickOn() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -97,36 +91,35 @@ public class SeInputField_Test {
       EN.ClickOn( "Vorname" );
       EN.VerifyHasFocus( "Name", "NO" );
       EN.VerifyHasFocus( "Vorname", "YES" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
-  // / \brief
-  // / Focus eines Textfeldes loggen.
-  // /
+  
+  /**
+   * Testet das Schlüsselwort LogHasFocus( FN ) eines SeInputField Prüfen.
+   */ 
   @Test
-  public void tcLogHasFocus() throws Exception {
-    try {
+  public void tcLogHasFocus() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
       EN.SelectWindow( "SeTextField" );
       EN.LogHasFocus( "Name" );
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "LogHasFocus", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "LogHasFocus", "F");
-      throw e;
-    }
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
-  // \brief
-  // Teste das Schlüsselwort LogLabel( FN ) eines SeInputText Prüfen.
-  //
+  /** 
+   *  Teste das Schlüsselwort LogIsActive( FN ) eines SeInputText Prüfen.
+   */
   @Test
-  public void tcLogIsActive() throws Exception {
-    try {
+  public void tcLogIsActive() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -134,66 +127,53 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
       EN.LogIsActive( "Name" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "LogIsActive", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "LogIsActive", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
-  // \brief
-  // Teste das Schlüsselwort LogLabel( FN ) eines SeInputText Prüfen.
-  //
+  /** 
+   *  Teste das Schlüsselwort LogLabel( FN ) eines SeInputText Prüfen.
+   */
   @Test
-  public void tcLogLabel() throws Exception {
-    try {
-      EN.BeginTest( name.getMethodName() );
-      EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+  public void tcLogLabel() throws Exception
+  {
 
-      EN.SelectWindow( "SeTextField" );
-      EN.LogLabel( "Name" );
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "LogLabel", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "LogLabel", "F");
-      throw e;
-    }
+    EN.BeginTest( name.getMethodName() );
+    EN.StartApp( ApplicationName );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+
+    EN.SelectWindow( "SeTextField" );
+    EN.LogLabel( "Name" );
+    
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
-  // \brief
-  // Teste das Schlüsselwort LogLogToolTip( FN ) eines SeInputText Prüfen.
-  //
+  /** 
+   *  Teste das Schlüsselwort LogTooltip( FN ) eines SeInputText Prüfen.
+   */
   @Test
-  public void tcLogToolTip() throws Exception {
-    try {
+  public void tcLogToolTip() throws Exception
+  {
+  
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
 
       EN.SelectWindow( "SeTextField" );
       EN.LogTooltip( "Name" );
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "LogToolTip", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "LogToolTip", "F");
-      throw e;
-    }
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
-  // \brief
-  // Teste das Schlüsselwort LogLogValue( FN ) eines SeInputText Prüfen.
-  //
+  /** 
+   *  Teste das Schlüsselwort LogValue( FN ) eines SeInputText Prüfen.
+   */
   @Test
-  public void tcLogValue() throws Exception {
-    try {
+  public void tcLogValue() throws Exception
+  {
+
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -203,22 +183,17 @@ public class SeInputField_Test {
 
       EN.TypeKey( "Name", "Zoltan" );
       EN.LogValue( "Name" );
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "LogValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "LogValue", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
-  // \brief
-  // Teste das Schlüsselwort MemorizeExists( FN, MemKey ) eines SeInputText Prüfen.
-  //
+  /** 
+   *  Teste das Schlüsselwort MemorizeExists( FN, MemKey ) eines SeInputText Prüfen.
+   */
   @Test
-  public void TC_MemorizeExists_en() throws Exception {
-    try {
+  public void TC_MemorizeExists_en() throws Exception
+  {
+
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -226,26 +201,18 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
       EN.MemorizeExists( "Name", "SeTextField_MemorizeExists_1" );
 
-      assertEquals(
-          "YES",
-          okw.OKW_Memorize_Sngltn.getInstance().Get(
-              "SeTextField_MemorizeExists_1" ) );
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "MemorizeExists", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "MemorizeExists", "F");
-      throw e;
-    }
+      assertEquals( "YES", okw.OKW_Memorize_Sngltn.getInstance().Get("SeTextField_MemorizeExists_1" ) );
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
-  // \brief
-  // Teste das Schlüsselwort MemorizeHasFocus( FN, MemKey ) eines SeInputText Prüfen.
-  //
+  /** 
+   *  Teste das Schlüsselwort MemorizeHasFocus( FN, MemKey ) eines SeInputText Prüfen.
+   */
   @Test
   public void tcMemorizeHasFocus() throws Exception {
-    try {
+
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -254,23 +221,18 @@ public class SeInputField_Test {
       EN.MemorizeHasFocus( "Name", "SeTextField_MemorizeHasFocus" );
 
       assertEquals( "NO", myMem.Get( "SeTextField_MemorizeHasFocus" ) );
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "MemorizeHasFocus", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "MemorizeHasFocus", "F");
-      throw e;
-    }
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
-  // \brief
-  // Teste das Schlüsselwort MemorizeIsActive( FN, MemKey ) eines SeInputText Prüfen.
-  //
+  /** 
+   *  Teste das Schlüsselwort MemorizeIsActive( FN, MemKey ) eines SeInputText Prüfen.
+   */
   @Test
   public void tcMemorizeIsActive_en() throws Exception {
-    try {
+
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -279,23 +241,18 @@ public class SeInputField_Test {
       EN.MemorizeIsActive( "Name", "SeTextField_MemorizeIsActive" );
 
       assertEquals( "YES", myMem.Get( "SeTextField_MemorizeIsActive" ) );
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "MemorizeIsActive", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "MemorizeIsActive", "F");
-      throw e;
-    }
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
-  // \brief
-  // Teste das Schlüsselwort MemorizeLabel( FN, MemKey ) eines SeInputText Prüfen.
-  //
+  /** 
+   *  Teste das Schlüsselwort MemorizeLabel( FN, MemKey ) eines SeInputText Prüfen.
+   */
   @Test
-  public void tcMemorizeLabel() throws Exception {
-    try {
+  public void tcMemorizeLabel() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -308,22 +265,16 @@ public class SeInputField_Test {
       assertEquals( "Name:", myMem.Get( "SeTextField_MemorizeLabel_1" ) );
       assertEquals( "Vorname:", myMem.Get( "SeTextField_MemorizeLabel_2" ) );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "MemorizeLabel", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "MemorizeLabel", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
-  // \brief
-  // Teste das Schlüsselwort MemorizeToolTip( FN, MemKey ) eines SeInputText Prüfen.
-  //
+  /** 
+   *  Teste das Schlüsselwort MemorizeTooltip( FN, MemKey ) eines SeInputText Prüfen.
+   */
   @Test
   public void tcMemorizeToolTip() throws Exception {
-    try {
+
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -331,26 +282,19 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
       EN.MemorizeTooltip( "Name", "SeTextField_MemorizeTooltip" );
 
-      assertEquals( "Den Namen eingeben",
-      myMem.Get( "SeTextField_MemorizeTooltip" ) );
+      assertEquals( "Den Namen eingeben", myMem.Get( "SeTextField_MemorizeTooltip" ) );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "MemorizeToolTip", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "MemorizeToolTip", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
 
-  // \brief
-  // Teste das Schlüsselwort MemorizeValue( FN, MemKey ) eines SeInputText Prüfen.
-  // 
+  /** 
+   *  Teste das Schlüsselwort MemorizeValue( FN, MemKey ) eines SeInputText Prüfen.
+   */
   @Test
-  public void tcMemorizeValue() throws Exception {
-    try {
+  public void tcMemorizeValue() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -365,14 +309,8 @@ public class SeInputField_Test {
       assertEquals( "", myMem.Get( "SeTextField_LogValue_1" ) );
       assertEquals( "Zoltan", myMem.Get( "SeTextField_LogValue_2" ) );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "MemorizeValue", "P");
-    }
-    catch (Exception ex) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "MemorizeValue", "F");
-      throw ex;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -380,8 +318,8 @@ public class SeInputField_Test {
   // Teste das Schlüsselwort SetFocus( FN ) eines SeInputText Prüfen.
   // 
   @Test
-  public void tcSetFocus_ReadableAndEnabled() throws Exception {
-    try {
+  public void tcSetFocus_ReadableAndEnabled() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -395,14 +333,8 @@ public class SeInputField_Test {
       EN.VerifyHasFocus( "Name", "NO" );
       EN.VerifyHasFocus( "Vorname", "YES" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "SetFocus", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "SetFocus", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \brief
@@ -413,9 +345,8 @@ public class SeInputField_Test {
   // * disable ist abgeschaltet
   //
   @Test
-  // @Ignore( "Frame for 'SeInputTextReadonly' not found" )
-  public void tcSetFocus_ReadonlyAndEnabled() throws Exception {
-    try {
+  public void tcSetFocus_ReadonlyAndEnabled() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/inputText/input_type-text_readonly.htm" );
@@ -430,22 +361,16 @@ public class SeInputField_Test {
       EN.VerifyHasFocus( "Preis", "NO" );
       EN.VerifyHasFocus( "MwSt", "YES" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "SetFocus", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "SetFocus", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \brief
   // Testet das Schlüsselwort SetValue( FN ) eines SeInputText-es.
   //
   @Test
-  public void tcSetValue() throws Exception {
-    try {
+  public void tcSetValue() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -464,23 +389,17 @@ public class SeInputField_Test {
       EN.SetValue( "Vorname", "Manu" );
       EN.VerifyValue( "Vorname", "Manu" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "SetValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "SetValue", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \brief
   // Testet das Schlüsselwort SetValue( FN ) mit ${IGNORE} eines SeInputText-es.
   //
   @Test
-  public void tcSetValue_IGNORE() throws Exception {
-    try {
-      EN.BeginTest( name.getMethodName() );
+  public void tcSetValue_IGNORE() throws Exception
+  { 
+     EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
 
@@ -497,23 +416,17 @@ public class SeInputField_Test {
       EN.VerifyValue( "Name", "Hrabovszki" );
       EN.SetValue( "Vorname", "${IGNORE}" );
       EN.VerifyValue( "Vorname", "Zoltan" );
-
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "SetValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "SetValue", "F");
-      throw e;
-    }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \brief
   // Testet das Schlüsselwort TypeKey( FN ) eines SeInputText-es.
   //
   @Test
-  public void tcTypeKey() throws Exception {
-    try {
+  public void tcTypeKey() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -528,22 +441,16 @@ public class SeInputField_Test {
       EN.TypeKey( "Vorname", "Zoltan" );
       EN.VerifyValue( "Vorname", "Zoltan" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "TypeKey", "P");
-    }
-    catch (Exception ex) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "TypeKey", "F");
-      throw ex;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \brief
   // Testet das Schlüsselwort TypeKey( FN ) mit ${IGNORE} eines SeInputText-es.
   //
   @Test
-  public void tcTypeKey_IGNORE() throws Exception {
-    try {
+  public void tcTypeKey_IGNORE() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -571,14 +478,8 @@ public class SeInputField_Test {
       EN.VerifyValue( "Name", "Hrabovszki" );
       EN.VerifyValue( "Vorname", "Zoltan" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "TypeKey", "P");
-    }
-    catch (Exception ex) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "TypeKey", "F");
-      throw ex;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \brief
@@ -586,8 +487,8 @@ public class SeInputField_Test {
   // Erwartet wird das das objekt nicht existiert.
   //
   @Test
-  public void tcVerifyExists_ExistsNoExpectedNo() throws Exception {
-    try {
+  public void tcVerifyExists_ExistsNoExpectedNo() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -595,14 +496,8 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
       EN.VerifyExists( "NichtVorhanden", "NO" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyExists", "P");
-    }
-    catch (Exception ex) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyExists", "F");
-      throw ex;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \brief
@@ -643,8 +538,8 @@ public class SeInputField_Test {
   // / Erwartet wird, dass das Objekt existiert.
   // /
   @Test
-  public void tcVerifyExists_ExistsYesExpectedYes() throws Exception {
-    try {
+  public void tcVerifyExists_ExistsYesExpectedYes() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -652,14 +547,8 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
       EN.VerifyExists( "Name", "YES" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyExists", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyExists", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \brife
@@ -672,8 +561,8 @@ public class SeInputField_Test {
   // worden.
   //
   @Test
-  public void tcVerifyExists_IGNORE() throws Exception {
-    try {
+  public void tcVerifyExists_IGNORE() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
@@ -682,22 +571,16 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
       EN.VerifyExists( "NichtVorhanden", "${IGNORE}" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyExists", "P");
-    }
-    catch (Exception ex) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyExists", "F");
-      throw ex;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \brief
   // Focus eines Textfeldes prüfen.
   //
   @Test
-  public void tcVerifyHasFocus() throws Exception {
-    try {
+  public void tcVerifyHasFocus() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -708,22 +591,16 @@ public class SeInputField_Test {
       EN.SetFocus( "Name" );
       EN.VerifyHasFocus( "Name", "YES" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyHasFocus", "P");
-    }
-    catch (Exception ex) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyHasFocus", "F");
-      throw ex;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \brief
   // Focus eines Textfeldes prüfen.
   //
   @Test( expected = OKWVerifyingFailsException.class )
-  public void tcVerifyHasFocus_HasFocusYesExpectedNo_OKWVerifyingFailsException() throws Exception {
-    try {
+  public void tcVerifyHasFocus_HasFocusYesExpectedNo_OKWVerifyingFailsException() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -733,15 +610,6 @@ public class SeInputField_Test {
       EN.VerifyHasFocus( "Name", "NO" );
       EN.SetFocus( "Name" );
       EN.VerifyHasFocus( "Name", "NO" );
-
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyHasFocus", "P");
-    }
-    catch (Exception ex) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyHasFocus", "F");
-      throw ex;
-    }
   }
 
   // \brief
@@ -749,7 +617,6 @@ public class SeInputField_Test {
   //
   @Test( expected = OKWVerifyingFailsException.class )
   public void tcVerifyHasFocus_HasFocusNoExpectedYes_OKWVerifyingFailsException() throws Exception {
-    try {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -757,15 +624,6 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
 
       EN.VerifyHasFocus( "Name", "YES" );
-
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyHasFocus", "P");
-    }
-    catch (Exception ex) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyHasFocus", "F");
-      throw ex;
-    }
   }
 
   
@@ -782,8 +640,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test
-  public void tcVerifyHasFocus_IGNORE() throws Exception {
-    try {
+  public void tcVerifyHasFocus_IGNORE() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -791,15 +649,8 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
 
       EN.VerifyHasFocus( "NichtVorhanden", "${IGNORE}" );
-
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyHasFocus", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyHasFocus", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \~german
@@ -810,8 +661,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test
-  public void tcVerifyIsActive() throws Exception {
-    try {
+  public void tcVerifyIsActive() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -835,14 +686,9 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeInputTextReadonly" );
 
       EN.VerifyIsActive( "Preis", "YES" );
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyIsActive", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyIsActive", "F");
-      throw e;
-    }
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -854,8 +700,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test
-  public void tcVerifyLabel() throws Exception {
-    try {
+  public void tcVerifyLabel() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -865,14 +711,8 @@ public class SeInputField_Test {
       EN.VerifyLabel( "Name", "Name:" );
       EN.VerifyLabel( "Vorname", "Vorname:" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyLabel", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyLabel", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -884,8 +724,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test( expected = OKWVerifyingFailsException.class )
-  public void tcVerifyLabel_OKWVerifyingFailsException() throws Exception {
-    try {
+  public void tcVerifyLabel_OKWVerifyingFailsException() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -894,15 +734,8 @@ public class SeInputField_Test {
 
       EN.VerifyLabel( "Name", "Xxxx:" );
 
-
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyLabel", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyLabel", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -914,8 +747,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test
-  public void tcVerifyLabelWCM() throws Exception {
-    try {
+  public void tcVerifyLabelWCM() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -925,14 +758,8 @@ public class SeInputField_Test {
       EN.VerifyLabelWCM( "Name", "Name?" );
       EN.VerifyLabelWCM( "Vorname", "Vorname?" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyLabel", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyLabel", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -944,8 +771,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test( expected = OKWVerifyingFailsException.class )
-  public void tcVerifyLabelWCM_OKWVerifyingFailsException() throws Exception {
-    try {
+  public void tcVerifyLabelWCM_OKWVerifyingFailsException() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -953,15 +780,6 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
 
       EN.VerifyLabelWCM( "Name", "####:" );
-
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyLabel", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyLabel", "F");
-      throw e;
-    }
   }
 
   
@@ -973,8 +791,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test
-  public void tcVerifyLabelREGX() throws Exception {
-    try {
+  public void tcVerifyLabelREGX() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -983,14 +801,8 @@ public class SeInputField_Test {
 
       EN.VerifyLabelREGX( "Name", "Name\\W" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyLabel", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyLabel", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -1002,8 +814,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test( expected = OKWVerifyingFailsException.class )
-  public void tcVerifyLabelREGX_OKWVerifyingFailsException() throws Exception {
-    try {
+  public void tcVerifyLabelREGX_OKWVerifyingFailsException() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -1011,15 +823,6 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
 
       EN.VerifyLabelREGX( "Name", "Xxxx:" );
-
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyLabel", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyLabel", "F");
-      throw e;
-    }
   }
 
   
@@ -1031,8 +834,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test
-  public void tcVerifyTooltip() throws Exception {
-    try {
+  public void tcVerifyTooltip() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -1041,14 +844,9 @@ public class SeInputField_Test {
 
       EN.VerifyTooltip( "Name", "Den Namen eingeben" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyTooltip", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyTooltip", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+
   }
 
   // \~german
@@ -1060,24 +858,17 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test( expected = OKWVerifyingFailsException.class )
-  public void tcVerifyTooltip_OKWVerifyingFailsException() throws Exception {
-    try {
+  public void tcVerifyTooltip_OKWVerifyingFailsException() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
       EN.SelectWindow( "SeTextField" );
+      
 
-      EN.VerifyTooltip( "Name", "Soltan" );
+      EN.VerifyTooltip( "Name", "Den Namen..." );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "F");
-      throw e;
-    }
   }
 
   
@@ -1089,8 +880,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test
-  public void tcVerifyTooltipWCM() throws Exception {
-    try {
+  public void tcVerifyTooltipWCM() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
   
@@ -1099,14 +890,8 @@ public class SeInputField_Test {
   
       EN.VerifyTooltipWCM( "Name", "??? Namen eingeben" );
   
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyTooltip", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyTooltip", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \~german
@@ -1117,8 +902,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test( expected = OKWVerifyingFailsException.class )
-  public void tcVerifyTooltipWCM_OKWVerifyingFailsException() throws Exception {
-    try {
+  public void tcVerifyTooltipWCM_OKWVerifyingFailsException() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -1126,15 +911,6 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
 
       EN.VerifyTooltipWCM( "Name", "#oltan" );
-
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "F");
-      throw e;
-    }
   }
 
   
@@ -1146,8 +922,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test
-  public void tcVerifyTooltipREGX() throws Exception {
-    try {
+  public void tcVerifyTooltipREGX() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
   
@@ -1156,14 +932,8 @@ public class SeInputField_Test {
   
       EN.VerifyTooltipREGX( "Name", "\\wen Namen eingeben" );
   
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyTooltip", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyTooltip", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \~german
@@ -1174,8 +944,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test( expected = OKWVerifyingFailsException.class )
-  public void tcVerifyTooltipREGX_OKWVerifyingFailsException() throws Exception {
-    try {
+  public void tcVerifyTooltipREGX_OKWVerifyingFailsException() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -1183,15 +953,6 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
 
       EN.VerifyTooltipREGX( "Name", "#oltan" );
-
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "F");
-      throw e;
-    }
   }
   
   
@@ -1203,8 +964,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test
-  public void tcVerifyValue() throws Exception {
-    try {
+  public void tcVerifyValue() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -1217,14 +978,8 @@ public class SeInputField_Test {
       EN.SetValue( "Name", "Zoltan" );
       EN.VerifyValue( "Name", "Zoltan" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
   
   
@@ -1237,9 +992,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test
-  // @Ignore("Setvalue error")
-  public void tcVerifyValue_DELETE_EMPTY() throws Exception {
-    try {
+  public void tcVerifyValue_DELETE_EMPTY() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
   
@@ -1251,15 +1005,6 @@ public class SeInputField_Test {
   
       EN.SetValue( "Name", "${DELETE}" );
       EN.VerifyValue( "Name", "${EMPTY}" );
-  
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "F");
-      throw e;
-    }
   }
 
   // \~german
@@ -1270,8 +1015,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test( expected = OKWVerifyingFailsException.class )
-  public void tcVerifyValue_OKWVerifyingFailsException() throws Exception {
-    try {
+  public void tcVerifyValue_OKWVerifyingFailsException() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -1284,27 +1029,19 @@ public class SeInputField_Test {
       EN.SetValue( "Name", "Zoltan" );
       EN.VerifyValue( "Name", "Soltan" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "F");
-      throw e;
-    }
   }
 
 
-  // \~german
-  // \brief
-  // Test des Schlüsselwortes "VerifyValueWCM( FN, ExpValu ) für SeInputText.
-  //
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2014.12.03
+  /** \~german
+   * Test des Schlüsselwortes "VerifyValueWCM( FN, ExpValu ) für SeInputText.
+   *
+   * \~
+   * @author Zoltan Hrabovszki
+   * @date 2014.12.03
+   */
   @Test
-  public void tcVerifyValueWCM() throws Exception {
-    try {
+  public void tcVerifyValueWCM() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -1317,15 +1054,10 @@ public class SeInputField_Test {
       EN.SetValue( "Name", "Zoltan" );
       EN.VerifyValueWCM( "Name", "??????" );
       EN.VerifyValueWCM( "Name", "Z????n" );
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
       
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "F");
-      throw e;
-    }
   }
   
   
@@ -1338,9 +1070,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test
-  // @Ignore("Setvalue error")
-  public void tcVerifyValueWCM_DELETE_EMPTY() throws Exception {
-    try {
+  public void tcVerifyValueWCM_DELETE_EMPTY() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
   
@@ -1353,14 +1084,8 @@ public class SeInputField_Test {
       EN.SetValue( "Name", "${DELETE}" );
       EN.VerifyValueWCM( "Name", "${EMPTY}" );
   
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \~german
@@ -1371,8 +1096,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test( expected = OKWVerifyingFailsException.class )
-  public void tcVerifyValueWCM_OKWVerifyingFailsException() throws Exception {
-    try {
+  public void tcVerifyValueWCM_OKWVerifyingFailsException() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -1384,15 +1109,6 @@ public class SeInputField_Test {
       
       EN.SetValue( "Name", "Zoltan" );
       EN.VerifyValueWCM( "Name", "#oltan" );
-
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "F");
-      throw e;
-    }
   }
 
   
@@ -1404,8 +1120,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test
-  public void tcVerifyValueREGX() throws Exception {
-    try {
+  public void tcVerifyValueREGX() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -1417,15 +1133,8 @@ public class SeInputField_Test {
       
       EN.SetValue( "Name", "Zoltan" );
       EN.VerifyValueREGX( "Name", ".oltan" );
-      
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
   
   
@@ -1438,9 +1147,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test
-  // @Ignore("Setvalue error")
-  public void tcVerifyValueREGX_DELETE_EMPTY() throws Exception {
-    try {
+  public void tcVerifyValueREGX_DELETE_EMPTY() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
   
@@ -1452,16 +1160,10 @@ public class SeInputField_Test {
   
       EN.SetValue( "Name", "${DELETE}" );
       EN.VerifyValueREGX( "Name", "${EMPTY}" );
-  
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "F");
-      throw e;
-    }
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
+
 
   // \~german
   // \brief
@@ -1471,8 +1173,8 @@ public class SeInputField_Test {
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
   @Test( expected = OKWVerifyingFailsException.class )
-  public void tcVerifyValueREGX_OKWVerifyingFailsException() throws Exception {
-    try {
+  public void tcVerifyValueREGX_OKWVerifyingFailsException() throws Exception
+  {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
@@ -1485,45 +1187,7 @@ public class SeInputField_Test {
       EN.SetValue( "Name", "Zoltan" );
       EN.VerifyValueREGX( "Name", "Soltan" );
 
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "P");
-    }
-    catch (Exception e) {
-      // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-      // "VerifyValue", "F");
-      throw e;
-    }
-  }
-
-  
-  // / \brief
-  // / Methoden, die nicht implementiert werden, in der ImplementationMatrix als
-  // "Nicht Implementiert" registrienen.
-  // /
-  @Test
-  @Ignore
-  public void __NotImplemented_en() {
-    // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-    // "LogCaption", "N");
-    // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-    // "LogTablecellValue", "N");
-    // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-    // "MemorizeCaption", "N");
-    // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-    // "MemorizeTablecellValue", "N");
-    // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-    // "SelectMenu", "N");
-    // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-    // "SelectTablecell", "N");
-    // ImplementationMatrix.Instance.SetImplementation("SeTextField", "StopApp",
-    // "N");
-    // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-    // "StartApp", "N");
-    // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-    // "VerifyCaption", "N");
-    // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-    // "VerifyTablecellValue", "N");
-    // ImplementationMatrix.Instance.SetImplementation("SeTextField",
-    // "SelectWindow", "N");
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 }

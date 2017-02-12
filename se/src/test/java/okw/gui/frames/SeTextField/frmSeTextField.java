@@ -43,7 +43,7 @@ public class frmSeTextField extends SeBrowserChild
 
     public frmSeTextField( )
     {
-    	super("//*[@title='Eingabefeld Disabled']");
+    	super("//title[contains(text(),'Textfield TestGUI 1 input_type_all_InputText')]/../..");
     }
 
 }

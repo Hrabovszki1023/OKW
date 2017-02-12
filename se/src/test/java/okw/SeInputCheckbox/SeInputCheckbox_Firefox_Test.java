@@ -3,9 +3,7 @@ package okw.SeInputCheckbox;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.*;
 
 public class SeInputCheckbox_Firefox_Test extends SeInputCheckbox_Test
 {

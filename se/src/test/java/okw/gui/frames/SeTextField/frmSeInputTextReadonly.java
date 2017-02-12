@@ -30,6 +30,6 @@ import okw.gui.adapter.selenium.*;
 
         public frmSeInputTextReadonly()
         {
-        	super("//@title='Eingabefeld Readonly']");
+          super("//title[contains(text(),'Textfield TestGUI 4 input_type-text_readonly')]/../..");
         }
 }
