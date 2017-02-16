@@ -42,5 +42,6 @@ public class SeSelect_Firefox_Test extends SeSelect_Test
     	     rt.exec("taskkill firefox");
     	   else
     	     rt.exec("pkill -f firefox");
+        Thread.sleep( 1000 );
     }
 }

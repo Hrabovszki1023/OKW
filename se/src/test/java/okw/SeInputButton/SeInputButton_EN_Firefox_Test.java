@@ -27,5 +27,6 @@ public class SeInputButton_EN_Firefox_Test extends SeInputButton_EN_Test
     	     rt.exec("taskkill firefox");
     	   else
     	     rt.exec("pkill -f firefox");
+    	  Thread.sleep( 1000 );
     }
 }

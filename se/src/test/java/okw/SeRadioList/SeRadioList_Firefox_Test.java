@@ -41,5 +41,6 @@ public class SeRadioList_Firefox_Test extends SeRadioList_Test
     	     rt.exec("taskkill firefox");
     	   else
     	     rt.exec("pkill -f firefox");
+        Thread.sleep( 1000 );
     }
 }

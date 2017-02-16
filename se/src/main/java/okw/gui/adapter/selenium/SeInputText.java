@@ -1,12 +1,3 @@
-package okw.gui.adapter.selenium;
-
-import java.util.ArrayList;
-
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-
-import okw.gui.OKWLocator;
-
 /*
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
@@ -46,6 +37,16 @@ import okw.gui.OKWLocator;
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
+package okw.gui.adapter.selenium;
+
+import java.util.ArrayList;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+
+import okw.gui.OKWLocator;
+
+
     // , IOKW_SimpleDataObj
     /// \~german
     /// \brief
@@ -67,6 +68,22 @@ import okw.gui.OKWLocator;
         	super(Locator, fpLocators);
         }
 
+        /** 
+         * \~german
+         *  
+         *  @param fpsLocator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
+         *  @param fpParams Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.
+         *  
+         *  \~english
+         *  
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2013.05.03
+         */
+         public SeInputText(String fp_iframeID, String Locator, OKWLocator... fpLocators)
+         {
+           super(fp_iframeID, Locator, fpLocators);
+         }
 
         /// \~german
         /// \brief
@@ -83,7 +100,7 @@ import okw.gui.OKWLocator;
         /// \author Zoltan Hrabovszki
         /// \date 2014.06.2014
         @Override
-        public ArrayList<String> getValue()
+        public ArrayList<String> getValue() throws Exception
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
             Boolean bOK = false;
@@ -127,21 +144,25 @@ import okw.gui.OKWLocator;
         }
 
   // / \~german
-  public void SetValue( ArrayList<String> Val )
+  public void SetValue( ArrayList<String> Val ) throws Exception
   {
     this.LogFunctionStartDebug( "SetValue", "Val", Val.toString() );
 
     try
     {
-      WebElement myMe = this.Me();
-      myMe.clear();
-      if( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
-      {
+      if( this.WaitForMe() ){
+      
+        WebElement myMe = this.Me();
         myMe.clear();
-      }
-      else
-      {
-        myMe.sendKeys( Val.get( 0 ) );
+        
+        if( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
+        {
+          myMe.clear();
+        }
+        else
+        {
+          myMe.sendKeys( Val.get( 0 ) );
+        }
       }
     }
     finally

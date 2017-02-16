@@ -86,9 +86,10 @@ import okw.gui.OKWLocator;
          *  \~
          *  \author Zoltán Hrabovszki
          *  \date 2013.12.07
+         * @throws Exception 
          */
         @Override
-        public ArrayList<String> VerifyCaption() throws InterruptedException
+        public ArrayList<String> VerifyCaption() throws Exception
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
@@ -121,9 +122,10 @@ import okw.gui.OKWLocator;
          *  \~
          *  \author Zoltán Hrabovszki
          *  \date 2013.12.07
+         * @throws Exception 
          */
         @Override
-        public ArrayList<String> LogCaption()
+        public ArrayList<String> LogCaption() throws Exception
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
@@ -155,9 +157,10 @@ import okw.gui.OKWLocator;
          *  \~
          *  \author Zoltán Hrabovszki
          *  \date 2013.12.07
+         * @throws Exception 
          */
         @Override
-        public ArrayList<String> MemorizeCaption()
+        public ArrayList<String> MemorizeCaption() throws Exception
         {
             ArrayList<String> lvLsReturn = null;
 
@@ -183,10 +186,11 @@ import okw.gui.OKWLocator;
          *  \~english
          *  \~
          *  @author Zoltán Hrabovszki
+         * @throws Exception 
          *  @date 2013.12.07
          */
         @Override //TODO define Prototype in BaseClass!
-        public ArrayList<String> getCaption()
+        public ArrayList<String> getCaption() throws Exception
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
             try

@@ -158,9 +158,10 @@ import okw.gui.OKWLocator;
    *  @return Rückgabe des Textuellen Inhaltes der markierten Textes.
    *  Es wird (immer) der aktuelle Wert des Objektes zurückgeliefert.
    *  @author Zoltan Hrabovszki
+   * @throws Exception 
    *  @date 2013.12.14
    */
-  public ArrayList<String> getValue( )
+  public ArrayList<String> getValue( ) throws Exception
   {
       ArrayList<String> lvLsReturn = new ArrayList<String>();
       

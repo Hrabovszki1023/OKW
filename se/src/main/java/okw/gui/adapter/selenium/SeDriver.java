@@ -39,10 +39,18 @@
 
 package okw.gui.adapter.selenium;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+
+import okw.exceptions.OKWGUIObjectNotFoundException;
+import okw.log.Logger_Sngltn;
 
      /**  \brief
      *  Pattern Singelton
@@ -50,7 +58,12 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
     public class SeDriver
     {
 
+      // Logger Instance holen
+      protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
+      
         public WebDriver driver;
+        
+        String currentIframeID = "";
 
         /** \brief
          *  Singelton-Class: instanz hold the Object-Referenc of CurrentObject
@@ -104,7 +117,128 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
             this.driver = new HtmlUnitDriver(true);
         }
 
+  /**
+   * \~german Wechselt das Frame auf das Frame mit der id=iframeID
+   * 
+   * Wenn iframe = null oder "", dann wird auf das "defaultContent" gewechselt
+   * Sonst wird zunächts auf das defaultContent zurückgesetzt und anschliesend
+   * das Frame mit der id=iframeID gewählt.
+   * 
+   * _Hinweis_ Nachdem setzten des Frame werden alle findElement Ausführungen
+   * innerhalb des Frames ausgeführt.
+   * https://www.seleniumeasy.com/selenium-tutorials/how-to-work-with-iframes-in-selenium-webdriver
+   */
+  public void swichToFrame( String iframeID )
+  {
 
+    // Nur etwas Unternehmen wenn iframeID sich geändert hat
+    if ( !currentIframeID.equalsIgnoreCase( iframeID ) )
+    {
+      // first reset to default
+      driver.switchTo().defaultContent();
+
+      // then set to yor ifframe if not null or empty!
+      if ( !okw.OKW_Helper.StringIsNullOrEmpty( iframeID ) )
+      {
+        try
+        {
+          driver.switchTo().frame( iframeID );
+
+          // Neuenwert merken wenn Fehlerfrei ge-Switchto wurde... 
+          currentIframeID = iframeID;
+
+        }
+        catch (NoSuchFrameException e)
+        {
+          System.out.println( "Unable to locate frame with id " + iframeID + e.getStackTrace() );
+        }
+        catch (Exception e)
+        {
+          System.out.println( "Unable to navigate to frame with id " + iframeID + e.getStackTrace() );
+        }
+      }
+    }
+    return;
+  }
+        
+        
+        /** \~german
+         *  Ermittelt das Webelement mit der gegebenen frameID und dem gegebenen Locator
+         *  
+         *  
+         *  \~english
+         *  \todo TODO: Brief Description.
+         *  
+         *  
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2015.05.12
+         */        
+        public WebElement getElement( String frameID, String fpsLocator ) throws Exception
+        {
+          WebElement me = null;
+          List<WebElement> meme = null;
+          
+          // 1. ggf Auf das richtige frame Setzen oder zurück auf default. 
+          this.swichToFrame( frameID );
+          
+          // Element ggf. des richtigen Frames Holen.
+          meme = this.driver.findElements(By.xpath(fpsLocator));
+          
+          if (meme.size() == 0)
+          {
+              String lvsPrintMe = "GUI-Objekt wurde nicht gefunden: Locator: >>" + fpsLocator + "<<";
+              
+              this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
+              this.MyLogger.LogPrint( lvsPrintMe );
+              this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
+
+              throw new OKWGUIObjectNotFoundException( lvsPrintMe );
+          }
+          else if (meme.size() > 1)
+          {
+              String lvsPrintMe = "Locator ist nicht eindeutig, es wurden mehrer GUI-Objekt gefunden:\n Locator: >>" + fpsLocator + "<<";
+              
+              this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
+              this.MyLogger.LogPrint( lvsPrintMe );
+              this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
+
+              throw new OKWGUIObjectNotFoundException( lvsPrintMe );
+          }
+          else
+          {
+              me = meme.get(0);
+          }
+          
+          return me;
+        }
+        
+        
+        /** \~german
+         *  Ermittelt das Webelement mit der gegebenen frameID und dem gegebenen Locator
+         *  
+         *  
+         *  \~english
+         *  \todo TODO: Brief Description.
+         *  
+         *  
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2015.05.12
+         */        
+        public List<WebElement> getElements( String frameID, String fpsLocator )
+        {
+          List<WebElement> meme = null;
+          
+          // 1. ggf Auf das richtige frame Setzen oder zurück auf default. 
+          this.swichToFrame( frameID );
+          
+          // Element ggf. des richtigen Frames Holen.
+          meme = this.driver.findElements(By.xpath(fpsLocator));
+                    
+          return meme;
+        }
+        
         /*
         /** \~german
          *  Erzeugt eine Instanz des HTMLnitDrivers

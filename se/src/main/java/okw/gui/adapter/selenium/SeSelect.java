@@ -73,10 +73,11 @@ import okw.gui.OKWLocator;
          *  
          *  @param fps_Values Ein oder mehrere Werte, die ausgewählt werden sollen.
          *  @author Zoltan Hrabovszki
+         * @throws Exception 
          *  @date 2013.04.11
          */
         @Override
-        public void Select(ArrayList<String> fps_Values)
+        public void Select(ArrayList<String> fps_Values) throws Exception
         {
             this.LogFunctionStartDebug("Select", "fps_Values", fps_Values.toString());
 
@@ -126,10 +127,11 @@ import okw.gui.OKWLocator;
          *  @param fpsValues Werte, die in der Listbox ausgwählt werden sollen.
          *  \~
          *  @author Zoltan Hrabovszki
+         * @throws Exception 
          *  @date 2013.04.11
          */
         @Override
-        public void SetValue( ArrayList<String> fpsValues)
+        public void SetValue( ArrayList<String> fpsValues) throws Exception
         {
             this.LogFunctionStartDebug("SetValue", "fpsValues", fpsValues.toString());
 
@@ -182,10 +184,11 @@ import okw.gui.OKWLocator;
          *  @return Liste der ausgewählten Werte\return
          *  \~
          *  @author Zoltan Hrabovszki
+         * @throws Exception 
          *  @date 2014.12.04
          */
         @Override
-        public ArrayList<String> getValue()
+        public ArrayList<String> getValue() throws Exception
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
             

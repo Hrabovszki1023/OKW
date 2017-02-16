@@ -42,5 +42,6 @@ public class SeLink_EN_Firefox_Test extends SeLink_EN_Test
            rt.exec("taskkill firefox");
          else
            rt.exec("pkill -f firefox");
+        Thread.sleep( 1000 );  
     }
 }

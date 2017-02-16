@@ -1,5 +1,7 @@
 package okw.gui.adapter.selenium;
 
+import java.io.IOException;
+
 /*
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
@@ -41,6 +43,11 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 
+import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.SAXException;
+
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
 
@@ -59,7 +66,6 @@ import okw.gui.OKWLocator;
         }
 
         /** \~german
-         *  \brief
          *  Klickt auf das aktuelle Objekt.
          *  
          *  \~english
@@ -67,14 +73,22 @@ import okw.gui.OKWLocator;
          *  \~
          *  \author Zoltán Hrabovszki
          *  \date 2013.11.11
+         * @throws IOException 
+         * @throws SAXException 
+         * @throws ParserConfigurationException 
+         * @throws JAXBException 
+         * @throws InterruptedException 
+         * @throws Exception 
          */
         @Override
-        public void ClickOn()
+        public void ClickOn() throws Exception
         {
             try
             {
                 this.LogFunctionStartDebug("ClickOn");
 
+                this.WaitForMe();
+                
                 // Wenn das Objekt nicht existiert mit Exception beenden...
                 if (!this.getExists())
                 {
@@ -140,7 +154,7 @@ import okw.gui.OKWLocator;
         /// 
         /// \return
         @Override
-        public ArrayList<String> getValue()
+        public ArrayList<String> getValue() throws Exception
         {
             
             ArrayList<String> lvLsReturn = new ArrayList<String>();
@@ -177,7 +191,7 @@ import okw.gui.OKWLocator;
         /// \author Zoltan Hrabovszki
         /// \date 2013.12.14
         @Override
-        public ArrayList<String> LogValue()
+        public ArrayList<String> LogValue() throws Exception
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
@@ -209,16 +223,14 @@ import okw.gui.OKWLocator;
         /// \author Zoltán Hrabovszki
         /// \date 2013.12.14
         @Override
-        public ArrayList<String> MemorizeValue()
+        public ArrayList<String> MemorizeValue() throws Exception
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
-            Boolean bOK = false;
 
             try
             {
                 MyLogger.LogFunctionStartDebug("Memorize");
                 lvLsReturn = this.getValue();
-                bOK = true;
             }
             finally
             {

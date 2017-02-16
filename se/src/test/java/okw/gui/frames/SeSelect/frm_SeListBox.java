@@ -51,8 +51,7 @@ import okw.gui.adapter.selenium.SeSelect;
 
       public frm_SeListBox() 
       {
-          super ("//*[@title='ListBox/Auswahliste: Einträge vorselektiert'");
-  
+          super ("//title[contains(text(),'ListBox/Auswahliste: Einträge vorselektiert')]/../..");
           NichtVorhanden = new SeSelect("//*[@name='NichtVorhanden']");
 
           Künstler =  new SeSelect("//*[@name='Künstler']");

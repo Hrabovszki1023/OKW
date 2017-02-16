@@ -40,5 +40,7 @@ public class SeInputRadio_EN_Firefox_Test extends SeInputRadio_EN_Test
     	     rt.exec("taskkill firefox");
     	   else
     	     rt.exec("pkill -f firefox");
+    	  
+    	Thread.sleep( 1000 );
     }
 }

@@ -83,9 +83,10 @@ import okw.gui.*;
          *  Diese Methode ist die Anpassungstelle für Projekspezifische Anpassungen.
          *  
          *  @author Zoltan Hrabovszki
+         * @throws Exception 
          *  @date 2013.04.11
          */
-        public Boolean IsSelected()
+        public Boolean IsSelected() throws Exception
         {
             Boolean lvbReturn = false;
             
@@ -108,9 +109,10 @@ import okw.gui.*;
          *  Method verlässt die Checkbox angehakt, egal ob diese vorher angehakt war oder nicht.
          *  
          *  @author Zoltan Hrabovszki
+         * @throws Exception 
          *  @date 2013.04.11
          */
-        public void Checking()
+        public void Checking() throws Exception
         {
             this.LogFunctionStartDebug("Checking");
 
@@ -135,10 +137,11 @@ import okw.gui.*;
          * 
          * @return Liefert im ersten Wert des ArrayList&lt;String&gt; sprachabhängig CHECKED/UNCHECKED zurück.
          * @author Zoltan Hrabovszki
+         * @throws Exception 
          * @date 2013.04.11
          */
         @Override
-        public ArrayList<String> getValue()
+        public ArrayList<String> getValue() throws Exception
         {
             ArrayList<String> lvls_Return = new ArrayList<String>();
             try
@@ -173,10 +176,11 @@ import okw.gui.*;
         
         /**
          *  @author Zoltan Hrabovszki
+         * @throws Exception 
          *  @date 2013.04.11
          */
         @Override
-        public void SetValue(ArrayList<String> fps_Values) throws XPathExpressionException
+        public void SetValue(ArrayList<String> fps_Values) throws Exception
         {
             this.LogFunctionStartDebug("SetValue", "fps_Values", fps_Values.toString());
 
@@ -219,7 +223,7 @@ import okw.gui.*;
         // \author Zoltan Hrabovszki
         // \date 2013.04.11
         @Override
-        public void Select(ArrayList<String> fps_Values) throws XPathExpressionException
+        public void Select(ArrayList<String> fps_Values) throws Exception
         {
             this.LogFunctionStartDebug("Select", "fps_Values", fps_Values.toString());
 
@@ -266,9 +270,10 @@ import okw.gui.*;
          *  Daher
          *  
          *  @author Zoltan Hrabovszki
+         * @throws Exception 
          *  @date 2013.04.11
          */
-        public void UnChecking()
+        public void UnChecking() throws Exception
         {
             this.LogFunctionStartDebug("UnChecking");
 

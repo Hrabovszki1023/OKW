@@ -290,12 +290,11 @@ public class SeSelect_Test
     EN.BeginTest( name.getMethodName() );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
+    
+    
     EN.SelectWindow( "SeListBox" );
-
     EN.VerifyExists( "NichtVorhanden", "YES" );
 
-    EN.StopApp( ApplicationName );
-    EN.EndTest();
   }
 
   // \~german

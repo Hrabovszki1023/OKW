@@ -83,9 +83,10 @@ import okw.gui.OKWLocator;
          *  \~
          *  \author Zoltan Hrabovszki
          *  \date 2014.06.2014
+         * @throws Exception 
          */
         //@Override
-        public ArrayList<String> igetValue()
+        public ArrayList<String> igetValue() throws Exception
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
@@ -135,9 +136,10 @@ import okw.gui.OKWLocator;
          *  \~
          *  \author Zoltan Hrabovszki
          *  \date 2014.06.2014
+         * @throws Exception 
          */
         @Override
-        public ArrayList<String> getValue()
+        public ArrayList<String> getValue() throws Exception
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
@@ -163,7 +165,7 @@ import okw.gui.OKWLocator;
         
         
   // / \~german
-  public void SetValue( ArrayList<String> Values )
+  public void SetValue( ArrayList<String> Values ) throws Exception
   {
     this.LogFunctionStartDebug( "SetValue", "Val", Values.toString() );
 

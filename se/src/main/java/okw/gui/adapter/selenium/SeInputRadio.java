@@ -29,10 +29,11 @@ public class SeInputRadio extends SeAnyChildWindow
    * 
    * @return Liefert im ersten Wert des ArrayList&lt;String&gt; sprachabhängig CHECKED/UNCHECKED zurück.
    * @author Zoltan Hrabovszki
+   * @throws Exception 
    * @date 2013.04.11
    */
   @Override
-  public ArrayList<String> getValue()
+  public ArrayList<String> getValue() throws Exception
   {
       ArrayList<String> lvls_Return = new ArrayList<String>();
       try
@@ -71,9 +72,10 @@ public class SeInputRadio extends SeAnyChildWindow
    *  
    *  @return Wenn Ausgewählt: true, sonst false
    *  @author Zoltan Hrabovszki
+   * @throws Exception 
    *  @date 2013.04.11
    */
-  public Boolean IsSelected()
+  public Boolean IsSelected() throws Exception
   {
       Boolean lvbReturn = false;
       

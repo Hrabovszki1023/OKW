@@ -15,7 +15,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-
 public class SeAnyChildWindow extends AnyChildwindow
 {	
     // Logger Instance holen
@@ -23,8 +22,22 @@ public class SeAnyChildWindow extends AnyChildwindow
     
     protected LogMessenger LM = new LogMessenger("GUI");
 
+    // If null then use "default" else switchTo "iframeID" 
+    protected String iframeID = "";
     
-    /**  \~german
+    public String getIframeID()
+    {
+      return iframeID;
+    }
+
+    public void setIframeID( String iframeID )
+    {
+      this.iframeID = iframeID;
+    }
+  
+    
+    /** 
+     * \~german
     *  
     *  @param fpsLocator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
     *  @param fpParams Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.
@@ -40,16 +53,36 @@ public class SeAnyChildWindow extends AnyChildwindow
     	super(Locator, fpLocators);
     }
 
+    
+    /** 
+     * \~german
+     *  
+     *  @param fpsLocator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
+     *  @param fpParams Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.
+     *  
+     *  \~english
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.05.03
+     */
+     public SeAnyChildWindow(String fp_iframeID, String Locator, OKWLocator... fpLocators)
+     {
+       super(Locator, fpLocators);
+       this.iframeID = fp_iframeID;
+     }
 
+    
     /** \~german
      *  Klickt auf das aktuelle Objekt.
      *  
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
+     * @throws Exception 
      *  @date 2013.11.11
      */
-    public void ClickOn()
+    public void ClickOn() throws Exception
     {
         try
         {
@@ -82,7 +115,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	  *  @author Zoltán Hrabovszki
 	  *  @date 2013.12.07
 	  */
-	public ArrayList<String> getCaption()
+	public ArrayList<String> getCaption() throws Exception
 	{
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 
@@ -91,9 +124,9 @@ public class SeAnyChildWindow extends AnyChildwindow
 	        this.LogFunctionStartDebug("GetCaption");
 	
 	        // Wenn das Objekt nicht existiert mit Exception beenden...
-	        if (!this.getExists())
+	        if (!this.WaitForMe())
 	        {
-	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
+	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getCaption()");
 	            throw new OKWGUIObjectNotFoundException(lvsLM);
 	        }
 	        
@@ -128,13 +161,16 @@ public class SeAnyChildWindow extends AnyChildwindow
         Boolean lvbReturn = false;
         List<WebElement> meme = null;
 
+        String myLocator = null;
+        
         try
         {
           this.LogFunctionStartDebug("getExists");
 
-           String myLocator = this.getLocator();
-        
-           meme = SeDriver.getInstance().driver.findElements(By.xpath(myLocator));
+          // Wenn Iframe gesetzt umschlaten auf das Ifreme sonst zurücksetzten aud default.
+          
+           myLocator = this.getLocator();
+           meme = SeDriver.getInstance().getElements(getIframeID(), myLocator);
         
            if (meme.size() == 0)
            {
@@ -175,7 +211,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.11.11
 	 */
-	public Boolean getHasFocus()
+	public Boolean getHasFocus() throws Exception
 	{
 	    Boolean lvbReturn = false;
 	
@@ -184,7 +220,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	        this.LogFunctionStartDebug("getHasFocus");
 	
 	        // Wenn das Objekt nicht existiert mit Exception beenden...
-	        if (!this.getExists())
+	        if (!this.WaitForMe())
 	        {
 	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getHasFocus()");
 	            throw new OKWGUIObjectNotFoundException(lvsLM);
@@ -211,7 +247,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2014.04.19
      */
-    public Boolean getIsActive()
+    public Boolean getIsActive() throws Exception
     {
         Boolean lvbReturn = false;
         String lvDisabled = null;
@@ -221,9 +257,9 @@ public class SeAnyChildWindow extends AnyChildwindow
             this.MyLogger.LogFunctionStartDebug("getIsActive");
 
             // Wenn das Objekt nicht existiert mit Exception beenden...
-            if (!this.getExists())
+            if (!this.WaitForMe())
             {
-                String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "SeAnyWin.GetIsActive()");
+                String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getIsActive()");
                 throw new OKWGUIObjectNotFoundException(lvsLM);
             }
 
@@ -258,18 +294,18 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  @author Zoltán Hrabovszki
     *  @date 2014.06.17
     */
-	public ArrayList<String> getLabel()
+	public ArrayList<String> getLabel() throws Exception
 	{
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 
 	    try
 	    {
-	        MyLogger.LogFunctionStartDebug("GetLabel");
+	        MyLogger.LogFunctionStartDebug("getLabel");
 	
 	        // Wenn das Objekt nicht existiert mit Exception beenden...
-	        if (!this.getExists())
+	        if (!this.WaitForMe())
 	        {
-	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetLabel()");
+	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getLabel()");
 	            throw new OKWGUIObjectNotFoundException(lvsLM);
 	        }
 	        
@@ -303,7 +339,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
 	 */
-	public ArrayList<String> getTooltip()
+	public ArrayList<String> getTooltip() throws Exception
 	{
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 
@@ -312,9 +348,9 @@ public class SeAnyChildWindow extends AnyChildwindow
 	        this.LogFunctionStartDebug("GetTooltip");
 	
 	        // Wenn das Objekt nicht existiert mit Exception beenden...
-	        if (!this.getExists())
+	        if (!this.WaitForMe())
 	        {
-	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetTooltip()");
+	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getTooltip()");
 	            throw new OKWGUIObjectNotFoundException(lvsLM);
 	        }
 	        
@@ -339,7 +375,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.14
 	 */
-	public ArrayList<String> getValue()
+	public ArrayList<String> getValue() throws Exception
 	{
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 	
@@ -347,10 +383,10 @@ public class SeAnyChildWindow extends AnyChildwindow
 	    {
 	        this.LogFunctionStartDebug("getValue");
 	
-          // Wenn das Objekt nicht existiert mit Exception beenden...
-          if (!this.getExists())
+          // Waretn auf das Wenn das Objekt nicht existiert mit Exception beenden...
+          if (!this.WaitForMe())
           {
-              String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetTooltip()");
+              String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getValue()");
               throw new OKWGUIObjectNotFoundException(lvsLM);
           }
 
@@ -378,7 +414,7 @@ public class SeAnyChildWindow extends AnyChildwindow
    *  @author Zoltán Hrabovszki
    *  @date 2013.12.07
    */
-  public ArrayList<String> LogCaption()
+  public ArrayList<String> LogCaption() throws Exception
   {
       ArrayList<String> lvLsReturn = null;
   
@@ -436,14 +472,17 @@ public class SeAnyChildWindow extends AnyChildwindow
       *  @author Zoltan Hrabovszki
       *  @date 2013.04.11
       */
-    public Boolean LogHasFocus()
+    public Boolean LogHasFocus() throws Exception
     {
         Boolean lvbReturn = null;
     
         try
         {
-            this.LogFunctionStartDebug("LogHasFocus");
-            lvbReturn = this.getHasFocus();
+          this.LogFunctionStartDebug("LogHasFocus");
+          
+          if (!this.WaitForMe())
+            
+          lvbReturn = this.getHasFocus();
         }
         finally
         {
@@ -466,12 +505,13 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public Boolean LogIsActive()
+    public Boolean LogIsActive() throws Exception
     {
         Boolean lvbReturn = null;
 
         try
         {
+          
             this.LogFunctionStartDebug("LogIsActive");
             lvbReturn = this.getIsActive();
         }
@@ -497,7 +537,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public ArrayList<String> LogLabel()
+    public ArrayList<String> LogLabel() throws Exception
     {
         ArrayList<String> lvLsReturn = null;
     
@@ -530,7 +570,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public ArrayList<String> LogTooltip()
+    public ArrayList<String> LogTooltip() throws Exception
     {
         ArrayList<String> lvLsReturn = null;
     
@@ -583,65 +623,16 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @return Refernz auf das gefunde DOM-Element
      *  \~
      *  @author Zoltán Hrabovszki
+     *  @throws Exception 
      *  @date 2013.11.11
      */
-    public WebElement Me()
+    public WebElement Me() throws Exception
     {
         this.MyLogger.LogFunctionStartDebug("Me");
         WebElement me = null;
 
-        List<WebElement> meme = null;
-        // OKWIni.Instance.TimeOutExists;
-
-        try
-        {
-          String myLocator = this.getLocator();
-          
-            meme = SeDriver.getInstance().driver.findElements(By.xpath(myLocator));
+        me = SeDriver.getInstance().getElement( getIframeID(), this.getLocator() );
             
-            if (meme.size() == 0)
-            {
-                String lvsPrintMe = "GUI-Objekt wurde nicht gefunden: Locator: >>" + myLocator + "<<";
-                
-                this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
-                this.MyLogger.LogPrint( lvsPrintMe );
-                this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
-
-                throw new OKWGUIObjectNotFoundException( lvsPrintMe );
-            }
-            else if (meme.size() > 1)
-            {
-                String lvsPrintMe = "Locator ist nicht eindeutig, es wurden mehrer GUI-Objekt gefunden:\n Locator: >>" + this.getLocator() + "<<";
-                
-                this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
-                this.MyLogger.LogPrint( lvsPrintMe );
-                this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
-
-                throw new OKWGUIObjectNotFoundException( lvsPrintMe );
-            }
-            else
-            {
-                me = meme.get(0);
-            }
-        }
-        /*
-         catch( Exception e )
-        {
-          System.out.println( e.getMessage() );
-        }
-        */
-        finally
-        {
-            if (me != null)
-            {
-                this.MyLogger.LogFunctionEndDebug(me.toString());
-            }
-            else
-            {
-                this.MyLogger.LogFunctionEndDebug();
-            }
-        }
-
         return me;
     }
     
@@ -689,7 +680,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2014.04.19
      */
-    public Boolean MemorizeIsActive()
+    public Boolean MemorizeIsActive() throws Exception
     {
         Boolean bOK = false;
         Boolean lvbReturn = false;
@@ -732,7 +723,7 @@ public class SeAnyChildWindow extends AnyChildwindow
       *  @author Zoltán Hrabovszki
       *  @date 2013.12.07
       */
-    public ArrayList<String> MemorizeTooltip()
+    public ArrayList<String> MemorizeTooltip() throws Exception
     {
         ArrayList<String> lvLsReturn = null;
 
@@ -765,7 +756,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public ArrayList<String> MemorizeLabel()
+    public ArrayList<String> MemorizeLabel() throws Exception
     {
         ArrayList<String> lvLsReturn = null;
 
@@ -794,7 +785,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public Boolean MemorizeHasFocus()
+    public Boolean MemorizeHasFocus() throws Exception
     {
         Boolean lvbReturn = null;
 
@@ -825,7 +816,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public ArrayList<String> MemorizeCaption()
+    public ArrayList<String> MemorizeCaption() throws Exception
     {
         ArrayList<String> lvLsReturn = null;
 
@@ -886,9 +877,10 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @return true, falls das Objekt NICHT vorhanden ist. Sonst false
      *  \~
      *  @author Zoltán Hrabovszki
+   * @throws Exception 
      *  @date 2013.11.11
      */
-    public Boolean NotExists()
+    public Boolean NotExists() throws Exception
     {
         this.LogFunctionStartDebug("NotExists");
         Boolean lvb_Return = null;
@@ -1000,9 +992,10 @@ public class SeAnyChildWindow extends AnyChildwindow
    *  \~english
    *  \~
    *  @author Zoltán Hrabovszki
+   * @throws Exception 
    *  @date 2013.11.11
    */
-  public void SetFocus()
+  public void SetFocus() throws Exception
   {
       this.LogFunctionStartDebug("SetFocus");
   
@@ -1061,18 +1054,19 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  
 	 *  \~
 	 *  @author Zoltan Hrabovszki
+   * @throws Exception 
 	 *  @date 2013.04.11
 	 */
-	public void TypeKey(ArrayList<String> fps_Values)
+	public void TypeKey(ArrayList<String> fps_Values) throws Exception
 	{
 	    try
 	    {
 	        this.LogFunctionStartDebug("TypeKey", "fps_Values", fps_Values.toString());
 	
 	        // Wenn das Objekt nicht existiert mit Exception beenden...
-	        if (!this.getExists())
+	        if (!this.WaitForMe())
 	        {
-	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "SeAnyWin.TypeKey()");
+	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "TypeKey()");
 	            throw new OKWGUIObjectNotFoundException(lvsLM);
 	        }
 	
@@ -1116,16 +1110,16 @@ public class SeAnyChildWindow extends AnyChildwindow
 	  *  @author Zoltán Hrabovszki
 	  *  @date 2013.12.07
 	  */
-	public ArrayList<String> VerifyCaption() throws InterruptedException
+	public ArrayList<String> VerifyCaption()  throws Exception
 	{
-	    this.LogFunctionStartDebug("VerifyCaption");
-	
-	    ArrayList<String> lvLsReturn = new ArrayList<String>();
-	
-	    try
-	    {
-	        // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
-	        lvLsReturn = this.getCaption( );
+    ArrayList<String> lvLsReturn = new ArrayList<String>();
+	    
+	  try
+	  {
+	      this.LogFunctionStartDebug("VerifyCaption");
+
+	      // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
+	      lvLsReturn = this.getCaption( );
 	    }
 	    finally
 	    {
@@ -1151,13 +1145,13 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 */
 	public Boolean VerifyExists() throws InterruptedException
 	{
-	    this.LogFunctionStartDebug("VerifyExists");
 	
 	    Boolean lvbReturn = null;
 	
 	    try
 	    {
-	        lvbReturn = this.getExists( );
+	      this.LogFunctionStartDebug("VerifyExists");
+	      lvbReturn = this.getExists( );
 	    }
 	    finally
 	    {
@@ -1180,16 +1174,17 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
 	 */
-	public Boolean VerifyIsActive( ) throws InterruptedException
+	public Boolean VerifyIsActive( ) throws Exception
 	{
-	    this.LogFunctionStartDebug("VerifyIsActive");
 	
 	    Boolean lvbReturn = null;
 	
 	    try
 	    {	
-	        // Wert GetIsActive ggf. auf den erwarteten Wert warten.
-	        lvbReturn = this.getIsActive( );
+	      this.LogFunctionStartDebug("VerifyIsActive");
+
+	      // Wert GetIsActive ggf. auf den erwarteten Wert warten.
+	      lvbReturn = this.getIsActive( );
 	    }
 	    finally
 	    {
@@ -1214,7 +1209,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
 	 */
-	public Boolean VerifyHasFocus() throws InterruptedException
+	public Boolean VerifyHasFocus() throws Exception
 	{
 	    Boolean lvbReturn = false;
 	    
@@ -1250,16 +1245,16 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
 	 */
-	public ArrayList<String> VerifyLabel() throws InterruptedException
+	public ArrayList<String> VerifyLabel() throws Exception
 	{
-	    this.LogFunctionStartDebug("VerifyLabel");
-	
-	    ArrayList<String> lvLsReturn = new ArrayList<String>();
+		    ArrayList<String> lvLsReturn = new ArrayList<String>();
 	
 	    try
 	    {
-	        // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
-	        lvLsReturn = this.getLabel( );
+	      this.LogFunctionStartDebug("VerifyLabel");
+
+	      // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
+	      lvLsReturn = this.getLabel( );
 	    }
 	    finally
 	    {
@@ -1282,15 +1277,15 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
    */
-	public ArrayList<String> VerifyTooltip() throws InterruptedException
-	{
-	    MyLogger.LogFunctionStartDebug("VerifyTooltip");
-	
+	public ArrayList<String> VerifyTooltip() throws Exception
+	{	
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 	
 	    try
 	    {
-	        // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
+	      this.LogFunctionStartDebug("VerifyTooltip");
+
+	      // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
 	        lvLsReturn = this.getTooltip( );
 	    }
 	    finally

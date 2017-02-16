@@ -26,9 +26,13 @@ public class SeInputCheckbox_Firefox_Test extends SeInputCheckbox_Test
     public void FirefoxAfter() throws Exception
     {
     	Runtime rt = Runtime.getRuntime();
-    	  if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) 
+    	  
+    	if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) 
     	     rt.exec("taskkill Firefox");
-    	   else
+    	else
     	     rt.exec("pkill -f Firefox");
+      
+    	Thread.sleep( 1000 );
+        
     }
 }

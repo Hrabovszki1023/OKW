@@ -21,7 +21,21 @@ public class SeAnyWindow extends AnyWindow
     protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
     
     protected LogMessenger LM = new LogMessenger("GUI");
+    
+    // If null then use "default" else switchTo "iframeID" 
+    protected String iframeID = "";
+    
+    public String getIframeID()
+    {
+      return iframeID;
+    }
 
+    public void setIframeID( String iframeID )
+    {
+      this.iframeID = iframeID;
+    }
+
+    
     public SeAnyWindow(String Locator, OKWLocator... fpLocators)
     {
     	super(Locator, fpLocators);
@@ -123,14 +137,16 @@ public class SeAnyWindow extends AnyWindow
     {
         this.MyLogger.LogFunctionStartDebug("getExists");
         Boolean lvbReturn = false;
-        //Boolean bOK = false;
+        String myLocator = null;
+        
         List<WebElement> meme = null;
 
         try
         {
-           String myLocator = this.getLocator();
+           myLocator = this.getLocator();
         
-           meme = SeDriver.getInstance().driver.findElements(By.xpath(myLocator));
+           //meme = SeDriver.getInstance().driver.findElements(By.xpath(myLocator));
+           meme = SeDriver.getInstance().getElements( null, myLocator );
         
            if (meme.size() == 0)
            {

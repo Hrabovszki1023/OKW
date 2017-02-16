@@ -86,42 +86,42 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
     throw new OKWFrameObjectMethodNotImplemented("The method getExists() is not defined for you GUI-Object. Please define first the methode!");
   }
 
-  public Boolean getHasFocus()
+  public Boolean getHasFocus() throws Exception
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getHasFocus() is not defined for you GUI-Object. Please define first the methode!");
   }
 
-  public Boolean getIsActive()
+  public Boolean getIsActive() throws Exception
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getIsActive() is not defined for you GUI-Object. Please define first the methode!");
   }
 
   
-  public ArrayList<String> getCaption()
+  public ArrayList<String> getCaption() throws Exception
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getCaption() is not defined for you GUI-Object. Please define first the methode!");
   }
 
   
-  public ArrayList<String> getTooltip()
+  public ArrayList<String> getTooltip() throws Exception
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getTooltip() is not defined for you GUI-Object. Please define first the methode!");
   }
 
-  public ArrayList<String> getLabel()
+  public ArrayList<String> getLabel() throws Exception
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getLabel() is not defined for you GUI-Object. Please define first the methode!");
   }
 
-  public ArrayList<String> getValue()
+  public ArrayList<String> getValue() throws Exception
   {
     // TODO: /todo Meldung in xml-Auslagern
-    throw new OKWFrameObjectMethodNotImplemented("The method getLabel() is not defined for you GUI-Object. Please define first the methode!");
+    throw new OKWFrameObjectMethodNotImplemented("The method getValue() is not defined for you GUI-Object. Please define first the methode!");
   }
   
   public AnyChildwindow()
@@ -144,17 +144,20 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
    
     
     /** \~german
-     *  Ermittelt aus dem gegebenen Locator das DOM-Elelement, welches das Objekt representiert.
+     *  Methode wartet auf die Existenz des aktuellen Objectes.
      *  
-     *  @return true, wenn das Objekt vorhanden ist.
+     *  Wichtig: Methode löst keine Exception aus, wenn das Objekt nicht erscheint!
+     *  
+     *  @return true, wenn das Objekt vorhanden ist, sonst false.
      *  \~
-     *  @author Zoltán Hrabovszki
      * @throws InterruptedException 
      * @throws IOException 
      * @throws SAXException 
      * @throws ParserConfigurationException 
      * @throws JAXBException 
      * @throws XPathExpressionException 
+     * 
+     *  @author Zoltán Hrabovszki
      *  @date 2013.11.11
      */
     public Boolean WaitForMe() throws InterruptedException, XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
