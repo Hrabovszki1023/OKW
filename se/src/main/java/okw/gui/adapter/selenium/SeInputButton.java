@@ -60,18 +60,29 @@ import okw.gui.OKWLocator;
      */
     public class SeInputButton extends SeAnyChildWindow
     {
-        /**
+
+      /**
          *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
          *  \~
          *  @author Zoltán Hrabovszki
          *  @date 2013.05.03
          */
-        public SeInputButton(String Locator, OKWLocator... fpLocators)
+        public SeInputButton(String Locator, OKWLocator... Locators)
         {
-        	super(Locator, fpLocators);
+        	super(Locator, Locators);
         }
 
+        /**
+         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+         *  @author Zoltán Hrabovszki
+         *  @date 2017.02.17
+         */
+         public SeInputButton(String IframeID, String Locator, OKWLocator... Locators)
+         {
+           super(IframeID, Locator, Locators);
+         }
 
+         
          /**  \~german
          *  \brief
          *  Ermittelt den textuellen Inhalt des Caption für Prüfewert.

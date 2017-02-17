@@ -16,13 +16,26 @@ public class SeInputRadio extends SeAnyChildWindow
 
   /**
    *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+   *  
+   *  @date 2013.04.11
    */         
-  public SeInputRadio( String Locator, OKWLocator... fpLocators )
+  public SeInputRadio( String Locator, OKWLocator... Locators )
   {
-    super(Locator, fpLocators);// TODO Auto-generated constructor stub
+    super(Locator, Locators);
   }
 
   
+  /**
+   *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+   *  
+   *  @date 2017.02.17
+   */
+   public SeInputRadio(String IframeID, String Locator, OKWLocator... Locators)
+   {
+     super(IframeID, Locator, Locators);
+   }  
+
+   
   /** Ermittelt den aktuellen Wert des RadioButtons.
    * 
    * Mögliche Werte sind sprachabhängig CHECKED/UNCHECKED
@@ -65,14 +78,15 @@ public class SeInputRadio extends SeAnyChildWindow
       
       return lvls_Return;
   }
-  
+
+
   /**
    *  Method liefert den aktuellen Zustand des RadioButtons,
    *  ausgewählt oder nicht.
    *  
    *  @return Wenn Ausgewählt: true, sonst false
    *  @author Zoltan Hrabovszki
-   * @throws Exception 
+   *  @throws Exception 
    *  @date 2013.04.11
    */
   public Boolean IsSelected() throws Exception

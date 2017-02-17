@@ -61,9 +61,9 @@ import okw.gui.OKWLocator;
        *  @author Zoltán Hrabovszki
        *  @date 2013.04.18
        */
-        public SeSelect(String Locator, OKWLocator... fpLocators)
+        public SeSelect(String Locator, OKWLocator... Locators)
         {
-        	super(Locator, fpLocators);
+        	super(Locator, Locators);
         }
         
         /** \~german

@@ -38,10 +38,11 @@ public class SeSelect_Firefox_Test extends SeSelect_Test
     public void FirefoxAfter() throws Exception
     {
     	Runtime rt = Runtime.getRuntime();
-    	  if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) 
-    	     rt.exec("taskkill firefox");
-    	   else
-    	     rt.exec("pkill -f firefox");
-        Thread.sleep( 1000 );
+    	
+    	if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) 
+    	    rt.exec("taskkill firefox");
+      else
+    	    rt.exec("pkill -f firefox");
+      Thread.sleep( 1000 );
     }
 }

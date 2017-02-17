@@ -58,7 +58,7 @@ import okw.log.Logger_Sngltn;
     public class SeDriver
     {
 
-      // Logger Instance holen
+      // Get the instance of Logger_Sngltn
       protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
       
         public WebDriver driver;
@@ -73,7 +73,6 @@ import okw.log.Logger_Sngltn;
         private SeDriver()
         {
         }
-
 
          /**  \brief
          *  Gibt die Instance für die einzige Instanz dieser Klasse zurück.<br/>
@@ -106,6 +105,7 @@ import okw.log.Logger_Sngltn;
             this.driver = new FirefoxDriver();
         }
 
+
         /*public void DriveInternetExplorer()
         {
             this.driver = new InternetExplorerDriver();
@@ -118,15 +118,18 @@ import okw.log.Logger_Sngltn;
         }
 
   /**
-   * \~german Wechselt das Frame auf das Frame mit der id=iframeID
+   * \~german
+   * Wechselt das aktuelle Frame auf das Frame mit der id=iframeID
    * 
-   * Wenn iframe = null oder "", dann wird auf das "defaultContent" gewechselt
+   * Wenn iframe = "", dann wird auf das "defaultContent" gewechselt
    * Sonst wird zunächts auf das defaultContent zurückgesetzt und anschliesend
    * das Frame mit der id=iframeID gewählt.
    * 
+   * @param iframeID Eindeutige ID des Frames. Siehe im iframe-tag das Attribute 'id'. 
+   * 
    * _Hinweis_ Nachdem setzten des Frame werden alle findElement Ausführungen
    * innerhalb des Frames ausgeführt.
-   * https://www.seleniumeasy.com/selenium-tutorials/how-to-work-with-iframes-in-selenium-webdriver
+   * @See https://www.seleniumeasy.com/selenium-tutorials/how-to-work-with-iframes-in-selenium-webdriver
    */
   public void swichToFrame( String iframeID )
   {
@@ -174,7 +177,7 @@ import okw.log.Logger_Sngltn;
          *  @author Zoltán Hrabovszki
          *  @date 2015.05.12
          */        
-        public WebElement getElement( String frameID, String fpsLocator ) throws Exception
+        public WebElement getElement( String frameID, String Locator ) throws Exception
         {
           WebElement me = null;
           List<WebElement> meme = null;
@@ -183,11 +186,11 @@ import okw.log.Logger_Sngltn;
           this.swichToFrame( frameID );
           
           // Element ggf. des richtigen Frames Holen.
-          meme = this.driver.findElements(By.xpath(fpsLocator));
+          meme = this.driver.findElements(By.xpath(Locator));
           
           if (meme.size() == 0)
           {
-              String lvsPrintMe = "GUI-Objekt wurde nicht gefunden: Locator: >>" + fpsLocator + "<<";
+              String lvsPrintMe = "GUI-Objekt wurde nicht gefunden: Locator: >>" + Locator + "<<";
               
               this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
               this.MyLogger.LogPrint( lvsPrintMe );
@@ -197,7 +200,7 @@ import okw.log.Logger_Sngltn;
           }
           else if (meme.size() > 1)
           {
-              String lvsPrintMe = "Locator ist nicht eindeutig, es wurden mehrer GUI-Objekt gefunden:\n Locator: >>" + fpsLocator + "<<";
+              String lvsPrintMe = "Locator ist nicht eindeutig, es wurden mehrer GUI-Objekt gefunden:\n Locator: >>" + Locator + "<<";
               
               this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
               this.MyLogger.LogPrint( lvsPrintMe );
@@ -238,6 +241,7 @@ import okw.log.Logger_Sngltn;
                     
           return meme;
         }
+
         
         /*
         /** \~german

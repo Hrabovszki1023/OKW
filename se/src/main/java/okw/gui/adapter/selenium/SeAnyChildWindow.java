@@ -1,3 +1,42 @@
+/*
+    ==============================================================================
+      Author: Zoltan Hrabovszki <zh@openkeyword.de>
+
+      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+      www.OpenKeyWord.de
+    ============================================================================== 
+
+    This file is part of OpenKeyWord.
+
+    OpenKeyWord is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    OpenKeyWord is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with OpenKeyWord.  If not, see <http://www.gnu.org/licenses/>.
+
+    Diese Datei ist Teil von OpenKeyWord.
+
+    OpenKeyWord ist Freie Software: Sie können es unter den Bedingungen
+    der GNU General Public License, wie von der Free Software Foundation,
+    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder späteren
+    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+
+    OpenKeyWord wird in der Hoffnung, dass es nützlich sein wird, aber
+    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+    Siehe die GNU General Public License für weitere Details.
+
+    Sie sollten eine Kopie der GNU General Public License zusammen mit 
+    OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
+*/
+
 package okw.gui.adapter.selenium;
 
 import java.util.*;
@@ -38,9 +77,10 @@ public class SeAnyChildWindow extends AnyChildwindow
     
     /** 
      * \~german
+     * Konstruktor der Klasse. iframeID wird auf den Wert "" (empty string) gesetzt.
     *  
-    *  @param fpsLocator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
-    *  @param fpParams Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.
+    *  @param Locator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
+    *  @param Locators Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.
     *  
     *  \~english
     *  
@@ -48,28 +88,30 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  @author Zoltán Hrabovszki
     *  @date 2013.05.03
     */
-    public SeAnyChildWindow(String Locator, OKWLocator... fpLocators)
+    public SeAnyChildWindow(String Locator, OKWLocator... Locators)
     {
-    	super(Locator, fpLocators);
+    	super(Locator, Locators);
+      this.iframeID = "";
     }
 
     
     /** 
      * \~german
-     *  
-     *  @param fpsLocator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
-     *  @param fpParams Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.
+     * Konstruktor der Klasse. iframeID wird auf den Wert des Parameters fpIframeID gesetzt.
+     * 
+     *  @param IframeID ID des iframes in dem Sich das GUI-Objekt befindet. "" falls 
+     *  @param Locator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
+     *  @param Locators Locatoren (z.B. von Elternobjekten), die mit dem fpLocator verkettet werden sollen.
      *  
      *  \~english
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.05.03
      */
-     public SeAnyChildWindow(String fp_iframeID, String Locator, OKWLocator... fpLocators)
+     public SeAnyChildWindow(String IframeID, String Locator, OKWLocator... Locators)
      {
-       super(Locator, fpLocators);
-       this.iframeID = fp_iframeID;
+       super(Locator, Locators);
+       this.iframeID = IframeID;
      }
 
     

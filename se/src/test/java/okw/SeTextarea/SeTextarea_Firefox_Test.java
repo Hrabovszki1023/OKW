@@ -36,10 +36,12 @@ public class SeTextarea_Firefox_Test extends SeTextarea_Test
     @After
     public void FirefoxAfter() throws Exception
     {
-    	Runtime rt = Runtime.getRuntime();
-    	  if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) 
-    	     rt.exec("taskkill firefox");
-    	   else
-    	     rt.exec("pkill -f firefox");
+      Runtime rt = Runtime.getRuntime();
+      
+      if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) 
+          rt.exec("taskkill firefox");
+      else
+          rt.exec("pkill -f firefox");
+      Thread.sleep( 1000 );
     }
 }

@@ -1,10 +1,8 @@
-package okw.gui.adapter.selenium;
-
 /*
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015, 2016 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -39,9 +37,9 @@ package okw.gui.adapter.selenium;
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
-import java.util.ArrayList;
+package okw.gui.adapter.selenium;
 
-import javax.xml.xpath.XPathExpressionException;
+import java.util.ArrayList;
 
 import okw.LogMessenger;
 import okw.OKW_Const_Sngltn;
@@ -61,18 +59,30 @@ import okw.gui.*;
     	
     	OKW_Const_Sngltn myOKW_Const = null;
 
-        /** TODO: Konstuktor Beschreiben
+        /**
          *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
          *
-         *  Konstruktor der Klasse SeCheckBox.
+         *  @date 2017.02.17
          */         
-        public SeInputCheckbox( String fpsLocator, OKWLocator... fpLocators )
+        public SeInputCheckbox( String Locator, OKWLocator... Locators )
         {
-            super(fpsLocator, fpLocators);
+            super(Locator, Locators);
             this.LM = new LogMessenger("GUI");
             myOKW_Const  = OKW_Const_Sngltn.getInstance();
         }
 
+        
+        /**
+         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+         *  
+         *  @date 2017.02.17
+         */
+         public SeInputCheckbox(String IframeID, String Locator, OKWLocator... Locators)
+         {
+           super(IframeID, Locator, Locators);
+         }        
+
+         
         /** \brief
          *  Method ermittel oder liefert den aktuellen zustend der Checkbox,
          *  also ob die angehakt oder Nicht angehakt.

@@ -41,6 +41,6 @@ public class frmSeTextareaReadonly extends SeBrowserChild
 
     public frmSeTextareaReadonly( )
     {
-      super("//*[@title='<textarea disabled>']");
+      super("//title[contains(text(),'textarea readonly')]/../..");
     }
 }

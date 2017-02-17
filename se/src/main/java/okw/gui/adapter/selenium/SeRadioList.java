@@ -79,9 +79,9 @@ import okw.gui.OKWLocator;
         /**
          *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
          */         
-        public SeRadioList(String Locator, OKWLocator... fpLocators)
+        public SeRadioList(String Locator, OKWLocator... Locators)
         {
-        	super(Locator, fpLocators);
+        	super(Locator, Locators);
           
         	try
         	{
@@ -93,6 +93,26 @@ import okw.gui.OKWLocator;
         	  System.exit(0);
         	}
         }
+        
+        /**
+         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+         *  
+         *  @date 2017.02.17
+         */
+         public SeRadioList(String IframeID, String Locator, OKWLocator... Locators)
+         {
+           super(IframeID, Locator, Locators);
+           
+           try
+           {
+              CO  = OKW_CurrentObject_Sngltn.getInstance();
+              FOD = FrameObjectDictionary_Sngltn.getInstance();
+           }
+           catch (Exception e)
+           {
+             System.exit(0);
+           }
+         }
         
   @Override
   public void SetValue( ArrayList<String> Val ) throws Exception

@@ -60,11 +60,23 @@ import okw.gui.OKWLocator;
       /**
        *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
        */
-        public SeLink(String Locator, OKWLocator... fpLocators)
+        public SeLink(String Locator, OKWLocator... Locators)
         {
-        	super(Locator, fpLocators);
+        	super(Locator, Locators);
         }
 
+        
+        /**
+         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+         *  
+         *  @date 2017.02.17
+         */
+         public SeLink(String IframeID, String Locator, OKWLocator... Locators)
+         {
+           super(IframeID, Locator, Locators);
+         }
+
+         
         /** \~german
          *  Klickt auf das aktuelle Objekt.
          *  

@@ -68,7 +68,18 @@ import okw.gui.OKWLocator;
         	super(Locator, fpLocators);
         }
 
+       
+       /**
+        *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+        *  
+        *  @date 2017.02.17
+        */
+        public SeTextarea(String IframeID, String Locator, OKWLocator... Locators)
+        {
+          super(IframeID, Locator, Locators);
+        }
 
+        
         /** \~german
          *  \brief
          *  Ermittelt den textuellen Inhalt eines Textfeldes.<br/>.

@@ -60,31 +60,26 @@ import okw.gui.OKWLocator;
     public class SeInputText extends SeAnyChildWindow
     {
 
-      /**
-       *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
-       */         
-        public SeInputText(String Locator, OKWLocator... fpLocators)
+       /**
+        *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+        */         
+        public SeInputText(String Locator, OKWLocator... Locators)
         {
-        	super(Locator, fpLocators);
+        	super(Locator, Locators);
         }
 
-        /** 
-         * \~german
+        
+        /**
+         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
          *  
-         *  @param fpsLocator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
-         *  @param fpParams Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.
-         *  
-         *  \~english
-         *  
-         *  \~
-         *  @author Zoltán Hrabovszki
-         *  @date 2013.05.03
+         *  @date 2017.02.17
          */
-         public SeInputText(String fp_iframeID, String Locator, OKWLocator... fpLocators)
+         public SeInputText(String IframeID, String Locator, OKWLocator... Locators)
          {
-           super(fp_iframeID, Locator, fpLocators);
+           super(IframeID, Locator, Locators);
          }
 
+         
         /// \~german
         /// \brief
         /// Ermittelt den textuellen Inhalt eines Textfeldes.<br/>.
