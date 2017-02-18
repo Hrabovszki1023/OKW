@@ -2,10 +2,10 @@ package okw.SeBrowserChild;
 
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
+import okw.exceptions.*;
 
-import org.junit.After;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.*;
+
 import org.junit.rules.TestName;
 
 public class SeBrowserChild_EN_Test
@@ -20,48 +20,53 @@ public class SeBrowserChild_EN_Test
     @Rule
     public TestName name = new TestName();
 
-        /// \brief
-        /// 
-        /// 
+        /** \brief
+         * 
+         */ 
         @Test
-        public void TC_SeBrowserChild_URL_EN() throws Exception
+        public void tcSeBrowserChild_URL_VerifyValue() throws Exception
         {
             EN.BeginTest( name.getMethodName() );
 
             EN.StartApp( ApplicationName );
-            EN.TypeKey("URL", "http://test.openkeyword.de/TextField/TextField.htm");
+            EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
 
-            //EN.SelectWindow("Eingabefelder");
-            EN.VerifyValue("URL", "http://test.openkeyword.de/TextField/TextField.htm");
-       }
-
-        @Test
-        public void Chrome_Start_Stop_EN() throws Exception
-        {
-            EN.BeginTest( name.getMethodName() );
-            EN.StartApp( ApplicationName );
-        }
-
-        /// \brief
-        /// Prüfen ob URL-Implemnetierung im BrowserChild vorhanden.
-        /// 
-        @Test
-        public void TC_BrowserChild_URL_EN() throws Exception
-        {
-            EN.BeginTest( name.getMethodName() );
-
-            EN.StartApp( ApplicationName );
+            EN.SelectWindow( "SeTextField" );
+            EN.VerifyValue("URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm");
             
-            EN.TypeKey("URL", "http://test.openkeyword.de");
-
-            // EN.SelectWindow("Chrome");
-            EN.VerifyValue("URL", "http://test.openkeyword.de");
-        }
-
-        @After
-        public void myAfter() throws Exception
-        {
             EN.StopApp( ApplicationName );
             EN.EndTest();
+       }
+
+
+        /**
+         *  Prüfen ob URL-Implemnetierung im BrowserChild vorhanden.
+         */ 
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tcBrowserChild_URL_OKWVerifyingFailsException() throws Exception
+        {
+          EN.BeginTest( name.getMethodName() );
+
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+
+          EN.SelectWindow( "SeTextField" );
+          EN.VerifyValue("URL", "Falscher Wert");
+        }
+
+        
+        /**
+         *  Prüft ob bei nicht vorhandenem Browserchild die Exception "" ausgelöst wird.
+         */ 
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcBrowserChild_SlectWindowL_OKWGUIObjectNotFoundException() throws Exception
+        {
+          EN.BeginTest( name.getMethodName() );
+
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+
+          EN.SelectWindow( "SeInputTextDisabled" );
+        
         }
     }

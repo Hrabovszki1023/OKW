@@ -107,11 +107,11 @@ import org.openqa.selenium.*;
           *  @author Zoltan Hrabovszki
           *  @date 2014.04.19
           */
-        public ArrayList<String> GetValue()
+        public ArrayList<String> getValue()
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
-            this.LogFunctionStartDebug("GetValue");
+            this.LogFunctionStartDebug("getValue");
 
             try
             {
@@ -143,7 +143,7 @@ import org.openqa.selenium.*;
             try
             {
                 this.LogFunctionStartDebug("LogValue");
-                lvLsReturn = this.GetValue();
+                lvLsReturn = this.getValue();
             }
             finally
             {
@@ -173,7 +173,7 @@ import org.openqa.selenium.*;
             try
             {
                 this.LogFunctionStartDebug("MemorizeValue");
-                lvLsReturn = this.GetValue();
+                lvLsReturn = this.getValue();
             }
             finally
             {

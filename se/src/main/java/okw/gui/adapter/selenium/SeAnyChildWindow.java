@@ -425,7 +425,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	    {
 	        this.LogFunctionStartDebug("getValue");
 	
-          // Waretn auf das Wenn das Objekt nicht existiert mit Exception beenden...
+          // Warten auf das Object: Wenn das Objekt nicht existiert mit Exception beenden...
           if (!this.WaitForMe())
           {
               String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getValue()");
@@ -521,9 +521,6 @@ public class SeAnyChildWindow extends AnyChildwindow
         try
         {
           this.LogFunctionStartDebug("LogHasFocus");
-          
-          if (!this.WaitForMe())
-            
           lvbReturn = this.getHasFocus();
         }
         finally
@@ -553,7 +550,6 @@ public class SeAnyChildWindow extends AnyChildwindow
 
         try
         {
-          
             this.LogFunctionStartDebug("LogIsActive");
             lvbReturn = this.getIsActive();
         }

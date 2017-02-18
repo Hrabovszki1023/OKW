@@ -40,6 +40,7 @@
 package okw.gui.adapter.selenium;
 
 import okw.OKW;
+import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
 
     /** \brief
@@ -74,6 +75,7 @@ import okw.gui.OKWLocator;
         @Override
         public void SelectWindow() throws Exception
         {
-         	this.WaitForMe();
+         	if ( !this.WaitForMe() )
+            throw new OKWGUIObjectNotFoundException( "BrowserChild not found!" );
         }
     }

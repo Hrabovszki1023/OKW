@@ -380,6 +380,7 @@ public class SeLink_EN_Test
    * 
    * \~ \author Zoltán Hrabovszki \date 2015.02.28
    */
+  @Ignore
   @Test//( expected=OKWGUIObjectNot )
   public void tc_VerifyIsActive() throws Exception
   {

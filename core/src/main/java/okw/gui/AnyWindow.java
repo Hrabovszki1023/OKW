@@ -157,18 +157,26 @@ public AnyWindow(String fpsLocator, OKWLocator... fpLocators )
     }
 
 	/** \~german
-	 *  Ermittelt aus dem gegebenen Locator das DOM-Elelement, welches das Objekt representiert.
+	 *  Methode, wartet auf das aktuelle GUI-Object bis es erscheint oder der eingestellte TimeOut erreicht ist.
 	 *  
-	 *  @return true, wenn das Objekt vorhanden ist.
+	 *  Time Out kann mit der Annotation OKW und Attributen
+	 *  
+	 *  -# WaitForMe_PT - Polling Time [ms] - (default 1000). <br>
+   *  -# WaitForMe_TO - TimeOut [s]  - (default 30).
+	 *  
+	 *  Wichtig: Die methode liefert lediglich false zurück, d.h. es wir keine Ausnahme ausgelöst,
+	 *  wenn das Object nicht gefunden wird.
+	 *  
+	 *  @return true, wenn das Objekt vorhanden ist. sonst false. 
 	 *  \~
-	 * @author Zoltán Hrabovszki
 	 * @throws InterruptedException 
 	 * @throws IOException 
 	 * @throws SAXException 
 	 * @throws ParserConfigurationException 
 	 * @throws JAXBException 
 	 * @throws XPathExpressionException 
-	 * @date 2017.01.31
+   * @author Zoltán Hrabovszki
+ 	 * @date 2017.01.31
 	 */
 	public Boolean WaitForMe() throws InterruptedException, XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
 	{

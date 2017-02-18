@@ -612,27 +612,16 @@ public class SeAnyWindow extends AnyWindow
     /// \date 2013.12.07
     public Boolean LogIsActive()
     {
-        Boolean lvbReturn = false;
-        Boolean bOK = false;
+        Boolean lvbReturn = null;
 
         try
         {
-            this.MyLogger.LogFunctionStartDebug("LogIsActive");
-
+            this.LogFunctionStartDebug("LogIsActive");
             lvbReturn = this.getIsActive();
-
-            bOK = true;
         }
         finally
         {
-            if (bOK)
-            {
-                this.MyLogger.LogFunctionEndDebug(lvbReturn);
-            }
-            else
-            {
-                this.MyLogger.LogFunctionEndDebug();
-            }
+            this.LogFunctionEndDebug(lvbReturn);
         }
 
         return lvbReturn;
