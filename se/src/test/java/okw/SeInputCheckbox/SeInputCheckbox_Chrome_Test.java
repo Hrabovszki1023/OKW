@@ -1,20 +1,17 @@
-package okw.SeSelect;
+package okw.SeInputCheckbox;
 
 import okw.log.Logger_Sngltn;
-import okw.log.log2html.Log2HTML;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.*;
 
-public class SeSelect_Chrome_Test extends SeSelect_Test
+
+public class SeInputCheckbox_Chrome_Test extends SeInputCheckbox_Test
 {
-
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception
 	{
 		ApplicationName = "Chrome";
-
+		
         Logger_Sngltn.getInstance();
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.Init();
@@ -22,7 +19,7 @@ public class SeSelect_Chrome_Test extends SeSelect_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
-	@After
+    @After
     public void FirefoxAfter() throws Exception
     {
     	Runtime rt = Runtime.getRuntime();

@@ -27,9 +27,10 @@ public class SeInputRadio_EN_Chrome_Test extends SeInputRadio_EN_Test
     public void FirefoxAfter() throws Exception
     {
     	Runtime rt = Runtime.getRuntime();
-    	  if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) 
-    	     rt.exec("taskkill Chrome");
-    	   else
-    	     rt.exec("pkill -f Chrome");
-    }
+    	
+    	if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) rt.exec("taskkill Chrome");
+    	else rt.exec("pkill -f Chrome");
+    	  
+    	Thread.sleep( 1000 );
+    }  
 }

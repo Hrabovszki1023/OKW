@@ -67,12 +67,6 @@ import org.junit.rules.TestName;
         @Rule
         public TestName name = new TestName();
     	
-//        @After
-//        public void myAfter() throws Exception
-//        {
-//            EN.StopApp( ApplicationName );
-//            EN.EndTest();
-//        }
 
         
         /** \~german
