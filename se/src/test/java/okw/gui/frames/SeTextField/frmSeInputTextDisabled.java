@@ -39,7 +39,10 @@ package okw.gui.frames.SeTextField;
 import okw.OKW;
 import okw.gui.adapter.selenium.*;
 
-@OKW (FN="SeInputTextDisabled")
+@OKW (FN="SeInputTextDisabled",
+      WaitForMe_PT=500,
+      WaitForMe_TO=5
+     )
 public class frmSeInputTextDisabled extends SeBrowserChild
     {
 	@OKW (FN="MwSt",

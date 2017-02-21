@@ -137,12 +137,8 @@ import okw.gui.OKWLocator;
 
             try
             {
-                // Wenn das Objekt nicht existiert mit Exception beenden...
-                if (!this.getExists())
-                {
-                    String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "Select()");
-                    throw new OKWGUIObjectNotFoundException(lvsLM);
-                }
+              // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+              this.WaitForMe();
 
                 Select SelectList = new Select(this.Me());
                 
@@ -196,12 +192,8 @@ import okw.gui.OKWLocator;
             {
                 this.LogFunctionStartDebug("GetValue");
 
-                // Wenn das Objekt nicht existiert mit Exception beenden...
-                if (!this.getExists())
-                {
-                    String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "Select()");
-                    throw new OKWGUIObjectNotFoundException(lvsLM);
-                }
+                // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+                this.WaitForMe();
 
                 Select SelectList = new Select(this.Me());
                 

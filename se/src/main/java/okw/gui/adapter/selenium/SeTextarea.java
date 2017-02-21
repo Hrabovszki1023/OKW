@@ -158,6 +158,9 @@ import okw.gui.OKWLocator;
             {
                 this.LogFunctionStartDebug("GetValue");
 
+                // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+                this.WaitForMe();
+
                 // Get Value from TextField and put this into the return List<string>
                 String myValue = this.Me().getAttribute("value");
                 
@@ -182,6 +185,8 @@ import okw.gui.OKWLocator;
 
     try
     {
+      // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+      this.WaitForMe();
 
       WebElement myMe = this.Me();
       myMe.clear();

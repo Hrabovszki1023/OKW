@@ -3,7 +3,10 @@ package okw.gui.frames.SeTextField;
 import okw.OKW;
 import okw.gui.adapter.selenium.*;
 
-@OKW (FN="SeInputTextReadonly")
+@OKW (FN="SeInputTextReadonly",
+WaitForMe_PT=500,
+WaitForMe_TO=5
+)
     public class frmSeInputTextReadonly extends SeBrowserChild
     {
 	@OKW (FN="MwSt",

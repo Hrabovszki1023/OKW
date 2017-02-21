@@ -38,6 +38,8 @@ package okw.SeInputField;
 
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
+import okw.exceptions.OKWFrameObjectMethodNotImplemented;
+import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.exceptions.OKWVerifyingFailsException;
 
 import org.junit.*;
@@ -494,7 +496,7 @@ public class SeInputField_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
 
       EN.SelectWindow( "SeTextField" );
-      EN.VerifyExists( "NichtVorhanden", "NO" );
+      EN.VerifyExists( "NotExists", "NO" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -514,7 +516,7 @@ public class SeInputField_Test {
   
       EN.SelectWindow( "SeTextField" );
   
-      EN.VerifyExists( "NichtVorhanden", "YES" );
+      EN.VerifyExists( "NotExists", "YES" );
   }
 
   // \brief
@@ -1190,4 +1192,278 @@ public class SeInputField_Test {
       EN.StopApp( ApplicationName );
       EN.EndTest();
   }
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcClickOn_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.ClickOn( "NotExists");
+  }
+
+  /**
+   * 
+   * @throws Exception
+   */
+  @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+  public void tcSelect_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.Select( "NotExists", "abc");
+  }
+
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcTypeKey_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.TypeKey( "NotExists", "abc");
+  }
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcSetValue_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.SetValue( "NotExists", "abc");
+  }
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcSetFocus_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.SetFocus( "NotExists");
+  }
+  
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcMemorizeCaption_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.MemorizeCaption( "NotExists", "MemorizeCaption");
+  }
+
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcMemorizeHasFocus_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.MemorizeHasFocus( "NotExists", "MemorizeHasFocus");
+  }
+  
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcMemorizeIsActive_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.MemorizeIsActive( "NotExists", "MemorizeIsActive");
+  }
+  
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcMemorizeLabel_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.MemorizeLabel( "NotExists", "MemorizeLabel");
+  }
+  
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcMemorizeTooltip_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.MemorizeTooltip( "NotExists", "MemorizeTooltip");
+  }
+
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcMemorizeValue_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.MemorizeValue( "NotExists", "MemorizeVale");
+  }
+
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcLogCaption_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.LogCaption( "NotExists");
+  }
+
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcLogHasFocus_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.LogHasFocus( "NotExists");
+  }
+  
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcLogIsActive_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.LogIsActive( "NotExists");
+  }
+  
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcLogLabel_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.LogLabel( "NotExists");
+  }
+  
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcLogTooltip_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.LogTooltip( "NotExists");
+  }
+
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcLogValue_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.LogValue( "NotExists");
+  }
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcVerifyCaption_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.VerifyCaption( "NotExists", "aa");
+  }
+
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcVerifyHasFocus_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.VerifyHasFocus( "NotExists", "YES");
+  }
+  
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcVerifyIsActive_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.VerifyIsActive( "NotExists", "YES" );
+  }
+  
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcVerifyLabel_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.VerifyLabel( "NotExists", "aa" );
+  }
+  
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcVerifyTooltip_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.VerifyTooltip( "NotExists", "aa");
+  }
+
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcVerifyValue_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.VerifyValue( "NotExists", "aa");
+  }
+
 }

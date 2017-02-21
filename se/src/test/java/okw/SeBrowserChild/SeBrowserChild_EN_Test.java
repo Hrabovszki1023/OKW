@@ -59,7 +59,7 @@ public class SeBrowserChild_EN_Test
          *  Prüft ob bei nicht vorhandenem Browserchild die Exception "" ausgelöst wird.
          */ 
         @Test( expected = OKWGUIObjectNotFoundException.class )
-        public void tcBrowserChild_SlectWindowL_OKWGUIObjectNotFoundException() throws Exception
+        public void tcBrowserChild_SelectWindowL_OKWGUIObjectNotFoundException() throws Exception
         {
           EN.BeginTest( name.getMethodName() );
 

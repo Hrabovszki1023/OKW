@@ -18,8 +18,8 @@ public class SeInputField_Firefox_Test extends SeInputField_Test
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.Init();
 
-        //myLog2HTML = new Log2HTML("SeTextField_EN_Firefox_Test.html");
-        //Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
+        myLog2HTML = new Log2HTML("target/SeInputField_Firefox_Test.html");
+        Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
@@ -36,10 +36,9 @@ public class SeInputField_Firefox_Test extends SeInputField_Test
    
   }
 	
-/*	@AfterClass
+	@AfterClass
 	public static void tearDownAfterClass() throws Exception
 	{
 		myLog2HTML.Result2HTML();
 	}
-	*/
 }

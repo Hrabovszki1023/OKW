@@ -138,16 +138,19 @@ import okw.gui.OKWLocator;
 
         }
 
-  // / \~german
+  /**
+   *  \~german
+   */
   public void SetValue( ArrayList<String> Val ) throws Exception
   {
     this.LogFunctionStartDebug( "SetValue", "Val", Val.toString() );
 
     try
     {
-      if( this.WaitForMe() ){
-      
-        WebElement myMe = this.Me();
+      // Wenn GUI-Objekt nicht gefunden wird, mit OKWGUIObjectNotFoundException aussteigen
+      this.WaitForMe();
+
+      WebElement myMe = this.Me();
         myMe.clear();
         
         if( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
@@ -158,7 +161,6 @@ import okw.gui.OKWLocator;
         {
           myMe.sendKeys( Val.get( 0 ) );
         }
-      }
     }
     finally
     {

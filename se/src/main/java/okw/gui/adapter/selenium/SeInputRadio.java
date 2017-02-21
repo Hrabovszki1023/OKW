@@ -7,7 +7,6 @@ import javax.xml.xpath.XPathExpressionException;
 import okw.OKW_Const_Sngltn;
 import okw.core.Core;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
-import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.gui.OKWLocator;
 
@@ -53,12 +52,8 @@ public class SeInputRadio extends SeAnyChildWindow
       {
           this.LogFunctionStartDebug("getValue");
 
-          // Wenn das Objekt nicht existiert mit Exception beenden...
-          if (!this.getExists())
-          {
-              String lvsLM = LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetValue()");
-              throw new OKWGUIObjectNotFoundException(lvsLM);
-          }
+          // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+          this.WaitForMe();
 
           if (this.IsSelected())
           {
@@ -97,8 +92,11 @@ public class SeInputRadio extends SeAnyChildWindow
 
       try
       {
-          // Hole Zusand: Häckchen oder kein Häckchen, das ist hier die Frage?
-          lvbReturn = this.Me().isSelected();
+        // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+        this.WaitForMe();
+
+        // Hole Zusand: Häckchen oder kein Häckchen, das ist hier die Frage?
+        lvbReturn = this.Me().isSelected();
       }
       finally
       {
@@ -156,12 +154,8 @@ public class SeInputRadio extends SeAnyChildWindow
       String myCHECKED = OKW_Const_Sngltn.getInstance().GetConst4Internalname("CHECKED");
       String myUNCHECKED = OKW_Const_Sngltn.getInstance().GetConst4Internalname("UNCHECKED");
 
-      // Wenn das Objekt nicht existiert mit Exception beenden...
-      if (!this.getExists())
-      {
-          String lvsLM = LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetValue()");
-          throw new OKWGUIObjectNotFoundException(lvsLM);
-      }
+      // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+      this.WaitForMe();
 
       if ( Value.equals(myCHECKED) )
       {

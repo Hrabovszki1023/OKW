@@ -76,6 +76,12 @@ import okw.gui.OKWLocator;
         public void SelectWindow() throws Exception
         {
          	if ( !this.WaitForMe() )
+         	{
+            this.MyLogger.ResOpenList( "GUI-Object not found..."  );
+         	  this.MyLogger.LogPrint( "Locator: '" + this.getLocator() + "'" );
+         	  this.MyLogger.ResCloseList();
+         	  
             throw new OKWGUIObjectNotFoundException( "BrowserChild not found!" );
+         	}
         }
     }

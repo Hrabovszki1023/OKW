@@ -42,7 +42,6 @@ package okw.gui.adapter.selenium;
 import java.util.ArrayList;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
-import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
 
 
@@ -208,12 +207,8 @@ import okw.gui.OKWLocator;
             {
                 this.LogFunctionStartDebug("GetCaption");
 
-                // Wenn das Objekt nicht existiert mit Exception beenden...
-                if (!this.getExists())
-                {
-                    String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getCaption()");
-                    throw new OKWGUIObjectNotFoundException(lvsLM);
-                }
+                // Warten auf das Objekt. Wenn es nicht existiert mit Exception beenden...
+                this.WaitForMe();
                 
                 // The Attribute "value" wird als Beschriftung angezeigt...
                 lvLsReturn.add(this.Me().getAttribute("value"));

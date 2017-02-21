@@ -39,22 +39,15 @@
 
 package okw.gui.adapter.selenium;
 
-import java.io.IOException;
 import java.util.ArrayList;
-
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.xml.sax.SAXException;
 
 import okw.FrameObjectDictionary_Sngltn;
 import okw.OKW_Const_Sngltn;
 import okw.core.Core;
 import okw.core.OKW_CurrentObject_Sngltn;
-import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
 
 
@@ -211,31 +204,6 @@ import okw.gui.OKWLocator;
         }
       }
     }
-    catch (XPathExpressionException e)
-    {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
-    catch (JAXBException e)
-    {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
-    catch (ParserConfigurationException e)
-    {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
-    catch (SAXException e)
-    {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
-    catch (IOException e)
-    {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
       finally
       {
           if (bOK)
@@ -263,7 +231,7 @@ import okw.gui.OKWLocator;
    *  \date 2016.12.20
    */
   @Override
-  public ArrayList<String> getLabel()
+  public ArrayList<String> getLabel() throws Exception
   {
       ArrayList<String> lvLsReturn = new ArrayList<String>();
       Boolean bOK = false;
@@ -271,12 +239,8 @@ import okw.gui.OKWLocator;
       {
           MyLogger.LogFunctionStartDebug("GetLabel");
 
-          // Wenn das Objekt nicht existiert mit Exception beenden...
-          if (!this.getExists())
-          {
-              String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetLabel()");
-              throw new OKWGUIObjectNotFoundException(lvsLM);
-          }
+          // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+          this.WaitForMe();
           
           // 2.schritt nun den Tag-label finden und den Textinhalt ermitteln.
           WebElement label = SeDriver.getInstance().driver.findElement(By.xpath( this.getLocator() + "//legend" ));

@@ -118,9 +118,10 @@ public AnyWindow(String fpsLocator, OKWLocator... fpLocators )
    *  @return true, falls das eindeutig Objekt gefunden worden ist ist, sonst false.
    *  \~
    *  @author Zoltán Hrabovszki
+   * @throws Exception 
    *  @date 2017.01.31
    */  
-  public ArrayList<String> getCaption()
+  public ArrayList<String> getCaption() throws Exception
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getCaption() is not definden for you GUI-Object. Please define first the methode!");
@@ -142,9 +143,10 @@ public AnyWindow(String fpsLocator, OKWLocator... fpLocators )
    *  @return true, falls das eindeutig Objekt gefunden worden ist ist, sonst false.
    *  \~
    *  @author Zoltán Hrabovszki
+   * @throws Exception 
    *  @date 2017.01.31
    */  
-  public Boolean getIsActive()
+  public Boolean getIsActive() throws Exception
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getIsActive() is not definden for this GUI-Object. Please define first this methode!");

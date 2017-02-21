@@ -3,6 +3,7 @@ package okw.SeInputCheckbox;
 import static org.junit.Assert.*;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
+import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.exceptions.OKWVerifyingFailsException;
 
 import org.junit.*;
@@ -785,6 +786,7 @@ public class SeInputCheckbox_Test
                 EN.EndTest();
         }
 
+        
         @Test( expected = OKWVerifyingFailsException.class )
         public void tcVerifyValue_ActuelUNCHECKED_ExpectedCHECKED_OKWVerifyingFailsException() throws Exception
         {
@@ -799,5 +801,298 @@ public class SeInputCheckbox_Test
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
+        }
+
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcClickOn_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.ClickOn( "NotExists");
+        }
+
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcSelect_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.Select( "NotExists", "abc");
+        }
+
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcTypeKey_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.TypeKey( "NotExists", "abc");
+        }
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcSetValue_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.SetValue( "NotExists", "abc");
+        }
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcSetFocus_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.SetFocus( "NotExists");
+        }
+        
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcMemorizeCaption_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.MemorizeCaption( "NotExists", "MemorizeCaption");
+        }
+
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcMemorizeHasFocus_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.MemorizeHasFocus( "NotExists", "MemorizeHasFocus");
+        }
+        
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcMemorizeIsActive_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.MemorizeIsActive( "NotExists", "MemorizeIsActive");
+        }
+        
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcMemorizeLabel_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.MemorizeLabel( "NotExists", "MemorizeLabel");
+        }
+        
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcMemorizeTooltip_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.MemorizeTooltip( "NotExists", "MemorizeTooltip");
+        }
+
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcMemorizeValue_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.MemorizeValue( "NotExists", "MemorizeVale");
+        }
+
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcLogCaption_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.LogCaption( "NotExists");
+        }
+
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcLogHasFocus_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.LogHasFocus( "NotExists");
+        }
+        
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcLogIsActive_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.LogIsActive( "NotExists");
+        }
+        
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcLogLabel_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.LogLabel( "NotExists");
+        }
+        
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcLogTooltip_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.LogTooltip( "NotExists");
+        }
+
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcLogValue_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.LogValue( "NotExists");
+        }
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcVerifyCaption_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyCaption( "NotExists", "aa");
+        }
+
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcVerifyHasFocus_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyHasFocus( "NotExists", "YES");
+        }
+        
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcVerifyIsActive_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyIsActive( "NotExists", "YES" );
+        }
+        
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcVerifyLabel_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyLabel( "NotExists", "aa" );
+        }
+        
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcVerifyTooltip_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyTooltip( "NotExists", "aa");
+        }
+
+        
+        @Test( expected = OKWGUIObjectNotFoundException.class )
+        public void tcVerifyValue_OKWGUIObjectNotFoundException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyValue( "NotExists", "aa");
         }
 }

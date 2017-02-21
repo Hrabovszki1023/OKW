@@ -39,8 +39,11 @@
 
 package okw.gui.adapter.selenium;
 
+import java.io.IOException;
 import java.util.*;
 
+import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
@@ -52,6 +55,7 @@ import okw.OKW_Const_Sngltn;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.xml.sax.SAXException;
 
 
 public class SeAnyChildWindow extends AnyChildwindow
@@ -131,11 +135,8 @@ public class SeAnyChildWindow extends AnyChildwindow
             this.LogFunctionStartDebug("ClickOn");
 
             // Wenn das Objekt nicht existiert mit Exception beenden...
-            if (!this.getExists())
-            {
-                String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "SeAnyWin.ClickOn()");
-                throw new OKWGUIObjectNotFoundException(lvsLM);
-            }
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
 
             this.Me().click();
         }
@@ -165,12 +166,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	    {
 	        this.LogFunctionStartDebug("GetCaption");
 	
-	        // Wenn das Objekt nicht existiert mit Exception beenden...
-	        if (!this.WaitForMe())
-	        {
-	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getCaption()");
-	            throw new OKWGUIObjectNotFoundException(lvsLM);
-	        }
+          // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+          this.WaitForMe();
 	        
 	        // The Attribute "value" wird als Beschriftung angezeigt...
 	        lvLsReturn.add(this.Me().getAttribute("textContent"));
@@ -209,8 +206,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         {
           this.LogFunctionStartDebug("getExists");
 
-          // Wenn Iframe gesetzt umschlaten auf das Ifreme sonst zurücksetzten aud default.
-          
+          // Wenn Iframe gesetzt umschlaten auf das Iframe sonst zurücksetzten aud default.
            myLocator = this.getLocator();
            meme = SeDriver.getInstance().getElements(getIframeID(), myLocator);
         
@@ -261,12 +257,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	    {
 	        this.LogFunctionStartDebug("getHasFocus");
 	
-	        // Wenn das Objekt nicht existiert mit Exception beenden...
-	        if (!this.WaitForMe())
-	        {
-	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getHasFocus()");
-	            throw new OKWGUIObjectNotFoundException(lvsLM);
-	        }
+          // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+          this.WaitForMe();
 	
 	        WebElement currentElement = SeDriver.getInstance().driver.switchTo().activeElement();
 	
@@ -298,12 +290,8 @@ public class SeAnyChildWindow extends AnyChildwindow
         {
             this.MyLogger.LogFunctionStartDebug("getIsActive");
 
-            // Wenn das Objekt nicht existiert mit Exception beenden...
-            if (!this.WaitForMe())
-            {
-                String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getIsActive()");
-                throw new OKWGUIObjectNotFoundException(lvsLM);
-            }
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
 
             lvDisabled = this.Me().getAttribute("disabled");
 
@@ -344,12 +332,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	    {
 	        MyLogger.LogFunctionStartDebug("getLabel");
 	
-	        // Wenn das Objekt nicht existiert mit Exception beenden...
-	        if (!this.WaitForMe())
-	        {
-	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getLabel()");
-	            throw new OKWGUIObjectNotFoundException(lvsLM);
-	        }
+          // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+          this.WaitForMe();
 	        
 	        // 1. Schritt: Attribute "id" is shown as Tooltip...
 	        String lvsID = this.Me().getAttribute("id");
@@ -389,12 +373,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	    {
 	        this.LogFunctionStartDebug("GetTooltip");
 	
-	        // Wenn das Objekt nicht existiert mit Exception beenden...
-	        if (!this.WaitForMe())
-	        {
-	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getTooltip()");
-	            throw new OKWGUIObjectNotFoundException(lvsLM);
-	        }
+          // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+          this.WaitForMe();
 	        
 	        // The Attribute "Title" is shown as Tooltip...
 	        lvLsReturn.add(this.Me().getAttribute("title"));
@@ -425,12 +405,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	    {
 	        this.LogFunctionStartDebug("getValue");
 	
-          // Warten auf das Object: Wenn das Objekt nicht existiert mit Exception beenden...
-          if (!this.WaitForMe())
-          {
-              String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getValue()");
-              throw new OKWGUIObjectNotFoundException(lvsLM);
-          }
+          // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+          this.WaitForMe();
 
           // Get Value from TextField and put this into the return ArrayList<String>
 	        lvLsReturn.add(this.Me().getAttribute("textContent"));
@@ -666,7 +642,6 @@ public class SeAnyChildWindow extends AnyChildwindow
      */
     public WebElement Me() throws Exception
     {
-        this.MyLogger.LogFunctionStartDebug("Me");
         WebElement me = null;
 
         me = SeDriver.getInstance().getElement( getIframeID(), this.getLocator() );
@@ -1101,12 +1076,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	    {
 	        this.LogFunctionStartDebug("TypeKey", "fps_Values", fps_Values.toString());
 	
-	        // Wenn das Objekt nicht existiert mit Exception beenden...
-	        if (!this.WaitForMe())
-	        {
-	            String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "TypeKey()");
-	            throw new OKWGUIObjectNotFoundException(lvsLM);
-	        }
+          // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+          this.WaitForMe();
 	
 	        // We are using a local-Variable to prevent multiple call of Me() in foreach-loop
 	        WebElement lv_WebElement = this.Me();
@@ -1361,5 +1332,25 @@ public class SeAnyChildWindow extends AnyChildwindow
         }
 
         return lvLsReturn;
+    }
+
+    /**
+     * Wartet auf das Objekt
+     * Wenn kein Fenstre gefunden wird, 
+     */
+    public Boolean WaitForMe() throws XPathExpressionException, InterruptedException, JAXBException, ParserConfigurationException, SAXException, IOException
+    {
+      Boolean lvbReturn = super.WaitForMe();
+      
+      if (!lvbReturn)
+      {
+        this.MyLogger.ResOpenList( "GUI-Object not found..."  );
+        this.MyLogger.LogPrint( "Locator: '" + this.getLocator() + "'" );
+        this.MyLogger.ResCloseList();
+
+        String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "getCaption()");
+        throw new OKWGUIObjectNotFoundException(lvsLM);
+      }
+      return lvbReturn;   
     }
 }

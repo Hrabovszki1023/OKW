@@ -174,12 +174,8 @@ import okw.gui.OKWLocator;
             {
                 this.LogFunctionStartDebug("GetCaption");
 
-                // Wenn das Objekt nicht existiert mit Exception beenden...
-                if (!this.getExists())
-                {
-                    String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
-                    throw new OKWGUIObjectNotFoundException(lvsLM);
-                }
+                // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+                this.WaitForMe();
                 
                 // The Attribute "value" wird als Beschriftung angezeigt...
                 lvLsReturn.add(this.Me().getAttribute("href"));
@@ -241,7 +237,7 @@ import okw.gui.OKWLocator;
 
             try
             {
-                MyLogger.LogFunctionStartDebug("Memorize");
+                MyLogger.LogFunctionStartDebug("MemorizeValue");
                 lvLsReturn = this.getValue();
             }
             finally

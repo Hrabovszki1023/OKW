@@ -107,7 +107,7 @@ public class SeAnyWindow extends AnyWindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.11.11
      */
-    public void ClickOn()
+    public void ClickOn() throws Exception
     {
         try
         {
@@ -140,7 +140,7 @@ public class SeAnyWindow extends AnyWindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
 	 */
-	public ArrayList<String> getCaption()
+	public ArrayList<String> getCaption() throws Exception
 	{
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 	    Boolean bOK = false;
@@ -244,7 +244,7 @@ public class SeAnyWindow extends AnyWindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.11.11
 	 */
-	public Boolean getHasFocus()
+	public Boolean getHasFocus() throws Exception
 	{
 	    Boolean lvbReturn = false;
 	    Boolean bOK = false;
@@ -289,7 +289,7 @@ public class SeAnyWindow extends AnyWindow
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2014.04.19
-    public Boolean getIsActive()
+    public Boolean getIsActive() throws Exception
     {
         Boolean lvbReturn = false;
         Boolean bOK = false;
@@ -345,7 +345,7 @@ public class SeAnyWindow extends AnyWindow
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2014.06.17
-	public ArrayList<String> getLabel()
+	public ArrayList<String> getLabel() throws Exception
 	{
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 	    Boolean bOK = false;
@@ -395,7 +395,7 @@ public class SeAnyWindow extends AnyWindow
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.12.07
-	public ArrayList<String> getTooltip()
+	public ArrayList<String> getTooltip() throws Exception
 	{
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 	    Boolean bOK = false;
@@ -487,7 +487,7 @@ public class SeAnyWindow extends AnyWindow
    *  @author Zoltán Hrabovszki
    *  @date 2013.12.07
    */
-  public ArrayList<String> LogCaption()
+  public ArrayList<String> LogCaption() throws Exception
   {
       ArrayList<String> lvLsReturn = new ArrayList<String>();
       Boolean bOK = false;
@@ -568,7 +568,7 @@ public class SeAnyWindow extends AnyWindow
     /// \return
     /// \author Zoltan Hrabovszki
     /// \date 2013.04.11
-    public Boolean LogHasFocus()
+    public Boolean LogHasFocus() throws Exception
     {
         Boolean lvbReturn = false;
         Boolean bOK = false;
@@ -610,7 +610,7 @@ public class SeAnyWindow extends AnyWindow
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.12.07
-    public Boolean LogIsActive()
+    public Boolean LogIsActive() throws Exception
     {
         Boolean lvbReturn = null;
 
@@ -641,7 +641,7 @@ public class SeAnyWindow extends AnyWindow
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.12.07
-    public ArrayList<String> LogLabel()
+    public ArrayList<String> LogLabel() throws Exception
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;
@@ -684,29 +684,19 @@ public class SeAnyWindow extends AnyWindow
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.12.07
-    public ArrayList<String> LogTooltip()
+    public ArrayList<String> LogTooltip() throws Exception
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
-        Boolean bOK = false;
     
         try
         {
-            MyLogger.LogFunctionStartDebug("LogTooltip");
+            this.LogFunctionStartDebug("LogTooltip");
     
             lvLsReturn = this.getTooltip();
-    
-            bOK = true;
         }
         finally
         {
-            if (bOK)
-            {
-                MyLogger.LogFunctionEndDebug(lvLsReturn);
-            }
-            else
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
+            this.LogFunctionEndDebug(lvLsReturn);
         }
     
         return lvLsReturn;
@@ -726,25 +716,16 @@ public class SeAnyWindow extends AnyWindow
       */
     public ArrayList<String> LogValue() throws Exception
     {
-        Boolean bOK = false;
         ArrayList<String> lvLsReturn = new ArrayList<String>();
     
         try
         {
-            MyLogger.LogFunctionStartDebug("LogValue");
+            this.LogFunctionStartDebug("LogValue");
             lvLsReturn = this.getValue();
-            bOK = true;
         }
         finally
         {
-            if (bOK)
-            {
-                MyLogger.LogFunctionEndDebug(lvLsReturn);
-            }
-            else
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
+                this.LogFunctionEndDebug(lvLsReturn);
         }
     
         return lvLsReturn;
@@ -759,64 +740,13 @@ public class SeAnyWindow extends AnyWindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.11.11
      */
-    public WebElement Me()
+    public WebElement Me() throws Exception
     {
-        this.MyLogger.LogFunctionStartDebug("Me");
-        WebElement me = null;
+      WebElement me = null;
 
-        List<WebElement> meme = null;
-        //// OKWIni.Instance.TimeOutExists;
-
-        try
-        {
-          String myLocator = this.getLocator();
+      me = SeDriver.getInstance().getElement( getIframeID(), this.getLocator() );
           
-            meme = SeDriver.getInstance().driver.findElements(By.xpath(myLocator));
-            
-            if (meme.size() == 0)
-            {
-                String lvsPrintMe = "GUI-Objekt wurde nicht gefunden: Locator: >>" + myLocator + "<<";
-                
-                this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
-                this.MyLogger.LogPrint( lvsPrintMe );
-                this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
-
-                throw new OKWGUIObjectNotFoundException( lvsPrintMe );
-            }
-            else if (meme.size() > 1)
-            {
-                String lvsPrintMe = "Locator ist nicht eindeutig, es wurden mehrer GUI-Objekt gefunden:\n Locator: >>" + this.getLocator() + "<<";
-                
-                this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
-                this.MyLogger.LogPrint( lvsPrintMe );
-                this.MyLogger.LogPrint( "????????????????????????????????????????????????????????????" );
-
-                throw new OKWGUIObjectNotFoundException( lvsPrintMe );
-            }
-            else
-            {
-                me = meme.get(0);
-            }
-        }
-        /*
-         catch( Exception e )
-        {
-          System.out.println( e.getMessage() );
-        }
-        */
-        finally
-        {
-            if (me != null)
-            {
-                this.MyLogger.LogFunctionEndDebug(me.toString());
-            }
-            else
-            {
-                this.MyLogger.LogFunctionEndDebug();
-            }
-        }
-
-        return me;
+      return me;
     }
     
     
@@ -873,7 +803,7 @@ public class SeAnyWindow extends AnyWindow
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2014.04.19
-    public Boolean MemorizeIsActive()
+    public Boolean MemorizeIsActive() throws Exception
     {
         Boolean bOK = false;
         Boolean lvbReturn = false;
@@ -912,7 +842,7 @@ public class SeAnyWindow extends AnyWindow
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.11.11
-    public Boolean NotExists()
+    public Boolean NotExists() throws Exception
     {
         this.MyLogger.LogFunctionStartDebug("NotExists");
         Boolean lvb_Return = false;
@@ -957,7 +887,7 @@ public class SeAnyWindow extends AnyWindow
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.11.11
-    public void SetFocus()
+    public void SetFocus() throws Exception
     {
         this.LogFunctionStartDebug("SetFocus");
 
@@ -1100,7 +1030,7 @@ public class SeAnyWindow extends AnyWindow
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.12.07
-    public ArrayList<String> MemorizeTooltip()
+    public ArrayList<String> MemorizeTooltip() throws Exception
     {
         Boolean bOK = false;
         ArrayList<String> lvLsReturn = null;
@@ -1141,7 +1071,7 @@ public class SeAnyWindow extends AnyWindow
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.12.07
-    public ArrayList<String> MemorizeLabel()
+    public ArrayList<String> MemorizeLabel() throws Exception
     {
         Boolean bOK = false;
         ArrayList<String> lvLsReturn = null;
@@ -1181,7 +1111,7 @@ public class SeAnyWindow extends AnyWindow
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2013.12.07
-    public Boolean MemorizeHasFocus()
+    public Boolean MemorizeHasFocus() throws Exception
     {
         Boolean lvbReturn = false;
         Boolean bOK = false;
@@ -1221,28 +1151,19 @@ public class SeAnyWindow extends AnyWindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public ArrayList<String> MemorizeCaption()
+    public ArrayList<String> MemorizeCaption() throws Exception
     {
-        Boolean bOK = false;
         ArrayList<String> lvLsReturn = null;
 
         try
         {
-            MyLogger.LogFunctionStartDebug("MemorizeCaption");
+            this.LogFunctionStartDebug("MemorizeCaption");
 
             lvLsReturn = this.getCaption();
-            bOK = true;
         }
         finally
         {
-            if (bOK)
-            {
-                this.LogFunctionEndDebug(lvLsReturn);
-            }
-            else
-            {
-                this.LogFunctionEndDebug();
-            }
+            this.LogFunctionEndDebug(lvLsReturn);
         }
 
         return lvLsReturn;
@@ -1298,7 +1219,7 @@ public class SeAnyWindow extends AnyWindow
 	/// \~
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.04.11
-	public void TypeKey(ArrayList<String> fps_Values)
+	public void TypeKey(ArrayList<String> fps_Values) throws Exception
 	{
 	    try
 	    {
@@ -1352,7 +1273,7 @@ public class SeAnyWindow extends AnyWindow
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.12.07
-	public ArrayList<String> VerifyCaption() throws InterruptedException
+	public ArrayList<String> VerifyCaption()  throws Exception
 	{
 	    MyLogger.LogFunctionStartDebug("VerifyCaption");
 	
@@ -1441,7 +1362,7 @@ public class SeAnyWindow extends AnyWindow
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.12.07
-	public Boolean VerifyIsActive( ) throws InterruptedException
+	public Boolean VerifyIsActive( )  throws Exception
 	{
 	    this.MyLogger.LogFunctionStartDebug("VerifyIsActive");
 	
@@ -1487,7 +1408,7 @@ public class SeAnyWindow extends AnyWindow
 	// \~
 	// \author Zoltán Hrabovszki
 	// \date 2013.12.07
-	public Boolean VerifyHasFocus() throws InterruptedException
+	public Boolean VerifyHasFocus()  throws Exception
 	{
 	    Boolean lvbReturn = false;
 	    Boolean bOK = false;
@@ -1534,7 +1455,7 @@ public class SeAnyWindow extends AnyWindow
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.12.07
-	public ArrayList<String> VerifyLabel() throws InterruptedException
+	public ArrayList<String> VerifyLabel() throws Exception
 	{
 	    MyLogger.LogFunctionStartDebug("VerifyLabel");
 	
@@ -1577,7 +1498,7 @@ public class SeAnyWindow extends AnyWindow
 	 *  \author Zoltán Hrabovszki
 	 *  \date 2013.12.07
    */
-	public ArrayList<String> VerifyTooltip() throws InterruptedException
+	public ArrayList<String> VerifyTooltip() throws Exception
 	{
 	    MyLogger.LogFunctionStartDebug("VerifyTooltip");
 	
