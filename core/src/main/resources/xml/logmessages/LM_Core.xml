@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="okwlogs.xslt"?>
+<LogMessages>
+	<!-- Class: "Core" -->
+	<Class name="Core">
+
+		<!-- Method: "BeginTest"-->
+		<Method name="BeginTest">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Begin Test</en>
+				<de>Test Beginnen</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "ClickOn"-->
+		<Method name="ClickOn">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Click On</en>
+				<de>Klicke Auf</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "DoubleClickOn"-->
+		<Method name="DoubleClickOn">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Doubleclick On</en>
+				<de>Klicke Doppelt Auf</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "EndTest"-->
+		<Method name="EndTest">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>End Test</en>
+				<de>Beende Test</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "LogExists"-->
+		<Method name="LogExists">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Log Exist</en>
+				<de>Logge Existenz</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "LogHasFocus"-->
+		<Method name="LogHasFocus">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Log Has Focus</en>
+				<de>Logge Focus</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "LogIsActive"-->
+		<Method name="LogIsActive">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Log is active</en>
+				<de>Logge is Aktiv</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "LogSelected"-->
+		<Method name="LogSelected">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Log Selected</en>
+				<de>Logge Augewähltes</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "LogTablecellValue"-->
+		<Method name="LogTablecellValue">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Log Tablecell Value</en>
+				<de>Logge Tabellenzellenwert</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "LogTooltip"-->
+		<Method name="LogTooltip">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Log Tooltip</en>
+				<de>Logge den Tooltip</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "LogCaption"-->
+		<Method name="LogCaption">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Log Caption</en>
+				<de>Logge Überschrift</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "LogLabel"-->
+		<Method name="LogLabel">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Log Label</en>
+				<de>Logge Etikette</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "LogValue"-->
+		<Method name="LogValue">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Log Value</en>
+				<de>Logge Wert</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "MemorizeExists"-->
+		<Method name="MemorizeExists">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Memorize Exists</en>
+				<de>Merke Existenz</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "MemorizeExists"-->
+		<Method name="MemorizeHasFocus">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Memorize Has Focus</en>
+				<de>Merke Hat Fokus</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "MemorizeIsActive"-->
+		<Method name="MemorizeIsActive">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Memorize Is Active</en>
+				<de>Merke ist Aktiv</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "MemorizeSelectedValue"-->
+		<Method name="MemorizeSelectedValue">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Memorize Selected Value</en>
+				<de>Merke Gewählten Wert</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "MemorizeTablecellValue"-->
+		<Method name="MemorizeTablecellValue">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Memorize Tablecell Value</en>
+				<de>Merke Tabellenellen Wert</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "MemorizeTooltip"-->
+		<Method name="MemorizeTooltip">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Memorize Tooltip</en>
+				<de>Merke Tooltip</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "MemorizeLabel"-->
+		<Method name="MemorizeLabel">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Memorize Label</en>
+				<de>Merke Etikette</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "MemorizeCaption"-->
+		<Method name="MemorizeCaption">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Memorize Caption</en>
+				<de>Merke Caption</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "MemorizeValue"-->
+		<Method name="MemorizeValue">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Memorize Value</en>
+				<de>Merke Value</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "Select"-->
+		<Method name="Select">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Select</en>
+				<de>Wähle aus</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "SelectMenu"-->
+		<Method name="SelectMenu">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Select Menu</en>
+				<de>Wähle Menu</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "SelectTablecell"-->
+		<Method name="SelectTablecell">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Select Tablecell</en>
+				<de>Wähle Tabellenzelle</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "SelectWindow"-->
+		<Method name="SelectWindow">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Select Window</en>
+				<de>Wähle Fenster</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "Sequence"-->
+		<Method name="Sequence">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Sequence</en>
+				<de>Sequenz</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "SetFocus"-->
+		<Method name="SetFocus">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Set Focus</en>
+				<de>Setze Focus</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "SetValue"-->
+		<Method name="SetValue">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Set Value</en>
+				<de>Setze Wert</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "StartApp"-->
+		<Method name="StartApp">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Start App</en>
+				<de>Starte Anwendung</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "StopApp"-->
+		<Method name="StopApp">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Stop App</en>
+				<de>Beende Anwendung</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "TypeKey"-->
+		<Method name="TypeKey">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Type Key</en>
+				<de>Gib Ein</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "TypeKeyTablecell"-->
+		<Method name="TypeKeyTablecell">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Type Key Tablecell</en>
+				<de>Gib Ein in Tabellenzelle</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "TypeKeyWindow"-->
+		<Method name="TypeKeyWindow">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Type Key Window</en>
+				<de>Gib Ein in Fenster</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyExists"-->
+		<Method name="VerifyExists">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Exists</en>
+				<de>Prüfe Vorhanden</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyHasFocus"-->
+		<Method name="VerifyHasFocus">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Focus</en>
+				<de>Prüfe Fokus</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyIsActive"-->
+		<Method name="VerifyIsActive">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Is Active</en>
+				<de>Prüfe Ist Aktiv</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifySelectedValue"-->
+		<Method name="VerifySelectedValue">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Selected Value</en>
+				<de>Prüfe gewählten Wert</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyTablecellValue"-->
+		<Method name="VerifyTablecellValue">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Tablecell Value</en>
+				<de>Prüfe Tabellenzellenwert</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyTooltip"-->
+		<Method name="VerifyTooltip">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Tooltip</en>
+				<de>Prüfe Tooltip</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyTooltipREGX"-->
+		<Method name="VerifyTooltipREGX">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Tooltip REGX</en>
+				<de>Prüfe Tooltip REGX</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyTooltipWCM"-->
+		<Method name="VerifyTooltipWCM">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Tooltip WCM</en>
+				<de>Prüfe Tooltip WCM</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyCaption"-->
+		<Method name="VerifyCaption">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Caption</en>
+				<de>Prüfe Überschrift</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyCaptionWCM"-->
+		<Method name="VerifyCaptionWCM">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Caption WCM</en>
+				<de>Prüfe Überschrift WCM</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyCaptionREGX"-->
+		<Method name="VerifyCaptionREGX">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Caption REGX</en>
+				<de>Prüfe Überschrift REGX</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyLabel"-->
+		<Method name="VerifyLabel">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Label</en>
+				<de>Prüfe Etikette</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyLabelWCM"-->
+		<Method name="VerifyLabelWCM">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Label WCM</en>
+				<de>Prüfe Etikette WCM</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyLabelREGX"-->
+		<Method name="VerifyLabelREGX">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Label REGX</en>
+				<de>Prüfe Etikette REGX</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyValue"-->
+		<Method name="VerifyValue">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Value</en>
+				<de>Prüfe Wert</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyValueWCM"-->
+		<Method name="VerifyValueWCM">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Value WCM</en>
+				<de>Prüfe Wert WCM</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyValueREGX"-->
+		<Method name="VerifyValueREGX">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Value REGX</en>
+				<de>Prüfe Wert REGX</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "FileDelete"-->
+		<Method name="FileDelete">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>File Delete</en>
+				<de>Datei löschen</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyFileExists"-->
+		<Method name="VerifyFileExists">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify File Exists</en>
+				<de>Prüfe Datei Vorhanden</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyDirectoryExists"-->
+		<Method name="VerifyDirectoryExists">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Directory Exists</en>
+				<de>Prüfe Verzeichnis Vorhanden</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "FileCopy"-->
+		<Method name="FileCopy">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>File Copy</en>
+				<de>Datei kopieren</de>
+			</Text>
+		</Method>
+	</Class>
+</LogMessages>

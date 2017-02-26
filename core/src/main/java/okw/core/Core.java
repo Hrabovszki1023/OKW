@@ -36,7 +36,6 @@
 
 package okw.core;
 
-import okw.FrameObjectDictionary_Sngltn;
 import okw.log.Logger_Sngltn;
 import okw.*;
 
@@ -94,8 +93,14 @@ import okw.*;
 public class Core implements IOKW_State
 {
 
+  private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
+
   // zeigt auf die Klasse des aktuellen Zustandes
   private IOKW_State CurrentState;
+  
+  // \copydoc LogMessenger
+  private static LogMessenger LM;
+
 
   // / \~german
   // / \brief
@@ -141,7 +146,7 @@ public class Core implements IOKW_State
       FrameObjectDictionary_Sngltn myFrameObjectDictionary = FrameObjectDictionary_Sngltn.getInstance();
 
       OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
-
+      LM = new LogMessenger("Core");
     }
     catch (Exception e)
     {
@@ -155,6 +160,7 @@ public class Core implements IOKW_State
    */
   public void BeginTest( String Testname ) throws Exception
   {
+    Log.LogTestcaseStart( Testname );
     this.CurrentState.BeginTest( Testname );
   }
 
@@ -164,7 +170,15 @@ public class Core implements IOKW_State
    */
   public void ClickOn( String FN ) throws Exception
   {
-    this.CurrentState.ClickOn( FN );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "ClickOn", "KeyWordName" ), FN);
+      this.CurrentState.ClickOn( FN );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -173,7 +187,15 @@ public class Core implements IOKW_State
    */
   public void DoubleClickOn( String FN ) throws Exception
   {
-    this.CurrentState.DoubleClickOn( FN );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "DoubleClickOn", "KeyWordName" ), FN);
+      this.CurrentState.DoubleClickOn( FN );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -182,7 +204,14 @@ public class Core implements IOKW_State
    */
   public void EndTest() throws Exception
   {
-    this.CurrentState.EndTest();
+    try
+    {
+      this.CurrentState.EndTest();
+    }
+    finally
+    {
+      Log.LogTestcaseEnd();
+    }
   }
 
   
@@ -191,7 +220,15 @@ public class Core implements IOKW_State
    */
   public void LogExists( String FN ) throws Exception
   {
-    this.CurrentState.LogExists( FN );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "LogExists", "KeyWordName" ), FN);
+      this.CurrentState.LogExists( FN );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -200,7 +237,15 @@ public class Core implements IOKW_State
    */
   public void LogHasFocus( String FN ) throws Exception
   {
-    this.CurrentState.LogHasFocus( FN );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "LogHasFocus", "KeyWordName" ), FN);
+      this.CurrentState.LogHasFocus( FN );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -209,7 +254,15 @@ public class Core implements IOKW_State
    */
   public void LogIsActive( String FN ) throws Exception
   {
-    this.CurrentState.LogIsActive( FN );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "LogIsActive", "KeyWordName" ), FN);
+      this.CurrentState.LogIsActive( FN );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -218,7 +271,15 @@ public class Core implements IOKW_State
    */
   public void LogSelected( String FN ) throws Exception
   {
-    this.CurrentState.LogSelected( FN );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "LogSelected", "KeyWordName" ), FN);
+      this.CurrentState.LogSelected( FN );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -227,7 +288,15 @@ public class Core implements IOKW_State
    */
   public void LogTablecellValue( String FN, String fpsCol, String fpsRow ) throws Exception
   {
-    this.CurrentState.LogTablecellValue( FN, fpsCol, fpsRow );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "LogTablecellValue", "KeyWordName" ), FN);
+      this.CurrentState.LogTablecellValue( FN, fpsCol, fpsRow );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -236,7 +305,15 @@ public class Core implements IOKW_State
    */
   public void LogTooltip( String FN ) throws Exception
   {
-    this.CurrentState.LogTooltip( FN );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "LogTooltip", "KeyWordName" ), FN);
+      this.CurrentState.LogTooltip( FN );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -245,7 +322,15 @@ public class Core implements IOKW_State
    */
   public void LogCaption( String FN ) throws Exception
   {
-    this.CurrentState.LogCaption( FN );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "LogCaption", "KeyWordName" ), FN);
+      this.CurrentState.LogCaption( FN );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -254,8 +339,16 @@ public class Core implements IOKW_State
    */
   public void LogLabel( String FN ) throws Exception
   {
-    this.CurrentState.LogLabel( FN );
-  }
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "LogLabel", "KeyWordName" ), FN);
+      this.CurrentState.LogLabel( FN );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
+ }
 
   
   /**
@@ -263,7 +356,15 @@ public class Core implements IOKW_State
    */
   public void LogValue( String FN ) throws Exception
   {
-    this.CurrentState.LogValue( FN );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "LogValue", "KeyWordName" ), FN);
+      this.CurrentState.LogValue( FN );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -272,7 +373,15 @@ public class Core implements IOKW_State
    */
   public void MemorizeExists( String FN, String Val ) throws Exception
   {
-    this.CurrentState.MemorizeExists( FN, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeExists", "KeyWordName" ), FN);
+      this.CurrentState.MemorizeExists( FN, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -281,7 +390,15 @@ public class Core implements IOKW_State
    */
   public void MemorizeHasFocus( String FN, String Val ) throws Exception
   {
-    this.CurrentState.MemorizeHasFocus( FN, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeHasFocus", "KeyWordName" ), FN);
+      this.CurrentState.MemorizeHasFocus( FN, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -290,7 +407,15 @@ public class Core implements IOKW_State
    */
   public void MemorizeIsActive( String FN, String Val ) throws Exception
   {
-    this.CurrentState.MemorizeIsActive( FN, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeIsActive", "KeyWordName" ), FN);
+      this.CurrentState.MemorizeIsActive( FN, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -299,7 +424,15 @@ public class Core implements IOKW_State
    */
   public void MemorizeSelectedValue( String FN, String Val ) throws Exception
   {
-    this.CurrentState.MemorizeSelectedValue( FN, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeSelectedValue", "KeyWordName" ), FN);
+      this.CurrentState.MemorizeSelectedValue( FN, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -308,7 +441,15 @@ public class Core implements IOKW_State
    */
   public void MemorizeTablecellValue( String FN, String fpsCol, String fpsRow, String fpsKeyName ) throws Exception
   {
-    this.CurrentState.MemorizeTablecellValue( FN, fpsCol, fpsRow, fpsKeyName );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeTablecellValue", "KeyWordName" ), FN);
+      this.CurrentState.MemorizeTablecellValue( FN, fpsCol, fpsRow, fpsKeyName );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -317,7 +458,15 @@ public class Core implements IOKW_State
    */
   public void MemorizeTooltip( String FN, String Val ) throws Exception
   {
-    this.CurrentState.MemorizeTooltip( FN, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeTooltip", "KeyWordName" ), FN);
+      this.CurrentState.MemorizeTooltip( FN, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -326,7 +475,15 @@ public class Core implements IOKW_State
    */
   public void MemorizeLabel( String FN, String Val ) throws Exception
   {
-    this.CurrentState.MemorizeLabel( FN, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeLabel", "KeyWordName" ), FN);
+      this.CurrentState.MemorizeLabel( FN, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -335,7 +492,15 @@ public class Core implements IOKW_State
    */
   public void MemorizeCaption( String FN, String Val ) throws Exception
   {
-    this.CurrentState.MemorizeCaption( FN, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeCaption", "KeyWordName" ), FN);
+      this.CurrentState.MemorizeCaption( FN, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -344,7 +509,15 @@ public class Core implements IOKW_State
    */
   public void MemorizeValue( String FN, String Val ) throws Exception
   {
-    this.CurrentState.MemorizeValue( FN, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeValue", "KeyWordName" ), FN);
+      this.CurrentState.MemorizeValue( FN, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -353,7 +526,15 @@ public class Core implements IOKW_State
    */
   public void Select( String FN, String Val ) throws Exception
   {
-    this.CurrentState.Select( FN, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "Select", "KeyWordName" ), FN);
+      this.CurrentState.Select( FN, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -362,23 +543,49 @@ public class Core implements IOKW_State
    */
   public void SelectMenu( String FN ) throws Exception
   {
-    this.CurrentState.SelectMenu( FN );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "SelectMenu", "KeyWordName" ), FN);
+      this.CurrentState.SelectMenu( FN );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
+  
   /**
    *  \copydoc IOKW_State::SelectMenu(String,String)
    */
   public void SelectMenu( String FN, String Val ) throws Exception
   {
-    this.CurrentState.SelectMenu( FN, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "SelectMenu", "KeyWordName" ), FN);
+      this.CurrentState.SelectMenu( FN, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
+  
   /**
    *  \copydoc IOKW_State::SelectTablecell(String,String,String)
    */
   public void SelectTablecell( String FN, String fpsCol, String fpsRow ) throws Exception
   {
-    this.CurrentState.SelectTablecell( FN, fpsCol, fpsRow );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "SelectTablecell", "KeyWordName" ), FN);
+      this.CurrentState.SelectTablecell( FN, fpsCol, fpsRow );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
 
@@ -387,7 +594,15 @@ public class Core implements IOKW_State
    */
   public void SelectWindow( String FN ) throws Exception
   {
-    this.CurrentState.SelectWindow( FN );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "SelectTablecell", "KeyWordName" ), FN);
+      this.CurrentState.SelectWindow( FN );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -396,7 +611,15 @@ public class Core implements IOKW_State
    */
   public void Sequence( String FN, String fpsSequenName, String SEQID ) throws Exception
   {
-    this.CurrentState.Sequence( FN, fpsSequenName, SEQID );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "Sequence", "KeyWordName" ), FN);
+      this.CurrentState.Sequence( FN, fpsSequenName, SEQID );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -422,9 +645,18 @@ public class Core implements IOKW_State
    */
   public void SetFocus( String FN ) throws Exception
   {
-    this.CurrentState.SetFocus( FN );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "SetFocus", "KeyWordName" ), FN);
+      this.CurrentState.SetFocus( FN );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
+  
   /**
    *  \~german
    *  \brief
@@ -448,7 +680,15 @@ public class Core implements IOKW_State
    */
   public void SetValue( String FN, String Val ) throws Exception
   {
-    this.CurrentState.SetValue( FN, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "SetValue", "KeyWordName" ), FN, Val);
+      this.CurrentState.SetValue( FN, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   /**
@@ -456,7 +696,15 @@ public class Core implements IOKW_State
    */
   public void StartApp( String fpsApplicationName ) throws Exception
   {
-    this.CurrentState.StartApp( fpsApplicationName );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "StartApp", "KeyWordName" ), fpsApplicationName);
+      this.CurrentState.StartApp( fpsApplicationName );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   /**
@@ -464,7 +712,15 @@ public class Core implements IOKW_State
    */
   public void StopApp( String fpsApplicationName ) throws Exception
   {
-    this.CurrentState.StopApp( fpsApplicationName );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "StopApp", "KeyWordName" ), fpsApplicationName);
+      this.CurrentState.StopApp( fpsApplicationName );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   /**
@@ -472,7 +728,15 @@ public class Core implements IOKW_State
    */
   public void TypeKey( String FN, String Val ) throws Exception
   {
-    this.CurrentState.TypeKey( FN, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "TypeKey", "KeyWordName" ), FN, Val);
+      this.CurrentState.TypeKey( FN, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   /**
@@ -480,7 +744,15 @@ public class Core implements IOKW_State
    */
   public void TypeKeyTablecell( String FN, String fpsCol, String fpsRow, String Val ) throws Exception
   {
-    this.CurrentState.TypeKeyTablecell( FN, fpsCol, fpsRow, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "TypeKeyTablecell", "KeyWordName" ), FN, fpsCol, fpsRow, Val);
+      this.CurrentState.TypeKeyTablecell( FN, fpsCol, fpsRow, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   /**
@@ -488,7 +760,15 @@ public class Core implements IOKW_State
    */
   public void TypeKeyWindow( String FN, String Val ) throws Exception
   {
-    this.CurrentState.TypeKeyWindow( FN, Val );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "TypeKeyWindow", "KeyWordName" ), FN, Val);
+      this.CurrentState.TypeKeyWindow( FN, Val );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   /**
@@ -496,7 +776,15 @@ public class Core implements IOKW_State
    */
   public void VerifyExists( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyExists( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyExists", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyExists( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   /**
@@ -504,7 +792,15 @@ public class Core implements IOKW_State
    */
   public void VerifyHasFocus( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyHasFocus( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyHasFocus", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyHasFocus( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -513,7 +809,15 @@ public class Core implements IOKW_State
    */
   public void VerifyIsActive( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyIsActive( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyIsActive", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyIsActive( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -522,7 +826,15 @@ public class Core implements IOKW_State
    */
   public void VerifySelectedValue( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifySelectedValue( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifySelectedValue", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifySelectedValue( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -531,7 +843,15 @@ public class Core implements IOKW_State
    */
   public void VerifyTablecellValue( String FN, String fpsCol, String fpsRow, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyTablecellValue( FN, fpsCol, fpsRow, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyTablecellValue", "KeyWordName" ), FN, fpsCol, fpsRow, ExpVal);
+      this.CurrentState.VerifyTablecellValue( FN, fpsCol, fpsRow, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -540,7 +860,15 @@ public class Core implements IOKW_State
    */
   public void VerifyTooltip( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyTooltip( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyTooltip", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyTooltip( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -549,7 +877,15 @@ public class Core implements IOKW_State
    */
   public void VerifyTooltipREGX( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyTooltipREGX( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyTooltipREGX", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyTooltipREGX( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -558,7 +894,15 @@ public class Core implements IOKW_State
    */
   public void VerifyTooltipWCM( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyTooltipWCM( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyTooltipWCM", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyTooltipWCM( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -567,7 +911,15 @@ public class Core implements IOKW_State
    */
   public void VerifyCaption( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyCaption( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyCaption", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyCaption( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -576,7 +928,15 @@ public class Core implements IOKW_State
    */
   public void VerifyCaptionWCM( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyCaptionWCM( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyCaptionWCM", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyCaptionWCM( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -585,7 +945,15 @@ public class Core implements IOKW_State
    */
   public void VerifyCaptionREGX( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyCaptionREGX( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyCaptionREGX", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyCaptionREGX( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -594,7 +962,15 @@ public class Core implements IOKW_State
    */
   public void VerifyLabel( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyLabel( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyLabel", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyLabel( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -603,7 +979,15 @@ public class Core implements IOKW_State
    */
   public void VerifyLabelWCM( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyLabelWCM( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyLabelWCM", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyLabelWCM( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -612,7 +996,15 @@ public class Core implements IOKW_State
    */
   public void VerifyLabelREGX( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyLabelREGX( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyLabelREGX", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyLabelREGX( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -621,7 +1013,15 @@ public class Core implements IOKW_State
    */
   public void VerifyValue( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyValue( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyValue", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyValue( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -630,7 +1030,15 @@ public class Core implements IOKW_State
    */
   public void VerifyValueREGX( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyValueREGX( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyValueREGX", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyValueREGX( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -639,7 +1047,15 @@ public class Core implements IOKW_State
    */
   public void VerifyValueWCM( String FN, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyValueWCM( FN, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyValueWCM", "KeyWordName" ), FN, ExpVal);
+      this.CurrentState.VerifyValueWCM( FN, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -648,7 +1064,15 @@ public class Core implements IOKW_State
    */
   public void FileDelete( String fpsPathAndFileName ) throws Exception
   {
-    this.CurrentState.FileDelete( fpsPathAndFileName );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "FileDelete", "KeyWordName" ), fpsPathAndFileName);
+      this.CurrentState.FileDelete( fpsPathAndFileName );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -657,7 +1081,15 @@ public class Core implements IOKW_State
    */
   public void VerifyFileExists( String fpsPathAndFileName, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyFileExists( fpsPathAndFileName, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyFileExists", "KeyWordName" ), fpsPathAndFileName, ExpVal);
+      this.CurrentState.VerifyFileExists( fpsPathAndFileName, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -666,7 +1098,15 @@ public class Core implements IOKW_State
    */
   public void VerifyDirectoryExists( String fpsPathAndFileName, String ExpVal ) throws Exception
   {
-    this.CurrentState.VerifyDirectoryExists( fpsPathAndFileName, ExpVal );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "VerifyDirectoryExists", "KeyWordName" ), fpsPathAndFileName, ExpVal);
+      this.CurrentState.VerifyDirectoryExists( fpsPathAndFileName, ExpVal );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 
   
@@ -675,6 +1115,14 @@ public class Core implements IOKW_State
    */
   public void CopyFile( String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName ) throws Exception
   {
-    this.CurrentState.CopyFile( fpsSourcePathAndFileName, fpsDestinationPathAndFileName );
+    try
+    {
+      Log.LogKeyWordStart( LM.GetMessage( "FileCopy", "KeyWordName" ), fpsSourcePathAndFileName, fpsDestinationPathAndFileName);
+      this.CurrentState.CopyFile( fpsSourcePathAndFileName, fpsDestinationPathAndFileName );
+    }
+    finally
+    {
+      Log.LogKeyWordEnd();
+    }
   }
 }
