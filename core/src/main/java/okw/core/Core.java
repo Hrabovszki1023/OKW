@@ -206,6 +206,7 @@ public class Core implements IOKW_State
   {
     try
     {
+      // Keine Schlüsselwort ausgabe! Das ist richtig!
       this.CurrentState.EndTest();
     }
     finally
@@ -290,7 +291,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "LogTablecellValue", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "LogTablecellValue", "KeyWordName" ), FN, fpsCol, fpsRow);
       this.CurrentState.LogTablecellValue( FN, fpsCol, fpsRow );
     }
     finally
@@ -375,7 +376,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "MemorizeExists", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeExists", "KeyWordName" ), FN, Val);
       this.CurrentState.MemorizeExists( FN, Val );
     }
     finally
@@ -392,7 +393,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "MemorizeHasFocus", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeHasFocus", "KeyWordName" ), FN, Val);
       this.CurrentState.MemorizeHasFocus( FN, Val );
     }
     finally
@@ -409,7 +410,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "MemorizeIsActive", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeIsActive", "KeyWordName" ), FN, Val);
       this.CurrentState.MemorizeIsActive( FN, Val );
     }
     finally
@@ -426,7 +427,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "MemorizeSelectedValue", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeSelectedValue", "KeyWordName" ), FN, Val);
       this.CurrentState.MemorizeSelectedValue( FN, Val );
     }
     finally
@@ -443,7 +444,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "MemorizeTablecellValue", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeTablecellValue", "KeyWordName" ), FN, fpsCol, fpsRow, fpsKeyName);
       this.CurrentState.MemorizeTablecellValue( FN, fpsCol, fpsRow, fpsKeyName );
     }
     finally
@@ -460,7 +461,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "MemorizeTooltip", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeTooltip", "KeyWordName" ), FN, Val);
       this.CurrentState.MemorizeTooltip( FN, Val );
     }
     finally
@@ -477,7 +478,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "MemorizeLabel", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeLabel", "KeyWordName" ), FN, Val);
       this.CurrentState.MemorizeLabel( FN, Val );
     }
     finally
@@ -494,7 +495,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "MemorizeCaption", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeCaption", "KeyWordName" ), FN, Val);
       this.CurrentState.MemorizeCaption( FN, Val );
     }
     finally
@@ -511,7 +512,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "MemorizeValue", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "MemorizeValue", "KeyWordName" ), FN, Val);
       this.CurrentState.MemorizeValue( FN, Val );
     }
     finally
@@ -528,7 +529,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "Select", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "Select", "KeyWordName" ), FN, Val);
       this.CurrentState.Select( FN, Val );
     }
     finally
@@ -562,7 +563,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "SelectMenu", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "SelectMenu", "KeyWordName" ), FN, Val);
       this.CurrentState.SelectMenu( FN, Val );
     }
     finally
@@ -579,7 +580,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "SelectTablecell", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "SelectTablecell", "KeyWordName" ), FN, fpsCol, fpsRow);
       this.CurrentState.SelectTablecell( FN, fpsCol, fpsRow );
     }
     finally
@@ -596,7 +597,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "SelectTablecell", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "SelectWindow", "KeyWordName" ), FN);
       this.CurrentState.SelectWindow( FN );
     }
     finally
@@ -613,7 +614,7 @@ public class Core implements IOKW_State
   {
     try
     {
-      Log.LogKeyWordStart( LM.GetMessage( "Sequence", "KeyWordName" ), FN);
+      Log.LogKeyWordStart( LM.GetMessage( "Sequence", "KeyWordName" ), FN, fpsSequenName, SEQID );
       this.CurrentState.Sequence( FN, fpsSequenName, SEQID );
     }
     finally
