@@ -43,7 +43,6 @@ import java.util.ArrayList;
 
 import okw.LogMessenger;
 import okw.OKW_Const_Sngltn;
-import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.gui.*;
 
@@ -84,26 +83,26 @@ import okw.gui.*;
 
          
         /** \brief
-         *  Method ermittel oder liefert den aktuellen zustend der Checkbox,
-         *  also ob die angehakt oder Nicht angehakt.
+         *  Method liefert den aktuellen zustand der Checkbox, "angehakt" oder "nicht angehakt".
          *  
          *  Alle OKW Checkbox methoden
-         *  Laufen über diese methode um den aktuellen zustand zu ermiietl.
-         *          angehakt war oder nicht.
-         *  Diese Methode ist die Anpassungstelle für Projekspezifische Anpassungen.
+         *  Laufen über diese methode um den aktuellen zustand zu ermitteln.
          *  
+         *  _Anmerkung:_ kein WaitForMe aufruf: WaitForMe() wird schon inder aufrufenden Methode ausgeführt.
+         *  
+         *  @return true falls angehakt, sonst false
          *  @author Zoltan Hrabovszki
-         * @throws Exception 
+         *  @throws Exception 
          *  @date 2013.04.11
          */
-        public Boolean IsSelected() throws Exception
+        public Boolean getIsSelected() throws Exception
         {
             Boolean lvbReturn = false;
             
-            this.LogFunctionStartDebug("IsSelected");
-
             try
             {
+                this.LogFunctionStartDebug("IsSelected");
+
                 // Hole Zusand: Häckchen oder kein Häckchen, das ist hier die Frage?
                 lvbReturn = this.Me().isSelected();
             }
@@ -129,7 +128,7 @@ import okw.gui.*;
             try
             {
                 // Hab ich ein Häckchen?
-                if (!this.IsSelected())
+                if (!this.getIsSelected())
                 {
                     this.ClickOn();
                 }
@@ -158,14 +157,10 @@ import okw.gui.*;
             {
                 this.LogFunctionStartDebug("getValue");
 
-                // Wenn das Objekt nicht existiert mit Exception beenden...
-                if (!this.getExists())
-                {
-                    String lvsLM = LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetValue()");
-                    throw new OKWGUIObjectNotFoundException(lvsLM);
-                }
+                // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+                this.WaitForMe();
 
-                if (this.IsSelected())
+                if (this.getIsSelected())
                 {
                     String lvsValue = myOKW_Const.GetConst4Internalname("CHECKED");
                     lvls_Return.add(lvsValue);
@@ -192,16 +187,13 @@ import okw.gui.*;
         @Override
         public void SetValue(ArrayList<String> fps_Values) throws Exception
         {
-            this.LogFunctionStartDebug("SetValue", "fps_Values", fps_Values.toString());
 
             try
             {
-                // Wenn das Objekt nicht existiert mit Exception beenden...
-                if (!this.getExists())
-                {
-                    String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "Select()");
-                    throw new OKWGUIObjectNotFoundException(lvsLM + "\\Locator: >>" + this.getLocator() + "<<");
-                }
+                this.LogFunctionStartDebug("SetValue", "fps_Values", fps_Values.toString());
+
+            	// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+                this.WaitForMe();
 
                 // Sprachabhängige Werte holen
                 String lvsCHECKED = myOKW_Const.GetConst4Internalname("CHECKED");
@@ -239,12 +231,8 @@ import okw.gui.*;
 
             try
             {
-                // Wenn das Objekt nicht existiert mit Exception beenden...
-                if (!this.getExists())
-                {
-                    String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "Select()");
-                    throw new OKWGUIObjectNotFoundException(lvsLM + "\\Locator: >>" + this.getLocator() + "<<");
-                }
+            	// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+                this.WaitForMe();
 
                 // Sprachabhängige Werte holen
                 String lvsCHECKED = myOKW_Const.GetConst4Internalname("CHECKED");
@@ -273,10 +261,11 @@ import okw.gui.*;
             return;
         }
 
+        
         /** \brief
          *  Method verlässt die Checkbox unangehakt, egal ob sie vorher angehakt
          *  war oder nicht.<br/>
-         *  __Anmerkung:__ Die Eigenschaft Elemen.Selected ist nicht beschreibar.
+         *  __Anmerkung:__ Die Eigenschaft Element.Selected() ist nicht beschreibar.
          *  Daher
          *  
          *  @author Zoltan Hrabovszki
@@ -285,12 +274,12 @@ import okw.gui.*;
          */
         public void UnChecking() throws Exception
         {
-            this.LogFunctionStartDebug("UnChecking");
-
             try
             {
+                this.LogFunctionStartDebug("UnChecking");
+
                 // Hab ich ein Häckchen?
-                if (this.IsSelected())
+                if (this.getIsSelected())
                 {
                     // yep! - Dann klicken und Häckchen weg...
                     this.ClickOn();

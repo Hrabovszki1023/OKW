@@ -77,47 +77,6 @@ import okw.gui.OKWLocator;
          }
 
          
-        /** \~german
-         *  Klickt auf das aktuelle Objekt.
-         *  
-         *  \~english
-         * 
-         *  \~
-         *  \author Zoltán Hrabovszki
-         *  \date 2013.11.11
-         * @throws IOException 
-         * @throws SAXException 
-         * @throws ParserConfigurationException 
-         * @throws JAXBException 
-         * @throws InterruptedException 
-         * @throws Exception 
-         */
-        @Override
-        public void ClickOn() throws Exception
-        {
-            try
-            {
-                this.LogFunctionStartDebug("ClickOn");
-
-                this.WaitForMe();
-                
-                // Wenn das Objekt nicht existiert mit Exception beenden...
-                if (!this.getExists())
-                {
-                    String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "SeAnyWin.TypeKey()");
-                    throw new OKWGUIObjectNotFoundException(lvsLM);
-                }
-
-                this.Me().click();
-            }
-            finally
-            {
-                this.LogFunctionEndDebug();
-            }
-
-            return;
-        }
-
        /* @Override
         public void SetFocus()
         {
@@ -125,18 +84,16 @@ import okw.gui.OKWLocator;
         }*/
 
 
-        /// \~german
-        /// \brief
-        /// Ein HTML-Link kann nicht aktiv/inaktiv oder enable/disables sein.
-        /// 
-        /// Daher wir eine Exception gezogen.
-        /// 
-        /// Methode muss ggf. Projektspezifisch implementiert werden.
-        /// 
-        /// \returntrue, falls das Objekt aktive ist, sonst false\return
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2014.11.26
+        /** \~german
+         *  \brief
+         *  Ein Standard HTML-Link kann nicht aktiv/inaktiv oder enable/disables sein.
+         *  
+         *  Methode muss ggf. Projektspezifisch implementiert werden.
+         *  
+         *  \~
+         *  \author Zoltán Hrabovszki
+         *  \date 2014.11.26
+         */
         @Override
         public Boolean getIsActive()
         {
@@ -161,18 +118,19 @@ import okw.gui.OKWLocator;
             throw new UnsupportedOperationException("Link cannot be Active");
         }
 
-        /// \brief
-        /// Holt den aktuellen Text aus dem Textfoil
-        /// 
-        /// \return
+        /** \brief
+         *  OpenKeyWord implemntiert den href-Attribute als "Value" eines HTML-Linkes.
+         * 
+         *  \return
+         */
         @Override
         public ArrayList<String> getValue() throws Exception
         {
-            
             ArrayList<String> lvLsReturn = new ArrayList<String>();
+
             try
             {
-                this.LogFunctionStartDebug("GetCaption");
+                this.LogFunctionStartDebug("getValue");
 
                 // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
                 this.WaitForMe();
@@ -185,66 +143,6 @@ import okw.gui.OKWLocator;
                 this.LogFunctionEndDebug(lvLsReturn);
             }
             
-            return lvLsReturn;
-        }
-
-        /// \brief
-        /// Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert.
-        /// 
-        /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
-        /// 
-        /// \return
-        /// Rückgabe des Textuellen Inhaltes der markierten Textes.
-        /// \return
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.12.14
-        @Override
-        public ArrayList<String> LogValue() throws Exception
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-
-            try
-            {
-                this.LogFunctionStartDebug("LogValue");
-                lvLsReturn = this.getValue();
-            }
-            finally
-            {
-                 this.LogFunctionEndDebug(lvLsReturn);
-            }
-
-            return lvLsReturn;
-        }
-
-        /// \~german
-        /// \brief
-        /// Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes
-        /// für das Schlüsselwort MerkeWert.
-        /// 
-        /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
-        /// 
-        /// \return
-        /// Rückgabe des Textuellen Inhaltes des aktuellen Objektes.
-        /// \return
-        /// \~english
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2013.12.14
-        @Override
-        public ArrayList<String> MemorizeValue() throws Exception
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-
-            try
-            {
-                MyLogger.LogFunctionStartDebug("MemorizeValue");
-                lvLsReturn = this.getValue();
-            }
-            finally
-            {
-                 this.LogFunctionEndDebug(lvLsReturn);
-            }
-
             return lvLsReturn;
         }
 }

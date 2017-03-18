@@ -83,12 +83,8 @@ import okw.gui.OKWLocator;
 
             try
             {
-                // Wenn das Objekt nicht existiert mit Exception beenden...
-                if (!this.getExists())
-                {
-                    String lvsLM = LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "Select()");
-                    throw new OKWGUIObjectNotFoundException(lvsLM);
-                }
+                // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+                this.WaitForMe();
                 
                 //org.openqa.selenium.support.ui.Select
                 Select SelectList = new Select(this.Me());

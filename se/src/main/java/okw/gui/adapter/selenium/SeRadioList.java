@@ -79,14 +79,15 @@ import okw.gui.OKWLocator;
         	try
         	{
         	   CO  = OKW_CurrentObject_Sngltn.getInstance();
-             FOD = FrameObjectDictionary_Sngltn.getInstance();
+               FOD = FrameObjectDictionary_Sngltn.getInstance();
         	}
         	catch (Exception e)
         	{
         	  System.exit(0);
         	}
         }
-        
+
+
         /**
          *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
          *  
@@ -106,42 +107,56 @@ import okw.gui.OKWLocator;
              System.exit(0);
            }
          }
-        
-  @Override
-  public void SetValue( ArrayList<String> Val ) throws Exception
-  {
 
-    if ( Val.size() == 1 )
-    {
 
-    	String DELETE = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("DELETE");
-    	
-    	if (Val.get(0).equals(DELETE))
-    	{
-    	      // \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
-    	      throw new okw.exceptions.OKWNotAllowedValueException( "SeRadioList: This Value is Not Aloowd here: " + Val.get(0));
-    	}
-    		
-    	else{
-      // Get my FN
-      String myFN = CO.GetChildFN();
+    @Override
+	public void SetValue(ArrayList<String> Val) throws Exception {
 
-      // Radiolist enthällt nur einen wert
-      String myChildFN = myFN + "." + Val.get( 0 );
+		try
+		{
 
-      Core myCore = new Core();
-      myCore.ClickOn( myChildFN );
+		    // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+		    this.WaitForMe();
+			
+			if (Val.size() == 1)
+			{
 
-      // Set the Current Radiobutton-object back to the RadioList..
-      CO.SetChildName( myFN );
-    	}
-    }
-    else
-    {
-      // \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
-      throw new okw.exceptions.OKWOnlySingleValueAllowedException( "SeRadioList: Only single value is allowed!" );
-    }
-  }
+				String DELETE = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("DELETE");
+
+				if (Val.get(0).equals(DELETE)) {
+					// \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
+					throw new okw.exceptions.OKWNotAllowedValueException(
+							"SeRadioList: This Value is Not Alowed here: " + Val.get(0));
+				}
+
+				else
+				{
+					// Get my FN
+					String myFN = this.getFN();
+
+					// Radiolist enthällt nur einen wert
+					String myChildFN = myFN + "." + Val.get(0);
+
+					Core myCore = new Core();
+					myCore.ClickOn(myChildFN);
+
+					// Set the Current Radiobutton-object back to the
+					// RadioList..
+					CO.SetChildName(myFN);
+				}
+			}
+			else 
+			{
+				// \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
+				throw new okw.exceptions.OKWOnlySingleValueAllowedException("SeRadioList: Only single value is allowed!");
+			}
+		}
+		finally
+		{
+			this.LogFunctionEndDebug();
+		}
+
+	}
   
   
   @Override
@@ -150,18 +165,20 @@ import okw.gui.OKWLocator;
    */
   public void Select( ArrayList<String> Val ) throws Exception
   {
-      this.SetValue( Val );
+	    try
+	    {
+	      this.LogFunctionStartDebug( "Select" );
+          this.SetValue( Val );
+	    }
+	    finally
+	    {
+	        this.LogFunctionEndDebug();
+	    }
+	    
+	    return;
   }
 
-  
-/*  @Override
-  public ArrayList<String> VerifyValue( ArrayList<String> Val )
-  {
-      this.SetValue( Val );
-      
-      return Val;
-  }
-  */
+
   
   /**
    *  Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
@@ -179,15 +196,17 @@ import okw.gui.OKWLocator;
       ArrayList<String> lvLsReturn = new ArrayList<String>();
       
       ArrayList<String> myRadioButtonKeys = new ArrayList<String>();
-      Boolean bOK = false;
 
     try
     {
       this.LogFunctionStartDebug( "getValue" );
 
+      // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+      this.WaitForMe();
+
       String isChecked = OKW_Const_Sngltn.getInstance().GetConst4Internalname( "CHECKED" );
 
-      // 1. Get the List of
+      // 1. Get the List of RadioButtons
       myRadioButtonKeys = OKW_CurrentObject_Sngltn.getInstance().GetAllChildFNsOfParent( this.getParentFN() + "." + this.getFN() + "." );
 
       for ( String lvsRadioButtonFN : myRadioButtonKeys )
@@ -195,27 +214,22 @@ import okw.gui.OKWLocator;
 
     	 ArrayList<String> Actuel = ( ( SeInputRadio ) FOD.GetParentObjectByName( lvsRadioButtonFN ) ).getValue(); 
         
-    	if ( isChecked.equals( Actuel.get(0) ))
-        {
+    	 if ( isChecked.equals( Actuel.get(0) ))
+         {
     		
-    	  String CurrentValue = okw.OKW_Helper.GetRightFromDelimiterNumber(lvsRadioButtonFN, this.getFN() + ".", 1);
-          lvLsReturn.add( CurrentValue );
-          break;
-        }
+    	    String CurrentValue = okw.OKW_Helper.GetRightFromDelimiterNumber(lvsRadioButtonFN, this.getFN() + ".", 1);
+            lvLsReturn.add( CurrentValue );
+            
+            break;
+         }
       }
     }
-      finally
-      {
-          if (bOK)
-          {
-              this.LogFunctionEndDebug(lvLsReturn.toString());
-          }
-          else
-          {
-              this.LogFunctionEndDebug();
-          }
-      }
-      return lvLsReturn;
+    finally
+    {
+        this.LogFunctionEndDebug(lvLsReturn.toString());
+    }
+
+    return lvLsReturn;
   }
   
   

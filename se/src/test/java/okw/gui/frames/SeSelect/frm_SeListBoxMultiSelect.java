@@ -22,7 +22,7 @@ public class frm_SeListBoxMultiSelect extends SeBrowserChild
 
     public frm_SeListBoxMultiSelect()
     {
-       super( "//*[@title='<select size=\"5\" multiple>'" );
+       super( "//form[@action = 'SelectMultiSelect.htm']/../.." );
        Künstler =  new SeSelect("//*[@name='Artist']");
     }
 

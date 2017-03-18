@@ -55,7 +55,7 @@ public class SeInputRadio extends SeAnyChildWindow
           // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
           this.WaitForMe();
 
-          if (this.IsSelected())
+          if (this.getIsSelected())
           {
               String lvsValue = OKW_Const_Sngltn.getInstance().GetConst4Internalname("CHECKED");
               lvls_Return.add(lvsValue);
@@ -84,7 +84,7 @@ public class SeInputRadio extends SeAnyChildWindow
    *  @throws Exception 
    *  @date 2013.04.11
    */
-  public Boolean IsSelected() throws Exception
+  public Boolean getIsSelected() throws Exception
   {
       Boolean lvbReturn = false;
       
@@ -150,17 +150,17 @@ public class SeInputRadio extends SeAnyChildWindow
     {
       MyLogger.LogFunctionStartDebug( "SetValue" );
       
+      // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+      this.WaitForMe();
+      
       String Value = Values.get(0);
       String myCHECKED = OKW_Const_Sngltn.getInstance().GetConst4Internalname("CHECKED");
       String myUNCHECKED = OKW_Const_Sngltn.getInstance().GetConst4Internalname("UNCHECKED");
 
-      // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-      this.WaitForMe();
-
       if ( Value.equals(myCHECKED) )
       {
           Core myCore = new Core();
-          myCore.ClickOn( this.getFN() ); // 
+          myCore.ClickOn( this.getFN() );
       }
       else if ( Value.equals(myUNCHECKED) )
       {

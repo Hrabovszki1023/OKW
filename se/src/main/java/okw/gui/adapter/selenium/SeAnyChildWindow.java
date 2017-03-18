@@ -95,7 +95,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     public SeAnyChildWindow(String Locator, OKWLocator... Locators)
     {
     	super(Locator, Locators);
-      this.iframeID = "";
+        this.iframeID = "";
     }
 
     
@@ -134,7 +134,6 @@ public class SeAnyChildWindow extends AnyChildwindow
         {
             this.LogFunctionStartDebug("ClickOn");
 
-            // Wenn das Objekt nicht existiert mit Exception beenden...
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
             this.WaitForMe();
 
@@ -166,8 +165,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	    {
 	        this.LogFunctionStartDebug("GetCaption");
 	
-          // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-          this.WaitForMe();
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
 	        
 	        // The Attribute "value" wird als Beschriftung angezeigt...
 	        lvLsReturn.add(this.Me().getAttribute("textContent"));
@@ -257,8 +256,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	    {
 	        this.LogFunctionStartDebug("getHasFocus");
 	
-          // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-          this.WaitForMe();
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
 	
 	        WebElement currentElement = SeDriver.getInstance().driver.switchTo().activeElement();
 	
@@ -330,7 +329,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 	    try
 	    {
-	        MyLogger.LogFunctionStartDebug("getLabel");
+	        this.LogFunctionStartDebug("getLabel");
 	
           // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
           this.WaitForMe();
@@ -405,10 +404,10 @@ public class SeAnyChildWindow extends AnyChildwindow
 	    {
 	        this.LogFunctionStartDebug("getValue");
 	
-          // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-          this.WaitForMe();
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
 
-          // Get Value from TextField and put this into the return ArrayList<String>
+            // Get Value from TextField and put this into the return ArrayList<String>
 	        lvLsReturn.add(this.Me().getAttribute("textContent"));
 	    }
 	    finally
@@ -420,7 +419,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	}
 
 
-	/** \~german
+  /** \~german
    *  Ermittelt den textuellen Inhalt der Beschriftung (Caption).
    *  
    *  Diese Methode ist der Einstiegspunkt für LogCaption-Anpassungen durch Methoden überschreibung.
@@ -452,9 +451,9 @@ public class SeAnyChildWindow extends AnyChildwindow
 
      /**
       * \~german
-     *  Ermittelt den textuellen Inhalt des ToolTips.
+     *  LogExists loggt, ob das aktuelle Objekt existiert.
      *  
-     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
+     *  Diese Methode ist der Einstiegspunkt für LogExists-Anpassungen durch Methoden überschreibung.
      *  
      *  @return Rückgabe des Textuellen Inhaltes der Tooltips.
      *  Interface schreibt ein Listen-Element als Rückgabewert vor.
@@ -470,6 +469,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         try
         {
             this.LogFunctionStartDebug("LogExists");
+            
             lvbReturn = this.getExists();
         }
         finally
@@ -481,9 +481,9 @@ public class SeAnyChildWindow extends AnyChildwindow
     }
 
      /**
-      *  Ermittelt für LoggeWert, ob das aktuelle Objekt den Fokus hat.
+      *  LogHasFocus loggt, ob das aktuelle Objekt den Focus besitzt.
       *  
-      *  Diese Methode ist der Einstiegspunkt für Loggewert-Anpassungen durch Methodenüberschreibung.
+      *  Diese Methode ist der Einstiegspunkt für LogHasFocus-Anpassungen durch Methodenüberschreibung.
       *  
       *  @return true falls Objekt den Fokus hat, sonst false
       *  
@@ -496,8 +496,9 @@ public class SeAnyChildWindow extends AnyChildwindow
     
         try
         {
-          this.LogFunctionStartDebug("LogHasFocus");
-          lvbReturn = this.getHasFocus();
+            this.LogFunctionStartDebug("LogHasFocus");
+          
+            lvbReturn = this.getHasFocus();
         }
         finally
         {
@@ -509,12 +510,12 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 
     /**  \~german
-     *  Ermittelt, ob das aktuelle Objket Aktiv ist.
+     *  LogHasFocus loggt, ob das aktuelle Objekt aktiv ist.
      *  
-     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
+     *  Diese Methode ist der Einstiegspunkt für LogIsActive-Anpassungen durch Methoden-Überschreibung.
      *  
-     *  @return Rückgabe des Textuellen Inhaltes der Tooltips.
-     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  @return true falls das Objekt aktive ist, sonst false.
+     *
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
@@ -527,6 +528,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         try
         {
             this.LogFunctionStartDebug("LogIsActive");
+            
             lvbReturn = this.getIsActive();
         }
         finally
@@ -540,7 +542,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      /**  \~german
      *  Logt den textuellen Inhalt des Labels eines Objektes.
      *  
-     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
+     *  Diese Methode ist der Einstiegspunkt für LogLabel-Anpassungen durch Methoden überschreibung.
      *  
      *  @return
      *  Rückgabe des Textuellen Inhaltes der Tooltips.
@@ -558,6 +560,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         try
         {
             this.LogFunctionStartDebug("LogLabel");
+            
             lvLsReturn = this.getLabel();
         }
         finally
@@ -573,7 +576,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  \brief
      *  Logt den textuellen Inhalt des ToolTips.
      *  
-     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
+     *  Diese Methode ist der Einstiegspunkt für LogTooltip-Anpassungen durch Methoden überschreibung.
      *  
      *  @return
      *  Rückgabe des Textuellen Inhaltes der Tooltips.
@@ -620,6 +623,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         try
         {
             this.LogFunctionStartDebug("LogValue");
+            
             lvLsReturn = this.getValue();
         }
         finally
@@ -652,6 +656,37 @@ public class SeAnyChildWindow extends AnyChildwindow
     
     
     /** \~german
+	 *  Ermittelt den textuellen Inhalt des Caption/Überschrift für das Schlüsselwort MerkeWert.
+	 *  
+	 *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
+	 *  
+	 *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+	 *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+	 *  
+	 *  \~english
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  @date 2013.12.07
+	 */
+	public ArrayList<String> MemorizeCaption() throws Exception
+	{
+	    ArrayList<String> lvLsReturn = null;
+	
+	    try
+	    {
+	        this.LogFunctionStartDebug("MemorizeCaption");
+	        
+	        lvLsReturn = this.getCaption();
+	    }
+	    finally
+	    {
+	        this.LogFunctionEndDebug(lvLsReturn);
+	    }
+	
+	    return lvLsReturn;
+	}
+
+	/** \~german
      *  Ermittelt ob das Atuelle Objekt existiert, für das Schlüsselwort MerkeVorhanden.
      *  
      *  Diese Methode ist der Einstiegspunkt für MerkeExist-Anpassungen durch Methodenüberschreibung.
@@ -669,7 +704,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 
         try
         {
-            this.MyLogger.LogFunctionStartDebug("MemorizeExists");
+            this.LogFunctionStartDebug("MemorizeExists");
 
             lvbReturn = this.getExists();
         }
@@ -695,26 +730,17 @@ public class SeAnyChildWindow extends AnyChildwindow
      */
     public Boolean MemorizeIsActive() throws Exception
     {
-        Boolean bOK = false;
         Boolean lvbReturn = false;
 
         try
         {
-            this.MyLogger.LogFunctionStartDebug("MemorizeIsActive");
+            this.LogFunctionStartDebug("MemorizeIsActive");
 
             lvbReturn = this.getIsActive();
-            bOK = true;
         }
         finally
         {
-            if (bOK)
-            {
                 this.MyLogger.LogFunctionEndDebug(lvbReturn);
-            }
-            else
-            {
-                this.MyLogger.LogFunctionEndDebug();
-            }
         }
 
         return lvbReturn;
@@ -816,38 +842,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvbReturn;
     }
 
-    /** \~german
-     *  Ermittelt den textuellen Inhalt des Caption/Überschrift für das Schlüsselwort MerkeWert.
-     *  
-     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
-     *  
-     *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
-     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
-     *  
-     *  \~english
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
-     */
-    public ArrayList<String> MemorizeCaption() throws Exception
-    {
-        ArrayList<String> lvLsReturn = null;
-
-        try
-        {
-            MyLogger.LogFunctionStartDebug("MemorizeCaption");
-            lvLsReturn = this.getCaption();
-        }
-        finally
-        {
-            this.LogFunctionEndDebug(lvLsReturn);
-        }
-
-        return lvLsReturn;
-    }
-
-
-     /**  \~german
+    /**  \~german
      *  \brief
      *  Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes
      *  für das Schlüsselwort MerkeWert.
@@ -867,7 +862,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 
         try
         {
-            MyLogger.LogFunctionStartDebug("MemorizeValue");
+            this.LogFunctionStartDebug("MemorizeValue");
+            
             lvLsReturn = this.getValue();
         }
         finally
@@ -997,7 +993,7 @@ public class SeAnyChildWindow extends AnyChildwindow
   /**  \~german
    *  Setzt den Focus auf das Objekt.
    *  
-   *  __Anmerkung:__ Kleiner Trick: Selenium kennt keine öffentliche c#-Methode
+   *  __Anmerkung:__ Kleiner Trick: Selenium kennt keine öffentliche Methode
    *  für das setzen des Fokus. So weit ich es verstanden habe, wird intern jedoch
    *  methode SetFocus verwendt, wenn <tt>SendKeys</tt> aufgerufen wird.
    *  Quelle: http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
@@ -1010,16 +1006,13 @@ public class SeAnyChildWindow extends AnyChildwindow
    */
   public void SetFocus() throws Exception
   {
-      this.LogFunctionStartDebug("SetFocus");
   
       try
       {
-          // Wenn das Objekt nicht existiert mit Exception beenden...
-          if (!this.getExists())
-          {
-              String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "SetFocus()");
-              throw new OKWGUIObjectNotFoundException(lvsLM);
-          }
+          this.LogFunctionStartDebug("SetFocus");
+
+          // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+          this.WaitForMe();
           
           this.Me().sendKeys("");
       }
@@ -1076,8 +1069,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	    {
 	        this.LogFunctionStartDebug("TypeKey", "fps_Values", fps_Values.toString());
 	
-          // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-          this.WaitForMe();
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
 	
 	        // We are using a local-Variable to prevent multiple call of Me() in foreach-loop
 	        WebElement lv_WebElement = this.Me();
@@ -1275,14 +1268,14 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 
   /** \~german
-	 *  Ermittelt den textuellen Inhalt des ToolTips für Prüfewert.
-	 *  
-	 *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-	 *  
-	 *  @return Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
-	 *  Interface schreibt ein Listen-Element als Rückgabewert vor.
-	 *  \~english
-	 *  \~
+	*  Ermittelt den textuellen Inhalt des ToolTips für Prüfewert.
+	*  
+	*  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+	*  
+	*  @return Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
+	*  Interface schreibt ein Listen-Element als Rückgabewert vor.
+	*  \~english
+	*  \~
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
    */
@@ -1334,6 +1327,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
+    
     /**
      * Wartet auf das Objekt
      * Wenn kein Fenstre gefunden wird, 

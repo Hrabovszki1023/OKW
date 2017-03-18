@@ -54,7 +54,7 @@ import okw.gui.adapter.selenium.SeRadioList;
       public frmSeRadioList() throws Exception 
       {
 	       // Set the Locator for the Window-Frame
-          super ("//title[@id='id_RadioList']/../../..");
+          super ("//title[@id='id_RadioList']/../..");
 
           // 
           DoesNotExist = new SeRadioList("//title[@id='id_RadioList']");

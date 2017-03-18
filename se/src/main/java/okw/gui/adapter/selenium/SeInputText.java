@@ -47,16 +47,16 @@ import org.openqa.selenium.WebElement;
 import okw.gui.OKWLocator;
 
 
-    // , IOKW_SimpleDataObj
-    /// \~german
-    /// \brief
-    /// Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld<br/>.
-    /// GUI-Automatisierungswerkzeug: Selenium.<br/>
-    /// Die meisten Methoden werden aus der abtrakten Klasse SeSimpleDataObjekt geerbt.
-    /// 
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2014.06.2014
+    /** \~german
+     *  \brief
+     *  Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld<br/>.
+     *  GUI-Automatisierungswerkzeug: Selenium.<br/>
+     *  Die meisten Methoden werden aus der abtrakten Klasse SeSimpleDataObjekt geerbt.
+     *  
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2014.06.2014
+     */
     public class SeInputText extends SeAnyChildWindow
     {
 
@@ -98,11 +98,13 @@ import okw.gui.OKWLocator;
         public ArrayList<String> getValue() throws Exception
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
-            Boolean bOK = false;
 
             try
             {
                 this.LogFunctionStartDebug("GetValue");
+
+                // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+                this.WaitForMe();
 
                 // Get Value from TextField and put this into the return List<string>
                 String myValue = this.Me().getAttribute("value");
@@ -111,18 +113,11 @@ import okw.gui.OKWLocator;
                 {
                   lvLsReturn.add(this.Me().getAttribute("value"));
                 }
-                bOK = true;
+
             }
             finally
             {
-                if (bOK)
-                {
                     this.LogFunctionEndDebug(lvLsReturn.toString());
-                }
-                else
-                {
-                    this.LogFunctionEndDebug();
-                }
             }
 
             return lvLsReturn;
@@ -143,14 +138,15 @@ import okw.gui.OKWLocator;
    */
   public void SetValue( ArrayList<String> Val ) throws Exception
   {
-    this.LogFunctionStartDebug( "SetValue", "Val", Val.toString() );
 
     try
     {
-      // Wenn GUI-Objekt nicht gefunden wird, mit OKWGUIObjectNotFoundException aussteigen
-      this.WaitForMe();
+        this.LogFunctionStartDebug( "SetValue", "Val", Val.toString() );
 
-      WebElement myMe = this.Me();
+        // Wenn GUI-Objekt nicht gefunden wird, mit OKWGUIObjectNotFoundException aussteigen
+        this.WaitForMe();
+
+        WebElement myMe = this.Me();
         myMe.clear();
         
         if( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
