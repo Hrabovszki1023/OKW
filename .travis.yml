@@ -1,7 +1,7 @@
 language: java
 jdk:
   - oraclejdk8
-script: mvn -Ptest=okw.AllTests  clean verify
+script: mvn -Ptest=okw.AllTests -Dgpg.skip=true clean verify
 notifications:
   email:
     - zh@openkeyword.de
