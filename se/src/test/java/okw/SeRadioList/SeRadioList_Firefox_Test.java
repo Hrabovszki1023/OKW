@@ -21,7 +21,7 @@ public class SeRadioList_Firefox_Test extends SeRadioList_Test
         Logger_Sngltn.Init();
 
         myLog2HTML = new Log2HTML();
-        myLog2HTML.setHTML_File( "target/SeRadioList_EN_Firefox_Test.html" );
+        myLog2HTML.setHTML_File( "target/OKWResult_SeRadioList_Firefox.html" );
         
         Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);

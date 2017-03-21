@@ -19,7 +19,7 @@ public class SeSelect_HTMLUnitDriver_Test extends SeSelect_Test
 		    // Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.Init();
 
-        myLog2HTML = new Log2HTML("SeSelect_HTMLUnitDriver_Test.html");
+        myLog2HTML = new Log2HTML("target/SeSelect_HTMLUnitDriver_Test.html");
         Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}

@@ -114,7 +114,17 @@ import okw.log.Logger_Sngltn;
         
         public void DriveUnitDriver()
         {
+          try
+          {
             this.driver = new HtmlUnitDriver(true);
+          }
+          catch (Exception e)
+          {
+            
+            System.out.println( e.getStackTrace() );
+          }
+
+            return;
         }
 
   /**

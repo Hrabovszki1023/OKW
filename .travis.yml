@@ -1,0 +1,5 @@
+language: java
+script: mvn -Ptest=okw.AllTests  clean verify
+notifications:
+  email:
+    - zh@openkeyword.de
