@@ -6,7 +6,7 @@ install:
 script:
   - # mvn -pl core surefire:test -Ptest=okw.core.AllCoreTests,okw.AllTests,okw.gui.OKWLocatorTest -Dgpg.skip=true
   - #mvn -pl log2html surefire:test -Ptest=okw.log.log2html.Log2HTMLCounterTest,okw.log.log2html.Log2HTMLTest -Dgpg.skip=true
-  - mvn -pl se surefire:test -Ptest=okw.AllSeUnitDriverTests -Dgpg.skip=true
+  - mvn test -pl se -Ptest=okw.AllSeUnitDriverTests -Dgpg.skip=true
 notifications:
   email:
     - zh@openkeyword.de
