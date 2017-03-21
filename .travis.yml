@@ -4,8 +4,8 @@ jdk:
 install:  
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
 script:
-  - mvn -Ptest=okw.core.AllCoreTests -Dgpg.skip=true test
-  - mvn -Ptest=okw.AllTests -Dgpg.skip=true test
+  - # mvn surefire:test -Ptest=okw.core.AllCoreTests -Dgpg.skip=true
+  - mvn surefire:test -Ptest=okw.AllTests -Dgpg.skip=true test
 notifications:
   email:
     - zh@openkeyword.de
