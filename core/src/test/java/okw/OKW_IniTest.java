@@ -304,6 +304,7 @@ public class OKW_IniTest
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.11.25
 	@Test
+	@Ignore
 	public void TC_VerifyFolder_XML()
 	{
 		
