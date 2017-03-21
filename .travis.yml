@@ -1,7 +1,10 @@
 language: java
 jdk:
   - oraclejdk8
-script: mvn -Ptest=okw.AllTests -Dgpg.skip=true clean verify
+install:  
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
+script:
+  - mvn -Ptest=okw.AllTests -Dgpg.skip=true test
 notifications:
   email:
     - zh@openkeyword.de
