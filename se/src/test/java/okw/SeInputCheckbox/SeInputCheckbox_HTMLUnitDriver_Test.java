@@ -19,7 +19,7 @@ public class SeInputCheckbox_HTMLUnitDriver_Test extends SeInputCheckbox_Test
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.Init();
 
-        myLog2HTML = new Log2HTML("SeCheckBox_EN_HTMLUnitDriver_Test.html");
+        myLog2HTML = new Log2HTML("target/OKWResult_SeCheckBox_HTMLUnitDriver_Test.html");
         Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}

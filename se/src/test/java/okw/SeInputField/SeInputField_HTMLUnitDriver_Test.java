@@ -19,7 +19,7 @@ public class SeInputField_HTMLUnitDriver_Test extends SeInputField_Test
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.Init();
 
-        myLog2HTML = new Log2HTML("SeTextField_EN_HTMLUnitDriver_Test.html");
+        myLog2HTML = new Log2HTML("target/OKWResult_SeInputField_HTMLUnitDriver_Test.html");
         Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}

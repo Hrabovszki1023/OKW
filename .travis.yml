@@ -4,8 +4,8 @@ jdk:
 install:  
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
 script:
-  - mvn -pl core surefire:test -Ptest=okw.core.AllCoreTests,okw.AllTests,okw.gui.OKWLocatorTest -Dgpg.skip=true
-  - mvn -pl log2html surefire:test -Ptest=okw.log.log2html.Log2HTMLCounterTest,okw.log.log2html.Log2HTMLTest -Dgpg.skip=true
+  - # mvn -pl core surefire:test -Ptest=okw.core.AllCoreTests,okw.AllTests,okw.gui.OKWLocatorTest -Dgpg.skip=true
+  - # mvn -pl log2html surefire:test -Ptest=okw.log.log2html.Log2HTMLCounterTest,okw.log.log2html.Log2HTMLTest -Dgpg.skip=true
   - mvn -pl se surefire:test -Ptest=okw.AllSeUnitDriverTests -Dgpg.skip=true  
 notifications:
   email:

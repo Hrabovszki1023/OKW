@@ -6,9 +6,9 @@ import okw.log.log2html.Log2HTML;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
-public class SeInputRadio_EN_HTMLUnitDriver_Test extends SeInputRadio_EN_Test
+public class SeInputRadio_HTMLUnitDriver_Test extends SeInputRadio_EN_Test
 {
-	//static Log2HTML myLog2HTML = null;
+	static Log2HTML myLog2HTML = null;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception
@@ -17,11 +17,12 @@ public class SeInputRadio_EN_HTMLUnitDriver_Test extends SeInputRadio_EN_Test
 		
        Logger_Sngltn.getInstance();
 		// Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.Init();
+       Logger_Sngltn.Init();
 
-        //myLog2HTML = new Log2HTML("SeInputButton_EN_HTMLUnitDriver_Test.html");
-        //Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(false);
+       myLog2HTML = new Log2HTML("target/OKWResult_SeInputRadio_HTMLUnitDriver_Test.html");
+       Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
+        
+       Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
 	@AfterClass
