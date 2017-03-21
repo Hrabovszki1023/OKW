@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/Hrabovszki1023/OKW.svg?branch=master)](https://travis-ci.org/Hrabovszki1023/OKW)
+
+
 <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png" width="150px" height="78px" />
 
 # OKW
