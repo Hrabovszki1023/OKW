@@ -4,7 +4,7 @@ jdk:
 install:  
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
 script:
-  - mvn  exec:java -pl core surefire:test -Ptest=okw.core.AllCoreTests -Dgpg.skip=true
+  - mvn  -pl core surefire:test -Ptest=okw.core.AllCoreTests -Dgpg.skip=true
   - # mvn surefire:test -Ptest=okw.AllTests -Dgpg.skip=true
 notifications:
   email:
