@@ -297,7 +297,8 @@ public class OKW_IniTest
 		}
 	}
 
-	/// \~german Prüft alle Pfade als gegen Ressorce verzeichniss.
+	
+	/* \~german Prüft alle Pfade als gegen Ressorce verzeichniss.
 	/// \brief
 	///
 	/// \~
@@ -324,6 +325,8 @@ public class OKW_IniTest
 
 		assertEquals(ExpectedDir, Actuell);
 	}
+	*/
+
 	
 	/// \~german
 	/// \brief
