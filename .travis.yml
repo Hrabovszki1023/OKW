@@ -1,4 +1,6 @@
 language: java
+jdk:
+  - oraclejdk8
 script: mvn -Ptest=okw.AllTests  clean verify
 notifications:
   email:
