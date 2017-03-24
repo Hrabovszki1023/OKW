@@ -610,7 +610,7 @@ public class EN_Keywords_Test {
     assertEquals( "Wert 2", myClipBoard.getValue().get( 1 ) );
     assertEquals( "Wert 3", myClipBoard.getValue().get( 2 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-    assertEquals( "SelectMenu_Value()", myClipBoard.getMethod() );
+    assertEquals( "SelectMenu(ArrayList<String>)", myClipBoard.getMethod() );
   }
 
   // \~german
@@ -639,7 +639,7 @@ public class EN_Keywords_Test {
     // Check the Name, Called Method and Value of Actuel object
     assertEquals( "Hanna", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-    assertEquals( "SelectMenu_Value()", myClipBoard.getMethod() );
+    assertEquals( "SelectMenu(ArrayList<String>)", myClipBoard.getMethod() );
   }
 
   // \~german

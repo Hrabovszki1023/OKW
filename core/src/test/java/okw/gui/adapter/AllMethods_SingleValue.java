@@ -496,9 +496,9 @@ import okw.log.Logger_Sngltn;
             return;
         }
 
-        public void SelectMenu_Value(ArrayList<String> fpLsValue)
+        public void SelectMenu(ArrayList<String> fpLsValue)
         {
-            this.myLogger.LogFunctionStartDebug("SelectMenu_Value");
+            this.myLogger.LogFunctionStartDebug("SelectMenu");
 
             // myALValue Löschen + setzen...
             this.myALValue.clear();
@@ -508,7 +508,7 @@ import okw.log.Logger_Sngltn;
             String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("SelectMenu_Value()");
+            myClipboard.setMethod("SelectMenu(ArrayList<String>)");
 
             myClipboard.getValue().addAll(this.myALValue);
 

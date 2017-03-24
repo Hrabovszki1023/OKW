@@ -482,7 +482,7 @@ public class EN_Keywords_DELETE_Test
     assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-    assertEquals( "SelectMenu_Value()", myClipBoard.getMethod() );
+    assertEquals( "SelectMenu(ArrayList<String>)", myClipBoard.getMethod() );
 
   }
 
@@ -515,7 +515,7 @@ public class EN_Keywords_DELETE_Test
 
     // Check the Name, Called Method and Value of Actuel object
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-    assertEquals( "SelectMenu_Value()", myClipBoard.getMethod() );
+    assertEquals( "SelectMenu(ArrayList<String>)", myClipBoard.getMethod() );
     assertEquals( 2, myClipBoard.getValue().size() );
     assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Value", myClipBoard.getValue().get( 1 ) );
@@ -548,7 +548,7 @@ public class EN_Keywords_DELETE_Test
 
     // Check the Name, Called Method and Value of Actuel object
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-    assertEquals( "SelectMenu_Value()", myClipBoard.getMethod() );
+    assertEquals( "SelectMenu(ArrayList<String>)", myClipBoard.getMethod() );
     assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
   }
