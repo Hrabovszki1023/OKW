@@ -973,7 +973,7 @@ public class SeAnyChildWindow extends AnyChildwindow
    *  @author Zoltán Hrabovszki
    *  @date 2016.10.06
    */
-  public void SelectMenu_Value(ArrayList<String> Values)
+  public void SelectMenu(ArrayList<String> Values)
   {
   
     try
