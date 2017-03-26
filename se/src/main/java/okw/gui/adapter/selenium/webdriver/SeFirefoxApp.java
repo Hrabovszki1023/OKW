@@ -130,8 +130,6 @@ import okw.log.*;
         	    		default:
         	    			MyLogger.LogError("Unknown Operating System" + System.getProperty("os.name"));
         	    	}		
-        	    	
-        	    	System.setProperty("webdriver.gecko.driver", "/Applications/geckodriver");
                 }
         	        
         		SeDriver.getInstance().driver = new FirefoxDriver();
