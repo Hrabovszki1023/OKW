@@ -92,7 +92,7 @@ import okw.log.*;
         	try
         	{
        	    
-        	    String OKWGeckodriverPath = System.getenv("OKWGeckoDriverPath");
+        	    String OKWGeckodriverPath = System.getenv("OKWGeckodriverPath");
         	    
         	    if (OKWGeckodriverPath != null)
         	    {
