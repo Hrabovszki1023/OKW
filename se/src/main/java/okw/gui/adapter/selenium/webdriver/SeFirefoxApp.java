@@ -40,6 +40,10 @@ package okw.gui.adapter.selenium.webdriver;
 */
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.Properties;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -80,15 +84,61 @@ import okw.log.*;
         }
 
         
-        public void StartApp()
+        @SuppressWarnings("unchecked")
+		public void StartApp()
         {
         	MyLogger.LogFunctionStartDebug("StartApp");
 
-        	System.setProperty("webdriver.gecko.driver", "/Applications/geckodriver");
-            SeDriver.getInstance().driver = new FirefoxDriver();
-            this.Init();
-
-            MyLogger.LogFunctionEndDebug();
+        	try
+        	{
+       	    
+        	    String OKWGeckodriverPath = System.getenv("OKW_GeckoDriverPath");
+        	    
+        	    if (OKWGeckodriverPath != null)
+        	    {
+            		System.setProperty("webdriver.gecko.driver", OKWGeckodriverPath);
+                }
+        	    else
+                {
+        	    	MyLogger.LogWarning("Enviroment Variable 'OKWGeckodriverPath' is not set!");
+            		
+        	    	Properties systemProperties = System.getProperties();
+        	    	Enumeration<?> enuProp = systemProperties.propertyNames();
+        	    	
+        	    	List list= Collections.list(enuProp); // create list from enumeration 
+        	    	Collections.sort(list);
+        	    	enuProp = Collections.enumeration(list);
+        	    	
+        	     
+        	    	MyLogger.ResOpenList("System.getProperties()... ");
+        	    		
+        	    	while (enuProp.hasMoreElements())
+        	    	{
+        	    		String propertyName = (String) enuProp.nextElement();
+        	    		String propertyValue = systemProperties.getProperty(propertyName);
+        	    		MyLogger.LogPrint(propertyName + ": " + propertyValue);
+        	    	}
+        	    	
+        	    	MyLogger.ResCloseList();
+        	    	
+        	    	switch (System.getProperty("os.name") )
+        	    	{
+        	    		case "Mac OS X":
+                	    	System.setProperty("webdriver.gecko.driver", "/Applications/geckodriver");
+        	    		default:
+        	    			MyLogger.LogError("Unknown Operating System" + System.getProperty("os.name"));
+        	    	}		
+        	    	
+        	    	System.setProperty("webdriver.gecko.driver", "/Applications/geckodriver");
+                }
+        	        
+        		SeDriver.getInstance().driver = new FirefoxDriver();
+        		this.Init();
+        	}
+        	finally
+        	{
+                MyLogger.LogFunctionEndDebug();				
+			}
         }
 
         
