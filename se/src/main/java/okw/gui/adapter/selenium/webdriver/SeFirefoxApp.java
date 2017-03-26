@@ -96,13 +96,14 @@ import okw.log.*;
         	    
         	    if (OKWGeckodriverPath != null)
         	    {
+        	    	MyLogger.LogPrint("EnvVar: OKWGeckodriverPath='" + OKWGeckodriverPath + "'");
             		System.setProperty("webdriver.gecko.driver", OKWGeckodriverPath);
                 }
         	    else
                 {
         	    	MyLogger.LogWarning("Enviroment Variable 'OKWGeckodriverPath' is not set!");
             		
-        	    	Properties systemProperties = System.getProperties();
+        	    	/* Properties systemProperties = System.getProperties();
         	    	Enumeration<?> enuProp = systemProperties.propertyNames();
         	    	
         	    	List list= Collections.list(enuProp); // create list from enumeration 
@@ -119,19 +120,27 @@ import okw.log.*;
         	    		MyLogger.LogPrint(propertyName + ": " + propertyValue);
         	    	}
         	    	
-        	    	MyLogger.ResCloseList();
+        	    	MyLogger.ResCloseList(); */
         	    	
-        	    	switch (System.getProperty("os.name") )
+        	    	String os_name = System.getProperty("os.name");
+        	    	
+        	    	switch (os_name)
         	    	{
         	    		case "Mac OS X":
                 	    	System.setProperty("webdriver.gecko.driver", "/Applications/geckodriver");
+                	    	break;
         	    		case "Linux":
                 	    	System.setProperty("webdriver.gecko.driver", "/home/travis/build/Hrabovszki1023/OKW/geckodriver");
+                	    	break;
         	    		default:
-        	    			MyLogger.LogError("Unknown Operating System" + System.getProperty("os.name"));
-        	    	}		
+        	    			MyLogger.LogError("Unknown Property: 'os.name'= '" + System.getProperty("os.name") + "'");
+                	    	break;
+        	    	}	
+        	    	
                 }
-        	        
+        	    
+    	    	MyLogger.LogPrint("System Property: webdriver.gecko.driver='" + System.getProperty("os.name") + "'");
+    	    	
         		SeDriver.getInstance().driver = new FirefoxDriver();
         		this.Init();
         	}
