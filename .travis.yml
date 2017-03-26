@@ -12,6 +12,7 @@ before_install:
   - tar -xzf geckodriver-v0.15.0-linux64.tar.gz -C geckodriver
   - export PATH=$PATH:$PWD/geckodriver
   - export OKWGeckodriverPath=$PWD/geckodriver
+  - echo $OKWGeckodriverPath 
   
 install:  
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
