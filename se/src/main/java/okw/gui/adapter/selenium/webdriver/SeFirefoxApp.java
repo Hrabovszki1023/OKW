@@ -92,7 +92,7 @@ import okw.log.*;
         	try
         	{
        	    
-        	    String OKWGeckodriverPath = System.getenv("OKW_GeckoDriverPath");
+        	    String OKWGeckodriverPath = System.getenv("OKWGeckoDriverPath");
         	    
         	    if (OKWGeckodriverPath != null)
         	    {
@@ -125,6 +125,8 @@ import okw.log.*;
         	    	{
         	    		case "Mac OS X":
                 	    	System.setProperty("webdriver.gecko.driver", "/Applications/geckodriver");
+        	    		case "Linux":
+                	    	System.setProperty("webdriver.gecko.driver", "/home/travis/build/Hrabovszki1023/OKW/geckodriver");
         	    		default:
         	    			MyLogger.LogError("Unknown Operating System" + System.getProperty("os.name"));
         	    	}		
