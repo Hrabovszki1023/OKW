@@ -65,16 +65,19 @@ public class OK implements IOKW_State {
 	// \copydoc OKWLanguage
 	private static OKWLanguage CL;
 
-	// \copydoc Logger
+	// \copydoc Logger_Sngltn
 	private static Logger_Sngltn Log;
 
 	// \copydoc LogMessenger
 	private static LogMessenger LM;
 
-	// \copydoc CurrentObject
+	// \copydoc OKW_CurrentObject_Sngltn
 	private static OKW_CurrentObject_Sngltn CO;
 
-	Boolean UNITTEST = true;
+  // \copydoc OKW_Memorize_Sngltn
+  private static OKW_Memorize_Sngltn MEM;
+
+  Boolean UNITTEST = true;
 
 	Core _Kernel;
 
@@ -88,15 +91,20 @@ public class OK implements IOKW_State {
 	// \~
 	// \author Zoltán Hrabovszki
 	// \date 09.01.2014
-	public OK(Core fp_OKW) {
-		try {
-			CL = OKWLanguage.getInstance();
+	public OK(Core fp_OKW)
+	{
+		try 
+		{
+			CL  = OKWLanguage.getInstance();
 			Log = Logger_Sngltn.getInstance();
-			LM = new LogMessenger("OK");
-			CO = OKW_CurrentObject_Sngltn.getInstance();
+			LM  = new LogMessenger("OK");
+			CO  = OKW_CurrentObject_Sngltn.getInstance();
+			MEM = OKW_Memorize_Sngltn.getInstance();
 
 			this._Kernel = fp_OKW;
-		} catch (Exception e) {
+		}
+		catch (Exception e)
+		{
 			final ByteArrayOutputStream stream = new ByteArrayOutputStream();
 			e.printStackTrace(new PrintStream(stream));
 
@@ -459,7 +467,7 @@ public class OK implements IOKW_State {
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-        OKW_Memorize_Sngltn.getInstance().Set( fpsMemKeyName, lvsToMemorize );
+        MEM.Set( fpsMemKeyName, lvsToMemorize );
       }
     }
     catch (Exception e)
@@ -500,7 +508,7 @@ public class OK implements IOKW_State {
 
         String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-        OKW_Memorize_Sngltn.getInstance().Set( fpsMemKeyName, lvsActual );
+        MEM.Set( fpsMemKeyName, lvsActual );
       }
     }
     catch (Exception e)
@@ -542,7 +550,7 @@ public class OK implements IOKW_State {
 
         String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-        OKW_Memorize_Sngltn.getInstance().Set( fps_MemKeyName, lvsActual );
+        MEM.Set( fps_MemKeyName, lvsActual );
       }
     }
     catch (Exception e)
@@ -583,7 +591,7 @@ public class OK implements IOKW_State {
 
         String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-        OKW_Memorize_Sngltn.getInstance().Set( fps_MemKeyName, lvsActual );
+        MEM.Set( fps_MemKeyName, lvsActual );
       }
     }
     catch (Exception e)
@@ -623,7 +631,7 @@ public class OK implements IOKW_State {
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-        OKW_Memorize_Sngltn.getInstance().Set( fps_MemKeyName, lvsToMemorize );
+        MEM.Set( fps_MemKeyName, lvsToMemorize );
       }
     }
     catch (Exception e)
@@ -663,7 +671,7 @@ public class OK implements IOKW_State {
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-        OKW_Memorize_Sngltn.getInstance().Set( fps_MemKeyName, lvsToMemorize );
+        MEM.Set( fps_MemKeyName, lvsToMemorize );
       }
     }
     catch (Exception e)
@@ -705,7 +713,7 @@ public class OK implements IOKW_State {
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-        OKW_Memorize_Sngltn.getInstance().Set( fps_MemKeyName, lvsToMemorize );
+        MEM.Set( fps_MemKeyName, lvsToMemorize );
       }
     }
     catch (Exception e)
@@ -744,7 +752,7 @@ public class OK implements IOKW_State {
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-        OKW_Memorize_Sngltn.getInstance().Set( fps_MemKeyName, lvsToMemorize );
+        MEM.Set( fps_MemKeyName, lvsToMemorize );
       }
     }
     catch (Exception e)
@@ -785,7 +793,7 @@ public class OK implements IOKW_State {
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-        OKW_Memorize_Sngltn.getInstance().Set( fpsMemKeyName, lvsToMemorize );
+        MEM.Set( fpsMemKeyName, lvsToMemorize );
       }
     }
     catch (Exception e)

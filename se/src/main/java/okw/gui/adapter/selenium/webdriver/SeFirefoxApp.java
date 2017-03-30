@@ -40,128 +40,127 @@ package okw.gui.adapter.selenium.webdriver;
 */
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.Properties;
-
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import okw.OKW_Memorize_Sngltn;
 import okw.gui.AnyWindow;
 import okw.gui.adapter.selenium.*;
 import okw.log.*;
 
-
+/**
+ * \brief OKW Selenium FireFox BrowserWindow Klasse
+ */
+public class SeFirefoxApp extends AnyWindow
+{
     /**
-     *  \brief
-     *  OKW Selenium FireFox BrowserWindow Klasse
-     */ 
-    public class SeFirefoxApp extends AnyWindow
+     *  \copydoc Logger_Sngltn
+     */
+    private static Logger_Sngltn       LOG = Logger_Sngltn.getInstance();
+
+    
+    /**
+     *  \copydoc OKW_Memorize_Sngltn
+     */
+    private static OKW_Memorize_Sngltn MEM = OKW_Memorize_Sngltn.getInstance();
+
+    public SeFirefoxApp()
     {
-        protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
+        this.LogFunctionStartDebug( "SeFirefoxApp()" );
 
-
-        public SeFirefoxApp()
-        {
-        	MyLogger.LogFunctionStartDebug("SeFirefoxApp()");
-
-        	MyLogger.LogFunctionEndDebug();
-        }
-
-
-        public void Init()
-        {
-        	MyLogger.LogFunctionStartDebug("Init()");
-
-            //// this.URL.mydriver = this.driver;
-
-        	MyLogger.LogFunctionEndDebug();
-        }
-
-        @Override
-        public void SelectWindow()
-        {
-        }
-
-        
-        @SuppressWarnings("unchecked")
-		public void StartApp()
-        {
-        	MyLogger.LogFunctionStartDebug("StartApp");
-
-        	try
-        	{
-       	    
-        	    String OKWGeckodriverPath = System.getenv("OKWGeckodriverPath");
-        	    
-        	    if (OKWGeckodriverPath != null)
-        	    {
-        	    	MyLogger.LogPrint("EnvVar: OKWGeckodriverPath='" + OKWGeckodriverPath + "'");
-            		System.setProperty("webdriver.gecko.driver", OKWGeckodriverPath);
-                }
-        	    else
-                {
-        	    	MyLogger.LogWarning("Enviroment Variable 'OKWGeckodriverPath' is not set!");
-            		
-        	    	/* Properties systemProperties = System.getProperties();
-        	    	Enumeration<?> enuProp = systemProperties.propertyNames();
-        	    	
-        	    	List list= Collections.list(enuProp); // create list from enumeration 
-        	    	Collections.sort(list);
-        	    	enuProp = Collections.enumeration(list);
-        	    	
-        	     
-        	    	MyLogger.ResOpenList("System.getProperties()... ");
-        	    		
-        	    	while (enuProp.hasMoreElements())
-        	    	{
-        	    		String propertyName = (String) enuProp.nextElement();
-        	    		String propertyValue = systemProperties.getProperty(propertyName);
-        	    		MyLogger.LogPrint(propertyName + ": " + propertyValue);
-        	    	}
-        	    	
-        	    	MyLogger.ResCloseList(); */
-        	    	
-        	    	String os_name = System.getProperty("os.name");
-        	    	
-        	    	switch (os_name)
-        	    	{
-        	    		case "Mac OS X":
-                	    	System.setProperty("webdriver.gecko.driver", "/Applications/geckodriver");
-                	    	break;
-        	    		case "Linux":
-                	    	System.setProperty("webdriver.gecko.driver", "/home/travis/build/Hrabovszki1023/OKW/geckodriver");
-                	    	break;
-        	    		default:
-        	    			MyLogger.LogError("Unknown Property: 'os.name'= '" + System.getProperty("os.name") + "'");
-                	    	break;
-        	    	}	
-        	    	
-                }
-        	    
-    	    	MyLogger.LogPrint("System Property: webdriver.gecko.driver='" + System.getProperty("os.name") + "'");
-    	    	
-        		SeDriver.getInstance().driver = new FirefoxDriver();
-        		this.Init();
-        	}
-        	finally
-        	{
-                MyLogger.LogFunctionEndDebug();				
-			}
-        }
-
-        
-        public void StopApp()
-        {
-        	MyLogger.LogFunctionStartDebug("StopApp");
-
-            SeDriver.getInstance().driver.quit();
-
-            MyLogger.LogFunctionEndDebug();
-        }
-
-        public void TypeKey(ArrayList<String> fps_Values)
-        {
-        }
-
+        this.LogFunctionEndDebug();
     }
+
+    public void Init()
+    {
+        this.LogFunctionStartDebug( "Init()" );
+
+        //// this.URL.mydriver = this.driver;
+
+        this.LogFunctionEndDebug();
+    }
+
+    @Override
+    public void SelectWindow()
+    {
+    }
+
+    public void StartApp() throws Exception
+    {
+        this.LogFunctionStartDebug( "StartApp" );
+
+        try
+        {
+
+            String OKWGeckodriverPath = System.getenv( "OKWGeckodriverPath" );
+
+            if ( OKWGeckodriverPath != null )
+            {
+                LOG.LogPrint( "EnvVar: OKWGeckodriverPath='" + OKWGeckodriverPath + "'" );
+                System.setProperty( "webdriver.gecko.driver", OKWGeckodriverPath );
+
+                MEM.Set( "System.Property: webdriver.gecko.driver", OKWGeckodriverPath );
+                MEM.Set( "OKW EnvVar: OKWGeckodriverPath", OKWGeckodriverPath );
+            }
+            else
+            {
+                LOG.LogWarning( "Enviroment Variable 'OKWGeckodriverPath' is not set!" );
+
+                /*
+                 * Properties systemProperties = System.getProperties();
+                 * Enumeration<?> enuProp = systemProperties.propertyNames();
+                 * 
+                 * List list= Collections.list(enuProp); // create list from
+                 * enumeration Collections.sort(list); enuProp =
+                 * Collections.enumeration(list);
+                 * 
+                 * 
+                 * MyLogger.ResOpenList("System.getProperties()... ");
+                 * 
+                 * while (enuProp.hasMoreElements()) { String propertyName =
+                 * (String) enuProp.nextElement(); String propertyValue =
+                 * systemProperties.getProperty(propertyName);
+                 * MyLogger.LogPrint(propertyName + ": " + propertyValue); }
+                 * 
+                 * MyLogger.ResCloseList();
+                 */
+
+                String os_name = System.getProperty( "os.name" );
+
+                switch ( os_name )
+                {
+                    case "Mac OS X":
+                        System.setProperty( "webdriver.gecko.driver", "/Applications/geckodriver" );
+                        MEM.Set( "System Propety: OKWGeckodriverPath", System.getProperty( "webdriver.gecko.driver" ) );
+                        break;
+                    default:
+                        LOG.LogError( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
+                        break;
+                }
+
+            }
+
+            LOG.LogPrint( "System Property: webdriver.gecko.driver='" + System.getProperty( "os.name" ) + "'" );
+
+            SeDriver.getInstance().driver = new FirefoxDriver();
+            this.Init();
+        }
+        finally
+        {
+            this.LogFunctionEndDebug();
+        }
+    }
+
+    public void StopApp()
+    {
+        this.LogFunctionStartDebug( "StopApp" );
+
+        SeDriver.getInstance().driver.quit();
+
+        this.LogFunctionEndDebug();
+    }
+
+    public void TypeKey( ArrayList<String> fps_Values )
+    {
+    }
+
+}
