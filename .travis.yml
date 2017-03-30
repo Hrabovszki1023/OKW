@@ -23,10 +23,10 @@ before_script:
   - sleep 3 # give xvfb some time to start
 
 script:
-#  - mvn test -Dtest=okw.core.AllCoreTests,okw.AllTests,okw.gui.OKWLocatorTest -Dgpg.skip=true -pl core
-#  - mvn test -Dtest=okw.log.log2html.Log2HTMLCounterTest,okw.log.log2html.Log2HTMLTest -Dgpg.skip=true -pl log2html
-#  - mvn test -Dtest=okw.AllSeUnitDriverTests -Dgpg.skip=true -pl se
-  - mvn test -Dtest=okw.AllSe_Firefox_Tests -Dgpg.skip=true -pl se
+  - mvn test -Dtest=okw.core.AllCoreTests,okw.AllTests,okw.gui.OKWLocatorTest -Dgpg.skip=true -pl core
+  - mvn test -Dtest=okw.log.log2html.Log2HTMLCounterTest,okw.log.log2html.Log2HTMLTest -Dgpg.skip=true -pl log2html
+  - mvn test -Dtest=okw.AllSeUnitDriverTests -Dgpg.skip=true -pl se
+#  - mvn test -Dtest=okw.AllSe_Firefox_Tests -Dgpg.skip=true -pl se
 
 notifications:
   email:
