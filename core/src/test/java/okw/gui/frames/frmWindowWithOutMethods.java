@@ -18,7 +18,7 @@ import okw.core.IOKW_FN;
 /// \copyright CC-OPENKEYWORD
 
 @OKW(FN="WindowWithoutMethods")
-public class frmWindowWithOutMethods implements IOKW_FN
+public class frmWindowWithOutMethods extends okw.gui.AnyWindow implements IOKW_FN
 {
   /** \~german
    *  Parent-Objekt FN des aktuellen GUI-Objektes.

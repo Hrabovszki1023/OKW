@@ -187,7 +187,7 @@ import okw.log.Logger_Sngltn;
          *  @author Zoltán Hrabovszki
          *  @date 2015.05.12
          */        
-        public WebElement getElement( String frameID, String Locator ) throws Exception
+        public WebElement getElement( String frameID, String Locator )
         {
           WebElement me = null;
           List<WebElement> meme = null;

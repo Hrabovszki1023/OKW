@@ -1,8 +1,13 @@
 package okw.gui.adapter.selenium;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
+
+import org.xml.sax.SAXException;
 
 import okw.OKW_Const_Sngltn;
 import okw.core.Core;
@@ -45,7 +50,7 @@ public class SeInputRadio extends SeAnyChildWindow
    * @date 2013.04.11
    */
   @Override
-  public ArrayList<String> getValue() throws Exception
+  public ArrayList<String> getValue()
   {
       ArrayList<String> lvls_Return = new ArrayList<String>();
       try
@@ -75,35 +80,35 @@ public class SeInputRadio extends SeAnyChildWindow
   }
 
 
-  /**
-   *  Method liefert den aktuellen Zustand des RadioButtons,
-   *  ausgewählt oder nicht.
-   *  
-   *  @return Wenn Ausgewählt: true, sonst false
-   *  @author Zoltan Hrabovszki
-   *  @throws Exception 
-   *  @date 2013.04.11
-   */
-  public Boolean getIsSelected() throws Exception
-  {
-      Boolean lvbReturn = false;
-      
-      this.LogFunctionStartDebug("IsSelected");
+    /**
+     *  Method liefert den aktuellen Zustand des RadioButtons,
+     *  ausgewählt oder nicht.
+     *  
+     *  @return Wenn Ausgewählt: true, sonst false
+     *  @author Zoltan Hrabovszki
+     *  @throws Exception 
+     *  @date 2013.04.11
+     */
+    public Boolean getIsSelected()
+    {
+        Boolean lvbReturn = false;
 
-      try
-      {
-        // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-        this.WaitForMe();
+        this.LogFunctionStartDebug( "IsSelected" );
 
-        // Hole Zusand: Häckchen oder kein Häckchen, das ist hier die Frage?
-        lvbReturn = this.Me().isSelected();
-      }
-      finally
-      {
-          this.LogFunctionEndDebug(lvbReturn);
-      }
-      return lvbReturn;
-  }
+        try
+        {
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
+
+            // Hole Zusand: Häckchen oder kein Häckchen, das ist hier die Frage?
+            lvbReturn = this.Me().isSelected();
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvbReturn );
+        }
+        return lvbReturn;
+    }
 
   /** \~german
    *  \brief
@@ -143,7 +148,7 @@ public class SeInputRadio extends SeAnyChildWindow
    * @date 2016.10.06
    */
   @Override
-  public void SetValue( ArrayList<String> Values ) throws XPathExpressionException, Exception
+  public void SetValue( ArrayList<String> Values )
   {
 
     try
@@ -171,6 +176,10 @@ public class SeInputRadio extends SeAnyChildWindow
           String lvsLM = LM.GetMessage("Common", "OKWNotAllowedValueException", Value);
           throw new OKWNotAllowedValueException(lvsLM);
       }
+    }
+    catch ( Exception e)
+    {
+            throw new RuntimeException( e );
     }
     finally
     {

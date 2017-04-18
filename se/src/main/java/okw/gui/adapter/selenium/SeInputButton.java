@@ -39,216 +39,219 @@
 
 package okw.gui.adapter.selenium;
 
+import java.io.IOException;
 import java.util.ArrayList;
+
+import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
+
+import org.xml.sax.SAXException;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.gui.OKWLocator;
 
+/**
+ * \~german SeInputButton ist die GUI-Adapter Klasse für HTML-Tags vom typ
+ * <input type='button'>
+ * 
+ * <a href="http://test.penkeyword.de/index.htm#input_type-button">InputButton
+ * Testseiten</a> \~english
+ * 
+ * \~ 
+ * \sa https://github.com/Hrabovszki1023/OKW/wiki/SeInputButton \sa
+ * https://github.com/Hrabovszki1023/OKW/issues/108
+ * 
+ * @author Zoltán Hrabovszki
+ * @date 2016.09.05
+ */
+public class SeInputButton extends SeAnyChildWindow
+{
 
-     /**  \~german
-     *  SeInputButton ist die GUI-Adapter Klasse für html tags vom typ <input type='button'> 
-     *  
-     *  <a href="http://test.penkeyword.de/index.htm#input_type-button">InputButton Testseiten</a>
-     *  \~english
-     *  
-     *  \~
-     *  \sa https://github.com/Hrabovszki1023/OKW/wiki/SeInputButton
-     *  \sa https://github.com/Hrabovszki1023/OKW/issues/108
-     *  @author Zoltán Hrabovszki
-     *  @date 2016.09.05
+    /**
+     * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator) \~
+     * 
+     * @author Zoltán Hrabovszki
+     * @date 2013.05.03
      */
-    public class SeInputButton extends SeAnyChildWindow
+    public SeInputButton( String Locator, OKWLocator... Locators )
     {
-
-      /**
-         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
-         *  \~
-         *  @author Zoltán Hrabovszki
-         *  @date 2013.05.03
-         */
-        public SeInputButton(String Locator, OKWLocator... Locators)
-        {
-        	super(Locator, Locators);
-        }
-
-        /**
-         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
-         *  @author Zoltán Hrabovszki
-         *  @date 2017.02.17
-         */
-         public SeInputButton(String IframeID, String Locator, OKWLocator... Locators)
-         {
-           super(IframeID, Locator, Locators);
-         }
-
-         
-         /**  \~german
-         *  \brief
-         *  Ermittelt den textuellen Inhalt des Caption für Prüfewert.
-         *  
-         *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-         *  
-         *  \return
-         *  Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
-         *  Interface schreibt ein Listen-Element als Rückgabewert vor.
-         *  \return
-         *  \~english
-         *  \~
-         *  \author Zoltán Hrabovszki
-         *  \date 2013.12.07
-         * @throws Exception 
-         */
-        @Override
-        public ArrayList<String> VerifyCaption() throws Exception
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-
-            try
-            {
-              this.LogFunctionStartDebug("VerifyCaption");
-              
-              // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
-                lvLsReturn = this.getCaption( );
-            }
-            finally
-            {
-                this.LogFunctionEndDebug(lvLsReturn);
-            }
-
-            return lvLsReturn;
-        }
-
-         /**  \~german
-         *  \brief
-         *  Ermittelt den textuellen Inhalt der Beschriftung (Caption).
-         *  
-         *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
-         *  
-         *  \return
-         *  Rückgabe des Textuellen Inhaltes der Tooltips.
-         *  Interface schreibt ein Listen-Element als Rückgabewert vor.
-         *  \return
-         *  \~english
-         *  \~
-         *  \author Zoltán Hrabovszki
-         *  \date 2013.12.07
-         * @throws Exception 
-         */
-        @Override
-        public ArrayList<String> LogCaption() throws Exception
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-
-            try
-            {
-                this.LogFunctionStartDebug("LogCaption");
-
-                lvLsReturn = this.getCaption();
-            }
-            finally
-            {
-                this.LogFunctionEndDebug(lvLsReturn);
-            }
-
-            return lvLsReturn;
-        }
-
-         /**  \~german
-         *  \brief
-         *  Ermittelt den textuellen Inhalt des Caption/Überschrift für das Schlüsselwort MerkeWert.
-         *  
-         *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
-         *  
-         *  \return
-         *  Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
-         *  Interface schreibt ein Listen-Element als Rückgabewert vor.
-         *  \return
-         *  \~english
-         *  \~
-         *  \author Zoltán Hrabovszki
-         *  \date 2013.12.07
-         * @throws Exception 
-         */
-        @Override
-        public ArrayList<String> MemorizeCaption() throws Exception
-        {
-            ArrayList<String> lvLsReturn = null;
-
-            try
-            {
-                this.LogFunctionStartDebug("MemorizeCaption");
-
-                lvLsReturn = this.getCaption();
-            }
-            finally
-            {
-                this.LogFunctionEndDebug(lvLsReturn);
-            }
-
-            return lvLsReturn;
-        }
-        
-         /**  \~german
-         *  Ermittelt den textuellen Inhalt der Caption/Überschrift des Objektes.
-         *  
-         *  @return
-         *  Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
-         *  \~english
-         *  \~
-         *  @author Zoltán Hrabovszki
-         * @throws Exception 
-         *  @date 2013.12.07
-         */
-        @Override //TODO define Prototype in BaseClass!
-        public ArrayList<String> getCaption() throws Exception
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-            try
-            {
-                this.LogFunctionStartDebug("GetCaption");
-
-                // Warten auf das Objekt. Wenn es nicht existiert mit Exception beenden...
-                this.WaitForMe();
-                
-                // The Attribute "value" wird als Beschriftung angezeigt...
-                lvLsReturn.add(this.Me().getAttribute("value"));
-            }
-            finally
-            {
-                this.LogFunctionEndDebug(lvLsReturn);
-            }
-            
-            return lvLsReturn;
-        }
-
-  /** \~german
-   *  Ein SeInputButton hat keinen Wert! -> OKWFrameObjectMethodNotImplemented
-   *  Auslösen!
-   * 
-   *  @return
-   *  \~english
-   *  \brief
-   *  A SeInputButton has no value! -> Trigger
-   *  OKWFrameObjectMethodNotImplemented!
-   *  \~
-   *  @author Zoltán Hrabovszki
-   *  @date 2016.10.06
-   */
-  @Override
-  public ArrayList<String> getValue()
-  {
-    // ArrayList<String> lvLsReturn = new ArrayList<String>();
-    try
-    {
-      MyLogger.LogFunctionStartDebug( "GetValue" );
-
-      String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "getValue()" );
-      throw new OKWFrameObjectMethodNotImplemented( lvsLM );
+        super( Locator, Locators );
     }
-    finally
+
+    /**
+     * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+     * 
+     * @author Zoltán Hrabovszki
+     * @date 2017.02.17
+     */
+    public SeInputButton( String IframeID, String Locator, OKWLocator... Locators )
     {
-      MyLogger.LogFunctionEndDebug();
+        super( IframeID, Locator, Locators );
     }
-    // return lvLsReturn;
-  }
+
+    /**
+     * \~german Ermittelt den textuellen Inhalt des Caption für Prüfewert.
+     * 
+     * Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch
+     * Methodenüberschreibung.
+     * 
+     * @return Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der
+     *         aktuelle Wert des Objektes zurückgeliefert Interface schreibt ein
+     *         Listen-Element als Rückgabewert vor. 
+     * \~english 
+     * \~ 
+     * @author Zoltán Hrabovszki
+     * @date 2013.12.07
+     * 
+     * @throws Exception
+     */
+    @Override
+    public ArrayList<String> VerifyCaption()
+    {
+        ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+        try
+        {
+            this.LogFunctionStartDebug( "VerifyCaption" );
+
+            // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den
+            // Wert Warten.
+            lvLsReturn = this.getCaption();
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvLsReturn );
+        }
+
+        return lvLsReturn;
+    }
+
+    /**
+     * \~german Ermittelt den textuellen Inhalt der Beschriftung (Caption).
+     * 
+     * Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch
+     * Methoden überschreibung.
+     * 
+     * @return Rückgabe des Textuellen Inhaltes der Tooltips. Interface schreibt
+     *         ein Listen-Element als Rückgabewert vor. \~english \~
+     * @author Zoltán Hrabovszki
+     * @date 2013.12.07
+     * 
+     * @throws Exception
+     */
+    @Override
+    public ArrayList<String> LogCaption()
+    {
+        ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+        try
+        {
+            this.LogFunctionStartDebug( "LogCaption" );
+
+            lvLsReturn = this.getCaption();
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvLsReturn );
+        }
+
+        return lvLsReturn;
+    }
+
+    /**
+     * \~german Ermittelt den textuellen Inhalt des Caption/Überschrift für das
+     * Schlüsselwort MerkeWert.
+     * 
+     * Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch
+     * Methodenüberschreibung.
+     * 
+     * @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+     *         Interface schreibt ein Listen-Element als Rückgabewert vor.
+     * 
+     * \~english
+     * \~ 
+     * @author Zoltán Hrabovszki
+     * @date 2013.12.07
+     * @throws Exception
+     */
+    @Override
+    public ArrayList<String> MemorizeCaption()
+    {
+        ArrayList<String> lvLsReturn = null;
+
+        try
+        {
+            this.LogFunctionStartDebug( "MemorizeCaption" );
+
+            lvLsReturn = this.getCaption();
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvLsReturn );
+        }
+
+        return lvLsReturn;
+    }
+
+    /**
+     * \~german Ermittelt den textuellen Inhalt der Caption/Überschrift des
+     * Objektes.
+     * 
+     * @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+     * \~english
+     * \~
+     * @author Zoltán Hrabovszki
+     * @throws Exception
+     * @date 2013.12.07
+     */
+    @Override // TODO define Prototype in BaseClass!
+    public ArrayList<String> getCaption()
+    {
+        ArrayList<String> lvLsReturn = new ArrayList<String>();
+        try
+        {
+            this.LogFunctionStartDebug( "GetCaption" );
+
+            // Warten auf das Objekt. Wenn es nicht existiert mit Exception
+            // beenden...
+            this.WaitForMe();
+
+            // The Attribute "value" wird als Beschriftung angezeigt...
+            lvLsReturn.add( this.Me().getAttribute( "value" ) );
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvLsReturn );
+        }
+
+        return lvLsReturn;
+    }
+
+    /**
+     * \~german Ein SeInputButton hat keinen Wert! ->
+     * OKWFrameObjectMethodNotImplemented Auslösen!
+     * 
+     * @return \~english A SeInputButton has no value! -> Trigger
+     *         OKWFrameObjectMethodNotImplemented! \~
+     * @author Zoltán Hrabovszki
+     * @date 2016.10.06
+     */
+    @Override
+    public ArrayList<String> getValue()
+    {
+        // ArrayList<String> lvLsReturn = new ArrayList<String>();
+        try
+        {
+            MyLogger.LogFunctionStartDebug( "GetValue" );
+
+            String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "getValue()" );
+            throw new OKWFrameObjectMethodNotImplemented( lvsLM );
+        }
+        finally
+        {
+            MyLogger.LogFunctionEndDebug();
+        }
+        // return lvLsReturn;
+    }
 }

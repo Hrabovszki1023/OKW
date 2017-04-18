@@ -107,7 +107,7 @@ public class SeAnyWindow extends AnyWindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.11.11
      */
-    public void ClickOn() throws Exception
+    public void ClickOn()
     {
         try
         {
@@ -130,6 +130,7 @@ public class SeAnyWindow extends AnyWindow
         return;
     }
 
+    
     /** \~german
 	 *  \brief
 	 *  Ermittelt den textuellen Inhalt der Überschrift eines HTML-Tags anhand des Attributee "textContent".
@@ -140,7 +141,7 @@ public class SeAnyWindow extends AnyWindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
 	 */
-	public ArrayList<String> getCaption() throws Exception
+	public ArrayList<String> getCaption()
 	{
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 	    Boolean bOK = false;
@@ -235,16 +236,16 @@ public class SeAnyWindow extends AnyWindow
 
     
   /** \~german
-	 * \brief
-	 *  Methode liefert den aktuellen Zustand Wert des Focus.
-	 *  Quelle: http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
-	 * 
-	 *  \return
-	 *  \~
-	 *  @author Zoltán Hrabovszki
-	 *  @date 2013.11.11
-	 */
-	public Boolean getHasFocus() throws Exception
+	* \brief
+	*  Methode liefert den aktuellen Zustand Wert des Focus.
+	*  Quelle: http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
+	* 
+	*  \return
+	*  \~
+	*  @author Zoltán Hrabovszki
+	*  @date 2013.11.11
+	*/
+	public Boolean getHasFocus()
 	{
 	    Boolean lvbReturn = false;
 	    Boolean bOK = false;
@@ -289,7 +290,7 @@ public class SeAnyWindow extends AnyWindow
     /// \~
     /// \author Zoltán Hrabovszki
     /// \date 2014.04.19
-    public Boolean getIsActive() throws Exception
+    public Boolean getIsActive()
     {
         Boolean lvbReturn = false;
         Boolean bOK = false;
@@ -470,7 +471,6 @@ public class SeAnyWindow extends AnyWindow
 	            this.LogFunctionEndDebug();
 	        }
 	    }
-	
 	    return lvLsReturn;
 	}
 
@@ -740,7 +740,7 @@ public class SeAnyWindow extends AnyWindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.11.11
      */
-    public WebElement Me() throws Exception
+    public WebElement Me()
     {
       WebElement me = null;
 

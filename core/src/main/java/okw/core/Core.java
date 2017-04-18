@@ -692,6 +692,7 @@ public class Core implements IOKW_State
     }
   }
 
+  
   /**
    *  \copydoc IOKW_State::StartApp(String)
    */
@@ -708,6 +709,7 @@ public class Core implements IOKW_State
     }
   }
 
+  
   /**
    *  \copydoc IOKW_State::StopApp(String)
    */

@@ -86,49 +86,252 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
     throw new OKWFrameObjectMethodNotImplemented("The method getExists() is not defined for you GUI-Object. Please define first the methode!");
   }
 
-  public Boolean getHasFocus() throws Exception
+  public Boolean getHasFocus()
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getHasFocus() is not defined for you GUI-Object. Please define first the methode!");
   }
 
-  public Boolean getIsActive() throws Exception
+  public Boolean getIsActive()
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getIsActive() is not defined for you GUI-Object. Please define first the methode!");
   }
 
   
-  public ArrayList<String> getCaption() throws Exception
+  public ArrayList<String> getCaption()
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getCaption() is not defined for you GUI-Object. Please define first the methode!");
   }
 
-  
-  public ArrayList<String> getTooltip() throws Exception
+  public ArrayList<String> getTooltip()
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getTooltip() is not defined for you GUI-Object. Please define first the methode!");
   }
 
-  public ArrayList<String> getLabel() throws Exception
+  public ArrayList<String> getLabel()
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getLabel() is not defined for you GUI-Object. Please define first the methode!");
   }
 
-  public ArrayList<String> getValue() throws Exception
+  public ArrayList<String> getValue()
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getValue() is not defined for you GUI-Object. Please define first the methode!");
   }
+
+  public void ClickOn( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method ClickOn() is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public void DoubleClickOn( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public void DoubleClickOn( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public ArrayList<String> LogCaption( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> LogCaption( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public boolean LogExists( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public boolean LogExists( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public boolean LogHasFocus( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public boolean LogHasFocus( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
   
-  public AnyChildwindow()
+  public boolean LogIsActive( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public boolean LogIsActive( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public ArrayList<String> LogLabel( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> LogLabel( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public ArrayList<String> LogSelected( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> LogSelected( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public ArrayList<String> LogTablecellValue( String COL, String ROW )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> ( String COL, String ROW ) throws Exception' throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public ArrayList<String> LogTooltip( )
+{
+  // TODO: /todo Meldung in xml-Auslagern
+  throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> LogTooltip( ) throws Exception' throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+}
+
+public ArrayList<String> LogValue( )
+{
+  // TODO: /todo Meldung in xml-Auslagern
+  throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> LogValue( ) throws Exception' throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+}
+
+public ArrayList<String> MemorizeCaption( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> MemorizeCaption( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public boolean MemorizeExists( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public boolean MemorizeExists( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+  
+  public boolean MemorizeHasFocus( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public boolean MemorizeHasFocus( ) throws Exception' throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+  
+  public boolean MemorizeIsActive( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public boolean MemorizeIsActive( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public ArrayList<String> MemorizeLabel( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> MemorizeLabel( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public ArrayList<String> MemorizeSelectedValue( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> MemorizeSelectedValue( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public ArrayList<String> MemorizeTablecellValue( String COL, String ROW )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> MemorizeTablecellValue( String COL, String ROW ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public ArrayList<String> MemorizeTooltip( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> MemorizeTooltip( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public ArrayList<String> MemorizeValue( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> MemorizeValue( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public void Select( ArrayList<String> fpLsParameter )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method Select() is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public void SelectMenu(  ) throws Exception
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method SelectMenu() is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public void SelectMenu( ArrayList<String> Val )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method SelectMenu() is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+    public void SelectTablecell( String COL, String ROW )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public void SelectTablecell( String COL, String ROW ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+    public void SetFocus( ) throws Exception
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public void SetFocus( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+    }
+
+    public void SetValue(ArrayList<String> Val )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public void SetValue( ArrayList<String> Val ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+    }
+
+    public void TypeKey(ArrayList<String> Val )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public void TypeKey( ArrayList<String> Val ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+    }
+
+    public ArrayList<String> VerifyLabel( )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public void VerifyLabel( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+    }
+
+    public ArrayList<String> VerifyCaption( )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public void VerifyCaption( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+    }
+
+    public ArrayList<String> VerifyTooltip( )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> VerifyTooltip( )' is not defined for you GUI-Object. Please define first the methode!");
+    }
+
+    public ArrayList<String> VerifyValue( )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> VerifyValue( )' is not defined for you GUI-Object. Please define first the methode!");
+    }
+
+    public Boolean VerifyExists( )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public Boolean VerifyExists( )' is not defined for you GUI-Object. Please define first the methode!");
+    }
+
+    public Boolean VerifyIsActive()
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public Boolean VerifyIsActive()' is not defined for you GUI-Object. Please define first the methode!");
+    }
+
+    public Boolean VerifyHasFocus( )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public Boolean VerifyHasFocus( )' is not defined for you GUI-Object. Please define first the methode!");
+    }
+
+    
+    public AnyChildwindow()
     {
         this._locator = new OKWLocator("");
     }
-
 
     public AnyChildwindow(String fpsLocator, OKWLocator... fpLocators )
     {
@@ -160,35 +363,44 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
      *  @author Zoltán Hrabovszki
      *  @date 2013.11.11
      */
-    public Boolean WaitForMe() throws InterruptedException, XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+    public Boolean WaitForMe()
     {
-      Boolean lvbReturn = false;
-    
-      Integer Count = 0;
+        // Variables
+        Boolean lvbReturn = false;
+        Integer Count = 0;
 
-	  OKW MyOKW = FrameObjectDictionary_Sngltn.getInstance().GetOKW( this.getKN() );
-		
-	  // TimeOut-Werte Ermitteln
-	  OKW_TimeOut timeout = new OKW_TimeOut();
-	  
-	  timeout.setPT( MyOKW.WaitForMe_PT() );
-	  timeout.setTO( MyOKW.WaitForMe_TO() );
-      
-      Count = 0;
-      
-      while ( Count <= timeout.getMaxCount() )
-      {
-        if ( this.getExists() )
+        try
         {
-          lvbReturn = true;
-          break;
+            OKW myOKW = FrameObjectDictionary_Sngltn.getInstance().GetOKW( this.getKN() );
+
+            // TimeOut-Werte Ermitteln
+            OKW_TimeOut timeout = new OKW_TimeOut( myOKW.WaitForMe_TO(), myOKW.WaitForMe_PT() );
+
+            Count = 0;
+
+            while ( Count <= timeout.getMaxCount() )
+            {
+                if ( this.getExists() )
+                {
+                    lvbReturn = true;
+                    break;
+                }
+                else
+                {
+                    Thread.sleep( timeout.getPT() );
+                }
+                Count++;
+            }
         }
-        else
+        catch (Exception e)
         {
-          Thread.sleep( timeout.getPollingTime() );
+            // TODO: handle exception
+            throw new RuntimeException(e);
         }
-        Count++;
-      }
-      return lvbReturn;
+        finally
+        {
+
+        }
+        return lvbReturn;
     }
 }

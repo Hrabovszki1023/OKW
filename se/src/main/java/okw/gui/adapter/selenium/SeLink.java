@@ -101,13 +101,13 @@ import okw.gui.OKWLocator;
         }
         
         @Override
-        public Boolean LogIsActive()
+        public boolean LogIsActive()
         {
             throw new UnsupportedOperationException("Link cannot be Active");
         }
 
         @Override
-        public Boolean MemorizeIsActive()
+        public boolean MemorizeIsActive()
         {
             throw new UnsupportedOperationException("Link cannot be Active");
         }
@@ -124,7 +124,7 @@ import okw.gui.OKWLocator;
          *  \return
          */
         @Override
-        public ArrayList<String> getValue() throws Exception
+        public ArrayList<String> getValue()
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 

@@ -57,16 +57,16 @@ import okw.log.Logger_Sngltn;
             return;
         }
 
+        
         public void DoubleClickOn()
         {
-          this.myLogger.LogFunctionStartDebug("ClickOn_Clicktype");
+          this.myLogger.LogFunctionStartDebug("DoubleClickOn");
             
             myClipboard.Clear();
             String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("DoubleClickOn()");
-            
             myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
@@ -74,33 +74,36 @@ import okw.log.Logger_Sngltn;
             return;
         }
 
-        public boolean LogExists()
+        
+    public boolean LogExists()
+    {
+
+        this.myLogger.LogFunctionStartDebug( "LogExists" );
+
+        myClipboard.Clear();
+        String lvs_ObjectName = getKN();
+
+        myClipboard.setObjectName( lvs_ObjectName );
+        myClipboard.setMethod( "LogExists()" );
+
+        myClipboard.getValue().addAll( this.myALValue );
+
+        Boolean lvbReturn = false;
+
+        try
         {
-          
-            this.myLogger.LogFunctionStartDebug("LogExists");
+            lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean( this.myALValue.get( 0 ) );
+        }
+        catch (XPathExpressionException e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
-            myClipboard.Clear();
-            String lvs_ObjectName = getKN();
+        this.myLogger.LogFunctionEndDebug( lvbReturn );
+        return lvbReturn;
+    }
 
-            myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("LogExists()");
-
-            myClipboard.getValue().addAll(this.myALValue);
-
-            Boolean lvbReturn = false;  
-
-            try
-            {
-              lvbReturn = okw.OKW_Const_Sngltn.getInstance().YesNo2Boolean(this.myALValue.get( 0 ));
-            }
-            catch (XPathExpressionException e)
-            {
-              // TODO Auto-generated catch block
-              e.printStackTrace();
-            }
-            
-            this.myLogger.LogFunctionEndDebug(lvbReturn);
-            return lvbReturn;        }
 
         public boolean LogHasFocus()
         {
@@ -524,7 +527,7 @@ import okw.log.Logger_Sngltn;
             String lvs_ObjectName = getKN();
 
             myClipboard.setObjectName(lvs_ObjectName);
-            myClipboard.setMethod("SelectTablecell()");
+            myClipboard.setMethod("SelectTablecell(String COL, String ROW)");
             
             myClipboard.getValue().add(COL);
             myClipboard.getValue().add(ROW);
@@ -703,7 +706,7 @@ import okw.log.Logger_Sngltn;
         }
 
 
-        public boolean VerifyExists() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+        public Boolean VerifyExists()
         {
             this.myLogger.LogFunctionStartDebug("VerifyExists");
 
@@ -763,7 +766,7 @@ import okw.log.Logger_Sngltn;
         }
 
 
-        public boolean VerifyIsActive() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+        public Boolean VerifyIsActive()
         {
           boolean lvbReturn = false;
           
@@ -834,9 +837,9 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-        public List<String> VerifyTooltip()
+        public ArrayList<String> VerifyTooltip()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyTooltip");
             lvLsReturn.add("The one and only Value");
@@ -853,9 +856,9 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-        public List<String> VerifyCaption()
+        public ArrayList<String> VerifyCaption()
        {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyCaption");
             lvLsReturn.addAll(this.myALValue);
@@ -872,9 +875,9 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
         
-        public List<String> VerifyLabel()
+        public ArrayList<String> VerifyLabel()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyLabel");
             
@@ -893,9 +896,9 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-        public List<String> VerifyValue()
+        public ArrayList<String> VerifyValue()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyValue");
             

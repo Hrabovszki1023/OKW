@@ -39,7 +39,14 @@
 
 package okw.gui.adapter.selenium;
 
+import java.io.IOException;
 import java.util.ArrayList;
+
+import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
+
+import org.xml.sax.SAXException;
 
 import okw.LogMessenger;
 import okw.OKW_Const_Sngltn;
@@ -95,7 +102,7 @@ import okw.gui.*;
          *  @throws Exception 
          *  @date 2013.04.11
          */
-        public Boolean getIsSelected() throws Exception
+        public Boolean getIsSelected()
         {
             Boolean lvbReturn = false;
             
@@ -121,7 +128,7 @@ import okw.gui.*;
          * @throws Exception 
          *  @date 2013.04.11
          */
-        public void Checking() throws Exception
+        public void Checking()
         {
             this.LogFunctionStartDebug("Checking");
 
@@ -150,7 +157,7 @@ import okw.gui.*;
          * @date 2013.04.11
          */
         @Override
-        public ArrayList<String> getValue() throws Exception
+        public ArrayList<String> getValue()
         {
             ArrayList<String> lvls_Return = new ArrayList<String>();
             try
@@ -185,7 +192,7 @@ import okw.gui.*;
          *  @date 2013.04.11
          */
         @Override
-        public void SetValue(ArrayList<String> fps_Values) throws Exception
+        public void SetValue(ArrayList<String> fps_Values)
         {
 
             try
@@ -225,7 +232,7 @@ import okw.gui.*;
         // \author Zoltan Hrabovszki
         // \date 2013.04.11
         @Override
-        public void Select(ArrayList<String> fps_Values) throws Exception
+        public void Select(ArrayList<String> fps_Values)
         {
             this.LogFunctionStartDebug("Select", "fps_Values", fps_Values.toString());
 
@@ -272,7 +279,7 @@ import okw.gui.*;
          * @throws Exception 
          *  @date 2013.04.11
          */
-        public void UnChecking() throws Exception
+        public void UnChecking()
         {
             try
             {

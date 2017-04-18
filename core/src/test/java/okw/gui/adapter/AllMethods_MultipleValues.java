@@ -739,9 +739,9 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-        public List<String> VerifyTooltip()
+        public ArrayList<String> VerifyTooltip()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyTooltip");
             lvLsReturn.add("1. Value");
@@ -760,9 +760,9 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-        public List<String> VerifyCaption()
+        public ArrayList<String> VerifyCaption()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyCaption");
             lvLsReturn.add("1. Value");
@@ -781,9 +781,9 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-        public List<String> VerifyLabel()
+        public ArrayList<String> VerifyLabel()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyLabel");
             lvLsReturn.add("1. Value");
@@ -802,9 +802,9 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-        public List<String> VerifyValue()
+        public ArrayList<String> VerifyValue()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyValue");
             lvLsReturn.add("1. Value");

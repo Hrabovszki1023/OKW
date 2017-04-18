@@ -38,21 +38,13 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 package okw.gui;
 
-import java.io.IOException;
 import java.util.ArrayList;
-
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
-
-import org.xml.sax.SAXException;
 
 import okw.FrameObjectDictionary_Sngltn;
 import okw.OKW;
 import okw.OKW_TimeOut;
 import okw.core.IOKW_FN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
-import okw.log.*;
 
 /** \brief
  * Description of AnyWin.
@@ -65,6 +57,7 @@ public class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_FN
 	{
 	    this._locator = new OKWLocator("");
 	}
+
 
 public AnyWindow(String fpsLocator, OKWLocator... fpLocators )
 {
@@ -99,7 +92,7 @@ public AnyWindow(String fpsLocator, OKWLocator... fpLocators )
   public Boolean getExists()
   {
     // TODO: /todo Meldung in xml-Auslagern
-    throw new OKWFrameObjectMethodNotImplemented("The method getExists() is not definden for the current GUI-Object. Please define first this method in your GUI-Class!");
+    throw new OKWFrameObjectMethodNotImplemented("The method Boolean getExists() is not definden for the current GUI-Object. Please define first this method in your GUI-Class!");
   }
 
   /** \~german
@@ -121,12 +114,13 @@ public AnyWindow(String fpsLocator, OKWLocator... fpLocators )
    * @throws Exception 
    *  @date 2017.01.31
    */  
-  public ArrayList<String> getCaption() throws Exception
+  public ArrayList<String> getCaption()
   {
     // TODO: /todo Meldung in xml-Auslagern
-    throw new OKWFrameObjectMethodNotImplemented("The method getCaption() is not definden for you GUI-Object. Please define first the methode!");
+    throw new OKWFrameObjectMethodNotImplemented("The method ArrayList<String> getCaption() is not definden for you GUI-Object. Please define first the methode!");
   }  
-  
+
+
   /** \~german
    *  Ermittelt ob das aktuelle Objekt aktiv ist.
    *  
@@ -143,57 +137,94 @@ public AnyWindow(String fpsLocator, OKWLocator... fpLocators )
    *  @return true, falls das eindeutig Objekt gefunden worden ist ist, sonst false.
    *  \~
    *  @author Zoltán Hrabovszki
-   * @throws Exception 
+   *  @throws Exception 
    *  @date 2017.01.31
    */  
-  public Boolean getIsActive() throws Exception
+  public Boolean getIsActive()
   {
     // TODO: /todo Meldung in xml-Auslagern
-    throw new OKWFrameObjectMethodNotImplemented("The method getIsActive() is not definden for this GUI-Object. Please define first this methode!");
+    throw new OKWFrameObjectMethodNotImplemented("The method Boolean getIsActive() is not definden for this GUI-Object. Please define first this methode!");
   }  
-  
-  public void SelectWindow() throws Exception
+
+
+  public void TypeKeyWindow(ArrayList<String> Val)
+  {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method void TypekeyWindow(ArrayList<String> Val) is not definden for this GUI-Object. Please define first this methode!");
+  }
+
+
+  public void SelectWindow()
     {
 	    // TODO: /todo Meldung in xml-Auslagern
-	    throw new OKWFrameObjectMethodNotImplemented("The method SelectWindow() is not definden for this GUI-Object. Please define first this methode!");
+	    throw new OKWFrameObjectMethodNotImplemented("The method void SelectWindow() is not definden for this GUI-Object. Please define first this methode!");
     }
 
-	/** \~german
+
+  public void StartApp()
+  {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method void void StartApp() is not definden for this GUI-Object. Please define first this methode!");
+  }
+
+
+  public void StopApp()
+  {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method void StopApp() is not definden for this GUI-Object. Please define first this methode!");
+  }
+
+ 
+  public Boolean VerifyWindowExists()
+  {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method Boolean VerifyWindowExists() is not definden for this GUI-Object. Please define first this methode!");
+  }
+
+  
+  public Boolean VerifyIsWindowActive()
+  {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method Boolean VerifyIsWindowActive() is not definden for this GUI-Object. Please define first this methode!");
+  }
+
+
+  public ArrayList<String> VerifyWindowCaption()
+  {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method ArrayList<String> VerifyWindowCaption() is not definden for this GUI-Object. Please define first this methode!");
+  }
+
+
+  /** \~german
 	 *  Methode, wartet auf das aktuelle GUI-Object bis es erscheint oder der eingestellte TimeOut erreicht ist.
 	 *  
 	 *  Time Out kann mit der Annotation OKW und Attributen
 	 *  
 	 *  -# WaitForMe_PT - Polling Time [ms] - (default 1000). <br>
-   *  -# WaitForMe_TO - TimeOut [s]  - (default 30).
+     *  -# WaitForMe_TO - TimeOut [s]  - (default 30).
 	 *  
 	 *  Wichtig: Die methode liefert lediglich false zurück, d.h. es wir keine Ausnahme ausgelöst,
 	 *  wenn das Object nicht gefunden wird.
 	 *  
 	 *  @return true, wenn das Objekt vorhanden ist. sonst false. 
 	 *  \~
-	 * @throws InterruptedException 
-	 * @throws IOException 
-	 * @throws SAXException 
-	 * @throws ParserConfigurationException 
-	 * @throws JAXBException 
-	 * @throws XPathExpressionException 
-   * @author Zoltán Hrabovszki
+	 * @throws RuntimeException 
+     * @author Zoltán Hrabovszki
  	 * @date 2017.01.31
 	 */
-	public Boolean WaitForMe() throws InterruptedException, XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+	public Boolean WaitForMe()
 	{
 	  Boolean lvbReturn = false;
 	
 	  Integer Count = 0;
 
+	  try{
 	  OKW MyOKW = FrameObjectDictionary_Sngltn.getInstance().GetOKW( this.getKN() );
 	
 	  // TimeOut-Werte Ermitteln
-	  OKW_TimeOut timeout = new OKW_TimeOut();
-	  
-	  timeout.setPT( MyOKW.WaitForMe_PT() );
-	  timeout.setTO( MyOKW.WaitForMe_TO() );
-	  
+	  OKW_TimeOut timeout = new OKW_TimeOut( MyOKW.WaitForMe_TO(),MyOKW.WaitForMe_PT());
+	  	  
 	  Count = 0;
 	
 	  while ( Count <= timeout.getMaxCount() )
@@ -205,9 +236,14 @@ public AnyWindow(String fpsLocator, OKWLocator... fpLocators )
 	    }
 	    else
 	    {
-	      Thread.sleep( timeout.getPollingTime() );
+	      Thread.sleep( timeout.getPT() );
 	    }
 	    Count++;
+	  }
+	  }
+	  catch(Exception e)
+	  {
+	      throw new RuntimeException( e );
 	  }
 	  return lvbReturn;
 	}

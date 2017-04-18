@@ -75,6 +75,7 @@ public interface IOKW_State
       *
       * \~
       * @author Zoltan Hrabovszki
+      * @throws Exception 
       * @date 2014-09-18
       */
         void BeginTest(String fpsTestname) throws Exception;
@@ -107,6 +108,7 @@ public interface IOKW_State
         * \~
         * @author Zoltan Hrabovszki
         * \date 2014-09-18/jnic
+        * @throws Exception 
         */
         void ClickOn(String FN) throws Exception;
 
@@ -131,6 +133,7 @@ public interface IOKW_State
          * \~
          * @author Zoltan Hrabovszki
          * \date 2014-09-18
+         * @throws Exception 
          */
         void DoubleClickOn(String FN) throws Exception;
 
@@ -154,6 +157,7 @@ public interface IOKW_State
         * \~
         * @author Zoltan Hrabovszki
         * \date 2014-09-18/jnic
+         * @throws Exception 
         */
         void EndTest() throws Exception;
 
@@ -871,41 +875,39 @@ public interface IOKW_State
          */
         void SetLanguage(String Language);
 
-        /**
-         *  \~german
-         *  \brief
-         *  Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert.
-         * 
-         *  Der Wert wird nicht durch die Simulation einzelner Tastatureingaben
-         *  eingegeben, sondern direkt ins Objekte geschrieben:<br/>
-         *  Sollte z.B. in einem TextFeld bereits ein Wert vorhanden sein,
-	 *  dann wird dieser mit _fpsValue_ überschrieben.
-         *  
-         *  __Beispiel:__ Setze den Wert des Objekts "MeinObjekt" auf "Hallo": <br/>
-         *  \verbatim Setze Wert: "Name", "Zoltan" \endverbatim
-         *  
-         *  @param FN Funktionaler Name des Objekts 
-         *  @param Val Sich ergebender Wert 
-         * 
-         *  \~english
-         *  \brief
-         *  Setting the value of the given window object to the given value.
-         * 
-         *  The input is not working with the simulation of single keyboard inputs,
-         *  but with High-Level Setter-Methods of the objects:<br/>
-         *  Inputs of the object are written over with "Val".
-         * 
-         *  _Example: Set the value of the objekt "MyWindow" to "Hello":_ <br/>
-         *  \verbatim Set Value: "Name", "Zoltan" \endverbatim
-         *  
-         *  @param FN Functional name of the object 
-         *  @param Val Resulting value 
-         * 
-         *  \~
-         *  @author Zoltan Hrabovszki
-        * \date 2014-09-21
-        */
-        void SetValue(String FN, String Val) throws Exception;
+    /**
+     *  \~german
+     *  Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert.
+     * 
+     *  Der Wert wird nicht durch die Simulation einzelner Tastatureingaben
+     *  eingegeben, sondern direkt ins Objekte geschrieben:<br/>
+     *  Sollte z.B. in einem TextFeld bereits ein Wert vorhanden sein,
+     *  dann wird dieser mit _fpsValue_ überschrieben.
+     *  
+     *  __Beispiel:__ Setze den Wert des Objekts "MeinObjekt" auf "Hallo": <br/>
+     *  \verbatim Setze Wert: "Name", "Zoltan" \endverbatim
+     *  
+     *  @param FN Funktionaler Name des Objekts 
+     *  @param Val Sich ergebender Wert 
+     * 
+     *  \~english
+     *  Setting the value of the given window object to the given value.
+     * 
+     *  The input is not working with the simulation of single keyboard inputs,
+     *  but with High-Level Setter-Methods of the objects:<br/>
+     *  Inputs of the object are written over with "Val".
+     * 
+     *  _Example: Set the value of the objekt "MyWindow" to "Hello":_ <br/>
+     *  \verbatim Set Value: "Name", "Zoltan" \endverbatim
+     *  
+     *  @param FN Functional name of the object 
+     *  @param Val Resulting value 
+     * 
+     *  \~
+     *  @author Zoltan Hrabovszki
+    * @date 2014-09-21
+    */
+    void SetValue( String FN, String Val ) throws Exception;
         
         /**
         * \~german

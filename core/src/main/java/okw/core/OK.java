@@ -43,23 +43,24 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-
-import javax.xml.xpath.XPathExpressionException;
+import java.util.function.Supplier;
 
 // \todo TODO: ANTLR einbauen import OKW.ANTLR4;
 import okw.*;
 import okw.exceptions.*;
+import okw.gui.IGUIChildwindow;
+import okw.gui.IGUIWindow;
 
-// \~german
-// \brief
-// Klasse OK representiert den Core Zustand OK.
-// 
-// Testausführung mit GUI-Aktivität und es ist keine Exception ausgelöst worden.
-// 
-// \~english
-// \~
-// \author Zoltán Hrabovszki
-// \date 2013.03.02
+/** \~german
+ * Klasse OK representiert den Core Zustand OK.
+ * 
+ * Testausführung mit GUI-Aktivität und es ist keine Exception ausgelöst worden.
+ * 
+ * \~english
+ * \~
+ * @author Zoltán Hrabovszki
+ * @date 2013.03.02
+ */
 public class OK implements IOKW_State {
 
 	// \copydoc OKWLanguage
@@ -117,27 +118,35 @@ public class OK implements IOKW_State {
 		}
 	}
 
-  /**
-   *  \copydoc IOKW_State::BeginTest()
-   */
-  public void BeginTest( String fpsTestname ) throws XPathExpressionException
-  {
-    
-    Log.LogFunctionStartDebug( "BeginTest", "fpsTestname", fpsTestname );
-    
-    OKW_Memorize_Sngltn.getInstance().Set( "TCN", fpsTestname );
-    
-    Log.LogFunctionEndDebug();
-  }
+    /**
+     *  \copydoc IOKW_State::BeginTest()
+     */
+    public void BeginTest( String fpsTestname ) throws Exception
+    {
+
+        Log.LogFunctionStartDebug( "BeginTest", "fpsTestname", fpsTestname );
+        try
+        {
+            OKW_Memorize_Sngltn.getInstance().Set( "TCN", fpsTestname );
+        }
+        catch (Exception e)
+        {
+            this.HandleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
 
 	 //  \copydoc IOKW_State::ClickOn(String)
-	public void ClickOn(String FN) throws Exception
+	public void ClickOn(String FN)  throws Exception
 	{
 		Log.LogFunctionStartDebug("ClickOn", "FN", FN);
 
 		try
 		{
-			CO.ClickOn( FN );
+			((IGUIChildwindow)CO.SetChildName( FN )).ClickOn( );
 		}
 		catch (Exception e)
 		{
@@ -158,7 +167,7 @@ public class OK implements IOKW_State {
 
 		try
 		{
-			CO.DoubleClickOn( FN );
+	        ((IGUIChildwindow)CO.SetChildName( FN )).DoubleClickOn( );
 		}
 		catch (Exception e)
 		{
@@ -173,7 +182,8 @@ public class OK implements IOKW_State {
 	/**
 	 *  \copydoc IOKW_State::EndTest()
 	 */
-	public void EndTest() {
+	public void EndTest()
+	{
 		Log.LogFunctionStartDebug("EndTest");
 
 		Log.LogFunctionEndDebug();
@@ -186,7 +196,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      ArrayList<String> ActualValues = CO.LogCaption( FN );
+      ArrayList<String> ActualValues = ((IGUIChildwindow)CO.SetChildName( FN )).LogCaption( );
 
       Log.ResOpenListDebug( "Log... " );
 
@@ -216,7 +226,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      Boolean lvbActual = CO.LogExists( FN );
+      Boolean lvbActual = ((IGUIChildwindow)CO.SetChildName( FN )).LogExists( );
       String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
       String lvsLM = LM.GetMessage( "LogExists", "LogValue", lvsActual );
@@ -242,7 +252,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      Boolean lvbActual = CO.LogHasFocus( FN );
+      Boolean lvbActual = ((IGUIChildwindow)CO.SetChildName( FN )).LogHasFocus( );
       String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
       String lvsLM = LM.GetMessage( "LogHasFocus", "LogValue", lvsActual );
@@ -268,7 +278,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      Boolean lvbActual = CO.LogIsActive( FN );
+      Boolean lvbActual = ((IGUIChildwindow)CO.SetChildName( FN )).LogIsActive( );
       String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
       String lvsLM = LM.GetMessage( "LogIsActive", "LogValue", lvsActual );
@@ -294,7 +304,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      ArrayList<String> ActualValues = CO.LogLabel( FN );
+      ArrayList<String> ActualValues = ((IGUIChildwindow)CO.SetChildName( FN )).LogLabel( );
 
       Log.ResOpenList( "Log... " );
 
@@ -324,7 +334,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      ArrayList<String> actualValues = CO.LogSelected( FN );
+      ArrayList<String> actualValues = ((IGUIChildwindow)CO.SetChildName( FN )).LogSelected();
 
       String lvsLM = LM.GetMessage( "LogSelected", "LogValue" );
 
@@ -358,7 +368,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      ArrayList<String> ActualValues = CO.LogTablecellValue( FN, fpsCol, fpsRow );
+      ArrayList<String> ActualValues = ((IGUIChildwindow)CO.SetChildName( FN )).LogTablecellValue( fpsCol, fpsRow );
 
       Log.ResOpenListDebug( "Log... " );
 
@@ -389,7 +399,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      ArrayList<String> ActualValues = CO.LogTooltip( FN );
+      ArrayList<String> ActualValues = ((IGUIChildwindow)CO.SetChildName( FN )).LogTooltip( );
 
       Log.ResOpenList( "Log... " );
 
@@ -419,7 +429,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      ArrayList<String> ActualValues = CO.LogValue( FN );
+      ArrayList<String> ActualValues = ((IGUIChildwindow)CO.SetChildName( FN )).LogValue( );
 
       Log.ResOpenList( "Log... " );
 
@@ -463,7 +473,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        ArrayList<String> ActualValues = CO.MemorizeCaption( FN );
+        ArrayList<String> ActualValues = ((IGUIChildwindow)CO.SetChildName( FN )).MemorizeCaption( );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -504,7 +514,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        Boolean lvbActual = CO.MemorizeExists( FN );
+        Boolean lvbActual = ((IGUIChildwindow)CO.SetChildName( FN )).MemorizeExists( );
 
         String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
@@ -546,7 +556,7 @@ public class OK implements IOKW_State {
 
       else
       {
-        Boolean lvbActual = CO.MemorizeHasFocus( FN );
+        Boolean lvbActual = ((IGUIChildwindow)CO.SetChildName( FN )).MemorizeHasFocus( );
 
         String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
@@ -587,7 +597,7 @@ public class OK implements IOKW_State {
       else
       {
 
-        Boolean lvbActual = CO.MemorizeIsActive( FN );
+        Boolean lvbActual = ((IGUIChildwindow)CO.SetChildName( FN )).MemorizeIsActive( );
 
         String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
@@ -627,7 +637,7 @@ public class OK implements IOKW_State {
 
       else
       {
-        ArrayList<String> ActualValues = CO.MemorizeLabel( FN );
+        ArrayList<String> ActualValues = ((IGUIChildwindow)CO.SetChildName( FN )).MemorizeLabel( );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -667,7 +677,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        ArrayList<String> ActualValues = CO.MemorizeSelectedValue( FN );
+        ArrayList<String> ActualValues = ((IGUIChildwindow)CO.SetChildName( FN )).MemorizeSelectedValue( );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -686,7 +696,7 @@ public class OK implements IOKW_State {
 
   
   /**
-   *  \copydoc IOKW_State::MemorizeTablecellValue(String,String,String,String)
+   *  \copydoc IOKW_State::MemorizeTablecellValue(String,String,String,String) throws Exception
    */
   public void MemorizeTablecellValue( String FN, String fpsCol, String fpsRow, String fps_MemKeyName ) throws Exception
   {
@@ -708,8 +718,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        CO.SetChildName( FN );
-        ArrayList<String> ActualValues = CO.MemorizeTablecellValue( FN, fpsCol, fpsRow );
+        ArrayList<String> ActualValues = ((IGUIChildwindow)CO.SetChildName( FN )).MemorizeTablecellValue( fpsCol, fpsRow );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -748,7 +757,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        ArrayList<String> ActualValues = CO.MemorizeTooltip( FN );
+        ArrayList<String> ActualValues = ((IGUIChildwindow)CO.SetChildName( FN )).MemorizeTooltip( );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -789,7 +798,7 @@ public class OK implements IOKW_State {
       }
       else
       {
-        ArrayList<String> ActualValues = CO.MemorizeValue( FN );
+        ArrayList<String> ActualValues = ((IGUIChildwindow)CO.SetChildName( FN )).MemorizeValue( );
 
         String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -829,7 +838,8 @@ public class OK implements IOKW_State {
 
         lvlsValue = Parser.ParseMe( lvlsValue );
 
-        CO.Select( FN, lvlsValue );
+        ((IGUIChildwindow)CO.SetChildName( FN )).Select( lvlsValue );
+
       }
     }
     catch (Exception e)
@@ -854,7 +864,7 @@ public class OK implements IOKW_State {
 
 		try
 		{
-			CO.SelectMenu( FN );
+	        ((IGUIChildwindow)CO.SetChildName( FN )).SelectMenu( );
 		}
 		catch (Exception e)
 		{
@@ -867,50 +877,46 @@ public class OK implements IOKW_State {
 	}
 
 
-	/**
-	 * \copydoc IOKW_State::SelectMenu(String,String)
-	 */
-	public void SelectMenu(String FN, String Val) throws Exception
-	{
-		Log.LogFunctionStartDebug("SelectMenu", "FN", FN, "Val", Val);
+    /**
+     * \copydoc IOKW_State::SelectMenu(String,String)
+     */
+    public void SelectMenu( String FN, String Val ) throws Exception
+    {
+        Log.LogFunctionStartDebug( "SelectMenu", "FN", FN, "Val", Val );
 
-		try
-		{
-			if (Val.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))|| Val.equals("")) 
-			{
-				// Wenn der 1. Wert = IGNORE ist -> Abbrechen...
-				// \todo TODO: Meldung sprachabhägig auslagern!
-				Log.LogPrintDebug("Ignore...");
-			}
-			else
-			{
-				ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP(Val);
+        try
+        {
+            if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || Val.equals( "" ) )
+            {
+                // Wenn der 1. Wert = IGNORE ist -> Abbrechen...
+                // \todo TODO: Meldung sprachabhägig auslagern!
+                Log.LogPrintDebug( "Ignore..." );
+            }
+            else
+            {
+                ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
 
-        CO.SelectMenu( FN, lvlsValue);
-			}
-		}
-		catch (Exception e)
-		{
-			this.HandleException(e);
-		}
-		finally
-		{
-			Log.LogFunctionEndDebug();
-		}
-	}
+                ((IGUIChildwindow)CO.SetChildName( FN )).SelectMenu( lvlsValue );
+            }
+        }
+        catch (Exception e)
+        {
+            this.HandleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
 
 	// \copydoc IOKW_State::SelectTablecell(String,String,String)
-  public void SelectTablecell( String FN, String fpsCol, String fpsRow ) throws Exception
+  public void SelectTablecell( String FN, String COL, String ROW ) throws Exception
   {
-    Log.LogFunctionStartDebug( "SelectTablecell", "FN", FN, "fpsCol", fpsCol, "fpsRow", fpsRow );
-
-    // ArrayList<String> lvls_Cell =
-    // LogMessenger.Instance.SplitSEP(fpsCell);
+    Log.LogFunctionStartDebug( "SelectTablecell", "FN", FN, "COL", COL, "ROW", ROW );
 
     try
     {
-      //CO.CallMethod( FN, "SelectTablecell", fpsCol, fpsRow );
-      CO.SelectTablecell( FN, fpsCol, fpsRow );
+        ((IGUIChildwindow)CO.SetChildName( FN )).SelectTablecell( COL, ROW );
     }
     catch (Exception e)
     {
@@ -930,7 +936,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      CO.SelectWindow( FN );
+      ((IGUIWindow)CO.SetWindowName( FN )).SelectWindow();
     }
     catch (Exception e)
     {
@@ -991,7 +997,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      CO.SetFocus( FN );
+        ((IGUIChildwindow)CO.SetChildName( FN )).SetFocus( );
     }
     catch (Exception e)
     {
@@ -1025,8 +1031,7 @@ public class OK implements IOKW_State {
 		try
 		{
 			// Prüfen ob ignoriert werden muss...
-			if (Val.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
-					|| Val.equals(""))
+			if (Val.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE")) || Val.equals(""))
 			{
 				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
 				Log.LogPrintDebug(LM.GetMessage("SetValue", "Ignore"));
@@ -1037,7 +1042,7 @@ public class OK implements IOKW_State {
 
 				lvlsValue = Parser.ParseMe(lvlsValue);
 
-				CO.SetValue( FN, lvlsValue );
+				((IGUIChildwindow)CO.SetChildName( FN )).SetValue( lvlsValue );
 			}
 		} 
 		catch (Exception e)
@@ -1060,7 +1065,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      CO.StartApp( AppName );
+        ((IGUIWindow)CO.SetWindowName(  AppName )).StartApp();
     }
     catch (Exception e)
     {
@@ -1082,7 +1087,7 @@ public class OK implements IOKW_State {
 
     try
     {
-      CO.StopApp( AppName );
+        ((IGUIWindow)CO.SetWindowName(  AppName )).StopApp();
     }
     catch (Exception e)
     {
@@ -1118,7 +1123,7 @@ public class OK implements IOKW_State {
 
         lvlsValue = Parser.ParseMe( lvlsValue );
 
-        CO.TypeKey( FN, lvlsValue );
+        ((IGUIChildwindow)CO.SetChildName( FN )).TypeKey( lvlsValue );
       }
     }
     catch (Exception e)
@@ -1206,6 +1211,7 @@ public class OK implements IOKW_State {
   {
   
     ArrayList<String> lvlsExpected = null;
+    ArrayList<String> Actual = null;
   
     Log.LogFunctionStartDebug( "VerifyCaption", "FN", FN, "fpsExpected", ExpVal );
   
@@ -1236,7 +1242,12 @@ public class OK implements IOKW_State {
           lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
           lvlsExpected = Parser.ParseMe( lvlsExpected );
         }
-        ArrayList<String> Actual = CO.VerifyCaption( FN, lvlsExpected );
+        IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+        
+        OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );        
+        OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyCaption_TO(), myOKW.VerifyCaption_PT() );
+        
+        Actual = Verify( TimeOut, lvlsExpected, () -> {return MyObject.VerifyCaption(); } ); 
         Verification( Actual, lvlsExpected );
       }
     }
@@ -1289,7 +1300,13 @@ public class OK implements IOKW_State {
           lvlsExpected = Parser.ParseMe( lvlsExpected );
         }
   
-        Actual = CO.VerifyCaptionWCM( FN, lvlsExpected );
+        IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+        
+        OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );        
+        OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyCaption_TO(), myOKW.VerifyCaption_PT() );
+        
+        Actual = VerifyWCM( TimeOut, lvlsExpected, () -> {return MyObject.VerifyCaption(); } ); 
+        
         VerificationWCM( Actual, lvlsExpected );
       }
     }
@@ -1306,7 +1323,7 @@ public class OK implements IOKW_State {
   /**
    *   \copydoc IOKW_State::VerifyCaptionREGX(String,String)
    */
-  public void VerifyCaptionREGX(String FN, String ExpVal) throws Exception 
+  public void VerifyCaptionREGX(String FN, String ExpVal) throws Exception
   {
   
     ArrayList<String> lvlsExpected = null;
@@ -1342,8 +1359,15 @@ public class OK implements IOKW_State {
           lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
           lvlsExpected = Parser.ParseMe( lvlsExpected );
         }
-        Actual = CO.VerifyCaptionREGX( FN, lvlsExpected );            
+
+        IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+        
+        OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+        OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyCaption_TO(), myOKW.VerifyCaption_PT() );
+        
+        Actual = VerifyREGX( TimeOut, lvlsExpected, () -> {return MyObject.VerifyCaption(); } ); 
         VerificationREGX( Actual, lvlsExpected );
+        
       }
     } 
     catch (Exception e)
@@ -1356,64 +1380,77 @@ public class OK implements IOKW_State {
     }
   }
 
-  //  \copydoc IOKW_State::VerifyExists(String,String)
-	public void VerifyExists(String FN, String ExpVal) throws Exception
-	{
+    /**
+    *   \copydoc IOKW_State::VerifyExists(String,String)
+    */
+    public void VerifyExists( String FN, String ExpVal ) throws Exception
+    {
 
-	  Log.LogFunctionStartDebug("VerifyExists", "FN", FN, "ExpVal",	ExpVal);
-    
-		try {
-			// Hier sind nur drei werte erlaubt: YES/NO/IGNORE
+        Log.LogFunctionStartDebug( "VerifyExists", "FN", FN, "ExpVal", ExpVal );
 
-			// Prüfen ob ignoriert werden muss...
-			if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
-					|| ExpVal.equals("")) {
-				// Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-				Log.LogPrintDebug(LM.GetMessage("VerifyExists", "Ignore"));
-			}
-      else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-      {
-        // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-        throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-      }
-			else {
+        try
+        {
+            // Hier sind nur drei werte erlaubt: YES/NO/IGNORE
 
-				String lvsExpected = Parser.ParseMe(ExpVal);
+            // Prüfen ob ignoriert werden muss...
+            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
+            {
+                // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+                Log.LogPrintDebug( LM.GetMessage( "VerifyExists", "Ignore" ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else
+            {
 
-				// Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-				if (lvsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("YES"))
-						|| lvsExpected.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname("NO"))) {
+                String lvsExpected = Parser.ParseMe( ExpVal );
 
-					// Sprachabhängiges YES/NO nach Boolean transformieren
-					Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(lvsExpected);
+                // Püfen ob YES/NO als Sollwert vorgegeben worden ist.
+                if ( lvsExpected.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "YES" ) )
+                                || lvsExpected.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "NO" ) ) )
+                {
 
-					Boolean lvbActual = CO.VerifyExists( FN, lvbExpectedValue );
-					String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
+                    // Sprachabhängiges YES/NO nach Boolean transformieren
+                    Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean( lvsExpected );
 
-		       Verification( lvsActual, lvsExpected );
-				}
-				// Beide Bedingungen sind nicht erfüllt -> Exception da
-				// keinanderer
-				// Wert hier erlaubt ist.
-				else
-				{
-					String ExceptionLog = LM.GetMessage("VerifyExists", "OKWNotAllowedValueException",
-							ExpVal);
-					throw new OKWNotAllowedValueException(ExceptionLog);
-				}
-			}
-		}
-		catch (Exception e)
-		{
-			this.HandleException(e);
-		}
-		finally
-		{
-			Log.LogFunctionEndDebug();
-		}
-	}
+                    IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                    
+                    OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );        
+                    OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyExists_TO(), myOKW.VerifyExists_PT() );
+                    
+                    Boolean lvbActual = Verify( TimeOut, lvbExpectedValue, () -> {return MyObject.VerifyExists(); } ); 
 
-  // \copydoc IOKW_State::VerifyHasFocus(String,String)
+                    String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
+
+                    Verification( lvsActual, lvsExpected );
+                }
+                // Beide Bedingungen sind nicht erfüllt -> Exception da
+                // keinanderer
+                // Wert hier erlaubt ist.
+                else
+                {
+                    String ExceptionLog = LM.GetMessage( "VerifyExists", "OKWNotAllowedValueException", ExpVal );
+                    throw new OKWNotAllowedValueException( ExceptionLog );
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            this.HandleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+
+  /**
+   *  \copydoc IOKW_State::VerifyHasFocus(String,String)
+   */
   public void VerifyHasFocus( String FN, String ExpVal ) throws Exception
   {
 
@@ -1447,8 +1484,14 @@ public class OK implements IOKW_State {
 
           // Sprachabhängiges YES/NO nach Boolean transformieren
           Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean( lvsExpected );
+          
+          IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+          
+          OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );        
+          OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyHasFocus_TO(), myOKW.VerifyHasFocus_PT() );
+          
+          Boolean lvbActual = Verify( TimeOut, lvbExpectedValue, () -> {return MyObject.VerifyHasFocus(); } ); 
 
-          Boolean lvbActual = CO.VerifyHasFocus( FN, lvbExpectedValue );
           String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
           Verification( lvsActual, lvsExpected );
@@ -1473,7 +1516,9 @@ public class OK implements IOKW_State {
     }
   }
 	  
-    // copydoc IOKW_State::VerifyHasFocus(String,String)
+    /**
+     *  copydoc IOKW_State::VerifyHasFocus(String,String)
+     */
     public void VerifyIsActive(String FN, String ExpVal) throws Exception
     {
       Log.LogFunctionStartDebug("VerifyIsActive", "FN", FN, "ExpVal", ExpVal);
@@ -1498,8 +1543,14 @@ public class OK implements IOKW_State {
 
             // Sprachabhängiges YES/NO nach Boolean transformieren
             Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean(lvsExpected);
+            
+            IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+            
+            OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );        
+            OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyIsActive_TO(), myOKW.VerifyIsActive_PT() );
+            
+            Boolean lvbActual = Verify( TimeOut, lvbExpectedValue, () -> {return MyObject.VerifyIsActive(); } ); 
 
-            Boolean lvbActual = CO.VerifyIsActive( FN, lvbExpectedValue );
             String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(lvbActual);
 
             // Soll/Ist Vergleich...
@@ -1692,13 +1743,255 @@ public class OK implements IOKW_State {
       throw new OKWVerifyingFailsException();
     }
   }
- 
 
-  // \copydoc IOKW_State::VerifyLabel(String,String)
+  /**
+   * 
+   * @param timeout Entält Timeout Daten.
+   * @param fpALExpectedREGXs Erwaretetr Wert
+   * @param Method2Call Functions eferenz auf die aufzurufende Methode
+   * @return
+   */
+  public Boolean Verify( OKW_TimeOut timeout, Boolean fpbExpected, Supplier<Boolean> Method2Call ) 
+  {
+      Integer Count = 0;
+
+      Boolean lvbReturn = false;
+      Boolean bOK = false;
+      
+      Log.LogFunctionStartDebug( "Verify", "String", "OKW_TimeOut", timeout.toString(), "fpbExpected", fpbExpected.toString() );
+
+      try
+      {
+          Count = 0;
+
+          while ( Count <= timeout.getMaxCount() )
+          {
+              lvbReturn = Method2Call.get( );
+
+              if ( fpbExpected.equals( lvbReturn ) )
+              {
+                  break;
+              }
+              else
+              {
+                  Thread.sleep( timeout.getPT() );
+              }
+
+              Count++;
+          }
+
+          bOK = true;
+      }
+    catch (IllegalArgumentException | InterruptedException e)
+    {
+        throw new RuntimeException( e );
+    }
+      finally
+      {
+          if ( bOK )
+          {
+              Log.LogFunctionEndDebug( lvbReturn );
+          }
+          else
+          {
+              Log.LogFunctionEndDebug();
+          }
+      }
+      return lvbReturn;
+  }
+
+
+  /**
+   * 
+   * @param timeout Entält Timeout Daten.
+   * @param fpALExpectedREGXs Erwaretetr Wert
+   * @param Method2Call Functions eferenz auf die aufzurufende Methode
+   * @return
+   */
+  public ArrayList<String> Verify( OKW_TimeOut timeout, ArrayList<String> fpALExpected, Supplier<ArrayList<String>> Method2Call ) 
+  {
+      Integer Count = 0;
+
+      ArrayList<String> lvLsReturn = null;
+      Boolean bOK = false;
+      
+      Log.LogFunctionStartDebug( "Verify", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpected.toString() );
+
+      try
+      {
+          Count = 0;
+
+          while ( Count <= timeout.getMaxCount() )
+          {
+              lvLsReturn = Method2Call.get( );
+
+              if ( fpALExpected.equals( lvLsReturn ) )
+              {
+                  break;
+              }
+              else
+              {
+                  Thread.sleep( timeout.getPT() );
+              }
+
+              Count++;
+          }
+
+          bOK = true;
+      }
+    catch (IllegalArgumentException e)
+    {
+        throw new RuntimeException( e );
+    }
+    catch (InterruptedException e)
+    {
+        throw new RuntimeException( e );
+    }
+      finally
+      {
+          if ( bOK )
+          {
+              Log.LogFunctionEndDebug( lvLsReturn );
+          }
+          else
+          {
+              Log.LogFunctionEndDebug();
+          }
+      }
+      return lvLsReturn;
+  }  
+  
+
+  /**
+   * 
+   * @param timeout Entält Timeout Daten.
+   * @param fpALExpectedREGXs Erwaretetr Wert
+   * @param Method2Call Functions eferenz auf die aufzurufende Methode
+   * @return
+   */
+  public ArrayList<String> VerifyWCM( OKW_TimeOut timeout, ArrayList<String> fpALExpectedREGXs, Supplier<ArrayList<String>> Method2Call ) 
+  {
+      Integer Count = 0;
+
+      ArrayList<String> lvLsReturn = null;
+      Boolean bOK = false;
+      
+      Log.LogFunctionStartDebug( "VerifyWCM", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
+
+      try
+      {
+          Count = 0;
+
+          while ( Count <= timeout.getMaxCount() )
+          {
+              lvLsReturn = Method2Call.get( );
+
+              if ( Matcher.WildcardMatch( lvLsReturn, fpALExpectedREGXs ) )
+              {
+                  break;
+              }
+              else
+              {
+                  Thread.sleep( timeout.getPT() );
+              }
+
+              Count++;
+          }
+
+          bOK = true;
+      }
+    catch (IllegalArgumentException e)
+    {
+        throw new RuntimeException( e );
+    }
+    catch (InterruptedException e)
+    {
+        throw new RuntimeException( e );
+    }
+      finally
+      {
+          if ( bOK )
+          {
+              Log.LogFunctionEndDebug( lvLsReturn );
+          }
+          else
+          {
+              Log.LogFunctionEndDebug();
+          }
+      }
+      return lvLsReturn;
+  }
+
+  
+  /**
+   * 
+   * @param timeout Entält Timeout Daten.
+   * @param fpALExpectedREGXs Erwaretetr Wert
+   * @param Method2Call Functions eferenz auf die aufzurufende Methode
+   * @return
+   */
+  public ArrayList<String> VerifyREGX( OKW_TimeOut timeout, ArrayList<String> fpALExpectedREGXs, Supplier<ArrayList<String>> Method2Call ) 
+  {
+      Integer Count = 0;
+
+      ArrayList<String> lvLsReturn = null;
+      Boolean bOK = false;
+      
+      Log.LogFunctionStartDebug( "VerifyREGX", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
+
+      try
+      {
+          Count = 0;
+
+          while ( Count <= timeout.getMaxCount() )
+          {
+              lvLsReturn = Method2Call.get( );
+
+              if ( Matcher.WildcardMatch( lvLsReturn, fpALExpectedREGXs ) )
+              {
+                  break;
+              }
+              else
+              {
+                  Thread.sleep( timeout.getPT() );
+              }
+
+              Count++;
+          }
+
+          bOK = true;
+      }
+    catch (IllegalArgumentException e)
+    {
+        throw new RuntimeException( e );
+    }
+    catch (InterruptedException e)
+    {
+        throw new RuntimeException( e );
+    }
+      finally
+      {
+          if ( bOK )
+          {
+              Log.LogFunctionEndDebug( lvLsReturn );
+          }
+          else
+          {
+              Log.LogFunctionEndDebug();
+          }
+      }
+      return lvLsReturn;
+  }
+  
+  
+  /**
+   *  \copydoc IOKW_State::VerifyLabel(String,String)
+   */
   public void VerifyLabel( String FN, String ExpVal ) throws Exception
   {
   
     ArrayList<String> lvlsExpected = null;
+    ArrayList<String> Actual = null;
     Log.LogFunctionStartDebug( "VerifyLabel", "FN", FN, "ExpVal", ExpVal );
   
     try
@@ -1719,7 +2012,6 @@ public class OK implements IOKW_State {
       {
         if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
         {
-
           lvlsExpected = new ArrayList<String>();
         }
         else
@@ -1729,7 +2021,12 @@ public class OK implements IOKW_State {
           lvlsExpected = Parser.ParseMe( lvlsExpected );
         }
   
-        ArrayList<String> Actual = CO.VerifyLabel( FN, lvlsExpected );
+        IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+        
+        OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() ); 
+        OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyLabel_TO(), myOKW.VerifyLabel_PT() );
+        
+        Actual = VerifyREGX( TimeOut, lvlsExpected, () -> {return MyObject.VerifyLabel(); } ); 
         Verification( Actual, lvlsExpected );
       }
     }
@@ -1743,8 +2040,11 @@ public class OK implements IOKW_State {
     }
   }
 
- //  \copydoc IOKW_State::VerifyLabelWCM(String,String)
- public void VerifyLabelWCM(String FN, String ExpVal) throws Exception {
+ /**
+  *   \copydoc IOKW_State::VerifyLabelWCM(String,String)
+  */
+ public void VerifyLabelWCM(String FN, String ExpVal) throws Exception
+ {
 
    ArrayList<String> lvlsExpected = null;
    ArrayList<String> Actual = null;
@@ -1777,7 +2077,12 @@ public class OK implements IOKW_State {
          lvlsExpected = Parser.ParseMe( lvlsExpected );
        }
 
-       Actual = CO.VerifyLabelWCM( FN, lvlsExpected );            
+       IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+       
+       OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() ); 
+       OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyLabel_TO(), myOKW.VerifyLabel_PT() );
+       
+       Actual = VerifyWCM( TimeOut, lvlsExpected, () -> {return MyObject.VerifyLabel(); } ); 
        
        VerificationWCM( Actual, lvlsExpected );
      }
@@ -1792,56 +2097,67 @@ public class OK implements IOKW_State {
    }
  }
 
- //  \copydoc IOKW_State::VerifyLabelREGX(String,String)
- public void VerifyLabelREGX(String FN, String ExpVal) throws Exception {
+    /**
+     *   \copydoc IOKW_State::VerifyLabelREGX(String,String)
+     */
+    public void VerifyLabelREGX( String FN, String ExpVal ) throws Exception
+    {
 
-   ArrayList<String> lvlsExpected = null;
-   ArrayList<String> Actual = null;
-   
-   Log.LogFunctionStartDebug("VerifyLabelREGX", "FN", FN, "fpsExpected", ExpVal);
+        ArrayList<String> lvlsExpected = null;
+        ArrayList<String> Actual = null;
 
-   try
-   {
-     // Prüfen ob ignoriert werden muss...
-     if (ExpVal.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("IGNORE"))
-         || ExpVal.equals("")) {
-       // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-       Log.LogPrintDebug(LM.GetMessage("VerifyValue", "Ignore"));
-     }
-     else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-     {
-       // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-       throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-     }
-     else 
-     {
-       if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
-       {
+        Log.LogFunctionStartDebug( "VerifyLabelREGX", "FN", FN, "fpsExpected", ExpVal );
 
-         lvlsExpected = new ArrayList<String>();
-       }
-       else
-       {
-         // Split giveneExpected Value
-         lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
-         lvlsExpected = Parser.ParseMe( lvlsExpected );
-       }
-       Actual = CO.VerifyLabelREGX( FN, lvlsExpected );            
-       
-       VerificationREGX( Actual, lvlsExpected );
-     }
-   } 
-   catch (Exception e)
-   {
-     this.HandleException( e );
-   }
-   finally 
-   {
-     Log.LogFunctionEndDebug();
-   }
- }
+        try
+        {
+            // Prüfen ob ignoriert werden muss...
+            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
+            {
+                // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else
+            {
+                if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+                {
 
-  // \copydoc IOKW_State::VerifySelectedValue(String,String)
+                    lvlsExpected = new ArrayList<String>();
+                }
+                else
+                {
+                    // Split giveneExpected Value
+                    lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                    lvlsExpected = Parser.ParseMe( lvlsExpected );
+                }
+
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() ); 
+                OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyLabel_TO(), myOKW.VerifyLabel_PT() );
+                
+                Actual = VerifyREGX( TimeOut, lvlsExpected, () -> {return MyObject.VerifyLabel(); } ); 
+
+                VerificationREGX( Actual, lvlsExpected );
+            }
+        }
+        catch (Exception e)
+        {
+            this.HandleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+  /**
+   *  \copydoc IOKW_State::VerifySelectedValue(String,String)
+   */
   public void VerifySelectedValue( String FN, String ExpVal ) throws Exception
   {
     Log.LogFunctionStartDebug( "VerifySelectedValue", "FN", FN, "fpsExpected", ExpVal );
@@ -1881,9 +2197,9 @@ public class OK implements IOKW_State {
     }
   }
   
-  
-  
-  // \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
+  /**
+   *  \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
+   */
   public void VerifyTablecellValue( String FN, String fpsCol, String fpsRow, String ExpVal ) throws Exception
   {
     Log.LogFunctionStartDebug( "VerifyTablecellValue", "FN", FN, "fpsCol", fpsCol, "fpsRow", fpsRow, "fpsExpected", ExpVal );
@@ -1921,10 +2237,13 @@ public class OK implements IOKW_State {
     }
   }
 
-	//  \copydoc IOKW_State::VerifyTooltip(String,String)
+  /**
+   * \copydoc IOKW_State::VerifyTooltip(String,String)
+   */
   public void VerifyTooltip( String FN, String ExpVal ) throws Exception
   {
     ArrayList<String> lvlsExpected = null;
+    ArrayList<String> Actual = null;
 
     Log.LogFunctionStartDebug( "VerifyTooltip", "FN", FN, "ExpVal", ExpVal );
 
@@ -1956,7 +2275,12 @@ public class OK implements IOKW_State {
           lvlsExpected = Parser.ParseMe( lvlsExpected );
         }
 
-        ArrayList<String> Actual = CO.VerifyTooltip( FN, lvlsExpected );
+        IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+
+        OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );        
+        OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTooltip_TO(), myOKW.VerifyTooltip_PT() );
+        
+        Actual = Verify( TimeOut, lvlsExpected, () -> {return MyObject.VerifyTooltip(); } ); 
         Verification( Actual, lvlsExpected );
       }
     }
@@ -1972,8 +2296,11 @@ public class OK implements IOKW_State {
 
 
   
-  //  \copydoc IOKW_State::VerifyTooltipWCM(String,String)
-  public void VerifyTooltipWCM(String FN, String ExpVal) throws Exception {
+  /**
+   *   \copydoc IOKW_State::VerifyTooltipWCM(String,String)
+   */
+  public void VerifyTooltipWCM(String FN, String ExpVal) throws Exception
+  {
 
     ArrayList<String> Actual = null;
     ArrayList<String> lvlsExpected = null;
@@ -2007,7 +2334,12 @@ public class OK implements IOKW_State {
           lvlsExpected = Parser.ParseMe( lvlsExpected );
         }
         
-        Actual = CO.VerifyTooltipWCM( FN, lvlsExpected );            
+        IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+        
+        OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+        OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTooltip_TO(), myOKW.VerifyTooltip_PT() );
+        
+        Actual = VerifyWCM( TimeOut, lvlsExpected, () -> {return MyObject.VerifyTooltip(); } ); 
         VerificationWCM( Actual, lvlsExpected );
         
       }
@@ -2022,7 +2354,9 @@ public class OK implements IOKW_State {
     }
   }
 
-  //  \copydoc IOKW_State::VerifyTooltipREGX(String,String)
+  /**
+   *  \copydoc IOKW_State::VerifyTooltipREGX(String,String)
+   */
   public void VerifyTooltipREGX(String FN, String ExpVal) throws Exception
   {
 
@@ -2057,8 +2391,13 @@ public class OK implements IOKW_State {
           lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
           lvlsExpected = Parser.ParseMe( lvlsExpected );
         }
+        
+        IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
 
-        Actual = CO.VerifyTooltipREGX( FN, lvlsExpected );            
+        OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+        OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTooltip_TO(), myOKW.VerifyTooltip_PT() );
+        
+        Actual = VerifyREGX( TimeOut, lvlsExpected, () -> {return MyObject.VerifyTooltip(); } ); 
         VerificationREGX( Actual, lvlsExpected );
         
       }
@@ -2080,6 +2419,7 @@ public class OK implements IOKW_State {
   public void VerifyValue( String FN, String ExpVal ) throws Exception
   {
     ArrayList<String> lvlsExpected = null;
+    ArrayList<String> Actual = null;
 
     Log.LogFunctionStartDebug( "VerifyValue", "FN", FN, "ExpVal", ExpVal );
 
@@ -2109,7 +2449,13 @@ public class OK implements IOKW_State {
           lvlsExpected = Parser.ParseMe( lvlsExpected );
         }
 
-        ArrayList<String> Actual = CO.VerifyValue( FN, lvlsExpected );
+        IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+        
+        OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+        OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyValue_TO(), myOKW.VerifyValue_PT() );
+        
+        Actual = Verify( TimeOut, lvlsExpected, () -> {return MyObject.VerifyValue(); } ); 
+
         Verification( Actual, lvlsExpected );
       }
     }
@@ -2124,7 +2470,9 @@ public class OK implements IOKW_State {
   }
 
   
-  // \copydoc IOKW_State::VerifyValueWCM(String,String)
+  /**
+   *  \copydoc IOKW_State::VerifyValueWCM(String,String)
+   */
   public void VerifyValueWCM( String FN, String ExpVal ) throws Exception
   {
 
@@ -2159,9 +2507,13 @@ public class OK implements IOKW_State {
           lvlsExpected = Parser.ParseMe( lvlsExpected );
         }
 
-        CO.SetChildName( FN );
+        IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+        
+        OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+        OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyValue_TO(), myOKW.VerifyValue_PT() );
+        
+        Actual = VerifyWCM( TimeOut, lvlsExpected, () -> {return MyObject.VerifyValue(); } ); 
 
-        Actual = CO.VerifyValueWCM( FN, lvlsExpected );
         VerificationWCM( Actual, lvlsExpected );
       }
     }
@@ -2216,7 +2568,12 @@ public class OK implements IOKW_State {
           lvlsExpected = Parser.ParseMe( lvlsExpected );
         }
 
-        Actual = CO.VerifyValueREGX( FN, lvlsExpected );
+        IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+        
+        OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+        OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyValue_TO(), myOKW.VerifyValue_PT() );
+        
+        Actual = VerifyREGX( TimeOut, lvlsExpected, () -> {return MyObject.VerifyValue(); } ); 
 
         VerificationREGX( Actual, lvlsExpected );
       }
@@ -2250,6 +2607,7 @@ public class OK implements IOKW_State {
 	 * \~
 	 * \author Zoltán Hrabovszki
 	 * \date 02.03.2013
+	 * @throws Exception 
 	 */
 	private void HandleException(Exception e) throws Exception
 	{	  
@@ -2259,6 +2617,18 @@ public class OK implements IOKW_State {
 	  {
 	    // ... then get the origin exception.
 	    e = ( Exception ) e.getCause();
+	  }
+	  else if( e instanceof RuntimeException)
+	  {
+	        // ... then get the origin exception.
+	      Exception e_Wrapped = ( Exception ) e.getCause();
+	      
+	      // Wrapped Exception?
+	      if ( e_Wrapped != null)
+	      {
+	          // Then unwrap Exception
+	          e = e_Wrapped;
+	      }
 	  }
 	  
 		Log.LogPrint("==========================================================================");
@@ -2281,7 +2651,8 @@ public class OK implements IOKW_State {
 		// Change State to NOK
 		this._Kernel.SetCurrentState(new NOK(this._Kernel));
 
-		if (this.UNITTEST) {
+		if (this.UNITTEST)
+		{
 			throw e;
 		}
 	}
@@ -2289,7 +2660,8 @@ public class OK implements IOKW_State {
 	/**
 	 *  \copydoc IOKW_State::FileDelete(String)
 	 */
-	public void FileDelete(String fpsPathAndFileName) throws Exception {
+	public void FileDelete(String fpsPathAndFileName) throws Exception
+	{
 		String lvsPathAndFileName = "";
 
 		Log.LogFunctionStartDebug("FileDelete", "fpsPathAndFileName", fpsPathAndFileName);
@@ -2320,8 +2692,11 @@ public class OK implements IOKW_State {
 		}
 	}
 
-	// \copydoc IOKW_State::VerifyFileExists(String,String)
-	public void VerifyFileExists(String fpsPathAndFileName, String ExpVal) throws Exception {
+	/**
+	 *  \copydoc IOKW_State::VerifyFileExists(String,String)
+	 */
+	public void VerifyFileExists(String fpsPathAndFileName, String ExpVal)  throws Exception
+	{
 		String lvsPathAndFileName = "";
 
 		Log.LogFunctionStartDebug("VerifyFileExist", "fpsPathAndFileName", fpsPathAndFileName, "ExpVal",
@@ -2370,7 +2745,9 @@ public class OK implements IOKW_State {
 		}
 	}
 
-  // \copydoc IOKW_State::VerifyDirectoryExists(String,String)
+  /**
+   *  \copydoc IOKW_State::VerifyDirectoryExists(String,String)
+   */
   public void VerifyDirectoryExists( String fpsPath, String ExpVal ) throws Exception
   {
     String lvsPath = "";
@@ -2432,8 +2809,8 @@ public class OK implements IOKW_State {
   }
 
 	@Override
-	public void CopyFile(String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName) throws Exception {
+	public void CopyFile(String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName) throws Exception
+	{
 		// TODO Auto-generated method stub
-
 	}
 }

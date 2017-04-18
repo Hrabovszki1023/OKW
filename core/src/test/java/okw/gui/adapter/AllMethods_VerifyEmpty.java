@@ -132,12 +132,12 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-        public List<String> VerifyTooltip()
+        public ArrayList<String> VerifyTooltip()
         {
 
             this.myLogger.LogFunctionStartDebug("VerifyTooltip");
 
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
             // empty => Empty ArrayList
 
             myClipboard.Clear();
@@ -152,12 +152,12 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-        public List<String> VerifyCaption()
+        public ArrayList<String> VerifyCaption()
         {
 
             this.myLogger.LogFunctionStartDebug("VerifyCaption");
 
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
             // empty => Empty ArrayList
 
             myClipboard.Clear();
@@ -173,9 +173,9 @@ import okw.log.Logger_Sngltn;
         }
 
 
-        public List<String> VerifyLabel()
+        public ArrayList<String> VerifyLabel()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyLabel");
             // empty => Empty ArrayList
@@ -193,11 +193,11 @@ import okw.log.Logger_Sngltn;
         }
 
 
-        public List<String> VerifyValue()
+        public ArrayList<String> VerifyValue()
         {
             this.myLogger.LogFunctionStartDebug("VerifyValue");
 
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
             // empty => Empty ArrayList
 
             myClipboard.Clear();

@@ -40,6 +40,9 @@ package okw.gui.adapter.selenium.webdriver;
 */
 
 import java.util.ArrayList;
+
+import javax.xml.xpath.XPathExpressionException;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import okw.OKW_Memorize_Sngltn;
@@ -57,7 +60,6 @@ public class SeFirefoxApp extends AnyWindow
      */
     private static Logger_Sngltn       LOG = Logger_Sngltn.getInstance();
 
-    
     /**
      *  \copydoc OKW_Memorize_Sngltn
      */
@@ -84,7 +86,7 @@ public class SeFirefoxApp extends AnyWindow
     {
     }
 
-    public void StartApp() throws Exception
+    public void StartApp()
     {
         this.LogFunctionStartDebug( "StartApp" );
 
@@ -143,6 +145,10 @@ public class SeFirefoxApp extends AnyWindow
 
             SeDriver.getInstance().driver = new FirefoxDriver();
             this.Init();
+        }
+        catch (XPathExpressionException e)
+        {
+            throw new RuntimeException( e );
         }
         finally
         {

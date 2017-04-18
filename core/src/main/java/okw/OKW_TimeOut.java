@@ -2,31 +2,49 @@ package okw;
 
 public class OKW_TimeOut
 {
-  private Integer PollingTime;
-  private Integer TimeOut;
+  private Integer PT;
+  private Integer TO;
   
-  public Integer getPollingTime()
+  public OKW_TimeOut( Integer fpsTO, Integer fpsPT )
   {
-    return PollingTime;
+      setPT( fpsPT );
+      setTO( fpsTO );
+  }
+    
+  /**
+   * Wartezeit zwischen zwei Pollings in [ms]
+   * @return
+   */
+  public Integer getPT()
+  {
+    return PT;
   }
 
   public void setPT( Integer pollingTime )
   {
-    PollingTime = pollingTime;
+    PT = pollingTime;
   }
 
-  public Integer getTimeOut()
+  /**
+   * Timeout Zeit in [s]. - Maximale zeit die gewarete werden soll.
+   * @return
+   */
+  public Integer getTO()
   {
-    return TimeOut;
+    return TO;
   }
 
   public void setTO( Integer timeOut )
   {
-    TimeOut = timeOut;
+    TO = timeOut;
   }
 
+  /**
+   * Anzahl der berechnetten Zyklen.
+   * @return
+   */
   public Integer getMaxCount()
   {
-    return TimeOut * 1000 / PollingTime;
+    return TO * 1000 / PT;
   }
 }

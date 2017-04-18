@@ -128,7 +128,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      * @throws Exception 
      *  @date 2013.11.11
      */
-    public void ClickOn() throws Exception
+    public void ClickOn()
     {
         try
         {
@@ -157,7 +157,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	  *  @author Zoltán Hrabovszki
 	  *  @date 2013.12.07
 	  */
-	public ArrayList<String> getCaption() throws Exception
+	public ArrayList<String> getCaption()
 	{
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 
@@ -227,7 +227,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         }
         catch (OKWGUIObjectNotFoundException e)
         {
-           this.MyLogger.LogPrintDebug("NoSuchElementException");
+           this.MyLogger.LogPrintDebug("OKWGUIObjectNotFoundException");
            lvbReturn = false;
         }
         finally
@@ -248,7 +248,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.11.11
 	 */
-	public Boolean getHasFocus() throws Exception
+	public Boolean getHasFocus()
 	{
 	    Boolean lvbReturn = false;
 	
@@ -280,7 +280,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2014.04.19
      */
-    public Boolean getIsActive() throws Exception
+    public Boolean getIsActive()
     {
         Boolean lvbReturn = false;
         String lvDisabled = null;
@@ -323,7 +323,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  @author Zoltán Hrabovszki
     *  @date 2014.06.17
     */
-	public ArrayList<String> getLabel() throws Exception
+	public ArrayList<String> getLabel()
 	{
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 
@@ -364,7 +364,8 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
 	 */
-	public ArrayList<String> getTooltip() throws Exception
+	public ArrayList<String> getTooltip()
+	
 	{
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 
@@ -396,7 +397,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.14
 	 */
-	public ArrayList<String> getValue() throws Exception
+	public ArrayList<String> getValue()
 	{
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 	
@@ -431,7 +432,7 @@ public class SeAnyChildWindow extends AnyChildwindow
    *  @author Zoltán Hrabovszki
    *  @date 2013.12.07
    */
-  public ArrayList<String> LogCaption() throws Exception
+  public ArrayList<String> LogCaption()
   {
       ArrayList<String> lvLsReturn = null;
   
@@ -462,7 +463,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public Boolean LogExists()
+    public boolean LogExists()
     {
         Boolean lvbReturn = null;
 
@@ -490,7 +491,7 @@ public class SeAnyChildWindow extends AnyChildwindow
       *  @author Zoltan Hrabovszki
       *  @date 2013.04.11
       */
-    public Boolean LogHasFocus() throws Exception
+    public boolean LogHasFocus()
     {
         Boolean lvbReturn = null;
     
@@ -521,7 +522,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public Boolean LogIsActive() throws Exception
+    public boolean LogIsActive()
     {
         Boolean lvbReturn = null;
 
@@ -553,7 +554,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public ArrayList<String> LogLabel() throws Exception
+    public ArrayList<String> LogLabel()
     {
         ArrayList<String> lvLsReturn = null;
     
@@ -587,7 +588,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public ArrayList<String> LogTooltip() throws Exception
+    public ArrayList<String> LogTooltip()
     {
         ArrayList<String> lvLsReturn = null;
     
@@ -616,7 +617,7 @@ public class SeAnyChildWindow extends AnyChildwindow
       *  @date 2013.12.14
       *  @throws Exception 
       */
-    public ArrayList<String> LogValue() throws Exception
+    public ArrayList<String> LogValue()
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
     
@@ -644,7 +645,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @throws Exception 
      *  @date 2013.11.11
      */
-    public WebElement Me() throws Exception
+    public WebElement Me()
     {
         WebElement me = null;
 
@@ -668,7 +669,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
 	 */
-	public ArrayList<String> MemorizeCaption() throws Exception
+	public ArrayList<String> MemorizeCaption()
 	{
 	    ArrayList<String> lvLsReturn = null;
 	
@@ -698,7 +699,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public Boolean MemorizeExists()
+    public boolean MemorizeExists()
     {
         Boolean lvbReturn = false;
 
@@ -728,7 +729,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2014.04.19
      */
-    public Boolean MemorizeIsActive() throws Exception
+    public boolean MemorizeIsActive()
     {
         Boolean lvbReturn = false;
 
@@ -762,7 +763,7 @@ public class SeAnyChildWindow extends AnyChildwindow
       *  @author Zoltán Hrabovszki
       *  @date 2013.12.07
       */
-    public ArrayList<String> MemorizeTooltip() throws Exception
+    public ArrayList<String> MemorizeTooltip()
     {
         ArrayList<String> lvLsReturn = null;
 
@@ -795,7 +796,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public ArrayList<String> MemorizeLabel() throws Exception
+    public ArrayList<String> MemorizeLabel()
     {
         ArrayList<String> lvLsReturn = null;
 
@@ -824,7 +825,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
      */
-    public Boolean MemorizeHasFocus() throws Exception
+    public boolean MemorizeHasFocus()
     {
         Boolean lvbReturn = null;
 
@@ -856,7 +857,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.14
      */
-    public ArrayList<String> MemorizeValue() throws Exception
+    public ArrayList<String> MemorizeValue()
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
 
@@ -917,7 +918,7 @@ public class SeAnyChildWindow extends AnyChildwindow
    *  @author Zoltán Hrabovszki
    *  @date 2016.10.06
    */
-  public void Select(ArrayList<String> Values)  throws Exception
+  public void Select(ArrayList<String> Values)
   {
   
     try
@@ -1034,7 +1035,7 @@ public class SeAnyChildWindow extends AnyChildwindow
    *  @author Zoltán Hrabovszki
    *  @date 2016.10.06
    */
-  public void SetValue( ArrayList<String> Values ) throws XPathExpressionException, Exception
+  public void SetValue( ArrayList<String> Values )
   {
   
     try
@@ -1063,7 +1064,7 @@ public class SeAnyChildWindow extends AnyChildwindow
    * @throws Exception 
 	 *  @date 2013.04.11
 	 */
-	public void TypeKey(ArrayList<String> fps_Values) throws Exception
+	public void TypeKey(ArrayList<String> fps_Values)
 	{
 	    try
 	    {
@@ -1112,7 +1113,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	  *  @author Zoltán Hrabovszki
 	  *  @date 2013.12.07
 	  */
-	public ArrayList<String> VerifyCaption()  throws Exception
+	public ArrayList<String> VerifyCaption()
 	{
     ArrayList<String> lvLsReturn = new ArrayList<String>();
 	    
@@ -1145,7 +1146,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
 	 */
-	public Boolean VerifyExists() throws InterruptedException
+	public Boolean VerifyExists()
 	{
 	
 	    Boolean lvbReturn = null;
@@ -1176,7 +1177,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
 	 */
-	public Boolean VerifyIsActive( ) throws Exception
+	public Boolean VerifyIsActive( )
 	{
 	
 	    Boolean lvbReturn = null;
@@ -1211,7 +1212,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
 	 */
-	public Boolean VerifyHasFocus() throws Exception
+	public Boolean VerifyHasFocus()
 	{
 	    Boolean lvbReturn = false;
 	    
@@ -1247,7 +1248,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
 	 */
-	public ArrayList<String> VerifyLabel() throws Exception
+	public ArrayList<String> VerifyLabel()
 	{
 		    ArrayList<String> lvLsReturn = new ArrayList<String>();
 	
@@ -1279,7 +1280,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.12.07
    */
-	public ArrayList<String> VerifyTooltip() throws Exception
+	public ArrayList<String> VerifyTooltip()
 	{	
 	    ArrayList<String> lvLsReturn = new ArrayList<String>();
 	
@@ -1308,7 +1309,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @author Zoltan Hrabovszki
      *  @date 2013.12.14
      */
-    public ArrayList<String> VerifyValue( ) throws Exception
+    public ArrayList<String> VerifyValue( )
     {
         ArrayList<String> lvLsReturn = null;
 
@@ -1330,9 +1331,9 @@ public class SeAnyChildWindow extends AnyChildwindow
     
     /**
      * Wartet auf das Objekt
-     * Wenn kein Fenstre gefunden wird, 
+     * Wenn kein Fenster gefunden wird, 
      */
-    public Boolean WaitForMe() throws XPathExpressionException, InterruptedException, JAXBException, ParserConfigurationException, SAXException, IOException
+    public Boolean WaitForMe()
     {
       Boolean lvbReturn = super.WaitForMe();
       

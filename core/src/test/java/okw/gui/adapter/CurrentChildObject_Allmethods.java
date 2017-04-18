@@ -28,8 +28,7 @@ import okw.log.Logger_Sngltn;
 
         
         public String getFN()
-        {
-                    	
+        {        	
         	String lvsReturn = "CurrentObjectWindow.CurrentObjectAllMethodCallTypes";
         	
         	return lvsReturn;

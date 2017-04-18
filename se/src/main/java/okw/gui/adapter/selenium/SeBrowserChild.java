@@ -43,45 +43,44 @@ import okw.OKW;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
 
-    /** \brief
-     * TODO: class SeBrowserChild dokumentieren...
-     */ 
-    public class SeBrowserChild extends SeAnyWindow
+/** \brief
+ * TODO: class SeBrowserChild dokumentieren...
+ */
+public class SeBrowserChild extends SeAnyWindow
+{
+
+    // The class for the window that contains the contents of the Web page.
+    public OKWLocator locator;
+
+    @OKW( FN = "URL" )
+    public SeURL      URL = new SeURL();
+
+    /**
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+     */
+    public SeBrowserChild( String Locator, OKWLocator... Locators )
     {
+        super( Locator, Locators );
+    }
 
-        // The class for the window that contains the contents of the Web page.
-        public OKWLocator locator;
-        
-        @OKW(FN="URL")
-        public SeURL URL = new SeURL();
+    /**
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+     */
+    public SeBrowserChild( String IframeID, String Locator, OKWLocator... Locators )
+    {
+        super( IframeID, Locator, Locators );
+    }
 
-        
-        /**
-         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
-         */
-        public SeBrowserChild(String Locator, OKWLocator... Locators )
+    @Override
+    public void SelectWindow()
+    {
+        if ( !this.WaitForMe() )
         {
-        	super( Locator, Locators);
-        }
-        
-        /**
-         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
-         */
-        public SeBrowserChild(String IframeID, String Locator, OKWLocator... Locators )
-        {
-          super(IframeID, Locator, Locators);
-        }
-        
-        @Override
-        public void SelectWindow() throws Exception
-        {
-         	if ( !this.WaitForMe() )
-         	{
-            this.MyLogger.ResOpenList( "GUI-Object not found..."  );
-         	  this.MyLogger.LogPrint( "Locator: '" + this.getLocator() + "'" );
-         	  this.MyLogger.ResCloseList();
-         	  
+            this.MyLogger.ResOpenList( "GUI-Object not found..." );
+            this.MyLogger.LogPrint( "Locator: '" + this.getLocator() + "'" );
+            this.MyLogger.ResCloseList();
+
             throw new OKWGUIObjectNotFoundException( "BrowserChild not found!" );
-         	}
         }
     }
+}

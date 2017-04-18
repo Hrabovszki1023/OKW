@@ -39,6 +39,8 @@
 
 package okw.gui.adapter.selenium.webdriver;
 
+import javax.xml.xpath.XPathExpressionException;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import okw.OKW_Memorize_Sngltn;
@@ -46,94 +48,96 @@ import okw.gui.AnyWindow;
 import okw.gui.adapter.selenium.SeDriver;
 import okw.log.Logger_Sngltn;
 
+/// \brief
+/// TODO: class SeChromeApp dokumentieren...
+/// 
+public class SeChromeApp extends AnyWindow
+{
 
-    /// \brief
-    /// TODO: class SeChromeApp dokumentieren...
-    /// 
-    public class SeChromeApp extends AnyWindow
+    /**
+     *  \copydoc Logger_Sngltn
+     */
+    private static Logger_Sngltn       LOG = Logger_Sngltn.getInstance();
+
+    /**
+     *  \copydoc OKW_Memorize_Sngltn
+     */
+    private static OKW_Memorize_Sngltn MEM = OKW_Memorize_Sngltn.getInstance();
+
+    public SeChromeApp()
     {
-    	
-        /**
-         *  \copydoc Logger_Sngltn
-         */
-        private static Logger_Sngltn       LOG = Logger_Sngltn.getInstance();
+        this.LogFunctionStartDebug( "SeChromeApp()" );
 
-        /**
-         *  \copydoc OKW_Memorize_Sngltn
-         */
-        private static OKW_Memorize_Sngltn MEM = OKW_Memorize_Sngltn.getInstance();
+        this.LogFunctionEndDebug();
+    }
 
-        public SeChromeApp()
+    public void Init()
+    {
+        this.LogFunctionStartDebug( "Init()" );
+
+        //this.URL.mydriver = this.driver;
+
+        this.LogFunctionEndDebug();
+    }
+
+    @Override
+    public void SelectWindow()
+    {
+    }
+
+    public void StartApp()
+    {
+        this.LogFunctionStartDebug( "StartApp" );
+
+        try
         {
-        	this.LogFunctionStartDebug("SeChromeApp()");
 
-        	this.LogFunctionEndDebug();
+            String DriverPath = System.getenv( "OKWChromedriverPath" );
+
+            if ( DriverPath != null )
+            {
+                LOG.LogPrint( "EnvVar: OKWChromedriverPath='" + DriverPath + "'" );
+                System.setProperty( "webdriver.Chrome.driver", DriverPath );
+
+                MEM.Set( "System.Property: webdriver.Chrome.driver", DriverPath );
+                MEM.Set( "OKW EnvVar: OKWChromedriverPath", DriverPath );
+
+            }
+            else
+            {
+                LOG.LogWarning( "Enviroment Variable 'OKWChromedriverPath' is not set!" );
+
+                String os_name = System.getProperty( "os.name" );
+
+                switch ( os_name )
+                {
+                    case "Mac OS X":
+                        System.setProperty( "webdriver.chrome.driver", "/Applications/chromedriver" );
+                        break;
+                    default:
+                        LOG.LogError( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
+                        break;
+                }
+            }
+
+            LOG.LogPrint( "System Property: webdriver.chrome.driver='" + System.getProperty( "os.name" ) + "'" );
+
+            SeDriver.getInstance().driver = new FirefoxDriver();
+            this.Init();
         }
-
-
-        public void Init()
+        catch (XPathExpressionException e)
         {
-        	this.LogFunctionStartDebug("Init()");
-
-            //this.URL.mydriver = this.driver;
-
-        	this.LogFunctionEndDebug();
+            // TODO Auto-generated catch block
+            throw new RuntimeException( e );
         }
-
-        @Override
-        public void SelectWindow()
+        finally
         {
-        }
-
-
-    public void StartApp() throws Exception
-        {
-          this.LogFunctionStartDebug("StartApp");
-
-          try
-          {
-            
-              String DriverPath = System.getenv("OKWChromedriverPath");
-              
-              if (DriverPath != null)
-              {
-                  LOG.LogPrint("EnvVar: OKWChromedriverPath='" + DriverPath + "'");
-                  System.setProperty("webdriver.Chrome.driver", DriverPath);
-                  
-                  MEM.Set( "System.Property: webdriver.Chrome.driver", DriverPath );
-                  MEM.Set( "OKW EnvVar: OKWChromedriverPath", DriverPath );
-
-              }
-              else
-              {
-                  LOG.LogWarning("Enviroment Variable 'OKWChromedriverPath' is not set!");
-                                
-                  String os_name = System.getProperty("os.name");
-                
-                  switch (os_name)
-                  {
-                      case "Mac OS X":
-                          System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
-                          break;
-                      default:
-                          LOG.LogError("Unknown Property: 'os.name'= '" + System.getProperty("os.name") + "'");
-                          break;
-                  }   
-              }
-              
-              LOG.LogPrint("System Property: webdriver.chrome.driver='" + System.getProperty("os.name") + "'");
-            
-              SeDriver.getInstance().driver = new FirefoxDriver();
-              this.Init();
-          }
-          finally
-          {
-              this.LogFunctionEndDebug();       
-          }
-   }
-
-        public void StopApp()
-        {
-            SeDriver.getInstance().driver.close();
+            this.LogFunctionEndDebug();
         }
     }
+
+    public void StopApp()
+    {
+        SeDriver.getInstance().driver.close();
+    }
+}

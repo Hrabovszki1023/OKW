@@ -150,7 +150,7 @@ import okw.gui.OKWLocator;
          * @throws Exception 
          */
         @Override
-        public ArrayList<String> getValue() throws Exception
+        public ArrayList<String> getValue()
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
@@ -179,7 +179,7 @@ import okw.gui.OKWLocator;
         
         
   // / \~german
-  public void SetValue( ArrayList<String> Values ) throws Exception
+  public void SetValue( ArrayList<String> Values )
   {
     this.LogFunctionStartDebug( "SetValue", "Val", Values.toString() );
 
@@ -191,7 +191,8 @@ import okw.gui.OKWLocator;
       WebElement myMe = this.Me();
       myMe.clear();
       
-      for (String Value : Values) {
+      for (String Value : Values)
+      {
         if (Value.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
         {
           myMe.clear();

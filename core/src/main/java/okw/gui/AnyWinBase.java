@@ -38,18 +38,7 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 package okw.gui;
 
-import java.io.IOException;
 import java.util.ArrayList;
-
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
-
-import org.xml.sax.SAXException;
-
-import okw.FrameObjectDictionary_Sngltn;
-import okw.OKW_TimeOut;
-import okw.core.IOKW_FN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.log.*;
 

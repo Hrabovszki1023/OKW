@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import okw.OKW_Const_Sngltn;
-import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
 
 /*
@@ -77,7 +76,7 @@ import okw.gui.OKWLocator;
          *  @date 2013.04.11
          */
         @Override
-        public void Select(ArrayList<String> fps_Values) throws Exception
+        public void Select(ArrayList<String> fps_Values)
         {
             this.LogFunctionStartDebug("Select", "fps_Values", fps_Values.toString());
 
@@ -127,7 +126,7 @@ import okw.gui.OKWLocator;
          *  @date 2013.04.11
          */
         @Override
-        public void SetValue( ArrayList<String> fpsValues) throws Exception
+        public void SetValue( ArrayList<String> fpsValues)
         {
             this.LogFunctionStartDebug("SetValue", "fpsValues", fpsValues.toString());
 
@@ -180,7 +179,7 @@ import okw.gui.OKWLocator;
          *  @date 2014.12.04
          */
         @Override
-        public ArrayList<String> getValue() throws Exception
+        public ArrayList<String> getValue()
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();
             
