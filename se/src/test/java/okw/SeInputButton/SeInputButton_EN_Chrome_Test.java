@@ -1,13 +1,9 @@
 package okw.SeInputButton;
 
-import okw.core.EN;
 import okw.log.Logger_Sngltn;
-import okw.log.log2html.Log2HTML;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
-import org.junit.Test;
 
 public class SeInputButton_EN_Chrome_Test extends SeInputButton_EN_Test
 {

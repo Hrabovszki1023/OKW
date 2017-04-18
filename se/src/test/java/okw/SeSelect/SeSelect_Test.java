@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
 
-import org.junit.After;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;

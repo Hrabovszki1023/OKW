@@ -39,12 +39,7 @@
 
 package okw.gui.adapter.selenium;
 
-import java.io.IOException;
 import java.util.*;
-
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWGUIObjectNotFoundException;
@@ -55,8 +50,6 @@ import okw.OKW_Const_Sngltn;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.xml.sax.SAXException;
-
 
 public class SeAnyChildWindow extends AnyChildwindow
 {	

@@ -39,14 +39,7 @@
 
 package okw.gui.adapter.selenium;
 
-import java.io.IOException;
 import java.util.ArrayList;
-
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
-
-import org.xml.sax.SAXException;
 
 import okw.LogMessenger;
 import okw.OKW_Const_Sngltn;

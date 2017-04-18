@@ -1,7 +1,6 @@
 package okw.SeInputField;
 
 import okw.log.Logger_Sngltn;
-import okw.log.log2html.Log2HTML;
 
 import org.junit.After;
 import org.junit.AfterClass;
