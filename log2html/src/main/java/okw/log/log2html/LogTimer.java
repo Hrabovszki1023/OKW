@@ -2,7 +2,6 @@ package okw.log.log2html;
  
 import java.text.DecimalFormat;
 import java.time.Instant;
-import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
  
  

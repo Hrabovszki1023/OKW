@@ -1,6 +1,6 @@
 /*
     ==============================================================================
-    Copyright © 2012 - 2016 IT-Beratung Hrabovszki
+    Copyright © 2012 - 2017 IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -49,16 +49,16 @@ import okw.OKW_Ini_Sngltn;
 import okw.OKW_Memorize_Sngltn;
 import okw.log.*;
 
-/// \~german
-/// \brief
-/// Klasse NOK representiert den Core Zustand __NOK__ im Ausführungs-Modus.
-/// 
-/// Testausführung mit GUI-Aktivität und es ist eine Exception ausgelöst worden.
-/// 
-/// \~english
-/// \~
-/// \author Zoltán Hrabovszki
-/// \date 2013.03.02
+/** \~german
+ *  Klasse NOK representiert den Core Zustand __NOK__ im Ausführungs-Modus.
+ * 
+ *  Testausführung mit GUI-Aktivität und es ist eine Exception ausgelöst worden.
+ * 
+ *  \~english
+ *  \~
+ *  @author Zoltán Hrabovszki
+ *  @date 2013.03.02
+ */
 public class NOK implements IOKW_State
 {
 
@@ -69,11 +69,12 @@ public class NOK implements IOKW_State
 
     Core          _Kernel;
 
-    /// \~german
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 02.03.2013
+    /** \~german
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 02.03.2013
+     */
     public NOK( Core fp_OKW )
     {
         Log = Logger_Sngltn.getInstance();
@@ -206,9 +207,9 @@ public class NOK implements IOKW_State
     /**
      *  \copydoc IOKW_State::LogTablecellValue(String,String,String)
      */
-    public void LogTablecellValue( String FN, String fpsCol, String fpsRow )
+    public void LogTablecellValue( String FN, String COL, String ROW )
     {
-        Log.LogFunctionStartDebug( "LogTablecellValue", "fpsCol", fpsCol, "fpsRow", fpsRow, "FN", FN );
+        Log.LogFunctionStartDebug( "LogTablecellValue", "COL", COL, "ROW", ROW, "FN", FN );
 
         Log.LogFunctionEndDebug();
     }
@@ -296,9 +297,10 @@ public class NOK implements IOKW_State
     /**
      *  \copydoc IOKW_State::MemorizeTablecellValue(String,String,String,String)
      */
-    public void MemorizeTablecellValue( String FN, String fpsCol, String fpsRow, String fpsMemKeyName )
+    public void MemorizeTablecellValue( String FN, String COL, String ROW, String fpsMemKeyName )
     {
-        Log.LogFunctionStartDebug( "MemorizeTablecellValue", "FN", FN, "fpsCol", fpsCol, "fpsRow", fpsRow, "fpsMemKeyName", fpsMemKeyName );
+        Log.LogFunctionStartDebug( "MemorizeTablecellValue", "FN", FN, "COL", COL, "ROW", ROW, "fpsMemKeyName", fpsMemKeyName );
+        
         Log.LogFunctionEndDebug();
     }
 
@@ -355,9 +357,9 @@ public class NOK implements IOKW_State
     /**
      *  \copydoc IOKW_State::SelectTablecell(String,String,String)
      */
-    public void SelectTablecell( String FN, String fpsCol, String fpsRow )
+    public void SelectTablecell( String FN, String COL, String ROW )
     {
-        Log.LogFunctionStartDebug( "SelectTablecell", "FN", FN, "fpsCol", fpsCol, "fpsRow", fpsRow );
+        Log.LogFunctionStartDebug( "SelectTablecell", "FN", FN, "COL", COL, "ROW", ROW );
 
         Log.LogFunctionEndDebug();
     }
@@ -382,8 +384,8 @@ public class NOK implements IOKW_State
         Log.LogFunctionEndDebug();
     }
 
-    /**
-    /// \copydoc IOKW_State::SetFocus(String)
+   /**
+    *  \copydoc IOKW_State::SetFocus(String)
     */
     public void SetFocus( String FN )
     {
@@ -392,20 +394,20 @@ public class NOK implements IOKW_State
         Log.LogFunctionEndDebug();
     }
 
-    /// \~german
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 02.03.2013
-    /// 
+    /** \~german
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 02.03.2013
+     */ 
     public void SetLanguage( String Language )
     {
         this.AL.setLanguage( Language );
     }
 
     /**
-    	 *  \copydoc IOKW_State::SetValue(String,String)
-    	 */
+     *  \copydoc IOKW_State::SetValue(String,String)
+     */
     public void SetValue( String FN, String fpsValue )
     {
         Log.LogFunctionStartDebug( "SetValue", "FN", FN );
@@ -446,9 +448,9 @@ public class NOK implements IOKW_State
     /**
      *  \copydoc IOKW_State::TypeKeyTablecell(String,String,String,String)
      */
-    public void TypeKeyTablecell( String FN, String fpsCol, String fpsRow, String fpsValue )
+    public void TypeKeyTablecell( String FN, String COL, String ROW, String fpsValue )
     {
-        Log.LogFunctionStartDebug( "TypeKeyTablecell", "FN", FN, "fpsColl", fpsCol, "fpsRow", fpsRow, "fpsValue", fpsValue );
+        Log.LogFunctionStartDebug( "TypeKeyTablecell", "FN", FN, "COLl", COL, "ROW", ROW, "fpsValue", fpsValue );
 
         Log.LogFunctionEndDebug();
     }
@@ -474,7 +476,7 @@ public class NOK implements IOKW_State
     }
 
     /**
-     *  \copydoc IOKW_State::VerifyCaption(String,String)
+     *  \copydoc IOKW_State::VerifyCaptionWCM(String,String)
      */
     public void VerifyCaptionWCM( String FN, String ExpVal )
     {
@@ -484,7 +486,7 @@ public class NOK implements IOKW_State
     }
 
     /**
-     *  \copydoc IOKW_State::VerifyCaption(String,String)
+     *  \copydoc IOKW_State::VerifyCaptionREGX(String,String)
      */
     public void VerifyCaptionREGX( String FN, String ExpVal )
     {
@@ -562,13 +564,53 @@ public class NOK implements IOKW_State
 
         Log.LogFunctionEndDebug();
     }
+    /**
+     *  \copydoc IOKW_State::VerifySelectedValueWCM(String,String)
+     */
+
+    public void VerifySelectedValueWCM( String FN, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifySelectedValueWCM", "FN", FN, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
+    
+    /**
+     *  \copydoc IOKW_State::VerifySelectedValueREGX(String,String)
+     */
+    public void VerifySelectedValueREGX( String FN, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifySelectedValueREGX", "FN", FN, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
 
     /**
      *  \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
      */
-    public void VerifyTablecellValue( String FN, String fpsCol, String fpsRow, String ExpVal )
+    public void VerifyTablecellValue( String FN, String COL, String ROW, String ExpVal )
     {
-        Log.LogFunctionStartDebug( "VerifyTablecellValue", "FN", FN, "fpsCol", fpsCol, "fpsRow", fpsRow, "ExpVal", ExpVal );
+        Log.LogFunctionStartDebug( "VerifyTablecellValue", "FN", FN, "COL", COL, "ROW", ROW, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     *  \copydoc IOKW_State::VerifyTablecellValueWCM(String,String,String,String)
+     */
+    public void VerifyTablecellValueWCM( String FN, String COL, String ROW, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifyTablecellValueWCM", "FN", FN, "COL", COL, "ROW", ROW, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     *  \copydoc IOKW_State::VerifyTablecellValueREGX(String,String,String,String)
+     */
+    public void VerifyTablecellValueREGX( String FN, String COL, String ROW, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifyTablecellValueREGX", "FN", FN, "COL", COL, "ROW", ROW, "ExpVal", ExpVal );
 
         Log.LogFunctionEndDebug();
     }
@@ -633,7 +675,9 @@ public class NOK implements IOKW_State
         Log.LogFunctionEndDebug();
     }
 
-    /// \copydoc IOKW_State::FileDelete(String)
+    /**
+     *  \copydoc IOKW_State::FileDelete(String)
+     */
     public void FileDelete( String fpsPathAndFileName )
     {
         Log.LogFunctionStartDebug( "FileDelete", "fpsPathAndFileName", fpsPathAndFileName );
@@ -641,7 +685,9 @@ public class NOK implements IOKW_State
         Log.LogFunctionEndDebug();
     }
 
-    /// \copydoc IOKW_State::VerifyFileExists(String,String)
+    /**
+     *  \copydoc IOKW_State::VerifyFileExists(String,String)
+     */
     public void VerifyFileExists( String fpsPathAndFileName, String ExpVal )
     {
         Log.LogFunctionStartDebug( "VerifyFileExists", "fpsPathAndFileName", fpsPathAndFileName, "ExpVal", ExpVal );
@@ -649,7 +695,9 @@ public class NOK implements IOKW_State
         Log.LogFunctionEndDebug();
     }
 
-    /// \copydoc IOKW_State::VerifyDirectoryExists(String,String)
+    /**
+     *  \copydoc IOKW_State::VerifyDirectoryExists(String,String)
+     */
     public void VerifyDirectoryExists( String fpsPath, String ExpVal )
     {
         Log.LogFunctionStartDebug( "VerifyDirectoryExists", "fpsPath", fpsPath, "ExpVal", ExpVal );
@@ -657,7 +705,9 @@ public class NOK implements IOKW_State
         Log.LogFunctionEndDebug();
     }
 
-    @Override
+    /**
+     *  \copydoc IOKW_State::CopyFile(String,String)
+     */
     public void CopyFile( String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName )
     {
         Log.LogFunctionStartDebug( "CopyFile", "fpsSourcePathAndFileName", fpsSourcePathAndFileName, "fpsDestinationPathAndFileName",

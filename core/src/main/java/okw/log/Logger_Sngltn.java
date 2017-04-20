@@ -185,28 +185,49 @@ public class Logger_Sngltn
 		}
 	}
 
-	public void LogFunctionEnd( String fps_Return )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogFunctionEnd(fps_Return);
-		}
-	}
+    public void LogFunctionEnd( String fps_Return )
+    {
+        if ( fps_Return != null )
+        {
+            for ( ILogger myLogger : LoggerList )
+            {
+                myLogger.LogFunctionEnd( fps_Return );
+            }
+        }
+        else
+        {
+            this.LogFunctionEnd();
+        }
+    }
 
 	public void LogFunctionEnd( Boolean fpb_Return )
 	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogFunctionEnd(fpb_Return);
-		}
+        if ( fpb_Return != null )
+        {
+            for ( ILogger myLogger : LoggerList )
+            {
+                myLogger.LogFunctionEnd( fpb_Return );
+            }
+        }
+        else
+        {
+            this.LogFunctionEnd();
+        }
 	}
 
 	public void LogFunctionEnd( List<String> fpls_Return )
 	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogFunctionEnd(fpls_Return);
-		}
+        if ( fpls_Return != null )
+        {
+            for ( ILogger myLogger : LoggerList )
+            {
+                myLogger.LogFunctionEnd( fpls_Return );
+            }
+        }
+        else
+        {
+            this.LogFunctionEnd();
+        }
 	}
 
 	public void LogFunctionEnd()
@@ -228,26 +249,47 @@ public class Logger_Sngltn
 
 	public void LogFunctionEndDebug( String fps_Return )
 	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogFunctionEndDebug(fps_Return);
-		}
+        if ( fps_Return != null )
+        {
+            for ( ILogger myLogger : LoggerList )
+            {
+                myLogger.LogFunctionEndDebug( fps_Return );
+            }
+        }
+        else
+        {
+            this.LogFunctionEnd();
+        }
 	}
 
-	public void LogFunctionEndDebug( List<String> fps_Return )
+	public void LogFunctionEndDebug( List<String> fpLs_Return )
 	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogFunctionEndDebug(fps_Return);
-		}
+        if ( fpLs_Return != null )
+        {
+            for ( ILogger myLogger : LoggerList )
+            {
+                myLogger.LogFunctionEndDebug( fpLs_Return );
+            }
+        }
+        else
+        {
+            this.LogFunctionEnd();
+        }
 	}
 
 	public void LogFunctionEndDebug( Boolean fpb_Return )
 	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogFunctionEndDebug(fpb_Return);
-		}
+        if ( fpb_Return != null )
+        {
+            for ( ILogger myLogger : LoggerList )
+            {
+                myLogger.LogFunctionEndDebug( fpb_Return );
+            }
+        }
+        else
+        {
+            this.LogFunctionEnd();
+        }
 	}
 
 	public void LogFunctionStart( String fps_FunctionName, String... fpsParameter )

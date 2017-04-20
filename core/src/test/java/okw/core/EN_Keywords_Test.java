@@ -1447,6 +1447,7 @@ public class EN_Keywords_Test
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+        EN.SetValue( "All_MethodsObj", "Sollwert_Einstellen" );
         // Einzelner Wert
         EN.VerifySelectedValue( "All_MethodsObj", "Sollwert_Einstellen" );
 
@@ -1456,6 +1457,7 @@ public class EN_Keywords_Test
         assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
 
         // Mehrerer Werte
+        EN.SetValue( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
         EN.VerifySelectedValue( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
 
         // Check the Name, Called Method and Value of Actuel object
@@ -1487,26 +1489,25 @@ public class EN_Keywords_Test
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+        EN.SetValue( "All_MethodsObj", "Sollwert_1" );
         EN.VerifyTablecellValue( "All_MethodsObj", "Col", "Row", "Sollwert_1" );
 
         // Check the Name, Called Method and Value of Actuel object
         assertEquals( "Col", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Row", myClipBoard.getValue().get( 1 ) );
-        assertEquals( "Sollwert_1", myClipBoard.getValue().get( 2 ) );
-        assertEquals( 3, myClipBoard.getValue().size() );
+        assertEquals( 2, myClipBoard.getValue().size() );
 
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyTablecellValue()", myClipBoard.getMethod() );
 
         // Kommen auch mehrere Sollwerte im Objekt ab?
+        EN.SetValue( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
         EN.VerifyTablecellValue( "All_MethodsObj", "Col", "Row", "Sollwert_1${SEP}Sollwert_2" );
 
         // Check the Name, Called Method and Value of Actuel object
         assertEquals( "Col", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Row", myClipBoard.getValue().get( 1 ) );
-        assertEquals( "Sollwert_1", myClipBoard.getValue().get( 2 ) );
-        assertEquals( "Sollwert_2", myClipBoard.getValue().get( 3 ) );
-        assertEquals( 4, myClipBoard.getValue().size() );
+        assertEquals( 2, myClipBoard.getValue().size() );
 
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyTablecellValue()", myClipBoard.getMethod() );

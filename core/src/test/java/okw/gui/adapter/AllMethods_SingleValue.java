@@ -787,7 +787,7 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyIsActive()");
-            myClipboard.getValue().addAll(this.myALValue);;
+            myClipboard.getValue().addAll(this.myALValue);
             
             this.myLogger.LogFunctionEndDebug();
 
@@ -795,12 +795,12 @@ import okw.log.Logger_Sngltn;
         }
 
 
-        public List<String> VerifySelectedValue(ArrayList<String> fpLsExpectedValue)
+        public ArrayList<String> VerifySelectedValue()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifySelectedValue");
-            lvLsReturn.addAll(fpLsExpectedValue);
+            lvLsReturn.addAll(this.myALValue);
 
             myClipboard.Clear();
             
@@ -808,19 +808,19 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifySelectedValue()");
-            myClipboard.getValue().addAll(fpLsExpectedValue);
+            myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
 
-        public List<String> VerifyTablecellValue(String Col, String Row, ArrayList<String> fpLsExpectedValue)
+        public ArrayList<String> VerifyTablecellValue(String Col, String Row)
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyTablecellValue");
-            lvLsReturn.addAll(fpLsExpectedValue);
+            lvLsReturn.addAll(this.myALValue);
 
             myClipboard.Clear();
             String lvs_ObjectName = getKN();
@@ -830,7 +830,6 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.getValue().add(Col);
             myClipboard.getValue().add(Row);
-            myClipboard.getValue().addAll(fpLsExpectedValue);
 
             this.myLogger.LogFunctionEndDebug();
 

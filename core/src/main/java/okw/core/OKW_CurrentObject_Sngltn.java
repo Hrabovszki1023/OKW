@@ -1,6 +1,6 @@
 /*
     ==============================================================================
-    Copyright © 2012 - 2016 IT-Beratung Hrabovszki
+    Copyright © 2012 - 2017 IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -249,78 +249,11 @@ public class OKW_CurrentObject_Sngltn
         return Instance;
     }
 
-
     public ArrayList<String> GetAllChildFNsOfParent( String FN )
     {
         return myFrameObjectDictionary.GetAllChildKeysOfParent( FN );
     }
 
-
-    /**
-     * \~german \brief Ruft eine Methode des aktuellen Objektes via
-     * "latebound function call" auf. Die aufgerufene Methode hat die Signatur:
-     *
-     * | Parameter/Return | Type | | :----------------|:-------------------| | 1.
-     * Parameter | List&lt;String&gt; | | Rückgabewert | List&lt;String&gt; |
-     *
-     *
-     * \param fpsMethod Name der Methode, die aufgerufen werden soll. \param
-     * fpLsParameter_1 1. Parameter als List&lt;String&gt;. \return
-     * List&lt;String&gt; .
-     *
-     * \~english \brief Calls a method of the current Object with
-     * "late bound function call". The called method has the signature:
-     *
-     * | Parameter/Return | Type | | :----------------|:-------------------| | 1st
-     * Parameter | List&lt;String&gt; | | Return | List&lt;String&gt; |
-     *
-     *
-     * \param fpsMethod Name of the method to be called \param fpLsParameter_1 1st
-     * parameter as list&lt;String&gt;. \return List&lt;String&gt; .
-     *
-     * \~ \author Zoltan Hrabovszki \date 2012.11.01
-     */
-    @SuppressWarnings( "unchecked" )
-    public ArrayList<String> VerifySelectedValue( String FN, ArrayList<String> fpLsParameter_1 )
-                    throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-        Boolean bOK = false;
-
-        Log.LogFunctionStartDebug( "VerifySelectedValue", "String FN", FN, "ArrayList<String> fpLsParameter_1", fpLsParameter_1.toString() );
-
-        this.SetChildName( FN );
-        Class<?>[] paramTypes =
-        { ArrayList.class };
-        Class<?> myFrame_Class = cvoObject.getClass();
-
-        try
-        {
-            Method myMethod = myFrame_Class.getMethod( "VerifySelectedValue", paramTypes );
-            lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject, fpLsParameter_1 );
-            bOK = true;
-        }
-        catch (NoSuchMethodException e)
-        {
-            // Existiert die Methode des Objektes?
-            // Nein: -> Mit einem OKWFrameObjectMethodNotFoundException
-            // aussteigen...
-            String errorText = LM.GetMessage( "CallMethod", "MethodNotDefined", "VerifySelectedValue" );
-            throw new OKWFrameObjectMethodNotFoundException( errorText );
-        }
-        finally
-        {
-            if ( bOK )
-            {
-                Log.LogFunctionEndDebug( lvLsReturn );
-            }
-            else
-            {
-                Log.LogFunctionEndDebug();
-            }
-        }
-        return lvLsReturn;
-    }
 
     /**
      * \~german \brief Ruft eine Methode des aktuellen Objektes via
@@ -352,12 +285,12 @@ public class OKW_CurrentObject_Sngltn
      * \~ \author Zoltan Hrabovszki \date 2012.11.01
      */
     @SuppressWarnings( "unchecked" )
-    public ArrayList<String> VerifyTablecellValue( String FN, String fpsCol, String fpsRow, ArrayList<String> fpLsExpVal ) throws Exception, SecurityException
+    public ArrayList<String> VerifyTablecellValue( String FN, String COL, String ROW, ArrayList<String> fpLsExpVal ) throws Exception, SecurityException
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;
 
-        Log.LogFunctionStartDebug( "VerifyTablecellValue", "String FN", FN, "String Col", fpsCol, "String fpsRow", fpsRow, "ArrayList<String> fpLsExpVal",
+        Log.LogFunctionStartDebug( "VerifyTablecellValue", "FN", FN, "COL", COL, "ROW", ROW, "ArrayList<String> fpLsExpVal",
                         fpLsExpVal.toString() );
 
         this.SetChildName( FN );
@@ -368,7 +301,7 @@ public class OKW_CurrentObject_Sngltn
         try
         {
             Method myMethod = myFrame_Class.getMethod( "VerifyTablecellValue", paramTypes );
-            lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject, fpsCol, fpsRow, fpLsExpVal );
+            lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject, COL, ROW, fpLsExpVal );
             bOK = true;
         }
         catch (NoSuchMethodException e)
@@ -393,23 +326,22 @@ public class OKW_CurrentObject_Sngltn
         return lvLsReturn;
     }
 
-    // \~german
-    // \brief  Ruft die Methode ClickOn( ) des aktuellen GUI-Objektes via
-    // "late bound function call" auf.
-    //
-    // \param FN  Funktionlare Name des GUI-Objektes
-    // \return Rückgabewert ist vom Typ Boolean.
-    //
-    // \~english 
-    // \brief Calls the method ClickOn( ) of the current GUI-Object
-    // "late bound function call".
-    //
-    // \param fpsMethod Name of the method to be called.
-    // \return Result is a Boolean type.
-    //
-    // \~ 
-    // \author Zoltan Hrabovszki
-    // \date 2012.11.01
+    /** \~german
+     * Ruft die Methode ClickOn( ) des aktuellen GUI-Objektes auf.
+     *
+     * @param FN  Funktionaler Name des GUI-Objektes
+     * @return Rückgabewert ist vom Typ Boolean.
+     *
+     * \~english 
+     * Calls the method ClickOn( ) of the current GUI-Object.
+     *
+     * @param fpsMethod Name of the method to be called.
+     * @return Result is a Boolean type.
+     *
+     * \~ 
+     * @author Zoltan Hrabovszki
+     * @date 2012.11.01
+     */
     public void DoubleClickOn( String FN ) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException
     {
         Log.LogFunctionStartDebug( "DoubleClickOn" );
@@ -455,17 +387,19 @@ public class OKW_CurrentObject_Sngltn
     }
 
     /**
-     * \~german \brief Liefert die Referenz zum aktuellen Frame-Object. Referenz
-     * ist im Feld cvoObject abgelegt.
+     * \~german
+     * Liefert die Referenz zum aktuellen Frame-Object. Referenz ist im Feld cvoObject abgelegt.
      *
-     * \return Die Referenz auf das auf das aktuelle GUI-Object.
+     * @return Die Referenz auf das auf das aktuelle GUI-Object.
      *
-     * \~english \brief Gives the reference to the current Frame-Object. Reference
-     * is stored in the field cvoObject.
+     * \~english 
+     * Returns the reference to the current Frame-Object. Reference is stored in the field cvoObject.
      *
-     * \return Reference to the current GUI-Object.
+     * @return Reference to the current GUI-Object.
      *
-     * \~ \author Zoltan Hrabovszki \date 2012.11.01
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2012.11.01
      */
     public Object GetCurrentObject()
     {
@@ -492,23 +426,28 @@ public class OKW_CurrentObject_Sngltn
     }
 
     /**
-     * \~german \brief Ermittelt den ObjektNamen des aktuellen Objektes.
+     * \~german 
+     * Ermittelt den ObjektNamen des aktuellen Objektes.
      *
-     * \return Liefert den Objektnamen in der Form "WindowName.ChildName" oder
-     * "WindowName".
+     * @return Liefert den Objektnamen in der Form "WindowName.ChildName" oder "WindowName".
      *
-     * \~english \brief Detecting the ObejctName of the current Object
+     * \~english
+     * Detecting the ObejctName of the current Object
      *
-     * \return Gives the ObjectName in the form "WindowName.ChildName" or
-     * "WindowName".
+     * @return Gives the ObjectName in the form "WindowName.ChildName" or "WindowName".
      *
-     * \~ \author Zoltan Hrabovszki \date 2012.11.01
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2012.11.01
      */
     public String GetObjectFN()
     {
+        // Varaibles
         String lvsReturn = "";
-        ;
         Boolean bOK = false;
+        
+        
+        // Action
         Log.LogFunctionStartDebug( "CurrentObject.GetObjectName" );
         try
         {
@@ -530,23 +469,27 @@ public class OKW_CurrentObject_Sngltn
     }
 
     /**
-     * \~german \brief Ermittelt den FN des des aktuellen Fenster-Objektes.
+     * \~german
+     * Ermittelt den FN des des aktuellen Fenster-Objektes.
      *
-     * \return Liefert den Objektnamen in der Form "WindowName" oder
-     * "WindowName".
+     * @return Liefert den Objektnamen in der Form "WindowName" oder "WindowName".
      *
-     * \~english \brief Detecting the ObejctName of the current Object
+     * \~english
+     * Detecting the ObejctName of the current Object
      *
-     * \return Gives the ObjectName in the form "WindowName.ChildName" or
-     * "WindowName".
+     * @return Gives the ObjectName in the form "WindowName.ChildName" or "WindowName".
      *
-     * \~ \author Zoltan Hrabovszki \date 2012.11.01
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2012.11.01
      */
     public String GetWindowFN()
     {
+        // Variables
         String lvsReturn = "";
-        ;
         Boolean bOK = false;
+        
+        // Action
         Log.LogFunctionStartDebug( "CurrentObject.GetWindowFN" );
         try
         {
@@ -568,22 +511,27 @@ public class OKW_CurrentObject_Sngltn
     }
 
     /**
-     * \~german \brief Ermittelt den FN des des aktuellen Kind-Objektes.
+     * \~german
+     * Ermittelt den FN des des aktuellen Kind-Objektes.
      *
-     * \return Liefert den Objektnamen in der Form "ChildName".
+     * @return Liefert den Objektnamen in der Form "ChildName".
      *
-     * \~english \brief Detecting the ObejctName of the current Object
+     * \~english
+     * @ Detecting the ObejctName of the current Object
      *
-     * \return Gives the ObjectName in the form "WindowName.ChildName" or
-     * "WindowName".
+     * @return Gives the ObjectName in the form "WindowName.ChildName" or "WindowName".
      *
-     * \~ \author Zoltan Hrabovszki \date 2012.11.01
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2012.11.01
      */
     public String GetChildFN()
     {
+        // Varaibles
         String lvsReturn = "";
-        ;
         Boolean bOK = false;
+        
+        //Action
         Log.LogFunctionStartDebug( "CurrentObject.GetChildFN" );
         try
         {
@@ -605,21 +553,19 @@ public class OKW_CurrentObject_Sngltn
     }
 
     /**
-     * \~german \brief Führt die Initialisierung der Klasse durch: Es werden alle
-     * Felder der Klasse auf einen definierten Anfangszustand zurükgesetzt;
+     * \~german
+     * Führt die Initialisierung der Klasse durch: Es werden alle Felder der Klasse auf einen definierten Anfangszustand zurükgesetzt;
      *
      *
-     * \~english \brief Running the initializing of the class: There are all
-     * fields of the class set to a defined initial state.
+     * \~english
+     * Running the initializing of the class: There are all fields of the class set to a defined initial state.
      *
-     *
-     * \~ \author Zoltan Hrabovszki \date 2012.12.15
+     * \~
+     * @author Zoltan Hrabovszki 
+     * @date 2012.12.15
      */
     public static void Init() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
     {
-        //Log.LogFunctionStartDebug( "CurrentObject.Init" );
-        try
-        {
             LM = new LogMessenger( "OKW_CurrentObject" );
             cvoObject = null;
             cvsWindowFN = "";
@@ -627,16 +573,12 @@ public class OKW_CurrentObject_Sngltn
             cvsObjectName = "";
             myFrameObjectDictionary = null;
             myFrameObjectDictionary = FrameObjectDictionary_Sngltn.getInstance();
-        }
-        finally
-        {
-            //Log.LogFunctionEndDebug();
-        }
         return;
     }
 
     /**
-     * \~german \brief Methode gibt alle wichtigen Informationen zum aktuellen Objekt aus.
+     * \~german
+     * Methode gibt alle wichtigen Informationen zum aktuellen Objekt aus.
      * 
      * Diese soll im Fehler- oder Ausnahmefall bei der Fehlersuche
      * durch Ausgabe der aktuellen Objektdaten helfen. <br/>
@@ -665,6 +607,7 @@ public class OKW_CurrentObject_Sngltn
     public void LogObjectData()
     {
         Log.LogFunctionStartDebug( "CurrentObject.LogObjectData" );
+        
         try
         {
             Log.ResOpenList( "Object Data:" );
@@ -681,19 +624,20 @@ public class OKW_CurrentObject_Sngltn
         {
             Log.ResCloseList();
         }
+        
         Log.LogFunctionEndDebug();
     }
 
     /**
-     * \~german \brief Das aktuelle Objekt wird auf das Fenster zurückgesetzt.
-     * Kindobjekt wird gelöscht.
+     * \~german
+     * Das aktuelle Objekt wird auf das Fenster zurückgesetzt. Kindobjekt wird gelöscht.
      *
-     * \return Liefert die Objektreferenz des Fensters zurück.
+     * @return Liefert die Objektreferenz des Fensters zurück.
      *
-     * \~english \brief The current Object will be set back to the window. Child
-     * Object will be deleted.
+     * \~english
+     * The current Object will be set back to the window. Child Object will be deleted.
      *
-     * \return Returns the Object reference of the window.
+     * @return Returns the Object reference of the window.
      *
      * \~ \author Zoltan Hrabovszki \date 2012.11.01
      * @throws IllegalAccessException 
@@ -773,16 +717,15 @@ public class OKW_CurrentObject_Sngltn
        * @param fpsChildName Fachlicher Name des
        * Kind-Objektes.
        *
-       * \note Wichtig! Das Fenster-Objekt muss gesetzt sein!<br/>
-       * Ist dies nicht der Fall, wird eine OKW.OKW_Kernel_Exception Exception
+       * \note Wichtig! Das Fenster-Objekt muss bereits gesetzt sein!<br/>
+       * Ist dies nicht der Fall, wird eine OKW.OKWFrameObjectWindowNotSetException Exception
        * ausgelöst
        *
        * \~english
        * Setting the Child Object.
        *
        * @param fpsChildName Funktional name of the Child Object.
-       * @return Returns the Object reference to the current Object cvoObject
-       * with the return. 
+       * @return Returns the Object reference to the current Object cvoObject with the return. 
        *
        * \note Notice! The Windows Object must be set!<br/>
        * If not, a OKW.OKW_Kernel_Exception Exception will be triggered.
@@ -830,21 +773,25 @@ public class OKW_CurrentObject_Sngltn
 
 
     /**
-     * \~german \brief Hier wird der Kontext auf ein Fenster gesetzt. * Der
+     * \~german
+     * Hier wird der Kontext auf ein Fenster gesetzt. * Der
      * Bezeichner des letzten Kindobjektes wird gelöscht. * Frame-Klasse mit
      * "fpsWindowName" wird ggf. instanziert oder aus dem
      *
-     * \param fpsWindowName Name des Fenster, welches den Kontext erhält. \return
-     * Liefert die Objektreferenz, auf das hier gesetzte Fenster zurück.
+     * @param fpsWindowName Name des Fenster, welches den Kontext erhält.
+     * @return Liefert die Objektreferenz, auf das hier gesetzte Fenster zurück.
      *
-     * \~english \brief Here the context is set to a window. * The identifier of
+     * \~english
+     * Here the context is set to a window. * The identifier of
      * the last child Object is deleted. * Frame class with "fpsWindowName" will
      * be instantiate optionally or from the
      *
-     * \param fpsWindowName Name of the window, which contains the context.
-     * \return Returns the Object reference back to the her set window.
+     * @param fpsWindowName Name of the window, which contains the context.
+     * @return Returns the Object reference back to the her set window.
      *
-     * \~ \author Zoltan Hrabovszki \date 2012.11.01
+     * \~ 
+     * @author Zoltan Hrabovszki
+     * @date 2012.11.01
      * @throws IllegalAccessException 
      * @throws IllegalArgumentException 
      */
@@ -881,8 +828,8 @@ public class OKW_CurrentObject_Sngltn
      * Ruft eine Methode TypeKey( Val ) des aktuellen Objektes via "Latebound Function Call" auf.
      *
      * @param FN Funktionaler Name des GUI-Objektes.
-     * @param Col Spalte, in der die Werte Gesetzt werden sollen.
-     * @param Row Zeile, in der die Werte Gesetzt werden sollen.
+     * @param COL Spalte, in der die Werte Gesetzt werden sollen.
+     * @param ROW Zeile, in der die Werte Gesetzt werden sollen.
      * @param Val Liste der zu setzenden Werte.
      * @return Kein Rückgabewert.
      *
@@ -891,6 +838,8 @@ public class OKW_CurrentObject_Sngltn
      * Calls the method TypeKey( Val ) of the current Object as "late bound function call". 
      * 
      * @param FN Functional name of the GUI-Object.
+     * @param COL Column, where the Val ist tu be set.
+     * @param ROW Row, , where the Val ist tu be set.
      * @param Val Values to set.
      * @return Kein Rückgabewert.
      *         
@@ -900,12 +849,12 @@ public class OKW_CurrentObject_Sngltn
      * @date 2012.11.01
      */
     @SuppressWarnings( "unchecked" )
-    public ArrayList<String> TypeKeyTablecell( String FN, String Col, String Row, ArrayList<String> Val ) throws Exception, SecurityException
+    public ArrayList<String> TypeKeyTablecell( String FN, String COL, String ROW, ArrayList<String> Val ) throws Exception, SecurityException
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;
 
-        Log.LogFunctionStartDebug( "TypeKeyTablecell", "String FN", FN, "String Col", Col, "String Row", Row, "ArrayList<String> fpLsExpVal", Val.toString() );
+        Log.LogFunctionStartDebug( "TypeKeyTablecell", "String FN", FN, "String COL", COL, "String ROW", ROW, "ArrayList<String> fpLsExpVal", Val.toString() );
 
         this.SetChildName( FN );
         Class<?>[] paramTypes =
@@ -915,7 +864,7 @@ public class OKW_CurrentObject_Sngltn
         try
         {
             Method myMethod = myFrame_Class.getMethod( "TypeKeyTablecell", paramTypes );
-            lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject, Col, Row, Val );
+            lvLsReturn = ( ArrayList<String> ) myMethod.invoke( cvoObject, COL, ROW, Val );
             bOK = true;
         }
         catch (NoSuchMethodException e)
@@ -947,7 +896,6 @@ public class OKW_CurrentObject_Sngltn
      *
      * @param FN Funktionaler Name des GUI-Objektes.
      * @param Val Liste der zu setzenden Werte.
-     * @return Kein Rückgabewert.
      *
      *         
      * \~english
@@ -955,7 +903,6 @@ public class OKW_CurrentObject_Sngltn
      * 
      * @param FN Functional name of the GUI-Object.
      * @param Val Values to set.
-     * @return Kein Rückgabewert.
      *         
      * \~
      * @author Zoltan Hrabovszki
@@ -994,9 +941,10 @@ public class OKW_CurrentObject_Sngltn
 
     
     /**
-     * \~german \brief Methode aktualisert zwei Werte: *
-     * OKW.CurrentObject.cvsObjectName wird aktualisiert und *
-     * OKW.CurrentObject.myFrameObjectDictionary erhält eine Objekt-Referenz auf
+     * \~german
+     * Methode aktualisert zwei Werte:
+     * - OKW.CurrentObject.cvsObjectName wird aktualisiert und
+     * - OKW.CurrentObject.myFrameObjectDictionary erhält eine Objekt-Referenz auf
      * das zugehörige Frame-Objekt.
      *
      * \note Diese Methode wird von OKW.CurrentObject.SetWindowName und
@@ -1004,9 +952,10 @@ public class OKW_CurrentObject_Sngltn
      * die in SetWindowName und SetChildName gegebenen Werte das entsprechende
      * FrameObjekt instanziert.
      *
-     * \~english \brief Method updates two values: *
-     * OKW.CurrentObject.cvsObjectName is updated and *
-     * OKW.CurrentObject.myFrameObjectDictionary is receiving an Object reference
+     * \~english
+     * Method updates two values:
+     *  - OKW.CurrentObject.cvsObjectName is updated and
+     *  - OKW.CurrentObject.myFrameObjectDictionary is receiving an Object reference
      * to the corresponding frame Object.
      *
      * \note This method is called by OKW.CurrentObject.SetWindowName and
@@ -1014,7 +963,9 @@ public class OKW_CurrentObject_Sngltn
      * given in SetWindowName and SetChildName will be instantiated in the
      * corresponding frame Object.
      *
-     * \~ \author Zoltan Hrabovszki \date 2012.11.01
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2012.11.01
      * @throws IllegalAccessException 
      * @throws IllegalArgumentException 
      */
@@ -1054,22 +1005,25 @@ public class OKW_CurrentObject_Sngltn
 
     /**
      * \~german
-     * \brief Ruft eine Methode des aktuellen Objektes via
-     * "late bound function call" auf. 
+     * Ruft eine Methode, gegeben in fpsMethodName, des aktuellen Objektes via "late bound function call" auf. 
      *
-     * @param fpsMethod Name der Methode, die aufgerufen werden soll. \param
-     * fpsParameter_1 1. Parameter als Type-String.
+     * @param FN Funktionaler Name des GUI-Objektes.
+     * @param fpsMethodName der Methode, die aufgerufen werden soll.
+     * @param fpsParameter_1 1. Parameter als Type-String.
      *
-     * \~english \brief Calls a method of the current Object with
-     * "late bound function call".
+     * \~english
+     * Calls a method of the current Object with "late bound function call".
      *
-     * @param fpsMethod name of method to be called. \param fpsParameter_1 1st
+     * @param FN Functional name of the GUI-Object.
+     * @param fpsMethodName of method to be called.
+     * @param fpsParameter_1 1st
      * parameter as type-String.
      *
-     * \~ \author Zoltan Hrabovszki \date 2012.11.01
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2012.11.01
      */
-    public void Sequence( String FN, String fpsMethodName, String fpsParameter_1 )
-                    throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, XPathExpressionException
+    public void Sequence( String FN, String fpsMethodName, String fpsParameter_1 ) throws Exception
     {
         Log.LogFunctionStartDebug( "Sequence", "String fpsMethodName", fpsMethodName, "String fps_Parameter_1", fpsParameter_1 );
 

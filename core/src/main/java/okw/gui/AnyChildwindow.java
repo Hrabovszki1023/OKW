@@ -309,6 +309,18 @@ public ArrayList<String> MemorizeCaption( )
       throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> VerifyValue( )' is not defined for you GUI-Object. Please define first the methode!");
     }
 
+    public ArrayList<String> VerifyTablecellValue( String COL, String ROW )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> VerifyTablecellValue( )' is not defined for you GUI-Object. Please define first the methode!");
+    }
+
+    public ArrayList<String> VerifySelectedValue( )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> VerifySelectedValue( )' is not defined for you GUI-Object. Please define first the methode!");
+    }
+    
     public Boolean VerifyExists( )
     {
       // TODO: /todo Meldung in xml-Auslagern
@@ -345,7 +357,7 @@ public ArrayList<String> MemorizeCaption( )
         }
     }
    
-    
+
     /** \~german
      *  Methode wartet auf die Existenz des aktuellen Objectes.
      *  
@@ -397,10 +409,7 @@ public ArrayList<String> MemorizeCaption( )
             // TODO: handle exception
             throw new RuntimeException(e);
         }
-        finally
-        {
 
-        }
         return lvbReturn;
     }
 }

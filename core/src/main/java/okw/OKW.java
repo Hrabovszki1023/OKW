@@ -130,13 +130,30 @@ public @interface OKW
    */
   int VerifySelectedValue_PT() default 1000;
 
+  
+  /**
+   * \~german
+   * TimeOut in [s] für das Schlüsselwort VerifyTablecellValue.
+   * Default ist 30s.
+   */
+  int VerifyTablecellValue_TO() default 30;
+
+  /**
+   * \~german
+   * Polling Time in [ms] für das Schlüsselwort VerifyTablecellValue.
+   *
+   * Die Periodendauer des Pollens wird in Millisekunden angegeben.
+   * Default ist 1000ms (=1s).
+   */
+  int VerifyTablecellValue_PT() default 1000;
+
+  
   /**
    * \~german
    * TimeOut in [s] für das Schlüsselwort VerifyTooltip.
    * Default ist 30s.
    */
   int VerifyTooltip_TO() default 30;
-
   
   /**
    * \~german
