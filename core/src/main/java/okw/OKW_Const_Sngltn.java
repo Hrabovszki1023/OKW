@@ -527,7 +527,7 @@ public class OKW_Const_Sngltn
     {
         Log.LogFunctionStartDebug( this.getClass().getName() + ".ReadConst", "fpsInternalname", fpsInternalname );
 
-        String lvsReturn = "";
+        String lvsReturn = null;
 
         try
         {
@@ -540,14 +540,7 @@ public class OKW_Const_Sngltn
         }
         finally
         {
-            if ( lvsReturn.equals( "" ) )
-            {
-                Log.LogFunctionEndDebug();
-            }
-            else
-            {
-                Log.LogFunctionEndDebug( lvsReturn );
-            }
+            Log.LogFunctionEndDebug( lvsReturn );
         }
 
         return lvsReturn;
@@ -612,7 +605,7 @@ public class OKW_Const_Sngltn
      */
     public String GetOKWConst4Internalname( String fpsInternalname )
     {
-        String lvsReturn = "";
+        String lvsReturn = null;
 
         Log.LogFunctionStartDebug( this.getClass().getName() + ".GetOKWConst4Internalname", "fpsInternalname", fpsInternalname );
 
@@ -672,8 +665,9 @@ public class OKW_Const_Sngltn
      */
     public ArrayList<String> SplitHSEP( String fpsString2Split ) throws XPathExpressionException
     {
-        Log.LogFunctionStartDebug( this.getClass().getName() + ".SplitHSEP", "fpsString2Split", fpsString2Split );
         ArrayList<String> lvls_2Plit = new ArrayList<String>();
+
+        Log.LogFunctionStartDebug( this.getClass().getName() + ".SplitHSEP", "fpsString2Split", fpsString2Split );
 
         try
         {
@@ -730,9 +724,8 @@ public class OKW_Const_Sngltn
      */
     public ArrayList<String> SplitSEP( String fpsString2Split ) throws XPathExpressionException
     {
-        Log.LogFunctionStartDebug( this.getClass().getName() + ".SplitSEP", "fpsString2Split", fpsString2Split );
-
         ArrayList<String> lvls_2Plit = null;
+        Log.LogFunctionStartDebug( this.getClass().getName() + ".SplitSEP", "fpsString2Split", fpsString2Split );
 
         try
         {
@@ -791,8 +784,9 @@ public class OKW_Const_Sngltn
     */
     public ArrayList<String> SplitVSEP( String fps_String2Split ) throws XPathExpressionException
     {
-        Log.LogFunctionStartDebug( this.getClass().getName() + ".SplitHSEP", "fps_String2Split", fps_String2Split );
         ArrayList<String> lvls_2Plit = new ArrayList<String>();
+
+        Log.LogFunctionStartDebug( this.getClass().getName() + ".SplitHSEP", "fps_String2Split", fps_String2Split );
 
         try
         {

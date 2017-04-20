@@ -258,8 +258,7 @@ public class OKW_Memorize_Sngltn
 	 */
 	public String Get( String fpsKey )
 	{
-		String lvsReturn = "";
-		Boolean bOK = false;
+		String lvsReturn = null;
 
 		Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Get", "String fpsKey", fpsKey);
 
@@ -274,19 +273,10 @@ public class OKW_Memorize_Sngltn
 				String ErrorText = LM.GetMessage("Get", "OKWMemorizeKeyNotExistsException", fpsKey);
 				throw new OKWMemorizeKeyNotExistsException(ErrorText);
 			}
-
-			bOK = true;
 		}
 		finally
 		{
-			if (bOK)
-			{
-				Log.LogFunctionEndDebug();
-			}
-			else
-			{
-				Log.LogFunctionEndDebug(lvsReturn);
-			}
+			Log.LogFunctionEndDebug(lvsReturn);
 		}
 
 		return lvsReturn;
