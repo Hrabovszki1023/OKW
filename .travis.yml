@@ -3,6 +3,11 @@ language: java
 # This will run on Travis' 'new' container-based infrastructure
 sudo: false
 
+# Blacklist
+branches:
+  except:
+    - gh-pages
+    
 jdk:
   - oraclejdk8
 
