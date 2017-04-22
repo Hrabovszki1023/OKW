@@ -38,7 +38,6 @@ before_install:
   - echo $OKWGeckodriverPath 
   
 install:
-  - InstallDoxygen.sh
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
 
 before_script:
@@ -56,6 +55,8 @@ script:
 # Generate and deploy documentation
 after_success:
   - cd $TRAVIS_BUILD_DIR
+  - chmod +x InstallDoxygen.sh
+  - ./InstallDoxygen.sh
   - chmod +x generateDocumentationAndDeploy.sh
   - ./generateDocumentationAndDeploy.sh
   - cd $TRAVIS_BUILD_DIR/html
