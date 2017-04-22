@@ -23,10 +23,10 @@ addons:
   firefox: latest
   apt:
     packages:
-      - doxygen
-      - doxygen-doc
-      - doxygen-latex
-      - doxygen-gui
+      # - doxygen
+      # - doxygen-doc
+      # - doxygen-latex
+      # - doxygen-gui
       - graphviz
       
 before_install:
@@ -37,7 +37,8 @@ before_install:
   - export OKWGeckodriverPath=$PWD/geckodriver/geckodriver
   - echo $OKWGeckodriverPath 
   
-install:  
+install:
+  - InstallDoxygen.sh
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
 
 before_script:
