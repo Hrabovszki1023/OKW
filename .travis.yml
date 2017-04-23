@@ -23,10 +23,10 @@ addons:
   firefox: latest
   apt:
     packages:
-      - doxygen
-      - doxygen-doc
-      - doxygen-latex
-      - doxygen-gui
+      # - doxygen
+      # - doxygen-doc
+      # - doxygen-latex
+      # - doxygen-gui
       - graphviz
       
 before_install:
@@ -35,9 +35,12 @@ before_install:
   - tar -xzf geckodriver-v0.15.0-linux64.tar.gz -C geckodriver
   - export PATH=$PATH:$PWD/geckodriver
   - export OKWGeckodriverPath=$PWD/geckodriver/geckodriver
-  - echo $OKWGeckodriverPath 
+  - echo $OKWGeckodriverPath
+  - sudo apt-get update
+  - sudo apt-get install plantuml
   
-install:  
+  
+install: 
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
 
 before_script:
@@ -55,8 +58,11 @@ script:
 # Generate and deploy documentation
 after_success:
   - cd $TRAVIS_BUILD_DIR
+  - chmod +x InstallDoxygen.sh
+  - ./InstallDoxygen.sh
   - chmod +x generateDocumentationAndDeploy.sh
   - ./generateDocumentationAndDeploy.sh
+  - cd $TRAVIS_BUILD_DIR/html
   - ls -sl
 
 notifications:
