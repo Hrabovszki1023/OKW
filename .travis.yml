@@ -18,6 +18,7 @@ env:
     - DOXYFILE: $TRAVIS_BUILD_DIR/src/doxygen/OKW_DE.doxyfile
     - GH_REPO_REF: github.com/Hrabovszki1023/OKW.git
     - WORKSPACE: $TRAVIS_BUILD_DIR
+    - BUILD_ID: $TRAVIS_BUILD_NUMBER
     
 addons:  
   firefox: latest
