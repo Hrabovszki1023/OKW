@@ -70,11 +70,6 @@ echo "" > .nojekyll
 ################################################################################
 ##### Generate the Doxygen code documentation and log the output.          #####
 echo 'Generating Doxygen code documentation...'
-java  -Djava.awt.headless=true -jar $PLANTUML_JAR -v -o $PWD/html  "./**.(java)"
-
-################################################################################
-##### Generate the Doxygen code documentation and log the output.          #####
-echo 'Generating Doxygen code documentation...'
 # Redirect both stderr and stdout to the log file AND the console.
 $HOME/local/bin/doxygen $DOXYFILE # 2>&1 | tee doxygen.log
 
