@@ -19,10 +19,14 @@ env:
     - GH_REPO_REF: github.com/Hrabovszki1023/OKW.git
     - WORKSPACE: $TRAVIS_BUILD_DIR
     
-addons:
+addons:  
   firefox: latest
   apt:
     packages:
+      # - doxygen
+      # - doxygen-doc
+      # - doxygen-latex
+      # - doxygen-gui
       - graphviz
       
 before_install:
@@ -31,16 +35,15 @@ before_install:
   - tar -xzf geckodriver-v0.15.0-linux64.tar.gz -C geckodriver
   - export PATH=$PATH:$PWD/geckodriver
   - export OKWGeckodriverPath=$PWD/geckodriver/geckodriver
-  - echo $OKWGeckodriverPath
+  - echo $OKWGeckodriverPath 
   
-  
-install:
+install: 
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
 
- before_script:
-   - "export DISPLAY=:99.0"
-   - "sh -e /etc/init.d/xvfb start"
-   - sleep 3 # give xvfb some time to start
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
 
 script:
   - ls
