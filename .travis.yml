@@ -34,7 +34,7 @@ before_install:
  - echo $OKWGeckodriverPath
   
   
- install: 
+install: 
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
 
  before_script:
