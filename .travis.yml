@@ -36,8 +36,7 @@ before_install:
   - export PATH=$PATH:$PWD/geckodriver
   - export OKWGeckodriverPath=$PWD/geckodriver/geckodriver
   - echo $OKWGeckodriverPath
-  - sudo apt-get update
-  - sudo apt-get install plantuml
+  - apt-get install plantuml
   
   
 install: 
