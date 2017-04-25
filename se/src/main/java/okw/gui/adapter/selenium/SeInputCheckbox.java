@@ -88,13 +88,13 @@ import okw.gui.*;
      * 
      * | OpenKeyWord | Implementiert | Beschreibung |
      * | ----------- | :-----------: | :----------- |
-     * | `VerifyExists( FN, ExpVal)`, <br/>`MemorizeExists( FN, MemKey)`, <br/>`LogExists( FN )` | **YES** |  |
-     * | `VerifyHasFocus( FN, ExpVal )`, <br/>`MemorizeHasFocus( FN, MemKey)`, <br/>`LogHasFocus( FN )` | **YES** |  |
-     * | `VerifyIsActive( FN, ExpVal )`, <br/>`MemorizeIsActive( FN, MemKey)`, <br/>`LogIsActive( FN )` | YES |  |
-     * | `VerifyCaption( FN, ExpVal )`, <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | Yes | \- The visibe Text is a the Caption of a Checkfield |
-     * | `VerifyLabel( FN, ExpVal )`, <br>`VerifyLabelWCM( FN, ExpVal )`, <br>`VerifyLabelREGX( FN, ExpVal )`, <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )` | ?? - **YES** | Check: Is a CheckBox bindable to label... |
-     * | `VerifyTooltip( FN, ExpVal )`, <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **YES** |  |
-     * | `VerifyValue( FN, ExpVal )`, <br>`VerifyValueWCM( FN, ExpVal )`, <br>`VerifyValueREGX( FN, ExpVal )`, <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )` | YES | "CHECKED/UNCHECKED",<br/> VerifyValueREGX and VerifyValueWCM -> NI, |
+     * | `VerifyExists( FN, ExpVal)`,    <br>`MemorizeExists( FN, MemKey)`,    <br>`LogExists( FN )` | **JA** |  |
+     * | `VerifyHasFocus( FN, ExpVal )`, <br>`MemorizeHasFocus( FN, MemKey)`,  <br>`LogHasFocus( FN )` | **JA** |  |
+     * | `VerifyIsActive( FN, ExpVal )`, <br>`MemorizeIsActive( FN, MemKey)`,  <br>`LogIsActive( FN )` | **JA** |  |
+     * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **JA** | Caption ist der sichtbare Text neben der Checkboc |
+     * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )` | - **JA** | Zu Prüfen: Ist eine CheckBox mit einem Label verbindbar? |
+     * | `VerifyTooltip( FN, ExpVal )`,  <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **JA** | Wert des attributes `title` |
+     * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )` | **JA** | Wenn gesetzt = `CHECKED` sonst `UNCHECKED` |
      * 
      *  # Quellen/Links
      *  
