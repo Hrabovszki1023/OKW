@@ -46,10 +46,62 @@ import okw.OKW_Const_Sngltn;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.gui.*;
 
-    /** \brief
-     *  Diese Klasse representiert eine CheckBox,
-     *  die mit Selenium angsteuert wird.
+    /**
+     * \~german
+     *  Diese Klasse representiert eine HTML-CheckBox, die mit Selenium angsteuert wird.
      *  
+     *  # Unterstützter Tag
+     *  \code{.html}
+     *  <input type="checkbox" name="ingredients" value="salami" title="title: salami">Salami<br>
+     *  \endcode
+     * 
+     * # Unterstützte GUI-Schlüsselwörter
+     *
+     * | OpenKeyWord | Implementiert | Beschreibung |
+     * | ----------- | :-----------: | :----------- |
+     * | `StarApp( AN )` | NO |  |
+     * | `StopApp( AN )` | NO |  |
+     * 
+     * | OpenKeyWord | Implementiert | Beschreibung |
+     * | ----------- | :-----------: | :----------- |
+     * | `ClickOn( FN )` | **YES** |  |
+     * | `DoubleClickOn( FN )` | **NO** | What happens on a CheckBox-DoubleClick??? |
+     * | `SetFocus( FN )` | **YES** |  |
+     * | `SetValue( FN, Val )` | **YES** | `SetValue( "MyChekckBox", "CHECKED")` - why not?!?. |
+     * | `Select( FN, Val )` | No | No Value inside Pushbutton to Select |
+     * | `SelectMenu( FN )` | NO |  |
+     * | `SelectMenu( FN, Val )` | NO |  |
+     * | `TypeKey( FN, Val )` | basicaly **YES** | Hint: TODO Define KeyNames for e.g. ${BLANK} TypeKey( "myCheckbox", "${BLANK}") (Does not work with the current core!) |
+     * 
+     * ## Fensterbezogene Schlüsselwörter
+     * 
+     * | OpenKeyWord | Implementiert | Beschreibung |
+     * | ----------- | :-----------: | :----------- |
+     * | `SelectWindow( FN )` | NO | checkbox is not a Window |
+     * | `Sequence( FN, SQN, SEQ_ID )` | NO | checkbox is not a Window |
+     * 
+     * ## Verifying, Memorizing, Logging Values
+     * 
+     * Group of keywords using the same GUI-Adapter Methods get*() <br/>
+     * (e.g.: `VerifyExists( FN, ExpVal)`, `MemorizeExists( FN, MemKey)`,`LogExists( FN )` -> `getExists()` )
+     * 
+     * | OpenKeyWord | Implementiert | Beschreibung |
+     * | ----------- | :-----------: | :----------- |
+     * | `VerifyExists( FN, ExpVal)`, <br/>`MemorizeExists( FN, MemKey)`, <br/>`LogExists( FN )` | **YES** |  |
+     * | `VerifyHasFocus( FN, ExpVal )`, <br/>`MemorizeHasFocus( FN, MemKey)`, <br/>`LogHasFocus( FN )` | **YES** |  |
+     * | `VerifyIsActive( FN, ExpVal )`, <br/>`MemorizeIsActive( FN, MemKey)`, <br/>`LogIsActive( FN )` | YES |  |
+     * | `VerifyCaption( FN, ExpVal )`, <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | Yes | \- The visibe Text is a the Caption of a Checkfield |
+     * | `VerifyLabel( FN, ExpVal )`, <br>`VerifyLabelWCM( FN, ExpVal )`, <br>`VerifyLabelREGX( FN, ExpVal )`, <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )` | ?? - **YES** | Check: Is a CheckBox bindable to label... |
+     * | `VerifyTooltip( FN, ExpVal )`, <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **YES** |  |
+     * | `VerifyValue( FN, ExpVal )`, <br>`VerifyValueWCM( FN, ExpVal )`, <br>`VerifyValueREGX( FN, ExpVal )`, <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )` | YES | "CHECKED/UNCHECKED",<br/> VerifyValueREGX and VerifyValueWCM -> NI, |
+     * 
+     *  # Quellen/Links
+     *  - [SelfHTML: https://wiki.selfhtml.org/wiki/HTML/Formulare/input/Radio-Buttons_und_Checkboxen#Checkboxen)
+     *  - [HTML/Formulare](https://github.com/Hrabovszki1023/OKW/issues/24)
+     *  
+     *  \~english
+     *  
+     *  \~
      *  @author Zoltan Hrabovszki
      *  @date 2013.04.11
      */
@@ -60,7 +112,7 @@ import okw.gui.*;
 
         /**
          *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
-         *
+         *  
          *  @date 2017.02.17
          */         
         public SeInputCheckbox( String Locator, OKWLocator... Locators )
@@ -82,17 +134,20 @@ import okw.gui.*;
          }        
 
          
-        /** \brief
-         *  Method liefert den aktuellen zustand der Checkbox, "angehakt" oder "nicht angehakt".
+        /**
+         * \~german
+         *  Method liefert den aktuellen Zustand der Checkbox, "angehakt" oder "nicht angehakt".
          *  
-         *  Alle OKW Checkbox methoden
-         *  Laufen über diese methode um den aktuellen zustand zu ermitteln.
+         *  Alle Methoden dieser Klasse verwenden diese Methode um den aktuellen Zustand zu ermitteln.
          *  
-         *  _Anmerkung:_ kein WaitForMe aufruf: WaitForMe() wird schon inder aufrufenden Methode ausgeführt.
+         *  \note WaitForMe() wird inder aufrufenden Methode ausgeführt.
          *  
          *  @return true falls angehakt, sonst false
+         *  
+         *  \~english
+         *  
+         *  \~
          *  @author Zoltan Hrabovszki
-         *  @throws Exception 
          *  @date 2013.04.11
          */
         public Boolean getIsSelected()
@@ -101,9 +156,9 @@ import okw.gui.*;
             
             try
             {
-                this.LogFunctionStartDebug("IsSelected");
+                this.LogFunctionStartDebug("getIsSelected");
 
-                // Hole Zusand: Häckchen oder kein Häckchen, das ist hier die Frage?
+                // Hole Zusand: "Häkschen" oder kein "Häkschen", das ist hier die Frage...
                 lvbReturn = this.Me().isSelected();
             }
             finally
@@ -114,11 +169,16 @@ import okw.gui.*;
         }
         
 
-        /** \brief
-         *  Method verlässt die Checkbox angehakt, egal ob diese vorher angehakt war oder nicht.
+        /**
+         * \~german
+         *  Method verlässt die Checkbox immer angehakt, egal ob diese vorher angehakt war oder nicht.
          *  
+         *  
+         *  \~english
+         *  
+         *  \~
          *  @author Zoltan Hrabovszki
-         * @throws Exception 
+         *  @throws Exception 
          *  @date 2013.04.11
          */
         public void Checking()
@@ -140,13 +200,19 @@ import okw.gui.*;
             return;
         }
 
-        /** Ermittelt den aktuellen Wert der CheckBox.
+        /**
+         * \~german
+         * Ermittelt/holt den aktuellen Wert der CheckBox.
          * 
-         * Mögliche Werte sind Sprachabhängig CHECKED/UNCHECKED
+         * Die Mögliche Werte sind sprachabhängig CHECKED/UNCHECKED
          * 
          * @return Liefert im ersten Wert des ArrayList&lt;String&gt; sprachabhängig CHECKED/UNCHECKED zurück.
-         * @author Zoltan Hrabovszki
-         * @throws Exception 
+         *
+         *  
+         *  \~english
+         *  
+         *  \~
+         * @author Zoltán Hrabovszki
          * @date 2013.04.11
          */
         @Override
@@ -180,8 +246,13 @@ import okw.gui.*;
         }
         
         /**
+         * \~german
+         *  
+         *  \~english
+         *  
+         *  \~
+         *  
          *  @author Zoltan Hrabovszki
-         * @throws Exception 
          *  @date 2013.04.11
          */
         @Override
@@ -222,8 +293,20 @@ import okw.gui.*;
             return;
         }
 
-        // \author Zoltan Hrabovszki
-        // \date 2013.04.11
+        /**
+         * \~german
+         * 
+         * Erlaubte Werte sind sprachabhängig CHECKED/UNCHECKED.
+         * 
+         * @exception OKWNotAllowedValueException wird aus glöst, wenn ein andere wert als die sprach abhängigen Werte CHECKED/UNCHECKED
+         * 
+         *  \~english
+         *  
+         *  \~  
+         *  \copydoc SeAnyChildWindow::Select(ArrayList<String>)
+         *  @author Zoltan Hrabovszki
+         *  @date 2013.04.11
+         */
         @Override
         public void Select(ArrayList<String> fps_Values)
         {
@@ -262,14 +345,15 @@ import okw.gui.*;
         }
 
         
-        /** \brief
-         *  Method verlässt die Checkbox unangehakt, egal ob sie vorher angehakt
+        /**
+         * \~german
+         * 
+         *  Method verlässt die Checkbox immer unangehakt, egal ob sie vorher angehakt
          *  war oder nicht.<br/>
-         *  __Anmerkung:__ Die Eigenschaft Element.Selected() ist nicht beschreibar.
-         *  Daher
+         *  
+         *  \note Die Eigenschaft Element.Selected() ist nicht beschreibar. Daher wird ggf. die Methode Click() verwendet.
          *  
          *  @author Zoltan Hrabovszki
-         * @throws Exception 
          *  @date 2013.04.11
          */
         public void UnChecking()
