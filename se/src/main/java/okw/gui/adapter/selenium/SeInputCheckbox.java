@@ -51,6 +51,7 @@ import okw.gui.*;
      *  Diese Klasse representiert eine HTML-CheckBox, die mit Selenium angsteuert wird.
      *  
      *  # Unterstützter Tag
+<<<<<<< HEAD
      *  Folgender HTML-Tag wird unterstützt:
      *  
      *  \code{.html}
@@ -98,6 +99,53 @@ import okw.gui.*;
      * 
      *  # Quellen/Links
      *  
+=======
+     *  \code{.html}
+     *  <input type="checkbox" name="ingredients" value="salami" title="title: salami">Salami<br>
+     *  \endcode
+     * 
+     * # Unterstützte GUI-Schlüsselwörter
+     *
+     * | OpenKeyWord | Implementiert | Beschreibung |
+     * | ----------- | :-----------: | :----------- |
+     * | `StarApp( AN )` | NO |  |
+     * | `StopApp( AN )` | NO |  |
+     * 
+     * | OpenKeyWord | Implementiert | Beschreibung |
+     * | ----------- | :-----------: | :----------- |
+     * | `ClickOn( FN )` | **YES** |  |
+     * | `DoubleClickOn( FN )` | **NO** | What happens on a CheckBox-DoubleClick??? |
+     * | `SetFocus( FN )` | **YES** |  |
+     * | `SetValue( FN, Val )` | **YES** | `SetValue( "MyChekckBox", "CHECKED")` - why not?!?. |
+     * | `Select( FN, Val )` | No | No Value inside Pushbutton to Select |
+     * | `SelectMenu( FN )` | NO |  |
+     * | `SelectMenu( FN, Val )` | NO |  |
+     * | `TypeKey( FN, Val )` | basicaly **YES** | Hint: TODO Define KeyNames for e.g. ${BLANK} TypeKey( "myCheckbox", "${BLANK}") (Does not work with the current core!) |
+     * 
+     * ## Fensterbezogene Schlüsselwörter
+     * 
+     * | OpenKeyWord | Implementiert | Beschreibung |
+     * | ----------- | :-----------: | :----------- |
+     * | `SelectWindow( FN )` | NO | checkbox is not a Window |
+     * | `Sequence( FN, SQN, SEQ_ID )` | NO | checkbox is not a Window |
+     * 
+     * ## Verifying, Memorizing, Logging Values
+     * 
+     * Group of keywords using the same GUI-Adapter Methods get*() <br/>
+     * (e.g.: `VerifyExists( FN, ExpVal)`, `MemorizeExists( FN, MemKey)`,`LogExists( FN )` -> `getExists()` )
+     * 
+     * | OpenKeyWord | Implementiert | Beschreibung |
+     * | ----------- | :-----------: | :----------- |
+     * | `VerifyExists( FN, ExpVal)`, <br/>`MemorizeExists( FN, MemKey)`, <br/>`LogExists( FN )` | **YES** |  |
+     * | `VerifyHasFocus( FN, ExpVal )`, <br/>`MemorizeHasFocus( FN, MemKey)`, <br/>`LogHasFocus( FN )` | **YES** |  |
+     * | `VerifyIsActive( FN, ExpVal )`, <br/>`MemorizeIsActive( FN, MemKey)`, <br/>`LogIsActive( FN )` | YES |  |
+     * | `VerifyCaption( FN, ExpVal )`, <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | Yes | \- The visibe Text is a the Caption of a Checkfield |
+     * | `VerifyLabel( FN, ExpVal )`, <br>`VerifyLabelWCM( FN, ExpVal )`, <br>`VerifyLabelREGX( FN, ExpVal )`, <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )` | ?? - **YES** | Check: Is a CheckBox bindable to label... |
+     * | `VerifyTooltip( FN, ExpVal )`, <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **YES** |  |
+     * | `VerifyValue( FN, ExpVal )`, <br>`VerifyValueWCM( FN, ExpVal )`, <br>`VerifyValueREGX( FN, ExpVal )`, <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )` | YES | "CHECKED/UNCHECKED",<br/> VerifyValueREGX and VerifyValueWCM -> NI, |
+     * 
+     *  # Quellen/Links
+>>>>>>> branch 'master' of https://github.com/Hrabovszki1023/OKW.git
      *  - [SelfHTML: https://wiki.selfhtml.org/wiki/HTML/Formulare/input/Radio-Buttons_und_Checkboxen#Checkboxen)
      *  - [HTML/Formulare](https://github.com/Hrabovszki1023/OKW/issues/24)
      *  
