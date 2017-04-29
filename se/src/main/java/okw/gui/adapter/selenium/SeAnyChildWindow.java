@@ -1095,7 +1095,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 	 /**
 	  * \~german
-	  *  Ermittelt den textuellen Inhalt des ToolTips für Prüfewert.
+	  *  Ermittelt den textuellen Inhalt des ToolTips.
 	  *  
 	  *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
 	  *  

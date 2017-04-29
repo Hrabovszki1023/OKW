@@ -230,6 +230,11 @@ public class SeRadioList extends SeAnyChildWindow
                     break;
                 }
             }
+            if ( 0 == lvLsReturn.size() )
+            {
+                lvLsReturn.add( "" );
+            }
+            
         }
         catch (XPathExpressionException | JAXBException | ParserConfigurationException | SAXException | IOException e)
         {

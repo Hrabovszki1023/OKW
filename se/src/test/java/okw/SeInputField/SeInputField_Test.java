@@ -447,6 +447,37 @@ public class SeInputField_Test {
       EN.EndTest();
   }
 
+  
+  /** \~german
+   *  Test des Schlüsselwortes "VerifyValue( FN, ExpVal ) für SeInputText.
+   *
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2014.12.03
+   */
+  @Test
+  public void tcVerifyCaption() throws Exception
+  {
+      EN.BeginTest( name.getMethodName() );
+      EN.StartApp( ApplicationName );
+
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.SelectWindow( "SeTextField" );
+
+      // First off all teh Name-Field is Empty
+      EN.VerifyValue( "Name", "${EMPTY}" );
+      
+      // First off all teh Name-Field is Empty
+      EN.VerifyCaption( "Name", "${EMPTY}" );
+      
+      EN.SetValue( "Name", "Zoltan" );
+      EN.VerifyCaption( "Name", "Zoltan" );
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+  }
+
+  
   // \brief
   // Testet das Schlüsselwort TypeKey( FN ) mit ${IGNORE} eines SeInputText-es.
   //

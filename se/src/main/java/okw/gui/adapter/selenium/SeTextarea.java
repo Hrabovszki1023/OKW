@@ -164,7 +164,7 @@ import okw.gui.OKWLocator;
                 // Get Value from TextField and put this into the return List<string>
                 String myValue = this.Me().getAttribute("value");
                 
-                if(!myValue.isEmpty())
+                if(myValue!=null)
                 {
                   lvLsReturn.add(this.Me().getAttribute("value"));
                 }

@@ -193,8 +193,6 @@ public class OKW_Helper
 		String lvsReturn = "";
 		ArrayList<String> lvLsSplitedSource = null;
 
-		Boolean bOK = false;
-
 		int RangeMin = 1;
 		int RangeMax = 1;
 
@@ -235,19 +233,10 @@ public class OKW_Helper
 				String lvsLM = LM.GetMessage("GetLeftFromDelimiterNumber", "OKWDelimiterIsEmptyException");
 				throw new IllegalArgumentException(lvsLM);
 			}
-
-			bOK = true;
 		}
 		finally
 		{
-			if (bOK)
-			{
-				Log.LogFunctionEndDebug(lvsReturn);
-			}
-			else
-			{
-				Log.LogFunctionEndDebug();
-			}
+			Log.LogFunctionEndDebug(lvsReturn);
 		}
 
 		return lvsReturn;
@@ -311,7 +300,6 @@ public class OKW_Helper
 	{
 		String lvsReturn = "";
 		List<String> lvLsSplitedSource = null;
-		Boolean bOK = false;
 		int RangeMin = 1;
 		int RangeMax = 1;
 		try
@@ -350,19 +338,10 @@ public class OKW_Helper
 				String lvsLM = LM.GetMessage("GetRightFromDelimiterNumber", "OKWDelimiterIsEmptyException");
 				throw new IllegalArgumentException(lvsLM);
 			}
-
-			bOK = true;
 		}
 		finally
 		{
-			if (bOK)
-			{
-				Log.LogFunctionEndDebug(lvsReturn);
-			}
-			else
-			{
-				Log.LogFunctionEndDebug();
-			}
+		    Log.LogFunctionEndDebug(lvsReturn);
 		}
 
 		return lvsReturn;
@@ -390,7 +369,6 @@ public class OKW_Helper
 	public static Boolean ListStringCompare( List<String> ListString1, List<String> ListString2 )
 	{
 		Boolean lvbReturn = true;
-		Boolean bOK = false;
 
 		Log.LogFunctionStartDebug("OKW_Helper.ListStringCompare", "ListString1", ListString1.toString(), "ListString2",
 				ListString2.toString());
@@ -419,19 +397,10 @@ public class OKW_Helper
 			{
 				lvbReturn = false;
 			}
-
-			bOK = true;
 		}
 		finally
 		{
-			if (bOK)
-			{
-				Log.LogFunctionEndDebug(lvbReturn);
-			}
-			else
-			{
-				Log.LogFunctionEndDebug();
-			}
+			Log.LogFunctionEndDebug(lvbReturn);
 		}
 
 		return lvbReturn;
@@ -486,14 +455,12 @@ public class OKW_Helper
 	public static String ListStringConcat( ArrayList<String> fps_ListString2Concat, String fps_Delimiter )
 	{
 		String lvsReturn = "";
-		Boolean bOK = false;
 
 		Log.LogFunctionStartDebug("OKW_Helper.ListStringConcat", "fps_ListString2Concat",
 				fps_ListString2Concat.toString(), "fps_Separator", fps_Delimiter);
 
 		try
 		{
-
 			StringBuilder sb = new StringBuilder();
 			
 			for (int i=0;  i<fps_ListString2Concat.size(); i++)
@@ -507,19 +474,10 @@ public class OKW_Helper
 			}
 
 			lvsReturn = sb.toString();
-
-			bOK = true;
 		}
 		finally
 		{
-			if (bOK)
-			{
-				Log.LogFunctionEndDebug(lvsReturn);
-			}
-			else
-			{
-				Log.LogFunctionEndDebug();
-			}
+			Log.LogFunctionEndDebug(lvsReturn);
 		}
 
 		return lvsReturn;
@@ -546,7 +504,6 @@ public class OKW_Helper
 	{
 		// Variables:
 		Boolean lvbReturn = false;
-		Boolean bOK = false;
 
 		// Action:
 		try
@@ -565,20 +522,10 @@ public class OKW_Helper
 
 			// C#: lvb_Return = regex.IsMatch(fpsStringToMatch);
 			lvbReturn = fpsStringToMatch.matches(pattern);
-
-			bOK = true;
-
 		}
 		finally
 		{
-			if (bOK)
-			{
 				Log.LogFunctionEndDebug(lvbReturn);
-			}
-			else
-			{
-				Log.LogFunctionEndDebug();
-			}
 		}
 
 		return lvbReturn;
@@ -605,7 +552,6 @@ public class OKW_Helper
 	{
 		// Variables:
 		Boolean lvbReturn = false;
-		Boolean bOK = true;
 
 		// Action:
 		try
@@ -626,19 +572,10 @@ public class OKW_Helper
 
 			// C#: lvb_Return = regex.IsMatch(fpsStringToMatch);
 			lvbReturn = fpsStringToMatch.matches("(?i:" + pattern + ")");
-
-			bOK = true;
 		}
 		finally
 		{
-			if (bOK)
-			{
-				Log.LogFunctionEndDebug(lvbReturn);
-			}
-			else
-			{
-				Log.LogFunctionEndDebug();
-			}
+			Log.LogFunctionEndDebug(lvbReturn);
 		}
 
 		return lvbReturn;
@@ -816,30 +753,19 @@ public class OKW_Helper
 	/// \date 2013.05.03
 	public static ArrayList<String> StrSplit_old( String fpsString2Split, String fpsSeparator )
 	{
-		Boolean bOK = false;
-
 		String[] lvsA_Splited;
 		ArrayList<String> lvls_Splited = new ArrayList<String>();
 
-		Log.LogFunctionStartDebug("OKW_Helper.StrSplit", "fpsString2Split", fpsString2Split, "fpsSeparator",
-				fpsSeparator);
+		Log.LogFunctionStartDebug("OKW_Helper.StrSplit", "fpsString2Split", fpsString2Split, "fpsSeparator", fpsSeparator);
 
 		try
 		{
 			lvsA_Splited = fpsString2Split.split(fpsSeparator);
 			lvls_Splited = StrArray2ListStr(lvsA_Splited);
-			bOK = true;
 		}
 		finally
 		{
-			if (bOK)
-			{
-				Log.LogFunctionEndDebug(lvls_Splited);
-			}
-			else
-			{
-				Log.LogFunctionEndDebug();
-			}
+			Log.LogFunctionEndDebug(lvls_Splited);
 		}
 
 		return lvls_Splited;
@@ -849,7 +775,6 @@ public class OKW_Helper
 	
 	public static ArrayList<String> StrSplit(String fpsString2Split, String fpsSeparator)
 	{
-		Boolean bOK = false;
 		ArrayList<String> SplitedList = new ArrayList<String>();
 	    int offset = 0;
 	    
@@ -872,18 +797,10 @@ public class OKW_Helper
 	            offset = (index + fpsSeparator.length());
 	        }
 	    }
-		bOK = true;
 	}
 	finally
 	{
-		if (bOK)
-		{
-			Log.LogFunctionEndDebug(SplitedList);
-		}
-		else
-		{
-			Log.LogFunctionEndDebug();
-		}
+		Log.LogFunctionEndDebug(SplitedList);
 	}
 	    
 	    return SplitedList;
@@ -913,18 +830,33 @@ public class OKW_Helper
 		return lvsReturn.toString();
 	}
 
-	
-	/// \todo TODO: Methode Documentieren!
+/**
+ * \~german
+ * Prüft ob der gegeben String `fpsStrin` `null` oder leer ("") ist.
+ *
+ * @param fpsStrin Zu prüfender String
+ * @return `true`, falls der String Leer oder `null` ist sondt `false`
+ * \~english
+ *
+ *
+ * @param ? 
+ * @return returns `true`, if the given String is empty or `null`, else `false`
+ * \~
+ * @author Zoltán Hrabovszki
+ * @date 2017-04-27
+ */
 	public static Boolean StringIsNullOrEmpty( String fpsString)
 	{
+		// Variables
+	    Boolean lvbReturn = true;
 		
-		Boolean lvbReturn = true;
-		
+	    // Action
 		if(fpsString != null && !fpsString.isEmpty())
 		{
 			lvbReturn = false;
-		}	
-
+		}
+		
+		// Return
 		return lvbReturn;
 	}
 }

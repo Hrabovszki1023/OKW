@@ -47,16 +47,69 @@ import org.openqa.selenium.WebElement;
 import okw.gui.OKWLocator;
 
 
-    /** \~german
-     *  \brief
-     *  Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld<br/>.
-     *  GUI-Automatisierungswerkzeug: Selenium.<br/>
-     *  Die meisten Methoden werden aus der abtrakten Klasse SeSimpleDataObjekt geerbt.
-     *  
-     *  \~
-     *  \author Zoltan Hrabovszki
-     *  \date 2014.06.2014
-     */
+/**
+ * \~german
+ *  Diese Klasse representiert einen HTML-Button, die mit Selenium angsteuert wird.
+ *  
+ *  # Unterstützter Tag
+ *  Folgender HTML-Tag wird unterstützt:
+ *  
+ *  \code{.html}
+ *  <label for="ID_Name">Name:</label>
+ *  <input type="text" name="Name" id="ID_Name" title="Title Name." size="30" maxlength="30">
+ *  \endcode
+ * 
+ * # Unterstützte GUI-Schlüsselwörter
+ *
+ * ## Kindobjekt Aktionen
+ * 
+ * | OpenKeyWord               | Implementiert | Beschreibung |
+ * | ------------------------- | :-----------: | :----------- |
+ * | `ClickOn( FN )`           | **JA**        |  |
+ * | `DoubleClickOn( FN )`     | **JA**        |  |
+ * | `SetFocus( FN )`          | **JA**        |  |
+ * | `SetValue( FN, Val )`     | **JA**        | Sichtbarer Eigabewert des Textfeldes |
+ * | `Select( FN, Val )`       | **NEIN**      | Im einem Textfeld ist kein Wert auswählbar -> throw OKWFrameObjectMethodNotImplemented |
+ * | `SelectMenu( FN )`        | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
+ * | `SelectMenu( FN, Val )`   | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
+ * | `TypeKey( FN, Val )`      | **NEIN**      | Sichtbarer Eigabewert des Textfeldes |
+ * 
+ * ## Fensterbezogene Schlüsselwörter
+ * 
+ * | OpenKeyWord               | Implementiert | Beschreibung |
+ * | ------------------------- | :-----------: | :----------- |
+ * | `StarApp( AN )`           | **NEIN**      | Kind-Objekt, Textfeld ist kein Fensterobjekt |
+ * | `StopApp( AN )`           | **NEIN**      | Kind-Objekt, Textfeld ist kein Fensterobjekt |
+ * | `SelectWindow( FN )`      | **NEIN**      | Kind-Objekt, Textfeld ist kein Fensterobjekt |
+ * | `Sequence( FN, SQN, SEQ_ID )` | **NEIN**  | Kind-Objekt, Textfeld ist kein Fensterobjekt |
+ * 
+ * ## Verifying, Memorizing, Logging Values
+ * 
+ * Group of keywords using the same GUI-Adapter Methods get*() <br/>
+ * (e.g.: `VerifyExists( FN, ExpVal)`, `MemorizeExists( FN, MemKey)`,`LogExists( FN )` -> `getExists()` )
+ * 
+ * | OpenKeyWord | Implementiert | Beschreibung |
+ * | ----------- | :-----------: | :----------- |
+ * | `VerifyExists( FN, ExpVal)`,    <br>`MemorizeExists( FN, MemKey)`,    <br>`LogExists( FN )`   | **JA** |  |
+ * | `VerifyHasFocus( FN, ExpVal )`, <br>`MemorizeHasFocus( FN, MemKey)`,  <br>`LogHasFocus( FN )` | **JA** |  |
+ * | `VerifyIsActive( FN, ExpVal )`, <br>`MemorizeIsActive( FN, MemKey)`,  <br>`LogIsActive( FN )` | **JA** |  |
+ * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **JA** | Der sichtbare Text eines Textfeldes ist sein Wert! - entspricht VerifyValue. |
+ * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )`     | **JA** |  |
+ * | `VerifyTooltip( FN, ExpVal )`,  <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **JA** | Als Tooltip wird das Attribute `title` verwendet.  Im Beispiel: `Button title` |
+ * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )`     | **JA** | Der sichtbare Text eines Textfeldes ist sein Wert |
+ * 
+ *  # Quellen/Links
+ *  
+ *  - [SELFHTML-Wiki input](https://wiki.selfhtml.org/wiki/Referenz:HTML/input)
+ *  - [Issue #107](https://github.com/Hrabovszki1023/OKW/issues/107)
+ *  - [Issue #121](https://github.com/Hrabovszki1023/OKW/issues/121)
+ *  
+ *  \~english
+ *  
+ *  \~
+ * @author Zoltán Hrabovszki
+ * @date 2016.09.05
+ */
     public class SeInputText extends SeAnyChildWindow
     {
 
@@ -78,6 +131,22 @@ import okw.gui.OKWLocator;
          {
            super(IframeID, Locator, Locators);
          }
+
+         
+         /** \~german
+          *  Ermittelt den textuellen Inhalt der Überschrift eines Textfeldes. Entspricht `getValue()`!
+          *   
+          *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+          *  \~english
+          *  \~
+          *  @author Zoltán Hrabovszki
+          *  @date 2013.12.07
+          */
+         @Override
+        public ArrayList<String> getCaption()
+        {
+            return getValue();
+        }
 
          
         /// \~german
@@ -109,7 +178,7 @@ import okw.gui.OKWLocator;
                 // Get Value from TextField and put this into the return List<string>
                 String myValue = this.Me().getAttribute("value");
                 
-                if(!myValue.isEmpty())
+                if(myValue!=null)
                 {
                   lvLsReturn.add(this.Me().getAttribute("value"));
                 }
@@ -117,7 +186,7 @@ import okw.gui.OKWLocator;
             }
             finally
             {
-                    this.LogFunctionEndDebug(lvLsReturn.toString());
+                this.LogFunctionEndDebug(lvLsReturn.toString());
             }
 
             return lvLsReturn;

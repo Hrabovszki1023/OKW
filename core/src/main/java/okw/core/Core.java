@@ -927,6 +927,7 @@ public class Core implements IOKW_State
         }
     }
 
+
     /**
      * \copydoc IOKW_State::VerifyCaption(String,String)
      */
@@ -942,6 +943,7 @@ public class Core implements IOKW_State
             Log.LogKeyWordEnd();
         }
     }
+
 
     /**
      * \copydoc IOKW_State::VerifyCaptionWCM(String,String)

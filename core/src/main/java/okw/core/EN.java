@@ -477,6 +477,24 @@ public class EN
     }
 
     /**
+     *  \copydoc IOKW_State::VerifySelectedValueREGX(String,String)
+     */
+    public static void VerifySelectedValueREGX( String FN, String ExpVal ) throws Exception
+    {
+        myKernel.SetLanguage( Language );
+        myKernel.VerifySelectedValueREGX( FN, ExpVal );
+    }
+
+    /**
+     *  \copydoc IOKW_State::VerifySelectedValueWCM(String,String)
+     */
+    public static void VerifySelectedValueWCM( String FN, String ExpVal ) throws Exception
+    {
+        myKernel.SetLanguage( Language );
+        myKernel.VerifySelectedValueWCM( FN, ExpVal );
+    }
+
+    /**
      *  \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
      */
     public static void VerifyTablecellValue( String FN, String COL, String ROW, String ExpVal ) throws Exception
@@ -485,6 +503,24 @@ public class EN
         myKernel.VerifyTablecellValue( FN, COL, ROW, ExpVal );
     }
 
+    /**
+     *  \copydoc IOKW_State::VerifyTablecellValueREGX(String,String,String,String)
+     */
+    public static void VerifyTablecellValueREGX( String FN, String COL, String ROW, String ExpVal ) throws Exception
+    {
+        myKernel.SetLanguage( Language );
+        myKernel.VerifyTablecellValueREGX( FN, COL, ROW, ExpVal );
+    }
+    
+    /**
+     *  \copydoc IOKW_State::VerifyTablecellValueWCM(String,String,String,String)
+     */
+    public static void VerifyTablecellValueWCM( String FN, String COL, String ROW, String ExpVal ) throws Exception
+    {
+        myKernel.SetLanguage( Language );
+        myKernel.VerifyTablecellValueWCM( FN, COL, ROW, ExpVal );
+    }
+    
     /**
      *  \copydoc IOKW_State::VerifyTooltip(String,String)
      */

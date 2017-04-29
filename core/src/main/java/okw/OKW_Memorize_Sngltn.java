@@ -211,7 +211,7 @@ public class OKW_Memorize_Sngltn
 	}
 
 	/**  \~german
-	 *  Prüft ob es eine Eintragzum Schlüssel _fpsKey_ vorhanden ist.
+	 *  Prüft ob es eine Eintrag zum Schlüssel _fpsKey_ vorhanden ist.
 	 * 
 	 *  Nach Aufruf dieser Methode befinden sich die Klasse im Initialzustand.
 	 *  Dazu wird die Instance-Variable auf__null__ gesetzt.

@@ -44,7 +44,6 @@ import java.io.PrintStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.function.BiFunction;
-import java.util.function.Function;
 import java.util.function.Supplier;
 
 // \todo TODO: ANTLR einbauen import OKW.ANTLR4;
@@ -1235,8 +1234,8 @@ public class OK implements IOKW_State
             {
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
-
                     lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
                 }
                 else
                 {
@@ -1297,6 +1296,7 @@ public class OK implements IOKW_State
                 {
 
                     lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
                 }
                 else
                 {
@@ -1358,6 +1358,7 @@ public class OK implements IOKW_State
                 {
 
                     lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
                 }
                 else
                 {
@@ -2190,6 +2191,7 @@ public class OK implements IOKW_State
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
                 }
                 else
                 {
@@ -2249,6 +2251,7 @@ public class OK implements IOKW_State
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
                 }
                 else
                 {
@@ -2308,8 +2311,8 @@ public class OK implements IOKW_State
             {
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
-
                     lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
                 }
                 else
                 {
@@ -2668,6 +2671,7 @@ public class OK implements IOKW_State
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
                 }
                 else
                 {
@@ -2728,6 +2732,7 @@ public class OK implements IOKW_State
                 {
 
                     lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
                 }
                 else
                 {
@@ -2788,6 +2793,7 @@ public class OK implements IOKW_State
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
                 }
                 else
                 {
@@ -2847,6 +2853,7 @@ public class OK implements IOKW_State
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
                 }
                 else
                 {
@@ -2907,6 +2914,7 @@ public class OK implements IOKW_State
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
                 }
                 else
                 {
@@ -2971,6 +2979,7 @@ public class OK implements IOKW_State
                 {
 
                     lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
                 }
                 else
                 {

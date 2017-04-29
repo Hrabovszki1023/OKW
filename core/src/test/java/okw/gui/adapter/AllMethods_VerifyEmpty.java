@@ -92,10 +92,11 @@ import okw.log.Logger_Sngltn;
 
         public List<String> VerifySelectedValue(ArrayList<String> fpLsExpectedValue)
         {
-            List<String> lvLsReturn = new ArrayList<String>();
-
             this.myLogger.LogFunctionStartDebug("VerifySelectedValue");
-            lvLsReturn.addAll(fpLsExpectedValue);
+            
+            // ${EMPTY} => ArrayList mit einem Wert und ""
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
+            lvLsReturn.add( "" );
 
             myClipboard.Clear();
             
@@ -115,8 +116,9 @@ import okw.log.Logger_Sngltn;
 
             this.myLogger.LogFunctionStartDebug("VerifyTablecellValue");
 
-            List<String> lvLsReturn = new ArrayList<String>();
-            // empty => Empty ArrayList
+            // ${EMPTY} => ArrayList mit einem Wert und ""
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
+            lvLsReturn.add( "" );
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
@@ -137,8 +139,9 @@ import okw.log.Logger_Sngltn;
 
             this.myLogger.LogFunctionStartDebug("VerifyTooltip");
 
+            // ${EMPTY} => ArrayList mit einem Wert und ""
             ArrayList<String> lvLsReturn = new ArrayList<String>();
-            // empty => Empty ArrayList
+            lvLsReturn.add( "" );
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
@@ -152,13 +155,16 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
+        
         public ArrayList<String> VerifyCaption()
         {
 
             this.myLogger.LogFunctionStartDebug("VerifyCaption");
 
+            // ${EMPTY} => ArrayList mit einem Wert und ""
             ArrayList<String> lvLsReturn = new ArrayList<String>();
-            // empty => Empty ArrayList
+            lvLsReturn.add( "" );
+
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
@@ -175,10 +181,11 @@ import okw.log.Logger_Sngltn;
 
         public ArrayList<String> VerifyLabel()
         {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-
             this.myLogger.LogFunctionStartDebug("VerifyLabel");
-            // empty => Empty ArrayList
+
+            // ${EMPTY} => ArrayList mit einem Wert und ""
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
+            lvLsReturn.add( "" );
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
@@ -197,8 +204,9 @@ import okw.log.Logger_Sngltn;
         {
             this.myLogger.LogFunctionStartDebug("VerifyValue");
 
+            // ${EMPTY} => ArrayList mit einem Wert und ""
             ArrayList<String> lvLsReturn = new ArrayList<String>();
-            // empty => Empty ArrayList
+            lvLsReturn.add( "" );
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
