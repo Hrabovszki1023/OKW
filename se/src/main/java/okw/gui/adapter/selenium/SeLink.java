@@ -61,12 +61,12 @@ import okw.gui.OKWLocator;
  * | ------------------------- | :-----------: | :----------- |
  * | `ClickOn( FN )`           | **JA**        |  |
  * | `DoubleClickOn( FN )`     | **NEIN**      | Ein Doppel-Klick ist auf ein Link nicht möglich|
- * | `SetFocus( FN )`          | **NEIN**      | Fokus kann nicht auf ein Link gestezt werden. - Oder doch? Dann aber wie? |
- * | `SetValue( FN, Val )`     | **NEIN**      | Link hat keinen änderbaren Wert. |
- * | `Select( FN, Val )`       | **NEIN**      | Link hat keinen änderbaren Wert. |
- * | `SelectMenu( FN )`        | **NEIN**      | Denkbar, jedoch noch nicht unterstützt |
- * | `SelectMenu( FN, Val )`   | **NEIN**      | Kein Wert  |
- * | `TypeKey( FN, Val )`      | **NEIN**      | Link hat keinen änderbaren Wert. Shortcut nicht bekannt. |
+ * | `SetFocus( FN )`          | **JA**        |  |
+ * | `SetValue( FN, Val )`     | **NEIN**      | Link hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented |
+ * | `Select( FN, Val )`       | **NEIN**      | Link hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented|
+ * | `SelectMenu( FN )`        | **NEIN**      | Denkbar, jedoch noch nicht unterstützt -> throw OKWFrameObjectMethodNotImplemented|
+ * | `SelectMenu( FN, Val )`   | **NEIN**      | Kein Wert -> throw OKWFrameObjectMethodNotImplemented |
+ * | `TypeKey( FN, Val )`      | **NEIN**      | Link hat keinen änderbaren Wert. Shortcut nicht bekannt.  -> throw UnsupportedOperationException|
  * 
  * ## Fensterbezogene Schlüsselwörter
  * 
@@ -85,12 +85,12 @@ import okw.gui.OKWLocator;
  * | OpenKeyWord | Implementiert | Beschreibung |
  * | ----------- | :-----------: | :----------- |
  * | `VerifyExists( FN, ExpVal)`,    <br>`MemorizeExists( FN, MemKey)`,    <br>`LogExists( FN )`   | **JA** |  |
- * | `VerifyHasFocus( FN, ExpVal )`, <br>`MemorizeHasFocus( FN, MemKey)`,  <br>`LogHasFocus( FN )` | **NEIN** |  |
- * | `VerifyIsActive( FN, ExpVal )`, <br>`MemorizeIsActive( FN, MemKey)`,  <br>`LogIsActive( FN )` | **NEIN** |  |
- * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **JA** | Caption ist der sichtbare Text des Links, im Beispiel `Link Caption` |
+ * | `VerifyHasFocus( FN, ExpVal )`, <br>`MemorizeHasFocus( FN, MemKey)`,  <br>`LogHasFocus( FN )` | **NEIN** | -> throw UnsupportedOperationException |
+ * | `VerifyIsActive( FN, ExpVal )`, <br>`MemorizeIsActive( FN, MemKey)`,  <br>`LogIsActive( FN )` | **NEIN** | -> throw UnsupportedOperationException |
+ * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **JA** | Caption ist der sichtbare Text des Links, im Beispiel `"Link Caption"` |
  * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )` | - **JA** | Zu Prüfen: Ist eine Link mit einem Label verbindbar? |
  * | `VerifyTooltip( FN, ExpVal )`,  <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **JA** | Als Tooltip Wird das Attribute `title` verwendet |
- * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )` | **JA** | Als Wert wird das Attribute `href` verwendet. |
+ * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )` | **JA** | Als Wert wird das Attribute `href` verwendet. Im Beispiel: `"./Path/WebSite.htm"` |
  * 
  *  # Quellen/Links
  *  
@@ -175,5 +175,25 @@ public class SeLink extends SeAnyChildWindow
         }
     
         return lvLsReturn;
+    }
+    
+    /**  \~german
+     *  Tastatureingabe ist für ein Link nicht möglich.
+     *  
+     *  Es wird die Ausnahme UnsupportedOperationException ausgelöst.
+     *  
+     *  @param fps_Values'>
+     *  Werte, die via Tastatur eingegeben werden sollen.
+     *  
+     *  \~
+     *  @author Zoltan Hrabovszki
+     * @throws Exception 
+     *  @date 2013.04.11
+     */
+    @Override
+    public void TypeKey(ArrayList<String> fps_Values)
+    {
+        // TODO: /todo Meldung in xml-Auslagern
+        throw new UnsupportedOperationException("The method TypeKey() is not defined for SeLink.");
     }
 }

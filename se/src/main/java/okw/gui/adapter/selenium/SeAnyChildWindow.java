@@ -1045,16 +1045,15 @@ public class SeAnyChildWindow extends AnyChildwindow
   }
 
 
-  /**  \~german
-	 *  \brief
-	 *  Tastatur Eingabe an das Objekt
+   /**  \~german
+	 *  Tastatureingabe in das aktuelle Objekt.
 	 *  
 	 *  @param fps_Values'>
 	 *  Werte, die via Tastatur eingegeben werden sollen.
 	 *  
 	 *  \~
 	 *  @author Zoltan Hrabovszki
-   * @throws Exception 
+     * @throws Exception 
 	 *  @date 2013.04.11
 	 */
 	public void TypeKey(ArrayList<String> fps_Values)

@@ -3,6 +3,7 @@ package okw.SeLink;
 import static org.junit.Assert.*;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
+import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWVerifyingFailsException;
 
 import org.junit.Ignore;
@@ -135,7 +136,79 @@ public class SeLink_EN_Test
       EN.EndTest();
   }
 
+/**
+ * \~german
+ *  Prüft ob die LogIsActive die Ausnahme OKWFrameObjectMethodNotImplemented auslöst.
+ * \~english
+ *
+ * \~
+ * @author Zoltán Hrabovszki
+ * @date 2017-04-30
+ */  @Test(expected= UnsupportedOperationException.class)
+  public void tcLogIsActive_en() throws Exception
+  {
+      EN.BeginTest( name.getMethodName() );
+
+      EN.StartApp( ApplicationName );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+
+      EN.SelectWindow( "SeLink" );
+
+      EN.LogIsActive( "Google" );
+
+      //EN.StopApp( ApplicationName );
+      //EN.EndTest();
+  }
   
+ /**
+  * \~german
+  *  Prüft ob die VerifyIsActive die Ausnahme OKWFrameObjectMethodNotImplemented auslöst.
+  * \~english
+  *
+  * \~
+  * @author Zoltán Hrabovszki
+  * @date 2017-04-30
+  */  @Test(expected= UnsupportedOperationException.class)
+   public void tcMemorizeIsActive_en() throws Exception
+   {
+       EN.BeginTest( name.getMethodName() );
+
+       EN.StartApp( ApplicationName );
+       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+
+       EN.SelectWindow( "SeLink" );
+
+       EN.MemorizeIsActive( "Google", "Schlüssel" );
+
+       //EN.StopApp( ApplicationName );
+       //EN.EndTest();
+   }
+  
+  /**
+   * \~german
+   *  Prüft ob die VerifyIsActive die Ausnahme OKWFrameObjectMethodNotImplemented auslöst.
+   * \~english
+   *
+   * \~
+   * @author Zoltán Hrabovszki
+   * @date 2017-04-30
+   */  @Test(expected= UnsupportedOperationException.class)
+    public void tcVerifyIsActive_en() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.StartApp( ApplicationName );
+        EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+
+        EN.SelectWindow( "SeLink" );
+
+        EN.VerifyIsActive( "Google", "YES" );
+
+        //EN.StopApp( ApplicationName );
+        //EN.EndTest();
+    }
+
+ 
   /// \brief
   /// Tooltip eines Textfeldes Prüfen.
   ///
@@ -366,37 +439,6 @@ public class SeLink_EN_Test
       EN.SelectWindow( "SeLink" );
       EN.VerifyCaptionREGX( "Google", "Google\\W{3}" );
       EN.VerifyCaptionREGX( "Yahoo", "Yahoo\\W{3}" );
-
-      EN.StopApp( ApplicationName );
-      EN.EndTest();
-  }
-
-  
-  /**
-   * \~german Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter
-   * SeLink.
-   * 
-   * Anmerkung: Das ist ein Prototyp für den Test. - Links sind im Standard HTML
-   * immer aktive. Daher wird dieser Testfall aktuell ignoriert.
-   *
-   * Link 1 ist active (_nicht_ "disabled") Link 2 ist inactive (also
-   * "disabled")
-   * 
-   * \~ \author Zoltán Hrabovszki \date 2015.02.28
-   */
-  @Ignore
-  @Test//( expected=OKWGUIObjectNot )
-  public void tc_VerifyIsActive() throws Exception
-  {
-      EN.BeginTest( name.getMethodName() );
-      EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link_disabled.htm" );
-
-      // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-      EN.SelectWindow( "InputButton" );
-
-      EN.VerifyIsActive( "Text_1", "YES" );
-      EN.VerifyIsActive( "Text_2", "NO" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -639,4 +681,133 @@ public class SeLink_EN_Test
     EN.StopApp( ApplicationName );
     EN.EndTest();
   }
+  
+  /**
+   * \~german
+   *  Prüft ob die DoubleClickOn die Ausnahme OKWFrameObjectMethodNotImplemented auslöst.
+   * \~english
+   *
+   * \~
+   * @author Zoltán Hrabovszki
+   * @date 2017-04-30
+   */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+    public void tcDoubleClickOn_en() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.StartApp( ApplicationName );
+        EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+
+        EN.SelectWindow( "SeLink" );
+
+        EN.DoubleClickOn( "Google");
+    }
+   
+    
+    /**
+     * \~german
+     *  Prüft ob die SetValue die Ausnahme OKWFrameObjectMethodNotImplemented auslöst.
+     * \~english
+     *
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2017-04-30
+     */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+      public void tcSetValue_en() throws Exception
+      {
+          EN.BeginTest( name.getMethodName() );
+
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+
+          EN.SelectWindow( "SeLink" );
+
+          EN.SetValue( "Google", "SetValue");
+      }
+     
+     /**
+      * \~german
+      *  Prüft ob die Select die Ausnahme OKWFrameObjectMethodNotImplemented auslöst.
+      * \~english
+      *
+      * \~
+      * @author Zoltán Hrabovszki
+      * @date 2017-04-30
+      */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+       public void tcSelect_en() throws Exception
+       {
+           EN.BeginTest( name.getMethodName() );
+
+           EN.StartApp( ApplicationName );
+           EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+
+           EN.SelectWindow( "SeLink" );
+
+           EN.Select( "Google", "SetValue");
+       }
+
+      /**
+       * \~german
+       *  Prüft ob die SelectMenu( FN die Ausnahme OKWFrameObjectMethodNotImplemented auslöst.
+       * \~english
+       *
+       * \~
+       * @author Zoltán Hrabovszki
+       * @date 2017-04-30
+       */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+        public void tcSelectMenu2_en() throws Exception
+        {
+            EN.BeginTest( name.getMethodName() );
+
+            EN.StartApp( ApplicationName );
+            EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+
+            EN.SelectWindow( "SeLink" );
+
+            EN.SelectMenu( "Google");
+        }
+      
+      /**
+       * \~german
+       *  Prüft ob die SelectMenu( FN, Val ) die Ausnahme OKWFrameObjectMethodNotImplemented auslöst.
+       * \~english
+       *
+       * \~
+       * @author Zoltán Hrabovszki
+       * @date 2017-04-30
+       */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+        public void tcSelectMenu_en() throws Exception
+        {
+            EN.BeginTest( name.getMethodName() );
+
+            EN.StartApp( ApplicationName );
+            EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+
+            EN.SelectWindow( "SeLink" );
+
+            EN.SelectMenu( "Google", "SetValue");
+        }
+       
+       
+       /**
+        * \~german
+        *  Prüft ob die TypeKey( FN, Val ) die Ausnahme OKWFrameObjectMethodNotImplemented auslöst.
+        * \~english
+        *
+        * \~
+        * @author Zoltán Hrabovszki
+        * @date 2017-04-30
+        */  @Test(expected= UnsupportedOperationException.class)
+         public void tcTypeKey_en() throws Exception
+         {
+             EN.BeginTest( name.getMethodName() );
+
+             EN.StartApp( ApplicationName );
+             EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+
+             EN.SelectWindow( "SeLink" );
+
+             EN.TypeKey( "Google", "SetValue");
+         }
+
 }
