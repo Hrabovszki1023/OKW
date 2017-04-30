@@ -132,14 +132,13 @@ public class SeLink extends SeAnyChildWindow
      }*/
 
     /** \~german
-     *  \brief
      *  Ein Standard HTML-Link kann nicht aktiv/inaktiv oder enable/disables sein.
      *  
      *  Methode muss ggf. Projektspezifisch implementiert werden.
      *  
      *  \~
-     *  \author Zoltán Hrabovszki
-     *  \date 2014.11.26
+     *  @author Zoltán Hrabovszki
+     *  @date 2014.11.26
      */
     @Override
     public Boolean getIsActive()
@@ -147,41 +146,26 @@ public class SeLink extends SeAnyChildWindow
         throw new UnsupportedOperationException( "Link cannot be Active" );
     }
 
-    @Override
-    public boolean LogIsActive()
-    {
-        throw new UnsupportedOperationException( "Link cannot be Active" );
-    }
-
-    @Override
-    public boolean MemorizeIsActive()
-    {
-        throw new UnsupportedOperationException( "Link cannot be Active" );
-    }
-
-    @Override
-    public Boolean VerifyIsActive()
-    {
-        throw new UnsupportedOperationException( "Link cannot be Active" );
-    }
-
-    /** \brief
-     *  OpenKeyWord implemntiert den href-Attribute als "Value" eines HTML-Linkes.
+    /** \~german
+     *  Der Wert eines Linkes ist das Ziel des Linkes, also das Attribut `href` des HTML-Linkes.
      * 
-     *  \return
+     *  @return Aktueller Wert des `href`-Attributes 
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2014.11.26
      */
     @Override
     public ArrayList<String> getValue()
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
-
+    
         try
         {
             this.LogFunctionStartDebug( "getValue" );
-
+    
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
             this.WaitForMe();
-
+    
             // The Attribute "value" wird als Beschriftung angezeigt...
             lvLsReturn.add( this.Me().getAttribute( "href" ) );
         }
@@ -189,7 +173,7 @@ public class SeLink extends SeAnyChildWindow
         {
             this.LogFunctionEndDebug( lvLsReturn );
         }
-
+    
         return lvLsReturn;
     }
 }

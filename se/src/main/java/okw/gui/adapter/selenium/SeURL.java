@@ -288,7 +288,7 @@ import org.openqa.selenium.*;
             }
             finally
             {
-                    this.LogFunctionEndDebug(lvLsReturn);
+                this.LogFunctionEndDebug(lvLsReturn);
             }
 
             return lvLsReturn;
