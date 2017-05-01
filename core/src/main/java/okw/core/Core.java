@@ -39,66 +39,44 @@ package okw.core;
 import okw.log.Logger_Sngltn;
 import okw.*;
 
-/// \~german
-/// \brief
-/// Hier Statediagram...
-/// @startuml{OKW_State.png}
-/// [*] --> OK : Execute Test
-/// OK --> NOK : OKW_Exception
-/// NOK --> OK: BeginTest
-/// OK --> OK: OKW-Keyword
-/// OK --> [*]
-/// NOK --> [*]
-///
-/// [*] --> OK_TRY : Try Test
-/// OK_TRY --> NOK_TRY : OKW_Exception
-/// NOK_TRY --> OK_TRY: BeginTest
-/// OK_TRY --> OK_TRY: OKW-Keyword
-/// OK_TRY --> [*]
-/// NOK_TRY --> [*]
-/// @enduml
-/// 
-///
-/// @startuml{Overview.png}
-/// frame "Core"{
-///   component [OK] as OK
-/// }
-///  
-/// frame "TestToolAdapter"{
-///  
-///   frame "Selenium"{
-/// 
-///    [SeAnyWin]
-///    [SeBrowserChild]
-///    [SeFireFox]
-///    [SeTextFieled]
-/// 
-///   }
-/// 
-///   frame "AutoIt"{
-/// 
-///    [AUITextfield]
-///    [AUIWindow]
-///   } 
-/// }
-/// @enduml
-/// 
-/// \~english
-/// \brief
-/// 
-/// 
-/// \~
-/// \author Zoltán Hrabovszki
-/// \date 09.01.2014
+/** \~german
+ *  Hier Statediagram...
+ *  @startuml{OKW_State.png}
+ *  [*] --> OK : Execute Test
+ *  OK --> NOK : OKW_Exception
+ *  NOK --> OK: BeginTest
+ *  OK --> OK: OKW-Keyword
+ *  OK --> [*]
+ *  NOK --> [*]
+ * @enduml
+ * 
+ *  # Quellen/Links
+ * [State-Pattern](https://www.philipphauer.de/study/se/design-pattern/state.php)
+ * 
+ *  \~english
+ *  
+ *  \~
+ *  @author Zoltán Hrabovszki
+ *  @date 2014-01-09
+ */
 public class Core implements IOKW_State
 {
 
     private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
-    // zeigt auf die Klasse des aktuellen Zustandes
+    /** \~german
+     * zeigt auf die Klasse des aktuellen Zustandes.
+     *  \~english
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2014-01-09
+     */
     private IOKW_State           CurrentState;
 
-    // \copydoc LogMessenger
+    /**
+     *  \copydoc LogMessenger
+     */
     private static LogMessenger  LM;
 
     /** \~german
