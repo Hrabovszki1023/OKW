@@ -63,14 +63,14 @@ import okw.gui.*;
      * 
      * | OpenKeyWord               | Implementiert | Beschreibung |
      * | ------------------------- | :-----------: | :----------- |
-     * | `ClickOn( FN )`           | **JA**   |  |
-     * | `DoubleClickOn( FN )`     | **NEIN** | - Wie reagiert ein CheckBox auf DoubleClick??? |
-     * | `SetFocus( FN )`          | **JA**   |  |
-     * | `SetValue( FN, Val )`     | **JA**   | `SetValue( "MyChekckBox", "CHECKED")` - why not?!?. |
-     * | `Select( FN, Val )`       | **JA**   | Hinweis: Entspricht `SetValue( FN, Val )` |
-     * | `SelectMenu( FN )`        | **NEIN** |  |
-     * | `SelectMenu( FN, Val )`   | **NEIN** |  |
-     * | `TypeKey( FN, Val )`      | **NEIN** | Prinzipiel sinnvoll. Zunächst müssen KeyNames für z.B. ${BLANK} TypeKey( "myCheckbox", "${BLANK}") definiert werden. |
+     * | `ClickOn( FN )`           | **JA**        |  |
+     * | `DoubleClickOn( FN )`     | **NEIN**      | - Wie reagiert eine CheckBox auf DoubleClick??? |
+     * | `SetFocus( FN )`          | **JA**        |  |
+     * | `SetValue( FN, Val )`     | **JA**        | `SetValue( "MyChekckBox", "CHECKED")` - why not?!?. |
+     * | `Select( FN, Val )`       | **JA**        | Hinweis: Entspricht `SetValue( FN, Val )` |
+     * | `SelectMenu( FN )`        | **NEIN**      |  |
+     * | `SelectMenu( FN, Val )`   | **NEIN**      |  |
+     * | `TypeKey( FN, Val )`      | **NEIN**      | Prinzipiel sinnvoll. Zunächst müssen KeyNames für z.B. ${BLANK} TypeKey( "myCheckbox", "${BLANK}") definiert werden. |
      * 
      * ## Fensterbezogene Schlüsselwörter
      * 
@@ -78,8 +78,8 @@ import okw.gui.*;
      * | ------------------------- | :-----------: | :----------- |
      * | `StarApp( AN )`           | **NEIN**      | Kind-Objekt, Checkbox ist kein Fensterobjekt |
      * | `StopApp( AN )`           | **NEIN**      | Kind-Objekt, Checkbox ist kein Fensterobjekt |
-     * | `SelectWindow( FN )`      | **NEIN**      | Checkbox ist kein Fensterobjekt |
-     * | `Sequence( FN, SQN, SEQ_ID )` | **NEIN**  | Checkbox ist kein Fensterobjekt |
+     * | `SelectWindow( FN )`      | **NEIN**      | Kind-Objekt, Checkbox ist kein Fensterobjekt |
+     * | `Sequence( FN, SQN, SEQ_ID )` | **NEIN**  | Kind-Objekt, Checkbox ist kein Fensterobjekt |
      * 
      * ## Verifying, Memorizing, Logging Values
      * 

@@ -187,7 +187,7 @@ public class SeLink extends SeAnyChildWindow
      *  
      *  \~
      *  @author Zoltan Hrabovszki
-     * @throws Exception 
+     *  @throws Exception 
      *  @date 2013.04.11
      */
     @Override

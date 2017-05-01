@@ -68,7 +68,6 @@ import org.junit.rules.TestName;
         public TestName name = new TestName();
     	
 
-        
         /** \~german
          * \brief
          * Test des Schlüsselwortes ClickOn() für den GUI-Adapter SeInputRadio.
@@ -103,9 +102,28 @@ import org.junit.rules.TestName;
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
-
         }
 
+        /** \~german
+         * \brief
+         * Test des Schlüsselwortes DoubleClickOn() für den GUI-Adapter SeInputRadio.
+         * 
+         * \~
+         * @author Zoltán Hrabovszki
+         * @date 2016.12.11
+         */
+        @Test (expected=OKWFrameObjectMethodNotImplemented.class)
+        public void tc_DoubleClickOn_OKWFrameObjectMethodNotImplemented() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                
+                EN.SelectWindow("SeInputRadioTestFrame");
+
+                EN.DoubleClickOn( "Visa");
+        }
+        
         /** \~german
         * \brief
         * Test des Schlüsselwortes LogCaption für den GUI-Adapter SeInputRadio.
@@ -163,8 +181,8 @@ import org.junit.rules.TestName;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
-        public void tc_LogHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception
+        @Test(expected=UnsupportedOperationException.class)
+        public void tc_LogHasFocus_UnsupportedOperationException() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
@@ -336,8 +354,8 @@ import org.junit.rules.TestName;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
-        public void tc_MemorizeHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception
+        @Test(expected=UnsupportedOperationException.class)
+        public void tc_MemorizeHasFocus_UnsupportedOperationException() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
@@ -442,8 +460,8 @@ import org.junit.rules.TestName;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
 		*/
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
-        public void tc_VerifyHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception
+        @Test(expected=UnsupportedOperationException.class)
+        public void tc_VerifyHasFocus_UnsupportedOperationException() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
@@ -624,6 +642,26 @@ import org.junit.rules.TestName;
                 EN.EndTest();
 }
 
+        /** \~german
+         * \brief
+         * Test des Schlüsselwortes TypeKey( FN, Val ) für den GUI-Adapter SeInputRadio.
+         * 
+         * \~
+         * @author Zoltán Hrabovszki
+         * @date 2016.12.11
+        */
+        @Test(expected=UnsupportedOperationException.class)
+        public void tc_TypeKey_OKWFrameObjectMethodNotImplemented() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
+                
+                EN.SelectWindow("SeInputRadioTestFrame");
+
+                EN.TypeKey( "Visa", "What ever...");
+        }
+        
         /** \~german
          * \brief
          * Test des Schlüsselwortes VerifyCaption für den GUI-Adapter SeInputRadio.
