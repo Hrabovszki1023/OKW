@@ -48,6 +48,7 @@ import okw.*;
  *  OK --> OK: OKW-Keyword
  *  OK --> [*]
  *  NOK --> [*]
+ *  FURZ --> NOK
  *  @enduml
  *  
  *  @startuml{OKW_StateClass.png}

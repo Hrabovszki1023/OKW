@@ -11,7 +11,25 @@ import okw.gui.OKWLocator;
 /**
  * \~german
  *  Diese Klasse representiert eine HTML-RadioButton, die mit Selenium angsteuert wird.
- *  
+ *  @startuml
+ *   class SeInputRadio [[java:okw.gui.adapter.selenium.SeInputRadio]] {
+ *   ..Construktor..
+ *   +SeInputRadio(String Locator, OKWLocator[] Locators)
+ *   +SeInputRadio(String IframeID, String Locator, OKWLocator[] Locators)
+ *   ..Getter..
+ *   +ArrayList<String> getValue()
+ *   +Boolean getIsSelected()
+ *   +ArrayList<String> getCaption()
+ *   +void SetValue(ArrayList<String> Values)
+ *   +Boolean getHasFocus()
+ *   .. Keyword API..
+ *   +void SetFocus()
+ *   +void TypeKey(ArrayList<String> fps_Values)
+ * }
+ * class SeAnyChildWindow [[java:okw.gui.adapter.selenium.SeAnyChildWindow]] {
+ * }
+ * SeAnyChildWindow <|-- SeInputRadio
+@enduml
  *  # Unterstützter Tag
  *  Folgender HTML-Tag wird unterstützt:
  *  
