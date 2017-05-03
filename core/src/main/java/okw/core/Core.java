@@ -48,6 +48,19 @@ import okw.*;
  *  OK --> OK: OKW-Keyword
  *  OK --> [*]
  *  NOK --> [*]
+ *  @enduml
+ *  
+ *  @startuml{OKW_StateClass.png}
+ *  class Core
+ *  interface IOKW_State
+ *  class OK
+ *  class NOK
+ *   
+ *  Core o-- IOKW_State: CurrentState
+ *  OK --> Core: core
+ *  NOK --> Core: core
+ *  IOKW_State <|.. OK
+ *  IOKW_State <|.. NOK
  * @enduml
  * 
  *  # Quellen/Links

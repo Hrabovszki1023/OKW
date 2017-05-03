@@ -171,14 +171,19 @@ public class SeLink extends SeAnyChildWindow
      *  \~
      *  #Sequence Diagramm
      *  @startuml
-     *  ->getValue
+     *  participant "Handle Exception"
+     *  participant getValue
+     *  participant WaitForMe
+     *  participant getAttribute
+     *  ->getValue: Call from "Value"-Keyword
      *  activate getValue
      *  getValue -> WaitForMe
-     *  WaitForMe -> Exception: OKWGUIObjectNotFoundException
+     *  WaitForMe -> "Handle Exception": OKWGUIObjectNotFoundException
      *  
      *  getValue -> getAttribute: getAttribute "href"
      *  activate getAttribute
-     *  getAttribute -> getAttribute: read "href"
+     *  getAttribute -> : read "href" via Selenium
+     *  getAttribute <- : return Value("href")
      *  getAttribute -> getValue: return Value("href")
      *  deactivate getAttribute
      *  
