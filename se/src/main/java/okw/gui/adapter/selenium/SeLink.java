@@ -46,6 +46,24 @@ import okw.gui.OKWLocator;
  * \~german
  *  Diese Klasse representiert einen HTML-Link, die mit Selenium angsteuert wird.
  *  
+ *  SeLink erweitert die Klasse SeAnyChildWindow 
+ *  \~
+ *  @startuml{SeLinkExtendsSeAnyChildWindow.png}
+ *  class SeLink [[java:okw.gui.adapter.selenium.SeLink]]{
+ *     +SeLink(String Locator, OKWLocator[] Locators)
+ *     +SeLink(String IframeID, String Locator, OKWLocator[] Locators)
+ *     ..Simple Getters..
+ *     +Boolean getIsActive()
+ *     +ArrayList<String> getValue()
+ *     ..Keyword API..
+ *     +void TypeKey(ArrayList<String> fps_Values)
+ *     }
+ *     
+ *  class SeAnyChildWindow [[java:okw.gui.adapter.selenium.SeAnyChildWindow]]{
+ *  }
+ *  SeAnyChildWindow <|-- SeLink
+ *  @enduml
+ *  
  *  # Unterstützter Tag
  *  Folgender HTML-Tag wird unterstützt:
  *  
@@ -100,22 +118,10 @@ import okw.gui.OKWLocator;
  *  
  *  \~english
  *  \~
- *  @startuml{SeLinkExtendsSeAnyChildWindow.png}
- *  class SeLink [[java:okw.gui.adapter.selenium.SeLink]]{
- *     +SeLink(String Locator, OKWLocator[] Locators)
- *     +SeLink(String IframeID, String Locator, OKWLocator[] Locators)
- *     +Boolean getIsActive()
- *     +ArrayList<String> getValue()
- *     +void TypeKey(ArrayList<String> fps_Values)
- *     }
- *     
- *  class SeAnyChildWindow [[java:okw.gui.adapter.selenium.SeAnyChildWindow]]{
- *  }
- *  SeAnyChildWindow <|-- SeLink
- *  @enduml
  *  @author Zoltan Hrabovszki
  *  @date 2013.04.11
  */
+
 public class SeLink extends SeAnyChildWindow
 {
 
@@ -163,6 +169,23 @@ public class SeLink extends SeAnyChildWindow
      * 
      *  @return Aktueller Wert des `href`-Attributes 
      *  \~
+     *  #Sequence Diagramm
+     *  @startuml
+     *  ->getValue
+     *  activate getValue
+     *  getValue -> WaitForMe
+     *  WaitForMe -> Exception: OKWGUIObjectNotFoundException
+     *  
+     *  getValue -> getAttribute: getAttribute "href"
+     *  activate getAttribute
+     *  getAttribute -> getAttribute: read "href"
+     *  getAttribute -> getValue: return Value("href")
+     *  deactivate getAttribute
+     *  
+     *  <- getValue: return Value("href")
+     *  deactivate getValue
+     *  @enduml
+     *  
      *  @author Zoltán Hrabovszki
      *  @date 2014.11.26
      */
