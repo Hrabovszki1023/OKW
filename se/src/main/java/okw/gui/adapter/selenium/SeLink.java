@@ -99,8 +99,20 @@ import okw.gui.OKWLocator;
  *  - [Issue #120](https://github.com/Hrabovszki1023/OKW/issues/120)
  *  
  *  \~english
- *  
  *  \~
+ *  @startuml{SeLinkExtendsSeAnyChildWindow.png}
+ *  class SeLink [[java:okw.gui.adapter.selenium.SeLink]]{
+ *     +SeLink(String Locator, OKWLocator[] Locators)
+ *     +SeLink(String IframeID, String Locator, OKWLocator[] Locators)
+ *     +Boolean getIsActive()
+ *     +ArrayList<String> getValue()
+ *     +void TypeKey(ArrayList<String> fps_Values)
+ *     }
+ *     
+ *  class SeAnyChildWindow [[java:okw.gui.adapter.selenium.SeAnyChildWindow]]{
+ *  }
+ *  SeAnyChildWindow <|-- SeLink
+ *  @enduml
  *  @author Zoltan Hrabovszki
  *  @date 2013.04.11
  */
