@@ -1,8 +1,6 @@
-\~german 
-
 <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png" width="150px" height="78px" />
 
-=Glossary=
+# Glossary
 
 | Parameter  | Description  |
 | -----------|:-------------|
@@ -13,7 +11,7 @@
 | Keyword    | A keyword is a project and technology-independent description of a user activity.|
 | Sequence   | A sequence is a reusable sequence of keywords or user activity.|
 | GUI-Adapter| |
-| `MemKey`   | Keyword parameter: User defined name in `Memorize*-keywords to save the KeyWord-specific value. ${MemKey} gets the value of saved MemKey. |
+| `MemKey`   | Keyword parameter: User defined name in `Memorize`-keywords to save the KeyWord-specific value. `${MemKey}` gets the value of saved MemKey. |
 | `SQN`      | Keyword parameter: **S**e**Q**uence**N**ame. |
 | `SEQ_ID`   | Keyword parameter: **SEQ**ence**ID**. |
 | `TCN`      | Keyword parameter: **T**est**C**ase**N**ame. |
