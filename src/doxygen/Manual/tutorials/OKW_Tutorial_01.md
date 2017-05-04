@@ -1,7 +1,5 @@
-@defgroup Tutorial Tutorials
-@addtogroup <Tutorial>
-@{ 
-# OKW Tutorial 1
+\page OKW_Tutorial_1 OKW Tutorial 1
+
 ## OpenKeyWord `OKW_Tutorial`-Project mit Maven anlegen: "Hello Test" - Teil 1
  
 ### Vorraussetzung:
@@ -119,5 +117,3 @@ SelectContextMenu( "Project Explorer", "OKW_Tutorial", "Maven->Update Project...
 > @momobee Maven Dependency zeigen: Benötigte Bibliotheken sind automatisch von Maven geladen worden.
  
 > Projekt ist für die Erstellung von OKW-Testfälle vorbereitet.
-
-@}
