@@ -61,7 +61,7 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
 {
 	Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 	
-	/** \~german
+  /** \~german
    *  Prüft die Existenz des aktuellen Objektes.
    *  
    *  - Methode kann hier nicht implementiert werden.
