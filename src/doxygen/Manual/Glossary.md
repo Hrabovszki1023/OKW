@@ -2,7 +2,7 @@
 
 <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png" width="150px" height="78px" />
 
-=Glossary=
+# Glossary
 
 | Parameter  | Description  |
 | -----------|:-------------|
