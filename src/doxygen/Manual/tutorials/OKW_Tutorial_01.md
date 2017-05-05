@@ -1,14 +1,15 @@
+
 \page OKW_Tutorial_1 OKW Tutorial 1
 
 ## OpenKeyWord `OKW_Tutorial`-Project mit Maven anlegen: "Hello Test" - Teil 1
- 
+
 ### Vorraussetzung:
 
-1. Java 8 (Version 1.8) ist auf dem Rechner installiert.
-2. Maven (M2) ist auf dem Rechner installiert.
-3. Eclipse ist installiert.
-
-> **Tip:** Das Eclipse Paket **"Neon.2 Eclipse IDE for Java Developers"** enthält bereits alle benötigten Plugin´s wie Maven und einen Git-client. Dieses Paket kann von https://eclipse.org/downloads/eclipse-packages/ geladen werden.
+ 1. Java 8 (Version 1.8) ist auf dem Rechner installiert.
+ 2. Maven (M2) ist auf dem Rechner installiert.
+ 3. Eclipse ist installiert.
+ 
+> **Tip:** Das Eclipse Paket **"Neon.2 Eclipse IDE for Java Developers"** enthält bereits alle benötigten Plugin´s wie Maven und einen Git-client.  * Dieses Paket kann von https://eclipse.org/downloads/eclipse-packages/ geladen werden.
 
 > **momobee:** Idee in der Beschreibung eventuell Referenz auf andere Youtube Videos verweisen, die zeigen,
 wie Maven und/oder/für Eclipse installiert wird.
