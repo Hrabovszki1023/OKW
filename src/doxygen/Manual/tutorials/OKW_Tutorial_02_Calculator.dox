@@ -1,8 +1,13 @@
-# OKW Tutorial 2: Calculator
+/*!
 
-2. Testfall am Beispiel Taschenrechner-Addition "1 + 1 = 2" in Schlüsselwort-Notation aufschreiben.
+@page refTutorial02_Calculator Tutorial: Calculator
 
-```java
+
+@section refTutorial02_TestfallErstellen Testfall erstellen
+
+Testfall am Beispiel Taschenrechner-Addition "1 + 1 = 2" in Schlüsselwort-Notation aufschreiben.
+
+```
    EN.TestcaseBegin( "Addition" );
    EN.StartApp( "Firefox" );
    EN.TypeKey( "URL", "http://Taschenrechner" );
@@ -15,7 +20,10 @@
  
    EN VerifyValue( "Display", "2" )
 ```
-3. Testfall funktioniert nicht: Die Objekt-Erkennung fehlt -> Frame erstellen:
+
+@section refTutorial02_Frame_Erstellen Frame esrtellen
+
+Testfall funktioniert noch nicht: Die Objekt-Erkennung fehlt -> Frame erstellen:
    Testclasse im Package okw.frame anlegen.
  
    mit den Klassen
@@ -23,5 +31,11 @@
    "SeBrowserWindow" das Fenster des Calkulators definieren
    "SeInputButton" die Tasten definieren.
    "SeInputField" die Anzeige (Display) definieren.
+
+
  
-4. Test Laufen lassen...
+@section refTutorial02_TestfallAusführen  
+
+Nun den Test ausführen...
+
+*/

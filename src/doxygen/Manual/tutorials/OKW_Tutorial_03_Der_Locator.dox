@@ -1,29 +1,32 @@
-# OKW Tutorial 3:  Der Locator
+/*!
 
-## Der Locator
-Des Locator eines GUI-Objektes enthält die Information **_wie_** ein Objekt erkannt wird.
+@page refTutorial03 Tutorial 3:  Der Locator
+
+@section Der Locator
+Der Locator eines GUI-Objektes enthält die Information wie ein Objekt erkannt wird.
 Der Locator für die OKW Se-Klassen wird als _XPATH_ angegeben.
 
-## Ziele des Locators
+@section refTutorial03_A Ziele des Locators
 
 1. Ein GUI-Objekt muss eindeutig erkannt und wiedererkannt werden können.
-2. Der Locator eines GUI-Objektes wird genau an einer Stelle in einem Frame definiert und gepflegt. - **DRY-Prinzip**
+2. Der Locator eines GUI-Objektes wird genau an einer Stelle in einem Frame definiert und gepflegt. - DRY-Prinzip
 3. Der Locator muss für jedes GUI-Objekt exakt angepaßt werden können. 
 
-## Die Klasse 'OKWLocator'
+@section refTutorial03_B  Die Klasse 'OKWLocator'
 
 In OKW existiert eine eigenen Klasse, die Klasse `okw.gui.OKWLocator` für die Definition von Locatoren.
 Die Locatoren können hierarchisch über GUI-Adapter hinweg miteinander verkettet werden. Dabei definieren die GUI-Adapter jeweils nur ihren Teil eines Loacators.
 
->Eine eigene Klasse für die Locatoren ist notwendig, da die Erkennungseigenschaften von GUI-Objekten
+> Eine eigene Klasse für die Locatoren ist notwendig, da die Erkennungseigenschaften von GUI-Objekten
 meist nicht mit einfach zudefinierenden `id`'s festgelegt werden kann. - In vielen Projekten wird die Problematik der Objekterkennung für den Test nicht hinreichen gewürdigt und es werden sehr komplexe Locatoren notwendig.
 
-**Wie das funktioniert ist Gegenstand dieses und der der folgenden Tutorials.** 
+Wie das funktioniert ist Gegenstand dieses und der der folgenden Tutorials.
 
 > Die 'okw.gui.OKWLocator' Klasse ist für die Verkettung von 'String'-Werten entworfen worden.
-D.h. sie **nicht** ausschliesslich nur für _XPATH_ geeignet, sonder sie kann für _beliebig andere Locatoren, die auf String-Werten basieren_, verwendet werden.   
+D.h. sie nicht ausschliesslich nur für _XPATH_ geeignet, sonder sie kann für _beliebig andere Locatoren, die auf String-Werten basieren_, verwendet werden.   
 
-## Definition eines _einfachen_ Locators
+@section refTutorial03_C Definition eines _einfachen_ Locators
+
 Der Locator für ein GUI-Objekt wird jeweils im Frame (für Fortgeschrittene: und im GUI-Container) eines GUI-Objektes definiert.
 
 Wir fangen mit dem einfachsten Fall an. Als Beispiel verwenden wir das Login-Fenster von Word-Press.
@@ -31,14 +34,15 @@ In diesem speziellen Fall haben alle Elemente jeweils eine Eindeutige `id` als A
 
 D.h. wir finden _jedes_ GUI-Object im WP-Login nach dem Prinzip: "Suche das Element mit der 'id', die einen bestimmten Wert" hat.
 
->**Hinweis:** Wichtig:** Dieser Wert sollte über alle Releases des Produkte const. sein
+> <b>Hinweis:<\b> Dieser Wert sollte über alle Releases des Produkte const. sein
 
-###Konkretes Beispiel `Username`
+@subsection refTutorial03_C_A Konkretes Beispiel `Username`
 
 Der Locator wird im Konstruktor eines GUI-Adapters als Parameter wie folgt festgelegt:
 
-**Beispiel:**
-```java
+<b>Beispiel:<\b>
+
+```
 @OKW (FN="Username") // FN des GUI-Objektes
 public SeInputText Username = new SeInputText( "//*[@id='user_login']" );
 ```
@@ -51,7 +55,7 @@ Hinweis: Die _XPATH_ Angaben erläutern wir hier nicht, weil das für die OKWLoc
 
 Das ganze Frame für _WP-Login_ (Wordpress-Login) sieht wie folg aus:
 
-```java
+```
 package okw.gui.frames;
 
 import okw.OKW;
@@ -88,6 +92,6 @@ public class wp_login extends SeBrowserChild
     }
 }
 ```
-
+*/
 
  
