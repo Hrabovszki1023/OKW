@@ -1,22 +1,45 @@
 /*!
-@page refListOdConst Liste der reservierten OpenKeyWord Konstanten
+\~german
+@page refLOConst Liste der reservierten OpenKeyWord Konstanten
 
+\~german
+Folgende OpenKeyWord-Konstanten sind reserviert:
+
+| OKW Konstante      | Beschreibung  |
+| -------------------|:-------------|
+| \ref refDELETE     | Löscht den Inhalt eines GUI-Objektes|
+| \ref refIGNORE     | Ignoriert bzw. überspringt das aktuelle Schlüsselwort |
+| \ref refEMPTY      | Das GUi-Objekt enthält keinen Wert. Diese Konstante ist in Verify*-Schlüsselwörtern erlaubt.|
+| \ref refSEP        | Trenner: Trennt mehrere Werte von einander. |  
+| \ref refVSEP_HSEP  | Trenner für Tabellen. | 
+| | |
+| \ref refTCN        | Enthält den Testfallname. Dieser Wert wird von EN.BeginTest( ) gesetzt|
+
+
+\~english
 The following OKW constants are reserved.
 
 | OKW constants      | Description  |
 | -------------------|:-------------|
-| [[${DELETE}|List-of-OKW-Constants#delete]] | Clears the contents of a GUI object.|
-| [[${IGNORE}|List-of-OKW-Constants#ignore]] | Ignore or Step over the keyword.|
-| [[${EMPTY} |List-of-OKW-Constants#empty]]  | The object is "empty". This constans is allowed in Verify*-Keywords.|
-| [[${SEP}   |List-of-OKW-Constants#sep]]    | Delimiter for values. |  
-| [[${VSEP}, ${HSEP}|List-of-OKW-Constants#vsep]] | Delimiter for tables. | 
-| -------------------|:-------------|
-| [[${TCN}|List-of-OKW-Constants#tcn]] | Insert the current Test-Case-Name. Value is set by EN.BeginTest( )|
+| \ref refDELETE     | Clears the contents of a GUI object.|
+| \ref refIGNORE     | Ignore or Step over the keyword.|
+| \ref refEMPTY      | The object is "empty". This constans is allowed in Verify*-Keywords.|
+| \ref refSEP        | Delimiter for values. |  
+| \ref refVSEP_HSEP  | Delimiter for tables. | 
+| | |
+| \ref refTCN | Insert the current Test-Case-Name. Value is set by EN.BeginTest( )|
 
-@section refListOfConst_DELETE ```${DELETE}```
 
-The value of the GUI object will be deleted/cleared.
+\~
+@section refDELETE ${DELETE}
 
+\~german
+Der aktuelle Wert eines GUI-Objektes wird gelöscht.
+
+\~english
+The current value of the GUI object will be deleted/cleared.
+
+\~
 ```
 EN.TypeKey( "Name", "${DELETE}" )
 EN.TypeKey( "Name", "${DELETE}${SEP}Second Value" )
@@ -27,82 +50,155 @@ EN.SetValue( "Name", "${DELETE}${SEP}Second Value" )
 EN.Select( "Artist", "${DELETE}" )
 EN.Select( "Artist", "${DELETE}${SEP}Frank Zappa${SEP}Rex Gildo" )
 ```
+\~german
+@note Wenn Werte in einem GUI-Objekt bereits Ausgewählt sind, dann können diese mit `${DELETE}` abgewählt werden.
 
-**Note:** Are values already selected in a GUI object, then these can be cleared with `${DELETE}`. These `${DELETE}` is specified as the first value:
+\~english
+@note Are values already selected in a GUI object, then these can be cleared with `${DELETE}`.
+These `${DELETE}` is specified as the first value:
 
 ```
 EN.Select( "Artist", "${DELETE}${SEP}Frank Zappa${SEP}Rex Gildo" )
 ```
+\~german
+@par Technischer Hinweis:
+Das Löschen von Werten wird im GUI-Adapter implmentiert (z.B. SeTextField, SeListbox)
 
+Wenn das Löschen der Werte für ein GUI-Objekt nicht möglich ist (z.B. ListBox enthält keine \refEMPTY Auswahlmöglichkeit),
+dann muss die Implementierung des GUI-Adapters darauf geignet (z.B. auslösen von okw.exceptions.OKWNotAllowedValueException) darauf reagieren. 
 
-## Technical Note
+\~english
+@par Technical Hint:
 
-Deleting the value in the GUI objects is implemented by the GUI Adapter (e.g. ```SeTextField```, ```SeListBox```).
+The deleting of values in GUI objects is implemented by the GUI Adapter (e.g. `SeTextField`, `SeListBox`).
 
-When deleting a GUI object is not possible (for example, selection list does not have the condition $ {EMPTY}), then the GUI property of GUI adapter must be considered.
+If deleting the values for a GUI object is not possible (e.g. selection list does not have the condition \refEMPTY ),
+then the implementation of the GUI adapter must respond appropriately.
 
+\~
+@section refIGNORE ${IGNORE}
 
-@section refListOfConst_IGNORE ```${IGNORE}```
+\~german
+OpenKeyWord überschpring ein Schlüsselwort, wenn als Wert `${IGNORE}` eingetragen ist.
 
-A OKW-keyword is skipped when ```${IGNORE}``` is entered as a value. This constant is important when re-usable sequences. With this, the activities of the OKW-keywords can be turned off in data-driven test.
+Diese Konstnate ist für wiederverwendbare Sequenzen wichtig.
+Mit ${IGNORE} können in Sequenzen die Ausführung einzelner Schlüsselwörter ein und ausgeschaltet werden.
 
+\~english
+A OpenKeyWeyword is skipped when `${IGNORE}` is entered as a value.
+This constant is important when re-usable sequences.
+With this, the activities of the OKW-keywords can be turned off in data-driven test.
+
+\~
 ```
 EN.Select( "Artist", "${IGNORE}" )
 EN.TypeKey( "Artist", "${IGNORE}" )
 EN.VerifyValue( "Artist", "${IGNORE}" )
 ```
+\~german
+@par Hinweis:
+Ein leerer String `""` ist äquivalent mit `${IGNORE}`.
+Das folgende Beispiel ist mit dem vorhergen Beispiel gleichwertig:
 
-**Important:** ```""``` (empty string) is equivalent to ```${IGNORE}```.
+\~english
+@par Important:
+An empty string `""` is equivalent to `${IGNORE}`.
 The following example is equivalent to the previous example.
 
+\~
 ```
 EN.Select ( "Artist", "" )
 EN.TypeKey ( "Artist", "" )
 EN.VerifyValue ( "Artist", "" )
 ```
+\~german
+`${IGNORE}` darf nicht mit anderen Werten kombiniert werden, sonst wir eine Ausnahme ausgelöst und der aktuelle Testfall wird beendet.
 
-```${IGNORE}``` may not be combined with other values. - It will raise an exception and a test case is terminated.
+\~english
+`${IGNORE}` may not be combined with other values. - This will raise an exception and a test case is terminated.
 
-## Technical Note
 
-```${IGNORE}``` is evaluated by the OK class. The OKW-Method of a GUI-Adapter (LFC) is not called in this case.
+\~german
+@par Technischer Hinweis:
+`${IGNORE}` wird in den Methoden der Klasse okw.core.OK ausgewertet. Eine OKW-Methode des GUI-Adapters wird im `${IGNORE}`-Fall nicht aufgerufen.
 
-@section refListOfConst_EMPTY ```${EMPTY}```
+\~english
+@par Technical Hint:
+`${IGNORE}` is evaluated by the OK class. The OKW-Method of a GUI-Adapter will not called in this case.
 
-The OKW constant ```${EMPTY}``` is necessary for the "VerifyValue"-keywords:
 
+\~
+@section refEMPTY ${EMPTY}
+
+\~german
+Die OKW Konstante `${EMPTY}` wird in den "VerifyValue"-Schlüsselwörtern verwendet:
+
+\~english
+The OKW constant `${EMPTY}` is necessary for the "VerifyValue"-keywords:
+
+\~
 ```
 EN.VerifyValue( "Name", "${EMPTY}" )
 ```
 
-> **Note:** ```VerifyValue( "Name", "" )``` ignores the execution of the keyword. In other words, nothing is checked.
+\~german
+@note ```VerifyValue( "Name", "" )``` ignoriert die Ausführung die Schlüsselwortes. Mit anderen Worten: Es wird nichts geprüft!
 
-## Technical Note
+@par Technischer Hinweis:
+`${EMPTY}` wird in den Verify-Methoden der Klasse okw.core.OK ausgewertet.: okw.core.OK konvertiert `${EMPTY}` in einen leeren String `""`
+und vergleicht das mit dem aktuellen Wert des GUI objectes.
 
-The evaluation of `${EMPTY}` occurs in the class ```OK```: ```OK``` converts `${EMPTY}` to `""` and compares this with the current value of the GUI object.
+
+\~english
+@note ```VerifyValue( "Name", "" )``` ignores the execution of the keyword. In other words, nothing is checked.
+
+@par Technical Hint:
+The evaluation of `${EMPTY}` occurs in the class `OK`: `OK` converts `${EMPTY}` to an empty string `""`
+and compares this with the current value of the GUI object.
 
 
-@section refListOfConst_SEP ```${SEP}```
+\~
+@section refSEP ${SEP}
 
-```${SEP}``` is used to separate values. E.g. multiple selection in a ListBox.
+\~english
+`${SEP}` wird verwendet um mehrere Werte von einander zu trennen. Ein Beispiel wäre die Mehrfachauswahl in einer ListBox.
 
+\~english
+`${SEP}` is used to separate values. E.g. multiple selection in a ListBox.
+
+\~
 ```
 EN.Select( "Artist" = "Frank Zappa${SEP}Rex Gildo" )
 ```
 
-## Technical Note
+\~english
 
-The separation of the values are in the ```OK``` class. The values are further processed in the GUI adapters as a list.
+@par Technischer Hinweis:
+Die Werte werden in den Methoden der Klasse okw.core.OK getrennt.
+The values are further processed in the GUI adapters as an `ArrayList<String>`.
 
-@section refListOfConst_TCS ```${TCS}```
+\~english
+@par Technical Hint:
+The separation of the values are in the ```OK``` class. The values are further processed in the GUI adapters as an `ArrayList<String>`.
 
-```${TCS}``` holds the current test case name.
 
+\~
+@section refTCN ${TCN}
+
+\~english
+`${TCN}` holds the current test case name. Each call of TestBegin saves the given Value in the MemKey `TCN`
+
+\~english
+`${TCN}` holds the current test case name. Each call of TestBegin saves the given Value in the MemKey `TCN`
+
+\~
 ```
 EN.TestBegin( "This is my first test case" ); // The KeyWord TestBegin() sets TCN="This is my first test case" 
 EN.SelectWindow( "MyWindow" );
-EN.SetValue( "Comment", "${TCS}" ); // GUI-Object with FN="Comment" is set to "This is my first test case"
+EN.SetValue( "Comment", "${TCN}" ); // GUI-Object with FN="Comment" is set to "This is my first test case"
 EN.VerifyValue( "Comment", "This is my first test case" )
 ```
-
+\~
+@author Zoltán Hrabovszki
+@date 2017-05-10
 */

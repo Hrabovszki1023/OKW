@@ -1,21 +1,28 @@
-\page refSeleniumGUIadapter `<input>`-Tag
+/*!
+@page refSeleniumGUIadapter Liste der Selenium GUI-Adapter
 
-| OKW GUI-Adapter | `<tag>`-Type  |
-| ----------------|:--------------|
-| SeInputButton   | `<input type='button'>`   | 
-| SeInputCheckbox | `<input type='checkbox'>` | 
-| SeInputText     | `<input type="text">`     | 
-| SeInputRadio    | `<input type="radio">`    | 
-| SeInputRange    | | 
+Liste der Selenium GUI Adapter
 
 
-* [[SeSelect]] for `<select>` tags
-* [[SeTextarea]] for `<textarea>` tags
-* [SeLink](https://hrabovszki1023.github.io/OKW/html/classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html) for `<a>` tags
+| OKW GUI-Adapter | ```<tag>```-Type   |
+| ----------------|:-------------------|
+| okw.gui.adapter.selenium.SeInputButton   | ```<input type='button'>```   | 
+| okw.gui.adapter.selenium.SeInputCheckbox | ```<input type='checkbox'>``` | 
+| okw.gui.adapter.selenium.SeInputText     | ```<input type='text'>```     | 
+| okw.gui.adapter.selenium.SeInputRadio    | ```<input type='radio'>```    | 
+| okw.gui.adapter.selenium.SeInputRange    | | 
 
-## Radiolist
-* [[SeRadioList]]
+
++ okw.gui.adapter.selenium.SeSelect for `<select>` tags
++ okw.gui.adapter.selenium.SeTextarea for `<textarea>` tags
++ okw.gui.adapter.selenium.SeLink for `<a>` tags
+
+@subsection refRadioList Radiolist
+
++ okw.gui.adapter.selenium.SeRadioList - Ist eine Liste aus RadioButtons ( okw.gui.adapter.selenium.SeInputRadio )
 
 
-* [[SeOutput]]
-* [[SeProgress]]
++ okw.gui.adapter.selenium.SeOutput - noch nicht umgesetzt
++ okw.gui.adapter.selenium.SeProgress - noch nicht umgesetzt
+
+*/
