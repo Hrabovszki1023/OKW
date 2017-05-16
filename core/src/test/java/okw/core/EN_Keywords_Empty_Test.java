@@ -280,7 +280,7 @@ public class EN_Keywords_Empty_Test {
     assertEquals( 0, myClipBoard.getValue().size() );
     // assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
-    assertEquals("VerifyCaption()", myClipBoard.getMethod());
+    assertEquals("VerifySelectedValue()", myClipBoard.getMethod());
   }
  
   /**
@@ -318,7 +318,7 @@ public class EN_Keywords_Empty_Test {
     assertEquals( 0, myClipBoard.getValue().size() );
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
-    assertEquals("VerifyCaption()", myClipBoard.getMethod());
+    assertEquals("VerifySelectedValue()", myClipBoard.getMethod());
   }
 
 
@@ -357,7 +357,7 @@ public class EN_Keywords_Empty_Test {
     assertEquals( 0, myClipBoard.getValue().size() );
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
-    assertEquals("VerifyCaption()", myClipBoard.getMethod());
+    assertEquals("VerifySelectedValue()", myClipBoard.getMethod());
 
   }  
   

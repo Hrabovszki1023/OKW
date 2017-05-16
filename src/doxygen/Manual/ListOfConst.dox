@@ -1,0 +1,108 @@
+/*!
+@page refListOdConst Liste der reservierten OpenKeyWord Konstanten
+
+The following OKW constants are reserved.
+
+| OKW constants      | Description  |
+| -------------------|:-------------|
+| [[${DELETE}|List-of-OKW-Constants#delete]] | Clears the contents of a GUI object.|
+| [[${IGNORE}|List-of-OKW-Constants#ignore]] | Ignore or Step over the keyword.|
+| [[${EMPTY} |List-of-OKW-Constants#empty]]  | The object is "empty". This constans is allowed in Verify*-Keywords.|
+| [[${SEP}   |List-of-OKW-Constants#sep]]    | Delimiter for values. |  
+| [[${VSEP}, ${HSEP}|List-of-OKW-Constants#vsep]] | Delimiter for tables. | 
+| -------------------|:-------------|
+| [[${TCN}|List-of-OKW-Constants#tcn]] | Insert the current Test-Case-Name. Value is set by EN.BeginTest( )|
+
+@section refListOfConst_DELETE ```${DELETE}```
+
+The value of the GUI object will be deleted/cleared.
+
+```
+EN.TypeKey( "Name", "${DELETE}" )
+EN.TypeKey( "Name", "${DELETE}${SEP}Second Value" )
+
+EN.SetValue( "Name", "${DELETE}" )
+EN.SetValue( "Name", "${DELETE}${SEP}Second Value" )
+
+EN.Select( "Artist", "${DELETE}" )
+EN.Select( "Artist", "${DELETE}${SEP}Frank Zappa${SEP}Rex Gildo" )
+```
+
+**Note:** Are values already selected in a GUI object, then these can be cleared with `${DELETE}`. These `${DELETE}` is specified as the first value:
+
+```
+EN.Select( "Artist", "${DELETE}${SEP}Frank Zappa${SEP}Rex Gildo" )
+```
+
+
+## Technical Note
+
+Deleting the value in the GUI objects is implemented by the GUI Adapter (e.g. ```SeTextField```, ```SeListBox```).
+
+When deleting a GUI object is not possible (for example, selection list does not have the condition $ {EMPTY}), then the GUI property of GUI adapter must be considered.
+
+
+@section refListOfConst_IGNORE ```${IGNORE}```
+
+A OKW-keyword is skipped when ```${IGNORE}``` is entered as a value. This constant is important when re-usable sequences. With this, the activities of the OKW-keywords can be turned off in data-driven test.
+
+```
+EN.Select( "Artist", "${IGNORE}" )
+EN.TypeKey( "Artist", "${IGNORE}" )
+EN.VerifyValue( "Artist", "${IGNORE}" )
+```
+
+**Important:** ```""``` (empty string) is equivalent to ```${IGNORE}```.
+The following example is equivalent to the previous example.
+
+```
+EN.Select ( "Artist", "" )
+EN.TypeKey ( "Artist", "" )
+EN.VerifyValue ( "Artist", "" )
+```
+
+```${IGNORE}``` may not be combined with other values. - It will raise an exception and a test case is terminated.
+
+## Technical Note
+
+```${IGNORE}``` is evaluated by the OK class. The OKW-Method of a GUI-Adapter (LFC) is not called in this case.
+
+@section refListOfConst_EMPTY ```${EMPTY}```
+
+The OKW constant ```${EMPTY}``` is necessary for the "VerifyValue"-keywords:
+
+```
+EN.VerifyValue( "Name", "${EMPTY}" )
+```
+
+> **Note:** ```VerifyValue( "Name", "" )``` ignores the execution of the keyword. In other words, nothing is checked.
+
+## Technical Note
+
+The evaluation of `${EMPTY}` occurs in the class ```OK```: ```OK``` converts `${EMPTY}` to `""` and compares this with the current value of the GUI object.
+
+
+@section refListOfConst_SEP ```${SEP}```
+
+```${SEP}``` is used to separate values. E.g. multiple selection in a ListBox.
+
+```
+EN.Select( "Artist" = "Frank Zappa${SEP}Rex Gildo" )
+```
+
+## Technical Note
+
+The separation of the values are in the ```OK``` class. The values are further processed in the GUI adapters as a list.
+
+@section refListOfConst_TCS ```${TCS}```
+
+```${TCS}``` holds the current test case name.
+
+```
+EN.TestBegin( "This is my first test case" ); // The KeyWord TestBegin() sets TCN="This is my first test case" 
+EN.SelectWindow( "MyWindow" );
+EN.SetValue( "Comment", "${TCS}" ); // GUI-Object with FN="Comment" is set to "This is my first test case"
+EN.VerifyValue( "Comment", "This is my first test case" )
+```
+
+*/

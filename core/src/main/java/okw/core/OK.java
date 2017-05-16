@@ -457,23 +457,28 @@ public class OK implements IOKW_State
     /**
      *  \copydoc IOKW_State::MemorizeCaption(String,String)
      */
-    public void MemorizeCaption( String FN, String fpsMemKeyName ) throws Exception
+    public void MemorizeCaption( String FN, String MemKey ) throws Exception
     {
-        Log.LogFunctionStartDebug( "MemorizeCaption", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
+        Log.LogFunctionStartDebug( "MemorizeCaption", "FN", FN, "fpsMemKeyName", MemKey );
 
         try
         {
-            if ( fpsMemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || fpsMemKeyName.equals( "" ) )
+            if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || MemKey.equals( "" ) )
             {
                 // Wenn fpsMemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
                 throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeCaption", "OKWNotAllowedValueException" ) );
             }
-            else if ( fpsMemKeyName.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+            }            
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn fpsMemKeyName = DELETE enthält ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", fpsMemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
             }
             else
             {
@@ -481,7 +486,7 @@ public class OK implements IOKW_State
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-                MEM.Set( fpsMemKeyName, lvsToMemorize );
+                MEM.Set( MemKey, lvsToMemorize );
             }
         }
         catch (Exception e)
@@ -497,24 +502,29 @@ public class OK implements IOKW_State
     /**
      *  \copydoc IOKW_State::MemorizeExists(String,String)
      */
-    public void MemorizeExists( String FN, String fpsMemKeyName ) throws Exception
+    public void MemorizeExists( String FN, String MemKey ) throws Exception
     {
-        Log.LogFunctionStartDebug( "MemorizeExists", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
+        Log.LogFunctionStartDebug( "MemorizeExists", "FN", FN, "MemKey", MemKey );
 
         try
         {
             // Prüfen ob ignoriert werden muss...
-            if ( fpsMemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || fpsMemKeyName.equals( "" ) )
+            if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || MemKey.equals( "" ) )
             {
                 // Wenn fpsMemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeExists", "OKWNotAllowedValueException", fpsMemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeExists", "OKWNotAllowedValueException", MemKey ) );
             }
-            else if ( fpsMemKeyName.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+            }            
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn fpsMemKeyName = DELETE enthält ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", fpsMemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
             }
             else
             {
@@ -522,7 +532,7 @@ public class OK implements IOKW_State
 
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-                MEM.Set( fpsMemKeyName, lvsActual );
+                MEM.Set( MemKey, lvsActual );
             }
         }
         catch (Exception e)
@@ -538,24 +548,29 @@ public class OK implements IOKW_State
     /**
      *  \copydoc IOKW_State::MemorizeHasFocus(String,String)
      */
-    public void MemorizeHasFocus( String FN, String fps_MemKeyName ) throws Exception
+    public void MemorizeHasFocus( String FN, String MemKey ) throws Exception
     {
-        Log.LogFunctionStartDebug( "MemorizeHasFocus", "FN", FN, "fps_MemKeyName", fps_MemKeyName );
+        Log.LogFunctionStartDebug( "MemorizeHasFocus", "FN", FN, "MemKey", MemKey );
 
         try
         {
             // Prüfen ob ignoriert werden muss...
-            if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || fps_MemKeyName.equals( "" ) )
+            if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || MemKey.equals( "" ) )
             {
                 // Wenn fps_MemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeHasFocus", "OKWNotAllowedValueException", fps_MemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeHasFocus", "OKWNotAllowedValueException", MemKey ) );
             }
-            else if ( fps_MemKeyName.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+            }            
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn fpsMemKeyName = DELETE enthält ->
                 // OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", fps_MemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
             }
 
             else
@@ -564,7 +579,7 @@ public class OK implements IOKW_State
 
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-                MEM.Set( fps_MemKeyName, lvsActual );
+                MEM.Set( MemKey, lvsActual );
             }
         }
         catch (Exception e)
@@ -580,23 +595,33 @@ public class OK implements IOKW_State
     /**
      *  \copydoc IOKW_State::MemorizeIsActive(String,String)
      */
-    public void MemorizeIsActive( String FN, String fps_MemKeyName ) throws Exception
+    public void MemorizeIsActive( String FN, String MemKey ) throws Exception
     {
-        Log.LogFunctionStartDebug( "MemorizeIsActive", "FN", FN, "fps_MemKeyName", fps_MemKeyName );
+        Log.LogFunctionStartDebug( "MemorizeIsActive", "FN", FN, "MemKey", MemKey );
 
         try
         {
             // Prüfen ob ignoriert werden muss...
-            if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || fps_MemKeyName.equals( "" ) )
+            if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || MemKey.equals( "" ) )
             {
                 // Wenn fpsMemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", fps_MemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
             }
-            else if ( fps_MemKeyName.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+            }            
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+            }            
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", fps_MemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
             }
             else
             {
@@ -605,7 +630,7 @@ public class OK implements IOKW_State
 
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-                MEM.Set( fps_MemKeyName, lvsActual );
+                MEM.Set( MemKey, lvsActual );
             }
         }
         catch (Exception e)
@@ -621,22 +646,27 @@ public class OK implements IOKW_State
     /**
      *  \copydoc IOKW_State::MemorizeLabel(String,String)
      */
-    public void MemorizeLabel( String FN, String fps_MemKeyName ) throws Exception
+    public void MemorizeLabel( String FN, String MemKey ) throws Exception
     {
-        Log.LogFunctionStartDebug( "MemorizeLabel", "FN", FN, "fps_MemKeyName", fps_MemKeyName );
+        Log.LogFunctionStartDebug( "MemorizeLabel", "FN", FN, "MemKey", MemKey );
 
         try
         {
-            if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || fps_MemKeyName.equals( "" ) )
+            if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || MemKey.equals( "" ) )
             {
                 // Wenn fps_MemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeLabel", "OKWNotAllowedValueException", fps_MemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeLabel", "OKWNotAllowedValueException", MemKey ) );
             }
-            else if ( fps_MemKeyName.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+            }            
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", fps_MemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
             }
 
             else
@@ -645,7 +675,7 @@ public class OK implements IOKW_State
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-                MEM.Set( fps_MemKeyName, lvsToMemorize );
+                MEM.Set( MemKey, lvsToMemorize );
             }
         }
         catch (Exception e)
@@ -661,23 +691,28 @@ public class OK implements IOKW_State
     /**
      *  \copydoc IOKW_State::MemorizeSelectedValue(String,String)
      */
-    public void MemorizeSelectedValue( String FN, String fps_MemKeyName ) throws Exception
+    public void MemorizeSelectedValue( String FN, String MemKey ) throws Exception
     {
-        Log.LogFunctionStartDebug( "MemorizeSelectedValue", "FN", FN, "fps_MemKeyName", fps_MemKeyName );
+        Log.LogFunctionStartDebug( "MemorizeSelectedValue", "FN", FN, "MemKey", MemKey );
 
         try
         {
-            if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || fps_MemKeyName.equals( "" ) )
+            if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || MemKey.equals( "" ) )
             {
                 // Wenn fps_MemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeSelectedValue", "OKWNotAllowedValueException", fps_MemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeSelectedValue", "OKWNotAllowedValueException", MemKey ) );
             }
-            else if ( fps_MemKeyName.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+            }            
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn fpsMemKeyName = DELETE enthält ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", fps_MemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
             }
             else
             {
@@ -685,7 +720,7 @@ public class OK implements IOKW_State
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-                MEM.Set( fps_MemKeyName, lvsToMemorize );
+                MEM.Set( MemKey, lvsToMemorize );
             }
         }
         catch (Exception e)
@@ -701,24 +736,29 @@ public class OK implements IOKW_State
     /**
      *  \copydoc IOKW_State::MemorizeTablecellValue(String,String,String,String) throws Exception
      */
-    public void MemorizeTablecellValue( String FN, String COL, String ROW, String fps_MemKeyName ) throws Exception
+    public void MemorizeTablecellValue( String FN, String COL, String ROW, String MemKey ) throws Exception
     {
-        Log.LogFunctionStartDebug( "MemorizeTablecellValue", "FN", FN, "COL", COL, "ROW", ROW, "fps_MemKeyName", fps_MemKeyName );
+        Log.LogFunctionStartDebug( "MemorizeTablecellValue", "FN", FN, "COL", COL, "ROW", ROW, "MemKey", MemKey );
 
         try
         {
 
-            if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || fps_MemKeyName.equals( "" ) )
+            if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || MemKey.equals( "" ) )
             {
                 // Wenn fpsMemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
                 throw new okw.exceptions.OKWNotAllowedValueException(
-                                LM.GetMessage( "MemorizeTablecellValue", "OKWNotAllowedValueException", fps_MemKeyName ) );
+                                LM.GetMessage( "MemorizeTablecellValue", "OKWNotAllowedValueException", MemKey ) );
             }
-            else if ( fps_MemKeyName.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+            }            
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn fpsMemKeyName = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", fps_MemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
             }
             else
             {
@@ -726,7 +766,7 @@ public class OK implements IOKW_State
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-                MEM.Set( fps_MemKeyName, lvsToMemorize );
+                MEM.Set( MemKey, lvsToMemorize );
             }
         }
         catch (Exception e)
@@ -742,22 +782,27 @@ public class OK implements IOKW_State
     /**
      *  \copydoc IOKW_State::MemorizeTooltip(String,String)
      */
-    public void MemorizeTooltip( String FN, String fps_MemKeyName ) throws Exception
+    public void MemorizeTooltip( String FN, String MemKey ) throws Exception
     {
-        Log.LogFunctionStartDebug( "MemorizeTooltip", "FN", FN, "fps_MemKeyName", fps_MemKeyName );
+        Log.LogFunctionStartDebug( "MemorizeTooltip", "FN", FN, "fps_MemKeyName", MemKey );
 
         try
         {
-            if ( fps_MemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || fps_MemKeyName.equals( "" ) )
+            if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || MemKey.equals( "" ) )
             {
                 // Wenn fpsMemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeTooltip", "OKWNotAllowedValueException", fps_MemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeTooltip", "OKWNotAllowedValueException", MemKey ) );
             }
-            else if ( fps_MemKeyName.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+            }            
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", fps_MemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
             }
             else
             {
@@ -765,7 +810,7 @@ public class OK implements IOKW_State
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-                MEM.Set( fps_MemKeyName, lvsToMemorize );
+                MEM.Set( MemKey, lvsToMemorize );
             }
         }
         catch (Exception e)
@@ -781,22 +826,27 @@ public class OK implements IOKW_State
     /**
      * \copydoc IOKW_State::MemorizeValue(String,String)
      */
-    public void MemorizeValue( String FN, String fpsMemKeyName ) throws Exception
+    public void MemorizeValue( String FN, String MemKey ) throws Exception
     {
-        Log.LogFunctionStartDebug( "MemorizeValue", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
+        Log.LogFunctionStartDebug( "MemorizeValue", "FN", FN, "MemKey", MemKey );
 
         try
         {
-            if ( fpsMemKeyName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || fpsMemKeyName.equals( "" ) )
+            if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || MemKey.equals( "" ) )
             {
                 // Wenn fpsMemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeValue", "OKWNotAllowedValueException", fpsMemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeValue", "OKWNotAllowedValueException", MemKey ) );
             }
-            else if ( fpsMemKeyName.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+            }            
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
-                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", fpsMemKeyName ) );
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
             }
             else
             {
@@ -804,7 +854,7 @@ public class OK implements IOKW_State
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-                MEM.Set( fpsMemKeyName, lvsToMemorize );
+                MEM.Set( MemKey, lvsToMemorize );
             }
         }
         catch (Exception e)
@@ -832,6 +882,11 @@ public class OK implements IOKW_State
                 // \todo TODO: Meldung sprachabhägig auslagern!
                 Log.LogPrint( "Ignore..." );
             }
+            else if ( Val.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", Val ) );
+            }            
             else
             {
                 // Sonst Methode des Objektes aufrufen....
@@ -891,6 +946,11 @@ public class OK implements IOKW_State
                 // \todo TODO: Meldung sprachabhägig auslagern!
                 Log.LogPrintDebug( "Ignore..." );
             }
+            else if ( Val.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", Val ) );
+            }            
             else
             {
                 ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
@@ -968,6 +1028,11 @@ public class OK implements IOKW_State
                 // \todo TODO: Meldung sprachabhägig auslagern!
                 Log.LogPrint( "Ignore" );
             }
+            else if ( SEQ_ID.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal neben dem Wert `${IGNORE}` weitere Zeichen enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", SEQ_ID ) );
+            }            
             else if ( SEQ_ID.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn SEQ_ID = DELETE enthält ist ->
@@ -1038,6 +1103,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "SetValue", "Ignore" ) );
             }
+            else if ( Val.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", Val ) );
+            }            
             else
             {
                 lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
@@ -1116,6 +1186,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "TypeKey", "Ignore" ) );
             }
+            else if ( Val.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", Val ) );
+            }            
             else
             {
                 lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
@@ -1152,6 +1227,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "TypeKeyTablecell", "Ignore" ) );
             }
+            else if ( Val.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", Val ) );
+            }            
             else
             {
                 // Werte in Val separieren
@@ -1224,6 +1304,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyCaption", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
@@ -1284,6 +1369,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyCaption", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
@@ -1347,6 +1437,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
@@ -2126,7 +2221,7 @@ public class OK implements IOKW_State
             {
                 lvLsReturn = Method2Call.get();
 
-                if ( Matcher.WildcardMatch( lvLsReturn, fpALExpectedREGXs ) )
+                if ( Matcher.RegexMatch( lvLsReturn, fpALExpectedREGXs ) )
                 {
                     break;
                 }
@@ -2180,6 +2275,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
@@ -2241,6 +2341,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
@@ -2302,6 +2407,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
@@ -2351,6 +2461,7 @@ public class OK implements IOKW_State
     {
         Log.LogFunctionStartDebug( "VerifySelectedValue", "FN", FN, "fpsExpected", ExpVal );
 
+        ArrayList<String> lvlsExpected = null;
         ArrayList<String> Actual = null;
 
         try
@@ -2361,6 +2472,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifySelectedValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
@@ -2369,8 +2485,17 @@ public class OK implements IOKW_State
             }
             else
             {
-                // Split giveneExpected Value
-                ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+                {
+                    lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
+                }
+                else
+                {
+                    // Split giveneExpected Value
+                    lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                    lvlsExpected = Parser.ParseMe( lvlsExpected );
+                }
 
                 // Get the actuel value from object
                 IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
@@ -2403,6 +2528,7 @@ public class OK implements IOKW_State
     {
         Log.LogFunctionStartDebug( "VerifySelectedValueWCM", "FN", FN, "fpsExpected", ExpVal );
 
+        ArrayList<String> lvlsExpected = null;
         ArrayList<String> Actual = null;
 
         try
@@ -2413,6 +2539,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifySelectedValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
@@ -2421,8 +2552,17 @@ public class OK implements IOKW_State
             }
             else
             {
-                // Split giveneExpected Value
-                ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+                {
+                    lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
+                }
+                else
+                {
+                    // Split giveneExpected Value
+                    lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                    lvlsExpected = Parser.ParseMe( lvlsExpected );
+                }
 
                 // Get the actuel value from object
                 IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
@@ -2455,6 +2595,7 @@ public class OK implements IOKW_State
     {
         Log.LogFunctionStartDebug( "VerifySelectedValueREGX", "FN", FN, "fpsExpected", ExpVal );
 
+        ArrayList<String> lvlsExpected = null;
         ArrayList<String> Actual = null;
 
         try
@@ -2465,6 +2606,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifySelectedValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
@@ -2473,8 +2619,17 @@ public class OK implements IOKW_State
             }
             else
             {
-                // Split giveneExpected Value
-                ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+                {
+                    lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
+                }
+                else
+                {
+                    // Split giveneExpected Value
+                    lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                    lvlsExpected = Parser.ParseMe( lvlsExpected );
+                }
 
                 IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
 
@@ -2514,6 +2669,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyTablecellValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
@@ -2562,6 +2722,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyTablecellValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
@@ -2610,6 +2775,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyTablecellValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
@@ -2661,6 +2831,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
@@ -2721,6 +2896,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyTooltip", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
@@ -2783,6 +2963,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyTooltip", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
@@ -2843,6 +3028,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
@@ -2904,6 +3094,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
@@ -2967,6 +3162,11 @@ public class OK implements IOKW_State
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
             }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new okw.exceptions.OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
             else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException

@@ -1,0 +1,21 @@
+\page refSeleniumGUIadapter `<input>`-Tag
+
+| OKW GUI-Adapter | `<tag>`-Type  |
+| ----------------|:--------------|
+| SeInputButton   | `<input type='button'>`   | 
+| SeInputCheckbox | `<input type='checkbox'>` | 
+| SeInputText     | `<input type="text">`     | 
+| SeInputRadio    | `<input type="radio">`    | 
+| SeInputRange    | | 
+
+
+* [[SeSelect]] for `<select>` tags
+* [[SeTextarea]] for `<textarea>` tags
+* [SeLink](https://hrabovszki1023.github.io/OKW/html/classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html) for `<a>` tags
+
+## Radiolist
+* [[SeRadioList]]
+
+
+* [[SeOutput]]
+* [[SeProgress]]

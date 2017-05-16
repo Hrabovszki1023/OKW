@@ -90,7 +90,7 @@ import okw.log.Logger_Sngltn;
             return fpbExpectedValue;
         }
 
-        public List<String> VerifySelectedValue(ArrayList<String> fpLsExpectedValue)
+        public ArrayList<String> VerifySelectedValue() //ArrayList<String> fpLsExpectedValue)
         {
             this.myLogger.LogFunctionStartDebug("VerifySelectedValue");
             
@@ -104,7 +104,7 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifySelectedValue()");
-            myClipboard.getValue().addAll(fpLsExpectedValue);
+            //myClipboard.getValue().addAll(fpLsExpectedValue);
 
             this.myLogger.LogFunctionEndDebug();
 

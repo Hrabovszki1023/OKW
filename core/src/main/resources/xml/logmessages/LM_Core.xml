@@ -346,12 +346,47 @@
 			</Text>
 		</Method>
 
+		<!-- Method: "VerifySelectedValueWCM"-->
+		<Method name="VerifySelectedValueWCM">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Selected Value WCM</en>
+				<de>Prüfe gewählten Wert WCM</de>
+			</Text>
+		</Method>
+		<!-- Method: "VerifySelectedValueREGX"-->
+		<Method name="VerifySelectedValueREGX">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Selected Value REGX</en>
+				<de>Prüfe gewählten Wert REGX</de>
+			</Text>
+		</Method>
+
 		<!-- Method: "VerifyTablecellValue"-->
 		<Method name="VerifyTablecellValue">
 			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
 			<Text key="KeyWordName">
 				<en>Verify Tablecell Value</en>
 				<de>Prüfe Tabellenzellenwert</de>
+			</Text>
+
+		</Method>
+		<!-- Method: "VerifyTablecellValueREGX"-->
+		<Method name="VerifyTablecellValueREGX">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Tablecell Value REGX</en>
+				<de>Prüfe Tabellenzellenwert REGX</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyTablecellValueWCM"-->
+		<Method name="VerifyTablecellValueWCM">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Tablecell Value WCM</en>
+				<de>Prüfe Tabellenzellenwert WCM</de>
 			</Text>
 		</Method>
 
