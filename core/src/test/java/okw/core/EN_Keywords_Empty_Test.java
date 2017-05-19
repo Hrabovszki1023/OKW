@@ -603,7 +603,7 @@ public class EN_Keywords_Empty_Test {
    *  \date 2013.12.26
    */
   @Test
-  public void tc_VerifyValue_Empty() throws Exception {
+  public void tc_VerifyTablecellValue_Empty() throws Exception {
 
     EN.BeginTest( name.getMethodName() );
 
@@ -622,7 +622,7 @@ public class EN_Keywords_Empty_Test {
     // Löschen des Clipboards
     myClipBoard.Clear();
     
-    EN.VerifyValue("All_MethodsObj_VerifyEmpty", "${EMPTY}");
+    EN.VerifyTablecellValue("All_MethodsObj_VerifyEmpty", "X", "Y", "${EMPTY}");
     
     assertEquals( 0, myClipBoard.getValue().size() );
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
@@ -641,7 +641,7 @@ public class EN_Keywords_Empty_Test {
    *  \date 2013.12.26
    */
   @Test
-  public void tc_VerifyValueREGX_Empty() throws Exception {
+  public void tc_VerifyVTablecellalueREGX_Empty() throws Exception {
 
     EN.BeginTest( name.getMethodName() );
 
@@ -660,7 +660,7 @@ public class EN_Keywords_Empty_Test {
     // Löschen des Clipboards
     myClipBoard.Clear();
     
-    EN.VerifyValueREGX("All_MethodsObj_VerifyEmpty", "${EMPTY}");
+    EN.VerifyTablecellValueREGX("All_MethodsObj_VerifyEmpty", "X", "Y", "${EMPTY}");
     
     assertEquals( 0, myClipBoard.getValue().size() );
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
@@ -680,7 +680,7 @@ public class EN_Keywords_Empty_Test {
    *  \date 2013.12.26
    */
   @Test
-  public void tc_VerifyValueWCM_Empty() throws Exception {
+  public void tc_VerifyTablecellValueWCM_Empty() throws Exception {
 
     EN.BeginTest( name.getMethodName() );
 
@@ -699,7 +699,7 @@ public class EN_Keywords_Empty_Test {
     // Löschen des Clipboards
     myClipBoard.Clear();
     
-    EN.VerifyValueWCM("All_MethodsObj_VerifyEmpty", "${EMPTY}");
+    EN.VerifyTablecellValueWCM("All_MethodsObj_VerifyEmpty", "X", "Y", "${EMPTY}");
     
     assertEquals( 0, myClipBoard.getValue().size() );
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
@@ -739,5 +739,120 @@ public class EN_Keywords_Empty_Test {
   
     EN.SelectWindow( "Rechner" );
     EN.VerifyIsActive( "All_MethodsObj", "${EMPTY}" );
+  }
+
+/**
+   *  \~german
+   *  \brief
+   *  Prüft "${EMPTY}" für das Schlüsselwort VerifyValue(string,string)
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifyValue_Empty() throws Exception {
+
+    EN.BeginTest( name.getMethodName() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+    
+    EN.VerifyValue("All_MethodsObj_VerifyEmpty", "${EMPTY}");
+    
+    assertEquals( 0, myClipBoard.getValue().size() );
+    //assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+    assertEquals("VerifyValue()", myClipBoard.getMethod());
+  }
+
+/**
+   *  \~german
+   *  \brief
+   *  Prüft "${EMPTY}" für das Schlüsselwort VerifyValue(string,string)
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifyValueREGX_Empty() throws Exception {
+
+    EN.BeginTest( name.getMethodName() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+    
+    EN.VerifyValueREGX("All_MethodsObj_VerifyEmpty", "${EMPTY}");
+    
+    assertEquals( 0, myClipBoard.getValue().size() );
+    //assertEquals( "", myClipBoard.getValue().get( 0 ) );
+
+    assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+    assertEquals("VerifyValue()", myClipBoard.getMethod());
+  }
+
+/**
+   *  \~german
+   *  \brief
+   *  Prüft "${EMPTY}" für das Schlüsselwort VerifyValue(string,string)
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifyValueWCM_Empty() throws Exception {
+
+    EN.BeginTest( name.getMethodName() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+    
+    EN.VerifyValueWCM("All_MethodsObj_VerifyEmpty", "${EMPTY}");
+    
+    assertEquals( 0, myClipBoard.getValue().size() );
+    //assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+    assertEquals("VerifyValue()", myClipBoard.getMethod());
   }
 }

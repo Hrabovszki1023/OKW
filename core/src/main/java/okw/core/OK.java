@@ -2659,6 +2659,9 @@ public class OK implements IOKW_State
      */
     public void VerifyTablecellValue( String FN, String COL, String ROW, String ExpVal ) throws Exception
     {
+        ArrayList<String> lvlsExpected = null;
+        ArrayList<String> Actual = null;
+
         Log.LogFunctionStartDebug( "VerifyTablecellValue", "FN", FN, "COL", COL, "ROW", ROW, "fpsExpected", ExpVal );
 
         try
@@ -2681,15 +2684,24 @@ public class OK implements IOKW_State
             }
             else
             {
-                // Split giveneExpected Value
-                ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+                {
+                    lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
+                }
+                else
+                {
+                    // Split giveneExpected Value
+                    lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                    lvlsExpected = Parser.ParseMe( lvlsExpected );
+                }
 
                 IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
 
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTablecellValue_TO(), myOKW.VerifyTablecellValue_PT() );
 
-                ArrayList<String> Actual = Verify( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
+                Actual = Verify( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
                 {
                     return MyObject.VerifyTablecellValue(col, row);
                 } );
@@ -2712,6 +2724,9 @@ public class OK implements IOKW_State
      */
     public void VerifyTablecellValueWCM( String FN, String COL, String ROW, String ExpVal ) throws Exception
     {
+        ArrayList<String> lvlsExpected = null;
+        ArrayList<String> Actual = null;
+
         Log.LogFunctionStartDebug( "VerifyTablecellValue", "FN", FN, "COL", COL, "ROW", ROW, "fpsExpected", ExpVal );
 
         try
@@ -2734,15 +2749,24 @@ public class OK implements IOKW_State
             }
             else
             {
-                // Split giveneExpected Value
-                ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+                {
+                    lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
+                }
+                else
+                {
+                    // Split giveneExpected Value
+                    lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                    lvlsExpected = Parser.ParseMe( lvlsExpected );
+                }
 
                 IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
 
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTablecellValue_TO(), myOKW.VerifyTablecellValue_PT() );
 
-                ArrayList<String> Actual = VerifyWCM( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
+                Actual = VerifyWCM( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
                 {
                     return MyObject.VerifyTablecellValue(col, row);
                 } );
@@ -2765,6 +2789,9 @@ public class OK implements IOKW_State
      */
     public void VerifyTablecellValueREGX( String FN, String COL, String ROW, String ExpVal ) throws Exception
     {
+        ArrayList<String> lvlsExpected = null;
+        ArrayList<String> Actual = null;
+
         Log.LogFunctionStartDebug( "VerifyTablecellValue", "FN", FN, "COL", COL, "ROW", ROW, "fpsExpected", ExpVal );
 
         try
@@ -2787,15 +2814,24 @@ public class OK implements IOKW_State
             }
             else
             {
-                // Split giveneExpected Value
-                ArrayList<String> lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+                {
+                    lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
+                }
+                else
+                {
+                    // Split giveneExpected Value
+                    lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                    lvlsExpected = Parser.ParseMe( lvlsExpected );
+                }
 
                 IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
 
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTablecellValue_TO(), myOKW.VerifyTablecellValue_PT() );
 
-                ArrayList<String> Actual = VerifyREGX( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
+                Actual = VerifyREGX( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
                 {
                     return MyObject.VerifyTablecellValue(col, row);
                 } );

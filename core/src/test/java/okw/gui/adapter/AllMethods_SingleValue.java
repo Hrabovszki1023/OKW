@@ -828,6 +828,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyTablecellValue()");
 
+            myClipboard.getValue().addAll(this.myALValue);
             myClipboard.getValue().add(Col);
             myClipboard.getValue().add(Row);
 
@@ -841,14 +842,15 @@ import okw.log.Logger_Sngltn;
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyTooltip");
-            lvLsReturn.add("The one and only Value");
+            
+            lvLsReturn.addAll(myALValue);
 
             myClipboard.Clear();
             String lvs_ObjectName = getKN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyTooltip()");
 
-            myClipboard.getValue().add("The one and only Value");
+            myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
 
@@ -867,7 +869,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyCaption()");
 
-            myClipboard.getValue().addAll(this.myALValue);;
+            myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
 
@@ -879,7 +881,6 @@ import okw.log.Logger_Sngltn;
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyLabel");
-            
             
             lvLsReturn.addAll(this.myALValue);
 

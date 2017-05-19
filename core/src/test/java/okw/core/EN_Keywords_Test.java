@@ -1425,14 +1425,15 @@ public class EN_Keywords_Test
 
     }
 
-    // \~german
-    // \brief
-    //
-    //
-    // \~english
-    // \~
-    // \author Zoltan Hrabovszki
-    // \date 2013.12.26
+    
+    /** \~german
+     *
+     *
+     *  \~english
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2013-12-26
+     */
     @Test
     public void tc_VerifySelectedValue() throws Exception
     {
@@ -1467,14 +1468,100 @@ public class EN_Keywords_Test
         assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
     }
 
-    // \~german
-    // \brief
-    //
-    //
-    // \~english
-    // \~
-    // \author Zoltan Hrabovszki
-    // \date 2013.12.26
+    /** \~german
+    *
+    *
+    *  \~english
+    *  \~
+    *  @author Zoltan Hrabovszki
+    *  @date 2013-12-26
+    */
+   @Test
+   public void tc_VerifySelectedValueWCM() throws Exception
+   {
+       EN.BeginTest( name.getMethodName() );
+
+       // Testscript in Schlüsselwort-Notation
+       EN.SelectWindow( "Rechner" );
+
+       // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+       // Check the Name, Called Method and Value of Actuel object
+       assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+       assertEquals( "Rechner", myClipBoard.getObjectName() );
+       assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+       EN.SetValue( "All_MethodsObj", "Sollwert_Einstellen" );
+       // Einzelner Wert
+       EN.VerifySelectedValueWCM( "All_MethodsObj", "?ollwert_Einstellen" );
+
+       // Check the Name, Called Method and Value of Actuel object
+       assertEquals( "Sollwert_Einstellen", myClipBoard.getValue().get( 0 ) );
+       assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+       assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
+
+       // Mehrerer Werte
+       EN.SetValue( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
+       EN.VerifySelectedValueWCM( "All_MethodsObj", "?ollwert_1${SEP}?ollwert_2" );
+
+       // Check the Name, Called Method and Value of Actuel object
+       assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
+       assertEquals( "Sollwert_2", myClipBoard.getValue().get( 1 ) );
+       assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+       assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
+   }
+   
+   
+   /** \~german
+   *
+   *
+   *  \~english
+   *  \~
+   *  @author Zoltan Hrabovszki
+   *  @date 2013-12-26
+   */
+  @Test
+  public void tc_VerifySelectedValueREGX() throws Exception
+  {
+      EN.BeginTest( name.getMethodName() );
+
+      // Testscript in Schlüsselwort-Notation
+      EN.SelectWindow( "Rechner" );
+
+      // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+      // Check the Name, Called Method and Value of Actuel object
+      assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+      assertEquals( "Rechner", myClipBoard.getObjectName() );
+      assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+      EN.SetValue( "All_MethodsObj", "Sollwert_Einstellen" );
+      // Einzelner Wert
+      EN.VerifySelectedValueREGX( "All_MethodsObj", "Sollwert_Einstellen" );
+
+      // Check the Name, Called Method and Value of Actuel object
+      assertEquals( "Sollwert_Einstellen", myClipBoard.getValue().get( 0 ) );
+      assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+      assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
+
+      // Mehrerer Werte
+      EN.SetValue( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
+      EN.VerifySelectedValueREGX( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
+
+      // Check the Name, Called Method and Value of Actuel object
+      assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
+      assertEquals( "Sollwert_2", myClipBoard.getValue().get( 1 ) );
+      assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+      assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
+  }
+
+  
+   /** \~german
+     * 
+     *
+     *  \~english
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2013-12-26
+     */
     @Test
     public void tc_VerifyTablecellValue() throws Exception
     {
@@ -1490,29 +1577,133 @@ public class EN_Keywords_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         EN.SetValue( "All_MethodsObj", "Sollwert_1" );
-        EN.VerifyTablecellValue( "All_MethodsObj", "Col", "Row", "Sollwert_1" );
+        EN.VerifyTablecellValueWCM( "All_MethodsObj", "Col", "Row", "*ollwert_1" );
 
         // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "Col", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Row", myClipBoard.getValue().get( 1 ) );
-        assertEquals( 2, myClipBoard.getValue().size() );
+        assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Col", myClipBoard.getValue().get( 1 ) );
+        assertEquals( "Row", myClipBoard.getValue().get( 2 ) );
+        assertEquals( 3, myClipBoard.getValue().size() );
 
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyTablecellValue()", myClipBoard.getMethod() );
 
         // Kommen auch mehrere Sollwerte im Objekt ab?
         EN.SetValue( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
-        EN.VerifyTablecellValue( "All_MethodsObj", "Col", "Row", "Sollwert_1${SEP}Sollwert_2" );
+        EN.VerifyTablecellValueWCM( "All_MethodsObj", "Col", "Row", "*ollwert_1${SEP}S*llwert_2" );
 
         // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "Col", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Row", myClipBoard.getValue().get( 1 ) );
-        assertEquals( 2, myClipBoard.getValue().size() );
+        assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Sollwert_2", myClipBoard.getValue().get( 1 ) );
+        assertEquals( "Col", myClipBoard.getValue().get( 2 ) );
+        assertEquals( "Row", myClipBoard.getValue().get( 3 ) );
+        assertEquals( 4, myClipBoard.getValue().size() );
 
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyTablecellValue()", myClipBoard.getMethod() );
     }
 
+
+    /** \~german
+     * 
+     *
+     *  \~english
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2013-12-26
+     */
+    @Test
+    public void tc_VerifyTablecellValueREGX() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        EN.SetValue( "All_MethodsObj", "Sollwert_1" );
+        EN.VerifyTablecellValueREGX( "All_MethodsObj", "Col", "Row", "Sollwert_1" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Col", myClipBoard.getValue().get( 1 ) );
+        assertEquals( "Row", myClipBoard.getValue().get( 2 ) );
+        assertEquals( 3, myClipBoard.getValue().size() );
+
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyTablecellValue()", myClipBoard.getMethod() );
+
+        // Kommen auch mehrere Sollwerte im Objekt ab?
+        EN.SetValue( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
+        EN.VerifyTablecellValueREGX( "All_MethodsObj", "Col", "Row", "Sollwert_1${SEP}Sollwert_2" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Sollwert_2", myClipBoard.getValue().get( 1 ) );
+        assertEquals( "Col", myClipBoard.getValue().get( 2 ) );
+        assertEquals( "Row", myClipBoard.getValue().get( 3 ) );
+        assertEquals( 4, myClipBoard.getValue().size() );
+
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyTablecellValue()", myClipBoard.getMethod() );
+    }
+
+    
+    /** \~german
+     * 
+     *
+     *  \~english
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2013-12-26
+     */
+    @Test
+    public void tc_VerifyTablecellValueWCM() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        EN.SetValue( "All_MethodsObj", "Sollwert_1" );
+        EN.VerifyTablecellValueWCM( "All_MethodsObj", "Col", "Row", "Sollwert_1" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Col", myClipBoard.getValue().get( 1 ) );
+        assertEquals( "Row", myClipBoard.getValue().get( 2 ) );
+        assertEquals( 3, myClipBoard.getValue().size() );
+
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyTablecellValue()", myClipBoard.getMethod() );
+
+        // Kommen auch mehrere Sollwerte im Objekt ab?
+        EN.SetValue( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
+        EN.VerifyTablecellValueWCM( "All_MethodsObj", "Col", "Row", "Sollwert_1${SEP}Sollwert_2" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Sollwert_2", myClipBoard.getValue().get( 1 ) );
+        assertEquals( "Col", myClipBoard.getValue().get( 2 ) );
+        assertEquals( "Row", myClipBoard.getValue().get( 3 ) );
+        assertEquals( 4, myClipBoard.getValue().size() );
+
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyTablecellValue()", myClipBoard.getMethod() );
+    }
+
+    
     /**
      * \~german
      * \brief "Normaler" Testfall für das Schlüsselwort VerifyCaption. 
@@ -1568,6 +1759,7 @@ public class EN_Keywords_Test
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+        EN.SetValue( "All_MethodsObj", "The one and only Value" );
         EN.VerifyTooltipREGX( "All_MethodsObj", "\\w{3} one and only Value" );
 
         // Check the Name, Called Method and Value of Actuel object
@@ -1600,6 +1792,7 @@ public class EN_Keywords_Test
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+        EN.SetValue("All_MethodsObj", "The one and only Value" );
         EN.VerifyTooltipWCM( "All_MethodsObj", "??? one and only Value" );
 
         // Check the Name, Called Method and Value of Actuel object
