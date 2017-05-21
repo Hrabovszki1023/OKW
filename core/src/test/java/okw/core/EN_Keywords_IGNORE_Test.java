@@ -1894,14 +1894,13 @@ public class EN_Keywords_IGNORE_Test
         }
         
         
-        /// \~german
-        /// \brief
-        /// 
-        /// 
-        /// \~english
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2013.12.26
+        /** \~german
+         *  
+         *  \~english
+         *  \~
+         *  @author Zoltan Hrabovszki
+         *  @date 2013-12-26
+         */
         @Test
         public void TC_VerifySelectedValue_IGNORE() throws Exception
         {
@@ -1918,7 +1917,6 @@ public class EN_Keywords_IGNORE_Test
 
             // Einzelner Wert
             EN.VerifySelectedValue( "All_MethodsObj", "${IGNORE}");
-
         }
 
         
@@ -1946,6 +1944,110 @@ public class EN_Keywords_IGNORE_Test
 
             // Einzelner Wert
             EN.VerifySelectedValue( "All_MethodsObj", "");
+        }
+        
+        
+        /** \~german
+         *  
+         *  \~english
+         *  \~
+         *  @author Zoltan Hrabovszki
+         *  @date 2013-12-26
+         */
+        @Test
+        public void TC_VerifySelectedValueREGX_IGNORE() throws Exception
+        {
+            EN.BeginTest( name.getMethodName() );
+
+            // Testscript in Schlüsselwort-Notation
+            EN.SelectWindow("Rechner");
+
+            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+            assertEquals("Rechner", myClipBoard.getObjectName());
+            assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+            // Einzelner Wert
+            EN.VerifySelectedValueREGX( "All_MethodsObj", "${IGNORE}");
+        }
+
+        
+        /** \~german
+         *  
+         *  \~english
+         *  \~
+         *  @author Zoltan Hrabovszki
+         *  @date 2013-12-26
+         */
+        @Test
+        public void TC_VerifySelectedValueREGX_IGNORE_EMptyString() throws Exception
+        {
+            EN.BeginTest( name.getMethodName() );
+
+            // Testscript in Schlüsselwort-Notation
+            EN.SelectWindow("Rechner");
+
+            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+            assertEquals("Rechner", myClipBoard.getObjectName());
+            assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+            // Einzelner Wert
+            EN.VerifySelectedValueREGX( "All_MethodsObj", "");
+        }
+        
+        
+        /** \~german
+         *  
+         *  \~english
+         *  \~
+         *  @author Zoltan Hrabovszki
+         *  @date 2013-12-26
+         */
+        @Test
+        public void TC_VerifySelectedValueWCM_IGNORE() throws Exception
+        {
+            EN.BeginTest( name.getMethodName() );
+
+            // Testscript in Schlüsselwort-Notation
+            EN.SelectWindow("Rechner");
+
+            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+            assertEquals("Rechner", myClipBoard.getObjectName());
+            assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+            // Einzelner Wert
+            EN.VerifySelectedValueWCM( "All_MethodsObj", "${IGNORE}");
+        }
+
+        
+        /** \~german
+         * 
+         *  \~english
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2013.12.26
+         */
+        @Test
+        public void TC_VerifySelectedValueWCM_IGNORE_EMptyString() throws Exception
+        {
+            EN.BeginTest( name.getMethodName() );
+
+            // Testscript in Schlüsselwort-Notation
+            EN.SelectWindow("Rechner");
+
+            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+            assertEquals("Rechner", myClipBoard.getObjectName());
+            assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+            // Einzelner Wert
+            EN.VerifySelectedValueWCM( "All_MethodsObj", "");
         }
         
         
@@ -1983,6 +2085,59 @@ public class EN_Keywords_IGNORE_Test
         /// \author Zoltan Hrabovszki
         /// \date 2013.12.26
         @Test
+        public void TC_VerifyTablecellValueREGX_IGNORE() throws Exception
+        {
+            EN.BeginTest( name.getMethodName() );
+
+            // Testscript in Schlüsselwort-Notation
+            EN.SelectWindow("Rechner");
+            
+            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+            assertEquals(1, myClipBoard.getValue().size());
+            assertEquals("Rechner", myClipBoard.getObjectName());
+            assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+            EN.VerifyTablecellValueREGX("All_MethodsObj", "Col", "Row", "${IGNORE}");
+
+        }
+        
+        
+        /// \~german
+        /// \brief
+        /// 
+        /// \~english
+        /// \~
+        /// \author Zoltan Hrabovszki
+        /// \date 2013.12.26
+        @Test
+        public void TC_VerifyTablecellValueWCM_IGNORE() throws Exception
+        {
+            EN.BeginTest( name.getMethodName() );
+
+            // Testscript in Schlüsselwort-Notation
+            EN.SelectWindow("Rechner");
+            
+            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+            assertEquals(1, myClipBoard.getValue().size());
+            assertEquals("Rechner", myClipBoard.getObjectName());
+            assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+            EN.VerifyTablecellValueWCM("All_MethodsObj", "Col", "Row", "${IGNORE}");
+
+        }
+
+        /// \~german
+        /// \brief
+        /// 
+        /// \~english
+        /// \~
+        /// \author Zoltan Hrabovszki
+        /// \date 2013.12.26
+        @Test
         public void TC_VerifyTablecellValue_IGNORE_EmptyString() throws Exception
         {
     		EN.BeginTest( name.getMethodName() );
@@ -1998,9 +2153,58 @@ public class EN_Keywords_IGNORE_Test
             assertEquals("SelectWindow()", myClipBoard.getMethod());
 
             EN.VerifyTablecellValue("All_MethodsObj", "Col", "Row", "");
-
         }
 
+
+        /// \~german
+        /// \brief
+        /// 
+        /// \~english
+        /// \~
+        /// \author Zoltan Hrabovszki
+        /// \date 2013.12.26
+        @Test
+        public void TC_VerifyTablecellValueREGX_IGNORE_EmptyString() throws Exception
+        {
+            EN.BeginTest( name.getMethodName() );
+
+            // Testscript in Schlüsselwort-Notation
+            EN.SelectWindow("Rechner");
+            
+            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+            assertEquals(1, myClipBoard.getValue().size());
+            assertEquals("Rechner", myClipBoard.getObjectName());
+            assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+            EN.VerifyTablecellValueREGX("All_MethodsObj", "Col", "Row", "");
+        }
+
+        /// \~german
+        /// \brief
+        /// 
+        /// \~english
+        /// \~
+        /// \author Zoltan Hrabovszki
+        /// \date 2013.12.26
+        @Test
+        public void TC_VerifyTablecellValueWCM_IGNORE_EmptyString() throws Exception
+        {
+            EN.BeginTest( name.getMethodName() );
+
+            // Testscript in Schlüsselwort-Notation
+            EN.SelectWindow("Rechner");
+            
+            // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+            // Check the Name, Called Method and Value of Actuel object
+            assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+            assertEquals(1, myClipBoard.getValue().size());
+            assertEquals("Rechner", myClipBoard.getObjectName());
+            assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+            EN.VerifyTablecellValueWCM("All_MethodsObj", "Col", "Row", "");
+        }
         
         /**
          *  \~german

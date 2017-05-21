@@ -1878,7 +1878,7 @@ public class OK implements IOKW_State
         {
             Count = 0;
 
-            while ( Count <= timeout.getMaxCount() )
+            while ( Count < timeout.getMaxCount() )
             {
                 lvbReturn = Method2Call.get();
 
@@ -1934,7 +1934,7 @@ public class OK implements IOKW_State
         {
             Count = 0;
 
-            while ( Count <= timeout.getMaxCount() )
+            while ( Count < timeout.getMaxCount() )
             {
                 lvLsReturn = Method2Call.apply( COL, ROW );
 
@@ -1987,7 +1987,7 @@ public class OK implements IOKW_State
         {
             Count = 0;
 
-            while ( Count <= timeout.getMaxCount() )
+            while ( Count < timeout.getMaxCount() )
             {
                 lvLsReturn = Method2Call.apply( COL, ROW );
 
@@ -2040,7 +2040,7 @@ public class OK implements IOKW_State
         {
             Count = 0;
 
-            while ( Count <= timeout.getMaxCount() )
+            while ( Count < timeout.getMaxCount() )
             {
                 lvLsReturn = Method2Call.apply( COL, ROW );
 
@@ -2093,7 +2093,7 @@ public class OK implements IOKW_State
         {
             Count = 0;
 
-            while ( Count <= timeout.getMaxCount() )
+            while ( Count < timeout.getMaxCount() )
             {
                 lvLsReturn = Method2Call.get();
 
@@ -2155,7 +2155,7 @@ public class OK implements IOKW_State
         {
             Count = 0;
 
-            while ( Count <= timeout.getMaxCount() )
+            while ( Count < timeout.getMaxCount() )
             {
                 lvLsReturn = Method2Call.get();
 
@@ -2217,7 +2217,7 @@ public class OK implements IOKW_State
         {
             Count = 0;
 
-            while ( Count <= timeout.getMaxCount() )
+            while ( Count < timeout.getMaxCount() )
             {
                 lvLsReturn = Method2Call.get();
 

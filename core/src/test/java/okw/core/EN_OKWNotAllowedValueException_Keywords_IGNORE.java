@@ -998,7 +998,80 @@ public class EN_OKWNotAllowedValueException_Keywords_IGNORE
                 EN.SelectWindow("Rechner");
                 EN.VerifySelectedValue( "All_MethodsObj", "${IGNORE}${TCN}");
             }
+            
 
+            /** \~german
+             * Prüft ob "${IGNORE} " die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+             * 
+             *  \~english
+             *  \~
+             *  \author Zoltan Hrabovszki
+             *  \date 2017-05-12
+             */
+            @Test(expected=OKWNotAllowedValueException.class)
+            public void TC_VerifySelectedValueREGX_IGNORE_1() throws Exception
+            {
+
+                EN.BeginTest( name.getMethodName() );
+                EN.SelectWindow("Rechner");
+                EN.VerifySelectedValueREGX( "All_MethodsObj", "${IGNORE} ");
+            }
+
+            
+            /**
+             * \~german
+             * Prüft ob ""${IGNORE}${TCN}" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+             * 
+             *  \~english
+             *  \~
+             *  \author Zoltan Hrabovszki
+             *  \date 2017-05-12
+             */
+            @Test(expected=OKWNotAllowedValueException.class)
+            public void TC_VerifySelectedValueREGX_IGNORE_2() throws Exception
+            {
+
+                EN.BeginTest( name.getMethodName() );
+                EN.SelectWindow("Rechner");
+                EN.VerifySelectedValueREGX( "All_MethodsObj", "${IGNORE}${TCN}");
+            }
+            
+
+            /** \~german
+             * Prüft ob "${IGNORE} " die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+             * 
+             *  \~english
+             *  \~
+             *  \author Zoltan Hrabovszki
+             *  \date 2017-05-12
+             */
+            @Test(expected=OKWNotAllowedValueException.class)
+            public void TC_VerifySelectedValueWCM_IGNORE_1() throws Exception
+            {
+
+                EN.BeginTest( name.getMethodName() );
+                EN.SelectWindow("Rechner");
+                EN.VerifySelectedValueWCM( "All_MethodsObj", "${IGNORE} ");
+            }
+
+            
+            /**
+             * \~german
+             * Prüft ob ""${IGNORE}${TCN}" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+             * 
+             *  \~english
+             *  \~
+             *  \author Zoltan Hrabovszki
+             *  \date 2017-05-12
+             */
+            @Test(expected=OKWNotAllowedValueException.class)
+            public void TC_VerifySelectedValueWCM_IGNORE_2() throws Exception
+            {
+
+                EN.BeginTest( name.getMethodName() );
+                EN.SelectWindow("Rechner");
+                EN.VerifySelectedValueWCM( "All_MethodsObj", "${IGNORE}${TCN}");
+            }
 
             /** \~german
              * Prüft ob "${IGNORE} " die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
@@ -1034,6 +1107,78 @@ public class EN_OKWNotAllowedValueException_Keywords_IGNORE
                 EN.BeginTest( name.getMethodName() );
                 EN.SelectWindow("Rechner");
                 EN.VerifyTablecellValue( "All_MethodsObj", "", "", "${IGNORE}${TCN}");
+            }
+
+            /** \~german
+             * Prüft ob "${IGNORE} " die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+             * 
+             *  \~english
+             *  \~
+             *  \author Zoltan Hrabovszki
+             *  \date 2017-05-12
+             */
+            @Test(expected=OKWNotAllowedValueException.class)
+            public void TC_VerifyTablecellValueREGX_IGNORE_1() throws Exception
+            {
+
+                EN.BeginTest( name.getMethodName() );
+                EN.SelectWindow("Rechner");
+                EN.VerifyTablecellValueREGX( "All_MethodsObj", "", "", "${IGNORE} ");
+            }
+
+            
+            /**
+             * \~german
+             * Prüft ob ""${IGNORE}${TCN}" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+             * 
+             *  \~english
+             *  \~
+             *  \author Zoltan Hrabovszki
+             *  \date 2017-05-12
+             */
+            @Test(expected=OKWNotAllowedValueException.class)
+            public void TC_VerifyTablecellValueREGX_IGNORE_2() throws Exception
+            {
+
+                EN.BeginTest( name.getMethodName() );
+                EN.SelectWindow("Rechner");
+                EN.VerifyTablecellValueREGX( "All_MethodsObj", "", "", "${IGNORE}${TCN}");
+            }
+            
+            /** \~german
+             * Prüft ob "${IGNORE} " die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+             * 
+             *  \~english
+             *  \~
+             *  \author Zoltan Hrabovszki
+             *  \date 2017-05-12
+             */
+            @Test(expected=OKWNotAllowedValueException.class)
+            public void TC_VerifyTablecellValueWCM_IGNORE_1() throws Exception
+            {
+
+                EN.BeginTest( name.getMethodName() );
+                EN.SelectWindow("Rechner");
+                EN.VerifyTablecellValueWCM( "All_MethodsObj", "", "", "${IGNORE} ");
+            }
+
+            
+            /**
+             * \~german
+             * Prüft ob ""${IGNORE}${TCN}" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+             * 
+             *  \~english
+             *  \~
+             *  \author Zoltan Hrabovszki
+             *  \date 2017-05-12
+             */
+            @Test(expected=OKWNotAllowedValueException.class)
+            public void TC_VerifyTablecellValueWCM_IGNORE_2() throws Exception
+            {
+
+                EN.BeginTest( name.getMethodName() );
+                EN.SelectWindow("Rechner");
+                EN.VerifyTablecellValueWCM( "All_MethodsObj", "", "", "${IGNORE}${TCN}");
             }
 
             /** \~german

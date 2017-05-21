@@ -697,12 +697,15 @@ import okw.log.Logger_Sngltn;
             return fpbExpectedValue;
         }
 
-        public List<String> VerifySelectedValue(ArrayList<String> fpLsExpectedValue)
+        public ArrayList<String> VerifySelectedValue()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifySelectedValue");
-            lvLsReturn.addAll(fpLsExpectedValue);
+            lvLsReturn.add("1. Value");
+            lvLsReturn.add("2. Value");
+            lvLsReturn.add("3. Value");
+
 
             myClipboard.Clear();
             
@@ -710,19 +713,21 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifySelectedValue()");
-            myClipboard.getValue().addAll(fpLsExpectedValue);
+            myClipboard.getValue().addAll(lvLsReturn);
 
             this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
 
-        public List<String> VerifyTablecellValue(String Col, String Row, ArrayList<String> fpLsExpectedValue)
+        public ArrayList<String> VerifyTablecellValue(String Col, String Row)
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyTablecellValue");
-            lvLsReturn.addAll(fpLsExpectedValue);
+            lvLsReturn.add("1. Value");
+            lvLsReturn.add("2. Value");
+            lvLsReturn.add("3. Value");
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
@@ -732,7 +737,7 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.getValue().add(Col);
             myClipboard.getValue().add(Row);
-            myClipboard.getValue().addAll(fpLsExpectedValue);
+            myClipboard.getValue().addAll(lvLsReturn);
 
             this.myLogger.LogFunctionEndDebug();
 

@@ -543,6 +543,126 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     }
 
     /**
+     * \~german
+     *  \brief
+     *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
+     *  VerifyTablecellValue( FN, X, Y, ExpVal ) ausgelöst wird.
+     * 
+     *  \~english
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2016-05-21
+     */
+    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    public void TC_VerifyTablecellValue_OKWFrameObjectMethodNotImplemented() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyTablecellValue( "NoMethodObj", "X", "Y", "NoValue" );
+    }
+
+    /**
+     * \~german
+     *  \brief
+     *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
+     *  VerifyTablecellValueREGX( FN, ExpVal ) ausgelöst wird.
+     * 
+     *  \~english
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2016-05-21
+     */
+    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    public void TC_VerifyTablecellValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyTablecellValueREGX( "NoMethodObj", "X", "Y", "NoValue" );
+    }
+
+    /**
+     * \~german
+     *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
+     *  VerifyTablecellValueWCM( FN, ExpVal ) ausgelöst wird.
+     * 
+     *  \~english
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2016-05-21
+     */
+    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    public void TC_VerifyTablecellValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyTablecellValueWCM( "NoMethodObj", "X", "Y", "NoValue" );
+    }
+
+    
+    /**
+     * \~german
+     *  \brief
+     *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
+     *  VerifySelectedValue( FN, ExpVal ) ausgelöst wird.
+     * 
+     *  \~english
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2016-05-21
+     */
+    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    public void TC_VerifySelectedValue_OKWFrameObjectMethodNotImplemented() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        EN.VerifySelectedValue( "NoMethodObj", "NoValue" );
+    }
+
+    /**
+     * \~german
+     *  \brief
+     *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
+     *  VerifySelectedValueREGX( FN, ExpVal ) ausgelöst wird.
+     * 
+     *  \~english
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2016-05-21
+     */
+    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    public void TC_VerifySelectedValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyValueREGX( "NoMethodObj", "NoValue" );
+    }
+
+    /**
+     * \~german
+     *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
+     *  VerifyValueWCM( FN, ExpVal ) ausgelöst wird.
+     * 
+     *  \~english
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2016-05-21
+     */
+    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    public void TC_VerifySelectedValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        EN.VerifySelectedValueWCM( "NoMethodObj", "NoValue" );
+    }
+
+    
+    /**
      *  \~german
      *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
      *  Sequence( FN, SEQ_NAME, SEQ_ID ) ausgelöst wird.

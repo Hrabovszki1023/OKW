@@ -619,8 +619,16 @@ import okw.log.Logger_Sngltn;
     {
       // myALValue Löschen + setzen...
       this.myALValue.clear();
-      this.myALValue.addAll( fpLs_Value );
-
+      
+      if (fpLs_Value.get( 0 ).equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
+      {
+          this.myALValue.add("");
+      }
+      else
+      {          
+          this.myALValue.addAll( fpLs_Value );
+      }
+ 
       // Clipboard löschen und Werte setzen...
       myClipboard.Clear();
       String lvs_ObjectName = getKN();

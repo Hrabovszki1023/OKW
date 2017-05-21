@@ -95,7 +95,7 @@ public class EN_Keywords_Empty_Test {
     EN.SetValue( "All_MethodsObj", "${DELETE}" );
 
     assertEquals( 1, myClipBoard.getValue().size() );
-    assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "SetValue()", myClipBoard.getMethod() );
   }
@@ -621,13 +621,15 @@ public class EN_Keywords_Empty_Test {
 
     // Löschen des Clipboards
     myClipBoard.Clear();
+    EN.SetValue( "All_MethodsObj", "${DELETE}" );
+    EN.VerifyTablecellValue("All_MethodsObj", "X", "Y", "${EMPTY}");
     
-    EN.VerifyTablecellValue("All_MethodsObj_VerifyEmpty", "X", "Y", "${EMPTY}");
-    
-    assertEquals( 0, myClipBoard.getValue().size() );
-    //assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals( 3, myClipBoard.getValue().size() );
+    assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "X", myClipBoard.getValue().get( 1 ) );
+    assertEquals( "Y", myClipBoard.getValue().get( 2 ) );    
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
-    assertEquals("VerifyValue()", myClipBoard.getMethod());
+    assertEquals("VerifyTablecellValue()", myClipBoard.getMethod());
   }
   
   /**
@@ -641,7 +643,7 @@ public class EN_Keywords_Empty_Test {
    *  \date 2013.12.26
    */
   @Test
-  public void tc_VerifyVTablecellalueREGX_Empty() throws Exception {
+  public void tc_VerifyTablecellValueREGX_Empty() throws Exception {
 
     EN.BeginTest( name.getMethodName() );
 
@@ -659,14 +661,15 @@ public class EN_Keywords_Empty_Test {
 
     // Löschen des Clipboards
     myClipBoard.Clear();
+    EN.SetValue( "All_MethodsObj", "${DELETE}" );
+    EN.VerifyTablecellValueREGX("All_MethodsObj", "X", "Y", "${EMPTY}");
     
-    EN.VerifyTablecellValueREGX("All_MethodsObj_VerifyEmpty", "X", "Y", "${EMPTY}");
-    
-    assertEquals( 0, myClipBoard.getValue().size() );
-    //assertEquals( "", myClipBoard.getValue().get( 0 ) );
-
+    assertEquals( 3, myClipBoard.getValue().size() );
+    assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "X", myClipBoard.getValue().get( 1 ) );
+    assertEquals( "Y", myClipBoard.getValue().get( 2 ) );    
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
-    assertEquals("VerifyValue()", myClipBoard.getMethod());
+    assertEquals("VerifyTablecellValue()", myClipBoard.getMethod());
   }
   
   /**
@@ -698,14 +701,17 @@ public class EN_Keywords_Empty_Test {
 
     // Löschen des Clipboards
     myClipBoard.Clear();
+    EN.SetValue( "All_MethodsObj", "${DELETE}" );
+    EN.VerifyTablecellValueWCM("All_MethodsObj", "X", "Y", "${EMPTY}");
     
-    EN.VerifyTablecellValueWCM("All_MethodsObj_VerifyEmpty", "X", "Y", "${EMPTY}");
-    
-    assertEquals( 0, myClipBoard.getValue().size() );
-    //assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals( 3, myClipBoard.getValue().size() );
+    assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "X", myClipBoard.getValue().get( 1 ) );
+    assertEquals( "Y", myClipBoard.getValue().get( 2 ) );    
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
-    assertEquals("VerifyValue()", myClipBoard.getMethod());
+    assertEquals("VerifyTablecellValue()", myClipBoard.getMethod());
   }
+
 
   // \~german
   // \brief

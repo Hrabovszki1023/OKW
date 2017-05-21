@@ -661,7 +661,7 @@ public class EN_Keywords_DELETE_Test
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "SetValue()", myClipBoard.getMethod() );
     assertEquals( 1, myClipBoard.getValue().size() );
-    assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "", myClipBoard.getValue().get( 0 ) );
 
   }
 
@@ -690,9 +690,9 @@ public class EN_Keywords_DELETE_Test
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "SetValue()", myClipBoard.getMethod() );
 
-    assertEquals( 2, myClipBoard.getValue().size() );
-    assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
-    assertEquals( "Value", myClipBoard.getValue().get( 1 ) );
+    assertEquals( 1, myClipBoard.getValue().size() );
+    assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    //assertEquals( "Value", myClipBoard.getValue().get( 1 ) );
   }
 
   // \~german
@@ -996,14 +996,53 @@ public class EN_Keywords_DELETE_Test
 
   }
 
-  // \~german
-  // \brief
-  //
-  //
-  // \~english
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2016.09.24
+  /** \~german
+  *
+  *
+  * \~english
+  * \~
+  * @author Zoltan Hrabovszki
+  * @date 2017-05-21
+  */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifySelectedValueREGX_DELETE_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+
+    EN.VerifySelectedValueREGX( "All_MethodsObj", "${DELETE}" );
+
+  }
+
+  /** \~german
+  *
+  *
+  * \~english
+  * \~
+  * @author Zoltan Hrabovszki
+  * @date 2017-05-21
+  */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifySelectedValueWCM_DELETE_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+
+    EN.VerifySelectedValueWCM( "All_MethodsObj", "${DELETE}" );
+
+  }
+
+  
+  /** \~german
+   *
+   *
+   * \~english
+   * \~
+   * @author Zoltan Hrabovszki
+   * @date 2016-09-24
+   */
   @Test( expected = OKWNotAllowedValueException.class )
   public void tcVerifyTablecellValue_DELETE_OKWNotAllowedValueException() throws Exception
   {
@@ -1015,7 +1054,46 @@ public class EN_Keywords_DELETE_Test
 
   }
 
-  // \~german
+  /** \~german
+  *
+  *
+  * \~english
+  * \~
+  * @author Zoltan Hrabovszki
+  * @date 2017-05-21
+  */
+ @Test( expected = OKWNotAllowedValueException.class )
+ public void tcVerifyTablecellValueREGX_DELETE_OKWNotAllowedValueException() throws Exception
+ {
+   EN.BeginTest( name.getMethodName() );
+
+   EN.SelectWindow( "Rechner" );
+
+   EN.VerifyTablecellValueREGX( "All_MethodsObj", "Col", "Row", "${DELETE}" );
+
+ }
+
+ /** \~german
+ *
+ *
+ * \~english
+ * \~
+ * @author Zoltan Hrabovszki
+ * @date 2016-09-24
+ */
+@Test( expected = OKWNotAllowedValueException.class )
+public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throws Exception
+{
+  EN.BeginTest( name.getMethodName() );
+
+  EN.SelectWindow( "Rechner" );
+
+  EN.VerifyTablecellValueWCM( "All_MethodsObj", "Col", "Row", "${DELETE}" );
+
+}
+
+
+// \~german
   // \brief
   //
   //
