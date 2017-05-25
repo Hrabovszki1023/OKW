@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/Hrabovszki1023/OKW.svg?branch=master)](https://travis-ci.org/Hrabovszki1023/OKW)
 [![Dependency Status](https://www.versioneye.com/user/projects/58182c04d33a7126ff24f295/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58182c04d33a7126ff24f295)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e53cf4dc539d4aac9c1f29b7320d28a8)](https://www.codacy.com/app/Hrabovszki1023/OKW?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Hrabovszki1023/OKW&amp;utm_campaign=Badge_Grade)
 
 <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png" width="150px" height="78px" />
 
