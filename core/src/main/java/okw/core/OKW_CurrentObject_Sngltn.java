@@ -251,7 +251,7 @@ public class OKW_CurrentObject_Sngltn
 
     public ArrayList<String> GetAllChildFNsOfParent( String FN )
     {
-        return myFrameObjectDictionary.GetAllChildKeysOfParent( FN );
+        return myFrameObjectDictionary.getAllChildKeysOfParent( FN );
     }
 
 
@@ -977,7 +977,7 @@ public class OKW_CurrentObject_Sngltn
             if ( cvsChildFN == "" )
             {
                 // -> 2. Get the Window-Object...
-                cvoObject = myFrameObjectDictionary.GetParentObjectByName( cvsWindowFN );
+                cvoObject = myFrameObjectDictionary.getParentObjectByName( cvsWindowFN );
                 cvsObjectName = cvoObject.getClass().getName();
                 cvsFullObjectFN = cvsWindowFN;
 
@@ -989,7 +989,7 @@ public class OKW_CurrentObject_Sngltn
 
                 // < 2. Now get the Object-Instance...
                 cvoObject = null;
-                cvoObject = myFrameObjectDictionary.GetChildObjectByName( cvsWindowFN, cvsChildFN );
+                cvoObject = myFrameObjectDictionary.getChildObjectByName( cvsWindowFN, cvsChildFN );
 
                 // < 3. Set tecnicalname of Object-Instance...
                 cvsObjectName = cvoObject.getClass().getName();

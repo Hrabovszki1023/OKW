@@ -108,7 +108,9 @@ public class FrameObjectDictionary_Sngltn
    */
   private static LogMessenger  LM;
 
-  private static Integer n = 0;
+  
+  private static FrameObjectDictionary_Sngltn Instance = null;
+
   
   /** \~german
    *  \brief
@@ -124,8 +126,6 @@ public class FrameObjectDictionary_Sngltn
   private FrameObjectDictionary_Sngltn()
   {
   }
-
-  private static FrameObjectDictionary_Sngltn Instance = null;
 
   public static FrameObjectDictionary_Sngltn getInstance() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException,
           IOException
@@ -143,7 +143,7 @@ public class FrameObjectDictionary_Sngltn
           Instance = new FrameObjectDictionary_Sngltn();
           try
           {
-            Init();
+            init();
           }
           catch (Exception e)
           {
@@ -192,7 +192,7 @@ public class FrameObjectDictionary_Sngltn
    *  \author Zoltan Hrabovszki
    *  \date 2014.10.10
    */
-  public Object GetParentObjectByName( String FNParentObject ) throws XPathExpressionException
+  public Object getParentObjectByName( String FNParentObject ) throws XPathExpressionException
   {
     Object lvo_Return = null;
 
@@ -247,7 +247,7 @@ public class FrameObjectDictionary_Sngltn
    *  @author Zoltan Hrabovszki
    *  \date 2016.11.18
    */
-  public ArrayList<String>GetAllChildKeysOfParent(String FN_Parent)
+  public ArrayList<String> getAllChildKeysOfParent(String FN_Parent)
   {
     ArrayList<String> lvAlReturn = new ArrayList<String>();
     
@@ -295,7 +295,7 @@ public class FrameObjectDictionary_Sngltn
    * @throws IllegalAccessException 
    * @throws IllegalArgumentException 
    */
-  public Object GetChildObjectByName( String fps_ParentObject, String fps_ChildObject ) throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+  public Object getChildObjectByName( String fps_ParentObject, String fps_ChildObject ) throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
   {
     Object lvo_Return = null;
     String lvs_ObjectName = fps_ParentObject + "." + fps_ChildObject;
@@ -354,7 +354,7 @@ public class FrameObjectDictionary_Sngltn
    * @author Zoltan Hrabovszki
    * @date 2014.10.10
    */
-  public static void Init() throws ClassNotFoundException, InstantiationException, JAXBException, ParserConfigurationException, SAXException, IOException,
+  public static void init() throws ClassNotFoundException, InstantiationException, JAXBException, ParserConfigurationException, SAXException, IOException,
           XPathExpressionException, IllegalArgumentException, IllegalAccessException
   {
     Log.LogFunctionStartDebug( "FrameObjectDictionary.Init" );
@@ -367,7 +367,7 @@ public class FrameObjectDictionary_Sngltn
 
       myFrameObjectDictionary.clear();
 
-      FrameScan( );
+      frameScan( );
 
       Set<String> Keys = myFrameObjectDictionary.keySet();
 
@@ -421,7 +421,7 @@ public class FrameObjectDictionary_Sngltn
    *  \date 2014.10.10
  * @throws XPathExpressionException 
    */
-  public static ArrayList<Class<?>> GetListOfOKWGuiClasses() throws ClassNotFoundException, IOException, XPathExpressionException
+  public static ArrayList<Class<?>> getListOfOKWGuiClasses() throws ClassNotFoundException, IOException, XPathExpressionException
   {
     String lvsNamespace = "okw.gui.frames";
     ArrayList<Class<?>> lvALReturn = new ArrayList<Class<?>>();
@@ -470,7 +470,7 @@ public class FrameObjectDictionary_Sngltn
    *  @date 2015.01.28
    *  \todo TODO: rename lvsFNParent to lvsFNWindow (Parent is not correct in all cases)
    */
-  private static void FrameScan(  ) throws InstantiationException, XPathExpressionException,
+  private static void frameScan(  ) throws InstantiationException, XPathExpressionException,
           IllegalArgumentException, IllegalAccessException, ClassNotFoundException, IOException
   {
     Object lvTypeInstanceAsObject = null;
@@ -480,13 +480,13 @@ public class FrameObjectDictionary_Sngltn
     try
     {
       // Alle Fenster Klassen, die eine Annotation ermitteln...
-      ArrayList<Class<?>> lvOKWGuiClasses = GetListOfOKWGuiClasses();
+      ArrayList<Class<?>> lvOKWGuiClasses = getListOfOKWGuiClasses();
 
       // Für jede Klasse in der Liste...
       for ( Class<?> lvOKWGuiClass : lvOKWGuiClasses )
       {
         // Erzeuge eine Instanz der Window-Klasse
-        lvTypeInstanceAsObject = CreateInstanceByType( lvOKWGuiClass );
+        lvTypeInstanceAsObject = createInstanceByType( lvOKWGuiClass );
 
         // FN (Fachlichen Namen) der Klasse aus der die Annotiation OKW.FN() auslesen.
         // Hierbei handelt es sich um des  ParentObject = Fenster
@@ -542,7 +542,7 @@ public class FrameObjectDictionary_Sngltn
                    (( IOKW_FN ) lvFieldInstance).setParentFN( lvsFNWindow );
                    myFrameObjectDictionary.put( lvsChildKey, lvFieldInstance );
                    
-                   FrameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNWindow );
+                   frameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNWindow );
                 }
                 catch (java.lang.ClassCastException e)
                 {
@@ -556,7 +556,7 @@ public class FrameObjectDictionary_Sngltn
               else
               {
                 Log.LogPrint( "-GUI-Container-" );              
-                FrameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNWindow );
+                frameScanFieldsRecursively( lvField, lvFieldInstance, lvsFNWindow );
               }
           }
         }
@@ -571,9 +571,9 @@ public class FrameObjectDictionary_Sngltn
   }
 
   
-  private static void FrameScanFieldsRecursively( Field fpParentField, Object fpParentFieldInstance, String fpsWindowName )
+  private static void frameScanFieldsRecursively( Field fpParentField, Object fpParentFieldInstance, String fpsWindowName )
   {
-    n++;
+    //n++;
     
     try
     {
@@ -618,13 +618,13 @@ public class FrameObjectDictionary_Sngltn
               
               myFrameObjectDictionary.put( lvsKey, lvFieldInstance );
         	  
-              FrameScanFieldsRecursively( lvField, lvFieldInstance, fpsWindowName );
+              frameScanFieldsRecursively( lvField, lvFieldInstance, fpsWindowName );
         	  Log.ResCloseList();
             }
           }
           else
           {
-        	  FrameScanFieldsRecursively( lvField, lvFieldInstance, fpsWindowName );
+        	  frameScanFieldsRecursively( lvField, lvFieldInstance, fpsWindowName );
           }
         }
       }
@@ -632,10 +632,6 @@ public class FrameObjectDictionary_Sngltn
     catch (Exception e)
     {
       Log.LogException( e.getMessage() );
-    }
-    finally
-    {
-      n--;
     }
   }
 
@@ -684,7 +680,7 @@ public class FrameObjectDictionary_Sngltn
   // / \author Zoltan Hrabovszki
   // / \date 2014.10.10
   // /
-  private static Object CreateInstanceByType( Class<?> fpParentType ) throws InstantiationException, XPathExpressionException
+  private static Object createInstanceByType( Class<?> fpParentType ) throws InstantiationException, XPathExpressionException
   {
     Object lvo_Obj = null;
     Boolean bOK = false;
@@ -754,7 +750,7 @@ public class FrameObjectDictionary_Sngltn
   // / FIXME: Prüfen, ob diese Methoden namentlich ok sind. Wird das Eltern
   // / Obejkt angelegt?
   @SuppressWarnings( "unused" )
-  private Object CreateInstanceByObjectName( String fps_ParentObject, String fps_ChildObject ) throws XPathExpressionException
+  private Object createInstanceByObjectName( String fps_ParentObject, String fps_ChildObject ) throws XPathExpressionException
   {
     Log.LogFunctionStartDebug( "FrameObjectDictionary.CreateInstanceByObjectName", "fps_ParentObject", fps_ParentObject, "fps_ChildObject", fps_ChildObject );
 
@@ -765,14 +761,14 @@ public class FrameObjectDictionary_Sngltn
     try
     {
       // PerentObject holen und ggf. als instanz anlegen
-      myParentObject = this.GetParentObjectByName( fps_ParentObject );
+      myParentObject = this.getParentObjectByName( fps_ParentObject );
 
       // Kindobjekt aufrufen...
       // aber nur wenn Paretobjekt gefunden worden ist.
       if ( myParentObject != null )
       {
         // FIXME: was ist wenn das myChildObject = null ist??Checken
-        myChildObject = GetChildObjectByName( myParentObject, fps_ChildObject );
+        myChildObject = getChildObjectByName( myParentObject, fps_ChildObject );
       }
       else
       {
@@ -824,7 +820,7 @@ public class FrameObjectDictionary_Sngltn
    * 
    * @throws XPathExpressionException
    */
-  private Object GetChildObjectByName( Object fpo_ParentObject, String fps_ChildName ) throws XPathExpressionException
+  private Object getChildObjectByName( Object fpo_ParentObject, String fps_ChildName ) throws XPathExpressionException
   {
     Object lvo_Return = null;
 
@@ -866,7 +862,7 @@ public class FrameObjectDictionary_Sngltn
   }
 
   
-  public void Print_ObjectDictionary()
+  public void printObjectDictionary()
   {
 
     Set<String> mySet = myFrameObjectDictionary.keySet();
@@ -901,7 +897,7 @@ public class FrameObjectDictionary_Sngltn
    * 
    * @throws XPathExpressionException
    */
-  public OKW GetOKW( String fpKN )
+  public OKW getOKW( String fpKN )
 
   {  
       OKW Return = null;

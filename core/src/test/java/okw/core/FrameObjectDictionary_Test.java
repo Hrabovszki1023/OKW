@@ -82,7 +82,7 @@ public class FrameObjectDictionary_Test
     // Frame laden.
     try
     {
-      target.GetChildObjectByName( "Rechner", "Taste_3" );
+      target.getChildObjectByName( "Rechner", "Taste_3" );
     }
     catch (XPathExpressionException | IllegalArgumentException | IllegalAccessException e)
     {
@@ -104,7 +104,7 @@ public class FrameObjectDictionary_Test
     // erneut existieren.
     try
     {
-      FrameObjectDictionary_Sngltn.Init();
+      FrameObjectDictionary_Sngltn.init();
     }
     catch (Exception e)
     {
@@ -130,7 +130,7 @@ public class FrameObjectDictionary_Test
 
     try
     {
-      actual = target.GetParentObjectByName( "Rechner" );
+      actual = target.getParentObjectByName( "Rechner" );
     }
     catch (XPathExpressionException e)
     {
@@ -226,7 +226,7 @@ public class FrameObjectDictionary_Test
   {
     try
     {
-      target.GetParentObjectByName( "RechnerNotExists" );
+      target.getParentObjectByName( "RechnerNotExists" );
       fail();
     }
     catch (OKWFrameObjectParentNotFoundException e)
@@ -267,7 +267,7 @@ public class FrameObjectDictionary_Test
 
     try
     {
-      target.GetChildObjectByName( "RechnerNotExists", "Taste_3" );
+      target.getChildObjectByName( "RechnerNotExists", "Taste_3" );
       fail();
     }
     catch (OKWFrameObjectChildNotFoundException e)
@@ -304,7 +304,7 @@ public class FrameObjectDictionary_Test
 
     try
     {
-      target.GetChildObjectByName( "Rechner", "TasteNotExists" );
+      target.getChildObjectByName( "Rechner", "TasteNotExists" );
       fail();
     }
     catch (OKWFrameObjectChildNotFoundException e)

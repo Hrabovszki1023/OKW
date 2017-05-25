@@ -383,7 +383,7 @@ public ArrayList<String> MemorizeCaption( )
 
         try
         {
-            OKW myOKW = FrameObjectDictionary_Sngltn.getInstance().GetOKW( this.getKN() );
+            OKW myOKW = FrameObjectDictionary_Sngltn.getInstance().getOKW( this.getKN() );
 
             // TimeOut-Werte Ermitteln
             OKW_TimeOut timeout = new OKW_TimeOut( myOKW.WaitForMe_TO(), myOKW.WaitForMe_PT() );
