@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Hrabovszki1023/OKW.svg?branch=master)](https://travis-ci.org/Hrabovszki1023/OKW)
-
+[![Dependency Status](https://www.versioneye.com/user/projects/58182c04d33a7126ff24f295/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/58182c04d33a7126ff24f295)
 
 <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png" width="150px" height="78px" />
 
