@@ -397,11 +397,12 @@ public class OKW_FileHelper
 			File myDir = new File(fpsPaFiNa);
 			File[] listOfFiles = myDir.listFiles();
 
-			for (File myFielToDelete : listOfFiles)
+			for (File myFileToDelete : listOfFiles)
 			{
-				if (myFielToDelete.isDirectory()) ;
-
-				myFielToDelete.delete();
+				if (!myFileToDelete.isDirectory())
+				{
+				    myFileToDelete.delete();
+				}
 			}
 		}
 	}
@@ -537,8 +538,6 @@ public class OKW_FileHelper
 		{
 			Log.LogFunctionEnd();
 		}
-
-		return;
 	}
 
 	/// \~german
@@ -575,21 +574,22 @@ public class OKW_FileHelper
 
 	}
 
-	/// \~german
-	/// \brief
-	/// Diese Methode prüft, ob das angegebene Vrzeicniss leer ist.
-	/// D.h. das Verzeichniss enthält
-	/// * keine Dateien und
-	/// * keine Unterverzeichnisse
-	///
-	/// \eception OKW.Exceptions.OKWDirectoryDoesNotExistsException wird
-	/// ausgelöst,
-	/// wenn de gegeben Pfad nicht auf ein existierendesVerzeichiss zeigt.
-	/// \param Folder Das zu prüfende Verzeichniss.
-	/// \~english
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.12.30
+	/** \~german
+	 *  \brief
+	 *  Diese Methode prüft, ob das angegebene Vrzeicniss leer ist.
+	 *  D.h. das Verzeichniss enthält
+	 *  * keine Dateien und
+	 *  * keine Unterverzeichnisse
+	 * 
+	 *  \eception OKW.Exceptions.OKWDirectoryDoesNotExistsException wird
+	 *  ausgelöst,
+	 *  wenn de gegeben Pfad nicht auf ein existierendesVerzeichiss zeigt.
+	 *  \param Folder Das zu prüfende Verzeichniss.
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  @date 2013.12.30
+	 */
 	public static Boolean isDirectoryEmpty( String fpsPath )
 	{
 
@@ -641,11 +641,11 @@ public class OKW_FileHelper
 		{
 			String myFileSeparator =System.getProperty("file.separator");
 			
-			if (myFileSeparator.equals("/"))
+			if ("/".equals( myFileSeparator))
 			{
 				lvsReturn = fpsPath.replace("\\", "/");
 			}
-			else if (myFileSeparator.equals("||"))
+			else if ("||".equals( myFileSeparator))
 			{
 				lvsReturn = fpsPath.replace("/", "\\");
 			}

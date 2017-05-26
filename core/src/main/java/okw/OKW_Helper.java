@@ -201,7 +201,7 @@ public class OKW_Helper
 			Log.LogFunctionStartDebug("OKW_Helper.GetLeftFromDelimiterNumber", "fpsSource", fpsSource, "fpsDelimiter",
 					fpsDelimiter, "fpiCount", fpiCount.toString());
 
-			if (fpsDelimiter != "")
+			if (fpsDelimiter.equals( "" ) )
 			{
 				lvLsSplitedSource = StrSplit(fpsSource, fpsDelimiter);
 
