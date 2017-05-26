@@ -1,14 +1,8 @@
 package okw.gui.adapter;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
-
-import org.xml.sax.SAXException;
 
 import okw.*;
 import okw.gui.AnyChildwindow;
@@ -25,7 +19,7 @@ import okw.log.Logger_Sngltn;
         protected OKW_TestClipboard        myClipboard     = OKW_TestClipboard.getInstance();
         
         
-        ArrayList<String> myALValue = new ArrayList<String>();
+        private ArrayList<String> myALValue = new ArrayList<String>();
 
 
         public AllMethods_SingleValue(String fps_Locator)
@@ -53,8 +47,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().addAll(this.myALValue);
             
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         
@@ -70,8 +62,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         
@@ -479,8 +469,6 @@ import okw.log.Logger_Sngltn;
             {
                 this.myLogger.LogFunctionEndDebug();
             }
-
-            return;
         }
 
         public void SelectMenu()
@@ -496,7 +484,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
-            return;
         }
 
         public void SelectMenu(ArrayList<String> fpLsValue)
@@ -516,7 +503,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
-            return;
         }
 
         public void SelectTablecell(String COL, String ROW)
@@ -535,7 +521,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
-            return;
         }
 
         public void SelectTablecell_Clicktype(String COL, String ROW, String fpsClickType)
@@ -555,13 +540,8 @@ import okw.log.Logger_Sngltn;
            
             
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
-        public void SelectWindow()
-        {
-        }
 
 /*        @Override
         public void Select_Clicktype(ArrayList<String> fpLs_Value, String fpsClicktype)
@@ -577,8 +557,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(fpLs_Value.get(0));
             myClipboard.getValue().add(fpsClicktype);
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }*/
 
         public void Select_TABLE(ArrayList<String> fpLs_Value)
@@ -591,8 +569,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.Clear();
             myClipboard.getValue().add(fpLs_Value.get(0));
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         public void SetFocus()
@@ -607,8 +583,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
   public void SetValue( ArrayList<String> fpLs_Value )
@@ -642,8 +616,6 @@ import okw.log.Logger_Sngltn;
     {
       this.myLogger.LogFunctionEndDebug();
     }
-
-    return;
   }
 
         public void TypeKey(ArrayList<String> fpLs_Value)
@@ -674,8 +646,6 @@ import okw.log.Logger_Sngltn;
             {
                 this.myLogger.LogFunctionEndDebug();
             }
-            
-            return;
         }
 
         public void TypeKeyTablecell(String COL, String ROW, ArrayList<String> fpLsValues)
@@ -705,12 +675,6 @@ import okw.log.Logger_Sngltn;
             {
                 this.myLogger.LogFunctionEndDebug();
             }
-            
-            return;
-        }
-
-        public void TypeKey_TABLE_ROW(int ROW, ArrayList<String> Values)
-        {
         }
 
 

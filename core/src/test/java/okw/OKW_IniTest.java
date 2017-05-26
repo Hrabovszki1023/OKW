@@ -389,7 +389,7 @@ public class OKW_IniTest
 	/// \date 2013.11.25
 	// [Category("WIN")]
 	@Test
-	public void tcCheck_Path_OKW_ImplementationMatrix()
+	public void tcCheckPathOKWImplementationMatrix()
 	{
 		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
 		

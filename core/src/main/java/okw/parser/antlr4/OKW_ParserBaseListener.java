@@ -19,7 +19,8 @@ public class OKW_ParserBaseListener implements OKW_ParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEnvvalue(@NotNull OKW_Parser.EnvvalueContext ctx) { }
+	@Override
+	public void enterEnvvalue(@NotNull OKW_Parser.EnvvalueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
