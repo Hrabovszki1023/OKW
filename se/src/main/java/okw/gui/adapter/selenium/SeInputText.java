@@ -201,6 +201,7 @@ public class SeInputText extends SeAnyChildWindow
     /**
      *  \~german
      */
+    @Override
     public void SetValue( ArrayList<String> Val )
     {
 
@@ -227,8 +228,6 @@ public class SeInputText extends SeAnyChildWindow
         {
             this.LogFunctionEndDebug();
         }
-
-        return;
     }
 
 }
