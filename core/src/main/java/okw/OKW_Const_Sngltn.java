@@ -129,8 +129,6 @@ public class OKW_Const_Sngltn
      */
     private static Logger_Sngltn    Log       = Logger_Sngltn.getInstance();
 
-    OKW_Ini_Sngltn                  myOKW_Ini = OKW_Ini_Sngltn.getInstance();
-
     private static OKW_Const_Sngltn Instance;
 
     /** 
@@ -161,7 +159,7 @@ public class OKW_Const_Sngltn
      * @author Zoltan Hrabovszki
      * @date 2013.12.22
      */
-    LogMessenger LM = null;
+    private LogMessenger LM = null;
 
     /**
      *  \copydoc OKW_XmlReader
@@ -235,9 +233,6 @@ public class OKW_Const_Sngltn
     {
         try
         {
-            // String myOKW_Const = OKW_Ini.getInstance().OKW_Enviroment.getFile_OKW_Const_xml();
-            String lvsOKW_Const_xml = myOKW_Ini.OKW_Enviroment.getFile_OKW_Const_xml();
-
             LM = new LogMessenger( "OKW_Const" );
 
             myXmlReader = new OKW_XmlReader( "xml/OKW_Const.xml" );
