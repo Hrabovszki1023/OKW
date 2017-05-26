@@ -91,26 +91,26 @@ public class OKW_HelperTest
         @Test
         public void TC_GetLeftFromDelimiterMultipleCharacterDelemeter() throws XPathExpressionException
         {
-            assertEquals("AAAA", OKW_Helper.GetLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 1));
-            assertEquals("AAAAGGBBBB", OKW_Helper.GetLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 2));
+            assertEquals("AAAA", OKW_Helper.getLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 1));
+            assertEquals("AAAAGGBBBB", OKW_Helper.getLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 2));
         }
 
         @Test
         public void TC_GetLeftFromDelimiterNumber() throws XPathExpressionException
         {
-            Assert.assertEquals("AAAA", OKW_Helper.GetLeftFromDelimiterNumber("AAAACBBBB", "C", 1));
+            Assert.assertEquals("AAAA", OKW_Helper.getLeftFromDelimiterNumber("AAAACBBBB", "C", 1));
         }
 
         @Test
         public void TC_GetLeftFromDelimiterNumber_2() throws XPathExpressionException
         {
-            assertEquals("AAAACBBBB", OKW_Helper.GetLeftFromDelimiterNumber("AAAACBBBBCDDDD", "C", 2));
+            assertEquals("AAAACBBBB", OKW_Helper.getLeftFromDelimiterNumber("AAAACBBBBCDDDD", "C", 2));
         }
 
         @Test
         public void TC_GetLeftFromDelimiterNumber_2a() throws XPathExpressionException
         {
-            assertEquals("AAAA", OKW_Helper.GetLeftFromDelimiterNumber("AAAACBBBBCDDDD", "C", 1));
+            assertEquals("AAAA", OKW_Helper.getLeftFromDelimiterNumber("AAAACBBBBCDDDD", "C", 1));
         }
 
         @Test
@@ -119,7 +119,7 @@ public class OKW_HelperTest
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
-                OKW_Helper.GetLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 3);
+                OKW_Helper.getLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 3);
                 Assert.fail();
             }
             catch (IndexOutOfBoundsException e)
@@ -141,7 +141,7 @@ public class OKW_HelperTest
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
-                OKW_Helper.GetLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 0);
+                OKW_Helper.getLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 0);
                 Assert.fail();
             }
             catch (IndexOutOfBoundsException e)
@@ -163,7 +163,7 @@ public class OKW_HelperTest
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
-                OKW_Helper.GetLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "", 1);
+                OKW_Helper.getLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "", 1);
                 Assert.fail();
             }
             catch (IllegalArgumentException e)
@@ -185,7 +185,7 @@ public class OKW_HelperTest
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
-                OKW_Helper.GetRightFromDelimiterNumber("AAAAGGBBBBGGDDDD", "", 1);
+                OKW_Helper.getRightFromDelimiterNumber("AAAAGGBBBBGGDDDD", "", 1);
                 Assert.fail();
             }
             catch (IllegalArgumentException e)
@@ -207,7 +207,7 @@ public class OKW_HelperTest
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
-                OKW_Helper.GetRightFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 3);
+                OKW_Helper.getRightFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 3);
                 Assert.fail();
             }
             catch (IndexOutOfBoundsException e)
@@ -229,7 +229,7 @@ public class OKW_HelperTest
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
-                OKW_Helper.GetRightFromDelimiterNumber( "AAAAGGBBBBGGDDDD", "GG", 0 );
+                OKW_Helper.getRightFromDelimiterNumber( "AAAAGGBBBBGGDDDD", "GG", 0 );
                 Assert.fail();
             }
             catch (IndexOutOfBoundsException e)
@@ -261,7 +261,7 @@ public class OKW_HelperTest
             Boolean expected = true;
             Boolean actual = true;
 
-            actual = OKW_Helper.ListStringCompare(List_1, List_2);
+            actual = OKW_Helper.compareListString(List_1, List_2);
             assertEquals(expected, actual);
         }
 
@@ -313,7 +313,7 @@ public class OKW_HelperTest
             Boolean expected = false;
             Boolean actual = true;
 
-            actual = OKW_Helper.ListStringCompare(List_1, List_2);
+            actual = OKW_Helper.compareListString(List_1, List_2);
             Assert.assertEquals(expected, actual);
         }
 
@@ -336,7 +336,7 @@ public class OKW_HelperTest
             Boolean expected = false;
             Boolean actual = true;
 
-            actual = OKW_Helper.ListStringCompare(List_1, List_2);
+            actual = OKW_Helper.compareListString(List_1, List_2);
             Assert.assertEquals(expected, actual);
         }
 
@@ -359,7 +359,7 @@ public class OKW_HelperTest
             Boolean expected = false;
             Boolean actual;
 
-            actual = OKW_Helper.ListStringCompare(List_1, List_2);
+            actual = OKW_Helper.compareListString(List_1, List_2);
             Assert.assertEquals(expected, actual);
         }
 
@@ -382,7 +382,7 @@ public class OKW_HelperTest
             Boolean expected = true;
             Boolean actual = true;
 
-            actual = OKW_Helper.ListStringCompare(List_1, List_2);
+            actual = OKW_Helper.compareListString(List_1, List_2);
             Assert.assertEquals(expected, actual);
         }
 
@@ -408,7 +408,7 @@ public class OKW_HelperTest
             Boolean expected = false;
             Boolean actual = true;
 
-            actual = OKW_Helper.ListStringCompare(List_1, List_2);
+            actual = OKW_Helper.compareListString(List_1, List_2);
             Assert.assertEquals(expected, actual);
         }
 
@@ -434,7 +434,7 @@ public class OKW_HelperTest
             Boolean expected = false;
             Boolean actual = true;
 
-            actual = OKW_Helper.ListStringCompare(List_1, List_2);
+            actual = OKW_Helper.compareListString(List_1, List_2);
             Assert.assertEquals(expected, actual);
         }
 
@@ -460,7 +460,7 @@ public class OKW_HelperTest
             Boolean expected = false;
             Boolean actual;
 
-            actual = OKW_Helper.ListStringCompare(List_1, List_2);
+            actual = OKW_Helper.compareListString(List_1, List_2);
             Assert.assertEquals(expected, actual);
         }
 
@@ -486,7 +486,7 @@ public class OKW_HelperTest
             Boolean expected = true;
             Boolean actual = true;
 
-            actual = OKW_Helper.ListStringCompare(List_1, List_2);
+            actual = OKW_Helper.compareListString(List_1, List_2);
             Assert.assertEquals(expected, actual);
         }
 
@@ -516,7 +516,7 @@ public class OKW_HelperTest
             Boolean expected = false;
             Boolean actual;
 
-            actual = OKW_Helper.ListStringCompare(List_1, List_2);
+            actual = OKW_Helper.compareListString(List_1, List_2);
             Assert.assertEquals(expected, actual);
         }
 
@@ -530,7 +530,7 @@ public class OKW_HelperTest
             // Keinwert
             Input.clear();
 
-            actual = OKW_Helper.ListStringConcat(Input, "/");
+            actual = OKW_Helper.concatListString(Input, "/");
 
             Assert.assertEquals("", actual);
 
@@ -538,7 +538,7 @@ public class OKW_HelperTest
             Input.clear();
             Input.add("Hase");
 
-            actual = OKW_Helper.ListStringConcat(Input, "/");
+            actual = OKW_Helper.concatListString(Input, "/");
 
             Assert.assertEquals("Hase", actual);
 
@@ -547,7 +547,7 @@ public class OKW_HelperTest
             Input.add("Hase");
             Input.add("Fuchs");
 
-            actual = OKW_Helper.ListStringConcat(Input, "/");
+            actual = OKW_Helper.concatListString(Input, "/");
 
             Assert.assertEquals("Hase/Fuchs", actual);
 
@@ -557,7 +557,7 @@ public class OKW_HelperTest
             Input.add("Fuchs");
             Input.add("Bär");
 
-            actual = OKW_Helper.ListStringConcat(Input, "/");
+            actual = OKW_Helper.concatListString(Input, "/");
 
             Assert.assertEquals("Hase/Fuchs/Bär", actual);
         }
@@ -572,7 +572,7 @@ public class OKW_HelperTest
             // Keinwert
             Input.clear();
 
-            actual = OKW_Helper.ListStringConcat(Input, "${SEP}");
+            actual = OKW_Helper.concatListString(Input, "${SEP}");
 
             Assert.assertEquals("", actual);
 
@@ -580,7 +580,7 @@ public class OKW_HelperTest
             Input.clear();
             Input.add("Hase");
 
-            actual = OKW_Helper.ListStringConcat(Input, "${SEP}");
+            actual = OKW_Helper.concatListString(Input, "${SEP}");
 
             Assert.assertEquals("Hase", actual);
 
@@ -589,7 +589,7 @@ public class OKW_HelperTest
             Input.add("Hase");
             Input.add("Fuchs");
 
-            actual = OKW_Helper.ListStringConcat(Input, "${SEP}");
+            actual = OKW_Helper.concatListString(Input, "${SEP}");
 
             Assert.assertEquals("Hase${SEP}Fuchs", actual);
 
@@ -599,7 +599,7 @@ public class OKW_HelperTest
             Input.add("Fuchs");
             Input.add("Bär");
 
-            actual = OKW_Helper.ListStringConcat(Input, "${SEP}");
+            actual = OKW_Helper.concatListString(Input, "${SEP}");
 
             Assert.assertEquals("Hase${SEP}Fuchs${SEP}Bär", actual);
 
@@ -609,7 +609,7 @@ public class OKW_HelperTest
             Input.add("");
             Input.add("Bär");
 
-            actual = OKW_Helper.ListStringConcat(Input, "${SEP}");
+            actual = OKW_Helper.concatListString(Input, "${SEP}");
 
             Assert.assertEquals("Hase${SEP}${SEP}Bär", actual);
 
@@ -619,7 +619,7 @@ public class OKW_HelperTest
             Input.add("Fuchs");
             Input.add("");
 
-            actual = OKW_Helper.ListStringConcat(Input, "${SEP}");
+            actual = OKW_Helper.concatListString(Input, "${SEP}");
 
             Assert.assertEquals("${SEP}Fuchs${SEP}", actual);
         }
@@ -634,7 +634,7 @@ public class OKW_HelperTest
             // Keinwert
             Input.clear();
 
-            actual = OKW_Helper.ListStringConcat(Input, "");
+            actual = OKW_Helper.concatListString(Input, "");
 
             Assert.assertEquals("", actual);
 
@@ -642,7 +642,7 @@ public class OKW_HelperTest
             Input.clear();
             Input.add("Hase");
 
-            actual = OKW_Helper.ListStringConcat(Input, "");
+            actual = OKW_Helper.concatListString(Input, "");
 
             Assert.assertEquals("Hase", actual);
 
@@ -651,7 +651,7 @@ public class OKW_HelperTest
             Input.add("Hase");
             Input.add("Fuchs");
 
-            actual = OKW_Helper.ListStringConcat(Input, "");
+            actual = OKW_Helper.concatListString(Input, "");
 
             Assert.assertEquals("HaseFuchs", actual);
 
@@ -661,7 +661,7 @@ public class OKW_HelperTest
             Input.add("Fuchs");
             Input.add("Bär");
 
-            actual = OKW_Helper.ListStringConcat(Input, "");
+            actual = OKW_Helper.concatListString(Input, "");
 
             assertEquals("HaseFuchsBär", actual);
         }
@@ -674,7 +674,7 @@ public class OKW_HelperTest
             Boolean actual = false;
             Boolean expected = false;
 
-            actual = OKW_Helper.MatchStr("*Hase*", "Fux, hASE, bär");
+            actual = OKW_Helper.matchString("*Hase*", "Fux, hASE, bär");
             Assert.assertEquals(expected, actual);
         }
 
@@ -684,23 +684,23 @@ public class OKW_HelperTest
             Boolean actual = false;
             Boolean expected = false;
 
-            actual = OKW_Helper.MatchStr("*Hase, bär", "Fux, Hase, Bär");
+            actual = OKW_Helper.matchString("*Hase, bär", "Fux, Hase, Bär");
             Assert.assertEquals(expected, actual);
         }
 
         @Test
         public void TC_RemoveBeginEndQuotations()
         {
-            Assert.assertEquals("", OKW_Helper.RemoveBeginEndQuotations("\"\""));
-            Assert.assertEquals("A", OKW_Helper.RemoveBeginEndQuotations("\"A\""));
-            Assert.assertEquals("ABC", OKW_Helper.RemoveBeginEndQuotations("\"ABC\""));
+            Assert.assertEquals("", OKW_Helper.removeBeginEndQuotations("\"\""));
+            Assert.assertEquals("A", OKW_Helper.removeBeginEndQuotations("\"A\""));
+            Assert.assertEquals("ABC", OKW_Helper.removeBeginEndQuotations("\"ABC\""));
         }
 
         @Test
         public void TC_RemoveBeginEndQuotations_TestMethod2()
         {
-            Assert.assertEquals("\"", OKW_Helper.RemoveBeginEndQuotations("\"\"\""));
-            Assert.assertEquals("A\"", OKW_Helper.RemoveBeginEndQuotations("\"A\"\""));
+            Assert.assertEquals("\"", OKW_Helper.removeBeginEndQuotations("\"\"\""));
+            Assert.assertEquals("A\"", OKW_Helper.removeBeginEndQuotations("\"A\"\""));
         }
 
         /// \brief
@@ -711,8 +711,8 @@ public class OKW_HelperTest
         @Test
         public void TC_RemoveBeginEndQuotations_TestMethod3()
         {
-            Assert.assertEquals("Fuchs \"liebt\" Hase", OKW_Helper.RemoveBeginEndQuotations("Fuchs \"liebt\" Hase"));
-            Assert.assertEquals("Fuchs \"liebt\" Hase", OKW_Helper.RemoveBeginEndQuotations("\"Fuchs \"liebt\" Hase\""));
+            Assert.assertEquals("Fuchs \"liebt\" Hase", OKW_Helper.removeBeginEndQuotations("Fuchs \"liebt\" Hase"));
+            Assert.assertEquals("Fuchs \"liebt\" Hase", OKW_Helper.removeBeginEndQuotations("\"Fuchs \"liebt\" Hase\""));
         }
 
         @Test
@@ -724,7 +724,7 @@ public class OKW_HelperTest
             String[] Input = { "Wert1" };
             
             // Keinwert
-            actual = OKW_Helper.StrArray2ListStr(Input);
+            actual = OKW_Helper.StringArray2ListStr(Input);
 
             expected.clear();
             expected.add("Wert1");
@@ -740,7 +740,7 @@ public class OKW_HelperTest
         	String[] Input = new String[] { "Wert1", "Wert2" };
 
             // Keinwert
-            actual = OKW_Helper.StrArray2ListStr(Input);
+            actual = OKW_Helper.StringArray2ListStr(Input);
 
             expected.clear();
             expected.add("Wert1");
@@ -757,7 +757,7 @@ public class OKW_HelperTest
         	String[] Input = new String[] { "Wert1", "Wert2", "Natloz" };
 
             // Keinwert
-            actual = OKW_Helper.StrArray2ListStr(Input);
+            actual = OKW_Helper.StringArray2ListStr(Input);
 
             expected.clear();
             expected.add("Wert1");
@@ -775,7 +775,7 @@ public class OKW_HelperTest
             String[] Input = { };
 
             // Keinwert
-            actual = OKW_Helper.StrArray2ListStr(Input);
+            actual = OKW_Helper.StringArray2ListStr(Input);
 
             expected.clear();
 
@@ -872,14 +872,14 @@ public class OKW_HelperTest
         	ArrayList<String> expected = new ArrayList<String>();
 
             // Keinwert
-            actual = OKW_Helper.StrSplit("", "/");
+            actual = OKW_Helper.splitString("", "/");
             expected.clear();
             expected.add("");
 
             Assert.assertEquals(expected, actual);
 
             // 1
-            actual = OKW_Helper.StrSplit("Root", "/");
+            actual = OKW_Helper.splitString("Root", "/");
 
             expected.clear();
             expected.add("Root");
@@ -887,7 +887,7 @@ public class OKW_HelperTest
             Assert.assertEquals(expected, actual);
 
             // 1t
-            actual = OKW_Helper.StrSplit("Root/", "/");
+            actual = OKW_Helper.splitString("Root/", "/");
 
             expected.clear();
             expected.add("Root");
@@ -895,7 +895,7 @@ public class OKW_HelperTest
             Assert.assertEquals(expected, actual);
 
             // t1
-            actual = OKW_Helper.StrSplit("/SubDir_1", "/");
+            actual = OKW_Helper.splitString("/SubDir_1", "/");
 
             expected.clear();
             expected.add("");
@@ -904,7 +904,7 @@ public class OKW_HelperTest
             Assert.assertEquals(expected, actual);
 
             // 1t1
-            actual = OKW_Helper.StrSplit("Root/SubDir_1", "/");
+            actual = OKW_Helper.splitString("Root/SubDir_1", "/");
 
             expected.clear();
             expected.add("Root");
@@ -913,7 +913,7 @@ public class OKW_HelperTest
             Assert.assertEquals(expected, actual);
 
             // 1tt1
-            actual = OKW_Helper.StrSplit("Root//Datei", "/");
+            actual = OKW_Helper.splitString("Root//Datei", "/");
 
             expected.clear();
             expected.add("Root");
@@ -923,7 +923,7 @@ public class OKW_HelperTest
             Assert.assertEquals(expected, actual);
 
             // 1t1t1t1
-            actual = OKW_Helper.StrSplit("Root/SubDir_1/SubDir_2/Datei", "/");
+            actual = OKW_Helper.splitString("Root/SubDir_1/SubDir_2/Datei", "/");
 
             expected.clear();
             expected.add("Root");
@@ -941,14 +941,14 @@ public class OKW_HelperTest
         	ArrayList<String> expected = new ArrayList<String>();
 
             // Keinwert
-            actual = OKW_Helper.StrSplit("", "${WERT}");
+            actual = OKW_Helper.splitString("", "${WERT}");
             expected.clear();
             expected.add("");
 
             Assert.assertEquals(expected, actual);
 
             // 1
-            actual = OKW_Helper.StrSplit("Root", "{WERT}");
+            actual = OKW_Helper.splitString("Root", "{WERT}");
 
             expected.clear();
             expected.add("Root");
@@ -956,7 +956,7 @@ public class OKW_HelperTest
             Assert.assertEquals(expected, actual);
 
             // 1t
-            actual = OKW_Helper.StrSplit("Root${WERT}", "${WERT}");
+            actual = OKW_Helper.splitString("Root${WERT}", "${WERT}");
 
             expected.clear();
             expected.add("Root");
@@ -964,7 +964,7 @@ public class OKW_HelperTest
             Assert.assertEquals(expected, actual);
 
             // t1
-            actual = OKW_Helper.StrSplit("${WERT}SubDir_1", "${WERT}");
+            actual = OKW_Helper.splitString("${WERT}SubDir_1", "${WERT}");
 
             expected.clear();
             expected.add("");
@@ -973,7 +973,7 @@ public class OKW_HelperTest
             Assert.assertEquals(expected, actual);
 
             // 1t1
-            actual = OKW_Helper.StrSplit("Root${WERT}SubDir_1", "${WERT}");
+            actual = OKW_Helper.splitString("Root${WERT}SubDir_1", "${WERT}");
 
             expected.clear();
             expected.add("Root");
@@ -982,7 +982,7 @@ public class OKW_HelperTest
             Assert.assertEquals(expected, actual);
 
             // 1tt1
-            actual = OKW_Helper.StrSplit("Root${WERT}${WERT}Datei", "${WERT}");
+            actual = OKW_Helper.splitString("Root${WERT}${WERT}Datei", "${WERT}");
 
             expected.clear();
             expected.add("Root");
@@ -992,7 +992,7 @@ public class OKW_HelperTest
             Assert.assertEquals(expected, actual);
 
             // 1t1t1t1
-            actual = OKW_Helper.StrSplit("Root${WERT}SubDir_1${WERT}SubDir_2${WERT}Datei", "${WERT}");
+            actual = OKW_Helper.splitString("Root${WERT}SubDir_1${WERT}SubDir_2${WERT}Datei", "${WERT}");
 
             expected.clear();
             expected.add("Root");

@@ -110,7 +110,7 @@ public class OKW_Helper_StringSplitTest
         	ArrayList<String> actual;
             ArrayList<String> expected = ExpectedValue;
 
-            actual = OKW_Helper.StrSplit(InputValue_1, InputValue_2);
+            actual = OKW_Helper.splitString(InputValue_1, InputValue_2);
             assertEquals(expected, actual);
         }
 }

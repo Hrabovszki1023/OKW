@@ -68,33 +68,34 @@ public class OKW_Helper
 	/// \copydoc CurrentObject::LM()
 	private static LogMessenger	LM	= new LogMessenger("OKW_Helper");
 
-	/// \~german
-	/// \brief
-	/// Konvertiert Boolean <tt>true</tt>/<tt>false</tt> nach String
-	/// "true"/"false"
-	///
-	///
-	/// \param fpbTrueOrFalse Zu konvertierender boolischer Wert.
-	/// \return
-	/// * <code>true</code> wird umgewandelt in "true" und
-	/// * <code>false</code>wird zu "false".
-	///
-	/// \~english
-	/// \brief
-	/// Converts Boolean <tt>true</tt>/<tt>false</tt> to String "true"/"false"
-	///
-	///
-	/// \param fpbTrueOrFalse Boolean value to be converted.
-	/// \return
-	/// * <code>true</code> is to be changed in "true" and
-	/// * <code>false</code>becomes "false".
-	///
-	/// \~
-	/// \author Zoltán Hrabovszki
-	/// \date 2013.05.03
+	/** \~german
+	 *  Konvertiert Boolean <tt>true</tt>/<tt>false</tt> nach String
+	 * "true"/"false"
+	 *
+	 *
+	 *  @param fpbTrueOrFalse Zu konvertierender boolischer Wert.
+	 *  @return
+	 *  + <code>true</code> wird umgewandelt in "true" und
+	 *  + <code>false</code>wird zu "false".
+	 *
+	 *   > _Method names should always begin with a lower case character, and should not contain underscores._ - das wird hier _bewust_ IGNORIERT
+	 *  \~english
+	 *  Converts Boolean <tt>true</tt>/<tt>false</tt> to String "true"/"false"
+	 *
+	 * 
+	 *  @param fpbTrueOrFalse Boolean value to be converted.
+	 *  @return
+	 *  + <code>true</code> is to be changed in "true" and
+	 *  + <code>false</code>becomes "false".
+	 * 
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  @date 2013.05.03
+	 */
 	public static String Boolean2String( Boolean fpbTrueOrFalse )
 	{
 		String lvsReturn = "";
+		
 		Log.LogFunctionStartDebug("OKW_Helper.Boolean2String", "fpbTrueOrFalse", fpbTrueOrFalse.toString());
 
 		try
@@ -188,7 +189,7 @@ public class OKW_Helper
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.05.03
-	public static String GetLeftFromDelimiterNumber( String fpsSource, String fpsDelimiter, Integer fpiCount ) throws XPathExpressionException
+	public static String getLeftFromDelimiterNumber( String fpsSource, String fpsDelimiter, Integer fpiCount ) throws XPathExpressionException
 	{
 		String lvsReturn = "";
 		ArrayList<String> lvLsSplitedSource = null;
@@ -201,9 +202,9 @@ public class OKW_Helper
 			Log.LogFunctionStartDebug("OKW_Helper.GetLeftFromDelimiterNumber", "fpsSource", fpsSource, "fpsDelimiter",
 					fpsDelimiter, "fpiCount", fpiCount.toString());
 
-			if (fpsDelimiter.equals( "" ) )
+			if ( ! fpsDelimiter.equals( "" ) )
 			{
-				lvLsSplitedSource = StrSplit(fpsSource, fpsDelimiter);
+				lvLsSplitedSource = splitString(fpsSource, fpsDelimiter);
 
 				// Gültigen Werte bereich berechnen:
 				RangeMax = lvLsSplitedSource.size() - 1;
@@ -296,7 +297,7 @@ public class OKW_Helper
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.05.03
-	public static String GetRightFromDelimiterNumber( String fpsSource, String fpsDelimiter, Integer fpiCount ) throws XPathExpressionException
+	public static String getRightFromDelimiterNumber( String fpsSource, String fpsDelimiter, Integer fpiCount ) throws XPathExpressionException
 	{
 		String lvsReturn = "";
 		List<String> lvLsSplitedSource = null;
@@ -306,9 +307,10 @@ public class OKW_Helper
 		{
 			Log.LogFunctionStartDebug("OKW_Helper.GetRigthFromDelimiterNumber", "fpsSource", fpsSource, "fpsDelimiter",
 					fpsDelimiter, "fpiCount", fpiCount.toString());
-			if (fpsDelimiter != "")
+			
+			if (  ! "".equals( fpsDelimiter ))
 			{
-				lvLsSplitedSource = StrSplit(fpsSource, fpsDelimiter);
+				lvLsSplitedSource = splitString(fpsSource, fpsDelimiter);
 
 				// Gültigen Werte bereich berechnen:
 				RangeMax = lvLsSplitedSource.size() - 1;
@@ -366,7 +368,7 @@ public class OKW_Helper
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.15.11
-	public static Boolean ListStringCompare( List<String> ListString1, List<String> ListString2 )
+	public static Boolean compareListString( List<String> ListString1, List<String> ListString2 )
 	{
 		Boolean lvbReturn = true;
 
@@ -452,7 +454,7 @@ public class OKW_Helper
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.01.03
-	public static String ListStringConcat( ArrayList<String> fps_ListString2Concat, String fps_Delimiter )
+	public static String concatListString( ArrayList<String> fps_ListString2Concat, String fps_Delimiter )
 	{
 		String lvsReturn = "";
 
@@ -500,7 +502,7 @@ public class OKW_Helper
 	/// \param fpsPattern
 	/// \param fpsStringToMatch
 	/// \return \todo TODO ZH: Rückgabewert beschreiben.
-	public static Boolean MatchStr( String fpsPattern, String fpsStringToMatch )
+	public static Boolean matchString( String fpsPattern, String fpsStringToMatch )
 	{
 		// Variables:
 		Boolean lvbReturn = false;
@@ -548,7 +550,7 @@ public class OKW_Helper
 	/// \param fpsPattern
 	/// \param fpsStringToMatch
 	/// \return \todo TODO ZH: Rückgabewert beschreiben.
-	public static Boolean MatchStrIgnoreCase( String fpsPattern, String fpsStringToMatch )
+	public static Boolean matchStrIgnoreCase( String fpsPattern, String fpsStringToMatch )
 	{
 		// Variables:
 		Boolean lvbReturn = false;
@@ -606,7 +608,7 @@ public class OKW_Helper
 	///
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.05.03
-	public static String RemoveBeginEndQuotations( String fps_StringinQuotations )
+	public static String removeBeginEndQuotations( String fps_StringinQuotations )
 	{
 
 		String lvsReturn = fps_StringinQuotations.replaceAll("^\"|\"$", "");
@@ -631,7 +633,7 @@ public class OKW_Helper
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.05.03
-	public static ArrayList<String> StrArray2ListStr( String[] fpsStringArray )
+	public static ArrayList<String> StringArray2ListStr( String[] fpsStringArray )
 	{
 		Log.LogFunctionStartDebug("OKW_Helper.StrArray2ListStr", "fpsStringArray", fpsStringArray.toString());
 
@@ -696,12 +698,12 @@ public class OKW_Helper
 
 		try
 		{
-			if (lvsTrueOrFalse.equals("true"))
+			if ( "true".equals( lvsTrueOrFalse ) )
 			{
 				lvbReturn = true;
 				bOK = true;
 			}
-			else if (lvsTrueOrFalse.equals("false") )
+			else if ( "false".equals( lvsTrueOrFalse ) )
 			{
 				lvbReturn = false;
 				bOK = true;
@@ -751,7 +753,7 @@ public class OKW_Helper
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.05.03
-	public static ArrayList<String> StrSplit_old( String fpsString2Split, String fpsSeparator )
+	public static ArrayList<String> splitString_old( String fpsString2Split, String fpsSeparator )
 	{
 		String[] lvsA_Splited;
 		ArrayList<String> lvls_Splited = new ArrayList<String>();
@@ -761,7 +763,7 @@ public class OKW_Helper
 		try
 		{
 			lvsA_Splited = fpsString2Split.split(fpsSeparator);
-			lvls_Splited = StrArray2ListStr(lvsA_Splited);
+			lvls_Splited = StringArray2ListStr(lvsA_Splited);
 		}
 		finally
 		{
@@ -773,7 +775,7 @@ public class OKW_Helper
 
 	
 	
-	public static ArrayList<String> StrSplit(String fpsString2Split, String fpsSeparator)
+	public static ArrayList<String> splitString(String fpsString2Split, String fpsSeparator)
 	{
 		ArrayList<String> SplitedList = new ArrayList<String>();
 	    int offset = 0;
@@ -808,7 +810,7 @@ public class OKW_Helper
 	
 	
 	/// \todo TODO: Methode Documentieren!
-	public static String StringRepeat( char c, Integer n )
+	public static String repeatString( char c, Integer n )
 	{
 		StringBuilder lvsReturn = new StringBuilder();
 		
@@ -820,7 +822,7 @@ public class OKW_Helper
 	
 
 	/// \todo TODO: Methode Documentieren!
-	public static String StringRepeat( String c, Integer n )
+	public static String repeatString( String c, Integer n )
 	{
 		StringBuilder lvsReturn = new StringBuilder();
 		
@@ -845,7 +847,7 @@ public class OKW_Helper
  * @author Zoltán Hrabovszki
  * @date 2017-04-27
  */
-	public static Boolean StringIsNullOrEmpty( String fpsString)
+	public static Boolean isStringNullOrEmpty( String fpsString)
 	{
 		// Variables
 	    Boolean lvbReturn = true;

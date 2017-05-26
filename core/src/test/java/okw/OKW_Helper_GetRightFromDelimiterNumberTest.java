@@ -107,7 +107,7 @@ public class OKW_Helper_GetRightFromDelimiterNumberTest
             String actual = "";
             String expected = ExpectedValue;
 
-            actual = OKW_Helper.GetRightFromDelimiterNumber( InputSource, InputDelimiter, InputCount);
+            actual = OKW_Helper.getRightFromDelimiterNumber( InputSource, InputDelimiter, InputCount);
             assertEquals(expected, actual);
         }
 }

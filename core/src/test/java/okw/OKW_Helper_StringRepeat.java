@@ -73,24 +73,24 @@ public class OKW_Helper_StringRepeat
     @Test
     public void tc_Repeat_0_Times()
     {
-        assertEquals( "", okw.OKW_Helper.StringRepeat( "A", 0 ) );
-        assertEquals( "", okw.OKW_Helper.StringRepeat( "ABC", 0 ) );
+        assertEquals( "", okw.OKW_Helper.repeatString( "A", 0 ) );
+        assertEquals( "", okw.OKW_Helper.repeatString( "ABC", 0 ) );
     }
 
     @Test
     public void tc_Repeat_1_Times()
     {
-        assertEquals( "A", okw.OKW_Helper.StringRepeat( "A", 1 ) );
-        assertEquals( "ABC", okw.OKW_Helper.StringRepeat( "ABC", 1 ) );
+        assertEquals( "A", okw.OKW_Helper.repeatString( "A", 1 ) );
+        assertEquals( "ABC", okw.OKW_Helper.repeatString( "ABC", 1 ) );
     }
 
     @Test
     public void tc_Repeat_n_Times()
     {
-        assertEquals( "AA", okw.OKW_Helper.StringRepeat( "A", 2 ) );
-        assertEquals( "ABCABC", okw.OKW_Helper.StringRepeat( "ABC", 2 ) );
-        assertEquals( "AAAAA", okw.OKW_Helper.StringRepeat( "A", 5 ) );
-        assertEquals( "ABCABCABCABCABC", okw.OKW_Helper.StringRepeat( "ABC", 5 ) );
+        assertEquals( "AA", okw.OKW_Helper.repeatString( "A", 2 ) );
+        assertEquals( "ABCABC", okw.OKW_Helper.repeatString( "ABC", 2 ) );
+        assertEquals( "AAAAA", okw.OKW_Helper.repeatString( "A", 5 ) );
+        assertEquals( "ABCABCABCABCABC", okw.OKW_Helper.repeatString( "ABC", 5 ) );
     }
 
 }

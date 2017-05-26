@@ -98,7 +98,7 @@ public class OKW_Helper_RemoveBeginQuotationsTest
             String actual = "";
             String expected = ExpectedValue;
 
-            actual = OKW_Helper.RemoveBeginEndQuotations( InputValue_1);
+            actual = OKW_Helper.removeBeginEndQuotations( InputValue_1);
             assertEquals(expected, actual);
         }
 }

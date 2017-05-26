@@ -370,7 +370,7 @@ public class OKW_Const_Sngltn
 
         try
         {
-            lvs_Return = OKW_Helper.ListStringConcat( fpLs_ListString2Concat, this.GetOKWConst4Internalname( "HSEP" ) );
+            lvs_Return = OKW_Helper.concatListString( fpLs_ListString2Concat, this.GetOKWConst4Internalname( "HSEP" ) );
         }
         finally
         {
@@ -418,7 +418,7 @@ public class OKW_Const_Sngltn
 
         try
         {
-            lvs_Return = OKW_Helper.ListStringConcat( fpLs_ListString2Concat, this.GetOKWConst4Internalname( "SEP" ) );
+            lvs_Return = OKW_Helper.concatListString( fpLs_ListString2Concat, this.GetOKWConst4Internalname( "SEP" ) );
         }
         finally
         {
@@ -466,7 +466,7 @@ public class OKW_Const_Sngltn
 
         try
         {
-            lvs_Return = OKW_Helper.ListStringConcat( fpLs_ListString2Concat, this.GetOKWConst4Internalname( "VSEP" ) );
+            lvs_Return = OKW_Helper.concatListString( fpLs_ListString2Concat, this.GetOKWConst4Internalname( "VSEP" ) );
         }
         finally
         {
@@ -666,7 +666,7 @@ public class OKW_Const_Sngltn
 
         try
         {
-            lvls_2Plit = OKW_Helper.StrSplit( fpsString2Split, this.GetOKWConst4Internalname( "HSEP" ) );
+            lvls_2Plit = OKW_Helper.splitString( fpsString2Split, this.GetOKWConst4Internalname( "HSEP" ) );
         }
         finally
         {
@@ -724,7 +724,7 @@ public class OKW_Const_Sngltn
 
         try
         {
-            lvls_2Plit = OKW_Helper.StrSplit( fpsString2Split, this.GetOKWConst4Internalname( "SEP" ) );
+            lvls_2Plit = OKW_Helper.splitString( fpsString2Split, this.GetOKWConst4Internalname( "SEP" ) );
         }
         finally
         {
@@ -785,7 +785,7 @@ public class OKW_Const_Sngltn
 
         try
         {
-            lvls_2Plit = OKW_Helper.StrSplit( fps_String2Split, this.GetOKWConst4Internalname( "VSEP" ) );
+            lvls_2Plit = OKW_Helper.splitString( fps_String2Split, this.GetOKWConst4Internalname( "VSEP" ) );
         }
         finally
         {

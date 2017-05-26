@@ -743,7 +743,7 @@ public class OKW_CurrentObject_Sngltn
         Log.LogPrintDebug( LM.GetMessage( "SetChildName", "GivenWindownameDebug" ) );
         try
         {
-            if ( !OKW_Helper.StringIsNullOrEmpty( cvsWindowFN ) )
+            if ( !OKW_Helper.isStringNullOrEmpty( cvsWindowFN ) )
             {
                 Log.LogPrintDebug( LM.GetMessage( "SetChildName", "SetChildwindowNameDebug", cvsWindowFN, cvsChildFN ) );
                 cvsChildFN = fpsChildName;

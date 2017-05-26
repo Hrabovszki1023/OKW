@@ -74,21 +74,21 @@ public class OKW_Helper_StringIsNullOrEmpty
     public void tc_String_IsNull()
     {
         String myStringToTest = null;
-        assertEquals( true, okw.OKW_Helper.StringIsNullOrEmpty( myStringToTest ) );
+        assertEquals( true, okw.OKW_Helper.isStringNullOrEmpty( myStringToTest ) );
     }
 
     @Test
     public void tc_String_IsEmpty()
     {
         String myStringToTest = "";
-        assertEquals( true, okw.OKW_Helper.StringIsNullOrEmpty( myStringToTest ) );
+        assertEquals( true, okw.OKW_Helper.isStringNullOrEmpty( myStringToTest ) );
     }
 
     @Test
     public void tc_String_IsNotEmptyOrNull()
     {
         String myStringToTest = "123";
-        assertEquals( false, okw.OKW_Helper.StringIsNullOrEmpty( myStringToTest ) );
+        assertEquals( false, okw.OKW_Helper.isStringNullOrEmpty( myStringToTest ) );
     }
 
 }

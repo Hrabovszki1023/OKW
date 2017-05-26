@@ -151,7 +151,7 @@ import okw.log.Logger_Sngltn;
       driver.switchTo().defaultContent();
 
       // then set to yor ifframe if not null or empty!
-      if ( !okw.OKW_Helper.StringIsNullOrEmpty( iframeID ) )
+      if ( !okw.OKW_Helper.isStringNullOrEmpty( iframeID ) )
       {
         try
         {

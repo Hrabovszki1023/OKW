@@ -105,7 +105,7 @@ public class OKW_Helper_MatchStrIgnoreCaseTest
             Boolean actual = false;
             Boolean expected = ExpectedValue;
 
-            actual = OKW_Helper.MatchStrIgnoreCase( InputValue_1, InputValue_2);
+            actual = OKW_Helper.matchStrIgnoreCase( InputValue_1, InputValue_2);
             assertEquals(expected, actual);
         }
 }

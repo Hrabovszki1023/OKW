@@ -326,7 +326,7 @@ public class OKW_Memorize_Sngltn
 		// 1. Setze Pfad und
 		OKW_Memorize_xml = OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFile_OKW_Memorize_xml();
 
-		if (!OKW_Helper.StringIsNullOrEmpty(this.OKW_Memorize_xml))
+		if (!OKW_Helper.isStringNullOrEmpty(this.OKW_Memorize_xml))
 		{
 			this.Log.LogPrintDebug("OKW Memorize Datei = >>" + this.OKW_Memorize_xml + "<<");
 			if (OKW_FileHelper.fileExists(this.OKW_Memorize_xml))

@@ -109,7 +109,7 @@ public class OKW_Helper_MatchStrTest
             Boolean actual = false;
             Boolean expected = ExpectedValue;
 
-            actual = OKW_Helper.MatchStr( InputValue_1, InputValue_2);
+            actual = OKW_Helper.matchString( InputValue_1, InputValue_2);
             assertEquals(expected, actual);
         }
 }

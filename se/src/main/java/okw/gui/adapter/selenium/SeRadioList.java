@@ -224,7 +224,7 @@ public class SeRadioList extends SeAnyChildWindow
                 if ( isChecked.equals( Actuel.get( 0 ) ) )
                 {
 
-                    String CurrentValue = okw.OKW_Helper.GetRightFromDelimiterNumber( lvsRadioButtonFN, this.getFN() + ".", 1 );
+                    String CurrentValue = okw.OKW_Helper.getRightFromDelimiterNumber( lvsRadioButtonFN, this.getFN() + ".", 1 );
                     lvLsReturn.add( CurrentValue );
 
                     break;
