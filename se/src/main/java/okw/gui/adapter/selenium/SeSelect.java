@@ -104,7 +104,6 @@ import okw.gui.OKWLocator;
             {
                 this.LogFunctionEndDebug();
             }
-            return;
         }
 
         
@@ -161,8 +160,6 @@ import okw.gui.OKWLocator;
             {
                 this.LogFunctionEndDebug();
             }
-
-            return;
         }
 
 

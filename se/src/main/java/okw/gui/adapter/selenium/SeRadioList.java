@@ -183,8 +183,6 @@ public class SeRadioList extends SeAnyChildWindow
         {
             this.LogFunctionEndDebug();
         }
-
-        return;
     }
 
     /**

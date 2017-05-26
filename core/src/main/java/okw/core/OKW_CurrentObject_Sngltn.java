@@ -383,7 +383,6 @@ public class OKW_CurrentObject_Sngltn
         {
             Log.LogFunctionEndDebug();
         }
-        return;
     }
 
     /**
@@ -573,7 +572,6 @@ public class OKW_CurrentObject_Sngltn
             cvsObjectName = "";
             myFrameObjectDictionary = null;
             myFrameObjectDictionary = FrameObjectDictionary_Sngltn.getInstance();
-        return;
     }
 
     /**
@@ -703,8 +701,6 @@ public class OKW_CurrentObject_Sngltn
         {
             Log.LogFunctionEndDebug();
         }
-
-        return;
     }
 
     
@@ -936,7 +932,6 @@ public class OKW_CurrentObject_Sngltn
         {
             Log.LogFunctionEndDebug();
         }
-        return;
     }
 
     
@@ -999,7 +994,6 @@ public class OKW_CurrentObject_Sngltn
         {
             Log.LogFunctionEndDebug();
         }
-        return;
     }
 
 
@@ -1050,6 +1044,5 @@ public class OKW_CurrentObject_Sngltn
         {
             Log.LogFunctionEndDebug();
         }
-        return;
     }
 }

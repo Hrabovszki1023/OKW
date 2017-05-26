@@ -161,8 +161,6 @@ public class Log2Console implements ILogger
 
 	            this.ResCloseList(); // Close Parameter List...
 	            this.LogPrint("-------");
-
-	            return;
 	        }
 
 			
@@ -212,8 +210,6 @@ public class Log2Console implements ILogger
 	            }
 
 	            this.ResOpenList(String2Print);
-
-	            return;
 	        }
 
 			

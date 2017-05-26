@@ -230,8 +230,6 @@ import org.openqa.selenium.*;
             {
                 this.LogFunctionEndDebug();
             }
-
-            return;
         }
 
          /**  \~german
@@ -259,8 +257,6 @@ import org.openqa.selenium.*;
             {
                 this.LogFunctionEndDebug();
             }
-
-            return;
         }
 
          /**

@@ -207,8 +207,6 @@ import okw.gui.OKWLocator;
     {
       this.LogFunctionEndDebug();
     }
-
-    return;
   }
 
 }

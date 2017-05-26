@@ -199,7 +199,6 @@ import okw.gui.*;
             {
                 this.LogFunctionEndDebug();
             }
-            return;
         }
 
         /**
@@ -291,8 +290,6 @@ import okw.gui.*;
             {
                 this.LogFunctionEndDebug();
             }
-
-            return;
         }
 
         /**
@@ -342,8 +339,6 @@ import okw.gui.*;
             {
                 this.LogFunctionEndDebug();
             }
-
-            return;
         }
 
         
@@ -375,7 +370,5 @@ import okw.gui.*;
             {
                 this.LogFunctionEndDebug();
             }
-
-            return;
         }
 }

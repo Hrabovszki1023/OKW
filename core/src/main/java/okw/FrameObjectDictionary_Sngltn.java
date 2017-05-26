@@ -567,7 +567,6 @@ public class FrameObjectDictionary_Sngltn
     {
       Log.ResCloseList();
     }
-    return;
   }
 
   
@@ -874,9 +873,6 @@ public class FrameObjectDictionary_Sngltn
       System.out.println( " Type: " + myFrameObjectDictionary.get( myKey ).getClass().getName() );
       System.out.println( "---------------------------------------------------------------------\n" );
     }
-
-    return;
-
   }
 
 

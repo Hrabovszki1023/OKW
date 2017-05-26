@@ -40,7 +40,6 @@ import okw.log.Logger_Sngltn;
             myClipBoard.getValue().add("NO VALUE");
             
             myLogger.LogFunctionEndDebug();
-            return;
         }
 
         public void StartApp()
@@ -53,8 +52,6 @@ import okw.log.Logger_Sngltn;
             myClipBoard.getValue().clear();;
             myClipBoard.getValue().add("NO VALUE");
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         public void StopApp()
@@ -67,8 +64,6 @@ import okw.log.Logger_Sngltn;
             myClipBoard.getValue().clear();;
             myClipBoard.getValue().add("NO VALUE");
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         public void TypeKey(ArrayList<String> fpLs_Value)
@@ -94,8 +89,6 @@ import okw.log.Logger_Sngltn;
             {
                 this.myLogger.LogFunctionEndDebug();
             }
-            
-            return;
         }
 
         /** \~german

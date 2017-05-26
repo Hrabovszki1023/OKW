@@ -232,8 +232,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add("NO VALUE");
 
             myLogger.LogFunctionEnd();
-            
-            return;
         }
 
 
@@ -252,7 +250,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(pLS.get(2));
 
             myLogger.LogFunctionEnd();
-            return;
         }
 
 
@@ -273,7 +270,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(sOption);
 
             myLogger.LogFunctionEnd();
-            return;
         }
 
 
@@ -290,7 +286,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(psParameter_1);
 
             myLogger.LogFunctionEnd();
-            return;
         }
 
         public void CallMethod_pMN_pS_pS(String psParameter_1, String psParameter_2)
@@ -307,7 +302,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(psParameter_2);
 
             myLogger.LogFunctionEnd();
-            return;
         }
 
 
@@ -326,7 +320,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(psParameter_3);
 
             myLogger.LogFunctionEnd();
-            return;
         }
 
 
@@ -348,7 +341,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(fpLSValue.get(2));
 
             myLogger.LogFunctionEnd();
-            return;
         }
 
     }

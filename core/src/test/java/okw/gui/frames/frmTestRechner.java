@@ -134,8 +134,6 @@ public class frmTestRechner extends Test_Window
             myClipBoard.getValue().add("NO VALUE");
 
             myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         public void TestSequence(String SEQID) throws Exception
@@ -179,7 +177,6 @@ public class frmTestRechner extends Test_Window
                 myClipBoard.getValue().add("NO VALUE");
 
                 myLogger.LogFunctionEndDebug();
-                return;
             }
         }
     }

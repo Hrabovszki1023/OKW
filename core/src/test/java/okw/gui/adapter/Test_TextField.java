@@ -80,7 +80,6 @@ import okw.log.*;
             myClipBoard.getValue().clear();
             myClipBoard.getValue().add(this.myValue);
             this.myLogger.LogFunctionEndDebug();
-            return;
         }
 
         public void ClickOn_DOUBLECLICK()
@@ -94,7 +93,6 @@ import okw.log.*;
             myClipBoard.getValue().clear();
             myClipBoard.getValue().add(this.myValue);
             this.myLogger.LogFunctionEndDebug();
-            return;
         }
 
         public List<String> GetValue()
@@ -145,8 +143,6 @@ import okw.log.*;
             myClipBoard.setMethod("Set_Focus()");
             myClipBoard.getValue().clear();
             myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         public void TypeKey(List<String> fpLs_Value)
@@ -162,8 +158,6 @@ import okw.log.*;
             myClipBoard.getValue().add(fpLs_Value.get(0));
             
             myLogger.LogFunctionEndDebug();
-
-            return;
         }
 
 
