@@ -400,7 +400,7 @@ public class NOK implements IOKW_State
      *  @author Zoltán Hrabovszki
      *  @date 02.03.2013
      */ 
-    public void SetLanguage( String Language )
+    public void setLanguage( String Language )
     {
         this.AL.setLanguage( Language );
     }

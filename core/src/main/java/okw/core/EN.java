@@ -76,7 +76,7 @@ public class EN
      */
     public static void BeginTest( String Testname ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.BeginTest( Testname );
     }
 
@@ -85,7 +85,7 @@ public class EN
      */
     public static void ClickOn( String FN ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.ClickOn( FN );
     }
 
@@ -94,7 +94,7 @@ public class EN
      */
     public static void DoubleClickOn( String FN ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.DoubleClickOn( FN );
     }
 
@@ -103,7 +103,7 @@ public class EN
      */
     public static void EndTest() throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.EndTest();
     }
 
@@ -112,7 +112,7 @@ public class EN
      */
     public static void LogCaption( String FN ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.LogCaption( FN );
     }
 
@@ -121,7 +121,7 @@ public class EN
      */
     public static void LogExists( String FN ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.LogExists( FN );
     }
 
@@ -130,7 +130,7 @@ public class EN
      */
     public static void LogHasFocus( String FN ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.LogHasFocus( FN );
     }
 
@@ -139,7 +139,7 @@ public class EN
      */
     public static void LogIsActive( String FN ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.LogIsActive( FN );
     }
 
@@ -148,7 +148,7 @@ public class EN
      */
     public static void LogLabel( String FN ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.LogLabel( FN );
     }
 
@@ -157,7 +157,7 @@ public class EN
      */
     public static void LogSelected( String FN ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.LogSelected( FN );
     }
 
@@ -166,7 +166,7 @@ public class EN
      */
     public static void LogTablecellValue( String FN, String COL, String ROW ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.LogTablecellValue( FN, COL, ROW );
     }
 
@@ -175,7 +175,7 @@ public class EN
      */
     public static void LogTooltip( String FN ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.LogTooltip( FN );
     }
 
@@ -184,7 +184,7 @@ public class EN
      */
     public static void LogValue( String FN ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.LogValue( FN );
     }
 
@@ -193,7 +193,7 @@ public class EN
      */
     public static void MemorizeCaption( String FN, String fpsKeyName ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.MemorizeCaption( FN, fpsKeyName );
     }
 
@@ -202,7 +202,7 @@ public class EN
      */
     public static void MemorizeExists( String FN, String fpsKeyName ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.MemorizeExists( FN, fpsKeyName );
     }
 
@@ -211,7 +211,7 @@ public class EN
      */
     public static void MemorizeHasFocus( String FN, String fpsKeyName ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.MemorizeHasFocus( FN, fpsKeyName );
     }
 
@@ -220,7 +220,7 @@ public class EN
      */
     public static void MemorizeIsActive( String FN, String fpsKeyName ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.MemorizeIsActive( FN, fpsKeyName );
     }
 
@@ -229,7 +229,7 @@ public class EN
      */
     public static void MemorizeLabel( String FN, String fpsKeyName ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.MemorizeLabel( FN, fpsKeyName );
     }
 
@@ -238,7 +238,7 @@ public class EN
      */
     public static void MemorizeSelectedValue( String FN, String fpsKeyName ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.MemorizeSelectedValue( FN, fpsKeyName );
     }
 
@@ -247,7 +247,7 @@ public class EN
      */
     public static void MemorizeTablecellValue( String FN, String COL, String ROW, String fpsKeyName ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.MemorizeTablecellValue( FN, COL, ROW, fpsKeyName );
     }
 
@@ -256,7 +256,7 @@ public class EN
      */
     public static void MemorizeTooltip( String FN, String fpsKeyName ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.MemorizeTooltip( FN, fpsKeyName );
     }
 
@@ -265,7 +265,7 @@ public class EN
      */
     public static void MemorizeValue( String FN, String fpsKeyName ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.MemorizeValue( FN, fpsKeyName );
     }
 
@@ -274,7 +274,7 @@ public class EN
      */
     public static void Select( String FN, String fpsValue ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.Select( FN, fpsValue );
     }
 
@@ -283,7 +283,7 @@ public class EN
      */
     public static void SelectMenu( String FN ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.SelectMenu( FN );
     }
 
@@ -292,7 +292,7 @@ public class EN
      */
     public static void SelectMenu( String FN, String fpsValue ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.SelectMenu( FN, fpsValue );
     }
 
@@ -301,7 +301,7 @@ public class EN
      */
     public static void SelectTablecell( String FN, String COL, String ROW ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.SelectTablecell( FN, COL, ROW );
     }
 
@@ -310,7 +310,7 @@ public class EN
      */
     public static void SelectWindow( String FN ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.SelectWindow( FN );
     }
 
@@ -319,7 +319,7 @@ public class EN
      */
     public static void Sequence( String fpsObjectName, String fpsSequenceName, String SEQID ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.Sequence( fpsObjectName, fpsSequenceName, SEQID );
     }
 
@@ -328,7 +328,7 @@ public class EN
      */
     public static void SetFocus( String FN ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.SetFocus( FN );
     }
 
@@ -337,7 +337,7 @@ public class EN
      */
     public static void SetValue( String FN, String fpsValue ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.SetValue( FN, fpsValue );
     }
 
@@ -346,7 +346,7 @@ public class EN
      */
     public static void StartApp( String fpsApplicationName ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.StartApp( fpsApplicationName );
     }
 
@@ -355,7 +355,7 @@ public class EN
      */
     public static void StopApp( String fpsApplicationName ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.StopApp( fpsApplicationName );
     }
 
@@ -364,7 +364,7 @@ public class EN
      */
     public static void TypeKey( String FN, String fpsValue ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.TypeKey( FN, fpsValue );
     }
 
@@ -373,7 +373,7 @@ public class EN
      */
     public static void TypeKeyTablecell( String FN, String COL, String ROW, String fpsValue ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.TypeKeyTablecell( FN, COL, ROW, fpsValue );
     }
 
@@ -382,7 +382,7 @@ public class EN
      */
     public static void TypeKeyWindow( String FN, String fpsValue ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.TypeKeyWindow( FN, fpsValue );
     }
 
@@ -391,7 +391,7 @@ public class EN
      */
     public static void VerifyCaption( String FN, String fpsValue ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyCaption( FN, fpsValue );
     }
 
@@ -400,7 +400,7 @@ public class EN
      */
     public static void VerifyCaptionREGX( String FN, String fpsValue ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyCaptionREGX( FN, fpsValue );
     }
 
@@ -409,7 +409,7 @@ public class EN
      */
     public static void VerifyCaptionWCM( String FN, String fpsValue ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyCaptionWCM( FN, fpsValue );
     }
 
@@ -418,7 +418,7 @@ public class EN
      */
     public static void VerifyExists( String FN, String fpsValue ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyExists( FN, fpsValue );
     }
 
@@ -427,7 +427,7 @@ public class EN
      */
     public static void VerifyHasFocus( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyHasFocus( FN, ExpVal );
     }
 
@@ -436,7 +436,7 @@ public class EN
      */
     public static void VerifyIsActive( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyIsActive( FN, ExpVal );
     }
 
@@ -445,7 +445,7 @@ public class EN
      */
     public static void VerifyLabel( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyLabel( FN, ExpVal );
     }
 
@@ -454,7 +454,7 @@ public class EN
      */
     public static void VerifyLabelREGX( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyLabelREGX( FN, ExpVal );
     }
 
@@ -463,7 +463,7 @@ public class EN
      */
     public static void VerifyLabelWCM( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyLabelWCM( FN, ExpVal );
     }
 
@@ -472,7 +472,7 @@ public class EN
      */
     public static void VerifySelectedValue( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifySelectedValue( FN, ExpVal );
     }
 
@@ -481,7 +481,7 @@ public class EN
      */
     public static void VerifySelectedValueREGX( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifySelectedValueREGX( FN, ExpVal );
     }
 
@@ -490,7 +490,7 @@ public class EN
      */
     public static void VerifySelectedValueWCM( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifySelectedValueWCM( FN, ExpVal );
     }
 
@@ -499,7 +499,7 @@ public class EN
      */
     public static void VerifyTablecellValue( String FN, String COL, String ROW, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyTablecellValue( FN, COL, ROW, ExpVal );
     }
 
@@ -508,7 +508,7 @@ public class EN
      */
     public static void VerifyTablecellValueREGX( String FN, String COL, String ROW, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyTablecellValueREGX( FN, COL, ROW, ExpVal );
     }
     
@@ -517,7 +517,7 @@ public class EN
      */
     public static void VerifyTablecellValueWCM( String FN, String COL, String ROW, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyTablecellValueWCM( FN, COL, ROW, ExpVal );
     }
     
@@ -526,7 +526,7 @@ public class EN
      */
     public static void VerifyTooltip( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyTooltip( FN, ExpVal );
     }
 
@@ -535,7 +535,7 @@ public class EN
     */
     public static void VerifyTooltipWCM( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyTooltipWCM( FN, ExpVal );
     }
 
@@ -544,7 +544,7 @@ public class EN
     */
     public static void VerifyTooltipREGX( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyTooltipREGX( FN, ExpVal );
     }
 
@@ -553,7 +553,7 @@ public class EN
      */
     public static void VerifyValue( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyValue( FN, ExpVal );
     }
 
@@ -562,7 +562,7 @@ public class EN
      */
     public static void VerifyValueWCM( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyValueWCM( FN, ExpVal );
     }
 
@@ -571,7 +571,7 @@ public class EN
     */
     public static void VerifyValueREGX( String FN, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyValueREGX( FN, ExpVal );
     }
 
@@ -580,7 +580,7 @@ public class EN
      */
     public static void VerifyFileExists( String fpsPathAndFileName, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyFileExists( fpsPathAndFileName, ExpVal );
     }
 
@@ -589,7 +589,7 @@ public class EN
      */
     public static void VerifyDirectoryExists( String fpsPath, String ExpVal ) throws Exception
     {
-        myKernel.SetLanguage( Language );
+        myKernel.setLanguage( Language );
         myKernel.VerifyDirectoryExists( fpsPath, ExpVal );
     }
 }

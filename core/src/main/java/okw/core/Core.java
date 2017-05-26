@@ -626,9 +626,9 @@ public class Core implements IOKW_State
      * @author Zoltán Hrabovszki
      * @date 2014.01.09
      */
-    public void SetLanguage( String Language )
+    public void setLanguage( String Language )
     {
-        this.CurrentState.SetLanguage( Language );
+        this.CurrentState.setLanguage( Language );
     }
 
     /**

@@ -132,7 +132,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -153,7 +153,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -174,7 +174,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -214,7 +214,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -240,7 +240,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -266,7 +266,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -292,7 +292,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -322,7 +322,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -356,7 +356,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -386,7 +386,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -416,7 +416,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -446,7 +446,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -463,7 +463,7 @@ public class OK implements IOKW_State
 
         try
         {
-            if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || MemKey.equals( "" ) )
+            if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || "".equals( MemKey ) )
             {
                 // Wenn fpsMemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
@@ -491,7 +491,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -537,7 +537,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -584,7 +584,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -635,7 +635,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -680,7 +680,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -725,7 +725,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -771,7 +771,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -815,7 +815,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -859,7 +859,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -876,7 +876,7 @@ public class OK implements IOKW_State
         try
         {
             // Prüfen ob ignoriert werden muss...
-            if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || Val.equals( "" ) )
+            if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || "".equals( Val ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> Abbrechen...
                 // \todo TODO: Meldung sprachabhägig auslagern!
@@ -900,7 +900,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -921,7 +921,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -958,7 +958,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -979,7 +979,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1000,7 +1000,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1018,7 +1018,7 @@ public class OK implements IOKW_State
         try
         {
             // Prüfen ob ignoriert werden muss...
-            if ( SEQ_ID.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || SEQ_ID.equals( "" ) )
+            if ( SEQ_ID.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || "".equals( SEQ_ID ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> Abbrechen...
                 // \todo TODO: Meldung sprachabhägig auslagern!
@@ -1042,7 +1042,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1063,7 +1063,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1077,7 +1077,7 @@ public class OK implements IOKW_State
      * @author Zoltán Hrabovszki
      * @date 02.03.2013
      */
-    public void SetLanguage( String Language )
+    public void setLanguage( String Language )
     {
         CL.setLanguage( Language );
     }
@@ -1115,7 +1115,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1136,7 +1136,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1157,7 +1157,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1198,7 +1198,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1240,7 +1240,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1273,7 +1273,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1295,7 +1295,7 @@ public class OK implements IOKW_State
         try
         {
             // Prüfen ob ignoriert werden muss...
-            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
+            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || "".equals( ExpVal ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyCaption", "Ignore" ) );
@@ -1329,16 +1329,16 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyCaption_TO(), myOKW.VerifyCaption_PT() );
 
-                Actual = Verify( TimeOut, lvlsExpected, () ->
+                Actual = verify( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyCaption();
                 } );
-                Verification( Actual, lvlsExpected );
+                verification( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1396,17 +1396,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyCaption_TO(), myOKW.VerifyCaption_PT() );
 
-                Actual = VerifyWCM( TimeOut, lvlsExpected, () ->
+                Actual = verifyWCM( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyCaption();
                 } );
 
-                VerificationWCM( Actual, lvlsExpected );
+                verificationWCM( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1463,17 +1463,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyCaption_TO(), myOKW.VerifyCaption_PT() );
 
-                Actual = VerifyREGX( TimeOut, lvlsExpected, () ->
+                Actual = verifyREGX( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyCaption();
                 } );
-                VerificationREGX( Actual, lvlsExpected );
+                verificationREGX( Actual, lvlsExpected );
 
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1522,14 +1522,14 @@ public class OK implements IOKW_State
                     OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                     OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyExists_TO(), myOKW.VerifyExists_PT() );
 
-                    Boolean lvbActual = Verify( TimeOut, lvbExpectedValue, () ->
+                    Boolean lvbActual = verify( TimeOut, lvbExpectedValue, () ->
                     {
                         return MyObject.VerifyExists();
                     } );
 
                     String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-                    Verification( lvsActual, lvsExpected );
+                    verification( lvsActual, lvsExpected );
                 }
                 // Beide Bedingungen sind nicht erfüllt -> Exception da
                 // keinanderer
@@ -1543,7 +1543,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1592,14 +1592,14 @@ public class OK implements IOKW_State
                     OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                     OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyHasFocus_TO(), myOKW.VerifyHasFocus_PT() );
 
-                    Boolean lvbActual = Verify( TimeOut, lvbExpectedValue, () ->
+                    Boolean lvbActual = verify( TimeOut, lvbExpectedValue, () ->
                     {
                         return MyObject.VerifyHasFocus();
                     } );
 
                     String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-                    Verification( lvsActual, lvsExpected );
+                    verification( lvsActual, lvsExpected );
                 }
                 // Beide Bedingungen sind nicht erfüllt -> Exception da
                 // keinanderer
@@ -1613,7 +1613,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1656,7 +1656,7 @@ public class OK implements IOKW_State
                     OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                     OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyIsActive_TO(), myOKW.VerifyIsActive_PT() );
 
-                    Boolean lvbActual = Verify( TimeOut, lvbExpectedValue, () ->
+                    Boolean lvbActual = verify( TimeOut, lvbExpectedValue, () ->
                     {
                         return MyObject.VerifyIsActive();
                     } );
@@ -1666,7 +1666,7 @@ public class OK implements IOKW_State
                     // Soll/Ist Vergleich...
                     Log.LogPrintDebug( LM.GetMessage( "VerifyIsActive", "VerifyValue" ) );
 
-                    Verification( lvsActual, lvsExpected );
+                    verification( lvsActual, lvsExpected );
                 }
                 else
                 {
@@ -1679,7 +1679,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -1687,7 +1687,7 @@ public class OK implements IOKW_State
         }
     }
 
-    private void Verification( String fpsActual, String fpsExpected )
+    private void verification( String fpsActual, String fpsExpected )
     {
         if ( fpsActual.equals( fpsExpected ) )
         {
@@ -1706,7 +1706,7 @@ public class OK implements IOKW_State
         }
     }
 
-    private void Verification( ArrayList<String> Actual, ArrayList<String> Expected )
+    private void verification( ArrayList<String> Actual, ArrayList<String> Expected )
     {
 
         Boolean bFail = false;
@@ -1755,7 +1755,7 @@ public class OK implements IOKW_State
         }
     }
 
-    private void VerificationWCM( ArrayList<String> Actual, ArrayList<String> Expected )
+    private void verificationWCM( ArrayList<String> Actual, ArrayList<String> Expected )
     {
 
         Boolean bFail = false;
@@ -1804,7 +1804,7 @@ public class OK implements IOKW_State
         }
     }
 
-    private void VerificationREGX( ArrayList<String> Actual, ArrayList<String> Expected )
+    private void verificationREGX( ArrayList<String> Actual, ArrayList<String> Expected )
     {
 
         Boolean bFail = false;
@@ -1861,7 +1861,7 @@ public class OK implements IOKW_State
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
-    public Boolean Verify( OKW_TimeOut timeout, Boolean fpbExpected, Supplier<Boolean> Method2Call )
+    private Boolean verify( OKW_TimeOut timeout, Boolean fpbExpected, Supplier<Boolean> Method2Call )
     {
         Integer Count = 0;
 
@@ -1918,7 +1918,7 @@ public class OK implements IOKW_State
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
-    public ArrayList<String> Verify( OKW_TimeOut timeout, String COL, String ROW, ArrayList<String> fpALExpected, BiFunction<String, String, ArrayList<String>> Method2Call )
+    private ArrayList<String> verify( OKW_TimeOut timeout, String COL, String ROW, ArrayList<String> fpALExpected, BiFunction<String, String, ArrayList<String>> Method2Call )
     {
         Integer Count = 0;
 
@@ -1971,7 +1971,7 @@ public class OK implements IOKW_State
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
-    public ArrayList<String> VerifyWCM( OKW_TimeOut timeout, String COL, String ROW, ArrayList<String> fpALExpected, BiFunction<String, String, ArrayList<String>> Method2Call )
+    private ArrayList<String> verifyWCM( OKW_TimeOut timeout, String COL, String ROW, ArrayList<String> fpALExpected, BiFunction<String, String, ArrayList<String>> Method2Call )
     {
         Integer Count = 0;
 
@@ -2024,7 +2024,7 @@ public class OK implements IOKW_State
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
-    public ArrayList<String> VerifyREGX( OKW_TimeOut timeout, String COL, String ROW, ArrayList<String> fpALExpected, BiFunction<String, String, ArrayList<String>> Method2Call )
+    private ArrayList<String> verifyREGX( OKW_TimeOut timeout, String COL, String ROW, ArrayList<String> fpALExpected, BiFunction<String, String, ArrayList<String>> Method2Call )
     {
         Integer Count = 0;
 
@@ -2076,7 +2076,7 @@ public class OK implements IOKW_State
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
-    public ArrayList<String> Verify( OKW_TimeOut timeout, ArrayList<String> fpALExpected, Supplier<ArrayList<String>> Method2Call )
+    private ArrayList<String> verify( OKW_TimeOut timeout, ArrayList<String> fpALExpected, Supplier<ArrayList<String>> Method2Call )
     {
         Integer Count = 0;
 
@@ -2138,7 +2138,7 @@ public class OK implements IOKW_State
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
-    public ArrayList<String> VerifyWCM( OKW_TimeOut timeout, ArrayList<String> fpALExpectedREGXs, Supplier<ArrayList<String>> Method2Call )
+    private ArrayList<String> verifyWCM( OKW_TimeOut timeout, ArrayList<String> fpALExpectedREGXs, Supplier<ArrayList<String>> Method2Call )
     {
         Integer Count = 0;
 
@@ -2200,7 +2200,7 @@ public class OK implements IOKW_State
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
-    public ArrayList<String> VerifyREGX( OKW_TimeOut timeout, ArrayList<String> fpALExpectedREGXs, Supplier<ArrayList<String>> Method2Call )
+    private ArrayList<String> verifyREGX( OKW_TimeOut timeout, ArrayList<String> fpALExpectedREGXs, Supplier<ArrayList<String>> Method2Call )
     {
         Integer Count = 0;
 
@@ -2301,16 +2301,16 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyLabel_TO(), myOKW.VerifyLabel_PT() );
 
-                Actual = VerifyREGX( TimeOut, lvlsExpected, () ->
+                Actual = verifyREGX( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyLabel();
                 } );
-                Verification( Actual, lvlsExpected );
+                verification( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -2366,17 +2366,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyLabel_TO(), myOKW.VerifyLabel_PT() );
 
-                Actual = VerifyWCM( TimeOut, lvlsExpected, () ->
+                Actual = verifyWCM( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyLabel();
                 } );
 
-                VerificationWCM( Actual, lvlsExpected );
+                verificationWCM( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -2432,17 +2432,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyLabel_TO(), myOKW.VerifyLabel_PT() );
 
-                Actual = VerifyREGX( TimeOut, lvlsExpected, () ->
+                Actual = verifyREGX( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyLabel();
                 } );
 
-                VerificationREGX( Actual, lvlsExpected );
+                verificationREGX( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -2499,17 +2499,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifySelectedValue_TO(), myOKW.VerifySelectedValue_PT() );
 
-                Actual = Verify( TimeOut, lvlsExpected, () ->
+                Actual = verify( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifySelectedValue();
                 } );
 
-                Verification( Actual, lvlsExpected );
+                verification( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -2566,17 +2566,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifySelectedValue_TO(), myOKW.VerifySelectedValue_PT() );
 
-                Actual = VerifyWCM( TimeOut, lvlsExpected, () ->
+                Actual = verifyWCM( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifySelectedValue();
                 } );
 
-                VerificationWCM( Actual, lvlsExpected );
+                verificationWCM( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -2632,17 +2632,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifySelectedValue_TO(), myOKW.VerifySelectedValue_PT() );
 
-                Actual = VerifyREGX( TimeOut, lvlsExpected, () ->
+                Actual = verifyREGX( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifySelectedValue();
                 } );
 
-                VerificationREGX( Actual, lvlsExpected );
+                verificationREGX( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -2697,17 +2697,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTablecellValue_TO(), myOKW.VerifyTablecellValue_PT() );
 
-                Actual = Verify( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
+                Actual = verify( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
                 {
                     return MyObject.VerifyTablecellValue(col, row);
                 } );
 
-                Verification( Actual, lvlsExpected );
+                verification( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -2762,17 +2762,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTablecellValue_TO(), myOKW.VerifyTablecellValue_PT() );
 
-                Actual = VerifyWCM( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
+                Actual = verifyWCM( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
                 {
                     return MyObject.VerifyTablecellValue(col, row);
                 } );
 
-                VerificationWCM( Actual, lvlsExpected );
+                verificationWCM( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -2827,17 +2827,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTablecellValue_TO(), myOKW.VerifyTablecellValue_PT() );
 
-                Actual = VerifyREGX( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
+                Actual = verifyREGX( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
                 {
                     return MyObject.VerifyTablecellValue(col, row);
                 } );
 
-                VerificationREGX( Actual, lvlsExpected );
+                verificationREGX( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -2892,16 +2892,16 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTooltip_TO(), myOKW.VerifyTooltip_PT() );
 
-                Actual = Verify( TimeOut, lvlsExpected, () ->
+                Actual = verify( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyTooltip();
                 } );
-                Verification( Actual, lvlsExpected );
+                verification( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -2958,17 +2958,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTooltip_TO(), myOKW.VerifyTooltip_PT() );
 
-                Actual = VerifyWCM( TimeOut, lvlsExpected, () ->
+                Actual = verifyWCM( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyTooltip();
                 } );
-                VerificationWCM( Actual, lvlsExpected );
+                verificationWCM( Actual, lvlsExpected );
 
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -3024,17 +3024,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTooltip_TO(), myOKW.VerifyTooltip_PT() );
 
-                Actual = VerifyREGX( TimeOut, lvlsExpected, () ->
+                Actual = verifyREGX( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyTooltip();
                 } );
-                VerificationREGX( Actual, lvlsExpected );
+                verificationREGX( Actual, lvlsExpected );
 
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -3089,17 +3089,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyValue_TO(), myOKW.VerifyValue_PT() );
 
-                Actual = Verify( TimeOut, lvlsExpected, () ->
+                Actual = verify( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyValue();
                 } );
 
-                Verification( Actual, lvlsExpected );
+                verification( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -3155,17 +3155,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyValue_TO(), myOKW.VerifyValue_PT() );
 
-                Actual = VerifyWCM( TimeOut, lvlsExpected, () ->
+                Actual = verifyWCM( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyValue();
                 } );
 
-                VerificationWCM( Actual, lvlsExpected );
+                verificationWCM( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -3225,17 +3225,17 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyValue_TO(), myOKW.VerifyValue_PT() );
 
-                Actual = VerifyREGX( TimeOut, lvlsExpected, () ->
+                Actual = verifyREGX( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyValue();
                 } );
 
-                VerificationREGX( Actual, lvlsExpected );
+                verificationREGX( Actual, lvlsExpected );
             }
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -3262,7 +3262,7 @@ public class OK implements IOKW_State
      * \date 02.03.2013
      * @throws Exception 
      */
-    private void HandleException( Exception e ) throws Exception
+    private void handleException( Exception e ) throws Exception
     {
 
         // if we have an InvocationTargetException...
@@ -3321,7 +3321,7 @@ public class OK implements IOKW_State
         try
         {
             // Prüfen ob ignoriert werden muss...
-            if ( fpsPathAndFileName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || fpsPathAndFileName.equals( "" ) )
+            if ( fpsPathAndFileName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || "".equals( fpsPathAndFileName ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
                 Log.LogPrintDebug( LM.GetMessage( "FileDelete", "Ignore" ) );
@@ -3343,7 +3343,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            HandleException( e );
+            handleException( e );
         }
         finally
         {
@@ -3389,7 +3389,7 @@ public class OK implements IOKW_State
 
                 // Soll/Ist Vergleich...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyIsActive", "VerifyValue" ) );
-                Verification( lvsActual, ExpVal );
+                verification( lvsActual, ExpVal );
             }
             // Beide Bedingungen sind nicht erfüllt -> Exception da kein anderer
             // Wert hier erlaubt ist.
@@ -3401,7 +3401,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {
@@ -3452,7 +3452,7 @@ public class OK implements IOKW_State
 
                 // Soll/Ist Vergleich...
                 Log.LogPrintDebug( LM.GetMessage( "VerifyDirectoryExists", "VerifyValue" ) );
-                Verification( lvsActual, ExpVal );
+                verification( lvsActual, ExpVal );
             }
             // Beide Bedingungen sind nicht erfüllt -> Exception da kein anderer
             // Wert hier erlaubt ist.
@@ -3464,7 +3464,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
-            this.HandleException( e );
+            this.handleException( e );
         }
         finally
         {

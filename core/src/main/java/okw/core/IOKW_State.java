@@ -809,7 +809,7 @@ public interface IOKW_State
     * @author Zoltan Hrabovszki
     * @date 2014-09-21
      */
-    void SetLanguage( String Language );
+    void setLanguage( String Language );
 
     /**
      *  \~german
