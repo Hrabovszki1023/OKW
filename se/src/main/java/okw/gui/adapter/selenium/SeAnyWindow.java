@@ -126,8 +126,6 @@ public class SeAnyWindow extends AnyWindow
         {
             this.LogFunctionEndDebug();
         }
-
-        return;
     }
 
     
@@ -906,8 +904,6 @@ public class SeAnyWindow extends AnyWindow
         {
             this.LogFunctionEndDebug();
         }
-        
-        return;
     }
 
     
@@ -1254,8 +1250,6 @@ public class SeAnyWindow extends AnyWindow
 	    {
 	        this.LogFunctionEndDebug();
 	    }
-	    
-	    return;
 	}
 
 

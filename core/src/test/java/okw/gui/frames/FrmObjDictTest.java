@@ -14,10 +14,10 @@ import okw.log.*;
  *  @copyright
  */
 @OKW(FN="frmObjDictTest")
-public class frmObjDictTest extends Test_Window
+public class FrmObjDictTest extends Test_Window
   {
-	Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
-	OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
+	private Logger_Sngltn      myLogger    = Logger_Sngltn.getInstance();
+	private OKW_TestClipboard  myClipBoard = OKW_TestClipboard.getInstance();
 
 
         /**
@@ -54,10 +54,6 @@ public class frmObjDictTest extends Test_Window
         public class myTestbutton extends AnyChildwindow
         {
 
-          public myTestbutton( String fpsLocator )
-          {
-          }
-
           /**
            * \~german
            * Taste_1 ist ein GUI-Objekt ohne weitere Veränderung/anpassungen der Basisklasse Test_PushButton.
@@ -80,7 +76,11 @@ public class frmObjDictTest extends Test_Window
            */
           @OKW(FN="Taste_2")
           public Test_PushButton Taste_2 = new Test_PushButton("2");
-
+          
+          public myTestbutton( String Locator )
+          {
+          }
+          
         };
         
         
@@ -95,7 +95,7 @@ public class frmObjDictTest extends Test_Window
          * @author Zoltan Hrabovszki
          * @date 2012.12.26
          */
-        public frmObjDictTest()
+        public FrmObjDictTest()
         {
         	super("Neuer Locator Rechner");
             myLogger.LogPrintDebug("Rechner.Constructor()");
@@ -113,7 +113,5 @@ public class frmObjDictTest extends Test_Window
             myClipBoard.getValue().add("NO VALUE");
 
             myLogger.LogFunctionEndDebug();
-            
-            return;
         }
     }
