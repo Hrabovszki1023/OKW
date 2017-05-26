@@ -329,7 +329,7 @@ public class OKW_Memorize_Sngltn
 		if (!OKW_Helper.StringIsNullOrEmpty(this.OKW_Memorize_xml))
 		{
 			this.Log.LogPrintDebug("OKW Memorize Datei = >>" + this.OKW_Memorize_xml + "<<");
-			if (OKW_FileHelper.FileExists(this.OKW_Memorize_xml))
+			if (OKW_FileHelper.fileExists(this.OKW_Memorize_xml))
 			{
 				// Lesen der Daten...
 				this.Read();

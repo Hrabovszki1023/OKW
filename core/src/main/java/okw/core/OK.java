@@ -3332,13 +3332,13 @@ public class OK implements IOKW_State
                 // 1. Parsen der Pfad-Eingabe
                 lvsPathAndFileName = Parser.ParseMe( fpsPathAndFileName );
                 // 2. Konvertieren des Pfad separators.
-                lvsPathAndFileName = OKW_FileHelper.ConvertDirectorySeperator( lvsPathAndFileName );
+                lvsPathAndFileName = OKW_FileHelper.convertDirectorySeperator( lvsPathAndFileName );
 
                 String lsvLog = LM.GetMessage( "FileDelete", "ResolvedPath", lvsPathAndFileName );
                 Log.LogPrintDebug( lsvLog );
 
                 // Basis-Funktion aufrufen...
-                OKW_FileHelper.FilesDelete( lvsPathAndFileName );
+                OKW_FileHelper.deleteFiles( lvsPathAndFileName );
             }
         }
         catch (Exception e)
@@ -3376,13 +3376,13 @@ public class OK implements IOKW_State
                 // 1. Parsen der Pfad-Eingabe
                 lvsPathAndFileName = Parser.ParseMe( fpsPathAndFileName );
                 // 2. Konvertieren des Pfad separators.
-                lvsPathAndFileName = OKW_FileHelper.ConvertDirectorySeperator( lvsPathAndFileName );
+                lvsPathAndFileName = OKW_FileHelper.convertDirectorySeperator( lvsPathAndFileName );
 
                 String lsvLog = LM.GetMessage( "VerifyFileExists", "ResolvedPath", lvsPathAndFileName );
                 Log.LogPrintDebug( lsvLog );
 
                 // Basis-Funkton aufrufen...
-                Boolean lvbActual = OKW_FileHelper.FileExists( lvsPathAndFileName );
+                Boolean lvbActual = OKW_FileHelper.fileExists( lvsPathAndFileName );
 
                 // Aktuellen Wert nach YES/NO, Sprachabhänging, wandel...
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
@@ -3439,13 +3439,13 @@ public class OK implements IOKW_State
                 // 1. Parsen der Pfad-Eingabe
                 lvsPath = Parser.ParseMe( fpsPath );
                 // 2. Konvertieren des Pfad separators.
-                lvsPath = OKW_FileHelper.ConvertDirectorySeperator( lvsPath );
+                lvsPath = OKW_FileHelper.convertDirectorySeperator( lvsPath );
 
                 String lsvLog = LM.GetMessage( "VerifyDirectoryExists", "ResolvedPath", lvsPath );
                 Log.LogPrintDebug( lsvLog );
 
                 // Basis-Funkton aufrufen...
-                Boolean lvbActual = OKW_FileHelper.DirectoryExists( lvsPath );
+                Boolean lvbActual = OKW_FileHelper.directoryExists( lvsPath );
 
                 // Aktuellen Wert nach YES/NO, Sprachabhänging, wandel...
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );

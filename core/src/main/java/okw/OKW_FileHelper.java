@@ -49,14 +49,15 @@ import java.nio.file.StandardCopyOption;
 import okw.exceptions.*;
 import okw.log.Logger_Sngltn;
 
-/// \~german
-/// \brief
-/// Description of OKW_FileHelper.
-/// 
-/// \~english
-/// \~
-/// \author Zoltan Hrabovszki
-/// \date 2013.12.30
+/** \~german
+ *  \brief
+ *  Description of OKW_FileHelper.
+ *  
+ *  \~english
+ *  \~
+ *  @author Zoltan Hrabovszki
+ *  @date 2013.12.30
+ */
 public class OKW_FileHelper
 {
 	/// \copydoc CurrentObject::Log()
@@ -80,7 +81,7 @@ public class OKW_FileHelper
 	/// \~
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.12.30
-	public static Boolean DirectoryCreateEmpty( String fpsPath )
+	public static Boolean createEmptyDirectory( String fpsPath )
 	{
 
 		String lvsPath = "";
@@ -96,11 +97,11 @@ public class OKW_FileHelper
 			// Determine whether the directory exists.
 			if (myDirectory.exists() & myDirectory.isDirectory())
 			{
-				DirectoryDelete(lvsPath);
+				deleteDirectory(lvsPath);
 			}
 			else if (myDirectory.exists() & myDirectory.isFile())
 			{
-				FileDelete(lvsPath);
+				deleteFile(lvsPath);
 			}
 
 			// Try to create the directory.
@@ -139,7 +140,7 @@ public class OKW_FileHelper
 	/// \~
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.12.30
-	public static void DirectoryDelete( String fpsPaFiNa )
+	public static void deleteDirectory( String fpsPaFiNa )
 	{
 		String lvsPaFiNa = fpsPaFiNa;
 		Boolean lvbReturn = false;
@@ -160,7 +161,7 @@ public class OKW_FileHelper
 				{
 					if (f.isDirectory())
 					{
-						DirectoryDelete(f.getPath());
+					    deleteDirectory(f.getPath());
 						f.delete();
 					}
 					else
@@ -175,7 +176,6 @@ public class OKW_FileHelper
 		{
 			Log.LogFunctionEndDebug(lvbReturn);
 		}
-		return;
 	}
 
 	/// \~german
@@ -189,7 +189,7 @@ public class OKW_FileHelper
 	/// \~
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.12.30
-	public static Boolean DirectoryExists( String fpsPaFiNa )
+	public static Boolean directoryExists( String fpsPaFiNa )
 	{
 		Boolean lvbReturn = false;
 
@@ -230,7 +230,7 @@ public class OKW_FileHelper
 		return lvbReturn;
 	}
 
-	public static void DirectoryCopy( String fpsSourceFolder, String fpsDestinationFolder )
+	public static void copyDirectory( String fpsSourceFolder, String fpsDestinationFolder )
 	{
 		// Source directory which you want to copy to new location
 		File sourceFolder = new File(fpsSourceFolder);
@@ -238,11 +238,11 @@ public class OKW_FileHelper
 		// Target directory where files should be copied
 		File destinationFolder = new File(fpsDestinationFolder);
 
-		DirectoryCopy(sourceFolder, destinationFolder);
+		copyDirectory(sourceFolder, destinationFolder);
 
 	}
 
-	private static boolean DirectoryCopy( File fpSourceFolder, File fpDestinationFolder )
+	private static boolean copyDirectory( File fpSourceFolder, File fpDestinationFolder )
 	{
 
 		Boolean lvbReturn = false;
@@ -279,7 +279,7 @@ public class OKW_FileHelper
 					File destFile = new File(fpDestinationFolder, file);
 
 					// Recursive function call
-					DirectoryCopy(srcFile, destFile);
+					copyDirectory(srcFile, destFile);
 				}
 			}
 			else
@@ -312,7 +312,7 @@ public class OKW_FileHelper
 	/// \~
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.12.30
-	public static boolean DirectoryMove( String fpsPaNaSource, String fpsPaNaDestination )
+	public static boolean moveDirectory( String fpsPaNaSource, String fpsPaNaDestination )
 			throws IOException, FileNotFoundException
 	{
 		Boolean lvbReturn = false;
@@ -328,19 +328,18 @@ public class OKW_FileHelper
 
 			Log.LogFunctionStartDebug("OKW_FileHelper.DirectoryMove", "fpsPaNaSource", fpsPaNaSource, "fpsPaNaDestination", fpsPaNaDestination);
 
-			if (DirectoryExists(lvsPaNaSource))
+			if (directoryExists(lvsPaNaSource))
 			{
 				// Löschen des ZIEL-verzeichnissen wenn vorhanden
-				DirectoryDelete(lvsPaNaDestination);
+			    deleteDirectory(lvsPaNaDestination);
 
 				// Copy with subfolders
-				Copy(lvsPaNaSource, lvsPaNaDestination, true);
+				copy(lvsPaNaSource, lvsPaNaDestination, true);
 
 				// Delete Source
-				DirectoryDelete(lvsPaNaSource);
+				deleteDirectory(lvsPaNaSource);
 
 				lvbReturn = true;
-
 			}
 		}
 		finally
@@ -351,7 +350,7 @@ public class OKW_FileHelper
 		return lvbReturn;
 	}
 
-	public static void Copy( String fpsSource, String fpsDestination, Boolean copySubDirs )
+	public static void copy( String fpsSource, String fpsDestination, Boolean copySubDirs )
 			throws IOException, FileNotFoundException
 	{
 		Path lvSourcePath = Paths.get(fpsSource);
@@ -390,10 +389,10 @@ public class OKW_FileHelper
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2015.08.22
-	public static void FilesDelete( String fpsPaFiNa )
+	public static void deleteFiles( String fpsPaFiNa )
 	{
 
-		if (DirectoryExists(fpsPaFiNa))
+		if (directoryExists(fpsPaFiNa))
 		{
 			File myDir = new File(fpsPaFiNa);
 			File[] listOfFiles = myDir.listFiles();
@@ -405,7 +404,6 @@ public class OKW_FileHelper
 				myFielToDelete.delete();
 			}
 		}
-		return;
 	}
 
 	/// \~german
@@ -426,13 +424,13 @@ public class OKW_FileHelper
 	/// \~
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.12.30
-	public static Boolean FileDelete( String fpsPaFiNa )
+	public static Boolean deleteFile( String fpsPaFiNa )
 	{
 		Boolean lvbReturn = false;
 
 		Log.LogFunctionStartDebug("OKW_FileHelper.FileDelete", "fpsPaFiNa", fpsPaFiNa);
 
-		if (FileExists(fpsPaFiNa))
+		if (fileExists(fpsPaFiNa))
 		{
 			try
 			{
@@ -460,7 +458,7 @@ public class OKW_FileHelper
 	/// \~
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.12.30
-	public static Boolean FileExists( String fpsPaFiNa )
+	public static Boolean fileExists( String fpsPaFiNa )
 	{
 
 		Boolean lvbReturn = false;
@@ -512,7 +510,7 @@ public class OKW_FileHelper
 	/// \~
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.12.30
-	public static void Move( String fpsPaFiNaSource, String fpsPaFiNaDestination )
+	public static void move( String fpsPaFiNaSource, String fpsPaFiNaDestination )
 			throws IOException, FileNotFoundException
 	{
 
@@ -520,12 +518,12 @@ public class OKW_FileHelper
 				fpsPaFiNaDestination);
 		try
 		{
-			if (FileExists(fpsPaFiNaSource))
+			if (fileExists(fpsPaFiNaSource))
 			{
 
-				FileDelete(fpsPaFiNaDestination);
-				Copy(fpsPaFiNaSource, fpsPaFiNaDestination, true);
-				FileDelete(fpsPaFiNaSource);
+				deleteFile(fpsPaFiNaDestination);
+				copy(fpsPaFiNaSource, fpsPaFiNaDestination, true);
+				deleteFile(fpsPaFiNaSource);
 
 			}
 			else
@@ -554,7 +552,7 @@ public class OKW_FileHelper
 	/// \~
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.12.30
-	public static boolean FileCreate( String fpsPaFiNa ) throws IOException
+	public static boolean createFile( String fpsPaFiNa ) throws IOException
 	{
 
 		Boolean lvbReturn = false;
@@ -592,14 +590,14 @@ public class OKW_FileHelper
 	/// \~
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.12.30
-	public static Boolean IsDirectoryEmpty( String fpsPath )
+	public static Boolean isDirectoryEmpty( String fpsPath )
 	{
 
 		Boolean lvbReturn = false;
 		Log.LogFunctionStart("OKW_FileHelper.IsDirectoryEmpty", "fpaFolder", fpsPath);
 		try
 		{
-			if (DirectoryExists(fpsPath))
+			if (directoryExists(fpsPath))
 			{
 				lvbReturn = Paths.get(fpsPath).toFile().listFiles().length == 0;
 			}
@@ -633,7 +631,7 @@ public class OKW_FileHelper
 	/// \~
 	/// \author Zoltan Hrabovszki
 	/// \date 2013.12.30
-	public static String ConvertDirectorySeperator( String fpsPath )
+	public static String convertDirectorySeperator( String fpsPath )
 	{
 		String lvsReturn = fpsPath;
 

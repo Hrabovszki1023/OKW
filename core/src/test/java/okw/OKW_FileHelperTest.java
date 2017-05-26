@@ -59,11 +59,11 @@ public class OKW_FileHelperTest
             String lsUnixPath = "/abc/abc/file.ext";
 
             if (System.getProperty("file.separator") == "\\")  
-            	Assert.assertEquals( lsDosPath, OKW_FileHelper.ConvertDirectorySeperator(lsUnixPath));
+            	Assert.assertEquals( lsDosPath, OKW_FileHelper.convertDirectorySeperator(lsUnixPath));
             else if  (System.getProperty("file.separator") == "/")
-            	Assert.assertEquals( lsUnixPath, OKW_FileHelper.ConvertDirectorySeperator(lsDosPath));
+            	Assert.assertEquals( lsUnixPath, OKW_FileHelper.convertDirectorySeperator(lsDosPath));
             else
-				Assert.fail("DirectorySeparatorChar ist weder UNIX noc DOS Typisch: " + System.getProperty("file.separator") );
+				Assert.fail("DirectorySearatorChar ist weder UNIX noc DOS Typisch: " + System.getProperty("file.separator") );
         }
 
 		@Test

@@ -87,26 +87,26 @@ public class OKW_IniTest
 			// 1. Merken wir den aktuellen OKW_Xml Wert
 			OKW_Xml = System.getenv("OKW_Xml");
 
-			assertEquals(true, OKW_FileHelper.DirectoryExists(OKW_Xml));
+			assertEquals(true, OKW_FileHelper.directoryExists(OKW_Xml));
 
 			// 2. Wert auf den 1. definierten Wert setzen
 			OKW_Ini_Sngltn.Reset();
 			OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
 
 			// Sind die Angaben zu OKW_Ini_Sngltn.xml Richtig?
-			assertEquals(true, OKW_FileHelper.FileExists(myOKW_Ini.OKW_Enviroment.getFile_OKW_Ini_xml()));
-			assertEquals(true, OKW_FileHelper.FileExists(myOKW_Ini.OKW_Enviroment.getFile_OKW_Keymaps_xml()));
+			assertEquals(true, OKW_FileHelper.fileExists(myOKW_Ini.OKW_Enviroment.getFile_OKW_Ini_xml()));
+			assertEquals(true, OKW_FileHelper.fileExists(myOKW_Ini.OKW_Enviroment.getFile_OKW_Keymaps_xml()));
 
 			// Folgende Datein werden zur ggf zur Laufzeit angelegt. Daher
 			// erfolgt hier nur die Prüfung ob die Zile verzeichnisse vorhanden
 			// sind.
 			assertEquals(true, OKW_FileHelper
-					.DirectoryExists(Paths.get(myOKW_Ini.OKW_Enviroment.getFile_OKW_Memorize_xml()).toString()));
-			assertEquals(true, OKW_FileHelper.DirectoryExists(
+					.directoryExists(Paths.get(myOKW_Ini.OKW_Enviroment.getFile_OKW_Memorize_xml()).toString()));
+			assertEquals(true, OKW_FileHelper.directoryExists(
 					Paths.get(myOKW_Ini.OKW_Enviroment.getFile_OKW_ImplementationMatrix_xml()).toString()));
 
-			assertEquals(true, OKW_FileHelper.DirectoryExists(myOKW_Ini.OKW_Enviroment.getFolder_XML()));
-			assertEquals(true, OKW_FileHelper.DirectoryExists(myOKW_Ini.OKW_Enviroment.getFolder_LogMessages()));
+			assertEquals(true, OKW_FileHelper.directoryExists(myOKW_Ini.OKW_Enviroment.getFolder_XML()));
+			assertEquals(true, OKW_FileHelper.directoryExists(myOKW_Ini.OKW_Enviroment.getFolder_LogMessages()));
 	}
 
 	/** \~german
@@ -198,9 +198,9 @@ public class OKW_IniTest
 
 			// ------------------------------------------------------------------------------
 			// 3. kopieren des XML-Verzechnisses zur OKW.dll
-			OKW_FileHelper.DirectoryDelete(Path_XML_Destination);
+			OKW_FileHelper.deleteDirectory(Path_XML_Destination);
 			// Das Zielverzeichniss löschen.
-			OKW_FileHelper.DirectoryCopy(Path_XML_Source, Path_XML_Destination);
+			OKW_FileHelper.copyDirectory(Path_XML_Source, Path_XML_Destination);
 
 			// ------------------------------------------------------------------------------
 			// Test durchführen...

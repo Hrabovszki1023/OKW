@@ -207,7 +207,7 @@ public class OKW_Enviroment
 	// [XmlIgnore]
 	public String getFolder_XML()
 	{
-		return OKW_FileHelper.ConvertDirectorySeperator(this.Folder_XML);
+		return OKW_FileHelper.convertDirectorySeperator(this.Folder_XML);
 	}
 
 	public void setFolder_XML( String value )
@@ -227,7 +227,7 @@ public class OKW_Enviroment
 	// [XmlElement("Folder_LogMessages")]
 	public String getFolder_LogMessages()
 	{
-		return OKW_FileHelper.ConvertDirectorySeperator(this.Folder_LogMessages);
+		return OKW_FileHelper.convertDirectorySeperator(this.Folder_LogMessages);
 	}
 
 	public void setFolder_LogMessages( String value )
@@ -248,7 +248,7 @@ public class OKW_Enviroment
 	{
 		String myPath = Parser.ParseMe(this.File_OKW_Ini_xml);
 		
-		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
+		return OKW_FileHelper.convertDirectorySeperator(myPath);
 	}
 
 	public void setFile_OKW_Ini_xml( String value )
@@ -269,7 +269,7 @@ public class OKW_Enviroment
 	public String getFile_OKW_Keymaps_xml()
 	{
 		String myPath = Parser.ParseMe(this.File_OKW_Keymaps_xml);
-		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
+		return OKW_FileHelper.convertDirectorySeperator(myPath);
 	}
 
 	public void setFile_OKW_Keymaps_xml( String value )
@@ -290,7 +290,7 @@ public class OKW_Enviroment
 	public String getFile_OKW_Memorize_xml()
 	{
 		String myPath = Parser.ParseMe(this.File_OKW_Memorize_xml);
-		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
+		return OKW_FileHelper.convertDirectorySeperator(myPath);
 	}
 
 	public void setFile_OKW_Memorize_xml( String value )
@@ -314,7 +314,7 @@ public class OKW_Enviroment
 
 	{
 		String myPath = Parser.ParseMe(this.File_OKW_ImplementationMatrix_xml);
-		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
+		return OKW_FileHelper.convertDirectorySeperator(myPath);
 	}
 
 	public void setFile_OKW_ImplementationMatrix_xml( String value )
@@ -338,7 +338,7 @@ public class OKW_Enviroment
 	{
 		String myPath = Parser.ParseMe(this.File_OKW_Const_xml);
 		
-		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
+		return OKW_FileHelper.convertDirectorySeperator(myPath);
 	}
 
 	public void setFile_OKW_Const_xml( String value )
@@ -362,7 +362,7 @@ public class OKW_Enviroment
 	{
 		String myPath = Parser.ParseMe(this.File_OKW_Docu_xml_);
 		
-		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
+		return OKW_FileHelper.convertDirectorySeperator(myPath);
 	}
 
 	public void setFile_OKW_Docu_xml( String value )
