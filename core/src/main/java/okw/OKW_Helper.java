@@ -202,7 +202,7 @@ public class OKW_Helper
 			Log.LogFunctionStartDebug("OKW_Helper.GetLeftFromDelimiterNumber", "fpsSource", fpsSource, "fpsDelimiter",
 					fpsDelimiter, "fpiCount", fpiCount.toString());
 
-			if ( ! fpsDelimiter.equals( "" ) )
+			if ( ! "".equals( fpsDelimiter ) )
 			{
 				lvLsSplitedSource = splitString(fpsSource, fpsDelimiter);
 
@@ -753,7 +753,7 @@ public class OKW_Helper
 	/// \~
 	/// \author Zoltán Hrabovszki
 	/// \date 2013.05.03
-	public static ArrayList<String> splitString_old( String fpsString2Split, String fpsSeparator )
+	/**public static ArrayList<String> splitString_old( String fpsString2Split, String fpsSeparator )
 	{
 		String[] lvsA_Splited;
 		ArrayList<String> lvls_Splited = new ArrayList<String>();
@@ -771,7 +771,7 @@ public class OKW_Helper
 		}
 
 		return lvls_Splited;
-	}
+	}*/
 
 	
 	
