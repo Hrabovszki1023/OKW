@@ -49,7 +49,7 @@ import org.junit.rules.TestName;
 @Ignore
 public class SeTextarea_Test {
 
-  OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
+  private OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
 
   protected static String ApplicationName;
 
