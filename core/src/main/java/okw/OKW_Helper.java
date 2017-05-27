@@ -616,27 +616,25 @@ public class OKW_Helper
 		return lvsReturn;
 	}
 
-	/// \~german
-	/// \brief
-	/// Konvertiert einen String-Array nach List-String
-	///
-	/// \param fpsStringArray Zu konvertierender Array.
-	/// \returnKonvertierung als List-String.
-	///
-	/// \~english
-	/// \brief
-	/// Converts a String-Array to a List-String
-	///
-	/// \param fpsStringArray Array to be converted.
-	/// \returnConvertion as a List-String.
-	///
-	/// \~
-	/// \author Zoltán Hrabovszki
-	/// \date 2013.05.03
+	/** \~german
+	 *  Konvertiert einen String-Array nach List-String
+	 *
+	 *  @param fpsStringArray Zu konvertierender Array.
+	 *  @return Konvertierung als List-String.
+	 *
+	 *  \~english
+	 *  Converts a String-Array to a List-String
+	 *
+	 *  @param fpsStringArray Array to be converted.
+	 *  @return Convertion as a List-String.
+	 *
+	 * \~
+	 * @author Zoltán Hrabovszki
+	 * @date 2013-05-03
+	 */
 	public static ArrayList<String> StringArray2ListStr( String[] fpsStringArray )
 	{
-	    String param = fpsStringArray.toString();
-		Log.LogFunctionStartDebug("OKW_Helper.StrArray2ListStr", "fpsStringArray", param);
+		Log.LogFunctionStartDebug("OKW_Helper.StrArray2ListStr", "fpsStringArray", fpsStringArray.toString());
 
 		ArrayList<String> lvls_Splited = new ArrayList<String>();
 		lvls_Splited.clear();
