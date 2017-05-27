@@ -346,8 +346,6 @@ public class OKW_Memorize_Sngltn
 		}
 
 		Log.LogFunctionEndDebug();
-		
-		return;
 	}
 
 	/** \~german
@@ -377,8 +375,6 @@ public class OKW_Memorize_Sngltn
 		{
 			Log.LogFunctionEndDebug();
 		}
-
-		return;
 	}
 
 	/** \~german
@@ -418,8 +414,6 @@ public class OKW_Memorize_Sngltn
 		{
 			Log.LogFunctionEndDebug();
 		}
-
-		return;
 	}
 
 	/** \~german
@@ -476,8 +470,5 @@ public class OKW_Memorize_Sngltn
 		{
 			Log.LogFunctionEndDebug();
 		}
-
-		return;
 	}
-
 }
