@@ -38,55 +38,39 @@
 */
 package okw;
 
-
 //import junit.framework.TestCase;
 import org.junit.*;
+import static org.junit.Assert.*;
 
-/*	[TestFixture]
-	[Category("BaseTest")]
-	[Category("WIN")]
-	[Category("OSX")]
-	[Category("Helper")]
-*/
-@Ignore
 public class OKW_FileHelperTest
-	{
-		@Test
-		//@Category("BaseTest")
-		public void TC_DosPath2UnixPath()
-        {
-            String lsDosPath = "\\abc\\abc\\file.ext";
-            String lsUnixPath = "/abc/abc/file.ext";
+{
 
-            if (System.getProperty("file.separator") == "\\")  
-            	Assert.assertEquals( lsDosPath, OKW_FileHelper.convertDirectorySeperator(lsUnixPath));
-            else if  (System.getProperty("file.separator") == "/")
-            	Assert.assertEquals( lsUnixPath, OKW_FileHelper.convertDirectorySeperator(lsDosPath));
-            else
-				Assert.fail("DirectorySearatorChar ist weder UNIX noc DOS Typisch: " + System.getProperty("file.separator") );
-        }
-
-		@Test
-		//@Category("BaseTest")
-		public void TC_1()
-        {
-
-			String a = "abc";
-			String b = "abc";
-			
-            Assert.assertEquals( a, b );
-        }
-
-		
-		@BeforeClass
-        public static void MyTestFixtureSetUp()
-        {
-            // TODO: Add Init code.
-        }
-        
-		@AfterClass
-        public static void MyTestFixtureTearDown()
-        {
-            // TODO: Add tear down code.
-        }
+    /**    @BeforeClass
+    public static void myBeforeClass()
+    {
+        // TODO: Add Init code.
     }
+    
+    @AfterClass
+    public static void myAfterClass()
+    {
+        // TODO: Add tear down code.
+    }
+    */
+
+    @Test
+    public void tcDosPath2UnixPath()
+    {
+        String lsDosPath = "\\abc\\abc\\file.ext";
+        String lsUnixPath = "/abc/abc/file.ext";
+
+        String CurrentFileSeparator = System.getProperty( "file.separator" );
+
+        if ( "\\".equals( CurrentFileSeparator ) )
+            assertEquals( lsDosPath, OKW_FileHelper.convertDirectorySeperator( lsUnixPath ) );
+        else if ( "/".equals( CurrentFileSeparator ) )
+            assertEquals( lsUnixPath, OKW_FileHelper.convertDirectorySeperator( lsDosPath ) );
+        else
+            fail( "DirectorySearatorChar ist weder UNIX noc DOS typisch: " + CurrentFileSeparator );
+    }
+}
