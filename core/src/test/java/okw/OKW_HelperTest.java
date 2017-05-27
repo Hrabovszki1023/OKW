@@ -69,7 +69,7 @@ public class OKW_HelperTest
         }
 
         @Test
-        public void TC_Boolean2String_false()
+        public void tcBoolean2String_false()
         {
             String actual = "false";
             String expected = "false";
@@ -79,7 +79,7 @@ public class OKW_HelperTest
         }
 
         @Test
-        public void TC_Boolean2String_true()
+        public void tcBoolean2String_true()
         {
             String actual = "true";
             String expected = "true";
@@ -89,44 +89,44 @@ public class OKW_HelperTest
         }
 
         @Test
-        public void TC_GetLeftFromDelimiterMultipleCharacterDelemeter() throws XPathExpressionException
+        public void tcGetLeftFromDelimiterMultipleCharacterDelemeter() throws XPathExpressionException
         {
             assertEquals("AAAA", OKW_Helper.getLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 1));
             assertEquals("AAAAGGBBBB", OKW_Helper.getLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 2));
         }
 
         @Test
-        public void TC_GetLeftFromDelimiterNumber() throws XPathExpressionException
+        public void tcGetLeftFromDelimiterNumber() throws XPathExpressionException
         {
-            Assert.assertEquals("AAAA", OKW_Helper.getLeftFromDelimiterNumber("AAAACBBBB", "C", 1));
+            assertEquals("AAAA", OKW_Helper.getLeftFromDelimiterNumber("AAAACBBBB", "C", 1));
         }
 
         @Test
-        public void TC_GetLeftFromDelimiterNumber_2() throws XPathExpressionException
+        public void tcGetLeftFromDelimiterNumber_2() throws XPathExpressionException
         {
             assertEquals("AAAACBBBB", OKW_Helper.getLeftFromDelimiterNumber("AAAACBBBBCDDDD", "C", 2));
         }
 
         @Test
-        public void TC_GetLeftFromDelimiterNumber_2a() throws XPathExpressionException
+        public void tcGetLeftFromDelimiterNumber_2a() throws XPathExpressionException
         {
             assertEquals("AAAA", OKW_Helper.getLeftFromDelimiterNumber("AAAACBBBBCDDDD", "C", 1));
         }
 
         @Test
-        public void TC_GetLeftFromDelimiterNumber_OKWDelimiterCountOutOfRangeException()
+        public void tcGetLeftFromDelimiterNumber_OKWDelimiterCountOutOfRangeException()
         {
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
                 OKW_Helper.getLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 3);
-                Assert.fail();
+                fail();
             }
             catch (IndexOutOfBoundsException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("The split-position(=3) is outside of valid range [1...2]!", e.getMessage());
-                //Assert.Pass();
+                assertEquals("The split-position(=3) is outside of valid range [1...2]!", e.getMessage());
+                //Pass();
             }
             catch (Exception e)
             {
@@ -136,112 +136,112 @@ public class OKW_HelperTest
         }
 
         @Test
-        public void TC_GetLeftFromDelimiterNumber_OKWDelimiterCountOutOfRangeException_0()
+        public void tcGetLeftFromDelimiterNumber_OKWDelimiterCountOutOfRangeException_0()
         {
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
                 OKW_Helper.getLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 0);
-                Assert.fail();
+                fail();
             }
             catch (IndexOutOfBoundsException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("The split-position(=0) is outside of valid range [1...2]!", e.getMessage());
-                //Assert.pass();
+                assertEquals("The split-position(=0) is outside of valid range [1...2]!", e.getMessage());
+                //pass();
             }
             catch (Exception e)
             {
                 // Alle anderen Exvceptions sind Fail!
-                Assert.fail();
+                fail();
             }
         }
 
         @Test
-        public void TC_GetLeftFromDelimiterNumber_OKWDelimiterIsEmptyException()
+        public void tcGetLeftFromDelimiterNumber_OKWDelimiterIsEmptyException()
         {
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
                 OKW_Helper.getLeftFromDelimiterNumber("AAAAGGBBBBGGDDDD", "", 1);
-                Assert.fail();
+                fail();
             }
             catch (IllegalArgumentException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("Delimiter is empty!", e.getMessage());
-                ////Assert.Pass();
+                assertEquals("Delimiter is empty!", e.getMessage());
+                ////Pass();
             }
             catch (Exception e)
             {
                 // Alle anderen Exvceptions sind Fail!
-                Assert.fail();
+                fail();
             }
         }
 
         @Test
-        public void TC_GetRightFromDelimiterNumber_ExceptionEmptyDelemiter()
+        public void tcGetRightFromDelimiterNumber_ExceptionEmptyDelemiter()
         {
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
                 OKW_Helper.getRightFromDelimiterNumber("AAAAGGBBBBGGDDDD", "", 1);
-                Assert.fail();
+                fail();
             }
             catch (IllegalArgumentException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("Delimiter is empty!", e.getMessage());
-                //Assert.Pass();
+                assertEquals("Delimiter is empty!", e.getMessage());
+                //Pass();
             }
             catch (Exception e)
             {
                 // Alle anderen Exvceptions sind Fail!
-                Assert.fail();
+                fail();
             }
         }
 
         @Test
-        public void TC_GetRigthFromDelimiterNumber_OKWDelimiterCountOutOfRangeException()
+        public void tcGetRigthFromDelimiterNumber_OKWDelimiterCountOutOfRangeException()
         {
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
                 OKW_Helper.getRightFromDelimiterNumber("AAAAGGBBBBGGDDDD", "GG", 3);
-                Assert.fail();
+                fail();
             }
             catch (IndexOutOfBoundsException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("The split-position(=3) is outside of valid range [1...2]!", e.getMessage());
-                //Assert.Pass();
+                assertEquals("The split-position(=3) is outside of valid range [1...2]!", e.getMessage());
+                //Pass();
             }
             catch (Exception e)
             {
                 // Alle anderen Exvceptions sind Fail!
-                Assert.fail();
+                fail();
             }
         }
 
         @Test
-        public void TC_GetRigthFromDelimiterNumber_OKWDelimiterCountOutOfRangeException_0()
+        public void tcGetRigthFromDelimiterNumber_OKWDelimiterCountOutOfRangeException_0()
         {
             try
             {
                 OKWLanguage.getInstance().setLanguage("en");
                 OKW_Helper.getRightFromDelimiterNumber( "AAAAGGBBBBGGDDDD", "GG", 0 );
-                Assert.fail();
+                fail();
             }
             catch (IndexOutOfBoundsException e)
             {
                 // Richtige Exception wurde ausgeloest daher Pass!
-                Assert.assertEquals("The split-position(=0) is outside of valid range [1...2]!", e.getMessage());
-                //Assert.Pass();
+                assertEquals("The split-position(=0) is outside of valid range [1...2]!", e.getMessage());
+                //Pass();
             }
             catch (Exception e)
             {
                 // Alle anderen Exvceptions sind Fail!
-                Assert.fail();
+                fail();
             }
         }
 
@@ -253,7 +253,7 @@ public class OKW_HelperTest
         /// \author Zoltán Hrabovszki
         /// \date 2013.15.11
         @Test
-        public void TC_ListStringCompare_0_0_Wert()
+        public void tcListStringCompare_0_0_Wert()
         {
         	ArrayList<String> List_1 = new ArrayList<String>();
         	ArrayList<String> List_2 = new ArrayList<String>();
@@ -276,7 +276,7 @@ public class OKW_HelperTest
         /// \author Zoltán Hrabovszki
         /// \date 2013.15.11
         @Test
-        public void TC_ListStringCompare_10_9Werte()
+        public void tcListStringCompare_10_9Werte()
         {
         	ArrayList<String> List_1 = new ArrayList<String>();
         	ArrayList<String> List_2 = new ArrayList<String>();
@@ -314,7 +314,7 @@ public class OKW_HelperTest
             Boolean actual = true;
 
             actual = OKW_Helper.compareListString(List_1, List_2);
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         /// \~german
@@ -326,7 +326,7 @@ public class OKW_HelperTest
         /// \author Zoltán Hrabovszki
         /// \date 2013.15.11
         @Test
-        public void TC_ListStringCompare_1_0_Werte()
+        public void tcListStringCompare_1_0_Werte()
         {
         	ArrayList<String> List_1 = new ArrayList<String>();
         	ArrayList<String> List_2 = new ArrayList<String>();
@@ -337,7 +337,7 @@ public class OKW_HelperTest
             Boolean actual = true;
 
             actual = OKW_Helper.compareListString(List_1, List_2);
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         /// \~german
@@ -348,7 +348,7 @@ public class OKW_HelperTest
         /// \author Zoltán Hrabovszki
         /// \date 2013.15.11
         @Test
-        public void TC_ListStringCompare_1_1_DiffWert_1()
+        public void tcListStringCompare_1_1_DiffWert_1()
         {
         	ArrayList<String> List_1 = new ArrayList<String>();
         	ArrayList<String> List_2 = new ArrayList<String>();
@@ -360,7 +360,7 @@ public class OKW_HelperTest
             Boolean actual;
 
             actual = OKW_Helper.compareListString(List_1, List_2);
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         /// \~german
@@ -371,7 +371,7 @@ public class OKW_HelperTest
         /// \author Zoltán Hrabovszki
         /// \date 2013.15.11
         @Test
-        public void TC_ListStringCompare_1_1_Wert()
+        public void tcListStringCompare_1_1_Wert()
         {
         	ArrayList<String> List_1 = new ArrayList<String>();
         	ArrayList<String> List_2 = new ArrayList<String>();
@@ -383,7 +383,7 @@ public class OKW_HelperTest
             Boolean actual = true;
 
             actual = OKW_Helper.compareListString(List_1, List_2);
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         /// \~german
@@ -395,7 +395,7 @@ public class OKW_HelperTest
         /// \author Zoltán Hrabovszki
         /// \date 2013.15.11
         @Test
-        public void TC_ListStringCompare_1_2_Werte()
+        public void tcListStringCompare_1_2_Werte()
         {
         	ArrayList<String> List_1 = new ArrayList<String>();
         	ArrayList<String> List_2 = new ArrayList<String>();
@@ -409,7 +409,7 @@ public class OKW_HelperTest
             Boolean actual = true;
 
             actual = OKW_Helper.compareListString(List_1, List_2);
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         /// \~german
@@ -421,7 +421,7 @@ public class OKW_HelperTest
         /// \author Zoltán Hrabovszki
         /// \date 2013.15.11
         @Test
-        public void TC_ListStringCompare_2_1_Werte()
+        public void tcListStringCompare_2_1_Werte()
         {
         	ArrayList<String> List_1 = new ArrayList<String>();
         	ArrayList<String> List_2 = new ArrayList<String>();
@@ -435,7 +435,7 @@ public class OKW_HelperTest
             Boolean actual = true;
 
             actual = OKW_Helper.compareListString(List_1, List_2);
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         /// \~german
@@ -446,7 +446,7 @@ public class OKW_HelperTest
         /// \author Zoltán Hrabovszki
         /// \date 2013.15.11
         @Test
-        public void TC_ListStringCompare_2_2_DiffWert_2()
+        public void tcListStringCompare_2_2_DiffWert_2()
         {
         	ArrayList<String> List_1 = new ArrayList<String>();
         	ArrayList<String> List_2 = new ArrayList<String>();
@@ -461,7 +461,7 @@ public class OKW_HelperTest
             Boolean actual;
 
             actual = OKW_Helper.compareListString(List_1, List_2);
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         /// \~german
@@ -472,7 +472,7 @@ public class OKW_HelperTest
         /// \author Zoltán Hrabovszki
         /// \date 2013.15.11
         @Test
-        public void TC_ListStringCompare_2_2_Werte()
+        public void tcListStringCompare_2_2_Werte()
         {
         	ArrayList<String> List_1 = new ArrayList<String>();
         	ArrayList<String> List_2 = new ArrayList<String>();
@@ -487,7 +487,7 @@ public class OKW_HelperTest
             Boolean actual = true;
 
             actual = OKW_Helper.compareListString(List_1, List_2);
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         /// \~german
@@ -499,7 +499,7 @@ public class OKW_HelperTest
         /// \author Zoltán Hrabovszki
         /// \date 2013.15.11
         @Test
-        public void TC_ListStringCompare_3_3_DiffWert_2()
+        public void tcListStringCompare_3_3_DiffWert_2()
         {
         	ArrayList<String> List_1 = new ArrayList<String>();
         	ArrayList<String> List_2 = new ArrayList<String>();
@@ -517,11 +517,11 @@ public class OKW_HelperTest
             Boolean actual;
 
             actual = OKW_Helper.compareListString(List_1, List_2);
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
-        public void TC_ListStringConcat_With1CharacterSeparator()
+        public void tcListStringConcat_With1CharacterSeparator()
         {
             String actual   = "";
 
@@ -532,7 +532,7 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.concatListString(Input, "/");
 
-            Assert.assertEquals("", actual);
+            assertEquals("", actual);
 
             // 1-Wert
             Input.clear();
@@ -540,7 +540,7 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.concatListString(Input, "/");
 
-            Assert.assertEquals("Hase", actual);
+            assertEquals("Hase", actual);
 
             // 2-Werte
             Input.clear();
@@ -549,7 +549,7 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.concatListString(Input, "/");
 
-            Assert.assertEquals("Hase/Fuchs", actual);
+            assertEquals("Hase/Fuchs", actual);
 
             // 3-Werte
             Input.clear();
@@ -559,11 +559,11 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.concatListString(Input, "/");
 
-            Assert.assertEquals("Hase/Fuchs/Bär", actual);
+            assertEquals("Hase/Fuchs/Bär", actual);
         }
 
         @Test
-        public void TC_ListStringConcat_WithMultipleCharacterSeparator()
+        public void tcListStringConcat_WithMultipleCharacterSeparator()
         {
             String actual   = "";
 
@@ -574,7 +574,7 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.concatListString(Input, "${SEP}");
 
-            Assert.assertEquals("", actual);
+            assertEquals("", actual);
 
             // 1-Wert W
             Input.clear();
@@ -582,7 +582,7 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.concatListString(Input, "${SEP}");
 
-            Assert.assertEquals("Hase", actual);
+            assertEquals("Hase", actual);
 
             // 2-Werte WW
             Input.clear();
@@ -591,7 +591,7 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.concatListString(Input, "${SEP}");
 
-            Assert.assertEquals("Hase${SEP}Fuchs", actual);
+            assertEquals("Hase${SEP}Fuchs", actual);
 
             // 3-Werte WWW
             Input.clear();
@@ -601,7 +601,7 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.concatListString(Input, "${SEP}");
 
-            Assert.assertEquals("Hase${SEP}Fuchs${SEP}Bär", actual);
+            assertEquals("Hase${SEP}Fuchs${SEP}Bär", actual);
 
             // 3-Werte WLW
             Input.clear();
@@ -611,7 +611,7 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.concatListString(Input, "${SEP}");
 
-            Assert.assertEquals("Hase${SEP}${SEP}Bär", actual);
+            assertEquals("Hase${SEP}${SEP}Bär", actual);
 
             // 3-Werte LWL
             Input.clear();
@@ -621,11 +621,11 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.concatListString(Input, "${SEP}");
 
-            Assert.assertEquals("${SEP}Fuchs${SEP}", actual);
+            assertEquals("${SEP}Fuchs${SEP}", actual);
         }
 
         @Test
-        public void TC_ListStringConcat_WithOut_Separator()
+        public void tcListStringConcat_WithOut_Separator()
         {
             String actual   = "";
 
@@ -636,7 +636,7 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.concatListString(Input, "");
 
-            Assert.assertEquals("", actual);
+            assertEquals("", actual);
 
             // 1-Wert
             Input.clear();
@@ -644,7 +644,7 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.concatListString(Input, "");
 
-            Assert.assertEquals("Hase", actual);
+            assertEquals("Hase", actual);
 
             // 2-Werte
             Input.clear();
@@ -653,7 +653,7 @@ public class OKW_HelperTest
 
             actual = OKW_Helper.concatListString(Input, "");
 
-            Assert.assertEquals("HaseFuchs", actual);
+            assertEquals("HaseFuchs", actual);
 
             // 3-Werte
             Input.clear();
@@ -669,38 +669,38 @@ public class OKW_HelperTest
 
 
         @Test
-        public void TC_MatchStr_SMS_CaseSensitve()
+        public void tcMatchStr_SMS_CaseSensitve()
         {
             Boolean actual = false;
             Boolean expected = false;
 
             actual = OKW_Helper.matchString("*Hase*", "Fux, hASE, bär");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
-        public void TC_MatchStr_SM_CaseSensitve()
+        public void tcMatchStr_SM_CaseSensitve()
         {
             Boolean actual = false;
             Boolean expected = false;
 
             actual = OKW_Helper.matchString("*Hase, bär", "Fux, Hase, Bär");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
-        public void TC_RemoveBeginEndQuotations()
+        public void tcRemoveBeginEndQuotations()
         {
-            Assert.assertEquals("", OKW_Helper.removeBeginEndQuotations("\"\""));
-            Assert.assertEquals("A", OKW_Helper.removeBeginEndQuotations("\"A\""));
-            Assert.assertEquals("ABC", OKW_Helper.removeBeginEndQuotations("\"ABC\""));
+            assertEquals("", OKW_Helper.removeBeginEndQuotations("\"\""));
+            assertEquals("A", OKW_Helper.removeBeginEndQuotations("\"A\""));
+            assertEquals("ABC", OKW_Helper.removeBeginEndQuotations("\"ABC\""));
         }
 
         @Test
-        public void TC_RemoveBeginEndQuotations_TestMethod2()
+        public void tcRemoveBeginEndQuotations_TestMethod2()
         {
-            Assert.assertEquals("\"", OKW_Helper.removeBeginEndQuotations("\"\"\""));
-            Assert.assertEquals("A\"", OKW_Helper.removeBeginEndQuotations("\"A\"\""));
+            assertEquals("\"", OKW_Helper.removeBeginEndQuotations("\"\"\""));
+            assertEquals("A\"", OKW_Helper.removeBeginEndQuotations("\"A\"\""));
         }
 
         /// \brief
@@ -709,14 +709,14 @@ public class OKW_HelperTest
         /// TF 2: Mit Anführungstriche am Anfang und Ende und in der Mitte.
         /// 
         @Test
-        public void TC_RemoveBeginEndQuotations_TestMethod3()
+        public void tcRemoveBeginEndQuotations_TestMethod3()
         {
-            Assert.assertEquals("Fuchs \"liebt\" Hase", OKW_Helper.removeBeginEndQuotations("Fuchs \"liebt\" Hase"));
-            Assert.assertEquals("Fuchs \"liebt\" Hase", OKW_Helper.removeBeginEndQuotations("\"Fuchs \"liebt\" Hase\""));
+            assertEquals("Fuchs \"liebt\" Hase", OKW_Helper.removeBeginEndQuotations("Fuchs \"liebt\" Hase"));
+            assertEquals("Fuchs \"liebt\" Hase", OKW_Helper.removeBeginEndQuotations("\"Fuchs \"liebt\" Hase\""));
         }
 
         @Test
-        public void TC_StrArray2ListStr_1Value()
+        public void tcStrArray2ListStr_1Value()
         {
         	ArrayList<String> actual = new ArrayList<String>();
         	ArrayList<String> expected = new ArrayList<String>();
@@ -729,11 +729,11 @@ public class OKW_HelperTest
             expected.clear();
             expected.add("Wert1");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
-        public void TC_StrArray2ListStr_2Value()
+        public void tcStrArray2ListStr_2Value()
         {
         	ArrayList<String> actual = new ArrayList<String>();
         	ArrayList<String> expected = new ArrayList<String>();
@@ -746,11 +746,11 @@ public class OKW_HelperTest
             expected.add("Wert1");
             expected.add("Wert2");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
-        public void TC_StrArray2ListStr_3Value()
+        public void tcStrArray2ListStr_3Value()
         {
         	ArrayList<String> actual = new ArrayList<String>();
         	ArrayList<String> expected = new ArrayList<String>();
@@ -764,11 +764,11 @@ public class OKW_HelperTest
             expected.add("Wert2");
             expected.add("Natloz");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
-        public void TC_StrArray2ListStr_NoValue()
+        public void tcStrArray2ListStr_NoValue()
         {
         	ArrayList<String> actual = new ArrayList<String>();
         	ArrayList<String> expected = new ArrayList<String>();
@@ -779,74 +779,74 @@ public class OKW_HelperTest
 
             expected.clear();
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
-        public void TC_String2Boolean_false() throws XPathExpressionException
+        public void tcString2Boolean_false() throws XPathExpressionException
         {
             Boolean actual = true;
             Boolean expected = true;
 
             actual = OKW_Helper.String2Boolean("true");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
-        public void TC_String2Boolean_true() throws XPathExpressionException
+        public void tcString2Boolean_true() throws XPathExpressionException
         {
             Boolean actual = false;
             Boolean expected = false;
 
             actual = OKW_Helper.String2Boolean("false");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
-        public void TC_String2Boolean_false_lower() throws XPathExpressionException
+        public void tcString2Boolean_false_lower() throws XPathExpressionException
         {
             Boolean actual = true;
             Boolean expected = false;
 
             actual = OKW_Helper.String2Boolean("False");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             actual = OKW_Helper.String2Boolean("FALSE");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             actual = OKW_Helper.String2Boolean("falsE");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             actual = OKW_Helper.String2Boolean("FaLsE");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
-        public void TC_String2Boolean_true_lower() throws XPathExpressionException
+        public void tcString2Boolean_true_lower() throws XPathExpressionException
         {
             Boolean actual = false;
             Boolean expected = true;
 
             actual = OKW_Helper.String2Boolean("True");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             actual = OKW_Helper.String2Boolean("TRUE");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             actual = OKW_Helper.String2Boolean("truE");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             actual = OKW_Helper.String2Boolean("TruE");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
-        public void TC_String2Boolean_true_OKWNotAllowedValueException()
+        public void tcString2Boolean_true_OKWNotAllowedValueException()
         {
             try
             {
                 OKW_Helper.String2Boolean("Uschi");
-                Assert.fail();
+                fail();
             }
             catch (OKWNotAllowedValueException e)
             {
@@ -856,17 +856,17 @@ public class OKW_HelperTest
                 String Expected = "Value 'Uschi' is not allowd here! Valid values are: 'true' or 'false'";
                 String Actual = e.getMessage();
                 
-                Assert.assertEquals(Expected, Actual);
+                assertEquals(Expected, Actual);
             }
             catch (Exception e)
             {
             	Log.LogPrint("Exception nicht erwartet: '" + e.getMessage() + "'");
-                Assert.fail();
+                fail();
             }
         }
 
         @Test
-        public void TC_StrSplit()
+        public void tcStrSplit()
         {
         	ArrayList<String> actual = new ArrayList<String>();
         	ArrayList<String> expected = new ArrayList<String>();
@@ -876,7 +876,7 @@ public class OKW_HelperTest
             expected.clear();
             expected.add("");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             // 1
             actual = OKW_Helper.splitString("Root", "/");
@@ -884,7 +884,7 @@ public class OKW_HelperTest
             expected.clear();
             expected.add("Root");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             // 1t
             actual = OKW_Helper.splitString("Root/", "/");
@@ -892,7 +892,7 @@ public class OKW_HelperTest
             expected.clear();
             expected.add("Root");
             expected.add("");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             // t1
             actual = OKW_Helper.splitString("/SubDir_1", "/");
@@ -901,7 +901,7 @@ public class OKW_HelperTest
             expected.add("");
             expected.add("SubDir_1");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             // 1t1
             actual = OKW_Helper.splitString("Root/SubDir_1", "/");
@@ -910,7 +910,7 @@ public class OKW_HelperTest
             expected.add("Root");
             expected.add("SubDir_1");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             // 1tt1
             actual = OKW_Helper.splitString("Root//Datei", "/");
@@ -920,7 +920,7 @@ public class OKW_HelperTest
             expected.add("");
             expected.add("Datei");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             // 1t1t1t1
             actual = OKW_Helper.splitString("Root/SubDir_1/SubDir_2/Datei", "/");
@@ -931,11 +931,11 @@ public class OKW_HelperTest
             expected.add("SubDir_2");
             expected.add("Datei");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
         @Test
-        public void TC_StrSplit_Wert()
+        public void tcStrSplit_Wert()
         {
         	ArrayList<String> actual = new ArrayList<String>();
         	ArrayList<String> expected = new ArrayList<String>();
@@ -945,7 +945,7 @@ public class OKW_HelperTest
             expected.clear();
             expected.add("");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             // 1
             actual = OKW_Helper.splitString("Root", "{WERT}");
@@ -953,7 +953,7 @@ public class OKW_HelperTest
             expected.clear();
             expected.add("Root");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             // 1t
             actual = OKW_Helper.splitString("Root${WERT}", "${WERT}");
@@ -961,7 +961,7 @@ public class OKW_HelperTest
             expected.clear();
             expected.add("Root");
             expected.add("");
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             // t1
             actual = OKW_Helper.splitString("${WERT}SubDir_1", "${WERT}");
@@ -970,7 +970,7 @@ public class OKW_HelperTest
             expected.add("");
             expected.add("SubDir_1");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             // 1t1
             actual = OKW_Helper.splitString("Root${WERT}SubDir_1", "${WERT}");
@@ -979,7 +979,7 @@ public class OKW_HelperTest
             expected.add("Root");
             expected.add("SubDir_1");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             // 1tt1
             actual = OKW_Helper.splitString("Root${WERT}${WERT}Datei", "${WERT}");
@@ -989,7 +989,7 @@ public class OKW_HelperTest
             expected.add("");
             expected.add("Datei");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
 
             // 1t1t1t1
             actual = OKW_Helper.splitString("Root${WERT}SubDir_1${WERT}SubDir_2${WERT}Datei", "${WERT}");
@@ -1000,7 +1000,7 @@ public class OKW_HelperTest
             expected.add("SubDir_2");
             expected.add("Datei");
 
-            Assert.assertEquals(expected, actual);
+            assertEquals(expected, actual);
         }
 
     }
