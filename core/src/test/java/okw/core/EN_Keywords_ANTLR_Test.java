@@ -30,8 +30,8 @@ import org.junit.rules.TestName;
  */
 public class EN_Keywords_ANTLR_Test
 {
-    static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
-    static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
+    private static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
+    private static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
     @Rule
     public TestName          name        = new TestName();
@@ -46,19 +46,22 @@ public class EN_Keywords_ANTLR_Test
         myLogger.setDebugMode( false );
     }
 
-    @AfterClass
+    /* @AfterClass
     public static void tearDownAfterClass() throws Exception
     {
 
     }
+    */
 
+    /*
     @Before
     public void setUp() throws Exception
     {
     }
+    */
 
     @After
-    public void tearDown() throws Exception
+    public void myAfter() throws Exception
     {
         EN.EndTest();
     }
@@ -250,7 +253,7 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         // Set Value in "Memory"
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "YES" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", "YES" );
 
         // Wert in "All_MethodsObj" setzen.
         EN.SetValue( "All_MethodsObj", "YES" );
@@ -290,7 +293,7 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         // Set Value in "Memory"
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "YES" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", "YES" );
 
         EN.SetValue( "All_MethodsObj", "YES" );
         // Kommen auch mehrere Sollwerte im Objekt ab?
@@ -304,7 +307,7 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "VerifyHasFocus()", myClipBoard.getMethod() );
 
         // Set Value in "Memory"
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "NO" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", "NO" );
 
         EN.SetValue( "All_MethodsObj", "NO" );
         // Kommen auch mehrere Sollwerte im Objekt ab?
@@ -343,7 +346,7 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         // Set Value in "Memory"
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "YES" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", "YES" );
 
         // Wert in "All_MethodsObj" setzen.
         EN.SetValue( "All_MethodsObj", "YES" );
@@ -422,10 +425,10 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-        okw.OKW_Memorize_Sngltn.getInstance();
+        OKW_Memorize_Sngltn.getInstance();
         // Set Value in "Memory"
         OKW_Memorize_Sngltn.Reset();
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "The one and only Value" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", "The one and only Value" );
 
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
         // Kommen auch mehrere Sollwerte im Objekt ab?
@@ -463,10 +466,10 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-        okw.OKW_Memorize_Sngltn.getInstance();
+        OKW_Memorize_Sngltn.getInstance();
         // Set Value in "Memory"
         OKW_Memorize_Sngltn.Reset();
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "\\w{3} one and only Value" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", "\\w{3} one and only Value" );
 
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
         // Kommen auch mehrere Sollwerte im Objekt ab?
@@ -504,10 +507,10 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-        okw.OKW_Memorize_Sngltn.getInstance();
+        OKW_Memorize_Sngltn.getInstance();
         // Set Value in "Memory"
         OKW_Memorize_Sngltn.Reset();
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "??? one and only Value" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", "??? one and only Value" );
 
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
         // Kommen auch mehrere Sollwerte im Objekt ab?
@@ -546,7 +549,7 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         // Set Value in "Memory"
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "The one and only Value" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", "The one and only Value" );
 
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
         // Kommen auch mehrere Sollwerte im Objekt ab?
@@ -585,7 +588,7 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         // Set Value in "Memory"
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "* one and * Value" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", "* one and * Value" );
 
         // Wert in "All_MethodsObj" setzen.
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
@@ -621,7 +624,7 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         // Set Value in "Memory"
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", ".* one and .* Value" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", ".* one and .* Value" );
 
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
         EN.VerifyLabelREGX( "All_MethodsObj", "${Key1}" );
@@ -771,7 +774,7 @@ public class EN_Keywords_ANTLR_Test
       assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
       // Set Value in "Memory"
-      okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "The one and only Value" );
+      OKW_Memorize_Sngltn.getInstance().Set( "Key1", "The one and only Value" );
 
       // Wert in "All_MethodsObj" setzen.
       EN.SetValue( "All_MethodsObj", "The one and only Value" );
@@ -811,7 +814,7 @@ public class EN_Keywords_ANTLR_Test
       assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
       // Set Value in "Memory"
-      okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "* one and * Value" );
+      OKW_Memorize_Sngltn.getInstance().Set( "Key1", "* one and * Value" );
 
       // Wert in "All_MethodsObj" setzen.
       EN.SetValue( "All_MethodsObj", "The one and only Value" );
@@ -851,7 +854,7 @@ public class EN_Keywords_ANTLR_Test
       assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
       // Set Value in "Memory"
-      okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", ".* one and .* Value" );
+      OKW_Memorize_Sngltn.getInstance().Set( "Key1", ".* one and .* Value" );
 
       EN.SetValue( "All_MethodsObj", "The one and only Value" );
       // Kommen auch mehrere Sollwerte im Objekt ab?
@@ -1010,7 +1013,7 @@ public class EN_Keywords_ANTLR_Test
       assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
       // Set Value in "Memory"
-      okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "The one and only Value" );
+      OKW_Memorize_Sngltn.getInstance().Set( "Key1", "The one and only Value" );
 
       // Wert in "All_MethodsObj" setzen.
       EN.SetValue( "All_MethodsObj", "The one and only Value" );
@@ -1052,7 +1055,7 @@ public class EN_Keywords_ANTLR_Test
       assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
       // Set Value in "Memory"
-      okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "* one and * Value" );
+      OKW_Memorize_Sngltn.getInstance().Set( "Key1", "* one and * Value" );
 
       // Wert in "All_MethodsObj" setzen.
       EN.SetValue( "All_MethodsObj", "The one and only Value" );
@@ -1094,7 +1097,7 @@ public class EN_Keywords_ANTLR_Test
       assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
       // Set Value in "Memory"
-      okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", ".* one and .* Value" );
+      OKW_Memorize_Sngltn.getInstance().Set( "Key1", ".* one and .* Value" );
 
       EN.SetValue( "All_MethodsObj", "The one and only Value" );
       // Kommen auch mehrere Sollwerte im Objekt ab?
@@ -1247,7 +1250,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         // Set Value in "Memory"
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "The one and only Value" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", "The one and only Value" );
 
         //Wert in "All_MethodsObj" setzen.
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
@@ -1287,7 +1290,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         // Set Value in "Memory"
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "* one and * Value" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", "* one and * Value" );
 
         //Wert in "All_MethodsObj" setzen.
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
@@ -1327,7 +1330,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         // Set Value in "Memory"
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", ".* one and .* Value" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", ".* one and .* Value" );
 
         //Wert in "All_MethodsObj" setzen.
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
@@ -1480,7 +1483,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         // Set Value in "Memory"
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "The one and only Value" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", "The one and only Value" );
 
         // Wert in "All_MethodsObj" setzen.
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
@@ -1520,7 +1523,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         // Set Value in "Memory"
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", "* one and * Value" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", "* one and * Value" );
 
         // Wert in "All_MethodsObj" setzen.
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
@@ -1560,7 +1563,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         // Set Value in "Memory"
-        okw.OKW_Memorize_Sngltn.getInstance().Set( "Key1", ".* one and .* Value" );
+        OKW_Memorize_Sngltn.getInstance().Set( "Key1", ".* one and .* Value" );
 
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
         // Kommen auch mehrere Sollwerte im Objekt ab?
