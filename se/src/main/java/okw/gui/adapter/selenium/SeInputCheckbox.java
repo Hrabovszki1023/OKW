@@ -110,7 +110,7 @@ import okw.gui.*;
     public class SeInputCheckbox extends SeAnyChildWindow
     {
     	
-    	OKW_Const_Sngltn myOKW_Const = null;
+    	private OKW_Const_Sngltn myOKW_Const = null;
 
         /**
          *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
@@ -183,7 +183,7 @@ import okw.gui.*;
          *  @throws Exception 
          *  @date 2013.04.11
          */
-        public void Checking()
+        public void checking()
         {
             this.LogFunctionStartDebug("Checking");
 
@@ -271,13 +271,13 @@ import okw.gui.*;
                 String lvsCHECKED = myOKW_Const.GetConst4Internalname("CHECKED");
                 String lvsUNCHECKED = myOKW_Const.GetConst4Internalname("UNCHECKED");
 
-                if (fps_Values.get(0).toUpperCase().equals( lvsCHECKED.toUpperCase()) )
+                if ( fps_Values.get(0).equalsIgnoreCase( lvsCHECKED ) )
                 {
-                    this.Checking();
+                    this.checking();
                 }
-                else if (fps_Values.get(0).toUpperCase().equals(lvsUNCHECKED.toUpperCase()) )
+                else if (fps_Values.get(0).equalsIgnoreCase( lvsUNCHECKED ) )
                 {
-                    this.UnChecking();
+                    this.unchecking();
                 }
                 else
                 {
@@ -322,11 +322,11 @@ import okw.gui.*;
 
                 if (fps_Values.get(0).toUpperCase().equals( lvsCHECKED.toUpperCase()) )
                 {
-                    this.Checking();
+                    checking();
                 }
                 else if (fps_Values.get(0).toUpperCase().equals(lvsUNCHECKED.toUpperCase()) )
                 {
-                    this.UnChecking();
+                    unchecking();
                 }
                 else
                 {
@@ -353,7 +353,7 @@ import okw.gui.*;
          *  @author Zoltan Hrabovszki
          *  @date 2013.04.11
          */
-        public void UnChecking()
+        public void unchecking()
         {
             try
             {
