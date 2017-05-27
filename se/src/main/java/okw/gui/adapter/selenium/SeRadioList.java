@@ -147,7 +147,7 @@ public class SeRadioList extends SeAnyChildWindow
 
                     // Set the Current Radiobutton-object back to the
                     // RadioList..
-                    CO.SetChildName( myFN );
+                    CO.setChildName( myFN );
                 }
             }
             else
@@ -212,7 +212,7 @@ public class SeRadioList extends SeAnyChildWindow
             String isChecked = OKW_Const_Sngltn.getInstance().GetConst4Internalname( "CHECKED" );
 
             // 1. Get the List of RadioButtons
-            myRadioButtonKeys = OKW_CurrentObject_Sngltn.getInstance().GetAllChildFNsOfParent( this.getParentFN() + "." + this.getFN() + "." );
+            myRadioButtonKeys = OKW_CurrentObject_Sngltn.getInstance().getAllChildFNsOfParent( this.getParentFN() + "." + this.getFN() + "." );
 
             for ( String lvsRadioButtonFN : myRadioButtonKeys )
             {

@@ -71,7 +71,7 @@ import okw.log.*;
             
             try
 			{
-				lvsReturn = okw.core.OKW_CurrentObject_Sngltn.getInstance().GetObjectFN();
+				lvsReturn = okw.core.OKW_CurrentObject_Sngltn.getInstance().getObjectFN();
 			}
 			catch (
 					XPathExpressionException | JAXBException

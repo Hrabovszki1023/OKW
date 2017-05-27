@@ -875,10 +875,10 @@ public class CurrentObject_Test {
 	        public void TC_SetChildName() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
 	        {
 	            // Setzen wir den Namen des Fensters
-	            CO.SetWindowName("Rechner");
+	            CO.setWindowName("Rechner");
 	            
 	            // Setzen wir den Namen des Kindobjektes
-	            CO.SetChildName("Taste_3");
+	            CO.setChildName("Taste_3");
 	            
 	            // Nun müssen "Rechner" In Windowname finden.
 	            //assertEquals("Rechner.Taste_3", CO.GetObjectName());
@@ -899,10 +899,10 @@ public class CurrentObject_Test {
 	        {
 	            try
 	            {
-	                OKW_CurrentObject_Sngltn.Init();
+	                OKW_CurrentObject_Sngltn.init();
 	                // Exception wird ausgelöst wenn ein Fenster Objekt nicht gesetzt ist.
 	                // Der Namen des Fensters wurde hier daher bewusst weggelasssen:
-	                CO.SetChildName("Taste_3");
+	                CO.setChildName("Taste_3");
 
 	                // Folgende Zeile darf nicht ausgeführt werden. ... Hier wir auf exception geprüft
 	                fail();
@@ -928,10 +928,10 @@ public class CurrentObject_Test {
 	        public void TC_SetWindowName() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
 	        {
 	            // Setzen wir den Namen des Fensters
-	            CO.SetWindowName("Rechner");
+	            CO.setWindowName("Rechner");
 
 	            // Nun müssen "frm_Rechner" In Windowname finden.
-	            assertEquals("Rechner", CO.GetObjectFN());
+	            assertEquals("Rechner", CO.getObjectFN());
 	        }
 
 	        /// \brief
@@ -946,16 +946,16 @@ public class CurrentObject_Test {
 	        public void TC_SetWindowName_AfterChildWasSetted() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
 	        {
 	            // Setzen wir den Namen des Fensters
-	            CO.SetWindowName("Rechner");
+	            CO.setWindowName("Rechner");
 
 	            // Setzen wir den Namen des Kindobjektes
-	            CO.SetChildName("Taste_3");
+	            CO.setChildName("Taste_3");
 
 	            // Nun müssen "Rechner" In Windowname finden.
 	            // assertEquals("Rechner.Taste_3", CO.GetObjectName());
 
 	            // Nun müssen "frm_Rechner" In Windowname finden.
-	            CO.SetWindowName("Rechner");
+	            CO.setWindowName("Rechner");
 	            // assertEquals("Rechner", CO.GetObjectName());
 	        }
 	}

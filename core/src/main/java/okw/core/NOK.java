@@ -94,7 +94,7 @@ public class NOK implements IOKW_State
             OKW_Ini_Sngltn.getInstance().Init();
 
             OKW_CurrentObject_Sngltn.getInstance();
-            OKW_CurrentObject_Sngltn.Init();
+            OKW_CurrentObject_Sngltn.init();
 
             // Memorize TestCaseName
             OKW_Memorize_Sngltn.getInstance().Set( "TCN", fpsTestname );

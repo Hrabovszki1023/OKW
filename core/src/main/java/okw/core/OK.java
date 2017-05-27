@@ -149,7 +149,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).ClickOn();
+            ( ( IGUIChildwindow ) CO.setChildName( FN ) ).ClickOn();
         }
         catch (Exception e)
         {
@@ -170,7 +170,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).DoubleClickOn();
+            ( ( IGUIChildwindow ) CO.setChildName( FN ) ).DoubleClickOn();
         }
         catch (Exception e)
         {
@@ -201,7 +201,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).LogCaption();
+            ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogCaption();
 
             Log.ResOpenListDebug( "Log... " );
 
@@ -231,7 +231,7 @@ public class OK implements IOKW_State
 
         try
         {
-            Boolean lvbActual = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).LogExists();
+            Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogExists();
             String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
             String lvsLM = LM.GetMessage( "LogExists", "LogValue", lvsActual );
@@ -257,7 +257,7 @@ public class OK implements IOKW_State
 
         try
         {
-            Boolean lvbActual = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).LogHasFocus();
+            Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogHasFocus();
             String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
             String lvsLM = LM.GetMessage( "LogHasFocus", "LogValue", lvsActual );
@@ -283,7 +283,7 @@ public class OK implements IOKW_State
 
         try
         {
-            Boolean lvbActual = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).LogIsActive();
+            Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogIsActive();
             String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
             String lvsLM = LM.GetMessage( "LogIsActive", "LogValue", lvsActual );
@@ -309,7 +309,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).LogLabel();
+            ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogLabel();
 
             Log.ResOpenList( "Log... " );
 
@@ -339,7 +339,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ArrayList<String> actualValues = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).LogSelected();
+            ArrayList<String> actualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogSelected();
 
             String lvsLM = LM.GetMessage( "LogSelected", "LogValue" );
 
@@ -373,7 +373,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).LogTablecellValue( COL, ROW );
+            ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogTablecellValue( COL, ROW );
 
             Log.ResOpenListDebug( "Log... " );
 
@@ -403,7 +403,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).LogTooltip();
+            ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogTooltip();
 
             Log.ResOpenList( "Log... " );
 
@@ -433,7 +433,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).LogValue();
+            ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogValue();
 
             Log.ResOpenList( "Log... " );
 
@@ -482,7 +482,7 @@ public class OK implements IOKW_State
             }
             else
             {
-                ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).MemorizeCaption();
+                ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeCaption();
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -528,7 +528,7 @@ public class OK implements IOKW_State
             }
             else
             {
-                Boolean lvbActual = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).MemorizeExists();
+                Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeExists();
 
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
@@ -575,7 +575,7 @@ public class OK implements IOKW_State
 
             else
             {
-                Boolean lvbActual = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).MemorizeHasFocus();
+                Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeHasFocus();
 
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
@@ -626,7 +626,7 @@ public class OK implements IOKW_State
             else
             {
 
-                Boolean lvbActual = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).MemorizeIsActive();
+                Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeIsActive();
 
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
@@ -671,7 +671,7 @@ public class OK implements IOKW_State
 
             else
             {
-                ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).MemorizeLabel();
+                ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeLabel();
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -716,7 +716,7 @@ public class OK implements IOKW_State
             }
             else
             {
-                ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).MemorizeSelectedValue();
+                ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeSelectedValue();
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -762,7 +762,7 @@ public class OK implements IOKW_State
             }
             else
             {
-                ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).MemorizeTablecellValue( COL, ROW );
+                ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeTablecellValue( COL, ROW );
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -806,7 +806,7 @@ public class OK implements IOKW_State
             }
             else
             {
-                ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).MemorizeTooltip();
+                ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeTooltip();
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -850,7 +850,7 @@ public class OK implements IOKW_State
             }
             else
             {
-                ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).MemorizeValue();
+                ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeValue();
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
@@ -894,7 +894,7 @@ public class OK implements IOKW_State
 
                 lvlsValue = Parser.ParseMe( lvlsValue );
 
-                ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).Select( lvlsValue );
+                ( ( IGUIChildwindow ) CO.setChildName( FN ) ).Select( lvlsValue );
 
             }
         }
@@ -917,7 +917,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).SelectMenu();
+            ( ( IGUIChildwindow ) CO.setChildName( FN ) ).SelectMenu();
         }
         catch (Exception e)
         {
@@ -953,7 +953,7 @@ public class OK implements IOKW_State
             {
                 ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
 
-                ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).SelectMenu( lvlsValue );
+                ( ( IGUIChildwindow ) CO.setChildName( FN ) ).SelectMenu( lvlsValue );
             }
         }
         catch (Exception e)
@@ -975,7 +975,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).SelectTablecell( COL, ROW );
+            ( ( IGUIChildwindow ) CO.setChildName( FN ) ).SelectTablecell( COL, ROW );
         }
         catch (Exception e)
         {
@@ -996,7 +996,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ( ( IGUIWindow ) CO.SetWindowName( FN ) ).SelectWindow();
+            ( ( IGUIWindow ) CO.setWindowName( FN ) ).SelectWindow();
         }
         catch (Exception e)
         {
@@ -1059,7 +1059,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).SetFocus();
+            ( ( IGUIChildwindow ) CO.setChildName( FN ) ).SetFocus();
         }
         catch (Exception e)
         {
@@ -1110,7 +1110,7 @@ public class OK implements IOKW_State
 
                 lvlsValue = Parser.ParseMe( lvlsValue );
 
-                ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).SetValue( lvlsValue );
+                ( ( IGUIChildwindow ) CO.setChildName( FN ) ).SetValue( lvlsValue );
             }
         }
         catch (Exception e)
@@ -1132,7 +1132,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ( ( IGUIWindow ) CO.SetWindowName( AppName ) ).StartApp();
+            ( ( IGUIWindow ) CO.setWindowName( AppName ) ).StartApp();
         }
         catch (Exception e)
         {
@@ -1153,7 +1153,7 @@ public class OK implements IOKW_State
 
         try
         {
-            ( ( IGUIWindow ) CO.SetWindowName( AppName ) ).StopApp();
+            ( ( IGUIWindow ) CO.setWindowName( AppName ) ).StopApp();
         }
         catch (Exception e)
         {
@@ -1193,7 +1193,7 @@ public class OK implements IOKW_State
 
                 lvlsValue = Parser.ParseMe( lvlsValue );
 
-                ( ( IGUIChildwindow ) CO.SetChildName( FN ) ).TypeKey( lvlsValue );
+                ( ( IGUIChildwindow ) CO.setChildName( FN ) ).TypeKey( lvlsValue );
             }
         }
         catch (Exception e)
@@ -1324,9 +1324,9 @@ public class OK implements IOKW_State
                     lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyCaption_TO(), myOKW.VerifyCaption_PT() );
 
                 Actual = verify( TimeOut, lvlsExpected, () ->
@@ -1391,9 +1391,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyCaption_TO(), myOKW.VerifyCaption_PT() );
 
                 Actual = verifyWCM( TimeOut, lvlsExpected, () ->
@@ -1458,9 +1458,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyCaption_TO(), myOKW.VerifyCaption_PT() );
 
                 Actual = verifyREGX( TimeOut, lvlsExpected, () ->
@@ -1517,9 +1517,9 @@ public class OK implements IOKW_State
                     // Sprachabhängiges YES/NO nach Boolean transformieren
                     Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean( lvsExpected );
 
-                    IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                    IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                    OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                    OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                     OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyExists_TO(), myOKW.VerifyExists_PT() );
 
                     Boolean lvbActual = verify( TimeOut, lvbExpectedValue, () ->
@@ -1587,9 +1587,9 @@ public class OK implements IOKW_State
                     // Sprachabhängiges YES/NO nach Boolean transformieren
                     Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean( lvsExpected );
 
-                    IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                    IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                    OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                    OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                     OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyHasFocus_TO(), myOKW.VerifyHasFocus_PT() );
 
                     Boolean lvbActual = verify( TimeOut, lvbExpectedValue, () ->
@@ -1651,9 +1651,9 @@ public class OK implements IOKW_State
                     // Sprachabhängiges YES/NO nach Boolean transformieren
                     Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean( lvsExpected );
 
-                    IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                    IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                    OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                    OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                     OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyIsActive_TO(), myOKW.VerifyIsActive_PT() );
 
                     Boolean lvbActual = verify( TimeOut, lvbExpectedValue, () ->
@@ -2296,9 +2296,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyLabel_TO(), myOKW.VerifyLabel_PT() );
 
                 Actual = verifyREGX( TimeOut, lvlsExpected, () ->
@@ -2361,9 +2361,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyLabel_TO(), myOKW.VerifyLabel_PT() );
 
                 Actual = verifyWCM( TimeOut, lvlsExpected, () ->
@@ -2427,9 +2427,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyLabel_TO(), myOKW.VerifyLabel_PT() );
 
                 Actual = verifyREGX( TimeOut, lvlsExpected, () ->
@@ -2494,9 +2494,9 @@ public class OK implements IOKW_State
                 }
 
                 // Get the actuel value from object
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifySelectedValue_TO(), myOKW.VerifySelectedValue_PT() );
 
                 Actual = verify( TimeOut, lvlsExpected, () ->
@@ -2561,9 +2561,9 @@ public class OK implements IOKW_State
                 }
 
                 // Get the actuel value from object
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifySelectedValue_TO(), myOKW.VerifySelectedValue_PT() );
 
                 Actual = verifyWCM( TimeOut, lvlsExpected, () ->
@@ -2627,9 +2627,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifySelectedValue_TO(), myOKW.VerifySelectedValue_PT() );
 
                 Actual = verifyREGX( TimeOut, lvlsExpected, () ->
@@ -2692,9 +2692,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTablecellValue_TO(), myOKW.VerifyTablecellValue_PT() );
 
                 Actual = verify( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
@@ -2757,9 +2757,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTablecellValue_TO(), myOKW.VerifyTablecellValue_PT() );
 
                 Actual = verifyWCM( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
@@ -2822,9 +2822,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTablecellValue_TO(), myOKW.VerifyTablecellValue_PT() );
 
                 Actual = verifyREGX( TimeOut, COL, ROW, lvlsExpected, (String col, String row) ->
@@ -2887,9 +2887,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTooltip_TO(), myOKW.VerifyTooltip_PT() );
 
                 Actual = verify( TimeOut, lvlsExpected, () ->
@@ -2953,9 +2953,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTooltip_TO(), myOKW.VerifyTooltip_PT() );
 
                 Actual = verifyWCM( TimeOut, lvlsExpected, () ->
@@ -3019,9 +3019,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTooltip_TO(), myOKW.VerifyTooltip_PT() );
 
                 Actual = verifyREGX( TimeOut, lvlsExpected, () ->
@@ -3084,9 +3084,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyValue_TO(), myOKW.VerifyValue_PT() );
 
                 Actual = verify( TimeOut, lvlsExpected, () ->
@@ -3150,9 +3150,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyValue_TO(), myOKW.VerifyValue_PT() );
 
                 Actual = verifyWCM( TimeOut, lvlsExpected, () ->
@@ -3220,9 +3220,9 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.SetChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
-                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.GetObjectFN() );
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyValue_TO(), myOKW.VerifyValue_PT() );
 
                 Actual = verifyREGX( TimeOut, lvlsExpected, () ->
