@@ -276,7 +276,7 @@ import okw.log.Logger_Sngltn;
 		public void CallMethod_pMN_pS(String psParameter_1)
         {
             
-            myLogger.LogFunctionStart("CallMethod_pMN_pS_pS", "String psParameter_1", psParameter_1.toString());
+            myLogger.LogFunctionStart("CallMethod_pMN_pS_pS", "String psParameter_1", psParameter_1 );
             myLogger.LogPrint("Locator: " + this.Locator);
 
             myClipboard.setObjectName(getFN());
@@ -291,7 +291,7 @@ import okw.log.Logger_Sngltn;
         public void CallMethod_pMN_pS_pS(String psParameter_1, String psParameter_2)
         {
             
-            myLogger.LogFunctionStart("CallMethod_pMN_pS_pS", "String psParameter_1", psParameter_1.toString(), "String psParameter_2", psParameter_2.toString());
+            myLogger.LogFunctionStart("CallMethod_pMN_pS_pS", "String psParameter_1", psParameter_1, "String psParameter_2", psParameter_2);
             myLogger.LogPrint("Locator: " + this.Locator);
 
             myClipboard.setObjectName(getFN());
@@ -308,7 +308,7 @@ import okw.log.Logger_Sngltn;
 		public void CallMethod_pMN_pS_pS_pS(String psParameter_1, String psParameter_2, String psParameter_3)
         {
             
-            myLogger.LogFunctionStart("CallMethod_pMN_pS_pS", "String psParameter_1", psParameter_1.toString(), "String psParameter_2", psParameter_2.toString(), "String psParameter_3", psParameter_3.toString());
+            myLogger.LogFunctionStart("CallMethod_pMN_pS_pS", "String psParameter_1", psParameter_1, "String psParameter_2", psParameter_2, "String psParameter_3", psParameter_3);
             myLogger.LogPrint("Locator: " + this.Locator);
 
             myClipboard.setObjectName(getFN());
@@ -326,7 +326,7 @@ import okw.log.Logger_Sngltn;
 		public void CallMethod_pMN_pS_pS_pLS(String psParameter_1, String psParameter_2, ArrayList<String> fpLSValue)
         {
             
-            myLogger.LogFunctionStart("CallMethod_pMN_pS_pS_pLS", "String psParameter_1", psParameter_1.toString(), "String psParameter_2", psParameter_2.toString());
+            myLogger.LogFunctionStart("CallMethod_pMN_pS_pS_pLS", "String psParameter_1", psParameter_1, "String psParameter_2", psParameter_2);
             myLogger.LogPrint("Locator: " + Locator);
 
             myClipboard.setObjectName(getFN());

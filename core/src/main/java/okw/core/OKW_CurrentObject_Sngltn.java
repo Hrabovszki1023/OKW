@@ -972,7 +972,7 @@ public class OKW_CurrentObject_Sngltn
         Log.LogFunctionStartDebug( "CurrentObject.UpdateObject" );
         try
         {
-            if ( cvsChildFN == "" )
+            if ( "".equals( cvsChildFN ) )
             {
                 // -> 2. Get the Window-Object...
                 cvoObject = myFrameObjectDictionary.getParentObjectByName( cvsWindowFN );
