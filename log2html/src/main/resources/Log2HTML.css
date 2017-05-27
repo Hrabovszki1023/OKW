@@ -329,10 +329,7 @@ p.VerifyDefault
 	clear:both;
 	font-family: monospace;
 	font-size: 10pt;
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:0px; 
-    margin-left:10px;
+    margin: 1px 0px 1px 10px;
 }
 
 p.VerifyDefault  
