@@ -320,11 +320,11 @@ import okw.gui.*;
                 String lvsCHECKED = myOKW_Const.GetConst4Internalname("CHECKED");
                 String lvsUNCHECKED = myOKW_Const.GetConst4Internalname("UNCHECKED");
 
-                if (fps_Values.get(0).toUpperCase().equals( lvsCHECKED.toUpperCase()) )
+                if (fps_Values.get(0).equalsIgnoreCase( lvsCHECKED ) )
                 {
                     checking();
                 }
-                else if (fps_Values.get(0).toUpperCase().equals(lvsUNCHECKED.toUpperCase()) )
+                else if (fps_Values.get(0).equalsIgnoreCase( lvsUNCHECKED ) )
                 {
                     unchecking();
                 }
