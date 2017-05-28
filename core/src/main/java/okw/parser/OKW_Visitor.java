@@ -16,8 +16,8 @@ import okw.parser.antlr4.*;
         {
             String lvsReturn = context.getChild(1).getText();
             
-            if (OKW_Memorize_Sngltn.getInstance().Exists( lvsReturn ))
-                lvsReturn = OKW_Memorize_Sngltn.getInstance().Get( lvsReturn);
+            if (OKW_Memorize_Sngltn.getInstance().exists( lvsReturn ))
+                lvsReturn = OKW_Memorize_Sngltn.getInstance().get( lvsReturn);
             else
             {
               if( lvsReturn.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "DELETE" )) )

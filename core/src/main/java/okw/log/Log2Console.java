@@ -218,9 +218,9 @@ public class Log2Console implements ILogger
 			 */
 	        public void LogPass( String fps_Message )
 	        {
-					System.out.println(this.BlanksBefore + okw.OKW_Helper.repeatString("-", 80));
+					System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));
 					System.out.println(this.BlanksBefore + "Pass: " + fps_Message);
-					System.out.println(this.BlanksBefore + okw.OKW_Helper.repeatString("-", 80));      
+					System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));      
 		    }
 
 			
@@ -238,9 +238,9 @@ public class Log2Console implements ILogger
 			 */
 	        public void LogWarning(String fps_Message)
 	        {	            
-						System.out.println(this.BlanksBefore + okw.OKW_Helper.repeatString("-", 80));
+						System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));
 						System.out.println(this.BlanksBefore + "WARNING: " + fps_Message);
-						System.out.println(this.BlanksBefore + okw.OKW_Helper.repeatString("-", 80));      
+						System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));      
 	        }
 
 			

@@ -70,11 +70,11 @@ import static org.junit.Assert.*;
         public void TC_ParseMe_MemorizedValue()
         {
         	
-        	OKW_Memorize_Sngltn.Reset();
+        	OKW_Memorize_Sngltn.reset();
         	
             try
             {
-            	OKW_Memorize_Sngltn.getInstance().Set("Schluessel", "Wert des Schlüssels.");
+            	OKW_Memorize_Sngltn.getInstance().set("Schluessel", "Wert des Schlüssels.");
 			}
             catch (XPathExpressionException e)
             {
@@ -265,12 +265,12 @@ import static org.junit.Assert.*;
             LsInput.add("PATHXML: >>${Folder_XML}<<");
             LsInput.add("${Schluessel}");
             
-            OKW_Memorize_Sngltn.Reset();
+            OKW_Memorize_Sngltn.reset();
             OKW_Memorize_Sngltn myOKW_Memorize= OKW_Memorize_Sngltn.getInstance();
 
             try
             {
-            	myOKW_Memorize.Set("Schluessel", "Wert des Schlüssels.");
+            	myOKW_Memorize.set("Schluessel", "Wert des Schlüssels.");
 			}
             catch (XPathExpressionException e)
             {

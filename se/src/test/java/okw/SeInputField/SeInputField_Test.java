@@ -203,7 +203,7 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
       EN.MemorizeExists( "Name", "SeTextField_MemorizeExists_1" );
 
-      assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().Get("SeTextField_MemorizeExists_1" ) );
+      assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().get("SeTextField_MemorizeExists_1" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -222,7 +222,7 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
       EN.MemorizeHasFocus( "Name", "SeTextField_MemorizeHasFocus" );
 
-      assertEquals( "NO", myMem.Get( "SeTextField_MemorizeHasFocus" ) );
+      assertEquals( "NO", myMem.get( "SeTextField_MemorizeHasFocus" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -242,7 +242,7 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
       EN.MemorizeIsActive( "Name", "SeTextField_MemorizeIsActive" );
 
-      assertEquals( "YES", myMem.Get( "SeTextField_MemorizeIsActive" ) );
+      assertEquals( "YES", myMem.get( "SeTextField_MemorizeIsActive" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -264,8 +264,8 @@ public class SeInputField_Test {
       EN.MemorizeLabel( "Name", "SeTextField_MemorizeLabel_1" );
       EN.MemorizeLabel( "Vorname", "SeTextField_MemorizeLabel_2" );
 
-      assertEquals( "Name:", myMem.Get( "SeTextField_MemorizeLabel_1" ) );
-      assertEquals( "Vorname:", myMem.Get( "SeTextField_MemorizeLabel_2" ) );
+      assertEquals( "Name:", myMem.get( "SeTextField_MemorizeLabel_1" ) );
+      assertEquals( "Vorname:", myMem.get( "SeTextField_MemorizeLabel_2" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -284,7 +284,7 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
       EN.MemorizeTooltip( "Name", "SeTextField_MemorizeTooltip" );
 
-      assertEquals( "Den Namen eingeben", myMem.Get( "SeTextField_MemorizeTooltip" ) );
+      assertEquals( "Den Namen eingeben", myMem.get( "SeTextField_MemorizeTooltip" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -308,8 +308,8 @@ public class SeInputField_Test {
       EN.TypeKey( "Name", "Zoltan" );
       EN.MemorizeValue( "Name", "SeTextField_LogValue_2" );
 
-      assertEquals( "", myMem.Get( "SeTextField_LogValue_1" ) );
-      assertEquals( "Zoltan", myMem.Get( "SeTextField_LogValue_2" ) );
+      assertEquals( "", myMem.get( "SeTextField_LogValue_1" ) );
+      assertEquals( "Zoltan", myMem.get( "SeTextField_LogValue_2" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();

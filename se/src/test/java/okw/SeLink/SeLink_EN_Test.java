@@ -240,10 +240,10 @@ public class SeLink_EN_Test
 
       EN.SelectWindow( "SeLink" );
       EN.MemorizeCaption( "Google", "SeLink_MemorizeCaption_1" );
-      assertEquals( "Google...", myMM.Get( "SeLink_MemorizeCaption_1" ) );
+      assertEquals( "Google...", myMM.get( "SeLink_MemorizeCaption_1" ) );
 
       EN.MemorizeCaption( "Yahoo", "SeLink_MemorizeCaption_1" );
-      assertEquals( "Yahoo...", myMM.Get( "SeLink_MemorizeCaption_1" ) );
+      assertEquals( "Yahoo...", myMM.get( "SeLink_MemorizeCaption_1" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -260,10 +260,10 @@ public class SeLink_EN_Test
 
       EN.SelectWindow( "SeLink" );
       EN.MemorizeLabel( "Google", "SeLink_MemorizeLabel_1" );
-      assertEquals( "Label Google:", myMM.Get( "SeLink_MemorizeLabel_1" ) );
+      assertEquals( "Label Google:", myMM.get( "SeLink_MemorizeLabel_1" ) );
 
       EN.MemorizeLabel( "Yahoo", "SeLink_MemorizeLabel_1" );
-      assertEquals( "Label Yahoo:", myMM.Get( "SeLink_MemorizeLabel_1" ) );
+      assertEquals( "Label Yahoo:", myMM.get( "SeLink_MemorizeLabel_1" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -312,13 +312,13 @@ public class SeLink_EN_Test
 
       EN.SelectWindow( "SeLink" );
       EN.MemorizeExists( "Google", "SeLink_MemorizeExists_1" );
-      assertEquals( "YES", myMM.Get( "SeLink_MemorizeExists_1" ) );
+      assertEquals( "YES", myMM.get( "SeLink_MemorizeExists_1" ) );
 
       EN.MemorizeExists( "Yahoo", "SeLink_MemorizeExists_1" );
-      assertEquals( "YES", myMM.Get( "SeLink_MemorizeExists_1" ) );
+      assertEquals( "YES", myMM.get( "SeLink_MemorizeExists_1" ) );
 
       EN.MemorizeExists( "LinkNotExists", "SeLink_MemorizeExists_1" );
-      assertEquals( "NO", myMM.Get( "SeLink_MemorizeExists_1" ) );
+      assertEquals( "NO", myMM.get( "SeLink_MemorizeExists_1" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -337,11 +337,11 @@ public class SeLink_EN_Test
 
       EN.SelectWindow( "SeLink" );
       EN.MemorizeHasFocus( "Yahoo", "SeLink_MemorizeHasFocus" );
-      assertEquals( "NO", myMM.Get( "SeLink_MemorizeHasFocus" ) );
+      assertEquals( "NO", myMM.get( "SeLink_MemorizeHasFocus" ) );
 
       EN.SetFocus( "Yahoo" );
       EN.MemorizeHasFocus( "Yahoo", "SeLink_MemorizeHasFocus" );
-      assertEquals( "YES", myMM.Get( "SeLink_MemorizeHasFocus" ) );
+      assertEquals( "YES", myMM.get( "SeLink_MemorizeHasFocus" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -360,10 +360,10 @@ public class SeLink_EN_Test
 
       EN.SelectWindow( "SeLink" );
       EN.MemorizeTooltip( "Google", "SeLink_MemorizeTooltip_1" );
-      assertEquals( "Title: Google", myMM.Get( "SeLink_MemorizeTooltip_1" ) );
+      assertEquals( "Title: Google", myMM.get( "SeLink_MemorizeTooltip_1" ) );
 
       EN.MemorizeTooltip( "Yahoo", "SeLink_MemorizeTooltip_1" );
-      assertEquals( "Title: Yahoo", myMM.Get( "SeLink_MemorizeTooltip_1" ) );
+      assertEquals( "Title: Yahoo", myMM.get( "SeLink_MemorizeTooltip_1" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();

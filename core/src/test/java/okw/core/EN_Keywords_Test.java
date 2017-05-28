@@ -361,7 +361,7 @@ public class EN_Keywords_Test
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "MemorizeExists()", myClipBoard.getMethod() );
 
-        assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().Get( "Key_TC_MemorizeExists" ) );
+        assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().get( "Key_TC_MemorizeExists" ) );
     }
 
     // \~german
@@ -394,7 +394,7 @@ public class EN_Keywords_Test
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "MemorizeHasFocus()", myClipBoard.getMethod() );
 
-        assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().Get( "Key_TC_Memorize_Focus" ) );
+        assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().get( "Key_TC_Memorize_Focus" ) );
     }
 
     // \~german
@@ -426,7 +426,7 @@ public class EN_Keywords_Test
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "MemorizeIsActive()", myClipBoard.getMethod() );
 
-        assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().Get( "TC_MemorizeIsActive" ) );
+        assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizeIsActive" ) );
     }
 
     // \~german
@@ -459,7 +459,7 @@ public class EN_Keywords_Test
         assertEquals( "MemorizeSelectedValue()", myClipBoard.getMethod() );
 
         assertEquals( "MemorizeSelectedValue_Return_1${SEP}MemorizeSelectedValue_Return_2",
-                        OKW_Memorize_Sngltn.getInstance().Get( "TC_MemorizeSelectedValue_Key_1" ) );
+                        OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizeSelectedValue_Key_1" ) );
     }
 
     // \~german
@@ -493,7 +493,7 @@ public class EN_Keywords_Test
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "MemorizeTablecellValue()", myClipBoard.getMethod() );
 
-        assertEquals( "MemorizeTablecellValue_1", OKW_Memorize_Sngltn.getInstance().Get( "TC_MemorizeTablecellVelue_Key_1" ) );
+        assertEquals( "MemorizeTablecellValue_1", OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizeTablecellVelue_Key_1" ) );
     }
 
     // \~german
@@ -525,7 +525,7 @@ public class EN_Keywords_Test
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "MemorizeTooltip()", myClipBoard.getMethod() );
 
-        assertEquals( "MemorizeTooltip_Return_1${SEP}MemorizeTooltip_Return_2", OKW_Memorize_Sngltn.getInstance().Get( "TC_MemorizeTooltip_Key_1" ) );
+        assertEquals( "MemorizeTooltip_Return_1${SEP}MemorizeTooltip_Return_2", OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizeTooltip_Key_1" ) );
     }
 
     // \~german
@@ -557,7 +557,7 @@ public class EN_Keywords_Test
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "MemorizeValue()", myClipBoard.getMethod() );
 
-        assertEquals( "MemorizeValue_Return_1", OKW_Memorize_Sngltn.getInstance().Get( "TC_Memorize_Key_1" ) );
+        assertEquals( "MemorizeValue_Return_1", OKW_Memorize_Sngltn.getInstance().get( "TC_Memorize_Key_1" ) );
     }
 
     // \~german

@@ -171,7 +171,7 @@ public class SeInputCheckbox_Test
 
                 EN.MemorizeIsActive("Salami", "SeCheckBox_MemorizeIsActive_Salami");
 
-                assertEquals("YES", myMM.Get("SeCheckBox_MemorizeIsActive_Salami"));
+                assertEquals("YES", myMM.get("SeCheckBox_MemorizeIsActive_Salami"));
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -205,7 +205,7 @@ public class SeInputCheckbox_Test
                 EN.SelectWindow("SeCheckBox");
                 EN.MemorizeExists("Salami", "SeCheckBox_MemorizeExists_1");
 
-                assertEquals("YES", myMM.Get("SeCheckBox_MemorizeExists_1"));
+                assertEquals("YES", myMM.get("SeCheckBox_MemorizeExists_1"));
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -226,16 +226,16 @@ public class SeInputCheckbox_Test
                 EN.MemorizeHasFocus("Salami", "SeCheckBox_MemorizeHasFocus_Salami");
                 EN.MemorizeHasFocus("Pilze", "SeCheckBox_MemorizeHasFocus_Pilze");
 
-                assertEquals("NO", myMM.Get("SeCheckBox_MemorizeHasFocus_Salami"));
-                assertEquals("YES", myMM.Get("SeCheckBox_MemorizeHasFocus_Pilze"));
+                assertEquals("NO", myMM.get("SeCheckBox_MemorizeHasFocus_Salami"));
+                assertEquals("YES", myMM.get("SeCheckBox_MemorizeHasFocus_Pilze"));
 
                 EN.SetFocus("Salami");
 
                 EN.MemorizeHasFocus("Salami", "SeCheckBox_MemorizeHasFocus_Salami");
                 EN.MemorizeHasFocus("Pilze", "SeCheckBox_MemorizeHasFocus_Pilze");
 
-                assertEquals("YES", myMM.Get("SeCheckBox_MemorizeHasFocus_Salami"));
-                assertEquals("NO", myMM.Get("SeCheckBox_MemorizeHasFocus_Pilze"));
+                assertEquals("YES", myMM.get("SeCheckBox_MemorizeHasFocus_Salami"));
+                assertEquals("NO", myMM.get("SeCheckBox_MemorizeHasFocus_Pilze"));
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -253,7 +253,7 @@ public class SeInputCheckbox_Test
                 EN.SelectWindow("SeCheckBox");
                 EN.MemorizeTooltip("Salami", "SeCheckBox_MemorizeTooltip_1");
 
-                assertEquals("title: Salami", myMM.Get("SeCheckBox_MemorizeTooltip_1"));
+                assertEquals("title: Salami", myMM.get("SeCheckBox_MemorizeTooltip_1"));
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -271,7 +271,7 @@ public class SeInputCheckbox_Test
                 EN.SelectWindow("SeCheckBox");
                 EN.MemorizeValue("Salami", "SeCheckBox_MemorizeValue_1");
 
-                assertEquals("UNCHECKED", myMM.Get("SeCheckBox_MemorizeValue_1"));
+                assertEquals("UNCHECKED", myMM.get("SeCheckBox_MemorizeValue_1"));
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -749,7 +749,7 @@ public class SeInputCheckbox_Test
                 EN.SelectWindow("SeCheckBox");
                 EN.MemorizeLabel("Salami", "SeCheckBox_MemorizeLabel_1");
 
-                assertEquals("Salami", myMM.Get("SeCheckBox_MemorizeLabel_1"));
+                assertEquals("Salami", myMM.get("SeCheckBox_MemorizeLabel_1"));
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();

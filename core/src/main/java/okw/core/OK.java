@@ -128,7 +128,7 @@ public class OK implements IOKW_State
         Log.LogFunctionStartDebug( "BeginTest", "fpsTestname", fpsTestname );
         try
         {
-            OKW_Memorize_Sngltn.getInstance().Set( "TCN", fpsTestname );
+            OKW_Memorize_Sngltn.getInstance().set( "TCN", fpsTestname );
         }
         catch (Exception e)
         {
@@ -486,7 +486,7 @@ public class OK implements IOKW_State
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-                MEM.Set( MemKey, lvsToMemorize );
+                MEM.set( MemKey, lvsToMemorize );
             }
         }
         catch (Exception e)
@@ -532,7 +532,7 @@ public class OK implements IOKW_State
 
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-                MEM.Set( MemKey, lvsActual );
+                MEM.set( MemKey, lvsActual );
             }
         }
         catch (Exception e)
@@ -579,7 +579,7 @@ public class OK implements IOKW_State
 
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-                MEM.Set( MemKey, lvsActual );
+                MEM.set( MemKey, lvsActual );
             }
         }
         catch (Exception e)
@@ -630,7 +630,7 @@ public class OK implements IOKW_State
 
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-                MEM.Set( MemKey, lvsActual );
+                MEM.set( MemKey, lvsActual );
             }
         }
         catch (Exception e)
@@ -675,7 +675,7 @@ public class OK implements IOKW_State
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-                MEM.Set( MemKey, lvsToMemorize );
+                MEM.set( MemKey, lvsToMemorize );
             }
         }
         catch (Exception e)
@@ -720,7 +720,7 @@ public class OK implements IOKW_State
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-                MEM.Set( MemKey, lvsToMemorize );
+                MEM.set( MemKey, lvsToMemorize );
             }
         }
         catch (Exception e)
@@ -766,7 +766,7 @@ public class OK implements IOKW_State
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-                MEM.Set( MemKey, lvsToMemorize );
+                MEM.set( MemKey, lvsToMemorize );
             }
         }
         catch (Exception e)
@@ -810,7 +810,7 @@ public class OK implements IOKW_State
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-                MEM.Set( MemKey, lvsToMemorize );
+                MEM.set( MemKey, lvsToMemorize );
             }
         }
         catch (Exception e)
@@ -854,7 +854,7 @@ public class OK implements IOKW_State
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
 
-                MEM.Set( MemKey, lvsToMemorize );
+                MEM.set( MemKey, lvsToMemorize );
             }
         }
         catch (Exception e)

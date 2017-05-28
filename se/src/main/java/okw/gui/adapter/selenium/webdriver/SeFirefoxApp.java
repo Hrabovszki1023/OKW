@@ -100,8 +100,8 @@ public class SeFirefoxApp extends AnyWindow
                 LOG.LogPrint( "EnvVar: OKWGeckodriverPath='" + OKWGeckodriverPath + "'" );
                 System.setProperty( "webdriver.gecko.driver", OKWGeckodriverPath );
 
-                MEM.Set( "System.Property: webdriver.gecko.driver", OKWGeckodriverPath );
-                MEM.Set( "OKW EnvVar: OKWGeckodriverPath", OKWGeckodriverPath );
+                MEM.set( "System.Property: webdriver.gecko.driver", OKWGeckodriverPath );
+                MEM.set( "OKW EnvVar: OKWGeckodriverPath", OKWGeckodriverPath );
             }
             else
             {
@@ -132,7 +132,7 @@ public class SeFirefoxApp extends AnyWindow
                 {
                     case "Mac OS X":
                         System.setProperty( "webdriver.gecko.driver", "/Applications/geckodriver" );
-                        MEM.Set( "System Propety: OKWGeckodriverPath", System.getProperty( "webdriver.gecko.driver" ) );
+                        MEM.set( "System Propety: OKWGeckodriverPath", System.getProperty( "webdriver.gecko.driver" ) );
                         break;
                     default:
                         LOG.LogError( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );

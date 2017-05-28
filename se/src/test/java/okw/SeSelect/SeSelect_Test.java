@@ -585,10 +585,10 @@ public class SeSelect_Test
     EN.SelectWindow( "SeListBox" );
 
     EN.MemorizeTooltip( "Künstler", "SeListBox_MemorizeTooltip_1" );
-    assertEquals( "Wähle Interpret aus", okw.OKW_Memorize_Sngltn.getInstance().Get( "SeListBox_MemorizeTooltip_1" ) );
+    assertEquals( "Wähle Interpret aus", okw.OKW_Memorize_Sngltn.getInstance().get( "SeListBox_MemorizeTooltip_1" ) );
 
     EN.MemorizeTooltip( "Blumen", "SeListBox_MemorizeTooltip_1" );
-    assertEquals( "Wähle eine Blume aus", okw.OKW_Memorize_Sngltn.getInstance().Get( "SeListBox_MemorizeTooltip_1" ) );
+    assertEquals( "Wähle eine Blume aus", okw.OKW_Memorize_Sngltn.getInstance().get( "SeListBox_MemorizeTooltip_1" ) );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();

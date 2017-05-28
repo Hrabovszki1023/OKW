@@ -99,8 +99,8 @@ public class SeChromeApp extends AnyWindow
                 LOG.LogPrint( "EnvVar: OKWChromedriverPath='" + DriverPath + "'" );
                 System.setProperty( "webdriver.Chrome.driver", DriverPath );
 
-                MEM.Set( "System.Property: webdriver.Chrome.driver", DriverPath );
-                MEM.Set( "OKW EnvVar: OKWChromedriverPath", DriverPath );
+                MEM.set( "System.Property: webdriver.Chrome.driver", DriverPath );
+                MEM.set( "OKW EnvVar: OKWChromedriverPath", DriverPath );
 
             }
             else

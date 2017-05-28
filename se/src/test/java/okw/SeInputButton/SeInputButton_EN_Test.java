@@ -246,10 +246,10 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
 
                 EN.MemorizeCaption("Text_1", "SePushButton_MemorizeCaption_1" );
-                assertEquals("Button 1", myMM.Get("SePushButton_MemorizeCaption_1"));
+                assertEquals("Button 1", myMM.get("SePushButton_MemorizeCaption_1"));
 
                 EN.MemorizeCaption("Text_2", "SePushButton_MemorizeCaption_2");
-                assertEquals("Button 2", myMM.Get("SePushButton_MemorizeCaption_2"));
+                assertEquals("Button 2", myMM.get("SePushButton_MemorizeCaption_2"));
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -274,10 +274,10 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton not Active");
 
                 EN.MemorizeLabel("Text_1", "SeInputButton_MemorizeLabel_1" );
-                assertEquals("Label für Button1: ", myMM.Get("SeInputButton_MemorizeLabel_1"));
+                assertEquals("Label für Button1: ", myMM.get("SeInputButton_MemorizeLabel_1"));
 
                 EN.MemorizeLabel("Text_2", "SeInputButton_MemorizeLabel_2");
-                assertEquals("Label für Button2: ", myMM.Get("SeInputButton_MemorizeLabel_2"));
+                assertEquals("Label für Button2: ", myMM.get("SeInputButton_MemorizeLabel_2"));
 
 
                 EN.StopApp( ApplicationName );
@@ -302,7 +302,7 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
                 EN.MemorizeExists("Text_1", "SePushButton_MemorizeExists_1");
 
-                assertEquals("YES", myMM.Get("SePushButton_MemorizeExists_1"));
+                assertEquals("YES", myMM.get("SePushButton_MemorizeExists_1"));
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -325,7 +325,7 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
                 EN.MemorizeHasFocus("Text_1", "SePushButton_MemorizeHasFocus");
 
-                assertEquals("NO", myMM.Get("SePushButton_MemorizeHasFocus"));
+                assertEquals("NO", myMM.get("SePushButton_MemorizeHasFocus"));
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -348,7 +348,7 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton");
                 EN.MemorizeIsActive("Text_1", "SePushButton_MemorizeIsActive");
 
-                assertEquals("YES", myMM.Get("SePushButton_MemorizeIsActive"));
+                assertEquals("YES", myMM.get("SePushButton_MemorizeIsActive"));
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -374,8 +374,8 @@ import org.junit.rules.TestName;
                 EN.MemorizeTooltip("Text_1", "SePushButton_MemorizeTooltip_1");
                 EN.MemorizeTooltip("Text_2", "SePushButton_MemorizeTooltip_2");
 
-                assertEquals("Button 1 Tooltip/title", myMM.Get("SePushButton_MemorizeTooltip_1"));
-                assertEquals("Button 2 Tooltip/title", myMM.Get("SePushButton_MemorizeTooltip_2"));
+                assertEquals("Button 1 Tooltip/title", myMM.get("SePushButton_MemorizeTooltip_1"));
+                assertEquals("Button 2 Tooltip/title", myMM.get("SePushButton_MemorizeTooltip_2"));
 
 
                 EN.StopApp( ApplicationName );

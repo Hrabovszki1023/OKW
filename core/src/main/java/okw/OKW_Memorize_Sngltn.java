@@ -205,7 +205,7 @@ public class OKW_Memorize_Sngltn
 	 *  @author Zoltan Hrabovszki
 	 *  @date 2013.11.25
 	 */
-	public static void Reset()
+	public static void reset()
 	{
 		Instance = null;
 	}
@@ -223,7 +223,7 @@ public class OKW_Memorize_Sngltn
 	 *  @author Zoltan Hrabovszki
 	 *  @date 2013.11.25
 	 */
-	public Boolean Exists( String fpsKey )
+	public Boolean exists( String fpsKey )
 	{
 		Boolean lvbReturn = false;
 
@@ -256,7 +256,7 @@ public class OKW_Memorize_Sngltn
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2014.12.27
 	 */
-	public String Get( String fpsKey )
+	public String get( String fpsKey )
 	{
 		String lvsReturn = null;
 
@@ -314,7 +314,7 @@ public class OKW_Memorize_Sngltn
 	 *  \author Zoltán Hrabovszki
 	 *  \date 2013.11.28
 	 */
-	public void Init()
+	public void init()
 	{
 		Log.LogFunctionStartDebug(this.getClass().getName() + ".Init");
 
@@ -332,7 +332,7 @@ public class OKW_Memorize_Sngltn
 			if (OKW_FileHelper.fileExists(this.OKW_Memorize_xml))
 			{
 				// Lesen der Daten...
-				this.Read();
+				//this.Read();
 			}
 			else
 			{
@@ -348,34 +348,34 @@ public class OKW_Memorize_Sngltn
 		Log.LogFunctionEndDebug();
 	}
 
-	/** \~german
-	 *  Liest die Werte der Klasse OKW_Memorize aus einer Datei,
-	 *  gegeben in OKW.OKW_Ini.Xml_Ini_xml, ein.
-	 *  Es wird eine XML Datei gelesen. Hierzu wird die Klasse OKW_Memorize mit
-	 *  System.Xml.XmlSerializer deserialisiert.
-	 * 
-	 *  \~english
-	 *  \~
-	 *  @author Zoltán Hrabovszki
-	 *  @date 2013.11.28
-	 */
-	public void Read()
-	{
-		Log.LogFunctionStartDebug(Instance.getClass().getName() + "Read()");
-
-		try
-		{
-			OKW_XmlReader myXMLReader = new OKW_XmlReader("xml/OKW_Memorize.xml");			
-		}
-		catch(Exception e)
-		{
-			Log.LogPrintDebug(e.getMessage());
-		}
-		finally
-		{
-			Log.LogFunctionEndDebug();
-		}
-	}
+//	/** \~german
+//	 *  Liest die Werte der Klasse OKW_Memorize aus einer Datei,
+//	 *  gegeben in OKW.OKW_Ini.Xml_Ini_xml, ein.
+//	 *  Es wird eine XML Datei gelesen. Hierzu wird die Klasse OKW_Memorize mit
+//	 *  System.Xml.XmlSerializer deserialisiert.
+//	 * 
+//	 *  \~english
+//   *  \~
+//	 *  @author Zoltán Hrabovszki
+//	 *  @date 2013.11.28
+//	 */
+	//	public void read()
+	//	{
+	//		Log.LogFunctionStartDebug(Instance.getClass().getName() + "Read()");
+	//
+	//		try
+	//		{
+	//			OKW_XmlReader myXMLReader = new OKW_XmlReader("xml/OKW_Memorize.xml");			
+	//		}
+	//		catch(Exception e)
+	//		{
+	//			Log.LogPrintDebug(e.getMessage());
+	//		}
+	//		finally
+	//		{
+	//			Log.LogFunctionEndDebug();
+	//		}
+	//	}
 
 	/** \~german
 	 *  Schreibt die Felder (fields) der Klasse OKW_Memorize in eine Datei.
@@ -392,7 +392,7 @@ public class OKW_Memorize_Sngltn
 	 *  \author Zoltán Hrabovszki
 	 *  \date 2013.11.28
 	 */
-	public void Save()
+	public void save()
 	{
 		Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Save");
 
@@ -430,7 +430,7 @@ public class OKW_Memorize_Sngltn
 	 *  \author Zoltán Hrabovszki
 	 *  \date 2014.12.27
 	 */
-	public void Set( String fpsKey, String fpsValue ) throws XPathExpressionException
+	public void set( String fpsKey, String fpsValue ) throws XPathExpressionException
 	{
 		Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Set", "String fpsKey", fpsKey,
 				"String fpsValue", fpsValue);
@@ -464,7 +464,7 @@ public class OKW_Memorize_Sngltn
 			}
 
 			// persistentes Speichern aller Daten...
-			Instance.Save();
+			Instance.save();
 		}
 		finally
 		{

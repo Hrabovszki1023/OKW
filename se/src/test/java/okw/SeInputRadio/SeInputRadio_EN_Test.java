@@ -307,13 +307,13 @@ import org.junit.rules.TestName;
                     EN.SelectWindow("SeInputRadioTestFrame");
 
                     EN.MemorizeLabel("Visa", "SeInputRadio_MemorizeLabel_1");
-                    assertEquals("Visa", myMM.Get("SeInputRadio_MemorizeLabel_1"));
+                    assertEquals("Visa", myMM.get("SeInputRadio_MemorizeLabel_1"));
                     
                     EN.MemorizeLabel("American Express", "SeInputRadio_MemorizeLabel_2");
-                    assertEquals("American Express", myMM.Get("SeInputRadio_MemorizeLabel_2"));
+                    assertEquals("American Express", myMM.get("SeInputRadio_MemorizeLabel_2"));
                     
                     EN.MemorizeLabel("Mastercard", "SeInputRadio_MemorizeLabel_3");
-                    assertEquals("Mastercard", myMM.Get("SeInputRadio_MemorizeLabel_3"));
+                    assertEquals("Mastercard", myMM.get("SeInputRadio_MemorizeLabel_3"));
                     
                     EN.StopApp( ApplicationName );
                     EN.EndTest();
@@ -340,7 +340,7 @@ import org.junit.rules.TestName;
                 
                 EN.MemorizeExists("Visa", "SeInputRadio_MemorizeExists_1");
 
-                assertEquals("YES", myMM.Get("SeInputRadio_MemorizeExists_1"));
+                assertEquals("YES", myMM.get("SeInputRadio_MemorizeExists_1"));
                 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -387,7 +387,7 @@ import org.junit.rules.TestName;
                 EN.MemorizeIsActive("Inactive", "SeInputRadio_MemorizeIsActive_Inactive");
                 
                 
-                assertEquals("NO", myMM.Get("SeInputRadio_MemorizeIsActive_Inactive"));
+                assertEquals("NO", myMM.get("SeInputRadio_MemorizeIsActive_Inactive"));
                 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -415,8 +415,8 @@ import org.junit.rules.TestName;
                 EN.MemorizeTooltip("Visa", "SeInputRadio_MemorizeTooltip_Visa");
                 EN.MemorizeTooltip("Inactive", "SeInputRadio_MemorizeTooltip_Inactive");
 
-                assertEquals("title-Visa", myMM.Get("SeInputRadio_MemorizeTooltip_Visa"));
-                assertEquals("title-Disabled", myMM.Get("SeInputRadio_MemorizeTooltip_Inactive"));
+                assertEquals("title-Visa", myMM.get("SeInputRadio_MemorizeTooltip_Visa"));
+                assertEquals("title-Disabled", myMM.get("SeInputRadio_MemorizeTooltip_Inactive"));
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -444,8 +444,8 @@ import org.junit.rules.TestName;
                 EN.MemorizeValue("Visa", "SeInputRadio_MemorizeValue_Visa");
                 EN.MemorizeValue("American Express", "SeInputRadio_MemorizeValue_AmericanExpress");
                 
-                assertEquals("CHECKED", myMM.Get("SeInputRadio_MemorizeValue_Visa"));
-                assertEquals("UNCHECKED", myMM.Get("SeInputRadio_MemorizeValue_AmericanExpress"));
+                assertEquals("CHECKED", myMM.get("SeInputRadio_MemorizeValue_Visa"));
+                assertEquals("UNCHECKED", myMM.get("SeInputRadio_MemorizeValue_AmericanExpress"));
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
