@@ -78,9 +78,9 @@ public class Log2Console implements ILogger
 			@Override
 	        public void LogError(String fps_Message)
 	        {
-				System.out.println(this.BlanksBefore + okw.OKW_Helper.repeatString("-", 80));
+				System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));
 				System.out.println(this.BlanksBefore + "ERROR: " + fps_Message);
-				System.out.println(this.BlanksBefore + okw.OKW_Helper.repeatString("-", 80));      
+				System.out.println(this.BlanksBefore + OKW_Helper.repeatString("-", 80));      
 	        }
 
 

@@ -197,12 +197,7 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
       EN.MemorizeExists( "Textarea 1", "SeTextarea_MemorizeExists_1" );
 
-      assertEquals(
-          "YES",
-          okw.OKW_Memorize_Sngltn.getInstance().Get(
-              "SeTextarea_MemorizeExists_1" ) );
-
-      
+      assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().Get( "SeTextarea_MemorizeExists_1" ) );
       EN.StopApp( ApplicationName );
       EN.EndTest();
       }

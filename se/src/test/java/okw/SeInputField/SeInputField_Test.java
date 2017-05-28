@@ -203,7 +203,7 @@ public class SeInputField_Test {
       EN.SelectWindow( "SeTextField" );
       EN.MemorizeExists( "Name", "SeTextField_MemorizeExists_1" );
 
-      assertEquals( "YES", okw.OKW_Memorize_Sngltn.getInstance().Get("SeTextField_MemorizeExists_1" ) );
+      assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().Get("SeTextField_MemorizeExists_1" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();

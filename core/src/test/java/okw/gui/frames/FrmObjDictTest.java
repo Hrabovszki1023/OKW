@@ -48,7 +48,7 @@ public class FrmObjDictTest extends Test_Window
          * No annotaion for the Container @OKW(FN="Anzeige")
          */
         @OKW(FN="Tastatur")
-        public myTestbutton myInlineClassDef = this.new myTestbutton("locator");
+        public myTestbutton myInlineClassDef = new myTestbutton("locator");
         
         
         public class myTestbutton extends AnyChildwindow
@@ -79,6 +79,7 @@ public class FrmObjDictTest extends Test_Window
           
           public myTestbutton( String Locator )
           {
+              super( Locator );
           }
           
         };
