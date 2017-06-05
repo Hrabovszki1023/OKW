@@ -5,7 +5,8 @@ var indexSectionsWithContent =
   2: "o",
   3: "abcdefghilmnoprstuvwy",
   4: "_acilmnot",
-  5: "aglot"
+  5: "os",
+  6: "aglot"
 };
 
 var indexSectionNames =
@@ -15,7 +16,8 @@ var indexSectionNames =
   2: "namespaces",
   3: "functions",
   4: "variables",
-  5: "pages"
+  5: "groups",
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -25,6 +27,7 @@ var indexSectionLabels =
   2: "Namensbereiche",
   3: "Funktionen",
   4: "Variablen",
-  5: "Seiten"
+  5: "Gruppen",
+  6: "Seiten"
 };
 
