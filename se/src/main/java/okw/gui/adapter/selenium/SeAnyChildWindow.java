@@ -39,6 +39,7 @@
 
 package okw.gui.adapter.selenium;
 
+
 import java.util.*;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
@@ -51,6 +52,16 @@ import okw.OKW_Const_Sngltn;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+/**
+ * @defgroup groupSeleniumClasses OKW Selenium Klassen
+ * 
+ * @defgroup groupSeleniumChildGUIAdapter Selenium Kindobjekt GUI-Adapter klasse
+ * @ingroup groupSeleniumClasses
+ * Group 4 is a subgroup of group 3
+ *
+ * 
+ *
+ */
 public class SeAnyChildWindow extends AnyChildwindow
 {	
     // Logger Instance holen

@@ -52,7 +52,16 @@ import okw.OKW_Const_Sngltn;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-
+/**
+ * \~
+ * @ingroup groupSeleniumClasses
+ * \~german
+ * SeAnyWindow ist ein Kinobjekt klasse.
+ *  \~english
+ *  \~
+ *  @author Zoltán Hrabovszki
+ *  @date 2017-06-05
+ */
 public class SeAnyWindow extends AnyWindow
 {	
     // Logger Instance holen
