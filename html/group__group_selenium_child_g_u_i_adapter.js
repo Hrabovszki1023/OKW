@@ -47,6 +47,10 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "LM", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a7c3ae19f79c61de87c8692f6b817fa09", null ],
       [ "MyLogger", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ab8f0c80bfe825c89cef42f922a2e2ece", null ]
     ] ],
+    [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html", [
+      [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#a32e66076fa69afd7f671a7cf8ad5fbdd", null ],
+      [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#ad91818efaf86f224dfc05a5ac9a79e8d", null ]
+    ] ],
     [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html", [
       [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a0d77a9524916d6b148a8c80571bc2d30", null ],
       [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a28f3b3787171dead144a64674923e66f", null ],

@@ -93,8 +93,8 @@ var NAVTREEINDEX11 =
 "functions_d.html":[7,3,0,4],
 "functions_e.html":[7,3,0,5],
 "functions_f.html":[7,3,0,6],
-"functions_func.html":[7,3,1,0],
 "functions_func.html":[7,3,1],
+"functions_func.html":[7,3,1,0],
 "functions_func_b.html":[7,3,1,1],
 "functions_func_c.html":[7,3,1,2],
 "functions_func_d.html":[7,3,1,3],
@@ -133,6 +133,8 @@ var NAVTREEINDEX11 =
 "functions_y.html":[7,3,0,21],
 "group__group_selenium_child_g_u_i_adapter.html":[5,0,1],
 "group__group_selenium_classes.html":[5,0],
+"group__group_selenium_driver_frames.html":[5,0,3],
+"group__group_selenium_frames.html":[5,0,4],
 "group__group_selenium_window_g_u_i_adapter.html":[5,0,2],
 "hierarchy.html":[7,2],
 "index.html":[],
@@ -247,7 +249,5 @@ var NAVTREEINDEX11 =
 "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#a5beec120b509e6559d396691c0f5c80e":[7,0,0,4,5,39],
 "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#a62f7dffc10cf4619d2b5528bc7d24a9c":[7,0,0,4,5,2],
 "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#a70d070470007b968765ea5f563f33a77":[7,0,0,4,5,26],
-"interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#a71821a79f397bbd89fad93b6144d8c42":[7,0,0,4,5,33],
-"interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#a75dcc51bb1ebd4ff595bd667f8904516":[7,0,0,4,5,19],
-"interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#a7cdfba4d9624b7a835971a23e904fdcc":[7,0,0,4,5,3]
+"interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#a71821a79f397bbd89fad93b6144d8c42":[7,0,0,4,5,33]
 };

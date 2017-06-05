@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['selenium_20childwindow_20gui_2dadapterklasse',['Selenium Childwindow GUI-Adapterklasse',['../group__group_selenium_child_g_u_i_adapter.html',1,'']]],
-  ['selenium_20window_20gui_2dadapterklassen',['Selenium Window GUI-Adapterklassen',['../group__group_selenium_window_g_u_i_adapter.html',1,'']]],
   ['save',['save',['../classokw_1_1_o_k_w___memorize___sngltn.html#a3ff14b0c6e596369e1437c59888a104f',1,'okw::OKW_Memorize_Sngltn']]],
   ['seanychildwindow',['SeAnyChildWindow',['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html',1,'okw.gui.adapter.selenium.SeAnyChildWindow'],['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#af4a47c7add0143367e9f65f8e7e87a4c',1,'okw.gui.adapter.selenium.SeAnyChildWindow.SeAnyChildWindow(String Locator, OKWLocator... Locators)'],['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a65c881c578c07a8006165a0ca244d93a',1,'okw.gui.adapter.selenium.SeAnyChildWindow.SeAnyChildWindow(String IframeID, String Locator, OKWLocator... Locators)']]],
   ['seanywindow',['SeAnyWindow',['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html',1,'okw.gui.adapter.selenium.SeAnyWindow'],['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a224cf7377b7914c1babcd8f80785654f',1,'okw.gui.adapter.selenium.SeAnyWindow.SeAnyWindow()']]],
