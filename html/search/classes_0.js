@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['anychildwindow',['AnyChildwindow',['../classokw_1_1gui_1_1_any_childwindow.html',1,'okw::gui']]],
-  ['anywinbase',['AnyWinBase',['../classokw_1_1gui_1_1_any_win_base.html',1,'okw::gui']]],
-  ['anywindow',['AnyWindow',['../classokw_1_1gui_1_1_any_window.html',1,'okw::gui']]]
+  ['_5f_5ftaste_5f3',['__Taste_3',['../classokw_1_1gui_1_1frames_1_1frm_test_rechner_1_1_____taste__3.html',1,'okw::gui::frames::frmTestRechner']]]
 ];

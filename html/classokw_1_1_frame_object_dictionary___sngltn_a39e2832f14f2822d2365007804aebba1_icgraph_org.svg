@@ -9,40 +9,40 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 52)">
 <title>okw.FrameObjectDictionary_Sngltn.getOKWFromObjekt</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-52 689,-52 689,5 -4,5"/>
-<!-- Node137 -->
-<g id="node1" class="node"><title>Node137</title>
+<!-- Node142 -->
+<g id="node1" class="node"><title>Node142</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-7 0.5,-41 141.5,-41 141.5,-7 0.5,-7"/>
 <text text-anchor="start" x="8.5" y="-28" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
 <text text-anchor="middle" x="71" y="-15" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn.getOKWFromObjekt</text>
 </g>
-<!-- Node138 -->
-<g id="node3" class="node"><title>Node138</title>
+<!-- Node143 -->
+<g id="node3" class="node"><title>Node143</title>
 <a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html#a1710d54e13c9ce591277209c898eec98" target="_top" xlink:title="Liefert die Instanz der Klasse. ">
 <polygon fill="white" stroke="black" points="178,-7 178,-41 316,-41 316,-7 178,-7"/>
 <text text-anchor="start" x="186" y="-28" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
 <text text-anchor="middle" x="247" y="-15" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn.frameScan</text>
 </a>
 </g>
-<!-- Node137&#45;&gt;Node138 -->
-<g id="edge2" class="edge"><title>Node137&#45;&gt;Node138</title>
+<!-- Node142&#45;&gt;Node143 -->
+<g id="edge2" class="edge"><title>Node142&#45;&gt;Node143</title>
 <path fill="none" stroke="midnightblue" d="M151.744,-24C160.463,-24 169.279,-24 177.845,-24"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="151.572,-20.5001 141.572,-24 151.572,-27.5001 151.572,-20.5001"/>
 </g>
-<!-- Node139 -->
-<g id="node5" class="node"><title>Node139</title>
+<!-- Node144 -->
+<g id="node5" class="node"><title>Node144</title>
 <a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html#a905bac544e5962ae15dfe1c1c50f2467" target="_top" xlink:title="Methode initialisiert diese Klasse. ">
 <polygon fill="white" stroke="black" points="352,-7 352,-41 490,-41 490,-7 352,-7"/>
 <text text-anchor="start" x="360" y="-28" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
 <text text-anchor="middle" x="421" y="-15" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn.init</text>
 </a>
 </g>
-<!-- Node138&#45;&gt;Node139 -->
-<g id="edge4" class="edge"><title>Node138&#45;&gt;Node139</title>
+<!-- Node143&#45;&gt;Node144 -->
+<g id="edge4" class="edge"><title>Node143&#45;&gt;Node144</title>
 <path fill="none" stroke="midnightblue" d="M326.035,-24C334.625,-24 343.319,-24 351.779,-24"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="326.019,-20.5001 316.019,-24 326.019,-27.5001 326.019,-20.5001"/>
 </g>
-<!-- Node140 -->
-<g id="node7" class="node"><title>Node140</title>
+<!-- Node145 -->
+<g id="node7" class="node"><title>Node145</title>
 <a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html#aca3d4bf06ca665795304f02b1bbe24eb" target="_top" xlink:title="Konstuktor der Klasse. ">
 <polygon fill="white" stroke="black" points="526,-0.5 526,-47.5 684,-47.5 684,-0.5 526,-0.5"/>
 <text text-anchor="start" x="534" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
@@ -50,8 +50,8 @@
 <text text-anchor="middle" x="605" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">Sngltn</text>
 </a>
 </g>
-<!-- Node139&#45;&gt;Node140 -->
-<g id="edge6" class="edge"><title>Node139&#45;&gt;Node140</title>
+<!-- Node144&#45;&gt;Node145 -->
+<g id="edge6" class="edge"><title>Node144&#45;&gt;Node145</title>
 <path fill="none" stroke="midnightblue" d="M500.041,-24C508.637,-24 517.388,-24 525.984,-24"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="500.038,-20.5001 490.038,-24 500.038,-27.5001 500.038,-20.5001"/>
 </g>

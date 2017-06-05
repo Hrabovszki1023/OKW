@@ -1,6 +1,10 @@
 var searchData=
 [
   ['matcher',['Matcher',['../classokw_1_1core_1_1_matcher.html',1,'okw::core']]],
+  ['matcher_5flevenshteindistancetest',['Matcher_LevenshteinDistanceTest',['../classokw_1_1core_1_1_matcher___levenshtein_distance_test.html',1,'okw::core']]],
+  ['matcher_5flevenshteinmatchtest',['Matcher_LevenshteinMatchTest',['../classokw_1_1core_1_1_matcher___levenshtein_match_test.html',1,'okw::core']]],
+  ['matcher_5fregexmatchertest',['Matcher_RegexMatcherTest',['../classokw_1_1core_1_1_matcher___regex_matcher_test.html',1,'okw::core']]],
+  ['matcher_5fwildcardmatchertest',['Matcher_WildcardMatcherTest',['../classokw_1_1core_1_1_matcher___wildcard_matcher_test.html',1,'okw::core']]],
   ['matchstrignorecase',['matchStrIgnoreCase',['../classokw_1_1_o_k_w___helper.html#afc21f32d0b5a893b712bbb6689f9496c',1,'okw::OKW_Helper']]],
   ['matchstring',['matchString',['../classokw_1_1_o_k_w___helper.html#a87a59b69ca02869bc0ea5a263dc8fa39',1,'okw::OKW_Helper']]],
   ['me',['Me',['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a9a138af1fc6ff850d708d66f308a2525',1,'okw.gui.adapter.selenium.SeAnyChildWindow.Me()'],['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a8b42bf27f4660b4807375a57fa9de815',1,'okw.gui.adapter.selenium.SeAnyWindow.Me()']]],
@@ -16,10 +20,16 @@ var searchData=
   ['memorizevalue',['MemorizeValue',['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a34e6e2cd7b15f0e05c4272941d3248cf',1,'okw.gui.adapter.selenium.SeAnyChildWindow.MemorizeValue()'],['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a12e4a6c87233f7de1d6738313709865e',1,'okw.gui.adapter.selenium.SeAnyWindow.MemorizeValue()'],['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html#a231e8f120770be513d3b68c572a878ef',1,'okw.gui.adapter.selenium.SeURL.MemorizeValue()'],['../classokw_1_1core_1_1_core.html#ac8440162926bfc169ee483bd7f860117',1,'okw.core.Core.MemorizeValue()'],['../classokw_1_1core_1_1_e_n.html#a443ae129e7d12b082d0555c597d1425d',1,'okw.core.EN.MemorizeValue()'],['../interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa48a3de07623a93fc0b4d68629dd0887',1,'okw.core.IOKW_State.MemorizeValue()'],['../classokw_1_1core_1_1_n_o_k.html#ad0ac30290156fae8afb23a9b93249e87',1,'okw.core.NOK.MemorizeValue()'],['../classokw_1_1core_1_1_o_k.html#a2d93a84a57295418131d219a5887094d',1,'okw.core.OK.MemorizeValue()']]],
   ['move',['move',['../classokw_1_1_o_k_w___file_helper.html#a3002a43c90d8b9c368d68642d586defd',1,'okw::OKW_FileHelper']]],
   ['movedirectory',['moveDirectory',['../classokw_1_1_o_k_w___file_helper.html#a8a031226863d889540a861a6e47c38b6',1,'okw::OKW_FileHelper']]],
-  ['myfn',['myFN',['../classokw_1_1gui_1_1_any_win_base.html#add95503004de6ad14501f8eaf73f041f',1,'okw::gui::AnyWinBase']]],
+  ['mybirthday',['myBirthDay',['../classokw_1_1gui_1_1adapter_1_1frm_obj_dict_gui_container1.html#a5a80adc5ec8a05205c2f390c165cabf0',1,'okw::gui::adapter::frmObjDictGuiContainer1']]],
+  ['myfn',['myFN',['../classokw_1_1gui_1_1_any_win_base.html#add95503004de6ad14501f8eaf73f041f',1,'okw.gui.AnyWinBase.myFN()'],['../classokw_1_1gui_1_1adapter_1_1_test___window.html#a44134333deb75417ccf88a4d1fb2fe4d',1,'okw.gui.adapter.Test_Window.myFN()'],['../classokw_1_1gui_1_1frames_1_1frm_window_with_out_methods.html#a11072a3f7140b749192efa5e67be2659',1,'okw.gui.frames.frmWindowWithOutMethods.myFN()']]],
   ['myframeobjectdictionary',['myFrameObjectDictionary',['../classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#ad8e0dc2ba39cf9ada33f7fe6a0114e81',1,'okw::core::OKW_CurrentObject_Sngltn']]],
-  ['mykn',['myKN',['../classokw_1_1gui_1_1_any_win_base.html#ae5e65a34f8642d95be665fff98f894ca',1,'okw::gui::AnyWinBase']]],
-  ['myparentfn',['myParentFN',['../classokw_1_1gui_1_1_any_win_base.html#a5bd40a7a4a8c753cb8a18a77f40dcac6',1,'okw::gui::AnyWinBase']]],
+  ['myguicontainer',['myGUIContainer',['../classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test.html#a0f12350171d4b0600240ea13ae7fa307',1,'okw::gui::frames::FrmObjDictTest']]],
+  ['myinlineclassdef',['myInlineClassDef',['../classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test.html#a6c03b5ba64a3cf4461a84d6bb9e78684',1,'okw::gui::frames::FrmObjDictTest']]],
+  ['mykn',['myKN',['../classokw_1_1gui_1_1_any_win_base.html#ae5e65a34f8642d95be665fff98f894ca',1,'okw.gui.AnyWinBase.myKN()'],['../classokw_1_1gui_1_1adapter_1_1_test___window.html#ab7deab3a1632882dcf42015bc0e96115',1,'okw.gui.adapter.Test_Window.myKN()'],['../classokw_1_1gui_1_1frames_1_1frm_window_with_out_methods.html#a7df5d5ee163c5f1d1b12dc6d2c242db8',1,'okw.gui.frames.frmWindowWithOutMethods.myKN()']]],
+  ['myname',['myName',['../classokw_1_1gui_1_1adapter_1_1frm_obj_dict_gui_container1.html#a12eec5f373789b2d69f40d3151ac98b2',1,'okw::gui::adapter::frmObjDictGuiContainer1']]],
+  ['myparentfn',['myParentFN',['../classokw_1_1gui_1_1_any_win_base.html#a5bd40a7a4a8c753cb8a18a77f40dcac6',1,'okw.gui.AnyWinBase.myParentFN()'],['../classokw_1_1gui_1_1adapter_1_1_test___window.html#a1c3f198edfbc3dc8df8efd0eb2a59cf6',1,'okw.gui.adapter.Test_Window.myParentFN()'],['../classokw_1_1gui_1_1frames_1_1frm_window_with_out_methods.html#a9ce9e888c38119af87b527ed07f8e4b0',1,'okw.gui.frames.frmWindowWithOutMethods.myParentFN()']]],
   ['myradiobuttonfns',['myRadioButtonFNs',['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a95dbb0e31ce47bd7ae2f30eb482fa6a0',1,'okw::gui::adapter::selenium::SeRadioList']]],
+  ['mysetup',['MySetUp',['../classokw_1_1parser_1_1_o_k_w___visitor_test.html#a2677a9bb1ef3eacab11efaf7929f60c2',1,'okw::parser::OKW_VisitorTest']]],
+  ['mytestbutton',['myTestbutton',['../classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test_1_1my_testbutton.html',1,'okw::gui::frames::FrmObjDictTest']]],
   ['myxmlreader',['myXmlReader',['../classokw_1_1_o_k_w___const___sngltn.html#a1d728edaa90cfa9f5c1612b51a9c1d7c',1,'okw::OKW_Const_Sngltn']]]
 ];

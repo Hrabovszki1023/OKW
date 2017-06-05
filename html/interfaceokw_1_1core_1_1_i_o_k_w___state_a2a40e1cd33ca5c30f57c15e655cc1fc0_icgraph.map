@@ -1,4 +1,9 @@
 <map id="okw.core.IOKW_State.DoubleClickOn" name="okw.core.IOKW_State.DoubleClickOn">
-<area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ac282376df171a9d2d62bfe2f5a624cb2" title="Klickt auf das gegebene Objekt. " alt="" coords="255,13,452,43"/>
-<area shape="rect" id="node5" href="$classokw_1_1core_1_1_e_n.html#adc2ff15e947443e4a40121de9bfa036a" title="Klickt auf das gegebene Objekt. " alt="" coords="503,13,692,43"/>
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ac282376df171a9d2d62bfe2f5a624cb2" title="Klickt auf das gegebene Objekt. " alt="" coords="255,219,452,248"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_e_n.html#adc2ff15e947443e4a40121de9bfa036a" title="Klickt auf das gegebene Objekt. " alt="" coords="503,183,692,212"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_current_object___test.html#ab0c36cf24c3d1499774026d1b172ae2c" title="Testziel: Prüft den Aufruf der Methode DoubleClickOn( &quot;FN&quot; ) im ChildObject. " alt="" coords="515,236,680,300"/>
+<area shape="rect" id="node7" href="$classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#ad165e477549c4bf24fa9d42e4cf5c927" title="Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch DoubleClickOn() ausgelöst wird..." alt="" coords="768,5,1008,86"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#ad7eb79bf7a39002a83a5d1d452cda82b" title="Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von DoubleClickOn() ausgelöst wird..." alt="" coords="751,109,1025,190"/>
+<area shape="rect" id="node11" href="$classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a3861906b92c8a0c2565d223cfb906e2c" title="Test des Schlüsselwortes DoubleClickOn() für den GUI&#45;Adapter SeInputRadio. " alt="" coords="743,213,1033,277"/>
+<area shape="rect" id="node13" href="$classokw_1_1_se_link_1_1_se_link___e_n___test.html#ad3983f34eec0e46d9d2ce79c7f1bbf83" title="Prüft ob die DoubleClickOn die Ausnahme OKWFrameObjectMethodNotImplemented auslöst. " alt="" coords="799,301,977,347"/>
 </map>

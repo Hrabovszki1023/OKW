@@ -9,20 +9,20 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 26)">
 <title>okw.log.Logger_Sngltn.LogPass</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-26 337,-26 337,5 -4,5"/>
-<!-- Node187 -->
-<g id="node1" class="node"><title>Node187</title>
+<!-- Node756 -->
+<g id="node1" class="node"><title>Node756</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-0.5 0.5,-21.5 157.5,-21.5 157.5,-0.5 0.5,-0.5"/>
 <text text-anchor="middle" x="79" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.LogPass</text>
 </g>
-<!-- Node188 -->
-<g id="node3" class="node"><title>Node188</title>
+<!-- Node757 -->
+<g id="node3" class="node"><title>Node757</title>
 <a xlink:href="classokw_1_1core_1_1_o_k.html#a071aec5319238e209cfc6f1434ea13e8" target="_top" xlink:title="copydoc IOKW_State::VerifyHasFocus(String,String) ">
 <polygon fill="white" stroke="black" points="194,-0.5 194,-21.5 332,-21.5 332,-0.5 194,-0.5"/>
 <text text-anchor="middle" x="263" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyIsActive</text>
 </a>
 </g>
-<!-- Node187&#45;&gt;Node188 -->
-<g id="edge2" class="edge"><title>Node187&#45;&gt;Node188</title>
+<!-- Node756&#45;&gt;Node757 -->
+<g id="edge2" class="edge"><title>Node756&#45;&gt;Node757</title>
 <path fill="none" stroke="midnightblue" d="M167.842,-11C176.627,-11 185.45,-11 193.99,-11"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="167.566,-7.5001 157.566,-11 167.566,-14.5001 167.566,-7.5001"/>
 </g>

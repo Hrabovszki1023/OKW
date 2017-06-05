@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['log2console',['Log2Console',['../classokw_1_1log_1_1_log2_console.html',1,'okw::log']]],
-  ['logger_5fsngltn',['Logger_Sngltn',['../classokw_1_1log_1_1_logger___sngltn.html',1,'okw::log']]],
-  ['logmessenger',['LogMessenger',['../classokw_1_1_log_messenger.html',1,'okw']]]
+  ['iguichildwindow',['IGUIChildwindow',['../interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html',1,'okw::gui']]],
+  ['iguiwindow',['IGUIWindow',['../interfaceokw_1_1gui_1_1_i_g_u_i_window.html',1,'okw::gui']]],
+  ['ilogger',['ILogger',['../interfaceokw_1_1log_1_1_i_logger.html',1,'okw::log']]],
+  ['iokw_5ffn',['IOKW_FN',['../interfaceokw_1_1core_1_1_i_o_k_w___f_n.html',1,'okw::core']]],
+  ['iokw_5fstate',['IOKW_State',['../interfaceokw_1_1core_1_1_i_o_k_w___state.html',1,'okw::core']]]
 ];

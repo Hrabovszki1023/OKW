@@ -55,47 +55,47 @@ var sectionId = 'dynsection-13';
 <g id="viewport">
 <title>okw.OKW_FileHelper.moveDirectory</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-90 541,-90 541,5 -4,5"/>
-<!-- Node50 -->
-<g id="node1" class="node"><title>Node50</title>
+<!-- Node54 -->
+<g id="node1" class="node"><title>Node54</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-32.5 0,-53.5 178,-53.5 178,-32.5 0,-32.5"/>
 <text text-anchor="middle" x="89" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_FileHelper.moveDirectory</text>
 </g>
-<!-- Node51 -->
-<g id="node3" class="node"><title>Node51</title>
+<!-- Node55 -->
+<g id="node3" class="node"><title>Node55</title>
 <a xlink:href="classokw_1_1_o_k_w___file_helper.html#a4feaa905b7b878f286058a06a81f3ce2" target="_top" xlink:title="Prüft, ob die gegebene fpsPaFiNa Datei existiert. ">
 <polygon fill="white" stroke="black" points="214,-52 214,-86 366,-86 366,-52 214,-52"/>
 <text text-anchor="start" x="222" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_FileHelper.directory</text>
 <text text-anchor="middle" x="290" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">Exists</text>
 </a>
 </g>
-<!-- Node50&#45;&gt;Node51 -->
-<g id="edge2" class="edge"><title>Node50&#45;&gt;Node51</title>
+<!-- Node54&#45;&gt;Node55 -->
+<g id="edge2" class="edge"><title>Node54&#45;&gt;Node55</title>
 <path fill="none" stroke="midnightblue" d="M170.175,-53.5003C181.186,-54.9246 192.519,-56.3905 203.618,-57.8262"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="203.362,-61.3222 213.728,-59.134 204.26,-54.38 203.362,-61.3222"/>
 </g>
-<!-- Node53 -->
-<g id="node7" class="node"><title>Node53</title>
+<!-- Node57 -->
+<g id="node7" class="node"><title>Node57</title>
 <a xlink:href="classokw_1_1_o_k_w___file_helper.html#a4017b3000ff41eacb036ed31d1a300b6" target="_top" xlink:title="Löschent rekursive alle Datien und Unterverzeichnisse und das gegebenen Verzeichniss selbst...">
 <polygon fill="white" stroke="black" points="220,-0 220,-34 360,-34 360,-0 220,-0"/>
 <text text-anchor="start" x="228" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_FileHelper.delete</text>
 <text text-anchor="middle" x="290" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">Directory</text>
 </a>
 </g>
-<!-- Node50&#45;&gt;Node53 -->
-<g id="edge6" class="edge"><title>Node50&#45;&gt;Node53</title>
+<!-- Node54&#45;&gt;Node57 -->
+<g id="edge6" class="edge"><title>Node54&#45;&gt;Node57</title>
 <path fill="none" stroke="midnightblue" d="M170.175,-32.4997C183.157,-30.8205 196.586,-29.0834 209.551,-27.4064"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="210.363,-30.8306 219.831,-26.0766 209.465,-23.8884 210.363,-30.8306"/>
 </g>
-<!-- Node52 -->
-<g id="node5" class="node"><title>Node52</title>
+<!-- Node56 -->
+<g id="node5" class="node"><title>Node56</title>
 <a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4" target="_top" xlink:title="Loggt eine Nachricht. ">
 <polygon fill="white" stroke="black" points="402,-52 402,-86 536,-86 536,-52 402,-52"/>
 <text text-anchor="start" x="410" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
 <text text-anchor="middle" x="469" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">PrintDebug</text>
 </a>
 </g>
-<!-- Node51&#45;&gt;Node52 -->
-<g id="edge4" class="edge"><title>Node51&#45;&gt;Node52</title>
+<!-- Node55&#45;&gt;Node56 -->
+<g id="edge4" class="edge"><title>Node55&#45;&gt;Node56</title>
 <path fill="none" stroke="midnightblue" d="M366.172,-69C374.628,-69 383.246,-69 391.716,-69"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="391.953,-72.5001 401.953,-69 391.953,-65.5001 391.953,-72.5001"/>
 </g>

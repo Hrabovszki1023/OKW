@@ -55,126 +55,126 @@ var sectionId = 'dynsection-16';
 <g id="viewport">
 <title>okw.core.OKW_CurrentObject_Sngltn.TypeKeyWindow</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-113 1313,-113 1313,5 -4,5"/>
-<!-- Node238 -->
-<g id="node1" class="node"><title>Node238</title>
+<!-- Node246 -->
+<g id="node1" class="node"><title>Node246</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-0 0.5,-34 149.5,-34 149.5,-0 0.5,-0"/>
 <text text-anchor="start" x="8.5" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OKW_CurrentObject</text>
 <text text-anchor="middle" x="75" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn.TypeKeyWindow</text>
 </g>
-<!-- Node239 -->
-<g id="node3" class="node"><title>Node239</title>
+<!-- Node247 -->
+<g id="node3" class="node"><title>Node247</title>
 <a xlink:href="classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#ad11e643efb1fe66ee4b6e5d4ea58ad24" target="_top" xlink:title="Hier wird der Kontext auf ein Fenster gesetzt. ">
 <polygon fill="white" stroke="black" points="186.5,-23 186.5,-57 335.5,-57 335.5,-23 186.5,-23"/>
 <text text-anchor="start" x="194.5" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OKW_CurrentObject</text>
 <text text-anchor="middle" x="261" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn.setWindowName</text>
 </a>
 </g>
-<!-- Node238&#45;&gt;Node239 -->
-<g id="edge2" class="edge"><title>Node238&#45;&gt;Node239</title>
+<!-- Node246&#45;&gt;Node247 -->
+<g id="edge2" class="edge"><title>Node246&#45;&gt;Node247</title>
 <path fill="none" stroke="midnightblue" d="M149.582,-26.2225C158.393,-27.3121 167.435,-28.4301 176.373,-29.5353"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="176.048,-33.0217 186.402,-30.7755 176.907,-26.0746 176.048,-33.0217"/>
 </g>
-<!-- Node243 -->
-<g id="node11" class="node"><title>Node243</title>
+<!-- Node251 -->
+<g id="node11" class="node"><title>Node251</title>
 <a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. ">
 <polygon fill="white" stroke="black" points="756,-29.5 756,-50.5 916,-50.5 916,-29.5 756,-29.5"/>
 <text text-anchor="middle" x="836" y="-37.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
-<!-- Node238&#45;&gt;Node243 -->
-<g id="edge22" class="edge"><title>Node238&#45;&gt;Node243</title>
+<!-- Node246&#45;&gt;Node251 -->
+<g id="edge22" class="edge"><title>Node246&#45;&gt;Node251</title>
 <path fill="none" stroke="midnightblue" d="M149.782,-11.1091C270.272,-2.86067 514.651,8.73131 720,-14 742.917,-16.5368 767.924,-21.8111 788.832,-26.9505"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="788.187,-30.3974 798.74,-29.45 789.9,-23.61 788.187,-30.3974"/>
 </g>
-<!-- Node240 -->
-<g id="node5" class="node"><title>Node240</title>
+<!-- Node248 -->
+<g id="node5" class="node"><title>Node248</title>
 <a xlink:href="classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#a51204f2563ba8defb737da6653705819" target="_top" xlink:title="Methode aktualisert zwei Werte: ">
 <polygon fill="white" stroke="black" points="372.5,-23 372.5,-57 521.5,-57 521.5,-23 372.5,-23"/>
 <text text-anchor="start" x="380.5" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OKW_CurrentObject</text>
 <text text-anchor="middle" x="447" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn.updateObject</text>
 </a>
 </g>
-<!-- Node239&#45;&gt;Node240 -->
-<g id="edge4" class="edge"><title>Node239&#45;&gt;Node240</title>
+<!-- Node247&#45;&gt;Node248 -->
+<g id="edge4" class="edge"><title>Node247&#45;&gt;Node248</title>
 <path fill="none" stroke="midnightblue" d="M335.582,-40C344.393,-40 353.435,-40 362.373,-40"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="362.402,-43.5001 372.402,-40 362.402,-36.5001 362.402,-43.5001"/>
 </g>
-<!-- Node241 -->
-<g id="node7" class="node"><title>Node241</title>
+<!-- Node249 -->
+<g id="node7" class="node"><title>Node249</title>
 <a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html#aeec07d71cbebe71ec3ec4d27e86d6c5c" target="_top" xlink:title="Die Methode liefert das Frame&#45;Object des gegebenen FN eines Fensterobjektes zurück. ">
 <polygon fill="white" stroke="black" points="558.5,-75 558.5,-109 719.5,-109 719.5,-75 558.5,-75"/>
 <text text-anchor="start" x="566.5" y="-96" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
 <text text-anchor="middle" x="639" y="-83" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn.getParentObjectByName</text>
 </a>
 </g>
-<!-- Node240&#45;&gt;Node241 -->
-<g id="edge6" class="edge"><title>Node240&#45;&gt;Node241</title>
+<!-- Node248&#45;&gt;Node249 -->
+<g id="edge6" class="edge"><title>Node248&#45;&gt;Node249</title>
 <path fill="none" stroke="midnightblue" d="M509.868,-57.0267C527.853,-61.8976 547.606,-67.2474 566.136,-72.2659"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="565.424,-75.6991 575.991,-74.935 567.253,-68.9425 565.424,-75.6991"/>
 </g>
-<!-- Node246 -->
-<g id="node17" class="node"><title>Node246</title>
+<!-- Node254 -->
+<g id="node17" class="node"><title>Node254</title>
 <a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html#a0a71734828093357dfc88b5fa242e361" target="_top" xlink:title="Die Methode liefert das Objekt des gegebenen Kindobjekttests zurück. ">
 <polygon fill="white" stroke="black" points="561.5,-23 561.5,-57 716.5,-57 716.5,-23 561.5,-23"/>
 <text text-anchor="start" x="569.5" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
 <text text-anchor="middle" x="639" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn.getChildObjectByName</text>
 </a>
 </g>
-<!-- Node240&#45;&gt;Node246 -->
-<g id="edge16" class="edge"><title>Node240&#45;&gt;Node246</title>
+<!-- Node248&#45;&gt;Node254 -->
+<g id="edge16" class="edge"><title>Node248&#45;&gt;Node254</title>
 <path fill="none" stroke="midnightblue" d="M521.507,-40C531.208,-40 541.218,-40 551.112,-40"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="551.362,-43.5001 561.362,-40 551.362,-36.5001 551.362,-43.5001"/>
 </g>
-<!-- Node242 -->
-<g id="node9" class="node"><title>Node242</title>
+<!-- Node250 -->
+<g id="node9" class="node"><title>Node250</title>
 <a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4" target="_top" xlink:title="Loggt eine Nachricht. ">
 <polygon fill="white" stroke="black" points="769,-72 769,-106 903,-106 903,-72 769,-72"/>
 <text text-anchor="start" x="777" y="-93" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
 <text text-anchor="middle" x="836" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">PrintDebug</text>
 </a>
 </g>
-<!-- Node241&#45;&gt;Node242 -->
-<g id="edge8" class="edge"><title>Node241&#45;&gt;Node242</title>
+<!-- Node249&#45;&gt;Node250 -->
+<g id="edge8" class="edge"><title>Node249&#45;&gt;Node250</title>
 <path fill="none" stroke="midnightblue" d="M719.696,-90.7711C732.608,-90.5745 745.942,-90.3714 758.771,-90.1761"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="758.988,-93.6733 768.933,-90.0213 758.881,-86.6741 758.988,-93.6733"/>
 </g>
-<!-- Node241&#45;&gt;Node243 -->
-<g id="edge10" class="edge"><title>Node241&#45;&gt;Node243</title>
+<!-- Node249&#45;&gt;Node251 -->
+<g id="edge10" class="edge"><title>Node249&#45;&gt;Node251</title>
 <path fill="none" stroke="midnightblue" d="M703.505,-74.9733C730.451,-67.8608 761.264,-59.7272 786.391,-53.0946"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="787.299,-56.475 796.075,-50.5386 785.513,-49.7068 787.299,-56.475"/>
 </g>
-<!-- Node244 -->
-<g id="node13" class="node"><title>Node244</title>
+<!-- Node252 -->
+<g id="node13" class="node"><title>Node252</title>
 <a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="952.5,-29.5 952.5,-50.5 1119.5,-50.5 1119.5,-29.5 952.5,-29.5"/>
 <text text-anchor="middle" x="1036" y="-37.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
-<!-- Node243&#45;&gt;Node244 -->
-<g id="edge12" class="edge"><title>Node243&#45;&gt;Node244</title>
+<!-- Node251&#45;&gt;Node252 -->
+<g id="edge12" class="edge"><title>Node251&#45;&gt;Node252</title>
 <path fill="none" stroke="midnightblue" d="M916.195,-40C924.709,-40 933.423,-40 942.075,-40"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="942.189,-43.5001 952.189,-40 942.189,-36.5001 942.189,-43.5001"/>
 </g>
-<!-- Node245 -->
-<g id="node15" class="node"><title>Node245</title>
+<!-- Node253 -->
+<g id="node15" class="node"><title>Node253</title>
 <a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="1156,-23 1156,-57 1308,-57 1308,-23 1156,-23"/>
 <text text-anchor="start" x="1164" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
 <text text-anchor="middle" x="1232" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00">ContentSingleValue</text>
 </a>
 </g>
-<!-- Node244&#45;&gt;Node245 -->
-<g id="edge14" class="edge"><title>Node244&#45;&gt;Node245</title>
+<!-- Node252&#45;&gt;Node253 -->
+<g id="edge14" class="edge"><title>Node252&#45;&gt;Node253</title>
 <path fill="none" stroke="midnightblue" d="M1119.69,-40C1128.29,-40 1137.04,-40 1145.67,-40"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1145.72,-43.5001 1155.72,-40 1145.72,-36.5001 1145.72,-43.5001"/>
 </g>
-<!-- Node246&#45;&gt;Node242 -->
-<g id="edge18" class="edge"><title>Node246&#45;&gt;Node242</title>
+<!-- Node254&#45;&gt;Node250 -->
+<g id="edge18" class="edge"><title>Node254&#45;&gt;Node250</title>
 <path fill="none" stroke="midnightblue" d="M707.348,-57.0003C723.977,-61.1364 741.874,-65.588 758.879,-69.8175"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="758.222,-73.2607 768.771,-72.278 759.911,-66.4677 758.222,-73.2607"/>
 </g>
-<!-- Node246&#45;&gt;Node243 -->
-<g id="edge20" class="edge"><title>Node246&#45;&gt;Node243</title>
+<!-- Node254&#45;&gt;Node251 -->
+<g id="edge20" class="edge"><title>Node254&#45;&gt;Node251</title>
 <path fill="none" stroke="midnightblue" d="M716.577,-40C726.166,-40 736.033,-40 745.791,-40"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="745.904,-43.5001 755.904,-40 745.904,-36.5001 745.904,-43.5001"/>
 </g>

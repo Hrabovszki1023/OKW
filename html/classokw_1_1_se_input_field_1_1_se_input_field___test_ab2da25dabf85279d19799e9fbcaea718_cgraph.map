@@ -1,0 +1,51 @@
+<map id="okw.SeInputField.SeInputField_Test.tcVerifyCaption" name="okw.SeInputField.SeInputField_Test.tcVerifyCaption">
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="259,943,419,972"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#aaa7465ee7f135c724668d8b22dc2219f" title="Startet die gegebene Anwendung. " alt="" coords="263,36,415,65"/>
+<area shape="rect" id="node26" href="$classokw_1_1core_1_1_e_n.html#ae24d951e607b9b82af4f3b80e71285b9" title="Tastatureingaben von Daten in das aktive Fensterobjekt. " alt="" coords="261,89,416,119"/>
+<area shape="rect" id="node35" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="245,143,432,172"/>
+<area shape="rect" id="node44" href="$classokw_1_1core_1_1_e_n.html#adb1179b7a549509b59f95a87a52e295d" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="255,196,423,225"/>
+<area shape="rect" id="node53" href="$classokw_1_1core_1_1_e_n.html#a9cc29f6315e5041f2b36f1eb6a14e334" title="Überprüft die Überschrift des Objektes. " alt="" coords="248,889,429,919"/>
+<area shape="rect" id="node62" href="$classokw_1_1core_1_1_e_n.html#a3de04697f1873ab6773a068a3159f1d1" title="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert. " alt="" coords="261,249,416,279"/>
+<area shape="rect" id="node69" href="$classokw_1_1core_1_1_e_n.html#aba06d28c60512e1dc55902403abbd3f6" title="Beendet eine gegebene Anwendung. " alt="" coords="263,303,415,332"/>
+<area shape="rect" id="node76" href="$classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" title="Beendet den Test, bzw. " alt="" coords="264,996,413,1025"/>
+<area shape="rect" id="node81" href="$classokw_1_1core_1_1_e_n.html#afbdb32a44d83abbf58222e5920004f28" title="Prüft, ob das gegebene Objekt existiert. " alt="" coords="252,356,425,385"/>
+<area shape="rect" id="node88" href="$classokw_1_1core_1_1_e_n.html#a4f454838a66107f968f9d50241180804" title="Vergleicht den Fokus&#45;Zustand des gegebenen Objekts mit dem erwarteten Wert. " alt="" coords="241,409,436,439"/>
+<area shape="rect" id="node95" href="$classokw_1_1core_1_1_e_n.html#a0c807adb569b1a479ed716d6ed5010f2" title="Setzt den Fokus auf das gegebene Fensterobjekt. " alt="" coords="260,463,417,492"/>
+<area shape="rect" id="node102" href="$classokw_1_1core_1_1_e_n.html#a67f59cc780c7b380127c430522ae6a62" title="Vergleicht den Fokus&#45;Status des gegebenen Objekts mit dem erwarteten Wert. " alt="" coords="247,516,431,545"/>
+<area shape="rect" id="node109" href="$classokw_1_1core_1_1_e_n.html#a81fa4af81b53e8e8fc2274e3767b9dce" title="Überprüft die Beschreibung des Objektes. " alt="" coords="256,569,421,599"/>
+<area shape="rect" id="node116" href="$classokw_1_1core_1_1_e_n.html#a70ba07cc0050e6bd89dc133c36972d2a" title="Überprüft die Beschreibung des Objektes. " alt="" coords="239,623,439,652"/>
+<area shape="rect" id="node123" href="$classokw_1_1core_1_1_e_n.html#a33c8aac65f5d1f919065a9ec5e47f415" title="Überprüft die Überschrift des Objektes. " alt="" coords="236,676,441,705"/>
+<area shape="rect" id="node130" href="$classokw_1_1core_1_1_e_n.html#a7a19b4149e808ffc7fbaca9d0e6412b3" title="Prüft den Tooltip&#45;Text eines Objektes. " alt="" coords="252,729,425,759"/>
+<area shape="rect" id="node137" href="$classokw_1_1core_1_1_e_n.html#aab0f2e51f9be09e36fbd27a5c8c88511" title="Prüft den Tooltip&#45;Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="235,783,443,812"/>
+<area shape="rect" id="node144" href="$classokw_1_1core_1_1_e_n.html#a1611d27707a732b6f22f301898e530cd" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="232,836,445,865"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="513,596,697,625"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="520,969,691,999"/>
+<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..." alt="" coords="767,596,996,625"/>
+<area shape="rect" id="node11" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls. " alt="" coords="792,961,971,1007"/>
+<area shape="rect" id="node13" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="773,1031,989,1060"/>
+<area shape="rect" id="node18" href="$classokw_1_1core_1_1_core.html#ac20a22275b6aea1c4e551dce1fd0c1e9" title="Startet die gegebene Anwendung. " alt="" coords="524,9,687,39"/>
+<area shape="rect" id="node20" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes. " alt="" coords="792,458,971,505"/>
+<area shape="rect" id="node22" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. " alt="" coords="775,405,988,435"/>
+<area shape="rect" id="node24" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0ec9b7c60041061f1b01d85b703a27a8" title="Startet die gegebene Anwendung. " alt="" coords="777,5,985,35"/>
+<area shape="rect" id="node29" href="$classokw_1_1core_1_1_core.html#ad09bf3a237b88913dbe9ebc228db1cf3" title="Tastatureingaben von Daten in das aktive Fensterobjekt. " alt="" coords="524,63,687,92"/>
+<area shape="rect" id="node33" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0466b45ed636074a1b6cd52de6b5fdd6" title="Tastatureingaben von Daten in das aktive Fensterobjekt. " alt="" coords="777,59,985,88"/>
+<area shape="rect" id="node38" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="508,116,703,145"/>
+<area shape="rect" id="node42" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="784,111,979,158"/>
+<area shape="rect" id="node47" href="$classokw_1_1core_1_1_core.html#aac0d21359cfabf641db830eadeb11721" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="516,169,695,199"/>
+<area shape="rect" id="node51" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a7cc12f50a3b6af352a873d42d947813e" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="787,181,976,227"/>
+<area shape="rect" id="node56" href="$classokw_1_1core_1_1_core.html#a742f7a967804814e172358e1ed9e3579" title="Überprüft die Überschrift des Objektes. " alt="" coords="511,916,700,945"/>
+<area shape="rect" id="node60" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa078c7da434452f524816f58519b395b" title="Überprüft die Überschrift des Objektes. " alt="" coords="787,891,976,938"/>
+<area shape="rect" id="node65" href="$classokw_1_1core_1_1_core.html#a7088065564f2909025435c0c5594926c" title="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert. " alt="" coords="524,223,687,252"/>
+<area shape="rect" id="node72" href="$classokw_1_1core_1_1_core.html#a13d953a145a5e1bc776785f8433ba69c" title="Beendet eine gegebene Anwendung. " alt="" coords="525,276,685,305"/>
+<area shape="rect" id="node79" href="$classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" title="Beendet den Test, bzw. " alt="" coords="525,1023,685,1052"/>
+<area shape="rect" id="node84" href="$classokw_1_1core_1_1_core.html#a47af0e08b2bde199fc5d10dee040ac1b" title="Prüft, ob das gegebene Objekt existiert. " alt="" coords="515,329,696,359"/>
+<area shape="rect" id="node91" href="$classokw_1_1core_1_1_core.html#ade5d877223a28ce11b57c8b94ab1a2eb" title="Vergleicht den Fokus&#45;Zustand des gegebenen Objekts mit dem erwarteten Wert. " alt="" coords="503,383,708,412"/>
+<area shape="rect" id="node98" href="$classokw_1_1core_1_1_core.html#a343aac009274a866520db97ec9cc793a" title="Setzt den Fokus auf das gegebene Fensterobjekt. " alt="" coords="523,436,688,465"/>
+<area shape="rect" id="node105" href="$classokw_1_1core_1_1_core.html#af9261f054d5a82396c678851ade66b1b" title="Vergleicht den Fokus&#45;Status des gegebenen Objekts mit dem erwarteten Wert. " alt="" coords="509,489,701,519"/>
+<area shape="rect" id="node112" href="$classokw_1_1core_1_1_core.html#a278a288682afcbfad17e90df17e3c53d" title="Überprüft die Beschreibung des Objektes. " alt="" coords="517,543,693,572"/>
+<area shape="rect" id="node119" href="$classokw_1_1core_1_1_core.html#a6e3d7fe88a78afa61a1a340dd2da88b7" title="Überprüft die Beschreibung des Objektes. " alt="" coords="500,649,711,679"/>
+<area shape="rect" id="node126" href="$classokw_1_1core_1_1_core.html#a15bd6c1b810f32fe6efcc76ccb10a0ae" title="Überprüft die Überschrift des Objektes. " alt="" coords="499,703,712,732"/>
+<area shape="rect" id="node133" href="$classokw_1_1core_1_1_core.html#aa53c4a10dcd4eb1a6ae2c41eb9f23ee2" title="Prüft den Tooltip&#45;Text eines Objektes. " alt="" coords="513,756,697,785"/>
+<area shape="rect" id="node140" href="$classokw_1_1core_1_1_core.html#a160aacb0d6817770fde1faeaf6749af3" title="Prüft den Tooltip&#45;Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="496,809,715,839"/>
+<area shape="rect" id="node147" href="$classokw_1_1core_1_1_core.html#a32ef0062d4814e329183c7110d2918e2" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="495,863,716,892"/>
+</map>

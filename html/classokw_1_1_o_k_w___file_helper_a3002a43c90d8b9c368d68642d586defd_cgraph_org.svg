@@ -9,37 +9,37 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 45)">
 <title>okw.OKW_FileHelper.move</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-45 527,-45 527,5 -4,5"/>
-<!-- Node46 -->
-<g id="node1" class="node"><title>Node46</title>
+<!-- Node50 -->
+<g id="node1" class="node"><title>Node50</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-19.5 0,-40.5 138,-40.5 138,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="69" y="-27.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_FileHelper.move</text>
 </g>
-<!-- Node47 -->
-<g id="node3" class="node"><title>Node47</title>
+<!-- Node51 -->
+<g id="node3" class="node"><title>Node51</title>
 <a xlink:href="classokw_1_1_o_k_w___file_helper.html#a86faaa4792bbe9d333c7bf2d2de275e3" target="_top" xlink:title="Prüft, ob die gegebene fpsPaFiNa Datei existiert. ">
 <polygon fill="white" stroke="black" points="366.5,-19.5 366.5,-40.5 521.5,-40.5 521.5,-19.5 366.5,-19.5"/>
 <text text-anchor="middle" x="444" y="-27.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_FileHelper.fileExists</text>
 </a>
 </g>
-<!-- Node46&#45;&gt;Node47 -->
-<g id="edge2" class="edge"><title>Node46&#45;&gt;Node47</title>
+<!-- Node50&#45;&gt;Node51 -->
+<g id="edge2" class="edge"><title>Node50&#45;&gt;Node51</title>
 <path fill="none" stroke="midnightblue" d="M138.188,-30.7524C150.131,-30.8556 162.424,-30.9449 174,-31 243.333,-31.3301 260.667,-31.3041 330,-31 338.556,-30.9625 347.474,-30.9091 356.386,-30.8463"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="356.454,-34.346 366.427,-30.7718 356.402,-27.3462 356.454,-34.346"/>
 </g>
-<!-- Node48 -->
-<g id="node5" class="node"><title>Node48</title>
+<!-- Node52 -->
+<g id="node5" class="node"><title>Node52</title>
 <a xlink:href="classokw_1_1_o_k_w___file_helper.html#ac5d246c66d38a54d9c7f388550be59e0" target="_top" xlink:title="Löscht die gegebene Datei fpsPaFiNa. ">
 <polygon fill="white" stroke="black" points="174,-0.5 174,-21.5 330,-21.5 330,-0.5 174,-0.5"/>
 <text text-anchor="middle" x="252" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_FileHelper.deleteFile</text>
 </a>
 </g>
-<!-- Node46&#45;&gt;Node48 -->
-<g id="edge4" class="edge"><title>Node46&#45;&gt;Node48</title>
+<!-- Node50&#45;&gt;Node52 -->
+<g id="edge4" class="edge"><title>Node50&#45;&gt;Node52</title>
 <path fill="none" stroke="midnightblue" d="M138.184,-22.8169C146.551,-21.9483 155.182,-21.0522 163.774,-20.16"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="164.24,-23.6306 173.825,-19.1165 163.517,-16.668 164.24,-23.6306"/>
 </g>
-<!-- Node48&#45;&gt;Node47 -->
-<g id="edge6" class="edge"><title>Node48&#45;&gt;Node47</title>
+<!-- Node52&#45;&gt;Node51 -->
+<g id="edge6" class="edge"><title>Node52&#45;&gt;Node51</title>
 <path fill="none" stroke="midnightblue" d="M330.094,-18.728C338.675,-19.5772 347.455,-20.446 356.144,-21.3059"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="355.991,-24.8078 366.287,-22.3096 356.68,-17.8418 355.991,-24.8078"/>
 </g>

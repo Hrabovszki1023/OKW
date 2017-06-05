@@ -9,96 +9,96 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 228)">
 <title>okw.OKW_Memorize_Sngltn.set</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-228 761,-228 761,5 -4,5"/>
-<!-- Node43 -->
-<g id="node1" class="node"><title>Node43</title>
+<!-- Node160 -->
+<g id="node1" class="node"><title>Node160</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-98.5 0.5,-119.5 159.5,-119.5 159.5,-98.5 0.5,-98.5"/>
 <text text-anchor="middle" x="80" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Memorize_Sngltn.set</text>
 </g>
-<!-- Node44 -->
-<g id="node3" class="node"><title>Node44</title>
+<!-- Node161 -->
+<g id="node3" class="node"><title>Node161</title>
 <a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. ">
 <polygon fill="white" stroke="black" points="200,-196.5 200,-217.5 360,-217.5 360,-196.5 200,-196.5"/>
 <text text-anchor="middle" x="280" y="-204.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
-<!-- Node43&#45;&gt;Node44 -->
-<g id="edge2" class="edge"><title>Node43&#45;&gt;Node44</title>
+<!-- Node160&#45;&gt;Node161 -->
+<g id="edge2" class="edge"><title>Node160&#45;&gt;Node161</title>
 <path fill="none" stroke="midnightblue" d="M92.329,-119.514C112.61,-136.274 154.876,-168.986 196,-187 201.677,-189.487 207.711,-191.692 213.839,-193.642"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="212.927,-197.021 223.508,-196.499 214.91,-190.308 212.927,-197.021"/>
 </g>
-<!-- Node47 -->
-<g id="node9" class="node"><title>Node47</title>
+<!-- Node164 -->
+<g id="node9" class="node"><title>Node164</title>
 <a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#ab4fc711bb4c754f251372ff3b14ab9c9" target="_top" xlink:title="Creates a new hierarchical level in the results file. ">
 <polygon fill="white" stroke="black" points="211.5,-144 211.5,-178 348.5,-178 348.5,-144 211.5,-144"/>
 <text text-anchor="start" x="219.5" y="-165" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Res</text>
 <text text-anchor="middle" x="280" y="-152" font-family="Helvetica,sans-Serif" font-size="10.00">OpenList</text>
 </a>
 </g>
-<!-- Node43&#45;&gt;Node47 -->
-<g id="edge8" class="edge"><title>Node43&#45;&gt;Node47</title>
+<!-- Node160&#45;&gt;Node164 -->
+<g id="edge8" class="edge"><title>Node160&#45;&gt;Node164</title>
 <path fill="none" stroke="midnightblue" d="M120.473,-119.523C144.569,-125.788 175.916,-133.938 204.437,-141.354"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="203.832,-144.813 214.391,-143.942 205.594,-138.038 203.832,-144.813"/>
 </g>
-<!-- Node48 -->
-<g id="node11" class="node"><title>Node48</title>
+<!-- Node165 -->
+<g id="node11" class="node"><title>Node165</title>
 <a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c" target="_top" xlink:title="LogPrint Function: Prints the values of expressions to the results file. ">
 <polygon fill="white" stroke="black" points="213,-92 213,-126 347,-126 347,-92 213,-92"/>
 <text text-anchor="start" x="221" y="-113" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
 <text text-anchor="middle" x="280" y="-100" font-family="Helvetica,sans-Serif" font-size="10.00">Print</text>
 </a>
 </g>
-<!-- Node43&#45;&gt;Node48 -->
-<g id="edge10" class="edge"><title>Node43&#45;&gt;Node48</title>
+<!-- Node160&#45;&gt;Node165 -->
+<g id="edge10" class="edge"><title>Node160&#45;&gt;Node165</title>
 <path fill="none" stroke="midnightblue" d="M159.62,-109C173.82,-109 188.593,-109 202.727,-109"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="202.888,-112.5 212.888,-109 202.888,-105.5 202.888,-112.5"/>
 </g>
-<!-- Node49 -->
-<g id="node13" class="node"><title>Node49</title>
+<!-- Node166 -->
+<g id="node13" class="node"><title>Node166</title>
 <a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a9b54104f7e0b4c0a473877b19dfaed56" target="_top" xlink:title="Closes a hierarchical level in the results file that was opened with ResOpenList. ...">
 <polygon fill="white" stroke="black" points="211.5,-40 211.5,-74 348.5,-74 348.5,-40 211.5,-40"/>
 <text text-anchor="start" x="219.5" y="-61" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Res</text>
 <text text-anchor="middle" x="280" y="-48" font-family="Helvetica,sans-Serif" font-size="10.00">CloseList</text>
 </a>
 </g>
-<!-- Node43&#45;&gt;Node49 -->
-<g id="edge12" class="edge"><title>Node43&#45;&gt;Node49</title>
+<!-- Node160&#45;&gt;Node166 -->
+<g id="edge12" class="edge"><title>Node160&#45;&gt;Node166</title>
 <path fill="none" stroke="midnightblue" d="M120.473,-98.477C144.569,-92.212 175.916,-84.0618 204.437,-76.6463"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="205.594,-79.962 214.391,-74.0582 203.832,-73.1873 205.594,-79.962"/>
 </g>
-<!-- Node50 -->
-<g id="node15" class="node"><title>Node50</title>
+<!-- Node167 -->
+<g id="node15" class="node"><title>Node167</title>
 <a xlink:href="classokw_1_1_o_k_w___memorize___sngltn.html#a3ff14b0c6e596369e1437c59888a104f" target="_top" xlink:title="Liest die Werte der Klasse OKW_Memorize aus einer Datei, gegeben in OKW.OKW_Ini.Xml_Ini_xml, ein. ">
 <polygon fill="white" stroke="black" points="196.5,-0.5 196.5,-21.5 363.5,-21.5 363.5,-0.5 196.5,-0.5"/>
 <text text-anchor="middle" x="280" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Memorize_Sngltn.save</text>
 </a>
 </g>
-<!-- Node43&#45;&gt;Node50 -->
-<g id="edge14" class="edge"><title>Node43&#45;&gt;Node50</title>
+<!-- Node160&#45;&gt;Node167 -->
+<g id="edge14" class="edge"><title>Node160&#45;&gt;Node167</title>
 <path fill="none" stroke="midnightblue" d="M92.329,-98.4856C112.61,-81.7261 154.876,-49.0137 196,-31 201.677,-28.5133 207.711,-26.3081 213.839,-24.3584"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="214.91,-27.6916 223.508,-21.5012 212.927,-20.9786 214.91,-27.6916"/>
 </g>
-<!-- Node45 -->
-<g id="node5" class="node"><title>Node45</title>
+<!-- Node162 -->
+<g id="node5" class="node"><title>Node162</title>
 <a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="400.5,-196.5 400.5,-217.5 567.5,-217.5 567.5,-196.5 400.5,-196.5"/>
 <text text-anchor="middle" x="484" y="-204.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
-<!-- Node44&#45;&gt;Node45 -->
-<g id="edge4" class="edge"><title>Node44&#45;&gt;Node45</title>
+<!-- Node161&#45;&gt;Node162 -->
+<g id="edge4" class="edge"><title>Node161&#45;&gt;Node162</title>
 <path fill="none" stroke="midnightblue" d="M360.041,-207C370.003,-207 380.259,-207 390.403,-207"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="390.495,-210.5 400.495,-207 390.495,-203.5 390.495,-210.5"/>
 </g>
-<!-- Node46 -->
-<g id="node7" class="node"><title>Node46</title>
+<!-- Node163 -->
+<g id="node7" class="node"><title>Node163</title>
 <a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="604,-190 604,-224 756,-224 756,-190 604,-190"/>
 <text text-anchor="start" x="612" y="-211" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
 <text text-anchor="middle" x="680" y="-198" font-family="Helvetica,sans-Serif" font-size="10.00">ContentSingleValue</text>
 </a>
 </g>
-<!-- Node45&#45;&gt;Node46 -->
-<g id="edge6" class="edge"><title>Node45&#45;&gt;Node46</title>
+<!-- Node162&#45;&gt;Node163 -->
+<g id="edge6" class="edge"><title>Node162&#45;&gt;Node163</title>
 <path fill="none" stroke="midnightblue" d="M567.69,-207C576.29,-207 585.041,-207 593.669,-207"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="593.725,-210.5 603.725,-207 593.725,-203.5 593.725,-210.5"/>
 </g>

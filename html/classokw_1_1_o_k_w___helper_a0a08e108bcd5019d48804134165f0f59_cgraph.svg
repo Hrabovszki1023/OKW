@@ -48,65 +48,65 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 748;
 var viewHeight = 76;
-var sectionId = 'dynsection-3';
+var sectionId = 'dynsection-4';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>okw.OKW_Helper.getLeftFromDelimiterNumber</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-72 745,-72 745,5 -4,5"/>
-<!-- Node16 -->
-<g id="node1" class="node"><title>Node16</title>
+<!-- Node27 -->
+<g id="node1" class="node"><title>Node27</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-20 0.5,-54 151.5,-54 151.5,-20 0.5,-20"/>
 <text text-anchor="start" x="8.5" y="-41" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Helper.getLeftFrom</text>
 <text text-anchor="middle" x="76" y="-28" font-family="Helvetica,sans-Serif" font-size="10.00">DelimiterNumber</text>
 </g>
-<!-- Node17 -->
-<g id="node3" class="node"><title>Node17</title>
+<!-- Node28 -->
+<g id="node3" class="node"><title>Node28</title>
 <a xlink:href="classokw_1_1_o_k_w___helper.html#a268ba5b6db697acd241f3ebea12c4194" target="_top" xlink:title="Splittet einen String am angegebenen Separator auf. ">
 <polygon fill="white" stroke="black" points="197,-46.5 197,-67.5 339,-67.5 339,-46.5 197,-46.5"/>
 <text text-anchor="middle" x="268" y="-54.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Helper.splitString</text>
 </a>
 </g>
-<!-- Node16&#45;&gt;Node17 -->
-<g id="edge2" class="edge"><title>Node16&#45;&gt;Node17</title>
+<!-- Node27&#45;&gt;Node28 -->
+<g id="edge2" class="edge"><title>Node27&#45;&gt;Node28</title>
 <path fill="none" stroke="midnightblue" d="M151.608,-44.8758C163.133,-46.0764 175.07,-47.3197 186.71,-48.5323"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="186.537,-52.0332 196.846,-49.5882 187.263,-45.0708 186.537,-52.0332"/>
 </g>
-<!-- Node18 -->
-<g id="node5" class="node"><title>Node18</title>
+<!-- Node29 -->
+<g id="node5" class="node"><title>Node29</title>
 <a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. ">
 <polygon fill="white" stroke="black" points="188,-6.5 188,-27.5 348,-27.5 348,-6.5 188,-6.5"/>
 <text text-anchor="middle" x="268" y="-14.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
-<!-- Node16&#45;&gt;Node18 -->
-<g id="edge4" class="edge"><title>Node16&#45;&gt;Node18</title>
+<!-- Node27&#45;&gt;Node29 -->
+<g id="edge4" class="edge"><title>Node27&#45;&gt;Node29</title>
 <path fill="none" stroke="midnightblue" d="M151.608,-29.1242C160.131,-28.2364 168.879,-27.3251 177.566,-26.4202"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="178.135,-29.88 187.718,-25.3627 177.409,-22.9177 178.135,-29.88"/>
 </g>
-<!-- Node19 -->
-<g id="node7" class="node"><title>Node19</title>
+<!-- Node30 -->
+<g id="node7" class="node"><title>Node30</title>
 <a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="384.5,-6.5 384.5,-27.5 551.5,-27.5 551.5,-6.5 384.5,-6.5"/>
 <text text-anchor="middle" x="468" y="-14.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
-<!-- Node18&#45;&gt;Node19 -->
-<g id="edge6" class="edge"><title>Node18&#45;&gt;Node19</title>
+<!-- Node29&#45;&gt;Node30 -->
+<g id="edge6" class="edge"><title>Node29&#45;&gt;Node30</title>
 <path fill="none" stroke="midnightblue" d="M348.195,-17C356.709,-17 365.423,-17 374.075,-17"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="374.189,-20.5001 384.189,-17 374.189,-13.5001 374.189,-20.5001"/>
 </g>
-<!-- Node20 -->
-<g id="node9" class="node"><title>Node20</title>
+<!-- Node31 -->
+<g id="node9" class="node"><title>Node31</title>
 <a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="588,-0 588,-34 740,-34 740,-0 588,-0"/>
 <text text-anchor="start" x="596" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
 <text text-anchor="middle" x="664" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">ContentSingleValue</text>
 </a>
 </g>
-<!-- Node19&#45;&gt;Node20 -->
-<g id="edge8" class="edge"><title>Node19&#45;&gt;Node20</title>
+<!-- Node30&#45;&gt;Node31 -->
+<g id="edge8" class="edge"><title>Node30&#45;&gt;Node31</title>
 <path fill="none" stroke="midnightblue" d="M551.69,-17C560.29,-17 569.041,-17 577.669,-17"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="577.725,-20.5001 587.725,-17 577.725,-13.5001 577.725,-20.5001"/>
 </g>

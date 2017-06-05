@@ -613,54 +613,54 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node47 -->
 <g id="node93" class="node"><title>Node47</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ab048c55c3dbbdbdddfabe5cfffb1d889" target="_top" xlink:title="Tastatureingabe in das aktuelle Objekt. ">
-<polygon fill="white" stroke="black" points="385,-156 385,-190 531,-190 531,-156 385,-156"/>
-<text text-anchor="start" x="393" y="-177" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="458" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.TypeKey</text>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1_all_methods___single_value.html#a8f05accdc25bb663a5187cf32453f6e7" target="_top" xlink:title="public String getFN() { return &quot;Rechner.All_MethodsObj&quot;; } ">
+<polygon fill="white" stroke="black" points="389.5,-156 389.5,-190 526.5,-190 526.5,-156 389.5,-156"/>
+<text text-anchor="start" x="397.5" y="-177" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.AllMethods</text>
+<text text-anchor="middle" x="458" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">_SingleValue.ClickOn</text>
 </a>
 </g>
 <!-- Node2&#45;&gt;Node47 -->
 <g id="edge92" class="edge"><title>Node2&#45;&gt;Node47</title>
-<path fill="none" stroke="midnightblue" d="M263.57,-1055.66C271.943,-913.861 313.1,-266.206 370,-199 374.22,-194.015 379.346,-189.96 384.979,-186.665"/>
+<path fill="none" stroke="midnightblue" d="M263.57,-1055.66C271.943,-913.861 313.1,-266.206 370,-199 375.25,-192.799 381.9,-188.037 389.185,-184.387"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="260.073,-1055.5 262.983,-1065.69 267.061,-1055.91 260.073,-1055.5"/>
 </g>
 <!-- Node48 -->
 <g id="node95" class="node"><title>Node48</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ab8c870d4fbe1a9eab110f75320991f64" target="_top" xlink:title="Tastatur Eingabe an das Objekt. ">
-<polygon fill="white" stroke="black" points="392.5,-104 392.5,-138 523.5,-138 523.5,-104 392.5,-104"/>
-<text text-anchor="start" x="400.5" y="-125" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="458" y="-112" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.TypeKey</text>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ab048c55c3dbbdbdddfabe5cfffb1d889" target="_top" xlink:title="Tastatureingabe in das aktuelle Objekt. ">
+<polygon fill="white" stroke="black" points="385,-104 385,-138 531,-138 531,-104 385,-104"/>
+<text text-anchor="start" x="393" y="-125" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="458" y="-112" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.TypeKey</text>
 </a>
 </g>
 <!-- Node2&#45;&gt;Node48 -->
 <g id="edge94" class="edge"><title>Node2&#45;&gt;Node48</title>
-<path fill="none" stroke="midnightblue" d="M263.384,-1055.48C271.02,-908.349 309.847,-218.533 370,-147 375.947,-139.928 383.716,-134.726 392.177,-130.91"/>
+<path fill="none" stroke="midnightblue" d="M263.384,-1055.48C271.02,-908.349 309.847,-218.533 370,-147 374.204,-142.001 379.318,-137.936 384.944,-134.635"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="259.869,-1055.69 262.851,-1065.86 266.86,-1056.05 259.869,-1055.69"/>
 </g>
 <!-- Node49 -->
 <g id="node97" class="node"><title>Node49</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a6e73dcc31ebb9e5e1d7d71ef93a6887e" target="_top" xlink:title="okw.gui.adapter.selenium.\lSeInputCheckbox.SeInputCheckbox">
-<polygon fill="white" stroke="black" points="370,-52 370,-86 546,-86 546,-52 370,-52"/>
-<text text-anchor="start" x="378" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="458" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputCheckbox.SeInputCheckbox</text>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ab8c870d4fbe1a9eab110f75320991f64" target="_top" xlink:title="Tastatur Eingabe an das Objekt. ">
+<polygon fill="white" stroke="black" points="392.5,-52 392.5,-86 523.5,-86 523.5,-52 392.5,-52"/>
+<text text-anchor="start" x="400.5" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="458" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.TypeKey</text>
 </a>
 </g>
 <!-- Node2&#45;&gt;Node49 -->
 <g id="edge96" class="edge"><title>Node2&#45;&gt;Node49</title>
-<path fill="none" stroke="midnightblue" d="M263.213,-1055.4C270.133,-903.25 306.576,-170.883 370,-95 372.758,-91.6997 375.914,-88.8063 379.352,-86.2708"/>
+<path fill="none" stroke="midnightblue" d="M263.213,-1055.4C270.133,-903.25 306.576,-170.883 370,-95 375.926,-87.9104 383.683,-82.6987 392.138,-78.8779"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="259.702,-1055.57 262.749,-1065.72 266.695,-1055.88 259.702,-1055.57"/>
 </g>
 <!-- Node50 -->
 <g id="node99" class="node"><title>Node50</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a065bf42fe3ac6802ebac1bb25099e89a" target="_top" xlink:title="Ermittelt den aktuellen Wert des RadioButtons. ">
-<polygon fill="white" stroke="black" points="392.5,-0 392.5,-34 523.5,-34 523.5,-0 392.5,-0"/>
-<text text-anchor="start" x="400.5" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="458" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputRadio.getValue</text>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a6e73dcc31ebb9e5e1d7d71ef93a6887e" target="_top" xlink:title="okw.gui.adapter.selenium.\lSeInputCheckbox.SeInputCheckbox">
+<polygon fill="white" stroke="black" points="370,-0 370,-34 546,-34 546,-0 370,-0"/>
+<text text-anchor="start" x="378" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="458" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputCheckbox.SeInputCheckbox</text>
 </a>
 </g>
 <!-- Node2&#45;&gt;Node50 -->
 <g id="edge98" class="edge"><title>Node2&#45;&gt;Node50</title>
-<path fill="none" stroke="midnightblue" d="M263.053,-1055.44C269.277,-898.65 303.284,-123.261 370,-43 375.906,-35.8945 383.653,-30.674 392.104,-26.8492"/>
+<path fill="none" stroke="midnightblue" d="M263.053,-1055.44C269.277,-898.65 303.284,-123.261 370,-43 372.749,-39.6922 375.898,-36.793 379.33,-34.2529"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="259.547,-1055.51 262.652,-1065.64 266.542,-1055.79 259.547,-1055.51"/>
 </g>
 </g>

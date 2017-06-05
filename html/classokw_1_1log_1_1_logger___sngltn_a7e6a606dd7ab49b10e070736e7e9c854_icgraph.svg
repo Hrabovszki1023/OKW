@@ -55,52 +55,52 @@ var sectionId = 'dynsection-11';
 <g id="viewport">
 <title>okw.log.Logger_Sngltn.ResOpenListDebug</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-137 511,-137 511,5 -4,5"/>
-<!-- Node768 -->
-<g id="node1" class="node"><title>Node768</title>
+<!-- Node1995 -->
+<g id="node1" class="node"><title>Node1995</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-59 0.5,-93 137.5,-93 137.5,-59 0.5,-59"/>
 <text text-anchor="start" x="8.5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Res</text>
 <text text-anchor="middle" x="69" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">OpenListDebug</text>
 </g>
-<!-- Node769 -->
-<g id="node3" class="node"><title>Node769</title>
+<!-- Node1996 -->
+<g id="node3" class="node"><title>Node1996</title>
 <a xlink:href="classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0" target="_top" xlink:title="Keine Beschreibung zu &quot;LogCaption&quot; verfügbar. ">
 <polygon fill="white" stroke="black" points="180,-111.5 180,-132.5 306,-132.5 306,-111.5 180,-111.5"/>
 <text text-anchor="middle" x="243" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.LogCaption</text>
 </a>
 </g>
-<!-- Node768&#45;&gt;Node769 -->
-<g id="edge2" class="edge"><title>Node768&#45;&gt;Node769</title>
+<!-- Node1995&#45;&gt;Node1996 -->
+<g id="edge2" class="edge"><title>Node1995&#45;&gt;Node1996</title>
 <path fill="none" stroke="midnightblue" d="M143.73,-95.7561C164.167,-101.159 185.526,-106.806 203.173,-111.471"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="144.354,-92.3009 133.791,-93.1287 142.564,-99.0684 144.354,-92.3009"/>
 </g>
-<!-- Node770 -->
-<g id="node5" class="node"><title>Node770</title>
+<!-- Node1997 -->
+<g id="node5" class="node"><title>Node1997</title>
 <a xlink:href="classokw_1_1core_1_1_o_k.html#a7c6a02d1f58952de8cc3591379cdfbe3" target="_top" xlink:title="Dokumentiert den Wert der ausgewählten Zelle. ">
 <polygon fill="white" stroke="black" points="177.5,-59 177.5,-93 308.5,-93 308.5,-59 177.5,-59"/>
 <text text-anchor="start" x="185.5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.LogTablecell</text>
 <text text-anchor="middle" x="243" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">Value</text>
 </a>
 </g>
-<!-- Node768&#45;&gt;Node770 -->
-<g id="edge4" class="edge"><title>Node768&#45;&gt;Node770</title>
+<!-- Node1995&#45;&gt;Node1997 -->
+<g id="edge4" class="edge"><title>Node1995&#45;&gt;Node1997</title>
 <path fill="none" stroke="midnightblue" d="M147.927,-76C157.743,-76 167.697,-76 177.284,-76"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="147.769,-72.5001 137.769,-76 147.769,-79.5001 147.769,-72.5001"/>
 </g>
-<!-- Node771 -->
-<g id="node7" class="node"><title>Node771</title>
+<!-- Node1998 -->
+<g id="node7" class="node"><title>Node1998</title>
 <a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html#a905bac544e5962ae15dfe1c1c50f2467" target="_top" xlink:title="Methode initialisiert diese Klasse. ">
 <polygon fill="white" stroke="black" points="174,-7 174,-41 312,-41 312,-7 174,-7"/>
 <text text-anchor="start" x="182" y="-28" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
 <text text-anchor="middle" x="243" y="-15" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn.init</text>
 </a>
 </g>
-<!-- Node768&#45;&gt;Node771 -->
-<g id="edge6" class="edge"><title>Node768&#45;&gt;Node771</title>
+<!-- Node1995&#45;&gt;Node1998 -->
+<g id="edge6" class="edge"><title>Node1995&#45;&gt;Node1998</title>
 <path fill="none" stroke="midnightblue" d="M135.598,-56.0971C152.183,-51.1407 169.816,-45.871 185.898,-41.065"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="134.553,-52.7564 125.974,-58.9733 136.558,-59.4633 134.553,-52.7564"/>
 </g>
-<!-- Node772 -->
-<g id="node9" class="node"><title>Node772</title>
+<!-- Node1999 -->
+<g id="node9" class="node"><title>Node1999</title>
 <a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html#aca3d4bf06ca665795304f02b1bbe24eb" target="_top" xlink:title="Konstuktor der Klasse. ">
 <polygon fill="white" stroke="black" points="348,-0.5 348,-47.5 506,-47.5 506,-0.5 348,-0.5"/>
 <text text-anchor="start" x="356" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
@@ -108,8 +108,8 @@ var sectionId = 'dynsection-11';
 <text text-anchor="middle" x="427" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">Sngltn</text>
 </a>
 </g>
-<!-- Node771&#45;&gt;Node772 -->
-<g id="edge8" class="edge"><title>Node771&#45;&gt;Node772</title>
+<!-- Node1998&#45;&gt;Node1999 -->
+<g id="edge8" class="edge"><title>Node1998&#45;&gt;Node1999</title>
 <path fill="none" stroke="midnightblue" d="M322.041,-24C330.637,-24 339.388,-24 347.984,-24"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="322.038,-20.5001 312.038,-24 322.038,-27.5001 322.038,-20.5001"/>
 </g>
