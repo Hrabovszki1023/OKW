@@ -48,7 +48,6 @@ import okw.*;
  *  OK --> OK: OKW-Keyword
  *  OK --> [*]
  *  NOK --> [*]
- *  FURZ --> NOK
  *  @enduml
  *  
  *  @startuml{OKW_StateClass.png}
@@ -96,9 +95,7 @@ public class Core implements IOKW_State
     /** \~german
      * OKW-Konstuktor: Setzt den Default-Zustand auf OKW.OK.
      *
-     *
      * \~english
-     *
      *
      * \~
      * @author Zoltán Hrabovszki
@@ -123,7 +120,6 @@ public class Core implements IOKW_State
     {
         try
         {
-
             // Init all Singelton...
             Logger_Sngltn Log = Logger_Sngltn.getInstance();
 

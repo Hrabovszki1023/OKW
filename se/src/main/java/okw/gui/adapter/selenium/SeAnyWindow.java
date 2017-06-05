@@ -52,7 +52,19 @@ import okw.OKW_Const_Sngltn;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-
+/**
+ * \~
+ * @defgroup groupSeleniumWindowGUIAdapter Selenium Kindobjekt GUI-Adapter klasse
+ * @ingroup groupSeleniumClasses
+ *
+ * @ingroup groupSeleniumWindowGUIAdapter
+ * \~german
+ * SeAnyWindow ist eine GUI-Adapterklasse.
+ *  \~english
+ *  \~
+ *  @author Zoltán Hrabovszki
+ *  @date 2017-06-05
+ */
 public class SeAnyWindow extends AnyWindow
 {	
     // Logger Instance holen

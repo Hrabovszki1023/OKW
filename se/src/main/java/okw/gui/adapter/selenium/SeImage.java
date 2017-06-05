@@ -40,27 +40,28 @@ package okw.gui.adapter.selenium;
 
 import okw.gui.OKWLocator;
 
-    /** \brief
-     * TODO: \tod Description of SeImage.
-     */ 
-    public class SeImage extends SeAnyChildWindow
+/**
+ * @ingroup groupSeleniumClasses 
+ * \brief
+ * TODO: \tod Description of SeImage.
+ */
+public class SeImage extends SeAnyChildWindow
+{
+
+    /**
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+     */
+    public SeImage( String Locator, OKWLocator... Locators )
     {
+        super( Locator, Locators );
+    }
 
-      /**
-       *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
-       */
-        public SeImage(String Locator, OKWLocator... Locators)
-        {
-        	super(Locator, Locators);
-        }
-
-        
-        /**
-         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
-         */
-          public SeImage(String IframeID, String Locator, OKWLocator... Locators)
-          {
-            super(IframeID, Locator, Locators);
-          }
+    /**
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+     */
+    public SeImage( String IframeID, String Locator, OKWLocator... Locators )
+    {
+        super( IframeID, Locator, Locators );
+    }
 
 }
