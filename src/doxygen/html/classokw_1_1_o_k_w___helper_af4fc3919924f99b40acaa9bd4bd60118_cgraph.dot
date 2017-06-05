@@ -1,0 +1,10 @@
+digraph "okw.OKW_Helper.StrSplit_old"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node211 [label="okw.OKW_Helper.StrSplit_old",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node211 -> Node212 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node212 [label="okw.OKW_Helper.StrArray2\lListStr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper.html#acfd7612a1338a6777ad3e83db2ee58ad",tooltip="Konvertiert einen String-Array nach List-String. "];
+}

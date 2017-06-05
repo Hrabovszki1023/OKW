@@ -1,0 +1,12 @@
+digraph "okw.gui.adapter.selenium.SeBACK.getValue"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node8 [label="okw.gui.adapter.selenium.\lSeBACK.getValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="okw.gui.adapter.selenium.\lSeBACK.LogValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_b_a_c_k.html#a65d2ba6eeca5849cb3e3884232f79a0d",tooltip="Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert. "];
+  Node8 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="okw.gui.adapter.selenium.\lSeBACK.MemorizeValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_b_a_c_k.html#a96bd392f680a445202295b7e0a15117c",tooltip="Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes für das Schlüsselwort MerkeWe..."];
+}

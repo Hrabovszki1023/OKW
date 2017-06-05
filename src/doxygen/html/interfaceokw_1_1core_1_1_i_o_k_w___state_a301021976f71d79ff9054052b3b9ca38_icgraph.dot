@@ -1,0 +1,12 @@
+digraph "okw.core.IOKW_State.SetValue"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node180 [label="okw.core.IOKW_State.SetValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node180 -> Node181 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node181 [label="okw.core.Core.SetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a7088065564f2909025435c0c5594926c",tooltip="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert. "];
+  Node181 -> Node182 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node182 [label="okw.core.EN.SetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a3de04697f1873ab6773a068a3159f1d1",tooltip="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert. "];
+}

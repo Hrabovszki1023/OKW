@@ -1,0 +1,14 @@
+digraph "okw.gui.adapter.selenium.SeAnyChildWindow.getValue"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node162 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.getValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node162 -> Node163 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node163 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.LogValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a82f2021812c449dc5b1624d2093532b4",tooltip="Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert. "];
+  Node162 -> Node164 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node164 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.MemorizeValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a34e6e2cd7b15f0e05c4272941d3248cf",tooltip="Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes für das Schlüsselwort MerkeWe..."];
+  Node162 -> Node165 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node165 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.VerifyValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a61782ba77f680a08d43ec4f3c6491d2b",tooltip="Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert. "];
+}

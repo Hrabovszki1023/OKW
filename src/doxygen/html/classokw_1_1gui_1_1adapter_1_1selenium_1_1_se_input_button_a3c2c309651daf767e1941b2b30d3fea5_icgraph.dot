@@ -1,0 +1,14 @@
+digraph "okw.gui.adapter.selenium.SeInputButton.getCaption"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node21 [label="okw.gui.adapter.selenium.\lSeInputButton.getCaption",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node21 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="okw.gui.adapter.selenium.\lSeInputButton.VerifyCaption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a4cee7cec06604e37b8f6379249708b7d",tooltip="Ermittelt den textuellen Inhalt des Caption für Prüfewert. "];
+  Node21 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="okw.gui.adapter.selenium.\lSeInputButton.LogCaption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#ab3eb7aae9885c8f2f3cd0b298dca3357",tooltip="Ermittelt den textuellen Inhalt der Beschriftung (Caption). "];
+  Node21 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="okw.gui.adapter.selenium.\lSeInputButton.MemorizeCaption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a2ebe2bcbd915dbb94a30e84b05d6eebd",tooltip="Ermittelt den textuellen Inhalt des Caption/Überschrift für das Schlüsselwort MerkeWert. "];
+}

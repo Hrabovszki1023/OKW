@@ -1,0 +1,12 @@
+digraph "okw.OKW_Ini_Sngltn"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{okw.OKW_Ini_Sngltn\n||+ OKW_Ini_Sngltn()\l+ Init()\l+ Read()\l+ LogAll()\l+ Save()\l+ MyDirectory()\l+ getInstance()\l+ Reset()\l+ StringIsNullOrEmpty()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -Instance" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +OKW_CustomSettings" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{okw.OKW_CustomSettings\n|- Language\l- PathSep\l- TimeOutExists\l- TimeOutNotExists\l|+ OKW_CustomSettings()\l+ getLanguage()\l+ setLanguage()\l+ getPathSep()\l+ setPathSep()\l+ getTimeOutExists()\l+ setTimeOutExists()\l+ getTimeOutNotExists()\l+ getTimeOutNotExists()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___custom_settings.html"];
+  Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +OKW_Enviroment" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{okw.OKW_Enviroment\n|- Folder_XML\l- Folder_LogMessages\l- File_OKW_Ini_xml\l- File_OKW_Const_xml\l- File_OKW_Keymaps_xml\l- File_OKW_Memorize_xml\l- File_OKW_Docu_xml_\l- File_OKW_ImplementationMatrix_xml\l|+ OKW_Enviroment()\l+ getFolder_XML()\l+ setFolder_XML()\l+ getFolder_LogMessages()\l+ setFolder_LogMessages()\l+ getFile_OKW_Ini_xml()\l+ setFile_OKW_Ini_xml()\l+ getFile_OKW_Keymaps_xml()\l+ setFile_OKW_Keymaps_xml()\l+ getFile_OKW_Memorize_xml()\l+ setFile_OKW_Memorize_xml()\l+ getFile_OKW_Implementation\lMatrix_xml()\l+ setFile_OKW_Implementation\lMatrix_xml()\l+ getFile_OKW_Const_xml()\l+ setFile_OKW_Const_xml()\l+ getFile_OKW_Docu_xml()\l+ setFile_OKW_Docu_xml()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___enviroment.html"];
+}

@@ -1,0 +1,47 @@
+digraph "okw.gui.adapter.selenium.SeAnyWindow.LogHasFocus"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node212 [label="okw.gui.adapter.selenium.\lSeAnyWindow.LogHasFocus",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node212 -> Node213 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node213 [label="okw.gui.AnyWinBase.LogFunction\lStartDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#abaab572bdbed7b471f659d5dd8c76853",tooltip="Diese Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(fps_FunctionName), und erweitert den gegebenen Methodenname in fps_FunctionName mit this.GetType().FullName um den Klassenbezeichner. "];
+  Node212 -> Node214 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node214 [label="okw.gui.adapter.selenium.\lSeAnyWindow.getHasFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a2406dc361467d086f006ffe1aa8c89fe",tooltip="Methode liefert den aktuellen Zustand Wert des Focus. "];
+  Node214 -> Node213 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node214 -> Node215 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node215 [label="okw.gui.adapter.selenium.\lSeAnyWindow.getExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ad806d20bf0e42d47e0aa5282532d3230",tooltip="Prüft die Existenz des aktuellen Objektes. "];
+  Node215 -> Node216 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node216 [label="okw.gui.AnyWinBase.getLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#a9929f6fae1f4e2c20df79d32d5bc79db",tooltip="Holt den vollständig (rekursiv) aufgelösten (z.B. "];
+  Node216 -> Node217 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node217 [label="okw.gui.OKWLocator.getLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator.html#adc74fc2125dd048dc1cb84e011f47ec8",tooltip="Holt den vollständig (rekursiv) aufgelösten (z.B. "];
+  Node215 -> Node218 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node218 [label="okw.gui.adapter.selenium.\lSeDriver.getInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#acb82765e99981ecc210e7599bbc2c639",tooltip="Gibt die Instance für die einzige Instanz dieser Klasse zurück. "];
+  Node215 -> Node219 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node219 [label="okw.gui.adapter.selenium.\lSeDriver.getElements",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#ae71e420f6619b67bb69ca8d70455d807",tooltip="Ermittelt das Webelement mit der gegebenen frameID und dem gegebenen Locator. "];
+  Node219 -> Node220 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node220 [label="okw.gui.adapter.selenium.\lSeDriver.swichToFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#a502a7d54c1a8b80424cd42a4e168a191",tooltip="Wechselt das aktuelle Frame auf das Frame mit der id=iframeID. "];
+  Node220 -> Node221 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node221 [label="okw.OKW_Helper.StringIsNull\lOrEmpty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper.html#ac042a51d58d56ede78ecff1b082f72f3",tooltip="Prüft ob der gegeben String fpsStrin null oder leer (\"\") ist. "];
+  Node215 -> Node222 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node222 [label="okw.log.Logger_Sngltn.Log\lWarning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a2c15e9b2cd0c6266f4c67b8cb00d92e5",tooltip="LogWarning Function: Logs a warning to the results file. "];
+  Node215 -> Node223 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node223 [label="okw.log.Logger_Sngltn.Log\lPrintDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4",tooltip="Loggt eine Nachricht. "];
+  Node214 -> Node224 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node224 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter. "];
+  Node224 -> Node225 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node225 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei. "];
+  Node225 -> Node226 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node226 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag. "];
+  Node214 -> Node218 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node214 -> Node227 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node227 [label="okw.gui.adapter.selenium.\lSeAnyWindow.Me",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a8b42bf27f4660b4807375a57fa9de815",tooltip="Ermittelt aus dem gegebenen Locator das DOM-Elelement, welches das Objekt representiert. "];
+  Node227 -> Node218 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node227 -> Node228 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node228 [label="okw.gui.adapter.selenium.\lSeDriver.getElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#ae08fe1cf4c694bb3a4dfb1f1837b26bc",tooltip="Ermittelt das Webelement mit der gegebenen frameID und dem gegebenen Locator. "];
+  Node228 -> Node220 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node228 -> Node229 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node229 [label="okw.log.Logger_Sngltn.Log\lPrint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c",tooltip="LogPrint Function: Prints the values of expressions to the results file. "];
+  Node227 -> Node216 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

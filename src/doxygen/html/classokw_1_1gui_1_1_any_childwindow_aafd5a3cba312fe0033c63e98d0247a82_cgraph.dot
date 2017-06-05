@@ -1,0 +1,22 @@
+digraph "okw.gui.AnyChildwindow.WaitForMe"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3 [label="okw.gui.AnyChildwindow.Wait\lForMe",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="okw.FrameObjectDictionary\l_Sngltn.GetOKW",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_frame_object_dictionary___sngltn.html#af0f61f17d968be6f9faf5a3af4c708d5",tooltip="Holt für einen GUI-Object die angehängte Annotation. "];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.gui.AnyWinBase.getKN",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#a064dcf61895c04b3dcd899d901586095",tooltip="Setzten des Objekt KN. "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="okw.OKW.WaitForMe_TO",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1_o_k_w.html#af34bc34f70320801da0d077669491629",tooltip="_T_ime_O_ut in Secunden [s] für das aktuelle Object. "];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="okw.OKW.WaitForMe_PT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1_o_k_w.html#a243bbdc6c866386fd64fd4c4758a14b7",tooltip="_P_olling _T_ime in [ms] für das aktuelle Object. "];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="okw.OKW_TimeOut.getMaxCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___time_out.html#adf7b9cc33db065c1f284bb5db2227b51",tooltip="Anzahl der berechnetten Zyklen. "];
+  Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="okw.gui.AnyChildwindow.get\lExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_childwindow.html#a666fda49ac2e081b65eac689c0a5f5ec",tooltip="Prüft die Existenz des aktuellen Objektes. "];
+  Node3 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="okw.OKW_TimeOut.getPT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___time_out.html#ab7142e5e6adc82f308a70177c71ced2c",tooltip="Wartezeit zwischen zwei Pollings in [ms]. "];
+}

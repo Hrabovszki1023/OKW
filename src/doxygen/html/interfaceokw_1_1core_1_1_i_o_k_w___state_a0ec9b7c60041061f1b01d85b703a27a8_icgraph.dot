@@ -1,0 +1,12 @@
+digraph "okw.core.IOKW_State.StartApp"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node184 [label="okw.core.IOKW_State.StartApp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node184 -> Node185 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node185 [label="okw.core.Core.StartApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ac20a22275b6aea1c4e551dce1fd0c1e9",tooltip="Startet die gegebene Anwendung. "];
+  Node185 -> Node186 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node186 [label="okw.core.EN.StartApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aaa7465ee7f135c724668d8b22dc2219f",tooltip="Startet die gegebene Anwendung. "];
+}

@@ -1,0 +1,26 @@
+digraph "okw.OKW_Helper.ListStringConcat"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node17 [label="okw.OKW_Helper.ListString\lConcat",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="okw.OKW_Const_Sngltn.ConcatHSEP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const___sngltn.html#a8c09d5d14790e264ebca64d6af80cf96",tooltip="Methode verbindet die einzelne Strings eines List<Strings> zu einem string und trennt diese mit der K..."];
+  Node17 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="okw.OKW_Const_Sngltn.ConcatSEP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const___sngltn.html#a8002f97f9fc96fbb3cfdbe04351e23b4",tooltip="Methode verbindet die einzelne Strings eines List<Strings> zu einem string und trennt diese mit der K..."];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="okw.core.OK.MemorizeCaption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#ac2a9670eced42eb1621f02ce9846efd6",tooltip="Keine Beschreibung zu \"MemorizeCaption\" verfügbar. "];
+  Node19 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="okw.core.OK.MemorizeLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#abf2d3b0ea27ab824c3392235e9762d2c",tooltip="Keine Beschreibung zu \"MemorizeLabel\" verfügbar. "];
+  Node19 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="okw.core.OK.MemorizeSelected\lValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a31a33ee47ccd711eef129564c0cc171d",tooltip="Keine Beschreibung zu \"MemorizeSelectedValue\" verfügbar. "];
+  Node19 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="okw.core.OK.MemorizeTablecell\lValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#abb2a76e85290552da0391746609d9303",tooltip="Merkt sich den Wert der gegebenen Zelle in der Tabelle. throws Exception "];
+  Node19 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="okw.core.OK.MemorizeTooltip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a7ec0d0c4a0f507cb107c2d3cbec2c4af",tooltip="Dokumentiert den Tooltip-Text (Kurzinformation) des gegebenen Objekts. "];
+  Node19 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="okw.core.OK.MemorizeValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#aff28467a54fa4cacaf859a83a0f6c552",tooltip="Merkt sich den Standartwert eines Objekts. "];
+  Node17 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="okw.OKW_Const_Sngltn.ConcatVSEP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const___sngltn.html#af7a33c2c7a1d1762b118b4c02bea80d7",tooltip="Methode verbindet die einzelnen Strings eines List<Strings> zu einem string und trennt diese mit der ..."];
+}

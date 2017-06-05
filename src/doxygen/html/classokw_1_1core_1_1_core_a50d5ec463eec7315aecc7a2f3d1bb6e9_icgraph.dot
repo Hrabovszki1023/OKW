@@ -1,0 +1,10 @@
+digraph "okw.core.Core.LogIsActive"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node77 [label="okw.core.Core.LogIsActive",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node77 -> Node78 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node78 [label="okw.core.EN.LogIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#acbeecc6c0bfe7f092b7b612471f5e790",tooltip="Dokumentiert den Status des gegebenen Objekts. "];
+}

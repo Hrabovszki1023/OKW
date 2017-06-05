@@ -1,0 +1,14 @@
+digraph "okw.gui.adapter.selenium.SeAnyChildWindow.getLabel"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node120 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.getLabel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node120 -> Node121 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node121 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.LogLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ae2b4f85d72988ba0d20ea7763e692c9e",tooltip="Logt den textuellen Inhalt des Labels eines Objektes. "];
+  Node120 -> Node122 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node122 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.MemorizeLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a890ebc9edf84edb93569ef77654664df",tooltip="Ermittelt den textuellen Inhalt des Labels für das Schlüsselwort MerkeWert. "];
+  Node120 -> Node123 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node123 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.VerifyLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a703f8e93c741d957f681bc6e7fc4099e",tooltip="Ermittelt den textuellen Inhalt des Labels für Prüfewert. "];
+}

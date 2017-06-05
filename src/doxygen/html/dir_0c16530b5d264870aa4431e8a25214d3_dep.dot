@@ -1,0 +1,10 @@
+digraph "/Users/zoltan/git/OKW/se" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_0c16530b5d264870aa4431e8a25214d3 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_0c16530b5d264870aa4431e8a25214d3.html"];
+    dir_0c16530b5d264870aa4431e8a25214d3 [shape=plaintext label="se"];
+    dir_be767b33c06e16aec676490308ce37bd [shape=box label="src" color="red" fillcolor="white" style="filled" URL="dir_be767b33c06e16aec676490308ce37bd.html"];
+  }
+}

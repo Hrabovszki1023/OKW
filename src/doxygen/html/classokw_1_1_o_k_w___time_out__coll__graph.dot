@@ -1,0 +1,7 @@
+digraph "okw.OKW_TimeOut"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{okw.OKW_TimeOut\n|- PT\l- TO\l|+ OKW_TimeOut()\l+ getPT()\l+ setPT()\l+ getTO()\l+ setTO()\l+ getMaxCount()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

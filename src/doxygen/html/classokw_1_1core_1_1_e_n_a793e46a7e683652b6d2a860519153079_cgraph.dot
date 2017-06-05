@@ -1,0 +1,24 @@
+digraph "okw.core.EN.Sequence"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node263 [label="okw.core.EN.Sequence",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node263 -> Node264 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node264 [label="okw.core.Core.SetLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ae4d17cb7b948458deadda4e4ed53f426",tooltip="Setzt die Sprache auf den gegebenen wert Language. "];
+  Node264 -> Node265 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node265 [label="okw.core.IOKW_State.SetLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad5224b447bfe46ad0ec5c37a9001199c",tooltip="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..."];
+  Node263 -> Node266 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node266 [label="okw.core.Core.Sequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ab0cd601b3ec8b8e20755ed24a3d8680b",tooltip="Ruft die Sequenz eines Fensters auf. "];
+  Node266 -> Node267 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node267 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes. "];
+  Node266 -> Node268 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node268 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter. "];
+  Node268 -> Node269 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node269 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei. "];
+  Node269 -> Node270 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node270 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag. "];
+  Node266 -> Node271 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node271 [label="okw.core.IOKW_State.Sequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a33edc5c4d97bf7f4a35d75619985eac7",tooltip="Ruft die Sequenz eines Fensters auf. "];
+}

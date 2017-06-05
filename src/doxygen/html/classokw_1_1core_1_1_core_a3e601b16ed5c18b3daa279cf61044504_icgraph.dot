@@ -1,0 +1,14 @@
+digraph "okw.core.Core.ClickOn"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node18 [label="okw.core.Core.ClickOn",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="okw.core.EN.ClickOn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aa0ea62b29e5e216241a5b757797f83bf",tooltip="Klickt auf das gegebene Objekt. "];
+  Node18 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="okw.gui.adapter.selenium.\lSeInputRadio.SetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a7dce83be09a4af05f50b0e74aa9d27f7",tooltip="Ein SeInputButton IstkeinMenüobject! -> OKWFrameObjectMethodNotImplemented Auslösen! ..."];
+  Node18 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="okw.gui.adapter.selenium.\lSeRadioList.SeRadioList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a793c9fd7670b1d77ee48996f7b287807"];
+}

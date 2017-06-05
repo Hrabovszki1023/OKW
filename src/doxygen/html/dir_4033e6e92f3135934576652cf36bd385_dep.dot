@@ -1,0 +1,17 @@
+digraph "/Users/zoltan/git/OKW/core/src/main/java/okw" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_6d0f1805523af42a675fba128cf43f17 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="java" fontname="Helvetica", fontsize="10", URL="dir_6d0f1805523af42a675fba128cf43f17.html"]
+  subgraph clusterdir_4033e6e92f3135934576652cf36bd385 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_4033e6e92f3135934576652cf36bd385.html"];
+    dir_4033e6e92f3135934576652cf36bd385 [shape=plaintext label="okw"];
+    dir_34e7d8b0f1db66cd28098468d778c941 [shape=box label="core" color="black" fillcolor="white" style="filled" URL="dir_34e7d8b0f1db66cd28098468d778c941.html"];
+    dir_b5ca14c5e2ca1a95fa067543d8a54038 [shape=box label="exceptions" color="black" fillcolor="white" style="filled" URL="dir_b5ca14c5e2ca1a95fa067543d8a54038.html"];
+    dir_2ae7d242b893eafa24ddfe8057e2b984 [shape=box label="gui" color="black" fillcolor="white" style="filled" URL="dir_2ae7d242b893eafa24ddfe8057e2b984.html"];
+    dir_40ab95b569ed07d877440da500b43fdb [shape=box label="log" color="black" fillcolor="white" style="filled" URL="dir_40ab95b569ed07d877440da500b43fdb.html"];
+    dir_48bb6eb25ae4747de8a800f92eb60677 [shape=box label="parser" color="red" fillcolor="white" style="filled" URL="dir_48bb6eb25ae4747de8a800f92eb60677.html"];
+  }
+  }
+}

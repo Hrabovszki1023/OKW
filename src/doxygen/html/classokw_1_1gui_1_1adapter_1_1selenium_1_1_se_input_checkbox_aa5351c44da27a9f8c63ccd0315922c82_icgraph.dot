@@ -1,0 +1,20 @@
+digraph "okw.gui.adapter.selenium.SeInputCheckbox.getIsSelected"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node39 [label="okw.gui.adapter.selenium.\lSeInputCheckbox.getIsSelected",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node39 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="okw.gui.adapter.selenium.\lSeInputCheckbox.Checking",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#adb5453c4394bcc84970ed9394e516503",tooltip="Method verlässt die Checkbox immer angehakt, egal ob diese vorher angehakt war oder nicht..."];
+  Node40 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="okw.gui.adapter.selenium.\lSeInputCheckbox.SetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#ae11a49c881f65456d65abd1b3ddf8de7"];
+  Node40 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="okw.gui.adapter.selenium.\lSeInputCheckbox.Select",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a37d7733b7807cf4daade07461a506146",tooltip="Erlaubte Werte sind sprachabhängig CHECKED/UNCHECKED. "];
+  Node39 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="okw.gui.adapter.selenium.\lSeInputCheckbox.getValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a19bd403031cbdc003823a7b21c0cf12e",tooltip="Ermittelt/holt den aktuellen Wert der CheckBox. "];
+  Node39 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="okw.gui.adapter.selenium.\lSeInputCheckbox.UnChecking",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a199da37b695d0acd29d83b4eed240418",tooltip="Method verlässt die Checkbox immer unangehakt, egal ob sie vorher angehakt war oder nicht..."];
+  Node44 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

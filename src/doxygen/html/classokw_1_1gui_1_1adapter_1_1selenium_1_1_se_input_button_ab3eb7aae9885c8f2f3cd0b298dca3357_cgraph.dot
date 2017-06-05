@@ -1,0 +1,46 @@
+digraph "okw.gui.adapter.selenium.SeInputButton.LogCaption"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node30 [label="okw.gui.adapter.selenium.\lSeInputButton.LogCaption",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node30 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="okw.gui.AnyWinBase.LogFunction\lStartDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#abaab572bdbed7b471f659d5dd8c76853",tooltip="Diese Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(fps_FunctionName), und erweitert den gegebenen Methodenname in fps_FunctionName mit this.GetType().FullName um den Klassenbezeichner. "];
+  Node30 -> Node32 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="okw.gui.adapter.selenium.\lSeInputButton.getCaption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a3c2c309651daf767e1941b2b30d3fea5",tooltip="Ermittelt den textuellen Inhalt der Caption/Überschrift des Objektes. "];
+  Node32 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 -> Node33 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.WaitForMe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a72faf4aa1717b4178fae1b0570ca9b28",tooltip="Wartet auf das Objekt Wenn kein Fenster gefunden wird,. "];
+  Node33 -> Node34 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node34 [label="okw.log.Logger_Sngltn.Res\lOpenList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#ab4fc711bb4c754f251372ff3b14ab9c9",tooltip="Creates a new hierarchical level in the results file. "];
+  Node33 -> Node35 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node35 [label="okw.log.Logger_Sngltn.Log\lPrint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c",tooltip="LogPrint Function: Prints the values of expressions to the results file. "];
+  Node33 -> Node36 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node36 [label="okw.gui.AnyWinBase.getLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#a9929f6fae1f4e2c20df79d32d5bc79db",tooltip="Holt den vollständig (rekursiv) aufgelösten (z.B. "];
+  Node36 -> Node37 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node37 [label="okw.gui.OKWLocator.getLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator.html#adc74fc2125dd048dc1cb84e011f47ec8",tooltip="Holt den vollständig (rekursiv) aufgelösten (z.B. "];
+  Node33 -> Node38 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node38 [label="okw.log.Logger_Sngltn.Res\lCloseList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a9b54104f7e0b4c0a473877b19dfaed56",tooltip="Closes a hierarchical level in the results file that was opened with ResOpenList. ..."];
+  Node33 -> Node39 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter. "];
+  Node39 -> Node40 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei. "];
+  Node40 -> Node41 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag. "];
+  Node32 -> Node42 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.Me",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a9a138af1fc6ff850d708d66f308a2525",tooltip="Ermittelt aus dem gegebenen Locator das DOM-Elelement, welches das Objekt representiert. "];
+  Node42 -> Node43 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="okw.gui.adapter.selenium.\lSeDriver.getInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#acb82765e99981ecc210e7599bbc2c639",tooltip="Gibt die Instance für die einzige Instanz dieser Klasse zurück. "];
+  Node42 -> Node44 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="okw.gui.adapter.selenium.\lSeDriver.getElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#ae08fe1cf4c694bb3a4dfb1f1837b26bc",tooltip="Ermittelt das Webelement mit der gegebenen frameID und dem gegebenen Locator. "];
+  Node44 -> Node45 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="okw.gui.adapter.selenium.\lSeDriver.swichToFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#a502a7d54c1a8b80424cd42a4e168a191",tooltip="Wechselt das aktuelle Frame auf das Frame mit der id=iframeID. "];
+  Node45 -> Node46 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="okw.OKW_Helper.StringIsNull\lOrEmpty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper.html#ac042a51d58d56ede78ecff1b082f72f3",tooltip="Prüft ob der gegeben String fpsStrin null oder leer (\"\") ist. "];
+  Node44 -> Node35 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 -> Node36 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 -> Node47 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node47 [label="okw.gui.AnyWinBase.LogFunction\lEndDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#a51cf50ace21902b3a5359316f53a7f3e",tooltip="Methode ruft die Methode Logger.Instance.LogFunctionEndDebug() auf. "];
+  Node30 -> Node47 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,13 @@
+digraph "/Users/zoltan/git/OKW/log2html/src/main/java/okw" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d717ae75f5e61c87a1e2df2201b09cfb {
+    graph [ bgcolor="#ddddee", pencolor="black", label="java" fontname="Helvetica", fontsize="10", URL="dir_d717ae75f5e61c87a1e2df2201b09cfb.html"]
+  subgraph clusterdir_87ad73dea16ebb87025cb5014ae597ae {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_87ad73dea16ebb87025cb5014ae597ae.html"];
+    dir_87ad73dea16ebb87025cb5014ae597ae [shape=plaintext label="okw"];
+    dir_ca26d802d000d319dfd82bdb0a90faf5 [shape=box label="log" color="red" fillcolor="white" style="filled" URL="dir_ca26d802d000d319dfd82bdb0a90faf5.html"];
+  }
+  }
+}

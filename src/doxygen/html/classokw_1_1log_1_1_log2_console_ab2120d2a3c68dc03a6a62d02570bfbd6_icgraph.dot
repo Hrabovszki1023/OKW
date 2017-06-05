@@ -1,0 +1,24 @@
+digraph "okw.log.Log2Console.ResCloseList"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node161 [label="okw.log.Log2Console.ResCloseList",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node161 -> Node162 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node162 [label="okw.log.Log2Console.LogFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#ae5d97f0d2c5d086474b811f700e97eb1",tooltip="LogFunctionEnd: "];
+  Node162 -> Node163 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node163 [label="okw.log.Log2Console.LogFunction\lEndDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a02a98178389196a6ac48021d5b116d7d",tooltip="LogFunctionEndDebug: "];
+  Node161 -> Node164 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node164 [label="okw.log.Log2Console.LogFunction\lStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a06fc14df2dcb5b2b28b65b2a5ca07e25"];
+  Node164 -> Node165 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node165 [label="okw.log.Log2Console.LogFunction\lStartDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#ae12be755a9da04599d329cfece22b1ef"];
+  Node161 -> Node166 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node166 [label="okw.log.Log2Console.LogKey\lWordEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a0cfb34192c7f33171638dcde05db6a99",tooltip="LogKeyWordEnd: "];
+  Node161 -> Node167 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node167 [label="okw.log.Log2Console.LogTestcaseEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a3d7f0164c5d9db37f32b9678b96bd2af",tooltip="LogTestcaseEnd: "];
+  Node161 -> Node168 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node168 [label="okw.log.Log2Console.LogSequenceEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a6adb44f183bebb3b2251c595e933e5f7",tooltip="LogSequenceEnd: "];
+  Node161 -> Node169 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node169 [label="okw.log.Log2Console.ResClose\lListDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a5f0ef403d1d3c2c093b2a8b0d6ded070",tooltip="ResCloseListDebug: "];
+}

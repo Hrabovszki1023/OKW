@@ -1,0 +1,12 @@
+digraph "okw.core.IOKW_State.VerifyHasFocus"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node228 [label="okw.core.IOKW_State.Verify\lHasFocus",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node228 -> Node229 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node229 [label="okw.core.Core.VerifyHasFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ade5d877223a28ce11b57c8b94ab1a2eb",tooltip="Vergleicht den Fokus-Zustand des gegebenen Objekts mit dem erwarteten Wert. "];
+  Node229 -> Node230 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node230 [label="okw.core.EN.VerifyHasFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a4f454838a66107f968f9d50241180804",tooltip="Vergleicht den Fokus-Zustand des gegebenen Objekts mit dem erwarteten Wert. "];
+}

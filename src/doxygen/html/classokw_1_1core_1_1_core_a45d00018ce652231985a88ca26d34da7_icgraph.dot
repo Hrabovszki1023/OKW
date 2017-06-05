@@ -1,0 +1,10 @@
+digraph "okw.core.Core.MemorizeCaption"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node125 [label="okw.core.Core.MemorizeCaption",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node125 -> Node126 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node126 [label="okw.core.EN.MemorizeCaption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#ab10f0a1c40f0093a14c4be313d59a94a",tooltip="Keine Beschreibung zu \"MemorizeCaption\" verfügbar. "];
+}

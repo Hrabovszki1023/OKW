@@ -1,0 +1,9 @@
+digraph "/Users/zoltan/git/OKW/core/src/main/java/okw/parser/antlr4" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_48bb6eb25ae4747de8a800f92eb60677 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="parser" fontname="Helvetica", fontsize="10", URL="dir_48bb6eb25ae4747de8a800f92eb60677.html"]
+  dir_9f7ae3fbae9ca993a73a2e7445a1293b [shape=box, label="antlr4", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_9f7ae3fbae9ca993a73a2e7445a1293b.html"];
+  }
+}

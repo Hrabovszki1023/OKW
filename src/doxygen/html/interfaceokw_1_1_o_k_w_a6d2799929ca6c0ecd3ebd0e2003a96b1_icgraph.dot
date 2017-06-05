@@ -1,0 +1,14 @@
+digraph "okw.OKW.VerifyValue_PT"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node74 [label="okw.OKW.VerifyValue_PT",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node74 -> Node75 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node75 [label="okw.core.OK.VerifyValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a68529a54c5b950d3aa005bb87890b703",tooltip="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..."];
+  Node74 -> Node76 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node76 [label="okw.core.OK.VerifyValueWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a6aafc82b46b36f952f2dd61db0f124b8",tooltip="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..."];
+  Node74 -> Node77 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node77 [label="okw.core.OK.VerifyValueREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#acb6c973210e73f47ee34f9df6eac7f83",tooltip="Wichtig: Ein \"EMPTY\"-Wert ist ein ArrayList String welche keine Array-Elemte enthält, also ArrayList.Size() = 0! "];
+}

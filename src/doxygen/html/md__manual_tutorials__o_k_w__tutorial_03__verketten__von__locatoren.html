@@ -1,0 +1,202 @@
+<!-- HTML header for doxygen 1.8.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,400,400italic,600,700italic,700,600italic' rel='stylesheet' type='text/css'>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>OpenKeyWord: OKW Tutorial 3: Verketten von Locatoren</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="OKW_doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">OpenKeyWord
+   &#160;<span id="projectnumber">Build_ID:  , Datum:</span>
+   </div>
+   <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.10 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="pages.html"><span>Zusätzliche&#160;Informationen</span></a></li>
+      <li><a href="namespaces.html"><span>Pakete</span></a></li>
+      <li><a href="annotated.html"><span>Klassen</span></a></li>
+      <li><a href="files.html"><span>Dateien</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('md__manual_tutorials__o_k_w__tutorial_03__verketten__von__locatoren.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">OKW Tutorial 3: Verketten von Locatoren </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2>Wozu die Verkettung von Lokatoren?</h2>
+<p>Eine Verkettung von Locatoren kann notwendig werden, wenn ein Kind-Objekt zusammen mit seinem Eltern-Objekt erkannt werden muss.</p>
+<p>So kann Eingabefeld wie <code>User</code>, aus dem Beispiel in [[OKW Tutorial 3: Der Locator|OKW-Tutorial-3:&ndash;Der-Locator]], in mehreren Fenstern vorkommen und erst in Verbindung mit dem Locator des Eltern-Objektes (=Fenster) kann eine Verwechselung mit einem anderen Objekt ausgeschlossen werden.</p>
+<h2>DRY</h2>
+<p>Nun könnte ohne Verkettung jedes Kind-Objekt einfach die Erkennungseigenschaft des Eltern Objektes mit eingebaut bekommen.</p>
+<p>Das zieht jedoch immer dann einen Wartungsaufwand nach sich, wenn die Objekt-Erkennungseigenschaft des Eltern-Objektes sich ändert: Dann müssen alle Kind-Objekte angepasst werden, die eine Objekterkennungseigenschaft des Eltern-Objektes besitzen.</p>
+<p>Eine Anpassung kann sehr aufwendig werden und der Umstand, dass sich ein Fehler in der Objekt-Erkennungseigenschaft erst <em>während</em> der Ausführung äussert, erschwert und verzögert die Wartung.</p>
+<p>Dem DRY-Prinzip gemäß, liegt eine mögliche Lösung in der Verkettung von Locatoren. - Das wird nun hier in diesem Tutorial gezeigt.</p>
+<h2>Verkettung von Eltern-Objekt Locator und Kind-Objekt Locator</h2>
+<p>Wir nehmen das Beispiel aus dem [[OKW Tutorial 3: Der Locator|OKW-Tutorial-3:&ndash;Der-Locator]] und verketten die Locatoren von <em>Eltern-Objekt</em> und <em>Kind-Objekt</em>.</p>
+<h3>Ziel</h3>
+<p>Das Ziel ist hier, dass der Locator des Eltern-Objektes <code>wp_login</code> dem der Locator des Kind-Objektes <code>User</code> vorangestellt wird:</p>
+<ul>
+<li>Eltern-Object Locator: `"//body/div[@id='login']/.."<code></code></li>
+<li><code>Kind-Object Locator:</code>"//*[@id='user_login']"`</li>
+<li><b>Ergebniss:</b> Soll `"//body/div[@id='login']/..//*[@id='user_login']"` ergeben</li>
+</ul>
+<h3>Die Methoden <code>getLOCATOR()</code> und <code>getLocator()</code></h3>
+<p>Zunächst müssen wir zwei Methoden kennen lernen:</p><ol type="1">
+<li>Die Methode <code>getLOCATOR()</code> holt die Referenz auf den Locator werden.<br />
+ <b>Hinweis:</b> Jede GUI-Adapter Klasse im Paket "se" besitzt ein Field vom Typ <code>OKWLocator</code>.</li>
+<li>Die Methode 'getLocator()' (man beachte die GROSS und klein Schreibung!), die (ggf. den vollständig rekursiv aufgelösten) aktuellen Wert des Locators (hier als XPath) zurückgibt.</li>
+</ol>
+<h3>Eltern-Objekt Locator</h3>
+<p>Wir lassen den Locator des Eltern-Objektes (<code>wp_login</code>) unverändert. Dieser wird im Konstruktor des Klasse definiert:</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> wp_login()</div>
+<div class="line">{</div>
+<div class="line">    super(<span class="stringliteral">&quot;//body/div[@id=&#39;login&#39;]/..&quot;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Entscheidend ist hier `super("//body/div[@id='login']/..");<code>. Hiermit wird in der _XPATH_ Wert </code>"//body/div[@id='login']/.."` in der Locator Klasse des Fensters abgelegt.</p>
+<h3>Kind-Objekt Locator</h3>
+<p>Wir erweitern nun den Locator des Kind-Objektes um den Locator des Eltern-Objektes:</p>
+<p>`public SeInputText Username = new SeInputText("%1$s//*[@id='user_login']", this.getLOCATOR() );`</p>
+<ul>
+<li>Die <em>Referenz</em> des Eltern-Objekt Locators wird im Konstruktor des Kind-Objektes übergeben.</li>
+<li><code>%1$s</code> gibt an, an welcher Stelle, der <em>Wert</em> des Eltern-Objekt Locators ein gesetzt werden soll.</li>
+</ul>
+<p>Das Ganze im Überblick:</p>
+<div class="fragment"><div class="line">@OKW(FN=<span class="stringliteral">&quot;WP-Login&quot;</span>)</div>
+<div class="line">public class wp_login extends SeBrowserChild</div>
+<div class="line">{</div>
+<div class="line"></div>
+<div class="line">    @OKW (FN=<span class="stringliteral">&quot;Username&quot;</span>)</div>
+<div class="line">    public SeInputText Username = new SeInputText(&quot;%1$s<span class="comment">//*[@id=&#39;user_login&#39;]&quot;, this.getLOCATOR() );</span></div>
+<div class="line"></div>
+<div class="line">    public wp_login()</div>
+<div class="line">    {</div>
+<div class="line">        super(<span class="stringliteral">&quot;//body/div[@id=&#39;login&#39;]/..&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Das war´s auch schon prinzipiell: Wenn der Locator der Klasse <code>wp-login"</code> geändert wird, dann bekommen die <em>Verketteten</em> Kind-Objekte automatisch die Änderung mit.</p>
+<h3>Hinweis 1</h3>
+<p>Dem Konstruktor können mehrere (prinzipiell beliebig viele) Locatoren mitgegeben werden. Der erste Parameter ist vom Typ <code>String</code> und enthält typischer weise die XPATH. Danach kommen 0 oder mehr LOCATOR-Referenzen. Der 1. LOCATOR Wert wird für <code>%1$s</code> ersetzt, der 2. LOCATOR wird für <code>%2$s</code> ersetzt usw.</p>
+<h3>Hinweis 2.</h3>
+<p>Ein LOCATOR kann auch an mehreren Stellen eingesetzt werden.</p>
+<div class="fragment"><div class="line">OKWLocator Locator_1 = <span class="keyword">new</span> OKWLocator(<span class="stringliteral">&quot;L1&quot;</span>);</div>
+<div class="line">OKWLocator Locator_2 = <span class="keyword">new</span> OKWLocator(<span class="stringliteral">&quot;L2&quot;</span>);</div>
+<div class="line">OKWLocator Locator = <span class="keyword">new</span> OKWLocator(<span class="stringliteral">&quot;L2=%2$s, L1=%1$s, L2=%2$s, L1=%1$s&quot;</span>, Locator_1, Locator_2);</div>
+<div class="line"></div>
+<div class="line">assertEquals(<span class="stringliteral">&quot;L2=L2, L1=L1, L2=L2, L1=L1&quot;</span>, Locator.getLocator());</div>
+</div><!-- fragment --><p>Damit sind wir mit diesem Tutorial auch schon fertig. </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Erzeugt am Fre Mai 5 2017 11:19:16 für OpenKeyWord von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-593506-12']);
+  _gaq.push(['_setDomainName', 'openkeyword.de']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

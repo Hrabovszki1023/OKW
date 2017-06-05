@@ -1,0 +1,20 @@
+digraph "okw.core.OK.VerifyWCM"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1518 [label="okw.core.OK.VerifyWCM",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1518 -> Node1519 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1519 [label="okw.core.OK.VerifyCaptionWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a461f7511030e7975fe983b2509527529",tooltip="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..."];
+  Node1518 -> Node1520 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1520 [label="okw.core.OK.VerifyLabelWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a4187442dc3574358fda8af18cb03f15e",tooltip="Überprüft die Beschreibung des Objektes. "];
+  Node1518 -> Node1521 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1521 [label="okw.core.OK.VerifySelected\lValueWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b"];
+  Node1518 -> Node1522 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1522 [label="okw.core.OK.VerifyTablecell\lValueWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a30fc98c4004c99e3e37047deac6ad16f"];
+  Node1518 -> Node1523 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1523 [label="okw.core.OK.VerifyTooltipWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#adbf2e96978ec22c0d8febdee394a60e6",tooltip="Prüft den Tooltip-Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..."];
+  Node1518 -> Node1524 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1524 [label="okw.core.OK.VerifyValueWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a6aafc82b46b36f952f2dd61db0f124b8",tooltip="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..."];
+}

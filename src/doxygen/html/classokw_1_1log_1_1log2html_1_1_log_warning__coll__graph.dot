@@ -1,0 +1,16 @@
+digraph "okw.log.log2html.LogWarning"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{okw.log.log2html.LogWarning\n||+ LogWarning()\l# getResult()\l# SetFail()\l# SetPass()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{okw.log.log2html.LogBase\n|~ myID\l~ Info\l~ Level\l~ myIndentionBase\l~ bWarning\l~ bException\l~ bError\l~ AllCount\l~ ErrorCount\l~ ExceptionCount\l~ WarningCount\l~ PassedCount\l~ PrintCount\l~ TestcaseCount\l~ TestcaseFail\l~ TestcasePass\l~ FunctionCount\l~ FunctionFail\l~ FunctionPass\l~ KeyWordCount\l~ KeyWordFail\l~ KeyWordPass\l~ SequensCount\l~ SequensFail\l~ SequensPass\l|+ setParent()\l+ reset()\l+ getParent()\l# SetFail()\l# SetPass()\l# abort()\l# getLevel()\l# getLevelIndention()\l# setWarning()\l# getWarning()\l# setException()\l# getException()\l# setError()\l# getError()\l# getResult()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1log2html_1_1_log_base.html"];
+  Node2 -> Node2 [color="grey25",fontsize="10",style="solid",label=" ~myParent" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" ~myLogs" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{List\< okw.log.log2html.Log\lBase \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node2 [color="grey25",fontsize="10",style="solid",label=" ~myDuration" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{okw.log.log2html.LogTimer\n|~ TimerBegin\l~ TimerEnd\l|+ StartTimer()\l+ StopTimer()\l+ getNanos()\l+ getMillis()\l+ getSeconds()\l+ getMilliSeconds()\l+ getStartTime()\l+ getEndTime()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1log2html_1_1_log_timer.html"];
+  Node5 -> Node4 [color="grey25",fontsize="10",style="solid",label=" ~lvEndTime\n~lvStartTime" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 [label="{Instant\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

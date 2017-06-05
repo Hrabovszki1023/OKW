@@ -1,0 +1,52 @@
+digraph "okw.core.OK.LogSelected"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node254 [label="okw.core.OK.LogSelected",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node254 -> Node255 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node255 [label="okw.core.OKW_CurrentObject\l_Sngltn.SetChildName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#aaf87c468ae2476e28fe8a4fb8f996277",tooltip="Setzt das Kindobjekt. "];
+  Node255 -> Node256 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node256 [label="okw.log.Logger_Sngltn.Log\lPrintDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4",tooltip="Loggt eine Nachricht. "];
+  Node255 -> Node257 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node257 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter. "];
+  Node257 -> Node258 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node258 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei. "];
+  Node258 -> Node259 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node259 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag. "];
+  Node255 -> Node260 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node260 [label="okw.OKW_Helper.StringIsNull\lOrEmpty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper.html#ac042a51d58d56ede78ecff1b082f72f3",tooltip="Prüft ob der gegeben String fpsStrin null oder leer (\"\") ist. "];
+  Node255 -> Node261 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node261 [label="okw.core.OKW_CurrentObject\l_Sngltn.UpdateObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#ae9a94a0fbfc07ca5f94e2acf44abee3a",tooltip="Methode aktualisert zwei Werte: "];
+  Node261 -> Node262 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node262 [label="okw.FrameObjectDictionary\l_Sngltn.GetParentObjectByName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_frame_object_dictionary___sngltn.html#ad8f8fa2d1e817d6390238be819f0fc35",tooltip="Die Methode liefert das Frame-Object des gegebenen FN eines Fensterobjektes zurück. "];
+  Node262 -> Node256 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node262 -> Node257 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node261 -> Node263 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node263 [label="okw.FrameObjectDictionary\l_Sngltn.GetChildObjectByName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_frame_object_dictionary___sngltn.html#ad6907b6c5e325dcb48932a56aefdbd38",tooltip="Die Methode liefert das Objekt des gegebenen Kindobjekttests zurück. "];
+  Node263 -> Node256 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node263 -> Node257 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node254 -> Node257 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node254 -> Node256 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node254 -> Node264 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node264 [label="okw.log.Logger_Sngltn.Res\lOpenList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#ab4fc711bb4c754f251372ff3b14ab9c9",tooltip="Creates a new hierarchical level in the results file. "];
+  Node254 -> Node265 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node265 [label="okw.log.Logger_Sngltn.Log\lPrint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c",tooltip="LogPrint Function: Prints the values of expressions to the results file. "];
+  Node254 -> Node266 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node266 [label="okw.log.Logger_Sngltn.Res\lCloseList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a9b54104f7e0b4c0a473877b19dfaed56",tooltip="Closes a hierarchical level in the results file that was opened with ResOpenList. ..."];
+  Node254 -> Node267 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node267 [label="okw.core.OK.HandleException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a1d020010a639b1aba44f93f4d046611d",tooltip="Zentrale Exception-Behandlung. "];
+  Node267 -> Node265 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node267 -> Node268 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node268 [label="okw.log.Logger_Sngltn.Log\lException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#aa29d396a2b9df1ac57079d777c548181",tooltip="LogException Function: Logs a Script Exception to the results file. "];
+  Node267 -> Node256 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node267 -> Node269 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node269 [label="okw.core.OKW_CurrentObject\l_Sngltn.LogObjectData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#a01b48f2c86a2f91909143ee9063dfd86",tooltip="Methode gibt alle wichtigen Informationen zum aktuellen Objekt aus. "];
+  Node269 -> Node264 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node269 -> Node265 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node269 -> Node257 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node269 -> Node266 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node267 -> Node270 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node270 [label="okw.core.Core.SetCurrent\lState",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#aafe6e3d88e810dabf350b37058d4af97",tooltip="Setter zum Setzen des aktuellen Zustandes. "];
+}

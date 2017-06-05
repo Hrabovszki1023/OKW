@@ -1,0 +1,10 @@
+digraph "okw.core.Core.VerifyValue"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node579 [label="okw.core.Core.VerifyValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node579 -> Node580 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node580 [label="okw.core.EN.VerifyValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#adb1179b7a549509b59f95a87a52e295d",tooltip="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..."];
+}

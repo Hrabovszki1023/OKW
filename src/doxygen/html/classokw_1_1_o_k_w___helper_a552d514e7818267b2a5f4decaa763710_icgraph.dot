@@ -1,0 +1,50 @@
+digraph "okw.OKW_Helper.StringRepeat"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node188 [label="okw.OKW_Helper.StringRepeat",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node188 -> Node189 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node189 [label="okw.log.Log2Console.LogError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a75b91325df2889012704c792aae1af40",tooltip="LogError: Logs an error message to the result. "];
+  Node188 -> Node190 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node190 [label="okw.log.Log2Console.LogPass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#aeb658ec77be3f4d5d5c4c8bdd76376b7",tooltip="LogPass: Logs an error message to the result. "];
+  Node188 -> Node191 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node191 [label="okw.log.Log2Console.LogWarning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a7e8ddd21e7b74affe148e618e594ed63",tooltip="LogWarning: Logs an error message to the result. "];
+  Node188 -> Node192 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node192 [label="okw.log.Log2Console.Blank\lBefore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a62905e4d224da47b6a31d17384594011"];
+  Node192 -> Node193 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node193 [label="okw.log.Log2Console.reset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#ae43e369c8f55c561cdd911cda4f97031",tooltip="Method resets . "];
+  Node193 -> Node194 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node194 [label="okw.log.Log2Console.LogTestcase\lStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#ab54c67895506d0e6786be1b7c4f1ac78",tooltip="LogTestcaseStart: "];
+  Node192 -> Node195 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node195 [label="okw.log.Log2Console.ResCloseList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#ab2120d2a3c68dc03a6a62d02570bfbd6",tooltip="ResCloseList: Closes the outline level. "];
+  Node195 -> Node196 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node196 [label="okw.log.Log2Console.LogFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#ae5d97f0d2c5d086474b811f700e97eb1",tooltip="LogFunctionEnd: "];
+  Node196 -> Node197 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node197 [label="okw.log.Log2Console.LogFunction\lEndDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a02a98178389196a6ac48021d5b116d7d",tooltip="LogFunctionEndDebug: "];
+  Node195 -> Node198 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node198 [label="okw.log.Log2Console.LogFunction\lStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a06fc14df2dcb5b2b28b65b2a5ca07e25"];
+  Node198 -> Node199 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node199 [label="okw.log.Log2Console.LogFunction\lStartDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#ae12be755a9da04599d329cfece22b1ef"];
+  Node195 -> Node200 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node200 [label="okw.log.Log2Console.LogKey\lWordEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a0cfb34192c7f33171638dcde05db6a99",tooltip="LogKeyWordEnd: "];
+  Node195 -> Node201 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node201 [label="okw.log.Log2Console.LogTestcaseEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a3d7f0164c5d9db37f32b9678b96bd2af",tooltip="LogTestcaseEnd: "];
+  Node195 -> Node202 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node202 [label="okw.log.Log2Console.LogSequenceEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a6adb44f183bebb3b2251c595e933e5f7",tooltip="LogSequenceEnd: "];
+  Node195 -> Node203 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node203 [label="okw.log.Log2Console.ResClose\lListDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a5f0ef403d1d3c2c093b2a8b0d6ded070",tooltip="ResCloseListDebug: "];
+  Node192 -> Node204 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node204 [label="okw.log.Log2Console.ResOpenList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#af99ba81cf4d8e14d5fe19070f12ae5cb",tooltip="LogFunctionStartDebug: Opens a debug outline level with the . "];
+  Node204 -> Node205 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node205 [label="okw.log.Log2Console.LogFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a2d42361222359da106d531084f9d283e",tooltip="LogFunctionEnd(String): "];
+  Node204 -> Node198 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node204 -> Node206 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node206 [label="okw.log.Log2Console.LogKey\lWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a6c848745fc8facac542f043f4bfce4bc"];
+  Node206 -> Node194 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node206 -> Node207 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node207 [label="okw.log.Log2Console.LogSequence\lStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a9ec829b2c64f226a7de1d6a8c0ec468f"];
+  Node204 -> Node208 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node208 [label="okw.log.Log2Console.ResOpen\lListDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#adea657f55b624397c13bfbf94f2a6d6a",tooltip="LogFunctionStartDebug: Opens a debug outline level with the . "];
+}

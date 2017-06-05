@@ -1,0 +1,14 @@
+digraph "okw.FrameObjectDictionary_Sngltn.GetListOfOKWGuiClasses"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node120 [label="okw.FrameObjectDictionary\l_Sngltn.GetListOfOKWGuiClasses",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node120 -> Node121 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node121 [label="okw.FrameObjectDictionary\l_Sngltn.FrameScan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_frame_object_dictionary___sngltn.html#af54d00c1b571c20ac8276100b8aa16f9",tooltip="Liefert die Instanz der Klasse. "];
+  Node121 -> Node122 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node122 [label="okw.FrameObjectDictionary\l_Sngltn.Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_frame_object_dictionary___sngltn.html#a4ded18b45836e476241446a612b8d9a6",tooltip="Methode initialisiert diese Klasse. "];
+  Node122 -> Node123 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node123 [label="okw.FrameObjectDictionary\l_Sngltn.FrameObjectDictionary_\lSngltn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_frame_object_dictionary___sngltn.html#aca3d4bf06ca665795304f02b1bbe24eb",tooltip="Konstuktor der Klasse. "];
+}

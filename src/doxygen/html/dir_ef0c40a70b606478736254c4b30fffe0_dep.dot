@@ -1,0 +1,9 @@
+digraph "/Users/zoltan/git/OKW/se/src/main/java/okw/gui/frames" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_2a7e58e4b12c9244601895cca3d2a1d6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="gui" fontname="Helvetica", fontsize="10", URL="dir_2a7e58e4b12c9244601895cca3d2a1d6.html"]
+  dir_ef0c40a70b606478736254c4b30fffe0 [shape=box, label="frames", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ef0c40a70b606478736254c4b30fffe0.html"];
+  }
+}
