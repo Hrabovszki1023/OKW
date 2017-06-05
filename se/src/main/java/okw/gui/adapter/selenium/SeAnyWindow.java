@@ -54,11 +54,16 @@ import org.openqa.selenium.WebElement;
 
 /**
  * \~
- * @defgroup groupSeleniumWindowGUIAdapter Selenium Window GUI-Adapterklassen
+ * @defgroup groupSeleniumWindowGUIAdapter OKW Window GUI-Adapterklassen für Selenium
  * @ingroup groupSeleniumClasses
- *
- * @ingroup groupSeleniumWindowGUIAdapter
+ */
+
+
+/** 
+ * 
  * \~german
+ * @ingroup groupSeleniumWindowGUIAdapter
+ * 
  * SeAnyWindow ist eine Fenster GUI-Adapterklasse.
  * 
  *  \~english

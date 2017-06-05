@@ -41,7 +41,7 @@ package okw.gui.adapter.selenium;
 import okw.gui.OKWLocator;
 
 /**
- * @ingroup groupSeleniumClasses 
+ * @ingroup groupSeleniumChildGUIAdapter 
  * 
  * TODO: \todo Description of SeImage.
  */

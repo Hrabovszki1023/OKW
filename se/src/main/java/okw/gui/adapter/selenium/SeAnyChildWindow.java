@@ -55,18 +55,14 @@ import org.openqa.selenium.WebElement;
 /**
  * @defgroup groupSeleniumClasses OKW Selenium Klassen
  * 
- * @defgroup groupSeleniumChildGUIAdapter Selenium Childwindow GUI-Adapterklasse
+ * @defgroup groupSeleniumChildGUIAdapter OKW Childwindow GUI-Adapterklasse für Selenium
  * @ingroup groupSeleniumClasses
- * 
- * SeAnyChildWindow
- * 
  */
 
 
 /**
  * @ingroup groupSeleniumChildGUIAdapter
  * @author zoltan
- *
  */
 public class SeAnyChildWindow extends AnyChildwindow
 {	

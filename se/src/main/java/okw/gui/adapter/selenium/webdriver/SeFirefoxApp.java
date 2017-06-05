@@ -51,7 +51,9 @@ import okw.gui.adapter.selenium.*;
 import okw.log.*;
 
 /**
- * \brief OKW Selenium FireFox BrowserWindow Klasse
+ * @ingroup groupSeleniumDriverFrames
+
+ * OKW Selenium FireFox BrowserWindow Klasse
  */
 public class SeFirefoxApp extends AnyWindow
 {
