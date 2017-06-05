@@ -47,7 +47,8 @@ import okw.OKW_Const_Sngltn;
 import okw.gui.OKWLocator;
 
 
-    /**  IOKW_SimpleDataObj
+    /**  
+     * @ingroup groupSeleniumChildGUIAdapter
      *  \~german
      *  Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld<br/>.
      *  GUI-Automatisierungswerkzeug: Selenium.<br/>

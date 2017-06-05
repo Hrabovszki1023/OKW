@@ -45,7 +45,7 @@ import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.gui.OKWLocator;
 
 /**
- * @ingroup groupSeleniumClasses 
+ * @ingroup groupSeleniumChildGUIAdapter 
  * 
  * \~german
  *  Diese Klasse representiert einen HTML-Button, die mit Selenium angsteuert wird.

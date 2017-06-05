@@ -58,7 +58,7 @@ import okw.gui.OKWLocator;
 
 
 /**
- * @ingroup groupSeleniumClasses 
+ * @ingroup groupSeleniumChildGUIAdapter 
  *
  * \brief
  *  TODO: Description of SeRadioList.

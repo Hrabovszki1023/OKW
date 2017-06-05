@@ -43,7 +43,7 @@ import java.util.ArrayList;
 import okw.gui.OKWLocator;
 
 /**
- * @ingroup groupSeleniumClasses 
+ * @ingroup groupSeleniumChildGUIAdapter 
  *
  * \~german
  *  Diese Klasse representiert einen HTML-Link, die mit Selenium angsteuert wird.

@@ -42,8 +42,8 @@ import okw.gui.OKWLocator;
 
 /**
  * @ingroup groupSeleniumClasses 
- * \brief
- * TODO: \tod Description of SeImage.
+ * 
+ * TODO: \todo Description of SeImage.
  */
 public class SeImage extends SeAnyChildWindow
 {

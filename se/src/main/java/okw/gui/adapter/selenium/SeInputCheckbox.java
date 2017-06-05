@@ -48,7 +48,7 @@ import okw.gui.*;
 
     /**
      * 
-     * @ingroup groupSeleniumClasses 
+     * @ingroup groupSeleniumChildGUIAdapter 
      * 
      * \~german
      *  Diese Klasse representiert eine HTML-CheckBox, die mit Selenium angsteuert wird.

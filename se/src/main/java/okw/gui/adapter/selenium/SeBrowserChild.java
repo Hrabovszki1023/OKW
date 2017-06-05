@@ -43,7 +43,8 @@ import okw.OKW;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
 
-/** \brief
+/** 
+ * @ingroup groupSeleniumWindowGUIAdapter
  * TODO: class SeBrowserChild dokumentieren...
  */
 public class SeBrowserChild extends SeAnyWindow

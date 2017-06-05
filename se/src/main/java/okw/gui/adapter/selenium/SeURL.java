@@ -42,7 +42,8 @@ package okw.gui.adapter.selenium;
 import java.util.ArrayList;
 import org.openqa.selenium.*;
 
-    /** : IOKW_SimpleDataObj
+    /** 
+     * @ingroup groupSeleniumChildGUIAdapter
      *  \~german
      *  Klasse Implementiert das URL-Eingabefeld der Browser.
      *  Die Klasse besitz keinen <tt>locator</tt>.

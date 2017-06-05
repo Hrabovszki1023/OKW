@@ -54,7 +54,7 @@ import org.openqa.selenium.WebElement;
 
 /**
  * \~
- * @defgroup groupSeleniumWindowGUIAdapter Selenium Kindobjekt GUI-Adapter klasse
+ * @defgroup groupSeleniumWindowGUIAdapter Selenium Window GUI-Adapterklassen
  * @ingroup groupSeleniumClasses
  *
  * @ingroup groupSeleniumWindowGUIAdapter
