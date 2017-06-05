@@ -1,9 +1,0 @@
-digraph "okw.OKW_XmlReader"
-{
- // INTERACTIVE_SVG=YES
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="{okw.OKW_XmlReader\n|- myXMLDocument\l- mydbFactory\l- mydBuilder\l- myXPath\l- myXMLFile\l|+ getXMLFile()\l+ OKW_XmlReader()\l+ getTextContentSingleValue()\l+ getTextContentAsList()\l- Init()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node1 [label="{ClassLoader\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-}

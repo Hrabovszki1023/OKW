@@ -1,7 +1,0 @@
-digraph "okw.OKW"
-{
- // INTERACTIVE_SVG=YES
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{okw.OKW\n||+ FN()\l+ WaitForMe_TO()\l+ WaitForMe_PT()\l+ VerifyHasFocus_TO()\l+ VerifyHasFocus_PT()\l+ VerifyIsActive_TO()\l+ VerifyIsActive_PT()\l+ VerifyLabel_TO()\l+ VerifyLabel_PT()\l+ VerifySelectedValue_TO()\l+ VerifySelectedValue_PT()\l+ VerifyTablecellValue_TO()\l+ VerifyTablecellValue_PT()\l+ VerifyTooltip_TO()\l+ VerifyTooltip_PT()\l+ VerifyValue_TO()\l+ VerifyValue_PT()\l+ VerifyCaption_TO()\l+ VerifyCaption_PT()\l+ VerifyExists_TO()\l+ VerifyExists_PT()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

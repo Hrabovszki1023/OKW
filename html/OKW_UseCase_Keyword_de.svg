@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="89px" preserveAspectRatio="none" style="width:411px;height:89px;" version="1.1" viewBox="0 0 411 89" width="411px" zoomAndPan="magnify"><defs><filter height="300%" id="ftgiep6qdrzb0" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity Fachtester--><ellipse cx="43" cy="18.5" fill="#FEFECE" filter="url(#ftgiep6qdrzb0)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M43,26.5 L43,53.5 M30,34.5 L56,34.5 M43,53.5 L30,68.5 M43,53.5 L56,68.5 " fill="#FEFECE" filter="url(#ftgiep6qdrzb0)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="6" y="88.4951">Fachtester</text><ellipse cx="283.241" cy="50.1482" fill="#FEFECE" filter="url(#ftgiep6qdrzb0)" rx="121.241" ry="26.6482" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="222" x="172.241" y="54.7966">Testfall in Schlüsselwortnotation</text><path d="M80.2367,50 C101.184,50 128.691,50 156.659,50 " fill="none" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="161.886,50,152.886,46,156.886,50,152.886,54,161.886,50" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="44" x="98.5" y="45.0669">erstellt</text><!--
+@startuml
+
+:Fachtester: -right-> (Testfall in Schlüsselwortnotation) : erstellt
+@enduml
+
+PlantUML version 2017.11(Wed Apr 19 16:18:59 UTC 2017)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_31-b13
+Operating System: Linux
+OS Version: 4.8.12-040812-generic
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

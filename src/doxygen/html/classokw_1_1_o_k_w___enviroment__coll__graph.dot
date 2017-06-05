@@ -1,7 +1,0 @@
-digraph "okw.OKW_Enviroment"
-{
- // INTERACTIVE_SVG=YES
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{okw.OKW_Enviroment\n|- Folder_XML\l- Folder_LogMessages\l- File_OKW_Ini_xml\l- File_OKW_Const_xml\l- File_OKW_Keymaps_xml\l- File_OKW_Memorize_xml\l- File_OKW_Docu_xml_\l- File_OKW_ImplementationMatrix_xml\l|+ OKW_Enviroment()\l+ getFolder_XML()\l+ setFolder_XML()\l+ getFolder_LogMessages()\l+ setFolder_LogMessages()\l+ getFile_OKW_Ini_xml()\l+ setFile_OKW_Ini_xml()\l+ getFile_OKW_Keymaps_xml()\l+ setFile_OKW_Keymaps_xml()\l+ getFile_OKW_Memorize_xml()\l+ setFile_OKW_Memorize_xml()\l+ getFile_OKW_Implementation\lMatrix_xml()\l+ setFile_OKW_Implementation\lMatrix_xml()\l+ getFile_OKW_Const_xml()\l+ setFile_OKW_Const_xml()\l+ getFile_OKW_Docu_xml()\l+ setFile_OKW_Docu_xml()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}

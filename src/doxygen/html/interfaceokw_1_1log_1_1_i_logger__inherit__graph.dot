@@ -1,9 +1,0 @@
-digraph "okw.log.ILogger"
-{
- // INTERACTIVE_SVG=YES
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="{okw.log.ILogger\n||+ reset()\l+ LogTestcaseStart()\l+ LogTestcaseEnd()\l+ LogKeyWordStart()\l+ LogKeyWordEnd()\l+ LogSequenceStart()\l+ LogSequenceEnd()\l+ LogError()\l+ LogPass()\l+ LogWarning()\l+ LogException()\l+ LogFunctionStart()\l+ LogFunctionStartDebug()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogPrint()\l+ LogPrintDebug()\l+ ResOpenList()\l+ ResOpenListDebug()\l+ ResCloseList()\l+ ResCloseListDebug()\l+ setDebugMode()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node1 [label="{okw.log.Log2Console\n|- BlanksBefore\l- LevelCounter\l- cvbDebugMode\l|+ reset()\l+ LogError()\l+ LogException()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionStart()\l+ LogKeyWordEnd()\l+ LogKeyWordStart()\l+ LogPass()\l+ LogPrint()\l+ LogWarning()\l+ ResCloseList()\l+ ResOpenList()\l+ LogTestcaseStart()\l+ LogTestcaseEnd()\l+ LogSequenceStart()\l+ LogSequenceEnd()\l+ LogFunctionStartDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogPrintDebug()\l+ ResOpenListDebug()\l+ ResCloseListDebug()\l+ setDebugMode()\l- BlankBefore()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html",tooltip="Klasse zur Ausgabe in die System.out. "];
-}

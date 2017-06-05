@@ -1,0 +1,135 @@
+<!-- HTML header for doxygen 1.8.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,400,400italic,600,700italic,700,600italic' rel='stylesheet' type='text/css'>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<title>OpenKeyWord: /home/travis/build/Hrabovszki1023/OKW/se/src/main/java/okw/gui/adapter/selenium/webdriver/SeHtmlUnitDriver.java Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="OKW_doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">OpenKeyWord
+   &#160;<span id="projectnumber">Build_ID: 135, Datum: 05.06.2017 07:54:48</span>
+   </div>
+   <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_se_html_unit_driver_8java_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">SeHtmlUnitDriver.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>okw.gui.adapter.selenium.webdriver;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">    ==============================================================================</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">      Author: Zoltan Hrabovszki &lt;zh@openkeyword.de&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">      www.OpenKeyWord.de</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    ============================================================================== </span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    This file is part of OpenKeyWord.</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    OpenKeyWord is free software: you can redistribute it and/or modify</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    it under the terms of the GNU General Public License as published by</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">    the Free Software Foundation, either version 3 of the License, or</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    (at your option) any later version.</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    OpenKeyWord is distributed in the hope that it will be useful,</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    GNU General Public License for more details.</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">    You should have received a copy of the GNU General Public License</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    along with OpenKeyWord.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    Diese Datei ist Teil von OpenKeyWord.</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    OpenKeyWord ist Freie Software: Sie können es unter den Bedingungen</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    der GNU General Public License, wie von der Free Software Foundation,</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder späteren</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    veröffentlichten Version, weiterverbreiten und/oder modifizieren.</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    OpenKeyWord wird in der Hoffnung, dass es nützlich sein wird, aber</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    Siehe die GNU General Public License für weitere Details.</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    Sie sollten eine Kopie der GNU General Public License zusammen mit </span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">    OpenKeyWord erhalten haben. Wenn nicht, siehe &lt;http://www.gnu.org/licenses/&gt;.</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">*/</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">import</span> java.util.ArrayList;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">import</span> <a class="code" href="namespaceokw.html">okw</a>.<a class="code" href="namespaceokw_1_1gui.html">gui</a>.<a class="code" href="classokw_1_1gui_1_1_any_window.html">AnyWindow</a>;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">import</span> <a class="code" href="namespaceokw.html">okw</a>.<a class="code" href="namespaceokw_1_1gui.html">gui</a>.<a class="code" href="namespaceokw_1_1gui_1_1adapter.html">adapter</a>.<a class="code" href="namespaceokw_1_1gui_1_1adapter_1_1selenium.html">selenium</a>.<a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html">SeDriver</a>;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">import</span> <a class="code" href="namespaceokw.html">okw</a>.<a class="code" href="namespaceokw_1_1log.html">log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a>;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html">   65</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html">SeHtmlUnitDriver</a> <span class="keyword">extends</span> <a class="code" href="classokw_1_1gui_1_1_any_window.html">AnyWindow</a></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">protected</span> <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a> MyLogger = <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a>.getInstance();</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html#a6bb14ecd5a8b6a6462ccca3735c550e9">   80</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html#a6bb14ecd5a8b6a6462ccca3735c550e9">SeHtmlUnitDriver</a>()</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        {</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            MyLogger.LogFunctionStartDebug(<span class="stringliteral">&quot;SeHtmlUnitDriver()&quot;</span>);</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            MyLogger.LogFunctionEndDebug();</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        </div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> Init()</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            MyLogger.LogFunctionStartDebug(<span class="stringliteral">&quot;Init()&quot;</span>);</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            MyLogger.LogFunctionEndDebug();</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        </div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> SelectWindow()</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div><div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html#a271473c89be66dab6be4fa4a5ce9a060">  119</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html#a271473c89be66dab6be4fa4a5ce9a060">StartApp</a>()</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        {</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            MyLogger.LogFunctionStartDebug(<span class="stringliteral">&quot;StartApp&quot;</span>);</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            </div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html">SeDriver</a>.<a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#acb82765e99981ecc210e7599bbc2c639">getInstance</a>().DriveUnitDriver();</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="comment">// this.Init();</span></div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            MyLogger.LogFunctionEndDebug();</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div><div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html#a947179a535ed037d34e220b83326feff">  146</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html#a947179a535ed037d34e220b83326feff">StopApp</a>()</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        {</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            MyLogger.LogFunctionStartDebug(<span class="stringliteral">&quot;StopApp&quot;</span>);</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html">SeDriver</a>.<a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#acb82765e99981ecc210e7599bbc2c639">getInstance</a>().driver.quit();</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            MyLogger.LogFunctionEndDebug();</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        }</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> TypeKey(ArrayList&lt;String&gt; fps_Values)</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        {</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        }</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div><div class="ttc" id="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver_html_a6bb14ecd5a8b6a6462ccca3735c550e9"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html#a6bb14ecd5a8b6a6462ccca3735c550e9">okw.gui.adapter.selenium.webdriver.SeHtmlUnitDriver.SeHtmlUnitDriver</a></div><div class="ttdeci">SeHtmlUnitDriver()</div><div class="ttdoc">Konstruktor der Klasse, aktuell keine MethodenAufrufe. </div><div class="ttdef"><b>Definition:</b> <a href="_se_html_unit_driver_8java_source.html#l00080">SeHtmlUnitDriver.java:80</a></div></div>
+<div class="ttc" id="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver_html_acb82765e99981ecc210e7599bbc2c639"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#acb82765e99981ecc210e7599bbc2c639">okw.gui.adapter.selenium.SeDriver.getInstance</a></div><div class="ttdeci">static SeDriver getInstance()</div><div class="ttdoc">Gibt die Instance für die einzige Instanz dieser Klasse zurück. </div><div class="ttdef"><b>Definition:</b> <a href="_se_driver_8java_source.html#l00091">SeDriver.java:91</a></div></div>
+<div class="ttc" id="namespaceokw_1_1gui_html"><div class="ttname"><a href="namespaceokw_1_1gui.html">okw.gui</a></div></div>
+<div class="ttc" id="namespaceokw_1_1gui_1_1adapter_html"><div class="ttname"><a href="namespaceokw_1_1gui_1_1adapter.html">okw.gui.adapter</a></div></div>
+<div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html">okw.log.Logger_Sngltn</a></div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00046">Logger_Sngltn.java:46</a></div></div>
+<div class="ttc" id="namespaceokw_html"><div class="ttname"><a href="namespaceokw.html">okw</a></div></div>
+<div class="ttc" id="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver_html_a271473c89be66dab6be4fa4a5ce9a060"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html#a271473c89be66dab6be4fa4a5ce9a060">okw.gui.adapter.selenium.webdriver.SeHtmlUnitDriver.StartApp</a></div><div class="ttdeci">void StartApp()</div><div class="ttdoc">Erzeugt eine Instanz des Selenium HTMLUnit-Drivers (RemoteDriver). </div><div class="ttdef"><b>Definition:</b> <a href="_se_html_unit_driver_8java_source.html#l00119">SeHtmlUnitDriver.java:119</a></div></div>
+<div class="ttc" id="namespaceokw_1_1gui_1_1adapter_1_1selenium_html"><div class="ttname"><a href="namespaceokw_1_1gui_1_1adapter_1_1selenium.html">okw.gui.adapter.selenium</a></div><div class="ttdef"><b>Definition:</b> <a href="_se_any_child_window_8java_source.html#l00040">SeAnyChildWindow.java:40</a></div></div>
+<div class="ttc" id="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver_html"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html">okw.gui.adapter.selenium.webdriver.SeHtmlUnitDriver</a></div><div class="ttdoc">Implementiert den Selenium HTMLUnit-Driver. </div><div class="ttdef"><b>Definition:</b> <a href="_se_html_unit_driver_8java_source.html#l00065">SeHtmlUnitDriver.java:65</a></div></div>
+<div class="ttc" id="classokw_1_1gui_1_1_any_window_html"><div class="ttname"><a href="classokw_1_1gui_1_1_any_window.html">okw.gui.AnyWindow</a></div><div class="ttdoc">Description of AnyWin. </div><div class="ttdef"><b>Definition:</b> <a href="_any_window_8java_source.html#l00052">AnyWindow.java:52</a></div></div>
+<div class="ttc" id="namespaceokw_1_1log_html"><div class="ttname"><a href="namespaceokw_1_1log.html">okw.log</a></div><div class="ttdoc"> Author: Zoltan Hrabovszki zh@openkeyword.de </div><div class="ttdef"><b>Definition:</b> <a href="_i_logger_8java_source.html#l00040">ILogger.java:40</a></div></div>
+<div class="ttc" id="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver_html"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html">okw.gui.adapter.selenium.SeDriver</a></div><div class="ttdoc">Pattern Singelton. </div><div class="ttdef"><b>Definition:</b> <a href="_se_driver_8java_source.html#l00058">SeDriver.java:58</a></div></div>
+<div class="ttc" id="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver_html_a947179a535ed037d34e220b83326feff"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html#a947179a535ed037d34e220b83326feff">okw.gui.adapter.selenium.webdriver.SeHtmlUnitDriver.StopApp</a></div><div class="ttdeci">void StopApp()</div><div class="ttdoc">HTMLUnit-Driver Beenden. </div><div class="ttdef"><b>Definition:</b> <a href="_se_html_unit_driver_8java_source.html#l00146">SeHtmlUnitDriver.java:146</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_0c16530b5d264870aa4431e8a25214d3.html">se</a></li><li class="navelem"><a class="el" href="dir_be767b33c06e16aec676490308ce37bd.html">src</a></li><li class="navelem"><a class="el" href="dir_ac7924823df1a4b239407b3617e0970c.html">main</a></li><li class="navelem"><a class="el" href="dir_8f2c69962c4cc68c0210369b9c8eb521.html">java</a></li><li class="navelem"><a class="el" href="dir_42d5229922fd7034c842f15cabaad1f7.html">okw</a></li><li class="navelem"><a class="el" href="dir_2a7e58e4b12c9244601895cca3d2a1d6.html">gui</a></li><li class="navelem"><a class="el" href="dir_7a2d81c6f1465d53b0d2a4afc126ed2d.html">adapter</a></li><li class="navelem"><a class="el" href="dir_eb18fa8f90104c1fcffe3bd2c582d105.html">selenium</a></li><li class="navelem"><a class="el" href="dir_9bf874d4a41cec5e7e6a5ec7a877f6f9.html">webdriver</a></li><li class="navelem"><b>SeHtmlUnitDriver.java</b></li>
+    <li class="footer">Erzeugt am Mon Jun 5 2017 07:55:37 für OpenKeyWord von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-593506-12']);
+  _gaq.push(['_setDomainName', 'openkeyword.de']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

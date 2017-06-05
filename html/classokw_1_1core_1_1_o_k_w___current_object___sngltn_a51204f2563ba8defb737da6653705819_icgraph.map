@@ -1,0 +1,51 @@
+<map id="okw.core.OKW_CurrentObject_Sngltn.updateObject" name="okw.core.OKW_CurrentObject_Sngltn.updateObject">
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#a8fea63b98bf6b590fdd915161095d7e1" title="Das aktuelle Objekt wird auf das Fenster zurückgesetzt. " alt="" coords="255,1175,452,1222"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#a461fa1ff29f4bc4a9798707ea7b71849" title="Setzt das Kindobjekt. " alt="" coords="255,1245,452,1291"/>
+<area shape="rect" id="node99" href="$classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#ad11e643efb1fe66ee4b6e5d4ea58ad24" title="Hier wird der Kontext auf ein Fenster gesetzt. " alt="" coords="255,1314,452,1361"/>
+<area shape="rect" id="node7" href="$classokw_1_1core_1_1_o_k.html#a1a4fcce79cac7386f04495383d2985b3" title="Klickt auf das gegebene Objekt. " alt="" coords="536,5,685,35"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_o_k.html#a3e40c302aa78cb83aa1fcfd0dafa24b0" title="Klickt auf das gegebene Objekt. " alt="" coords="516,59,705,88"/>
+<area shape="rect" id="node11" href="$classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0" title="Keine Beschreibung zu &quot;LogCaption&quot; verfügbar. " alt="" coords="527,112,695,141"/>
+<area shape="rect" id="node13" href="$classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" title="Protokolliert, ob das gegebene Objekt existiert. " alt="" coords="531,165,691,195"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_o_k.html#a1b8a5a3d583ffabc0063632ab9d981cf" title="Dokumentiert den Fokus&#45;Status des gegebenen Objekts. " alt="" coords="520,219,701,248"/>
+<area shape="rect" id="node17" href="$classokw_1_1core_1_1_o_k.html#ae44a6c32e26a7f93dd5c9f7b5765ee0d" title="Dokumentiert den Status des gegebenen Objekts. " alt="" coords="525,272,696,301"/>
+<area shape="rect" id="node19" href="$classokw_1_1core_1_1_o_k.html#a5ca2a918fc575095dd00d15e65f1491c" title="Keine Beschreibung zu &quot;LogLabel&quot; verfügbar. " alt="" coords="533,325,688,355"/>
+<area shape="rect" id="node21" href="$classokw_1_1core_1_1_o_k.html#af480aabf37fd55561892d9effcdaf182" title="Dokumentiert den markierten Text des gegebenen Objekts. " alt="" coords="524,379,697,408"/>
+<area shape="rect" id="node23" href="$classokw_1_1core_1_1_o_k.html#a7c6a02d1f58952de8cc3591379cdfbe3" title="Dokumentiert den Wert der ausgewählten Zelle. " alt="" coords="524,431,697,478"/>
+<area shape="rect" id="node25" href="$classokw_1_1core_1_1_o_k.html#a170fa2f1a3bd1fa9f00fc160c48e76c2" title="Dokumentiert die Kurzinfo zu einem Werkzeug des gegebenen Objekts. " alt="" coords="529,501,692,531"/>
+<area shape="rect" id="node27" href="$classokw_1_1core_1_1_o_k.html#ad13df6f48f816f5d075efe045907527d" title="Dokumentiert den Standartwert eines Objekts. " alt="" coords="533,555,688,584"/>
+<area shape="rect" id="node29" href="$classokw_1_1core_1_1_o_k.html#a661c650ca7824d1ea464d98b792ae712" title="Keine Beschreibung zu &quot;MemorizeCaption&quot; verfügbar. " alt="" coords="509,608,712,637"/>
+<area shape="rect" id="node31" href="$classokw_1_1core_1_1_o_k.html#a61db6d17853d7c0913216708c2c29779" title="Merkt sich den aktuell existierenden Zustand des Objekts. " alt="" coords="513,661,708,691"/>
+<area shape="rect" id="node33" href="$classokw_1_1core_1_1_o_k.html#aa18fa77383398b2a8242ca299938c24d" title="Keine Beschreibung zu &quot;MemorizeHasFocus&quot; verfügbar. " alt="" coords="501,715,720,744"/>
+<area shape="rect" id="node35" href="$classokw_1_1core_1_1_o_k.html#aed2c0c9e72b5b730b6b041ef641f3bdc" title="Merkt sich den Zustand des gegebenen Objekts. " alt="" coords="508,768,713,797"/>
+<area shape="rect" id="node37" href="$classokw_1_1core_1_1_o_k.html#ad09ff6f6389ceb04f7ec338ea3c45e85" title="Keine Beschreibung zu &quot;MemorizeLabel&quot; verfügbar. " alt="" coords="516,821,705,851"/>
+<area shape="rect" id="node39" href="$classokw_1_1core_1_1_o_k.html#a7e8652a632b073da02222ee6e5e88266" title="Keine Beschreibung zu &quot;MemorizeSelectedValue&quot; verfügbar. " alt="" coords="505,874,716,921"/>
+<area shape="rect" id="node41" href="$classokw_1_1core_1_1_o_k.html#ab7c819556f3b21faeea08fad5be32813" title="Merkt sich den Wert der gegebenen Zelle in der Tabelle. throws Exception " alt="" coords="505,943,716,990"/>
+<area shape="rect" id="node43" href="$classokw_1_1core_1_1_o_k.html#aad3ff1b462da844ccc53d2e177fb1def" title="Dokumentiert den Tooltip&#45;Text (Kurzinformation) des gegebenen Objekts. " alt="" coords="512,1013,709,1043"/>
+<area shape="rect" id="node45" href="$classokw_1_1core_1_1_o_k.html#a2d93a84a57295418131d219a5887094d" title="Merkt sich den Standartwert eines Objekts. " alt="" coords="515,1067,707,1096"/>
+<area shape="rect" id="node47" href="$classokw_1_1core_1_1_o_k.html#a7ee0b387364c0c188f94099f14f2da43" title="Auswahl aller Zeilen einer Liste/Tabelle, welche die gegebenen Daten enthalten. " alt="" coords="541,1120,680,1149"/>
+<area shape="rect" id="node49" href="$classokw_1_1core_1_1_o_k.html#ae30b70ea446f3a58022a617177d0bcb6" title="Wählt den gegebenen Menü&#45;Eintrag aus. " alt="" coords="525,1173,696,1203"/>
+<area shape="rect" id="node51" href="$classokw_1_1core_1_1_o_k.html#a0cbda1e1d604b0b988296c48835300cc" title="Wählt die gegebene Tabellenzelle aus. " alt="" coords="516,1227,705,1256"/>
+<area shape="rect" id="node53" href="$classokw_1_1core_1_1_o_k.html#a2ec62170b8430a0ea58e919d8d46a7c0" title="Setzt den Fokus auf das gegebene Fensterobjekt. " alt="" coords="532,1280,689,1309"/>
+<area shape="rect" id="node55" href="$classokw_1_1core_1_1_o_k.html#a6af4fe0d34a701aefc8ce67657b3c432" title="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert. " alt="" coords="533,1333,688,1363"/>
+<area shape="rect" id="node57" href="$classokw_1_1core_1_1_o_k.html#a4600012e7b1fdbedcee36313d0397fd5" title="Tastatureingaben von Daten in das aktive Fensterobjekt. " alt="" coords="533,1387,688,1416"/>
+<area shape="rect" id="node59" href="$classokw_1_1core_1_1_o_k.html#afe1a1b392d59c5ceef93ed6d0cfd2e01" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="520,1440,701,1469"/>
+<area shape="rect" id="node61" href="$classokw_1_1core_1_1_o_k.html#a461f7511030e7975fe983b2509527529" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="504,1493,717,1523"/>
+<area shape="rect" id="node63" href="$classokw_1_1core_1_1_o_k.html#a7b0869a2a6df63be61899963dc35d768" title="Überprüft die Überschrift des Objektes. " alt="" coords="501,1547,720,1576"/>
+<area shape="rect" id="node65" href="$classokw_1_1core_1_1_o_k.html#a9785853231d70946dcbbfcd44b509c25" title="Prüft, ob das gegebene Objekt existiert. " alt="" coords="524,1600,697,1629"/>
+<area shape="rect" id="node67" href="$classokw_1_1core_1_1_o_k.html#a4950117cbe9cd2b769ae529bbdc1f897" title="Vergleicht den Fokus&#45;Zustand des gegebenen Objekts mit dem erwarteten Wert. " alt="" coords="513,1653,708,1683"/>
+<area shape="rect" id="node69" href="$classokw_1_1core_1_1_o_k.html#a071aec5319238e209cfc6f1434ea13e8" title="copydoc IOKW_State::VerifyHasFocus(String,String) " alt="" coords="519,1707,703,1736"/>
+<area shape="rect" id="node71" href="$classokw_1_1core_1_1_o_k.html#a1bfa8ae24fc44958e4e3c4272c120bb8" title="Überprüft die Beschreibung des Objektes. " alt="" coords="528,1760,693,1789"/>
+<area shape="rect" id="node73" href="$classokw_1_1core_1_1_o_k.html#a4187442dc3574358fda8af18cb03f15e" title="Überprüft die Beschreibung des Objektes. " alt="" coords="511,1813,711,1843"/>
+<area shape="rect" id="node75" href="$classokw_1_1core_1_1_o_k.html#aeedf0dfdfe514b50ad774eb187a8cc34" title="Überprüft die Überschrift des Objektes. " alt="" coords="508,1867,713,1896"/>
+<area shape="rect" id="node77" href="$classokw_1_1core_1_1_o_k.html#a648f371fccab2eded552b69adf164bbd" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="517,1919,704,1966"/>
+<area shape="rect" id="node79" href="$classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b" title="okw.core.OK.VerifySelected\lValueWCM" alt="" coords="517,1989,704,2035"/>
+<area shape="rect" id="node81" href="$classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f" title="okw.core.OK.VerifySelected\lValueREGX" alt="" coords="517,2058,704,2105"/>
+<area shape="rect" id="node83" href="$classokw_1_1core_1_1_o_k.html#a3548a5a8ddfbf7f84bfe18ba200e1b35" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. " alt="" coords="517,2127,704,2174"/>
+<area shape="rect" id="node85" href="$classokw_1_1core_1_1_o_k.html#a30fc98c4004c99e3e37047deac6ad16f" title="okw.core.OK.VerifyTablecell\lValueWCM" alt="" coords="517,2197,704,2243"/>
+<area shape="rect" id="node87" href="$classokw_1_1core_1_1_o_k.html#a84abe8cdf2426bde23d357c89a6822a6" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. " alt="" coords="517,2266,704,2313"/>
+<area shape="rect" id="node89" href="$classokw_1_1core_1_1_o_k.html#a9f5e0c09b6d74adf4265e3c84cf700d1" title="Prüft den Tooltip&#45;Text eines Objektes. " alt="" coords="524,2336,697,2365"/>
+<area shape="rect" id="node91" href="$classokw_1_1core_1_1_o_k.html#adbf2e96978ec22c0d8febdee394a60e6" title="Prüft den Tooltip&#45;Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="507,2389,715,2419"/>
+<area shape="rect" id="node93" href="$classokw_1_1core_1_1_o_k.html#a95d9d7b4bc22bd4deae5398394d90e3a" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="504,2443,717,2472"/>
+<area shape="rect" id="node95" href="$classokw_1_1core_1_1_o_k.html#a68529a54c5b950d3aa005bb87890b703" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="527,2496,695,2525"/>
+<area shape="rect" id="node97" href="$classokw_1_1core_1_1_o_k.html#a6aafc82b46b36f952f2dd61db0f124b8" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="509,2549,712,2579"/>
+</map>

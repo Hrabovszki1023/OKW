@@ -1,7 +1,0 @@
-digraph "okw.log.ILogger"
-{
- // INTERACTIVE_SVG=YES
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node2 [label="{okw.log.ILogger\n||+ reset()\l+ LogTestcaseStart()\l+ LogTestcaseEnd()\l+ LogKeyWordStart()\l+ LogKeyWordEnd()\l+ LogSequenceStart()\l+ LogSequenceEnd()\l+ LogError()\l+ LogPass()\l+ LogWarning()\l+ LogException()\l+ LogFunctionStart()\l+ LogFunctionStartDebug()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogPrint()\l+ LogPrintDebug()\l+ ResOpenList()\l+ ResOpenListDebug()\l+ ResCloseList()\l+ ResCloseListDebug()\l+ setDebugMode()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-}
