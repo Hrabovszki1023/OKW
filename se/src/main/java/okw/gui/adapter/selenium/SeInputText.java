@@ -47,6 +47,8 @@ import org.openqa.selenium.WebElement;
 import okw.gui.OKWLocator;
 
 /**
+ * @ingroup groupSeleniumClasses 
+ *
  * \~german
  *  Diese Klasse representiert ein HTML-Textfeld, die mit Selenium angsteuert wird.
  *  

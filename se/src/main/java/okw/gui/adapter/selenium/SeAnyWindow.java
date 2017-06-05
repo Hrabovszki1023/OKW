@@ -59,7 +59,7 @@ import org.openqa.selenium.WebElement;
  *
  * @ingroup groupSeleniumWindowGUIAdapter
  * \~german
- * SeAnyWindow ist eine GUI-Adapterklasse.
+ * SeAnyWindow ist eine Fenster GUI-Adapterklasse.
  * 
  *  \~english
  *  \~

@@ -47,6 +47,9 @@ import okw.exceptions.OKWNotAllowedValueException;
 import okw.gui.*;
 
     /**
+     * 
+     * @ingroup groupSeleniumClasses 
+     * 
      * \~german
      *  Diese Klasse representiert eine HTML-CheckBox, die mit Selenium angsteuert wird.
      *  

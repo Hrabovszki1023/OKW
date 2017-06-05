@@ -9,6 +9,8 @@ import okw.gui.OKWLocator;
 
 
 /**
+ * @ingroup groupSeleniumClasses 
+ * 
  * \~german
  *  Diese Klasse representiert eine HTML-RadioButton, die mit Selenium angsteuert wird.
  *  @startuml

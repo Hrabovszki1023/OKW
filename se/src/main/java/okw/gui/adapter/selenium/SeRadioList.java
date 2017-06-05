@@ -57,7 +57,10 @@ import okw.core.OKW_CurrentObject_Sngltn;
 import okw.gui.OKWLocator;
 
 
-/** \brief
+/**
+ * @ingroup groupSeleniumClasses 
+ *
+ * \brief
  *  TODO: Description of SeRadioList.
  */
 public class SeRadioList extends SeAnyChildWindow
