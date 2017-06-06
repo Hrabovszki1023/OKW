@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 143, Datum: 06.06.2017 18:55:18</span>
+   &#160;<span id="projectnumber">Build_ID: 144, Datum: 06.06.2017 20:56:30</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('classokw_1_1core_1_1_n_o_k.html','');}
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Öffentliche Methoden</a> &#124;
-<a href="#pac-attribs">Paketattribute</a> &#124;
+<a href="#pri-attribs">Private Attribute</a> &#124;
 <a href="classokw_1_1core_1_1_n_o_k-members.html">Aufstellung aller Elemente</a>  </div>
   <div class="headertitle">
 <div class="title">okw.core.NOK Klassenreferenz</div>  </div>
@@ -121,6 +121,7 @@ $(document).ready(function(){initNavTree('classokw_1_1core_1_1_n_o_k.html','');}
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
 <tr class="memitem:ace2d4cedddbf1969e282bc85987197b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_n_o_k.html#ace2d4cedddbf1969e282bc85987197b8">NOK</a> (<a class="el" href="classokw_1_1core_1_1_core.html">Core</a> fp_OKW)</td></tr>
+<tr class="memdesc:ace2d4cedddbf1969e282bc85987197b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Diese Klasser repräsentiert den Zustand "Not OK".  <a href="#ace2d4cedddbf1969e282bc85987197b8">Mehr ...</a><br /></td></tr>
 <tr class="separator:ace2d4cedddbf1969e282bc85987197b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62d1765ea311e440d678cb57ca9dd2c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_n_o_k.html#a62d1765ea311e440d678cb57ca9dd2c2">BeginTest</a> (String fpsTestname)</td></tr>
 <tr class="memdesc:a62d1765ea311e440d678cb57ca9dd2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Markiert den Anfang eines neuen Testfalls.  <a href="#a62d1765ea311e440d678cb57ca9dd2c2">Mehr ...</a><br /></td></tr>
@@ -300,8 +301,8 @@ $(document).ready(function(){initNavTree('classokw_1_1core_1_1_n_o_k.html','');}
 <tr class="memitem:af0f7d3c245d0927b948f14a7a77361c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_n_o_k.html#af0f7d3c245d0927b948f14a7a77361c1">CopyFile</a> (String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName)</td></tr>
 <tr class="separator:af0f7d3c245d0927b948f14a7a77361c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-attribs"></a>
-Paketattribute</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
 <tr class="memitem:ae8beb003ded9fae89722ded093297ff6"><td class="memItemLeft" align="right" valign="top"><a id="ae8beb003ded9fae89722ded093297ff6"></a>
 <a class="el" href="classokw_1_1_o_k_w_language.html">OKWLanguage</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AL</b> = OKWLanguage.getInstance()</td></tr>
 <tr class="separator:ae8beb003ded9fae89722ded093297ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -335,11 +336,14 @@ Paketattribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Diese Klasser repräsentiert den Zustand "Not OK". </p>
+<p>Wenn ein Schlüsselwort eine Ausnahme auslöst, dann wechselt der Zustand von <a class="el" href="classokw_1_1core_1_1_o_k.html" title="Klasse OK representiert den Core Zustand OK. ">OK</a> nach <a class="el" href="classokw_1_1core_1_1_n_o_k.html" title="Klasse NOK representiert den Core Zustand NOK im Ausführungs-Modus. ">NOK</a>. Die Schlüsselwörter dieser Klassen führen, bis auf einge ausnahmen, kein GUI aktivitäten aus.</p>
 <dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>02.03.2013 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00078">78</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        Log = <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a>.getInstance();</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        this._Kernel = fp_OKW;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div><div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html">okw.log.Logger_Sngltn</a></div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00046">Logger_Sngltn.java:46</a></div></div>
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00082">82</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        Log = <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a>.getInstance();</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        this._Kernel = fp_OKW;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div><div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html">okw.log.Logger_Sngltn</a></div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00046">Logger_Sngltn.java:46</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -380,8 +384,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00087">87</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">try</span></div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            Log.LogFunctionStartDebug( <span class="stringliteral">&quot;BeginTest&quot;</span>, <span class="stringliteral">&quot;fpsTestname&quot;</span>, fpsTestname );</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="comment">// Alles Initialisieren</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            OKW_Ini_Sngltn.getInstance().Init();</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            OKW_CurrentObject_Sngltn.getInstance();</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            OKW_CurrentObject_Sngltn.init();</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="comment">// Memorize TestCaseName</span></div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            OKW_Memorize_Sngltn.getInstance().set( <span class="stringliteral">&quot;TCN&quot;</span>, fpsTestname );</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            Log.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c">LogPrint</a>( <span class="stringliteral">&quot;NOK -&gt; OK&quot;</span> );</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            this._Kernel.<a class="code" href="classokw_1_1core_1_1_core.html#aafe6e3d88e810dabf350b37058d4af97">SetCurrentState</a>( <span class="keyword">new</span> OK( this._Kernel ) );</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">catch</span> (XPathExpressionException | JAXBException | ParserConfigurationException | SAXException | IOException e)</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( e );</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">finally</span></div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="comment">// Gute Frage was alles hier hingehört...</span></div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            Log.LogFunctionEndDebug();</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        }</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div><div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a8ebceaddd6cc6963ddb8e08c72ea808c"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c">okw.log.Logger_Sngltn.LogPrint</a></div><div class="ttdeci">void LogPrint(String fps_Message)</div><div class="ttdoc">LogPrint Function: Prints the values of expressions to the results file. </div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00427">Logger_Sngltn.java:427</a></div></div>
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00091">91</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">try</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            Log.LogFunctionStartDebug( <span class="stringliteral">&quot;BeginTest&quot;</span>, <span class="stringliteral">&quot;fpsTestname&quot;</span>, fpsTestname );</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// Alles Initialisieren</span></div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            OKW_Ini_Sngltn.getInstance().Init();</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            OKW_CurrentObject_Sngltn.getInstance();</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            OKW_CurrentObject_Sngltn.init();</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="comment">// Memorize TestCaseName</span></div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            OKW_Memorize_Sngltn.getInstance().set( <span class="stringliteral">&quot;TCN&quot;</span>, fpsTestname );</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            Log.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c">LogPrint</a>( <span class="stringliteral">&quot;NOK -&gt; OK&quot;</span> );</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            this._Kernel.<a class="code" href="classokw_1_1core_1_1_core.html#aafe6e3d88e810dabf350b37058d4af97">SetCurrentState</a>( <span class="keyword">new</span> OK( this._Kernel ) );</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">catch</span> (XPathExpressionException | JAXBException | ParserConfigurationException | SAXException | IOException e)</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( e );</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">finally</span></div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        {</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="comment">// Gute Frage was alles hier hingehört...</span></div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            Log.LogFunctionEndDebug();</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div><div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a8ebceaddd6cc6963ddb8e08c72ea808c"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c">okw.log.Logger_Sngltn.LogPrint</a></div><div class="ttdeci">void LogPrint(String fps_Message)</div><div class="ttdoc">LogPrint Function: Prints the values of expressions to the results file. </div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00427">Logger_Sngltn.java:427</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_aafe6e3d88e810dabf350b37058d4af97"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#aafe6e3d88e810dabf350b37058d4af97">okw.core.Core.SetCurrentState</a></div><div class="ttdeci">void SetCurrentState(IOKW_State fp_CurrentState)</div><div class="ttdoc">Setter zum Setzen des aktuellen Zustandes. </div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00594">Core.java:594</a></div></div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
@@ -429,8 +433,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#afdad3bb294ebbc2e30b17e81a6b1f378">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00119">119</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;ClickOn&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00123">123</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;ClickOn&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="af0f7d3c245d0927b948f14a7a77361c1"></a>
@@ -463,8 +467,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00711">711</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    {</div><div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;CopyFile&quot;</span>, <span class="stringliteral">&quot;fpsSourcePathAndFileName&quot;</span>, fpsSourcePathAndFileName, <span class="stringliteral">&quot;fpsDestinationPathAndFileName&quot;</span>,</div><div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;                        fpsDestinationPathAndFileName );</div><div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;</div><div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00715">715</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    {</div><div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;CopyFile&quot;</span>, <span class="stringliteral">&quot;fpsSourcePathAndFileName&quot;</span>, fpsSourcePathAndFileName, <span class="stringliteral">&quot;fpsDestinationPathAndFileName&quot;</span>,</div><div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;                        fpsDestinationPathAndFileName );</div><div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;</div><div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a8df2bacd7054a68fcf64cc11f2c20aed"></a>
@@ -502,8 +506,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a2a40e1cd33ca5c30f57c15e655cc1fc0">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00129">129</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;DoubleClickOn&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00133">133</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    {</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;DoubleClickOn&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ae844be2622110b000a33064dc6289724"></a>
@@ -535,8 +539,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00139">139</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="comment">// TODO: Aufräumen  Kill... usw aufrufen</span></div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;EndTest&quot;</span> );</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00143">143</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    {</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">// TODO: Aufräumen  Kill... usw aufrufen</span></div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;EndTest&quot;</span> );</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a3aa19121a609565b6b17eb977015deb6"></a>
@@ -584,8 +588,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a254dfe876591f4cfeba173149e131ee4">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00681">681</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    {</div><div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;FileDelete&quot;</span>, <span class="stringliteral">&quot;fpsPathAndFileName&quot;</span>, fpsPathAndFileName );</div><div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;</div><div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00685">685</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    {</div><div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;FileDelete&quot;</span>, <span class="stringliteral">&quot;fpsPathAndFileName&quot;</span>, fpsPathAndFileName );</div><div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;</div><div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a1d7880a68a3b872f59528d75e150565b"></a>
@@ -617,8 +621,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac80485d56013384a4518b25e76b87637">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00150">150</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    {</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogCaption&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00154">154</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    {</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogCaption&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a8d07a855db20a154229ab711dbd1b381"></a>
@@ -650,8 +654,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a04432f21a91af5ea4df110b625934fb6">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00160">160</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogExists&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00164">164</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    {</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogExists&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ade62b7727003f86e35c5bc8df93d889f"></a>
@@ -683,8 +687,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a2f5401278066c4012e2f1e6691d619ee">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00170">170</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    {</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogHasFocus&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00174">174</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    {</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogHasFocus&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ad06f597988dedc7bbe975ffa2dcfc90e"></a>
@@ -716,8 +720,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a4a22cc70524486b607b1994b6e9b2db7">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00180">180</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    {</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogIsActive&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00184">184</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    {</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogIsActive&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="aaa31fa0609a756c1246697245d605c92"></a>
@@ -749,8 +753,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a7f76b6d18ebd45517d5a9afd0fdcb9d5">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00190">190</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    {</div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogLabel&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00194">194</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    {</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogLabel&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a9094b8d739085217ed53187b9d9f733c"></a>
@@ -781,8 +785,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ab471567ece6e585834e5b4bedda51033">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00200">200</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    {</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogSelected&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00204">204</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    {</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogSelected&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a6ff6c3b4496891ec79775cf6c9019528"></a>
@@ -832,8 +836,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aed4fb79a0e38cdb3ec43e8bb9d2e3425">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00210">210</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    {</div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogTablecellValue&quot;</span>, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00214">214</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    {</div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogTablecellValue&quot;</span>, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a5aff089e53e4b4dd76cb1eefcb06da8c"></a>
@@ -865,8 +869,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a337d18daedd0cb42e8743f6f6a7d4a25">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00220">220</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    {</div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogTooltip&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00224">224</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogTooltip&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a79b350027c37a204a7a0ad5d8610eeed"></a>
@@ -899,8 +903,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a4b1463b44559987c81efe44f0d4233df">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00230">230</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    {</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00234">234</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    {</div><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;LogValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a14c98a57cf22cf64c87b92166a3f4848"></a>
@@ -942,8 +946,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#af8e1a17d61642cdb29d6c4e95200c275">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00240">240</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    {</div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeCaption&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00244">244</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    {</div><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeCaption&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a1d132e622ae94b7e727d21a418f5b05a"></a>
@@ -987,8 +991,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a7ac0a2063f45adf17acc2592c2b87328">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00250">250</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    {</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeExists&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00254">254</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    {</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeExists&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ac2d0a1ec8a297e02c1fd2a48685b3ee5"></a>
@@ -1031,8 +1035,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a064a961875018e9ce88379b1b5314fb1">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00260">260</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    {</div><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeHasFocus&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00264">264</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    {</div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeHasFocus&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a040d79a214fa59bb5997b7180f8d3b7b"></a>
@@ -1076,8 +1080,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aacc6bf4789bc0654920cd81c26dbd9f9">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00270">270</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    {</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeIsActive&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00274">274</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    {</div><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeIsActive&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;</div><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a0284e5aeb74320f955c1736af1df1a20"></a>
@@ -1120,8 +1124,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ab44d9c2c8f0b34496afcea31d6f6e6a9">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00280">280</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    {</div><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeLabel&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00284">284</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    {</div><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeLabel&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a1fe6d8432b1d89138bf2d743df7016a5"></a>
@@ -1164,8 +1168,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a2e9dcf9b0e3ebe2645ed830e5c077e04">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00290">290</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    {</div><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeSelectedValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;</div><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00294">294</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    {</div><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeSelectedValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a3de23f4a962b3a7094525b0751bc9d67"></a>
@@ -1220,8 +1224,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a663c898d044034490098c92870bce082">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00300">300</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    {</div><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeTablecellValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        </div><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00304">304</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    {</div><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeTablecellValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        </div><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="af073c8af4f13641abbc0e4eed15c080b"></a>
@@ -1264,8 +1268,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a6e7e3d1a14c48c0485a7ef8741e90b8d">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00310">310</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    {</div><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeTooltip&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00314">314</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    {</div><div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeTooltip&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ad0ac30290156fae8afb23a9b93249e87"></a>
@@ -1308,8 +1312,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa48a3de07623a93fc0b4d68629dd0887">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00320">320</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    {</div><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00324">324</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    {</div><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;MemorizeValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsMemKeyName&quot;</span>, fpsMemKeyName );</div><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;</div><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a872e63488d274fb410301637c25eac7d"></a>
@@ -1357,8 +1361,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#afab26cbca470df57025e32b4332328cf">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00330">330</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    {</div><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;Select&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsValue&quot;</span>, fpsValue );</div><div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div><div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00334">334</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    {</div><div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;Select&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsValue&quot;</span>, fpsValue );</div><div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;</div><div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a0f1039f36e2e80dd8427123d2e47886d"></a>
@@ -1390,8 +1394,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae224c8800159ae480d8cd1badda53ef2">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00340">340</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    {</div><div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;SelectMenu&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div><div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00344">344</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    {</div><div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;SelectMenu&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;</div><div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ad51c9eef8dd0dc514f6e654e589181e9"></a>
@@ -1434,8 +1438,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a82ffb0ae4e9c5ca4dc2b4547ebd9d5e3">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00350">350</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    {</div><div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;SelectMenu&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsValue&quot;</span>, fpsValue );</div><div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div><div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00354">354</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    {</div><div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;SelectMenu&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsValue&quot;</span>, fpsValue );</div><div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;</div><div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="aad7966a10c83fe25a4312908893a4cf6"></a>
@@ -1490,8 +1494,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4767e2f8655cd52ae27dac1351d9c18">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00360">360</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    {</div><div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;SelectTablecell&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW );</div><div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div><div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00364">364</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    {</div><div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;SelectTablecell&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW );</div><div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;</div><div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a90f8ec9fe09861a85c15205e3a43f9a1"></a>
@@ -1525,8 +1529,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00370">370</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    {</div><div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;SelectWindow&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;</div><div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00374">374</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    {</div><div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;SelectWindow&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;</div><div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a642d80d4e9702d6d4a817ee7d1f83ac2"></a>
@@ -1577,8 +1581,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a33edc5c4d97bf7f4a35d75619985eac7">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00380">380</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    {</div><div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;Sequence&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsSequenceName&quot;</span>, SeqName, <span class="stringliteral">&quot;SEQ_ID&quot;</span>, SEQ_ID );</div><div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;</div><div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00384">384</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    {</div><div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;Sequence&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsSequenceName&quot;</span>, SeqName, <span class="stringliteral">&quot;SEQ_ID&quot;</span>, SEQ_ID );</div><div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div><div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="aad2ed71809e8e2b30a03111b18ab834d"></a>
@@ -1609,8 +1613,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aae538e656d521d0fbe7ee57765b3e3cb">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00390">390</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    {</div><div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;SetFocus&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;</div><div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00394">394</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    {</div><div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;SetFocus&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div><div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a5e8d582dc6afaeb9f93e8aad43a988c2"></a>
@@ -1633,8 +1637,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00403">403</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    {</div><div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        this.AL.setLanguage( Language );</div><div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00407">407</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    {</div><div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        this.AL.setLanguage( Language );</div><div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="af5c85c4eb152b3e4e8139127d9e08ede"></a>
@@ -1679,8 +1683,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a301021976f71d79ff9054052b3b9ca38">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00411">411</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    {</div><div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;SetValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;</div><div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00415">415</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    {</div><div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;SetValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN );</div><div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;</div><div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a41c91b8b73b7ec9e9c3c20bb50929719"></a>
@@ -1714,8 +1718,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0ec9b7c60041061f1b01d85b703a27a8">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00421">421</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    {</div><div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;StartApp&quot;</span>, <span class="stringliteral">&quot;fpsApplicationName&quot;</span>, fpsApplicationName );</div><div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;</div><div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00425">425</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    {</div><div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;StartApp&quot;</span>, <span class="stringliteral">&quot;fpsApplicationName&quot;</span>, fpsApplicationName );</div><div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;</div><div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="aad271c3e0ae6947b746603c6ff878453"></a>
@@ -1749,8 +1753,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a789e33be9253edfccfe5654f537cf52a">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00431">431</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    {</div><div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;StopApp&quot;</span>, <span class="stringliteral">&quot;fpsApplicationName&quot;</span>, fpsApplicationName );</div><div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;</div><div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00435">435</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    {</div><div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;StopApp&quot;</span>, <span class="stringliteral">&quot;fpsApplicationName&quot;</span>, fpsApplicationName );</div><div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;</div><div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a231824c8c57b210a08a3c4ca54863664"></a>
@@ -1797,8 +1801,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0466b45ed636074a1b6cd52de6b5fdd6">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00441">441</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    {</div><div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;TypeKey&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsValue&quot;</span>, fpsValue );</div><div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div><div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00445">445</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;    {</div><div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;TypeKey&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsValue&quot;</span>, fpsValue );</div><div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;</div><div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a8c16fbb5300e0e0d7e29674251d34188"></a>
@@ -1862,8 +1866,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a402e4109c56f7be77debccb2132e4e27">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00451">451</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    {</div><div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;TypeKeyTablecell&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COLl&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;fpsValue&quot;</span>, fpsValue );</div><div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;</div><div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00455">455</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;    {</div><div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;TypeKeyTablecell&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COLl&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;fpsValue&quot;</span>, fpsValue );</div><div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div><div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a9e3ccf7ffc14ab48b07888ee1b193bdd"></a>
@@ -1908,8 +1912,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a96f34e11f8d52127e6b6f39d3c15186b">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00461">461</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    {</div><div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;TypeKeyWindow&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsValue&quot;</span>, fpsValue );</div><div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;</div><div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00465">465</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    {</div><div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;TypeKeyWindow&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;fpsValue&quot;</span>, fpsValue );</div><div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div><div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a8a732f7aa969c0c5b6bed8a3c4145512"></a>
@@ -1952,8 +1956,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa078c7da434452f524816f58519b395b">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00471">471</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    {</div><div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyCaption&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;</div><div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00475">475</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    {</div><div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyCaption&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;</div><div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a0c6eb502891dae5328872b07c558d8bf"></a>
@@ -1999,8 +2003,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aef357868be62a11c185d5c73989c131a">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00491">491</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    {</div><div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyCaption&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;</div><div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00495">495</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    {</div><div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyCaption&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;</div><div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a99a94136ac134779c0829beb8f0a3e55"></a>
@@ -2050,8 +2054,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a8f08ab9f441773a456ea6a0f87f2967f">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00481">481</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    {</div><div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyCaption&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;</div><div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00485">485</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    {</div><div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyCaption&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;</div><div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a499ad6b680f5f32d3d94ca42cadef06e"></a>
@@ -2093,8 +2097,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aea3ea402ce421e7fede1cc1fb4ce9a65">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00701">701</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    {</div><div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyDirectoryExists&quot;</span>, <span class="stringliteral">&quot;fpsPath&quot;</span>, fpsPath, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;</div><div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00705">705</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    {</div><div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyDirectoryExists&quot;</span>, <span class="stringliteral">&quot;fpsPath&quot;</span>, fpsPath, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;</div><div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a6161473900747fe51b8ac29b72612339"></a>
@@ -2138,8 +2142,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aac781d7e7b1f3ea4ca2d138733f7f2f6">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00501">501</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;    {</div><div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyExists&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;</div><div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00505">505</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    {</div><div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyExists&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;</div><div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ac749086e6a2548a55dd943507b9bca10"></a>
@@ -2182,8 +2186,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a210b00e532545680e8859179c41e1888">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00691">691</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    {</div><div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyFileExists&quot;</span>, <span class="stringliteral">&quot;fpsPathAndFileName&quot;</span>, fpsPathAndFileName, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;</div><div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00695">695</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    {</div><div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyFileExists&quot;</span>, <span class="stringliteral">&quot;fpsPathAndFileName&quot;</span>, fpsPathAndFileName, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;</div><div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a4d2aa52c68350265f480a97496ae3314"></a>
@@ -2227,8 +2231,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a40877cd2c0183c22aa695cf4973ce37c">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00511">511</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    {</div><div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyHasFocus&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;</div><div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00515">515</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;    {</div><div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyHasFocus&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;</div><div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a6bbe7604796f00fb1ccf3f6a367139ba"></a>
@@ -2271,8 +2275,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad003bc140c032dc58f2f67bcc749990c">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00521">521</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    {</div><div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyIsActive&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;</div><div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00525">525</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    {</div><div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyIsActive&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;</div><div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ab5817c363d1b01b85a2ebbdcf8138a9f"></a>
@@ -2317,8 +2321,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a39449615efcf006fddf5389238470efc">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00531">531</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;    {</div><div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyLabel&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;</div><div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00535">535</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;    {</div><div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyLabel&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;</div><div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a4c28bf955ff62013fef49c8d63d10355"></a>
@@ -2364,8 +2368,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a070f48adbb7a8148c8276ee965773a6d">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00551">551</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    {</div><div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyLabelREGX&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;</div><div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00555">555</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;    {</div><div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyLabelREGX&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;</div><div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="af418e9cdaaa0198e88c926e7a1f4fbb2"></a>
@@ -2415,8 +2419,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa2e12e52f5fd3c45a5006af52dd9a7db">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00541">541</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    {</div><div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyLabelWCM&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;</div><div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00545">545</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    {</div><div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyLabelWCM&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;</div><div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a0ad0c8de9843133c96de2f779aad880f"></a>
@@ -2461,8 +2465,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a804768212384c2b9b29f2664a5eb95d0">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00561">561</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    {</div><div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifySelectedValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;</div><div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00565">565</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    {</div><div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifySelectedValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;</div><div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a0a62848307c85ba96ad832db82f8f499"></a>
@@ -2495,8 +2499,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00581">581</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    {</div><div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifySelectedValueREGX&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;</div><div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00585">585</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    {</div><div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifySelectedValueREGX&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;</div><div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a51df04d0178308deafb1130afc1c7945"></a>
@@ -2529,8 +2533,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00571">571</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    {</div><div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifySelectedValueWCM&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;</div><div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00575">575</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    {</div><div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifySelectedValueWCM&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;</div><div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a37a7b10a667ec77dc511cefcf1499693"></a>
@@ -2586,8 +2590,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a08f78760818a6ad5c1fd14640de3d3b1">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00591">591</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    {</div><div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTablecellValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;</div><div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00595">595</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;    {</div><div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTablecellValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;</div><div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="ac5016aa88a24d6364b1b289b00f33e75"></a>
@@ -2632,8 +2636,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00611">611</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;    {</div><div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTablecellValueREGX&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;</div><div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00615">615</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    {</div><div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTablecellValueREGX&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;</div><div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="af07d71db8e2c2052f8ae794a3f6f8d0a"></a>
@@ -2678,8 +2682,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00601">601</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    {</div><div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTablecellValueWCM&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;</div><div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00605">605</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    {</div><div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTablecellValueWCM&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;</div><div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a4da634853fd2fdef024d540f14647585"></a>
@@ -2722,8 +2726,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a1490b97398a9c1f4da2a45ea683135d6">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00621">621</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    {</div><div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTooltip&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;</div><div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00625">625</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    {</div><div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTooltip&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;</div><div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a153ee50279c2795015979757137a9b15"></a>
@@ -2768,8 +2772,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a651ce4c1a5bd9dcac256b3204548f3be">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00641">641</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    {</div><div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTooltipREGX&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;</div><div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00645">645</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    {</div><div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTooltipREGX&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;</div><div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="aa8cc96dadd981676a49359add8e516e5"></a>
@@ -2819,8 +2823,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a5eeafdd7f415970cddcec31fa642da02">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00631">631</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    {</div><div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTooltipWCM&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;</div><div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00635">635</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    {</div><div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTooltipWCM&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;</div><div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="aa101dafd795d6cf87a3835d16af931e3"></a>
@@ -2865,8 +2869,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a7cc12f50a3b6af352a873d42d947813e">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00651">651</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    {</div><div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;</div><div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00655">655</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    {</div><div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyValue&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;</div><div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a70d34ef288553bd4c8fa9a2dd0d6366e"></a>
@@ -2911,8 +2915,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a36827474765ec238f21d94609fcec76a">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00671">671</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    {</div><div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyValueREGX&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;</div><div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00675">675</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;    {</div><div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyValueREGX&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;</div><div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a42a907b7f01e22228ca87de50cb8be59"></a>
@@ -2961,8 +2965,8 @@ Paketattribute</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#afb81a5b87f50e267a98ed3902297b420">okw.core.IOKW_State</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00661">661</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    {</div><div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyValueWCM&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;</div><div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00665">665</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    {</div><div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyValueWCM&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;</div><div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
 <hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
@@ -2975,7 +2979,7 @@ Paketattribute</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><a class="el" href="namespaceokw_1_1core.html">core</a></li><li class="navelem"><a class="el" href="classokw_1_1core_1_1_n_o_k.html">NOK</a></li>
-    <li class="footer">Erzeugt am Die Jun 6 2017 18:55:58 für OpenKeyWord von
+    <li class="footer">Erzeugt am Die Jun 6 2017 20:57:18 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

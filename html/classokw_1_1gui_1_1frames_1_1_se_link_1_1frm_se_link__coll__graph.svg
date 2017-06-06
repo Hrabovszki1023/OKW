@@ -54,623 +54,623 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>okw.gui.frames.SeLink.frmSeLink</title>
-<polygon fill="white" stroke="white" points="-4,5 -4,-2480 1263.88,-2480 1263.88,5 -4,5"/>
+<polygon fill="white" stroke="white" points="-4,5 -4,-2480 1263.96,-2480 1263.96,5 -4,5"/>
 <!-- Node7 -->
 <g id="node1" class="node"><title>Node7</title>
-<polygon fill="#bfbfbf" stroke="black" points="505.88,-1 505.88,-77 639.88,-77 639.88,-1 505.88,-1"/>
-<text text-anchor="start" x="513.88" y="-64" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.SeLink.frm</text>
-<text text-anchor="middle" x="572.88" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">SeLink</text>
-<polyline fill="none" stroke="black" points="505.88,-43 639.88,-43 "/>
-<text text-anchor="middle" x="572.88" y="-30" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="505.88,-22 639.88,-22 "/>
-<text text-anchor="start" x="513.88" y="-9" font-family="Helvetica,sans-Serif" font-size="10.00">+ frmSeLink()</text>
+<polygon fill="#bfbfbf" stroke="black" points="505.965,-1 505.965,-77 639.965,-77 639.965,-1 505.965,-1"/>
+<text text-anchor="start" x="513.965" y="-64" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.SeLink.frm</text>
+<text text-anchor="middle" x="572.965" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">SeLink</text>
+<polyline fill="none" stroke="black" points="505.965,-43 639.965,-43 "/>
+<text text-anchor="middle" x="572.965" y="-30" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="505.965,-22 639.965,-22 "/>
+<text text-anchor="start" x="513.965" y="-9" font-family="Helvetica,sans-Serif" font-size="10.00">+ frmSeLink()</text>
 </g>
 <!-- Node8 -->
 <g id="node2" class="node"><title>Node8</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html" target="_top" xlink:title="TODO: class SeBrowserChild dokumentieren... ">
-<polygon fill="white" stroke="black" points="406.38,-117 406.38,-219 537.38,-219 537.38,-117 406.38,-117"/>
-<text text-anchor="start" x="414.38" y="-206" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="471.88" y="-193" font-family="Helvetica,sans-Serif" font-size="10.00">SeBrowserChild</text>
-<polyline fill="none" stroke="black" points="406.38,-185 537.38,-185 "/>
-<text text-anchor="middle" x="471.88" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="406.38,-164 537.38,-164 "/>
-<text text-anchor="start" x="414.38" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeBrowserChild()</text>
-<text text-anchor="start" x="414.38" y="-138" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeBrowserChild()</text>
-<text text-anchor="start" x="414.38" y="-125" font-family="Helvetica,sans-Serif" font-size="10.00">+ SelectWindow()</text>
+<polygon fill="white" stroke="black" points="406.465,-117 406.465,-219 537.465,-219 537.465,-117 406.465,-117"/>
+<text text-anchor="start" x="414.465" y="-206" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="471.965" y="-193" font-family="Helvetica,sans-Serif" font-size="10.00">SeBrowserChild</text>
+<polyline fill="none" stroke="black" points="406.465,-185 537.465,-185 "/>
+<text text-anchor="middle" x="471.965" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="406.465,-164 537.465,-164 "/>
+<text text-anchor="start" x="414.465" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeBrowserChild()</text>
+<text text-anchor="start" x="414.465" y="-138" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeBrowserChild()</text>
+<text text-anchor="start" x="414.465" y="-125" font-family="Helvetica,sans-Serif" font-size="10.00">+ SelectWindow()</text>
 </a>
 </g>
 <!-- Node8&#45;&gt;Node7 -->
 <g id="edge2" class="edge"><title>Node8&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M518.449,-108.52C526.825,-97.8227 535.346,-86.9398 543.083,-77.0582"/>
-<polygon fill="none" stroke="midnightblue" points="515.497,-106.614 512.088,-116.645 521.009,-110.929 515.497,-106.614"/>
+<path fill="none" stroke="midnightblue" d="M518.534,-108.52C526.91,-97.8227 535.431,-86.9398 543.167,-77.0582"/>
+<polygon fill="none" stroke="midnightblue" points="515.582,-106.614 512.173,-116.645 521.094,-110.929 515.582,-106.614"/>
 </g>
 <!-- Node9 -->
 <g id="node4" class="node"><title>Node9</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html" target="_top" xlink:title="SeAnyWindow ist eine Fenster GUI&#45;Adapterklasse. ">
-<polygon fill="white" stroke="black" points="406.38,-607 406.38,-943 537.38,-943 537.38,-607 406.38,-607"/>
-<text text-anchor="start" x="414.38" y="-930" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="471.88" y="-917" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow</text>
-<polyline fill="none" stroke="black" points="406.38,-909 537.38,-909 "/>
-<text text-anchor="start" x="414.38" y="-896" font-family="Helvetica,sans-Serif" font-size="10.00"># iframeID</text>
-<polyline fill="none" stroke="black" points="406.38,-888 537.38,-888 "/>
-<text text-anchor="start" x="414.38" y="-875" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIframeID()</text>
-<text text-anchor="start" x="414.38" y="-862" font-family="Helvetica,sans-Serif" font-size="10.00">+ setIframeID()</text>
-<text text-anchor="start" x="414.38" y="-849" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyWindow()</text>
-<text text-anchor="start" x="414.38" y="-836" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyWindow()</text>
-<text text-anchor="start" x="414.38" y="-823" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
-<text text-anchor="start" x="414.38" y="-810" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="414.38" y="-797" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="414.38" y="-784" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
-<text text-anchor="start" x="414.38" y="-771" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="414.38" y="-758" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
-<text text-anchor="start" x="414.38" y="-745" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
-<text text-anchor="start" x="414.38" y="-732" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="414.38" y="-719" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="414.38" y="-706" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="414.38" y="-693" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="414.38" y="-680" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="414.38" y="-667" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="414.38" y="-654" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="414.38" y="-641" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="414.38" y="-628" font-family="Helvetica,sans-Serif" font-size="10.00">+ Me()</text>
-<text text-anchor="start" x="414.38" y="-615" font-family="Helvetica,sans-Serif" font-size="10.00">und 21 mehr ...</text>
+<polygon fill="white" stroke="black" points="406.465,-607 406.465,-943 537.465,-943 537.465,-607 406.465,-607"/>
+<text text-anchor="start" x="414.465" y="-930" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="471.965" y="-917" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow</text>
+<polyline fill="none" stroke="black" points="406.465,-909 537.465,-909 "/>
+<text text-anchor="start" x="414.465" y="-896" font-family="Helvetica,sans-Serif" font-size="10.00"># iframeID</text>
+<polyline fill="none" stroke="black" points="406.465,-888 537.465,-888 "/>
+<text text-anchor="start" x="414.465" y="-875" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIframeID()</text>
+<text text-anchor="start" x="414.465" y="-862" font-family="Helvetica,sans-Serif" font-size="10.00">+ setIframeID()</text>
+<text text-anchor="start" x="414.465" y="-849" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyWindow()</text>
+<text text-anchor="start" x="414.465" y="-836" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyWindow()</text>
+<text text-anchor="start" x="414.465" y="-823" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
+<text text-anchor="start" x="414.465" y="-810" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="414.465" y="-797" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="414.465" y="-784" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
+<text text-anchor="start" x="414.465" y="-771" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="414.465" y="-758" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
+<text text-anchor="start" x="414.465" y="-745" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
+<text text-anchor="start" x="414.465" y="-732" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="414.465" y="-719" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="414.465" y="-706" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="414.465" y="-693" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="414.465" y="-680" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="414.465" y="-667" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="414.465" y="-654" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="414.465" y="-641" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="414.465" y="-628" font-family="Helvetica,sans-Serif" font-size="10.00">+ Me()</text>
+<text text-anchor="start" x="414.465" y="-615" font-family="Helvetica,sans-Serif" font-size="10.00">und 21 mehr ...</text>
 </a>
 </g>
 <!-- Node9&#45;&gt;Node8 -->
 <g id="edge4" class="edge"><title>Node9&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M471.88,-596.702C471.88,-467.503 471.88,-301.6 471.88,-219.193"/>
-<polygon fill="none" stroke="midnightblue" points="468.38,-596.723 471.88,-606.723 475.38,-596.723 468.38,-596.723"/>
+<path fill="none" stroke="midnightblue" d="M471.965,-596.702C471.965,-467.503 471.965,-301.6 471.965,-219.193"/>
+<polygon fill="none" stroke="midnightblue" points="468.465,-596.723 471.965,-606.723 475.465,-596.723 468.465,-596.723"/>
 </g>
 <!-- Node10 -->
 <g id="node6" class="node"><title>Node10</title>
 <a xlink:href="classokw_1_1gui_1_1_any_window.html" target="_top" xlink:title="Description of AnyWin. ">
-<polygon fill="white" stroke="black" points="230.88,-1046.5 230.88,-1265.5 358.88,-1265.5 358.88,-1046.5 230.88,-1046.5"/>
-<text text-anchor="middle" x="294.88" y="-1252.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWindow</text>
-<polyline fill="none" stroke="black" points="230.88,-1244.5 358.88,-1244.5 "/>
-<text text-anchor="middle" x="294.88" y="-1231.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="230.88,-1223.5 358.88,-1223.5 "/>
-<text text-anchor="start" x="238.88" y="-1210.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWindow()</text>
-<text text-anchor="start" x="238.88" y="-1197.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWindow()</text>
-<text text-anchor="start" x="238.88" y="-1184.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="238.88" y="-1171.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="238.88" y="-1158.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="238.88" y="-1145.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKeyWindow()</text>
-<text text-anchor="start" x="238.88" y="-1132.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SelectWindow()</text>
-<text text-anchor="start" x="238.88" y="-1119.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ StartApp()</text>
-<text text-anchor="start" x="238.88" y="-1106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ StopApp()</text>
-<text text-anchor="start" x="238.88" y="-1093.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowExists()</text>
-<text text-anchor="start" x="238.88" y="-1080.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyIsWindowActive()</text>
-<text text-anchor="start" x="238.88" y="-1067.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowCaption()</text>
-<text text-anchor="start" x="238.88" y="-1054.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ WaitForMe()</text>
+<polygon fill="white" stroke="black" points="230.965,-1046.5 230.965,-1265.5 358.965,-1265.5 358.965,-1046.5 230.965,-1046.5"/>
+<text text-anchor="middle" x="294.965" y="-1252.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWindow</text>
+<polyline fill="none" stroke="black" points="230.965,-1244.5 358.965,-1244.5 "/>
+<text text-anchor="middle" x="294.965" y="-1231.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="230.965,-1223.5 358.965,-1223.5 "/>
+<text text-anchor="start" x="238.965" y="-1210.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWindow()</text>
+<text text-anchor="start" x="238.965" y="-1197.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWindow()</text>
+<text text-anchor="start" x="238.965" y="-1184.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="238.965" y="-1171.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="238.965" y="-1158.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="238.965" y="-1145.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKeyWindow()</text>
+<text text-anchor="start" x="238.965" y="-1132.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SelectWindow()</text>
+<text text-anchor="start" x="238.965" y="-1119.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ StartApp()</text>
+<text text-anchor="start" x="238.965" y="-1106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ StopApp()</text>
+<text text-anchor="start" x="238.965" y="-1093.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowExists()</text>
+<text text-anchor="start" x="238.965" y="-1080.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyIsWindowActive()</text>
+<text text-anchor="start" x="238.965" y="-1067.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowCaption()</text>
+<text text-anchor="start" x="238.965" y="-1054.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ WaitForMe()</text>
 </a>
 </g>
 <!-- Node10&#45;&gt;Node9 -->
 <g id="edge6" class="edge"><title>Node10&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M350.078,-1037.18C367.882,-998.86 387.792,-956.003 406.272,-916.225"/>
-<polygon fill="none" stroke="midnightblue" points="346.877,-1035.77 345.838,-1046.31 353.226,-1038.72 346.877,-1035.77"/>
+<path fill="none" stroke="midnightblue" d="M350.163,-1037.18C367.967,-998.86 387.877,-956.003 406.357,-916.225"/>
+<polygon fill="none" stroke="midnightblue" points="346.962,-1035.77 345.923,-1046.31 353.311,-1038.72 346.962,-1035.77"/>
 </g>
 <!-- Node11 -->
 <g id="node8" class="node"><title>Node11</title>
 <a xlink:href="classokw_1_1gui_1_1_any_win_base.html" target="_top" xlink:title="Description of AnyWin. ">
-<polygon fill="white" stroke="black" points="301.88,-1381.5 301.88,-1678.5 435.88,-1678.5 435.88,-1381.5 301.88,-1381.5"/>
-<text text-anchor="middle" x="368.88" y="-1665.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase</text>
-<polyline fill="none" stroke="black" points="301.88,-1657.5 435.88,-1657.5 "/>
-<text text-anchor="start" x="309.88" y="-1644.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myFN</text>
-<text text-anchor="start" x="309.88" y="-1631.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myKN</text>
-<text text-anchor="start" x="309.88" y="-1618.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myParentFN</text>
-<polyline fill="none" stroke="black" points="301.88,-1610.5 435.88,-1610.5 "/>
-<text text-anchor="start" x="309.88" y="-1597.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
-<text text-anchor="start" x="309.88" y="-1584.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLOCATOR()</text>
-<text text-anchor="start" x="309.88" y="-1571.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="309.88" y="-1558.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
-<text text-anchor="start" x="309.88" y="-1545.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
-<text text-anchor="start" x="309.88" y="-1532.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFN()</text>
-<text text-anchor="start" x="309.88" y="-1519.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getKN()</text>
-<text text-anchor="start" x="309.88" y="-1506.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentFN()</text>
-<text text-anchor="start" x="309.88" y="-1493.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFN()</text>
-<text text-anchor="start" x="309.88" y="-1480.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setKN()</text>
-<text text-anchor="start" x="309.88" y="-1467.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setParentFN()</text>
-<text text-anchor="start" x="309.88" y="-1454.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
-<text text-anchor="start" x="309.88" y="-1441.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
-<text text-anchor="start" x="309.88" y="-1428.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
-<text text-anchor="start" x="309.88" y="-1415.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
-<text text-anchor="start" x="309.88" y="-1402.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
-<text text-anchor="start" x="309.88" y="-1389.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<polygon fill="white" stroke="black" points="301.965,-1381.5 301.965,-1678.5 435.965,-1678.5 435.965,-1381.5 301.965,-1381.5"/>
+<text text-anchor="middle" x="368.965" y="-1665.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase</text>
+<polyline fill="none" stroke="black" points="301.965,-1657.5 435.965,-1657.5 "/>
+<text text-anchor="start" x="309.965" y="-1644.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myFN</text>
+<text text-anchor="start" x="309.965" y="-1631.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myKN</text>
+<text text-anchor="start" x="309.965" y="-1618.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myParentFN</text>
+<polyline fill="none" stroke="black" points="301.965,-1610.5 435.965,-1610.5 "/>
+<text text-anchor="start" x="309.965" y="-1597.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
+<text text-anchor="start" x="309.965" y="-1584.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLOCATOR()</text>
+<text text-anchor="start" x="309.965" y="-1571.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="309.965" y="-1558.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
+<text text-anchor="start" x="309.965" y="-1545.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
+<text text-anchor="start" x="309.965" y="-1532.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFN()</text>
+<text text-anchor="start" x="309.965" y="-1519.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getKN()</text>
+<text text-anchor="start" x="309.965" y="-1506.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentFN()</text>
+<text text-anchor="start" x="309.965" y="-1493.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFN()</text>
+<text text-anchor="start" x="309.965" y="-1480.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setKN()</text>
+<text text-anchor="start" x="309.965" y="-1467.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setParentFN()</text>
+<text text-anchor="start" x="309.965" y="-1454.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
+<text text-anchor="start" x="309.965" y="-1441.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
+<text text-anchor="start" x="309.965" y="-1428.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<text text-anchor="start" x="309.965" y="-1415.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<text text-anchor="start" x="309.965" y="-1402.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<text text-anchor="start" x="309.965" y="-1389.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
 </a>
 </g>
 <!-- Node11&#45;&gt;Node10 -->
 <g id="edge8" class="edge"><title>Node11&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M337.495,-1371.38C330.447,-1335.76 323.122,-1298.74 316.573,-1265.64"/>
-<polygon fill="none" stroke="midnightblue" points="334.099,-1372.25 339.474,-1381.38 340.966,-1370.89 334.099,-1372.25"/>
+<path fill="none" stroke="midnightblue" d="M337.579,-1371.38C330.532,-1335.76 323.207,-1298.74 316.658,-1265.64"/>
+<polygon fill="none" stroke="midnightblue" points="334.184,-1372.25 339.559,-1381.38 341.051,-1370.89 334.184,-1372.25"/>
 </g>
 <!-- Node27 -->
 <g id="node44" class="node"><title>Node27</title>
 <a xlink:href="classokw_1_1gui_1_1_any_childwindow.html" target="_top" xlink:title="Description of AnyWin. ">
-<polygon fill="white" stroke="black" points="678.88,-994.5 678.88,-1317.5 804.88,-1317.5 804.88,-994.5 678.88,-994.5"/>
-<text text-anchor="middle" x="741.88" y="-1304.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyChildwindow</text>
-<polyline fill="none" stroke="black" points="678.88,-1296.5 804.88,-1296.5 "/>
-<text text-anchor="middle" x="741.88" y="-1283.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="678.88,-1275.5 804.88,-1275.5 "/>
-<text text-anchor="start" x="686.88" y="-1262.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="686.88" y="-1249.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
-<text text-anchor="start" x="686.88" y="-1236.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="686.88" y="-1223.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="686.88" y="-1210.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
-<text text-anchor="start" x="686.88" y="-1197.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
-<text text-anchor="start" x="686.88" y="-1184.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="686.88" y="-1171.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
-<text text-anchor="start" x="686.88" y="-1158.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
-<text text-anchor="start" x="686.88" y="-1145.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="686.88" y="-1132.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="686.88" y="-1119.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="686.88" y="-1106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="686.88" y="-1093.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="686.88" y="-1080.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
-<text text-anchor="start" x="686.88" y="-1067.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
-<text text-anchor="start" x="686.88" y="-1054.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="686.88" y="-1041.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="686.88" y="-1028.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeCaption()</text>
-<text text-anchor="start" x="686.88" y="-1015.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
-<text text-anchor="start" x="686.88" y="-1002.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 26 mehr ...</text>
+<polygon fill="white" stroke="black" points="678.965,-994.5 678.965,-1317.5 804.965,-1317.5 804.965,-994.5 678.965,-994.5"/>
+<text text-anchor="middle" x="741.965" y="-1304.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyChildwindow</text>
+<polyline fill="none" stroke="black" points="678.965,-1296.5 804.965,-1296.5 "/>
+<text text-anchor="middle" x="741.965" y="-1283.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="678.965,-1275.5 804.965,-1275.5 "/>
+<text text-anchor="start" x="686.965" y="-1262.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="686.965" y="-1249.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
+<text text-anchor="start" x="686.965" y="-1236.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="686.965" y="-1223.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="686.965" y="-1210.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
+<text text-anchor="start" x="686.965" y="-1197.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
+<text text-anchor="start" x="686.965" y="-1184.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="686.965" y="-1171.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
+<text text-anchor="start" x="686.965" y="-1158.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
+<text text-anchor="start" x="686.965" y="-1145.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="686.965" y="-1132.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="686.965" y="-1119.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="686.965" y="-1106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="686.965" y="-1093.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="686.965" y="-1080.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
+<text text-anchor="start" x="686.965" y="-1067.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
+<text text-anchor="start" x="686.965" y="-1054.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="686.965" y="-1041.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="686.965" y="-1028.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeCaption()</text>
+<text text-anchor="start" x="686.965" y="-1015.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
+<text text-anchor="start" x="686.965" y="-1002.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 26 mehr ...</text>
 </a>
 </g>
 <!-- Node11&#45;&gt;Node27 -->
 <g id="edge50" class="edge"><title>Node11&#45;&gt;Node27</title>
-<path fill="none" stroke="midnightblue" d="M442.776,-1374C445.077,-1371.91 447.445,-1369.91 449.88,-1368 528.766,-1306.1 592.42,-1381.67 669.88,-1318 672.971,-1315.46 675.934,-1312.76 678.773,-1309.92"/>
-<polygon fill="none" stroke="midnightblue" points="439.911,-1371.91 435.201,-1381.4 444.801,-1376.91 439.911,-1371.91"/>
+<path fill="none" stroke="midnightblue" d="M442.86,-1374C445.162,-1371.91 447.53,-1369.91 449.965,-1368 528.851,-1306.1 592.505,-1381.67 669.965,-1318 673.056,-1315.46 676.018,-1312.76 678.858,-1309.92"/>
+<polygon fill="none" stroke="midnightblue" points="439.995,-1371.91 435.286,-1381.4 444.886,-1376.91 439.995,-1371.91"/>
 </g>
 <!-- Node12 -->
 <g id="node10" class="node"><title>Node12</title>
 <a xlink:href="classokw_1_1gui_1_1_o_k_w_locator.html" target="_top" xlink:title="Description of OKWLocator. ">
-<polygon fill="white" stroke="black" points="146.88,-1742.5 146.88,-1831.5 256.88,-1831.5 256.88,-1742.5 146.88,-1742.5"/>
-<text text-anchor="middle" x="201.88" y="-1818.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.OKWLocator</text>
-<polyline fill="none" stroke="black" points="146.88,-1810.5 256.88,-1810.5 "/>
-<text text-anchor="start" x="154.88" y="-1797.5" font-family="Helvetica,sans-Serif" font-size="10.00">~ _locator</text>
-<polyline fill="none" stroke="black" points="146.88,-1789.5 256.88,-1789.5 "/>
-<text text-anchor="start" x="154.88" y="-1776.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ OKWLocator()</text>
-<text text-anchor="start" x="154.88" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
-<text text-anchor="start" x="154.88" y="-1750.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setLocator()</text>
+<polygon fill="white" stroke="black" points="149.965,-1742.5 149.965,-1831.5 259.965,-1831.5 259.965,-1742.5 149.965,-1742.5"/>
+<text text-anchor="middle" x="204.965" y="-1818.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.OKWLocator</text>
+<polyline fill="none" stroke="black" points="149.965,-1810.5 259.965,-1810.5 "/>
+<text text-anchor="start" x="157.965" y="-1797.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; _locator</text>
+<polyline fill="none" stroke="black" points="149.965,-1789.5 259.965,-1789.5 "/>
+<text text-anchor="start" x="157.965" y="-1776.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ OKWLocator()</text>
+<text text-anchor="start" x="157.965" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
+<text text-anchor="start" x="157.965" y="-1750.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setLocator()</text>
 </a>
 </g>
 <!-- Node12&#45;&gt;Node8 -->
 <g id="edge62" class="edge"><title>Node12&#45;&gt;Node8</title>
-<path fill="none" stroke="#404040" d="M146.532,-1772.35C105.969,-1758.56 53.2303,-1733.66 24.8801,-1692 -15.9017,-1632.07 5.88012,-1602.49 5.88012,-1530 5.88012,-1530 5.88012,-1530 5.88012,-477 5.88012,-292.968 261.443,-212.045 394.053,-182.443"/>
-<polygon fill="none" stroke="#404040" points="394.377,-182.373 399.388,-177.187 406.102,-179.819 401.091,-185.004 394.377,-182.373"/>
-<text text-anchor="middle" x="25.3801" y="-966.5" font-family="Helvetica,sans-Serif" font-size="10.00"> +locator</text>
+<path fill="none" stroke="#404040" d="M149.556,-1772.88C108.207,-1759.3 54.0356,-1734.4 24.9649,-1692 -16.0256,-1632.21 5.96488,-1602.49 5.96488,-1530 5.96488,-1530 5.96488,-1530 5.96488,-477 5.96488,-292.968 261.528,-212.045 394.138,-182.443"/>
+<polygon fill="none" stroke="#404040" points="394.462,-182.373 399.473,-177.187 406.187,-179.819 401.175,-185.004 394.462,-182.373"/>
+<text text-anchor="middle" x="25.4649" y="-966.5" font-family="Helvetica,sans-Serif" font-size="10.00"> +locator</text>
 </g>
 <!-- Node12&#45;&gt;Node11 -->
 <g id="edge10" class="edge"><title>Node12&#45;&gt;Node11</title>
-<path fill="none" stroke="#404040" d="M250.493,-1742.29C265.24,-1727.21 280.735,-1709.7 292.88,-1692 293.627,-1690.91 294.37,-1689.81 295.109,-1688.71"/>
-<polygon fill="none" stroke="#404040" points="295.148,-1688.65 295.039,-1681.44 301.653,-1678.56 301.762,-1685.77 295.148,-1688.65"/>
-<text text-anchor="middle" x="298.38" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #_locator</text>
+<path fill="none" stroke="#404040" d="M251.898,-1742.07C266.155,-1726.99 281.156,-1709.53 292.965,-1692 293.724,-1690.87 294.48,-1689.74 295.232,-1688.59"/>
+<polygon fill="none" stroke="#404040" points="295.464,-1688.23 295.3,-1681.02 301.892,-1678.09 302.056,-1685.3 295.464,-1688.23"/>
+<text text-anchor="middle" x="299.465" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #_locator</text>
 </g>
 <!-- Node12&#45;&gt;Node12 -->
 <g id="edge12" class="edge"><title>Node12&#45;&gt;Node12</title>
-<path fill="none" stroke="#404040" d="M256.953,-1799.5C267.454,-1798 274.88,-1793.84 274.88,-1787 274.88,-1783.15 272.531,-1780.15 268.606,-1778"/>
-<polygon fill="none" stroke="#404040" points="268.447,-1777.95 261.551,-1780.06 256.953,-1774.5 263.85,-1772.4 268.447,-1777.95"/>
-<text text-anchor="middle" x="303.88" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~_Locatoren</text>
+<path fill="none" stroke="#404040" d="M260.038,-1799.5C270.539,-1798 277.965,-1793.84 277.965,-1787 277.965,-1783.15 275.615,-1780.15 271.69,-1778"/>
+<polygon fill="none" stroke="#404040" points="271.532,-1777.95 264.636,-1780.06 260.038,-1774.5 266.935,-1772.4 271.532,-1777.95"/>
+<text text-anchor="middle" x="305.465" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;_Locatoren</text>
 </g>
 <!-- Node13 -->
 <g id="node13" class="node"><title>Node13</title>
 <a xlink:href="classokw_1_1log_1_1_logger___sngltn.html" target="_top" xlink:title="{okw.log.Logger_Sngltn\n|&#45; cvbDebugMode\l|+ getDebugMode()\l+ setDebugMode()\l+ AddLogger()\l+ reset()\l+ LogError()\l+ LogException()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionStart()\l+ LogFunctionStartDebug()\l+ LogKeyWordEnd()\l+ LogSequenceEnd()\l+ LogTestcaseEnd()\l+ LogKeyWordStart()\l+ LogSequenceStart()\l+ LogTestcaseStart()\l+ LogPass()\l+ LogPrint()\l+ LogPrintDebug()\l+ LogWarning()\l+ ResCloseList()\l+ ResCloseListDebug()\l+ ResOpenList()\l+ ResOpenListDebug()\l+ getInstance()\l+ Init()\l&#45; Logger_Sngltn()\l}">
-<polygon fill="white" stroke="black" points="381.88,-1882.5 381.88,-2361.5 515.88,-2361.5 515.88,-1882.5 381.88,-1882.5"/>
-<text text-anchor="middle" x="448.88" y="-2348.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn</text>
-<polyline fill="none" stroke="black" points="381.88,-2340.5 515.88,-2340.5 "/>
-<text text-anchor="start" x="389.88" y="-2327.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; cvbDebugMode</text>
-<polyline fill="none" stroke="black" points="381.88,-2319.5 515.88,-2319.5 "/>
-<text text-anchor="start" x="389.88" y="-2306.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getDebugMode()</text>
-<text text-anchor="start" x="389.88" y="-2293.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setDebugMode()</text>
-<text text-anchor="start" x="389.88" y="-2280.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AddLogger()</text>
-<text text-anchor="start" x="389.88" y="-2267.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ reset()</text>
-<text text-anchor="start" x="389.88" y="-2254.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogError()</text>
-<text text-anchor="start" x="389.88" y="-2241.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogException()</text>
-<text text-anchor="start" x="389.88" y="-2228.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEnd()</text>
-<text text-anchor="start" x="389.88" y="-2215.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEnd()</text>
-<text text-anchor="start" x="389.88" y="-2202.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEnd()</text>
-<text text-anchor="start" x="389.88" y="-2189.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEnd()</text>
-<text text-anchor="start" x="389.88" y="-2176.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEndDebug()</text>
-<text text-anchor="start" x="389.88" y="-2163.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEndDebug()</text>
-<text text-anchor="start" x="389.88" y="-2150.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEndDebug()</text>
-<text text-anchor="start" x="389.88" y="-2137.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEndDebug()</text>
-<text text-anchor="start" x="389.88" y="-2124.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionStart()</text>
-<text text-anchor="start" x="389.88" y="-2111.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionStartDebug()</text>
-<text text-anchor="start" x="389.88" y="-2098.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogKeyWordEnd()</text>
-<text text-anchor="start" x="389.88" y="-2085.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSequenceEnd()</text>
-<text text-anchor="start" x="389.88" y="-2072.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTestcaseEnd()</text>
-<text text-anchor="start" x="389.88" y="-2059.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogKeyWordStart()</text>
-<text text-anchor="start" x="389.88" y="-2046.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSequenceStart()</text>
-<text text-anchor="start" x="389.88" y="-2033.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTestcaseStart()</text>
-<text text-anchor="start" x="389.88" y="-2020.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPass()</text>
-<text text-anchor="start" x="389.88" y="-2007.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPrint()</text>
-<text text-anchor="start" x="389.88" y="-1994.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPrintDebug()</text>
-<text text-anchor="start" x="389.88" y="-1981.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogWarning()</text>
-<text text-anchor="start" x="389.88" y="-1968.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ResCloseList()</text>
-<text text-anchor="start" x="389.88" y="-1955.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ResCloseListDebug()</text>
-<text text-anchor="start" x="389.88" y="-1942.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ResOpenList()</text>
-<text text-anchor="start" x="389.88" y="-1929.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ResOpenListDebug()</text>
-<text text-anchor="start" x="389.88" y="-1916.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getInstance()</text>
-<text text-anchor="start" x="389.88" y="-1903.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Init()</text>
-<text text-anchor="start" x="389.88" y="-1890.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; Logger_Sngltn()</text>
+<polygon fill="white" stroke="black" points="381.965,-1882.5 381.965,-2361.5 515.965,-2361.5 515.965,-1882.5 381.965,-1882.5"/>
+<text text-anchor="middle" x="448.965" y="-2348.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn</text>
+<polyline fill="none" stroke="black" points="381.965,-2340.5 515.965,-2340.5 "/>
+<text text-anchor="start" x="389.965" y="-2327.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; cvbDebugMode</text>
+<polyline fill="none" stroke="black" points="381.965,-2319.5 515.965,-2319.5 "/>
+<text text-anchor="start" x="389.965" y="-2306.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getDebugMode()</text>
+<text text-anchor="start" x="389.965" y="-2293.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setDebugMode()</text>
+<text text-anchor="start" x="389.965" y="-2280.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AddLogger()</text>
+<text text-anchor="start" x="389.965" y="-2267.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ reset()</text>
+<text text-anchor="start" x="389.965" y="-2254.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogError()</text>
+<text text-anchor="start" x="389.965" y="-2241.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogException()</text>
+<text text-anchor="start" x="389.965" y="-2228.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEnd()</text>
+<text text-anchor="start" x="389.965" y="-2215.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEnd()</text>
+<text text-anchor="start" x="389.965" y="-2202.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEnd()</text>
+<text text-anchor="start" x="389.965" y="-2189.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEnd()</text>
+<text text-anchor="start" x="389.965" y="-2176.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEndDebug()</text>
+<text text-anchor="start" x="389.965" y="-2163.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEndDebug()</text>
+<text text-anchor="start" x="389.965" y="-2150.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEndDebug()</text>
+<text text-anchor="start" x="389.965" y="-2137.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionEndDebug()</text>
+<text text-anchor="start" x="389.965" y="-2124.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionStart()</text>
+<text text-anchor="start" x="389.965" y="-2111.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogFunctionStartDebug()</text>
+<text text-anchor="start" x="389.965" y="-2098.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogKeyWordEnd()</text>
+<text text-anchor="start" x="389.965" y="-2085.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSequenceEnd()</text>
+<text text-anchor="start" x="389.965" y="-2072.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTestcaseEnd()</text>
+<text text-anchor="start" x="389.965" y="-2059.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogKeyWordStart()</text>
+<text text-anchor="start" x="389.965" y="-2046.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSequenceStart()</text>
+<text text-anchor="start" x="389.965" y="-2033.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTestcaseStart()</text>
+<text text-anchor="start" x="389.965" y="-2020.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPass()</text>
+<text text-anchor="start" x="389.965" y="-2007.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPrint()</text>
+<text text-anchor="start" x="389.965" y="-1994.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPrintDebug()</text>
+<text text-anchor="start" x="389.965" y="-1981.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogWarning()</text>
+<text text-anchor="start" x="389.965" y="-1968.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ResCloseList()</text>
+<text text-anchor="start" x="389.965" y="-1955.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ResCloseListDebug()</text>
+<text text-anchor="start" x="389.965" y="-1942.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ResOpenList()</text>
+<text text-anchor="start" x="389.965" y="-1929.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ResOpenListDebug()</text>
+<text text-anchor="start" x="389.965" y="-1916.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getInstance()</text>
+<text text-anchor="start" x="389.965" y="-1903.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Init()</text>
+<text text-anchor="start" x="389.965" y="-1890.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; Logger_Sngltn()</text>
 </a>
 </g>
 <!-- Node13&#45;&gt;Node9 -->
 <g id="edge42" class="edge"><title>Node13&#45;&gt;Node9</title>
-<path fill="none" stroke="#404040" d="M452.972,-1882.35C457.506,-1616.82 464.715,-1194.65 468.796,-955.593"/>
-<polygon fill="none" stroke="#404040" points="468.802,-955.29 464.905,-949.222 469.007,-943.292 472.903,-949.359 468.802,-955.29"/>
-<text text-anchor="middle" x="486.88" y="-1527.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #MyLogger</text>
+<path fill="none" stroke="#404040" d="M453.057,-1882.35C457.591,-1616.82 464.799,-1194.65 468.881,-955.593"/>
+<polygon fill="none" stroke="#404040" points="468.886,-955.29 464.989,-949.222 469.091,-943.292 472.988,-949.359 468.886,-955.29"/>
+<text text-anchor="middle" x="486.965" y="-1527.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #MyLogger</text>
 </g>
 <!-- Node13&#45;&gt;Node11 -->
 <g id="edge20" class="edge"><title>Node13&#45;&gt;Node11</title>
-<path fill="none" stroke="#404040" d="M390.897,-1882.46C387.847,-1865.45 385.122,-1848.5 382.88,-1832 376.685,-1786.41 373.091,-1736.62 371.043,-1690.87"/>
-<polygon fill="none" stroke="#404040" points="371.036,-1690.69 366.787,-1684.87 370.531,-1678.7 374.78,-1684.53 371.036,-1690.69"/>
-<text text-anchor="middle" x="408.88" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
+<path fill="none" stroke="#404040" d="M390.981,-1882.46C387.931,-1865.45 385.207,-1848.5 382.965,-1832 376.77,-1786.41 373.176,-1736.62 371.128,-1690.87"/>
+<polygon fill="none" stroke="#404040" points="371.121,-1690.69 366.872,-1684.87 370.615,-1678.7 374.865,-1684.53 371.121,-1690.69"/>
+<text text-anchor="middle" x="408.965" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
 </g>
 <!-- Node13&#45;&gt;Node12 -->
 <g id="edge14" class="edge"><title>Node13&#45;&gt;Node12</title>
-<path fill="none" stroke="#404040" d="M381.713,-2030.9C337.115,-1970.42 280.045,-1893.01 242.292,-1841.81"/>
-<polygon fill="none" stroke="#404040" points="242.13,-1841.59 235.35,-1839.13 235.009,-1831.93 241.789,-1834.39 242.13,-1841.59"/>
-<text text-anchor="middle" x="280.88" y="-1854.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
+<path fill="none" stroke="#404040" d="M381.645,-2029.57C337.608,-1969.11 281.586,-1892.2 244.567,-1841.37"/>
+<polygon fill="none" stroke="#404040" points="244.491,-1841.27 237.725,-1838.77 237.426,-1831.57 244.192,-1834.06 244.491,-1841.27"/>
+<text text-anchor="middle" x="281.465" y="-1854.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myLogger</text>
 </g>
 <!-- Node13&#45;&gt;Node13 -->
 <g id="edge18" class="edge"><title>Node13&#45;&gt;Node13</title>
-<path fill="none" stroke="#404040" d="M516.217,-2167.36C526.72,-2160.58 533.88,-2145.46 533.88,-2122 533.88,-2105.69 530.418,-2093.41 524.778,-2085.16"/>
-<polygon fill="none" stroke="#404040" points="524.722,-2085.1 517.648,-2083.7 516.217,-2076.64 523.292,-2078.03 524.722,-2085.1"/>
-<text text-anchor="middle" x="555.88" y="-2119.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;Instance</text>
+<path fill="none" stroke="#404040" d="M516.302,-2167.36C526.805,-2160.58 533.965,-2145.46 533.965,-2122 533.965,-2105.69 530.503,-2093.41 524.863,-2085.16"/>
+<polygon fill="none" stroke="#404040" points="524.807,-2085.1 517.733,-2083.7 516.302,-2076.64 523.376,-2078.03 524.807,-2085.1"/>
+<text text-anchor="middle" x="555.965" y="-2119.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;Instance</text>
 </g>
 <!-- Node26 -->
 <g id="node42" class="node"><title>Node26</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html" target="_top" xlink:title="{okw.gui.adapter.selenium.\lSeAnyChildWindow\n|# iframeID\l|+ getIframeID()\l+ setIframeID()\l+ SeAnyChildWindow()\l+ SeAnyChildWindow()\l+ ClickOn()\l+ getCaption()\l+ getExists()\l+ getHasFocus()\l+ getIsActive()\l+ getLabel()\l+ getTooltip()\l+ getValue()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogTooltip()\l+ LogValue()\l+ Me()\lund 22 mehr ...\l}">
-<polygon fill="white" stroke="black" points="597.38,-607 597.38,-943 728.38,-943 728.38,-607 597.38,-607"/>
-<text text-anchor="start" x="605.38" y="-930" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="662.88" y="-917" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow</text>
-<polyline fill="none" stroke="black" points="597.38,-909 728.38,-909 "/>
-<text text-anchor="start" x="605.38" y="-896" font-family="Helvetica,sans-Serif" font-size="10.00"># iframeID</text>
-<polyline fill="none" stroke="black" points="597.38,-888 728.38,-888 "/>
-<text text-anchor="start" x="605.38" y="-875" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIframeID()</text>
-<text text-anchor="start" x="605.38" y="-862" font-family="Helvetica,sans-Serif" font-size="10.00">+ setIframeID()</text>
-<text text-anchor="start" x="605.38" y="-849" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyChildWindow()</text>
-<text text-anchor="start" x="605.38" y="-836" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyChildWindow()</text>
-<text text-anchor="start" x="605.38" y="-823" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
-<text text-anchor="start" x="605.38" y="-810" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="605.38" y="-797" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="605.38" y="-784" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
-<text text-anchor="start" x="605.38" y="-771" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="605.38" y="-758" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
-<text text-anchor="start" x="605.38" y="-745" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
-<text text-anchor="start" x="605.38" y="-732" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="605.38" y="-719" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="605.38" y="-706" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="605.38" y="-693" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="605.38" y="-680" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="605.38" y="-667" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="605.38" y="-654" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="605.38" y="-641" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="605.38" y="-628" font-family="Helvetica,sans-Serif" font-size="10.00">+ Me()</text>
-<text text-anchor="start" x="605.38" y="-615" font-family="Helvetica,sans-Serif" font-size="10.00">und 22 mehr ...</text>
+<polygon fill="white" stroke="black" points="597.465,-607 597.465,-943 728.465,-943 728.465,-607 597.465,-607"/>
+<text text-anchor="start" x="605.465" y="-930" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="662.965" y="-917" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow</text>
+<polyline fill="none" stroke="black" points="597.465,-909 728.465,-909 "/>
+<text text-anchor="start" x="605.465" y="-896" font-family="Helvetica,sans-Serif" font-size="10.00"># iframeID</text>
+<polyline fill="none" stroke="black" points="597.465,-888 728.465,-888 "/>
+<text text-anchor="start" x="605.465" y="-875" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIframeID()</text>
+<text text-anchor="start" x="605.465" y="-862" font-family="Helvetica,sans-Serif" font-size="10.00">+ setIframeID()</text>
+<text text-anchor="start" x="605.465" y="-849" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyChildWindow()</text>
+<text text-anchor="start" x="605.465" y="-836" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyChildWindow()</text>
+<text text-anchor="start" x="605.465" y="-823" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
+<text text-anchor="start" x="605.465" y="-810" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="605.465" y="-797" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="605.465" y="-784" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
+<text text-anchor="start" x="605.465" y="-771" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="605.465" y="-758" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
+<text text-anchor="start" x="605.465" y="-745" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
+<text text-anchor="start" x="605.465" y="-732" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="605.465" y="-719" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="605.465" y="-706" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="605.465" y="-693" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="605.465" y="-680" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="605.465" y="-667" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="605.465" y="-654" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="605.465" y="-641" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="605.465" y="-628" font-family="Helvetica,sans-Serif" font-size="10.00">+ Me()</text>
+<text text-anchor="start" x="605.465" y="-615" font-family="Helvetica,sans-Serif" font-size="10.00">und 22 mehr ...</text>
 </a>
 </g>
 <!-- Node13&#45;&gt;Node26 -->
 <g id="edge60" class="edge"><title>Node13&#45;&gt;Node26</title>
-<path fill="none" stroke="#404040" d="M516.279,-2109.96C638.962,-2084.01 896.014,-2010.07 1003.88,-1832 1202.48,-1504.15 887.013,-1048.09 736.106,-860.642"/>
-<polygon fill="none" stroke="#404040" points="735.939,-860.435 729.054,-858.29 728.387,-851.11 735.272,-853.255 735.939,-860.435"/>
-<text text-anchor="middle" x="1092.88" y="-1527.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #MyLogger</text>
+<path fill="none" stroke="#404040" d="M516.364,-2109.96C639.047,-2084.01 896.099,-2010.07 1003.96,-1832 1202.57,-1504.15 887.098,-1048.09 736.19,-860.642"/>
+<polygon fill="none" stroke="#404040" points="736.024,-860.435 729.139,-858.29 728.472,-851.11 735.356,-853.255 736.024,-860.435"/>
+<text text-anchor="middle" x="1092.96" y="-1527.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #MyLogger</text>
 </g>
 <!-- Node13&#45;&gt;Node27 -->
 <g id="edge56" class="edge"><title>Node13&#45;&gt;Node27</title>
-<path fill="none" stroke="#404040" d="M515.929,-2115.03C644.028,-2097.84 922.639,-2041.03 1055.88,-1864 1113.94,-1786.86 1100.46,-1410.83 1076.88,-1368 1021.83,-1268.01 897.51,-1208.6 816.777,-1179.16"/>
-<polygon fill="none" stroke="#404040" points="816.499,-1179.06 809.504,-1180.81 805.195,-1175.03 812.19,-1173.27 816.499,-1179.06"/>
-<text text-anchor="middle" x="1117.88" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
+<path fill="none" stroke="#404040" d="M516.014,-2115.03C644.113,-2097.84 922.724,-2041.03 1055.96,-1864 1114.03,-1786.86 1100.54,-1410.83 1076.96,-1368 1021.91,-1268.01 897.595,-1208.6 816.862,-1179.16"/>
+<polygon fill="none" stroke="#404040" points="816.584,-1179.06 809.589,-1180.81 805.28,-1175.03 812.275,-1173.27 816.584,-1179.06"/>
+<text text-anchor="middle" x="1117.96" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
 </g>
 <!-- Node14 -->
 <g id="node15" class="node"><title>Node14</title>
-<polygon fill="white" stroke="#bfbfbf" points="377.38,-2412.5 377.38,-2475.5 520.38,-2475.5 520.38,-2412.5 377.38,-2412.5"/>
-<text text-anchor="middle" x="448.88" y="-2462.5" font-family="Helvetica,sans-Serif" font-size="10.00">ArrayList&lt; okw.log.ILogger &gt;</text>
-<polyline fill="none" stroke="#bfbfbf" points="377.38,-2454.5 520.38,-2454.5 "/>
-<text text-anchor="middle" x="448.88" y="-2441.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="377.38,-2433.5 520.38,-2433.5 "/>
-<text text-anchor="middle" x="448.88" y="-2420.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="377.465,-2412.5 377.465,-2475.5 520.465,-2475.5 520.465,-2412.5 377.465,-2412.5"/>
+<text text-anchor="middle" x="448.965" y="-2462.5" font-family="Helvetica,sans-Serif" font-size="10.00">ArrayList&lt; okw.log.ILogger &gt;</text>
+<polyline fill="none" stroke="#bfbfbf" points="377.465,-2454.5 520.465,-2454.5 "/>
+<text text-anchor="middle" x="448.965" y="-2441.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="377.465,-2433.5 520.465,-2433.5 "/>
+<text text-anchor="middle" x="448.965" y="-2420.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node14&#45;&gt;Node13 -->
 <g id="edge16" class="edge"><title>Node14&#45;&gt;Node13</title>
-<path fill="none" stroke="#404040" d="M448.88,-2412.24C448.88,-2401.52 448.88,-2388.57 448.88,-2374.17"/>
-<polygon fill="none" stroke="#404040" points="448.88,-2373.75 444.88,-2367.75 448.88,-2361.75 452.88,-2367.75 448.88,-2373.75"/>
-<text text-anchor="middle" x="474.88" y="-2384.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;LoggerList</text>
+<path fill="none" stroke="#404040" d="M448.965,-2412.24C448.965,-2401.52 448.965,-2388.57 448.965,-2374.17"/>
+<polygon fill="none" stroke="#404040" points="448.965,-2373.75 444.965,-2367.75 448.965,-2361.75 452.965,-2367.75 448.965,-2373.75"/>
+<text text-anchor="middle" x="474.965" y="-2384.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;LoggerList</text>
 </g>
 <!-- Node15 -->
 <g id="node19" class="node"><title>Node15</title>
 <a xlink:href="interfaceokw_1_1gui_1_1_i_g_u_i_window.html" target="_top" xlink:title="{okw.gui.IGUIWindow\n||+ getCaption()\l+ getExists()\l+ getIsActive()\l+ TypeKeyWindow()\l+ SelectWindow()\l+ StartApp()\l+ StopApp()\l+ VerifyWindowExists()\l+ VerifyIsWindowActive()\l+ VerifyWindowCaption()\l}">
-<polygon fill="white" stroke="black" points="33.8801,-1440 33.8801,-1620 161.88,-1620 161.88,-1440 33.8801,-1440"/>
-<text text-anchor="middle" x="97.8801" y="-1607" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.IGUIWindow</text>
-<polyline fill="none" stroke="black" points="33.8801,-1599 161.88,-1599 "/>
-<text text-anchor="middle" x="97.8801" y="-1586" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="33.8801,-1578 161.88,-1578 "/>
-<text text-anchor="start" x="41.8801" y="-1565" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="41.8801" y="-1552" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="41.8801" y="-1539" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="41.8801" y="-1526" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKeyWindow()</text>
-<text text-anchor="start" x="41.8801" y="-1513" font-family="Helvetica,sans-Serif" font-size="10.00">+ SelectWindow()</text>
-<text text-anchor="start" x="41.8801" y="-1500" font-family="Helvetica,sans-Serif" font-size="10.00">+ StartApp()</text>
-<text text-anchor="start" x="41.8801" y="-1487" font-family="Helvetica,sans-Serif" font-size="10.00">+ StopApp()</text>
-<text text-anchor="start" x="41.8801" y="-1474" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowExists()</text>
-<text text-anchor="start" x="41.8801" y="-1461" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyIsWindowActive()</text>
-<text text-anchor="start" x="41.8801" y="-1448" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowCaption()</text>
+<polygon fill="white" stroke="black" points="33.9649,-1440 33.9649,-1620 161.965,-1620 161.965,-1440 33.9649,-1440"/>
+<text text-anchor="middle" x="97.9649" y="-1607" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.IGUIWindow</text>
+<polyline fill="none" stroke="black" points="33.9649,-1599 161.965,-1599 "/>
+<text text-anchor="middle" x="97.9649" y="-1586" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="33.9649,-1578 161.965,-1578 "/>
+<text text-anchor="start" x="41.9649" y="-1565" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="41.9649" y="-1552" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="41.9649" y="-1539" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="41.9649" y="-1526" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKeyWindow()</text>
+<text text-anchor="start" x="41.9649" y="-1513" font-family="Helvetica,sans-Serif" font-size="10.00">+ SelectWindow()</text>
+<text text-anchor="start" x="41.9649" y="-1500" font-family="Helvetica,sans-Serif" font-size="10.00">+ StartApp()</text>
+<text text-anchor="start" x="41.9649" y="-1487" font-family="Helvetica,sans-Serif" font-size="10.00">+ StopApp()</text>
+<text text-anchor="start" x="41.9649" y="-1474" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowExists()</text>
+<text text-anchor="start" x="41.9649" y="-1461" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyIsWindowActive()</text>
+<text text-anchor="start" x="41.9649" y="-1448" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowCaption()</text>
 </a>
 </g>
 <!-- Node15&#45;&gt;Node10 -->
 <g id="edge22" class="edge"><title>Node15&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M140.733,-1430.46C150.257,-1409.63 160.592,-1387.94 170.88,-1368 189.257,-1332.38 210.857,-1294.34 230.835,-1260.45"/>
-<polygon fill="none" stroke="midnightblue" points="137.51,-1429.09 136.56,-1439.64 143.883,-1431.99 137.51,-1429.09"/>
+<path fill="none" stroke="midnightblue" d="M140.817,-1430.46C150.342,-1409.63 160.677,-1387.94 170.965,-1368 189.342,-1332.38 210.942,-1294.34 230.92,-1260.45"/>
+<polygon fill="none" stroke="midnightblue" points="137.595,-1429.09 136.645,-1439.64 143.968,-1431.99 137.595,-1429.09"/>
 </g>
 <!-- Node16 -->
 <g id="node21" class="node"><title>Node16</title>
 <a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___f_n.html" target="_top" xlink:title="{okw.core.IOKW_FN\n||+ setKN()\l+ setFN()\l+ setParentFN()\l+ getKN()\l+ getFN()\l+ getParentFN()\l}">
-<polygon fill="white" stroke="black" points="179.38,-1466 179.38,-1594 284.38,-1594 284.38,-1466 179.38,-1466"/>
-<text text-anchor="middle" x="231.88" y="-1581" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_FN</text>
-<polyline fill="none" stroke="black" points="179.38,-1573 284.38,-1573 "/>
-<text text-anchor="middle" x="231.88" y="-1560" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="179.38,-1552 284.38,-1552 "/>
-<text text-anchor="start" x="187.38" y="-1539" font-family="Helvetica,sans-Serif" font-size="10.00">+ setKN()</text>
-<text text-anchor="start" x="187.38" y="-1526" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFN()</text>
-<text text-anchor="start" x="187.38" y="-1513" font-family="Helvetica,sans-Serif" font-size="10.00">+ setParentFN()</text>
-<text text-anchor="start" x="187.38" y="-1500" font-family="Helvetica,sans-Serif" font-size="10.00">+ getKN()</text>
-<text text-anchor="start" x="187.38" y="-1487" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFN()</text>
-<text text-anchor="start" x="187.38" y="-1474" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentFN()</text>
+<polygon fill="white" stroke="black" points="179.465,-1466 179.465,-1594 284.465,-1594 284.465,-1466 179.465,-1466"/>
+<text text-anchor="middle" x="231.965" y="-1581" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_FN</text>
+<polyline fill="none" stroke="black" points="179.465,-1573 284.465,-1573 "/>
+<text text-anchor="middle" x="231.965" y="-1560" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="179.465,-1552 284.465,-1552 "/>
+<text text-anchor="start" x="187.465" y="-1539" font-family="Helvetica,sans-Serif" font-size="10.00">+ setKN()</text>
+<text text-anchor="start" x="187.465" y="-1526" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFN()</text>
+<text text-anchor="start" x="187.465" y="-1513" font-family="Helvetica,sans-Serif" font-size="10.00">+ setParentFN()</text>
+<text text-anchor="start" x="187.465" y="-1500" font-family="Helvetica,sans-Serif" font-size="10.00">+ getKN()</text>
+<text text-anchor="start" x="187.465" y="-1487" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFN()</text>
+<text text-anchor="start" x="187.465" y="-1474" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentFN()</text>
 </a>
 </g>
 <!-- Node16&#45;&gt;Node10 -->
 <g id="edge24" class="edge"><title>Node16&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M244.379,-1455.8C253.538,-1401.43 266.117,-1326.75 276.43,-1265.53"/>
-<polygon fill="none" stroke="midnightblue" points="240.92,-1455.26 242.71,-1465.71 247.823,-1456.43 240.92,-1455.26"/>
+<path fill="none" stroke="midnightblue" d="M244.464,-1455.8C253.622,-1401.43 266.202,-1326.75 276.515,-1265.53"/>
+<polygon fill="none" stroke="midnightblue" points="241.005,-1455.26 242.795,-1465.71 247.908,-1456.43 241.005,-1455.26"/>
 </g>
 <!-- Node16&#45;&gt;Node27 -->
 <g id="edge54" class="edge"><title>Node16&#45;&gt;Node27</title>
-<path fill="none" stroke="midnightblue" d="M243.063,-1455.66C251.574,-1424.16 266.549,-1389.78 292.88,-1368 357.183,-1314.82 395.167,-1347.01 477.88,-1336 520.359,-1330.34 635.078,-1343 669.88,-1318 673.005,-1315.76 675.995,-1313.34 678.858,-1310.79"/>
-<polygon fill="none" stroke="midnightblue" points="239.566,-1455.22 240.52,-1465.77 246.354,-1456.93 239.566,-1455.22"/>
+<path fill="none" stroke="midnightblue" d="M243.147,-1455.66C251.659,-1424.16 266.634,-1389.78 292.965,-1368 357.268,-1314.82 395.252,-1347.01 477.965,-1336 520.444,-1330.34 635.163,-1343 669.965,-1318 673.089,-1315.76 676.08,-1313.34 678.943,-1310.79"/>
+<polygon fill="none" stroke="midnightblue" points="239.65,-1455.22 240.605,-1465.77 246.439,-1456.93 239.65,-1455.22"/>
 </g>
 <!-- Node17 -->
 <g id="node23" class="node"><title>Node17</title>
 <a xlink:href="classokw_1_1_log_messenger.html" target="_top" xlink:title="LogMessenger liest Log&#45;Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...">
-<polygon fill="white" stroke="black" points="560.38,-1092 560.38,-1220 661.38,-1220 661.38,-1092 560.38,-1092"/>
-<text text-anchor="middle" x="610.88" y="-1207" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger</text>
-<polyline fill="none" stroke="black" points="560.38,-1199 661.38,-1199 "/>
-<text text-anchor="start" x="568.38" y="-1186" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; cvsClassName</text>
-<polyline fill="none" stroke="black" points="560.38,-1178 661.38,-1178 "/>
-<text text-anchor="start" x="568.38" y="-1165" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogMessenger()</text>
-<text text-anchor="start" x="568.38" y="-1152" font-family="Helvetica,sans-Serif" font-size="10.00">+ GetMessage()</text>
-<text text-anchor="start" x="568.38" y="-1139" font-family="Helvetica,sans-Serif" font-size="10.00">+ GetMessage()</text>
-<text text-anchor="start" x="568.38" y="-1126" font-family="Helvetica,sans-Serif" font-size="10.00">+ GetMessage()</text>
-<text text-anchor="start" x="568.38" y="-1113" font-family="Helvetica,sans-Serif" font-size="10.00">+ GetMessage()</text>
-<text text-anchor="start" x="568.38" y="-1100" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; ReadMessage()</text>
+<polygon fill="white" stroke="black" points="560.465,-1092 560.465,-1220 661.465,-1220 661.465,-1092 560.465,-1092"/>
+<text text-anchor="middle" x="610.965" y="-1207" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger</text>
+<polyline fill="none" stroke="black" points="560.465,-1199 661.465,-1199 "/>
+<text text-anchor="start" x="568.465" y="-1186" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; cvsClassName</text>
+<polyline fill="none" stroke="black" points="560.465,-1178 661.465,-1178 "/>
+<text text-anchor="start" x="568.465" y="-1165" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogMessenger()</text>
+<text text-anchor="start" x="568.465" y="-1152" font-family="Helvetica,sans-Serif" font-size="10.00">+ GetMessage()</text>
+<text text-anchor="start" x="568.465" y="-1139" font-family="Helvetica,sans-Serif" font-size="10.00">+ GetMessage()</text>
+<text text-anchor="start" x="568.465" y="-1126" font-family="Helvetica,sans-Serif" font-size="10.00">+ GetMessage()</text>
+<text text-anchor="start" x="568.465" y="-1113" font-family="Helvetica,sans-Serif" font-size="10.00">+ GetMessage()</text>
+<text text-anchor="start" x="568.465" y="-1100" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; ReadMessage()</text>
 </a>
 </g>
 <!-- Node17&#45;&gt;Node9 -->
 <g id="edge26" class="edge"><title>Node17&#45;&gt;Node9</title>
-<path fill="none" stroke="#404040" d="M587.458,-1091.8C573.604,-1053.83 555.305,-1003.67 537.364,-954.493"/>
-<polygon fill="none" stroke="#404040" points="537.293,-954.298 531.479,-950.033 533.181,-943.025 538.995,-947.291 537.293,-954.298"/>
-<text text-anchor="middle" x="551.88" y="-966.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #LM</text>
+<path fill="none" stroke="#404040" d="M587.543,-1091.8C573.689,-1053.83 555.39,-1003.67 537.449,-954.493"/>
+<polygon fill="none" stroke="#404040" points="537.378,-954.298 531.564,-950.033 533.265,-943.025 539.08,-947.291 537.378,-954.298"/>
+<text text-anchor="middle" x="551.965" y="-966.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #LM</text>
 </g>
 <!-- Node17&#45;&gt;Node26 -->
 <g id="edge58" class="edge"><title>Node17&#45;&gt;Node26</title>
-<path fill="none" stroke="#404040" d="M619.642,-1091.8C624.803,-1053.99 631.613,-1004.09 638.298,-955.114"/>
-<polygon fill="none" stroke="#404040" points="638.325,-954.915 635.173,-948.429 639.948,-943.025 643.099,-949.511 638.325,-954.915"/>
-<text text-anchor="middle" x="647.88" y="-966.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #LM</text>
+<path fill="none" stroke="#404040" d="M619.727,-1091.8C624.888,-1053.99 631.698,-1004.09 638.382,-955.114"/>
+<polygon fill="none" stroke="#404040" points="638.409,-954.915 635.258,-948.429 640.032,-943.025 643.184,-949.511 638.409,-954.915"/>
+<text text-anchor="middle" x="647.965" y="-966.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #LM</text>
 </g>
 <!-- Node18 -->
 <g id="node25" class="node"><title>Node18</title>
 <a xlink:href="classokw_1_1_o_k_w___xml_reader.html" target="_top" xlink:title="{okw.OKW_XmlReader\n||+ getXMLFile()\l+ OKW_XmlReader()\l+ getTextContentSingleValue()\l+ getTextContentAsList()\l&#45; Init()\l}">
-<polygon fill="white" stroke="black" points="639.38,-1472.5 639.38,-1587.5 790.38,-1587.5 790.38,-1472.5 639.38,-1472.5"/>
-<text text-anchor="middle" x="714.88" y="-1574.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader</text>
-<polyline fill="none" stroke="black" points="639.38,-1566.5 790.38,-1566.5 "/>
-<text text-anchor="middle" x="714.88" y="-1553.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="639.38,-1545.5 790.38,-1545.5 "/>
-<text text-anchor="start" x="647.38" y="-1532.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getXMLFile()</text>
-<text text-anchor="start" x="647.38" y="-1519.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ OKW_XmlReader()</text>
-<text text-anchor="start" x="647.38" y="-1506.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTextContentSingleValue()</text>
-<text text-anchor="start" x="647.38" y="-1493.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTextContentAsList()</text>
-<text text-anchor="start" x="647.38" y="-1480.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; Init()</text>
+<polygon fill="white" stroke="black" points="639.465,-1472.5 639.465,-1587.5 790.465,-1587.5 790.465,-1472.5 639.465,-1472.5"/>
+<text text-anchor="middle" x="714.965" y="-1574.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader</text>
+<polyline fill="none" stroke="black" points="639.465,-1566.5 790.465,-1566.5 "/>
+<text text-anchor="middle" x="714.965" y="-1553.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="639.465,-1545.5 790.465,-1545.5 "/>
+<text text-anchor="start" x="647.465" y="-1532.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getXMLFile()</text>
+<text text-anchor="start" x="647.465" y="-1519.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ OKW_XmlReader()</text>
+<text text-anchor="start" x="647.465" y="-1506.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTextContentSingleValue()</text>
+<text text-anchor="start" x="647.465" y="-1493.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTextContentAsList()</text>
+<text text-anchor="start" x="647.465" y="-1480.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; Init()</text>
 </a>
 </g>
 <!-- Node18&#45;&gt;Node17 -->
 <g id="edge28" class="edge"><title>Node18&#45;&gt;Node17</title>
-<path fill="none" stroke="#404040" d="M698.858,-1472.38C680.949,-1407.98 651.872,-1303.41 632.089,-1232.27"/>
-<polygon fill="none" stroke="#404040" points="631.968,-1231.83 626.506,-1227.12 628.753,-1220.27 634.214,-1224.98 631.968,-1231.83"/>
-<text text-anchor="middle" x="697.38" y="-1340.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXmlReader</text>
+<path fill="none" stroke="#404040" d="M698.943,-1472.38C681.034,-1407.98 651.957,-1303.41 632.174,-1232.27"/>
+<polygon fill="none" stroke="#404040" points="632.052,-1231.83 626.591,-1227.12 628.837,-1220.27 634.299,-1224.98 632.052,-1231.83"/>
+<text text-anchor="middle" x="697.465" y="-1340.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXmlReader</text>
 </g>
 <!-- Node19 -->
 <g id="node27" class="node"><title>Node19</title>
-<polygon fill="white" stroke="#bfbfbf" points="476.38,-1755.5 476.38,-1818.5 547.38,-1818.5 547.38,-1755.5 476.38,-1755.5"/>
-<text text-anchor="middle" x="511.88" y="-1805.5" font-family="Helvetica,sans-Serif" font-size="10.00">ClassLoader</text>
-<polyline fill="none" stroke="#bfbfbf" points="476.38,-1797.5 547.38,-1797.5 "/>
-<text text-anchor="middle" x="511.88" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="476.38,-1776.5 547.38,-1776.5 "/>
-<text text-anchor="middle" x="511.88" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="476.465,-1755.5 476.465,-1818.5 547.465,-1818.5 547.465,-1755.5 476.465,-1755.5"/>
+<text text-anchor="middle" x="511.965" y="-1805.5" font-family="Helvetica,sans-Serif" font-size="10.00">ClassLoader</text>
+<polyline fill="none" stroke="#bfbfbf" points="476.465,-1797.5 547.465,-1797.5 "/>
+<text text-anchor="middle" x="511.965" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="476.465,-1776.5 547.465,-1776.5 "/>
+<text text-anchor="middle" x="511.965" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node19&#45;&gt;Node18 -->
 <g id="edge30" class="edge"><title>Node19&#45;&gt;Node18</title>
-<path fill="none" stroke="midnightblue" d="M543.026,-1747.57C576.735,-1704.89 630.82,-1636.42 669.307,-1587.7"/>
-<polygon fill="none" stroke="midnightblue" points="540.224,-1745.47 536.772,-1755.49 545.717,-1749.81 540.224,-1745.47"/>
+<path fill="none" stroke="midnightblue" d="M543.111,-1747.57C576.819,-1704.89 630.905,-1636.42 669.392,-1587.7"/>
+<polygon fill="none" stroke="midnightblue" points="540.309,-1745.47 536.857,-1755.49 545.802,-1749.81 540.309,-1745.47"/>
 </g>
 <!-- Node20 -->
 <g id="node29" class="node"><title>Node20</title>
-<polygon fill="white" stroke="#bfbfbf" points="564.38,-1755.5 564.38,-1818.5 689.38,-1818.5 689.38,-1755.5 564.38,-1755.5"/>
-<text text-anchor="middle" x="626.88" y="-1805.5" font-family="Helvetica,sans-Serif" font-size="10.00">DocumentBuilderFactory</text>
-<polyline fill="none" stroke="#bfbfbf" points="564.38,-1797.5 689.38,-1797.5 "/>
-<text text-anchor="middle" x="626.88" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="564.38,-1776.5 689.38,-1776.5 "/>
-<text text-anchor="middle" x="626.88" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="564.465,-1755.5 564.465,-1818.5 689.465,-1818.5 689.465,-1755.5 564.465,-1755.5"/>
+<text text-anchor="middle" x="626.965" y="-1805.5" font-family="Helvetica,sans-Serif" font-size="10.00">DocumentBuilderFactory</text>
+<polyline fill="none" stroke="#bfbfbf" points="564.465,-1797.5 689.465,-1797.5 "/>
+<text text-anchor="middle" x="626.965" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="564.465,-1776.5 689.465,-1776.5 "/>
+<text text-anchor="middle" x="626.965" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node20&#45;&gt;Node18 -->
 <g id="edge32" class="edge"><title>Node20&#45;&gt;Node18</title>
-<path fill="none" stroke="#404040" d="M634.299,-1755.31C637.782,-1741.32 642.196,-1724.74 646.88,-1710 658.644,-1672.98 673.752,-1632.45 686.739,-1599.24"/>
-<polygon fill="none" stroke="#404040" points="686.84,-1598.98 685.315,-1591.93 691.235,-1587.81 692.759,-1594.86 686.84,-1598.98"/>
-<text text-anchor="middle" x="678.88" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;mydbFactory</text>
+<path fill="none" stroke="#404040" d="M634.383,-1755.31C637.867,-1741.32 642.28,-1724.74 646.965,-1710 658.729,-1672.98 673.837,-1632.45 686.823,-1599.24"/>
+<polygon fill="none" stroke="#404040" points="686.925,-1598.98 685.4,-1591.93 691.319,-1587.81 692.844,-1594.86 686.925,-1598.98"/>
+<text text-anchor="middle" x="678.965" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;mydbFactory</text>
 </g>
 <!-- Node21 -->
 <g id="node31" class="node"><title>Node21</title>
-<polygon fill="white" stroke="#bfbfbf" points="706.88,-1755.5 706.88,-1818.5 750.88,-1818.5 750.88,-1755.5 706.88,-1755.5"/>
-<text text-anchor="middle" x="728.88" y="-1805.5" font-family="Helvetica,sans-Serif" font-size="10.00">XPath</text>
-<polyline fill="none" stroke="#bfbfbf" points="706.88,-1797.5 750.88,-1797.5 "/>
-<text text-anchor="middle" x="728.88" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="706.88,-1776.5 750.88,-1776.5 "/>
-<text text-anchor="middle" x="728.88" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="706.965,-1755.5 706.965,-1818.5 750.965,-1818.5 750.965,-1755.5 706.965,-1755.5"/>
+<text text-anchor="middle" x="728.965" y="-1805.5" font-family="Helvetica,sans-Serif" font-size="10.00">XPath</text>
+<polyline fill="none" stroke="#bfbfbf" points="706.965,-1797.5 750.965,-1797.5 "/>
+<text text-anchor="middle" x="728.965" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="706.965,-1776.5 750.965,-1776.5 "/>
+<text text-anchor="middle" x="728.965" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node21&#45;&gt;Node18 -->
 <g id="edge34" class="edge"><title>Node21&#45;&gt;Node18</title>
-<path fill="none" stroke="#404040" d="M721.096,-1755.47C718.973,-1745.47 716.962,-1734.33 715.88,-1724 711.595,-1683.07 711.172,-1637.02 711.901,-1600.05"/>
-<polygon fill="none" stroke="#404040" points="711.905,-1599.88 708.048,-1593.79 712.189,-1587.89 716.046,-1593.98 711.905,-1599.88"/>
-<text text-anchor="middle" x="739.38" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXPath</text>
+<path fill="none" stroke="#404040" d="M721.181,-1755.47C719.058,-1745.47 717.046,-1734.33 715.965,-1724 711.679,-1683.07 711.257,-1637.02 711.986,-1600.05"/>
+<polygon fill="none" stroke="#404040" points="711.99,-1599.88 708.133,-1593.79 712.274,-1587.89 716.131,-1593.98 711.99,-1599.88"/>
+<text text-anchor="middle" x="739.465" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXPath</text>
 </g>
 <!-- Node22 -->
 <g id="node33" class="node"><title>Node22</title>
-<polygon fill="white" stroke="#bfbfbf" points="768.38,-1755.5 768.38,-1818.5 805.38,-1818.5 805.38,-1755.5 768.38,-1755.5"/>
-<text text-anchor="middle" x="786.88" y="-1805.5" font-family="Helvetica,sans-Serif" font-size="10.00">Path</text>
-<polyline fill="none" stroke="#bfbfbf" points="768.38,-1797.5 805.38,-1797.5 "/>
-<text text-anchor="middle" x="786.88" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="768.38,-1776.5 805.38,-1776.5 "/>
-<text text-anchor="middle" x="786.88" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="768.465,-1755.5 768.465,-1818.5 805.465,-1818.5 805.465,-1755.5 768.465,-1755.5"/>
+<text text-anchor="middle" x="786.965" y="-1805.5" font-family="Helvetica,sans-Serif" font-size="10.00">Path</text>
+<polyline fill="none" stroke="#bfbfbf" points="768.465,-1797.5 805.465,-1797.5 "/>
+<text text-anchor="middle" x="786.965" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="768.465,-1776.5 805.465,-1776.5 "/>
+<text text-anchor="middle" x="786.965" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node22&#45;&gt;Node18 -->
 <g id="edge36" class="edge"><title>Node22&#45;&gt;Node18</title>
-<path fill="none" stroke="#404040" d="M778.052,-1755.49C767.217,-1716.81 748.533,-1650.12 734.286,-1599.27"/>
-<polygon fill="none" stroke="#404040" points="734.281,-1599.25 728.811,-1594.55 731.044,-1587.7 736.514,-1592.39 734.281,-1599.25"/>
-<text text-anchor="middle" x="794.88" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXMLFile</text>
+<path fill="none" stroke="#404040" d="M778.136,-1755.49C767.302,-1716.81 748.618,-1650.12 734.371,-1599.27"/>
+<polygon fill="none" stroke="#404040" points="734.366,-1599.25 728.896,-1594.55 731.129,-1587.7 736.599,-1592.39 734.366,-1599.25"/>
+<text text-anchor="middle" x="794.965" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXMLFile</text>
 </g>
 <!-- Node23 -->
 <g id="node35" class="node"><title>Node23</title>
-<polygon fill="white" stroke="#bfbfbf" points="822.88,-1755.5 822.88,-1818.5 914.88,-1818.5 914.88,-1755.5 822.88,-1755.5"/>
-<text text-anchor="middle" x="868.88" y="-1805.5" font-family="Helvetica,sans-Serif" font-size="10.00">DocumentBuilder</text>
-<polyline fill="none" stroke="#bfbfbf" points="822.88,-1797.5 914.88,-1797.5 "/>
-<text text-anchor="middle" x="868.88" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="822.88,-1776.5 914.88,-1776.5 "/>
-<text text-anchor="middle" x="868.88" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="822.965,-1755.5 822.965,-1818.5 914.965,-1818.5 914.965,-1755.5 822.965,-1755.5"/>
+<text text-anchor="middle" x="868.965" y="-1805.5" font-family="Helvetica,sans-Serif" font-size="10.00">DocumentBuilder</text>
+<polyline fill="none" stroke="#bfbfbf" points="822.965,-1797.5 914.965,-1797.5 "/>
+<text text-anchor="middle" x="868.965" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="822.965,-1776.5 914.965,-1776.5 "/>
+<text text-anchor="middle" x="868.965" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node23&#45;&gt;Node18 -->
 <g id="edge38" class="edge"><title>Node23&#45;&gt;Node18</title>
-<path fill="none" stroke="#404040" d="M852.119,-1755.3C844.585,-1741.31 835.472,-1724.73 826.88,-1710 805.129,-1672.7 779.796,-1631.79 758.73,-1598.41"/>
-<polygon fill="none" stroke="#404040" points="758.465,-1597.99 751.877,-1595.06 752.05,-1587.85 758.638,-1590.79 758.465,-1597.99"/>
-<text text-anchor="middle" x="861.38" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;mydBuilder</text>
+<path fill="none" stroke="#404040" d="M852.203,-1755.3C844.67,-1741.31 835.557,-1724.73 826.965,-1710 805.214,-1672.7 779.88,-1631.79 758.814,-1598.41"/>
+<polygon fill="none" stroke="#404040" points="758.55,-1597.99 751.962,-1595.06 752.135,-1587.85 758.723,-1590.79 758.55,-1597.99"/>
+<text text-anchor="middle" x="861.465" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;mydBuilder</text>
 </g>
 <!-- Node24 -->
 <g id="node37" class="node"><title>Node24</title>
-<polygon fill="white" stroke="#bfbfbf" points="932.88,-1755.5 932.88,-1818.5 994.88,-1818.5 994.88,-1755.5 932.88,-1755.5"/>
-<text text-anchor="middle" x="963.88" y="-1805.5" font-family="Helvetica,sans-Serif" font-size="10.00">Document</text>
-<polyline fill="none" stroke="#bfbfbf" points="932.88,-1797.5 994.88,-1797.5 "/>
-<text text-anchor="middle" x="963.88" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="932.88,-1776.5 994.88,-1776.5 "/>
-<text text-anchor="middle" x="963.88" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="932.965,-1755.5 932.965,-1818.5 994.965,-1818.5 994.965,-1755.5 932.965,-1755.5"/>
+<text text-anchor="middle" x="963.965" y="-1805.5" font-family="Helvetica,sans-Serif" font-size="10.00">Document</text>
+<polyline fill="none" stroke="#bfbfbf" points="932.965,-1797.5 994.965,-1797.5 "/>
+<text text-anchor="middle" x="963.965" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="932.965,-1776.5 994.965,-1776.5 "/>
+<text text-anchor="middle" x="963.965" y="-1763.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node24&#45;&gt;Node18 -->
 <g id="edge40" class="edge"><title>Node24&#45;&gt;Node18</title>
-<path fill="none" stroke="#404040" d="M936.076,-1755.37C932.016,-1750.86 927.862,-1746.29 923.88,-1742 877.6,-1692.13 823.654,-1637.49 782.162,-1596.18"/>
-<polygon fill="none" stroke="#404040" points="782.014,-1596.03 774.939,-1594.64 773.505,-1587.57 780.58,-1588.96 782.014,-1596.03"/>
-<text text-anchor="middle" x="943.38" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXMLDocument</text>
+<path fill="none" stroke="#404040" d="M936.161,-1755.37C932.101,-1750.86 927.947,-1746.29 923.965,-1742 877.685,-1692.13 823.739,-1637.49 782.247,-1596.18"/>
+<polygon fill="none" stroke="#404040" points="782.099,-1596.03 775.024,-1594.64 773.589,-1587.57 780.664,-1588.96 782.099,-1596.03"/>
+<text text-anchor="middle" x="943.465" y="-1714.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXMLDocument</text>
 </g>
 <!-- Node25 -->
 <g id="node40" class="node"><title>Node25</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html" target="_top" xlink:title="Klasse Implementiert das URL&#45;Eingabefeld der Browser. ">
-<polygon fill="white" stroke="black" points="504.38,-387 504.38,-567 635.38,-567 635.38,-387 504.38,-387"/>
-<text text-anchor="start" x="512.38" y="-554" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="569.88" y="-541" font-family="Helvetica,sans-Serif" font-size="10.00">SeURL</text>
-<polyline fill="none" stroke="black" points="504.38,-533 635.38,-533 "/>
-<text text-anchor="middle" x="569.88" y="-520" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="504.38,-512 635.38,-512 "/>
-<text text-anchor="start" x="512.38" y="-499" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeURL()</text>
-<text text-anchor="start" x="512.38" y="-486" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
-<text text-anchor="start" x="512.38" y="-473" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="512.38" y="-460" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="512.38" y="-447" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeValue()</text>
-<text text-anchor="start" x="512.38" y="-434" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetFocus()</text>
-<text text-anchor="start" x="512.38" y="-421" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
-<text text-anchor="start" x="512.38" y="-408" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKey()</text>
-<text text-anchor="start" x="512.38" y="-395" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyValue()</text>
+<polygon fill="white" stroke="black" points="504.465,-387 504.465,-567 635.465,-567 635.465,-387 504.465,-387"/>
+<text text-anchor="start" x="512.465" y="-554" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="569.965" y="-541" font-family="Helvetica,sans-Serif" font-size="10.00">SeURL</text>
+<polyline fill="none" stroke="black" points="504.465,-533 635.465,-533 "/>
+<text text-anchor="middle" x="569.965" y="-520" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="504.465,-512 635.465,-512 "/>
+<text text-anchor="start" x="512.465" y="-499" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeURL()</text>
+<text text-anchor="start" x="512.465" y="-486" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
+<text text-anchor="start" x="512.465" y="-473" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="512.465" y="-460" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="512.465" y="-447" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeValue()</text>
+<text text-anchor="start" x="512.465" y="-434" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetFocus()</text>
+<text text-anchor="start" x="512.465" y="-421" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
+<text text-anchor="start" x="512.465" y="-408" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKey()</text>
+<text text-anchor="start" x="512.465" y="-395" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyValue()</text>
 </a>
 </g>
 <!-- Node25&#45;&gt;Node7 -->
 <g id="edge64" class="edge"><title>Node25&#45;&gt;Node7</title>
-<path fill="none" stroke="#404040" d="M570.498,-386.777C571.114,-296.887 572.037,-162.103 572.534,-89.5537"/>
-<polygon fill="none" stroke="#404040" points="572.536,-89.1818 568.578,-83.1545 572.619,-77.1821 576.577,-83.2093 572.536,-89.1818"/>
-<text text-anchor="middle" x="581.88" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00"> +url</text>
+<path fill="none" stroke="#404040" d="M570.583,-386.777C571.199,-296.887 572.122,-162.103 572.619,-89.5537"/>
+<polygon fill="none" stroke="#404040" points="572.621,-89.1818 568.662,-83.1545 572.703,-77.1821 576.662,-83.2093 572.621,-89.1818"/>
+<text text-anchor="middle" x="581.965" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00"> +url</text>
 </g>
 <!-- Node25&#45;&gt;Node8 -->
 <g id="edge44" class="edge"><title>Node25&#45;&gt;Node8</title>
-<path fill="none" stroke="#404040" d="M535.298,-386.796C533.068,-380.455 530.907,-374.144 528.88,-368 513.879,-322.537 499.126,-270.513 488.388,-230.922"/>
-<polygon fill="none" stroke="#404040" points="488.383,-230.904 482.959,-226.153 485.259,-219.318 490.683,-224.07 488.383,-230.904"/>
-<text text-anchor="middle" x="543.88" y="-300.5" font-family="Helvetica,sans-Serif" font-size="10.00"> +URL</text>
+<path fill="none" stroke="#404040" d="M535.383,-386.796C533.153,-380.455 530.992,-374.144 528.965,-368 513.964,-322.537 499.211,-270.513 488.473,-230.922"/>
+<polygon fill="none" stroke="#404040" points="488.468,-230.904 483.044,-226.153 485.344,-219.318 490.768,-224.07 488.468,-230.904"/>
+<text text-anchor="middle" x="543.965" y="-300.5" font-family="Helvetica,sans-Serif" font-size="10.00"> +URL</text>
 </g>
 <!-- Node26&#45;&gt;Node25 -->
 <g id="edge46" class="edge"><title>Node26&#45;&gt;Node25</title>
-<path fill="none" stroke="midnightblue" d="M607.331,-597.005C604.147,-586.8 601.021,-576.784 598.017,-567.158"/>
-<polygon fill="none" stroke="midnightblue" points="604.08,-598.337 610.401,-606.84 610.763,-596.252 604.08,-598.337"/>
+<path fill="none" stroke="midnightblue" d="M607.416,-597.005C604.231,-586.8 601.106,-576.784 598.102,-567.158"/>
+<polygon fill="none" stroke="midnightblue" points="604.165,-598.337 610.485,-606.84 610.847,-596.252 604.165,-598.337"/>
 </g>
 <!-- Node29 -->
 <g id="node55" class="node"><title>Node29</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html" target="_top" xlink:title="Diese Klasse representiert einen HTML&#45;Link, die mit Selenium angsteuert wird. ">
-<polygon fill="white" stroke="black" points="593.38,-239 593.38,-367 724.38,-367 724.38,-239 593.38,-239"/>
-<text text-anchor="start" x="601.38" y="-354" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="658.88" y="-341" font-family="Helvetica,sans-Serif" font-size="10.00">SeLink</text>
-<polyline fill="none" stroke="black" points="593.38,-333 724.38,-333 "/>
-<text text-anchor="middle" x="658.88" y="-320" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="593.38,-312 724.38,-312 "/>
-<text text-anchor="start" x="601.38" y="-299" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeLink()</text>
-<text text-anchor="start" x="601.38" y="-286" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeLink()</text>
-<text text-anchor="start" x="601.38" y="-273" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="601.38" y="-260" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="601.38" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKey()</text>
+<polygon fill="white" stroke="black" points="593.465,-239 593.465,-367 724.465,-367 724.465,-239 593.465,-239"/>
+<text text-anchor="start" x="601.465" y="-354" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="658.965" y="-341" font-family="Helvetica,sans-Serif" font-size="10.00">SeLink</text>
+<polyline fill="none" stroke="black" points="593.465,-333 724.465,-333 "/>
+<text text-anchor="middle" x="658.965" y="-320" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="593.465,-312 724.465,-312 "/>
+<text text-anchor="start" x="601.465" y="-299" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeLink()</text>
+<text text-anchor="start" x="601.465" y="-286" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeLink()</text>
+<text text-anchor="start" x="601.465" y="-273" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="601.465" y="-260" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="601.465" y="-247" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKey()</text>
 </a>
 </g>
 <!-- Node26&#45;&gt;Node29 -->
 <g id="edge68" class="edge"><title>Node26&#45;&gt;Node29</title>
-<path fill="none" stroke="midnightblue" d="M661.369,-596.653C660.686,-516.134 659.923,-426.078 659.424,-367.184"/>
-<polygon fill="none" stroke="midnightblue" points="657.871,-596.959 661.456,-606.929 664.871,-596.9 657.871,-596.959"/>
+<path fill="none" stroke="midnightblue" d="M661.453,-596.653C660.771,-516.134 660.008,-426.078 659.509,-367.184"/>
+<polygon fill="none" stroke="midnightblue" points="657.956,-596.959 661.541,-606.929 664.956,-596.9 657.956,-596.959"/>
 </g>
 <!-- Node27&#45;&gt;Node26 -->
 <g id="edge48" class="edge"><title>Node27&#45;&gt;Node26</title>
-<path fill="none" stroke="midnightblue" d="M706.313,-984.467C703.47,-970.759 700.601,-956.918 697.763,-943.232"/>
-<polygon fill="none" stroke="midnightblue" points="702.92,-985.341 708.377,-994.422 709.774,-983.919 702.92,-985.341"/>
+<path fill="none" stroke="midnightblue" d="M706.398,-984.467C703.555,-970.759 700.685,-956.918 697.848,-943.232"/>
+<polygon fill="none" stroke="midnightblue" points="703.004,-985.341 708.462,-994.422 709.858,-983.919 703.004,-985.341"/>
 </g>
 <!-- Node28 -->
 <g id="node47" class="node"><title>Node28</title>
 <a xlink:href="interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html" target="_top" xlink:title="{okw.gui.IGUIChildwindow\n||+ getCaption()\l+ getExists()\l+ getHasFocus()\l+ getIsActive()\l+ getLabel()\l+ getTooltip()\l+ getValue()\l+ ClickOn()\l+ DoubleClickOn()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogSelected()\l+ LogTablecellValue()\l+ LogTooltip()\l+ LogValue()\l+ MemorizeCaption()\l+ MemorizeExists()\lund 23 mehr ...\l}">
-<polygon fill="white" stroke="black" points="1128.88,-1368.5 1128.88,-1691.5 1258.88,-1691.5 1258.88,-1368.5 1128.88,-1368.5"/>
-<text text-anchor="middle" x="1193.88" y="-1678.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.IGUIChildwindow</text>
-<polyline fill="none" stroke="black" points="1128.88,-1670.5 1258.88,-1670.5 "/>
-<text text-anchor="middle" x="1193.88" y="-1657.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="1128.88,-1649.5 1258.88,-1649.5 "/>
-<text text-anchor="start" x="1136.88" y="-1636.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="1136.88" y="-1623.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="1136.88" y="-1610.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
-<text text-anchor="start" x="1136.88" y="-1597.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="1136.88" y="-1584.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
-<text text-anchor="start" x="1136.88" y="-1571.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
-<text text-anchor="start" x="1136.88" y="-1558.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="1136.88" y="-1545.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
-<text text-anchor="start" x="1136.88" y="-1532.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
-<text text-anchor="start" x="1136.88" y="-1519.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="1136.88" y="-1506.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="1136.88" y="-1493.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="1136.88" y="-1480.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="1136.88" y="-1467.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="1136.88" y="-1454.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
-<text text-anchor="start" x="1136.88" y="-1441.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
-<text text-anchor="start" x="1136.88" y="-1428.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="1136.88" y="-1415.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="1136.88" y="-1402.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeCaption()</text>
-<text text-anchor="start" x="1136.88" y="-1389.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
-<text text-anchor="start" x="1136.88" y="-1376.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 23 mehr ...</text>
+<polygon fill="white" stroke="black" points="1128.96,-1368.5 1128.96,-1691.5 1258.96,-1691.5 1258.96,-1368.5 1128.96,-1368.5"/>
+<text text-anchor="middle" x="1193.96" y="-1678.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.IGUIChildwindow</text>
+<polyline fill="none" stroke="black" points="1128.96,-1670.5 1258.96,-1670.5 "/>
+<text text-anchor="middle" x="1193.96" y="-1657.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="1128.96,-1649.5 1258.96,-1649.5 "/>
+<text text-anchor="start" x="1136.96" y="-1636.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="1136.96" y="-1623.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="1136.96" y="-1610.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
+<text text-anchor="start" x="1136.96" y="-1597.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="1136.96" y="-1584.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
+<text text-anchor="start" x="1136.96" y="-1571.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
+<text text-anchor="start" x="1136.96" y="-1558.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="1136.96" y="-1545.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
+<text text-anchor="start" x="1136.96" y="-1532.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
+<text text-anchor="start" x="1136.96" y="-1519.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="1136.96" y="-1506.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="1136.96" y="-1493.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="1136.96" y="-1480.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="1136.96" y="-1467.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="1136.96" y="-1454.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
+<text text-anchor="start" x="1136.96" y="-1441.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
+<text text-anchor="start" x="1136.96" y="-1428.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="1136.96" y="-1415.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="1136.96" y="-1402.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeCaption()</text>
+<text text-anchor="start" x="1136.96" y="-1389.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
+<text text-anchor="start" x="1136.96" y="-1376.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 23 mehr ...</text>
 </a>
 </g>
 <!-- Node28&#45;&gt;Node27 -->
 <g id="edge52" class="edge"><title>Node28&#45;&gt;Node27</title>
-<path fill="none" stroke="midnightblue" d="M1133.7,-1359.55C1127.96,-1351.18 1121.69,-1343.26 1114.88,-1336 1028.99,-1244.53 886.885,-1194.13 805.108,-1171.3"/>
-<polygon fill="none" stroke="midnightblue" points="1130.87,-1361.61 1139.28,-1368.05 1136.72,-1357.77 1130.87,-1361.61"/>
+<path fill="none" stroke="midnightblue" d="M1133.79,-1359.55C1128.04,-1351.18 1121.78,-1343.26 1114.96,-1336 1029.08,-1244.53 886.97,-1194.13 805.193,-1171.3"/>
+<polygon fill="none" stroke="midnightblue" points="1130.95,-1361.61 1139.36,-1368.05 1136.81,-1357.77 1130.95,-1361.61"/>
 </g>
 <!-- Node29&#45;&gt;Node7 -->
 <g id="edge66" class="edge"><title>Node29&#45;&gt;Node7</title>
-<path fill="none" stroke="#404040" d="M637.952,-238.756C622.909,-192.578 602.922,-131.222 589.087,-88.7512"/>
-<polygon fill="none" stroke="#404040" points="589.074,-88.7112 583.412,-84.2452 585.357,-77.3013 591.019,-81.7673 589.074,-88.7112"/>
-<text text-anchor="middle" x="663.88" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00"> +Yahoo</text>
-<text text-anchor="middle" x="663.88" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">+LinkNotExists</text>
-<text text-anchor="middle" x="663.88" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">+Google</text>
+<path fill="none" stroke="#404040" d="M638.037,-238.756C622.994,-192.578 603.007,-131.222 589.172,-88.7512"/>
+<polygon fill="none" stroke="#404040" points="589.159,-88.7112 583.497,-84.2452 585.442,-77.3013 591.104,-81.7673 589.159,-88.7112"/>
+<text text-anchor="middle" x="663.965" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00"> +Yahoo</text>
+<text text-anchor="middle" x="663.965" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">+LinkNotExists</text>
+<text text-anchor="middle" x="663.965" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">+Google</text>
 </g>
 </g>
 </svg>

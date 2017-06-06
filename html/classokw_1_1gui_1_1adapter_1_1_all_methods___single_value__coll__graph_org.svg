@@ -115,7 +115,7 @@
 <polygon fill="white" stroke="black" points="217,-1148.5 217,-1237.5 327,-1237.5 327,-1148.5 217,-1148.5"/>
 <text text-anchor="middle" x="272" y="-1224.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.OKWLocator</text>
 <polyline fill="none" stroke="black" points="217,-1216.5 327,-1216.5 "/>
-<text text-anchor="start" x="225" y="-1203.5" font-family="Helvetica,sans-Serif" font-size="10.00">~ _locator</text>
+<text text-anchor="start" x="225" y="-1203.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; _locator</text>
 <polyline fill="none" stroke="black" points="217,-1195.5 327,-1195.5 "/>
 <text text-anchor="start" x="225" y="-1182.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ OKWLocator()</text>
 <text text-anchor="start" x="225" y="-1169.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
@@ -132,7 +132,7 @@
 <g id="edge8" class="edge"><title>Node8&#45;&gt;Node8</title>
 <path fill="none" stroke="#404040" d="M327.073,-1205.5C337.574,-1204 345,-1199.84 345,-1193 345,-1189.15 342.65,-1186.15 338.726,-1184"/>
 <polygon fill="none" stroke="#404040" points="338.567,-1183.95 331.671,-1186.06 327.073,-1180.5 333.97,-1178.4 338.567,-1183.95"/>
-<text text-anchor="middle" x="374" y="-1190.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~_Locatoren</text>
+<text text-anchor="middle" x="372.5" y="-1190.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;_Locatoren</text>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node"><title>Node9</title>
@@ -199,7 +199,7 @@
 <g id="edge10" class="edge"><title>Node9&#45;&gt;Node8</title>
 <path fill="none" stroke="#404040" d="M180.2,-1386.42C203.166,-1338.03 227.535,-1286.68 245.39,-1249.06"/>
 <polygon fill="none" stroke="#404040" points="245.568,-1248.69 244.527,-1241.55 250.713,-1237.85 251.754,-1244.98 245.568,-1248.69"/>
-<text text-anchor="middle" x="268" y="-1260.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
+<text text-anchor="middle" x="266.5" y="-1260.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myLogger</text>
 </g>
 <!-- Node9&#45;&gt;Node9 -->
 <g id="edge14" class="edge"><title>Node9&#45;&gt;Node9</title>

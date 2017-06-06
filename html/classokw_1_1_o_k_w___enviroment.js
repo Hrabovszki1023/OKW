@@ -1,6 +1,5 @@
 var classokw_1_1_o_k_w___enviroment =
 [
-    [ "OKW_Enviroment", "classokw_1_1_o_k_w___enviroment.html#ad6ff9ad5c95a9da5e73e68297b25ff6a", null ],
     [ "getFile_OKW_Const_xml", "classokw_1_1_o_k_w___enviroment.html#a576c6b7693e98003bdc43f73886863aa", null ],
     [ "getFile_OKW_Docu_xml", "classokw_1_1_o_k_w___enviroment.html#aa880cc8759201bf2b23e7b6fcb78fc9a", null ],
     [ "getFile_OKW_ImplementationMatrix_xml", "classokw_1_1_o_k_w___enviroment.html#a182aaff0a18dde262957074ae23eb332", null ],

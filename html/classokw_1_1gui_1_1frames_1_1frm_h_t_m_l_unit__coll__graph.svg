@@ -187,27 +187,27 @@ var sectionId = 'dynsection-1';
 <!-- Node10 -->
 <g id="node8" class="node"><title>Node10</title>
 <a xlink:href="classokw_1_1gui_1_1_o_k_w_locator.html" target="_top" xlink:title="Description of OKWLocator. ">
-<polygon fill="white" stroke="black" points="76,-1470.5 76,-1559.5 186,-1559.5 186,-1470.5 76,-1470.5"/>
-<text text-anchor="middle" x="131" y="-1546.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.OKWLocator</text>
-<polyline fill="none" stroke="black" points="76,-1538.5 186,-1538.5 "/>
-<text text-anchor="start" x="84" y="-1525.5" font-family="Helvetica,sans-Serif" font-size="10.00">~ _locator</text>
-<polyline fill="none" stroke="black" points="76,-1517.5 186,-1517.5 "/>
-<text text-anchor="start" x="84" y="-1504.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ OKWLocator()</text>
-<text text-anchor="start" x="84" y="-1491.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
-<text text-anchor="start" x="84" y="-1478.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setLocator()</text>
+<polygon fill="white" stroke="black" points="79,-1470.5 79,-1559.5 189,-1559.5 189,-1470.5 79,-1470.5"/>
+<text text-anchor="middle" x="134" y="-1546.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.OKWLocator</text>
+<polyline fill="none" stroke="black" points="79,-1538.5 189,-1538.5 "/>
+<text text-anchor="start" x="87" y="-1525.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; _locator</text>
+<polyline fill="none" stroke="black" points="79,-1517.5 189,-1517.5 "/>
+<text text-anchor="start" x="87" y="-1504.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ OKWLocator()</text>
+<text text-anchor="start" x="87" y="-1491.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
+<text text-anchor="start" x="87" y="-1478.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setLocator()</text>
 </a>
 </g>
 <!-- Node10&#45;&gt;Node9 -->
 <g id="edge8" class="edge"><title>Node10&#45;&gt;Node9</title>
-<path fill="none" stroke="#404040" d="M170.398,-1470.23C182.92,-1454.88 196.286,-1437.21 207,-1420 207.949,-1418.48 208.894,-1416.94 209.834,-1415.39"/>
-<polygon fill="none" stroke="#404040" points="209.874,-1415.32 209.48,-1408.12 215.974,-1404.99 216.369,-1412.19 209.874,-1415.32"/>
+<path fill="none" stroke="#404040" d="M171.733,-1470.05C183.754,-1454.68 196.615,-1437.06 207,-1420 207.934,-1418.47 208.865,-1416.92 209.791,-1415.36"/>
+<polygon fill="none" stroke="#404040" points="209.832,-1415.29 209.381,-1408.09 215.851,-1404.91 216.302,-1412.11 209.832,-1415.29"/>
 <text text-anchor="middle" x="215.5" y="-1442.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #_locator</text>
 </g>
 <!-- Node10&#45;&gt;Node10 -->
 <g id="edge10" class="edge"><title>Node10&#45;&gt;Node10</title>
-<path fill="none" stroke="#404040" d="M186.073,-1527.5C196.574,-1526 204,-1521.84 204,-1515 204,-1511.15 201.65,-1508.15 197.726,-1506"/>
-<polygon fill="none" stroke="#404040" points="197.567,-1505.95 190.671,-1508.06 186.073,-1502.5 192.97,-1500.4 197.567,-1505.95"/>
-<text text-anchor="middle" x="233" y="-1512.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~_Locatoren</text>
+<path fill="none" stroke="#404040" d="M189.073,-1527.5C199.574,-1526 207,-1521.84 207,-1515 207,-1511.15 204.65,-1508.15 200.726,-1506"/>
+<polygon fill="none" stroke="#404040" points="200.567,-1505.95 193.671,-1508.06 189.073,-1502.5 195.97,-1500.4 200.567,-1505.95"/>
+<text text-anchor="middle" x="234.5" y="-1512.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;_Locatoren</text>
 </g>
 <!-- Node11 -->
 <g id="node11" class="node"><title>Node11</title>
@@ -266,9 +266,9 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node11&#45;&gt;Node10 -->
 <g id="edge12" class="edge"><title>Node11&#45;&gt;Node10</title>
-<path fill="none" stroke="#404040" d="M230.797,-1715.19C205.583,-1664.61 178.306,-1609.9 158.652,-1570.47"/>
-<polygon fill="none" stroke="#404040" points="158.545,-1570.26 152.289,-1566.67 153.191,-1559.52 159.448,-1563.1 158.545,-1570.26"/>
-<text text-anchor="middle" x="193" y="-1582.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
+<path fill="none" stroke="#404040" d="M230.822,-1712.78C206.427,-1662.95 180.222,-1609.42 161.234,-1570.63"/>
+<polygon fill="none" stroke="#404040" points="161.107,-1570.37 154.876,-1566.74 155.83,-1559.59 162.061,-1563.22 161.107,-1570.37"/>
+<text text-anchor="middle" x="193.5" y="-1582.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myLogger</text>
 </g>
 <!-- Node11&#45;&gt;Node11 -->
 <g id="edge16" class="edge"><title>Node11&#45;&gt;Node11</title>

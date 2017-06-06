@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 1031;
+var viewWidth = 1028;
 var viewHeight = 2640;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,7 +54,7 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>okw.gui.frames.frmCalculator.frmCalculator</title>
-<polygon fill="white" stroke="white" points="-4,5 -4,-2636 1028,-2636 1028,5 -4,5"/>
+<polygon fill="white" stroke="white" points="-4,5 -4,-2636 1025,-2636 1025,5 -4,5"/>
 <!-- Node7 -->
 <g id="node1" class="node"><title>Node7</title>
 <polygon fill="#bfbfbf" stroke="black" points="428,-0.5 428,-167.5 590,-167.5 590,-0.5 428,-0.5"/>
@@ -232,7 +232,7 @@ var sectionId = 'dynsection-1';
 <polygon fill="white" stroke="black" points="757,-1898.5 757,-1987.5 867,-1987.5 867,-1898.5 757,-1898.5"/>
 <text text-anchor="middle" x="812" y="-1974.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.OKWLocator</text>
 <polyline fill="none" stroke="black" points="757,-1966.5 867,-1966.5 "/>
-<text text-anchor="start" x="765" y="-1953.5" font-family="Helvetica,sans-Serif" font-size="10.00">~ _locator</text>
+<text text-anchor="start" x="765" y="-1953.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; _locator</text>
 <polyline fill="none" stroke="black" points="757,-1945.5 867,-1945.5 "/>
 <text text-anchor="start" x="765" y="-1932.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ OKWLocator()</text>
 <text text-anchor="start" x="765" y="-1919.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
@@ -255,7 +255,7 @@ var sectionId = 'dynsection-1';
 <g id="edge12" class="edge"><title>Node12&#45;&gt;Node12</title>
 <path fill="none" stroke="#404040" d="M867.073,-1955.5C877.574,-1954 885,-1949.84 885,-1943 885,-1939.15 882.65,-1936.15 878.726,-1934"/>
 <polygon fill="none" stroke="#404040" points="878.567,-1933.95 871.671,-1936.06 867.073,-1930.5 873.97,-1928.4 878.567,-1933.95"/>
-<text text-anchor="middle" x="914" y="-1940.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~_Locatoren</text>
+<text text-anchor="middle" x="912.5" y="-1940.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;_Locatoren</text>
 </g>
 <!-- Node13 -->
 <g id="node13" class="node"><title>Node13</title>
@@ -302,9 +302,9 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node13&#45;&gt;Node9 -->
 <g id="edge42" class="edge"><title>Node13&#45;&gt;Node9</title>
-<path fill="none" stroke="#404040" d="M754.304,-2238.68C838.287,-2183.98 971,-2076.43 971,-1943 971,-1943 971,-1943 971,-1312 971,-1223.49 976.576,-1190.64 926,-1118 874.581,-1044.15 783.705,-991.947 718.591,-961.794"/>
-<polygon fill="none" stroke="#404040" points="718.486,-961.747 711.369,-962.906 707.561,-956.782 714.678,-955.623 718.486,-961.747"/>
-<text text-anchor="middle" x="997" y="-1683.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #MyLogger</text>
+<path fill="none" stroke="#404040" d="M754.307,-2238.04C837.438,-2183 968,-2075.46 968,-1943 968,-1943 968,-1943 968,-1312 968,-1223.78 975.875,-1190.77 926,-1118 875.126,-1043.77 784.146,-991.642 718.858,-961.609"/>
+<polygon fill="none" stroke="#404040" points="718.736,-961.554 711.622,-962.733 707.798,-956.619 714.912,-955.44 718.736,-961.554"/>
+<text text-anchor="middle" x="994" y="-1683.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #MyLogger</text>
 </g>
 <!-- Node13&#45;&gt;Node11 -->
 <g id="edge20" class="edge"><title>Node13&#45;&gt;Node11</title>
@@ -316,7 +316,7 @@ var sectionId = 'dynsection-1';
 <g id="edge14" class="edge"><title>Node13&#45;&gt;Node12</title>
 <path fill="none" stroke="#404040" d="M754.074,-2098.24C767.503,-2062.25 780.65,-2027.02 791.015,-1999.24"/>
 <polygon fill="none" stroke="#404040" points="791.084,-1999.05 789.434,-1992.03 795.279,-1987.81 796.93,-1994.83 791.084,-1999.05"/>
-<text text-anchor="middle" x="814" y="-2010.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
+<text text-anchor="middle" x="812.5" y="-2010.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myLogger</text>
 </g>
 <!-- Node13&#45;&gt;Node13 -->
 <g id="edge18" class="edge"><title>Node13&#45;&gt;Node13</title>

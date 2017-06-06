@@ -153,7 +153,7 @@ var sectionId = 'dynsection-1';
 <polygon fill="white" stroke="black" points="141,-1006.5 141,-1095.5 251,-1095.5 251,-1006.5 141,-1006.5"/>
 <text text-anchor="middle" x="196" y="-1082.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.OKWLocator</text>
 <polyline fill="none" stroke="black" points="141,-1074.5 251,-1074.5 "/>
-<text text-anchor="start" x="149" y="-1061.5" font-family="Helvetica,sans-Serif" font-size="10.00">~ _locator</text>
+<text text-anchor="start" x="149" y="-1061.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; _locator</text>
 <polyline fill="none" stroke="black" points="141,-1053.5 251,-1053.5 "/>
 <text text-anchor="start" x="149" y="-1040.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ OKWLocator()</text>
 <text text-anchor="start" x="149" y="-1027.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
@@ -170,7 +170,7 @@ var sectionId = 'dynsection-1';
 <g id="edge8" class="edge"><title>Node25&#45;&gt;Node25</title>
 <path fill="none" stroke="#404040" d="M251.073,-1063.5C261.574,-1062 269,-1057.84 269,-1051 269,-1047.15 266.65,-1044.15 262.726,-1042"/>
 <polygon fill="none" stroke="#404040" points="262.567,-1041.95 255.671,-1044.06 251.073,-1038.5 257.97,-1036.4 262.567,-1041.95"/>
-<text text-anchor="middle" x="298" y="-1048.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~_Locatoren</text>
+<text text-anchor="middle" x="296.5" y="-1048.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;_Locatoren</text>
 </g>
 <!-- Node26 -->
 <g id="node9" class="node"><title>Node26</title>
@@ -231,7 +231,7 @@ var sectionId = 'dynsection-1';
 <g id="edge10" class="edge"><title>Node26&#45;&gt;Node25</title>
 <path fill="none" stroke="#404040" d="M138.074,-1206.24C151.503,-1170.25 164.65,-1135.02 175.015,-1107.24"/>
 <polygon fill="none" stroke="#404040" points="175.084,-1107.05 173.434,-1100.03 179.279,-1095.81 180.93,-1102.83 175.084,-1107.05"/>
-<text text-anchor="middle" x="199" y="-1118.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
+<text text-anchor="middle" x="197.5" y="-1118.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myLogger</text>
 </g>
 <!-- Node26&#45;&gt;Node26 -->
 <g id="edge14" class="edge"><title>Node26&#45;&gt;Node26</title>
@@ -345,46 +345,46 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node32 -->
 <g id="node23" class="node"><title>Node32</title>
-<polygon fill="white" stroke="#bfbfbf" points="346.5,-1019.5 346.5,-1082.5 417.5,-1082.5 417.5,-1019.5 346.5,-1019.5"/>
-<text text-anchor="middle" x="382" y="-1069.5" font-family="Helvetica,sans-Serif" font-size="10.00">ClassLoader</text>
-<polyline fill="none" stroke="#bfbfbf" points="346.5,-1061.5 417.5,-1061.5 "/>
-<text text-anchor="middle" x="382" y="-1048.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="346.5,-1040.5 417.5,-1040.5 "/>
-<text text-anchor="middle" x="382" y="-1027.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="345.5,-1019.5 345.5,-1082.5 416.5,-1082.5 416.5,-1019.5 345.5,-1019.5"/>
+<text text-anchor="middle" x="381" y="-1069.5" font-family="Helvetica,sans-Serif" font-size="10.00">ClassLoader</text>
+<polyline fill="none" stroke="#bfbfbf" points="345.5,-1061.5 416.5,-1061.5 "/>
+<text text-anchor="middle" x="381" y="-1048.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="345.5,-1040.5 416.5,-1040.5 "/>
+<text text-anchor="middle" x="381" y="-1027.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node32&#45;&gt;Node31 -->
 <g id="edge26" class="edge"><title>Node32&#45;&gt;Node31</title>
-<path fill="none" stroke="midnightblue" d="M418.358,-1012.51C420.887,-1010.25 423.446,-1008.06 426,-1006 458.665,-979.713 477.03,-986.311 506,-956 531.134,-929.702 551.448,-894.454 565.8,-864.844"/>
-<polygon fill="none" stroke="midnightblue" points="415.816,-1010.1 410.9,-1019.48 420.596,-1015.21 415.816,-1010.1"/>
+<path fill="none" stroke="midnightblue" d="M417.345,-1012.5C419.877,-1010.23 422.441,-1008.05 425,-1006 458.033,-979.568 476.684,-986.503 506,-956 531.31,-929.665 551.69,-894.24 566.035,-864.539"/>
+<polygon fill="none" stroke="midnightblue" points="414.806,-1010.08 409.88,-1019.46 419.58,-1015.2 414.806,-1010.08"/>
 </g>
 <!-- Node33 -->
 <g id="node25" class="node"><title>Node33</title>
-<polygon fill="white" stroke="#bfbfbf" points="434.5,-1019.5 434.5,-1082.5 559.5,-1082.5 559.5,-1019.5 434.5,-1019.5"/>
-<text text-anchor="middle" x="497" y="-1069.5" font-family="Helvetica,sans-Serif" font-size="10.00">DocumentBuilderFactory</text>
-<polyline fill="none" stroke="#bfbfbf" points="434.5,-1061.5 559.5,-1061.5 "/>
-<text text-anchor="middle" x="497" y="-1048.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="434.5,-1040.5 559.5,-1040.5 "/>
-<text text-anchor="middle" x="497" y="-1027.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="433.5,-1019.5 433.5,-1082.5 558.5,-1082.5 558.5,-1019.5 433.5,-1019.5"/>
+<text text-anchor="middle" x="496" y="-1069.5" font-family="Helvetica,sans-Serif" font-size="10.00">DocumentBuilderFactory</text>
+<polyline fill="none" stroke="#bfbfbf" points="433.5,-1061.5 558.5,-1061.5 "/>
+<text text-anchor="middle" x="496" y="-1048.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="433.5,-1040.5 558.5,-1040.5 "/>
+<text text-anchor="middle" x="496" y="-1027.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node33&#45;&gt;Node31 -->
 <g id="edge28" class="edge"><title>Node33&#45;&gt;Node31</title>
-<path fill="none" stroke="#404040" d="M506.176,-1019.32C510.407,-1005.33 515.667,-988.748 521,-974 532.777,-941.432 547.228,-905.897 559.857,-876.01"/>
-<polygon fill="none" stroke="#404040" points="559.906,-875.895 558.571,-868.809 564.598,-864.851 565.934,-871.937 559.906,-875.895"/>
+<path fill="none" stroke="#404040" d="M505.668,-1019.34C510.095,-1005.36 515.56,-988.772 521,-974 533.017,-941.372 547.563,-905.691 560.195,-875.718"/>
+<polygon fill="none" stroke="#404040" points="560.254,-875.579 558.91,-868.494 564.933,-864.529 566.277,-871.613 560.254,-875.579"/>
 <text text-anchor="middle" x="553" y="-978.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;mydbFactory</text>
 </g>
 <!-- Node34 -->
 <g id="node27" class="node"><title>Node34</title>
-<polygon fill="white" stroke="#bfbfbf" points="577,-1019.5 577,-1082.5 621,-1082.5 621,-1019.5 577,-1019.5"/>
-<text text-anchor="middle" x="599" y="-1069.5" font-family="Helvetica,sans-Serif" font-size="10.00">XPath</text>
-<polyline fill="none" stroke="#bfbfbf" points="577,-1061.5 621,-1061.5 "/>
-<text text-anchor="middle" x="599" y="-1048.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="577,-1040.5 621,-1040.5 "/>
-<text text-anchor="middle" x="599" y="-1027.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="576,-1019.5 576,-1082.5 620,-1082.5 620,-1019.5 576,-1019.5"/>
+<text text-anchor="middle" x="598" y="-1069.5" font-family="Helvetica,sans-Serif" font-size="10.00">XPath</text>
+<polyline fill="none" stroke="#bfbfbf" points="576,-1061.5 620,-1061.5 "/>
+<text text-anchor="middle" x="598" y="-1048.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="576,-1040.5 620,-1040.5 "/>
+<text text-anchor="middle" x="598" y="-1027.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node34&#45;&gt;Node31 -->
 <g id="edge30" class="edge"><title>Node34&#45;&gt;Node31</title>
-<path fill="none" stroke="#404040" d="M593.586,-1019.37C592.115,-1009.37 590.728,-998.249 590,-988 587.391,-951.29 587.169,-910.286 587.696,-876.601"/>
-<polygon fill="none" stroke="#404040" points="587.697,-876.541 583.81,-870.467 587.922,-864.543 591.809,-870.617 587.697,-876.541"/>
+<path fill="none" stroke="#404040" d="M593.187,-1019.35C591.88,-1009.35 590.647,-998.233 590,-988 587.677,-951.271 587.48,-910.266 587.949,-876.584"/>
+<polygon fill="none" stroke="#404040" points="587.95,-876.526 584.05,-870.46 588.15,-864.528 592.049,-870.593 587.95,-876.526"/>
 <text text-anchor="middle" x="613.5" y="-978.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXPath</text>
 </g>
 <!-- Node35 -->

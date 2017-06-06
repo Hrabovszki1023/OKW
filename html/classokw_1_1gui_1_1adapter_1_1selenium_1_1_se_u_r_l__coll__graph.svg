@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 936;
+var viewWidth = 933;
 var viewHeight = 2098;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,7 +54,7 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>okw.gui.adapter.selenium.SeURL</title>
-<polygon fill="white" stroke="white" points="-4,5 -4,-2094 933,-2094 933,5 -4,5"/>
+<polygon fill="white" stroke="white" points="-4,5 -4,-2094 930,-2094 930,5 -4,5"/>
 <!-- Node6 -->
 <g id="node1" class="node"><title>Node6</title>
 <polygon fill="#bfbfbf" stroke="black" points="221.5,-1 221.5,-181 352.5,-181 352.5,-1 221.5,-1"/>
@@ -186,7 +186,7 @@ var sectionId = 'dynsection-1';
 <polygon fill="white" stroke="black" points="206,-1356.5 206,-1445.5 316,-1445.5 316,-1356.5 206,-1356.5"/>
 <text text-anchor="middle" x="261" y="-1432.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.OKWLocator</text>
 <polyline fill="none" stroke="black" points="206,-1424.5 316,-1424.5 "/>
-<text text-anchor="start" x="214" y="-1411.5" font-family="Helvetica,sans-Serif" font-size="10.00">~ _locator</text>
+<text text-anchor="start" x="214" y="-1411.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; _locator</text>
 <polyline fill="none" stroke="black" points="206,-1403.5 316,-1403.5 "/>
 <text text-anchor="start" x="214" y="-1390.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ OKWLocator()</text>
 <text text-anchor="start" x="214" y="-1377.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
@@ -203,7 +203,7 @@ var sectionId = 'dynsection-1';
 <g id="edge10" class="edge"><title>Node10&#45;&gt;Node10</title>
 <path fill="none" stroke="#404040" d="M316.073,-1413.5C326.574,-1412 334,-1407.84 334,-1401 334,-1397.15 331.65,-1394.15 327.726,-1392"/>
 <polygon fill="none" stroke="#404040" points="327.567,-1391.95 320.671,-1394.06 316.073,-1388.5 322.97,-1386.4 327.567,-1391.95"/>
-<text text-anchor="middle" x="363" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~_Locatoren</text>
+<text text-anchor="middle" x="361.5" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;_Locatoren</text>
 </g>
 <!-- Node11 -->
 <g id="node11" class="node"><title>Node11</title>
@@ -270,7 +270,7 @@ var sectionId = 'dynsection-1';
 <g id="edge12" class="edge"><title>Node11&#45;&gt;Node10</title>
 <path fill="none" stroke="#404040" d="M175.108,-1589.06C196.481,-1542.27 218.847,-1493.3 235.396,-1457.06"/>
 <polygon fill="none" stroke="#404040" points="235.571,-1456.68 234.425,-1449.56 240.556,-1445.76 241.702,-1452.88 235.571,-1456.68"/>
-<text text-anchor="middle" x="258" y="-1468.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
+<text text-anchor="middle" x="256.5" y="-1468.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myLogger</text>
 </g>
 <!-- Node11&#45;&gt;Node11 -->
 <g id="edge16" class="edge"><title>Node11&#45;&gt;Node11</title>
@@ -375,112 +375,112 @@ var sectionId = 'dynsection-1';
 <!-- Node16 -->
 <g id="node24" class="node"><title>Node16</title>
 <a xlink:href="classokw_1_1_o_k_w___xml_reader.html" target="_top" xlink:title="{okw.OKW_XmlReader\n||+ getXMLFile()\l+ OKW_XmlReader()\l+ getTextContentSingleValue()\l+ getTextContentAsList()\l&#45; Init()\l}">
-<polygon fill="white" stroke="black" points="574.5,-1086.5 574.5,-1201.5 725.5,-1201.5 725.5,-1086.5 574.5,-1086.5"/>
-<text text-anchor="middle" x="650" y="-1188.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader</text>
-<polyline fill="none" stroke="black" points="574.5,-1180.5 725.5,-1180.5 "/>
-<text text-anchor="middle" x="650" y="-1167.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="574.5,-1159.5 725.5,-1159.5 "/>
-<text text-anchor="start" x="582.5" y="-1146.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getXMLFile()</text>
-<text text-anchor="start" x="582.5" y="-1133.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ OKW_XmlReader()</text>
-<text text-anchor="start" x="582.5" y="-1120.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTextContentSingleValue()</text>
-<text text-anchor="start" x="582.5" y="-1107.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTextContentAsList()</text>
-<text text-anchor="start" x="582.5" y="-1094.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; Init()</text>
+<polygon fill="white" stroke="black" points="571.5,-1086.5 571.5,-1201.5 722.5,-1201.5 722.5,-1086.5 571.5,-1086.5"/>
+<text text-anchor="middle" x="647" y="-1188.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader</text>
+<polyline fill="none" stroke="black" points="571.5,-1180.5 722.5,-1180.5 "/>
+<text text-anchor="middle" x="647" y="-1167.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="571.5,-1159.5 722.5,-1159.5 "/>
+<text text-anchor="start" x="579.5" y="-1146.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getXMLFile()</text>
+<text text-anchor="start" x="579.5" y="-1133.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ OKW_XmlReader()</text>
+<text text-anchor="start" x="579.5" y="-1120.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTextContentSingleValue()</text>
+<text text-anchor="start" x="579.5" y="-1107.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTextContentAsList()</text>
+<text text-anchor="start" x="579.5" y="-1094.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; Init()</text>
 </a>
 </g>
 <!-- Node16&#45;&gt;Node15 -->
 <g id="edge28" class="edge"><title>Node16&#45;&gt;Node15</title>
-<path fill="none" stroke="#404040" d="M625.967,-1086.38C598.992,-1021.71 555.127,-916.549 525.446,-845.389"/>
-<polygon fill="none" stroke="#404040" points="525.428,-845.347 519.427,-841.35 520.809,-834.272 526.81,-838.27 525.428,-845.347"/>
-<text text-anchor="middle" x="606.5" y="-954.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXmlReader</text>
+<path fill="none" stroke="#404040" d="M623.429,-1086.38C596.973,-1021.71 553.952,-916.549 524.841,-845.389"/>
+<polygon fill="none" stroke="#404040" points="524.837,-845.379 518.863,-841.34 520.293,-834.272 526.267,-838.311 524.837,-845.379"/>
+<text text-anchor="middle" x="604.5" y="-954.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXmlReader</text>
 </g>
 <!-- Node17 -->
 <g id="node26" class="node"><title>Node17</title>
-<polygon fill="white" stroke="#bfbfbf" points="409.5,-1369.5 409.5,-1432.5 480.5,-1432.5 480.5,-1369.5 409.5,-1369.5"/>
-<text text-anchor="middle" x="445" y="-1419.5" font-family="Helvetica,sans-Serif" font-size="10.00">ClassLoader</text>
-<polyline fill="none" stroke="#bfbfbf" points="409.5,-1411.5 480.5,-1411.5 "/>
-<text text-anchor="middle" x="445" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="409.5,-1390.5 480.5,-1390.5 "/>
-<text text-anchor="middle" x="445" y="-1377.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="406.5,-1369.5 406.5,-1432.5 477.5,-1432.5 477.5,-1369.5 406.5,-1369.5"/>
+<text text-anchor="middle" x="442" y="-1419.5" font-family="Helvetica,sans-Serif" font-size="10.00">ClassLoader</text>
+<polyline fill="none" stroke="#bfbfbf" points="406.5,-1411.5 477.5,-1411.5 "/>
+<text text-anchor="middle" x="442" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="406.5,-1390.5 477.5,-1390.5 "/>
+<text text-anchor="middle" x="442" y="-1377.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node17&#45;&gt;Node16 -->
 <g id="edge30" class="edge"><title>Node17&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M476.821,-1361.27C490.437,-1344.25 506.507,-1324.16 521,-1306 548.586,-1271.44 579.443,-1232.69 604.06,-1201.76"/>
-<polygon fill="none" stroke="midnightblue" points="473.868,-1359.35 470.351,-1369.35 479.333,-1363.73 473.868,-1359.35"/>
+<path fill="none" stroke="midnightblue" d="M475.68,-1361.09C489.806,-1344.2 506.327,-1324.24 521,-1306 548.579,-1271.71 578.873,-1232.8 602.843,-1201.71"/>
+<polygon fill="none" stroke="midnightblue" points="472.696,-1359.2 468.956,-1369.11 478.062,-1363.7 472.696,-1359.2"/>
 </g>
 <!-- Node18 -->
 <g id="node28" class="node"><title>Node18</title>
-<polygon fill="white" stroke="#bfbfbf" points="497.5,-1369.5 497.5,-1432.5 622.5,-1432.5 622.5,-1369.5 497.5,-1369.5"/>
-<text text-anchor="middle" x="560" y="-1419.5" font-family="Helvetica,sans-Serif" font-size="10.00">DocumentBuilderFactory</text>
-<polyline fill="none" stroke="#bfbfbf" points="497.5,-1411.5 622.5,-1411.5 "/>
-<text text-anchor="middle" x="560" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="497.5,-1390.5 622.5,-1390.5 "/>
-<text text-anchor="middle" x="560" y="-1377.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="494.5,-1369.5 494.5,-1432.5 619.5,-1432.5 619.5,-1369.5 494.5,-1369.5"/>
+<text text-anchor="middle" x="557" y="-1419.5" font-family="Helvetica,sans-Serif" font-size="10.00">DocumentBuilderFactory</text>
+<polyline fill="none" stroke="#bfbfbf" points="494.5,-1411.5 619.5,-1411.5 "/>
+<text text-anchor="middle" x="557" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="494.5,-1390.5 619.5,-1390.5 "/>
+<text text-anchor="middle" x="557" y="-1377.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node18&#45;&gt;Node16 -->
 <g id="edge32" class="edge"><title>Node18&#45;&gt;Node16</title>
-<path fill="none" stroke="#404040" d="M568.406,-1369.35C572.283,-1355.37 577.105,-1338.78 582,-1324 594.258,-1286.98 609.476,-1246.29 622.406,-1212.98"/>
-<polygon fill="none" stroke="#404040" points="622.514,-1212.71 620.969,-1205.66 626.876,-1201.53 628.422,-1208.57 622.514,-1212.71"/>
-<text text-anchor="middle" x="614" y="-1328.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;mydbFactory</text>
+<path fill="none" stroke="#404040" d="M565.406,-1369.35C569.283,-1355.37 574.105,-1338.78 579,-1324 591.258,-1286.98 606.476,-1246.29 619.406,-1212.98"/>
+<polygon fill="none" stroke="#404040" points="619.514,-1212.71 617.969,-1205.66 623.876,-1201.53 625.422,-1208.57 619.514,-1212.71"/>
+<text text-anchor="middle" x="611" y="-1328.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;mydbFactory</text>
 </g>
 <!-- Node19 -->
 <g id="node30" class="node"><title>Node19</title>
-<polygon fill="white" stroke="#bfbfbf" points="640,-1369.5 640,-1432.5 684,-1432.5 684,-1369.5 640,-1369.5"/>
-<text text-anchor="middle" x="662" y="-1419.5" font-family="Helvetica,sans-Serif" font-size="10.00">XPath</text>
-<polyline fill="none" stroke="#bfbfbf" points="640,-1411.5 684,-1411.5 "/>
-<text text-anchor="middle" x="662" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="640,-1390.5 684,-1390.5 "/>
-<text text-anchor="middle" x="662" y="-1377.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="637,-1369.5 637,-1432.5 681,-1432.5 681,-1369.5 637,-1369.5"/>
+<text text-anchor="middle" x="659" y="-1419.5" font-family="Helvetica,sans-Serif" font-size="10.00">XPath</text>
+<polyline fill="none" stroke="#bfbfbf" points="637,-1411.5 681,-1411.5 "/>
+<text text-anchor="middle" x="659" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="637,-1390.5 681,-1390.5 "/>
+<text text-anchor="middle" x="659" y="-1377.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node19&#45;&gt;Node16 -->
 <g id="edge34" class="edge"><title>Node19&#45;&gt;Node16</title>
-<path fill="none" stroke="#404040" d="M655.417,-1369.41C653.621,-1359.41 651.918,-1348.28 651,-1338 647.342,-1297.01 646.948,-1250.95 647.536,-1214"/>
-<polygon fill="none" stroke="#404040" points="647.539,-1213.84 643.655,-1207.77 647.769,-1201.84 651.653,-1207.92 647.539,-1213.84"/>
-<text text-anchor="middle" x="674.5" y="-1328.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXPath</text>
+<path fill="none" stroke="#404040" d="M652.417,-1369.41C650.621,-1359.41 648.918,-1348.28 648,-1338 644.342,-1297.01 643.948,-1250.95 644.536,-1214"/>
+<polygon fill="none" stroke="#404040" points="644.539,-1213.84 640.655,-1207.77 644.769,-1201.84 648.653,-1207.92 644.539,-1213.84"/>
+<text text-anchor="middle" x="671.5" y="-1328.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXPath</text>
 </g>
 <!-- Node20 -->
 <g id="node32" class="node"><title>Node20</title>
-<polygon fill="white" stroke="#bfbfbf" points="701.5,-1369.5 701.5,-1432.5 738.5,-1432.5 738.5,-1369.5 701.5,-1369.5"/>
-<text text-anchor="middle" x="720" y="-1419.5" font-family="Helvetica,sans-Serif" font-size="10.00">Path</text>
-<polyline fill="none" stroke="#bfbfbf" points="701.5,-1411.5 738.5,-1411.5 "/>
-<text text-anchor="middle" x="720" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="701.5,-1390.5 738.5,-1390.5 "/>
-<text text-anchor="middle" x="720" y="-1377.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="698.5,-1369.5 698.5,-1432.5 735.5,-1432.5 735.5,-1369.5 698.5,-1369.5"/>
+<text text-anchor="middle" x="717" y="-1419.5" font-family="Helvetica,sans-Serif" font-size="10.00">Path</text>
+<polyline fill="none" stroke="#bfbfbf" points="698.5,-1411.5 735.5,-1411.5 "/>
+<text text-anchor="middle" x="717" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="698.5,-1390.5 735.5,-1390.5 "/>
+<text text-anchor="middle" x="717" y="-1377.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node20&#45;&gt;Node16 -->
 <g id="edge36" class="edge"><title>Node20&#45;&gt;Node16</title>
-<path fill="none" stroke="#404040" d="M711.417,-1369.49C700.905,-1330.9 682.794,-1264.4 668.955,-1213.59"/>
-<polygon fill="none" stroke="#404040" points="668.868,-1213.27 663.432,-1208.54 665.715,-1201.7 671.151,-1206.43 668.868,-1213.27"/>
-<text text-anchor="middle" x="729" y="-1328.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXMLFile</text>
+<path fill="none" stroke="#404040" d="M708.417,-1369.49C697.905,-1330.9 679.794,-1264.4 665.955,-1213.59"/>
+<polygon fill="none" stroke="#404040" points="665.868,-1213.27 660.432,-1208.54 662.715,-1201.7 668.151,-1206.43 665.868,-1213.27"/>
+<text text-anchor="middle" x="726" y="-1328.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXMLFile</text>
 </g>
 <!-- Node21 -->
 <g id="node34" class="node"><title>Node21</title>
-<polygon fill="white" stroke="#bfbfbf" points="756,-1369.5 756,-1432.5 848,-1432.5 848,-1369.5 756,-1369.5"/>
-<text text-anchor="middle" x="802" y="-1419.5" font-family="Helvetica,sans-Serif" font-size="10.00">DocumentBuilder</text>
-<polyline fill="none" stroke="#bfbfbf" points="756,-1411.5 848,-1411.5 "/>
-<text text-anchor="middle" x="802" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="756,-1390.5 848,-1390.5 "/>
-<text text-anchor="middle" x="802" y="-1377.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="753,-1369.5 753,-1432.5 845,-1432.5 845,-1369.5 753,-1369.5"/>
+<text text-anchor="middle" x="799" y="-1419.5" font-family="Helvetica,sans-Serif" font-size="10.00">DocumentBuilder</text>
+<polyline fill="none" stroke="#bfbfbf" points="753,-1411.5 845,-1411.5 "/>
+<text text-anchor="middle" x="799" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="753,-1390.5 845,-1390.5 "/>
+<text text-anchor="middle" x="799" y="-1377.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node21&#45;&gt;Node16 -->
 <g id="edge38" class="edge"><title>Node21&#45;&gt;Node16</title>
-<path fill="none" stroke="#404040" d="M785.69,-1369.28C778.345,-1355.29 769.442,-1338.71 761,-1324 739.566,-1286.65 714.468,-1245.73 693.566,-1212.36"/>
-<polygon fill="none" stroke="#404040" points="693.319,-1211.97 686.74,-1209.01 686.936,-1201.81 693.515,-1204.76 693.319,-1211.97"/>
-<text text-anchor="middle" x="795.5" y="-1328.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;mydBuilder</text>
+<path fill="none" stroke="#404040" d="M782.69,-1369.28C775.345,-1355.29 766.442,-1338.71 758,-1324 736.566,-1286.65 711.468,-1245.73 690.566,-1212.36"/>
+<polygon fill="none" stroke="#404040" points="690.319,-1211.97 683.74,-1209.01 683.936,-1201.81 690.515,-1204.76 690.319,-1211.97"/>
+<text text-anchor="middle" x="792.5" y="-1328.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;mydBuilder</text>
 </g>
 <!-- Node22 -->
 <g id="node36" class="node"><title>Node22</title>
-<polygon fill="white" stroke="#bfbfbf" points="866,-1369.5 866,-1432.5 928,-1432.5 928,-1369.5 866,-1369.5"/>
-<text text-anchor="middle" x="897" y="-1419.5" font-family="Helvetica,sans-Serif" font-size="10.00">Document</text>
-<polyline fill="none" stroke="#bfbfbf" points="866,-1411.5 928,-1411.5 "/>
-<text text-anchor="middle" x="897" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="866,-1390.5 928,-1390.5 "/>
-<text text-anchor="middle" x="897" y="-1377.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polygon fill="white" stroke="#bfbfbf" points="863,-1369.5 863,-1432.5 925,-1432.5 925,-1369.5 863,-1369.5"/>
+<text text-anchor="middle" x="894" y="-1419.5" font-family="Helvetica,sans-Serif" font-size="10.00">Document</text>
+<polyline fill="none" stroke="#bfbfbf" points="863,-1411.5 925,-1411.5 "/>
+<text text-anchor="middle" x="894" y="-1398.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="#bfbfbf" points="863,-1390.5 925,-1390.5 "/>
+<text text-anchor="middle" x="894" y="-1377.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node22&#45;&gt;Node16 -->
 <g id="edge40" class="edge"><title>Node22&#45;&gt;Node16</title>
-<path fill="none" stroke="#404040" d="M869.131,-1369.43C865.081,-1364.91 860.947,-1360.32 857,-1356 811.508,-1306.17 758.289,-1251.74 717.206,-1210.52"/>
-<polygon fill="none" stroke="#404040" points="717.108,-1210.42 710.038,-1209 708.63,-1201.93 715.7,-1203.35 717.108,-1210.42"/>
-<text text-anchor="middle" x="877.5" y="-1328.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXMLDocument</text>
+<path fill="none" stroke="#404040" d="M866.131,-1369.43C862.081,-1364.91 857.947,-1360.32 854,-1356 808.508,-1306.17 755.289,-1251.74 714.206,-1210.52"/>
+<polygon fill="none" stroke="#404040" points="714.108,-1210.42 707.038,-1209 705.63,-1201.93 712.7,-1203.35 714.108,-1210.42"/>
+<text text-anchor="middle" x="874.5" y="-1328.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXMLDocument</text>
 </g>
 </g>
 </svg>
