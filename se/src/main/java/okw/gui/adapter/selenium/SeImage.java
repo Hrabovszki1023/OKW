@@ -55,7 +55,6 @@ import okw.gui.OKWLocator;
  *         title="Image title"
  *         alt="Image Caption">
  *  \endcode
- *  \~english
  * 
  * # Unterstützte GUI-Schlüsselwörter
  *
@@ -100,6 +99,7 @@ import okw.gui.OKWLocator;
  *  
  *  - [SelfHTML: HTML/Multimedia und Grafiken/Grafiken](https://wiki.selfhtml.org/wiki/HTML/Multimedia_und_Grafiken/Grafiken)
  *  
+ *  \~english
  * \~
  * @author Zoltán Hrabovszki
  * @date 2016.09.05

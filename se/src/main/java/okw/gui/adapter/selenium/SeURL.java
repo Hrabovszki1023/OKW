@@ -44,6 +44,7 @@ import org.openqa.selenium.*;
 
     /** 
      * @ingroup groupSeleniumChildGUIAdapter
+     * 
      *  \~german
      *  Klasse Implementiert das URL-Eingabefeld der Browser.
      *  Die Klasse besitz keinen <tt>locator</tt>.
