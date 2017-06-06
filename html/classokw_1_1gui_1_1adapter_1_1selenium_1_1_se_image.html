@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 142, Datum: 06.06.2017 18:40:24</span>
+   &#160;<span id="projectnumber">Build_ID: 143, Datum: 06.06.2017 18:55:18</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -484,7 +484,89 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
 <div class="textblock"><p>Diese Klasse representiert einen HTML-Button, die mit Selenium angsteuert wird. </p>
 <h1>Unterstützter Tag</h1>
 <p>Folgender HTML-Tag wird unterstützt:</p>
-<div class="fragment"><div class="line">&lt;label for=&quot;ID_Image_1&quot;&gt;Button Label:&lt;/label&gt;</div><div class="line">&lt;img src=&quot;img.png&quot;</div><div class="line">       id=&quot;ID_Button_1&quot;</div><div class="line">       title=&quot;Image title&quot;</div><div class="line">       alt=&quot;Image Caption&quot;&gt;</div></div><!-- fragment --><dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
+<div class="fragment"><div class="line">&lt;label for=&quot;ID_Image_1&quot;&gt;Button Label:&lt;/label&gt;</div><div class="line">&lt;img src=&quot;img.png&quot;</div><div class="line">       id=&quot;ID_Button_1&quot;</div><div class="line">       title=&quot;Image title&quot;</div><div class="line">       alt=&quot;Image Caption&quot;&gt;</div></div><!-- fragment --><h1>Unterstützte GUI-Schlüsselwörter</h1>
+<h2>Kindobjekt Aktionen</h2>
+<table class="doxtable">
+<tr>
+<th>OpenKeyWord </th><th align="center">Implementiert </th><th align="left">Beschreibung  </th></tr>
+<tr>
+<td><code>ClickOn( FN )</code> </td><td align="center"><b>JA</b> </td><td align="left"></td></tr>
+<tr>
+<td><code>DoubleClickOn( FN )</code> </td><td align="center"><b>NEIN</b> </td><td align="left">Ein Doppel-Klick ist auf ein Image nicht möglich -&gt; OKWFrameObjectMethodNotImplemented </td></tr>
+<tr>
+<td><code>SetFocus( FN )</code> </td><td align="center"><b>JA</b> </td><td align="left"></td></tr>
+<tr>
+<td><code>SetValue( FN, Val )</code> </td><td align="center"><b>NEIN</b> </td><td align="left">Button hat keinen änderbaren Wert. -&gt; throw OKWFrameObjectMethodNotImplemented </td></tr>
+<tr>
+<td><code>Select( FN, Val )</code> </td><td align="center"><b>NEIN</b> </td><td align="left">Button hat keinen änderbaren Wert. -&gt; throw OKWFrameObjectMethodNotImplemented </td></tr>
+<tr>
+<td><code>SelectMenu( FN )</code> </td><td align="center"><b>NEIN</b> </td><td align="left">-&gt; throw OKWFrameObjectMethodNotImplemented </td></tr>
+<tr>
+<td><code>SelectMenu( FN, Val )</code> </td><td align="center"><b>NEIN</b> </td><td align="left">-&gt; throw OKWFrameObjectMethodNotImplemented </td></tr>
+<tr>
+<td><code>TypeKey( FN, Val )</code> </td><td align="center"><b>NEIN</b> </td><td align="left">-&gt; OKWFrameObjectMethodNotImplemented </td></tr>
+</table>
+<h2>Fensterbezogene Schlüsselwörter</h2>
+<table class="doxtable">
+<tr>
+<th>OpenKeyWord </th><th align="center">Implementiert </th><th align="left">Beschreibung  </th></tr>
+<tr>
+<td><code>StarApp( AN )</code> </td><td align="center"><b>NEIN</b> </td><td align="left">Kind-Objekt, Button ist kein Fensterobjekt </td></tr>
+<tr>
+<td><code>StopApp( AN )</code> </td><td align="center"><b>NEIN</b> </td><td align="left">Kind-Objekt, Button ist kein Fensterobjekt </td></tr>
+<tr>
+<td><code>SelectWindow( FN )</code> </td><td align="center"><b>NEIN</b> </td><td align="left">Kind-Objekt, Button ist kein Fensterobjekt </td></tr>
+<tr>
+<td><code>Sequence( FN, SQN, SEQ_ID )</code> </td><td align="center"><b>NEIN</b> </td><td align="left">Kind-Objekt, Button ist kein Fensterobjekt </td></tr>
+</table>
+<h2>Verifying, Memorizing, Logging Values</h2>
+<p>Group of keywords using the same GUI-Adapter Methods get*() <br />
+ (e.g.: <code>VerifyExists( FN, ExpVal)</code>, <code>MemorizeExists( FN, MemKey)</code>,<code>LogExists( FN )</code> -&gt; <code><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#abbf4e30bd11acd1ad0c06706a6e43871" title="Prüft die Existenz des aktuellen Objektes. ">getExists()</a></code> )</p>
+<table class="doxtable">
+<tr>
+<th>OpenKeyWord </th><th align="center">Implementiert </th><th align="left">Beschreibung  </th></tr>
+<tr>
+<td><code>VerifyExists( FN, ExpVal)</code>, <br />
+<code>MemorizeExists( FN, MemKey)</code>, <br />
+<code>LogExists( FN )</code> </td><td align="center"><b>JA</b> </td><td align="left"></td></tr>
+<tr>
+<td><code>VerifyHasFocus( FN, ExpVal )</code>, <br />
+<code>MemorizeHasFocus( FN, MemKey)</code>, <br />
+<code>LogHasFocus( FN )</code> </td><td align="center"><b>JA</b> </td><td align="left"></td></tr>
+<tr>
+<td><code>VerifyIsActive( FN, ExpVal )</code>, <br />
+<code>MemorizeIsActive( FN, MemKey)</code>, <br />
+<code>LogIsActive( FN )</code> </td><td align="center"><b>JA</b> </td><td align="left"></td></tr>
+<tr>
+<td><code>VerifyCaption( FN, ExpVal )</code>, <br />
+<code>VerifyCaptionWCM( FN, ExpVal )</code>, <br />
+<code>VerifyCaptionREGX( FN, ExpVal )</code>, <br />
+<code>MemorizeCaption( FN, ExpVal )</code>, <br />
+<code>LogCaption( FN, ExpVal )</code> </td><td align="center"><b>JA</b> </td><td align="left">Caption ist das Attribute-'alt' Text des Buttons. Im Beispiel: <code>Image Caption</code> </td></tr>
+<tr>
+<td><code>VerifyLabel( FN, ExpVal )</code>, <br />
+<code>VerifyLabelWCM( FN, ExpVal )</code>, <br />
+<code>VerifyLabelREGX( FN, ExpVal )</code>, <br />
+<code>MemorizeLabel( FN, ExpVal )</code>, <br />
+<code>LogLabel( FN, ExpVal )</code> </td><td align="center"><b>JA</b> </td><td align="left"></td></tr>
+<tr>
+<td><code>VerifyTooltip( FN, ExpVal )</code>, <br />
+<code>VerifyTooltipWCM( FN, ExpVal )</code>, <br />
+<code>VerifyTooltipREGX( FN, ExpVal )</code>, <br />
+<code>MemorizeTooltip( FN, ExpVal )</code>, <br />
+<code>LogTooltip( FN, ExpVal )</code> </td><td align="center"><b>JA</b> </td><td align="left">Als Tooltip wird das Attribute <code>title</code> verwendet. Im Beispiel: <code>Button title</code> </td></tr>
+<tr>
+<td><code>VerifyValue( FN, ExpVal )</code>, <br />
+<code>VerifyValueWCM( FN, ExpVal )</code>, <br />
+<code>VerifyValueREGX( FN, ExpVal )</code>, <br />
+<code>MemorizeValue( FN, ExpVal )</code>, <br />
+<code>LogValue( FN, ExpVal )</code> </td><td align="center"><b>JA</b> </td><td align="left">Der Wert eines Image ist das attribute 'src'. </td></tr>
+</table>
+<h1>Quellen/Links</h1>
+<ul>
+<li><a href="https://wiki.selfhtml.org/wiki/HTML/Multimedia_und_Grafiken/Grafiken">SelfHTML: HTML/Multimedia und Grafiken/Grafiken</a></li>
+</ul>
+<dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2016.09.05 </dd></dl>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_se_image_8java_source.html#l00107">107</a> der Datei <a class="el" href="_se_image_8java_source.html">SeImage.java</a>.</p>
@@ -569,7 +651,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><b>adapter</b></li><li class="navelem"><b>selenium</b></li><li class="navelem"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html">SeImage</a></li>
-    <li class="footer">Erzeugt am Die Jun 6 2017 18:42:08 für OpenKeyWord von
+    <li class="footer">Erzeugt am Die Jun 6 2017 18:55:58 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
