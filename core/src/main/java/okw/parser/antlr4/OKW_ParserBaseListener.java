@@ -4,7 +4,6 @@ package okw.parser.antlr4;
 
 
 import org.antlr.v4.runtime.ParserRuleContext;
-import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
@@ -20,7 +19,7 @@ public class OKW_ParserBaseListener implements OKW_ParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override 
-	public void enterEnvvalue( OKW_Parser.EnvvalueContext ctx) { ; }
+	public void enterEnvvalue( OKW_Parser.EnvvalueContext ctx) { }
 	
 	/**
 	 * {@inheritDoc}
@@ -28,7 +27,7 @@ public class OKW_ParserBaseListener implements OKW_ParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override
-	public void exitEnvvalue( OKW_Parser.EnvvalueContext ctx) { ; }
+	public void exitEnvvalue( OKW_Parser.EnvvalueContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -36,7 +35,7 @@ public class OKW_ParserBaseListener implements OKW_ParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override 
-	public void enterOkw_internal_var( OKW_Parser.Okw_internal_varContext ctx) { ; }
+	public void enterOkw_internal_var( OKW_Parser.Okw_internal_varContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -44,7 +43,7 @@ public class OKW_ParserBaseListener implements OKW_ParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override
-	public void exitOkw_internal_var( OKW_Parser.Okw_internal_varContext ctx) { ; }
+	public void exitOkw_internal_var( OKW_Parser.Okw_internal_varContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -52,7 +51,7 @@ public class OKW_ParserBaseListener implements OKW_ParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override
-	public void enterText( OKW_Parser.TextContext ctx) { ; }
+	public void enterText( OKW_Parser.TextContext ctx) { }
 	
 	/**
 	 * {@inheritDoc}
@@ -60,7 +59,7 @@ public class OKW_ParserBaseListener implements OKW_ParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override
-	public void exitText( OKW_Parser.TextContext ctx) { ; }
+	public void exitText( OKW_Parser.TextContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
