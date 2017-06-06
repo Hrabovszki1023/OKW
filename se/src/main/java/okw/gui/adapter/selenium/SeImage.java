@@ -43,7 +43,66 @@ import okw.gui.OKWLocator;
 /**
  * @ingroup groupSeleniumChildGUIAdapter 
  * 
- * TODO: \todo Description of SeImage.
+ * Diese Klasse representiert einen HTML-Button, die mit Selenium angsteuert wird.
+ * 
+ *  # Unterstützter Tag
+ *  Folgender HTML-Tag wird unterstützt:
+ *  
+ *  \code{.html}
+ *  <label for="ID_Image_1">Button Label:</label>
+ *  <img src="img.png"
+ *         id="ID_Button_1"
+ *         title="Image title"
+ *         alt="Image Caption">
+ *  \endcode
+ *  \~english
+ * 
+ * # Unterstützte GUI-Schlüsselwörter
+ *
+ * ## Kindobjekt Aktionen
+ * 
+ * | OpenKeyWord               | Implementiert | Beschreibung |
+ * | ------------------------- | :-----------: | :----------- |
+ * | `ClickOn( FN )`           | **JA**        |  |
+ * | `DoubleClickOn( FN )`     | **NEIN**      | Ein Doppel-Klick ist auf ein Image nicht möglich -> OKWFrameObjectMethodNotImplemented | 
+ * | `SetFocus( FN )`          | **JA**        |  |
+ * | `SetValue( FN, Val )`     | **NEIN**      | Button hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented |
+ * | `Select( FN, Val )`       | **NEIN**      | Button hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented |
+ * | `SelectMenu( FN )`        | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
+ * | `SelectMenu( FN, Val )`   | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
+ * | `TypeKey( FN, Val )`      | **NEIN**      | -> OKWFrameObjectMethodNotImplemented |
+ * 
+ * ## Fensterbezogene Schlüsselwörter
+ * 
+ * | OpenKeyWord               | Implementiert | Beschreibung |
+ * | ------------------------- | :-----------: | :----------- |
+ * | `StarApp( AN )`           | **NEIN**      | Kind-Objekt, Button ist kein Fensterobjekt |
+ * | `StopApp( AN )`           | **NEIN**      | Kind-Objekt, Button ist kein Fensterobjekt |
+ * | `SelectWindow( FN )`      | **NEIN**      | Kind-Objekt, Button ist kein Fensterobjekt |
+ * | `Sequence( FN, SQN, SEQ_ID )` | **NEIN**  | Kind-Objekt, Button ist kein Fensterobjekt |
+ * 
+ * ## Verifying, Memorizing, Logging Values
+ * 
+ * Group of keywords using the same GUI-Adapter Methods get*() <br/>
+ * (e.g.: `VerifyExists( FN, ExpVal)`, `MemorizeExists( FN, MemKey)`,`LogExists( FN )` -> `getExists()` )
+ * 
+ * | OpenKeyWord | Implementiert | Beschreibung |
+ * | ----------- | :-----------: | :----------- |
+ * | `VerifyExists( FN, ExpVal)`,    <br>`MemorizeExists( FN, MemKey)`,    <br>`LogExists( FN )`   | **JA** |  |
+ * | `VerifyHasFocus( FN, ExpVal )`, <br>`MemorizeHasFocus( FN, MemKey)`,  <br>`LogHasFocus( FN )` | **JA** |  |
+ * | `VerifyIsActive( FN, ExpVal )`, <br>`MemorizeIsActive( FN, MemKey)`,  <br>`LogIsActive( FN )` | **JA** |  |
+ * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **JA** | Caption ist das Attribute-'alt' Text des Buttons. Im Beispiel: `Image Caption` |
+ * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )`     | **JA** |  |
+ * | `VerifyTooltip( FN, ExpVal )`,  <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **JA** | Als Tooltip wird das Attribute `title` verwendet.  Im Beispiel: `Button title` |
+ * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )`     | **JA** | Der Wert eines Image ist das attribute 'src'. |
+ * 
+ *  # Quellen/Links
+ *  
+ *  - [SelfHTML: HTML/Multimedia und Grafiken/Grafiken](https://wiki.selfhtml.org/wiki/HTML/Multimedia_und_Grafiken/Grafiken)
+ *  
+ * \~
+ * @author Zoltán Hrabovszki
+ * @date 2016.09.05
  */
 public class SeImage extends SeAnyChildWindow
 {

@@ -69,13 +69,13 @@ import okw.gui.OKWLocator;
  * | OpenKeyWord               | Implementiert | Beschreibung |
  * | ------------------------- | :-----------: | :----------- |
  * | `ClickOn( FN )`           | **JA**        |  |
- * | `DoubleClickOn( FN )`     | **NEIN**      | Ein Doppel-Klick ist auf ein Button nicht möglich|
+ * | `DoubleClickOn( FN )`     | **NEIN**      | Ein Doppel-Klick ist auf ein Button nicht möglich -> OKWFrameObjectMethodNotImplemented | 
  * | `SetFocus( FN )`          | **JA**        |  |
  * | `SetValue( FN, Val )`     | **NEIN**      | Button hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented |
  * | `Select( FN, Val )`       | **NEIN**      | Button hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented |
  * | `SelectMenu( FN )`        | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
- * | `SelectMenu( FN, Val )`   | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented  |
- * | `TypeKey( FN, Val )`      | **NEIN**      |  |
+ * | `SelectMenu( FN, Val )`   | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
+ * | `TypeKey( FN, Val )`      | **NEIN**      | -> OKWFrameObjectMethodNotImplemented |
  * 
  * ## Fensterbezogene Schlüsselwörter
  * 
