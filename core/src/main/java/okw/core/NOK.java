@@ -62,14 +62,18 @@ import okw.log.*;
 public class NOK implements IOKW_State
 {
 
-    OKWLanguage   AL = OKWLanguage.getInstance();
-    // OKW_Docu MyOKWDocu = OKW_Docu.getInstance();
+    private OKWLanguage   AL = OKWLanguage.getInstance();
 
-    Logger_Sngltn Log;
+    private Logger_Sngltn Log;
 
-    Core          _Kernel;
+    private Core          _Kernel;
 
     /** \~german
+     *  Diese Klasser repräsentiert den Zustand "Not OK".
+     *  
+     *  Wenn ein Schlüsselwort eine Ausnahme auslöst, dann wechselt der Zustand von OK nach NOK.
+     *  Die Schlüsselwörter dieser Klassen führen, bis auf einge ausnahmen, kein GUI aktivitäten aus.
+     * 
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
