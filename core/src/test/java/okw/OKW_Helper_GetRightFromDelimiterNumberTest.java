@@ -56,6 +56,13 @@ import okw.log.*;
 @RunWith(Parameterized.class)
 public class OKW_Helper_GetRightFromDelimiterNumberTest
     {
+    
+    private String ExpectedValue;
+    
+    private String InputSource;
+    private String InputDelimiter;
+    private int    InputCount;
+
     @Parameters( name = "{index}: {0} = GetRigthFromDelimiterNumber[\"{1}\", \"{2}\", \"{3}\"] " )
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {     
@@ -72,12 +79,6 @@ public class OKW_Helper_GetRightFromDelimiterNumberTest
            });
     }
     
-    private String ExpectedValue;
-    
-    private String InputSource;
-    private String InputDelimiter;
-    private int    InputCount;
-
     public OKW_Helper_GetRightFromDelimiterNumberTest(String ExpectedValue, String InputSource, String InputDelimiter, int InputCount) {
     	
     	   this.ExpectedValue  = ExpectedValue;
@@ -87,7 +88,9 @@ public class OKW_Helper_GetRightFromDelimiterNumberTest
     	   this.InputCount     = InputCount;
     	   }
     
-	/// \copydoc CurrentObject::Log()
+	/**
+	 *  \copydoc CurrentObject::Log()
+	 */
 	public static Logger_Sngltn Log;
 
 		//@BeforeClass

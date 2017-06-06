@@ -56,6 +56,13 @@ import okw.log.*;
 @RunWith(Parameterized.class)
 public class OKW_Helper_GetLeftFromDelimiterNumberTest
     {
+    
+    private String ExpectedValue;
+    
+    private String InputSource;
+    private String InputDelimiter;
+    private int    InputCount;
+
     @Parameters( name = "{index}: {0} = GetRigthFromDelimiterNumber[\"{1}\", \"{2}\", \"{3}\"] " )
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {     
@@ -73,13 +80,6 @@ public class OKW_Helper_GetLeftFromDelimiterNumberTest
         		{ "AAA/BBB/CCC/DDD", "AAA/BBB/CCC/DDD/EEE", "/", 4 }
            });
     }
-
- 
-    private String ExpectedValue;
-    
-    private String InputSource;
-    private String InputDelimiter;
-    private int    InputCount;
 
     public OKW_Helper_GetLeftFromDelimiterNumberTest(String ExpectedValue, String InputSource, String InputDelimiter, int InputCount) {
     	

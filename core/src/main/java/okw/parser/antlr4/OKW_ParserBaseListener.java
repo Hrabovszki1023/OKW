@@ -19,115 +19,130 @@ public class OKW_ParserBaseListener implements OKW_ParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override 
+	public void enterEnvvalue( OKW_Parser.EnvvalueContext ctx) { ; }
+	
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override
-	public void enterEnvvalue(@NotNull OKW_Parser.EnvvalueContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitEnvvalue(@NotNull OKW_Parser.EnvvalueContext ctx) { }
+	public void exitEnvvalue( OKW_Parser.EnvvalueContext ctx) { ; }
 
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOkw_internal_var(@NotNull OKW_Parser.Okw_internal_varContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitOkw_internal_var(@NotNull OKW_Parser.Okw_internal_varContext ctx) { }
+	@Override 
+	public void enterOkw_internal_var( OKW_Parser.Okw_internal_varContext ctx) { ; }
 
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterText(@NotNull OKW_Parser.TextContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitText(@NotNull OKW_Parser.TextContext ctx) { }
+	@Override
+	public void exitOkw_internal_var( OKW_Parser.Okw_internal_varContext ctx) { ; }
 
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRoot(@NotNull OKW_Parser.RootContext ctx) { }
+	@Override
+	public void enterText( OKW_Parser.TextContext ctx) { ; }
+	
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRoot(@NotNull OKW_Parser.RootContext ctx) { }
+	@Override
+	public void exitText( OKW_Parser.TextContext ctx) { ; }
 
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOkw_env_var(@NotNull OKW_Parser.Okw_env_varContext ctx) { }
-	/**
+    @Override
+    public void enterRoot( OKW_Parser.RootContext ctx) { }
+	
+    /**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOkw_env_var(@NotNull OKW_Parser.Okw_env_varContext ctx) { }
+    @Override 
+    public void exitRoot( OKW_Parser.RootContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOkw_typekey(@NotNull OKW_Parser.Okw_typekeyContext ctx) { }
+    @Override public void enterOkw_env_var( OKW_Parser.Okw_env_varContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitOkw_typekey(@NotNull OKW_Parser.Okw_typekeyContext ctx) { }
+    @Override public void exitOkw_env_var( OKW_Parser.Okw_env_varContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterKeyvalue(@NotNull OKW_Parser.KeyvalueContext ctx) { }
+    @Override public void enterOkw_typekey( OKW_Parser.Okw_typekeyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitKeyvalue(@NotNull OKW_Parser.KeyvalueContext ctx) { }
+    @Override public void exitOkw_typekey( OKW_Parser.Okw_typekeyContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEveryRule(@NotNull ParserRuleContext ctx) { }
+    @Override public void enterKeyvalue( OKW_Parser.KeyvalueContext ctx) { }
+
+    /**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+    @Override public void exitKeyvalue( OKW_Parser.KeyvalueContext ctx) { }
+
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEveryRule(@NotNull ParserRuleContext ctx) { }
-	/**
+    @Override public void enterEveryRule( ParserRuleContext ctx) { }
+	
+    /**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void visitTerminal(@NotNull TerminalNode node) { }
-	/**
+    @Override public void exitEveryRule( ParserRuleContext ctx) { }
+	
+    /**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void visitErrorNode(@NotNull ErrorNode node) { }
+      @Override public void visitTerminal( TerminalNode node) { }
+	 
+    /**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+    @Override public void visitErrorNode( ErrorNode node) { }
 }

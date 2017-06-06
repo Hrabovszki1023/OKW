@@ -177,22 +177,6 @@ public class OKW_Enviroment
 	// \date 2013.12.02
 	private String	File_OKW_ImplementationMatrix_xml	= "${Folder_XML}\\OKW_ImplementationMatrix.xml";
 
-	 //
-	 // \~german 
-	 // \brief Konstruktor der Klasse OKW_Enviroment.
-	 // 
-	 // __Anmerkung:__ Konstruktor ist public, weil diese Klasse mit
-	 // System.Xml.Serialization in/aus der Datei OKW_Ini.xml
-	 // serialisert/deserialisert wird. System.Xml.Serialization verlangt dazu
-	 // einen öffentlichen Konstruktor.
-	 // 
-	 // \~english
-	 // \~ 
-	 // \author Zoltán Hrabovszki \date 2013.11.28
-	 //
-	public OKW_Enviroment()
-	{
-	}
 
 	//
 	// \~german 
