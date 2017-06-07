@@ -35,7 +35,7 @@
   	<dependency>
   		<groupId>org.seleniumhq.selenium</groupId>
   		<artifactId>htmlunit-driver</artifactId>
-  		<version>2.26</version>
+  		<version>2.27</version>
   	</dependency>
   </dependencies>
   <description>This is the OpenKeyWord Selenium GUI-Adapter-module. Se defines default  GUI-Adapter ( Pushbutton, Link, Textfield...)
