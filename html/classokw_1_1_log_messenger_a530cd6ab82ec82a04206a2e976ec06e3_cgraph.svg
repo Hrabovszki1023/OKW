@@ -9,21 +9,21 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 38)">
 <title>okw.LogMessenger.ReadMessage</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-38 361,-38 361,5 -4,5"/>
-<!-- Node799 -->
-<g id="node1" class="node"><title>Node799</title>
+<!-- Node801 -->
+<g id="node1" class="node"><title>Node801</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-6.5 0.5,-27.5 167.5,-27.5 167.5,-6.5 0.5,-6.5"/>
 <text text-anchor="middle" x="84" y="-14.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </g>
-<!-- Node800 -->
-<g id="node3" class="node"><title>Node800</title>
+<!-- Node802 -->
+<g id="node3" class="node"><title>Node802</title>
 <a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="204,-0 204,-34 356,-34 356,-0 204,-0"/>
 <text text-anchor="start" x="212" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
 <text text-anchor="middle" x="280" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">ContentSingleValue</text>
 </a>
 </g>
-<!-- Node799&#45;&gt;Node800 -->
-<g id="edge2" class="edge"><title>Node799&#45;&gt;Node800</title>
+<!-- Node801&#45;&gt;Node802 -->
+<g id="edge2" class="edge"><title>Node801&#45;&gt;Node802</title>
 <path fill="none" stroke="midnightblue" d="M167.69,-17C176.29,-17 185.041,-17 193.669,-17"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="193.725,-20.5001 203.725,-17 193.725,-13.5001 193.725,-20.5001"/>
 </g>
