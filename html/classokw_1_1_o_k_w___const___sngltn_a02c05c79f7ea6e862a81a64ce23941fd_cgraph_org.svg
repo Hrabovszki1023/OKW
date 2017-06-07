@@ -9,48 +9,48 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 90)">
 <title>okw.OKW_Const_Sngltn.GetOKWConst4Internalname</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-90 521,-90 521,5 -4,5"/>
-<!-- Node240 -->
-<g id="node1" class="node"><title>Node240</title>
+<!-- Node244 -->
+<g id="node1" class="node"><title>Node244</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-26 0.5,-60 145.5,-60 145.5,-26 0.5,-26"/>
 <text text-anchor="start" x="8.5" y="-47" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Const_Sngltn.Get</text>
 <text text-anchor="middle" x="73" y="-34" font-family="Helvetica,sans-Serif" font-size="10.00">OKWConst4Internalname</text>
 </g>
-<!-- Node241 -->
-<g id="node3" class="node"><title>Node241</title>
+<!-- Node245 -->
+<g id="node3" class="node"><title>Node245</title>
 <a xlink:href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7" target="_top" xlink:title="Methode ermittelt für Internalname und der aktuell eingestellten Sprache den Wert für Const...">
 <polygon fill="white" stroke="black" points="182.5,-26 182.5,-60 327.5,-60 327.5,-26 182.5,-26"/>
 <text text-anchor="start" x="190.5" y="-47" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Const_Sngltn.Get</text>
 <text text-anchor="middle" x="255" y="-34" font-family="Helvetica,sans-Serif" font-size="10.00">Const4Internalname</text>
 </a>
 </g>
-<!-- Node240&#45;&gt;Node241 -->
-<g id="edge2" class="edge"><title>Node240&#45;&gt;Node241</title>
+<!-- Node244&#45;&gt;Node245 -->
+<g id="edge2" class="edge"><title>Node244&#45;&gt;Node245</title>
 <path fill="none" stroke="midnightblue" d="M145.716,-43C154.398,-43 163.312,-43 172.123,-43"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="172.4,-46.5001 182.4,-43 172.4,-39.5001 172.4,-46.5001"/>
 </g>
-<!-- Node242 -->
-<g id="node5" class="node"><title>Node242</title>
+<!-- Node246 -->
+<g id="node5" class="node"><title>Node246</title>
 <a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4" target="_top" xlink:title="Loggt eine Nachricht. ">
 <polygon fill="white" stroke="black" points="373,-52 373,-86 507,-86 507,-52 373,-52"/>
 <text text-anchor="start" x="381" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
 <text text-anchor="middle" x="440" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">PrintDebug</text>
 </a>
 </g>
-<!-- Node241&#45;&gt;Node242 -->
-<g id="edge4" class="edge"><title>Node241&#45;&gt;Node242</title>
+<!-- Node245&#45;&gt;Node246 -->
+<g id="edge4" class="edge"><title>Node245&#45;&gt;Node246</title>
 <path fill="none" stroke="midnightblue" d="M327.586,-53.2013C339.095,-54.8188 351.036,-56.497 362.649,-58.1291"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="362.362,-61.623 372.752,-59.5489 363.336,-54.6912 362.362,-61.623"/>
 </g>
-<!-- Node243 -->
-<g id="node7" class="node"><title>Node243</title>
+<!-- Node247 -->
+<g id="node7" class="node"><title>Node247</title>
 <a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="364,-0 364,-34 516,-34 516,-0 364,-0"/>
 <text text-anchor="start" x="372" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
 <text text-anchor="middle" x="440" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">ContentSingleValue</text>
 </a>
 </g>
-<!-- Node241&#45;&gt;Node243 -->
-<g id="edge6" class="edge"><title>Node241&#45;&gt;Node243</title>
+<!-- Node245&#45;&gt;Node247 -->
+<g id="edge6" class="edge"><title>Node245&#45;&gt;Node247</title>
 <path fill="none" stroke="midnightblue" d="M327.586,-32.7987C336.265,-31.579 345.189,-30.3248 354.033,-29.0818"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="354.552,-32.5434 363.967,-27.6857 353.577,-25.6116 354.552,-32.5434"/>
 </g>

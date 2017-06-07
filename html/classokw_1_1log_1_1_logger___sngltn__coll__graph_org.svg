@@ -18,7 +18,7 @@
 <polyline fill="none" stroke="black" points="4,-437.5 138,-437.5 "/>
 <text text-anchor="start" x="12" y="-424.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getDebugMode()</text>
 <text text-anchor="start" x="12" y="-411.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setDebugMode()</text>
-<text text-anchor="start" x="12" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AddLogger()</text>
+<text text-anchor="start" x="12" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ addLogger()</text>
 <text text-anchor="start" x="12" y="-385.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ reset()</text>
 <text text-anchor="start" x="12" y="-372.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogError()</text>
 <text text-anchor="start" x="12" y="-359.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogException()</text>
@@ -47,7 +47,7 @@
 <text text-anchor="start" x="12" y="-60.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ResOpenList()</text>
 <text text-anchor="start" x="12" y="-47.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ResOpenListDebug()</text>
 <text text-anchor="start" x="12" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getInstance()</text>
-<text text-anchor="start" x="12" y="-21.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Init()</text>
+<text text-anchor="start" x="12" y="-21.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ init()</text>
 <text text-anchor="start" x="12" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; Logger_Sngltn()</text>
 </g>
 <!-- Node1&#45;&gt;Node1 -->

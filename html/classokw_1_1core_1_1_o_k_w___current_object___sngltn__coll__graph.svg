@@ -302,7 +302,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node13 -->
 <g id="node26" class="node"><title>Node13</title>
-<a xlink:href="classokw_1_1log_1_1_logger___sngltn.html" target="_top" xlink:title="{okw.log.Logger_Sngltn\n|&#45; cvbDebugMode\l|+ getDebugMode()\l+ setDebugMode()\l+ AddLogger()\l+ reset()\l+ LogError()\l+ LogException()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionStart()\l+ LogFunctionStartDebug()\l+ LogKeyWordEnd()\l+ LogSequenceEnd()\l+ LogTestcaseEnd()\l+ LogKeyWordStart()\l+ LogSequenceStart()\l+ LogTestcaseStart()\l+ LogPass()\l+ LogPrint()\l+ LogPrintDebug()\l+ LogWarning()\l+ ResCloseList()\l+ ResCloseListDebug()\l+ ResOpenList()\l+ ResOpenListDebug()\l+ getInstance()\l+ Init()\l&#45; Logger_Sngltn()\l}">
+<a xlink:href="classokw_1_1log_1_1_logger___sngltn.html" target="_top" xlink:title="{okw.log.Logger_Sngltn\n|&#45; cvbDebugMode\l|+ getDebugMode()\l+ setDebugMode()\l+ addLogger()\l+ reset()\l+ LogError()\l+ LogException()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionStart()\l+ LogFunctionStartDebug()\l+ LogKeyWordEnd()\l+ LogSequenceEnd()\l+ LogTestcaseEnd()\l+ LogKeyWordStart()\l+ LogSequenceStart()\l+ LogTestcaseStart()\l+ LogPass()\l+ LogPrint()\l+ LogPrintDebug()\l+ LogWarning()\l+ ResCloseList()\l+ ResCloseListDebug()\l+ ResOpenList()\l+ ResOpenListDebug()\l+ getInstance()\l+ init()\l&#45; Logger_Sngltn()\l}">
 <polygon fill="white" stroke="black" points="649,-736.5 649,-1215.5 783,-1215.5 783,-736.5 649,-736.5"/>
 <text text-anchor="middle" x="716" y="-1202.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn</text>
 <polyline fill="none" stroke="black" points="649,-1194.5 783,-1194.5 "/>
@@ -310,7 +310,7 @@ var sectionId = 'dynsection-0';
 <polyline fill="none" stroke="black" points="649,-1173.5 783,-1173.5 "/>
 <text text-anchor="start" x="657" y="-1160.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getDebugMode()</text>
 <text text-anchor="start" x="657" y="-1147.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setDebugMode()</text>
-<text text-anchor="start" x="657" y="-1134.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AddLogger()</text>
+<text text-anchor="start" x="657" y="-1134.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ addLogger()</text>
 <text text-anchor="start" x="657" y="-1121.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ reset()</text>
 <text text-anchor="start" x="657" y="-1108.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogError()</text>
 <text text-anchor="start" x="657" y="-1095.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogException()</text>
@@ -339,7 +339,7 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="657" y="-796.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ResOpenList()</text>
 <text text-anchor="start" x="657" y="-783.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ResOpenListDebug()</text>
 <text text-anchor="start" x="657" y="-770.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getInstance()</text>
-<text text-anchor="start" x="657" y="-757.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Init()</text>
+<text text-anchor="start" x="657" y="-757.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ init()</text>
 <text text-anchor="start" x="657" y="-744.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; Logger_Sngltn()</text>
 </a>
 </g>

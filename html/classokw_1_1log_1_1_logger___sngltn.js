@@ -1,7 +1,7 @@
 var classokw_1_1log_1_1_logger___sngltn =
 [
     [ "Logger_Sngltn", "classokw_1_1log_1_1_logger___sngltn.html#affd31aef6f12f9b27032e2c748fdf57c", null ],
-    [ "AddLogger", "classokw_1_1log_1_1_logger___sngltn.html#a4146c86604bd9e3f0fa36b15b04bc666", null ],
+    [ "addLogger", "classokw_1_1log_1_1_logger___sngltn.html#a2e4d734eff59dd09510fef50353c8672", null ],
     [ "getDebugMode", "classokw_1_1log_1_1_logger___sngltn.html#a56dd530700730c243fdc1dd3952a03ad", null ],
     [ "LogError", "classokw_1_1log_1_1_logger___sngltn.html#ae3f9bbd7f9bb06a3637b638bd791693c", null ],
     [ "LogException", "classokw_1_1log_1_1_logger___sngltn.html#aa29d396a2b9df1ac57079d777c548181", null ],
