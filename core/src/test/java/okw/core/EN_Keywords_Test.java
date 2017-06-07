@@ -27,7 +27,7 @@ public class EN_Keywords_Test
 
         Logger_Sngltn.getInstance();
         // Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.Init();
+        Logger_Sngltn.init();
 
         // Log2Console myLog2Console = null;
         // myLog2Console = new Log2Console();

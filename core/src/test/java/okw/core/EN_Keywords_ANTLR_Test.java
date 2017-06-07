@@ -36,7 +36,7 @@ public class EN_Keywords_ANTLR_Test
     {
         Logger_Sngltn.getInstance();
         // Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.Init();
+        Logger_Sngltn.init();
 
         myLogger.setDebugMode( false );
     }

@@ -46,144 +46,142 @@ import okw.OKW_Const_Sngltn;
 public class Logger_Sngltn
 {
 
-	private static Boolean cvbDebugMode = false;
+    private static Boolean            cvbDebugMode = false;
+    private static ArrayList<ILogger> LoggerList;
 
-	public Boolean getDebugMode()
-	{
-		return cvbDebugMode;
-	}
+    private static Logger_Sngltn      Instance;
 
-	public void setDebugMode( Boolean fpbDebugMode )
-	{
-		cvbDebugMode = fpbDebugMode;
-		
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.setDebugMode(cvbDebugMode);
-		}
+    
+    public Boolean getDebugMode()
+    {
+        return cvbDebugMode;
+    }
 
-	}
+    public void setDebugMode( Boolean fpbDebugMode )
+    {
+        cvbDebugMode = fpbDebugMode;
 
-	private static ArrayList<ILogger>		LoggerList;
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.setDebugMode( cvbDebugMode );
+        }
 
-	private static Logger_Sngltn	Instance;
+    }
 
-	public static Logger_Sngltn getInstance()
-	{
-		// Lazy Initialization (If required then only)
+    public static Logger_Sngltn getInstance()
+    {
+        // Lazy Initialization (If required then only)
 
-		if (Instance == null)
-		{
-			// Thread Safe. Might be costly operation in some case
-			synchronized (OKW_Const_Sngltn.class)
-			{
-				if (Instance == null)
-				{
-					Instance = new Logger_Sngltn();
-					Init();
-				}
-			}
-		}
-		return Instance;
+        if ( Instance == null )
+        {
+            // Thread Safe. Might be costly operation in some case
+            synchronized ( OKW_Const_Sngltn.class )
+            {
+                if ( Instance == null )
+                {
+                    Instance = new Logger_Sngltn();
+                    init();
+                }
+            }
+        }
+        return Instance;
 
-	}
+    }
 
-	
-	public static void Init()
-	{
-		LoggerList.clear();
-		LoggerList.add( new Log2Console() );
-		
-		Instance.setDebugMode(false);
-	}
-	
-	private Logger_Sngltn()
-	{
-		try
-		{
-			LoggerList = new ArrayList<ILogger>();
-		}
-		catch (Exception e)
-		{
-			OKW_HandleException.StopRunning(e, Instance.getClass());
-		}
-	}
+    public static void init()
+    {
+        LoggerList.clear();
+        LoggerList.add( new Log2Console() );
 
-	
-	/** \~german
-	 *  \brief Fügt einen ILogger der Logger-Liste Logger.LoggerList
-	 * 
-	 *  \param fpLogger Logger, der
-	 *  \return
-	 * 
-	 *  \~english
-	 *  \brief \todo TODO: Brief Description.
-	 * 
-	 *  \todo TODO: Detailed Description
-	 * 
-	 *  \param fpbTrueOrFalse
-	 *  \return
-	 * 
-	 *  \~
-	 *  \author Zoltán Hrabovszki
-	 *  \date 2015.05.01
+        Instance.setDebugMode( false );
+    }
+
+    private Logger_Sngltn()
+    {
+        try
+        {
+            LoggerList = new ArrayList<ILogger>();
+        }
+        catch (Exception e)
+        {
+            OKW_HandleException.StopRunning( e, Instance.getClass() );
+        }
+    }
+
+    /** \~german
+     *  \brief Fügt einen ILogger der Logger-Liste Logger.LoggerList
+     * 
+     *  \param fpLogger Logger, der
+     *  \return
+     * 
+     *  \~english
+     *  \brief \todo TODO: Brief Description.
+     * 
+     *  \todo TODO: Detailed Description
+     * 
+     *  \param fpbTrueOrFalse
+     *  \return
+     * 
+     *  \~
+     *  \author Zoltán Hrabovszki
+     *  \date 2015.05.01
      */
-	public void AddLogger( ILogger fpLogger )
-	{
-		LoggerList.add(fpLogger);
-	}
+    public void addLogger( ILogger fpLogger )
+    {
+        LoggerList.add( fpLogger );
+    }
 
-	/**
-	 *  \~german
-	 *  \brief Initialisi.
-	 * 
-	 * 
-	 *  \~english
-	 *  \brief \todo TODO: Brief Description.
-	 * 
-	 *  \todo TODO: Detailed Description
-	 * 
-	 *  \~
-	 *  @author Zoltán Hrabovszki
-	 *  @date 2015.05.01
-	 */
-	public void reset()
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.reset();
-		}
-	}
+    /**
+     *  \~german
+     *  \brief Initialisi.
+     * 
+     * 
+     *  \~english
+     *  \brief \todo TODO: Brief Description.
+     * 
+     *  \todo TODO: Detailed Description
+     * 
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2015.05.01
+     */
+    public void reset()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.reset();
+        }
+    }
 
-	/**
-	 *  \brief
-	 *  LogError Function:
-	 *  Logs an error message to the results file.
-	 * 
-	 *  \param fps_Message
-	 */
-	public void LogError( String fps_Message )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogError(fps_Message);
-		}
-	}
+    /**
+     *  \brief
+     *  LogError Function:
+     *  Logs an error message to the results file.
+     * 
+     *  \param fps_Message
+     */
+    public void LogError( String fps_Message )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogError( fps_Message );
+        }
+    }
 
-	/**
-	 *  \brief
-	 *  LogException Function:
-	 *  Logs a Script Exception to the results file.
-	 * 
-	 *  \param fps_Message
-	 */
-	public void LogException( String fps_Message )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogException(fps_Message);
-		}
-	}
+    /**
+     *  \brief
+     *  LogException Function:
+     *  Logs a Script Exception to the results file.
+     * 
+     *  \param fps_Message
+     */
+    public void LogException( String fps_Message )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogException( fps_Message );
+        }
+    }
 
     public void LogFunctionEnd( String fps_Return )
     {
@@ -200,8 +198,8 @@ public class Logger_Sngltn
         }
     }
 
-	public void LogFunctionEnd( Boolean fpb_Return )
-	{
+    public void LogFunctionEnd( Boolean fpb_Return )
+    {
         if ( fpb_Return != null )
         {
             for ( ILogger myLogger : LoggerList )
@@ -213,10 +211,10 @@ public class Logger_Sngltn
         {
             this.LogFunctionEnd();
         }
-	}
+    }
 
-	public void LogFunctionEnd( List<String> fpls_Return )
-	{
+    public void LogFunctionEnd( List<String> fpls_Return )
+    {
         if ( fpls_Return != null )
         {
             for ( ILogger myLogger : LoggerList )
@@ -228,27 +226,27 @@ public class Logger_Sngltn
         {
             this.LogFunctionEnd();
         }
-	}
+    }
 
-	public void LogFunctionEnd()
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogFunctionEnd();
-		}
-	}
+    public void LogFunctionEnd()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogFunctionEnd();
+        }
+    }
 
-	public void LogFunctionEndDebug()
-	{
+    public void LogFunctionEndDebug()
+    {
 
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogFunctionEndDebug();
-		}
-	}
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogFunctionEndDebug();
+        }
+    }
 
-	public void LogFunctionEndDebug( String fps_Return )
-	{
+    public void LogFunctionEndDebug( String fps_Return )
+    {
         if ( fps_Return != null )
         {
             for ( ILogger myLogger : LoggerList )
@@ -260,10 +258,10 @@ public class Logger_Sngltn
         {
             this.LogFunctionEnd();
         }
-	}
+    }
 
-	public void LogFunctionEndDebug( List<String> fpLs_Return )
-	{
+    public void LogFunctionEndDebug( List<String> fpLs_Return )
+    {
         if ( fpLs_Return != null )
         {
             for ( ILogger myLogger : LoggerList )
@@ -275,10 +273,10 @@ public class Logger_Sngltn
         {
             this.LogFunctionEnd();
         }
-	}
+    }
 
-	public void LogFunctionEndDebug( Boolean fpb_Return )
-	{
+    public void LogFunctionEndDebug( Boolean fpb_Return )
+    {
         if ( fpb_Return != null )
         {
             for ( ILogger myLogger : LoggerList )
@@ -290,292 +288,281 @@ public class Logger_Sngltn
         {
             this.LogFunctionEnd();
         }
-	}
+    }
 
-	public void LogFunctionStart( String fps_FunctionName, String... fpsParameter )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogFunctionStart(fps_FunctionName, fpsParameter);
-		}
-	}
+    public void LogFunctionStart( String fps_FunctionName, String... fpsParameter )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogFunctionStart( fps_FunctionName, fpsParameter );
+        }
+    }
 
-	public void LogFunctionStartDebug( String fps_FunctionName, String... fpsParameter )
-	{
+    public void LogFunctionStartDebug( String fps_FunctionName, String... fpsParameter )
+    {
 
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogFunctionStartDebug(fps_FunctionName, fpsParameter);
-		}
-	}
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogFunctionStartDebug( fps_FunctionName, fpsParameter );
+        }
+    }
 
-	public void LogKeyWordEnd()
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogKeyWordEnd();
-		}
-	}
+    public void LogKeyWordEnd()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogKeyWordEnd();
+        }
+    }
 
-	public void LogSequenceEnd()
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogSequenceEnd( );
-		}
-	}
+    public void LogSequenceEnd()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogSequenceEnd();
+        }
+    }
 
+    public void LogTestcaseEnd()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogTestcaseEnd();
+        }
+    }
 
-	public void LogTestcaseEnd()
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogTestcaseEnd();
-		}
-	}
+    /**
+     *  \~german
+     *  \brief Ausgabe eines Schlüsselwortes
+     * 
+     *  \todo TODO: Ausführliche Beschreibung
+     * 
+     *  \param Parameterbezeichner \todo TODO: Beschreibung
+     *  \return
+     * 
+     *  \~english
+     *  \brief \todo TODO: Brief Description.
+     * 
+     *  \todo TODO: Detailed Description
+     * 
+     *  \param fpbTrueOrFalse
+     *  \return
+     * 
+     *  \~
+     *  \author Zoltán Hrabovszki
+     *  \date 2015.05.01
+     */
+    public void LogKeyWordStart( String fpsKeyWordName, String... fpsParameter )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogKeyWordStart( fpsKeyWordName, fpsParameter );
+        }
+    }
 
-	
-	/**
-	 *  \~german
-	 *  \brief Ausgabe eines Schlüsselwortes
-	 * 
-	 *  \todo TODO: Ausführliche Beschreibung
-	 * 
-	 *  \param Parameterbezeichner \todo TODO: Beschreibung
-	 *  \return
-	 * 
-	 *  \~english
-	 *  \brief \todo TODO: Brief Description.
-	 * 
-	 *  \todo TODO: Detailed Description
-	 * 
-	 *  \param fpbTrueOrFalse
-	 *  \return
-	 * 
-	 *  \~
-	 *  \author Zoltán Hrabovszki
-	 *  \date 2015.05.01
-	 */
-	public void LogKeyWordStart( String fpsKeyWordName, String... fpsParameter )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogKeyWordStart(fpsKeyWordName, fpsParameter);
-		}
-	}
+    public void LogSequenceStart( String fps_KeyWordName, String fpsWinowFN, String fps_SequensName, String... fpsParameter )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogSequenceStart( fps_KeyWordName, fpsWinowFN, fps_SequensName, fpsParameter );
+        }
+    }
 
-	public void LogSequenceStart(String fps_KeyWordName, String fpsWinowFN, String fps_SequensName, String... fpsParameter)
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogSequenceStart( fps_KeyWordName, fpsWinowFN, fps_SequensName, fpsParameter );
-		}
-	}
+    /**
+     *  \~german
+     *  \brief Ausgabe des Testfalls
+     * 
+     *  \todo TODO: Ausführliche Beschreibung
+     * 
+     *  \param Parameterbezeichner \todo TODO: Beschreibung
+     *  \return
+     * 
+     *  \~english
+     *  \brief \todo TODO: Brief Description.
+     * 
+     *  \todo TODO: Detailed Description
+     * 
+     *  \param fpbTrueOrFalse
+     *  \return
+     * 
+     *  \~
+     *  \author Zoltán Hrabovszki
+     *  \date 2015.05.01
+     */
+    public void LogTestcaseStart( String fps_TestcaseName )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogTestcaseStart( fps_TestcaseName );
+        }
+    }
 
-	
-	/**
-	 *  \~german
-	 *  \brief Ausgabe des Testfalls
-	 * 
-	 *  \todo TODO: Ausführliche Beschreibung
-	 * 
-	 *  \param Parameterbezeichner \todo TODO: Beschreibung
-	 *  \return
-	 * 
-	 *  \~english
-	 *  \brief \todo TODO: Brief Description.
-	 * 
-	 *  \todo TODO: Detailed Description
-	 * 
-	 *  \param fpbTrueOrFalse
-	 *  \return
-	 * 
-	 *  \~
-	 *  \author Zoltán Hrabovszki
-	 *  \date 2015.05.01
-	 */
-	public void LogTestcaseStart( String fps_TestcaseName )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogTestcaseStart( fps_TestcaseName );
-		}
-	}
-	
-	
-	/** 
-	 *  \brief LogPass: Logs an passes-message to the result.
-	 *
-	 *  \param fps_Message
-	 */
-	public void LogPass( String fps_Message )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogPass(fps_Message);
-		}
-	}
-	
-	
-	/**
-	 *  \brief
-	 *  LogPrint Function:
-	 *  Prints the values of expressions to the results file.
-	 * 
-	 *  \param fps_Message
-	 */
-	public void LogPrint( String fps_Message )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogPrint(fps_Message);
-		}
-	}
+    /** 
+     *  \brief LogPass: Logs an passes-message to the result.
+     *
+     *  \param fps_Message
+     */
+    public void LogPass( String fps_Message )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogPass( fps_Message );
+        }
+    }
 
-	
-	/**
-	 *  \~german
-	 *  \brief Loggt eine Nachricht
-	 * 
-	 *  Die Nachricht fpsMessage wird im Ergebniss ausgegeben.
-	 * 
-	 *  \param fpsMessage Nachricht, die Ausgegeben werden soll.
-	 * 
-	 *  \~english
-	 *  \brief \todo TODO: Brief sescription.
-	 * 
-	 *  \todo TODO: Detailed Description
-	 * 
-	 *  \param fpsMessage
-	 *  \return
-	 * 
-	 *  \~
-	 *  \author Zoltán Hrabovszki
-	 *  \date 2015.05.01
-	 *  \brief
-	 *  Prints the message fps_Messageof expressions to the results file, if
-	 *  cvb_DebugMode
-	 * 
-	 *  \param fps_Message Message to Print
-	 */
-	public void LogPrintDebug( String fpsMessage )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogPrintDebug(fpsMessage);
-		}
-	}
+    /**
+     *  \brief
+     *  LogPrint Function:
+     *  Prints the values of expressions to the results file.
+     * 
+     *  \param fps_Message
+     */
+    public void LogPrint( String fps_Message )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogPrint( fps_Message );
+        }
+    }
 
-	
-	/**
-	 *  \brief
-	 *  LogWarning Function:
-	 *  Logs a warning to the results file.
-	 * 
-	 *  \param fps_Message
-	 */
-	public void LogWarning( String fps_Message )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.LogWarning(fps_Message);
-		}
-	}
+    /**
+     *  \~german
+     *  \brief Loggt eine Nachricht
+     * 
+     *  Die Nachricht fpsMessage wird im Ergebniss ausgegeben.
+     * 
+     *  \param fpsMessage Nachricht, die Ausgegeben werden soll.
+     * 
+     *  \~english
+     *  \brief \todo TODO: Brief sescription.
+     * 
+     *  \todo TODO: Detailed Description
+     * 
+     *  \param fpsMessage
+     *  \return
+     * 
+     *  \~
+     *  \author Zoltán Hrabovszki
+     *  \date 2015.05.01
+     *  \brief
+     *  Prints the message fps_Messageof expressions to the results file, if
+     *  cvb_DebugMode
+     * 
+     *  \param fps_Message Message to Print
+     */
+    public void LogPrintDebug( String fpsMessage )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogPrintDebug( fpsMessage );
+        }
+    }
 
-	
-	/**
-	 *  \brief
-	 *  Closes a hierarchical level in the results file that was opened with
-	 *  ResOpenList.
-	 *  Use ResOpenList to start a new hierarchical level.
-	 *  The Print commands that follow it are indented until you close the level
-	 *  with ResCloseList.
-	 *  When you view the results file, the item sName is initially collapsed,
-	 *  indicated by the [+] icon next to it.
-	 *  You can expand sName to reveal the indented items under it.
-	 * 
-	 */
-	public void ResCloseList()
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.ResCloseList();
-		}
-	}
+    /**
+     *  \brief
+     *  LogWarning Function:
+     *  Logs a warning to the results file.
+     * 
+     *  \param fps_Message
+     */
+    public void LogWarning( String fps_Message )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogWarning( fps_Message );
+        }
+    }
 
-	
-	/**
-	 *  \brief
-	 *  Closes a hierarchical level in the results file that was opened with
-	 *  ResOpenList.
-	 *  Use ResOpenList to start a new hierarchical level.
-	 *  The Print commands that follow it are indented until you close the level
-	 *  with ResCloseList.
-	 *  When you view the results file, the item sName is initially collapsed,
-	 *  indicated by the [+] icon next to it.
-	 *  You can expand sName to reveal the indented items under it.
-	 * 
-	 */
-	public void ResCloseListDebug()
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.ResCloseListDebug();
-		}
-	}
+    /**
+     *  \brief
+     *  Closes a hierarchical level in the results file that was opened with
+     *  ResOpenList.
+     *  Use ResOpenList to start a new hierarchical level.
+     *  The Print commands that follow it are indented until you close the level
+     *  with ResCloseList.
+     *  When you view the results file, the item sName is initially collapsed,
+     *  indicated by the [+] icon next to it.
+     *  You can expand sName to reveal the indented items under it.
+     * 
+     */
+    public void ResCloseList()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.ResCloseList();
+        }
+    }
 
+    /**
+     *  \brief
+     *  Closes a hierarchical level in the results file that was opened with
+     *  ResOpenList.
+     *  Use ResOpenList to start a new hierarchical level.
+     *  The Print commands that follow it are indented until you close the level
+     *  with ResCloseList.
+     *  When you view the results file, the item sName is initially collapsed,
+     *  indicated by the [+] icon next to it.
+     *  You can expand sName to reveal the indented items under it.
+     * 
+     */
+    public void ResCloseListDebug()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.ResCloseListDebug();
+        }
+    }
 
-	/**
-	 *  \brief
-	 *  Creates a new hierarchical level in the results file.
-	 *  Use ResOpenList to start a new hierarchical level.
-	 *  The Print commands that follow it are indented until you close the level
-	 *  with ResCloseList.
-	 *  When you view the results file, the item sName is initially collapsed,
-	 *  indicated by the [+] icon next to it.
-	 *  You can expand sName to reveal the indented items under it.
-	 * 
-	 *  \param fps_Name
-	 */
-	public void ResOpenList( String fps_Name )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.ResOpenList(fps_Name);
-		}
-	}
+    /**
+     *  \brief
+     *  Creates a new hierarchical level in the results file.
+     *  Use ResOpenList to start a new hierarchical level.
+     *  The Print commands that follow it are indented until you close the level
+     *  with ResCloseList.
+     *  When you view the results file, the item sName is initially collapsed,
+     *  indicated by the [+] icon next to it.
+     *  You can expand sName to reveal the indented items under it.
+     * 
+     *  \param fps_Name
+     */
+    public void ResOpenList( String fps_Name )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.ResOpenList( fps_Name );
+        }
+    }
 
-	
-	/**
-	 *  \~german
-	 *  \brief Erzeugt eine hierachische Log-Ebene in der Ergenbniss-Ausgabe.
-	 * 
-	 *  \todo TODO: Ausführliche Beschreibung erstellen.
-	 * 
-	 *  \param fpsListCaption Überschrift der Log-Ebene.
-	 * 
-	 *  \~english
-	 *  \brief
-	 *  Creates a new hierarchical level in the results file.
-	 * 
-	 *  Use ResOpenList to start a new hierarchical level.
-	 *  The Print commands that follow it are indented until you close the level
-	 *  with ResCloseList.
-	 *  When you view the results file, the item sName is initially collapsed,
-	 *  indicated by the [+] icon next to it.
-	 *  You can expand sName to reveal the indented items under it.
-	 * 
-	 *  \param fpsListCaption Caption of the resultlist.
-	 * 
-	 *  \~
-	 *  \author Zoltán Hrabovszki
-	 *  \date 2015.05.01
-	 */
-	public void ResOpenListDebug( String fpsListCaption )
-	{
-		for (ILogger myLogger : LoggerList)
-		{
-			myLogger.ResOpenListDebug(fpsListCaption);
-		}
-	}
+    /**
+     *  \~german
+     *  \brief Erzeugt eine hierachische Log-Ebene in der Ergenbniss-Ausgabe.
+     * 
+     *  \todo TODO: Ausführliche Beschreibung erstellen.
+     * 
+     *  \param fpsListCaption Überschrift der Log-Ebene.
+     * 
+     *  \~english
+     *  \brief
+     *  Creates a new hierarchical level in the results file.
+     * 
+     *  Use ResOpenList to start a new hierarchical level.
+     *  The Print commands that follow it are indented until you close the level
+     *  with ResCloseList.
+     *  When you view the results file, the item sName is initially collapsed,
+     *  indicated by the [+] icon next to it.
+     *  You can expand sName to reveal the indented items under it.
+     * 
+     *  \param fpsListCaption Caption of the resultlist.
+     * 
+     *  \~
+     *  \author Zoltán Hrabovszki
+     *  \date 2015.05.01
+     */
+    public void ResOpenListDebug( String fpsListCaption )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.ResOpenListDebug( fpsListCaption );
+        }
+    }
 }

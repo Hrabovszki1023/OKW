@@ -38,7 +38,7 @@ public class CurrentObject_Test {
 	            try
 	            {
 	                // Reset des Loggers: Alle geladenen Instanzen löschen
-	            	Logger_Sngltn.Init();
+	            	Logger_Sngltn.init();
 	                
 	                // Log2NUnit in den Logger laden.
 	            	//myLogger.AddLogger(new Log2NUnit());

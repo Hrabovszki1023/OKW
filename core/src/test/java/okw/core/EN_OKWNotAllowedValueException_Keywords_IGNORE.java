@@ -45,7 +45,7 @@ public class EN_OKWNotAllowedValueException_Keywords_IGNORE
     public static void setUpBeforeClass() throws Exception
     {
         // Reset des Loggers: Alle Geladenen Instanzen löschen
-        Logger_Sngltn.Init();
+        Logger_Sngltn.init();
         //myLogger.AddLogger(new Log2Console());
 
         myLogger.setDebugMode( false );

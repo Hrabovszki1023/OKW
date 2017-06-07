@@ -45,7 +45,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
     Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 
     // Reset/init the Logger
-    Logger_Sngltn.Init();
+    Logger_Sngltn.init();
     // myLogger.AddLogger(new Log2Console());
 
     myLogger.setDebugMode( false );

@@ -43,7 +43,7 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
         Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 
         // Reset des Loggers: Alle Geladenen Instanzen löschen
-        Logger_Sngltn.Init();
+        Logger_Sngltn.init();
         //myLogger.AddLogger(new Log2Console());
 
         myLogger.setDebugMode(false);
