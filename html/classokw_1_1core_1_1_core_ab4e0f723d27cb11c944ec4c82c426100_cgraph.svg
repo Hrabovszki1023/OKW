@@ -9,20 +9,20 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 26)">
 <title>okw.core.Core.setLanguage</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-26 355,-26 355,5 -4,5"/>
-<!-- Node1713 -->
-<g id="node1" class="node"><title>Node1713</title>
+<!-- Node1538 -->
+<g id="node1" class="node"><title>Node1538</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-0.5 0.5,-21.5 139.5,-21.5 139.5,-0.5 0.5,-0.5"/>
 <text text-anchor="middle" x="70" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.setLanguage</text>
 </g>
-<!-- Node1714 -->
-<g id="node3" class="node"><title>Node1714</title>
+<!-- Node1539 -->
+<g id="node3" class="node"><title>Node1539</title>
 <a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" target="_top" xlink:title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)...">
 <polygon fill="white" stroke="black" points="176.5,-0.5 176.5,-21.5 349.5,-21.5 349.5,-0.5 176.5,-0.5"/>
 <text text-anchor="middle" x="263" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.setLanguage</text>
 </a>
 </g>
-<!-- Node1713&#45;&gt;Node1714 -->
-<g id="edge2" class="edge"><title>Node1713&#45;&gt;Node1714</title>
+<!-- Node1538&#45;&gt;Node1539 -->
+<g id="edge2" class="edge"><title>Node1538&#45;&gt;Node1539</title>
 <path fill="none" stroke="midnightblue" d="M139.677,-11C148.307,-11 157.247,-11 166.191,-11"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="166.274,-14.5001 176.274,-11 166.274,-7.5001 166.274,-14.5001"/>
 </g>

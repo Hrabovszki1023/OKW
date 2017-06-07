@@ -9,98 +9,98 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 246)">
 <title>okw.core.Core.LogExists</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-246 511,-246 511,5 -4,5"/>
-<!-- Node709 -->
-<g id="node1" class="node"><title>Node709</title>
+<!-- Node634 -->
+<g id="node1" class="node"><title>Node634</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-87.5 0.5,-108.5 127.5,-108.5 127.5,-87.5 0.5,-87.5"/>
 <text text-anchor="middle" x="64" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogExists</text>
 </g>
-<!-- Node710 -->
-<g id="node3" class="node"><title>Node710</title>
+<!-- Node635 -->
+<g id="node3" class="node"><title>Node635</title>
 <a xlink:href="classokw_1_1core_1_1_e_n.html#a6b31a5c7517cf918ffc2115e5f019f4c" target="_top" xlink:title="Protokolliert, ob das gegebene Objekt existiert. ">
 <polygon fill="white" stroke="black" points="183,-110.5 183,-131.5 303,-131.5 303,-110.5 183,-110.5"/>
 <text text-anchor="middle" x="243" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.LogExists</text>
 </a>
 </g>
-<!-- Node709&#45;&gt;Node710 -->
-<g id="edge2" class="edge"><title>Node709&#45;&gt;Node710</title>
+<!-- Node634&#45;&gt;Node635 -->
+<g id="edge2" class="edge"><title>Node634&#45;&gt;Node635</title>
 <path fill="none" stroke="midnightblue" d="M137.87,-107.492C152.856,-109.417 168.446,-111.42 182.888,-113.276"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="137.977,-103.977 127.613,-106.174 137.085,-110.92 137.977,-103.977"/>
 </g>
-<!-- Node716 -->
-<g id="node15" class="node"><title>Node716</title>
+<!-- Node641 -->
+<g id="node15" class="node"><title>Node641</title>
 <a xlink:href="classokw_1_1core_1_1_current_object___test.html#a3af3ee26cd57443cdc1a3126836ac628" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode LogExists( &quot;FN&quot; ) im ChildObject. ">
 <polygon fill="white" stroke="black" points="164,-58 164,-92 322,-92 322,-58 164,-58"/>
 <text text-anchor="start" x="172" y="-79" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
 <text text-anchor="middle" x="243" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.tc_LogExists_ChildObject</text>
 </a>
 </g>
-<!-- Node709&#45;&gt;Node716 -->
-<g id="edge14" class="edge"><title>Node709&#45;&gt;Node716</title>
+<!-- Node634&#45;&gt;Node641 -->
+<g id="edge14" class="edge"><title>Node634&#45;&gt;Node641</title>
 <path fill="none" stroke="midnightblue" d="M137.667,-88.5344C146.329,-87.4214 155.196,-86.2821 163.928,-85.1601"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="137.085,-85.0803 127.613,-89.8263 137.977,-92.0232 137.085,-85.0803"/>
 </g>
-<!-- Node711 -->
-<g id="node5" class="node"><title>Node711</title>
+<!-- Node636 -->
+<g id="node5" class="node"><title>Node636</title>
 <a xlink:href="classokw_1_1_se_input_field_1_1_se_input_field___test.html#a67c769e13eae67ef09674b3a5538cb2a" target="_top" xlink:title="Testet das Schlüsselwort LogExists( FN ) eines SeInputField Prüfen. ">
 <polygon fill="white" stroke="black" points="367.5,-208 367.5,-242 496.5,-242 496.5,-208 367.5,-208"/>
 <text text-anchor="start" x="375.5" y="-229" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputField.SeInput</text>
 <text text-anchor="middle" x="432" y="-216" font-family="Helvetica,sans-Serif" font-size="10.00">Field_Test.tcLogExists</text>
 </a>
 </g>
-<!-- Node710&#45;&gt;Node711 -->
-<g id="edge4" class="edge"><title>Node710&#45;&gt;Node711</title>
+<!-- Node635&#45;&gt;Node636 -->
+<g id="edge4" class="edge"><title>Node635&#45;&gt;Node636</title>
 <path fill="none" stroke="midnightblue" d="M264.197,-137.852C286.522,-154.991 323.198,-181.456 358,-199 364.323,-202.187 371.13,-205.153 377.965,-207.855"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="266.147,-134.935 256.104,-131.562 261.852,-140.462 266.147,-134.935"/>
 </g>
-<!-- Node712 -->
-<g id="node7" class="node"><title>Node712</title>
+<!-- Node637 -->
+<g id="node7" class="node"><title>Node637</title>
 <a xlink:href="classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a2dbae039ed1a2bf9c10f6dcbc5fc5476" target="_top" xlink:title="Test des Schlüsselwortes LogExists für den GUI&#45;Adapter SeInputRadio. ">
 <polygon fill="white" stroke="black" points="359,-156 359,-190 505,-190 505,-156 359,-156"/>
 <text text-anchor="start" x="367" y="-177" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputRadio.SeInput</text>
 <text text-anchor="middle" x="432" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">Radio_EN_Test.tc_LogExists</text>
 </a>
 </g>
-<!-- Node710&#45;&gt;Node712 -->
-<g id="edge6" class="edge"><title>Node710&#45;&gt;Node712</title>
+<!-- Node635&#45;&gt;Node637 -->
+<g id="edge6" class="edge"><title>Node635&#45;&gt;Node637</title>
 <path fill="none" stroke="midnightblue" d="M291.168,-134.253C315.133,-140.846 344.381,-148.893 370,-155.942"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="291.817,-130.801 281.247,-131.523 289.96,-137.55 291.817,-130.801"/>
 </g>
-<!-- Node713 -->
-<g id="node9" class="node"><title>Node713</title>
+<!-- Node638 -->
+<g id="node9" class="node"><title>Node638</title>
 <a xlink:href="classokw_1_1_se_link_1_1_se_link___e_n___test.html#a4024539898f1eaf112ea1ad68051895d" target="_top" xlink:title="Prüft ob ein vorhandenes objekt existiert. ">
 <polygon fill="white" stroke="black" points="371,-104 371,-138 493,-138 493,-104 371,-104"/>
 <text text-anchor="start" x="379" y="-125" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeLink.SeLink_EN</text>
 <text text-anchor="middle" x="432" y="-112" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.TC_LogExists_en</text>
 </a>
 </g>
-<!-- Node710&#45;&gt;Node713 -->
-<g id="edge8" class="edge"><title>Node710&#45;&gt;Node713</title>
+<!-- Node635&#45;&gt;Node638 -->
+<g id="edge8" class="edge"><title>Node635&#45;&gt;Node638</title>
 <path fill="none" stroke="midnightblue" d="M313.115,-121C332.051,-121 352.39,-121 370.796,-121"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="313.061,-117.5 303.06,-121 313.06,-124.5 313.061,-117.5"/>
 </g>
-<!-- Node714 -->
-<g id="node11" class="node"><title>Node714</title>
+<!-- Node639 -->
+<g id="node11" class="node"><title>Node639</title>
 <a xlink:href="classokw_1_1_se_radio_list_1_1_se_radio_list___test.html#a17634586f5417224c045e0f765ff69d5" target="_top" xlink:title="Prüft die Methode SeRadioList.LogExists, wenn das Object nicht vorhanden ist. ">
 <polygon fill="white" stroke="black" points="358.5,-52 358.5,-86 505.5,-86 505.5,-52 358.5,-52"/>
 <text text-anchor="start" x="366.5" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeRadioList.SeRadioList</text>
 <text text-anchor="middle" x="432" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.tcLogExists_ExistsNo</text>
 </a>
 </g>
-<!-- Node710&#45;&gt;Node714 -->
-<g id="edge10" class="edge"><title>Node710&#45;&gt;Node714</title>
+<!-- Node635&#45;&gt;Node639 -->
+<g id="edge10" class="edge"><title>Node635&#45;&gt;Node639</title>
 <path fill="none" stroke="midnightblue" d="M295.555,-107.97C304.397,-105.699 313.47,-103.32 322,-101 339.177,-96.3288 357.788,-91.0126 374.732,-86.0733"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="294.537,-104.617 285.711,-110.479 296.266,-111.4 294.537,-104.617"/>
 </g>
-<!-- Node715 -->
-<g id="node13" class="node"><title>Node715</title>
+<!-- Node640 -->
+<g id="node13" class="node"><title>Node640</title>
 <a xlink:href="classokw_1_1_se_radio_list_1_1_se_radio_list___test.html#ae344ab1cc939628baad817e11eadaf38" target="_top" xlink:title="Prüft die Methode SeRadioList.LogExists, wenn das Object nicht vorhanden ist. ">
 <polygon fill="white" stroke="black" points="358.5,-0 358.5,-34 505.5,-34 505.5,-0 358.5,-0"/>
 <text text-anchor="start" x="366.5" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeRadioList.SeRadioList</text>
 <text text-anchor="middle" x="432" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.tcLogExists_ExistsYes</text>
 </a>
 </g>
-<!-- Node710&#45;&gt;Node715 -->
-<g id="edge12" class="edge"><title>Node710&#45;&gt;Node715</title>
+<!-- Node635&#45;&gt;Node640 -->
+<g id="edge12" class="edge"><title>Node635&#45;&gt;Node640</title>
 <path fill="none" stroke="midnightblue" d="M312.316,-106.948C315.713,-105.193 318.967,-103.219 322,-101 346.486,-83.0857 334.344,-61.9968 358,-43 362.247,-39.5895 366.973,-36.61 371.926,-34.0102"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="310.739,-103.82 303.046,-111.105 313.603,-110.207 310.739,-103.82"/>
 </g>

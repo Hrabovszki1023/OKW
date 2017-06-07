@@ -55,70 +55,70 @@ var sectionId = 'dynsection-27';
 <g id="viewport">
 <title>okw.core.Core.LogTooltip</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-118 725,-118 725,5 -4,5"/>
-<!-- Node777 -->
-<g id="node1" class="node"><title>Node777</title>
+<!-- Node702 -->
+<g id="node1" class="node"><title>Node702</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-40.5 0,-61.5 128,-61.5 128,-40.5 0,-40.5"/>
 <text text-anchor="middle" x="64" y="-48.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogTooltip</text>
 </g>
-<!-- Node778 -->
-<g id="node3" class="node"><title>Node778</title>
+<!-- Node703 -->
+<g id="node3" class="node"><title>Node703</title>
 <a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" target="_top" xlink:title="Ausgabe eines Schlüsselwortes. ">
 <polygon fill="white" stroke="black" points="179,-80 179,-114 313,-114 313,-80 179,-80"/>
 <text text-anchor="start" x="187" y="-101" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
 <text text-anchor="middle" x="246" y="-88" font-family="Helvetica,sans-Serif" font-size="10.00">KeyWordStart</text>
 </a>
 </g>
-<!-- Node777&#45;&gt;Node778 -->
-<g id="edge2" class="edge"><title>Node777&#45;&gt;Node778</title>
+<!-- Node702&#45;&gt;Node703 -->
+<g id="edge2" class="edge"><title>Node702&#45;&gt;Node703</title>
 <path fill="none" stroke="midnightblue" d="M105.754,-61.5533C124.502,-66.2918 147.24,-72.0388 168.902,-77.5138"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="168.208,-80.9484 178.761,-80.0056 169.924,-74.1618 168.208,-80.9484"/>
 </g>
-<!-- Node779 -->
-<g id="node5" class="node"><title>Node779</title>
+<!-- Node704 -->
+<g id="node5" class="node"><title>Node704</title>
 <a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. ">
 <polygon fill="white" stroke="black" points="166,-40.5 166,-61.5 326,-61.5 326,-40.5 166,-40.5"/>
 <text text-anchor="middle" x="246" y="-48.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
-<!-- Node777&#45;&gt;Node779 -->
-<g id="edge4" class="edge"><title>Node777&#45;&gt;Node779</title>
+<!-- Node702&#45;&gt;Node704 -->
+<g id="edge4" class="edge"><title>Node702&#45;&gt;Node704</title>
 <path fill="none" stroke="midnightblue" d="M128.166,-51C137.11,-51 146.434,-51 155.747,-51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="155.83,-54.5001 165.83,-51 155.83,-47.5001 155.83,-54.5001"/>
 </g>
-<!-- Node782 -->
-<g id="node11" class="node"><title>Node782</title>
+<!-- Node707 -->
+<g id="node11" class="node"><title>Node707</title>
 <a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a337d18daedd0cb42e8743f6f6a7d4a25" target="_top" xlink:title="Dokumentiert die Kurzinfo zu einem Werkzeug des gegebenen Objekts. ">
 <polygon fill="white" stroke="black" points="164.5,-0.5 164.5,-21.5 327.5,-21.5 327.5,-0.5 164.5,-0.5"/>
 <text text-anchor="middle" x="246" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.LogTooltip</text>
 </a>
 </g>
-<!-- Node777&#45;&gt;Node782 -->
-<g id="edge10" class="edge"><title>Node777&#45;&gt;Node782</title>
+<!-- Node702&#45;&gt;Node707 -->
+<g id="edge10" class="edge"><title>Node702&#45;&gt;Node707</title>
 <path fill="none" stroke="midnightblue" d="M111.818,-40.4905C135.237,-35.3434 163.624,-29.1046 188.246,-23.6933"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="189.17,-27.0738 198.185,-21.5087 187.667,-20.2369 189.17,-27.0738"/>
 </g>
-<!-- Node780 -->
-<g id="node7" class="node"><title>Node780</title>
+<!-- Node705 -->
+<g id="node7" class="node"><title>Node705</title>
 <a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="364.5,-40.5 364.5,-61.5 531.5,-61.5 531.5,-40.5 364.5,-40.5"/>
 <text text-anchor="middle" x="448" y="-48.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
-<!-- Node779&#45;&gt;Node780 -->
-<g id="edge6" class="edge"><title>Node779&#45;&gt;Node780</title>
+<!-- Node704&#45;&gt;Node705 -->
+<g id="edge6" class="edge"><title>Node704&#45;&gt;Node705</title>
 <path fill="none" stroke="midnightblue" d="M326.126,-51C335.348,-51 344.812,-51 354.193,-51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="354.325,-54.5001 364.325,-51 354.325,-47.5001 354.325,-54.5001"/>
 </g>
-<!-- Node781 -->
-<g id="node9" class="node"><title>Node781</title>
+<!-- Node706 -->
+<g id="node9" class="node"><title>Node706</title>
 <a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="568,-34 568,-68 720,-68 720,-34 568,-34"/>
 <text text-anchor="start" x="576" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
 <text text-anchor="middle" x="644" y="-42" font-family="Helvetica,sans-Serif" font-size="10.00">ContentSingleValue</text>
 </a>
 </g>
-<!-- Node780&#45;&gt;Node781 -->
-<g id="edge8" class="edge"><title>Node780&#45;&gt;Node781</title>
+<!-- Node705&#45;&gt;Node706 -->
+<g id="edge8" class="edge"><title>Node705&#45;&gt;Node706</title>
 <path fill="none" stroke="midnightblue" d="M531.69,-51C540.29,-51 549.041,-51 557.669,-51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="557.725,-54.5001 567.725,-51 557.725,-47.5001 557.725,-54.5001"/>
 </g>
