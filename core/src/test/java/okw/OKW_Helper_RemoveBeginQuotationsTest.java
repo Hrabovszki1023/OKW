@@ -39,7 +39,6 @@
 
 package okw;
 
-
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -51,57 +50,58 @@ import org.junit.runners.Parameterized.Parameters;
 import static org.junit.Assert.*;
 import okw.log.*;
 
-@RunWith(Parameterized.class)
+@RunWith( Parameterized.class )
 public class OKW_Helper_RemoveBeginQuotationsTest
-    {
+{
+
+    private String              ExpectedValue;
+    private String              InputValue_1;
+
+    /*
+     *  \copydoc CurrentObject::Log()
+     */
+    public static Logger_Sngltn Log;
+
     @Parameters( name = "{index}: {0} = RemoveBeginEndQuotations[>>{1}<<] " )
-    public static Collection<Object[]> data() {
-        return Arrays.asList(new Object[][] {     
-        		{ "",                     "\"\"" },
-        		{ "A",                    "\"A\"" },
-        		{ "ABC",                  "\"ABC\"" },
-        		{ "\"",                   "\"\"\"" },
-        		{ "A\"",                  "\"A\"\"" },
-        		{ "Fuchs \"liebt\" Hase", "Fuchs \"liebt\" Hase" },
-        		{ "Fuchs \"liebt\" Hase", "\"Fuchs \"liebt\" Hase\"" }
-           });
+    public static Collection<Object[]> data()
+    {
+        return Arrays.asList( new Object[][]
+        {
+                        { "", "\"\"" },
+                        { "A", "\"A\"" },
+                        { "ABC", "\"ABC\"" },
+                        { "\"", "\"\"\"" },
+                        { "A\"", "\"A\"\"" },
+                        { "Fuchs \"liebt\" Hase", "Fuchs \"liebt\" Hase" },
+                        { "Fuchs \"liebt\" Hase", "\"Fuchs \"liebt\" Hase\"" } } );
     }
-    
-    private String ExpectedValue;
-    
-    private String InputValue_1;
 
-    public OKW_Helper_RemoveBeginQuotationsTest(String ExpectedValue, String InputValue_1) {
-    	
-    	   this.ExpectedValue = ExpectedValue;
-    	    
-    	   this.InputValue_1 = InputValue_1;
-    	   }
-    
-	/// \copydoc CurrentObject::Log()
-	public static Logger_Sngltn Log;
+    public OKW_Helper_RemoveBeginQuotationsTest( String ExpectedValue, String InputValue_1 )
+    {
 
-		//@BeforeClass
-        public static void myTestFixtureSetUp()
-        {
-			Log = Logger_Sngltn.getInstance();
-            // Reset des Loggers: Alle geladenen Instanzen löschen
-            Logger_Sngltn.init();
+        this.ExpectedValue = ExpectedValue;
 
-            //Log.AddLogger(new Log2Console());
-            Log.setDebugMode(false);
-        }
+        this.InputValue_1 = InputValue_1;
+    }
 
-        @Test
-        public void TC_MatchStr()
-        {
-            String actual = "";
-            String expected = ExpectedValue;
+    //@BeforeClass
+    public static void myTestFixtureSetUp()
+    {
+        Log = Logger_Sngltn.getInstance();
+        // Reset des Loggers: Alle geladenen Instanzen löschen
+        Logger_Sngltn.init();
 
-            actual = OKW_Helper.removeBeginEndQuotations( InputValue_1);
-            assertEquals(expected, actual);
-        }
+        //Log.AddLogger(new Log2Console());
+        Log.setDebugMode( false );
+    }
+
+    @Test
+    public void tcMatchStr()
+    {
+        String actual = "";
+        String expected = ExpectedValue;
+
+        actual = OKW_Helper.removeBeginEndQuotations( InputValue_1 );
+        assertEquals( expected, actual );
+    }
 }
-
-
-
