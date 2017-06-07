@@ -54,6 +54,15 @@ import okw.log.*;
 @RunWith(Parameterized.class)
 public class OKW_Helper_MatchStrTest
     {
+    
+    private Boolean ExpectedValue;
+    
+    private String InputValue_1;
+    private String InputValue_2;
+    
+    /// \copydoc CurrentObject::Log()
+    public static Logger_Sngltn Log;
+    
     @Parameters( name = "{index}: {0} = MatchStr[\"{1}\", \"{2}\"] " )
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {     
@@ -76,11 +85,6 @@ public class OKW_Helper_MatchStrTest
         });
     }
     
-    private Boolean ExpectedValue;
-    
-    private String InputValue_1;
-    private String InputValue_2;
-
     public OKW_Helper_MatchStrTest(Boolean ExpectedValue, String InputValue_1, String InputValue_2) {
     	
     	   this.ExpectedValue = ExpectedValue;
@@ -89,9 +93,6 @@ public class OKW_Helper_MatchStrTest
     	   this.InputValue_2 = InputValue_2;
     	   }
     
-	/// \copydoc CurrentObject::Log()
-	public static Logger_Sngltn Log;
-
 		//@BeforeClass
         public static void myTestFixtureSetUp()
         {
@@ -104,7 +105,7 @@ public class OKW_Helper_MatchStrTest
         }
 
         @Test
-        public void TC_MatchStr()
+        public void tcMatchStr()
         {
             Boolean actual = false;
             Boolean expected = ExpectedValue;
