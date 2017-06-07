@@ -141,7 +141,7 @@ var sectionId = 'dynsection-0';
 <g id="edge4" class="edge"><title>Node3&#45;&gt;Node1</title>
 <path fill="none" stroke="#404040" d="M144,-718.724C144,-668.79 144,-606.208 144,-543.65"/>
 <polygon fill="none" stroke="#404040" points="144,-543.559 140,-537.559 144,-531.559 148,-537.559 144,-543.559"/>
-<text text-anchor="middle" x="177" y="-554.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myClipBoard</text>
+<text text-anchor="middle" x="175.5" y="-554.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myClipBoard</text>
 </g>
 <!-- Node3&#45;&gt;Node3 -->
 <g id="edge8" class="edge"><title>Node3&#45;&gt;Node3</title>
@@ -212,7 +212,7 @@ var sectionId = 'dynsection-0';
 <g id="edge10" class="edge"><title>Node5&#45;&gt;Node1</title>
 <path fill="none" stroke="#404040" d="M281.901,-607.123C278.947,-598.62 275.974,-590.22 273,-582 259.514,-544.724 244.268,-505.351 229.102,-467.523"/>
 <polygon fill="none" stroke="#404040" points="229.094,-467.502 223.143,-463.429 224.615,-456.37 230.565,-460.443 229.094,-467.502"/>
-<text text-anchor="middle" x="289" y="-554.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
+<text text-anchor="middle" x="287.5" y="-554.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myLogger</text>
 </g>
 <!-- Node5&#45;&gt;Node5 -->
 <g id="edge14" class="edge"><title>Node5&#45;&gt;Node5</title>
