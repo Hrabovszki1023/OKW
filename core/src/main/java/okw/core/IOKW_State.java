@@ -34,19 +34,18 @@
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
+package okw.core;
+
 /**
  * \~german
- * \brief IOKW_State ist die Schnittstelle der OKW-Klasse.
+ * IOKW_State ist die Schnittstelle der OKW-Klasse.
  * Die OKW-Klasse wird vom State-Design-Muster abgeleitet
  *
  * \~english
- * \brief 
  * IOKW_state is the Interface of OKW-Class.
  * The OKW-Class is derived from the State-Design-Pattern
  * 
  */
-package okw.core;
-
 public interface IOKW_State
 {
 
@@ -96,7 +95,8 @@ public interface IOKW_State
      * _Example: Click on "My Object":_
      * 
      * \verbatim click on: "MyObject" \endverbatim
-     * @paramfpsFunctionalname Functional name of the object 
+     * 
+     * @param FN Functional name of the object 
      * 
      *
      * \~

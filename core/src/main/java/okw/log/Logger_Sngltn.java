@@ -1,4 +1,4 @@
-/**
+/*
 ==============================================================================
   Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
@@ -36,6 +36,7 @@ Siehe die GNU General Public License für weitere Details.
 Sie sollten eine Kopie der GNU General Public License zusammen mit 
 OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
+
 package okw.log;
 
 import java.util.*;
