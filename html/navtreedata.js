@@ -8,8 +8,8 @@ var NAVTREE =
       [ "${SEP}", "ref_l_o_const.html#refSEP", null ],
       [ "${TCN}", "ref_l_o_const.html#refTCN", null ]
     ] ],
-    [ "OKW Anleitungen", "ref_tutorials.html", "ref_tutorials" ],
     [ "Liste der Selenium GUI-Adapter", "ref_selenium_g_u_iadapter.html", null ],
+    [ "OKW Anleitungen", "ref_tutorials.html", "ref_tutorials" ],
     [ "Glossar", "ref_glossary.html", null ],
     [ "Ausstehende Aufgaben", "todo.html", null ],
     [ "Module", "modules.html", "modules" ],

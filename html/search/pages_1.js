@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['glossar',['Glossar',['../ref_glossary.html',1,'']]]
+  ['glossar',['Glossar',['../ref_glossary.html',1,'index']]]
 ];
