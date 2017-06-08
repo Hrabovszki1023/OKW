@@ -4,6 +4,11 @@
 
 <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png" width="150px" height="78px" />
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.openkeyword/se/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.openkeyword/se)
+
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.openkeyword/log2html/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.openkeyword/log2html)
+
+
 # OKW
 
 OKW - OpenKeyWord is a powerful extension to your existing test-framework such as 
