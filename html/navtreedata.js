@@ -13,9 +13,6 @@ var NAVTREE =
     [ "Glossar", "ref_glossary.html", null ],
     [ "Ausstehende Aufgaben", "todo.html", null ],
     [ "Module", "modules.html", "modules" ],
-    [ "Pakete", null, [
-      [ "Pakete", "namespaces.html", "namespaces" ]
-    ] ],
     [ "Klassen", "annotated.html", [
       [ "Auflistung der Klassen", "annotated.html", "annotated_dup" ],
       [ "Klassen-Verzeichnis", "classes.html", null ],

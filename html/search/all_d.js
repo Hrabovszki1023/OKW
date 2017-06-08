@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['core',['core',['../namespaceokw_1_1core.html',1,'okw']]],
   ['okw_20childwindow_20gui_2dadapterklasse_20für_20selenium',['OKW Childwindow GUI-Adapterklasse für Selenium',['../group__group_selenium_child_g_u_i_adapter.html',1,'']]],
   ['okw_20selenium_20klassen',['OKW Selenium Klassen',['../group__group_selenium_classes.html',1,'']]],
   ['okw_20frame_2dklassen_20implemntieren_20selenium_2ddriver',['OKW Frame-Klassen implemntieren Selenium-Driver',['../group__group_selenium_driver_frames.html',1,'']]],
