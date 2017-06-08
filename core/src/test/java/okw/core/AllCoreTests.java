@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2016,  IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017  IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -36,7 +36,6 @@
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
-
 
 package okw.core;
 
