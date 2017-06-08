@@ -4,42 +4,41 @@ import java.util.*;
 
 public abstract class LogBase {
 	
-	
-	static Integer AllCount = 0;
-	Integer myID = 0;
+	protected static Integer AllCount = 0;
+	protected Integer myID = 0;
 
 	// Statistics
-	static Integer ErrorCount = 0;	
-	static Integer ExceptionCount = 0;	
-	static Integer WarningCount = 0;
-	static Integer PassedCount = 0;
-	static Integer PrintCount = 0;
+	protected static Integer ErrorCount = 0;	
+	protected static Integer ExceptionCount = 0;	
+	protected static Integer WarningCount = 0;
+	protected static Integer PassedCount = 0;
+	protected static Integer PrintCount = 0;
 	
 	
 	
-	static Integer TestcaseCount = 0;
-	static Integer TestcaseFail = 0;
-	static Integer TestcasePass = 0;
+	protected static Integer TestcaseCount = 0;
+	protected static Integer TestcaseFail = 0;
+	protected static Integer TestcasePass = 0;
 
-	static Integer FunctionCount = 0;
-	static Integer FunctionFail = 0;
-	static Integer FunctionPass = 0;
+	protected static Integer FunctionCount = 0;
+	protected static Integer FunctionFail = 0;
+	protected static Integer FunctionPass = 0;
 	
-	static Integer KeyWordCount = 0;
-	static Integer KeyWordFail = 0;
-	static Integer KeyWordPass = 0;
+	protected static Integer KeyWordCount = 0;
+	protected static Integer KeyWordFail = 0;
+	protected static Integer KeyWordPass = 0;
 	
-	static Integer SequensCount = 0;
-	static Integer SequensFail = 0;
-	static Integer SequensPass = 0;
+	protected static Integer SequensCount = 0;
+	protected static Integer SequensFail = 0;
+	protected static Integer SequensPass = 0;
 		
-	String Info = "";
+	protected String Info = "";
 	
-	LogTimer myDuration = new LogTimer();
+	protected LogTimer myDuration = new LogTimer();
 	
-	LogBase myParent = null;
+	protected LogBase myParent = null;
 
-	List<LogBase> myLogs= new ArrayList<LogBase>();
+	protected List<LogBase> myLogs= new ArrayList<LogBase>();
 
 	protected abstract void SetFail();
 	protected abstract void SetPass();
@@ -92,9 +91,8 @@ public abstract class LogBase {
 	}
 
 	
-	int Level = -1;
-	String myIndentionBase = "  ";
-
+	protected int Level = -1;
+	protected String myIndentionBase = "  ";
 	
 	protected int getLevel()
 	{
@@ -137,7 +135,7 @@ public abstract class LogBase {
 	}
 
 	
-	Boolean bWarning = false;
+	protected Boolean bWarning = false;
 	
 	protected void setWarning()
 	{
@@ -159,7 +157,7 @@ public abstract class LogBase {
 	}
 	
 	
-	Boolean bException = false;
+	protected Boolean bException = false;
 
 	protected void setException()
 	{
@@ -182,7 +180,7 @@ public abstract class LogBase {
 	}
 
 
-	Boolean bError = false;
+	protected Boolean bError = false;
 	
 	protected void setError()
 	{

@@ -7,19 +7,19 @@ import java.util.concurrent.TimeUnit;
  
 public class LogTimer {
  
-        long TimerBegin;
-        long TimerEnd;
+        private long TimerBegin;
+        private long TimerEnd;
 
-        Instant lvStartTime;
-        Instant lvEndTime;
+        private Instant lvStartTime;
+        private Instant lvEndTime;
          
-        public void StartTimer()
+        public void startTimer()
         {
                 TimerBegin = System.nanoTime();
                 lvStartTime = Instant.now();
         }
        
-        public void StopTimer()
+        public void stopTimer()
         {
                 TimerEnd = System.nanoTime();
                 lvEndTime = Instant.now();
