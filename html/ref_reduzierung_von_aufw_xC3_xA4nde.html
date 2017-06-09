@@ -1,0 +1,218 @@
+<!-- HTML header for doxygen 1.8.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,400,400italic,600,700italic,700,600italic' rel='stylesheet' type='text/css'>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<title>OpenKeyWord: Aufwandsreduzierung</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="OKW_doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">OpenKeyWord
+   &#160;<span id="projectnumber">Build_ID: 162, Datum: 09.06.2017 05:55:03</span>
+   </div>
+   <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('ref_reduzierung_von_aufw_xC3_xA4nde.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Aufwandsreduzierung </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Inhaltsverzeichnis</h3>
+<ul><li class="level1"><a href="#refObjketerkennungseigenschaft">Objekt-Erkennungseigenschaft</a><ul><li class="level2"><a href="#refFunktionsweiseGUIObjekterkennung">Funktionsweise der GUI-Objekterkennung</a></li>
+<li class="level2"><a href="#refObjekteErkennen">Objekte erkennen</a></li>
+<li class="level2"><a href="#refObjekterkennungseigenschaftZentralVerwalten">Objekterkennungseigenschaft zentral verwalten</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#refMethodenAnpassung">Methoden Anpassung</a><ul><li class="level2"><a href="#refSynchronisation">Synchronisation</a></li>
+<li class="level2"><a href="#refMethodenÜberschreibung">Methoden Überschreibung</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#refEinleitung">Einleitung</a></li>
+<li class="level1"><a href="#refGrundsätzlicheÜberlegungen">Grundsätzliche Überlegungen</a></li>
+<li class="level1"><a href="#refTestfallErstellung">Testfallerstellung</a><ul><li class="level2"><a href="#refReduzierungVonAufwänden">Aufwandsreduzierung</a></li>
+<li class="level2"><a href="#refVermeidungVonAufwänden">Vermeidung von Aufwänden</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#refWartungDerLocatoren">Pflege der Objekt-Erkennungseigenschaft</a></li>
+</ul>
+</div>
+<div class="textblock"><h1><a class="anchor" id="refObjketerkennungseigenschaft"></a>
+Objekt-Erkennungseigenschaft</h1>
+<h2><a class="anchor" id="refFunktionsweiseGUIObjekterkennung"></a>
+Funktionsweise der GUI-Objekterkennung</h2>
+<p>Die gängingsten GUI-Automatisierungswerkzeuge erkennen ein GUI-Objekt an einer oder mehreren charakteristischen Eigenschaften (Properties oder Attribute). Das kann z.B. die Position oder Größe des Objektes sein. Wichtig ist nur, dass ein GUI-Objekt mit Hilfe dieser Eigenschaften eindeutig identifiziert werden kann.</p>
+<p>Die optimale Lösung wäre eine jedem GUI-Objekt eindeutig zugewiesene Test-ID, die über den gesamten GUI-Objektlebenszyklus konstant bleibt und über alle Objekte eindeutig ist. Es gäbe damit keine zwei GUI-Objekte mit einer identischen Test-ID.</p>
+<h2><a class="anchor" id="refObjekteErkennen"></a>
+Objekte erkennen</h2>
+<p>Hier stellen wir Selenium vor. Selenium automatisiert Browser, insbesondere für die Automatisierung von Web-Applikationen zu Testzwecken. Es ist nativer Bestandteil vieler gängiger Webbrowser. (weiterführende Infos in engl. Sprache unter  <a href="http://www.seleniumhq.org/">http://www.seleniumhq.org/</a> ) </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000063">Noch zu erledigen:</a></b></dt><dd>jnic-&gt;ZH =eingefügten Text prüfen=</dd></dl>
+<p>Hier zu nächst ein typisches Beispiel für Selenium:</p>
+<p>{lstlisting}[caption={Selenium Beispiel für die Objekterkennung //Quelle: {<a href="http://www.anujchaudhary.com/2012/11/selenium-automating-ui-testing-for.html">http://www.anujchaudhary.com/2012/11/selenium-automating-ui-testing-for.html</a>}}, label=SeleniumObjectRecognition] [TestMethod] public void TestBing()</p>
+<p>{ Test Case Steps _webDriver.Navigate().GoToUrl("http://www.bing.com");</p>
+<p>IWebElement search = _webDriver.FindElement(By.Name("q")); IWebElement go = _webDriver.FindElement(By.Name("go"));</p>
+<p>search.SendKeys("james bond"); go.Click();</p>
+<p>Verfication </p><pre class="fragment">IWebElement msWebsite =
+            _webDriver.FindElement(
+                    By.XPath( "//a[@href='http://en.wikipedia.org/wiki/James_Bond']")
+            );
+
+            Assert.IsNotNull(msWebsite, "Could not find wikipedia link for James Bond");
+
+   }
+</pre><p>{lstlisting}</p>
+<p>In großen Projekten existieren sehr viele solcher Tests. Hier können mehrere tausend Testfälle mit sehr viel mehr Schritten existieren. Betrachten wir nun die Stellen mit "\_webDriver.FindElement(...)".</p>
+<p>Die Objekt-Erkennungseigenschaften ist z.B. "q" in</p>
+<p>{IWebElement search = _webDriver.FindElement(By.Name("q"));}</p>
+<p>Hier wurde das Objekt erkannt, weil das Attribut {name="q"} ist.</p>
+<p>Nach diesem Prinzip arbeiten alle GUI-Automatisierungwerkzeige, womit alle GUI-Objekt erkannt werden. In diesem Beispiel gibt es Wechselwirkungen (Interaktionen) zu drei GUI-Objekten:</p>
+<ul>
+<li>search = _webDriver.FindElement( By.Name("q") )</li>
+<li>go = _webDriver.FindElement( By.Name("go") );</li>
+<li>msWebsite = _webDriver.FindElement( By.XPath( "//a[@href='http://en.wikipedia.org/wiki/James_Bond']") );</li>
+</ul>
+<p>Wenn sich eine Objekt-Erkennungseigenschaft ändert, folgert das die Änderung im Testfall. Hier aber kann das Objekt mehrfach verwendet werden, was die Änderung für jedes einzelne Objekt im Testfall erforderlich macht. Das können Tausende sein...</p>
+<p>Bei einer solchen Anpassung ergeben sich mehrere Unsicherheiten:</p>
+<ol type="1">
+<li>Wie finde ich die relevanten Objekte?</li>
+<li>Habe ich alle Objekte gefunden und keines übersehen?</li>
+<li>Habe ich alle richtigen Objekte gefunden und nicht ein falsches geändert?</li>
+</ol>
+<p>Pauschal "Suchen und Ersetzen" hilft nicht immer: Wenn sich verschiedene Objekte nicht im gleichen Fenster befinden und an identischen Eigenschaften erkannt werden können, funktioniert "Suchen und Ersetzen" nicht.</p>
+<h2><a class="anchor" id="refObjekterkennungseigenschaftZentralVerwalten"></a>
+Objekterkennungseigenschaft zentral verwalten</h2>
+<p>Verschiede Testautomatisierungswerkzege haben das vorbenannte Problem wie folgt gelöst: Die Objekterkennungseigenschaften werden zentral verwaltet und per Referenz verwendet.</p>
+<p>Einige ausgewählte Bezeichnungen für die zentrale Verwaltung der Objekterkennungseigenschaften:</p>
+<ul>
+<li>Object-Repository (HP Quick Test Professional (QTP), Ranorex)</li>
+<li>GUI-Map (Winrunner)</li>
+<li>Test-Frame (Silktest-Classic)</li>
+</ul>
+<p>Allen Lösungen ist gemeinsam, dass jedes GUI Objekt einen (fachlichen) Namen erhält und die Objekterkennungseigenschaft dahinter abgelegt wird. So muss nur noch an einer Stelle eine Anpassung vorgenommen werden, wenn sich eine Objekt-Erkennungseigenschaft ändert.</p>
+<h1><a class="anchor" id="refMethodenAnpassung"></a>
+Methoden Anpassung</h1>
+<h2><a class="anchor" id="refSynchronisation"></a>
+Synchronisation</h2>
+<p>Unter Synchronisation versteht man, das Warten des Skriptes auf die Anwendung.</p><ul>
+<li>Wenn ein Skript ausgeführt wird, dann läuft dieses parallel unabhängig vom "System under Test (SUT)". Häufig benötigt eine Anwendung, exemplarisch bei einer Datenbank-Transaktion, etwas länger und das Skript möchte ein Objekt bearbeiten, bevor dieses überhaupt verfügbar ist. An solchen Stellen muss das Skript zwingend auf eine Eigenschaft oder ein Objekt warten, bevor es mit seinen GUI-Aktivitäten fortfährt.</li>
+</ul>
+<p>Eine typische Lösung eines solchen Synchronisation besteht darin eine Methode "WartenAufEigenschaft()" oder "WartenAufObjekt()" einzufügen.</p>
+<p>Beispiel: Nach dem Login (Klick auf Login-Button) wird auf das HauptFenster der Anwendung gewartet.</p>
+<p>Wird in eintausend Testfällen beispielsweise eintausendmal ein WartenAufObjekt("HauptFenster") eingefügt, müsste im Änderungsfalle (weil evtl. ein Sicherheitsdialog eingefügt wird) an diesen eintausend Stellen das jeweilige Objekt WartenAufObekt ("Hauptfenster") angepasst werden. Auch hier gäbe es keinen Verlass auf "Suchen und Ersetzen".</p>
+<p>Hieraus resultieren die nachfolgenden wichtigen Gründe die Synchronisation nicht wie beschrieben vorzunehmen:</p>
+<ol type="1">
+<li>Da der Fachtester die Testfälle erstellen soll, müsste der Fachtester wissen an welchen Stellen eine Synchronisation erforderlich ist. Das kann jedoch ein Fachtester im Vorfeld nicht wissen, weil</li>
+<li>die Synchronisation ein technisches Problem ist. Ein funktionaler GUI-Testfall ist jedoch ein fachlicher Test. Das bedeutet, dass die Synchronisation die Testfallbeschreibung mit technischen Detailproblemen quasi "kontaminieren" würde.</li>
+<li>Es ist das Ziel dass ein Testfall durch ein Fachtester beschrieben wird, ohne dass der technische Tester etwas daran ändern muss.</li>
+<li>n-Pflegestellen statt einer einzigen.</li>
+</ol>
+<p>Wie sieht aber nun die Lösung aus?</p>
+<h2><a class="anchor" id="refMethodenÜberschreibung"></a>
+Methoden Überschreibung</h2>
+<p>Die Methode 'WartenAufObjekt("HauptFenster")' wird in die Klick-Methode des Login-Buttons integriert.</p>
+<p>Beispiel: In Silktest-Klassik, ein Werkzeug für die automatisierte Funktions- und Regressionstests von Unternehmensanwendungen, ist es eine Erweiterung der Klick-Methode. (Mehr Informationen zu Silktest:  <a href="http://www.borland.com/Products/Software-Testing/Automated-Testing/Silk-Test">http://www.borland.com/Products/Software-Testing/Automated-Testing/Silk-Test</a>)</p>
+<p>In 4Test ist es abgeleitet: Click() ist der Aufruf der Methode Klick der Super-Klasse. (Mehr Information zu 4Test:  <a href="http://sqa.fyicenter.com/FAQ/SilkTest/What_is_4Test_.html">http://sqa.fyicenter.com/FAQ/SilkTest/What_is_4Test_.html</a>)</p>
+<p>{lstlisting}[caption={Methoden-Überschreibungs-Beispiel für 4Test, (Scriptsprache Silktest-Classik)}, label= ] [-] window PushButton Login [-] Click( ) [ ] [ ] WartenAufObjekt("HauptFenster") [ ] derived::Click() [ ] {lstlisting}</p>
+<p>Mit Methoden-Überschreibung (OOP) erfolgt hier die Implementierung an einer Stelle: Die Implementierung der Synchronisation des Logins erfolgt an genau einer Stelle. -&gt; Reduzierung von {n}-Stellen in der Testfallbeschreibung auf eine Stelle im Skript.</p>
+<dl class="section remark"><dt>Bemerkungen</dt><dd>Eine Methoden-Überschreibung ist nur mit objektorientierten Skriptsprachen möglich.</dd></dl>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="ref_anwenderhandbuch.html">Anwenderhandbuch</a></li>
+    <li class="footer">Erzeugt am Fre Jun 9 2017 05:55:39 für OpenKeyWord von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-593506-12']);
+  _gaq.push(['_setDomainName', 'openkeyword.de']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
