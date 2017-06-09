@@ -1,0 +1,100 @@
+/**
+\~german
+\page refTestfaelle Testfälle
+\tableofcontents
+
+\author Zoltán Hrabovszki
+_2014_12_03_jnic
+
+\section refTestfallDefinitionISTQB Definition Testfall nach ISTQB:
+ 
+\cite ISTQBGlossarGermanTestfall Die Definition eines Testfalls umfasst folgende Angaben:
+
+- die für die Ausführung notwendigen Vorbedingungen,
+- die Menge der Eingabewerte (ein Eingabewert je Parameter des Testobjekts),
+- die Menge der vorausgesagten Ergebnisse,
+- sowie die erwarteten Nachbedingungen.
+
+Testfälle werden entwickelt im Hinblick auf ein bestimmtes Ziel bzw. auf eine Testbedingung,
+wie z.B. einen bestimmten Programmpfad auszuführen oder
+die Übereinstimmung mit spezifischen Anforderungen zu prüfen
+(wie Eingaben an das Testobjekt zu übergeben und Sollwerte abzulesen sind) [nach IEEE 610].
+ 
+\section refTestfallAndersBeleuchtet Testfall etwas anders beleuchtet
+
+\f[
+ E_{Erwartet} = F( O_{Test}, D_{Umgebung}, D_{Eingabe} )
+\f]
+
+D.h, Das erwartete Ergebnis ist abhängig vom
+
+- Testling,
+- von der Funktionalität der Testumgebung
+- vom Dateninhalt der Testumgebung 
+- und den Eingabewerten.
+
+__Wichtig:__ Wenn ein Testfall reproduzierbar und wiederholbar sein soll,
+dann darf die einzige veränderliche Größe der Testling selbst sein.
+Diesen tauschen wir von Version zu Version aus. Wenn Aspekte des Objektes über mehrere
+Versionen gleich bleiben, dann sollten die Testfälle zu diesen Aspekten auch gleich bleiben,
+d.h. wiederum, dass zwei Testfälle gleich sind, wenn 
+
+-# die Umgebung, 
+-# die Eingabewerte und
+-# das erwartete Ergebnis gleich, d.h. konstant bleiben.
+
+Diese _müssen_ konstant bleiben, damit auf ein konstantes und bekanntes Ergebnis geprüft werden kann.
+
+Tests müssen reproduzierbar sein. Es darf immer nur ein Parameter variieren. Sind dies mehrere, so kann im Fall
+einer Abweichung nicht sicher gesagt werden, welcher Parameter für die Abweichung ursächlich ist.
+
+\todo jnic>ZH - bitte neuen Text prüfen [Tests müssen...]
+
+Wird der Parameter, bzw. werden die Parameter, verändert und bei einem wiederholten Testlauf ergibt sich eine
+Abweichung, besteht _nicht_ die Möglichkeit einer sicheren Aussage über die Ursachen dieser Abweichung.
+Diese kann ihre Ursache in der neuen Version der "Software under Test (SUT)" oder in der Variation der
+Daten unter Einbeziehung einer falschen Vorhersage des Oracles haben.
+
+Eine schnelle Aussage über die VErsionsänderung, wie in einem Test erwünscht, kann so nicht getroffen werden. 
+
+Neue Testfälle sind durchaus erwünscht, aber für einen verläßlichen Vergleich zwischen einer alten und einer
+neuen Version des Testlings, müssen bereits durchgeführte Testfälle wiederholt werden.
+ 
+Bei neuen Testfällen ist es wichtig, dass diese auch neue Aspekte des Testlings abprüfen. Sie müssen systematisch
+abgeleitet werden.
+
+-# Äquivalenzklassen - Erläuterung unter \url http://de.wikipedia.org/wiki/%C3%84quivalenzklassentest
+-# Pairwise Methode - Erläuterung unter \url http://de.wikipedia.org/wiki/Pairwise-Methode
+-# Whitebox Verfahren - Erläuterung unter \url http://de.wikipedia.org/wiki/White-Box-Test
+-# etc.
+ 
+\section refOrganisation Organisation von Testfällen
+ 
+\subsection refTestfallVerkettung Testfall Verkettung
+
+Im Rahmen der Automatisierung von Tests sollte jeder Testfall eigenständig durchgeführt und nicht miteinander
+verkettet werden. 
+
+Bei manuellen Tests können Testfall-Verkettungen unter bestimmten Umständen vorteilhaft sein, nicht jedoch bei
+der Automatisierung. Hier hat die Verkettung folgende Nachteile:
+
+-# schlägt der erste Testfall fehl, kann über die nachfolgenden Testfälle keine Aussage getroffen werden
+-# gleiches gilt, wenn der letzte Testfall negativ läuft, dann müssen alle vorherigen ausgeführt werden
+-# Testfall-Abhängigkeiten können in Testwerkzeugen zusätzlich gepflegt werden: Wenn ein Vorgänger fehlschlägt,
+   dann wird der Testfall selbst nicht durchgeführt. -> Verwaltungsaufwand
+-# Wenn diese Abhängigkeiten nicht berücksichtigt werden, d.h. es werden immer alle Testfälle ausgeführt, 
+   dann werden neben den fehlschlagenden Testfällen auch die abhängigen Testfälle fehlschlagen, 
+   weil deren Startbedingungen nicht erfüllt sind. Diese Testfälle müssen zusätzlich analysiert werden.
+  
+\subsection refTestfallZustaendigkeit Testfall Zuständigkeit
+Jeder Testfall sollte nur für eine bestimmte Testling Eigenschaft zuständig sein. Das hat den Vorteil,
+wenn so ein Testfall fehlschlägt, dann ist sofort erkennbar welche Eigenschaft betroffen ist. 
+
+- Clean Code - Erläuterung unter \url http://de.wikipedia.org/wiki/Clean_Code
+ 
+\section refFubktionalFachlicherTestfall Funktional/fachlicher Testfall.
+\todo 
+
+\section refAblauf Ablauf
+
+*/

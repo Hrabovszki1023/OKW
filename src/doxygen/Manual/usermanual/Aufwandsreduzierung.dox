@@ -1,0 +1,127 @@
+/**
+\~german
+\page refReduzierungVonAufwände Aufwandsreduzierung
+\tableofcontents
+
+\section refEinleitung Einleitung
+Bestehende Software zu testen _muss_ schnell vorgenommen werden können. Der Einfluss von Erweiterungen
+und Änderungen an den Objekten des Projektes muss idealerweise _sofort_ und ohne größere Umstände
+zu testen sein. 
+Ein Testlauf darf keinen hohen Arbeitsaufwand fordern, sonst wird gänzlich auf einen Test verzichtet.
+
+Unittests müssen durch den Entwickler _sofort_ durchführbar sein. Der Unittest muss innnerhalb von Sekunden ablaufen können.
+Es muss unmittelbar geprüft werden können welche Auswirkungen die Änderungen haben.
+
+\todo jnic - neuer Text =BEGINN=
+
+Wenn das nicht möglich ist steht zu vermuten, dass die Regeln des Clean Code nicht beachtet worden sind.
+
+\note Clean Code ist ein Begriff aus der Softwaretechnik, der seinen Ursprung im gleichnamigen Buch 
+von Robert C. Martin hat. Als „sauber“ bezeichnen Software-Entwickler in erster Linie den Quellcode, aber auch 
+Dokumente, Konzepte, Regeln und Verfahren, die intuitiv verständlich sind. Als intuitiv verständlich gilt 
+alles, was mit wenig Aufwand und in kurzer Zeit richtig verstanden werden kann. Vorteile von Clean Code 
+sind stabilere und effizient wartbarere Programme, d. h. kürzere Entwicklungszeiten bei Funktionserweiterung 
+und Fehlerbehebungen. Die Bedeutung wächst mit der Beobachtung, dass im Schnitt 80 % der Lebensdauer einer 
+Software auf den Wartungszeitraum entfällt. (Aus Wikipedia: \url http://de.wikipedia.org/wiki/Clean_Code)
+
+\todo jnic-->ZH =bitte neuen Text übrprüfen=
+
+Effizientes automatisiertes Testen erfordert die Reduzierung auf eine einzige Stelle, damit erfolgt die Reduzierung
+des Erstellungs- und Pflegeaufwands auf _DAS MINIMUM_.
+
+Klonen, bzw. Kopieren von Testfällen oder von Skriptabschnitten erzeugt bei kleinen Änderungen 
+viel Arbeit im Bereich Anpassung. Wenn kleine Änderungen im "Software under Test (SUT)" vorgenommen werden, 
+dann kann das einen großen Aufwand für die Testautomatisierung bedeuten.
+
+\todo jnic-->ZH =bitte neuen Text übrprüfen=
+
+\begin{Beispiel}
+Beispiel .
+\end{Beispiel}
+
+Die nun folgenden Absätze verfolgen alle das Ziel das Testen _effizient_ zu machen und 
+befassen sich mit der Aufwandsreduzierung bei der Erstellung von
+funktionalen, fachlichen GUI Tests. 
+
+\section refGrundsätzlicheÜberlegungen Grundsätzliche Überlegungen
+
+-# Wie oft muss ich bei einer Änderung etwas machen?
+-# Wie kann eine Änderung auf eine Stelle reduziert werden?
+-# Reduktion auf eine Stelle ist grundsätzlich möglich!
+
+Dem steht entgegen, dass jeder Test einen Einzelfall darstellt, der _EINZELN SPEZIFIZIERT WERDEN MUSS_!
+Führt man die vorbeschriebenen Maßnahmen aber konsequent durch, bedeutet das eine enorme Reduzierung des
+Erstellungs- und Pflegeaufwandes.
+
+\todo jnic-->ZH =vorstehenden neuen Text überprüfen=
+
+Zur besseren Beherrschung der Testumgebung emfpiehlt es sich eine Synchronisation in die Testumgebung einzubauen.
+Hierbei ist auch eine gute Benennung der Klassen, Methoden und Sequenzen wichtig. Erst hierdurch wird dann
+letztlich die Lesbarkeit des Skripts und dessen Nachvollziehbarkeit verwirklicht.
+
+\todo jnic-->ZH =vorstehenden neuen Text überprüfen=
+
+\section refTestfallErstellung Testfallerstellung
+Bei der üblichen Erstellung von Testfällen fallen folgende Arbeiten an:
+
+- Ein Fachtester erstellt zunächst einen Testfall. Dieser wird in Prosa aufgeschrieben.
+- Ein technischer Tester übersetzt die Prosa-Testfallbeschreibung in die Skriptsprache 
+  des Automatisierungswerkzeuges.
+  
+Hieraus folgt, dass zur Belegung der fachlichen Anforderung eines Testfalls zwei Übersetzungen erforderlich sind:
+
+-# Anforderung zu Prosa-Testfallbeschreibung, und
+-# Prosa-Testfallbeschreibung zu Skriptsprache des Automatisierungswerkzeuges.
+-# Prosa-Testfallbeschreibung ist in der Regel ein abstrakter Testfall, d.h. es gibt keine konkreten Daten.
+ 
+Folgende Mängel im Übersetzungsprozess können die Erstellung der Automatisierungsscripte
+erschweren oder verhindern:
+ 
+-# Die Beschreibung des Prosa-Testfalls ist zu ungenau. ( "Man wähle eine geeignete Person aus." )
+-# Der Prosa-Testfall enthält keine Testdaten, d.h. es handelt sich um einen abstrakten Testfall.
+-# Die Start-Bedingung für den Testfall ist nicht definiert. Es ist unklar welche Umgebungsdaten die 
+   SUT benötigt. 
+ 
+\subsection refReduzierungVonAufwänden Aufwandsreduzierung
+Durch eine exakte Beschreibung der Testfälle inkl. der notwendigen Eingabedaten
+können die genannten Aufwände verringert werden. - Der Arbeitsaufwand wird minimiert,
+weil Rückfragen der technischen Tester an die fachlichen Tester reduziert werden.
+ 
+_Aber:_ Eine Fehlinterpretation der Testfälle kann in der Prosa-Notation nicht ausgeschlossen werden.
+Es sind weiterhin zwei Übersetzungen notwendig:
+-# Anforderung nach Prosa-Testfall und
+-# Prosa-Testfall in die Skriptsprache des Testwerkzeuges.. 
+ 
+\subsection refVermeidungVonAufwänden Vermeidung von Aufwänden
+Die beste Aufwandsreduzierung wird erreicht, wenn Tätigkeiten vollständig beseitigt werden:
+Wenn die Testfälle mit Schlüsselwörtern beschrieben werden,
+dann ist eine Übersetzung der Testfälle in die Skriptsprache des Automatisierungswerkzeuges
+nicht notwendig.
+ 
+Mit Schlüsselwörtern kann die Notation zur Beschreibung von Testfällen
+so nahe an einer Prosabeschreibung erfolgen, dass ein Fachtester nicht nur eine manuelle Testfalldurchführung
+problemlos vornehmen kann, sondern die Beschreibung mit Schlüsselwörtern 
+ist formal genug, dass diese ohne weitere Änderungen automatisierbar sind.
+ 
+Die Grundidee des schlüsselwortbasierten Testens besteht darin,
+die Testsequenz, d.h. die Abfolge von Testschritten in einem Testfall, aus vorgefertigten,
+wohl definierten Schlüsselwörtern zu erstellen.
+
+Wenn jedes Schlüsselwort durch ein Skript einmal automatisiert ist,
+dann ist auch jede beliebige Testsequenz, die aus diesen Schlüsselwörtern besteht,
+ohne einen weiteren Arbeitsschritt ebenfalls automatisiert.
+
+
+
+
+ 
+\section refWartungDerLocatoren Pflege der Objekt-Erkennungseigenschaft
+ 
+(Object-Repository, GUI-Map, Test-Frame)
+
+\author Zoltan Hrabovszki
+\date 2014-11-18/jnic
+
+
+
+*/
