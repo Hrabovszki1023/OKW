@@ -22,15 +22,14 @@ env:
     - BUILD_TIMESTAMP_DE=$(date +"%m.%d.%Y %T")
     
 addons:  
-  firefox: latest
+#  firefox: latest
   apt:
     packages:
+      - texlive-latex-base
       - perl
       - graphviz
       
 before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install texlive-latex-base
 #    - wget https://github.com/mozilla/geckodriver/releases/download/v0.15.0/geckodriver-v0.15.0-linux64.tar.gz
 #    - mkdir geckodriver
 #    - tar -xzf geckodriver-v0.15.0-linux64.tar.gz -C geckodriver
