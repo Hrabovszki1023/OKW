@@ -38,7 +38,7 @@ before_install:
   # - echo $OKWGeckodriverPath 
   
 install: 
-  # - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
 
 before_script:
   # - "export DISPLAY=:99.0"
