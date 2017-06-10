@@ -38,7 +38,6 @@ before_install:
   # - echo $OKWGeckodriverPath 
   
 install:
-  - ls 
   # - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
 
 before_script:
@@ -47,6 +46,7 @@ before_script:
   # - sleep 3 # give xvfb some time to start
 
 script:
+  - ls 
   # - mvn test -Dtest=okw.core.AllCoreTests,okw.AllTests,okw.gui.OKWLocatorTest -Dgpg.skip=true -pl core
   # - mvn test -Dtest=okw.log.log2html.Log2HTMLCounterTest,okw.log.log2html.Log2HTMLTest -Dgpg.skip=true -pl log2html
   # - mvn test -Dtest=okw.AllSeUnitDriverTests -Dgpg.skip=true -pl se
