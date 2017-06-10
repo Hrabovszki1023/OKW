@@ -1,0 +1,114 @@
+/*!
+
+@page refTutorial04 OKW Tutorial: Verketten von Locatoren
+
+@section refTutorial04_A Wozu die Verkettung von Lokatoren?
+
+Eine Verkettung von Locatoren kann notwendig werden, wenn ein Kind-Objekt nur zusammen mit seinem Eltern-Objekt eindeutig erkannt werden kann.  
+
+So kann ein Eingabefeld wie `User`, aus dem Beispiel in Tutorial 3 @ref refTutorial03, in mehreren Fenstern vorkommen.
+Erst in Verbindung mit dem Locator des Eltern-Objektes (=Fenster) kann eine Verwechselung der Kind-Objekt ausgeschlossen werden.
+
+@section refTutorial04_DRY DRY
+
+Nun könnte ohne Verkettung jedes Kind-Objekt einfach die Erkennungseigenschaft des Eltern Objektes mit eingebaut bekommen.
+
+Das zieht jedoch immer dann einen Wartungsaufwand nach sich, wenn die Objekt-Erkennungseigenschaft des Eltern-Objektes sich ändert: Dann müssen alle Kind-Objekte angepasst werden, die eine Objekterkennungseigenschaft des Eltern-Objektes besitzen.
+
+Eine Anpassung kann sehr aufwendig werden und der Umstand, dass sich ein Fehler in der Objekt-Erkennungseigenschaft erst _während_ der Ausführung äussert, erschwert und verzögert die Wartung.
+
+Dem DRY-Prinzip gemäß, liegt eine mögliche Lösung in der Verkettung von Locatoren. - Das wird nun hier in diesem Tutorial gezeigt.
+
+@section refTutorial04_C Verkettung von Eltern-Objekt Locator und Kind-Objekt Locator
+
+Wir nehmen das Beispiel aus dem [[OKW Tutorial 3: Der Locator|OKW-Tutorial-3:--Der-Locator]] und verketten die Locatoren von _Eltern-Objekt_ und _Kind-Objekt_.
+
+@subsection refTutorial04_C_A Ziel
+
+Das Ziel ist hier, dass der Locator des Eltern-Objektes `wp_login` dem der Locator des Kind-Objektes `User` vorangestellt wird:
+
++ Eltern-Object Locator: ```//body/div[@id='login']/..```
++ Kind-Object Locator: ```//*[@id='user_login']```
+
++ **Ergebniss:** Soll `//body/div[@id='login']/..//*[@id='user_login']` ergeben
+
+@subsection refTutorial04_C_B Die Methoden `getLOCATOR()` und `getLocator()`
+
+Zunächst müssen wir zwei Methoden kennen lernen:
+
+1. Die Methode `getLOCATOR()` holt die Referenz auf den Locator werden.<br>
+   **Hinweis:** Jede GUI-Adapter Klasse im Paket "se" besitzt ein Field vom Typ `OKWLocator`.
+2. Die Methode 'getLocator()' (man beachte die GROSS und klein Schreibung!), die (ggf. den vollständig rekursiv aufgelösten) aktuellen Wert des Locators (hier als XPath) zurückgibt.
+
+@subsection refTutorial04_C_C Der Locator des Eltern_Objectes
+
+Wir lassen den Locator des Eltern-Objektes (`wp_login`) unverändert.
+Dieser wird im Konstruktor des Klasse definiert:
+
+```
+public wp_login()
+{
+    super("//body/div[@id='login']/..");
+}
+```
+
+Entscheidend ist hier der Ausdruck ```super("//body/div[@id='login']/..");```.
+Hiermit wird in der XPATH Wert ```//body/div[@id='login']/..``` in der Locator Klasse des Fensters abgelegt.
+
+
+@subsection refTutorial04_C_D Der Locator des Kind-Objektes
+
+Wir erweitern nun den Locator des Kind-Objektes um den Locator des Eltern-Objektes:
+
+```
+public SeInputText Username = new SeInputText("%1$s//*[@id='user_login']", this.getLOCATOR() );
+```
+
+
++ Die _Referenz_ des Eltern-Objekt Locators wird im Konstruktor des Kind-Objektes übergeben.
++ ```%1$s``` gibt an, an welcher Stelle, der _Wert_ des Eltern-Objekt Locators ein gesetzt werden soll. 
+
+Das Ganze nun im Überblick:
+
+```
+@OKW(FN="WP-Login")
+public class wp_login extends SeBrowserChild
+{
+
+    @OKW (FN="Username")
+    public SeInputText Username = new SeInputText("%1$s//*[@id='user_login']", this.getLOCATOR() );
+
+    public wp_login()
+    {
+    	super("//body/div[@id='login']/..");
+    }
+}
+
+```
+
+Das war´s auch schon prinzipiell: Wenn der Locator der Klasse `wp-login` geändert wird, dann bekommen die Verketteten Kind-Objekte automatisch die Änderung mit.
+
+@section refTutorial04_D Kombination mehrerer Locatoren
+
+Es können prinzipiell beliebig viele Locatoren im Konstruktor mitgegeben werden.
+
++ Der erste Parameter ist immer vom Typ `String` und enthält den XPATH.
++ Danach kommen 0 oder mehr LOCATOR-Referenzen.
++ Der 1. LOCATOR Wert wird für `%1$s` ersetzt, der 2. LOCATOR wird für `%2$s` ersetzt usw.
+
+
+Ein Eltern LOCATOR kann an mehreren Stellen in einem Kind-Locator eingesetzt werden.
+
+Im folgenden Beispiel (JUnit TestFall) werden zwei Locatorer (`Eltern_1` und `Eltern_2`) an mehreren Stellen (zwei) in ein Kind-Locator eingesetzt. Das erwartetet Ergebniss ist `L2=L2, L1=L1, L2=L2, L1=L1`
+
+```
+OKWLocator Eltern_1 = new OKWLocator("L1");
+OKWLocator Eltern_2 = new OKWLocator("L2");
+OKWLocator Kind = new OKWLocator("L2=%2$s, L1=%1$s, L2=%2$s, L1=%1$s", Eltern_1, Eltern_2);
+
+assertEquals("L2=L2, L1=L1, L2=L2, L1=L1", Kind.getLocator());
+```
+
+Damit sind wir mit diesem Tutorial auch schon fertig.
+
+*/

@@ -20,6 +20,8 @@ import org.junit.runners.Suite.SuiteClasses;
   OKW_Helper_MatchStrTest.class,
   OKW_Helper_RemoveBeginQuotationsTest.class,
   OKW_Helper_String2BooleanTest.class,
+  OKW_Helper_StringIsNullOrEmpty.class,
+  OKW_Helper_StringRepeat.class,  
   OKW_Helper_StringSplitTest.class,
   OKW_HelperTest.class,
   OKW_IniTest.class,

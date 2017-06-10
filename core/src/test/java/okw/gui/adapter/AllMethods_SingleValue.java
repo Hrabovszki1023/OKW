@@ -1,14 +1,8 @@
 package okw.gui.adapter;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
-
-import org.xml.sax.SAXException;
 
 import okw.*;
 import okw.gui.AnyChildwindow;
@@ -25,7 +19,7 @@ import okw.log.Logger_Sngltn;
         protected OKW_TestClipboard        myClipboard     = OKW_TestClipboard.getInstance();
         
         
-        ArrayList<String> myALValue = new ArrayList<String>();
+        private ArrayList<String> myALValue = new ArrayList<String>();
 
 
         public AllMethods_SingleValue(String fps_Locator)
@@ -53,8 +47,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().addAll(this.myALValue);
             
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         
@@ -70,8 +62,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         
@@ -479,8 +469,6 @@ import okw.log.Logger_Sngltn;
             {
                 this.myLogger.LogFunctionEndDebug();
             }
-
-            return;
         }
 
         public void SelectMenu()
@@ -496,7 +484,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
-            return;
         }
 
         public void SelectMenu(ArrayList<String> fpLsValue)
@@ -516,7 +503,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
-            return;
         }
 
         public void SelectTablecell(String COL, String ROW)
@@ -535,7 +521,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
-            return;
         }
 
         public void SelectTablecell_Clicktype(String COL, String ROW, String fpsClickType)
@@ -555,13 +540,8 @@ import okw.log.Logger_Sngltn;
            
             
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
-        public void SelectWindow()
-        {
-        }
 
 /*        @Override
         public void Select_Clicktype(ArrayList<String> fpLs_Value, String fpsClicktype)
@@ -577,8 +557,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(fpLs_Value.get(0));
             myClipboard.getValue().add(fpsClicktype);
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }*/
 
         public void Select_TABLE(ArrayList<String> fpLs_Value)
@@ -591,8 +569,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.Clear();
             myClipboard.getValue().add(fpLs_Value.get(0));
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         public void SetFocus()
@@ -607,8 +583,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
   public void SetValue( ArrayList<String> fpLs_Value )
@@ -619,8 +593,16 @@ import okw.log.Logger_Sngltn;
     {
       // myALValue Löschen + setzen...
       this.myALValue.clear();
-      this.myALValue.addAll( fpLs_Value );
-
+      
+      if (fpLs_Value.get( 0 ).equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
+      {
+          this.myALValue.add("");
+      }
+      else
+      {          
+          this.myALValue.addAll( fpLs_Value );
+      }
+ 
       // Clipboard löschen und Werte setzen...
       myClipboard.Clear();
       String lvs_ObjectName = getKN();
@@ -634,8 +616,6 @@ import okw.log.Logger_Sngltn;
     {
       this.myLogger.LogFunctionEndDebug();
     }
-
-    return;
   }
 
         public void TypeKey(ArrayList<String> fpLs_Value)
@@ -666,8 +646,6 @@ import okw.log.Logger_Sngltn;
             {
                 this.myLogger.LogFunctionEndDebug();
             }
-            
-            return;
         }
 
         public void TypeKeyTablecell(String COL, String ROW, ArrayList<String> fpLsValues)
@@ -697,12 +675,6 @@ import okw.log.Logger_Sngltn;
             {
                 this.myLogger.LogFunctionEndDebug();
             }
-            
-            return;
-        }
-
-        public void TypeKey_TABLE_ROW(int ROW, ArrayList<String> Values)
-        {
         }
 
 
@@ -828,6 +800,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyTablecellValue()");
 
+            myClipboard.getValue().addAll(this.myALValue);
             myClipboard.getValue().add(Col);
             myClipboard.getValue().add(Row);
 
@@ -841,14 +814,15 @@ import okw.log.Logger_Sngltn;
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyTooltip");
-            lvLsReturn.add("The one and only Value");
+            
+            lvLsReturn.addAll(myALValue);
 
             myClipboard.Clear();
             String lvs_ObjectName = getKN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyTooltip()");
 
-            myClipboard.getValue().add("The one and only Value");
+            myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
 
@@ -867,7 +841,7 @@ import okw.log.Logger_Sngltn;
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyCaption()");
 
-            myClipboard.getValue().addAll(this.myALValue);;
+            myClipboard.getValue().addAll(this.myALValue);
 
             this.myLogger.LogFunctionEndDebug();
 
@@ -879,7 +853,6 @@ import okw.log.Logger_Sngltn;
             ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyLabel");
-            
             
             lvLsReturn.addAll(this.myALValue);
 

@@ -97,7 +97,7 @@ public class OKW_Helper__MatchStrTest
         {
 			Log = Logger_Sngltn.getInstance();
             // Reset des Loggers: Alle geladenen Instanzen löschen
-            Logger_Sngltn.Init();
+            Logger_Sngltn.init();
 
             //Log.AddLogger(new Log2Console());
             Log.setDebugMode(false);
@@ -109,7 +109,7 @@ public class OKW_Helper__MatchStrTest
             Boolean actual = false;
             Boolean expected = ExpectedValue;
 
-            actual = OKW_Helper.MatchStr( InputValue_1, InputValue_2);
+            actual = OKW_Helper.matchString( InputValue_1, InputValue_2);
             assertEquals(expected, actual);
         }
 }

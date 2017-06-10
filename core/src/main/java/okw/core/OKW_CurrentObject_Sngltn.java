@@ -185,7 +185,32 @@ public class OKW_CurrentObject_Sngltn
      * automatized call: The right class is given after input of the frame Object
      * Function contains the reference to the current window or child Object
      */
-    static FrameObjectDictionary_Sngltn myFrameObjectDictionary = null;
+    private static FrameObjectDictionary_Sngltn myFrameObjectDictionary = null;
+
+    /**
+     * \~german
+     * Gibt die Instanz für die einzige Instanz dieser Klasse zurück.
+     * 
+     * __Hinweis:__ * Diese Klasse ist ein Singleton. - Highlander Prinzip: Es
+     * kann nur eine Instanz von dieser Klasse geben! - Verwenden Sie diese
+     * Eigenschaft um die Instanz dieser Klasse zu erhalten. - Es gibt keinen
+     * öffentlichen Konstruktor für diese Methode!
+     *
+     *
+     * \~english
+     * Returns the Instance for the only Instance of this class.
+     * 
+     * __Remark:__ * This class is a Singleton. - Highlander Principle: There only
+     * can be one instance of this class! - Use this function to obtain the
+     * instance of this class. - There is no public constructor for this method!
+     *
+     * <value> The instance of CurrentObject. </value>
+     *
+     * \~ 
+     * @author Zoltan Hrabovszki
+     * @date 2012.11.29
+     */
+    private static OKW_CurrentObject_Sngltn Instance;
 
     /**
      * \~german \brief Initialisiert eine neue Instanz der <see
@@ -209,28 +234,7 @@ public class OKW_CurrentObject_Sngltn
 
     }
 
-    /**
-     * \~german \brief Gibt die Instanz für die einzige Instanz dieser Klasse
-     * zurück.<br/>
-     * __Hinweis:__ * Diese Klasse ist ein Singleton. - Highlander Prinzip: Es
-     * kann nur eine Instanz von dieser Klasse geben! - Verwenden Sie diese
-     * Eigenschaft um die Instanz dieser Klasse zu erhalten. - Es gibt keinen
-     * öffentlichen Konstruktor für diese Methode!
-     *
-     *
-     * \~english \brief Returns the Instance for the only Instance of this class.<br/>
-     * __Remark:__ * This class is a Singleton. - Highlander Principle: There only
-     * can be one instance of this class! - Use this function to obtain the
-     * instance of this class. - There is no public constructor for this method!
-     *
-     * <value> The instance of CurrentObject. </value>
-     *
-     * \~ 
-     * @author Zoltan Hrabovszki
-     * @date 2012.11.29
-     */
-    private static OKW_CurrentObject_Sngltn Instance;
-
+    
     public static OKW_CurrentObject_Sngltn getInstance() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
     {
         // Lazy Initialization (If required then only)
@@ -242,16 +246,16 @@ public class OKW_CurrentObject_Sngltn
                 if ( Instance == null )
                 {
                     Instance = new OKW_CurrentObject_Sngltn();
-                    Init();
+                    init();
                 }
             }
         }
         return Instance;
     }
 
-    public ArrayList<String> GetAllChildFNsOfParent( String FN )
+    public ArrayList<String> getAllChildFNsOfParent( String FN )
     {
-        return myFrameObjectDictionary.GetAllChildKeysOfParent( FN );
+        return myFrameObjectDictionary.getAllChildKeysOfParent( FN );
     }
 
 
@@ -293,7 +297,7 @@ public class OKW_CurrentObject_Sngltn
         Log.LogFunctionStartDebug( "VerifyTablecellValue", "FN", FN, "COL", COL, "ROW", ROW, "ArrayList<String> fpLsExpVal",
                         fpLsExpVal.toString() );
 
-        this.SetChildName( FN );
+        setChildName( FN );
         Class<?>[] paramTypes =
         { String.class, String.class, ArrayList.class };
         Class<?> myFrame_Class = cvoObject.getClass();
@@ -346,7 +350,7 @@ public class OKW_CurrentObject_Sngltn
     {
         Log.LogFunctionStartDebug( "DoubleClickOn" );
 
-        this.SetChildName( FN );
+        this.setChildName( FN );
         Class<?> myFrame_Class = cvoObject.getClass();
         Method myMethod = null;
 
@@ -383,7 +387,6 @@ public class OKW_CurrentObject_Sngltn
         {
             Log.LogFunctionEndDebug();
         }
-        return;
     }
 
     /**
@@ -401,7 +404,7 @@ public class OKW_CurrentObject_Sngltn
      * @author Zoltan Hrabovszki
      * @date 2012.11.01
      */
-    public Object GetCurrentObject()
+    public Object getCurrentObject()
     {
         Object lvoReturn = new Object();
         Boolean bOK = false;
@@ -440,7 +443,7 @@ public class OKW_CurrentObject_Sngltn
      * @author Zoltan Hrabovszki
      * @date 2012.11.01
      */
-    public String GetObjectFN()
+    public String getObjectFN()
     {
         // Varaibles
         String lvsReturn = "";
@@ -483,7 +486,7 @@ public class OKW_CurrentObject_Sngltn
      * @author Zoltan Hrabovszki
      * @date 2012.11.01
      */
-    public String GetWindowFN()
+    public String getWindowFN()
     {
         // Variables
         String lvsReturn = "";
@@ -525,7 +528,7 @@ public class OKW_CurrentObject_Sngltn
      * @author Zoltan Hrabovszki
      * @date 2012.11.01
      */
-    public String GetChildFN()
+    public String getChildFN()
     {
         // Varaibles
         String lvsReturn = "";
@@ -556,7 +559,6 @@ public class OKW_CurrentObject_Sngltn
      * \~german
      * Führt die Initialisierung der Klasse durch: Es werden alle Felder der Klasse auf einen definierten Anfangszustand zurükgesetzt;
      *
-     *
      * \~english
      * Running the initializing of the class: There are all fields of the class set to a defined initial state.
      *
@@ -564,7 +566,7 @@ public class OKW_CurrentObject_Sngltn
      * @author Zoltan Hrabovszki 
      * @date 2012.12.15
      */
-    public static void Init() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+    public static void init() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
     {
             LM = new LogMessenger( "OKW_CurrentObject" );
             cvoObject = null;
@@ -573,7 +575,6 @@ public class OKW_CurrentObject_Sngltn
             cvsObjectName = "";
             myFrameObjectDictionary = null;
             myFrameObjectDictionary = FrameObjectDictionary_Sngltn.getInstance();
-        return;
     }
 
     /**
@@ -644,7 +645,7 @@ public class OKW_CurrentObject_Sngltn
      * @throws IllegalArgumentException 
      */
     @SuppressWarnings( "unused" )
-    private Object ResetToWindow() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+    private Object resetToWindow() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
     {
         Boolean bOK = false;
         Log.LogFunctionStartDebug( "CurrentObject.ResetToWindow" );
@@ -652,7 +653,7 @@ public class OKW_CurrentObject_Sngltn
         try
         {
             cvsChildFN = "";
-            this.UpdateObject();
+            updateObject();
             bOK = true;
         }
         finally
@@ -696,15 +697,13 @@ public class OKW_CurrentObject_Sngltn
 
         try
         {
-            this.SetChildName( FN );
+            setChildName( FN );
             ( ( IGUIChildwindow ) cvoObject ).SelectTablecell( COL, ROW );
         }
         finally
         {
             Log.LogFunctionEndDebug();
         }
-
-        return;
     }
 
     
@@ -736,18 +735,18 @@ public class OKW_CurrentObject_Sngltn
        * @throws IllegalAccessException 
        * @throws IllegalArgumentException 
        */
-    public Object SetChildName( String fpsChildName ) throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+    public Object setChildName( String fpsChildName ) throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
     {
         Boolean bOK = false;
         Log.LogFunctionStartDebug( "CurrentObject.SetChildName", "String fpsChildName", fpsChildName );
         Log.LogPrintDebug( LM.GetMessage( "SetChildName", "GivenWindownameDebug" ) );
         try
         {
-            if ( !OKW_Helper.StringIsNullOrEmpty( cvsWindowFN ) )
+            if ( !OKW_Helper.isStringNullOrEmpty( cvsWindowFN ) )
             {
                 Log.LogPrintDebug( LM.GetMessage( "SetChildName", "SetChildwindowNameDebug", cvsWindowFN, cvsChildFN ) );
                 cvsChildFN = fpsChildName;
-                this.UpdateObject();
+                updateObject();
                 bOK = true;
             }
             else
@@ -795,7 +794,7 @@ public class OKW_CurrentObject_Sngltn
      * @throws IllegalAccessException 
      * @throws IllegalArgumentException 
      */
-    public Object SetWindowName( String fpsWindowName ) throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+    public Object setWindowName( String fpsWindowName ) throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
     {
         Object lvoReturn = new Object();
         Boolean bOK = false;
@@ -804,7 +803,7 @@ public class OKW_CurrentObject_Sngltn
         {
             cvsWindowFN = fpsWindowName;
             cvsChildFN = "";
-            this.UpdateObject();
+            updateObject();
             lvoReturn = cvoObject;
             bOK = true;
         }
@@ -856,7 +855,7 @@ public class OKW_CurrentObject_Sngltn
 
         Log.LogFunctionStartDebug( "TypeKeyTablecell", "String FN", FN, "String COL", COL, "String ROW", ROW, "ArrayList<String> fpLsExpVal", Val.toString() );
 
-        this.SetChildName( FN );
+        setChildName( FN );
         Class<?>[] paramTypes =
         { String.class, String.class, ArrayList.class };
         Class<?> myFrame_Class = cvoObject.getClass();
@@ -916,7 +915,7 @@ public class OKW_CurrentObject_Sngltn
         Class<?>[] paramTypes =
         { ArrayList.class };
 
-        this.SetWindowName( FN );
+        setWindowName( FN );
         Class<?> myFrame_Class = cvoObject.getClass();
 
         try
@@ -936,7 +935,6 @@ public class OKW_CurrentObject_Sngltn
         {
             Log.LogFunctionEndDebug();
         }
-        return;
     }
 
     
@@ -969,15 +967,15 @@ public class OKW_CurrentObject_Sngltn
      * @throws IllegalAccessException 
      * @throws IllegalArgumentException 
      */
-    private void UpdateObject() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+    private void updateObject() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
     {
         Log.LogFunctionStartDebug( "CurrentObject.UpdateObject" );
         try
         {
-            if ( cvsChildFN == "" )
+            if ( "".equals( cvsChildFN ) )
             {
                 // -> 2. Get the Window-Object...
-                cvoObject = myFrameObjectDictionary.GetParentObjectByName( cvsWindowFN );
+                cvoObject = myFrameObjectDictionary.getParentObjectByName( cvsWindowFN );
                 cvsObjectName = cvoObject.getClass().getName();
                 cvsFullObjectFN = cvsWindowFN;
 
@@ -989,7 +987,7 @@ public class OKW_CurrentObject_Sngltn
 
                 // < 2. Now get the Object-Instance...
                 cvoObject = null;
-                cvoObject = myFrameObjectDictionary.GetChildObjectByName( cvsWindowFN, cvsChildFN );
+                cvoObject = myFrameObjectDictionary.getChildObjectByName( cvsWindowFN, cvsChildFN );
 
                 // < 3. Set tecnicalname of Object-Instance...
                 cvsObjectName = cvoObject.getClass().getName();
@@ -999,7 +997,6 @@ public class OKW_CurrentObject_Sngltn
         {
             Log.LogFunctionEndDebug();
         }
-        return;
     }
 
 
@@ -1027,7 +1024,7 @@ public class OKW_CurrentObject_Sngltn
     {
         Log.LogFunctionStartDebug( "Sequence", "String fpsMethodName", fpsMethodName, "String fps_Parameter_1", fpsParameter_1 );
 
-        this.SetWindowName( FN );
+        setWindowName( FN );
 
         Class<?>[] paramTypes =
         { String.class };
@@ -1050,6 +1047,5 @@ public class OKW_CurrentObject_Sngltn
         {
             Log.LogFunctionEndDebug();
         }
-        return;
     }
 }

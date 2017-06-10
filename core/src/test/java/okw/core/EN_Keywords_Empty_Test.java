@@ -1,22 +1,41 @@
-//  OKW__Test__AllMethodCalls.cs
-//
-//  Author:
-//       zoltan <${AuthorEmail}>
-//
-//  Copyright(c) 2012 zoltan
-//
-//  This program is free software: you can redistribute it and/or modify
-//  it under the terms of the GNU General Public License as published by
-//  the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-//  This program is distributed in the hope that it will be useful,
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//  GNU General Public License for more details.
-//
-//  You should have received a copy of the GNU General Public License
-//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+/*
+    ==============================================================================
+      Author: Zoltan Hrabovszki <zh@openkeyword.de>
+
+      Copyright © 2012 - 2017  IT-Beratung Hrabovszki
+      www.OpenKeyWord.de
+    ============================================================================== 
+
+    This file is part of OpenKeyWord.
+
+    OpenKeyWord is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    OpenKeyWord is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with OpenKeyWord.  If not, see <http://www.gnu.org/licenses/>.
+
+    Diese Datei ist Teil von OpenKeyWord.
+
+    OpenKeyWord ist Freie Software: Sie können es unter den Bedingungen
+    der GNU General Public License, wie von der Free Software Foundation,
+    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder späteren
+    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+
+    OpenKeyWord wird in der Hoffnung, dass es nützlich sein wird, aber
+    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+    Siehe die GNU General Public License für weitere Details.
+
+    Sie sollten eine Kopie der GNU General Public License zusammen mit 
+    OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
+*/
 
 package okw.core;
 
@@ -44,7 +63,7 @@ public class EN_Keywords_Empty_Test {
   @BeforeClass
   public static void setUpBeforeClass() throws Exception {
     // Reset des Loggers: Alle Geladenen Instanzen löschen
-    Logger_Sngltn.Init();
+    Logger_Sngltn.init();
     // myLogger.AddLogger(new Log2Console());
 
     myLogger.setDebugMode( false );
@@ -95,7 +114,7 @@ public class EN_Keywords_Empty_Test {
     EN.SetValue( "All_MethodsObj", "${DELETE}" );
 
     assertEquals( 1, myClipBoard.getValue().size() );
-    assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "SetValue()", myClipBoard.getMethod() );
   }
@@ -170,7 +189,7 @@ public class EN_Keywords_Empty_Test {
   /**
    *  \~german
    *  \brief
-   *  Prüft "${EMPTY}" für das Schlüsslewort VerifyCaption(strng,string)
+   *  Prüft "${EMPTY}" für das Schlüsslewort VerifyCaptionREGX(strng,string)
    * 
    *  \~english
    *  \~
@@ -203,13 +222,13 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyCaption()", myClipBoard.getMethod());
-
   }
 
+  
   /**
    *  \~german
    *  \brief
-   *  Prüft "${EMPTY}" für das Schlüsslewort VerifyCaption(strng,string)
+   *  Prüft "${EMPTY}" für das Schlüsslewort VerifyCaptionWCM(strng,string)
    * 
    *  \~english
    *  \~
@@ -244,6 +263,123 @@ public class EN_Keywords_Empty_Test {
     assertEquals("VerifyCaption()", myClipBoard.getMethod());
 
   }
+
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft "${EMPTY}" für das Schlüsslewort VerifySelectedValue(strng,string)
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifySelectedValue_Empty() throws Exception {
+
+    EN.BeginTest( name.getMethodName() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+    
+    EN.VerifySelectedValue( "All_MethodsObj_VerifyEmpty", "${EMPTY}");
+    
+    assertEquals( 0, myClipBoard.getValue().size() );
+    // assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+    assertEquals("VerifySelectedValue()", myClipBoard.getMethod());
+  }
+ 
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft "${EMPTY}" für das Schlüsslewort VerifySelectedValueREGX(strng,string)
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifySelectedValueREGX_Empty() throws Exception {
+
+    EN.BeginTest( name.getMethodName() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+    
+    EN.VerifySelectedValueREGX("All_MethodsObj_VerifyEmpty", "${EMPTY}");
+    
+    assertEquals( 0, myClipBoard.getValue().size() );
+    //assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+    assertEquals("VerifySelectedValue()", myClipBoard.getMethod());
+  }
+
+
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft "${EMPTY}" für das Schlüsslewort VerifyCaptionWCM(strng,string)
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifySelectedValueWCM_Empty() throws Exception {
+
+    EN.BeginTest( name.getMethodName() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+    
+    EN.VerifySelectedValueWCM("All_MethodsObj_VerifyEmpty", "${EMPTY}");
+    
+    assertEquals( 0, myClipBoard.getValue().size() );
+    //assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+    assertEquals("VerifySelectedValue()", myClipBoard.getMethod());
+
+  }  
+  
 
   /**
    *  \~german
@@ -486,6 +622,161 @@ public class EN_Keywords_Empty_Test {
    *  \date 2013.12.26
    */
   @Test
+  public void tc_VerifyTablecellValue_Empty() throws Exception {
+
+    EN.BeginTest( name.getMethodName() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+    EN.SetValue( "All_MethodsObj", "${DELETE}" );
+    EN.VerifyTablecellValue("All_MethodsObj", "X", "Y", "${EMPTY}");
+    
+    assertEquals( 3, myClipBoard.getValue().size() );
+    assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "X", myClipBoard.getValue().get( 1 ) );
+    assertEquals( "Y", myClipBoard.getValue().get( 2 ) );    
+    assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+    assertEquals("VerifyTablecellValue()", myClipBoard.getMethod());
+  }
+  
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft "${EMPTY}" für das Schlüsselwort VerifyValue(string,string)
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifyTablecellValueREGX_Empty() throws Exception {
+
+    EN.BeginTest( name.getMethodName() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+    EN.SetValue( "All_MethodsObj", "${DELETE}" );
+    EN.VerifyTablecellValueREGX("All_MethodsObj", "X", "Y", "${EMPTY}");
+    
+    assertEquals( 3, myClipBoard.getValue().size() );
+    assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "X", myClipBoard.getValue().get( 1 ) );
+    assertEquals( "Y", myClipBoard.getValue().get( 2 ) );    
+    assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+    assertEquals("VerifyTablecellValue()", myClipBoard.getMethod());
+  }
+  
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft "${EMPTY}" für das Schlüsselwort VerifyValue(string,string)
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
+  public void tc_VerifyTablecellValueWCM_Empty() throws Exception {
+
+    EN.BeginTest( name.getMethodName() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+    EN.SetValue( "All_MethodsObj", "${DELETE}" );
+    EN.VerifyTablecellValueWCM("All_MethodsObj", "X", "Y", "${EMPTY}");
+    
+    assertEquals( 3, myClipBoard.getValue().size() );
+    assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "X", myClipBoard.getValue().get( 1 ) );
+    assertEquals( "Y", myClipBoard.getValue().get( 2 ) );    
+    assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+    assertEquals("VerifyTablecellValue()", myClipBoard.getMethod());
+  }
+
+
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2016.09.24
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tc_VerifyExists_EMPTY_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+  
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyExists( "All_MethodsObj", "${EMPTY}" );
+  }
+
+  // \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2016.09.24
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tc_VerifyIsActive_EMPTY_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+  
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyIsActive( "All_MethodsObj", "${EMPTY}" );
+  }
+
+/**
+   *  \~german
+   *  \brief
+   *  Prüft "${EMPTY}" für das Schlüsselwort VerifyValue(string,string)
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2013.12.26
+   */
+  @Test
   public void tc_VerifyValue_Empty() throws Exception {
 
     EN.BeginTest( name.getMethodName() );
@@ -512,8 +803,8 @@ public class EN_Keywords_Empty_Test {
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyValue()", myClipBoard.getMethod());
   }
-  
-  /**
+
+/**
    *  \~german
    *  \brief
    *  Prüft "${EMPTY}" für das Schlüsselwort VerifyValue(string,string)
@@ -551,8 +842,8 @@ public class EN_Keywords_Empty_Test {
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyValue()", myClipBoard.getMethod());
   }
-  
-  /**
+
+/**
    *  \~german
    *  \brief
    *  Prüft "${EMPTY}" für das Schlüsselwort VerifyValue(string,string)
@@ -588,39 +879,5 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyValue()", myClipBoard.getMethod());
-  }
-
-  // \~german
-  // \brief
-  //
-  //
-  // \~english
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
-  public void tc_VerifyExists_EMPTY_OKWNotAllowedValueException() throws Exception
-  {
-    EN.BeginTest( name.getMethodName() );
-  
-    EN.SelectWindow( "Rechner" );
-    EN.VerifyExists( "All_MethodsObj", "${EMPTY}" );
-  }
-
-  // \~german
-  // \brief
-  //
-  //
-  // \~english
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
-  public void tc_VerifyIsActive_EMPTY_OKWNotAllowedValueException() throws Exception
-  {
-    EN.BeginTest( name.getMethodName() );
-  
-    EN.SelectWindow( "Rechner" );
-    EN.VerifyIsActive( "All_MethodsObj", "${EMPTY}" );
   }
 }

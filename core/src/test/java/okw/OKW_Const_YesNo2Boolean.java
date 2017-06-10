@@ -58,53 +58,55 @@ import org.xml.sax.SAXException;
 import static org.junit.Assert.*;
 import okw.log.*;
 
-@RunWith(Parameterized.class)
+@RunWith( Parameterized.class )
 public class OKW_Const_YesNo2Boolean
 {
-@Parameters( name = "{index} {1}: {0} = GetOKWConst4Internalname[>>{2}<<] " )
-public static Collection<Object[]> data() {
-    return Arrays.asList(new Object[][] {     
-    		//Separatoren
-    		{ true,     "de",   "JA" },
-    		{ true,     "en",   "YES" },
 
-    		{ true,     "de",   "ja" },
-    		{ true,     "en",   "yes" },
+    private Boolean ExpectedValue;
 
-    		
-    		{ false,     "de",  "NEIN" },
-    		{ false,     "en",  "NO" },
-    		
-    		{ false,     "de",  "nein" },
-    		{ false,     "en",  "no" },
-       });
-}
+    private String  SelectLanguage;
+    private String  InputValue_1;
 
-private Boolean ExpectedValue;
+    @Parameters( name = "{index} {1}: {0} = GetOKWConst4Internalname[>>{2}<<] " )
+    public static Collection<Object[]> data()
+    {
+        return Arrays.asList( new Object[][]
+        {
+                        //Separatoren
+                        { true, "de", "JA" },
+                        { true, "en", "YES" },
 
-private String SelectLanguage;
-private String InputValue_1;
+                        { true, "de", "ja" },
+                        { true, "en", "yes" },
 
-public OKW_Const_YesNo2Boolean(Boolean ExpectedValue, String SelectLanguage, String InputValue_1) {
-	
-	   this.ExpectedValue  = ExpectedValue;
-	   
-	   this.SelectLanguage = SelectLanguage;
-	   this.InputValue_1   = InputValue_1;
-	   }
+                        { false, "de", "NEIN" },
+                        { false, "en", "NO" },
 
-/// \copydoc CurrentObject::Log()
-public static Logger_Sngltn Log;
+                        { false, "de", "nein" },
+                        { false, "en", "no" }, } );
+    }
 
-	//@BeforeClass
+    public OKW_Const_YesNo2Boolean( Boolean ExpectedValue, String SelectLanguage, String InputValue_1 )
+    {
+
+        this.ExpectedValue = ExpectedValue;
+
+        this.SelectLanguage = SelectLanguage;
+        this.InputValue_1 = InputValue_1;
+    }
+
+    /// \copydoc CurrentObject::Log()
+    public static Logger_Sngltn Log;
+
+    //@BeforeClass
     public static void myTestFixtureSetUp()
     {
-		Log = Logger_Sngltn.getInstance();
+        Log = Logger_Sngltn.getInstance();
         // Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.Init();
+        Logger_Sngltn.init();
 
         //Log.AddLogger(new Log2Console());
-        Log.setDebugMode(false);
+        Log.setDebugMode( false );
     }
 
     @Test
@@ -112,9 +114,9 @@ public static Logger_Sngltn Log;
     {
         Boolean actual;
         Boolean expected = ExpectedValue;
-        
-		OKWLanguage.getInstance().setLanguage(SelectLanguage);
-        actual = OKW_Const_Sngltn.getInstance().YesNo2Boolean(InputValue_1);
-        assertEquals(expected, actual);
+
+        OKWLanguage.getInstance().setLanguage( SelectLanguage );
+        actual = OKW_Const_Sngltn.getInstance().YesNo2Boolean( InputValue_1 );
+        assertEquals( expected, actual );
     }
 }

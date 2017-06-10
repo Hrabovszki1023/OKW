@@ -15,7 +15,7 @@ public class SeSelect_Chrome_Test extends SeSelect_Test
 
         Logger_Sngltn.getInstance();
 		// Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.Init();
+        Logger_Sngltn.init();
 
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}

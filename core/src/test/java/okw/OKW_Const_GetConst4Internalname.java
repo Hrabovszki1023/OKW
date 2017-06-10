@@ -117,7 +117,9 @@ public OKW_Const_GetConst4Internalname(String ExpectedValue, String SelectLangua
 	   this.InputValue_1   = InputValue_1;
 	   }
 
-/// \copydoc CurrentObject::Log()
+/**
+ *  \copydoc CurrentObject::Log()
+ */
 public static Logger_Sngltn Log;
 
 	//@BeforeClass
@@ -125,7 +127,7 @@ public static Logger_Sngltn Log;
     {
 		Log = Logger_Sngltn.getInstance();
         // Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.Init();
+		Logger_Sngltn.init();
 
         //Log.AddLogger(new Log2Console());
         Log.setDebugMode(false);

@@ -61,130 +61,134 @@ import okw.log.*;
 @RunWith(Parameterized.class)
 public class OKW_Const_Split_SEP_HSEP_VSEP
     {
-  @Parameters( name = "{index}: Language={1}, \"{0}\" = Split{2}(\"{3}\") " )
-  public static Collection<Object[]> data() {
-        return Arrays.asList(new Object[][] {     
-        		
-           		// ------------------------------------------------------------------------------------------------------------------------
-        		// - SEP
-        		// ------------------------------------------------------------------------------------------------------------------------
-        		
-        		{ new ArrayList<String>(Arrays.asList( "" )),                         "de", "SEP", "" },
-        		
-        		{ new ArrayList<String>(Arrays.asList( "WERT" )),                     "de", "SEP", "WERT" },
-        		
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2" )),           "de", "SEP", "Wert1${SEP}Wert2" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "" )),                "de", "SEP", "Wert1${SEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2" )),                "de", "SEP", "${SEP}Wert2" },
-        		{ new ArrayList<String>(Arrays.asList( "", "" )),                     "de", "SEP", "${SEP}" },
-
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2", "Wert3" )),  "de", "SEP", "Wert1${SEP}Wert2${SEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2", "" )),       "de", "SEP", "Wert1${SEP}Wert2${SEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "", "Wert3" )),       "de", "SEP", "Wert1${SEP}${SEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2", "Wert3" )),       "de", "SEP", "${SEP}Wert2${SEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2", "" )),            "de", "SEP", "${SEP}Wert2${SEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "", "", "" )),                 "de", "SEP", "${SEP}${SEP}" },
-        		
-        		
-        		{ new ArrayList<String>(Arrays.asList( "" )),                         "en", "SEP", "" },
-        		
-        		{ new ArrayList<String>(Arrays.asList( "WERT" )),                     "en", "SEP", "WERT" },
-        		
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2" )),           "en", "SEP", "Wert1${SEP}Wert2" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "" )),                "en", "SEP", "Wert1${SEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2" )),                "en", "SEP", "${SEP}Wert2" },
-        		{ new ArrayList<String>(Arrays.asList( "", "" )),                     "en", "SEP", "${SEP}" },
-
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2", "Wert3" )),  "en", "SEP", "Wert1${SEP}Wert2${SEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2", "" )),       "en", "SEP", "Wert1${SEP}Wert2${SEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "", "Wert3" )),       "en", "SEP", "Wert1${SEP}${SEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2", "Wert3" )),       "en", "SEP", "${SEP}Wert2${SEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2", "" )),            "en", "SEP", "${SEP}Wert2${SEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "", "", "" )),                 "en", "SEP", "${SEP}${SEP}" },       		
-
-        		
-        		// ------------------------------------------------------------------------------------------------------------------------
-        		// - HSEP
-        		// ------------------------------------------------------------------------------------------------------------------------
-        		
-        		{ new ArrayList<String>(Arrays.asList( "" )),                         "de", "HSEP", "" },
-        		
-        		{ new ArrayList<String>(Arrays.asList( "WERT" )),                     "de", "HSEP", "WERT" },
-        		
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2" )),           "de", "HSEP", "Wert1${HSEP}Wert2" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "" )),                "de", "HSEP", "Wert1${HSEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2" )),                "de", "HSEP", "${HSEP}Wert2" },
-        		{ new ArrayList<String>(Arrays.asList( "", "" )),                     "de", "HSEP", "${HSEP}" },
-
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2", "Wert3" )),  "de", "HSEP", "Wert1${HSEP}Wert2${HSEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2", "" )),       "de", "HSEP", "Wert1${HSEP}Wert2${HSEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "", "Wert3" )),       "de", "HSEP", "Wert1${HSEP}${HSEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2", "Wert3" )),       "de", "HSEP", "${HSEP}Wert2${HSEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2", "" )),            "de", "HSEP", "${HSEP}Wert2${HSEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "", "", "" )),                 "de", "HSEP", "${HSEP}${HSEP}" },
-        		
-        		
-        		{ new ArrayList<String>(Arrays.asList( "" )),                         "en", "HSEP", "" },
-        		
-        		{ new ArrayList<String>(Arrays.asList( "WERT" )),                     "en", "HSEP", "WERT" },
-        		
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2" )),           "en", "HSEP", "Wert1${HSEP}Wert2" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "" )),                "en", "HSEP", "Wert1${HSEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2" )),                "en", "HSEP", "${HSEP}Wert2" },
-        		{ new ArrayList<String>(Arrays.asList( "", "" )),                     "en", "HSEP", "${HSEP}" },
-
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2", "Wert3" )),  "en", "HSEP", "Wert1${HSEP}Wert2${HSEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2", "" )),       "en", "HSEP", "Wert1${HSEP}Wert2${HSEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "", "Wert3" )),       "en", "HSEP", "Wert1${HSEP}${HSEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2", "Wert3" )),       "en", "HSEP", "${HSEP}Wert2${HSEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2", "" )),            "en", "HSEP", "${HSEP}Wert2${HSEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "", "", "" )),                 "en", "HSEP", "${HSEP}${HSEP}" },       		
-        		
-        		// ------------------------------------------------------------------------------------------------------------------------
-        		// - VSEP
-        		// ------------------------------------------------------------------------------------------------------------------------
-        		
-        		{ new ArrayList<String>(Arrays.asList( "" )),                         "de", "VSEP", "" },
-        		
-        		{ new ArrayList<String>(Arrays.asList( "WERT" )),                     "de", "VSEP", "WERT" },
-        		
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2" )),           "de", "VSEP", "Wert1${VSEP}Wert2" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "" )),                "de", "VSEP", "Wert1${VSEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2" )),                "de", "VSEP", "${VSEP}Wert2" },
-        		{ new ArrayList<String>(Arrays.asList( "", "" )),                     "de", "VSEP", "${VSEP}" },
-
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2", "Wert3" )),  "de", "VSEP", "Wert1${VSEP}Wert2${VSEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2", "" )),       "de", "VSEP", "Wert1${VSEP}Wert2${VSEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "", "Wert3" )),       "de", "VSEP", "Wert1${VSEP}${VSEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2", "Wert3" )),       "de", "VSEP", "${VSEP}Wert2${VSEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2", "" )),            "de", "VSEP", "${VSEP}Wert2${VSEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "", "", "" )),                 "de", "VSEP", "${VSEP}${VSEP}" },
-        		
-        		
-        		{ new ArrayList<String>(Arrays.asList( "" )),                         "en", "VSEP", "" },
-        		
-        		{ new ArrayList<String>(Arrays.asList( "WERT" )),                     "en", "VSEP", "WERT" },
-        		
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2" )),           "en", "VSEP", "Wert1${VSEP}Wert2" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "" )),                "en", "VSEP", "Wert1${VSEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2" )),                "en", "VSEP", "${VSEP}Wert2" },
-        		{ new ArrayList<String>(Arrays.asList( "", "" )),                     "en", "VSEP", "${VSEP}" },
-
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2", "Wert3" )),  "en", "VSEP", "Wert1${VSEP}Wert2${VSEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "Wert2", "" )),       "en", "VSEP", "Wert1${VSEP}Wert2${VSEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "Wert1", "", "Wert3" )),       "en", "VSEP", "Wert1${VSEP}${VSEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2", "Wert3" )),       "en", "VSEP", "${VSEP}Wert2${VSEP}Wert3" },
-        		{ new ArrayList<String>(Arrays.asList( "", "Wert2", "" )),            "en", "VSEP", "${VSEP}Wert2${VSEP}" },
-        		{ new ArrayList<String>(Arrays.asList( "", "", "" )),                 "en", "VSEP", "${VSEP}${VSEP}" },       		
-
-           });
-    }
+    
     
     private ArrayList<String> ExpectedValue;
     
     private String Language;
     private String SEPType;
     private String InputValue_1;
+    
+    /// \copydoc CurrentObject::Log()
+    public static Logger_Sngltn Log;
+
+
+    @Parameters( name = "{index}: Language={1}, \"{0}\" = Split{2}(\"{3}\") " )
+    public static Collection<Object[]> data()
+    {
+        return Arrays.asList( new Object[][]
+        {
+
+                        // ------------------------------------------------------------------------------------------------------------------------
+                        // - SEP
+                        // ------------------------------------------------------------------------------------------------------------------------
+
+                        { new ArrayList<String>( Arrays.asList( "" ) ), "de", "SEP", "" },
+
+                        { new ArrayList<String>( Arrays.asList( "WERT" ) ), "de", "SEP", "WERT" },
+
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2" ) ), "de", "SEP", "Wert1${SEP}Wert2" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "" ) ), "de", "SEP", "Wert1${SEP}" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2" ) ), "de", "SEP", "${SEP}Wert2" },
+                        { new ArrayList<String>( Arrays.asList( "", "" ) ), "de", "SEP", "${SEP}" },
+
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2", "Wert3" ) ), "de", "SEP", "Wert1${SEP}Wert2${SEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2", "" ) ), "de", "SEP", "Wert1${SEP}Wert2${SEP}" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "", "Wert3" ) ), "de", "SEP", "Wert1${SEP}${SEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2", "Wert3" ) ), "de", "SEP", "${SEP}Wert2${SEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2", "" ) ), "de", "SEP", "${SEP}Wert2${SEP}" },
+                        { new ArrayList<String>( Arrays.asList( "", "", "" ) ), "de", "SEP", "${SEP}${SEP}" },
+
+                        { new ArrayList<String>( Arrays.asList( "" ) ), "en", "SEP", "" },
+
+                        { new ArrayList<String>( Arrays.asList( "WERT" ) ), "en", "SEP", "WERT" },
+
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2" ) ), "en", "SEP", "Wert1${SEP}Wert2" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "" ) ), "en", "SEP", "Wert1${SEP}" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2" ) ), "en", "SEP", "${SEP}Wert2" },
+                        { new ArrayList<String>( Arrays.asList( "", "" ) ), "en", "SEP", "${SEP}" },
+
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2", "Wert3" ) ), "en", "SEP", "Wert1${SEP}Wert2${SEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2", "" ) ), "en", "SEP", "Wert1${SEP}Wert2${SEP}" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "", "Wert3" ) ), "en", "SEP", "Wert1${SEP}${SEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2", "Wert3" ) ), "en", "SEP", "${SEP}Wert2${SEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2", "" ) ), "en", "SEP", "${SEP}Wert2${SEP}" },
+                        { new ArrayList<String>( Arrays.asList( "", "", "" ) ), "en", "SEP", "${SEP}${SEP}" },
+
+                        // ------------------------------------------------------------------------------------------------------------------------
+                        // - HSEP
+                        // ------------------------------------------------------------------------------------------------------------------------
+
+                        { new ArrayList<String>( Arrays.asList( "" ) ), "de", "HSEP", "" },
+
+                        { new ArrayList<String>( Arrays.asList( "WERT" ) ), "de", "HSEP", "WERT" },
+
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2" ) ), "de", "HSEP", "Wert1${HSEP}Wert2" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "" ) ), "de", "HSEP", "Wert1${HSEP}" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2" ) ), "de", "HSEP", "${HSEP}Wert2" },
+                        { new ArrayList<String>( Arrays.asList( "", "" ) ), "de", "HSEP", "${HSEP}" },
+
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2", "Wert3" ) ), "de", "HSEP", "Wert1${HSEP}Wert2${HSEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2", "" ) ), "de", "HSEP", "Wert1${HSEP}Wert2${HSEP}" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "", "Wert3" ) ), "de", "HSEP", "Wert1${HSEP}${HSEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2", "Wert3" ) ), "de", "HSEP", "${HSEP}Wert2${HSEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2", "" ) ), "de", "HSEP", "${HSEP}Wert2${HSEP}" },
+                        { new ArrayList<String>( Arrays.asList( "", "", "" ) ), "de", "HSEP", "${HSEP}${HSEP}" },
+
+                        { new ArrayList<String>( Arrays.asList( "" ) ), "en", "HSEP", "" },
+
+                        { new ArrayList<String>( Arrays.asList( "WERT" ) ), "en", "HSEP", "WERT" },
+
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2" ) ), "en", "HSEP", "Wert1${HSEP}Wert2" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "" ) ), "en", "HSEP", "Wert1${HSEP}" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2" ) ), "en", "HSEP", "${HSEP}Wert2" },
+                        { new ArrayList<String>( Arrays.asList( "", "" ) ), "en", "HSEP", "${HSEP}" },
+
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2", "Wert3" ) ), "en", "HSEP", "Wert1${HSEP}Wert2${HSEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2", "" ) ), "en", "HSEP", "Wert1${HSEP}Wert2${HSEP}" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "", "Wert3" ) ), "en", "HSEP", "Wert1${HSEP}${HSEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2", "Wert3" ) ), "en", "HSEP", "${HSEP}Wert2${HSEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2", "" ) ), "en", "HSEP", "${HSEP}Wert2${HSEP}" },
+                        { new ArrayList<String>( Arrays.asList( "", "", "" ) ), "en", "HSEP", "${HSEP}${HSEP}" },
+
+                        // ------------------------------------------------------------------------------------------------------------------------
+                        // - VSEP
+                        // ------------------------------------------------------------------------------------------------------------------------
+
+                        { new ArrayList<String>( Arrays.asList( "" ) ), "de", "VSEP", "" },
+
+                        { new ArrayList<String>( Arrays.asList( "WERT" ) ), "de", "VSEP", "WERT" },
+
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2" ) ), "de", "VSEP", "Wert1${VSEP}Wert2" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "" ) ), "de", "VSEP", "Wert1${VSEP}" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2" ) ), "de", "VSEP", "${VSEP}Wert2" },
+                        { new ArrayList<String>( Arrays.asList( "", "" ) ), "de", "VSEP", "${VSEP}" },
+
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2", "Wert3" ) ), "de", "VSEP", "Wert1${VSEP}Wert2${VSEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2", "" ) ), "de", "VSEP", "Wert1${VSEP}Wert2${VSEP}" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "", "Wert3" ) ), "de", "VSEP", "Wert1${VSEP}${VSEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2", "Wert3" ) ), "de", "VSEP", "${VSEP}Wert2${VSEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2", "" ) ), "de", "VSEP", "${VSEP}Wert2${VSEP}" },
+                        { new ArrayList<String>( Arrays.asList( "", "", "" ) ), "de", "VSEP", "${VSEP}${VSEP}" },
+
+                        { new ArrayList<String>( Arrays.asList( "" ) ), "en", "VSEP", "" },
+
+                        { new ArrayList<String>( Arrays.asList( "WERT" ) ), "en", "VSEP", "WERT" },
+
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2" ) ), "en", "VSEP", "Wert1${VSEP}Wert2" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "" ) ), "en", "VSEP", "Wert1${VSEP}" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2" ) ), "en", "VSEP", "${VSEP}Wert2" },
+                        { new ArrayList<String>( Arrays.asList( "", "" ) ), "en", "VSEP", "${VSEP}" },
+
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2", "Wert3" ) ), "en", "VSEP", "Wert1${VSEP}Wert2${VSEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "Wert2", "" ) ), "en", "VSEP", "Wert1${VSEP}Wert2${VSEP}" },
+                        { new ArrayList<String>( Arrays.asList( "Wert1", "", "Wert3" ) ), "en", "VSEP", "Wert1${VSEP}${VSEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2", "Wert3" ) ), "en", "VSEP", "${VSEP}Wert2${VSEP}Wert3" },
+                        { new ArrayList<String>( Arrays.asList( "", "Wert2", "" ) ), "en", "VSEP", "${VSEP}Wert2${VSEP}" },
+                        { new ArrayList<String>( Arrays.asList( "", "", "" ) ), "en", "VSEP", "${VSEP}${VSEP}" },
+
+        } );
+    }
 
     public OKW_Const_Split_SEP_HSEP_VSEP(ArrayList<String> ExpectedValue, String Language, String SEPType, String InputValue_1) {
     	
@@ -194,38 +198,35 @@ public class OKW_Const_Split_SEP_HSEP_VSEP
     	   this.SEPType = SEPType;
     	   this.InputValue_1 = InputValue_1;
     	   }
-    
-	/// \copydoc CurrentObject::Log()
-	public static Logger_Sngltn Log;
 
 		//@BeforeClass
         public static void myTestFixtureSetUp()
         {
 			Log = Logger_Sngltn.getInstance();
             // Reset des Loggers: Alle geladenen Instanzen löschen
-            Logger_Sngltn.Init();
+            Logger_Sngltn.init();
 
             //Log.AddLogger(new Log2Console());
             Log.setDebugMode(false);
         }
 
         @Test
-        public void TC_MatchStr() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+        public void tcMatchStr() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
         {
         	ArrayList<String> actual = null ;
             ArrayList<String> expected = ExpectedValue;
 
 			OKWLanguage.getInstance().setLanguage(Language);
             
-            if (SEPType.equals("SEP"))
+            if ( "SEP".equals( SEPType) )
             {
             	actual = OKW_Const_Sngltn.getInstance().SplitSEP(InputValue_1);	
             }
-            else if (SEPType.equals("HSEP"))
+            else if ( "HSEP".equals( SEPType) )
             {
             	actual = OKW_Const_Sngltn.getInstance().SplitHSEP(InputValue_1);	
             }
-            else if (SEPType.equals("VSEP"))
+            else if ( "VSEP".equals( SEPType ) )
             {
             	actual = OKW_Const_Sngltn.getInstance().SplitVSEP(InputValue_1);	
             }

@@ -61,45 +61,49 @@ import okw.log.*;
 @RunWith(Parameterized.class)
 public class OKW_Const_GetOKWConst4Internalname
 {
-@Parameters( name = "{index} {1}: {0} = GetOKWConst4Internalname[>>{2}<<] " )
-public static Collection<Object[]> data() {
-    return Arrays.asList(new Object[][] {     
-    		{ "${HSEP}",       "de",   "HSEP" },
-    		{ "${HSEP}",       "en",   "HSEP" },
+    private String ExpectedValue;
 
-    		//{ "NEIN",          "de",   "NO" },
-    		//{ "NO",            "en",   "NO" },
-    		{ "${SEP}",        "de",   "SEP"  },
-    		{ "${SEP}",        "en", "SEP"  },
-    		//{ "ABGEWÄHLT",     "de", "UNCHECKED"},
-    		//{ "UNCHECKED",     "en", "UNCHECKED"},
-    		//{ "ANGEWÄHLT",     "de", "CHECKED"},
-    		//{ "CHECKED",       "en", "CHECKED"},
-    		//{ "JA",            "de", "YES"},
-    		//{ "YES",           "en", "YES"},
-    		{ "${LÖSCHEN}",    "de", "DELETE"},
-    		{ "${DELETE}",     "en", "DELETE"},
-    		{ "${IGNORIEREN}", "de", "IGNORE"},
-    		{ "${IGNORE}",     "en", "IGNORE"},
-    		{ "${LEER}",       "de", "EMPTY"},
-    		{ "${EMPTY}",      "en", "EMPTY"}
-       });
-}
+    private String SelectLanguage;
+    private String InputValue_1;
+    
+    @Parameters( name = "{index} {1}: {0} = GetOKWConst4Internalname[>>{2}<<] " )
+    public static Collection<Object[]> data()
+    {
+        return Arrays.asList( new Object[][]
+        {
+                        { "${HSEP}", "de", "HSEP" },
+                        { "${HSEP}", "en", "HSEP" },
 
-private String ExpectedValue;
+                        //{ "NEIN",          "de",   "NO" },
+                        //{ "NO",            "en",   "NO" },
+                        { "${SEP}", "de", "SEP" },
+                        { "${SEP}", "en", "SEP" },
+                        //{ "ABGEWÄHLT",     "de", "UNCHECKED"},
+                        //{ "UNCHECKED",     "en", "UNCHECKED"},
+                        //{ "ANGEWÄHLT",     "de", "CHECKED"},
+                        //{ "CHECKED",       "en", "CHECKED"},
+                        //{ "JA",            "de", "YES"},
+                        //{ "YES",           "en", "YES"},
+                        { "${LÖSCHEN}", "de", "DELETE" },
+                        { "${DELETE}", "en", "DELETE" },
+                        { "${IGNORIEREN}", "de", "IGNORE" },
+                        { "${IGNORE}", "en", "IGNORE" },
+                        { "${LEER}", "de", "EMPTY" },
+                        { "${EMPTY}", "en", "EMPTY" } } );
+    }
 
-private String SelectLanguage;
-private String InputValue_1;
+    public OKW_Const_GetOKWConst4Internalname( String ExpectedValue, String SelectLanguage, String InputValue_1 )
+    {
 
-public OKW_Const_GetOKWConst4Internalname(String ExpectedValue, String SelectLanguage, String InputValue_1) {
-	
-	   this.ExpectedValue  = ExpectedValue;
-	   
-	   this.SelectLanguage = SelectLanguage;
-	   this.InputValue_1   = InputValue_1;
-	   }
+        this.ExpectedValue = ExpectedValue;
 
-/// \copydoc CurrentObject::Log()
+        this.SelectLanguage = SelectLanguage;
+        this.InputValue_1 = InputValue_1;
+    }
+
+/**
+ *  \copydoc CurrentObject::Log()
+ */
 public static Logger_Sngltn Log;
 
 	//@BeforeClass
@@ -107,7 +111,7 @@ public static Logger_Sngltn Log;
     {
 		Log = Logger_Sngltn.getInstance();
         // Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.Init();
+        Logger_Sngltn.init();
 
         //Log.AddLogger(new Log2Console());
         Log.setDebugMode(false);

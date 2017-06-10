@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -54,6 +54,15 @@ import okw.log.*;
 @RunWith(Parameterized.class)
 public class OKW_Helper_MatchStrTest
     {
+    
+    private Boolean ExpectedValue;
+    
+    private String InputValue_1;
+    private String InputValue_2;
+    
+    /// \copydoc CurrentObject::Log()
+    public static Logger_Sngltn Log;
+    
     @Parameters( name = "{index}: {0} = MatchStr[\"{1}\", \"{2}\"] " )
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {     
@@ -76,11 +85,6 @@ public class OKW_Helper_MatchStrTest
         });
     }
     
-    private Boolean ExpectedValue;
-    
-    private String InputValue_1;
-    private String InputValue_2;
-
     public OKW_Helper_MatchStrTest(Boolean ExpectedValue, String InputValue_1, String InputValue_2) {
     	
     	   this.ExpectedValue = ExpectedValue;
@@ -89,27 +93,24 @@ public class OKW_Helper_MatchStrTest
     	   this.InputValue_2 = InputValue_2;
     	   }
     
-	/// \copydoc CurrentObject::Log()
-	public static Logger_Sngltn Log;
-
 		//@BeforeClass
         public static void myTestFixtureSetUp()
         {
 			Log = Logger_Sngltn.getInstance();
             // Reset des Loggers: Alle geladenen Instanzen löschen
-            Logger_Sngltn.Init();
+            Logger_Sngltn.init();
 
             //Log.AddLogger(new Log2Console());
             Log.setDebugMode(false);
         }
 
         @Test
-        public void TC_MatchStr()
+        public void tcMatchStr()
         {
             Boolean actual = false;
             Boolean expected = ExpectedValue;
 
-            actual = OKW_Helper.MatchStr( InputValue_1, InputValue_2);
+            actual = OKW_Helper.matchString( InputValue_1, InputValue_2);
             assertEquals(expected, actual);
         }
 }

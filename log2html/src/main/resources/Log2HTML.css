@@ -65,10 +65,7 @@ div.LogTestcase
 	color: #39499C;
     padding:0px; 
     border:2pt solid #39499C; 
-    margin-top:10px;
-    margin-bottom:0px;
-    margin-right:1px; 
-    margin-left:10px;
+    margin: 10px 1px 0px 10px;
 }
 
 div.LogSequence  
@@ -77,10 +74,7 @@ div.LogSequence
     padding:1px; 
     border:1pt solid #5462AD;
     border-left: 3pt solid #5462AD;
-    margin-top:5px;
-    margin-bottom:1px;
-    margin-right:1px; 
-    margin-left:10px;
+    margin: 5px 1px 1px 10px;
 }
 
 div.LogKeyword  
@@ -88,10 +82,7 @@ div.LogKeyword
     color: #39499C;
     padding:2px; 
     border:1pt solid #808CCB; 
-    margin-top:2px;
-    margin-bottom:1px;
-    margin-right:1px; 
-    margin-left:10px;
+    margin: 2px 1px 1px 10px;
 }
 
 
@@ -99,11 +90,8 @@ div.LogFunction
 {
     color: #39499C;
     padding:1px; 
-    border:1pt solid #808CCB; 
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:1px; 
-    margin-left:10px;
+    border:1pt solid #808CCB;
+    margin: 1px 1px 1px 10px;
 }
 
 div.LogFunctionDebug
@@ -112,10 +100,7 @@ div.LogFunctionDebug
     padding: 1px; 
     border: 1pt solid black;
     border-left: 5pt solid black;
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:1px; 
-    margin-left:10px;
+    margin: 1px 1px 1px 10px;
 }
 
 div.ResultList  
@@ -123,10 +108,7 @@ div.ResultList
 	color: #39499C;
     padding:1px; 
     border:1pt solid #5462AD; 
-    margin-top:5px;
-    margin-bottom:1px;
-    margin-right:1px; 
-    margin-left:10px;
+    margin: 5px 1px 1px 10px;
 }
 
 div.ResultListDebug
@@ -136,10 +118,7 @@ div.ResultListDebug
     padding:1px; 
     border: 1pt solid black;
     border-left: 5pt solid black;
-    margin-top:5px;
-    margin-bottom:1px;
-    margin-right:1px; 
-    margin-left:10px;
+    margin: 5px 1px 1px 10px;
 }
 
 /* -----------------------------------------*/
@@ -166,10 +145,7 @@ p.LogError
     padding-left:3px; 
     border: 1pt solid #E4473E; /*red; */
     border-left: 5pt solid #E4473E; /*red; */
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:1px; 
-    margin-left:10px;
+    margin: 1px 1px 1px 10px;
 }
 
 
@@ -179,10 +155,7 @@ p.LogPassed
     background-color: white;
     padding:1px; 
     border:2pt solid green; 
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:1px; 
-    margin-left:10px;
+    margin: 1px 1px 1px 10px;
 }
 
 p.LogWarning  
@@ -195,10 +168,7 @@ p.LogWarning
     padding-left:3px; 
     border:1pt solid #E4C23E; 
     border-left:5pt solid #E4C23E;
-  	margin-top:1px;
-    margin-bottom:1px;
-    margin-right:1px; 
-    margin-left:10px;
+    margin: 1px 1px 1px 10px;
 }
 
 p.LogException
@@ -210,10 +180,7 @@ p.LogException
     padding-left:3px; 
     border:1pt solid #B64AA1; 
     border-left:5pt solid #B64AA1;
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:1px; 
-    margin-left:10px;
+    margin: 1px 1px 1px 10px;
 }
 
 p.LogPrint,
@@ -223,11 +190,7 @@ p.LogPrintDebug
 	font-weight: 100;
     font-size: 10pt;
 	padding:3px; 
-    margin-top:2px;
-    margin-bottom:2px;
-    margin-right:1px; 
-    margin-left:10px;
-
+    margin: 2px 2px 1px 10px;
 }
 
 p.LogPrint
@@ -366,10 +329,7 @@ p.VerifyDefault
 	clear:both;
 	font-family: monospace;
 	font-size: 10pt;
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:0px; 
-    margin-left:10px;
+    margin: 1px 0px 1px 10px;
 }
 
 p.VerifyDefault  
@@ -408,15 +368,7 @@ div.pass-bar
 }
  
 div.fail-bar{
-    height:100%;
-    background:#black;
-    float:left;    
+    height: 100%;
+    background: black;
+    float: left;    
 }
-	</style>
-	<script language='JavaScript'>
-	function div_change() {
-		for (i = 0; i < div_change.arguments.length; i++) {
-		var _id = div_change.arguments[i];
-		document.getElementById(_id).style.display = (document.getElementById(_id).style.display == 'none' ) ? 'block' : 'none';
-		}
-	}

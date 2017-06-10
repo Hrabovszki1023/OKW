@@ -1,0 +1,21 @@
+/**
+\~german
+\tableofcontents
+
+\page refAnwenderhandbuch Anwenderhandbuch
+
+- \subpage refWarum_OKW_keine_Kontrollstrukturen_anbietet
+- \subpage refTestfaelle
+- \subpage refAutomatisiertesTesten "Automatisiertes Testen..."
+- \subpage refReduzierungVonAufwände "Aufwandsreduzierung beim Testfall..."
+
+
+Schlüsslewörter für die Überprüfung von GUI-Objketen
+
+\copybrief IOKW_State::VerifyValue(string,string)
+
+\copybrief IOKW_State::VerifyTooltip(string,string)
+
+\copybrief IOKW_State::VerifyTablecellValue(string,string,string,string)
+
+*/

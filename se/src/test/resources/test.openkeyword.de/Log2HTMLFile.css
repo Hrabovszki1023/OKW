@@ -7,10 +7,7 @@ blockquote.KeyWord
     font:12px "Lucida Console", Monospace;
     padding:1px; 
     border:1pt solid lightgray; 
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:0px; 
-    margin-left:10px;
+    margin:1px 0px 1px 10px;
 }
 
 blockquote.Method  
@@ -19,10 +16,7 @@ blockquote.Method
     font:12px "Lucida Console", Monospace;
     padding:1px; 
     border:1pt solid gray; 
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:0px; 
-    margin-left:10px;
+    margin:1px 0px 1px 10px;
 }
 
 
@@ -32,10 +26,7 @@ blockquote.Sequenz
     font:12px "Lucida Console", Monospace;
     padding:1px; 
     border:1pt solid lightgray; 
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:0px; 
-    margin-left:10px;
+    margin:1px 0px 1px 10px;
 }
 
 blockquote.Error  
@@ -44,10 +35,7 @@ blockquote.Error
     font:12px "Lucida Console", Monospace;
     padding:1px; 
     border:2pt solid red; 
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:0px; 
-    margin-left:10px;
+    margin:1px 0px 1px 10px;
 }
 
 blockquote.Passed  
@@ -56,10 +44,7 @@ blockquote.Passed
     font:12px "Lucida Console", Monospace;
     padding:1px; 
     border:2pt solid green; 
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:0px; 
-    margin-left:10px;
+    margin:1px 0px 1px 10px;
 }
 
 blockquote.Warning  
@@ -68,10 +53,7 @@ blockquote.Warning
     font:12px "Lucida Console", Monospace;
     padding:1px; 
     border:2pt solid yellow; 
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:0px; 
-    margin-left:10px;
+    margin:1px 0px 1px 10px;
 }
 
 blockquote.Exception
@@ -80,18 +62,12 @@ blockquote.Exception
     font:12px "Lucida Console", Monospace;
     padding:1px; 
     border:2pt solid magenta; 
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:0px; 
-    margin-left:10px;
+    margin:1px 0px 1px 10px;
 }
 
 p
 {
     font:12px "Lucida Console", Monospace;
     padding:1px; 
-    margin-top:1px;
-    margin-bottom:1px;
-    margin-right:0px; 
-    margin-left:10px;
+    margin:1px 0px 1px 10px;
 }

@@ -4,7 +4,7 @@ public class LogError extends LogBase{
 	
 	protected LogError(LogBase fpParent, String fpsInfo)
 	{
-		Info = fpsInfo;
+	    Info = fpsInfo;
 		myID = AllCount;
 		this.setParent(fpParent);		
 		setError();	

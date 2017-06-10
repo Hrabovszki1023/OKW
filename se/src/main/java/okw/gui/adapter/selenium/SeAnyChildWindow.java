@@ -39,6 +39,7 @@
 
 package okw.gui.adapter.selenium;
 
+
 import java.util.*;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
@@ -51,6 +52,18 @@ import okw.OKW_Const_Sngltn;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+/**
+ * @defgroup groupSeleniumClasses OKW Selenium Klassen
+ * 
+ * @defgroup groupSeleniumChildGUIAdapter OKW Childwindow GUI-Adapterklasse für Selenium
+ * @ingroup groupSeleniumClasses
+ */
+
+
+/**
+ * @ingroup groupSeleniumChildGUIAdapter
+ * @author zoltan
+ */
 public class SeAnyChildWindow extends AnyChildwindow
 {	
     // Logger Instance holen
@@ -136,8 +149,6 @@ public class SeAnyChildWindow extends AnyChildwindow
         {
             this.LogFunctionEndDebug();
         }
-
-        return;
     }
 
     
@@ -1014,8 +1025,6 @@ public class SeAnyChildWindow extends AnyChildwindow
       {
           this.LogFunctionEndDebug();
       }
-      
-      return;
   }
 
 
@@ -1045,16 +1054,15 @@ public class SeAnyChildWindow extends AnyChildwindow
   }
 
 
-  /**  \~german
-	 *  \brief
-	 *  Tastatur Eingabe an das Objekt
+   /**  \~german
+	 *  Tastatureingabe in das aktuelle Objekt.
 	 *  
 	 *  @param fps_Values'>
 	 *  Werte, die via Tastatur eingegeben werden sollen.
 	 *  
 	 *  \~
 	 *  @author Zoltan Hrabovszki
-   * @throws Exception 
+     * @throws Exception 
 	 *  @date 2013.04.11
 	 */
 	public void TypeKey(ArrayList<String> fps_Values)
@@ -1088,14 +1096,12 @@ public class SeAnyChildWindow extends AnyChildwindow
 	    {
 	        this.LogFunctionEndDebug();
 	    }
-	    
-	    return;
 	}
 
 
 	 /**
 	  * \~german
-	  *  Ermittelt den textuellen Inhalt des ToolTips für Prüfewert.
+	  *  Ermittelt den textuellen Inhalt des ToolTips.
 	  *  
 	  *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
 	  *  

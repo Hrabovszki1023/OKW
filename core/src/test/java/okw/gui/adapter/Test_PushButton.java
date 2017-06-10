@@ -71,7 +71,7 @@ import okw.log.*;
             
             try
 			{
-				lvsReturn = okw.core.OKW_CurrentObject_Sngltn.getInstance().GetObjectFN();
+				lvsReturn = okw.core.OKW_CurrentObject_Sngltn.getInstance().getObjectFN();
 			}
 			catch (
 					XPathExpressionException | JAXBException
@@ -136,7 +136,6 @@ import okw.log.*;
             myClipBoard.getValue().add(this.myValue);
             
             this.myLogger.LogFunctionEndDebug();
-            return;
         }
 
         /// \~german
@@ -161,8 +160,6 @@ import okw.log.*;
             myClipBoard.getValue().add(this.myValue);
             
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         /// \~german
@@ -195,8 +192,6 @@ import okw.log.*;
             myClipBoard.getValue().add(fpLsValue.get(0));
             
             myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
 }

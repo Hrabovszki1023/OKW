@@ -1,3 +1,42 @@
+/*
+    ==============================================================================
+      Author: Zoltan Hrabovszki <zh@openkeyword.de>
+
+      Copyright © 2012 - 2017  IT-Beratung Hrabovszki
+      www.OpenKeyWord.de
+    ============================================================================== 
+
+    This file is part of OpenKeyWord.
+
+    OpenKeyWord is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    OpenKeyWord is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with OpenKeyWord.  If not, see <http://www.gnu.org/licenses/>.
+
+    Diese Datei ist Teil von OpenKeyWord.
+
+    OpenKeyWord ist Freie Software: Sie können es unter den Bedingungen
+    der GNU General Public License, wie von der Free Software Foundation,
+    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder späteren
+    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+
+    OpenKeyWord wird in der Hoffnung, dass es nützlich sein wird, aber
+    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+    Siehe die GNU General Public License für weitere Details.
+
+    Sie sollten eine Kopie der GNU General Public License zusammen mit 
+    OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
+*/
+
 package okw.core;
 
 import static org.junit.Assert.*;
@@ -38,7 +77,7 @@ public class CurrentObject_Test {
 	            try
 	            {
 	                // Reset des Loggers: Alle geladenen Instanzen löschen
-	            	Logger_Sngltn.Init();
+	            	Logger_Sngltn.init();
 	                
 	                // Log2NUnit in den Logger laden.
 	            	//myLogger.AddLogger(new Log2NUnit());
@@ -875,10 +914,10 @@ public class CurrentObject_Test {
 	        public void TC_SetChildName() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
 	        {
 	            // Setzen wir den Namen des Fensters
-	            CO.SetWindowName("Rechner");
+	            CO.setWindowName("Rechner");
 	            
 	            // Setzen wir den Namen des Kindobjektes
-	            CO.SetChildName("Taste_3");
+	            CO.setChildName("Taste_3");
 	            
 	            // Nun müssen "Rechner" In Windowname finden.
 	            //assertEquals("Rechner.Taste_3", CO.GetObjectName());
@@ -899,10 +938,10 @@ public class CurrentObject_Test {
 	        {
 	            try
 	            {
-	                OKW_CurrentObject_Sngltn.Init();
+	                OKW_CurrentObject_Sngltn.init();
 	                // Exception wird ausgelöst wenn ein Fenster Objekt nicht gesetzt ist.
 	                // Der Namen des Fensters wurde hier daher bewusst weggelasssen:
-	                CO.SetChildName("Taste_3");
+	                CO.setChildName("Taste_3");
 
 	                // Folgende Zeile darf nicht ausgeführt werden. ... Hier wir auf exception geprüft
 	                fail();
@@ -928,10 +967,10 @@ public class CurrentObject_Test {
 	        public void TC_SetWindowName() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
 	        {
 	            // Setzen wir den Namen des Fensters
-	            CO.SetWindowName("Rechner");
+	            CO.setWindowName("Rechner");
 
 	            // Nun müssen "frm_Rechner" In Windowname finden.
-	            assertEquals("Rechner", CO.GetObjectFN());
+	            assertEquals("Rechner", CO.getObjectFN());
 	        }
 
 	        /// \brief
@@ -946,16 +985,16 @@ public class CurrentObject_Test {
 	        public void TC_SetWindowName_AfterChildWasSetted() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
 	        {
 	            // Setzen wir den Namen des Fensters
-	            CO.SetWindowName("Rechner");
+	            CO.setWindowName("Rechner");
 
 	            // Setzen wir den Namen des Kindobjektes
-	            CO.SetChildName("Taste_3");
+	            CO.setChildName("Taste_3");
 
 	            // Nun müssen "Rechner" In Windowname finden.
 	            // assertEquals("Rechner.Taste_3", CO.GetObjectName());
 
 	            // Nun müssen "frm_Rechner" In Windowname finden.
-	            CO.SetWindowName("Rechner");
+	            CO.setWindowName("Rechner");
 	            // assertEquals("Rechner", CO.GetObjectName());
 	        }
 	}

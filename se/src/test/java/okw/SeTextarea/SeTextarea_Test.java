@@ -49,7 +49,7 @@ import org.junit.rules.TestName;
 @Ignore
 public class SeTextarea_Test {
 
-  OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
+  private OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
 
   protected static String ApplicationName;
 
@@ -197,12 +197,7 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
       EN.MemorizeExists( "Textarea 1", "SeTextarea_MemorizeExists_1" );
 
-      assertEquals(
-          "YES",
-          okw.OKW_Memorize_Sngltn.getInstance().Get(
-              "SeTextarea_MemorizeExists_1" ) );
-
-      
+      assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().get( "SeTextarea_MemorizeExists_1" ) );
       EN.StopApp( ApplicationName );
       EN.EndTest();
       }
@@ -221,7 +216,7 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
       EN.MemorizeHasFocus( "Textarea 1", "SeTextarea_MemorizeHasFocus" );
 
-      assertEquals( "NO", myMem.Get( "SeTextarea_MemorizeHasFocus" ) );
+      assertEquals( "NO", myMem.get( "SeTextarea_MemorizeHasFocus" ) );
       
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -241,7 +236,7 @@ public class SeTextarea_Test {
       EN.SelectWindow( "SeTextarea" );
       EN.MemorizeIsActive( "Textarea 1", "SeTextarea_MemorizeIsActive" );
 
-      assertEquals( "YES", myMem.Get( "SeTextarea_MemorizeIsActive" ) );
+      assertEquals( "YES", myMem.get( "SeTextarea_MemorizeIsActive" ) );
       
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -263,8 +258,8 @@ public class SeTextarea_Test {
       EN.MemorizeLabel( "Textarea 1", "SeTextarea_MemorizeLabel_1" );
       EN.MemorizeLabel( "Textarea 2", "SeTextarea_MemorizeLabel_2" );
 
-      assertEquals( "Label Textarea 1:", myMem.Get( "SeTextarea_MemorizeLabel_1" ) );
-      assertEquals( "Label Textarea 2:", myMem.Get( "SeTextarea_MemorizeLabel_2" ) );
+      assertEquals( "Label Textarea 1:", myMem.get( "SeTextarea_MemorizeLabel_1" ) );
+      assertEquals( "Label Textarea 2:", myMem.get( "SeTextarea_MemorizeLabel_2" ) );
       
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -284,7 +279,7 @@ public class SeTextarea_Test {
       EN.MemorizeTooltip( "Textarea 1", "SeTextarea_MemorizeTooltip" );
 
       assertEquals( "Title Textarea 1",
-      myMem.Get( "SeTextarea_MemorizeTooltip" ) );
+      myMem.get( "SeTextarea_MemorizeTooltip" ) );
 
       
       EN.StopApp( ApplicationName );
@@ -307,8 +302,8 @@ public class SeTextarea_Test {
       EN.TypeKey( "Textarea 1", "Zoltan" );
       EN.MemorizeValue( "Textarea 1", "SeTextarea_LogValue_2" );
 
-      assertEquals( "", myMem.Get( "SeTextarea_LogValue_1" ) );
-      assertEquals( "Zoltan", myMem.Get( "SeTextarea_LogValue_2" ) );
+      assertEquals( "", myMem.get( "SeTextarea_LogValue_1" ) );
+      assertEquals( "Zoltan", myMem.get( "SeTextarea_LogValue_2" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();

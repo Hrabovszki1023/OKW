@@ -7,6 +7,89 @@ import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.gui.OKWLocator;
 
+
+/**
+ * @ingroup groupSeleniumChildGUIAdapter 
+ * 
+ * \~german
+ *  Diese Klasse representiert eine HTML-RadioButton, die mit Selenium angsteuert wird.
+ *  @startuml
+ *   class SeInputRadio [[java:okw.gui.adapter.selenium.SeInputRadio]] {
+ *   ..Construktor..
+ *   +SeInputRadio(String Locator, OKWLocator[] Locators)
+ *   +SeInputRadio(String IframeID, String Locator, OKWLocator[] Locators)
+ *   ..Getter..
+ *   +ArrayList<String> getValue()
+ *   +Boolean getIsSelected()
+ *   +ArrayList<String> getCaption()
+ *   +void SetValue(ArrayList<String> Values)
+ *   +Boolean getHasFocus()
+ *   .. Keyword API..
+ *   +void SetFocus()
+ *   +void TypeKey(ArrayList<String> fps_Values)
+ * }
+ * class SeAnyChildWindow [[java:okw.gui.adapter.selenium.SeAnyChildWindow]] {
+ * }
+ * SeAnyChildWindow <|-- SeInputRadio
+@enduml
+ *  # Unterstützter Tag
+ *  Folgender HTML-Tag wird unterstützt:
+ *  
+ *  \code{.html}
+ *  <input type="radio" id="id_Mastercard" name="Zahlmethode" value="Mastercard">
+ *  <label for="id_Mastercard"> Mastercard</label><br>
+ *  \endcode
+ * 
+ * # Unterstützte GUI-Schlüsselwörter
+ *
+ * ## Kindobjekt Aktionen
+ * 
+ * | OpenKeyWord               | Implementiert | Beschreibung |
+ * | ------------------------- | :-----------: | :----------- |
+ * | `ClickOn( FN )`           | **JA**        |   |
+ * | `DoubleClickOn( FN )`     | **NEIN**      | -> OKWFrameObjectMethodNotImplemented |
+ * | `SetFocus( FN )`          | **NEIN**      | -> OKWFrameObjectMethodNotImplemented |
+ * | `SetValue( FN, Val )`     | **JA**        | Erlaubter Wert: CHECKED ist möglich, UNCHECKED ist nicht möglich. |
+ * | `Select( FN, Val )`       | **JA**        | -> OKWFrameObjectMethodNotImplemented |
+ * | `SelectMenu( FN )`        | **NEIN**      | -> OKWFrameObjectMethodNotImplemented |
+ * | `SelectMenu( FN, Val )`   | **NEIN**      | -> OKWFrameObjectMethodNotImplemented |
+ * | `TypeKey( FN, Val )`      | **NEIN**      | -> OKWFrameObjectMethodNotImplemented |
+ * 
+ * ## Fensterbezogene Schlüsselwörter
+ * 
+ * | OpenKeyWord               | Implementiert | Beschreibung |
+ * | ------------------------- | :-----------: | :----------- |
+ * | `StarApp( AN )`           | **NEIN**      | Kind-Objekt, Checkbox ist kein Fensterobjekt |
+ * | `StopApp( AN )`           | **NEIN**      | Kind-Objekt, Checkbox ist kein Fensterobjekt |
+ * | `SelectWindow( FN )`      | **NEIN**      | Kind-Objekt, Checkbox ist kein Fensterobjekt |
+ * | `Sequence( FN, SQN, SEQ_ID )` | **NEIN**  | Kind-Objekt, Checkbox ist kein Fensterobjekt |
+ * 
+ * ## Verifying, Memorizing, Logging Values
+ * 
+ * Group of keywords using the same GUI-Adapter Methods get*() <br/>
+ * (e.g.: `VerifyExists( FN, ExpVal)`, `MemorizeExists( FN, MemKey)`,`LogExists( FN )` -> `getExists()` )
+ * 
+ * | OpenKeyWord | Implementiert | Beschreibung |
+ * | ----------- | :-----------: | :----------- |
+ * | `VerifyExists( FN, ExpVal)`,    <br>`MemorizeExists( FN, MemKey)`,    <br>`LogExists( FN )` | **JA** |  |
+ * | `VerifyHasFocus( FN, ExpVal )`, <br>`MemorizeHasFocus( FN, MemKey)`,  <br>`LogHasFocus( FN )` | **NEIN** | -> UnsupportedOperationException |
+ * | `VerifyIsActive( FN, ExpVal )`, <br>`MemorizeIsActive( FN, MemKey)`,  <br>`LogIsActive( FN )` | **JA** |  |
+ * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **JA** | Caption ist der sichtbare Text neben der Checkboc |
+ * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )` | - **JA** | Zu Prüfen: Ist eine CheckBox mit einem Label verbindbar? |
+ * | `VerifyTooltip( FN, ExpVal )`,  <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **JA** | Wert des attributes `title` |
+ * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )` | **JA** | Wenn gesetzt = `CHECKED` sonst `UNCHECKED` |
+ * 
+ *  # Quellen/Links
+ *  
+ *  - [SelfHTML: HTML/Formulare](https://wiki.selfhtml.org/wiki/HTML/Formulare)
+ *  - [Issue #140](https://github.com/Hrabovszki1023/OKW/issues/140)
+ *  - [Issue #112](https://github.com/Hrabovszki1023/OKW/issues/112) *  
+ *  \~english
+ *  
+ *  \~
+ *  @author Zoltan Hrabovszki
+ *  @date 2013.04.11
+ */
 public class SeInputRadio extends SeAnyChildWindow
 {
 
@@ -196,7 +279,7 @@ public class SeInputRadio extends SeAnyChildWindow
 	      {
 	          this.LogFunctionStartDebug("getHasFocus");
 	          // String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
-	    	  throw new OKWFrameObjectMethodNotImplemented("The Radiobutton/SeInputRadion don´t has a focos, The RadioList has the focus.");
+	    	  throw new UnsupportedOperationException("The Radiobutton/SeInputRadion can´t have a focus. The RadioList has the focus.");
 	      }
 	      finally
 	      {      
@@ -226,5 +309,20 @@ public class SeInputRadio extends SeAnyChildWindow
       {      
           this.LogFunctionEndDebug( );
       }
+  }
+  
+  /** \~german
+   *  Tastatur Eingabe an das Objekt
+   *  
+   *  @param fps_Values Werte, die via Tastatur eingegeben werden sollen.
+   *  
+   *  \~
+   *  @author Zoltan Hrabovszki
+   *  @date 2013-04-11
+   */
+  public void TypeKey(ArrayList<String> fps_Values)
+  {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new UnsupportedOperationException("Typekey is unsuported.");
   }
 }

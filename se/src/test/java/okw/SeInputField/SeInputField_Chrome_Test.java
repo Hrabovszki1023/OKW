@@ -17,7 +17,7 @@ public class SeInputField_Chrome_Test extends SeInputField_Test
 
         Logger_Sngltn.getInstance();
 		// Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.Init();
+        Logger_Sngltn.init();
 
         //myLog2HTML = new Log2HTML("SeTextField_EN_Chrome_Test.html");
         // Logger_Sngltn.getInstance().AddLogger(myLog2HTML);

@@ -519,7 +519,7 @@ public class SeRadioList_Test
 
     EN.Select( "Pay Method", "Visa");
     EN.MemorizeValue( "Pay Method", "SeRadioList_MemorizeValue_1" );
-    assertEquals( "Visa", okw.OKW_Memorize_Sngltn.getInstance().Get( "SeRadioList_MemorizeValue_1" ) );
+    assertEquals( "Visa", okw.OKW_Memorize_Sngltn.getInstance().get( "SeRadioList_MemorizeValue_1" ) );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -571,7 +571,7 @@ public class SeRadioList_Test
 
     EN.Select( "Pay Method", "Visa");
     EN.MemorizeValue( "Pay Method", "SeRadioList_MemorizeValue_1" );
-    assertEquals( "Visa", okw.OKW_Memorize_Sngltn.getInstance().Get( "SeRadioList_MemorizeValue_1" ) );
+    assertEquals( "Visa", okw.OKW_Memorize_Sngltn.getInstance().get( "SeRadioList_MemorizeValue_1" ) );
 
     EN.Select( "Pay Method", "American Express");
     EN.MemorizeValue( "Pay Method", "${IGNORE}" );
@@ -598,7 +598,7 @@ public class SeRadioList_Test
 
     EN.Select( "Pay Method", "Visa");
     EN.MemorizeValue( "Pay Method", "SeRadioList_MemorizeValue_1" );
-    assertEquals( "Visa", okw.OKW_Memorize_Sngltn.getInstance().Get( "SeRadioList_MemorizeValue_1" ) );
+    assertEquals( "Visa", okw.OKW_Memorize_Sngltn.getInstance().get( "SeRadioList_MemorizeValue_1" ) );
 
     EN.Select( "Pay Method", "American Express");
     EN.MemorizeValue( "Pay Method", "" );
@@ -908,7 +908,7 @@ public class SeRadioList_Test
 
     EN.Select( "Pay Method", "Visa");
     EN.MemorizeLabel( "Pay Method", "SeRadioLabel_MemorizeValue_2" );
-    assertEquals( "Pay with:", okw.OKW_Memorize_Sngltn.getInstance().Get( "SeRadioLabel_MemorizeValue_2" ) );
+    assertEquals( "Pay with:", okw.OKW_Memorize_Sngltn.getInstance().get( "SeRadioLabel_MemorizeValue_2" ) );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -995,7 +995,7 @@ public class SeRadioList_Test
     EN.SelectWindow( "SeRadioList" );
 
     EN.MemorizeTooltip( "Pay Method", "SeRadioList_MemorizeTooltip_1" );
-    assertEquals( "fieldset-title", okw.OKW_Memorize_Sngltn.getInstance().Get( "SeRadioList_MemorizeTooltip_1" ) );
+    assertEquals( "fieldset-title", okw.OKW_Memorize_Sngltn.getInstance().get( "SeRadioList_MemorizeTooltip_1" ) );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();

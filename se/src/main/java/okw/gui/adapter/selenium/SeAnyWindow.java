@@ -52,7 +52,25 @@ import okw.OKW_Const_Sngltn;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+/**
+ * \~
+ * @defgroup groupSeleniumWindowGUIAdapter OKW Window GUI-Adapterklassen für Selenium
+ * @ingroup groupSeleniumClasses
+ */
 
+
+/** 
+ * 
+ * \~german
+ * @ingroup groupSeleniumWindowGUIAdapter
+ * 
+ * SeAnyWindow ist eine Fenster GUI-Adapterklasse.
+ * 
+ *  \~english
+ *  \~
+ *  @author Zoltán Hrabovszki
+ *  @date 2017-06-05
+ */
 public class SeAnyWindow extends AnyWindow
 {	
     // Logger Instance holen
@@ -126,8 +144,6 @@ public class SeAnyWindow extends AnyWindow
         {
             this.LogFunctionEndDebug();
         }
-
-        return;
     }
 
     
@@ -906,8 +922,6 @@ public class SeAnyWindow extends AnyWindow
         {
             this.LogFunctionEndDebug();
         }
-        
-        return;
     }
 
     
@@ -1254,8 +1268,6 @@ public class SeAnyWindow extends AnyWindow
 	    {
 	        this.LogFunctionEndDebug();
 	    }
-	    
-	    return;
 	}
 
 

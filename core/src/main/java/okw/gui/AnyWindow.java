@@ -220,7 +220,7 @@ public AnyWindow(String fpsLocator, OKWLocator... fpLocators )
 	  Integer Count = 0;
 
 	  try{
-	  OKW MyOKW = FrameObjectDictionary_Sngltn.getInstance().GetOKW( this.getKN() );
+	  OKW MyOKW = FrameObjectDictionary_Sngltn.getInstance().getOKW( this.getKN() );
 	
 	  // TimeOut-Werte Ermitteln
 	  OKW_TimeOut timeout = new OKW_TimeOut( MyOKW.WaitForMe_TO(),MyOKW.WaitForMe_PT());

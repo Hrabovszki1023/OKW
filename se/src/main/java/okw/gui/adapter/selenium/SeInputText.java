@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015, 2016 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -46,124 +46,190 @@ import org.openqa.selenium.WebElement;
 
 import okw.gui.OKWLocator;
 
+/**
+ * @ingroup groupSeleniumChildGUIAdapter 
+ *
+ * \~german
+ *  Diese Klasse representiert ein HTML-Textfeld, die mit Selenium angsteuert wird.
+ *  
+ *  # Unterstützter Tag
+ *  Folgende Kombination aus Label/Input-Tags wird unterstützt:
+ *  
+ *  \code{.html}
+ *  <label for="ID_Name">Name:</label>
+ *  <input type="text" name="Name" id="ID_Name" title="Title Name" size="30" maxlength="30">
+ *  \endcode
+ * 
+ * # Unterstützte GUI-Schlüsselwörter
+ *
+ * ## Kindobjekt Aktionen
+ * 
+ * | OpenKeyWord               | Implementiert | Beschreibung |
+ * | ------------------------- | :-----------: | :----------- |
+ * | `ClickOn( FN )`           | **JA**        |  |
+ * | `DoubleClickOn( FN )`     | **JA**        |  |
+ * | `SetFocus( FN )`          | **JA**        |  |
+ * | `SetValue( FN, Val )`     | **JA**        | Sichtbarer Eigabewert des Textfeldes |
+ * | `Select( FN, Val )`       | **NEIN**      | Im einem Textfeld ist kein Wert auswählbar -> throw OKWFrameObjectMethodNotImplemented |
+ * | `SelectMenu( FN )`        | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
+ * | `SelectMenu( FN, Val )`   | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
+ * | `TypeKey( FN, Val )`      | **NEIN**      | Sichtbarer Wert des Textfeldes wir vie Tastatur eingegeben |
+ * 
+ * ## Fensterbezogene Schlüsselwörter
+ * 
+ * | OpenKeyWord               | Implementiert | Beschreibung |
+ * | ------------------------- | :-----------: | :----------- |
+ * | `StarApp( AN )`           | **NEIN**      | Kind-Objekt, Textfeld ist kein Fensterobjekt |
+ * | `StopApp( AN )`           | **NEIN**      | Kind-Objekt, Textfeld ist kein Fensterobjekt |
+ * | `SelectWindow( FN )`      | **NEIN**      | Kind-Objekt, Textfeld ist kein Fensterobjekt |
+ * | `Sequence( FN, SQN, SEQ_ID )` | **NEIN**  | Kind-Objekt, Textfeld ist kein Fensterobjekt |
+ * 
+ * ## Verifying, Memorizing, Logging Values
+ * 
+ * Group of keywords using the same GUI-Adapter Methods get*() <br/>
+ * (e.g.: `VerifyExists( FN, ExpVal)`, `MemorizeExists( FN, MemKey)`,`LogExists( FN )` -> `getExists()` )
+ * 
+ * | OpenKeyWord | Implementiert | Beschreibung |
+ * | ----------- | :-----------: | :----------- |
+ * | `VerifyExists( FN, ExpVal)`,    <br>`MemorizeExists( FN, MemKey)`,    <br>`LogExists( FN )`   | **JA** |  |
+ * | `VerifyHasFocus( FN, ExpVal )`, <br>`MemorizeHasFocus( FN, MemKey)`,  <br>`LogHasFocus( FN )` | **JA** |  |
+ * | `VerifyIsActive( FN, ExpVal )`, <br>`MemorizeIsActive( FN, MemKey)`,  <br>`LogIsActive( FN )` | **JA** |  |
+ * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **JA** | Der sichtbare Text eines Textfeldes entspricht sein _Wert_ -> In diesem GUI-Adapter sind VerifyCaption und VerifyValue identisch. |
+ * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )`     | **JA** | Im Beispie. `Name:` |
+ * | `VerifyTooltip( FN, ExpVal )`,  <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **JA** | Als Tooltip wird das Attribute `title` verwendet.  Im Beispiel: `Title Name` |
+ * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )`     | **JA** | Der sichtbare Text eines Textfeldes ist sein Wert |
+ * 
+ *  # Quellen/Links
+ *  
+ *  - [SELFHTML-Wiki input](https://wiki.selfhtml.org/wiki/Referenz:HTML/input)
+ *  - [Issue #107](https://github.com/Hrabovszki1023/OKW/issues/107)
+ *  - [Issue #121](https://github.com/Hrabovszki1023/OKW/issues/121)
+ *  
+ *  \~english
+ *  
+ *  \~
+ * @author Zoltán Hrabovszki
+ * @date 2016.09.05
+ */
+public class SeInputText extends SeAnyChildWindow
+{
+
+    /**
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+     */
+    public SeInputText( String Locator, OKWLocator... Locators )
+    {
+        super( Locator, Locators );
+    }
+
+    /**
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+     *  
+     *  @date 2017.02.17
+     */
+    public SeInputText( String IframeID, String Locator, OKWLocator... Locators )
+    {
+        super( IframeID, Locator, Locators );
+    }
 
     /** \~german
-     *  \brief
-     *  Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld<br/>.
-     *  GUI-Automatisierungswerkzeug: Selenium.<br/>
-     *  Die meisten Methoden werden aus der abtrakten Klasse SeSimpleDataObjekt geerbt.
+     *  Ermittelt den textuellen Inhalt der Überschrift eines Textfeldes.
      *  
+     *  Im GUI-adapter SeInputText ist die Überschrift (Caption) gleich dem Wert des Textfeldes.
+     *  Daher ruft `SeInputText::getCaption()` die Methode `SeInputText::getValue()` auf!
+     *   
+     *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+     *  \~english
      *  \~
-     *  \author Zoltan Hrabovszki
-     *  \date 2014.06.2014
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
      */
-    public class SeInputText extends SeAnyChildWindow
+    @Override
+    public ArrayList<String> getCaption()
     {
-
-       /**
-        *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
-        */         
-        public SeInputText(String Locator, OKWLocator... Locators)
-        {
-        	super(Locator, Locators);
-        }
-
-        
-        /**
-         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
-         *  
-         *  @date 2017.02.17
-         */
-         public SeInputText(String IframeID, String Locator, OKWLocator... Locators)
-         {
-           super(IframeID, Locator, Locators);
-         }
-
-         
-        /// \~german
-        /// \brief
-        /// Ermittelt den textuellen Inhalt eines Textfeldes.<br/>.
-        /// GUI-Automatisierungswerkzeug: Selenium.<br/>
-        /// 
-        /// \return
-        /// Gibt den Textuellen Inhaltes eines DOM-TextField-s zurück.
-        /// Es korrespondieren je eine Zeile des GUI-Objektes mit jeweil einem Listen-Element.<br/>
-        /// Ein Textfield besteht aus einerZeile: Daher wird der Wert des Textfield-s im ListenElement[0] abgelegt.
-        /// Zurückgegeben.
-        /// \return
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014.06.2014
-        @Override
-        public ArrayList<String> getValue()
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-
-            try
-            {
-                this.LogFunctionStartDebug("GetValue");
-
-                // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-                this.WaitForMe();
-
-                // Get Value from TextField and put this into the return List<string>
-                String myValue = this.Me().getAttribute("value");
-                
-                if(!myValue.isEmpty())
-                {
-                  lvLsReturn.add(this.Me().getAttribute("value"));
-                }
-
-            }
-            finally
-            {
-                    this.LogFunctionEndDebug(lvLsReturn.toString());
-            }
-
-            return lvLsReturn;
-        }
-        
-        public void setAttribute( WebElement elem, String value )
-        {
-        	JavascriptExecutor js = (JavascriptExecutor) SeDriver.getInstance().driver; 
-
-            String scriptSetAttrValue = "arguments[0].setAttribute(arguments[1],arguments[2])";
-
-            js.executeScript(scriptSetAttrValue, elem, "value", value);
-
-        }
-
-  /**
-   *  \~german
-   */
-  public void SetValue( ArrayList<String> Val )
-  {
-
-    try
-    {
-        this.LogFunctionStartDebug( "SetValue", "Val", Val.toString() );
-
-        // Wenn GUI-Objekt nicht gefunden wird, mit OKWGUIObjectNotFoundException aussteigen
-        this.WaitForMe();
-
-        WebElement myMe = this.Me();
-        myMe.clear();
-        
-        if( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
-        {
-          myMe.clear();
-        }
-        else
-        {
-          myMe.sendKeys( Val.get( 0 ) );
-        }
-    }
-    finally
-    {
-      this.LogFunctionEndDebug();
+        return getValue();
     }
 
-    return;
-  }
+    /** \~german
+     *  Ermittelt den Wert des Textfeldes, welches dem sichtbaren .
+     *  
+     *  @return
+     *  Gibt den Textuellen Inhaltes des TextFeldes zurück.
+     *  Es korrespondieren je eine Zeile des GUI-Objektes mit jeweil einem Listen-Element.<br/>
+     *  Ein Textfield besteht aus einerZeile: Daher wird der Wert des Textfield-s im ListenElement[0] zurückgegeben.
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2014.06.2014
+     */
+    @Override
+    public ArrayList<String> getValue()
+    {
+        ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+        try
+        {
+            this.LogFunctionStartDebug( "GetValue" );
+
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
+
+            // Get Value from TextField and put this into the return List<string>
+            String myValue = this.Me().getAttribute( "value" );
+
+            if ( myValue != null )
+            {
+                lvLsReturn.add( this.Me().getAttribute( "value" ) );
+            }
+
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvLsReturn.toString() );
+        }
+
+        return lvLsReturn;
+    }
+
+    public void setAttribute( WebElement elem, String value )
+    {
+        JavascriptExecutor js = ( JavascriptExecutor ) SeDriver.getInstance().driver;
+
+        String scriptSetAttrValue = "arguments[0].setAttribute(arguments[1],arguments[2])";
+
+        js.executeScript( scriptSetAttrValue, elem, "value", value );
+
+    }
+
+    /**
+     *  \~german
+     */
+    @Override
+    public void SetValue( ArrayList<String> Val )
+    {
+
+        try
+        {
+            this.LogFunctionStartDebug( "SetValue", "Val", Val.toString() );
+
+            // Wenn GUI-Objekt nicht gefunden wird, mit OKWGUIObjectNotFoundException aussteigen
+            this.WaitForMe();
+
+            WebElement myMe = this.Me();
+            myMe.clear();
+
+            if ( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            {
+                myMe.clear();
+            }
+            else
+            {
+                myMe.sendKeys( Val.get( 0 ) );
+            }
+        }
+        finally
+        {
+            this.LogFunctionEndDebug();
+        }
+    }
 
 }

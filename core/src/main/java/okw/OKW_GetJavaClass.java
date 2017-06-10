@@ -31,11 +31,11 @@ public class OKW_GetJavaClass
 				// Hier handelt es sch um eine *.jar Datei
 				// "file:/some/path/myfile.jar!/okw/gui/frames"
 
-				lvClassPath = okw.OKW_Helper.GetRightFromDelimiterNumber(lvClassPath, "file:", 1);
+				lvClassPath = okw.OKW_Helper.getRightFromDelimiterNumber(lvClassPath, "file:", 1);
 				
 				// nun rechts von "!" abschneiden incl. "!" weg!
 				// Ergebniss: "/some/path/myfile.jar"
-				lvClassPath = okw.OKW_Helper.GetLeftFromDelimiterNumber( lvClassPath, "!", 1);
+				lvClassPath = okw.OKW_Helper.getLeftFromDelimiterNumber( lvClassPath, "!", 1);
 			}
 					
 			File file = new File(lvClassPath);

@@ -15,7 +15,7 @@ public class SeInputRadio_EN_Chrome_Test extends SeInputRadio_EN_Test
 
         Logger_Sngltn.getInstance();
 		// Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.Init();
+        Logger_Sngltn.init();
 
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}

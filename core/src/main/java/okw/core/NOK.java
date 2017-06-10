@@ -62,14 +62,18 @@ import okw.log.*;
 public class NOK implements IOKW_State
 {
 
-    OKWLanguage   AL = OKWLanguage.getInstance();
-    // OKW_Docu MyOKWDocu = OKW_Docu.getInstance();
+    private OKWLanguage   AL = OKWLanguage.getInstance();
 
-    Logger_Sngltn Log;
+    private Logger_Sngltn Log;
 
-    Core          _Kernel;
+    private Core          _Kernel;
 
     /** \~german
+     *  Diese Klasser repräsentiert den Zustand "Not OK".
+     *  
+     *  Wenn ein Schlüsselwort eine Ausnahme auslöst, dann wechselt der Zustand von OK nach NOK.
+     *  Die Schlüsselwörter dieser Klassen führen, bis auf einge ausnahmen, kein GUI aktivitäten aus.
+     * 
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
@@ -94,10 +98,10 @@ public class NOK implements IOKW_State
             OKW_Ini_Sngltn.getInstance().Init();
 
             OKW_CurrentObject_Sngltn.getInstance();
-            OKW_CurrentObject_Sngltn.Init();
+            OKW_CurrentObject_Sngltn.init();
 
             // Memorize TestCaseName
-            OKW_Memorize_Sngltn.getInstance().Set( "TCN", fpsTestname );
+            OKW_Memorize_Sngltn.getInstance().set( "TCN", fpsTestname );
 
             Log.LogPrint( "NOK -> OK" );
             this._Kernel.SetCurrentState( new OK( this._Kernel ) );
@@ -400,7 +404,7 @@ public class NOK implements IOKW_State
      *  @author Zoltán Hrabovszki
      *  @date 02.03.2013
      */ 
-    public void SetLanguage( String Language )
+    public void setLanguage( String Language )
     {
         this.AL.setLanguage( Language );
     }

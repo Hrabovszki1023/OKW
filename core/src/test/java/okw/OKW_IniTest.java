@@ -17,12 +17,9 @@ import okw.log.Logger_Sngltn;
 public class OKW_IniTest
 {
 	@Rule
-	public TestName	name	= new TestName();
+	public TestName	name = new TestName();
     
-	static Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
-	static OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
-    
-	static String			myOKW_Xml	= "";
+	private static Logger_Sngltn myLogger  = Logger_Sngltn.getInstance();
 
 	protected static void setEnv( String fpsKey, String fpsValue )
 	{
@@ -58,7 +55,7 @@ public class OKW_IniTest
 	}
 
 	@BeforeClass
-	public static void MySetUp()
+	public static void mySetUp()
 	{
         // Reset des Loggers: Alle Instanzen löschen
         //Logger_Sngltn.Init();
@@ -66,80 +63,68 @@ public class OKW_IniTest
         myLogger.setDebugMode(false);
 	}
 
-	@AfterClass
-	public static void MyTearDown()
-	{
 
-	}
-
-	/// \~german
-	/// \brief
-	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
-	/// * Umgebungsvariable setzten.
-	/// * OKW_Ini Instanzieren.
-	/// * OKW_Ini_Sngltn.xml existiert und ist an der richtigen stelle.
-	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
-	/// * OKW_Ini Eigenschaften Prüfen.
-	///
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.11.25
-	// [Category("WIN")]
+	/** \~german
+	 *  Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	 * 
+	 * + Umgebungsvariable setzten.
+	 * + OKW_Ini Instanzieren.
+	 * + OKW_Ini_Sngltn.xml existiert und ist an der richtigen stelle.
+	 * + OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	 *  + OKW_Ini Eigenschaften Prüfen.
+	 *
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  @date 2013.11.25
+	 * 
+	 */
 	@Test
 	@Ignore
-	public void TC_Windows_OKW_Env_Set_XML_Exist()
+	public void tcWindowsOKWEnvSetXmlExist()
 	{
 		String OKW_Xml = "";
 
-		try
-		{
 			// 1. Merken wir den aktuellen OKW_Xml Wert
 			OKW_Xml = System.getenv("OKW_Xml");
 
-			assertEquals(true, OKW_FileHelper.DirectoryExists(OKW_Xml));
+			assertEquals(true, OKW_FileHelper.directoryExists(OKW_Xml));
 
 			// 2. Wert auf den 1. definierten Wert setzen
 			OKW_Ini_Sngltn.Reset();
 			OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
 
 			// Sind die Angaben zu OKW_Ini_Sngltn.xml Richtig?
-			assertEquals(true, OKW_FileHelper.FileExists(myOKW_Ini.OKW_Enviroment.getFile_OKW_Ini_xml()));
-			assertEquals(true, OKW_FileHelper.FileExists(myOKW_Ini.OKW_Enviroment.getFile_OKW_Keymaps_xml()));
+			assertEquals(true, OKW_FileHelper.fileExists(myOKW_Ini.OKW_Enviroment.getFile_OKW_Ini_xml()));
+			assertEquals(true, OKW_FileHelper.fileExists(myOKW_Ini.OKW_Enviroment.getFile_OKW_Keymaps_xml()));
 
 			// Folgende Datein werden zur ggf zur Laufzeit angelegt. Daher
 			// erfolgt hier nur die Prüfung ob die Zile verzeichnisse vorhanden
 			// sind.
 			assertEquals(true, OKW_FileHelper
-					.DirectoryExists(Paths.get(myOKW_Ini.OKW_Enviroment.getFile_OKW_Memorize_xml()).toString()));
-			assertEquals(true, OKW_FileHelper.DirectoryExists(
+					.directoryExists(Paths.get(myOKW_Ini.OKW_Enviroment.getFile_OKW_Memorize_xml()).toString()));
+			assertEquals(true, OKW_FileHelper.directoryExists(
 					Paths.get(myOKW_Ini.OKW_Enviroment.getFile_OKW_ImplementationMatrix_xml()).toString()));
 
-			assertEquals(true, OKW_FileHelper.DirectoryExists(myOKW_Ini.OKW_Enviroment.getFolder_XML()));
-			assertEquals(true, OKW_FileHelper.DirectoryExists(myOKW_Ini.OKW_Enviroment.getFolder_LogMessages()));
-
-		}
-		finally
-		{
-			// Umgebung zurücksetzen...
-		}
+			assertEquals(true, OKW_FileHelper.directoryExists(myOKW_Ini.OKW_Enviroment.getFolder_XML()));
+			assertEquals(true, OKW_FileHelper.directoryExists(myOKW_Ini.OKW_Enviroment.getFolder_LogMessages()));
 	}
 
-	/// \~german
-	/// \brief
-	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
-	/// * Umgebungsvariable setzten.
-	/// * OKW_Ini Instanzieren.
-	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
-	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
-	/// * OKW_Ini Eigenschaften Prüfen.
-	///
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.11.25
-	// [Category("WIN")]
+	/** \~german
+     *
+	 * Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	 *  - Umgebungsvariable setzten.
+	 * - OKW_Ini Instanzieren.
+	 * - OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	 * - OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	 * - OKW_Ini Eigenschaften Prüfen.
+	 *
+	 * \~
+	 * @author Zoltan Hrabovszki
+	 * @date 2013.11.25
+     */
 	@Test
 	@Ignore
-	public void TC_Check_All_Path_with_OKW_Xml()
+	public void tcCheckAllPathWithOKWXml()
 	{
 		String OKW_Xml_Path_Expected = "";
 
@@ -178,7 +163,7 @@ public class OKW_IniTest
 	/// \date 2013.11.25
 	@Test
 	@Ignore
-	public void TC_Check_All_Path_without_OKW_Xml()
+	public void tcCheckAllPathWithoutOKWXml()
 	{
 		String OKW_Xml_original = "";
 		@SuppressWarnings("unused")
@@ -213,9 +198,9 @@ public class OKW_IniTest
 
 			// ------------------------------------------------------------------------------
 			// 3. kopieren des XML-Verzechnisses zur OKW.dll
-			OKW_FileHelper.DirectoryDelete(Path_XML_Destination);
+			OKW_FileHelper.deleteDirectory(Path_XML_Destination);
 			// Das Zielverzeichniss löschen.
-			OKW_FileHelper.DirectoryCopy(Path_XML_Source, Path_XML_Destination);
+			OKW_FileHelper.copyDirectory(Path_XML_Source, Path_XML_Destination);
 
 			// ------------------------------------------------------------------------------
 			// Test durchführen...
@@ -229,12 +214,11 @@ public class OKW_IniTest
 			assertEquals(Paths.get(SolutionDir, "bin\\Debug").toString(), myOKW_Ini.MyDirectory());
 			assertEquals(Path_XML_Destination, myOKW_Ini.OKW_Enviroment.getFolder_XML());
 			assertEquals(Paths.get(Path_XML_Destination, "OKW_Ini_Sngltn.xml"),
-					myOKW_Ini.OKW_Enviroment.getFile_OKW_Ini_xml());
+		    myOKW_Ini.OKW_Enviroment.getFile_OKW_Ini_xml());
 
 		}
 		finally
 		{
-
 			// ------------------------------------------------------------------------------
 			// Wieder Herstellen der Umgebung
 			// ------------------------------------------------------------------------------
@@ -262,7 +246,7 @@ public class OKW_IniTest
 	/// \date 2013.11.25
 	@Test
 	@Ignore
-	public void TC_Windows_OKW_Env_Set_XML_NotExist_Exception()
+	public void tcWindowsOKWEnvSetXMLNotExistException()
 	{
 		// 1. Merken wir den aktuellen OKW_Xml Wert
 		String OKW_Xml_original = System.getenv("OKW_Xml");
@@ -280,7 +264,7 @@ public class OKW_IniTest
 		{
 			@SuppressWarnings("unused")
 			OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
-			Assert.fail("Exception wurde nicht ausgelöst");
+			fail("Exception wurde nicht ausgelöst");
 		}
 		catch (OKWFileDoesNotExistsException e)
 		{
@@ -288,7 +272,7 @@ public class OKW_IniTest
 			Logger_Sngltn.getInstance().LogPrint("OKWFileDoesNotExistsException: " + e.getMessage());
 			assertEquals("Directory not found: >>" + Path_XML_invalid + "<<", e.getMessage());
 
-			// Assert. pass("Exception wurde ausgelöst, das ist für diesen Test
+			// pass("Exception wurde ausgelöst, das ist für diesen Test
 			// OK!");
 		}
 		finally
@@ -306,7 +290,7 @@ public class OKW_IniTest
 	/// \date 2013.11.25
 	@Test
 	@Ignore
-	public void TC_VerifyFolder_XML()
+	public void tcVerifyFolderXML()
 	{
 		
 		//Get file from resources folder
@@ -342,7 +326,7 @@ public class OKW_IniTest
 	/// \date 2013.11.25
 	// [Category("WIN")]
 	@Test
-	public void TC_Check_Path_OKW_Const()
+	public void tcCheckPathOKWConst()
 	{
 		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
 		
@@ -374,7 +358,7 @@ public class OKW_IniTest
 	/// \date 2013.11.25
 	// [Category("WIN")]
 	@Test
-	public void TC_Check_Path_OKW_Docu()
+	public void tcCheckPathOKWDocu()
 	{
 		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
 		
@@ -405,7 +389,7 @@ public class OKW_IniTest
 	/// \date 2013.11.25
 	// [Category("WIN")]
 	@Test
-	public void TC_Check_Path_OKW_ImplementationMatrix()
+	public void tcCheckPathOKWImplementationMatrix()
 	{
 		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
 		
@@ -437,7 +421,7 @@ public class OKW_IniTest
 	/// \date 2013.11.25
 	// [Category("WIN")]
 	@Test
-	public void TC_Check_Path_OKW_Ini()
+	public void tcCheckPathOKWIni()
 	{
 		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
 		
@@ -468,7 +452,7 @@ public class OKW_IniTest
 	/// \date 2013.11.25
 	// [Category("WIN")]
 	@Test
-	public void TC_Check_Path_OKW_Keymaps()
+	public void tcCheckPathOKWKeymaps()
 	{
 		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
 		
@@ -499,7 +483,7 @@ public class OKW_IniTest
 	/// \date 2013.11.25
 	// [Category("WIN")]
 	@Test
-	public void TC_Check_Path_OKW_Memorize()
+	public void tcCheckPathOKWMemorize()
 	{
 		OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
 		

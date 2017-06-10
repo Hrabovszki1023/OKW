@@ -47,7 +47,9 @@ import okw.gui.OKWLocator;
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
     
-    /** \brief
+    /** 
+     * @ingroup groupSeleniumChildGUIAdapter
+     * 
      *  SeListBox ist ein Selenium GUI-Objekt.
      *  Erbt von SeAnyChildWindow
      */ 
@@ -104,7 +106,6 @@ import okw.gui.OKWLocator;
             {
                 this.LogFunctionEndDebug();
             }
-            return;
         }
 
         
@@ -161,8 +162,6 @@ import okw.gui.OKWLocator;
             {
                 this.LogFunctionEndDebug();
             }
-
-            return;
         }
 
 

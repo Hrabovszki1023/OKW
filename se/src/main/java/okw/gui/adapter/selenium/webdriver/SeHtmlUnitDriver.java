@@ -47,21 +47,22 @@ import okw.gui.adapter.selenium.SeDriver;
 import okw.log.Logger_Sngltn;
 
 
-    /// \~german
-    /// \brief
-    /// Implementiert den Selenium HTMLUnit-Driver 
-    /// 
-    /// 
-    /// \todo TODO: Ausführliche Beschreibung
-    /// 
-    /// \~english
-    /// \brief \todo TODO: Brief Description.
-    /// 
-    /// \todo TODO: Detailed Description
-    /// 
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2015.05.12
+    /** \~german
+     * @ingroup groupSeleniumDriverFrames
+     * Implementiert den Selenium HTMLUnit-Driver 
+     * 
+     * 
+     * \todo TODO: Ausführliche Beschreibung
+     * 
+     * \~english
+     * \todo TODO: Brief Description.
+     * 
+     *  \todo TODO: Detailed Description
+     * 
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2015-05-12
+     */
     public class SeHtmlUnitDriver extends AnyWindow
     {
         protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();

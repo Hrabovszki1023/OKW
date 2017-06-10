@@ -1,0 +1,108 @@
+
+/*!
+
+@page refTutorial02 Tutorial 2: Einen Testfall mit OKW in JUnit erstellen ("Hello Test" - Teil 2)
+ 
+@section refTutorial02_JUnit_TestKlasse_Anlegen 1. JUnit TestKlasse anlegen.
+
+Eine JUnit Klasse wird folgender maßen angelegt:
+
+
+```
+EN.SelectWindow("EcLipse");
+EN.SelectMenu("File->New->JUnit Test Case");
+
+EN.SelectWindow("New JUnit Test Case");
+EN.SetValue("New JUnit 4 test")
+EN.SetValue("Source Folder", "OKW_Tutorial/src/test/java")
+
+EN.SetValue("Package", "${IGNORE}");
+EN.SetValue("Name", "Hello_OKW");
+EN.SetValue("Superclass", "${IGNORE}");
+
+EN.SetValue("setUpBeforeClass", "UNCHEKED");
+EN.SetValue("setUp", "UNCHEKED");
+EN.SetValue("tearDownAfterClass", "UNCHEKED");
+EN.SetValue("tearAfter", "UNCHEKED");
+```
+
+@section refTutorial02_a 2. Eine Testcase-Methode einfügen.
+
+Nachdem Anlegen sollte die erzeugte Klasse bzw. die Datei in Eclipse geöffnet und angezeigt werden.
+
+Als Testfall legen wir `tcHello_OKW()` an.
+
+```
+    @Test
+    public void tcHello_OKW() throws Exception
+    {
+        EN.BeginTest( "Hello Test" );
+        // Add test steps here...	
+        EN.EndTest();
+    }
+```
+
+Die beiden Schlüsselwörter bedeuten:
+
+* `EN.BeginTest( "Hello Test" );` - Initialisiert OKW: Wenn mehrere Testfälle hintereinander ausgeführt werden und einer der Testfälle schlägt fehl (z.B. wegen einer Abweichung oder Exception), dann wird mit BeginTest OKW wieder in den Initialzustand versetzt. Technisch wechselt ggf. OKW vom Zustand NOK nach OK.  
+ 
+* `EN.EndTest();` - Löst Aufräum-Aktionen aus, sofern diese definiert worden sind und es wird dem Logging mit geteilt das nun der Testfall beendet ist.
+
+> Das Verschachteln von BeginTest/EndTest ist nicht erlaubt.
+
+
+Nun wird der java-compiler `EN` anmeckern, weil wir OKW noch nicht der Klasse "vorgestellt" haben:
+Dazu vor oder nach (wie´s gefällt) `import org.junit.Test;` folgende Zeile einfügen:
+
+```
+import okw.core.EN;
+```
+
+Alles zusammen sollte etwa so aussehen:
+
+```
+import org.junit.Test;
+
+import okw.core.EN;
+
+public class Hello_OKW{
+
+    @Test
+    public void tcHello_OKW() throws Exception
+    {
+        EN.BeginTest( "Hello Test" );
+        // Add test steps here...	
+        EN.EndTest();
+    }
+}
+```
+
+Damit ist schon ein minimal JUnit-Rahmen für die Erstellung und Ausführung von Testfällen mit OKW fertig.
+
+@section refTutorial02_B 3. Testfall `tcHello_OKW` ausführen
+
+```
+EN.SelectWindow("EcLipse");
+EN.SelectContext("Project Explorer", "/OKW_Tutorial/src/test/java/(default package)/Hello_OKW.java", );
+EN.SelectMenu("Run->Run As->JUnit Test");
+```
+
+@section refTutorial02_Result Result
+Das Result-Log von OKW ist etwas länger, so wird u.a. eine Liste der gefundenen Frames ausgegeben, aber die ent scheidende Ausgabe ist am Ende zu finden:
+
+```
+-------------------------------------------------------------------------
+Testcase: "Hello Test"
+  Memorize value of MemKey 'TCN'...
+    Value('TCN') = 'Hello Test'
+-------------------------------------------------------------------------
+```
+
+> Die beiden Zeilen unter `Testcase: "Hello Test"` zeigen an, das OKW sich den Testfall-Namen gemerkt hat.
+mit `${TCN}` kann dieser in Schlüsselwörtern verwendet werden.
+
+Damit haben wir den ersten OKW Testfall erstellt.
+
+Im nächsten Tutorial werden wir einen einfachen aber etwas längeren Testfall in OKW Schlüsselwort-Notation erstellen.
+
+*/

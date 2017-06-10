@@ -1,3 +1,42 @@
+/*
+    ==============================================================================
+      Author: Zoltan Hrabovszki <zh@openkeyword.de>
+
+      Copyright © 2012 - 2017  IT-Beratung Hrabovszki
+      www.OpenKeyWord.de
+    ============================================================================== 
+
+    This file is part of OpenKeyWord.
+
+    OpenKeyWord is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    OpenKeyWord is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with OpenKeyWord.  If not, see <http://www.gnu.org/licenses/>.
+
+    Diese Datei ist Teil von OpenKeyWord.
+
+    OpenKeyWord ist Freie Software: Sie können es unter den Bedingungen
+    der GNU General Public License, wie von der Free Software Foundation,
+    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder späteren
+    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+
+    OpenKeyWord wird in der Hoffnung, dass es nützlich sein wird, aber
+    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+    Siehe die GNU General Public License für weitere Details.
+
+    Sie sollten eine Kopie der GNU General Public License zusammen mit 
+    OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
+*/
+
 package okw.core;
 
 import static org.junit.Assert.*;
@@ -35,7 +74,7 @@ public class FrameObjectDictionary_Test
 
     Logger_Sngltn.getInstance();
     // Reset des Loggers: Alle geladenen Instanzen löschen
-    Logger_Sngltn.Init();
+    Logger_Sngltn.init();
 
     // Logger_Sngltn.getInstance().AddLogger(new Log2Console());
     Logger_Sngltn.getInstance().setDebugMode( false );
@@ -82,7 +121,7 @@ public class FrameObjectDictionary_Test
     // Frame laden.
     try
     {
-      target.GetChildObjectByName( "Rechner", "Taste_3" );
+      target.getChildObjectByName( "Rechner", "Taste_3" );
     }
     catch (XPathExpressionException | IllegalArgumentException | IllegalAccessException e)
     {
@@ -104,7 +143,7 @@ public class FrameObjectDictionary_Test
     // erneut existieren.
     try
     {
-      FrameObjectDictionary_Sngltn.Init();
+      FrameObjectDictionary_Sngltn.init();
     }
     catch (Exception e)
     {
@@ -130,7 +169,7 @@ public class FrameObjectDictionary_Test
 
     try
     {
-      actual = target.GetParentObjectByName( "Rechner" );
+      actual = target.getParentObjectByName( "Rechner" );
     }
     catch (XPathExpressionException e)
     {
@@ -226,7 +265,7 @@ public class FrameObjectDictionary_Test
   {
     try
     {
-      target.GetParentObjectByName( "RechnerNotExists" );
+      target.getParentObjectByName( "RechnerNotExists" );
       fail();
     }
     catch (OKWFrameObjectParentNotFoundException e)
@@ -267,7 +306,7 @@ public class FrameObjectDictionary_Test
 
     try
     {
-      target.GetChildObjectByName( "RechnerNotExists", "Taste_3" );
+      target.getChildObjectByName( "RechnerNotExists", "Taste_3" );
       fail();
     }
     catch (OKWFrameObjectChildNotFoundException e)
@@ -304,7 +343,7 @@ public class FrameObjectDictionary_Test
 
     try
     {
-      target.GetChildObjectByName( "Rechner", "TasteNotExists" );
+      target.getChildObjectByName( "Rechner", "TasteNotExists" );
       fail();
     }
     catch (OKWFrameObjectChildNotFoundException e)

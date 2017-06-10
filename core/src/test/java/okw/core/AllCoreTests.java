@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltan Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2016,  IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017  IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -37,24 +37,37 @@
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
-
 package okw.core;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-import okw.exceptions.OKWFrameObjectMethodNotFoundException;
-
 @RunWith( Suite.class )
 @SuiteClasses(
-{ CurrentObject_Test.class, EN_Keywords_ANTLR_Test.class, EN_Keywords_DELETE_Test.class, EN_Keywords_Empty_Test.class, EN_Keywords_IGNORE_Test.class,
-                EN_Keywords_Test.class, EN_OKWFrameObjectChildNotFoundException_Test.class, EN_OKWFrameObjectMethodNotImplemented_Test.class,
-                EN_OKWFrameObjectParentNotFoundException_Test.class, EN_OKWNotAllowedValueException_Test.class,
-                EN_VerifyCaption_OKWVerifyingFailsException_Test.class, EN_VerifyExists_OKWVerifyingFailsException_Test.class,
-                EN_VerifyLabel_OKWVerifyingFailsException_Test.class, EN_VerifyTooltip_OKWVerifyingFailsException_Test.class,
-                EN_VerifyValue_OKWVerifyingFailsException_Test.class, FrameObjectDictionary_Test.class, Matcher_LevenshteinDistanceTest.class,
-                Matcher_LevenshteinMatchTest.class, Matcher_RegexMatcherTest.class, Matcher_WildcardMatcherTest.class } )
+{ CurrentObject_Test.class,
+  EN_Keywords_ANTLR_Test.class,
+  EN_Keywords_DELETE_Test.class,
+  EN_Keywords_Empty_Test.class,
+  EN_Keywords_IGNORE_Test.class,
+  EN_Keywords_Test.class,
+  EN_OKWFrameObjectChildNotFoundException_Test.class,
+  EN_OKWFrameObjectMethodNotImplemented_Test.class,
+  EN_OKWFrameObjectParentNotFoundException_Test.class,
+  EN_OKWNotAllowedValueException_Test.class,
+  EN_OKWNotAllowedValueException_Keywords_IGNORE.class,
+  EN_VerifyCaption_OKWVerifyingFailsException_Test.class,
+  EN_VerifyExists_OKWVerifyingFailsException_Test.class,
+  EN_VerifyLabel_OKWVerifyingFailsException_Test.class,
+  EN_VerifySelectedValue_OKWVerifyingFailsException_Test.class,
+  EN_VerifyTablecellValue_OKWVerifyingFailsException_Test.class,
+  EN_VerifyTooltip_OKWVerifyingFailsException_Test.class,
+  EN_VerifyValue_OKWVerifyingFailsException_Test.class,
+  FrameObjectDictionary_Test.class,
+  Matcher_LevenshteinDistanceTest.class,
+  Matcher_LevenshteinMatchTest.class,
+  Matcher_RegexMatcherTest.class,
+  Matcher_WildcardMatcherTest.class } )
 
 /** \~german
 * Test-Suite enthält alle Core-Unittest Test-Klassen.

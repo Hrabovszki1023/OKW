@@ -57,7 +57,10 @@ import okw.core.OKW_CurrentObject_Sngltn;
 import okw.gui.OKWLocator;
 
 
-/** \brief
+/**
+ * @ingroup groupSeleniumChildGUIAdapter 
+ *
+ * \brief
  *  TODO: Description of SeRadioList.
  */
 public class SeRadioList extends SeAnyChildWindow
@@ -147,7 +150,7 @@ public class SeRadioList extends SeAnyChildWindow
 
                     // Set the Current Radiobutton-object back to the
                     // RadioList..
-                    CO.SetChildName( myFN );
+                    CO.setChildName( myFN );
                 }
             }
             else
@@ -183,8 +186,6 @@ public class SeRadioList extends SeAnyChildWindow
         {
             this.LogFunctionEndDebug();
         }
-
-        return;
     }
 
     /**
@@ -214,22 +215,27 @@ public class SeRadioList extends SeAnyChildWindow
             String isChecked = OKW_Const_Sngltn.getInstance().GetConst4Internalname( "CHECKED" );
 
             // 1. Get the List of RadioButtons
-            myRadioButtonKeys = OKW_CurrentObject_Sngltn.getInstance().GetAllChildFNsOfParent( this.getParentFN() + "." + this.getFN() + "." );
+            myRadioButtonKeys = OKW_CurrentObject_Sngltn.getInstance().getAllChildFNsOfParent( this.getParentFN() + "." + this.getFN() + "." );
 
             for ( String lvsRadioButtonFN : myRadioButtonKeys )
             {
 
-                ArrayList<String> Actuel = ( ( SeInputRadio ) FOD.GetParentObjectByName( lvsRadioButtonFN ) ).getValue();
+                ArrayList<String> Actuel = ( ( SeInputRadio ) FOD.getParentObjectByName( lvsRadioButtonFN ) ).getValue();
 
                 if ( isChecked.equals( Actuel.get( 0 ) ) )
                 {
 
-                    String CurrentValue = okw.OKW_Helper.GetRightFromDelimiterNumber( lvsRadioButtonFN, this.getFN() + ".", 1 );
+                    String CurrentValue = okw.OKW_Helper.getRightFromDelimiterNumber( lvsRadioButtonFN, this.getFN() + ".", 1 );
                     lvLsReturn.add( CurrentValue );
 
                     break;
                 }
             }
+            if ( 0 == lvLsReturn.size() )
+            {
+                lvLsReturn.add( "" );
+            }
+            
         }
         catch (XPathExpressionException | JAXBException | ParserConfigurationException | SAXException | IOException e)
         {

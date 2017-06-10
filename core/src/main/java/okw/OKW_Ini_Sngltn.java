@@ -430,7 +430,6 @@ public class OKW_Ini_Sngltn
 			}
 		  
 			System.out.println(" - OK.");
-			return;
 	}
 
 	/*
@@ -455,8 +454,6 @@ public class OKW_Ini_Sngltn
 		OKW_Ini_Sngltn customer = (OKW_Ini_Sngltn) jaxbUnmarshaller.unmarshal(file);
 		
 		System.out.println(customer);
-
-		return;
 	}
 
 	public void LogAll()
@@ -483,8 +480,6 @@ public class OKW_Ini_Sngltn
 		System.out.println("   TimeOutExists: " + this.OKW_CustomSettings.getTimeOutExists());
 		System.out.println("TimeOutNotExists: " + this.OKW_CustomSettings.getTimeOutNotExists());
 		System.out.println("----------------------------------------------------------------");
-
-		return;
 	}
 
 	
@@ -514,7 +509,6 @@ public class OKW_Ini_Sngltn
 
 		jaxbMarshaller.marshal(this, file);
 		jaxbMarshaller.marshal(this, System.out);
-		return;
 	}
 
 	

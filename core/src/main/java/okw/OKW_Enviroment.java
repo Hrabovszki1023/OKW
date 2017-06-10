@@ -177,22 +177,6 @@ public class OKW_Enviroment
 	// \date 2013.12.02
 	private String	File_OKW_ImplementationMatrix_xml	= "${Folder_XML}\\OKW_ImplementationMatrix.xml";
 
-	 //
-	 // \~german 
-	 // \brief Konstruktor der Klasse OKW_Enviroment.
-	 // 
-	 // __Anmerkung:__ Konstruktor ist public, weil diese Klasse mit
-	 // System.Xml.Serialization in/aus der Datei OKW_Ini.xml
-	 // serialisert/deserialisert wird. System.Xml.Serialization verlangt dazu
-	 // einen öffentlichen Konstruktor.
-	 // 
-	 // \~english
-	 // \~ 
-	 // \author Zoltán Hrabovszki \date 2013.11.28
-	 //
-	public OKW_Enviroment()
-	{
-	}
 
 	//
 	// \~german 
@@ -207,7 +191,7 @@ public class OKW_Enviroment
 	// [XmlIgnore]
 	public String getFolder_XML()
 	{
-		return OKW_FileHelper.ConvertDirectorySeperator(this.Folder_XML);
+		return OKW_FileHelper.convertDirectorySeperator(this.Folder_XML);
 	}
 
 	public void setFolder_XML( String value )
@@ -227,7 +211,7 @@ public class OKW_Enviroment
 	// [XmlElement("Folder_LogMessages")]
 	public String getFolder_LogMessages()
 	{
-		return OKW_FileHelper.ConvertDirectorySeperator(this.Folder_LogMessages);
+		return OKW_FileHelper.convertDirectorySeperator(this.Folder_LogMessages);
 	}
 
 	public void setFolder_LogMessages( String value )
@@ -248,7 +232,7 @@ public class OKW_Enviroment
 	{
 		String myPath = Parser.ParseMe(this.File_OKW_Ini_xml);
 		
-		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
+		return OKW_FileHelper.convertDirectorySeperator(myPath);
 	}
 
 	public void setFile_OKW_Ini_xml( String value )
@@ -269,7 +253,7 @@ public class OKW_Enviroment
 	public String getFile_OKW_Keymaps_xml()
 	{
 		String myPath = Parser.ParseMe(this.File_OKW_Keymaps_xml);
-		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
+		return OKW_FileHelper.convertDirectorySeperator(myPath);
 	}
 
 	public void setFile_OKW_Keymaps_xml( String value )
@@ -290,7 +274,7 @@ public class OKW_Enviroment
 	public String getFile_OKW_Memorize_xml()
 	{
 		String myPath = Parser.ParseMe(this.File_OKW_Memorize_xml);
-		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
+		return OKW_FileHelper.convertDirectorySeperator(myPath);
 	}
 
 	public void setFile_OKW_Memorize_xml( String value )
@@ -314,7 +298,7 @@ public class OKW_Enviroment
 
 	{
 		String myPath = Parser.ParseMe(this.File_OKW_ImplementationMatrix_xml);
-		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
+		return OKW_FileHelper.convertDirectorySeperator(myPath);
 	}
 
 	public void setFile_OKW_ImplementationMatrix_xml( String value )
@@ -338,7 +322,7 @@ public class OKW_Enviroment
 	{
 		String myPath = Parser.ParseMe(this.File_OKW_Const_xml);
 		
-		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
+		return OKW_FileHelper.convertDirectorySeperator(myPath);
 	}
 
 	public void setFile_OKW_Const_xml( String value )
@@ -362,7 +346,7 @@ public class OKW_Enviroment
 	{
 		String myPath = Parser.ParseMe(this.File_OKW_Docu_xml_);
 		
-		return OKW_FileHelper.ConvertDirectorySeperator(myPath);
+		return OKW_FileHelper.convertDirectorySeperator(myPath);
 	}
 
 	public void setFile_OKW_Docu_xml( String value )

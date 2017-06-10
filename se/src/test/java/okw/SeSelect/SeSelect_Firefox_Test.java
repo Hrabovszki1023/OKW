@@ -19,10 +19,10 @@ public class SeSelect_Firefox_Test extends SeSelect_Test
 
         Logger_Sngltn.getInstance();
 		 // Reset des Loggers: Alle geladenen Instanzen löschen
-        Logger_Sngltn.Init();
+        Logger_Sngltn.init();
 
         myLog2HTML = new Log2HTML("target/SeSelect_Firefox_Test.html");
-        Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
+        Logger_Sngltn.getInstance().addLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
    }
 

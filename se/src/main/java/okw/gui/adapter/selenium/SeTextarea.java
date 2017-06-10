@@ -47,7 +47,8 @@ import okw.OKW_Const_Sngltn;
 import okw.gui.OKWLocator;
 
 
-    /**  IOKW_SimpleDataObj
+    /**  
+     * @ingroup groupSeleniumChildGUIAdapter
      *  \~german
      *  Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld<br/>.
      *  GUI-Automatisierungswerkzeug: Selenium.<br/>
@@ -164,7 +165,7 @@ import okw.gui.OKWLocator;
                 // Get Value from TextField and put this into the return List<string>
                 String myValue = this.Me().getAttribute("value");
                 
-                if(!myValue.isEmpty())
+                if(myValue!=null)
                 {
                   lvLsReturn.add(this.Me().getAttribute("value"));
                 }
@@ -207,8 +208,6 @@ import okw.gui.OKWLocator;
     {
       this.LogFunctionEndDebug();
     }
-
-    return;
   }
 
 }

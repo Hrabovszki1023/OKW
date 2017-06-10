@@ -1,0 +1,176 @@
+/**
+\~german
+\page refReduzierungVonAufwände Aufwandsreduzierung
+\tableofcontents
+
+\section refObjketerkennungseigenschaft Objekt-Erkennungseigenschaft
+\subsection refFunktionsweiseGUIObjekterkennung Funktionsweise der GUI-Objekterkennung
+
+Die gängingsten GUI-Automatisierungswerkzeuge erkennen ein GUI-Objekt
+an einer oder mehreren charakteristischen Eigenschaften (Properties oder Attribute).
+Das kann z.B. die Position oder Größe des Objektes sein.
+Wichtig ist nur, dass ein GUI-Objekt mit Hilfe dieser Eigenschaften
+eindeutig identifiziert werden kann.
+ 
+Die optimale Lösung wäre eine jedem GUI-Objekt eindeutig zugewiesene Test-ID, die über den gesamten 
+GUI-Objektlebenszyklus konstant bleibt und über alle Objekte eindeutig ist. Es gäbe damit keine zwei 
+GUI-Objekte mit einer identischen Test-ID.
+ 
+\subsection refObjekteErkennen Objekte erkennen
+
+Hier stellen wir Selenium vor. Selenium automatisiert Browser, insbesondere für die Automatisierung 
+von Web-Applikationen zu Testzwecken. Es ist nativer Bestandteil vieler gängiger Webbrowser.
+(weiterführende Infos in engl. Sprache unter \url http://www.seleniumhq.org/ )
+\todo jnic->ZH =eingefügten Text prüfen=
+
+Hier zu nächst ein typisches Beispiel für Selenium: 
+
+\begin{lstlisting}[caption={Selenium Beispiel für die Objekterkennung //Quelle: \url{http://www.anujchaudhary.com/2012/11/selenium-automating-ui-testing-for.html}}, label=SeleniumObjectRecognition]
+    [TestMethod]
+    public void TestBing()
+ 
+    {
+    // Test Case Steps
+        _webDriver.Navigate().GoToUrl("http://www.bing.com");
+ 
+    IWebElement search = _webDriver.FindElement(By.Name("q"));
+    IWebElement go = _webDriver.FindElement(By.Name("go"));
+ 
+    search.SendKeys("james bond");
+    go.Click();
+ 
+    // Verfication
+ 
+    IWebElement msWebsite =
+                _webDriver.FindElement(
+                        By.XPath( "//a[@href='http://en.wikipedia.org/wiki/James_Bond']")
+                );
+ 
+                Assert.IsNotNull(msWebsite, "Could not find wikipedia link for James Bond");
+ 
+       }
+
+\end{lstlisting}
+ 
+In großen Projekten existieren sehr viele solcher Tests. Hier können mehrere tausend Testfälle mit
+sehr viel mehr Schritten existieren.
+Betrachten wir nun die Stellen mit "\_webDriver.FindElement(...)".
+ 
+Die Objekt-Erkennungseigenschaften ist z.B. "q" in
+ 
+\texttt{IWebElement search = \_webDriver.FindElement(By.Name("q"));}
+ 
+Hier wurde das Objekt erkannt, weil das Attribut \texttt{name="q"} ist.
+ 
+Nach diesem Prinzip arbeiten alle GUI-Automatisierungwerkzeige, womit alle GUI-Objekt erkannt werden.
+In diesem Beispiel gibt es Wechselwirkungen (Interaktionen) zu drei GUI-Objekten:
+ 
+- search = \_webDriver.FindElement( By.Name("q") )
+- go = \_webDriver.FindElement( By.Name("go") );
+- msWebsite = \_webDriver.FindElement( By.XPath( "//a[@href='http://en.wikipedia.org/wiki/James_Bond']") );
+ 
+Wenn sich eine Objekt-Erkennungseigenschaft ändert, folgert das die Änderung im Testfall. Hier aber kann das
+Objekt mehrfach verwendet werden, was die Änderung für jedes einzelne Objekt im Testfall erforderlich macht.
+Das können Tausende sein...
+ 
+Bei einer solchen Anpassung ergeben sich mehrere Unsicherheiten:
+
+-# Wie finde ich die relevanten Objekte?
+-# Habe ich alle Objekte gefunden und keines übersehen?
+-# Habe ich alle richtigen Objekte gefunden und nicht ein falsches geändert?
+
+Pauschal "Suchen und Ersetzen" hilft nicht immer: 
+Wenn sich verschiedene Objekte nicht im gleichen Fenster befinden und an identischen 
+Eigenschaften erkannt werden können, funktioniert "Suchen und Ersetzen" nicht.
+ 
+\subsection refObjekterkennungseigenschaftZentralVerwalten Objekterkennungseigenschaft zentral verwalten
+Verschiede Testautomatisierungswerkzege haben das vorbenannte Problem wie folgt gelöst: 
+Die Objekterkennungseigenschaften werden zentral verwaltet und per Referenz verwendet.
+ 
+Einige ausgewählte Bezeichnungen für die zentrale Verwaltung der Objekterkennungseigenschaften:
+
+- Object-Repository (HP Quick Test Professional (QTP), Ranorex)
+- GUI-Map (Winrunner)
+- Test-Frame (Silktest-Classic)
+
+Allen Lösungen ist gemeinsam, dass jedes GUI Objekt einen (fachlichen) Namen erhält und die 
+Objekterkennungseigenschaft dahinter abgelegt wird. So muss nur noch an einer Stelle eine Anpassung
+vorgenommen werden, wenn sich eine Objekt-Erkennungseigenschaft ändert.
+ 
+\section refMethodenAnpassung Methoden Anpassung
+ 
+\subsection refSynchronisation Synchronisation
+Unter Synchronisation versteht man, das Warten des Skriptes auf die Anwendung.
+- Wenn ein Skript ausgeführt wird, dann läuft dieses parallel unabhängig vom "System under Test (SUT)".
+Häufig benötigt eine Anwendung, exemplarisch bei einer Datenbank-Transaktion, etwas länger und das
+Skript möchte ein Objekt bearbeiten, bevor dieses überhaupt verfügbar ist. An solchen Stellen muss
+das Skript zwingend auf eine Eigenschaft oder ein Objekt warten, bevor es mit seinen GUI-Aktivitäten fortfährt.
+ 
+Eine typische Lösung eines solchen Synchronisation besteht darin eine Methode "WartenAufEigenschaft()" 
+oder "WartenAufObjekt()" einzufügen.
+ 
+Beispiel: Nach dem Login (Klick auf Login-Button) wird auf das HauptFenster der Anwendung gewartet.
+
+Wird in eintausend Testfällen beispielsweise eintausendmal ein WartenAufObjekt("HauptFenster") eingefügt, müsste 
+im Änderungsfalle (weil evtl. ein Sicherheitsdialog eingefügt wird) an diesen eintausend Stellen das jeweilige 
+Objekt WartenAufObekt ("Hauptfenster") angepasst werden. Auch hier gäbe es keinen Verlass auf "Suchen und Ersetzen".
+ 
+Hieraus resultieren die nachfolgenden wichtigen Gründe die Synchronisation nicht wie beschrieben vorzunehmen:
+ 
+-# Da der Fachtester die Testfälle erstellen soll, müsste der Fachtester wissen an welchen Stellen eine 
+   Synchronisation erforderlich ist. Das kann jedoch ein Fachtester im Vorfeld nicht wissen, weil
+-# die Synchronisation ein technisches Problem ist. Ein funktionaler GUI-Testfall ist jedoch ein fachlicher Test.
+   Das bedeutet, dass die Synchronisation die Testfallbeschreibung mit technischen Detailproblemen quasi
+   "kontaminieren" würde.
+-# Es ist das Ziel dass ein Testfall durch ein Fachtester beschrieben wird, ohne dass der technische Tester 
+   etwas daran ändern muss.
+-# n-Pflegestellen statt einer einzigen.
+
+Wie sieht aber nun die Lösung aus?
+ 
+\subsection refMethodenÜberschreibung Methoden Überschreibung
+
+Die Methode 'WartenAufObjekt("HauptFenster")' wird in die Klick-Methode des Login-Buttons integriert.
+
+Beispiel: 
+In Silktest-Klassik, ein Werkzeug für die automatisierte Funktions- und 
+Regressionstests von Unternehmensanwendungen, ist es eine Erweiterung der Klick-Methode.
+(Mehr Informationen zu Silktest: \url http://www.borland.com/Products/Software-Testing/Automated-Testing/Silk-Test)
+ 
+In 4Test ist es abgeleitet: Click() ist der Aufruf der Methode Klick der Super-Klasse.
+(Mehr Information zu 4Test: \url http://sqa.fyicenter.com/FAQ/SilkTest/What_is_4Test_.html)
+
+ \begin{lstlisting}[caption={Methoden-Überschreibungs-Beispiel für 4Test, (Scriptsprache Silktest-Classik)}, %label=
+ ]
+[-] window PushButton Login
+  [-] Click( )
+    [ ]
+    [ ] WartenAufObjekt("HauptFenster")
+    [ ] derived::Click()
+    [ ]
+\end{lstlisting}
+ 
+Mit Methoden-Überschreibung (OOP) erfolgt hier die Implementierung an einer Stelle:
+Die Implementierung der Synchronisation des Logins erfolgt an genau einer Stelle. 
+-> Reduzierung von \texttt{n}-Stellen in der Testfallbeschreibung auf eine Stelle im Skript.
+ 
+\remark Eine Methoden-Überschreibung ist nur mit objektorientierten Skriptsprachen möglich.
+ 
+\section{Sequenzen}
+Sequenzen sind eine Abfolge von elementaren Schüsselwörten. Siehe Def: Sequenz
+Diese können aus vielen Schritten bestehen, sind wieder verwendbar.
+ 
+So kann eine häufig wiederkehrende Sequenz an einer Stelle definiert und gepflegt werden.
+ 
+Beispiel: Login
+ \begin{lstlisting}[caption={\OKW-Beispiel für eine Sequenz für Login. }, label=SequenzLogin
+ ] 
+        de.WähleFenster( "Login" );
+        de.GibEin( "User", "Zoltan" )
+        de.GibEin( "Passwort", "Geheim" (
+        de.Klicke( "Login" )
+ \end{lstlisting}
+
+Bearbeitung: 2014_11_03_jnic 
+ 
+*/

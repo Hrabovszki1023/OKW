@@ -40,14 +40,14 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public Log2HTML()
 	{
-		this.myDuration.StartTimer();;
+		this.myDuration.startTimer();;
 		Pointer2LogBaseStack.push(this);
 	}
 
 	public Log2HTML(String fpsOutputFilename)
 	{
 		bFinalize = true;
-		this.myDuration.StartTimer();;
+		this.myDuration.startTimer();;
 		Pointer2LogBaseStack.push(this);
 		setHTML_File( fpsOutputFilename );
 	}
@@ -310,7 +310,7 @@ public class Log2HTML extends LogBase implements ILogger
 		LogBase myLog = new LogTestcase( Pointer2LogBaseStack.peek(), fps_FunctionName);
 		
 		// Timer starten
-		myLog.myDuration.StartTimer();
+		myLog.myDuration.startTimer();
 	
 		Pointer2LogBaseStack.peek().myLogs.add(myLog);
 		Pointer2LogBaseStack.push(myLog);
@@ -320,7 +320,7 @@ public class Log2HTML extends LogBase implements ILogger
     {
     	LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	myLog.myDuration.StopTimer();
+    	myLog.myDuration.stopTimer();
 
     	@SuppressWarnings( "unused" )
 		LogTestcase myCheck = (LogTestcase)myLog;
@@ -342,7 +342,7 @@ public class Log2HTML extends LogBase implements ILogger
     	LogBase myLog = new LogKeyword( Pointer2LogBaseStack.peek(), fps_FunctionName, fpsParameter);
     	
     	// Timer starten
-    	myLog.myDuration.StartTimer();
+    	myLog.myDuration.startTimer();
 
     	Pointer2LogBaseStack.peek().myLogs.add(myLog);
     	Pointer2LogBaseStack.push(myLog);
@@ -353,7 +353,7 @@ public class Log2HTML extends LogBase implements ILogger
     {
 		LogBase myLog = Pointer2LogBaseStack.peek();
     	// Timer Stoppen...
-    	myLog.myDuration.StopTimer();
+    	myLog.myDuration.stopTimer();
 
     	@SuppressWarnings( "unused" )
 		LogKeyword myCheck = (LogKeyword)myLog;
@@ -375,7 +375,7 @@ public class Log2HTML extends LogBase implements ILogger
     	LogBase myLog = new LogSequence( Pointer2LogBaseStack.peek(), fpsWindowFN, fps_SequensName, fpsParameter);
     	
     	// Timer starten
-    	myLog.myDuration.StartTimer();
+    	myLog.myDuration.startTimer();
 
     	Pointer2LogBaseStack.peek().myLogs.add(myLog);
     	Pointer2LogBaseStack.push(myLog);
@@ -386,7 +386,7 @@ public class Log2HTML extends LogBase implements ILogger
     {
 		LogBase myLog = Pointer2LogBaseStack.peek();
     	// Timer Stoppen...
-    	myLog.myDuration.StopTimer();
+    	myLog.myDuration.stopTimer();
 
     	@SuppressWarnings( "unused" )
 		LogSequence myCheck = (LogSequence)myLog;
@@ -676,7 +676,7 @@ public class Log2HTML extends LogBase implements ILogger
     	LogBase myLog = new ResultList( Pointer2LogBaseStack.peek(), fps_ListHeader);
 
     	// Timer starten
-    	myLog.myDuration.StartTimer();
+    	myLog.myDuration.startTimer();
     	
     	Pointer2LogBaseStack.peek().myLogs.add(myLog);    	
     	Pointer2LogBaseStack.push(myLog);
@@ -708,7 +708,7 @@ public class Log2HTML extends LogBase implements ILogger
 		
 	    while (!Pointer2LogBaseStack.isEmpty()) 
 	    {
-	    	Pointer2LogBaseStack.pop().myDuration.StopTimer();	
+	    	Pointer2LogBaseStack.pop().myDuration.stopTimer();	
 		}
 	}
 	
@@ -718,7 +718,7 @@ public class Log2HTML extends LogBase implements ILogger
 		LogBase myLog = Pointer2LogBaseStack.pop();
 		
     	// Timer Stoppen...
-		myLog.myDuration.StopTimer();
+		myLog.myDuration.stopTimer();
     	
     	@SuppressWarnings( "unused" )
 		ResultList myResultList = (ResultList)myLog;

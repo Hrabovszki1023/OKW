@@ -39,74 +39,63 @@ package okw.core;
 import okw.log.Logger_Sngltn;
 import okw.*;
 
-/// \~german
-/// \brief
-/// Hier Statediagram...
-/// @startuml{OKW_State.png}
-/// [*] --> OK : Execute Test
-/// OK --> NOK : OKW_Exception
-/// NOK --> OK: BeginTest
-/// OK --> OK: OKW-Keyword
-/// OK --> [*]
-/// NOK --> [*]
-///
-/// [*] --> OK_TRY : Try Test
-/// OK_TRY --> NOK_TRY : OKW_Exception
-/// NOK_TRY --> OK_TRY: BeginTest
-/// OK_TRY --> OK_TRY: OKW-Keyword
-/// OK_TRY --> [*]
-/// NOK_TRY --> [*]
-/// @enduml
-/// 
-///
-/// @startuml{Overview.png}
-/// frame "Core"{
-///   component [OK] as OK
-/// }
-///  
-/// frame "TestToolAdapter"{
-///  
-///   frame "Selenium"{
-/// 
-///    [SeAnyWin]
-///    [SeBrowserChild]
-///    [SeFireFox]
-///    [SeTextFieled]
-/// 
-///   }
-/// 
-///   frame "AutoIt"{
-/// 
-///    [AUITextfield]
-///    [AUIWindow]
-///   } 
-/// }
-/// @enduml
-/// 
-/// \~english
-/// \brief
-/// 
-/// 
-/// \~
-/// \author Zoltán Hrabovszki
-/// \date 09.01.2014
+/** \~german
+ *  Hier Statediagram...
+ *  @startuml{OKW_State.png}
+ *  [*] --> OK : Execute Test
+ *  OK --> NOK : OKW_Exception
+ *  NOK --> OK: BeginTest
+ *  OK --> OK: OKW-Keyword
+ *  OK --> [*]
+ *  NOK --> [*]
+ *  @enduml
+ *  
+ *  @startuml{OKW_StateClass.png}
+ *  class Core
+ *  interface IOKW_State
+ *  class OK
+ *  class NOK
+ *   
+ *  Core o-- IOKW_State: CurrentState
+ *  OK --> Core: core
+ *  NOK --> Core: core
+ *  IOKW_State <|.. OK
+ *  IOKW_State <|.. NOK
+ * @enduml
+ * 
+ *  # Quellen/Links
+ * [State-Pattern](https://www.philipphauer.de/study/se/design-pattern/state.php)
+ * 
+ *  \~english
+ *  
+ *  \~
+ *  @author Zoltán Hrabovszki
+ *  @date 2014-01-09
+ */
 public class Core implements IOKW_State
 {
 
     private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
-    // zeigt auf die Klasse des aktuellen Zustandes
+    /** \~german
+     * zeigt auf die Klasse des aktuellen Zustandes.
+     *  \~english
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2014-01-09
+     */
     private IOKW_State           CurrentState;
 
-    // \copydoc LogMessenger
+    /**
+     *  \copydoc LogMessenger
+     */
     private static LogMessenger  LM;
 
     /** \~german
      * OKW-Konstuktor: Setzt den Default-Zustand auf OKW.OK.
      *
-     *
      * \~english
-     *
      *
      * \~
      * @author Zoltán Hrabovszki
@@ -131,7 +120,6 @@ public class Core implements IOKW_State
     {
         try
         {
-
             // Init all Singelton...
             Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
@@ -634,9 +622,9 @@ public class Core implements IOKW_State
      * @author Zoltán Hrabovszki
      * @date 2014.01.09
      */
-    public void SetLanguage( String Language )
+    public void setLanguage( String Language )
     {
-        this.CurrentState.SetLanguage( Language );
+        this.CurrentState.setLanguage( Language );
     }
 
     /**
@@ -927,6 +915,7 @@ public class Core implements IOKW_State
         }
     }
 
+
     /**
      * \copydoc IOKW_State::VerifyCaption(String,String)
      */
@@ -942,6 +931,7 @@ public class Core implements IOKW_State
             Log.LogKeyWordEnd();
         }
     }
+
 
     /**
      * \copydoc IOKW_State::VerifyCaptionWCM(String,String)

@@ -1,0 +1,28 @@
+/*!
+@page refSeleniumGUIadapter Liste der Selenium GUI-Adapter
+
+Liste der Selenium GUI Adapter
+
+
+| OKW GUI-Adapter | ```<tag>```-Type   |
+| ----------------|:-------------------|
+| okw.gui.adapter.selenium.SeInputButton   | ```<input type='button'>```   | 
+| okw.gui.adapter.selenium.SeInputCheckbox | ```<input type='checkbox'>``` | 
+| okw.gui.adapter.selenium.SeInputText     | ```<input type='text'>```     | 
+| okw.gui.adapter.selenium.SeInputRadio    | ```<input type='radio'>```    | 
+| okw.gui.adapter.selenium.SeInputRange    | | 
+
+
++ okw.gui.adapter.selenium.SeSelect for `<select>` tags
++ okw.gui.adapter.selenium.SeTextarea for `<textarea>` tags
++ okw.gui.adapter.selenium.SeLink for `<a>` tags
+
+@subsection refRadioList Radiolist
+
++ okw.gui.adapter.selenium.SeRadioList - Ist eine Liste aus RadioButtons ( okw.gui.adapter.selenium.SeInputRadio )
+
+
++ okw.gui.adapter.selenium.SeOutput - noch nicht umgesetzt
++ okw.gui.adapter.selenium.SeProgress - noch nicht umgesetzt
+
+*/

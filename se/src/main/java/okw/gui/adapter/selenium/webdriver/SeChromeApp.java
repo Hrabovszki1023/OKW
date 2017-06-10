@@ -37,6 +37,15 @@
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
+
+
+/**
+ * \~
+ * @defgroup groupSeleniumDriverFrames OKW Frame-Klassen implemntieren Selenium-Driver
+ * @ingroup groupSeleniumClasses
+ */
+
+
 package okw.gui.adapter.selenium.webdriver;
 
 import javax.xml.xpath.XPathExpressionException;
@@ -48,9 +57,13 @@ import okw.gui.AnyWindow;
 import okw.gui.adapter.selenium.SeDriver;
 import okw.log.Logger_Sngltn;
 
-/// \brief
-/// TODO: class SeChromeApp dokumentieren...
-/// 
+/**
+ * @ingroup groupSeleniumDriverFrames
+ * 
+ * @author zoltan
+ *
+ * TODO: class SeChromeApp dokumentieren...
+ */ 
 public class SeChromeApp extends AnyWindow
 {
 
@@ -99,8 +112,8 @@ public class SeChromeApp extends AnyWindow
                 LOG.LogPrint( "EnvVar: OKWChromedriverPath='" + DriverPath + "'" );
                 System.setProperty( "webdriver.Chrome.driver", DriverPath );
 
-                MEM.Set( "System.Property: webdriver.Chrome.driver", DriverPath );
-                MEM.Set( "OKW EnvVar: OKWChromedriverPath", DriverPath );
+                MEM.set( "System.Property: webdriver.Chrome.driver", DriverPath );
+                MEM.set( "OKW EnvVar: OKWChromedriverPath", DriverPath );
 
             }
             else

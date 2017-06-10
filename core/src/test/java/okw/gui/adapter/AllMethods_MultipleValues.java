@@ -2,7 +2,6 @@ package okw.gui.adapter;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
@@ -25,7 +24,7 @@ import okw.log.Logger_Sngltn;
         protected OKW_TestClipboard        myClipboard     = OKW_TestClipboard.getInstance();
         
         
-        String myValue = "";
+        private String myValue = "";
 
 
         public AllMethods_MultipleValues(String fps_Locator)
@@ -47,8 +46,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("ClickOn()");
             myClipboard.getValue().add(this.myValue);
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         public void ClickOn_Clicktype(String fpsClickType)
@@ -64,8 +61,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add( fpsClickType );
 
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         public boolean LogExists()
@@ -432,8 +427,6 @@ import okw.log.Logger_Sngltn;
             {
                 this.myLogger.LogFunctionEndDebug();
             }
-
-            return;
         }
 
         public void SelectMenu()
@@ -449,7 +442,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(this.myValue);
 
             this.myLogger.LogFunctionEndDebug();
-            return;
         }
 
         public void SelectMenu(ArrayList<String> fpLsValue)
@@ -468,7 +460,6 @@ import okw.log.Logger_Sngltn;
             }
 
             this.myLogger.LogFunctionEndDebug();
-            return;
         }
 
         public void SelectTablecell(String COL, String ROW)
@@ -485,7 +476,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(ROW);
 
             this.myLogger.LogFunctionEndDebug();
-            return;
         }
 
         public void SelectTablecell_Clicktype(String COL, String ROW, String fpsClickType)
@@ -501,8 +491,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(ROW);
             myClipboard.getValue().add(fpsClickType);
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         public void SelectWindow()
@@ -522,8 +510,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.getValue().add(fpLs_Value.get(0));
             myClipboard.getValue().add(fpsClicktype);
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         public void Select_TABLE(ArrayList<String> fpLs_Value)
@@ -537,8 +523,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.Clear();
             myClipboard.getValue().add(fpLs_Value.get(0));
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         public void SetFocus()
@@ -553,8 +537,6 @@ import okw.log.Logger_Sngltn;
             myClipboard.setMethod("SetFocus()");
             myClipboard.getValue().add(this.myValue);
             this.myLogger.LogFunctionEndDebug();
-            
-            return;
         }
 
         public void SetValue(ArrayList<String> fpLs_Value)
@@ -579,10 +561,9 @@ import okw.log.Logger_Sngltn;
             {
                 this.myLogger.LogFunctionEndDebug();
             }
-
-            return;
         }
 
+        
         public void TypeKey(ArrayList<String> fpLs_Value)
         {
             this.myLogger.LogFunctionStartDebug("TypeKey");
@@ -606,8 +587,6 @@ import okw.log.Logger_Sngltn;
             {
                 this.myLogger.LogFunctionEndDebug();
             }
-            
-            return;
         }
 
         public void TypeKeyTablecell(String COL, String ROW, ArrayList<String> fpLsValues)
@@ -637,14 +616,7 @@ import okw.log.Logger_Sngltn;
             {
                 this.myLogger.LogFunctionEndDebug();
             }
-            
-            return;
         }
-
-        public void TypeKey_TABLE_ROW(int ROW, ArrayList<String> Values)
-        {
-        }
-
 
         public boolean VerifyExists(Boolean fpbExpectedValue) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
         {
@@ -697,12 +669,15 @@ import okw.log.Logger_Sngltn;
             return fpbExpectedValue;
         }
 
-        public List<String> VerifySelectedValue(ArrayList<String> fpLsExpectedValue)
+        public ArrayList<String> VerifySelectedValue()
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifySelectedValue");
-            lvLsReturn.addAll(fpLsExpectedValue);
+            lvLsReturn.add("1. Value");
+            lvLsReturn.add("2. Value");
+            lvLsReturn.add("3. Value");
+
 
             myClipboard.Clear();
             
@@ -710,19 +685,21 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifySelectedValue()");
-            myClipboard.getValue().addAll(fpLsExpectedValue);
+            myClipboard.getValue().addAll(lvLsReturn);
 
             this.myLogger.LogFunctionEndDebug();
 
             return lvLsReturn;
         }
 
-        public List<String> VerifyTablecellValue(String Col, String Row, ArrayList<String> fpLsExpectedValue)
+        public ArrayList<String> VerifyTablecellValue(String Col, String Row)
         {
-            List<String> lvLsReturn = new ArrayList<String>();
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
 
             this.myLogger.LogFunctionStartDebug("VerifyTablecellValue");
-            lvLsReturn.addAll(fpLsExpectedValue);
+            lvLsReturn.add("1. Value");
+            lvLsReturn.add("2. Value");
+            lvLsReturn.add("3. Value");
 
             myClipboard.Clear();
             String lvs_ObjectName = getFN();
@@ -732,7 +709,7 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.getValue().add(Col);
             myClipboard.getValue().add(Row);
-            myClipboard.getValue().addAll(fpLsExpectedValue);
+            myClipboard.getValue().addAll(lvLsReturn);
 
             this.myLogger.LogFunctionEndDebug();
 
