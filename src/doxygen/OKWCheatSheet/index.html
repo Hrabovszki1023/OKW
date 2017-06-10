@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	<link type="text/css" rel="stylesheet" href="./normalize.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="./main.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="./print.css" media="print" />
+	<title>OpenKeyWord CheatSheet</title>
+</head>
+<body>
+	<header>
+		<h1>OKWCS - OpenKeyWord CheatSheet</h1>
+		<h2>v2015.03</h2>
+	</header>
+	<section>
+		<section>
+			<article>
+				<h2>Syntax</h2>
+				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables">var</a> = <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Values_and_Data_Types">value</a>;</code>
+			</article>
+			<article>
+				<h2>GUI childobject actions</h2>
+				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#circle">circle</a>(radius | d=diameter)</code>
+			</article>
+			<article>
+				<h2>GUI childobject verifying</h2>
+				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#sphere">sphere</a>(radius | d=diameter)</code>
+			</article>
+		</section>
+
+
+            
+		<section>
+			<article>
+                                <h2>List Comprehensions</h2>
+                                <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#for">Generate</a> [ for (i = <i>range</i>|<i>list</i>) i ]</code>
+				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#if">Conditions</a> [ for (i = &hellip;) if (condition(i)) i ] </code>
+				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#let">Assignments</a> [ for (i = &hellip;) let (assignments) a ] </code>
+                        </article>
+                </section>
+                <section>
+			<article>
+				<h2>Special variables</h2>
+				<dl>
+					<dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24fa.2C_.24fs_and_.24fn">$fa</a></code></dt>
+					<dd>minimum angle</dd>
+					<dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24fa.2C_.24fs_and_.24fn">$fs</a></code></dt>
+					<dd>minimum size</dd>
+					<dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24fa.2C_.24fs_and_.24fn">$fn</a></code></dt>
+					<dd>number of fragments</dd>
+					<dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24t">$t</a></code></dt>
+					<dd>animation step</dd>
+                    <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24vpr.2C_.24vpt_and_.24vpd">$vpr</a></code></dt>
+					<dd>viewport rotation angles in degrees</dd>
+                    <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24vpr.2C_.24vpt_and_.24vpd">$vpt</a></code></dt>
+					<dd>viewport translation</dd>
+                    <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24vpr.2C_.24vpt_and_.24vpd">$vpd</a></code></dt>
+					<dd>viewport camera distance</dd>
+                    <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#children">$children</a></code></dt>
+                    <dd>&nbsp;number of module children</dd>
+				</dl>
+			</article>
+		</section>
+                
+                <br clear="all"/>
+		
+                <section>
+			<article class="info">
+                            <em>Links:</em>
+					<a href="http://www.openkeyword.de/" target="_blank">Official website</a>
+					| <a href="https://github.com/Hrabovszki1023/OKW" target="_blank">Code</a>
+                    | <a href="https://github.com/Hrabovszki1023/OKW/issues" target="_blank">Issues</a>
+					| <a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual" target="_blank">Manual</a>
+					| <a href="https://travis-ci.org/Hrabovszki1023/OKW" target="_blank">OKW on Travis.org</a>
+                    | <a href="https://www.codacy.com/app/Hrabovszki1023/OKW/dashboard" target="_blank">Codacy</a>
+			</article>
+		</section>
+	</section>
+
+		<footer>
+			<a href="https://github.com/openscad/openscad.github.com/tree/master/cheatsheet" target="_blank">Edit me on GitHub!</a><br/>
+			By Zoltan Hrabovszki
+		</footer>
+</body>
+</html>
