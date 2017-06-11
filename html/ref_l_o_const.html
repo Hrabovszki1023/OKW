@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 174, Datum: 06.10.2017 20:27:27</span>
+   &#160;<span id="projectnumber">Build_ID: 175, Datum: 06.11.2017 16:27:24</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -94,6 +94,15 @@ $(document).ready(function(){initNavTree('ref_l_o_const.html','');});
 <div class="title">Liste der reservierten OpenKeyWord Konstanten </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="toc"><h3>Inhaltsverzeichnis</h3>
+<ul><li class="level1"><a href="#refDELETE">${DELETE}</a></li>
+<li class="level1"><a href="#refIGNORE">${IGNORE}</a></li>
+<li class="level1"><a href="#refEMPTY">${EMPTY}</a></li>
+<li class="level1"><a href="#refSEP">${SEP}</a></li>
+<li class="level1"><a href="#refHSEP_VSEP">${HSEP} ${VSEP}</a></li>
+<li class="level1"><a href="#refTCN">${TCN}</a></li>
+</ul>
+</div>
 <div class="textblock"><p>Folgende OpenKeyWord-Konstanten sind reserviert:</p>
 <table class="doxtable">
 <tr>
@@ -107,7 +116,7 @@ $(document).ready(function(){initNavTree('ref_l_o_const.html','');});
 <tr>
 <td><a class="el" href="ref_l_o_const.html#refSEP">${SEP}</a> </td><td align="left">Trenner: Trennt mehrere Werte von einander. </td></tr>
 <tr>
-<td>refVSEP_HSEP </td><td align="left">Trenner für Tabellen. </td></tr>
+<td><a class="el" href="ref_l_o_const.html#refHSEP_VSEP">${HSEP} ${VSEP}</a> </td><td align="left">Trenner für Tabellen. </td></tr>
 <tr>
 <td></td><td align="left"></td></tr>
 <tr>
@@ -133,6 +142,9 @@ ${EMPTY}</h1>
 <dl class="section user"><dt>Technischer Hinweis:</dt><dd><code>${EMPTY}</code> wird in den Verify-Methoden der Klasse <a class="el" href="classokw_1_1core_1_1_o_k.html" title="Klasse OK representiert den Core Zustand OK. ">okw.core.OK</a> ausgewertet.: <a class="el" href="classokw_1_1core_1_1_o_k.html" title="Klasse OK representiert den Core Zustand OK. ">okw.core.OK</a> konvertiert <code>${EMPTY}</code> in einen leeren String <code>""</code> und vergleicht das mit dem aktuellen Wert des GUI objectes.</dd></dl>
 <h1><a class="anchor" id="refSEP"></a>
 ${SEP}</h1>
+<div class="fragment"><div class="line">EN.Select( <span class="stringliteral">&quot;Artist&quot;</span> = <span class="stringliteral">&quot;Frank Zappa${SEP}Rex Gildo&quot;</span> )</div></div><!-- fragment --><h1><a class="anchor" id="refHSEP_VSEP"></a>
+${HSEP} ${VSEP}</h1>
+<p>refHSEP_VSEP</p>
 <div class="fragment"><div class="line">EN.Select( <span class="stringliteral">&quot;Artist&quot;</span> = <span class="stringliteral">&quot;Frank Zappa${SEP}Rex Gildo&quot;</span> )</div></div><!-- fragment --><h1><a class="anchor" id="refTCN"></a>
 ${TCN}</h1>
 <div class="fragment"><div class="line">EN.TestBegin( <span class="stringliteral">&quot;This is my first test case&quot;</span> ); <span class="comment">// The KeyWord TestBegin() sets TCN=&quot;This is my first test case&quot; </span></div><div class="line">EN.SelectWindow( <span class="stringliteral">&quot;MyWindow&quot;</span> );</div><div class="line">EN.SetValue( <span class="stringliteral">&quot;Comment&quot;</span>, <span class="stringliteral">&quot;${TCN}&quot;</span> ); <span class="comment">// GUI-Object with FN=&quot;Comment&quot; is set to &quot;This is my first test case&quot;</span></div><div class="line">EN.VerifyValue( <span class="stringliteral">&quot;Comment&quot;</span>, <span class="stringliteral">&quot;This is my first test case&quot;</span> )</div></div><!-- fragment --><dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
@@ -144,7 +156,7 @@ ${TCN}</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="index.html">OpenKeyWord</a></li>
-    <li class="footer">Erzeugt am Sam Jun 10 2017 20:29:12 für OpenKeyWord von
+    <li class="footer">Erzeugt am Son Jun 11 2017 16:29:13 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
