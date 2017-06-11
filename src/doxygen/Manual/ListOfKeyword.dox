@@ -1,0 +1,78 @@
+/*!
+\~german
+
+@page refLOKeywords Liste der OKW Schlüsselwörter
+@tableofcontents
+
+@section refTestcaseKeywords Testcase Keywords
+
+@subsection refBeginTest BeginTest( TCN )
+@subsection refEndTest EndTest()
+
+@section refApplicationHandling Application Handling 
+
+@subsection refStartApp  StartApp( AN ) 
+@subsection refStopApp  StopApp( AN ) 
+
+@section refUserActivities User Activities
+
+@subsection refClickOn  ClickOn( FN ) 
+@subsection refDoubleClickOn  DoubleClickOn( FN ) 
+@subsection refSetFocus  SetFocus( FN ) 
+@subsection refSetValue  SetValue( FN, Val ) 
+@subsection refSelect  Select( FN, Val ) 
+@subsection refSelectMenu  SelectMenu( FN ) 
+@subsection refSelectMenu2  SelectMenu( FN, Val ) 
+@subsection refTypeKey  TypeKey( FN, Val ) 
+
+@section refSequences Sequence
+
+@subsection refSequence  Sequence( FN, SQN, SEQ_ID ) 
+
+@section refWindowSpecificKeywords Window Specific Keywords
+
+@subsection refSelectWindow  SelectWindow( FN ) 
+
+
+@section refVeryfying Verifying
+
+@subsection refVerifyExists  VerifyExists( FN, ExpVal) 
+@subsection refVerifyHasFocus  VerifyHasFocus( FN, ExpVal ) 
+@subsection refVerifyIsActive  VerifyIsActive( FN, ExpVal ) 
+
+@subsection refVerifyCaptions VerifyCaption
+
+@subsubsection refVerifyCaption  VerifyCaption( FN, ExpVal ) 
+@subsubsection refVerifyCaptionWCM  VerifyCaptionWCM( FN, ExpVal ) 
+@subsubsection refVerifyCaptionREGX  VerifyCaptionREGX( FN, ExpVal ) 
+
+@subsection refVerifyLabels VerifyLabel
+
+@subsubsection refVerifyLabel  VerifyLabel( FN, ExpVal ) 
+@subsubsection refVerifyLabelWCM  VerifyLabelWCM( FN, ExpVal ) 
+@subsubsection refVerifyLabelREGX  VerifyLabelREGX( FN, ExpVal ) 
+
+
+@subsection refVerifyTooltips VerifyTooltip
+
+@subsubsection refVerifyTooltip  VerifyTooltip( FN, ExpVal ) 
+@subsubsection refVerifyTooltipWCM  VerifyTooltipWCM( FN, ExpVal ) 
+@subsubsection refVerifyTooltipREGX  VerifyTooltipREGX( FN, ExpVal ) 
+
+
+@subsection refVerifyValues VerifyValue
+
+@subsubsection refVerifyValue  VerifyValue( FN, ExpVal ) 
+@subsubsection refVerifyValueWCM  VerifyValueWCM( FN, ExpVal ) 
+@subsubsection refVerifyValueREGX  VerifyValueREGX( FN, ExpVal ) 
+
+@section refMemorizingValues Memorizing Values
+
+@subsection refMemorizeValue  MemorizeValue( FN, MemKey ) 
+
+
+
+\~
+@author Zoltán Hrabovszki
+@date 2017-06-11
+*/

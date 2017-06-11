@@ -1,6 +1,8 @@
 /*!
 \~german
+
 @page refLOConst Liste der reservierten OpenKeyWord Konstanten
+\tableofcontents
 
 \~german
 Folgende OpenKeyWord-Konstanten sind reserviert:
@@ -11,7 +13,7 @@ Folgende OpenKeyWord-Konstanten sind reserviert:
 | \ref refIGNORE     | Ignoriert bzw. überspringt das aktuelle Schlüsselwort |
 | \ref refEMPTY      | Das GUi-Objekt enthält keinen Wert. Diese Konstante ist in Verify*-Schlüsselwörtern erlaubt.|
 | \ref refSEP        | Trenner: Trennt mehrere Werte von einander. |  
-| \ref refVSEP_HSEP  | Trenner für Tabellen. | 
+| \ref refHSEP_VSEP  | Trenner für Tabellen. | 
 | | |
 | \ref refTCN        | Enthält den Testfallname. Dieser Wert wird von EN.BeginTest( ) gesetzt|
 
@@ -180,6 +182,31 @@ The values are further processed in the GUI adapters as an `ArrayList<String>`.
 \~english
 @par Technical Hint:
 The separation of the values are in the ```OK``` class. The values are further processed in the GUI adapters as an `ArrayList<String>`.
+
+\~
+@section refHSEP_VSEP ${HSEP} ${VSEP}
+refHSEP_VSEP
+\~english
+`${SEP}` wird verwendet um Spalten ${HSEP} und Zeile ${VSEP} in einer Tabelle von einander zu trennen.
+
+\~english
+`${SEP}` is used to separate column ${HSEP} and row ${VSEP} values.
+
+\~
+```
+EN.Select( "Artist" = "Frank Zappa${SEP}Rex Gildo" )
+```
+
+\~english
+
+@par Technischer Hinweis:
+Die Werte werden in den Methoden der Klasse okw.core.OK getrennt.
+The values are further processed in the GUI adapters as an `ArrayList<String>`.
+
+\~english
+@par Technical Hint:
+The separation of the values are in the ```OK``` class. The values are further processed in the GUI adapters as an `ArrayList<String>`.
+
 
 
 \~
