@@ -152,15 +152,14 @@ var NAVTREEINDEX1 =
 "classokw_1_1_o_k_w___helper___string_is_null_or_empty.html#a99cfb4bcf5e4ea1446914e5d4635ab18":[9,0,0,45,3],
 "classokw_1_1_o_k_w___helper___string_is_null_or_empty.html#ada7272eaa461f024c6c8ff9001a12425":[9,0,0,45,2],
 "classokw_1_1_o_k_w___helper___string_repeat.html":[9,0,0,46],
-"classokw_1_1_o_k_w___helper___string_repeat.html#a0a85a17b877332f3edfd939981ae17c6":[9,0,0,46,1],
-"classokw_1_1_o_k_w___helper___string_repeat.html#a0f59b2f71164f14980f46b2f3ad06a54":[9,0,0,46,3],
-"classokw_1_1_o_k_w___helper___string_repeat.html#a2f59ac3115645dd6e1ebac5b2f0c4cd4":[9,0,0,46,2],
-"classokw_1_1_o_k_w___helper___string_repeat.html#a887d659766b0ef25658e50312c7d305f":[9,0,0,46,0],
+"classokw_1_1_o_k_w___helper___string_repeat.html#a03a8fa9402a511845bb1530f5d79c4b1":[9,0,0,46,2],
+"classokw_1_1_o_k_w___helper___string_repeat.html#a096fd2fe630969c438571d46ddd41b27":[9,0,0,46,1],
+"classokw_1_1_o_k_w___helper___string_repeat.html#a9cf15ec59cf00566a7bd429a518efec3":[9,0,0,46,0],
 "classokw_1_1_o_k_w___helper___string_split_test.html":[9,0,0,47],
 "classokw_1_1_o_k_w___helper___string_split_test.html#a4916cba91fbde983dc9215cd60bcc621":[9,0,0,47,4],
 "classokw_1_1_o_k_w___helper___string_split_test.html#a4e7b1e5d1cd5eae84b38e3ff88c4ca34":[9,0,0,47,0],
 "classokw_1_1_o_k_w___helper___string_split_test.html#a5c8d98874feb36fbe283950a753d4b1d":[9,0,0,47,2],
-"classokw_1_1_o_k_w___helper___string_split_test.html#aaa161ac5393e52bee581d17e57dc3364":[9,0,0,47,1],
+"classokw_1_1_o_k_w___helper___string_split_test.html#ad22c84e543f72273da22fa1567b9fc58":[9,0,0,47,1],
 "classokw_1_1_o_k_w___helper___string_split_test.html#ad55e03f97c3c270f1d36f4f295790bfc":[9,0,0,47,3],
 "classokw_1_1_o_k_w___helper_test.html":[9,0,0,48],
 "classokw_1_1_o_k_w___helper_test.html#a000a411ee3788e96d6c382af75d45175":[9,0,0,48,23],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "classokw_1_1_o_k_w___test_clipboard.html#a4b97d1cf70fd55d50b4046bf78f97638":[9,0,0,52,8],
 "classokw_1_1_o_k_w___test_clipboard.html#a5b699361e52947f9cde841b5af2c14e1":[9,0,0,52,10],
 "classokw_1_1_o_k_w___test_clipboard.html#a728c08466e8fd9f86162658516d17081":[9,0,0,52,6],
-"classokw_1_1_o_k_w___test_clipboard.html#a82ffa0c971af68bf591cb8c14ac47f04":[9,0,0,52,9]
+"classokw_1_1_o_k_w___test_clipboard.html#a82ffa0c971af68bf591cb8c14ac47f04":[9,0,0,52,9],
+"classokw_1_1_o_k_w___test_clipboard.html#aabf87a9733c6c0b32527ae7206f1cd99":[9,0,0,52,2]
 };

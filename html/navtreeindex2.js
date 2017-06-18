@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"classokw_1_1_o_k_w___test_clipboard.html#aabf87a9733c6c0b32527ae7206f1cd99":[9,0,0,52,2],
 "classokw_1_1_o_k_w___time_out.html":[9,0,0,53],
 "classokw_1_1_o_k_w___time_out.html#a02ba1d2694fc5d88859f49d8df0a8b3a":[9,0,0,53,0],
 "classokw_1_1_o_k_w___time_out.html#a6180b28f4ad743a1a85e8cf213c69148":[9,0,0,53,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX2 =
 "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___chrome___test.html":[9,0,0,11,0],
 "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___chrome___test.html#a80bae3dc6cae0980f41aae553238862a":[9,0,0,11,0,0],
 "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___firefox___test.html":[9,0,0,11,1],
-"classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___firefox___test.html#a2f3b8c7db54adfa6b871b7def937bc27":[9,0,0,11,1,0]
+"classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___firefox___test.html#a2f3b8c7db54adfa6b871b7def937bc27":[9,0,0,11,1,0],
+"classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html":[9,0,0,11,2]
 };
