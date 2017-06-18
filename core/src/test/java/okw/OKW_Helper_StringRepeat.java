@@ -49,11 +49,6 @@ import okw.log.*;
 public class OKW_Helper_StringRepeat
 {
 
-    public OKW_Helper_StringRepeat()
-    {
-
-    }
-
     /**
      *  \copydoc CurrentObject::Log()
      */
@@ -71,21 +66,21 @@ public class OKW_Helper_StringRepeat
     }
 
     @Test
-    public void tc_Repeat_0_Times()
+    public void tcRepeat0Times()
     {
         assertEquals( "", okw.OKW_Helper.repeatString( "A", 0 ) );
         assertEquals( "", okw.OKW_Helper.repeatString( "ABC", 0 ) );
     }
 
     @Test
-    public void tc_Repeat_1_Times()
+    public void tcRepeat1Times()
     {
         assertEquals( "A", okw.OKW_Helper.repeatString( "A", 1 ) );
         assertEquals( "ABC", okw.OKW_Helper.repeatString( "ABC", 1 ) );
     }
 
     @Test
-    public void tc_Repeat_n_Times()
+    public void tcRepeatNTimes()
     {
         assertEquals( "AA", okw.OKW_Helper.repeatString( "A", 2 ) );
         assertEquals( "ABCABC", okw.OKW_Helper.repeatString( "ABC", 2 ) );
