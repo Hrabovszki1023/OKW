@@ -81,6 +81,7 @@ var annotated_dup =
             [ "SeAnyChildWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window" ],
             [ "SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window" ],
             [ "SeBrowserChild", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child" ],
+            [ "SeButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button" ],
             [ "SeDriver", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver" ],
             [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image" ],
             [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button" ],
@@ -180,6 +181,12 @@ var annotated_dup =
         [ "SeBrowserChild_EN_Firefox_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___firefox___test.html", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___firefox___test" ],
         [ "SeBrowserChild_EN_HTMLUnitDriver_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeBrowserChild_EN_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___test.html", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___test" ]
+      ] ],
+      [ "SeButton", null, [
+        [ "SeButton_Chrome_Test", "classokw_1_1_se_button_1_1_se_button___chrome___test.html", "classokw_1_1_se_button_1_1_se_button___chrome___test" ],
+        [ "SeButton_Firefox_Test", "classokw_1_1_se_button_1_1_se_button___firefox___test.html", "classokw_1_1_se_button_1_1_se_button___firefox___test" ],
+        [ "SeButton_HTMLUnitDriver_Test", "classokw_1_1_se_button_1_1_se_button___h_t_m_l_unit_driver___test.html", null ],
+        [ "SeButton_Test", "classokw_1_1_se_button_1_1_se_button___test.html", "classokw_1_1_se_button_1_1_se_button___test" ]
       ] ],
       [ "SeInputButton", null, [
         [ "SeInputButton_EN_Chrome_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___chrome___test.html", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___chrome___test" ],

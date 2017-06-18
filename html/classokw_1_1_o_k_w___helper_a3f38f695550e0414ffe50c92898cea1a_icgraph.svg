@@ -9,22 +9,22 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 38)">
 <title>okw.OKW_Helper.StringArray2ListStr</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-38 361,-38 361,5 -4,5"/>
-<!-- Node264 -->
-<g id="node1" class="node"><title>Node264</title>
+<!-- Node263 -->
+<g id="node1" class="node"><title>Node263</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-0 0,-34 152,-34 152,-0 0,-0"/>
 <text text-anchor="start" x="8" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Helper.StringArray2</text>
 <text text-anchor="middle" x="76" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">ListStr</text>
 </g>
-<!-- Node265 -->
-<g id="node3" class="node"><title>Node265</title>
+<!-- Node264 -->
+<g id="node3" class="node"><title>Node264</title>
 <a xlink:href="classokw_1_1_o_k_w___helper_test.html#ae7889b49db902cf40532e9a75efeaec9" target="_top" xlink:title="Prüft ob innen liegende Anführungsstriche erhalten bleiben. ">
 <polygon fill="white" stroke="black" points="188,-0 188,-34 356,-34 356,-0 188,-0"/>
 <text text-anchor="start" x="196" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_HelperTest.tcRemove</text>
 <text text-anchor="middle" x="272" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">BeginEndQuotations_TestMethod3</text>
 </a>
 </g>
-<!-- Node264&#45;&gt;Node265 -->
-<g id="edge2" class="edge"><title>Node264&#45;&gt;Node265</title>
+<!-- Node263&#45;&gt;Node264 -->
+<g id="edge2" class="edge"><title>Node263&#45;&gt;Node264</title>
 <path fill="none" stroke="midnightblue" d="M162.324,-17C170.801,-17 179.397,-17 187.853,-17"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="162.059,-13.5001 152.059,-17 162.059,-20.5001 162.059,-13.5001"/>
 </g>

@@ -55,268 +55,268 @@ var sectionId = 'dynsection-10';
 <g id="viewport">
 <title>okw.OKW_Helper.repeatString</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-450 1005,-450 1005,5 -4,5"/>
-<!-- Node201 -->
-<g id="node1" class="node"><title>Node201</title>
+<!-- Node200 -->
+<g id="node1" class="node"><title>Node200</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-209.5 0.5,-230.5 151.5,-230.5 151.5,-209.5 0.5,-209.5"/>
 <text text-anchor="middle" x="76" y="-217.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Helper.repeatString</text>
 </g>
-<!-- Node202 -->
-<g id="node3" class="node"><title>Node202</title>
+<!-- Node201 -->
+<g id="node3" class="node"><title>Node201</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#a75b91325df2889012704c792aae1af40" target="_top" xlink:title="LogError: Logs an error message to the result. ">
 <polygon fill="white" stroke="black" points="196,-269.5 196,-290.5 346,-290.5 346,-269.5 196,-269.5"/>
 <text text-anchor="middle" x="271" y="-277.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogError</text>
 </a>
 </g>
-<!-- Node201&#45;&gt;Node202 -->
-<g id="edge2" class="edge"><title>Node201&#45;&gt;Node202</title>
+<!-- Node200&#45;&gt;Node201 -->
+<g id="edge2" class="edge"><title>Node200&#45;&gt;Node201</title>
 <path fill="none" stroke="midnightblue" d="M112.392,-234.107C134.143,-242.26 162.433,-252.378 188,-260 199.363,-263.388 211.73,-266.611 223.364,-269.442"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="113.483,-230.778 102.891,-230.516 111.007,-237.326 113.483,-230.778"/>
 </g>
-<!-- Node203 -->
-<g id="node5" class="node"><title>Node203</title>
+<!-- Node202 -->
+<g id="node5" class="node"><title>Node202</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#aeb658ec77be3f4d5d5c4c8bdd76376b7" target="_top" xlink:title="LogPass: Logs an error message to the result. ">
 <polygon fill="white" stroke="black" points="195,-229.5 195,-250.5 347,-250.5 347,-229.5 195,-229.5"/>
 <text text-anchor="middle" x="271" y="-237.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogPass</text>
 </a>
 </g>
-<!-- Node201&#45;&gt;Node203 -->
-<g id="edge4" class="edge"><title>Node201&#45;&gt;Node203</title>
+<!-- Node200&#45;&gt;Node202 -->
+<g id="edge4" class="edge"><title>Node200&#45;&gt;Node202</title>
 <path fill="none" stroke="midnightblue" d="M161.697,-228.789C172.695,-229.917 183.895,-231.066 194.729,-232.177"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="161.976,-225.3 151.671,-227.761 161.262,-232.263 161.976,-225.3"/>
 </g>
-<!-- Node204 -->
-<g id="node7" class="node"><title>Node204</title>
+<!-- Node203 -->
+<g id="node7" class="node"><title>Node203</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#a7e8ddd21e7b74affe148e618e594ed63" target="_top" xlink:title="LogWarning: Logs an error message to the result. ">
 <polygon fill="white" stroke="black" points="188.5,-189.5 188.5,-210.5 353.5,-210.5 353.5,-189.5 188.5,-189.5"/>
 <text text-anchor="middle" x="271" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogWarning</text>
 </a>
 </g>
-<!-- Node201&#45;&gt;Node204 -->
-<g id="edge6" class="edge"><title>Node201&#45;&gt;Node204</title>
+<!-- Node200&#45;&gt;Node203 -->
+<g id="edge6" class="edge"><title>Node200&#45;&gt;Node203</title>
 <path fill="none" stroke="midnightblue" d="M161.881,-211.192C170.643,-210.293 179.531,-209.381 188.258,-208.486"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="161.262,-207.737 151.671,-212.239 161.976,-214.7 161.262,-207.737"/>
 </g>
-<!-- Node205 -->
-<g id="node9" class="node"><title>Node205</title>
+<!-- Node204 -->
+<g id="node9" class="node"><title>Node204</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#a62905e4d224da47b6a31d17384594011" target="_top" xlink:title="okw.log.Log2Console.Blank\lBefore">
 <polygon fill="white" stroke="black" points="202,-137 202,-171 340,-171 340,-137 202,-137"/>
 <text text-anchor="start" x="210" y="-158" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blank</text>
 <text text-anchor="middle" x="271" y="-145" font-family="Helvetica,sans-Serif" font-size="10.00">Before</text>
 </a>
 </g>
-<!-- Node201&#45;&gt;Node205 -->
-<g id="edge8" class="edge"><title>Node201&#45;&gt;Node205</title>
+<!-- Node200&#45;&gt;Node204 -->
+<g id="edge8" class="edge"><title>Node200&#45;&gt;Node204</title>
 <path fill="none" stroke="midnightblue" d="M113.916,-206.039C135.549,-198.179 163.213,-188.305 188,-180 196.877,-177.026 206.323,-173.967 215.541,-171.039"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="112.63,-202.782 104.433,-209.496 115.027,-209.359 112.63,-202.782"/>
 </g>
-<!-- Node206 -->
-<g id="node11" class="node"><title>Node206</title>
+<!-- Node205 -->
+<g id="node11" class="node"><title>Node205</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#ae43e369c8f55c561cdd911cda4f97031" target="_top" xlink:title="Method resets . ">
 <polygon fill="white" stroke="black" points="409.5,-143.5 409.5,-164.5 544.5,-164.5 544.5,-143.5 409.5,-143.5"/>
 <text text-anchor="middle" x="477" y="-151.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.reset</text>
 </a>
 </g>
-<!-- Node205&#45;&gt;Node206 -->
-<g id="edge10" class="edge"><title>Node205&#45;&gt;Node206</title>
+<!-- Node204&#45;&gt;Node205 -->
+<g id="edge10" class="edge"><title>Node204&#45;&gt;Node205</title>
 <path fill="none" stroke="midnightblue" d="M350.251,-154C369.774,-154 390.5,-154 409.413,-154"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="350.168,-150.5 340.168,-154 350.168,-157.5 350.168,-150.5"/>
 </g>
-<!-- Node208 -->
-<g id="node15" class="node"><title>Node208</title>
+<!-- Node207 -->
+<g id="node15" class="node"><title>Node207</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#ab2120d2a3c68dc03a6a62d02570bfbd6" target="_top" xlink:title="ResCloseList: Closes the outline level. ">
 <polygon fill="white" stroke="black" points="390.5,-286.5 390.5,-307.5 563.5,-307.5 563.5,-286.5 390.5,-286.5"/>
 <text text-anchor="middle" x="477" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.ResCloseList</text>
 </a>
 </g>
-<!-- Node205&#45;&gt;Node208 -->
-<g id="edge14" class="edge"><title>Node205&#45;&gt;Node208</title>
+<!-- Node204&#45;&gt;Node207 -->
+<g id="edge14" class="edge"><title>Node204&#45;&gt;Node207</title>
 <path fill="none" stroke="midnightblue" d="M345.09,-175.233C348.153,-176.727 351.137,-178.315 354,-180 404.29,-209.6 450.367,-263.403 468.664,-286.262"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="346.264,-171.924 335.707,-171.026 343.4,-178.311 346.264,-171.924"/>
 </g>
-<!-- Node217 -->
-<g id="node33" class="node"><title>Node217</title>
+<!-- Node216 -->
+<g id="node33" class="node"><title>Node216</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#af99ba81cf4d8e14d5fe19070f12ae5cb" target="_top" xlink:title="LogFunctionStartDebug: Opens a debug outline level with the . ">
 <polygon fill="white" stroke="black" points="392,-98.5 392,-119.5 562,-119.5 562,-98.5 392,-98.5"/>
 <text text-anchor="middle" x="477" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.ResOpenList</text>
 </a>
 </g>
-<!-- Node205&#45;&gt;Node217 -->
-<g id="edge32" class="edge"><title>Node205&#45;&gt;Node217</title>
+<!-- Node204&#45;&gt;Node216 -->
+<g id="edge32" class="edge"><title>Node204&#45;&gt;Node216</title>
 <path fill="none" stroke="midnightblue" d="M350.199,-136.699C376.698,-130.911 405.42,-124.636 428.817,-119.525"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="349.191,-133.337 340.168,-138.89 350.685,-140.176 349.191,-133.337"/>
 </g>
-<!-- Node207 -->
-<g id="node13" class="node"><title>Node207</title>
+<!-- Node206 -->
+<g id="node13" class="node"><title>Node206</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#ab54c67895506d0e6786be1b7c4f1ac78" target="_top" xlink:title="LogTestcaseStart: ">
 <polygon fill="white" stroke="black" points="828,-133 828,-167 998,-167 998,-133 828,-133"/>
 <text text-anchor="start" x="836" y="-154" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogTestcase</text>
 <text text-anchor="middle" x="913" y="-141" font-family="Helvetica,sans-Serif" font-size="10.00">Start</text>
 </a>
 </g>
-<!-- Node206&#45;&gt;Node207 -->
-<g id="edge12" class="edge"><title>Node206&#45;&gt;Node207</title>
+<!-- Node205&#45;&gt;Node206 -->
+<g id="edge12" class="edge"><title>Node205&#45;&gt;Node206</title>
 <path fill="none" stroke="midnightblue" d="M554.741,-153.287C631.546,-152.582 748.719,-151.507 827.964,-150.78"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="554.614,-149.788 544.647,-153.379 554.678,-156.787 554.614,-149.788"/>
 </g>
-<!-- Node209 -->
-<g id="node17" class="node"><title>Node209</title>
+<!-- Node208 -->
+<g id="node17" class="node"><title>Node208</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#ae5d97f0d2c5d086474b811f700e97eb1" target="_top" xlink:title="LogFunctionEnd: ">
 <polygon fill="white" stroke="black" points="603,-418.5 603,-439.5 787,-439.5 787,-418.5 603,-418.5"/>
 <text text-anchor="middle" x="695" y="-426.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogFunctionEnd</text>
 </a>
 </g>
-<!-- Node208&#45;&gt;Node209 -->
-<g id="edge16" class="edge"><title>Node208&#45;&gt;Node209</title>
+<!-- Node207&#45;&gt;Node208 -->
+<g id="edge16" class="edge"><title>Node207&#45;&gt;Node208</title>
 <path fill="none" stroke="midnightblue" d="M491.592,-315.38C512.7,-340.635 554.266,-385.593 600,-409 607.502,-412.84 615.697,-415.942 624.029,-418.449"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="494.287,-313.147 485.241,-307.63 488.872,-317.583 494.287,-313.147"/>
 </g>
-<!-- Node211 -->
-<g id="node21" class="node"><title>Node211</title>
+<!-- Node210 -->
+<g id="node21" class="node"><title>Node210</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#a06fc14df2dcb5b2b28b65b2a5ca07e25" target="_top" xlink:title="okw.log.Log2Console.LogFunction\lStart">
 <polygon fill="white" stroke="black" points="611.5,-182 611.5,-216 778.5,-216 778.5,-182 611.5,-182"/>
 <text text-anchor="start" x="619.5" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogFunction</text>
 <text text-anchor="middle" x="695" y="-190" font-family="Helvetica,sans-Serif" font-size="10.00">Start</text>
 </a>
 </g>
-<!-- Node208&#45;&gt;Node211 -->
-<g id="edge20" class="edge"><title>Node208&#45;&gt;Node211</title>
+<!-- Node207&#45;&gt;Node210 -->
+<g id="edge20" class="edge"><title>Node207&#45;&gt;Node210</title>
 <path fill="none" stroke="midnightblue" d="M500.7,-280.58C524.776,-264.525 563.599,-240.32 600,-225 607.802,-221.717 616.138,-218.731 624.511,-216.05"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="498.56,-277.802 492.231,-286.299 502.477,-283.603 498.56,-277.802"/>
 </g>
-<!-- Node213 -->
-<g id="node25" class="node"><title>Node213</title>
+<!-- Node212 -->
+<g id="node25" class="node"><title>Node212</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#a0cfb34192c7f33171638dcde05db6a99" target="_top" xlink:title="LogKeyWordEnd: ">
 <polygon fill="white" stroke="black" points="622,-366 622,-400 768,-400 768,-366 622,-366"/>
 <text text-anchor="start" x="630" y="-387" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogKey</text>
 <text text-anchor="middle" x="695" y="-374" font-family="Helvetica,sans-Serif" font-size="10.00">WordEnd</text>
 </a>
 </g>
-<!-- Node208&#45;&gt;Node213 -->
-<g id="edge24" class="edge"><title>Node208&#45;&gt;Node213</title>
+<!-- Node207&#45;&gt;Node212 -->
+<g id="edge24" class="edge"><title>Node207&#45;&gt;Node212</title>
 <path fill="none" stroke="midnightblue" d="M505.179,-312.625C529.687,-325.754 566.438,-344.348 600,-357 608.56,-360.227 617.692,-363.241 626.782,-365.989"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="506.562,-309.394 496.102,-307.712 503.23,-315.55 506.562,-309.394"/>
 </g>
-<!-- Node214 -->
-<g id="node27" class="node"><title>Node214</title>
+<!-- Node213 -->
+<g id="node27" class="node"><title>Node213</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#a3d7f0164c5d9db37f32b9678b96bd2af" target="_top" xlink:title="LogTestcaseEnd: ">
 <polygon fill="white" stroke="black" points="601.5,-326.5 601.5,-347.5 788.5,-347.5 788.5,-326.5 601.5,-326.5"/>
 <text text-anchor="middle" x="695" y="-334.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogTestcaseEnd</text>
 </a>
 </g>
-<!-- Node208&#45;&gt;Node214 -->
-<g id="edge26" class="edge"><title>Node208&#45;&gt;Node214</title>
+<!-- Node207&#45;&gt;Node213 -->
+<g id="edge26" class="edge"><title>Node207&#45;&gt;Node213</title>
 <path fill="none" stroke="midnightblue" d="M544.224,-309.335C574.161,-314.828 609.053,-321.23 637.728,-326.491"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="544.744,-305.872 534.277,-307.51 543.481,-312.757 544.744,-305.872"/>
 </g>
-<!-- Node215 -->
-<g id="node29" class="node"><title>Node215</title>
+<!-- Node214 -->
+<g id="node29" class="node"><title>Node214</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#a6adb44f183bebb3b2251c595e933e5f7" target="_top" xlink:title="LogSequenceEnd: ">
 <polygon fill="white" stroke="black" points="600,-286.5 600,-307.5 790,-307.5 790,-286.5 600,-286.5"/>
 <text text-anchor="middle" x="695" y="-294.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogSequenceEnd</text>
 </a>
 </g>
-<!-- Node208&#45;&gt;Node215 -->
-<g id="edge28" class="edge"><title>Node208&#45;&gt;Node215</title>
+<!-- Node207&#45;&gt;Node214 -->
+<g id="edge28" class="edge"><title>Node207&#45;&gt;Node214</title>
 <path fill="none" stroke="midnightblue" d="M573.878,-297C582.527,-297 591.279,-297 599.912,-297"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="573.786,-293.5 563.786,-297 573.786,-300.5 573.786,-293.5"/>
 </g>
-<!-- Node216 -->
-<g id="node31" class="node"><title>Node216</title>
+<!-- Node215 -->
+<g id="node31" class="node"><title>Node215</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#a5f0ef403d1d3c2c093b2a8b0d6ded070" target="_top" xlink:title="ResCloseListDebug: ">
 <polygon fill="white" stroke="black" points="616.5,-234 616.5,-268 773.5,-268 773.5,-234 616.5,-234"/>
 <text text-anchor="start" x="624.5" y="-255" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.ResClose</text>
 <text text-anchor="middle" x="695" y="-242" font-family="Helvetica,sans-Serif" font-size="10.00">ListDebug</text>
 </a>
 </g>
-<!-- Node208&#45;&gt;Node216 -->
-<g id="edge30" class="edge"><title>Node208&#45;&gt;Node216</title>
+<!-- Node207&#45;&gt;Node215 -->
+<g id="edge30" class="edge"><title>Node207&#45;&gt;Node215</title>
 <path fill="none" stroke="midnightblue" d="M536.877,-284.365C561.357,-279.2 590.018,-273.152 616.165,-267.635"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="536.076,-280.957 527.014,-286.447 537.521,-287.807 536.076,-280.957"/>
 </g>
-<!-- Node210 -->
-<g id="node19" class="node"><title>Node210</title>
+<!-- Node209 -->
+<g id="node19" class="node"><title>Node209</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#a02a98178389196a6ac48021d5b116d7d" target="_top" xlink:title="LogFunctionEndDebug: ">
 <polygon fill="white" stroke="black" points="829.5,-412 829.5,-446 996.5,-446 996.5,-412 829.5,-412"/>
 <text text-anchor="start" x="837.5" y="-433" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogFunction</text>
 <text text-anchor="middle" x="913" y="-420" font-family="Helvetica,sans-Serif" font-size="10.00">EndDebug</text>
 </a>
 </g>
-<!-- Node209&#45;&gt;Node210 -->
-<g id="edge18" class="edge"><title>Node209&#45;&gt;Node210</title>
+<!-- Node208&#45;&gt;Node209 -->
+<g id="edge18" class="edge"><title>Node208&#45;&gt;Node209</title>
 <path fill="none" stroke="midnightblue" d="M797.32,-429C807.984,-429 818.734,-429 829.159,-429"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="797.136,-425.5 787.136,-429 797.136,-432.5 797.136,-425.5"/>
 </g>
-<!-- Node212 -->
-<g id="node23" class="node"><title>Node212</title>
+<!-- Node211 -->
+<g id="node23" class="node"><title>Node211</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#ae12be755a9da04599d329cfece22b1ef" target="_top" xlink:title="okw.log.Log2Console.LogFunction\lStartDebug">
 <polygon fill="white" stroke="black" points="829.5,-185 829.5,-219 996.5,-219 996.5,-185 829.5,-185"/>
 <text text-anchor="start" x="837.5" y="-206" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogFunction</text>
 <text text-anchor="middle" x="913" y="-193" font-family="Helvetica,sans-Serif" font-size="10.00">StartDebug</text>
 </a>
 </g>
-<!-- Node211&#45;&gt;Node212 -->
-<g id="edge22" class="edge"><title>Node211&#45;&gt;Node212</title>
+<!-- Node210&#45;&gt;Node211 -->
+<g id="edge22" class="edge"><title>Node210&#45;&gt;Node211</title>
 <path fill="none" stroke="midnightblue" d="M788.847,-200.291C802.265,-200.476 815.995,-200.665 829.203,-200.847"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="788.708,-196.789 778.661,-200.151 788.612,-203.789 788.708,-196.789"/>
 </g>
-<!-- Node217&#45;&gt;Node211 -->
-<g id="edge36" class="edge"><title>Node217&#45;&gt;Node211</title>
+<!-- Node216&#45;&gt;Node210 -->
+<g id="edge36" class="edge"><title>Node216&#45;&gt;Node210</title>
 <path fill="none" stroke="midnightblue" d="M529.484,-122.422C540.987,-125.822 553.009,-129.734 564,-134 599.503,-147.779 638.376,-167.726 664.481,-181.883"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="530.125,-118.964 519.548,-119.569 528.194,-125.693 530.125,-118.964"/>
 </g>
-<!-- Node218 -->
-<g id="node35" class="node"><title>Node218</title>
+<!-- Node217 -->
+<g id="node35" class="node"><title>Node217</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#a2d42361222359da106d531084f9d283e" target="_top" xlink:title="LogFunctionEnd(String): ">
 <polygon fill="white" stroke="black" points="603,-52.5 603,-73.5 787,-73.5 787,-52.5 603,-52.5"/>
 <text text-anchor="middle" x="695" y="-60.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogFunctionEnd</text>
 </a>
 </g>
-<!-- Node217&#45;&gt;Node218 -->
-<g id="edge34" class="edge"><title>Node217&#45;&gt;Node218</title>
+<!-- Node216&#45;&gt;Node217 -->
+<g id="edge34" class="edge"><title>Node216&#45;&gt;Node217</title>
 <path fill="none" stroke="midnightblue" d="M536.639,-96.3831C556.764,-92.1284 579.356,-87.355 600,-83 614.513,-79.9385 630.273,-76.6185 644.709,-73.5795"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="535.731,-92.9977 526.671,-98.4907 537.179,-99.8462 535.731,-92.9977"/>
 </g>
-<!-- Node219 -->
-<g id="node38" class="node"><title>Node219</title>
+<!-- Node218 -->
+<g id="node38" class="node"><title>Node218</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#a6c848745fc8facac542f043f4bfce4bc" target="_top" xlink:title="okw.log.Log2Console.LogKey\lWordStart">
 <polygon fill="white" stroke="black" points="622,-92 622,-126 768,-126 768,-92 622,-92"/>
 <text text-anchor="start" x="630" y="-113" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogKey</text>
 <text text-anchor="middle" x="695" y="-100" font-family="Helvetica,sans-Serif" font-size="10.00">WordStart</text>
 </a>
 </g>
-<!-- Node217&#45;&gt;Node219 -->
-<g id="edge38" class="edge"><title>Node217&#45;&gt;Node219</title>
+<!-- Node216&#45;&gt;Node218 -->
+<g id="edge38" class="edge"><title>Node216&#45;&gt;Node218</title>
 <path fill="none" stroke="midnightblue" d="M572.464,-109C589.024,-109 606.008,-109 621.854,-109"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="572.221,-105.5 562.221,-109 572.221,-112.5 572.221,-105.5"/>
 </g>
-<!-- Node221 -->
-<g id="node43" class="node"><title>Node221</title>
+<!-- Node220 -->
+<g id="node43" class="node"><title>Node220</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#adea657f55b624397c13bfbf94f2a6d6a" target="_top" xlink:title="LogFunctionStartDebug: Opens a debug outline level with the . ">
 <polygon fill="white" stroke="black" points="617.5,-0 617.5,-34 772.5,-34 772.5,-0 617.5,-0"/>
 <text text-anchor="start" x="625.5" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.ResOpen</text>
 <text text-anchor="middle" x="695" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">ListDebug</text>
 </a>
 </g>
-<!-- Node217&#45;&gt;Node221 -->
-<g id="edge44" class="edge"><title>Node217&#45;&gt;Node221</title>
+<!-- Node216&#45;&gt;Node220 -->
+<g id="edge44" class="edge"><title>Node216&#45;&gt;Node220</title>
 <path fill="none" stroke="midnightblue" d="M502.54,-93.0891C526.865,-78.4757 564.875,-57.0218 600,-43 608.179,-39.7351 616.911,-36.7316 625.644,-34.0164"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="500.651,-90.1414 493.923,-98.3251 504.286,-96.1237 500.651,-90.1414"/>
 </g>
-<!-- Node219&#45;&gt;Node207 -->
-<g id="edge40" class="edge"><title>Node219&#45;&gt;Node207</title>
+<!-- Node218&#45;&gt;Node206 -->
+<g id="edge40" class="edge"><title>Node218&#45;&gt;Node206</title>
 <path fill="none" stroke="midnightblue" d="M778.216,-124.651C794.499,-127.713 811.597,-130.929 827.939,-134.002"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="778.672,-121.175 768.197,-122.766 777.378,-128.055 778.672,-121.175"/>
 </g>
-<!-- Node220 -->
-<g id="node41" class="node"><title>Node220</title>
+<!-- Node219 -->
+<g id="node41" class="node"><title>Node219</title>
 <a xlink:href="classokw_1_1log_1_1_log2_console.html#a9ec829b2c64f226a7de1d6a8c0ec468f" target="_top" xlink:title="okw.log.Log2Console.LogSequence\lStart">
 <polygon fill="white" stroke="black" points="826.5,-81 826.5,-115 999.5,-115 999.5,-81 826.5,-81"/>
 <text text-anchor="start" x="834.5" y="-102" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogSequence</text>
 <text text-anchor="middle" x="913" y="-89" font-family="Helvetica,sans-Serif" font-size="10.00">Start</text>
 </a>
 </g>
-<!-- Node219&#45;&gt;Node220 -->
-<g id="edge42" class="edge"><title>Node219&#45;&gt;Node220</title>
+<!-- Node218&#45;&gt;Node219 -->
+<g id="edge42" class="edge"><title>Node218&#45;&gt;Node219</title>
 <path fill="none" stroke="midnightblue" d="M778.404,-104.792C794.123,-103.998 810.595,-103.167 826.409,-102.369"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="778.008,-101.307 768.197,-105.307 778.361,-108.298 778.008,-101.307"/>
 </g>

@@ -9,8 +9,8 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 1066)">
 <title>Grafische Darstellung der Klassenhierarchie</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-1066 313,-1066 313,5 -4,5"/>
-<!-- Node37 -->
-<g id="node1" class="node"><title>Node37</title>
+<!-- Node41 -->
+<g id="node1" class="node"><title>Node41</title>
 <polygon fill="white" stroke="#bfbfbf" points="0.5,-514.5 0.5,-535.5 97.5,-535.5 97.5,-514.5 0.5,-514.5"/>
 <text text-anchor="middle" x="49" y="-522.5" font-family="Helvetica,sans-Serif" font-size="10.00">RuntimeException</text>
 </g>
@@ -22,267 +22,267 @@
 <text text-anchor="middle" x="221" y="-1036" font-family="Helvetica,sans-Serif" font-size="10.00">InternalnameNotFoundException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node0 -->
-<g id="edge2" class="edge"><title>Node37&#45;&gt;Node0</title>
+<!-- Node41&#45;&gt;Node0 -->
+<g id="edge2" class="edge"><title>Node41&#45;&gt;Node0</title>
 <path fill="none" stroke="midnightblue" d="M49.7393,-545.766C53.1588,-630.236 70.109,-946.942 134,-1019 137.033,-1022.42 140.495,-1025.4 144.251,-1027.99"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="53.2316,-545.495 49.3503,-535.637 46.2367,-545.764 53.2316,-545.495"/>
 </g>
-<!-- Node39 -->
-<g id="node5" class="node"><title>Node39</title>
+<!-- Node43 -->
+<g id="node5" class="node"><title>Node43</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_directory_does_not_exists_exception.html" target="_top" xlink:title="OKWDirectoryDoesNotExistsException&#45;Ausnahme wird ausgelöst, wenn ein Verzeichniss nicht gefunden word...">
 <polygon fill="white" stroke="black" points="145,-976 145,-1010 297,-1010 297,-976 145,-976"/>
 <text text-anchor="start" x="153" y="-997" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWDirectory</text>
 <text text-anchor="middle" x="221" y="-984" font-family="Helvetica,sans-Serif" font-size="10.00">DoesNotExistsException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node39 -->
-<g id="edge4" class="edge"><title>Node37&#45;&gt;Node39</title>
+<!-- Node41&#45;&gt;Node43 -->
+<g id="edge4" class="edge"><title>Node41&#45;&gt;Node43</title>
 <path fill="none" stroke="midnightblue" d="M50.202,-545.817C55.1623,-624.631 76.5513,-903.472 134,-967 137.172,-970.508 140.795,-973.55 144.721,-976.189"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="53.6868,-545.458 49.587,-535.689 46.6997,-545.883 53.6868,-545.458"/>
 </g>
-<!-- Node40 -->
-<g id="node7" class="node"><title>Node40</title>
+<!-- Node44 -->
+<g id="node7" class="node"><title>Node44</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_directory_seperator_not_implemented_exception.html" target="_top" xlink:title="OKWDirectorySeperatorNotImplementedException&#45;Ausnahme wird ausgelöst, wenn das Betriebssystem einen u...">
 <polygon fill="white" stroke="black" points="134,-924 134,-958 308,-958 308,-924 134,-924"/>
 <text text-anchor="start" x="142" y="-945" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWDirectory</text>
 <text text-anchor="middle" x="221" y="-932" font-family="Helvetica,sans-Serif" font-size="10.00">SeperatorNotImplementedException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node40 -->
-<g id="edge6" class="edge"><title>Node37&#45;&gt;Node40</title>
+<!-- Node41&#45;&gt;Node44 -->
+<g id="edge6" class="edge"><title>Node41&#45;&gt;Node44</title>
 <path fill="none" stroke="midnightblue" d="M50.7678,-545.661C57.3766,-618.206 82.9113,-859.884 134,-915 137.108,-918.353 140.628,-921.28 144.427,-923.834"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="54.2386,-545.176 49.8686,-535.524 47.266,-545.794 54.2386,-545.176"/>
 </g>
-<!-- Node41 -->
-<g id="node9" class="node"><title>Node41</title>
+<!-- Node45 -->
+<g id="node9" class="node"><title>Node45</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_enviroment_var_not_set_exception.html" target="_top" xlink:title="OKWNotAllowedValueException&#45;Ausnahme wird ausgelöst, wenn ein gebener Wert nicht erlaubt ist...">
 <polygon fill="white" stroke="black" points="140.5,-872 140.5,-906 301.5,-906 301.5,-872 140.5,-872"/>
 <text text-anchor="start" x="148.5" y="-893" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWEnviroment</text>
 <text text-anchor="middle" x="221" y="-880" font-family="Helvetica,sans-Serif" font-size="10.00">VarNotSetException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node41 -->
-<g id="edge8" class="edge"><title>Node37&#45;&gt;Node41</title>
+<!-- Node41&#45;&gt;Node45 -->
+<g id="edge8" class="edge"><title>Node41&#45;&gt;Node45</title>
 <path fill="none" stroke="midnightblue" d="M51.5411,-545.864C60.0139,-612.147 89.3137,-816.301 134,-863 137.27,-866.417 140.968,-869.39 144.949,-871.976"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="54.9966,-545.289 50.2808,-535.802 48.0508,-546.16 54.9966,-545.289"/>
 </g>
-<!-- Node42 -->
-<g id="node11" class="node"><title>Node42</title>
+<!-- Node46 -->
+<g id="node11" class="node"><title>Node46</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_file_does_not_exists_exception.html" target="_top" xlink:title="OKWFileDoesNotExistsException&#45;Ausnahme wird ausgelöst, wenn eine Datei nicht gefunden worden ist...">
 <polygon fill="white" stroke="black" points="145.5,-820 145.5,-854 296.5,-854 296.5,-820 145.5,-820"/>
 <text text-anchor="start" x="153.5" y="-841" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWFileDoes</text>
 <text text-anchor="middle" x="221" y="-828" font-family="Helvetica,sans-Serif" font-size="10.00">NotExistsException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node42 -->
-<g id="edge10" class="edge"><title>Node37&#45;&gt;Node42</title>
+<!-- Node41&#45;&gt;Node46 -->
+<g id="edge10" class="edge"><title>Node41&#45;&gt;Node46</title>
 <path fill="none" stroke="midnightblue" d="M52.5294,-545.683C63.0017,-604.767 95.576,-772.518 134,-811 137.342,-814.347 141.095,-817.266 145.117,-819.812"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="55.9505,-544.927 50.7844,-535.678 49.0546,-546.13 55.9505,-544.927"/>
 </g>
-<!-- Node43 -->
-<g id="node13" class="node"><title>Node43</title>
+<!-- Node47 -->
+<g id="node13" class="node"><title>Node47</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_frame_object_child_not_found_exception.html" target="_top" xlink:title="OKW.OKWFrameObjectChildNotFoundException wird ausgelöst, wenn die Frame&#45;Definition eines Kind&#45;Objekte...">
 <polygon fill="white" stroke="black" points="137,-768 137,-802 305,-802 305,-768 137,-768"/>
 <text text-anchor="start" x="145" y="-789" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWFrameObject</text>
 <text text-anchor="middle" x="221" y="-776" font-family="Helvetica,sans-Serif" font-size="10.00">ChildNotFoundException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node43 -->
-<g id="edge12" class="edge"><title>Node37&#45;&gt;Node43</title>
+<!-- Node41&#45;&gt;Node47 -->
+<g id="edge12" class="edge"><title>Node41&#45;&gt;Node47</title>
 <path fill="none" stroke="midnightblue" d="M50.453,-545.771C54.7586,-591.179 71.4022,-699.933 134,-759 137.554,-762.354 141.524,-765.277 145.755,-767.824"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="53.9286,-545.332 49.6037,-535.661 46.9531,-545.918 53.9286,-545.332"/>
 </g>
-<!-- Node44 -->
-<g id="node15" class="node"><title>Node44</title>
+<!-- Node48 -->
+<g id="node15" class="node"><title>Node48</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_frame_object_dictionary_duplicate_f_n_exception.html" target="_top" xlink:title="Diese Ausnahme wird ausgelöst, wenn kein Fenster Objekt ausgewählt/gesetzt worden ist bevor ein Kindo...">
 <polygon fill="white" stroke="black" points="137,-716 137,-750 305,-750 305,-716 137,-716"/>
 <text text-anchor="start" x="145" y="-737" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWFrameObject</text>
 <text text-anchor="middle" x="221" y="-724" font-family="Helvetica,sans-Serif" font-size="10.00">DictionaryDuplicateFNException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node44 -->
-<g id="edge14" class="edge"><title>Node37&#45;&gt;Node44</title>
+<!-- Node41&#45;&gt;Node48 -->
+<g id="edge14" class="edge"><title>Node41&#45;&gt;Node48</title>
 <path fill="none" stroke="midnightblue" d="M52.8882,-545.745C61.0489,-583.475 83.5447,-663.445 134,-707 137.938,-710.399 142.306,-713.354 146.929,-715.923"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="56.3045,-544.981 50.8774,-535.882 49.4456,-546.38 56.3045,-544.981"/>
 </g>
-<!-- Node45 -->
-<g id="node17" class="node"><title>Node45</title>
+<!-- Node49 -->
+<g id="node17" class="node"><title>Node49</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_frame_object_illegal_name_character_exception.html" target="_top" xlink:title="Diese Ausnahme OKWFrameObjectIllegalNameCharacterException wird ausgelöst, wenn nicht erlaubte Zeiche...">
 <polygon fill="white" stroke="black" points="137,-664 137,-698 305,-698 305,-664 137,-664"/>
 <text text-anchor="start" x="145" y="-685" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWFrameObject</text>
 <text text-anchor="middle" x="221" y="-672" font-family="Helvetica,sans-Serif" font-size="10.00">IllegalNameCharacterException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node45 -->
-<g id="edge16" class="edge"><title>Node37&#45;&gt;Node45</title>
+<!-- Node41&#45;&gt;Node49 -->
+<g id="edge16" class="edge"><title>Node41&#45;&gt;Node49</title>
 <path fill="none" stroke="midnightblue" d="M56.7596,-544.939C68.9069,-573.549 95.1188,-625.987 134,-655 138.548,-658.394 143.538,-661.348 148.755,-663.918"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="59.9499,-543.494 52.9232,-535.564 53.4713,-546.145 59.9499,-543.494"/>
 </g>
-<!-- Node46 -->
-<g id="node19" class="node"><title>Node46</title>
+<!-- Node50 -->
+<g id="node19" class="node"><title>Node50</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_frame_object_method_not_found_exception.html" target="_top" xlink:title="Die Ausnahme OKWFrameObjectMethodNotFoundException wird ausgelöst, wenn im Frame Objekt eine gegebene...">
 <polygon fill="white" stroke="black" points="137,-612 137,-646 305,-646 305,-612 137,-612"/>
 <text text-anchor="start" x="145" y="-633" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWFrameObject</text>
 <text text-anchor="middle" x="221" y="-620" font-family="Helvetica,sans-Serif" font-size="10.00">MethodNotFoundException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node46 -->
-<g id="edge18" class="edge"><title>Node37&#45;&gt;Node46</title>
+<!-- Node41&#45;&gt;Node50 -->
+<g id="edge18" class="edge"><title>Node41&#45;&gt;Node50</title>
 <path fill="none" stroke="midnightblue" d="M64.6967,-543.628C80.5122,-561.283 106.46,-587.362 134,-603 139.895,-606.347 146.264,-609.304 152.781,-611.906"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="67.0008,-540.946 57.7841,-535.721 61.7305,-545.553 67.0008,-540.946"/>
 </g>
-<!-- Node47 -->
-<g id="node21" class="node"><title>Node47</title>
+<!-- Node51 -->
+<g id="node21" class="node"><title>Node51</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_frame_object_method_not_implemented.html" target="_top" xlink:title="Die Ausnahme OKWFrameObjectMethodNotImplemented wird ausgelöst, wenn im Frame Objekt eine gegebene Me...">
 <polygon fill="white" stroke="black" points="137,-560 137,-594 305,-594 305,-560 137,-560"/>
 <text text-anchor="start" x="145" y="-581" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWFrameObject</text>
 <text text-anchor="middle" x="221" y="-568" font-family="Helvetica,sans-Serif" font-size="10.00">MethodNotImplemented</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node47 -->
-<g id="edge20" class="edge"><title>Node37&#45;&gt;Node47</title>
+<!-- Node41&#45;&gt;Node51 -->
+<g id="edge20" class="edge"><title>Node41&#45;&gt;Node51</title>
 <path fill="none" stroke="midnightblue" d="M93.0797,-538.542C106.238,-542.569 120.699,-546.978 134,-551 143.657,-553.92 153.923,-557.005 163.89,-559.99"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="93.8983,-535.133 83.3117,-535.55 91.8482,-541.826 93.8983,-535.133"/>
 </g>
-<!-- Node48 -->
-<g id="node23" class="node"><title>Node48</title>
+<!-- Node52 -->
+<g id="node23" class="node"><title>Node52</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_frame_object_parent_not_found_exception.html" target="_top" xlink:title="Die Ausnahme OKWFrameObjectWindowNotFoundException wird ausgelöst, wenn ein Fenster&#45;Frame&#45;Objekt mit ...">
 <polygon fill="white" stroke="black" points="137,-508 137,-542 305,-542 305,-508 137,-508"/>
 <text text-anchor="start" x="145" y="-529" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWFrameObject</text>
 <text text-anchor="middle" x="221" y="-516" font-family="Helvetica,sans-Serif" font-size="10.00">ParentNotFoundException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node48 -->
-<g id="edge22" class="edge"><title>Node37&#45;&gt;Node48</title>
+<!-- Node41&#45;&gt;Node52 -->
+<g id="edge22" class="edge"><title>Node41&#45;&gt;Node52</title>
 <path fill="none" stroke="midnightblue" d="M108.101,-525C117.398,-525 127.162,-525 136.893,-525"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="107.828,-521.5 97.8282,-525 107.828,-528.5 107.828,-521.5"/>
 </g>
-<!-- Node49 -->
-<g id="node25" class="node"><title>Node49</title>
+<!-- Node53 -->
+<g id="node25" class="node"><title>Node53</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_frame_object_window_not_set_exception.html" target="_top" xlink:title="Diese Ausnahme wird ausgelöst, wenn kein Fenster Objekt ausgewählt/gesetzt worden ist bevor ein Kindo...">
 <polygon fill="white" stroke="black" points="137,-456 137,-490 305,-490 305,-456 137,-456"/>
 <text text-anchor="start" x="145" y="-477" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWFrameObject</text>
 <text text-anchor="middle" x="221" y="-464" font-family="Helvetica,sans-Serif" font-size="10.00">WindowNotSetException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node49 -->
-<g id="edge24" class="edge"><title>Node37&#45;&gt;Node49</title>
+<!-- Node41&#45;&gt;Node53 -->
+<g id="edge24" class="edge"><title>Node41&#45;&gt;Node53</title>
 <path fill="none" stroke="midnightblue" d="M93.0797,-511.458C106.238,-507.431 120.699,-503.022 134,-499 143.657,-496.08 153.923,-492.995 163.89,-490.01"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="91.8482,-508.174 83.3117,-514.45 93.8983,-514.867 91.8482,-508.174"/>
 </g>
-<!-- Node50 -->
-<g id="node27" class="node"><title>Node50</title>
+<!-- Node54 -->
+<g id="node27" class="node"><title>Node54</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_g_u_i_exception.html" target="_top" xlink:title="Initialisiert eine neue Instanz der GUIException&#45;Klasse. ">
 <polygon fill="white" stroke="black" points="134.5,-416.5 134.5,-437.5 307.5,-437.5 307.5,-416.5 134.5,-416.5"/>
 <text text-anchor="middle" x="221" y="-424.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWGUIException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node50 -->
-<g id="edge26" class="edge"><title>Node37&#45;&gt;Node50</title>
+<!-- Node41&#45;&gt;Node54 -->
+<g id="edge26" class="edge"><title>Node41&#45;&gt;Node54</title>
 <path fill="none" stroke="midnightblue" d="M64.2277,-506.271C79.8572,-488.318 105.818,-461.823 134,-447 141.27,-443.176 149.258,-440.079 157.357,-437.57"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="61.2121,-504.416 57.4205,-514.309 66.554,-508.94 61.2121,-504.416"/>
 </g>
-<!-- Node51 -->
-<g id="node29" class="node"><title>Node51</title>
+<!-- Node55 -->
+<g id="node29" class="node"><title>Node55</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_g_u_i_object_not_found_exception.html" target="_top" xlink:title="Diese Ausnahme wird ausgelöst, wenn ein GUI&#45;Objekt zu den im Frame gegebenen Objekterkennungseigensch...">
 <polygon fill="white" stroke="black" points="142,-364 142,-398 300,-398 300,-364 142,-364"/>
 <text text-anchor="start" x="150" y="-385" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWGUIObject</text>
 <text text-anchor="middle" x="221" y="-372" font-family="Helvetica,sans-Serif" font-size="10.00">NotFoundException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node51 -->
-<g id="edge28" class="edge"><title>Node37&#45;&gt;Node51</title>
+<!-- Node41&#45;&gt;Node55 -->
+<g id="edge28" class="edge"><title>Node41&#45;&gt;Node55</title>
 <path fill="none" stroke="midnightblue" d="M58.1791,-505.036C71.2931,-478.708 97.8611,-432.717 134,-407 138.752,-403.618 143.948,-400.671 149.36,-398.103"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="54.8611,-503.859 53.677,-514.388 61.1683,-506.896 54.8611,-503.859"/>
 </g>
-<!-- Node52 -->
-<g id="node31" class="node"><title>Node52</title>
+<!-- Node56 -->
+<g id="node31" class="node"><title>Node56</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_language_not_implemnted_exception.html" target="_top" xlink:title="Diese Ausnahme wird ausgelöst, wenn eine nicht implementierte Sprache ausgewählt worden ist...">
 <polygon fill="white" stroke="black" points="144,-312 144,-346 298,-346 298,-312 144,-312"/>
 <text text-anchor="start" x="152" y="-333" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWLanguage</text>
 <text text-anchor="middle" x="221" y="-320" font-family="Helvetica,sans-Serif" font-size="10.00">NotImplemntedException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node52 -->
-<g id="edge30" class="edge"><title>Node37&#45;&gt;Node52</title>
+<!-- Node41&#45;&gt;Node56 -->
+<g id="edge30" class="edge"><title>Node41&#45;&gt;Node56</title>
 <path fill="none" stroke="midnightblue" d="M53.5489,-504.636C62.5752,-468.976 86.1486,-395.205 134,-355 137.983,-351.654 142.385,-348.738 147.031,-346.197"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="50.136,-503.859 51.2039,-514.4 56.9425,-505.494 50.136,-503.859"/>
 </g>
-<!-- Node53 -->
-<g id="node33" class="node"><title>Node53</title>
+<!-- Node57 -->
+<g id="node33" class="node"><title>Node57</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_memorize_key_not_exists_exception.html" target="_top" xlink:title="Die Ausnahme wird ausgelöst, wenn kein Eintrag zu einem Schlüssel vorhanden ist. ">
 <polygon fill="white" stroke="black" points="143.5,-260 143.5,-294 298.5,-294 298.5,-260 143.5,-260"/>
 <text text-anchor="start" x="151.5" y="-281" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWMemorize</text>
 <text text-anchor="middle" x="221" y="-268" font-family="Helvetica,sans-Serif" font-size="10.00">KeyNotExistsException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node53 -->
-<g id="edge32" class="edge"><title>Node37&#45;&gt;Node53</title>
+<!-- Node41&#45;&gt;Node57 -->
+<g id="edge32" class="edge"><title>Node41&#45;&gt;Node57</title>
 <path fill="none" stroke="midnightblue" d="M50.9028,-504.391C56.0436,-460.756 74.1515,-358.506 134,-303 137.699,-299.57 141.832,-296.591 146.234,-294.004"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="47.4174,-504.069 49.8362,-514.384 54.3779,-504.812 47.4174,-504.069"/>
 </g>
-<!-- Node54 -->
-<g id="node35" class="node"><title>Node54</title>
+<!-- Node58 -->
+<g id="node35" class="node"><title>Node58</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_message_not_found_exception.html" target="_top" xlink:title="Die Ausnahme OKWMessageNotFoundException wird ausgelöst, wenn ein Nachrichten&#45;Eintrag in einer XML/Lo...">
 <polygon fill="white" stroke="black" points="145,-208 145,-242 297,-242 297,-208 145,-208"/>
 <text text-anchor="start" x="153" y="-229" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWMessage</text>
 <text text-anchor="middle" x="221" y="-216" font-family="Helvetica,sans-Serif" font-size="10.00">NotFoundException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node54 -->
-<g id="edge34" class="edge"><title>Node37&#45;&gt;Node54</title>
+<!-- Node41&#45;&gt;Node58 -->
+<g id="edge34" class="edge"><title>Node41&#45;&gt;Node58</title>
 <path fill="none" stroke="midnightblue" d="M52.7925,-504.438C63.7423,-447.165 96.9952,-287.622 134,-251 137.361,-247.673 141.13,-244.769 145.164,-242.235"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="49.316,-503.987 50.9055,-514.462 56.1951,-505.282 49.316,-503.987"/>
 </g>
-<!-- Node55 -->
-<g id="node37" class="node"><title>Node55</title>
+<!-- Node59 -->
+<g id="node37" class="node"><title>Node59</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_not_allowed_value_exception.html" target="_top" xlink:title="OKWNotAllowedValueException&#45;Ausnahme wird ausgelöst, wenn ein gegebener Wert im Schlüsselwort nicht e...">
 <polygon fill="white" stroke="black" points="140,-156 140,-190 302,-190 302,-156 140,-156"/>
 <text text-anchor="start" x="148" y="-177" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWNotAllowed</text>
 <text text-anchor="middle" x="221" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">ValueException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node55 -->
-<g id="edge36" class="edge"><title>Node37&#45;&gt;Node55</title>
+<!-- Node41&#45;&gt;Node59 -->
+<g id="edge36" class="edge"><title>Node41&#45;&gt;Node59</title>
 <path fill="none" stroke="midnightblue" d="M51.7614,-504.042C60.7005,-439.237 90.794,-243.761 134,-199 137.284,-195.597 140.994,-192.635 144.984,-190.057"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="48.254,-503.862 50.3818,-514.241 55.1908,-504.8 48.254,-503.862"/>
 </g>
-<!-- Node56 -->
-<g id="node39" class="node"><title>Node56</title>
+<!-- Node60 -->
+<g id="node39" class="node"><title>Node60</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_only_single_value_allowed_exception.html" target="_top" xlink:title="OKWOnlySingleValueAllowedException&#45;Ausnahme wird ausgelöst, wenn nur Wert erlaubt ist...">
 <polygon fill="white" stroke="black" points="141.5,-104 141.5,-138 300.5,-138 300.5,-104 141.5,-104"/>
 <text text-anchor="start" x="149.5" y="-125" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWOnlySingle</text>
 <text text-anchor="middle" x="221" y="-112" font-family="Helvetica,sans-Serif" font-size="10.00">ValueAllowedException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node56 -->
-<g id="edge38" class="edge"><title>Node37&#45;&gt;Node56</title>
+<!-- Node41&#45;&gt;Node60 -->
+<g id="edge38" class="edge"><title>Node41&#45;&gt;Node60</title>
 <path fill="none" stroke="midnightblue" d="M50.9495,-504.065C58.0057,-432.651 84.4458,-200.108 134,-147 137.119,-143.657 140.648,-140.739 144.453,-138.19"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="47.4257,-504.146 49.9507,-514.435 54.3934,-504.817 47.4257,-504.146"/>
 </g>
-<!-- Node57 -->
-<g id="node41" class="node"><title>Node57</title>
+<!-- Node61 -->
+<g id="node41" class="node"><title>Node61</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_path_does_not_exist_exception.html" target="_top" xlink:title="OKWPathDoesNotExistException&#45;Ausnahme wird ausgelöst, wenn ein gegebener Pfad nicht existiert...">
 <polygon fill="white" stroke="black" points="143.5,-52 143.5,-86 298.5,-86 298.5,-52 143.5,-52"/>
 <text text-anchor="start" x="151.5" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWPathDoes</text>
 <text text-anchor="middle" x="221" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">NotExistException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node57 -->
-<g id="edge40" class="edge"><title>Node37&#45;&gt;Node57</title>
+<!-- Node41&#45;&gt;Node61 -->
+<g id="edge40" class="edge"><title>Node41&#45;&gt;Node61</title>
 <path fill="none" stroke="midnightblue" d="M50.3527,-503.763C55.7375,-425.765 78.1316,-156.46 134,-95 137.075,-91.6172 140.57,-88.6671 144.35,-86.0951"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="46.8294,-503.997 49.6557,-514.208 53.8139,-504.463 46.8294,-503.997"/>
 </g>
-<!-- Node58 -->
-<g id="node43" class="node"><title>Node58</title>
+<!-- Node62 -->
+<g id="node43" class="node"><title>Node62</title>
 <a xlink:href="classokw_1_1exceptions_1_1_o_k_w_verifying_fails_exception.html" target="_top" xlink:title="OKWVerifyingFailsException&#45;Ausnahme wird ausgelöst, wenn ein Soll&#45;Ist&#45;Vergleich fehlschlägt. ">
 <polygon fill="white" stroke="black" points="146,-0 146,-34 296,-34 296,-0 146,-0"/>
 <text text-anchor="start" x="154" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.exceptions.OKWVerifying</text>
 <text text-anchor="middle" x="221" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException</text>
 </a>
 </g>
-<!-- Node37&#45;&gt;Node58 -->
-<g id="edge42" class="edge"><title>Node37&#45;&gt;Node58</title>
+<!-- Node41&#45;&gt;Node62 -->
+<g id="edge42" class="edge"><title>Node41&#45;&gt;Node62</title>
 <path fill="none" stroke="midnightblue" d="M49.8385,-504.196C53.6051,-420.965 71.6048,-113.077 134,-43 137.459,-39.1147 141.473,-35.7991 145.839,-32.9707"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="46.3411,-504.063 49.4063,-514.205 53.3345,-504.365 46.3411,-504.063"/>
 </g>

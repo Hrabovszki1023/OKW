@@ -9,8 +9,8 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 78)">
 <title>Grafische Darstellung der Klassenhierarchie</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-78 419,-78 419,5 -4,5"/>
-<!-- Node220 -->
-<g id="node1" class="node"><title>Node220</title>
+<!-- Node225 -->
+<g id="node1" class="node"><title>Node225</title>
 <polygon fill="white" stroke="#bfbfbf" points="126,-52.5 126,-73.5 252,-73.5 252,-52.5 126,-52.5"/>
 <text text-anchor="middle" x="189" y="-60.5" font-family="Helvetica,sans-Serif" font-size="10.00">AbstractParseTreeVisitor</text>
 </g>
@@ -22,13 +22,13 @@
 <text text-anchor="middle" x="351" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00">_ParserBaseVisitor&lt; T &gt;</text>
 </a>
 </g>
-<!-- Node220&#45;&gt;Node1 -->
-<g id="edge2" class="edge"><title>Node220&#45;&gt;Node1</title>
+<!-- Node225&#45;&gt;Node1 -->
+<g id="edge2" class="edge"><title>Node225&#45;&gt;Node1</title>
 <path fill="none" stroke="midnightblue" d="M262.246,-52.6008C270.96,-51.3637 279.794,-50.1094 288.341,-48.896"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="261.506,-49.1707 252.097,-54.0417 262.49,-56.1013 261.506,-49.1707"/>
 </g>
-<!-- Node212 -->
-<g id="node4" class="node"><title>Node212</title>
+<!-- Node217 -->
+<g id="node4" class="node"><title>Node217</title>
 <polygon fill="white" stroke="#bfbfbf" points="0.5,-6.5 0.5,-27.5 89.5,-27.5 89.5,-6.5 0.5,-6.5"/>
 <text text-anchor="middle" x="45" y="-14.5" font-family="Helvetica,sans-Serif" font-size="10.00">ParseTreeVisitor</text>
 </g>
@@ -40,8 +40,8 @@
 <text text-anchor="middle" x="189" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">_ParserVisitor&lt; T &gt;</text>
 </a>
 </g>
-<!-- Node212&#45;&gt;Node0 -->
-<g id="edge4" class="edge"><title>Node212&#45;&gt;Node0</title>
+<!-- Node217&#45;&gt;Node0 -->
+<g id="edge4" class="edge"><title>Node217&#45;&gt;Node0</title>
 <path fill="none" stroke="midnightblue" d="M100.012,-17C109.636,-17 119.689,-17 129.429,-17"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="99.7732,-13.5001 89.7731,-17 99.7731,-20.5001 99.7732,-13.5001"/>
 </g>

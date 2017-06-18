@@ -12,6 +12,7 @@ var hierarchy =
         [ "okw.gui.adapter.AllMethods_VerifyEmpty", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html", null ],
         [ "okw.gui.adapter.CurrentChildObject_Allmethods", "classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html", null ],
         [ "okw.gui.adapter.selenium.SeAnyChildWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html", [
+          [ "okw.gui.adapter.selenium.SeButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html", null ],
           [ "okw.gui.adapter.selenium.SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html", null ],
           [ "okw.gui.adapter.selenium.SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html", null ],
           [ "okw.gui.adapter.selenium.SeInputCheckbox", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html", null ],
@@ -206,6 +207,11 @@ var hierarchy =
     [ "okw.SeBrowserChild.SeBrowserChild_EN_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___test.html", [
       [ "okw.SeBrowserChild.SeBrowserChild_EN_Firefox_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___firefox___test.html", null ],
       [ "okw.SeBrowserChild.SeBrowserChild_EN_HTMLUnitDriver_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___h_t_m_l_unit_driver___test.html", null ]
+    ] ],
+    [ "okw.SeButton.SeButton_Test", "classokw_1_1_se_button_1_1_se_button___test.html", [
+      [ "okw.SeButton.SeButton_Chrome_Test", "classokw_1_1_se_button_1_1_se_button___chrome___test.html", null ],
+      [ "okw.SeButton.SeButton_Firefox_Test", "classokw_1_1_se_button_1_1_se_button___firefox___test.html", null ],
+      [ "okw.SeButton.SeButton_HTMLUnitDriver_Test", "classokw_1_1_se_button_1_1_se_button___h_t_m_l_unit_driver___test.html", null ]
     ] ],
     [ "okw.gui.adapter.selenium.SeDriver", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html", null ],
     [ "okw.SeInputButton.SeInputButton_EN_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___test.html", [

@@ -47,6 +47,12 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "LM", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a7c3ae19f79c61de87c8692f6b817fa09", null ],
       [ "MyLogger", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ab8f0c80bfe825c89cef42f922a2e2ece", null ]
     ] ],
+    [ "SeButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html", [
+      [ "SeButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html#a8abc86e4407278c4e4fa8df2bb0505f9", null ],
+      [ "SeButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html#a135574bc1c484e13acad71f11e102ccd", null ],
+      [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html#a4d658a6f764e2983da35ea25ee9c2412", null ],
+      [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html#adf7b5e39f438dc8807b5e77a381da73a", null ]
+    ] ],
     [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html", [
       [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#a32e66076fa69afd7f671a7cf8ad5fbdd", null ],
       [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#ad91818efaf86f224dfc05a5ac9a79e8d", null ],
@@ -57,10 +63,7 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a0d77a9524916d6b148a8c80571bc2d30", null ],
       [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a28f3b3787171dead144a64674923e66f", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a3c2c309651daf767e1941b2b30d3fea5", null ],
-      [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#aeaaf09d0f1c2c9524b27084c2f3d6639", null ],
-      [ "LogCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#ab3eb7aae9885c8f2f3cd0b298dca3357", null ],
-      [ "MemorizeCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a2ebe2bcbd915dbb94a30e84b05d6eebd", null ],
-      [ "VerifyCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a4cee7cec06604e37b8f6379249708b7d", null ]
+      [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#aeaaf09d0f1c2c9524b27084c2f3d6639", null ]
     ] ],
     [ "SeInputCheckbox", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html", [
       [ "SeInputCheckbox", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a6e73dcc31ebb9e5e1d7d71ef93a6887e", null ],

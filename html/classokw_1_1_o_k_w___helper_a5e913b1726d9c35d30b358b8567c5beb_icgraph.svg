@@ -9,21 +9,21 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 38)">
 <title>okw.OKW_Helper.String2Boolean</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-38 373,-38 373,5 -4,5"/>
-<!-- Node261 -->
-<g id="node1" class="node"><title>Node261</title>
+<!-- Node260 -->
+<g id="node1" class="node"><title>Node260</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-6.5 0,-27.5 164,-27.5 164,-6.5 0,-6.5"/>
 <text text-anchor="middle" x="82" y="-14.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Helper.String2Boolean</text>
 </g>
-<!-- Node262 -->
-<g id="node3" class="node"><title>Node262</title>
+<!-- Node261 -->
+<g id="node3" class="node"><title>Node261</title>
 <a xlink:href="classokw_1_1_o_k_w___helper_test.html#ae7889b49db902cf40532e9a75efeaec9" target="_top" xlink:title="Prüft ob innen liegende Anführungsstriche erhalten bleiben. ">
 <polygon fill="white" stroke="black" points="200,-0 200,-34 368,-34 368,-0 200,-0"/>
 <text text-anchor="start" x="208" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_HelperTest.tcRemove</text>
 <text text-anchor="middle" x="284" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">BeginEndQuotations_TestMethod3</text>
 </a>
 </g>
-<!-- Node261&#45;&gt;Node262 -->
-<g id="edge2" class="edge"><title>Node261&#45;&gt;Node262</title>
+<!-- Node260&#45;&gt;Node261 -->
+<g id="edge2" class="edge"><title>Node260&#45;&gt;Node261</title>
 <path fill="none" stroke="midnightblue" d="M174.184,-17C182.768,-17 191.438,-17 199.943,-17"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="174.161,-13.5001 164.161,-17 174.161,-20.5001 174.161,-13.5001"/>
 </g>
