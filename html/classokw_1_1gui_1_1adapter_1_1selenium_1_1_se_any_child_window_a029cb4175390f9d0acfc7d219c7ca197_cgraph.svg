@@ -55,72 +55,72 @@ var sectionId = 'dynsection-39';
 <g id="viewport">
 <title>okw.gui.adapter.selenium.SeAnyChildWindow.SetValue</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-130 747,-130 747,5 -4,5"/>
-<!-- Node528 -->
-<g id="node1" class="node"><title>Node528</title>
+<!-- Node530 -->
+<g id="node1" class="node"><title>Node530</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-46 0,-80 146,-80 146,-46 0,-46"/>
 <text text-anchor="start" x="8" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="73" y="-54" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.SetValue</text>
 </g>
-<!-- Node529 -->
-<g id="node3" class="node"><title>Node529</title>
+<!-- Node531 -->
+<g id="node3" class="node"><title>Node531</title>
 <a xlink:href="classokw_1_1gui_1_1_any_win_base.html#abaab572bdbed7b471f659d5dd8c76853" target="_top" xlink:title="Diese Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(fps_FunctionName), und erweitert den gegebenen Methodenname in fps_FunctionName mit this.GetType().FullName um den Klassenbezeichner. ">
 <polygon fill="white" stroke="black" points="182.5,-92 182.5,-126 349.5,-126 349.5,-92 182.5,-92"/>
 <text text-anchor="start" x="190.5" y="-113" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase.LogFunction</text>
 <text text-anchor="middle" x="266" y="-100" font-family="Helvetica,sans-Serif" font-size="10.00">StartDebug</text>
 </a>
 </g>
-<!-- Node528&#45;&gt;Node529 -->
-<g id="edge2" class="edge"><title>Node528&#45;&gt;Node529</title>
+<!-- Node530&#45;&gt;Node531 -->
+<g id="edge2" class="edge"><title>Node530&#45;&gt;Node531</title>
 <path fill="none" stroke="midnightblue" d="M144.592,-80.0633C157.586,-83.1603 171.226,-86.4115 184.481,-89.5705"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="183.985,-93.0503 194.524,-91.9642 185.608,-86.241 183.985,-93.0503"/>
 </g>
-<!-- Node530 -->
-<g id="node5" class="node"><title>Node530</title>
+<!-- Node532 -->
+<g id="node5" class="node"><title>Node532</title>
 <a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. ">
 <polygon fill="white" stroke="black" points="186,-52.5 186,-73.5 346,-73.5 346,-52.5 186,-52.5"/>
 <text text-anchor="middle" x="266" y="-60.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
-<!-- Node528&#45;&gt;Node530 -->
-<g id="edge4" class="edge"><title>Node528&#45;&gt;Node530</title>
+<!-- Node530&#45;&gt;Node532 -->
+<g id="edge4" class="edge"><title>Node530&#45;&gt;Node532</title>
 <path fill="none" stroke="midnightblue" d="M146.24,-63C155.817,-63 165.718,-63 175.536,-63"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="175.72,-66.5001 185.72,-63 175.72,-59.5001 175.72,-66.5001"/>
 </g>
-<!-- Node533 -->
-<g id="node11" class="node"><title>Node533</title>
+<!-- Node535 -->
+<g id="node11" class="node"><title>Node535</title>
 <a xlink:href="classokw_1_1gui_1_1_any_win_base.html#a51cf50ace21902b3a5359316f53a7f3e" target="_top" xlink:title="Methode ruft die Methode Logger.Instance.LogFunctionEndDebug() auf. ">
 <polygon fill="white" stroke="black" points="182.5,-0 182.5,-34 349.5,-34 349.5,-0 182.5,-0"/>
 <text text-anchor="start" x="190.5" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase.LogFunction</text>
 <text text-anchor="middle" x="266" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">EndDebug</text>
 </a>
 </g>
-<!-- Node528&#45;&gt;Node533 -->
-<g id="edge10" class="edge"><title>Node528&#45;&gt;Node533</title>
+<!-- Node530&#45;&gt;Node535 -->
+<g id="edge10" class="edge"><title>Node530&#45;&gt;Node535</title>
 <path fill="none" stroke="midnightblue" d="M144.592,-45.9367C157.586,-42.8397 171.226,-39.5885 184.481,-36.4295"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="185.608,-39.759 194.524,-34.0358 183.985,-32.9497 185.608,-39.759"/>
 </g>
-<!-- Node531 -->
-<g id="node7" class="node"><title>Node531</title>
+<!-- Node533 -->
+<g id="node7" class="node"><title>Node533</title>
 <a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="386.5,-52.5 386.5,-73.5 553.5,-73.5 553.5,-52.5 386.5,-52.5"/>
 <text text-anchor="middle" x="470" y="-60.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
-<!-- Node530&#45;&gt;Node531 -->
-<g id="edge6" class="edge"><title>Node530&#45;&gt;Node531</title>
+<!-- Node532&#45;&gt;Node533 -->
+<g id="edge6" class="edge"><title>Node532&#45;&gt;Node533</title>
 <path fill="none" stroke="midnightblue" d="M346.041,-63C356.003,-63 366.259,-63 376.403,-63"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="376.495,-66.5001 386.495,-63 376.495,-59.5001 376.495,-66.5001"/>
 </g>
-<!-- Node532 -->
-<g id="node9" class="node"><title>Node532</title>
+<!-- Node534 -->
+<g id="node9" class="node"><title>Node534</title>
 <a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="590,-46 590,-80 742,-80 742,-46 590,-46"/>
 <text text-anchor="start" x="598" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
 <text text-anchor="middle" x="666" y="-54" font-family="Helvetica,sans-Serif" font-size="10.00">ContentSingleValue</text>
 </a>
 </g>
-<!-- Node531&#45;&gt;Node532 -->
-<g id="edge8" class="edge"><title>Node531&#45;&gt;Node532</title>
+<!-- Node533&#45;&gt;Node534 -->
+<g id="edge8" class="edge"><title>Node533&#45;&gt;Node534</title>
 <path fill="none" stroke="midnightblue" d="M553.69,-63C562.29,-63 571.041,-63 579.669,-63"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="579.725,-66.5001 589.725,-63 579.725,-59.5001 579.725,-66.5001"/>
 </g>

@@ -49,7 +49,9 @@ var group__group_selenium_child_g_u_i_adapter =
     ] ],
     [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html", [
       [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#a32e66076fa69afd7f671a7cf8ad5fbdd", null ],
-      [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#ad91818efaf86f224dfc05a5ac9a79e8d", null ]
+      [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#ad91818efaf86f224dfc05a5ac9a79e8d", null ],
+      [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#a44980a47d966e4bfd206ae5d5ac4399c", null ],
+      [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#a143118b7b3b0cc7788cbf7c9238bc68f", null ]
     ] ],
     [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html", [
       [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a0d77a9524916d6b148a8c80571bc2d30", null ],

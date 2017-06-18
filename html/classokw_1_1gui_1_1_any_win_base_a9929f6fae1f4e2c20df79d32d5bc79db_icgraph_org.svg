@@ -11,8 +11,8 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-2242 749,-2242 749,5 -4,5"/>
 <!-- Node15 -->
 <g id="node1" class="node"><title>Node15</title>
-<polygon fill="#bfbfbf" stroke="black" points="0.5,-798.5 0.5,-819.5 159.5,-819.5 159.5,-798.5 0.5,-798.5"/>
-<text text-anchor="middle" x="80" y="-806.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase.getLocator</text>
+<polygon fill="#bfbfbf" stroke="black" points="0.5,-719.5 0.5,-740.5 159.5,-740.5 159.5,-719.5 0.5,-719.5"/>
+<text text-anchor="middle" x="80" y="-727.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase.getLocator</text>
 </g>
 <!-- Node16 -->
 <g id="node3" class="node"><title>Node16</title>
@@ -24,73 +24,73 @@
 </g>
 <!-- Node15&#45;&gt;Node16 -->
 <g id="edge2" class="edge"><title>Node15&#45;&gt;Node16</title>
-<path fill="none" stroke="midnightblue" d="M83.038,-829.797C96.3385,-920.825 150.789,-1293.24 196,-1599 226.658,-1806.34 264.291,-2058.06 274.399,-2125.62"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="86.4702,-829.078 81.5612,-819.689 79.5437,-830.09 86.4702,-829.078"/>
+<path fill="none" stroke="midnightblue" d="M82.8779,-750.642C105.469,-912.681 253.973,-1977.84 274.619,-2125.92"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="86.3198,-749.982 81.4724,-740.561 79.3869,-750.949 86.3198,-749.982"/>
 </g>
 <!-- Node20 -->
 <g id="node11" class="node"><title>Node20</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a9a138af1fc6ff850d708d66f308a2525" target="_top" xlink:title="Ermittelt aus dem gegebenen Locator das DOM&#45;Elelement, welches das Objekt representiert. ">
-<polygon fill="white" stroke="black" points="211.5,-1556 211.5,-1590 342.5,-1590 342.5,-1556 211.5,-1556"/>
-<text text-anchor="start" x="219.5" y="-1577" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="277" y="-1564" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.Me</text>
+<polygon fill="white" stroke="black" points="211.5,-1504 211.5,-1538 342.5,-1538 342.5,-1504 211.5,-1504"/>
+<text text-anchor="start" x="219.5" y="-1525" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="277" y="-1512" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.Me</text>
 </a>
 </g>
 <!-- Node15&#45;&gt;Node20 -->
 <g id="edge10" class="edge"><title>Node15&#45;&gt;Node20</title>
-<path fill="none" stroke="midnightblue" d="M85.2301,-829.283C113.382,-938.462 246.58,-1455.03 272.59,-1555.9"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="88.596,-828.319 82.7099,-819.509 81.8177,-830.067 88.596,-828.319"/>
+<path fill="none" stroke="midnightblue" d="M85.0539,-750.292C112.88,-862.021 247.092,-1400.91 272.754,-1503.95"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="88.4489,-749.441 82.6359,-740.584 81.6564,-751.133 88.4489,-749.441"/>
 </g>
-<!-- Node69 -->
-<g id="node59" class="node"><title>Node69</title>
+<!-- Node71 -->
+<g id="node63" class="node"><title>Node71</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a72faf4aa1717b4178fae1b0570ca9b28" target="_top" xlink:title="Wartet auf das Objekt Wenn kein Fenster gefunden wird,. ">
-<polygon fill="white" stroke="black" points="199.5,-1169 199.5,-1203 354.5,-1203 354.5,-1169 199.5,-1169"/>
-<text text-anchor="start" x="207.5" y="-1190" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="277" y="-1177" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.WaitForMe</text>
+<polygon fill="white" stroke="black" points="199.5,-1114 199.5,-1148 354.5,-1148 354.5,-1114 199.5,-1114"/>
+<text text-anchor="start" x="207.5" y="-1135" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="277" y="-1122" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.WaitForMe</text>
 </a>
 </g>
-<!-- Node15&#45;&gt;Node69 -->
-<g id="edge60" class="edge"><title>Node15&#45;&gt;Node69</title>
-<path fill="none" stroke="midnightblue" d="M90.3735,-828.852C124.864,-894.857 235.352,-1106.3 267.897,-1168.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="93.4167,-827.118 85.6834,-819.876 87.2127,-830.36 93.4167,-827.118"/>
+<!-- Node15&#45;&gt;Node71 -->
+<g id="edge64" class="edge"><title>Node15&#45;&gt;Node71</title>
+<path fill="none" stroke="midnightblue" d="M89.8854,-750.122C124.027,-819.619 236.632,-1048.83 268.518,-1113.74"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="92.8201,-748.158 85.2693,-740.726 86.5373,-751.244 92.8201,-748.158"/>
 </g>
-<!-- Node74 -->
-<g id="node92" class="node"><title>Node74</title>
+<!-- Node76 -->
+<g id="node98" class="node"><title>Node76</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ad806d20bf0e42d47e0aa5282532d3230" target="_top" xlink:title="Prüft die Existenz des aktuellen Objektes. ">
-<polygon fill="white" stroke="black" points="211.5,-338 211.5,-372 342.5,-372 342.5,-338 211.5,-338"/>
-<text text-anchor="start" x="219.5" y="-359" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="277" y="-346" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getExists</text>
+<polygon fill="white" stroke="red" points="211.5,-260 211.5,-294 342.5,-294 342.5,-260 211.5,-260"/>
+<text text-anchor="start" x="219.5" y="-281" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="277" y="-268" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getExists</text>
 </a>
 </g>
-<!-- Node15&#45;&gt;Node74 -->
-<g id="edge112" class="edge"><title>Node15&#45;&gt;Node74</title>
-<path fill="none" stroke="midnightblue" d="M82.9605,-788.311C94.38,-711.209 137.844,-441.89 196,-381 200.386,-376.407 205.584,-372.624 211.198,-369.508"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="79.4917,-787.844 81.5102,-798.244 86.4182,-788.855 79.4917,-787.844"/>
-</g>
-<!-- Node104 -->
-<g id="node118" class="node"><title>Node104</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a8b42bf27f4660b4807375a57fa9de815" target="_top" xlink:title="Ermittelt aus dem gegebenen Locator das DOM&#45;Elelement, welches das Objekt representiert. ">
-<polygon fill="white" stroke="red" points="211.5,-390 211.5,-424 342.5,-424 342.5,-390 211.5,-390"/>
-<text text-anchor="start" x="219.5" y="-411" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="277" y="-398" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.Me</text>
-</a>
-</g>
-<!-- Node15&#45;&gt;Node104 -->
-<g id="edge138" class="edge"><title>Node15&#45;&gt;Node104</title>
-<path fill="none" stroke="midnightblue" d="M89.6761,-789.255C123.564,-720.102 236.567,-489.508 268.518,-424.308"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="86.5269,-787.728 85.2693,-798.247 92.8128,-790.808 86.5269,-787.728"/>
+<!-- Node15&#45;&gt;Node76 -->
+<g id="edge120" class="edge"><title>Node15&#45;&gt;Node76</title>
+<path fill="none" stroke="midnightblue" d="M82.9674,-709.359C94.4116,-632.435 137.953,-363.741 196,-303 200.388,-298.409 205.587,-294.626 211.201,-291.51"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="79.5021,-708.867 81.5139,-719.269 86.428,-709.883 79.5021,-708.867"/>
 </g>
 <!-- Node106 -->
-<g id="node129" class="node"><title>Node106</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html#ab5951bea393bf1c873b04e2f7ebe19ed" target="_top" xlink:title="okw.gui.adapter.selenium.\lSeBrowserChild.SeBrowserChild">
-<polygon fill="white" stroke="black" points="196.5,-286 196.5,-320 357.5,-320 357.5,-286 196.5,-286"/>
-<text text-anchor="start" x="204.5" y="-307" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="277" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00">SeBrowserChild.SeBrowserChild</text>
+<g id="node120" class="node"><title>Node106</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a8b42bf27f4660b4807375a57fa9de815" target="_top" xlink:title="Ermittelt aus dem gegebenen Locator das DOM&#45;Elelement, welches das Objekt representiert. ">
+<polygon fill="white" stroke="red" points="211.5,-312 211.5,-346 342.5,-346 342.5,-312 211.5,-312"/>
+<text text-anchor="start" x="219.5" y="-333" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="277" y="-320" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.Me</text>
 </a>
 </g>
 <!-- Node15&#45;&gt;Node106 -->
-<g id="edge158" class="edge"><title>Node15&#45;&gt;Node106</title>
-<path fill="none" stroke="midnightblue" d="M82.3159,-788.258C91.9731,-705.279 131.563,-398.355 196,-329 199.116,-325.646 202.666,-322.723 206.498,-320.175"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="78.8337,-787.904 81.1744,-798.237 85.7884,-788.699 78.8337,-787.904"/>
+<g id="edge142" class="edge"><title>Node15&#45;&gt;Node106</title>
+<path fill="none" stroke="midnightblue" d="M89.8854,-709.878C124.027,-640.381 236.632,-411.17 268.518,-346.265"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="86.5373,-708.756 85.2693,-719.274 92.8201,-711.842 86.5373,-708.756"/>
+</g>
+<!-- Node108 -->
+<g id="node130" class="node"><title>Node108</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html#ab5951bea393bf1c873b04e2f7ebe19ed" target="_top" xlink:title="okw.gui.adapter.selenium.\lSeBrowserChild.SeBrowserChild">
+<polygon fill="white" stroke="black" points="196.5,-208 196.5,-242 357.5,-242 357.5,-208 196.5,-208"/>
+<text text-anchor="start" x="204.5" y="-229" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="277" y="-216" font-family="Helvetica,sans-Serif" font-size="10.00">SeBrowserChild.SeBrowserChild</text>
+</a>
+</g>
+<!-- Node15&#45;&gt;Node108 -->
+<g id="edge160" class="edge"><title>Node15&#45;&gt;Node108</title>
+<path fill="none" stroke="midnightblue" d="M82.3221,-709.301C92.0034,-626.493 131.673,-320.203 196,-251 199.117,-247.647 202.667,-244.724 206.499,-242.177"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="78.8424,-708.925 81.1777,-719.259 85.7967,-709.724 78.8424,-708.925"/>
 </g>
 <!-- Node17 -->
 <g id="node5" class="node"><title>Node17</title>
@@ -134,93 +134,93 @@
 <!-- Node21 -->
 <g id="node13" class="node"><title>Node21</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a16df325c8b8bb0e360ac9d9dbb50d91e" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort ClickOn( FN ) aufgerufen wird...">
-<polygon fill="white" stroke="red" points="412,-1660 412,-1694 554,-1694 554,-1660 412,-1660"/>
-<text text-anchor="start" x="420" y="-1681" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1668" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.ClickOn</text>
+<polygon fill="white" stroke="red" points="412,-1816 412,-1850 554,-1850 554,-1816 412,-1816"/>
+<text text-anchor="start" x="420" y="-1837" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1824" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.ClickOn</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node21 -->
 <g id="edge12" class="edge"><title>Node20&#45;&gt;Node21</title>
-<path fill="none" stroke="midnightblue" d="M306.459,-1596.32C329.261,-1613.44 362.214,-1636.19 394,-1651 401.003,-1654.26 408.51,-1657.22 416.083,-1659.86"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="308.318,-1593.34 298.24,-1590.07 304.078,-1598.91 308.318,-1593.34"/>
+<path fill="none" stroke="midnightblue" d="M280.232,-1548.05C288.446,-1604.65 315.37,-1736.16 394,-1807 399.262,-1811.74 405.344,-1815.62 411.81,-1818.79"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="283.691,-1547.51 278.868,-1538.08 276.755,-1548.46 283.691,-1547.51"/>
 </g>
 <!-- Node26 -->
 <g id="node15" class="node"><title>Node26</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a6dbc784267dbac3feef5e421ece9aced" target="_top" xlink:title="Ermittelt den textuellen Inhalt der Überschrift eines HTML&#45;Tags anhand des Attributee &quot;textContent&quot;...">
-<polygon fill="white" stroke="red" points="406,-1608 406,-1642 560,-1642 560,-1608 406,-1608"/>
-<text text-anchor="start" x="414" y="-1629" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1616" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.getCaption</text>
+<polygon fill="white" stroke="red" points="406,-1712 406,-1746 560,-1746 560,-1712 406,-1712"/>
+<text text-anchor="start" x="414" y="-1733" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1720" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.getCaption</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node26 -->
 <g id="edge14" class="edge"><title>Node20&#45;&gt;Node26</title>
-<path fill="none" stroke="midnightblue" d="M352.689,-1592.11C373.231,-1597.29 395.336,-1602.87 415.4,-1607.94"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="353.299,-1588.65 342.746,-1589.6 351.585,-1595.44 353.299,-1588.65"/>
+<path fill="none" stroke="midnightblue" d="M286.931,-1547.52C303.179,-1587.29 339.219,-1662.06 394,-1703 398.513,-1706.37 403.455,-1709.31 408.625,-1711.87"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="290.175,-1546.21 283.228,-1538.21 283.67,-1548.8 290.175,-1546.21"/>
 </g>
 <!-- Node30 -->
 <g id="node17" class="node"><title>Node30</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a3dd9beab770c688211a9244ce308505c" target="_top" xlink:title="Methode liefert den aktuellen Zustand Wert des Focus. ">
-<polygon fill="white" stroke="red" points="400.5,-1556 400.5,-1590 565.5,-1590 565.5,-1556 400.5,-1556"/>
-<text text-anchor="start" x="408.5" y="-1577" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1564" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.getHasFocus</text>
+<polygon fill="white" stroke="red" points="400.5,-1660 400.5,-1694 565.5,-1694 565.5,-1660 400.5,-1660"/>
+<text text-anchor="start" x="408.5" y="-1681" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1668" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.getHasFocus</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node30 -->
 <g id="edge16" class="edge"><title>Node20&#45;&gt;Node30</title>
-<path fill="none" stroke="midnightblue" d="M353.184,-1573C368.484,-1573 384.632,-1573 400.145,-1573"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="352.746,-1569.5 342.746,-1573 352.746,-1576.5 352.746,-1569.5"/>
+<path fill="none" stroke="midnightblue" d="M293.457,-1546.61C313.672,-1576.03 350.665,-1623.76 394,-1651 399.315,-1654.34 405.077,-1657.27 411.025,-1659.83"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="296.222,-1544.44 287.734,-1538.1 290.415,-1548.35 296.222,-1544.44"/>
 </g>
 <!-- Node34 -->
 <g id="node19" class="node"><title>Node34</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ad645cfa0e917477adffe133b1d3371d5" target="_top" xlink:title="Ermittelt, ob das aktuellen Objekt aktiv ist. ">
-<polygon fill="white" stroke="red" points="405,-1504 405,-1538 561,-1538 561,-1504 405,-1504"/>
-<text text-anchor="start" x="413" y="-1525" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1512" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.getIsActive</text>
+<polygon fill="white" stroke="red" points="405,-1608 405,-1642 561,-1642 561,-1608 405,-1608"/>
+<text text-anchor="start" x="413" y="-1629" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1616" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.getIsActive</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node34 -->
 <g id="edge18" class="edge"><title>Node20&#45;&gt;Node34</title>
-<path fill="none" stroke="midnightblue" d="M352.689,-1553.89C373.231,-1548.71 395.336,-1543.13 415.4,-1538.06"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="351.585,-1550.56 342.746,-1556.4 353.299,-1557.35 351.585,-1550.56"/>
+<path fill="none" stroke="midnightblue" d="M306.459,-1544.32C329.261,-1561.44 362.214,-1584.19 394,-1599 401.003,-1602.26 408.51,-1605.22 416.083,-1607.86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="308.318,-1541.34 298.24,-1538.07 304.078,-1546.91 308.318,-1541.34"/>
 </g>
 <!-- Node38 -->
 <g id="node21" class="node"><title>Node38</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a51e404fc0a53a8de7803e22f201f6b23" target="_top" xlink:title="Ermittelt den textuellen Inhalt des Labels. ">
-<polygon fill="white" stroke="red" points="411.5,-1452 411.5,-1486 554.5,-1486 554.5,-1452 411.5,-1452"/>
-<text text-anchor="start" x="419.5" y="-1473" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1460" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.getLabel</text>
+<polygon fill="white" stroke="red" points="411.5,-1556 411.5,-1590 554.5,-1590 554.5,-1556 411.5,-1556"/>
+<text text-anchor="start" x="419.5" y="-1577" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1564" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.getLabel</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node38 -->
 <g id="edge20" class="edge"><title>Node20&#45;&gt;Node38</title>
-<path fill="none" stroke="midnightblue" d="M306.459,-1549.68C329.261,-1532.56 362.214,-1509.81 394,-1495 401.003,-1491.74 408.51,-1488.78 416.083,-1486.14"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="304.078,-1547.09 298.24,-1555.93 308.318,-1552.66 304.078,-1547.09"/>
+<path fill="none" stroke="midnightblue" d="M352.689,-1540.11C373.231,-1545.29 395.336,-1550.87 415.4,-1555.94"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="353.299,-1536.65 342.746,-1537.6 351.585,-1543.44 353.299,-1536.65"/>
 </g>
 <!-- Node42 -->
 <g id="node23" class="node"><title>Node42</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a1c887727f8411c769a24c90d8bde67a5" target="_top" xlink:title="Ermittelt den textuellen Inhalt des ToolTips. ">
-<polygon fill="white" stroke="red" points="408.5,-1400 408.5,-1434 557.5,-1434 557.5,-1400 408.5,-1400"/>
-<text text-anchor="start" x="416.5" y="-1421" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1408" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.getTooltip</text>
+<polygon fill="white" stroke="red" points="408.5,-1504 408.5,-1538 557.5,-1538 557.5,-1504 408.5,-1504"/>
+<text text-anchor="start" x="416.5" y="-1525" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1512" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.getTooltip</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node42 -->
 <g id="edge22" class="edge"><title>Node20&#45;&gt;Node42</title>
-<path fill="none" stroke="midnightblue" d="M293.457,-1547.39C313.672,-1517.97 350.665,-1470.24 394,-1443 399.315,-1439.66 405.077,-1436.73 411.025,-1434.17"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="290.415,-1545.65 287.734,-1555.9 296.222,-1549.56 290.415,-1545.65"/>
+<path fill="none" stroke="midnightblue" d="M352.924,-1521C370.971,-1521 390.213,-1521 408.209,-1521"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="352.746,-1517.5 342.746,-1521 352.746,-1524.5 352.746,-1517.5"/>
 </g>
 <!-- Node46 -->
 <g id="node25" class="node"><title>Node46</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a2fcad47248d5e447d9b3cb29a933b8df" target="_top" xlink:title="Liest den aktuellen Wert/Text aus dem HTML&#45;Tag. ">
-<polygon fill="white" stroke="red" points="410.5,-1348 410.5,-1382 555.5,-1382 555.5,-1348 410.5,-1348"/>
-<text text-anchor="start" x="418.5" y="-1369" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1356" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.getValue</text>
+<polygon fill="white" stroke="red" points="410.5,-1452 410.5,-1486 555.5,-1486 555.5,-1452 410.5,-1452"/>
+<text text-anchor="start" x="418.5" y="-1473" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1460" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.getValue</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node46 -->
 <g id="edge24" class="edge"><title>Node20&#45;&gt;Node46</title>
-<path fill="none" stroke="midnightblue" d="M286.931,-1546.48C303.179,-1506.71 339.219,-1431.94 394,-1391 399.029,-1387.24 404.591,-1384.02 410.407,-1381.27"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="283.67,-1545.2 283.228,-1555.79 290.175,-1547.79 283.67,-1545.2"/>
+<path fill="none" stroke="midnightblue" d="M352.689,-1501.89C373.231,-1496.71 395.336,-1491.13 415.4,-1486.06"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="351.585,-1498.56 342.746,-1504.4 353.299,-1505.35 351.585,-1498.56"/>
 </g>
 <!-- Node50 -->
 <g id="node27" class="node"><title>Node50</title>
@@ -232,574 +232,579 @@
 </g>
 <!-- Node20&#45;&gt;Node50 -->
 <g id="edge26" class="edge"><title>Node20&#45;&gt;Node50</title>
-<path fill="none" stroke="midnightblue" d="M280.255,-1600.05C291.554,-1689.59 331.815,-1974.39 394,-2039 398.019,-2043.18 402.667,-2046.69 407.689,-2049.65"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="283.729,-1599.61 279.022,-1590.12 276.782,-1600.48 283.729,-1599.61"/>
+<path fill="none" stroke="midnightblue" d="M279.532,-1548.15C289.016,-1644.21 325.454,-1966.06 394,-2039 398.079,-2043.34 402.838,-2046.97 407.995,-2050"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="283.004,-1547.7 278.555,-1538.08 276.037,-1548.37 283.004,-1547.7"/>
 </g>
 <!-- Node51 -->
 <g id="node29" class="node"><title>Node51</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a0b446a5c7e2e308a3e03450f5a31e510" target="_top" xlink:title="Setzt den Focus auf das Objekt. ">
-<polygon fill="white" stroke="black" points="408.5,-1296 408.5,-1330 557.5,-1330 557.5,-1296 408.5,-1296"/>
-<text text-anchor="start" x="416.5" y="-1317" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1304" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.SetFocus</text>
+<polygon fill="white" stroke="black" points="408.5,-1400 408.5,-1434 557.5,-1434 557.5,-1400 408.5,-1400"/>
+<text text-anchor="start" x="416.5" y="-1421" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1408" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.SetFocus</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node51 -->
 <g id="edge28" class="edge"><title>Node20&#45;&gt;Node51</title>
-<path fill="none" stroke="midnightblue" d="M282.921,-1546.15C295.059,-1497.48 327.412,-1394.6 394,-1339 398.325,-1335.39 403.131,-1332.28 408.205,-1329.6"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="279.5,-1545.4 280.57,-1555.94 286.307,-1547.04 279.5,-1545.4"/>
+<path fill="none" stroke="midnightblue" d="M306.459,-1497.68C329.261,-1480.56 362.214,-1457.81 394,-1443 401.003,-1439.74 408.51,-1436.78 416.083,-1434.14"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="304.078,-1495.09 298.24,-1503.93 308.318,-1500.66 304.078,-1495.09"/>
 </g>
 <!-- Node52 -->
 <g id="node31" class="node"><title>Node52</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ab048c55c3dbbdbdddfabe5cfffb1d889" target="_top" xlink:title="Tastatureingabe in das aktuelle Objekt. ">
-<polygon fill="white" stroke="black" points="410,-1244 410,-1278 556,-1278 556,-1244 410,-1244"/>
-<text text-anchor="start" x="418" y="-1265" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1252" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.TypeKey</text>
+<polygon fill="white" stroke="black" points="410,-1348 410,-1382 556,-1382 556,-1348 410,-1348"/>
+<text text-anchor="start" x="418" y="-1369" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1356" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.TypeKey</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node52 -->
 <g id="edge30" class="edge"><title>Node20&#45;&gt;Node52</title>
-<path fill="none" stroke="midnightblue" d="M280.232,-1545.95C288.446,-1489.35 315.37,-1357.84 394,-1287 398.664,-1282.8 403.973,-1279.27 409.621,-1276.32"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="276.755,-1545.54 278.868,-1555.92 283.691,-1546.49 276.755,-1545.54"/>
+<path fill="none" stroke="midnightblue" d="M293.457,-1495.39C313.672,-1465.97 350.665,-1418.24 394,-1391 399.315,-1387.66 405.077,-1384.73 411.025,-1382.17"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="290.415,-1493.65 287.734,-1503.9 296.222,-1497.56 290.415,-1493.65"/>
 </g>
 <!-- Node53 -->
 <g id="node33" class="node"><title>Node53</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#a143118b7b3b0cc7788cbf7c9238bc68f" target="_top" xlink:title="Der Wert eines img ist der Wert des Attributtes src. ">
+<polygon fill="white" stroke="black" points="417.5,-1296 417.5,-1330 548.5,-1330 548.5,-1296 417.5,-1296"/>
+<text text-anchor="start" x="425.5" y="-1317" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1304" font-family="Helvetica,sans-Serif" font-size="10.00">SeImage.getValue</text>
+</a>
+</g>
+<!-- Node20&#45;&gt;Node53 -->
+<g id="edge32" class="edge"><title>Node20&#45;&gt;Node53</title>
+<path fill="none" stroke="midnightblue" d="M286.931,-1494.48C303.179,-1454.71 339.219,-1379.94 394,-1339 400.963,-1333.8 408.948,-1329.63 417.215,-1326.3"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="283.67,-1493.2 283.228,-1503.79 290.175,-1495.79 283.67,-1493.2"/>
+</g>
+<!-- Node54 -->
+<g id="node35" class="node"><title>Node54</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#a44980a47d966e4bfd206ae5d5ac4399c" target="_top" xlink:title="Ermittelt den textuellen Inhalt der Caption. ">
+<polygon fill="white" stroke="black" points="417.5,-1244 417.5,-1278 548.5,-1278 548.5,-1244 417.5,-1244"/>
+<text text-anchor="start" x="425.5" y="-1265" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1252" font-family="Helvetica,sans-Serif" font-size="10.00">SeImage.getCaption</text>
+</a>
+</g>
+<!-- Node20&#45;&gt;Node54 -->
+<g id="edge34" class="edge"><title>Node20&#45;&gt;Node54</title>
+<path fill="none" stroke="midnightblue" d="M282.921,-1494.15C295.059,-1445.48 327.412,-1342.6 394,-1287 400.796,-1281.33 408.78,-1276.89 417.128,-1273.42"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="279.5,-1493.4 280.57,-1503.94 286.307,-1495.04 279.5,-1493.4"/>
+</g>
+<!-- Node55 -->
+<g id="node37" class="node"><title>Node55</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a3c2c309651daf767e1941b2b30d3fea5" target="_top" xlink:title="Ermittelt den textuellen Inhalt der Caption/Überschrift des Objektes. ">
 <polygon fill="white" stroke="red" points="417.5,-1192 417.5,-1226 548.5,-1226 548.5,-1192 417.5,-1192"/>
 <text text-anchor="start" x="425.5" y="-1213" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="483" y="-1200" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputButton.getCaption</text>
 </a>
 </g>
-<!-- Node20&#45;&gt;Node53 -->
-<g id="edge32" class="edge"><title>Node20&#45;&gt;Node53</title>
-<path fill="none" stroke="midnightblue" d="M278.307,-1545.61C282.864,-1481.66 303.236,-1321.42 394,-1235 400.645,-1228.67 408.743,-1223.87 417.318,-1220.24"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="274.807,-1545.5 277.664,-1555.71 281.793,-1545.95 274.807,-1545.5"/>
-</g>
-<!-- Node57 -->
-<g id="node35" class="node"><title>Node57</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#aa5351c44da27a9f8c63ccd0315922c82" target="_top" xlink:title="Method liefert den aktuellen Zustand der Checkbox, &quot;angehakt&quot; oder &quot;nicht angehakt&quot;. ">
-<polygon fill="white" stroke="red" points="404,-1944 404,-1978 562,-1978 562,-1944 404,-1944"/>
-<text text-anchor="start" x="412" y="-1965" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1952" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputCheckbox.getIsSelected</text>
-</a>
-</g>
-<!-- Node20&#45;&gt;Node57 -->
-<g id="edge34" class="edge"><title>Node20&#45;&gt;Node57</title>
-<path fill="none" stroke="midnightblue" d="M278.03,-1600.24C281.989,-1666.08 301.16,-1835.43 394,-1930 399.502,-1935.6 406.069,-1940.2 413.11,-1943.96"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="281.524,-1600.03 277.5,-1590.23 274.534,-1600.4 281.524,-1600.03"/>
+<!-- Node20&#45;&gt;Node55 -->
+<g id="edge36" class="edge"><title>Node20&#45;&gt;Node55</title>
+<path fill="none" stroke="midnightblue" d="M280.232,-1493.95C288.446,-1437.35 315.37,-1305.84 394,-1235 400.697,-1228.97 408.723,-1224.33 417.176,-1220.76"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="276.755,-1493.54 278.868,-1503.92 283.691,-1494.49 276.755,-1493.54"/>
 </g>
 <!-- Node59 -->
 <g id="node39" class="node"><title>Node59</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a2bdc045186dd1244133cf6edaa2d45f1" target="_top" xlink:title="Method liefert den aktuellen Zustand des RadioButtons, ausgewählt oder nicht. ">
-<polygon fill="white" stroke="black" points="413.5,-1012 413.5,-1046 552.5,-1046 552.5,-1012 413.5,-1012"/>
-<text text-anchor="start" x="421.5" y="-1033" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1020" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputRadio.getIsSelected</text>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#aa5351c44da27a9f8c63ccd0315922c82" target="_top" xlink:title="Method liefert den aktuellen Zustand der Checkbox, &quot;angehakt&quot; oder &quot;nicht angehakt&quot;. ">
+<polygon fill="white" stroke="red" points="404,-1868 404,-1902 562,-1902 562,-1868 404,-1868"/>
+<text text-anchor="start" x="412" y="-1889" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1876" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputCheckbox.getIsSelected</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node59 -->
 <g id="edge38" class="edge"><title>Node20&#45;&gt;Node59</title>
-<path fill="none" stroke="midnightblue" d="M283.086,-1545.84C306.953,-1439.37 392.913,-1056.16 394,-1055 399.402,-1049.25 405.996,-1044.75 413.129,-1041.23"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="279.624,-1545.28 280.852,-1555.81 286.455,-1546.82 279.624,-1545.28"/>
+<path fill="none" stroke="midnightblue" d="M278.307,-1548.39C282.864,-1612.34 303.236,-1772.58 394,-1859 397.497,-1862.33 401.397,-1865.24 405.557,-1867.77"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="281.793,-1548.05 277.664,-1538.29 274.807,-1548.5 281.793,-1548.05"/>
 </g>
 <!-- Node61 -->
 <g id="node43" class="node"><title>Node61</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#aca62fc718d6636750d210014eb6244d2" target="_top" xlink:title="Ermittelt den Wert des Textfeldes, welches dem sichtbaren . ">
-<polygon fill="white" stroke="red" points="417.5,-1764 417.5,-1798 548.5,-1798 548.5,-1764 417.5,-1764"/>
-<text text-anchor="start" x="425.5" y="-1785" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1772" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputText.getValue</text>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a2bdc045186dd1244133cf6edaa2d45f1" target="_top" xlink:title="Method liefert den aktuellen Zustand des RadioButtons, ausgewählt oder nicht. ">
+<polygon fill="white" stroke="black" points="413.5,-946 413.5,-980 552.5,-980 552.5,-946 413.5,-946"/>
+<text text-anchor="start" x="421.5" y="-967" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-954" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputRadio.getIsSelected</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node61 -->
 <g id="edge42" class="edge"><title>Node20&#45;&gt;Node61</title>
-<path fill="none" stroke="midnightblue" d="M286.931,-1599.52C303.179,-1639.29 339.219,-1714.06 394,-1755 400.963,-1760.2 408.948,-1764.37 417.215,-1767.7"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="290.175,-1598.21 283.228,-1590.21 283.67,-1600.8 290.175,-1598.21"/>
+<path fill="none" stroke="midnightblue" d="M282.851,-1493.98C304.65,-1393.62 380.591,-1047.03 394,-1027 407.447,-1006.92 429.455,-991.008 448.222,-980.075"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="279.389,-1493.42 280.689,-1503.94 286.23,-1494.91 279.389,-1493.42"/>
 </g>
 <!-- Node63 -->
-<g id="node45" class="node"><title>Node63</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html#a5f07ff01898f066115ea23d3bcc10fd3" target="_top" xlink:title="Der Wert eines Linkes ist das Ziel des Linkes, also das Attribut href des HTML&#45;Linkes. ">
-<polygon fill="white" stroke="black" points="417.5,-1712 417.5,-1746 548.5,-1746 548.5,-1712 417.5,-1712"/>
-<text text-anchor="start" x="425.5" y="-1733" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1720" font-family="Helvetica,sans-Serif" font-size="10.00">SeLink.getValue</text>
+<g id="node47" class="node"><title>Node63</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#aca62fc718d6636750d210014eb6244d2" target="_top" xlink:title="Ermittelt den Wert des Textfeldes, welches dem sichtbaren . ">
+<polygon fill="white" stroke="red" points="417.5,-1140 417.5,-1174 548.5,-1174 548.5,-1140 417.5,-1140"/>
+<text text-anchor="start" x="425.5" y="-1161" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1148" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputText.getValue</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node63 -->
-<g id="edge44" class="edge"><title>Node20&#45;&gt;Node63</title>
-<path fill="none" stroke="midnightblue" d="M293.457,-1598.61C313.672,-1628.03 350.665,-1675.76 394,-1703 401.223,-1707.54 409.271,-1711.31 417.491,-1714.45"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="296.222,-1596.44 287.734,-1590.1 290.415,-1600.35 296.222,-1596.44"/>
-</g>
-<!-- Node64 -->
-<g id="node47" class="node"><title>Node64</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html#afdad05e1d4413b4cdce12d38b67def23" target="_top" xlink:title="Methode wählt einen oder mehrere Werte in einer ListBox aus. ">
-<polygon fill="white" stroke="black" points="417.5,-1064 417.5,-1098 548.5,-1098 548.5,-1064 417.5,-1064"/>
-<text text-anchor="start" x="425.5" y="-1085" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1072" font-family="Helvetica,sans-Serif" font-size="10.00">SeSelect.Select</text>
-</a>
-</g>
-<!-- Node20&#45;&gt;Node64 -->
-<g id="edge46" class="edge"><title>Node20&#45;&gt;Node64</title>
-<path fill="none" stroke="midnightblue" d="M281.095,-1545.65C291.805,-1479.77 324.74,-1308.45 394,-1183 412.515,-1149.46 443.534,-1117.28 463.628,-1098.33"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="277.619,-1545.22 279.51,-1555.65 284.533,-1546.32 277.619,-1545.22"/>
+<g id="edge46" class="edge"><title>Node20&#45;&gt;Node63</title>
+<path fill="none" stroke="midnightblue" d="M278.307,-1493.61C282.864,-1429.66 303.236,-1269.42 394,-1183 400.645,-1176.67 408.743,-1171.87 417.318,-1168.24"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="274.807,-1493.5 277.664,-1503.71 281.793,-1493.95 274.807,-1493.5"/>
 </g>
 <!-- Node65 -->
 <g id="node49" class="node"><title>Node65</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html#adadeaad5c5dbbe8c2f24e51a99de6012" target="_top" xlink:title="Methode setzt einen oder mehrere Werte in einer ListBox. ">
-<polygon fill="white" stroke="black" points="610.5,-1112 610.5,-1146 741.5,-1146 741.5,-1112 610.5,-1112"/>
-<text text-anchor="start" x="618.5" y="-1133" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="676" y="-1120" font-family="Helvetica,sans-Serif" font-size="10.00">SeSelect.SetValue</text>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html#a5f07ff01898f066115ea23d3bcc10fd3" target="_top" xlink:title="Der Wert eines Linkes ist das Ziel des Linkes, also das Attribut href des HTML&#45;Linkes. ">
+<polygon fill="white" stroke="black" points="417.5,-1036 417.5,-1070 548.5,-1070 548.5,-1036 417.5,-1036"/>
+<text text-anchor="start" x="425.5" y="-1057" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1044" font-family="Helvetica,sans-Serif" font-size="10.00">SeLink.getValue</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node65 -->
-<g id="edge52" class="edge"><title>Node20&#45;&gt;Node65</title>
-<path fill="none" stroke="midnightblue" d="M282.852,-1600.35C298.603,-1671.12 344.088,-1857.14 394,-1892 458.86,-1937.3 513.237,-1944.97 572,-1892 629.421,-1840.24 597.775,-1622.62 608,-1546 628.812,-1390.04 662.488,-1202.68 672.859,-1146.03"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="286.23,-1599.42 280.665,-1590.4 279.394,-1600.92 286.23,-1599.42"/>
+<g id="edge48" class="edge"><title>Node20&#45;&gt;Node65</title>
+<path fill="none" stroke="midnightblue" d="M282.562,-1493.88C301.524,-1402.47 364.119,-1109.65 394,-1079 400.517,-1072.31 408.65,-1067.32 417.331,-1063.6"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="279.116,-1493.26 280.519,-1503.76 285.971,-1494.68 279.116,-1493.26"/>
 </g>
 <!-- Node66 -->
 <g id="node51" class="node"><title>Node66</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html#a9b794180edef1f6d5d11cad9f6e7e136" target="_top" xlink:title="Holt die aktuell ausgewählten Werte aus der ListBox. ">
-<polygon fill="white" stroke="black" points="610.5,-1060 610.5,-1094 741.5,-1094 741.5,-1060 610.5,-1060"/>
-<text text-anchor="start" x="618.5" y="-1081" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="676" y="-1068" font-family="Helvetica,sans-Serif" font-size="10.00">SeSelect.getValue</text>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html#afdad05e1d4413b4cdce12d38b67def23" target="_top" xlink:title="Methode wählt einen oder mehrere Werte in einer ListBox aus. ">
+<polygon fill="white" stroke="black" points="417.5,-1764 417.5,-1798 548.5,-1798 548.5,-1764 417.5,-1764"/>
+<text text-anchor="start" x="425.5" y="-1785" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1772" font-family="Helvetica,sans-Serif" font-size="10.00">SeSelect.Select</text>
 </a>
 </g>
 <!-- Node20&#45;&gt;Node66 -->
-<g id="edge54" class="edge"><title>Node20&#45;&gt;Node66</title>
-<path fill="none" stroke="midnightblue" d="M278.627,-1600.28C283.807,-1659.53 305.317,-1799.46 394,-1859 426.841,-1881.05 543.373,-1886.3 572,-1859 632.862,-1800.97 558.688,-1171.12 608,-1103 610.446,-1099.62 613.391,-1096.68 616.666,-1094.12"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="282.107,-1599.88 277.837,-1590.19 275.129,-1600.43 282.107,-1599.88"/>
+<g id="edge50" class="edge"><title>Node20&#45;&gt;Node66</title>
+<path fill="none" stroke="midnightblue" d="M282.921,-1547.85C295.059,-1596.52 327.412,-1699.4 394,-1755 400.796,-1760.67 408.78,-1765.11 417.128,-1768.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="286.307,-1546.96 280.57,-1538.06 279.5,-1548.6 286.307,-1546.96"/>
 </g>
 <!-- Node67 -->
-<g id="node55" class="node"><title>Node67</title>
+<g id="node53" class="node"><title>Node67</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html#adadeaad5c5dbbe8c2f24e51a99de6012" target="_top" xlink:title="Methode setzt einen oder mehrere Werte in einer ListBox. ">
+<polygon fill="white" stroke="black" points="610.5,-1790 610.5,-1824 741.5,-1824 741.5,-1790 610.5,-1790"/>
+<text text-anchor="start" x="618.5" y="-1811" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="676" y="-1798" font-family="Helvetica,sans-Serif" font-size="10.00">SeSelect.SetValue</text>
+</a>
+</g>
+<!-- Node20&#45;&gt;Node67 -->
+<g id="edge56" class="edge"><title>Node20&#45;&gt;Node67</title>
+<path fill="none" stroke="midnightblue" d="M280.292,-1548.06C291.261,-1633.22 329.564,-1893.03 394,-1942 456.986,-1989.87 501.014,-1976.92 572,-1942 622.44,-1917.19 655.296,-1854.84 668.884,-1824.34"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="283.762,-1547.6 279.034,-1538.12 276.817,-1548.48 283.762,-1547.6"/>
+</g>
+<!-- Node68 -->
+<g id="node55" class="node"><title>Node68</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html#a9b794180edef1f6d5d11cad9f6e7e136" target="_top" xlink:title="Holt die aktuell ausgewählten Werte aus der ListBox. ">
+<polygon fill="white" stroke="black" points="610.5,-1738 610.5,-1772 741.5,-1772 741.5,-1738 610.5,-1738"/>
+<text text-anchor="start" x="618.5" y="-1759" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="676" y="-1746" font-family="Helvetica,sans-Serif" font-size="10.00">SeSelect.getValue</text>
+</a>
+</g>
+<!-- Node20&#45;&gt;Node68 -->
+<g id="edge58" class="edge"><title>Node20&#45;&gt;Node68</title>
+<path fill="none" stroke="midnightblue" d="M280.94,-1548.21C293.288,-1629.28 334.024,-1866.38 394,-1911 457.47,-1958.22 509.036,-1958.9 572,-1911 619.715,-1874.7 567.669,-1825.36 608,-1781 611.061,-1777.63 614.606,-1774.7 618.438,-1772.14"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="284.393,-1547.63 279.449,-1538.26 277.47,-1548.67 284.393,-1547.63"/>
+</g>
+<!-- Node69 -->
+<g id="node59" class="node"><title>Node69</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#ae561257a88aece7f85d04001b7ead2ae" target="_top" xlink:title="Ermittelt den textuellen Inhalt eines Textfeldes. ">
 <polygon fill="white" stroke="black" points="417.5,-1996 417.5,-2030 548.5,-2030 548.5,-1996 417.5,-1996"/>
 <text text-anchor="start" x="425.5" y="-2017" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="483" y="-2004" font-family="Helvetica,sans-Serif" font-size="10.00">SeTextarea.igetValue</text>
 </a>
 </g>
-<!-- Node20&#45;&gt;Node67 -->
-<g id="edge56" class="edge"><title>Node20&#45;&gt;Node67</title>
-<path fill="none" stroke="midnightblue" d="M281.204,-1600.27C294.521,-1683.29 338.212,-1930.72 394,-1987 400.573,-1993.63 408.736,-1998.59 417.431,-2002.3"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="284.651,-1599.66 279.629,-1590.33 277.737,-1600.75 284.651,-1599.66"/>
+<!-- Node20&#45;&gt;Node69 -->
+<g id="edge60" class="edge"><title>Node20&#45;&gt;Node69</title>
+<path fill="none" stroke="midnightblue" d="M280.5,-1548.21C292.434,-1637.05 334.135,-1916.71 394,-1982 400.414,-1988.99 408.489,-1994.41 417.145,-1998.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="283.946,-1547.57 279.163,-1538.11 277.007,-1548.49 283.946,-1547.57"/>
 </g>
-<!-- Node68 -->
-<g id="node57" class="node"><title>Node68</title>
+<!-- Node70 -->
+<g id="node61" class="node"><title>Node70</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#a144e35802cf11c6b714bf8513691cc22" target="_top" xlink:title="Ermittelt den textuellen Inhalt eines Textfeldes. ">
-<polygon fill="white" stroke="black" points="417.5,-1816 417.5,-1850 548.5,-1850 548.5,-1816 417.5,-1816"/>
-<text text-anchor="start" x="425.5" y="-1837" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-1824" font-family="Helvetica,sans-Serif" font-size="10.00">SeTextarea.getValue</text>
+<polygon fill="white" stroke="black" points="417.5,-1088 417.5,-1122 548.5,-1122 548.5,-1088 417.5,-1088"/>
+<text text-anchor="start" x="425.5" y="-1109" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-1096" font-family="Helvetica,sans-Serif" font-size="10.00">SeTextarea.getValue</text>
 </a>
 </g>
-<!-- Node20&#45;&gt;Node68 -->
-<g id="edge58" class="edge"><title>Node20&#45;&gt;Node68</title>
-<path fill="none" stroke="midnightblue" d="M282.921,-1599.85C295.059,-1648.52 327.412,-1751.4 394,-1807 400.796,-1812.67 408.78,-1817.11 417.128,-1820.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="286.307,-1598.96 280.57,-1590.06 279.5,-1600.6 286.307,-1598.96"/>
-</g>
-<!-- Node58 -->
-<g id="node37" class="node"><title>Node58</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a19bd403031cbdc003823a7b21c0cf12e" target="_top" xlink:title="Ermittelt/holt den aktuellen Wert der CheckBox. ">
-<polygon fill="white" stroke="black" points="608,-1555 608,-1589 744,-1589 744,-1555 608,-1555"/>
-<text text-anchor="start" x="616" y="-1576" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="676" y="-1563" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputCheckbox.getValue</text>
-</a>
-</g>
-<!-- Node57&#45;&gt;Node58 -->
-<g id="edge36" class="edge"><title>Node57&#45;&gt;Node58</title>
-<path fill="none" stroke="midnightblue" d="M562.166,-1938.49C565.711,-1935.96 569.023,-1933.14 572,-1930 620.782,-1878.59 662.211,-1653.15 673.168,-1589.05"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="560.138,-1935.63 553.518,-1943.91 563.851,-1941.57 560.138,-1935.63"/>
+<!-- Node20&#45;&gt;Node70 -->
+<g id="edge62" class="edge"><title>Node20&#45;&gt;Node70</title>
+<path fill="none" stroke="midnightblue" d="M281.751,-1493.5C296.085,-1413.53 341.177,-1183.44 394,-1131 400.511,-1124.54 408.535,-1119.66 417.076,-1115.99"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="278.233,-1493.29 279.935,-1503.75 285.125,-1494.51 278.233,-1493.29"/>
 </g>
 <!-- Node60 -->
 <g id="node41" class="node"><title>Node60</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a065bf42fe3ac6802ebac1bb25099e89a" target="_top" xlink:title="Ermittelt den aktuellen Wert des RadioButtons. ">
-<polygon fill="white" stroke="black" points="610.5,-812 610.5,-846 741.5,-846 741.5,-812 610.5,-812"/>
-<text text-anchor="start" x="618.5" y="-833" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="676" y="-820" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputRadio.getValue</text>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a19bd403031cbdc003823a7b21c0cf12e" target="_top" xlink:title="Ermittelt/holt den aktuellen Wert der CheckBox. ">
+<polygon fill="white" stroke="black" points="608,-1341 608,-1375 744,-1375 744,-1341 608,-1341"/>
+<text text-anchor="start" x="616" y="-1362" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="676" y="-1349" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputCheckbox.getValue</text>
 </a>
 </g>
 <!-- Node59&#45;&gt;Node60 -->
 <g id="edge40" class="edge"><title>Node59&#45;&gt;Node60</title>
-<path fill="none" stroke="midnightblue" d="M561.776,-1009.75C565.363,-1007.72 568.796,-1005.48 572,-1003 626.571,-960.809 658.543,-881.228 670.532,-846.241"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="559.952,-1006.74 552.586,-1014.36 563.093,-1013 559.952,-1006.74"/>
+<path fill="none" stroke="midnightblue" d="M569.634,-1861.41C570.446,-1860.63 571.236,-1859.83 572,-1859 589.101,-1840.48 657.647,-1460.88 672.957,-1375.12"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="567.357,-1858.75 561.762,-1867.74 571.746,-1864.2 567.357,-1858.75"/>
 </g>
-<!-- Node64&#45;&gt;Node65 -->
-<g id="edge48" class="edge"><title>Node64&#45;&gt;Node65</title>
-<path fill="none" stroke="midnightblue" d="M558.54,-1099.79C575.615,-1104.03 593.61,-1108.51 610.243,-1112.65"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="559.159,-1096.33 548.61,-1097.32 557.47,-1103.13 559.159,-1096.33"/>
+<!-- Node62 -->
+<g id="node45" class="node"><title>Node62</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a065bf42fe3ac6802ebac1bb25099e89a" target="_top" xlink:title="Ermittelt den aktuellen Wert des RadioButtons. ">
+<polygon fill="white" stroke="black" points="610.5,-729 610.5,-763 741.5,-763 741.5,-729 610.5,-729"/>
+<text text-anchor="start" x="618.5" y="-750" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="676" y="-737" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputRadio.getValue</text>
+</a>
 </g>
-<!-- Node64&#45;&gt;Node66 -->
-<g id="edge50" class="edge"><title>Node64&#45;&gt;Node66</title>
-<path fill="none" stroke="midnightblue" d="M559.019,-1079.42C575.951,-1079.07 593.765,-1078.7 610.243,-1078.36"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="558.536,-1075.93 548.61,-1079.64 558.681,-1082.93 558.536,-1075.93"/>
+<!-- Node61&#45;&gt;Node62 -->
+<g id="edge44" class="edge"><title>Node61&#45;&gt;Node62</title>
+<path fill="none" stroke="midnightblue" d="M520.376,-940.4C537.232,-929.177 556.735,-914.674 572,-899 614.353,-855.513 650.855,-792.843 667.061,-763.018"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="518.31,-937.569 511.839,-945.958 522.129,-943.435 518.31,-937.569"/>
 </g>
-<!-- Node69&#45;&gt;Node21 -->
-<g id="edge62" class="edge"><title>Node69&#45;&gt;Node21</title>
-<path fill="none" stroke="midnightblue" d="M283.05,-1213.16C304.76,-1310.17 378.295,-1634.69 394,-1651 399.136,-1656.33 405.3,-1660.59 411.957,-1663.98"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="286.429,-1212.23 280.832,-1203.23 279.598,-1213.76 286.429,-1212.23"/>
+<!-- Node66&#45;&gt;Node67 -->
+<g id="edge52" class="edge"><title>Node66&#45;&gt;Node67</title>
+<path fill="none" stroke="midnightblue" d="M558.54,-1791.18C575.615,-1793.48 593.61,-1795.9 610.243,-1798.14"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="558.988,-1787.71 548.61,-1789.84 558.053,-1794.64 558.988,-1787.71"/>
 </g>
-<!-- Node69&#45;&gt;Node26 -->
-<g id="edge64" class="edge"><title>Node69&#45;&gt;Node26</title>
-<path fill="none" stroke="midnightblue" d="M281.213,-1213.2C294.558,-1296.03 338.319,-1542.86 394,-1599 397.514,-1602.54 401.482,-1605.61 405.743,-1608.26"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="284.663,-1212.61 279.635,-1203.29 277.75,-1213.71 284.663,-1212.61"/>
+<!-- Node66&#45;&gt;Node68 -->
+<g id="edge54" class="edge"><title>Node66&#45;&gt;Node68</title>
+<path fill="none" stroke="midnightblue" d="M558.54,-1770.82C575.615,-1768.52 593.61,-1766.1 610.243,-1763.86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="558.053,-1767.36 548.61,-1772.16 558.988,-1774.29 558.053,-1767.36"/>
 </g>
-<!-- Node69&#45;&gt;Node30 -->
-<g id="edge66" class="edge"><title>Node69&#45;&gt;Node30</title>
-<path fill="none" stroke="midnightblue" d="M282.448,-1213.47C298.001,-1289.31 344.675,-1499.09 394,-1547 397.464,-1550.36 401.339,-1553.3 405.48,-1555.85"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="285.801,-1212.4 280.383,-1203.29 278.941,-1213.79 285.801,-1212.4"/>
+<!-- Node71&#45;&gt;Node21 -->
+<g id="edge66" class="edge"><title>Node71&#45;&gt;Node21</title>
+<path fill="none" stroke="midnightblue" d="M284.064,-1158.16C299.505,-1218.4 336.59,-1367.93 358,-1495 369.596,-1563.82 348.999,-1753.65 394,-1807 398.878,-1812.78 404.965,-1817.32 411.652,-1820.87"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="287.408,-1157.11 281.525,-1148.3 280.629,-1158.86 287.408,-1157.11"/>
 </g>
-<!-- Node69&#45;&gt;Node34 -->
-<g id="edge68" class="edge"><title>Node69&#45;&gt;Node34</title>
-<path fill="none" stroke="midnightblue" d="M279.345,-1213.51C285.961,-1273.61 310.162,-1417.44 394,-1495 397.663,-1498.39 401.744,-1501.34 406.088,-1503.9"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="282.8,-1212.89 278.304,-1203.3 275.836,-1213.6 282.8,-1212.89"/>
+<!-- Node71&#45;&gt;Node26 -->
+<g id="edge68" class="edge"><title>Node71&#45;&gt;Node26</title>
+<path fill="none" stroke="midnightblue" d="M283.532,-1158.26C297.911,-1218.69 333.009,-1368.58 358,-1495 376.195,-1587.04 331.507,-1633.02 394,-1703 397.431,-1706.84 401.395,-1710.13 405.705,-1712.94"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="286.897,-1157.28 281.173,-1148.37 280.088,-1158.9 286.897,-1157.28"/>
 </g>
-<!-- Node69&#45;&gt;Node38 -->
-<g id="edge70" class="edge"><title>Node69&#45;&gt;Node38</title>
-<path fill="none" stroke="midnightblue" d="M281.595,-1212.86C291.952,-1265.1 322.07,-1380.68 394,-1443 399.11,-1447.43 404.939,-1451.1 411.113,-1454.15"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="285.028,-1212.18 279.728,-1203.01 278.15,-1213.48 285.028,-1212.18"/>
+<!-- Node71&#45;&gt;Node30 -->
+<g id="edge70" class="edge"><title>Node71&#45;&gt;Node30</title>
+<path fill="none" stroke="midnightblue" d="M283.022,-1158.19C306.648,-1264.82 391.818,-1648.68 394,-1651 397.195,-1654.4 400.809,-1657.37 404.705,-1659.95"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="286.392,-1157.22 280.812,-1148.22 279.558,-1158.74 286.392,-1157.22"/>
 </g>
-<!-- Node69&#45;&gt;Node42 -->
-<g id="edge72" class="edge"><title>Node69&#45;&gt;Node42</title>
-<path fill="none" stroke="midnightblue" d="M285.021,-1212.95C299.487,-1256.88 334.145,-1343.75 394,-1391 398.422,-1394.49 403.299,-1397.51 408.423,-1400.13"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="288.302,-1211.72 281.928,-1203.25 281.633,-1213.85 288.302,-1211.72"/>
+<!-- Node71&#45;&gt;Node34 -->
+<g id="edge72" class="edge"><title>Node71&#45;&gt;Node34</title>
+<path fill="none" stroke="midnightblue" d="M282.972,-1158.01C304.573,-1255.24 378.194,-1582.56 394,-1599 397.236,-1602.37 400.88,-1605.3 404.8,-1607.86"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="286.351,-1157.08 280.768,-1148.07 279.517,-1158.59 286.351,-1157.08"/>
 </g>
-<!-- Node69&#45;&gt;Node46 -->
-<g id="edge74" class="edge"><title>Node69&#45;&gt;Node46</title>
-<path fill="none" stroke="midnightblue" d="M290.074,-1212.03C308.575,-1246.22 345.601,-1305.81 394,-1339 399.045,-1342.46 404.553,-1345.46 410.276,-1348.07"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="293.122,-1210.3 285.353,-1203.1 286.934,-1213.57 293.122,-1210.3"/>
+<!-- Node71&#45;&gt;Node38 -->
+<g id="edge74" class="edge"><title>Node71&#45;&gt;Node38</title>
+<path fill="none" stroke="midnightblue" d="M281.185,-1158.4C294.448,-1241.82 337.998,-1490.43 394,-1547 398.983,-1552.03 404.882,-1556.1 411.236,-1559.4"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="284.626,-1157.75 279.617,-1148.41 277.71,-1158.83 284.626,-1157.75"/>
 </g>
-<!-- Node69&#45;&gt;Node51 -->
-<g id="edge76" class="edge"><title>Node69&#45;&gt;Node51</title>
-<path fill="none" stroke="midnightblue" d="M299.26,-1210.5C321.268,-1233.35 356.938,-1266.84 394,-1287 400.08,-1290.31 406.629,-1293.24 413.318,-1295.82"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="301.757,-1208.05 292.338,-1203.2 296.676,-1212.86 301.757,-1208.05"/>
+<!-- Node71&#45;&gt;Node42 -->
+<g id="edge76" class="edge"><title>Node71&#45;&gt;Node42</title>
+<path fill="none" stroke="midnightblue" d="M282.416,-1158.7C297.886,-1235.16 344.362,-1446.67 394,-1495 398.268,-1499.15 403.161,-1502.65 408.409,-1505.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="285.756,-1157.55 280.362,-1148.44 278.892,-1158.93 285.756,-1157.55"/>
 </g>
-<!-- Node69&#45;&gt;Node52 -->
-<g id="edge78" class="edge"><title>Node69&#45;&gt;Node52</title>
-<path fill="none" stroke="midnightblue" d="M324.173,-1207.18C345.314,-1216.3 370.688,-1226.74 394,-1235 402.801,-1238.12 412.182,-1241.16 421.429,-1243.99"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="325.346,-1203.87 314.78,-1203.09 322.554,-1210.29 325.346,-1203.87"/>
+<!-- Node71&#45;&gt;Node46 -->
+<g id="edge78" class="edge"><title>Node71&#45;&gt;Node46</title>
+<path fill="none" stroke="midnightblue" d="M279.213,-1158.34C285.587,-1218.75 309.375,-1364.46 394,-1443 398.837,-1447.49 404.408,-1451.21 410.353,-1454.29"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="282.667,-1157.7 278.214,-1148.09 275.7,-1158.38 282.667,-1157.7"/>
 </g>
-<!-- Node69&#45;&gt;Node53 -->
-<g id="edge80" class="edge"><title>Node69&#45;&gt;Node53</title>
-<path fill="none" stroke="midnightblue" d="M364.848,-1195.81C382.422,-1197.77 400.598,-1199.8 417.268,-1201.66"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="364.913,-1192.29 354.586,-1194.66 364.136,-1199.25 364.913,-1192.29"/>
+<!-- Node71&#45;&gt;Node51 -->
+<g id="edge80" class="edge"><title>Node71&#45;&gt;Node51</title>
+<path fill="none" stroke="midnightblue" d="M281.497,-1158.17C291.682,-1211 321.512,-1327.92 394,-1391 398.372,-1394.8 403.274,-1398.05 408.471,-1400.83"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="284.915,-1157.4 279.664,-1148.2 278.03,-1158.67 284.915,-1157.4"/>
 </g>
-<!-- Node69&#45;&gt;Node58 -->
-<g id="edge82" class="edge"><title>Node69&#45;&gt;Node58</title>
-<path fill="none" stroke="midnightblue" d="M364.46,-1173.61C439.587,-1164.99 540.605,-1158.9 572,-1183 633.271,-1230.04 666.26,-1485.77 674.135,-1554.81"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="364.028,-1170.13 354.506,-1174.78 364.847,-1177.08 364.028,-1170.13"/>
+<!-- Node71&#45;&gt;Node52 -->
+<g id="edge82" class="edge"><title>Node71&#45;&gt;Node52</title>
+<path fill="none" stroke="midnightblue" d="M284.8,-1158.01C299.036,-1202.47 333.482,-1290.92 394,-1339 398.79,-1342.8 404.118,-1346.05 409.72,-1348.83"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="288.066,-1156.72 281.762,-1148.21 281.379,-1158.79 288.066,-1156.72"/>
 </g>
-<!-- Node69&#45;&gt;Node59 -->
-<g id="edge90" class="edge"><title>Node69&#45;&gt;Node59</title>
-<path fill="none" stroke="midnightblue" d="M293.411,-1160.19C313.582,-1130.54 350.533,-1082.43 394,-1055 399.99,-1051.22 406.549,-1047.97 413.306,-1045.18"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="290.334,-1158.5 287.701,-1168.76 296.159,-1162.38 290.334,-1158.5"/>
+<!-- Node71&#45;&gt;Node53 -->
+<g id="edge84" class="edge"><title>Node71&#45;&gt;Node53</title>
+<path fill="none" stroke="midnightblue" d="M289.943,-1157.54C308.296,-1192.41 345.158,-1253.17 394,-1287 401.014,-1291.86 408.938,-1295.82 417.095,-1299.05"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="292.947,-1155.73 285.262,-1148.44 286.722,-1158.93 292.947,-1155.73"/>
 </g>
-<!-- Node69&#45;&gt;Node60 -->
-<g id="edge88" class="edge"><title>Node69&#45;&gt;Node60</title>
-<path fill="none" stroke="midnightblue" d="M278.595,-1158.81C285.07,-1059.01 313.022,-715.209 394,-650 455.617,-600.382 503.434,-610.538 572,-650 634.145,-685.766 662.591,-774.495 672.12,-811.918"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="275.09,-1158.78 277.956,-1168.98 282.077,-1159.22 275.09,-1158.78"/>
+<!-- Node71&#45;&gt;Node54 -->
+<g id="edge86" class="edge"><title>Node71&#45;&gt;Node54</title>
+<path fill="none" stroke="midnightblue" d="M298.741,-1155.86C320.61,-1179.41 356.399,-1214.19 394,-1235 401.324,-1239.05 409.345,-1242.53 417.477,-1245.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="301.202,-1153.36 291.875,-1148.34 296.032,-1158.08 301.202,-1153.36"/>
 </g>
-<!-- Node69&#45;&gt;Node61 -->
-<g id="edge94" class="edge"><title>Node69&#45;&gt;Node61</title>
-<path fill="none" stroke="midnightblue" d="M283.545,-1213.03C297.95,-1272.96 333.095,-1421.6 358,-1547 376.276,-1639.02 331.507,-1685.02 394,-1755 400.326,-1762.08 408.464,-1767.28 417.242,-1771.09"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="286.926,-1212.12 281.181,-1203.22 280.121,-1213.76 286.926,-1212.12"/>
+<!-- Node71&#45;&gt;Node55 -->
+<g id="edge88" class="edge"><title>Node71&#45;&gt;Node55</title>
+<path fill="none" stroke="midnightblue" d="M321.335,-1152.39C342.97,-1162.39 369.547,-1174.04 394,-1183 402.464,-1186.1 411.484,-1189.09 420.411,-1191.87"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="322.62,-1149.13 312.078,-1148.07 319.661,-1155.47 322.62,-1149.13"/>
 </g>
-<!-- Node69&#45;&gt;Node63 -->
-<g id="edge96" class="edge"><title>Node69&#45;&gt;Node63</title>
-<path fill="none" stroke="midnightblue" d="M283.086,-1213.1C306.953,-1319.37 392.914,-1701.85 394,-1703 400.395,-1709.8 408.461,-1714.86 417.112,-1718.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="286.459,-1212.15 280.853,-1203.16 279.629,-1213.68 286.459,-1212.15"/>
+<!-- Node71&#45;&gt;Node60 -->
+<g id="edge90" class="edge"><title>Node71&#45;&gt;Node60</title>
+<path fill="none" stroke="midnightblue" d="M278.508,-1103.72C284.705,-1002.85 311.886,-653.331 394,-587 455.541,-537.288 512.438,-534.933 572,-587 586.809,-599.945 660.813,-1228.01 673.991,-1340.76"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="275.013,-1103.54 277.913,-1113.73 282,-1103.96 275.013,-1103.54"/>
 </g>
-<!-- Node69&#45;&gt;Node64 -->
-<g id="edge104" class="edge"><title>Node69&#45;&gt;Node64</title>
-<path fill="none" stroke="midnightblue" d="M309.017,-1162.93C331.906,-1147.15 363.865,-1126.54 394,-1112 404.61,-1106.88 416.292,-1102.19 427.603,-1098.09"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="306.915,-1160.13 300.712,-1168.72 310.917,-1165.87 306.915,-1160.13"/>
+<!-- Node71&#45;&gt;Node61 -->
+<g id="edge98" class="edge"><title>Node71&#45;&gt;Node61</title>
+<path fill="none" stroke="midnightblue" d="M292.808,-1105.27C312.824,-1074.69 350.051,-1024.04 394,-994 401.97,-988.553 410.993,-983.97 420.161,-980.142"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="289.853,-1103.39 287.393,-1113.7 295.743,-1107.18 289.853,-1103.39"/>
 </g>
-<!-- Node69&#45;&gt;Node65 -->
-<g id="edge106" class="edge"><title>Node69&#45;&gt;Node65</title>
-<path fill="none" stroke="midnightblue" d="M333.604,-1165.78C352.575,-1159.76 373.993,-1153.77 394,-1150 467.33,-1136.17 552.997,-1131.36 610.498,-1129.73"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="332.359,-1162.51 323.927,-1168.92 334.519,-1169.17 332.359,-1162.51"/>
+<!-- Node71&#45;&gt;Node62 -->
+<g id="edge96" class="edge"><title>Node71&#45;&gt;Node62</title>
+<path fill="none" stroke="midnightblue" d="M278.058,-1103.74C282.782,-998.009 305.773,-617.353 394,-545 424.586,-519.917 538.209,-524.438 572,-545 639.968,-586.359 665.482,-688.054 673.177,-728.753"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="274.553,-1103.76 277.623,-1113.9 281.547,-1104.06 274.553,-1103.76"/>
 </g>
-<!-- Node69&#45;&gt;Node66 -->
-<g id="edge108" class="edge"><title>Node69&#45;&gt;Node66</title>
-<path fill="none" stroke="midnightblue" d="M279.124,-1158.74C287.136,-1063.83 318.976,-750.358 394,-691 456.041,-641.914 510.354,-641.418 572,-691 630.15,-737.77 589.057,-782.82 608,-855 628.26,-932.198 657.858,-1022.78 670.23,-1059.87"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="275.615,-1158.71 278.283,-1168.96 282.591,-1159.28 275.615,-1158.71"/>
+<!-- Node71&#45;&gt;Node63 -->
+<g id="edge102" class="edge"><title>Node71&#45;&gt;Node63</title>
+<path fill="none" stroke="midnightblue" d="M364.848,-1142.09C382.422,-1144.31 400.598,-1146.6 417.268,-1148.7"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="364.946,-1138.57 354.586,-1140.79 364.069,-1145.52 364.946,-1138.57"/>
 </g>
-<!-- Node69&#45;&gt;Node68 -->
-<g id="edge110" class="edge"><title>Node69&#45;&gt;Node68</title>
-<path fill="none" stroke="midnightblue" d="M283.86,-1212.97C298.894,-1272.78 335.217,-1421.19 358,-1547 368.394,-1604.4 355.887,-1762.84 394,-1807 400.311,-1814.31 408.552,-1819.62 417.473,-1823.47"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="287.23,-1212.02 281.39,-1203.18 280.443,-1213.73 287.23,-1212.02"/>
+<!-- Node71&#45;&gt;Node65 -->
+<g id="edge104" class="edge"><title>Node71&#45;&gt;Node65</title>
+<path fill="none" stroke="midnightblue" d="M321.335,-1109.61C342.97,-1099.61 369.547,-1087.96 394,-1079 402.464,-1075.9 411.484,-1072.91 420.411,-1070.13"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="319.661,-1106.53 312.078,-1113.93 322.62,-1112.87 319.661,-1106.53"/>
+</g>
+<!-- Node71&#45;&gt;Node66 -->
+<g id="edge112" class="edge"><title>Node71&#45;&gt;Node66</title>
+<path fill="none" stroke="midnightblue" d="M283.85,-1158.2C298.863,-1218.51 335.148,-1368.18 358,-1495 368.344,-1552.4 355.887,-1710.84 394,-1755 400.311,-1762.31 408.552,-1767.62 417.473,-1771.47"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="287.203,-1157.18 281.383,-1148.33 280.411,-1158.88 287.203,-1157.18"/>
+</g>
+<!-- Node71&#45;&gt;Node67 -->
+<g id="edge114" class="edge"><title>Node71&#45;&gt;Node67</title>
+<path fill="none" stroke="midnightblue" d="M295.857,-1105.85C316.652,-1080.42 352.69,-1042.71 394,-1027 467.947,-998.885 514.742,-972.41 572,-1027 632.705,-1084.88 558.814,-1713.06 608,-1781 610.446,-1784.38 613.391,-1787.32 616.667,-1789.88"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="292.896,-1103.95 289.403,-1113.95 298.371,-1108.31 292.896,-1103.95"/>
+</g>
+<!-- Node71&#45;&gt;Node68 -->
+<g id="edge116" class="edge"><title>Node71&#45;&gt;Node68</title>
+<path fill="none" stroke="midnightblue" d="M283.958,-1104.2C297.044,-1060.02 329.953,-973.167 394,-937 462.887,-898.1 513.858,-883.352 572,-937 608.62,-970.79 601.5,-1334.6 608,-1384 626.066,-1521.31 660.695,-1684.97 672.188,-1737.71"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="280.552,-1103.38 281.187,-1113.96 287.286,-1105.3 280.552,-1103.38"/>
+</g>
+<!-- Node71&#45;&gt;Node70 -->
+<g id="edge118" class="edge"><title>Node71&#45;&gt;Node70</title>
+<path fill="none" stroke="midnightblue" d="M364.848,-1119.91C382.422,-1117.69 400.598,-1115.4 417.268,-1113.3"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="364.069,-1116.48 354.586,-1121.21 364.946,-1123.43 364.069,-1116.48"/>
 </g>
 <!-- Node23 -->
-<g id="node72" class="node"><title>Node23</title>
+<g id="node78" class="node"><title>Node23</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#ae11a49c881f65456d65abd1b3ddf8de7" target="_top" xlink:title="okw.gui.adapter.selenium.\lSeInputCheckbox.SetValue">
-<polygon fill="white" stroke="black" points="414.5,-752 414.5,-786 551.5,-786 551.5,-752 414.5,-752"/>
-<text text-anchor="start" x="422.5" y="-773" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-760" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputCheckbox.SetValue</text>
+<polygon fill="white" stroke="black" points="414.5,-648 414.5,-682 551.5,-682 551.5,-648 414.5,-648"/>
+<text text-anchor="start" x="422.5" y="-669" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-656" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputCheckbox.SetValue</text>
 </a>
 </g>
-<!-- Node69&#45;&gt;Node23 -->
-<g id="edge84" class="edge"><title>Node69&#45;&gt;Node23</title>
-<path fill="none" stroke="midnightblue" d="M281.741,-1158.43C296.047,-1078.25 341.071,-847.584 394,-795 399.824,-789.214 406.86,-784.701 414.393,-781.184"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="278.218,-1158.25 279.929,-1168.7 285.112,-1159.46 278.218,-1158.25"/>
+<!-- Node71&#45;&gt;Node23 -->
+<g id="edge92" class="edge"><title>Node71&#45;&gt;Node23</title>
+<path fill="none" stroke="midnightblue" d="M280.752,-1103.49C293.104,-1016.77 335.1,-751.351 394,-691 399.734,-685.125 406.716,-680.559 414.22,-677.013"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="277.256,-1103.21 279.331,-1113.6 284.188,-1104.19 277.256,-1103.21"/>
 </g>
 <!-- Node24 -->
-<g id="node74" class="node"><title>Node24</title>
+<g id="node80" class="node"><title>Node24</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a37d7733b7807cf4daade07461a506146" target="_top" xlink:title="Erlaubte Werte sind sprachabhängig CHECKED/UNCHECKED. ">
-<polygon fill="white" stroke="black" points="417.5,-700 417.5,-734 548.5,-734 548.5,-700 417.5,-700"/>
-<text text-anchor="start" x="425.5" y="-721" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-708" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputCheckbox.Select</text>
+<polygon fill="white" stroke="black" points="417.5,-596 417.5,-630 548.5,-630 548.5,-596 417.5,-596"/>
+<text text-anchor="start" x="425.5" y="-617" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-604" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputCheckbox.Select</text>
 </a>
 </g>
-<!-- Node69&#45;&gt;Node24 -->
-<g id="edge86" class="edge"><title>Node69&#45;&gt;Node24</title>
-<path fill="none" stroke="midnightblue" d="M280.643,-1158.89C292.809,-1072.2 334.643,-803.921 394,-743 400.515,-736.313 408.647,-731.321 417.328,-727.6"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="277.15,-1158.6 279.246,-1168.98 284.084,-1159.56 277.15,-1158.6"/>
-</g>
-<!-- Node70 -->
-<g id="node78" class="node"><title>Node70</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a7dce83be09a4af05f50b0e74aa9d27f7" target="_top" xlink:title="Ein SeInputButton IstkeinMenüobject! &#45;&gt; OKWFrameObjectMethodNotImplemented Auslösen! ...">
-<polygon fill="white" stroke="black" points="417.5,-960 417.5,-994 548.5,-994 548.5,-960 417.5,-960"/>
-<text text-anchor="start" x="425.5" y="-981" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-968" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputRadio.SetValue</text>
-</a>
-</g>
-<!-- Node69&#45;&gt;Node70 -->
-<g id="edge92" class="edge"><title>Node69&#45;&gt;Node70</title>
-<path fill="none" stroke="midnightblue" d="M286.768,-1159.63C302.903,-1119.73 338.918,-1044.28 394,-1003 400.956,-997.787 408.938,-993.617 417.203,-990.281"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="283.499,-1158.38 283.095,-1168.97 290.013,-1160.95 283.499,-1158.38"/>
-</g>
-<!-- Node71 -->
-<g id="node82" class="node"><title>Node71</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a793c9fd7670b1d77ee48996f7b287807" target="_top" xlink:title="okw.gui.adapter.selenium.\lSeRadioList.SeRadioList">
-<polygon fill="white" stroke="black" points="417.5,-908 417.5,-942 548.5,-942 548.5,-908 417.5,-908"/>
-<text text-anchor="start" x="425.5" y="-929" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-916" font-family="Helvetica,sans-Serif" font-size="10.00">SeRadioList.SeRadioList</text>
-</a>
-</g>
-<!-- Node69&#45;&gt;Node71 -->
-<g id="edge98" class="edge"><title>Node69&#45;&gt;Node71</title>
-<path fill="none" stroke="midnightblue" d="M282.887,-1159.03C294.968,-1110.16 327.232,-1006.84 394,-951 400.791,-945.32 408.772,-940.88 417.119,-937.411"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="279.455,-1158.33 280.547,-1168.87 286.266,-1159.95 279.455,-1158.33"/>
+<!-- Node71&#45;&gt;Node24 -->
+<g id="edge94" class="edge"><title>Node71&#45;&gt;Node24</title>
+<path fill="none" stroke="midnightblue" d="M279.865,-1104C290.224,-1011.27 328.616,-707.79 394,-639 400.432,-632.233 408.518,-627.197 417.178,-623.456"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="276.38,-1103.67 278.766,-1113.99 283.338,-1104.43 276.38,-1103.67"/>
 </g>
 <!-- Node72 -->
 <g id="node84" class="node"><title>Node72</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a2de5dcb9d606e72dbe9e5a9cbef481ad" target="_top" xlink:title="Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a7dce83be09a4af05f50b0e74aa9d27f7" target="_top" xlink:title="Ein SeInputButton IstkeinMenüobject! &#45;&gt; OKWFrameObjectMethodNotImplemented Auslösen! ...">
 <polygon fill="white" stroke="black" points="417.5,-856 417.5,-890 548.5,-890 548.5,-856 417.5,-856"/>
 <text text-anchor="start" x="425.5" y="-877" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-864" font-family="Helvetica,sans-Serif" font-size="10.00">SeRadioList.getValue</text>
+<text text-anchor="middle" x="483" y="-864" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputRadio.SetValue</text>
 </a>
 </g>
-<!-- Node69&#45;&gt;Node72 -->
-<g id="edge100" class="edge"><title>Node69&#45;&gt;Node72</title>
-<path fill="none" stroke="midnightblue" d="M280.202,-1158.85C288.358,-1102.06 315.177,-970.104 394,-899 400.693,-892.962 408.717,-888.321 417.169,-884.756"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="276.72,-1158.48 278.848,-1168.86 283.657,-1159.42 276.72,-1158.48"/>
+<!-- Node71&#45;&gt;Node72 -->
+<g id="edge100" class="edge"><title>Node71&#45;&gt;Node72</title>
+<path fill="none" stroke="midnightblue" d="M283.805,-1103.93C297.041,-1056.68 330.664,-958.996 394,-904 400.795,-898.1 408.778,-893.304 417.126,-889.41"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="280.384,-1103.17 281.148,-1113.74 287.14,-1105 280.384,-1103.17"/>
 </g>
 <!-- Node73 -->
-<g id="node86" class="node"><title>Node73</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#ad4ef958d557fd0e526b1c20af767accf" target="_top" xlink:title="Ermittelt den textuellen Inhalt des Labels. ">
+<g id="node88" class="node"><title>Node73</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a793c9fd7670b1d77ee48996f7b287807" target="_top" xlink:title="okw.gui.adapter.selenium.\lSeRadioList.SeRadioList">
 <polygon fill="white" stroke="black" points="417.5,-804 417.5,-838 548.5,-838 548.5,-804 417.5,-804"/>
 <text text-anchor="start" x="425.5" y="-825" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-812" font-family="Helvetica,sans-Serif" font-size="10.00">SeRadioList.getLabel</text>
+<text text-anchor="middle" x="483" y="-812" font-family="Helvetica,sans-Serif" font-size="10.00">SeRadioList.SeRadioList</text>
 </a>
 </g>
-<!-- Node69&#45;&gt;Node73 -->
-<g id="edge102" class="edge"><title>Node69&#45;&gt;Node73</title>
-<path fill="none" stroke="midnightblue" d="M278.28,-1158.53C282.78,-1094.39 303.035,-933.691 394,-847 400.642,-840.67 408.739,-835.87 417.313,-832.232"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="274.778,-1158.46 277.647,-1168.66 281.764,-1158.89 274.778,-1158.46"/>
+<!-- Node71&#45;&gt;Node73 -->
+<g id="edge106" class="edge"><title>Node71&#45;&gt;Node73</title>
+<path fill="none" stroke="midnightblue" d="M280.352,-1103.73C288.752,-1047.3 315.94,-917.156 394,-847 400.705,-840.974 408.735,-836.341 417.19,-832.779"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="276.879,-1103.3 278.954,-1113.69 283.811,-1104.27 276.879,-1103.3"/>
+</g>
+<!-- Node74 -->
+<g id="node90" class="node"><title>Node74</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a2de5dcb9d606e72dbe9e5a9cbef481ad" target="_top" xlink:title="Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert. ">
+<polygon fill="white" stroke="black" points="417.5,-752 417.5,-786 548.5,-786 548.5,-752 417.5,-752"/>
+<text text-anchor="start" x="425.5" y="-773" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-760" font-family="Helvetica,sans-Serif" font-size="10.00">SeRadioList.getValue</text>
+</a>
+</g>
+<!-- Node71&#45;&gt;Node74 -->
+<g id="edge108" class="edge"><title>Node71&#45;&gt;Node74</title>
+<path fill="none" stroke="midnightblue" d="M278.361,-1103.76C283.034,-1040.19 303.636,-880.881 394,-795 400.651,-788.679 408.752,-783.884 417.329,-780.249"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="274.865,-1103.6 277.699,-1113.8 281.849,-1104.06 274.865,-1103.6"/>
 </g>
 <!-- Node75 -->
-<g id="node94" class="node"><title>Node75</title>
+<g id="node92" class="node"><title>Node75</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#ad4ef958d557fd0e526b1c20af767accf" target="_top" xlink:title="Ermittelt den textuellen Inhalt des Labels. ">
+<polygon fill="white" stroke="black" points="417.5,-700 417.5,-734 548.5,-734 548.5,-700 417.5,-700"/>
+<text text-anchor="start" x="425.5" y="-721" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-708" font-family="Helvetica,sans-Serif" font-size="10.00">SeRadioList.getLabel</text>
+</a>
+</g>
+<!-- Node71&#45;&gt;Node75 -->
+<g id="edge110" class="edge"><title>Node71&#45;&gt;Node75</title>
+<path fill="none" stroke="midnightblue" d="M281.771,-1103.63C296.16,-1024.07 341.389,-795.158 394,-743 400.516,-736.54 408.543,-731.668 417.084,-727.997"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="278.262,-1103.38 279.948,-1113.84 285.153,-1104.61 278.262,-1103.38"/>
+</g>
+<!-- Node77 -->
+<g id="node100" class="node"><title>Node77</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aa12522740af84cd18ca60c08bec1ce47" target="_top" xlink:title="Klickt auf das aktuelle Objekt. ">
-<polygon fill="white" stroke="black" points="417.5,-468 417.5,-502 548.5,-502 548.5,-468 417.5,-468"/>
-<text text-anchor="start" x="425.5" y="-489" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-476" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.ClickOn</text>
-</a>
-</g>
-<!-- Node74&#45;&gt;Node75 -->
-<g id="edge114" class="edge"><title>Node74&#45;&gt;Node75</title>
-<path fill="none" stroke="midnightblue" d="M351.716,-376.08C353.913,-377.607 356.016,-379.244 358,-381 386.591,-406.305 365.078,-434.075 394,-459 400.829,-464.885 408.928,-469.439 417.417,-472.964"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="353.208,-372.892 342.838,-370.721 349.59,-378.885 353.208,-372.892"/>
-</g>
-<!-- Node76 -->
-<g id="node96" class="node"><title>Node76</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ac628cf2651ecb5ac8104a8379a3fa06e" target="_top" xlink:title="Ermittelt den textuellen Inhalt der Überschrift eines HTML&#45;Tags anhand des Attributee &quot;textContent&quot;...">
-<polygon fill="white" stroke="red" points="417.5,-416 417.5,-450 548.5,-450 548.5,-416 417.5,-416"/>
-<text text-anchor="start" x="425.5" y="-437" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-424" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getCaption</text>
-</a>
-</g>
-<!-- Node74&#45;&gt;Node76 -->
-<g id="edge116" class="edge"><title>Node74&#45;&gt;Node76</title>
-<path fill="none" stroke="midnightblue" d="M347.029,-375.911C350.788,-377.518 354.468,-379.215 358,-381 375.614,-389.904 376.27,-398.329 394,-407 401.375,-410.607 409.344,-413.808 417.377,-416.623"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="348.149,-372.589 337.565,-372.103 345.536,-379.083 348.149,-372.589"/>
-</g>
-<!-- Node80 -->
-<g id="node98" class="node"><title>Node80</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a2406dc361467d086f006ffe1aa8c89fe" target="_top" xlink:title="Methode liefert den aktuellen Zustand Wert des Focus. ">
-<polygon fill="white" stroke="red" points="411.5,-364 411.5,-398 554.5,-398 554.5,-364 411.5,-364"/>
-<text text-anchor="start" x="419.5" y="-385" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-372" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getHasFocus</text>
-</a>
-</g>
-<!-- Node74&#45;&gt;Node80 -->
-<g id="edge118" class="edge"><title>Node74&#45;&gt;Node80</title>
-<path fill="none" stroke="midnightblue" d="M352.92,-364.582C372.061,-366.998 392.546,-369.583 411.464,-371.971"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="353.106,-361.078 342.746,-363.298 352.229,-368.023 353.106,-361.078"/>
-</g>
-<!-- Node84 -->
-<g id="node100" class="node"><title>Node84</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a471a1346a97ca3365eb4274adcde296b" target="_top" xlink:title="Ermittelt, ob das aktuellen Objekt aktiv ist. ">
-<polygon fill="white" stroke="red" points="416,-312 416,-346 550,-346 550,-312 416,-312"/>
-<text text-anchor="start" x="424" y="-333" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-320" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getIsActive</text>
-</a>
-</g>
-<!-- Node74&#45;&gt;Node84 -->
-<g id="edge120" class="edge"><title>Node74&#45;&gt;Node84</title>
-<path fill="none" stroke="midnightblue" d="M352.74,-345.441C373.389,-342.834 395.613,-340.029 415.755,-337.487"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="352.229,-341.977 342.746,-346.702 353.106,-348.922 352.229,-341.977"/>
-</g>
-<!-- Node87 -->
-<g id="node102" class="node"><title>Node87</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#af08a80081d265dc09e1c7968227d4b15" target="_top" xlink:title="Ermittelt den textuellen Inhalt des Labels. ">
-<polygon fill="white" stroke="red" points="417.5,-260 417.5,-294 548.5,-294 548.5,-260 417.5,-260"/>
-<text text-anchor="start" x="425.5" y="-281" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-268" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getLabel</text>
-</a>
-</g>
-<!-- Node74&#45;&gt;Node87 -->
-<g id="edge122" class="edge"><title>Node74&#45;&gt;Node87</title>
-<path fill="none" stroke="midnightblue" d="M347.029,-334.089C350.788,-332.482 354.468,-330.785 358,-329 375.614,-320.096 376.27,-311.671 394,-303 401.375,-299.393 409.344,-296.192 417.377,-293.377"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="345.536,-330.917 337.565,-337.897 348.149,-337.411 345.536,-330.917"/>
-</g>
-<!-- Node91 -->
-<g id="node104" class="node"><title>Node91</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#afb3aa055dd6f2604bf484a9c44f77909" target="_top" xlink:title="Ermittelt den textuellen Inhalt des ToolTips. ">
-<polygon fill="white" stroke="red" points="417.5,-208 417.5,-242 548.5,-242 548.5,-208 417.5,-208"/>
+<polygon fill="white" stroke="black" points="417.5,-208 417.5,-242 548.5,-242 548.5,-208 417.5,-208"/>
 <text text-anchor="start" x="425.5" y="-229" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-216" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getTooltip</text>
+<text text-anchor="middle" x="483" y="-216" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.ClickOn</text>
 </a>
 </g>
-<!-- Node74&#45;&gt;Node91 -->
-<g id="edge124" class="edge"><title>Node74&#45;&gt;Node91</title>
-<path fill="none" stroke="midnightblue" d="M351.716,-333.92C353.913,-332.393 356.016,-330.756 358,-329 386.591,-303.695 365.078,-275.925 394,-251 400.829,-245.115 408.928,-240.561 417.417,-237.036"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="349.59,-331.115 342.838,-339.279 353.208,-337.108 349.59,-331.115"/>
+<!-- Node76&#45;&gt;Node77 -->
+<g id="edge122" class="edge"><title>Node76&#45;&gt;Node77</title>
+<path fill="none" stroke="midnightblue" d="M352.658,-257.902C373.816,-252.561 396.633,-246.801 417.172,-241.617"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="351.585,-254.563 342.746,-260.404 353.299,-261.35 351.585,-254.563"/>
 </g>
-<!-- Node95 -->
-<g id="node106" class="node"><title>Node95</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a5d60d6ec1ef41ea4f7cc4f1bf3c65fa1" target="_top" xlink:title="Liest den aktuellen Wert/Text aus dem HTML&#45;Tag. ">
+<!-- Node78 -->
+<g id="node102" class="node"><title>Node78</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ac628cf2651ecb5ac8104a8379a3fa06e" target="_top" xlink:title="Ermittelt den textuellen Inhalt der Überschrift eines HTML&#45;Tags anhand des Attributee &quot;textContent&quot;...">
 <polygon fill="white" stroke="red" points="417.5,-156 417.5,-190 548.5,-190 548.5,-156 417.5,-156"/>
 <text text-anchor="start" x="425.5" y="-177" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getValue</text>
+<text text-anchor="middle" x="483" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getCaption</text>
 </a>
 </g>
-<!-- Node74&#45;&gt;Node95 -->
-<g id="edge126" class="edge"><title>Node74&#45;&gt;Node95</title>
-<path fill="none" stroke="midnightblue" d="M351.322,-334.925C353.699,-333.117 355.938,-331.147 358,-329 399.527,-285.759 351.907,-241.69 394,-199 400.555,-192.352 408.709,-187.382 417.399,-183.67"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="349.262,-332.09 342.776,-340.467 353.071,-337.963 349.262,-332.09"/>
+<!-- Node76&#45;&gt;Node78 -->
+<g id="edge124" class="edge"><title>Node76&#45;&gt;Node78</title>
+<path fill="none" stroke="midnightblue" d="M351.51,-255.356C353.753,-253.989 355.924,-252.539 358,-251 380.581,-234.26 371.2,-215.441 394,-199 401.051,-193.916 409.087,-189.82 417.379,-186.521"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="349.668,-252.373 342.549,-260.22 353.008,-258.525 349.668,-252.373"/>
 </g>
-<!-- Node99 -->
-<g id="node108" class="node"><title>Node99</title>
+<!-- Node82 -->
+<g id="node104" class="node"><title>Node82</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a2406dc361467d086f006ffe1aa8c89fe" target="_top" xlink:title="Methode liefert den aktuellen Zustand Wert des Focus. ">
+<polygon fill="white" stroke="red" points="411.5,-104 411.5,-138 554.5,-138 554.5,-104 411.5,-104"/>
+<text text-anchor="start" x="419.5" y="-125" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-112" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getHasFocus</text>
+</a>
+</g>
+<!-- Node76&#45;&gt;Node82 -->
+<g id="edge126" class="edge"><title>Node76&#45;&gt;Node82</title>
+<path fill="none" stroke="midnightblue" d="M351.792,-256.286C353.98,-254.656 356.059,-252.897 358,-251 392.976,-216.807 358.576,-180.729 394,-147 399.013,-142.227 404.853,-138.324 411.1,-135.133"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="349.433,-253.639 342.876,-261.96 353.192,-259.544 349.433,-253.639"/>
+</g>
+<!-- Node86 -->
+<g id="node106" class="node"><title>Node86</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a471a1346a97ca3365eb4274adcde296b" target="_top" xlink:title="Ermittelt, ob das aktuellen Objekt aktiv ist. ">
+<polygon fill="white" stroke="red" points="416,-468 416,-502 550,-502 550,-468 416,-468"/>
+<text text-anchor="start" x="424" y="-489" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-476" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getIsActive</text>
+</a>
+</g>
+<!-- Node76&#45;&gt;Node86 -->
+<g id="edge128" class="edge"><title>Node76&#45;&gt;Node86</title>
+<path fill="none" stroke="midnightblue" d="M351.278,-296.834C353.683,-298.708 355.938,-300.758 358,-303 406.163,-355.378 345.151,-407.262 394,-459 400.078,-465.438 407.652,-470.309 415.8,-473.99"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="352.872,-293.693 342.595,-291.118 349.023,-299.54 352.872,-293.693"/>
+</g>
+<!-- Node89 -->
+<g id="node108" class="node"><title>Node89</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#af08a80081d265dc09e1c7968227d4b15" target="_top" xlink:title="Ermittelt den textuellen Inhalt des Labels. ">
+<polygon fill="white" stroke="red" points="417.5,-416 417.5,-450 548.5,-450 548.5,-416 417.5,-416"/>
+<text text-anchor="start" x="425.5" y="-437" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-424" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getLabel</text>
+</a>
+</g>
+<!-- Node76&#45;&gt;Node89 -->
+<g id="edge130" class="edge"><title>Node76&#45;&gt;Node89</title>
+<path fill="none" stroke="midnightblue" d="M351.792,-297.714C353.98,-299.344 356.059,-301.103 358,-303 392.976,-337.193 358.576,-373.271 394,-407 400.645,-413.327 408.743,-418.126 417.318,-421.763"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="353.192,-294.456 342.876,-292.04 349.433,-300.361 353.192,-294.456"/>
+</g>
+<!-- Node93 -->
+<g id="node110" class="node"><title>Node93</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#afb3aa055dd6f2604bf484a9c44f77909" target="_top" xlink:title="Ermittelt den textuellen Inhalt des ToolTips. ">
+<polygon fill="white" stroke="red" points="417.5,-364 417.5,-398 548.5,-398 548.5,-364 417.5,-364"/>
+<text text-anchor="start" x="425.5" y="-385" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-372" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getTooltip</text>
+</a>
+</g>
+<!-- Node76&#45;&gt;Node93 -->
+<g id="edge132" class="edge"><title>Node76&#45;&gt;Node93</title>
+<path fill="none" stroke="midnightblue" d="M351.51,-298.644C353.753,-300.011 355.924,-301.461 358,-303 380.581,-319.74 371.2,-338.559 394,-355 401.051,-360.084 409.087,-364.18 417.379,-367.479"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="353.008,-295.475 342.549,-293.78 349.668,-301.627 353.008,-295.475"/>
+</g>
+<!-- Node97 -->
+<g id="node112" class="node"><title>Node97</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a5d60d6ec1ef41ea4f7cc4f1bf3c65fa1" target="_top" xlink:title="Liest den aktuellen Wert/Text aus dem HTML&#45;Tag. ">
+<polygon fill="white" stroke="red" points="417.5,-312 417.5,-346 548.5,-346 548.5,-312 417.5,-312"/>
+<text text-anchor="start" x="425.5" y="-333" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-320" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.getValue</text>
+</a>
+</g>
+<!-- Node76&#45;&gt;Node97 -->
+<g id="edge134" class="edge"><title>Node76&#45;&gt;Node97</title>
+<path fill="none" stroke="midnightblue" d="M352.658,-296.098C373.816,-301.439 396.633,-307.199 417.172,-312.383"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="353.299,-292.65 342.746,-293.596 351.585,-299.437 353.299,-292.65"/>
+</g>
+<!-- Node101 -->
+<g id="node114" class="node"><title>Node101</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a1db45676819106c384627ab997407cee" target="_top" xlink:title="Ermittelt den textuellen Inhalt des ToolTips. ">
-<polygon fill="white" stroke="black" points="417.5,-104 417.5,-138 548.5,-138 548.5,-104 417.5,-104"/>
-<text text-anchor="start" x="425.5" y="-125" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-112" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.LogExists</text>
+<polygon fill="white" stroke="black" points="417.5,-0 417.5,-34 548.5,-34 548.5,-0 417.5,-0"/>
+<text text-anchor="start" x="425.5" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.LogExists</text>
 </a>
 </g>
-<!-- Node74&#45;&gt;Node99 -->
-<g id="edge128" class="edge"><title>Node74&#45;&gt;Node99</title>
-<path fill="none" stroke="midnightblue" d="M351.369,-335.247C353.748,-333.351 355.974,-331.274 358,-329 412.848,-267.432 338.344,-207.84 394,-147 400.41,-139.992 408.593,-134.834 417.391,-131.044"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="349.109,-332.548 342.751,-341.023 353.006,-338.363 349.109,-332.548"/>
+<!-- Node76&#45;&gt;Node101 -->
+<g id="edge136" class="edge"><title>Node76&#45;&gt;Node101</title>
+<path fill="none" stroke="midnightblue" d="M351.438,-257.308C353.798,-255.395 356.001,-253.299 358,-251 419.565,-180.207 331.507,-112.975 394,-43 400.326,-35.9163 408.464,-30.7168 417.242,-26.9091"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="349.176,-254.614 342.871,-263.129 353.109,-260.404 349.176,-254.614"/>
 </g>
-<!-- Node100 -->
-<g id="node110" class="node"><title>Node100</title>
+<!-- Node102 -->
+<g id="node116" class="node"><title>Node102</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a6c7e14fc8dcfe45a9a17a132dda24187" target="_top" xlink:title="Ermittelt ob das Atuelle Objekt existiert, für das Schlüsselwort MerkeVorhanden. ">
 <polygon fill="white" stroke="black" points="405.5,-52 405.5,-86 560.5,-86 560.5,-52 405.5,-52"/>
 <text text-anchor="start" x="413.5" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="483" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.MemorizeExists</text>
 </a>
 </g>
-<!-- Node74&#45;&gt;Node100 -->
-<g id="edge130" class="edge"><title>Node74&#45;&gt;Node100</title>
-<path fill="none" stroke="midnightblue" d="M351.333,-335.487C353.739,-333.526 355.978,-331.37 358,-329 426.302,-248.958 324.648,-174.135 394,-95 397.289,-91.2471 401.086,-88.0219 405.221,-85.2515"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="348.886,-332.918 342.579,-341.431 352.818,-338.709 348.886,-332.918"/>
-</g>
-<!-- Node101 -->
-<g id="node112" class="node"><title>Node101</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a18cc21003d35c2cdcd17b78bf91f2045" target="_top" xlink:title="Setzt den Focus auf das Objekt. ">
-<polygon fill="white" stroke="black" points="417.5,-572 417.5,-606 548.5,-606 548.5,-572 417.5,-572"/>
-<text text-anchor="start" x="425.5" y="-593" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-580" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.SetFocus</text>
-</a>
-</g>
-<!-- Node74&#45;&gt;Node101 -->
-<g id="edge132" class="edge"><title>Node74&#45;&gt;Node101</title>
-<path fill="none" stroke="midnightblue" d="M351.369,-374.753C353.748,-376.649 355.974,-378.726 358,-381 412.848,-442.568 338.344,-502.16 394,-563 400.41,-570.008 408.593,-575.166 417.391,-578.956"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="353.006,-371.637 342.751,-368.977 349.109,-377.452 353.006,-371.637"/>
-</g>
-<!-- Node102 -->
-<g id="node114" class="node"><title>Node102</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ab8c870d4fbe1a9eab110f75320991f64" target="_top" xlink:title="Tastatur Eingabe an das Objekt. ">
-<polygon fill="white" stroke="black" points="417.5,-520 417.5,-554 548.5,-554 548.5,-520 417.5,-520"/>
-<text text-anchor="start" x="425.5" y="-541" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-528" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.TypeKey</text>
-</a>
-</g>
-<!-- Node74&#45;&gt;Node102 -->
-<g id="edge134" class="edge"><title>Node74&#45;&gt;Node102</title>
-<path fill="none" stroke="midnightblue" d="M351.322,-375.075C353.699,-376.883 355.938,-378.853 358,-381 399.527,-424.241 351.907,-468.31 394,-511 400.555,-517.648 408.709,-522.618 417.399,-526.33"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="353.071,-372.037 342.776,-369.533 349.262,-377.91 353.071,-372.037"/>
+<!-- Node76&#45;&gt;Node102 -->
+<g id="edge138" class="edge"><title>Node76&#45;&gt;Node102</title>
+<path fill="none" stroke="midnightblue" d="M351.278,-257.166C353.683,-255.292 355.938,-253.242 358,-251 406.163,-198.622 345.151,-146.738 394,-95 397.315,-91.4886 401.076,-88.4432 405.132,-85.8027"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="349.023,-254.46 342.595,-262.882 352.872,-260.307 349.023,-254.46"/>
 </g>
 <!-- Node103 -->
-<g id="node116" class="node"><title>Node103</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aa6bdf957546ce613e5a5922de84736a3" target="_top" xlink:title="Ermittelt/Prüft, ob das aktuelle Objekt existiert. ">
-<polygon fill="white" stroke="black" points="414.5,-0 414.5,-34 551.5,-34 551.5,-0 414.5,-0"/>
-<text text-anchor="start" x="422.5" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="483" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.VerifyExists</text>
+<g id="node118" class="node"><title>Node103</title>
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a18cc21003d35c2cdcd17b78bf91f2045" target="_top" xlink:title="Setzt den Focus auf das Objekt. ">
+<polygon fill="white" stroke="black" points="417.5,-260 417.5,-294 548.5,-294 548.5,-260 417.5,-260"/>
+<text text-anchor="start" x="425.5" y="-281" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="483" y="-268" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow.SetFocus</text>
 </a>
 </g>
-<!-- Node74&#45;&gt;Node103 -->
-<g id="edge136" class="edge"><title>Node74&#45;&gt;Node103</title>
-<path fill="none" stroke="midnightblue" d="M351.415,-335.556C353.799,-333.576 356.01,-331.397 358,-329 439.817,-230.414 310.891,-140.499 394,-43 399.535,-36.5072 406.592,-31.5885 414.305,-27.8703"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="348.967,-332.993 342.721,-341.551 352.941,-338.756 348.967,-332.993"/>
+<!-- Node76&#45;&gt;Node103 -->
+<g id="edge140" class="edge"><title>Node76&#45;&gt;Node103</title>
+<path fill="none" stroke="midnightblue" d="M352.945,-277C374.022,-277 396.725,-277 417.172,-277"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="352.746,-273.5 342.746,-277 352.746,-280.5 352.746,-273.5"/>
 </g>
-<!-- Node104&#45;&gt;Node75 -->
-<g id="edge140" class="edge"><title>Node104&#45;&gt;Node75</title>
-<path fill="none" stroke="midnightblue" d="M321.335,-428.388C342.97,-438.389 369.547,-450.04 394,-459 402.464,-462.101 411.484,-465.09 420.411,-467.867"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="322.62,-425.125 312.078,-424.07 319.661,-431.469 322.62,-425.125"/>
+<!-- Node106&#45;&gt;Node77 -->
+<g id="edge144" class="edge"><title>Node106&#45;&gt;Node77</title>
+<path fill="none" stroke="midnightblue" d="M351.51,-307.356C353.753,-305.989 355.924,-304.539 358,-303 380.581,-286.26 371.2,-267.441 394,-251 401.051,-245.916 409.087,-241.82 417.379,-238.521"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="349.668,-304.373 342.549,-312.22 353.008,-310.525 349.668,-304.373"/>
 </g>
-<!-- Node104&#45;&gt;Node76 -->
-<g id="edge142" class="edge"><title>Node104&#45;&gt;Node76</title>
-<path fill="none" stroke="midnightblue" d="M352.945,-416.585C374.022,-419.245 396.725,-422.111 417.172,-424.692"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="353.106,-413.078 342.746,-415.298 352.229,-420.023 353.106,-413.078"/>
+<!-- Node106&#45;&gt;Node78 -->
+<g id="edge146" class="edge"><title>Node106&#45;&gt;Node78</title>
+<path fill="none" stroke="midnightblue" d="M351.792,-308.286C353.98,-306.656 356.059,-304.897 358,-303 392.976,-268.807 358.576,-232.729 394,-199 400.645,-192.673 408.743,-187.874 417.318,-184.237"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="349.433,-305.639 342.876,-313.96 353.192,-311.544 349.433,-305.639"/>
 </g>
-<!-- Node104&#45;&gt;Node80 -->
-<g id="edge144" class="edge"><title>Node104&#45;&gt;Node80</title>
-<path fill="none" stroke="midnightblue" d="M352.92,-397.418C372.061,-395.002 392.546,-392.417 411.464,-390.029"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="352.229,-393.977 342.746,-398.702 353.106,-400.922 352.229,-393.977"/>
+<!-- Node106&#45;&gt;Node82 -->
+<g id="edge148" class="edge"><title>Node106&#45;&gt;Node82</title>
+<path fill="none" stroke="midnightblue" d="M351.278,-309.166C353.683,-307.292 355.938,-305.242 358,-303 406.163,-250.622 345.151,-198.738 394,-147 398.973,-141.733 404.948,-137.514 411.418,-134.138"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="349.023,-306.46 342.595,-314.882 352.872,-312.307 349.023,-306.46"/>
 </g>
-<!-- Node104&#45;&gt;Node84 -->
-<g id="edge146" class="edge"><title>Node104&#45;&gt;Node84</title>
-<path fill="none" stroke="midnightblue" d="M347.029,-386.089C350.788,-384.482 354.468,-382.785 358,-381 375.614,-372.096 376.27,-363.671 394,-355 400.941,-351.605 408.408,-348.57 415.96,-345.878"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="345.536,-382.917 337.565,-389.897 348.149,-389.411 345.536,-382.917"/>
+<!-- Node106&#45;&gt;Node86 -->
+<g id="edge150" class="edge"><title>Node106&#45;&gt;Node86</title>
+<path fill="none" stroke="midnightblue" d="M293.457,-354.605C313.672,-384.034 350.665,-431.765 394,-459 400.678,-463.197 408.061,-466.74 415.633,-469.726"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="296.222,-352.444 287.734,-346.103 290.415,-356.353 296.222,-352.444"/>
 </g>
-<!-- Node104&#45;&gt;Node87 -->
-<g id="edge148" class="edge"><title>Node104&#45;&gt;Node87</title>
-<path fill="none" stroke="midnightblue" d="M351.716,-385.92C353.913,-384.393 356.016,-382.756 358,-381 386.591,-355.695 365.078,-327.925 394,-303 400.829,-297.115 408.928,-292.561 417.417,-289.036"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="349.59,-383.115 342.838,-391.279 353.208,-389.108 349.59,-383.115"/>
+<!-- Node106&#45;&gt;Node89 -->
+<g id="edge152" class="edge"><title>Node106&#45;&gt;Node89</title>
+<path fill="none" stroke="midnightblue" d="M306.459,-352.324C329.261,-369.438 362.214,-392.186 394,-407 401.295,-410.4 409.136,-413.464 417.031,-416.193"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="308.318,-349.34 298.24,-346.069 304.078,-354.911 308.318,-349.34"/>
 </g>
-<!-- Node104&#45;&gt;Node91 -->
-<g id="edge150" class="edge"><title>Node104&#45;&gt;Node91</title>
-<path fill="none" stroke="midnightblue" d="M351.322,-386.925C353.699,-385.117 355.938,-383.147 358,-381 399.527,-337.759 351.907,-293.69 394,-251 400.555,-244.352 408.709,-239.382 417.399,-235.67"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="349.262,-384.09 342.776,-392.467 353.071,-389.963 349.262,-384.09"/>
+<!-- Node106&#45;&gt;Node93 -->
+<g id="edge154" class="edge"><title>Node106&#45;&gt;Node93</title>
+<path fill="none" stroke="midnightblue" d="M352.658,-348.098C373.816,-353.439 396.633,-359.199 417.172,-364.383"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="353.299,-344.65 342.746,-345.596 351.585,-351.437 353.299,-344.65"/>
 </g>
-<!-- Node104&#45;&gt;Node95 -->
-<g id="edge152" class="edge"><title>Node104&#45;&gt;Node95</title>
-<path fill="none" stroke="midnightblue" d="M351.369,-387.247C353.748,-385.351 355.974,-383.274 358,-381 412.848,-319.432 338.344,-259.84 394,-199 400.41,-191.992 408.593,-186.834 417.391,-183.044"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="349.109,-384.548 342.751,-393.023 353.006,-390.363 349.109,-384.548"/>
+<!-- Node106&#45;&gt;Node97 -->
+<g id="edge156" class="edge"><title>Node106&#45;&gt;Node97</title>
+<path fill="none" stroke="midnightblue" d="M352.945,-329C374.022,-329 396.725,-329 417.172,-329"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="352.746,-325.5 342.746,-329 352.746,-332.5 352.746,-325.5"/>
 </g>
-<!-- Node104&#45;&gt;Node101 -->
-<g id="edge154" class="edge"><title>Node104&#45;&gt;Node101</title>
-<path fill="none" stroke="midnightblue" d="M289.943,-433.54C308.296,-468.408 345.158,-529.17 394,-563 401.014,-567.858 408.938,-571.818 417.095,-575.045"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="292.947,-431.729 285.262,-424.436 286.722,-434.929 292.947,-431.729"/>
-</g>
-<!-- Node104&#45;&gt;Node102 -->
-<g id="edge156" class="edge"><title>Node104&#45;&gt;Node102</title>
-<path fill="none" stroke="midnightblue" d="M298.741,-431.857C320.61,-455.411 356.399,-490.193 394,-511 401.324,-515.053 409.345,-518.532 417.477,-521.503"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="301.202,-429.362 291.875,-424.336 296.032,-434.081 301.202,-429.362"/>
+<!-- Node106&#45;&gt;Node103 -->
+<g id="edge158" class="edge"><title>Node106&#45;&gt;Node103</title>
+<path fill="none" stroke="midnightblue" d="M352.658,-309.902C373.816,-304.561 396.633,-298.801 417.172,-293.617"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="351.585,-306.563 342.746,-312.404 353.299,-313.35 351.585,-306.563"/>
 </g>
 </g>
 </svg>

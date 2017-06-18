@@ -356,19 +356,21 @@
 <!-- Node7 -->
 <g id="node15" class="node"><title>Node7</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html" target="_top" xlink:title="Diese Klasse representiert einen HTML&#45;Button, die mit Selenium angsteuert wird. ">
-<polygon fill="white" stroke="black" points="-0.5,-186.5 -0.5,-275.5 130.5,-275.5 130.5,-186.5 -0.5,-186.5"/>
-<text text-anchor="start" x="7.5" y="-262.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="65" y="-249.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeImage</text>
-<polyline fill="none" stroke="black" points="-0.5,-241.5 130.5,-241.5 "/>
-<text text-anchor="middle" x="65" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="-0.5,-220.5 130.5,-220.5 "/>
+<polygon fill="white" stroke="black" points="-0.5,-173.5 -0.5,-288.5 130.5,-288.5 130.5,-173.5 -0.5,-173.5"/>
+<text text-anchor="start" x="7.5" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="65" y="-262.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeImage</text>
+<polyline fill="none" stroke="black" points="-0.5,-254.5 130.5,-254.5 "/>
+<text text-anchor="middle" x="65" y="-241.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="-0.5,-233.5 130.5,-233.5 "/>
+<text text-anchor="start" x="7.5" y="-220.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeImage()</text>
 <text text-anchor="start" x="7.5" y="-207.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeImage()</text>
-<text text-anchor="start" x="7.5" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeImage()</text>
+<text text-anchor="start" x="7.5" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="7.5" y="-181.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
 </a>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge14" class="edge"><title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M825.163,-376.906C819.138,-369.928 812.442,-363.558 805,-358 686.249,-269.308 271.075,-389.262 139,-322 118.859,-311.743 102.271,-293.272 89.9427,-275.639"/>
+<path fill="none" stroke="midnightblue" d="M825.163,-376.906C819.138,-369.928 812.442,-363.558 805,-358 686.249,-269.308 271.075,-389.262 139,-322 123.758,-314.238 110.551,-301.772 99.6851,-288.525"/>
 <polygon fill="none" stroke="midnightblue" points="822.445,-379.111 831.441,-384.707 827.898,-374.722 822.445,-379.111"/>
 </g>
 <!-- Node8 -->

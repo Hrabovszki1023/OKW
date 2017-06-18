@@ -55,160 +55,160 @@ var sectionId = 'dynsection-28';
 <g id="viewport">
 <title>okw.gui.adapter.selenium.SeAnyChildWindow.MemorizeExists</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-338 951,-338 951,5 -4,5"/>
-<!-- Node369 -->
-<g id="node1" class="node"><title>Node369</title>
+<!-- Node371 -->
+<g id="node1" class="node"><title>Node371</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-156 0.5,-190 177.5,-190 177.5,-156 0.5,-156"/>
 <text text-anchor="start" x="8.5" y="-177" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="89" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.MemorizeExists</text>
 </g>
-<!-- Node370 -->
-<g id="node3" class="node"><title>Node370</title>
+<!-- Node372 -->
+<g id="node3" class="node"><title>Node372</title>
 <a xlink:href="classokw_1_1gui_1_1_any_win_base.html#abaab572bdbed7b471f659d5dd8c76853" target="_top" xlink:title="Diese Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(fps_FunctionName), und erweitert den gegebenen Methodenname in fps_FunctionName mit this.GetType().FullName um den Klassenbezeichner. ">
 <polygon fill="white" stroke="black" points="398.5,-300 398.5,-334 565.5,-334 565.5,-300 398.5,-300"/>
 <text text-anchor="start" x="406.5" y="-321" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase.LogFunction</text>
 <text text-anchor="middle" x="482" y="-308" font-family="Helvetica,sans-Serif" font-size="10.00">StartDebug</text>
 </a>
 </g>
-<!-- Node369&#45;&gt;Node370 -->
-<g id="edge2" class="edge"><title>Node369&#45;&gt;Node370</title>
+<!-- Node371&#45;&gt;Node372 -->
+<g id="edge2" class="edge"><title>Node371&#45;&gt;Node372</title>
 <path fill="none" stroke="midnightblue" d="M131.168,-190.097C190.362,-213.869 301.654,-257.732 398,-291 403.546,-292.915 409.321,-294.841 415.13,-296.732"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="414.314,-300.146 424.905,-299.872 416.455,-293.481 414.314,-300.146"/>
 </g>
-<!-- Node371 -->
-<g id="node5" class="node"><title>Node371</title>
+<!-- Node373 -->
+<g id="node5" class="node"><title>Node373</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#abbf4e30bd11acd1ad0c06706a6e43871" target="_top" xlink:title="Prüft die Existenz des aktuellen Objektes. ">
 <polygon fill="white" stroke="black" points="214,-156 214,-190 362,-190 362,-156 214,-156"/>
 <text text-anchor="start" x="222" y="-177" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="288" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.getExists</text>
 </a>
 </g>
-<!-- Node369&#45;&gt;Node371 -->
-<g id="edge4" class="edge"><title>Node369&#45;&gt;Node371</title>
+<!-- Node371&#45;&gt;Node373 -->
+<g id="edge4" class="edge"><title>Node371&#45;&gt;Node373</title>
 <path fill="none" stroke="midnightblue" d="M177.733,-173C186.375,-173 195.126,-173 203.722,-173"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="203.725,-176.5 213.725,-173 203.725,-169.5 203.725,-176.5"/>
 </g>
-<!-- Node380 -->
-<g id="node24" class="node"><title>Node380</title>
+<!-- Node382 -->
+<g id="node24" class="node"><title>Node382</title>
 <a xlink:href="classokw_1_1gui_1_1_any_win_base.html#a51cf50ace21902b3a5359316f53a7f3e" target="_top" xlink:title="Methode ruft die Methode Logger.Instance.LogFunctionEndDebug() auf. ">
 <polygon fill="white" stroke="black" points="398.5,-0 398.5,-34 565.5,-34 565.5,-0 398.5,-0"/>
 <text text-anchor="start" x="406.5" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase.LogFunction</text>
 <text text-anchor="middle" x="482" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">EndDebug</text>
 </a>
 </g>
-<!-- Node369&#45;&gt;Node380 -->
-<g id="edge26" class="edge"><title>Node369&#45;&gt;Node380</title>
+<!-- Node371&#45;&gt;Node382 -->
+<g id="edge26" class="edge"><title>Node371&#45;&gt;Node382</title>
 <path fill="none" stroke="midnightblue" d="M126.107,-155.992C183.652,-129.936 298.195,-79.3414 398,-43 403.422,-41.0258 409.074,-39.0678 414.77,-37.1642"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="415.952,-40.4599 424.364,-34.0188 413.771,-33.8083 415.952,-40.4599"/>
 </g>
-<!-- Node371&#45;&gt;Node370 -->
-<g id="edge6" class="edge"><title>Node371&#45;&gt;Node370</title>
+<!-- Node373&#45;&gt;Node372 -->
+<g id="edge6" class="edge"><title>Node373&#45;&gt;Node372</title>
 <path fill="none" stroke="midnightblue" d="M303.745,-190.002C333.81,-222.451 396.558,-290.095 398,-291 400.485,-292.559 403.071,-294.031 405.728,-295.419"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="404.459,-298.692 414.993,-299.826 407.465,-292.37 404.459,-298.692"/>
 </g>
-<!-- Node372 -->
-<g id="node8" class="node"><title>Node372</title>
+<!-- Node374 -->
+<g id="node8" class="node"><title>Node374</title>
 <a xlink:href="classokw_1_1gui_1_1_any_win_base.html#a9929f6fae1f4e2c20df79d32d5bc79db" target="_top" xlink:title="Holt den vollständig (rekursiv) aufgelösten (z.B. ">
 <polygon fill="white" stroke="black" points="402.5,-260.5 402.5,-281.5 561.5,-281.5 561.5,-260.5 402.5,-260.5"/>
 <text text-anchor="middle" x="482" y="-268.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase.getLocator</text>
 </a>
 </g>
-<!-- Node371&#45;&gt;Node372 -->
-<g id="edge8" class="edge"><title>Node371&#45;&gt;Node372</title>
+<!-- Node373&#45;&gt;Node374 -->
+<g id="edge8" class="edge"><title>Node373&#45;&gt;Node374</title>
 <path fill="none" stroke="midnightblue" d="M307.241,-190.169C328.149,-207.939 363.239,-235.256 398,-251 403.336,-253.417 409.001,-255.562 414.769,-257.462"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="413.949,-260.871 424.535,-260.433 415.986,-254.174 413.949,-260.871"/>
 </g>
-<!-- Node374 -->
-<g id="node12" class="node"><title>Node374</title>
+<!-- Node376 -->
+<g id="node12" class="node"><title>Node376</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#acb82765e99981ecc210e7599bbc2c639" target="_top" xlink:title="Gibt die Instance für die einzige Instanz dieser Klasse zurück. ">
 <polygon fill="white" stroke="black" points="416.5,-208 416.5,-242 547.5,-242 547.5,-208 416.5,-208"/>
 <text text-anchor="start" x="424.5" y="-229" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="482" y="-216" font-family="Helvetica,sans-Serif" font-size="10.00">SeDriver.getInstance</text>
 </a>
 </g>
-<!-- Node371&#45;&gt;Node374 -->
-<g id="edge12" class="edge"><title>Node371&#45;&gt;Node374</title>
+<!-- Node373&#45;&gt;Node376 -->
+<g id="edge12" class="edge"><title>Node373&#45;&gt;Node376</title>
 <path fill="none" stroke="midnightblue" d="M351.523,-190.027C369.779,-194.92 389.838,-200.297 408.636,-205.335"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="407.769,-208.727 418.334,-207.935 409.582,-201.965 407.769,-208.727"/>
 </g>
-<!-- Node375 -->
-<g id="node14" class="node"><title>Node375</title>
+<!-- Node377 -->
+<g id="node14" class="node"><title>Node377</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#ae71e420f6619b67bb69ca8d70455d807" target="_top" xlink:title="Ermittelt das Webelement mit der gegebenen frameID und dem gegebenen Locator. ">
 <polygon fill="white" stroke="black" points="416.5,-156 416.5,-190 547.5,-190 547.5,-156 416.5,-156"/>
 <text text-anchor="start" x="424.5" y="-177" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="482" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">SeDriver.getElements</text>
 </a>
 </g>
-<!-- Node371&#45;&gt;Node375 -->
-<g id="edge14" class="edge"><title>Node371&#45;&gt;Node375</title>
+<!-- Node373&#45;&gt;Node377 -->
+<g id="edge14" class="edge"><title>Node373&#45;&gt;Node377</title>
 <path fill="none" stroke="midnightblue" d="M362.173,-173C376.548,-173 391.631,-173 406.062,-173"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="406.434,-176.5 416.434,-173 406.434,-169.5 406.434,-176.5"/>
 </g>
-<!-- Node378 -->
-<g id="node20" class="node"><title>Node378</title>
+<!-- Node380 -->
+<g id="node20" class="node"><title>Node380</title>
 <a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a2c15e9b2cd0c6266f4c67b8cb00d92e5" target="_top" xlink:title="LogWarning Function: Logs a warning to the results file. ">
 <polygon fill="white" stroke="black" points="415,-104 415,-138 549,-138 549,-104 415,-104"/>
 <text text-anchor="start" x="423" y="-125" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
 <text text-anchor="middle" x="482" y="-112" font-family="Helvetica,sans-Serif" font-size="10.00">Warning</text>
 </a>
 </g>
-<!-- Node371&#45;&gt;Node378 -->
-<g id="edge20" class="edge"><title>Node371&#45;&gt;Node378</title>
+<!-- Node373&#45;&gt;Node380 -->
+<g id="edge20" class="edge"><title>Node373&#45;&gt;Node380</title>
 <path fill="none" stroke="midnightblue" d="M351.523,-155.973C369.779,-151.08 389.838,-145.703 408.636,-140.665"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="409.582,-144.035 418.334,-138.065 407.769,-137.273 409.582,-144.035"/>
 </g>
-<!-- Node379 -->
-<g id="node22" class="node"><title>Node379</title>
+<!-- Node381 -->
+<g id="node22" class="node"><title>Node381</title>
 <a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4" target="_top" xlink:title="Loggt eine Nachricht. ">
 <polygon fill="white" stroke="black" points="415,-52 415,-86 549,-86 549,-52 415,-52"/>
 <text text-anchor="start" x="423" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
 <text text-anchor="middle" x="482" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">PrintDebug</text>
 </a>
 </g>
-<!-- Node371&#45;&gt;Node379 -->
-<g id="edge22" class="edge"><title>Node371&#45;&gt;Node379</title>
+<!-- Node373&#45;&gt;Node381 -->
+<g id="edge22" class="edge"><title>Node373&#45;&gt;Node381</title>
 <path fill="none" stroke="midnightblue" d="M307.845,-155.963C328.975,-138.562 363.991,-111.786 398,-95 401.773,-93.1377 405.707,-91.3751 409.725,-89.7122"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="411.166,-92.9069 419.211,-86.0131 408.623,-86.3851 411.166,-92.9069"/>
 </g>
-<!-- Node371&#45;&gt;Node380 -->
-<g id="edge24" class="edge"><title>Node371&#45;&gt;Node380</title>
+<!-- Node373&#45;&gt;Node382 -->
+<g id="edge24" class="edge"><title>Node373&#45;&gt;Node382</title>
 <path fill="none" stroke="midnightblue" d="M302.868,-155.974C317.901,-138.7 341.742,-111.142 362,-87 378.241,-67.6444 377.042,-57.1125 398,-43 400.295,-41.4546 402.686,-39.9976 405.149,-38.6244"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="406.966,-41.6281 414.329,-34.0098 403.823,-35.3737 406.966,-41.6281"/>
 </g>
-<!-- Node373 -->
-<g id="node10" class="node"><title>Node373</title>
+<!-- Node375 -->
+<g id="node10" class="node"><title>Node375</title>
 <a xlink:href="classokw_1_1gui_1_1_o_k_w_locator.html#adc74fc2125dd048dc1cb84e011f47ec8" target="_top" xlink:title="Holt den vollständig (rekursiv) aufgelösten (z.B. ">
 <polygon fill="white" stroke="black" points="602,-260.5 602,-281.5 760,-281.5 760,-260.5 602,-260.5"/>
 <text text-anchor="middle" x="681" y="-268.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.OKWLocator.getLocator</text>
 </a>
 </g>
-<!-- Node372&#45;&gt;Node373 -->
-<g id="edge10" class="edge"><title>Node372&#45;&gt;Node373</title>
+<!-- Node374&#45;&gt;Node375 -->
+<g id="edge10" class="edge"><title>Node374&#45;&gt;Node375</title>
 <path fill="none" stroke="midnightblue" d="M561.508,-271C571.495,-271 581.762,-271 591.885,-271"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="591.943,-274.5 601.943,-271 591.943,-267.5 591.943,-274.5"/>
 </g>
-<!-- Node376 -->
-<g id="node16" class="node"><title>Node376</title>
+<!-- Node378 -->
+<g id="node16" class="node"><title>Node378</title>
 <a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#a502a7d54c1a8b80424cd42a4e168a191" target="_top" xlink:title="Wechselt das aktuelle Frame auf das Frame mit der id=iframeID. ">
 <polygon fill="white" stroke="black" points="615.5,-156 615.5,-190 746.5,-190 746.5,-156 615.5,-156"/>
 <text text-anchor="start" x="623.5" y="-177" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="681" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">SeDriver.swichToFrame</text>
 </a>
 </g>
-<!-- Node375&#45;&gt;Node376 -->
-<g id="edge16" class="edge"><title>Node375&#45;&gt;Node376</title>
+<!-- Node377&#45;&gt;Node378 -->
+<g id="edge16" class="edge"><title>Node377&#45;&gt;Node378</title>
 <path fill="none" stroke="midnightblue" d="M547.712,-173C566.137,-173 586.316,-173 605.272,-173"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="605.357,-176.5 615.357,-173 605.357,-169.5 605.357,-176.5"/>
 </g>
-<!-- Node377 -->
-<g id="node18" class="node"><title>Node377</title>
+<!-- Node379 -->
+<g id="node18" class="node"><title>Node379</title>
 <a xlink:href="classokw_1_1_o_k_w___helper.html#a3a7ba0f42b29adf70574830688e72e4a" target="_top" xlink:title="Prüft ob der gegeben String fpsStrin null oder leer (&quot;&quot;) ist. ">
 <polygon fill="white" stroke="black" points="796.5,-156 796.5,-190 945.5,-190 945.5,-156 796.5,-156"/>
 <text text-anchor="start" x="804.5" y="-177" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Helper.isStringNull</text>
 <text text-anchor="middle" x="871" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">OrEmpty</text>
 </a>
 </g>
-<!-- Node376&#45;&gt;Node377 -->
-<g id="edge18" class="edge"><title>Node376&#45;&gt;Node377</title>
+<!-- Node378&#45;&gt;Node379 -->
+<g id="edge18" class="edge"><title>Node378&#45;&gt;Node379</title>
 <path fill="none" stroke="midnightblue" d="M746.653,-173C759.389,-173 772.905,-173 786.155,-173"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="786.218,-176.5 796.218,-173 786.217,-169.5 786.218,-176.5"/>
 </g>

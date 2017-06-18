@@ -104,7 +104,9 @@ var NAVTREEINDEX9 =
 "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#ae08fe1cf4c694bb3a4dfb1f1837b26bc":[9,0,0,4,0,0,4,4],
 "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#ae71e420f6619b67bb69ca8d70455d807":[9,0,0,4,0,0,4,5],
 "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html":[8,0,0,1],
+"classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#a143118b7b3b0cc7788cbf7c9238bc68f":[8,0,0,1,3],
 "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#a32e66076fa69afd7f671a7cf8ad5fbdd":[8,0,0,1,0],
+"classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#a44980a47d966e4bfd206ae5d5ac4399c":[8,0,0,1,2],
 "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#ad91818efaf86f224dfc05a5ac9a79e8d":[8,0,0,1,1],
 "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html":[8,0,0,2],
 "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a0d77a9524916d6b148a8c80571bc2d30":[8,0,0,2,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX9 =
 "classokw_1_1gui_1_1frames_1_1_se_input_button_1_1frm_input_button_not_activ.html#a68b297aafa789fb2e1dbca8f2d2fd60e":[9,0,0,4,1,2,1,1],
 "classokw_1_1gui_1_1frames_1_1_se_input_radio_1_1frm_se_input_radio.html":[9,0,0,4,1,3,0],
 "classokw_1_1gui_1_1frames_1_1_se_input_radio_1_1frm_se_input_radio.html#a6511a073e55d61d166e5f3800f084910":[9,0,0,4,1,3,0,4],
-"classokw_1_1gui_1_1frames_1_1_se_input_radio_1_1frm_se_input_radio.html#a69f16bf649dafedcea37599af4dd84dd":[9,0,0,4,1,3,0,1],
-"classokw_1_1gui_1_1frames_1_1_se_input_radio_1_1frm_se_input_radio.html#a7563c36c4f6bd30a91609ca3f4b1e47d":[9,0,0,4,1,3,0,5],
-"classokw_1_1gui_1_1frames_1_1_se_input_radio_1_1frm_se_input_radio.html#a97105d5e274fc17eed02a07610eeb828":[9,0,0,4,1,3,0,2]
+"classokw_1_1gui_1_1frames_1_1_se_input_radio_1_1frm_se_input_radio.html#a69f16bf649dafedcea37599af4dd84dd":[9,0,0,4,1,3,0,1]
 };

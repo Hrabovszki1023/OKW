@@ -9,21 +9,21 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 38)">
 <title>okw.OKW_Helper.matchString</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-38 349,-38 349,5 -4,5"/>
-<!-- Node192 -->
-<g id="node1" class="node"><title>Node192</title>
+<!-- Node194 -->
+<g id="node1" class="node"><title>Node194</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-6.5 0.5,-27.5 151.5,-27.5 151.5,-6.5 0.5,-6.5"/>
 <text text-anchor="middle" x="76" y="-14.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Helper.matchString</text>
 </g>
-<!-- Node193 -->
-<g id="node3" class="node"><title>Node193</title>
+<!-- Node195 -->
+<g id="node3" class="node"><title>Node195</title>
 <a xlink:href="classokw_1_1_o_k_w___helper_test.html#a4a54cfce3440c6c39c752d858a7237c0" target="_top" xlink:title="Test auf den Vergleich von zwei ListStings mit je drei Werten. ">
 <polygon fill="white" stroke="black" points="188.5,-0 188.5,-34 343.5,-34 343.5,-0 188.5,-0"/>
 <text text-anchor="start" x="196.5" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_HelperTest.tcList</text>
 <text text-anchor="middle" x="266" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">StringCompare_3_3_DiffWert_2</text>
 </a>
 </g>
-<!-- Node192&#45;&gt;Node193 -->
-<g id="edge2" class="edge"><title>Node192&#45;&gt;Node193</title>
+<!-- Node194&#45;&gt;Node195 -->
+<g id="edge2" class="edge"><title>Node194&#45;&gt;Node195</title>
 <path fill="none" stroke="midnightblue" d="M161.652,-17C170.578,-17 179.616,-17 188.445,-17"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="161.639,-13.5001 151.639,-17 161.639,-20.5001 161.639,-13.5001"/>
 </g>
