@@ -1,22 +1,120 @@
 /*!
 <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png" width="150px" height="78px" />
 
-@page refGlossary Glossar
+@page refGlossary Glossary
 
-| Parameter  | Description  |
-| -----------|:-------------|
-| `AN`       | Keyword parameter: <b>A</b>pplication <b>N</b>ame - Functional name of the application |
-| `ExpVal`   | Keyword parameter: The <b>Exp</b>ected <b>Val</b>ue in verification. |
-| Frame      | A Frame <ul><li>is a description of the GUI</li><li>which maps the FN to a GUI-Adapter</li><li>holds the locator for the Object recognition</li><li>definition of object specific OKW-LBFs </li></ul>  |
-| `FN`       | Keyword parameter: <b>F</b>unctional<b>N</b>ame of the GUI-object, e.g. name of main-window or child-window.|
-| Keyword    | A keyword is a project and technology-independent description of a user activity.|
-| Sequence   | A sequence is a reusable sequence of keywords or user activity.|
-| GUI-Adapter| |
-| `MemKey`   | Keyword parameter: User defined name in `Memorize`-keywords to save the KeyWord-specific value. `${MemKey}` gets the value of saved MemKey. |
-| `SQN`      | Keyword parameter: <b>SEQ</b>uence<b>N</b>ame. |
-| `SEQ_ID`   | Keyword parameter: <b>SEQ</b>ence <b>ID</b>. |
-| `TCN`      | Keyword parameter: <b>T</b>est<b>C</b>ase**N</b>ame. |
-| `TN`       | <b>T</b>echnical <b>N</b>ame|
+@section refGlossaryGL Glossary 
+
+\~
+_____________
+@subsection refGlossarA A
+
+@subsubsection refAN AN
+
+Keyword parameter: <b>A</b>pplication <b>N</b>ame - Functional name of the application
+
+\~
+_____________
+@subsection refGlossarC C
+
+@subsubsection refCaption Caption
+
+\~german
+Die Beschriftung _Caption_ ist der sichtbare und prinzipiel nicht veränderbare Text eines GUI-Objektes.
+Z.B. der sichtbare Text einer Schaltfläche oder eines Links.
+
+\~enlish
+The caption is the visible and basicaly not changeable text of a GUI-Object.
+E.g. the visible text of a pushbutton or of a link.
+
+\~
+_____________
+@subsection refGlossarE E
+
+@subsubsection refExpVal ExpVal
+
+\~german
+Schlüsselwort Parameter: In Verify-Schlüsselwörtern ist <b>Exp</b>ected <b>Val</b>ue der erwartet Sollwert der Prüfung.
+
+\~enlish
+Keyword parameter: The <b>Exp</b>ected <b>Val</b>ue in verification.
+
+
+\~
+_____________
+@subsection refGlossarF F
+
+@subsubsection refFrame Frame
+
+<ul>
+  <li>is a description of the GUI</li>
+  <li>which maps the FN to a GUI-Adapter</li>
+  <li>holds the locator for the Object recognition</li>
+  <li>definition of object specific GUI-adapter methods </li>
+</ul>
+
+
+
+@subsubsection refFN FN
+
+Keyword parameter: <b>F</b>unctional<b>N</b>ame of the GUI-object, e.g. name of main-window or child-window.
+
+\~
+_____________
+@subsection refGlossarK K
+
+@subsubsection refKeyword Keyword
+
+A _keyword_ is a project and technology-independent description of a user activity.
+
+\~
+_____________
+@subsection refGlossarG G
+
+@subsubsection refGUIAdapter GUI-Adapter
+
+\todo Description for GUI-Adapter
+
+\~
+_____________
+@subsection refGlossarM M
+
+@subsubsection refMemKey MemKey
+
+Symbolicname for a user defined name created in `Memorize`-keywords to save GUI-specific values. `${MemKey}` gets the value of saved MemKey.
+
+\~
+_____________
+@subsection refGlossarS S
+
+@subsubsection refSQN SQN
+
+Keyword parameter, <b>S</b>E<b>Q</b>uence<b>N</b>ame.
+
+
+\~
+@subsubsection refSEQ_ID SEQ_ID
+
+Keyword parameter, <b>SEQ</b>ence <b>ID</b>.
+
+
+\~
+@subsubsection refSequence Sequence
+
+A sequence is a reusable sequential arrangement of \ref refKeyword s.
+
+\~
+_____________
+@subsection refGlossarT T
+
+@subsubsection refTCN TCN
+
+OKW Variable: <b>T</b>est<b>C</b>ase<b>N</b>ame.
+
+
+@subsubsection refTN TN
+
+<b>T</b>echnical <b>N</b>ame
 
 
 */

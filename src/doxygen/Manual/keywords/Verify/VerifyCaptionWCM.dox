@@ -1,0 +1,79 @@
+/*!
+\~german
+
+@page refVerifyCaptionWCM VerifyCaptionWCM( FN, ExpVal )
+
+Keyword verifies the caption of a GUI-Object ( #97 ).
+The caption is the visible and basicaly not changeable text of a GUI-Object: E.g. the visible text of pushbutton or link.
+
+* wildcards - yes
+* ~~regular expression~~ - no
+
+### Parameter
+
+| Parameter   | Description                            |
+| ------------|:---------------------------------------|
+| `FN`        | Functionalname of the GUI-object       |
+| `ExpVal`    | Expected value. Wildcards are possible.|
+
+### Reserved `ExpVal` Values
+
+| Keyword                   | Description  |
+| --------------------------|:-------------|
+| `""` and `${IGNORE}`      | Don´t execute the keyword. Interesting for data-driven testing |
+| `${EMPTY}`                | The Expected value is empty or "" |
+| `${`_ENV_`}`              | Expected value is empty or "" |
+| `${`_MEMKEY_`}`           | OKW Parser substitutes with the Value memorized to Key "_MEMKEY_" |
+
+### Wildcards
+
+| Wildcard | Description  |
+| ---------|:-------------|
+| `?`      | Masks exact one character. |
+| `*`      | Masks 0-n character. |
+| `#`      | Masks exact one numeric character [0-9]. |
+
+
+##Examples
+
+### Exact match
+
+ 1. `EN.SelectWindow( "Login" )` - Set context to the Window `Login` with the ChildObject you want to verify.
+ 2. **`EN.VerifyCaptionWCM( "User", "Zoltan" )`** - then Verify the GUI-Object with the `FN = "User"` matches exact to the given expected value.
+
+### Wildcard match
+
+`EN.SelectWindow( "Login" )` - Set context to the Window `Login` with the ChildObject you want to verify.
+
+**`EN.VerifyCaptionWCM( "User", "?oltan" )`** - True with: `Zoltan`, `ooltan` Fail with `oltan`, `oltan` and `oltann`
+**`EN.VerifyCaptionWCM( "User", "*ltan" )`** - True with: `Zoltan`, `ooltan` Fail with `tan`, `oltann
+
+
+### Verify an Empty GUI-object
+
+1. **`EN.VerifyCaptionWCM( "User", "${EMPTY}" )`** - Verifies that `User` is empty (= "") 
+
+
+### Ignore VerifyValue(...)
+There are two ways to ignore a Keyword: Set the Parameter `ExpVal` = `"${IGNORE}"` or simply `""` 
+
+ 1. `EN.SelectWindow( "Login" )`
+ 2. **`EN.VerifyCaptionWCM( "User", "" )`** - Don´t Verify the GUI-Object `FN = "User"`
+
+### Enviroment Variables
+On Windowssystems the Enviromentvar ´USERNAME` returns the name of the user who is currently logged on.
+OKW resolves the Enviroment var `${USERNAME}` to currently logged on username and uses this as expected value (ExpVal). 
+
+ 1. `EN.SelectWindow( "Login" )`
+ 2. **`EN.VerifyCaptionWCM( "User", "${USERNAME}" )`** - Verify the GUI-Object `FN = "User"`
+
+## Late Bound Function Call
+
+| Keyword                             |<->| Called GUI-Adapter Method                  |
+| -----------------------------------:|---|:-------------------------------------------|
+| `EN.VerifyCaptionWCM( FN, ExpVal )` |<->| `public ArrayList<String> VerifyCaption( )`|
+
+\~
+@author Zoltán Hrabovszki
+@date 2017-06-11
+*/

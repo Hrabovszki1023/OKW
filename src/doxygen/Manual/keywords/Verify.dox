@@ -1,0 +1,29 @@
+/*!
+\~german
+
+@page refVeryfying Verify Attributes Of The GUI
+
+- \subpage refVerifyExists
+- \subpage refVerifyHasFocus
+- \subpage refVerifyIsActive
+
+- \subpage refVerifyCaption
+- \subpage refVerifyCaptionREGX
+- \subpage refVerifyCaptionWCM
+
+- \subpage refVerifyLabel
+- \subpage refVerifyLabelREGX
+- \subpage refVerifyLabelWCM
+
+- \subpage refVerifyTooltip
+- \subpage refVerifyTooltipREGX
+- \subpage refVerifyTooltipWCM
+
+- \subpage refVerifyValue
+- \subpage refVerifyValueREGX
+- \subpage refVerifyValueWCM
+
+\~
+@author Zoltán Hrabovszki
+@date 2017-06-11
+*/

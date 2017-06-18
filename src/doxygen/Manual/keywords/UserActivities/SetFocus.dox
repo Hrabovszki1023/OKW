@@ -1,0 +1,41 @@
+/*!
+\~
+@page refSetFocus SetFocus( FN )
+
+\~german
+Schlüsselwort setzt den Focus auf des GUI-Objekt mit \ref refFN .
+
+\~english
+Keyword sets the focus to the GUI-Object \ref refFN .
+
+\~
+@section refSetFocusParameter Parameter
+
+\~german
+| Parameter    | Beschreibung                      |
+| -------------|:----------------------------------|
+| \ref refFN   | Functionaler Name des GUI-Objektes|
+
+\~english
+| Parameter    | Description                      |
+| -------------|:---------------------------------|
+| \ref refFN   | Functional name of the GUI-Object|
+
+
+\~german
+@section refSetFocusExamples Beispiele
+
+\~english
+@section refSetFocusExamples Examples
+
+@subsection refVerifyCaptionDefault Default Usage
+
+~~~~~~~~~~~~~{.java}
+EN.SelectWindow( "Login" );
+EN.SetFocus( "User" );
+~~~~~~~~~~~~~
+
+\~
+@author Zoltán Hrabovszki
+@date 2017-06-11
+*/

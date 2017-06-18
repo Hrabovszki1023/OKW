@@ -1,0 +1,79 @@
+/*!
+\~german
+
+@page refSelect Select( FN, Val )
+
+Keyword selects the given values of a GUI-Object. Select is mostly Used with List-Objects to slect one or more possible options.
+
+>**Hint:** 
+
+1. If there is an allready selected option, then the select-keyword will _add_ the given values to current selection. 
+If you went to delete the current selection: Use \ref refDELETE as the first value.
+2. Select does not simulate the keyboard input. See: TypeKeys
+
+
+
+# Parameter
+
+| Parameter | Description                     |
+| ----------|:--------------------------------|
+| `FN`      | Functionalname of the GUI-Object|
+| `Val`     | Value to be entered.            |
+
+
+# Reserved `Val` Values
+
+| ```Val```                 | Description                                                    |
+| --------------------------|:---------------------------------------------------------------|
+| `""` and \ref refIGNORE   | Don´t execute the keyword! (For data-driven testing).          |
+| \ref refDELETE            | Delete the value of the GUI-object.  |
+| \ref refEMPTY             | Is a not allowed value. This will raise a ```OKWNotAllowedValueException``` exception  |
+| `${_ENV_}`                | Set the value of GUI-object to value of given enviromentvar `_ENV_`    |
+| `${_MEMKEY_}`             | Set the value of GUI-object to the memorized value with `_MEMKEY_` Key.|
+
+
+# Examples
+
+## Normal Usage
+Add one value to the current selection:
+
+~~~~~~~~~~~~~{.java}
+EN.SelectWindow( "Select" );
+EN.SetValue( "Artist", "Frank Zappa" );
+~~~~~~~~~~~~~
+
+## Normal Usage With Multiple Values
+Add three values to the current selection:
+
+~~~~~~~~~~~~~{.java}
+EN.SelectWindow( "Select" );
+EN.Select( "Artist", "Frank Zappa${SEP}Michael Jackson${SEP}Patti Smith" );
+~~~~~~~~~~~~~
+
+## Delete Current Selection And Select Multiple Values
+First Delete the current selection and than add three _new_ values as selection:
+
+~~~~~~~~~~~~~{.java}
+EN.SelectWindow( "Select" );
+EN.Select( "Artist", "${DELETE}${SEP}Frank Zappa${SEP}Michael Jackson${SEP}Patti Smith" );
+~~~~~~~~~~~~~
+
+## Delete a Value
+
+~~~~~~~~~~~~~{.java}
+EN.SelectWindow( "Select" );
+EN.Select( "User", "${DELETE}" );
+~~~~~~~~~~~~~
+
+## Ignoring SetValue
+
+~~~~~~~~~~~~~{.java}
+EN.SelectWindow( "Select" );
+EN.Select( "Artist", "" );
+EN.Select( "Artist", "${IGNORE}" );
+~~~~~~~~~~~~~
+
+\~
+@author Zoltán Hrabovszki
+@date 2017-06-11
+*/

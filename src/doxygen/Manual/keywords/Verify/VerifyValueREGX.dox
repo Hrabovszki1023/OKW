@@ -1,0 +1,72 @@
+/*!
+\~german
+
+@page refVerifyValueREGX VerifyValueREGX( FN ExpVal )
+
+Keyword verifies the text-content of a GUI-Object
+
+* ~~wildcards - no~~
+* regular expression - yes
+
+### Parameter
+
+| Parameter   | Description  |
+| ------------|:-------------|
+| `FN`        | Functionalname of the GUI-Object|
+| `ExpVal`    | Expected value. Wildcards are possible.|
+
+### Reserved `ExpVal` Values
+
+| Keyword                   | Description  |
+| --------------------------|:-------------|
+| `""` and `${IGNORE}`      | Don´t execute the keyword. Interesting for data-driven testing<br/>[See List of OKW Constants...](https://github.com/Hrabovszki1023/OKW/wiki/List-of-OKW-Constants#ignore) |
+| `${EMPTY}`                | The Expected value is empty or ""<br/>[See List of OKW Constants...](https://github.com/Hrabovszki1023/OKW/wiki/List-of-OKW-Constants#empty) |
+| `${_ENV_}`                | Expected value is empty or "" |
+| `${_MEMKEY_}`             | OKW Parser substitutes with the Value memorized to Key "_MEMKEY_" |
+
+### Regular Expression
+OKW implements standard java regular language. See: [Regular expression](https://en.wikipedia.org/wiki/Regular_expression)
+
+##Examples
+
+### Exact match
+
+ 1. `EN.SelectWindow( "Login" )` - Set context to the Window `Login` with the ChildObject you want to verify.
+ 2. **`EN.VerifyValueREGX( "User", "Zoltan" )`** - then Verify the GUI-Object with the `FN = "User"` matches exact to the given expected value.
+
+### Wildcard match
+
+`EN.SelectWindow( "Login" )` - Set context to the Window `Login` with the ChildObject you want to verify.
+
+**`EN.VerifyValueREGX( "User", ".oltan" )`** - True with: `Zoltan`, `ooltan` Fail with `oltan`, `oltan` and `oltann`
+**`EN.VerifyValueREGX( "User", ".*ltan" )`** - True with: `Zoltan`, `ooltan` Fail with `tan`, `oltann
+
+
+### Verify an Empty GUI-object
+
+1. **`EN.VerifyValueREGX( "User", "${EMPTY}" )`** - Verifies that `User` is empty (= "") 
+
+
+### Ignore VerifyValueREGX(...)
+There are two ways to ignore a Keyword: Set the Parameter `ExpVal` = `"${IGNORE}"` or simply `""` 
+
+ 1. `EN.SelectWindow( "Login" )`
+ 2. **`EN.VerifyValueREGX( "User", "" )`** - Don´t Verify the GUI-Object `FN = "User"`
+
+### Enviroment Variables
+On Windowssystems the Enviromentvar ´USERNAME` returns the name of the user who is currently logged on.
+OKW resolves the Enviroment var `${USERNAME}` to currently logged on username and uses this as expected value (ExpVal). 
+
+ 1. `EN.SelectWindow( "Login" )`
+ 2. **`EN.VerifyValueREGX( "User", "${USERNAME}" )`** - Don´t Verify the GUI-Object `FN = "User"`
+
+## Late Bound Function Call
+
+| Keyword                            |<->| Called GUI-Adapter Method                 |
+| ----------------------------------:|---|:------------------------------------------|
+| `EN.VerifyValueREGX( FN, ExpVal )` |<->| `public ArrayList<String> VerifyValue( )` |
+
+\~
+@author Zoltán Hrabovszki
+@date 2017-06-11
+*/

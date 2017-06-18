@@ -1,0 +1,26 @@
+/*!
+\~german
+
+@page refDoubleClickOn DoubleClickOn( FN )`
+
+Keyword executes a _double left-click_ on the GUI-Object with the functional name `FN`.
+
+# Parameter
+
+| Parameter | Description  |
+| ----------|:-------------|
+| `FN`      | Functionalname of the GUI-Object|
+
+#Examples
+
+## Default Usage
+
+~~~~~~~~~~~~~{.java}
+EN.SelectWindow( "Login" )
+EN.DoubleClickOn( "User" )
+~~~~~~~~~~~~~
+
+\~
+@author Zoltán Hrabovszki
+@date 2017-06-11
+*/

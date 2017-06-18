@@ -1,0 +1,28 @@
+/*!
+\~german
+
+@page refClickOn ClickOn( FN )
+
+Keyword executes a _single left-click_ on the GUI-Object with the functional name `FN`.
+
+# Parameter
+
+| Parameter | Description  |
+| ----------|:-------------|
+| `FN`      | Functionalname of the GUI-Object|
+
+# Examples
+
+## Default Usage
+
+~~~~~~~~~~~~~{.java}
+EN.SelectWindow( "Login" );
+EN.SetValue( "User"... );
+EN.SetValue( "Password"... );
+EN.ClickOn( "OK" );
+~~~~~~~~~~~~~
+
+\~
+@author Zoltán Hrabovszki
+@date 2017-06-11
+*/

@@ -1,0 +1,62 @@
+/*!
+\~german
+
+@page refVerifyValue VerifyValue( FN, ExpVal )
+
+Keyword verifies the text-content of a GUI-Object
+
+- no wildcards
+- no regular expression 
+
+### Parameter
+
+| Parameter | Description  |
+| ----------|:-------------|
+| `FN`      | Functionalname of the GUI-Object|
+| `ExpVal`  | Expected value|
+
+### Reserved `ExpVal` Values
+
+| Keyword                   | Description  |
+| --------------------------|:-------------|
+| `""` and `${IGNORE}`      | Don´t execute the keyword. Interesting for data-driven testing<br/>[See List of OKW Constants...](https://github.com/Hrabovszki1023/OKW/wiki/List-of-OKW-Constants#ignore) |
+| `${EMPTY}`                | The Expected value is empty or ""<br/>[See List of OKW Constants...](https://github.com/Hrabovszki1023/OKW/wiki/List-of-OKW-Constants#empty) |
+| `${_ENV_}`                | Expected value is empty or "" |
+| `${_MEMKEY_}`             | OKW Parser substitutes with the Value memorized to Key "_MEMKEY_" |
+
+##Examples
+
+### Default Usage
+
+ 1. `EN.SelectWindow( "Login" )` - Set context to the Window `Login` with the ChildObject you want to verify.
+ 2. **`EN.VerifyValue( "User", "Zoltan" )`** - then Verify the GUI-Object with the `FN = "User"`
+
+### Verify an Empty GUI-object
+
+1. **`EN.VerifyValue( "User", "${EMPTY}" )`** - Verifyies that `User` is empty (= "") 
+
+
+### Ignore execution of Keyword
+There are two ways to ignore a Keyword: Set the Parameter `ExpVal` = `"${IGNORE}"` or simply `""` 
+
+ 1. `EN.SelectWindow( "Login" )`
+ 2. **`EN.VerifyValue( "User", "" )`** - This ignores the execution of GUI-Object `FN = "User"`
+ 3. **`EN.VerifyValue( "Passwd", "${IGNORE}" )`** - The other way to _ignore_
+
+### Enviroment Variables
+On Windowssystems the Enviroment variable `USERNAME` returns the name of the user who is currently logged on.
+OKW resolves the Enviroment variable `${USERNAME}` to the currently logged on username and uses this as expected value (ExpVal). 
+
+ 1. `EN.SelectWindow( "Login" )`
+ 2. **`EN.VerifyValue( "User", "${USERNAME}" )`** - Matches the GUI-Object `FN = "User"` with the current logged on username?
+
+## Late Bound Function Call
+
+| Keyword                       |<-> | Called GUI-Adapter Method  |
+| ------------------------------:|---|:---------------------------|
+| `EN.VerifyValue( FN, ExpVal )` |<->| `public ArrayList<String> VerifyValue( )` |
+
+\~
+@author Zoltán Hrabovszki
+@date 2017-06-11
+*/

@@ -1,0 +1,58 @@
+/*!
+\~german
+
+@page refSetValue SetValue( FN, Val )
+
+Keyword sets the text-content of a GUI-Object to the given `Val`.
+
+**Hint:** 
+
+1. The existing value of the will be overwritten with the execution of SetValue().
+2. SetValue does not simulate the keyboard. See: TypeKeys
+
+
+
+### Parameter
+
+| Parameter | Description                     |
+| ----------|:--------------------------------|
+| `FN`      | Functionalname of the GUI-Object|
+| `Val`     | Value to be entered.            |
+
+### Reserved `Val` Values
+
+| ```Val```                 | Description                                                    |
+| --------------------------|:---------------------------------------------------------------|
+| `""` and `${IGNORE}`      | Don´t execute the keyword! (For data-driven testing).<br/>[See List of OKW Constants...](https://github.com/Hrabovszki1023/OKW/wiki/List-of-OKW-Constants#ignore)          |
+| `${DELETE}`               | Delete the value of the GUI-object.<br/>[See List of OKW Constants...](https://github.com/Hrabovszki1023/OKW/wiki/List-of-OKW-Constants#delete)  |
+| `${_ENV_}`                | Set the value of GUI-object to value of given enviromentvar `_ENV_`    |
+| `${_MEMKEY_}`             | Set the value of GUI-object to the memorized value with `_MEMKEY_` Key.|
+
+##Examples
+
+### Normal Usage
+~~~~~~~~~~~~~{.java}
+EN.SelectWindow( "Login" )
+  EN.SetValue( "User", "Zoltan" )
+  EN.SetValue( "Password", "Secret!" )
+  EN.ClickOn( "OK" )
+~~~~~~~~~~~~~
+
+### Delete the Value of a GUI-Object
+~~~~~~~~~~~~~{.java}
+EN.SelectWindow( "Login" )
+  EN.SetValue( "User", "${DELETE}" )
+  EN.SetValue( "Password", "${DELETE}" )
+  EN.ClickOn( "OK" )
+~~~~~~~~~~~~~
+
+### Ignoring SetValue
+~~~~~~~~~~~~~{.java}
+EN.SetValue( "name", "" )
+EN.SetValue( "first name", "${IGNORE}" )
+~~~~~~~~~~~~~
+
+\~
+@author Zoltán Hrabovszki
+@date 2017-06-11
+*/

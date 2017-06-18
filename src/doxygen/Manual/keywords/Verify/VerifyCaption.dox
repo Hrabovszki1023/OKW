@@ -1,0 +1,66 @@
+/*!
+\~german
+
+@page refVerifyCaption VerifyCaption( FN, ExpVal )
+
+Keyword verifies the caption of a GUI-Object.
+The caption is e.g. the visible and basicaly not changeable text of a GUI-Object. Visible text of pushbutton or link.
+
+- no wildcards
+- no regular expression 
+
+@section refVerifyCaptionParameter Parameter
+
+| Parameter | Description  |
+| ----------|:-------------|
+| `FN`      | Functionalname of the GUI-Object|
+| `ExpVal`  | Expected value|
+
+@section refVerifyCaptionReservedValues Reserved `ExpVal` Values
+
+| Keyword                   | Description  |
+| --------------------------|:-------------|
+| `""` and \ref refIGNORE   | Don´t execute the keyword. (for data-driven-testing) |
+| \ref refEMPTY             | The Expected value is empty or "" |
+| `${_ENV_}`                | Expected value is empty or "" |
+| `${_MEMKEY_}`             | OKW Parser substitutes with the Value memorized to Key "_MEMKEY_" |
+
+@section refVerifyCaptionExamples Examples
+
+@subsection refVerifyCaptionExample1 Default Usage
+
+1. `EN.SelectWindow( "Login" )` - Set context to the Window `Login` with the ChildObject you want to verify.
+2. **`EN.VerifyCaption( "OK", "Ok" )`** - then Verify the GUI-Object with the `FN = "OK"` has a caption = "Ok"
+
+@subsection refVerifyCaptionExample2 Verify an Empty GUI-object
+
+1. **`EN.VerifyCaption( "OK", "${EMPTY}" )`** - Verifyies that `OK` has an _empty_ (= "") caption 
+
+@subsection refVerifyCaptionExample3 Ignore execution of Keyword_
+
+There are two ways to ignore a Keyword: Set the Parameter `ExpVal` = `"${IGNORE}"` or simply `""` 
+
+ 1. `EN.SelectWindow( "Login" )`
+ 2. **`EN.VerifyCaption( "OK", "" )`** - This ignores the execution of this Keyword `FN = "User"` **or** 
+ 3. **`EN.VerifyCaption( "OK", "${IGNORE}" )`** - This ignores the execution of this Keyword
+
+@subsection refVerifyCaptionExample4 Enviroment Variables
+
+On Windowssystems the Enviroment variable `USERNAME` returns the name of the user who is currently logged on.
+OKW resolves the Enviroment variable `${USERNAME}` to the currently logged on username and uses this as expected value (ExpVal).
+
+For this Example
+
+ 1. `EN.SelectWindow( "Login" )`
+ 2. **`EN.VerifyCaption( "User", "${USERNAME}" )`** - Matches the GUI-Object `FN = "User"` with the current logged on username?
+
+@section refVerifyCaptionCalledMethod Called Method
+
+| Keyword                          |<->| Called GUI-Adapter Method  |
+| --------------------------------:|---|:---------------------------|
+| `EN.VerifyCaption( FN, ExpVal )` |<->| `public ArrayList<String> VerifyCaption( )` |
+
+\~
+@author Zoltán Hrabovszki
+@date 2017-06-11
+*/

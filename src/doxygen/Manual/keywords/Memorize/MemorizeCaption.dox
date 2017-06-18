@@ -1,0 +1,88 @@
+/*!
+\~
+
+@page refMemorizeCaption MemorizeCaption( FN, MemKey )
+
+\~german
+\ref refMemorizeCaption Schlüsselwort Speichert die \ref refCaption des \ref refFN -GUI-Objektes unter dem gegebenen \ref refMemKey.
+
+
+\~english
+\ref refMemorizeCaption Keyword memorize the \ref refCaption of a GUI-Object with the given \ref refMemKey.
+
+\~german
+@section refMemorizeCaptionParameter Parameter
+
+\~english
+@section refMemorizeCaptionParameter Parameter
+
+\~german
+| Parameter       | Description  |
+| ----------------|:-------------|
+| \ref refFN      | Funktionaler Name des GUI-Objektes |
+| \ref refMemKey  | Bezeichner des Schlüsseles unter dem die \ref refCaption gespeichert wird. |
+
+
+\~english
+| Parameter       | Description  |
+| ----------------|:-------------|
+| \ref refFN      | Functionalname of the GUI-Object |
+| \ref refMemKey  | Memkey Vaule |
+
+
+\~german
+@section refMemorizeCaptionExamples Beispiele
+
+\~english
+@section refMemorizeCaptionExamples Examples
+
+\~german
+@subsection refMemorizeCaptionExample1 Normale Verwendung
+
+\~english
+@subsection refMemorizeCaptionExample1 Default Usage
+
+\~
+~~~~~~~~~~~~~{.java}
+EN.SelectWindow( "Login" );
+EN.MemorizeCaption( "OK", "MemOK" );
+~~~~~~~~~~~~~
+
+
+\~german
+@subsection refMemorizeCaptionExample3 Schlüsselwortausführung ignorieren
+
+\~english
+@subsection refMemorizeCaptionExample3 Ignore execution
+
+\~english
+Wenn der Parameter `MemKey` = \ref refIgnore oder einfach `""` (leerer String) gesetzt wird, dann ignoriert OKW die Ausführung des Schlüsselwortes. 
+
+\~english
+There are two ways to ignore a Keyword: Set the Parameter `ExpVal` = `"${IGNORE}"` or simply `""` 
+
+\~
+~~~~~~~~~~~~~{.java}
+EN.SelectWindow( "Login" );
+EN.VerifyCaption( "OK", "" );
+EN.VerifyCaption( "OK", "${IGNORE}" );
+~~~~~~~~~~~~~
+
+\~german
+@section refMemorizeCaptionCalledMethod Aufgrufene GUI-Adapter Methode
+
+| Keyword                             |<->| Aufgrufene GUI-Adapter Methode |
+| -----------------------------------:|---|:-------------------------------|
+| `EN.MemorizeCaption( FN, MemKey )`  |<->| `public ArrayList<String> MemorizeCaption( )` |
+
+\~english
+@section refMemorizeCaptionCalledMethod Called Method
+
+| Keyword                             |<->| Called GUI-Adapter Method  |
+| -----------------------------------:|---|:---------------------------|
+| `EN.MemorizeCaption( FN, MemKey )`  |<->| `public ArrayList<String> MemorizeCaption( )` |
+
+\~
+@author Zoltán Hrabovszki
+@date 2017-06-11
+*/

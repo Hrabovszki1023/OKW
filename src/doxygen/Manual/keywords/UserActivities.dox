@@ -1,0 +1,18 @@
+/*!
+\~german
+
+@page refUserActivities User Activities
+
+- \subpage refClickOn ClickOn( FN )
+- \subpage refDoubleClickOn DoubleClickOn( FN )
+- \subpage refSetFocus SetFocus( FN ) 
+- \subpage refSetValue SetValue( FN, Val ) 
+- \subpage refSelect Select( FN, Val ) 
+- \subpage refSelectMenu SelectMenu( FN ) 
+- \subpage refSelectMenu2 SelectMenu( FN, Val ) 
+- \subpage refTypeKey TypeKey( FN, Val ) 
+
+\~
+@author Zoltán Hrabovszki
+@date 2017-06-11
+*/
