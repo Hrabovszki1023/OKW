@@ -55,7 +55,7 @@ import okw.gui.OKWLocator;
  *  
  *  \code{.html}
  *  <label for="ID_Button_1">Button Label:</label>
- *  <button type="button"
+ *  <input type="button"
  *         id="ID_Button_1"
  *         name="Button 1"
  *         title="Button title"
@@ -116,7 +116,7 @@ import okw.gui.OKWLocator;
  * @author Zoltán Hrabovszki
  * @date 2016.09.05
  */
-public class SeInputButton extends SeAnyChildWindow
+public class SeButton extends SeAnyChildWindow
 {
 
     /**
@@ -125,7 +125,7 @@ public class SeInputButton extends SeAnyChildWindow
      * @author Zoltán Hrabovszki
      * @date 2013.05.03
      */
-    public SeInputButton( String Locator, OKWLocator... Locators )
+    public SeButton( String Locator, OKWLocator... Locators )
     {
         super( Locator, Locators );
     }
@@ -136,7 +136,7 @@ public class SeInputButton extends SeAnyChildWindow
      * @author Zoltán Hrabovszki
      * @date 2017.02.17
      */
-    public SeInputButton( String IframeID, String Locator, OKWLocator... Locators )
+    public SeButton( String IframeID, String Locator, OKWLocator... Locators )
     {
         super( IframeID, Locator, Locators );
     }
@@ -179,28 +179,35 @@ public class SeInputButton extends SeAnyChildWindow
      * \~german Ein SeInputButton hat keinen Wert! ->
      * OKWFrameObjectMethodNotImplemented Auslösen!
      * 
-     * @return
-     * 
-     * \~english A SeInputButton has no value! -> Trigger
+     * @return \~english A SeInputButton has no value! -> Trigger
      *         OKWFrameObjectMethodNotImplemented! \~
      * @author Zoltán Hrabovszki
      * @date 2016.10.06
      */
+    
     @Override
     public ArrayList<String> getValue()
     {
+        ArrayList<String> lvLsReturn = new ArrayList<String>();
+        
         // ArrayList<String> lvLsReturn = new ArrayList<String>();
         try
         {
             MyLogger.LogFunctionStartDebug( "GetValue" );
 
-            String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "getValue()" );
-            throw new OKWFrameObjectMethodNotImplemented( lvsLM );
+            // Warten auf das Objekt. Wenn es nicht existiert mit Exception
+            // beenden...
+            this.WaitForMe();
+
+            // The Attribute "value" wird als Beschriftung angezeigt...
+            lvLsReturn.add( this.Me().getAttribute( "value" ) );
         }
         finally
         {
             MyLogger.LogFunctionEndDebug();
         }
-        // return lvLsReturn;
+        
+        return lvLsReturn;
     }
+
 }
