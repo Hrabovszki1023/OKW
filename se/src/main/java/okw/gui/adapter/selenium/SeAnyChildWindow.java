@@ -150,6 +150,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         }
     }
 
+    
     /** \~german
       *  Ermittelt den textuellen Inhalt der Überschrift eines HTML-Tags anhand des Attributee "textContent".
       *   

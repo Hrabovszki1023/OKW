@@ -38,6 +38,8 @@
 */
 package okw.gui.adapter.selenium;
 
+import java.util.ArrayList;
+
 import okw.gui.OKWLocator;
 
 /**
@@ -122,5 +124,66 @@ public class SeImage extends SeAnyChildWindow
     {
         super( IframeID, Locator, Locators );
     }
+    
+    
+    /**
+     *  Der Wert eines img ist der Wert des Attributtes `src`.
+     * 
+     *  @return
+     *  @author Zoltán Hrabovszki
+     *  @date 2017-06-18
+     */
+    @Override
+    public ArrayList<String> getValue()
+    {
+        ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+        try
+        {
+            this.LogFunctionStartDebug( "getValue" );
+
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
+
+            // Get Value from TextField and put this into the return ArrayList<String>
+            lvLsReturn.add( this.Me().getAttribute( "src" ) );
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvLsReturn );
+        }
+
+        return lvLsReturn;
+    }
+
+    /** \~german
+     *  Ermittelt den textuellen Inhalt der \ref refCaption. Für ein img-Tags ist die \ref refCaption das Attribut "alt".
+     *   
+     *  @return Rückgabe des Textuellen Inhaltes der \ref refCaption.
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2017-06-18
+     */
+   public ArrayList<String> getCaption()
+   {
+       ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+       try
+       {
+           this.LogFunctionStartDebug( "GetCaption" );
+
+           // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+           this.WaitForMe();
+
+           // The Attribute "value" wird als Beschriftung angezeigt...
+           lvLsReturn.add( this.Me().getAttribute( "alt" ) );
+       }
+       finally
+       {
+           this.LogFunctionEndDebug( lvLsReturn );
+       }
+       return lvLsReturn;
+   }
 
 }
