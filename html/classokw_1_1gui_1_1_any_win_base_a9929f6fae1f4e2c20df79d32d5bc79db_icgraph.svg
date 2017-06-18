@@ -140,7 +140,7 @@ var sectionId = 'dynsection-5';
 </g>
 <!-- Node17 -->
 <g id="node5" class="node"><title>Node17</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a77468a67b30058f840a2c6c1bbcf44f6" target="_top" xlink:title="LogExists loggt, ob das aktuelle Objekt existiert. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a77468a67b30058f840a2c6c1bbcf44f6" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refLogExists aufgerufen wird...">
 <polygon fill="white" stroke="black" points="408,-2204 408,-2238 558,-2238 558,-2204 408,-2204"/>
 <text text-anchor="start" x="416" y="-2225" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="483" y="-2212" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.LogExists</text>
@@ -153,7 +153,7 @@ var sectionId = 'dynsection-5';
 </g>
 <!-- Node18 -->
 <g id="node7" class="node"><title>Node18</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a851c4e1bf2147aece7493acfad6d2fba" target="_top" xlink:title="Ermittelt ob das Atuelle Objekt existiert, für das Schlüsselwort MerkeVorhanden. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a851c4e1bf2147aece7493acfad6d2fba" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refMemorizeExists aufgerufen wird...">
 <polygon fill="white" stroke="black" points="394.5,-2152 394.5,-2186 571.5,-2186 571.5,-2152 394.5,-2152"/>
 <text text-anchor="start" x="402.5" y="-2173" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="483" y="-2160" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.MemorizeExists</text>
@@ -179,7 +179,7 @@ var sectionId = 'dynsection-5';
 </g>
 <!-- Node21 -->
 <g id="node13" class="node"><title>Node21</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a16df325c8b8bb0e360ac9d9dbb50d91e" target="_top" xlink:title="Klickt auf das aktuelle Objekt. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a16df325c8b8bb0e360ac9d9dbb50d91e" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort ClickOn( FN ) aufgerufen wird...">
 <polygon fill="white" stroke="red" points="412,-1660 412,-1694 554,-1694 554,-1660 412,-1660"/>
 <text text-anchor="start" x="420" y="-1681" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="483" y="-1668" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.ClickOn</text>

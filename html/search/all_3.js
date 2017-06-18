@@ -32,5 +32,6 @@ var searchData=
   ['cvschildfn',['cvsChildFN',['../classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#a419ff0f0ab86137f79469be6c69e478d',1,'okw::core::OKW_CurrentObject_Sngltn']]],
   ['cvsfullobjectfn',['cvsFullObjectFN',['../classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#a3d4129fdcaa67d3e28ee18394af01d7e',1,'okw::core::OKW_CurrentObject_Sngltn']]],
   ['cvsobjectname',['cvsObjectName',['../classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#ad484951bee65e00a472b822725589b86',1,'okw::core::OKW_CurrentObject_Sngltn']]],
-  ['cvswindowfn',['cvsWindowFN',['../classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#a2c5d9c522e58e7599ab4b64fd5287c8c',1,'okw::core::OKW_CurrentObject_Sngltn']]]
+  ['cvswindowfn',['cvsWindowFN',['../classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#a2c5d9c522e58e7599ab4b64fd5287c8c',1,'okw::core::OKW_CurrentObject_Sngltn']]],
+  ['clickon_28_20fn_20_29',['ClickOn( FN )',['../ref_click_on.html',1,'refUserActivities']]]
 ];

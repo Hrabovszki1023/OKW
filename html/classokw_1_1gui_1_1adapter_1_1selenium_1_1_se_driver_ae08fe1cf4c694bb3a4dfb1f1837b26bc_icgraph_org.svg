@@ -43,7 +43,7 @@
 </g>
 <!-- Node6 -->
 <g id="node5" class="node"><title>Node6</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a16df325c8b8bb0e360ac9d9dbb50d91e" target="_top" xlink:title="Klickt auf das aktuelle Objekt. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a16df325c8b8bb0e360ac9d9dbb50d91e" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort ClickOn( FN ) aufgerufen wird...">
 <polygon fill="white" stroke="black" points="348,-1139 348,-1173 490,-1173 490,-1139 348,-1139"/>
 <text text-anchor="start" x="356" y="-1160" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="419" y="-1147" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.ClickOn</text>
@@ -329,7 +329,7 @@
 </g>
 <!-- Node12 -->
 <g id="node13" class="node"><title>Node12</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a92bd154bf0387bd4044fb9065d8b6113" target="_top" xlink:title="Ermittelt den textuellen Inhalt der Beschriftung (Caption). ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a92bd154bf0387bd4044fb9065d8b6113" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort LogCaption( FN, ExpVal ) aufgerufen wird...">
 <polygon fill="white" stroke="black" points="557,-1066 557,-1100 713,-1100 713,-1066 557,-1066"/>
 <text text-anchor="start" x="565" y="-1087" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="635" y="-1074" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.LogCaption</text>
@@ -342,7 +342,7 @@
 </g>
 <!-- Node13 -->
 <g id="node15" class="node"><title>Node13</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a414b8352e88e27441e9d846d8df55582" target="_top" xlink:title="Ermittelt den textuellen Inhalt des Caption/Überschrift für das Schlüsselwort MerkeWert. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a414b8352e88e27441e9d846d8df55582" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort MemorizeCaption( FN, MemKey ) aufgerufen...">
 <polygon fill="white" stroke="black" points="543.5,-1170 543.5,-1204 726.5,-1204 726.5,-1170 543.5,-1170"/>
 <text text-anchor="start" x="551.5" y="-1191" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="635" y="-1178" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.MemorizeCaption</text>
@@ -368,7 +368,7 @@
 </g>
 <!-- Node16 -->
 <g id="node21" class="node"><title>Node16</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a4b2c518a6da93a0960fed6da1cba688c" target="_top" xlink:title="LogHasFocus loggt, ob das aktuelle Objekt den Focus besitzt. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a4b2c518a6da93a0960fed6da1cba688c" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refLogHasFocus aufgerufen wird...">
 <polygon fill="white" stroke="black" points="551.5,-910 551.5,-944 718.5,-944 718.5,-910 551.5,-910"/>
 <text text-anchor="start" x="559.5" y="-931" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="635" y="-918" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.LogHasFocus</text>
@@ -381,7 +381,7 @@
 </g>
 <!-- Node17 -->
 <g id="node23" class="node"><title>Node17</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a584bd499ca9b87b864c662303c02787a" target="_top" xlink:title="Ermittelt ob das Objekt den Fokus besitz und liefert diesen für das Schlüsselwort MerkeWert...">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a584bd499ca9b87b864c662303c02787a" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refMemorizeHasFocus aufgerufen wird...">
 <polygon fill="white" stroke="black" points="538,-1014 538,-1048 732,-1048 732,-1014 538,-1014"/>
 <text text-anchor="start" x="546" y="-1035" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="635" y="-1022" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.MemorizeHasFocus</text>
@@ -407,7 +407,7 @@
 </g>
 <!-- Node20 -->
 <g id="node29" class="node"><title>Node20</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a2d019b7624f7ebc2714d0eb995623f58" target="_top" xlink:title="LogHasFocus loggt, ob das aktuelle Objekt aktiv ist. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a2d019b7624f7ebc2714d0eb995623f58" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refLogIsActive aufgerufen wird...">
 <polygon fill="white" stroke="black" points="556,-754 556,-788 714,-788 714,-754 556,-754"/>
 <text text-anchor="start" x="564" y="-775" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="635" y="-762" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.LogIsActive</text>
@@ -420,7 +420,7 @@
 </g>
 <!-- Node21 -->
 <g id="node31" class="node"><title>Node21</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a2b1293256c4b07b0d3586101478df743" target="_top" xlink:title="Ermittelt für das Schlüsselwort MerkeIstAktive, ob das aktuelle Objekt aktiv ist. ...">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a2b1293256c4b07b0d3586101478df743" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refLogIsActive aufgerufen wird...">
 <polygon fill="white" stroke="black" points="542.5,-858 542.5,-892 727.5,-892 727.5,-858 542.5,-858"/>
 <text text-anchor="start" x="550.5" y="-879" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="635" y="-866" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.MemorizeIsActive</text>
@@ -446,7 +446,7 @@
 </g>
 <!-- Node24 -->
 <g id="node37" class="node"><title>Node24</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ae2b4f85d72988ba0d20ea7763e692c9e" target="_top" xlink:title="Logt den textuellen Inhalt des Labels eines Objektes. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ae2b4f85d72988ba0d20ea7763e692c9e" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refLogLabel aufgerufen wird...">
 <polygon fill="white" stroke="black" points="562,-598 562,-632 708,-632 708,-598 562,-598"/>
 <text text-anchor="start" x="570" y="-619" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="635" y="-606" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.LogLabel</text>
@@ -459,7 +459,7 @@
 </g>
 <!-- Node25 -->
 <g id="node39" class="node"><title>Node25</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a890ebc9edf84edb93569ef77654664df" target="_top" xlink:title="Ermittelt den textuellen Inhalt des Labels für das Schlüsselwort MerkeWert. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a890ebc9edf84edb93569ef77654664df" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refLogLabel aufgerufen wird...">
 <polygon fill="white" stroke="black" points="548.5,-702 548.5,-736 721.5,-736 721.5,-702 548.5,-702"/>
 <text text-anchor="start" x="556.5" y="-723" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="635" y="-710" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.MemorizeLabel</text>
@@ -485,7 +485,7 @@
 </g>
 <!-- Node28 -->
 <g id="node45" class="node"><title>Node28</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a11271dce635b5c2714f14b9b7e4c2bf9" target="_top" xlink:title="Logt den textuellen Inhalt des ToolTips. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a11271dce635b5c2714f14b9b7e4c2bf9" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refLogTooltip aufgerufen wird...">
 <polygon fill="white" stroke="black" points="559,-442 559,-476 711,-476 711,-442 559,-442"/>
 <text text-anchor="start" x="567" y="-463" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="635" y="-450" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.LogTooltip</text>
@@ -498,7 +498,7 @@
 </g>
 <!-- Node29 -->
 <g id="node47" class="node"><title>Node29</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a9d8a7b5b58c3eb991d7052a82a834f29" target="_top" xlink:title="Ermittelt den textuellen Inhalt des ToolTips für das Schlüsselwort MerkeWert. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a9d8a7b5b58c3eb991d7052a82a834f29" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refMemorizeTooltip aufgerufen wird...">
 <polygon fill="white" stroke="black" points="545.5,-546 545.5,-580 724.5,-580 724.5,-546 545.5,-546"/>
 <text text-anchor="start" x="553.5" y="-567" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="635" y="-554" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.MemorizeTooltip</text>

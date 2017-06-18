@@ -89,7 +89,7 @@ var sectionId = 'dynsection-4';
 </g>
 <!-- Node87 -->
 <g id="node5" class="node"><title>Node87</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a77468a67b30058f840a2c6c1bbcf44f6" target="_top" xlink:title="LogExists loggt, ob das aktuelle Objekt existiert. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a77468a67b30058f840a2c6c1bbcf44f6" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refLogExists aufgerufen wird...">
 <polygon fill="white" stroke="black" points="366,-949 366,-983 516,-983 516,-949 366,-949"/>
 <text text-anchor="start" x="374" y="-970" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="441" y="-957" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.LogExists</text>
@@ -102,7 +102,7 @@ var sectionId = 'dynsection-4';
 </g>
 <!-- Node88 -->
 <g id="node7" class="node"><title>Node88</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a851c4e1bf2147aece7493acfad6d2fba" target="_top" xlink:title="Ermittelt ob das Atuelle Objekt existiert, für das Schlüsselwort MerkeVorhanden. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a851c4e1bf2147aece7493acfad6d2fba" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refMemorizeExists aufgerufen wird...">
 <polygon fill="white" stroke="black" points="352.5,-897 352.5,-931 529.5,-931 529.5,-897 352.5,-897"/>
 <text text-anchor="start" x="360.5" y="-918" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="441" y="-905" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow.MemorizeExists</text>
