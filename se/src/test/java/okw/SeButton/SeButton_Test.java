@@ -57,14 +57,14 @@ import org.junit.rules.TestName;
      * 
      * \~
      * \author Zoltán Hrabovszki
-     * \date 2015.02.28
+     * @date 2017-06-18
      * 
      * @author Zoltan Hrabovszki
      */
     @Ignore("Ignoring the whole fixture")
     public class SeButton_Test
     {
-    	OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
+    	protected OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
     	
     	protected static String ApplicationName;
     	
@@ -73,13 +73,16 @@ import org.junit.rules.TestName;
     	
 
         
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes ClickOn für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes ClickOn für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * \author Zoltán Hrabovszki
+        * @date 2017-06-18
+        * 
+        * @author Zoltan Hrabovszki
+        */
         @Test
         public void tcClickOn() throws Exception
         {
@@ -99,13 +102,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
          }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes LogCaption für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes LogCaption für den GUI-Adapter SeButton.
+         * 
+         * \~
+        * @date 2017-06-18
+        * 
+        * @author Zoltan Hrabovszki
+        */
         @Test
         public void tcLogCaption() throws Exception
         {
@@ -123,13 +128,16 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes LogExists für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /**
+         *  \~german
+         *  
+         * Test des Schlüsselwortes LogExists für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcLogExists() throws Exception
         {
@@ -146,13 +154,15 @@ import org.junit.rules.TestName;
 
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes LogHasFocus für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes LogHasFocus für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcLogHasFocus() throws Exception
         {
@@ -170,13 +180,15 @@ import org.junit.rules.TestName;
 
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes LogTooltip für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes LogTooltip für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcLogToolTip() throws Exception
         {
@@ -191,13 +203,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes LogTooltip für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes LogTooltip für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcLogValue_OKWFrameObjectMethodNotImplemented() throws Exception
         {
@@ -212,13 +226,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes LogIsaCTIVE für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes LogIsaCTIVE für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcLogIsActive() throws Exception
         {
@@ -235,13 +251,15 @@ import org.junit.rules.TestName;
         }
 
         
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes MemorizeCaption für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes MemorizeCaption für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcMemorizeCaption() throws Exception
         {
@@ -262,13 +280,15 @@ import org.junit.rules.TestName;
 
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes MemorizeCaption für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes MemorizeCaption für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcMemorizeLabel() throws Exception
         {
@@ -279,11 +299,11 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("InputButton not Active");
 
-                EN.MemorizeLabel("Text_1", "SeInputButton_MemorizeLabel_1" );
-                assertEquals("Label für Button1: ", myMM.get("SeInputButton_MemorizeLabel_1"));
+                EN.MemorizeLabel("Text_1", "SeButton_MemorizeLabel_1" );
+                assertEquals("Label für Button1: ", myMM.get("SeButton_MemorizeLabel_1"));
 
-                EN.MemorizeLabel("Text_2", "SeInputButton_MemorizeLabel_2");
-                assertEquals("Label für Button2: ", myMM.get("SeInputButton_MemorizeLabel_2"));
+                EN.MemorizeLabel("Text_2", "SeButton_MemorizeLabel_2");
+                assertEquals("Label für Button2: ", myMM.get("SeButton_MemorizeLabel_2"));
 
 
                 EN.StopApp( ApplicationName );
@@ -291,13 +311,15 @@ import org.junit.rules.TestName;
         }
 
         
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes MemorizeExists für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes MemorizeExists für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcMemorizeExists() throws Exception
         {
@@ -314,13 +336,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes MemorizeHasFocus für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes MemorizeHasFocus für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcMemorizeHasFocus() throws Exception
         {
@@ -337,13 +361,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes MemorizeIsActive für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes MemorizeIsActive für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcMemorizeIsActive() throws Exception
         {
@@ -362,13 +388,15 @@ import org.junit.rules.TestName;
         }
 
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes MemorizeTooltip für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes MemorizeTooltip für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcMemorizeTooltip() throws Exception
         {
@@ -383,18 +411,19 @@ import org.junit.rules.TestName;
                 assertEquals("Button 1 Tooltip/title", myMM.get("SePushButton_MemorizeTooltip_1"));
                 assertEquals("Button 2 Tooltip/title", myMM.get("SePushButton_MemorizeTooltip_2"));
 
-
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes MemorizeValue für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes MemorizeValue für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcMemorizeValue_OKWFrameObjectMethodNotImplemented() throws Exception
         {
@@ -410,14 +439,15 @@ import org.junit.rules.TestName;
         }
 
         
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes SetFocus und VerifyHasFocus für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
-
+        /** \~german
+         *
+         * Test des Schlüsselwortes SetFocus und VerifyHasFocus für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcSetFocus_VerifyHasFocus() throws Exception
         {
@@ -441,13 +471,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes SelectMenu( FN ) für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes SelectMenu( FN ) für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcSelectMenu_OKWFrameObjectMethodNotImplemented() throws Exception
         {
@@ -463,13 +495,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes SelectMenu( FN, Val ) für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes SelectMenu( FN, Val ) für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcSelectMenu2_OKWFrameObjectMethodNotImplemented() throws Exception
         {
@@ -486,13 +520,15 @@ import org.junit.rules.TestName;
         }
 
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes SetValue( FN, Val ) für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes SetValue( FN, Val ) für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcSetValue_OKWFrameObjectMethodNotImplemented() throws Exception
         {
@@ -508,13 +544,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes Select( FN, Val ) für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes Select( FN, Val ) für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcSelect_OKWFrameObjectMethodNotImplemented() throws Exception
         {
@@ -530,13 +568,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyCaption für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyCaption für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcVerifyCaption() throws Exception
         {
@@ -554,13 +594,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyCaptionWCM für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyCaptionWCM für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcVerifyCaptionWCM() throws Exception
         {
@@ -578,13 +620,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyCaptionREGX für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyCaptionREGX für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcVerifyCaptionREGX() throws Exception
         {
@@ -602,12 +646,14 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeButton.
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcVerifyExists_ExsistsNOExpectedNO() throws Exception
         {
@@ -619,12 +665,14 @@ import org.junit.rules.TestName;
                 EN.VerifyExists("Does Not Exists", "NO");
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeButton.
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test( expected = OKWVerifyingFailsException.class )
         public void tcVerifyExists_ExistsNOExpectedYES() throws Exception
         {
@@ -636,14 +684,16 @@ import org.junit.rules.TestName;
                 EN.VerifyExists("Does Not Exists", "YES");
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
-        // 
-        // Prüfung: Sollwert Nein  Istwert Ja.
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeButton.
+         * 
+         * Prüfung: Sollwert Nein  Istwert Ja.
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test( expected = OKWVerifyingFailsException.class )
         public void tcVerifyExists_ExistsYESExpectedNO() throws Exception
         {
@@ -655,14 +705,16 @@ import org.junit.rules.TestName;
             EN.VerifyExists("Text_1", "NO");
         }
 
-  // \~german
-  // \brief
-  // Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputButton.
-  //
-  // Prüfung: Sollwert Ja. Istwert Ja.
-  // \~
-  // \author Zoltán Hrabovszki
-  // \date 2015.02.28
+  /** \~german
+   *
+   * Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeButton.
+   *
+   * Prüfung: Sollwert Ja. Istwert Ja.
+   * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
   @Test
   public void tcVerifyExists_ExistsYESExpectedYES() throws Exception
   {
@@ -677,15 +729,17 @@ import org.junit.rules.TestName;
     EN.EndTest();
   }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeInputButton.
-        // 
-        // Button 1 ist active (_nicht_ "disabled")
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeButton.
+         * 
+         * Button 1 ist active (_nicht_ "disabled")
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcVerifyIsActive_ActiveYESExpectedYES() throws Exception
         {
@@ -702,15 +756,17 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeInputButton.
-        // 
-        // Button 1 ist active (_nicht_ "disabled")
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeButton.
+         * 
+         * Button 1 ist active (_nicht_ "disabled")
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test(expected=OKWVerifyingFailsException.class)
         public void tcVerifyIsActive_ActiveYESExpectedNO() throws Exception
         {
@@ -718,7 +774,7 @@ import org.junit.rules.TestName;
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
 
-              // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
+               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
                 EN.SelectWindow("InputButton");
 
                 EN.VerifyIsActive("Text_1", "NO");
@@ -727,14 +783,16 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
         
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeInputButton.
-        // 
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeButton.
+         * 
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcVerifyIsActive_ActiveNOExpectedNO() throws Exception
         {
@@ -751,14 +809,16 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeInputButton.
-        // 
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyIsActive für den GUI-Adapter SeButton.
+         * 
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test(expected=OKWVerifyingFailsException.class)
         public void tcVerifyIsActive_ActiveNOExpectedYES() throws Exception
         {
@@ -775,14 +835,16 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyLabel für den GUI-Adapter SeInputButton.
-        // 
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyLabel für den GUI-Adapter SeButton.
+         * 
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcVerifyLabel() throws Exception
         {
@@ -800,14 +862,16 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyLabel für den GUI-Adapter SeInputButton.
-        // 
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyLabel für den GUI-Adapter SeButton.
+         * 
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcVerifyLabelWCM() throws Exception
         {
@@ -825,14 +889,16 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyLabel für den GUI-Adapter SeInputButton.
-        // 
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyLabel für den GUI-Adapter SeButton.
+         * 
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcVerifyLabelREGX() throws Exception
         {
@@ -850,13 +916,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyToolTip für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyToolTip für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcVerifyToolTip() throws Exception
         {
@@ -873,13 +941,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
  
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyToolTipWCM für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyToolTipWCM für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcVerifyToolTipWCM() throws Exception
         {
@@ -896,13 +966,15 @@ import org.junit.rules.TestName;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyToolTip für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyToolTip für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test
         public void tcVerifyToolTipREGX() throws Exception
         {
@@ -920,13 +992,15 @@ import org.junit.rules.TestName;
         }
 
         
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyValue für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyValue für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcVerifyValue_OKWFrameObjectMethodNotImplemented() throws Exception
         {
@@ -943,13 +1017,15 @@ import org.junit.rules.TestName;
         }
 
         
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyValueWCM für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyValueWCM für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcVerifyValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
         {
@@ -966,13 +1042,15 @@ import org.junit.rules.TestName;
         }
 
 
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyValueTEGX für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         *
+         * Test des Schlüsselwortes VerifyValueTEGX für den GUI-Adapter SeButton.
+         * 
+         * \~
+         * @date 2017-06-18
+         * 
+         * @author Zoltan Hrabovszki
+         */
         @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcVerifyValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
         {

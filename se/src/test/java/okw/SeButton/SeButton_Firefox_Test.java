@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 
 public class SeButton_Firefox_Test extends SeButton_Test
 {
-    static Log2HTML myLog2HTML = null;
+    private static Log2HTML myLog2HTML = null;
     
     @BeforeClass
 	public static void setUpBeforeClass() throws Exception
@@ -26,7 +26,7 @@ public class SeButton_Firefox_Test extends SeButton_Test
 	}
 
     @After
-    public void FirefoxAfter() throws Exception
+    public void afterFirefox() throws Exception
     {
     	Runtime rt = Runtime.getRuntime();
     	  if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) 
