@@ -9,106 +9,106 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 158)">
 <title>okw.core.EN.SelectMenu</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-158 911,-158 911,5 -4,5"/>
-<!-- Node931 -->
-<g id="node1" class="node"><title>Node931</title>
+<!-- Node1023 -->
+<g id="node1" class="node"><title>Node1023</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-86.5 0,-107.5 128,-107.5 128,-86.5 0,-86.5"/>
 <text text-anchor="middle" x="64" y="-94.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.SelectMenu</text>
 </g>
-<!-- Node932 -->
-<g id="node3" class="node"><title>Node932</title>
+<!-- Node1024 -->
+<g id="node3" class="node"><title>Node1024</title>
 <a xlink:href="classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" target="_top" xlink:title="Setzt die Sprache auf den gegebenen wert Language. ">
 <polygon fill="white" stroke="black" points="164.5,-119.5 164.5,-140.5 303.5,-140.5 303.5,-119.5 164.5,-119.5"/>
 <text text-anchor="middle" x="234" y="-127.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.setLanguage</text>
 </a>
 </g>
-<!-- Node931&#45;&gt;Node932 -->
-<g id="edge2" class="edge"><title>Node931&#45;&gt;Node932</title>
+<!-- Node1023&#45;&gt;Node1024 -->
+<g id="edge2" class="edge"><title>Node1023&#45;&gt;Node1024</title>
 <path fill="none" stroke="midnightblue" d="M118.256,-107.532C134.665,-110.717 152.839,-114.245 169.831,-117.544"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="169.192,-120.985 179.676,-119.455 170.526,-114.113 169.192,-120.985"/>
 </g>
-<!-- Node934 -->
-<g id="node7" class="node"><title>Node934</title>
+<!-- Node1026 -->
+<g id="node7" class="node"><title>Node1026</title>
 <a xlink:href="classokw_1_1core_1_1_core.html#ad456e1c840aa697b44843afd9fefa8e2" target="_top" xlink:title="Wählt den gegebenen Menü&#45;Eintrag aus. ">
 <polygon fill="white" stroke="black" points="166.5,-53.5 166.5,-74.5 301.5,-74.5 301.5,-53.5 166.5,-53.5"/>
 <text text-anchor="middle" x="234" y="-61.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.SelectMenu</text>
 </a>
 </g>
-<!-- Node931&#45;&gt;Node934 -->
-<g id="edge6" class="edge"><title>Node931&#45;&gt;Node934</title>
+<!-- Node1023&#45;&gt;Node1026 -->
+<g id="edge6" class="edge"><title>Node1023&#45;&gt;Node1026</title>
 <path fill="none" stroke="midnightblue" d="M118.256,-86.4679C134.665,-83.2827 152.839,-79.7547 169.831,-76.4564"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="170.526,-79.8868 179.676,-74.5453 169.192,-73.0151 170.526,-79.8868"/>
 </g>
-<!-- Node933 -->
-<g id="node5" class="node"><title>Node933</title>
+<!-- Node1025 -->
+<g id="node5" class="node"><title>Node1025</title>
 <a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" target="_top" xlink:title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)...">
 <polygon fill="white" stroke="black" points="340.5,-132.5 340.5,-153.5 513.5,-153.5 513.5,-132.5 340.5,-132.5"/>
 <text text-anchor="middle" x="427" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.setLanguage</text>
 </a>
 </g>
-<!-- Node932&#45;&gt;Node933 -->
-<g id="edge4" class="edge"><title>Node932&#45;&gt;Node933</title>
+<!-- Node1024&#45;&gt;Node1025 -->
+<g id="edge4" class="edge"><title>Node1024&#45;&gt;Node1025</title>
 <path fill="none" stroke="midnightblue" d="M303.677,-134.693C312.307,-135.275 321.247,-135.877 330.191,-136.479"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="330.061,-139.978 340.274,-137.158 330.532,-132.994 330.061,-139.978"/>
 </g>
-<!-- Node935 -->
-<g id="node9" class="node"><title>Node935</title>
+<!-- Node1027 -->
+<g id="node9" class="node"><title>Node1027</title>
 <a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" target="_top" xlink:title="Ausgabe eines Schlüsselwortes. ">
 <polygon fill="white" stroke="black" points="360,-80 360,-114 494,-114 494,-80 360,-80"/>
 <text text-anchor="start" x="368" y="-101" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
 <text text-anchor="middle" x="427" y="-88" font-family="Helvetica,sans-Serif" font-size="10.00">KeyWordStart</text>
 </a>
 </g>
-<!-- Node934&#45;&gt;Node935 -->
-<g id="edge8" class="edge"><title>Node934&#45;&gt;Node935</title>
+<!-- Node1026&#45;&gt;Node1027 -->
+<g id="edge8" class="edge"><title>Node1026&#45;&gt;Node1027</title>
 <path fill="none" stroke="midnightblue" d="M295.597,-74.5321C312.91,-77.4924 331.955,-80.7488 350.044,-83.8418"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="349.531,-87.3048 359.978,-85.5403 350.711,-80.4049 349.531,-87.3048"/>
 </g>
-<!-- Node936 -->
-<g id="node11" class="node"><title>Node936</title>
+<!-- Node1028 -->
+<g id="node11" class="node"><title>Node1028</title>
 <a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. ">
 <polygon fill="white" stroke="black" points="347,-40.5 347,-61.5 507,-61.5 507,-40.5 347,-40.5"/>
 <text text-anchor="middle" x="427" y="-48.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
-<!-- Node934&#45;&gt;Node936 -->
-<g id="edge10" class="edge"><title>Node934&#45;&gt;Node936</title>
+<!-- Node1026&#45;&gt;Node1028 -->
+<g id="edge10" class="edge"><title>Node1026&#45;&gt;Node1028</title>
 <path fill="none" stroke="midnightblue" d="M301.502,-59.4532C312.967,-58.681 325.033,-57.8682 336.968,-57.0644"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="337.203,-60.5565 346.945,-56.3923 336.732,-53.5724 337.203,-60.5565"/>
 </g>
-<!-- Node939 -->
-<g id="node17" class="node"><title>Node939</title>
+<!-- Node1031 -->
+<g id="node17" class="node"><title>Node1031</title>
 <a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae224c8800159ae480d8cd1badda53ef2" target="_top" xlink:title="Wählt den gegebenen Menü&#45;Eintrag aus. ">
 <polygon fill="white" stroke="black" points="342,-0.5 342,-21.5 512,-21.5 512,-0.5 342,-0.5"/>
 <text text-anchor="middle" x="427" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.SelectMenu</text>
 </a>
 </g>
-<!-- Node934&#45;&gt;Node939 -->
-<g id="edge16" class="edge"><title>Node934&#45;&gt;Node939</title>
+<!-- Node1026&#45;&gt;Node1031 -->
+<g id="edge16" class="edge"><title>Node1026&#45;&gt;Node1031</title>
 <path fill="none" stroke="midnightblue" d="M265.822,-53.4008C286.777,-46.5927 314.881,-37.7868 340,-31 349.106,-28.5398 358.799,-26.119 368.285,-23.8579"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="369.127,-27.2556 378.064,-21.5645 367.529,-20.4406 369.127,-27.2556"/>
 </g>
-<!-- Node937 -->
-<g id="node13" class="node"><title>Node937</title>
+<!-- Node1029 -->
+<g id="node13" class="node"><title>Node1029</title>
 <a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="550.5,-40.5 550.5,-61.5 717.5,-61.5 717.5,-40.5 550.5,-40.5"/>
 <text text-anchor="middle" x="634" y="-48.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
-<!-- Node936&#45;&gt;Node937 -->
-<g id="edge12" class="edge"><title>Node936&#45;&gt;Node937</title>
+<!-- Node1028&#45;&gt;Node1029 -->
+<g id="edge12" class="edge"><title>Node1028&#45;&gt;Node1029</title>
 <path fill="none" stroke="midnightblue" d="M507.032,-51C517.92,-51 529.173,-51 540.276,-51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="540.415,-54.5001 550.415,-51 540.415,-47.5001 540.415,-54.5001"/>
 </g>
-<!-- Node938 -->
-<g id="node15" class="node"><title>Node938</title>
+<!-- Node1030 -->
+<g id="node15" class="node"><title>Node1030</title>
 <a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="754,-34 754,-68 906,-68 906,-34 754,-34"/>
 <text text-anchor="start" x="762" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
 <text text-anchor="middle" x="830" y="-42" font-family="Helvetica,sans-Serif" font-size="10.00">ContentSingleValue</text>
 </a>
 </g>
-<!-- Node937&#45;&gt;Node938 -->
-<g id="edge14" class="edge"><title>Node937&#45;&gt;Node938</title>
+<!-- Node1029&#45;&gt;Node1030 -->
+<g id="edge14" class="edge"><title>Node1029&#45;&gt;Node1030</title>
 <path fill="none" stroke="midnightblue" d="M717.69,-51C726.29,-51 735.041,-51 743.669,-51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="743.725,-54.5001 753.725,-51 743.725,-47.5001 743.725,-54.5001"/>
 </g>

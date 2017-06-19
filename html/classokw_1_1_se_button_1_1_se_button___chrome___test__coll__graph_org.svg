@@ -17,7 +17,7 @@
 <polyline fill="none" stroke="black" points="355,-69 477,-69 "/>
 <text text-anchor="middle" x="416" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 <polyline fill="none" stroke="black" points="355,-48 477,-48 "/>
-<text text-anchor="start" x="363" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">+ FirefoxAfter()</text>
+<text text-anchor="start" x="363" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">+ afterChrome()</text>
 <text text-anchor="start" x="363" y="-22" font-family="Helvetica,sans-Serif" font-size="10.00">+ setUpBeforeClass()</text>
 <text text-anchor="start" x="363" y="-9" font-family="Helvetica,sans-Serif" font-size="10.00">+ tearDownAfterClass()</text>
 </g>
@@ -100,7 +100,7 @@
 <g id="edge6" class="edge"><title>Node5&#45;&gt;Node3</title>
 <path fill="none" stroke="#404040" d="M382.43,-606.864C378.965,-594.474 375.24,-581.153 371.377,-567.339"/>
 <polygon fill="none" stroke="#404040" points="371.335,-567.185 365.866,-562.484 368.103,-555.629 373.571,-560.33 371.335,-567.185"/>
-<text text-anchor="middle" x="397" y="-578.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myMM</text>
+<text text-anchor="middle" x="396.5" y="-578.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #myMM</text>
 </g>
 <!-- Node5&#45;&gt;Node5 -->
 <g id="edge26" class="edge"><title>Node5&#45;&gt;Node5</title>
@@ -338,7 +338,7 @@
 <g id="edge34" class="edge"><title>Node17&#45;&gt;Node2</title>
 <path fill="none" stroke="#404040" d="M447.353,-323.431C441.691,-274.406 430.67,-179.003 423.321,-115.381"/>
 <polygon fill="none" stroke="#404040" points="423.28,-115.024 418.618,-109.523 421.903,-103.103 426.565,-108.605 423.28,-115.024"/>
-<text text-anchor="middle" x="461.5" y="-126.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLog2HTML</text>
+<text text-anchor="middle" x="460" y="-126.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myLog2HTML</text>
 </g>
 </g>
 </svg>

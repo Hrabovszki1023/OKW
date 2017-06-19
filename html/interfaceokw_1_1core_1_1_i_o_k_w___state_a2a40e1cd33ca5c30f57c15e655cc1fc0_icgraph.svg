@@ -55,38 +55,38 @@ var sectionId = 'dynsection-4';
 <g id="viewport">
 <title>okw.core.IOKW_State.DoubleClickOn</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-260 777,-260 777,5 -4,5"/>
-<!-- Node488 -->
-<g id="node1" class="node"><title>Node488</title>
+<!-- Node528 -->
+<g id="node1" class="node"><title>Node528</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-68 0.5,-102 149.5,-102 149.5,-68 0.5,-68"/>
 <text text-anchor="start" x="8.5" y="-89" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.Double</text>
 <text text-anchor="middle" x="75" y="-76" font-family="Helvetica,sans-Serif" font-size="10.00">ClickOn</text>
 </g>
-<!-- Node489 -->
-<g id="node3" class="node"><title>Node489</title>
+<!-- Node529 -->
+<g id="node3" class="node"><title>Node529</title>
 <a xlink:href="classokw_1_1core_1_1_core.html#ac282376df171a9d2d62bfe2f5a624cb2" target="_top" xlink:title="Klickt auf das gegebene Objekt. ">
 <polygon fill="white" stroke="black" points="186.5,-74.5 186.5,-95.5 335.5,-95.5 335.5,-74.5 186.5,-74.5"/>
 <text text-anchor="middle" x="261" y="-82.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.DoubleClickOn</text>
 </a>
 </g>
-<!-- Node488&#45;&gt;Node489 -->
-<g id="edge2" class="edge"><title>Node488&#45;&gt;Node489</title>
+<!-- Node528&#45;&gt;Node529 -->
+<g id="edge2" class="edge"><title>Node528&#45;&gt;Node529</title>
 <path fill="none" stroke="midnightblue" d="M159.61,-85C168.548,-85 177.59,-85 186.402,-85"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="159.582,-81.5001 149.582,-85 159.582,-88.5001 159.582,-81.5001"/>
 </g>
-<!-- Node490 -->
-<g id="node5" class="node"><title>Node490</title>
+<!-- Node530 -->
+<g id="node5" class="node"><title>Node530</title>
 <a xlink:href="classokw_1_1core_1_1_e_n.html#adc2ff15e947443e4a40121de9bfa036a" target="_top" xlink:title="Klickt auf das gegebene Objekt. ">
 <polygon fill="white" stroke="black" points="372.5,-101.5 372.5,-122.5 515.5,-122.5 515.5,-101.5 372.5,-101.5"/>
 <text text-anchor="middle" x="444" y="-109.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.DoubleClickOn</text>
 </a>
 </g>
-<!-- Node489&#45;&gt;Node490 -->
-<g id="edge4" class="edge"><title>Node489&#45;&gt;Node490</title>
+<!-- Node529&#45;&gt;Node530 -->
+<g id="edge4" class="edge"><title>Node529&#45;&gt;Node530</title>
 <path fill="none" stroke="midnightblue" d="M342.305,-96.9958C352.408,-98.4864 362.679,-100.002 372.617,-101.468"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="342.68,-93.5134 332.277,-95.5162 341.659,-100.438 342.68,-93.5134"/>
 </g>
-<!-- Node495 -->
-<g id="node15" class="node"><title>Node495</title>
+<!-- Node535 -->
+<g id="node15" class="node"><title>Node535</title>
 <a xlink:href="classokw_1_1core_1_1_current_object___test.html#ab0c36cf24c3d1499774026d1b172ae2c" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode DoubleClickOn( &quot;FN&quot; ) im ChildObject. ">
 <polygon fill="white" stroke="black" points="382,-35.5 382,-82.5 506,-82.5 506,-35.5 382,-35.5"/>
 <text text-anchor="start" x="390" y="-69.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -94,13 +94,13 @@ var sectionId = 'dynsection-4';
 <text text-anchor="middle" x="444" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00">_ChildObject</text>
 </a>
 </g>
-<!-- Node489&#45;&gt;Node495 -->
-<g id="edge14" class="edge"><title>Node489&#45;&gt;Node495</title>
+<!-- Node529&#45;&gt;Node535 -->
+<g id="edge14" class="edge"><title>Node529&#45;&gt;Node535</title>
 <path fill="none" stroke="midnightblue" d="M344.838,-73.0886C357.295,-71.3187 369.943,-69.5217 381.85,-67.83"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="344.314,-69.6278 334.906,-74.4997 345.299,-76.5582 344.314,-69.6278"/>
 </g>
-<!-- Node491 -->
-<g id="node7" class="node"><title>Node491</title>
+<!-- Node531 -->
+<g id="node7" class="node"><title>Node531</title>
 <a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#ad165e477549c4bf24fa9d42e4cf5c927" target="_top" xlink:title="Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch DoubleClickOn() ausgelöst wird...">
 <polygon fill="white" stroke="black" points="571.5,-196 571.5,-256 752.5,-256 752.5,-196 571.5,-196"/>
 <text text-anchor="start" x="579.5" y="-243" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWFrameObject</text>
@@ -109,13 +109,13 @@ var sectionId = 'dynsection-4';
 <text text-anchor="middle" x="662" y="-204" font-family="Helvetica,sans-Serif" font-size="10.00">ObjectChildNotFoundException</text>
 </a>
 </g>
-<!-- Node490&#45;&gt;Node491 -->
-<g id="edge6" class="edge"><title>Node490&#45;&gt;Node491</title>
+<!-- Node530&#45;&gt;Node531 -->
+<g id="edge6" class="edge"><title>Node530&#45;&gt;Node531</title>
 <path fill="none" stroke="midnightblue" d="M464.823,-128.984C485.828,-145.491 519.686,-170.429 552,-187 558.22,-190.19 564.762,-193.228 571.425,-196.098"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="466.914,-126.175 456.911,-122.685 462.555,-131.652 466.914,-126.175"/>
 </g>
-<!-- Node492 -->
-<g id="node9" class="node"><title>Node492</title>
+<!-- Node532 -->
+<g id="node9" class="node"><title>Node532</title>
 <a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#ad7eb79bf7a39002a83a5d1d452cda82b" target="_top" xlink:title="Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von DoubleClickOn() ausgelöst wird...">
 <polygon fill="white" stroke="black" points="559,-118 559,-178 765,-178 765,-118 559,-118"/>
 <text text-anchor="start" x="567" y="-165" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWFrameObject</text>
@@ -124,13 +124,13 @@ var sectionId = 'dynsection-4';
 <text text-anchor="middle" x="662" y="-126" font-family="Helvetica,sans-Serif" font-size="10.00">NotImplemented</text>
 </a>
 </g>
-<!-- Node490&#45;&gt;Node492 -->
-<g id="edge8" class="edge"><title>Node490&#45;&gt;Node492</title>
+<!-- Node530&#45;&gt;Node532 -->
+<g id="edge8" class="edge"><title>Node530&#45;&gt;Node532</title>
 <path fill="none" stroke="midnightblue" d="M517.627,-124.159C530.906,-126.351 544.97,-128.674 558.905,-130.975"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="518.077,-120.686 507.641,-122.509 516.937,-127.592 518.077,-120.686"/>
 </g>
-<!-- Node493 -->
-<g id="node11" class="node"><title>Node493</title>
+<!-- Node533 -->
+<g id="node11" class="node"><title>Node533</title>
 <a xlink:href="classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a3861906b92c8a0c2565d223cfb906e2c" target="_top" xlink:title="Test des Schlüsselwortes DoubleClickOn() für den GUI&#45;Adapter SeInputRadio. ">
 <polygon fill="white" stroke="black" points="552.5,-52.5 552.5,-99.5 771.5,-99.5 771.5,-52.5 552.5,-52.5"/>
 <text text-anchor="start" x="560.5" y="-86.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputRadio.SeInput</text>
@@ -138,21 +138,21 @@ var sectionId = 'dynsection-4';
 <text text-anchor="middle" x="662" y="-60.5" font-family="Helvetica,sans-Serif" font-size="10.00">On_OKWFrameObjectMethodNotImplemented</text>
 </a>
 </g>
-<!-- Node490&#45;&gt;Node493 -->
-<g id="edge10" class="edge"><title>Node490&#45;&gt;Node493</title>
+<!-- Node530&#45;&gt;Node533 -->
+<g id="edge10" class="edge"><title>Node530&#45;&gt;Node533</title>
 <path fill="none" stroke="midnightblue" d="M517.724,-99.8253C528.891,-97.9813 540.611,-96.0459 552.341,-94.1088"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="516.937,-96.4079 507.641,-101.491 518.077,-103.314 516.937,-96.4079"/>
 </g>
-<!-- Node494 -->
-<g id="node13" class="node"><title>Node494</title>
+<!-- Node534 -->
+<g id="node13" class="node"><title>Node534</title>
 <a xlink:href="classokw_1_1_se_link_1_1_se_link___e_n___test.html#ad3983f34eec0e46d9d2ce79c7f1bbf83" target="_top" xlink:title="Prüft ob die DoubleClickOn die Ausnahme OKWFrameObjectMethodNotImplemented auslöst. ">
 <polygon fill="white" stroke="black" points="595,-0 595,-34 729,-34 729,-0 595,-0"/>
 <text text-anchor="start" x="603" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeLink.SeLink_EN</text>
 <text text-anchor="middle" x="662" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.tcDoubleClickOn_en</text>
 </a>
 </g>
-<!-- Node490&#45;&gt;Node494 -->
-<g id="edge12" class="edge"><title>Node490&#45;&gt;Node494</title>
+<!-- Node530&#45;&gt;Node534 -->
+<g id="edge12" class="edge"><title>Node530&#45;&gt;Node534</title>
 <path fill="none" stroke="midnightblue" d="M506.912,-97.3628C510.084,-95.757 513.137,-93.9757 516,-92 538.241,-76.651 529.465,-57.9141 552,-43 564.764,-34.5526 579.962,-28.8391 594.925,-24.9778"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="505.44,-94.1867 497.717,-101.44 508.278,-100.586 505.44,-94.1867"/>
 </g>

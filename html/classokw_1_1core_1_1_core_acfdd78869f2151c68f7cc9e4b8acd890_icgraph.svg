@@ -55,33 +55,33 @@ var sectionId = 'dynsection-75';
 <g id="viewport">
 <title>okw.core.Core.TypeKeyWindow</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-38 509,-38 509,5 -4,5"/>
-<!-- Node2545 -->
-<g id="node1" class="node"><title>Node2545</title>
+<!-- Node2831 -->
+<g id="node1" class="node"><title>Node2831</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-6.5 0,-27.5 158,-27.5 158,-6.5 0,-6.5"/>
 <text text-anchor="middle" x="79" y="-14.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.TypeKeyWindow</text>
 </g>
-<!-- Node2546 -->
-<g id="node3" class="node"><title>Node2546</title>
+<!-- Node2832 -->
+<g id="node3" class="node"><title>Node2832</title>
 <a xlink:href="classokw_1_1core_1_1_e_n.html#a26a7f06e28d3827614961408314625c7" target="_top" xlink:title="Tastatureingabe in ein bestimmtes Fensterobjekt. ">
 <polygon fill="white" stroke="black" points="194.5,-6.5 194.5,-27.5 345.5,-27.5 345.5,-6.5 194.5,-6.5"/>
 <text text-anchor="middle" x="270" y="-14.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.TypeKeyWindow</text>
 </a>
 </g>
-<!-- Node2545&#45;&gt;Node2546 -->
-<g id="edge2" class="edge"><title>Node2545&#45;&gt;Node2546</title>
+<!-- Node2831&#45;&gt;Node2832 -->
+<g id="edge2" class="edge"><title>Node2831&#45;&gt;Node2832</title>
 <path fill="none" stroke="midnightblue" d="M168.264,-17C176.994,-17 185.794,-17 194.37,-17"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="168.066,-13.5001 158.066,-17 168.066,-20.5001 168.066,-13.5001"/>
 </g>
-<!-- Node2547 -->
-<g id="node5" class="node"><title>Node2547</title>
+<!-- Node2833 -->
+<g id="node5" class="node"><title>Node2833</title>
 <a xlink:href="classokw_1_1core_1_1_e_n___keywords___test.html#aa18345af1dd86689b4a74a48a64aac9b" target="_top" xlink:title="okw.core.EN_Keywords\l_Test.tc_SetValue_SV">
 <polygon fill="white" stroke="black" points="382,-0 382,-34 504,-34 504,-0 382,-0"/>
 <text text-anchor="start" x="390" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_Keywords</text>
 <text text-anchor="middle" x="443" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.tc_SetValue_SV</text>
 </a>
 </g>
-<!-- Node2546&#45;&gt;Node2547 -->
-<g id="edge4" class="edge"><title>Node2546&#45;&gt;Node2547</title>
+<!-- Node2832&#45;&gt;Node2833 -->
+<g id="edge4" class="edge"><title>Node2832&#45;&gt;Node2833</title>
 <path fill="none" stroke="midnightblue" d="M355.879,-17C364.632,-17 373.393,-17 381.805,-17"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="355.629,-13.5001 345.629,-17 355.629,-20.5001 355.629,-13.5001"/>
 </g>

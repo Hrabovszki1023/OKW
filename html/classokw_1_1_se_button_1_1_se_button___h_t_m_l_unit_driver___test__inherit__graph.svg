@@ -61,7 +61,7 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="36" y="-76.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeButton.SeButton</text>
 <text text-anchor="middle" x="89" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">_HTMLUnitDriver_Test</text>
 <polyline fill="none" stroke="black" points="28,-55.5 150,-55.5 "/>
-<text text-anchor="start" x="36" y="-42.5" font-family="Helvetica,sans-Serif" font-size="10.00">~ myLog2HTML</text>
+<text text-anchor="start" x="36" y="-42.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myLog2HTML</text>
 <polyline fill="none" stroke="black" points="28,-34.5 150,-34.5 "/>
 <text text-anchor="start" x="36" y="-21.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setUpBeforeClass()</text>
 <text text-anchor="start" x="36" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tearDownAfterClass()</text>
@@ -73,7 +73,7 @@ var sectionId = 'dynsection-0';
 <text text-anchor="middle" x="89" y="-540.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeButton.SeButton_Test</text>
 <polyline fill="none" stroke="black" points="-0.5,-532.5 178.5,-532.5 "/>
 <text text-anchor="start" x="7.5" y="-519.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ name</text>
-<text text-anchor="start" x="7.5" y="-506.5" font-family="Helvetica,sans-Serif" font-size="10.00">~ myMM</text>
+<text text-anchor="start" x="7.5" y="-506.5" font-family="Helvetica,sans-Serif" font-size="10.00"># myMM</text>
 <text text-anchor="start" x="7.5" y="-493.5" font-family="Helvetica,sans-Serif" font-size="10.00"># ApplicationName</text>
 <polyline fill="none" stroke="black" points="-0.5,-485.5 178.5,-485.5 "/>
 <text text-anchor="start" x="7.5" y="-472.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcClickOn()</text>

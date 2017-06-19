@@ -9,33 +9,33 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 78)">
 <title>okw.core.Core.LogSelected</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-78 347,-78 347,5 -4,5"/>
-<!-- Node690 -->
-<g id="node1" class="node"><title>Node690</title>
+<!-- Node770 -->
+<g id="node1" class="node"><title>Node770</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-29.5 0.5,-50.5 137.5,-50.5 137.5,-29.5 0.5,-29.5"/>
 <text text-anchor="middle" x="69" y="-37.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogSelected</text>
 </g>
-<!-- Node691 -->
-<g id="node3" class="node"><title>Node691</title>
+<!-- Node771 -->
+<g id="node3" class="node"><title>Node771</title>
 <a xlink:href="classokw_1_1core_1_1_e_n.html#a7c5b0f0e1a534035090bdd7c523d1486" target="_top" xlink:title="Dokumentiert den markierten Text des gegebenen Objekts. ">
 <polygon fill="white" stroke="black" points="192.5,-52.5 192.5,-73.5 323.5,-73.5 323.5,-52.5 192.5,-52.5"/>
 <text text-anchor="middle" x="258" y="-60.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.LogSelected</text>
 </a>
 </g>
-<!-- Node690&#45;&gt;Node691 -->
-<g id="edge2" class="edge"><title>Node690&#45;&gt;Node691</title>
+<!-- Node770&#45;&gt;Node771 -->
+<g id="edge2" class="edge"><title>Node770&#45;&gt;Node771</title>
 <path fill="none" stroke="midnightblue" d="M147.666,-49.5731C162.5,-51.3783 177.87,-53.2487 192.257,-54.9995"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="147.85,-46.0698 137.501,-48.336 147.004,-53.0185 147.85,-46.0698"/>
 </g>
-<!-- Node692 -->
-<g id="node5" class="node"><title>Node692</title>
+<!-- Node772 -->
+<g id="node5" class="node"><title>Node772</title>
 <a xlink:href="classokw_1_1core_1_1_current_object___test.html#a8a0a39a42dd658626726e6b996fa0d10" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode LogCaption( &quot;FN&quot; ) im ChildObject. ">
 <polygon fill="white" stroke="black" points="174,-0 174,-34 342,-34 342,-0 174,-0"/>
 <text text-anchor="start" x="182" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
 <text text-anchor="middle" x="258" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.tc_LogSelected_ChildObject</text>
 </a>
 </g>
-<!-- Node690&#45;&gt;Node692 -->
-<g id="edge4" class="edge"><title>Node690&#45;&gt;Node692</title>
+<!-- Node770&#45;&gt;Node772 -->
+<g id="edge4" class="edge"><title>Node770&#45;&gt;Node772</title>
 <path fill="none" stroke="midnightblue" d="M147.605,-30.4343C156.301,-29.3761 165.182,-28.2954 173.941,-27.2294"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="147.004,-26.9815 137.501,-31.664 147.85,-33.9302 147.004,-26.9815"/>
 </g>

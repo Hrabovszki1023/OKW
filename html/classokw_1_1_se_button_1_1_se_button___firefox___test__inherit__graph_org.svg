@@ -15,9 +15,9 @@
 <text text-anchor="start" x="36" y="-90" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeButton.SeButton</text>
 <text text-anchor="middle" x="89" y="-77" font-family="Helvetica,sans-Serif" font-size="10.00">_Firefox_Test</text>
 <polyline fill="none" stroke="black" points="28,-69 150,-69 "/>
-<text text-anchor="start" x="36" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00">~ myLog2HTML</text>
+<text text-anchor="start" x="36" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myLog2HTML</text>
 <polyline fill="none" stroke="black" points="28,-48 150,-48 "/>
-<text text-anchor="start" x="36" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">+ FirefoxAfter()</text>
+<text text-anchor="start" x="36" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">+ afterFirefox()</text>
 <text text-anchor="start" x="36" y="-22" font-family="Helvetica,sans-Serif" font-size="10.00">+ setUpBeforeClass()</text>
 <text text-anchor="start" x="36" y="-9" font-family="Helvetica,sans-Serif" font-size="10.00">+ tearDownAfterClass()</text>
 </g>
@@ -28,7 +28,7 @@
 <text text-anchor="middle" x="89" y="-554.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeButton.SeButton_Test</text>
 <polyline fill="none" stroke="black" points="-0.5,-546.5 178.5,-546.5 "/>
 <text text-anchor="start" x="7.5" y="-533.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ name</text>
-<text text-anchor="start" x="7.5" y="-520.5" font-family="Helvetica,sans-Serif" font-size="10.00">~ myMM</text>
+<text text-anchor="start" x="7.5" y="-520.5" font-family="Helvetica,sans-Serif" font-size="10.00"># myMM</text>
 <text text-anchor="start" x="7.5" y="-507.5" font-family="Helvetica,sans-Serif" font-size="10.00"># ApplicationName</text>
 <polyline fill="none" stroke="black" points="-0.5,-499.5 178.5,-499.5 "/>
 <text text-anchor="start" x="7.5" y="-486.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcClickOn()</text>

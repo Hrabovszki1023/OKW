@@ -1,5 +1,5 @@
 <map id="okw.SeButton.SeButton_Test" name="okw.SeButton.SeButton_Test">
-<area shape="rect" id="node3" href="$classokw_1_1_se_button_1_1_se_button___chrome___test.html" title="{okw.SeButton.SeButton\l_Chrome_Test\n|~ myLog2HTML\l|+ FirefoxAfter()\l+ setUpBeforeClass()\l+ tearDownAfterClass()\l}" alt="" coords="5,625,168,762"/>
-<area shape="rect" id="node5" href="$classokw_1_1_se_button_1_1_se_button___firefox___test.html" title="{okw.SeButton.SeButton\l_Firefox_Test\n|~ myLog2HTML\l|+ FirefoxAfter()\l+ setUpBeforeClass()\l+ tearDownAfterClass()\l}" alt="" coords="192,625,355,762"/>
-<area shape="rect" id="node7" href="$classokw_1_1_se_button_1_1_se_button___h_t_m_l_unit_driver___test.html" title="{okw.SeButton.SeButton\l_HTMLUnitDriver_Test\n|~ myLog2HTML\l|+ setUpBeforeClass()\l+ tearDownAfterClass()\l}" alt="" coords="379,633,541,753"/>
+<area shape="rect" id="node3" href="$classokw_1_1_se_button_1_1_se_button___chrome___test.html" title="{okw.SeButton.SeButton\l_Chrome_Test\n|&#45; myLog2HTML\l|+ afterChrome()\l+ setUpBeforeClass()\l+ tearDownAfterClass()\l}" alt="" coords="5,625,168,762"/>
+<area shape="rect" id="node5" href="$classokw_1_1_se_button_1_1_se_button___firefox___test.html" title="{okw.SeButton.SeButton\l_Firefox_Test\n|&#45; myLog2HTML\l|+ afterFirefox()\l+ setUpBeforeClass()\l+ tearDownAfterClass()\l}" alt="" coords="192,625,355,762"/>
+<area shape="rect" id="node7" href="$classokw_1_1_se_button_1_1_se_button___h_t_m_l_unit_driver___test.html" title="{okw.SeButton.SeButton\l_HTMLUnitDriver_Test\n|&#45; myLog2HTML\l|+ setUpBeforeClass()\l+ tearDownAfterClass()\l}" alt="" coords="379,633,541,753"/>
 </map>
