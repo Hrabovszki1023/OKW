@@ -62,6 +62,11 @@ public class OKW_Helper_GetLeftFromDelimiterNumberTest
     private String InputSource;
     private String InputDelimiter;
     private int    InputCount;
+    
+    /**
+     *  \copydoc CurrentObject::Log()
+     */
+    public static Logger_Sngltn Log;
 
     @Parameters( name = "{index}: {0} = GetRigthFromDelimiterNumber[\"{1}\", \"{2}\", \"{3}\"] " )
     public static Collection<Object[]> data() {
@@ -90,8 +95,6 @@ public class OKW_Helper_GetLeftFromDelimiterNumberTest
     	   this.InputCount     = InputCount;
     	   }
     
-	/// \copydoc CurrentObject::Log()
-	public static Logger_Sngltn Log;
 
 		//@BeforeClass
         public static void myTestFixtureSetUp()
@@ -105,7 +108,7 @@ public class OKW_Helper_GetLeftFromDelimiterNumberTest
         }
 
         @Test
-        public void TC_MatchStr() throws XPathExpressionException
+        public void tcMatchStr() throws XPathExpressionException
         {
             String actual = "";
             String expected = ExpectedValue;

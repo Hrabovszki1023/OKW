@@ -53,14 +53,14 @@ import okw.gui.OKWLocator;
  *  # Unterstützter Tag
  *  Folgender HTML-Tag wird unterstützt:
  *  
- *  \code{.html}
- *  <label for="ID_Button_1">Button Label:</label>
- *  <input type="button"
+ *  ~~~~~~~~~~~~~{.html}
+ *  <label for="ID_Button_1">Button Label:<\label>
+ *  <button type="button"
  *         id="ID_Button_1"
  *         name="Button 1"
  *         title="Button title"
- *         value="Button 1">Button Caption<\input>
- *  \endcode
+ *         value="Button 1">Button Caption<\button>
+ *  ~~~~~~~~~~~~~
  * 
  * # Unterstützte GUI-Schlüsselwörter
  *
@@ -96,19 +96,19 @@ import okw.gui.OKWLocator;
  * | `VerifyExists( FN, ExpVal)`,    <br>`MemorizeExists( FN, MemKey)`,    <br>`LogExists( FN )`   | **JA** |  |
  * | `VerifyHasFocus( FN, ExpVal )`, <br>`MemorizeHasFocus( FN, MemKey)`,  <br>`LogHasFocus( FN )` | **JA** |  |
  * | `VerifyIsActive( FN, ExpVal )`, <br>`MemorizeIsActive( FN, MemKey)`,  <br>`LogIsActive( FN )` | **JA** |  |
- * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **JA** | Caption ist der sichtbare Text des Buttons. Im Beispiel: `Button Caption` |
- * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )`     | - **JA** |  |
+ * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **JA** | Als \ref refCaption wird das Attribute `textContent` verwendet.. Im Beispiel: `Button Caption` |
+ * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )`     | **JA** |  |
  * | `VerifyTooltip( FN, ExpVal )`,  <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **JA** | Als Tooltip wird das Attribute `title` verwendet.  Im Beispiel: `Button title` |
- * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )`     | **NEIN** | Was ist der Wert eines Buttons? -> throw OKWFrameObjectMethodNotImplemented |
+ * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )`     | **JA** | Als Tooltip wird das Attribute `value` verwendet. |
  * 
  *  # Siehe auch:
  *  - okw.gui.adapter.selenium.SeButton - für button-tags 
  *  
  *  # Quellen/Links
- *  
- *  - [SelfHTML: HTML/Textauszeichnung/a](https://wiki.selfhtml.org/wiki/HTML/Textauszeichnung/a)
- *  - [Issue #106](https://github.com/Hrabovszki1023/OKW/issues/106)
- *  - [Issue #120](https://github.com/Hrabovszki1023/OKW/issues/120)
+ *
+ *  - [SelfHTML: HTML/Formulare/Button](https://wiki.selfhtml.org/wiki/HTML/Formulare/Button)
+ *  - [Issue #106](https://github.com/Hrabovszki1023/OKW/issues/108)
+ *  - [Issue #120](https://github.com/Hrabovszki1023/OKW/issues/116)
  *  
  *  \~english
  *  

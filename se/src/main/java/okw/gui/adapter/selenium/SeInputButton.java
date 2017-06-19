@@ -97,7 +97,7 @@ import okw.gui.OKWLocator;
  * | `VerifyHasFocus( FN, ExpVal )`, <br>`MemorizeHasFocus( FN, MemKey)`,  <br>`LogHasFocus( FN )` | **JA** |  |
  * | `VerifyIsActive( FN, ExpVal )`, <br>`MemorizeIsActive( FN, MemKey)`,  <br>`LogIsActive( FN )` | **JA** |  |
  * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **JA** | Caption ist der sichtbare Text des Buttons. Im Beispiel: `Button Caption` |
- * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )`     | - **JA** |  |
+ * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )`     | **JA** |  |
  * | `VerifyTooltip( FN, ExpVal )`,  <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **JA** | Als Tooltip wird das Attribute `title` verwendet.  Im Beispiel: `Button title` |
  * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )`     | **NEIN** | Was ist der Wert eines Buttons? -> throw OKWFrameObjectMethodNotImplemented |
  * 
@@ -106,9 +106,9 @@ import okw.gui.OKWLocator;
  *  
  *  # Quellen/Links
  *  
- *  - [SelfHTML: HTML/Textauszeichnung/a](https://wiki.selfhtml.org/wiki/HTML/Textauszeichnung/a)
- *  - [Issue #106](https://github.com/Hrabovszki1023/OKW/issues/106)
- *  - [Issue #120](https://github.com/Hrabovszki1023/OKW/issues/120)
+ *  - [SelfHTML: HTML/Formulare/input/button](HTML/Formulare/input/button)
+ *  - [Issue #106](https://github.com/Hrabovszki1023/OKW/issues/108)
+ *  - [Issue #120](https://github.com/Hrabovszki1023/OKW/issues/116)
  *  
  *  \~english
  *  
