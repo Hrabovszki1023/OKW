@@ -22,7 +22,7 @@
 <polyline fill="none" stroke="black" points="-0.5,-73.5 188.5,-73.5 "/>
 <text text-anchor="start" x="7.5" y="-60.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ OKW_Helper_GetRightFromDelimiter</text>
 <text text-anchor="start" x="7.5" y="-47.5" font-family="Helvetica,sans-Serif" font-size="10.00">NumberTest()</text>
-<text text-anchor="start" x="7.5" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_MatchStr()</text>
+<text text-anchor="start" x="7.5" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcMatchStr()</text>
 <text text-anchor="start" x="7.5" y="-21.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ data()</text>
 <text text-anchor="start" x="7.5" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ myTestFixtureSetUp()</text>
 </g>

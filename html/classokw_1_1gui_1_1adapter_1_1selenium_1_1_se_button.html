@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 182, Datum: 06.19.2017 06:33:04</span>
+   &#160;<span id="projectnumber">Build_ID: 183, Datum: 06.19.2017 11:10:21</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -490,7 +490,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
 <div class="textblock"><p>Diese Klasse representiert einen HTML-Button, die mit Selenium angsteuert wird. </p>
 <h1>Unterstützter Tag</h1>
 <p>Folgender HTML-Tag wird unterstützt:</p>
-<div class="fragment"><div class="line">&lt;label for=&quot;ID_Button_1&quot;&gt;Button Label:&lt;/label&gt;</div><div class="line">&lt;input type=&quot;button&quot;</div><div class="line">       id=&quot;ID_Button_1&quot;</div><div class="line">       name=&quot;Button 1&quot;</div><div class="line">       title=&quot;Button title&quot;</div><div class="line">       value=&quot;Button 1&quot;&gt;Button Caption&lt;\input&gt;</div></div><!-- fragment --><h1>Unterstützte GUI-Schlüsselwörter</h1>
+<div class="fragment"><div class="line">&lt;label for=&quot;ID_Button_1&quot;&gt;Button Label:&lt;\label&gt;</div><div class="line">&lt;button type=&quot;button&quot;</div><div class="line">       id=&quot;ID_Button_1&quot;</div><div class="line">       name=&quot;Button 1&quot;</div><div class="line">       title=&quot;Button title&quot;</div><div class="line">       value=&quot;Button 1&quot;&gt;Button Caption&lt;\button&gt;</div></div><!-- fragment --><h1>Unterstützte GUI-Schlüsselwörter</h1>
 <h2>Kindobjekt Aktionen</h2>
 <table class="doxtable">
 <tr>
@@ -548,13 +548,13 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
 <code>VerifyCaptionWCM( FN, ExpVal )</code>, <br />
 <code>VerifyCaptionREGX( FN, ExpVal )</code>, <br />
 <code>MemorizeCaption( FN, ExpVal )</code>, <br />
-<code>LogCaption( FN, ExpVal )</code> </td><td align="center"><b>JA</b> </td><td align="left">Caption ist der sichtbare Text des Buttons. Im Beispiel: <code>Button Caption</code> </td></tr>
+<code>LogCaption( FN, ExpVal )</code> </td><td align="center"><b>JA</b> </td><td align="left">Als <a class="el" href="ref_glossary.html#refCaption">Caption</a> wird das Attribute <code>textContent</code> verwendet.. Im Beispiel: <code>Button Caption</code> </td></tr>
 <tr>
 <td><code>VerifyLabel( FN, ExpVal )</code>, <br />
 <code>VerifyLabelWCM( FN, ExpVal )</code>, <br />
 <code>VerifyLabelREGX( FN, ExpVal )</code>, <br />
 <code>MemorizeLabel( FN, ExpVal )</code>, <br />
-<code>LogLabel( FN, ExpVal )</code> </td><td align="center">- <b>JA</b> </td><td align="left"></td></tr>
+<code>LogLabel( FN, ExpVal )</code> </td><td align="center"><b>JA</b> </td><td align="left"></td></tr>
 <tr>
 <td><code>VerifyTooltip( FN, ExpVal )</code>, <br />
 <code>VerifyTooltipWCM( FN, ExpVal )</code>, <br />
@@ -566,7 +566,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
 <code>VerifyValueWCM( FN, ExpVal )</code>, <br />
 <code>VerifyValueREGX( FN, ExpVal )</code>, <br />
 <code>MemorizeValue( FN, ExpVal )</code>, <br />
-<code>LogValue( FN, ExpVal )</code> </td><td align="center"><b>NEIN</b> </td><td align="left">Was ist der Wert eines Buttons? -&gt; throw OKWFrameObjectMethodNotImplemented </td></tr>
+<code>LogValue( FN, ExpVal )</code> </td><td align="center"><b>JA</b> </td><td align="left">Als Tooltip wird das Attribute <code>value</code> verwendet. </td></tr>
 </table>
 <h1>Siehe auch:</h1>
 <ul>
@@ -574,9 +574,9 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
 </ul>
 <h1>Quellen/Links</h1>
 <ul>
-<li><a href="https://wiki.selfhtml.org/wiki/HTML/Textauszeichnung/a">SelfHTML: HTML/Textauszeichnung/a</a></li>
-<li><a href="https://github.com/Hrabovszki1023/OKW/issues/106">Issue #106</a></li>
-<li><a href="https://github.com/Hrabovszki1023/OKW/issues/120">Issue #120</a></li>
+<li><a href="https://wiki.selfhtml.org/wiki/HTML/Formulare/Button">SelfHTML: HTML/Formulare/Button</a></li>
+<li><a href="https://github.com/Hrabovszki1023/OKW/issues/108">Issue #106</a></li>
+<li><a href="https://github.com/Hrabovszki1023/OKW/issues/116">Issue #120</a></li>
 </ul>
 <dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2016.09.05 </dd></dl>
@@ -748,7 +748,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><b>adapter</b></li><li class="navelem"><b>selenium</b></li><li class="navelem"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html">SeButton</a></li>
-    <li class="footer">Erzeugt am Mon Jun 19 2017 06:35:10 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mon Jun 19 2017 11:12:21 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
