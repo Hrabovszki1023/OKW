@@ -111,6 +111,10 @@ var annotated_dup =
           [ "frmCalculator", null, [
             [ "frmCalculator", "classokw_1_1gui_1_1frames_1_1frm_calculator_1_1frm_calculator.html", "classokw_1_1gui_1_1frames_1_1frm_calculator_1_1frm_calculator" ]
           ] ],
+          [ "SeButton", null, [
+            [ "FrmButton", "classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button.html", "classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button" ],
+            [ "FrmButtonNotActiv", "classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button_not_activ.html", "classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button_not_activ" ]
+          ] ],
           [ "SeCheckBox", null, [
             [ "frmSeCheckBox", "classokw_1_1gui_1_1frames_1_1_se_check_box_1_1frm_se_check_box.html", "classokw_1_1gui_1_1frames_1_1_se_check_box_1_1frm_se_check_box" ]
           ] ],

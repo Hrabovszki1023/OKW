@@ -29,6 +29,7 @@ var NAVTREEINDEX0 =
 ".html":[9,0,0,4,1,6],
 ".html":[9,0,0,4,1,7],
 ".html":[9,0,0,4,1,8],
+".html":[9,0,0,4,1,9],
 ".html":[9,0,0,5],
 ".html":[9,0,0,6],
 ".html":[9,0,0,6,0],
@@ -74,6 +75,8 @@ var NAVTREEINDEX0 =
 "_e_n___verify_value___o_k_w_verifying_fails_exception___test_8java_source.html":[10,0,0,0,1,0,0,0,18],
 "_frame_object_dictionary___sngltn_8java_source.html":[10,0,0,0,0,0,0,6],
 "_frame_object_dictionary___test_8java_source.html":[10,0,0,0,1,0,0,0,19],
+"_frm_button_8java_source.html":[10,0,1,0,1,0,0,2,0,1,0],
+"_frm_button_not_activ_8java_source.html":[10,0,1,0,1,0,0,2,0,1,1],
 "_frm_obj_dict_test_8java_source.html":[10,0,0,0,1,0,0,1,1,1],
 "_i_g_u_i_childwindow_8java_source.html":[10,0,0,0,0,0,0,2,3],
 "_i_g_u_i_window_8java_source.html":[10,0,0,0,0,0,0,2,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX0 =
 "classokw_1_1_frame_object_dictionary___sngltn.html#aca3d4bf06ca665795304f02b1bbe24eb":[9,0,0,22,0],
 "classokw_1_1_frame_object_dictionary___sngltn.html#aeec07d71cbebe71ec3ec4d27e86d6c5c":[9,0,0,22,6],
 "classokw_1_1_log_messenger.html":[9,0,0,23],
-"classokw_1_1_log_messenger.html#a2f9f189911cfc98e77f346a52c4c1d13":[9,0,0,23,3],
-"classokw_1_1_log_messenger.html#a32300ad1446048dd692bbbbd17e07799":[9,0,0,23,2],
-"classokw_1_1_log_messenger.html#a4649aaa2bd93e17750f21fc4fc8a65da":[9,0,0,23,7],
-"classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3":[9,0,0,23,5]
+"classokw_1_1_log_messenger.html#a2f9f189911cfc98e77f346a52c4c1d13":[9,0,0,23,3]
 };

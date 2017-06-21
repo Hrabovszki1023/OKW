@@ -38,6 +38,8 @@ var hierarchy =
         [ "okw.gui.adapter.selenium.SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html", [
           [ "okw.gui.adapter.selenium.SeBrowserChild", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html", [
             [ "okw.gui.frames.frmCalculator.frmCalculator", "classokw_1_1gui_1_1frames_1_1frm_calculator_1_1frm_calculator.html", null ],
+            [ "okw.gui.frames.SeButton.FrmButton", "classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button.html", null ],
+            [ "okw.gui.frames.SeButton.FrmButtonNotActiv", "classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button_not_activ.html", null ],
             [ "okw.gui.frames.SeCheckBox.frmSeCheckBox", "classokw_1_1gui_1_1frames_1_1_se_check_box_1_1frm_se_check_box.html", null ],
             [ "okw.gui.frames.SeInputButton.frmInputButton", "classokw_1_1gui_1_1frames_1_1_se_input_button_1_1frm_input_button.html", null ],
             [ "okw.gui.frames.SeInputButton.frmInputButtonNotActiv", "classokw_1_1gui_1_1frames_1_1_se_input_button_1_1frm_input_button_not_activ.html", null ],
