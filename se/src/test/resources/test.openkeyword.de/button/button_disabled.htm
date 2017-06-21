@@ -11,26 +11,26 @@
          alt="OpenKeyWord Logo">
     <p>Sie befinden sich auf einer Entwicklungstestseite von OpenKeyWord.</p>
 
-    <h1>&lt;input type="button" disabled&gt;</h1>
+    <h1>&lt;button disabled='disabled'&gt;</h1>
 
 <form action="input_button.htm">
   <p>
     <textarea cols="20" rows="4" name="textfeld"></textarea>
     <label for="ID_Botton_1">Label für Button1: </label>
-    <input type="button"
+    <button type="button"
            id="ID_Botton_1"
            name="Button 1"
            title="Button 1 Tooltip/title"
-           value="Button 1"
-           onclick="this.form.textfeld.value='Button 1 und rückwärts seltsam geschrieben ich bin.'">
+           value="Button 1 value"
+           onclick="this.form.textfeld.value='Button 1 und rückwärts seltsam geschrieben ich bin.'">Button 1</button>
     <label for="ID_Botton_2">Label für Button2: </label>
-    <input type="button"
+    <button type="button"
            id="ID_Botton_2"
            name="Button 2"
            title="Button 2 Tooltip/title"
-           value="Button 2"
+           value="Button 2 value"
            onclick="this.form.textfeld.value='Ich bin Text 2 - ganz normal'"
-           disabled='disabled'>
+           disabled='disabled'>Button 2</button>
   </p>
 </form>
 
