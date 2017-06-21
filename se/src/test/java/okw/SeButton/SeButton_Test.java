@@ -88,13 +88,12 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/Button/button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
                 EN.ClickOn("Text_1");
                 EN.VerifyValue("Display", "Ich bin Button 1 - ganz normal");
-
                 EN.ClickOn("Text_2");
                 EN.VerifyValue("Display", "Ich bin Button 2 - ganz normal");
 
@@ -117,9 +116,9 @@ import org.junit.rules.TestName;
                 EN.BeginTest( name.getMethodName() );
 
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 EN.LogCaption("Text_1");
                 EN.LogCaption("Text_2");
 
@@ -144,9 +143,9 @@ import org.junit.rules.TestName;
 
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 EN.LogExists("Text_1");
 
                 EN.StopApp( ApplicationName );
@@ -169,9 +168,9 @@ import org.junit.rules.TestName;
 
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 EN.LogHasFocus("Text_1");
                 //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogHasFocus", "P");
 
@@ -194,9 +193,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 EN.LogTooltip("Text_1");
 
                 EN.StopApp( ApplicationName );
@@ -212,14 +211,13 @@ import org.junit.rules.TestName;
          * 
          * @author Zoltan Hrabovszki
          */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcLogValue_OKWFrameObjectMethodNotImplemented() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 EN.LogValue("Text_1");
 
                 EN.StopApp( ApplicationName );
@@ -240,9 +238,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 EN.LogIsActive("Text_1");
 
 
@@ -265,9 +263,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
                 EN.MemorizeCaption("Text_1", "SePushButton_MemorizeCaption_1" );
                 assertEquals("Button 1", myMM.get("SePushButton_MemorizeCaption_1"));
@@ -325,9 +323,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 EN.MemorizeExists("Text_1", "SePushButton_MemorizeExists_1");
 
                 assertEquals("YES", myMM.get("SePushButton_MemorizeExists_1"));
@@ -350,9 +348,9 @@ import org.junit.rules.TestName;
         {
                EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 EN.MemorizeHasFocus("Text_1", "SePushButton_MemorizeHasFocus");
 
                 assertEquals("NO", myMM.get("SePushButton_MemorizeHasFocus"));
@@ -375,9 +373,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 EN.MemorizeIsActive("Text_1", "SePushButton_MemorizeIsActive");
 
                 assertEquals("YES", myMM.get("SePushButton_MemorizeIsActive"));
@@ -402,9 +400,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 EN.MemorizeTooltip("Text_1", "SePushButton_MemorizeTooltip_1");
                 EN.MemorizeTooltip("Text_2", "SePushButton_MemorizeTooltip_2");
 
@@ -424,16 +422,18 @@ import org.junit.rules.TestName;
          * 
          * @author Zoltan Hrabovszki
          */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcMemorizeValue_OKWFrameObjectMethodNotImplemented() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
-                EN.MemorizeValue("Text_1", "SePushButton_MemorizeTooltip_1");
+                EN.SelectWindow("Button");
+                EN.MemorizeValue("Text_1", "SeButton_MemorizeTooltip_1");
 
+                EN.TypeKey( "Display", "${SeButton_MemorizeTooltip_1}" );
+                EN.VerifyValue( "Display", "${SeButton_MemorizeTooltip_1}" );
+                
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
         }
@@ -453,9 +453,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 
                 EN.SetFocus("Text_1");
 
@@ -485,9 +485,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
                 EN.SelectMenu("Text_1");
 
@@ -509,9 +509,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
                 EN.SelectMenu("Text_1", "What ever...");
 
@@ -534,9 +534,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
                 EN.SetValue("Text_1", "What ever...");
 
@@ -558,9 +558,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
                 EN.Select("Text_1", "What ever...");
 
@@ -582,9 +582,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 
                 EN.VerifyCaption("Text_1", "Button 1");
                 EN.VerifyCaption("Text_2", "Button 2");
@@ -608,9 +608,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 
                 EN.VerifyCaptionWCM("Text_1", "?utton #");
                 EN.VerifyCaptionWCM("Text_2", "?utton #");
@@ -634,9 +634,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 
                 EN.VerifyCaptionREGX("Text_1", "Button 1");
                 EN.VerifyCaptionREGX("Text_2", "Button 2");
@@ -659,9 +659,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 EN.VerifyExists("Does Not Exists", "NO");
         }
 
@@ -678,9 +678,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
                 EN.VerifyExists("Does Not Exists", "YES");
         }
 
@@ -699,9 +699,9 @@ import org.junit.rules.TestName;
         {
             EN.BeginTest( name.getMethodName() );
             EN.StartApp( ApplicationName );
-            EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+            EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
             
-            EN.SelectWindow("InputButton");
+            EN.SelectWindow("Button");
             EN.VerifyExists("Text_1", "NO");
         }
 
@@ -720,9 +720,9 @@ import org.junit.rules.TestName;
   {
     EN.BeginTest( name.getMethodName() );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputButton/input_type-button.htm" );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/button/button.htm" );
 
-    EN.SelectWindow( "InputButton" );
+    EN.SelectWindow( "Button" );
     EN.VerifyExists( "Text_1", "YES" );
 
     EN.StopApp( ApplicationName );
@@ -745,10 +745,10 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
 
             	// Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
                 EN.VerifyIsActive("Text_1", "YES");
                 
@@ -772,10 +772,10 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
 
                // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
                 EN.VerifyIsActive("Text_1", "NO");
 
@@ -930,9 +930,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
                 EN.VerifyTooltip("Text_1", "Button 1 Tooltip/title");
                 EN.VerifyTooltip("Text_2", "Button 2 Tooltip/title");
@@ -955,9 +955,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
                 EN.VerifyTooltipWCM("Text_1", "?utton # Tooltip/title");
                 EN.VerifyTooltipWCM("Text_2", "?utton # Tooltip/title");
@@ -980,9 +980,9 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
                 EN.VerifyTooltipREGX("Text_1", "Button 1 Tooltip/title");
                 EN.VerifyTooltipREGX("Text_2", "Button 2 Tooltip/title");
@@ -1001,16 +1001,15 @@ import org.junit.rules.TestName;
          * 
          * @author Zoltan Hrabovszki
          */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcVerifyValue_OKWFrameObjectMethodNotImplemented() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
-                EN.VerifyValue("Text_1", "Button 1 Tooltip/title");
+                EN.VerifyValue("Text_1", "Button 1 value");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -1026,16 +1025,15 @@ import org.junit.rules.TestName;
          * 
          * @author Zoltan Hrabovszki
          */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcVerifyValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
-                EN.VerifyValueWCM("Text_1", "?utton # Tooltip/title");
+                EN.VerifyValueWCM("Text_1", "?utton # value");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -1044,23 +1042,22 @@ import org.junit.rules.TestName;
 
         /** \~german
          *
-         * Test des Schlüsselwortes VerifyValueTEGX für den GUI-Adapter SeButton.
+         * Test des Schlüsselwortes VerifyValueREGX für den GUI-Adapter SeButton.
          * 
          * \~
          * @date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcVerifyValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
 
-                EN.SelectWindow("InputButton");
+                EN.SelectWindow("Button");
 
-                EN.VerifyValueREGX("Text_1", "Button 1 Tooltip/title");
+                EN.VerifyValueREGX("Text_1", "Button 1 value");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();

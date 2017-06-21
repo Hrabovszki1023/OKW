@@ -165,7 +165,7 @@ public class SeButton extends SeAnyChildWindow
             this.WaitForMe();
 
             // The Attribute "value" wird als Beschriftung angezeigt...
-            lvLsReturn.add( this.Me().getAttribute( "value" ) );
+            lvLsReturn.add( this.Me().getAttribute( "textContent" ) );
         }
         finally
         {
