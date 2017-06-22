@@ -4,7 +4,12 @@ import okw.log.Logger_Sngltn;
 
 import org.junit.*;
 
-
+/**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
+* @author zoltan
+*/
 public class SeInputCheckbox_Chrome_Test extends SeInputCheckbox_Test
 {
 	@BeforeClass

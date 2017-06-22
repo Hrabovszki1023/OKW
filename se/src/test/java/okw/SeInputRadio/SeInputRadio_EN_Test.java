@@ -48,7 +48,11 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 
-    /** \~german
+     /**
+     * \~
+     * @ingroup groupSeleniumChildGUIAdapterTests
+     * 
+     *\~german
      * \brief
      * Basisklasse für Test des GUI-Adapters SeInputRadio.
      * 

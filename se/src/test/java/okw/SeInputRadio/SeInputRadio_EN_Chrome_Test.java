@@ -5,6 +5,12 @@ import okw.log.Logger_Sngltn;
 import org.junit.After;
 import org.junit.BeforeClass;
 
+/**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
+* @author zoltan
+*/
 public class SeInputRadio_EN_Chrome_Test extends SeInputRadio_EN_Test
 {
 

@@ -10,6 +10,12 @@ import org.junit.*;
 import org.junit.rules.TestName;
 
 
+/**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
+* @author zoltan
+*/
 public class SeInputCheckbox_Test
 {
 	protected String cvsObjektName = "SeCheckBox";

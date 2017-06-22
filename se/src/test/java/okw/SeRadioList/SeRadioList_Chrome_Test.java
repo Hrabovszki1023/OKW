@@ -5,6 +5,12 @@ import okw.log.log2html.Log2HTML;
 
 import org.junit.*;
 
+/**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
+* @author zoltan
+*/
 public class SeRadioList_Chrome_Test extends SeRadioList_Test
 {
   static Log2HTML myLog2HTML = null;

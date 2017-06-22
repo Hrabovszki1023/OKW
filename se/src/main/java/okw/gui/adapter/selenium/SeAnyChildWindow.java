@@ -54,9 +54,16 @@ import org.openqa.selenium.WebElement;
 /**
  * @defgroup groupSeleniumClasses OKW Selenium Klassen
  * 
- * @defgroup groupSeleniumChildGUIAdapter OKW Childwindow GUI-Adapterklasse für Selenium
+ * @defgroup groupSeleniumChildGUIAdapter OKW Childwindow GUI-Adapterklassen
  * @ingroup groupSeleniumClasses
  */
+
+/**
+ * \~
+ * @defgroup groupSeleniumChildGUIAdapterTests JUnit-Testklassen für OKW Childwindow GUI-Adapterklassen
+ * @ingroup groupSeleniumClasses
+ */
+
 
 /**
  * @ingroup groupSeleniumChildGUIAdapter

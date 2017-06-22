@@ -7,6 +7,12 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
+/**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
+* @author zoltan
+*/
 public class SeRadioList_Firefox_Test extends SeRadioList_Test
 {
 	static Log2HTML myLog2HTML = null;

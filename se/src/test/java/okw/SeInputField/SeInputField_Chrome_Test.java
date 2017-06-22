@@ -6,6 +6,12 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
+/**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
+* @author zoltan
+*/
 public class SeInputField_Chrome_Test extends SeInputField_Test
 {
 	// static Log2HTML myLog2HTML = null;

@@ -49,7 +49,7 @@ import okw.gui.adapter.selenium.SeInputText;
 // \~
 // \author Zoltán Hrabovszki
 // \date 2016.09.06
-@OKW( FN = "InputButton not Active" )
+@OKW( FN = "Button not Active" )
 public class FrmButtonNotActiv extends SeBrowserChild
 {
     // \~german

@@ -46,6 +46,12 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import org.junit.rules.TestName;
 
+/**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
+* @author zoltan
+*/
 @Ignore
 public class SeInputField_Test {
 

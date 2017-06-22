@@ -5,6 +5,12 @@ import okw.log.log2html.Log2HTML;
 
 import org.junit.*;
 
+/**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
+* @author zoltan
+*/
 public class SeInputCheckbox_Firefox_Test extends SeInputCheckbox_Test
 {
 

@@ -10,6 +10,9 @@ import org.junit.rules.TestName;
 
 
 /**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
  *  \~german
  *  Base-Class enthält Testfälle für die Prüfung der Klasse okw.gui.adapter.selenium.SeRadioList
  *

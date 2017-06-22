@@ -7,6 +7,13 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
+
+/**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
+* @author zoltan
+*/
 public class SeButton_Chrome_Test extends SeButton_Test
 {
     private static Log2HTML myLog2HTML = null;

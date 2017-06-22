@@ -5,6 +5,12 @@ import okw.log.Logger_Sngltn;
 import org.junit.After;
 import org.junit.BeforeClass;
 
+/**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
+* @author zoltan
+*/
 public class SeSelect_Chrome_Test extends SeSelect_Test
 {
 

@@ -47,7 +47,11 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 
-    /** \~german
+    /**
+     * \~
+     * @ingroup groupSeleniumChildGUIAdapterTests
+     * 
+     * \~german
      * Basisklasse für Tests des GUI-Adapters SeButton.
      * 
      * - okw.SeButton.SeButton_Chrome_Test, 
@@ -293,7 +297,7 @@ import org.junit.rules.TestName;
 
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
                 
                 EN.SelectWindow("InputButton not Active");
 
@@ -798,7 +802,7 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
                 EN.SelectWindow("InputButton not Active");
@@ -824,7 +828,7 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
                 EN.SelectWindow("InputButton not Active");
@@ -850,7 +854,7 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
                 EN.SelectWindow("InputButton not Active");
@@ -877,7 +881,7 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
                 EN.SelectWindow("InputButton not Active");
@@ -904,7 +908,7 @@ import org.junit.rules.TestName;
         {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
-                EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
+                EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
                 EN.SelectWindow("InputButton not Active");

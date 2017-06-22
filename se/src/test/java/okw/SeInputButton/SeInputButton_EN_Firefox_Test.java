@@ -5,6 +5,12 @@ import okw.log.Logger_Sngltn;
 import org.junit.After;
 import org.junit.BeforeClass;
 
+/**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
+* @author zoltan
+*/
 public class SeInputButton_EN_Firefox_Test extends SeInputButton_EN_Test
 {
 	@BeforeClass

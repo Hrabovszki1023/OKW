@@ -1,7 +1,7 @@
 package okw.SeInputButton;
 /*
 ==============================================================================
-Copyright © 2012, 2013, 2014, 2015, 2016 IT-Beratung Hrabovszki
+Copyright © 2012 - 2017 IT-Beratung Hrabovszki
 ============================================================================== 
 
 This file is part of OpenKeyWord.
@@ -47,14 +47,20 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 
-    // \~german
-    // \brief
-    // Basisklasse für Test des GUI-Adapters SeInputButton.
-    // 
-    // SeInputButton_Chrome_Test, SeInputButton_FireFox_Test usw. werden von diese Klasse abgeleitet.
-    // \~
-    // \author Zoltán Hrabovszki
-    // \date 2015.02.28
+     /**
+     * \~
+     * @ingroup groupSeleniumChildGUIAdapterTests
+     * \~german
+     * Basisklasse für Test des GUI-Adapters SeInputButton.
+     * 
+     * SeInputButton_Chrome_Test, SeInputButton_FireFox_Test usw. werden von diese Klasse abgeleitet.
+     * \~
+     * \author Zoltán Hrabovszki
+     * \date 2015.02.28
+     * 
+     * @author zoltan
+     *
+     */
     @Ignore("Ignoring the whole fixture")
     public class SeInputButton_EN_Test
     {

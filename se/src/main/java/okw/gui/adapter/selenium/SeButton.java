@@ -41,7 +41,6 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 
-import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.gui.OKWLocator;
 
 /**

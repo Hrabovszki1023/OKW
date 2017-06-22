@@ -6,6 +6,12 @@ import okw.log.log2html.Log2HTML;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
+/**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
+* @author zoltan
+*/
 public class SeInputButton_HTMLUnitDriver_Test extends SeInputButton_EN_Test
 {
 	static Log2HTML myLog2HTML = null;
