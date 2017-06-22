@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"interfaceokw_1_1core_1_1_i_o_k_w___state.html#a1490b97398a9c1f4da2a45ea683135d6":[9,0,0,1,23,55],
 "interfaceokw_1_1core_1_1_i_o_k_w___state.html#a210b00e532545680e8859179c41e1888":[9,0,0,1,23,43],
 "interfaceokw_1_1core_1_1_i_o_k_w___state.html#a254dfe876591f4cfeba173149e131ee4":[9,0,0,1,23,5],
 "interfaceokw_1_1core_1_1_i_o_k_w___state.html#a2a40e1cd33ca5c30f57c15e655cc1fc0":[9,0,0,1,23,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX12 =
 "ref_tutorial01.html#refTutorial01_Ein_Neues_Maven_Projekt_Anlegen":[3,0,2,1],
 "ref_tutorial01.html#refTutorial01_JUnit":[3,0,2,2,2],
 "ref_tutorial01.html#refTutorial01_Java_8_Einstellen":[3,0,2,2,0],
-"ref_tutorial01.html#refTutorial01_OKW_Dependency_Eingeben":[3,0,2,2,1],
-"ref_tutorial01.html#refTutorial01_OKW_Testprojekt_Anlegen":[3,0,2]
+"ref_tutorial01.html#refTutorial01_OKW_Dependency_Eingeben":[3,0,2,2,1]
 };

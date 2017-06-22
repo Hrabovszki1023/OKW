@@ -68,7 +68,7 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node3 -->
 <g id="node2" class="node"><title>Node3</title>
-<a xlink:href="classokw_1_1_se_input_button_1_1_se_input_button___e_n___test.html" target="_top" xlink:title="{okw.SeInputButton.SeInput\lButton_EN_Test\n|# ApplicationName\l|+ tc_ClickOn()\l+ tc_LogCaption()\l+ tc_LogExists()\l+ tc_LogHasFocus()\l+ tc_LogToolTip()\l+ tc_LogValue_OKWFrameObject\lMethodNotImplemented()\l+ tc_LogIsActive()\l+ tc_MemorizeCaption()\l+ tc_MemorizeLabel()\l+ tc_MemorizeExists()\l+ tc_MemorizeHasFocus()\l+ tc_MemorizeIsActive()\l+ tc_MemorizeTooltip()\l+ tc_MemorizeValue_OKWFrame\lObjectMethodNotImplemented()\l+ tc_SetFocus_VerifyHasFocus()\l+ tc_SelectMenu_OKWFrameObject\lMethodNotImplemented()\l+ tc_SelectMenu2_OKWFrameObject\lMethodNotImplemented()\l+ tc_SetValue_OKWFrameObject\lMethodNotImplemented()\l+ tc_Select_OKWFrameObject\lMethodNotImplemented()\l+ tc_VerifyCaption()\lund 19 mehr ...\l}">
+<a xlink:href="classokw_1_1_se_input_button_1_1_se_input_button___e_n___test.html" target="_top" xlink:title="Basisklasse für Test des GUI&#45;Adapters SeInputButton. ">
 <polygon fill="white" stroke="black" points="237,-129 237,-543 419,-543 419,-129 237,-129"/>
 <text text-anchor="start" x="245" y="-530" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputButton.SeInput</text>
 <text text-anchor="middle" x="328" y="-517" font-family="Helvetica,sans-Serif" font-size="10.00">Button_EN_Test</text>
