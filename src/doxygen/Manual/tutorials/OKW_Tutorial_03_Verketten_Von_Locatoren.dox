@@ -1,5 +1,7 @@
 /*!
 
+\~german
+
 @page refTutorial04 OKW Tutorial: Verketten von Locatoren
 
 @section refTutorial04_A Wozu die Verkettung von Lokatoren?
@@ -7,7 +9,9 @@
 Eine Verkettung von Locatoren kann notwendig werden, wenn ein Kind-Objekt nur zusammen mit seinem Eltern-Objekt eindeutig erkannt werden kann.  
 
 So kann ein Eingabefeld wie `User`, aus dem Beispiel in Tutorial 3 @ref refTutorial03, in mehreren Fenstern vorkommen.
-Erst in Verbindung mit dem Locator des Eltern-Objektes (=Fenster) kann eine Verwechselung der Kind-Objekt ausgeschlossen werden.
+Erst in Verbindung mit dem Locator des Eltern-Objektes (=Fenster) kann eine Verwechselung des Kind-Objeks ausgeschlossen werden.
+
+
 
 @section refTutorial04_DRY DRY
 
@@ -19,9 +23,9 @@ Eine Anpassung kann sehr aufwendig werden und der Umstand, dass sich ein Fehler 
 
 Dem DRY-Prinzip gemäß, liegt eine mögliche Lösung in der Verkettung von Locatoren. - Das wird nun hier in diesem Tutorial gezeigt.
 
-@section refTutorial04_C Verkettung von Eltern-Objekt Locator und Kind-Objekt Locator
+@section refTutorial04_C Verkettung von Eltern- und Kind-Objekt Locatoren
 
-Wir nehmen das Beispiel aus dem [[OKW Tutorial 3: Der Locator|OKW-Tutorial-3:--Der-Locator]] und verketten die Locatoren von _Eltern-Objekt_ und _Kind-Objekt_.
+Wir nehmen das Beispiel aus dem [[OKW Tutorial 3: Der Locator|OKW-Tutorial-3:--Der-Locator]] und verketten die Locatoren von _Eltern-_ und _Kind-Objekt_.
 
 @subsection refTutorial04_C_A Ziel
 
@@ -34,7 +38,7 @@ Das Ziel ist hier, dass der Locator des Eltern-Objektes `wp_login` dem der Locat
 
 @subsection refTutorial04_C_B Die Methoden `getLOCATOR()` und `getLocator()`
 
-Zunächst müssen wir zwei Methoden kennen lernen:
+Zunächst müssen wir zwei Methoden kennenlernen:
 
 1. Die Methode `getLOCATOR()` holt die Referenz auf den Locator werden.<br>
    **Hinweis:** Jede GUI-Adapter Klasse im Paket "se" besitzt ein Field vom Typ `OKWLocator`.
