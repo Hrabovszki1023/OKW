@@ -36,7 +36,7 @@ var ref_tutorials =
     [ "OKW Tutorial: Verketten von Locatoren", "ref_tutorial04.html", [
       [ "Wozu die Verkettung von Lokatoren?", "ref_tutorial04.html#refTutorial04_A", null ],
       [ "DRY", "ref_tutorial04.html#refTutorial04_DRY", null ],
-      [ "Verkettung von Eltern-Objekt Locator und Kind-Objekt Locator", "ref_tutorial04.html#refTutorial04_C", [
+      [ "Verkettung von Eltern- und Kind-Objekt Locatoren", "ref_tutorial04.html#refTutorial04_C", [
         [ "Ziel", "ref_tutorial04.html#refTutorial04_C_A", null ],
         [ "Die Methoden `getLOCATOR()` und `getLocator()`", "ref_tutorial04.html#refTutorial04_C_B", null ],
         [ "Der Locator des Eltern_Objectes", "ref_tutorial04.html#refTutorial04_C_C", null ],
