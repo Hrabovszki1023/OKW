@@ -1,8 +1,8 @@
 /*
     ==============================================================================
-      Author: Zoltan Hrabovszki <zh@openkeyword.de>
+      Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015, 2016 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017, 2016 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 

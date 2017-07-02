@@ -10,9 +10,9 @@ import okw.gui.OKWLocator;
 
 /*
     ==============================================================================
-      Author: Zoltan Hrabovszki <zh@openkeyword.de>
+      Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -46,161 +46,241 @@ import okw.gui.OKWLocator;
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
-    
-    /** 
-     * @ingroup groupSeleniumChildGUIAdapter
-     * 
-     *  SeListBox ist ein Selenium GUI-Objekt.
-     *  Erbt von SeAnyChildWindow
-     */ 
-    public class SeSelect extends SeAnyChildWindow
+
+
+/**
+ * \~
+ * @ingroup groupSeleniumChildGUIAdapter 
+ * 
+ * \~german
+ *  Diese Klasse representiert einen <select>-tag, der mit Selenium angsteuert wird.
+ *  
+ *  @startuml
+ *  class SeSelect [[java:okw.gui.adapter.selenium.SeSelect]] {
+ *   ..Constructor..
+ *  +SeSelect(String Locator, OKWLocator[] Locators)
+ *   .. Keyword API..
+ *   +void Select(ArrayList<String> fps_Values)
+ *   +void SetValue(ArrayList<String> fpsValues)
+ *   +ArrayList<String> getValue()
+ * }
+ * class SeAnyChildWindow [[java:okw.gui.adapter.selenium.SeAnyChildWindow]] {
+ * }
+ * SeAnyChildWindow <|-- SeSelect
+ * @enduml
+ * 
+ *  # Unterstützter Tag
+ *  Folgender HTML-Tag wird unterstützt:
+ *  
+ *  \code{.html}
+ *  <label for="ID_Select">Button Label:</label>
+ *  <select name="Select" title="Select title" size="3">
+ *     <option>First Value</option>
+ *     <option>Second Value</option>
+ *     <option>Third Value</option>
+ *     <option>Forth Value</option>
+ *     <option>Fifth Value</option>
+ *  </select>
+ *  \endcode
+ * 
+ * # Unterstützte GUI-Schlüsselwörter
+ *
+ * ## Kindobjekt Aktionen
+ * 
+ * | OpenKeyWord               | Implementiert | Beschreibung |
+ * | ------------------------- | :-----------: | :----------- |
+ * | `ClickOn( FN )`           | **JA**        |  |
+ * | `DoubleClickOn( FN )`     | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented | 
+ * | `SetFocus( FN )`          | **JA**        |  |
+ * | `SetValue( FN, Val )`     | **JA**        | Entspricht Select( FN, Val ) |
+ * | `Select( FN, Val )`       | **JA**        | Select( "FN Select", "First Value${SEP}Third Value${SEP}Fifth Value" ) |
+ * | `SelectMenu( FN )`        | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
+ * | `SelectMenu( FN, Val )`   | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
+ * | `TypeKey( FN, Val )`      | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
+ * 
+ * ## Fensterbezogene Schlüsselwörter
+ * 
+ * | OpenKeyWord               | Implementiert | Beschreibung |
+ * | ------------------------- | :-----------: | :----------- |
+ * | `StarApp( AN )`           | **NEIN**      | Kind-Objekt, SeSelect ist kein Fensterobjekt |
+ * | `StopApp( AN )`           | **NEIN**      | Kind-Objekt, SeSelect ist kein Fensterobjekt |
+ * | `SelectWindow( FN )`      | **NEIN**      | Kind-Objekt, SeSelect ist kein Fensterobjekt |
+ * | `Sequence( FN, SQN, SEQ_ID )` | **NEIN**  | Kind-Objekt, SeSelect ist kein Fensterobjekt |
+ * 
+ * ## Verifying, Memorizing, Logging Values
+ * 
+ * Group of keywords using the same GUI-Adapter Methods get*() <br/>
+ * (e.g.: `VerifyExists( FN, ExpVal)`, `MemorizeExists( FN, MemKey)`,`LogExists( FN )` -> `getExists()` )
+ * 
+ * | OpenKeyWord | Implementiert | Beschreibung |
+ * | ----------- | :-----------: | :----------- |
+ * | `VerifyExists( FN, ExpVal)`,    <br>`MemorizeExists( FN, MemKey)`,    <br>`LogExists( FN )`   | **JA** |  |
+ * | `VerifyHasFocus( FN, ExpVal )`, <br>`MemorizeHasFocus( FN, MemKey)`,  <br>`LogHasFocus( FN )` | **JA** |  |
+ * | `VerifyIsActive( FN, ExpVal )`, <br>`MemorizeIsActive( FN, MemKey)`,  <br>`LogIsActive( FN )` | **JA** |  |
+ * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **NEIN** | Was ist die Caption |
+ * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )`     | **JA** |  |
+ * | `VerifyTooltip( FN, ExpVal )`,  <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **JA** | Als Tooltip wird das Attribute `title` verwendet.  Im Beispiel: `Select title` |
+ * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )`     | **JA** | Ausgewählte Wert |
+ * 
+ *  # Siehe auch:
+ *  - okw.gui.adapter.selenium.SeButton - für button-tags 
+ *  
+ *  # Quellen/Links
+ *  
+ *  - [SelfHTML: HTML/Formulare/Auswahllisten](https://wiki.selfhtml.org/wiki/HTML/Formulare/Auswahllisten)
+ *  - [SelfHTML: Referenz:HTML/select](https://wiki.selfhtml.org/wiki/Referenz:HTML/select)
+ *  - [Issue #106](https://github.com/Hrabovszki1023/OKW/issues/110)
+ *  
+ *  \~english
+ *  
+ *  \~
+ * @author Zoltán Hrabovszki
+ * @date 2016.09.05
+ */
+public class SeSelect extends SeAnyChildWindow
+{
+
+    /**
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+     *  
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.04.18
+     */
+    public SeSelect( String Locator, OKWLocator... Locators )
     {
+        super( Locator, Locators );
+    }
 
-      /**
-       *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
-       *  
-       *  @author Zoltán Hrabovszki
-       *  @date 2013.04.18
-       */
-        public SeSelect(String Locator, OKWLocator... Locators)
+    /** \~german
+     *  Methode wählt einen oder mehrere Werte in einer ListBox aus.
+     *  
+     *  Die Methode Select löscht bereits ausgewählte _nicht_.
+     *  
+     *  @param fps_Values Ein oder mehrere Werte, die ausgewählt werden sollen.
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2013.04.11
+     */
+    @Override
+    public void Select( ArrayList<String> fps_Values )
+    {
+        this.LogFunctionStartDebug( "Select", "fps_Values", fps_Values.toString() );
+
+        try
         {
-        	super(Locator, Locators);
-        }
-        
-        /** \~german
-         *  Methode wählt einen oder mehrere Werte in einer ListBox aus.
-         *  
-         *  Die Methode Select löscht bereits ausgewählte _nicht_.
-         *  
-         *  @param fps_Values Ein oder mehrere Werte, die ausgewählt werden sollen.
-         *  @author Zoltan Hrabovszki
-         * @throws Exception 
-         *  @date 2013.04.11
-         */
-        @Override
-        public void Select(ArrayList<String> fps_Values)
-        {
-            this.LogFunctionStartDebug("Select", "fps_Values", fps_Values.toString());
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
 
-            try
+            //org.openqa.selenium.support.ui.Select
+            Select SelectList = new Select( this.Me() );
+
+            for ( String lvsValue : fps_Values )
             {
-                // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-                this.WaitForMe();
-                
-                //org.openqa.selenium.support.ui.Select
-                Select SelectList = new Select(this.Me());
-                
-                for (String lvsValue : fps_Values )
-                {
-                  if(lvsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("DELETE") ))
-                  {
-                    SelectList.deselectAll();
-                  }
-                  else
-                  {
-                    SelectList.selectByVisibleText(lvsValue);
-                  }
-                }
-            }
-            finally
-            {
-                this.LogFunctionEndDebug();
-            }
-        }
-
-        
-        /** \~german
-         *  Methode setzt einen oder mehrere Werte in einer ListBox.
-         *  
-         *  Die Methode löscht zunächst  alle ausgewählten Werte in der Liste, wenn eine Mehrfachauswahl möglich ist
-         *  ( Attribut _multiple_ ist gestzt.
-         *  
-         *  Danach werden die gegebenen Werte ausgewählt.
-         *  
-         *  Unterschied zu Select: Nach SetValue sind nur die gegebenen Werte ausgewählt.
-         *  (Select wählt bereits ausgewählte werde einer Listbox nicht ab sonder ergeänzt diese um die gegebenen Werte.)
-         *  
-         *  @param fpsValues Werte, die in der Listbox ausgwählt werden sollen.
-         *  \~
-         *  @author Zoltan Hrabovszki
-         * @throws Exception 
-         *  @date 2013.04.11
-         */
-        @Override
-        public void SetValue( ArrayList<String> fpsValues)
-        {
-            this.LogFunctionStartDebug("SetValue", "fpsValues", fpsValues.toString());
-
-            try
-            {
-              // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-              this.WaitForMe();
-
-                Select SelectList = new Select(this.Me());
-                
-                // Zunächst alle ausgwählten Werte der Listbox löschen, wenn eine mehrfachauswahl möglich ist...
-                if (SelectList.isMultiple())
+                if ( lvsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
                 {
                     SelectList.deselectAll();
                 }
                 else
                 {
-                    if (fpsValues.size() > 1)
-                        MyLogger.LogError( "ListBox erlaub keine Mehrfachauswahl." );
-                    // \todo TODO: Text in XML auslagern.
-                    // \todo TODO: Exception für NichtErlaubte Mehrfachauswahl setzen.
-                    
+                    SelectList.selectByVisibleText( lvsValue );
                 }
-
-                // Danach die gegebene Werte auswählen
-                for (String lvsValue : fpsValues )
-                {
-                    SelectList.selectByVisibleText(lvsValue);
-                }
-            }
-            finally
-            {
-                this.LogFunctionEndDebug();
             }
         }
-
-
-        /** \~german
-         *  Holt die aktuell _ausgewählten_ Werte aus der ListBox.
-         *  
-         *  Die ausgewählten Werte werden in der Reihenfolge _oben nach unten_ inder Rückgabe-Liste abgelegt.
-         *  Sind keine Werte ausgewählt, dann ist die Rückgabe-Liste leer.
-         *  leer und List.Count = 0.
-         *  @return Liste der ausgewählten Werte\return
-         *  \~
-         *  @author Zoltan Hrabovszki
-         * @throws Exception 
-         *  @date 2014.12.04
-         */
-        @Override
-        public ArrayList<String> getValue()
+        finally
         {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-            
-            try
-            {
-                this.LogFunctionStartDebug("GetValue");
-
-                // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-                this.WaitForMe();
-
-                Select SelectList = new Select(this.Me());
-                
-                for (WebElement Option : SelectList.getAllSelectedOptions() )
-                {
-                    lvLsReturn.add( Option.getAttribute("textContent") );
-                }
-            }
-            finally
-            {
-                this.LogFunctionEndDebug(lvLsReturn);
-            }
-            
-            return lvLsReturn;
+            this.LogFunctionEndDebug();
         }
+    }
+
+    /** \~german
+     *  Methode setzt einen oder mehrere Werte in einer ListBox.
+     *  
+     *  Die Methode löscht zunächst  alle ausgewählten Werte in der Liste, wenn eine Mehrfachauswahl möglich ist
+     *  ( Attribut _multiple_ ist gestzt.
+     *  
+     *  Danach werden die gegebenen Werte ausgewählt.
+     *  
+     *  Unterschied zu Select: Nach SetValue sind nur die gegebenen Werte ausgewählt.
+     *  (Select wählt bereits ausgewählte werde einer Listbox nicht ab sonder ergeänzt diese um die gegebenen Werte.)
+     *  
+     *  @param fpsValues Werte, die in der Listbox ausgwählt werden sollen.
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2013.04.11
+     */
+    @Override
+    public void SetValue( ArrayList<String> fpsValues )
+    {
+        this.LogFunctionStartDebug( "SetValue", "fpsValues", fpsValues.toString() );
+
+        try
+        {
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
+
+            Select SelectList = new Select( this.Me() );
+
+            // Zunächst alle ausgwählten Werte der Listbox löschen, wenn eine mehrfachauswahl möglich ist...
+            if ( SelectList.isMultiple() )
+            {
+                SelectList.deselectAll();
+            }
+            else
+            {
+                if ( fpsValues.size() > 1 )
+                    MyLogger.LogError( "ListBox erlaub keine Mehrfachauswahl." );
+                // \todo TODO: Text in XML auslagern.
+                // \todo TODO: Exception für NichtErlaubte Mehrfachauswahl setzen.
+
+            }
+
+            // Danach die gegebene Werte auswählen
+            for ( String lvsValue : fpsValues )
+            {
+                SelectList.selectByVisibleText( lvsValue );
+            }
+        }
+        finally
+        {
+            this.LogFunctionEndDebug();
+        }
+    }
+
+    /** \~german
+     *  Holt die aktuell _ausgewählten_ Werte aus der ListBox.
+     *  
+     *  Die ausgewählten Werte werden in der Reihenfolge _oben nach unten_ inder Rückgabe-Liste abgelegt.
+     *  Sind keine Werte ausgewählt, dann ist die Rückgabe-Liste leer.
+     *  leer und List.Count = 0.
+     *  @return Liste der ausgewählten Werte\return
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2014.12.04
+     */
+    @Override
+    public ArrayList<String> getValue()
+    {
+        ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+        try
+        {
+            this.LogFunctionStartDebug( "GetValue" );
+
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
+
+            Select SelectList = new Select( this.Me() );
+
+            for ( WebElement Option : SelectList.getAllSelectedOptions() )
+            {
+                lvLsReturn.add( Option.getAttribute( "textContent" ) );
+            }
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvLsReturn );
+        }
+
+        return lvLsReturn;
+    }
 }

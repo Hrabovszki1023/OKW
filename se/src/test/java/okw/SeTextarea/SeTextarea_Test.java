@@ -2,7 +2,7 @@ package okw.SeTextarea;
 
 /*
  ==============================================================================
- Copyright © 2012, 2013, 2014, 2015, 2016 IT-Beratung Hrabovszki
+ Copyright © 2012 - 2017, 2016 IT-Beratung Hrabovszki
  ============================================================================== 
 
  This file is part of OpenKeyWord.

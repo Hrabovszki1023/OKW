@@ -9,6 +9,76 @@
 	<link type="text/css" rel="stylesheet" href="./print.css" media="print" />
 	<title>OpenKeyWord CheatSheet</title>
 </head>
+<!--
+#GUI-Keywords
+
+## Testcase Handling
+
+* `BeginTest( TCN )` - [[More...|BeginTest( TCN )]]
+* `EndTest()` - [[More...|EndTest( )]]
+
+## Application Handling 
+
+* `StartApp( AN )` - [[More...|StartApp( AN )]]
+* `StopApp( AN )` - [[More...|StopApp( AN )]]
+
+## User Activities
+
+* `ClickOn( FN )` - [[More...|ClickOn( FN )]]
+* `DoubleClickOn( FN )` - [[More...|DoubleClickOn( FN )]]
+* `SetFocus( FN )` - [[More...|SetFocus( FN )]]
+* `SetValue( FN, Val )` - [[More...|SetValue( FN, Val )]]
+* `Select( FN, Val )` - [[More...|Select( FN, Val )]]
+* `SelectMenu( FN )` - [[More...|SelectMenu( FN )]]
+* `SelectMenu( FN, Val )` - [[More...|SelectMenu( FN, Val )]]
+* `TypeKey( FN, Val )` - [[More...|TypeKey( FN, Val )]]
+
+## Sequence
+
+* `Sequence( FN, SQN, SEQ_ID )` - [[More...|Sequence( FN, SQN, SEQ_ID )]]
+
+## Window Specific Keywords
+
+* `SelectWindow( FN )` - [[More...|SelectWindow( FN )]]
+
+
+## Verifying
+
+* `VerifyExists( FN, ExpVal)` - [[More...|VerifyExists( FN, ExpVal)]]
+* `VerifyHasFocus( FN, ExpVal )` - [[More...|VerifyHasFocus( FN, ExpVal )]]
+* `VerifyIsActive( FN, ExpVal )` - [[More...|VerifyIsActive( FN, ExpVal )]]
+
+### VerifyCaption
+
+* `VerifyCaption( FN, ExpVal )` use for exact match. [[More...|VerifyCaption( FN, ExpVal )]]
+* `VerifyCaptionWCM( FN, ExpVal )` -> Wildcard match (`?` `*` `#`). [[More...|VerifyCaptionWCM( FN, ExpVal )]]
+* `VerifyCaptionREGX( FN, ExpVal )` -> Regular-expression match. [[More...|VerifyCaptionREGX( FN, ExpVal )]]
+
+### VerifyLabel
+
+* `VerifyLabel( FN, ExpVal )` use for exact match. [[More...|VerifyLabel( FN, ExpVal )]]
+* `VerifyLabelWCM( FN, ExpVal )` -> Wildcard match (`?` `*` `#`). [[More...|VerifyLabelWCM( FN, ExpVal )]]
+* `VerifyLabelREGX( FN, ExpVal )` -> Regular-expression match. [[More...|VerifyLabelREGX( FN, ExpVal )]]
+
+
+### VerifyTooltip
+
+* `VerifyTooltip( FN, ExpVal )` use for exact match. [[More...|VerifyTooltip( FN, ExpVal )]]
+* `VerifyTooltipWCM( FN, ExpVal )` -> Wildcard match (`?` `*` `#`). [[More...|VerifyTooltipWCM( FN, ExpVal )]]
+* `VerifyTooltipREGX( FN, ExpVal )` -> Regular-expression match. [[More...|VerifyTooltipREGX( FN, ExpVal )]]
+
+
+### VerifyValue
+
+* `VerifyValue( FN, ExpVal )` use for exact match. [[More...|VerifyValue( FN, ExpVal )]]
+* `VerifyValueWCM( FN, ExpVal )` -> Wildcard match (`?` `*` `#`). [[More...|VerifyValueWCM( FN, ExpVal )]]
+* `VerifyValueREGX( FN, ExpVal )` -> Regular-expression match. [[More...|VerifyValueREGX( FN, ExpVal )]]
+
+## Memorize Values
+
+* `MemorizeValue( FN, MemKey )` use for exact match. [[More...|MemorizeValue( FN, MemKey )]]
+ -->
+ 
 <body>
 	<header>
 		<h1>OKWCS - OpenKeyWord CheatSheet</h1>
@@ -17,32 +87,57 @@
 	<section>
 		<section>
 			<article>
-				<h2>Syntax</h2>
-				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables">var</a> = <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Values_and_Data_Types">value</a>;</code>
+				<h2>Testfall-Schlüsselwörter</h2>
+				<dl>
+					<dt><code><a href="https://hrabovszki1023.github.io/OKW/html/ref_l_o_keywords.html#refBeginTest">BeginTest( TCN )</a></code></dt>
+					<dd>Steht als erstes in einem Testfalls. Im Fehlerfall wird mit diesem Schlüsselwort OKW-Framework zurückgesetzt.</dd>
+					
+					<dt><code><a href="https://hrabovszki1023.github.io/OKW/html/ref_l_o_keywords.html#refEndTest">EndTest( )</a></code></dt>
+					<dd>XXX.</dd>
+				</dl>
+			</article>
+			
+			<article>
+				<h2>Application Handling</h2>
+				<dl>
+					<dt><code><a href="https://hrabovszki1023.github.io/OKW/html/ref_l_o_keywords.html#refStartApp">StartApp( AN )</a></code></dt>
+					<dd> Start the application with the geven Application Name AN.</dd>
+					
+					<dt><code><a href="https://hrabovszki1023.github.io/OKW/html/ref_l_o_keywords.html#refStopApp">StopApp( AN )</a></code></dt>
+					<dd> Stop the application with the geven Application Name AN.</dd>
+				</dl>
+			</article>
+
+			<article>
+				<h2>Childobject User Activities</h2>
+				<dl>
+				<dt><code><a href="https://hrabovszki1023.github.io/OKW/html/ref_click_on">ClickOn( FN )</a></code></dt>
+				<dd> Single click on a GUI Object</dd>
+				<dt><code><a href="https://hrabovszki1023.github.io/OKW/html/ref_double_click_on">DoubleClickOn( FN )</a></code></dt>
+				<dd> Double click on a GUI Object</dd>
+				<dt><code><a href="https://hrabovszki1023.github.io/OKW/html/ref_l_o_keywords.html#refSetFocus">SetFocus( FN )</a></code></dt>
+				<dd> XXX</dd>
+				<dt><code><a href="https://hrabovszki1023.github.io/OKW/html/ref_l_o_keywords.html#refSetValue">SetValue( FN, Val )</a></code></dt>
+				<dd> Sets the value of a GUI object the given Val</dd>
+				<dt><code><a href="https://hrabovszki1023.github.io/OKW/html/ref_l_o_keywords.html#refSelect">Select( FN, Val )</a></code></dt>
+				<dd> XXX</dd>
+				<dt><code><a href="https://hrabovszki1023.github.io/OKW/html/ref_l_o_keywords.html#refSelectMenu">SelectMenu( FN )</a></code></dt>
+				<dd> XXX</dd>
+				<dt><code><a href="https://hrabovszki1023.github.io/OKW/html/ref_l_o_keywords.html#refSelectMenu2">SelectMenu( FN, Val )</a></code></dt>
+				<dd> XXX</dd>
+				<dt><code><a href="https://hrabovszki1023.github.io/OKW/html/ref_l_o_keywords.html#refTypeKey">TypeKey( FN, Val )</a></code></dt>
+				<dd> XXX</dd>
+				</dl>
 			</article>
 			<article>
-				<h2>GUI childobject actions</h2>
-				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#circle">circle</a>(radius | d=diameter)</code>
-			</article>
-			<article>
-				<h2>GUI childobject verifying</h2>
+				<h2>GUI childobject Verification</h2>
 				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#sphere">sphere</a>(radius | d=diameter)</code>
 			</article>
 		</section>
-
-
             
-		<section>
+        <section>
 			<article>
-                                <h2>List Comprehensions</h2>
-                                <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#for">Generate</a> [ for (i = <i>range</i>|<i>list</i>) i ]</code>
-				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#if">Conditions</a> [ for (i = &hellip;) if (condition(i)) i ] </code>
-				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#let">Assignments</a> [ for (i = &hellip;) let (assignments) a ] </code>
-                        </article>
-                </section>
-                <section>
-			<article>
-				<h2>Special variables</h2>
+				<h2>Konstanten und Variables</h2>
 				<dl>
 					<dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24fa.2C_.24fs_and_.24fn">$fa</a></code></dt>
 					<dd>minimum angle</dd>
@@ -72,7 +167,7 @@
 					<a href="http://www.openkeyword.de/" target="_blank">Official website</a>
 					| <a href="https://github.com/Hrabovszki1023/OKW" target="_blank">Code</a>
                     | <a href="https://github.com/Hrabovszki1023/OKW/issues" target="_blank">Issues</a>
-					| <a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual" target="_blank">Manual</a>
+					| <a href="https://hrabovszki1023.github.io/OKW/html" target="_blank">Manual</a>
 					| <a href="https://travis-ci.org/Hrabovszki1023/OKW" target="_blank">OKW on Travis.org</a>
                     | <a href="https://www.codacy.com/app/Hrabovszki1023/OKW/dashboard" target="_blank">Codacy</a>
 			</article>

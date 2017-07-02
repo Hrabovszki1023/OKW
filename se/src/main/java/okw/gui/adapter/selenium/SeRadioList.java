@@ -1,8 +1,8 @@
 /*
     ==============================================================================
-      Author: Zoltan Hrabovszki <zh@openkeyword.de>
+      Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -58,10 +58,98 @@ import okw.gui.OKWLocator;
 
 
 /**
+ * \~
  * @ingroup groupSeleniumChildGUIAdapter 
+ * 
+ * \~german
+ *  Diese Klasse representiert einen <select>-tag, der mit Selenium angsteuert wird.
+ *  
+ * @startuml
+ * class SeRadioList [[java:okw.gui.adapter.selenium.SeRadioList]] {
+ *     ~OKW_CurrentObject_Sngltn CO
+ *     ~FrameObjectDictionary_Sngltn FOD
+ *     ~ArrayList<String> myRadioButtonFNs
+ *   ..Constructor..
+ *     +SeRadioList(String Locator, OKWLocator[] Locators)
+ *     +SeRadioList(String IframeID, String Locator, OKWLocator[] Locators)
+ *   .. Getter/Setter..
+ *     +ArrayList<String> getValue()
+ *     +ArrayList<String> getLabel()
+ *   .. Keyword API..
+ *     +void SetValue(ArrayList<String> Val)
+ *     +void Select(ArrayList<String> Val)
+ * }
+ * class SeAnyChildWindow [[java:okw.gui.adapter.selenium.SeAnyChildWindow]] {
+ * }
+ * SeAnyChildWindow <|-- SeRadioList
+ * @enduml
+ *  # Unterstützter Tag
+ *  Folgender HTML-Tag wird unterstützt:
+ *  
+ *  \code{.html}
+ *  <fieldset>
+ *    <input type="radio" id="mc" name="Paymethode" value="Mastercard">
+ *    <label for="mc"> Mastercard</label><br> 
+ *    <input type="radio" id="vi" name="Paymethode" value="Visa">
+ *    <label for="vi"> Visa</label><br> 
+ *    <input type="radio" id="ae" name="Paymethode" value="AmericanExpress">
+ *    <label for="ae"> American Express</label> 
+ *  </fieldset>
+ *  \endcode
+ * 
+ * # Unterstützte GUI-Schlüsselwörter
  *
- * \brief
- *  TODO: Description of SeRadioList.
+ * ## Kindobjekt Aktionen
+ * 
+ * | OpenKeyWord               | Implementiert | Beschreibung |
+ * | ------------------------- | :-----------: | :----------- |
+ * | `ClickOn( FN )`           | **NEIN**        | -> throw OKWFrameObjectMethodNotImplemented |
+ * | `DoubleClickOn( FN )`     | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented | 
+ * | `SetFocus( FN )`          | **NEIN**        | -> throw OKWFrameObjectMethodNotImplemented |
+ * | `SetValue( FN, Val )`     | **JA**        | Entspricht Select( FN, Val ) |
+ * | `Select( FN, Val )`       | **JA**        | Select( "FN Select", "First Value${SEP}Third Value${SEP}Fifth Value" ) |
+ * | `SelectMenu( FN )`        | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
+ * | `SelectMenu( FN, Val )`   | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
+ * | `TypeKey( FN, Val )`      | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
+ * 
+ * ## Fensterbezogene Schlüsselwörter
+ * 
+ * | OpenKeyWord               | Implementiert | Beschreibung |
+ * | ------------------------- | :-----------: | :----------- |
+ * | `StarApp( AN )`           | **NEIN**      | Kind-Objekt, SeSelect ist kein Fensterobjekt |
+ * | `StopApp( AN )`           | **NEIN**      | Kind-Objekt, SeSelect ist kein Fensterobjekt |
+ * | `SelectWindow( FN )`      | **NEIN**      | Kind-Objekt, SeSelect ist kein Fensterobjekt |
+ * | `Sequence( FN, SQN, SEQ_ID )` | **NEIN**  | Kind-Objekt, SeSelect ist kein Fensterobjekt |
+ * 
+ * ## Verifying, Memorizing, Logging Values
+ * 
+ * Group of keywords using the same GUI-Adapter Methods get*() <br/>
+ * (e.g.: `VerifyExists( FN, ExpVal)`, `MemorizeExists( FN, MemKey)`,`LogExists( FN )` -> `getExists()` )
+ * 
+ * | OpenKeyWord | Implementiert | Beschreibung |
+ * | ----------- | :-----------: | :----------- |
+ * | `VerifyExists( FN, ExpVal)`,    <br>`MemorizeExists( FN, MemKey)`,    <br>`LogExists( FN )`   | **JA** |  |
+ * | `VerifyHasFocus( FN, ExpVal )`, <br>`MemorizeHasFocus( FN, MemKey)`,  <br>`LogHasFocus( FN )` | **JA** |  |
+ * | `VerifyIsActive( FN, ExpVal )`, <br>`MemorizeIsActive( FN, MemKey)`,  <br>`LogIsActive( FN )` | **JA** |  |
+ * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **NEIN** | Was ist die Caption der RadioList? |
+ * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )`     | **JA** |  |
+ * | `VerifyTooltip( FN, ExpVal )`,  <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **JA** | Als Tooltip wird das Attribute `title` verwendet.  Im Beispiel: `Select title` |
+ * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )`     | **JA** | Ausgewählte Wert |
+ * 
+ *  # Siehe auch:
+ *  - okw.gui.adapter.selenium.SeInputRadion - für <input type="radionbutton">-Tags.
+ *  
+ *  # Quellen/Links
+ *  
+ *  - [SelfHTML: HTML/Formulare/input/Radio-Buttons und Checkboxen](https://wiki.selfhtml.org/wiki/HTML/Formulare/input/Radio-Buttons_und_Checkboxen)
+ *  - [SelfHTML: Referenz:HTML/select](https://wiki.selfhtml.org/wiki/Referenz:HTML/select)
+ *  - [Issue #139](https://github.com/Hrabovszki1023/OKW/issues/139)
+ *  
+ *  \~english
+ *  
+ *  \~
+ * @author Zoltán Hrabovszki
+ * @date 2017.07.02
  */
 public class SeRadioList extends SeAnyChildWindow
 {

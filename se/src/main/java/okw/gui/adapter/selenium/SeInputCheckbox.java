@@ -1,6 +1,6 @@
 /*
     ==============================================================================
-      Author: Zoltan Hrabovszki <zh@openkeyword.de>
+      Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
       Copyright © 2012 - 2017 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
@@ -51,7 +51,7 @@ import okw.gui.*;
      * @ingroup groupSeleniumChildGUIAdapter 
      * 
      * \~german
-     *  Diese Klasse representiert eine HTML-CheckBox, die mit Selenium angsteuert wird.
+     *  Diese Klasse representiert einen <input type="checkbox">-Tag, der mit Selenium angsteuert wird.
      *  
      *  # Unterstützter Tag
      *  Folgender HTML-Tag wird unterstützt:

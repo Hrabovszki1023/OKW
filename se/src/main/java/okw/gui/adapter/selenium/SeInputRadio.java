@@ -12,13 +12,14 @@ import okw.gui.OKWLocator;
  * @ingroup groupSeleniumChildGUIAdapter 
  * 
  * \~german
- *  Diese Klasse representiert eine HTML-RadioButton, die mit Selenium angsteuert wird.
+ *  Diese Klasse representiert eine <input type="radio">-Tag, der mit Selenium angsteuert wird.
+ *  
  *  @startuml
  *   class SeInputRadio [[java:okw.gui.adapter.selenium.SeInputRadio]] {
- *   ..Construktor..
+ *   ..Constructor..
  *   +SeInputRadio(String Locator, OKWLocator[] Locators)
  *   +SeInputRadio(String IframeID, String Locator, OKWLocator[] Locators)
- *   ..Getter..
+ *   ..Getter/Setter..
  *   +ArrayList<String> getValue()
  *   +Boolean getIsSelected()
  *   +ArrayList<String> getCaption()
@@ -27,16 +28,19 @@ import okw.gui.OKWLocator;
  *   .. Keyword API..
  *   +void SetFocus()
  *   +void TypeKey(ArrayList<String> fps_Values)
- * }
+ *   }
  * class SeAnyChildWindow [[java:okw.gui.adapter.selenium.SeAnyChildWindow]] {
- * }
+ *   }
  * SeAnyChildWindow <|-- SeInputRadio
-@enduml
+ * @enduml
  *  # Unterstützter Tag
  *  Folgender HTML-Tag wird unterstützt:
  *  
  *  \code{.html}
- *  <input type="radio" id="id_Mastercard" name="Zahlmethode" value="Mastercard">
+ *  <input type="radio"
+ *         id="id_Mastercard"
+ *         name="Zahlmethode"
+ *         value="Mastercard">
  *  <label for="id_Mastercard"> Mastercard</label><br>
  *  \endcode
  * 

@@ -1,8 +1,8 @@
 /*
     ==============================================================================
-      Author: Zoltan Hrabovszki <zh@openkeyword.de>
+      Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -48,18 +48,18 @@ import okw.gui.OKWLocator;
  * @ingroup groupSeleniumChildGUIAdapter 
  * 
  * \~german
- *  Diese Klasse representiert einen HTML-Button, die mit Selenium angsteuert wird.
+ *  Diese Klasse representiert einen <input type="button">-tag, der mit Selenium angsteuert wird.
  *  
  *  # Unterstützter Tag
  *  Folgender HTML-Tag wird unterstützt:
  *  
  *  \code{.html}
  *  <label for="ID_Button_1">Button Label:</label>
- *  <button type="button"
+ *  <input type="button"
  *         id="ID_Button_1"
  *         name="Button 1"
  *         title="Button title"
- *         value="Button 1">Button Caption<\input>
+ *         value="Button 1">Button Caption<\button>
  *  \endcode
  * 
  * # Unterstützte GUI-Schlüsselwörter
@@ -69,13 +69,13 @@ import okw.gui.OKWLocator;
  * | OpenKeyWord               | Implementiert | Beschreibung |
  * | ------------------------- | :-----------: | :----------- |
  * | `ClickOn( FN )`           | **JA**        |  |
- * | `DoubleClickOn( FN )`     | **NEIN**      | Ein Doppel-Klick ist auf ein Button nicht möglich -> OKWFrameObjectMethodNotImplemented | 
+ * | `DoubleClickOn( FN )`     | **NEIN**      | Ein Doppel-Klick ist auf ein Button nicht möglich -> throw OKWFrameObjectMethodNotImplemented | 
  * | `SetFocus( FN )`          | **JA**        |  |
  * | `SetValue( FN, Val )`     | **NEIN**      | Button hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented |
  * | `Select( FN, Val )`       | **NEIN**      | Button hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented |
  * | `SelectMenu( FN )`        | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
  * | `SelectMenu( FN, Val )`   | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
- * | `TypeKey( FN, Val )`      | **NEIN**      | -> OKWFrameObjectMethodNotImplemented |
+ * | `TypeKey( FN, Val )`      | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
  * 
  * ## Fensterbezogene Schlüsselwörter
  * 
@@ -106,7 +106,9 @@ import okw.gui.OKWLocator;
  *  
  *  # Quellen/Links
  *  
- *  - [SelfHTML: HTML/Formulare/input/button](HTML/Formulare/input/button)
+ *  - [SelfHTML: HTML/Formulare/Button](https://wiki.selfhtml.org/wiki/HTML/Formulare/Button)
+ *  - [SelfHTML: HTML/Formulare/input/button](https://wiki.selfhtml.org/wiki/HTML/Formulare/input/button#type_.3D_.22button.22)
+ *  - [SelfHTML: input oder button für submit-Elemente?](https://blog.selfhtml.org/2015/02/09/input-oder-button-fuer-submit-elemente/)
  *  - [Issue #106](https://github.com/Hrabovszki1023/OKW/issues/108)
  *  - [Issue #120](https://github.com/Hrabovszki1023/OKW/issues/116)
  *  

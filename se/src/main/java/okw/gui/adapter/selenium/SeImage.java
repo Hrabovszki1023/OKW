@@ -1,8 +1,8 @@
 /*
     ==============================================================================
-      Author: Zoltan Hrabovszki <zh@openkeyword.de>
+      Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012, 2013, 2014, 2015 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -43,15 +43,17 @@ import java.util.ArrayList;
 import okw.gui.OKWLocator;
 
 /**
+ * \~
  * @ingroup groupSeleniumChildGUIAdapter 
- * 
- * Diese Klasse representiert einen HTML-Button, die mit Selenium angsteuert wird.
+ *
+ * \~german
+ * Diese Klasse representiert einen <img>-Tag, der mit Selenium angsteuert wird.
  * 
  *  # Unterstützter Tag
  *  Folgender HTML-Tag wird unterstützt:
  *  
  *  \code{.html}
- *  <label for="ID_Image_1">Button Label:</label>
+ *  <label for="ID_Image_1">Image Label:</label>
  *  <img src="img.png"
  *         id="ID_Button_1"
  *         title="Image title"
@@ -65,13 +67,13 @@ import okw.gui.OKWLocator;
  * | OpenKeyWord               | Implementiert | Beschreibung |
  * | ------------------------- | :-----------: | :----------- |
  * | `ClickOn( FN )`           | **JA**        |  |
- * | `DoubleClickOn( FN )`     | **NEIN**      | Ein Doppel-Klick ist auf ein Image nicht möglich -> OKWFrameObjectMethodNotImplemented | 
+ * | `DoubleClickOn( FN )`     | **NEIN**      | Ein Doppel-Klick ist auf ein Image nicht möglich -> throw OKWFrameObjectMethodNotImplemented | 
  * | `SetFocus( FN )`          | **JA**        |  |
- * | `SetValue( FN, Val )`     | **NEIN**      | Button hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented |
- * | `Select( FN, Val )`       | **NEIN**      | Button hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented |
+ * | `SetValue( FN, Val )`     | **NEIN**      | Image hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented |
+ * | `Select( FN, Val )`       | **NEIN**      | Image hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented |
  * | `SelectMenu( FN )`        | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
  * | `SelectMenu( FN, Val )`   | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
- * | `TypeKey( FN, Val )`      | **NEIN**      | -> OKWFrameObjectMethodNotImplemented |
+ * | `TypeKey( FN, Val )`      | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
  * 
  * ## Fensterbezogene Schlüsselwörter
  * 
