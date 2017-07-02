@@ -1,9 +1,5 @@
 var NAVTREEINDEX13 =
 {
-"ref_tutorial01.html#refTutorial01_OKW_Testprojekt_Anlegen":[3,0,2],
-"ref_tutorial01.html#refTutorial01_Pom_Anpassen":[3,0,2,2],
-"ref_tutorial01.html#refTutorial01_Update_Projekt":[3,0,2,3],
-"ref_tutorial01.html#refTutorial01_Vorraussetzung":[3,0,1],
 "ref_tutorial02.html":[3,1],
 "ref_tutorial02.html#refTutorial02_B":[3,1,2],
 "ref_tutorial02.html#refTutorial02_JUnit_TestKlasse_Anlegen":[3,1,0],

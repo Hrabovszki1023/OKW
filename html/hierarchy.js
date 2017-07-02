@@ -19,7 +19,6 @@ var hierarchy =
           [ "okw.gui.adapter.selenium.SeInputRadio", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html", null ],
           [ "okw.gui.adapter.selenium.SeInputText", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html", null ],
           [ "okw.gui.adapter.selenium.SeLink", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html", null ],
-          [ "okw.gui.adapter.selenium.SePopupList", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_popup_list.html", null ],
           [ "okw.gui.adapter.selenium.SeRadioList", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html", [
             [ "okw.gui.frames.SeRadioList.frmSeRadioList.PayMethod", "classokw_1_1gui_1_1frames_1_1_se_radio_list_1_1frm_se_radio_list_1_1_pay_method.html", null ]
           ] ],

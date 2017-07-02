@@ -41,7 +41,6 @@ var searchData=
   ['selink_5fen_5ffirefox_5ftest',['SeLink_EN_Firefox_Test',['../classokw_1_1_se_link_1_1_se_link___e_n___firefox___test.html',1,'okw::SeLink']]],
   ['selink_5fen_5fhtmlunitdriver_5ftest',['SeLink_EN_HTMLUnitDriver_Test',['../classokw_1_1_se_link_1_1_se_link___e_n___h_t_m_l_unit_driver___test.html',1,'okw::SeLink']]],
   ['selink_5fen_5ftest',['SeLink_EN_Test',['../classokw_1_1_se_link_1_1_se_link___e_n___test.html',1,'okw::SeLink']]],
-  ['sepopuplist',['SePopupList',['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_popup_list.html',1,'okw::gui::adapter::selenium']]],
   ['seradiolist',['SeRadioList',['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html',1,'okw::gui::adapter::selenium']]],
   ['seradiolist_5fchrome_5ftest',['SeRadioList_Chrome_Test',['../classokw_1_1_se_radio_list_1_1_se_radio_list___chrome___test.html',1,'okw::SeRadioList']]],
   ['seradiolist_5ffirefox_5ftest',['SeRadioList_Firefox_Test',['../classokw_1_1_se_radio_list_1_1_se_radio_list___firefox___test.html',1,'okw::SeRadioList']]],

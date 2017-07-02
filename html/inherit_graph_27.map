@@ -1,65 +1,64 @@
 <map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
-<area shape="rect" id="node1" href="$classokw_1_1gui_1_1_any_win_base.html" title="Description of AnyWin. " alt="" coords="19,845,165,875"/>
-<area shape="rect" id="node3" href="$classokw_1_1gui_1_1_any_childwindow.html" title="Description of AnyWin. " alt="" coords="227,707,395,736"/>
-<area shape="rect" id="node51" href="$classokw_1_1gui_1_1_any_window.html" title="Description of AnyWin. " alt="" coords="240,1157,381,1187"/>
-<area shape="rect" id="node5" href="$classokw_1_1gui_1_1adapter_1_1_all_methods___multiple_values.html" title="okw.gui.adapter.AllMethods\l_MultipleValues" alt="" coords="469,767,651,814"/>
-<area shape="rect" id="node7" href="$classokw_1_1gui_1_1adapter_1_1_all_methods___single_value.html" title="okw.gui.adapter.AllMethods\l_SingleValue" alt="" coords="469,837,651,883"/>
-<area shape="rect" id="node9" href="$classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html" title="okw.gui.adapter.AllMethods\l_VerifyEmpty" alt="" coords="469,906,651,953"/>
-<area shape="rect" id="node11" href="$classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html" title="okw.gui.adapter.CurrentChild\lObject_Allmethods" alt="" coords="465,351,655,398"/>
-<area shape="rect" id="node13" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html" title="okw.gui.adapter.selenium.\lSeAnyChildWindow" alt="" coords="473,421,647,467"/>
-<area shape="rect" id="node41" href="$classokw_1_1gui_1_1adapter_1_1_test___no_method___object.html" title="Dieses GUI&#45;Objekt enthält keine OKW&#45;Methoden und dient damit der Überprüfung des &quot;OKWFrameObjectMetho..." alt="" coords="488,490,632,537"/>
-<area shape="rect" id="node43" href="$classokw_1_1gui_1_1adapter_1_1_test___push_button.html" title="okw.gui.adapter.Test\l_PushButton" alt="" coords="488,559,632,606"/>
-<area shape="rect" id="node47" href="$classokw_1_1gui_1_1adapter_1_1_test___text_field.html" title="okw.gui.adapter.Test\l_TextField" alt="" coords="488,629,632,675"/>
-<area shape="rect" id="node49" href="$classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test_1_1my_testbutton.html" title="okw.gui.frames.FrmObjDict\lTest.myTestbutton" alt="" coords="469,698,651,745"/>
-<area shape="rect" id="node15" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html" title="Diese Klasse representiert einen HTML&#45;Button, die mit Selenium angsteuert wird. " alt="" coords="745,421,919,467"/>
-<area shape="rect" id="node17" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html" title="Diese Klasse representiert einen HTML&#45;Button, die mit Selenium angsteuert wird. " alt="" coords="745,490,919,537"/>
-<area shape="rect" id="node19" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html" title="Diese Klasse representiert einen HTML&#45;Button, die mit Selenium angsteuert wird. " alt="" coords="745,559,919,606"/>
-<area shape="rect" id="node21" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html" title="Diese Klasse representiert eine HTML&#45;CheckBox, die mit Selenium angsteuert wird. " alt="" coords="745,629,919,675"/>
-<area shape="rect" id="node23" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html" title="Diese Klasse representiert eine HTML&#45;RadioButton, die mit Selenium angsteuert wird. " alt="" coords="745,698,919,745"/>
-<area shape="rect" id="node25" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html" title="Diese Klasse representiert ein HTML&#45;Textfeld, die mit Selenium angsteuert wird. " alt="" coords="745,767,919,814"/>
-<area shape="rect" id="node27" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html" title="Diese Klasse representiert einen HTML&#45;Link, die mit Selenium angsteuert wird. " alt="" coords="745,5,919,51"/>
-<area shape="rect" id="node29" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_popup_list.html" title="TODO: Description of SePopupList. " alt="" coords="745,74,919,121"/>
-<area shape="rect" id="node31" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html" title="TODO: Description of SeRadioList. " alt="" coords="745,143,919,190"/>
-<area shape="rect" id="node35" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html" title="SeListBox ist ein Selenium GUI&#45;Objekt. " alt="" coords="745,213,919,259"/>
-<area shape="rect" id="node37" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html" title="Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld . " alt="" coords="745,282,919,329"/>
-<area shape="rect" id="node39" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html" title="Klasse Implementiert das URL&#45;Eingabefeld der Browser. " alt="" coords="745,351,919,398"/>
-<area shape="rect" id="node33" href="$classokw_1_1gui_1_1frames_1_1_se_radio_list_1_1frm_se_radio_list_1_1_pay_method.html" title="okw.gui.frames.SeRadioList.frm\lSeRadioList.PayMethod" alt="" coords="993,143,1201,190"/>
-<area shape="rect" id="node45" href="$classokw_1_1gui_1_1frames_1_1frm_test_rechner_1_1_____taste__3.html" title="okw.gui.frames.frmTestRechner.\l__Taste_3" alt="" coords="725,837,939,883"/>
-<area shape="rect" id="node53" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html" title="SeAnyWindow ist eine Fenster GUI&#45;Adapterklasse. " alt="" coords="473,1045,647,1091"/>
-<area shape="rect" id="node93" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_chrome_app.html" title="okw.gui.adapter.selenium.webdriver.\lSeChromeApp" alt="" coords="443,1114,677,1161"/>
-<area shape="rect" id="node97" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_firefox_app.html" title="OKW Selenium FireFox BrowserWindow Klasse. " alt="" coords="443,1183,677,1230"/>
-<area shape="rect" id="node101" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html" title="Implementiert den Selenium HTMLUnit&#45;Driver. " alt="" coords="443,1253,677,1299"/>
-<area shape="rect" id="node105" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_safari_app.html" title="OKW Selenium FireFox BrowserWindow Klasse. " alt="" coords="443,1322,677,1369"/>
-<area shape="rect" id="node109" href="$classokw_1_1gui_1_1adapter_1_1_test___window.html" title="okw.gui.adapter.Test\l_Window" alt="" coords="488,1391,632,1438"/>
-<area shape="rect" id="node117" href="$classokw_1_1gui_1_1frames_1_1frm_internet_explorer.html" title="okw.gui.frames.frmInternet\lExplorer" alt="" coords="471,1461,649,1507"/>
-<area shape="rect" id="node119" href="$classokw_1_1gui_1_1frames_1_1frm_window_with_out_methods.html" title="Test&#45;Frame&#45;Klasse: Diese Klasse dient als Unittest&#45;Objekt. " alt="" coords="469,975,651,1022"/>
-<area shape="rect" id="node55" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html" title="TODO: class SeBrowserChild dokumentieren... " alt="" coords="745,979,919,1026"/>
-<area shape="rect" id="node91" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_table.html" title="TODO: Description of SeTable. " alt="" coords="745,1049,919,1095"/>
-<area shape="rect" id="node57" href="$classokw_1_1gui_1_1frames_1_1frm_calculator_1_1frm_calculator.html" title="okw.gui.frames.frmCalculator.frm\lCalculator" alt="" coords="989,633,1205,679"/>
-<area shape="rect" id="node59" href="$classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button.html" title="okw.gui.frames.SeButton.\lFrmButton" alt="" coords="1011,702,1184,749"/>
-<area shape="rect" id="node61" href="$classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button_not_activ.html" title="okw.gui.frames.SeButton.\lFrmButtonNotActiv" alt="" coords="1011,771,1184,818"/>
-<area shape="rect" id="node63" href="$classokw_1_1gui_1_1frames_1_1_se_check_box_1_1frm_se_check_box.html" title="okw.gui.frames.SeCheckBox.frm\lSeCheckBox" alt="" coords="991,841,1204,887"/>
-<area shape="rect" id="node65" href="$classokw_1_1gui_1_1frames_1_1_se_input_button_1_1frm_input_button.html" title="okw.gui.frames.SeInputButton.frm\lInputButton" alt="" coords="987,910,1208,957"/>
-<area shape="rect" id="node67" href="$classokw_1_1gui_1_1frames_1_1_se_input_button_1_1frm_input_button_not_activ.html" title="okw.gui.frames.SeInputButton.frm\lInputButtonNotActiv" alt="" coords="987,979,1208,1026"/>
-<area shape="rect" id="node69" href="$classokw_1_1gui_1_1frames_1_1_se_input_radio_1_1frm_se_input_radio.html" title="TestFrame für den Test der Klasse SeInputRadio. " alt="" coords="989,1049,1205,1095"/>
-<area shape="rect" id="node71" href="$classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_se_link.html" title="Selenium&#45;Frame zur Link&#45;TestSeite " alt="" coords="1008,1118,1187,1165"/>
-<area shape="rect" id="node73" href="$classokw_1_1gui_1_1frames_1_1_se_radio_list_1_1frm_se_radio_list.html" title="okw.gui.frames.SeRadioList.frm\lSeRadioList" alt="" coords="993,1187,1201,1234"/>
-<area shape="rect" id="node75" href="$classokw_1_1gui_1_1frames_1_1_se_select_1_1frm___se_list_box.html" title="okw.gui.frames.SeSelect.frm\l_SeListBox" alt="" coords="1003,1257,1192,1303"/>
-<area shape="rect" id="node77" href="$classokw_1_1gui_1_1frames_1_1_se_select_1_1frm___se_list_box_multi_select.html" title="okw.gui.frames.SeSelect.frm\l_SeListBoxMultiSelect" alt="" coords="1003,1326,1192,1373"/>
-<area shape="rect" id="node79" href="$classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea.html" title="okw.gui.frames.SeTextarea.frm\lSeTextarea" alt="" coords="995,1395,1200,1442"/>
-<area shape="rect" id="node81" href="$classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea_disabled.html" title="okw.gui.frames.SeTextarea.frm\lSeTextareaDisabled" alt="" coords="995,1465,1200,1511"/>
-<area shape="rect" id="node83" href="$classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea_readonly.html" title="okw.gui.frames.SeTextarea.frm\lSeTextareaReadonly" alt="" coords="995,1534,1200,1581"/>
-<area shape="rect" id="node85" href="$classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_disabled.html" title="okw.gui.frames.SeTextField.frm\lSeInputTextDisabled" alt="" coords="993,425,1201,471"/>
-<area shape="rect" id="node87" href="$classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_readonly.html" title="okw.gui.frames.SeTextField.frm\lSeInputTextReadonly" alt="" coords="993,494,1201,541"/>
-<area shape="rect" id="node89" href="$classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_text_field.html" title="okw.gui.frames.SeTextField.frm\lSeTextField" alt="" coords="993,563,1201,610"/>
-<area shape="rect" id="node95" href="$classokw_1_1gui_1_1frames_1_1frm_chrome.html" title="okw.gui.frames.frmChrome" alt="" coords="743,1123,921,1152"/>
-<area shape="rect" id="node99" href="$classokw_1_1gui_1_1frames_1_1frm_firefox.html" title="okw.gui.frames.frmFirefox" alt="" coords="745,1192,919,1221"/>
-<area shape="rect" id="node103" href="$classokw_1_1gui_1_1frames_1_1frm_h_t_m_l_unit.html" title="okw.gui.frames.frmHTMLUnit" alt="" coords="735,1261,929,1291"/>
-<area shape="rect" id="node107" href="$classokw_1_1gui_1_1frames_1_1frm_safari.html" title="okw.gui.frames.frmSafari" alt="" coords="748,1323,916,1352"/>
-<area shape="rect" id="node111" href="$classokw_1_1gui_1_1frames_1_1frm_current_object_window.html" title="okw.gui.frames.frmCurrent\lObjectWindow" alt="" coords="744,1375,920,1422"/>
-<area shape="rect" id="node113" href="$classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test.html" title="frmObjDictTest ist eine Test&#45;Frame&#45;Klasse. " alt="" coords="728,1445,936,1475"/>
-<area shape="rect" id="node115" href="$classokw_1_1gui_1_1frames_1_1frm_test_rechner.html" title="okw.gui.frames.frmTestRechner" alt="" coords="728,1499,936,1528"/>
-<area shape="rect" id="node120" href="$interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html" title="okw.gui.IGUIChildwindow" alt="" coords="5,707,179,736"/>
-<area shape="rect" id="node122" href="$interfaceokw_1_1gui_1_1_i_g_u_i_window.html" title="okw.gui.IGUIWindow" alt="" coords="19,1157,165,1187"/>
-<area shape="rect" id="node124" href="$interfaceokw_1_1core_1_1_i_o_k_w___f_n.html" title="okw.core.IOKW_FN" alt="" coords="23,984,161,1013"/>
+<area shape="rect" id="node1" href="$classokw_1_1gui_1_1_any_win_base.html" title="Description of AnyWin. " alt="" coords="19,811,165,840"/>
+<area shape="rect" id="node3" href="$classokw_1_1gui_1_1_any_childwindow.html" title="Description of AnyWin. " alt="" coords="227,672,395,701"/>
+<area shape="rect" id="node49" href="$classokw_1_1gui_1_1_any_window.html" title="Description of AnyWin. " alt="" coords="240,1123,381,1152"/>
+<area shape="rect" id="node5" href="$classokw_1_1gui_1_1adapter_1_1_all_methods___multiple_values.html" title="okw.gui.adapter.AllMethods\l_MultipleValues" alt="" coords="469,733,651,779"/>
+<area shape="rect" id="node7" href="$classokw_1_1gui_1_1adapter_1_1_all_methods___single_value.html" title="okw.gui.adapter.AllMethods\l_SingleValue" alt="" coords="469,802,651,849"/>
+<area shape="rect" id="node9" href="$classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html" title="okw.gui.adapter.AllMethods\l_VerifyEmpty" alt="" coords="469,871,651,918"/>
+<area shape="rect" id="node11" href="$classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html" title="okw.gui.adapter.CurrentChild\lObject_Allmethods" alt="" coords="465,317,655,363"/>
+<area shape="rect" id="node13" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html" title="okw.gui.adapter.selenium.\lSeAnyChildWindow" alt="" coords="473,386,647,433"/>
+<area shape="rect" id="node39" href="$classokw_1_1gui_1_1adapter_1_1_test___no_method___object.html" title="Dieses GUI&#45;Objekt enthält keine OKW&#45;Methoden und dient damit der Überprüfung des &quot;OKWFrameObjectMetho..." alt="" coords="488,455,632,502"/>
+<area shape="rect" id="node41" href="$classokw_1_1gui_1_1adapter_1_1_test___push_button.html" title="okw.gui.adapter.Test\l_PushButton" alt="" coords="488,525,632,571"/>
+<area shape="rect" id="node45" href="$classokw_1_1gui_1_1adapter_1_1_test___text_field.html" title="okw.gui.adapter.Test\l_TextField" alt="" coords="488,594,632,641"/>
+<area shape="rect" id="node47" href="$classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test_1_1my_testbutton.html" title="okw.gui.frames.FrmObjDict\lTest.myTestbutton" alt="" coords="469,663,651,710"/>
+<area shape="rect" id="node15" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html" title="Diese Klasse representiert einen HTML&#45;Button, die mit Selenium angsteuert wird. " alt="" coords="745,559,919,606"/>
+<area shape="rect" id="node17" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html" title="Diese Klasse representiert einen. " alt="" coords="745,629,919,675"/>
+<area shape="rect" id="node19" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html" title="Diese Klasse representiert einen &lt;input type=&quot;button&quot;&gt;&#45;tag, der mit Selenium angsteuert wird..." alt="" coords="745,698,919,745"/>
+<area shape="rect" id="node21" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html" title="Diese Klasse representiert einen &lt;input type=&quot;checkbox&quot;&gt;&#45;Tag, der mit Selenium angsteuert wird..." alt="" coords="745,5,919,51"/>
+<area shape="rect" id="node23" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html" title="Diese Klasse representiert eine &lt;input type=&quot;radio&quot;&gt;&#45;Tag, der mit Selenium angsteuert wird..." alt="" coords="745,74,919,121"/>
+<area shape="rect" id="node25" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html" title="Diese Klasse representiert ein HTML&#45;Textfeld, die mit Selenium angsteuert wird. " alt="" coords="745,143,919,190"/>
+<area shape="rect" id="node27" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html" title="Diese Klasse representiert einen HTML&#45;Link, die mit Selenium angsteuert wird. " alt="" coords="745,213,919,259"/>
+<area shape="rect" id="node29" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html" title="Diese Klasse representiert einen &lt;select&gt;&#45;tag, der mit Selenium angsteuert wird. " alt="" coords="745,282,919,329"/>
+<area shape="rect" id="node33" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html" title="Diese Klasse representiert einen &lt;select&gt;&#45;tag, der mit Selenium angsteuert wird. " alt="" coords="745,351,919,398"/>
+<area shape="rect" id="node35" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html" title="Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld . " alt="" coords="745,421,919,467"/>
+<area shape="rect" id="node37" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html" title="Klasse Implementiert das URL&#45;Eingabefeld der Browser. " alt="" coords="745,490,919,537"/>
+<area shape="rect" id="node31" href="$classokw_1_1gui_1_1frames_1_1_se_radio_list_1_1frm_se_radio_list_1_1_pay_method.html" title="okw.gui.frames.SeRadioList.frm\lSeRadioList.PayMethod" alt="" coords="993,282,1201,329"/>
+<area shape="rect" id="node43" href="$classokw_1_1gui_1_1frames_1_1frm_test_rechner_1_1_____taste__3.html" title="okw.gui.frames.frmTestRechner.\l__Taste_3" alt="" coords="725,767,939,814"/>
+<area shape="rect" id="node51" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html" title="SeAnyWindow ist eine Fenster GUI&#45;Adapterklasse. " alt="" coords="473,1010,647,1057"/>
+<area shape="rect" id="node91" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_chrome_app.html" title="okw.gui.adapter.selenium.webdriver.\lSeChromeApp" alt="" coords="443,1079,677,1126"/>
+<area shape="rect" id="node95" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_firefox_app.html" title="OKW Selenium FireFox BrowserWindow Klasse. " alt="" coords="443,1149,677,1195"/>
+<area shape="rect" id="node99" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html" title="Implementiert den Selenium HTMLUnit&#45;Driver. " alt="" coords="443,1218,677,1265"/>
+<area shape="rect" id="node103" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_safari_app.html" title="OKW Selenium FireFox BrowserWindow Klasse. " alt="" coords="443,1287,677,1334"/>
+<area shape="rect" id="node107" href="$classokw_1_1gui_1_1adapter_1_1_test___window.html" title="okw.gui.adapter.Test\l_Window" alt="" coords="488,1357,632,1403"/>
+<area shape="rect" id="node115" href="$classokw_1_1gui_1_1frames_1_1frm_internet_explorer.html" title="okw.gui.frames.frmInternet\lExplorer" alt="" coords="471,1426,649,1473"/>
+<area shape="rect" id="node117" href="$classokw_1_1gui_1_1frames_1_1frm_window_with_out_methods.html" title="Test&#45;Frame&#45;Klasse: Diese Klasse dient als Unittest&#45;Objekt. " alt="" coords="469,941,651,987"/>
+<area shape="rect" id="node53" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html" title="TODO: class SeBrowserChild dokumentieren... " alt="" coords="745,1014,919,1061"/>
+<area shape="rect" id="node89" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_table.html" title="TODO: Description of SeTable. " alt="" coords="745,945,919,991"/>
+<area shape="rect" id="node55" href="$classokw_1_1gui_1_1frames_1_1frm_calculator_1_1frm_calculator.html" title="okw.gui.frames.frmCalculator.frm\lCalculator" alt="" coords="989,667,1205,714"/>
+<area shape="rect" id="node57" href="$classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button.html" title="okw.gui.frames.SeButton.\lFrmButton" alt="" coords="1011,737,1184,783"/>
+<area shape="rect" id="node59" href="$classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button_not_activ.html" title="okw.gui.frames.SeButton.\lFrmButtonNotActiv" alt="" coords="1011,806,1184,853"/>
+<area shape="rect" id="node61" href="$classokw_1_1gui_1_1frames_1_1_se_check_box_1_1frm_se_check_box.html" title="okw.gui.frames.SeCheckBox.frm\lSeCheckBox" alt="" coords="991,875,1204,922"/>
+<area shape="rect" id="node63" href="$classokw_1_1gui_1_1frames_1_1_se_input_button_1_1frm_input_button.html" title="okw.gui.frames.SeInputButton.frm\lInputButton" alt="" coords="987,945,1208,991"/>
+<area shape="rect" id="node65" href="$classokw_1_1gui_1_1frames_1_1_se_input_button_1_1frm_input_button_not_activ.html" title="okw.gui.frames.SeInputButton.frm\lInputButtonNotActiv" alt="" coords="987,1014,1208,1061"/>
+<area shape="rect" id="node67" href="$classokw_1_1gui_1_1frames_1_1_se_input_radio_1_1frm_se_input_radio.html" title="TestFrame für den Test der Klasse SeInputRadio. " alt="" coords="989,1083,1205,1130"/>
+<area shape="rect" id="node69" href="$classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_se_link.html" title="Selenium&#45;Frame zur Link&#45;TestSeite " alt="" coords="1008,1153,1187,1199"/>
+<area shape="rect" id="node71" href="$classokw_1_1gui_1_1frames_1_1_se_radio_list_1_1frm_se_radio_list.html" title="okw.gui.frames.SeRadioList.frm\lSeRadioList" alt="" coords="993,1222,1201,1269"/>
+<area shape="rect" id="node73" href="$classokw_1_1gui_1_1frames_1_1_se_select_1_1frm___se_list_box.html" title="okw.gui.frames.SeSelect.frm\l_SeListBox" alt="" coords="1003,1291,1192,1338"/>
+<area shape="rect" id="node75" href="$classokw_1_1gui_1_1frames_1_1_se_select_1_1frm___se_list_box_multi_select.html" title="okw.gui.frames.SeSelect.frm\l_SeListBoxMultiSelect" alt="" coords="1003,1361,1192,1407"/>
+<area shape="rect" id="node77" href="$classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea.html" title="okw.gui.frames.SeTextarea.frm\lSeTextarea" alt="" coords="995,1430,1200,1477"/>
+<area shape="rect" id="node79" href="$classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea_disabled.html" title="okw.gui.frames.SeTextarea.frm\lSeTextareaDisabled" alt="" coords="995,1499,1200,1546"/>
+<area shape="rect" id="node81" href="$classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea_readonly.html" title="okw.gui.frames.SeTextarea.frm\lSeTextareaReadonly" alt="" coords="995,1569,1200,1615"/>
+<area shape="rect" id="node83" href="$classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_disabled.html" title="okw.gui.frames.SeTextField.frm\lSeInputTextDisabled" alt="" coords="993,459,1201,506"/>
+<area shape="rect" id="node85" href="$classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_readonly.html" title="okw.gui.frames.SeTextField.frm\lSeInputTextReadonly" alt="" coords="993,529,1201,575"/>
+<area shape="rect" id="node87" href="$classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_text_field.html" title="okw.gui.frames.SeTextField.frm\lSeTextField" alt="" coords="993,598,1201,645"/>
+<area shape="rect" id="node93" href="$classokw_1_1gui_1_1frames_1_1frm_chrome.html" title="okw.gui.frames.frmChrome" alt="" coords="743,1088,921,1117"/>
+<area shape="rect" id="node97" href="$classokw_1_1gui_1_1frames_1_1frm_firefox.html" title="okw.gui.frames.frmFirefox" alt="" coords="745,1157,919,1187"/>
+<area shape="rect" id="node101" href="$classokw_1_1gui_1_1frames_1_1frm_h_t_m_l_unit.html" title="okw.gui.frames.frmHTMLUnit" alt="" coords="735,1227,929,1256"/>
+<area shape="rect" id="node105" href="$classokw_1_1gui_1_1frames_1_1frm_safari.html" title="okw.gui.frames.frmSafari" alt="" coords="748,1288,916,1317"/>
+<area shape="rect" id="node109" href="$classokw_1_1gui_1_1frames_1_1frm_current_object_window.html" title="okw.gui.frames.frmCurrent\lObjectWindow" alt="" coords="744,1341,920,1387"/>
+<area shape="rect" id="node111" href="$classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test.html" title="frmObjDictTest ist eine Test&#45;Frame&#45;Klasse. " alt="" coords="728,1411,936,1440"/>
+<area shape="rect" id="node113" href="$classokw_1_1gui_1_1frames_1_1frm_test_rechner.html" title="okw.gui.frames.frmTestRechner" alt="" coords="728,1464,936,1493"/>
+<area shape="rect" id="node118" href="$interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html" title="okw.gui.IGUIChildwindow" alt="" coords="5,672,179,701"/>
+<area shape="rect" id="node120" href="$interfaceokw_1_1gui_1_1_i_g_u_i_window.html" title="okw.gui.IGUIWindow" alt="" coords="19,1123,165,1152"/>
+<area shape="rect" id="node122" href="$interfaceokw_1_1core_1_1_i_o_k_w___f_n.html" title="okw.core.IOKW_FN" alt="" coords="23,949,161,979"/>
 </map>

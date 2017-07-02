@@ -1,6 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"classokw_1_1exceptions_1_1_o_k_w_language_not_implemnted_exception.html#a7ef25b0c9710c35b929009b32ecd5187":[9,0,0,3,14,0],
 "classokw_1_1exceptions_1_1_o_k_w_memorize_key_not_exists_exception.html":[9,0,0,3,15],
 "classokw_1_1exceptions_1_1_o_k_w_memorize_key_not_exists_exception.html#a500641d4ae67a21a60d8d61616653be1":[9,0,0,3,15,1],
 "classokw_1_1exceptions_1_1_o_k_w_memorize_key_not_exists_exception.html#ae316f21c877ecc02e31e28d1d759786d":[9,0,0,3,15,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX8 =
 "classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#ad4257fd865fb2f7dd332ccf086106238":[9,0,0,4,0,5,12],
 "classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#adec6c08405c0195a30a6c602e1688ff7":[9,0,0,4,0,5,17],
 "classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#ae2c996ee18222c028b9a89c080948ba2":[9,0,0,4,0,5,3],
-"classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#af177f7f22ad6a3b4234fc743119cf8c2":[9,0,0,4,0,5,18]
+"classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#af177f7f22ad6a3b4234fc743119cf8c2":[9,0,0,4,0,5,18],
+"classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#afe103c9d4793166e815e453813665020":[9,0,0,4,0,5,6]
 };

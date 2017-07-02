@@ -89,7 +89,6 @@ var annotated_dup =
             [ "SeInputRadio", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio" ],
             [ "SeInputText", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text" ],
             [ "SeLink", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link" ],
-            [ "SePopupList", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_popup_list.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_popup_list" ],
             [ "SeRadioList", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list" ],
             [ "SeSelect", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select" ],
             [ "SeTable", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_table.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_table" ],
