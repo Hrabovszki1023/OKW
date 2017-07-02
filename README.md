@@ -23,6 +23,7 @@ OKW is absolutely free, both for open source projects and commercial projects.
 ## OKW Wiki-Pages 
 Here you can find the OKW Wiki-Pages:
 
+* [DoxyGen-Docu (german)](https://hrabovszki1023.github.io/OKW/html/index.html)
 * [Wiki-Home](https://github.com/Hrabovszki1023/OKW/wiki)
 * [List of OKW KeyWords](https://github.com/Hrabovszki1023/OKW/wiki/List-of-OKW-Keywords)
 * [List of OKW Constants](https://github.com/Hrabovszki1023/OKW/wiki/List-of-OKW-Constants)
