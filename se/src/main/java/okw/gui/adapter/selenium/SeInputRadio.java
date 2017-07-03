@@ -98,7 +98,7 @@ public class SeInputRadio extends SeAnyChildWindow
 {
 
   /**
-   *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+   *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
    *  
    *  @date 2013.04.11
    */         
@@ -109,7 +109,7 @@ public class SeInputRadio extends SeAnyChildWindow
 
   
   /**
-   *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+   *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
    *  
    *  @date 2017.02.17
    */

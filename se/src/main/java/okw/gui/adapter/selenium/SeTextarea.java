@@ -62,7 +62,7 @@ import okw.gui.OKWLocator;
     {
 
       /**
-       *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+       *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
        */         
        public SeTextarea(String Locator, OKWLocator... fpLocators)
         {
@@ -71,7 +71,7 @@ import okw.gui.OKWLocator;
 
        
        /**
-        *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+        *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
         *  
         *  @date 2017.02.17
         */

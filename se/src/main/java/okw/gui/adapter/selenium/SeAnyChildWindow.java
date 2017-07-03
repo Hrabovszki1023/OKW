@@ -89,9 +89,9 @@ public class SeAnyChildWindow extends AnyChildwindow
         this.iframeID = iframeID;
     }
 
-    /** 
-     * \~german
-     * Konstruktor der Klasse. iframeID wird auf den Wert "" (empty string) gesetzt.
+   /** 
+    * \~german
+    * Konstruktor der Klasse. iframeID wird auf den Wert "" (empty string) gesetzt.
     *  
     *  @param Locator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
     *  @param Locators Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.

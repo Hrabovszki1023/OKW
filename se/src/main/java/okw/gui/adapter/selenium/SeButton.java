@@ -47,18 +47,17 @@ import okw.gui.OKWLocator;
  * @ingroup groupSeleniumChildGUIAdapter 
  * 
  * \~german
- *  Diese Klasse representiert einen HTML-Button, die mit Selenium angsteuert wird.
+ *  Diese Klasse representiert einen <button>-Button, der mit Selenium angsteuert wird.
  *  
  *  # Unterstützter Tag
  *  Folgender HTML-Tag wird unterstützt:
  *  
  *  \code{.html}
  *  <label for="ID_Button_1">Button Label:<\label>
- *  <button type="button"
- *         id="ID_Button_1"
- *         name="Button 1"
- *         title="Button title"
- *         value="Button 1">Button Caption<\button>
+ *  <button id="ID_Button_1"
+ *          name="Button 1"
+ *          title="Button title"
+ *          value="Button 1">Button Caption<\button>
  *  \endcode
  * 
  * # Unterstützte GUI-Schlüsselwörter
@@ -121,7 +120,7 @@ public class SeButton extends SeAnyChildWindow
 {
 
     /**
-     * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator) \~
+     * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...) \~
      * 
      * @author Zoltán Hrabovszki
      * @date 2013.05.03
@@ -132,7 +131,7 @@ public class SeButton extends SeAnyChildWindow
     }
 
     /**
-     * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+     * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
      * 
      * @author Zoltán Hrabovszki
      * @date 2017.02.17

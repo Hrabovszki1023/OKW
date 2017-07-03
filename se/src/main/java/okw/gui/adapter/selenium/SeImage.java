@@ -112,7 +112,7 @@ public class SeImage extends SeAnyChildWindow
 {
 
     /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
      */
     public SeImage( String Locator, OKWLocator... Locators )
     {
@@ -120,7 +120,7 @@ public class SeImage extends SeAnyChildWindow
     }
 
     /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
      */
     public SeImage( String IframeID, String Locator, OKWLocator... Locators )
     {

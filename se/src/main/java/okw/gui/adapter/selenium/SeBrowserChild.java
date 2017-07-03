@@ -57,7 +57,7 @@ public class SeBrowserChild extends SeAnyWindow
     public SeURL      URL = new SeURL();
 
     /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
      */
     public SeBrowserChild( String Locator, OKWLocator... Locators )
     {
@@ -65,7 +65,7 @@ public class SeBrowserChild extends SeAnyWindow
     }
 
     /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
      */
     public SeBrowserChild( String IframeID, String Locator, OKWLocator... Locators )
     {

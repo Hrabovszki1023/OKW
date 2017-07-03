@@ -116,7 +116,7 @@ import okw.gui.*;
     	private OKW_Const_Sngltn myOKW_Const = null;
 
         /**
-         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
          *  
          *  @date 2017.02.17
          */         
@@ -129,7 +129,7 @@ import okw.gui.*;
 
         
         /**
-         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
          *  
          *  @date 2017.02.17
          */

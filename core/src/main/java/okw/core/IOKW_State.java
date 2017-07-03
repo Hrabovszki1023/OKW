@@ -1374,7 +1374,15 @@ public interface IOKW_State
     * @date 2014-09-21
     */
     void VerifyTablecellValue( String FN, String COL, String ROW, String ExpVal ) throws Exception;
+    
+    /**
+     * @copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
+     */
     void VerifyTablecellValueWCM( String FN, String COL, String ROW, String ExpVal ) throws Exception;
+
+    /**
+     * @copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
+     */
     void VerifyTablecellValueREGX( String FN, String COL, String ROW, String ExpVal ) throws Exception;
     
     /** \~german
@@ -1405,7 +1413,7 @@ public interface IOKW_State
      *  _Beispiel: Prüfe, ob der Tooltip-Text des Objekts "MeinObjekt" dem erwarteten
      *  Wert "\\.jango" entspricht:_ <br/>
      *  
-     *  \verbatim PrüfeTooltipREGX: "MeinObjekt", "\\.jango" \endverbatim
+     *  \verbatim VerifyTooltipREGX( "MeinObjekt", "\\.jango" )\endverbatim
      *           
      *  @param FN Funktionaler Name des Objekts 
      *  @param ExpVal Erwarteter Wert, gegegebn als Regulärerausdruck.
@@ -1447,9 +1455,9 @@ public interface IOKW_State
      *  Checks the tooltip text of an object. The expected Value is givan as WildCardMatch
      *  
      *  The following wildcards can be used:
-     *  * "?" - exactly one character is masked
-     *  * "*" - (0-n) any number of characters to be masked
-     *  * "#" - exactly one number [0..9] is masked
+     *  - "?" - exactly one character is masked
+     *  - "*" - (0-n) any number of characters to be masked
+     *  - "#" - exactly one number [0..9] is masked
      *  
      *  _Example: Check if the tooltip text of object "MyObject" equals the expected value "?jango":_<br/>
      *  \verbatim VerifyTooltipWCM( "MyObject", "?jango" ) \endverbatim

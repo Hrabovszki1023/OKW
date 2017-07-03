@@ -46,7 +46,7 @@ import okw.gui.OKWLocator;
  * @ingroup groupSeleniumChildGUIAdapter 
  *
  * \~german
- *  Diese Klasse representiert einen HTML-Link, die mit Selenium angsteuert wird.
+ *  Diese Klasse representiert einen <a>-Tag (Link), der mit Selenium angsteuert wird.
  *  
  *  SeLink erweitert die Klasse SeAnyChildWindow 
  *  \~
@@ -128,7 +128,7 @@ public class SeLink extends SeAnyChildWindow
 {
 
     /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
      */
     public SeLink( String Locator, OKWLocator... Locators )
     {
@@ -136,7 +136,7 @@ public class SeLink extends SeAnyChildWindow
     }
 
     /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
      *  
      *  @date 2017.02.17
      */

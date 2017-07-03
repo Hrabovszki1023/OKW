@@ -48,7 +48,7 @@ import okw.gui.OKWLocator;
  * @ingroup groupSeleniumChildGUIAdapter 
  * 
  * \~german
- *  Diese Klasse representiert einen <input type="button">-tag, der mit Selenium angsteuert wird.
+ *  Diese Klasse representiert einen <input type="button">-Tag, der mit Selenium angsteuert wird.
  *  
  *  # Unterstützter Tag
  *  Folgender HTML-Tag wird unterstützt:
@@ -122,7 +122,7 @@ public class SeInputButton extends SeAnyChildWindow
 {
 
     /**
-     * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator) \~
+     * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...) \~
      * 
      * @author Zoltán Hrabovszki
      * @date 2013.05.03
@@ -133,7 +133,7 @@ public class SeInputButton extends SeAnyChildWindow
     }
 
     /**
-     * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+     * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
      * 
      * @author Zoltán Hrabovszki
      * @date 2017.02.17

@@ -62,7 +62,7 @@ import okw.gui.OKWLocator;
  * @ingroup groupSeleniumChildGUIAdapter 
  * 
  * \~german
- *  Diese Klasse representiert einen <select>-tag, der mit Selenium angsteuert wird.
+ *  Diese Klasse representiert einen <select>-Tag, der mit Selenium angsteuert wird.
  *  
  * @startuml
  * class SeRadioList [[java:okw.gui.adapter.selenium.SeRadioList]] {
@@ -167,7 +167,7 @@ public class SeRadioList extends SeAnyChildWindow
     ArrayList<String>            myRadioButtonFNs = null;
 
     /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
      */
     public SeRadioList( String Locator, OKWLocator... Locators )
     {
@@ -185,7 +185,7 @@ public class SeRadioList extends SeAnyChildWindow
     }
 
     /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
      *  
      *  @date 2017.02.17
      */

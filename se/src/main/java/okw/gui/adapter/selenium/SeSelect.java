@@ -53,7 +53,7 @@ import okw.gui.OKWLocator;
  * @ingroup groupSeleniumChildGUIAdapter 
  * 
  * \~german
- *  Diese Klasse representiert einen <select>-tag, der mit Selenium angsteuert wird.
+ *  Diese Klasse representiert einen <select>-Tag, der mit Selenium angsteuert wird.
  *  
  *  @startuml
  *  class SeSelect [[java:okw.gui.adapter.selenium.SeSelect]] {
@@ -141,10 +141,7 @@ public class SeSelect extends SeAnyChildWindow
 {
 
     /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
-     *  
-     *  @author Zoltán Hrabovszki
-     *  @date 2013.04.18
+     *  @copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
      */
     public SeSelect( String Locator, OKWLocator... Locators )
     {

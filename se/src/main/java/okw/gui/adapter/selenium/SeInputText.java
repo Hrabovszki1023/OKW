@@ -115,7 +115,7 @@ public class SeInputText extends SeAnyChildWindow
 {
 
     /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator)
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
      */
     public SeInputText( String Locator, OKWLocator... Locators )
     {
@@ -123,7 +123,7 @@ public class SeInputText extends SeAnyChildWindow
     }
 
     /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator)
+     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
      *  
      *  @date 2017.02.17
      */
