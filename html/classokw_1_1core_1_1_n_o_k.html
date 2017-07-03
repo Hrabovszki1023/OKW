@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 191, Datum: 07.02.2017 17:30:37</span>
+   &#160;<span id="projectnumber">Build_ID: 192, Datum: 07.03.2017 04:31:07</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -268,8 +268,10 @@ $(document).ready(function(){initNavTree('classokw_1_1core_1_1_n_o_k.html','');}
 <tr class="memdesc:a37a7b10a667ec77dc511cefcf1499693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert.  <a href="#a37a7b10a667ec77dc511cefcf1499693">Mehr ...</a><br /></td></tr>
 <tr class="separator:a37a7b10a667ec77dc511cefcf1499693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af07d71db8e2c2052f8ae794a3f6f8d0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_n_o_k.html#af07d71db8e2c2052f8ae794a3f6f8d0a">VerifyTablecellValueWCM</a> (String FN, String COL, String ROW, String ExpVal)</td></tr>
+<tr class="memdesc:af07d71db8e2c2052f8ae794a3f6f8d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert.  <a href="#af07d71db8e2c2052f8ae794a3f6f8d0a">Mehr ...</a><br /></td></tr>
 <tr class="separator:af07d71db8e2c2052f8ae794a3f6f8d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5016aa88a24d6364b1b289b00f33e75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_n_o_k.html#ac5016aa88a24d6364b1b289b00f33e75">VerifyTablecellValueREGX</a> (String FN, String COL, String ROW, String ExpVal)</td></tr>
+<tr class="memdesc:ac5016aa88a24d6364b1b289b00f33e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert.  <a href="#ac5016aa88a24d6364b1b289b00f33e75">Mehr ...</a><br /></td></tr>
 <tr class="separator:ac5016aa88a24d6364b1b289b00f33e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4da634853fd2fdef024d540f14647585"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_n_o_k.html#a4da634853fd2fdef024d540f14647585">VerifyTooltip</a> (String FN, String ExpVal)</td></tr>
 <tr class="memdesc:a4da634853fd2fdef024d540f14647585"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prüft den Tooltip-Text eines Objektes.  <a href="#a4da634853fd2fdef024d540f14647585">Mehr ...</a><br /></td></tr>
@@ -2632,9 +2634,20 @@ Private Attribute</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">COL</td><td>Spaltennummer der zu wählenden Zelle, beginnend mit 1. </td></tr>
+    <tr><td class="paramname">ROW</td><td>Zeilennummer der zu wählenden Zelle, beginnend mit 1. </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
-<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html">okw.core.IOKW_State</a>.</p>
+<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a4e452e946ec073b880a8e3d952b9340e">okw.core.IOKW_State</a>.</p>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00615">615</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    {</div><div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTablecellValueREGX&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;</div><div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    }</div></div><!-- fragment -->
@@ -2678,9 +2691,20 @@ Private Attribute</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">COL</td><td>Spaltennummer der zu wählenden Zelle, beginnend mit 1. </td></tr>
+    <tr><td class="paramname">ROW</td><td>Zeilennummer der zu wählenden Zelle, beginnend mit 1. </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
-<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html">okw.core.IOKW_State</a>.</p>
+<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a3f9d14b5445fc5a5432483c302baf2c4">okw.core.IOKW_State</a>.</p>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00605">605</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    {</div><div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyTablecellValueWCM&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;COL&quot;</span>, COL, <span class="stringliteral">&quot;ROW&quot;</span>, ROW, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;</div><div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    }</div></div><!-- fragment -->
@@ -2760,7 +2784,7 @@ Private Attribute</h2></td></tr>
 <p>Der Sollwert wird als RegulererAusdruck angegeben.</p>
 <p><em>Beispiel: Prüfe, ob der Tooltip-Text des Objekts "MeinObjekt" dem erwarteten Wert "\\.jango" entspricht:</em> <br />
 </p>
-<pre class="fragment">PrüfeTooltipREGX: "MeinObjekt", "\\.jango" </pre><dl class="params"><dt>Parameter</dt><dd>
+<pre class="fragment">VerifyTooltipREGX( "MeinObjekt", "\\.jango" )</pre><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
     <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert, gegegebn als Regulärerausdruck.</td></tr>
@@ -2979,7 +3003,7 @@ Private Attribute</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>core</b></li><li class="navelem"><a class="el" href="classokw_1_1core_1_1_n_o_k.html">NOK</a></li>
-    <li class="footer">Erzeugt am Son Jul 2 2017 17:32:39 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mon Jul 3 2017 04:33:02 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

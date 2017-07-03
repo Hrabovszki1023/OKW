@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 191, Datum: 07.02.2017 17:30:37</span>
+   &#160;<span id="projectnumber">Build_ID: 192, Datum: 07.03.2017 04:31:07</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -121,8 +121,10 @@ $(document).ready(function(){initNavTree('classokw_1_1gui_1_1adapter_1_1selenium
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
 <tr class="memitem:a8303e52a36440c2b7fadb2e1b44c4cac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#a8303e52a36440c2b7fadb2e1b44c4cac">SeTextarea</a> (String Locator, OKWLocator... fpLocators)</td></tr>
+<tr class="memdesc:a8303e52a36440c2b7fadb2e1b44c4cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor der Klasse.  <a href="#a8303e52a36440c2b7fadb2e1b44c4cac">Mehr ...</a><br /></td></tr>
 <tr class="separator:a8303e52a36440c2b7fadb2e1b44c4cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a345c525cf50bcaad3c47555646051069"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#a345c525cf50bcaad3c47555646051069">SeTextarea</a> (String IframeID, String Locator, OKWLocator... Locators)</td></tr>
+<tr class="memdesc:a345c525cf50bcaad3c47555646051069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor der Klasse.  <a href="#a345c525cf50bcaad3c47555646051069">Mehr ...</a><br /></td></tr>
 <tr class="separator:a345c525cf50bcaad3c47555646051069"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae561257a88aece7f85d04001b7ead2ae"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#ae561257a88aece7f85d04001b7ead2ae">igetValue</a> ()  throws Exception         </td></tr>
 <tr class="memdesc:ae561257a88aece7f85d04001b7ead2ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ermittelt den textuellen Inhalt eines Textfeldes.  <a href="#ae561257a88aece7f85d04001b7ead2ae">Mehr ...</a><br /></td></tr>
@@ -529,7 +531,17 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
       </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Konstruktor der Klasse. </p>
+<p>iframeID wird auf den Wert "" (empty string) gesetzt.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Locator</td><td>definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben </td></tr>
+    <tr><td class="paramname">Locators</td><td>Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2013.05.03 </dd></dl>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_se_textarea_8java_source.html#l00067">67</a> der Datei <a class="el" href="_se_textarea_8java_source.html">SeTextarea.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            super(Locator, fpLocators);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div></div><!-- fragment -->
@@ -567,7 +579,17 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
       </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Konstruktor der Klasse. </p>
+<p>iframeID wird auf den Wert des Parameters fpIframeID gesetzt.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IframeID</td><td>ID des iframes in dem Sich das GUI-Objekt befindet. "" falls </td></tr>
+    <tr><td class="paramname">Locator</td><td>definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben </td></tr>
+    <tr><td class="paramname">Locators</td><td>Locatoren (z.B. von Elternobjekten), die mit dem fpLocator verkettet werden sollen.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki</dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2017.02.17 </dd></dl>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_se_textarea_8java_source.html#l00078">78</a> der Datei <a class="el" href="_se_textarea_8java_source.html">SeTextarea.java</a>.</p>
@@ -682,7 +704,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><b>adapter</b></li><li class="navelem"><b>selenium</b></li><li class="navelem"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html">SeTextarea</a></li>
-    <li class="footer">Erzeugt am Son Jul 2 2017 17:33:00 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mon Jul 3 2017 04:33:26 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

@@ -1,17 +1,18 @@
 <map id="okw.core.EN_VerifyTablecellValue_OKWVerifyingFailsException_Test.TC_VerifyTablecellValueWCM_OKWVerifyingFailsException_MV03" name="okw.core.EN_VerifyTablecellValue_OKWVerifyingFailsException_Test.TC_VerifyTablecellValueWCM_OKWVerifyingFailsException_MV03">
-<area shape="rect" id="node3" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="308,220,468,249"/>
-<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="295,167,481,196"/>
-<area shape="rect" id="node30" href="$classokw_1_1core_1_1_e_n.html#aae92a9bb1e550b16be588fbd38c39038" title="okw.core.EN.VerifyTablecell\lValueWCM" alt="" coords="295,97,481,143"/>
-<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="537,193,721,223"/>
-<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="544,259,715,288"/>
-<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..." alt="" coords="777,197,1007,227"/>
-<area shape="rect" id="node11" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls. " alt="" coords="803,250,981,297"/>
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="308,292,468,321"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="295,169,481,199"/>
+<area shape="rect" id="node30" href="$classokw_1_1core_1_1_e_n.html#aae92a9bb1e550b16be588fbd38c39038" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. " alt="" coords="295,222,481,269"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="537,263,721,292"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="544,320,715,349"/>
+<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..." alt="" coords="777,267,1007,296"/>
+<area shape="rect" id="node11" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls. " alt="" coords="803,373,981,419"/>
 <area shape="rect" id="node13" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="784,320,1000,349"/>
-<area shape="rect" id="node18" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="532,136,727,165"/>
-<area shape="rect" id="node20" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes. " alt="" coords="803,5,981,51"/>
+<area shape="rect" id="node18" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="532,105,727,135"/>
+<area shape="rect" id="node20" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes. " alt="" coords="803,127,981,174"/>
 <area shape="rect" id="node22" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. " alt="" coords="785,75,999,104"/>
-<area shape="rect" id="node28" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="795,127,989,174"/>
+<area shape="rect" id="node28" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="795,5,989,51"/>
 <area shape="rect" id="node24" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. " alt="" coords="1057,75,1279,104"/>
 <area shape="rect" id="node26" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag. " alt="" coords="1328,66,1531,113"/>
-<area shape="rect" id="node33" href="$classokw_1_1core_1_1_core.html#add884d5c22a8a05b762e3bc06a7ed02a" title="okw.core.Core.VerifyTablecell\lValueWCM" alt="" coords="531,66,728,113"/>
+<area shape="rect" id="node33" href="$classokw_1_1core_1_1_core.html#add884d5c22a8a05b762e3bc06a7ed02a" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. " alt="" coords="531,162,728,209"/>
+<area shape="rect" id="node37" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a3f9d14b5445fc5a5432483c302baf2c4" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. " alt="" coords="797,197,987,243"/>
 </map>

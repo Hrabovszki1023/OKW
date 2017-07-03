@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 191, Datum: 07.02.2017 17:30:37</span>
+   &#160;<span id="projectnumber">Build_ID: 192, Datum: 07.03.2017 04:31:07</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -257,8 +257,10 @@ $(document).ready(function(){initNavTree('classokw_1_1core_1_1_core.html','');})
 <tr class="memdesc:ad15cc0817387e5b6db0ae8b11619226f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert.  <a href="#ad15cc0817387e5b6db0ae8b11619226f">Mehr ...</a><br /></td></tr>
 <tr class="separator:ad15cc0817387e5b6db0ae8b11619226f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add884d5c22a8a05b762e3bc06a7ed02a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_core.html#add884d5c22a8a05b762e3bc06a7ed02a">VerifyTablecellValueWCM</a> (String FN, String COL, String ROW, String ExpVal)  throws Exception     </td></tr>
+<tr class="memdesc:add884d5c22a8a05b762e3bc06a7ed02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert.  <a href="#add884d5c22a8a05b762e3bc06a7ed02a">Mehr ...</a><br /></td></tr>
 <tr class="separator:add884d5c22a8a05b762e3bc06a7ed02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c0af68470649d10f4143ac58398ef03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_core.html#a3c0af68470649d10f4143ac58398ef03">VerifyTablecellValueREGX</a> (String FN, String COL, String ROW, String ExpVal)  throws Exception     </td></tr>
+<tr class="memdesc:a3c0af68470649d10f4143ac58398ef03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert.  <a href="#a3c0af68470649d10f4143ac58398ef03">Mehr ...</a><br /></td></tr>
 <tr class="separator:a3c0af68470649d10f4143ac58398ef03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa53c4a10dcd4eb1a6ae2c41eb9f23ee2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_core.html#aa53c4a10dcd4eb1a6ae2c41eb9f23ee2">VerifyTooltip</a> (String FN, String ExpVal)  throws Exception     </td></tr>
 <tr class="memdesc:aa53c4a10dcd4eb1a6ae2c41eb9f23ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prüft den Tooltip-Text eines Objektes.  <a href="#aa53c4a10dcd4eb1a6ae2c41eb9f23ee2">Mehr ...</a><br /></td></tr>
@@ -3767,13 +3769,25 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
       </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">COL</td><td>Spaltennummer der zu wählenden Zelle, beginnend mit 1. </td></tr>
+    <tr><td class="paramname">ROW</td><td>Zeilennummer der zu wählenden Zelle, beginnend mit 1. </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
-<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html">okw.core.IOKW_State</a>.</p>
+<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a4e452e946ec073b880a8e3d952b9340e">okw.core.IOKW_State</a>.</p>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_core_8java_source.html#l00857">857</a> der Datei <a class="el" href="_core_8java_source.html">Core.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;    {</div><div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;        <span class="keywordflow">try</span></div><div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;        {</div><div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;            Log.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">LogKeyWordStart</a>( <a class="code" href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">LM</a>.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;VerifyTablecellValue&quot;</span>, <span class="stringliteral">&quot;KeyWordName&quot;</span> ), FN, COL, ROW, ExpVal );</div><div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;            this.<a class="code" href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">CurrentState</a>.VerifyTablecellValueREGX( FN, COL, ROW, ExpVal );</div><div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;        }</div><div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;        <span class="keywordflow">finally</span></div><div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;        {</div><div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;            Log.LogKeyWordEnd();</div><div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;        }</div><div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    }</div><div class="ttc" id="classokw_1_1_log_messenger_html_af225d1f037d47b3b085175c09d78bdd2"><div class="ttname"><a href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">okw.LogMessenger.GetMessage</a></div><div class="ttdeci">String GetMessage(String MethodName, String TextKey)</div><div class="ttdoc">Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter. </div><div class="ttdef"><b>Definition:</b> <a href="_log_messenger_8java_source.html#l00137">LogMessenger.java:137</a></div></div>
+<div class="fragment"><div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;    {</div><div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;        <span class="keywordflow">try</span></div><div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;        {</div><div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;            Log.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">LogKeyWordStart</a>( <a class="code" href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">LM</a>.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;VerifyTablecellValue&quot;</span>, <span class="stringliteral">&quot;KeyWordName&quot;</span> ), FN, COL, ROW, ExpVal );</div><div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;            this.<a class="code" href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">CurrentState</a>.<a class="code" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a4e452e946ec073b880a8e3d952b9340e">VerifyTablecellValueREGX</a>( FN, COL, ROW, ExpVal );</div><div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;        }</div><div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;        <span class="keywordflow">finally</span></div><div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;        {</div><div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;            Log.LogKeyWordEnd();</div><div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;        }</div><div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    }</div><div class="ttc" id="classokw_1_1_log_messenger_html_af225d1f037d47b3b085175c09d78bdd2"><div class="ttname"><a href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">okw.LogMessenger.GetMessage</a></div><div class="ttdeci">String GetMessage(String MethodName, String TextKey)</div><div class="ttdoc">Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter. </div><div class="ttdef"><b>Definition:</b> <a href="_log_messenger_8java_source.html#l00137">LogMessenger.java:137</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00093">Core.java:93</a></div></div>
+<div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a4e452e946ec073b880a8e3d952b9340e"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a4e452e946ec073b880a8e3d952b9340e">okw.core.IOKW_State.VerifyTablecellValueREGX</a></div><div class="ttdeci">void VerifyTablecellValueREGX(String FN, String COL, String ROW, String ExpVal)</div><div class="ttdoc">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. </div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes. </div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes. </div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00356">Logger_Sngltn.java:356</a></div></div>
 </div><!-- fragment --><div id="dynsection-106" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -3781,7 +3795,7 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div id="dynsection-106-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-106-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1core_1_1_core_a3c0af68470649d10f4143ac58398ef03_cgraph.svg" width="100%" height="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1core_1_1_core_a3c0af68470649d10f4143ac58398ef03_cgraph.svg" width="100%" height="434"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div id="dynsection-107" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -3833,12 +3847,24 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
       </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">COL</td><td>Spaltennummer der zu wählenden Zelle, beginnend mit 1. </td></tr>
+    <tr><td class="paramname">ROW</td><td>Zeilennummer der zu wählenden Zelle, beginnend mit 1. </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
-<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html">okw.core.IOKW_State</a>.</p>
+<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a3f9d14b5445fc5a5432483c302baf2c4">okw.core.IOKW_State</a>.</p>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_core_8java_source.html#l00841">841</a> der Datei <a class="el" href="_core_8java_source.html">Core.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    {</div><div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;        <span class="keywordflow">try</span></div><div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;        {</div><div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            Log.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">LogKeyWordStart</a>( <a class="code" href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">LM</a>.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;VerifyTablecellValue&quot;</span>, <span class="stringliteral">&quot;KeyWordName&quot;</span> ), FN, COL, ROW, ExpVal );</div><div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;            this.<a class="code" href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">CurrentState</a>.VerifyTablecellValueWCM( FN, COL, ROW, ExpVal );</div><div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;        }</div><div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;        <span class="keywordflow">finally</span></div><div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;        {</div><div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;            Log.LogKeyWordEnd();</div><div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        }</div><div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;    }</div><div class="ttc" id="classokw_1_1_log_messenger_html_af225d1f037d47b3b085175c09d78bdd2"><div class="ttname"><a href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">okw.LogMessenger.GetMessage</a></div><div class="ttdeci">String GetMessage(String MethodName, String TextKey)</div><div class="ttdoc">Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter. </div><div class="ttdef"><b>Definition:</b> <a href="_log_messenger_8java_source.html#l00137">LogMessenger.java:137</a></div></div>
+<div class="fragment"><div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    {</div><div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;        <span class="keywordflow">try</span></div><div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;        {</div><div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            Log.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">LogKeyWordStart</a>( <a class="code" href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">LM</a>.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;VerifyTablecellValue&quot;</span>, <span class="stringliteral">&quot;KeyWordName&quot;</span> ), FN, COL, ROW, ExpVal );</div><div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;            this.<a class="code" href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">CurrentState</a>.<a class="code" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a3f9d14b5445fc5a5432483c302baf2c4">VerifyTablecellValueWCM</a>( FN, COL, ROW, ExpVal );</div><div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;        }</div><div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;        <span class="keywordflow">finally</span></div><div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;        {</div><div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;            Log.LogKeyWordEnd();</div><div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        }</div><div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;    }</div><div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a3f9d14b5445fc5a5432483c302baf2c4"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a3f9d14b5445fc5a5432483c302baf2c4">okw.core.IOKW_State.VerifyTablecellValueWCM</a></div><div class="ttdeci">void VerifyTablecellValueWCM(String FN, String COL, String ROW, String ExpVal)</div><div class="ttdoc">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. </div></div>
+<div class="ttc" id="classokw_1_1_log_messenger_html_af225d1f037d47b3b085175c09d78bdd2"><div class="ttname"><a href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">okw.LogMessenger.GetMessage</a></div><div class="ttdeci">String GetMessage(String MethodName, String TextKey)</div><div class="ttdoc">Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter. </div><div class="ttdef"><b>Definition:</b> <a href="_log_messenger_8java_source.html#l00137">LogMessenger.java:137</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00093">Core.java:93</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes. </div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes. </div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00356">Logger_Sngltn.java:356</a></div></div>
@@ -3847,7 +3873,7 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div id="dynsection-108-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-108-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1core_1_1_core_add884d5c22a8a05b762e3bc06a7ed02a_cgraph.svg" width="100%" height="388"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1core_1_1_core_add884d5c22a8a05b762e3bc06a7ed02a_cgraph.svg" width="100%" height="434"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div id="dynsection-109" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -3956,7 +3982,7 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <p>Der Sollwert wird als RegulererAusdruck angegeben.</p>
 <p><em>Beispiel: Prüfe, ob der Tooltip-Text des Objekts "MeinObjekt" dem erwarteten Wert "\\.jango" entspricht:</em> <br />
 </p>
-<pre class="fragment">PrüfeTooltipREGX: "MeinObjekt", "\\.jango" </pre><dl class="params"><dt>Parameter</dt><dd>
+<pre class="fragment">VerifyTooltipREGX( "MeinObjekt", "\\.jango" )</pre><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
     <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert, gegegebn als Regulärerausdruck.</td></tr>
@@ -4347,7 +4373,7 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>core</b></li><li class="navelem"><a class="el" href="classokw_1_1core_1_1_core.html">Core</a></li>
-    <li class="footer">Erzeugt am Son Jul 2 2017 17:32:34 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mon Jul 3 2017 04:32:57 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

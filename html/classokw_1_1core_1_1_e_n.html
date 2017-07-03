@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 191, Datum: 07.02.2017 17:30:37</span>
+   &#160;<span id="projectnumber">Build_ID: 192, Datum: 07.03.2017 04:31:07</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -255,8 +255,10 @@ $(document).ready(function(){initNavTree('classokw_1_1core_1_1_e_n.html','');});
 <tr class="memdesc:a67331a9d3f88e0c7c8a593730683c2c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert.  <a href="#a67331a9d3f88e0c7c8a593730683c2c6">Mehr ...</a><br /></td></tr>
 <tr class="separator:a67331a9d3f88e0c7c8a593730683c2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7f564b9473f69377d40c80e0508752a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_e_n.html#aa7f564b9473f69377d40c80e0508752a">VerifyTablecellValueREGX</a> (String FN, String COL, String ROW, String ExpVal)  throws Exception     </td></tr>
+<tr class="memdesc:aa7f564b9473f69377d40c80e0508752a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert.  <a href="#aa7f564b9473f69377d40c80e0508752a">Mehr ...</a><br /></td></tr>
 <tr class="separator:aa7f564b9473f69377d40c80e0508752a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae92a9bb1e550b16be588fbd38c39038"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_e_n.html#aae92a9bb1e550b16be588fbd38c39038">VerifyTablecellValueWCM</a> (String FN, String COL, String ROW, String ExpVal)  throws Exception     </td></tr>
+<tr class="memdesc:aae92a9bb1e550b16be588fbd38c39038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert.  <a href="#aae92a9bb1e550b16be588fbd38c39038">Mehr ...</a><br /></td></tr>
 <tr class="separator:aae92a9bb1e550b16be588fbd38c39038"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a19b4149e808ffc7fbaca9d0e6412b3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_e_n.html#a7a19b4149e808ffc7fbaca9d0e6412b3">VerifyTooltip</a> (String FN, String ExpVal)  throws Exception     </td></tr>
 <tr class="memdesc:a7a19b4149e808ffc7fbaca9d0e6412b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prüft den Tooltip-Text eines Objektes.  <a href="#a7a19b4149e808ffc7fbaca9d0e6412b3">Mehr ...</a><br /></td></tr>
@@ -3559,17 +3561,28 @@ Beispiel: Login</h1>
 </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">COL</td><td>Spaltennummer der zu wählenden Zelle, beginnend mit 1. </td></tr>
+    <tr><td class="paramname">ROW</td><td>Zeilennummer der zu wählenden Zelle, beginnend mit 1. </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_e_n_8java_source.html#l00509">509</a> der Datei <a class="el" href="_e_n_8java_source.html">EN.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    {</div><div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        myKernel.<a class="code" href="classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100">setLanguage</a>( Language );</div><div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        myKernel.<a class="code" href="classokw_1_1core_1_1_core.html#a3c0af68470649d10f4143ac58398ef03">VerifyTablecellValueREGX</a>( FN, COL, ROW, ExpVal );</div><div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    }</div><div class="ttc" id="classokw_1_1core_1_1_core_html_a3c0af68470649d10f4143ac58398ef03"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3c0af68470649d10f4143ac58398ef03">okw.core.Core.VerifyTablecellValueREGX</a></div><div class="ttdeci">void VerifyTablecellValueREGX(String FN, String COL, String ROW, String ExpVal)</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00857">Core.java:857</a></div></div>
+<div class="fragment"><div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    {</div><div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;        myKernel.<a class="code" href="classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100">setLanguage</a>( Language );</div><div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        myKernel.<a class="code" href="classokw_1_1core_1_1_core.html#a3c0af68470649d10f4143ac58398ef03">VerifyTablecellValueREGX</a>( FN, COL, ROW, ExpVal );</div><div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    }</div><div class="ttc" id="classokw_1_1core_1_1_core_html_a3c0af68470649d10f4143ac58398ef03"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3c0af68470649d10f4143ac58398ef03">okw.core.Core.VerifyTablecellValueREGX</a></div><div class="ttdeci">void VerifyTablecellValueREGX(String FN, String COL, String ROW, String ExpVal)</div><div class="ttdoc">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. </div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00857">Core.java:857</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_ab4e0f723d27cb11c944ec4c82c426100"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100">okw.core.Core.setLanguage</a></div><div class="ttdeci">void setLanguage(String Language)</div><div class="ttdoc">Setzt die Sprache auf den gegebenen wert Language. </div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00625">Core.java:625</a></div></div>
 </div><!-- fragment --><div id="dynsection-88" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-88-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-88-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-88-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1core_1_1_e_n_aa7f564b9473f69377d40c80e0508752a_cgraph.svg" width="100%" height="428"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1core_1_1_e_n_aa7f564b9473f69377d40c80e0508752a_cgraph.svg" width="100%" height="474"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div id="dynsection-89" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -3629,17 +3642,28 @@ Beispiel: Login</h1>
 </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">COL</td><td>Spaltennummer der zu wählenden Zelle, beginnend mit 1. </td></tr>
+    <tr><td class="paramname">ROW</td><td>Zeilennummer der zu wählenden Zelle, beginnend mit 1. </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_e_n_8java_source.html#l00518">518</a> der Datei <a class="el" href="_e_n_8java_source.html">EN.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;    {</div><div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        myKernel.<a class="code" href="classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100">setLanguage</a>( Language );</div><div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        myKernel.<a class="code" href="classokw_1_1core_1_1_core.html#add884d5c22a8a05b762e3bc06a7ed02a">VerifyTablecellValueWCM</a>( FN, COL, ROW, ExpVal );</div><div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    }</div><div class="ttc" id="classokw_1_1core_1_1_core_html_ab4e0f723d27cb11c944ec4c82c426100"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100">okw.core.Core.setLanguage</a></div><div class="ttdeci">void setLanguage(String Language)</div><div class="ttdoc">Setzt die Sprache auf den gegebenen wert Language. </div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00625">Core.java:625</a></div></div>
-<div class="ttc" id="classokw_1_1core_1_1_core_html_add884d5c22a8a05b762e3bc06a7ed02a"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#add884d5c22a8a05b762e3bc06a7ed02a">okw.core.Core.VerifyTablecellValueWCM</a></div><div class="ttdeci">void VerifyTablecellValueWCM(String FN, String COL, String ROW, String ExpVal)</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00841">Core.java:841</a></div></div>
+<div class="ttc" id="classokw_1_1core_1_1_core_html_add884d5c22a8a05b762e3bc06a7ed02a"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#add884d5c22a8a05b762e3bc06a7ed02a">okw.core.Core.VerifyTablecellValueWCM</a></div><div class="ttdeci">void VerifyTablecellValueWCM(String FN, String COL, String ROW, String ExpVal)</div><div class="ttdoc">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. </div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00841">Core.java:841</a></div></div>
 </div><!-- fragment --><div id="dynsection-90" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-90-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-90-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-90-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1core_1_1_e_n_aae92a9bb1e550b16be588fbd38c39038_cgraph.svg" width="100%" height="428"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1core_1_1_e_n_aae92a9bb1e550b16be588fbd38c39038_cgraph.svg" width="100%" height="474"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div id="dynsection-91" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -3759,7 +3783,7 @@ Beispiel: Login</h1>
 <p>Der Sollwert wird als RegulererAusdruck angegeben.</p>
 <p><em>Beispiel: Prüfe, ob der Tooltip-Text des Objekts "MeinObjekt" dem erwarteten Wert "\\.jango" entspricht:</em> <br />
 </p>
-<pre class="fragment">PrüfeTooltipREGX: "MeinObjekt", "\\.jango" </pre><dl class="params"><dt>Parameter</dt><dd>
+<pre class="fragment">VerifyTooltipREGX( "MeinObjekt", "\\.jango" )</pre><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
     <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
     <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert, gegegebn als Regulärerausdruck.</td></tr>
@@ -4090,7 +4114,7 @@ Beispiel: Login</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>core</b></li><li class="navelem"><a class="el" href="classokw_1_1core_1_1_e_n.html">EN</a></li>
-    <li class="footer">Erzeugt am Son Jul 2 2017 17:32:38 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mon Jul 3 2017 04:33:01 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 191, Datum: 07.02.2017 17:30:37</span>
+   &#160;<span id="projectnumber">Build_ID: 192, Datum: 07.03.2017 04:31:07</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('classokw_1_1gui_1_1adapter_1_1selenium
 </div><!--header-->
 <div class="contents">
 
-<p>Diese Klasse representiert einen HTML-Link, die mit Selenium angsteuert wird.  
+<p>Diese Klasse representiert einen -Tag (Link), der mit Selenium angsteuert wird.  
  <a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html#details">Mehr ...</a></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Klassendiagramm für okw.gui.adapter.selenium.SeLink:</div>
@@ -120,8 +120,10 @@ $(document).ready(function(){initNavTree('classokw_1_1gui_1_1adapter_1_1selenium
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
 <tr class="memitem:a7dc7f49cc59089ce6330cf75a9d67132"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html#a7dc7f49cc59089ce6330cf75a9d67132">SeLink</a> (String Locator, OKWLocator... Locators)</td></tr>
+<tr class="memdesc:a7dc7f49cc59089ce6330cf75a9d67132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor der Klasse.  <a href="#a7dc7f49cc59089ce6330cf75a9d67132">Mehr ...</a><br /></td></tr>
 <tr class="separator:a7dc7f49cc59089ce6330cf75a9d67132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae3afc6ee6365f2a23e583e4162a240f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html#aae3afc6ee6365f2a23e583e4162a240f">SeLink</a> (String IframeID, String Locator, OKWLocator... Locators)</td></tr>
+<tr class="memdesc:aae3afc6ee6365f2a23e583e4162a240f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor der Klasse.  <a href="#aae3afc6ee6365f2a23e583e4162a240f">Mehr ...</a><br /></td></tr>
 <tr class="separator:aae3afc6ee6365f2a23e583e4162a240f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac07906e995862490b82616c40d1340e7"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html#ac07906e995862490b82616c40d1340e7">getIsActive</a> ()</td></tr>
 <tr class="memdesc:ac07906e995862490b82616c40d1340e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Standard HTML-Link kann nicht aktiv/inaktiv oder enable/disables sein.  <a href="#ac07906e995862490b82616c40d1340e7">Mehr ...</a><br /></td></tr>
@@ -490,8 +492,8 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
 <tr class="separator:ab9aae428db366fa60b89675092e11fe3 inherit pac_attribs_classokw_1_1gui_1_1_any_win_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><p>Diese Klasse representiert einen HTML-Link, die mit Selenium angsteuert wird. </p>
-<p><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html" title="Diese Klasse representiert einen HTML-Link, die mit Selenium angsteuert wird. ">SeLink</a> erweitert die Klasse <a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html">SeAnyChildWindow</a></p>
+<div class="textblock"><p>Diese Klasse representiert einen -Tag (Link), der mit Selenium angsteuert wird. </p>
+<p><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html" title="Diese Klasse representiert einen -Tag (Link), der mit Selenium angsteuert wird. ">SeLink</a> erweitert die Klasse <a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html">SeAnyChildWindow</a></p>
 <div class="plantumlgraph">
 <object type="image/svg+xml" data="SeLinkExtendsSeAnyChildWindow.svg"></object>
 </div>
@@ -612,7 +614,17 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
       </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Konstruktor der Klasse. </p>
+<p>iframeID wird auf den Wert "" (empty string) gesetzt.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Locator</td><td>definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben </td></tr>
+    <tr><td class="paramname">Locators</td><td>Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2013.05.03 </dd></dl>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_se_link_8java_source.html#l00133">133</a> der Datei <a class="el" href="_se_link_8java_source.html">SeLink.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    {</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        super( Locator, Locators );</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div></div><!-- fragment -->
@@ -650,7 +662,17 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
       </table>
 </div><div class="memdoc">
 
-<p></p>
+<p>Konstruktor der Klasse. </p>
+<p>iframeID wird auf den Wert des Parameters fpIframeID gesetzt.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IframeID</td><td>ID des iframes in dem Sich das GUI-Objekt befindet. "" falls </td></tr>
+    <tr><td class="paramname">Locator</td><td>definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben </td></tr>
+    <tr><td class="paramname">Locators</td><td>Locatoren (z.B. von Elternobjekten), die mit dem fpLocator verkettet werden sollen.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki</dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2017.02.17 </dd></dl>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_se_link_8java_source.html#l00143">143</a> der Datei <a class="el" href="_se_link_8java_source.html">SeLink.java</a>.</p>
@@ -774,7 +796,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>iframeID</b> = &quo
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><b>adapter</b></li><li class="navelem"><b>selenium</b></li><li class="navelem"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html">SeLink</a></li>
-    <li class="footer">Erzeugt am Son Jul 2 2017 17:32:51 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mon Jul 3 2017 04:33:16 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

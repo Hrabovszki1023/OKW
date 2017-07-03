@@ -159,7 +159,7 @@
 </g>
 <!-- Node7 -->
 <g id="node15" class="node"><title>Node7</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html" target="_top" xlink:title="Diese Klasse representiert einen HTML&#45;Button, die mit Selenium angsteuert wird. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;button&gt;&#45;Button, der mit Selenium angsteuert wird. ">
 <polygon fill="white" stroke="black" points="554.5,-757 554.5,-791 685.5,-791 685.5,-757 554.5,-757"/>
 <text text-anchor="start" x="562.5" y="-778" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="620" y="-765" font-family="Helvetica,sans-Serif" font-size="10.00">SeButton</text>
@@ -185,7 +185,7 @@
 </g>
 <!-- Node9 -->
 <g id="node19" class="node"><title>Node9</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;input type=&quot;button&quot;&gt;&#45;tag, der mit Selenium angsteuert wird...">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;input type=&quot;button&quot;&gt;&#45;Tag, der mit Selenium angsteuert wird...">
 <polygon fill="white" stroke="black" points="554.5,-653 554.5,-687 685.5,-687 685.5,-653 554.5,-653"/>
 <text text-anchor="start" x="562.5" y="-674" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="620" y="-661" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputButton</text>
@@ -237,7 +237,7 @@
 </g>
 <!-- Node13 -->
 <g id="node27" class="node"><title>Node13</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html" target="_top" xlink:title="Diese Klasse representiert einen HTML&#45;Link, die mit Selenium angsteuert wird. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html" target="_top" xlink:title="Diese Klasse representiert einen &#45;Tag (Link), der mit Selenium angsteuert wird. ">
 <polygon fill="white" stroke="black" points="554.5,-1017 554.5,-1051 685.5,-1051 685.5,-1017 554.5,-1017"/>
 <text text-anchor="start" x="562.5" y="-1038" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="620" y="-1025" font-family="Helvetica,sans-Serif" font-size="10.00">SeLink</text>
@@ -250,7 +250,7 @@
 </g>
 <!-- Node14 -->
 <g id="node29" class="node"><title>Node14</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;select&gt;&#45;tag, der mit Selenium angsteuert wird. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;select&gt;&#45;Tag, der mit Selenium angsteuert wird. ">
 <polygon fill="white" stroke="black" points="554.5,-965 554.5,-999 685.5,-999 685.5,-965 554.5,-965"/>
 <text text-anchor="start" x="562.5" y="-986" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="620" y="-973" font-family="Helvetica,sans-Serif" font-size="10.00">SeRadioList</text>
@@ -263,7 +263,7 @@
 </g>
 <!-- Node16 -->
 <g id="node33" class="node"><title>Node16</title>
-<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;select&gt;&#45;tag, der mit Selenium angsteuert wird. ">
+<a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;select&gt;&#45;Tag, der mit Selenium angsteuert wird. ">
 <polygon fill="white" stroke="black" points="554.5,-913 554.5,-947 685.5,-947 685.5,-913 554.5,-913"/>
 <text text-anchor="start" x="562.5" y="-934" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="620" y="-921" font-family="Helvetica,sans-Serif" font-size="10.00">SeSelect</text>
