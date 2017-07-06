@@ -21,6 +21,7 @@ var ref_anwenderhandbuch =
         [ "Synchronisation", "ref_reduzierung_von_aufw_xC3_xA4nde.html#refSynchronisation", null ],
         [ "Methoden Überschreibung", "ref_reduzierung_von_aufw_xC3_xA4nde.html#refMethodenÜberschreibung", null ]
       ] ],
+      [ "Sequenzen", "ref_reduzierung_von_aufw_xC3_xA4nde.html#refAufwandreduzierungSequenzen", null ],
       [ "Einleitung", "ref_reduzierung_von_aufw_xC3_xA4nde.html#refEinleitung", null ],
       [ "Grundsätzliche Überlegungen", "ref_reduzierung_von_aufw_xC3_xA4nde.html#refGrundsätzlicheÜberlegungen", null ],
       [ "Testfallerstellung", "ref_reduzierung_von_aufw_xC3_xA4nde.html#refTestfallErstellung", [

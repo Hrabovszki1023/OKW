@@ -125,7 +125,7 @@ var sectionId = 'dynsection-2';
 </g>
 <!-- Node21 -->
 <g id="node11" class="node"><title>Node21</title>
-<a xlink:href="classokw_1_1core_1_1_core.html#ac282376df171a9d2d62bfe2f5a624cb2" target="_top" xlink:title="Klickt auf das gegebene Objekt. ">
+<a xlink:href="classokw_1_1core_1_1_core.html#ac282376df171a9d2d62bfe2f5a624cb2" target="_top" xlink:title="Führt ein Doppelklick auf das gegebene GUI&#45;Objekt aus. ">
 <polygon fill="white" stroke="red" points="643.5,-292.5 643.5,-313.5 792.5,-313.5 792.5,-292.5 643.5,-292.5"/>
 <text text-anchor="middle" x="718" y="-300.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.DoubleClickOn</text>
 </a>
@@ -137,7 +137,7 @@ var sectionId = 'dynsection-2';
 </g>
 <!-- Node28 -->
 <g id="node13" class="node"><title>Node28</title>
-<a xlink:href="classokw_1_1core_1_1_core.html#a40b3422362c40854e75c069250a9c964" target="_top" xlink:title="Protokolliert, ob das gegebene Objekt existiert. ">
+<a xlink:href="classokw_1_1core_1_1_core.html#a40b3422362c40854e75c069250a9c964" target="_top" xlink:title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus. ">
 <polygon fill="white" stroke="red" points="654.5,-252.5 654.5,-273.5 781.5,-273.5 781.5,-252.5 654.5,-252.5"/>
 <text text-anchor="middle" x="718" y="-260.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogExists</text>
 </a>
@@ -210,7 +210,7 @@ var sectionId = 'dynsection-2';
 </g>
 <!-- Node67 -->
 <g id="node25" class="node"><title>Node67</title>
-<a xlink:href="classokw_1_1core_1_1_core.html#a0aa220ef8efe2df075093c4eb2a08212" target="_top" xlink:title="Keine Beschreibung zu &quot;LogCaption&quot; verfügbar. ">
+<a xlink:href="classokw_1_1core_1_1_core.html#a0aa220ef8efe2df075093c4eb2a08212" target="_top" xlink:title="Gibt die Caption eines GUI&#45;Objektes in den Testergebnissen aus. ">
 <polygon fill="white" stroke="red" points="651.5,-0.5 651.5,-21.5 784.5,-21.5 784.5,-0.5 651.5,-0.5"/>
 <text text-anchor="middle" x="718" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogCaption</text>
 </a>

@@ -48,47 +48,47 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 788;
 var viewHeight = 160;
-var sectionId = 'dynsection-22';
+var sectionId = 'dynsection-23';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>okw.core.IOKW_State.MemorizeTablecellValue</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-156 785,-156 785,5 -4,5"/>
-<!-- Node828 -->
-<g id="node1" class="node"><title>Node828</title>
+<!-- Node831 -->
+<g id="node1" class="node"><title>Node831</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-36 0.5,-70 161.5,-70 161.5,-36 0.5,-36"/>
 <text text-anchor="start" x="8.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.Memorize</text>
 <text text-anchor="middle" x="81" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">TablecellValue</text>
 </g>
-<!-- Node829 -->
-<g id="node3" class="node"><title>Node829</title>
+<!-- Node832 -->
+<g id="node3" class="node"><title>Node832</title>
 <a xlink:href="classokw_1_1core_1_1_core.html#a67a1a2afd49b3f0e696f86e78a599c4b" target="_top" xlink:title="Merkt sich den Wert der gegebenen Zelle in der Tabelle. ">
 <polygon fill="white" stroke="black" points="198.5,-36 198.5,-70 363.5,-70 363.5,-36 198.5,-36"/>
 <text text-anchor="start" x="206.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.MemorizeTablecell</text>
 <text text-anchor="middle" x="281" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">Value</text>
 </a>
 </g>
-<!-- Node828&#45;&gt;Node829 -->
-<g id="edge2" class="edge"><title>Node828&#45;&gt;Node829</title>
+<!-- Node831&#45;&gt;Node832 -->
+<g id="edge2" class="edge"><title>Node831&#45;&gt;Node832</title>
 <path fill="none" stroke="midnightblue" d="M172,-53C180.764,-53 189.62,-53 198.298,-53"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="171.771,-49.5001 161.771,-53 171.771,-56.5001 171.771,-49.5001"/>
 </g>
-<!-- Node830 -->
-<g id="node5" class="node"><title>Node830</title>
+<!-- Node833 -->
+<g id="node5" class="node"><title>Node833</title>
 <a xlink:href="classokw_1_1core_1_1_e_n.html#a69ca65f068665ec7e458d9701bb826ff" target="_top" xlink:title="Merkt sich den Wert der gegebenen Zelle in der Tabelle. ">
 <polygon fill="white" stroke="black" points="403,-66 403,-100 561,-100 561,-66 403,-66"/>
 <text text-anchor="start" x="411" y="-87" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.MemorizeTablecell</text>
 <text text-anchor="middle" x="482" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00">Value</text>
 </a>
 </g>
-<!-- Node829&#45;&gt;Node830 -->
-<g id="edge4" class="edge"><title>Node829&#45;&gt;Node830</title>
+<!-- Node832&#45;&gt;Node833 -->
+<g id="edge4" class="edge"><title>Node832&#45;&gt;Node833</title>
 <path fill="none" stroke="midnightblue" d="M373.741,-66.8419C383.497,-68.2981 393.352,-69.7689 402.934,-71.199"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="374.032,-63.3466 363.625,-65.332 372.998,-70.2699 374.032,-63.3466"/>
 </g>
-<!-- Node833 -->
-<g id="node11" class="node"><title>Node833</title>
+<!-- Node836 -->
+<g id="node11" class="node"><title>Node836</title>
 <a xlink:href="classokw_1_1core_1_1_current_object___test.html#aefef14ea88c3a0d237d4d94d6e60967e" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode MemorizeSelectedValue( FN, MemKey ) im ChildObject. ">
 <polygon fill="white" stroke="black" points="400,-0.5 400,-47.5 564,-47.5 564,-0.5 400,-0.5"/>
 <text text-anchor="start" x="408" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -96,13 +96,13 @@ var sectionId = 'dynsection-22';
 <text text-anchor="middle" x="482" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">Value_ChildObject</text>
 </a>
 </g>
-<!-- Node829&#45;&gt;Node833 -->
-<g id="edge10" class="edge"><title>Node829&#45;&gt;Node833</title>
+<!-- Node832&#45;&gt;Node836 -->
+<g id="edge10" class="edge"><title>Node832&#45;&gt;Node836</title>
 <path fill="none" stroke="midnightblue" d="M373.741,-39.6195C382.402,-38.3699 391.14,-37.1092 399.696,-35.8747"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="373.022,-36.1868 363.625,-41.079 374.022,-43.1151 373.022,-36.1868"/>
 </g>
-<!-- Node831 -->
-<g id="node7" class="node"><title>Node831</title>
+<!-- Node834 -->
+<g id="node7" class="node"><title>Node834</title>
 <a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a8c28a77c8241c9b46584fccb2fc480b1" target="_top" xlink:title="Prüft ob &quot;${IGNORE} &quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst. ">
 <polygon fill="white" stroke="black" points="600.5,-92 600.5,-152 779.5,-152 779.5,-92 600.5,-92"/>
 <text text-anchor="start" x="608.5" y="-139" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -111,13 +111,13 @@ var sectionId = 'dynsection-22';
 <text text-anchor="middle" x="690" y="-100" font-family="Helvetica,sans-Serif" font-size="10.00">IGNORE1</text>
 </a>
 </g>
-<!-- Node830&#45;&gt;Node831 -->
-<g id="edge6" class="edge"><title>Node830&#45;&gt;Node831</title>
+<!-- Node833&#45;&gt;Node834 -->
+<g id="edge6" class="edge"><title>Node833&#45;&gt;Node834</title>
 <path fill="none" stroke="midnightblue" d="M571.176,-99.7206C580.795,-101.524 590.587,-103.36 600.213,-105.165"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="571.703,-96.2584 561.229,-97.8555 570.413,-103.139 571.703,-96.2584"/>
 </g>
-<!-- Node832 -->
-<g id="node9" class="node"><title>Node832</title>
+<!-- Node835 -->
+<g id="node9" class="node"><title>Node835</title>
 <a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a5661983ff87090109557ad06f0ad2301" target="_top" xlink:title="Prüft ob &quot;&quot;${IGNORE}${TCN}&quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst...">
 <polygon fill="white" stroke="black" points="600.5,-14 600.5,-74 779.5,-74 779.5,-14 600.5,-14"/>
 <text text-anchor="start" x="608.5" y="-61" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -126,8 +126,8 @@ var sectionId = 'dynsection-22';
 <text text-anchor="middle" x="690" y="-22" font-family="Helvetica,sans-Serif" font-size="10.00">IGNORE2</text>
 </a>
 </g>
-<!-- Node830&#45;&gt;Node832 -->
-<g id="edge8" class="edge"><title>Node830&#45;&gt;Node832</title>
+<!-- Node833&#45;&gt;Node835 -->
+<g id="edge8" class="edge"><title>Node833&#45;&gt;Node835</title>
 <path fill="none" stroke="midnightblue" d="M571.176,-66.2794C580.795,-64.4759 590.587,-62.64 600.213,-60.8351"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="570.413,-62.8615 561.229,-68.1445 571.703,-69.7416 570.413,-62.8615"/>
 </g>

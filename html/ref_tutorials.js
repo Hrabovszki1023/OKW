@@ -4,7 +4,6 @@ var ref_tutorials =
       [ "Radiolist", "ref_selenium_g_u_iadapter.html#refRadioList", null ],
       [ "Vorraussetzung", "ref_tutorial01.html#refTutorial01_Vorraussetzung", null ],
       [ "Reines OKW Testprojekt anlegen", "ref_tutorial01.html#refTutorial01_OKW_Testprojekt_Anlegen", [
-        [ "${TCN}", "ref_l_o_const.html#refTCN", null ],
         [ "Ein neues Maven Projekt anlegen", "ref_tutorial01.html#refTutorial01_Ein_Neues_Maven_Projekt_Anlegen", null ],
         [ "Entstandene pom.xml-Datei anpassen.", "ref_tutorial01.html#refTutorial01_Pom_Anpassen", [
           [ "1. Java 8 einstellen", "ref_tutorial01.html#refTutorial01_Java_8_Einstellen", null ],

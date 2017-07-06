@@ -57,16 +57,16 @@
 </g>
 <!-- Node41 -->
 <g id="node7" class="node"><title>Node41</title>
-<a xlink:href="classokw_1_1log_1_1_log2_console.html#a62905e4d224da47b6a31d17384594011" target="_top" xlink:title="okw.log.Log2Console.Blank\lBefore">
-<polygon fill="white" stroke="black" points="436,-10 436,-44 574,-44 574,-10 436,-10"/>
-<text text-anchor="start" x="444" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blank</text>
+<a xlink:href="classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2" target="_top" xlink:title="Erzeugt die Einrücktiefe für die Console&#45;Ausgabe. ">
+<polygon fill="white" stroke="black" points="433.5,-10 433.5,-44 576.5,-44 576.5,-10 433.5,-10"/>
+<text text-anchor="start" x="441.5" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blanks</text>
 <text text-anchor="middle" x="505" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">Before</text>
 </a>
 </g>
 <!-- Node39&#45;&gt;Node41 -->
 <g id="edge6" class="edge"><title>Node39&#45;&gt;Node41</title>
-<path fill="none" stroke="midnightblue" d="M392.119,-40.6826C403.273,-39.3305 414.668,-37.9494 425.72,-36.6097"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="426.252,-40.071 435.758,-35.393 425.409,-33.1218 426.252,-40.071"/>
+<path fill="none" stroke="midnightblue" d="M392.119,-40.6826C402.417,-39.4343 412.919,-38.1613 423.168,-36.919"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="423.81,-40.3669 433.316,-35.6889 422.968,-33.4178 423.81,-40.3669"/>
 </g>
 <!-- Node42 -->
 <g id="node9" class="node"><title>Node42</title>
@@ -77,13 +77,13 @@
 </g>
 <!-- Node41&#45;&gt;Node42 -->
 <g id="edge8" class="edge"><title>Node41&#45;&gt;Node42</title>
-<path fill="none" stroke="midnightblue" d="M574.101,-27C584.508,-27 595.349,-27 606.057,-27"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="606.264,-30.5001 616.264,-27 606.264,-23.5001 606.264,-30.5001"/>
+<path fill="none" stroke="midnightblue" d="M576.764,-27C586.396,-27 596.354,-27 606.197,-27"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="606.395,-30.5001 616.395,-27 606.395,-23.5001 606.395,-30.5001"/>
 </g>
 <!-- Node43&#45;&gt;Node41 -->
 <g id="edge14" class="edge"><title>Node43&#45;&gt;Node41</title>
-<path fill="none" stroke="midnightblue" d="M393.558,-17.9946C404.282,-18.8612 415.205,-19.7438 425.811,-20.6009"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="425.617,-24.0965 435.866,-21.4135 426.181,-17.1193 425.617,-24.0965"/>
+<path fill="none" stroke="midnightblue" d="M393.558,-17.9946C403.443,-18.7934 413.497,-19.6058 423.317,-20.3993"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="423.198,-23.9011 433.447,-21.218 423.762,-16.9238 423.198,-23.9011"/>
 </g>
 </g>
 </svg>

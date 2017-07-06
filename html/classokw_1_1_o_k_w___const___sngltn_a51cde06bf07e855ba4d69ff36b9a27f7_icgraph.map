@@ -16,7 +16,7 @@
 <area shape="rect" id="node111" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a065bf42fe3ac6802ebac1bb25099e89a" title="Ermittelt den aktuellen Wert des RadioButtons. " alt="" coords="335,1521,508,1568"/>
 <area shape="rect" id="node113" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a7dce83be09a4af05f50b0e74aa9d27f7" title="Ein SeInputButton IstkeinMenüobject! &#45;&gt; OKWFrameObjectMethodNotImplemented Auslösen! ..." alt="" coords="335,1591,508,1637"/>
 <area shape="rect" id="node115" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a2de5dcb9d606e72dbe9e5a9cbef481ad" title="Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert. " alt="" coords="335,1660,508,1707"/>
-<area shape="rect" id="node15" href="$classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" title="Protokolliert, ob das gegebene Objekt existiert. " alt="" coords="672,191,832,221"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus. " alt="" coords="672,191,832,221"/>
 <area shape="rect" id="node17" href="$classokw_1_1core_1_1_o_k.html#a1b8a5a3d583ffabc0063632ab9d981cf" title="Dokumentiert den Fokus&#45;Status des gegebenen Objekts. " alt="" coords="661,245,843,274"/>
 <area shape="rect" id="node19" href="$classokw_1_1core_1_1_o_k.html#ae44a6c32e26a7f93dd5c9f7b5765ee0d" title="Dokumentiert den Status des gegebenen Objekts. " alt="" coords="667,298,837,327"/>
 <area shape="rect" id="node21" href="$classokw_1_1core_1_1_o_k.html#a61db6d17853d7c0913216708c2c29779" title="Merkt sich den aktuell existierenden Zustand des Objekts. " alt="" coords="655,405,849,434"/>
@@ -42,8 +42,8 @@
 <area shape="rect" id="node74" href="$classokw_1_1core_1_1_o_k.html#a4187442dc3574358fda8af18cb03f15e" title="Überprüft die Beschreibung des Objektes. " alt="" coords="652,2042,852,2071"/>
 <area shape="rect" id="node76" href="$classokw_1_1core_1_1_o_k.html#aeedf0dfdfe514b50ad774eb187a8cc34" title="Überprüft die Überschrift des Objektes. " alt="" coords="649,2095,855,2125"/>
 <area shape="rect" id="node78" href="$classokw_1_1core_1_1_o_k.html#a648f371fccab2eded552b69adf164bbd" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="659,633,845,680"/>
-<area shape="rect" id="node80" href="$classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b" title="okw.core.OK.VerifySelected\lValueWCM" alt="" coords="659,703,845,749"/>
-<area shape="rect" id="node82" href="$classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f" title="okw.core.OK.VerifySelected\lValueREGX" alt="" coords="659,772,845,819"/>
+<area shape="rect" id="node80" href="$classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="659,703,845,749"/>
+<area shape="rect" id="node82" href="$classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="659,772,845,819"/>
 <area shape="rect" id="node84" href="$classokw_1_1core_1_1_o_k.html#a3548a5a8ddfbf7f84bfe18ba200e1b35" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. " alt="" coords="659,841,845,888"/>
 <area shape="rect" id="node86" href="$classokw_1_1core_1_1_o_k.html#a30fc98c4004c99e3e37047deac6ad16f" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. " alt="" coords="659,911,845,957"/>
 <area shape="rect" id="node88" href="$classokw_1_1core_1_1_o_k.html#a84abe8cdf2426bde23d357c89a6822a6" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. " alt="" coords="659,980,845,1027"/>

@@ -135,7 +135,7 @@ var sectionId = 'dynsection-26';
 </g>
 <!-- Node701 -->
 <g id="node66" class="node"><title>Node701</title>
-<a xlink:href="classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" target="_top" xlink:title="Beendet den Test, bzw. ">
+<a xlink:href="classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" target="_top" xlink:title="Signalisiert das Ende eines Testfalls. ">
 <polygon fill="white" stroke="black" points="253.5,-147.5 253.5,-168.5 366.5,-168.5 366.5,-147.5 253.5,-147.5"/>
 <text text-anchor="middle" x="310" y="-155.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.EndTest</text>
 </a>
@@ -450,7 +450,7 @@ var sectionId = 'dynsection-26';
 </g>
 <!-- Node702 -->
 <g id="node69" class="node"><title>Node702</title>
-<a xlink:href="classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" target="_top" xlink:title="Beendet den Test, bzw. ">
+<a xlink:href="classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" target="_top" xlink:title="Signalisiert das Ende eines Testfalls. ">
 <polygon fill="white" stroke="black" points="454,-109.5 454,-130.5 574,-130.5 574,-109.5 454,-109.5"/>
 <text text-anchor="middle" x="514" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.EndTest</text>
 </a>
@@ -462,7 +462,7 @@ var sectionId = 'dynsection-26';
 </g>
 <!-- Node703 -->
 <g id="node71" class="node"><title>Node703</title>
-<a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186" target="_top" xlink:title="Beendet den Test, bzw. ">
+<a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186" target="_top" xlink:title="Signalisiert das Ende eines Testfalls. ">
 <polygon fill="white" stroke="black" points="645.5,-92.5 645.5,-113.5 800.5,-113.5 800.5,-92.5 645.5,-92.5"/>
 <text text-anchor="middle" x="723" y="-100.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.EndTest</text>
 </a>

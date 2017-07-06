@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 192, Datum: 07.03.2017 04:31:07</span>
+   &#160;<span id="projectnumber">Build_ID: 193, Datum: 07.06.2017 04:11:51</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -99,52 +99,29 @@ $(document).ready(function(){initNavTree('ref_log_caption.html','');});
 <li>no wildcards</li>
 <li>no regular expression</li>
 </ul>
-<h1><a class="anchor" id="refVerifyCaptionParameter"></a>
+<h1><a class="anchor" id="refLogCaptionParameter"></a>
 Parameter</h1>
 <table class="doxtable">
 <tr>
 <th>Parameter </th><th align="left">Description  </th></tr>
 <tr>
 <td><code>FN</code> </td><td align="left">Functionalname of the GUI-Object </td></tr>
-<tr>
-<td><code>ExpVal</code> </td><td align="left">Expected value </td></tr>
 </table>
-<h1><a class="anchor" id="refVerifyCaptionExamples"></a>
+<h1><a class="anchor" id="refLogCaptionExamples"></a>
 Examples</h1>
-<h2><a class="anchor" id="refVerifyCaptionDefault"></a>
+<h2><a class="anchor" id="refLogCaptionDefault"></a>
 Default Usage</h2>
 <ol type="1">
 <li><code>EN.SelectWindow( "Login" )</code> - Set context to the Window <code>Login</code> with the ChildObject you want to verify.</li>
-<li>**<code>EN.VerifyCaption( "OK", "Ok" )</code>** - then Verify the GUI-Object with the <code>FN = "OK"</code> has a caption = "Ok"</li>
+<li>**<code>EN.LogCaption( "OK" )</code>** - then log Caption of the GUI-Object with the <code>FN = "OK"</code></li>
 </ol>
-<h2><a class="anchor" id="refVerifyCaptionExample2"></a>
-Verify an Empty GUI-object</h2>
-<ol type="1">
-<li>**<code>EN.VerifyCaption( "OK", "${EMPTY}" )</code>** - Verifyies that <code>OK</code> has an <em>empty</em> (= "") caption</li>
-</ol>
-<h2><a class="anchor" id="refVerifyCaptionExample3"></a>
-Ignore execution of Keyword_</h2>
-<p>There are two ways to ignore a Keyword: Set the Parameter <code>ExpVal</code> = <code>"${IGNORE}"</code> or simply <code>""</code></p>
-<ol type="1">
-<li><code>EN.SelectWindow( "Login" )</code></li>
-<li>**<code>EN.VerifyCaption( "OK", "" )</code>** - This ignores the execution of this Keyword <code>FN = "User"</code> <b>or</b></li>
-<li>**<code>EN.VerifyCaption( "OK", "${IGNORE}" )</code>** - This ignores the execution of this Keyword</li>
-</ol>
-<h2><a class="anchor" id="refVerifyCaptionExample4"></a>
-Enviroment Variables</h2>
-<p>On Windowssystems the Enviroment variable <code>USERNAME</code> returns the name of the user who is currently logged on. OKW resolves the Enviroment variable <code>${USERNAME}</code> to the currently logged on username and uses this as expected value (ExpVal).</p>
-<p>For this Example</p>
-<ol type="1">
-<li><code>EN.SelectWindow( "Login" )</code></li>
-<li>**<code>EN.VerifyCaption( "User", "${USERNAME}" )</code>** - Matches the GUI-Object <code>FN = "User"</code> with the current logged on username?</li>
-</ol>
-<h1><a class="anchor" id="refVerifyCaptionCalledMethod"></a>
+<h1><a class="anchor" id="refLogCaptionCalledMethod"></a>
 Called Method</h1>
 <table class="doxtable">
 <tr>
 <th align="right">Keyword </th><th>&lt;-&gt;</th><th align="left">Called GUI-Adapter Method  </th></tr>
 <tr>
-<td align="right"><code>EN.VerifyCaption( FN, ExpVal )</code> </td><td>&lt;-&gt;</td><td align="left"><code>public ArrayList&lt;String&gt; VerifyCaption( )</code> </td></tr>
+<td align="right"><code>EN.LogCaption( FN, ExpVal )</code> </td><td>&lt;-&gt;</td><td align="left"><code>public ArrayList&lt;String&gt; LogCaption( )</code> </td></tr>
 </table>
 <dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2017-06-11 </dd></dl>
@@ -155,7 +132,7 @@ Called Method</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="index.html">OpenKeyWord</a></li><li class="navelem"><a class="el" href="ref_l_o_keywords.html">OKW Schlüsselwörter</a></li><li class="navelem"><a class="el" href="ref_log_values.html">Log Attributes Of The GUI</a></li>
-    <li class="footer">Erzeugt am Mon Jul 3 2017 04:32:48 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Jul 6 2017 04:12:24 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

@@ -17,7 +17,7 @@ var searchData=
   ['concatvsep',['ConcatVSEP',['../classokw_1_1_o_k_w___const___sngltn.html#af7a33c2c7a1d1762b118b4c02bea80d7',1,'okw::OKW_Const_Sngltn']]],
   ['convertdirectoryseperator',['convertDirectorySeperator',['../classokw_1_1_o_k_w___file_helper.html#aac0c21a231235d82167c736ae0150065',1,'okw::OKW_FileHelper']]],
   ['copy',['Copy',['../classokw_1_1_copy.html',1,'okw']]],
-  ['copyfile',['copyFile',['../classokw_1_1_copy.html#a525382b0549af1e55f1d3d3080b12194',1,'okw.Copy.copyFile()'],['../classokw_1_1core_1_1_core.html#a9eaef26bb78a9014d69cac3f0e669ee4',1,'okw.core.Core.CopyFile()'],['../classokw_1_1core_1_1_n_o_k.html#af0f7d3c245d0927b948f14a7a77361c1',1,'okw.core.NOK.CopyFile()']]],
+  ['copyfile',['copyFile',['../classokw_1_1_copy.html#a525382b0549af1e55f1d3d3080b12194',1,'okw.Copy.copyFile()'],['../classokw_1_1core_1_1_core.html#a9eaef26bb78a9014d69cac3f0e669ee4',1,'okw.core.Core.CopyFile()'],['../interfaceokw_1_1core_1_1_i_o_k_w___state.html#ab291a70d5a1e6c8900390828dd61e7eb',1,'okw.core.IOKW_State.CopyFile()'],['../classokw_1_1core_1_1_n_o_k.html#af0f7d3c245d0927b948f14a7a77361c1',1,'okw.core.NOK.CopyFile()'],['../classokw_1_1core_1_1_o_k.html#ab53b6e793aa690be5c57ef7bf271f1eb',1,'okw.core.OK.CopyFile()']]],
   ['core',['Core',['../classokw_1_1core_1_1_core.html',1,'okw.core.Core'],['../classokw_1_1core_1_1_core.html#a7f67744c156b494c2e932412efaa0e07',1,'okw.core.Core.Core()']]],
   ['createemptydirectory',['createEmptyDirectory',['../classokw_1_1_o_k_w___file_helper.html#a3f1e666538681aaa975fde389b707ee7',1,'okw::OKW_FileHelper']]],
   ['createfile',['createFile',['../classokw_1_1_o_k_w___file_helper.html#a971febc29814ec065a22940729d7eeb7',1,'okw::OKW_FileHelper']]],

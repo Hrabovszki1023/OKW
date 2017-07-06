@@ -7,7 +7,8 @@ var NAVTREE =
       [ "${IGNORE}", "ref_l_o_const.html#refIGNORE", null ],
       [ "${EMPTY}", "ref_l_o_const.html#refEMPTY", null ],
       [ "${SEP}", "ref_l_o_const.html#refSEP", null ],
-      [ "${HSEP} ${VSEP}", "ref_l_o_const.html#refHSEP_VSEP", null ]
+      [ "${HSEP} ${VSEP}", "ref_l_o_const.html#refHSEP_VSEP", null ],
+      [ "${TCN}", "ref_l_o_const.html#refTCN", null ]
     ] ],
     [ "Liste der Selenium GUI-Adapter", "ref_selenium_g_u_iadapter.html", null ],
     [ "OKW Anleitungen", "ref_tutorials.html", "ref_tutorials" ],
@@ -41,6 +42,7 @@ var NAVTREE =
           [ "Sequence", "ref_glossary.html#refSequence", null ]
         ] ],
         [ "T", "ref_glossary.html#refGlossarT", [
+          [ "TCN", "ref_glossary.html#refGlossarTCN", null ],
           [ "TN", "ref_glossary.html#refTN", null ]
         ] ]
       ] ]
@@ -80,7 +82,7 @@ var NAVTREEINDEX =
 "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_firefox_app.html#acdf1a746defffc60175d2ae162ed050a",
 "classokw_1_1parser_1_1_o_k_w___visitor.html",
 "interfaceokw_1_1core_1_1_i_o_k_w___state.html#a2e9dcf9b0e3ebe2645ed830e5c077e04",
-"ref_tutorial02.html"
+"ref_tutorial02.html#refTutorial02_B"
 ];
 
 var SYNCONMSG = 'Klicken um Panelsynchronisation auszuschalten';

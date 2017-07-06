@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 770;
+var viewWidth = 776;
 var viewHeight = 42;
 var sectionId = 'dynsection-23';
 </script>
@@ -54,7 +54,7 @@ var sectionId = 'dynsection-23';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>okw.log.Log2Console.LogSequenceEnd</title>
-<polygon fill="white" stroke="white" points="-4,5 -4,-38 767,-38 767,5 -4,5"/>
+<polygon fill="white" stroke="white" points="-4,5 -4,-38 773,-38 773,5 -4,5"/>
 <!-- Node129 -->
 <g id="node1" class="node"><title>Node129</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-6.5 0,-27.5 190,-27.5 190,-6.5 0,-6.5"/>
@@ -74,28 +74,28 @@ var sectionId = 'dynsection-23';
 </g>
 <!-- Node131 -->
 <g id="node5" class="node"><title>Node131</title>
-<a xlink:href="classokw_1_1log_1_1_log2_console.html#a62905e4d224da47b6a31d17384594011" target="_top" xlink:title="okw.log.Log2Console.Blank\lBefore">
-<polygon fill="white" stroke="black" points="436,-0 436,-34 574,-34 574,-0 436,-0"/>
-<text text-anchor="start" x="444" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blank</text>
-<text text-anchor="middle" x="505" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">Before</text>
+<a xlink:href="classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2" target="_top" xlink:title="Erzeugt die Einrücktiefe für die Console&#45;Ausgabe. ">
+<polygon fill="white" stroke="black" points="436.5,-0 436.5,-34 579.5,-34 579.5,-0 436.5,-0"/>
+<text text-anchor="start" x="444.5" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blanks</text>
+<text text-anchor="middle" x="508" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">Before</text>
 </a>
 </g>
 <!-- Node130&#45;&gt;Node131 -->
 <g id="edge4" class="edge"><title>Node130&#45;&gt;Node131</title>
-<path fill="none" stroke="midnightblue" d="M399.732,-17C408.446,-17 417.263,-17 425.892,-17"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="425.918,-20.5001 435.918,-17 425.918,-13.5001 425.918,-20.5001"/>
+<path fill="none" stroke="midnightblue" d="M399.665,-17C408.512,-17 417.479,-17 426.27,-17"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="426.491,-20.5001 436.491,-17 426.491,-13.5001 426.491,-20.5001"/>
 </g>
 <!-- Node132 -->
 <g id="node7" class="node"><title>Node132</title>
 <a xlink:href="classokw_1_1_o_k_w___helper.html#ab5e676787808ed174e603c1e3bfcd176" target="_top" xlink:title="okw.OKW_Helper.repeatString">
-<polygon fill="white" stroke="black" points="610.5,-6.5 610.5,-27.5 761.5,-27.5 761.5,-6.5 610.5,-6.5"/>
-<text text-anchor="middle" x="686" y="-14.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Helper.repeatString</text>
+<polygon fill="white" stroke="black" points="616.5,-6.5 616.5,-27.5 767.5,-27.5 767.5,-6.5 616.5,-6.5"/>
+<text text-anchor="middle" x="692" y="-14.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Helper.repeatString</text>
 </a>
 </g>
 <!-- Node131&#45;&gt;Node132 -->
 <g id="edge6" class="edge"><title>Node131&#45;&gt;Node132</title>
-<path fill="none" stroke="midnightblue" d="M574.203,-17C582.667,-17 591.395,-17 600.067,-17"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="600.201,-20.5001 610.201,-17 600.201,-13.5001 600.201,-20.5001"/>
+<path fill="none" stroke="midnightblue" d="M579.666,-17C588.297,-17 597.179,-17 605.987,-17"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="606.274,-20.5001 616.274,-17 606.274,-13.5001 606.274,-20.5001"/>
 </g>
 </g>
 </svg>

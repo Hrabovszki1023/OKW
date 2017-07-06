@@ -55,27 +55,27 @@ var sectionId = 'dynsection-42';
 <g id="viewport">
 <title>okw.core.Core.MemorizeSelectedValue</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-156 585,-156 585,5 -4,5"/>
-<!-- Node908 -->
-<g id="node1" class="node"><title>Node908</title>
+<!-- Node910 -->
+<g id="node1" class="node"><title>Node910</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-36 0,-70 164,-70 164,-36 0,-36"/>
 <text text-anchor="start" x="8" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.MemorizeSelected</text>
 <text text-anchor="middle" x="82" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">Value</text>
 </g>
-<!-- Node909 -->
-<g id="node3" class="node"><title>Node909</title>
+<!-- Node911 -->
+<g id="node3" class="node"><title>Node911</title>
 <a xlink:href="classokw_1_1core_1_1_e_n.html#a1f6ef2b7affb30444c6ecee001778615" target="_top" xlink:title="Keine Beschreibung zu &quot;MemorizeSelectedValue&quot; verfügbar. ">
 <polygon fill="white" stroke="black" points="203,-66 203,-100 361,-100 361,-66 203,-66"/>
 <text text-anchor="start" x="211" y="-87" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.MemorizeSelected</text>
 <text text-anchor="middle" x="282" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00">Value</text>
 </a>
 </g>
-<!-- Node908&#45;&gt;Node909 -->
-<g id="edge2" class="edge"><title>Node908&#45;&gt;Node909</title>
+<!-- Node910&#45;&gt;Node911 -->
+<g id="edge2" class="edge"><title>Node910&#45;&gt;Node911</title>
 <path fill="none" stroke="midnightblue" d="M174.111,-66.8166C183.656,-68.2484 193.297,-69.6946 202.684,-71.1026"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="174.622,-63.3542 164.213,-65.332 173.584,-70.2768 174.622,-63.3542"/>
 </g>
-<!-- Node912 -->
-<g id="node9" class="node"><title>Node912</title>
+<!-- Node914 -->
+<g id="node9" class="node"><title>Node914</title>
 <a xlink:href="classokw_1_1core_1_1_current_object___test.html#a8150cc2adcce05ac8c0b7cfbaa489c12" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode MemorizeSelectedValue( FN, MemKey ) im ChildObject. ">
 <polygon fill="white" stroke="black" points="200,-0.5 200,-47.5 364,-47.5 364,-0.5 200,-0.5"/>
 <text text-anchor="start" x="208" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -83,13 +83,13 @@ var sectionId = 'dynsection-42';
 <text text-anchor="middle" x="282" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">_ChildObject</text>
 </a>
 </g>
-<!-- Node908&#45;&gt;Node912 -->
-<g id="edge8" class="edge"><title>Node908&#45;&gt;Node912</title>
+<!-- Node910&#45;&gt;Node914 -->
+<g id="edge8" class="edge"><title>Node910&#45;&gt;Node914</title>
 <path fill="none" stroke="midnightblue" d="M174.187,-39.6328C182.726,-38.3947 191.342,-37.1454 199.783,-35.9215"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="173.608,-36.1802 164.213,-41.079 174.612,-43.1077 173.608,-36.1802"/>
 </g>
-<!-- Node910 -->
-<g id="node5" class="node"><title>Node910</title>
+<!-- Node912 -->
+<g id="node5" class="node"><title>Node912</title>
 <a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#ae5de04448f8df22f360181da046dbbba" target="_top" xlink:title="Prüft ob &quot;${IGNORE} &quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst. ">
 <polygon fill="white" stroke="black" points="400.5,-92 400.5,-152 579.5,-152 579.5,-92 400.5,-92"/>
 <text text-anchor="start" x="408.5" y="-139" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -98,13 +98,13 @@ var sectionId = 'dynsection-42';
 <text text-anchor="middle" x="490" y="-100" font-family="Helvetica,sans-Serif" font-size="10.00">IGNORE1</text>
 </a>
 </g>
-<!-- Node909&#45;&gt;Node910 -->
-<g id="edge4" class="edge"><title>Node909&#45;&gt;Node910</title>
+<!-- Node911&#45;&gt;Node912 -->
+<g id="edge4" class="edge"><title>Node911&#45;&gt;Node912</title>
 <path fill="none" stroke="midnightblue" d="M371.176,-99.7206C380.795,-101.524 390.587,-103.36 400.213,-105.165"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="371.703,-96.2584 361.229,-97.8555 370.413,-103.139 371.703,-96.2584"/>
 </g>
-<!-- Node911 -->
-<g id="node7" class="node"><title>Node911</title>
+<!-- Node913 -->
+<g id="node7" class="node"><title>Node913</title>
 <a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a17027c80a2f52ef3ad7305a91c331e08" target="_top" xlink:title="Prüft ob &quot;&quot;${IGNORE}${TCN}&quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst...">
 <polygon fill="white" stroke="black" points="400.5,-14 400.5,-74 579.5,-74 579.5,-14 400.5,-14"/>
 <text text-anchor="start" x="408.5" y="-61" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -113,8 +113,8 @@ var sectionId = 'dynsection-42';
 <text text-anchor="middle" x="490" y="-22" font-family="Helvetica,sans-Serif" font-size="10.00">IGNORE2</text>
 </a>
 </g>
-<!-- Node909&#45;&gt;Node911 -->
-<g id="edge6" class="edge"><title>Node909&#45;&gt;Node911</title>
+<!-- Node911&#45;&gt;Node913 -->
+<g id="edge6" class="edge"><title>Node911&#45;&gt;Node913</title>
 <path fill="none" stroke="midnightblue" d="M371.176,-66.2794C380.795,-64.4759 390.587,-62.64 400.213,-60.8351"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="370.413,-62.8615 361.229,-68.1445 371.703,-69.7416 370.413,-62.8615"/>
 </g>

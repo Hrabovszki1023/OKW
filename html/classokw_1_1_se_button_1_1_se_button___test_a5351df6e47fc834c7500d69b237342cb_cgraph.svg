@@ -111,7 +111,7 @@ var sectionId = 'dynsection-3';
 </g>
 <!-- Node53 -->
 <g id="node48" class="node"><title>Node53</title>
-<a xlink:href="classokw_1_1core_1_1_e_n.html#a30ccb279c44093debc4e07686a193765" target="_top" xlink:title="Keine Beschreibung zu &quot;LogCaption&quot; verfügbar. ">
+<a xlink:href="classokw_1_1core_1_1_e_n.html#a30ccb279c44093debc4e07686a193765" target="_top" xlink:title="Gibt die Caption eines GUI&#45;Objektes in den Testergebnissen aus. ">
 <polygon fill="white" stroke="black" points="165,-255.5 165,-276.5 291,-276.5 291,-255.5 165,-255.5"/>
 <text text-anchor="middle" x="228" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.LogCaption</text>
 </a>
@@ -135,7 +135,7 @@ var sectionId = 'dynsection-3';
 </g>
 <!-- Node59 -->
 <g id="node66" class="node"><title>Node59</title>
-<a xlink:href="classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" target="_top" xlink:title="Beendet den Test, bzw. ">
+<a xlink:href="classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" target="_top" xlink:title="Signalisiert das Ende eines Testfalls. ">
 <polygon fill="white" stroke="black" points="171.5,-135.5 171.5,-156.5 284.5,-156.5 284.5,-135.5 171.5,-135.5"/>
 <text text-anchor="middle" x="228" y="-143.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.EndTest</text>
 </a>
@@ -371,7 +371,7 @@ var sectionId = 'dynsection-3';
 </g>
 <!-- Node54 -->
 <g id="node51" class="node"><title>Node54</title>
-<a xlink:href="classokw_1_1core_1_1_core.html#a0aa220ef8efe2df075093c4eb2a08212" target="_top" xlink:title="Keine Beschreibung zu &quot;LogCaption&quot; verfügbar. ">
+<a xlink:href="classokw_1_1core_1_1_core.html#a0aa220ef8efe2df075093c4eb2a08212" target="_top" xlink:title="Gibt die Caption eines GUI&#45;Objektes in den Testergebnissen aus. ">
 <polygon fill="white" stroke="black" points="340.5,-275.5 340.5,-296.5 473.5,-296.5 473.5,-275.5 340.5,-275.5"/>
 <text text-anchor="middle" x="407" y="-283.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogCaption</text>
 </a>
@@ -393,7 +393,7 @@ var sectionId = 'dynsection-3';
 </g>
 <!-- Node55 -->
 <g id="node55" class="node"><title>Node55</title>
-<a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac80485d56013384a4518b25e76b87637" target="_top" xlink:title="Keine Beschreibung zu &quot;LogCaption&quot; verfügbar. ">
+<a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac80485d56013384a4518b25e76b87637" target="_top" xlink:title="Gibt die Caption eines GUI&#45;Objektes in den Testergebnissen aus. ">
 <polygon fill="white" stroke="black" points="519.5,-252.5 519.5,-273.5 686.5,-273.5 686.5,-252.5 519.5,-252.5"/>
 <text text-anchor="middle" x="603" y="-260.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.LogCaption</text>
 </a>
@@ -449,7 +449,7 @@ var sectionId = 'dynsection-3';
 </g>
 <!-- Node60 -->
 <g id="node69" class="node"><title>Node60</title>
-<a xlink:href="classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" target="_top" xlink:title="Beendet den Test, bzw. ">
+<a xlink:href="classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" target="_top" xlink:title="Signalisiert das Ende eines Testfalls. ">
 <polygon fill="white" stroke="black" points="347,-103.5 347,-124.5 467,-124.5 467,-103.5 347,-103.5"/>
 <text text-anchor="middle" x="407" y="-111.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.EndTest</text>
 </a>
@@ -461,7 +461,7 @@ var sectionId = 'dynsection-3';
 </g>
 <!-- Node61 -->
 <g id="node71" class="node"><title>Node61</title>
-<a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186" target="_top" xlink:title="Beendet den Test, bzw. ">
+<a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186" target="_top" xlink:title="Signalisiert das Ende eines Testfalls. ">
 <polygon fill="white" stroke="black" points="525.5,-92.5 525.5,-113.5 680.5,-113.5 680.5,-92.5 525.5,-92.5"/>
 <text text-anchor="middle" x="603" y="-100.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.EndTest</text>
 </a>

@@ -55,111 +55,111 @@ var sectionId = 'dynsection-16';
 <g id="viewport">
 <title>okw.core.Core.LogExists</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-298 511,-298 511,5 -4,5"/>
-<!-- Node711 -->
-<g id="node1" class="node"><title>Node711</title>
+<!-- Node713 -->
+<g id="node1" class="node"><title>Node713</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-113.5 0.5,-134.5 127.5,-134.5 127.5,-113.5 0.5,-113.5"/>
 <text text-anchor="middle" x="64" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogExists</text>
 </g>
-<!-- Node712 -->
-<g id="node3" class="node"><title>Node712</title>
-<a xlink:href="classokw_1_1core_1_1_e_n.html#a6b31a5c7517cf918ffc2115e5f019f4c" target="_top" xlink:title="Protokolliert, ob das gegebene Objekt existiert. ">
+<!-- Node714 -->
+<g id="node3" class="node"><title>Node714</title>
+<a xlink:href="classokw_1_1core_1_1_e_n.html#a6b31a5c7517cf918ffc2115e5f019f4c" target="_top" xlink:title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus. ">
 <polygon fill="white" stroke="black" points="183,-136.5 183,-157.5 303,-157.5 303,-136.5 183,-136.5"/>
 <text text-anchor="middle" x="243" y="-144.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.LogExists</text>
 </a>
 </g>
-<!-- Node711&#45;&gt;Node712 -->
-<g id="edge2" class="edge"><title>Node711&#45;&gt;Node712</title>
+<!-- Node713&#45;&gt;Node714 -->
+<g id="edge2" class="edge"><title>Node713&#45;&gt;Node714</title>
 <path fill="none" stroke="midnightblue" d="M137.87,-133.492C152.856,-135.417 168.446,-137.42 182.888,-139.276"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="137.977,-129.977 127.613,-132.174 137.085,-136.92 137.977,-129.977"/>
 </g>
-<!-- Node719 -->
-<g id="node17" class="node"><title>Node719</title>
+<!-- Node721 -->
+<g id="node17" class="node"><title>Node721</title>
 <a xlink:href="classokw_1_1core_1_1_current_object___test.html#a3af3ee26cd57443cdc1a3126836ac628" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode LogExists( &quot;FN&quot; ) im ChildObject. ">
 <polygon fill="white" stroke="black" points="164,-84 164,-118 322,-118 322,-84 164,-84"/>
 <text text-anchor="start" x="172" y="-105" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
 <text text-anchor="middle" x="243" y="-92" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.tc_LogExists_ChildObject</text>
 </a>
 </g>
-<!-- Node711&#45;&gt;Node719 -->
-<g id="edge16" class="edge"><title>Node711&#45;&gt;Node719</title>
+<!-- Node713&#45;&gt;Node721 -->
+<g id="edge16" class="edge"><title>Node713&#45;&gt;Node721</title>
 <path fill="none" stroke="midnightblue" d="M137.667,-114.534C146.329,-113.421 155.196,-112.282 163.928,-111.16"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="137.085,-111.08 127.613,-115.826 137.977,-118.023 137.085,-111.08"/>
 </g>
-<!-- Node713 -->
-<g id="node5" class="node"><title>Node713</title>
+<!-- Node715 -->
+<g id="node5" class="node"><title>Node715</title>
 <a xlink:href="classokw_1_1_se_button_1_1_se_button___test.html#a8519687cea144a5f9e8584722f39681c" target="_top" xlink:title="Test des Schlüsselwortes LogExists für den GUI&#45;Adapter SeButton. ">
 <polygon fill="white" stroke="black" points="371,-260 371,-294 493,-294 493,-260 371,-260"/>
 <text text-anchor="start" x="379" y="-281" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeButton.SeButton</text>
 <text text-anchor="middle" x="432" y="-268" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.tcLogExists</text>
 </a>
 </g>
-<!-- Node712&#45;&gt;Node713 -->
-<g id="edge4" class="edge"><title>Node712&#45;&gt;Node713</title>
+<!-- Node714&#45;&gt;Node715 -->
+<g id="edge4" class="edge"><title>Node714&#45;&gt;Node715</title>
 <path fill="none" stroke="midnightblue" d="M258.884,-165.288C279.625,-188.168 318.025,-227.225 358,-251 363.501,-254.272 369.476,-257.218 375.566,-259.849"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="261.339,-162.782 252.071,-157.648 256.114,-167.441 261.339,-162.782"/>
 </g>
-<!-- Node714 -->
-<g id="node7" class="node"><title>Node714</title>
+<!-- Node716 -->
+<g id="node7" class="node"><title>Node716</title>
 <a xlink:href="classokw_1_1_se_input_field_1_1_se_input_field___test.html#a67c769e13eae67ef09674b3a5538cb2a" target="_top" xlink:title="Testet das Schlüsselwort LogExists( FN ) eines SeInputField Prüfen. ">
 <polygon fill="white" stroke="black" points="367.5,-208 367.5,-242 496.5,-242 496.5,-208 367.5,-208"/>
 <text text-anchor="start" x="375.5" y="-229" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputField.SeInput</text>
 <text text-anchor="middle" x="432" y="-216" font-family="Helvetica,sans-Serif" font-size="10.00">Field_Test.tcLogExists</text>
 </a>
 </g>
-<!-- Node712&#45;&gt;Node714 -->
-<g id="edge6" class="edge"><title>Node712&#45;&gt;Node714</title>
+<!-- Node714&#45;&gt;Node716 -->
+<g id="edge6" class="edge"><title>Node714&#45;&gt;Node716</title>
 <path fill="none" stroke="midnightblue" d="M274.044,-161.921C297.009,-172.741 329.171,-187.443 358,-199 365.584,-202.04 373.677,-205.083 381.625,-207.961"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="275.338,-158.661 264.802,-157.542 272.34,-164.987 275.338,-158.661"/>
 </g>
-<!-- Node715 -->
-<g id="node9" class="node"><title>Node715</title>
+<!-- Node717 -->
+<g id="node9" class="node"><title>Node717</title>
 <a xlink:href="classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a2dbae039ed1a2bf9c10f6dcbc5fc5476" target="_top" xlink:title="Test des Schlüsselwortes LogExists für den GUI&#45;Adapter SeInputRadio. ">
 <polygon fill="white" stroke="black" points="359,-156 359,-190 505,-190 505,-156 359,-156"/>
 <text text-anchor="start" x="367" y="-177" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputRadio.SeInput</text>
 <text text-anchor="middle" x="432" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">Radio_EN_Test.tc_LogExists</text>
 </a>
 </g>
-<!-- Node712&#45;&gt;Node715 -->
-<g id="edge8" class="edge"><title>Node712&#45;&gt;Node715</title>
+<!-- Node714&#45;&gt;Node717 -->
+<g id="edge8" class="edge"><title>Node714&#45;&gt;Node717</title>
 <path fill="none" stroke="midnightblue" d="M313.209,-156.658C328.097,-158.706 343.847,-160.873 358.841,-162.936"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="313.444,-153.158 303.06,-155.262 312.49,-160.093 313.444,-153.158"/>
 </g>
-<!-- Node716 -->
-<g id="node11" class="node"><title>Node716</title>
+<!-- Node718 -->
+<g id="node11" class="node"><title>Node718</title>
 <a xlink:href="classokw_1_1_se_link_1_1_se_link___e_n___test.html#a4024539898f1eaf112ea1ad68051895d" target="_top" xlink:title="Prüft ob ein vorhandenes objekt existiert. ">
 <polygon fill="white" stroke="black" points="371,-104 371,-138 493,-138 493,-104 371,-104"/>
 <text text-anchor="start" x="379" y="-125" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeLink.SeLink_EN</text>
 <text text-anchor="middle" x="432" y="-112" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.TC_LogExists_en</text>
 </a>
 </g>
-<!-- Node712&#45;&gt;Node716 -->
-<g id="edge10" class="edge"><title>Node712&#45;&gt;Node716</title>
+<!-- Node714&#45;&gt;Node718 -->
+<g id="edge10" class="edge"><title>Node714&#45;&gt;Node718</title>
 <path fill="none" stroke="midnightblue" d="M313.115,-137.355C332.051,-134.75 352.39,-131.952 370.796,-129.42"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="312.49,-133.907 303.06,-138.738 313.444,-140.842 312.49,-133.907"/>
 </g>
-<!-- Node717 -->
-<g id="node13" class="node"><title>Node717</title>
+<!-- Node719 -->
+<g id="node13" class="node"><title>Node719</title>
 <a xlink:href="classokw_1_1_se_radio_list_1_1_se_radio_list___test.html#a17634586f5417224c045e0f765ff69d5" target="_top" xlink:title="Prüft die Methode SeRadioList.LogExists, wenn das Object nicht vorhanden ist. ">
 <polygon fill="white" stroke="black" points="358.5,-52 358.5,-86 505.5,-86 505.5,-52 358.5,-52"/>
 <text text-anchor="start" x="366.5" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeRadioList.SeRadioList</text>
 <text text-anchor="middle" x="432" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.tcLogExists_ExistsNo</text>
 </a>
 </g>
-<!-- Node712&#45;&gt;Node717 -->
-<g id="edge12" class="edge"><title>Node712&#45;&gt;Node717</title>
+<!-- Node714&#45;&gt;Node719 -->
+<g id="edge12" class="edge"><title>Node714&#45;&gt;Node719</title>
 <path fill="none" stroke="midnightblue" d="M308.664,-133.021C313.276,-131.241 317.769,-129.242 322,-127 340.915,-116.976 339.554,-105.864 358,-95 363.632,-91.683 369.754,-88.6958 375.983,-86.0313"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="307.359,-129.77 299.077,-136.378 309.672,-136.377 307.359,-129.77"/>
 </g>
-<!-- Node718 -->
-<g id="node15" class="node"><title>Node718</title>
+<!-- Node720 -->
+<g id="node15" class="node"><title>Node720</title>
 <a xlink:href="classokw_1_1_se_radio_list_1_1_se_radio_list___test.html#ae344ab1cc939628baad817e11eadaf38" target="_top" xlink:title="Prüft die Methode SeRadioList.LogExists, wenn das Object nicht vorhanden ist. ">
 <polygon fill="white" stroke="black" points="358.5,-0 358.5,-34 505.5,-34 505.5,-0 358.5,-0"/>
 <text text-anchor="start" x="366.5" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeRadioList.SeRadioList</text>
 <text text-anchor="middle" x="432" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.tcLogExists_ExistsYes</text>
 </a>
 </g>
-<!-- Node712&#45;&gt;Node718 -->
-<g id="edge14" class="edge"><title>Node712&#45;&gt;Node718</title>
+<!-- Node714&#45;&gt;Node720 -->
+<g id="edge14" class="edge"><title>Node714&#45;&gt;Node720</title>
 <path fill="none" stroke="midnightblue" d="M312.542,-133.596C315.903,-131.676 319.085,-129.49 322,-127 352.884,-100.619 328.333,-70.7426 358,-43 361.581,-39.6517 365.617,-36.731 369.912,-34.1837"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="310.761,-130.57 303.289,-138.081 313.814,-136.869 310.761,-130.57"/>
 </g>

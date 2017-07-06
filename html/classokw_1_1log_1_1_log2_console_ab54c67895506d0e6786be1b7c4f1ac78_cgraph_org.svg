@@ -41,7 +41,7 @@
 </g>
 <!-- Node152 -->
 <g id="node11" class="node"><title>Node152</title>
-<a xlink:href="classokw_1_1log_1_1_log2_console.html#a6c848745fc8facac542f043f4bfce4bc" target="_top" xlink:title="okw.log.Log2Console.LogKey\lWordStart">
+<a xlink:href="classokw_1_1log_1_1_log2_console.html#a6c848745fc8facac542f043f4bfce4bc" target="_top" xlink:title="LogKeyWordStart: ">
 <polygon fill="white" stroke="black" points="206,-19 206,-53 352,-53 352,-19 206,-19"/>
 <text text-anchor="start" x="214" y="-40" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogKey</text>
 <text text-anchor="middle" x="279" y="-27" font-family="Helvetica,sans-Serif" font-size="10.00">WordStart</text>
@@ -54,16 +54,16 @@
 </g>
 <!-- Node149 -->
 <g id="node5" class="node"><title>Node149</title>
-<a xlink:href="classokw_1_1log_1_1_log2_console.html#a62905e4d224da47b6a31d17384594011" target="_top" xlink:title="okw.log.Log2Console.Blank\lBefore">
-<polygon fill="white" stroke="black" points="600,-50 600,-84 738,-84 738,-50 600,-50"/>
-<text text-anchor="start" x="608" y="-71" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blank</text>
+<a xlink:href="classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2" target="_top" xlink:title="Erzeugt die Einrücktiefe für die Console&#45;Ausgabe. ">
+<polygon fill="white" stroke="black" points="597.5,-50 597.5,-84 740.5,-84 740.5,-50 597.5,-50"/>
+<text text-anchor="start" x="605.5" y="-71" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blanks</text>
 <text text-anchor="middle" x="669" y="-58" font-family="Helvetica,sans-Serif" font-size="10.00">Before</text>
 </a>
 </g>
 <!-- Node148&#45;&gt;Node149 -->
 <g id="edge4" class="edge"><title>Node148&#45;&gt;Node149</title>
-<path fill="none" stroke="midnightblue" d="M540.727,-74.199C556.579,-73.3093 573.603,-72.3539 589.902,-71.4392"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="590.152,-74.9307 599.94,-70.8758 589.76,-67.9417 590.152,-74.9307"/>
+<path fill="none" stroke="midnightblue" d="M540.727,-74.199C555.703,-73.3585 571.726,-72.4593 587.195,-71.5911"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="587.476,-75.0809 597.264,-71.026 587.083,-68.0919 587.476,-75.0809"/>
 </g>
 <!-- Node150 -->
 <g id="node7" class="node"><title>Node150</title>
@@ -74,8 +74,8 @@
 </g>
 <!-- Node149&#45;&gt;Node150 -->
 <g id="edge6" class="edge"><title>Node149&#45;&gt;Node150</title>
-<path fill="none" stroke="midnightblue" d="M738.101,-67C748.508,-67 759.349,-67 770.057,-67"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="770.264,-70.5001 780.264,-67 770.264,-63.5001 770.264,-70.5001"/>
+<path fill="none" stroke="midnightblue" d="M740.764,-67C750.396,-67 760.354,-67 770.197,-67"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="770.395,-70.5001 780.395,-67 770.395,-63.5001 770.395,-70.5001"/>
 </g>
 <!-- Node153 -->
 <g id="node13" class="node"><title>Node153</title>
@@ -91,8 +91,8 @@
 </g>
 <!-- Node153&#45;&gt;Node149 -->
 <g id="edge16" class="edge"><title>Node153&#45;&gt;Node149</title>
-<path fill="none" stroke="midnightblue" d="M539.63,-46.5384C555.713,-49.0822 573.057,-51.8253 589.658,-54.451"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="589.457,-57.9627 599.881,-56.0679 590.551,-51.0486 589.457,-57.9627"/>
+<path fill="none" stroke="midnightblue" d="M539.63,-46.5384C554.833,-48.943 571.162,-51.5257 586.927,-54.019"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="586.763,-57.5365 597.187,-55.6418 587.856,-50.6225 586.763,-57.5365"/>
 </g>
 <!-- Node153&#45;&gt;Node151 -->
 <g id="edge14" class="edge"><title>Node153&#45;&gt;Node151</title>

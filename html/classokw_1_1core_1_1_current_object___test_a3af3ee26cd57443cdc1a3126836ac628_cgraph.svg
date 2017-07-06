@@ -87,7 +87,7 @@ var sectionId = 'dynsection-4';
 </g>
 <!-- Node45 -->
 <g id="node21" class="node"><title>Node45</title>
-<a xlink:href="classokw_1_1core_1_1_core.html#a40b3422362c40854e75c069250a9c964" target="_top" xlink:title="Protokolliert, ob das gegebene Objekt existiert. ">
+<a xlink:href="classokw_1_1core_1_1_core.html#a40b3422362c40854e75c069250a9c964" target="_top" xlink:title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus. ">
 <polygon fill="white" stroke="black" points="203.5,-138.5 203.5,-159.5 330.5,-159.5 330.5,-138.5 203.5,-138.5"/>
 <text text-anchor="middle" x="267" y="-146.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogExists</text>
 </a>
@@ -194,7 +194,7 @@ var sectionId = 'dynsection-4';
 </g>
 <!-- Node46 -->
 <g id="node25" class="node"><title>Node46</title>
-<a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a04432f21a91af5ea4df110b625934fb6" target="_top" xlink:title="Protokolliert, ob das gegebene Objekt existiert. ">
+<a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a04432f21a91af5ea4df110b625934fb6" target="_top" xlink:title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus. ">
 <polygon fill="white" stroke="black" points="376.5,-184.5 376.5,-205.5 537.5,-205.5 537.5,-184.5 376.5,-184.5"/>
 <text text-anchor="middle" x="457" y="-192.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.LogExists</text>
 </a>

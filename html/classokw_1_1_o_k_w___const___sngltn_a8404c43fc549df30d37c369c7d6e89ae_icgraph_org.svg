@@ -42,7 +42,7 @@
 </g>
 <!-- Node4 -->
 <g id="node7" class="node"><title>Node4</title>
-<a xlink:href="classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" target="_top" xlink:title="Protokolliert, ob das gegebene Objekt existiert. ">
+<a xlink:href="classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" target="_top" xlink:title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus. ">
 <polygon fill="white" stroke="black" points="398,-1996.5 398,-2017.5 518,-2017.5 518,-1996.5 398,-1996.5"/>
 <text text-anchor="middle" x="458" y="-2004.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.LogExists</text>
 </a>
@@ -393,7 +393,7 @@
 </g>
 <!-- Node33 -->
 <g id="node65" class="node"><title>Node33</title>
-<a xlink:href="classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b" target="_top" xlink:title="okw.core.OK.VerifySelected\lValueWCM">
+<a xlink:href="classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b" target="_top" xlink:title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. ">
 <polygon fill="white" stroke="black" points="388,-788 388,-822 528,-822 528,-788 388,-788"/>
 <text text-anchor="start" x="396" y="-809" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifySelected</text>
 <text text-anchor="middle" x="458" y="-796" font-family="Helvetica,sans-Serif" font-size="10.00">ValueWCM</text>
@@ -406,7 +406,7 @@
 </g>
 <!-- Node34 -->
 <g id="node67" class="node"><title>Node34</title>
-<a xlink:href="classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f" target="_top" xlink:title="okw.core.OK.VerifySelected\lValueREGX">
+<a xlink:href="classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f" target="_top" xlink:title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. ">
 <polygon fill="white" stroke="black" points="388,-736 388,-770 528,-770 528,-736 388,-736"/>
 <text text-anchor="start" x="396" y="-757" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifySelected</text>
 <text text-anchor="middle" x="458" y="-744" font-family="Helvetica,sans-Serif" font-size="10.00">ValueREGX</text>

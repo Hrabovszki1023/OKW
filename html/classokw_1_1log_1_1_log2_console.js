@@ -1,6 +1,6 @@
 var classokw_1_1log_1_1_log2_console =
 [
-    [ "BlankBefore", "classokw_1_1log_1_1_log2_console.html#a62905e4d224da47b6a31d17384594011", null ],
+    [ "BlanksBefore", "classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2", null ],
     [ "LogError", "classokw_1_1log_1_1_log2_console.html#a75b91325df2889012704c792aae1af40", null ],
     [ "LogException", "classokw_1_1log_1_1_log2_console.html#a2a46728aae13d31dfe0db0db4b299844", null ],
     [ "LogFunctionEnd", "classokw_1_1log_1_1_log2_console.html#ae5d97f0d2c5d086474b811f700e97eb1", null ],

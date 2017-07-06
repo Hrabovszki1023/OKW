@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 192, Datum: 07.03.2017 04:31:07</span>
+   &#160;<span id="projectnumber">Build_ID: 193, Datum: 07.06.2017 04:11:51</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -107,34 +107,23 @@ Ziele des Locators</h1>
 <h1><a class="anchor" id="refTutorial03_B"></a>
 Die Klasse 'OKWLocator'</h1>
 <p>In OKW existiert eine eigenen Klasse, die Klasse <code><a class="el" href="classokw_1_1gui_1_1_o_k_w_locator.html" title="Description of OKWLocator. ">okw.gui.OKWLocator</a></code> für die Definition von Locatoren. Die Locatoren können hierarchisch über GUI-Adapter hinweg miteinander verkettet werden. Dabei definieren die GUI-Adapter jeweils nur ihren Teil eines Loacators.</p>
-<blockquote class="doxtable">
-<p>Eine eigene Klasse für die Locatoren ist notwendig, da die Erkennungseigenschaften von GUI-Objekten </p>
-</blockquote>
-<p>meist nicht mit einfach zudefinierenden <code>id</code>'s festgelegt werden kann. - In vielen Projekten wird die Problematik der Objekterkennung für den Test nicht hinreichen gewürdigt und es werden sehr komplexe Locatoren notwendig.</p>
-<p>Wie das funktioniert ist Gegenstand dieses und der der folgenden Tutorials.</p>
-<blockquote class="doxtable">
-<p>Die '<a class="el" href="classokw_1_1gui_1_1_o_k_w_locator.html" title="Description of OKWLocator. ">okw.gui.OKWLocator</a>' Klasse ist für die Verkettung von 'String'-Werten entworfen worden. </p>
-</blockquote>
-<p>D.h. sie nicht ausschliesslich nur für <em>XPATH</em> geeignet, sonder sie kann für <em>beliebig andere Locatoren, die auf String-Werten basieren</em>, verwendet werden.</p>
+<dl class="section user"><dt></dt><dd>Eine eigene Klasse für die Locatoren ist notwendig, da die Erkennungseigenschaften von GUI-Objekten meist nicht mit einfach zudefinierenden <code>id</code>'s festgelegt werden kann. - In vielen Projekten wird die Problematik der Objekterkennung für den Test nicht hinreichen gewürdigt und es werden sehr komplexe Locatoren notwendig.</dd></dl>
+<p>Wie das funktioniert ist Gegenstand dieses und der folgenden Tutorials.</p>
+<dl class="section user"><dt>Die 'okw.gui.OKWLocator' Klasse ist für die Verkettung von 'String'-Werten entworfen worden.</dt><dd>D.h. sie nicht ausschliesslich nur für <em>XPATH</em> geeignet, sonder sie kann für <em>beliebig andere Locatoren, die auf String-Werten basieren</em>, verwendet werden.</dd></dl>
 <h1><a class="anchor" id="refTutorial03_C"></a>
 Definition eines _einfachen_ Locators</h1>
 <p>Der Locator für ein GUI-Objekt wird jeweils im Frame (für Fortgeschrittene: und im GUI-Container) eines GUI-Objektes definiert.</p>
 <p>Wir fangen mit dem einfachsten Fall an. Als Beispiel verwenden wir das Login-Fenster von Word-Press. In diesem speziellen Fall haben alle Elemente jeweils eine Eindeutige <code>id</code> als Attribute.</p>
 <p>D.h. wir finden <em>jedes</em> GUI-Object im WP-Login nach dem Prinzip: "Suche das Element mit der 'id', die einen bestimmten Wert" hat.</p>
-<blockquote class="doxtable">
-<p><b>Hinweis:&lt;<b></b> &gt; Dieser Wert sollte über alle Releases des Produkte const. sein </b></p>
-</blockquote>
-<p><b></b></p>
+<dl class="section user"><dt>Hinweis:</dt><dd>Die Objekt-Erkennungseigenschaft sollte über alle Releases des Produkte const. bleiben!</dd></dl>
 <h2><a class="anchor" id="refTutorial03_C_A"></a>
 Konkretes Beispiel `Username`</h2>
-<p><b> Der Locator wird im Konstruktor eines GUI-Adapters als Parameter wie folgt festgelegt:</b></p>
-<p><b><b>Beispiel:&lt;<b></b> &gt;</b></b></p>
-<p><b><b></p><div class="fragment"><div class="line">@OKW (FN=<span class="stringliteral">&quot;Username&quot;</span>) <span class="comment">// FN des GUI-Objektes</span></div><div class="line">public SeInputText Username = new SeInputText( &quot;<span class="comment">//*[@id=&#39;user_login&#39;]&quot; );</span></div></div><!-- fragment --><p></b></b></p>
-<p><b><b>Entscheidend ist in diesem Beispiel der Ausdruck `"//*[@id='user_login']"`.</b></b></p>
-<p><b><b>Das ist der einfachste Fall für die definition eines Locators. Das Eingabefeld 'User' wird anhand des Attributes 'id' eindeutig erkannt.</b></b></p>
-<p><b><b>Hinweis: Die <em>XPATH</em> Angaben erläutern wir hier nicht, weil das für die OKWLocator-Klasse nicht relevant ist. Wichtig ist lediglich, dass das Feld <em>User</em> mit der <em>XPATH</em>-Angaben eindeutig erkannt wird.</b></b></p>
-<p><b><b>Das ganze Frame für <em>WP-Login</em> (Wordpress-Login) sieht wie folg aus:</b></b></p>
-<p><b><b></p><div class="fragment"><div class="line"><span class="keyword">package </span>okw.gui.frames;</div><div class="line"></div><div class="line"><span class="keyword">import</span> <a class="code" href="namespaceokw.html">okw</a>.<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a>;</div><div class="line"><span class="keyword">import</span> <a class="code" href="namespaceokw.html">okw</a>.<a class="code" href="namespaceokw_1_1gui.html">gui</a>.<a class="code" href="namespaceokw_1_1gui_1_1adapter.html">adapter</a>.<a class="code" href="namespaceokw_1_1gui_1_1adapter_1_1selenium.html">selenium</a>.*;</div><div class="line"></div><div class="line">@OKW(FN=<span class="stringliteral">&quot;WP-Login&quot;</span>)</div><div class="line">public class wp_login extends SeBrowserChild</div><div class="line">{</div><div class="line"></div><div class="line">    @OKW (FN=<span class="stringliteral">&quot;Username&quot;</span>)</div><div class="line">    public SeInputText Username = new SeInputText(&quot;<span class="comment">//*[@id=&#39;user_login&#39;]&quot; );</span></div><div class="line"></div><div class="line">    @OKW (FN=&quot;Password&quot;)</div><div class="line">    public SeInputText Password = new SeInputText(&quot;<span class="comment">//*[@id=&#39;user_pass&#39;]&quot; );</span></div><div class="line"></div><div class="line">    @OKW (FN=&quot;Remember Me&quot;)</div><div class="line">    public SeInputCheckbox Remember_Me = new SeInputCheckbox(&quot;<span class="comment">//*[@id=&#39;rememberme&#39;]&quot; );</span></div><div class="line"></div><div class="line">    @OKW( FN = &quot;Log In&quot;)</div><div class="line">    public SeInputButton Log_In = new SeInputButton( &quot;<span class="comment">//*[@id=&#39;wp-submit&#39;]&quot; );</span></div><div class="line"></div><div class="line">    @OKW( FN = &quot;Lost your password&quot;)</div><div class="line">    public SeLink LostPasswd = new SeLink( &quot;<span class="comment">//p[@id=&#39;nav&#39;]/a&quot; );</span></div><div class="line"></div><div class="line">    @OKW( FN = &quot;Back&quot;)</div><div class="line">    public SeLink Back = new SeLink( &quot;<span class="comment">//p[@id=&#39;backoblog&#39;]/a&quot; );</span></div><div class="line"></div><div class="line">    @OKW( FN = &quot;Login Error&quot;)</div><div class="line">    public SeAnyWin LogError = new SeAnyWin( &quot;<span class="comment">//div[@id=&#39;login_error&#39;]&quot; );</span></div><div class="line"></div><div class="line">    public wp_login()</div><div class="line">    {</div><div class="line">        super(<span class="stringliteral">&quot;//body/div[@id=&#39;login&#39;]/..&quot;</span>);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p> </b></b></p>
+<p>Der Locator wird im Konstruktor eines GUI-Adapters als Parameter wie folgt festgelegt:</p>
+<dl class="section user"><dt>Beispiel:</dt><dd><div class="fragment"><div class="line">@OKW (FN=<span class="stringliteral">&quot;Username&quot;</span>) <span class="comment">// FN des GUI-Objektes</span></div><div class="line">public SeInputText Username = new SeInputText( &quot;<span class="comment">//*[@id=&#39;user_login&#39;]&quot; );</span></div></div><!-- fragment --></dd></dl>
+<p>Entscheidend ist in diesem Beispiel der Ausdruck `"//*[@id='user_login']"`.</p>
+<p>Das ist der einfachste Fall für die definition eines Locators. Das Eingabefeld 'User' wird anhand des Attributes 'id' eindeutig erkannt.</p>
+<p>Hinweis: Die <em>XPATH</em> Angaben erläutern wir hier nicht, weil das für die OKWLocator-Klasse nicht relevant ist. Wichtig ist lediglich, dass das Feld <em>User</em> mit der <em>XPATH</em>-Angaben eindeutig erkannt wird.</p>
+<dl class="section user"><dt>Das ganze Frame für WP-Login (Wordpress-Login) sieht wie folg aus:</dt><dd><div class="fragment"><div class="line"><span class="keyword">package </span>okw.gui.frames;</div><div class="line"></div><div class="line"><span class="keyword">import</span> <a class="code" href="namespaceokw.html">okw</a>.<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a>;</div><div class="line"><span class="keyword">import</span> <a class="code" href="namespaceokw.html">okw</a>.<a class="code" href="namespaceokw_1_1gui.html">gui</a>.<a class="code" href="namespaceokw_1_1gui_1_1adapter.html">adapter</a>.<a class="code" href="namespaceokw_1_1gui_1_1adapter_1_1selenium.html">selenium</a>.*;</div><div class="line"></div><div class="line">@OKW(FN=<span class="stringliteral">&quot;WP-Login&quot;</span>)</div><div class="line">public class wp_login extends SeBrowserChild</div><div class="line">{</div><div class="line"></div><div class="line">    @OKW (FN=<span class="stringliteral">&quot;Username&quot;</span>)</div><div class="line">    public SeInputText Username = new SeInputText(&quot;<span class="comment">//*[@id=&#39;user_login&#39;]&quot; );</span></div><div class="line">    </div><div class="line">    @OKW (FN=&quot;Password&quot;)</div><div class="line">    public SeInputText Password = new SeInputText(&quot;<span class="comment">//*[@id=&#39;user_pass&#39;]&quot; );</span></div><div class="line">    </div><div class="line">    @OKW (FN=&quot;Remember Me&quot;)</div><div class="line">    public SeInputCheckbox Remember_Me = new SeInputCheckbox(&quot;<span class="comment">//*[@id=&#39;rememberme&#39;]&quot; );</span></div><div class="line"></div><div class="line">    @OKW( FN = &quot;Log In&quot;)</div><div class="line">    public SeInputButton Log_In = new SeInputButton( &quot;<span class="comment">//*[@id=&#39;wp-submit&#39;]&quot; );</span></div><div class="line"></div><div class="line">    @OKW( FN = &quot;Lost your password&quot;)</div><div class="line">    public SeLink LostPasswd = new SeLink( &quot;<span class="comment">//p[@id=&#39;nav&#39;]/a&quot; );</span></div><div class="line"></div><div class="line">    @OKW( FN = &quot;Back&quot;)</div><div class="line">    public SeLink Back = new SeLink( &quot;<span class="comment">//p[@id=&#39;backoblog&#39;]/a&quot; );</span></div><div class="line">    </div><div class="line">    @OKW( FN = &quot;Login Error&quot;)</div><div class="line">    public SeAnyWin LogError = new SeAnyWin( &quot;<span class="comment">//div[@id=&#39;login_error&#39;]&quot; );</span></div><div class="line"></div><div class="line">    public wp_login()</div><div class="line">    {</div><div class="line">        super(<span class="stringliteral">&quot;//body/div[@id=&#39;login&#39;]/..&quot;</span>);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --> </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.9.1-->
@@ -142,7 +131,7 @@ Konkretes Beispiel `Username`</h2>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="index.html">OpenKeyWord</a></li><li class="navelem"><a class="el" href="ref_tutorials.html">OKW Anleitungen</a></li>
-    <li class="footer">Erzeugt am Mon Jul 3 2017 04:32:48 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Jul 6 2017 04:12:24 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

@@ -9,40 +9,40 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 156)">
 <title>okw.core.IOKW_State.MemorizeSelectedValue</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-156 783,-156 783,5 -4,5"/>
-<!-- Node821 -->
-<g id="node1" class="node"><title>Node821</title>
+<!-- Node824 -->
+<g id="node1" class="node"><title>Node824</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-36 0.5,-70 161.5,-70 161.5,-36 0.5,-36"/>
 <text text-anchor="start" x="8.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.Memorize</text>
 <text text-anchor="middle" x="81" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">SelectedValue</text>
 </g>
-<!-- Node822 -->
-<g id="node3" class="node"><title>Node822</title>
+<!-- Node825 -->
+<g id="node3" class="node"><title>Node825</title>
 <a xlink:href="classokw_1_1core_1_1_core.html#ae13536308d66e68f25d673af7fec2d2b" target="_top" xlink:title="Keine Beschreibung zu &quot;MemorizeSelectedValue&quot; verfügbar. ">
 <polygon fill="white" stroke="black" points="198,-36 198,-70 362,-70 362,-36 198,-36"/>
 <text text-anchor="start" x="206" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.MemorizeSelected</text>
 <text text-anchor="middle" x="280" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">Value</text>
 </a>
 </g>
-<!-- Node821&#45;&gt;Node822 -->
-<g id="edge2" class="edge"><title>Node821&#45;&gt;Node822</title>
+<!-- Node824&#45;&gt;Node825 -->
+<g id="edge2" class="edge"><title>Node824&#45;&gt;Node825</title>
 <path fill="none" stroke="midnightblue" d="M171.818,-53C180.524,-53 189.321,-53 197.937,-53"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="171.654,-49.5001 161.654,-53 171.654,-56.5001 171.654,-49.5001"/>
 </g>
-<!-- Node823 -->
-<g id="node5" class="node"><title>Node823</title>
+<!-- Node826 -->
+<g id="node5" class="node"><title>Node826</title>
 <a xlink:href="classokw_1_1core_1_1_e_n.html#a1f6ef2b7affb30444c6ecee001778615" target="_top" xlink:title="Keine Beschreibung zu &quot;MemorizeSelectedValue&quot; verfügbar. ">
 <polygon fill="white" stroke="black" points="401,-66 401,-100 559,-100 559,-66 401,-66"/>
 <text text-anchor="start" x="409" y="-87" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.MemorizeSelected</text>
 <text text-anchor="middle" x="480" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00">Value</text>
 </a>
 </g>
-<!-- Node822&#45;&gt;Node823 -->
-<g id="edge4" class="edge"><title>Node822&#45;&gt;Node823</title>
+<!-- Node825&#45;&gt;Node826 -->
+<g id="edge4" class="edge"><title>Node825&#45;&gt;Node826</title>
 <path fill="none" stroke="midnightblue" d="M372.111,-66.8166C381.656,-68.2484 391.297,-69.6946 400.684,-71.1026"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="372.622,-63.3542 362.213,-65.332 371.584,-70.2768 372.622,-63.3542"/>
 </g>
-<!-- Node826 -->
-<g id="node11" class="node"><title>Node826</title>
+<!-- Node829 -->
+<g id="node11" class="node"><title>Node829</title>
 <a xlink:href="classokw_1_1core_1_1_current_object___test.html#a8150cc2adcce05ac8c0b7cfbaa489c12" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode MemorizeSelectedValue( FN, MemKey ) im ChildObject. ">
 <polygon fill="white" stroke="black" points="398,-0.5 398,-47.5 562,-47.5 562,-0.5 398,-0.5"/>
 <text text-anchor="start" x="406" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -50,13 +50,13 @@
 <text text-anchor="middle" x="480" y="-8.5" font-family="Helvetica,sans-Serif" font-size="10.00">_ChildObject</text>
 </a>
 </g>
-<!-- Node822&#45;&gt;Node826 -->
-<g id="edge10" class="edge"><title>Node822&#45;&gt;Node826</title>
+<!-- Node825&#45;&gt;Node829 -->
+<g id="edge10" class="edge"><title>Node825&#45;&gt;Node829</title>
 <path fill="none" stroke="midnightblue" d="M372.187,-39.6328C380.726,-38.3947 389.342,-37.1454 397.783,-35.9215"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="371.608,-36.1802 362.213,-41.079 372.612,-43.1077 371.608,-36.1802"/>
 </g>
-<!-- Node824 -->
-<g id="node7" class="node"><title>Node824</title>
+<!-- Node827 -->
+<g id="node7" class="node"><title>Node827</title>
 <a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#ae5de04448f8df22f360181da046dbbba" target="_top" xlink:title="Prüft ob &quot;${IGNORE} &quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst. ">
 <polygon fill="white" stroke="black" points="598.5,-92 598.5,-152 777.5,-152 777.5,-92 598.5,-92"/>
 <text text-anchor="start" x="606.5" y="-139" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -65,13 +65,13 @@
 <text text-anchor="middle" x="688" y="-100" font-family="Helvetica,sans-Serif" font-size="10.00">IGNORE1</text>
 </a>
 </g>
-<!-- Node823&#45;&gt;Node824 -->
-<g id="edge6" class="edge"><title>Node823&#45;&gt;Node824</title>
+<!-- Node826&#45;&gt;Node827 -->
+<g id="edge6" class="edge"><title>Node826&#45;&gt;Node827</title>
 <path fill="none" stroke="midnightblue" d="M569.176,-99.7206C578.795,-101.524 588.587,-103.36 598.213,-105.165"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="569.703,-96.2584 559.229,-97.8555 568.413,-103.139 569.703,-96.2584"/>
 </g>
-<!-- Node825 -->
-<g id="node9" class="node"><title>Node825</title>
+<!-- Node828 -->
+<g id="node9" class="node"><title>Node828</title>
 <a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a17027c80a2f52ef3ad7305a91c331e08" target="_top" xlink:title="Prüft ob &quot;&quot;${IGNORE}${TCN}&quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst...">
 <polygon fill="white" stroke="black" points="598.5,-14 598.5,-74 777.5,-74 777.5,-14 598.5,-14"/>
 <text text-anchor="start" x="606.5" y="-61" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -80,8 +80,8 @@
 <text text-anchor="middle" x="688" y="-22" font-family="Helvetica,sans-Serif" font-size="10.00">IGNORE2</text>
 </a>
 </g>
-<!-- Node823&#45;&gt;Node825 -->
-<g id="edge8" class="edge"><title>Node823&#45;&gt;Node825</title>
+<!-- Node826&#45;&gt;Node828 -->
+<g id="edge8" class="edge"><title>Node826&#45;&gt;Node828</title>
 <path fill="none" stroke="midnightblue" d="M569.176,-66.2794C578.795,-64.4759 588.587,-62.64 598.213,-60.8351"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="568.413,-62.8615 559.229,-68.1445 569.703,-69.7416 568.413,-62.8615"/>
 </g>

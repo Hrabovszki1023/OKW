@@ -151,7 +151,7 @@ var sectionId = 'dynsection-2';
 </g>
 <!-- Node6 -->
 <g id="node9" class="node"><title>Node6</title>
-<a xlink:href="interfaceokw_1_1_o_k_w.html#af34bc34f70320801da0d077669491629" target="_top" xlink:title="_T_ime_O_ut in Secunden [s] für das aktuelle Object. ">
+<a xlink:href="interfaceokw_1_1_o_k_w.html#af34bc34f70320801da0d077669491629" target="_top" xlink:title="TimeOut in Sekunden [s] für das erscheinen des aktuellen Objektes. ">
 <polygon fill="white" stroke="black" points="411.5,-248.5 411.5,-269.5 542.5,-269.5 542.5,-248.5 411.5,-248.5"/>
 <text text-anchor="middle" x="477" y="-256.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW.WaitForMe_TO</text>
 </a>
@@ -163,7 +163,7 @@ var sectionId = 'dynsection-2';
 </g>
 <!-- Node7 -->
 <g id="node11" class="node"><title>Node7</title>
-<a xlink:href="interfaceokw_1_1_o_k_w.html#a243bbdc6c866386fd64fd4c4758a14b7" target="_top" xlink:title="_P_olling _T_ime in [ms] für das aktuelle Object. ">
+<a xlink:href="interfaceokw_1_1_o_k_w.html#a243bbdc6c866386fd64fd4c4758a14b7" target="_top" xlink:title="Polling Time in [ms] für das aktuelle Object. ">
 <polygon fill="white" stroke="black" points="411.5,-208.5 411.5,-229.5 542.5,-229.5 542.5,-208.5 411.5,-208.5"/>
 <text text-anchor="middle" x="477" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW.WaitForMe_PT</text>
 </a>

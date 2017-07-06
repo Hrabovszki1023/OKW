@@ -98,9 +98,9 @@ var sectionId = 'dynsection-10';
 </g>
 <!-- Node204 -->
 <g id="node9" class="node"><title>Node204</title>
-<a xlink:href="classokw_1_1log_1_1_log2_console.html#a62905e4d224da47b6a31d17384594011" target="_top" xlink:title="okw.log.Log2Console.Blank\lBefore">
-<polygon fill="white" stroke="black" points="202,-137 202,-171 340,-171 340,-137 202,-137"/>
-<text text-anchor="start" x="210" y="-158" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blank</text>
+<a xlink:href="classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2" target="_top" xlink:title="Erzeugt die Einrücktiefe für die Console&#45;Ausgabe. ">
+<polygon fill="white" stroke="black" points="199.5,-137 199.5,-171 342.5,-171 342.5,-137 199.5,-137"/>
+<text text-anchor="start" x="207.5" y="-158" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blanks</text>
 <text text-anchor="middle" x="271" y="-145" font-family="Helvetica,sans-Serif" font-size="10.00">Before</text>
 </a>
 </g>
@@ -118,8 +118,8 @@ var sectionId = 'dynsection-10';
 </g>
 <!-- Node204&#45;&gt;Node205 -->
 <g id="edge10" class="edge"><title>Node204&#45;&gt;Node205</title>
-<path fill="none" stroke="midnightblue" d="M350.251,-154C369.774,-154 390.5,-154 409.413,-154"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="350.168,-150.5 340.168,-154 350.168,-157.5 350.168,-150.5"/>
+<path fill="none" stroke="midnightblue" d="M353.015,-154C371.683,-154 391.311,-154 409.304,-154"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="352.76,-150.5 342.76,-154 352.76,-157.5 352.76,-150.5"/>
 </g>
 <!-- Node207 -->
 <g id="node15" class="node"><title>Node207</title>
@@ -142,8 +142,8 @@ var sectionId = 'dynsection-10';
 </g>
 <!-- Node204&#45;&gt;Node216 -->
 <g id="edge32" class="edge"><title>Node204&#45;&gt;Node216</title>
-<path fill="none" stroke="midnightblue" d="M350.199,-136.699C376.698,-130.911 405.42,-124.636 428.817,-119.525"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="349.191,-133.337 340.168,-138.89 350.685,-140.176 349.191,-133.337"/>
+<path fill="none" stroke="midnightblue" d="M352.548,-136.186C378.367,-130.546 406.068,-124.495 428.766,-119.537"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="351.782,-132.771 342.76,-138.324 353.276,-139.61 351.782,-132.771"/>
 </g>
 <!-- Node206 -->
 <g id="node13" class="node"><title>Node206</title>
@@ -172,7 +172,7 @@ var sectionId = 'dynsection-10';
 </g>
 <!-- Node210 -->
 <g id="node21" class="node"><title>Node210</title>
-<a xlink:href="classokw_1_1log_1_1_log2_console.html#a06fc14df2dcb5b2b28b65b2a5ca07e25" target="_top" xlink:title="okw.log.Log2Console.LogFunction\lStart">
+<a xlink:href="classokw_1_1log_1_1_log2_console.html#a06fc14df2dcb5b2b28b65b2a5ca07e25" target="_top" xlink:title="LogFunctionStart: ">
 <polygon fill="white" stroke="black" points="611.5,-182 611.5,-216 778.5,-216 778.5,-182 611.5,-182"/>
 <text text-anchor="start" x="619.5" y="-203" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogFunction</text>
 <text text-anchor="middle" x="695" y="-190" font-family="Helvetica,sans-Serif" font-size="10.00">Start</text>
@@ -248,7 +248,7 @@ var sectionId = 'dynsection-10';
 </g>
 <!-- Node211 -->
 <g id="node23" class="node"><title>Node211</title>
-<a xlink:href="classokw_1_1log_1_1_log2_console.html#ae12be755a9da04599d329cfece22b1ef" target="_top" xlink:title="okw.log.Log2Console.LogFunction\lStartDebug">
+<a xlink:href="classokw_1_1log_1_1_log2_console.html#ae12be755a9da04599d329cfece22b1ef" target="_top" xlink:title="LogFunctionStartDebug: ">
 <polygon fill="white" stroke="black" points="829.5,-185 829.5,-219 996.5,-219 996.5,-185 829.5,-185"/>
 <text text-anchor="start" x="837.5" y="-206" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogFunction</text>
 <text text-anchor="middle" x="913" y="-193" font-family="Helvetica,sans-Serif" font-size="10.00">StartDebug</text>
@@ -278,7 +278,7 @@ var sectionId = 'dynsection-10';
 </g>
 <!-- Node218 -->
 <g id="node38" class="node"><title>Node218</title>
-<a xlink:href="classokw_1_1log_1_1_log2_console.html#a6c848745fc8facac542f043f4bfce4bc" target="_top" xlink:title="okw.log.Log2Console.LogKey\lWordStart">
+<a xlink:href="classokw_1_1log_1_1_log2_console.html#a6c848745fc8facac542f043f4bfce4bc" target="_top" xlink:title="LogKeyWordStart: ">
 <polygon fill="white" stroke="black" points="622,-92 622,-126 768,-126 768,-92 622,-92"/>
 <text text-anchor="start" x="630" y="-113" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogKey</text>
 <text text-anchor="middle" x="695" y="-100" font-family="Helvetica,sans-Serif" font-size="10.00">WordStart</text>
@@ -309,7 +309,7 @@ var sectionId = 'dynsection-10';
 </g>
 <!-- Node219 -->
 <g id="node41" class="node"><title>Node219</title>
-<a xlink:href="classokw_1_1log_1_1_log2_console.html#a9ec829b2c64f226a7de1d6a8c0ec468f" target="_top" xlink:title="okw.log.Log2Console.LogSequence\lStart">
+<a xlink:href="classokw_1_1log_1_1_log2_console.html#a9ec829b2c64f226a7de1d6a8c0ec468f" target="_top" xlink:title="LogSequenceStart: Begin of a Sequence. ">
 <polygon fill="white" stroke="black" points="826.5,-81 826.5,-115 999.5,-115 999.5,-81 826.5,-81"/>
 <text text-anchor="start" x="834.5" y="-102" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogSequence</text>
 <text text-anchor="middle" x="913" y="-89" font-family="Helvetica,sans-Serif" font-size="10.00">Start</text>

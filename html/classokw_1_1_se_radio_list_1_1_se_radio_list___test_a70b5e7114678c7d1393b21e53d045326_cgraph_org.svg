@@ -101,7 +101,7 @@
 </g>
 <!-- Node601 -->
 <g id="node75" class="node"><title>Node601</title>
-<a xlink:href="classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" target="_top" xlink:title="Beendet den Test, bzw. ">
+<a xlink:href="classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" target="_top" xlink:title="Signalisiert das Ende eines Testfalls. ">
 <polygon fill="white" stroke="black" points="199.5,-130.5 199.5,-151.5 312.5,-151.5 312.5,-130.5 199.5,-130.5"/>
 <text text-anchor="middle" x="256" y="-138.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.EndTest</text>
 </a>
@@ -455,7 +455,7 @@
 </g>
 <!-- Node602 -->
 <g id="node78" class="node"><title>Node602</title>
-<a xlink:href="classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" target="_top" xlink:title="Beendet den Test, bzw. ">
+<a xlink:href="classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" target="_top" xlink:title="Signalisiert das Ende eines Testfalls. ">
 <polygon fill="white" stroke="black" points="375,-101.5 375,-122.5 495,-122.5 495,-101.5 375,-101.5"/>
 <text text-anchor="middle" x="435" y="-109.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.EndTest</text>
 </a>
@@ -467,7 +467,7 @@
 </g>
 <!-- Node603 -->
 <g id="node80" class="node"><title>Node603</title>
-<a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186" target="_top" xlink:title="Beendet den Test, bzw. ">
+<a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186" target="_top" xlink:title="Signalisiert das Ende eines Testfalls. ">
 <polygon fill="white" stroke="black" points="553.5,-92.5 553.5,-113.5 708.5,-113.5 708.5,-92.5 553.5,-92.5"/>
 <text text-anchor="middle" x="631" y="-100.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.EndTest</text>
 </a>

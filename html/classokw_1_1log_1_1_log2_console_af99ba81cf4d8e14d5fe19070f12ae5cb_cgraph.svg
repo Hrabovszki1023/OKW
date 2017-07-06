@@ -74,16 +74,16 @@ var sectionId = 'dynsection-33';
 </g>
 <!-- Node182 -->
 <g id="node5" class="node"><title>Node182</title>
-<a xlink:href="classokw_1_1log_1_1_log2_console.html#a62905e4d224da47b6a31d17384594011" target="_top" xlink:title="okw.log.Log2Console.Blank\lBefore">
-<polygon fill="white" stroke="black" points="212,-0 212,-34 350,-34 350,-0 212,-0"/>
-<text text-anchor="start" x="220" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blank</text>
+<a xlink:href="classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2" target="_top" xlink:title="Erzeugt die Einrücktiefe für die Console&#45;Ausgabe. ">
+<polygon fill="white" stroke="black" points="209.5,-0 209.5,-34 352.5,-34 352.5,-0 209.5,-0"/>
+<text text-anchor="start" x="217.5" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blanks</text>
 <text text-anchor="middle" x="281" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">Before</text>
 </a>
 </g>
 <!-- Node180&#45;&gt;Node182 -->
 <g id="edge4" class="edge"><title>Node180&#45;&gt;Node182</title>
-<path fill="none" stroke="midnightblue" d="M170.113,-30.0122C180.682,-28.772 191.455,-27.5078 201.928,-26.2789"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="202.337,-29.755 211.861,-25.1133 201.521,-22.8027 202.337,-29.755"/>
+<path fill="none" stroke="midnightblue" d="M170.113,-30.0122C179.851,-28.8695 189.762,-27.7065 199.451,-26.5695"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="199.929,-30.0376 209.453,-25.3959 199.113,-23.0853 199.929,-30.0376"/>
 </g>
 <!-- Node183 -->
 <g id="node7" class="node"><title>Node183</title>
@@ -94,8 +94,8 @@ var sectionId = 'dynsection-33';
 </g>
 <!-- Node182&#45;&gt;Node183 -->
 <g id="edge6" class="edge"><title>Node182&#45;&gt;Node183</title>
-<path fill="none" stroke="midnightblue" d="M350.101,-17C360.508,-17 371.349,-17 382.057,-17"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="382.264,-20.5001 392.264,-17 382.264,-13.5001 382.264,-20.5001"/>
+<path fill="none" stroke="midnightblue" d="M352.764,-17C362.396,-17 372.354,-17 382.197,-17"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="382.395,-20.5001 392.395,-17 382.395,-13.5001 382.395,-20.5001"/>
 </g>
 </g>
 </svg>

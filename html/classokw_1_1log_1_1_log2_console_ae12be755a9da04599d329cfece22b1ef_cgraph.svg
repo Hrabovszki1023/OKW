@@ -63,7 +63,7 @@ var sectionId = 'dynsection-16';
 </g>
 <!-- Node89 -->
 <g id="node3" class="node"><title>Node89</title>
-<a xlink:href="classokw_1_1log_1_1_log2_console.html#a06fc14df2dcb5b2b28b65b2a5ca07e25" target="_top" xlink:title="okw.log.Log2Console.LogFunction\lStart">
+<a xlink:href="classokw_1_1log_1_1_log2_console.html#a06fc14df2dcb5b2b28b65b2a5ca07e25" target="_top" xlink:title="LogFunctionStart: ">
 <polygon fill="white" stroke="black" points="204.5,-34 204.5,-68 371.5,-68 371.5,-34 204.5,-34"/>
 <text text-anchor="start" x="212.5" y="-55" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.LogFunction</text>
 <text text-anchor="middle" x="288" y="-42" font-family="Helvetica,sans-Serif" font-size="10.00">Start</text>
@@ -117,16 +117,16 @@ var sectionId = 'dynsection-16';
 </g>
 <!-- Node92 -->
 <g id="node9" class="node"><title>Node92</title>
-<a xlink:href="classokw_1_1log_1_1_log2_console.html#a62905e4d224da47b6a31d17384594011" target="_top" xlink:title="okw.log.Log2Console.Blank\lBefore">
-<polygon fill="white" stroke="black" points="624,-10 624,-44 762,-44 762,-10 624,-10"/>
-<text text-anchor="start" x="632" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blank</text>
+<a xlink:href="classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2" target="_top" xlink:title="Erzeugt die Einrücktiefe für die Console&#45;Ausgabe. ">
+<polygon fill="white" stroke="black" points="621.5,-10 621.5,-44 764.5,-44 764.5,-10 621.5,-10"/>
+<text text-anchor="start" x="629.5" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blanks</text>
 <text text-anchor="middle" x="693" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">Before</text>
 </a>
 </g>
 <!-- Node90&#45;&gt;Node92 -->
 <g id="edge8" class="edge"><title>Node90&#45;&gt;Node92</title>
-<path fill="none" stroke="midnightblue" d="M580.119,-40.6826C591.273,-39.3305 602.668,-37.9494 613.72,-36.6097"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="614.252,-40.071 623.758,-35.393 613.409,-33.1218 614.252,-40.071"/>
+<path fill="none" stroke="midnightblue" d="M580.119,-40.6826C590.417,-39.4343 600.919,-38.1613 611.168,-36.919"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="611.81,-40.3669 621.316,-35.6889 610.968,-33.4178 611.81,-40.3669"/>
 </g>
 <!-- Node93 -->
 <g id="node11" class="node"><title>Node93</title>
@@ -137,13 +137,13 @@ var sectionId = 'dynsection-16';
 </g>
 <!-- Node92&#45;&gt;Node93 -->
 <g id="edge10" class="edge"><title>Node92&#45;&gt;Node93</title>
-<path fill="none" stroke="midnightblue" d="M762.101,-27C772.508,-27 783.349,-27 794.057,-27"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="794.264,-30.5001 804.264,-27 794.264,-23.5001 794.264,-30.5001"/>
+<path fill="none" stroke="midnightblue" d="M764.764,-27C774.396,-27 784.354,-27 794.197,-27"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="794.395,-30.5001 804.395,-27 794.395,-23.5001 794.395,-30.5001"/>
 </g>
 <!-- Node94&#45;&gt;Node92 -->
 <g id="edge16" class="edge"><title>Node94&#45;&gt;Node92</title>
-<path fill="none" stroke="midnightblue" d="M581.558,-17.9946C592.282,-18.8612 603.205,-19.7438 613.811,-20.6009"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="613.617,-24.0965 623.866,-21.4135 614.181,-17.1193 613.617,-24.0965"/>
+<path fill="none" stroke="midnightblue" d="M581.558,-17.9946C591.443,-18.7934 601.497,-19.6058 611.317,-20.3993"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="611.198,-23.9011 621.447,-21.218 611.762,-16.9238 611.198,-23.9011"/>
 </g>
 </g>
 </svg>

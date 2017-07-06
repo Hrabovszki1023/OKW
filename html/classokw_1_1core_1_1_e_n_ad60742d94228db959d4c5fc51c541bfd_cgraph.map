@@ -1,9 +1,10 @@
 <map id="okw.core.EN.VerifySelectedValueWCM" name="okw.core.EN.VerifySelectedValueWCM">
-<area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="247,5,431,35"/>
-<area shape="rect" id="node7" href="$classokw_1_1core_1_1_core.html#ad0ff49c39bbe4fdc3477df1527bf7c58" title="okw.core.Core.VerifySelected\lValueWCM" alt="" coords="241,58,436,105"/>
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="247,21,431,51"/>
+<area shape="rect" id="node7" href="$classokw_1_1core_1_1_core.html#ad0ff49c39bbe4fdc3477df1527bf7c58" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="241,105,436,151"/>
 <area shape="rect" id="node5" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..." alt="" coords="487,5,716,35"/>
 <area shape="rect" id="node9" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes. " alt="" coords="512,58,691,105"/>
 <area shape="rect" id="node11" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. " alt="" coords="495,128,708,157"/>
+<area shape="rect" id="node17" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac10e056db5254f3e5c9ec9c9885f7184" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="507,181,696,227"/>
 <area shape="rect" id="node13" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. " alt="" coords="767,128,988,157"/>
 <area shape="rect" id="node15" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag. " alt="" coords="1037,119,1240,166"/>
 </map>

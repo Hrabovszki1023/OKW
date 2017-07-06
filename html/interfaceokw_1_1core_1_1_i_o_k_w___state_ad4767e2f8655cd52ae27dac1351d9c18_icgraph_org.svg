@@ -9,46 +9,46 @@
 <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 78)">
 <title>okw.core.IOKW_State.SelectTablecell</title>
 <polygon fill="white" stroke="white" points="-4,5 -4,-78 517,-78 517,5 -4,5"/>
-<!-- Node918 -->
-<g id="node1" class="node"><title>Node918</title>
+<!-- Node921 -->
+<g id="node1" class="node"><title>Node921</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-23 0,-57 146,-57 146,-23 0,-23"/>
 <text text-anchor="start" x="8" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.Select</text>
 <text text-anchor="middle" x="73" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00">Tablecell</text>
 </g>
-<!-- Node919 -->
-<g id="node3" class="node"><title>Node919</title>
+<!-- Node922 -->
+<g id="node3" class="node"><title>Node922</title>
 <a xlink:href="classokw_1_1core_1_1_core.html#a02e398b0aa11815b25b1471e4ce2795e" target="_top" xlink:title="Wählt die gegebene Tabellenzelle aus. ">
 <polygon fill="white" stroke="black" points="182,-29.5 182,-50.5 332,-50.5 332,-29.5 182,-29.5"/>
 <text text-anchor="middle" x="257" y="-37.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.SelectTablecell</text>
 </a>
 </g>
-<!-- Node918&#45;&gt;Node919 -->
-<g id="edge2" class="edge"><title>Node918&#45;&gt;Node919</title>
+<!-- Node921&#45;&gt;Node922 -->
+<g id="edge2" class="edge"><title>Node921&#45;&gt;Node922</title>
 <path fill="none" stroke="midnightblue" d="M156.505,-40C164.968,-40 173.527,-40 181.894,-40"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="156.25,-36.5001 146.25,-40 156.25,-43.5001 156.25,-36.5001"/>
 </g>
-<!-- Node920 -->
-<g id="node5" class="node"><title>Node920</title>
+<!-- Node923 -->
+<g id="node5" class="node"><title>Node923</title>
 <a xlink:href="classokw_1_1core_1_1_e_n.html#a1a629d61992d84ccfaa275e7fa9db64d" target="_top" xlink:title="Wählt die gegebene Tabellenzelle aus. ">
 <polygon fill="white" stroke="black" points="368.5,-52.5 368.5,-73.5 511.5,-73.5 511.5,-52.5 368.5,-52.5"/>
 <text text-anchor="middle" x="440" y="-60.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.SelectTablecell</text>
 </a>
 </g>
-<!-- Node919&#45;&gt;Node920 -->
-<g id="edge4" class="edge"><title>Node919&#45;&gt;Node920</title>
+<!-- Node922&#45;&gt;Node923 -->
+<g id="edge4" class="edge"><title>Node922&#45;&gt;Node923</title>
 <path fill="none" stroke="midnightblue" d="M342.362,-50.7285C351.041,-51.8194 359.795,-52.9196 368.308,-53.9895"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="342.584,-47.229 332.225,-49.4545 341.711,-54.1743 342.584,-47.229"/>
 </g>
-<!-- Node921 -->
-<g id="node7" class="node"><title>Node921</title>
+<!-- Node924 -->
+<g id="node7" class="node"><title>Node924</title>
 <a xlink:href="classokw_1_1core_1_1_current_object___test.html#a51c300e8232a0eeb42eb5731f004f357" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode SelectTablecell( FN, COL, ROW ) im ChildObject. ">
 <polygon fill="white" stroke="black" points="375,-0 375,-34 505,-34 505,-0 375,-0"/>
 <text text-anchor="start" x="383" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
 <text text-anchor="middle" x="440" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.tc_SelectTablecelle</text>
 </a>
 </g>
-<!-- Node919&#45;&gt;Node921 -->
-<g id="edge6" class="edge"><title>Node919&#45;&gt;Node921</title>
+<!-- Node922&#45;&gt;Node924 -->
+<g id="edge6" class="edge"><title>Node922&#45;&gt;Node924</title>
 <path fill="none" stroke="midnightblue" d="M342.207,-29.2909C353.133,-27.9177 364.178,-26.5295 374.717,-25.2049"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="341.711,-25.8257 332.225,-30.5455 342.584,-32.771 341.711,-25.8257"/>
 </g>

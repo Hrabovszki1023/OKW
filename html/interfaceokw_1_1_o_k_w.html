@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 192, Datum: 07.03.2017 04:31:07</span>
+   &#160;<span id="projectnumber">Build_ID: 193, Datum: 07.06.2017 04:11:51</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -98,7 +98,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Annotation  für die Zuordnung des Fachlichen Name-s eines GUI-Objektes im Frame.  
+<p>Annotations-Klasses für die Zuordnung von</p><ol type="1">
+<li>der <a class="el" href="ref_glossary.html#refFN">FN</a> -s</li>
+<li>Wartezeiten für die Verify* -Schlüsselwörter</li>
+<li>Wartezeiten für das <em>erscheinen</em> von GUI-Objekten. </li>
+</ol>
+ 
  <a href="interfaceokw_1_1_o_k_w.html#details">Mehr ...</a></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Zusammengehörigkeiten von okw.OKW:</div>
@@ -112,76 +117,81 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
 <tr class="memitem:a95f6a6c8976dbbc79a8765a36e3545ff"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a95f6a6c8976dbbc79a8765a36e3545ff">FN</a> () default &quot;&quot;</td></tr>
-<tr class="memdesc:a95f6a6c8976dbbc79a8765a36e3545ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">_F_untionaler _N_ame des GUI-Objektes.  <a href="#a95f6a6c8976dbbc79a8765a36e3545ff">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a95f6a6c8976dbbc79a8765a36e3545ff"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="ref_glossary.html#refFN">FN</a> des GUI-Objektes.  <a href="#a95f6a6c8976dbbc79a8765a36e3545ff">Mehr ...</a><br /></td></tr>
 <tr class="separator:a95f6a6c8976dbbc79a8765a36e3545ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af34bc34f70320801da0d077669491629"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#af34bc34f70320801da0d077669491629">WaitForMe_TO</a> () default 30</td></tr>
-<tr class="memdesc:af34bc34f70320801da0d077669491629"><td class="mdescLeft">&#160;</td><td class="mdescRight">_T_ime_O_ut in Secunden [s] für das aktuelle Object.  <a href="#af34bc34f70320801da0d077669491629">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:af34bc34f70320801da0d077669491629"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>T</b>ime<b>O</b>ut in Sekunden [s] für das erscheinen des aktuellen Objektes.  <a href="#af34bc34f70320801da0d077669491629">Mehr ...</a><br /></td></tr>
 <tr class="separator:af34bc34f70320801da0d077669491629"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a243bbdc6c866386fd64fd4c4758a14b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a243bbdc6c866386fd64fd4c4758a14b7">WaitForMe_PT</a> () default 1000</td></tr>
-<tr class="memdesc:a243bbdc6c866386fd64fd4c4758a14b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">_P_olling _T_ime in [ms] für das aktuelle Object.  <a href="#a243bbdc6c866386fd64fd4c4758a14b7">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a243bbdc6c866386fd64fd4c4758a14b7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>P</b>olling <b>T</b>ime in [ms] für das aktuelle Object.  <a href="#a243bbdc6c866386fd64fd4c4758a14b7">Mehr ...</a><br /></td></tr>
 <tr class="separator:a243bbdc6c866386fd64fd4c4758a14b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8d37eed135646fd2d8bce2763e4cf1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#ae8d37eed135646fd2d8bce2763e4cf1a">VerifyHasFocus_TO</a> () default 30</td></tr>
-<tr class="memdesc:ae8d37eed135646fd2d8bce2763e4cf1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">_T_ime_O_ut in Secunden [s] für das Schlüsselwort VerifyHasFocus.  <a href="#ae8d37eed135646fd2d8bce2763e4cf1a">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:ae8d37eed135646fd2d8bce2763e4cf1a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyHasFocus.  <a href="#ae8d37eed135646fd2d8bce2763e4cf1a">Mehr ...</a><br /></td></tr>
 <tr class="separator:ae8d37eed135646fd2d8bce2763e4cf1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b87d4e6b44b93fbf858c3653c458d18"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a1b87d4e6b44b93fbf858c3653c458d18">VerifyHasFocus_PT</a> () default 1000</td></tr>
-<tr class="memdesc:a1b87d4e6b44b93fbf858c3653c458d18"><td class="mdescLeft">&#160;</td><td class="mdescRight">_P_olling _T_ime in [ms] für das Schlüsselwort VerifyHasFocus.  <a href="#a1b87d4e6b44b93fbf858c3653c458d18">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a1b87d4e6b44b93fbf858c3653c458d18"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyHasFocus.  <a href="#a1b87d4e6b44b93fbf858c3653c458d18">Mehr ...</a><br /></td></tr>
 <tr class="separator:a1b87d4e6b44b93fbf858c3653c458d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a03152459d43bb819b4d3c0410c070b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a8a03152459d43bb819b4d3c0410c070b">VerifyIsActive_TO</a> () default 30</td></tr>
-<tr class="memdesc:a8a03152459d43bb819b4d3c0410c070b"><td class="mdescLeft">&#160;</td><td class="mdescRight">_T_ime_O_ut in [s] für das Schlüsselwort VerifyIsActive.  <a href="#a8a03152459d43bb819b4d3c0410c070b">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a8a03152459d43bb819b4d3c0410c070b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyIsActive.  <a href="#a8a03152459d43bb819b4d3c0410c070b">Mehr ...</a><br /></td></tr>
 <tr class="separator:a8a03152459d43bb819b4d3c0410c070b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d30c8ec3d9fa8d473373076fbdbed00"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a8d30c8ec3d9fa8d473373076fbdbed00">VerifyIsActive_PT</a> () default 1000</td></tr>
-<tr class="memdesc:a8d30c8ec3d9fa8d473373076fbdbed00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polling Time in [ms] für das Schlüsselwort VerifyIsActive.  <a href="#a8d30c8ec3d9fa8d473373076fbdbed00">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a8d30c8ec3d9fa8d473373076fbdbed00"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyIsActive.  <a href="#a8d30c8ec3d9fa8d473373076fbdbed00">Mehr ...</a><br /></td></tr>
 <tr class="separator:a8d30c8ec3d9fa8d473373076fbdbed00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d3914927a74bed1f783d9a3037dd8af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a6d3914927a74bed1f783d9a3037dd8af">VerifyLabel_TO</a> () default 30</td></tr>
-<tr class="memdesc:a6d3914927a74bed1f783d9a3037dd8af"><td class="mdescLeft">&#160;</td><td class="mdescRight">TimeOut in [s] für das Schlüsselwort VerifyLabel.  <a href="#a6d3914927a74bed1f783d9a3037dd8af">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a6d3914927a74bed1f783d9a3037dd8af"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyLabel.  <a href="#a6d3914927a74bed1f783d9a3037dd8af">Mehr ...</a><br /></td></tr>
 <tr class="separator:a6d3914927a74bed1f783d9a3037dd8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af61e99c52f99cd85078aef9cf024557b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#af61e99c52f99cd85078aef9cf024557b">VerifyLabel_PT</a> () default 1000</td></tr>
-<tr class="memdesc:af61e99c52f99cd85078aef9cf024557b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polling Time in [ms] für das Schlüsselwort VerifyLabel.  <a href="#af61e99c52f99cd85078aef9cf024557b">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:af61e99c52f99cd85078aef9cf024557b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyLabel.  <a href="#af61e99c52f99cd85078aef9cf024557b">Mehr ...</a><br /></td></tr>
 <tr class="separator:af61e99c52f99cd85078aef9cf024557b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7371741dc0c7311f45fa72822d41da17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a7371741dc0c7311f45fa72822d41da17">VerifySelectedValue_TO</a> () default 30</td></tr>
-<tr class="memdesc:a7371741dc0c7311f45fa72822d41da17"><td class="mdescLeft">&#160;</td><td class="mdescRight">TimeOut in [s] für das Schlüsselwort VerifySelectedValue.  <a href="#a7371741dc0c7311f45fa72822d41da17">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a7371741dc0c7311f45fa72822d41da17"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifySelectedValue.  <a href="#a7371741dc0c7311f45fa72822d41da17">Mehr ...</a><br /></td></tr>
 <tr class="separator:a7371741dc0c7311f45fa72822d41da17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa66dfee6a52c8f6dfc422159e47fdc1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#aa66dfee6a52c8f6dfc422159e47fdc1d">VerifySelectedValue_PT</a> () default 1000</td></tr>
-<tr class="memdesc:aa66dfee6a52c8f6dfc422159e47fdc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polling Time in [ms] für das Schlüsselwort VerifySelectedValue.  <a href="#aa66dfee6a52c8f6dfc422159e47fdc1d">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:aa66dfee6a52c8f6dfc422159e47fdc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifySelectedValue.  <a href="#aa66dfee6a52c8f6dfc422159e47fdc1d">Mehr ...</a><br /></td></tr>
 <tr class="separator:aa66dfee6a52c8f6dfc422159e47fdc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a899fc2a092c4a03f53ce85ca1af61b28"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a899fc2a092c4a03f53ce85ca1af61b28">VerifyTablecellValue_TO</a> () default 30</td></tr>
-<tr class="memdesc:a899fc2a092c4a03f53ce85ca1af61b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">TimeOut in [s] für das Schlüsselwort VerifyTablecellValue.  <a href="#a899fc2a092c4a03f53ce85ca1af61b28">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a899fc2a092c4a03f53ce85ca1af61b28"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyTablecellValue.  <a href="#a899fc2a092c4a03f53ce85ca1af61b28">Mehr ...</a><br /></td></tr>
 <tr class="separator:a899fc2a092c4a03f53ce85ca1af61b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acefee0b26413ff55e79c06d39f968943"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#acefee0b26413ff55e79c06d39f968943">VerifyTablecellValue_PT</a> () default 1000</td></tr>
-<tr class="memdesc:acefee0b26413ff55e79c06d39f968943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polling Time in [ms] für das Schlüsselwort VerifyTablecellValue.  <a href="#acefee0b26413ff55e79c06d39f968943">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:acefee0b26413ff55e79c06d39f968943"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyTablecellValue.  <a href="#acefee0b26413ff55e79c06d39f968943">Mehr ...</a><br /></td></tr>
 <tr class="separator:acefee0b26413ff55e79c06d39f968943"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90ddb827a9c10509bdb0fad0c07d1fd8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a90ddb827a9c10509bdb0fad0c07d1fd8">VerifyTooltip_TO</a> () default 30</td></tr>
-<tr class="memdesc:a90ddb827a9c10509bdb0fad0c07d1fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">TimeOut in [s] für das Schlüsselwort VerifyTooltip.  <a href="#a90ddb827a9c10509bdb0fad0c07d1fd8">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a90ddb827a9c10509bdb0fad0c07d1fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyTooltip.  <a href="#a90ddb827a9c10509bdb0fad0c07d1fd8">Mehr ...</a><br /></td></tr>
 <tr class="separator:a90ddb827a9c10509bdb0fad0c07d1fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a288e904782a66d08a9f2f0e93e7c73ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a288e904782a66d08a9f2f0e93e7c73ba">VerifyTooltip_PT</a> () default 1000</td></tr>
-<tr class="memdesc:a288e904782a66d08a9f2f0e93e7c73ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polling Time in [ms] für das Schlüsselwort VerifyTooltip.  <a href="#a288e904782a66d08a9f2f0e93e7c73ba">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a288e904782a66d08a9f2f0e93e7c73ba"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyTooltip.  <a href="#a288e904782a66d08a9f2f0e93e7c73ba">Mehr ...</a><br /></td></tr>
 <tr class="separator:a288e904782a66d08a9f2f0e93e7c73ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ef9ef7440ec347cb80d403321e4a843"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a3ef9ef7440ec347cb80d403321e4a843">VerifyValue_TO</a> () default 30</td></tr>
-<tr class="memdesc:a3ef9ef7440ec347cb80d403321e4a843"><td class="mdescLeft">&#160;</td><td class="mdescRight">TimeOut in [s] für das Schlüsselwort VerifyValue.  <a href="#a3ef9ef7440ec347cb80d403321e4a843">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a3ef9ef7440ec347cb80d403321e4a843"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyValue.  <a href="#a3ef9ef7440ec347cb80d403321e4a843">Mehr ...</a><br /></td></tr>
 <tr class="separator:a3ef9ef7440ec347cb80d403321e4a843"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d2799929ca6c0ecd3ebd0e2003a96b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a6d2799929ca6c0ecd3ebd0e2003a96b1">VerifyValue_PT</a> () default 1000</td></tr>
-<tr class="memdesc:a6d2799929ca6c0ecd3ebd0e2003a96b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polling Time in [ms] für das Schlüsselwort VerifyValue.  <a href="#a6d2799929ca6c0ecd3ebd0e2003a96b1">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a6d2799929ca6c0ecd3ebd0e2003a96b1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyValue.  <a href="#a6d2799929ca6c0ecd3ebd0e2003a96b1">Mehr ...</a><br /></td></tr>
 <tr class="separator:a6d2799929ca6c0ecd3ebd0e2003a96b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b7f6f149265871217e825365d5c87a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a0b7f6f149265871217e825365d5c87a1">VerifyCaption_TO</a> () default 30</td></tr>
-<tr class="memdesc:a0b7f6f149265871217e825365d5c87a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">TimeOut in [s] für das Schlüsselwort VerifyCaption.  <a href="#a0b7f6f149265871217e825365d5c87a1">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a0b7f6f149265871217e825365d5c87a1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyCaption.  <a href="#a0b7f6f149265871217e825365d5c87a1">Mehr ...</a><br /></td></tr>
 <tr class="separator:a0b7f6f149265871217e825365d5c87a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05a951f068a3d3535a8df1fd883781a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a05a951f068a3d3535a8df1fd883781a5">VerifyCaption_PT</a> () default 1000</td></tr>
-<tr class="memdesc:a05a951f068a3d3535a8df1fd883781a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polling Time in [ms] für das Schlüsselwort VerifyCaption.  <a href="#a05a951f068a3d3535a8df1fd883781a5">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a05a951f068a3d3535a8df1fd883781a5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyCaption.  <a href="#a05a951f068a3d3535a8df1fd883781a5">Mehr ...</a><br /></td></tr>
 <tr class="separator:a05a951f068a3d3535a8df1fd883781a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49f8a2366e22577bf4c10f8337d6a42d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a49f8a2366e22577bf4c10f8337d6a42d">VerifyExists_TO</a> () default 30</td></tr>
-<tr class="memdesc:a49f8a2366e22577bf4c10f8337d6a42d"><td class="mdescLeft">&#160;</td><td class="mdescRight">TimeOut in [s] für das Schlüsselwort VerifyExists.  <a href="#a49f8a2366e22577bf4c10f8337d6a42d">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a49f8a2366e22577bf4c10f8337d6a42d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyExists.  <a href="#a49f8a2366e22577bf4c10f8337d6a42d">Mehr ...</a><br /></td></tr>
 <tr class="separator:a49f8a2366e22577bf4c10f8337d6a42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0463f41da2a22c0299661f0719b32018"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1_o_k_w.html#a0463f41da2a22c0299661f0719b32018">VerifyExists_PT</a> () default 1000</td></tr>
-<tr class="memdesc:a0463f41da2a22c0299661f0719b32018"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polling Time in [ms] für das Schlüsselwort VerifyExists.  <a href="#a0463f41da2a22c0299661f0719b32018">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a0463f41da2a22c0299661f0719b32018"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyExists.  <a href="#a0463f41da2a22c0299661f0719b32018">Mehr ...</a><br /></td></tr>
 <tr class="separator:a0463f41da2a22c0299661f0719b32018"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><p>Annotation  für die Zuordnung des Fachlichen Name-s eines GUI-Objektes im Frame. </p>
+<div class="textblock"><p>Annotations-Klasses für die Zuordnung von</p><ol type="1">
+<li>der <a class="el" href="ref_glossary.html#refFN">FN</a> -s</li>
+<li>Wartezeiten für die Verify* -Schlüsselwörter</li>
+<li>Wartezeiten für das <em>erscheinen</em> von GUI-Objekten. </li>
+</ol>
+<p>zu einem GUI-Objekt im Frame.</p>
 <dl class="section see"><dt>Siehe auch</dt><dd>: <a href="http://tutorials.jenkov.com/java-reflection/annotations.html">http://tutorials.jenkov.com/java-reflection/annotations.html</a> == github Issue issue <a href="https://github.com/Hrabovszki1023/OKW/issues/37">https://github.com/Hrabovszki1023/OKW/issues/37</a></dd></dl>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2015-11-28 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w_8java_source.html#l00032">32</a> der Datei <a class="el" href="_o_k_w_8java_source.html">OKW.java</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w_8java_source.html#l00038">38</a> der Datei <a class="el" href="_o_k_w_8java_source.html">OKW.java</a>.</p>
 </div><h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
 <a id="a95f6a6c8976dbbc79a8765a36e3545ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95f6a6c8976dbbc79a8765a36e3545ff">&#9670;&nbsp;</a></span>FN()</h2>
@@ -198,7 +208,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>_F_untionaler _N_ame des GUI-Objektes. </p>
+<p><a class="el" href="ref_glossary.html#refFN">FN</a> des GUI-Objektes. </p>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2015-11-28 </dd></dl>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -227,7 +237,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Polling Time in [ms] für das Schlüsselwort VerifyCaption. </p>
+<p><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyCaption. </p>
 <p>Die Periodendauer des Pollens wird in Millisekunden angegeben. Default ist 1000ms (=1s). </p>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -255,7 +265,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>TimeOut in [s] für das Schlüsselwort VerifyCaption. </p>
+<p><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyCaption. </p>
 <p>Default ist 30s. </p>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -283,7 +293,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Polling Time in [ms] für das Schlüsselwort VerifyExists. </p>
+<p><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyExists. </p>
 <p>Die Periodendauer des Pollens wird in Millisekunden angegeben. Default ist 1000ms (=1s). </p>
 <div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -311,7 +321,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>TimeOut in [s] für das Schlüsselwort VerifyExists. </p>
+<p><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyExists. </p>
 <p>Default ist 30s. </p>
 <div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -339,7 +349,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>_P_olling _T_ime in [ms] für das Schlüsselwort VerifyHasFocus. </p>
+<p><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyHasFocus. </p>
 <p>Die Periodendauer des Pollens wird in Millisekunden angegeben. Default ist 1000ms (=1s). </p>
 <div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -367,7 +377,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>_T_ime_O_ut in Secunden [s] für das Schlüsselwort VerifyHasFocus. </p>
+<p><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyHasFocus. </p>
 <p>Default ist 30s. </p>
 <div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -395,7 +405,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Polling Time in [ms] für das Schlüsselwort VerifyIsActive. </p>
+<p><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyIsActive. </p>
 <p>Die Periodendauer des Pollens wird in Millisekunden angegeben. Default ist 1000ms (=1s). </p>
 <div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -423,7 +433,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>_T_ime_O_ut in [s] für das Schlüsselwort VerifyIsActive. </p>
+<p><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyIsActive. </p>
 <p>Default ist 30s. </p>
 <div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -451,7 +461,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Polling Time in [ms] für das Schlüsselwort VerifyLabel. </p>
+<p><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyLabel. </p>
 <p>Die Periodendauer des Pollens wird in Millisekunden angegeben. Default ist 1000ms (=1s). </p>
 <div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -479,7 +489,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>TimeOut in [s] für das Schlüsselwort VerifyLabel. </p>
+<p><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyLabel. </p>
 <p>Default ist 30s. </p>
 <div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -507,7 +517,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Polling Time in [ms] für das Schlüsselwort VerifySelectedValue. </p>
+<p><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifySelectedValue. </p>
 <p>Die Periodendauer des Pollens wird in Millisekunden angegeben. Default ist 1000ms (=1s). </p>
 <div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -535,7 +545,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>TimeOut in [s] für das Schlüsselwort VerifySelectedValue. </p>
+<p><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifySelectedValue. </p>
 <p>Default ist 30s. </p>
 <div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -563,7 +573,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Polling Time in [ms] für das Schlüsselwort VerifyTablecellValue. </p>
+<p><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyTablecellValue. </p>
 <p>Die Periodendauer des Pollens wird in Millisekunden angegeben. Default ist 1000ms (=1s). </p>
 <div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -591,7 +601,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>TimeOut in [s] für das Schlüsselwort VerifyTablecellValue. </p>
+<p><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyTablecellValue. </p>
 <p>Default ist 30s. </p>
 <div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -619,7 +629,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Polling Time in [ms] für das Schlüsselwort VerifyTooltip. </p>
+<p><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyTooltip. </p>
 <p>Die Periodendauer des Pollens wird in Millisekunden angegeben. Default ist 1000ms (=1s). </p>
 <div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -647,7 +657,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>TimeOut in [s] für das Schlüsselwort VerifyTooltip. </p>
+<p><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyTooltip. </p>
 <p>Default ist 30s. </p>
 <div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -675,7 +685,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>Polling Time in [ms] für das Schlüsselwort VerifyValue. </p>
+<p><b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyValue. </p>
 <p>Die Periodendauer des Pollens wird in Millisekunden angegeben. Default ist 1000ms (=1s). </p>
 <div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -703,7 +713,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>TimeOut in [s] für das Schlüsselwort VerifyValue. </p>
+<p><b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyValue. </p>
 <p>Default ist 30s. </p>
 <div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -731,7 +741,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>_P_olling _T_ime in [ms] für das aktuelle Object. </p>
+<p><b>P</b>olling <b>T</b>ime in [ms] für das aktuelle Object. </p>
 <p>Die Periodendauer des Pollens wird in Millisekunden angegeben. Default ist 1000ms (=1s). </p>
 <div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -759,7 +769,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
       </table>
 </div><div class="memdoc">
 
-<p>_T_ime_O_ut in Secunden [s] für das aktuelle Object. </p>
+<p><b>T</b>ime<b>O</b>ut in Sekunden [s] für das erscheinen des aktuellen Objektes. </p>
 <p>Default ist 30s. </p>
 <div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
@@ -782,7 +792,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1_o_k_w.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><a class="el" href="interfaceokw_1_1_o_k_w.html">OKW</a></li>
-    <li class="footer">Erzeugt am Mon Jul 3 2017 04:32:48 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Jul 6 2017 04:12:24 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

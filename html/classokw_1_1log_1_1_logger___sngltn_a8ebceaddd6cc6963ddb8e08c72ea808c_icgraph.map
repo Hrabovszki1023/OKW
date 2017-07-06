@@ -1,7 +1,7 @@
 <map id="okw.log.Logger_Sngltn.LogPrint" name="okw.log.Logger_Sngltn.LogPrint">
 <area shape="rect" id="node3" href="$classokw_1_1core_1_1_n_o_k.html#a62d1765ea311e440d678cb57ca9dd2c2" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="608,249,779,279"/>
-<area shape="rect" id="node5" href="$classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0" title="Keine Beschreibung zu &quot;LogCaption&quot; verfügbar. " alt="" coords="855,52,1023,81"/>
-<area shape="rect" id="node7" href="$classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" title="Protokolliert, ob das gegebene Objekt existiert. " alt="" coords="859,111,1019,140"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0" title="Gibt die Caption eines GUI&#45;Objektes in den Testergebnissen aus. " alt="" coords="855,52,1023,81"/>
+<area shape="rect" id="node7" href="$classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus. " alt="" coords="859,111,1019,140"/>
 <area shape="rect" id="node9" href="$classokw_1_1core_1_1_o_k.html#a1b8a5a3d583ffabc0063632ab9d981cf" title="Dokumentiert den Fokus&#45;Status des gegebenen Objekts. " alt="" coords="848,176,1029,205"/>
 <area shape="rect" id="node11" href="$classokw_1_1core_1_1_o_k.html#ae44a6c32e26a7f93dd5c9f7b5765ee0d" title="Dokumentiert den Status des gegebenen Objekts. " alt="" coords="853,252,1024,281"/>
 <area shape="rect" id="node13" href="$classokw_1_1core_1_1_o_k.html#a5ca2a918fc575095dd00d15e65f1491c" title="Keine Beschreibung zu &quot;LogLabel&quot; verfügbar. " alt="" coords="861,559,1016,588"/>
@@ -47,5 +47,5 @@
 <area shape="rect" id="node115" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html#ae08fe1cf4c694bb3a4dfb1f1837b26bc" title="Ermittelt das Webelement mit der gegebenen frameID und dem gegebenen Locator. " alt="" coords="301,2982,475,3029"/>
 <area shape="rect" id="node29" href="$classokw_1_1core_1_1_o_k.html#a594d5a3518a401240bc1868f5883a393" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="859,351,1019,380"/>
 <area shape="rect" id="node31" href="$classokw_1_1core_1_1_o_k.html#a1a4fcce79cac7386f04495383d2985b3" title="Klickt auf das gegebene Objekt. " alt="" coords="864,452,1013,481"/>
-<area shape="rect" id="node33" href="$classokw_1_1core_1_1_o_k.html#a3e40c302aa78cb83aa1fcfd0dafa24b0" title="Klickt auf das gegebene Objekt. " alt="" coords="844,505,1033,535"/>
+<area shape="rect" id="node33" href="$classokw_1_1core_1_1_o_k.html#a3e40c302aa78cb83aa1fcfd0dafa24b0" title="Führt ein Doppelklick auf das gegebene GUI&#45;Objekt aus. " alt="" coords="844,505,1033,535"/>
 </map>

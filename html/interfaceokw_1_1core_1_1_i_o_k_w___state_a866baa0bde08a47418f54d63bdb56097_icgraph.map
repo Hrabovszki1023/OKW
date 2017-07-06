@@ -2,10 +2,10 @@
 <area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="287,1307,471,1336"/>
 <area shape="rect" id="node5" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="549,5,709,35"/>
 <area shape="rect" id="node7" href="$classokw_1_1core_1_1_e_n.html#aa0ea62b29e5e216241a5b757797f83bf" title="Klickt auf das gegebene Objekt. " alt="" coords="555,59,704,88"/>
-<area shape="rect" id="node9" href="$classokw_1_1core_1_1_e_n.html#adc2ff15e947443e4a40121de9bfa036a" title="Klickt auf das gegebene Objekt. " alt="" coords="535,112,724,141"/>
-<area shape="rect" id="node11" href="$classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" title="Beendet den Test, bzw. " alt="" coords="555,165,704,195"/>
-<area shape="rect" id="node13" href="$classokw_1_1core_1_1_e_n.html#a30ccb279c44093debc4e07686a193765" title="Keine Beschreibung zu &quot;LogCaption&quot; verfügbar. " alt="" coords="545,219,713,248"/>
-<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#a6b31a5c7517cf918ffc2115e5f019f4c" title="Protokolliert, ob das gegebene Objekt existiert. " alt="" coords="549,272,709,301"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_e_n.html#adc2ff15e947443e4a40121de9bfa036a" title="Führt ein Doppelklick auf das gegebene GUI&#45;Objekt aus. " alt="" coords="535,112,724,141"/>
+<area shape="rect" id="node11" href="$classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" title="Signalisiert das Ende eines Testfalls. " alt="" coords="555,165,704,195"/>
+<area shape="rect" id="node13" href="$classokw_1_1core_1_1_e_n.html#a30ccb279c44093debc4e07686a193765" title="Gibt die Caption eines GUI&#45;Objektes in den Testergebnissen aus. " alt="" coords="545,219,713,248"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#a6b31a5c7517cf918ffc2115e5f019f4c" title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus. " alt="" coords="549,272,709,301"/>
 <area shape="rect" id="node17" href="$classokw_1_1core_1_1_e_n.html#a446ed81868f18ea11da1b531d5b2d152" title="Dokumentiert den Fokus&#45;Status des gegebenen Objekts. " alt="" coords="539,325,720,355"/>
 <area shape="rect" id="node19" href="$classokw_1_1core_1_1_e_n.html#acbeecc6c0bfe7f092b7b612471f5e790" title="Dokumentiert den Status des gegebenen Objekts. " alt="" coords="544,379,715,408"/>
 <area shape="rect" id="node21" href="$classokw_1_1core_1_1_e_n.html#a5fcf39338e18d9d03d75197bc6b4ace2" title="Keine Beschreibung zu &quot;LogLabel&quot; verfügbar. " alt="" coords="552,432,707,461"/>
@@ -44,8 +44,8 @@
 <area shape="rect" id="node87" href="$classokw_1_1core_1_1_e_n.html#a33c8aac65f5d1f919065a9ec5e47f415" title="Überprüft die Überschrift des Objektes. " alt="" coords="527,2240,732,2269"/>
 <area shape="rect" id="node89" href="$classokw_1_1core_1_1_e_n.html#a70ba07cc0050e6bd89dc133c36972d2a" title="Überprüft die Beschreibung des Objektes. " alt="" coords="529,2293,729,2323"/>
 <area shape="rect" id="node91" href="$classokw_1_1core_1_1_e_n.html#a535232918db76d11b92e1c00d24e228b" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="536,2346,723,2393"/>
-<area shape="rect" id="node93" href="$classokw_1_1core_1_1_e_n.html#ad190826f8408d93b5f4769ef1306ce31" title="okw.core.EN.VerifySelected\lValueREGX" alt="" coords="536,2415,723,2462"/>
-<area shape="rect" id="node95" href="$classokw_1_1core_1_1_e_n.html#ad60742d94228db959d4c5fc51c541bfd" title="okw.core.EN.VerifySelected\lValueWCM" alt="" coords="536,2485,723,2531"/>
+<area shape="rect" id="node93" href="$classokw_1_1core_1_1_e_n.html#ad190826f8408d93b5f4769ef1306ce31" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="536,2415,723,2462"/>
+<area shape="rect" id="node95" href="$classokw_1_1core_1_1_e_n.html#ad60742d94228db959d4c5fc51c541bfd" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="536,2485,723,2531"/>
 <area shape="rect" id="node97" href="$classokw_1_1core_1_1_e_n.html#a67331a9d3f88e0c7c8a593730683c2c6" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. " alt="" coords="536,2554,723,2601"/>
 <area shape="rect" id="node99" href="$classokw_1_1core_1_1_e_n.html#aa7f564b9473f69377d40c80e0508752a" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. " alt="" coords="536,2623,723,2670"/>
 </map>

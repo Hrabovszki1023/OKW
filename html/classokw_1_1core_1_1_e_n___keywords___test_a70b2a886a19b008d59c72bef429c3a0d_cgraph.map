@@ -1,20 +1,21 @@
 <map id="okw.core.EN_Keywords_Test.tc_VerifySelectedValueWCM" name="okw.core.EN_Keywords_Test.tc_VerifySelectedValueWCM">
-<area shape="rect" id="node3" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="296,277,456,307"/>
-<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="283,101,469,131"/>
-<area shape="rect" id="node30" href="$classokw_1_1core_1_1_e_n.html#a3de04697f1873ab6773a068a3159f1d1" title="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert. " alt="" coords="299,224,453,253"/>
-<area shape="rect" id="node39" href="$classokw_1_1core_1_1_e_n.html#ad60742d94228db959d4c5fc51c541bfd" title="okw.core.EN.VerifySelected\lValueWCM" alt="" coords="283,154,469,201"/>
-<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="524,251,708,280"/>
-<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="531,304,701,333"/>
-<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..." alt="" coords="764,251,993,280"/>
-<area shape="rect" id="node11" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls. " alt="" coords="789,357,968,403"/>
-<area shape="rect" id="node13" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="771,304,987,333"/>
-<area shape="rect" id="node18" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="519,75,713,104"/>
-<area shape="rect" id="node20" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes. " alt="" coords="789,127,968,174"/>
-<area shape="rect" id="node22" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. " alt="" coords="772,75,985,104"/>
-<area shape="rect" id="node28" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="781,5,976,51"/>
-<area shape="rect" id="node24" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. " alt="" coords="1044,75,1265,104"/>
-<area shape="rect" id="node26" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag. " alt="" coords="1315,66,1517,113"/>
-<area shape="rect" id="node33" href="$classokw_1_1core_1_1_core.html#a7088065564f2909025435c0c5594926c" title="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert. " alt="" coords="535,197,697,227"/>
-<area shape="rect" id="node37" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a301021976f71d79ff9054052b3b9ca38" title="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert. " alt="" coords="773,197,984,227"/>
-<area shape="rect" id="node42" href="$classokw_1_1core_1_1_core.html#ad0ff49c39bbe4fdc3477df1527bf7c58" title="okw.core.Core.VerifySelected\lValueWCM" alt="" coords="519,127,713,174"/>
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="296,269,456,299"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="283,216,469,245"/>
+<area shape="rect" id="node30" href="$classokw_1_1core_1_1_e_n.html#a3de04697f1873ab6773a068a3159f1d1" title="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert. " alt="" coords="299,93,453,123"/>
+<area shape="rect" id="node39" href="$classokw_1_1core_1_1_e_n.html#ad60742d94228db959d4c5fc51c541bfd" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="283,146,469,193"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="524,243,708,272"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="531,381,701,411"/>
+<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..." alt="" coords="764,320,993,349"/>
+<area shape="rect" id="node11" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls. " alt="" coords="789,373,968,419"/>
+<area shape="rect" id="node13" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="771,443,987,472"/>
+<area shape="rect" id="node18" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="519,189,713,219"/>
+<area shape="rect" id="node20" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes. " alt="" coords="789,58,968,105"/>
+<area shape="rect" id="node22" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. " alt="" coords="772,128,985,157"/>
+<area shape="rect" id="node28" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="781,250,976,297"/>
+<area shape="rect" id="node24" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. " alt="" coords="1044,128,1265,157"/>
+<area shape="rect" id="node26" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag. " alt="" coords="1315,119,1517,166"/>
+<area shape="rect" id="node33" href="$classokw_1_1core_1_1_core.html#a7088065564f2909025435c0c5594926c" title="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert. " alt="" coords="535,67,697,96"/>
+<area shape="rect" id="node37" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a301021976f71d79ff9054052b3b9ca38" title="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert. " alt="" coords="773,5,984,35"/>
+<area shape="rect" id="node42" href="$classokw_1_1core_1_1_core.html#ad0ff49c39bbe4fdc3477df1527bf7c58" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="519,119,713,166"/>
+<area shape="rect" id="node46" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac10e056db5254f3e5c9ec9c9885f7184" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="784,181,973,227"/>
 </map>

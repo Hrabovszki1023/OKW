@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 192, Datum: 07.03.2017 04:31:07</span>
+   &#160;<span id="projectnumber">Build_ID: 193, Datum: 07.06.2017 04:11:51</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('ref_reduzierung_von_aufw_xC3_xA4nde.ht
 <li class="level2"><a href="#refMethodenÜberschreibung">Methoden Überschreibung</a></li>
 </ul>
 </li>
+<li class="level1"><a href="#refAufwandreduzierungSequenzen">Sequenzen</a></li>
 <li class="level1"><a href="#refEinleitung">Einleitung</a></li>
 <li class="level1"><a href="#refGrundsätzlicheÜberlegungen">Grundsätzliche Überlegungen</a></li>
 <li class="level1"><a href="#refTestfallErstellung">Testfallerstellung</a><ul><li class="level2"><a href="#refReduzierungVonAufwänden">Aufwandsreduzierung</a></li>
@@ -118,10 +119,15 @@ Objekt-Erkennungseigenschaft</h1>
 <h2><a class="anchor" id="refFunktionsweiseGUIObjekterkennung"></a>
 Funktionsweise der GUI-Objekterkennung</h2>
 <p>Die gängingsten GUI-Automatisierungswerkzeuge erkennen ein GUI-Objekt an einer oder mehreren charakteristischen Eigenschaften (Properties oder Attribute). Das kann z.B. die Position oder Größe des Objektes sein. Wichtig ist nur, dass ein GUI-Objekt mit Hilfe dieser Eigenschaften eindeutig identifiziert werden kann.</p>
-<p>Die optimale Lösung wäre eine jedem GUI-Objekt eindeutig zugewiesene Test-ID, die über den gesamten GUI-Objektlebenszyklus konstant bleibt und über alle Objekte eindeutig ist. Es gäbe damit keine zwei GUI-Objekte mit einer identischen Test-ID.</p>
+<dl class="section user"><dt>Die optimale Lösung wäre:</dt><dd><ul>
+<li>Jedem GUI-Objekt eine eindeutig zugewiesene Test-ID,</li>
+<li>die über die gesamten GUI-Objektlebendauer konstant bleibt</li>
+<li>und über alle GUI-Objekte hinweg eindeutig ist: also keine zwei GUI-Objekte mit einer identischen Test-ID.</li>
+</ul>
+</dd></dl>
 <h2><a class="anchor" id="refObjekteErkennen"></a>
 Objekte erkennen</h2>
-<p>Hier stellen wir Selenium vor. Selenium automatisiert Browser, insbesondere für die Automatisierung von Web-Applikationen zu Testzwecken. Es ist nativer Bestandteil vieler gängiger Webbrowser. (weiterführende Infos in engl. Sprache unter  <a href="http://www.seleniumhq.org/">http://www.seleniumhq.org/</a> ) </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000064">Noch zu erledigen:</a></b></dt><dd>jnic-&gt;ZH =eingefügten Text prüfen=</dd></dl>
+<p>Hier stellen wir Selenium vor. Selenium automatisiert Browser, insbesondere für die Automatisierung von Web-Applikationen zu Testzwecken. Es ist nativer Bestandteil vieler gängiger Webbrowser. (weiterführende Infos in engl. Sprache unter  <a href="http://www.seleniumhq.org/">http://www.seleniumhq.org/</a> ) </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000064">Noch zu erledigen:</a></b></dt><dd>eingefügten Text prüfen</dd></dl>
 <p>Hier zu nächst ein typisches Beispiel für Selenium:</p>
 <p>{lstlisting}[caption={Selenium Beispiel für die Objekterkennung //Quelle: {<a href="http://www.anujchaudhary.com/2012/11/selenium-automating-ui-testing-for.html">http://www.anujchaudhary.com/2012/11/selenium-automating-ui-testing-for.html</a>}}, label=SeleniumObjectRecognition] [TestMethod] public void TestBing()</p>
 <p>{ Test Case Steps _webDriver.Navigate().GoToUrl("http://www.bing.com");</p>
@@ -190,6 +196,72 @@ Methoden Überschreibung</h2>
 <p>{lstlisting}[caption={Methoden-Überschreibungs-Beispiel für 4Test, (Scriptsprache Silktest-Classik)}, label= ] [-] window PushButton Login [-] Click( ) [ ] [ ] WartenAufObjekt("HauptFenster") [ ] derived::Click() [ ] {lstlisting}</p>
 <p>Mit Methoden-Überschreibung (OOP) erfolgt hier die Implementierung an einer Stelle: Die Implementierung der Synchronisation des Logins erfolgt an genau einer Stelle. -&gt; Reduzierung von {n}-Stellen in der Testfallbeschreibung auf eine Stelle im Skript.</p>
 <dl class="section remark"><dt>Bemerkungen</dt><dd>Eine Methoden-Überschreibung ist nur mit objektorientierten Skriptsprachen möglich.</dd></dl>
+<h1><a class="anchor" id="refAufwandreduzierungSequenzen"></a>
+Sequenzen</h1>
+<p>Sequenzen sind eine Abfolge von elementaren Schüsselwörten. Siehe Def: Sequenz Diese können aus vielen Schritten bestehen, sind wieder verwendbar.</p>
+<p>So kann eine häufig wiederkehrende Sequenz an einer Stelle definiert und gepflegt werden.</p>
+<p>Beispiel: Login {lstlisting}[caption={-Beispiel für eine Sequenz für Login. }, label=SequenzLogin ] de.WähleFenster( "Login" ); de.GibEin( "User", "Zoltan" ) de.GibEin( "Passwort", "Geheim" ( de.Klicke( "Login" ) {lstlisting}</p>
+<h1><a class="anchor" id="refEinleitung"></a>
+Einleitung</h1>
+<p>Bestehende Software zu testen <em>muss</em> schnell vorgenommen werden können. Der Einfluss von Erweiterungen und Änderungen an den Objekten des Projektes muss idealerweise <em>sofort</em> und ohne größere Umstände zu testen sein. Ein Testlauf darf keinen hohen Arbeitsaufwand fordern, sonst wird gänzlich auf einen Test verzichtet.</p>
+<p>Unittests müssen durch den Entwickler <em>sofort</em> durchführbar sein. Der Unittest muss innnerhalb von Sekunden ablaufen können. Es muss unmittelbar geprüft werden können welche Auswirkungen die Änderungen haben.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000065">Noch zu erledigen:</a></b></dt><dd>jnic - neuer Text =BEGINN=</dd></dl>
+<p>Wenn das nicht möglich ist steht zu vermuten, dass die Regeln des Clean Code nicht beachtet worden sind.</p>
+<dl class="section note"><dt>Zu beachten</dt><dd>Clean Code ist ein Begriff aus der Softwaretechnik, der seinen Ursprung im gleichnamigen Buch von Robert C. Martin hat. Als „sauber“ bezeichnen Software-Entwickler in erster Linie den Quellcode, aber auch Dokumente, Konzepte, Regeln und Verfahren, die intuitiv verständlich sind. Als intuitiv verständlich gilt alles, was mit wenig Aufwand und in kurzer Zeit richtig verstanden werden kann. Vorteile von Clean Code sind stabilere und effizient wartbarere Programme, d. h. kürzere Entwicklungszeiten bei Funktionserweiterung und Fehlerbehebungen. Die Bedeutung wächst mit der Beobachtung, dass im Schnitt 80 % der Lebensdauer einer Software auf den Wartungszeitraum entfällt. (Aus Wikipedia:  <a href="http://de.wikipedia.org/wiki/Clean_Code">http://de.wikipedia.org/wiki/Clean_Code</a>)</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000066">Noch zu erledigen:</a></b></dt><dd>jnic&ndash;&gt;ZH =bitte neuen Text übrprüfen=</dd></dl>
+<p>Effizientes automatisiertes Testen erfordert die Reduzierung auf eine einzige Stelle, damit erfolgt die Reduzierung des Erstellungs- und Pflegeaufwands auf <em>DAS MINIMUM</em>.</p>
+<p>Klonen, bzw. Kopieren von Testfällen oder von Skriptabschnitten erzeugt bei kleinen Änderungen viel Arbeit im Bereich Anpassung. Wenn kleine Änderungen im "Software under Test (SUT)" vorgenommen werden, dann kann das einen großen Aufwand für die Testautomatisierung bedeuten.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000067">Noch zu erledigen:</a></b></dt><dd>jnic&ndash;&gt;ZH =bitte neuen Text übrprüfen=</dd></dl>
+<p>{Beispiel} Beispiel . {Beispiel}</p>
+<p>Die nun folgenden Absätze verfolgen alle das Ziel das Testen <em>effizient</em> zu machen und befassen sich mit der Aufwandsreduzierung bei der Erstellung von funktionalen, fachlichen GUI Tests.</p>
+<h1><a class="anchor" id="refGrundsätzlicheÜberlegungen"></a>
+Grundsätzliche Überlegungen</h1>
+<ol type="1">
+<li>Wie oft muss ich bei einer Änderung etwas machen?</li>
+<li>Wie kann eine Änderung auf eine Stelle reduziert werden?</li>
+<li>Reduktion auf eine Stelle ist grundsätzlich möglich!</li>
+</ol>
+<p>Dem steht entgegen, dass jeder Test einen Einzelfall darstellt, der <em>EINZELN SPEZIFIZIERT WERDEN MUSS</em>! Führt man die vorbeschriebenen Maßnahmen aber konsequent durch, bedeutet das eine enorme Reduzierung des Erstellungs- und Pflegeaufwandes.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000068">Noch zu erledigen:</a></b></dt><dd>jnic&ndash;&gt;ZH =vorstehenden neuen Text überprüfen=</dd></dl>
+<p>Zur besseren Beherrschung der Testumgebung emfpiehlt es sich eine Synchronisation in die Testumgebung einzubauen. Hierbei ist auch eine gute Benennung der Klassen, Methoden und Sequenzen wichtig. Erst hierdurch wird dann letztlich die Lesbarkeit des Skripts und dessen Nachvollziehbarkeit verwirklicht.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000069">Noch zu erledigen:</a></b></dt><dd>jnic&ndash;&gt;ZH =vorstehenden neuen Text überprüfen=</dd></dl>
+<h1><a class="anchor" id="refTestfallErstellung"></a>
+Testfallerstellung</h1>
+<p>Bei der üblichen Erstellung von Testfällen fallen folgende Arbeiten an:</p>
+<ul>
+<li>Ein Fachtester erstellt zunächst einen Testfall. Dieser wird in Prosa aufgeschrieben.</li>
+<li>Ein technischer Tester übersetzt die Prosa-Testfallbeschreibung in die Skriptsprache des Automatisierungswerkzeuges.</li>
+</ul>
+<p>Hieraus folgt, dass zur Belegung der fachlichen Anforderung eines Testfalls zwei Übersetzungen erforderlich sind:</p>
+<ol type="1">
+<li>Anforderung zu Prosa-Testfallbeschreibung, und</li>
+<li>Prosa-Testfallbeschreibung zu Skriptsprache des Automatisierungswerkzeuges.</li>
+<li>Prosa-Testfallbeschreibung ist in der Regel ein abstrakter Testfall, d.h. es gibt keine konkreten Daten.</li>
+</ol>
+<p>Folgende Mängel im Übersetzungsprozess können die Erstellung der Automatisierungsscripte erschweren oder verhindern:</p>
+<ol type="1">
+<li>Die Beschreibung des Prosa-Testfalls ist zu ungenau. ( "Man wähle eine geeignete Person aus." )</li>
+<li>Der Prosa-Testfall enthält keine Testdaten, d.h. es handelt sich um einen abstrakten Testfall.</li>
+<li>Die Start-Bedingung für den Testfall ist nicht definiert. Es ist unklar welche Umgebungsdaten die SUT benötigt.</li>
+</ol>
+<h2><a class="anchor" id="refReduzierungVonAufwänden"></a>
+Aufwandsreduzierung</h2>
+<p>Durch eine exakte Beschreibung der Testfälle inkl. der notwendigen Eingabedaten können die genannten Aufwände verringert werden. - Der Arbeitsaufwand wird minimiert, weil Rückfragen der technischen Tester an die fachlichen Tester reduziert werden.</p>
+<p><em>Aber:</em> Eine Fehlinterpretation der Testfälle kann in der Prosa-Notation nicht ausgeschlossen werden. Es sind weiterhin zwei Übersetzungen notwendig:</p><ol type="1">
+<li>Anforderung nach Prosa-Testfall und</li>
+<li>Prosa-Testfall in die Skriptsprache des Testwerkzeuges..</li>
+</ol>
+<h2><a class="anchor" id="refVermeidungVonAufwänden"></a>
+Vermeidung von Aufwänden</h2>
+<p>Die beste Aufwandsreduzierung wird erreicht, wenn Tätigkeiten vollständig beseitigt werden: Wenn die Testfälle mit Schlüsselwörtern beschrieben werden, dann ist eine Übersetzung der Testfälle in die Skriptsprache des Automatisierungswerkzeuges nicht notwendig.</p>
+<p>Mit Schlüsselwörtern kann die Notation zur Beschreibung von Testfällen so nahe an einer Prosabeschreibung erfolgen, dass ein Fachtester nicht nur eine manuelle Testfalldurchführung problemlos vornehmen kann, sondern die Beschreibung mit Schlüsselwörtern ist formal genug, dass diese ohne weitere Änderungen automatisierbar sind.</p>
+<p>Die Grundidee des schlüsselwortbasierten Testens besteht darin, die Testsequenz, d.h. die Abfolge von Testschritten in einem Testfall, aus vorgefertigten, wohl definierten Schlüsselwörtern zu erstellen.</p>
+<p>Wenn jedes Schlüsselwort durch ein Skript einmal automatisiert ist, dann ist auch jede beliebige Testsequenz, die aus diesen Schlüsselwörtern besteht, ohne einen weiteren Arbeitsschritt ebenfalls automatisiert.</p>
+<h1><a class="anchor" id="refWartungDerLocatoren"></a>
+Pflege der Objekt-Erkennungseigenschaft</h1>
+<p>(Object-Repository, GUI-Map, Test-Frame)</p>
+<dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2014-11-18/jnic </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.9.1-->
@@ -197,7 +269,7 @@ Methoden Überschreibung</h2>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="ref_anwenderhandbuch.html">Anwenderhandbuch</a></li>
-    <li class="footer">Erzeugt am Mon Jul 3 2017 04:32:48 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Jul 6 2017 04:12:24 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

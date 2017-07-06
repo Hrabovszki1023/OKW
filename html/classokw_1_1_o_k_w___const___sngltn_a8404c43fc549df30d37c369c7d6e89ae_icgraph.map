@@ -1,7 +1,7 @@
 <map id="okw.OKW_Const_Sngltn.OKW_Const_Sngltn" name="okw.OKW_Const_Sngltn.OKW_Const_Sngltn">
 <area shape="rect" id="node3" href="$classokw_1_1_o_k_w___const___sngltn.html#afdb8f095b58cbd870dbb8eb353e3b0bf" title="Holt die einzige Instanz dieser Klasse. " alt="" coords="260,1282,449,1329"/>
 <area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#a7f67744c156b494c2e932412efaa0e07" title="OKW&#45;Konstuktor: Setzt den Default&#45;Zustand auf OKW.OK. " alt="" coords="547,5,685,35"/>
-<area shape="rect" id="node7" href="$classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" title="Protokolliert, ob das gegebene Objekt existiert. " alt="" coords="536,59,696,88"/>
+<area shape="rect" id="node7" href="$classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus. " alt="" coords="536,59,696,88"/>
 <area shape="rect" id="node9" href="$classokw_1_1core_1_1_o_k.html#a1b8a5a3d583ffabc0063632ab9d981cf" title="Dokumentiert den Fokus&#45;Status des gegebenen Objekts. " alt="" coords="525,112,707,141"/>
 <area shape="rect" id="node11" href="$classokw_1_1core_1_1_o_k.html#ae44a6c32e26a7f93dd5c9f7b5765ee0d" title="Dokumentiert den Status des gegebenen Objekts. " alt="" coords="531,165,701,195"/>
 <area shape="rect" id="node13" href="$classokw_1_1core_1_1_o_k.html#a661c650ca7824d1ea464d98b792ae712" title="Keine Beschreibung zu &quot;MemorizeCaption&quot; verfügbar. " alt="" coords="515,219,717,248"/>
@@ -30,8 +30,8 @@
 <area shape="rect" id="node59" href="$classokw_1_1core_1_1_o_k.html#a4187442dc3574358fda8af18cb03f15e" title="Überprüft die Beschreibung des Objektes. " alt="" coords="516,1477,716,1507"/>
 <area shape="rect" id="node61" href="$classokw_1_1core_1_1_o_k.html#aeedf0dfdfe514b50ad774eb187a8cc34" title="Überprüft die Überschrift des Objektes. " alt="" coords="513,1531,719,1560"/>
 <area shape="rect" id="node63" href="$classokw_1_1core_1_1_o_k.html#a648f371fccab2eded552b69adf164bbd" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="523,1583,709,1630"/>
-<area shape="rect" id="node65" href="$classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b" title="okw.core.OK.VerifySelected\lValueWCM" alt="" coords="523,1653,709,1699"/>
-<area shape="rect" id="node67" href="$classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f" title="okw.core.OK.VerifySelected\lValueREGX" alt="" coords="523,1722,709,1769"/>
+<area shape="rect" id="node65" href="$classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="523,1653,709,1699"/>
+<area shape="rect" id="node67" href="$classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. " alt="" coords="523,1722,709,1769"/>
 <area shape="rect" id="node69" href="$classokw_1_1core_1_1_o_k.html#a3548a5a8ddfbf7f84bfe18ba200e1b35" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. " alt="" coords="523,1791,709,1838"/>
 <area shape="rect" id="node71" href="$classokw_1_1core_1_1_o_k.html#a30fc98c4004c99e3e37047deac6ad16f" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. " alt="" coords="523,1861,709,1907"/>
 <area shape="rect" id="node73" href="$classokw_1_1core_1_1_o_k.html#a84abe8cdf2426bde23d357c89a6822a6" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. " alt="" coords="523,1930,709,1977"/>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['deletedirectory',['deleteDirectory',['../classokw_1_1_o_k_w___file_helper.html#a4017b3000ff41eacb036ed31d1a300b6',1,'okw::OKW_FileHelper']]],
+  ['deletedirectory',['deleteDirectory',['../classokw_1_1_o_k_w___file_helper.html#adf28af32c2d72be7bb599ec6e2222aba',1,'okw::OKW_FileHelper']]],
   ['deletefile',['deleteFile',['../classokw_1_1_o_k_w___file_helper.html#ac5d246c66d38a54d9c7f388550be59e0',1,'okw::OKW_FileHelper']]],
   ['deletefiles',['deleteFiles',['../classokw_1_1_o_k_w___file_helper.html#a0366b16ffbda3758499996c037fee1f7',1,'okw::OKW_FileHelper']]],
   ['directoryexists',['directoryExists',['../classokw_1_1_o_k_w___file_helper.html#a4feaa905b7b878f286058a06a81f3ce2',1,'okw::OKW_FileHelper']]],

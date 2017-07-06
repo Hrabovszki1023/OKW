@@ -66,7 +66,7 @@
 </g>
 <!-- Node12 -->
 <g id="node9" class="node"><title>Node12</title>
-<a xlink:href="classokw_1_1core_1_1_o_k.html#a3e40c302aa78cb83aa1fcfd0dafa24b0" target="_top" xlink:title="Klickt auf das gegebene Objekt. ">
+<a xlink:href="classokw_1_1core_1_1_o_k.html#a3e40c302aa78cb83aa1fcfd0dafa24b0" target="_top" xlink:title="Führt ein Doppelklick auf das gegebene GUI&#45;Objekt aus. ">
 <polygon fill="white" stroke="black" points="366.5,-1856.5 366.5,-1877.5 509.5,-1877.5 509.5,-1856.5 366.5,-1856.5"/>
 <text text-anchor="middle" x="438" y="-1864.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.DoubleClickOn</text>
 </a>
@@ -78,7 +78,7 @@
 </g>
 <!-- Node13 -->
 <g id="node11" class="node"><title>Node13</title>
-<a xlink:href="classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0" target="_top" xlink:title="Keine Beschreibung zu &quot;LogCaption&quot; verfügbar. ">
+<a xlink:href="classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0" target="_top" xlink:title="Gibt die Caption eines GUI&#45;Objektes in den Testergebnissen aus. ">
 <polygon fill="white" stroke="black" points="375,-1816.5 375,-1837.5 501,-1837.5 501,-1816.5 375,-1816.5"/>
 <text text-anchor="middle" x="438" y="-1824.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.LogCaption</text>
 </a>
@@ -90,7 +90,7 @@
 </g>
 <!-- Node14 -->
 <g id="node13" class="node"><title>Node14</title>
-<a xlink:href="classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" target="_top" xlink:title="Protokolliert, ob das gegebene Objekt existiert. ">
+<a xlink:href="classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" target="_top" xlink:title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus. ">
 <polygon fill="white" stroke="black" points="378,-1776.5 378,-1797.5 498,-1797.5 498,-1776.5 378,-1776.5"/>
 <text text-anchor="middle" x="438" y="-1784.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.LogExists</text>
 </a>
@@ -562,7 +562,7 @@
 </g>
 <!-- Node54 -->
 <g id="node91" class="node"><title>Node54</title>
-<a xlink:href="classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b" target="_top" xlink:title="okw.core.OK.VerifySelected\lValueWCM">
+<a xlink:href="classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b" target="_top" xlink:title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. ">
 <polygon fill="white" stroke="black" points="368,-156 368,-190 508,-190 508,-156 368,-156"/>
 <text text-anchor="start" x="376" y="-177" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifySelected</text>
 <text text-anchor="middle" x="438" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00">ValueWCM</text>
@@ -575,7 +575,7 @@
 </g>
 <!-- Node55 -->
 <g id="node93" class="node"><title>Node55</title>
-<a xlink:href="classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f" target="_top" xlink:title="okw.core.OK.VerifySelected\lValueREGX">
+<a xlink:href="classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f" target="_top" xlink:title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. ">
 <polygon fill="white" stroke="black" points="368,-104 368,-138 508,-138 508,-104 368,-104"/>
 <text text-anchor="start" x="376" y="-125" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifySelected</text>
 <text text-anchor="middle" x="438" y="-112" font-family="Helvetica,sans-Serif" font-size="10.00">ValueREGX</text>

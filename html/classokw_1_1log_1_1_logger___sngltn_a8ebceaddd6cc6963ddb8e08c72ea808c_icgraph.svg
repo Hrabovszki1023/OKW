@@ -75,7 +75,7 @@ var sectionId = 'dynsection-4';
 </g>
 <!-- Node727 -->
 <g id="node5" class="node"><title>Node727</title>
-<a xlink:href="classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0" target="_top" xlink:title="Keine Beschreibung zu &quot;LogCaption&quot; verfügbar. ">
+<a xlink:href="classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0" target="_top" xlink:title="Gibt die Caption eines GUI&#45;Objektes in den Testergebnissen aus. ">
 <polygon fill="white" stroke="black" points="637,-2210.5 637,-2231.5 763,-2231.5 763,-2210.5 637,-2210.5"/>
 <text text-anchor="middle" x="700" y="-2218.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.LogCaption</text>
 </a>
@@ -87,7 +87,7 @@ var sectionId = 'dynsection-4';
 </g>
 <!-- Node728 -->
 <g id="node7" class="node"><title>Node728</title>
-<a xlink:href="classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" target="_top" xlink:title="Protokolliert, ob das gegebene Objekt existiert. ">
+<a xlink:href="classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" target="_top" xlink:title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus. ">
 <polygon fill="white" stroke="black" points="640,-2166.5 640,-2187.5 760,-2187.5 760,-2166.5 640,-2166.5"/>
 <text text-anchor="middle" x="700" y="-2174.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.LogExists</text>
 </a>
@@ -732,7 +732,7 @@ var sectionId = 'dynsection-4';
 </g>
 <!-- Node741 -->
 <g id="node33" class="node"><title>Node741</title>
-<a xlink:href="classokw_1_1core_1_1_o_k.html#a3e40c302aa78cb83aa1fcfd0dafa24b0" target="_top" xlink:title="Klickt auf das gegebene Objekt. ">
+<a xlink:href="classokw_1_1core_1_1_o_k.html#a3e40c302aa78cb83aa1fcfd0dafa24b0" target="_top" xlink:title="Führt ein Doppelklick auf das gegebene GUI&#45;Objekt aus. ">
 <polygon fill="white" stroke="black" points="628.5,-1870.5 628.5,-1891.5 771.5,-1891.5 771.5,-1870.5 628.5,-1870.5"/>
 <text text-anchor="middle" x="700" y="-1878.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.DoubleClickOn</text>
 </a>

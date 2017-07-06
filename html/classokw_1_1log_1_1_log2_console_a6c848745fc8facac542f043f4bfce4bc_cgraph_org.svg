@@ -41,16 +41,16 @@
 </g>
 <!-- Node104 -->
 <g id="node7" class="node"><title>Node104</title>
-<a xlink:href="classokw_1_1log_1_1_log2_console.html#a62905e4d224da47b6a31d17384594011" target="_top" xlink:title="okw.log.Log2Console.Blank\lBefore">
-<polygon fill="white" stroke="black" points="394,-0 394,-34 532,-34 532,-0 394,-0"/>
-<text text-anchor="start" x="402" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blank</text>
+<a xlink:href="classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2" target="_top" xlink:title="Erzeugt die Einrücktiefe für die Console&#45;Ausgabe. ">
+<polygon fill="white" stroke="black" points="391.5,-0 391.5,-34 534.5,-34 534.5,-0 391.5,-0"/>
+<text text-anchor="start" x="399.5" y="-21" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Log2Console.Blanks</text>
 <text text-anchor="middle" x="463" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">Before</text>
 </a>
 </g>
 <!-- Node102&#45;&gt;Node104 -->
 <g id="edge6" class="edge"><title>Node102&#45;&gt;Node104</title>
-<path fill="none" stroke="midnightblue" d="M352.113,-30.0122C362.682,-28.772 373.455,-27.5078 383.928,-26.2789"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="384.337,-29.755 393.861,-25.1133 383.521,-22.8027 384.337,-29.755"/>
+<path fill="none" stroke="midnightblue" d="M352.113,-30.0122C361.851,-28.8695 371.762,-27.7065 381.451,-26.5695"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="381.929,-30.0376 391.453,-25.3959 381.113,-23.0853 381.929,-30.0376"/>
 </g>
 <!-- Node105 -->
 <g id="node9" class="node"><title>Node105</title>
@@ -61,8 +61,8 @@
 </g>
 <!-- Node104&#45;&gt;Node105 -->
 <g id="edge8" class="edge"><title>Node104&#45;&gt;Node105</title>
-<path fill="none" stroke="midnightblue" d="M532.101,-17C542.508,-17 553.349,-17 564.057,-17"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="564.264,-20.5001 574.264,-17 564.264,-13.5001 564.264,-20.5001"/>
+<path fill="none" stroke="midnightblue" d="M534.764,-17C544.396,-17 554.354,-17 564.197,-17"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="564.395,-20.5001 574.395,-17 564.395,-13.5001 564.395,-20.5001"/>
 </g>
 </g>
 </svg>

@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 192, Datum: 07.03.2017 04:31:07</span>
+   &#160;<span id="projectnumber">Build_ID: 193, Datum: 07.06.2017 04:11:51</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -113,8 +113,8 @@ Ziel</h2>
 <ul>
 <li>Eltern-Object Locator: <code>//body/div[@id='login']/..</code></li>
 <li>Kind-Object Locator: <code>//*[@id='user_login']</code></li>
-<li><b>Ergebniss:</b> Soll `//body/div[='login']/..//*[='user_login']` ergeben</li>
 </ul>
+<dl class="section user"><dt>Ergebniss: Der zusammengestzte Locator sollte wie folgt aussehen:</dt><dd><div class="fragment"><div class="line"><span class="stringliteral">&quot;//body/div[@id=&#39;login&#39;]/..//*[@id=&#39;user_login&#39;]&quot;</span></div></div><!-- fragment --></dd></dl>
 <h2><a class="anchor" id="refTutorial04_C_B"></a>
 Die Methoden `getLOCATOR()` und `getLocator()`</h2>
 <p>Zunächst müssen wir zwei Methoden kennenlernen:</p>
@@ -130,7 +130,8 @@ Der Locator des Eltern_Objectes</h2>
 <h2><a class="anchor" id="refTutorial04_C_D"></a>
 Der Locator des Kind-Objektes</h2>
 <p>Wir erweitern nun den Locator des Kind-Objektes um den Locator des Eltern-Objektes:</p>
-<div class="fragment"><div class="line"><span class="keyword">public</span> SeInputText Username = <span class="keyword">new</span> SeInputText(<span class="stringliteral">&quot;%1$s//*[@id=&#39;user_login&#39;]&quot;</span>, this.getLOCATOR() );</div></div><!-- fragment --><ul>
+<dl class="section user"><dt></dt><dd><div class="fragment"><div class="line"><span class="keyword">public</span> SeInputText Username = <span class="keyword">new</span> SeInputText(<span class="stringliteral">&quot;%1$s//*[@id=&#39;user_login&#39;]&quot;</span>, this.getLOCATOR() );</div></div><!-- fragment --></dd></dl>
+<ul>
 <li>Die <em>Referenz</em> des Eltern-Objekt Locators wird im Konstruktor des Kind-Objektes übergeben.</li>
 <li><code>%1$s</code> gibt an, an welcher Stelle, der <em>Wert</em> des Eltern-Objekt Locators ein gesetzt werden soll.</li>
 </ul>
@@ -154,7 +155,7 @@ Kombination mehrerer Locatoren</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="index.html">OpenKeyWord</a></li><li class="navelem"><a class="el" href="ref_tutorials.html">OKW Anleitungen</a></li>
-    <li class="footer">Erzeugt am Mon Jul 3 2017 04:32:48 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Jul 6 2017 04:12:24 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
