@@ -12,16 +12,17 @@ Das kann z.B. die Position oder Größe des Objektes sein.
 Wichtig ist nur, dass ein GUI-Objekt mit Hilfe dieser Eigenschaften
 eindeutig identifiziert werden kann.
  
-Die optimale Lösung wäre eine jedem GUI-Objekt eindeutig zugewiesene Test-ID, die über den gesamten 
-GUI-Objektlebenszyklus konstant bleibt und über alle Objekte eindeutig ist. Es gäbe damit keine zwei 
-GUI-Objekte mit einer identischen Test-ID.
+\par Die optimale Lösung wäre:
+- Jedem GUI-Objekt eine eindeutig zugewiesene Test-ID,
+- die über die gesamten GUI-Objektlebendauer konstant bleibt
+- und über alle GUI-Objekte hinweg eindeutig ist: also keine zwei GUI-Objekte mit einer identischen Test-ID.
  
 \subsection refObjekteErkennen Objekte erkennen
 
 Hier stellen wir Selenium vor. Selenium automatisiert Browser, insbesondere für die Automatisierung 
 von Web-Applikationen zu Testzwecken. Es ist nativer Bestandteil vieler gängiger Webbrowser.
 (weiterführende Infos in engl. Sprache unter \url http://www.seleniumhq.org/ )
-\todo jnic->ZH =eingefügten Text prüfen=
+\todo eingefügten Text prüfen
 
 Hier zu nächst ein typisches Beispiel für Selenium: 
 
@@ -156,7 +157,7 @@ Die Implementierung der Synchronisation des Logins erfolgt an genau einer Stelle
  
 \remark Eine Methoden-Überschreibung ist nur mit objektorientierten Skriptsprachen möglich.
  
-\section{Sequenzen}
+\section refAufwandreduzierungSequenzen Sequenzen 
 Sequenzen sind eine Abfolge von elementaren Schüsselwörten. Siehe Def: Sequenz
 Diese können aus vielen Schritten bestehen, sind wieder verwendbar.
  
@@ -171,6 +172,4 @@ Beispiel: Login
         de.Klicke( "Login" )
  \end{lstlisting}
 
-Bearbeitung: 2014_11_03_jnic 
- 
 */

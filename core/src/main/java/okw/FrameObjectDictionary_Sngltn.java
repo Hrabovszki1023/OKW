@@ -99,12 +99,13 @@ public class FrameObjectDictionary_Sngltn
   public static Map<String, OKW>   myAnnotationDictionary = new HashMap<String, OKW>();
   
   /**
-   *  \copydoc CurrentObject::Log()
+   *  \copydoc Logger_Sngltn::getInstance()
    */
   private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
+  
   /**
-   *  \copydoc CurrentObject::LM()
+   *  \copybrief LogMessenger
    */
   private static LogMessenger  LM;
 

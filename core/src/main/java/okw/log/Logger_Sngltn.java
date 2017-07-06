@@ -44,6 +44,14 @@ import java.util.*;
 import okw.OKW_HandleException;
 import okw.OKW_Const_Sngltn;
 
+/**
+ *  \~german
+ *  @class
+ *  Zentrale Logger-Klasse stellt Logger-Methoden innerhalb von OKW zur Verfügung.
+ *  
+ *  \~english
+ *  Central Log-Classes offers the Logging-Methodes.
+ */
 public class Logger_Sngltn
 {
 
@@ -68,6 +76,15 @@ public class Logger_Sngltn
         }
 
     }
+    
+    
+    /**
+     *  \~german
+     *  Zentrale Logger-Klasse stellt Logger-Methoden innerhalb von OKW zur Verfügung.
+     *  
+     *  \~english
+     *  Central Log-Classes offers the Logging-Methodes.
+     */
 
     public static Logger_Sngltn getInstance()
     {

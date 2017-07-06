@@ -9,48 +9,25 @@ The caption is e.g. the visible and basicaly not changeable text of a GUI-Object
 - no wildcards
 - no regular expression 
 
-@section refVerifyCaptionParameter Parameter
+@section refLogCaptionParameter Parameter
 
 | Parameter | Description  |
 | ----------|:-------------|
 | `FN`      | Functionalname of the GUI-Object|
-| `ExpVal`  | Expected value|
 
 
-@section refVerifyCaptionExamples Examples
+@section refLogCaptionExamples Examples
 
-@subsection refVerifyCaptionDefault Default Usage
+@subsection refLogCaptionDefault Default Usage
 
 1. `EN.SelectWindow( "Login" )` - Set context to the Window `Login` with the ChildObject you want to verify.
-2. **`EN.VerifyCaption( "OK", "Ok" )`** - then Verify the GUI-Object with the `FN = "OK"` has a caption = "Ok"
+2. **`EN.LogCaption( "OK" )`** - then log Caption of the GUI-Object with the `FN = "OK"`
 
-@subsection refVerifyCaptionExample2 Verify an Empty GUI-object
-
-1. **`EN.VerifyCaption( "OK", "${EMPTY}" )`** - Verifyies that `OK` has an _empty_ (= "") caption 
-
-@subsection refVerifyCaptionExample3 Ignore execution of Keyword_
-
-There are two ways to ignore a Keyword: Set the Parameter `ExpVal` = `"${IGNORE}"` or simply `""` 
-
- 1. `EN.SelectWindow( "Login" )`
- 2. **`EN.VerifyCaption( "OK", "" )`** - This ignores the execution of this Keyword `FN = "User"` **or** 
- 3. **`EN.VerifyCaption( "OK", "${IGNORE}" )`** - This ignores the execution of this Keyword
-
-@subsection refVerifyCaptionExample4 Enviroment Variables
-
-On Windowssystems the Enviroment variable `USERNAME` returns the name of the user who is currently logged on.
-OKW resolves the Enviroment variable `${USERNAME}` to the currently logged on username and uses this as expected value (ExpVal).
-
-For this Example
-
- 1. `EN.SelectWindow( "Login" )`
- 2. **`EN.VerifyCaption( "User", "${USERNAME}" )`** - Matches the GUI-Object `FN = "User"` with the current logged on username?
-
-@section refVerifyCaptionCalledMethod Called Method
+@section refLogCaptionCalledMethod Called Method
 
 | Keyword                          |<->| Called GUI-Adapter Method  |
 | --------------------------------:|---|:---------------------------|
-| `EN.VerifyCaption( FN, ExpVal )` |<->| `public ArrayList<String> VerifyCaption( )` |
+| `EN.LogCaption( FN, ExpVal )` |<->| `public ArrayList<String> LogCaption( )` |
 
 \~
 @author Zoltán Hrabovszki

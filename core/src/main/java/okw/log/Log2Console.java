@@ -68,7 +68,7 @@ public class Log2Console implements ILogger
 		        LevelCounter = 0;
 		        BlanksBefore = "";
 		        
-		        this.BlankBefore();
+		        this.BlanksBefore();
 	        }
 	        
 	        
@@ -129,7 +129,7 @@ public class Log2Console implements ILogger
 
 
 	        /**
-	         *  \copydoc ILogger::LogFunctionEnd(List)
+	         *  \copydoc ILogger::LogFunctionEnd(List<String>)
 	         */
 	        public void LogFunctionEnd(List<String> fpls_Return)
 	        {
@@ -147,7 +147,7 @@ public class Log2Console implements ILogger
 
 
 	        /**
-	         *  \copydoc ILogger::LogFunctionStart(String,params)
+	         *  \copydoc ILogger::LogFunctionStart(String,String...)
 	         */
 			public void LogFunctionStart(String fps_FunctionName, String... fpsParameter)
 	        {
@@ -174,7 +174,7 @@ public class Log2Console implements ILogger
 
 	        
 	        /**
-	         *  \copydoc ILogger::LogKeyWordStart(String,params)
+	         *  \copydoc ILogger::LogKeyWordStart(String,String...)
 	         */
 	        public void LogKeyWordStart(String fps_KeyWordName, String... fpsParameter)
 	        {
@@ -258,7 +258,7 @@ public class Log2Console implements ILogger
 	                this.LevelCounter = 0;
 	            }
 	            
-	            this.BlankBefore();
+	            this.BlanksBefore();
 	        }
 
 			
@@ -269,14 +269,16 @@ public class Log2Console implements ILogger
 	        {
 	            this.LogPrint(fps_Name);
 	            this.LevelCounter++;
-	            this.BlankBefore();
+	            this.BlanksBefore();
 	        }
 
 	        
 	        /**
-	         *  \copydoc ILogger::BlankBefore()
+	         *  Erzeugt die Einrücktiefe für die Console-Ausgabe.
+	         *  
+	         *  Ergebniss befindet sich im Feld BlanksBefore.
 	         */
-	        private void BlankBefore()
+	        private void BlanksBefore()
 	        {
 	            this.BlanksBefore = OKW_Helper.repeatString( "  ", this.LevelCounter);
 	        }
@@ -305,7 +307,7 @@ public class Log2Console implements ILogger
 			}
 
 	        /**
-	         *  \copydoc ILogger::LogSequenceStart(String,String,String,String)
+	         *  \copydoc ILogger::LogSequenceStart(String,String,String,String...)
 	         */
 			public void LogSequenceStart( String fps_KeyWordName, String fpsWindowFN,
 					String fps_SequenceName, String... fpsParameter )
@@ -336,7 +338,7 @@ public class Log2Console implements ILogger
 
 			
 	        /**
-	         *  \copydoc ILogger::LogFunctionStartDebug(String,String)
+	         *  \copydoc ILogger::LogFunctionStartDebug(String,String...)
 	         */
 			public void LogFunctionStartDebug( String fps_FunctionName, String... fpsParameter )
 			{

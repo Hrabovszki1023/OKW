@@ -585,7 +585,7 @@ public class EN
     }
 
     /**
-     *  \copydoc IOKW_State::VerifyDirectoyExists(String,String)
+     *  \copydoc IOKW_State::VerifyDirectoryExists(String,String)
      */
     public static void VerifyDirectoryExists( String fpsPath, String ExpVal ) throws Exception
     {

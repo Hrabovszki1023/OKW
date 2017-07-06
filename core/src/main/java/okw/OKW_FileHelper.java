@@ -50,37 +50,47 @@ import okw.exceptions.*;
 import okw.log.Logger_Sngltn;
 
 /** \~german
- *  \brief
- *  Description of OKW_FileHelper.
+ *  OKW_FileHelper enthält FilfsMethoden für die Handhabung von Dateien und Verzechnissen..
  *  
  *  \~english
  *  \~
  *  @author Zoltan Hrabovszki
- *  @date 2013.12.30
+ *  @date 2013-12-30
  */
 public class OKW_FileHelper
 {
-	/// \copydoc CurrentObject::Log()
+	/**
+     * \~german
+	 *  Instanz der Zentralen Loggerklasse.
+     *  
+     *  \~english
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2017-07-06
+	 */
 	private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
-	/// \copydoc CurrentObject::LM()
+	/// \copydoc OKW_CurrentObject_Sngltn::LM()
 	// private static LogMessenger LM = new LogMessenger("OKW_FileHelper");
 
-	/// \~german
-	/// \brief
-	/// Erzeug ein leeres Verzechniss mit dem gegebenen Naaen.
-	///
-	/// Endbedingung: Nachdem Aufruf existiert ein leeres Verzeichniss mit dem
-	/// gegebenen Namen.
-	/// -# Existiert das Verzeichniss nicht, dann wird ein (leeres) Verzeichniss
-	/// angelegt.
-	/// -# Existiert das Verzeichniss, dann wird dieser rekursiv gelöscht und
-	/// neu angelegt.
-	/// \param fpsPaFiNa
-	/// \~english
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.12.30
+	/**
+	 * \~german
+	 *  Erzeug ein leeres Verzechniss mit dem angegebenen Pfad.
+	 * 
+	 *  Endbedingung: Nachdem Aufruf existiert ein leeres Verzeichniss mit dem gegebenen Pfad.
+	 *  
+	 *  -# Existiert das Verzeichniss nicht, dann wird ein (leeres) Verzeichniss angelegt.
+	 *  -# Existiert das Verzeichniss, dann wird dieser rekursiv gelöscht und neu angelegt.
+	 *  
+	 *  @param fpsPath Pfad des Verzeichnisses, das Angelegt werden soll.
+	 *  
+	 *  @return true wenn ein leeres Verzeichniss erfolgreich angelegt worden ist, sonst false.
+	 *  
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  @date 2013-12-30
+	 */
 	public static Boolean createEmptyDirectory( String fpsPath )
 	{
 
@@ -121,31 +131,30 @@ public class OKW_FileHelper
 		return lvbReturn;
 	}
 
-	/// \~german
-	/// \brief
-	/// Löschent rekursive alle Datien und Unterverzeichnisse und das gegebenen
-	/// Verzeichniss selbst.
-	///
-	/// Endbedingung: Verzeichniss exsitiert einschliesslich aller Dateien und
-	/// Unterverueichnisse
-	/// nachdem Aufruf nicht mehr.
-	/// -# Existiert das Verzeichniss nicht, dann ist die Endbedingung bereits
-	/// erfüllt.
-	/// Keine weitere Aktion wird durchgeführt. Methode wird ohne Fehler
-	/// beenden.
-	/// -# Existiert das Verzeichniss, dann wird rekursiv der gesamte Inhalt
-	/// gelöscht.
-	/// \param fpsPaFiNa
-	/// \~english
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.12.30
-	public static void deleteDirectory( String fpsPaFiNa )
+	/** \~german
+	 *  Löschent rekursiv alle Dateien und Unterverzeichnisse und das gegebenen
+	 *  Verzeichniss selbst.
+	 * 
+	 *  Endbedingung: Verzeichniss exsitiert einschliesslich aller Dateien und
+	 *  Unterverueichnisse nachdem Aufruf nicht mehr.
+	 *  
+	 *  -# Existiert das Verzeichniss nicht, dann ist die Endbedingung bereits erfüllt. 
+	 *     Es wird keine weitere Aktion durchgeführt. Methode wird ohne Fehler beenden.
+	 *  -# Existiert das Verzeichniss, dann wird dieser rekursiv mit dem gesamten Inhalt gelöscht.
+	 *  
+	 *  \param fpsPath
+	 *  
+	 *  \~english
+	 *  \~
+	 *  @author Zoltan Hrabovszki
+	 *  @date 2013-12-30
+	 */  
+	public static void deleteDirectory( String fpsPath )
 	{
-		String lvsPaFiNa = fpsPaFiNa;
+		String lvsPath = fpsPath;
 		Boolean lvbReturn = false;
 
-		Log.LogFunctionStartDebug("OKW_Helper.DirectoryDelete", "fpsPaFiNa", fpsPaFiNa);
+		Log.LogFunctionStartDebug("OKW_Helper.DirectoryDelete", "fpsPaFiNa", fpsPath);
 
 		try
 		{
@@ -153,7 +162,7 @@ public class OKW_FileHelper
 			// \todo TODO: ANTLR-Paser einschalten
 			// lvsPaFiNa = MyParser.ParseMe(lvsPaFiNa);
 
-			File myPath = new File(lvsPaFiNa);
+			File myPath = new File(lvsPath);
 
 			if (myPath.exists())
 			{

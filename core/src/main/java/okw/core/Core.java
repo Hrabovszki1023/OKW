@@ -788,7 +788,7 @@ public class Core implements IOKW_State
     }
 
     /**
-     *  \copydoc IOKW_State::VerifySelectedValueWCN(String,String)
+     *  \copydoc IOKW_State::VerifySelectedValueWCM(String,String)
      */
     public void VerifySelectedValueWCM( String FN, String ExpVal ) throws Exception
     {

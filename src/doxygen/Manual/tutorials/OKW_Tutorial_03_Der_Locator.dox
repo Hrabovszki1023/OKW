@@ -1,4 +1,4 @@
-/*!
+/**
 
 @page refTutorial03 Tutorial 3:  Der Locator
 
@@ -17,12 +17,13 @@ Der Locator für die OKW Se-Klassen wird als _XPATH_ angegeben.
 In OKW existiert eine eigenen Klasse, die Klasse `okw.gui.OKWLocator` für die Definition von Locatoren.
 Die Locatoren können hierarchisch über GUI-Adapter hinweg miteinander verkettet werden. Dabei definieren die GUI-Adapter jeweils nur ihren Teil eines Loacators.
 
-> Eine eigene Klasse für die Locatoren ist notwendig, da die Erkennungseigenschaften von GUI-Objekten
+\par
+Eine eigene Klasse für die Locatoren ist notwendig, da die Erkennungseigenschaften von GUI-Objekten
 meist nicht mit einfach zudefinierenden `id`'s festgelegt werden kann. - In vielen Projekten wird die Problematik der Objekterkennung für den Test nicht hinreichen gewürdigt und es werden sehr komplexe Locatoren notwendig.
 
-Wie das funktioniert ist Gegenstand dieses und der der folgenden Tutorials.
+Wie das funktioniert ist Gegenstand dieses und der folgenden Tutorials.
 
-> Die 'okw.gui.OKWLocator' Klasse ist für die Verkettung von 'String'-Werten entworfen worden.
+\par Die 'okw.gui.OKWLocator' Klasse ist für die Verkettung von 'String'-Werten entworfen worden.
 D.h. sie nicht ausschliesslich nur für _XPATH_ geeignet, sonder sie kann für _beliebig andere Locatoren, die auf String-Werten basieren_, verwendet werden.   
 
 @section refTutorial03_C Definition eines _einfachen_ Locators
@@ -34,18 +35,18 @@ In diesem speziellen Fall haben alle Elemente jeweils eine Eindeutige `id` als A
 
 D.h. wir finden _jedes_ GUI-Object im WP-Login nach dem Prinzip: "Suche das Element mit der 'id', die einen bestimmten Wert" hat.
 
-> <b>Hinweis:<\b> Dieser Wert sollte über alle Releases des Produkte const. sein
+\par Hinweis:
+Die Objekt-Erkennungseigenschaft sollte über alle Releases des Produkte const. bleiben!
 
 @subsection refTutorial03_C_A Konkretes Beispiel `Username`
 
 Der Locator wird im Konstruktor eines GUI-Adapters als Parameter wie folgt festgelegt:
 
-<b>Beispiel:<\b>
-
-```
+\par Beispiel:
+\code{.java}
 @OKW (FN="Username") // FN des GUI-Objektes
 public SeInputText Username = new SeInputText( "//*[@id='user_login']" );
-```
+\endcode
 
 Entscheidend ist in diesem Beispiel der Ausdruck `"//*[@id='user_login']"`.
 
@@ -53,9 +54,8 @@ Das ist der einfachste Fall für die definition eines Locators. Das Eingabefeld 
 
 Hinweis: Die _XPATH_ Angaben erläutern wir hier nicht, weil das für die OKWLocator-Klasse nicht relevant ist. Wichtig ist lediglich, dass das Feld _User_ mit der _XPATH_-Angaben eindeutig erkannt wird.
 
-Das ganze Frame für _WP-Login_ (Wordpress-Login) sieht wie folg aus:
-
-```
+\par Das ganze Frame für _WP-Login_ (Wordpress-Login) sieht wie folg aus:
+\code{.java}
 package okw.gui.frames;
 
 import okw.OKW;
@@ -91,7 +91,8 @@ public class wp_login extends SeBrowserChild
     	super("//body/div[@id='login']/..");
     }
 }
-```
+\endcode
+
 */
 
  

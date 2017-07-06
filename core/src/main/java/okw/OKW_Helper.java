@@ -62,10 +62,14 @@ import okw.log.Logger_Sngltn;
 public class OKW_Helper
 {
 
-	/// \copydoc CurrentObject::Log()
+	/**
+	 *  \copydoc OKW_CurrentObject_Sngltn::Log()
+	 */
 	private static Logger_Sngltn		Log	= Logger_Sngltn.getInstance();
 
-	/// \copydoc CurrentObject::LM()
+	/**
+	 *  \copydoc OKW_CurrentObject_Sngltn::LM()
+	 */
 	private static LogMessenger	LM	= new LogMessenger("OKW_Helper");
 
 	/** \~german

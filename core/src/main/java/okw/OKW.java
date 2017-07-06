@@ -7,9 +7,15 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Target;
 
-/** \~german
- *  Annotation @Interface für die Zuordnung des Fachlichen Name-s eines GUI-Objektes im Frame.
- *  \see: http://tutorials.jenkov.com/java-reflection/annotations.html
+/**
+ * \~german
+ *  Annotations-Klasses für die Zuordnung von
+ *  -# der \ref refFN -s 
+ *  -# Wartezeiten für die Verify* -Schlüsselwörter
+ *  -# Wartezeiten für das *erscheinen* von GUI-Objekten.
+ *  zu einem GUI-Objekt im Frame.
+ *  
+ *  @see: http://tutorials.jenkov.com/java-reflection/annotations.html
  *  == github Issue
  *  issue https://github.com/Hrabovszki1023/OKW/issues/37
  * 
@@ -34,10 +40,10 @@ public @interface OKW
 
   /**
    * \~german
-   *  _F_untionaler _N_ame des GUI-Objektes.
+   *  \ref refFN des GUI-Objektes.
    * 
    *  \~english
-   *  Functional Name of the GUI-Object.
+   *  \ref refFN of the GUI-Object.
    * 
    *  \~
    *  @author Zoltan Hrabovszki
@@ -48,14 +54,14 @@ public @interface OKW
   
   /**
    * \~german
-   * _T_ime_O_ut in Secunden [s] für das aktuelle Object.
+   * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das erscheinen des aktuellen Objektes.
    * Default ist 30s.
    */
   public int WaitForMe_TO() default 30;
 
   /**
    * \~german
-   * _P_olling _T_ime in [ms] für das aktuelle Object.
+   * <b>P</b>olling <b>T</b>ime in [ms] für das aktuelle Object.
    *
    * Die Periodendauer des Pollens wird in Millisekunden angegeben.
    * Default ist 1000ms (=1s).
@@ -65,14 +71,14 @@ public @interface OKW
   
   /**
    * \~german
-   * _T_ime_O_ut in Secunden [s] für das Schlüsselwort VerifyHasFocus.
+   * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyHasFocus.
    * Default ist 30s.
    */
   public int VerifyHasFocus_TO() default 30;
 
   /**
    * \~german
-   * _P_olling _T_ime in [ms] für das Schlüsselwort VerifyHasFocus.
+   * <b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyHasFocus.
    *
    * Die Periodendauer des Pollens wird in Millisekunden angegeben.
    * Default ist 1000ms (=1s).
@@ -82,14 +88,14 @@ public @interface OKW
   
   /**
    * \~german
-   * _T_ime_O_ut in [s] für das Schlüsselwort VerifyIsActive.
+   * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyIsActive.
    * Default ist 30s.
    */
   public int VerifyIsActive_TO() default 30;
 
   /**
    * \~german
-   * Polling Time in [ms] für das Schlüsselwort VerifyIsActive.
+   * <b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyIsActive.
    *
    * Die Periodendauer des Pollens wird in Millisekunden angegeben.
    * Default ist 1000ms (=1s).
@@ -99,14 +105,14 @@ public @interface OKW
   
   /**
    * \~german
-   * TimeOut in [s] für das Schlüsselwort VerifyLabel.
+   * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyLabel.
    * Default ist 30s.
    */
   int VerifyLabel_TO() default 30;
 
   /**
    * \~german
-   * Polling Time in [ms] für das Schlüsselwort VerifyLabel.
+   * <b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyLabel.
    *
    * Die Periodendauer des Pollens wird in Millisekunden angegeben.
    * Default ist 1000ms (=1s).
@@ -116,14 +122,14 @@ public @interface OKW
   
   /**
    * \~german
-   * TimeOut in [s] für das Schlüsselwort VerifySelectedValue.
+   * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifySelectedValue.
    * Default ist 30s.
    */
   int VerifySelectedValue_TO() default 30;
 
   /**
    * \~german
-   * Polling Time in [ms] für das Schlüsselwort VerifySelectedValue.
+   * <b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifySelectedValue.
    *
    * Die Periodendauer des Pollens wird in Millisekunden angegeben.
    * Default ist 1000ms (=1s).
@@ -133,14 +139,14 @@ public @interface OKW
   
   /**
    * \~german
-   * TimeOut in [s] für das Schlüsselwort VerifyTablecellValue.
+   * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyTablecellValue.
    * Default ist 30s.
    */
   int VerifyTablecellValue_TO() default 30;
 
   /**
    * \~german
-   * Polling Time in [ms] für das Schlüsselwort VerifyTablecellValue.
+   * <b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyTablecellValue.
    *
    * Die Periodendauer des Pollens wird in Millisekunden angegeben.
    * Default ist 1000ms (=1s).
@@ -150,14 +156,14 @@ public @interface OKW
   
   /**
    * \~german
-   * TimeOut in [s] für das Schlüsselwort VerifyTooltip.
+   * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyTooltip.
    * Default ist 30s.
    */
   int VerifyTooltip_TO() default 30;
   
   /**
    * \~german
-   * Polling Time in [ms] für das Schlüsselwort VerifyTooltip.
+   * <b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyTooltip.
    *
    * Die Periodendauer des Pollens wird in Millisekunden angegeben.
    * Default ist 1000ms (=1s).
@@ -166,14 +172,14 @@ public @interface OKW
 
   /**
    * \~german
-   * TimeOut in [s] für das Schlüsselwort VerifyValue.
+   * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyValue.
    * Default ist 30s.
    */
   public int VerifyValue_TO() default 30;
 
   /**
    * \~german
-   * Polling Time in [ms] für das Schlüsselwort VerifyValue.
+   * <b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyValue.
    *
    * Die Periodendauer des Pollens wird in Millisekunden angegeben.
    * Default ist 1000ms (=1s).
@@ -182,14 +188,14 @@ public @interface OKW
 
   /**
    * \~german
-   * TimeOut in [s] für das Schlüsselwort VerifyCaption.
+   * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyCaption.
    * Default ist 30s.
    */
   public int VerifyCaption_TO() default 30;
 
   /**
    * \~german
-   * Polling Time in [ms] für das Schlüsselwort VerifyCaption.
+   * <b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyCaption.
    *
    * Die Periodendauer des Pollens wird in Millisekunden angegeben.
    * Default ist 1000ms (=1s).
@@ -198,14 +204,14 @@ public @interface OKW
 
   /**
    * \~german
-   * TimeOut in [s] für das Schlüsselwort VerifyExists.
+   * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyExists.
    * Default ist 30s.
    */
   public int VerifyExists_TO() default 30;
 
   /**
    * \~german
-   * Polling Time in [ms] für das Schlüsselwort VerifyExists.
+   * <b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyExists.
    *
    * Die Periodendauer des Pollens wird in Millisekunden angegeben.
    * Default ist 1000ms (=1s).

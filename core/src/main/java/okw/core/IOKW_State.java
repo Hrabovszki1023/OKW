@@ -75,6 +75,7 @@ public interface IOKW_State
       */
     void BeginTest( String fpsTestname ) throws Exception;
 
+    
     /**
      * \~german
      * Klickt auf das gegebene Objekt.
@@ -106,8 +107,9 @@ public interface IOKW_State
      */
     void ClickOn( String FN ) throws Exception;
 
+    
     /** \~german
-     * Klickt auf das gegebene Objekt.
+     * Führt ein Doppelklick auf das gegebene GUI-Objekt aus.
      * 
      * _Beispiel: Klicke auf das Objekt mit Namen "MeinObjekt":_<br/>
      * \verbatim DoppelKlickeAuf( "MeinObjekt" ) \endverbatim
@@ -131,9 +133,11 @@ public interface IOKW_State
 
     /**
      * \~german
-     * Beendet den Test, bzw. den Testfall.
+     * Signalisiert das Ende eines Testfalls.
      *
-     * Beschreibung der Arbeitsweise.
+     * Mit EndTest() werden aufräum Aktivitäten angestoßem,
+     * in der aktuellen Version ist das jedoch noch nicht implementiert.
+     * 
      * \note Zusätzliche Bemerkungen zum Schlüsselwort
      * 
      *
@@ -153,7 +157,7 @@ public interface IOKW_State
 
     /**
      * \~german
-     * Keine Beschreibung zu "LogCaption" verfügbar
+     * Gibt die \ref refCaption eines GUI-Objektes in den Testergebnissen aus.
      * 
      * @param FN Funktionaler Name des Objekts 
      *
@@ -171,10 +175,10 @@ public interface IOKW_State
 
     /**
      * \~german
-     * Protokolliert, ob das gegebene Objekt existiert.
+     * Gibt die Existenz eines GUI-Objektes mit YES/NO in den Testergebnissen aus.
      * 
      * _Beispiel: Protokolliert, ob das Objekt mit Namen "Mein Objekt" vorhanden ist:_<br/>
-     * \verbatim logge vorhanden: "MeinObjekt" \endverbatim
+     * \verbatim LogExists( "myObject" ) \endverbatim
      * 
      * @param FN Funktionaler Name des Objekts 
      *
@@ -570,9 +574,11 @@ public interface IOKW_State
     * Spalten gefordert sind.<br/>
     * _Beispiel 1: Wähle alle Zeilen aus, die den Text "Wert" enthalten:_<br/>
     * \verbatim Wähle aus: "MeineTabelle", "Wert" \endverbatim <br/>
+    * 
     * _Beispiel 2: Wähle alle Zeilen aus, die mit dem Text "Wert1" beginnen und
     * deren zweite Spalte den Text "Wert2" enthält:_<br/>
     * \verbatim Wähle aus: "MeineTabelle", "Wert1{HSEP}, Wert2" \endverbatim <br/>
+    * 
     * _Beispiel 3: Wähle alle Zeilen aus, die mit dem Text "Wert1" beginnen und
     * deren dritte Spalte den Text "Wert2" enthält:_<br/>
     * \verbatim Wähle aus: "MeineTabelle", "Wert1{HSEP}{HSEP}Wert2" \endverbatim
@@ -1349,7 +1355,15 @@ public interface IOKW_State
     * @date 2014-09-21
     */
     void VerifySelectedValue( String FN, String ExpVal ) throws Exception;
+    
+    /**
+     * @copydoc IOKW_State::VerifySelectedValue(String,String)
+     */
     void VerifySelectedValueWCM( String FN, String ExpVal ) throws Exception;
+
+    /**
+     * @copydoc IOKW_State::VerifySelectedValue(String,String)
+     */
     void VerifySelectedValueREGX( String FN, String ExpVal ) throws Exception;
     
     /**
@@ -1376,14 +1390,59 @@ public interface IOKW_State
     void VerifyTablecellValue( String FN, String COL, String ROW, String ExpVal ) throws Exception;
     
     /**
-     * @copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
-     */
+    * \~german
+    * Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert.
+    * 
+     *  Der Sollwert wird als Wildcard-Match angegeben.
+     *  
+     *  Folgende Platzhalter sind möglich:
+     *  * "?" - genau ein beliebiges Zeichen wird Maskiert
+     *  * "*" - (0-n) beliebig viele Zeichen werden Maskiert
+     *  * "#" - genau eine Ziffer [0..9] wird maskiert
+    * 
+    * @param FN Funktionaler Name des Objekts 
+    * @param COL Spaltennummer der zu wählenden Zelle, beginnend mit 1. 
+    * @param ROW Zeilennummer der zu wählenden Zelle, beginnend mit 1. 
+    * @param ExpVal Erwarteter Wert 
+    *
+    * \~english
+    * Compares the content of the given table cell with the expected value.
+    * 
+    * @param FN Functional name of the object 
+    * @param COL Column number of cell to be selected, starting with 1. 
+    * @param ROW Row number of cell to be selected, starting with 1. 
+    * @param ExpVal Expected Value 
+    *
+    * \~
+    * @author Zoltan Hrabovszki
+    * @date 2014-09-21
+    */
     void VerifyTablecellValueWCM( String FN, String COL, String ROW, String ExpVal ) throws Exception;
 
     /**
-     * @copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
-     */
-    void VerifyTablecellValueREGX( String FN, String COL, String ROW, String ExpVal ) throws Exception;
+    * \~german
+    * Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert.
+    * 
+    * Sollwert kann als Regulärer Ausdruck angegeben werden.
+    * 
+    * 
+    * @param FN Funktionaler Name des Objekts 
+    * @param COL Spaltennummer der zu wählenden Zelle, beginnend mit 1. 
+    * @param ROW Zeilennummer der zu wählenden Zelle, beginnend mit 1. 
+    * @param ExpVal Erwarteter Wert 
+    *
+    * \~english
+    * Compares the content of the given table cell with the expected value.
+    * 
+    * @param FN Functional name of the object 
+    * @param COL Column number of cell to be selected, starting with 1. 
+    * @param ROW Row number of cell to be selected, starting with 1. 
+    * @param ExpVal Expected Value 
+    *
+    * \~
+    * @author Zoltan Hrabovszki
+    * @date 2014-09-21
+    */    void VerifyTablecellValueREGX( String FN, String COL, String ROW, String ExpVal ) throws Exception;
     
     /** \~german
      *  Prüft den Tooltip-Text eines Objektes. 
@@ -1566,6 +1625,50 @@ public interface IOKW_State
      */
     void VerifyValueWCM( String FN, String ExpVal ) throws Exception;
 
+    /**
+    * \~german
+    * Copiert die gegebene Quelldatei zur Zieldatei
+    * 
+    * In den Pfadangaben sind:
+    * - OKW-Parser angaben sind erlaubt ```${umgebungsvariable}```, ```${merkewertschlüssel}```.
+    * - im Dateinamen sind Wildcards ```*``` + ```?```
+    * erlaubt.
+    * 
+    * \note
+    * Dieses Schlüsselwort stellt sicher, dass _nach_ der Ausführung die angegebene Datei oder Dateien kopiert worden sind.
+    * Falls die gegebene Quelldatei _nicht_ existiert, dann wird Fehlermeldung und eine Ausnahme augelöst und
+    * das Schlüsselwort/Tesfall beendet.
+    * 
+    * \par Beispiel
+    * \code{.java}
+    * EN.CopyFile( "C:\temp\quellDatei.txt", "C:\temp\ZielDatei.txt" )
+    * \endcode
+    * 
+    * \par Siehe auch
+    * - EN::CopyFile(String,String)
+    * - Core::CopyFile(String,String)
+    * - OK::CopyFile(String,String)
+    * - NOK::CopyFile(String,String)
+    * - OK_TRY::CopyFile(String,String)
+    * - NOK_TRY::CopyFile(String,String)
+    * - IOKW_State::CopyFile(String,String)
+    * 
+    * @param fpsPathAndFileName Vollständiger Pfad und Dateiname.
+    *
+    * \~english
+    * Copies the given source files to the given destination.
+    * 
+    * If the file does not exist, then this keyword ends with an error message and an exception will rais.
+    * 
+    * - OKW-Parser is included.
+    * - widcards are in the filename allowed.
+    * 
+    * @param fpsPathAndFileName Full path of teh File
+    *
+    * \~
+    * @author Zoltán Hrabovszki
+    * @date 2015.08.20
+    */
     void CopyFile( String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName ) throws Exception;
 
     /**
@@ -1573,8 +1676,8 @@ public interface IOKW_State
     * Löscht die gegebene Datei.
     * 
     * In der Pfadangabe sind 
-    * - OKW-Parser angaben sind erlaubt <code>${umgebungsvariable}</code>, <code>${merkewertschlüssel}</code>.
-    * - im Dateinamen sind Wildcards <code>*</code> + <code>?</code> erlaubt.
+    * - OKW-Parser angaben sind erlaubt ```${umgebungsvariable}```, ```${merkewertschlüssel}```.
+    * - im Dateinamen sind Wildcards ```*``` + ```?``` erlaubt.
     * 
     * \note
     * Dieses Schlüsselwort stellt sicher, dass _nach_ der Ausführung die angegebene Datei oder Dateien nicht (mehr) existiert/existieren.
@@ -1586,14 +1689,12 @@ public interface IOKW_State
     * DE.LöscheDatei( "C:\temp\*.*" ) - Löscht alle Dateien im Verzeichniss <code>C:\temp</code>
     * 
     * \par Siehe auch
-    * - DE::LöscheDatei(string)
     * - EN::FileDelete(string)
     * - Core::FileDelete(string)
     * - OK::FileDelete(string)
     * - NOK::FileDelete(string)
     * - OK_TRY::FileDelete(string)
     * - NOK_TRY::FileDelete(string)
-    * 
     * - IOKW_State::FileDelete(string)
     * 
     * @param fpsPathAndFileName Vollständiger Pfad und Dateiname.

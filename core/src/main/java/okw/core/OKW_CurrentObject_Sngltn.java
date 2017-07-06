@@ -55,7 +55,7 @@ import okw.log.*;
 import okw.gui.IGUIChildwindow;;
 
 /**
- * \~german \brief Diese Klasse verwaltet das aktuelle GUI-Objekt.
+ * \~german Diese Klasse verwaltet das aktuelle GUI-Objekt.
  * 
  * Jedes technische GUI-Objekt, wobei es unerheblich ist, wie tief diese
  * technisch ineinander verschachtelt sind, wird mit maximal zwei Angaben
@@ -63,7 +63,8 @@ import okw.gui.IGUIChildwindow;;
  * 
  * __Design-Pattern:__ Singleton - Highlander-Prinzip
  *
- * \~english \brief This class administrates the actual GUI-Object.
+ * \~english
+ *  This class administrates the actual GUI-Object.
  * 
  * Each technical GUI-Object, irrelevant how deep they are nested into each
  * other technically, will be referenced with two informations: **WindowName**
@@ -71,7 +72,8 @@ import okw.gui.IGUIChildwindow;;
  * 
  * __Design-Pattern:__ Singleton - Highlander-Principle
  *
- * \~ \author Zoltan Hrabovszki \date 2012.11.01
+ * \~
+ * \author Zoltan Hrabovszki \date 2012.11.01
  */
 public class OKW_CurrentObject_Sngltn
 {
@@ -144,8 +146,8 @@ public class OKW_CurrentObject_Sngltn
     private static String               cvsObjectName           = "";
 
     /**
-     * \~german \brief Hält eine Referenz auf die Klasse LogMessenger für die
-     * sprachabhängige Log-Ausgabe vor.
+     * \~german
+     * Hält eine Referenz auf die Klasse LogMessenger für die sprachabhängige Log-Ausgabe vor.
      *
      * Diese Variable wird im Konstruktor initialisiert.
      *
@@ -153,7 +155,8 @@ public class OKW_CurrentObject_Sngltn
      * ist: <tt>/XML/Log/CurrentObject.xml</tt>
      *
      *
-     * \~english \brief \todo TODO: für JN review
+     * \~english
+     * \todo TODO: für JN review
      */
     private static LogMessenger         LM                      = null;
 
