@@ -25,7 +25,7 @@ var interfaceokw_1_1log_1_1_i_logger =
     [ "ResCloseList", "interfaceokw_1_1log_1_1_i_logger.html#af5bf41c16560c494fa08dd0f96753174", null ],
     [ "ResCloseListDebug", "interfaceokw_1_1log_1_1_i_logger.html#a3902380633dc59a36bc1c7fdc1ab5a1f", null ],
     [ "reset", "interfaceokw_1_1log_1_1_i_logger.html#a9baa55e3f3f4d790f808f6c89ae3270e", null ],
-    [ "ResOpenList", "interfaceokw_1_1log_1_1_i_logger.html#a27be22d3424c4d87d6ae2521c1ccd652", null ],
-    [ "ResOpenListDebug", "interfaceokw_1_1log_1_1_i_logger.html#a6198ec3e7417623ded0096daf20f8a21", null ],
+    [ "ResOpenList", "interfaceokw_1_1log_1_1_i_logger.html#a3766234a4f5cab201345fd4cdb0cb987", null ],
+    [ "ResOpenListDebug", "interfaceokw_1_1log_1_1_i_logger.html#ab4fb19524ab566ac28092099e21aceb0", null ],
     [ "setDebugMode", "interfaceokw_1_1log_1_1_i_logger.html#a3cbf569182e02e793ebe9c8da9fa6511", null ]
 ];
