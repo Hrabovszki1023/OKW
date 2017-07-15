@@ -57,20 +57,19 @@ import okw.core.IOKW_FN;
 import okw.exceptions.*;
 import okw.log.Logger_Sngltn;
 
-/// \~german
-/// \brief
-/// Verwaltet zentral die Frame-Klassen: Instanziert Frame-Klassen zu Frame-Objekten
-/// und liefert die Referenzen auf diese zurück.
-/// 
-/// \todo TODO: ZH Dokumentaion erweitern.
-/// \~english
-/// \brief
-/// \todo TODO: JN Übersetzung/Review
-/// 
-/// \~
-/// \author Zoltan Hrabovszki
-/// \date 2014.10.10
-/// 
+/** \~german
+ *  Verwaltet zentral die Frame-Klassen: Instanziert Frame-Klassen zu Frame-Objekten
+ *  und liefert die Referenzen auf diese zurück.
+ *  
+ *  \todo TODO: ZH Dokumentaion erweitern.
+ *  \~english
+ *  \brief
+ *  \todo TODO: JN Übersetzung/Review
+ *  
+ *  \~
+ *  \author Zoltan Hrabovszki
+ *  \date 2014-10-10
+ */
 public class FrameObjectDictionary_Sngltn
 {
 

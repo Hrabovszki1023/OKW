@@ -312,18 +312,24 @@ public interface ILogger
      * @author Zoltan Hrabovszki
      * @date 2016-10-23
      */    
-    void ResOpenList(String LevelHeader);
+    void ResOpenList(String ListHeader);
 
+    
     /**
-     *  LogFunctionStartDebug: Opens a debug outline level with the .
-     *  @todo TODO: Add description to LogFunctionStartDebug.
-     * 
-     *  @param LevelHeader
+     *  \~german
+     *  Öffnet eine neue debug Ergenis-Ebene mit der gegebenen Überschrift.
+     *  
+     *  @param ListHeader Überschrift neu zuöffnenden Liste
+     *  
+     *  \~english
+     *  Opens a new result list leven with the geven header.
+     *  
+     *  @param ListHeader
      * \~
      * @author Zoltan Hrabovszki
      * @date 2016-10-23
      */    
-    void ResOpenListDebug(String LevelHeader); 
+    void ResOpenListDebug(String ListHeader); 
     
 
     /**
@@ -338,6 +344,7 @@ public interface ILogger
      */    
     void ResCloseList();
 
+    
     /**
      *  ResCloseListDebug: @todo TODO: Add description to ResCloseListDebug.
      * 
@@ -346,6 +353,7 @@ public interface ILogger
      * @date 2016-10-23
      */    
     void ResCloseListDebug();
+
     
     /**
      *  setDebugMode: @todo TODO: Add description to setDebugMode.

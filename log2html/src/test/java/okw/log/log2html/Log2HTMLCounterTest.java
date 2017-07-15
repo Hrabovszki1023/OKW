@@ -23,7 +23,7 @@ public class Log2HTMLCounterTest {
 	{	
 		Log2HTML myLog = new Log2HTML();
 		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_Normal_Test.html" );
+		myLog.setHTML_File( "target/_Log2HTMLCounterTest-tcTestcase_Normal_Test.html" );
 				
 		myLog.LogTestcaseStart( "tcTestcase_Normal_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );

@@ -51,10 +51,12 @@ import org.openqa.selenium.WebElement;
 import org.xml.sax.SAXException;
 
 import okw.FrameObjectDictionary_Sngltn;
+import okw.OKW;
 import okw.OKW_Const_Sngltn;
 import okw.core.Core;
 import okw.core.OKW_CurrentObject_Sngltn;
 import okw.gui.OKWLocator;
+import okw.gui.frames.SeRadioList.frmSeRadioList.PayMethod;
 
 
 /**
@@ -63,6 +65,10 @@ import okw.gui.OKWLocator;
  * 
  * \~german
  *  Diese Klasse representiert einen <select>-Tag, der mit Selenium angsteuert wird.
+ *  
+ *  SeRadioList selbst ist ein komplexer GUI-Adapter, der als Kontainer für SeRadioButtons dient.
+ *  Im Absatz *Verwendung*, wird beschrieben, wie ein funktionierender RadioList im GUI-Frame aufgebaut wird.
+ *  
  *  
  * @startuml
  * class SeRadioList [[java:okw.gui.adapter.selenium.SeRadioList]] {
@@ -136,8 +142,74 @@ import okw.gui.OKWLocator;
  * | `VerifyTooltip( FN, ExpVal )`,  <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **JA** | Als Tooltip wird das Attribute `title` verwendet.  Im Beispiel: `Select title` |
  * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )`     | **JA** | Ausgewählte Wert |
  * 
+ * # Verwendung
+ * Hier wird nun gezeigt, wie ein SeRadioList zu einer funtionierenden Einheit
+ * 
+ * - aus einer SeRadioList als Kontainer-Klasse und
+ * - aus mehreren SeInputRadio -s als Elemente der RadioList
+ * 
+ * aufgebaut wird.
+ *  
+ * Als Beispiel verwenden wir die SeRadioList Implementation aus dem TestFrame okw.gui.frames.SeRadioList.frmSeRadioList für den Test der SeRadioList,
+ * die in OKW Verwendet wird.
+ * 
+ * 
+ * Bei diesem Beispiel handelt es sich um die Auswahl der Zahlungsmethode (Pay Method) als Radio-Liste. Die Möglichen Optionen sind:
+ * 
+ * - Visa
+ * - American Express
+ * - Mastercard
+ *  
+ * ## Der FN der SeRadioList
+ * Wie jeder GUI-Adapter erhält auch ein GUI-Adapter vom Type SeRadiolist einen @ref refFN.
+ * Hier ist kein Unterschied zu anderen GUI-Adapter. Der \ref refFN ist im Beispiel "Pay Method"
+ * 
+ * \par Hinweis:
+ * Die Klasse ```PayMethod``` ist der GUI-Kontainer, diese erweitert (extends) die Klasse SeRadioList. Das kommt im weiter unten.
+ * 
+ * 
+ * ## Der FN der SeRadioList
+ * 
+ * \code{.java}
+ * @OKW( FN = "Pay Method" )
+ * public PayMethod   mySeRadioList = new PayMethod( "//fieldset[@title='fieldset-title']", this.getLOCATOR() );
+ * \endcode
+ * 
+ * 
+ * ## SeRadioList Kontainer Klasse definieren
+ * In diesem Schritt werden die "Knöpfe" der Radio-Liste definiert und jeweils ein \ref refFN zugeordnet.
+ * 
+ * \par Hinweis:
+ * Damit SeRadioList funktioniert, müssen die \ref refFN -s der Knöpfe jeweil mit dem \ref refFN der SeRadioList + "." beginnen!<br>
+ * Also in diesem Beispiel: ```"Pay Method."``` - Wichtig: ```"."``` nicht vergessen.<br><br>
+ * In unserem Beispiel ist der \ref refFN für die Option "American Express" = ```"Pay Method.American Express"```<br><br>
+ * Die Annotaion als gnazes: @OKW( FN = "Pay Method.American Express" )
+ * 
+ * Das Ganze sieht dann wie folg aus:
+ * 
+ * \code{.java}
+ *    public class PayMethod extends SeRadioList
+ *  {
+ *
+ *      public PayMethod( String Locator, OKWLocator... fpLocators )
+ *      {
+ *          super( Locator, fpLocators );
+ *      }
+ *
+ *      @OKW( FN = "Pay Method.Visa" )
+ *      public SeInputRadio myVisa            = new SeInputRadio( "%1$s//input[@id='id_visa']", this.getLOCATOR() );
+ *
+ *      @OKW( FN = "Pay Method.American Express" )
+ *      public SeInputRadio myAmericanExpress = new SeInputRadio( "%1$s//input[@id='id_american_express']", this.getLOCATOR() );
+ *
+ *      @OKW( FN = "Pay Method.Mastercard" )
+ *      public SeInputRadio myMastercard      = new SeInputRadio( "%1$s//input[@id='id_mastercard']", this.getLOCATOR() );
+ *
+ *  };
+ * \endcode
+ * 
  *  # Siehe auch:
- *  - okw.gui.adapter.selenium.SeInputRadion - für <input type="radionbutton">-Tags.
+ *  - okw.gui.adapter.selenium.SeInputRadio - für <input type="radionbutton">-Tags.
  *  
  *  # Quellen/Links
  *  

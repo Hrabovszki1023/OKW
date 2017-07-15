@@ -369,6 +369,6 @@ div.pass-bar
  
 div.fail-bar{
     height: 100%;
-    background: black;
+    background: #E4473E;
     float: left;    
 }

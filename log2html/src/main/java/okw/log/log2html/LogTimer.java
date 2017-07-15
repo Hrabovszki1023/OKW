@@ -2,6 +2,10 @@ package okw.log.log2html;
  
 import java.text.DecimalFormat;
 import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
  
  
@@ -12,7 +16,12 @@ public class LogTimer {
 
         private Instant lvStartTime;
         private Instant lvEndTime;
-         
+        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern( "yyyy-MMM-dd HH:mm:ss.SSS")
+                        .withLocale( Locale.GERMANY )
+                        .withZone( ZoneId.systemDefault() );
+        
+        
         public void startTimer()
         {
                 TimerBegin = System.nanoTime();
@@ -65,14 +74,15 @@ public class LogTimer {
         
         public String getStartTime()
         {
-        	String lvsReturn = lvStartTime.toString();
+        	String lvsReturn = formatter.format( lvStartTime );
         	return lvsReturn;
         }
 
         
         public String getEndTime()
         {
-        	String lvsReturn = lvEndTime.toString();
+            String lvsReturn = formatter.format( lvEndTime );
+        	
         	return lvsReturn;
         }
 
