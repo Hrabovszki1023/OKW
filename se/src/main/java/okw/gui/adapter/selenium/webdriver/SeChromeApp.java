@@ -50,6 +50,7 @@ package okw.gui.adapter.selenium.webdriver;
 
 import javax.xml.xpath.XPathExpressionException;
 
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import okw.OKW_Memorize_Sngltn;
@@ -110,11 +111,9 @@ public class SeChromeApp extends AnyWindow
             if ( DriverPath != null )
             {
                 LOG.LogPrint( "EnvVar: OKWChromedriverPath='" + DriverPath + "'" );
-                System.setProperty( "webdriver.Chrome.driver", DriverPath );
-
+                System.setProperty( "webdriver.chrome.driver", DriverPath );
                 MEM.set( "System.Property: webdriver.Chrome.driver", DriverPath );
                 MEM.set( "OKW EnvVar: OKWChromedriverPath", DriverPath );
-
             }
             else
             {
@@ -135,7 +134,7 @@ public class SeChromeApp extends AnyWindow
 
             LOG.LogPrint( "System Property: webdriver.chrome.driver='" + System.getProperty( "os.name" ) + "'" );
 
-            SeDriver.getInstance().driver = new FirefoxDriver();
+            SeDriver.getInstance().driver = new ChromeDriver();
             this.Init();
         }
         catch (XPathExpressionException e)
