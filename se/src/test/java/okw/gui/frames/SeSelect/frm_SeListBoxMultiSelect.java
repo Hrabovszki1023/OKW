@@ -17,13 +17,12 @@ public class frm_SeListBoxMultiSelect extends SeBrowserChild
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeSelect Künstler;
+    public SeSelect Künstler =  new SeSelect("//*[@name='Artist']");
 
 
     public frm_SeListBoxMultiSelect()
     {
-       super( "//form[@action = 'SelectMultiSelect.htm']/../.." );
-       Künstler =  new SeSelect("//*[@name='Artist']");
+       setLocator( "//form[@action = 'SelectMultiSelect.htm']/../.." );
     }
 
 }

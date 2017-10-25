@@ -1,6 +1,6 @@
 /*
  ==============================================================================
- Copyright © 2012 - 2017,2016 IT-Beratung Hrabovszki
+ Copyright © 2012 - 2017 IT-Beratung Hrabovszki
  ============================================================================== 
 
  This file is part of OpenKeyWord.
@@ -111,12 +111,15 @@ public class frmInputButton extends SeBrowserChild
            )
   public SeInputButton Button_3       = new SeInputButton( "//*[@name='Button 3']" );
 
-  // / \brief
-  // / URL des Fensters: http://test.openkeyword.de/InputButton/input_type-button.htm
-  // /
+  /**
+   * \~german
+   *  URL des Fensters: http://test.openkeyword.de/InputButton/input_type-button.htm
+   * \~
+   * @author Zoltán Hrabovszki
+   * @date 2016.09.06   
+   */
   public frmInputButton()
   {
-    // 
-    super( "//title[contains(text(),'This is the page-title of input_type-button.htm')]/../.." );
+      setLocator( "//title[contains(text(),'This is the page-title of input_type-button.htm')]/../.." );
   }
 }

@@ -1,6 +1,5 @@
 package okw.gui.frames;
 
-import okw.gui.adapter.selenium.SeURL;
 import okw.gui.adapter.selenium.webdriver.*;
 import okw.OKW;
 

@@ -47,7 +47,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import okw.OKW_Memorize_Sngltn;
 import okw.gui.AnyWindow;
-import okw.gui.adapter.selenium.*;
 import okw.log.*;
 
 /**
@@ -55,6 +54,7 @@ import okw.log.*;
 
  * OKW Selenium FireFox BrowserWindow Klasse
  */
+@Deprecated
 public class SeFirefoxApp extends AnyWindow
 {
     /**

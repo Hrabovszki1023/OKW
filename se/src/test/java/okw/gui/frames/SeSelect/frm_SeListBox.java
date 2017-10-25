@@ -17,7 +17,7 @@ import okw.gui.adapter.selenium.SeSelect;
               VerifyExists_PT=500, VerifyExists_TO=1,
               VerifyIsActive_PT=500, VerifyIsActive_TO=1,
               VerifyHasFocus_PT=500, VerifyHasFocus_TO=1)
-      public SeSelect NichtVorhanden;
+      public SeSelect NichtVorhanden = new SeSelect("//*[@name='NichtVorhanden']");;
 
       @OKW(FN="Künstler", 
               VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -27,7 +27,7 @@ import okw.gui.adapter.selenium.SeSelect;
               VerifyIsActive_PT=500, VerifyIsActive_TO=1,
               VerifyExists_PT=500, VerifyExists_TO=1,
               VerifyHasFocus_PT=500, VerifyHasFocus_TO=1)
-      public SeSelect Künstler;
+      public SeSelect Künstler =  new SeSelect("//*[@name='Künstler']");
 
       @OKW(FN="Blumen", 
               VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -37,7 +37,7 @@ import okw.gui.adapter.selenium.SeSelect;
               VerifyIsActive_PT=500, VerifyIsActive_TO=1,
               VerifyExists_PT=500, VerifyExists_TO=1,
               VerifyHasFocus_PT=500, VerifyHasFocus_TO=1)
-      public SeSelect Blumen;
+      public SeSelect Blumen = new SeSelect("//*[@name='Blumen']");
 
       @OKW(FN="Fahrzeug", 
               VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -47,16 +47,11 @@ import okw.gui.adapter.selenium.SeSelect;
               VerifyIsActive_PT=500, VerifyIsActive_TO=1,
               VerifyExists_PT=500, VerifyExists_TO=1,
               VerifyHasFocus_PT=500, VerifyHasFocus_TO=1)
-      public SeSelect Fahrzeug;
+      public SeSelect Fahrzeug = new SeSelect("//*[@name='Fahrzeug']");
 
       public frm_SeListBox() 
       {
-          super ("//title[contains(text(),'ListBox/Auswahliste: Einträge vorselektiert')]/../..");
-          NichtVorhanden = new SeSelect("//*[@name='NichtVorhanden']");
-
-          Künstler =  new SeSelect("//*[@name='Künstler']");
-          Blumen = new SeSelect("//*[@name='Blumen']");
-          Fahrzeug = new SeSelect("//*[@name='Fahrzeug']");
+          setLocator( "//title[contains(text(),'ListBox/Auswahliste: Einträge vorselektiert')]/../.." );
       }
 
   }

@@ -67,6 +67,6 @@ public class frmSeInputRadio extends SeBrowserChild
     public frmSeInputRadio() throws Exception 
     {
        // Set the Locator for the Window-Frame
-      super ("//title[@id='id_RadioList']/../..");
+        setLocator("//title[@id='id_RadioList']/../..");
     }
 }

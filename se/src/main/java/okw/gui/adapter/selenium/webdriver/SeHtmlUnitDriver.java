@@ -1,5 +1,3 @@
-package okw.gui.adapter.selenium.webdriver;
-
 /*
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
@@ -39,122 +37,103 @@ package okw.gui.adapter.selenium.webdriver;
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
+package okw.gui.adapter.selenium.webdriver;
 
 import java.util.ArrayList;
 
 import okw.gui.AnyWindow;
-import okw.gui.adapter.selenium.SeDriver;
 import okw.log.Logger_Sngltn;
 
 
-    /** \~german
-     * @ingroup groupSeleniumDriverFrames
-     * Implementiert den Selenium HTMLUnit-Driver 
-     * 
-     * 
-     * \todo TODO: Ausführliche Beschreibung
-     * 
-     * \~english
-     * \todo TODO: Brief Description.
-     * 
-     *  \todo TODO: Detailed Description
-     * 
-     * \~
-     * @author Zoltán Hrabovszki
-     * @date 2015-05-12
-     */
-    public class SeHtmlUnitDriver extends AnyWindow
+public class SeHtmlUnitDriver extends AnyWindow
+{
+    protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
+
+    /// \~german
+    /// \brief Konstruktor der Klasse, aktuell keine MethodenAufrufe.
+    /// 
+    /// \~english
+    /// \brief \todo TODO: Brief Description.
+    /// 
+    /// \todo TODO: Detailed Description
+    /// 
+    /// \~
+    /// \author Zoltán Hrabovszki
+    /// \date 2015.05.12
+    public SeHtmlUnitDriver()
     {
-        protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
+        MyLogger.LogFunctionStartDebug( "SeHtmlUnitDriver()" );
 
-        /// \~german
-        /// \brief Konstruktor der Klasse, aktuell keine MethodenAufrufe.
-        /// 
-        /// \~english
-        /// \brief \todo TODO: Brief Description.
-        /// 
-        /// \todo TODO: Detailed Description
-        /// 
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2015.05.12
-        public SeHtmlUnitDriver()
-        {
-        	MyLogger.LogFunctionStartDebug("SeHtmlUnitDriver()");
+        MyLogger.LogFunctionEndDebug();
+    }
 
-        	MyLogger.LogFunctionEndDebug();
-        }
+    public void Init()
+    {
+        MyLogger.LogFunctionStartDebug( "Init()" );
 
-        
-        public void Init()
-        {
-        	MyLogger.LogFunctionStartDebug("Init()");
+        MyLogger.LogFunctionEndDebug();
+    }
 
-        	MyLogger.LogFunctionEndDebug();
-        }
+    public void SelectWindow()
+    {
+    }
 
-        
-        public void SelectWindow()
-        {
-        }
+    /// \~german
+    /// \brief Erzeugt eine Instanz des Selenium HTMLUnit-Drivers (RemoteDriver).
+    /// 
+    /// \todo TODO: Ausführliche Beschreibung
+    /// 
+    /// \param Parameterbezeichner \todo TODO: Beschreibung 
+    /// \return
+    ///
+    /// \~english
+    /// \brief \todo TODO: Brief Description.
+    /// 
+    /// \todo TODO: Detailed Description
+    /// 
+    /// \param fpbTrueOrFalse 
+    /// \return
+    ///
+    /// \~
+    /// \author Zoltán Hrabovszki
+    /// \date 2015.05.12
+    public void StartApp()
+    {
+        MyLogger.LogFunctionStartDebug( "StartApp" );
 
-        /// \~german
-        /// \brief Erzeugt eine Instanz des Selenium HTMLUnit-Drivers (RemoteDriver).
-        /// 
-        /// \todo TODO: Ausführliche Beschreibung
-        /// 
-        /// \param Parameterbezeichner \todo TODO: Beschreibung 
-        /// \return
-        ///
-        /// \~english
-        /// \brief \todo TODO: Brief Description.
-        /// 
-        /// \todo TODO: Detailed Description
-        /// 
-        /// \param fpbTrueOrFalse 
-        /// \return
-        ///
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2015.05.12
-        public void StartApp()
-        {
-        	MyLogger.LogFunctionStartDebug("StartApp");
+        SeDriver.getInstance().DriveUnitDriver();
+        // this.Init();
 
-        	
-            SeDriver.getInstance().DriveUnitDriver();
-            // this.Init();
+        MyLogger.LogFunctionEndDebug();
+    }
 
-            MyLogger.LogFunctionEndDebug();
-        }
+    /// \~german
+    /// \brief HTMLUnit-Driver Beenden. 
+    /// 
+    /// Beendet den HTMLUnit-Driver mit der Methode Quit()
+    /// 
+    /// \~english
+    /// \brief \todo TODO: Brief Description.
+    /// 
+    /// \todo TODO: Detailed Description
+    /// 
+    /// \param fpbTrueOrFalse 
+    /// \return
+    ///
+    /// \~
+    /// \author Zoltán Hrabovszki
+    /// \date 2015.05.12
+    public void StopApp()
+    {
+        MyLogger.LogFunctionStartDebug( "StopApp" );
 
-        /// \~german
-        /// \brief HTMLUnit-Driver Beenden. 
-        /// 
-        /// Beendet den HTMLUnit-Driver mit der Methode Quit()
-        /// 
-        /// \~english
-        /// \brief \todo TODO: Brief Description.
-        /// 
-        /// \todo TODO: Detailed Description
-        /// 
-        /// \param fpbTrueOrFalse 
-        /// \return
-        ///
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2015.05.12
-        public void StopApp()
-        {
-        	MyLogger.LogFunctionStartDebug("StopApp");
+        SeDriver.getInstance().driver.quit();
 
-            SeDriver.getInstance().driver.quit();
+        MyLogger.LogFunctionEndDebug();
+    }
 
-            MyLogger.LogFunctionEndDebug();
-        }
-
-        public void TypeKey(ArrayList<String> fps_Values)
-        {
-        }
+    public void TypeKey( ArrayList<String> fps_Values )
+    {
+    }
 
 }

@@ -42,6 +42,11 @@ package okw.gui.adapter.selenium;
 import okw.OKW;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
+import okw.gui.adapter.selenium.webdriver.SeBACK;
+import okw.gui.adapter.selenium.webdriver.SeMAXIMIZE;
+import okw.gui.adapter.selenium.webdriver.SePOSITION;
+import okw.gui.adapter.selenium.webdriver.SeSIZE;
+import okw.gui.adapter.selenium.webdriver.SeURL;
 
 /** 
  * @ingroup groupSeleniumWindowGUIAdapter
@@ -49,29 +54,24 @@ import okw.gui.OKWLocator;
  */
 public class SeBrowserChild extends SeAnyWindow
 {
-
     // The class for the window that contains the contents of the Web page.
     public OKWLocator locator;
 
     @OKW( FN = "URL" )
-    public SeURL      URL = new SeURL();
+    public SeURL URL = new SeURL();
+    
+    @OKW( FN = "BACK")
+    public SeBACK BACK = new SeBACK();
 
-    /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
-     */
-    public SeBrowserChild( String Locator, OKWLocator... Locators )
-    {
-        super( Locator, Locators );
-    }
+    @OKW( FN = "MAXIMIZE")
+    public SeMAXIMIZE MAXIMIZE = new SeMAXIMIZE();
 
-    /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
-     */
-    public SeBrowserChild( String IframeID, String Locator, OKWLocator... Locators )
-    {
-        super( IframeID, Locator, Locators );
-    }
+    @OKW( FN = "SIZE")
+    public SeSIZE SIZE = new SeSIZE();
 
+    @OKW( FN = "POSITION")
+    public SePOSITION POSITION = new SePOSITION();
+    
     @Override
     public void SelectWindow()
     {

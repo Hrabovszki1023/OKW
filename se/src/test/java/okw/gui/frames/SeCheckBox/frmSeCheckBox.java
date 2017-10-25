@@ -67,6 +67,6 @@ public class frmSeCheckBox extends SeBrowserChild
 
     public frmSeCheckBox()
     {
-    	super("//title[contains(text(),'Checkbox TestGUI 1')]/../..");
+        setLocator("//title[contains(text(),'Checkbox TestGUI 1')]/../..");
     }
 }

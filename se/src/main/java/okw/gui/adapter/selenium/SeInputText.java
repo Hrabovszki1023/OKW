@@ -45,6 +45,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import okw.gui.OKWLocator;
+import okw.gui.adapter.selenium.webdriver.SeDriver;
 
 /**
  * @ingroup groupSeleniumChildGUIAdapter 

@@ -111,12 +111,11 @@ public class FrmButton extends SeBrowserChild
            )
   public SeButton Button_3       = new SeButton( "//*[@name='Button 3']" );
 
-  // / \brief
-  // / URL des Fensters: http://test.openkeyword.de/InputButton/input_type-button.htm
-  // /
+  /**
+   * URL des Fensters: http://test.openkeyword.de/InputButton/input_type-button.htm
+   */
   public FrmButton()
   {
-    // 
-    super( "//title[contains(text(),'This is the page-title of button.htm')]/../.." );
+    setLocator( "//title[contains(text(),'This is the page-title of button.htm')]/../.." );
   }
 }

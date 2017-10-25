@@ -33,6 +33,6 @@ WaitForMe_TO=5
 
         public frmSeInputTextReadonly()
         {
-          super("//title[contains(text(),'Textfield TestGUI 4 input_type-text_readonly')]/../..");
+            setLocator("//title[contains(text(),'Textfield TestGUI 4 input_type-text_readonly')]/../..");
         }
 }

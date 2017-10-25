@@ -116,6 +116,6 @@ public class frmInputButtonNotActiv extends SeBrowserChild
    */
   public frmInputButtonNotActiv()
   {
-    super( "//title[contains(text(),'Button enabled / disabled')]/../.." );
+     setLocator( "//title[contains(text(),'Button enabled / disabled')]/../.." );
   }
 }

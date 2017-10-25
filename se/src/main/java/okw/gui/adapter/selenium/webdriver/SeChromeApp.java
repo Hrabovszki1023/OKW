@@ -51,11 +51,9 @@ package okw.gui.adapter.selenium.webdriver;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import okw.OKW_Memorize_Sngltn;
 import okw.gui.AnyWindow;
-import okw.gui.adapter.selenium.SeDriver;
 import okw.log.Logger_Sngltn;
 
 /**
@@ -65,6 +63,7 @@ import okw.log.Logger_Sngltn;
  *
  * TODO: class SeChromeApp dokumentieren...
  */ 
+@Deprecated
 public class SeChromeApp extends AnyWindow
 {
 

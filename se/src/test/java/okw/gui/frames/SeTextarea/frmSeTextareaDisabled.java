@@ -31,6 +31,6 @@ public class frmSeTextareaDisabled extends SeBrowserChild
 
     public frmSeTextareaDisabled( )
     {
-      super("//title[contains(text(),'textarea disabled')]/../..");
+        setLocator("//title[contains(text(),'textarea disabled')]/../..");
     }
 }

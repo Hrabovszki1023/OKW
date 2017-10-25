@@ -26,6 +26,7 @@ import org.junit.runners.Suite.SuiteClasses;
   OKW_HelperTest.class,
   OKW_IniTest.class,
   OKW_XmlReaderTest.class } )
+
 public class AllTests
 {
 

@@ -407,7 +407,7 @@ public class OKW_Ini_Sngltn
 		ClassLoader classLoader = getClass().getClassLoader();
 
 		// ... und dann alles Initialisieren!
-			// 1. Ermittle xml-Verzeciniss in der Resource
+			// 1. Ermittle xml-Verzeichniss in der Resource
 		
 		  URL xml_resource_path = classLoader.getResource("xml/logmessages");
 		  

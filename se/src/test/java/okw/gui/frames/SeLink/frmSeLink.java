@@ -3,23 +3,16 @@ package okw.gui.frames.SeLink;
 import okw.OKW;
 import okw.gui.adapter.selenium.*;
 
-/// \~german
-/// \brief
-/// Selenium-Frame zur [Link-TestSeite](http://test.openkeyword.de/Link/Link.htm)
-
+/** \~german
+ *  Selenium-Frame zur [Link-TestSeite](http://test.openkeyword.de/Link/Link.htm)
+ */
 @OKW( FN = "SeLink" )
 public class frmSeLink extends SeBrowserChild {
 
-    // @todo TODO: WorkAround for inherited object: Scanner doesnt collect
-    // inherited objects.
-    @OKW( FN = "URL" )
-    public SeURL  url           = new SeURL();
-
-    // / \~german
-    // / \brief
-    // / Dieses Objekt dient zur Existenzprüfung eines _nicht_
-    // / vorhandenen SeLink-Objektes.
-    // /
+    /** \~german
+     *  Dieses Objekt dient zur Existenzprüfung eines _nicht_
+     *  vorhandenen SeLink-Objektes.
+     */
     @OKW( FN = "LinkNotExists",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
             VerifyIsActive_PT=500, VerifyIsActive_TO=1,
@@ -47,7 +40,7 @@ public class frmSeLink extends SeBrowserChild {
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeLink Google;
+    public SeLink Google = new SeLink( "%1$s//*[@name='Google_Link']", this.getLOCATOR() );
 
     // / \~german
     // / \brief
@@ -65,12 +58,10 @@ public class frmSeLink extends SeBrowserChild {
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeLink Yahoo;
+    public SeLink Yahoo = new SeLink( "%1$s//*[@name='Yahoo_Link']", getLOCATOR() );
 
-    public frmSeLink() {
-      super( "//title[text()='OKW Link-Testpage']/../.." );
-
-      this.Google = new SeLink( "%1$s//*[@name='Google_Link']", getLOCATOR() );
-      this.Yahoo = new SeLink( "%1$s//*[@name='Yahoo_Link']", getLOCATOR() );
+    public frmSeLink()
+    {
+        setLocator( "//title[text()='OKW Link-Testpage']/../.." );
     }
 }

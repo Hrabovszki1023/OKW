@@ -16,7 +16,7 @@ public class SeBrowserChild_EN_Test
 	OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
 	
 	protected static String ApplicationName;
-
+	
     @Rule
     public TestName name = new TestName();
 
@@ -67,6 +67,30 @@ public class SeBrowserChild_EN_Test
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
 
           EN.SelectWindow( "SeInputTextDisabled" );
-        
         }
+        
+        
+        /**
+         *  Prüft ob bei nicht vorhandenem Browserchild die Exception "" ausgelöst wird.
+         */ 
+        @Test
+        public void tcBrowserChild_BACK() throws Exception
+        {
+          EN.BeginTest( name.getMethodName() );
+
+          EN.StartApp( ApplicationName );
+          EN.SetValue( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.VerifyValue( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+
+          EN.SetValue( "URL", "http://test.openkeyword.de/Link/a.htm" );
+          EN.VerifyValue( "URL", "http://test.openkeyword.de/Link/a.htm" );
+
+          EN.ClickOn( "BACK" );
+          EN.VerifyValue( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
+
+        }
+
     }

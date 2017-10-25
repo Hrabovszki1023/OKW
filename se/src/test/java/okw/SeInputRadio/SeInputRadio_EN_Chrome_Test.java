@@ -28,7 +28,7 @@ public class SeInputRadio_EN_Chrome_Test extends SeInputRadio_EN_Test
 
 
     @After
-    public void FirefoxAfter() throws Exception
+    public void After() throws Exception
     {
     	Runtime rt = Runtime.getRuntime();
     	

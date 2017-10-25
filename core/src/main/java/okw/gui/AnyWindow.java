@@ -59,7 +59,7 @@ public class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_FN
 	}
 
 
-public AnyWindow(String fpsLocator, OKWLocator... fpLocators )
+public void setLocator(String fpsLocator, OKWLocator... fpLocators )
 {
     if ( fpLocators.length != 0 )
     {
@@ -134,7 +134,7 @@ public AnyWindow(String fpsLocator, OKWLocator... fpLocators )
    *  - Es wird nur ein eiziges mal die Existenz geprüft.
    *  - Es wird keine Ausnahme ausgelöst, wenn das Object nicht vorhanden ist!
    *  
-   *  @return true, falls das eindeutig Objekt gefunden worden ist ist, sonst false.
+   *  @return true, falls das eindeutig aktiv ist, sonst false.
    *  \~
    *  @author Zoltán Hrabovszki
    *  @throws Exception 

@@ -42,6 +42,6 @@ public class frmSeTextarea extends SeBrowserChild
 
     public frmSeTextarea( )
     {
-      super("//title[contains(text(),'textarea')]/../..");
+      setLocator("//title[contains(text(),'textarea')]/../..");
     }
 }

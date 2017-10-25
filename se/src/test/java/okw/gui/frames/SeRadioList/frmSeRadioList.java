@@ -11,7 +11,7 @@ public class frmSeRadioList extends SeBrowserChild
 {
 
     @OKW( FN = "Does Not Exist", VerifyLabel_PT = 500, VerifyLabel_TO = 1, VerifyValue_PT = 500, VerifyValue_TO = 1, VerifyTooltip_PT = 500, VerifyTooltip_TO = 1, VerifyCaption_PT = 500, VerifyCaption_TO = 1, VerifyExists_PT = 500, VerifyExists_TO = 1, VerifyIsActive_PT = 500, VerifyIsActive_TO = 1, VerifyHasFocus_PT = 500, VerifyHasFocus_TO = 1 )
-    public SeRadioList DoesNotExist;
+    public SeRadioList DoesNotExist= new SeRadioList( "//title[@id='id_RadioList']" );
 
     @OKW( FN = "Pay Method", VerifyLabel_PT = 500, VerifyLabel_TO = 1, VerifyValue_PT = 500, VerifyValue_TO = 1, VerifyTooltip_PT = 500, VerifyTooltip_TO = 1, VerifyCaption_PT = 500, VerifyCaption_TO = 1, VerifyIsActive_PT = 500, VerifyIsActive_TO = 1, VerifyExists_PT = 500, VerifyExists_TO = 1, VerifyHasFocus_PT = 500, VerifyHasFocus_TO = 1 )
     public PayMethod   mySeRadioList = new PayMethod( "//fieldset[@title='fieldset-title']", this.getLOCATOR() );
@@ -37,14 +37,7 @@ public class frmSeRadioList extends SeBrowserChild
 
     public frmSeRadioList() throws Exception
     {
-        // Set the Locator for the Window-Frame
-        super( "//title[@id='id_RadioList']/../.." );
+        setLocator( "//title[@id='id_RadioList']/../.." );
 
-        // 
-        DoesNotExist = new SeRadioList( "//title[@id='id_RadioList']" );
-
-        // myVisa = new SeInputRadio( "%1$s//input[@id='id_visa']", this.getLOCATOR() );
-        // myAmaricanExpress = new SeInputRadio( "%1$s//input[@id='id_amarican_express']", this.getLOCATOR() );
-        // myMastercard = new SeInputRadio( "%1$s//input[@id='id_mastercard']", this.getLOCATOR() );
     }
 }

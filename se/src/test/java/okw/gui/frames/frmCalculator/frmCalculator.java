@@ -104,7 +104,7 @@ public class frmCalculator extends SeBrowserChild {
   public frmCalculator() {
     
     // define Locator for Calculator Main-Window
-    super( "//title[text()='Taschenrechner']/../.." );
+    setLocator(  "//title[text()='Taschenrechner']/../.." );
 
   }
 }
