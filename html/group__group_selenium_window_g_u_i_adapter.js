@@ -1,8 +1,6 @@
 var group__group_selenium_window_g_u_i_adapter =
 [
     [ "SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html", [
-      [ "SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a5e1bd0faa1c03833397230a75ae8f246", null ],
-      [ "SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a224cf7377b7914c1babcd8f80785654f", null ],
       [ "ClickOn", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aa12522740af84cd18ca60c08bec1ce47", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ac628cf2651ecb5ac8104a8379a3fa06e", null ],
       [ "getExists", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ad806d20bf0e42d47e0aa5282532d3230", null ],
@@ -32,7 +30,9 @@ var group__group_selenium_window_g_u_i_adapter =
       [ "SelectMenu", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a236185190e513611d20bb8c05cbc270f", null ],
       [ "SelectMenu_Value", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aad1975ed00cf82773a5f195b3372c8d0", null ],
       [ "SetFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a18cc21003d35c2cdcd17b78bf91f2045", null ],
-      [ "setIframeID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a0ff12605bbeadd9ffa66789cf51bb6c9", null ],
+      [ "setiFrameID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ae09959d897718db0c8909eba2d0f4c2d", null ],
+      [ "setLocator", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ab2d6a182ed8b31c8abe0668632e2671f", null ],
+      [ "setLocator", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a9fedc826b5c9cadaa01cdf3a6c28ce65", null ],
       [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a40816e3262cca2de59ecef3d7d90ef4c", null ],
       [ "TypeKey", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ab8c870d4fbe1a9eab110f75320991f64", null ],
       [ "VerifyCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a9ad73167da71aa8082d826f9d84ef288", null ],
@@ -47,10 +47,20 @@ var group__group_selenium_window_g_u_i_adapter =
       [ "MyLogger", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a77626be8d12466f96db294687b5405cf", null ]
     ] ],
     [ "SeBrowserChild", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html", [
-      [ "SeBrowserChild", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html#afd2e2139c552595ff2eb9efec22fb3db", null ],
-      [ "SeBrowserChild", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html#ab5951bea393bf1c873b04e2f7ebe19ed", null ],
       [ "SelectWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html#adb40bf9fab066a5066768ef1e0476576", null ],
+      [ "BACK", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html#a5febb765fda30662e5b3432763dfe683", null ],
       [ "locator", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html#abc4ab194cc9a77d94c1db564556230df", null ],
+      [ "MAXIMIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html#a8e50ca84f7e984e4b5011da24b2acd60", null ],
+      [ "POSITION", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html#a94b8a98a6e312535265023f2bce29f66", null ],
+      [ "SIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html#a9a3b59817f98743f8b2d8bb8a9c9fbf1", null ],
       [ "URL", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html#a7f045462230c2430ca82c78a28c7971b", null ]
+    ] ],
+    [ "SeBrowserWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_window.html", [
+      [ "SelectWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_window.html#af4adfacb5bcddd3cbb54c70761713070", null ],
+      [ "BACK", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_window.html#a69ae0e0caee5f485104900e27b42ee10", null ],
+      [ "MAXIMIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_window.html#a3d1ac6f174700ab8e3c61ac5b6af86e4", null ],
+      [ "POSITION", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_window.html#a4ed8543f8830d7a41e47830efdc8e3b6", null ],
+      [ "SIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_window.html#a4301933051fbaedfcbebbf7416790cf2", null ],
+      [ "URL", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_window.html#a0e874aca09e7cb9c4eb468c16d989fbe", null ]
     ] ]
 ];

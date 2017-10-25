@@ -127,15 +127,65 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "setAttribute", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#ae40ec0953db4d03ac54dd9aafbb56bcf", null ],
       [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#aa9f8884c932bcb113d2392ca5444e111", null ]
     ] ],
-    [ "SeURL", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html", [
-      [ "SeURL", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html#a35ef0b0a9655f26de226e4de07ca4318", null ],
-      [ "getTooltip", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html#a5f73a14ecc17eeaacbc039cb7e9fc162", null ],
-      [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html#a7916070ea88b2c81d532a1be3bea03cd", null ],
-      [ "LogValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html#af58f42ce320c5d10dcaaaf400b407bcd", null ],
-      [ "MemorizeValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html#a231e8f120770be513d3b68c572a878ef", null ],
-      [ "SetFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html#a4fad213bd1e349975803457f7e2d249a", null ],
-      [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html#a0e0e4c5f90e4eccae793ee786811f35a", null ],
-      [ "TypeKey", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html#ac1bd60e07b5ea4a5feceb0052e5907a3", null ],
-      [ "VerifyValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html#ad0776f1cb611a7f83f3788e617914b87", null ]
+    [ "SeBACK", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html", [
+      [ "SeBACK", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html#ac093e86c069a60e2432322f8f0ee11be", null ],
+      [ "ClickOn", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html#a3006539e3640c87b845568ebee192d70", null ],
+      [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html#a94a641baa0504397d6fb56b857341da3", null ],
+      [ "getExists", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html#a7238b9d4490a209846fd8f7ef620728b", null ],
+      [ "getHasFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html#a6db07f7701c3b7a1b9df1c159846b0ec", null ],
+      [ "getIsActive", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html#a175eeb55371034137d5b87bb58e523d0", null ],
+      [ "getLabel", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html#addb74210a41cce91233e73d05029959d", null ],
+      [ "getTooltip", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html#a6e793c7aab518e56fbcd3d152d4cf694", null ],
+      [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html#a7c45b966e6beace3dbd9243d388a2cde", null ],
+      [ "SetFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html#a211093d2ffc9a60208ccc704003b5074", null ],
+      [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html#a9c25a68c0c8fa2aa0d5835d1e900cf95", null ],
+      [ "TypeKey", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html#a2c3431f74e916489bc651e1e92b13cb9", null ]
+    ] ],
+    [ "SeMAXIMIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html", [
+      [ "SeMAXIMIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html#aacac3ca1c0733d645c651abc2e5e3734", null ],
+      [ "ClickOn", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html#a1dd8d09896417f0c6770843c1b7d3896", null ],
+      [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html#a70760cdb02d6a386066128263fa47bc4", null ],
+      [ "getExists", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html#ac0469da73921acc3119bf6ffb2d9311e", null ],
+      [ "getHasFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html#ac0b522f76313166eb2a6dc3a5dcfed25", null ],
+      [ "getIsActive", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html#ada8ff0c7eecffed842ea9be1c97037e1", null ],
+      [ "getLabel", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html#a532e20796d22398fb86c25c3efbc8ea3", null ],
+      [ "getTooltip", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html#adf6698d2768cbca966dccbf892cdde1d", null ],
+      [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html#ac6417176833cc3d6e01ba0b31fb6252a", null ],
+      [ "SetFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html#a9be75acc469db736462b4b3b95d4604d", null ],
+      [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html#a112fd6b439319757e1e5d941b67bada8", null ],
+      [ "TypeKey", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html#a097d26c11cf73d59853ccd5d74d464df", null ]
+    ] ],
+    [ "SePOSITION", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html", [
+      [ "SePOSITION", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html#ad6832fb0aeb6ec7da50833453a638ab6", null ],
+      [ "getTooltip", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html#ab955bdc4eabb8da297f58358b0472062", null ],
+      [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html#a8202bdbc5da3771dfff2e139d3c5391f", null ],
+      [ "LogValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html#a8a880a78da2d76a5f0a6041b5c9ac5a2", null ],
+      [ "MemorizeValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html#a374ac58371062a373ab336ca2e991f2a", null ],
+      [ "SetFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html#af4fb8e9a49f45d62f9fd659e30ae3189", null ],
+      [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html#a950d14a51708f5c5474f8fde21ad1879", null ],
+      [ "TypeKey", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html#a534d1301283e6470b02f6c4216f05fde", null ],
+      [ "VerifyValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html#a0d166291e49632f7a3f91736c513fac6", null ]
+    ] ],
+    [ "SeSIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html", [
+      [ "SeSIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html#aeff04c43e70fe9497df758d2e5aab26f", null ],
+      [ "getTooltip", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html#ad4cb3648e4795f30aa9797830cb0b174", null ],
+      [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html#aa87092db0da97d396bdd4ec57a675866", null ],
+      [ "LogValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html#a6615a3f3782e41bbf6a8babba2d29d2d", null ],
+      [ "MemorizeValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html#a8b2cc8a7791621eacee14fa2eeeb17e1", null ],
+      [ "SetFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html#ab6a453eb4839e41750e87a20886e933a", null ],
+      [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html#a19404fa22c30712c19d0cb40fc0e504e", null ],
+      [ "TypeKey", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html#ac07b3d4d9a3335690359943282d4dbac", null ],
+      [ "VerifyValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html#ac1643c768cf532d3c1cca2c76af4680c", null ]
+    ] ],
+    [ "SeURL", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html", [
+      [ "SeURL", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html#a0f24f63e46e68461ae9a26322c984d96", null ],
+      [ "getTooltip", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html#aed012fcb761022cb1e3fb3baeb3bb7d5", null ],
+      [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html#ac4a8fb6892a96ff08d6c7ce77f193aab", null ],
+      [ "LogValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html#aafe644c6b8d35e3cfdb52008a5649015", null ],
+      [ "MemorizeValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html#a503c89e64bf6e92b37ff8cd463dcd099", null ],
+      [ "SetFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html#afd6f7d99b6b56c950a3f4ec961d51fc8", null ],
+      [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html#a7d87a9788b57054aaedb9597fdae8f1b", null ],
+      [ "TypeKey", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html#a1a38bdf8d462e42ba1961051bd8dddf8", null ],
+      [ "VerifyValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html#aadb20c277321299b91182cf10c99c1c6", null ]
     ] ]
 ];

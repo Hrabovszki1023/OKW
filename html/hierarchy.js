@@ -1,9 +1,9 @@
 var hierarchy =
 [
     [ "okw.core.AllCoreTests", "classokw_1_1core_1_1_all_core_tests.html", null ],
-    [ "okw.AllSe_Chrome_Tests", "classokw_1_1_all_se___chrome___tests.html", null ],
-    [ "okw.AllSe_Firefox_Tests", "classokw_1_1_all_se___firefox___tests.html", null ],
-    [ "okw.AllSeUnitDriverTests", "classokw_1_1_all_se_unit_driver_tests.html", null ],
+    [ "okw.AllSe_EN_Chrome_Tests", "classokw_1_1_all_se___e_n___chrome___tests.html", null ],
+    [ "okw.AllSe_EN_Firefox_Tests", "classokw_1_1_all_se___e_n___firefox___tests.html", null ],
+    [ "okw.AllSe_EN_UnitDriverTests", "classokw_1_1_all_se___e_n___unit_driver_tests.html", null ],
     [ "okw.AllTests", "classokw_1_1_all_tests.html", null ],
     [ "okw.gui.AnyWinBase", "classokw_1_1gui_1_1_any_win_base.html", [
       [ "okw.gui.AnyChildwindow", "classokw_1_1gui_1_1_any_childwindow.html", [
@@ -23,8 +23,13 @@ var hierarchy =
             [ "okw.gui.frames.SeRadioList.frmSeRadioList.PayMethod", "classokw_1_1gui_1_1frames_1_1_se_radio_list_1_1frm_se_radio_list_1_1_pay_method.html", null ]
           ] ],
           [ "okw.gui.adapter.selenium.SeSelect", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html", null ],
+          [ "okw.gui.adapter.selenium.SeTable", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_table.html", null ],
           [ "okw.gui.adapter.selenium.SeTextarea", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html", null ],
-          [ "okw.gui.adapter.selenium.SeURL", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_u_r_l.html", null ]
+          [ "okw.gui.adapter.selenium.webdriver.SeBACK", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html", null ],
+          [ "okw.gui.adapter.selenium.webdriver.SeMAXIMIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html", null ],
+          [ "okw.gui.adapter.selenium.webdriver.SePOSITION", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html", null ],
+          [ "okw.gui.adapter.selenium.webdriver.SeSIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html", null ],
+          [ "okw.gui.adapter.selenium.webdriver.SeURL", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html", null ]
         ] ],
         [ "okw.gui.adapter.Test_NoMethod_Object", "classokw_1_1gui_1_1adapter_1_1_test___no_method___object.html", null ],
         [ "okw.gui.adapter.Test_PushButton", "classokw_1_1gui_1_1adapter_1_1_test___push_button.html", [
@@ -54,17 +59,16 @@ var hierarchy =
             [ "okw.gui.frames.SeTextField.frmSeInputTextReadonly", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_readonly.html", null ],
             [ "okw.gui.frames.SeTextField.frmSeTextField", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_text_field.html", null ]
           ] ],
-          [ "okw.gui.adapter.selenium.SeTable", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_table.html", null ]
+          [ "okw.gui.adapter.selenium.SeBrowserWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_window.html", [
+            [ "okw.gui.frames.frmInternetExplorer", "classokw_1_1gui_1_1frames_1_1frm_internet_explorer.html", null ],
+            [ "okw.gui.frames.FrmSeChrome", "classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html", null ],
+            [ "okw.gui.frames.FrmSeFirefox", "classokw_1_1gui_1_1frames_1_1_frm_se_firefox.html", null ],
+            [ "okw.gui.frames.FrmSeHTMLUnit", "classokw_1_1gui_1_1frames_1_1_frm_se_h_t_m_l_unit.html", null ]
+          ] ]
         ] ],
-        [ "okw.gui.adapter.selenium.webdriver.SeChromeApp", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_chrome_app.html", [
-          [ "okw.gui.frames.frmChrome", "classokw_1_1gui_1_1frames_1_1frm_chrome.html", null ]
-        ] ],
-        [ "okw.gui.adapter.selenium.webdriver.SeFirefoxApp", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_firefox_app.html", [
-          [ "okw.gui.frames.frmFirefox", "classokw_1_1gui_1_1frames_1_1frm_firefox.html", null ]
-        ] ],
-        [ "okw.gui.adapter.selenium.webdriver.SeHtmlUnitDriver", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html", [
-          [ "okw.gui.frames.frmHTMLUnit", "classokw_1_1gui_1_1frames_1_1frm_h_t_m_l_unit.html", null ]
-        ] ],
+        [ "okw.gui.adapter.selenium.webdriver.SeChromeApp", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_chrome_app.html", null ],
+        [ "okw.gui.adapter.selenium.webdriver.SeFirefoxApp", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_firefox_app.html", null ],
+        [ "okw.gui.adapter.selenium.webdriver.SeHtmlUnitDriver", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html", null ],
         [ "okw.gui.adapter.selenium.webdriver.SeSafariApp", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_safari_app.html", [
           [ "okw.gui.frames.frmSafari", "classokw_1_1gui_1_1frames_1_1frm_safari.html", null ]
         ] ],
@@ -73,7 +77,6 @@ var hierarchy =
           [ "okw.gui.frames.FrmObjDictTest", "classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test.html", null ],
           [ "okw.gui.frames.frmTestRechner", "classokw_1_1gui_1_1frames_1_1frm_test_rechner.html", null ]
         ] ],
-        [ "okw.gui.frames.frmInternetExplorer", "classokw_1_1gui_1_1frames_1_1frm_internet_explorer.html", null ],
         [ "okw.gui.frames.frmWindowWithOutMethods", "classokw_1_1gui_1_1frames_1_1frm_window_with_out_methods.html", null ]
       ] ]
     ] ],
@@ -110,6 +113,11 @@ var hierarchy =
     [ "okw.core.EN_VerifyValue_OKWVerifyingFailsException_Test", "classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html", null ],
     [ "okw.FrameObjectDictionary_Sngltn", "classokw_1_1_frame_object_dictionary___sngltn.html", null ],
     [ "okw.core.FrameObjectDictionary_Test", "classokw_1_1core_1_1_frame_object_dictionary___test.html", null ],
+    [ "browser.FrmBrowserBase_Test", "classbrowser_1_1_frm_browser_base___test.html", [
+      [ "browser.FrmSeChrome_Test", "classbrowser_1_1_frm_se_chrome___test.html", null ],
+      [ "browser.FrmSeFirefox_Test", "classbrowser_1_1_frm_se_firefox___test.html", null ],
+      [ "browser.FrmSeHTMLUnitDriver_Test", "classbrowser_1_1_frm_se_h_t_m_l_unit_driver___test.html", null ]
+    ] ],
     [ "okw.gui.adapter.frmObjDictGuiContainer1", "classokw_1_1gui_1_1adapter_1_1frm_obj_dict_gui_container1.html", null ],
     [ "okw.gui.IGUIChildwindow", "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html", [
       [ "okw.gui.AnyChildwindow", "classokw_1_1gui_1_1_any_childwindow.html", null ]
@@ -205,55 +213,67 @@ var hierarchy =
       [ "okw.exceptions.OKWPathDoesNotExistException", "classokw_1_1exceptions_1_1_o_k_w_path_does_not_exist_exception.html", null ],
       [ "okw.exceptions.OKWVerifyingFailsException", "classokw_1_1exceptions_1_1_o_k_w_verifying_fails_exception.html", null ]
     ] ],
+    [ "okw.SeBACK.SeBACK_EN_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html", [
+      [ "okw.SeBACK.SeBACK_EN_Chrome_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___chrome___test.html", null ],
+      [ "okw.SeBACK.SeBACK_EN_Firefox_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___firefox___test.html", null ],
+      [ "okw.SeBACK.SeBACK_EN_HTMLUnitDriver_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___h_t_m_l_unit_driver___test.html", null ]
+    ] ],
     [ "okw.SeBrowserChild.SeBrowserChild_EN_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___test.html", [
+      [ "okw.SeBrowserChild.SeBrowserChild_EN_Chrome_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___chrome___test.html", null ],
       [ "okw.SeBrowserChild.SeBrowserChild_EN_Firefox_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___firefox___test.html", null ],
       [ "okw.SeBrowserChild.SeBrowserChild_EN_HTMLUnitDriver_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___h_t_m_l_unit_driver___test.html", null ]
     ] ],
-    [ "okw.SeButton.SeButton_Test", "classokw_1_1_se_button_1_1_se_button___test.html", [
-      [ "okw.SeButton.SeButton_Chrome_Test", "classokw_1_1_se_button_1_1_se_button___chrome___test.html", null ],
-      [ "okw.SeButton.SeButton_Firefox_Test", "classokw_1_1_se_button_1_1_se_button___firefox___test.html", null ],
-      [ "okw.SeButton.SeButton_HTMLUnitDriver_Test", "classokw_1_1_se_button_1_1_se_button___h_t_m_l_unit_driver___test.html", null ]
+    [ "okw.SeButton.SeButton_EN_Test", "classokw_1_1_se_button_1_1_se_button___e_n___test.html", [
+      [ "okw.SeButton.SeButton_EN_Chrome_Test", "classokw_1_1_se_button_1_1_se_button___e_n___chrome___test.html", null ],
+      [ "okw.SeButton.SeButton_EN_Firefox_Test", "classokw_1_1_se_button_1_1_se_button___e_n___firefox___test.html", null ],
+      [ "okw.SeButton.SeButton_EN_HTMLUnitDriver_Test", "classokw_1_1_se_button_1_1_se_button___e_n___h_t_m_l_unit_driver___test.html", null ]
     ] ],
-    [ "okw.gui.adapter.selenium.SeDriver", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_driver.html", null ],
+    [ "okw.gui.adapter.selenium.webdriver.SeDriver", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_driver.html", null ],
     [ "okw.SeInputButton.SeInputButton_EN_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___test.html", [
       [ "okw.SeInputButton.SeInputButton_EN_Chrome_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___chrome___test.html", null ],
       [ "okw.SeInputButton.SeInputButton_EN_Firefox_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___firefox___test.html", null ],
-      [ "okw.SeInputButton.SeInputButton_HTMLUnitDriver_Test", "classokw_1_1_se_input_button_1_1_se_input_button___h_t_m_l_unit_driver___test.html", null ]
+      [ "okw.SeInputButton.SeInputButton_EN_HTMLUnitDriver_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___h_t_m_l_unit_driver___test.html", null ]
     ] ],
-    [ "okw.SeInputCheckbox.SeInputCheckbox_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___test.html", [
-      [ "okw.SeInputCheckbox.SeInputCheckbox_Chrome_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___chrome___test.html", null ],
-      [ "okw.SeInputCheckbox.SeInputCheckbox_Firefox_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___firefox___test.html", null ],
-      [ "okw.SeInputCheckbox.SeInputCheckbox_HTMLUnitDriver_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___h_t_m_l_unit_driver___test.html", null ]
+    [ "okw.SeInputCheckbox.SeInputCheckbox_EN_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___test.html", [
+      [ "okw.SeInputCheckbox.SeInputCheckbox_EN_Chrome_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___chrome___test.html", null ],
+      [ "okw.SeInputCheckbox.SeInputCheckbox_EN_Firefox_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___firefox___test.html", null ],
+      [ "okw.SeInputCheckbox.SeInputCheckbox_EN_HTMLUnitDriver_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___h_t_m_l_unit_driver___test.html", null ]
     ] ],
-    [ "okw.SeInputField.SeInputField_Test", "classokw_1_1_se_input_field_1_1_se_input_field___test.html", [
-      [ "okw.SeInputField.SeInputField_Chrome_Test", "classokw_1_1_se_input_field_1_1_se_input_field___chrome___test.html", null ],
-      [ "okw.SeInputField.SeInputField_Firefox_Test", "classokw_1_1_se_input_field_1_1_se_input_field___firefox___test.html", null ],
-      [ "okw.SeInputField.SeInputField_HTMLUnitDriver_Test", "classokw_1_1_se_input_field_1_1_se_input_field___h_t_m_l_unit_driver___test.html", null ]
+    [ "okw.SeInputField.SeInputField_EN_Test", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html", [
+      [ "okw.SeInputField.SeInputField_EN_Chrome_Test", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___chrome___test.html", null ],
+      [ "okw.SeInputField.SeInputField_EN_Firefox_Test", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___firefox___test.html", null ],
+      [ "okw.SeInputField.SeInputField_EN_HTMLUnitDriver_Test", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___h_t_m_l_unit_driver___test.html", null ]
     ] ],
     [ "okw.SeInputRadio.SeInputRadio_EN_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html", [
       [ "okw.SeInputRadio.SeInputRadio_EN_Chrome_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___chrome___test.html", null ],
       [ "okw.SeInputRadio.SeInputRadio_EN_Firefox_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___firefox___test.html", null ],
-      [ "okw.SeInputRadio.SeInputRadio_HTMLUnitDriver_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___h_t_m_l_unit_driver___test.html", null ]
+      [ "okw.SeInputRadio.SeInputRadio_EN_HTMLUnitDriver_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___h_t_m_l_unit_driver___test.html", null ]
     ] ],
     [ "okw.seKeys", "classokw_1_1se_keys.html", null ],
     [ "okw.SeLink.SeLink_EN_Test", "classokw_1_1_se_link_1_1_se_link___e_n___test.html", [
+      [ "okw.SeLink.SeLink_EN_Chrome_Test", "classokw_1_1_se_link_1_1_se_link___e_n___chrome___test.html", null ],
       [ "okw.SeLink.SeLink_EN_Firefox_Test", "classokw_1_1_se_link_1_1_se_link___e_n___firefox___test.html", null ],
       [ "okw.SeLink.SeLink_EN_HTMLUnitDriver_Test", "classokw_1_1_se_link_1_1_se_link___e_n___h_t_m_l_unit_driver___test.html", null ]
     ] ],
-    [ "okw.SeRadioList.SeRadioList_Test", "classokw_1_1_se_radio_list_1_1_se_radio_list___test.html", [
-      [ "okw.SeRadioList.SeRadioList_Chrome_Test", "classokw_1_1_se_radio_list_1_1_se_radio_list___chrome___test.html", null ],
-      [ "okw.SeRadioList.SeRadioList_Firefox_Test", "classokw_1_1_se_radio_list_1_1_se_radio_list___firefox___test.html", null ],
-      [ "okw.SeRadioList.SeRadioList_HTMLUnitDriver_Test", "classokw_1_1_se_radio_list_1_1_se_radio_list___h_t_m_l_unit_driver___test.html", null ]
+    [ "okw.SeMAXIMIZE.SeMAXIMIZE_EN_Test", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test.html", [
+      [ "okw.SeMAXIMIZE.SeMAXIMIZE_EN_Chrome_Test", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___chrome___test.html", null ],
+      [ "okw.SeMAXIMIZE.SeMAXIMIZE_EN_Firefox_Test", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___firefox___test.html", null ],
+      [ "okw.SeMAXIMIZE.SeMAXIMIZE_EN_HTMLUnitDriver_Test", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___h_t_m_l_unit_driver___test.html", null ]
     ] ],
-    [ "okw.SeSelect.SeSelect_Test", "classokw_1_1_se_select_1_1_se_select___test.html", [
-      [ "okw.SeSelect.SeSelect_Chrome_Test", "classokw_1_1_se_select_1_1_se_select___chrome___test.html", null ],
-      [ "okw.SeSelect.SeSelect_Firefox_Test", "classokw_1_1_se_select_1_1_se_select___firefox___test.html", null ],
-      [ "okw.SeSelect.SeSelect_HTMLUnitDriver_Test", "classokw_1_1_se_select_1_1_se_select___h_t_m_l_unit_driver___test.html", null ]
+    [ "okw.SeRadioList.SeRadioList_EN_Test", "classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___test.html", [
+      [ "okw.SeRadioList.SeRadioList_EN_Chrome_Test", "classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___chrome___test.html", null ],
+      [ "okw.SeRadioList.SeRadioList_EN_Firefox_Test", "classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___firefox___test.html", null ],
+      [ "okw.SeRadioList.SeRadioList_EN_HTMLUnitDriver_Test", "classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___h_t_m_l_unit_driver___test.html", null ]
     ] ],
-    [ "okw.SeTextarea.SeTextarea_Test", "classokw_1_1_se_textarea_1_1_se_textarea___test.html", [
-      [ "okw.SeTextarea.SeTextarea_Chrome_Test", "classokw_1_1_se_textarea_1_1_se_textarea___chrome___test.html", null ],
-      [ "okw.SeTextarea.SeTextarea_Firefox_Test", "classokw_1_1_se_textarea_1_1_se_textarea___firefox___test.html", null ],
-      [ "okw.SeTextarea.SeTextarea_HTMLUnitDriver_Test", "classokw_1_1_se_textarea_1_1_se_textarea___h_t_m_l_unit_driver___test.html", null ]
+    [ "okw.SeSelect.SeSelect_EN_Test", "classokw_1_1_se_select_1_1_se_select___e_n___test.html", [
+      [ "okw.SeSelect.SeSelect_EN_Chrome_Test", "classokw_1_1_se_select_1_1_se_select___e_n___chrome___test.html", null ],
+      [ "okw.SeSelect.SeSelect_EN_Firefox_Test", "classokw_1_1_se_select_1_1_se_select___e_n___firefox___test.html", null ],
+      [ "okw.SeSelect.SeSelect_EN_HTMLUnitDriver_Test", "classokw_1_1_se_select_1_1_se_select___e_n___h_t_m_l_unit_driver___test.html", null ]
+    ] ],
+    [ "okw.SeTextarea.SeTextarea_EN_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___test.html", [
+      [ "okw.SeTextarea.SeTextarea_EN_Chrome_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___chrome___test.html", null ],
+      [ "okw.SeTextarea.SeTextarea_EN_Firefox_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___firefox___test.html", null ],
+      [ "okw.SeTextarea.SeTextarea_EN_HTMLUnitDriver_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___h_t_m_l_unit_driver___test.html", null ]
     ] ],
     [ "okw.cucumber.Steps", "classokw_1_1cucumber_1_1_steps.html", null ],
     [ "AbstractParseTreeVisitor", null, [
@@ -261,11 +281,6 @@ var hierarchy =
     ] ],
     [ "Lexer", null, [
       [ "okw.parser.antlr4.OKW_Lexer", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___lexer.html", null ]
-    ] ],
-    [ "ParseTreeListener", null, [
-      [ "okw.parser.antlr4.OKW_ParserListener", "interfaceokw_1_1parser_1_1antlr4_1_1_o_k_w___parser_listener.html", [
-        [ "okw.parser.antlr4.OKW_ParserBaseListener", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser_base_listener.html", null ]
-      ] ]
     ] ],
     [ "ParseTreeVisitor", null, [
       [ "okw.parser.antlr4.OKW_ParserVisitor< T >", "interfaceokw_1_1parser_1_1antlr4_1_1_o_k_w___parser_visitor.html", [

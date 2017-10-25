@@ -1,15 +1,15 @@
 <map id="okw.core.EN_OKWFrameObjectParentNotFoundException_Test.tcSelectWindow_OKWFrameObjectParentNotFoundException_Test" name="okw.core.EN_OKWFrameObjectParentNotFoundException_Test.tcSelectWindow_OKWFrameObjectParentNotFoundException_Test">
-<area shape="rect" id="node3" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="336,101,496,131"/>
-<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="323,155,509,184"/>
-<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="563,128,747,157"/>
-<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="569,75,740,104"/>
-<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..." alt="" coords="801,128,1031,157"/>
-<area shape="rect" id="node11" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls. " alt="" coords="827,5,1005,51"/>
-<area shape="rect" id="node13" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="808,75,1024,104"/>
-<area shape="rect" id="node18" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="557,220,752,249"/>
-<area shape="rect" id="node20" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes. " alt="" coords="827,181,1005,227"/>
-<area shape="rect" id="node22" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. " alt="" coords="809,251,1023,280"/>
-<area shape="rect" id="node28" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="819,303,1013,350"/>
-<area shape="rect" id="node24" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. " alt="" coords="1081,251,1303,280"/>
-<area shape="rect" id="node26" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag. " alt="" coords="1352,242,1555,289"/>
+<area shape="rect" id="node2" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="335,96,497,123"/>
+<area shape="rect" id="node8" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="323,147,509,173"/>
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="562,121,747,148"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="569,71,740,97"/>
+<area shape="rect" id="node4" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..." alt="" coords="801,121,1031,148"/>
+<area shape="rect" id="node6" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls. " alt="" coords="827,5,1005,46"/>
+<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="808,71,1024,97"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="557,209,752,236"/>
+<area shape="rect" id="node10" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes. " alt="" coords="827,173,1005,214"/>
+<area shape="rect" id="node11" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. " alt="" coords="809,239,1023,265"/>
+<area shape="rect" id="node14" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="819,290,1013,331"/>
+<area shape="rect" id="node12" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. " alt="" coords="1081,239,1303,265"/>
+<area shape="rect" id="node13" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag. " alt="" coords="1352,231,1555,273"/>
 </map>

@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 198, Datum: 07.18.2017 12:56:57</span>
+   &#160;<span id="projectnumber">Build_ID: 199, Datum: 10.25.2017 20:00:00</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -96,6 +96,7 @@ $(document).ready(function(){initNavTree('classokw_1_1parser_1_1antlr4_1_1_o_k_w
 <a href="#pro-static-attribs">Statische, geschützte Attribute</a> &#124;
 <a href="#pac-static-methods">Statische Paketfunktionen</a> &#124;
 <a href="#pac-static-attribs">Statische Paketattribute</a> &#124;
+<a href="#pri-static-attribs">Statische, private Attribute</a> &#124;
 <a href="classokw_1_1parser_1_1antlr4_1_1_o_k_w___lexer-members.html">Aufstellung aller Elemente</a>  </div>
   <div class="headertitle">
 <div class="title">okw.parser.antlr4.OKW_Lexer Klassenreferenz</div>  </div>
@@ -120,21 +121,27 @@ $(document).ready(function(){initNavTree('classokw_1_1parser_1_1antlr4_1_1_o_k_w
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a57a820c16b650b984241b4c4d1f3cc49"><td class="memItemLeft" align="right" valign="top"><a id="a57a820c16b650b984241b4c4d1f3cc49"></a>
+String []&#160;</td><td class="memItemRight" valign="bottom"><b>getTokenNames</b> ()</td></tr>
+<tr class="separator:a57a820c16b650b984241b4c4d1f3cc49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82a7ba5d2efa6f1b6a808df8adf593e1"><td class="memItemLeft" align="right" valign="top"><a id="a82a7ba5d2efa6f1b6a808df8adf593e1"></a>
+Vocabulary&#160;</td><td class="memItemRight" valign="bottom"><b>getVocabulary</b> ()</td></tr>
+<tr class="separator:a82a7ba5d2efa6f1b6a808df8adf593e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a659907267d25839ae5b5f4c8104caa2c"><td class="memItemLeft" align="right" valign="top"><a id="a659907267d25839ae5b5f4c8104caa2c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>OKW_Lexer</b> (CharStream input)</td></tr>
 <tr class="separator:a659907267d25839ae5b5f4c8104caa2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bd3b7d7f8509e2e3f394339161b34fc"><td class="memItemLeft" align="right" valign="top"><a id="a3bd3b7d7f8509e2e3f394339161b34fc"></a>
 String&#160;</td><td class="memItemRight" valign="bottom"><b>getGrammarFileName</b> ()</td></tr>
 <tr class="separator:a3bd3b7d7f8509e2e3f394339161b34fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57a820c16b650b984241b4c4d1f3cc49"><td class="memItemLeft" align="right" valign="top"><a id="a57a820c16b650b984241b4c4d1f3cc49"></a>
-String []&#160;</td><td class="memItemRight" valign="bottom"><b>getTokenNames</b> ()</td></tr>
-<tr class="separator:a57a820c16b650b984241b4c4d1f3cc49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acedea5d4131324be43b78553d29c59c0"><td class="memItemLeft" align="right" valign="top"><a id="acedea5d4131324be43b78553d29c59c0"></a>
 String []&#160;</td><td class="memItemRight" valign="bottom"><b>getRuleNames</b> ()</td></tr>
 <tr class="separator:acedea5d4131324be43b78553d29c59c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06a103056121c798388810524e20d0a7"><td class="memItemLeft" align="right" valign="top"><a id="a06a103056121c798388810524e20d0a7"></a>
 String&#160;</td><td class="memItemRight" valign="bottom"><b>getSerializedATN</b> ()</td></tr>
 <tr class="separator:a06a103056121c798388810524e20d0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0331a2b736b67843e09c4dec7813a50e"><td class="memItemLeft" align="right" valign="top"><a id="a0331a2b736b67843e09c4dec7813a50e"></a>
+String []&#160;</td><td class="memItemRight" valign="bottom"><b>getChannelNames</b> ()</td></tr>
+<tr class="separator:a0331a2b736b67843e09c4dec7813a50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b7f5b8be7a69e14697fe65ff70ef1cd"><td class="memItemLeft" align="right" valign="top"><a id="a8b7f5b8be7a69e14697fe65ff70ef1cd"></a>
 String []&#160;</td><td class="memItemRight" valign="bottom"><b>getModeNames</b> ()</td></tr>
 <tr class="separator:a8b7f5b8be7a69e14697fe65ff70ef1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,14 +155,19 @@ Statische öffentliche Attribute</h2></td></tr>
 static final int&#160;</td><td class="memItemRight" valign="bottom"><b>KLAMMERAUF</b> =1</td></tr>
 <tr class="separator:a81bf420914b81a88029287a79cd5c34c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc5b85ebc20d307eebfe0f4588083728"><td class="memItemLeft" align="right" valign="top"><a id="adc5b85ebc20d307eebfe0f4588083728"></a>
-static final int&#160;</td><td class="memItemRight" valign="bottom"><b>KLAMMER_MODE</b> = 1</td></tr>
+static final int&#160;</td><td class="memItemRight" valign="bottom"><b>KLAMMER_MODE</b> =1</td></tr>
 <tr class="separator:adc5b85ebc20d307eebfe0f4588083728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510a3b7e4905e93d6bbbe9d3f16fc3e6"><td class="memItemLeft" align="right" valign="top">static String []&#160;</td><td class="memItemRight" valign="bottom"><b>channelNames</b></td></tr>
+<tr class="separator:a510a3b7e4905e93d6bbbe9d3f16fc3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4db5e724692667570abfbe3dbf237249"><td class="memItemLeft" align="right" valign="top">static String []&#160;</td><td class="memItemRight" valign="bottom"><b>modeNames</b></td></tr>
 <tr class="separator:a4db5e724692667570abfbe3dbf237249"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10c74eacc9939e1c0bee346ddeff5777"><td class="memItemLeft" align="right" valign="top">static final String []&#160;</td><td class="memItemRight" valign="bottom"><b>tokenNames</b></td></tr>
-<tr class="separator:a10c74eacc9939e1c0bee346ddeff5777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d37e52b52389229eaf9d3e04e24955a"><td class="memItemLeft" align="right" valign="top">static final String []&#160;</td><td class="memItemRight" valign="bottom"><b>ruleNames</b></td></tr>
 <tr class="separator:a1d37e52b52389229eaf9d3e04e24955a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7055f7328f1b310259a06063ecca4f6e"><td class="memItemLeft" align="right" valign="top"><a id="a7055f7328f1b310259a06063ecca4f6e"></a>
+static final Vocabulary&#160;</td><td class="memItemRight" valign="bottom"><b>VOCABULARY</b> = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES)</td></tr>
+<tr class="separator:a7055f7328f1b310259a06063ecca4f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c74eacc9939e1c0bee346ddeff5777"><td class="memItemLeft" align="right" valign="top">static final String []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1parser_1_1antlr4_1_1_o_k_w___lexer.html#a10c74eacc9939e1c0bee346ddeff5777">tokenNames</a></td></tr>
+<tr class="separator:a10c74eacc9939e1c0bee346ddeff5777"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac494af627e15f2a732d9e9facb564cea"><td class="memItemLeft" align="right" valign="top"><a id="ac494af627e15f2a732d9e9facb564cea"></a>
 static final String&#160;</td><td class="memItemRight" valign="bottom"><b>_serializedATN</b></td></tr>
 <tr class="separator:ac494af627e15f2a732d9e9facb564cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,6 +184,9 @@ static final DFA []&#160;</td><td class="memItemRight" valign="bottom"><b>_decis
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-static-methods"></a>
 Statische Paketfunktionen</h2></td></tr>
+<tr class="memitem:afcfde0bdc88d7ae925df79c419c5f10a"><td class="memItemLeft" align="right" valign="top"><a id="afcfde0bdc88d7ae925df79c419c5f10a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>[static initializer]</b></td></tr>
+<tr class="separator:afcfde0bdc88d7ae925df79c419c5f10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcfde0bdc88d7ae925df79c419c5f10a"><td class="memItemLeft" align="right" valign="top"><a id="afcfde0bdc88d7ae925df79c419c5f10a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>[static initializer]</b></td></tr>
 <tr class="separator:afcfde0bdc88d7ae925df79c419c5f10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,6 +241,13 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>ENVVAL</b
 <tr class="memitem:a0b9960aa0f7e2d13b1d20b2d7c67a763"><td class="memItemLeft" align="right" valign="top"><a id="a0b9960aa0f7e2d13b1d20b2d7c67a763"></a>
 static final int&#160;</td><td class="memItemRight" valign="bottom"><b>VALUE</b> =16</td></tr>
 <tr class="separator:a0b9960aa0f7e2d13b1d20b2d7c67a763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Statische, private Attribute</h2></td></tr>
+<tr class="memitem:afa4ac550dcca7396bba0f6bcac2aa339"><td class="memItemLeft" align="right" valign="top">static final String []&#160;</td><td class="memItemRight" valign="bottom"><b>_LITERAL_NAMES</b></td></tr>
+<tr class="separator:afa4ac550dcca7396bba0f6bcac2aa339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9226519d0e11a947abdd3e92ed85422c"><td class="memItemLeft" align="right" valign="top">static final String []&#160;</td><td class="memItemRight" valign="bottom"><b>_SYMBOLIC_NAMES</b></td></tr>
+<tr class="separator:a9226519d0e11a947abdd3e92ed85422c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
 <div class="textblock">
@@ -251,7 +273,31 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>VALUE</b>
 </table>
 </div><div class="memdoc">
 <b>Initialisierung:</b><div class="fragment"><div class="line">=</div><div class="line">        <span class="keyword">new</span> ATNDeserializer().deserialize(_serializedATN.toCharArray())</div></div><!-- fragment -->
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___lexer_8java_source.html#l00140">140</a> der Datei <a class="el" href="_o_k_w___lexer_8java_source.html">OKW_Lexer.java</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___lexer_8java_source.html#l00185">185</a> der Datei <a class="el" href="_o_k_w___lexer_8java_source.html">OKW_Lexer.java</a>.</p>
+
+</div>
+</div>
+<a id="afa4ac550dcca7396bba0f6bcac2aa339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa4ac550dcca7396bba0f6bcac2aa339">&#9670;&nbsp;</a></span>_LITERAL_NAMES</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String [] okw.parser.antlr4.OKW_Lexer._LITERAL_NAMES</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initialisierung:</b><div class="fragment"><div class="line">= {</div><div class="line">        null, <span class="stringliteral">&quot;&#39;${&#39;&quot;</span>, null, null, <span class="stringliteral">&quot;&#39;}&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;Folder_LogMessages&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;Folder_XML&#39;&quot;</span>, </div><div class="line">        <span class="stringliteral">&quot;&#39;File_OKW_Const_xml&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;File_OKW_Docu_xml&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;File_OKW_ImplementationMatrix_xml&#39;&quot;</span>, </div><div class="line">        <span class="stringliteral">&quot;&#39;File_OKW_Ini_xml&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;File_OKW_Keymaps_xml&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;File_OKW_Memorize_xml&#39;&quot;</span>, </div><div class="line">        <span class="stringliteral">&quot;&#39;Taste.&#39;&quot;</span></div><div class="line">    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___lexer_8java_source.html#l00043">43</a> der Datei <a class="el" href="_o_k_w___lexer_8java_source.html">OKW_Lexer.java</a>.</p>
 
 </div>
 </div>
@@ -279,6 +325,54 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>VALUE</b>
 
 </div>
 </div>
+<a id="a9226519d0e11a947abdd3e92ed85422c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9226519d0e11a947abdd3e92ed85422c">&#9670;&nbsp;</a></span>_SYMBOLIC_NAMES</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String [] okw.parser.antlr4.OKW_Lexer._SYMBOLIC_NAMES</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initialisierung:</b><div class="fragment"><div class="line">= {</div><div class="line">        null, <span class="stringliteral">&quot;KLAMMERAUF&quot;</span>, <span class="stringliteral">&quot;TEXT&quot;</span>, <span class="stringliteral">&quot;WS&quot;</span>, <span class="stringliteral">&quot;KLAMMERZU&quot;</span>, <span class="stringliteral">&quot;FOLDER_LOGMESSAGES&quot;</span>, <span class="stringliteral">&quot;FOLDER_XML&quot;</span>, </div><div class="line">        <span class="stringliteral">&quot;FILE_OKW_CONST_XML&quot;</span>, <span class="stringliteral">&quot;FILE_OKW_DOCU_XML&quot;</span>, <span class="stringliteral">&quot;FILE_OKW_IMPLEMENTATIONMATRIX_XML&quot;</span>, </div><div class="line">        <span class="stringliteral">&quot;FILE_OKW_INI_XML&quot;</span>, <span class="stringliteral">&quot;FILE_OKW_KEYMAPS_XML&quot;</span>, <span class="stringliteral">&quot;FILE_OKW_MEMORIZE_XML&quot;</span>, <span class="stringliteral">&quot;KEYPREFIX&quot;</span>, </div><div class="line">        <span class="stringliteral">&quot;KEYVALUE&quot;</span>, <span class="stringliteral">&quot;ENVVAL&quot;</span>, <span class="stringliteral">&quot;VALUE&quot;</span></div><div class="line">    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___lexer_8java_source.html#l00049">49</a> der Datei <a class="el" href="_o_k_w___lexer_8java_source.html">OKW_Lexer.java</a>.</p>
+
+</div>
+</div>
+<a id="a510a3b7e4905e93d6bbbe9d3f16fc3e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a510a3b7e4905e93d6bbbe9d3f16fc3e6">&#9670;&nbsp;</a></span>channelNames</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String [] okw.parser.antlr4.OKW_Lexer.channelNames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initialisierung:</b><div class="fragment"><div class="line">= {</div><div class="line">        <span class="stringliteral">&quot;DEFAULT_TOKEN_CHANNEL&quot;</span>, <span class="stringliteral">&quot;HIDDEN&quot;</span></div><div class="line">    }</div></div><!-- fragment -->
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___lexer_8java_source.html#l00028">28</a> der Datei <a class="el" href="_o_k_w___lexer_8java_source.html">OKW_Lexer.java</a>.</p>
+
+</div>
+</div>
 <a id="a4db5e724692667570abfbe3dbf237249"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4db5e724692667570abfbe3dbf237249">&#9670;&nbsp;</a></span>modeNames</h2>
 
@@ -299,7 +393,7 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>VALUE</b>
 </table>
 </div><div class="memdoc">
 <b>Initialisierung:</b><div class="fragment"><div class="line">= {</div><div class="line">        <span class="stringliteral">&quot;DEFAULT_MODE&quot;</span>, <span class="stringliteral">&quot;KLAMMER_MODE&quot;</span></div><div class="line">    }</div></div><!-- fragment -->
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___lexer_8java_source.html#l00027">27</a> der Datei <a class="el" href="_o_k_w___lexer_8java_source.html">OKW_Lexer.java</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___lexer_8java_source.html#l00032">32</a> der Datei <a class="el" href="_o_k_w___lexer_8java_source.html">OKW_Lexer.java</a>.</p>
 
 </div>
 </div>
@@ -346,8 +440,9 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>VALUE</b>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initialisierung:</b><div class="fragment"><div class="line">= {</div><div class="line">        <span class="stringliteral">&quot;&#39;\\u0000&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\\u0001&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\\u0002&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\\u0003&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\\u0004&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\\u0005&#39;&quot;</span>, </div><div class="line">        <span class="stringliteral">&quot;&#39;\\u0006&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\\u0007&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\b&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\t&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\n&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\\u000B&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\f&#39;&quot;</span>, </div><div class="line">        <span class="stringliteral">&quot;&#39;\r&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\\u000E&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\\u000F&#39;&quot;</span>, <span class="stringliteral">&quot;&#39;\\u0010&#39;&quot;</span></div><div class="line">    }</div></div><!-- fragment -->
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___lexer_8java_source.html#l00031">31</a> der Datei <a class="el" href="_o_k_w___lexer_8java_source.html">OKW_Lexer.java</a>.</p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Veraltet:</a></b></dt><dd>Use <a class="el" href="">VOCABULARY</a> instead.</dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___lexer_8java_source.html#l00061">61</a> der Datei <a class="el" href="_o_k_w___lexer_8java_source.html">OKW_Lexer.java</a>.</p>
 
 </div>
 </div>
@@ -361,7 +456,7 @@ static final int&#160;</td><td class="memItemRight" valign="bottom"><b>VALUE</b>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>parser</b></li><li class="navelem"><b>antlr4</b></li><li class="navelem"><a class="el" href="classokw_1_1parser_1_1antlr4_1_1_o_k_w___lexer.html">OKW_Lexer</a></li>
-    <li class="footer">Erzeugt am Die Jul 18 2017 12:57:51 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Okt 25 2017 20:00:55 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

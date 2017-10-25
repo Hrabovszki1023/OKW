@@ -7,6 +7,7 @@ var classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser =
     [ "getRuleNames", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html#a399e8f21b50323bc5e8f5404912c7d34", null ],
     [ "getSerializedATN", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html#aae36131bda6005410b83432c3cbb30f8", null ],
     [ "getTokenNames", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html#a8c16d11ea0637fcdc3d3d31e64f48e73", null ],
+    [ "getVocabulary", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html#af154ff2378f3644600bc0c37899b7bba", null ],
     [ "keyvalue", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html#a081bb14035d2a522d7134c9f03af30c2", null ],
     [ "okw_env_var", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html#a5f034d6e93f20f00e8221c027829a729", null ],
     [ "okw_internal_var", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html#a84392899fef90df84c387a0e03e54fa1", null ],
