@@ -61,12 +61,13 @@ public class FrmButton extends SeBrowserChild
   @OKW( FN = "Display", WaitForMe_PT= 500, WaitForMe_TO=1 )
   public SeInputText   Anzeige        = new SeInputText( "//*[@id='textfield']" );
 
-  // \~german
-  // \brief
-  // Nicht vorhandes Button für eine nicht Existenz zu prüfen.
-  //\~english
-  // \brief 
-  // Not existing text box to verify the non-existence.
+  /*
+   * \~german
+   * Nicht vorhandes Button für eine nicht Existenz zu prüfen.
+   *
+   * \~english
+   * Not existing text box to verify the non-existence.
+   */
   @OKW( FN = "Does Not Exists",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
           VerifyIsActive_PT=500, VerifyIsActive_TO=1,

@@ -78,7 +78,6 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-
   @Test
   public void tcLogExists() throws Exception {
 
