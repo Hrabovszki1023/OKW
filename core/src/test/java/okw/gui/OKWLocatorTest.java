@@ -83,21 +83,22 @@ public class OKWLocatorTest
 	}
 
 	
-    /// \~german
-    /// \brief Mehrfach Verschachtelung: 2 Locatoren an zweistellen in einen dritten Locator einfügen. (einfach Verschachtelt)
-    ///
-    /// \~english
-    /// \brief \todo TODO: Brief Description.
-    /// 
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2015.07.12
+    /* \~german
+     * \brief Mehrfach Verschachtelung: 2 Locatoren an zweistellen in einen dritten Locator einfügen. (einfach Verschachtelt)
+     * 
+     *  \~english
+     *  \brief \todo TODO: Brief Description.
+     *  
+     *  \~
+     *  \author Zoltán Hrabovszki
+     *  \date 2015.07.12
+     */
 	@Test
     public void TC_Kombiniert_2in1_Multiple()
     {
 		  OKWLocator Locator_1 = new OKWLocator("L1");
 		  OKWLocator Locator_2 = new OKWLocator("L2");
-		  OKWLocator Locator = new OKWLocator("L2=%2$s, L1=%1$s, L2=%2$s, L1=%1$s", Locator_1, Locator_2);
+		  OKWLocator Locator = new OKWLocator("L2=$L2$, L1=$L1$, L2=$L2$, L1=$L1$", Locator_1, Locator_2);
         
 		  assertEquals("L2=L2, L1=L1, L2=L2, L1=L1", Locator.getLocator());
     }
@@ -107,7 +108,7 @@ public class OKWLocatorTest
     {
 		OKWLocator Locator_1 = new OKWLocator(">Locator1<");
 		OKWLocator Locator_2 = new OKWLocator(">Locator2<");
-		OKWLocator Locator_Summe = new OKWLocator("Locator2=%2$s//Locator1=%1$s", Locator_1, Locator_2);
+		OKWLocator Locator_Summe = new OKWLocator("Locator2=$L2$//Locator1=$L1$", Locator_1, Locator_2);
         
 		assertEquals("Locator2=>Locator2<//Locator1=>Locator1<", Locator_Summe.getLocator());
     }
@@ -117,7 +118,7 @@ public class OKWLocatorTest
     {
 		OKWLocator Locator_1 = new OKWLocator(">Locator1<");
 		OKWLocator Locator_2 = new OKWLocator(">Locator2<");
-		OKWLocator Locator_Summe = new OKWLocator("Locator1=%1$s//Locator2=%2$s", Locator_1, Locator_2);
+		OKWLocator Locator_Summe = new OKWLocator("Locator1=$L1$//Locator2=$L2$", Locator_1, Locator_2);
         
 		assertEquals("Locator1=>Locator1<//Locator2=>Locator2<", Locator_Summe.getLocator());
     }
@@ -133,7 +134,7 @@ public class OKWLocatorTest
     public void TC_Window_Child()
     {
 		OKWLocator Window = new OKWLocator("Window");
-		OKWLocator Child  = new OKWLocator("%1$s.Child", Window);
+		OKWLocator Child  = new OKWLocator("$L1$.Child", Window);
         
 		assertEquals("Window.Child", Child.getLocator());
 		assertEquals("Window", Window.getLocator());

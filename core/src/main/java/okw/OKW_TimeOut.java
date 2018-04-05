@@ -47,4 +47,9 @@ public class OKW_TimeOut
   {
     return TO * 1000 / PT;
   }
+  
+  public String toString()
+  {
+      return "PT: " + PT.toString() + "ms, TO: " + TO.toString() + "s";
+  }
 }

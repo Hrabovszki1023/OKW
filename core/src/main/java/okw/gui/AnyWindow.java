@@ -59,18 +59,6 @@ public class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_FN
 	}
 
 
-public void setLocator(String fpsLocator, OKWLocator... fpLocators )
-{
-    if ( fpLocators.length != 0 )
-    {
-        this._locator = new OKWLocator(fpsLocator, fpLocators);
-    }
-    else
-    {
-        this._locator = new OKWLocator(fpsLocator);
-    }
-}
-
 /** \~german
    *  Prüft die Existenz des aktuellen Objektes.
    *  

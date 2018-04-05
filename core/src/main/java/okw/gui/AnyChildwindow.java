@@ -55,7 +55,7 @@ import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.log.*;
 
 /** \brief
- * Description of AnyWin.
+ * @todo TODO: Description of AnyWin.
  */ 
 public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwindow, IOKW_FN
 {
@@ -65,7 +65,7 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
    *  Prüft die Existenz des aktuellen Objektes.
    *  
    *  - Methode kann hier nicht implementiert werden.
-   *  - Mathode ist nur als Platzhalter implementiert.
+   *  - Methoden ist nur als Platzhalter implementiert.
    *  - Hier wird die Ausnahme OKWFrameObjectMethodNotImplemented ausgelöst.
    *  
    *  Hinweis zur Implementierung:
@@ -97,7 +97,6 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method getIsActive() is not defined for you GUI-Object. Please define first the methode!");
   }
-
   
   public ArrayList<String> getCaption()
   {
@@ -339,12 +338,15 @@ public ArrayList<String> MemorizeCaption( )
       throw new OKWFrameObjectMethodNotImplemented("The method 'public Boolean VerifyHasFocus( )' is not defined for you GUI-Object. Please define first the methode!");
     }
 
-    
+    /**
+     *  @todo TODO: Wird dieser Konstruktor überhaupt benötigt?
+     */
     public AnyChildwindow()
     {
         this._locator = new OKWLocator("");
     }
 
+    
     public AnyChildwindow(String fpsLocator, OKWLocator... fpLocators )
     {
         if ( fpLocators.length != 0 )

@@ -66,6 +66,7 @@ public abstract class AnyWinBase
    */    
   private String myFN = "";
 
+  
   /** \~german
    *  Parent-Objekt FN des aktuellen GUI-Objektes.
    *  
@@ -79,6 +80,7 @@ public abstract class AnyWinBase
    */    
   private String myKN = "";
 
+  
   /** \~german
    *  Parent-Objekt FN des aktuellen GUI-Objektes.
    *  
@@ -91,11 +93,12 @@ public abstract class AnyWinBase
    *  @date 2016.11.20
    */    
   private String myParentFN = "";
-	
-	/** \~german
+
+  
+   /** \~german
    *  Holt den vollständig (rekursiv) aufgelösten  (z.B. XPath-Wert) des Locators.
    *  
-   *  Beim Aufruf dieser Methode wird der Locator vollständig neu berechnet und der aktuelle Wert Zurückgeliefert.
+   *  Beim Aufruf dieser Methode wird der Locator vollständig neu berechnet und der aktuelle Wert zurückgeliefert.
    *  (Dynamischer Locator)
    *  
    *  @return Aktueller Wert des Locators
@@ -113,6 +116,7 @@ public abstract class AnyWinBase
           return this._locator.getLocator();
   }
 
+  
   /** \~german
    *  Holt die Refrenz auf den (OKWLocator) den Locator selbst.
    *   
@@ -130,6 +134,30 @@ public abstract class AnyWinBase
   }
 
   
+  /** \~german
+   *  Setzt den Locator für den aktuellen GUI-Adapter.
+   *   
+   *  \~english
+   *  \brief
+   *  @todo TODO:  Übersetzung ins Englische fehlt...
+   *  
+   *  \~
+   *  @author Zoltán Hrabovszki
+   *  @date 2014.04.27
+   */  
+  public void setLocator(String fpsLocator, OKWLocator... fpLocators )
+  {
+      if ( fpLocators.length != 0 )
+      {
+          this._locator = new OKWLocator(fpsLocator, fpLocators);
+      }
+      else
+      {
+          this._locator = new OKWLocator(fpsLocator);
+      }
+  }
+
+ 
   /** \~german
    *  Prüft die Existenz des aktuellen Objektes.
    *  

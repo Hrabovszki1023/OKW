@@ -1857,7 +1857,7 @@ public class OK implements IOKW_State
      * 
      * \see https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
      * @param timeout Entält Timeout Daten.
-     * @param fpALExpectedREGXs Erwaretetr Wert
+     * @param fpbExpected Erwaretetr Wert
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
@@ -1868,7 +1868,9 @@ public class OK implements IOKW_State
         Boolean lvbReturn = false;
         Boolean bOK = false;
 
-        Log.LogFunctionStartDebug( "Verify", "String", "OKW_TimeOut", timeout.toString(), "fpbExpected", fpbExpected.toString() );
+        //Log.LogFunctionStartDebug( "Verify", "String", "OKW_TimeOut", timeout.toString(), "fpbExpected", fpbExpected.toString() );
+        
+        Log.LogFunctionStartDebug( "verify", "timeout", timeout.toString(), "fpbExpected", fpbExpected.toString() );
 
         try
         {
@@ -1914,7 +1916,7 @@ public class OK implements IOKW_State
      * \see https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
      * 
      * @param timeout Entält Timeout Daten.
-     * @param fpALExpectedREGXs Erwaretetr Wert
+     * @param fpALExpected Erwaretetr Wert
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
@@ -1924,7 +1926,7 @@ public class OK implements IOKW_State
 
         ArrayList<String> lvLsReturn = null;
 
-        Log.LogFunctionStartDebug( "Verify", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpected.toString() );
+        Log.LogFunctionStartDebug( "Verify", "timeout", timeout.toString(), "COL", COL, "ROW", ROW, "ArrayList<String> fpALExpected", fpALExpected.toString() );
 
         try
         {
@@ -1967,18 +1969,18 @@ public class OK implements IOKW_State
      * \see https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
      * 
      * @param timeout Entält Timeout Daten.
-     * @param fpALExpectedREGXs Erwaretetr Wert
+     * @param fpALExpectedWCM Erwaretetr Wert
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
-    private ArrayList<String> verifyWCM( OKW_TimeOut timeout, String COL, String ROW, ArrayList<String> fpALExpected, BiFunction<String, String, ArrayList<String>> Method2Call )
+    private ArrayList<String> verifyWCM( OKW_TimeOut timeout, String COL, String ROW, ArrayList<String> fpALExpectedWCM, BiFunction<String, String, ArrayList<String>> Method2Call )
     {
         Integer Count = 0;
 
         ArrayList<String> lvLsReturn = null;
 
-        Log.LogFunctionStartDebug( "Verify", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpected.toString() );
-
+        Log.LogFunctionStartDebug( "verifyWCM", "timeout", timeout.toString(), "COL", COL, "ROW", ROW, "ArrayList<String> fpALExpectedWCM", fpALExpectedWCM.toString() );
+        
         try
         {
             Count = 0;
@@ -1987,7 +1989,7 @@ public class OK implements IOKW_State
             {
                 lvLsReturn = Method2Call.apply( COL, ROW );
 
-                if ( Matcher.WildcardMatch( lvLsReturn, fpALExpected ) )
+                if ( Matcher.WildcardMatch( lvLsReturn, fpALExpectedWCM ) )
                 {
                     break;
                 }
@@ -2024,13 +2026,13 @@ public class OK implements IOKW_State
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
-    private ArrayList<String> verifyREGX( OKW_TimeOut timeout, String COL, String ROW, ArrayList<String> fpALExpected, BiFunction<String, String, ArrayList<String>> Method2Call )
+    private ArrayList<String> verifyREGX( OKW_TimeOut timeout, String COL, String ROW, ArrayList<String> fpALExpectedREGXs, BiFunction<String, String, ArrayList<String>> Method2Call )
     {
         Integer Count = 0;
 
         ArrayList<String> lvLsReturn = null;
 
-        Log.LogFunctionStartDebug( "Verify", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpected.toString() );
+        Log.LogFunctionStartDebug( "verifyREGX", "timeout", timeout.toString(), "COL", COL, "ROW", ROW, "ArrayList<String> fpALExpected", fpALExpectedREGXs.toString() );
 
         try
         {
@@ -2040,7 +2042,7 @@ public class OK implements IOKW_State
             {
                 lvLsReturn = Method2Call.apply( COL, ROW );
 
-                if ( Matcher.RegexMatch(  lvLsReturn, fpALExpected ) )
+                if ( Matcher.RegexMatch(  lvLsReturn, fpALExpectedREGXs ) )
                 {
                     break;
                 }
@@ -2072,7 +2074,7 @@ public class OK implements IOKW_State
      * \see https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
      * 
      * @param timeout Entält Timeout Daten.
-     * @param fpALExpectedREGXs Erwaretetr Wert
+     * @param fpALExpected Erwaretetr Wert
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
@@ -2083,7 +2085,7 @@ public class OK implements IOKW_State
         ArrayList<String> lvLsReturn = null;
         Boolean bOK = false;
 
-        Log.LogFunctionStartDebug( "Verify", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpected.toString() );
+        Log.LogFunctionStartDebug( "verify", "timeout", timeout.toString(), "ArrayList<String> fpALExpected", fpALExpected.toString() );
 
         try
         {
@@ -2134,18 +2136,18 @@ public class OK implements IOKW_State
      * \see https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
      * 
      * @param timeout Entält Timeout Daten.
-     * @param fpALExpectedREGXs Erwaretetr Wert
+     * @param fpALExpectedWCMs Erwaretetr Wert
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
-    private ArrayList<String> verifyWCM( OKW_TimeOut timeout, ArrayList<String> fpALExpectedREGXs, Supplier<ArrayList<String>> Method2Call )
+    private ArrayList<String> verifyWCM( OKW_TimeOut timeout, ArrayList<String> fpALExpectedWCMs, Supplier<ArrayList<String>> Method2Call )
     {
         Integer Count = 0;
 
         ArrayList<String> lvLsReturn = null;
         Boolean bOK = false;
 
-        Log.LogFunctionStartDebug( "VerifyWCM", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
+        Log.LogFunctionStartDebug( "verifyWCN", "timeout", timeout.toString(), "ArrayList<String> fpALExpectedWCMs", fpALExpectedWCMs.toString() );
 
         try
         {
@@ -2155,7 +2157,7 @@ public class OK implements IOKW_State
             {
                 lvLsReturn = Method2Call.get();
 
-                if ( Matcher.WildcardMatch( lvLsReturn, fpALExpectedREGXs ) )
+                if ( Matcher.WildcardMatch( lvLsReturn, fpALExpectedWCMs ) )
                 {
                     break;
                 }
@@ -2207,7 +2209,7 @@ public class OK implements IOKW_State
         ArrayList<String> lvLsReturn = null;
         Boolean bOK = false;
 
-        Log.LogFunctionStartDebug( "VerifyREGX", "String", "FN", "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
+        Log.LogFunctionStartDebug( "verifyWCN", "timeout", timeout.toString(), "ArrayList<String> fpALExpectedREGXs", fpALExpectedREGXs.toString() );
 
         try
         {

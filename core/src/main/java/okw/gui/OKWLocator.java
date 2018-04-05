@@ -42,6 +42,8 @@ package okw.gui;
 import java.util.ArrayList;
 
 import okw.log.*;
+import org.stringtemplate.v4.*;
+
 
 /** <summary>
  * Description of OKWLocator.
@@ -81,7 +83,7 @@ public class OKWLocator //: IOKWLocator
      *  \~
      *  @author Zoltán Hrabovszki
      *  @date 2014.04.27
-     */
+     *
     public String getLocator()
     {
         myLogger.LogFunctionStartDebug( "getLocator()" );
@@ -105,7 +107,55 @@ public class OKWLocator //: IOKWLocator
 
         myLogger.LogFunctionEndDebug( lvsReturn );
         return lvsReturn;
-    }
+    }*/
+
+    /** \~german
+     *  Holt den vollständig (rekursiv) aufgelösten  (z.B. XPath-Wert) des Locators.
+     *  
+     *  Beim Aufruf dieser Methode wird der Locator jeweils vollständig neu berechnet 
+     *  und der aktuelle Wert zurückgeliefert.
+     *  (Dynamischer Locator)
+     *  
+     *  @return Aktueller Wert des Locators
+     *  
+     *  \~english
+     *  \brief
+     *  @todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2014.04.27
+     */
+    public String getLocator()
+    {
+        myLogger.LogFunctionStartDebug( "getLocator()" );
+        String lvsReturn = "";
+
+        //ArrayList<String> myLocatoren = new ArrayList<String>();
+
+        if ( _Locatoren != null )
+        {
+            ST st = new ST(_locator, '$', '$');
+
+            Integer i = 1;
+            
+            for ( OKWLocator Locator : _Locatoren )
+            {
+                st.add("L" + i.toString() , Locator.getLocator());
+                i++;
+            }
+
+            lvsReturn = st.render();
+        }
+        else
+        {
+            lvsReturn = _locator;
+        }
+
+        myLogger.LogFunctionEndDebug( lvsReturn );
+        return lvsReturn;
+    }    
+    
 
     /** \~german
      *  Setzt den Wert (z.B. XPath-Wert) des Locators.
