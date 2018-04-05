@@ -126,70 +126,70 @@ var sectionId = 'dynsection-1';
 <!-- Node10 -->
 <g id="node4" class="node"><title>Node10</title>
 <g id="a_node4"><a xlink:href="classokw_1_1gui_1_1_any_window.html" target="_top" xlink:title="Description of AnyWin. ">
-<polygon fill="white" stroke="black" points="845,-858.5 845,-1047.5 973,-1047.5 973,-858.5 845,-858.5"/>
-<text text-anchor="middle" x="909" y="-1035.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWindow</text>
-<polyline fill="none" stroke="black" points="845,-1028.5 973,-1028.5 "/>
-<text text-anchor="middle" x="909" y="-1016.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="845,-1009.5 973,-1009.5 "/>
-<text text-anchor="start" x="853" y="-997.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWindow()</text>
-<text text-anchor="start" x="853" y="-986.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setLocator()</text>
-<text text-anchor="start" x="853" y="-975.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="853" y="-964.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="853" y="-953.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="853" y="-942.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKeyWindow()</text>
-<text text-anchor="start" x="853" y="-931.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SelectWindow()</text>
-<text text-anchor="start" x="853" y="-920.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ StartApp()</text>
-<text text-anchor="start" x="853" y="-909.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ StopApp()</text>
-<text text-anchor="start" x="853" y="-898.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowExists()</text>
-<text text-anchor="start" x="853" y="-887.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyIsWindowActive()</text>
-<text text-anchor="start" x="853" y="-876.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowCaption()</text>
-<text text-anchor="start" x="853" y="-865.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ WaitForMe()</text>
+<polygon fill="white" stroke="black" points="845,-864 845,-1042 973,-1042 973,-864 845,-864"/>
+<text text-anchor="middle" x="909" y="-1030" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWindow</text>
+<polyline fill="none" stroke="black" points="845,-1023 973,-1023 "/>
+<text text-anchor="middle" x="909" y="-1011" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="845,-1004 973,-1004 "/>
+<text text-anchor="start" x="853" y="-992" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWindow()</text>
+<text text-anchor="start" x="853" y="-981" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="853" y="-970" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="853" y="-959" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="853" y="-948" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKeyWindow()</text>
+<text text-anchor="start" x="853" y="-937" font-family="Helvetica,sans-Serif" font-size="10.00">+ SelectWindow()</text>
+<text text-anchor="start" x="853" y="-926" font-family="Helvetica,sans-Serif" font-size="10.00">+ StartApp()</text>
+<text text-anchor="start" x="853" y="-915" font-family="Helvetica,sans-Serif" font-size="10.00">+ StopApp()</text>
+<text text-anchor="start" x="853" y="-904" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowExists()</text>
+<text text-anchor="start" x="853" y="-893" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyIsWindowActive()</text>
+<text text-anchor="start" x="853" y="-882" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowCaption()</text>
+<text text-anchor="start" x="853" y="-871" font-family="Helvetica,sans-Serif" font-size="10.00">+ WaitForMe()</text>
 </a>
 </g>
 </g>
 <!-- Node10&#45;&gt;Node9 -->
 <g id="edge3" class="edge"><title>Node10&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M924.392,-848.342C928.306,-821.983 932.581,-793.189 936.731,-765.243"/>
-<polygon fill="none" stroke="midnightblue" points="920.917,-847.912 922.91,-858.318 927.841,-848.94 920.917,-847.912"/>
+<path fill="none" stroke="midnightblue" d="M923.569,-853.885C927.704,-826.034 932.294,-795.124 936.739,-765.188"/>
+<polygon fill="none" stroke="midnightblue" points="920.074,-853.594 922.067,-864 926.998,-854.622 920.074,-853.594"/>
 </g>
 <!-- Node11 -->
 <g id="node5" class="node"><title>Node11</title>
 <g id="a_node5"><a xlink:href="classokw_1_1gui_1_1_any_win_base.html" target="_top" xlink:title="Description of AnyWin. ">
-<polygon fill="white" stroke="black" points="826,-1151.5 826,-1406.5 960,-1406.5 960,-1151.5 826,-1151.5"/>
-<text text-anchor="middle" x="893" y="-1394.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase</text>
-<polyline fill="none" stroke="black" points="826,-1387.5 960,-1387.5 "/>
-<text text-anchor="start" x="834" y="-1375.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myFN</text>
-<text text-anchor="start" x="834" y="-1364.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myKN</text>
-<text text-anchor="start" x="834" y="-1353.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myParentFN</text>
-<polyline fill="none" stroke="black" points="826,-1346.5 960,-1346.5 "/>
-<text text-anchor="start" x="834" y="-1334.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
-<text text-anchor="start" x="834" y="-1323.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLOCATOR()</text>
-<text text-anchor="start" x="834" y="-1312.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="834" y="-1301.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
-<text text-anchor="start" x="834" y="-1290.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
-<text text-anchor="start" x="834" y="-1279.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFN()</text>
-<text text-anchor="start" x="834" y="-1268.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getKN()</text>
-<text text-anchor="start" x="834" y="-1257.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentFN()</text>
-<text text-anchor="start" x="834" y="-1246.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFN()</text>
-<text text-anchor="start" x="834" y="-1235.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setKN()</text>
-<text text-anchor="start" x="834" y="-1224.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setParentFN()</text>
-<text text-anchor="start" x="834" y="-1213.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
-<text text-anchor="start" x="834" y="-1202.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
-<text text-anchor="start" x="834" y="-1191.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
-<text text-anchor="start" x="834" y="-1180.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
-<text text-anchor="start" x="834" y="-1169.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
-<text text-anchor="start" x="834" y="-1158.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<polygon fill="white" stroke="black" points="826,-1146 826,-1412 960,-1412 960,-1146 826,-1146"/>
+<text text-anchor="middle" x="893" y="-1400" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase</text>
+<polyline fill="none" stroke="black" points="826,-1393 960,-1393 "/>
+<text text-anchor="start" x="834" y="-1381" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myFN</text>
+<text text-anchor="start" x="834" y="-1370" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myKN</text>
+<text text-anchor="start" x="834" y="-1359" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myParentFN</text>
+<polyline fill="none" stroke="black" points="826,-1352 960,-1352 "/>
+<text text-anchor="start" x="834" y="-1340" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
+<text text-anchor="start" x="834" y="-1329" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLOCATOR()</text>
+<text text-anchor="start" x="834" y="-1318" font-family="Helvetica,sans-Serif" font-size="10.00">+ setLocator()</text>
+<text text-anchor="start" x="834" y="-1307" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="834" y="-1296" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
+<text text-anchor="start" x="834" y="-1285" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
+<text text-anchor="start" x="834" y="-1274" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFN()</text>
+<text text-anchor="start" x="834" y="-1263" font-family="Helvetica,sans-Serif" font-size="10.00">+ getKN()</text>
+<text text-anchor="start" x="834" y="-1252" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentFN()</text>
+<text text-anchor="start" x="834" y="-1241" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFN()</text>
+<text text-anchor="start" x="834" y="-1230" font-family="Helvetica,sans-Serif" font-size="10.00">+ setKN()</text>
+<text text-anchor="start" x="834" y="-1219" font-family="Helvetica,sans-Serif" font-size="10.00">+ setParentFN()</text>
+<text text-anchor="start" x="834" y="-1208" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
+<text text-anchor="start" x="834" y="-1197" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
+<text text-anchor="start" x="834" y="-1186" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<text text-anchor="start" x="834" y="-1175" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<text text-anchor="start" x="834" y="-1164" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<text text-anchor="start" x="834" y="-1153" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
 </a>
 </g>
 </g>
 <!-- Node11&#45;&gt;Node10 -->
 <g id="edge4" class="edge"><title>Node11&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M899.756,-1141.2C901.307,-1109.79 902.922,-1077.09 904.36,-1047.97"/>
-<polygon fill="none" stroke="midnightblue" points="896.252,-1141.18 899.255,-1151.34 903.244,-1141.53 896.252,-1141.18"/>
+<path fill="none" stroke="midnightblue" d="M900.037,-1135.5C901.602,-1103.8 903.218,-1071.1 904.638,-1042.33"/>
+<polygon fill="none" stroke="midnightblue" points="896.528,-1135.59 899.531,-1145.75 903.52,-1135.93 896.528,-1135.59"/>
 </g>
 <!-- Node27 -->
 <g id="node21" class="node"><title>Node27</title>
-<g id="a_node21"><a xlink:href="classokw_1_1gui_1_1_any_childwindow.html" target="_top" xlink:title="Description of AnyWin. ">
+<g id="a_node21"><a xlink:href="classokw_1_1gui_1_1_any_childwindow.html" target="_top" xlink:title="{okw.gui.AnyChildwindow\n||+ getExists()\l+ getHasFocus()\l+ getIsActive()\l+ getCaption()\l+ getTooltip()\l+ getLabel()\l+ getValue()\l+ ClickOn()\l+ DoubleClickOn()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogSelected()\l+ LogTablecellValue()\l+ LogTooltip()\l+ LogValue()\l+ MemorizeCaption()\l+ MemorizeExists()\lund 26 mehr ...\l}">
 <polygon fill="white" stroke="black" points="413,-814.5 413,-1091.5 539,-1091.5 539,-814.5 413,-814.5"/>
 <text text-anchor="middle" x="476" y="-1079.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyChildwindow</text>
 <polyline fill="none" stroke="black" points="413,-1072.5 539,-1072.5 "/>
@@ -221,8 +221,8 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node11&#45;&gt;Node27 -->
 <g id="edge25" class="edge"><title>Node11&#45;&gt;Node27</title>
-<path fill="none" stroke="midnightblue" d="M821.51,-1144.37C819.712,-1142.86 817.876,-1141.4 816,-1140 767.087,-1103.5 742.072,-1120.77 682,-1110 652.643,-1104.74 573.457,-1109.07 549,-1092 545.555,-1089.6 542.26,-1086.98 539.108,-1084.18"/>
-<polygon fill="none" stroke="midnightblue" points="819.398,-1147.19 829.143,-1151.34 824.118,-1142.02 819.398,-1147.19"/>
+<path fill="none" stroke="midnightblue" d="M818.218,-1141.7C817.485,-1141.12 816.746,-1140.56 816,-1140 767.087,-1103.5 742.072,-1120.77 682,-1110 652.643,-1104.74 573.457,-1109.07 549,-1092 545.555,-1089.6 542.26,-1086.98 539.108,-1084.18"/>
+<polygon fill="none" stroke="midnightblue" points="815.955,-1144.37 825.837,-1148.19 820.496,-1139.04 815.955,-1144.37"/>
 </g>
 <!-- Node12 -->
 <g id="node6" class="node"><title>Node12</title>
@@ -240,8 +240,8 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node12&#45;&gt;Node11 -->
 <g id="edge5" class="edge"><title>Node12&#45;&gt;Node11</title>
-<path fill="none" stroke="#404040" d="M983.262,-1466.32C976.425,-1452.21 968.244,-1435.32 959.637,-1417.55"/>
-<polygon fill="none" stroke="#404040" points="959.612,-1417.5 953.396,-1413.85 954.38,-1406.7 960.596,-1410.36 959.612,-1417.5"/>
+<path fill="none" stroke="#404040" d="M983.262,-1466.32C977.179,-1453.76 970.032,-1439.01 962.468,-1423.4"/>
+<polygon fill="none" stroke="#404040" points="962.404,-1423.26 956.188,-1419.61 957.172,-1412.47 963.388,-1416.12 962.404,-1423.26"/>
 <text text-anchor="middle" x="994.5" y="-1439.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #_locator</text>
 </g>
 <!-- Node12&#45;&gt;Node12 -->
@@ -308,8 +308,8 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node13&#45;&gt;Node11 -->
 <g id="edge10" class="edge"><title>Node13&#45;&gt;Node11</title>
-<path fill="none" stroke="#404040" d="M889.663,-1594.29C888.19,-1577.97 886.933,-1561.72 886,-1546 883.895,-1510.51 885.331,-1501.55 886,-1466 886.288,-1450.68 886.71,-1434.66 887.205,-1418.71"/>
-<polygon fill="none" stroke="#404040" points="887.211,-1418.54 883.406,-1412.42 887.598,-1406.55 891.402,-1412.67 887.211,-1418.54"/>
+<path fill="none" stroke="#404040" d="M889.663,-1594.29C888.19,-1577.97 886.933,-1561.72 886,-1546 883.895,-1510.51 885.331,-1501.55 886,-1466 886.254,-1452.51 886.611,-1438.46 887.031,-1424.41"/>
+<polygon fill="none" stroke="#404040" points="887.042,-1424.07 883.231,-1417.95 887.416,-1412.08 891.227,-1418.2 887.042,-1424.07"/>
 <text text-anchor="middle" x="912" y="-1503.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
 </g>
 <!-- Node13&#45;&gt;Node12 -->
@@ -407,7 +407,7 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node15&#45;&gt;Node10 -->
 <g id="edge11" class="edge"><title>Node15&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M1006.49,-1191.49C988.271,-1147.11 966.059,-1093 947.44,-1047.64"/>
+<path fill="none" stroke="midnightblue" d="M1006.46,-1191.41C987.49,-1145.21 964.2,-1088.47 945.143,-1042.05"/>
 <polygon fill="none" stroke="midnightblue" points="1003.28,-1192.88 1010.31,-1200.81 1009.75,-1190.23 1003.28,-1192.88"/>
 </g>
 <!-- Node16 -->
@@ -429,7 +429,7 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node16&#45;&gt;Node10 -->
 <g id="edge12" class="edge"><title>Node16&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M783.465,-1213.32C793.835,-1190.11 805.772,-1163.8 817,-1140 831.218,-1109.86 847.173,-1077.22 861.752,-1047.82"/>
+<path fill="none" stroke="midnightblue" d="M783.465,-1213.32C793.835,-1190.11 805.772,-1163.8 817,-1140 832.14,-1107.91 849.25,-1072.97 864.571,-1042.14"/>
 <polygon fill="none" stroke="midnightblue" points="780.149,-1212.16 779.274,-1222.72 786.542,-1215.01 780.149,-1212.16"/>
 </g>
 <!-- Node16&#45;&gt;Node27 -->

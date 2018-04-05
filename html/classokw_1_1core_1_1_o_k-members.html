@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 203, Datum: 11.04.2017 05:56:26</span>
+   &#160;<span id="projectnumber">Build_ID: 204, Datum: 04.05.2018 06:13:20</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -162,7 +162,7 @@ $(document).ready(function(){initNavTree('classokw_1_1core_1_1_o_k.html','');});
   <tr class="even"><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#a1bfa8ae24fc44958e4e3c4272c120bb8">VerifyLabel</a>(String FN, String ExpVal)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#aeedf0dfdfe514b50ad774eb187a8cc34">VerifyLabelREGX</a>(String FN, String ExpVal)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#a4187442dc3574358fda8af18cb03f15e">VerifyLabelWCM</a>(String FN, String ExpVal)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#a3ba74585cf304afd0962a5ed1680e576">verifyREGX</a>(OKW_TimeOut timeout, String COL, String ROW, ArrayList&lt; String &gt; fpALExpected, BiFunction&lt; String, String, ArrayList&lt; String &gt;&gt; Method2Call)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#a9920f558ea5d2ea252daf5199864c28f">verifyREGX</a>(OKW_TimeOut timeout, String COL, String ROW, ArrayList&lt; String &gt; fpALExpectedREGXs, BiFunction&lt; String, String, ArrayList&lt; String &gt;&gt; Method2Call)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#a317660eb4175ea721505436e2b56444c">verifyREGX</a>(OKW_TimeOut timeout, ArrayList&lt; String &gt; fpALExpectedREGXs, Supplier&lt; ArrayList&lt; String &gt;&gt; Method2Call)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#a648f371fccab2eded552b69adf164bbd">VerifySelectedValue</a>(String FN, String ExpVal)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f">VerifySelectedValueREGX</a>(String FN, String ExpVal)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"></td></tr>
@@ -176,15 +176,15 @@ $(document).ready(function(){initNavTree('classokw_1_1core_1_1_o_k.html','');});
   <tr class="even"><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#a68529a54c5b950d3aa005bb87890b703">VerifyValue</a>(String FN, String ExpVal)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#acb6c973210e73f47ee34f9df6eac7f83">VerifyValueREGX</a>(String FN, String ExpVal)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#a6aafc82b46b36f952f2dd61db0f124b8">VerifyValueWCM</a>(String FN, String ExpVal)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#acf39336d1700f6f2a15243bbaba364fb">verifyWCM</a>(OKW_TimeOut timeout, String COL, String ROW, ArrayList&lt; String &gt; fpALExpected, BiFunction&lt; String, String, ArrayList&lt; String &gt;&gt; Method2Call)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#a188a9e1723ea2a831bdfca58c9d76427">verifyWCM</a>(OKW_TimeOut timeout, ArrayList&lt; String &gt; fpALExpectedREGXs, Supplier&lt; ArrayList&lt; String &gt;&gt; Method2Call)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#a127f0328e514d1b9f8bc1a972269ecfc">verifyWCM</a>(OKW_TimeOut timeout, String COL, String ROW, ArrayList&lt; String &gt; fpALExpectedWCM, BiFunction&lt; String, String, ArrayList&lt; String &gt;&gt; Method2Call)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html#a7f5d71ec7eb518d201715fcbffe4bef2">verifyWCM</a>(OKW_TimeOut timeout, ArrayList&lt; String &gt; fpALExpectedWCMs, Supplier&lt; ArrayList&lt; String &gt;&gt; Method2Call)</td><td class="entry"><a class="el" href="classokw_1_1core_1_1_o_k.html">okw.core.OK</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Erzeugt am Sam Nov 4 2017 05:57:33 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Apr 5 2018 06:14:25 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

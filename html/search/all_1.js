@@ -1,6 +1,8 @@
 var searchData=
 [
+  ['addfile',['addFile',['../classokw_1_1_o_k_w___properties.html#aaa5b5e0b2825e95ec2e1e922b31df43f',1,'okw::OKW_Properties']]],
   ['addlogger',['addLogger',['../classokw_1_1log_1_1_logger___sngltn.html#a2e4d734eff59dd09510fef50353c8672',1,'okw::log::Logger_Sngltn']]],
+  ['addresource',['addResource',['../classokw_1_1_o_k_w___properties.html#ad170c832264ab27c615f6e1bf2e8e8d3',1,'okw::OKW_Properties']]],
   ['all_5fmethodsobj_5fmultiplevalues',['All_MethodsObj_MultipleValues',['../classokw_1_1gui_1_1frames_1_1frm_test_rechner.html#ab537f65e3fafc301bbd68efcc689754b',1,'okw::gui::frames::frmTestRechner']]],
   ['all_5fmethodsobj_5fsinglevalue',['All_MethodsObj_SingleValue',['../classokw_1_1gui_1_1frames_1_1frm_test_rechner.html#a6dfa51106e5944a044b83015b8084471',1,'okw::gui::frames::frmTestRechner']]],
   ['all_5fmethodsobj_5fverifyempty',['All_MethodsObj_VerifyEmpty',['../classokw_1_1gui_1_1frames_1_1frm_test_rechner.html#ae9e8971f7b95d2809eec5587e95bac47',1,'okw::gui::frames::frmTestRechner']]],
@@ -12,7 +14,7 @@ var searchData=
   ['allse_5fen_5ffirefox_5ftests',['AllSe_EN_Firefox_Tests',['../classokw_1_1_all_se___e_n___firefox___tests.html',1,'okw']]],
   ['allse_5fen_5funitdrivertests',['AllSe_EN_UnitDriverTests',['../classokw_1_1_all_se___e_n___unit_driver_tests.html',1,'okw']]],
   ['alltests',['AllTests',['../classokw_1_1_all_tests.html',1,'okw']]],
-  ['anychildwindow',['AnyChildwindow',['../classokw_1_1gui_1_1_any_childwindow.html',1,'okw::gui']]],
+  ['anychildwindow',['AnyChildwindow',['../classokw_1_1gui_1_1_any_childwindow.html',1,'okw.gui.AnyChildwindow'],['../classokw_1_1gui_1_1_any_childwindow.html#aeb56121e4636403c3fd2091396ee0f03',1,'okw.gui.AnyChildwindow.AnyChildwindow()']]],
   ['anywinbase',['AnyWinBase',['../classokw_1_1gui_1_1_any_win_base.html',1,'okw::gui']]],
   ['anywindow',['AnyWindow',['../classokw_1_1gui_1_1_any_window.html',1,'okw::gui']]],
   ['anzeige',['Anzeige',['../classokw_1_1gui_1_1frames_1_1frm_test_rechner.html#ade49323b14ef8a2238848f10bf92c690',1,'okw::gui::frames::frmTestRechner']]],

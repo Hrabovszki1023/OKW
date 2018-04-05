@@ -58,7 +58,7 @@ var classokw_1_1core_1_1_o_k =
     [ "VerifyLabel", "classokw_1_1core_1_1_o_k.html#a1bfa8ae24fc44958e4e3c4272c120bb8", null ],
     [ "VerifyLabelREGX", "classokw_1_1core_1_1_o_k.html#aeedf0dfdfe514b50ad774eb187a8cc34", null ],
     [ "VerifyLabelWCM", "classokw_1_1core_1_1_o_k.html#a4187442dc3574358fda8af18cb03f15e", null ],
-    [ "verifyREGX", "classokw_1_1core_1_1_o_k.html#a3ba74585cf304afd0962a5ed1680e576", null ],
+    [ "verifyREGX", "classokw_1_1core_1_1_o_k.html#a9920f558ea5d2ea252daf5199864c28f", null ],
     [ "verifyREGX", "classokw_1_1core_1_1_o_k.html#a317660eb4175ea721505436e2b56444c", null ],
     [ "VerifySelectedValue", "classokw_1_1core_1_1_o_k.html#a648f371fccab2eded552b69adf164bbd", null ],
     [ "VerifySelectedValueREGX", "classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f", null ],
@@ -72,8 +72,8 @@ var classokw_1_1core_1_1_o_k =
     [ "VerifyValue", "classokw_1_1core_1_1_o_k.html#a68529a54c5b950d3aa005bb87890b703", null ],
     [ "VerifyValueREGX", "classokw_1_1core_1_1_o_k.html#acb6c973210e73f47ee34f9df6eac7f83", null ],
     [ "VerifyValueWCM", "classokw_1_1core_1_1_o_k.html#a6aafc82b46b36f952f2dd61db0f124b8", null ],
-    [ "verifyWCM", "classokw_1_1core_1_1_o_k.html#acf39336d1700f6f2a15243bbaba364fb", null ],
-    [ "verifyWCM", "classokw_1_1core_1_1_o_k.html#a188a9e1723ea2a831bdfca58c9d76427", null ],
+    [ "verifyWCM", "classokw_1_1core_1_1_o_k.html#a127f0328e514d1b9f8bc1a972269ecfc", null ],
+    [ "verifyWCM", "classokw_1_1core_1_1_o_k.html#a7f5d71ec7eb518d201715fcbffe4bef2", null ],
     [ "_Kernel", "classokw_1_1core_1_1_o_k.html#a4d82871bc255f963190bcdb3bb90ab3f", null ],
     [ "UNITTEST", "classokw_1_1core_1_1_o_k.html#af2059175b46e05b2cb534e1dc7735046", null ]
 ];

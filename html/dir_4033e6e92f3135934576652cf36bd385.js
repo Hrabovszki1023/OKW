@@ -18,6 +18,7 @@ var dir_4033e6e92f3135934576652cf36bd385 =
     [ "OKW_Helper.java", "_o_k_w___helper_8java_source.html", null ],
     [ "OKW_Ini_Sngltn.java", "_o_k_w___ini___sngltn_8java_source.html", null ],
     [ "OKW_Memorize_Sngltn.java", "_o_k_w___memorize___sngltn_8java_source.html", null ],
+    [ "OKW_Properties.java", "_o_k_w___properties_8java_source.html", null ],
     [ "OKW_TimeOut.java", "_o_k_w___time_out_8java_source.html", null ],
     [ "OKW_XmlReader.java", "_o_k_w___xml_reader_8java_source.html", null ],
     [ "OKWLanguage.java", "_o_k_w_language_8java_source.html", null ],

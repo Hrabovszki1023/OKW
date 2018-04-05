@@ -41,37 +41,38 @@
 <!-- Node32 -->
 <g id="node2" class="node"><title>Node32</title>
 <g id="a_node2"><a xlink:href="classokw_1_1gui_1_1_any_win_base.html" target="_top" xlink:title="Description of AnyWin. ">
-<polygon fill="white" stroke="black" points="50.8669,-327.5 50.8669,-582.5 184.867,-582.5 184.867,-327.5 50.8669,-327.5"/>
-<text text-anchor="middle" x="117.867" y="-570.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase</text>
-<polyline fill="none" stroke="black" points="50.8669,-563.5 184.867,-563.5 "/>
-<text text-anchor="start" x="58.8669" y="-551.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myFN</text>
-<text text-anchor="start" x="58.8669" y="-540.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myKN</text>
-<text text-anchor="start" x="58.8669" y="-529.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myParentFN</text>
-<polyline fill="none" stroke="black" points="50.8669,-522.5 184.867,-522.5 "/>
-<text text-anchor="start" x="58.8669" y="-510.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
-<text text-anchor="start" x="58.8669" y="-499.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLOCATOR()</text>
-<text text-anchor="start" x="58.8669" y="-488.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="58.8669" y="-477.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
-<text text-anchor="start" x="58.8669" y="-466.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
-<text text-anchor="start" x="58.8669" y="-455.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFN()</text>
-<text text-anchor="start" x="58.8669" y="-444.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getKN()</text>
-<text text-anchor="start" x="58.8669" y="-433.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentFN()</text>
-<text text-anchor="start" x="58.8669" y="-422.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFN()</text>
-<text text-anchor="start" x="58.8669" y="-411.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setKN()</text>
-<text text-anchor="start" x="58.8669" y="-400.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setParentFN()</text>
-<text text-anchor="start" x="58.8669" y="-389.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
-<text text-anchor="start" x="58.8669" y="-378.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
-<text text-anchor="start" x="58.8669" y="-367.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
-<text text-anchor="start" x="58.8669" y="-356.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
-<text text-anchor="start" x="58.8669" y="-345.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
-<text text-anchor="start" x="58.8669" y="-334.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<polygon fill="white" stroke="black" points="50.8669,-322 50.8669,-588 184.867,-588 184.867,-322 50.8669,-322"/>
+<text text-anchor="middle" x="117.867" y="-576" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase</text>
+<polyline fill="none" stroke="black" points="50.8669,-569 184.867,-569 "/>
+<text text-anchor="start" x="58.8669" y="-557" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myFN</text>
+<text text-anchor="start" x="58.8669" y="-546" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myKN</text>
+<text text-anchor="start" x="58.8669" y="-535" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myParentFN</text>
+<polyline fill="none" stroke="black" points="50.8669,-528 184.867,-528 "/>
+<text text-anchor="start" x="58.8669" y="-516" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
+<text text-anchor="start" x="58.8669" y="-505" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLOCATOR()</text>
+<text text-anchor="start" x="58.8669" y="-494" font-family="Helvetica,sans-Serif" font-size="10.00">+ setLocator()</text>
+<text text-anchor="start" x="58.8669" y="-483" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="58.8669" y="-472" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
+<text text-anchor="start" x="58.8669" y="-461" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
+<text text-anchor="start" x="58.8669" y="-450" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFN()</text>
+<text text-anchor="start" x="58.8669" y="-439" font-family="Helvetica,sans-Serif" font-size="10.00">+ getKN()</text>
+<text text-anchor="start" x="58.8669" y="-428" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentFN()</text>
+<text text-anchor="start" x="58.8669" y="-417" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFN()</text>
+<text text-anchor="start" x="58.8669" y="-406" font-family="Helvetica,sans-Serif" font-size="10.00">+ setKN()</text>
+<text text-anchor="start" x="58.8669" y="-395" font-family="Helvetica,sans-Serif" font-size="10.00">+ setParentFN()</text>
+<text text-anchor="start" x="58.8669" y="-384" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
+<text text-anchor="start" x="58.8669" y="-373" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
+<text text-anchor="start" x="58.8669" y="-362" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<text text-anchor="start" x="58.8669" y="-351" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<text text-anchor="start" x="58.8669" y="-340" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<text text-anchor="start" x="58.8669" y="-329" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
 </a>
 </g>
 </g>
 <!-- Node32&#45;&gt;Node31 -->
 <g id="edge1" class="edge"><title>Node32&#45;&gt;Node31</title>
-<path fill="none" stroke="midnightblue" d="M166.53,-317.569C171.263,-304.3 176.067,-290.833 180.803,-277.554"/>
-<polygon fill="none" stroke="midnightblue" points="163.162,-316.595 163.099,-327.189 169.755,-318.946 163.162,-316.595"/>
+<path fill="none" stroke="midnightblue" d="M168.467,-312.14C172.559,-300.668 176.69,-289.087 180.771,-277.645"/>
+<polygon fill="none" stroke="midnightblue" points="165.103,-311.151 165.04,-321.746 171.697,-313.503 165.103,-311.151"/>
 </g>
 <!-- Node33 -->
 <g id="node3" class="node"><title>Node33</title>
@@ -89,8 +90,8 @@
 </g>
 <!-- Node33&#45;&gt;Node32 -->
 <g id="edge2" class="edge"><title>Node33&#45;&gt;Node32</title>
-<path fill="none" stroke="#404040" d="M198.192,-642.321C192.136,-628.274 184.895,-611.478 177.276,-593.804"/>
-<polygon fill="none" stroke="#404040" points="177.24,-593.721 171.192,-589.795 172.489,-582.702 178.538,-586.628 177.24,-593.721"/>
+<path fill="none" stroke="#404040" d="M198.192,-642.321C192.831,-629.885 186.54,-615.294 179.881,-599.847"/>
+<polygon fill="none" stroke="#404040" points="179.725,-599.485 173.676,-595.559 174.974,-588.465 181.023,-592.392 179.725,-599.485"/>
 <text text-anchor="middle" x="210.367" y="-615.5" font-family="Helvetica,sans-Serif" font-size="10.00"> #_locator</text>
 </g>
 <!-- Node33&#45;&gt;Node33 -->
@@ -151,8 +152,8 @@
 </g>
 <!-- Node34&#45;&gt;Node32 -->
 <g id="edge7" class="edge"><title>Node34&#45;&gt;Node32</title>
-<path fill="none" stroke="#404040" d="M92.9877,-770.22C94.3114,-727.816 96.1931,-683.429 98.8669,-642 99.8539,-626.706 101.123,-610.727 102.537,-594.835"/>
-<polygon fill="none" stroke="#404040" points="102.553,-594.662 99.1149,-588.323 103.644,-582.712 107.082,-589.051 102.553,-594.662"/>
+<path fill="none" stroke="#404040" d="M92.9877,-770.22C94.3114,-727.816 96.1931,-683.429 98.8669,-642 99.736,-628.534 100.824,-614.536 102.037,-600.535"/>
+<polygon fill="none" stroke="#404040" points="102.067,-600.196 98.6151,-593.864 103.132,-588.243 106.584,-594.574 102.067,-600.196"/>
 <text text-anchor="middle" x="124.867" y="-679.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
 </g>
 <!-- Node34&#45;&gt;Node33 -->

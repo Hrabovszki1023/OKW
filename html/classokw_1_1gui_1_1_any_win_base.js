@@ -16,6 +16,7 @@ var classokw_1_1gui_1_1_any_win_base =
     [ "LogFunctionStartDebug", "classokw_1_1gui_1_1_any_win_base.html#a7d5d61deeb182026c1e6abdeca7b6d1d", null ],
     [ "setFN", "classokw_1_1gui_1_1_any_win_base.html#ab67004671299d9e4e1d88dce528a612a", null ],
     [ "setKN", "classokw_1_1gui_1_1_any_win_base.html#acf7d0a5fcd6e80b4933c400704c73a5c", null ],
+    [ "setLocator", "classokw_1_1gui_1_1_any_win_base.html#a66e21fa1c7d50255e70fa495e879fc86", null ],
     [ "setParentFN", "classokw_1_1gui_1_1_any_win_base.html#ac860a71142fd8d66c7ba0e6d9d902b9e", null ],
     [ "_locator", "classokw_1_1gui_1_1_any_win_base.html#aa683ac7d24411f0c95a46e4ccec59eeb", null ],
     [ "myFN", "classokw_1_1gui_1_1_any_win_base.html#add95503004de6ad14501f8eaf73f041f", null ],

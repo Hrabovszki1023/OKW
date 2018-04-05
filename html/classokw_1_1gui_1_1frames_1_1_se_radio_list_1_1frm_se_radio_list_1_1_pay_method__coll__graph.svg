@@ -154,7 +154,7 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node10 -->
 <g id="node4" class="node"><title>Node10</title>
-<g id="a_node4"><a xlink:href="classokw_1_1gui_1_1_any_childwindow.html" target="_top" xlink:title="Description of AnyWin. ">
+<g id="a_node4"><a xlink:href="classokw_1_1gui_1_1_any_childwindow.html" target="_top" xlink:title="{okw.gui.AnyChildwindow\n||+ getExists()\l+ getHasFocus()\l+ getIsActive()\l+ getCaption()\l+ getTooltip()\l+ getLabel()\l+ getValue()\l+ ClickOn()\l+ DoubleClickOn()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogSelected()\l+ LogTablecellValue()\l+ LogTooltip()\l+ LogValue()\l+ MemorizeCaption()\l+ MemorizeExists()\lund 26 mehr ...\l}">
 <polygon fill="white" stroke="black" points="357,-706.5 357,-983.5 483,-983.5 483,-706.5 357,-706.5"/>
 <text text-anchor="middle" x="420" y="-971.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyChildwindow</text>
 <polyline fill="none" stroke="black" points="357,-964.5 483,-964.5 "/>
@@ -192,37 +192,38 @@ var sectionId = 'dynsection-1';
 <!-- Node11 -->
 <g id="node5" class="node"><title>Node11</title>
 <g id="a_node5"><a xlink:href="classokw_1_1gui_1_1_any_win_base.html" target="_top" xlink:title="Description of AnyWin. ">
-<polygon fill="white" stroke="black" points="165,-1043.5 165,-1298.5 299,-1298.5 299,-1043.5 165,-1043.5"/>
-<text text-anchor="middle" x="232" y="-1286.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase</text>
-<polyline fill="none" stroke="black" points="165,-1279.5 299,-1279.5 "/>
-<text text-anchor="start" x="173" y="-1267.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myFN</text>
-<text text-anchor="start" x="173" y="-1256.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myKN</text>
-<text text-anchor="start" x="173" y="-1245.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myParentFN</text>
-<polyline fill="none" stroke="black" points="165,-1238.5 299,-1238.5 "/>
-<text text-anchor="start" x="173" y="-1226.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
-<text text-anchor="start" x="173" y="-1215.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLOCATOR()</text>
-<text text-anchor="start" x="173" y="-1204.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="173" y="-1193.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
-<text text-anchor="start" x="173" y="-1182.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
-<text text-anchor="start" x="173" y="-1171.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFN()</text>
-<text text-anchor="start" x="173" y="-1160.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getKN()</text>
-<text text-anchor="start" x="173" y="-1149.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentFN()</text>
-<text text-anchor="start" x="173" y="-1138.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFN()</text>
-<text text-anchor="start" x="173" y="-1127.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setKN()</text>
-<text text-anchor="start" x="173" y="-1116.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setParentFN()</text>
-<text text-anchor="start" x="173" y="-1105.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
-<text text-anchor="start" x="173" y="-1094.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
-<text text-anchor="start" x="173" y="-1083.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
-<text text-anchor="start" x="173" y="-1072.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
-<text text-anchor="start" x="173" y="-1061.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
-<text text-anchor="start" x="173" y="-1050.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<polygon fill="white" stroke="black" points="165,-1038 165,-1304 299,-1304 299,-1038 165,-1038"/>
+<text text-anchor="middle" x="232" y="-1292" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase</text>
+<polyline fill="none" stroke="black" points="165,-1285 299,-1285 "/>
+<text text-anchor="start" x="173" y="-1273" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myFN</text>
+<text text-anchor="start" x="173" y="-1262" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myKN</text>
+<text text-anchor="start" x="173" y="-1251" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myParentFN</text>
+<polyline fill="none" stroke="black" points="165,-1244 299,-1244 "/>
+<text text-anchor="start" x="173" y="-1232" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLocator()</text>
+<text text-anchor="start" x="173" y="-1221" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLOCATOR()</text>
+<text text-anchor="start" x="173" y="-1210" font-family="Helvetica,sans-Serif" font-size="10.00">+ setLocator()</text>
+<text text-anchor="start" x="173" y="-1199" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="173" y="-1188" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
+<text text-anchor="start" x="173" y="-1177" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWinBase()</text>
+<text text-anchor="start" x="173" y="-1166" font-family="Helvetica,sans-Serif" font-size="10.00">+ getFN()</text>
+<text text-anchor="start" x="173" y="-1155" font-family="Helvetica,sans-Serif" font-size="10.00">+ getKN()</text>
+<text text-anchor="start" x="173" y="-1144" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentFN()</text>
+<text text-anchor="start" x="173" y="-1133" font-family="Helvetica,sans-Serif" font-size="10.00">+ setFN()</text>
+<text text-anchor="start" x="173" y="-1122" font-family="Helvetica,sans-Serif" font-size="10.00">+ setKN()</text>
+<text text-anchor="start" x="173" y="-1111" font-family="Helvetica,sans-Serif" font-size="10.00">+ setParentFN()</text>
+<text text-anchor="start" x="173" y="-1100" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
+<text text-anchor="start" x="173" y="-1089" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionStartDebug()</text>
+<text text-anchor="start" x="173" y="-1078" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<text text-anchor="start" x="173" y="-1067" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<text text-anchor="start" x="173" y="-1056" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
+<text text-anchor="start" x="173" y="-1045" font-family="Helvetica,sans-Serif" font-size="10.00"># LogFunctionEndDebug()</text>
 </a>
 </g>
 </g>
 <!-- Node11&#45;&gt;Node10 -->
 <g id="edge4" class="edge"><title>Node11&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M295.184,-1034.35C301.002,-1023.29 306.979,-1012.39 313,-1002 326.256,-979.126 341.756,-955.212 356.777,-933.174"/>
-<polygon fill="none" stroke="midnightblue" points="292.069,-1032.75 290.554,-1043.24 298.278,-1035.99 292.069,-1032.75"/>
+<path fill="none" stroke="midnightblue" d="M298.027,-1028.98C302.942,-1019.77 307.956,-1010.7 313,-1002 326.256,-979.126 341.756,-955.212 356.777,-933.174"/>
+<polygon fill="none" stroke="midnightblue" points="294.918,-1027.37 293.347,-1037.85 301.109,-1030.64 294.918,-1027.37"/>
 </g>
 <!-- Node12 -->
 <g id="node6" class="node"><title>Node12</title>
@@ -308,8 +309,8 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node13&#45;&gt;Node11 -->
 <g id="edge10" class="edge"><title>Node13&#45;&gt;Node11</title>
-<path fill="none" stroke="#404040" d="M265.955,-1508.45C264.274,-1492.06 262.606,-1475.75 261,-1460 256.042,-1411.37 250.665,-1358.1 245.903,-1310.76"/>
-<polygon fill="none" stroke="#404040" points="245.874,-1310.47 241.294,-1304.9 244.674,-1298.53 249.254,-1304.1 245.874,-1310.47"/>
+<path fill="none" stroke="#404040" d="M265.955,-1508.45C264.274,-1492.06 262.606,-1475.75 261,-1460 256.24,-1413.3 251.093,-1362.34 246.475,-1316.45"/>
+<polygon fill="none" stroke="#404040" points="246.451,-1316.21 241.871,-1310.64 245.25,-1304.27 249.831,-1309.84 246.451,-1316.21"/>
 <text text-anchor="middle" x="287" y="-1406.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
 </g>
 <!-- Node13&#45;&gt;Node12 -->

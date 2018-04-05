@@ -23,6 +23,8 @@ var dir_cd7042f6567675755d2a7d20e8cf9ca8 =
     [ "OKW_Helper_StringSplitTest.java", "_o_k_w___helper___string_split_test_8java_source.html", null ],
     [ "OKW_HelperTest.java", "_o_k_w___helper_test_8java_source.html", null ],
     [ "OKW_IniTest.java", "_o_k_w___ini_test_8java_source.html", null ],
+    [ "OKW_Properties_SetDOptionsTest.java", "_o_k_w___properties___set_d_options_test_8java_source.html", null ],
+    [ "OKW_PropertiesTest.java", "_o_k_w___properties_test_8java_source.html", null ],
     [ "OKW_TestClipboard.java", "_o_k_w___test_clipboard_8java_source.html", null ],
     [ "OKW_XmlReaderTest.java", "_o_k_w___xml_reader_test_8java_source.html", null ]
 ];

@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 203, Datum: 11.04.2017 05:56:26</span>
+   &#160;<span id="projectnumber">Build_ID: 204, Datum: 04.05.2018 06:13:20</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -118,8 +118,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setUp</b> ()  throws 
 <tr class="memitem:af2d5bc5ab5aa65171329871b81577171"><td class="memItemLeft" align="right" valign="top"><a id="af2d5bc5ab5aa65171329871b81577171"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>tearDown</b> ()  throws Exception 	</td></tr>
 <tr class="separator:af2d5bc5ab5aa65171329871b81577171"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea5150769697b9e27dfa85c123856abf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1gui_1_1_o_k_w_locator_test.html#aea5150769697b9e27dfa85c123856abf">TC_Kombiniert_2in1_Multiple</a> ()</td></tr>
-<tr class="memdesc:aea5150769697b9e27dfa85c123856abf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mehrfach Verschachtelung: 2 Locatoren an zweistellen in einen dritten Locator einfügen.  <a href="#aea5150769697b9e27dfa85c123856abf">Mehr ...</a><br /></td></tr>
+<tr class="memitem:aea5150769697b9e27dfa85c123856abf"><td class="memItemLeft" align="right" valign="top"><a id="aea5150769697b9e27dfa85c123856abf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>TC_Kombiniert_2in1_Multiple</b> ()</td></tr>
 <tr class="separator:aea5150769697b9e27dfa85c123856abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2483b68719f6d8d843647e24a3869f38"><td class="memItemLeft" align="right" valign="top"><a id="a2483b68719f6d8d843647e24a3869f38"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>TC_Kombiniert_2in1_ReverseOrder</b> ()</td></tr>
@@ -150,40 +150,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>tearDownAfterC
 <dl class="section date"><dt>Datum</dt><dd>2015.07.12 </dd></dl>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_o_k_w_locator_test_8java_source.html#l00063">63</a> der Datei <a class="el" href="_o_k_w_locator_test_8java_source.html">OKWLocatorTest.java</a>.</p>
-</div><h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
-<a id="aea5150769697b9e27dfa85c123856abf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea5150769697b9e27dfa85c123856abf">&#9670;&nbsp;</a></span>TC_Kombiniert_2in1_Multiple()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void okw.gui.OKWLocatorTest.TC_Kombiniert_2in1_Multiple </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Mehrfach Verschachtelung: 2 Locatoren an zweistellen in einen dritten Locator einfügen. </p>
-<p>(einfach Verschachtelt)</p>
-<dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
-<dl class="section date"><dt>Datum</dt><dd>2015.07.12 </dd></dl>
-
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w_locator_test_8java_source.html#l00096">96</a> der Datei <a class="el" href="_o_k_w_locator_test_8java_source.html">OKWLocatorTest.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;          OKWLocator Locator_1 = <span class="keyword">new</span> OKWLocator(<span class="stringliteral">&quot;L1&quot;</span>);</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;          OKWLocator Locator_2 = <span class="keyword">new</span> OKWLocator(<span class="stringliteral">&quot;L2&quot;</span>);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;          OKWLocator Locator = <span class="keyword">new</span> OKWLocator(<span class="stringliteral">&quot;L2=%2$s, L1=%1$s, L2=%2$s, L1=%1$s&quot;</span>, Locator_1, Locator_2);</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        </div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;          assertEquals(<span class="stringliteral">&quot;L2=L2, L1=L1, L2=L2, L1=L1&quot;</span>, Locator.getLocator());</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div></div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classokw_1_1gui_1_1_o_k_w_locator_test_aea5150769697b9e27dfa85c123856abf_cgraph.svg" width="464" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+</div><hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
 <li>/home/travis/build/Hrabovszki1023/OKW/core/src/test/java/okw/gui/<a class="el" href="_o_k_w_locator_test_8java_source.html">OKWLocatorTest.java</a></li>
 </ul>
 </div><!-- contents -->
@@ -193,7 +160,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>tearDownAfterC
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><a class="el" href="classokw_1_1gui_1_1_o_k_w_locator_test.html">OKWLocatorTest</a></li>
-    <li class="footer">Erzeugt am Sam Nov 4 2017 05:57:33 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Apr 5 2018 06:14:25 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

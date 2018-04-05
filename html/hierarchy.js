@@ -180,6 +180,8 @@ var hierarchy =
     [ "okw.parser.antlr4.OKW_ParserBaseVisitor< String >", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser_base_visitor.html", [
       [ "okw.parser.OKW_Visitor", "classokw_1_1parser_1_1_o_k_w___visitor.html", null ]
     ] ],
+    [ "okw.OKW_Properties_SetDOptionsTest", "classokw_1_1_o_k_w___properties___set_d_options_test.html", null ],
+    [ "okw.OKW_PropertiesTest", "classokw_1_1_o_k_w___properties_test.html", null ],
     [ "okw.OKW_TestClipboard", "classokw_1_1_o_k_w___test_clipboard.html", null ],
     [ "okw.OKW_TimeOut", "classokw_1_1_o_k_w___time_out.html", null ],
     [ "okw.parser.OKW_VisitorTest", "classokw_1_1parser_1_1_o_k_w___visitor_test.html", null ],
@@ -286,5 +288,8 @@ var hierarchy =
       [ "okw.parser.antlr4.OKW_ParserVisitor< T >", "interfaceokw_1_1parser_1_1antlr4_1_1_o_k_w___parser_visitor.html", [
         [ "okw.parser.antlr4.OKW_ParserBaseVisitor< T >", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser_base_visitor.html", null ]
       ] ]
+    ] ],
+    [ "Properties", null, [
+      [ "okw.OKW_Properties", "classokw_1_1_o_k_w___properties.html", null ]
     ] ]
 ];
