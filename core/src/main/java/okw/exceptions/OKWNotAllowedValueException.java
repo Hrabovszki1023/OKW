@@ -42,8 +42,8 @@ package okw.exceptions;
 /// \~german
 /// \brief
 /// <code>OKWNotAllowedValueException</code>-Ausnahme wird ausgelöst, wenn ein gegebener Wert im 
-/// Schlüsselwort nicht erlaubt ist.<br/>
-/// Beispiel:<br/>
+/// Schlüsselwort nicht erlaubt ist.<br>
+/// Beispiel:<br>
 /// 
 /// <code>EN.Select( "MyCheckbox", "Haus" )</code> - bei einer CheckBox sind nur die Werte CHECKED/UNCHECKED erlaubt.
 /// Bei allen anderen Werten wird <code>OKWNotAllowedValueException</code> ausgelöst.
@@ -51,8 +51,8 @@ package okw.exceptions;
 /// \~english
 /// \brief
 /// <code>OKWNotAllowedValueException</code>-exception is triggered, if a given value in the keyword is
-/// not allowed.<br/>
-/// Example:<br/>
+/// not allowed.<br>
+/// Example:<br>
 /// 
 /// <code>EN.Select( "MyCheckbox", "House" )</code> - at a checkbox only the values CHECKED/UNCHECKED are permitted.
 /// With all other values <code>OKWNotAllowedValueException</code> is triggered.

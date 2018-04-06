@@ -102,7 +102,7 @@ public class OKW_CurrentObject_Sngltn
      *
      *
      * \~english \brief The feature contains the professional name of the current
-     * window.<br/>
+     * window.<br>
      * All GUI child Objects are relating to this window given mit "cvsChildName".
      */
     protected static String             cvsWindowFN             = "";
@@ -585,7 +585,7 @@ public class OKW_CurrentObject_Sngltn
      * Methode gibt alle wichtigen Informationen zum aktuellen Objekt aus.
      * 
      * Diese soll im Fehler- oder Ausnahmefall bei der Fehlersuche
-     * durch Ausgabe der aktuellen Objektdaten helfen. <br/>
+     * durch Ausgabe der aktuellen Objektdaten helfen. <br>
      * Diese Daten werden ausgegeben: * Window Name: cvsWindowName * Name des
      * Kindes: cvsChildName * Objektklasse: cvoObject.getClass().Name *
      * Voller Name des Objektes: cvsObjectName
@@ -719,7 +719,7 @@ public class OKW_CurrentObject_Sngltn
        * @param fpsChildName Fachlicher Name des
        * Kind-Objektes.
        *
-       * \note Wichtig! Das Fenster-Objekt muss bereits gesetzt sein!<br/>
+       * \note Wichtig! Das Fenster-Objekt muss bereits gesetzt sein!<br>
        * Ist dies nicht der Fall, wird eine OKW.OKWFrameObjectWindowNotSetException Exception
        * ausgelöst
        *
@@ -729,7 +729,7 @@ public class OKW_CurrentObject_Sngltn
        * @param fpsChildName Funktional name of the Child Object.
        * @return Returns the Object reference to the current Object cvoObject with the return. 
        *
-       * \note Notice! The Windows Object must be set!<br/>
+       * \note Notice! The Windows Object must be set!<br>
        * If not, a OKW.OKW_Kernel_Exception Exception will be triggered.
        *
        * \~

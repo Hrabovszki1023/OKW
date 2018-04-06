@@ -42,12 +42,12 @@ package okw.exceptions;
 /// \~german
 /// \brief
 /// <code>OKWDirectoryDoesNotExistsException</code>-Ausnahme wird ausgelöst, 
-/// wenn ein Verzeichniss nicht gefunden worden ist.<br/>
+/// wenn ein Verzeichniss nicht gefunden worden ist.<br>
 /// 
 /// \~english
 /// \brief
 /// <code>OKWDirectoryDoesNotExistsException</code>-Exeption is triggered, 
-/// if a data is not found.<br/>
+/// if a data is not found.<br>
 /// 
 /// \~
 /// \author Zoltán Hrabovszki

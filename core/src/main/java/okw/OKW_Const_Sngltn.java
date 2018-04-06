@@ -48,14 +48,14 @@ import okw.log.Logger_Sngltn;
 /** \~german
  *  OKW_Const verwaltet die sprachabhängigen OKW-Konstanten.
  * 
- * Entwurfsmuster: Singleton - es gilt das Highländer-Prinzip "Es kann nur einen geben". <br/>
+ * Entwurfsmuster: Singleton - es gilt das Highländer-Prinzip "Es kann nur einen geben". <br>
  * Das bedeutet, dass es nur eine Instanz dieser Klasse gibt, die zum Lesen der Nachrichten zuständig ist.
  * 
  * Die sprachabhängigen Werte, die zu dieser Klasse gehören, stehen in der Datei "OKW_Const.xml".
  * 
- * Diese Klasse selbst ist eine OKW-Fundametalklasse und gibt selbst keine Dokumentationen (Logs) aus.<br/>
+ * Diese Klasse selbst ist eine OKW-Fundametalklasse und gibt selbst keine Dokumentationen (Logs) aus.<br>
  * 
- * Begriffe: <br/>
+ * Begriffe: <br>
  * Hier ist eine Liste der Bezeichner/ Namen/ Begriff zusammengestellt,
  *	die im Rahmen dieser Klasse verwendet werden.
  * 
@@ -83,14 +83,14 @@ import okw.log.Logger_Sngltn;
  * \~english
  * OKW_Const manages the language dependent OKW-Constants.
  * 
- * Designpattern: Singleton - the Highlander-Principle is valid "There only can be one!". <br/>
+ * Designpattern: Singleton - the Highlander-Principle is valid "There only can be one!". <br>
  * 
  * This means there is only one instance of this class, which is responsible for reading the news.
  * The language dependent values belonging to this class are in the file "OKW_Const.xml"
  * 
- * This class itself is an OKW-fundamental-class and returns no logs for its own. <br/>
+ * This class itself is an OKW-fundamental-class and returns no logs for its own. <br>
  * 
- * Terms <br/>
+ * Terms <br>
  * Here is a list of identifier / name / term created to be used in this class.
  * 
  * - _Const_ is the language dependent constant to an internal constant(no brackets)
@@ -115,7 +115,7 @@ import okw.log.Logger_Sngltn;
  * 
  * \~
  * @author Zoltan Hrabovszki
- * @date 2013_12_22 <br/>
+ * @date 2013_12_22 <br>
  * Reviews:(2014_12_18_jnic, 2014_12_22_zh, 2014_12_22_jnic)
  * \todo (Zeile 22) Zukünftige Funktionalität: Nachricht auf einen anderen Tag weiterverlinken.
  * \todo (Zeile 41) Tabellenüberschrift wird als Verlinkung gelesen und blau auf blau dargestellt - OKWConst/DE
@@ -134,12 +134,12 @@ public class OKW_Const_Sngltn
     /** 
      * \~german
      * Aktuelle Spracheinstellung (Current Language) wird in der
-     * Klasse OKWLanguage verwaltet.<br/>
+     * Klasse OKWLanguage verwaltet.<br>
      * http: *de.wikipedia.org/wiki/ISO-3166-1-Kodierliste
      *
      * \~english
      * The actual language settings (current language) are
-     * administrated in the classe OKWLanguage.<br/>
+     * administrated in the classe OKWLanguage.<br>
      * http: *en.wikipedia.org/wiki/ISO_3166-1
      * \~
      * @author Zoltan Hrabovszki
@@ -258,13 +258,13 @@ public class OKW_Const_Sngltn
     
     /**
      * \~german
-     * Holt die einzige Instanz dieser Klasse.<br/>
+     * Holt die einzige Instanz dieser Klasse.<br>
      * <value> Die Instanz dieser Klasse. </value>
      *
      * Lazy Initialization (If required then only)
      *
      * \~english
-     * Gets the only instance of this class.<br/>
+     * Gets the only instance of this class.<br>
      * <value> The instance of this class. </value>
      *
      * \~
@@ -294,11 +294,11 @@ public class OKW_Const_Sngltn
      * \~german
      * Konvertiert WAHR/FALSCH (true/false) sprachabhängig nach
      * "Ja"/"Nein" (Yes/No) \param fpbTrueOrFalse WAHR oder FALSCH \return "Ja"
-     * für true<br/> "Nein" für false
+     * für true<br> "Nein" für false
      *
      * \~english
      * Converts true/false language dependent to yes/no \param
-     * fps_YesOrNo true or false \return "yes" in case of true<br/> "no" in case
+     * fps_YesOrNo true or false \return "yes" in case of true<br> "no" in case
      * of false
      *
      * \~
@@ -354,7 +354,7 @@ public class OKW_Const_Sngltn
      * constant is used in the actual language.
      *
      * @param fpLs_ListString2Concat List-String, to be combined to a single
-     * string.<br/> Example: {"Value1", "Value2", "Value3", "Value4"}
+     * string.<br> Example: {"Value1", "Value2", "Value3", "Value4"}
      *
      * @return Combined Values "Value1${HSEP}Value2${HSEP}Value3${HSEP}Value
      *
@@ -625,12 +625,12 @@ public class OKW_Const_Sngltn
      * Trennkonstante der aktuellen Sprache verwendet.
      *
      * @see
-     * OKWConst::ConcatSEP()<br/> OKWConst::ConcatHSEP()<br/>
-     * OKWConst::ConcatVSEP()<br/> OKWConst::SplitSEP()<br/>
+     * OKWConst::ConcatSEP()<br> OKWConst::ConcatHSEP()<br>
+     * OKWConst::ConcatVSEP()<br> OKWConst::SplitSEP()<br>
      * OKWConst::SplitVSEP()
      *
      * @param fpsString2Split Ein oder mehrere Werte, die mit ${HSEP} getrennt
-     * sind.<br/> Beispiel: "Wert1${HSEP}Wert2${HSEP}Wert2"
+     * sind.<br> Beispiel: "Wert1${HSEP}Wert2${HSEP}Wert2"
      *
      * @return Getrennte Werte als Liste. Beispiel: {"Wert1", "Wert2", "Wert3"}
      *
@@ -649,7 +649,7 @@ public class OKW_Const_Sngltn
      * OKWConst::SplitVSEP()
      *
      * @param fpsString2Split One or more values, which are divided with
-     * ${HSEP}.<br/> Example: "Value1${HSEP}Value2${HSEP}Value2"
+     * ${HSEP}.<br> Example: "Value1${HSEP}Value2${HSEP}Value2"
      *
      * @return Separated values as a list. Example: {"Value1", "Value2",
      * "Value3"}
@@ -686,12 +686,12 @@ public class OKW_Const_Sngltn
      *
      *
      * @see
-     * OKWConst::ConcatSEP()<br/> OKWConst::ConcatHSEP()<br/>
-     * OKWConst::ConcatVSEP()<br/> OKWConst::SplitHSEP()<br/>
+     * OKWConst::ConcatSEP()<br> OKWConst::ConcatHSEP()<br>
+     * OKWConst::ConcatVSEP()<br> OKWConst::SplitHSEP()<br>
      * OKWConst::SplitVSEP()
      *
      * @param fpsString2Split Ein oder mehrere Werte, die mit ${SEP} getrennt
-     * sind.<br/> Beispiel: "Wert1${SEP}Wert2${SEP}Wert2"
+     * sind.<br> Beispiel: "Wert1${SEP}Wert2${SEP}Wert2"
      *
      * @return Getrennte Werte als Liste. Beispiel: {"Wert1", "Wert2", "Wert3"}
      *
@@ -704,12 +704,12 @@ public class OKW_Const_Sngltn
      *
      *
      * @see
-     * OKWConst::ConcatSEP()<br/> OKWConst::ConcatHSEP()<br/>
-     * OKWConst::ConcatVSEP()<br/> OKWConst::SplitHSEP()<br/>
+     * OKWConst::ConcatSEP()<br> OKWConst::ConcatHSEP()<br>
+     * OKWConst::ConcatVSEP()<br> OKWConst::SplitHSEP()<br>
      * OKWConst::SplitVSEP()
      *
      * @param fpsString2Split One or more values, which are separated with
-     * ${SEP}.<br/> Example: "Value1${SEP}Value2${SEP}Value2"
+     * ${SEP}.<br> Example: "Value1${SEP}Value2${SEP}Value2"
      *
      * @return Separated values as a list: {"value1", "value2", "value3"}
      *
@@ -744,12 +744,12 @@ public class OKW_Const_Sngltn
      *
      *
      * @see 
-     * OKWConst::ConcatSEP()<br/> OKWConst::ConcatHSEP()<br/>
-     * OKWConst::ConcatVSEP()<br/> OKWConst::SplitHSEP()<br/>
+     * OKWConst::ConcatSEP()<br> OKWConst::ConcatHSEP()<br>
+     * OKWConst::ConcatVSEP()<br> OKWConst::SplitHSEP()<br>
      * OKWConst::SplitSEP()
      *
      * @param fpsString2Split Ein oder mehrer Werte, die mit ${VSEP} getrennt
-     * sind.<br/>
+     * sind.<br>
      * Beispiel: "Wert1${VSEP}Wert2${VSEP}Wert2"
      *
      * @return Getrennte Werte als Liste. Beispiel: {"Wert1", "Wert2", "Wert3"}
@@ -763,18 +763,18 @@ public class OKW_Const_Sngltn
      *
      *
      * @see
-     * OKWConst::ConcatSEP()<br/> OKWConst::ConcatHSEP()<br/>
-     * OKWConst::ConcatVSEP()<br/> OKWConst::SplitHSEP()<br/>
+     * OKWConst::ConcatSEP()<br> OKWConst::ConcatHSEP()<br>
+     * OKWConst::ConcatVSEP()<br> OKWConst::SplitHSEP()<br>
      * OKWConst::SplitSEP()
      *
      * @param fpsString2Split One or more values, which are separated with
-     * ${VSEP}.<br/> Example: "value1${VSEP}value2${VSEP}value2"
+     * ${VSEP}.<br> Example: "value1${VSEP}value2${VSEP}value2"
      *
      * @return Separated values as a list. Example: {"value1", "value2","value3"}
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013_12_22 <br/>
+     * @date 2013_12_22 <br>
      * Reviews:(2014_12_18_jnic, 2014_12_22_zh, 2014_12_26_jnic)
     */
     public ArrayList<String> SplitVSEP( String fps_String2Split ) throws XPathExpressionException
@@ -798,10 +798,10 @@ public class OKW_Const_Sngltn
     /**
      * \~german
      * Konvertiert sprachabhängig Ja/Nein zu einem Booleanean
-     * Wert (Wahr/Falsch).<br/>
+     * Wert (Wahr/Falsch).<br>
      *
-     * Beispiele: Sprache ist "de": Eingabe "JA" -> Ausgabe Wahr <br/>
-     * Sprache ist "de": Eingabe "NEIN" -> Ausgabe Falsch <br/> Sprache ist "en":
+     * Beispiele: Sprache ist "de": Eingabe "JA" -> Ausgabe Wahr <br>
+     * Sprache ist "de": Eingabe "NEIN" -> Ausgabe Falsch <br> Sprache ist "en":
      * Eingabe "JA" oder "NEIN" -> löst die Exception
      * OKWNotAllowedValueException aus.
      *
@@ -813,18 +813,18 @@ public class OKW_Const_Sngltn
      *
      * @param fpsYesOrNo sprachabhängig Ja/Nein
      * @return WAHR wenn
-     * sprachabhängiger Wert ist "Ja"<br/> FALSCH, wenn sprachabhängiger Wert
+     * sprachabhängiger Wert ist "Ja"<br> FALSCH, wenn sprachabhängiger Wert
      * "Nein"
      *
      * \~english
-     * Converts a Language dependent Yes/No to Boolean.<br/>
+     * Converts a Language dependent Yes/No to Boolean.<br>
      *
-     * e.g. Language is "en": Input "Yes" returns true <br/> e.g. Language is
-     * "en": Input "No" returns false <br/> e.g. Language is "de": Input "Yes"
-     * or "No" - raises the exception OKWNotAllowedValueException.<br/>
+     * e.g. Language is "en": Input "Yes" returns true <br> e.g. Language is
+     * "en": Input "No" returns false <br> e.g. Language is "de": Input "Yes"
+     * or "No" - raises the exception OKWNotAllowedValueException.<br>
      *
      * @param fpsYesOrNo Language dependent Yes/No
-     * @return true if Language dependent value is "yes"<br/> false if language dependent "No"
+     * @return true if Language dependent value is "yes"<br> false if language dependent "No"
      *
      * \~
      * \author Zoltan Hrabovszki

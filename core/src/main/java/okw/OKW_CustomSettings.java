@@ -43,7 +43,7 @@ package okw;
 * \brief
 * Property-Klasse von OKW.OKW_Ini. Stellt Umgebungseigenschaften von OKW zur Verfügung.
 * 
-* Diese Klasse darf ausschliesslich nur über die OKW.OK_Ini verwendet werden.<br/>
+* Diese Klasse darf ausschliesslich nur über die OKW.OK_Ini verwendet werden.<br>
 * __Anmerkung:__ Die Klasse ist public, weil diese mit System.Xml.Serialization in/aus der Datei OKW_Ini.xml
 * serialisert/deserialisert wird. System.Xml.Serialization verlangt einen öffentliche Felder und einen öffentlichen Konstruktor.
 * 
@@ -73,7 +73,7 @@ public class OKW_CustomSettings
 	 * Wert wird 1. auf Default initialisiert 2. danach auf den Wert aus
 	 * XML_Ini.xml deseariliser, vorhanden.
 	 * 
-	 * Siehe Beschreibung zum Ablauf der Initialisierung unter OKW.OKW_Ini.<br/>
+	 * Siehe Beschreibung zum Ablauf der Initialisierung unter OKW.OKW_Ini.<br>
 	 * Beschreibung des Propertys ist unter OKW.OKW_CustomSettings zufinden.
 	 * 
 	 * \~english \~ \author Zoltán Hrabovszki \date 2013.12.02
@@ -86,7 +86,7 @@ public class OKW_CustomSettings
 	 * Wert wird 1. auf Default initialisiert 2. danach auf den Wert aus
 	 * XML_Ini.xml deseariliser, vorhanden.
 	 * 
-	 * Siehe Beschreibung zum Ablauf der Initialisierung unter OKW.OKW_Ini.<br/>
+	 * Siehe Beschreibung zum Ablauf der Initialisierung unter OKW.OKW_Ini.<br>
 	 * Beschreibung des Propertys ist unter OKW.OKW_CustomSettings zufinden.
 	 * 
 	 * \~english \~ \author Zoltán Hrabovszki \date 2013.12.02
@@ -99,7 +99,7 @@ public class OKW_CustomSettings
 	 * Wert wird 1. auf Default initialisiert 2. danach auf den Wert aus
 	 * XML_Ini.xml deseariliser, vorhanden.
 	 * 
-	 * Siehe Beschreibung zum Ablauf der Initialisierung unter OKW.OKW_Ini.<br/>
+	 * Siehe Beschreibung zum Ablauf der Initialisierung unter OKW.OKW_Ini.<br>
 	 * Beschreibung des Propertys ist unter OKW.OKW_CustomSettings zufinden.
 	 * 
 	 * \~english \~ \author Zoltán Hrabovszki \date 2013.12.02
@@ -112,7 +112,7 @@ public class OKW_CustomSettings
 	 * Wert wird 1. auf Default initialisiert 2. danach auf den Wert aus
 	 * XML_Ini.xml desearilisert.
 	 * 
-	 * Siehe Beschreibung zum Ablauf der Initialisierung unter OKW.OKW_Ini.<br/>
+	 * Siehe Beschreibung zum Ablauf der Initialisierung unter OKW.OKW_Ini.<br>
 	 * Beschreibung des Propertys ist unter OKW.OKW_CustomSettings zufinden.
 	 * 
 	 * \~english \~ \author Zoltán Hrabovszki \date 2013.12.02
@@ -120,7 +120,7 @@ public class OKW_CustomSettings
 	private Integer	TimeOutNotExists	= 30;
 
 	/*
-	 * \~german \brief Konstruktor der Klasse OKW_CustomSetting.<br/>
+	 * \~german \brief Konstruktor der Klasse OKW_CustomSetting.<br>
 	 * __Anmerkung:__ Konstruktor ist public, weil diese Klasse mit
 	 * System.Xml.Serialization in/aus der Datei OKW_Ini.xml
 	 * serialisert/deserialisert wird. System.Xml.Serialization verlangt einen
@@ -136,7 +136,7 @@ public class OKW_CustomSettings
 	 * \~german \brief Öffentliches Property "Language".
 	 *
 	 * Beschreibung des Propertys ist unter OKW.OKW_CustomSettings
-	 * zufinden.<br/> Siehe auch die Beschreibung zu
+	 * zufinden.<br> Siehe auch die Beschreibung zu
 	 * OKW.OKW_CustomSettings.__Language
 	 * 
 	 * \~english \~ \author Zoltán Hrabovszki \date 2013.12.02
@@ -156,7 +156,7 @@ public class OKW_CustomSettings
 	 * \~german \brief Öffentliches Property "PathSep".
 	 *
 	 * Beschreibung des Propertys ist unter OKW.OKW_CustomSettings
-	 * zufinden.<br/> Siehe auch die Beschreibung zu
+	 * zufinden.<br> Siehe auch die Beschreibung zu
 	 * OKW.OKW_CustomSettings.__PathSep
 	 * 
 	 * \~english \~ \author Zoltán Hrabovszki \date 2013.12.02
@@ -176,7 +176,7 @@ public class OKW_CustomSettings
 	 * \~german \brief Öffentliches Property "TimeOutExists".
 	 *
 	 * Beschreibung des Propertys ist unter OKW.OKW_CustomSettings
-	 * zufinden.<br/> Siehe auch die Beschreibung zu
+	 * zufinden.<br> Siehe auch die Beschreibung zu
 	 * OKW.OKW_CustomSettings.__TimeOutExists
 	 * 
 	 * \~english \~ \author Zoltán Hrabovszki \date 2013.12.02
@@ -196,7 +196,7 @@ public class OKW_CustomSettings
 	 * \~german \brief Öffentliches Property "TimeOutNotExists".
 	 *
 	 * Beschreibung des Propertys ist unter OKW.OKW_CustomSettings
-	 * zufinden.<br/> Siehe auch die Beschreibung zu
+	 * zufinden.<br> Siehe auch die Beschreibung zu
 	 * OKW.OKW_CustomSettings.__TimeOutNotExists
 	 * 
 	 * \~english \~ \author Zoltán Hrabovszki \date 2013.12.02

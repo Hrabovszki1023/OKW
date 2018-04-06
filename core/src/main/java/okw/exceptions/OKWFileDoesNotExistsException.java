@@ -42,12 +42,12 @@ package okw.exceptions;
 /// \~german
 /// \brief
 /// <code>OKWFileDoesNotExistsException</code>-Ausnahme wird ausgelöst, 
-/// wenn eine Datei nicht gefunden worden ist.<br/>
+/// wenn eine Datei nicht gefunden worden ist.<br>
 /// 
 /// \~english
 /// \brief
 /// <code>OKWFileDoesNotExistsException</code>-Exeption is triggered, 
-/// if a data is not found.<br/>
+/// if a data is not found.<br>
 /// 
 /// \~
 /// \author Zoltán Hrabovszki

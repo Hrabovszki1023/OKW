@@ -41,11 +41,11 @@ package okw.exceptions;
 
 /// \~german
 /// \brief
-/// <code>OKWVerifyingFailsException</code>-Ausnahme wird ausgelöst, wenn ein Soll-Ist-Vergleich fehlschlägt.<br/>
+/// <code>OKWVerifyingFailsException</code>-Ausnahme wird ausgelöst, wenn ein Soll-Ist-Vergleich fehlschlägt.<br>
 /// 
 /// \~english
 /// \brief
-/// <code>OKWVerifyingFailsException</code>-Exception is triggered, if an actuel-expected-verification fails.<br/>
+/// <code>OKWVerifyingFailsException</code>-Exception is triggered, if an actuel-expected-verification fails.<br>
 /// 
 /// \~
 /// \author Zoltán Hrabovszki

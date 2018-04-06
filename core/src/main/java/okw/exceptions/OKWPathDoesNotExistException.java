@@ -41,11 +41,11 @@ package okw.exceptions;
 
 /// \~german
 /// \brief
-/// <code>OKWPathDoesNotExistException</code>-Ausnahme wird ausgelöst, wenn ein gegebener Pfad nicht existiert.<br/>
+/// <code>OKWPathDoesNotExistException</code>-Ausnahme wird ausgelöst, wenn ein gegebener Pfad nicht existiert.<br>
 /// 
 /// \~english
 /// \brief
-/// <code>OKWPathDoesNotExistException</code>-Exception is triggered, if a given path is non-existent.<br/>
+/// <code>OKWPathDoesNotExistException</code>-Exception is triggered, if a given path is non-existent.<br>
 /// 
 /// \~
 /// \author Zoltán Hrabovszki

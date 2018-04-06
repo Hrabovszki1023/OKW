@@ -42,7 +42,7 @@ package okw.exceptions;
 /// \~german
 /// \brief
 /// OKW.OKWConst4InternalnameNotFoundException wird ausgelöst, 
-/// wenn zu einer Konstanten, gegeben mit dem internen Namen, keine Übersetzung gefunden wird.<br/>
+/// wenn zu einer Konstanten, gegeben mit dem internen Namen, keine Übersetzung gefunden wird.<br>
 /// 
 /// \~english
 /// \brief

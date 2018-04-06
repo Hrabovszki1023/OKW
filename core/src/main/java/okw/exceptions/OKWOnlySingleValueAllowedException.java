@@ -41,9 +41,9 @@ package okw.exceptions;
 
 /**
  *  \~german
- *  <code>OKWOnlySingleValueAllowedException</code>-Ausnahme wird ausgelöst, wenn nur Wert erlaubt ist.<br/>
+ *  <code>OKWOnlySingleValueAllowedException</code>-Ausnahme wird ausgelöst, wenn nur Wert erlaubt ist.<br>
  *
- *  Beispiel:<br/>
+ *  Beispiel:<br>
  *  
  *  <code>EN.Select( "Geschlecht", "weiblich${SEP}männlich" )</code> - Ein Radiolist erlaubt naturgemäß nur die Auswahl eines
  *  einzigen Wertes.
@@ -53,8 +53,8 @@ package okw.exceptions;
  *  
  *  \~english
  *  <code>OKWOnlySingleValueAllowedException</code> - exception is triggered, if a given value in the keyword is
- *  not allowed.<br/>
- *  Example:<br/>
+ *  not allowed.<br>
+ *  Example:<br>
  *  
  *  <code>EN.Select( "MyCheckbox", "House" )</code> - A radiolist, of course, allows only the selection of a single value.
  *  If, as in the example, more than one value is selected, the exception <code>OKWOnlySingleValueAllowedException</code> is thrown.</br>

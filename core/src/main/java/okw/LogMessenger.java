@@ -307,7 +307,7 @@ public class LogMessenger
 	 *  @param TextKey Key for the Text-Message.
 	 * 
 	 *  @return Rreturns the Message for the given language or default language
-	 *  if given languae does not exist<br/>
+	 *  if given languae does not exist<br>
 	 *  
 	 *  _"Message Not Found!"_ will be returnd, if a doesn´s exist.
 	 *  
