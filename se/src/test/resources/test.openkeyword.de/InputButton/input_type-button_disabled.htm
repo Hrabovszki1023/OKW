@@ -1,11 +1,10 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-       "http://www.w3.org/TR/html4/strict.dtd">
+﻿<!DOCTYPE HTML>
 <html>
 <head>
 	<title>Button enabled / disabled</title>
 	<link href="../okw.css" type="text/css" rel="stylesheet">
 </head>
-<body>
+<body data-fn="input_type-button_disabled">
     <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png"
          width="150"
          alt="OpenKeyWord Logo">
@@ -15,10 +14,11 @@
 
 <form action="input_button.htm">
   <p>
-    <textarea cols="20" rows="4" name="textfeld"></textarea>
+    <textarea data-fn="textfeld" cols="20" rows="4" name="textfeld"></textarea>
     <label for="ID_Botton_1">Label für Button1: </label>
     <input type="button"
            id="ID_Botton_1"
+           data-fn="ID_Botton_1"           
            name="Button 1"
            title="Button 1 Tooltip/title"
            value="Button 1"
@@ -26,6 +26,7 @@
     <label for="ID_Botton_2">Label für Button2: </label>
     <input type="button"
            id="ID_Botton_2"
+           data-fn="ID_Botton_2"
            name="Button 2"
            title="Button 2 Tooltip/title"
            value="Button 2"
