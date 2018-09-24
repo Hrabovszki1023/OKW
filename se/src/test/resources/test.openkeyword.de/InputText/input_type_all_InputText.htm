@@ -1,25 +1,27 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-  <!-- HTML5 -->
-<meta charset="utf-8">  
-  <!-- HTML 4.x -->
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
+﻿<!DOCTYPE HTML>
 <html>
 <head>
+ 	<!-- HTML5 -->
+	<meta charset="utf-8">  
+  	<!-- HTML 4.x -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
 	<title>Textfield TestGUI 1 input_type_all_InputText</title>
 	<link href="../okw.css" type="text/css" rel="stylesheet">
+	
 </head>
-<body>
+<body data-fn="input_type_all_InputText">
     <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png"
          width="150"
          alt="OpenKeyWord Logo">
-    <p>You are on a test page of OpenKeyWord.</p>
+    <p>This is a test page of OpenKeyWord.</p>
 
 	<h1>&lt;input type='???'&gt;</h1>
 
 <form action="input_text.htm">
 	<h3>&lt;input type='text'&gt;</h3>
 		<p><label for="ID_Vorname">Vorname:</label>
-		<input type="text"
+		<input data-fn="Vorname" type="text"
 		name="Vorname"
 		id="ID_Vorname"
 		title="Den Vornamen eingeben."
@@ -27,7 +29,7 @@
 		maxlength="30"></p>
 		
 	<p><label for="ID_Name">Name:</label>
-		<input type="text"
+		<input data-fn="Name" type="text"
 		name="Name"
 		id="ID_Name"
 		title="Den Namen eingeben"
@@ -36,8 +38,8 @@
 		
   <h3>&lt;input type='search'&gt;</h3>
   <p>
-  	<label for="ID_Search">search:</label>
-  	<input type="search" list="Vögel" id="ID_Search">
+  	<label for="ID_Search">Suche:</label>
+  	<input data-fn="Suche" type="search" list="Vögel" id="ID_Search">
     	<datalist id="Vögel">
     	<option value="Amsel"> 
     	<option value="Buntspecht"> 
@@ -52,49 +54,48 @@
 
   <h3>&lt;input type='password'&gt;</h3>
     <label for="ID_Benutzername">Benutzername:</label> 
-    <input type="text" id="IS_Benutzername" size="30" maxlength="30" required>
+    <input data-fn="Benutzername" type="text" id="IS_Benutzername" size="30" maxlength="30" required>
  
-    <label for="ID_passwd">password:</label>
-    <input type="password" id="ID_passwd" size="30" maxlength="40" required>
+    <label for="ID_passwd">Passwort:</label>
+    <input data-fn="Passwort" type="password" id="ID_passwd" size="30" maxlength="40" required>
 
   	<h3>&lt;input type='tel'&gt;</h3>
-		<label for="ID_tel">tel</label>
-		<input type="tel" name="MobilNummer" placeholder="0179-">
+		<label for="ID_tel">Telefon:</label>
+		<input data-fn="Telefon" type="tel" name="MobilNummer" placeholder="0179-">
 
   	<h3>&lt;input type='url'&gt;</h3>
- 	<label for="ID_url">url:</label>
- 	<input type="url" id="url" name="deine-url" value="http://www.">
+ 	<label for="ID_url">URL:</label>
+ 	<input data-fn="URL" type="url" id="url" name="deine-url" value="http://www." placeholder="http://www.">
  	
  	<h3>&lt;input type='email'&gt;</h3>
- 	<label for="ID_email">email:</label>
- 	<input type="email"  id="ID_email" name="email">
+ 	<label for="ID_email">Email:</label>
+ 	<input data-fn="Email" type="email"  id="ID_email" name="email">
  
  	<h2>Date Types</h2>
  	
   	<h3>&lt;input type='date'&gt;</h3>
- 	<label for="ID_date">date:</label>
-	<input type="date" id="ID_date">
+ 	<label for="ID_date">Date:</label>
+	<input data-fn="Date" type="date" id="ID_date">
  	
  	<h3>&lt;input type='datetime'&gt;</h3>
- 	<label for="ID_datetime">datetime:</label>
-    <input type="datetime" id="ID_datetime" name="geburtsdatum" placeholder="1998-12-24T16:39:57-08:00">
-	</label>
+ 	<label for="ID_datetime">Datetime:</label>
+    <input data-fn="Datetime" type="datetime" id="ID_datetime" name="geburtsdatum" placeholder="1998-12-24T16:39:57-08:00">
  	
  	<h3>&lt;input type='datetime-local'&gt;</h3>
- 	<label for="ID_datetime-local">datetime-local:</label>
- 	<input type="datetime-local" id="ID_datetime-local" name="geburtsdatum" placeholder="1999-12-24T06:39:57">
+ 	<label for="ID_datetime-local">Datetime Local:</label>
+ 	<input data-fn="Datetime Local" type="datetime-local" id="ID_datetime-local" name="geburtsdatum" placeholder="1999-12-24T06:39:57">
  	
  	<h3>&lt;input type='week'&gt;</h3>
  	<label for="ID_week">week:</label>
- 	<input type="week" id="ID_week" name="JahrKW" placeholder="1999-w51">
+ 	<input data-fn="Week" type="week" id="ID_week" name="JahrKW" placeholder="1999-w51">
  	
  	<h3>&lt;input type='month'&gt;</h3>
- 	<label for="ID_month">month:</label>
- 	<input type="month" id="ID_month" name="geburtsdatum" placeholder="2014-05">
+ 	<label for="ID_month">Month:</label>
+ 	<input data-fn="Month" type="month" id="ID_month" name="geburtsdatum" placeholder="2014-05">
  	
  	<h3>&lt;input type='time'&gt;</h3>
- 	<label for="ID_time">time:</label> 	
- 	<input type="time" for="ID_time" name="UhrZeit" placeholder="23:59:59">
+ 	<label for="ID_time">Time:</label> 	
+ 	<input data-fn="Time" type="time" for="ID_time" name="UhrZeit" placeholder="23:59:59">
  	
 </form>
 </body>

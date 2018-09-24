@@ -1,5 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+﻿<!DOCTYPE HTML>
 <html>
 <head>
 	<title>Einzeilige Eingabefelder</title>
@@ -20,36 +19,78 @@ type="text"</p>
 <h2>Testobjekt</h2>
 
 <form action="input_text.htm">
-	<p><label for="ID_Anrede">Anrede:</label><br/>
-		<input name="Anrede" id="ID_Anrede" title="Wie soll die Person Angesprocehn werden? Herr/Frau" type="text" size="30" maxlength="40"></p>
-	<p><label for="ID_Vorname">Vorname:</label><br/>
-		<input name="Vorname" id="ID_Vorname" title="Geben Sie bitte den Vornamen ein." type="text" size="30" maxlength="30"></p>
-	<p><label for="ID_Name">Name:</label><br/>
-		<input name="Name" id="ID_Name" title="Geben Sie bitte den Vornamen ein." type="text" size="30" maxlength="40"></p>
-	<p><label for="ID_Titel">Titel:</label><br/>
-		<input name="Titel" id="ID_Titel" title="Geben Sie bitte den Titel ein. Dr./Dr.-Ing./Prof. " type="text" size="30" maxlength="40"></p>
-	<p/>
-	<p><label for="ID_Strasse">Straße:</label><br/>
-		<input name="Strasse" id="ID_Strasse" title="Geben Sie bitte die Strasse ein." type="text" size="30" maxlength="40">
-	<label for="ID_Haus_Nr">Nr:</label>
-		<input name="Haus_Nr" id="ID_Haus_Nr" title="Geben Sie bitte die Hausnummer ein." type="text" size="5" maxlength="5"></p>
-	<p><label for="ID_PLZ">PLZ:</label><br/>
-		<input name="PLZ" id="ID_PLZ" title="Geben Sie bitte die PLZ ein." type="text" size="5" maxlength="5">
-	<label for="ID_Ort">Nr:</label>
-		<input name="Ort" id="ID_Ort" title="Geben Sie bitte den Ort ein." type="text" size="30" maxlength="30"></p>
+	<p>
+	    <label for="ID_Salutation">Salutation:</label><br/>
+		<input name="Salutation" id="ID_Salutation" title="How should the person be addressed? Mr/Mrs" type="text" size="30" maxlength="40">
+	</p>
+	<p>
+	    <label for="ID_First_Name">First Name:</label><br/>
+		<input data-fn="First Name" name="First_Name" id="ID_First_Name" title="Please enter your first name." type="text" size="30" maxlength="30">
+	</p>
+
+	<p>
+	    <label for="ID_Name">Last Name:</label><br/>
+		<input data-fn="Last Name"
+		       name="Last_Name"
+		       id="ID_Name"
+		       title="Please enter your last name."
+		       type="text"
+		       size="30"
+		       maxlength="40">
+	</p>
+
+	<p>
+	    <label for="ID_Title">Title:</label><br/>
+		<input data-fn="Title"
+		       name="Title"
+		       id="ID_Title"
+		       title="Please enter the title."
+		       type="text"
+		       size="30"
+		       maxlength="40">
+	</p>
+	<p>
+	    <label for="ID_Street">Street:</label><br/> 
+		<input data-fn="Street"
+		       name="Street"
+		       id="ID_Street"
+		       title="Please enter the street."
+		       type="text"
+		       size="30"
+		       maxlength="40">
+	    <label for="ID_Haus_Nr">House No:</label>
+		<input data-fn="House_No"
+		       name="House_No"
+		       id="ID_House_No"
+		       title="Geben Sie bitte die Hausnummer ein."
+		       type="text"
+		       size="5"
+		       maxlength="5">
+	</p>
+	<p>
+	    <label for="ID_Postcode">Postcode:</label><br/>
+		<input data-fn="Postcode" name="Postcode" id="ID_Postcode" title="Please enter the postcode." type="text" size="5" maxlength="5">
+	    <label for="ID_Ort">City:</label>
+		<input Data-fn="City" name="City" id="ID_City" title="Please enter the city." type="text" size="30" maxlength="30">
+	</p>
 		
-    <textarea cols="20" rows="4" name="Anzeige"></textarea>
-    <input type="button"
-           name="Speichern"
-           title="Speichern..."
-           value="Speichern"
-           onclick="this.form.Anzeige.value =this.form.Anrede.value 
-                                            + ' ' + this.form.Vorname.value
-                                            + ' ' + this.form.Name.value
-                                            + ' ' + this.form.Strasse.value
-                                            + ' ' + this.form.Haus_Nr.value
-                                            + ' ' + this.form.PLZ.value
-                                            + ' ' + this.form.Ort.value">
+    <textarea data-fn="Display"
+              cols="20"
+              rows="4"
+              name="Display"></textarea>
+    <input data-fn="Save"
+           type="button"
+           name="Save"
+           title="Save..."
+           value="Save"
+           onclick="this.form.Display.value = this.form.Salutation.value 
+							                + ' ' + this.form.Title.value
+                                            + ' ' + this.form.First_Name.value
+                                            + ' ' + this.form.Last_Name.value
+                                            + ' ' + this.form.Street.value
+                                            + ' ' + this.form.House_No.value
+                                            + ' ' + this.form.Postcode.value
+                                            + ' ' + this.form.City.value">
 
 </form>
 </body>
