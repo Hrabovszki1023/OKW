@@ -1,11 +1,10 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-       "http://www.w3.org/TR/html4/strict.dtd">
+﻿<!DOCTYPE HTML>
 <html>
 <head>
 	<title>OKW Link-Testpage</title>
 	<link href="../okw.css" type="text/css" rel="stylesheet">
 </head>
-<body>
+<body data-fn="a">
     <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png"
          width="150"
          alt="OpenKeyWord Logo">
@@ -13,13 +12,21 @@
 
     <h1>&lt;a type="button"&gt;</h1>
 
-<h1><a></h1>
-<p>
-  <label for="ID_Google">Label Google:</label>
-  <a id="ID_Google" href="http://www.google.de" title="Title: Google" name="Google_Link">Google...</a><br/>
-    <label for="ID_Yahoo">Label Yahoo:</label>
-  <a id="ID_Yahoo"  href="http://www.yahoo.de"  title="Title: Yahoo"  name="Yahoo_Link">Yahoo...</a><br/>
-</p>
+    <h1>&lt;a&gt;</h1>
+    <p>
+        <label for="ID_Google">Label Google:</label>
+        <a data-fn="Google"
+           id="ID_Google" 
+           href="http://www.google.de"
+           title="Title: Google">Google...</a>
+        <br/>
+        <label for="ID_Yahoo">Label Yahoo:</label>
+        <a data-fn="Yahoo"
+           id="ID_Yahoo"
+           href="http://www.yahoo.de"
+           title="Title: Yahoo">Yahoo...</a>
+        <br/>
+     </p>
 
 </body>
 </html>
