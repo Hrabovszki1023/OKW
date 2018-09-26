@@ -1,25 +1,25 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+﻿<!DOCTYPE HTML>
 <html>
 <head>
-    <title>ListBox/Auswahliste: Einträge vorselektiert</title>
+    <title>ListBoc With Preselection</title>
 	<link href="../okw.css" type="text/css" rel="stylesheet">
 </head>
-<body>
+<body data-fn="select">
     <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png"
          width="150"
          alt="OpenKeyWord Logo">
-    <p>Sie befinden sich auf einer Entwicklungstestseite von OpenKeyWord.</p>
+    <p>You are on a test page of OpenKeyWord.</p>
 
     <h1>&lt;select&gt;</h1>
 
 
 <p>Auswahlliste mit Scroll-Balken</p>
 <p>
-  <label for="ID_Künstler">Künstler</label>
-  <select name="Künstler"
-          id="ID_Künstler"
-          title="Wähle Interpret aus"
+  <label for="ID_Artist">Artist:</label>
+  <select data-fn="Artist" 
+          name="artist"
+          id="ID_Artist"
+          title="Title: Artist"
           size="3">
     <option>Heino</option>
     <option>Michael Jackson</option>
@@ -29,12 +29,13 @@
    </select>
 </p>
 
-<p>Auswahlliste: select als DropDownList</p>
+<p>Selection as DropDownList</p>
 <p>
-  <label for="ID_Blumen">Blumen</label>
-  <select name="Blumen"
-          id="ID_Blumen"
-          title= "Wähle eine Blume aus"
+  <label for="ID_Flowers">Flowers:</label>
+  <select data-fn="Flowers" 
+          name="Flowers"
+          id="ID_Flowers"
+          title= "Titel: Flowers"
           size="1">
     <option>Tulpe</option>
     <option>Rose</option>
@@ -45,10 +46,11 @@
 
 <p>Auswahlliste: select als DropDownList</p>
 <p>
-  <label for="ID_Fahrzeug">Fahrzeug</label>
-  <select name="Fahrzeug"
-          id="ID_Fahrzeug"
-          title= "Wähle ein Fahrzeug aus"
+  <label for="ID_Vehicle">Vehicle:</label>
+  <select data-fn="Vehicle"
+          name="vehicle"
+          id="ID_Vehicle"
+          title= "Title: Vehicle"
           size="1"
           disabled>
     <option>Dreirad</option>

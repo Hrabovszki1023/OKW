@@ -1,11 +1,10 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-       "http://www.w3.org/TR/html4/strict.dtd">
+﻿<!DOCTYPE HTML>
 <html>
   <head>
     <title>textarea wrap</title>
     <link href="../okw.css" type="text/css" rel="stylesheet">
   </head>
-  <body>
+  <body data-fn="textarea_wrap">
      <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png"
          width="150"
          alt="OpenKeyWord Logo">
@@ -15,35 +14,28 @@
     <h1>&lt;textarea wrap="soft"&gt;</h1>
     
     <form action="textarea_wrap.htm">
-      <p>wrap= "soft":<br><textarea name="soft" cols="80" rows="5" wrap="soft"></textarea></p>
+         <label for="ID_textarea">Wrap is soft:</label>
+         <textarea data-fn="Wrap is soft"
+                   title="Title: Wrap is soft"
+                   name="hard"
+                   cols="80"
+                   rows="3"
+                   wrap="soft">
+         </textarea>
     </form>
 
 
     <h1>&lt;textarea wrap="hard"&gt;</h1>
     
     <form action="textarea_wrap.htm">
-      <p>wrap= "hard":<br><textarea name="hard" cols="80" rows="3" wrap="hard"></textarea></p>
-    </form>
-
-
-    <h1>&lt;textarea wrap="physical"&gt;</h1>
-    
-    <form action="textarea_wrap.htm">
-      <p>wrap= "physical":<br><textarea name="physical" cols="80" rows="5" wrap="physical"></textarea></p>
-    </form>
-    
-    
-    <h1>&lt;textarea wrap="virtual"&gt;</h1>
-    
-    <form action="textarea_wrap.htm">
-      <p>wrap= "virtual":<br><textarea name="virtual" cols="80" rows="5" wrap="virtual"></textarea></p>
-    </form>
-
-
-    <h1>&lt;textarea wrap="off"&gt;</h1>
-    
-    <form action="textarea_wrap.htm">
-      <p>wrap= "off":<br><textarea name="off" cols="80" rows="5" wrap="off"></textarea></p>
+         <label for="ID_textarea">Wrap is hard:</label>
+         <textarea data-fn="Wrap is hard"
+                   title="Title: Wrap is hard"
+                   name="hard"
+                   cols="80"
+                   rows="3"
+                   wrap="hard">
+         </textarea>
     </form>
 
   </body>
