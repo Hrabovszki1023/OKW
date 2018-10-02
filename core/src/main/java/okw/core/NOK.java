@@ -379,6 +379,16 @@ public class NOK implements IOKW_State
     }
 
     /**
+     *  \copydoc IOKW_State::SelectChild(String)
+     */
+    public void SelectChild( String FN )
+    {
+        Log.LogFunctionStartDebug( "SelectWindow", "FN", FN );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
      *  \copydoc IOKW_State::Sequence(String,String,String)
      */
     public void Sequence( String FN, String SeqName, String SEQ_ID )

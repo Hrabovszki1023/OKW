@@ -750,6 +750,65 @@ public class EN_Keywords_Test
 
     // \~german
     // \brief
+    //
+    //
+    // \~english
+    // \~
+    // \author Zoltan Hrabovszki
+    // \date 2014.03.19
+    @Test
+    public void tc_SelectChild() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        myClipBoard.Clear();
+        EN.SelectChild( "All_MethodsObj" );
+        EN.SetValue( "SELECTEDCHILD", "YES" );
+        EN.SetFocus( "SELECTEDCHILD" );
+
+        assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "SetFocus()", myClipBoard.getMethod() );
+        assertEquals( 1, myClipBoard.getValue().size() );
+    }
+
+    // \~german
+    // \brief
+    //
+    //
+    // \~english
+    // \~
+    // \author Zoltan Hrabovszki
+    // \date 2014.03.19
+    @Test
+    public void tc_SELECTEDCHILD() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        myClipBoard.Clear();
+        //EN.SelectChild( "All_MethodsObj" );
+        EN.SetValue( "All_MethodsObj", "YES" );
+        EN.SetFocus( "SELECTEDCHILD" );
+
+        assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "SetFocus()", myClipBoard.getMethod() );
+        assertEquals( 1, myClipBoard.getValue().size() );
+    }
+
+    
+    // \~german
+    // \brief
     // Prüft den Methodenaufruf Select mit einem einzelnen Wert.
     // Prüft Ziel es darf nur ein Wert im List of string übergabe Parameter
     // enthalten sein.

@@ -1008,6 +1008,29 @@ public class OK implements IOKW_State
         }
     }
 
+    
+    /**
+     *  \copydoc IOKW_State::SelectChild(String)
+     */
+    public void SelectChild( String FN ) throws Exception
+    {
+        Log.LogFunctionStartDebug( "SelectChild", "FN", FN );
+
+        try
+        {
+            CO.setChildName( FN );
+        }
+        catch (Exception e)
+        {
+            this.handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+    
     /**
      *  \copydoc IOKW_State::Sequence(String,String,String)
      */

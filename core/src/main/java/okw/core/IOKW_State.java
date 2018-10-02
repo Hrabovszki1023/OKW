@@ -745,6 +745,43 @@ public interface IOKW_State
      */
     void SelectWindow( String FN ) throws Exception;
 
+    /** 
+     * \~german
+     *  Setzt den Wert von SELECTEDCHILD auf den Wert von FN.
+     *  
+     *  In nachfolgenden OpeKeywords kann dieser Wert mit "SELECTEDCHILD" abgerufen bzw referenziert werden.
+     *  
+     *  _Beispiel:_ Auswahl des Kindobjektes mit dem Namen "MeinKindobjekt" <br>
+     *  \code{java}
+     *  EN.SelectChild( "MeinKindobjekt" )
+     *  EN.SetValue("SELECTEDCHILD", "MyValue")
+     *  EN.VerifyValue("SELECTEDCHILD", "MyValue")
+     *  EN.VerifyLabel("SELECTEDCHILD", "MyLabel")
+     *  \endcode
+     *  
+     *  @param FN Funktionaler Name des KindObjektes 
+     * 
+     *  \~english
+     *  Sets the value of SELECTEDCHILD to the value of FN.
+     *  
+     *  In the following OpeKeywords this value can be retrieved or referenced with "SELECTEDCHILD".
+     *  
+     *  _Example:_ Selection of the child object with the name "MyChildObject".<br>
+     *  \code{java}
+     *  EN.SelectChild( "MeinKindobjekt" )
+     *  EN.SetValue("SELECTEDCHILD", "MyValue")
+     *  EN.VerifyValue("SELECTEDCHILD", "MyValue")
+     *  EN.VerifyLabel("SELECTEDCHILD", "MyLabel")
+     *  \endcode
+     *  
+     *  @param FN Functional Name of the object 
+     * 
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2018-10-02
+     */
+    void SelectChild( String FN ) throws Exception;   
+    
     /** \~german
      *  Ruft die Sequenz eines Fensters auf.
      *  
@@ -840,7 +877,7 @@ public interface IOKW_State
      *  Inputs of the object are written over with "Val".
      * 
      *  _Example: Set the value of the objekt "MyWindow" to "Hello":_ <br>
-     *  \verbatim Set Value: "Name", "Zoltan" \endverbatim
+     *  \verbatim EN.SetValue( "Name", "Zoltan" ) \endverbatim
      *  
      *  @param FN Functional name of the object 
      *  @param Val Resulting value 
