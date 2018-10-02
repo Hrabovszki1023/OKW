@@ -566,6 +566,23 @@ public class Core implements IOKW_State
     }
 
     /**
+     * \copydoc IOKW_State::SelectChild(String)
+     */
+    public void SelectChild( String FN ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "SelectWindow", "KeyWordName" ), FN );
+            this.CurrentState.SelectChild( FN );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+
+    
+    /**
      * \copydoc IOKW_State::Sequence(String,String,String)
      */
     public void Sequence( String FN, String fpsSequenName, String SEQID ) throws Exception

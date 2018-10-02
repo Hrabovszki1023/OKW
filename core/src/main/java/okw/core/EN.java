@@ -315,6 +315,15 @@ public class EN
     }
 
     /**
+     *  \copydoc IOKW_State::SelectChild(String)
+     */
+    public static void SelectChild( String FN ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.SelectChild( FN );
+    }
+
+    /**
      *  \copydoc IOKW_State::Sequence(String,String,String)
      */
     public static void Sequence( String fpsObjectName, String fpsSequenceName, String SEQID ) throws Exception
