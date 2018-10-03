@@ -48,47 +48,47 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 788;
 var viewHeight = 1691;
-var sectionId = 'dynsection-61';
+var sectionId = 'dynsection-62';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>okw.core.IOKW_State.VerifyValueWCM</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-1687 784,-1687 784,4 -4,4"/>
-<!-- Node3438 -->
-<g id="node1" class="node"><title>Node3438</title>
+<!-- Node3443 -->
+<g id="node1" class="node"><title>Node3443</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-758 0.5,-788 143.5,-788 143.5,-758 0.5,-758"/>
 <text text-anchor="start" x="8.5" y="-776" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.Verify</text>
 <text text-anchor="middle" x="72" y="-765" font-family="Helvetica,sans-Serif" font-size="10.00">ValueWCM</text>
 </g>
-<!-- Node3439 -->
-<g id="node2" class="node"><title>Node3439</title>
+<!-- Node3444 -->
+<g id="node2" class="node"><title>Node3444</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_core.html#aaf9b78aa2200f60eb453331116e53704" target="_top" xlink:title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)...">
 <polygon fill="white" stroke="black" points="180.5,-763.5 180.5,-782.5 339.5,-782.5 339.5,-763.5 180.5,-763.5"/>
 <text text-anchor="middle" x="260" y="-770.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.VerifyValueWCM</text>
 </a>
 </g>
 </g>
-<!-- Node3438&#45;&gt;Node3439 -->
-<g id="edge1" class="edge"><title>Node3438&#45;&gt;Node3439</title>
+<!-- Node3443&#45;&gt;Node3444 -->
+<g id="edge1" class="edge"><title>Node3443&#45;&gt;Node3444</title>
 <path fill="none" stroke="midnightblue" d="M153.836,-773C162.644,-773 171.599,-773 180.38,-773"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="153.584,-769.5 143.584,-773 153.584,-776.5 153.584,-769.5"/>
 </g>
-<!-- Node3440 -->
-<g id="node3" class="node"><title>Node3440</title>
+<!-- Node3445 -->
+<g id="node3" class="node"><title>Node3445</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_e_n.html#acae40ba869cd9f7f36a967050f52c515" target="_top" xlink:title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)...">
 <polygon fill="white" stroke="black" points="376,-763.5 376,-782.5 528,-782.5 528,-763.5 376,-763.5"/>
 <text text-anchor="middle" x="452" y="-770.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.VerifyValueWCM</text>
 </a>
 </g>
 </g>
-<!-- Node3439&#45;&gt;Node3440 -->
-<g id="edge2" class="edge"><title>Node3439&#45;&gt;Node3440</title>
+<!-- Node3444&#45;&gt;Node3445 -->
+<g id="edge2" class="edge"><title>Node3444&#45;&gt;Node3445</title>
 <path fill="none" stroke="midnightblue" d="M349.797,-773C358.481,-773 367.235,-773 375.766,-773"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="349.652,-769.5 339.652,-773 349.652,-776.5 349.652,-769.5"/>
 </g>
-<!-- Node3441 -->
-<g id="node4" class="node"><title>Node3441</title>
+<!-- Node3446 -->
+<g id="node4" class="node"><title>Node3446</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html#af439c47a1f9b1e2547e659db69fec77a" target="_top" xlink:title="okw.core.EN_Keywords\l_ANTLR_Test.tc_VerifyValueWCM\l_MemorizedValue">
 <polygon fill="white" stroke="black" points="586,-1641.5 586,-1682.5 758,-1682.5 758,-1641.5 586,-1641.5"/>
 <text text-anchor="start" x="594" y="-1670.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_Keywords</text>
@@ -97,13 +97,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3441 -->
-<g id="edge3" class="edge"><title>Node3440&#45;&gt;Node3441</title>
+<!-- Node3445&#45;&gt;Node3446 -->
+<g id="edge3" class="edge"><title>Node3445&#45;&gt;Node3446</title>
 <path fill="none" stroke="midnightblue" d="M452.732,-792.809C451.566,-908.82 451.292,-1499.53 564,-1631 570.042,-1638.05 577.58,-1643.54 585.841,-1647.82"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="456.235,-792.614 452.851,-782.574 449.235,-792.533 456.235,-792.614"/>
 </g>
-<!-- Node3442 -->
-<g id="node5" class="node"><title>Node3442</title>
+<!-- Node3447 -->
+<g id="node5" class="node"><title>Node3447</title>
 <g id="a_node5"><a xlink:href="classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#aef1aa280938a881904e91fbb8db09a8b" target="_top" xlink:title="okw.core.EN_Keywords\l_DELETE_Test.tcVerifyTablecell\lValueWCM_DELETE_OKWNotAllowedValue\lException">
 <polygon fill="white" stroke="black" points="564.5,-1570 564.5,-1622 779.5,-1622 779.5,-1570 564.5,-1570"/>
 <text text-anchor="start" x="572.5" y="-1610" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_Keywords</text>
@@ -113,13 +113,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3442 -->
-<g id="edge4" class="edge"><title>Node3440&#45;&gt;Node3442</title>
+<!-- Node3445&#45;&gt;Node3447 -->
+<g id="edge4" class="edge"><title>Node3445&#45;&gt;Node3447</title>
 <path fill="none" stroke="midnightblue" d="M453.091,-792.768C453.984,-902.583 463.502,-1437.01 564,-1559 567.374,-1563.1 571.227,-1566.74 575.42,-1569.98"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="456.591,-792.719 453.025,-782.742 449.591,-792.765 456.591,-792.719"/>
 </g>
-<!-- Node3443 -->
-<g id="node6" class="node"><title>Node3443</title>
+<!-- Node3448 -->
+<g id="node6" class="node"><title>Node3448</title>
 <g id="a_node6"><a xlink:href="classokw_1_1core_1_1_e_n___keywords___empty___test.html#a083f77bd6fdf453e5fa50fd6795f48b3" target="_top" xlink:title="Prüft &quot;${EMPTY}&quot; für das Schlüsselwort VerifyValue(string,string) ">
 <polygon fill="white" stroke="black" points="585.5,-1509.5 585.5,-1550.5 758.5,-1550.5 758.5,-1509.5 585.5,-1509.5"/>
 <text text-anchor="start" x="593.5" y="-1538.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_Keywords</text>
@@ -128,13 +128,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3443 -->
-<g id="edge5" class="edge"><title>Node3440&#45;&gt;Node3443</title>
+<!-- Node3445&#45;&gt;Node3448 -->
+<g id="edge5" class="edge"><title>Node3445&#45;&gt;Node3448</title>
 <path fill="none" stroke="midnightblue" d="M453.222,-792.671C454.804,-897.608 467.351,-1390.79 564,-1500 569.946,-1506.72 577.261,-1511.99 585.254,-1516.11"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="456.72,-792.499 453.087,-782.547 449.721,-792.593 456.72,-792.499"/>
 </g>
-<!-- Node3444 -->
-<g id="node7" class="node"><title>Node3444</title>
+<!-- Node3449 -->
+<g id="node7" class="node"><title>Node3449</title>
 <g id="a_node7"><a xlink:href="classokw_1_1core_1_1_e_n___keywords___test.html#a58b68d3cc96183dd2ca9a4eee78fc409" target="_top" xlink:title="okw.core.EN_Keywords\l_Test.tc_VerifyValueWCM">
 <polygon fill="white" stroke="black" points="605,-1461 605,-1491 739,-1491 739,-1461 605,-1461"/>
 <text text-anchor="start" x="613" y="-1479" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_Keywords</text>
@@ -142,13 +142,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3444 -->
-<g id="edge6" class="edge"><title>Node3440&#45;&gt;Node3444</title>
+<!-- Node3445&#45;&gt;Node3449 -->
+<g id="edge6" class="edge"><title>Node3445&#45;&gt;Node3449</title>
 <path fill="none" stroke="midnightblue" d="M453.384,-792.997C455.744,-894.529 471.447,-1352 564,-1451 574.748,-1462.5 589.681,-1469.18 604.986,-1472.96"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="456.881,-792.808 453.167,-782.885 449.882,-792.958 456.881,-792.808"/>
 </g>
-<!-- Node3445 -->
-<g id="node8" class="node"><title>Node3445</title>
+<!-- Node3450 -->
+<g id="node8" class="node"><title>Node3450</title>
 <g id="a_node8"><a xlink:href="classokw_1_1core_1_1_e_n___keywords___test.html#ab12d01ec6e1714261c26aef0c2a40df6" target="_top" xlink:title="okw.core.EN_Keywords\l_Test.tc_VerifyValueWCM\l_MultipleValues">
 <polygon fill="white" stroke="black" points="605,-1401.5 605,-1442.5 739,-1442.5 739,-1401.5 605,-1401.5"/>
 <text text-anchor="start" x="613" y="-1430.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_Keywords</text>
@@ -157,13 +157,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3445 -->
-<g id="edge7" class="edge"><title>Node3440&#45;&gt;Node3445</title>
+<!-- Node3445&#45;&gt;Node3450 -->
+<g id="edge7" class="edge"><title>Node3445&#45;&gt;Node3450</title>
 <path fill="none" stroke="midnightblue" d="M453.83,-792.929C458.206,-888.561 481.622,-1299.55 564,-1391 574.679,-1402.86 589.588,-1410.29 604.891,-1414.92"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="457.323,-792.709 453.388,-782.872 450.33,-793.016 457.323,-792.709"/>
 </g>
-<!-- Node3446 -->
-<g id="node9" class="node"><title>Node3446</title>
+<!-- Node3451 -->
+<g id="node9" class="node"><title>Node3451</title>
 <g id="a_node9"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#aaef560ba92da037187a978233be33a08" target="_top" xlink:title="Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die LFC&#45;VerifyValue ausgelöst wird...">
 <polygon fill="white" stroke="black" points="566.5,-1330 566.5,-1382 777.5,-1382 777.5,-1330 566.5,-1330"/>
 <text text-anchor="start" x="574.5" y="-1370" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWFrameObject</text>
@@ -173,13 +173,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3446 -->
-<g id="edge8" class="edge"><title>Node3440&#45;&gt;Node3446</title>
+<!-- Node3445&#45;&gt;Node3451 -->
+<g id="edge8" class="edge"><title>Node3445&#45;&gt;Node3451</title>
 <path fill="none" stroke="midnightblue" d="M454.408,-792.755C461.075,-881.037 492.192,-1238.66 564,-1320 567.243,-1323.67 570.873,-1326.97 574.783,-1329.94"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="457.881,-792.258 453.656,-782.542 450.899,-792.772 457.881,-792.258"/>
 </g>
-<!-- Node3447 -->
-<g id="node10" class="node"><title>Node3447</title>
+<!-- Node3452 -->
+<g id="node10" class="node"><title>Node3452</title>
 <g id="a_node10"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a871f31309255e4dc9807870b6decb789" target="_top" xlink:title="Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von VerifyValueWCM( FN, ExpVal ) ausgelöst w...">
 <polygon fill="white" stroke="black" points="564.5,-1259 564.5,-1311 779.5,-1311 779.5,-1259 564.5,-1259"/>
 <text text-anchor="start" x="572.5" y="-1299" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWFrameObject</text>
@@ -189,13 +189,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3447 -->
-<g id="edge9" class="edge"><title>Node3440&#45;&gt;Node3447</title>
+<!-- Node3445&#45;&gt;Node3452 -->
+<g id="edge9" class="edge"><title>Node3445&#45;&gt;Node3452</title>
 <path fill="none" stroke="midnightblue" d="M455.128,-793.173C464.1,-874.657 501.301,-1178.46 564,-1248 567.685,-1252.09 571.845,-1255.72 576.33,-1258.96"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="458.563,-792.384 454.009,-782.818 451.604,-793.136 458.563,-792.384"/>
 </g>
-<!-- Node3448 -->
-<g id="node11" class="node"><title>Node3448</title>
+<!-- Node3453 -->
+<g id="node11" class="node"><title>Node3453</title>
 <g id="a_node11"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a76b5e8a6ab3e32e9d1eaab7c95be1c77" target="_top" xlink:title="Prüft ob &quot;${IGNORE} &quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst. ">
 <polygon fill="white" stroke="black" points="575,-1198.5 575,-1239.5 769,-1239.5 769,-1198.5 575,-1198.5"/>
 <text text-anchor="start" x="583" y="-1227.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -204,13 +204,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3448 -->
-<g id="edge10" class="edge"><title>Node3440&#45;&gt;Node3448</title>
+<!-- Node3445&#45;&gt;Node3453 -->
+<g id="edge10" class="edge"><title>Node3445&#45;&gt;Node3453</title>
 <path fill="none" stroke="midnightblue" d="M455.734,-793.055C466.324,-867.919 506.906,-1129.71 564,-1188 567.789,-1191.87 572.03,-1195.26 576.578,-1198.24"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="459.139,-792.127 454.294,-782.705 452.206,-793.092 459.139,-792.127"/>
 </g>
-<!-- Node3449 -->
-<g id="node12" class="node"><title>Node3449</title>
+<!-- Node3454 -->
+<g id="node12" class="node"><title>Node3454</title>
 <g id="a_node12"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#ae440a39281c24ab0e3d2b613f2a6e287" target="_top" xlink:title="Prüft ob &quot;&quot;${IGNORE}${TCN}&quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst...">
 <polygon fill="white" stroke="black" points="575,-1138.5 575,-1179.5 769,-1179.5 769,-1138.5 575,-1138.5"/>
 <text text-anchor="start" x="583" y="-1167.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -219,13 +219,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3449 -->
-<g id="edge11" class="edge"><title>Node3440&#45;&gt;Node3449</title>
+<!-- Node3445&#45;&gt;Node3454 -->
+<g id="edge11" class="edge"><title>Node3445&#45;&gt;Node3454</title>
 <path fill="none" stroke="midnightblue" d="M453.052,-792.869C454.321,-852.632 466.459,-1032.49 564,-1128 568.007,-1131.92 572.48,-1135.36 577.261,-1138.36"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="456.548,-792.533 452.921,-782.578 449.548,-792.622 456.548,-792.533"/>
 </g>
-<!-- Node3450 -->
-<g id="node13" class="node"><title>Node3450</title>
+<!-- Node3455 -->
+<g id="node13" class="node"><title>Node3455</title>
 <g id="a_node13"><a xlink:href="classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#a5165c970a18d108df0ba9f08900643b7" target="_top" xlink:title="Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist&#45;Vergleich ausgelöst wird...">
 <polygon fill="white" stroke="black" points="569,-1067 569,-1119 775,-1119 775,-1067 569,-1067"/>
 <text text-anchor="start" x="577" y="-1107" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_VerifyValue</text>
@@ -235,13 +235,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3450 -->
-<g id="edge12" class="edge"><title>Node3440&#45;&gt;Node3450</title>
+<!-- Node3445&#45;&gt;Node3455 -->
+<g id="edge12" class="edge"><title>Node3445&#45;&gt;Node3455</title>
 <path fill="none" stroke="midnightblue" d="M455.022,-792.714C461.306,-843.814 485.088,-981.79 564,-1057 567.831,-1060.65 572.044,-1063.93 576.516,-1066.88"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="458.488,-792.216 453.88,-782.676 451.532,-793.007 458.488,-792.216"/>
 </g>
-<!-- Node3451 -->
-<g id="node14" class="node"><title>Node3451</title>
+<!-- Node3456 -->
+<g id="node14" class="node"><title>Node3456</title>
 <g id="a_node14"><a xlink:href="classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#ab209defc88377a7a63754e3ab513c6f3" target="_top" xlink:title="Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist&#45;Vergleich ausgelöst wird...">
 <polygon fill="white" stroke="black" points="569,-996 569,-1048 775,-1048 775,-996 569,-996"/>
 <text text-anchor="start" x="577" y="-1036" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_VerifyValue</text>
@@ -251,13 +251,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3451 -->
-<g id="edge13" class="edge"><title>Node3440&#45;&gt;Node3451</title>
+<!-- Node3445&#45;&gt;Node3456 -->
+<g id="edge13" class="edge"><title>Node3445&#45;&gt;Node3456</title>
 <path fill="none" stroke="midnightblue" d="M457.8,-792.406C469.075,-833.989 501.161,-932.264 564,-986 568.32,-989.694 573.034,-993.013 577.998,-995.995"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="461.177,-791.483 455.269,-782.688 454.403,-793.247 461.177,-791.483"/>
 </g>
-<!-- Node3452 -->
-<g id="node15" class="node"><title>Node3452</title>
+<!-- Node3457 -->
+<g id="node15" class="node"><title>Node3457</title>
 <g id="a_node15"><a xlink:href="classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#ae6c3f62c653a07e74ebaa8c4fb132fc6" target="_top" xlink:title="Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist&#45;Vergleich ausgelöst wird...">
 <polygon fill="white" stroke="black" points="569,-925 569,-977 775,-977 775,-925 569,-925"/>
 <text text-anchor="start" x="577" y="-965" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_VerifyValue</text>
@@ -267,13 +267,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3452 -->
-<g id="edge14" class="edge"><title>Node3440&#45;&gt;Node3452</title>
+<!-- Node3445&#45;&gt;Node3457 -->
+<g id="edge14" class="edge"><title>Node3445&#45;&gt;Node3457</title>
 <path fill="none" stroke="midnightblue" d="M462.71,-791.514C479.434,-821.666 516.5,-881.38 564,-915 569.119,-918.623 574.631,-921.903 580.356,-924.869"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="465.67,-789.631 457.832,-782.503 459.514,-792.963 465.67,-789.631"/>
 </g>
-<!-- Node3453 -->
-<g id="node16" class="node"><title>Node3453</title>
+<!-- Node3458 -->
+<g id="node16" class="node"><title>Node3458</title>
 <g id="a_node16"><a xlink:href="classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#ad16f9e8ca5ae70fe54f92c611a3329f2" target="_top" xlink:title="Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist&#45;Vergleich ausgelöst wird...">
 <polygon fill="white" stroke="black" points="569,-854 569,-906 775,-906 775,-854 569,-854"/>
 <text text-anchor="start" x="577" y="-894" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_VerifyValue</text>
@@ -283,13 +283,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3453 -->
-<g id="edge15" class="edge"><title>Node3440&#45;&gt;Node3453</title>
+<!-- Node3445&#45;&gt;Node3458 -->
+<g id="edge15" class="edge"><title>Node3445&#45;&gt;Node3458</title>
 <path fill="none" stroke="midnightblue" d="M473.855,-788.548C495.516,-804.155 530.818,-828.102 564,-844 571.335,-847.515 579.104,-850.836 586.974,-853.934"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="475.862,-785.68 465.72,-782.615 471.738,-791.335 475.862,-785.68"/>
 </g>
-<!-- Node3454 -->
-<g id="node17" class="node"><title>Node3454</title>
+<!-- Node3459 -->
+<g id="node17" class="node"><title>Node3459</title>
 <g id="a_node17"><a xlink:href="classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#a03f8b2e374e6d6a4a5f387d7fb29986a" target="_top" xlink:title="Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist&#45;Vergleich ausgelöst wird...">
 <polygon fill="white" stroke="black" points="569,-783 569,-835 775,-835 775,-783 569,-783"/>
 <text text-anchor="start" x="577" y="-823" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_VerifyValue</text>
@@ -299,13 +299,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3454 -->
-<g id="edge16" class="edge"><title>Node3440&#45;&gt;Node3454</title>
+<!-- Node3445&#45;&gt;Node3459 -->
+<g id="edge16" class="edge"><title>Node3445&#45;&gt;Node3459</title>
 <path fill="none" stroke="midnightblue" d="M520.435,-784.136C535.767,-786.668 552.388,-789.413 568.803,-792.123"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="520.999,-780.682 510.562,-782.506 519.858,-787.588 520.999,-780.682"/>
 </g>
-<!-- Node3455 -->
-<g id="node18" class="node"><title>Node3455</title>
+<!-- Node3460 -->
+<g id="node18" class="node"><title>Node3460</title>
 <g id="a_node18"><a xlink:href="classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#a883a6ebbb1ca9b7bb63fbe8bf8b60092" target="_top" xlink:title="Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist&#45;Vergleich ausgelöst wird...">
 <polygon fill="white" stroke="black" points="569,-712 569,-764 775,-764 775,-712 569,-712"/>
 <text text-anchor="start" x="577" y="-752" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_VerifyValue</text>
@@ -315,13 +315,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3455 -->
-<g id="edge17" class="edge"><title>Node3440&#45;&gt;Node3455</title>
+<!-- Node3445&#45;&gt;Node3460 -->
+<g id="edge17" class="edge"><title>Node3445&#45;&gt;Node3460</title>
 <path fill="none" stroke="midnightblue" d="M522.353,-761.865C537.187,-759.484 553.155,-756.92 568.928,-754.388"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="521.6,-758.441 512.282,-763.482 522.71,-765.353 521.6,-758.441"/>
 </g>
-<!-- Node3456 -->
-<g id="node19" class="node"><title>Node3456</title>
+<!-- Node3461 -->
+<g id="node19" class="node"><title>Node3461</title>
 <g id="a_node19"><a xlink:href="classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#ab7fac13fbe8c938942c1469eb9038903" target="_top" xlink:title="Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist&#45;Vergleich ausgelöst wird...">
 <polygon fill="white" stroke="black" points="569,-641 569,-693 775,-693 775,-641 569,-641"/>
 <text text-anchor="start" x="577" y="-681" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_VerifyValue</text>
@@ -331,13 +331,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3456 -->
-<g id="edge18" class="edge"><title>Node3440&#45;&gt;Node3456</title>
+<!-- Node3445&#45;&gt;Node3461 -->
+<g id="edge18" class="edge"><title>Node3445&#45;&gt;Node3461</title>
 <path fill="none" stroke="midnightblue" d="M474.247,-757.441C495.964,-742.066 531.084,-718.641 564,-703 571.435,-699.467 579.311,-696.124 587.282,-693.004"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="472.165,-754.626 466.074,-763.295 476.242,-760.317 472.165,-754.626"/>
 </g>
-<!-- Node3457 -->
-<g id="node20" class="node"><title>Node3457</title>
+<!-- Node3462 -->
+<g id="node20" class="node"><title>Node3462</title>
 <g id="a_node20"><a xlink:href="classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#abbf11b28d6f4eee6538d5ecebe6544c6" target="_top" xlink:title="Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist&#45;Vergleich ausgelöst wird...">
 <polygon fill="white" stroke="black" points="569,-570 569,-622 775,-622 775,-570 569,-570"/>
 <text text-anchor="start" x="577" y="-610" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_VerifyValue</text>
@@ -347,13 +347,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3457 -->
-<g id="edge19" class="edge"><title>Node3440&#45;&gt;Node3457</title>
+<!-- Node3445&#45;&gt;Node3462 -->
+<g id="edge19" class="edge"><title>Node3445&#45;&gt;Node3462</title>
 <path fill="none" stroke="midnightblue" d="M462.988,-754.182C479.875,-724.109 516.879,-665.231 564,-632 569.206,-628.329 574.814,-625.01 580.639,-622.012"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="459.784,-752.746 458.047,-763.198 465.922,-756.111 459.784,-752.746"/>
 </g>
-<!-- Node3458 -->
-<g id="node21" class="node"><title>Node3458</title>
+<!-- Node3463 -->
+<g id="node21" class="node"><title>Node3463</title>
 <g id="a_node21"><a xlink:href="classbrowser_1_1_frm_browser_base___test.html#ad01c53c3708838d512938da461830fd9" target="_top" xlink:title="Testet das Schlüsselwort VerifyValueWCM( FN ) für das Virtuelle&#45;GUI&#45;Adapter URL Prüfen. ">
 <polygon fill="white" stroke="black" points="607,-521 607,-551 737,-551 737,-521 607,-521"/>
 <text text-anchor="start" x="615" y="-539" font-family="Helvetica,sans-Serif" font-size="10.00">browser.FrmBrowserBase</text>
@@ -361,13 +361,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3458 -->
-<g id="edge20" class="edge"><title>Node3440&#45;&gt;Node3458</title>
+<!-- Node3445&#45;&gt;Node3463 -->
+<g id="edge20" class="edge"><title>Node3445&#45;&gt;Node3463</title>
 <path fill="none" stroke="midnightblue" d="M457.451,-753.221C468.043,-710.925 498.872,-611.441 564,-561 576.292,-551.48 591.602,-545.488 606.763,-541.742"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="454.007,-752.575 455.087,-763.115 460.815,-754.202 454.007,-752.575"/>
 </g>
-<!-- Node3459 -->
-<g id="node22" class="node"><title>Node3459</title>
+<!-- Node3464 -->
+<g id="node22" class="node"><title>Node3464</title>
 <g id="a_node22"><a xlink:href="classbrowser_1_1_frm_browser_base___test.html#a5e58bf20d8282c9d70074171013081fc" target="_top" xlink:title="Testet das Schlüsselwort VerifyValueWCM( FN ) für das Virtuelle&#45;GUI&#45;Adapter URL Prüfen. ">
 <polygon fill="white" stroke="black" points="595,-472 595,-502 749,-502 749,-472 595,-472"/>
 <text text-anchor="start" x="603" y="-490" font-family="Helvetica,sans-Serif" font-size="10.00">browser.FrmBrowserBase</text>
@@ -375,13 +375,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3459 -->
-<g id="edge21" class="edge"><title>Node3440&#45;&gt;Node3459</title>
+<!-- Node3445&#45;&gt;Node3464 -->
+<g id="edge21" class="edge"><title>Node3445&#45;&gt;Node3464</title>
 <path fill="none" stroke="midnightblue" d="M455.348,-753.167C462.246,-704.167 487.063,-576.685 564,-512 572.907,-504.511 583.645,-499.172 594.834,-495.383"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="451.841,-752.997 454.017,-763.366 458.782,-753.903 451.841,-752.997"/>
 </g>
-<!-- Node3460 -->
-<g id="node23" class="node"><title>Node3460</title>
+<!-- Node3465 -->
+<g id="node23" class="node"><title>Node3465</title>
 <g id="a_node23"><a xlink:href="classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#a2a157b68191b8519ea32fe39a1a04b4b" target="_top" xlink:title="Test des Schlüsselwortes &quot;VerifyValueWCM( FN, ExpValu ) für SeBACK. ">
 <polygon fill="white" stroke="black" points="569,-412.5 569,-453.5 775,-453.5 775,-412.5 569,-412.5"/>
 <text text-anchor="start" x="577" y="-441.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeBACK.SeBACK_EN</text>
@@ -390,13 +390,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3460 -->
-<g id="edge22" class="edge"><title>Node3440&#45;&gt;Node3460</title>
+<!-- Node3445&#45;&gt;Node3465 -->
+<g id="edge22" class="edge"><title>Node3445&#45;&gt;Node3465</title>
 <path fill="none" stroke="midnightblue" d="M454.031,-753.459C457.983,-699.022 476.736,-544.32 564,-463 567.811,-459.449 572.008,-456.313 576.468,-453.544"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="450.535,-753.289 453.393,-763.491 457.521,-753.734 450.535,-753.289"/>
 </g>
-<!-- Node3461 -->
-<g id="node24" class="node"><title>Node3461</title>
+<!-- Node3466 -->
+<g id="node24" class="node"><title>Node3466</title>
 <g id="a_node24"><a xlink:href="classokw_1_1_se_button_1_1_se_button___e_n___test.html#a71a7ee883da39945857e9d251bd4eaa6" target="_top" xlink:title="Test des Schlüsselwortes VerifyValueWCM für den GUI&#45;Adapter SeButton. ">
 <polygon fill="white" stroke="black" points="569,-352.5 569,-393.5 775,-393.5 775,-352.5 569,-352.5"/>
 <text text-anchor="start" x="577" y="-381.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeButton.SeButton</text>
@@ -405,13 +405,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3461 -->
-<g id="edge23" class="edge"><title>Node3440&#45;&gt;Node3461</title>
+<!-- Node3445&#45;&gt;Node3466 -->
+<g id="edge23" class="edge"><title>Node3445&#45;&gt;Node3466</title>
 <path fill="none" stroke="midnightblue" d="M452.719,-753.071C452.979,-691.55 462.409,-502.769 564,-403 567.579,-399.485 571.534,-396.375 575.753,-393.623"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="449.22,-753.337 452.761,-763.323 456.22,-753.308 449.22,-753.337"/>
 </g>
-<!-- Node3462 -->
-<g id="node25" class="node"><title>Node3462</title>
+<!-- Node3467 -->
+<g id="node25" class="node"><title>Node3467</title>
 <g id="a_node25"><a xlink:href="classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a60d79636eacaede185bf8ae403e862b8" target="_top" xlink:title="Test des Schlüsselwortes &quot;VerifyValueWCM( FN, ExpValu ) für SeInputText. ">
 <polygon fill="white" stroke="black" points="587.5,-304 587.5,-334 756.5,-334 756.5,-304 587.5,-304"/>
 <text text-anchor="start" x="595.5" y="-322" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputField.SeInput</text>
@@ -419,13 +419,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3462 -->
-<g id="edge24" class="edge"><title>Node3440&#45;&gt;Node3462</title>
+<!-- Node3445&#45;&gt;Node3467 -->
+<g id="edge24" class="edge"><title>Node3445&#45;&gt;Node3467</title>
 <path fill="none" stroke="midnightblue" d="M455.39,-753.091C464.987,-676.462 503.157,-401.928 564,-343 570.701,-336.51 578.757,-331.625 587.403,-327.969"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="451.885,-752.919 454.139,-763.271 458.833,-753.773 451.885,-752.919"/>
 </g>
-<!-- Node3463 -->
-<g id="node26" class="node"><title>Node3463</title>
+<!-- Node3468 -->
+<g id="node26" class="node"><title>Node3468</title>
 <g id="a_node26"><a xlink:href="classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a110e82fd5d9309ebf617febe21ef358d" target="_top" xlink:title="Test des Schlüsselwortes VerifyValueWCM für den GUI&#45;Adapter SeInputRadio. ">
 <polygon fill="white" stroke="black" points="582.5,-255 582.5,-285 761.5,-285 761.5,-255 582.5,-255"/>
 <text text-anchor="start" x="590.5" y="-273" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputRadio.SeInput</text>
@@ -433,13 +433,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3463 -->
-<g id="edge25" class="edge"><title>Node3440&#45;&gt;Node3463</title>
+<!-- Node3445&#45;&gt;Node3468 -->
+<g id="edge25" class="edge"><title>Node3445&#45;&gt;Node3468</title>
 <path fill="none" stroke="midnightblue" d="M454.861,-753.046C462.9,-671.123 497.297,-361.793 564,-295 569.325,-289.668 575.554,-285.386 582.281,-281.958"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="451.336,-753.139 453.865,-763.427 458.304,-753.807 451.336,-753.139"/>
 </g>
-<!-- Node3464 -->
-<g id="node27" class="node"><title>Node3464</title>
+<!-- Node3469 -->
+<g id="node27" class="node"><title>Node3469</title>
 <g id="a_node27"><a xlink:href="classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a764e3f90123eb747d81f597d472711c3" target="_top" xlink:title="Test des Schlüsselwortes VerifyValueREGX für den GUI&#45;Adapter SeInputRadio. ">
 <polygon fill="white" stroke="black" points="581,-206 581,-236 763,-236 763,-206 581,-206"/>
 <text text-anchor="start" x="589" y="-224" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputRadio.SeInput</text>
@@ -447,13 +447,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3464 -->
-<g id="edge26" class="edge"><title>Node3440&#45;&gt;Node3464</title>
+<!-- Node3445&#45;&gt;Node3469 -->
+<g id="edge26" class="edge"><title>Node3445&#45;&gt;Node3469</title>
 <path fill="none" stroke="midnightblue" d="M454.383,-753.248C460.851,-666.546 490.942,-320.678 564,-246 568.936,-240.955 574.68,-236.845 580.896,-233.507"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="450.885,-753.084 453.653,-763.311 457.867,-753.591 450.885,-753.084"/>
 </g>
-<!-- Node3465 -->
-<g id="node28" class="node"><title>Node3465</title>
+<!-- Node3470 -->
+<g id="node28" class="node"><title>Node3470</title>
 <g id="a_node28"><a xlink:href="classokw_1_1_se_link_1_1_se_link___e_n___test.html#ade5477cb18a1aaf96deb62f11f8a69c0" target="_top" xlink:title="Tooltip eines Textfeldes Prüfen. ">
 <polygon fill="white" stroke="black" points="608.5,-157 608.5,-187 735.5,-187 735.5,-157 608.5,-157"/>
 <text text-anchor="start" x="616.5" y="-175" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeLink.SeLink_EN</text>
@@ -461,13 +461,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3465 -->
-<g id="edge27" class="edge"><title>Node3440&#45;&gt;Node3465</title>
+<!-- Node3445&#45;&gt;Node3470 -->
+<g id="edge27" class="edge"><title>Node3445&#45;&gt;Node3470</title>
 <path fill="none" stroke="midnightblue" d="M454.003,-753.195C459.049,-661.545 484.63,-279.54 564,-197 575.636,-184.899 591.916,-178.164 608.272,-174.535"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="450.501,-753.144 453.466,-763.315 457.491,-753.515 450.501,-753.144"/>
 </g>
-<!-- Node3466 -->
-<g id="node29" class="node"><title>Node3466</title>
+<!-- Node3471 -->
+<g id="node29" class="node"><title>Node3471</title>
 <g id="a_node29"><a xlink:href="classokw_1_1_se_link_1_1_se_link___e_n___test.html#ad88f4d017f1a55ad12f9ffc5ed0ab336" target="_top" xlink:title="Prüft die Methode SeLink.MemorizeToolTip. ">
 <polygon fill="white" stroke="black" points="595,-108 595,-138 749,-138 749,-108 595,-108"/>
 <text text-anchor="start" x="603" y="-126" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeLink.SeLink_EN</text>
@@ -475,13 +475,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3466 -->
-<g id="edge28" class="edge"><title>Node3440&#45;&gt;Node3466</title>
+<!-- Node3445&#45;&gt;Node3471 -->
+<g id="edge28" class="edge"><title>Node3445&#45;&gt;Node3471</title>
 <path fill="none" stroke="midnightblue" d="M453.672,-753.371C457.359,-657.397 478.227,-238.512 564,-148 572.398,-139.138 583.284,-133.144 594.89,-129.139"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="450.172,-753.309 453.304,-763.43 457.167,-753.565 450.172,-753.309"/>
 </g>
-<!-- Node3467 -->
-<g id="node30" class="node"><title>Node3467</title>
+<!-- Node3472 -->
+<g id="node30" class="node"><title>Node3472</title>
 <g id="a_node30"><a xlink:href="classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test.html#a4537459b68f3c017780affedb4dc8bc8" target="_top" xlink:title="Test des Schlüsselwortes &quot;VerifyValueWCM( FN, ExpValu ) für SeMAXIMIZE. ">
 <polygon fill="white" stroke="black" points="591,-59 591,-89 753,-89 753,-59 591,-59"/>
 <text text-anchor="start" x="599" y="-77" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeMAXIMIZE.SeMAXIMIZE</text>
@@ -489,13 +489,13 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3467 -->
-<g id="edge29" class="edge"><title>Node3440&#45;&gt;Node3467</title>
+<!-- Node3445&#45;&gt;Node3472 -->
+<g id="edge29" class="edge"><title>Node3445&#45;&gt;Node3472</title>
 <path fill="none" stroke="midnightblue" d="M453.402,-753.119C455.853,-652.181 471.932,-197.384 564,-99 571.365,-91.1301 580.69,-85.5163 590.753,-81.5461"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="449.902,-753.096 453.176,-763.172 456.9,-753.254 449.902,-753.096"/>
 </g>
-<!-- Node3468 -->
-<g id="node31" class="node"><title>Node3468</title>
+<!-- Node3473 -->
+<g id="node31" class="node"><title>Node3473</title>
 <g id="a_node31"><a xlink:href="classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___test.html#a6867860868e8cc03d7c683740c2876bd" target="_top" xlink:title="Prüft die Methode SeRadioList.MemorizeLabel. ">
 <polygon fill="white" stroke="black" points="573,0.5 573,-40.5 771,-40.5 771,0.5 573,0.5"/>
 <text text-anchor="start" x="581" y="-28.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeRadioList.SeRadioList</text>
@@ -504,8 +504,8 @@ var sectionId = 'dynsection-61';
 </a>
 </g>
 </g>
-<!-- Node3440&#45;&gt;Node3468 -->
-<g id="edge30" class="edge"><title>Node3440&#45;&gt;Node3468</title>
+<!-- Node3445&#45;&gt;Node3473 -->
+<g id="edge30" class="edge"><title>Node3445&#45;&gt;Node3473</title>
 <path fill="none" stroke="midnightblue" d="M453.249,-752.771C454.961,-647.004 468.029,-158.35 564,-50 567.07,-46.5339 570.505,-43.4541 574.209,-40.7185"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="449.746,-752.961 453.101,-763.011 456.745,-753.063 449.746,-752.961"/>
 </g>

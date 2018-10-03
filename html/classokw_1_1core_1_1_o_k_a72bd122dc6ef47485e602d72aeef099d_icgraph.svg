@@ -9,65 +9,65 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 313)">
 <title>okw.core.OK.verify</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-313 290,-313 290,4 -4,4"/>
-<!-- Node846 -->
-<g id="node1" class="node"><title>Node846</title>
+<!-- Node865 -->
+<g id="node1" class="node"><title>Node865</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-153.5 0.5,-172.5 101.5,-172.5 101.5,-153.5 0.5,-153.5"/>
 <text text-anchor="middle" x="51" y="-160.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.verify</text>
 </g>
-<!-- Node847 -->
-<g id="node2" class="node"><title>Node847</title>
+<!-- Node866 -->
+<g id="node2" class="node"><title>Node866</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_o_k.html#afe1a1b392d59c5ceef93ed6d0cfd2e01" target="_top" xlink:title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)...">
 <polygon fill="white" stroke="black" points="144,-289.5 144,-308.5 280,-308.5 280,-289.5 144,-289.5"/>
 <text text-anchor="middle" x="212" y="-296.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyCaption</text>
 </a>
 </g>
 </g>
-<!-- Node846&#45;&gt;Node847 -->
-<g id="edge1" class="edge"><title>Node846&#45;&gt;Node847</title>
+<!-- Node865&#45;&gt;Node866 -->
+<g id="edge1" class="edge"><title>Node865&#45;&gt;Node866</title>
 <path fill="none" stroke="midnightblue" d="M60.6701,-181.809C73.6894,-207.918 100.79,-254.773 138,-280 143.745,-283.895 150.24,-286.991 156.929,-289.453"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="63.7311,-180.098 56.239,-172.607 57.4242,-183.135 63.7311,-180.098"/>
 </g>
-<!-- Node848 -->
-<g id="node3" class="node"><title>Node848</title>
+<!-- Node867 -->
+<g id="node3" class="node"><title>Node867</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_o_k.html#a9785853231d70946dcbbfcd44b509c25" target="_top" xlink:title="Prüft, ob das gegebene Objekt existiert. ">
 <polygon fill="white" stroke="black" points="147,-251.5 147,-270.5 277,-270.5 277,-251.5 147,-251.5"/>
 <text text-anchor="middle" x="212" y="-258.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyExists</text>
 </a>
 </g>
 </g>
-<!-- Node846&#45;&gt;Node848 -->
-<g id="edge2" class="edge"><title>Node846&#45;&gt;Node848</title>
+<!-- Node865&#45;&gt;Node867 -->
+<g id="edge2" class="edge"><title>Node865&#45;&gt;Node867</title>
 <path fill="none" stroke="midnightblue" d="M66.4812,-180.636C82.2411,-198.683 109.083,-226.247 138,-242 145.13,-245.884 153.088,-249.001 161.055,-251.495"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="68.8198,-177.983 59.6743,-172.635 63.4881,-182.519 68.8198,-177.983"/>
 </g>
-<!-- Node849 -->
-<g id="node4" class="node"><title>Node849</title>
+<!-- Node868 -->
+<g id="node4" class="node"><title>Node868</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_o_k.html#a4950117cbe9cd2b769ae529bbdc1f897" target="_top" xlink:title="Vergleicht den Fokus&#45;Zustand des gegebenen Objekts mit dem erwarteten Wert. ">
 <polygon fill="white" stroke="black" points="138.5,-213.5 138.5,-232.5 285.5,-232.5 285.5,-213.5 138.5,-213.5"/>
 <text text-anchor="middle" x="212" y="-220.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyHasFocus</text>
 </a>
 </g>
 </g>
-<!-- Node846&#45;&gt;Node849 -->
-<g id="edge3" class="edge"><title>Node846&#45;&gt;Node849</title>
+<!-- Node865&#45;&gt;Node868 -->
+<g id="edge3" class="edge"><title>Node865&#45;&gt;Node868</title>
 <path fill="none" stroke="midnightblue" d="M78.8362,-177.421C95.5197,-185.974 117.606,-196.561 138,-204 147.842,-207.59 158.662,-210.792 168.887,-213.497"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="80.1774,-174.174 69.6912,-172.66 76.9447,-180.383 80.1774,-174.174"/>
 </g>
-<!-- Node850 -->
-<g id="node5" class="node"><title>Node850</title>
+<!-- Node869 -->
+<g id="node5" class="node"><title>Node869</title>
 <g id="a_node5"><a xlink:href="classokw_1_1core_1_1_o_k.html#a071aec5319238e209cfc6f1434ea13e8" target="_top" xlink:title="copydoc IOKW_State::VerifyHasFocus(String,String) ">
 <polygon fill="white" stroke="black" points="143,-175.5 143,-194.5 281,-194.5 281,-175.5 143,-175.5"/>
 <text text-anchor="middle" x="212" y="-182.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyIsActive</text>
 </a>
 </g>
 </g>
-<!-- Node846&#45;&gt;Node850 -->
-<g id="edge4" class="edge"><title>Node846&#45;&gt;Node850</title>
+<!-- Node865&#45;&gt;Node869 -->
+<g id="edge4" class="edge"><title>Node865&#45;&gt;Node869</title>
 <path fill="none" stroke="midnightblue" d="M111.845,-171.28C121.997,-172.685 132.605,-174.153 142.949,-175.584"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="112.258,-167.804 101.872,-169.901 111.298,-174.738 112.258,-167.804"/>
 </g>
-<!-- Node851 -->
-<g id="node6" class="node"><title>Node851</title>
+<!-- Node870 -->
+<g id="node6" class="node"><title>Node870</title>
 <g id="a_node6"><a xlink:href="classokw_1_1core_1_1_o_k.html#a648f371fccab2eded552b69adf164bbd" target="_top" xlink:title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert. ">
 <polygon fill="white" stroke="black" points="142,-126 142,-156 282,-156 282,-126 142,-126"/>
 <text text-anchor="start" x="150" y="-144" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifySelected</text>
@@ -75,13 +75,13 @@
 </a>
 </g>
 </g>
-<!-- Node846&#45;&gt;Node851 -->
-<g id="edge5" class="edge"><title>Node846&#45;&gt;Node851</title>
+<!-- Node865&#45;&gt;Node870 -->
+<g id="edge5" class="edge"><title>Node865&#45;&gt;Node870</title>
 <path fill="none" stroke="midnightblue" d="M111.87,-154.716C121.635,-153.365 131.823,-151.955 141.791,-150.576"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="111.298,-151.262 101.872,-156.099 112.258,-158.196 111.298,-151.262"/>
 </g>
-<!-- Node852 -->
-<g id="node7" class="node"><title>Node852</title>
+<!-- Node871 -->
+<g id="node7" class="node"><title>Node871</title>
 <g id="a_node7"><a xlink:href="classokw_1_1core_1_1_o_k.html#a3548a5a8ddfbf7f84bfe18ba200e1b35" target="_top" xlink:title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert. ">
 <polygon fill="white" stroke="black" points="141.5,-77 141.5,-107 282.5,-107 282.5,-77 141.5,-77"/>
 <text text-anchor="start" x="149.5" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyTablecell</text>
@@ -89,34 +89,34 @@
 </a>
 </g>
 </g>
-<!-- Node846&#45;&gt;Node852 -->
-<g id="edge6" class="edge"><title>Node846&#45;&gt;Node852</title>
+<!-- Node865&#45;&gt;Node871 -->
+<g id="edge6" class="edge"><title>Node865&#45;&gt;Node871</title>
 <path fill="none" stroke="midnightblue" d="M76.8005,-148.357C93.7019,-138.724 116.779,-126.237 138,-117 146.107,-113.471 154.886,-110.1 163.451,-107.04"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="75.0113,-145.349 68.0972,-153.377 78.5084,-151.413 75.0113,-145.349"/>
 </g>
-<!-- Node853 -->
-<g id="node8" class="node"><title>Node853</title>
+<!-- Node872 -->
+<g id="node8" class="node"><title>Node872</title>
 <g id="a_node8"><a xlink:href="classokw_1_1core_1_1_o_k.html#a9f5e0c09b6d74adf4265e3c84cf700d1" target="_top" xlink:title="Prüft den Tooltip&#45;Text eines Objektes. ">
 <polygon fill="white" stroke="black" points="146.5,-38.5 146.5,-57.5 277.5,-57.5 277.5,-38.5 146.5,-38.5"/>
 <text text-anchor="middle" x="212" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyTooltip</text>
 </a>
 </g>
 </g>
-<!-- Node846&#45;&gt;Node853 -->
-<g id="edge7" class="edge"><title>Node846&#45;&gt;Node853</title>
+<!-- Node865&#45;&gt;Node872 -->
+<g id="edge7" class="edge"><title>Node865&#45;&gt;Node872</title>
 <path fill="none" stroke="midnightblue" d="M63.7232,-144.694C78.4732,-123.145 105.808,-87.7925 138,-68 145.052,-63.6641 153.055,-60.251 161.112,-57.5692"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="60.6505,-142.994 58.0268,-153.259 66.4791,-146.871 60.6505,-142.994"/>
 </g>
-<!-- Node854 -->
-<g id="node9" class="node"><title>Node854</title>
+<!-- Node873 -->
+<g id="node9" class="node"><title>Node873</title>
 <g id="a_node9"><a xlink:href="classokw_1_1core_1_1_o_k.html#a68529a54c5b950d3aa005bb87890b703" target="_top" xlink:title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)...">
 <polygon fill="white" stroke="black" points="148.5,-0.5 148.5,-19.5 275.5,-19.5 275.5,-0.5 148.5,-0.5"/>
 <text text-anchor="middle" x="212" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyValue</text>
 </a>
 </g>
 </g>
-<!-- Node846&#45;&gt;Node854 -->
-<g id="edge8" class="edge"><title>Node846&#45;&gt;Node854</title>
+<!-- Node865&#45;&gt;Node873 -->
+<g id="edge8" class="edge"><title>Node865&#45;&gt;Node873</title>
 <path fill="none" stroke="midnightblue" d="M58.9113,-143.995C70.5635,-114.696 96.943,-58.7733 138,-29 143.301,-25.156 149.316,-22.0888 155.564,-19.6415"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="55.5843,-142.897 55.2848,-153.487 62.1233,-145.395 55.5843,-142.897"/>
 </g>

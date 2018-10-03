@@ -38,7 +38,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 210, Datum: 10.01.2018 18:43:51</span>
+   &#160;<span id="projectnumber">Build_ID: 211, Datum: 10.03.2018 15:58:12</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -200,6 +200,9 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <tr class="memitem:ad4fc9610ed5b1176590a45b55e6ac7f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0">SelectWindow</a> (String FN)  throws Exception</td></tr>
 <tr class="memdesc:ad4fc9610ed5b1176590a45b55e6ac7f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setzt den Kontext auf das gegebene Fenster.  <a href="#ad4fc9610ed5b1176590a45b55e6ac7f0">Mehr ...</a><br /></td></tr>
 <tr class="separator:ad4fc9610ed5b1176590a45b55e6ac7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49773a012bbf93eb2fe55301cccd220"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ab49773a012bbf93eb2fe55301cccd220">SelectChild</a> (String FN)  throws Exception</td></tr>
+<tr class="memdesc:ab49773a012bbf93eb2fe55301cccd220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setzt den Wert von SELECTEDCHILD auf den Wert von FN.  <a href="#ab49773a012bbf93eb2fe55301cccd220">Mehr ...</a><br /></td></tr>
+<tr class="separator:ab49773a012bbf93eb2fe55301cccd220"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33edc5c4d97bf7f4a35d75619985eac7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a33edc5c4d97bf7f4a35d75619985eac7">Sequence</a> (String FN, String fpsSequenceName, String SEQ_ID)  throws Exception</td></tr>
 <tr class="memdesc:a33edc5c4d97bf7f4a35d75619985eac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ruft die Sequenz eines Fensters auf.  <a href="#a33edc5c4d97bf7f4a35d75619985eac7">Mehr ...</a><br /></td></tr>
 <tr class="separator:a33edc5c4d97bf7f4a35d75619985eac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1492,6 +1495,46 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 
 </div>
 </div>
+<a id="ab49773a012bbf93eb2fe55301cccd220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49773a012bbf93eb2fe55301cccd220">&#9670;&nbsp;</a></span>SelectChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void okw.core.IOKW_State.SelectChild </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>FN</em></td><td>)</td>
+          <td> throws Exception</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setzt den Wert von SELECTEDCHILD auf den Wert von FN. </p>
+<p>In nachfolgenden OpeKeywords kann dieser Wert mit "SELECTEDCHILD" abgerufen bzw referenziert werden.</p>
+<p><em>Beispiel:</em> Auswahl des Kindobjektes mit dem Namen "MeinKindobjekt" <br />
+ </p><div class="fragment"><div class="line">EN.SelectChild( <span class="stringliteral">&quot;MeinKindobjekt&quot;</span> )</div><div class="line">EN.SetValue(<span class="stringliteral">&quot;SELECTEDCHILD&quot;</span>, <span class="stringliteral">&quot;MyValue&quot;</span>)</div><div class="line">EN.VerifyValue(<span class="stringliteral">&quot;SELECTEDCHILD&quot;</span>, <span class="stringliteral">&quot;MyValue&quot;</span>)</div><div class="line">EN.VerifyLabel(<span class="stringliteral">&quot;SELECTEDCHILD&quot;</span>, <span class="stringliteral">&quot;MyLabel&quot;</span>)</div></div><!-- fragment --><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des KindObjektes</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2018-10-02 </dd></dl>
+
+<p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a038f45c24b6538ddadbdcd1fd179c2ab">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a7289e7dad7d13ac4f97a7ad278663651">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a9e133d066d3c77a1d0bbef778c0930c3">okw.core.NOK</a>.</p>
+<div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-27-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-27-content" class="dyncontent" style="display:none;">
+<div class="center"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_ab49773a012bbf93eb2fe55301cccd220_icgraph.svg" width="651" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 <a id="ae224c8800159ae480d8cd1badda53ef2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae224c8800159ae480d8cd1badda53ef2">&#9670;&nbsp;</a></span>SelectMenu() <span class="overload">[1/2]</span></h2>
 
@@ -1520,11 +1563,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014.09.19 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#ae30b70ea446f3a58022a617177d0bcb6">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ad456e1c840aa697b44843afd9fefa8e2">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a0f1039f36e2e80dd8427123d2e47886d">okw.core.NOK</a>.</p>
-<div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-27-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-27-content" class="dyncontent" style="display:none;">
+<div id="dynsection-28-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_ae224c8800159ae480d8cd1badda53ef2_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1624,11 +1667,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-19 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a0cbda1e1d604b0b988296c48835300cc">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a02e398b0aa11815b25b1471e4ce2795e">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#aad7966a10c83fe25a4312908893a4cf6">okw.core.NOK</a>.</p>
-<div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-29-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-28-content" class="dyncontent" style="display:none;">
+<div id="dynsection-29-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_ad4767e2f8655cd52ae27dac1351d9c18_icgraph.svg" width="100%" height="377"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1665,11 +1708,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-19 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a4609a2156286fe56e1d4dba1695cd600">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a90f8ec9fe09861a85c15205e3a43f9a1">okw.core.NOK</a>.</p>
-<div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-29-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-30-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-30-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-29-content" class="dyncontent" style="display:none;">
+<div id="dynsection-30-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_ad4fc9610ed5b1176590a45b55e6ac7f0_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1723,11 +1766,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a4ce824499d5b8b9612beff9f5438c6a1">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ab0cd601b3ec8b8e20755ed24a3d8680b">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a642d80d4e9702d6d4a817ee7d1f83ac2">okw.core.NOK</a>.</p>
-<div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-30-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-30-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-31-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-30-content" class="dyncontent" style="display:none;">
+<div id="dynsection-31-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a33edc5c4d97bf7f4a35d75619985eac7_icgraph.svg" width="100%" height="529"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1761,11 +1804,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a2ec62170b8430a0ea58e919d8d46a7c0">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a343aac009274a866520db97ec9cc793a">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#aad2ed71809e8e2b30a03111b18ab834d">okw.core.NOK</a>.</p>
-<div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-31-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-32-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-32-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-31-content" class="dyncontent" style="display:none;">
+<div id="dynsection-32-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_aae538e656d521d0fbe7ee57765b3e3cb_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1800,11 +1843,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#af17725c4ae8c2ec68359b066b7d9517a">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a5e8d582dc6afaeb9f93e8aad43a988c2">okw.core.NOK</a>.</p>
-<div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-32-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-32-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-33" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-33-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-33-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-32-content" class="dyncontent" style="display:none;">
+<div id="dynsection-33-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a866baa0bde08a47418f54d63bdb56097_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1852,11 +1895,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a6af4fe0d34a701aefc8ce67657b3c432">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a7088065564f2909025435c0c5594926c">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#af5c85c4eb152b3e4e8139127d9e08ede">okw.core.NOK</a>.</p>
-<div id="dynsection-33" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-33-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-33-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-34" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-34-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-34-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-33-content" class="dyncontent" style="display:none;">
+<div id="dynsection-34-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a301021976f71d79ff9054052b3b9ca38_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1893,11 +1936,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a38d47241f9746791eecaf7a45fcabb80">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ac20a22275b6aea1c4e551dce1fd0c1e9">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a41c91b8b73b7ec9e9c3c20bb50929719">okw.core.NOK</a>.</p>
-<div id="dynsection-34" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-34-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-34-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-35" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-35-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-35-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-34-content" class="dyncontent" style="display:none;">
+<div id="dynsection-35-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a0ec9b7c60041061f1b01d85b703a27a8_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1934,11 +1977,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#adbb934e4f20a0c451b4720a67c6cf99a">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a13d953a145a5e1bc776785f8433ba69c">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#aad271c3e0ae6947b746603c6ff878453">okw.core.NOK</a>.</p>
-<div id="dynsection-35" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-35-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-35-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-36" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-36-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-36-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-35-content" class="dyncontent" style="display:none;">
+<div id="dynsection-36-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a789e33be9253edfccfe5654f537cf52a_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -1988,11 +2031,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21/jnic </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a4600012e7b1fdbedcee36313d0397fd5">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ad09bf3a237b88913dbe9ebc228db1cf3">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a231824c8c57b210a08a3c4ca54863664">okw.core.NOK</a>.</p>
-<div id="dynsection-36" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-36-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-36-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-37" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-37-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-37-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-36-content" class="dyncontent" style="display:none;">
+<div id="dynsection-37-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a0466b45ed636074a1b6cd52de6b5fdd6_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2059,11 +2102,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21/jnic </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#afbfb6cebd96c8087190627a4c0d0f7c4">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a86cffd624c6b0a94074479b6fe3260de">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a8c16fbb5300e0e0d7e29674251d34188">okw.core.NOK</a>.</p>
-<div id="dynsection-37" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-37-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-37-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-38" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-38-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-38-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-37-content" class="dyncontent" style="display:none;">
+<div id="dynsection-38-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a402e4109c56f7be77debccb2132e4e27_icgraph.svg" width="100%" height="517"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2111,11 +2154,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21/jnic </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#ad91da46f1631eed55757d42061543e86">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#acfdd78869f2151c68f7cc9e4b8acd890">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a9e3ccf7ffc14ab48b07888ee1b193bdd">okw.core.NOK</a>.</p>
-<div id="dynsection-38" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-38-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-38-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-39" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-39-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-39-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-38-content" class="dyncontent" style="display:none;">
+<div id="dynsection-39-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a96f34e11f8d52127e6b6f39d3c15186b_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2161,11 +2204,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#afe1a1b392d59c5ceef93ed6d0cfd2e01">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a742f7a967804814e172358e1ed9e3579">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a8a732f7aa969c0c5b6bed8a3c4145512">okw.core.NOK</a>.</p>
-<div id="dynsection-39" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-39-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-39-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-40" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-40-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-40-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-39-content" class="dyncontent" style="display:none;">
+<div id="dynsection-40-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_aa078c7da434452f524816f58519b395b_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2214,11 +2257,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a7b0869a2a6df63be61899963dc35d768">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#adb7da11977acc1b851caac445eb37451">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a0c6eb502891dae5328872b07c558d8bf">okw.core.NOK</a>.</p>
-<div id="dynsection-40" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-40-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-40-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-41" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-41-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-41-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-40-content" class="dyncontent" style="display:none;">
+<div id="dynsection-41-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_aef357868be62a11c185d5c73989c131a_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2271,11 +2314,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a461f7511030e7975fe983b2509527529">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a1dc3f5a21cba756cd6448f88280342ec">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a99a94136ac134779c0829beb8f0a3e55">okw.core.NOK</a>.</p>
-<div id="dynsection-41" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-41-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-41-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-42" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-42-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-42-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-41-content" class="dyncontent" style="display:none;">
+<div id="dynsection-42-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a8f08ab9f441773a456ea6a0f87f2967f_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2320,11 +2363,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2015-06-26 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#aeec97e6090b2d4140c5961d81700b5cf">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ab9c07f0acb5bdf36c58bc3c3ae12768d">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a499ad6b680f5f32d3d94ca42cadef06e">okw.core.NOK</a>.</p>
-<div id="dynsection-42" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-42-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-42-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-43" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-43-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-43-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-42-content" class="dyncontent" style="display:none;">
+<div id="dynsection-43-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_aea3ea402ce421e7fede1cc1fb4ce9a65_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2371,11 +2414,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a9785853231d70946dcbbfcd44b509c25">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a47af0e08b2bde199fc5d10dee040ac1b">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a6161473900747fe51b8ac29b72612339">okw.core.NOK</a>.</p>
-<div id="dynsection-43" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-43-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-43-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-44" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-44-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-44-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-43-content" class="dyncontent" style="display:none;">
+<div id="dynsection-44-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_aac781d7e7b1f3ea4ca2d138733f7f2f6_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2421,11 +2464,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2015-06-26 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a8afdd9c8a47dc54aced5cce6226678ad">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#aac1e5e5b59dc780f5fd75bd215b13dff">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#ac749086e6a2548a55dd943507b9bca10">okw.core.NOK</a>.</p>
-<div id="dynsection-44" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-44-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-44-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-45" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-45-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-45-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-44-content" class="dyncontent" style="display:none;">
+<div id="dynsection-45-content" class="dyncontent" style="display:none;">
 <div class="center"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a210b00e532545680e8859179c41e1888_icgraph.svg" width="662" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
@@ -2472,11 +2515,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a4950117cbe9cd2b769ae529bbdc1f897">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ade5d877223a28ce11b57c8b94ab1a2eb">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a4d2aa52c68350265f480a97496ae3314">okw.core.NOK</a>.</p>
-<div id="dynsection-45" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-45-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-45-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-46" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-46-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-46-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-45-content" class="dyncontent" style="display:none;">
+<div id="dynsection-46-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a40877cd2c0183c22aa695cf4973ce37c_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2522,11 +2565,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21/jnic </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a071aec5319238e209cfc6f1434ea13e8">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#af9261f054d5a82396c678851ade66b1b">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a6bbe7604796f00fb1ccf3f6a367139ba">okw.core.NOK</a>.</p>
-<div id="dynsection-46" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-46-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-46-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-47" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-47-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-47-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-46-content" class="dyncontent" style="display:none;">
+<div id="dynsection-47-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_ad003bc140c032dc58f2f67bcc749990c_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2571,11 +2614,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014.09.21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a1bfa8ae24fc44958e4e3c4272c120bb8">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a278a288682afcbfad17e90df17e3c53d">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#ab5817c363d1b01b85a2ebbdcf8138a9f">okw.core.NOK</a>.</p>
-<div id="dynsection-47" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-47-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-47-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-48" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-48-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-48-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-47-content" class="dyncontent" style="display:none;">
+<div id="dynsection-48-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a39449615efcf006fddf5389238470efc_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2624,11 +2667,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#aeedf0dfdfe514b50ad774eb187a8cc34">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a15bd6c1b810f32fe6efcc76ccb10a0ae">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a4c28bf955ff62013fef49c8d63d10355">okw.core.NOK</a>.</p>
-<div id="dynsection-48" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-48-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-48-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-49" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-49-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-49-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-48-content" class="dyncontent" style="display:none;">
+<div id="dynsection-49-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a070f48adbb7a8148c8276ee965773a6d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2681,11 +2724,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Noch zu erledigen:</a></b></dt><dd>TODOkeine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a4187442dc3574358fda8af18cb03f15e">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a6e3d7fe88a78afa61a1a340dd2da88b7">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#af418e9cdaaa0198e88c926e7a1f4fbb2">okw.core.NOK</a>.</p>
-<div id="dynsection-49" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-49-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-49-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-50" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-50-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-50-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-49-content" class="dyncontent" style="display:none;">
+<div id="dynsection-50-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_aa2e12e52f5fd3c45a5006af52dd9a7db_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2733,11 +2776,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a648f371fccab2eded552b69adf164bbd">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ab243fc4ed28faf2ee9e7cd3123b8f13c">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a0ad0c8de9843133c96de2f779aad880f">okw.core.NOK</a>.</p>
-<div id="dynsection-50" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-50-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-50-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-51" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-51-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-51-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-50-content" class="dyncontent" style="display:none;">
+<div id="dynsection-51-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a804768212384c2b9b29f2664a5eb95d0_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2785,11 +2828,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a34e7722cddcc1eae53b714f4883a02f2">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a0a62848307c85ba96ad832db82f8f499">okw.core.NOK</a>.</p>
-<div id="dynsection-51" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-51-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-51-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-52" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-52-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-52-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-51-content" class="dyncontent" style="display:none;">
+<div id="dynsection-52-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a7c72b9596aa356a729e3e5cb04e043bf_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2837,11 +2880,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ad0ff49c39bbe4fdc3477df1527bf7c58">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a51df04d0178308deafb1130afc1c7945">okw.core.NOK</a>.</p>
-<div id="dynsection-52" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-52-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-52-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-53" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-53-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-53-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-52-content" class="dyncontent" style="display:none;">
+<div id="dynsection-53-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_ac10e056db5254f3e5c9ec9c9885f7184_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2900,11 +2943,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a3548a5a8ddfbf7f84bfe18ba200e1b35">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ad15cc0817387e5b6db0ae8b11619226f">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a37a7b10a667ec77dc511cefcf1499693">okw.core.NOK</a>.</p>
-<div id="dynsection-53" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-53-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-53-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-54" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-54-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-54-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-53-content" class="dyncontent" style="display:none;">
+<div id="dynsection-54-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a08f78760818a6ad5c1fd14640de3d3b1_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -2964,11 +3007,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a84abe8cdf2426bde23d357c89a6822a6">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a3c0af68470649d10f4143ac58398ef03">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#ac5016aa88a24d6364b1b289b00f33e75">okw.core.NOK</a>.</p>
-<div id="dynsection-54" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-54-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-54-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-55" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-55-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-55-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-54-content" class="dyncontent" style="display:none;">
+<div id="dynsection-55-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a4e452e946ec073b880a8e3d952b9340e_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -3033,11 +3076,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a30fc98c4004c99e3e37047deac6ad16f">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#add884d5c22a8a05b762e3bc06a7ed02a">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#af07d71db8e2c2052f8ae794a3f6f8d0a">okw.core.NOK</a>.</p>
-<div id="dynsection-55" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-55-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-55-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-56" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-56-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-56-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-55-content" class="dyncontent" style="display:none;">
+<div id="dynsection-56-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a3f9d14b5445fc5a5432483c302baf2c4_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -3083,11 +3126,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a9f5e0c09b6d74adf4265e3c84cf700d1">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#aa53c4a10dcd4eb1a6ae2c41eb9f23ee2">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a4da634853fd2fdef024d540f14647585">okw.core.NOK</a>.</p>
-<div id="dynsection-56" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-56-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-56-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-57" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-57-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-57-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-56-content" class="dyncontent" style="display:none;">
+<div id="dynsection-57-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a1490b97398a9c1f4da2a45ea683135d6_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -3135,11 +3178,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a95d9d7b4bc22bd4deae5398394d90e3a">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a32ef0062d4814e329183c7110d2918e2">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a153ee50279c2795015979757137a9b15">okw.core.NOK</a>.</p>
-<div id="dynsection-57" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-57-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-57-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-58" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-58-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-58-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-57-content" class="dyncontent" style="display:none;">
+<div id="dynsection-58-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a651ce4c1a5bd9dcac256b3204548f3be_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -3192,11 +3235,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#adbf2e96978ec22c0d8febdee394a60e6">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a160aacb0d6817770fde1faeaf6749af3">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#aa8cc96dadd981676a49359add8e516e5">okw.core.NOK</a>.</p>
-<div id="dynsection-58" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-58-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-58-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-59" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-59-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-59-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-58-content" class="dyncontent" style="display:none;">
+<div id="dynsection-59-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a5eeafdd7f415970cddcec31fa642da02_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -3244,11 +3287,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a68529a54c5b950d3aa005bb87890b703">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#aac0d21359cfabf641db830eadeb11721">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#aa101dafd795d6cf87a3835d16af931e3">okw.core.NOK</a>.</p>
-<div id="dynsection-59" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-59-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-59-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-60" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-60-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-60-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-59-content" class="dyncontent" style="display:none;">
+<div id="dynsection-60-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a7cc12f50a3b6af352a873d42d947813e_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -3296,11 +3339,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#acb6c973210e73f47ee34f9df6eac7f83">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a19e8df9600c470e8b1ae1fe31c36f50a">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a70d34ef288553bd4c8fa9a2dd0d6366e">okw.core.NOK</a>.</p>
-<div id="dynsection-60" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-60-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-60-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-61" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-61-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-61-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-60-content" class="dyncontent" style="display:none;">
+<div id="dynsection-61-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_a36827474765ec238f21d94609fcec76a_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -3352,11 +3395,11 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a6aafc82b46b36f952f2dd61db0f124b8">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#aaf9b78aa2200f60eb453331116e53704">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a42a907b7f01e22228ca87de50cb8be59">okw.core.NOK</a>.</p>
-<div id="dynsection-61" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-61-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-61-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-62" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-62-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-62-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-61-content" class="dyncontent" style="display:none;">
+<div id="dynsection-62-content" class="dyncontent" style="display:none;">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="interfaceokw_1_1core_1_1_i_o_k_w___state_afb81a5b87f50e267a98ed3902297b420_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
@@ -3373,7 +3416,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>core</b></li><li class="navelem"><a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html">IOKW_State</a></li>
-    <li class="footer">Erzeugt am Mon Okt 1 2018 18:44:51 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Okt 3 2018 15:59:05 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

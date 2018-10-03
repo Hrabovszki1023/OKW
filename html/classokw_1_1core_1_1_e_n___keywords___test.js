@@ -19,6 +19,8 @@ var classokw_1_1core_1_1_e_n___keywords___test =
     [ "tc_MemorizeValue", "classokw_1_1core_1_1_e_n___keywords___test.html#a4bdcca5bb302a7054aaea54d534a072e", null ],
     [ "tc_Select_MultipleValue", "classokw_1_1core_1_1_e_n___keywords___test.html#a544f4209f6f9f27886de547f7e422c6e", null ],
     [ "tc_Select_SingleValue", "classokw_1_1core_1_1_e_n___keywords___test.html#a85cc17eec3db1ff2b5bfc444d91dd784", null ],
+    [ "tc_SelectChild", "classokw_1_1core_1_1_e_n___keywords___test.html#a7dbcfba02f13d23ba2dda4495de8b51b", null ],
+    [ "tc_SELECTEDCHILD", "classokw_1_1core_1_1_e_n___keywords___test.html#a7a131d279ca67788aa18cf046eb2348e", null ],
     [ "tc_SelectMenu", "classokw_1_1core_1_1_e_n___keywords___test.html#a19b288addf8e1f6fc2a3e0ceb608eb5b", null ],
     [ "tc_SelectMenu_Value_MV", "classokw_1_1core_1_1_e_n___keywords___test.html#ac1e67c01559cdbd07526419cf197665a", null ],
     [ "tc_SelectMenu_Value_SV", "classokw_1_1core_1_1_e_n___keywords___test.html#ac26c44752e633262d5556940eeff1daf", null ],

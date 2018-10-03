@@ -26,6 +26,7 @@ var classokw_1_1core_1_1_n_o_k =
     [ "MemorizeTooltip", "classokw_1_1core_1_1_n_o_k.html#af073c8af4f13641abbc0e4eed15c080b", null ],
     [ "MemorizeValue", "classokw_1_1core_1_1_n_o_k.html#ad0ac30290156fae8afb23a9b93249e87", null ],
     [ "Select", "classokw_1_1core_1_1_n_o_k.html#a872e63488d274fb410301637c25eac7d", null ],
+    [ "SelectChild", "classokw_1_1core_1_1_n_o_k.html#a9e133d066d3c77a1d0bbef778c0930c3", null ],
     [ "SelectMenu", "classokw_1_1core_1_1_n_o_k.html#a0f1039f36e2e80dd8427123d2e47886d", null ],
     [ "SelectMenu", "classokw_1_1core_1_1_n_o_k.html#ad51c9eef8dd0dc514f6e654e589181e9", null ],
     [ "SelectTablecell", "classokw_1_1core_1_1_n_o_k.html#aad7966a10c83fe25a4312908893a4cf6", null ],

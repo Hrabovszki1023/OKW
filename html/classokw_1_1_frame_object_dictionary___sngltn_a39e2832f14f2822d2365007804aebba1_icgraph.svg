@@ -55,14 +55,14 @@ var sectionId = 'dynsection-11';
 <g id="viewport">
 <title>okw.FrameObjectDictionary_Sngltn.getOKWFromObjekt</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-44 688,-44 688,4 -4,4"/>
-<!-- Node141 -->
-<g id="node1" class="node"><title>Node141</title>
+<!-- Node142 -->
+<g id="node1" class="node"><title>Node142</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-5 0.5,-35 141.5,-35 141.5,-5 0.5,-5"/>
 <text text-anchor="start" x="8.5" y="-23" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
 <text text-anchor="middle" x="71" y="-12" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn.getOKWFromObjekt</text>
 </g>
-<!-- Node142 -->
-<g id="node2" class="node"><title>Node142</title>
+<!-- Node143 -->
+<g id="node2" class="node"><title>Node143</title>
 <g id="a_node2"><a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html#a1710d54e13c9ce591277209c898eec98" target="_top" xlink:title="Liefert die Instanz der Klasse. ">
 <polygon fill="white" stroke="black" points="178,-5 178,-35 316,-35 316,-5 178,-5"/>
 <text text-anchor="start" x="186" y="-23" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
@@ -70,13 +70,13 @@ var sectionId = 'dynsection-11';
 </a>
 </g>
 </g>
-<!-- Node141&#45;&gt;Node142 -->
-<g id="edge1" class="edge"><title>Node141&#45;&gt;Node142</title>
+<!-- Node142&#45;&gt;Node143 -->
+<g id="edge1" class="edge"><title>Node142&#45;&gt;Node143</title>
 <path fill="none" stroke="midnightblue" d="M151.67,-20C160.374,-20 169.176,-20 177.725,-20"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="151.52,-16.5001 141.52,-20 151.52,-23.5001 151.52,-16.5001"/>
 </g>
-<!-- Node143 -->
-<g id="node3" class="node"><title>Node143</title>
+<!-- Node144 -->
+<g id="node3" class="node"><title>Node144</title>
 <g id="a_node3"><a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html#a905bac544e5962ae15dfe1c1c50f2467" target="_top" xlink:title="Methode initialisiert diese Klasse. ">
 <polygon fill="white" stroke="black" points="352,-5 352,-35 490,-35 490,-5 352,-5"/>
 <text text-anchor="start" x="360" y="-23" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
@@ -84,13 +84,13 @@ var sectionId = 'dynsection-11';
 </a>
 </g>
 </g>
-<!-- Node142&#45;&gt;Node143 -->
-<g id="edge2" class="edge"><title>Node142&#45;&gt;Node143</title>
+<!-- Node143&#45;&gt;Node144 -->
+<g id="edge2" class="edge"><title>Node143&#45;&gt;Node144</title>
 <path fill="none" stroke="midnightblue" d="M326.637,-20C335.025,-20 343.508,-20 351.762,-20"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="326.473,-16.5001 316.473,-20 326.473,-23.5001 326.473,-16.5001"/>
 </g>
-<!-- Node144 -->
-<g id="node4" class="node"><title>Node144</title>
+<!-- Node145 -->
+<g id="node4" class="node"><title>Node145</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html#aca3d4bf06ca665795304f02b1bbe24eb" target="_top" xlink:title="Konstuktor der Klasse. ">
 <polygon fill="white" stroke="black" points="526,0.5 526,-40.5 684,-40.5 684,0.5 526,0.5"/>
 <text text-anchor="start" x="534" y="-28.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
@@ -99,8 +99,8 @@ var sectionId = 'dynsection-11';
 </a>
 </g>
 </g>
-<!-- Node143&#45;&gt;Node144 -->
-<g id="edge3" class="edge"><title>Node143&#45;&gt;Node144</title>
+<!-- Node144&#45;&gt;Node145 -->
+<g id="edge3" class="edge"><title>Node144&#45;&gt;Node145</title>
 <path fill="none" stroke="midnightblue" d="M500.301,-20C508.801,-20 517.451,-20 525.947,-20"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="500.029,-16.5001 490.029,-20 500.029,-23.5001 500.029,-16.5001"/>
 </g>
