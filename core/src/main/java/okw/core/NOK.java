@@ -199,6 +199,16 @@ public class NOK implements IOKW_State
     }
 
     /**
+     *  \copydoc IOKW_State::LogPlaceholder(String)
+     */
+    public void LogPlaceholder( String FN )
+    {
+        Log.LogFunctionStartDebug( "LogPlaceholder", "FN", FN );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
      *  \copydoc IOKW_State::LogSelected(String)
      */
     public void LogSelected( String FN )
@@ -284,6 +294,16 @@ public class NOK implements IOKW_State
     public void MemorizeLabel( String FN, String fpsMemKeyName )
     {
         Log.LogFunctionStartDebug( "MemorizeLabel", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     *  \copydoc IOKW_State::MemorizePlaceholder(String,String)
+     */
+    public void MemorizePlaceholder( String FN, String fpsMemKeyName )
+    {
+        Log.LogFunctionStartDebug( "MemorizePlaceholder", "FN", FN, "fpsMemKeyName", fpsMemKeyName );
 
         Log.LogFunctionEndDebug();
     }
@@ -565,6 +585,36 @@ public class NOK implements IOKW_State
     public void VerifyLabelREGX( String FN, String ExpVal )
     {
         Log.LogFunctionStartDebug( "VerifyLabelREGX", "FN", FN, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     * \copydoc IOKW_State::VerifyPlaceholder(String,String)
+     */
+    public void VerifyPlaceholder( String FN, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifyPlaceholder", "FN", FN, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     * \copydoc IOKW_State::VerifyPlaceholderWCM(String,String)
+     */
+    public void VerifyPlaceholderWCM( String FN, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifyPlaceholderWCM", "FN", FN, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     * \copydoc IOKW_State::VerifyPlaceholderREGX(String,String)
+     */
+    public void VerifyPlaceholderREGX( String FN, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifyPlaceholderREGX", "FN", FN, "ExpVal", ExpVal );
 
         Log.LogFunctionEndDebug();
     }

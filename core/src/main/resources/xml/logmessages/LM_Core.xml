@@ -112,6 +112,15 @@
 			</Text>
 		</Method>
 
+		<!-- Method: "LogPlaceholder"-->
+		<Method name="LogPlaceholder">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Log Placeholder</en>
+				<de>Logge Platzhalter</de>
+			</Text>
+		</Method>
+
 		<!-- Method: "LogValue"-->
 		<Method name="LogValue">
 			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
@@ -184,6 +193,15 @@
 			</Text>
 		</Method>
 
+		<!-- Method: "MemorizePlaceholder"-->
+		<Method name="MemorizePlaceholder">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Memorize Placeholder</en>
+				<de>Merke Platzhalter</de>
+			</Text>
+		</Method>
+
 		<!-- Method: "MemorizeCaption"-->
 		<Method name="MemorizeCaption">
 			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
@@ -235,6 +253,15 @@
 			<Text key="KeyWordName">
 				<en>Select Window</en>
 				<de>Wähle Fenster</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "SelectChild"-->
+		<Method name="SelectChild">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Select Child</en>
+				<de>Wähle Kindobject</de>
 			</Text>
 		</Method>
 
@@ -468,6 +495,33 @@
 			<Text key="KeyWordName">
 				<en>Verify Label REGX</en>
 				<de>Prüfe Etikette REGX</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyPlaceholder"-->
+		<Method name="VerifyPlaceholder">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Placeholder</en>
+				<de>Prüfe Platzhalter</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyPlaceholderWCM"-->
+		<Method name="VerifyPlaceholderWCM">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Placeholder WCM</en>
+				<de>Prüfe Plathalter WCM</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyPlaceholderREGX"-->
+		<Method name="VerifyPlaceholderREGX">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Placeholder REGX</en>
+				<de>Prüfe Platzhalter REGX</de>
 			</Text>
 		</Method>
 

@@ -346,7 +346,7 @@ public class CurrentObject_Test {
 
            
            /**
-            *  Testziel: Prüft den Aufruf der Methode LogCaption( "FN" ) im ChildObject
+            *  Testziel: Prüft den Aufruf der Methode LogLabel( "FN" ) im ChildObject
             * @throws Exception
             */
            @Test
@@ -367,6 +367,31 @@ public class CurrentObject_Test {
                assertEquals("NO VALUE", myClipBoard.getValue().get(0));
                assertEquals("CurrentObjectWindow.AllMethod 2", myClipBoard.getObjectName());
                assertEquals("LogLabel()", myClipBoard.getMethod());
+           }
+
+           
+           /**
+            *  Testziel: Prüft den Aufruf der Methode LogPlaceholder( "FN" ) im ChildObject
+            * @throws Exception
+            */
+           @Test
+           public void tc_LogPlaceholder_ChildObject() throws Exception
+           {
+               // Testscript in Schlüsselwort-Notation
+               this.myKernel.SelectWindow("CurrentObjectWindow");
+        
+               // Check the Name, Called Method and Value of Actuel object
+               assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+               assertEquals("CurrentObjectWindow", myClipBoard.getObjectName());
+               assertEquals("SelectWindow()", myClipBoard.getMethod());
+        
+               this.myKernel.SetValue("AllMethod 2", "YES");
+               this.myKernel.LogPlaceholder("AllMethod 2");
+        
+               // Check the Name, Called Method and Value of Actuel object
+               assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+               assertEquals("CurrentObjectWindow.AllMethod 2", myClipBoard.getObjectName());
+               assertEquals("LogPlaceholder()", myClipBoard.getMethod());
            }
 
            
@@ -615,6 +640,31 @@ public class CurrentObject_Test {
                assertEquals("NO VALUE", myClipBoard.getValue().get(0));
                assertEquals("CurrentObjectWindow.AllMethod 2", myClipBoard.getObjectName());
                assertEquals("MemorizeLabel()", myClipBoard.getMethod());
+           }
+
+           
+           /**
+            *  Testziel: Prüft den Aufruf der Methode MemorizePlaceholder( FN, MemKey ) im ChildObject
+            * @throws Exception
+            */
+           @Test
+           public void tc_MemorizePlaceholder_ChildObject() throws Exception
+           {
+               // Testscript in Schlüsselwort-Notation
+               this.myKernel.SelectWindow("CurrentObjectWindow");
+        
+               // Check the Name, Called Method and Value of Actuel object
+               assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+               assertEquals("CurrentObjectWindow", myClipBoard.getObjectName());
+               assertEquals("SelectWindow()", myClipBoard.getMethod());
+        
+               //this.myKernel.SetValue("AllMethod 2", "YES");
+               this.myKernel.MemorizePlaceholder("AllMethod 2", "tc_MemorizePlaceholder_ChildObject");
+        
+               // Check the Name, Called Method and Value of Actuel object
+               assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+               assertEquals("CurrentObjectWindow.AllMethod 2", myClipBoard.getObjectName());
+               assertEquals("MemorizePlaceholder()", myClipBoard.getMethod());
            }
 
            

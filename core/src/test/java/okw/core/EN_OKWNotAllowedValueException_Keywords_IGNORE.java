@@ -269,6 +269,41 @@ public class EN_OKWNotAllowedValueException_Keywords_IGNORE
         EN.MemorizeLabel( "All_MethodsObj", "${IGNORE}${TCN}" );
     }
 
+
+    /** \~german
+     * Prüft ob "${IGNORE} " die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2017-05-12
+     */
+    @Test( expected = OKWNotAllowedValueException.class )
+    public void tcMemorizePlaceholderIGNORE1() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.SelectWindow( "Rechner" );
+        EN.MemorizePlaceholder( "All_MethodsObj", "${IGNORE} " );
+    }
+
+    /**
+     * \~german
+     * Prüft ob ""${IGNORE}${TCN}" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2017-05-12
+     */
+    @Test( expected = OKWNotAllowedValueException.class )
+    public void tcMemorizePlaceholderIGNORE2() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.SelectWindow( "Rechner" );
+        EN.MemorizePlaceholder( "All_MethodsObj", "${IGNORE}${TCN}" );
+    }
     /** \~german
      * Prüft ob "${IGNORE} " die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
      * 
@@ -826,6 +861,111 @@ public class EN_OKWNotAllowedValueException_Keywords_IGNORE
         EN.BeginTest( name.getMethodName() );
         EN.SelectWindow( "Rechner" );
         EN.VerifyLabelWCM( "All_MethodsObj", "${IGNORE}${TCN}" );
+    }
+
+    /** \~german
+     * Prüft ob "${IGNORE} " die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2017-05-12
+     */
+    @Test( expected = OKWNotAllowedValueException.class )
+    public void tcVerifyPlaceholderIGNORE1() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyPlaceholder( "All_MethodsObj", "${IGNORE} " );
+    }
+
+    /**
+     * \~german
+     * Prüft ob ""${IGNORE}${TCN}" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2017-05-12
+     */
+    @Test( expected = OKWNotAllowedValueException.class )
+    public void tcVerifyPlaceholderIGNORE2() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyPlaceholder( "All_MethodsObj", "${IGNORE}${TCN}" );
+    }
+
+    /** \~german
+     * Prüft ob "${IGNORE} " die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2017-05-12
+     */
+    @Test( expected = OKWNotAllowedValueException.class )
+    public void tcVerifyPlaceholderREGXIGNORE1() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyPlaceholderREGX( "All_MethodsObj", "${IGNORE} " );
+    }
+
+    /**
+     * \~german
+     * Prüft ob ""${IGNORE}${TCN}" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2017-05-12
+     */
+    @Test( expected = OKWNotAllowedValueException.class )
+    public void tcVerifyPlaceholderREGXIGNORE2() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyPlaceholderREGX( "All_MethodsObj", "${IGNORE}${TCN}" );
+    }
+
+    /** \~german
+     * Prüft ob "${IGNORE} " die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2017-05-12
+     */
+    @Test( expected = OKWNotAllowedValueException.class )
+    public void tcVerifyPlaceholderWCMIGNORE1() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyPlaceholderWCM( "All_MethodsObj", "${IGNORE} " );
+    }
+
+    /**
+     * \~german
+     * Prüft ob ""${IGNORE}${TCN}" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2017-05-12
+     */
+    @Test( expected = OKWNotAllowedValueException.class )
+    public void tcVerifyPlaceholderWCMIGNORE2() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyPlaceholderWCM( "All_MethodsObj", "${IGNORE}${TCN}" );
     }
 
     /** \~german

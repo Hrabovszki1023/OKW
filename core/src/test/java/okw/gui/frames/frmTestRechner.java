@@ -36,6 +36,7 @@ public class frmTestRechner extends Test_Window
         @OKW(FN="All_MethodsObj",
                 VerifyExists_PT=100, VerifyExists_TO=1,
                 VerifyLabel_PT=100, VerifyLabel_TO=1,
+                VerifyPlaceholder_PT=100, VerifyPlaceholder_TO=1,
                 VerifyValue_PT=100, VerifyValue_TO=1,
                 VerifyTooltip_PT=100, VerifyTooltip_TO=1,
                 VerifyCaption_PT=100, VerifyCaption_TO=1,
@@ -46,23 +47,27 @@ public class frmTestRechner extends Test_Window
         /// \brief
         /// Test Objekt mit allen OKW-Methoden,
         @OKW(FN="AllMethods_MultipleValues", 
-                VerifyLabel_PT=100, VerifyLabel_TO=1,
-                VerifyValue_PT=100, VerifyValue_TO=1,
-                VerifyTooltip_PT=100, VerifyTooltip_TO=1,
-                VerifyCaption_PT=100, VerifyCaption_TO=1,
-                VerifySelectedValue_PT=100, VerifySelectedValue_TO=1,
-                VerifyTablecellValue_PT=100, VerifyTablecellValue_TO=1)
+                        VerifyExists_PT=100, VerifyExists_TO=1,
+                        VerifyLabel_PT=100, VerifyLabel_TO=1,
+                        VerifyPlaceholder_PT=100, VerifyPlaceholder_TO=1,
+                        VerifyValue_PT=100, VerifyValue_TO=1,
+                        VerifyTooltip_PT=100, VerifyTooltip_TO=1,
+                        VerifyCaption_PT=100, VerifyCaption_TO=1,
+                        VerifySelectedValue_PT=100, VerifySelectedValue_TO=1,
+                        VerifyTablecellValue_PT=100, VerifyTablecellValue_TO=1)
         public AllMethods_MultipleValues All_MethodsObj_MultipleValues = new AllMethods_MultipleValues("Locator_AllMethods_MultipleValues");
 
         /// \brief
         /// Test Objekt mit allen OKW-Methoden,
         @OKW(FN="All_MethodsObj_VerifyEmpty", 
-                VerifyLabel_PT=100, VerifyLabel_TO=1,
-                VerifyValue_PT=100, VerifyValue_TO=1,
-                VerifyTooltip_PT=100, VerifyTooltip_TO=1,
-                VerifyCaption_PT=100, VerifyCaption_TO=1,
-                VerifySelectedValue_PT=100, VerifySelectedValue_TO=1,
-                VerifyTablecellValue_PT=100, VerifyTablecellValue_TO=1)
+                        VerifyExists_PT=100, VerifyExists_TO=1,
+                        VerifyLabel_PT=100, VerifyLabel_TO=1,
+                        VerifyPlaceholder_PT=100, VerifyPlaceholder_TO=1,
+                        VerifyValue_PT=100, VerifyValue_TO=1,
+                        VerifyTooltip_PT=100, VerifyTooltip_TO=1,
+                        VerifyCaption_PT=100, VerifyCaption_TO=1,
+                        VerifySelectedValue_PT=100, VerifySelectedValue_TO=1,
+                        VerifyTablecellValue_PT=100, VerifyTablecellValue_TO=1)
         public AllMethods_VerifyEmpty All_MethodsObj_VerifyEmpty= new AllMethods_VerifyEmpty("Locator_AllMethods_VerifyEmpty");
 
         

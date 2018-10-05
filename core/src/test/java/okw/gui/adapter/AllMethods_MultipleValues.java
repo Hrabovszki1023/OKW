@@ -216,6 +216,29 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
+
+        public ArrayList<String> LogPlaceholder()
+        {
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+            this.myLogger.LogFunctionStartDebug("LogPlaceholder");
+            lvLsReturn.add("Placeholder Rückgabewert 1");
+            lvLsReturn.add("Placeholder Rückgabewert 2");
+            lvLsReturn.add("Placeholder Rückgabewert 3");
+
+            myClipboard.Clear();
+            String lvs_ObjectName = getFN();
+
+            myClipboard.setObjectName(lvs_ObjectName);
+            myClipboard.setMethod("LogPlaceholder()");
+            myClipboard.getValue().add("NO VALUE");
+
+            this.myLogger.LogFunctionEndDebug(lvLsReturn);
+
+            return lvLsReturn;
+        }
+
+        
         public ArrayList<String> LogValue()
         {
         	ArrayList<String> lvLsReturn = new ArrayList<String>();
@@ -378,6 +401,26 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("MemorizeLabel()");
+            myClipboard.getValue().add("NO VALUE");
+
+            this.myLogger.LogFunctionEndDebug();
+
+            return lvLsReturn;
+        }
+
+        public ArrayList<String> MemorizePlaceholder()
+        {
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+            this.myLogger.LogFunctionStartDebug("MemorizePlaceholder");
+            lvLsReturn.add("MemorizePlaceholder_Return_1");
+            lvLsReturn.add("MemorizePlaceholder_Return_2");
+
+            myClipboard.Clear();
+            String lvs_ObjectName = getFN();
+
+            myClipboard.setObjectName(lvs_ObjectName);
+            myClipboard.setMethod("MemorizePlaceholder()");
             myClipboard.getValue().add("NO VALUE");
 
             this.myLogger.LogFunctionEndDebug();
@@ -771,6 +814,27 @@ import okw.log.Logger_Sngltn;
             String lvs_ObjectName = getFN();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyLabel()");
+
+            myClipboard.getValue().addAll(lvLsReturn);
+
+            this.myLogger.LogFunctionEndDebug();
+
+            return lvLsReturn;
+        }
+
+        public ArrayList<String> VerifyPlaceholder()
+        {
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+            this.myLogger.LogFunctionStartDebug("VerifyPlaceholder");
+            lvLsReturn.add("1. Placeholder");
+            lvLsReturn.add("2. Placeholder");
+            lvLsReturn.add("3. Placeholder");
+            
+            myClipboard.Clear();
+            String lvs_ObjectName = getFN();
+            myClipboard.setObjectName(lvs_ObjectName);
+            myClipboard.setMethod("VerifyPlaceholder()");
 
             myClipboard.getValue().addAll(lvLsReturn);
 
