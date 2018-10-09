@@ -110,6 +110,12 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
     throw new OKWFrameObjectMethodNotImplemented("The method getTooltip() is not defined for you GUI-Object. Please define first the methode!");
   }
 
+  public ArrayList<String> getPlaceholder()
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method getPlaceholder() is not defined for you GUI-Object. Please define first the methode!");
+  }
+
   public ArrayList<String> getLabel()
   {
     // TODO: /todo Meldung in xml-Auslagern

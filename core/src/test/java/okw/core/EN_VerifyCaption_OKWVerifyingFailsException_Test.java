@@ -96,7 +96,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
    *  1. Trenner ${SEP} : nichtvorhanden
@@ -106,10 +106,10 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \~english
    *  \~
    *  \author Zoltan Hrabovszki
-   *  \date 2016.05.07
+   *  \date 2016-05-07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValue_OKWVerifyingFailsException_SV01() throws Exception {
+  public void TC_VerifyCaption_OKWVerifyingFailsException_SV01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -131,7 +131,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValue_OKWVerifyingFailsException_SV02() throws Exception {
+  public void TC_VerifyCaption_OKWVerifyingFailsException_SV02() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -154,7 +154,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValue_OKWVerifyingFailsException_SV03() throws Exception {
+  public void TC_VerifyCaption_OKWVerifyingFailsException_SV03() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -177,7 +177,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValue_OKWVerifyingFailsException_MV01() throws Exception {
+  public void TC_VerifyCaption_OKWVerifyingFailsException_MV01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -200,7 +200,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValue_OKWVerifyingFailsException_MV02() throws Exception {
+  public void TC_VerifyCaption_OKWVerifyingFailsException_MV02() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -222,7 +222,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValue_OKWVerifyingFailsException_MV03() throws Exception {
+  public void TC_VerifyCaption_OKWVerifyingFailsException_MV03() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -244,12 +244,11 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueWCM_OKWVerifyingFailsException_M01() throws Exception {
+  public void TC_VerifyCaptionWCM_OKWVerifyingFailsException_M01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyCaptionWCM( "All_MethodsObj", "Tha one and only Value" );
-//  EN.VerifyCaptionWCM( "All_MethodsObj", "Tha one and only Value" );
   }
   
   
@@ -268,7 +267,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueWCM_OKWVerifyingFailsException_SV01() throws Exception {
+  public void TC_VerifyCaptionWCM_OKWVerifyingFailsException_SV01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -290,7 +289,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueWCM_OKWVerifyingFailsException_SV02() throws Exception {
+  public void TC_VerifyCaptionWCM_OKWVerifyingFailsException_SV02() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -312,7 +311,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueWCM_OKWVerifyingFailsException_SV03() throws Exception {
+  public void TC_VerifyCaptionWCM_OKWVerifyingFailsException_SV03() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -334,7 +333,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueWCM_OKWVerifyingFailsException_MV01() throws Exception {
+  public void TC_VerifyCaptionWCM_OKWVerifyingFailsException_MV01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -356,7 +355,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueWCM_OKWVerifyingFailsException_MV02() throws Exception {
+  public void TC_VerifyCaptionWCM_OKWVerifyingFailsException_MV02() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -378,7 +377,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueWCM_OKWVerifyingFailsException_MV03() throws Exception {
+  public void TC_VerifyCaptionWCM_OKWVerifyingFailsException_MV03() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -400,7 +399,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueWCM_OKWVerifyingFailsException_MV04() throws Exception {
+  public void TC_VerifyCaptionWCM_OKWVerifyingFailsException_MV04() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -423,7 +422,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueREGX_OKWVerifyingFailsException_SV01() throws Exception {
+  public void TC_VerifyCaptionREGX_OKWVerifyingFailsException_SV01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -445,7 +444,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueREGX_OKWVerifyingFailsException_SV02() throws Exception {
+  public void TC_VerifyCaptionREGX_OKWVerifyingFailsException_SV02() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -467,7 +466,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueREGX_OKWVerifyingFailsException_SV03() throws Exception {
+  public void TC_VerifyCaptionREGX_OKWVerifyingFailsException_SV03() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -489,7 +488,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueREGX_OKWVerifyingFailsException_MV01() throws Exception {
+  public void TC_VerifyCaptionREGX_OKWVerifyingFailsException_MV01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -511,7 +510,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueREGX_OKWVerifyingFailsException_MV02() throws Exception {
+  public void TC_VerifyCaptionREGX_OKWVerifyingFailsException_MV02() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -533,7 +532,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueREGX_OKWVerifyingFailsException_MV03() throws Exception {
+  public void TC_VerifyCaptionREGX_OKWVerifyingFailsException_MV03() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -555,7 +554,7 @@ public class EN_VerifyCaption_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValueREGX_OKWVerifyingFailsException_MV04() throws Exception {
+  public void TC_VerifyCaptionREGX_OKWVerifyingFailsException_MV04() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );

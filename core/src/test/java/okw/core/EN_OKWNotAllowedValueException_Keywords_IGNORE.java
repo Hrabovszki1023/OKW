@@ -70,7 +70,7 @@ public class EN_OKWNotAllowedValueException_Keywords_IGNORE
         myLogger.setDebugMode( false );
     }
 
-    @AfterClass
+    /*@AfterClass
     public static void tearDownAfterClass() throws Exception
     {
     }
@@ -84,11 +84,12 @@ public class EN_OKWNotAllowedValueException_Keywords_IGNORE
     {
 
     }
+    */
 
-    /// \~german
-    /// \brief
-    /// Diese Methode wird immer nach jedem Test(fall) ausgeführt.
-    /// 
+    /** \~german
+     * \brief
+     * Diese Methode wird immer nach jedem Test(fall) ausgeführt.
+     */ 
     @After
     public void tearDown() throws Exception
     {

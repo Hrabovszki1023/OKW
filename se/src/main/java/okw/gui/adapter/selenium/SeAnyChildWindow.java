@@ -395,12 +395,20 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
-    /**
-     *  Liest den aktuellen Wert/Text aus dem HTML-Tag.
+    /** \~german
+     *  Liest den aktuellen sichtbaren Wert/Text des HTML-Tags aus.
      * 
-     *  Es wird das Attribute "textContent" ausgelesen.
-     *
-     *  @return
+     *  Es wird das Attribut "textContent" ausgelesen.
+     *  @return Wert des Attributs "textContent"
+     *  
+     *  \~english
+     *  Reads the current visible value/text of the HTML tag.
+     *  
+     *  It reads the attribute "textContent".
+     *  
+     *  @return The value of the attribute "textContent"
+     *  
+     *  \~
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.14
      */
@@ -426,6 +434,45 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
+    /** \~german
+     *  Liest den aktuellen sichtbaren Wert/Text des HTML-Tags aus.
+     * 
+     *  Es wird das Attribut "textContent" ausgelesen.
+     *  @return Wert des Attributs "textContent"
+     *  
+     *  \~english
+     *  Reads the current visible value/text of the HTML tag.
+     *  
+     *  It reads the attribute "textContent".
+     *  
+     *  @return The value of the attribute "textContent"
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.14
+     */
+    public ArrayList<String> getPlaceholder()
+    {
+        ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+        try
+        {
+            this.LogFunctionStartDebug( "getPlaceholder" );
+
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
+
+            // Get Value from TextField and put this into the return ArrayList<String>
+            lvLsReturn.add( this.Me().getAttribute( "placeholder" ) );
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvLsReturn );
+        }
+
+        return lvLsReturn;
+    }    
+    
     /** \~german
     *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refLogCaption aufgerufen wird.
     *  
@@ -1257,16 +1304,15 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvbReturn;
     }
 
-    /**  
-     * \~german
+   /**  
+    * \~german
     *  Ermittelt den textuellen Inhalt des Labels für Prüfewert.
     *  
-    *  @remark Sollte der Erwartetet Wert zunächt nicht mit dem aktuellen Wert nicht übereinstimmen,
+    *  @remark Sollte der erwartete Wert zunächt nicht mit dem aktuellen Wert nicht übereinstimmen,
     *  dann wird gewartet bis entweder der erwartete Wert sich im GUI objekt einstellt
     *  oder der TimeOut erreicht wird.<br/>
     *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
     *  
-    *  @param fplsExpectedValue'>Erwarteter Wert, auf den ggf. bis zum TimeOut gewartet wird.
     *  @return Rückgabe des Textuellen Inhaltes des Labels.
     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
     *  \~english
@@ -1293,6 +1339,50 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
+    
+    /**  
+     * \~german
+     *  Ermittelt den Text-Inhalt des Platzhalter für VerifyPlaceholder().
+     *  
+     *  @remark Sollte der erwartete Wert zunächst nicht mit dem aktuellen Wert übereinstimmen,
+     *  dann wird gewartet bis entweder der erwartete Wert sich im GUI Objekt einstellt
+     *  oder der TimeOut erreicht wird.<br>
+     *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @param fplsExpectedValue' Erwarteter Wert, auf den ggf. bis zum TimeOut gewartet wird.
+     *  @return Rückgabe des Textuellen Inhaltes des Labels.
+     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  \~english
+     *  Returns the text content of the placeholder for VerifyPlaceholder().
+     *  
+     *  @remark If the expected value does not match the current value,
+     *  the GUI waits until either the expected value is found in the GUI object
+     *  or the TimeOut is reached.<br>
+     *  This method is the entry point for CheckPlacholder() adjustments by method overwriting.
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2018.10.05
+     */
+     public ArrayList<String> VerifyPlaceholder()
+     {
+         ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+         try
+         {
+             this.LogFunctionStartDebug( "VerifyPlaceholder" );
+
+             // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
+             lvLsReturn = this.getPlaceholder();
+         }
+         finally
+         {
+             this.LogFunctionEndDebug( lvLsReturn );
+         }
+
+         return lvLsReturn;
+     }
+
+     
     /** \~german
     *  Ermittelt den textuellen Inhalt des ToolTips für Prüfewert.
     *  

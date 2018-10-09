@@ -158,6 +158,24 @@ public class SeInputField_EN_Test {
   }
 
   /** 
+   *  Teste das Schlüsselwort LogPlaceholder( FN ) eines SeInputText Prüfen.
+   */
+  @Test
+  public void tcLogPlaceholder() throws Exception
+  {
+
+    EN.BeginTest( name.getMethodName() );
+    EN.StartApp( ApplicationName );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+
+    EN.SelectWindow( "SeTextField" );
+    EN.LogPlaceholder( "Placeholder Name" );
+    
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+  }
+
+  /** 
    *  Teste das Schlüsselwort LogTooltip( FN ) eines SeInputText Prüfen.
    */
   @Test
@@ -277,6 +295,30 @@ public class SeInputField_EN_Test {
       EN.EndTest();
   }
 
+  
+  /** 
+   *  Testet ob das Schlüsselwort MemorizePlaceholder( FN, MemKey ) der Klasse SeInputText implementiert ist.
+   */
+  @Test
+  public void tcMemorizePlaceholder() throws Exception
+  {
+      EN.BeginTest( name.getMethodName() );
+      EN.StartApp( ApplicationName );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+
+      EN.SelectWindow( "SeTextField" );
+      // /
+      EN.MemorizePlaceholder( "Name", "SeTextField_MemorizeLabel_1" );
+      EN.MemorizePlaceholder( "Vorname", "SeTextField_MemorizeLabel_2" );
+
+      assertEquals( "Placeholder Name", myMem.get( "SeTextField_MemorizeLabel_1" ) );
+      assertEquals( "Placeholder Vorname", myMem.get( "SeTextField_MemorizeLabel_2" ) );
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+  }
+
+  
   /** 
    *  Teste das Schlüsselwort MemorizeTooltip( FN, MemKey ) eines SeInputText Prüfen.
    */
@@ -731,13 +773,16 @@ public class SeInputField_EN_Test {
   }
 
   
-  // \~german
-  // \brief
-  // Prüft, ob die Methode VerifyLabel für SeInputField implementiert ist.
-  //
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2014.12.03
+  /** \~german
+   *  Testet ob das Schlüsselwort VerifyLabel( FN, ExpVal ) der Klasse SeInputText implementiert ist.
+   *
+   * \~
+   * \~english
+   * Tests whether the keyword VerifyLabel( FN, ExpVal ) of the class SeInputText is implemented.
+   * 
+   * \author Zoltan Hrabovszki
+   * \date 2014.12.03
+   */
   @Test
   public void tcVerifyLabel() throws Exception
   {
@@ -755,13 +800,14 @@ public class SeInputField_EN_Test {
   }
 
   
-  // \~german
-  // \brief
-  // Prüft, ob die Methode VerifyLabel bei einer Soll/Ist Abweichung die Ausnahme 
-  // OKWVerifyingFailsException für SeInputField auslöst.  //
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2014.12.03
+  /** \~german
+   * Prüft, ob die Methode VerifyLabel bei einer Soll/Ist Abweichung die Ausnahme OKWVerifyingFailsException für SeInputField auslöst.  //
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2014.12.03
+   * 
+   * \todo TODO: Macht es sinn dass ihier zu testen?
+   */
   @Test( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabel_OKWVerifyingFailsException() throws Exception
   {
@@ -1339,6 +1385,18 @@ public class SeInputField_EN_Test {
   
   
   @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcMemorizePlaceholder_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.MemorizePlaceholder( "NotExists", "MemorizeLabel");
+  }
+  
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
   public void tcMemorizeTooltip_OKWGUIObjectNotFoundException() throws Exception
   {
           EN.BeginTest( name.getMethodName() );
@@ -1409,6 +1467,17 @@ public class SeInputField_EN_Test {
           EN.LogLabel( "NotExists");
   }
   
+  
+  @Test( expected = OKWGUIObjectNotFoundException.class )
+  public void tcLogPlaceholder_OKWGUIObjectNotFoundException() throws Exception
+  {
+          EN.BeginTest( name.getMethodName() );
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.SelectWindow( "SeTextField" );
+
+          EN.LogPlaceholder( "NotExists");
+  }
   
   @Test( expected = OKWGUIObjectNotFoundException.class )
   public void tcLogTooltip_OKWGUIObjectNotFoundException() throws Exception

@@ -9,6 +9,7 @@ public interface IGUIChildwindow
     Boolean getHasFocus();
     Boolean getIsActive();
     ArrayList<String> getLabel();
+    ArrayList<String> getPlaceholder();
     ArrayList<String> getTooltip();
     ArrayList<String> getValue();
     

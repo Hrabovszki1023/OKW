@@ -49,8 +49,7 @@ import org.junit.rules.TestName;
 
 
 /** \~german
- * \brief
- * Testfälle für die Prüfung der ANTLR-Funktionalitäten in den Schlüsselwörtern.
+ * Testfälle für die Prüfung der ANTLR-Funktionalitäten der Schlüsselwörtern.
  * 
  * Geprüft wird:
  * * Gemerkte werte
@@ -58,9 +57,14 @@ import org.junit.rules.TestName;
  * 
  *
  * \~english
+ * Test cases for checking the ANTLR functionalities of the keywords.
+ * 
+ * Is checked:
+ *  * Notes values
+ *  * environmental variables
  * \~
  * \author Zoltan Hrabovszki
- * \date 2016.05.07
+ * \date 2016-05-07
  */
 public class EN_Keywords_ANTLR_Test
 {
@@ -101,13 +105,13 @@ public class EN_Keywords_ANTLR_Test
     }
 
     /** \~german
-     *  \brief
      *  Prüft das Schlüsselwort "BeginTest" mit dem Testziel, dass der aktuelle Testfallname unter dem MemKey "TCN" (TestCaseName) gespeichert wird.
      * 
      *  \~english
+     *  Checks the keyword "BeginTest" with the test objective that the current test case name is stored under the MemKey "TCN" (TestCaseName).
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  @date 2016-05-07
      */
     @Test
     public void tc_BeginTest_TestCaseName() throws Exception
@@ -117,12 +121,13 @@ public class EN_Keywords_ANTLR_Test
     }
 
     /** \~german
-     *  Prüft das Keyword Select mit dem Testziel ob gemerkte Werte richtig eingesetzt werden.
+     *  Prüft das Keyword Select() mit dem Testziel ob gemerkte Werte richtig eingesetzt werden.
      * 
      *  \~english
+     *  Checks the keyword Select() with the test objective of whether the memorized values are used correctly.
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  @date 2016-05-07
      */
     @Test
     public void tc_Select_MemorizedValue() throws Exception
@@ -151,16 +156,17 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "Select()", myClipBoard.getMethod() );
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft das Keyword Select mit dem Ziel, ob Umgebungsvariablen richtig eingesetzt werden.
-    ///
-    /// Als umgebungsvariable wird 'USER' verwendet.
-    ///
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2016.05.07
+    /**
+     *  \~german
+     *  Prüft das Keyword Select() mit dem Ziel, ob Umgebungsvariablen richtig eingesetzt werden.
+     * 
+     *  Als umgebungsvariable wird '${TCN}' verwendet.
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2016-05-07
+     */
     @Test
     public void tc_Select_EnviromentVar() throws Exception
     {
@@ -190,14 +196,15 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "Select()", myClipBoard.getMethod() );
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft das Keyword Select mit dem Ziel ob gemerkte Werte richtig eingesetzt werden.
-    ///
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2016.05.07
+    /** \~german
+     *  Prüft das Schlüsselwort Select mit dem Ziel ob gemerkte Werte richtig eingesetzt werden.
+     * 
+     *  \~english
+     *  Checks the keyword Select with the aim to ensure that the values are used correctly.
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2016-05-07
+     */
     @Test
     public void tc_Typekey_MemorizedValue() throws Exception
     {

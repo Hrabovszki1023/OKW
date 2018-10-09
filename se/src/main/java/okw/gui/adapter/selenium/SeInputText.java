@@ -143,7 +143,7 @@ public class SeInputText extends SeAnyChildWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  @date 2013-12-07
      */
     @Override
     public ArrayList<String> getCaption()
@@ -191,7 +191,8 @@ public class SeInputText extends SeAnyChildWindow
         return lvLsReturn;
     }
 
-    public void setAttribute( WebElement elem, String value )
+    
+    public void set__Attribute( WebElement elem, String value )
     {
         JavascriptExecutor js = ( JavascriptExecutor ) SeDriver.getInstance().driver;
 
