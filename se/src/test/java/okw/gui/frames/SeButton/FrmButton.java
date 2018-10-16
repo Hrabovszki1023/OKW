@@ -52,14 +52,15 @@ import okw.gui.adapter.selenium.SeInputText;
 @OKW( FN = "Button" )
 public class FrmButton extends SeBrowserChild
 {
-  // \~german
-  // \brief
-  // Anzeigefeld im Fenster: Enthält Werte nach dem Klick auf "Button 1" und "Button 2". Dient zur Prüfung der Button-Klicks geprüft werden.
-  //\~english
-  // \brief 
-  // Display TextField: Contains values after you click the "Button 1" and "Button 2".
+  /** \~german
+   * Anzeigefeld im Fenster: Enthält Werte nach dem Klick auf "Button 1" und "Button 2". Dient zur Prüfung der Button-Klicks geprüft werden.
+   * 
+   * \~english
+   * \brief 
+   * Display TextField: Contains values after you click the "Button 1" and "Button 2".
+   */
   @OKW( FN = "Display", WaitForMe_PT= 500, WaitForMe_TO=1 )
-  public SeInputText   Anzeige        = new SeInputText( "//*[@id='textfield']" );
+  public SeInputText   Anzeige        = new SeInputText( "//*[@data-fn='textarea']" );
 
   /*
    * \~german
@@ -88,7 +89,7 @@ public class FrmButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
           )
-  public SeButton Text_1         = new SeButton( "//*[@name='Button 1']" );
+  public SeButton Text_1         = new SeButton( "//*[@data-fn='Button 1']" );
 
   @OKW( FN = "Text_2",
           VerifyLabel_PT=500, VerifyLabel_TO=3,
@@ -99,7 +100,7 @@ public class FrmButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=3,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=3
           )
-  public SeButton Text_2         = new SeButton( "//*[@name='Button 2']" );
+  public SeButton Text_2         = new SeButton( "//*[@data-fn='Button 2']" );
 
   @OKW( FN = "Button_3",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -110,7 +111,7 @@ public class FrmButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
            )
-  public SeButton Button_3       = new SeButton( "//*[@name='Button 3']" );
+  public SeButton Button_3       = new SeButton( "//*[@data-fn='Button 3']" );
 
   /**
    * URL des Fensters: http://test.openkeyword.de/InputButton/input_type-button.htm
