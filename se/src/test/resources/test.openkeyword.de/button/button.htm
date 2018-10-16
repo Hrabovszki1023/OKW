@@ -13,7 +13,11 @@
     <p>Sie befinden sich auf einer Entwicklungstestseite von OpenKeyWord.</p>
     <h1>&lt;button&gt;</h1>
   <p>
-    <textarea cols="20" rows="4" data-fn="textarea"></textarea>
+    <textarea
+           id="textarea"
+           cols="20"
+           rows="4"
+           data-fn="textarea"></textarea>
     <button
            data-fn="Button 1"
            name="Button 1"
@@ -29,11 +33,11 @@
   </p>
 <script>
 function myFunction1() {
-    document.getElementById("textfield").value = 'Ich bin Button 1 - ganz normal';
+    document.getElementById("textarea").value = 'Ich bin Button 1 - ganz normal';
 }
 
 function myFunction2() {
-    document.getElementById("textfield").value = 'Ich bin Button 2 - ganz normal';
+    document.getElementById("textarea").value = 'Ich bin Button 2 - ganz normal';
 }
 
 </script>
