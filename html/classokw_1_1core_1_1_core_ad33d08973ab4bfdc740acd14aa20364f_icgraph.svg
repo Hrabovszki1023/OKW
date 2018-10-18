@@ -9,14 +9,14 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 93)">
 <title>okw.core.Core.LogTablecellValue</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-93 316,-93 316,4 -4,4"/>
-<!-- Node1019 -->
-<g id="node1" class="node"><title>Node1019</title>
+<!-- Node881 -->
+<g id="node1" class="node"><title>Node881</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-32 0,-62 138,-62 138,-32 0,-32"/>
 <text text-anchor="start" x="8" y="-50" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogTablecell</text>
 <text text-anchor="middle" x="69" y="-39" font-family="Helvetica,sans-Serif" font-size="10.00">Value</text>
 </g>
-<!-- Node1020 -->
-<g id="node2" class="node"><title>Node1020</title>
+<!-- Node882 -->
+<g id="node2" class="node"><title>Node882</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_e_n.html#ab1718e25041c06f775c33c6a41605966" target="_top" xlink:title="Dokumentiert den Wert der ausgewählten Zelle. ">
 <polygon fill="white" stroke="black" points="177.5,-59 177.5,-89 308.5,-89 308.5,-59 177.5,-59"/>
 <text text-anchor="start" x="185.5" y="-77" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.LogTablecell</text>
@@ -24,13 +24,13 @@
 </a>
 </g>
 </g>
-<!-- Node1019&#45;&gt;Node1020 -->
-<g id="edge1" class="edge"><title>Node1019&#45;&gt;Node1020</title>
+<!-- Node881&#45;&gt;Node882 -->
+<g id="edge1" class="edge"><title>Node881&#45;&gt;Node882</title>
 <path fill="none" stroke="midnightblue" d="M148.488,-59.3207C158.162,-60.8393 167.963,-62.378 177.398,-63.859"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="148.895,-55.8419 138.473,-57.7487 147.809,-62.7572 148.895,-55.8419"/>
 </g>
-<!-- Node1021 -->
-<g id="node3" class="node"><title>Node1021</title>
+<!-- Node883 -->
+<g id="node3" class="node"><title>Node883</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_current_object___test.html#a470773dd1468bde0e5df0a942902360c" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode LogTablecellValue( &quot;FN&quot;, COL, ROW ) im ChildObject. ">
 <polygon fill="white" stroke="black" points="174.5,0.5 174.5,-40.5 311.5,-40.5 311.5,0.5 174.5,0.5"/>
 <text text-anchor="start" x="182.5" y="-28.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -39,8 +39,8 @@
 </a>
 </g>
 </g>
-<!-- Node1019&#45;&gt;Node1021 -->
-<g id="edge2" class="edge"><title>Node1019&#45;&gt;Node1021</title>
+<!-- Node881&#45;&gt;Node883 -->
+<g id="edge2" class="edge"><title>Node881&#45;&gt;Node883</title>
 <path fill="none" stroke="midnightblue" d="M148.521,-34.674C157.138,-33.3214 165.855,-31.953 174.324,-30.6236"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="147.809,-31.2428 138.473,-36.2513 148.895,-38.1581 147.809,-31.2428"/>
 </g>

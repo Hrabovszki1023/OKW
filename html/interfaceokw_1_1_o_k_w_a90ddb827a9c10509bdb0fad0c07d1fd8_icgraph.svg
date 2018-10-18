@@ -9,47 +9,47 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 100)">
 <title>okw.OKW.VerifyTooltip_TO</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-100 338,-100 338,4 -4,4"/>
-<!-- Node79 -->
-<g id="node1" class="node"><title>Node79</title>
+<!-- Node69 -->
+<g id="node1" class="node"><title>Node69</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-38.5 0,-57.5 138,-57.5 138,-38.5 0,-38.5"/>
 <text text-anchor="middle" x="69" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW.VerifyTooltip_TO</text>
 </g>
-<!-- Node80 -->
-<g id="node2" class="node"><title>Node80</title>
+<!-- Node70 -->
+<g id="node2" class="node"><title>Node70</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_o_k.html#a9f5e0c09b6d74adf4265e3c84cf700d1" target="_top" xlink:title="Prüft den Tooltip&#45;Text eines Objektes. ">
 <polygon fill="white" stroke="black" points="188.5,-76.5 188.5,-95.5 319.5,-95.5 319.5,-76.5 188.5,-76.5"/>
 <text text-anchor="middle" x="254" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyTooltip</text>
 </a>
 </g>
 </g>
-<!-- Node79&#45;&gt;Node80 -->
-<g id="edge1" class="edge"><title>Node79&#45;&gt;Node80</title>
+<!-- Node69&#45;&gt;Node70 -->
+<g id="edge1" class="edge"><title>Node69&#45;&gt;Node70</title>
 <path fill="none" stroke="midnightblue" d="M126.253,-59.681C152.205,-65.0699 182.622,-71.3861 207.153,-76.4799"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="126.681,-56.1953 116.179,-57.589 125.258,-63.0491 126.681,-56.1953"/>
 </g>
-<!-- Node81 -->
-<g id="node3" class="node"><title>Node81</title>
+<!-- Node71 -->
+<g id="node3" class="node"><title>Node71</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_o_k.html#adbf2e96978ec22c0d8febdee394a60e6" target="_top" xlink:title="Prüft den Tooltip&#45;Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text)...">
 <polygon fill="white" stroke="black" points="175.5,-38.5 175.5,-57.5 332.5,-57.5 332.5,-38.5 175.5,-38.5"/>
 <text text-anchor="middle" x="254" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyTooltipWCM</text>
 </a>
 </g>
 </g>
-<!-- Node79&#45;&gt;Node81 -->
-<g id="edge2" class="edge"><title>Node79&#45;&gt;Node81</title>
+<!-- Node69&#45;&gt;Node71 -->
+<g id="edge2" class="edge"><title>Node69&#45;&gt;Node71</title>
 <path fill="none" stroke="midnightblue" d="M148.174,-48C157.142,-48 166.284,-48 175.246,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="148.142,-44.5001 138.142,-48 148.142,-51.5001 148.142,-44.5001"/>
 </g>
-<!-- Node82 -->
-<g id="node4" class="node"><title>Node82</title>
+<!-- Node72 -->
+<g id="node4" class="node"><title>Node72</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_o_k.html#a95d9d7b4bc22bd4deae5398394d90e3a" target="_top" xlink:title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)...">
 <polygon fill="white" stroke="black" points="174,-0.5 174,-19.5 334,-19.5 334,-0.5 174,-0.5"/>
 <text text-anchor="middle" x="254" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyTooltipREGX</text>
 </a>
 </g>
 </g>
-<!-- Node79&#45;&gt;Node82 -->
-<g id="edge3" class="edge"><title>Node79&#45;&gt;Node82</title>
+<!-- Node69&#45;&gt;Node72 -->
+<g id="edge3" class="edge"><title>Node69&#45;&gt;Node72</title>
 <path fill="none" stroke="midnightblue" d="M126.253,-36.319C152.205,-30.9301 182.622,-24.6139 207.153,-19.5201"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="125.258,-32.9509 116.179,-38.411 126.681,-39.8047 125.258,-32.9509"/>
 </g>

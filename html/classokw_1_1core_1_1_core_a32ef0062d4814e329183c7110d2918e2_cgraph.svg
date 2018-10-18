@@ -48,20 +48,20 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 764;
 var viewHeight = 126;
-var sectionId = 'dynsection-124';
+var sectionId = 'dynsection-112';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>okw.core.Core.VerifyTooltipREGX</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-122 760,-122 760,4 -4,4"/>
-<!-- Node4155 -->
-<g id="node1" class="node"><title>Node4155</title>
+<!-- Node3591 -->
+<g id="node1" class="node"><title>Node3591</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-49.5 0.5,-68.5 167.5,-68.5 167.5,-49.5 0.5,-49.5"/>
 <text text-anchor="middle" x="84" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.VerifyTooltipREGX</text>
 </g>
-<!-- Node4156 -->
-<g id="node2" class="node"><title>Node4156</title>
+<!-- Node3592 -->
+<g id="node2" class="node"><title>Node3592</title>
 <g id="a_node2"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" target="_top" xlink:title="Ausgabe eines Schlüsselwortes. ">
 <polygon fill="white" stroke="black" points="217,-88 217,-118 351,-118 351,-88 217,-88"/>
 <text text-anchor="start" x="225" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
@@ -69,26 +69,26 @@ var sectionId = 'dynsection-124';
 </a>
 </g>
 </g>
-<!-- Node4155&#45;&gt;Node4156 -->
-<g id="edge1" class="edge"><title>Node4155&#45;&gt;Node4156</title>
+<!-- Node3591&#45;&gt;Node3592 -->
+<g id="edge1" class="edge"><title>Node3591&#45;&gt;Node3592</title>
 <path fill="none" stroke="midnightblue" d="M127.963,-68.5473C150.957,-73.6572 179.966,-80.1035 206.653,-86.0341"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="206.229,-89.5252 216.751,-88.2779 207.748,-82.6919 206.229,-89.5252"/>
 </g>
-<!-- Node4157 -->
-<g id="node3" class="node"><title>Node4157</title>
+<!-- Node3593 -->
+<g id="node3" class="node"><title>Node3593</title>
 <g id="a_node3"><a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. ">
 <polygon fill="white" stroke="black" points="204,-49.5 204,-68.5 364,-68.5 364,-49.5 204,-49.5"/>
 <text text-anchor="middle" x="284" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
 </g>
-<!-- Node4155&#45;&gt;Node4157 -->
-<g id="edge2" class="edge"><title>Node4155&#45;&gt;Node4157</title>
+<!-- Node3591&#45;&gt;Node3593 -->
+<g id="edge2" class="edge"><title>Node3591&#45;&gt;Node3593</title>
 <path fill="none" stroke="midnightblue" d="M167.536,-59C176.154,-59 184.944,-59 193.633,-59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="193.772,-62.5001 203.772,-59 193.772,-55.5001 193.772,-62.5001"/>
 </g>
-<!-- Node4160 -->
-<g id="node6" class="node"><title>Node4160</title>
+<!-- Node3596 -->
+<g id="node6" class="node"><title>Node3596</title>
 <g id="a_node6"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a651ce4c1a5bd9dcac256b3204548f3be" target="_top" xlink:title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)...">
 <polygon fill="white" stroke="black" points="212.5,-0 212.5,-30 355.5,-30 355.5,-0 212.5,-0"/>
 <text text-anchor="start" x="220.5" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.Verify</text>
@@ -96,26 +96,26 @@ var sectionId = 'dynsection-124';
 </a>
 </g>
 </g>
-<!-- Node4155&#45;&gt;Node4160 -->
-<g id="edge5" class="edge"><title>Node4155&#45;&gt;Node4160</title>
+<!-- Node3591&#45;&gt;Node3596 -->
+<g id="edge5" class="edge"><title>Node3591&#45;&gt;Node3596</title>
 <path fill="none" stroke="midnightblue" d="M127.963,-49.4527C150.554,-44.4324 178.95,-38.1223 205.247,-32.2785"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="206.203,-35.6514 215.206,-30.0654 204.685,-28.8181 206.203,-35.6514"/>
 </g>
-<!-- Node4158 -->
-<g id="node4" class="node"><title>Node4158</title>
+<!-- Node3594 -->
+<g id="node4" class="node"><title>Node3594</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="400.5,-49.5 400.5,-68.5 567.5,-68.5 567.5,-49.5 400.5,-49.5"/>
 <text text-anchor="middle" x="484" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
 </g>
-<!-- Node4157&#45;&gt;Node4158 -->
-<g id="edge3" class="edge"><title>Node4157&#45;&gt;Node4158</title>
+<!-- Node3593&#45;&gt;Node3594 -->
+<g id="edge3" class="edge"><title>Node3593&#45;&gt;Node3594</title>
 <path fill="none" stroke="midnightblue" d="M364.108,-59C372.702,-59 381.505,-59 390.242,-59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="390.452,-62.5001 400.452,-59 390.452,-55.5001 390.452,-62.5001"/>
 </g>
-<!-- Node4159 -->
-<g id="node5" class="node"><title>Node4159</title>
+<!-- Node3595 -->
+<g id="node5" class="node"><title>Node3595</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="604,-44 604,-74 756,-74 756,-44 604,-44"/>
 <text text-anchor="start" x="612" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
@@ -123,8 +123,8 @@ var sectionId = 'dynsection-124';
 </a>
 </g>
 </g>
-<!-- Node4158&#45;&gt;Node4159 -->
-<g id="edge4" class="edge"><title>Node4158&#45;&gt;Node4159</title>
+<!-- Node3594&#45;&gt;Node3595 -->
+<g id="edge4" class="edge"><title>Node3594&#45;&gt;Node3595</title>
 <path fill="none" stroke="midnightblue" d="M567.555,-59C576.227,-59 585.057,-59 593.759,-59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="593.899,-62.5001 603.899,-59 593.899,-55.5001 593.899,-62.5001"/>
 </g>

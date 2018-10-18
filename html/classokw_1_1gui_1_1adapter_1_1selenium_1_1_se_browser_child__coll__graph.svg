@@ -169,7 +169,7 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node42 -->
 <g id="node20" class="node"><title>Node42</title>
-<g id="a_node20"><a xlink:href="classokw_1_1gui_1_1_any_childwindow.html" target="_top" xlink:title="{okw.gui.AnyChildwindow\n||+ getExists()\l+ getHasFocus()\l+ getIsActive()\l+ getCaption()\l+ getTooltip()\l+ getPlaceholder()\l+ getLabel()\l+ getValue()\l+ ClickOn()\l+ DoubleClickOn()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogPlaceholder()\l+ LogSelected()\l+ LogTablecellValue()\l+ LogTooltip()\l+ LogValue()\lund 30 mehr ...\l}">
+<g id="a_node20"><a xlink:href="classokw_1_1gui_1_1_any_childwindow.html" target="_top" xlink:title="{okw.gui.AnyChildwindow\n||+ getExists()\l+ getHasFocus()\l+ getIsActive()\l+ getCaption()\l+ getTooltip()\l+ getLabel()\l+ getValue()\l+ ClickOn()\l+ DoubleClickOn()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogSelected()\l+ LogTablecellValue()\l+ LogTooltip()\l+ LogValue()\l+ MemorizeCaption()\l+ MemorizeExists()\lund 26 mehr ...\l}">
 <polygon fill="white" stroke="black" points="845.457,-684.5 845.457,-961.5 971.457,-961.5 971.457,-684.5 845.457,-684.5"/>
 <text text-anchor="middle" x="908.457" y="-949.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyChildwindow</text>
 <polyline fill="none" stroke="black" points="845.457,-942.5 971.457,-942.5 "/>
@@ -180,22 +180,22 @@ var sectionId = 'dynsection-1';
 <text text-anchor="start" x="853.457" y="-889.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
 <text text-anchor="start" x="853.457" y="-878.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
 <text text-anchor="start" x="853.457" y="-867.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
-<text text-anchor="start" x="853.457" y="-856.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getPlaceholder()</text>
-<text text-anchor="start" x="853.457" y="-845.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
-<text text-anchor="start" x="853.457" y="-834.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="853.457" y="-823.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
-<text text-anchor="start" x="853.457" y="-812.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
-<text text-anchor="start" x="853.457" y="-801.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="853.457" y="-790.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="853.457" y="-779.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="853.457" y="-768.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="853.457" y="-757.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="853.457" y="-746.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPlaceholder()</text>
-<text text-anchor="start" x="853.457" y="-735.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
-<text text-anchor="start" x="853.457" y="-724.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
-<text text-anchor="start" x="853.457" y="-713.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="853.457" y="-702.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="853.457" y="-691.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 30 mehr ...</text>
+<text text-anchor="start" x="853.457" y="-856.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
+<text text-anchor="start" x="853.457" y="-845.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="853.457" y="-834.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
+<text text-anchor="start" x="853.457" y="-823.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
+<text text-anchor="start" x="853.457" y="-812.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="853.457" y="-801.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="853.457" y="-790.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="853.457" y="-779.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="853.457" y="-768.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="853.457" y="-757.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
+<text text-anchor="start" x="853.457" y="-746.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
+<text text-anchor="start" x="853.457" y="-735.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="853.457" y="-724.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="853.457" y="-713.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeCaption()</text>
+<text text-anchor="start" x="853.457" y="-702.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
+<text text-anchor="start" x="853.457" y="-691.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 26 mehr ...</text>
 </a>
 </g>
 </g>
@@ -306,7 +306,7 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node41 -->
 <g id="node19" class="node"><title>Node41</title>
-<g id="a_node19"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html" target="_top" xlink:title="{okw.gui.adapter.selenium.\lSeAnyChildWindow\n|# iframeID\l|+ getIframeID()\l+ setIframeID()\l+ SeAnyChildWindow()\l+ SeAnyChildWindow()\l+ ClickOn()\l+ getCaption()\l+ getExists()\l+ getHasFocus()\l+ getIsActive()\l+ getLabel()\l+ getTooltip()\l+ getValue()\l+ getPlaceholder()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogTooltip()\l+ LogValue()\lund 24 mehr ...\l}">
+<g id="a_node19"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html" target="_top" xlink:title="{okw.gui.adapter.selenium.\lSeAnyChildWindow\n|# iframeID\l|+ getIframeID()\l+ setIframeID()\l+ SeAnyChildWindow()\l+ SeAnyChildWindow()\l+ ClickOn()\l+ getCaption()\l+ getExists()\l+ getHasFocus()\l+ getIsActive()\l+ getLabel()\l+ getTooltip()\l+ getValue()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogTooltip()\l+ LogValue()\l+ Me()\lund 22 mehr ...\l}">
 <polygon fill="white" stroke="black" points="842.957,-347 842.957,-635 973.957,-635 973.957,-347 842.957,-347"/>
 <text text-anchor="start" x="850.957" y="-623" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="908.457" y="-612" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow</text>
@@ -325,15 +325,15 @@ var sectionId = 'dynsection-1';
 <text text-anchor="start" x="850.957" y="-475" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
 <text text-anchor="start" x="850.957" y="-464" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
 <text text-anchor="start" x="850.957" y="-453" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="850.957" y="-442" font-family="Helvetica,sans-Serif" font-size="10.00">+ getPlaceholder()</text>
-<text text-anchor="start" x="850.957" y="-431" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="850.957" y="-420" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="850.957" y="-409" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="850.957" y="-398" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="850.957" y="-387" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="850.957" y="-376" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="850.957" y="-365" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="850.957" y="-354" font-family="Helvetica,sans-Serif" font-size="10.00">und 24 mehr ...</text>
+<text text-anchor="start" x="850.957" y="-442" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="850.957" y="-431" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="850.957" y="-420" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="850.957" y="-409" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="850.957" y="-398" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="850.957" y="-387" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="850.957" y="-376" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="850.957" y="-365" font-family="Helvetica,sans-Serif" font-size="10.00">+ Me()</text>
+<text text-anchor="start" x="850.957" y="-354" font-family="Helvetica,sans-Serif" font-size="10.00">und 22 mehr ...</text>
 </a>
 </g>
 </g>
@@ -706,7 +706,7 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node43 -->
 <g id="node21" class="node"><title>Node43</title>
-<g id="a_node21"><a xlink:href="interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html" target="_top" xlink:title="{okw.gui.IGUIChildwindow\n||+ getCaption()\l+ getExists()\l+ getHasFocus()\l+ getIsActive()\l+ getLabel()\l+ getPlaceholder()\l+ getTooltip()\l+ getValue()\l+ ClickOn()\l+ DoubleClickOn()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogPlaceholder()\l+ LogSelected()\l+ LogTablecellValue()\l+ LogTooltip()\l+ LogValue()\lund 27 mehr ...\l}">
+<g id="a_node21"><a xlink:href="interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html" target="_top" xlink:title="{okw.gui.IGUIChildwindow\n||+ getCaption()\l+ getExists()\l+ getHasFocus()\l+ getIsActive()\l+ getLabel()\l+ getTooltip()\l+ getValue()\l+ ClickOn()\l+ DoubleClickOn()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogSelected()\l+ LogTablecellValue()\l+ LogTooltip()\l+ LogValue()\l+ MemorizeCaption()\l+ MemorizeExists()\lund 23 mehr ...\l}">
 <polygon fill="white" stroke="black" points="1123.46,-1010.5 1123.46,-1287.5 1253.46,-1287.5 1253.46,-1010.5 1123.46,-1010.5"/>
 <text text-anchor="middle" x="1188.46" y="-1275.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.IGUIChildwindow</text>
 <polyline fill="none" stroke="black" points="1123.46,-1268.5 1253.46,-1268.5 "/>
@@ -717,22 +717,22 @@ var sectionId = 'dynsection-1';
 <text text-anchor="start" x="1131.46" y="-1215.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
 <text text-anchor="start" x="1131.46" y="-1204.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
 <text text-anchor="start" x="1131.46" y="-1193.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
-<text text-anchor="start" x="1131.46" y="-1182.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getPlaceholder()</text>
-<text text-anchor="start" x="1131.46" y="-1171.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
-<text text-anchor="start" x="1131.46" y="-1160.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="1131.46" y="-1149.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
-<text text-anchor="start" x="1131.46" y="-1138.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
-<text text-anchor="start" x="1131.46" y="-1127.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="1131.46" y="-1116.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="1131.46" y="-1105.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="1131.46" y="-1094.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="1131.46" y="-1083.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="1131.46" y="-1072.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPlaceholder()</text>
-<text text-anchor="start" x="1131.46" y="-1061.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
-<text text-anchor="start" x="1131.46" y="-1050.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
-<text text-anchor="start" x="1131.46" y="-1039.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="1131.46" y="-1028.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="1131.46" y="-1017.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 27 mehr ...</text>
+<text text-anchor="start" x="1131.46" y="-1182.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
+<text text-anchor="start" x="1131.46" y="-1171.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="1131.46" y="-1160.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
+<text text-anchor="start" x="1131.46" y="-1149.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
+<text text-anchor="start" x="1131.46" y="-1138.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="1131.46" y="-1127.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="1131.46" y="-1116.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="1131.46" y="-1105.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="1131.46" y="-1094.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="1131.46" y="-1083.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
+<text text-anchor="start" x="1131.46" y="-1072.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
+<text text-anchor="start" x="1131.46" y="-1061.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="1131.46" y="-1050.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="1131.46" y="-1039.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeCaption()</text>
+<text text-anchor="start" x="1131.46" y="-1028.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
+<text text-anchor="start" x="1131.46" y="-1017.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 23 mehr ...</text>
 </a>
 </g>
 </g>

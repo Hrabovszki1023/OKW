@@ -9,22 +9,22 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 34)">
 <title>okw.core.IOKW_State.FileDelete</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-34 302,-34 302,4 -4,4"/>
-<!-- Node884 -->
-<g id="node1" class="node"><title>Node884</title>
+<!-- Node759 -->
+<g id="node1" class="node"><title>Node759</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-0 0,-30 134,-30 134,-0 0,-0"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.File</text>
 <text text-anchor="middle" x="67" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Delete</text>
 </g>
-<!-- Node885 -->
-<g id="node2" class="node"><title>Node885</title>
+<!-- Node760 -->
+<g id="node2" class="node"><title>Node760</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_core.html#aee3fa3a377a0b7a3487a1a3bf8a680a1" target="_top" xlink:title="Löscht die gegebene Datei. ">
 <polygon fill="white" stroke="black" points="170,-5.5 170,-24.5 298,-24.5 298,-5.5 170,-5.5"/>
 <text text-anchor="middle" x="234" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.FileDelete</text>
 </a>
 </g>
 </g>
-<!-- Node884&#45;&gt;Node885 -->
-<g id="edge1" class="edge"><title>Node884&#45;&gt;Node885</title>
+<!-- Node759&#45;&gt;Node760 -->
+<g id="edge1" class="edge"><title>Node759&#45;&gt;Node760</title>
 <path fill="none" stroke="midnightblue" d="M144.437,-15C152.917,-15 161.482,-15 169.773,-15"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="144.161,-11.5001 134.161,-15 144.161,-18.5001 144.161,-11.5001"/>
 </g>

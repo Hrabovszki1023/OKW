@@ -9,40 +9,40 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 419)">
 <title>okw.core.IOKW_State.LogHasFocus</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-419 790,-419 790,4 -4,4"/>
-<!-- Node909 -->
-<g id="node1" class="node"><title>Node909</title>
+<!-- Node784 -->
+<g id="node1" class="node"><title>Node784</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-178 0,-208 152,-208 152,-178 0,-178"/>
 <text text-anchor="start" x="8" y="-196" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.LogHas</text>
 <text text-anchor="middle" x="76" y="-185" font-family="Helvetica,sans-Serif" font-size="10.00">Focus</text>
 </g>
-<!-- Node910 -->
-<g id="node2" class="node"><title>Node910</title>
+<!-- Node785 -->
+<g id="node2" class="node"><title>Node785</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_core.html#a03c5ee5ec358b422d897b56c095d2613" target="_top" xlink:title="Dokumentiert den Fokus&#45;Status des gegebenen Objekts. ">
 <polygon fill="white" stroke="black" points="188,-183.5 188,-202.5 332,-202.5 332,-183.5 188,-183.5"/>
 <text text-anchor="middle" x="260" y="-190.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogHasFocus</text>
 </a>
 </g>
 </g>
-<!-- Node909&#45;&gt;Node910 -->
-<g id="edge1" class="edge"><title>Node909&#45;&gt;Node910</title>
+<!-- Node784&#45;&gt;Node785 -->
+<g id="edge1" class="edge"><title>Node784&#45;&gt;Node785</title>
 <path fill="none" stroke="midnightblue" d="M162.144,-193C170.762,-193 179.451,-193 187.899,-193"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="162.077,-189.5 152.077,-193 162.077,-196.5 162.077,-189.5"/>
 </g>
-<!-- Node911 -->
-<g id="node3" class="node"><title>Node911</title>
+<!-- Node786 -->
+<g id="node3" class="node"><title>Node786</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_e_n.html#a446ed81868f18ea11da1b531d5b2d152" target="_top" xlink:title="Dokumentiert den Fokus&#45;Status des gegebenen Objekts. ">
 <polygon fill="white" stroke="black" points="387.5,-205.5 387.5,-224.5 524.5,-224.5 524.5,-205.5 387.5,-205.5"/>
 <text text-anchor="middle" x="456" y="-212.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.LogHasFocus</text>
 </a>
 </g>
 </g>
-<!-- Node910&#45;&gt;Node911 -->
-<g id="edge2" class="edge"><title>Node910&#45;&gt;Node911</title>
+<!-- Node785&#45;&gt;Node786 -->
+<g id="edge2" class="edge"><title>Node785&#45;&gt;Node786</title>
 <path fill="none" stroke="midnightblue" d="M342.413,-202.232C357.401,-203.932 372.898,-205.689 387.423,-207.337"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="342.468,-198.716 332.137,-201.067 341.679,-205.672 342.468,-198.716"/>
 </g>
-<!-- Node920 -->
-<g id="node12" class="node"><title>Node920</title>
+<!-- Node795 -->
+<g id="node12" class="node"><title>Node795</title>
 <g id="a_node12"><a xlink:href="classokw_1_1core_1_1_current_object___test.html#a2d6b28ef6db7e3e30a236d2a9d3a1c5b" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode LogExists( &quot;FN&quot; ) im ChildObject. ">
 <polygon fill="white" stroke="black" points="368.5,-156 368.5,-186 543.5,-186 543.5,-156 368.5,-156"/>
 <text text-anchor="start" x="376.5" y="-174" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -50,13 +50,13 @@
 </a>
 </g>
 </g>
-<!-- Node910&#45;&gt;Node920 -->
-<g id="edge11" class="edge"><title>Node910&#45;&gt;Node920</title>
+<!-- Node785&#45;&gt;Node795 -->
+<g id="edge11" class="edge"><title>Node785&#45;&gt;Node795</title>
 <path fill="none" stroke="midnightblue" d="M342.196,-183.792C350.846,-182.811 359.669,-181.811 368.379,-180.823"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="341.679,-180.328 332.137,-184.933 342.468,-187.284 341.679,-180.328"/>
 </g>
-<!-- Node912 -->
-<g id="node4" class="node"><title>Node912</title>
+<!-- Node787 -->
+<g id="node4" class="node"><title>Node787</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#aa5f68b22014a6f83a97bd865ee219771" target="_top" xlink:title="Testet das Schlüsselwort LogHasFocus( FN ) eines SeBACK Prüfen. ">
 <polygon fill="white" stroke="black" points="598,-373.5 598,-414.5 768,-414.5 768,-373.5 598,-373.5"/>
 <text text-anchor="start" x="606" y="-402.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeBACK.SeBACK_EN</text>
@@ -65,13 +65,13 @@
 </a>
 </g>
 </g>
-<!-- Node911&#45;&gt;Node912 -->
-<g id="edge3" class="edge"><title>Node911&#45;&gt;Node912</title>
+<!-- Node786&#45;&gt;Node787 -->
+<g id="edge3" class="edge"><title>Node786&#45;&gt;Node787</title>
 <path fill="none" stroke="midnightblue" d="M467.376,-233.759C485.843,-265.402 527.456,-329.321 580,-364 585.546,-367.66 591.549,-370.885 597.772,-373.723"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="470.203,-231.65 462.21,-224.697 464.122,-235.118 470.203,-231.65"/>
 </g>
-<!-- Node913 -->
-<g id="node5" class="node"><title>Node913</title>
+<!-- Node788 -->
+<g id="node5" class="node"><title>Node788</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_se_button_1_1_se_button___e_n___test.html#a49539de775afe7bca40d6f152ce1e99e" target="_top" xlink:title="Test des Schlüsselwortes LogHasFocus für den GUI&#45;Adapter SeButton. ">
 <polygon fill="white" stroke="black" points="616.5,-325 616.5,-355 749.5,-355 749.5,-325 616.5,-325"/>
 <text text-anchor="start" x="624.5" y="-343" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeButton.SeButton</text>
@@ -79,13 +79,13 @@
 </a>
 </g>
 </g>
-<!-- Node911&#45;&gt;Node913 -->
-<g id="edge4" class="edge"><title>Node911&#45;&gt;Node913</title>
+<!-- Node786&#45;&gt;Node788 -->
+<g id="edge4" class="edge"><title>Node786&#45;&gt;Node788</title>
 <path fill="none" stroke="midnightblue" d="M473.027,-232.084C495.017,-254.498 536.765,-293.499 580,-315 591.264,-320.602 603.867,-325 616.267,-328.437"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="475.312,-229.411 465.853,-224.64 470.272,-234.269 475.312,-229.411"/>
 </g>
-<!-- Node914 -->
-<g id="node6" class="node"><title>Node914</title>
+<!-- Node789 -->
+<g id="node6" class="node"><title>Node789</title>
 <g id="a_node6"><a xlink:href="classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___test.html#ad572d5badb79741c496835cbb5c2d6df" target="_top" xlink:title="Prüft die SetFocusFunktion bei Textfelder mit dem Attribute &quot;ReadOnly&quot;. ">
 <polygon fill="white" stroke="black" points="604,-276 604,-306 762,-306 762,-276 604,-276"/>
 <text text-anchor="start" x="612" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputCheckbox.SeInput</text>
@@ -93,13 +93,13 @@
 </a>
 </g>
 </g>
-<!-- Node911&#45;&gt;Node914 -->
-<g id="edge5" class="edge"><title>Node911&#45;&gt;Node914</title>
+<!-- Node786&#45;&gt;Node789 -->
+<g id="edge5" class="edge"><title>Node786&#45;&gt;Node789</title>
 <path fill="none" stroke="midnightblue" d="M486.688,-228.813C511.306,-239.899 547.42,-255.322 580,-266 591.002,-269.606 602.821,-272.961 614.376,-275.968"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="488.08,-225.601 477.528,-224.648 485.183,-231.973 488.08,-225.601"/>
 </g>
-<!-- Node915 -->
-<g id="node7" class="node"><title>Node915</title>
+<!-- Node790 -->
+<g id="node7" class="node"><title>Node790</title>
 <g id="a_node7"><a xlink:href="classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#aea12edabe046d05661be0d10287ad9e7" target="_top" xlink:title="Testet das Schlüsselwort LogHasFocus( FN ) eines SeInputField Prüfen. ">
 <polygon fill="white" stroke="black" points="606,-227 606,-257 760,-257 760,-227 606,-227"/>
 <text text-anchor="start" x="614" y="-245" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputField.SeInput</text>
@@ -107,13 +107,13 @@
 </a>
 </g>
 </g>
-<!-- Node911&#45;&gt;Node915 -->
-<g id="edge6" class="edge"><title>Node911&#45;&gt;Node915</title>
+<!-- Node786&#45;&gt;Node790 -->
+<g id="edge6" class="edge"><title>Node786&#45;&gt;Node790</title>
 <path fill="none" stroke="midnightblue" d="M534.591,-224.311C557.657,-227.079 582.897,-230.108 605.869,-232.864"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="534.853,-220.817 524.507,-223.101 534.019,-227.767 534.853,-220.817"/>
 </g>
-<!-- Node916 -->
-<g id="node8" class="node"><title>Node916</title>
+<!-- Node791 -->
+<g id="node8" class="node"><title>Node791</title>
 <g id="a_node8"><a xlink:href="classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a27d58cefa1bfc6754c9183baf8d6a41b" target="_top" xlink:title="okw.SeInputField.SeInput\lField_EN_Test.tcSelect\l_OKWGUIObjectNotFoundException">
 <polygon fill="white" stroke="black" points="593.5,-167.5 593.5,-208.5 772.5,-208.5 772.5,-167.5 593.5,-167.5"/>
 <text text-anchor="start" x="601.5" y="-196.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputField.SeInput</text>
@@ -122,13 +122,13 @@
 </a>
 </g>
 </g>
-<!-- Node911&#45;&gt;Node916 -->
-<g id="edge7" class="edge"><title>Node911&#45;&gt;Node916</title>
+<!-- Node786&#45;&gt;Node791 -->
+<g id="edge7" class="edge"><title>Node786&#45;&gt;Node791</title>
 <path fill="none" stroke="midnightblue" d="M534.558,-205.693C553.488,-203.421 573.883,-200.974 593.289,-198.645"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="534.019,-202.233 524.507,-206.899 534.853,-209.183 534.019,-202.233"/>
 </g>
-<!-- Node917 -->
-<g id="node9" class="node"><title>Node917</title>
+<!-- Node792 -->
+<g id="node9" class="node"><title>Node792</title>
 <g id="a_node9"><a xlink:href="classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a6488b26eb7784c8e4a8d87d086612a30" target="_top" xlink:title="Test des Schlüsselwortes LogHasFocus für den GUI&#45;Adapter SeInputRadio. ">
 <polygon fill="white" stroke="black" points="601,-107.5 601,-148.5 765,-148.5 765,-107.5 601,-107.5"/>
 <text text-anchor="start" x="609" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputRadio.SeInput</text>
@@ -137,13 +137,13 @@
 </a>
 </g>
 </g>
-<!-- Node911&#45;&gt;Node917 -->
-<g id="edge8" class="edge"><title>Node911&#45;&gt;Node917</title>
+<!-- Node786&#45;&gt;Node792 -->
+<g id="edge8" class="edge"><title>Node786&#45;&gt;Node792</title>
 <path fill="none" stroke="midnightblue" d="M528.717,-202.073C534.031,-200.049 539.188,-197.708 544,-195 563.996,-183.749 560.351,-169.847 580,-158 586.56,-154.045 593.674,-150.583 600.989,-147.56"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="527.356,-198.84 519.025,-205.386 529.62,-205.464 527.356,-198.84"/>
 </g>
-<!-- Node918 -->
-<g id="node10" class="node"><title>Node918</title>
+<!-- Node793 -->
+<g id="node10" class="node"><title>Node793</title>
 <g id="a_node10"><a xlink:href="classokw_1_1_se_link_1_1_se_link___e_n___test.html#ab2878c015058b11805698c41ee421c14" target="_top" xlink:title="Focus eines Textfeldes loggen. ">
 <polygon fill="white" stroke="black" points="613,-59 613,-89 753,-89 753,-59 613,-59"/>
 <text text-anchor="start" x="621" y="-77" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeLink.SeLink_EN</text>
@@ -151,13 +151,13 @@
 </a>
 </g>
 </g>
-<!-- Node911&#45;&gt;Node918 -->
-<g id="edge9" class="edge"><title>Node911&#45;&gt;Node918</title>
+<!-- Node786&#45;&gt;Node793 -->
+<g id="edge9" class="edge"><title>Node786&#45;&gt;Node793</title>
 <path fill="none" stroke="midnightblue" d="M534.057,-202.075C537.599,-200.029 540.943,-197.685 544,-195 578.55,-164.655 545.528,-128.434 580,-98 589.274,-89.8128 600.817,-84.2818 612.771,-80.5734"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="532.337,-199.02 524.902,-206.568 535.421,-205.304 532.337,-199.02"/>
 </g>
-<!-- Node919 -->
-<g id="node11" class="node"><title>Node919</title>
+<!-- Node794 -->
+<g id="node11" class="node"><title>Node794</title>
 <g id="a_node11"><a xlink:href="classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test.html#ac36a4777b1e4faa03e09a691f002dfd7" target="_top" xlink:title="Testet das Schlüsselwort LogHasFocus( FN ) eines SeMAXIMIZE Prüfen. ">
 <polygon fill="white" stroke="black" points="580,0.5 580,-40.5 786,-40.5 786,0.5 580,0.5"/>
 <text text-anchor="start" x="588" y="-28.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeMAXIMIZE.SeMAXIMIZE</text>
@@ -166,8 +166,8 @@
 </a>
 </g>
 </g>
-<!-- Node911&#45;&gt;Node919 -->
-<g id="edge10" class="edge"><title>Node911&#45;&gt;Node919</title>
+<!-- Node786&#45;&gt;Node794 -->
+<g id="edge10" class="edge"><title>Node786&#45;&gt;Node794</title>
 <path fill="none" stroke="midnightblue" d="M533.691,-202.934C537.415,-200.681 540.891,-198.055 544,-195 591.359,-148.458 534.06,-97.9441 580,-50 583.32,-46.5348 587.018,-43.464 590.983,-40.7433"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="531.939,-199.897 524.604,-207.542 535.105,-206.14 531.939,-199.897"/>
 </g>

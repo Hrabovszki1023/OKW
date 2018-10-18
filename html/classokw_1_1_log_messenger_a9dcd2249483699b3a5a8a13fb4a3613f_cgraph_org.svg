@@ -9,26 +9,26 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 34)">
 <title>okw.LogMessenger.GetMessage</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-34 556,-34 556,4 -4,4"/>
-<!-- Node1050 -->
-<g id="node1" class="node"><title>Node1050</title>
+<!-- Node907 -->
+<g id="node1" class="node"><title>Node907</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-5.5 0,-24.5 160,-24.5 160,-5.5 0,-5.5"/>
 <text text-anchor="middle" x="80" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </g>
-<!-- Node1051 -->
-<g id="node2" class="node"><title>Node1051</title>
+<!-- Node908 -->
+<g id="node2" class="node"><title>Node908</title>
 <g id="a_node2"><a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="196.5,-5.5 196.5,-24.5 363.5,-24.5 363.5,-5.5 196.5,-5.5"/>
 <text text-anchor="middle" x="280" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
 </g>
-<!-- Node1050&#45;&gt;Node1051 -->
-<g id="edge1" class="edge"><title>Node1050&#45;&gt;Node1051</title>
+<!-- Node907&#45;&gt;Node908 -->
+<g id="edge1" class="edge"><title>Node907&#45;&gt;Node908</title>
 <path fill="none" stroke="midnightblue" d="M160.108,-15C168.702,-15 177.505,-15 186.242,-15"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="186.452,-18.5001 196.452,-15 186.452,-11.5001 186.452,-18.5001"/>
 </g>
-<!-- Node1052 -->
-<g id="node3" class="node"><title>Node1052</title>
+<!-- Node909 -->
+<g id="node3" class="node"><title>Node909</title>
 <g id="a_node3"><a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="400,-0 400,-30 552,-30 552,-0 400,-0"/>
 <text text-anchor="start" x="408" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
@@ -36,8 +36,8 @@
 </a>
 </g>
 </g>
-<!-- Node1051&#45;&gt;Node1052 -->
-<g id="edge2" class="edge"><title>Node1051&#45;&gt;Node1052</title>
+<!-- Node908&#45;&gt;Node909 -->
+<g id="edge2" class="edge"><title>Node908&#45;&gt;Node909</title>
 <path fill="none" stroke="midnightblue" d="M363.555,-15C372.227,-15 381.057,-15 389.759,-15"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="389.899,-18.5001 399.899,-15 389.899,-11.5001 389.899,-18.5001"/>
 </g>

@@ -10,7 +10,6 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "getIframeID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a7ea97abe22a5902bdef010bae26ce0c7", null ],
       [ "getIsActive", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ad645cfa0e917477adffe133b1d3371d5", null ],
       [ "getLabel", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a51e404fc0a53a8de7803e22f201f6b23", null ],
-      [ "getPlaceholder", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ad3c2fd8f307042718b691afca7928a63", null ],
       [ "getTooltip", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a1c887727f8411c769a24c90d8bde67a5", null ],
       [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a2fcad47248d5e447d9b3cb29a933b8df", null ],
       [ "LogCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a92bd154bf0387bd4044fb9065d8b6113", null ],
@@ -41,7 +40,6 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "VerifyHasFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a6216158314b8256477ea97c2393d2015", null ],
       [ "VerifyIsActive", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ad43f179cd90bda6ef736ac80ff4dcdac", null ],
       [ "VerifyLabel", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a703f8e93c741d957f681bc6e7fc4099e", null ],
-      [ "VerifyPlaceholder", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a7de2c60c39d707eff1e8253f893b7a6b", null ],
       [ "VerifyTooltip", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ae60fbaf8981798fcfcee6e8f2e5eec15", null ],
       [ "VerifyValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a61782ba77f680a08d43ec4f3c6491d2b", null ],
       [ "WaitForMe", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a72faf4aa1717b4178fae1b0570ca9b28", null ],
@@ -94,7 +92,7 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "SeInputText", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#ae51ba68de350e0266b8ba8b6f717a158", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#abc6862817c8a8f7455110d6dbba6faf9", null ],
       [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#aca62fc718d6636750d210014eb6244d2", null ],
-      [ "set__Attribute", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#ac35952c2a9a13593c013a802d745af14", null ],
+      [ "setAttribute", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#ab5b2fb8dbea8a39414a2f61359d19b27", null ],
       [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#ad8c33e44105dbec888046b752475aaa8", null ]
     ] ],
     [ "SeLink", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html", [

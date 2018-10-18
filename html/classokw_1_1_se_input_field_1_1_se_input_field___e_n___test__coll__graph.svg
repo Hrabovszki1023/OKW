@@ -68,22 +68,22 @@ var sectionId = 'dynsection-1';
 <text text-anchor="start" x="247.5" y="-206" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcLogHasFocus()</text>
 <text text-anchor="start" x="247.5" y="-195" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcLogIsActive()</text>
 <text text-anchor="start" x="247.5" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcLogLabel()</text>
-<text text-anchor="start" x="247.5" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcLogPlaceholder()</text>
-<text text-anchor="start" x="247.5" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcLogToolTip()</text>
-<text text-anchor="start" x="247.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcLogValue()</text>
-<text text-anchor="start" x="247.5" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_MemorizeExists_en()</text>
-<text text-anchor="start" x="247.5" y="-129" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcMemorizeHasFocus()</text>
-<text text-anchor="start" x="247.5" y="-118" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcMemorizeIsActive_en()</text>
-<text text-anchor="start" x="247.5" y="-107" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcMemorizeLabel()</text>
-<text text-anchor="start" x="247.5" y="-96" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcMemorizePlaceholder()</text>
-<text text-anchor="start" x="247.5" y="-85" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcMemorizeToolTip()</text>
-<text text-anchor="start" x="247.5" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcMemorizeValue()</text>
-<text text-anchor="start" x="247.5" y="-63" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcSetFocus_ReadableAndEnabled()</text>
-<text text-anchor="start" x="247.5" y="-52" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcSetFocus_ReadonlyAndEnabled()</text>
-<text text-anchor="start" x="247.5" y="-41" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcSetValue()</text>
-<text text-anchor="start" x="247.5" y="-30" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcSetValue_IGNORE()</text>
-<text text-anchor="start" x="247.5" y="-19" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcTypeKey()</text>
-<text text-anchor="start" x="247.5" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">und 58 mehr ...</text>
+<text text-anchor="start" x="247.5" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcLogToolTip()</text>
+<text text-anchor="start" x="247.5" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcLogValue()</text>
+<text text-anchor="start" x="247.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_MemorizeExists_en()</text>
+<text text-anchor="start" x="247.5" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcMemorizeHasFocus()</text>
+<text text-anchor="start" x="247.5" y="-129" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcMemorizeIsActive_en()</text>
+<text text-anchor="start" x="247.5" y="-118" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcMemorizeLabel()</text>
+<text text-anchor="start" x="247.5" y="-107" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcMemorizeToolTip()</text>
+<text text-anchor="start" x="247.5" y="-96" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcMemorizeValue()</text>
+<text text-anchor="start" x="247.5" y="-85" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcSetFocus_ReadableAndEnabled()</text>
+<text text-anchor="start" x="247.5" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcSetFocus_ReadonlyAndEnabled()</text>
+<text text-anchor="start" x="247.5" y="-63" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcSetValue()</text>
+<text text-anchor="start" x="247.5" y="-52" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcSetValue_IGNORE()</text>
+<text text-anchor="start" x="247.5" y="-41" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcTypeKey()</text>
+<text text-anchor="start" x="247.5" y="-30" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcVerifyCaption()</text>
+<text text-anchor="start" x="247.5" y="-19" font-family="Helvetica,sans-Serif" font-size="10.00">+ tcTypeKey_IGNORE()</text>
+<text text-anchor="start" x="247.5" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">und 54 mehr ...</text>
 </g>
 <!-- Node5 -->
 <g id="node2" class="node"><title>Node5</title>
