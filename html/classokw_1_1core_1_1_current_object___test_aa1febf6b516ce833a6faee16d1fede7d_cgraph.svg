@@ -48,48 +48,48 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 928;
 var viewHeight = 175;
-var sectionId = 'dynsection-12';
+var sectionId = 'dynsection-13';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>okw.core.CurrentObject_Test.tc_MemorizeCaption_ChildObject</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-171 924,-171 924,4 -4,4"/>
-<!-- Node132 -->
-<g id="node1" class="node"><title>Node132</title>
+<!-- Node144 -->
+<g id="node1" class="node"><title>Node144</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-59.5 0,-100.5 134,-100.5 134,-59.5 0,-59.5"/>
 <text text-anchor="start" x="8" y="-88.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
 <text text-anchor="start" x="8" y="-77.5" font-family="Helvetica,sans-Serif" font-size="10.00">_Test.tc_MemorizeCaption</text>
 <text text-anchor="middle" x="67" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">_ChildObject</text>
 </g>
-<!-- Node133 -->
-<g id="node2" class="node"><title>Node133</title>
+<!-- Node145 -->
+<g id="node2" class="node"><title>Node145</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" target="_top" xlink:title="Setzt den Kontext auf das gegebene Fenster. ">
 <polygon fill="white" stroke="black" points="177,-50.5 177,-69.5 323,-69.5 323,-50.5 177,-50.5"/>
 <text text-anchor="middle" x="250" y="-57.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.SelectWindow</text>
 </a>
 </g>
 </g>
-<!-- Node132&#45;&gt;Node133 -->
-<g id="edge1" class="edge"><title>Node132&#45;&gt;Node133</title>
+<!-- Node144&#45;&gt;Node145 -->
+<g id="edge1" class="edge"><title>Node144&#45;&gt;Node145</title>
 <path fill="none" stroke="midnightblue" d="M134.113,-72.6946C144.783,-71.5157 155.942,-70.2827 166.933,-69.0682"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="167.406,-72.5373 176.961,-67.9601 166.637,-65.5796 167.406,-72.5373"/>
 </g>
-<!-- Node139 -->
-<g id="node8" class="node"><title>Node139</title>
+<!-- Node151 -->
+<g id="node8" class="node"><title>Node151</title>
 <g id="a_node8"><a xlink:href="classokw_1_1core_1_1_core.html#a45d00018ce652231985a88ca26d34da7" target="_top" xlink:title="Keine Beschreibung zu &quot;MemorizeCaption&quot; verfügbar. ">
 <polygon fill="white" stroke="black" points="170,-91.5 170,-110.5 330,-110.5 330,-91.5 170,-91.5"/>
 <text text-anchor="middle" x="250" y="-98.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.MemorizeCaption</text>
 </a>
 </g>
 </g>
-<!-- Node132&#45;&gt;Node139 -->
-<g id="edge7" class="edge"><title>Node132&#45;&gt;Node139</title>
+<!-- Node144&#45;&gt;Node151 -->
+<g id="edge7" class="edge"><title>Node144&#45;&gt;Node151</title>
 <path fill="none" stroke="midnightblue" d="M134.113,-87.6706C142.461,-88.6391 151.107,-89.6422 159.738,-90.6437"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="159.508,-94.1403 169.845,-91.8162 160.315,-87.187 159.508,-94.1403"/>
 </g>
-<!-- Node134 -->
-<g id="node3" class="node"><title>Node134</title>
+<!-- Node146 -->
+<g id="node3" class="node"><title>Node146</title>
 <g id="a_node3"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" target="_top" xlink:title="Ausgabe eines Schlüsselwortes. ">
 <polygon fill="white" stroke="black" points="380,-88 380,-118 514,-118 514,-88 380,-88"/>
 <text text-anchor="start" x="388" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
@@ -97,26 +97,26 @@ var sectionId = 'dynsection-12';
 </a>
 </g>
 </g>
-<!-- Node133&#45;&gt;Node134 -->
-<g id="edge2" class="edge"><title>Node133&#45;&gt;Node134</title>
+<!-- Node145&#45;&gt;Node146 -->
+<g id="edge2" class="edge"><title>Node145&#45;&gt;Node146</title>
 <path fill="none" stroke="midnightblue" d="M294.277,-69.5431C316.465,-74.4359 344.147,-80.5401 369.769,-86.1901"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="369.327,-89.6766 379.846,-88.4122 370.834,-82.8408 369.327,-89.6766"/>
 </g>
-<!-- Node135 -->
-<g id="node4" class="node"><title>Node135</title>
+<!-- Node147 -->
+<g id="node4" class="node"><title>Node147</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. ">
 <polygon fill="white" stroke="black" points="367,-49.5 367,-68.5 527,-68.5 527,-49.5 367,-49.5"/>
 <text text-anchor="middle" x="447" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
 </g>
-<!-- Node133&#45;&gt;Node135 -->
-<g id="edge3" class="edge"><title>Node133&#45;&gt;Node135</title>
+<!-- Node145&#45;&gt;Node147 -->
+<g id="edge3" class="edge"><title>Node145&#45;&gt;Node147</title>
 <path fill="none" stroke="midnightblue" d="M323.057,-59.6305C333.938,-59.5747 345.274,-59.5165 356.469,-59.4591"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="356.712,-62.958 366.694,-59.4067 356.676,-55.9581 356.712,-62.958"/>
 </g>
-<!-- Node138 -->
-<g id="node7" class="node"><title>Node138</title>
+<!-- Node150 -->
+<g id="node7" class="node"><title>Node150</title>
 <g id="a_node7"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" target="_top" xlink:title="Setzt den Kontext auf das gegebene Fenster. ">
 <polygon fill="white" stroke="black" points="374,-0 374,-30 520,-30 520,-0 374,-0"/>
 <text text-anchor="start" x="382" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.Select</text>
@@ -124,26 +124,26 @@ var sectionId = 'dynsection-12';
 </a>
 </g>
 </g>
-<!-- Node133&#45;&gt;Node138 -->
-<g id="edge6" class="edge"><title>Node133&#45;&gt;Node138</title>
+<!-- Node145&#45;&gt;Node150 -->
+<g id="edge6" class="edge"><title>Node145&#45;&gt;Node150</title>
 <path fill="none" stroke="midnightblue" d="M292.354,-50.4567C315.155,-45.195 344.17,-38.4993 370.831,-32.3468"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="371.958,-35.6786 380.915,-30.0195 370.384,-28.8578 371.958,-35.6786"/>
 </g>
-<!-- Node136 -->
-<g id="node5" class="node"><title>Node136</title>
+<!-- Node148 -->
+<g id="node5" class="node"><title>Node148</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="564.5,-49.5 564.5,-68.5 731.5,-68.5 731.5,-49.5 564.5,-49.5"/>
 <text text-anchor="middle" x="648" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
 </g>
-<!-- Node135&#45;&gt;Node136 -->
-<g id="edge4" class="edge"><title>Node135&#45;&gt;Node136</title>
+<!-- Node147&#45;&gt;Node148 -->
+<g id="edge4" class="edge"><title>Node147&#45;&gt;Node148</title>
 <path fill="none" stroke="midnightblue" d="M527.222,-59C536.121,-59 545.246,-59 554.295,-59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="554.464,-62.5001 564.464,-59 554.464,-55.5001 554.464,-62.5001"/>
 </g>
-<!-- Node137 -->
-<g id="node6" class="node"><title>Node137</title>
+<!-- Node149 -->
+<g id="node6" class="node"><title>Node149</title>
 <g id="a_node6"><a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="768,-44 768,-74 920,-74 920,-44 768,-44"/>
 <text text-anchor="start" x="776" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
@@ -151,23 +151,23 @@ var sectionId = 'dynsection-12';
 </a>
 </g>
 </g>
-<!-- Node136&#45;&gt;Node137 -->
-<g id="edge5" class="edge"><title>Node136&#45;&gt;Node137</title>
+<!-- Node148&#45;&gt;Node149 -->
+<g id="edge5" class="edge"><title>Node148&#45;&gt;Node149</title>
 <path fill="none" stroke="midnightblue" d="M731.555,-59C740.227,-59 749.057,-59 757.759,-59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="757.899,-62.5001 767.899,-59 757.899,-55.5001 757.899,-62.5001"/>
 </g>
-<!-- Node139&#45;&gt;Node134 -->
-<g id="edge8" class="edge"><title>Node139&#45;&gt;Node134</title>
+<!-- Node151&#45;&gt;Node146 -->
+<g id="edge8" class="edge"><title>Node151&#45;&gt;Node146</title>
 <path fill="none" stroke="midnightblue" d="M330.033,-101.811C343.112,-101.945 356.65,-102.084 369.661,-102.217"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="369.928,-105.72 379.963,-102.323 370,-98.7202 369.928,-105.72"/>
 </g>
-<!-- Node139&#45;&gt;Node135 -->
-<g id="edge9" class="edge"><title>Node139&#45;&gt;Node135</title>
+<!-- Node151&#45;&gt;Node147 -->
+<g id="edge9" class="edge"><title>Node151&#45;&gt;Node147</title>
 <path fill="none" stroke="midnightblue" d="M295.249,-91.4695C323.819,-85.3158 361.19,-77.2667 391.576,-70.7222"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="392.551,-74.0925 401.589,-68.5653 391.077,-67.2494 392.551,-74.0925"/>
 </g>
-<!-- Node140 -->
-<g id="node9" class="node"><title>Node140</title>
+<!-- Node152 -->
+<g id="node9" class="node"><title>Node152</title>
 <g id="a_node9"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#af8e1a17d61642cdb29d6c4e95200c275" target="_top" xlink:title="Keine Beschreibung zu &quot;MemorizeCaption&quot; verfügbar. ">
 <polygon fill="white" stroke="black" points="366.5,-137 366.5,-167 527.5,-167 527.5,-137 366.5,-137"/>
 <text text-anchor="start" x="374.5" y="-155" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.Memorize</text>
@@ -175,8 +175,8 @@ var sectionId = 'dynsection-12';
 </a>
 </g>
 </g>
-<!-- Node139&#45;&gt;Node140 -->
-<g id="edge10" class="edge"><title>Node139&#45;&gt;Node140</title>
+<!-- Node151&#45;&gt;Node152 -->
+<g id="edge10" class="edge"><title>Node151&#45;&gt;Node152</title>
 <path fill="none" stroke="midnightblue" d="M287.678,-110.593C313.263,-117.284 348.151,-126.409 378.666,-134.39"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="377.842,-137.792 388.402,-136.936 379.613,-131.02 377.842,-137.792"/>
 </g>

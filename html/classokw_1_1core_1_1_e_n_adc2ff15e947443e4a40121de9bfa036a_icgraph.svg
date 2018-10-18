@@ -9,13 +9,13 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 236)">
 <title>okw.core.EN.DoubleClickOn</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-236 404,-236 404,4 -4,4"/>
-<!-- Node613 -->
-<g id="node1" class="node"><title>Node613</title>
+<!-- Node734 -->
+<g id="node1" class="node"><title>Node734</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-92.5 0.5,-111.5 143.5,-111.5 143.5,-92.5 0.5,-92.5"/>
 <text text-anchor="middle" x="72" y="-99.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.DoubleClickOn</text>
 </g>
-<!-- Node614 -->
-<g id="node2" class="node"><title>Node614</title>
+<!-- Node735 -->
+<g id="node2" class="node"><title>Node735</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#ad165e477549c4bf24fa9d42e4cf5c927" target="_top" xlink:title="Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch DoubleClickOn() ausgelöst wird...">
 <polygon fill="white" stroke="black" points="199.5,-180 199.5,-232 380.5,-232 380.5,-180 199.5,-180"/>
 <text text-anchor="start" x="207.5" y="-220" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWFrameObject</text>
@@ -25,13 +25,13 @@
 </a>
 </g>
 </g>
-<!-- Node613&#45;&gt;Node614 -->
-<g id="edge1" class="edge"><title>Node613&#45;&gt;Node614</title>
+<!-- Node734&#45;&gt;Node735 -->
+<g id="edge1" class="edge"><title>Node734&#45;&gt;Node735</title>
 <path fill="none" stroke="midnightblue" d="M94.0708,-117.612C115.023,-132.588 148.5,-155.072 180,-170 187.474,-173.542 195.389,-176.881 203.406,-179.991"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="96.0532,-114.726 85.9006,-111.697 91.9481,-120.396 96.0532,-114.726"/>
 </g>
-<!-- Node615 -->
-<g id="node3" class="node"><title>Node615</title>
+<!-- Node736 -->
+<g id="node3" class="node"><title>Node736</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#ad7eb79bf7a39002a83a5d1d452cda82b" target="_top" xlink:title="Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von DoubleClickOn() ausgelöst wird...">
 <polygon fill="white" stroke="black" points="187,-109 187,-161 393,-161 393,-109 187,-109"/>
 <text text-anchor="start" x="195" y="-149" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWFrameObject</text>
@@ -41,13 +41,13 @@
 </a>
 </g>
 </g>
-<!-- Node613&#45;&gt;Node615 -->
-<g id="edge2" class="edge"><title>Node613&#45;&gt;Node615</title>
+<!-- Node734&#45;&gt;Node736 -->
+<g id="edge2" class="edge"><title>Node734&#45;&gt;Node736</title>
 <path fill="none" stroke="midnightblue" d="M145.252,-113.039C158.648,-115.085 172.869,-117.258 186.956,-119.41"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="145.6,-109.551 135.186,-111.501 144.543,-116.471 145.6,-109.551"/>
 </g>
-<!-- Node616 -->
-<g id="node4" class="node"><title>Node616</title>
+<!-- Node737 -->
+<g id="node4" class="node"><title>Node737</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a3861906b92c8a0c2565d223cfb906e2c" target="_top" xlink:title="Test des Schlüsselwortes DoubleClickOn() für den GUI&#45;Adapter SeInputRadio. ">
 <polygon fill="white" stroke="black" points="180.5,-48.5 180.5,-89.5 399.5,-89.5 399.5,-48.5 180.5,-48.5"/>
 <text text-anchor="start" x="188.5" y="-77.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputRadio.SeInput</text>
@@ -56,13 +56,13 @@
 </a>
 </g>
 </g>
-<!-- Node613&#45;&gt;Node616 -->
-<g id="edge3" class="edge"><title>Node613&#45;&gt;Node616</title>
+<!-- Node734&#45;&gt;Node737 -->
+<g id="edge3" class="edge"><title>Node734&#45;&gt;Node737</title>
 <path fill="none" stroke="midnightblue" d="M145.374,-90.9429C156.664,-89.218 168.539,-87.4038 180.423,-85.5882"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="144.543,-87.5291 135.186,-92.4993 145.6,-94.4488 144.543,-87.5291"/>
 </g>
-<!-- Node617 -->
-<g id="node5" class="node"><title>Node617</title>
+<!-- Node738 -->
+<g id="node5" class="node"><title>Node738</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_se_link_1_1_se_link___e_n___test.html#ad3983f34eec0e46d9d2ce79c7f1bbf83" target="_top" xlink:title="Prüft ob die DoubleClickOn die Ausnahme OKWFrameObjectMethodNotImplemented auslöst. ">
 <polygon fill="white" stroke="black" points="223,-0 223,-30 357,-30 357,-0 223,-0"/>
 <text text-anchor="start" x="231" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeLink.SeLink_EN</text>
@@ -70,8 +70,8 @@
 </a>
 </g>
 </g>
-<!-- Node613&#45;&gt;Node617 -->
-<g id="edge4" class="edge"><title>Node613&#45;&gt;Node617</title>
+<!-- Node734&#45;&gt;Node738 -->
+<g id="edge4" class="edge"><title>Node734&#45;&gt;Node738</title>
 <path fill="none" stroke="midnightblue" d="M94.5781,-86.52C115.478,-72.2151 148.541,-51.3624 180,-39 193.526,-33.6848 208.482,-29.424 222.869,-26.0561"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="92.3508,-83.8059 86.1431,-92.3917 96.35,-89.551 92.3508,-83.8059"/>
 </g>

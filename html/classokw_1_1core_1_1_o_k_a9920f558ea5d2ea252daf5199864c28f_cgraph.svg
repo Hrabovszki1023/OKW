@@ -9,34 +9,34 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 62)">
 <title>okw.core.OK.verifyREGX</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-62 336,-62 336,4 -4,4"/>
-<!-- Node1174 -->
-<g id="node1" class="node"><title>Node1174</title>
+<!-- Node1319 -->
+<g id="node1" class="node"><title>Node1319</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-19.5 0.5,-38.5 129.5,-38.5 129.5,-19.5 0.5,-19.5"/>
 <text text-anchor="middle" x="65" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.verifyREGX</text>
 </g>
-<!-- Node1175 -->
-<g id="node2" class="node"><title>Node1175</title>
+<!-- Node1320 -->
+<g id="node2" class="node"><title>Node1320</title>
 <g id="a_node2"><a xlink:href="classokw_1_1_o_k_w___time_out.html#adf7b9cc33db065c1f284bb5db2227b51" target="_top" xlink:title="Anzahl der berechnetten Zyklen. ">
 <polygon fill="white" stroke="black" points="166,-38.5 166,-57.5 332,-57.5 332,-38.5 166,-38.5"/>
 <text text-anchor="middle" x="249" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_TimeOut.getMaxCount</text>
 </a>
 </g>
 </g>
-<!-- Node1174&#45;&gt;Node1175 -->
-<g id="edge1" class="edge"><title>Node1174&#45;&gt;Node1175</title>
+<!-- Node1319&#45;&gt;Node1320 -->
+<g id="edge1" class="edge"><title>Node1319&#45;&gt;Node1320</title>
 <path fill="none" stroke="midnightblue" d="M129.655,-35.6453C138.145,-36.5316 146.986,-37.4546 155.841,-38.379"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="155.518,-41.8642 165.827,-39.4215 156.245,-34.902 155.518,-41.8642"/>
 </g>
-<!-- Node1176 -->
-<g id="node3" class="node"><title>Node1176</title>
+<!-- Node1321 -->
+<g id="node3" class="node"><title>Node1321</title>
 <g id="a_node3"><a xlink:href="classokw_1_1_o_k_w___time_out.html#ab7142e5e6adc82f308a70177c71ced2c" target="_top" xlink:title="Wartezeit zwischen zwei Pollings in [ms]. ">
 <polygon fill="white" stroke="black" points="182,-0.5 182,-19.5 316,-19.5 316,-0.5 182,-0.5"/>
 <text text-anchor="middle" x="249" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_TimeOut.getPT</text>
 </a>
 </g>
 </g>
-<!-- Node1174&#45;&gt;Node1176 -->
-<g id="edge2" class="edge"><title>Node1174&#45;&gt;Node1176</title>
+<!-- Node1319&#45;&gt;Node1321 -->
+<g id="edge2" class="edge"><title>Node1319&#45;&gt;Node1321</title>
 <path fill="none" stroke="midnightblue" d="M129.655,-22.3547C143.265,-20.9339 157.775,-19.4191 171.802,-17.9547"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="172.329,-21.4188 181.912,-16.8993 171.602,-14.4566 172.329,-21.4188"/>
 </g>

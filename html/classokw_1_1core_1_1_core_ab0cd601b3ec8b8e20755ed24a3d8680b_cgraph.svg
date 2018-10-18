@@ -48,20 +48,20 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 726;
 var viewHeight = 115;
-var sectionId = 'dynsection-60';
+var sectionId = 'dynsection-64';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>okw.core.Core.Sequence</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-111 722,-111 722,4 -4,4"/>
-<!-- Node1701 -->
-<g id="node1" class="node"><title>Node1701</title>
+<!-- Node1993 -->
+<g id="node1" class="node"><title>Node1993</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-38.5 0.5,-57.5 127.5,-57.5 127.5,-38.5 0.5,-38.5"/>
 <text text-anchor="middle" x="64" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.Sequence</text>
 </g>
-<!-- Node1702 -->
-<g id="node2" class="node"><title>Node1702</title>
+<!-- Node1994 -->
+<g id="node2" class="node"><title>Node1994</title>
 <g id="a_node2"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" target="_top" xlink:title="Ausgabe eines Schlüsselwortes. ">
 <polygon fill="white" stroke="black" points="178,-77 178,-107 312,-107 312,-77 178,-77"/>
 <text text-anchor="start" x="186" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
@@ -69,52 +69,52 @@ var sectionId = 'dynsection-60';
 </a>
 </g>
 </g>
-<!-- Node1701&#45;&gt;Node1702 -->
-<g id="edge1" class="edge"><title>Node1701&#45;&gt;Node1702</title>
+<!-- Node1993&#45;&gt;Node1994 -->
+<g id="edge1" class="edge"><title>Node1993&#45;&gt;Node1994</title>
 <path fill="none" stroke="midnightblue" d="M103.84,-57.5473C123.994,-62.5012 149.257,-68.7112 172.764,-74.4895"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="172.165,-77.9463 182.711,-76.9346 173.836,-71.1487 172.165,-77.9463"/>
 </g>
-<!-- Node1703 -->
-<g id="node3" class="node"><title>Node1703</title>
+<!-- Node1995 -->
+<g id="node3" class="node"><title>Node1995</title>
 <g id="a_node3"><a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. ">
 <polygon fill="white" stroke="black" points="165,-38.5 165,-57.5 325,-57.5 325,-38.5 165,-38.5"/>
 <text text-anchor="middle" x="245" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
 </g>
-<!-- Node1701&#45;&gt;Node1703 -->
-<g id="edge2" class="edge"><title>Node1701&#45;&gt;Node1703</title>
+<!-- Node1993&#45;&gt;Node1995 -->
+<g id="edge2" class="edge"><title>Node1993&#45;&gt;Node1995</title>
 <path fill="none" stroke="midnightblue" d="M127.606,-48C136.322,-48 145.414,-48 154.506,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="154.751,-51.5001 164.751,-48 154.751,-44.5001 154.751,-51.5001"/>
 </g>
-<!-- Node1706 -->
-<g id="node6" class="node"><title>Node1706</title>
+<!-- Node1998 -->
+<g id="node6" class="node"><title>Node1998</title>
 <g id="a_node6"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a33edc5c4d97bf7f4a35d75619985eac7" target="_top" xlink:title="Ruft die Sequenz eines Fensters auf. ">
 <polygon fill="white" stroke="black" points="164.5,-0.5 164.5,-19.5 325.5,-19.5 325.5,-0.5 164.5,-0.5"/>
 <text text-anchor="middle" x="245" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.Sequence</text>
 </a>
 </g>
 </g>
-<!-- Node1701&#45;&gt;Node1706 -->
-<g id="edge5" class="edge"><title>Node1701&#45;&gt;Node1706</title>
+<!-- Node1993&#45;&gt;Node1998 -->
+<g id="edge5" class="edge"><title>Node1993&#45;&gt;Node1998</title>
 <path fill="none" stroke="midnightblue" d="M110.169,-38.411C134.216,-33.3061 163.974,-26.9887 189.319,-21.6082"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="190.1,-25.0205 199.156,-19.5201 188.647,-18.1731 190.1,-25.0205"/>
 </g>
-<!-- Node1704 -->
-<g id="node4" class="node"><title>Node1704</title>
+<!-- Node1996 -->
+<g id="node4" class="node"><title>Node1996</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="362.5,-38.5 362.5,-57.5 529.5,-57.5 529.5,-38.5 362.5,-38.5"/>
 <text text-anchor="middle" x="446" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
 </g>
-<!-- Node1703&#45;&gt;Node1704 -->
-<g id="edge3" class="edge"><title>Node1703&#45;&gt;Node1704</title>
+<!-- Node1995&#45;&gt;Node1996 -->
+<g id="edge3" class="edge"><title>Node1995&#45;&gt;Node1996</title>
 <path fill="none" stroke="midnightblue" d="M325.222,-48C334.121,-48 343.246,-48 352.295,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="352.464,-51.5001 362.464,-48 352.464,-44.5001 352.464,-51.5001"/>
 </g>
-<!-- Node1705 -->
-<g id="node5" class="node"><title>Node1705</title>
+<!-- Node1997 -->
+<g id="node5" class="node"><title>Node1997</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="566,-33 566,-63 718,-63 718,-33 566,-33"/>
 <text text-anchor="start" x="574" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
@@ -122,8 +122,8 @@ var sectionId = 'dynsection-60';
 </a>
 </g>
 </g>
-<!-- Node1704&#45;&gt;Node1705 -->
-<g id="edge4" class="edge"><title>Node1704&#45;&gt;Node1705</title>
+<!-- Node1996&#45;&gt;Node1997 -->
+<g id="edge4" class="edge"><title>Node1996&#45;&gt;Node1997</title>
 <path fill="none" stroke="midnightblue" d="M529.555,-48C538.227,-48 547.057,-48 555.759,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="555.899,-51.5001 565.899,-48 555.899,-44.5001 555.899,-51.5001"/>
 </g>

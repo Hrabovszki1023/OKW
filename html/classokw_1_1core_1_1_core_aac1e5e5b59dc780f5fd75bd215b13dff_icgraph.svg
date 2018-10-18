@@ -9,22 +9,22 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 34)">
 <title>okw.core.Core.VerifyFileExists</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-34 312,-34 312,4 -4,4"/>
-<!-- Node3270 -->
-<g id="node1" class="node"><title>Node3270</title>
+<!-- Node3729 -->
+<g id="node1" class="node"><title>Node3729</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-0 0.5,-30 125.5,-30 125.5,-0 0.5,-0"/>
 <text text-anchor="start" x="8.5" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.VerifyFile</text>
 <text text-anchor="middle" x="63" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">Exists</text>
 </g>
-<!-- Node3271 -->
-<g id="node2" class="node"><title>Node3271</title>
+<!-- Node3730 -->
+<g id="node2" class="node"><title>Node3730</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_e_n.html#ac343826e3b37f19e531fc70d98018833" target="_top" xlink:title="Prüft, ob die gegebene Datei existiert. ">
 <polygon fill="white" stroke="black" points="162,-5.5 162,-24.5 308,-24.5 308,-5.5 162,-5.5"/>
 <text text-anchor="middle" x="235" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.VerifyFileExists</text>
 </a>
 </g>
 </g>
-<!-- Node3270&#45;&gt;Node3271 -->
-<g id="edge1" class="edge"><title>Node3270&#45;&gt;Node3271</title>
+<!-- Node3729&#45;&gt;Node3730 -->
+<g id="edge1" class="edge"><title>Node3729&#45;&gt;Node3730</title>
 <path fill="none" stroke="midnightblue" d="M136.116,-15C144.619,-15 153.298,-15 161.802,-15"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="135.855,-11.5001 125.855,-15 135.855,-18.5001 135.855,-11.5001"/>
 </g>

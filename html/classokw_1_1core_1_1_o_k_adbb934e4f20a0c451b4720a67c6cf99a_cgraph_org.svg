@@ -9,13 +9,13 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 309)">
 <title>okw.core.OK.StopApp</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-309 1276,-309 1276,4 -4,4"/>
-<!-- Node769 -->
-<g id="node1" class="node"><title>Node769</title>
+<!-- Node818 -->
+<g id="node1" class="node"><title>Node818</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-142.5 0,-161.5 114,-161.5 114,-142.5 0,-142.5"/>
 <text text-anchor="middle" x="57" y="-149.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.StopApp</text>
 </g>
-<!-- Node770 -->
-<g id="node2" class="node"><title>Node770</title>
+<!-- Node819 -->
+<g id="node2" class="node"><title>Node819</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#ad11e643efb1fe66ee4b6e5d4ea58ad24" target="_top" xlink:title="Hier wird der Kontext auf ein Fenster gesetzt. ">
 <polygon fill="white" stroke="black" points="150.5,-173 150.5,-203 299.5,-203 299.5,-173 150.5,-173"/>
 <text text-anchor="start" x="158.5" y="-191" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OKW_CurrentObject</text>
@@ -23,26 +23,26 @@
 </a>
 </g>
 </g>
-<!-- Node769&#45;&gt;Node770 -->
-<g id="edge1" class="edge"><title>Node769&#45;&gt;Node770</title>
+<!-- Node818&#45;&gt;Node819 -->
+<g id="edge1" class="edge"><title>Node818&#45;&gt;Node819</title>
 <path fill="none" stroke="midnightblue" d="M102.049,-161.553C115.16,-164.396 129.948,-167.603 144.587,-170.778"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="144.161,-174.267 154.675,-172.966 145.644,-167.426 144.161,-174.267"/>
 </g>
-<!-- Node778 -->
-<g id="node10" class="node"><title>Node778</title>
+<!-- Node827 -->
+<g id="node10" class="node"><title>Node827</title>
 <g id="a_node10"><a xlink:href="classokw_1_1core_1_1_o_k.html#a5a6db6a457bcb71c893f5d4eb615b2b7" target="_top" xlink:title="Zentrale Exception&#45;Behandlung. ">
 <polygon fill="white" stroke="black" points="336.5,-100.5 336.5,-119.5 485.5,-119.5 485.5,-100.5 336.5,-100.5"/>
 <text text-anchor="middle" x="411" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.handleException</text>
 </a>
 </g>
 </g>
-<!-- Node769&#45;&gt;Node778 -->
-<g id="edge11" class="edge"><title>Node769&#45;&gt;Node778</title>
+<!-- Node818&#45;&gt;Node827 -->
+<g id="edge11" class="edge"><title>Node818&#45;&gt;Node827</title>
 <path fill="none" stroke="midnightblue" d="M114.165,-145.299C171.28,-138.484 260.461,-127.843 325.984,-120.025"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="326.773,-123.455 336.288,-118.795 325.944,-116.505 326.773,-123.455"/>
 </g>
-<!-- Node771 -->
-<g id="node3" class="node"><title>Node771</title>
+<!-- Node820 -->
+<g id="node3" class="node"><title>Node820</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#a51204f2563ba8defb737da6653705819" target="_top" xlink:title="Methode aktualisert zwei Werte: ">
 <polygon fill="white" stroke="black" points="336.5,-186 336.5,-216 485.5,-216 485.5,-186 336.5,-186"/>
 <text text-anchor="start" x="344.5" y="-204" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OKW_CurrentObject</text>
@@ -50,13 +50,13 @@
 </a>
 </g>
 </g>
-<!-- Node770&#45;&gt;Node771 -->
-<g id="edge2" class="edge"><title>Node770&#45;&gt;Node771</title>
+<!-- Node819&#45;&gt;Node820 -->
+<g id="edge2" class="edge"><title>Node819&#45;&gt;Node820</title>
 <path fill="none" stroke="midnightblue" d="M299.515,-193.194C308.315,-193.816 317.351,-194.454 326.281,-195.085"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="326.08,-198.579 336.302,-195.793 326.573,-191.597 326.08,-198.579"/>
 </g>
-<!-- Node772 -->
-<g id="node4" class="node"><title>Node772</title>
+<!-- Node821 -->
+<g id="node4" class="node"><title>Node821</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html#aeec07d71cbebe71ec3ec4d27e86d6c5c" target="_top" xlink:title="Die Methode liefert das Frame&#45;Object des gegebenen FN eines Fensterobjektes zurück. ">
 <polygon fill="white" stroke="black" points="522.5,-186 522.5,-216 683.5,-216 683.5,-186 522.5,-186"/>
 <text text-anchor="start" x="530.5" y="-204" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
@@ -64,13 +64,13 @@
 </a>
 </g>
 </g>
-<!-- Node771&#45;&gt;Node772 -->
-<g id="edge3" class="edge"><title>Node771&#45;&gt;Node772</title>
+<!-- Node820&#45;&gt;Node821 -->
+<g id="edge3" class="edge"><title>Node820&#45;&gt;Node821</title>
 <path fill="none" stroke="midnightblue" d="M485.731,-201C494.447,-201 503.414,-201 512.319,-201"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="512.33,-204.5 522.33,-201 512.33,-197.5 512.33,-204.5"/>
 </g>
-<!-- Node777 -->
-<g id="node9" class="node"><title>Node777</title>
+<!-- Node826 -->
+<g id="node9" class="node"><title>Node826</title>
 <g id="a_node9"><a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html#a0a71734828093357dfc88b5fa242e361" target="_top" xlink:title="Die Methode liefert das Objekt des gegebenen Kindobjekttests zurück. ">
 <polygon fill="white" stroke="black" points="525.5,-274 525.5,-304 680.5,-304 680.5,-274 525.5,-274"/>
 <text text-anchor="start" x="533.5" y="-292" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
@@ -78,13 +78,13 @@
 </a>
 </g>
 </g>
-<!-- Node771&#45;&gt;Node777 -->
-<g id="edge8" class="edge"><title>Node771&#45;&gt;Node777</title>
+<!-- Node820&#45;&gt;Node826 -->
+<g id="edge8" class="edge"><title>Node820&#45;&gt;Node826</title>
 <path fill="none" stroke="midnightblue" d="M438.206,-216.022C460.205,-228.338 492.654,-245.824 522,-259 530.738,-262.923 540.157,-266.776 549.358,-270.344"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="548.24,-273.663 558.831,-273.95 550.73,-267.121 548.24,-273.663"/>
 </g>
-<!-- Node773 -->
-<g id="node5" class="node"><title>Node773</title>
+<!-- Node822 -->
+<g id="node5" class="node"><title>Node822</title>
 <g id="a_node5"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4" target="_top" xlink:title="Loggt eine Nachricht. ">
 <polygon fill="white" stroke="black" points="733,-230 733,-260 867,-260 867,-230 733,-230"/>
 <text text-anchor="start" x="741" y="-248" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
@@ -92,39 +92,39 @@
 </a>
 </g>
 </g>
-<!-- Node772&#45;&gt;Node773 -->
-<g id="edge4" class="edge"><title>Node772&#45;&gt;Node773</title>
+<!-- Node821&#45;&gt;Node822 -->
+<g id="edge4" class="edge"><title>Node821&#45;&gt;Node822</title>
 <path fill="none" stroke="midnightblue" d="M670.563,-216.019C687.349,-219.807 705.499,-223.902 722.722,-227.789"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="722.212,-231.261 732.737,-230.048 723.753,-224.433 722.212,-231.261"/>
 </g>
-<!-- Node774 -->
-<g id="node6" class="node"><title>Node774</title>
+<!-- Node823 -->
+<g id="node6" class="node"><title>Node823</title>
 <g id="a_node6"><a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. ">
 <polygon fill="white" stroke="black" points="720,-191.5 720,-210.5 880,-210.5 880,-191.5 720,-191.5"/>
 <text text-anchor="middle" x="800" y="-198.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
 </g>
-<!-- Node772&#45;&gt;Node774 -->
-<g id="edge5" class="edge"><title>Node772&#45;&gt;Node774</title>
+<!-- Node821&#45;&gt;Node823 -->
+<g id="edge5" class="edge"><title>Node821&#45;&gt;Node823</title>
 <path fill="none" stroke="midnightblue" d="M683.595,-201C692.224,-201 701.047,-201 709.78,-201"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="709.975,-204.5 719.975,-201 709.975,-197.5 709.975,-204.5"/>
 </g>
-<!-- Node775 -->
-<g id="node7" class="node"><title>Node775</title>
+<!-- Node824 -->
+<g id="node7" class="node"><title>Node824</title>
 <g id="a_node7"><a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="916.5,-191.5 916.5,-210.5 1083.5,-210.5 1083.5,-191.5 916.5,-191.5"/>
 <text text-anchor="middle" x="1000" y="-198.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
 </g>
-<!-- Node774&#45;&gt;Node775 -->
-<g id="edge6" class="edge"><title>Node774&#45;&gt;Node775</title>
+<!-- Node823&#45;&gt;Node824 -->
+<g id="edge6" class="edge"><title>Node823&#45;&gt;Node824</title>
 <path fill="none" stroke="midnightblue" d="M880.108,-201C888.702,-201 897.505,-201 906.242,-201"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="906.452,-204.5 916.452,-201 906.452,-197.5 906.452,-204.5"/>
 </g>
-<!-- Node776 -->
-<g id="node8" class="node"><title>Node776</title>
+<!-- Node825 -->
+<g id="node8" class="node"><title>Node825</title>
 <g id="a_node8"><a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="1120,-186 1120,-216 1272,-216 1272,-186 1120,-186"/>
 <text text-anchor="start" x="1128" y="-204" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
@@ -132,28 +132,28 @@
 </a>
 </g>
 </g>
-<!-- Node775&#45;&gt;Node776 -->
-<g id="edge7" class="edge"><title>Node775&#45;&gt;Node776</title>
+<!-- Node824&#45;&gt;Node825 -->
+<g id="edge7" class="edge"><title>Node824&#45;&gt;Node825</title>
 <path fill="none" stroke="midnightblue" d="M1083.55,-201C1092.23,-201 1101.06,-201 1109.76,-201"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1109.9,-204.5 1119.9,-201 1109.9,-197.5 1109.9,-204.5"/>
 </g>
-<!-- Node777&#45;&gt;Node773 -->
-<g id="edge9" class="edge"><title>Node777&#45;&gt;Node773</title>
+<!-- Node826&#45;&gt;Node822 -->
+<g id="edge9" class="edge"><title>Node826&#45;&gt;Node822</title>
 <path fill="none" stroke="midnightblue" d="M670.563,-273.981C687.349,-270.193 705.499,-266.098 722.722,-262.211"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="723.753,-265.567 732.737,-259.952 722.212,-258.739 723.753,-265.567"/>
 </g>
-<!-- Node777&#45;&gt;Node774 -->
-<g id="edge10" class="edge"><title>Node777&#45;&gt;Node774</title>
+<!-- Node826&#45;&gt;Node823 -->
+<g id="edge10" class="edge"><title>Node826&#45;&gt;Node823</title>
 <path fill="none" stroke="midnightblue" d="M624.796,-273.995C647.267,-258.429 684.62,-234.391 720,-220 726.233,-217.465 732.887,-215.214 739.587,-213.231"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="740.692,-216.557 749.394,-210.514 738.823,-209.811 740.692,-216.557"/>
 </g>
-<!-- Node778&#45;&gt;Node773 -->
-<g id="edge14" class="edge"><title>Node778&#45;&gt;Node773</title>
+<!-- Node827&#45;&gt;Node822 -->
+<g id="edge14" class="edge"><title>Node827&#45;&gt;Node822</title>
 <path fill="none" stroke="midnightblue" d="M424.238,-119.58C439.521,-131.832 466.077,-154.096 486,-176 504.183,-195.991 498.345,-211.935 522,-225 583.216,-258.811 663.983,-260.729 722.496,-256.041"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="723.134,-259.498 732.786,-255.13 722.517,-252.525 723.134,-259.498"/>
 </g>
-<!-- Node779 -->
-<g id="node11" class="node"><title>Node779</title>
+<!-- Node828 -->
+<g id="node11" class="node"><title>Node828</title>
 <g id="a_node11"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c" target="_top" xlink:title="LogPrint Function: Prints the values of expressions to the results file. ">
 <polygon fill="white" stroke="black" points="733,-42 733,-72 867,-72 867,-42 733,-42"/>
 <text text-anchor="start" x="741" y="-60" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
@@ -161,13 +161,13 @@
 </a>
 </g>
 </g>
-<!-- Node778&#45;&gt;Node779 -->
-<g id="edge12" class="edge"><title>Node778&#45;&gt;Node779</title>
+<!-- Node827&#45;&gt;Node828 -->
+<g id="edge12" class="edge"><title>Node827&#45;&gt;Node828</title>
 <path fill="none" stroke="midnightblue" d="M439.198,-100.373C461.233,-92.9934 493.232,-83.2164 522,-78 589.123,-65.8286 666.635,-60.6963 722.564,-58.5402"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="722.882,-62.0311 732.749,-58.1712 722.629,-55.0356 722.882,-62.0311"/>
 </g>
-<!-- Node780 -->
-<g id="node12" class="node"><title>Node780</title>
+<!-- Node829 -->
+<g id="node12" class="node"><title>Node829</title>
 <g id="a_node12"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#aa29d396a2b9df1ac57079d777c548181" target="_top" xlink:title="LogException Function: Logs a Script Exception to the results file. ">
 <polygon fill="white" stroke="black" points="536,-0 536,-30 670,-30 670,-0 536,-0"/>
 <text text-anchor="start" x="544" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
@@ -175,13 +175,13 @@
 </a>
 </g>
 </g>
-<!-- Node778&#45;&gt;Node780 -->
-<g id="edge13" class="edge"><title>Node778&#45;&gt;Node780</title>
+<!-- Node827&#45;&gt;Node829 -->
+<g id="edge13" class="edge"><title>Node827&#45;&gt;Node829</title>
 <path fill="none" stroke="midnightblue" d="M426.493,-100.32C447.115,-86.8089 486.382,-62.0405 522,-45 530.254,-41.0509 539.176,-37.2631 547.964,-33.7881"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="549.337,-37.0098 557.409,-30.1473 546.819,-30.4782 549.337,-37.0098"/>
 </g>
-<!-- Node781 -->
-<g id="node13" class="node"><title>Node781</title>
+<!-- Node830 -->
+<g id="node13" class="node"><title>Node830</title>
 <g id="a_node13"><a xlink:href="classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#a01b48f2c86a2f91909143ee9063dfd86" target="_top" xlink:title="Methode gibt alle wichtigen Informationen zum aktuellen Objekt aus. ">
 <polygon fill="white" stroke="black" points="528.5,-88 528.5,-118 677.5,-118 677.5,-88 528.5,-88"/>
 <text text-anchor="start" x="536.5" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OKW_CurrentObject</text>
@@ -189,13 +189,13 @@
 </a>
 </g>
 </g>
-<!-- Node778&#45;&gt;Node781 -->
-<g id="edge15" class="edge"><title>Node778&#45;&gt;Node781</title>
+<!-- Node827&#45;&gt;Node830 -->
+<g id="edge15" class="edge"><title>Node827&#45;&gt;Node830</title>
 <path fill="none" stroke="midnightblue" d="M485.731,-107.284C496.323,-106.893 507.288,-106.489 518.06,-106.093"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="518.446,-109.581 528.311,-105.715 518.188,-102.586 518.446,-109.581"/>
 </g>
-<!-- Node784 -->
-<g id="node16" class="node"><title>Node784</title>
+<!-- Node833 -->
+<g id="node16" class="node"><title>Node833</title>
 <g id="a_node16"><a xlink:href="classokw_1_1core_1_1_core.html#aafe6e3d88e810dabf350b37058d4af97" target="_top" xlink:title="Setter zum Setzen des aktuellen Zustandes. ">
 <polygon fill="white" stroke="black" points="537.5,-137 537.5,-167 668.5,-167 668.5,-137 537.5,-137"/>
 <text text-anchor="start" x="545.5" y="-155" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.SetCurrent</text>
@@ -203,23 +203,23 @@
 </a>
 </g>
 </g>
-<!-- Node778&#45;&gt;Node784 -->
-<g id="edge20" class="edge"><title>Node778&#45;&gt;Node784</title>
+<!-- Node827&#45;&gt;Node833 -->
+<g id="edge20" class="edge"><title>Node827&#45;&gt;Node833</title>
 <path fill="none" stroke="midnightblue" d="M455.114,-119.53C476.477,-124.253 502.89,-130.091 527.401,-135.51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="526.886,-138.98 537.405,-137.721 528.397,-132.145 526.886,-138.98"/>
 </g>
-<!-- Node781&#45;&gt;Node774 -->
-<g id="edge18" class="edge"><title>Node781&#45;&gt;Node774</title>
+<!-- Node830&#45;&gt;Node823 -->
+<g id="edge18" class="edge"><title>Node830&#45;&gt;Node823</title>
 <path fill="none" stroke="midnightblue" d="M668.729,-118.144C674.129,-120.661 679.308,-123.591 684,-127 706.74,-143.523 697.097,-162.704 720,-179 724.83,-182.437 730.18,-185.338 735.751,-187.786"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="734.696,-191.131 745.285,-191.494 737.233,-184.607 734.696,-191.131"/>
 </g>
-<!-- Node781&#45;&gt;Node779 -->
-<g id="edge17" class="edge"><title>Node781&#45;&gt;Node779</title>
+<!-- Node830&#45;&gt;Node828 -->
+<g id="edge17" class="edge"><title>Node830&#45;&gt;Node828</title>
 <path fill="none" stroke="midnightblue" d="M667.85,-87.9379C686.295,-83.5869 706.57,-78.8039 725.549,-74.3268"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="726.41,-77.7199 735.339,-72.0174 724.803,-70.9069 726.41,-77.7199"/>
 </g>
-<!-- Node782 -->
-<g id="node14" class="node"><title>Node782</title>
+<!-- Node831 -->
+<g id="node14" class="node"><title>Node831</title>
 <g id="a_node14"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#ab4fc711bb4c754f251372ff3b14ab9c9" target="_top" xlink:title="Creates a new hierarchical level in the results file. ">
 <polygon fill="white" stroke="black" points="731.5,-140 731.5,-170 868.5,-170 868.5,-140 731.5,-140"/>
 <text text-anchor="start" x="739.5" y="-158" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Res</text>
@@ -227,13 +227,13 @@
 </a>
 </g>
 </g>
-<!-- Node781&#45;&gt;Node782 -->
-<g id="edge16" class="edge"><title>Node781&#45;&gt;Node782</title>
+<!-- Node830&#45;&gt;Node831 -->
+<g id="edge16" class="edge"><title>Node830&#45;&gt;Node831</title>
 <path fill="none" stroke="midnightblue" d="M660.402,-118.041C683.039,-124.077 709.294,-131.078 732.825,-137.353"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="732.16,-140.798 742.725,-139.993 733.964,-134.035 732.16,-140.798"/>
 </g>
-<!-- Node783 -->
-<g id="node15" class="node"><title>Node783</title>
+<!-- Node832 -->
+<g id="node15" class="node"><title>Node832</title>
 <g id="a_node15"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a9b54104f7e0b4c0a473877b19dfaed56" target="_top" xlink:title="Closes a hierarchical level in the results file that was opened with ResOpenList. ...">
 <polygon fill="white" stroke="black" points="731.5,-91 731.5,-121 868.5,-121 868.5,-91 731.5,-91"/>
 <text text-anchor="start" x="739.5" y="-109" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Res</text>
@@ -241,8 +241,8 @@
 </a>
 </g>
 </g>
-<!-- Node781&#45;&gt;Node783 -->
-<g id="edge19" class="edge"><title>Node781&#45;&gt;Node783</title>
+<!-- Node830&#45;&gt;Node832 -->
+<g id="edge19" class="edge"><title>Node830&#45;&gt;Node832</title>
 <path fill="none" stroke="midnightblue" d="M677.721,-104.134C691.868,-104.352 706.725,-104.58 721.001,-104.8"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="721.223,-108.304 731.275,-104.958 721.33,-101.305 721.223,-108.304"/>
 </g>

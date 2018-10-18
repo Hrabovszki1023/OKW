@@ -9,27 +9,27 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 132)">
 <title>okw.core.OKW_CurrentObject_Sngltn.init</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-132 402,-132 402,4 -4,4"/>
-<!-- Node47 -->
-<g id="node1" class="node"><title>Node47</title>
+<!-- Node50 -->
+<g id="node1" class="node"><title>Node50</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-59 0.5,-89 149.5,-89 149.5,-59 0.5,-59"/>
 <text text-anchor="start" x="8.5" y="-77" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OKW_CurrentObject</text>
 <text text-anchor="middle" x="75" y="-66" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn.init</text>
 </g>
-<!-- Node48 -->
-<g id="node2" class="node"><title>Node48</title>
+<!-- Node51 -->
+<g id="node2" class="node"><title>Node51</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_n_o_k.html#a62d1765ea311e440d678cb57ca9dd2c2" target="_top" xlink:title="Markiert den Anfang eines neuen Testfalls. ">
 <polygon fill="white" stroke="black" points="228,-108.5 228,-127.5 356,-127.5 356,-108.5 228,-108.5"/>
 <text text-anchor="middle" x="292" y="-115.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.NOK.BeginTest</text>
 </a>
 </g>
 </g>
-<!-- Node47&#45;&gt;Node48 -->
-<g id="edge1" class="edge"><title>Node47&#45;&gt;Node48</title>
+<!-- Node50&#45;&gt;Node51 -->
+<g id="edge1" class="edge"><title>Node50&#45;&gt;Node51</title>
 <path fill="none" stroke="midnightblue" d="M153.395,-91.1571C164.332,-93.5026 175.443,-95.8433 186,-98 203.363,-101.547 222.384,-105.231 239.409,-108.456"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="153.934,-87.6929 143.421,-89.0069 152.459,-94.5357 153.934,-87.6929"/>
 </g>
-<!-- Node49 -->
-<g id="node3" class="node"><title>Node49</title>
+<!-- Node52 -->
+<g id="node3" class="node"><title>Node52</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#a76165466ac41105afd78dbea7076582a" target="_top" xlink:title="Initialisiert eine neue Instanz der OKW.CurrentObject Klasse Nicht öffentlicher Konstruktor: Verwende...">
 <polygon fill="white" stroke="black" points="204,-59 204,-89 380,-89 380,-59 204,-59"/>
 <text text-anchor="start" x="212" y="-77" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OKW_CurrentObject</text>
@@ -37,13 +37,13 @@
 </a>
 </g>
 </g>
-<!-- Node47&#45;&gt;Node49 -->
-<g id="edge2" class="edge"><title>Node47&#45;&gt;Node49</title>
+<!-- Node50&#45;&gt;Node52 -->
+<g id="edge2" class="edge"><title>Node50&#45;&gt;Node52</title>
 <path fill="none" stroke="midnightblue" d="M160.01,-74C174.346,-74 189.269,-74 203.689,-74"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="159.69,-70.5001 149.69,-74 159.69,-77.5001 159.69,-70.5001"/>
 </g>
-<!-- Node50 -->
-<g id="node4" class="node"><title>Node50</title>
+<!-- Node53 -->
+<g id="node4" class="node"><title>Node53</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_current_object___test.html#ac47d14a9fc85ffe22e5626da790c32f7" target="_top" xlink:title="Testziel: Prüfen, ob OKW_Kernel_Exception in der Methode CurrentObject.SetChildName() ausglöst wird...">
 <polygon fill="white" stroke="black" points="186,0.5 186,-40.5 398,-40.5 398,0.5 186,0.5"/>
 <text text-anchor="start" x="194" y="-28.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -52,8 +52,8 @@
 </a>
 </g>
 </g>
-<!-- Node47&#45;&gt;Node50 -->
-<g id="edge3" class="edge"><title>Node47&#45;&gt;Node50</title>
+<!-- Node50&#45;&gt;Node53 -->
+<g id="edge3" class="edge"><title>Node50&#45;&gt;Node53</title>
 <path fill="none" stroke="midnightblue" d="M145.678,-56.4994C165.987,-51.3987 188.359,-45.7795 209.337,-40.5107"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="144.736,-53.1274 135.889,-58.958 146.441,-59.9165 144.736,-53.1274"/>
 </g>

@@ -9,13 +9,13 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 73)">
 <title>okw.OKW.WaitForMe_PT</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-73 330,-73 330,4 -4,4"/>
-<!-- Node84 -->
-<g id="node1" class="node"><title>Node84</title>
+<!-- Node94 -->
+<g id="node1" class="node"><title>Node94</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-22.5 0.5,-41.5 131.5,-41.5 131.5,-22.5 0.5,-22.5"/>
 <text text-anchor="middle" x="66" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW.WaitForMe_PT</text>
 </g>
-<!-- Node85 -->
-<g id="node2" class="node"><title>Node85</title>
+<!-- Node95 -->
+<g id="node2" class="node"><title>Node95</title>
 <g id="a_node2"><a xlink:href="classokw_1_1gui_1_1_any_childwindow.html#aafd5a3cba312fe0033c63e98d0247a82" target="_top" xlink:title="Methode wartet auf die Existenz des aktuellen Objectes. ">
 <polygon fill="white" stroke="black" points="172.5,-39 172.5,-69 321.5,-69 321.5,-39 172.5,-39"/>
 <text text-anchor="start" x="180.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyChildwindow.Wait</text>
@@ -23,21 +23,21 @@
 </a>
 </g>
 </g>
-<!-- Node84&#45;&gt;Node85 -->
-<g id="edge1" class="edge"><title>Node84&#45;&gt;Node85</title>
+<!-- Node94&#45;&gt;Node95 -->
+<g id="edge1" class="edge"><title>Node94&#45;&gt;Node95</title>
 <path fill="none" stroke="midnightblue" d="M141.665,-41.1766C151.813,-42.424 162.224,-43.7035 172.354,-44.9486"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="141.975,-37.6886 131.623,-39.9425 141.121,-44.6363 141.975,-37.6886"/>
 </g>
-<!-- Node86 -->
-<g id="node3" class="node"><title>Node86</title>
+<!-- Node96 -->
+<g id="node3" class="node"><title>Node96</title>
 <g id="a_node3"><a xlink:href="classokw_1_1gui_1_1_any_window.html#a17845263881502bb0c2ab166da623149" target="_top" xlink:title="Methode, wartet auf das aktuelle GUI&#45;Object bis es erscheint oder der eingestellte TimeOut erreicht i...">
 <polygon fill="white" stroke="black" points="168.5,-0.5 168.5,-19.5 325.5,-19.5 325.5,-0.5 168.5,-0.5"/>
 <text text-anchor="middle" x="247" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWindow.WaitForMe</text>
 </a>
 </g>
 </g>
-<!-- Node84&#45;&gt;Node86 -->
-<g id="edge2" class="edge"><title>Node84&#45;&gt;Node86</title>
+<!-- Node94&#45;&gt;Node96 -->
+<g id="edge2" class="edge"><title>Node94&#45;&gt;Node96</title>
 <path fill="none" stroke="midnightblue" d="M141.607,-22.8304C150.544,-21.7321 159.685,-20.6086 168.659,-19.5056"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="141.121,-19.3637 131.623,-24.0575 141.975,-26.3114 141.121,-19.3637"/>
 </g>

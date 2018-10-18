@@ -9,14 +9,14 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 83)">
 <title>okw.OKW_Helper.removeBeginEndQuotations</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-83 364,-83 364,4 -4,4"/>
-<!-- Node197 -->
-<g id="node1" class="node"><title>Node197</title>
+<!-- Node205 -->
+<g id="node1" class="node"><title>Node205</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-24 0.5,-54 155.5,-54 155.5,-24 0.5,-24"/>
 <text text-anchor="start" x="8.5" y="-42" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Helper.removeBegin</text>
 <text text-anchor="middle" x="78" y="-31" font-family="Helvetica,sans-Serif" font-size="10.00">EndQuotations</text>
 </g>
-<!-- Node198 -->
-<g id="node2" class="node"><title>Node198</title>
+<!-- Node206 -->
+<g id="node2" class="node"><title>Node206</title>
 <g id="a_node2"><a xlink:href="classokw_1_1_o_k_w___helper_test.html#a4a54cfce3440c6c39c752d858a7237c0" target="_top" xlink:title="Test auf den Vergleich von zwei ListStings mit je drei Werten. ">
 <polygon fill="white" stroke="black" points="198.5,-49 198.5,-79 353.5,-79 353.5,-49 198.5,-49"/>
 <text text-anchor="start" x="206.5" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_HelperTest.tcList</text>
@@ -24,13 +24,13 @@
 </a>
 </g>
 </g>
-<!-- Node197&#45;&gt;Node198 -->
-<g id="edge1" class="edge"><title>Node197&#45;&gt;Node198</title>
+<!-- Node205&#45;&gt;Node206 -->
+<g id="edge1" class="edge"><title>Node205&#45;&gt;Node206</title>
 <path fill="none" stroke="midnightblue" d="M165.596,-50.0454C176.535,-51.4406 187.665,-52.8603 198.432,-54.2337"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="165.983,-46.5665 155.621,-48.7731 165.098,-53.5103 165.983,-46.5665"/>
 </g>
-<!-- Node199 -->
-<g id="node3" class="node"><title>Node199</title>
+<!-- Node207 -->
+<g id="node3" class="node"><title>Node207</title>
 <g id="a_node3"><a xlink:href="classokw_1_1_o_k_w___helper_test.html#ae7889b49db902cf40532e9a75efeaec9" target="_top" xlink:title="Prüft ob innen liegende Anführungsstriche erhalten bleiben. ">
 <polygon fill="white" stroke="black" points="192,-0 192,-30 360,-30 360,-0 192,-0"/>
 <text text-anchor="start" x="200" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_HelperTest.tcRemove</text>
@@ -38,8 +38,8 @@
 </a>
 </g>
 </g>
-<!-- Node197&#45;&gt;Node199 -->
-<g id="edge2" class="edge"><title>Node197&#45;&gt;Node199</title>
+<!-- Node205&#45;&gt;Node207 -->
+<g id="edge2" class="edge"><title>Node205&#45;&gt;Node207</title>
 <path fill="none" stroke="midnightblue" d="M165.765,-28.3757C174.467,-27.3101 183.29,-26.2298 191.952,-25.1691"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="165.121,-24.9283 155.621,-29.6179 165.972,-31.8764 165.121,-24.9283"/>
 </g>

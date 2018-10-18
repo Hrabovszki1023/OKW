@@ -72,17 +72,17 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="76" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_LogSelected()</text>
 <text text-anchor="start" x="76" y="-161.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_LogTablecellValue()</text>
 <text text-anchor="start" x="76" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_LogTooltip()</text>
-<text text-anchor="start" x="76" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_LogValue()</text>
-<text text-anchor="start" x="76" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizeExists()</text>
-<text text-anchor="start" x="76" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizeHasFocus()</text>
-<text text-anchor="start" x="76" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizeIsActive()</text>
-<text text-anchor="start" x="76" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizeSelectedValue()</text>
-<text text-anchor="start" x="76" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizeTablecellValue()</text>
-<text text-anchor="start" x="76" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizeTooltip()</text>
-<text text-anchor="start" x="76" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizeValue()</text>
-<text text-anchor="start" x="76" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_SelectMenu()</text>
-<text text-anchor="start" x="76" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_SelectMenu_Value_MV()</text>
-<text text-anchor="start" x="76" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 43 mehr ...</text>
+<text text-anchor="start" x="76" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_LogPlaceholder()</text>
+<text text-anchor="start" x="76" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_LogLabel()</text>
+<text text-anchor="start" x="76" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_LogCaption()</text>
+<text text-anchor="start" x="76" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_LogValue()</text>
+<text text-anchor="start" x="76" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizeExists()</text>
+<text text-anchor="start" x="76" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizeHasFocus()</text>
+<text text-anchor="start" x="76" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizeIsActive()</text>
+<text text-anchor="start" x="76" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizeSelectedValue()</text>
+<text text-anchor="start" x="76" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizeTablecellValue()</text>
+<text text-anchor="start" x="76" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizeTooltip()</text>
+<text text-anchor="start" x="76" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 52 mehr ...</text>
 <text text-anchor="start" x="76" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setUpBeforeClass()</text>
 <text text-anchor="start" x="76" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tearDownAfterClass()</text>
 </g>
