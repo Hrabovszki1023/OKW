@@ -11,58 +11,58 @@
 <polygon fill="white" stroke="none" points="-4,4 -4,-1142 482,-1142 482,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node"><title>Node1</title>
-<polygon fill="#bfbfbf" stroke="black" points="51.5,-0.5 51.5,-563.5 236.5,-563.5 236.5,-0.5 51.5,-0.5"/>
-<text text-anchor="start" x="59.5" y="-551.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_VerifyCaption</text>
+<polygon fill="#bfbfbf" stroke="black" points="50,-0.5 50,-563.5 238,-563.5 238,-0.5 50,-0.5"/>
+<text text-anchor="start" x="58" y="-551.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_VerifyCaption</text>
 <text text-anchor="middle" x="144" y="-540.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_Test</text>
-<polyline fill="none" stroke="black" points="51.5,-533.5 236.5,-533.5 "/>
+<polyline fill="none" stroke="black" points="50,-533.5 238,-533.5 "/>
 <text text-anchor="middle" x="144" y="-521.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="51.5,-514.5 236.5,-514.5 "/>
-<text text-anchor="start" x="59.5" y="-502.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setUp()</text>
-<text text-anchor="start" x="59.5" y="-491.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tearDown()</text>
-<text text-anchor="start" x="59.5" y="-480.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaption_OKWVerifying</text>
-<text text-anchor="start" x="59.5" y="-469.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_SV01()</text>
-<text text-anchor="start" x="59.5" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaption_OKWVerifying</text>
-<text text-anchor="start" x="59.5" y="-447.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_SV02()</text>
-<text text-anchor="start" x="59.5" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaption_OKWVerifying</text>
-<text text-anchor="start" x="59.5" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_SV03()</text>
-<text text-anchor="start" x="59.5" y="-414.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaption_OKWVerifying</text>
-<text text-anchor="start" x="59.5" y="-403.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_MV01()</text>
-<text text-anchor="start" x="59.5" y="-392.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaption_OKWVerifying</text>
-<text text-anchor="start" x="59.5" y="-381.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_MV02()</text>
-<text text-anchor="start" x="59.5" y="-370.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaption_OKWVerifying</text>
-<text text-anchor="start" x="59.5" y="-359.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_MV03()</text>
-<text text-anchor="start" x="59.5" y="-348.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionWCM</text>
-<text text-anchor="start" x="59.5" y="-337.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_M01()</text>
-<text text-anchor="start" x="59.5" y="-326.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionWCM</text>
-<text text-anchor="start" x="59.5" y="-315.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_SV01()</text>
-<text text-anchor="start" x="59.5" y="-304.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionWCM</text>
-<text text-anchor="start" x="59.5" y="-293.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_SV02()</text>
-<text text-anchor="start" x="59.5" y="-282.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionWCM</text>
-<text text-anchor="start" x="59.5" y="-271.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_SV03()</text>
-<text text-anchor="start" x="59.5" y="-260.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionWCM</text>
-<text text-anchor="start" x="59.5" y="-249.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_MV01()</text>
-<text text-anchor="start" x="59.5" y="-238.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionWCM</text>
-<text text-anchor="start" x="59.5" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_MV02()</text>
-<text text-anchor="start" x="59.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionWCM</text>
-<text text-anchor="start" x="59.5" y="-205.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_MV03()</text>
-<text text-anchor="start" x="59.5" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionWCM</text>
-<text text-anchor="start" x="59.5" y="-183.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_MV04()</text>
-<text text-anchor="start" x="59.5" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionREGX</text>
-<text text-anchor="start" x="59.5" y="-161.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_SV01()</text>
-<text text-anchor="start" x="59.5" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionREGX</text>
-<text text-anchor="start" x="59.5" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_SV02()</text>
-<text text-anchor="start" x="59.5" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionREGX</text>
-<text text-anchor="start" x="59.5" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_SV03()</text>
-<text text-anchor="start" x="59.5" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionREGX</text>
-<text text-anchor="start" x="59.5" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_MV01()</text>
-<text text-anchor="start" x="59.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionREGX</text>
-<text text-anchor="start" x="59.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_MV02()</text>
-<text text-anchor="start" x="59.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionREGX</text>
-<text text-anchor="start" x="59.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_MV03()</text>
-<text text-anchor="start" x="59.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionREGX</text>
-<text text-anchor="start" x="59.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_MV04()</text>
-<text text-anchor="start" x="59.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setUpBeforeClass()</text>
-<text text-anchor="start" x="59.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tearDownAfterClass()</text>
+<polyline fill="none" stroke="black" points="50,-514.5 238,-514.5 "/>
+<text text-anchor="start" x="58" y="-502.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setUp()</text>
+<text text-anchor="start" x="58" y="-491.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tearDown()</text>
+<text text-anchor="start" x="58" y="-480.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValue_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-469.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_SV01()</text>
+<text text-anchor="start" x="58" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValue_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-447.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_SV02()</text>
+<text text-anchor="start" x="58" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValue_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_SV03()</text>
+<text text-anchor="start" x="58" y="-414.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValue_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-403.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_MV01()</text>
+<text text-anchor="start" x="58" y="-392.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValue_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-381.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_MV02()</text>
+<text text-anchor="start" x="58" y="-370.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValue_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-359.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_MV03()</text>
+<text text-anchor="start" x="58" y="-348.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueWCM_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-337.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_M01()</text>
+<text text-anchor="start" x="58" y="-326.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueWCM_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-315.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_SV01()</text>
+<text text-anchor="start" x="58" y="-304.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueWCM_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-293.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_SV02()</text>
+<text text-anchor="start" x="58" y="-282.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueWCM_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-271.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_SV03()</text>
+<text text-anchor="start" x="58" y="-260.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueWCM_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-249.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_MV01()</text>
+<text text-anchor="start" x="58" y="-238.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueWCM_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_MV02()</text>
+<text text-anchor="start" x="58" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueWCM_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-205.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_MV03()</text>
+<text text-anchor="start" x="58" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueWCM_OKWVerifying</text>
+<text text-anchor="start" x="58" y="-183.5" font-family="Helvetica,sans-Serif" font-size="10.00">FailsException_MV04()</text>
+<text text-anchor="start" x="58" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueREGX</text>
+<text text-anchor="start" x="58" y="-161.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_SV01()</text>
+<text text-anchor="start" x="58" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueREGX</text>
+<text text-anchor="start" x="58" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_SV02()</text>
+<text text-anchor="start" x="58" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueREGX</text>
+<text text-anchor="start" x="58" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_SV03()</text>
+<text text-anchor="start" x="58" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueREGX</text>
+<text text-anchor="start" x="58" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_MV01()</text>
+<text text-anchor="start" x="58" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueREGX</text>
+<text text-anchor="start" x="58" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_MV02()</text>
+<text text-anchor="start" x="58" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueREGX</text>
+<text text-anchor="start" x="58" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_MV03()</text>
+<text text-anchor="start" x="58" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyValueREGX</text>
+<text text-anchor="start" x="58" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWVerifyingFailsException_MV04()</text>
+<text text-anchor="start" x="58" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setUpBeforeClass()</text>
+<text text-anchor="start" x="58" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ tearDownAfterClass()</text>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
@@ -176,8 +176,8 @@
 </g>
 <!-- Node5&#45;&gt;Node1 -->
 <g id="edge5" class="edge"><title>Node5&#45;&gt;Node1</title>
-<path fill="none" stroke="#404040" d="M281.926,-635.455C278.921,-627.525 275.935,-619.678 273,-612 262.747,-585.179 251.931,-557.169 241.101,-529.301"/>
-<polygon fill="none" stroke="#404040" points="240.975,-528.977 235.072,-524.836 236.625,-517.794 242.528,-521.936 240.975,-528.977"/>
+<path fill="none" stroke="#404040" d="M281.926,-635.455C278.921,-627.525 275.935,-619.678 273,-612 263.176,-586.301 252.835,-559.511 242.46,-532.799"/>
+<polygon fill="none" stroke="#404040" points="242.361,-532.544 236.459,-528.401 238.013,-521.36 243.915,-525.503 242.361,-532.544"/>
 <text text-anchor="middle" x="288" y="-585.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
 </g>
 <!-- Node5&#45;&gt;Node5 -->

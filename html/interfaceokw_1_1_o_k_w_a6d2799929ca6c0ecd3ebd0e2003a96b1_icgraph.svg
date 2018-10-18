@@ -9,47 +9,47 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 100)">
 <title>okw.OKW.VerifyValue_PT</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-100 330,-100 330,4 -4,4"/>
-<!-- Node84 -->
-<g id="node1" class="node"><title>Node84</title>
+<!-- Node74 -->
+<g id="node1" class="node"><title>Node74</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-38.5 0.5,-57.5 133.5,-57.5 133.5,-38.5 0.5,-38.5"/>
 <text text-anchor="middle" x="67" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW.VerifyValue_PT</text>
 </g>
-<!-- Node85 -->
-<g id="node2" class="node"><title>Node85</title>
+<!-- Node75 -->
+<g id="node2" class="node"><title>Node75</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_o_k.html#a68529a54c5b950d3aa005bb87890b703" target="_top" xlink:title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)...">
 <polygon fill="white" stroke="black" points="184.5,-76.5 184.5,-95.5 311.5,-95.5 311.5,-76.5 184.5,-76.5"/>
 <text text-anchor="middle" x="248" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyValue</text>
 </a>
 </g>
 </g>
-<!-- Node84&#45;&gt;Node85 -->
-<g id="edge1" class="edge"><title>Node84&#45;&gt;Node85</title>
+<!-- Node74&#45;&gt;Node75 -->
+<g id="edge1" class="edge"><title>Node74&#45;&gt;Node75</title>
 <path fill="none" stroke="midnightblue" d="M123.024,-59.681C148.408,-65.0699 178.161,-71.3861 202.156,-76.4799"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="123.678,-56.242 113.169,-57.589 122.224,-63.0894 123.678,-56.242"/>
 </g>
-<!-- Node86 -->
-<g id="node3" class="node"><title>Node86</title>
+<!-- Node76 -->
+<g id="node3" class="node"><title>Node76</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_o_k.html#a6aafc82b46b36f952f2dd61db0f124b8" target="_top" xlink:title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)...">
 <polygon fill="white" stroke="black" points="172,-38.5 172,-57.5 324,-57.5 324,-38.5 172,-38.5"/>
 <text text-anchor="middle" x="248" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyValueWCM</text>
 </a>
 </g>
 </g>
-<!-- Node84&#45;&gt;Node86 -->
-<g id="edge2" class="edge"><title>Node84&#45;&gt;Node86</title>
+<!-- Node74&#45;&gt;Node76 -->
+<g id="edge2" class="edge"><title>Node74&#45;&gt;Node76</title>
 <path fill="none" stroke="midnightblue" d="M143.697,-48C153.061,-48 162.631,-48 171.985,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="143.637,-44.5001 133.637,-48 143.637,-51.5001 143.637,-44.5001"/>
 </g>
-<!-- Node87 -->
-<g id="node4" class="node"><title>Node87</title>
+<!-- Node77 -->
+<g id="node4" class="node"><title>Node77</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_o_k.html#acb6c973210e73f47ee34f9df6eac7f83" target="_top" xlink:title="Wichtig: Ein &quot;EMPTY&quot;&#45;Wert ist ein ArrayList String welche keine Array&#45;Elemte enthält, also ArrayList.Size() = 0! ">
 <polygon fill="white" stroke="black" points="170.5,-0.5 170.5,-19.5 325.5,-19.5 325.5,-0.5 170.5,-0.5"/>
 <text text-anchor="middle" x="248" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyValueREGX</text>
 </a>
 </g>
 </g>
-<!-- Node84&#45;&gt;Node87 -->
-<g id="edge3" class="edge"><title>Node84&#45;&gt;Node87</title>
+<!-- Node74&#45;&gt;Node77 -->
+<g id="edge3" class="edge"><title>Node74&#45;&gt;Node77</title>
 <path fill="none" stroke="midnightblue" d="M123.024,-36.319C148.408,-30.9301 178.161,-24.6139 202.156,-19.5201"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="122.224,-32.9106 113.169,-38.411 123.678,-39.758 122.224,-32.9106"/>
 </g>

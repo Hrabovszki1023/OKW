@@ -57,114 +57,114 @@ var sectionId = 'dynsection-0';
 <polygon fill="white" stroke="none" points="-4,4 -4,-1334 577,-1334 577,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node"><title>Node1</title>
-<polygon fill="#bfbfbf" stroke="black" points="185.5,-0.5 185.5,-277.5 310.5,-277.5 310.5,-0.5 185.5,-0.5"/>
-<text text-anchor="middle" x="248" y="-265.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN</text>
-<polyline fill="none" stroke="black" points="185.5,-258.5 310.5,-258.5 "/>
-<text text-anchor="start" x="193.5" y="-246.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; Language</text>
-<polyline fill="none" stroke="black" points="185.5,-239.5 310.5,-239.5 "/>
-<text text-anchor="start" x="193.5" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ BeginTest()</text>
-<text text-anchor="start" x="193.5" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
-<text text-anchor="start" x="193.5" y="-205.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
-<text text-anchor="start" x="193.5" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ EndTest()</text>
-<text text-anchor="start" x="193.5" y="-183.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="193.5" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="193.5" y="-161.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="193.5" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="193.5" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="193.5" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPlaceholder()</text>
-<text text-anchor="start" x="193.5" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
-<text text-anchor="start" x="193.5" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
-<text text-anchor="start" x="193.5" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="193.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="193.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeCaption()</text>
-<text text-anchor="start" x="193.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
-<text text-anchor="start" x="193.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeHasFocus()</text>
-<text text-anchor="start" x="193.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeIsActive()</text>
-<text text-anchor="start" x="193.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeLabel()</text>
-<text text-anchor="start" x="193.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizePlaceholder()</text>
-<text text-anchor="start" x="193.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 44 mehr ...</text>
+<polygon fill="#bfbfbf" stroke="black" points="178,-0.5 178,-277.5 316,-277.5 316,-0.5 178,-0.5"/>
+<text text-anchor="middle" x="247" y="-265.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN</text>
+<polyline fill="none" stroke="black" points="178,-258.5 316,-258.5 "/>
+<text text-anchor="start" x="186" y="-246.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; Language</text>
+<polyline fill="none" stroke="black" points="178,-239.5 316,-239.5 "/>
+<text text-anchor="start" x="186" y="-227.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ BeginTest()</text>
+<text text-anchor="start" x="186" y="-216.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
+<text text-anchor="start" x="186" y="-205.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
+<text text-anchor="start" x="186" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ EndTest()</text>
+<text text-anchor="start" x="186" y="-183.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="186" y="-172.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="186" y="-161.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="186" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="186" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="186" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
+<text text-anchor="start" x="186" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
+<text text-anchor="start" x="186" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="186" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="186" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeCaption()</text>
+<text text-anchor="start" x="186" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
+<text text-anchor="start" x="186" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeHasFocus()</text>
+<text text-anchor="start" x="186" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeIsActive()</text>
+<text text-anchor="start" x="186" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeLabel()</text>
+<text text-anchor="start" x="186" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeSelectedValue()</text>
+<text text-anchor="start" x="186" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeTablecellValue()</text>
+<text text-anchor="start" x="186" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 38 mehr ...</text>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_core.html" target="_top" xlink:title="Hier Statediagram... ">
-<polygon fill="white" stroke="black" points="179,-327 179,-615 317,-615 317,-327 179,-327"/>
-<text text-anchor="middle" x="248" y="-603" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core</text>
-<polyline fill="none" stroke="black" points="179,-596 317,-596 "/>
-<text text-anchor="middle" x="248" y="-584" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="179,-577 317,-577 "/>
-<text text-anchor="start" x="187" y="-565" font-family="Helvetica,sans-Serif" font-size="10.00">+ Core()</text>
-<text text-anchor="start" x="187" y="-554" font-family="Helvetica,sans-Serif" font-size="10.00">+ BeginTest()</text>
-<text text-anchor="start" x="187" y="-543" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
-<text text-anchor="start" x="187" y="-532" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
-<text text-anchor="start" x="187" y="-521" font-family="Helvetica,sans-Serif" font-size="10.00">+ EndTest()</text>
-<text text-anchor="start" x="187" y="-510" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="187" y="-499" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="187" y="-488" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="187" y="-477" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
-<text text-anchor="start" x="187" y="-466" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
-<text text-anchor="start" x="187" y="-455" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="187" y="-444" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="187" y="-433" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="187" y="-422" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPlaceholder()</text>
-<text text-anchor="start" x="187" y="-411" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="187" y="-400" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
-<text text-anchor="start" x="187" y="-389" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeHasFocus()</text>
-<text text-anchor="start" x="187" y="-378" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeIsActive()</text>
-<text text-anchor="start" x="187" y="-367" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeSelectedValue()</text>
-<text text-anchor="start" x="187" y="-356" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeTablecellValue()</text>
-<text text-anchor="start" x="187" y="-345" font-family="Helvetica,sans-Serif" font-size="10.00">und 49 mehr ...</text>
-<text text-anchor="start" x="187" y="-334" font-family="Helvetica,sans-Serif" font-size="10.00">+ Init()</text>
+<polygon fill="white" stroke="black" points="178,-327 178,-615 316,-615 316,-327 178,-327"/>
+<text text-anchor="middle" x="247" y="-603" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core</text>
+<polyline fill="none" stroke="black" points="178,-596 316,-596 "/>
+<text text-anchor="middle" x="247" y="-584" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="178,-577 316,-577 "/>
+<text text-anchor="start" x="186" y="-565" font-family="Helvetica,sans-Serif" font-size="10.00">+ Core()</text>
+<text text-anchor="start" x="186" y="-554" font-family="Helvetica,sans-Serif" font-size="10.00">+ BeginTest()</text>
+<text text-anchor="start" x="186" y="-543" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
+<text text-anchor="start" x="186" y="-532" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
+<text text-anchor="start" x="186" y="-521" font-family="Helvetica,sans-Serif" font-size="10.00">+ EndTest()</text>
+<text text-anchor="start" x="186" y="-510" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="186" y="-499" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="186" y="-488" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="186" y="-477" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
+<text text-anchor="start" x="186" y="-466" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
+<text text-anchor="start" x="186" y="-455" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="186" y="-444" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="186" y="-433" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="186" y="-422" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="186" y="-411" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
+<text text-anchor="start" x="186" y="-400" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeHasFocus()</text>
+<text text-anchor="start" x="186" y="-389" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeIsActive()</text>
+<text text-anchor="start" x="186" y="-378" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeSelectedValue()</text>
+<text text-anchor="start" x="186" y="-367" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeTablecellValue()</text>
+<text text-anchor="start" x="186" y="-356" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeTooltip()</text>
+<text text-anchor="start" x="186" y="-345" font-family="Helvetica,sans-Serif" font-size="10.00">und 43 mehr ...</text>
+<text text-anchor="start" x="186" y="-334" font-family="Helvetica,sans-Serif" font-size="10.00">+ Init()</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node1 -->
 <g id="edge1" class="edge"><title>Node2&#45;&gt;Node1</title>
-<path fill="none" stroke="#404040" d="M248,-326.697C248,-314.499 248,-302.141 248,-289.894"/>
-<polygon fill="none" stroke="#404040" points="248,-289.695 244,-283.695 248,-277.695 252,-283.695 248,-289.695"/>
-<text text-anchor="middle" x="272" y="-299.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myKernel</text>
+<path fill="none" stroke="#404040" d="M247,-326.697C247,-314.499 247,-302.141 247,-289.894"/>
+<polygon fill="none" stroke="#404040" points="247,-289.695 243,-283.695 247,-277.695 251,-283.695 247,-289.695"/>
+<text text-anchor="middle" x="271" y="-299.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myKernel</text>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
 <g id="a_node3"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html" target="_top" xlink:title="IOKW_State ist die Schnittstelle der OKW&#45;Klasse. ">
-<polygon fill="white" stroke="black" points="100.5,-730.5 100.5,-1007.5 225.5,-1007.5 225.5,-730.5 100.5,-730.5"/>
-<text text-anchor="middle" x="163" y="-995.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State</text>
-<polyline fill="none" stroke="black" points="100.5,-988.5 225.5,-988.5 "/>
-<text text-anchor="middle" x="163" y="-976.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="100.5,-969.5 225.5,-969.5 "/>
-<text text-anchor="start" x="108.5" y="-957.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ BeginTest()</text>
-<text text-anchor="start" x="108.5" y="-946.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
-<text text-anchor="start" x="108.5" y="-935.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
-<text text-anchor="start" x="108.5" y="-924.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ EndTest()</text>
-<text text-anchor="start" x="108.5" y="-913.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="108.5" y="-902.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="108.5" y="-891.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="108.5" y="-880.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="108.5" y="-869.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="108.5" y="-858.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPlaceholder()</text>
-<text text-anchor="start" x="108.5" y="-847.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
-<text text-anchor="start" x="108.5" y="-836.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
-<text text-anchor="start" x="108.5" y="-825.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="108.5" y="-814.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="108.5" y="-803.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeCaption()</text>
-<text text-anchor="start" x="108.5" y="-792.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
-<text text-anchor="start" x="108.5" y="-781.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeHasFocus()</text>
-<text text-anchor="start" x="108.5" y="-770.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeIsActive()</text>
-<text text-anchor="start" x="108.5" y="-759.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeLabel()</text>
-<text text-anchor="start" x="108.5" y="-748.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizePlaceholder()</text>
-<text text-anchor="start" x="108.5" y="-737.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 47 mehr ...</text>
+<polygon fill="white" stroke="black" points="87,-730.5 87,-1007.5 225,-1007.5 225,-730.5 87,-730.5"/>
+<text text-anchor="middle" x="156" y="-995.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State</text>
+<polyline fill="none" stroke="black" points="87,-988.5 225,-988.5 "/>
+<text text-anchor="middle" x="156" y="-976.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="87,-969.5 225,-969.5 "/>
+<text text-anchor="start" x="95" y="-957.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ BeginTest()</text>
+<text text-anchor="start" x="95" y="-946.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
+<text text-anchor="start" x="95" y="-935.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ DoubleClickOn()</text>
+<text text-anchor="start" x="95" y="-924.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ EndTest()</text>
+<text text-anchor="start" x="95" y="-913.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="95" y="-902.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="95" y="-891.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="95" y="-880.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="95" y="-869.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="95" y="-858.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogSelected()</text>
+<text text-anchor="start" x="95" y="-847.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTablecellValue()</text>
+<text text-anchor="start" x="95" y="-836.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="95" y="-825.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="95" y="-814.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeCaption()</text>
+<text text-anchor="start" x="95" y="-803.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
+<text text-anchor="start" x="95" y="-792.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeHasFocus()</text>
+<text text-anchor="start" x="95" y="-781.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeIsActive()</text>
+<text text-anchor="start" x="95" y="-770.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeLabel()</text>
+<text text-anchor="start" x="95" y="-759.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeSelectedValue()</text>
+<text text-anchor="start" x="95" y="-748.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeTablecellValue()</text>
+<text text-anchor="start" x="95" y="-737.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 41 mehr ...</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node2 -->
 <g id="edge2" class="edge"><title>Node3&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M168.936,-720.333C171.969,-691.458 176.441,-661.589 183,-634 184.472,-627.809 186.14,-621.543 187.962,-615.257"/>
-<polygon fill="none" stroke="midnightblue" points="165.431,-720.201 167.921,-730.499 172.397,-720.896 165.431,-720.201"/>
+<path fill="none" stroke="midnightblue" d="M166.264,-720.306C169.992,-691.434 175.074,-661.572 182,-634 183.55,-627.828 185.284,-621.578 187.16,-615.305"/>
+<polygon fill="none" stroke="midnightblue" points="162.76,-720.117 165,-730.472 169.707,-720.98 162.76,-720.117"/>
 </g>
 <!-- Node3&#45;&gt;Node2 -->
 <g id="edge3" class="edge"><title>Node3&#45;&gt;Node2</title>
-<path fill="none" stroke="#404040" d="M184.969,-730.238C190.628,-698.517 197.09,-664.997 204,-634 204.511,-631.707 205.034,-629.397 205.567,-627.074"/>
-<polygon fill="none" stroke="#404040" points="205.572,-627.052 203.047,-620.298 208.311,-615.369 210.836,-622.123 205.572,-627.052"/>
-<text text-anchor="middle" x="235" y="-637.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;CurrentState</text>
+<path fill="none" stroke="#404040" d="M182.055,-730.321C188.502,-698.596 195.673,-665.053 203,-634 203.54,-631.713 204.089,-629.41 204.647,-627.093"/>
+<polygon fill="none" stroke="#404040" points="204.652,-627.069 202.191,-620.291 207.501,-615.413 209.962,-622.191 204.652,-627.069"/>
+<text text-anchor="middle" x="234" y="-637.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;CurrentState</text>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node"><title>Node4</title>
@@ -185,9 +185,9 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node4&#45;&gt;Node2 -->
 <g id="edge4" class="edge"><title>Node4&#45;&gt;Node2</title>
-<path fill="none" stroke="#404040" d="M288.836,-812.627C284.288,-765.176 277.272,-695.03 270,-634 269.734,-631.772 269.464,-629.527 269.19,-627.268"/>
-<polygon fill="none" stroke="#404040" points="269.156,-626.985 264.452,-621.519 267.689,-615.075 272.392,-620.541 269.156,-626.985"/>
-<text text-anchor="middle" x="281" y="-637.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;LM</text>
+<path fill="none" stroke="#404040" d="M288.534,-812.632C283.743,-765.185 276.404,-695.041 269,-634 268.73,-631.772 268.455,-629.528 268.177,-627.269"/>
+<polygon fill="none" stroke="#404040" points="268.142,-626.986 263.43,-621.528 266.656,-615.079 271.368,-620.537 268.142,-626.986"/>
+<text text-anchor="middle" x="280" y="-637.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;LM</text>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node"><title>Node5</title>
@@ -346,8 +346,8 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node12&#45;&gt;Node2 -->
 <g id="edge12" class="edge"><title>Node12&#45;&gt;Node2</title>
-<path fill="none" stroke="#404040" d="M376.874,-713.936C369.019,-696.994 360.963,-680.072 353,-664 343.572,-644.971 333.254,-625.097 322.886,-605.656"/>
-<polygon fill="none" stroke="#404040" points="322.794,-605.484 316.435,-602.085 317.126,-594.908 323.486,-598.307 322.794,-605.484"/>
+<path fill="none" stroke="#404040" d="M376.939,-713.904C369.071,-696.968 360.995,-680.056 353,-664 343.253,-644.426 332.545,-623.972 321.797,-604.018"/>
+<polygon fill="none" stroke="#404040" points="321.716,-603.868 315.342,-600.496 316.004,-593.315 322.378,-596.688 321.716,-603.868"/>
 <text text-anchor="middle" x="354" y="-637.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;Log</text>
 </g>
 <!-- Node12&#45;&gt;Node12 -->

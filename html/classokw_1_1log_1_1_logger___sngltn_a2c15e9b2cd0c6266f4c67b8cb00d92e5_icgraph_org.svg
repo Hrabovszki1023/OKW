@@ -9,27 +9,27 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 927)">
 <title>okw.log.Logger_Sngltn.LogWarning</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-927 754,-927 754,4 -4,4"/>
-<!-- Node2028 -->
-<g id="node1" class="node"><title>Node2028</title>
+<!-- Node1741 -->
+<g id="node1" class="node"><title>Node1741</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-819 0,-849 134,-849 134,-819 0,-819"/>
 <text text-anchor="start" x="8" y="-837" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
 <text text-anchor="middle" x="67" y="-826" font-family="Helvetica,sans-Serif" font-size="10.00">Warning</text>
 </g>
-<!-- Node2029 -->
-<g id="node2" class="node"><title>Node2029</title>
+<!-- Node1742 -->
+<g id="node2" class="node"><title>Node1742</title>
 <g id="a_node2"><a xlink:href="classokw_1_1_o_k_w___memorize___sngltn.html#a60d34f09f06f9b2af525a4bd77065ce2" target="_top" xlink:title="Initialsiert die Klasse OKW.OKW_Memorize. ">
 <polygon fill="white" stroke="black" points="170,-868.5 170,-887.5 328,-887.5 328,-868.5 170,-868.5"/>
 <text text-anchor="middle" x="249" y="-875.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Memorize_Sngltn.init</text>
 </a>
 </g>
 </g>
-<!-- Node2028&#45;&gt;Node2029 -->
-<g id="edge1" class="edge"><title>Node2028&#45;&gt;Node2029</title>
+<!-- Node1741&#45;&gt;Node1742 -->
+<g id="edge1" class="edge"><title>Node1741&#45;&gt;Node1742</title>
 <path fill="none" stroke="midnightblue" d="M139.167,-851.396C162.993,-857.221 188.663,-863.495 209.086,-868.488"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="139.987,-847.994 129.442,-849.019 138.325,-854.794 139.987,-847.994"/>
 </g>
-<!-- Node2030 -->
-<g id="node3" class="node"><title>Node2030</title>
+<!-- Node1743 -->
+<g id="node3" class="node"><title>Node1743</title>
 <g id="a_node3"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#abbf4e30bd11acd1ad0c06706a6e43871" target="_top" xlink:title="Prüft die Existenz des aktuellen Objektes. ">
 <polygon fill="white" stroke="black" points="175,-819 175,-849 323,-849 323,-819 175,-819"/>
 <text text-anchor="start" x="183" y="-837" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -37,13 +37,13 @@
 </a>
 </g>
 </g>
-<!-- Node2028&#45;&gt;Node2030 -->
-<g id="edge2" class="edge"><title>Node2028&#45;&gt;Node2030</title>
+<!-- Node1741&#45;&gt;Node1743 -->
+<g id="edge2" class="edge"><title>Node1741&#45;&gt;Node1743</title>
 <path fill="none" stroke="midnightblue" d="M144.057,-834C154.211,-834 164.608,-834 174.714,-834"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="144.003,-830.5 134.003,-834 144.003,-837.5 144.003,-830.5"/>
 </g>
-<!-- Node2034 -->
-<g id="node7" class="node"><title>Node2034</title>
+<!-- Node1747 -->
+<g id="node7" class="node"><title>Node1747</title>
 <g id="a_node7"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ad806d20bf0e42d47e0aa5282532d3230" target="_top" xlink:title="Prüft die Existenz des aktuellen Objektes. ">
 <polygon fill="white" stroke="black" points="183.5,-294 183.5,-324 314.5,-324 314.5,-294 183.5,-294"/>
 <text text-anchor="start" x="191.5" y="-312" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -51,13 +51,13 @@
 </a>
 </g>
 </g>
-<!-- Node2028&#45;&gt;Node2034 -->
-<g id="edge6" class="edge"><title>Node2028&#45;&gt;Node2034</title>
+<!-- Node1741&#45;&gt;Node1747 -->
+<g id="edge6" class="edge"><title>Node1741&#45;&gt;Node1747</title>
 <path fill="none" stroke="midnightblue" d="M76.4731,-809.287C107.936,-717.52 217.541,-397.84 242.786,-324.207"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="73.1254,-808.259 73.1929,-818.854 79.7471,-810.53 73.1254,-808.259"/>
 </g>
-<!-- Node2031 -->
-<g id="node4" class="node"><title>Node2031</title>
+<!-- Node1744 -->
+<g id="node4" class="node"><title>Node1744</title>
 <g id="a_node4"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a77468a67b30058f840a2c6c1bbcf44f6" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refLogExists aufgerufen wird...">
 <polygon fill="white" stroke="black" points="378,-893 378,-923 528,-923 528,-893 378,-893"/>
 <text text-anchor="start" x="386" y="-911" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -65,13 +65,13 @@
 </a>
 </g>
 </g>
-<!-- Node2030&#45;&gt;Node2031 -->
-<g id="edge3" class="edge"><title>Node2030&#45;&gt;Node2031</title>
+<!-- Node1743&#45;&gt;Node1744 -->
+<g id="edge3" class="edge"><title>Node1743&#45;&gt;Node1744</title>
 <path fill="none" stroke="midnightblue" d="M313.357,-852.64C318.379,-854.62 323.316,-856.743 328,-859 345.323,-867.348 346.54,-874.942 364,-883 372.076,-886.727 380.829,-890.02 389.577,-892.89"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="314.231,-849.23 303.638,-849.01 311.781,-855.788 314.231,-849.23"/>
 </g>
-<!-- Node2032 -->
-<g id="node5" class="node"><title>Node2032</title>
+<!-- Node1745 -->
+<g id="node5" class="node"><title>Node1745</title>
 <g id="a_node5"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a851c4e1bf2147aece7493acfad6d2fba" target="_top" xlink:title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort refMemorizeExists aufgerufen wird...">
 <polygon fill="white" stroke="black" points="364.5,-844 364.5,-874 541.5,-874 541.5,-844 364.5,-844"/>
 <text text-anchor="start" x="372.5" y="-862" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -79,13 +79,13 @@
 </a>
 </g>
 </g>
-<!-- Node2030&#45;&gt;Node2032 -->
-<g id="edge4" class="edge"><title>Node2030&#45;&gt;Node2032</title>
+<!-- Node1743&#45;&gt;Node1745 -->
+<g id="edge4" class="edge"><title>Node1743&#45;&gt;Node1745</title>
 <path fill="none" stroke="midnightblue" d="M333.32,-844.312C343.526,-845.575 353.981,-846.869 364.25,-848.14"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="333.566,-840.816 323.212,-843.061 332.707,-847.763 333.566,-840.816"/>
 </g>
-<!-- Node2033 -->
-<g id="node6" class="node"><title>Node2033</title>
+<!-- Node1746 -->
+<g id="node6" class="node"><title>Node1746</title>
 <g id="a_node6"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#aa267e861bf7e7dc9e0c932e6ca5e8579" target="_top" xlink:title="Ermittelt/Prüft, ob das aktuelle Objekt existiert. ">
 <polygon fill="white" stroke="black" points="373,-795 373,-825 533,-825 533,-795 373,-795"/>
 <text text-anchor="start" x="381" y="-813" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -93,13 +93,13 @@
 </a>
 </g>
 </g>
-<!-- Node2030&#45;&gt;Node2033 -->
-<g id="edge5" class="edge"><title>Node2030&#45;&gt;Node2033</title>
+<!-- Node1743&#45;&gt;Node1746 -->
+<g id="edge5" class="edge"><title>Node1743&#45;&gt;Node1746</title>
 <path fill="none" stroke="midnightblue" d="M333.163,-824.119C346.301,-822.558 359.856,-820.948 372.898,-819.398"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="332.729,-820.646 323.212,-825.302 333.555,-827.597 332.729,-820.646"/>
 </g>
-<!-- Node2035 -->
-<g id="node8" class="node"><title>Node2035</title>
+<!-- Node1748 -->
+<g id="node8" class="node"><title>Node1748</title>
 <g id="a_node8"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aa12522740af84cd18ca60c08bec1ce47" target="_top" xlink:title="Klickt auf das aktuelle Objekt. ">
 <polygon fill="white" stroke="black" points="387.5,-746 387.5,-776 518.5,-776 518.5,-746 387.5,-746"/>
 <text text-anchor="start" x="395.5" y="-764" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -107,13 +107,13 @@
 </a>
 </g>
 </g>
-<!-- Node2034&#45;&gt;Node2035 -->
-<g id="edge7" class="edge"><title>Node2034&#45;&gt;Node2035</title>
+<!-- Node1747&#45;&gt;Node1748 -->
+<g id="edge7" class="edge"><title>Node1747&#45;&gt;Node1748</title>
 <path fill="none" stroke="midnightblue" d="M253.407,-333.994C265.115,-416.347 306.181,-677.254 364,-736 370.462,-742.565 378.513,-747.439 387.101,-751.05"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="256.863,-333.433 252.009,-324.016 249.931,-334.405 256.863,-333.433"/>
 </g>
-<!-- Node2036 -->
-<g id="node9" class="node"><title>Node2036</title>
+<!-- Node1749 -->
+<g id="node9" class="node"><title>Node1749</title>
 <g id="a_node9"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ac628cf2651ecb5ac8104a8379a3fa06e" target="_top" xlink:title="Ermittelt den textuellen Inhalt der Überschrift eines HTML&#45;Tags anhand des Attributee &quot;textContent&quot;...">
 <polygon fill="white" stroke="black" points="387.5,-697 387.5,-727 518.5,-727 518.5,-697 387.5,-697"/>
 <text text-anchor="start" x="395.5" y="-715" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -121,13 +121,13 @@
 </a>
 </g>
 </g>
-<!-- Node2034&#45;&gt;Node2036 -->
-<g id="edge8" class="edge"><title>Node2034&#45;&gt;Node2036</title>
+<!-- Node1747&#45;&gt;Node1749 -->
+<g id="edge8" class="edge"><title>Node1747&#45;&gt;Node1749</title>
 <path fill="none" stroke="midnightblue" d="M253.982,-334.134C264.119,-392.105 295.12,-537.874 364,-638 380.857,-662.504 407.903,-683.552 427.566,-696.866"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="257.397,-333.331 252.278,-324.055 250.495,-334.498 257.397,-333.331"/>
 </g>
-<!-- Node2040 -->
-<g id="node13" class="node"><title>Node2040</title>
+<!-- Node1753 -->
+<g id="node13" class="node"><title>Node1753</title>
 <g id="a_node13"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a2406dc361467d086f006ffe1aa8c89fe" target="_top" xlink:title="Methode liefert den aktuellen Zustand Wert des Focus. ">
 <polygon fill="white" stroke="black" points="381.5,-599 381.5,-629 524.5,-629 524.5,-599 381.5,-599"/>
 <text text-anchor="start" x="389.5" y="-617" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -135,13 +135,13 @@
 </a>
 </g>
 </g>
-<!-- Node2034&#45;&gt;Node2040 -->
-<g id="edge12" class="edge"><title>Node2034&#45;&gt;Node2040</title>
+<!-- Node1747&#45;&gt;Node1753 -->
+<g id="edge12" class="edge"><title>Node1747&#45;&gt;Node1753</title>
 <path fill="none" stroke="midnightblue" d="M258.423,-333.963C274.252,-378.493 311.625,-473.211 364,-540 382.6,-563.719 409.874,-585.203 429.119,-598.836"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="261.636,-332.548 255.035,-324.261 255.028,-334.856 261.636,-332.548"/>
 </g>
-<!-- Node2044 -->
-<g id="node17" class="node"><title>Node2044</title>
+<!-- Node1757 -->
+<g id="node17" class="node"><title>Node1757</title>
 <g id="a_node17"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a471a1346a97ca3365eb4274adcde296b" target="_top" xlink:title="Ermittelt, ob das aktuellen Objekt aktiv ist. ">
 <polygon fill="white" stroke="black" points="386,-501 386,-531 520,-531 520,-501 386,-501"/>
 <text text-anchor="start" x="394" y="-519" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -149,13 +149,13 @@
 </a>
 </g>
 </g>
-<!-- Node2034&#45;&gt;Node2044 -->
-<g id="edge16" class="edge"><title>Node2034&#45;&gt;Node2044</title>
+<!-- Node1747&#45;&gt;Node1757 -->
+<g id="edge16" class="edge"><title>Node1747&#45;&gt;Node1757</title>
 <path fill="none" stroke="midnightblue" d="M272.016,-331.561C313.433,-374.003 401.936,-464.696 437.125,-500.756"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="274.343,-328.934 264.854,-324.221 269.333,-333.823 274.343,-328.934"/>
 </g>
-<!-- Node2047 -->
-<g id="node20" class="node"><title>Node2047</title>
+<!-- Node1760 -->
+<g id="node20" class="node"><title>Node1760</title>
 <g id="a_node20"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#af08a80081d265dc09e1c7968227d4b15" target="_top" xlink:title="Ermittelt den textuellen Inhalt des Labels. ">
 <polygon fill="white" stroke="black" points="387.5,-367 387.5,-397 518.5,-397 518.5,-367 387.5,-367"/>
 <text text-anchor="start" x="395.5" y="-385" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -163,13 +163,13 @@
 </a>
 </g>
 </g>
-<!-- Node2034&#45;&gt;Node2047 -->
-<g id="edge20" class="edge"><title>Node2034&#45;&gt;Node2047</title>
+<!-- Node1747&#45;&gt;Node1760 -->
+<g id="edge20" class="edge"><title>Node1747&#45;&gt;Node1760</title>
 <path fill="none" stroke="midnightblue" d="M301.525,-327.621C335.216,-339.796 378.659,-355.496 410.199,-366.894"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="302.449,-324.233 291.855,-324.126 300.07,-330.816 302.449,-324.233"/>
 </g>
-<!-- Node2051 -->
-<g id="node24" class="node"><title>Node2051</title>
+<!-- Node1764 -->
+<g id="node24" class="node"><title>Node1764</title>
 <g id="a_node24"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#afb3aa055dd6f2604bf484a9c44f77909" target="_top" xlink:title="Ermittelt den textuellen Inhalt des ToolTips. ">
 <polygon fill="white" stroke="black" points="387.5,-294 387.5,-324 518.5,-324 518.5,-294 387.5,-294"/>
 <text text-anchor="start" x="395.5" y="-312" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -177,13 +177,13 @@
 </a>
 </g>
 </g>
-<!-- Node2034&#45;&gt;Node2051 -->
-<g id="edge24" class="edge"><title>Node2034&#45;&gt;Node2051</title>
+<!-- Node1747&#45;&gt;Node1764 -->
+<g id="edge24" class="edge"><title>Node1747&#45;&gt;Node1764</title>
 <path fill="none" stroke="midnightblue" d="M324.971,-309C345.436,-309 367.431,-309 387.273,-309"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="324.748,-305.5 314.748,-309 324.748,-312.5 324.748,-305.5"/>
 </g>
-<!-- Node2055 -->
-<g id="node28" class="node"><title>Node2055</title>
+<!-- Node1768 -->
+<g id="node28" class="node"><title>Node1768</title>
 <g id="a_node28"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a5d60d6ec1ef41ea4f7cc4f1bf3c65fa1" target="_top" xlink:title="Liest den aktuellen Wert/Text aus dem HTML&#45;Tag. ">
 <polygon fill="white" stroke="black" points="387.5,-245 387.5,-275 518.5,-275 518.5,-245 387.5,-245"/>
 <text text-anchor="start" x="395.5" y="-263" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -191,13 +191,13 @@
 </a>
 </g>
 </g>
-<!-- Node2034&#45;&gt;Node2055 -->
-<g id="edge28" class="edge"><title>Node2034&#45;&gt;Node2055</title>
+<!-- Node1747&#45;&gt;Node1768 -->
+<g id="edge28" class="edge"><title>Node1747&#45;&gt;Node1768</title>
 <path fill="none" stroke="midnightblue" d="M321.746,-291.596C344.092,-286.176 368.529,-280.248 390.138,-275.006"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="320.872,-288.207 311.979,-293.965 322.523,-295.009 320.872,-288.207"/>
 </g>
-<!-- Node2059 -->
-<g id="node32" class="node"><title>Node2059</title>
+<!-- Node1772 -->
+<g id="node32" class="node"><title>Node1772</title>
 <g id="a_node32"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a1db45676819106c384627ab997407cee" target="_top" xlink:title="Ermittelt den textuellen Inhalt des ToolTips. ">
 <polygon fill="white" stroke="black" points="387.5,-196 387.5,-226 518.5,-226 518.5,-196 387.5,-196"/>
 <text text-anchor="start" x="395.5" y="-214" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -205,13 +205,13 @@
 </a>
 </g>
 </g>
-<!-- Node2034&#45;&gt;Node2059 -->
-<g id="edge32" class="edge"><title>Node2034&#45;&gt;Node2059</title>
+<!-- Node1747&#45;&gt;Node1772 -->
+<g id="edge32" class="edge"><title>Node1747&#45;&gt;Node1772</title>
 <path fill="none" stroke="midnightblue" d="M277.391,-287.735C299.656,-271.334 332.441,-249.132 364,-235 371.516,-231.635 379.609,-228.646 387.735,-226.021"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="275.021,-285.137 269.108,-293.928 279.213,-290.743 275.021,-285.137"/>
 </g>
-<!-- Node2060 -->
-<g id="node33" class="node"><title>Node2060</title>
+<!-- Node1773 -->
+<g id="node33" class="node"><title>Node1773</title>
 <g id="a_node33"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a6c7e14fc8dcfe45a9a17a132dda24187" target="_top" xlink:title="Ermittelt ob das Atuelle Objekt existiert, für das Schlüsselwort MerkeVorhanden. ">
 <polygon fill="white" stroke="black" points="375.5,-147 375.5,-177 530.5,-177 530.5,-147 375.5,-147"/>
 <text text-anchor="start" x="383.5" y="-165" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -219,13 +219,13 @@
 </a>
 </g>
 </g>
-<!-- Node2034&#45;&gt;Node2060 -->
-<g id="edge33" class="edge"><title>Node2034&#45;&gt;Node2060</title>
+<!-- Node1747&#45;&gt;Node1773 -->
+<g id="edge33" class="edge"><title>Node1747&#45;&gt;Node1773</title>
 <path fill="none" stroke="midnightblue" d="M265.433,-285.635C285.055,-257.768 321.534,-211.733 364,-186 369.688,-182.553 375.879,-179.591 382.253,-177.048"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="262.463,-283.776 259.668,-293.995 268.226,-287.749 262.463,-283.776"/>
 </g>
-<!-- Node2061 -->
-<g id="node34" class="node"><title>Node2061</title>
+<!-- Node1774 -->
+<g id="node34" class="node"><title>Node1774</title>
 <g id="a_node34"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a18cc21003d35c2cdcd17b78bf91f2045" target="_top" xlink:title="Setzt den Focus auf das Objekt. ">
 <polygon fill="white" stroke="black" points="387.5,-98 387.5,-128 518.5,-128 518.5,-98 387.5,-98"/>
 <text text-anchor="start" x="395.5" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -233,13 +233,13 @@
 </a>
 </g>
 </g>
-<!-- Node2034&#45;&gt;Node2061 -->
-<g id="edge34" class="edge"><title>Node2034&#45;&gt;Node2061</title>
+<!-- Node1747&#45;&gt;Node1774 -->
+<g id="edge34" class="edge"><title>Node1747&#45;&gt;Node1774</title>
 <path fill="none" stroke="midnightblue" d="M259.61,-284.271C275.516,-246.649 310.922,-175.365 364,-137 371.059,-131.898 379.146,-127.88 387.495,-124.717"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="256.203,-283.355 255.643,-293.935 262.679,-286.013 256.203,-283.355"/>
 </g>
-<!-- Node2062 -->
-<g id="node35" class="node"><title>Node2062</title>
+<!-- Node1775 -->
+<g id="node35" class="node"><title>Node1775</title>
 <g id="a_node35"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ab8c870d4fbe1a9eab110f75320991f64" target="_top" xlink:title="Tastatur Eingabe an das Objekt. ">
 <polygon fill="white" stroke="black" points="387.5,-49 387.5,-79 518.5,-79 518.5,-49 387.5,-49"/>
 <text text-anchor="start" x="395.5" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -247,13 +247,13 @@
 </a>
 </g>
 </g>
-<!-- Node2034&#45;&gt;Node2062 -->
-<g id="edge35" class="edge"><title>Node2034&#45;&gt;Node2062</title>
+<!-- Node1747&#45;&gt;Node1775 -->
+<g id="edge35" class="edge"><title>Node1747&#45;&gt;Node1775</title>
 <path fill="none" stroke="midnightblue" d="M255.724,-284.276C267.645,-238.428 299.554,-140.158 364,-88 370.893,-82.421 378.982,-78.1344 387.412,-74.8418"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="252.326,-283.438 253.296,-293.989 259.117,-285.136 252.326,-283.438"/>
 </g>
-<!-- Node2063 -->
-<g id="node36" class="node"><title>Node2063</title>
+<!-- Node1776 -->
+<g id="node36" class="node"><title>Node1776</title>
 <g id="a_node36"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aa6bdf957546ce613e5a5922de84736a3" target="_top" xlink:title="Ermittelt/Prüft, ob das aktuelle Objekt existiert. ">
 <polygon fill="white" stroke="black" points="384.5,-0 384.5,-30 521.5,-30 521.5,-0 384.5,-0"/>
 <text text-anchor="start" x="392.5" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -261,13 +261,13 @@
 </a>
 </g>
 </g>
-<!-- Node2034&#45;&gt;Node2063 -->
-<g id="edge36" class="edge"><title>Node2034&#45;&gt;Node2063</title>
+<!-- Node1747&#45;&gt;Node1776 -->
+<g id="edge36" class="edge"><title>Node1747&#45;&gt;Node1776</title>
 <path fill="none" stroke="midnightblue" d="M253.244,-283.811C261.483,-230.408 288.227,-105.293 364,-39 369.959,-33.7864 376.947,-29.6939 384.336,-26.4833"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="249.769,-283.385 251.794,-293.785 256.696,-284.392 249.769,-283.385"/>
 </g>
-<!-- Node2037 -->
-<g id="node10" class="node"><title>Node2037</title>
+<!-- Node1750 -->
+<g id="node10" class="node"><title>Node1750</title>
 <g id="a_node10"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a592cca9ca404042c076ba6e114daf31d" target="_top" xlink:title="Ermittelt den textuellen Inhalt der Beschriftung (Caption). ">
 <polygon fill="white" stroke="black" points="597,-820 597,-850 731,-850 731,-820 597,-820"/>
 <text text-anchor="start" x="605" y="-838" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -275,13 +275,13 @@
 </a>
 </g>
 </g>
-<!-- Node2036&#45;&gt;Node2037 -->
-<g id="edge9" class="edge"><title>Node2036&#45;&gt;Node2037</title>
+<!-- Node1749&#45;&gt;Node1750 -->
+<g id="edge9" class="edge"><title>Node1749&#45;&gt;Node1750</title>
 <path fill="none" stroke="midnightblue" d="M527.967,-727.77C532.982,-730.389 537.73,-733.441 542,-737 569.791,-760.158 550.317,-786.713 578,-810 583.532,-814.654 589.899,-818.441 596.606,-821.524"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="529.246,-724.506 518.698,-723.509 526.323,-730.866 529.246,-724.506"/>
 </g>
-<!-- Node2038 -->
-<g id="node11" class="node"><title>Node2038</title>
+<!-- Node1751 -->
+<g id="node11" class="node"><title>Node1751</title>
 <g id="a_node11"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a79fed120f45d576a1e34bba8c3936f0a" target="_top" xlink:title="Ermittelt den textuellen Inhalt des Caption/Überschrift für das Schlüsselwort MerkeWert. ">
 <polygon fill="white" stroke="black" points="583.5,-771 583.5,-801 744.5,-801 744.5,-771 583.5,-771"/>
 <text text-anchor="start" x="591.5" y="-789" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -289,13 +289,13 @@
 </a>
 </g>
 </g>
-<!-- Node2036&#45;&gt;Node2038 -->
-<g id="edge10" class="edge"><title>Node2036&#45;&gt;Node2038</title>
+<!-- Node1749&#45;&gt;Node1751 -->
+<g id="edge10" class="edge"><title>Node1749&#45;&gt;Node1751</title>
 <path fill="none" stroke="midnightblue" d="M526.231,-730.518C531.641,-732.511 536.953,-734.671 542,-737 559.46,-745.058 560.578,-752.861 578,-761 585.944,-764.711 594.564,-768.009 603.166,-770.893"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="527.018,-727.086 516.423,-727.11 524.72,-733.698 527.018,-727.086"/>
 </g>
-<!-- Node2039 -->
-<g id="node12" class="node"><title>Node2039</title>
+<!-- Node1752 -->
+<g id="node12" class="node"><title>Node1752</title>
 <g id="a_node12"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a9ad73167da71aa8082d826f9d84ef288" target="_top" xlink:title="Ermittelt den textuellen Inhalt des ToolTips für Prüfewert. ">
 <polygon fill="white" stroke="black" points="592.5,-722 592.5,-752 735.5,-752 735.5,-722 592.5,-722"/>
 <text text-anchor="start" x="600.5" y="-740" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -303,13 +303,13 @@
 </a>
 </g>
 </g>
-<!-- Node2036&#45;&gt;Node2039 -->
-<g id="edge11" class="edge"><title>Node2036&#45;&gt;Node2039</title>
+<!-- Node1749&#45;&gt;Node1752 -->
+<g id="edge11" class="edge"><title>Node1749&#45;&gt;Node1752</title>
 <path fill="none" stroke="midnightblue" d="M528.729,-720.939C549.477,-723.421 571.932,-726.107 592.433,-728.559"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="529.043,-717.452 518.698,-719.739 528.211,-724.402 529.043,-717.452"/>
 </g>
-<!-- Node2041 -->
-<g id="node14" class="node"><title>Node2041</title>
+<!-- Node1754 -->
+<g id="node14" class="node"><title>Node1754</title>
 <g id="a_node14"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a81fc0c4d8a2797fc2f67124883b58aa0" target="_top" xlink:title="Ermittelt für LoggeWert, ob das aktuelle Objekt den Fokus hat. ">
 <polygon fill="white" stroke="black" points="591.5,-673 591.5,-703 736.5,-703 736.5,-673 591.5,-673"/>
 <text text-anchor="start" x="599.5" y="-691" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -317,13 +317,13 @@
 </a>
 </g>
 </g>
-<!-- Node2040&#45;&gt;Node2041 -->
-<g id="edge13" class="edge"><title>Node2040&#45;&gt;Node2041</title>
+<!-- Node1753&#45;&gt;Node1754 -->
+<g id="edge13" class="edge"><title>Node1753&#45;&gt;Node1754</title>
 <path fill="none" stroke="midnightblue" d="M498.816,-632.841C522.224,-642.393 551.45,-653.871 578,-663 588.037,-666.451 598.838,-669.858 609.263,-672.994"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="500.075,-629.575 489.495,-629.014 497.416,-636.05 500.075,-629.575"/>
 </g>
-<!-- Node2042 -->
-<g id="node15" class="node"><title>Node2042</title>
+<!-- Node1755 -->
+<g id="node15" class="node"><title>Node1755</title>
 <g id="a_node15"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a9bbcabb6c1d3b95ca94a3bd0921b206c" target="_top" xlink:title="Ermittelt ob das Objekt den Fokus besitz und liefert diesen für das Schlüsselwort MerkeWert...">
 <polygon fill="white" stroke="black" points="578,-624 578,-654 750,-654 750,-624 578,-624"/>
 <text text-anchor="start" x="586" y="-642" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -331,13 +331,13 @@
 </a>
 </g>
 </g>
-<!-- Node2040&#45;&gt;Node2042 -->
-<g id="edge14" class="edge"><title>Node2040&#45;&gt;Node2042</title>
+<!-- Node1753&#45;&gt;Node1755 -->
+<g id="edge14" class="edge"><title>Node1753&#45;&gt;Node1755</title>
 <path fill="none" stroke="midnightblue" d="M534.888,-623.676C548.968,-625.36 563.651,-627.116 577.841,-628.814"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="535.103,-620.176 524.758,-622.464 534.271,-627.127 535.103,-620.176"/>
 </g>
-<!-- Node2043 -->
-<g id="node16" class="node"><title>Node2043</title>
+<!-- Node1756 -->
+<g id="node16" class="node"><title>Node1756</title>
 <g id="a_node16"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a6498c1c87ad98dc2cd7e601106023720" target="_top" xlink:title="Ermittelt/Prüft, ob das aktuelle Objekt aktiv ist. ">
 <polygon fill="white" stroke="black" points="591,-575 591,-605 737,-605 737,-575 591,-575"/>
 <text text-anchor="start" x="599" y="-593" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -345,18 +345,18 @@
 </a>
 </g>
 </g>
-<!-- Node2040&#45;&gt;Node2043 -->
-<g id="edge15" class="edge"><title>Node2040&#45;&gt;Node2043</title>
+<!-- Node1753&#45;&gt;Node1756 -->
+<g id="edge15" class="edge"><title>Node1753&#45;&gt;Node1756</title>
 <path fill="none" stroke="midnightblue" d="M534.888,-604.711C553.342,-602.592 572.833,-600.354 590.891,-598.28"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="534.293,-601.257 524.758,-605.875 535.092,-608.211 534.293,-601.257"/>
 </g>
-<!-- Node2044&#45;&gt;Node2043 -->
-<g id="edge19" class="edge"><title>Node2044&#45;&gt;Node2043</title>
+<!-- Node1757&#45;&gt;Node1756 -->
+<g id="edge19" class="edge"><title>Node1757&#45;&gt;Node1756</title>
 <path fill="none" stroke="midnightblue" d="M498.816,-534.841C522.224,-544.393 551.45,-555.871 578,-565 588.037,-568.451 598.838,-571.858 609.263,-574.994"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="500.075,-531.575 489.495,-531.014 497.416,-538.05 500.075,-531.575"/>
 </g>
-<!-- Node2045 -->
-<g id="node18" class="node"><title>Node2045</title>
+<!-- Node1758 -->
+<g id="node18" class="node"><title>Node1758</title>
 <g id="a_node18"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a5f4b400e4aa9e68fd083ea205feb1c32" target="_top" xlink:title="Ermittelt, ob das aktuelle Objket Aktiv ist. ">
 <polygon fill="white" stroke="black" points="596,-526 596,-556 732,-556 732,-526 596,-526"/>
 <text text-anchor="start" x="604" y="-544" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -364,13 +364,13 @@
 </a>
 </g>
 </g>
-<!-- Node2044&#45;&gt;Node2045 -->
-<g id="edge17" class="edge"><title>Node2044&#45;&gt;Node2045</title>
+<!-- Node1757&#45;&gt;Node1758 -->
+<g id="edge17" class="edge"><title>Node1757&#45;&gt;Node1758</title>
 <path fill="none" stroke="midnightblue" d="M530.199,-525.115C551.703,-527.687 574.935,-530.466 595.865,-532.969"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="530.474,-521.623 520.129,-523.91 529.642,-528.573 530.474,-521.623"/>
 </g>
-<!-- Node2046 -->
-<g id="node19" class="node"><title>Node2046</title>
+<!-- Node1759 -->
+<g id="node19" class="node"><title>Node1759</title>
 <g id="a_node19"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a4c220e499764b9b1523bee0e68727699" target="_top" xlink:title="Ermittelt für das Schlüsselwort MerkeIstAktive, ob das aktuelle Objekt aktiv ist. ...">
 <polygon fill="white" stroke="black" points="582.5,-477 582.5,-507 745.5,-507 745.5,-477 582.5,-477"/>
 <text text-anchor="start" x="590.5" y="-495" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -378,13 +378,13 @@
 </a>
 </g>
 </g>
-<!-- Node2044&#45;&gt;Node2046 -->
-<g id="edge18" class="edge"><title>Node2044&#45;&gt;Node2046</title>
+<!-- Node1757&#45;&gt;Node1759 -->
+<g id="edge18" class="edge"><title>Node1757&#45;&gt;Node1759</title>
 <path fill="none" stroke="midnightblue" d="M530.474,-507.218C547.335,-505.282 565.247,-503.225 582.27,-501.27"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="529.664,-503.788 520.129,-508.406 530.463,-510.742 529.664,-503.788"/>
 </g>
-<!-- Node2048 -->
-<g id="node21" class="node"><title>Node2048</title>
+<!-- Node1761 -->
+<g id="node21" class="node"><title>Node1761</title>
 <g id="a_node21"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a7d9329528a1de239d3f545dbc4ab3349" target="_top" xlink:title="Logt den textuellen Inhalt des Labels eines Objektes. ">
 <polygon fill="white" stroke="black" points="598.5,-428 598.5,-458 729.5,-458 729.5,-428 598.5,-428"/>
 <text text-anchor="start" x="606.5" y="-446" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -392,13 +392,13 @@
 </a>
 </g>
 </g>
-<!-- Node2047&#45;&gt;Node2048 -->
-<g id="edge21" class="edge"><title>Node2047&#45;&gt;Node2048</title>
+<!-- Node1760&#45;&gt;Node1761 -->
+<g id="edge21" class="edge"><title>Node1760&#45;&gt;Node1761</title>
 <path fill="none" stroke="midnightblue" d="M515.095,-399.832C545.679,-408.758 582.294,-419.445 611.441,-427.952"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="515.975,-396.442 505.395,-397 514.014,-403.162 515.975,-396.442"/>
 </g>
-<!-- Node2049 -->
-<g id="node22" class="node"><title>Node2049</title>
+<!-- Node1762 -->
+<g id="node22" class="node"><title>Node1762</title>
 <g id="a_node22"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a26e0e12d54e793e6cb084161d22d173e" target="_top" xlink:title="Ermittelt den textuellen Inhalt des Labels für das Schlüsselwort MerkeWert. ">
 <polygon fill="white" stroke="black" points="589,-379 589,-409 739,-409 739,-379 589,-379"/>
 <text text-anchor="start" x="597" y="-397" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -406,13 +406,13 @@
 </a>
 </g>
 </g>
-<!-- Node2047&#45;&gt;Node2049 -->
-<g id="edge22" class="edge"><title>Node2047&#45;&gt;Node2049</title>
+<!-- Node1760&#45;&gt;Node1762 -->
+<g id="edge22" class="edge"><title>Node1760&#45;&gt;Node1762</title>
 <path fill="none" stroke="midnightblue" d="M528.744,-386.292C548.249,-387.411 569.263,-388.618 588.743,-389.736"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="528.882,-382.794 518.698,-385.715 528.481,-389.782 528.882,-382.794"/>
 </g>
-<!-- Node2050 -->
-<g id="node23" class="node"><title>Node2050</title>
+<!-- Node1763 -->
+<g id="node23" class="node"><title>Node1763</title>
 <g id="a_node23"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#af43e390e1ff415edf0f712ccad4c60e7" target="_top" xlink:title="Ermittelt den textuellen Inhalt des Labels für Prüfewert. ">
 <polygon fill="white" stroke="black" points="597.5,-330 597.5,-360 730.5,-360 730.5,-330 597.5,-330"/>
 <text text-anchor="start" x="605.5" y="-348" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -420,13 +420,13 @@
 </a>
 </g>
 </g>
-<!-- Node2047&#45;&gt;Node2050 -->
-<g id="edge23" class="edge"><title>Node2047&#45;&gt;Node2050</title>
+<!-- Node1760&#45;&gt;Node1763 -->
+<g id="edge23" class="edge"><title>Node1760&#45;&gt;Node1763</title>
 <path fill="none" stroke="midnightblue" d="M528.805,-368.757C551.141,-364.803 575.451,-360.499 597.167,-356.655"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="527.934,-365.357 518.698,-370.546 529.155,-372.249 527.934,-365.357"/>
 </g>
-<!-- Node2052 -->
-<g id="node25" class="node"><title>Node2052</title>
+<!-- Node1765 -->
+<g id="node25" class="node"><title>Node1765</title>
 <g id="a_node25"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#afc2a8c2aa64ef9cf5ea8b29e85d7d65c" target="_top" xlink:title="Logt den textuellen Inhalt des ToolTips. ">
 <polygon fill="white" stroke="black" points="598.5,-281 598.5,-311 729.5,-311 729.5,-281 598.5,-281"/>
 <text text-anchor="start" x="606.5" y="-299" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -434,13 +434,13 @@
 </a>
 </g>
 </g>
-<!-- Node2051&#45;&gt;Node2052 -->
-<g id="edge25" class="edge"><title>Node2051&#45;&gt;Node2052</title>
+<!-- Node1764&#45;&gt;Node1765 -->
+<g id="edge25" class="edge"><title>Node1764&#45;&gt;Node1765</title>
 <path fill="none" stroke="midnightblue" d="M528.953,-304.338C551.62,-302.928 576.308,-301.392 598.248,-300.028"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="528.461,-300.862 518.698,-304.976 528.896,-307.848 528.461,-300.862"/>
 </g>
-<!-- Node2053 -->
-<g id="node26" class="node"><title>Node2053</title>
+<!-- Node1766 -->
+<g id="node26" class="node"><title>Node1766</title>
 <g id="a_node26"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a20997f7ec363af3e52ded1d26822090c" target="_top" xlink:title="Ermittelt den textuellen Inhalt des ToolTips für das Schlüsselwort MerkeWert. ">
 <polygon fill="white" stroke="black" points="586,-232 586,-262 742,-262 742,-232 586,-232"/>
 <text text-anchor="start" x="594" y="-250" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -448,13 +448,13 @@
 </a>
 </g>
 </g>
-<!-- Node2051&#45;&gt;Node2053 -->
-<g id="edge26" class="edge"><title>Node2051&#45;&gt;Node2053</title>
+<!-- Node1764&#45;&gt;Node1766 -->
+<g id="edge26" class="edge"><title>Node1764&#45;&gt;Node1766</title>
 <path fill="none" stroke="midnightblue" d="M518.929,-291.109C526.727,-288.797 534.56,-286.397 542,-284 558.192,-278.784 561.804,-276.203 578,-271 587.489,-267.951 597.64,-264.903 607.504,-262.053"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="517.716,-287.817 509.101,-293.984 519.681,-294.535 517.716,-287.817"/>
 </g>
-<!-- Node2054 -->
-<g id="node27" class="node"><title>Node2054</title>
+<!-- Node1767 -->
+<g id="node27" class="node"><title>Node1767</title>
 <g id="a_node27"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a6cf810f4712e4e7892f47722dd57a6f2" target="_top" xlink:title="Ermittelt den textuellen Inhalt des ToolTips für Prüfewert. ">
 <polygon fill="white" stroke="black" points="594.5,-183 594.5,-213 733.5,-213 733.5,-183 594.5,-183"/>
 <text text-anchor="start" x="602.5" y="-201" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -462,13 +462,13 @@
 </a>
 </g>
 </g>
-<!-- Node2051&#45;&gt;Node2054 -->
-<g id="edge27" class="edge"><title>Node2051&#45;&gt;Node2054</title>
+<!-- Node1764&#45;&gt;Node1767 -->
+<g id="edge27" class="edge"><title>Node1764&#45;&gt;Node1767</title>
 <path fill="none" stroke="midnightblue" d="M527.974,-292.765C532.95,-290.252 537.69,-287.351 542,-284 567.157,-264.444 552.827,-241.535 578,-222 582.967,-218.146 588.523,-214.91 594.352,-212.194"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="526.495,-289.593 518.805,-296.881 529.361,-295.979 526.495,-289.593"/>
 </g>
-<!-- Node2056 -->
-<g id="node29" class="node"><title>Node2056</title>
+<!-- Node1769 -->
+<g id="node29" class="node"><title>Node1769</title>
 <g id="a_node29"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a4393c40898d3b2173978f22ef3a5064e" target="_top" xlink:title="Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert. ">
 <polygon fill="white" stroke="black" points="598.5,-134 598.5,-164 729.5,-164 729.5,-134 598.5,-134"/>
 <text text-anchor="start" x="606.5" y="-152" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -476,13 +476,13 @@
 </a>
 </g>
 </g>
-<!-- Node2055&#45;&gt;Node2056 -->
-<g id="edge29" class="edge"><title>Node2055&#45;&gt;Node2056</title>
+<!-- Node1768&#45;&gt;Node1769 -->
+<g id="edge29" class="edge"><title>Node1768&#45;&gt;Node1769</title>
 <path fill="none" stroke="midnightblue" d="M527.974,-243.765C532.95,-241.252 537.69,-238.351 542,-235 567.157,-215.444 552.827,-192.535 578,-173 584.057,-168.3 590.991,-164.52 598.227,-161.48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="526.495,-240.593 518.805,-247.881 529.361,-246.979 526.495,-240.593"/>
 </g>
-<!-- Node2057 -->
-<g id="node30" class="node"><title>Node2057</title>
+<!-- Node1770 -->
+<g id="node30" class="node"><title>Node1770</title>
 <g id="a_node30"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a12e4a6c87233f7de1d6738313709865e" target="_top" xlink:title="Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes für das Schlüsselwort MerkeWe...">
 <polygon fill="white" stroke="black" points="588,-85 588,-115 740,-115 740,-85 588,-85"/>
 <text text-anchor="start" x="596" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -490,13 +490,13 @@
 </a>
 </g>
 </g>
-<!-- Node2055&#45;&gt;Node2057 -->
-<g id="edge30" class="edge"><title>Node2055&#45;&gt;Node2057</title>
+<!-- Node1768&#45;&gt;Node1770 -->
+<g id="edge30" class="edge"><title>Node1768&#45;&gt;Node1770</title>
 <path fill="none" stroke="midnightblue" d="M527.662,-245.405C532.882,-242.528 537.751,-239.095 542,-235 579.342,-199.009 540.629,-159.961 578,-124 581.536,-120.598 585.516,-117.671 589.773,-115.154"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="526.105,-242.27 518.593,-249.741 529.124,-248.585 526.105,-242.27"/>
 </g>
-<!-- Node2058 -->
-<g id="node31" class="node"><title>Node2058</title>
+<!-- Node1771 -->
+<g id="node31" class="node"><title>Node1771</title>
 <g id="a_node31"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a22e71a15606b0dc55a2b2ded64043780" target="_top" xlink:title="Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert. ">
 <polygon fill="white" stroke="black" points="597,-36 597,-66 731,-66 731,-36 597,-36"/>
 <text text-anchor="start" x="605" y="-54" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -504,8 +504,8 @@
 </a>
 </g>
 </g>
-<!-- Node2055&#45;&gt;Node2058 -->
-<g id="edge31" class="edge"><title>Node2055&#45;&gt;Node2058</title>
+<!-- Node1768&#45;&gt;Node1771 -->
+<g id="edge31" class="edge"><title>Node1768&#45;&gt;Node1771</title>
 <path fill="none" stroke="midnightblue" d="M527.82,-245.979C533.049,-242.979 537.875,-239.361 542,-235 592.091,-182.05 527.867,-127.91 578,-75 583.273,-69.4346 589.729,-65.1276 596.705,-61.7999"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="526.123,-242.913 518.692,-250.465 529.21,-249.195 526.123,-242.913"/>
 </g>

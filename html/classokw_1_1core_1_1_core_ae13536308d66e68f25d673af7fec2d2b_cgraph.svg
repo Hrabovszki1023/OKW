@@ -48,21 +48,21 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 762;
 var viewHeight = 126;
-var sectionId = 'dynsection-45';
+var sectionId = 'dynsection-41';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>okw.core.Core.MemorizeSelectedValue</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-122 758,-122 758,4 -4,4"/>
-<!-- Node1171 -->
-<g id="node1" class="node"><title>Node1171</title>
+<!-- Node1016 -->
+<g id="node1" class="node"><title>Node1016</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-44 0,-74 164,-74 164,-44 0,-44"/>
 <text text-anchor="start" x="8" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.MemorizeSelected</text>
 <text text-anchor="middle" x="82" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">Value</text>
 </g>
-<!-- Node1172 -->
-<g id="node2" class="node"><title>Node1172</title>
+<!-- Node1017 -->
+<g id="node2" class="node"><title>Node1017</title>
 <g id="a_node2"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" target="_top" xlink:title="Ausgabe eines Schlüsselwortes. ">
 <polygon fill="white" stroke="black" points="214,-88 214,-118 348,-118 348,-88 214,-88"/>
 <text text-anchor="start" x="222" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
@@ -70,26 +70,26 @@ var sectionId = 'dynsection-45';
 </a>
 </g>
 </g>
-<!-- Node1171&#45;&gt;Node1172 -->
-<g id="edge1" class="edge"><title>Node1171&#45;&gt;Node1172</title>
+<!-- Node1016&#45;&gt;Node1017 -->
+<g id="edge1" class="edge"><title>Node1016&#45;&gt;Node1017</title>
 <path fill="none" stroke="midnightblue" d="M150.245,-74.0192C167.39,-77.8485 185.944,-81.9925 203.513,-85.9165"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="203.203,-89.4335 213.725,-88.1975 204.729,-82.6018 203.203,-89.4335"/>
 </g>
-<!-- Node1173 -->
-<g id="node3" class="node"><title>Node1173</title>
+<!-- Node1018 -->
+<g id="node3" class="node"><title>Node1018</title>
 <g id="a_node3"><a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. ">
 <polygon fill="white" stroke="black" points="201,-49.5 201,-68.5 361,-68.5 361,-49.5 201,-49.5"/>
 <text text-anchor="middle" x="281" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
 </g>
-<!-- Node1171&#45;&gt;Node1173 -->
-<g id="edge2" class="edge"><title>Node1171&#45;&gt;Node1173</title>
+<!-- Node1016&#45;&gt;Node1018 -->
+<g id="edge2" class="edge"><title>Node1016&#45;&gt;Node1018</title>
 <path fill="none" stroke="midnightblue" d="M164.265,-59C172.949,-59 181.818,-59 190.59,-59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="190.826,-62.5001 200.826,-59 190.826,-55.5001 190.826,-62.5001"/>
 </g>
-<!-- Node1176 -->
-<g id="node6" class="node"><title>Node1176</title>
+<!-- Node1021 -->
+<g id="node6" class="node"><title>Node1021</title>
 <g id="a_node6"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a2e9dcf9b0e3ebe2645ed830e5c077e04" target="_top" xlink:title="Keine Beschreibung zu &quot;MemorizeSelectedValue&quot; verfügbar. ">
 <polygon fill="white" stroke="black" points="200.5,-0 200.5,-30 361.5,-30 361.5,-0 200.5,-0"/>
 <text text-anchor="start" x="208.5" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.Memorize</text>
@@ -97,26 +97,26 @@ var sectionId = 'dynsection-45';
 </a>
 </g>
 </g>
-<!-- Node1171&#45;&gt;Node1176 -->
-<g id="edge5" class="edge"><title>Node1171&#45;&gt;Node1176</title>
+<!-- Node1016&#45;&gt;Node1021 -->
+<g id="edge5" class="edge"><title>Node1016&#45;&gt;Node1021</title>
 <path fill="none" stroke="midnightblue" d="M150.245,-43.9808C167.11,-40.214 185.339,-36.1426 202.653,-32.2756"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="203.727,-35.6219 212.724,-30.0262 202.201,-28.7902 203.727,-35.6219"/>
 </g>
-<!-- Node1174 -->
-<g id="node4" class="node"><title>Node1174</title>
+<!-- Node1019 -->
+<g id="node4" class="node"><title>Node1019</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="398.5,-49.5 398.5,-68.5 565.5,-68.5 565.5,-49.5 398.5,-49.5"/>
 <text text-anchor="middle" x="482" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
 </g>
-<!-- Node1173&#45;&gt;Node1174 -->
-<g id="edge3" class="edge"><title>Node1173&#45;&gt;Node1174</title>
+<!-- Node1018&#45;&gt;Node1019 -->
+<g id="edge3" class="edge"><title>Node1018&#45;&gt;Node1019</title>
 <path fill="none" stroke="midnightblue" d="M361.222,-59C370.121,-59 379.246,-59 388.295,-59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="388.464,-62.5001 398.464,-59 388.464,-55.5001 388.464,-62.5001"/>
 </g>
-<!-- Node1175 -->
-<g id="node5" class="node"><title>Node1175</title>
+<!-- Node1020 -->
+<g id="node5" class="node"><title>Node1020</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="602,-44 602,-74 754,-74 754,-44 602,-44"/>
 <text text-anchor="start" x="610" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
@@ -124,8 +124,8 @@ var sectionId = 'dynsection-45';
 </a>
 </g>
 </g>
-<!-- Node1174&#45;&gt;Node1175 -->
-<g id="edge4" class="edge"><title>Node1174&#45;&gt;Node1175</title>
+<!-- Node1019&#45;&gt;Node1020 -->
+<g id="edge4" class="edge"><title>Node1019&#45;&gt;Node1020</title>
 <path fill="none" stroke="midnightblue" d="M565.555,-59C574.227,-59 583.057,-59 591.759,-59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="591.899,-62.5001 601.899,-59 591.899,-55.5001 591.899,-62.5001"/>
 </g>

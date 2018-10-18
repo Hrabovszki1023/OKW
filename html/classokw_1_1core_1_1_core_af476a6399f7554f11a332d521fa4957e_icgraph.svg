@@ -48,34 +48,34 @@ if (edges && edges.length) {
 <script type="text/javascript">
 var viewWidth = 594;
 var viewHeight = 592;
-var sectionId = 'dynsection-38';
+var sectionId = 'dynsection-36';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>okw.core.Core.MemorizeHasFocus</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-588 590,-588 590,4 -4,4"/>
-<!-- Node1099 -->
-<g id="node1" class="node"><title>Node1099</title>
+<!-- Node961 -->
+<g id="node1" class="node"><title>Node961</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-251 0,-281 144,-281 144,-251 0,-251"/>
 <text text-anchor="start" x="8" y="-269" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.MemorizeHas</text>
 <text text-anchor="middle" x="72" y="-258" font-family="Helvetica,sans-Serif" font-size="10.00">Focus</text>
 </g>
-<!-- Node1100 -->
-<g id="node2" class="node"><title>Node1100</title>
+<!-- Node962 -->
+<g id="node2" class="node"><title>Node962</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_e_n.html#a93f2db8bf0eff6613fbf2bbbeb9436f0" target="_top" xlink:title="Keine Beschreibung zu &quot;MemorizeHasFocus&quot; verfügbar. ">
 <polygon fill="white" stroke="black" points="180,-281.5 180,-300.5 344,-300.5 344,-281.5 180,-281.5"/>
 <text text-anchor="middle" x="262" y="-288.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.MemorizeHasFocus</text>
 </a>
 </g>
 </g>
-<!-- Node1099&#45;&gt;Node1100 -->
-<g id="edge1" class="edge"><title>Node1099&#45;&gt;Node1100</title>
+<!-- Node961&#45;&gt;Node962 -->
+<g id="edge1" class="edge"><title>Node961&#45;&gt;Node962</title>
 <path fill="none" stroke="midnightblue" d="M154.288,-276.81C166.01,-278.368 178.001,-279.963 189.513,-281.494"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="154.449,-273.3 144.075,-275.451 153.526,-280.239 154.449,-273.3"/>
 </g>
-<!-- Node1112 -->
-<g id="node14" class="node"><title>Node1112</title>
+<!-- Node974 -->
+<g id="node14" class="node"><title>Node974</title>
 <g id="a_node14"><a xlink:href="classokw_1_1core_1_1_current_object___test.html#aea98fdc54d554792ed8cbd78cf297d50" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode MemorizeHasFocus( FN, MemKey ) im ChildObject. ">
 <polygon fill="white" stroke="black" points="189,-221.5 189,-262.5 335,-262.5 335,-221.5 189,-221.5"/>
 <text text-anchor="start" x="197" y="-250.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -84,13 +84,13 @@ var sectionId = 'dynsection-38';
 </a>
 </g>
 </g>
-<!-- Node1099&#45;&gt;Node1112 -->
-<g id="edge13" class="edge"><title>Node1099&#45;&gt;Node1112</title>
+<!-- Node961&#45;&gt;Node974 -->
+<g id="edge13" class="edge"><title>Node961&#45;&gt;Node974</title>
 <path fill="none" stroke="midnightblue" d="M154.144,-255.641C165.7,-254.166 177.52,-252.657 188.888,-251.206"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="153.551,-252.188 144.075,-256.927 154.437,-259.132 153.551,-252.188"/>
 </g>
-<!-- Node1101 -->
-<g id="node3" class="node"><title>Node1101</title>
+<!-- Node963 -->
+<g id="node3" class="node"><title>Node963</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a6fcd85be4c936ba7dd6b1a18d3ff92e0" target="_top" xlink:title="Prüft ob &quot;${IGNORE} &quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst. ">
 <polygon fill="white" stroke="black" points="380,-542.5 380,-583.5 586,-583.5 586,-542.5 380,-542.5"/>
 <text text-anchor="start" x="388" y="-571.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -99,13 +99,13 @@ var sectionId = 'dynsection-38';
 </a>
 </g>
 </g>
-<!-- Node1100&#45;&gt;Node1101 -->
-<g id="edge2" class="edge"><title>Node1100&#45;&gt;Node1101</title>
+<!-- Node962&#45;&gt;Node963 -->
+<g id="edge2" class="edge"><title>Node962&#45;&gt;Node963</title>
 <path fill="none" stroke="midnightblue" d="M266.902,-310.575C277.051,-356.329 308.603,-471.011 380,-532 384.644,-535.967 389.786,-539.426 395.219,-542.443"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="270.266,-309.561 264.772,-300.502 263.417,-311.01 270.266,-309.561"/>
 </g>
-<!-- Node1102 -->
-<g id="node4" class="node"><title>Node1102</title>
+<!-- Node964 -->
+<g id="node4" class="node"><title>Node964</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a3af95e4551c9e10443801f6c34cc72ff" target="_top" xlink:title="Prüft ob &quot;&quot;${IGNORE}${TCN}&quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst...">
 <polygon fill="white" stroke="black" points="380,-482.5 380,-523.5 586,-523.5 586,-482.5 380,-482.5"/>
 <text text-anchor="start" x="388" y="-511.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -114,13 +114,13 @@ var sectionId = 'dynsection-38';
 </a>
 </g>
 </g>
-<!-- Node1100&#45;&gt;Node1102 -->
-<g id="edge3" class="edge"><title>Node1100&#45;&gt;Node1102</title>
+<!-- Node962&#45;&gt;Node964 -->
+<g id="edge3" class="edge"><title>Node962&#45;&gt;Node964</title>
 <path fill="none" stroke="midnightblue" d="M270.095,-310.096C284.786,-347.004 322.079,-428.332 380,-472 385.246,-475.955 390.999,-479.41 397.017,-482.426"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="273.274,-308.612 266.408,-300.544 266.744,-311.133 273.274,-308.612"/>
 </g>
-<!-- Node1103 -->
-<g id="node5" class="node"><title>Node1103</title>
+<!-- Node965 -->
+<g id="node5" class="node"><title>Node965</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#a6c552e5a5979756d446b596d1fff577e" target="_top" xlink:title="Teste das Schlüsselwort MemorizeHasFocus( FN, MemKey ) eines SeBACK Prüfen. ">
 <polygon fill="white" stroke="black" points="380,-422.5 380,-463.5 586,-463.5 586,-422.5 380,-422.5"/>
 <text text-anchor="start" x="388" y="-451.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeBACK.SeBACK_EN</text>
@@ -129,13 +129,13 @@ var sectionId = 'dynsection-38';
 </a>
 </g>
 </g>
-<!-- Node1100&#45;&gt;Node1103 -->
-<g id="edge4" class="edge"><title>Node1100&#45;&gt;Node1103</title>
+<!-- Node962&#45;&gt;Node965 -->
+<g id="edge4" class="edge"><title>Node962&#45;&gt;Node965</title>
 <path fill="none" stroke="midnightblue" d="M275.366,-308.914C294.659,-335.523 334.463,-385.32 380,-413 385.836,-416.547 392.116,-419.696 398.589,-422.487"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="278.066,-306.67 269.422,-300.543 272.358,-310.723 278.066,-306.67"/>
 </g>
-<!-- Node1104 -->
-<g id="node6" class="node"><title>Node1104</title>
+<!-- Node966 -->
+<g id="node6" class="node"><title>Node966</title>
 <g id="a_node6"><a xlink:href="classokw_1_1_se_button_1_1_se_button___e_n___test.html#a9707ba1526eeda75c8fa41e1e8164aa0" target="_top" xlink:title="Test des Schlüsselwortes MemorizeHasFocus für den GUI&#45;Adapter SeButton. ">
 <polygon fill="white" stroke="black" points="403,-374 403,-404 563,-404 563,-374 403,-374"/>
 <text text-anchor="start" x="411" y="-392" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeButton.SeButton</text>
@@ -143,13 +143,13 @@ var sectionId = 'dynsection-38';
 </a>
 </g>
 </g>
-<!-- Node1100&#45;&gt;Node1104 -->
-<g id="edge5" class="edge"><title>Node1100&#45;&gt;Node1104</title>
+<!-- Node962&#45;&gt;Node966 -->
+<g id="edge5" class="edge"><title>Node962&#45;&gt;Node966</title>
 <path fill="none" stroke="midnightblue" d="M283.37,-306.535C305.886,-323.011 343.776,-348.723 380,-364 388.988,-367.79 398.674,-371.088 408.374,-373.934"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="285.371,-303.661 275.256,-300.508 281.197,-309.28 285.371,-303.661"/>
 </g>
-<!-- Node1105 -->
-<g id="node7" class="node"><title>Node1105</title>
+<!-- Node967 -->
+<g id="node7" class="node"><title>Node967</title>
 <g id="a_node7"><a xlink:href="classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___test.html#ad65d7242329916eba19b5ee13e6e96b6" target="_top" xlink:title="Logget ob ein vorhandenes objekt existiert. ">
 <polygon fill="white" stroke="black" points="389.5,-325 389.5,-355 576.5,-355 576.5,-325 389.5,-325"/>
 <text text-anchor="start" x="397.5" y="-343" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputCheckbox.SeInput</text>
@@ -157,13 +157,13 @@ var sectionId = 'dynsection-38';
 </a>
 </g>
 </g>
-<!-- Node1100&#45;&gt;Node1105 -->
-<g id="edge6" class="edge"><title>Node1100&#45;&gt;Node1105</title>
+<!-- Node962&#45;&gt;Node967 -->
+<g id="edge6" class="edge"><title>Node962&#45;&gt;Node967</title>
 <path fill="none" stroke="midnightblue" d="M315.262,-302.693C345.037,-309.355 382.667,-317.775 414.641,-324.929"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="316.008,-299.274 305.485,-300.506 314.48,-306.105 316.008,-299.274"/>
 </g>
-<!-- Node1106 -->
-<g id="node8" class="node"><title>Node1106</title>
+<!-- Node968 -->
+<g id="node8" class="node"><title>Node968</title>
 <g id="a_node8"><a xlink:href="classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___test.html#ad572d5badb79741c496835cbb5c2d6df" target="_top" xlink:title="Prüft die SetFocusFunktion bei Textfelder mit dem Attribute &quot;ReadOnly&quot;. ">
 <polygon fill="white" stroke="black" points="404,-276 404,-306 562,-306 562,-276 404,-276"/>
 <text text-anchor="start" x="412" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputCheckbox.SeInput</text>
@@ -171,13 +171,13 @@ var sectionId = 'dynsection-38';
 </a>
 </g>
 </g>
-<!-- Node1100&#45;&gt;Node1106 -->
-<g id="edge7" class="edge"><title>Node1100&#45;&gt;Node1106</title>
+<!-- Node962&#45;&gt;Node968 -->
+<g id="edge7" class="edge"><title>Node962&#45;&gt;Node968</title>
 <path fill="none" stroke="midnightblue" d="M354.379,-291C370.806,-291 387.793,-291 403.806,-291"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="354.236,-287.5 344.236,-291 354.236,-294.5 354.236,-287.5"/>
 </g>
-<!-- Node1107 -->
-<g id="node9" class="node"><title>Node1107</title>
+<!-- Node969 -->
+<g id="node9" class="node"><title>Node969</title>
 <g id="a_node9"><a xlink:href="classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#acd5886595f784cf019869d6ea13e8d01" target="_top" xlink:title="Teste das Schlüsselwort MemorizeHasFocus( FN, MemKey ) eines SeInputText Prüfen. ">
 <polygon fill="white" stroke="black" points="392.5,-227 392.5,-257 573.5,-257 573.5,-227 392.5,-227"/>
 <text text-anchor="start" x="400.5" y="-245" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputField.SeInput</text>
@@ -185,13 +185,13 @@ var sectionId = 'dynsection-38';
 </a>
 </g>
 </g>
-<!-- Node1100&#45;&gt;Node1107 -->
-<g id="edge8" class="edge"><title>Node1100&#45;&gt;Node1107</title>
+<!-- Node962&#45;&gt;Node969 -->
+<g id="edge8" class="edge"><title>Node962&#45;&gt;Node969</title>
 <path fill="none" stroke="midnightblue" d="M315.262,-279.307C345.037,-272.645 382.667,-264.225 414.641,-257.071"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="314.48,-275.895 305.485,-281.494 316.008,-282.726 314.48,-275.895"/>
 </g>
-<!-- Node1108 -->
-<g id="node10" class="node"><title>Node1108</title>
+<!-- Node970 -->
+<g id="node10" class="node"><title>Node970</title>
 <g id="a_node10"><a xlink:href="classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a27d58cefa1bfc6754c9183baf8d6a41b" target="_top" xlink:title="okw.SeInputField.SeInput\lField_EN_Test.tcSelect\l_OKWGUIObjectNotFoundException">
 <polygon fill="white" stroke="black" points="393.5,-167.5 393.5,-208.5 572.5,-208.5 572.5,-167.5 393.5,-167.5"/>
 <text text-anchor="start" x="401.5" y="-196.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputField.SeInput</text>
@@ -200,13 +200,13 @@ var sectionId = 'dynsection-38';
 </a>
 </g>
 </g>
-<!-- Node1100&#45;&gt;Node1108 -->
-<g id="edge9" class="edge"><title>Node1100&#45;&gt;Node1108</title>
+<!-- Node962&#45;&gt;Node970 -->
+<g id="edge9" class="edge"><title>Node962&#45;&gt;Node970</title>
 <path fill="none" stroke="midnightblue" d="M332.66,-277.528C336.639,-275.631 340.456,-273.467 344,-271 367.371,-254.731 356.992,-234.778 380,-218 384.847,-214.465 390.107,-211.345 395.598,-208.59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="331.025,-274.418 323.136,-281.49 333.714,-280.881 331.025,-274.418"/>
 </g>
-<!-- Node1109 -->
-<g id="node11" class="node"><title>Node1109</title>
+<!-- Node971 -->
+<g id="node11" class="node"><title>Node971</title>
 <g id="a_node11"><a xlink:href="classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a9416989a5eda857bc38b4446fcff54ec" target="_top" xlink:title="Test des Schlüsselwortes MemorizeHasFocus für den GUI&#45;Adapter SeInputRadio. ">
 <polygon fill="white" stroke="black" points="388,-107.5 388,-148.5 578,-148.5 578,-107.5 388,-107.5"/>
 <text text-anchor="start" x="396" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputRadio.SeInput</text>
@@ -215,13 +215,13 @@ var sectionId = 'dynsection-38';
 </a>
 </g>
 </g>
-<!-- Node1100&#45;&gt;Node1109 -->
-<g id="edge10" class="edge"><title>Node1100&#45;&gt;Node1109</title>
+<!-- Node962&#45;&gt;Node971 -->
+<g id="edge10" class="edge"><title>Node962&#45;&gt;Node971</title>
 <path fill="none" stroke="midnightblue" d="M337.628,-276.103C339.876,-274.558 342.01,-272.862 344,-271 382.487,-234.986 342.314,-194.852 380,-158 383.563,-154.516 387.509,-151.432 391.718,-148.705"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="335.41,-273.339 328.467,-281.342 338.885,-279.416 335.41,-273.339"/>
 </g>
-<!-- Node1110 -->
-<g id="node12" class="node"><title>Node1110</title>
+<!-- Node972 -->
+<g id="node12" class="node"><title>Node972</title>
 <g id="a_node12"><a xlink:href="classokw_1_1_se_link_1_1_se_link___e_n___test.html#a62aa2dfe0475b6579877aa5ef89615c3" target="_top" xlink:title="Prüft die Methode SeLink.MemorizeFocus. ">
 <polygon fill="white" stroke="black" points="399.5,-59 399.5,-89 566.5,-89 566.5,-59 399.5,-59"/>
 <text text-anchor="start" x="407.5" y="-77" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeLink.SeLink_EN</text>
@@ -229,13 +229,13 @@ var sectionId = 'dynsection-38';
 </a>
 </g>
 </g>
-<!-- Node1100&#45;&gt;Node1110 -->
-<g id="edge11" class="edge"><title>Node1100&#45;&gt;Node1110</title>
+<!-- Node962&#45;&gt;Node972 -->
+<g id="edge11" class="edge"><title>Node962&#45;&gt;Node972</title>
 <path fill="none" stroke="midnightblue" d="M338.626,-275.798C340.527,-274.333 342.326,-272.737 344,-271 398.499,-214.451 325.191,-154.249 380,-98 385.586,-92.2671 392.265,-87.7959 399.497,-84.3221"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="336.301,-273.126 329.712,-281.423 340.037,-279.046 336.301,-273.126"/>
 </g>
-<!-- Node1111 -->
-<g id="node13" class="node"><title>Node1111</title>
+<!-- Node973 -->
+<g id="node13" class="node"><title>Node973</title>
 <g id="a_node13"><a xlink:href="classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test.html#a9cc8e97f0a2307a57c87fd290d04a538" target="_top" xlink:title="Teste das Schlüsselwort MemorizeHasFocus( FN, MemKey ) eines SeMAXIMIZE Prüfen. ">
 <polygon fill="white" stroke="black" points="380,0.5 380,-40.5 586,-40.5 586,0.5 380,0.5"/>
 <text text-anchor="start" x="388" y="-28.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeMAXIMIZE.SeMAXIMIZE</text>
@@ -244,8 +244,8 @@ var sectionId = 'dynsection-38';
 </a>
 </g>
 </g>
-<!-- Node1100&#45;&gt;Node1111 -->
-<g id="edge12" class="edge"><title>Node1100&#45;&gt;Node1111</title>
+<!-- Node962&#45;&gt;Node973 -->
+<g id="edge12" class="edge"><title>Node962&#45;&gt;Node973</title>
 <path fill="none" stroke="midnightblue" d="M338.863,-275.784C340.684,-274.321 342.404,-272.73 344,-271 411.477,-197.853 314.148,-124.613 380,-50 383.054,-46.5402 386.483,-43.47 390.187,-40.7464"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="336.734,-272.994 330.295,-281.408 340.576,-278.846 336.734,-272.994"/>
 </g>

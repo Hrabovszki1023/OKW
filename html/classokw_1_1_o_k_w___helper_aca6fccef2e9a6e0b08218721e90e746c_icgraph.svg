@@ -9,14 +9,14 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 34)">
 <title>okw.OKW_Helper.getRightFromDelimiterNumber</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-34 330,-34 330,4 -4,4"/>
-<!-- Node39 -->
-<g id="node1" class="node"><title>Node39</title>
+<!-- Node38 -->
+<g id="node1" class="node"><title>Node38</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-0 0,-30 158,-30 158,-0 0,-0"/>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Helper.getRightFrom</text>
 <text text-anchor="middle" x="79" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">DelimiterNumber</text>
 </g>
-<!-- Node40 -->
-<g id="node2" class="node"><title>Node40</title>
+<!-- Node39 -->
+<g id="node2" class="node"><title>Node39</title>
 <g id="a_node2"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a2de5dcb9d606e72dbe9e5a9cbef481ad" target="_top" xlink:title="Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert. ">
 <polygon fill="white" stroke="black" points="194.5,-0 194.5,-30 325.5,-30 325.5,-0 194.5,-0"/>
 <text text-anchor="start" x="202.5" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -24,8 +24,8 @@
 </a>
 </g>
 </g>
-<!-- Node39&#45;&gt;Node40 -->
-<g id="edge1" class="edge"><title>Node39&#45;&gt;Node40</title>
+<!-- Node38&#45;&gt;Node39 -->
+<g id="edge1" class="edge"><title>Node38&#45;&gt;Node39</title>
 <path fill="none" stroke="midnightblue" d="M168.457,-15C177.173,-15 185.902,-15 194.314,-15"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="168.252,-11.5001 158.252,-15 168.252,-18.5001 168.252,-11.5001"/>
 </g>
