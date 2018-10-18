@@ -1294,7 +1294,6 @@ public class SeAnyChildWindow extends AnyChildwindow
         {
             this.LogFunctionStartDebug( "VerifyHasFocus" );
 
-            // Nun mit dem erwarteten Sollwert und GetHasFocus ggf. auf den Wert Warten.
             lvbReturn = this.getHasFocus();
         }
         finally
@@ -1328,7 +1327,6 @@ public class SeAnyChildWindow extends AnyChildwindow
         {
             this.LogFunctionStartDebug( "VerifyLabel" );
 
-            // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
             lvLsReturn = this.getLabel();
         }
         finally
@@ -1371,7 +1369,6 @@ public class SeAnyChildWindow extends AnyChildwindow
          {
              this.LogFunctionStartDebug( "VerifyPlaceholder" );
 
-             // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
              lvLsReturn = this.getPlaceholder();
          }
          finally
@@ -1403,7 +1400,6 @@ public class SeAnyChildWindow extends AnyChildwindow
         {
             this.LogFunctionStartDebug( "VerifyTooltip" );
 
-            // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
             lvLsReturn = this.getTooltip();
         }
         finally
@@ -1414,7 +1410,8 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
-    /**  \brief
+    /**
+     * \~german
     *  Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
     *  
     *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
@@ -1456,7 +1453,7 @@ public class SeAnyChildWindow extends AnyChildwindow
             this.MyLogger.LogPrint( "Locator: '" + this.getLocator() + "'" );
             this.MyLogger.ResCloseList();
 
-            String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "getCaption()" );
+            String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "WaitForMe()" );
             throw new OKWGUIObjectNotFoundException( lvsLM );
         }
         return lvbReturn;
