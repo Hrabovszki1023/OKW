@@ -77,31 +77,31 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="46" y="-327" font-family="Helvetica,sans-Serif" font-size="10.00">MethodNotImplemented()</text>
 <text text-anchor="start" x="46" y="-316" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_SetValue_OKWFrameObject</text>
 <text text-anchor="start" x="46" y="-305" font-family="Helvetica,sans-Serif" font-size="10.00">MethodNotImplemented()</text>
-<text text-anchor="start" x="46" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_TypeKey_OKWFrameObject</text>
-<text text-anchor="start" x="46" y="-283" font-family="Helvetica,sans-Serif" font-size="10.00">MethodNotImplemented()</text>
-<text text-anchor="start" x="46" y="-272" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_Select_Window_OKWFrame</text>
-<text text-anchor="start" x="46" y="-261" font-family="Helvetica,sans-Serif" font-size="10.00">ObjectMethodNotImplemented_Test()</text>
-<text text-anchor="start" x="46" y="-250" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_StartApp_OKWFrameObject</text>
-<text text-anchor="start" x="46" y="-239" font-family="Helvetica,sans-Serif" font-size="10.00">MethodNotImplemented_Test()</text>
-<text text-anchor="start" x="46" y="-228" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_StopApp_OKWFrameObject</text>
-<text text-anchor="start" x="46" y="-217" font-family="Helvetica,sans-Serif" font-size="10.00">MethodNotImplemented_Test()</text>
-<text text-anchor="start" x="46" y="-206" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyHasFocus_OKWFrame</text>
-<text text-anchor="start" x="46" y="-195" font-family="Helvetica,sans-Serif" font-size="10.00">ObjectMethodNotImplemented()</text>
-<text text-anchor="start" x="46" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyIsActive_OKWFrame</text>
-<text text-anchor="start" x="46" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00">ObjectMethodNotImplemented()</text>
-<text text-anchor="start" x="46" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaption_OKWFrame</text>
+<text text-anchor="start" x="46" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_LogPlaceholder_OKWFrame</text>
+<text text-anchor="start" x="46" y="-283" font-family="Helvetica,sans-Serif" font-size="10.00">ObjectMethodNotImplemented()</text>
+<text text-anchor="start" x="46" y="-272" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_MemorizePlaceholder</text>
+<text text-anchor="start" x="46" y="-261" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWFrameObjectMethodNotImplemented()</text>
+<text text-anchor="start" x="46" y="-250" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_TypeKey_OKWFrameObject</text>
+<text text-anchor="start" x="46" y="-239" font-family="Helvetica,sans-Serif" font-size="10.00">MethodNotImplemented()</text>
+<text text-anchor="start" x="46" y="-228" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_Select_Window_OKWFrame</text>
+<text text-anchor="start" x="46" y="-217" font-family="Helvetica,sans-Serif" font-size="10.00">ObjectMethodNotImplemented_Test()</text>
+<text text-anchor="start" x="46" y="-206" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_StartApp_OKWFrameObject</text>
+<text text-anchor="start" x="46" y="-195" font-family="Helvetica,sans-Serif" font-size="10.00">MethodNotImplemented_Test()</text>
+<text text-anchor="start" x="46" y="-184" font-family="Helvetica,sans-Serif" font-size="10.00">+ tc_StopApp_OKWFrameObject</text>
+<text text-anchor="start" x="46" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00">MethodNotImplemented_Test()</text>
+<text text-anchor="start" x="46" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyHasFocus_OKWFrame</text>
 <text text-anchor="start" x="46" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00">ObjectMethodNotImplemented()</text>
-<text text-anchor="start" x="46" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionREGX</text>
-<text text-anchor="start" x="46" y="-129" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWFrameObjectMethodNotImplemented()</text>
-<text text-anchor="start" x="46" y="-118" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionWCM</text>
-<text text-anchor="start" x="46" y="-107" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWFrameObjectMethodNotImplemented()</text>
-<text text-anchor="start" x="46" y="-96" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyLabel_OKWFrameObject</text>
-<text text-anchor="start" x="46" y="-85" font-family="Helvetica,sans-Serif" font-size="10.00">MethodNotImplemented()</text>
-<text text-anchor="start" x="46" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyLabelREGX</text>
+<text text-anchor="start" x="46" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyIsActive_OKWFrame</text>
+<text text-anchor="start" x="46" y="-129" font-family="Helvetica,sans-Serif" font-size="10.00">ObjectMethodNotImplemented()</text>
+<text text-anchor="start" x="46" y="-118" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaption_OKWFrame</text>
+<text text-anchor="start" x="46" y="-107" font-family="Helvetica,sans-Serif" font-size="10.00">ObjectMethodNotImplemented()</text>
+<text text-anchor="start" x="46" y="-96" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionREGX</text>
+<text text-anchor="start" x="46" y="-85" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWFrameObjectMethodNotImplemented()</text>
+<text text-anchor="start" x="46" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyCaptionWCM</text>
 <text text-anchor="start" x="46" y="-63" font-family="Helvetica,sans-Serif" font-size="10.00">_OKWFrameObjectMethodNotImplemented()</text>
-<text text-anchor="start" x="46" y="-52" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyLabelWCM_OKWFrame</text>
-<text text-anchor="start" x="46" y="-41" font-family="Helvetica,sans-Serif" font-size="10.00">ObjectMethodNotImplemented()</text>
-<text text-anchor="start" x="46" y="-30" font-family="Helvetica,sans-Serif" font-size="10.00">und 13 mehr ...</text>
+<text text-anchor="start" x="46" y="-52" font-family="Helvetica,sans-Serif" font-size="10.00">+ TC_VerifyLabel_OKWFrameObject</text>
+<text text-anchor="start" x="46" y="-41" font-family="Helvetica,sans-Serif" font-size="10.00">MethodNotImplemented()</text>
+<text text-anchor="start" x="46" y="-30" font-family="Helvetica,sans-Serif" font-size="10.00">und 18 mehr ...</text>
 <text text-anchor="start" x="46" y="-19" font-family="Helvetica,sans-Serif" font-size="10.00">+ setUpBeforeClass()</text>
 <text text-anchor="start" x="46" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00">+ tearDownAfterClass()</text>
 </g>

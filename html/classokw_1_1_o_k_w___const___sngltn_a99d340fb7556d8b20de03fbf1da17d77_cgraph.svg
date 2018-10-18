@@ -55,14 +55,14 @@ var sectionId = 'dynsection-16';
 <g id="viewport">
 <title>okw.OKW_Const_Sngltn.YesNo2Boolean</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-111 738,-111 738,4 -4,4"/>
-<!-- Node350 -->
-<g id="node1" class="node"><title>Node350</title>
+<!-- Node370 -->
+<g id="node1" class="node"><title>Node370</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-17 0,-47 146,-47 146,-17 0,-17"/>
 <text text-anchor="start" x="8" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Const_Sngltn.Yes</text>
 <text text-anchor="middle" x="73" y="-24" font-family="Helvetica,sans-Serif" font-size="10.00">No2Boolean</text>
 </g>
-<!-- Node351 -->
-<g id="node2" class="node"><title>Node351</title>
+<!-- Node371 -->
+<g id="node2" class="node"><title>Node371</title>
 <g id="a_node2"><a xlink:href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7" target="_top" xlink:title="Methode ermittelt für Internalname und der aktuell eingestellten Sprache den Wert für Const...">
 <polygon fill="white" stroke="black" points="189.5,-39 189.5,-69 334.5,-69 334.5,-39 189.5,-39"/>
 <text text-anchor="start" x="197.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Const_Sngltn.Get</text>
@@ -70,26 +70,26 @@ var sectionId = 'dynsection-16';
 </a>
 </g>
 </g>
-<!-- Node350&#45;&gt;Node351 -->
-<g id="edge1" class="edge"><title>Node350&#45;&gt;Node351</title>
+<!-- Node370&#45;&gt;Node371 -->
+<g id="edge1" class="edge"><title>Node370&#45;&gt;Node371</title>
 <path fill="none" stroke="midnightblue" d="M146.032,-40.4743C156.902,-41.7532 168.182,-43.0803 179.24,-44.3812"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="178.974,-47.8739 189.314,-45.5664 179.791,-40.9218 178.974,-47.8739"/>
 </g>
-<!-- Node354 -->
-<g id="node5" class="node"><title>Node354</title>
+<!-- Node374 -->
+<g id="node5" class="node"><title>Node374</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. ">
 <polygon fill="white" stroke="black" points="182,-0.5 182,-19.5 342,-19.5 342,-0.5 182,-0.5"/>
 <text text-anchor="middle" x="262" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
 </g>
-<!-- Node350&#45;&gt;Node354 -->
-<g id="edge4" class="edge"><title>Node350&#45;&gt;Node354</title>
+<!-- Node370&#45;&gt;Node374 -->
+<g id="edge4" class="edge"><title>Node370&#45;&gt;Node374</title>
 <path fill="none" stroke="midnightblue" d="M146.032,-23.5257C154.462,-22.5339 163.139,-21.5131 171.767,-20.4981"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="172.333,-23.9557 181.855,-19.3112 171.515,-17.0036 172.333,-23.9557"/>
 </g>
-<!-- Node352 -->
-<g id="node3" class="node"><title>Node352</title>
+<!-- Node372 -->
+<g id="node3" class="node"><title>Node372</title>
 <g id="a_node3"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4" target="_top" xlink:title="Loggt eine Nachricht. ">
 <polygon fill="white" stroke="black" points="395,-77 395,-107 529,-107 529,-77 395,-77"/>
 <text text-anchor="start" x="403" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
@@ -97,13 +97,13 @@ var sectionId = 'dynsection-16';
 </a>
 </g>
 </g>
-<!-- Node351&#45;&gt;Node352 -->
-<g id="edge2" class="edge"><title>Node351&#45;&gt;Node352</title>
+<!-- Node371&#45;&gt;Node372 -->
+<g id="edge2" class="edge"><title>Node371&#45;&gt;Node372</title>
 <path fill="none" stroke="midnightblue" d="M334.762,-67.7726C350.985,-70.8859 368.265,-74.2023 384.668,-77.3503"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="384.27,-80.8378 394.75,-79.2854 385.589,-73.9632 384.27,-80.8378"/>
 </g>
-<!-- Node353 -->
-<g id="node4" class="node"><title>Node353</title>
+<!-- Node373 -->
+<g id="node4" class="node"><title>Node373</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="582,-14 582,-44 734,-44 734,-14 582,-14"/>
 <text text-anchor="start" x="590" y="-32" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
@@ -111,26 +111,26 @@ var sectionId = 'dynsection-16';
 </a>
 </g>
 </g>
-<!-- Node351&#45;&gt;Node353 -->
-<g id="edge3" class="edge"><title>Node351&#45;&gt;Node353</title>
+<!-- Node371&#45;&gt;Node373 -->
+<g id="edge3" class="edge"><title>Node371&#45;&gt;Node373</title>
 <path fill="none" stroke="midnightblue" d="M334.808,-49.4437C401.447,-45.2153 500.722,-38.9161 571.442,-34.4288"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="571.904,-37.9067 581.662,-33.7803 571.46,-30.9207 571.904,-37.9067"/>
 </g>
-<!-- Node355 -->
-<g id="node6" class="node"><title>Node355</title>
+<!-- Node375 -->
+<g id="node6" class="node"><title>Node375</title>
 <g id="a_node6"><a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="378.5,-0.5 378.5,-19.5 545.5,-19.5 545.5,-0.5 378.5,-0.5"/>
 <text text-anchor="middle" x="462" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
 </g>
-<!-- Node354&#45;&gt;Node355 -->
-<g id="edge5" class="edge"><title>Node354&#45;&gt;Node355</title>
+<!-- Node374&#45;&gt;Node375 -->
+<g id="edge5" class="edge"><title>Node374&#45;&gt;Node375</title>
 <path fill="none" stroke="midnightblue" d="M342.108,-10C350.702,-10 359.505,-10 368.242,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="368.452,-13.5001 378.452,-10 368.452,-6.5001 368.452,-13.5001"/>
 </g>
-<!-- Node355&#45;&gt;Node353 -->
-<g id="edge6" class="edge"><title>Node355&#45;&gt;Node353</title>
+<!-- Node375&#45;&gt;Node373 -->
+<g id="edge6" class="edge"><title>Node375&#45;&gt;Node373</title>
 <path fill="none" stroke="midnightblue" d="M545.555,-18.0853C554.227,-18.9346 563.057,-19.7994 571.759,-20.6517"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="571.605,-24.1532 581.899,-21.6447 572.287,-17.1866 571.605,-24.1532"/>
 </g>

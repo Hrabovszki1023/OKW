@@ -55,60 +55,60 @@ var sectionId = 'dynsection-6';
 <g id="viewport">
 <title>okw.core.EN.EndTest</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-62 504,-62 504,4 -4,4"/>
-<!-- Node618 -->
-<g id="node1" class="node"><title>Node618</title>
+<!-- Node739 -->
+<g id="node1" class="node"><title>Node739</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-19.5 0.5,-38.5 113.5,-38.5 113.5,-19.5 0.5,-19.5"/>
 <text text-anchor="middle" x="57" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.EndTest</text>
 </g>
-<!-- Node619 -->
-<g id="node2" class="node"><title>Node619</title>
+<!-- Node740 -->
+<g id="node2" class="node"><title>Node740</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" target="_top" xlink:title="Setzt die Sprache auf den gegebenen wert Language. ">
 <polygon fill="white" stroke="black" points="150.5,-38.5 150.5,-57.5 289.5,-57.5 289.5,-38.5 150.5,-38.5"/>
 <text text-anchor="middle" x="220" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.setLanguage</text>
 </a>
 </g>
 </g>
-<!-- Node618&#45;&gt;Node619 -->
-<g id="edge1" class="edge"><title>Node618&#45;&gt;Node619</title>
+<!-- Node739&#45;&gt;Node740 -->
+<g id="edge1" class="edge"><title>Node739&#45;&gt;Node740</title>
 <path fill="none" stroke="midnightblue" d="M113.858,-35.592C122.437,-36.6043 131.428,-37.6654 140.388,-38.7229"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="140.127,-42.2162 150.468,-39.9124 140.947,-35.2644 140.127,-42.2162"/>
 </g>
-<!-- Node621 -->
-<g id="node4" class="node"><title>Node621</title>
+<!-- Node742 -->
+<g id="node4" class="node"><title>Node742</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" target="_top" xlink:title="Signalisiert das Ende eines Testfalls. ">
 <polygon fill="white" stroke="black" points="160,-0.5 160,-19.5 280,-19.5 280,-0.5 160,-0.5"/>
 <text text-anchor="middle" x="220" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.EndTest</text>
 </a>
 </g>
 </g>
-<!-- Node618&#45;&gt;Node621 -->
-<g id="edge3" class="edge"><title>Node618&#45;&gt;Node621</title>
+<!-- Node739&#45;&gt;Node742 -->
+<g id="edge3" class="edge"><title>Node739&#45;&gt;Node742</title>
 <path fill="none" stroke="midnightblue" d="M113.858,-22.408C125.495,-21.0348 137.891,-19.5718 149.939,-18.15"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="150.432,-21.6162 159.953,-16.9683 149.612,-14.6645 150.432,-21.6162"/>
 </g>
-<!-- Node620 -->
-<g id="node3" class="node"><title>Node620</title>
+<!-- Node741 -->
+<g id="node3" class="node"><title>Node741</title>
 <g id="a_node3"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" target="_top" xlink:title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)...">
 <polygon fill="white" stroke="black" points="326.5,-38.5 326.5,-57.5 499.5,-57.5 499.5,-38.5 326.5,-38.5"/>
 <text text-anchor="middle" x="413" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.setLanguage</text>
 </a>
 </g>
 </g>
-<!-- Node619&#45;&gt;Node620 -->
-<g id="edge2" class="edge"><title>Node619&#45;&gt;Node620</title>
+<!-- Node740&#45;&gt;Node741 -->
+<g id="edge2" class="edge"><title>Node740&#45;&gt;Node741</title>
 <path fill="none" stroke="midnightblue" d="M289.686,-48C298.311,-48 307.254,-48 316.2,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="316.285,-51.5001 326.285,-48 316.285,-44.5001 316.285,-51.5001"/>
 </g>
-<!-- Node622 -->
-<g id="node5" class="node"><title>Node622</title>
+<!-- Node743 -->
+<g id="node5" class="node"><title>Node743</title>
 <g id="a_node5"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186" target="_top" xlink:title="Signalisiert das Ende eines Testfalls. ">
 <polygon fill="white" stroke="black" points="335.5,-0.5 335.5,-19.5 490.5,-19.5 490.5,-0.5 335.5,-0.5"/>
 <text text-anchor="middle" x="413" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.EndTest</text>
 </a>
 </g>
 </g>
-<!-- Node621&#45;&gt;Node622 -->
-<g id="edge4" class="edge"><title>Node621&#45;&gt;Node622</title>
+<!-- Node742&#45;&gt;Node743 -->
+<g id="edge4" class="edge"><title>Node742&#45;&gt;Node743</title>
 <path fill="none" stroke="midnightblue" d="M280.126,-10C294.279,-10 309.686,-10 324.813,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="325.222,-13.5001 335.222,-10 325.222,-6.5001 325.222,-13.5001"/>
 </g>
