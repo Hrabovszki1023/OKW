@@ -9,53 +9,53 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 388)">
 <title>okw.OKW_Const_Sngltn.YesNo2Boolean</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-388 406,-388 406,4 -4,4"/>
-<!-- Node356 -->
-<g id="node1" class="node"><title>Node356</title>
+<!-- Node376 -->
+<g id="node1" class="node"><title>Node376</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-212 0,-242 146,-242 146,-212 0,-212"/>
 <text text-anchor="start" x="8" y="-230" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Const_Sngltn.Yes</text>
 <text text-anchor="middle" x="73" y="-219" font-family="Helvetica,sans-Serif" font-size="10.00">No2Boolean</text>
 </g>
-<!-- Node357 -->
-<g id="node2" class="node"><title>Node357</title>
+<!-- Node377 -->
+<g id="node2" class="node"><title>Node377</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_o_k.html#a9785853231d70946dcbbfcd44b509c25" target="_top" xlink:title="Prüft, ob das gegebene Objekt existiert. ">
 <polygon fill="white" stroke="black" points="227,-364.5 227,-383.5 357,-383.5 357,-364.5 227,-364.5"/>
 <text text-anchor="middle" x="292" y="-371.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyExists</text>
 </a>
 </g>
 </g>
-<!-- Node356&#45;&gt;Node357 -->
-<g id="edge1" class="edge"><title>Node356&#45;&gt;Node357</title>
+<!-- Node376&#45;&gt;Node377 -->
+<g id="edge1" class="edge"><title>Node376&#45;&gt;Node377</title>
 <path fill="none" stroke="midnightblue" d="M87.1389,-251.077C104.65,-280.677 138.544,-330.046 182,-355 195.493,-362.748 211.36,-367.495 226.747,-370.365"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="90.0607,-249.137 82.0379,-242.217 83.9944,-252.63 90.0607,-249.137"/>
 </g>
-<!-- Node358 -->
-<g id="node3" class="node"><title>Node358</title>
+<!-- Node378 -->
+<g id="node3" class="node"><title>Node378</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_o_k.html#a4950117cbe9cd2b769ae529bbdc1f897" target="_top" xlink:title="Vergleicht den Fokus&#45;Zustand des gegebenen Objekts mit dem erwarteten Wert. ">
 <polygon fill="white" stroke="black" points="218.5,-326.5 218.5,-345.5 365.5,-345.5 365.5,-326.5 218.5,-326.5"/>
 <text text-anchor="middle" x="292" y="-333.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyHasFocus</text>
 </a>
 </g>
 </g>
-<!-- Node356&#45;&gt;Node358 -->
-<g id="edge2" class="edge"><title>Node356&#45;&gt;Node358</title>
+<!-- Node376&#45;&gt;Node378 -->
+<g id="edge2" class="edge"><title>Node376&#45;&gt;Node378</title>
 <path fill="none" stroke="midnightblue" d="M94.3814,-249.765C114.507,-270.716 147.239,-300.904 182,-317 193.33,-322.246 205.934,-326.054 218.434,-328.814"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="96.7057,-247.127 87.3074,-242.236 91.6043,-251.921 96.7057,-247.127"/>
 </g>
-<!-- Node359 -->
-<g id="node4" class="node"><title>Node359</title>
+<!-- Node379 -->
+<g id="node4" class="node"><title>Node379</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_o_k.html#a071aec5319238e209cfc6f1434ea13e8" target="_top" xlink:title="copydoc IOKW_State::VerifyHasFocus(String,String) ">
 <polygon fill="white" stroke="black" points="223,-288.5 223,-307.5 361,-307.5 361,-288.5 223,-288.5"/>
 <text text-anchor="middle" x="292" y="-295.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.VerifyIsActive</text>
 </a>
 </g>
 </g>
-<!-- Node356&#45;&gt;Node359 -->
-<g id="edge3" class="edge"><title>Node356&#45;&gt;Node359</title>
+<!-- Node376&#45;&gt;Node379 -->
+<g id="edge3" class="edge"><title>Node376&#45;&gt;Node379</title>
 <path fill="none" stroke="midnightblue" d="M109.727,-246.752C130.321,-257.396 157.009,-269.958 182,-278 195.278,-282.273 209.778,-285.729 223.742,-288.49"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="111.202,-243.574 100.722,-242.02 107.946,-249.77 111.202,-243.574"/>
 </g>
-<!-- Node360 -->
-<g id="node5" class="node"><title>Node360</title>
+<!-- Node380 -->
+<g id="node5" class="node"><title>Node380</title>
 <g id="a_node5"><a xlink:href="classokw_1_1gui_1_1adapter_1_1_all_methods___single_value.html#a8f05accdc25bb663a5187cf32453f6e7" target="_top" xlink:title="public String getFN() { return &quot;Rechner.All_MethodsObj&quot;; } ">
 <polygon fill="white" stroke="black" points="223.5,-239 223.5,-269 360.5,-269 360.5,-239 223.5,-239"/>
 <text text-anchor="start" x="231.5" y="-257" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.AllMethods</text>
@@ -63,13 +63,13 @@
 </a>
 </g>
 </g>
-<!-- Node356&#45;&gt;Node360 -->
-<g id="edge4" class="edge"><title>Node356&#45;&gt;Node360</title>
+<!-- Node376&#45;&gt;Node380 -->
+<g id="edge4" class="edge"><title>Node376&#45;&gt;Node380</title>
 <path fill="none" stroke="midnightblue" d="M156.319,-237.242C178.485,-240 202.202,-242.951 223.46,-245.596"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="156.614,-233.752 146.258,-235.991 155.749,-240.699 156.614,-233.752"/>
 </g>
-<!-- Node361 -->
-<g id="node6" class="node"><title>Node361</title>
+<!-- Node381 -->
+<g id="node6" class="node"><title>Node381</title>
 <g id="a_node6"><a xlink:href="classokw_1_1_o_k_w___const_exception_test_1_1_o_k_w___const___test__.html#a7925015c73864a9ef6c87a3ec78e9a67" target="_top" xlink:title="Prüft ob eine die fehlende Sprache(hurtz) eine Exception auslöst. ">
 <polygon fill="white" stroke="black" points="182,-179.5 182,-220.5 402,-220.5 402,-179.5 182,-179.5"/>
 <text text-anchor="start" x="190" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_ConstExceptionTest.</text>
@@ -78,13 +78,13 @@
 </a>
 </g>
 </g>
-<!-- Node356&#45;&gt;Node361 -->
-<g id="edge5" class="edge"><title>Node356&#45;&gt;Node361</title>
+<!-- Node376&#45;&gt;Node381 -->
+<g id="edge5" class="edge"><title>Node376&#45;&gt;Node381</title>
 <path fill="none" stroke="midnightblue" d="M156.34,-216.755C164.706,-215.714 173.294,-214.645 181.887,-213.576"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="155.749,-213.301 146.258,-218.009 156.614,-220.248 155.749,-213.301"/>
 </g>
-<!-- Node362 -->
-<g id="node7" class="node"><title>Node362</title>
+<!-- Node382 -->
+<g id="node7" class="node"><title>Node382</title>
 <g id="a_node7"><a xlink:href="classokw_1_1_o_k_w___const_exception_test_1_1_o_k_w___const___test__.html#a7bd6a3b0c31c56ed1498712d8a945102" target="_top" xlink:title="Prüft ob ein Tippfehler eine Kernel&#45;Exception auslöst. ">
 <polygon fill="white" stroke="black" points="197,-119.5 197,-160.5 387,-160.5 387,-119.5 197,-119.5"/>
 <text text-anchor="start" x="205" y="-148.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_ConstExceptionTest.</text>
@@ -93,13 +93,13 @@
 </a>
 </g>
 </g>
-<!-- Node356&#45;&gt;Node362 -->
-<g id="edge6" class="edge"><title>Node356&#45;&gt;Node362</title>
+<!-- Node376&#45;&gt;Node382 -->
+<g id="edge6" class="edge"><title>Node376&#45;&gt;Node382</title>
 <path fill="none" stroke="midnightblue" d="M107.793,-206.725C128.645,-194.838 156.244,-180.201 182,-170 190.577,-166.603 199.678,-163.442 208.823,-160.546"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="105.917,-203.767 99.0075,-211.798 109.418,-209.829 105.917,-203.767"/>
 </g>
-<!-- Node363 -->
-<g id="node8" class="node"><title>Node363</title>
+<!-- Node383 -->
+<g id="node8" class="node"><title>Node383</title>
 <g id="a_node8"><a xlink:href="classokw_1_1_o_k_w___const_exception_test_1_1_o_k_w___const___test__.html#aca18f53eeab69ee0749d2d3cc3cf8f24" target="_top" xlink:title="Prüft ob ein Tippfehler eine OKWNotAllowedValueException&#45;Exception auslöst. ">
 <polygon fill="white" stroke="black" points="190,-59.5 190,-100.5 394,-100.5 394,-59.5 190,-59.5"/>
 <text text-anchor="start" x="198" y="-88.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_ConstExceptionTest.</text>
@@ -108,13 +108,13 @@
 </a>
 </g>
 </g>
-<!-- Node356&#45;&gt;Node363 -->
-<g id="edge7" class="edge"><title>Node356&#45;&gt;Node363</title>
+<!-- Node376&#45;&gt;Node383 -->
+<g id="edge7" class="edge"><title>Node376&#45;&gt;Node383</title>
 <path fill="none" stroke="midnightblue" d="M89.4478,-203.595C108.215,-176.998 142.333,-134.155 182,-110 187.783,-106.478 193.988,-103.361 200.394,-100.603"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="86.4866,-201.724 83.6859,-211.942 92.2473,-205.701 86.4866,-201.724"/>
 </g>
-<!-- Node364 -->
-<g id="node9" class="node"><title>Node364</title>
+<!-- Node384 -->
+<g id="node9" class="node"><title>Node384</title>
 <g id="a_node9"><a xlink:href="classokw_1_1_o_k_w___const_exception_test_1_1_o_k_w___const___test__.html#a9352b8a0286f776b5985cadb02abc7ef" target="_top" xlink:title="Prüft ob ein Tippfehler eine OKWNotAllowedValueException&#45;Exception auslöst. ">
 <polygon fill="white" stroke="black" points="197,0.5 197,-40.5 387,-40.5 387,0.5 197,0.5"/>
 <text text-anchor="start" x="205" y="-28.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_ConstExceptionTest.</text>
@@ -123,8 +123,8 @@
 </a>
 </g>
 </g>
-<!-- Node356&#45;&gt;Node364 -->
-<g id="edge8" class="edge"><title>Node356&#45;&gt;Node364</title>
+<!-- Node376&#45;&gt;Node384 -->
+<g id="edge8" class="edge"><title>Node376&#45;&gt;Node384</title>
 <path fill="none" stroke="midnightblue" d="M82.4401,-201.872C96.7109,-163.273 129.311,-89.7028 182,-50 186.703,-46.4565 191.8,-43.3315 197.135,-40.5756"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="78.9707,-201.18 78.8995,-211.774 85.562,-203.536 78.9707,-201.18"/>
 </g>

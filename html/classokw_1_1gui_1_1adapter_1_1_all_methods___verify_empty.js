@@ -7,6 +7,7 @@ var classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty =
     [ "VerifyHasFocus", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#a7dd4d78ca5fac89078501c1b9d8fb594", null ],
     [ "VerifyIsActive", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#aeb1093eefccb6c4feca4b63aef31d8c3", null ],
     [ "VerifyLabel", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#a6f5e0af48623970ee3f8a9f6c4e50265", null ],
+    [ "VerifyPlaceholder", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#a8b4212809c40ba8c735a5cb347ad8d69", null ],
     [ "VerifySelectedValue", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#a8b63aad0e235a000bec924e8e6ea1e70", null ],
     [ "VerifyTablecellValue", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#ae5a4b5d2bda39943ca976fcfaa043480", null ],
     [ "VerifyTooltip", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#a0e43cdcf9d5a10b9bc1f2c5936a496cf", null ],

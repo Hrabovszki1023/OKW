@@ -115,7 +115,7 @@ var sectionId = 'dynsection-13';
 </g>
 <!-- Node357 -->
 <g id="node21" class="node"><title>Node357</title>
-<g id="a_node21"><a xlink:href="classokw_1_1core_1_1_e_n.html#aecb0b17c6683319633eec36e2646f3f5" target="_top" xlink:title="Keine Beschreibung zu &quot;MemorizeLabel&quot; verfügbar. ">
+<g id="a_node21"><a xlink:href="classokw_1_1core_1_1_e_n.html#aecb0b17c6683319633eec36e2646f3f5" target="_top" xlink:title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab. ">
 <polygon fill="white" stroke="black" points="182.5,-236.5 182.5,-255.5 325.5,-255.5 325.5,-236.5 182.5,-236.5"/>
 <text text-anchor="middle" x="254" y="-243.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.MemorizeLabel</text>
 </a>
@@ -406,7 +406,7 @@ var sectionId = 'dynsection-13';
 </g>
 <!-- Node358 -->
 <g id="node22" class="node"><title>Node358</title>
-<g id="a_node22"><a xlink:href="classokw_1_1core_1_1_core.html#a85d56eaf394a4e6a0f67979e5d3c58fa" target="_top" xlink:title="Keine Beschreibung zu &quot;MemorizeLabel&quot; verfügbar. ">
+<g id="a_node22"><a xlink:href="classokw_1_1core_1_1_core.html#a85d56eaf394a4e6a0f67979e5d3c58fa" target="_top" xlink:title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab. ">
 <polygon fill="white" stroke="black" points="370.5,-236.5 370.5,-255.5 519.5,-255.5 519.5,-236.5 370.5,-236.5"/>
 <text text-anchor="middle" x="445" y="-243.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.MemorizeLabel</text>
 </a>
@@ -429,7 +429,7 @@ var sectionId = 'dynsection-13';
 </g>
 <!-- Node359 -->
 <g id="node23" class="node"><title>Node359</title>
-<g id="a_node23"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ab44d9c2c8f0b34496afcea31d6f6e6a9" target="_top" xlink:title="Keine Beschreibung zu &quot;MemorizeLabel&quot; verfügbar. ">
+<g id="a_node23"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ab44d9c2c8f0b34496afcea31d6f6e6a9" target="_top" xlink:title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab. ">
 <polygon fill="white" stroke="black" points="562.5,-203 562.5,-233 723.5,-233 723.5,-203 562.5,-203"/>
 <text text-anchor="start" x="570.5" y="-221" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.Memorize</text>
 <text text-anchor="middle" x="643" y="-210" font-family="Helvetica,sans-Serif" font-size="10.00">Label</text>

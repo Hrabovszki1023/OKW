@@ -1,7 +1,7 @@
 <map id="okw.core.EN_OKWNotAllowedValueException_Keywords_IGNORE.tcMemorizeLabelIGNORE2" name="okw.core.EN_OKWNotAllowedValueException_Keywords_IGNORE.tcMemorizeLabelIGNORE2">
 <area shape="rect" id="node2" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="314,264,475,291"/>
 <area shape="rect" id="node8" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="301,163,488,189"/>
-<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#aecb0b17c6683319633eec36e2646f3f5" title="Keine Beschreibung zu &quot;MemorizeLabel&quot; verfügbar. " alt="" coords="299,213,490,240"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#aecb0b17c6683319633eec36e2646f3f5" title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab. " alt="" coords="299,213,490,240"/>
 <area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="546,239,731,265"/>
 <area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="553,304,724,331"/>
 <area shape="rect" id="node4" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..." alt="" coords="787,253,1018,280"/>
@@ -13,6 +13,6 @@
 <area shape="rect" id="node14" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="805,5,1000,46"/>
 <area shape="rect" id="node12" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. " alt="" coords="1067,71,1290,97"/>
 <area shape="rect" id="node13" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag. " alt="" coords="1339,63,1541,105"/>
-<area shape="rect" id="node16" href="$classokw_1_1core_1_1_core.html#a85d56eaf394a4e6a0f67979e5d3c58fa" title="Keine Beschreibung zu &quot;MemorizeLabel&quot; verfügbar. " alt="" coords="539,173,738,200"/>
-<area shape="rect" id="node17" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ab44d9c2c8f0b34496afcea31d6f6e6a9" title="Keine Beschreibung zu &quot;MemorizeLabel&quot; verfügbar. " alt="" coords="795,187,1010,229"/>
+<area shape="rect" id="node16" href="$classokw_1_1core_1_1_core.html#a85d56eaf394a4e6a0f67979e5d3c58fa" title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab. " alt="" coords="539,173,738,200"/>
+<area shape="rect" id="node17" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ab44d9c2c8f0b34496afcea31d6f6e6a9" title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab. " alt="" coords="795,187,1010,229"/>
 </map>

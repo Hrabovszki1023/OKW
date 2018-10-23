@@ -9,13 +9,13 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 171)">
 <title>okw.OKW_Memorize_Sngltn.init</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-171 354,-171 354,4 -4,4"/>
-<!-- Node121 -->
-<g id="node1" class="node"><title>Node121</title>
+<!-- Node128 -->
+<g id="node1" class="node"><title>Node128</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-71.5 0,-90.5 158,-90.5 158,-71.5 0,-71.5"/>
 <text text-anchor="middle" x="79" y="-78.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Memorize_Sngltn.init</text>
 </g>
-<!-- Node122 -->
-<g id="node2" class="node"><title>Node122</title>
+<!-- Node129 -->
+<g id="node2" class="node"><title>Node129</title>
 <g id="a_node2"><a xlink:href="classokw_1_1_o_k_w___helper.html#a3a7ba0f42b29adf70574830688e72e4a" target="_top" xlink:title="Prüft ob der gegeben String fpsStrin null oder leer (&quot;&quot;) ist. ">
 <polygon fill="white" stroke="black" points="197.5,-137 197.5,-167 346.5,-167 346.5,-137 197.5,-137"/>
 <text text-anchor="start" x="205.5" y="-155" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_Helper.isStringNull</text>
@@ -23,13 +23,13 @@
 </a>
 </g>
 </g>
-<!-- Node121&#45;&gt;Node122 -->
-<g id="edge1" class="edge"><title>Node121&#45;&gt;Node122</title>
+<!-- Node128&#45;&gt;Node129 -->
+<g id="edge1" class="edge"><title>Node128&#45;&gt;Node129</title>
 <path fill="none" stroke="midnightblue" d="M102.531,-90.6321C125.4,-100.28 161.908,-115.332 194,-127 200.212,-129.259 206.741,-131.531 213.26,-133.737"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="212.172,-137.063 222.766,-136.91 214.389,-130.423 212.172,-137.063"/>
 </g>
-<!-- Node123 -->
-<g id="node3" class="node"><title>Node123</title>
+<!-- Node130 -->
+<g id="node3" class="node"><title>Node130</title>
 <g id="a_node3"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4" target="_top" xlink:title="Loggt eine Nachricht. ">
 <polygon fill="white" stroke="black" points="205,-88 205,-118 339,-118 339,-88 205,-88"/>
 <text text-anchor="start" x="213" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
@@ -37,26 +37,26 @@
 </a>
 </g>
 </g>
-<!-- Node121&#45;&gt;Node123 -->
-<g id="edge2" class="edge"><title>Node121&#45;&gt;Node123</title>
+<!-- Node128&#45;&gt;Node130 -->
+<g id="edge2" class="edge"><title>Node128&#45;&gt;Node130</title>
 <path fill="none" stroke="midnightblue" d="M158.238,-90.0117C170.311,-91.4023 182.765,-92.8368 194.792,-94.2221"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="194.443,-97.7049 204.777,-95.3723 195.244,-90.7509 194.443,-97.7049"/>
 </g>
-<!-- Node124 -->
-<g id="node4" class="node"><title>Node124</title>
+<!-- Node131 -->
+<g id="node4" class="node"><title>Node131</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_o_k_w___file_helper.html#a86faaa4792bbe9d333c7bf2d2de275e3" target="_top" xlink:title="Prüft, ob die gegebene fpsPaFiNa Datei existiert. ">
 <polygon fill="white" stroke="black" points="194.5,-49.5 194.5,-68.5 349.5,-68.5 349.5,-49.5 194.5,-49.5"/>
 <text text-anchor="middle" x="272" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_FileHelper.fileExists</text>
 </a>
 </g>
 </g>
-<!-- Node121&#45;&gt;Node124 -->
-<g id="edge3" class="edge"><title>Node121&#45;&gt;Node124</title>
+<!-- Node128&#45;&gt;Node131 -->
+<g id="edge3" class="edge"><title>Node128&#45;&gt;Node131</title>
 <path fill="none" stroke="midnightblue" d="M158.238,-71.9883C166.828,-70.9989 175.61,-69.9874 184.294,-68.9871"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="184.893,-72.4414 194.426,-67.82 184.092,-65.4873 184.893,-72.4414"/>
 </g>
-<!-- Node125 -->
-<g id="node5" class="node"><title>Node125</title>
+<!-- Node132 -->
+<g id="node5" class="node"><title>Node132</title>
 <g id="a_node5"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a2c15e9b2cd0c6266f4c67b8cb00d92e5" target="_top" xlink:title="LogWarning Function: Logs a warning to the results file. ">
 <polygon fill="white" stroke="black" points="205,-0 205,-30 339,-30 339,-0 205,-0"/>
 <text text-anchor="start" x="213" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
@@ -64,8 +64,8 @@
 </a>
 </g>
 </g>
-<!-- Node121&#45;&gt;Node125 -->
-<g id="edge4" class="edge"><title>Node121&#45;&gt;Node125</title>
+<!-- Node128&#45;&gt;Node132 -->
+<g id="edge4" class="edge"><title>Node128&#45;&gt;Node132</title>
 <path fill="none" stroke="midnightblue" d="M105.726,-71.4876C128.779,-63.026 163.552,-50.4153 194,-40 200.433,-37.7994 207.184,-35.5378 213.904,-33.3168"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="215.277,-36.5498 223.686,-30.1037 213.093,-29.8994 215.277,-36.5498"/>
 </g>
