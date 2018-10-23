@@ -20,7 +20,7 @@ public class frmSeTextField extends SeBrowserChild
 	          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1,
 	          WaitForMe_PT=500, WaitForMe_TO=1
 	          )
-    public SeInputText NichtVorhanden = new SeInputText("//*[@name='NichtVorhanden']");
+    public SeInputText NichtVorhanden = new SeInputText("//*[@data-fn='NichtVorhanden']");
 
     @OKW (FN="Vorname",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -31,7 +31,7 @@ public class frmSeTextField extends SeBrowserChild
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeInputText Vorname = new SeInputText("//*[@name='Vorname']");
+    public SeInputText Vorname = new SeInputText("//*[@data-fn='First Name']");
 
     @OKW (FN="Name",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -42,12 +42,11 @@ public class frmSeTextField extends SeBrowserChild
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeInputText Zuname = new SeInputText("//*[@name='Name']");
-
+    public SeInputText Zuname = new SeInputText("//*[@data-fn='Last Name']");
 
     public frmSeTextField( )
     {
-        setLocator("//title[contains(text(),'Textfield TestGUI 1 input_type_all_InputText')]/../..");
+        setLocator("//*[@data-fn='input_type_all_InputText']");
     }
 
 }
