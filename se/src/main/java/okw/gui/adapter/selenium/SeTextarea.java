@@ -83,7 +83,6 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
 
         
         /** \~german
-         *  \brief
          *  Ermittelt den textuellen Inhalt eines Textfeldes.<br/>.
          *  GUI-Automatisierungswerkzeug: Selenium.<br/>
          *  
@@ -133,6 +132,46 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
             js.executeScript(scriptSetAttrValue, elem, "value", value);
 
         }
+
+        
+        /** \~german
+         *  Liest den Placeholder des TextAere-Tags aus.
+         * 
+         *  Es wird das Attribut "placeholder" ausgelesen.
+         *  @return Wert des Attributs "placeholder"
+         *  
+         *  \~english
+         *  Reads the current placeholder of the input-tag.
+         *  
+         *  It reads the attribute "placeholder".
+         *  
+         *  @return The value of the attribute "placeholder"
+         *  
+         *  \~
+         *  @author Zoltán Hrabovszki
+         *  @date 2018.10.28
+         */
+        public ArrayList<String> getPlaceholder()
+        {
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+            try
+            {
+                this.LogFunctionStartDebug( "getPlaceholder" );
+
+                // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+                this.WaitForMe();
+
+                // Get Value from TextField and put this into the return ArrayList<String>
+                lvLsReturn.add( this.Me().getAttribute( "placeholder" ) );
+            }
+            finally
+            {
+                this.LogFunctionEndDebug( lvLsReturn );
+            }
+
+            return lvLsReturn;
+        }    
 
 
         /** \~german

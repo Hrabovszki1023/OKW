@@ -90,6 +90,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         this.iframeID = iframeID;
     }
 
+    
    /** 
     * \~german
     * Konstruktor der Klasse. iframeID wird auf den Wert "" (empty string) gesetzt.
@@ -434,44 +435,6 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
-    /** \~german
-     *  Liest den aktuellen sichtbaren Wert/Text des HTML-Tags aus.
-     * 
-     *  Es wird das Attribut "textContent" ausgelesen.
-     *  @return Wert des Attributs "textContent"
-     *  
-     *  \~english
-     *  Reads the current visible value/text of the HTML tag.
-     *  
-     *  It reads the attribute "textContent".
-     *  
-     *  @return The value of the attribute "textContent"
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  @date 2013.12.14
-     */
-    public ArrayList<String> getPlaceholder()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-
-        try
-        {
-            this.LogFunctionStartDebug( "getPlaceholder" );
-
-            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-            this.WaitForMe();
-
-            // Get Value from TextField and put this into the return ArrayList<String>
-            lvLsReturn.add( this.Me().getAttribute( "placeholder" ) );
-        }
-        finally
-        {
-            this.LogFunctionEndDebug( lvLsReturn );
-        }
-
-        return lvLsReturn;
-    }    
     
     /** \~german
     *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refLogCaption aufgerufen wird.
