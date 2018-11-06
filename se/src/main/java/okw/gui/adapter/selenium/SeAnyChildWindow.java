@@ -90,6 +90,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         this.iframeID = iframeID;
     }
 
+    
    /** 
     * \~german
     * Konstruktor der Klasse. iframeID wird auf den Wert "" (empty string) gesetzt.
@@ -434,44 +435,6 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
-    /** \~german
-     *  Liest den aktuellen sichtbaren Wert/Text des HTML-Tags aus.
-     * 
-     *  Es wird das Attribut "textContent" ausgelesen.
-     *  @return Wert des Attributs "textContent"
-     *  
-     *  \~english
-     *  Reads the current visible value/text of the HTML tag.
-     *  
-     *  It reads the attribute "textContent".
-     *  
-     *  @return The value of the attribute "textContent"
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     *  @date 2013.12.14
-     */
-    public ArrayList<String> getPlaceholder()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-
-        try
-        {
-            this.LogFunctionStartDebug( "getPlaceholder" );
-
-            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-            this.WaitForMe();
-
-            // Get Value from TextField and put this into the return ArrayList<String>
-            lvLsReturn.add( this.Me().getAttribute( "placeholder" ) );
-        }
-        finally
-        {
-            this.LogFunctionEndDebug( lvLsReturn );
-        }
-
-        return lvLsReturn;
-    }    
     
     /** \~german
     *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refLogCaption aufgerufen wird.
@@ -623,6 +586,39 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  @date 2013.12.07
     */
     public ArrayList<String> LogLabel()
+    {
+        ArrayList<String> lvLsReturn = null;
+
+        try
+        {
+            this.LogFunctionStartDebug( "LogLabel" );
+
+            lvLsReturn = this.getLabel();
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvLsReturn );
+        }
+
+        return lvLsReturn;
+    }
+
+    /**  \~german
+    *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refLogPlaceholder aufgerufen wird.
+    *  
+    *  Diese Methode ermittelt den textuellen Inhalt des zugehörigen \ref refPlaceholder s.
+    *  Das Loggen selbst wird in der aufrufenden Methode okw.core.OK.LogLabel(String) (zentral) vorgenommen.
+    *  
+    *  Diese Methode ist der Einstiegspunkt für Anpassungen von \ref refLogLabel durch Methoden überschreibung.
+    *  
+    *  @return Rückgabe des label-Textes. Interface schreibt ein Listen-Element als Rückgabewert vor.
+    *  
+    *  \~english
+    *  \~
+    *  @author Zoltán Hrabovszki
+    *  @date 2013.12.07
+    */
+    public ArrayList<String> LogPlaceholder()
     {
         ArrayList<String> lvLsReturn = null;
 
@@ -828,12 +824,13 @@ public class SeAnyChildWindow extends AnyChildwindow
 
     /**
     * \~german
-     *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refLogIsActive aufgerufen wird.
+     *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refMemorizeIsActive aufgerufen wird.
      *  
      *  Diese Methode ermittelt, ob das aktuelle Objekt Active.
-     *  Das Speichern des Wertes in der aufrufenden Methode okw.core.OK.LogIsActive(String) (zentral) vorgenommen.
+     *  Das Speichern des Wertes in der aufrufenden Methode okw.core.OK.MemorizeIsActive(String) (zentral) 
+     *  vorgenommen.
      *  
-     *  Diese Methode ist der Einstiegspunkt für Anpassungen von \ref refLogIsActive durch Methoden überschreibung.
+     *  Diese Methode ist der Einstiegspunkt für Anpassungen von \ref refMemorizeIsActive durch Methoden überschreibung.
      *  
      *  @return true falls das Objekt aktive ist, sonst false.
      *
@@ -861,12 +858,12 @@ public class SeAnyChildWindow extends AnyChildwindow
     }
 
     /**  \~german
-    *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refLogLabel aufgerufen wird.
+    *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refMemorizeLabel aufgerufen wird.
     *  
     *  Diese Methode ermittelt den textuellen Inhalt des zugehörigen \ref refLabel s.
-    *  Das Speichern des Wertes selbst wird in der aufrufenden Methode okw.core.OK.LogLabel(String) (zentral) vorgenommen.
+    *  Das Speichern des Wertes selbst wird in der aufrufenden Methode okw.core.OK.MemorizeLabel(String) (zentral) vorgenommen.
     *  
-    *  Diese Methode ist der Einstiegspunkt für Anpassungen von \ref refLogLabel durch Methoden überschreibung.
+    *  Diese Methode ist der Einstiegspunkt für Anpassungen von \ref refMemorizeLabel durch Methoden überschreibung.
     *  
     *  @return Rückgabe des label-Textes. Interface schreibt ein Listen-Element als Rückgabewert vor.
     *  
@@ -893,7 +890,41 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
-   /**
+    /**  \~german
+    *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refMemorizePlaceholder aufgerufen wird.
+    *  
+    *  Diese Methode ermittelt den textuellen Inhalt des zugehörigen \ref refPlaceholder s.
+    *  Das Speichern des Wertes selbst wird in der aufrufenden Methode okw.core.OK.MemorizePlaceholder(String) (zentral) vorgenommen.
+    *  
+    *  Diese Methode ist der Einstiegspunkt für Anpassungen von \ref refMemorizePlaceholder durch Methoden überschreibung.
+    *  
+    *  @return Rückgabe des Placeholder-Textes. Interface schreibt ein Listen-Element als Rückgabewert vor.
+    *  
+    *  \~english
+    *  \~
+    *  @author Zoltán Hrabovszki
+    *  @date 2018.10.19
+    */
+    public ArrayList<String> MemorizePlaceholder()
+    {
+        ArrayList<String> lvLsReturn = null;
+
+        try
+        {
+            this.LogFunctionStartDebug( "MemorizePlaceholder" );
+
+            lvLsReturn = this.getPlaceholder();
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvLsReturn );
+        }
+
+        return lvLsReturn;
+    }
+
+    
+    /**
     * \~german
     *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refMemorizeTooltip aufgerufen wird.
     *  

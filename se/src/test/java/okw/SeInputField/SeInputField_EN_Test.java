@@ -169,7 +169,7 @@ public class SeInputField_EN_Test {
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
 
     EN.SelectWindow( "SeTextField" );
-    EN.LogPlaceholder( "Placeholder Name" );
+    EN.LogPlaceholder( "Name" );
     
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -288,8 +288,8 @@ public class SeInputField_EN_Test {
       EN.MemorizeLabel( "Name", "SeTextField_MemorizeLabel_1" );
       EN.MemorizeLabel( "Vorname", "SeTextField_MemorizeLabel_2" );
 
-      assertEquals( "Name:", myMem.get( "SeTextField_MemorizeLabel_1" ) );
-      assertEquals( "Vorname:", myMem.get( "SeTextField_MemorizeLabel_2" ) );
+      assertEquals( "Last Name:", myMem.get( "SeTextField_MemorizeLabel_1" ) );
+      assertEquals( "First Name:", myMem.get( "SeTextField_MemorizeLabel_2" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -311,8 +311,8 @@ public class SeInputField_EN_Test {
       EN.MemorizePlaceholder( "Name", "SeTextField_MemorizeLabel_1" );
       EN.MemorizePlaceholder( "Vorname", "SeTextField_MemorizeLabel_2" );
 
-      assertEquals( "Placeholder Name", myMem.get( "SeTextField_MemorizeLabel_1" ) );
-      assertEquals( "Placeholder Vorname", myMem.get( "SeTextField_MemorizeLabel_2" ) );
+      assertEquals( "Placeholder: Last Name", myMem.get( "SeTextField_MemorizeLabel_1" ) );
+      assertEquals( "Placeholder: First Name", myMem.get( "SeTextField_MemorizeLabel_2" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -332,7 +332,7 @@ public class SeInputField_EN_Test {
       EN.SelectWindow( "SeTextField" );
       EN.MemorizeTooltip( "Name", "SeTextField_MemorizeTooltip" );
 
-      assertEquals( "Den Namen eingeben", myMem.get( "SeTextField_MemorizeTooltip" ) );
+      assertEquals( "Title: Last Name", myMem.get( "SeTextField_MemorizeTooltip" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -792,8 +792,8 @@ public class SeInputField_EN_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
       EN.SelectWindow( "SeTextField" );
 
-      EN.VerifyLabel( "Name", "Name:" );
-      EN.VerifyLabel( "Vorname", "Vorname:" );
+      EN.VerifyLabel( "Name", "Last Name:" );
+      EN.VerifyLabel( "Vorname", "First Name:" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -805,8 +805,6 @@ public class SeInputField_EN_Test {
    * \~
    * \author Zoltan Hrabovszki
    * \date 2014.12.03
-   * 
-   * \todo TODO: Macht es sinn dass ihier zu testen?
    */
   @Test( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabel_OKWVerifyingFailsException() throws Exception
@@ -825,7 +823,6 @@ public class SeInputField_EN_Test {
 
   
   // \~german
-  // \brief
   // Prüft, ob die Methode VerifyLabelWCM für SeInputField implementiert ist.
   //
   // \~
@@ -840,8 +837,8 @@ public class SeInputField_EN_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
       EN.SelectWindow( "SeTextField" );
 
-      EN.VerifyLabelWCM( "Name", "Name?" );
-      EN.VerifyLabelWCM( "Vorname", "Vorname?" );
+      EN.VerifyLabelWCM( "Name", "Last Name?" );
+      EN.VerifyLabelWCM( "Vorname", "First Name?" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -884,7 +881,7 @@ public class SeInputField_EN_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
       EN.SelectWindow( "SeTextField" );
 
-      EN.VerifyLabelREGX( "Name", "Name\\W" );
+      EN.VerifyLabelREGX( "Name", "Last Name\\W" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -911,6 +908,140 @@ public class SeInputField_EN_Test {
   }
 
   
+  /** \~german
+   *  Testet ob das Schlüsselwort VerifyPlaceholder( FN, ExpVal ) der Klasse SeInputText implementiert ist.
+   *
+   * \~
+   * \~english
+   * Tests whether the keyword VerifyPlaceholder( FN, ExpVal ) of the class SeInputText is implemented.
+   * 
+   * \author Zoltan Hrabovszki
+   * \date 2018-10-18
+   */
+  @Test
+  public void tcVerifyPlaceholder() throws Exception
+  {
+      EN.BeginTest( name.getMethodName() );
+      EN.StartApp( ApplicationName );
+
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.SelectWindow( "SeTextField" );
+
+      EN.VerifyPlaceholder( "Name", "Placeholder: Last Name" );
+      EN.VerifyPlaceholder( "Vorname", "Placeholder: First Name" );
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+  }
+
+  
+  /** \~german
+   * Prüft, ob die Methode VerifyPlaceholder bei einer Soll/Ist Abweichung die Ausnahme OKWVerifyingFailsException für SeInputField auslöst.  //
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018-10-18
+   */
+  @Test( expected = OKWVerifyingFailsException.class )
+  public void tcVerifyPlaceholder_OKWVerifyingFailsException() throws Exception
+  {
+      EN.BeginTest( name.getMethodName() );
+      EN.StartApp( ApplicationName );
+
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.SelectWindow( "SeTextField" );
+
+      EN.VerifyLabel( "Name", "Placeholder: Last Nam" );
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+  }
+
+  
+  /** \~german
+   * Prüft, ob die Methode VerifyPlaceholderWCM für SeInputField implementiert ist.
+   *
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018-10-18
+   */
+  @Test
+  public void tc_VerifyPlaceholderWCM() throws Exception
+  {
+      EN.BeginTest( name.getMethodName() );
+      EN.StartApp( ApplicationName );
+
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.SelectWindow( "SeTextField" );
+
+      EN.VerifyPlaceholderWCM( "Name", "Placeholder: Last Nam?" );
+      EN.VerifyPlaceholderWCM( "Vorname", "Placeholder: First Nam?" );
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+  }
+
+  
+  /** \~german
+   * Prüft, ob die Methode VerifyPlaceholderWCM bei einer Soll/Ist Abweichung die Ausnahme 
+   * OKWVerifyingFailsException für SeInputField auslöst.  //
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018-10-18
+   */
+  @Test( expected = OKWVerifyingFailsException.class )
+  public void tcVerifyPlaceholderWCM_OKWVerifyingFailsException() throws Exception
+  {
+      EN.BeginTest( name.getMethodName() );
+      EN.StartApp( ApplicationName );
+
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.SelectWindow( "SeTextField" );
+
+      EN.VerifyPlaceholderWCM( "Name", "####:" );
+  }
+
+  
+  /** \~german
+   * Prüft, ob die Methode VerifyPlaceholderREGX für SeInputField implementiert ist.
+   *
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018-10-18
+   */
+  @Test
+  public void tcVerifyPlaceholderREGX() throws Exception
+  {
+      EN.BeginTest( name.getMethodName() );
+      EN.StartApp( ApplicationName );
+
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.SelectWindow( "SeTextField" );
+
+      EN.VerifyPlaceholderREGX( "Name", "Placeholder: Last Nam\\w" );
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+  }
+
+  
+  /** \~german
+   * Prüft, ob die Methode VerifyPlaceholderREGX bei einer Soll/Ist Abweichung die Ausnahme 
+   * OKWVerifyingFailsException für SeInputField auslöst.  //
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018-10-18
+   */
+  @Test( expected = OKWVerifyingFailsException.class )
+  public void tcVerifyPlaceholderREGX_OKWVerifyingFailsException() throws Exception
+  {
+      EN.BeginTest( name.getMethodName() );
+      EN.StartApp( ApplicationName );
+
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.SelectWindow( "SeTextField" );
+
+      EN.VerifyPlaceholderREGX( "Name", "Placeholder: Xxxx" );
+  }
   // \~german
   // \brief
   // Prüft, ob die Methode VerifyToolTip für SeTextField implementiert ist.
@@ -927,7 +1058,7 @@ public class SeInputField_EN_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
       EN.SelectWindow( "SeTextField" );
 
-      EN.VerifyTooltip( "Name", "Den Namen eingeben" );
+      EN.VerifyTooltip( "Name", "Title: Last Name" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -951,19 +1082,17 @@ public class SeInputField_EN_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
       EN.SelectWindow( "SeTextField" );
       
-
       EN.VerifyTooltip( "Name", "Den Namen..." );
-
   }
 
   
-  // \~german
-  // \brief
-  // Prüft, ob die Methode VerifyTooltipWCM für SeTextField implementiert ist.
-  //
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2014.12.03
+  /** \~german
+   * Prüft, ob die Methode VerifyTooltipWCM für SeTextField implementiert ist.
+   *
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2014.12.03
+   */
   @Test
   public void tcVerifyTooltipWCM() throws Exception
   {
@@ -973,7 +1102,7 @@ public class SeInputField_EN_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
       EN.SelectWindow( "SeTextField" );
   
-      EN.VerifyTooltipWCM( "Name", "??? Namen eingeben" );
+      EN.VerifyTooltipWCM( "Name", "?????: Last Name" );
   
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -1015,7 +1144,7 @@ public class SeInputField_EN_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_inputText.htm" );
       EN.SelectWindow( "SeTextField" );
   
-      EN.VerifyTooltipREGX( "Name", "\\wen Namen eingeben" );
+      EN.VerifyTooltipREGX( "Name", "\\witle: Last Name" );
   
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -1392,7 +1521,7 @@ public class SeInputField_EN_Test {
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
           EN.SelectWindow( "SeTextField" );
 
-          EN.MemorizePlaceholder( "NotExists", "MemorizeLabel");
+          EN.MemorizePlaceholder( "NotExists", "MemorizePlaceholder");
   }
   
   

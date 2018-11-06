@@ -25,13 +25,13 @@ public class frmSeRadioList extends SeBrowserChild
         }
 
         @OKW( FN = "Pay Method.Visa" )
-        public SeInputRadio myVisa            = new SeInputRadio( "%1$s//input[@id='id_visa']", this.getLOCATOR() );
+        public SeInputRadio myVisa            = new SeInputRadio( "//input[@id='id_visa']", this.getLOCATOR() );
 
         @OKW( FN = "Pay Method.American Express" )
-        public SeInputRadio myAmericanExpress = new SeInputRadio( "%1$s//input[@id='id_american_express']", this.getLOCATOR() );
+        public SeInputRadio myAmericanExpress = new SeInputRadio( "//input[@id='id_american_express']", this.getLOCATOR() );
 
         @OKW( FN = "Pay Method.Mastercard" )
-        public SeInputRadio myMastercard      = new SeInputRadio( "%1$s//input[@id='id_mastercard']", this.getLOCATOR() );
+        public SeInputRadio myMastercard      = new SeInputRadio( "//input[@id='id_mastercard']", this.getLOCATOR() );
 
     };
 

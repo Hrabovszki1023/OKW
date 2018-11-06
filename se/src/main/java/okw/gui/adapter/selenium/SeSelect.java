@@ -258,6 +258,7 @@ public class SeSelect extends SeAnyChildWindow
     public ArrayList<String> getValue()
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
+        Boolean lvbSelectionFound = false;
 
         try
         {
@@ -271,7 +272,11 @@ public class SeSelect extends SeAnyChildWindow
             for ( WebElement Option : SelectList.getAllSelectedOptions() )
             {
                 lvLsReturn.add( Option.getAttribute( "textContent" ) );
+                lvbSelectionFound = true;
             }
+            
+            if (!lvbSelectionFound) lvLsReturn.add("");
+            
         }
         finally
         {

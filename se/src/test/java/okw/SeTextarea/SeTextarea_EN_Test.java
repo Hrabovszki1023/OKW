@@ -264,16 +264,17 @@ public class SeTextarea_EN_Test {
       EN.MemorizeLabel( "Textarea 1", "SeTextarea_MemorizeLabel_1" );
       EN.MemorizeLabel( "Textarea 2", "SeTextarea_MemorizeLabel_2" );
 
-      assertEquals( "Label Textarea 1:", myMem.get( "SeTextarea_MemorizeLabel_1" ) );
-      assertEquals( "Label Textarea 2:", myMem.get( "SeTextarea_MemorizeLabel_2" ) );
+      assertEquals( "Textarea 1:", myMem.get( "SeTextarea_MemorizeLabel_1" ) );
+      assertEquals( "Textarea 2:", myMem.get( "SeTextarea_MemorizeLabel_2" ) );
       
       EN.StopApp( ApplicationName );
       EN.EndTest();
       }
 
-  // \brief
-  // Teste das Schlüsselwort MemorizeToolTip( FN, MemKey ) eines SeInputText Prüfen.
-  //
+  /**
+   * Testet das Schlüsselwort MemorizeToolTip( FN, MemKey ) eines SeInputText Prüfen.
+   *
+   */
   @Test
   public void tcMemorizeToolTip() throws Exception {
 
@@ -284,10 +285,8 @@ public class SeTextarea_EN_Test {
       EN.SelectWindow( "SeTextarea" );
       EN.MemorizeTooltip( "Textarea 1", "SeTextarea_MemorizeTooltip" );
 
-      assertEquals( "Title Textarea 1",
-      myMem.get( "SeTextarea_MemorizeTooltip" ) );
+      assertEquals( "Title: Textarea 1", myMem.get( "SeTextarea_MemorizeTooltip" ) );
 
-      
       EN.StopApp( ApplicationName );
       EN.EndTest();
       }
@@ -725,8 +724,8 @@ public class SeTextarea_EN_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
       EN.SelectWindow( "SeTextarea" );
 
-      EN.VerifyLabel( "Textarea 1", "Label Textarea 1:" );
-      EN.VerifyLabel( "Textarea 2", "Label Textarea 2:" );
+      EN.VerifyLabel( "Textarea 1", "Textarea 1:" );
+      EN.VerifyLabel( "Textarea 2", "Textarea 2:" );
       
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -772,8 +771,8 @@ public class SeTextarea_EN_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
       EN.SelectWindow( "SeTextarea" );
 
-      EN.VerifyLabelWCM( "Textarea 1", "Label Textarea 1?" );
-      EN.VerifyLabelWCM( "Textarea 2", "Label Textarea 2?" );
+      EN.VerifyLabelWCM( "Textarea 1", "Textarea 1?" );
+      EN.VerifyLabelWCM( "Textarea 2", "Textarea 2?" );
       
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -819,7 +818,7 @@ public class SeTextarea_EN_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
       EN.SelectWindow( "SeTextarea" );
 
-      EN.VerifyLabelREGX( "Textarea 1", "Label Textarea 1\\W" );
+      EN.VerifyLabelREGX( "Textarea 1", "Textarea 1\\W" );
 
       
       EN.StopApp( ApplicationName );
@@ -867,7 +866,7 @@ public class SeTextarea_EN_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
       EN.SelectWindow( "SeTextarea" );
 
-      EN.VerifyTooltip( "Textarea 1", "Title Textarea 1" );
+      EN.VerifyTooltip( "Textarea 1", "Title: Textarea 1" );
       
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -897,13 +896,14 @@ public class SeTextarea_EN_Test {
       }
 
   
-  // \~german
-  // \brief
-  // Prüft, ob die Methode VerifyTooltipWCM für SeTextField implementiert ist.
-  //
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2014.12.03
+  /**
+   * \~german
+   * Prüft, ob die Methode VerifyTooltipWCM für SeTextField implementiert ist.
+   *
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2014.12.03
+   */
   @Test
   public void tcVerifyTooltipWCM() throws Exception {
 
@@ -913,7 +913,7 @@ public class SeTextarea_EN_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
       EN.SelectWindow( "SeTextarea" );
   
-      EN.VerifyTooltipWCM( "Textarea 1", "Title Textarea #" );
+      EN.VerifyTooltipWCM( "Textarea 1", "Title: Textarea #" );
       
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -958,7 +958,7 @@ public class SeTextarea_EN_Test {
       EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
       EN.SelectWindow( "SeTextarea" );
   
-      EN.VerifyTooltipREGX( "Textarea 1", "\\witle Textarea 1" );
+      EN.VerifyTooltipREGX( "Textarea 1", "\\witle: Textarea 1" );
       
       EN.StopApp( ApplicationName );
       EN.EndTest();

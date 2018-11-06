@@ -407,8 +407,8 @@ public class SeSelect_EN_Test
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
 
-    EN.VerifyTooltip( "Künstler", "Wähle Interpret aus" );
-    EN.VerifyTooltip( "Blumen", "Wähle eine Blume aus" );
+    EN.VerifyTooltip( "Künstler", "Title: Artist" );
+    EN.VerifyTooltip( "Blumen", "Titel: Flowers" );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -423,10 +423,7 @@ public class SeSelect_EN_Test
     EN.SelectWindow( "SeListBox" );
 
     // Actuall Value: "Wähle eine Blume aus"
-    EN.VerifyTooltip( "Künstler", "Wähle Interpret" );
-
-    EN.StopApp( ApplicationName );
-    EN.EndTest();
+    EN.VerifyTooltip( "Künstler", "Title: Artis" );
   }
 
   @Test
@@ -437,8 +434,8 @@ public class SeSelect_EN_Test
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
 
-    EN.VerifyTooltipWCM( "Künstler", "Wähle Interpret aus" );
-    EN.VerifyTooltipWCM( "Blumen", "Wähle eine Blume aus" );
+    EN.VerifyTooltipWCM( "Künstler", "Title: Artist" );
+    EN.VerifyTooltipWCM( "Blumen", "Titel: Flowers" );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -467,8 +464,8 @@ public class SeSelect_EN_Test
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
 
-    EN.VerifyTooltipREGX( "Künstler", "Wähle Interpret aus" );
-    EN.VerifyTooltipREGX( "Blumen", "Wähle eine Blume aus" );
+    EN.VerifyTooltipREGX( "Künstler", "Title: Artist" );
+    EN.VerifyTooltipREGX( "Blumen", "Titel: Flowers" );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -482,8 +479,8 @@ public class SeSelect_EN_Test
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
 
-    // Actuall Value: "Wähle eine Blume aus"
-    EN.VerifyTooltipREGX( "Künstler", "Wähle Interpret" );
+    // Actuall Value: "Wähle eine Künstler aus"
+    EN.VerifyTooltipREGX( "Künstler", "Title: Künstker" );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -497,8 +494,8 @@ public class SeSelect_EN_Test
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
 
-    EN.VerifyLabel( "Künstler", "Künstler" );
-    EN.VerifyLabel( "Blumen", "Blumen" );
+    EN.VerifyLabel( "Künstler", "Artist:" );
+    EN.VerifyLabel( "Blumen", "Flowers:" );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -527,8 +524,8 @@ public class SeSelect_EN_Test
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
 
-    EN.VerifyLabelWCM( "Künstler", "*ünstler" );
-    EN.VerifyLabelWCM( "Blumen", "Blume?" );
+    EN.VerifyLabelWCM( "Künstler", "*rtist:" );
+    EN.VerifyLabelWCM( "Blumen", "Flowers?" );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -557,8 +554,8 @@ public class SeSelect_EN_Test
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
 
-    EN.VerifyLabelREGX( "Künstler", ".ünstler" );
-    EN.VerifyLabelREGX( "Blumen", ".lumen" );
+    EN.VerifyLabelREGX( "Künstler", "Artist:" );
+    EN.VerifyLabelREGX( "Blumen", "Flowers:" );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -591,10 +588,10 @@ public class SeSelect_EN_Test
     EN.SelectWindow( "SeListBox" );
 
     EN.MemorizeTooltip( "Künstler", "SeListBox_MemorizeTooltip_1" );
-    assertEquals( "Wähle Interpret aus", okw.OKW_Memorize_Sngltn.getInstance().get( "SeListBox_MemorizeTooltip_1" ) );
+    assertEquals( "Title: Artist", okw.OKW_Memorize_Sngltn.getInstance().get( "SeListBox_MemorizeTooltip_1" ) );
 
     EN.MemorizeTooltip( "Blumen", "SeListBox_MemorizeTooltip_1" );
-    assertEquals( "Wähle eine Blume aus", okw.OKW_Memorize_Sngltn.getInstance().get( "SeListBox_MemorizeTooltip_1" ) );
+    assertEquals( "Titel: Flowers", okw.OKW_Memorize_Sngltn.getInstance().get( "SeListBox_MemorizeTooltip_1" ) );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -653,8 +650,8 @@ public class SeSelect_EN_Test
     EN.BeginTest( name.getMethodName() );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
-    EN.SelectWindow( "SeListBox" );
 
+    EN.SelectWindow( "SeListBox" );
     EN.VerifyValueWCM( "Künstler", "${EMPTY}" );
     EN.VerifyValueWCM( "Blumen", "?ulpe" );
 

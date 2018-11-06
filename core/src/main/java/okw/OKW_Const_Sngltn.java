@@ -235,7 +235,7 @@ public class OKW_Const_Sngltn
         {
             LM = new LogMessenger( "OKW_Const" );
 
-            myXmlReader = new OKW_XmlReader( "xml/OKW_Const.xml" );
+            myXmlReader = new OKW_XmlReader( "/xml/OKW_Const.xml" );
 
             /*if (OKW_FileHelper.FileExists(lvsOKW_Const_xml))
             	{
