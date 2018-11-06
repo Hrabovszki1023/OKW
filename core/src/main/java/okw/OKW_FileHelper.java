@@ -654,12 +654,12 @@ public class OKW_FileHelper
 			{
 				lvsReturn = fpsPath.replace("\\", "/");
 			}
-			else if ("||".equals( myFileSeparator))
+			else if ("\\".equals( myFileSeparator))
 			{
 				lvsReturn = fpsPath.replace("/", "\\");
 			}
 			else
-				throw (new OKWDirectorySeperatorNotImplementedException(""));
+				throw (new OKWDirectorySeperatorNotImplementedException("Error: Unknown file.separator: -" + myFileSeparator + "-"));
 		}
 		finally
 		{
