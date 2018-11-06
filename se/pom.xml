@@ -3,19 +3,19 @@
   <parent>
     <groupId>de.openkeyword</groupId>
     <artifactId>okw</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.18</version>
   </parent>
   <artifactId>se</artifactId>
   <dependencies>
   	<dependency>
   		<groupId>de.openkeyword</groupId>
   		<artifactId>core</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
+  		<version>0.1.18</version>
   	</dependency>
   	<dependency>
   		<groupId>de.openkeyword</groupId>
   		<artifactId>log2html</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
+  		<version>0.1.18</version>
   	</dependency>
   	<dependency>
   		<groupId>org.seleniumhq.selenium</groupId>
