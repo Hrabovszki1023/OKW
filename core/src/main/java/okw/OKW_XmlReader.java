@@ -23,7 +23,7 @@ import org.xml.sax.SAXException;
 
 import okw.exceptions.OKWMessageNotFoundException;
 
-public class OKW_XmlReader extends ClassLoader 
+public class OKW_XmlReader // extends ClassLoader 
 {
 
 	private Document				myXMLDocument;
@@ -38,13 +38,6 @@ public class OKW_XmlReader extends ClassLoader
 		return myXMLFile.toString();
 	}
 
-/*	@Deprecated
-	public OKW_XmlReader(Path fpsXMLFile) throws JAXBException, ParserConfigurationException, SAXException, IOException
-	{
-		myXMLFile = fpsXMLFile;
-		Init();
-	}
-*/
 	
 	public OKW_XmlReader(String fpsXMLFile) throws JAXBException, ParserConfigurationException, SAXException, IOException
 	{
@@ -52,24 +45,23 @@ public class OKW_XmlReader extends ClassLoader
 		Init();
 	}
 	
-	/// \~german
-	/// \brief
-	/// Initialisiert die Klasse:
-	///
-	/// * LM- Dateinamen als ermitteln
-	///
-	/// \~english
-	/// \brief
-	/// This constructor has no Parameter and uses the default values for the
-	/// config-file and Actual/default language(=EN)
-	///
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013_12_22
+	/** \~german
+	 *  Initialisiert die Klasse:
+	 * 
+	 *  * LM- Dateinamen als ermitteln
+	 * 
+	 *  \~english
+	 *  This constructor has no Parameter and uses the default values for the
+	 *  config-file and Actual/default language(=EN)
+	 * 
+	 *  \~
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2013_12_22
+	 */
 	private void Init() throws JAXBException, ParserConfigurationException, SAXException, IOException
 	{
 
-		  InputStream is = this.getResourceAsStream( myXMLFile.toString() );
+		  InputStream is = OKW_XmlReader.class.getResourceAsStream( myXMLFile.toString() );
 		  
 			if ( is == null )
 			{

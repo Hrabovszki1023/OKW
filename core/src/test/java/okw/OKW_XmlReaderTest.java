@@ -61,11 +61,11 @@ public class OKW_XmlReaderTest
 		try
 		{
 
-			OKW_XmlReader myXlReader = new OKW_XmlReader("OKW_XmlReaderTestXML.xml");
+			OKW_XmlReader myXlReader = new OKW_XmlReader("/OKW_XmlReaderTestXML.xml");
 
 			String Actuell = myXlReader.getXMLFile();
 
-			Assert.assertEquals("Ein Wert wird erwartet:", "OKW_XmlReaderTestXML.xml", Actuell);
+			Assert.assertEquals("Ein Wert wird erwartet:", "/OKW_XmlReaderTestXML.xml", Actuell);
 
 		}
 		catch (JAXBException | ParserConfigurationException | SAXException | IOException e)
@@ -74,6 +74,26 @@ public class OKW_XmlReaderTest
 		}
 	}
 
+	   @Test
+	    public void TC_getXMLFil2e()
+	    {
+	        try
+	        {
+
+	            OKW_XmlReader myXlReader = new OKW_XmlReader("/xml/OKW_Ini.xml");
+
+	            String Actuell = myXlReader.getXMLFile();
+
+	            Assert.assertEquals("Ein Wert wird erwartet:", "/xml/OKW_Ini.xml", Actuell);
+
+	        }
+	        catch (JAXBException | ParserConfigurationException | SAXException | IOException e)
+	        {
+	            Assert.fail(e.getMessage());
+	        }
+	    }
+
+	
 	 @Test(expected=FileNotFoundException.class)
 	  public void TC_getXMLFile_FileNotFoundException() throws JAXBException, ParserConfigurationException, SAXException, IOException
 	  {
@@ -81,7 +101,7 @@ public class OKW_XmlReaderTest
 
 	      String Actuell = myXlReader.getXMLFile();
 
-	      Assert.assertEquals("Ein Wert wird erwartet:", "OKW_XmlReaderTestXML.xml", Actuell);
+	      //Assert.assertEquals("Ein Wert wird erwartet:", "OKW_XmlReaderTestXML.xml", Actuell);
 	  }
 
 	// Test
@@ -90,7 +110,7 @@ public class OKW_XmlReaderTest
 	{
 		try
 		{
-			OKW_XmlReader myXlReader = new OKW_XmlReader("OKW_XmlReaderTestXML.xml");
+			OKW_XmlReader myXlReader = new OKW_XmlReader("/OKW_XmlReaderTestXML.xml");
 
 			ArrayList<String> Actuell = myXlReader.getTextContentAsList("//value");
 			Assert.assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell.get(0));
@@ -109,7 +129,7 @@ public class OKW_XmlReaderTest
   {
     try
     {
-      OKW_XmlReader myXlReader = new OKW_XmlReader("SubFolder4Test/OKW_XmlReaderTestXML2.xml");
+      OKW_XmlReader myXlReader = new OKW_XmlReader("/SubFolder4Test/OKW_XmlReaderTestXML2.xml");
 
       ArrayList<String> Actuell = myXlReader.getTextContentAsList("//value");
       Assert.assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell.get(0));
@@ -127,7 +147,7 @@ public class OKW_XmlReaderTest
 	{
 		try
 		{
-			OKW_XmlReader myXlReader = new OKW_XmlReader("OKW_XmlReaderTestXML.xml");
+			OKW_XmlReader myXlReader = new OKW_XmlReader("/OKW_XmlReaderTestXML.xml");
 
 			String Actuell = myXlReader.getTextContentSingleValue("//value[1]");
 			Assert.assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell);
@@ -150,7 +170,7 @@ public class OKW_XmlReaderTest
   {
     try
     {
-      OKW_XmlReader myXlReader = new OKW_XmlReader("SubFolder4Test/OKW_XmlReaderTestXML2.xml");
+      OKW_XmlReader myXlReader = new OKW_XmlReader("/SubFolder4Test/OKW_XmlReaderTestXML2.xml");
 
       String Actuell = myXlReader.getTextContentSingleValue("//value[1]");
       Assert.assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell);
