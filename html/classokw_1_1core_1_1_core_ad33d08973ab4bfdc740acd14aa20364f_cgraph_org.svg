@@ -9,14 +9,14 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 122)">
 <title>okw.core.Core.LogTablecellValue</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-122 744,-122 744,4 -4,4"/>
-<!-- Node1013 -->
-<g id="node1" class="node"><title>Node1013</title>
+<!-- Node1033 -->
+<g id="node1" class="node"><title>Node1033</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-44 0,-74 138,-74 138,-44 0,-44"/>
 <text text-anchor="start" x="8" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogTablecell</text>
 <text text-anchor="middle" x="69" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">Value</text>
 </g>
-<!-- Node1014 -->
-<g id="node2" class="node"><title>Node1014</title>
+<!-- Node1034 -->
+<g id="node2" class="node"><title>Node1034</title>
 <g id="a_node2"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" target="_top" xlink:title="Ausgabe eines Schlüsselwortes. ">
 <polygon fill="white" stroke="black" points="194,-88 194,-118 328,-118 328,-88 194,-88"/>
 <text text-anchor="start" x="202" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
@@ -24,26 +24,26 @@
 </a>
 </g>
 </g>
-<!-- Node1013&#45;&gt;Node1014 -->
-<g id="edge1" class="edge"><title>Node1013&#45;&gt;Node1014</title>
+<!-- Node1033&#45;&gt;Node1034 -->
+<g id="edge1" class="edge"><title>Node1033&#45;&gt;Node1034</title>
 <path fill="none" stroke="midnightblue" d="M134.856,-74.0192C150.97,-77.7508 168.374,-81.7814 184.933,-85.616"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="184.582,-89.1274 195.114,-87.9738 186.162,-82.3079 184.582,-89.1274"/>
 </g>
-<!-- Node1015 -->
-<g id="node3" class="node"><title>Node1015</title>
+<!-- Node1035 -->
+<g id="node3" class="node"><title>Node1035</title>
 <g id="a_node3"><a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. ">
 <polygon fill="white" stroke="black" points="181,-49.5 181,-68.5 341,-68.5 341,-49.5 181,-49.5"/>
 <text text-anchor="middle" x="261" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
 </g>
-<!-- Node1013&#45;&gt;Node1015 -->
-<g id="edge2" class="edge"><title>Node1013&#45;&gt;Node1015</title>
+<!-- Node1033&#45;&gt;Node1035 -->
+<g id="edge2" class="edge"><title>Node1033&#45;&gt;Node1035</title>
 <path fill="none" stroke="midnightblue" d="M138.058,-59C148.656,-59 159.742,-59 170.725,-59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="170.767,-62.5001 180.767,-59 170.766,-55.5001 170.767,-62.5001"/>
 </g>
-<!-- Node1018 -->
-<g id="node6" class="node"><title>Node1018</title>
+<!-- Node1038 -->
+<g id="node6" class="node"><title>Node1038</title>
 <g id="a_node6"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aed4fb79a0e38cdb3ec43e8bb9d2e3425" target="_top" xlink:title="Dokumentiert den Wert der ausgewählten Zelle. ">
 <polygon fill="white" stroke="black" points="174.5,-0 174.5,-30 347.5,-30 347.5,-0 174.5,-0"/>
 <text text-anchor="start" x="182.5" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.LogTablecell</text>
@@ -51,26 +51,26 @@
 </a>
 </g>
 </g>
-<!-- Node1013&#45;&gt;Node1018 -->
-<g id="edge5" class="edge"><title>Node1013&#45;&gt;Node1018</title>
+<!-- Node1033&#45;&gt;Node1038 -->
+<g id="edge5" class="edge"><title>Node1033&#45;&gt;Node1038</title>
 <path fill="none" stroke="midnightblue" d="M134.856,-43.9808C150.97,-40.2492 168.374,-36.2186 184.933,-32.384"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="186.162,-35.6921 195.114,-30.0262 184.582,-28.8726 186.162,-35.6921"/>
 </g>
-<!-- Node1016 -->
-<g id="node4" class="node"><title>Node1016</title>
+<!-- Node1036 -->
+<g id="node4" class="node"><title>Node1036</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. ">
 <polygon fill="white" stroke="black" points="384.5,-49.5 384.5,-68.5 551.5,-68.5 551.5,-49.5 384.5,-49.5"/>
 <text text-anchor="middle" x="468" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
 </g>
-<!-- Node1015&#45;&gt;Node1016 -->
-<g id="edge3" class="edge"><title>Node1015&#45;&gt;Node1016</title>
+<!-- Node1035&#45;&gt;Node1036 -->
+<g id="edge3" class="edge"><title>Node1035&#45;&gt;Node1036</title>
 <path fill="none" stroke="midnightblue" d="M341.258,-59C352.041,-59 363.186,-59 374.181,-59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="374.222,-62.5001 384.222,-59 374.222,-55.5001 374.222,-62.5001"/>
 </g>
-<!-- Node1017 -->
-<g id="node5" class="node"><title>Node1017</title>
+<!-- Node1037 -->
+<g id="node5" class="node"><title>Node1037</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag. ">
 <polygon fill="white" stroke="black" points="588,-44 588,-74 740,-74 740,-44 588,-44"/>
 <text text-anchor="start" x="596" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
@@ -78,8 +78,8 @@
 </a>
 </g>
 </g>
-<!-- Node1016&#45;&gt;Node1017 -->
-<g id="edge4" class="edge"><title>Node1016&#45;&gt;Node1017</title>
+<!-- Node1036&#45;&gt;Node1037 -->
+<g id="edge4" class="edge"><title>Node1036&#45;&gt;Node1037</title>
 <path fill="none" stroke="midnightblue" d="M551.555,-59C560.227,-59 569.057,-59 577.759,-59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="577.899,-62.5001 587.899,-59 577.899,-55.5001 577.899,-62.5001"/>
 </g>

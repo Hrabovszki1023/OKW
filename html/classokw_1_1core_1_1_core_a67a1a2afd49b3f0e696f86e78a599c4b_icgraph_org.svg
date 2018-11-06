@@ -9,14 +9,14 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 248)">
 <title>okw.core.Core.MemorizeTablecellValue</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-248 586,-248 586,4 -4,4"/>
-<!-- Node1190 -->
-<g id="node1" class="node"><title>Node1190</title>
+<!-- Node1210 -->
+<g id="node1" class="node"><title>Node1210</title>
 <polygon fill="#bfbfbf" stroke="black" points="0.5,-88 0.5,-118 165.5,-118 165.5,-88 0.5,-88"/>
 <text text-anchor="start" x="8.5" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.MemorizeTablecell</text>
 <text text-anchor="middle" x="83" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00">Value</text>
 </g>
-<!-- Node1191 -->
-<g id="node2" class="node"><title>Node1191</title>
+<!-- Node1211 -->
+<g id="node2" class="node"><title>Node1211</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_e_n.html#a69ca65f068665ec7e458d9701bb826ff" target="_top" xlink:title="Merkt sich den Wert der gegebenen Zelle in der Tabelle. ">
 <polygon fill="white" stroke="black" points="205,-115 205,-145 363,-145 363,-115 205,-115"/>
 <text text-anchor="start" x="213" y="-133" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.MemorizeTablecell</text>
@@ -24,13 +24,13 @@
 </a>
 </g>
 </g>
-<!-- Node1190&#45;&gt;Node1191 -->
-<g id="edge1" class="edge"><title>Node1190&#45;&gt;Node1191</title>
+<!-- Node1210&#45;&gt;Node1211 -->
+<g id="edge1" class="edge"><title>Node1210&#45;&gt;Node1211</title>
 <path fill="none" stroke="midnightblue" d="M175.629,-115.432C185.384,-116.756 195.241,-118.093 204.822,-119.393"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="175.895,-111.936 165.515,-114.06 174.954,-118.873 175.895,-111.936"/>
 </g>
-<!-- Node1196 -->
-<g id="node7" class="node"><title>Node1196</title>
+<!-- Node1216 -->
+<g id="node7" class="node"><title>Node1216</title>
 <g id="a_node7"><a xlink:href="classokw_1_1core_1_1_current_object___test.html#aefef14ea88c3a0d237d4d94d6e60967e" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode MemorizeSelectedValue( FN, MemKey ) im ChildObject. ">
 <polygon fill="white" stroke="black" points="202,-55.5 202,-96.5 366,-96.5 366,-55.5 202,-55.5"/>
 <text text-anchor="start" x="210" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -39,13 +39,13 @@
 </a>
 </g>
 </g>
-<!-- Node1190&#45;&gt;Node1196 -->
-<g id="edge6" class="edge"><title>Node1190&#45;&gt;Node1196</title>
+<!-- Node1210&#45;&gt;Node1216 -->
+<g id="edge6" class="edge"><title>Node1210&#45;&gt;Node1216</title>
 <path fill="none" stroke="midnightblue" d="M175.443,-90.5932C184.282,-89.394 193.206,-88.1832 201.934,-86.999"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="174.954,-87.1274 165.515,-91.9402 175.895,-94.0638 174.954,-87.1274"/>
 </g>
-<!-- Node1192 -->
-<g id="node3" class="node"><title>Node1192</title>
+<!-- Node1212 -->
+<g id="node3" class="node"><title>Node1212</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html#a072376c59adb62205031d901decc3299" target="_top" xlink:title="okw.core.EN_Keywords\l_IGNORE_Test.tcMemorizeTablecell\lValue_IGNORE">
 <polygon fill="white" stroke="black" points="402.5,-202.5 402.5,-243.5 581.5,-243.5 581.5,-202.5 402.5,-202.5"/>
 <text text-anchor="start" x="410.5" y="-231.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_Keywords</text>
@@ -54,13 +54,13 @@
 </a>
 </g>
 </g>
-<!-- Node1191&#45;&gt;Node1192 -->
-<g id="edge2" class="edge"><title>Node1191&#45;&gt;Node1192</title>
+<!-- Node1211&#45;&gt;Node1212 -->
+<g id="edge2" class="edge"><title>Node1211&#45;&gt;Node1212</title>
 <path fill="none" stroke="midnightblue" d="M319.91,-150.296C342.814,-163.161 373.664,-179.643 402,-192 410.249,-195.597 419.061,-199.08 427.814,-202.331"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="321.348,-147.089 310.922,-145.206 317.898,-153.18 321.348,-147.089"/>
 </g>
-<!-- Node1193 -->
-<g id="node4" class="node"><title>Node1193</title>
+<!-- Node1213 -->
+<g id="node4" class="node"><title>Node1213</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html#ae088fe5c05fb9a943c63b99272ea39cc" target="_top" xlink:title="okw.core.EN_Keywords\l_IGNORE_Test.tcMemorizeTablecell\lValue_IGNORE_StringEmpty">
 <polygon fill="white" stroke="black" points="402.5,-142.5 402.5,-183.5 581.5,-183.5 581.5,-142.5 402.5,-142.5"/>
 <text text-anchor="start" x="410.5" y="-171.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_Keywords</text>
@@ -69,13 +69,13 @@
 </a>
 </g>
 </g>
-<!-- Node1191&#45;&gt;Node1193 -->
-<g id="edge3" class="edge"><title>Node1191&#45;&gt;Node1193</title>
+<!-- Node1211&#45;&gt;Node1213 -->
+<g id="edge3" class="edge"><title>Node1211&#45;&gt;Node1213</title>
 <path fill="none" stroke="midnightblue" d="M373.126,-144.117C382.752,-145.659 392.555,-147.23 402.19,-148.773"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="373.601,-140.649 363.173,-142.523 372.494,-147.561 373.601,-140.649"/>
 </g>
-<!-- Node1194 -->
-<g id="node5" class="node"><title>Node1194</title>
+<!-- Node1214 -->
+<g id="node5" class="node"><title>Node1214</title>
 <g id="a_node5"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a8c28a77c8241c9b46584fccb2fc480b1" target="_top" xlink:title="Prüft ob &quot;${IGNORE} &quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst. ">
 <polygon fill="white" stroke="black" points="402.5,-71 402.5,-123 581.5,-123 581.5,-71 402.5,-71"/>
 <text text-anchor="start" x="410.5" y="-111" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -85,13 +85,13 @@
 </a>
 </g>
 </g>
-<!-- Node1191&#45;&gt;Node1194 -->
-<g id="edge4" class="edge"><title>Node1191&#45;&gt;Node1194</title>
+<!-- Node1211&#45;&gt;Node1214 -->
+<g id="edge4" class="edge"><title>Node1211&#45;&gt;Node1214</title>
 <path fill="none" stroke="midnightblue" d="M373.126,-115.883C382.752,-114.341 392.555,-112.77 402.19,-111.227"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="372.494,-112.439 363.173,-117.477 373.601,-119.351 372.494,-112.439"/>
 </g>
-<!-- Node1195 -->
-<g id="node6" class="node"><title>Node1195</title>
+<!-- Node1215 -->
+<g id="node6" class="node"><title>Node1215</title>
 <g id="a_node6"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a5661983ff87090109557ad06f0ad2301" target="_top" xlink:title="Prüft ob &quot;&quot;${IGNORE}${TCN}&quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst...">
 <polygon fill="white" stroke="black" points="402.5,-0 402.5,-52 581.5,-52 581.5,-0 402.5,-0"/>
 <text text-anchor="start" x="410.5" y="-40" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -101,8 +101,8 @@
 </a>
 </g>
 </g>
-<!-- Node1191&#45;&gt;Node1195 -->
-<g id="edge5" class="edge"><title>Node1191&#45;&gt;Node1195</title>
+<!-- Node1211&#45;&gt;Node1215 -->
+<g id="edge5" class="edge"><title>Node1211&#45;&gt;Node1215</title>
 <path fill="none" stroke="midnightblue" d="M356.361,-110.637C359.706,-108.909 362.94,-107.034 366,-105 386.758,-91.204 381.847,-76.6655 402,-62 406.852,-58.4694 412.099,-55.2199 417.534,-52.2422"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="354.871,-107.47 347.293,-114.874 357.834,-113.812 354.871,-107.47"/>
 </g>

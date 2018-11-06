@@ -235,7 +235,7 @@
 </g>
 <!-- Node6 -->
 <g id="node7" class="node"><title>Node6</title>
-<g id="a_node7"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html" target="_top" xlink:title="{okw.gui.adapter.selenium.\lSeAnyChildWindow\n|# MyLogger\l# LM\l# iframeID\l|+ getIframeID()\l+ setIframeID()\l+ SeAnyChildWindow()\l+ SeAnyChildWindow()\l+ ClickOn()\l+ getCaption()\l+ getExists()\l+ getHasFocus()\l+ getIsActive()\l+ getLabel()\l+ getTooltip()\l+ getValue()\l+ getPlaceholder()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogTooltip()\l+ LogValue()\lund 24 mehr ...\l}">
+<g id="a_node7"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html" target="_top" xlink:title="{okw.gui.adapter.selenium.\lSeAnyChildWindow\n|# MyLogger\l# LM\l# iframeID\l|+ getIframeID()\l+ setIframeID()\l+ SeAnyChildWindow()\l+ SeAnyChildWindow()\l+ ClickOn()\l+ getCaption()\l+ getExists()\l+ getHasFocus()\l+ getIsActive()\l+ getLabel()\l+ getTooltip()\l+ getValue()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogPlaceholder()\l+ LogTooltip()\l+ LogValue()\lund 25 mehr ...\l}">
 <polygon fill="white" stroke="black" points="1191.5,-377 1191.5,-687 1322.5,-687 1322.5,-377 1191.5,-377"/>
 <text text-anchor="start" x="1199.5" y="-675" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="1257" y="-664" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyChildWindow</text>
@@ -256,15 +256,15 @@
 <text text-anchor="start" x="1199.5" y="-505" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
 <text text-anchor="start" x="1199.5" y="-494" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
 <text text-anchor="start" x="1199.5" y="-483" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="1199.5" y="-472" font-family="Helvetica,sans-Serif" font-size="10.00">+ getPlaceholder()</text>
-<text text-anchor="start" x="1199.5" y="-461" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="1199.5" y="-450" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="1199.5" y="-439" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="1199.5" y="-428" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="1199.5" y="-417" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="1199.5" y="-472" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="1199.5" y="-461" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="1199.5" y="-450" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="1199.5" y="-439" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="1199.5" y="-428" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="1199.5" y="-417" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPlaceholder()</text>
 <text text-anchor="start" x="1199.5" y="-406" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
 <text text-anchor="start" x="1199.5" y="-395" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="1199.5" y="-384" font-family="Helvetica,sans-Serif" font-size="10.00">und 24 mehr ...</text>
+<text text-anchor="start" x="1199.5" y="-384" font-family="Helvetica,sans-Serif" font-size="10.00">und 25 mehr ...</text>
 </a>
 </g>
 </g>
@@ -481,24 +481,25 @@
 <!-- Node12 -->
 <g id="node13" class="node"><title>Node12</title>
 <g id="a_node13"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html" target="_top" xlink:title="Diese Klasse representiert ein HTML&#45;Textfeld, die mit Selenium angsteuert wird. ">
-<polygon fill="white" stroke="black" points="744.5,-161.5 744.5,-284.5 875.5,-284.5 875.5,-161.5 744.5,-161.5"/>
-<text text-anchor="start" x="752.5" y="-272.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="810" y="-261.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputText</text>
-<polyline fill="none" stroke="black" points="744.5,-254.5 875.5,-254.5 "/>
-<text text-anchor="middle" x="810" y="-242.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="744.5,-235.5 875.5,-235.5 "/>
-<text text-anchor="start" x="752.5" y="-223.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputText()</text>
-<text text-anchor="start" x="752.5" y="-212.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputText()</text>
-<text text-anchor="start" x="752.5" y="-201.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="752.5" y="-190.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="752.5" y="-179.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ set__Attribute()</text>
-<text text-anchor="start" x="752.5" y="-168.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
+<polygon fill="white" stroke="black" points="744.5,-156 744.5,-290 875.5,-290 875.5,-156 744.5,-156"/>
+<text text-anchor="start" x="752.5" y="-278" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="810" y="-267" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputText</text>
+<polyline fill="none" stroke="black" points="744.5,-260 875.5,-260 "/>
+<text text-anchor="middle" x="810" y="-248" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="744.5,-241 875.5,-241 "/>
+<text text-anchor="start" x="752.5" y="-229" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputText()</text>
+<text text-anchor="start" x="752.5" y="-218" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputText()</text>
+<text text-anchor="start" x="752.5" y="-207" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="752.5" y="-196" font-family="Helvetica,sans-Serif" font-size="10.00">+ getPlaceholder()</text>
+<text text-anchor="start" x="752.5" y="-185" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="752.5" y="-174" font-family="Helvetica,sans-Serif" font-size="10.00">+ set__Attribute()</text>
+<text text-anchor="start" x="752.5" y="-163" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node12 -->
 <g id="edge12" class="edge"><title>Node6&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M1198.5,-369.019C1193.45,-363.535 1187.96,-358.485 1182,-354 1075.77,-274.028 1001.11,-382.794 885,-318 870.415,-309.861 857.622,-297.63 846.924,-284.658"/>
+<path fill="none" stroke="midnightblue" d="M1198.5,-369.019C1193.45,-363.535 1187.96,-358.485 1182,-354 1075.77,-274.028 1001.11,-382.794 885,-318 872.603,-311.082 861.5,-301.207 851.879,-290.434"/>
 <polygon fill="none" stroke="midnightblue" points="1195.97,-371.438 1205.13,-376.751 1201.28,-366.882 1195.97,-371.438"/>
 </g>
 <!-- Node13 -->
@@ -590,24 +591,25 @@
 <!-- Node18 -->
 <g id="node19" class="node"><title>Node18</title>
 <g id="a_node19"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html" target="_top" xlink:title="Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld . ">
-<polygon fill="white" stroke="black" points="1489.5,-161.5 1489.5,-284.5 1620.5,-284.5 1620.5,-161.5 1489.5,-161.5"/>
-<text text-anchor="start" x="1497.5" y="-272.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="1555" y="-261.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeTextarea</text>
-<polyline fill="none" stroke="black" points="1489.5,-254.5 1620.5,-254.5 "/>
-<text text-anchor="middle" x="1555" y="-242.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="1489.5,-235.5 1620.5,-235.5 "/>
-<text text-anchor="start" x="1497.5" y="-223.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeTextarea()</text>
-<text text-anchor="start" x="1497.5" y="-212.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeTextarea()</text>
-<text text-anchor="start" x="1497.5" y="-201.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ igetValue()</text>
-<text text-anchor="start" x="1497.5" y="-190.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setAttribute()</text>
-<text text-anchor="start" x="1497.5" y="-179.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="1497.5" y="-168.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
+<polygon fill="white" stroke="black" points="1489.5,-156 1489.5,-290 1620.5,-290 1620.5,-156 1489.5,-156"/>
+<text text-anchor="start" x="1497.5" y="-278" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="1555" y="-267" font-family="Helvetica,sans-Serif" font-size="10.00">SeTextarea</text>
+<polyline fill="none" stroke="black" points="1489.5,-260 1620.5,-260 "/>
+<text text-anchor="middle" x="1555" y="-248" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="1489.5,-241 1620.5,-241 "/>
+<text text-anchor="start" x="1497.5" y="-229" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeTextarea()</text>
+<text text-anchor="start" x="1497.5" y="-218" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeTextarea()</text>
+<text text-anchor="start" x="1497.5" y="-207" font-family="Helvetica,sans-Serif" font-size="10.00">+ igetValue()</text>
+<text text-anchor="start" x="1497.5" y="-196" font-family="Helvetica,sans-Serif" font-size="10.00">+ setAttribute()</text>
+<text text-anchor="start" x="1497.5" y="-185" font-family="Helvetica,sans-Serif" font-size="10.00">+ getPlaceholder()</text>
+<text text-anchor="start" x="1497.5" y="-174" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="1497.5" y="-163" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node18 -->
 <g id="edge18" class="edge"><title>Node6&#45;&gt;Node18</title>
-<path fill="none" stroke="midnightblue" d="M1317.18,-368.719C1321.77,-363.441 1326.7,-358.501 1332,-354 1383.59,-310.167 1422.93,-354.416 1480,-318 1493.55,-309.352 1505.74,-297.403 1516.15,-284.92"/>
+<path fill="none" stroke="midnightblue" d="M1317.18,-368.719C1321.77,-363.441 1326.7,-358.501 1332,-354 1383.59,-310.167 1422.93,-354.416 1480,-318 1491.62,-310.588 1502.23,-300.75 1511.58,-290.229"/>
 <polygon fill="none" stroke="midnightblue" points="1314.3,-366.718 1310.7,-376.682 1319.72,-371.138 1314.3,-366.718"/>
 </g>
 <!-- Node19 -->

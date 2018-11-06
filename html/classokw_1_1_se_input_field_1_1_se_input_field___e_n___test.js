@@ -1,6 +1,7 @@
 var classokw_1_1_se_input_field_1_1_se_input_field___e_n___test =
 [
     [ "TC_MemorizeExists_en", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a2a649957e3eb7b2a00fae75dd386ff6b", null ],
+    [ "tc_VerifyPlaceholderWCM", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#af197519eaf51557354088d21f1688741", null ],
     [ "tcClickOn", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a5860a514b07b6bf715c17dd674d0f384", null ],
     [ "tcClickOn_OKWGUIObjectNotFoundException", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#ad1aef5e5e1c43c0db7a808c3c2112bb5", null ],
     [ "tcLogCaption_OKWGUIObjectNotFoundException", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#aaa5e2ea3a1b373bde4b6ba7995ae2ae1", null ],
@@ -61,6 +62,11 @@ var classokw_1_1_se_input_field_1_1_se_input_field___e_n___test =
     [ "tcVerifyLabelREGX_OKWVerifyingFailsException", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#ad944db72715423452edc03977d3218a1", null ],
     [ "tcVerifyLabelWCM", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a82c440e5ee25a92f2fa3e2736b58b22c", null ],
     [ "tcVerifyLabelWCM_OKWVerifyingFailsException", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a7314c7c1357f091a925be58557fb3ce0", null ],
+    [ "tcVerifyPlaceholder", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#aec216a090d5c65a2f994847617fd772b", null ],
+    [ "tcVerifyPlaceholder_OKWVerifyingFailsException", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a6b9e3bf034618b6d3bfe5bb7f4c3dc40", null ],
+    [ "tcVerifyPlaceholderREGX", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a9552a7820f8f8e9a840df645b2c1609a", null ],
+    [ "tcVerifyPlaceholderREGX_OKWVerifyingFailsException", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a983e9928ca2684556b50731ddbc04771", null ],
+    [ "tcVerifyPlaceholderWCM_OKWVerifyingFailsException", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#aef3bff5f354659641cd4570daa1ae534", null ],
     [ "tcVerifyTooltip", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a8a87d53d09cf0ae38e02cc4b20fecfba", null ],
     [ "tcVerifyTooltip_OKWGUIObjectNotFoundException", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a31c7896dfc2c083dcfbae03d8e62a5b1", null ],
     [ "tcVerifyTooltip_OKWVerifyingFailsException", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a4d389deb96f4c18cdab6acc0b5080d42", null ],

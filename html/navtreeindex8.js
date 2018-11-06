@@ -1,5 +1,15 @@
 var NAVTREEINDEX8 =
 {
+"classokw_1_1core_1_1_matcher___levenshtein_match_test.html#a816e6e93af1933ba7fdaace887fa5346":[10,0,1,1,27,4],
+"classokw_1_1core_1_1_matcher___levenshtein_match_test.html#ab9aec370fc3bef1eba427b993d5a0eca":[10,0,1,1,27,3],
+"classokw_1_1core_1_1_matcher___levenshtein_match_test.html#ac18bb946c789b2da0cdc3e71d99f94a5":[10,0,1,1,27,0],
+"classokw_1_1core_1_1_matcher___levenshtein_match_test.html#ae63ebcbea7cc78e07f741062906dad3d":[10,0,1,1,27,2],
+"classokw_1_1core_1_1_matcher___regex_matcher_test.html":[10,0,1,1,28],
+"classokw_1_1core_1_1_matcher___regex_matcher_test.html#a0b91a5f8b50c46f7bffc011989696185":[10,0,1,1,28,4],
+"classokw_1_1core_1_1_matcher___regex_matcher_test.html#a23cdedc3337ab3c561efc026357fb46d":[10,0,1,1,28,3],
+"classokw_1_1core_1_1_matcher___regex_matcher_test.html#a249b9759c65c9058ca7338900834b68a":[10,0,1,1,28,0],
+"classokw_1_1core_1_1_matcher___regex_matcher_test.html#a2c55406d474fac5805426ee69eb68600":[10,0,1,1,28,2],
+"classokw_1_1core_1_1_matcher___regex_matcher_test.html#aae598e095987504ca3c717a364ce3eae":[10,0,1,1,28,1],
 "classokw_1_1core_1_1_matcher___wildcard_matcher_test.html":[10,0,1,1,29],
 "classokw_1_1core_1_1_matcher___wildcard_matcher_test.html#a5abee11253a74b08f051f922a64ed518":[10,0,1,1,29,1],
 "classokw_1_1core_1_1_matcher___wildcard_matcher_test.html#ab0e194983de7e7258d9909a1f0b3a98a":[10,0,1,1,29,2],
@@ -239,15 +249,5 @@ var NAVTREEINDEX8 =
 "classokw_1_1exceptions_1_1_o_k_w_memorize_key_not_exists_exception.html":[10,0,1,3,15],
 "classokw_1_1exceptions_1_1_o_k_w_memorize_key_not_exists_exception.html#a500641d4ae67a21a60d8d61616653be1":[10,0,1,3,15,1],
 "classokw_1_1exceptions_1_1_o_k_w_memorize_key_not_exists_exception.html#ae316f21c877ecc02e31e28d1d759786d":[10,0,1,3,15,0],
-"classokw_1_1exceptions_1_1_o_k_w_message_not_found_exception.html":[10,0,1,3,16],
-"classokw_1_1exceptions_1_1_o_k_w_message_not_found_exception.html#a06da7092aef5f207906e699ac3b7ea00":[10,0,1,3,16,0],
-"classokw_1_1exceptions_1_1_o_k_w_message_not_found_exception.html#a886376124799590a86cbcee899a5f9d0":[10,0,1,3,16,1],
-"classokw_1_1exceptions_1_1_o_k_w_not_allowed_value_exception.html":[10,0,1,3,17],
-"classokw_1_1exceptions_1_1_o_k_w_not_allowed_value_exception.html#a55de217be81f330ede05aac1c501b40d":[10,0,1,3,17,1],
-"classokw_1_1exceptions_1_1_o_k_w_not_allowed_value_exception.html#ac1f5b01fa0405003ba6bda794c3df0e6":[10,0,1,3,17,0],
-"classokw_1_1exceptions_1_1_o_k_w_only_single_value_allowed_exception.html":[10,0,1,3,18],
-"classokw_1_1exceptions_1_1_o_k_w_only_single_value_allowed_exception.html#a4a0803a6f736e2e9f53708f831d13dfb":[10,0,1,3,18,0],
-"classokw_1_1exceptions_1_1_o_k_w_only_single_value_allowed_exception.html#ace7da61eb11212215a22f0f18c9149ac":[10,0,1,3,18,1],
-"classokw_1_1exceptions_1_1_o_k_w_path_does_not_exist_exception.html":[10,0,1,3,19],
-"classokw_1_1exceptions_1_1_o_k_w_path_does_not_exist_exception.html#a7ddc0812c9485cc1c91d03a6b4145e94":[10,0,1,3,19,0]
+"classokw_1_1exceptions_1_1_o_k_w_message_not_found_exception.html":[10,0,1,3,16]
 };

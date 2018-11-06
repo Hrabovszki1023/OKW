@@ -1,5 +1,15 @@
 var NAVTREEINDEX9 =
 {
+"classokw_1_1exceptions_1_1_o_k_w_message_not_found_exception.html#a06da7092aef5f207906e699ac3b7ea00":[10,0,1,3,16,0],
+"classokw_1_1exceptions_1_1_o_k_w_message_not_found_exception.html#a886376124799590a86cbcee899a5f9d0":[10,0,1,3,16,1],
+"classokw_1_1exceptions_1_1_o_k_w_not_allowed_value_exception.html":[10,0,1,3,17],
+"classokw_1_1exceptions_1_1_o_k_w_not_allowed_value_exception.html#a55de217be81f330ede05aac1c501b40d":[10,0,1,3,17,1],
+"classokw_1_1exceptions_1_1_o_k_w_not_allowed_value_exception.html#ac1f5b01fa0405003ba6bda794c3df0e6":[10,0,1,3,17,0],
+"classokw_1_1exceptions_1_1_o_k_w_only_single_value_allowed_exception.html":[10,0,1,3,18],
+"classokw_1_1exceptions_1_1_o_k_w_only_single_value_allowed_exception.html#a4a0803a6f736e2e9f53708f831d13dfb":[10,0,1,3,18,0],
+"classokw_1_1exceptions_1_1_o_k_w_only_single_value_allowed_exception.html#ace7da61eb11212215a22f0f18c9149ac":[10,0,1,3,18,1],
+"classokw_1_1exceptions_1_1_o_k_w_path_does_not_exist_exception.html":[10,0,1,3,19],
+"classokw_1_1exceptions_1_1_o_k_w_path_does_not_exist_exception.html#a7ddc0812c9485cc1c91d03a6b4145e94":[10,0,1,3,19,0],
 "classokw_1_1exceptions_1_1_o_k_w_path_does_not_exist_exception.html#ac5a4a093aa1cfa567190980b63ae7f45":[10,0,1,3,19,1],
 "classokw_1_1exceptions_1_1_o_k_w_verifying_fails_exception.html":[10,0,1,3,20],
 "classokw_1_1exceptions_1_1_o_k_w_verifying_fails_exception.html#a1ff8857eedd9a4b97de87f46f371679c":[10,0,1,3,20,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX9 =
 "classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#a8fdfc3608dd6ff9457f1c324fe54cb69":[10,0,1,4,0,5,7],
 "classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#a97b7fece5375788854d0c882aea5f1c4":[10,0,1,4,0,5,21],
 "classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#aaa1bf862cb600c8bf9c97974d36b4967":[10,0,1,4,0,5,1],
-"classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#aca845eccb00ccc3bba8f157ebe54fdcb":[10,0,1,4,0,5,14],
-"classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#ad007318afadc512087f356866ab1c1e0":[10,0,1,4,0,5,0],
-"classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#ad1d06c5a89bfd50a88ccec21c8f9d399":[10,0,1,4,0,5,5],
-"classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#ad4257fd865fb2f7dd332ccf086106238":[10,0,1,4,0,5,12],
-"classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#adec6c08405c0195a30a6c602e1688ff7":[10,0,1,4,0,5,17],
-"classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#ae2c996ee18222c028b9a89c080948ba2":[10,0,1,4,0,5,3],
-"classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#af177f7f22ad6a3b4234fc743119cf8c2":[10,0,1,4,0,5,18],
-"classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#afe103c9d4793166e815e453813665020":[10,0,1,4,0,5,6],
-"classokw_1_1gui_1_1adapter_1_1_test___no_method___object.html":[10,0,1,4,0,7],
-"classokw_1_1gui_1_1adapter_1_1_test___no_method___object.html#a90cf9edcc4c49e19a6c68c75a6229ded":[10,0,1,4,0,7,0],
-"classokw_1_1gui_1_1adapter_1_1_test___no_method___object.html#afce4155cc5d24f405983de8415d236cd":[10,0,1,4,0,7,1]
+"classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html#aca845eccb00ccc3bba8f157ebe54fdcb":[10,0,1,4,0,5,14]
 };

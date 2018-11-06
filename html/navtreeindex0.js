@@ -1,6 +1,8 @@
 var NAVTREEINDEX0 =
 {
 ".html":[10,0,0],
+".html":[10,0,1],
+".html":[10,0,1,0],
 ".html":[10,0,1,1],
 ".html":[10,0,1,2],
 ".html":[10,0,1,3],
@@ -34,8 +36,6 @@ var NAVTREEINDEX0 =
 ".html":[10,0,1,16],
 ".html":[10,0,1,17],
 ".html":[10,0,1,18],
-".html":[10,0,1],
-".html":[10,0,1,0],
 "_all_core_tests_8java_source.html":[11,0,0,0,1,0,0,0,0],
 "_all_methods___multiple_values_8java_source.html":[11,0,0,0,1,0,0,1,0,0],
 "_all_methods___single_value_8java_source.html":[11,0,0,0,1,0,0,1,0,1],

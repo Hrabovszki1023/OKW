@@ -87,9 +87,6 @@ var hierarchy =
       [ "okw.calculator.Calculator_EN_HTMLUnitDriver_Test", "classokw_1_1calculator_1_1_calculator___e_n___h_t_m_l_unit_driver___test.html", null ],
       [ "okw.calculator.Calculator_EN_Safari_Test", "classokw_1_1calculator_1_1_calculator___e_n___safari___test.html", null ]
     ] ],
-    [ "ClassLoader", null, [
-      [ "okw.OKW_XmlReader", "classokw_1_1_o_k_w___xml_reader.html", null ]
-    ] ],
     [ "okw.Copy", "classokw_1_1_copy.html", null ],
     [ "okw.cucumber.CucumberTest", "classokw_1_1cucumber_1_1_cucumber_test.html", null ],
     [ "okw.core.CurrentObject_Test", "classokw_1_1core_1_1_current_object___test.html", null ],
@@ -186,6 +183,7 @@ var hierarchy =
     [ "okw.OKW_TestClipboard", "classokw_1_1_o_k_w___test_clipboard.html", null ],
     [ "okw.OKW_TimeOut", "classokw_1_1_o_k_w___time_out.html", null ],
     [ "okw.parser.OKW_VisitorTest", "classokw_1_1parser_1_1_o_k_w___visitor_test.html", null ],
+    [ "okw.OKW_XmlReader", "classokw_1_1_o_k_w___xml_reader.html", null ],
     [ "okw.OKW_XmlReaderTest", "classokw_1_1_o_k_w___xml_reader_test.html", null ],
     [ "okw.OKWLanguage", "classokw_1_1_o_k_w_language.html", null ],
     [ "okw.gui.OKWLocator", "classokw_1_1gui_1_1_o_k_w_locator.html", null ],
