@@ -194,7 +194,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     }
 
     /**
-     * \~german \brief Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented
+     * \~german
+     * Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented
      * von SetValue( FN, Val ) ausgelöst wird.
      * 
      * \~english \~ @author Zoltan Hrabovszki @date 2013.12.26
@@ -206,6 +207,38 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.SetValue( "NoMethodObj", "NoValue" );
+    }
+
+    /**
+     * \~german
+     * Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented
+     * von LogPlaceholder( FN ) ausgelöst wird.
+     * 
+     * \~english \~ @author Zoltan Hrabovszki @date 2013.12.26
+     */
+    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    public void tc_LogPlaceholder_OKWFrameObjectMethodNotImplemented() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        EN.LogPlaceholder( "NoMethodObj" );
+    }
+
+    /**
+     * \~german
+     * Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented
+     * von MemorizePlaceholder( FN, MemKey ) ausgelöst wird.
+     * 
+     * \~english \~ @author Zoltan Hrabovszki @date 2013.12.26
+     */
+    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    public void tc_MemorizePlaceholder_OKWFrameObjectMethodNotImplemented() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        EN.MemorizePlaceholder( "NoMethodObj", "myKey" );
     }
 
     /**
@@ -382,7 +415,6 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
     /**
     * \~german
-    *  \brief
     *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
     *  VerifyCaption( FN, ExpVal ) ausgelöst wird.
     * 
@@ -390,7 +422,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  \~
     *  @author Zoltan Hrabovszki
     *  @date 2016.05.07
-    */
+    **/
     @Test( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyLabel_OKWFrameObjectMethodNotImplemented() throws Exception
     {
@@ -433,6 +465,65 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     */
     @Test( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyLabelWCM_OKWFrameObjectMethodNotImplemented() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyLabelWCM( "NoMethodObj", "NoValue" );
+    }
+
+    /**
+    * \~german
+    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
+    *  VerifyCaption( FN, ExpVal ) ausgelöst wird.
+    * 
+    *  \~english
+    *  \~
+    *  @author Zoltan Hrabovszki
+    *  @date 2018-10-04
+    **/
+    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    public void TC_VerifyPlaceholder_OKWFrameObjectMethodNotImplemented() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyPlaceholder( "NoMethodObj", "NoValue" );
+    }
+
+    /**
+    * \~german
+    *  \brief
+    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
+    *  VerifyPlaceholderREGX( FN, ExpVal ) ausgelöst wird.
+    * 
+    *  \~english
+    *  \~
+    *  @author Zoltan Hrabovszki
+    *  @date 2018-10-04
+    */
+    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    public void TC_VerifyPlaceholderREGX_OKWFrameObjectMethodNotImplemented() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyPlaceholderREGX( "NoMethodObj", "NoValue" );
+    }
+
+    /**
+    * \~german
+    *  \brief
+    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
+    *  VerifyPlaceholderWCM( FN, ExpVal ) ausgelöst wird.
+    * 
+    *  \~english
+    *  \~
+    *  @author Zoltan Hrabovszki
+    *  @date 2018-10-04
+    */
+    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    public void TC_VerifyPlaceholderWCM_OKWFrameObjectMethodNotImplemented() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 

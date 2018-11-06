@@ -329,7 +329,38 @@ public class OK implements IOKW_State
             Log.LogFunctionEndDebug();
         }
     }
+    
+    /**
+     *  \copydoc IOKW_State::LogPlaceholder(String)
+     */
+    public void LogPlaceholder( String FN ) throws Exception
+    {
+        Log.LogFunctionStartDebug( "LogLabel", "FN", FN );
 
+        try
+        {
+            ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogPlaceholder();
+
+            Log.ResOpenList( "Log... " );
+
+            for ( String Value : ActualValues )
+            {
+                Log.LogPrint( "'" + Value + "'" );
+            }
+
+            Log.ResCloseList();
+        }
+        catch (Exception e)
+        {
+            this.handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+    
     /**
      *  \copydoc IOKW_State::LogSelected(String)
      */
@@ -689,6 +720,51 @@ public class OK implements IOKW_State
     }
 
     /**
+     *  \copydoc IOKW_State::MemorizePlaceholder(String,String)
+     */
+    public void MemorizePlaceholder( String FN, String MemKey ) throws Exception
+    {
+        Log.LogFunctionStartDebug( "MemorizePlaceholder", "FN", FN, "MemKey", MemKey );
+
+        try
+        {
+            if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || MemKey.equals( "" ) )
+            {
+                // Wenn fps_MemKeyName = IGNORE oder "" ist ->
+                // OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeLabel", "OKWNotAllowedValueException", MemKey ) );
+            }
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+            }            
+            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            {
+                // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+            }
+
+            else
+            {
+                ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizePlaceholder();
+
+                String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
+
+                MEM.set( MemKey, lvsToMemorize );
+            }
+        }
+        catch (Exception e)
+        {
+            this.handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+    /**
      *  \copydoc IOKW_State::MemorizeSelectedValue(String,String)
      */
     public void MemorizeSelectedValue( String FN, String MemKey ) throws Exception
@@ -1008,6 +1084,29 @@ public class OK implements IOKW_State
         }
     }
 
+    
+    /**
+     *  \copydoc IOKW_State::SelectChild(String)
+     */
+    public void SelectChild( String FN ) throws Exception
+    {
+        Log.LogFunctionStartDebug( "SelectChild", "FN", FN );
+
+        try
+        {
+            CO.setChildName( FN );
+        }
+        catch (Exception e)
+        {
+            this.handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+    
     /**
      *  \copydoc IOKW_State::Sequence(String,String,String)
      */
@@ -2303,7 +2402,7 @@ public class OK implements IOKW_State
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyLabel_TO(), myOKW.VerifyLabel_PT() );
 
-                Actual = verifyREGX( TimeOut, lvlsExpected, () ->
+                Actual = verify( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyLabel();
                 } );
@@ -2437,6 +2536,204 @@ public class OK implements IOKW_State
                 Actual = verifyREGX( TimeOut, lvlsExpected, () ->
                 {
                     return MyObject.VerifyLabel();
+                } );
+
+                verificationREGX( Actual, lvlsExpected );
+            }
+        }
+        catch (Exception e)
+        {
+            this.handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+
+    /**
+     *  \copydoc IOKW_State::VerifyLabel(String,String)
+     */
+    public void VerifyPlaceholder( String FN, String ExpVal ) throws Exception
+    {
+
+        ArrayList<String> lvlsExpected = null;
+        ArrayList<String> Actual = null;
+        Log.LogFunctionStartDebug( "VerifyPlaceholder", "FN", FN, "ExpVal", ExpVal );
+
+        try
+        {
+            // Prüfen ob ignoriert werden muss...
+            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
+            {
+                // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
+                // auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else
+            {
+                if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+                {
+                    lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
+                }
+                else
+                {
+                    // Split giveneExpected Value
+                    lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                    lvlsExpected = Parser.ParseMe( lvlsExpected );
+                }
+
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
+
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
+                OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyPlaceholder_TO(), myOKW.VerifyPlaceholder_PT() );
+
+                Actual = verify( TimeOut, lvlsExpected, () ->
+                {
+                    return MyObject.VerifyPlaceholder();
+                } );
+                verification( Actual, lvlsExpected );
+            }
+        }
+        catch (Exception e)
+        {
+            this.handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+    /**
+     *   \copydoc IOKW_State::VerifyPlaceholderWCM(String,String)
+     */
+    public void VerifyPlaceholderWCM( String FN, String ExpVal ) throws Exception
+    {
+
+        ArrayList<String> lvlsExpected = null;
+        ArrayList<String> Actual = null;
+
+        Log.LogFunctionStartDebug( "VerifyLabelWCM", "FN", FN, "fpsExpected", ExpVal );
+
+        try
+        {
+            // Prüfen ob ignoriert werden muss...
+            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
+            {
+                // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else
+            {
+                if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+                {
+                    lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
+                }
+                else
+                {
+                    // Split giveneExpected Value
+                    lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                    lvlsExpected = Parser.ParseMe( lvlsExpected );
+                }
+
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
+
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
+                OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyPlaceholder_TO(), myOKW.VerifyPlaceholder_PT() );
+
+                Actual = verifyWCM( TimeOut, lvlsExpected, () ->
+                {
+                    return MyObject.VerifyPlaceholder();
+                } );
+
+                verificationWCM( Actual, lvlsExpected );
+            }
+        }
+        catch (Exception e)
+        {
+            this.handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+    /**
+     *   \copydoc IOKW_State::VerifyPlaceholderREGX(String,String)
+     */
+    public void VerifyPlaceholderREGX( String FN, String ExpVal ) throws Exception
+    {
+
+        ArrayList<String> lvlsExpected = null;
+        ArrayList<String> Actual = null;
+
+        Log.LogFunctionStartDebug( "VerifyPlaceholderREGX", "FN", FN, "fpsExpected", ExpVal );
+
+        try
+        {
+            // Prüfen ob ignoriert werden muss...
+            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
+            {
+                // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }            
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else
+            {
+                if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+                {
+                    lvlsExpected = new ArrayList<String>();
+                    lvlsExpected.add( "" );
+                }
+                else
+                {
+                    // Split giveneExpected Value
+                    lvlsExpected = OKW_Const_Sngltn.getInstance().SplitSEP( ExpVal );
+                    lvlsExpected = Parser.ParseMe( lvlsExpected );
+                }
+
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
+
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
+                OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyPlaceholder_TO(), myOKW.VerifyPlaceholder_PT() );
+
+                Actual = verifyREGX( TimeOut, lvlsExpected, () ->
+                {
+                    return MyObject.VerifyPlaceholder();
                 } );
 
                 verificationREGX( Actual, lvlsExpected );

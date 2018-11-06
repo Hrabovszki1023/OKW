@@ -90,6 +90,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         this.iframeID = iframeID;
     }
 
+    
    /** 
     * \~german
     * Konstruktor der Klasse. iframeID wird auf den Wert "" (empty string) gesetzt.
@@ -395,12 +396,20 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
-    /**
-     *  Liest den aktuellen Wert/Text aus dem HTML-Tag.
+    /** \~german
+     *  Liest den aktuellen sichtbaren Wert/Text des HTML-Tags aus.
      * 
-     *  Es wird das Attribute "textContent" ausgelesen.
-     *
-     *  @return
+     *  Es wird das Attribut "textContent" ausgelesen.
+     *  @return Wert des Attributs "textContent"
+     *  
+     *  \~english
+     *  Reads the current visible value/text of the HTML tag.
+     *  
+     *  It reads the attribute "textContent".
+     *  
+     *  @return The value of the attribute "textContent"
+     *  
+     *  \~
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.14
      */
@@ -426,6 +435,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
+    
     /** \~german
     *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refLogCaption aufgerufen wird.
     *  
@@ -576,6 +586,39 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  @date 2013.12.07
     */
     public ArrayList<String> LogLabel()
+    {
+        ArrayList<String> lvLsReturn = null;
+
+        try
+        {
+            this.LogFunctionStartDebug( "LogLabel" );
+
+            lvLsReturn = this.getLabel();
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvLsReturn );
+        }
+
+        return lvLsReturn;
+    }
+
+    /**  \~german
+    *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refLogPlaceholder aufgerufen wird.
+    *  
+    *  Diese Methode ermittelt den textuellen Inhalt des zugehörigen \ref refPlaceholder s.
+    *  Das Loggen selbst wird in der aufrufenden Methode okw.core.OK.LogLabel(String) (zentral) vorgenommen.
+    *  
+    *  Diese Methode ist der Einstiegspunkt für Anpassungen von \ref refLogLabel durch Methoden überschreibung.
+    *  
+    *  @return Rückgabe des label-Textes. Interface schreibt ein Listen-Element als Rückgabewert vor.
+    *  
+    *  \~english
+    *  \~
+    *  @author Zoltán Hrabovszki
+    *  @date 2013.12.07
+    */
+    public ArrayList<String> LogPlaceholder()
     {
         ArrayList<String> lvLsReturn = null;
 
@@ -781,12 +824,13 @@ public class SeAnyChildWindow extends AnyChildwindow
 
     /**
     * \~german
-     *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refLogIsActive aufgerufen wird.
+     *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refMemorizeIsActive aufgerufen wird.
      *  
      *  Diese Methode ermittelt, ob das aktuelle Objekt Active.
-     *  Das Speichern des Wertes in der aufrufenden Methode okw.core.OK.LogIsActive(String) (zentral) vorgenommen.
+     *  Das Speichern des Wertes in der aufrufenden Methode okw.core.OK.MemorizeIsActive(String) (zentral) 
+     *  vorgenommen.
      *  
-     *  Diese Methode ist der Einstiegspunkt für Anpassungen von \ref refLogIsActive durch Methoden überschreibung.
+     *  Diese Methode ist der Einstiegspunkt für Anpassungen von \ref refMemorizeIsActive durch Methoden überschreibung.
      *  
      *  @return true falls das Objekt aktive ist, sonst false.
      *
@@ -814,12 +858,12 @@ public class SeAnyChildWindow extends AnyChildwindow
     }
 
     /**  \~german
-    *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refLogLabel aufgerufen wird.
+    *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refMemorizeLabel aufgerufen wird.
     *  
     *  Diese Methode ermittelt den textuellen Inhalt des zugehörigen \ref refLabel s.
-    *  Das Speichern des Wertes selbst wird in der aufrufenden Methode okw.core.OK.LogLabel(String) (zentral) vorgenommen.
+    *  Das Speichern des Wertes selbst wird in der aufrufenden Methode okw.core.OK.MemorizeLabel(String) (zentral) vorgenommen.
     *  
-    *  Diese Methode ist der Einstiegspunkt für Anpassungen von \ref refLogLabel durch Methoden überschreibung.
+    *  Diese Methode ist der Einstiegspunkt für Anpassungen von \ref refMemorizeLabel durch Methoden überschreibung.
     *  
     *  @return Rückgabe des label-Textes. Interface schreibt ein Listen-Element als Rückgabewert vor.
     *  
@@ -846,7 +890,41 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
-   /**
+    /**  \~german
+    *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refMemorizePlaceholder aufgerufen wird.
+    *  
+    *  Diese Methode ermittelt den textuellen Inhalt des zugehörigen \ref refPlaceholder s.
+    *  Das Speichern des Wertes selbst wird in der aufrufenden Methode okw.core.OK.MemorizePlaceholder(String) (zentral) vorgenommen.
+    *  
+    *  Diese Methode ist der Einstiegspunkt für Anpassungen von \ref refMemorizePlaceholder durch Methoden überschreibung.
+    *  
+    *  @return Rückgabe des Placeholder-Textes. Interface schreibt ein Listen-Element als Rückgabewert vor.
+    *  
+    *  \~english
+    *  \~
+    *  @author Zoltán Hrabovszki
+    *  @date 2018.10.19
+    */
+    public ArrayList<String> MemorizePlaceholder()
+    {
+        ArrayList<String> lvLsReturn = null;
+
+        try
+        {
+            this.LogFunctionStartDebug( "MemorizePlaceholder" );
+
+            lvLsReturn = this.getPlaceholder();
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvLsReturn );
+        }
+
+        return lvLsReturn;
+    }
+
+    
+    /**
     * \~german
     *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refMemorizeTooltip aufgerufen wird.
     *  
@@ -1247,7 +1325,6 @@ public class SeAnyChildWindow extends AnyChildwindow
         {
             this.LogFunctionStartDebug( "VerifyHasFocus" );
 
-            // Nun mit dem erwarteten Sollwert und GetHasFocus ggf. auf den Wert Warten.
             lvbReturn = this.getHasFocus();
         }
         finally
@@ -1257,16 +1334,15 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvbReturn;
     }
 
-    /**  
-     * \~german
+   /**  
+    * \~german
     *  Ermittelt den textuellen Inhalt des Labels für Prüfewert.
     *  
-    *  @remark Sollte der Erwartetet Wert zunächt nicht mit dem aktuellen Wert nicht übereinstimmen,
+    *  @remark Sollte der erwartete Wert zunächt nicht mit dem aktuellen Wert nicht übereinstimmen,
     *  dann wird gewartet bis entweder der erwartete Wert sich im GUI objekt einstellt
     *  oder der TimeOut erreicht wird.<br/>
     *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
     *  
-    *  @param fplsExpectedValue'>Erwarteter Wert, auf den ggf. bis zum TimeOut gewartet wird.
     *  @return Rückgabe des Textuellen Inhaltes des Labels.
     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
     *  \~english
@@ -1282,7 +1358,6 @@ public class SeAnyChildWindow extends AnyChildwindow
         {
             this.LogFunctionStartDebug( "VerifyLabel" );
 
-            // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
             lvLsReturn = this.getLabel();
         }
         finally
@@ -1293,6 +1368,49 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
+    
+    /**  
+     * \~german
+     *  Ermittelt den Text-Inhalt des Platzhalter für VerifyPlaceholder().
+     *  
+     *  @remark Sollte der erwartete Wert zunächst nicht mit dem aktuellen Wert übereinstimmen,
+     *  dann wird gewartet bis entweder der erwartete Wert sich im GUI Objekt einstellt
+     *  oder der TimeOut erreicht wird.<br>
+     *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @param fplsExpectedValue' Erwarteter Wert, auf den ggf. bis zum TimeOut gewartet wird.
+     *  @return Rückgabe des Textuellen Inhaltes des Labels.
+     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  \~english
+     *  Returns the text content of the placeholder for VerifyPlaceholder().
+     *  
+     *  @remark If the expected value does not match the current value,
+     *  the GUI waits until either the expected value is found in the GUI object
+     *  or the TimeOut is reached.<br>
+     *  This method is the entry point for CheckPlacholder() adjustments by method overwriting.
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2018.10.05
+     */
+     public ArrayList<String> VerifyPlaceholder()
+     {
+         ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+         try
+         {
+             this.LogFunctionStartDebug( "VerifyPlaceholder" );
+
+             lvLsReturn = this.getPlaceholder();
+         }
+         finally
+         {
+             this.LogFunctionEndDebug( lvLsReturn );
+         }
+
+         return lvLsReturn;
+     }
+
+     
     /** \~german
     *  Ermittelt den textuellen Inhalt des ToolTips für Prüfewert.
     *  
@@ -1313,7 +1431,6 @@ public class SeAnyChildWindow extends AnyChildwindow
         {
             this.LogFunctionStartDebug( "VerifyTooltip" );
 
-            // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
             lvLsReturn = this.getTooltip();
         }
         finally
@@ -1324,7 +1441,8 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
-    /**  \brief
+    /**
+     * \~german
     *  Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
     *  
     *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
@@ -1366,7 +1484,7 @@ public class SeAnyChildWindow extends AnyChildwindow
             this.MyLogger.LogPrint( "Locator: '" + this.getLocator() + "'" );
             this.MyLogger.ResCloseList();
 
-            String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "getCaption()" );
+            String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "WaitForMe()" );
             throw new OKWGUIObjectNotFoundException( lvsLM );
         }
         return lvbReturn;

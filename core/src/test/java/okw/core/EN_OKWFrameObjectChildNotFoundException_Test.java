@@ -196,6 +196,44 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
     EN.SetFocus( "IsNotDefindeInRechner" );
   }
 
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch LogPlaceholder
+   *  ausgelöst wird, wenn das Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_LogPlaceholder_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.LogPlaceholder( "IsNotDefindeInRechner" );
+  }
+
+  /**
+   *  \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch MemorizePlaceholder
+   *  ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_MemorizePlaceholder_OKWFrameObjectChildNotFoundException()
+      throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.MemorizePlaceholder( "IsNotDefindeInRechner", "Key" );
+  }
 
   /**
    *  \~german
@@ -350,6 +388,61 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyLabelREGX( "IsNotDefindeInRechner", "Value" );
+  }
+
+  /**
+   * \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyPlaceholder ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyPlaceholder_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyPlaceholder( "IsNotDefindeInRechner", "Value" );
+  }
+  
+  /**
+   * \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyPlaceholder ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyPlaceholderWCM_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyPlaceholderWCM( "IsNotDefindeInRechner", "Value" );
+  }
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyCaption ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyPlaceholderREGX_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyPlaceholderREGX( "IsNotDefindeInRechner", "Value" );
   }
 
   /**

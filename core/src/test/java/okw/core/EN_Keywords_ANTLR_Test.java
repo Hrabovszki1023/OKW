@@ -49,8 +49,7 @@ import org.junit.rules.TestName;
 
 
 /** \~german
- * \brief
- * Testfälle für die Prüfung der ANTLR-Funktionalitäten in den Schlüsselwörtern.
+ * Testfälle für die Prüfung der ANTLR-Funktionalitäten der Schlüsselwörtern.
  * 
  * Geprüft wird:
  * * Gemerkte werte
@@ -58,9 +57,14 @@ import org.junit.rules.TestName;
  * 
  *
  * \~english
+ * Test cases for checking the ANTLR functionalities of the keywords.
+ * 
+ * Is checked:
+ *  * Notes values
+ *  * environmental variables
  * \~
  * \author Zoltan Hrabovszki
- * \date 2016.05.07
+ * \date 2016-05-07
  */
 public class EN_Keywords_ANTLR_Test
 {
@@ -101,13 +105,13 @@ public class EN_Keywords_ANTLR_Test
     }
 
     /** \~german
-     *  \brief
      *  Prüft das Schlüsselwort "BeginTest" mit dem Testziel, dass der aktuelle Testfallname unter dem MemKey "TCN" (TestCaseName) gespeichert wird.
      * 
      *  \~english
+     *  Checks the keyword "BeginTest" with the test objective that the current test case name is stored under the MemKey "TCN" (TestCaseName).
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  @date 2016-05-07
      */
     @Test
     public void tc_BeginTest_TestCaseName() throws Exception
@@ -117,12 +121,13 @@ public class EN_Keywords_ANTLR_Test
     }
 
     /** \~german
-     *  Prüft das Keyword Select mit dem Testziel ob gemerkte Werte richtig eingesetzt werden.
+     *  Prüft das Keyword Select() mit dem Testziel ob gemerkte Werte richtig eingesetzt werden.
      * 
      *  \~english
+     *  Checks the keyword Select() with the test objective of whether the memorized values are used correctly.
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  @date 2016-05-07
      */
     @Test
     public void tc_Select_MemorizedValue() throws Exception
@@ -151,16 +156,17 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "Select()", myClipBoard.getMethod() );
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft das Keyword Select mit dem Ziel, ob Umgebungsvariablen richtig eingesetzt werden.
-    ///
-    /// Als umgebungsvariable wird 'USER' verwendet.
-    ///
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2016.05.07
+    /**
+     *  \~german
+     *  Prüft das Keyword Select() mit dem Ziel, ob Umgebungsvariablen richtig eingesetzt werden.
+     * 
+     *  Als umgebungsvariable wird '${TCN}' verwendet.
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2016-05-07
+     */
     @Test
     public void tc_Select_EnviromentVar() throws Exception
     {
@@ -190,14 +196,15 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "Select()", myClipBoard.getMethod() );
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft das Keyword Select mit dem Ziel ob gemerkte Werte richtig eingesetzt werden.
-    ///
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2016.05.07
+    /** \~german
+     *  Prüft das Schlüsselwort Select mit dem Ziel ob gemerkte Werte richtig eingesetzt werden.
+     * 
+     *  \~english
+     *  Checks the keyword Select with the aim to ensure that the values are used correctly.
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2016-05-07
+     */
     @Test
     public void tc_Typekey_MemorizedValue() throws Exception
     {
@@ -560,7 +567,6 @@ public class EN_Keywords_ANTLR_Test
 
     /**
     * \~german
-    * \brief
     *
     * \~english
     * \~
@@ -638,9 +644,12 @@ public class EN_Keywords_ANTLR_Test
     }
 
     /**
-     * \~german \brief
+     * \~german
      *
-     * \~english \~ \author Zoltan Hrabovszki \date 2013.12.26
+     * \~english
+     * \~ 
+     * \author Zoltan Hrabovszki
+     * \date 2013.12.26
      */
     @Test
     public void tc_VerifyLabelREGX_MemorizedValue() throws Exception
@@ -670,6 +679,122 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyLabel()", myClipBoard.getMethod() );
     }
+
+    /**
+    * \~german
+    *
+    * \~english
+    * \~
+    * \author Zoltan Hrabovszki
+    * \date 2013.12.26
+    */
+    @Test
+    public void tc_VerifyPlaceholder_MemorizedValue() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        // Set Value in "Memory"
+        OKW_Memorize_Sngltn.getInstance().set( "Key1", "The one and only Placeholder" );
+
+        EN.SetValue( "All_MethodsObj", "The one and only Placeholder" );
+        // Kommen auch mehrere Sollwerte im Objekt ab?
+        EN.VerifyPlaceholder( "All_MethodsObj", "${Key1}" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        //assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyPlaceholder()", myClipBoard.getMethod() );
+    }
+
+    /**
+    * \~german
+    * \brief
+    *
+    * \~english
+    * \~
+    * \author Zoltan Hrabovszki
+    * \date 2013.12.26
+    */
+    @Test
+    public void tc_VerifyPlaceholderWCM_MemorizedValue() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        // Set Value in "Memory"
+        OKW_Memorize_Sngltn.getInstance().set( "Key1", "* one and * Placeholder" );
+
+        // Wert in "All_MethodsObj" setzen.
+        EN.SetValue( "All_MethodsObj", "The one and only Placeholder" );
+        // Prüfung des Schlüsselwortes?
+        EN.VerifyPlaceholderWCM( "All_MethodsObj", "${Key1}" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        //assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyPlaceholder()", myClipBoard.getMethod() );
+    }
+
+    /**
+     * \~german
+     *
+     * \~english
+     * \~ 
+     * \author Zoltan Hrabovszki
+     * \date 2013.12.26
+     */
+    @Test
+    public void tc_VerifyPlaceholderREGX_MemorizedValue() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        // Set Value in "Memory"
+        OKW_Memorize_Sngltn.getInstance().set( "Key1", ".* one and .* Placeholder" );
+
+        EN.SetValue( "All_MethodsObj", "The one and only Placeholder" );
+        EN.VerifyPlaceholderREGX( "All_MethodsObj", "${Key1}" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        // assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyPlaceholder()", myClipBoard.getMethod() );
+    }
+
     /**
      *  \~german
      *  \brief

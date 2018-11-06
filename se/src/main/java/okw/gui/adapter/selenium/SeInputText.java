@@ -143,7 +143,7 @@ public class SeInputText extends SeAnyChildWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  @date 2013-12-07
      */
     @Override
     public ArrayList<String> getCaption()
@@ -151,6 +151,46 @@ public class SeInputText extends SeAnyChildWindow
         return getValue();
     }
 
+    /** \~german
+     *  Liest den Placeholder des input-Tags aus.
+     * 
+     *  Es wird das Attribut "placeholder" ausgelesen.
+     *  @return Wert des Attributs "placeholder"
+     *  
+     *  \~english
+     *  Reads the current placeholder of the input-tag.
+     *  
+     *  It reads the attribute "placeholder".
+     *  
+     *  @return The value of the attribute "placeholder"
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2018.10.28
+     */
+    public ArrayList<String> getPlaceholder()
+    {
+        ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+        try
+        {
+            this.LogFunctionStartDebug( "getPlaceholder" );
+
+            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.WaitForMe();
+
+            // Get Value from TextField and put this into the return ArrayList<String>
+            lvLsReturn.add( this.Me().getAttribute( "placeholder" ) );
+        }
+        finally
+        {
+            this.LogFunctionEndDebug( lvLsReturn );
+        }
+
+        return lvLsReturn;
+    }    
+
+    
     /** \~german
      *  Ermittelt den Wert des Textfeldes, welches dem sichtbaren .
      *  
@@ -191,7 +231,8 @@ public class SeInputText extends SeAnyChildWindow
         return lvLsReturn;
     }
 
-    public void setAttribute( WebElement elem, String value )
+    
+    public void set__Attribute( WebElement elem, String value )
     {
         JavascriptExecutor js = ( JavascriptExecutor ) SeDriver.getInstance().driver;
 

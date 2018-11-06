@@ -9,6 +9,7 @@ public interface IGUIChildwindow
     Boolean getHasFocus();
     Boolean getIsActive();
     ArrayList<String> getLabel();
+    ArrayList<String> getPlaceholder();
     ArrayList<String> getTooltip();
     ArrayList<String> getValue();
     
@@ -20,6 +21,7 @@ public interface IGUIChildwindow
     boolean LogHasFocus( );
     boolean LogIsActive( );
     ArrayList<String> LogLabel( );
+    ArrayList<String> LogPlaceholder( );
     ArrayList<String> LogSelected( );
     ArrayList<String> LogTablecellValue( String COL, String ROW );
     ArrayList<String> LogTooltip( );
@@ -30,6 +32,7 @@ public interface IGUIChildwindow
     boolean MemorizeHasFocus( );
     boolean MemorizeIsActive( );
     ArrayList<String> MemorizeLabel( );
+    ArrayList<String> MemorizePlaceholder( );
     ArrayList<String> MemorizeSelectedValue( );
     ArrayList<String> MemorizeTablecellValue( String COL, String ROW );
     ArrayList<String> MemorizeTooltip( );
@@ -45,6 +48,7 @@ public interface IGUIChildwindow
     void TypeKey( ArrayList<String> Val );
 
     ArrayList<String> VerifyLabel();
+    ArrayList<String> VerifyPlaceholder();
     ArrayList<String> VerifyCaption();
     ArrayList<String> VerifyTooltip();
     ArrayList<String> VerifyValue();

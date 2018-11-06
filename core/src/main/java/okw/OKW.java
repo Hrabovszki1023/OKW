@@ -112,6 +112,23 @@ public @interface OKW
 
   /**
    * \~german
+   * <b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyPlaceholder.
+   *
+   * Die Periodendauer des Pollens wird in Millisekunden angegeben.
+   * Default ist 1000ms (=1s).
+   */
+  int VerifyPlaceholder_PT() default 1000;
+
+  
+  /**
+   * \~german
+   * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyPlaceholder.
+   * Default ist 30s.
+   */
+  int VerifyPlaceholder_TO() default 30;
+
+  /**
+   * \~german
    * <b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyLabel.
    *
    * Die Periodendauer des Pollens wird in Millisekunden angegeben.

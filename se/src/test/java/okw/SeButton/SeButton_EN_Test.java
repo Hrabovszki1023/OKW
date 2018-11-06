@@ -921,6 +921,73 @@ import org.junit.rules.TestName;
         }
 
         /** \~german
+        *
+        * Schlüsselwortes VerifyPlaceholder für SeButton sollte OKWFrameObjectMethodNotImplemented auslösen
+        * 
+        * \~
+        * @date 2017-06-18
+        * 
+        * @author Zoltan Hrabovszki
+        */
+       @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+       public void tcVerifyPlaceholder() throws Exception
+       {
+               EN.BeginTest( name.getMethodName() );
+               EN.StartApp( ApplicationName );
+               EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
+
+             // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
+               EN.SelectWindow("InputButton not Active");
+
+               EN.VerifyPlaceholder("Text_1", "Label für Button1: ");
+       }
+
+       /** \~german
+        *
+        * Schlüsselwortes VerifyPlaceholderWCM für SeButton sollte OKWFrameObjectMethodNotImplemented auslösen
+        * 
+        * \~
+        * @date 2017-06-18
+        * 
+        * @author Zoltan Hrabovszki
+        */
+       @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+       public void tcVerifyPlaceholderWCM() throws Exception
+       {
+               EN.BeginTest( name.getMethodName() );
+               EN.StartApp( ApplicationName );
+               EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
+
+             // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
+               EN.SelectWindow("InputButton not Active");
+
+               EN.VerifyPlaceholderWCM("Text_1", "Label für Button#: ");
+       }
+
+       /** \~german
+        *
+        * Schlüsselwortes VerifyPlaceholderREGX für SeButton sollte OKWFrameObjectMethodNotImplemented auslösen
+        * 
+        * 
+        * \~
+        * @date 2018-10-28
+        * 
+        * @author Zoltan Hrabovszki
+        */
+       @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+       public void tcVerifyPlaceholderREGX() throws Exception
+       {
+               EN.BeginTest( name.getMethodName() );
+               EN.StartApp( ApplicationName );
+               EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
+
+             // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
+               EN.SelectWindow("InputButton not Active");
+
+               EN.VerifyPlaceholderREGX("Text_1", "Label für Button1: ");
+       }
+
+        /** \~german
          *
          * Test des Schlüsselwortes VerifyToolTip für den GUI-Adapter SeButton.
          * 

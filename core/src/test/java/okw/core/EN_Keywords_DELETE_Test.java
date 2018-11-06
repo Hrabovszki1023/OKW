@@ -1203,4 +1203,47 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
 
   }
 
+  /* \~german
+   * Prüft "DELETE" mit zusätlich Zeichen für das Schlüsselwort
+   * MemorizePlaceholder(strng,string) ob die
+   * Ausname OKWNotAllowedValueException ausgelöst wird.
+   *
+   * \~english
+   * Checks "DELETE" for the keyword MemorizePlaceholder(strng,string)
+   * if the exception OKWNotAllowedValueException is thrown.
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018.10.05
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcMemorizePlaceholder_DELETE_2_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.MemorizePlaceholder( "All_MethodsObj", "abc${DELETE}abc" );
+
+  }
+
+  /* \~german
+   * Prüft "DELETE" für das Schlüsselwort MemorizePlaceholder(strng,string) ob die
+   * Ausname OKWNotAllowedValueException ausgelöst wird.
+   *
+   * \~english
+   * Checks "DELETE" for the keyword MemorizePlaceholder(strng,string)
+   * if the exception OKWNotAllowedValueException is thrown.
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018.10.04
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcMemorizePlaceholder_DELETE_OKWNotAllowedValueException() throws Exception
+  {
+
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.MemorizePlaceholder( "All_MethodsObj", "${DELETE}" );
+  }
+
 }

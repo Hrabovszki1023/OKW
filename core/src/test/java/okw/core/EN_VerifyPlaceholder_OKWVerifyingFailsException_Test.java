@@ -52,7 +52,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 
-public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
+public class EN_VerifyPlaceholder_OKWVerifyingFailsException_Test {
 
   static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
   static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
@@ -109,11 +109,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabel_OKWVerifyingFailsException_SV01() throws Exception {
+  public void TC_VerifyPlaceholder_OKWVerifyingFailsException_SV01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabel( "All_MethodsObj", "Tha one and only Value" );
+    EN.VerifyPlaceholder( "All_MethodsObj", "Tha one and only Value" );
   }
   
   /**
@@ -131,11 +131,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabel_OKWVerifyingFailsException_SV02() throws Exception {
+  public void TC_VerifyPlaceholder_OKWVerifyingFailsException_SV02() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabel( "All_MethodsObj", "The one andX only Value" );
+    EN.VerifyPlaceholder( "All_MethodsObj", "The one andX only Value" );
   }
  
   
@@ -154,11 +154,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabel_OKWVerifyingFailsException_SV03() throws Exception {
+  public void TC_VerifyPlaceholder_OKWVerifyingFailsException_SV03() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabel( "All_MethodsObj", "The one an only Value" );
+    EN.VerifyPlaceholder( "All_MethodsObj", "The one an only Value" );
   }
 
   
@@ -177,11 +177,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabel_OKWVerifyingFailsException_MV01() throws Exception {
+  public void TC_VerifyPlaceholder_OKWVerifyingFailsException_MV01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabel( "AllMethods_MultipleValues", "1. Value${SEP}X. Value${SEP}3. Value" );
+    EN.VerifyPlaceholder( "AllMethods_MultipleValues", "1. Value${SEP}X. Value${SEP}3. Value" );
   }
 
 
@@ -200,11 +200,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabel_OKWVerifyingFailsException_MV02() throws Exception {
+  public void TC_VerifyPlaceholder_OKWVerifyingFailsException_MV02() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabel( "AllMethods_MultipleValues", "1. Value${SEP}2. Value" );
+    EN.VerifyPlaceholder( "AllMethods_MultipleValues", "1. Value${SEP}2. Value" );
   }
 
   /**
@@ -222,11 +222,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabel_OKWVerifyingFailsException_MV03() throws Exception {
+  public void TC_VerifyPlaceholder_OKWVerifyingFailsException_MV03() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabel( "AllMethods_MultipleValues", "1. Value${SEP}2. Value${SEP}3. Value${SEP}4. Value" );
+    EN.VerifyPlaceholder( "AllMethods_MultipleValues", "1. Value${SEP}2. Value${SEP}3. Value${SEP}4. Value" );
   }
   
   /**
@@ -244,11 +244,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelWCM_OKWVerifyingFailsException_M01() throws Exception {
+  public void TC_VerifyPlaceholderWCM_OKWVerifyingFailsException_M01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelWCM( "All_MethodsObj", "Tha one and only Value" );
+    EN.VerifyPlaceholderWCM( "All_MethodsObj", "Tha one and only Value" );
   }
   
   
@@ -267,11 +267,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelWCM_OKWVerifyingFailsException_SV01() throws Exception {
+  public void TC_VerifyPlaceholderWCM_OKWVerifyingFailsException_SV01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelWCM( "All_MethodsObj","Tha one and only Value" );
+    EN.VerifyPlaceholderWCM( "All_MethodsObj","Tha one and only Value" );
   }
 
   /**
@@ -289,11 +289,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelWCM_OKWVerifyingFailsException_SV02() throws Exception {
+  public void TC_VerifyPlaceholderWCM_OKWVerifyingFailsException_SV02() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelWCM( "All_MethodsObj","The oneX and only Value" );
+    EN.VerifyPlaceholderWCM( "All_MethodsObj","The oneX and only Value" );
   }
   
   /**
@@ -311,11 +311,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelWCM_OKWVerifyingFailsException_SV03() throws Exception {
+  public void TC_VerifyPlaceholderWCM_OKWVerifyingFailsException_SV03() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelWCM( "All_MethodsObj", "The one and only Value${SEP}The one and only Value" );
+    EN.VerifyPlaceholderWCM( "All_MethodsObj", "The one and only Value${SEP}The one and only Value" );
   }
   
   /**
@@ -333,11 +333,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelWCM_OKWVerifyingFailsException_MV01() throws Exception {
+  public void TC_VerifyPlaceholderWCM_OKWVerifyingFailsException_MV01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelWCM( "AllMethods_MultipleValues", "?. Value${SEP}X. Value${SEP}?. Value" );
+    EN.VerifyPlaceholderWCM( "AllMethods_MultipleValues", "?. Value${SEP}X. Value${SEP}?. Value" );
   }
   
   /**
@@ -355,11 +355,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelWCM_OKWVerifyingFailsException_MV02() throws Exception {
+  public void TC_VerifyPlaceholderWCM_OKWVerifyingFailsException_MV02() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelWCM( "AllMethods_MultipleValues", "?. XValue${SEP}?. X Value${SEP}?. XValue" );
+    EN.VerifyPlaceholderWCM( "AllMethods_MultipleValues", "?. XValue${SEP}?. X Value${SEP}?. XValue" );
   }
   
   /**
@@ -377,11 +377,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelWCM_OKWVerifyingFailsException_MV03() throws Exception {
+  public void TC_VerifyPlaceholderWCM_OKWVerifyingFailsException_MV03() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelWCM( "AllMethods_MultipleValues", "?. Value${SEP}?. Value" );
+    EN.VerifyPlaceholderWCM( "AllMethods_MultipleValues", "?. Value${SEP}?. Value" );
   }
   
   /**
@@ -399,11 +399,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelWCM_OKWVerifyingFailsException_MV04() throws Exception {
+  public void TC_VerifyPlaceholderWCM_OKWVerifyingFailsException_MV04() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelWCM( "AllMethods_MultipleValues", "?. Value${SEP}?. Value${SEP}?. Value${SEP}?. Value" );
+    EN.VerifyPlaceholderWCM( "AllMethods_MultipleValues", "?. Value${SEP}?. Value${SEP}?. Value${SEP}?. Value" );
   }
   
   
@@ -422,7 +422,7 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelREGX_OKWVerifyingFailsException_SV01() throws Exception {
+  public void TC_VerifyPlaceholderREGX_OKWVerifyingFailsException_SV01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -444,11 +444,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelREGX_OKWVerifyingFailsException_SV02() throws Exception {
+  public void TC_VerifyPlaceholderREGX_OKWVerifyingFailsException_SV02() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelREGX( "All_MethodsObj", "The oneX and only Value" );
+    EN.VerifyPlaceholderREGX( "All_MethodsObj", "The oneX and only Value" );
   }
   
   /**
@@ -466,11 +466,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelREGX_OKWVerifyingFailsException_SV03() throws Exception {
+  public void TC_VerifyPlaceholderREGX_OKWVerifyingFailsException_SV03() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelREGX( "All_MethodsObj", "The one and only Value${SEP}The one and only Value" );
+    EN.VerifyPlaceholderREGX( "All_MethodsObj", "The one and only Value${SEP}The one and only Value" );
   }
   
   /**
@@ -488,11 +488,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelREGX_OKWVerifyingFailsException_MV01() throws Exception {
+  public void TC_VerifyPlaceholderREGX_OKWVerifyingFailsException_MV01() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}X. Value${SEP}.\\. Value" );
+    EN.VerifyPlaceholderREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}X. Value${SEP}.\\. Value" );
   }
   
   /**
@@ -510,11 +510,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelREGX_OKWVerifyingFailsException_MV02() throws Exception {
+  public void TC_VerifyPlaceholderREGX_OKWVerifyingFailsException_MV02() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelREGX( "AllMethods_MultipleValues", ".\\. XValue${SEP}.\\. X Value${SEP}.\\. XValue" );
+    EN.VerifyPlaceholderREGX( "AllMethods_MultipleValues", ".\\. XValue${SEP}.\\. X Value${SEP}.\\. XValue" );
   }
   
   /**
@@ -532,11 +532,11 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelREGX_OKWVerifyingFailsException_MV03() throws Exception {
+  public void TC_VerifyPlaceholderREGX_OKWVerifyingFailsException_MV03() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}.\\. Value" );
+    EN.VerifyPlaceholderREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}.\\. Value" );
   }
   
   /**
@@ -554,10 +554,10 @@ public class EN_VerifyLabel_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyLabelREGX_OKWVerifyingFailsException_MV04() throws Exception {
+  public void TC_VerifyPlaceholderREGX_OKWVerifyingFailsException_MV04() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}.\\. Value${SEP}.\\. Value${SEP}.\\. Value" );
+    EN.VerifyPlaceholderREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}.\\. Value${SEP}.\\. Value${SEP}.\\. Value" );
   }
 }

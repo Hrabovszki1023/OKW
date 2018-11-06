@@ -326,6 +326,22 @@ public class Core implements IOKW_State
     }
 
     /**
+     *  \copydoc IOKW_State::LogPlaceholder(String)
+     */
+    public void LogPlaceholder( String FN ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "LogPlaceholder", "KeyWordName" ), FN );
+            this.CurrentState.LogPlaceholder( FN );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+
+    /**
      *  \copydoc IOKW_State::LogValue(String)
      */
     public void LogValue( String FN ) throws Exception
@@ -454,6 +470,22 @@ public class Core implements IOKW_State
     }
 
     /**
+     *  \copydoc IOKW_State::MemorizePlaceholder(String,String)
+     */
+    public void MemorizePlaceholder( String FN, String Val ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "MemorizePlaceholder", "KeyWordName" ), FN, Val );
+            this.CurrentState.MemorizePlaceholder( FN, Val );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+
+    /**
      *  \copydoc IOKW_State::MemorizeCaption(String,String)
      */
     public void MemorizeCaption( String FN, String Val ) throws Exception
@@ -565,6 +597,23 @@ public class Core implements IOKW_State
         }
     }
 
+    /**
+     * \copydoc IOKW_State::SelectChild(String)
+     */
+    public void SelectChild( String FN ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "SelectChild", "KeyWordName" ), FN );
+            this.CurrentState.SelectChild( FN );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+
+    
     /**
      * \copydoc IOKW_State::Sequence(String,String,String)
      */
@@ -1013,6 +1062,55 @@ public class Core implements IOKW_State
         }
     }
 
+    /**
+     *  \copydoc IOKW_State::VerifyPlaceholder(String,String)
+     */
+    public void VerifyPlaceholder( String FN, String ExpVal ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "VerifyPlaceholder", "KeyWordName" ), FN, ExpVal );
+            this.CurrentState.VerifyPlaceholder( FN, ExpVal );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+
+    /**
+     * \copydoc IOKW_State::VerifyPlaceholderWCM(String,String)
+     */
+    public void VerifyPlaceholderWCM( String FN, String ExpVal ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "VerifyPlaceholderWCM", "KeyWordName" ), FN, ExpVal );
+            this.CurrentState.VerifyPlaceholderWCM( FN, ExpVal );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+
+    /**
+     * \copydoc IOKW_State::VerifyPlaceholderREGX(String,String)
+     */
+    public void VerifyPlaceholderREGX( String FN, String ExpVal ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "VerifyPlaceholderREGX", "KeyWordName" ), FN, ExpVal );
+            this.CurrentState.VerifyPlaceholderREGX( FN, ExpVal );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+    
+    
     /**
      *  \copydoc IOKW_State::VerifyValue(String,String)
      */

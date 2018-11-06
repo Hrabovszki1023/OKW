@@ -741,16 +741,24 @@ public class OKW_CurrentObject_Sngltn
     public Object setChildName( String fpsChildName ) throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
     {
         Boolean bOK = false;
+        
         Log.LogFunctionStartDebug( "CurrentObject.SetChildName", "String fpsChildName", fpsChildName );
         Log.LogPrintDebug( LM.GetMessage( "SetChildName", "GivenWindownameDebug" ) );
         try
         {
             if ( !OKW_Helper.isStringNullOrEmpty( cvsWindowFN ) )
             {
-                Log.LogPrintDebug( LM.GetMessage( "SetChildName", "SetChildwindowNameDebug", cvsWindowFN, cvsChildFN ) );
-                cvsChildFN = fpsChildName;
-                updateObject();
-                bOK = true;
+                if( "SELECTEDCHILD".equals( fpsChildName ) )
+                {
+                    Log.LogPrint( LM.GetMessage( "SetChildName", "SetChildwindowNameDebug", cvsWindowFN, cvsChildFN ) );                    
+                }
+                else
+                {
+                    cvsChildFN = fpsChildName;
+                    Log.LogPrintDebug( LM.GetMessage( "SetChildName", "SetChildwindowNameDebug", cvsWindowFN, cvsChildFN ) );
+                    updateObject();
+                    bOK = true;
+                }
             }
             else
             {

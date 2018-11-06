@@ -110,6 +110,12 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
     throw new OKWFrameObjectMethodNotImplemented("The method getTooltip() is not defined for you GUI-Object. Please define first the methode!");
   }
 
+  public ArrayList<String> getPlaceholder()
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method getPlaceholder() is not defined for you GUI-Object. Please define first the methode!");
+  }
+
   public ArrayList<String> getLabel()
   {
     // TODO: /todo Meldung in xml-Auslagern
@@ -164,6 +170,12 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
     throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> LogLabel( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
   }
 
+  public ArrayList<String> LogPlaceholder( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> LogPlace( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
   public ArrayList<String> LogSelected( )
   {
     // TODO: /todo Meldung in xml-Auslagern
@@ -216,6 +228,12 @@ public ArrayList<String> MemorizeCaption( )
   {
     // TODO: /todo Meldung in xml-Auslagern
     throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> MemorizeLabel( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+  }
+
+  public ArrayList<String> MemorizePlaceholder( )
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> MemorizePlaceholder( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
   }
 
   public ArrayList<String> MemorizeSelectedValue( )
@@ -288,6 +306,12 @@ public ArrayList<String> MemorizeCaption( )
     {
       // TODO: /todo Meldung in xml-Auslagern
       throw new OKWFrameObjectMethodNotImplemented("The method 'public void VerifyLabel( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+    }
+
+    public ArrayList<String> VerifyPlaceholder( )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public void VerifyPlaceholder( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
     }
 
     public ArrayList<String> VerifyCaption( )

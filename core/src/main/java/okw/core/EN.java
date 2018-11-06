@@ -153,6 +153,15 @@ public class EN
     }
 
     /**
+     *  \copydoc IOKW_State::LogPlaceholder(String)
+     */
+    public static void LogPlaceholder( String FN ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.LogPlaceholder( FN );
+    }
+
+    /**
      *  \copydoc IOKW_State::LogSelected(String)
      */
     public static void LogSelected( String FN ) throws Exception
@@ -234,6 +243,15 @@ public class EN
     }
 
     /**
+     *  \copydoc IOKW_State::MemorizeLabel(String,String)
+     */
+    public static void MemorizePlaceholder( String FN, String fpsKeyName ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.MemorizePlaceholder( FN, fpsKeyName );
+    }
+
+    /**
      *  \copydoc IOKW_State::MemorizeSelectedValue(String,String)
      */
     public static void MemorizeSelectedValue( String FN, String fpsKeyName ) throws Exception
@@ -312,6 +330,15 @@ public class EN
     {
         myKernel.setLanguage( Language );
         myKernel.SelectWindow( FN );
+    }
+
+    /**
+     *  \copydoc IOKW_State::SelectChild(String)
+     */
+    public static void SelectChild( String FN ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.SelectChild( FN );
     }
 
     /**
@@ -465,6 +492,33 @@ public class EN
     {
         myKernel.setLanguage( Language );
         myKernel.VerifyLabelWCM( FN, ExpVal );
+    }
+
+    /**
+     *  \copydoc IOKW_State::VerifyPlaceholder(String,String)
+     */
+    public static void VerifyPlaceholder( String FN, String ExpVal ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.VerifyPlaceholder( FN, ExpVal );
+    }
+
+    /**
+     *  \copydoc IOKW_State::VerifyPlaceholderREGX(String,String)
+     */
+    public static void VerifyPlaceholderREGX( String FN, String ExpVal ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.VerifyPlaceholderREGX( FN, ExpVal );
+    }
+
+    /**
+     *  \copydoc IOKW_State::VerifyPlaceholderWCM(String,String)
+     */
+    public static void VerifyPlaceholderWCM( String FN, String ExpVal ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.VerifyPlaceholderWCM( FN, ExpVal );
     }
 
     /**

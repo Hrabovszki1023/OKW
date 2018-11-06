@@ -1,6 +1,6 @@
 /*
     ==============================================================================
-    Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+    Copyright © 2012 - 2018 IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -69,7 +69,7 @@ public interface IOKW_State
       * @param fpsTestname No explanation available 
       *
       * \~
-      * @author Zoltan Hrabovszki
+      * @author zh@openkeyword.de
       * @throws Exception 
       * @date 2014-09-18
       */
@@ -101,7 +101,7 @@ public interface IOKW_State
      * 
      *
      * \~
-     * @author Zoltan Hrabovszki
+     * @author zh@openkeyword.de
      * @date 2014-09-18
      * @throws Exception 
      */
@@ -125,7 +125,7 @@ public interface IOKW_State
      * @param FN Functional Name of the object 
      *
      * \~
-     * @author Zoltan Hrabovszki
+     * @author zh@openkeyword.de
      * @date 2014-09-18
      * @throws Exception 
      */
@@ -149,7 +149,7 @@ public interface IOKW_State
      * 
      *
      * \~
-     * @author Zoltan Hrabovszki
+     * @author zh@openkeyword.de
      * @date 2014-09-18
      * @throws Exception 
      */
@@ -167,7 +167,7 @@ public interface IOKW_State
      * @param FN Functional name of the object 
      *
      * \~
-     * @author Zoltan Hrabovszki
+     * @author zh@openkeyword.de
      * @date 2014-09-18/jnic
      * \todo jnic-->keine Beschreibung vorhanden
      */
@@ -191,7 +191,7 @@ public interface IOKW_State
      * @param FN Functional name of the object 
      *
      * \~
-     * @author Zoltan Hrabovszki
+     * @author zh@openkeyword.de
      * @date 2014-09-18
      */
     void LogExists( String FN ) throws Exception;
@@ -214,7 +214,7 @@ public interface IOKW_State
     * @param FN Functional name of the object 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19
     */
     void LogHasFocus( String FN ) throws Exception;
@@ -237,28 +237,44 @@ public interface IOKW_State
     * @param FN Functional name of the object 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19
     */
     void LogIsActive( String FN ) throws Exception;
 
     /**
     * \~german
-    * Keine Beschreibung zu "LogLabel" verfügbar
+    * Gibt den Wert des Etikette/Label in der Logdatei aus.
     * 
     * @param FN Funktionaler Name des Objekts 
     *
     * \~english
-    * No description for "LogLabel" available
+    * Displays the value of the label in the log file.
     * 
     * @param FN Functional name of the object 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19
-    * \todo jnic-->keine Beschreibung vorhanden
     */
     void LogLabel( String FN ) throws Exception;
+
+    /**
+    * \~german
+    * Gibt den Wert des Platzhalters in der Logdatei aus.
+    * 
+    * @param FN Funktionaler Name des Objekts 
+    *
+    * \~english
+    * Displays the value of the placeholder in the log file.
+    * 
+    * @param FN Functional name of the object 
+    *
+    * \~
+    * @author zh@openkeyword.de
+    * @date 2014-09-19
+    */
+    void LogPlaceholder( String FN ) throws Exception;
 
     /**
     * \~german
@@ -272,7 +288,7 @@ public interface IOKW_State
     * @param FN Functional name of the object 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19
     */
     void LogSelected( String FN ) throws Exception;
@@ -294,7 +310,7 @@ public interface IOKW_State
     * @param ROW Row number of cell to be selected, starting with 1. 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19
     * \todo Beschreibung überprüfen
     */
@@ -318,7 +334,7 @@ public interface IOKW_State
     * @param FN Functional name of the object 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19
     */
     void LogTooltip( String FN ) throws Exception;
@@ -345,7 +361,7 @@ public interface IOKW_State
     * @param FN Functional name of the object 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19
     */
     void LogValue( String FN ) throws Exception;
@@ -364,7 +380,7 @@ public interface IOKW_State
     * @param fpsMemKeyName Name of the key 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19
      */
     void MemorizeCaption( String FN, String fpsMemKeyName ) throws Exception;
@@ -393,7 +409,7 @@ public interface IOKW_State
     * @param fpsMemKeyName Name of the key 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19
     */
     void MemorizeExists( String FN, String fpsMemKeyName ) throws Exception;
@@ -412,7 +428,7 @@ public interface IOKW_State
     * @param fpsMemKeyName Name of the key 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19/jnic
     * @todo TODO: keine Beschreibung vorhanden
     */
@@ -440,30 +456,48 @@ public interface IOKW_State
     * @param fpsMemKeyName Name of the key 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date TODO: 2014-09-19
      */
     void MemorizeIsActive( String FN, String fpsMemKeyName ) throws Exception;
 
     /**
     * \~german
-    * Keine Beschreibung zu "MemorizeLabel" verfügbar
+    * Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab.
     * 
     * @param FN Funktionaler Name des Objekts 
     * @param fpsMemKeyName Name des Schlüssels 
     *
     * \~english
-    * No description for "MemorizeLabel" available
+    * Speaks the current value of the label and stores it under fpsMemKeyName.
     * 
     * @param FN Functional name of the object 
-    * @param fpsMemKeyName Name of the key 
+    * @param fpsMemKeyName Name of the key
     *
     * \~
-    * @author Zoltan Hrabovszki
-    * @date 2014-09-19/jnic
-    * @todo TODO: keine Beschreibung vorhanden
+    * @author zh@openkeyword.de
+    * @date 2014-09-19
      */
     void MemorizeLabel( String FN, String fpsMemKeyName ) throws Exception;
+
+    /**
+    * \~german
+    * Speirchert den aktuellen Wert der Platzhalters, und legt diesen unter fpsMemKeyName ab.
+    * 
+    * @param FN Funktionaler Name des Objekts 
+    * @param fpsMemKeyName Name des Schlüssels 
+    *
+    * \~english
+    * Saves the current value of the label, and saves it under fpsMemKeyName.
+    * 
+    * @param FN Functional name of the object 
+    * @param fpsMemKeyName Name of the key
+    *
+    * \~
+    * @author zh@openkeyword.de
+    * @date 2014-09-19
+     */
+    void MemorizePlaceholder( String FN, String fpsMemKeyName ) throws Exception;
 
     /**
     * \~german
@@ -479,7 +513,7 @@ public interface IOKW_State
     * @param fpsMemKeyName Name of the key 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19/jnic
     * @todo TODO:keine Beschreibung vorhanden
      */
@@ -503,7 +537,7 @@ public interface IOKW_State
     * @param ROW Row number of cell to be selected, starting with 1. 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
      */
     void MemorizeTablecellValue( String FN, String COL, String ROW, String fpsMemKeyName ) throws Exception;
 
@@ -527,7 +561,7 @@ public interface IOKW_State
     * @param fpsMemKeyName Name of the key 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19/jnic
      */
     void MemorizeTooltip( String FN, String fpsMemKeyName ) throws Exception;
@@ -557,7 +591,7 @@ public interface IOKW_State
     * @param fpsMemKeyName Name of the key 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19
      */
     void MemorizeValue( String FN, String fpsMemKeyName ) throws Exception;
@@ -607,7 +641,7 @@ public interface IOKW_State
     * @param Val Resulting value 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19
      */
     void Select( String FN, String Val ) throws Exception;
@@ -630,7 +664,7 @@ public interface IOKW_State
      *  @param FN Functional name of the object 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014.09.19
      */
     void SelectMenu( String FN ) throws Exception;
@@ -655,7 +689,7 @@ public interface IOKW_State
     * @param Val Resulting value 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     *  @date 2014.09.19
     */
     void SelectMenu( String FN, String Val ) throws Exception;
@@ -710,7 +744,7 @@ public interface IOKW_State
     * @param ROW Row number of cell to be selected, starting with 1. 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-19
     */
     void SelectTablecell( String FN, String COL, String ROW ) throws Exception;
@@ -740,11 +774,48 @@ public interface IOKW_State
      *  @param FN Functionalname of the object 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-19
      */
     void SelectWindow( String FN ) throws Exception;
 
+    /** 
+     * \~german
+     *  Setzt den Wert von SELECTEDCHILD auf den Wert von FN.
+     *  
+     *  In nachfolgenden OpeKeywords kann dieser Wert mit "SELECTEDCHILD" abgerufen bzw referenziert werden.
+     *  
+     *  _Beispiel:_ Auswahl des Kindobjektes mit dem Namen "MeinKindobjekt" <br>
+     *  \code{java}
+     *  EN.SelectChild( "MeinKindobjekt" )
+     *  EN.SetValue("SELECTEDCHILD", "MyValue")
+     *  EN.VerifyValue("SELECTEDCHILD", "MyValue")
+     *  EN.VerifyLabel("SELECTEDCHILD", "MyLabel")
+     *  \endcode
+     *  
+     *  @param FN Funktionaler Name des KindObjektes 
+     * 
+     *  \~english
+     *  Sets the value of SELECTEDCHILD to the value of FN.
+     *  
+     *  In the following OpeKeywords this value can be retrieved or referenced with "SELECTEDCHILD".
+     *  
+     *  _Example:_ Selection of the child object with the name "MyChildObject".<br>
+     *  \code{java}
+     *  EN.SelectChild( "MeinKindobjekt" )
+     *  EN.SetValue("SELECTEDCHILD", "MyValue")
+     *  EN.VerifyValue("SELECTEDCHILD", "MyValue")
+     *  EN.VerifyLabel("SELECTEDCHILD", "MyLabel")
+     *  \endcode
+     *  
+     *  @param FN Functional Name of the object 
+     * 
+     *  \~
+     *  @author zh@openkeyword.de
+     *  @date 2018-10-02
+     */
+    void SelectChild( String FN ) throws Exception;   
+    
     /** \~german
      *  Ruft die Sequenz eines Fensters auf.
      *  
@@ -772,7 +843,7 @@ public interface IOKW_State
      *  @param SEQ_ID No explanation available 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21
      */
     void Sequence( String FN, String fpsSequenceName, String SEQ_ID ) throws Exception;
@@ -789,7 +860,7 @@ public interface IOKW_State
      *  @param FN Functional name of the object 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21
      */
     void SetFocus( String FN ) throws Exception;
@@ -812,7 +883,7 @@ public interface IOKW_State
     * @param Language Select "en" 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-21
      */
     void setLanguage( String Language );
@@ -840,13 +911,13 @@ public interface IOKW_State
      *  Inputs of the object are written over with "Val".
      * 
      *  _Example: Set the value of the objekt "MyWindow" to "Hello":_ <br>
-     *  \verbatim Set Value: "Name", "Zoltan" \endverbatim
+     *  \verbatim EN.SetValue( "Name", "Zoltan" ) \endverbatim
      *  
      *  @param FN Functional name of the object 
      *  @param Val Resulting value 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
     * @date 2014-09-21
     */
     void SetValue( String FN, String Val ) throws Exception;
@@ -881,7 +952,7 @@ public interface IOKW_State
     * @param fpsApplicationName No explanation available 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-21
     */
     void StartApp( String fpsApplicationName ) throws Exception;
@@ -915,7 +986,7 @@ public interface IOKW_State
     * @param fpsApplicationName The technical name of the application 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-21
     */
     void StopApp( String fpsApplicationName ) throws Exception;
@@ -964,7 +1035,7 @@ public interface IOKW_State
     * @param Val Resulting value 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-21/jnic         
     */
     void TypeKey( String FN, String Val ) throws Exception;
@@ -1038,7 +1109,7 @@ public interface IOKW_State
     * @param COL Column number of cell to be selected, starting with 1. 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-21/jnic
      */
     void TypeKeyTablecell( String FN, String COL, String ROW, String Val ) throws Exception;
@@ -1081,7 +1152,7 @@ public interface IOKW_State
     * @param Val Resulting value 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-21/jnic
      */
     void TypeKeyWindow( String FN, String Val ) throws Exception;
@@ -1100,7 +1171,7 @@ public interface IOKW_State
      *  @param ExpVal Expected Value 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21/jnic
      *  \todo TODO: keine Beschreibung vorhanden
      */
@@ -1129,7 +1200,7 @@ public interface IOKW_State
      *  @param ExpVal Expected Value 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21/jnic
      *  \todo  TODO: keine Beschreibung vorhanden
      */
@@ -1155,7 +1226,7 @@ public interface IOKW_State
      *  @param ExpVal Expected Value 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21/jnic
      *  \todo TODO: keine Beschreibung vorhanden
      */
@@ -1187,7 +1258,7 @@ public interface IOKW_State
     * @param ExpVal Expected Value 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-21
      */
     void VerifyExists( String FN, String ExpVal ) throws Exception;
@@ -1216,7 +1287,7 @@ public interface IOKW_State
      *  @param ExpVal Expected Value. Following values are Allowed here: "YES, "NO", and "IGNORE".  
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21
      */
     void VerifyHasFocus( String FN, String ExpVal ) throws Exception;
@@ -1241,11 +1312,109 @@ public interface IOKW_State
      *  @param ExpVal Expected Value. Following values are Allowed here: "YES, "NO", and "IGNORE". 
      *
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21/jnic
     */
     void VerifyIsActive( String FN, String ExpVal ) throws Exception;
 
+    /**
+     *  \~german
+     *  Überprüft den Platzhalter des Objektes.
+     *  
+     *  _Beispiel: Prüfe, ob der Platzhalter (Text) des Objekts "MeinObjekt" dem erwarteten Wert "Jango" übereinstimmt:_
+     *  
+     *  \verbatim VerifyPlaceholderWCM: "MeinObjekt", "Jango" \endverbatim
+     *  
+     *  @param FN Funktionaler Name des Objekts 
+     *  @param ExpVal Erwarteter Wert 
+     * 
+     *  \~english
+     *  Verifies the placeholder of a GUI-object.
+     *  
+     *  Example: Check whether the placeholder (text) of the object "MyObject" matches the expected value "Jango
+     *  
+     *  \verbatim VerifyPlaceholderWCM: "MyObjekt", "Jango" \endverbatim
+     *  
+     *  @param FN Functional name of the object 
+     *  @param ExpVal Expected Value 
+     * 
+     *  \~
+     *  @author zh@openkeyword.de
+     *  @date 2018-10-03
+     */
+    void VerifyPlaceholder( String FN, String ExpVal ) throws Exception;
+
+    /**
+     *  \~german
+     *  Überprüft den Platzhalter des Objektes.
+     *  Wildcards sind im erwartetem Wert erlaubt.
+     *  
+     *  Folgende Wildcards sind möglich:
+     *  * "?" - genau ein beliebiges Zeichen wird Maskiert
+     *  * "*" - (0-n) beliebige Zeichen werden maskiert
+     *  * "#" - genau eine Ziffer [0..9] kann maskiert werden
+     *  
+     *  _Beispiel: Prüfe, ob der Platzhalter (Text) des Objekts "MeinObjekt" dem erwarteten Wert "*jango" entspricht:_ <br>
+     *  
+     *  \verbatim VerifyPlaceholderWCM: "MeinObjekt", "*jango" \endverbatim
+     *       
+     *  @param FN Funktionaler Name des Objekts 
+     *  @param ExpVal Erwarteter Wert 
+     * 
+     *  \~english
+     *  Verifies the placeholder of the GUI object.
+     *  Wildcards are allowed in the expected value.
+     *  
+     *  The following wildcards are supported:
+     *  
+     *  * "?" - exactly one arbitrary character is masked
+     *  * "*" - (0-n) any characters are masked
+     *  * "#" - exactly one digit [0..9] can be masked
+     *  
+     *  _Example: Check whether the placeholder (text) of the object "MyObject" corresponds to the expected value "*jango:_
+     *  
+     *  \verbatim VerifyPlaceholderWCM: "MyObjekt", "*jango" \endverbatim
+     *  
+     *  @param FN Functional name of the object 
+     *  @param ExpVal Expected Value 
+     * 
+     *  \~
+     *  @author zh@openkeyword.de
+     *  @date 2018-10-03
+     */
+    void VerifyPlaceholderWCM( String FN, String ExpVal ) throws Exception;
+
+    /**
+     *  \~german
+     *  Überprüft den Platzhalter des Objektes.
+     *  Reguläre Ausdrücke als Sollwert sind erlaubt.
+     *  
+     *  _Beispiel: Prüfe, ob der Plathalter (Text) des Objekts "MeinObjekt" dem erwarteten
+     *  Wert "\\.jango" entspricht:_ <br>
+     *  
+     *  \verbatim VerifyPlaceholderREGX: "MeinObjekt", "$Django" \endverbatim
+     *  
+     *  @param FN Funktionaler Name des Objekts 
+     *  @param ExpVal Erwarteter Wert 
+     * 
+     *  \~english
+     *  Verifies the placeholder of the GUI object.
+     *  Regular expressions as expected values are allowed.
+     *  
+     *  _Example: Check whether the placeholder (text) of the object "MyObject" corresponds to the expected value "\\.jango":_
+     *  
+     *  \verbatim VerifyPlaceholderREGX: "MyObjekt", "$Django" \endverbatim
+     *  
+     *  @param FN Functional name of the object 
+     *  @param ExpVal Expected Value 
+     * 
+     *  \~
+     *  @author zh@openkeyword.de
+     *  @date 2018-10-03
+     *  \todo TODO: keine Beschreibung vorhanden
+     */
+    void VerifyPlaceholderREGX( String FN, String ExpVal ) throws Exception;    
+    
     /**
      *  \~german
      *  Überprüft die Beschreibung des Objektes.
@@ -1254,13 +1423,13 @@ public interface IOKW_State
      *  @param ExpVal Erwarteter Wert 
      * 
      *  \~english
-     *  Verifies the Label of a GUI-object.
+     *  Verifies the label of a GUI-object.
      *  
      *  @param FN Functional name of the object 
      *  @param ExpVal Expected Value 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014.09.21
      */
     void VerifyLabel( String FN, String ExpVal ) throws Exception;
@@ -1288,7 +1457,7 @@ public interface IOKW_State
      *  @param ExpVal Expected Value 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21/jnic
      *  \todo TODOkeine Beschreibung vorhanden
      */
@@ -1314,7 +1483,7 @@ public interface IOKW_State
      *  @param ExpVal Expected Value 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21
      *  \todo TODO: keine Beschreibung vorhanden
      */
@@ -1351,7 +1520,7 @@ public interface IOKW_State
     * @param ExpVal Expected Value 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-21
     */
     void VerifySelectedValue( String FN, String ExpVal ) throws Exception;
@@ -1384,7 +1553,7 @@ public interface IOKW_State
     * @param ExpVal Expected Value 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-21
     */
     void VerifyTablecellValue( String FN, String COL, String ROW, String ExpVal ) throws Exception;
@@ -1414,7 +1583,7 @@ public interface IOKW_State
     * @param ExpVal Expected Value 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-21
     */
     void VerifyTablecellValueWCM( String FN, String COL, String ROW, String ExpVal ) throws Exception;
@@ -1440,7 +1609,7 @@ public interface IOKW_State
     * @param ExpVal Expected Value 
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2014-09-21
     */    void VerifyTablecellValueREGX( String FN, String COL, String ROW, String ExpVal ) throws Exception;
     
@@ -1459,7 +1628,7 @@ public interface IOKW_State
      *  @param ExpVal Expected Value 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21
      */
     void VerifyTooltip( String FN, String ExpVal ) throws Exception;
@@ -1487,7 +1656,7 @@ public interface IOKW_State
      *  @param ExpVal Expected Value 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21
      */
     void VerifyTooltipREGX( String FN, String ExpVal ) throws Exception;
@@ -1525,7 +1694,7 @@ public interface IOKW_State
      *  @param ExpVal Expected Value as WildCardMatch
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21
      */
     void VerifyTooltipWCM( String FN, String ExpVal ) throws Exception;
@@ -1555,7 +1724,7 @@ public interface IOKW_State
      *  @param ExpVal Expected Value 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21
      */
     void VerifyValue( String FN, String ExpVal ) throws Exception;
@@ -1583,7 +1752,7 @@ public interface IOKW_State
      *  @param ExpVal Expected Value 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21
      */
     void VerifyValueREGX( String FN, String ExpVal ) throws Exception;
@@ -1620,7 +1789,7 @@ public interface IOKW_State
      *  @param ExpVal Expected Value 
      * 
      *  \~
-     *  @author Zoltan Hrabovszki
+     *  @author zh@openkeyword.de
      *  @date 2014-09-21
      */
     void VerifyValueWCM( String FN, String ExpVal ) throws Exception;
@@ -1730,7 +1899,7 @@ public interface IOKW_State
        * @param ExpVal Expected Value. ExpVal: "YES"/"NO"/"${IGNORE}"
        *
        * \~
-       * @author Zoltan Hrabovszki
+       * @author zh@openkeyword.de
        * @date 2015-06-26
        */
     void VerifyFileExists( String fpsPathAndFileName, String ExpVal ) throws Exception;
@@ -1748,7 +1917,7 @@ public interface IOKW_State
     * @param ExpVal Expected Value. ExpVal: "YES"/"NO"/"${IGNORE}"
     *
     * \~
-    * @author Zoltan Hrabovszki
+    * @author zh@openkeyword.de
     * @date 2015-06-26
     */
     void VerifyDirectoryExists( String fpsPath, String ExpVal ) throws Exception;

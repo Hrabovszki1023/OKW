@@ -178,7 +178,6 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
-
         public ArrayList<String> VerifyLabel()
         {
             this.myLogger.LogFunctionStartDebug("VerifyLabel");
@@ -199,6 +198,25 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
+        public ArrayList<String> VerifyPlaceholder()
+        {
+            this.myLogger.LogFunctionStartDebug("VerifyPlaceholder");
+
+            // ${EMPTY} => ArrayList mit einem Wert und ""
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
+            lvLsReturn.add( "" );
+
+            myClipboard.Clear();
+            String lvs_ObjectName = getFN();
+            myClipboard.setObjectName(lvs_ObjectName);
+            myClipboard.setMethod("VerifyPlaceholder()");
+
+            myClipboard.getValue().clear();
+
+            this.myLogger.LogFunctionEndDebug();
+
+            return lvLsReturn;
+        }
 
         public ArrayList<String> VerifyValue()
         {
