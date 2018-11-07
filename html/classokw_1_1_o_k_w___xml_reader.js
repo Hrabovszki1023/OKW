@@ -8,6 +8,6 @@ var classokw_1_1_o_k_w___xml_reader =
     [ "mydbFactory", "classokw_1_1_o_k_w___xml_reader.html#a062dddc36445ed3fa48fcdac0c590ca3", null ],
     [ "mydBuilder", "classokw_1_1_o_k_w___xml_reader.html#a797bad66c5310e8c9085350e9d30543c", null ],
     [ "myXMLDocument", "classokw_1_1_o_k_w___xml_reader.html#a56ea8a424aaab4985cd0ad8b8832a718", null ],
-    [ "myXMLFile", "classokw_1_1_o_k_w___xml_reader.html#af5c13773babe5f19b17a972deb943127", null ],
+    [ "myXMLFile", "classokw_1_1_o_k_w___xml_reader.html#af30d450cf51d8ea9edd9d5b1896c3a34", null ],
     [ "myXPath", "classokw_1_1_o_k_w___xml_reader.html#afb5199d46ef1811e02d5b18a38228443", null ]
 ];

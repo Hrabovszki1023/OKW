@@ -88,7 +88,6 @@ var hierarchy =
       [ "okw.calculator.Calculator_EN_Safari_Test", "classokw_1_1calculator_1_1_calculator___e_n___safari___test.html", null ]
     ] ],
     [ "okw.Copy", "classokw_1_1_copy.html", null ],
-    [ "okw.cucumber.CucumberTest", "classokw_1_1cucumber_1_1_cucumber_test.html", null ],
     [ "okw.core.CurrentObject_Test", "classokw_1_1core_1_1_current_object___test.html", null ],
     [ "okw.core.EN", "classokw_1_1core_1_1_e_n.html", null ],
     [ "okw.core.EN_Keywords_ANTLR_Test", "classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html", null ],
@@ -276,7 +275,6 @@ var hierarchy =
       [ "okw.SeTextarea.SeTextarea_EN_Firefox_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___firefox___test.html", null ],
       [ "okw.SeTextarea.SeTextarea_EN_HTMLUnitDriver_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___h_t_m_l_unit_driver___test.html", null ]
     ] ],
-    [ "okw.cucumber.Steps", "classokw_1_1cucumber_1_1_steps.html", null ],
     [ "AbstractParseTreeVisitor", null, [
       [ "okw.parser.antlr4.OKW_ParserBaseVisitor< T >", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser_base_visitor.html", null ]
     ] ],

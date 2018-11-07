@@ -7,7 +7,6 @@ var searchData=
   ['calculator_5fen_5ftest',['Calculator_EN_Test',['../classokw_1_1calculator_1_1_calculator___e_n___test.html',1,'okw::calculator']]],
   ['copy',['Copy',['../classokw_1_1_copy.html',1,'okw']]],
   ['core',['Core',['../classokw_1_1core_1_1_core.html',1,'okw::core']]],
-  ['cucumbertest',['CucumberTest',['../classokw_1_1cucumber_1_1_cucumber_test.html',1,'okw::cucumber']]],
   ['currentchildobject_5fallmethods',['CurrentChildObject_Allmethods',['../classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html',1,'okw::gui::adapter']]],
   ['currentobject_5ftest',['CurrentObject_Test',['../classokw_1_1core_1_1_current_object___test.html',1,'okw::core']]]
 ];

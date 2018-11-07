@@ -49,10 +49,6 @@ var annotated_dup =
         [ "OK", "classokw_1_1core_1_1_o_k.html", "classokw_1_1core_1_1_o_k" ],
         [ "OKW_CurrentObject_Sngltn", "classokw_1_1core_1_1_o_k_w___current_object___sngltn.html", "classokw_1_1core_1_1_o_k_w___current_object___sngltn" ]
       ] ],
-      [ "cucumber", null, [
-        [ "CucumberTest", "classokw_1_1cucumber_1_1_cucumber_test.html", null ],
-        [ "Steps", "classokw_1_1cucumber_1_1_steps.html", "classokw_1_1cucumber_1_1_steps" ]
-      ] ],
       [ "exceptions", null, [
         [ "OKWConst4InternalnameNotFoundException", "classokw_1_1exceptions_1_1_o_k_w_const4_internalname_not_found_exception.html", "classokw_1_1exceptions_1_1_o_k_w_const4_internalname_not_found_exception" ],
         [ "OKWDirectoryDoesNotExistsException", "classokw_1_1exceptions_1_1_o_k_w_directory_does_not_exists_exception.html", "classokw_1_1exceptions_1_1_o_k_w_directory_does_not_exists_exception" ],

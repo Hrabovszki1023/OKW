@@ -73,6 +73,5 @@ var searchData=
   ['setextarea_5fen_5ffirefox_5ftest',['SeTextarea_EN_Firefox_Test',['../classokw_1_1_se_textarea_1_1_se_textarea___e_n___firefox___test.html',1,'okw::SeTextarea']]],
   ['setextarea_5fen_5fhtmlunitdriver_5ftest',['SeTextarea_EN_HTMLUnitDriver_Test',['../classokw_1_1_se_textarea_1_1_se_textarea___e_n___h_t_m_l_unit_driver___test.html',1,'okw::SeTextarea']]],
   ['setextarea_5fen_5ftest',['SeTextarea_EN_Test',['../classokw_1_1_se_textarea_1_1_se_textarea___e_n___test.html',1,'okw::SeTextarea']]],
-  ['seurl',['SeURL',['../classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html',1,'okw::gui::adapter::selenium::webdriver']]],
-  ['steps',['Steps',['../classokw_1_1cucumber_1_1_steps.html',1,'okw::cucumber']]]
+  ['seurl',['SeURL',['../classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html',1,'okw::gui::adapter::selenium::webdriver']]]
 ];
