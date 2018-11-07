@@ -660,6 +660,8 @@ public class OKW_FileHelper
 			}
 			else
 				throw (new OKWDirectorySeperatorNotImplementedException("Error: Unknown file.separator: -" + myFileSeparator + "-"));
+
+			lvsReturn  = lvsReturn.replace( "\\C:", "C:");
 		}
 		finally
 		{

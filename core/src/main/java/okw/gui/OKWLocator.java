@@ -39,8 +39,6 @@ package okw.gui;
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
-import java.util.ArrayList;
-
 import okw.log.*;
 import org.stringtemplate.v4.*;
 

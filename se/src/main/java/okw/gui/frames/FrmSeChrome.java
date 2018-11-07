@@ -6,7 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import okw.OKW;
 import okw.OKW_Memorize_Sngltn;
-import okw.gui.OKWLocator;
 // import okw.gui.adapter.selenium.webdriver.*;
 import okw.gui.adapter.selenium.SeBrowserWindow;
 import okw.gui.adapter.selenium.webdriver.SeDriver;

@@ -31,7 +31,7 @@ public class OKW_XmlReader // extends ClassLoader
 	private DocumentBuilder			mydBuilder;
 	private XPath					myXPath;
 
-	private Path					myXMLFile;
+	private String					myXMLFile;
 
 	public String getXMLFile()
 	{
@@ -41,7 +41,8 @@ public class OKW_XmlReader // extends ClassLoader
 	
 	public OKW_XmlReader(String fpsXMLFile) throws JAXBException, ParserConfigurationException, SAXException, IOException
 	{
-		myXMLFile = Paths.get( fpsXMLFile );
+		//myXMLFile = Paths.get( fpsXMLFile );
+		myXMLFile = fpsXMLFile;
 		Init();
 	}
 	
@@ -60,8 +61,7 @@ public class OKW_XmlReader // extends ClassLoader
 	 */
 	private void Init() throws JAXBException, ParserConfigurationException, SAXException, IOException
 	{
-
-		  InputStream is = OKW_XmlReader.class.getResourceAsStream( myXMLFile.toString() );
+		    InputStream is = OKW_XmlReader.class.getResourceAsStream( myXMLFile.toString() );
 		  
 			if ( is == null )
 			{
