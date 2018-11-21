@@ -1,6 +1,7 @@
 # Downloads
 
-1. [AutoIt](https://www.autoitscript.com/site/autoit/downloads/)
+* [AutoIt](https://www.autoitscript.com/site/autoit/downloads/)
+* [jacob on maven - JAVA COM Bridge](https://mvnrepository.com/artifact/com.hynnet/jacob/1.18)
 
 # References
 
