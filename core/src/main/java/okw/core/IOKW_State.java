@@ -802,9 +802,9 @@ public interface IOKW_State
      *  
      *  _Example:_ Selection of the child object with the name "MyChildObject".<br>
      *  \code{java}
-     *  EN.SelectChild( "MeinKindobjekt" )
+     *  EN.SelectChild( "MeinKindobjekt" ) name, vormane
      *  EN.SetValue("SELECTEDCHILD", "MyValue")
-     *  EN.VerifyValue("SELECTEDCHILD", "MyValue")
+     *  EN.VerifyLenght("SELECTEDCHILD", "MyValue") 1, 2 ,5, 5
      *  EN.VerifyLabel("SELECTEDCHILD", "MyLabel")
      *  \endcode
      *  

@@ -689,6 +689,112 @@ public class EN_Keywords_ANTLR_Test
     * \date 2013.12.26
     */
     @Test
+    public void tc_VerifyPlaceholder_EnviromentVar() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+    
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+    
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+            
+        EN.SetValue( "All_MethodsObj", "${TCN}" );
+        // Kommen auch mehrere Sollwerte im Objekt ab?
+        EN.VerifyPlaceholder( "All_MethodsObj", "${TCN}" );
+    
+        // Check the Name, Called Method and Value of Actuel object
+        //assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+    
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyPlaceholder()", myClipBoard.getMethod() );
+    }
+
+    /**
+    * \~german
+    * \brief
+    *
+    * \~english
+    * \~
+    * \author Zoltan Hrabovszki
+    * \date 2013.12.26
+    */
+    @Test
+    public void tc_VerifyPlaceholderWCM_EnviromentVar() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+    
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+    
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+       
+        // Wert in "All_MethodsObj" setzen.
+        EN.SetValue( "All_MethodsObj", "${TCN}" );
+        // Prüfung des Schlüsselwortes?
+        EN.VerifyPlaceholderWCM( "All_MethodsObj", "${TCN}" );
+    
+        // Check the Name, Called Method and Value of Actuel object
+        //assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+    
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyPlaceholder()", myClipBoard.getMethod() );
+    }
+
+    /**
+     * \~german
+     *
+     * \~english
+     * \~ 
+     * \author Zoltan Hrabovszki
+     * \date 2013.12.26
+     */
+    @Test
+    public void tc_VerifyPlaceholderREGX_EnviromentVar() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+    
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+    
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+    
+        EN.SetValue( "All_MethodsObj", "${TCN}" );
+        EN.VerifyPlaceholderREGX( "All_MethodsObj", "${TCN}" );
+    
+        // Check the Name, Called Method and Value of Actuel object
+        // assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+    
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyPlaceholder()", myClipBoard.getMethod() );
+    }
+
+    /**
+    * \~german
+    *
+    * \~english
+    * \~
+    * \author Zoltan Hrabovszki
+    * \date 2013.12.26
+    */
+    @Test
     public void tc_VerifyPlaceholder_MemorizedValue() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
