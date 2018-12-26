@@ -58,4 +58,6 @@ public interface IGUIChildwindow
     Boolean VerifyExists();
     Boolean VerifyIsActive();
     Boolean VerifyHasFocus();
+
+    Integer VerifyMaxLength();
 }

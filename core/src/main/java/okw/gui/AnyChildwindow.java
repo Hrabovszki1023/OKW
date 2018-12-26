@@ -314,6 +314,12 @@ public ArrayList<String> MemorizeCaption( )
       throw new OKWFrameObjectMethodNotImplemented("The method 'public void VerifyPlaceholder( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
     }
 
+    public Integer VerifyMaxLength( )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public void VerifyMaxLength( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+    }
+
     public ArrayList<String> VerifyCaption( )
     {
       // TODO: /todo Meldung in xml-Auslagern

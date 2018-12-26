@@ -72,4 +72,8 @@ public class OKWNotAllowedValueException extends RuntimeException {
 		super(message);
 	}
 
+    public OKWNotAllowedValueException(String message, Throwable e) {
+        super(message, e);
+    }
+
 }

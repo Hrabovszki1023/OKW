@@ -614,6 +614,28 @@ public class EN_Keywords_Empty_Test {
 
   }
 
+  /** \~german
+   * EMPTY ist ein nicht erlaubter Wert im Schlüsselwort EN.VerifyMaxLength(String,String).
+   *
+   * Dieser Test Prüft, ob die Ausnahmen OKWNotAllowedValueException ausgelöst wird.
+   * 
+   * \~english
+   * EMPTY is an illegal value in the keyword EN.VerifyMaxLength(String,String).
+   * 
+   * This test verifies whether the exception OKWNotAllowedValueException is thrown.
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018.12.26
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tc_VerifyMaxLength_EMPTY_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+  
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMaxLength( "All_MethodsObj", "${EMPTY}" );
+  }
+
   /**
    *  \~german
    *  \brief
@@ -866,14 +888,19 @@ public class EN_Keywords_Empty_Test {
     EN.VerifyExists( "All_MethodsObj", "${EMPTY}" );
   }
 
-  // \~german
-  // \brief
-  //
-  //
-  // \~english
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2016.09.24
+  /** \~german
+   * EMPTY ist ein nicht erlaubter Wert im Schlüsselwort EN.VerifyIsActive(String,String).
+   *
+   * Dieser Test Prüft, ob die Ausnahmen OKWNotAllowedValueException ausgelöst wird.
+   * 
+   * \~english
+   * EMPTY is an illegal value in the keyword EN.VerifyIsActive(String,String).
+   * 
+   * This test verifies whether the exception OKWNotAllowedValueException is thrown.
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2016.09.24
+   */
   @Test( expected = OKWNotAllowedValueException.class )
   public void tc_VerifyIsActive_EMPTY_OKWNotAllowedValueException() throws Exception
   {

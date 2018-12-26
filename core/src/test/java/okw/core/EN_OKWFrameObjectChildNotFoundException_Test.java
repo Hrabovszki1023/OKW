@@ -374,10 +374,12 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
   /**
    * \~german
    *  \brief
-   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
-   *  LFC-VerifyCaption ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   *  Prüft, ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyLabelREGX ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
    * 
    *  \~english
+   *  Checks whether the OKWFrameObjectChildNotFoundException exception is raised
+   *  by the LFC VerifyLabelREGX if the frame child object does not exist.
    *  \~
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
@@ -388,6 +390,27 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyLabelREGX( "IsNotDefindeInRechner", "Value" );
+  }
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft, ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyMaxLength ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  Checks whether the OKWFrameObjectChildNotFoundException exception is raised
+   *  by the LFC VerifyMaxLength if the frame child object does not exist.
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyMaxLength_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMaxLength( "IsNotDefindeInRechner", "2" );
   }
 
   /**

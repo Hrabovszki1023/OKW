@@ -475,6 +475,29 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     /**
     * \~german
     *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
+    *  VerifyMaxLength( FN, ExpVal ) ausgelöst wird,
+    *  wenn die Methode im GUI-Adapter nicht implementiert ist.
+    * 
+    *  \~english
+    *  Checks whether the OKWFrameObjectMethodNotImplemented exception is raised 
+    *  by VerifyMaxLength( FN, ExpVal ),
+    *  if the method is not implemented in the GUI adapter.
+    *  \~
+    *  @author Zoltan Hrabovszki
+    *  @date 2018-12-26
+    */
+    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    public void TC_VerifyMaxLength_OKWFrameObjectMethodNotImplemented() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+        EN.VerifyMaxLength( "NoMethodObj", "2" );
+    }
+
+    /**
+    * \~german
+    *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
     *  VerifyCaption( FN, ExpVal ) ausgelöst wird.
     * 
     *  \~english
@@ -513,11 +536,14 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
     /**
     * \~german
-    *  \brief
     *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
-    *  VerifyPlaceholderWCM( FN, ExpVal ) ausgelöst wird.
+    *  VerifyPlaceholderWCM( FN, ExpVal ) ausgelöst wird,
+    *  wenn die Methode im GUI-Adapter nicht implementiert ist.
     * 
     *  \~english
+    *  Checks whether the OKWFrameObjectMethodNotImplemented exception is raised 
+    *  by VerifyPlaceholderWCM( FN, ExpVal ),
+    *  if the method is not implemented in the GUI adapter.
     *  \~
     *  @author Zoltan Hrabovszki
     *  @date 2018-10-04

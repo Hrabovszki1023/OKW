@@ -788,6 +788,80 @@ public class EN_Keywords_ANTLR_Test
 
     /**
     * \~german
+    * \brief
+    *
+    * \~english
+    * \~
+    * \author Zoltan Hrabovszki
+    * \date 2018.12.26
+    */
+    @Test
+    public void tc_VerifyMaxLength_EnviromentVar() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+    
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+    
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+       
+        // Wert in "All_MethodsObj" setzen.
+        EN.SetValue( "All_MethodsObj", "${VerifyMaxLength}" );
+        // Prüfung des Schlüsselwortes?
+        EN.VerifyMaxLength( "All_MethodsObj", "${VerifyMaxLength}" );
+    
+        // Check the Name, Called Method and Value of Actuel object
+        //assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+    
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyPlaceholder()", myClipBoard.getMethod() );
+    }
+
+    /**
+     * \~german
+     *
+     * \~english
+     * \~ 
+     * \author Zoltan Hrabovszki
+     * \date 2018.12.26
+     */
+    @Test
+    public void tc_VerifyMaxLengthMemorizedValue() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+    
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+    
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        // Set Value in "Memory"
+        OKW_Memorize_Sngltn.getInstance().set( "Key1", "2" );
+    
+        EN.SetValue( "All_MethodsObj", "${Key1}" );
+        EN.VerifyMaxLength( "All_MethodsObj", "${Key1}" );
+    
+        // Check the Name, Called Method and Value of Actuel object
+        // assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+    
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyPlaceholder()", myClipBoard.getMethod() );
+    }
+
+    /**
+    * \~german
     *
     * \~english
     * \~

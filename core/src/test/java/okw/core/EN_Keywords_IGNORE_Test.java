@@ -1566,10 +1566,11 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
-     *  
+     *  Prüft ob das Schlüsselwort VerifyLabel( FN, "" ) nicht ausgeführt wird
      *  
      *  \~english
+     *  Verifies if the keyword VerifyLabel( FN, "" ) is not executed.
+     *  
      *  \~
      *  \author Zoltan Hrabovszki
      *  \date 2013.12.26
@@ -1602,10 +1603,11 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
-     *  
+     *  Prüft ob das Schlüsselwort VerifyLabel( FN, "${IGNORE}" ) nicht ausgeführt wird
      *  
      *  \~english
+     *  Verifies if the keyword VerifyLabel( FN, "${IGNORE}" ) is not executed.
+     *  
      *  \~
      *  \author Zoltan Hrabovszki
      *  \date 2013.12.26
@@ -1746,7 +1748,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -1774,6 +1775,80 @@ public class EN_Keywords_IGNORE_Test
         EN.VerifyLabelWCM( "All_MethodsObj", "" );
 
         // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "", myClipBoard.getObjectName() );
+        assertEquals( "", myClipBoard.getMethod() );
+
+        assertEquals( 0, myClipBoard.getValue().size() );
+    }
+
+    /**
+     *  \~german
+     *  Prüft ob das Schlüsselwort VerifyMaxLength( FN, "" ) nicht ausgeführt wird
+     *  
+     *  \~english
+     *  Verifies if the keyword VerifyMaxLength( FN, "" ) is not executed.
+     *  
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+    @Test
+    public void tcVerifyMaxLength_IGNORE_EmptyString() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        myClipBoard.Clear();
+
+        EN.VerifyMaxLength( "All_MethodsObj", "" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "", myClipBoard.getObjectName() );
+        assertEquals( "", myClipBoard.getMethod() );
+
+        assertEquals( 0, myClipBoard.getValue().size() );
+    }
+
+    /**
+     *  \~german
+     *  Prüft ob das Schlüsselwort VerifyMaxLength( FN, "${IGNORE}" ) nicht ausgeführt wird
+     *  
+     *  \~english
+     *  Verifies if the keyword VerifyMaxLength( FN, "${IGNORE}" ) is not executed.
+     *  
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+    @Test
+    public void tcVerifyMaxLength_IGNORE() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        myClipBoard.Clear();
+
+        EN.VerifyMaxLength( "All_MethodsObj", "${IGNORE}" );
+
+        // Check the Name, Called Method and Value of Actual object
         assertEquals( "", myClipBoard.getObjectName() );
         assertEquals( "", myClipBoard.getMethod() );
 

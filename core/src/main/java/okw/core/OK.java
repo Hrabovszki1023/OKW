@@ -1805,6 +1805,28 @@ public class OK implements IOKW_State
         }
     }
 
+    private void verification( Integer fpiActual, Integer fpiExpected )
+    {
+        String fpsActual   = fpiActual.toString();
+        String fpsExpected = fpiExpected.toString();
+        
+        if ( fpsActual.equals( fpsExpected ) )
+        {
+            Log.LogPass( fpsActual + " = " + fpsExpected );
+        }
+        else
+        {
+            Log.LogError( fpsActual + " \u2260 " + fpsExpected );
+            Log.ResOpenList( "Details..." );
+            Log.LogPrint( "  Actual: " + fpsActual );
+            Log.LogPrint( "Expected: " + fpsExpected );
+            Log.ResCloseList();
+
+            // Trigger OKWVerifyingFailsException!
+            throw new OKWVerifyingFailsException();
+        }
+    }
+
     private void verification( ArrayList<String> Actual, ArrayList<String> Expected )
     {
 
@@ -2008,6 +2030,64 @@ public class OK implements IOKW_State
             }
         }
         return lvbReturn;
+    }
+
+    /**
+     * 
+     * \see https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
+     * @param timeout Entält Timeout Daten.
+     * @param fpiExpected Erwarteter Wert
+     * @param Method2Call Functionsreferenz auf die aufzurufende Methode
+     * @return
+     */
+    private Integer verify( OKW_TimeOut timeout, Integer fpiExpected, Supplier<Integer> Method2Call )
+    {
+        Integer Count = 0;
+
+        Integer lviReturn = 0;
+        Boolean bOK = false;
+
+        //Log.LogFunctionStartDebug( "Verify", "String", "OKW_TimeOut", timeout.toString(), "fpbExpected", fpbExpected.toString() );
+        
+        Log.LogFunctionStartDebug( "verify", "timeout", timeout.toString(), "fpbExpected", fpiExpected.toString() );
+
+        try
+        {
+            Count = 0;
+
+            while ( Count < timeout.getMaxCount() )
+            {
+                lviReturn = Method2Call.get();
+
+                if ( fpiExpected == lviReturn )
+                {
+                    break;
+                }
+                else
+                {
+                    Thread.sleep( timeout.getPT() );
+                }
+                Count++;
+            }
+
+            bOK = true;
+        }
+        catch (IllegalArgumentException | InterruptedException e)
+        {
+            throw new RuntimeException( e );
+        }
+        finally
+        {
+            if ( bOK )
+            {
+                Log.LogFunctionEndDebug( lviReturn.toString() );
+            }
+            else
+            {
+                Log.LogFunctionEndDebug();
+            }
+        }
+        return lviReturn;
     }
 
     /**
@@ -2617,6 +2697,7 @@ public class OK implements IOKW_State
         }
     }
 
+    
     /**
      *   \copydoc IOKW_State::VerifyPlaceholderWCM(String,String)
      */
@@ -2683,6 +2764,86 @@ public class OK implements IOKW_State
         }
     }
 
+    
+    /**
+     *   \copydoc IOKW_State::VerifyMaxLength(String,String)
+     */
+    public void VerifyMaxLength( String FN, String ExpVal ) throws Exception
+    {
+
+        Integer lviExpected = null;
+        Integer Actual = null;
+
+        Log.LogFunctionStartDebug( "VerifyMaxLength", "FN", FN, "fpsExpected", ExpVal );
+
+        try
+        {
+            // Prüfen ob ignoriert werden muss...
+            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
+            {
+                // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = IGNORE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "SEP" ) ) )
+            {
+                // Wenn ExpVal = SEP enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "VSEP" ) ) )
+            {
+                // Wenn ExpVal = VSEP enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+            {
+                // Wenn ExpVal = VSEP enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else
+            {
+                try {
+                    lviExpected = Integer.parseInt( ExpVal );
+                }
+                catch (NumberFormatException e) {
+                    // Wenn ExpVal = keine Zahl enthält -> OKWNotAllowedValueException auslösen...
+                    String msg = LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal );
+                    throw new OKWNotAllowedValueException( msg, e );
+                }
+
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
+
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
+                OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyPlaceholder_TO(), myOKW.VerifyPlaceholder_PT() );
+
+                Actual = verify( TimeOut, lviExpected, () ->
+                {
+                    return MyObject.VerifyMaxLength();
+                } );
+
+                verification( Actual, lviExpected );
+            }
+        }
+        catch (Exception e)
+        {
+            this.handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+    
     /**
      *   \copydoc IOKW_State::VerifyPlaceholderREGX(String,String)
      */
@@ -3563,6 +3724,7 @@ public class OK implements IOKW_State
      */
     private void handleException( Exception e ) throws Exception
     {
+        Exception e_Wrapped = null;
 
         // if we have an InvocationTargetException...
         if ( e instanceof InvocationTargetException )
@@ -3573,19 +3735,21 @@ public class OK implements IOKW_State
         else if ( e instanceof RuntimeException )
         {
             // ... then get the origin exception.
-            Exception e_Wrapped = ( Exception ) e.getCause();
-
-            // Wrapped Exception?
-            if ( e_Wrapped != null )
-            {
-                // Then unwrap Exception
-                e = e_Wrapped;
-            }
+            e_Wrapped = ( Exception ) e.getCause();
         }
 
         Log.LogPrint( "==========================================================================" );
         Log.LogException( e.getMessage() );
-        Log.LogPrintDebug( "--------" );
+
+        if ( e_Wrapped != null )
+        {
+            Log.ResOpenList( "Trigger of the exception..." );
+            Log.LogPrint( "--------------------------------------------------------------------------" );
+            Log.LogPrint( "Exception: " + e_Wrapped.toString() );
+            Log.LogPrint( "--------------------------------------------------------------------------" );
+            Log.ResCloseList();
+        }
+        Log.LogPrint( "==========================================================================" );
 
         CO.LogObjectData();
         /*
