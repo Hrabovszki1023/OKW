@@ -122,6 +122,12 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
     throw new OKWFrameObjectMethodNotImplemented("The method getLabel() is not defined for you GUI-Object. Please define first the methode!");
   }
 
+  public Integer getMaxLength()
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method getMaxLength() is not defined for you GUI-Object. Please define first the methode!");
+  }
+
   public ArrayList<String> getValue()
   {
     // TODO: /todo Meldung in xml-Auslagern

@@ -359,6 +359,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
+
     /**  \~german
     *  \brief
     *  Ermittelt den textuellen Inhalt des ToolTips.
@@ -1368,6 +1369,41 @@ public class SeAnyChildWindow extends AnyChildwindow
         return lvLsReturn;
     }
 
+
+    /**  
+     * \~german
+     *  Ermittelt die maximale Lenge des Wertes für Prüfewert.
+     *  
+     *  @remark Sollte der erwartete Wert zunächt nicht mit dem aktuellen Wert nicht übereinstimmen,
+     *  dann wird gewartet bis entweder der erwartete Wert sich im GUI objekt einstellt
+     *  oder der TimeOut erreicht wird.<br/>
+     *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @return Rückgabe des Textuellen Inhaltes des Labels.
+     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2018.12.27
+     */
+     @Override
+     public Integer VerifyMaxLength()
+     {
+         Integer lvLsReturn = null;
+
+         try
+         {
+             this.LogFunctionStartDebug( "VerifyMaxLength" );
+
+             lvLsReturn = this.getMaxLength();
+         }
+         finally
+         {
+             this.LogFunctionEndDebug( lvLsReturn.toString( ) );
+         }
+
+         return lvLsReturn;
+     }
     
     /**  
      * \~german

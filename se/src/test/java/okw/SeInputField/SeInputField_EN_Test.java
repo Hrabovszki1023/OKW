@@ -822,12 +822,13 @@ public class SeInputField_EN_Test {
   }
 
   
-  // \~german
-  // Prüft, ob die Methode VerifyLabelWCM für SeInputField implementiert ist.
-  //
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2014.12.03
+  /** \~german
+   * Prüft, ob die Methode VerifyLabelWCM für SeInputField implementiert ist.
+   *
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2014.12.03
+   */
   @Test
   public void tcVerifyLabelWCM() throws Exception
   {
@@ -862,6 +863,57 @@ public class SeInputField_EN_Test {
       EN.SelectWindow( "SeTextField" );
 
       EN.VerifyLabelWCM( "Name", "####:" );
+  }
+
+  
+  /** \~german
+   * Prüft, ob die Methode VerifyMaxLength für SeInputField implementiert ist.
+   *
+   * \~english
+   * Verifies whether the EN.VerifyMaxLength(String, String) method is implemented for okw.gui.adapter.SeInputField.
+   * 
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018.12.28
+   */
+  @Test
+  public void tcVerifyMaxLength() throws Exception
+  {
+      EN.BeginTest( name.getMethodName() );
+      EN.StartApp( ApplicationName );
+
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.SelectWindow( "SeTextField" );
+
+      EN.VerifyMaxLength( "Name", "40" );
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+  }
+
+  
+  /** \~german
+   * Prüft, ob die Methode VerifyMaxLength bei einer Soll/Ist Abweichung die Ausnahme 
+   * OKWVerifyingFailsException für SeInputField auslöst.
+   * 
+   * \~german
+   * Checks whether the VerifyMaxLength() method throws the OKWVerifyingFailsException
+   * exception for a SeInputField if there is a target/actual deviation.
+   * 
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018.12.28
+   */
+  @Test( expected = OKWVerifyingFailsException.class )
+  public void tcVerifyMaxLength_OKWVerifyingFailsException() throws Exception
+  {
+      EN.BeginTest( name.getMethodName() );
+      EN.StartApp( ApplicationName );
+
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.SelectWindow( "SeTextField" );
+
+      EN.VerifyMaxLength( "Name", "25" );
   }
 
   

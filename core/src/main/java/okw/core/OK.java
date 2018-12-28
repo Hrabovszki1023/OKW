@@ -2812,7 +2812,9 @@ public class OK implements IOKW_State
             else
             {
                 try {
-                    lviExpected = Integer.parseInt( ExpVal );
+                    String myExpVal = Parser.ParseMe( ExpVal );
+
+                    lviExpected = Integer.parseInt( myExpVal );
                 }
                 catch (NumberFormatException e) {
                     // Wenn ExpVal = keine Zahl enthält -> OKWNotAllowedValueException auslösen...
@@ -2823,7 +2825,7 @@ public class OK implements IOKW_State
                 IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
 
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
-                OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyPlaceholder_TO(), myOKW.VerifyPlaceholder_PT() );
+                OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyMaxLength_TO(), myOKW.VerifyMaxLength_PT() );
 
                 Actual = verify( TimeOut, lviExpected, () ->
                 {

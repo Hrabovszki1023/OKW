@@ -857,7 +857,7 @@ public class EN_Keywords_ANTLR_Test
         assertEquals( 1, myClipBoard.getValue().size() );
     
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-        assertEquals( "VerifyPlaceholder()", myClipBoard.getMethod() );
+        assertEquals( "VerifyMaxLength()", myClipBoard.getMethod() );
     }
 
     /**

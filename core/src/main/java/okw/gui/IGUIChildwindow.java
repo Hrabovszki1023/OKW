@@ -13,6 +13,8 @@ public interface IGUIChildwindow
     ArrayList<String> getTooltip();
     ArrayList<String> getValue();
     
+    Integer getMaxLength();
+    
     void ClickOn( );
     void DoubleClickOn( );
     

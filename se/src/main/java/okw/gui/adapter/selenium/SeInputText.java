@@ -97,6 +97,7 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
  * | `VerifyIsActive( FN, ExpVal )`, <br>`MemorizeIsActive( FN, MemKey)`,  <br>`LogIsActive( FN )` | **JA** |  |
  * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **JA** | Der sichtbare Text eines Textfeldes entspricht sein _Wert_ -> In diesem GUI-Adapter sind VerifyCaption und VerifyValue identisch. |
  * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )`     | **JA** | Im Beispie. `Name:` |
+ * | `VerifyMaxLength( FN, ExpVal )`                                                               | **JA** |  |
  * | `VerifyTooltip( FN, ExpVal )`,  <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **JA** | Als Tooltip wird das Attribute `title` verwendet.  Im Beispiel: `Title Name` |
  * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )`     | **JA** | Der sichtbare Text eines Textfeldes ist sein Wert |
  * 
@@ -150,7 +151,49 @@ public class SeInputText extends SeAnyChildWindow
     {
         return getValue();
     }
+    
+    
+   /** \~german
+   *  Ermittelt den textuellen Inhalt des Labels.
+   *  
+   *  Es wird das Attribute "textContent" des mit "id" an das aktuelle Objekt angebunde "Laben" gelesen.
+   *  
+   *  @return Rückgabe des Label-Textes.
+   *  \~english
+   *  \~
+   *  @author Zoltán Hrabovszki
+   *  @date 2018.12.27
+   */
+   public Integer getMaxLength()
+   {
+       Integer lviReturn = 0;
 
+       try
+       {
+           this.LogFunctionStartDebug( "getMaxLength" );
+
+           // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+           this.WaitForMe();
+
+           
+           // The Attribute "MaxLength" auslesen...
+           
+           String lvsMaxLength = this.Me().getAttribute( "maxlength" );
+
+           if ( !okw.OKW_Helper.isStringNullOrEmpty( lvsMaxLength) )
+           {
+               lviReturn = Integer.parseInt( lvsMaxLength );
+           }
+       }
+       finally
+       {
+           this.LogFunctionEndDebug( lviReturn.toString() );
+       }
+
+       return lviReturn;
+   }
+   
+   
     /** \~german
      *  Liest den Placeholder des input-Tags aus.
      * 
