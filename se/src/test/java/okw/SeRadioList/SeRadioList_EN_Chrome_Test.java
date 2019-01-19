@@ -18,7 +18,7 @@ public class SeRadioList_EN_Chrome_Test extends SeRadioList_EN_Test
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception
 	{
-	ApplicationName = "Chrome";
+	    ApplicationName = "Chrome";
 
         Logger_Sngltn.getInstance();
 		// Reset des Loggers: Alle geladenen Instanzen löschen

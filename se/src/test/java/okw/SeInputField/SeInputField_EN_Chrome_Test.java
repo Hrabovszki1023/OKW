@@ -1,6 +1,7 @@
 package okw.SeInputField;
 
 import okw.log.Logger_Sngltn;
+import okw.log.log2html.Log2HTML;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -14,7 +15,7 @@ import org.junit.BeforeClass;
 */
 public class SeInputField_EN_Chrome_Test extends SeInputField_EN_Test
 {
-	// static Log2HTML myLog2HTML = null;
+	static Log2HTML myLog2HTML = null;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception
@@ -25,16 +26,21 @@ public class SeInputField_EN_Chrome_Test extends SeInputField_EN_Test
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        //myLog2HTML = new Log2HTML("SeTextField_EN_Chrome_Test.html");
-        // Logger_Sngltn.getInstance().AddLogger(myLog2HTML);
+        //
+        myLog2HTML = new Log2HTML();
+        myLog2HTML.setHTML_File( "target/SeInputField_EN_Chrome_Test.html" );
+
+        Logger_Sngltn.getInstance().addLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
+        
+        
 	}
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception
-	{
-		//myLog2HTML.Result2HTML();
-	}
+    @AfterClass
+    public static void tearDownAfterClass() throws Exception
+    {
+      myLog2HTML.Result2HTML();
+    }
 	
     @After
     public void FirefoxAfter() throws Exception
