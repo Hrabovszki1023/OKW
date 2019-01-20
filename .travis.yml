@@ -10,7 +10,7 @@ branches:
     - gh-pages
     
 jdk:
-  - oraclejdk8
+  - openjdk8
 
 # Environment variables
 env:
