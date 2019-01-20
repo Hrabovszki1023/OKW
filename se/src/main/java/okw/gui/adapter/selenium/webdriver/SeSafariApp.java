@@ -80,7 +80,7 @@ import okw.log.*;
 
         	
         	 SafariOptions options = new SafariOptions();
-        	 options.setUseCleanSession(true); //if you wish safari to forget session everytime
+        	 //options.setUseCleanSession(true); //if you wish safari to forget session everytime
 
             SeDriver.getInstance().driver = new SafariDriver(options);
             this.Init();
