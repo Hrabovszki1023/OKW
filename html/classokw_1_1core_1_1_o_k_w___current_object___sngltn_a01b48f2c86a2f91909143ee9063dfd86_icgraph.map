@@ -1,51 +1,52 @@
 <map id="okw.core.OKW_CurrentObject_Sngltn.LogObjectData" name="okw.core.OKW_CurrentObject_Sngltn.LogObjectData">
-<area shape="rect" id="node2" href="$classokw_1_1core_1_1_o_k.html#a5a6db6a457bcb71c893f5d4eb615b2b7" title="Zentrale Exception&#45;Behandlung. " alt="" coords="254,1243,453,1269"/>
-<area shape="rect" id="node3" href="$classokw_1_1core_1_1_o_k.html#a594d5a3518a401240bc1868f5883a393" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="542,5,703,32"/>
-<area shape="rect" id="node4" href="$classokw_1_1core_1_1_o_k.html#a1a4fcce79cac7386f04495383d2985b3" title="Klickt auf das gegebene Objekt. " alt="" coords="548,56,697,83"/>
-<area shape="rect" id="node5" href="$classokw_1_1core_1_1_o_k.html#a3e40c302aa78cb83aa1fcfd0dafa24b0" title="Führt ein Doppelklick auf das gegebene GUI&#45;Objekt aus. " alt="" coords="527,107,718,133"/>
-<area shape="rect" id="node6" href="$classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0" title="Gibt die Caption eines GUI&#45;Objektes in den Testergebnissen aus. " alt="" coords="539,157,707,184"/>
-<area shape="rect" id="node7" href="$classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus. " alt="" coords="543,208,703,235"/>
-<area shape="rect" id="node8" href="$classokw_1_1core_1_1_o_k.html#a1b8a5a3d583ffabc0063632ab9d981cf" title="Dokumentiert den Fokus&#45;Status des gegebenen Objekts. " alt="" coords="531,259,714,285"/>
-<area shape="rect" id="node9" href="$classokw_1_1core_1_1_o_k.html#ae44a6c32e26a7f93dd5c9f7b5765ee0d" title="Dokumentiert den Status des gegebenen Objekts. " alt="" coords="537,309,708,336"/>
-<area shape="rect" id="node10" href="$classokw_1_1core_1_1_o_k.html#a5ca2a918fc575095dd00d15e65f1491c" title="Gibt den Wert des Etikette/Label in der Logdatei aus. " alt="" coords="545,360,700,387"/>
-<area shape="rect" id="node11" href="$classokw_1_1core_1_1_o_k.html#a260d21c87a1d0df97bb442888fc87fcb" title="Gibt den Wert des Platzhalters in der Logdatei aus. " alt="" coords="527,411,718,437"/>
-<area shape="rect" id="node12" href="$classokw_1_1core_1_1_o_k.html#af480aabf37fd55561892d9effcdaf182" title="Dokumentiert den markierten Text des gegebenen Objekts. " alt="" coords="535,461,710,488"/>
-<area shape="rect" id="node13" href="$classokw_1_1core_1_1_o_k.html#a7c6a02d1f58952de8cc3591379cdfbe3" title="Dokumentiert den Wert der ausgewählten Zelle. " alt="" coords="535,513,710,554"/>
-<area shape="rect" id="node14" href="$classokw_1_1core_1_1_o_k.html#a170fa2f1a3bd1fa9f00fc160c48e76c2" title="Dokumentiert die Kurzinfo zu einem Werkzeug des gegebenen Objekts. " alt="" coords="541,579,704,605"/>
-<area shape="rect" id="node15" href="$classokw_1_1core_1_1_o_k.html#ad13df6f48f816f5d075efe045907527d" title="Dokumentiert den Standartwert eines Objekts. " alt="" coords="545,629,701,656"/>
-<area shape="rect" id="node16" href="$classokw_1_1core_1_1_o_k.html#a661c650ca7824d1ea464d98b792ae712" title="Keine Beschreibung zu &quot;MemorizeCaption&quot; verfügbar. " alt="" coords="521,680,725,707"/>
-<area shape="rect" id="node17" href="$classokw_1_1core_1_1_o_k.html#a61db6d17853d7c0913216708c2c29779" title="Merkt sich den aktuell existierenden Zustand des Objekts. " alt="" coords="525,731,721,757"/>
-<area shape="rect" id="node18" href="$classokw_1_1core_1_1_o_k.html#aa18fa77383398b2a8242ca299938c24d" title="Keine Beschreibung zu &quot;MemorizeHasFocus&quot; verfügbar. " alt="" coords="513,781,732,808"/>
-<area shape="rect" id="node19" href="$classokw_1_1core_1_1_o_k.html#aed2c0c9e72b5b730b6b041ef641f3bdc" title="Merkt sich den Zustand des gegebenen Objekts. " alt="" coords="519,832,726,859"/>
-<area shape="rect" id="node20" href="$classokw_1_1core_1_1_o_k.html#ad09ff6f6389ceb04f7ec338ea3c45e85" title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab. " alt="" coords="527,883,718,909"/>
-<area shape="rect" id="node21" href="$classokw_1_1core_1_1_o_k.html#ac9744fdc26e9049a0d0fe48b1ae9d11c" title="Speirchert den aktuellen Wert der Platzhalters, und legt diesen unter fpsMemKeyName ab..." alt="" coords="509,933,736,960"/>
-<area shape="rect" id="node22" href="$classokw_1_1core_1_1_o_k.html#a7e8652a632b073da02222ee6e5e88266" title="Keine Beschreibung zu &quot;MemorizeSelectedValue&quot; verfügbar. " alt="" coords="517,985,728,1026"/>
-<area shape="rect" id="node23" href="$classokw_1_1core_1_1_o_k.html#ab7c819556f3b21faeea08fad5be32813" title="Merkt sich den Wert der gegebenen Zelle in der Tabelle. throws Exception " alt="" coords="517,1050,728,1091"/>
-<area shape="rect" id="node24" href="$classokw_1_1core_1_1_o_k.html#aad3ff1b462da844ccc53d2e177fb1def" title="Dokumentiert den Tooltip&#45;Text (Kurzinformation) des gegebenen Objekts. " alt="" coords="523,1116,722,1143"/>
-<area shape="rect" id="node25" href="$classokw_1_1core_1_1_o_k.html#a2d93a84a57295418131d219a5887094d" title="Merkt sich den Standartwert eines Objekts. " alt="" coords="527,1167,719,1193"/>
-<area shape="rect" id="node26" href="$classokw_1_1core_1_1_o_k.html#a7ee0b387364c0c188f94099f14f2da43" title="Auswahl aller Zeilen einer Liste/Tabelle, welche die gegebenen Daten enthalten. " alt="" coords="553,1217,692,1244"/>
-<area shape="rect" id="node27" href="$classokw_1_1core_1_1_o_k.html#ae30b70ea446f3a58022a617177d0bcb6" title="Wählt den gegebenen Menü&#45;Eintrag aus. " alt="" coords="537,1268,708,1295"/>
-<area shape="rect" id="node28" href="$classokw_1_1core_1_1_o_k.html#a0cbda1e1d604b0b988296c48835300cc" title="Wählt die gegebene Tabellenzelle aus. " alt="" coords="527,1319,718,1345"/>
-<area shape="rect" id="node29" href="$classokw_1_1core_1_1_o_k.html#a4609a2156286fe56e1d4dba1695cd600" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="529,1369,716,1396"/>
-<area shape="rect" id="node30" href="$classokw_1_1core_1_1_o_k.html#a038f45c24b6538ddadbdcd1fd179c2ab" title="Setzt den Wert von SELECTEDCHILD auf den Wert von FN. " alt="" coords="538,1420,707,1447"/>
-<area shape="rect" id="node31" href="$classokw_1_1core_1_1_o_k.html#a4ce824499d5b8b9612beff9f5438c6a1" title="Ruft die Sequenz eines Fensters auf. " alt="" coords="543,1471,703,1497"/>
-<area shape="rect" id="node32" href="$classokw_1_1core_1_1_o_k.html#a2ec62170b8430a0ea58e919d8d46a7c0" title="Setzt den Fokus auf das gegebene Fensterobjekt. " alt="" coords="543,1521,702,1548"/>
-<area shape="rect" id="node33" href="$classokw_1_1core_1_1_o_k.html#a6af4fe0d34a701aefc8ce67657b3c432" title="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert. " alt="" coords="545,1572,700,1599"/>
-<area shape="rect" id="node34" href="$classokw_1_1core_1_1_o_k.html#a38d47241f9746791eecaf7a45fcabb80" title="Startet die gegebene Anwendung. " alt="" coords="546,1623,699,1649"/>
-<area shape="rect" id="node35" href="$classokw_1_1core_1_1_o_k.html#adbb934e4f20a0c451b4720a67c6cf99a" title="Beendet eine gegebene Anwendung. " alt="" coords="547,1673,699,1700"/>
-<area shape="rect" id="node36" href="$classokw_1_1core_1_1_o_k.html#a4600012e7b1fdbedcee36313d0397fd5" title="Tastatureingaben von Daten in das aktive Fensterobjekt. " alt="" coords="545,1724,700,1751"/>
-<area shape="rect" id="node37" href="$classokw_1_1core_1_1_o_k.html#afbfb6cebd96c8087190627a4c0d0f7c4" title="Eingabe von Daten in eine gegebene Tabellenzelle über die Tastatur. " alt="" coords="519,1775,726,1801"/>
-<area shape="rect" id="node38" href="$classokw_1_1core_1_1_o_k.html#ad91da46f1631eed55757d42061543e86" title="Tastatureingabe in ein bestimmtes Fensterobjekt. " alt="" coords="522,1825,723,1852"/>
-<area shape="rect" id="node39" href="$classokw_1_1core_1_1_o_k.html#afe1a1b392d59c5ceef93ed6d0cfd2e01" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="532,1876,713,1903"/>
-<area shape="rect" id="node40" href="$classokw_1_1core_1_1_o_k.html#a461f7511030e7975fe983b2509527529" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="515,1927,730,1953"/>
-<area shape="rect" id="node41" href="$classokw_1_1core_1_1_o_k.html#a7b0869a2a6df63be61899963dc35d768" title="Überprüft die Überschrift des Objektes. " alt="" coords="513,1977,732,2004"/>
-<area shape="rect" id="node42" href="$classokw_1_1core_1_1_o_k.html#a9785853231d70946dcbbfcd44b509c25" title="Prüft, ob das gegebene Objekt existiert. " alt="" coords="536,2028,709,2055"/>
-<area shape="rect" id="node43" href="$classokw_1_1core_1_1_o_k.html#a4950117cbe9cd2b769ae529bbdc1f897" title="Vergleicht den Fokus&#45;Zustand des gegebenen Objekts mit dem erwarteten Wert. " alt="" coords="525,2079,721,2105"/>
-<area shape="rect" id="node44" href="$classokw_1_1core_1_1_o_k.html#a071aec5319238e209cfc6f1434ea13e8" title="copydoc IOKW_State::VerifyHasFocus(String,String) " alt="" coords="531,2129,715,2156"/>
-<area shape="rect" id="node45" href="$classokw_1_1core_1_1_o_k.html#a1bfa8ae24fc44958e4e3c4272c120bb8" title="Überprüft die Beschreibung des Objektes. " alt="" coords="539,2180,706,2207"/>
-<area shape="rect" id="node46" href="$classokw_1_1core_1_1_o_k.html#a4187442dc3574358fda8af18cb03f15e" title="Überprüft die Beschreibung des Objektes. " alt="" coords="522,2231,723,2257"/>
-<area shape="rect" id="node47" href="$classokw_1_1core_1_1_o_k.html#aeedf0dfdfe514b50ad774eb187a8cc34" title="Überprüft die Überschrift des Objektes. " alt="" coords="520,2281,725,2308"/>
-<area shape="rect" id="node48" href="$classokw_1_1core_1_1_o_k.html#a8c6275d39dbc5ce13caf907f511a9a64" title="Überprüft die Beschreibung des Objektes. " alt="" coords="521,2332,725,2359"/>
-<area shape="rect" id="node49" href="$classokw_1_1core_1_1_o_k.html#a20ab85fe302c5b2fc61b94a8fe347f0c" title="Überprüft den Platzhalter des Objektes. " alt="" coords="503,2383,742,2409"/>
-<area shape="rect" id="node50" href="$classokw_1_1core_1_1_o_k.html#a52a7e12864bb2fbf5c8578d3d25aabb5" title="Überprüft den Platzhalter des Objektes. " alt="" coords="501,2433,744,2460"/>
+<area shape="rect" id="node1" title="Methode gibt alle wichtigen Informationen zum aktuellen Objekt aus." alt="" coords="552,1235,759,1277"/>
+<area shape="rect" id="node2" href="$classokw_1_1core_1_1_o_k.html#a5a6db6a457bcb71c893f5d4eb615b2b7" title="Zentrale Exception&#45;Behandlung." alt="" coords="296,1243,504,1269"/>
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_o_k.html#a594d5a3518a401240bc1868f5883a393" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="45,5,209,32"/>
+<area shape="rect" id="node4" href="$classokw_1_1core_1_1_o_k.html#a1a4fcce79cac7386f04495383d2985b3" title="Klickt auf das gegebene Objekt." alt="" coords="51,56,202,83"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_o_k.html#a3e40c302aa78cb83aa1fcfd0dafa24b0" title="Führt ein Doppelklick auf das gegebene GUI&#45;Objekt aus." alt="" coords="29,107,224,133"/>
+<area shape="rect" id="node6" href="$classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0" title="Gibt die Caption eines GUI&#45;Objektes in den Testergebnissen aus." alt="" coords="39,157,214,184"/>
+<area shape="rect" id="node7" href="$classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus." alt="" coords="45,208,208,235"/>
+<area shape="rect" id="node8" href="$classokw_1_1core_1_1_o_k.html#a1b8a5a3d583ffabc0063632ab9d981cf" title="Dokumentiert den Fokus&#45;Status des gegebenen Objekts." alt="" coords="33,259,221,285"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_o_k.html#ae44a6c32e26a7f93dd5c9f7b5765ee0d" title="Dokumentiert den Status des gegebenen Objekts." alt="" coords="39,309,214,336"/>
+<area shape="rect" id="node10" href="$classokw_1_1core_1_1_o_k.html#a5ca2a918fc575095dd00d15e65f1491c" title="Gibt den Wert des Etikette/Label in der Logdatei aus." alt="" coords="47,360,207,387"/>
+<area shape="rect" id="node11" href="$classokw_1_1core_1_1_o_k.html#a260d21c87a1d0df97bb442888fc87fcb" title="Gibt den Wert des Platzhalters in der Logdatei aus." alt="" coords="27,411,227,437"/>
+<area shape="rect" id="node12" href="$classokw_1_1core_1_1_o_k.html#af480aabf37fd55561892d9effcdaf182" title="Dokumentiert den markierten Text des gegebenen Objekts." alt="" coords="35,461,218,488"/>
+<area shape="rect" id="node13" href="$classokw_1_1core_1_1_o_k.html#a7c6a02d1f58952de8cc3591379cdfbe3" title="Dokumentiert den Wert der ausgewählten Zelle." alt="" coords="37,513,216,554"/>
+<area shape="rect" id="node14" href="$classokw_1_1core_1_1_o_k.html#a170fa2f1a3bd1fa9f00fc160c48e76c2" title="Dokumentiert die Kurzinfo zu einem Werkzeug des gegebenen Objekts." alt="" coords="43,579,210,605"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_o_k.html#ad13df6f48f816f5d075efe045907527d" title="Dokumentiert den Standartwert eines Objekts." alt="" coords="46,629,207,656"/>
+<area shape="rect" id="node16" href="$classokw_1_1core_1_1_o_k.html#a661c650ca7824d1ea464d98b792ae712" title="Keine Beschreibung zu &quot;MemorizeCaption&quot; verfügbar." alt="" coords="19,680,234,707"/>
+<area shape="rect" id="node17" href="$classokw_1_1core_1_1_o_k.html#a61db6d17853d7c0913216708c2c29779" title="Merkt sich den aktuell existierenden Zustand des Objekts." alt="" coords="25,731,228,757"/>
+<area shape="rect" id="node18" href="$classokw_1_1core_1_1_o_k.html#aa18fa77383398b2a8242ca299938c24d" title="Keine Beschreibung zu &quot;MemorizeHasFocus&quot; verfügbar." alt="" coords="13,781,241,808"/>
+<area shape="rect" id="node19" href="$classokw_1_1core_1_1_o_k.html#aed2c0c9e72b5b730b6b041ef641f3bdc" title="Merkt sich den Zustand des gegebenen Objekts." alt="" coords="19,832,234,859"/>
+<area shape="rect" id="node20" href="$classokw_1_1core_1_1_o_k.html#ad09ff6f6389ceb04f7ec338ea3c45e85" title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab." alt="" coords="27,883,227,909"/>
+<area shape="rect" id="node21" href="$classokw_1_1core_1_1_o_k.html#ac9744fdc26e9049a0d0fe48b1ae9d11c" title="Speirchert den aktuellen Wert der Platzhalters, und legt diesen unter fpsMemKeyName ab." alt="" coords="7,933,247,960"/>
+<area shape="rect" id="node22" href="$classokw_1_1core_1_1_o_k.html#a7e8652a632b073da02222ee6e5e88266" title="Keine Beschreibung zu &quot;MemorizeSelectedValue&quot; verfügbar." alt="" coords="15,985,238,1026"/>
+<area shape="rect" id="node23" href="$classokw_1_1core_1_1_o_k.html#ab7c819556f3b21faeea08fad5be32813" title="Merkt sich den Wert der gegebenen Zelle in der Tabelle. throws Exception" alt="" coords="17,1050,236,1091"/>
+<area shape="rect" id="node24" href="$classokw_1_1core_1_1_o_k.html#aad3ff1b462da844ccc53d2e177fb1def" title="Dokumentiert den Tooltip&#45;Text (Kurzinformation) des gegebenen Objekts." alt="" coords="23,1116,230,1143"/>
+<area shape="rect" id="node25" href="$classokw_1_1core_1_1_o_k.html#a2d93a84a57295418131d219a5887094d" title="Merkt sich den Standartwert eines Objekts." alt="" coords="26,1167,227,1193"/>
+<area shape="rect" id="node26" href="$classokw_1_1core_1_1_o_k.html#a7ee0b387364c0c188f94099f14f2da43" title="Auswahl aller Zeilen einer Liste/Tabelle, welche die gegebenen Daten enthalten." alt="" coords="55,1217,198,1244"/>
+<area shape="rect" id="node27" href="$classokw_1_1core_1_1_o_k.html#ae30b70ea446f3a58022a617177d0bcb6" title="Wählt den gegebenen Menü&#45;Eintrag aus." alt="" coords="37,1268,216,1295"/>
+<area shape="rect" id="node28" href="$classokw_1_1core_1_1_o_k.html#a0cbda1e1d604b0b988296c48835300cc" title="Wählt die gegebene Tabellenzelle aus." alt="" coords="29,1319,225,1345"/>
+<area shape="rect" id="node29" href="$classokw_1_1core_1_1_o_k.html#a4609a2156286fe56e1d4dba1695cd600" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="31,1369,222,1396"/>
+<area shape="rect" id="node30" href="$classokw_1_1core_1_1_o_k.html#a038f45c24b6538ddadbdcd1fd179c2ab" title="Setzt den Wert von SELECTEDCHILD auf den Wert von FN." alt="" coords="39,1420,214,1447"/>
+<area shape="rect" id="node31" href="$classokw_1_1core_1_1_o_k.html#a4ce824499d5b8b9612beff9f5438c6a1" title="Ruft die Sequenz eines Fensters auf." alt="" coords="43,1471,210,1497"/>
+<area shape="rect" id="node32" href="$classokw_1_1core_1_1_o_k.html#a2ec62170b8430a0ea58e919d8d46a7c0" title="Setzt den Fokus auf das gegebene Fensterobjekt." alt="" coords="45,1521,208,1548"/>
+<area shape="rect" id="node33" href="$classokw_1_1core_1_1_o_k.html#a6af4fe0d34a701aefc8ce67657b3c432" title="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert." alt="" coords="47,1572,207,1599"/>
+<area shape="rect" id="node34" href="$classokw_1_1core_1_1_o_k.html#a38d47241f9746791eecaf7a45fcabb80" title="Startet die gegebene Anwendung." alt="" coords="47,1623,207,1649"/>
+<area shape="rect" id="node35" href="$classokw_1_1core_1_1_o_k.html#adbb934e4f20a0c451b4720a67c6cf99a" title="Beendet eine gegebene Anwendung." alt="" coords="47,1673,206,1700"/>
+<area shape="rect" id="node36" href="$classokw_1_1core_1_1_o_k.html#a4600012e7b1fdbedcee36313d0397fd5" title="Tastatureingaben von Daten in das aktive Fensterobjekt." alt="" coords="50,1724,203,1751"/>
+<area shape="rect" id="node37" href="$classokw_1_1core_1_1_o_k.html#afbfb6cebd96c8087190627a4c0d0f7c4" title="Eingabe von Daten in eine gegebene Tabellenzelle über die Tastatur." alt="" coords="23,1775,230,1801"/>
+<area shape="rect" id="node38" href="$classokw_1_1core_1_1_o_k.html#ad91da46f1631eed55757d42061543e86" title="Tastatureingabe in ein bestimmtes Fensterobjekt." alt="" coords="27,1825,227,1852"/>
+<area shape="rect" id="node39" href="$classokw_1_1core_1_1_o_k.html#afe1a1b392d59c5ceef93ed6d0cfd2e01" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)." alt="" coords="33,1876,220,1903"/>
+<area shape="rect" id="node40" href="$classokw_1_1core_1_1_o_k.html#a461f7511030e7975fe983b2509527529" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)." alt="" coords="17,1927,236,1953"/>
+<area shape="rect" id="node41" href="$classokw_1_1core_1_1_o_k.html#a7b0869a2a6df63be61899963dc35d768" title="Überprüft die Überschrift des Objektes." alt="" coords="16,1977,237,2004"/>
+<area shape="rect" id="node42" href="$classokw_1_1core_1_1_o_k.html#a9785853231d70946dcbbfcd44b509c25" title="Prüft, ob das gegebene Objekt existiert." alt="" coords="39,2028,214,2055"/>
+<area shape="rect" id="node43" href="$classokw_1_1core_1_1_o_k.html#a4950117cbe9cd2b769ae529bbdc1f897" title="Vergleicht den Fokus&#45;Zustand des gegebenen Objekts mit dem erwarteten Wert." alt="" coords="27,2079,227,2105"/>
+<area shape="rect" id="node44" href="$classokw_1_1core_1_1_o_k.html#a071aec5319238e209cfc6f1434ea13e8" title="copydoc IOKW_State::VerifyHasFocus(String,String)" alt="" coords="33,2129,220,2156"/>
+<area shape="rect" id="node45" href="$classokw_1_1core_1_1_o_k.html#a1bfa8ae24fc44958e4e3c4272c120bb8" title="Überprüft die Beschreibung des Objektes." alt="" coords="41,2180,213,2207"/>
+<area shape="rect" id="node46" href="$classokw_1_1core_1_1_o_k.html#a4187442dc3574358fda8af18cb03f15e" title="Überprüft die Beschreibung/Label des Objektes." alt="" coords="25,2231,228,2257"/>
+<area shape="rect" id="node47" href="$classokw_1_1core_1_1_o_k.html#aeedf0dfdfe514b50ad774eb187a8cc34" title="Überprüft die Überschrift des Objektes." alt="" coords="23,2281,230,2308"/>
+<area shape="rect" id="node48" href="$classokw_1_1core_1_1_o_k.html#a8c6275d39dbc5ce13caf907f511a9a64" title="Überprüft die Beschreibung des Objektes." alt="" coords="21,2332,233,2359"/>
+<area shape="rect" id="node49" href="$classokw_1_1core_1_1_o_k.html#a20ab85fe302c5b2fc61b94a8fe347f0c" title="Überprüft den Platzhalter des Objektes." alt="" coords="5,2383,248,2409"/>
+<area shape="rect" id="node50" href="$classokw_1_1core_1_1_o_k.html#af60e502babb048eec6adefd04dc9d349" title="Checks the maximum number of characters that can be entered." alt="" coords="23,2433,231,2460"/>
 </map>

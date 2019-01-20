@@ -1,10 +1,11 @@
 <map id="okw.core.CurrentObject_Test.tc_MemorizeValue_ChildObject" name="okw.core.CurrentObject_Test.tc_MemorizeValue_ChildObject">
-<area shape="rect" id="node2" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="225,135,420,161"/>
-<area shape="rect" id="node8" href="$classokw_1_1core_1_1_core.html#ac8440162926bfc169ee483bd7f860117" title="Merkt sich den Standartwert eines Objekts. " alt="" coords="222,80,423,107"/>
-<area shape="rect" id="node3" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes. " alt="" coords="491,70,669,111"/>
-<area shape="rect" id="node4" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. " alt="" coords="473,136,687,163"/>
-<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="483,187,677,229"/>
-<area shape="rect" id="node5" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. " alt="" coords="737,136,959,163"/>
-<area shape="rect" id="node6" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag. " alt="" coords="1008,129,1211,170"/>
-<area shape="rect" id="node9" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa48a3de07623a93fc0b4d68629dd0887" title="Merkt sich den Standartwert eines Objekts. " alt="" coords="473,5,687,46"/>
+<area shape="rect" id="node1" title="Testziel: Prüft den Aufruf der Methode MemorizeValue( FN, MemKey ) im ChildObject." alt="" coords="5,94,180,150"/>
+<area shape="rect" id="node2" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="233,135,436,162"/>
+<area shape="rect" id="node8" href="$classokw_1_1core_1_1_core.html#ac8440162926bfc169ee483bd7f860117" title="Merkt sich den Standartwert eines Objekts." alt="" coords="228,81,441,107"/>
+<area shape="rect" id="node3" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes." alt="" coords="507,71,697,112"/>
+<area shape="rect" id="node4" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter." alt="" coords="489,137,715,163"/>
+<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="503,188,701,229"/>
+<area shape="rect" id="node5" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei." alt="" coords="763,137,996,163"/>
+<area shape="rect" id="node6" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag." alt="" coords="1044,129,1247,171"/>
+<area shape="rect" id="node9" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa48a3de07623a93fc0b4d68629dd0887" title="Merkt sich den Standartwert eines Objekts." alt="" coords="491,5,713,47"/>
 </map>

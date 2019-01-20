@@ -1,31 +1,32 @@
 <map id="okw.SeButton.SeButton_EN_Test.tcMemorizeLabel" name="okw.SeButton.SeButton_EN_Test.tcMemorizeLabel">
-<area shape="rect" id="node2" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="263,411,425,437"/>
-<area shape="rect" id="node8" href="$classokw_1_1core_1_1_e_n.html#aaa7465ee7f135c724668d8b22dc2219f" title="Startet die gegebene Anwendung. " alt="" coords="267,107,421,133"/>
-<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#ae24d951e607b9b82af4f3b80e71285b9" title="Tastatureingaben von Daten in das aktive Fensterobjekt. " alt="" coords="267,157,421,184"/>
-<area shape="rect" id="node18" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="251,208,437,235"/>
-<area shape="rect" id="node21" href="$classokw_1_1core_1_1_e_n.html#aecb0b17c6683319633eec36e2646f3f5" title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab. " alt="" coords="249,259,439,285"/>
-<area shape="rect" id="node24" href="$classokw_1_1_o_k_w___memorize___sngltn.html#ad03be59f27b20d60aecb8e5f1f59b7db" title="Holt den Aktuellen Wert eines Schlüssels. " alt="" coords="238,56,450,83"/>
-<area shape="rect" id="node25" href="$classokw_1_1core_1_1_e_n.html#aba06d28c60512e1dc55902403abbd3f6" title="Beendet eine gegebene Anwendung. " alt="" coords="268,309,420,336"/>
-<area shape="rect" id="node28" href="$classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" title="Signalisiert das Ende eines Testfalls. " alt="" coords="269,360,419,387"/>
-<area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="506,309,691,336"/>
-<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="513,515,684,541"/>
-<area shape="rect" id="node4" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..." alt="" coords="747,355,978,381"/>
-<area shape="rect" id="node6" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls. " alt="" coords="773,507,952,549"/>
-<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="755,573,971,600"/>
-<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#ac20a22275b6aea1c4e551dce1fd0c1e9" title="Startet die gegebene Anwendung. " alt="" coords="517,107,680,133"/>
-<area shape="rect" id="node10" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes. " alt="" coords="773,158,952,199"/>
-<area shape="rect" id="node11" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. " alt="" coords="756,107,969,133"/>
-<area shape="rect" id="node14" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0ec9b7c60041061f1b01d85b703a27a8" title="Startet die gegebene Anwendung. " alt="" coords="759,5,967,32"/>
-<area shape="rect" id="node12" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. " alt="" coords="1027,107,1250,133"/>
-<area shape="rect" id="node13" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag. " alt="" coords="1299,99,1501,141"/>
-<area shape="rect" id="node16" href="$classokw_1_1core_1_1_core.html#ad09bf3a237b88913dbe9ebc228db1cf3" title="Tastatureingaben von Daten in das aktive Fensterobjekt. " alt="" coords="517,157,680,184"/>
-<area shape="rect" id="node17" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0466b45ed636074a1b6cd52de6b5fdd6" title="Tastatureingaben von Daten in das aktive Fensterobjekt. " alt="" coords="758,56,967,83"/>
-<area shape="rect" id="node19" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="501,208,696,235"/>
-<area shape="rect" id="node20" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="765,223,960,265"/>
-<area shape="rect" id="node22" href="$classokw_1_1core_1_1_core.html#a85d56eaf394a4e6a0f67979e5d3c58fa" title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab. " alt="" coords="499,259,698,285"/>
-<area shape="rect" id="node23" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ab44d9c2c8f0b34496afcea31d6f6e6a9" title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab. " alt="" coords="755,289,970,330"/>
-<area shape="rect" id="node26" href="$classokw_1_1core_1_1_core.html#a13d953a145a5e1bc776785f8433ba69c" title="Beendet eine gegebene Anwendung. " alt="" coords="518,360,679,387"/>
-<area shape="rect" id="node27" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a789e33be9253edfccfe5654f537cf52a" title="Beendet eine gegebene Anwendung. " alt="" coords="759,405,966,432"/>
-<area shape="rect" id="node29" href="$classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" title="Signalisiert das Ende eines Testfalls. " alt="" coords="519,433,679,460"/>
-<area shape="rect" id="node30" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186" title="Signalisiert das Ende eines Testfalls. " alt="" coords="759,456,966,483"/>
+<area shape="rect" id="node1" title="Test des Schlüsselwortes MemorizeCaption für den GUI&#45;Adapter SeButton." alt="" coords="5,226,197,267"/>
+<area shape="rect" id="node2" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="274,411,438,437"/>
+<area shape="rect" id="node8" href="$classokw_1_1core_1_1_e_n.html#aaa7465ee7f135c724668d8b22dc2219f" title="Startet die gegebene Anwendung." alt="" coords="276,107,436,133"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#ae24d951e607b9b82af4f3b80e71285b9" title="Tastatureingaben von Daten in das aktive Fensterobjekt." alt="" coords="279,157,433,184"/>
+<area shape="rect" id="node18" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="261,208,451,235"/>
+<area shape="rect" id="node21" href="$classokw_1_1core_1_1_e_n.html#aecb0b17c6683319633eec36e2646f3f5" title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab." alt="" coords="256,259,456,285"/>
+<area shape="rect" id="node24" href="$classokw_1_1_o_k_w___memorize___sngltn.html#ad03be59f27b20d60aecb8e5f1f59b7db" title="Holt den Aktuellen Wert eines Schlüssels." alt="" coords="245,56,467,83"/>
+<area shape="rect" id="node25" href="$classokw_1_1core_1_1_e_n.html#aba06d28c60512e1dc55902403abbd3f6" title="Beendet eine gegebene Anwendung." alt="" coords="277,309,435,336"/>
+<area shape="rect" id="node28" href="$classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" title="Signalisiert das Ende eines Testfalls." alt="" coords="280,360,432,387"/>
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language." alt="" coords="521,309,720,336"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="533,515,709,541"/>
+<area shape="rect" id="node4" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)." alt="" coords="775,355,1017,381"/>
+<area shape="rect" id="node6" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls." alt="" coords="801,507,991,549"/>
+<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="786,573,1006,600"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#ac20a22275b6aea1c4e551dce1fd0c1e9" title="Startet die gegebene Anwendung." alt="" coords="535,107,707,133"/>
+<area shape="rect" id="node10" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes." alt="" coords="801,158,991,199"/>
+<area shape="rect" id="node11" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter." alt="" coords="783,107,1009,133"/>
+<area shape="rect" id="node14" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0ec9b7c60041061f1b01d85b703a27a8" title="Startet die gegebene Anwendung." alt="" coords="788,5,1004,32"/>
+<area shape="rect" id="node12" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei." alt="" coords="1065,107,1299,133"/>
+<area shape="rect" id="node13" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag." alt="" coords="1347,99,1549,141"/>
+<area shape="rect" id="node16" href="$classokw_1_1core_1_1_core.html#ad09bf3a237b88913dbe9ebc228db1cf3" title="Tastatureingaben von Daten in das aktive Fensterobjekt." alt="" coords="538,157,703,184"/>
+<area shape="rect" id="node17" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0466b45ed636074a1b6cd52de6b5fdd6" title="Tastatureingaben von Daten in das aktive Fensterobjekt." alt="" coords="791,56,1001,83"/>
+<area shape="rect" id="node19" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="519,208,722,235"/>
+<area shape="rect" id="node20" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="797,223,995,265"/>
+<area shape="rect" id="node22" href="$classokw_1_1core_1_1_core.html#a85d56eaf394a4e6a0f67979e5d3c58fa" title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab." alt="" coords="515,259,727,285"/>
+<area shape="rect" id="node23" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ab44d9c2c8f0b34496afcea31d6f6e6a9" title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab." alt="" coords="785,289,1007,330"/>
+<area shape="rect" id="node26" href="$classokw_1_1core_1_1_core.html#a13d953a145a5e1bc776785f8433ba69c" title="Beendet eine gegebene Anwendung." alt="" coords="535,360,706,387"/>
+<area shape="rect" id="node27" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a789e33be9253edfccfe5654f537cf52a" title="Beendet eine gegebene Anwendung." alt="" coords="789,405,1003,432"/>
+<area shape="rect" id="node29" href="$classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" title="Signalisiert das Ende eines Testfalls." alt="" coords="539,433,703,460"/>
+<area shape="rect" id="node30" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186" title="Signalisiert das Ende eines Testfalls." alt="" coords="792,456,1000,483"/>
 </map>

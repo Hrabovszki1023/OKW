@@ -1,11 +1,12 @@
 <map id="okw.gui.adapter.selenium.SeBrowserWindow" name="okw.gui.adapter.selenium.SeBrowserWindow">
-<area shape="rect" id="node7" href="$classokw_1_1gui_1_1frames_1_1frm_internet_explorer.html" title="Diese Klasse representiert den HTMLUnit&#45;Driver, der mit Selenium angsteuert wird. ..." alt="" coords="5,1392,184,1528"/>
-<area shape="rect" id="node8" href="$classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html" title="{okw.gui.frames.FrmSeChrome\n|&#45; LOG\l&#45; MEM\l|+ SelectWindow()\l+ StartApp()\l+ StopApp()\l}" alt="" coords="208,1399,407,1521"/>
-<area shape="rect" id="node9" href="$classokw_1_1gui_1_1frames_1_1_frm_se_firefox.html" title="{okw.gui.frames.FrmSeFirefox\n|&#45; LOG\l&#45; MEM\l|+ SelectWindow()\l+ StartApp()\l+ StopApp()\l+ TypeKey()\l}" alt="" coords="432,1392,627,1528"/>
-<area shape="rect" id="node10" href="$classokw_1_1gui_1_1frames_1_1_frm_se_h_t_m_l_unit.html" title="Diese Klasse representiert den HTMLUnit&#45;Driver, der mit Selenium angsteuert wird. ..." alt="" coords="651,1399,865,1521"/>
-<area shape="rect" id="node2" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html" title="SeAnyWindow ist eine Fenster GUI&#45;Adapterklasse. " alt="" coords="331,729,505,1143"/>
-<area shape="rect" id="node3" href="$classokw_1_1gui_1_1_any_window.html" title="Description of AnyWin. " alt="" coords="333,441,504,679"/>
-<area shape="rect" id="node4" href="$classokw_1_1gui_1_1_any_win_base.html" title="Description of AnyWin. " alt="" coords="131,6,309,391"/>
-<area shape="rect" id="node5" href="$interfaceokw_1_1gui_1_1_i_g_u_i_window.html" title="{okw.gui.IGUIWindow\n||+ getCaption()\l+ getExists()\l+ getIsActive()\l+ TypeKeyWindow()\l+ SelectWindow()\l+ StartApp()\l+ StopApp()\l+ VerifyWindowExists()\l+ VerifyIsWindowActive()\l+ VerifyWindowCaption()\l}" alt="" coords="333,94,504,303"/>
-<area shape="rect" id="node6" href="$interfaceokw_1_1core_1_1_i_o_k_w___f_n.html" title="{okw.core.IOKW_FN\n||+ setKN()\l+ setFN()\l+ setParentFN()\l+ getKN()\l+ getFN()\l+ getParentFN()\l}" alt="" coords="529,123,668,274"/>
+<area shape="rect" id="node1" title="Abstrakte Basisklasse für SeBrowserTypen." alt="" coords="353,1188,539,1339"/>
+<area shape="rect" id="node7" href="$classokw_1_1gui_1_1frames_1_1frm_internet_explorer.html" title="Diese Klasse representiert den HTMLUnit&#45;Driver, der mit Selenium angsteuert wird." alt="" coords="5,1387,199,1523"/>
+<area shape="rect" id="node8" href="$classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html" title=" " alt="" coords="223,1394,437,1515"/>
+<area shape="rect" id="node9" href="$classokw_1_1gui_1_1frames_1_1_frm_se_firefox.html" title=" " alt="" coords="461,1387,663,1523"/>
+<area shape="rect" id="node10" href="$classokw_1_1gui_1_1frames_1_1_frm_se_h_t_m_l_unit.html" title="Diese Klasse representiert den HTMLUnit&#45;Driver, der mit Selenium angsteuert wird." alt="" coords="688,1394,911,1515"/>
+<area shape="rect" id="node2" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html" title="SeAnyWindow ist eine Fenster GUI&#45;Adapterklasse." alt="" coords="353,725,539,1140"/>
+<area shape="rect" id="node3" href="$classokw_1_1gui_1_1_any_window.html" title="Description of AnyWin." alt="" coords="357,439,535,677"/>
+<area shape="rect" id="node4" href="$classokw_1_1gui_1_1_any_win_base.html" title="Description of AnyWin." alt="" coords="135,5,333,391"/>
+<area shape="rect" id="node5" href="$interfaceokw_1_1gui_1_1_i_g_u_i_window.html" title=" " alt="" coords="357,93,535,303"/>
+<area shape="rect" id="node6" href="$interfaceokw_1_1core_1_1_i_o_k_w___f_n.html" title=" " alt="" coords="560,123,697,273"/>
 </map>

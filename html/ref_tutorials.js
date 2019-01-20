@@ -16,7 +16,7 @@ var ref_tutorials =
     [ "Tutorial 2: Einen Testfall mit OKW in JUnit erstellen (\"Hello Test\" - Teil 2)", "ref_tutorial02.html", [
       [ "1. JUnit TestKlasse anlegen.", "ref_tutorial02.html#refTutorial02_JUnit_TestKlasse_Anlegen", null ],
       [ "2. Eine Testcase-Methode einfügen.", "ref_tutorial02.html#refTutorial02_a", null ],
-      [ "3. Testfall `tcHello_OKW` ausführen", "ref_tutorial02.html#refTutorial02_B", null ],
+      [ "3. Testfall <tt>tcHello_OKW</tt> ausführen", "ref_tutorial02.html#refTutorial02_B", null ],
       [ "Result", "ref_tutorial02.html#refTutorial02_Result", null ]
     ] ],
     [ "Tutorial: Calculator", "ref_tutorial02__calculator.html", [
@@ -28,8 +28,8 @@ var ref_tutorials =
       [ "Locator", "ref_tutorial03.html#Der", null ],
       [ "Ziele des Locators", "ref_tutorial03.html#refTutorial03_A", null ],
       [ "Die Klasse 'OKWLocator'", "ref_tutorial03.html#refTutorial03_B", null ],
-      [ "Definition eines _einfachen_ Locators", "ref_tutorial03.html#refTutorial03_C", [
-        [ "Konkretes Beispiel `Username`", "ref_tutorial03.html#refTutorial03_C_A", null ]
+      [ "Definition eines <em>einfachen</em> Locators", "ref_tutorial03.html#refTutorial03_C", [
+        [ "Konkretes Beispiel <tt>Username</tt>", "ref_tutorial03.html#refTutorial03_C_A", null ]
       ] ]
     ] ],
     [ "OKW Tutorial: Verketten von Locatoren", "ref_tutorial04.html", [
@@ -37,7 +37,7 @@ var ref_tutorials =
       [ "DRY", "ref_tutorial04.html#refTutorial04_DRY", null ],
       [ "Verkettung von Eltern- und Kind-Objekt Locatoren", "ref_tutorial04.html#refTutorial04_C", [
         [ "Ziel", "ref_tutorial04.html#refTutorial04_C_A", null ],
-        [ "Die Methoden `getLOCATOR()` und `getLocator()`", "ref_tutorial04.html#refTutorial04_C_B", null ],
+        [ "Die Methoden <tt>getLOCATOR()</tt> und <tt>getLocator()</tt>", "ref_tutorial04.html#refTutorial04_C_B", null ],
         [ "Der Locator des Eltern_Objectes", "ref_tutorial04.html#refTutorial04_C_C", null ],
         [ "Der Locator des Kind-Objektes", "ref_tutorial04.html#refTutorial04_C_D", null ]
       ] ],

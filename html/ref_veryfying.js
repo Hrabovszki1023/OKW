@@ -2,7 +2,7 @@ var ref_veryfying =
 [
     [ "VerifyCaption( FN, ExpVal )", "ref_verify_caption.html", [
       [ "Parameter", "ref_verify_caption.html#refVerifyCaptionParameter", null ],
-      [ "Reserved `ExpVal` Values", "ref_verify_caption.html#refVerifyCaptionReservedValues", null ],
+      [ "Reserved <tt>ExpVal</tt> Values", "ref_verify_caption.html#refVerifyCaptionReservedValues", null ],
       [ "Examples", "ref_verify_caption.html#refVerifyCaptionExamples", [
         [ "Default Usage", "ref_verify_caption.html#refVerifyCaptionExample1", null ],
         [ "Verify an Empty GUI-object", "ref_verify_caption.html#refVerifyCaptionExample2", null ],

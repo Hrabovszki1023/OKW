@@ -1,7 +1,8 @@
 <map id="okw.gui.adapter.selenium.SeInputCheckbox.getIsSelected" name="okw.gui.adapter.selenium.SeInputCheckbox.getIsSelected">
-<area shape="rect" id="node2" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#ab998b0c6ae99303c050c6a7fe417dd6d" title="Method verlässt die Checkbox immer angehakt, egal ob diese vorher angehakt war oder nicht..." alt="" coords="271,70,454,111"/>
-<area shape="rect" id="node5" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a19bd403031cbdc003823a7b21c0cf12e" title="Ermittelt/holt den aktuellen Wert der CheckBox. " alt="" coords="272,135,453,177"/>
-<area shape="rect" id="node6" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a9b2cd5dc1001157dcf168acb76779b6f" title="Method verlässt die Checkbox immer unangehakt, egal ob sie vorher angehakt war oder nicht..." alt="" coords="265,5,461,46"/>
-<area shape="rect" id="node3" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#ae11a49c881f65456d65abd1b3ddf8de7" title="okw.gui.adapter.selenium.\lSeInputCheckbox.SetValue" alt="" coords="510,5,693,46"/>
-<area shape="rect" id="node4" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a37d7733b7807cf4daade07461a506146" title="Erlaubte Werte sind sprachabhängig CHECKED/UNCHECKED. " alt="" coords="514,70,689,111"/>
+<area shape="rect" id="node1" title="Method liefert den aktuellen Zustand der Checkbox, &quot;angehakt&quot; oder &quot;nicht angehakt&quot;." alt="" coords="505,71,729,112"/>
+<area shape="rect" id="node2" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#ab998b0c6ae99303c050c6a7fe417dd6d" title="Method verlässt die Checkbox immer angehakt, egal ob diese vorher angehakt war oder nicht." alt="" coords="256,71,449,112"/>
+<area shape="rect" id="node5" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a19bd403031cbdc003823a7b21c0cf12e" title="Ermittelt/holt den aktuellen Wert der CheckBox." alt="" coords="256,136,449,177"/>
+<area shape="rect" id="node6" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a9b2cd5dc1001157dcf168acb76779b6f" title="Method verlässt die Checkbox immer unangehakt, egal ob sie vorher angehakt war oder nicht." alt="" coords="248,5,457,47"/>
+<area shape="rect" id="node3" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#ae11a49c881f65456d65abd1b3ddf8de7" title=" " alt="" coords="5,5,200,47"/>
+<area shape="rect" id="node4" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a37d7733b7807cf4daade07461a506146" title="Erlaubte Werte sind sprachabhängig CHECKED/UNCHECKED." alt="" coords="9,71,196,112"/>
 </map>

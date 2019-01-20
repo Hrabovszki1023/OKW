@@ -1,8 +1,10 @@
 <map id="okw.gui.adapter.selenium.webdriver.SeSafariApp" name="okw.gui.adapter.selenium.webdriver.SeSafariApp">
-<area shape="rect" id="node2" href="$classokw_1_1gui_1_1_any_window.html" title="Description of AnyWin. " alt="" coords="277,1337,448,1575"/>
-<area shape="rect" id="node3" href="$classokw_1_1gui_1_1_any_win_base.html" title="Description of AnyWin. " alt="" coords="132,929,311,1285"/>
-<area shape="rect" id="node4" href="$classokw_1_1gui_1_1_o_k_w_locator.html" title="Description of OKWLocator. " alt="" coords="193,757,340,864"/>
-<area shape="rect" id="node5" href="$classokw_1_1log_1_1_logger___sngltn.html" title="{okw.log.Logger_Sngltn\n|&#45; cvbDebugMode\l|+ getDebugMode()\l+ setDebugMode()\l+ addLogger()\l+ reset()\l+ LogError()\l+ LogException()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionStart()\l+ LogFunctionStartDebug()\l+ LogKeyWordEnd()\l+ LogSequenceEnd()\l+ LogTestcaseEnd()\l+ LogKeyWordStart()\l+ LogSequenceStart()\l+ LogTestcaseStart()\l+ LogPass()\l+ LogPrint()\l+ LogPrintDebug()\l+ LogWarning()\l+ ResCloseList()\l+ ResCloseListDebug()\l+ ResOpenList()\l+ ResOpenListDebug()\l+ getInstance()\l+ init()\l&#45; Logger_Sngltn()\l}" alt="" coords="11,147,189,693"/>
-<area shape="rect" id="node7" href="$interfaceokw_1_1gui_1_1_i_g_u_i_window.html" title="{okw.gui.IGUIWindow\n||+ getCaption()\l+ getExists()\l+ getIsActive()\l+ TypeKeyWindow()\l+ SelectWindow()\l+ StartApp()\l+ StopApp()\l+ VerifyWindowExists()\l+ VerifyIsWindowActive()\l+ VerifyWindowCaption()\l}" alt="" coords="335,1002,505,1211"/>
-<area shape="rect" id="node8" href="$interfaceokw_1_1core_1_1_i_o_k_w___f_n.html" title="{okw.core.IOKW_FN\n||+ setKN()\l+ setFN()\l+ setParentFN()\l+ getKN()\l+ getFN()\l+ getParentFN()\l}" alt="" coords="530,1031,669,1182"/>
+<area shape="rect" id="node1" title="OKW Selenium FireFox BrowserWindow Klasse." alt="" coords="32,1617,283,1783"/>
+<area shape="rect" id="node2" href="$classokw_1_1gui_1_1_any_window.html" title="Description of AnyWin." alt="" coords="308,1329,487,1568"/>
+<area shape="rect" id="node3" href="$classokw_1_1gui_1_1_any_win_base.html" title="Description of AnyWin." alt="" coords="148,924,345,1280"/>
+<area shape="rect" id="node4" href="$classokw_1_1gui_1_1_o_k_w_locator.html" title="Description of OKWLocator." alt="" coords="212,755,361,861"/>
+<area shape="rect" id="node5" href="$classokw_1_1log_1_1_logger___sngltn.html" title=" " alt="" coords="9,145,207,692"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,5,211,83"/>
+<area shape="rect" id="node7" href="$interfaceokw_1_1gui_1_1_i_g_u_i_window.html" title=" " alt="" coords="369,997,548,1207"/>
+<area shape="rect" id="node8" href="$interfaceokw_1_1core_1_1_i_o_k_w___f_n.html" title=" " alt="" coords="573,1027,710,1177"/>
 </map>

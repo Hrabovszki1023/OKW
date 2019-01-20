@@ -1,18 +1,19 @@
 <map id="okw.core.EN_Keywords_IGNORE_Test.tcTypeKeyTablecell_IGNORE_EmptyString" name="okw.core.EN_Keywords_IGNORE_Test.tcTypeKeyTablecell_IGNORE_EmptyString">
-<area shape="rect" id="node2" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="311,264,473,291"/>
-<area shape="rect" id="node8" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="299,163,485,189"/>
-<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#a926f4e3a2113f58c84aea75a36ff1c6b" title="Eingabe von Daten in eine gegebene Tabellenzelle über die Tastatur. " alt="" coords="289,213,495,240"/>
-<area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="559,239,745,265"/>
-<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="567,304,737,331"/>
-<area shape="rect" id="node4" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..." alt="" coords="809,253,1039,280"/>
-<area shape="rect" id="node6" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls. " alt="" coords="835,355,1013,397"/>
-<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="816,304,1032,331"/>
-<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="555,100,749,127"/>
-<area shape="rect" id="node10" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes. " alt="" coords="835,122,1013,163"/>
-<area shape="rect" id="node11" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. " alt="" coords="817,71,1031,97"/>
-<area shape="rect" id="node14" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="827,5,1021,46"/>
-<area shape="rect" id="node12" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. " alt="" coords="1089,71,1311,97"/>
-<area shape="rect" id="node13" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag. " alt="" coords="1360,63,1563,105"/>
-<area shape="rect" id="node16" href="$classokw_1_1core_1_1_core.html#a86cffd624c6b0a94074479b6fe3260de" title="Eingabe von Daten in eine gegebene Tabellenzelle über die Tastatur. " alt="" coords="545,173,759,200"/>
-<area shape="rect" id="node17" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a402e4109c56f7be77debccb2132e4e27" title="Eingabe von Daten in eine gegebene Tabellenzelle über die Tastatur. " alt="" coords="831,187,1017,229"/>
+<area shape="rect" id="node1" title="Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Typekey Übertragen wird." alt="" coords="5,199,235,255"/>
+<area shape="rect" id="node2" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="304,265,468,291"/>
+<area shape="rect" id="node8" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="291,163,481,190"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#a926f4e3a2113f58c84aea75a36ff1c6b" title="Eingabe von Daten in eine gegebene Tabellenzelle über die Tastatur." alt="" coords="283,214,489,241"/>
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language." alt="" coords="547,239,746,266"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="559,305,735,331"/>
+<area shape="rect" id="node4" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)." alt="" coords="804,254,1047,281"/>
+<area shape="rect" id="node6" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls." alt="" coords="830,356,1021,397"/>
+<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="815,305,1035,331"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="545,101,748,127"/>
+<area shape="rect" id="node10" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes." alt="" coords="830,123,1021,164"/>
+<area shape="rect" id="node11" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter." alt="" coords="813,71,1038,98"/>
+<area shape="rect" id="node14" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="826,5,1025,47"/>
+<area shape="rect" id="node12" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei." alt="" coords="1095,71,1328,98"/>
+<area shape="rect" id="node13" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag." alt="" coords="1376,64,1579,105"/>
+<area shape="rect" id="node16" href="$classokw_1_1core_1_1_core.html#a86cffd624c6b0a94074479b6fe3260de" title="Eingabe von Daten in eine gegebene Tabellenzelle über die Tastatur." alt="" coords="537,174,756,201"/>
+<area shape="rect" id="node17" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a402e4109c56f7be77debccb2132e4e27" title="Eingabe von Daten in eine gegebene Tabellenzelle über die Tastatur." alt="" coords="832,188,1019,229"/>
 </map>

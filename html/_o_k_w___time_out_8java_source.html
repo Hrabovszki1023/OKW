@@ -5,7 +5,7 @@
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,400,400italic,600,700italic,700,600italic' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
 <title>OpenKeyWord: /home/travis/build/Hrabovszki1023/OKW/core/src/main/java/okw/OKW_TimeOut.java Quellcode</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -15,8 +15,9 @@
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
   $(document).ready(initResizable);
-</script>
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,7 +26,7 @@
     extensions: ["tex2jax.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+</script><script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="OKW_doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -38,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 233, Datum: 11.21.2018 09:26:37</span>
+   &#160;<span id="projectnumber">Build_ID: 240, Datum: 01.20.2019 11:26:00</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -47,18 +48,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Erzeugt von Doxygen 1.8.13 -->
+<!-- Erzeugt von Doxygen 1.8.15 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Suchen');
   $(document).ready(function() { init_search(); });
 });
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +76,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(document).ready(function(){initNavTree('_o_k_w___time_out_8java_source.html','');});
+/* @license-end */
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -94,10 +100,10 @@ $(document).ready(function(){initNavTree('_o_k_w___time_out_8java_source.html','
 <div class="title">OKW_TimeOut.java</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>okw;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w___time_out.html">    3</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classokw_1_1_o_k_w___time_out.html">OKW_TimeOut</a></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keyword">private</span> Integer PT;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keyword">private</span> Integer TO;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  </div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keyword">public</span> <a class="code" href="classokw_1_1_o_k_w___time_out.html">OKW_TimeOut</a>( Integer fpsTO, Integer fpsPT )</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      setPT( fpsPT );</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      setTO( fpsTO );</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  }</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w___time_out.html#ab7142e5e6adc82f308a70177c71ced2c">   18</a></span>&#160;  <span class="keyword">public</span> Integer <a class="code" href="classokw_1_1_o_k_w___time_out.html#ab7142e5e6adc82f308a70177c71ced2c">getPT</a>()</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> PT;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> setPT( Integer pollingTime )</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    PT = pollingTime;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w___time_out.html#a8d0014a5080ff088a2252e950555e37a">   32</a></span>&#160;  <span class="keyword">public</span> Integer <a class="code" href="classokw_1_1_o_k_w___time_out.html#a8d0014a5080ff088a2252e950555e37a">getTO</a>()</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  {</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> TO;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> setTO( Integer timeOut )</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    TO = timeOut;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  }</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w___time_out.html#adf7b9cc33db065c1f284bb5db2227b51">   46</a></span>&#160;  <span class="keyword">public</span> Integer <a class="code" href="classokw_1_1_o_k_w___time_out.html#adf7b9cc33db065c1f284bb5db2227b51">getMaxCount</a>()</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> TO * 1000 / PT;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  </div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">public</span> String toString()</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;PT: &quot;</span> + PT.toString() + <span class="stringliteral">&quot;ms, TO: &quot;</span> + TO.toString() + <span class="stringliteral">&quot;s&quot;</span>;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="ttc" id="classokw_1_1_o_k_w___time_out_html_ab7142e5e6adc82f308a70177c71ced2c"><div class="ttname"><a href="classokw_1_1_o_k_w___time_out.html#ab7142e5e6adc82f308a70177c71ced2c">okw.OKW_TimeOut.getPT</a></div><div class="ttdeci">Integer getPT()</div><div class="ttdoc">Wartezeit zwischen zwei Pollings in [ms]. </div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___time_out_8java_source.html#l00018">OKW_TimeOut.java:18</a></div></div>
-<div class="ttc" id="classokw_1_1_o_k_w___time_out_html_adf7b9cc33db065c1f284bb5db2227b51"><div class="ttname"><a href="classokw_1_1_o_k_w___time_out.html#adf7b9cc33db065c1f284bb5db2227b51">okw.OKW_TimeOut.getMaxCount</a></div><div class="ttdeci">Integer getMaxCount()</div><div class="ttdoc">Anzahl der berechnetten Zyklen. </div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___time_out_8java_source.html#l00046">OKW_TimeOut.java:46</a></div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>okw;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w___time_out.html">    3</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classokw_1_1_o_k_w___time_out.html">OKW_TimeOut</a></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keyword">private</span> Integer PT;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keyword">private</span> Integer TO;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  </div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keyword">public</span> <a class="code" href="classokw_1_1_o_k_w___time_out.html">OKW_TimeOut</a>( Integer fpsTO, Integer fpsPT )</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;      setPT( fpsPT );</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      setTO( fpsTO );</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  }</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w___time_out.html#ab7142e5e6adc82f308a70177c71ced2c">   18</a></span>&#160;  <span class="keyword">public</span> Integer <a class="code" href="classokw_1_1_o_k_w___time_out.html#ab7142e5e6adc82f308a70177c71ced2c">getPT</a>()</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> PT;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  }</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> setPT( Integer pollingTime )</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    PT = pollingTime;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w___time_out.html#a8d0014a5080ff088a2252e950555e37a">   32</a></span>&#160;  <span class="keyword">public</span> Integer <a class="code" href="classokw_1_1_o_k_w___time_out.html#a8d0014a5080ff088a2252e950555e37a">getTO</a>()</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  {</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> TO;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> setTO( Integer timeOut )</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    TO = timeOut;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  }</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w___time_out.html#adf7b9cc33db065c1f284bb5db2227b51">   46</a></span>&#160;  <span class="keyword">public</span> Integer <a class="code" href="classokw_1_1_o_k_w___time_out.html#adf7b9cc33db065c1f284bb5db2227b51">getMaxCount</a>()</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  {</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> TO * 1000 / PT;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  </div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">public</span> String toString()</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  {</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;PT: &quot;</span> + PT.toString() + <span class="stringliteral">&quot;ms, TO: &quot;</span> + TO.toString() + <span class="stringliteral">&quot;s&quot;</span>;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="ttc" id="classokw_1_1_o_k_w___time_out_html_ab7142e5e6adc82f308a70177c71ced2c"><div class="ttname"><a href="classokw_1_1_o_k_w___time_out.html#ab7142e5e6adc82f308a70177c71ced2c">okw.OKW_TimeOut.getPT</a></div><div class="ttdeci">Integer getPT()</div><div class="ttdoc">Wartezeit zwischen zwei Pollings in [ms].</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___time_out_8java_source.html#l00018">OKW_TimeOut.java:18</a></div></div>
+<div class="ttc" id="classokw_1_1_o_k_w___time_out_html_adf7b9cc33db065c1f284bb5db2227b51"><div class="ttname"><a href="classokw_1_1_o_k_w___time_out.html#adf7b9cc33db065c1f284bb5db2227b51">okw.OKW_TimeOut.getMaxCount</a></div><div class="ttdeci">Integer getMaxCount()</div><div class="ttdoc">Anzahl der berechnetten Zyklen.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___time_out_8java_source.html#l00046">OKW_TimeOut.java:46</a></div></div>
 <div class="ttc" id="classokw_1_1_o_k_w___time_out_html"><div class="ttname"><a href="classokw_1_1_o_k_w___time_out.html">okw.OKW_TimeOut</a></div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___time_out_8java_source.html#l00003">OKW_TimeOut.java:3</a></div></div>
-<div class="ttc" id="classokw_1_1_o_k_w___time_out_html_a8d0014a5080ff088a2252e950555e37a"><div class="ttname"><a href="classokw_1_1_o_k_w___time_out.html#a8d0014a5080ff088a2252e950555e37a">okw.OKW_TimeOut.getTO</a></div><div class="ttdeci">Integer getTO()</div><div class="ttdoc">Timeout Zeit in [s]. </div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___time_out_8java_source.html#l00032">OKW_TimeOut.java:32</a></div></div>
+<div class="ttc" id="classokw_1_1_o_k_w___time_out_html_a8d0014a5080ff088a2252e950555e37a"><div class="ttname"><a href="classokw_1_1_o_k_w___time_out.html#a8d0014a5080ff088a2252e950555e37a">okw.OKW_TimeOut.getTO</a></div><div class="ttdeci">Integer getTO()</div><div class="ttdoc">Timeout Zeit in [s].</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___time_out_8java_source.html#l00032">OKW_TimeOut.java:32</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.9.1-->
@@ -105,9 +111,9 @@ $(document).ready(function(){initNavTree('_o_k_w___time_out_8java_source.html','
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_90fd98a0ba30abf7a6068a44995d2d6b.html">src</a></li><li class="navelem"><a class="el" href="dir_3fdb55be625affb78b03858da3433959.html">main</a></li><li class="navelem"><a class="el" href="dir_6d0f1805523af42a675fba128cf43f17.html">java</a></li><li class="navelem"><a class="el" href="dir_4033e6e92f3135934576652cf36bd385.html">okw</a></li><li class="navelem"><b>OKW_TimeOut.java</b></li>
-    <li class="footer">Erzeugt am Mit Nov 21 2018 09:27:44 für OpenKeyWord von
+    <li class="footer">Erzeugt am Son Jan 20 2019 11:47:45 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>
 </div>
 <script type="text/javascript">

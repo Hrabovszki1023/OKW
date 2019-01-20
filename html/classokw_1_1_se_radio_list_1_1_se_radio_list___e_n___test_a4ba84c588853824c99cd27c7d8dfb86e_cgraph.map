@@ -1,51 +1,31 @@
 <map id="okw.SeRadioList.SeRadioList_EN_Test.tcLogIsActive" name="okw.SeRadioList.SeRadioList_EN_Test.tcLogIsActive">
-<area shape="rect" id="node2" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="277,844,438,871"/>
-<area shape="rect" id="node8" href="$classokw_1_1core_1_1_e_n.html#aaa7465ee7f135c724668d8b22dc2219f" title="Startet die gegebene Anwendung. " alt="" coords="281,337,434,364"/>
-<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#ae24d951e607b9b82af4f3b80e71285b9" title="Tastatureingaben von Daten in das aktive Fensterobjekt. " alt="" coords="280,388,435,415"/>
-<area shape="rect" id="node18" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="264,439,451,465"/>
-<area shape="rect" id="node21" href="$classokw_1_1core_1_1_e_n.html#acbeecc6c0bfe7f092b7b612471f5e790" title="Dokumentiert den Status des gegebenen Objekts. " alt="" coords="272,185,443,212"/>
-<area shape="rect" id="node24" href="$classokw_1_1core_1_1_e_n.html#aba06d28c60512e1dc55902403abbd3f6" title="Beendet eine gegebene Anwendung. " alt="" coords="281,236,433,263"/>
-<area shape="rect" id="node27" href="$classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" title="Signalisiert das Ende eines Testfalls. " alt="" coords="282,793,433,820"/>
-<area shape="rect" id="node30" href="$classokw_1_1core_1_1_e_n.html#a7a19b4149e808ffc7fbaca9d0e6412b3" title="Prüft den Tooltip&#45;Text eines Objektes. " alt="" coords="270,287,445,313"/>
-<area shape="rect" id="node33" href="$classokw_1_1core_1_1_e_n.html#aab0f2e51f9be09e36fbd27a5c8c88511" title="Prüft den Tooltip&#45;Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="253,641,462,668"/>
-<area shape="rect" id="node36" href="$classokw_1_1core_1_1_e_n.html#a1611d27707a732b6f22f301898e530cd" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="251,692,464,719"/>
-<area shape="rect" id="node39" href="$classokw_1_1core_1_1_e_n.html#a3214b395b88cde7b880c3992c9c05763" title="Auswahl aller Zeilen einer Liste/Tabelle, welche die gegebenen Daten enthalten. " alt="" coords="288,743,427,769"/>
-<area shape="rect" id="node42" href="$classokw_1_1core_1_1_e_n.html#a81fa4af81b53e8e8fc2274e3767b9dce" title="Überprüft die Beschreibung des Objektes. " alt="" coords="274,489,441,516"/>
-<area shape="rect" id="node45" href="$classokw_1_1core_1_1_e_n.html#a70ba07cc0050e6bd89dc133c36972d2a" title="Überprüft die Beschreibung des Objektes. " alt="" coords="257,540,458,567"/>
-<area shape="rect" id="node48" href="$classokw_1_1core_1_1_e_n.html#a33c8aac65f5d1f919065a9ec5e47f415" title="Überprüft die Überschrift des Objektes. " alt="" coords="255,591,460,617"/>
-<area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="531,565,717,592"/>
-<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="539,961,709,988"/>
-<area shape="rect" id="node4" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..." alt="" coords="785,604,1015,631"/>
-<area shape="rect" id="node6" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls. " alt="" coords="811,954,989,995"/>
-<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls. " alt="" coords="792,1020,1008,1047"/>
-<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#ac20a22275b6aea1c4e551dce1fd0c1e9" title="Startet die gegebene Anwendung. " alt="" coords="543,312,705,339"/>
-<area shape="rect" id="node10" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes. " alt="" coords="811,355,989,397"/>
-<area shape="rect" id="node11" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. " alt="" coords="793,421,1007,448"/>
-<area shape="rect" id="node14" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0ec9b7c60041061f1b01d85b703a27a8" title="Startet die gegebene Anwendung. " alt="" coords="796,188,1004,215"/>
-<area shape="rect" id="node12" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. " alt="" coords="1065,421,1287,448"/>
-<area shape="rect" id="node13" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag. " alt="" coords="1336,414,1539,455"/>
-<area shape="rect" id="node16" href="$classokw_1_1core_1_1_core.html#ad09bf3a237b88913dbe9ebc228db1cf3" title="Tastatureingaben von Daten in das aktive Fensterobjekt. " alt="" coords="543,363,705,389"/>
-<area shape="rect" id="node17" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0466b45ed636074a1b6cd52de6b5fdd6" title="Tastatureingaben von Daten in das aktive Fensterobjekt. " alt="" coords="795,239,1005,265"/>
-<area shape="rect" id="node19" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="527,413,721,440"/>
-<area shape="rect" id="node20" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster. " alt="" coords="803,290,997,331"/>
-<area shape="rect" id="node22" href="$classokw_1_1core_1_1_core.html#a50d5ec463eec7315aecc7a2f3d1bb6e9" title="Dokumentiert den Status des gegebenen Objekts. " alt="" coords="534,160,714,187"/>
-<area shape="rect" id="node23" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a4a22cc70524486b607b1994b6e9b2db7" title="Dokumentiert den Status des gegebenen Objekts. " alt="" coords="805,5,995,46"/>
-<area shape="rect" id="node25" href="$classokw_1_1core_1_1_core.html#a13d953a145a5e1bc776785f8433ba69c" title="Beendet eine gegebene Anwendung. " alt="" coords="543,211,705,237"/>
-<area shape="rect" id="node26" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a789e33be9253edfccfe5654f537cf52a" title="Beendet eine gegebene Anwendung. " alt="" coords="797,71,1003,97"/>
-<area shape="rect" id="node28" href="$classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" title="Signalisiert das Ende eines Testfalls. " alt="" coords="544,861,704,888"/>
-<area shape="rect" id="node29" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186" title="Signalisiert das Ende eines Testfalls. " alt="" coords="797,903,1003,929"/>
-<area shape="rect" id="node31" href="$classokw_1_1core_1_1_core.html#aa53c4a10dcd4eb1a6ae2c41eb9f23ee2" title="Prüft den Tooltip&#45;Text eines Objektes. " alt="" coords="532,261,716,288"/>
-<area shape="rect" id="node32" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a1490b97398a9c1f4da2a45ea683135d6" title="Prüft den Tooltip&#45;Text eines Objektes. " alt="" coords="805,122,995,163"/>
-<area shape="rect" id="node34" href="$classokw_1_1core_1_1_core.html#a160aacb0d6817770fde1faeaf6749af3" title="Prüft den Tooltip&#45;Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="515,667,733,693"/>
-<area shape="rect" id="node35" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a5eeafdd7f415970cddcec31fa642da02" title="Prüft den Tooltip&#45;Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="805,721,995,762"/>
-<area shape="rect" id="node37" href="$classokw_1_1core_1_1_core.html#a32ef0062d4814e329183c7110d2918e2" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="513,717,735,744"/>
-<area shape="rect" id="node38" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a651ce4c1a5bd9dcac256b3204548f3be" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)..." alt="" coords="805,786,995,827"/>
-<area shape="rect" id="node40" href="$classokw_1_1core_1_1_core.html#af118e712145af544f4045c3bf636311b" title="Auswahl aller Zeilen einer Liste/Tabelle, welche die gegebenen Daten enthalten. " alt="" coords="550,768,698,795"/>
-<area shape="rect" id="node41" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#afab26cbca470df57025e32b4332328cf" title="Auswahl aller Zeilen einer Liste/Tabelle, welche die gegebenen Daten enthalten. " alt="" coords="803,852,997,879"/>
-<area shape="rect" id="node43" href="$classokw_1_1core_1_1_core.html#a278a288682afcbfad17e90df17e3c53d" title="Überprüft die Beschreibung des Objektes. " alt="" coords="536,464,712,491"/>
-<area shape="rect" id="node44" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a39449615efcf006fddf5389238470efc" title="Überprüft die Beschreibung des Objektes. " alt="" coords="805,473,995,514"/>
-<area shape="rect" id="node46" href="$classokw_1_1core_1_1_core.html#a6e3d7fe88a78afa61a1a340dd2da88b7" title="Überprüft die Beschreibung des Objektes. " alt="" coords="519,515,729,541"/>
-<area shape="rect" id="node47" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa2e12e52f5fd3c45a5006af52dd9a7db" title="Überprüft die Beschreibung des Objektes. " alt="" coords="805,538,995,579"/>
-<area shape="rect" id="node49" href="$classokw_1_1core_1_1_core.html#a15bd6c1b810f32fe6efcc76ccb10a0ae" title="Überprüft die Überschrift des Objektes. " alt="" coords="517,616,731,643"/>
-<area shape="rect" id="node50" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a070f48adbb7a8148c8276ee965773a6d" title="Überprüft die Überschrift des Objektes. " alt="" coords="805,655,995,697"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,278,207,319"/>
+<area shape="rect" id="node2" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="268,437,432,464"/>
+<area shape="rect" id="node8" href="$classokw_1_1core_1_1_e_n.html#aaa7465ee7f135c724668d8b22dc2219f" title="Startet die gegebene Anwendung." alt="" coords="270,336,430,363"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#ae24d951e607b9b82af4f3b80e71285b9" title="Tastatureingaben von Daten in das aktive Fensterobjekt." alt="" coords="273,133,427,160"/>
+<area shape="rect" id="node18" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="255,184,445,211"/>
+<area shape="rect" id="node21" href="$classokw_1_1core_1_1_e_n.html#acbeecc6c0bfe7f092b7b612471f5e790" title="Dokumentiert den Status des gegebenen Objekts." alt="" coords="263,235,437,261"/>
+<area shape="rect" id="node24" href="$classokw_1_1core_1_1_e_n.html#aba06d28c60512e1dc55902403abbd3f6" title="Beendet eine gegebene Anwendung." alt="" coords="271,285,429,312"/>
+<area shape="rect" id="node27" href="$classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" title="Signalisiert das Ende eines Testfalls." alt="" coords="274,387,426,413"/>
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language." alt="" coords="495,311,694,337"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="507,508,683,535"/>
+<area shape="rect" id="node4" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)." alt="" coords="744,356,987,383"/>
+<area shape="rect" id="node6" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls." alt="" coords="770,559,961,601"/>
+<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="755,508,975,535"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#ac20a22275b6aea1c4e551dce1fd0c1e9" title="Startet die gegebene Anwendung." alt="" coords="509,361,681,388"/>
+<area shape="rect" id="node10" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes." alt="" coords="770,122,961,163"/>
+<area shape="rect" id="node11" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter." alt="" coords="753,188,978,215"/>
+<area shape="rect" id="node14" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0ec9b7c60041061f1b01d85b703a27a8" title="Startet die gegebene Anwendung." alt="" coords="757,407,973,433"/>
+<area shape="rect" id="node12" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei." alt="" coords="1035,188,1268,215"/>
+<area shape="rect" id="node13" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag." alt="" coords="1316,181,1519,222"/>
+<area shape="rect" id="node16" href="$classokw_1_1core_1_1_core.html#ad09bf3a237b88913dbe9ebc228db1cf3" title="Tastatureingaben von Daten in das aktive Fensterobjekt." alt="" coords="512,108,677,135"/>
+<area shape="rect" id="node17" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0466b45ed636074a1b6cd52de6b5fdd6" title="Tastatureingaben von Daten in das aktive Fensterobjekt." alt="" coords="761,5,970,32"/>
+<area shape="rect" id="node19" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="493,159,696,185"/>
+<area shape="rect" id="node20" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="766,57,965,98"/>
+<area shape="rect" id="node22" href="$classokw_1_1core_1_1_core.html#a50d5ec463eec7315aecc7a2f3d1bb6e9" title="Dokumentiert den Status des gegebenen Objekts." alt="" coords="501,209,688,236"/>
+<area shape="rect" id="node23" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a4a22cc70524486b607b1994b6e9b2db7" title="Dokumentiert den Status des gegebenen Objekts." alt="" coords="769,239,961,281"/>
+<area shape="rect" id="node25" href="$classokw_1_1core_1_1_core.html#a13d953a145a5e1bc776785f8433ba69c" title="Beendet eine gegebene Anwendung." alt="" coords="509,260,680,287"/>
+<area shape="rect" id="node26" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a789e33be9253edfccfe5654f537cf52a" title="Beendet eine gegebene Anwendung." alt="" coords="758,305,973,332"/>
+<area shape="rect" id="node28" href="$classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" title="Signalisiert das Ende eines Testfalls." alt="" coords="513,435,677,461"/>
+<area shape="rect" id="node29" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186" title="Signalisiert das Ende eines Testfalls." alt="" coords="761,457,969,484"/>
 </map>

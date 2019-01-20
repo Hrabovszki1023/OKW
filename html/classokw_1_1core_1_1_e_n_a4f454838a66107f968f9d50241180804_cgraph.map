@@ -1,10 +1,11 @@
 <map id="okw.core.EN.VerifyHasFocus" name="okw.core.EN.VerifyHasFocus">
-<area shape="rect" id="node2" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language. " alt="" coords="261,23,446,49"/>
-<area shape="rect" id="node4" href="$classokw_1_1core_1_1_core.html#ade5d877223a28ce11b57c8b94ab1a2eb" title="Vergleicht den Fokus&#45;Zustand des gegebenen Objekts mit dem erwarteten Wert. " alt="" coords="251,107,456,133"/>
-<area shape="rect" id="node3" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)..." alt="" coords="505,5,735,32"/>
-<area shape="rect" id="node5" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes. " alt="" coords="531,57,709,98"/>
-<area shape="rect" id="node6" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. " alt="" coords="513,123,727,149"/>
-<area shape="rect" id="node9" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a40877cd2c0183c22aa695cf4973ce37c" title="Vergleicht den Fokus&#45;Zustand des gegebenen Objekts mit dem erwarteten Wert. " alt="" coords="525,174,715,215"/>
-<area shape="rect" id="node7" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. " alt="" coords="785,123,1007,149"/>
-<area shape="rect" id="node8" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag. " alt="" coords="1056,115,1259,157"/>
+<area shape="rect" id="node1" title="Vergleicht den Fokus&#45;Zustand des gegebenen Objekts mit dem erwarteten Wert." alt="" coords="5,65,205,92"/>
+<area shape="rect" id="node2" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language." alt="" coords="260,23,459,49"/>
+<area shape="rect" id="node4" href="$classokw_1_1core_1_1_core.html#ade5d877223a28ce11b57c8b94ab1a2eb" title="Vergleicht den Fokus&#45;Zustand des gegebenen Objekts mit dem erwarteten Wert." alt="" coords="253,107,465,133"/>
+<area shape="rect" id="node3" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)." alt="" coords="513,5,756,32"/>
+<area shape="rect" id="node5" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes." alt="" coords="539,57,730,98"/>
+<area shape="rect" id="node6" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter." alt="" coords="522,123,747,149"/>
+<area shape="rect" id="node9" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a40877cd2c0183c22aa695cf4973ce37c" title="Vergleicht den Fokus&#45;Zustand des gegebenen Objekts mit dem erwarteten Wert." alt="" coords="537,174,732,215"/>
+<area shape="rect" id="node7" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei." alt="" coords="804,123,1037,149"/>
+<area shape="rect" id="node8" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag." alt="" coords="1085,115,1288,157"/>
 </map>

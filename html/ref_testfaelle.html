@@ -5,7 +5,7 @@
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,400,400italic,600,700italic,700,600italic' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
 <title>OpenKeyWord: Testfälle</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -15,8 +15,9 @@
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
   $(document).ready(initResizable);
-</script>
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,7 +26,7 @@
     extensions: ["tex2jax.js"],
     jax: ["input/TeX","output/HTML-CSS"],
 });
-</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+</script><script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 <link href="OKW_doxygen.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -38,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 233, Datum: 11.21.2018 09:26:37</span>
+   &#160;<span id="projectnumber">Build_ID: 240, Datum: 01.20.2019 11:26:00</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -47,18 +48,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Erzeugt von Doxygen 1.8.13 -->
+<!-- Erzeugt von Doxygen 1.8.15 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Suchen');
   $(document).ready(function() { init_search(); });
 });
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
@@ -72,7 +76,9 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(document).ready(function(){initNavTree('ref_testfaelle.html','');});
+/* @license-end */
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -89,7 +95,7 @@ $(document).ready(function(){initNavTree('ref_testfaelle.html','');});
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
 <div class="title">Testfälle </div>  </div>
 </div><!--header-->
@@ -136,15 +142,15 @@ Testfall etwas anders beleuchtet</h1>
 </ol>
 <p>Diese <em>müssen</em> konstant bleiben, damit auf ein konstantes und bekanntes Ergebnis geprüft werden kann.</p>
 <p>Tests müssen reproduzierbar sein. Es darf immer nur ein Parameter variieren. Sind dies mehrere, so kann im Fall einer Abweichung nicht sicher gesagt werden, welcher Parameter für die Abweichung ursächlich ist.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000061">Noch zu erledigen:</a></b></dt><dd>jnic&gt;ZH - bitte neuen Text prüfen [Tests müssen...]</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000058">Noch zu erledigen:</a></b></dt><dd>jnic&gt;ZH - bitte neuen Text prüfen [Tests müssen...]</dd></dl>
 <p>Wird der Parameter, bzw. werden die Parameter, verändert und bei einem wiederholten Testlauf ergibt sich eine Abweichung, besteht <em>nicht</em> die Möglichkeit einer sicheren Aussage über die Ursachen dieser Abweichung. Diese kann ihre Ursache in der neuen Version der "Software under Test (SUT)" oder in der Variation der Daten unter Einbeziehung einer falschen Vorhersage des Oracles haben.</p>
 <p>Eine schnelle Aussage über die VErsionsänderung, wie in einem Test erwünscht, kann so nicht getroffen werden.</p>
 <p>Neue Testfälle sind durchaus erwünscht, aber für einen verläßlichen Vergleich zwischen einer alten und einer neuen Version des Testlings, müssen bereits durchgeführte Testfälle wiederholt werden.</p>
 <p>Bei neuen Testfällen ist es wichtig, dass diese auch neue Aspekte des Testlings abprüfen. Sie müssen systematisch abgeleitet werden.</p>
 <ol type="1">
-<li>Äquivalenzklassen - Erläuterung unter  <a href="http://de.wikipedia.org/wiki/%C3%84quivalenzklassentest">http://de.wikipedia.org/wiki/%C3%84quivalenzklassentest</a></li>
-<li>Pairwise Methode - Erläuterung unter  <a href="http://de.wikipedia.org/wiki/Pairwise-Methode">http://de.wikipedia.org/wiki/Pairwise-Methode</a></li>
-<li>Whitebox Verfahren - Erläuterung unter  <a href="http://de.wikipedia.org/wiki/White-Box-Test">http://de.wikipedia.org/wiki/White-Box-Test</a></li>
+<li>Äquivalenzklassen - Erläuterung unter \url <a href="http://de.wikipedia.org/wiki/%C3%84quivalenzklassentest">http://de.wikipedia.org/wiki/%C3%84quivalenzklassentest</a></li>
+<li>Pairwise Methode - Erläuterung unter \url <a href="http://de.wikipedia.org/wiki/Pairwise-Methode">http://de.wikipedia.org/wiki/Pairwise-Methode</a></li>
+<li>Whitebox Verfahren - Erläuterung unter \url <a href="http://de.wikipedia.org/wiki/White-Box-Test">http://de.wikipedia.org/wiki/White-Box-Test</a></li>
 <li>etc.</li>
 </ol>
 <h1><a class="anchor" id="refOrganisation"></a>
@@ -163,23 +169,24 @@ Testfall Verkettung</h2>
 Testfall Zuständigkeit</h2>
 <p>Jeder Testfall sollte nur für eine bestimmte Testling Eigenschaft zuständig sein. Das hat den Vorteil, wenn so ein Testfall fehlschlägt, dann ist sofort erkennbar welche Eigenschaft betroffen ist.</p>
 <ul>
-<li>Clean Code - Erläuterung unter  <a href="http://de.wikipedia.org/wiki/Clean_Code">http://de.wikipedia.org/wiki/Clean_Code</a></li>
+<li>Clean Code - Erläuterung unter \url <a href="http://de.wikipedia.org/wiki/Clean_Code">http://de.wikipedia.org/wiki/Clean_Code</a></li>
 </ul>
 <h1><a class="anchor" id="refFubktionalFachlicherTestfall"></a>
 Funktional/fachlicher Testfall.</h1>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000062">Noch zu erledigen:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000059">Noch zu erledigen:</a></b></dt><dd></dd></dl>
 <h1><a class="anchor" id="refAblauf"></a>
 Ablauf</h1>
-</div></div><!-- contents -->
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="ref_anwenderhandbuch.html">Anwenderhandbuch</a></li>
-    <li class="footer">Erzeugt am Mit Nov 21 2018 09:27:45 für OpenKeyWord von
+    <li class="footer">Erzeugt am Son Jan 20 2019 11:47:46 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>
 </div>
 <script type="text/javascript">

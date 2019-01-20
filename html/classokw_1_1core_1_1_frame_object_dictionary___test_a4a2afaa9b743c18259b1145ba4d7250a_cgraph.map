@@ -1,9 +1,10 @@
 <map id="okw.core.FrameObjectDictionary_Test.tc_CreatInstanceByObjectName_OKWFrameObjectWindowNotFoundException_1" name="okw.core.FrameObjectDictionary_Test.tc_CreatInstanceByObjectName_OKWFrameObjectWindowNotFoundException_1">
-<area shape="rect" id="node2" href="$classokw_1_1_frame_object_dictionary___sngltn.html#aeec07d71cbebe71ec3ec4d27e86d6c5c" title="Die Methode liefert das Frame&#45;Object des gegebenen FN eines Fensterobjektes zurück. " alt="" coords="366,34,581,75"/>
-<area shape="rect" id="node7" href="$classokw_1_1log_1_1_logger___sngltn.html#a525771433356af73ed6e94b35f31b541" title="Zentrale Logger&#45;Klasse stellt Logger&#45;Methoden innerhalb von OKW zur Verfügung. " alt="" coords="385,99,561,141"/>
-<area shape="rect" id="node8" href="$classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c" title="LogPrint Function: Prints the values of expressions to the results file. " alt="" coords="384,165,563,206"/>
-<area shape="rect" id="node3" href="$classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4" title="Loggt eine Nachricht. " alt="" coords="647,5,825,46"/>
-<area shape="rect" id="node4" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter. " alt="" coords="629,71,843,97"/>
-<area shape="rect" id="node5" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei. " alt="" coords="891,71,1114,97"/>
-<area shape="rect" id="node6" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag. " alt="" coords="1163,63,1365,105"/>
+<area shape="rect" id="node1" title="Prüft ob eine OKWFrameObjectWindowNotFoundException ausgelöst wird, wenn das Fensterobjekt nicht exis..." alt="" coords="5,93,331,149"/>
+<area shape="rect" id="node2" href="$classokw_1_1_frame_object_dictionary___sngltn.html#aeec07d71cbebe71ec3ec4d27e86d6c5c" title="Die Methode liefert das Frame&#45;Object des gegebenen FN eines Fensterobjektes zurück." alt="" coords="379,35,611,76"/>
+<area shape="rect" id="node7" href="$classokw_1_1log_1_1_logger___sngltn.html#a525771433356af73ed6e94b35f31b541" title="Zentrale Logger&#45;Klasse stellt Logger&#45;Methoden innerhalb von OKW zur Verfügung." alt="" coords="400,100,589,141"/>
+<area shape="rect" id="node8" href="$classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c" title="LogPrint Function: Prints the values of expressions to the results file." alt="" coords="399,165,590,207"/>
+<area shape="rect" id="node3" href="$classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4" title="Loggt eine Nachricht." alt="" coords="676,5,867,47"/>
+<area shape="rect" id="node4" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter." alt="" coords="659,71,884,98"/>
+<area shape="rect" id="node5" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei." alt="" coords="932,71,1165,98"/>
+<area shape="rect" id="node6" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag." alt="" coords="1213,64,1416,105"/>
 </map>
