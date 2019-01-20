@@ -42,7 +42,6 @@ package okw.gui.adapter.selenium.webdriver;
 import java.util.ArrayList;
 import org.openqa.selenium.safari.*;
 import okw.gui.AnyWindow;
-import okw.gui.adapter.selenium.*;
 import okw.log.*;
 
 
@@ -81,7 +80,7 @@ import okw.log.*;
 
         	
         	 SafariOptions options = new SafariOptions();
-        	 options.setUseCleanSession(true); //if you wish safari to forget session everytime
+        	 //options.setUseCleanSession(true); //if you wish safari to forget session everytime
 
             SeDriver.getInstance().driver = new SafariDriver(options);
             this.Init();

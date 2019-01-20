@@ -126,7 +126,7 @@ public class SeChromeApp extends AnyWindow
                         System.setProperty( "webdriver.chrome.driver", "/Applications/chromedriver" );
                         break;
                     default:
-                        LOG.LogError( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
+                        LOG.LogWarning( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
                         break;
                 }
             }

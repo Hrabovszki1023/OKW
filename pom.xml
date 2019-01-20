@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.openkeyword</groupId>
@@ -6,14 +7,14 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<url>www.openkeyword.de</url>
 	<description>OKW - OpenKeyWord is a framework for keyword-driven testing. OKW is like a glue: it is the link between the test case description and the user activity on GUI. OKW dramatically reduces the cost of creating and maintaining test cases.</description>
-    
-    <properties>
-        <project.java.version>1.8</project.java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <additionalparam>-Xdoclint:none</additionalparam>
-    </properties>
-    
+
+	<properties>
+		<project.java.version>1.8</project.java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<additionalparam>-Xdoclint:none</additionalparam>
+	</properties>
+
 	<build>
 		<!-- To define the plugin version in your parent POM -->
 		<pluginManagement>
@@ -58,7 +59,7 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>3.0.0</version>
 				<configuration>
-					<!-- <additionalparam>-Xdoclint:none</additionalparam>  -->
+					<!-- <additionalparam>-Xdoclint:none</additionalparam> -->
 					<doclint>none</doclint>
 				</configuration>
 				<executions>
@@ -108,38 +109,27 @@
 					<generateBackupPoms>false</generateBackupPoms>
 				</configuration>
 			</plugin>
-			
-			<plugin>
-      			<groupId>com.versioneye</groupId>
-      			<artifactId>versioneye-maven-plugin</artifactId>
-      			<version>3.11.4</version>
-    			</plugin>
 		</plugins>
 	</build>
 	<reporting>
 		<plugins>
-<!-- 			<plugin> -->
-<!-- 				<groupId>com.github.igoryeremin</groupId> -->
-<!-- 				<artifactId>doxygen-report-maven-plugin</artifactId> -->
-<!-- 				<version>1.0</version> -->
-<!-- 				<configuration> -->
-<!-- 					<doxygenConf>${basedir}/src/doxygen/OKW_EN.doxyfile</doxygenConf> -->
-<!-- 					<outputDirectory>${project.reporting.outputDirectory}/doxygen</outputDirectory> -->
-<!-- 					<input>${basedir}/src</input> -->
-<!-- 					<executableName>doxygen</executableName> -->
-<!-- 				</configuration> -->
-<!-- 			</plugin> -->
+			<!-- <plugin> -->
+			<!-- <groupId>com.github.igoryeremin</groupId> -->
+			<!-- <artifactId>doxygen-report-maven-plugin</artifactId> -->
+			<!-- <version>1.0</version> -->
+			<!-- <configuration> -->
+			<!-- <doxygenConf>${basedir}/src/doxygen/OKW_EN.doxyfile</doxygenConf> -->
+			<!-- <outputDirectory>${project.reporting.outputDirectory}/doxygen</outputDirectory> -->
+			<!-- <input>${basedir}/src</input> -->
+			<!-- <executableName>doxygen</executableName> -->
+			<!-- </configuration> -->
+			<!-- </plugin> -->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
 				<version>2.20.1</version>
 			</plugin>
-    			<plugin>
-      			<groupId>com.versioneye</groupId>
-      			<artifactId>versioneye-maven-plugin</artifactId>
-      			<version>3.11.4</version>
-    			</plugin>
 		</plugins>
 	</reporting>
 	<dependencies>
@@ -151,7 +141,7 @@
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>ST4</artifactId>
-			<version>4.0.8</version>
+			<version>4.1</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -162,45 +152,33 @@
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-core</artifactId>
-			<version>2.3.0</version>
+			<version>2.3.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>
-			<version>2.3.0</version>
+			<version>2.3.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-impl</artifactId>
-			<version>2.3.0</version>
+			<version>2.3.2</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-jxc</artifactId>
-			<version>2.3.0</version>
+			<version>2.3.2</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-xjc</artifactId>
-			<version>2.3.0</version>
+			<version>2.3.2</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
 		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-java</artifactId>
-			<version>1.2.5</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-picocontainer</artifactId>
-			<version>1.2.5</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-junit</artifactId>
-			<version>1.2.5</version>
-			<scope>test</scope>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>versions-maven-plugin</artifactId>
+			<version>2.7</version>
 		</dependency>
 	</dependencies>
 	<issueManagement>
