@@ -191,7 +191,9 @@ public class OKW_Enviroment
 	// [XmlIgnore]
 	public String getFolder_XML()
 	{
-		return OKW_FileHelper.convertDirectorySeperator(this.Folder_XML);
+		String lvsReturn = OKW_FileHelper.convertDirectorySeperator(this.Folder_XML);
+		
+		return lvsReturn;
 	}
 
 	public void setFolder_XML( String value )

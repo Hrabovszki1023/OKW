@@ -49,10 +49,10 @@ public class OKW_GetJavaClass
 					// Dann "okw.gui.frames.*" Klassen des Paketes ermitteln...
 					lvAsReturn.addAll( getClassesFromJar( lvClassPath, fpsPackage ) );
 				}
-				else if ( Files.isDirectory( Paths.get( lvClassPath ), LinkOption.NOFOLLOW_LINKS ) )
+				else if ( Files.isDirectory( Paths.get( file.toURI() ), LinkOption.NOFOLLOW_LINKS ) )
 				{
 					// Dann "okw.gui.frames.*" Klassen des gegebenen Pfades ermitteln...
-					lvAsReturn.addAll( getClassesFromDirectory( lvClassPath, fpsPackage ) );
+					lvAsReturn.addAll( getClassesFromDirectory( file.getAbsolutePath(), fpsPackage ) );
 				}
 			}
 		}

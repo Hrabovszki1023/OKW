@@ -42,7 +42,6 @@ package okw.gui.adapter.selenium.webdriver;
 import java.util.ArrayList;
 import org.openqa.selenium.safari.*;
 import okw.gui.AnyWindow;
-import okw.gui.adapter.selenium.*;
 import okw.log.*;
 
 

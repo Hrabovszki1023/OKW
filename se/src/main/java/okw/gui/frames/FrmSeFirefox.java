@@ -1,6 +1,5 @@
 package okw.gui.frames;
 
-import okw.gui.OKWLocator;
 import okw.gui.adapter.selenium.SeBrowserWindow;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
 import okw.log.Logger_Sngltn;

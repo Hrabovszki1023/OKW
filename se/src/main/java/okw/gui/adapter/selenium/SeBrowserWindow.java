@@ -41,7 +41,6 @@ package okw.gui.adapter.selenium;
 
 import okw.OKW;
 import okw.exceptions.OKWGUIObjectNotFoundException;
-import okw.gui.OKWLocator;
 import okw.gui.adapter.selenium.webdriver.*;
 
 /** 
