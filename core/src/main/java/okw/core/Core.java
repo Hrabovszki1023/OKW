@@ -1046,6 +1046,24 @@ public class Core implements IOKW_State
         }
     }
 
+
+    /**
+     * \copydoc IOKW_State::VerifyMaxLength(String,String)
+     */
+    public void VerifyMaxLength( String FN, String ExpVal ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "VerifyMaxLength", "KeyWordName" ), FN, ExpVal );
+            this.CurrentState.VerifyMaxLength( FN, ExpVal );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+
+    
     /**
      * \copydoc IOKW_State::VerifyLabelREGX(String,String)
      */

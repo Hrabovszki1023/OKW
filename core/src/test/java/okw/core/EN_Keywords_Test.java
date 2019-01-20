@@ -45,7 +45,6 @@ import okw.OKW_TestClipboard;
 import okw.log.Logger_Sngltn;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
@@ -75,6 +74,7 @@ public class EN_Keywords_Test
         myLogger.setDebugMode( false );
     }
 
+    /*
     @AfterClass
     public static void tearDownAfterClass() throws Exception
     {
@@ -84,6 +84,7 @@ public class EN_Keywords_Test
         //myLog2HTML.Result2HTML( "EN_Keywords_Test.html" );
         System.out.println( "===========================================================================" );
     }
+    */
 
     @Before
     public void setUp() throws Exception
@@ -1562,6 +1563,7 @@ public class EN_Keywords_Test
      * "Normaler" Testfall für das Schlüsselwort EN.VerifyLabelWCM(String,String). 
      * 
      *  \~english
+     *  "Normal" test case for the keyword EN.VerifyLabelWCM(String,String).
      *  \~
      *  \author Zoltan Hrabovszki
      *  \date 2013.12.26
@@ -1589,6 +1591,41 @@ public class EN_Keywords_Test
         assertEquals( "The one and only VerifyLabel", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyLabel()", myClipBoard.getMethod() );
+    }
+
+    /**
+     * \~german
+     * "Normaler" Testfall für das Schlüsselwort EN.VerifyMaxLenth(String,String). 
+     * 
+     *  \~english
+     *  "Normal" test case for the keyword EN.VerifyMaxLenth(String,String).
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2018.12.26
+     */
+    @Test
+    public void tc_VerifyMaxLength() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        EN.SetValue( "All_MethodsObj", "2" );
+        myClipBoard.Clear();
+        EN.VerifyMaxLength( "All_MethodsObj", "2" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "2", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyMaxLength()", myClipBoard.getMethod() );
     }
 
     /**

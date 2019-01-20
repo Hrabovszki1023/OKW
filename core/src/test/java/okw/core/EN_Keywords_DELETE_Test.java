@@ -926,6 +926,28 @@ public class EN_Keywords_DELETE_Test
     EN.VerifyLabelWCM( "All_MethodsObj", "${DELETE}" );
   }
 
+  /** \~german
+   * DELETE ist ein nicht erlaubter Wert im Schlüsselwort EN.VeryfyMaxLength(String,String).
+   *
+   * Dieser Test Prüft, ob die Ausnahmen OKWNotAllowedValueException ausgelöst wird.
+   * 
+   * \~english
+   * DELETE is an illegal value in the keyword EN.VeryfyMaxLength(String,String).
+   * 
+   * This test verifies whether the exception OKWNotAllowedValueException is thrown.
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018.12.26
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifyMaxLength_DELETE_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMaxLength( "All_MethodsObj", "${DELETE}" );
+  }
+
   // \~german
   // \brief
   //

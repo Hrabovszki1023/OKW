@@ -610,6 +610,16 @@ public class NOK implements IOKW_State
     }
 
     /**
+     * \copydoc IOKW_State::VerifyMaxLength(String,String)
+     */
+    public void VerifyMaxLength( String FN, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifyMaxLength", "FN", FN, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
      * \copydoc IOKW_State::VerifyPlaceholderREGX(String,String)
      */
     public void VerifyPlaceholderREGX( String FN, String ExpVal )

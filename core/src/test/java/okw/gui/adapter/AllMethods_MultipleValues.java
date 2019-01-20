@@ -843,6 +843,25 @@ import okw.log.Logger_Sngltn;
             return lvLsReturn;
         }
 
+        public Integer VerifyMaxLength()
+        {
+            Integer lviReturn;
+
+            this.myLogger.LogFunctionStartDebug("VerifyMaxLength");
+            lviReturn = 10;
+            
+            myClipboard.Clear();
+            String lvs_ObjectName = getFN();
+            myClipboard.setObjectName(lvs_ObjectName);
+            myClipboard.setMethod("VerifyPlaceholder()");
+
+            myClipboard.getValue().add(lviReturn.toString());
+
+            this.myLogger.LogFunctionEndDebug();
+
+            return lviReturn;
+        }
+
         public ArrayList<String> VerifyValue()
         {
             ArrayList<String> lvLsReturn = new ArrayList<String>();

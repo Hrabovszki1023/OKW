@@ -165,7 +165,9 @@ public class SeSelect extends SeAnyChildWindow
 
         try
         {
-            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            // Waiting for the object. 
+            // If it does not exist after TimeOut 
+            // then the exception OKWGUIObjectNotFoundException is raised and terminated...
             this.WaitForMe();
 
             //org.openqa.selenium.support.ui.Select
@@ -212,7 +214,9 @@ public class SeSelect extends SeAnyChildWindow
 
         try
         {
-            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            // Waiting for the object. 
+            // If it does not exist after TimeOut 
+            // then the exception OKWGUIObjectNotFoundException is raised and terminated...
             this.WaitForMe();
 
             Select SelectList = new Select( this.Me() );
@@ -264,7 +268,9 @@ public class SeSelect extends SeAnyChildWindow
         {
             this.LogFunctionStartDebug( "GetValue" );
 
-            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            // Waiting for the object. 
+            // If it does not exist after TimeOut 
+            // then the exception OKWGUIObjectNotFoundException is raised and terminated...
             this.WaitForMe();
 
             Select SelectList = new Select( this.Me() );

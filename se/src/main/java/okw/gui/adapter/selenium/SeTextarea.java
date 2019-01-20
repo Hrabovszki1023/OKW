@@ -135,6 +135,47 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
 
         
         /** \~german
+           *  Ermittelt den textuellen Inhalt des Labels.
+           *  
+           *  Es wird das Attribute "textContent" des mit "id" an das aktuelle Objekt angebunde "Laben" gelesen.
+           *  
+           *  @return Rückgabe des Label-Textes.
+           *  \~english
+           *  \~
+           *  @author Zoltán Hrabovszki
+           *  @date 2018.12.27
+           */
+           public Integer getMaxLength()
+           {
+               Integer lviReturn = 0;
+        
+               try
+               {
+                   this.LogFunctionStartDebug( "getMaxLength" );
+        
+                   // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+                   this.WaitForMe();
+        
+                   
+                   // The Attribute "MaxLength" auslesen...
+                   
+                   String lvsMaxLength = this.Me().getAttribute( "maxlength" );
+        
+                   if ( !okw.OKW_Helper.isStringNullOrEmpty( lvsMaxLength) )
+                   {
+                       lviReturn = Integer.parseInt( lvsMaxLength );
+                   }
+               }
+               finally
+               {
+                   this.LogFunctionEndDebug( lviReturn.toString() );
+               }
+        
+               return lviReturn;
+           }
+
+
+        /** \~german
          *  Liest den Placeholder des TextAere-Tags aus.
          * 
          *  Es wird das Attribut "placeholder" ausgelesen.

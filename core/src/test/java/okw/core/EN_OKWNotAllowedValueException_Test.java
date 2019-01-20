@@ -106,14 +106,13 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWNotAllowedValueException.class )
-  public void TC_VerifyExists_OKWFrameObjectMethodNotFoundException() throws Exception {
+  public void TC_VerifyExists_OKWNotAllowedValueException() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyExists( "IsNotDefindeInRechner", "Bandersnatch" );
   }
-
-  
+ 
   /**
    * \~german
    *  \brief
@@ -126,7 +125,7 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWNotAllowedValueException.class )
-  public void TC_VerifyHasFocus_OKWFrameObjectMethodNotFoundException() throws Exception {
+  public void TC_VerifyHasFocus_OKWNotAllowedValueException() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -138,6 +137,26 @@ public class EN_OKWNotAllowedValueException_Test {
    * \~german
    *  \brief
    *  Prüft ob die Ausnahme OKWNotAllowedValueException durch die
+   *  LFC-VerifyIsActive ausgelöst wird, wenn das Frame-Kindobjekt vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void TC_VerifyHasFocus_OKWNotAllowedValueException_2() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyHasFocus( "All_MethodsObj", "Bandersnatch" );
+  }
+
+  
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWNotAllowedValueException durch die
    *  LFC-VerifyIsActive ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
    * 
    *  \~english
@@ -146,10 +165,87 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWNotAllowedValueException.class )
-  public void TC_VerifyIsActive_OKWFrameObjectMethodNotFoundException() throws Exception {
+  public void TC_VerifyIsActive_OKWNotAllowedValueException() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyIsActive( "IsNotDefindeInRechner", "Bandersnatch" );
   }
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWNotAllowedValueException durch die
+   *  VerifyMaxLength(String, String) ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void TC_VerifyMaxLength_OKWNotAllowedValueException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMaxLength( "IsNotDefindeInRechner", "Bandersnatch" );
+  }
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWNotAllowedValueException durch die
+   *  VerifyMaxLength(String, String) ausgelöst wird, wenn das Frame-Kindobjekt vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void TC_VerifyMaxLength_OKWNotAllowedValueException_2() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMaxLength( "All_MethodsObj", "Bandersnatch" );
+  }
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWNotAllowedValueException durch die
+   *  VerifyMaxLength(String, String) ausgelöst wird, wenn das Frame-Kindobjekt vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void TC_VerifyMaxLength_OKWNotAllowedValueException_3() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMaxLength( "All_MethodsObj", " 1" );
+  }
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWNotAllowedValueException durch die
+   *  VerifyMaxLength(String, String) ausgelöst wird, wenn das Frame-Kindobjekt vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void TC_VerifyMaxLength_OKWNotAllowedValueException_4() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMaxLength( "All_MethodsObj", "1,03" );
+  }
+
 }

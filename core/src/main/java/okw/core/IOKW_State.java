@@ -802,9 +802,9 @@ public interface IOKW_State
      *  
      *  _Example:_ Selection of the child object with the name "MyChildObject".<br>
      *  \code{java}
-     *  EN.SelectChild( "MeinKindobjekt" )
+     *  EN.SelectChild( "MeinKindobjekt" ) name, vormane
      *  EN.SetValue("SELECTEDCHILD", "MyValue")
-     *  EN.VerifyValue("SELECTEDCHILD", "MyValue")
+     *  EN.VerifyLenght("SELECTEDCHILD", "MyValue") 1, 2 ,5, 5
      *  EN.VerifyLabel("SELECTEDCHILD", "MyLabel")
      *  \endcode
      *  
@@ -1309,7 +1309,7 @@ public interface IOKW_State
      *  \verbatim Verify Is Active: "MyObject", "YES" \endverbatim
      * 
      *  @param FN Functional name of the object 
-     *  @param ExpVal Expected Value. Following values are Allowed here: "YES, "NO", and "IGNORE". 
+     *  @param ExpVal Expected Value. Following values are allowed here: "YES, "NO", and "IGNORE". 
      *
      *  \~
      *  @author zh@openkeyword.de
@@ -1344,6 +1344,36 @@ public interface IOKW_State
      */
     void VerifyPlaceholder( String FN, String ExpVal ) throws Exception;
 
+    
+    /**
+     *  \~german
+     *  Checks the maximum number of characters that can be entered.
+     *  
+     *  _Beispiel:_ Prüfe, ob max. 10 Zeichen in ein das Objekt mit FN = "Name" 
+     *  eingeben werden darf:
+     *  
+     *  \verbatim EN.VerifyMaxLength( "Name", "10" ) \endverbatim
+     *  
+     *  @param FN Funktionaler Name des Objekts 
+     *  @param ExpVal Erwarteter Wert, als String Zahl 
+     * 
+     *  \~english
+     *  Verifies the placeholder of a GUI-object.
+     *  
+     *  _Example:_ Check if max. 10 characters in the object with FN = "Name" can be inserted:
+     *  
+     *  \verbatim EN.VerifyMaxLength( "Name", "10" ) \endverbatim
+     *  
+     *  @param FN Functional name of the object 
+     *  @param ExpVal Expected Value as String with Numbers
+     * 
+     *  \~
+     *  @author zh@openkeyword.de
+     *  @date 2018-12-25
+     */
+    void VerifyMaxLength( String FN, String ExpVal ) throws Exception;
+
+    
     /**
      *  \~german
      *  Überprüft den Platzhalter des Objektes.
@@ -1411,7 +1441,6 @@ public interface IOKW_State
      *  \~
      *  @author zh@openkeyword.de
      *  @date 2018-10-03
-     *  \todo TODO: keine Beschreibung vorhanden
      */
     void VerifyPlaceholderREGX( String FN, String ExpVal ) throws Exception;    
     
@@ -1430,13 +1459,13 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014.09.21
+     *  @date 2014-09-21
      */
     void VerifyLabel( String FN, String ExpVal ) throws Exception;
 
     /**
      *  \~german
-     *  Überprüft die Beschreibung des Objektes.
+     *  Überprüft die Beschreibung/Label des Objektes.
      *  Der Sollwert wird als Wildcard-Match angegeben.
      *  
      *  Folgende Platzhalter sind möglich:
@@ -1458,8 +1487,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21/jnic
-     *  \todo TODOkeine Beschreibung vorhanden
+     *  @date 2014-09-21
      */
     void VerifyLabelWCM( String FN, String ExpVal ) throws Exception;
 
@@ -1485,7 +1513,6 @@ public interface IOKW_State
      *  \~
      *  @author zh@openkeyword.de
      *  @date 2014-09-21
-     *  \todo TODO: keine Beschreibung vorhanden
      */
     void VerifyLabelREGX( String FN, String ExpVal ) throws Exception;
 

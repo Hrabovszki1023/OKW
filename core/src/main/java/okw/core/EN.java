@@ -495,6 +495,15 @@ public class EN
     }
 
     /**
+     *  \copydoc IOKW_State::VerifyMaxLength(String,String)
+     */
+    public static void VerifyMaxLength( String FN, String ExpVal ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.VerifyMaxLength( FN, ExpVal );
+    }
+
+    /**
      *  \copydoc IOKW_State::VerifyPlaceholder(String,String)
      */
     public static void VerifyPlaceholder( String FN, String ExpVal ) throws Exception

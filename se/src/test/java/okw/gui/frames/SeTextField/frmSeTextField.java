@@ -40,7 +40,8 @@ public class frmSeTextField extends SeBrowserChild
             VerifyTooltip_PT=500, VerifyTooltip_TO=1,
             VerifyCaption_PT=500, VerifyCaption_TO=1,
             VerifyExists_PT=500, VerifyExists_TO=1,
-            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
+            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1,
+            VerifyMaxLength_PT=500, VerifyMaxLength_TO=1
             )
     public SeInputText Zuname = new SeInputText("//*[@data-fn='Last Name']");
 
