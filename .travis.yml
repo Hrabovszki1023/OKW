@@ -61,7 +61,7 @@ after_success:
   - chmod +x generateDocumentationAndDeploy.sh
   - ./generateDocumentationAndDeploy.sh
   - cd $TRAVIS_BUILD_DIR/html
-  - ls -sl
+#  - ls -sl
 
 notifications:
   email:

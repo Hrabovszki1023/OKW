@@ -419,7 +419,7 @@ public class FrameObjectDictionary_Sngltn
    *  \~
    *  \author Zoltan Hrabovszki
    *  \date 2014.10.10
- * @throws XPathExpressionException 
+   * @throws XPathExpressionException 
    */
   public static ArrayList<Class<?>> getListOfOKWGuiClasses() throws ClassNotFoundException, IOException, XPathExpressionException
   {
@@ -486,7 +486,7 @@ public class FrameObjectDictionary_Sngltn
       for ( Class<?> lvOKWGuiClass : lvOKWGuiClasses )
       {
         // Erzeuge eine Instanz der Window-Klasse
-        lvTypeInstanceAsObject = createInstanceByType( lvOKWGuiClass );
+        lvTypeInstanceAsObject = OKW_GetJavaClass.createInstanceByType( lvOKWGuiClass );
 
         // FN (Fachlichen Namen) der Klasse aus der die Annotiation OKW.FN() auslesen.
         // Hierbei handelt es sich um des  ParentObject = Fenster
@@ -652,73 +652,6 @@ public class FrameObjectDictionary_Sngltn
     return lvsReturn;
   }
 
-  // / \~german
-  // / \brief
-  // / Die Methode erzeugt eine Instanz der Rahmenklasse (frame class) mit dem
-  // / in 'fps_ParentClassName' gegebenen Namen.
-  // /
-  // / \note __WICHTIG:__ Die Klasse muss zwingend so heißen, wie angegeben.
-  // / Hier wird kein 'Frame Präfix' ergänzt.
-  // /
-  // / \return
-  // / Liefert die Instanz der Klasse.
-  // /
-  // / \param fps_ParentClassName Name der Klasse
-  // /
-  // / \~english
-  // / \brief
-  // / The method generates an instance of the frame class with the name given
-  // / in 'fps_ParentClassName'.
-  // / \note __IMPORTANT:__ the class is forced to be exactly, as specified.
-  // / Here is no 'frame prefix' added.
-  // / \return
-  // / Delivers the instance of the class
-  // / \param fps_ParentClassName Name of the class
-  // /
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2014.10.10
-  // /
-  private static Object createInstanceByType( Class<?> fpParentType ) throws InstantiationException, XPathExpressionException
-  {
-    Object lvo_Obj = null;
-    Boolean bOK = false;
-
-    Log.LogFunctionStartDebug( "FrameObjectDictionary.CreateInstanceByObjectName", "fpParentClass", fpParentType.getName() );
-
-    try
-    {
-      // lvo_Obj = Activator.CreateInstance(fpParentType, null);
-
-      lvo_Obj = fpParentType.newInstance();
-
-      Log.LogPrintDebug( LM.GetMessage( "CreateInstanceByObjectName", "InstanceWasCreated", lvo_Obj.getClass().getName() ) );
-      bOK = true;
-    }
-    catch (IllegalAccessException e)
-    {
-      // EXCEPTION: Pürfen was hier genau passiert. Exception weitergeben
-      throw new OKWFrameObjectParentNotFoundException( LM.GetMessage( "CreateInstanceByObjectName", "InstanceWasCreated", fpParentType.getName() ) );
-    }
-    finally
-    {
-      if ( bOK )
-      {
-        // Wir sind ohne Exception durchgekommen und wir nehmen an,
-        // dass lvo_Obj != null
-        // -> wir geben den Namen des Objektes zurück...
-        Log.LogFunctionEndDebug( lvo_Obj.getClass().getName() );
-      }
-      else
-      {
-        // Irgend etwas ist faul wir rufen nur LogFunctionEndDebug
-        // auf...
-        Log.LogFunctionEndDebug();
-      }
-    }
-
-    return lvo_Obj;
-  }
 
   // / \~german
   // / \brief
