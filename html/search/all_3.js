@@ -21,6 +21,7 @@ var searchData=
   ['core',['Core',['../classokw_1_1core_1_1_core.html',1,'okw.core.Core'],['../classokw_1_1core_1_1_core.html#a7f67744c156b494c2e932412efaa0e07',1,'okw.core.Core.Core()']]],
   ['createemptydirectory',['createEmptyDirectory',['../classokw_1_1_o_k_w___file_helper.html#a3f1e666538681aaa975fde389b707ee7',1,'okw::OKW_FileHelper']]],
   ['createfile',['createFile',['../classokw_1_1_o_k_w___file_helper.html#a971febc29814ec065a22940729d7eeb7',1,'okw::OKW_FileHelper']]],
+  ['createinstancebytype',['createInstanceByType',['../classokw_1_1_o_k_w___get_java_class.html#a10701221abeade4716d492e8db29a877',1,'okw::OKW_GetJavaClass']]],
   ['currentchildobject_5fallmethods',['CurrentChildObject_Allmethods',['../classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html',1,'okw::gui::adapter']]],
   ['currentobject_5ftest',['CurrentObject_Test',['../classokw_1_1core_1_1_current_object___test.html',1,'okw::core']]],
   ['currentobjectallmethodcalltypes',['CurrentObjectAllMethodCallTypes',['../classokw_1_1gui_1_1frames_1_1frm_current_object_window.html#a157c0e6546a1b19bc4d977573c7120c0',1,'okw::gui::frames::frmCurrentObjectWindow']]],

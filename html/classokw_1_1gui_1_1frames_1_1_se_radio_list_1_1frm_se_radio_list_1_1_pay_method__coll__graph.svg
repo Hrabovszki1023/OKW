@@ -372,35 +372,34 @@ var sectionId = 'dynsection-1';
 <!-- Node24 -->
 <g id="node18" class="node"><title>Node24</title>
 <g id="a_node18"><a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html" target="_top" xlink:title="Verwaltet zentral die Frame&#45;Klassen: Instanziert Frame&#45;Klassen zu Frame&#45;Objekten und liefert die Refe...">
-<polygon fill="white" stroke="black" points="908,-722.5 908,-955.5 1082,-955.5 1082,-722.5 908,-722.5"/>
-<text text-anchor="start" x="916" y="-943.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
-<text text-anchor="middle" x="995" y="-932.5" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn</text>
-<polyline fill="none" stroke="black" points="908,-925.5 1082,-925.5 "/>
-<text text-anchor="middle" x="995" y="-913.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="908,-906.5 1082,-906.5 "/>
-<text text-anchor="start" x="916" y="-894.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentObjectByName()</text>
-<text text-anchor="start" x="916" y="-883.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getAllChildKeysOfParent()</text>
-<text text-anchor="start" x="916" y="-872.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getChildObjectByName()</text>
-<text text-anchor="start" x="916" y="-861.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ printObjectDictionary()</text>
-<text text-anchor="start" x="916" y="-850.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getOKW()</text>
-<text text-anchor="start" x="916" y="-839.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getInstance()</text>
-<text text-anchor="start" x="916" y="-828.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ init()</text>
-<text text-anchor="start" x="916" y="-817.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getListOfOKWGuiClasses()</text>
-<text text-anchor="start" x="916" y="-806.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; FrameObjectDictionary</text>
-<text text-anchor="start" x="916" y="-795.5" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn()</text>
-<text text-anchor="start" x="916" y="-784.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; createInstanceByObjectName()</text>
-<text text-anchor="start" x="916" y="-773.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; getChildObjectByName()</text>
-<text text-anchor="start" x="916" y="-762.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; frameScan()</text>
-<text text-anchor="start" x="916" y="-751.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; frameScanFieldsRecursively()</text>
-<text text-anchor="start" x="916" y="-740.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; getOKWFromObjekt()</text>
-<text text-anchor="start" x="916" y="-729.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; createInstanceByType()</text>
+<polygon fill="white" stroke="black" points="908,-728 908,-950 1082,-950 1082,-728 908,-728"/>
+<text text-anchor="start" x="916" y="-938" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
+<text text-anchor="middle" x="995" y="-927" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn</text>
+<polyline fill="none" stroke="black" points="908,-920 1082,-920 "/>
+<text text-anchor="middle" x="995" y="-908" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="908,-901 1082,-901 "/>
+<text text-anchor="start" x="916" y="-889" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentObjectByName()</text>
+<text text-anchor="start" x="916" y="-878" font-family="Helvetica,sans-Serif" font-size="10.00">+ getAllChildKeysOfParent()</text>
+<text text-anchor="start" x="916" y="-867" font-family="Helvetica,sans-Serif" font-size="10.00">+ getChildObjectByName()</text>
+<text text-anchor="start" x="916" y="-856" font-family="Helvetica,sans-Serif" font-size="10.00">+ printObjectDictionary()</text>
+<text text-anchor="start" x="916" y="-845" font-family="Helvetica,sans-Serif" font-size="10.00">+ getOKW()</text>
+<text text-anchor="start" x="916" y="-834" font-family="Helvetica,sans-Serif" font-size="10.00">+ getInstance()</text>
+<text text-anchor="start" x="916" y="-823" font-family="Helvetica,sans-Serif" font-size="10.00">+ init()</text>
+<text text-anchor="start" x="916" y="-812" font-family="Helvetica,sans-Serif" font-size="10.00">+ getListOfOKWGuiClasses()</text>
+<text text-anchor="start" x="916" y="-801" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; FrameObjectDictionary</text>
+<text text-anchor="start" x="916" y="-790" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn()</text>
+<text text-anchor="start" x="916" y="-779" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; createInstanceByObjectName()</text>
+<text text-anchor="start" x="916" y="-768" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; getChildObjectByName()</text>
+<text text-anchor="start" x="916" y="-757" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; frameScan()</text>
+<text text-anchor="start" x="916" y="-746" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; frameScanFieldsRecursively()</text>
+<text text-anchor="start" x="916" y="-735" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; getOKWFromObjekt()</text>
 </a>
 </g>
 </g>
 <!-- Node13&#45;&gt;Node24 -->
 <g id="edge28" class="edge"><title>Node13&#45;&gt;Node24</title>
-<path fill="none" stroke="#404040" d="M521.029,-1656.51C598.811,-1606.08 713.506,-1526.68 740,-1481 791.26,-1392.61 740.93,-1109.07 799,-1025 824.199,-988.517 853.048,-1006.52 887,-978 892.096,-973.72 897.109,-969.163 902.018,-964.409"/>
-<polygon fill="none" stroke="#404040" points="902.267,-964.159 903.665,-957.085 910.733,-955.655 909.335,-962.729 902.267,-964.159"/>
+<path fill="none" stroke="#404040" d="M521.029,-1656.51C598.811,-1606.08 713.506,-1526.68 740,-1481 791.26,-1392.61 740.93,-1109.07 799,-1025 824.199,-988.517 853.048,-1006.52 887,-978 894.043,-972.084 900.929,-965.64 907.597,-958.876"/>
+<polygon fill="none" stroke="#404040" points="907.637,-958.835 908.885,-951.732 915.921,-950.153 914.673,-957.255 907.637,-958.835"/>
 <text text-anchor="middle" x="778.5" y="-1324" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;Log</text>
 </g>
 <!-- Node14 -->
@@ -511,8 +510,8 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node17&#45;&gt;Node24 -->
 <g id="edge27" class="edge"><title>Node17&#45;&gt;Node24</title>
-<path fill="none" stroke="#404040" d="M884.712,-1107.84C900.647,-1069.14 922.619,-1015.78 942.76,-966.869"/>
-<polygon fill="none" stroke="#404040" points="942.86,-966.625 941.446,-959.554 947.429,-955.529 948.844,-962.6 942.86,-966.625"/>
+<path fill="none" stroke="#404040" d="M884.712,-1107.84C901.232,-1067.72 924.241,-1011.84 944.972,-961.497"/>
+<polygon fill="none" stroke="#404040" points="945.063,-961.275 943.649,-954.204 949.632,-950.179 951.047,-957.25 945.063,-961.275"/>
 <text text-anchor="middle" x="939.5" y="-999" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;LM</text>
 </g>
 <!-- Node18 -->
@@ -623,13 +622,13 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node24&#45;&gt;Node8 -->
 <g id="edge32" class="edge"><title>Node24&#45;&gt;Node8</title>
-<path fill="none" stroke="#404040" d="M1023.12,-722.17C1025.53,-708.695 1027.59,-695.091 1029,-682 1037.1,-606.815 1049.13,-409.478 1015,-342 998.485,-309.352 969.072,-282.395 940.273,-262.014"/>
+<path fill="none" stroke="#404040" d="M1022.11,-727.693C1024.96,-712.427 1027.4,-696.882 1029,-682 1037.1,-606.815 1049.13,-409.478 1015,-342 998.485,-309.352 969.072,-282.395 940.273,-262.014"/>
 <polygon fill="none" stroke="#404040" points="940.04,-261.854 932.829,-261.769 930.134,-255.081 937.345,-255.166 940.04,-261.854"/>
 <text text-anchor="middle" x="1054" y="-495" font-family="Helvetica,sans-Serif" font-size="10.00"> ~FOD</text>
 </g>
 <!-- Node24&#45;&gt;Node23 -->
 <g id="edge23" class="edge"><title>Node24&#45;&gt;Node23</title>
-<path fill="none" stroke="#404040" d="M917.027,-722.363C909.921,-709.087 903.386,-695.474 898,-682 895.719,-676.293 893.568,-670.429 891.539,-664.463"/>
+<path fill="none" stroke="#404040" d="M919.867,-727.597C911.665,-712.68 904.096,-697.251 898,-682 895.719,-676.293 893.568,-670.429 891.539,-664.463"/>
 <polygon fill="none" stroke="#404040" points="891.485,-664.293 885.831,-659.817 887.789,-652.876 893.442,-657.353 891.485,-664.293"/>
 <text text-anchor="middle" x="963.5" y="-674" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myFrameObjectDictionary</text>
 </g>
@@ -653,8 +652,8 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node25&#45;&gt;Node24 -->
 <g id="edge24" class="edge"><title>Node25&#45;&gt;Node24</title>
-<path fill="none" stroke="#404040" d="M1001.4,-1135.46C1000.6,-1098.35 999.113,-1029.79 997.775,-968.06"/>
-<polygon fill="none" stroke="#404040" points="997.77,-967.813 993.641,-961.901 997.51,-955.816 1001.64,-961.728 997.77,-967.813"/>
+<path fill="none" stroke="#404040" d="M1001.4,-1135.46C1000.57,-1097.19 999.02,-1025.51 997.651,-962.331"/>
+<polygon fill="none" stroke="#404040" points="997.649,-962.231 993.52,-956.319 997.389,-950.234 1001.52,-956.146 997.649,-962.231"/>
 <text text-anchor="middle" x="1062.5" y="-999" font-family="Helvetica,sans-Serif" font-size="10.00"> +myAnnotationDictionary</text>
 </g>
 <!-- Node26 -->

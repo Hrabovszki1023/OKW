@@ -1,13 +1,14 @@
 <map id="okw.FrameObjectDictionary_Sngltn.frameScan" name="okw.FrameObjectDictionary_Sngltn.frameScan">
-<area shape="rect" id="node1" title="Liefert die Instanz der Klasse." alt="" coords="5,224,200,265"/>
+<area shape="rect" id="node1" title="Liefert die Instanz der Klasse." alt="" coords="5,247,200,288"/>
 <area shape="rect" id="node2" href="$classokw_1_1log_1_1_logger___sngltn.html#ab4fc711bb4c754f251372ff3b14ab9c9" title="Creates a new hierarchical level in the results file." alt="" coords="268,5,459,47"/>
 <area shape="rect" id="node3" href="$classokw_1_1_frame_object_dictionary___sngltn.html#adb3f31a2a073d4093f801a4422529dea" title="Methode erstellt eine Liste aller OKWGUI&#45;Rahmenklassen (Frame class), die in der aktuell ausgeführten..." alt="" coords="248,71,479,112"/>
-<area shape="rect" id="node4" href="$classokw_1_1_frame_object_dictionary___sngltn.html#a39e2832f14f2822d2365007804aebba1" title="Holt die Referenz auf die Annotation des gegebenen Objektes." alt="" coords="265,136,462,177"/>
-<area shape="rect" id="node5" href="$interfaceokw_1_1_o_k_w.html#a95f6a6c8976dbbc79a8765a36e3545ff" title="FN des GUI&#45;Objektes." alt="" coords="314,202,413,229"/>
-<area shape="rect" id="node6" href="$classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c" title="LogPrint Function: Prints the values of expressions to the results file." alt="" coords="268,253,459,295"/>
-<area shape="rect" id="node7" href="$classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4" title="Loggt eine Nachricht." alt="" coords="268,319,459,360"/>
-<area shape="rect" id="node8" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter." alt="" coords="251,385,476,411"/>
-<area shape="rect" id="node11" href="$classokw_1_1log_1_1_logger___sngltn.html#a9b54104f7e0b4c0a473877b19dfaed56" title="Closes a hierarchical level in the results file that was opened with ResOpenList." alt="" coords="268,436,459,477"/>
-<area shape="rect" id="node9" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei." alt="" coords="527,385,760,411"/>
-<area shape="rect" id="node10" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag." alt="" coords="808,377,1011,419"/>
+<area shape="rect" id="node4" href="$classokw_1_1_o_k_w___get_java_class.html#a10701221abeade4716d492e8db29a877" title="Die Methode erzeugt eine Instanz der Rahmenklasse (frame class) mit dem in &#39;fps_ParentClassName&#39; gege..." alt="" coords="257,188,470,229"/>
+<area shape="rect" id="node5" href="$classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4" title="Loggt eine Nachricht." alt="" coords="544,159,735,200"/>
+<area shape="rect" id="node6" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter." alt="" coords="527,239,752,266"/>
+<area shape="rect" id="node9" href="$classokw_1_1_frame_object_dictionary___sngltn.html#a39e2832f14f2822d2365007804aebba1" title="Holt die Referenz auf die Annotation des gegebenen Objektes." alt="" coords="265,305,462,347"/>
+<area shape="rect" id="node10" href="$interfaceokw_1_1_o_k_w.html#a95f6a6c8976dbbc79a8765a36e3545ff" title="FN des GUI&#45;Objektes." alt="" coords="314,371,413,398"/>
+<area shape="rect" id="node11" href="$classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c" title="LogPrint Function: Prints the values of expressions to the results file." alt="" coords="268,423,459,464"/>
+<area shape="rect" id="node12" href="$classokw_1_1log_1_1_logger___sngltn.html#a9b54104f7e0b4c0a473877b19dfaed56" title="Closes a hierarchical level in the results file that was opened with ResOpenList." alt="" coords="268,488,459,529"/>
+<area shape="rect" id="node7" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei." alt="" coords="800,239,1033,266"/>
+<area shape="rect" id="node8" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag." alt="" coords="1081,232,1284,273"/>
 </map>

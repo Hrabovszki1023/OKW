@@ -97,34 +97,33 @@
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
 <g id="a_node3"><a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html" target="_top" xlink:title="Verwaltet zentral die Frame&#45;Klassen: Instanziert Frame&#45;Klassen zu Frame&#45;Objekten und liefert die Refe...">
-<polygon fill="white" stroke="black" points="137,-788 137,-1021 311,-1021 311,-788 137,-788"/>
-<text text-anchor="start" x="145" y="-1009" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
-<text text-anchor="middle" x="224" y="-998" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn</text>
-<polyline fill="none" stroke="black" points="137,-991 311,-991 "/>
-<text text-anchor="middle" x="224" y="-979" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="137,-972 311,-972 "/>
-<text text-anchor="start" x="145" y="-960" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentObjectByName()</text>
-<text text-anchor="start" x="145" y="-949" font-family="Helvetica,sans-Serif" font-size="10.00">+ getAllChildKeysOfParent()</text>
-<text text-anchor="start" x="145" y="-938" font-family="Helvetica,sans-Serif" font-size="10.00">+ getChildObjectByName()</text>
-<text text-anchor="start" x="145" y="-927" font-family="Helvetica,sans-Serif" font-size="10.00">+ printObjectDictionary()</text>
-<text text-anchor="start" x="145" y="-916" font-family="Helvetica,sans-Serif" font-size="10.00">+ getOKW()</text>
-<text text-anchor="start" x="145" y="-905" font-family="Helvetica,sans-Serif" font-size="10.00">+ getInstance()</text>
-<text text-anchor="start" x="145" y="-894" font-family="Helvetica,sans-Serif" font-size="10.00">+ init()</text>
-<text text-anchor="start" x="145" y="-883" font-family="Helvetica,sans-Serif" font-size="10.00">+ getListOfOKWGuiClasses()</text>
-<text text-anchor="start" x="145" y="-872" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; FrameObjectDictionary</text>
-<text text-anchor="start" x="145" y="-861" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn()</text>
-<text text-anchor="start" x="145" y="-850" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; createInstanceByObjectName()</text>
-<text text-anchor="start" x="145" y="-839" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; getChildObjectByName()</text>
-<text text-anchor="start" x="145" y="-828" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; frameScan()</text>
-<text text-anchor="start" x="145" y="-817" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; frameScanFieldsRecursively()</text>
-<text text-anchor="start" x="145" y="-806" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; getOKWFromObjekt()</text>
-<text text-anchor="start" x="145" y="-795" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; createInstanceByType()</text>
+<polygon fill="white" stroke="black" points="137,-793.5 137,-1015.5 311,-1015.5 311,-793.5 137,-793.5"/>
+<text text-anchor="start" x="145" y="-1003.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
+<text text-anchor="middle" x="224" y="-992.5" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn</text>
+<polyline fill="none" stroke="black" points="137,-985.5 311,-985.5 "/>
+<text text-anchor="middle" x="224" y="-973.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="137,-966.5 311,-966.5 "/>
+<text text-anchor="start" x="145" y="-954.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getParentObjectByName()</text>
+<text text-anchor="start" x="145" y="-943.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getAllChildKeysOfParent()</text>
+<text text-anchor="start" x="145" y="-932.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getChildObjectByName()</text>
+<text text-anchor="start" x="145" y="-921.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ printObjectDictionary()</text>
+<text text-anchor="start" x="145" y="-910.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getOKW()</text>
+<text text-anchor="start" x="145" y="-899.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getInstance()</text>
+<text text-anchor="start" x="145" y="-888.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ init()</text>
+<text text-anchor="start" x="145" y="-877.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getListOfOKWGuiClasses()</text>
+<text text-anchor="start" x="145" y="-866.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; FrameObjectDictionary</text>
+<text text-anchor="start" x="145" y="-855.5" font-family="Helvetica,sans-Serif" font-size="10.00">_Sngltn()</text>
+<text text-anchor="start" x="145" y="-844.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; createInstanceByObjectName()</text>
+<text text-anchor="start" x="145" y="-833.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; getChildObjectByName()</text>
+<text text-anchor="start" x="145" y="-822.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; frameScan()</text>
+<text text-anchor="start" x="145" y="-811.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; frameScanFieldsRecursively()</text>
+<text text-anchor="start" x="145" y="-800.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; getOKWFromObjekt()</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node2 -->
 <g id="edge3" class="edge"><title>Node3&#45;&gt;Node2</title>
-<path fill="none" stroke="#404040" d="M245.345,-788C251.351,-765.005 258.822,-741.373 268,-720 275.108,-703.448 283.764,-686.72 293.081,-670.529"/>
+<path fill="none" stroke="#404040" d="M243.976,-793.331C250.203,-768.68 258.111,-743.029 268,-720 275.108,-703.448 283.764,-686.72 293.081,-670.529"/>
 <polygon fill="none" stroke="#404040" points="293.206,-670.317 292.801,-663.118 299.291,-659.974 299.696,-667.174 293.206,-670.317"/>
 <text text-anchor="middle" x="333.5" y="-728.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myFrameObjectDictionary</text>
 </g>
@@ -166,8 +165,8 @@
 </g>
 <!-- Node5&#45;&gt;Node3 -->
 <g id="edge6" class="edge"><title>Node5&#45;&gt;Node3</title>
-<path fill="none" stroke="#404040" d="M217.88,-1272.38C217.745,-1228.75 217.692,-1141.22 219,-1067 219.192,-1056.08 219.442,-1044.75 219.727,-1033.39"/>
-<polygon fill="none" stroke="#404040" points="219.735,-1033.05 215.893,-1026.95 220.048,-1021.06 223.89,-1027.16 219.735,-1033.05"/>
+<path fill="none" stroke="#404040" d="M217.88,-1272.38C217.745,-1228.75 217.692,-1141.22 219,-1067 219.223,-1054.33 219.523,-1041.1 219.866,-1027.91"/>
+<polygon fill="none" stroke="#404040" points="219.869,-1027.82 216.032,-1021.71 220.192,-1015.82 224.029,-1021.93 219.869,-1027.82"/>
 <text text-anchor="middle" x="287" y="-1070" font-family="Helvetica,sans-Serif" font-size="10.00"> +myFrameObjectDictionary</text>
 </g>
 <!-- Node6 -->

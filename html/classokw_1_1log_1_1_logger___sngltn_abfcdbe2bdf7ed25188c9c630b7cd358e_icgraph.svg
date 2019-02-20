@@ -9,8 +9,8 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 122.5)">
 <title>okw.log.Logger_Sngltn.ResCloseListDebug</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-122.5 329,-122.5 329,4 -4,4"/>
-<!-- Node2290 -->
-<g id="node1" class="node"><title>Node2290</title>
+<!-- Node2291 -->
+<g id="node1" class="node"><title>Node2291</title>
 <g id="a_node1"><a xlink:title="Closes a hierarchical level in the results file that was opened with ResOpenList.">
 <polygon fill="#bfbfbf" stroke="black" points="182,-49.5 182,-79.5 325,-79.5 325,-49.5 182,-49.5"/>
 <text text-anchor="start" x="190" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Res</text>
@@ -18,21 +18,21 @@
 </a>
 </g>
 </g>
-<!-- Node2291 -->
-<g id="node2" class="node"><title>Node2291</title>
+<!-- Node2292 -->
+<g id="node2" class="node"><title>Node2292</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0" target="_top" xlink:title="Gibt die Caption eines GUI&#45;Objektes in den Testergebnissen aus.">
 <polygon fill="white" stroke="black" points="7.5,-99 7.5,-118 138.5,-118 138.5,-99 7.5,-99"/>
 <text text-anchor="middle" x="73" y="-106" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.LogCaption</text>
 </a>
 </g>
 </g>
-<!-- Node2290&#45;&gt;Node2291 -->
-<g id="edge1" class="edge"><title>Node2290&#45;&gt;Node2291</title>
+<!-- Node2291&#45;&gt;Node2292 -->
+<g id="edge1" class="edge"><title>Node2291&#45;&gt;Node2292</title>
 <path fill="none" stroke="midnightblue" d="M181.611,-81.9741C158.072,-87.7763 132.753,-94.0176 112.59,-98.9876"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="182.698,-85.3109 191.57,-79.5192 181.023,-78.5144 182.698,-85.3109"/>
 </g>
-<!-- Node2292 -->
-<g id="node3" class="node"><title>Node2292</title>
+<!-- Node2293 -->
+<g id="node3" class="node"><title>Node2293</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_o_k.html#a7c6a02d1f58952de8cc3591379cdfbe3" target="_top" xlink:title="Dokumentiert den Wert der ausgewählten Zelle.">
 <polygon fill="white" stroke="black" points="6,-49.5 6,-79.5 140,-79.5 140,-49.5 6,-49.5"/>
 <text text-anchor="start" x="14" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.OK.LogTablecell</text>
@@ -40,13 +40,13 @@
 </a>
 </g>
 </g>
-<!-- Node2290&#45;&gt;Node2292 -->
-<g id="edge2" class="edge"><title>Node2290&#45;&gt;Node2292</title>
+<!-- Node2291&#45;&gt;Node2293 -->
+<g id="edge2" class="edge"><title>Node2291&#45;&gt;Node2293</title>
 <path fill="none" stroke="midnightblue" d="M171.88,-64.5C161.301,-64.5 150.56,-64.5 140.257,-64.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="171.952,-68.0001 181.952,-64.5 171.952,-61.0001 171.952,-68.0001"/>
 </g>
-<!-- Node2293 -->
-<g id="node4" class="node"><title>Node2293</title>
+<!-- Node2294 -->
+<g id="node4" class="node"><title>Node2294</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_frame_object_dictionary___sngltn.html#a905bac544e5962ae15dfe1c1c50f2467" target="_top" xlink:title="Methode initialisiert diese Klasse.">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-30.5 146,-30.5 146,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
@@ -54,8 +54,8 @@
 </a>
 </g>
 </g>
-<!-- Node2290&#45;&gt;Node2293 -->
-<g id="edge3" class="edge"><title>Node2290&#45;&gt;Node2293</title>
+<!-- Node2291&#45;&gt;Node2294 -->
+<g id="edge3" class="edge"><title>Node2291&#45;&gt;Node2294</title>
 <path fill="none" stroke="midnightblue" d="M187.58,-46.6788C168.307,-41.3882 147.396,-35.6478 128.831,-30.5516"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="186.918,-50.1265 197.488,-49.3986 188.771,-43.3762 186.918,-50.1265"/>
 </g>

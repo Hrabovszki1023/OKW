@@ -9,8 +9,8 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 73.5)">
 <title>okw.FrameObjectDictionary_Sngltn.getOKW</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-73.5 344,-73.5 344,4 -4,4"/>
-<!-- Node110 -->
-<g id="node1" class="node"><title>Node110</title>
+<!-- Node111 -->
+<g id="node1" class="node"><title>Node111</title>
 <g id="a_node1"><a xlink:title="Holt für einen GUI&#45;Object die angehängte Annotation.">
 <polygon fill="#bfbfbf" stroke="black" points="194,-17 194,-47 340,-47 340,-17 194,-17"/>
 <text text-anchor="start" x="202" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">okw.FrameObjectDictionary</text>
@@ -18,8 +18,8 @@
 </a>
 </g>
 </g>
-<!-- Node111 -->
-<g id="node2" class="node"><title>Node111</title>
+<!-- Node112 -->
+<g id="node2" class="node"><title>Node112</title>
 <g id="a_node2"><a xlink:href="classokw_1_1gui_1_1_any_childwindow.html#aafd5a3cba312fe0033c63e98d0247a82" target="_top" xlink:title="Methode wartet auf die Existenz des aktuellen Objectes.">
 <polygon fill="white" stroke="black" points="3.5,-39 3.5,-69 154.5,-69 154.5,-39 3.5,-39"/>
 <text text-anchor="start" x="11.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyChildwindow.Wait</text>
@@ -27,21 +27,21 @@
 </a>
 </g>
 </g>
-<!-- Node110&#45;&gt;Node111 -->
-<g id="edge1" class="edge"><title>Node110&#45;&gt;Node111</title>
+<!-- Node111&#45;&gt;Node112 -->
+<g id="edge1" class="edge"><title>Node111&#45;&gt;Node112</title>
 <path fill="none" stroke="midnightblue" d="M183.776,-41.7254C174.064,-42.8741 164.194,-44.0416 154.595,-45.1769"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="184.302,-45.1877 193.821,-40.5373 183.479,-38.2362 184.302,-45.1877"/>
 </g>
-<!-- Node112 -->
-<g id="node3" class="node"><title>Node112</title>
+<!-- Node113 -->
+<g id="node3" class="node"><title>Node113</title>
 <g id="a_node3"><a xlink:href="classokw_1_1gui_1_1_any_window.html#a17845263881502bb0c2ab166da623149" target="_top" xlink:title="Methode, wartet auf das aktuelle GUI&#45;Object bis es erscheint oder der eingestellte TimeOut erreicht i...">
 <polygon fill="white" stroke="black" points="-1.42109e-14,-0.5 -1.42109e-14,-19.5 158,-19.5 158,-0.5 -1.42109e-14,-0.5"/>
 <text text-anchor="middle" x="79" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWindow.WaitForMe</text>
 </a>
 </g>
 </g>
-<!-- Node110&#45;&gt;Node112 -->
-<g id="edge2" class="edge"><title>Node110&#45;&gt;Node112</title>
+<!-- Node111&#45;&gt;Node113 -->
+<g id="edge2" class="edge"><title>Node111&#45;&gt;Node113</title>
 <path fill="none" stroke="midnightblue" d="M183.63,-22.2573C175.212,-21.2616 166.676,-20.252 158.303,-19.2616"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="183.479,-25.7638 193.821,-23.4627 184.302,-18.8123 183.479,-25.7638"/>
 </g>
