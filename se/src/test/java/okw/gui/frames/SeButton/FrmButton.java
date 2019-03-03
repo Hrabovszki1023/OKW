@@ -60,7 +60,7 @@ public class FrmButton extends SeBrowserChild
    * Display TextField: Contains values after you click the "Button 1" and "Button 2".
    */
   @OKW( FN = "Display", WaitForMe_PT= 500, WaitForMe_TO=1 )
-  public SeInputText   Anzeige        = new SeInputText( "//*[@data-fn='textarea']" );
+  public SeInputText   Anzeige        = new SeInputText( "//*[@data-4test='textarea']" );
 
   /*
    * \~german
@@ -80,7 +80,7 @@ public class FrmButton extends SeBrowserChild
            )
   public SeButton NichtVorhanden = new SeButton( "//*[@name='NichtVorhanden']" );
 
-  @OKW( FN = "Text_1",
+  @OKW( FN = "Button 1",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
           VerifyIsActive_PT=500, VerifyIsActive_TO=1,
           VerifyValue_PT=500, VerifyValue_TO=1,
@@ -89,9 +89,9 @@ public class FrmButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
           )
-  public SeButton Text_1         = new SeButton( "//*[@data-fn='Button 1']" );
+  public SeButton Text_1         = new SeButton( "//*[@data-4test='Button 1']" );
 
-  @OKW( FN = "Text_2",
+  @OKW( FN = "Button 2",
           VerifyLabel_PT=500, VerifyLabel_TO=3,
           VerifyIsActive_PT=500, VerifyIsActive_TO=3,
           VerifyValue_PT=500, VerifyValue_TO=3,
@@ -100,9 +100,9 @@ public class FrmButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=3,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=3
           )
-  public SeButton Text_2         = new SeButton( "//*[@data-fn='Button 2']" );
+  public SeButton Text_2         = new SeButton( "//*[@data-4test='Button 2']" );
 
-  @OKW( FN = "Button_3",
+  @OKW( FN = "Button 3",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
           VerifyIsActive_PT=500, VerifyIsActive_TO=1,
           VerifyValue_PT=500, VerifyValue_TO=1,
@@ -111,13 +111,13 @@ public class FrmButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
            )
-  public SeButton Button_3       = new SeButton( "//*[@data-fn='Button 3']" );
+  public SeButton Button_3       = new SeButton( "//*[@data-4test='Button 3']" );
 
   /**
    * URL des Fensters: http://test.openkeyword.de/InputButton/input_type-button.htm
    */
   public FrmButton()
   {
-    setLocator( "//title[contains(text(),'This is the page-title of button.htm')]/../.." );
+    setLocator( "//*[@data-4test='button.htm']" );
   }
 }

@@ -135,22 +135,6 @@ public class SeLink extends SeAnyChildWindow
         super( Locator, Locators );
     }
 
-    /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
-     *  
-     *  @date 2017.02.17
-     */
-    public SeLink( String IframeID, String Locator, OKWLocator... Locators )
-    {
-        super( IframeID, Locator, Locators );
-    }
-
-    /* @Override
-     public void SetFocus()
-     {
-     	super.SetFocus();
-     }*/
-
     /** \~german
      *  Ein Standard HTML-Link kann nicht aktiv/inaktiv oder enable/disables sein.
      *  

@@ -78,49 +78,59 @@ public class SeAnyWindow extends AnyWindow
 
     protected LogMessenger  LM       = new LogMessenger( "GUI" );
 
-    // If null then use "default" else switchTo "iframeID" 
-    protected String        iframeID = "";
+    /**
+     * \~
+     *  If iframeID IS null the iFrame is to be checked
+     *  else if iframeID IS "" then iFrame is switchTo "default"
+     *  else switchTo is iframeID
+     *  @author zoltan
+     *  @date 2019.03.03
+     */
+    protected String        iframeID = null;
 
-    public String getIframeID()
+    public String get_iframeID()
     {
+        this.MyLogger.LogFunctionStartDebug( this.getClass().getSimpleName() + ".get_iframeID" );
+
+        // Wenn die iframeID 
+        if ( iframeID == null )
+        {
+            try
+            {   
+                String myLocator = this.getLocator();
+                
+                this.MyLogger.LogPrintDebug( "Find iframe ID for the Locator: '" + myLocator + "'..." );
+                // ID ist noch nicht ermittelt -> ID Ermitteln
+                String myiframeID = SeDriver.getInstance().getFrameID4Locator( myLocator );
+                this.MyLogger.LogPrintDebug( "Frame ID found: '" + myiframeID + "'" );
+
+                // Denn Aktuellen wert merken.
+                set_iframeID( myiframeID );
+            }
+            finally
+            {
+                this.MyLogger.LogFunctionEndDebug( iframeID );
+            }
+        }
+        
         return iframeID;
     }
 
-   /**
-    * 
-    * @param iframeID
-    */
-    public void setiFrameID( String iframeID )
+    public void set_iframeID( String iframeID )
     {
+        this.MyLogger.LogFunctionStartDebug( "SeAnyChildWindow.set_iframeID", "iframeID", iframeID );
         this.iframeID = iframeID;
+        this.MyLogger.LogFunctionEndDebug( );
     }
+
 
     @Override
     public void setLocator( String Locator, OKWLocator... Locators )
     {
         super.setLocator( Locator, Locators );
-        this.iframeID = "";
+        this.iframeID = null;
     }
 
-    /** 
-     * \~german
-     * Selenium/HTML Spezifischer setLocator(String,String,OKWLocator...) erweitert den setLocator(String,String) um die iframeID.
-     * 
-    *  @param iframeID gibt die ID des iFrame-s an, auf das sich das Fenstre beziehen soll.
-    *  @param Locator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben.
-    *  @param Locators Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.
-    *  
-    *  \~english
-    *  
-    *  \~
-    *  @author Zoltán Hrabovszki
-    *  @date 2017.07.23
-    */
-    public void setLocator( String iframeID, String Locator, OKWLocator... Locators )
-    {
-        setLocator( Locator, Locators );
-        setiFrameID( iframeID );
-    }
 
     /** \~german
      *  Klickt auf das aktuelle Objekt.
@@ -212,18 +222,19 @@ public class SeAnyWindow extends AnyWindow
     */
     public Boolean getExists()
     {
-        this.MyLogger.LogFunctionStartDebug( "getExists" );
         Boolean lvbReturn = false;
-        String myLocator = null;
-
         List<WebElement> meme = null;
+
+        String myLocator = null;
 
         try
         {
+            this.MyLogger.LogFunctionStartDebug( "getExists" );
+            
             myLocator = this.getLocator();
 
             //meme = SeDriver.getInstance().driver.findElements(By.xpath(myLocator));
-            meme = SeDriver.getInstance().getElements( null, myLocator );
+            meme = SeDriver.getInstance().getElements( get_iframeID(), myLocator );
 
             if ( meme.size() == 0 )
             {
@@ -745,7 +756,7 @@ public class SeAnyWindow extends AnyWindow
     /** \~german
      *  Ermittelt aus dem gegebenen Locator das DOM-Elelement, welches das Objekt representiert.
      *  
-     *  \return Refernz auf das gefunde DOM-Element
+     *  \return Referenz auf das gefunde DOM-Element
      *  \~
      *  @author Zoltán Hrabovszki
      *  @date 2013.11.11
@@ -754,25 +765,25 @@ public class SeAnyWindow extends AnyWindow
     {
         WebElement me = null;
 
-        me = SeDriver.getInstance().getElement( getIframeID(), this.getLocator() );
+        me = SeDriver.getInstance().getElement( get_iframeID(), this.getLocator() );
 
         return me;
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt ob das Atuelle Objekt existiert, für das Schlüsselwort MerkeVorhanden.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für MerkeExist-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips.
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  Ermittelt, ob das atuelle Objekt für das Schlüsselwort MemorizeExists existiert.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für MemorizeExists-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @return Rückgabe des Textuellen Inhaltes der Tooltips.
+     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  
+     *  \~english
+     *  \return
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public Boolean MemorizeExists()
     {
         Boolean bOK = false;

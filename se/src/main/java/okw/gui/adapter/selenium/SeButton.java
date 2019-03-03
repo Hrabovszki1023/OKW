@@ -130,16 +130,6 @@ public class SeButton extends SeAnyChildWindow
         super( Locator, Locators );
     }
 
-    /**
-     * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
-     * 
-     * @author Zoltán Hrabovszki
-     * @date 2017.02.17
-     */
-    public SeButton( String IframeID, String Locator, OKWLocator... Locators )
-    {
-        super( IframeID, Locator, Locators );
-    }
 
     /**
      * \~german Ermittelt den textuellen Inhalt der Caption/Überschrift des

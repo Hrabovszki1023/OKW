@@ -118,14 +118,6 @@ public class SeImage extends SeAnyChildWindow
     {
         super( Locator, Locators );
     }
-
-    /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
-     */
-    public SeImage( String IframeID, String Locator, OKWLocator... Locators )
-    {
-        super( IframeID, Locator, Locators );
-    }
     
     
     /**

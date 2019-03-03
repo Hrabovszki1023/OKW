@@ -33,6 +33,7 @@ import okw.gui.OKWLocator;
  *   }
  * SeAnyChildWindow <|-- SeInputRadio
  * @enduml
+ * 
  *  # Unterstützter Tag
  *  Folgender HTML-Tag wird unterstützt:
  *  
@@ -106,17 +107,6 @@ public class SeInputRadio extends SeAnyChildWindow
   {
     super(Locator, Locators);
   }
-
-  
-  /**
-   *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
-   *  
-   *  @date 2017.02.17
-   */
-   public SeInputRadio(String IframeID, String Locator, OKWLocator... Locators)
-   {
-     super(IframeID, Locator, Locators);
-   }  
 
    
   /** Ermittelt den aktuellen Wert des RadioButtons.
@@ -243,8 +233,9 @@ public class SeInputRadio extends SeAnyChildWindow
 
       if ( Value.equals(myCHECKED) )
       {
-          Core myCore = new Core();
-          myCore.ClickOn( this.getFN() );
+          //Core myCore = new Core();
+          //myCore.ClickOn( this.getFN() );
+          this.ClickOn();
       }
       else if ( Value.equals(myUNCHECKED) )
       {
@@ -256,10 +247,10 @@ public class SeInputRadio extends SeAnyChildWindow
           throw new OKWNotAllowedValueException(lvsLM);
       }
     }
-    catch ( Exception e)
-    {
-            throw new RuntimeException( e );
-    }
+    //catch ( Exception e)
+    //{
+    //        throw new RuntimeException( e );
+    //}
     finally
     {
       MyLogger.LogFunctionEndDebug();

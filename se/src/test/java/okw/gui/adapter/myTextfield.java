@@ -37,7 +37,7 @@
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
-package okw.gui.adapter.selenium;
+package okw.gui.adapter;
 
 import java.util.ArrayList;
 
@@ -45,6 +45,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import okw.gui.OKWLocator;
+import okw.gui.adapter.selenium.SeInputText;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
 
 /**
@@ -113,18 +114,18 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
  * @author Zoltán Hrabovszki
  * @date 2016.09.05
  */
-public class SeInputText extends SeAnyChildWindow
+public class myTextfield extends SeInputText
 {
 
     /**
      *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
      */
-    public SeInputText( String Locator, OKWLocator... Locators )
+    public myTextfield( String Locator, OKWLocator... Locators )
     {
         super( Locator, Locators );
     }
 
-    
+
     /** \~german
      *  Ermittelt den textuellen Inhalt der Überschrift eines Textfeldes.
      *  

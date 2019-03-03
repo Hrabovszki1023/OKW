@@ -255,25 +255,6 @@ public class SeRadioList extends SeAnyChildWindow
         }
     }
 
-    /**
-     *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
-     *  
-     *  @date 2017.02.17
-     */
-    public SeRadioList( String IframeID, String Locator, OKWLocator... Locators )
-    {
-        super( IframeID, Locator, Locators );
-
-        try
-        {
-            CO = OKW_CurrentObject_Sngltn.getInstance();
-            FOD = FrameObjectDictionary_Sngltn.getInstance();
-        }
-        catch (Exception e)
-        {
-            System.exit( 0 );
-        }
-    }
 
     @Override
     public void SetValue( ArrayList<String> Val )

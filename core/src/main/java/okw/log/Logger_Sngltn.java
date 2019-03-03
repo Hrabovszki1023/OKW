@@ -274,7 +274,7 @@ public class Logger_Sngltn
         }
         else
         {
-            this.LogFunctionEnd();
+            this.LogFunctionEndDebug();
         }
     }
 
@@ -289,7 +289,7 @@ public class Logger_Sngltn
         }
         else
         {
-            this.LogFunctionEnd();
+            this.LogFunctionEndDebug();
         }
     }
 
@@ -304,7 +304,7 @@ public class Logger_Sngltn
         }
         else
         {
-            this.LogFunctionEnd();
+            this.LogFunctionEndDebug();
         }
     }
 

@@ -129,17 +129,6 @@ import okw.gui.*;
 
         
         /**
-         *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,String,OKWLocator...)
-         *  
-         *  @date 2017.02.17
-         */
-         public SeInputCheckbox(String IframeID, String Locator, OKWLocator... Locators)
-         {
-           super(IframeID, Locator, Locators);
-         }        
-
-         
-        /**
          * \~german
          *  Method liefert den aktuellen Zustand der Checkbox, "angehakt" oder "nicht angehakt".
          *  

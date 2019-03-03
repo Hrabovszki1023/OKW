@@ -96,9 +96,9 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("Button");
 
-                EN.ClickOn("Text_1");
+                EN.ClickOn("Button 1");
                 EN.VerifyValue("Display", "Ich bin Button 1 - ganz normal");
-                EN.ClickOn("Text_2");
+                EN.ClickOn("Button 2");
                 EN.VerifyValue("Display", "Ich bin Button 2 - ganz normal");
 
                 EN.StopApp( ApplicationName );
@@ -123,8 +123,8 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
                 EN.SelectWindow("Button");
-                EN.LogCaption("Text_1");
-                EN.LogCaption("Text_2");
+                EN.LogCaption("Button 1");
+                EN.LogCaption("Button 2");
 
 
                 EN.StopApp( ApplicationName );
@@ -150,7 +150,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
                 EN.SelectWindow("Button");
-                EN.LogExists("Text_1");
+                EN.LogExists("Button 1");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -175,7 +175,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
                 EN.SelectWindow("Button");
-                EN.LogHasFocus("Text_1");
+                EN.LogHasFocus("Button 1");
                 //ImplementationMatrix.Instance.SetImplementation("SePushButton", "LogHasFocus", "P");
 
                 EN.StopApp( ApplicationName );
@@ -200,7 +200,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
                 EN.SelectWindow("Button");
-                EN.LogTooltip("Text_1");
+                EN.LogTooltip("Button 1");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -222,7 +222,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
                 EN.SelectWindow("Button");
-                EN.LogValue("Text_1");
+                EN.LogValue("Button 1");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -245,7 +245,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
                 EN.SelectWindow("Button");
-                EN.LogIsActive("Text_1");
+                EN.LogIsActive("Button 1");
 
 
                 EN.StopApp( ApplicationName );
@@ -271,10 +271,10 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("Button");
 
-                EN.MemorizeCaption("Text_1", "SePushButton_MemorizeCaption_1" );
+                EN.MemorizeCaption("Button 1", "SePushButton_MemorizeCaption_1" );
                 assertEquals("Button 1", myMM.get("SePushButton_MemorizeCaption_1"));
 
-                EN.MemorizeCaption("Text_2", "SePushButton_MemorizeCaption_2");
+                EN.MemorizeCaption("Button 2", "SePushButton_MemorizeCaption_2");
                 assertEquals("Button 2", myMM.get("SePushButton_MemorizeCaption_2"));
 
                 EN.StopApp( ApplicationName );
@@ -299,12 +299,12 @@ import org.junit.rules.TestName;
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
                 
-                EN.SelectWindow("InputButton not Active");
+                EN.SelectWindow("Button not Active");
 
-                EN.MemorizeLabel("Text_1", "SeButton_MemorizeLabel_1" );
+                EN.MemorizeLabel("Button 1", "SeButton_MemorizeLabel_1" );
                 assertEquals("Label für Button1: ", myMM.get("SeButton_MemorizeLabel_1"));
 
-                EN.MemorizeLabel("Text_2", "SeButton_MemorizeLabel_2");
+                EN.MemorizeLabel("Button 2", "SeButton_MemorizeLabel_2");
                 assertEquals("Label für Button2: ", myMM.get("SeButton_MemorizeLabel_2"));
 
 
@@ -330,7 +330,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
                 EN.SelectWindow("Button");
-                EN.MemorizeExists("Text_1", "SePushButton_MemorizeExists_1");
+                EN.MemorizeExists("Button 1", "SePushButton_MemorizeExists_1");
 
                 assertEquals("YES", myMM.get("SePushButton_MemorizeExists_1"));
 
@@ -355,7 +355,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
                 EN.SelectWindow("Button");
-                EN.MemorizeHasFocus("Text_1", "SePushButton_MemorizeHasFocus");
+                EN.MemorizeHasFocus("Button 1", "SePushButton_MemorizeHasFocus");
 
                 assertEquals("NO", myMM.get("SePushButton_MemorizeHasFocus"));
 
@@ -380,7 +380,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
                 EN.SelectWindow("Button");
-                EN.MemorizeIsActive("Text_1", "SePushButton_MemorizeIsActive");
+                EN.MemorizeIsActive("Button 1", "SePushButton_MemorizeIsActive");
 
                 assertEquals("YES", myMM.get("SePushButton_MemorizeIsActive"));
 
@@ -407,8 +407,8 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                
                 EN.SelectWindow("Button");
-                EN.MemorizeTooltip("Text_1", "SePushButton_MemorizeTooltip_1");
-                EN.MemorizeTooltip("Text_2", "SePushButton_MemorizeTooltip_2");
+                EN.MemorizeTooltip("Button 1", "SePushButton_MemorizeTooltip_1");
+                EN.MemorizeTooltip("Button 2", "SePushButton_MemorizeTooltip_2");
 
                 assertEquals("Button 1 Tooltip/title", myMM.get("SePushButton_MemorizeTooltip_1"));
                 assertEquals("Button 2 Tooltip/title", myMM.get("SePushButton_MemorizeTooltip_2"));
@@ -433,7 +433,7 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
                 EN.SelectWindow("Button");
-                EN.MemorizeValue("Text_1", "SeButton_MemorizeTooltip_1");
+                EN.MemorizeValue("Button 1", "SeButton_MemorizeTooltip_1");
 
                 EN.TypeKey( "Display", "${SeButton_MemorizeTooltip_1}" );
                 EN.VerifyValue( "Display", "${SeButton_MemorizeTooltip_1}" );
@@ -461,15 +461,15 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("Button");
                 
-                EN.SetFocus("Text_1");
+                EN.SetFocus("Button 1");
 
-                EN.VerifyHasFocus( "Text_1", "YES" );
-                EN.VerifyHasFocus( "Text_2", "NO" );
+                EN.VerifyHasFocus( "Button 1", "YES" );
+                EN.VerifyHasFocus( "Button 2", "NO" );
 
-                EN.SetFocus("Text_2");
+                EN.SetFocus("Button 2");
 
-                EN.VerifyHasFocus( "Text_2", "YES" );
-                EN.VerifyHasFocus( "Text_1", "NO" );
+                EN.VerifyHasFocus( "Button 2", "YES" );
+                EN.VerifyHasFocus( "Button 1", "NO" );
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -493,7 +493,7 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("Button");
 
-                EN.SelectMenu("Text_1");
+                EN.SelectMenu("Button 1");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -517,7 +517,7 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("Button");
 
-                EN.SelectMenu("Text_1", "What ever...");
+                EN.SelectMenu("Button 1", "What ever...");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -542,7 +542,7 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("Button");
 
-                EN.SetValue("Text_1", "What ever...");
+                EN.SetValue("Button 1", "What ever...");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -566,7 +566,7 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("Button");
 
-                EN.Select("Text_1", "What ever...");
+                EN.Select("Button 1", "What ever...");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -590,8 +590,8 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("Button");
                 
-                EN.VerifyCaption("Text_1", "Button 1");
-                EN.VerifyCaption("Text_2", "Button 2");
+                EN.VerifyCaption("Button 1", "Button 1");
+                EN.VerifyCaption("Button 2", "Button 2");
 
 
                 EN.StopApp( ApplicationName );
@@ -616,8 +616,8 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("Button");
                 
-                EN.VerifyCaptionWCM("Text_1", "?utton #");
-                EN.VerifyCaptionWCM("Text_2", "?utton #");
+                EN.VerifyCaptionWCM("Button 1", "?utton #");
+                EN.VerifyCaptionWCM("Button 2", "?utton #");
 
 
                 EN.StopApp( ApplicationName );
@@ -642,8 +642,8 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("Button");
                 
-                EN.VerifyCaptionREGX("Text_1", "Button 1");
-                EN.VerifyCaptionREGX("Text_2", "Button 2");
+                EN.VerifyCaptionREGX("Button 1", "Button 1");
+                EN.VerifyCaptionREGX("Button 2", "Button 2");
 
 
                 EN.StopApp( ApplicationName );
@@ -706,7 +706,7 @@ import org.junit.rules.TestName;
             EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
             
             EN.SelectWindow("Button");
-            EN.VerifyExists("Text_1", "NO");
+            EN.VerifyExists("Button 1", "NO");
         }
 
   /** \~german
@@ -727,7 +727,7 @@ import org.junit.rules.TestName;
     EN.TypeKey( "URL", "http://test.openkeyword.de/button/button.htm" );
 
     EN.SelectWindow( "Button" );
-    EN.VerifyExists( "Text_1", "YES" );
+    EN.VerifyExists( "Button 1", "YES" );
 
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -754,7 +754,7 @@ import org.junit.rules.TestName;
             	// Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
                 EN.SelectWindow("Button");
 
-                EN.VerifyIsActive("Text_1", "YES");
+                EN.VerifyIsActive("Button 1", "YES");
                 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -781,7 +781,7 @@ import org.junit.rules.TestName;
                // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
                 EN.SelectWindow("Button");
 
-                EN.VerifyIsActive("Text_1", "NO");
+                EN.VerifyIsActive("Button 1", "NO");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -805,9 +805,9 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton not Active");
+                EN.SelectWindow("Button not Active");
 
-                EN.VerifyIsActive("Text_2", "NO");
+                EN.VerifyIsActive("Button 2", "NO");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -831,9 +831,9 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton not Active");
+                EN.SelectWindow("Button not Active");
 
-                EN.VerifyIsActive("Text_2", "YES");
+                EN.VerifyIsActive("Button 2", "YES");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -857,10 +857,10 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton not Active");
+                EN.SelectWindow("Button not Active");
 
-                EN.VerifyLabel("Text_1", "Label für Button1: ");
-                EN.VerifyLabel("Text_2", "Label für Button2: ");
+                EN.VerifyLabel("Button 1", "Label für Button1: ");
+                EN.VerifyLabel("Button 2", "Label für Button2: ");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -884,10 +884,10 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton not Active");
+                EN.SelectWindow("Button not Active");
 
-                EN.VerifyLabelWCM("Text_1", "Label für Button#: ");
-                EN.VerifyLabelWCM("Text_2", "Label für Button#: ");
+                EN.VerifyLabelWCM("Button 1", "Label für Button#: ");
+                EN.VerifyLabelWCM("Button 2", "Label für Button#: ");
                 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -911,10 +911,10 @@ import org.junit.rules.TestName;
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
 
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-                EN.SelectWindow("InputButton not Active");
+                EN.SelectWindow("Button not Active");
 
-                EN.VerifyLabelREGX("Text_1", "Label für Button1: ");
-                EN.VerifyLabelREGX("Text_2", "Label für Button2: ");
+                EN.VerifyLabelREGX( "Button 1", "Label für Button1: ");
+                EN.VerifyLabelREGX( "Button 2", "Label für Button2: ");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -937,9 +937,9 @@ import org.junit.rules.TestName;
                EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
 
              // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-               EN.SelectWindow("InputButton not Active");
+               EN.SelectWindow("Button not Active");
 
-               EN.VerifyPlaceholder("Text_1", "Label für Button1: ");
+               EN.VerifyPlaceholder("Button 1", "Label für Button1: ");
        }
 
        /** \~german
@@ -959,9 +959,9 @@ import org.junit.rules.TestName;
                EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
 
              // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-               EN.SelectWindow("InputButton not Active");
+               EN.SelectWindow("Button not Active");
 
-               EN.VerifyPlaceholderWCM("Text_1", "Label für Button#: ");
+               EN.VerifyPlaceholderWCM("Button 1", "Label für Button#: ");
        }
 
        /** \~german
@@ -982,9 +982,9 @@ import org.junit.rules.TestName;
                EN.TypeKey("URL", "http://test.openkeyword.de/button/button_disabled.htm");
 
              // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-               EN.SelectWindow("InputButton not Active");
+               EN.SelectWindow("Button not Active");
 
-               EN.VerifyPlaceholderREGX("Text_1", "Label für Button1: ");
+               EN.VerifyPlaceholderREGX("Button 1", "Label für Button1: ");
        }
 
         /** \~german
@@ -1005,8 +1005,8 @@ import org.junit.rules.TestName;
 
                 EN.SelectWindow("Button");
 
-                EN.VerifyTooltip("Text_1", "Button 1 Tooltip/title");
-                EN.VerifyTooltip("Text_2", "Button 2 Tooltip/title");
+                EN.VerifyTooltip("Button 1", "Button 1 Tooltip/title");
+                EN.VerifyTooltip("Button 2", "Button 2 Tooltip/title");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -1030,8 +1030,8 @@ import org.junit.rules.TestName;
 
                 EN.SelectWindow("Button");
 
-                EN.VerifyTooltipWCM("Text_1", "?utton # Tooltip/title");
-                EN.VerifyTooltipWCM("Text_2", "?utton # Tooltip/title");
+                EN.VerifyTooltipWCM("Button 1", "?utton # Tooltip/title");
+                EN.VerifyTooltipWCM("Button 2", "?utton # Tooltip/title");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -1055,8 +1055,8 @@ import org.junit.rules.TestName;
 
                 EN.SelectWindow("Button");
 
-                EN.VerifyTooltipREGX("Text_1", "Button 1 Tooltip/title");
-                EN.VerifyTooltipREGX("Text_2", "Button 2 Tooltip/title");
+                EN.VerifyTooltipREGX("Button 1", "Button 1 Tooltip/title");
+                EN.VerifyTooltipREGX("Button 2", "Button 2 Tooltip/title");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -1080,7 +1080,7 @@ import org.junit.rules.TestName;
 
                 EN.SelectWindow("Button");
 
-                EN.VerifyValue("Text_1", "Button 1 value");
+                EN.VerifyValue("Button 1", "Button 1 value");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -1104,7 +1104,7 @@ import org.junit.rules.TestName;
 
                 EN.SelectWindow("Button");
 
-                EN.VerifyValueWCM("Text_1", "?utton # value");
+                EN.VerifyValueWCM("Button 1", "?utton # value");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -1128,7 +1128,7 @@ import org.junit.rules.TestName;
 
                 EN.SelectWindow("Button");
 
-                EN.VerifyValueREGX("Text_1", "Button 1 value");
+                EN.VerifyValueREGX("Button 1", "Button 1 value");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();

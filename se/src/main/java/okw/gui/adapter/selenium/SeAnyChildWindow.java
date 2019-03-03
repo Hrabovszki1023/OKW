@@ -77,17 +77,53 @@ public class SeAnyChildWindow extends AnyChildwindow
 
     protected LogMessenger  LM       = new LogMessenger( "GUI" );
 
-    // If null then use "default" else switchTo "iframeID" 
-    protected String        iframeID = "";
+    /**
+     * \~
+     *  If iframeID IS null the iFrame is to be checked
+     *  else if iframeID IS "" then iFrame is switchTo "default"
+     *  else switchTo is iframeID
+     *  @author zoltan
+     *  @date 2019.03.03
+     */
+    protected String        iframeID = null;
 
-    public String getIframeID()
+    public String get_iframeID()
     {
+        this.MyLogger.LogFunctionStartDebug( this.getClass().getSimpleName() + ".get_iframeID" );
+
+        // Wenn die iframeID 
+        if ( iframeID == null )
+        {
+            try
+            {   
+                String myLocator = this.getLocator();
+                
+                this.MyLogger.LogPrintDebug( "Find iframe ID for the Locator: '" + myLocator + "'..." );
+                // ID ist noch nicht ermittelt -> ID Ermitteln
+                String myiframeID = SeDriver.getInstance().getFrameID4Locator( myLocator );
+                this.MyLogger.LogPrintDebug( "Frame ID found: '" + myiframeID + "'" );
+
+                // Denn Aktuellen wert merken.
+                set_iframeID( myiframeID );
+            }
+            finally
+            {
+                this.MyLogger.LogFunctionEndDebug( iframeID );
+            }
+        }
+        else
+        {
+            this.MyLogger.LogFunctionEndDebug( iframeID );
+        }
+        
         return iframeID;
     }
 
-    public void setIframeID( String iframeID )
+    public void set_iframeID( String iframeID )
     {
+        this.MyLogger.LogFunctionStartDebug( "SeAnyChildWindow.set_iframeID", "iframeID", iframeID );
         this.iframeID = iframeID;
+        this.MyLogger.LogFunctionEndDebug( );
     }
 
     
@@ -107,28 +143,10 @@ public class SeAnyChildWindow extends AnyChildwindow
     public SeAnyChildWindow( String Locator, OKWLocator... Locators )
     {
         super( Locator, Locators );
-        this.iframeID = "";
+        this.iframeID = null;
     }
 
-    /** 
-     * \~german
-     * Konstruktor der Klasse. iframeID wird auf den Wert des Parameters fpIframeID gesetzt.
-     * 
-     *  @param IframeID ID des iframes in dem Sich das GUI-Objekt befindet. "" falls 
-     *  @param Locator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
-     *  @param Locators Locatoren (z.B. von Elternobjekten), die mit dem fpLocator verkettet werden sollen.
-     *  
-     *  \~english
-     *  
-     *  \~
-     *  @author Zoltán Hrabovszki
-     */
-    public SeAnyChildWindow( String IframeID, String Locator, OKWLocator... Locators )
-    {
-        super( Locator, Locators );
-        this.iframeID = IframeID;
-    }
-
+    
     /** \~german
      *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refClickOn aufgerufen wird.
      *  
@@ -216,9 +234,10 @@ public class SeAnyChildWindow extends AnyChildwindow
         {
             this.LogFunctionStartDebug( "getExists" );
 
-            // Wenn Iframe gesetzt umschlaten auf das Iframe sonst zurücksetzten aud default.
             myLocator = this.getLocator();
-            meme = SeDriver.getInstance().getElements( getIframeID(), myLocator );
+
+            // Wenn iframe gesetz umschalten auf das iframe sonst zurücksetzten auf default.
+            meme = SeDriver.getInstance().getElements( get_iframeID(), myLocator );
 
             if ( meme.size() == 0 )
             {
@@ -226,7 +245,7 @@ public class SeAnyChildWindow extends AnyChildwindow
             }
             else if ( meme.size() > 1 )
             {
-                String lvsPrintMe = "Locator ist nicht eindeutig, es wurden mehrer GUI-Objekt gefunden:\n Locator: >>" + this.getLocator() + "<<";
+                String lvsPrintMe = "Locator ist nicht eindeutig, es wurden mehrer GUI-Objekt gefunden: Locator: >>" + this.getLocator() + "<<";
                 this.MyLogger.LogWarning( lvsPrintMe );
 
                 lvbReturn = false;
@@ -718,7 +737,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     {
         WebElement me = null;
 
-        me = SeDriver.getInstance().getElement( getIframeID(), this.getLocator() );
+        me = SeDriver.getInstance().getElement( get_iframeID(), this.getLocator() );
 
         return me;
     }
@@ -1524,5 +1543,4 @@ public class SeAnyChildWindow extends AnyChildwindow
             throw new OKWGUIObjectNotFoundException( lvsLM );
         }
         return lvbReturn;
-    }
-}
+    }}

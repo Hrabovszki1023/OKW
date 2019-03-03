@@ -27,7 +27,7 @@ import okw.gui.adapter.selenium.SeSelect;
               VerifyIsActive_PT=500, VerifyIsActive_TO=1,
               VerifyExists_PT=500, VerifyExists_TO=1,
               VerifyHasFocus_PT=500, VerifyHasFocus_TO=1)
-      public SeSelect Künstler =  new SeSelect("//*[@data-fn='Artist']");
+      public SeSelect Künstler =  new SeSelect("//*[@data-4test='Artist']");
 
       @OKW(FN="Blumen", 
               VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -37,7 +37,7 @@ import okw.gui.adapter.selenium.SeSelect;
               VerifyIsActive_PT=500, VerifyIsActive_TO=1,
               VerifyExists_PT=500, VerifyExists_TO=1,
               VerifyHasFocus_PT=500, VerifyHasFocus_TO=1)
-      public SeSelect Blumen = new SeSelect("//*[@data-fn='Flowers']");
+      public SeSelect Blumen = new SeSelect("//*[@data-4test='Flowers']");
 
       @OKW(FN="Fahrzeug", 
               VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -47,11 +47,11 @@ import okw.gui.adapter.selenium.SeSelect;
               VerifyIsActive_PT=500, VerifyIsActive_TO=1,
               VerifyExists_PT=500, VerifyExists_TO=1,
               VerifyHasFocus_PT=500, VerifyHasFocus_TO=1)
-      public SeSelect Fahrzeug = new SeSelect("//*[@data-fn='Vehicle']");
+      public SeSelect Fahrzeug = new SeSelect("//*[@data-4test='Vehicle']");
 
       public frm_SeListBox() 
       {
-          setLocator( "//*[@data-fn='select']" );
+          setLocator( "//*[@data-4test='select']" );
       }
 
   }
