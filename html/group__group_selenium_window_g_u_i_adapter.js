@@ -2,10 +2,10 @@ var group__group_selenium_window_g_u_i_adapter =
 [
     [ "SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html", [
       [ "ClickOn", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aa12522740af84cd18ca60c08bec1ce47", null ],
+      [ "get_iframeID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aad65286224d3546754351876ad77bf05", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ac628cf2651ecb5ac8104a8379a3fa06e", null ],
       [ "getExists", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ad806d20bf0e42d47e0aa5282532d3230", null ],
       [ "getHasFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a2406dc361467d086f006ffe1aa8c89fe", null ],
-      [ "getIframeID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a0af8fedc2e7aa1fb0b17129c36af0a6e", null ],
       [ "getIsActive", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a471a1346a97ca3365eb4274adcde296b", null ],
       [ "getLabel", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#af08a80081d265dc09e1c7968227d4b15", null ],
       [ "getTooltip", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#afb3aa055dd6f2604bf484a9c44f77909", null ],
@@ -29,10 +29,9 @@ var group__group_selenium_window_g_u_i_adapter =
       [ "Select", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ac870990619f63b5a7c8539bf359e68b7", null ],
       [ "SelectMenu", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a236185190e513611d20bb8c05cbc270f", null ],
       [ "SelectMenu_Value", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aad1975ed00cf82773a5f195b3372c8d0", null ],
+      [ "set_iframeID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a6e7da680555611d1d95f5f8ead2a95c3", null ],
       [ "SetFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a18cc21003d35c2cdcd17b78bf91f2045", null ],
-      [ "setiFrameID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ae09959d897718db0c8909eba2d0f4c2d", null ],
       [ "setLocator", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ab2d6a182ed8b31c8abe0668632e2671f", null ],
-      [ "setLocator", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a9fedc826b5c9cadaa01cdf3a6c28ce65", null ],
       [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a40816e3262cca2de59ecef3d7d90ef4c", null ],
       [ "TypeKey", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ab8c870d4fbe1a9eab110f75320991f64", null ],
       [ "VerifyCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a9ad73167da71aa8082d826f9d84ef288", null ],

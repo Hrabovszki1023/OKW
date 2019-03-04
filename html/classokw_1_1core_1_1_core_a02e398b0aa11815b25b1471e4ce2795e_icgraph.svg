@@ -9,29 +9,29 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 73.5)">
 <title>okw.core.Core.SelectTablecell</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-73.5 343,-73.5 343,4 -4,4"/>
-<!-- Node1333 -->
-<g id="node1" class="node"><title>Node1333</title>
+<!-- Node1338 -->
+<g id="node1" class="node"><title>Node1338</title>
 <g id="a_node1"><a xlink:title="Wählt die gegebene Tabellenzelle aus.">
 <polygon fill="#bfbfbf" stroke="black" points="183,-28 183,-47 339,-47 339,-28 183,-28"/>
 <text text-anchor="middle" x="261" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.SelectTablecell</text>
 </a>
 </g>
 </g>
-<!-- Node1334 -->
-<g id="node2" class="node"><title>Node1334</title>
+<!-- Node1339 -->
+<g id="node2" class="node"><title>Node1339</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_e_n.html#a1a629d61992d84ccfaa275e7fa9db64d" target="_top" xlink:title="Wählt die gegebene Tabellenzelle aus.">
 <polygon fill="white" stroke="black" points="0,-50 0,-69 147,-69 147,-50 0,-50"/>
 <text text-anchor="middle" x="73.5" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.SelectTablecell</text>
 </a>
 </g>
 </g>
-<!-- Node1333&#45;&gt;Node1334 -->
-<g id="edge1" class="edge"><title>Node1333&#45;&gt;Node1334</title>
+<!-- Node1338&#45;&gt;Node1339 -->
+<g id="edge1" class="edge"><title>Node1338&#45;&gt;Node1339</title>
 <path fill="none" stroke="midnightblue" d="M172.883,-47.832C164.272,-48.8532 155.596,-49.8821 147.154,-50.8833"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="173.425,-51.2923 182.943,-46.6389 172.6,-44.341 173.425,-51.2923"/>
 </g>
-<!-- Node1335 -->
-<g id="node3" class="node"><title>Node1335</title>
+<!-- Node1340 -->
+<g id="node3" class="node"><title>Node1340</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_current_object___test.html#a51c300e8232a0eeb42eb5731f004f357" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode SelectTablecell( FN, COL, ROW ) im ChildObject.">
 <polygon fill="white" stroke="black" points="6.5,-0.5 6.5,-30.5 140.5,-30.5 140.5,-0.5 6.5,-0.5"/>
 <text text-anchor="start" x="14.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -39,8 +39,8 @@
 </a>
 </g>
 </g>
-<!-- Node1333&#45;&gt;Node1335 -->
-<g id="edge2" class="edge"><title>Node1333&#45;&gt;Node1335</title>
+<!-- Node1338&#45;&gt;Node1340 -->
+<g id="edge2" class="edge"><title>Node1338&#45;&gt;Node1340</title>
 <path fill="none" stroke="midnightblue" d="M173.01,-27.1831C162.143,-25.8943 151.17,-24.593 140.691,-23.3502"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="172.6,-30.659 182.943,-28.3611 173.425,-23.7077 172.6,-30.659"/>
 </g>

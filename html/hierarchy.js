@@ -17,7 +17,9 @@ var hierarchy =
           [ "okw.gui.adapter.selenium.SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html", null ],
           [ "okw.gui.adapter.selenium.SeInputCheckbox", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html", null ],
           [ "okw.gui.adapter.selenium.SeInputRadio", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html", null ],
-          [ "okw.gui.adapter.selenium.SeInputText", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html", null ],
+          [ "okw.gui.adapter.selenium.SeInputText", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html", [
+            [ "okw.gui.adapter.myTextfield", "classokw_1_1gui_1_1adapter_1_1my_textfield.html", null ]
+          ] ],
           [ "okw.gui.adapter.selenium.SeLink", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html", null ],
           [ "okw.gui.adapter.selenium.SeRadioList", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html", [
             [ "okw.gui.frames.SeRadioList.frmSeRadioList.PayMethod", "classokw_1_1gui_1_1frames_1_1_se_radio_list_1_1frm_se_radio_list_1_1_pay_method.html", null ]
@@ -42,6 +44,8 @@ var hierarchy =
         [ "okw.gui.adapter.selenium.SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html", [
           [ "okw.gui.adapter.selenium.SeBrowserChild", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html", [
             [ "okw.gui.frames.frmCalculator.frmCalculator", "classokw_1_1gui_1_1frames_1_1frm_calculator_1_1frm_calculator.html", null ],
+            [ "okw.gui.frames.iframe.frmIframe", "classokw_1_1gui_1_1frames_1_1iframe_1_1frm_iframe.html", null ],
+            [ "okw.gui.frames.iframe.frmIFrameWithName", "classokw_1_1gui_1_1frames_1_1iframe_1_1frm_i_frame_with_name.html", null ],
             [ "okw.gui.frames.SeButton.FrmButton", "classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button.html", null ],
             [ "okw.gui.frames.SeButton.FrmButtonNotActiv", "classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button_not_activ.html", null ],
             [ "okw.gui.frames.SeCheckBox.frmSeCheckBox", "classokw_1_1gui_1_1frames_1_1_se_check_box_1_1frm_se_check_box.html", null ],
@@ -118,6 +122,9 @@ var hierarchy =
       [ "browser.FrmSeHTMLUnitDriver_Test", "classbrowser_1_1_frm_se_h_t_m_l_unit_driver___test.html", null ]
     ] ],
     [ "okw.gui.adapter.frmObjDictGuiContainer1", "classokw_1_1gui_1_1adapter_1_1frm_obj_dict_gui_container1.html", null ],
+    [ "okw.IFrame.IFrame_EN_Test", "classokw_1_1_i_frame_1_1_i_frame___e_n___test.html", [
+      [ "okw.IFrame.IFrame_EN_Chrome_Test", "classokw_1_1_i_frame_1_1_i_frame___e_n___chrome___test.html", null ]
+    ] ],
     [ "okw.gui.IGUIChildwindow", "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html", [
       [ "okw.gui.AnyChildwindow", "classokw_1_1gui_1_1_any_childwindow.html", null ]
     ] ],
@@ -207,6 +214,7 @@ var hierarchy =
       [ "okw.exceptions.OKWFrameObjectWindowNotSetException", "classokw_1_1exceptions_1_1_o_k_w_frame_object_window_not_set_exception.html", null ],
       [ "okw.exceptions.OKWGUIException", "classokw_1_1exceptions_1_1_o_k_w_g_u_i_exception.html", null ],
       [ "okw.exceptions.OKWGUIObjectNotFoundException", "classokw_1_1exceptions_1_1_o_k_w_g_u_i_object_not_found_exception.html", null ],
+      [ "okw.exceptions.OKWGUIObjectNotUniqueException", "classokw_1_1exceptions_1_1_o_k_w_g_u_i_object_not_unique_exception.html", null ],
       [ "okw.exceptions.OKWLanguageNotImplemntedException", "classokw_1_1exceptions_1_1_o_k_w_language_not_implemnted_exception.html", null ],
       [ "okw.exceptions.OKWMemorizeKeyNotExistsException", "classokw_1_1exceptions_1_1_o_k_w_memorize_key_not_exists_exception.html", null ],
       [ "okw.exceptions.OKWMessageNotFoundException", "classokw_1_1exceptions_1_1_o_k_w_message_not_found_exception.html", null ],

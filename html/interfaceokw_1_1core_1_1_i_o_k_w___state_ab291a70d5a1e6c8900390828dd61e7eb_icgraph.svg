@@ -9,24 +9,24 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 24)">
 <title>okw.core.IOKW_State.CopyFile</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-24 323,-24 323,4 -4,4"/>
-<!-- Node758 -->
-<g id="node1" class="node"><title>Node758</title>
+<!-- Node760 -->
+<g id="node1" class="node"><title>Node760</title>
 <g id="a_node1"><a xlink:title="Copiert die gegebene Quelldatei zur Zieldatei.">
 <polygon fill="#bfbfbf" stroke="black" points="161,-0.5 161,-19.5 319,-19.5 319,-0.5 161,-0.5"/>
 <text text-anchor="middle" x="240" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.CopyFile</text>
 </a>
 </g>
 </g>
-<!-- Node759 -->
-<g id="node2" class="node"><title>Node759</title>
+<!-- Node761 -->
+<g id="node2" class="node"><title>Node761</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_core.html#a9eaef26bb78a9014d69cac3f0e669ee4" target="_top" xlink:title="Copiert die gegebene Quelldatei zur Zieldatei.">
 <polygon fill="white" stroke="black" points="-7.10543e-15,-0.5 -7.10543e-15,-19.5 125,-19.5 125,-0.5 -7.10543e-15,-0.5"/>
 <text text-anchor="middle" x="62.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.CopyFile</text>
 </a>
 </g>
 </g>
-<!-- Node758&#45;&gt;Node759 -->
-<g id="edge1" class="edge"><title>Node758&#45;&gt;Node759</title>
+<!-- Node760&#45;&gt;Node761 -->
+<g id="edge1" class="edge"><title>Node760&#45;&gt;Node761</title>
 <path fill="none" stroke="midnightblue" d="M150.606,-10C141.954,-10 133.311,-10 125.013,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="150.745,-13.5001 160.745,-10 150.745,-6.5001 150.745,-13.5001"/>
 </g>

@@ -55,8 +55,8 @@ var sectionId = 'dynsection-1';
 <g id="viewport">
 <title>okw.gui.AnyChildwindow</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-1286 474.104,-1286 474.104,4 -4,4"/>
-<!-- Node31 -->
-<g id="node1" class="node"><title>Node31</title>
+<!-- Node32 -->
+<g id="node1" class="node"><title>Node32</title>
 <g id="a_node1"><a xlink:title=" ">
 <polygon fill="#bfbfbf" stroke="black" points="179.104,-0.5 179.104,-277.5 308.104,-277.5 308.104,-0.5 179.104,-0.5"/>
 <text text-anchor="middle" x="243.604" y="-265.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyChildwindow</text>
@@ -87,8 +87,8 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node32 -->
-<g id="node2" class="node"><title>Node32</title>
+<!-- Node33 -->
+<g id="node2" class="node"><title>Node33</title>
 <g id="a_node2"><a xlink:href="classokw_1_1gui_1_1_any_win_base.html" target="_top" xlink:title="Description of AnyWin.">
 <polygon fill="white" stroke="black" points="51.6037,-321 51.6037,-587 199.604,-587 199.604,-321 51.6037,-321"/>
 <text text-anchor="middle" x="125.604" y="-575" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase</text>
@@ -118,13 +118,13 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node32&#45;&gt;Node31 -->
-<g id="edge1" class="edge"><title>Node32&#45;&gt;Node31</title>
+<!-- Node33&#45;&gt;Node32 -->
+<g id="edge1" class="edge"><title>Node33&#45;&gt;Node32</title>
 <path fill="none" stroke="midnightblue" d="M179.018,-311.318C183.248,-300.097 187.516,-288.774 191.736,-277.582"/>
 <polygon fill="none" stroke="midnightblue" points="175.728,-310.122 175.475,-320.713 182.278,-312.591 175.728,-310.122"/>
 </g>
-<!-- Node33 -->
-<g id="node3" class="node"><title>Node33</title>
+<!-- Node34 -->
+<g id="node3" class="node"><title>Node34</title>
 <g id="a_node3"><a xlink:href="classokw_1_1gui_1_1_o_k_w_locator.html" target="_top" xlink:title="Description of OKWLocator.">
 <polygon fill="white" stroke="black" points="176.604,-640.5 176.604,-719.5 288.604,-719.5 288.604,-640.5 176.604,-640.5"/>
 <text text-anchor="middle" x="232.604" y="-707.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.OKWLocator</text>
@@ -137,20 +137,20 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node33&#45;&gt;Node32 -->
-<g id="edge2" class="edge"><title>Node33&#45;&gt;Node32</title>
+<!-- Node34&#45;&gt;Node33 -->
+<g id="edge2" class="edge"><title>Node34&#45;&gt;Node33</title>
 <path fill="none" stroke="#404040" d="M214.21,-640.493C208.344,-628.213 201.47,-613.822 194.19,-598.582"/>
 <polygon fill="none" stroke="#404040" points="193.998,-598.181 187.803,-594.491 188.826,-587.353 195.021,-591.043 193.998,-598.181"/>
 <text text-anchor="middle" x="229.604" y="-614" font-family="Helvetica,sans-Serif" font-size="10.00"> #_locator</text>
 </g>
-<!-- Node33&#45;&gt;Node33 -->
-<g id="edge3" class="edge"><title>Node33&#45;&gt;Node33</title>
+<!-- Node34&#45;&gt;Node34 -->
+<g id="edge3" class="edge"><title>Node34&#45;&gt;Node34</title>
 <path fill="none" stroke="#404040" d="M288.75,-691.028C299.226,-689.67 306.604,-685.994 306.604,-680 306.604,-676.628 304.269,-673.99 300.362,-672.085"/>
 <polygon fill="none" stroke="#404040" points="300.34,-672.079 293.509,-674.389 288.75,-668.972 295.581,-666.662 300.34,-672.079"/>
 <text text-anchor="middle" x="337.104" y="-677.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;_Locatoren</text>
 </g>
-<!-- Node34 -->
-<g id="node4" class="node"><title>Node34</title>
+<!-- Node35 -->
+<g id="node4" class="node"><title>Node35</title>
 <g id="a_node4"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="24.6037,-767.5 24.6037,-1176.5 172.604,-1176.5 172.604,-767.5 24.6037,-767.5"/>
 <text text-anchor="middle" x="98.6037" y="-1164.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn</text>
@@ -193,32 +193,32 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node34&#45;&gt;Node31 -->
-<g id="edge10" class="edge"><title>Node34&#45;&gt;Node31</title>
+<!-- Node35&#45;&gt;Node32 -->
+<g id="edge10" class="edge"><title>Node35&#45;&gt;Node32</title>
 <path fill="none" stroke="#404040" d="M30.8577,-767.341C-1.9397,-633.103 -21.8657,-456.61 42.6037,-315 68.447,-258.234 122.808,-212.726 168.487,-182.361"/>
 <polygon fill="none" stroke="#404040" points="168.624,-182.272 171.475,-175.648 178.686,-175.733 175.834,-182.356 168.624,-182.272"/>
 <text text-anchor="middle" x="35.6037" y="-614" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
 </g>
-<!-- Node34&#45;&gt;Node32 -->
-<g id="edge7" class="edge"><title>Node34&#45;&gt;Node32</title>
+<!-- Node35&#45;&gt;Node33 -->
+<g id="edge7" class="edge"><title>Node35&#45;&gt;Node33</title>
 <path fill="none" stroke="#404040" d="M101.902,-767.403C103.213,-725.259 105.044,-681.167 107.604,-640 108.428,-626.735 109.454,-612.95 110.593,-599.156"/>
 <polygon fill="none" stroke="#404040" points="110.606,-599 107.129,-592.683 111.622,-587.044 115.1,-593.361 110.606,-599"/>
 <text text-anchor="middle" x="137.604" y="-677.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
 </g>
-<!-- Node34&#45;&gt;Node33 -->
-<g id="edge4" class="edge"><title>Node34&#45;&gt;Node33</title>
+<!-- Node35&#45;&gt;Node34 -->
+<g id="edge4" class="edge"><title>Node35&#45;&gt;Node34</title>
 <path fill="none" stroke="#404040" d="M172.658,-810.732C186.121,-781.596 199.2,-753.292 209.687,-730.595"/>
 <polygon fill="none" stroke="#404040" points="209.737,-730.487 208.623,-723.363 214.771,-719.594 215.885,-726.719 209.737,-730.487"/>
 <text text-anchor="middle" x="232.104" y="-741" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myLogger</text>
 </g>
-<!-- Node34&#45;&gt;Node34 -->
-<g id="edge6" class="edge"><title>Node34&#45;&gt;Node34</title>
+<!-- Node35&#45;&gt;Node35 -->
+<g id="edge6" class="edge"><title>Node35&#45;&gt;Node35</title>
 <path fill="none" stroke="#404040" d="M172.964,-1010.36C183.52,-1004.16 190.604,-991.371 190.604,-972 190.604,-958.985 187.406,-948.942 182.106,-941.87"/>
 <polygon fill="none" stroke="#404040" points="181.88,-941.667 174.745,-940.624 172.964,-933.636 180.099,-934.679 181.88,-941.667"/>
 <text text-anchor="middle" x="214.604" y="-969.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;Instance</text>
 </g>
-<!-- Node35 -->
-<g id="node5" class="node"><title>Node35</title>
+<!-- Node36 -->
+<g id="node5" class="node"><title>Node36</title>
 <g id="a_node5"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="21.6037,-1224.5 21.6037,-1281.5 175.604,-1281.5 175.604,-1224.5 21.6037,-1224.5"/>
 <text text-anchor="middle" x="98.6037" y="-1269.5" font-family="Helvetica,sans-Serif" font-size="10.00">ArrayList&lt; okw.log.ILogger &gt;</text>
@@ -229,14 +229,14 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node35&#45;&gt;Node34 -->
-<g id="edge5" class="edge"><title>Node35&#45;&gt;Node34</title>
+<!-- Node36&#45;&gt;Node35 -->
+<g id="edge5" class="edge"><title>Node36&#45;&gt;Node35</title>
 <path fill="none" stroke="#404040" d="M98.6037,-1224.48C98.6037,-1214.54 98.6037,-1202.39 98.6037,-1188.86"/>
 <polygon fill="none" stroke="#404040" points="98.6038,-1188.62 94.6037,-1182.62 98.6037,-1176.62 102.604,-1182.62 98.6038,-1188.62"/>
 <text text-anchor="middle" x="127.104" y="-1198" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;LoggerList</text>
 </g>
-<!-- Node36 -->
-<g id="node6" class="node"><title>Node36</title>
+<!-- Node37 -->
+<g id="node6" class="node"><title>Node37</title>
 <g id="a_node6"><a xlink:href="interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="218.104,-315.5 218.104,-592.5 349.104,-592.5 349.104,-315.5 218.104,-315.5"/>
 <text text-anchor="middle" x="283.604" y="-580.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.IGUIChildwindow</text>
@@ -267,13 +267,13 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node36&#45;&gt;Node31 -->
-<g id="edge8" class="edge"><title>Node36&#45;&gt;Node31</title>
+<!-- Node37&#45;&gt;Node32 -->
+<g id="edge8" class="edge"><title>Node37&#45;&gt;Node32</title>
 <path fill="none" stroke="midnightblue" d="M264.728,-305.297C263.552,-296.097 262.371,-286.856 261.201,-277.703"/>
 <polygon fill="none" stroke="midnightblue" points="261.261,-305.783 266.001,-315.258 268.205,-304.895 261.261,-305.783"/>
 </g>
-<!-- Node37 -->
-<g id="node7" class="node"><title>Node37</title>
+<!-- Node38 -->
+<g id="node7" class="node"><title>Node38</title>
 <g id="a_node7"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___f_n.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="367.104,-398 367.104,-510 470.104,-510 470.104,-398 367.104,-398"/>
 <text text-anchor="middle" x="418.604" y="-498" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_FN</text>
@@ -289,8 +289,8 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node37&#45;&gt;Node31 -->
-<g id="edge9" class="edge"><title>Node37&#45;&gt;Node31</title>
+<!-- Node38&#45;&gt;Node32 -->
+<g id="edge9" class="edge"><title>Node38&#45;&gt;Node32</title>
 <path fill="none" stroke="midnightblue" d="M392.753,-388.741C382.6,-365.149 370.334,-338.481 357.604,-315 342.828,-287.746 325.206,-259.176 308.286,-233.209"/>
 <polygon fill="none" stroke="midnightblue" points="389.54,-390.131 396.68,-397.959 395.98,-387.387 389.54,-390.131"/>
 </g>

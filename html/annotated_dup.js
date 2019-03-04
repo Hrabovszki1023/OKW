@@ -65,6 +65,7 @@ var annotated_dup =
         [ "OKWFrameObjectWindowNotSetException", "classokw_1_1exceptions_1_1_o_k_w_frame_object_window_not_set_exception.html", "classokw_1_1exceptions_1_1_o_k_w_frame_object_window_not_set_exception" ],
         [ "OKWGUIException", "classokw_1_1exceptions_1_1_o_k_w_g_u_i_exception.html", "classokw_1_1exceptions_1_1_o_k_w_g_u_i_exception" ],
         [ "OKWGUIObjectNotFoundException", "classokw_1_1exceptions_1_1_o_k_w_g_u_i_object_not_found_exception.html", "classokw_1_1exceptions_1_1_o_k_w_g_u_i_object_not_found_exception" ],
+        [ "OKWGUIObjectNotUniqueException", "classokw_1_1exceptions_1_1_o_k_w_g_u_i_object_not_unique_exception.html", "classokw_1_1exceptions_1_1_o_k_w_g_u_i_object_not_unique_exception" ],
         [ "OKWLanguageNotImplemntedException", "classokw_1_1exceptions_1_1_o_k_w_language_not_implemnted_exception.html", "classokw_1_1exceptions_1_1_o_k_w_language_not_implemnted_exception" ],
         [ "OKWMemorizeKeyNotExistsException", "classokw_1_1exceptions_1_1_o_k_w_memorize_key_not_exists_exception.html", "classokw_1_1exceptions_1_1_o_k_w_memorize_key_not_exists_exception" ],
         [ "OKWMessageNotFoundException", "classokw_1_1exceptions_1_1_o_k_w_message_not_found_exception.html", "classokw_1_1exceptions_1_1_o_k_w_message_not_found_exception" ],
@@ -110,6 +111,7 @@ var annotated_dup =
           [ "ArraList", "classokw_1_1gui_1_1adapter_1_1_arra_list.html", null ],
           [ "CurrentChildObject_Allmethods", "classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods.html", "classokw_1_1gui_1_1adapter_1_1_current_child_object___allmethods" ],
           [ "frmObjDictGuiContainer1", "classokw_1_1gui_1_1adapter_1_1frm_obj_dict_gui_container1.html", "classokw_1_1gui_1_1adapter_1_1frm_obj_dict_gui_container1" ],
+          [ "myTextfield", "classokw_1_1gui_1_1adapter_1_1my_textfield.html", "classokw_1_1gui_1_1adapter_1_1my_textfield" ],
           [ "Test_NoMethod_Object", "classokw_1_1gui_1_1adapter_1_1_test___no_method___object.html", "classokw_1_1gui_1_1adapter_1_1_test___no_method___object" ],
           [ "Test_PushButton", "classokw_1_1gui_1_1adapter_1_1_test___push_button.html", "classokw_1_1gui_1_1adapter_1_1_test___push_button" ],
           [ "Test_TextField", "classokw_1_1gui_1_1adapter_1_1_test___text_field.html", "classokw_1_1gui_1_1adapter_1_1_test___text_field" ],
@@ -118,6 +120,10 @@ var annotated_dup =
         [ "frames", null, [
           [ "frmCalculator", null, [
             [ "frmCalculator", "classokw_1_1gui_1_1frames_1_1frm_calculator_1_1frm_calculator.html", "classokw_1_1gui_1_1frames_1_1frm_calculator_1_1frm_calculator" ]
+          ] ],
+          [ "iframe", null, [
+            [ "frmIframe", "classokw_1_1gui_1_1frames_1_1iframe_1_1frm_iframe.html", "classokw_1_1gui_1_1frames_1_1iframe_1_1frm_iframe" ],
+            [ "frmIFrameWithName", "classokw_1_1gui_1_1frames_1_1iframe_1_1frm_i_frame_with_name.html", "classokw_1_1gui_1_1frames_1_1iframe_1_1frm_i_frame_with_name" ]
           ] ],
           [ "SeButton", null, [
             [ "FrmButton", "classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button.html", "classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button" ],
@@ -170,6 +176,10 @@ var annotated_dup =
         [ "IGUIWindow", "interfaceokw_1_1gui_1_1_i_g_u_i_window.html", "interfaceokw_1_1gui_1_1_i_g_u_i_window" ],
         [ "OKWLocator", "classokw_1_1gui_1_1_o_k_w_locator.html", "classokw_1_1gui_1_1_o_k_w_locator" ],
         [ "OKWLocatorTest", "classokw_1_1gui_1_1_o_k_w_locator_test.html", "classokw_1_1gui_1_1_o_k_w_locator_test" ]
+      ] ],
+      [ "IFrame", null, [
+        [ "IFrame_EN_Chrome_Test", "classokw_1_1_i_frame_1_1_i_frame___e_n___chrome___test.html", "classokw_1_1_i_frame_1_1_i_frame___e_n___chrome___test" ],
+        [ "IFrame_EN_Test", "classokw_1_1_i_frame_1_1_i_frame___e_n___test.html", "classokw_1_1_i_frame_1_1_i_frame___e_n___test" ]
       ] ],
       [ "log", null, [
         [ "ILogger", "interfaceokw_1_1log_1_1_i_logger.html", "interfaceokw_1_1log_1_1_i_logger" ],

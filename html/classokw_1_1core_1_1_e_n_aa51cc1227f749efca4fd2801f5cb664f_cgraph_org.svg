@@ -9,63 +9,63 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 62)">
 <title>okw.core.EN.EndTest</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-62 521,-62 521,4 -4,4"/>
-<!-- Node777 -->
-<g id="node1" class="node"><title>Node777</title>
+<!-- Node780 -->
+<g id="node1" class="node"><title>Node780</title>
 <g id="a_node1"><a xlink:title="Signalisiert das Ende eines Testfalls.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-19.5 0,-38.5 114,-38.5 114,-19.5 0,-19.5"/>
 <text text-anchor="middle" x="57" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.EndTest</text>
 </a>
 </g>
 </g>
-<!-- Node778 -->
-<g id="node2" class="node"><title>Node778</title>
+<!-- Node781 -->
+<g id="node2" class="node"><title>Node781</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" target="_top" xlink:title="Setzt die Sprache auf den gegebenen wert Language.">
 <polygon fill="white" stroke="black" points="150,-38.5 150,-57.5 299,-57.5 299,-38.5 150,-38.5"/>
 <text text-anchor="middle" x="224.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.setLanguage</text>
 </a>
 </g>
 </g>
-<!-- Node777&#45;&gt;Node778 -->
-<g id="edge1" class="edge"><title>Node777&#45;&gt;Node778</title>
+<!-- Node780&#45;&gt;Node781 -->
+<g id="edge1" class="edge"><title>Node780&#45;&gt;Node781</title>
 <path fill="none" stroke="midnightblue" d="M114.031,-35.4325C122.321,-36.3843 131.012,-37.3821 139.719,-38.3816"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="139.589,-41.8896 149.923,-39.5531 140.387,-34.9353 139.589,-41.8896"/>
 </g>
-<!-- Node780 -->
-<g id="node4" class="node"><title>Node780</title>
+<!-- Node783 -->
+<g id="node4" class="node"><title>Node783</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" target="_top" xlink:title="Signalisiert das Ende eines Testfalls.">
 <polygon fill="white" stroke="black" points="163,-0.5 163,-19.5 286,-19.5 286,-0.5 163,-0.5"/>
 <text text-anchor="middle" x="224.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.EndTest</text>
 </a>
 </g>
 </g>
-<!-- Node777&#45;&gt;Node780 -->
-<g id="edge3" class="edge"><title>Node777&#45;&gt;Node780</title>
+<!-- Node780&#45;&gt;Node783 -->
+<g id="edge3" class="edge"><title>Node780&#45;&gt;Node783</title>
 <path fill="none" stroke="midnightblue" d="M114.031,-22.5675C126.462,-21.1403 139.794,-19.6097 152.728,-18.1249"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="153.454,-21.5646 162.99,-16.9468 152.656,-14.6103 153.454,-21.5646"/>
 </g>
-<!-- Node779 -->
-<g id="node3" class="node"><title>Node779</title>
+<!-- Node782 -->
+<g id="node3" class="node"><title>Node782</title>
 <g id="a_node3"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" target="_top" xlink:title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log).">
 <polygon fill="white" stroke="black" points="335,-38.5 335,-57.5 517,-57.5 517,-38.5 335,-38.5"/>
 <text text-anchor="middle" x="426" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.setLanguage</text>
 </a>
 </g>
 </g>
-<!-- Node778&#45;&gt;Node779 -->
-<g id="edge2" class="edge"><title>Node778&#45;&gt;Node779</title>
+<!-- Node781&#45;&gt;Node782 -->
+<g id="edge2" class="edge"><title>Node781&#45;&gt;Node782</title>
 <path fill="none" stroke="midnightblue" d="M299.22,-48C307.517,-48 316.072,-48 324.633,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="324.671,-51.5001 334.671,-48 324.671,-44.5001 324.671,-51.5001"/>
 </g>
-<!-- Node781 -->
-<g id="node5" class="node"><title>Node781</title>
+<!-- Node784 -->
+<g id="node5" class="node"><title>Node784</title>
 <g id="a_node5"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186" target="_top" xlink:title="Signalisiert das Ende eines Testfalls.">
 <polygon fill="white" stroke="black" points="348,-0.5 348,-19.5 504,-19.5 504,-0.5 348,-0.5"/>
 <text text-anchor="middle" x="426" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.EndTest</text>
 </a>
 </g>
 </g>
-<!-- Node780&#45;&gt;Node781 -->
-<g id="edge4" class="edge"><title>Node780&#45;&gt;Node781</title>
+<!-- Node783&#45;&gt;Node784 -->
+<g id="edge4" class="edge"><title>Node783&#45;&gt;Node784</title>
 <path fill="none" stroke="midnightblue" d="M286.169,-10C302.364,-10 320.192,-10 337.518,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="337.646,-13.5001 347.646,-10 337.646,-6.5001 337.646,-13.5001"/>
 </g>

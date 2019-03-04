@@ -14,6 +14,7 @@ var dir_b5ca14c5e2ca1a95fa067543d8a54038 =
     [ "OKWFrameObjectWindowNotSetException.java", "_o_k_w_frame_object_window_not_set_exception_8java_source.html", null ],
     [ "OKWGUIException.java", "_o_k_w_g_u_i_exception_8java_source.html", null ],
     [ "OKWGUIObjectNotFoundException.java", "_o_k_w_g_u_i_object_not_found_exception_8java_source.html", null ],
+    [ "OKWGUIObjectNotUniqueException.java", "_o_k_w_g_u_i_object_not_unique_exception_8java_source.html", null ],
     [ "OKWLanguageNotImplemntedException.java", "_o_k_w_language_not_implemnted_exception_8java_source.html", null ],
     [ "OKWMemorizeKeyNotExistsException.java", "_o_k_w_memorize_key_not_exists_exception_8java_source.html", null ],
     [ "OKWMessageNotFoundException.java", "_o_k_w_message_not_found_exception_8java_source.html", null ],

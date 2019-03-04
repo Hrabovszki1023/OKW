@@ -16,6 +16,16 @@ var group__group_selenium_child_g_u_i_adapter_tests =
       [ "FirefoxAfter", "classbrowser_1_1_frm_se_firefox___test.html#a224fa1ad2f3cd95bd3fd0fecd8d5449f", null ]
     ] ],
     [ "FrmSeHTMLUnitDriver_Test", "classbrowser_1_1_frm_se_h_t_m_l_unit_driver___test.html", null ],
+    [ "IFrame_EN_Chrome_Test", "classokw_1_1_i_frame_1_1_i_frame___e_n___chrome___test.html", [
+      [ "AfterTest", "classokw_1_1_i_frame_1_1_i_frame___e_n___chrome___test.html#af50c0da06a5b517b5dd24156486e83d5", null ]
+    ] ],
+    [ "IFrame_EN_Test", "classokw_1_1_i_frame_1_1_i_frame___e_n___test.html", [
+      [ "tcFind_iFrameWithID", "classokw_1_1_i_frame_1_1_i_frame___e_n___test.html#ab1e815f02e65054073caf3ebc7419b7d", null ],
+      [ "tcFind_iFrameWithID_WindowEmbeded", "classokw_1_1_i_frame_1_1_i_frame___e_n___test.html#a7aaaee2e40921df4f548e8c908f2935b", null ],
+      [ "tcFind_iFrameWithName", "classokw_1_1_i_frame_1_1_i_frame___e_n___test.html#a7dd33e09d8a90379b6007fffd3b79684", null ],
+      [ "myMem", "classokw_1_1_i_frame_1_1_i_frame___e_n___test.html#ae7938a0d5ae36ebb594d663f9b5f35ab", null ],
+      [ "name", "classokw_1_1_i_frame_1_1_i_frame___e_n___test.html#a948a960adb3460a6e485ba7b6e1b4a0f", null ]
+    ] ],
     [ "SeBACK_EN_Chrome_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___chrome___test.html", [
       [ "FirefoxAfter", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___chrome___test.html#adb78a166bb035a5eb979c72fb1556ac9", null ]
     ] ],

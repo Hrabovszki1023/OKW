@@ -9,29 +9,29 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 203.5)">
 <title>okw.core.Core.MemorizeCaption</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-203.5 604,-203.5 604,4 -4,4"/>
-<!-- Node1093 -->
-<g id="node1" class="node"><title>Node1093</title>
+<!-- Node1098 -->
+<g id="node1" class="node"><title>Node1098</title>
 <g id="a_node1"><a xlink:title="Keine Beschreibung zu &quot;MemorizeCaption&quot; verfügbar.">
 <polygon fill="#bfbfbf" stroke="black" points="430,-57 430,-76 600,-76 600,-57 430,-57"/>
 <text text-anchor="middle" x="515" y="-64" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.MemorizeCaption</text>
 </a>
 </g>
 </g>
-<!-- Node1094 -->
-<g id="node2" class="node"><title>Node1094</title>
+<!-- Node1099 -->
+<g id="node2" class="node"><title>Node1099</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_e_n.html#ab10f0a1c40f0093a14c4be313d59a94a" target="_top" xlink:title="Keine Beschreibung zu &quot;MemorizeCaption&quot; verfügbar.">
 <polygon fill="white" stroke="black" points="233,-82 233,-101 394,-101 394,-82 233,-82"/>
 <text text-anchor="middle" x="313.5" y="-89" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.MemorizeCaption</text>
 </a>
 </g>
 </g>
-<!-- Node1093&#45;&gt;Node1094 -->
-<g id="edge1" class="edge"><title>Node1093&#45;&gt;Node1094</title>
+<!-- Node1098&#45;&gt;Node1099 -->
+<g id="edge1" class="edge"><title>Node1098&#45;&gt;Node1099</title>
 <path fill="none" stroke="midnightblue" d="M427.719,-77.3121C415.372,-78.8594 402.744,-80.4419 390.611,-81.9623"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="428.521,-80.7391 438.008,-76.0227 427.651,-73.7934 428.521,-80.7391"/>
 </g>
-<!-- Node1099 -->
-<g id="node7" class="node"><title>Node1099</title>
+<!-- Node1104 -->
+<g id="node7" class="node"><title>Node1104</title>
 <g id="a_node7"><a xlink:href="classokw_1_1core_1_1_current_object___test.html#aa1febf6b516ce833a6faee16d1fede7d" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode MemorizeCaption( FN, MemKey ) im ChildObject.">
 <polygon fill="white" stroke="black" points="242.5,-22 242.5,-63 384.5,-63 384.5,-22 242.5,-22"/>
 <text text-anchor="start" x="250.5" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -40,13 +40,13 @@
 </a>
 </g>
 </g>
-<!-- Node1093&#45;&gt;Node1099 -->
-<g id="edge6" class="edge"><title>Node1093&#45;&gt;Node1099</title>
+<!-- Node1098&#45;&gt;Node1104 -->
+<g id="edge6" class="edge"><title>Node1098&#45;&gt;Node1104</title>
 <path fill="none" stroke="midnightblue" d="M424.708,-55.7581C411.338,-54.1497 397.716,-52.5109 384.814,-50.9589"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="424.519,-59.2606 434.866,-56.9801 425.355,-52.3107 424.519,-59.2606"/>
 </g>
-<!-- Node1095 -->
-<g id="node3" class="node"><title>Node1095</title>
+<!-- Node1100 -->
+<g id="node3" class="node"><title>Node1100</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a44061b4b16fc67763dccaa6423cd7d91" target="_top" xlink:title="Prüft ob &quot;${IGNORE} &quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst.">
 <polygon fill="white" stroke="black" points="0,-158 0,-199 197,-199 197,-158 0,-158"/>
 <text text-anchor="start" x="8" y="-187" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -55,13 +55,13 @@
 </a>
 </g>
 </g>
-<!-- Node1094&#45;&gt;Node1095 -->
-<g id="edge2" class="edge"><title>Node1094&#45;&gt;Node1095</title>
+<!-- Node1099&#45;&gt;Node1100 -->
+<g id="edge2" class="edge"><title>Node1099&#45;&gt;Node1100</title>
 <path fill="none" stroke="midnightblue" d="M286.462,-105.848C263.403,-118.189 228.594,-135.937 197,-148.5 188.689,-151.805 179.863,-154.973 171.049,-157.93"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="288.15,-108.914 295.285,-101.082 284.823,-102.755 288.15,-108.914"/>
 </g>
-<!-- Node1096 -->
-<g id="node4" class="node"><title>Node1096</title>
+<!-- Node1101 -->
+<g id="node4" class="node"><title>Node1101</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#af4c82cc048fb7ee517f87292034e252a" target="_top" xlink:title="Prüft ob &quot;&quot;${IGNORE}${TCN}&quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst.">
 <polygon fill="white" stroke="black" points="0,-98 0,-139 197,-139 197,-98 0,-98"/>
 <text text-anchor="start" x="8" y="-127" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -70,13 +70,13 @@
 </a>
 </g>
 </g>
-<!-- Node1094&#45;&gt;Node1096 -->
-<g id="edge3" class="edge"><title>Node1094&#45;&gt;Node1096</title>
+<!-- Node1099&#45;&gt;Node1101 -->
+<g id="edge3" class="edge"><title>Node1099&#45;&gt;Node1101</title>
 <path fill="none" stroke="midnightblue" d="M227.184,-102.315C217.274,-103.571 207.108,-104.86 197.05,-106.135"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="227.924,-105.749 237.404,-101.019 227.043,-98.8046 227.924,-105.749"/>
 </g>
-<!-- Node1097 -->
-<g id="node5" class="node"><title>Node1097</title>
+<!-- Node1102 -->
+<g id="node5" class="node"><title>Node1102</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_se_button_1_1_se_button___e_n___test.html#a9945d7e2b928f3055a48cfdd63c5c7f7" target="_top" xlink:title="Test des Schlüsselwortes MemorizeCaption für den GUI&#45;Adapter SeButton.">
 <polygon fill="white" stroke="black" points="21,-49.5 21,-79.5 176,-79.5 176,-49.5 21,-49.5"/>
 <text text-anchor="start" x="29" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeButton.SeButton</text>
@@ -84,13 +84,13 @@
 </a>
 </g>
 </g>
-<!-- Node1094&#45;&gt;Node1097 -->
-<g id="edge4" class="edge"><title>Node1094&#45;&gt;Node1097</title>
+<!-- Node1099&#45;&gt;Node1102 -->
+<g id="edge4" class="edge"><title>Node1099&#45;&gt;Node1102</title>
 <path fill="none" stroke="midnightblue" d="M227.026,-80.6653C210.181,-78.53 192.605,-76.3021 176.076,-74.2068"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="227.043,-84.1954 237.404,-81.9808 227.924,-77.251 227.043,-84.1954"/>
 </g>
-<!-- Node1098 -->
-<g id="node6" class="node"><title>Node1098</title>
+<!-- Node1103 -->
+<g id="node6" class="node"><title>Node1103</title>
 <g id="a_node6"><a xlink:href="classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a93400968b75eee4f5489d382006d91e3" target="_top" xlink:title="Test des Schlüsselwortes MemorizeCaption für den GUI&#45;Adapter SeInputRadio.">
 <polygon fill="white" stroke="black" points="5,-0.5 5,-30.5 192,-30.5 192,-0.5 5,-0.5"/>
 <text text-anchor="start" x="13" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputRadio.SeInput</text>
@@ -98,8 +98,8 @@
 </a>
 </g>
 </g>
-<!-- Node1094&#45;&gt;Node1098 -->
-<g id="edge5" class="edge"><title>Node1094&#45;&gt;Node1098</title>
+<!-- Node1099&#45;&gt;Node1103 -->
+<g id="edge5" class="edge"><title>Node1099&#45;&gt;Node1103</title>
 <path fill="none" stroke="midnightblue" d="M247.291,-78.7473C242.345,-76.9298 237.524,-74.8588 233,-72.5 214.018,-62.6028 215.9,-50.5526 197,-40.5 189.749,-36.6432 181.874,-33.36 173.848,-30.5696"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="246.317,-82.1118 256.911,-81.9391 248.522,-75.4679 246.317,-82.1118"/>
 </g>

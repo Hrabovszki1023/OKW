@@ -1,7 +1,7 @@
 <map id="okw.core.IOKW_State.VerifyTooltip" name="okw.core.IOKW_State.VerifyTooltip">
-<area shape="rect" id="node1" title="Prüft den Tooltip&#45;Text eines Objektes." alt="" coords="813,791,1008,833"/>
-<area shape="rect" id="node2" href="$classokw_1_1core_1_1_core.html#aa53c4a10dcd4eb1a6ae2c41eb9f23ee2" title="Prüft den Tooltip&#45;Text eines Objektes." alt="" coords="575,799,765,825"/>
-<area shape="rect" id="node3" href="$classokw_1_1core_1_1_e_n.html#a7a19b4149e808ffc7fbaca9d0e6412b3" title="Prüft den Tooltip&#45;Text eines Objektes." alt="" coords="348,799,527,825"/>
+<area shape="rect" id="node1" title="Prüft den Tooltip&#45;Text eines Objektes." alt="" coords="813,883,1008,925"/>
+<area shape="rect" id="node2" href="$classokw_1_1core_1_1_core.html#aa53c4a10dcd4eb1a6ae2c41eb9f23ee2" title="Prüft den Tooltip&#45;Text eines Objektes." alt="" coords="575,891,765,917"/>
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_e_n.html#a7a19b4149e808ffc7fbaca9d0e6412b3" title="Prüft den Tooltip&#45;Text eines Objektes." alt="" coords="348,891,527,917"/>
 <area shape="rect" id="node4" href="$classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html#a4ad606615476d86141bdb598f2c21666" title=" " alt="" coords="49,5,256,61"/>
 <area shape="rect" id="node5" href="$classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html#af6fc2eaf63a00647e7cf20878a2b7536" title=" " alt="" coords="53,85,253,141"/>
 <area shape="rect" id="node6" href="$classokw_1_1core_1_1_e_n___keywords___empty___test.html#a9fc53dc3dc66074ac611851720cb9a94" title="Prüft &quot;${EMPTY}&quot; für das Schlüsselwort VerifyValue(string,string)" alt="" coords="49,165,256,221"/>
@@ -18,8 +18,10 @@
 <area shape="rect" id="node17" href="$classokw_1_1core_1_1_e_n___verify_tooltip___o_k_w_verifying_fails_exception___test.html#afd2d3f8ba38ae6d7cd04aecbd34d62e8" title="Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist&#45;Vergleich ausgelöst wird." alt="" coords="31,1105,274,1175"/>
 <area shape="rect" id="node18" href="$classokw_1_1core_1_1_e_n___verify_tooltip___o_k_w_verifying_fails_exception___test.html#a5c0d99347013a0d2de1b9687a6471364" title="Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist&#45;Vergleich ausgelöst wird." alt="" coords="31,1199,274,1270"/>
 <area shape="rect" id="node19" href="$classokw_1_1core_1_1_e_n___verify_tooltip___o_k_w_verifying_fails_exception___test.html#aa8e11ade33902ea207796749753d42d8" title="Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist&#45;Vergleich ausgelöst wird." alt="" coords="31,1294,274,1365"/>
-<area shape="rect" id="node20" href="$classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#aecb47fe026acbfeffe3a9652edff6d28" title="Test des Schlüsselwortes &quot;VerifyTooltip( FN, ExpVal ) für SeBACK." alt="" coords="5,1389,300,1445"/>
-<area shape="rect" id="node21" href="$classokw_1_1_se_button_1_1_se_button___e_n___test.html#a3754f555c3ddb1497ad7f4cd5afee7d8" title="Test des Schlüsselwortes VerifyToolTip für den GUI&#45;Adapter SeButton." alt="" coords="66,1469,239,1510"/>
-<area shape="rect" id="node22" href="$classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a15d1be869a8007c4af24bb3d416bcd04" title="Test des Schlüsselwortes VerifyToolTip für den GUI&#45;Adapter SeInputRadio." alt="" coords="45,1534,260,1575"/>
-<area shape="rect" id="node23" href="$classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test.html#a747e004c2a2034259e367ddbd22625a8" title="Test des Schlüsselwortes &quot;VerifyTooltip( FN, ExpVal ) für SeMAXIMIZE." alt="" coords="46,1599,259,1641"/>
+<area shape="rect" id="node20" href="$classokw_1_1_i_frame_1_1_i_frame___e_n___test.html#ab1e815f02e65054073caf3ebc7419b7d" title="Testet die Implementierung des Schlüsselwortes ClickOn( FN ) für Klasse SeBACK ." alt="" coords="60,1389,245,1430"/>
+<area shape="rect" id="node21" href="$classokw_1_1_i_frame_1_1_i_frame___e_n___test.html#a7dd33e09d8a90379b6007fffd3b79684" title="Testet die Implementierung des Schlüsselwortes ClickOn( FN ) für Klasse SeBACK ." alt="" coords="47,1454,258,1495"/>
+<area shape="rect" id="node22" href="$classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#aecb47fe026acbfeffe3a9652edff6d28" title="Test des Schlüsselwortes &quot;VerifyTooltip( FN, ExpVal ) für SeBACK." alt="" coords="5,1519,300,1575"/>
+<area shape="rect" id="node23" href="$classokw_1_1_se_button_1_1_se_button___e_n___test.html#a3754f555c3ddb1497ad7f4cd5afee7d8" title="Test des Schlüsselwortes VerifyToolTip für den GUI&#45;Adapter SeButton." alt="" coords="66,1598,239,1639"/>
+<area shape="rect" id="node24" href="$classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a15d1be869a8007c4af24bb3d416bcd04" title="Test des Schlüsselwortes VerifyToolTip für den GUI&#45;Adapter SeInputRadio." alt="" coords="45,1663,260,1705"/>
+<area shape="rect" id="node25" href="$classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test.html#a747e004c2a2034259e367ddbd22625a8" title="Test des Schlüsselwortes &quot;VerifyTooltip( FN, ExpVal ) für SeMAXIMIZE." alt="" coords="46,1729,259,1770"/>
 </map>

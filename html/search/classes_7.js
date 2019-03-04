@@ -5,5 +5,6 @@ var searchData=
   ['matcher_5flevenshteinmatchtest',['Matcher_LevenshteinMatchTest',['../classokw_1_1core_1_1_matcher___levenshtein_match_test.html',1,'okw::core']]],
   ['matcher_5fregexmatchertest',['Matcher_RegexMatcherTest',['../classokw_1_1core_1_1_matcher___regex_matcher_test.html',1,'okw::core']]],
   ['matcher_5fwildcardmatchertest',['Matcher_WildcardMatcherTest',['../classokw_1_1core_1_1_matcher___wildcard_matcher_test.html',1,'okw::core']]],
-  ['mytestbutton',['myTestbutton',['../classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test_1_1my_testbutton.html',1,'okw::gui::frames::FrmObjDictTest']]]
+  ['mytestbutton',['myTestbutton',['../classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test_1_1my_testbutton.html',1,'okw::gui::frames::FrmObjDictTest']]],
+  ['mytextfield',['myTextfield',['../classokw_1_1gui_1_1adapter_1_1my_textfield.html',1,'okw::gui::adapter']]]
 ];

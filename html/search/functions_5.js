@@ -8,6 +8,8 @@ var searchData=
   ['frmbutton',['FrmButton',['../classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button.html#aa4c8c7ab2ee9a8a14c101e205dd9cacb',1,'okw::gui::frames::SeButton::FrmButton']]],
   ['frmbuttonnotactiv',['FrmButtonNotActiv',['../classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button_not_activ.html#a363dc19762d0086c63f8792f56ccf413',1,'okw::gui::frames::SeButton::FrmButtonNotActiv']]],
   ['frmcurrentobjectwindow',['frmCurrentObjectWindow',['../classokw_1_1gui_1_1frames_1_1frm_current_object_window.html#adb34ad04853d9d29cddfa7d3c204439d',1,'okw::gui::frames::frmCurrentObjectWindow']]],
+  ['frmiframe',['frmIframe',['../classokw_1_1gui_1_1frames_1_1iframe_1_1frm_iframe.html#abaaf6cc660d86f3c2894d3a4b05764b9',1,'okw::gui::frames::iframe::frmIframe']]],
+  ['frmiframewithname',['frmIFrameWithName',['../classokw_1_1gui_1_1frames_1_1iframe_1_1frm_i_frame_with_name.html#ac9384fa2d99e61050c113ab86b4a4072',1,'okw::gui::frames::iframe::frmIFrameWithName']]],
   ['frminputbutton',['frmInputButton',['../classokw_1_1gui_1_1frames_1_1_se_input_button_1_1frm_input_button.html#a2ebb10ff6ce8f5ececf82c11e66efb1d',1,'okw::gui::frames::SeInputButton::frmInputButton']]],
   ['frminputbuttonnotactiv',['frmInputButtonNotActiv',['../classokw_1_1gui_1_1frames_1_1_se_input_button_1_1frm_input_button_not_activ.html#a28d109fb3de4b33e20baedc1f8dc482c',1,'okw::gui::frames::SeInputButton::frmInputButtonNotActiv']]],
   ['frmobjdicttest',['FrmObjDictTest',['../classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test.html#ae2df0b7e37c8c47f94c6c631a595f181',1,'okw::gui::frames::FrmObjDictTest']]],

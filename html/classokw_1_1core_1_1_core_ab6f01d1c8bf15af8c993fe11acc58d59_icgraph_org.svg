@@ -9,29 +9,29 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 177)">
 <title>okw.core.Core.LogPlaceholder</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-177 606,-177 606,4 -4,4"/>
-<!-- Node1032 -->
-<g id="node1" class="node"><title>Node1032</title>
+<!-- Node1037 -->
+<g id="node1" class="node"><title>Node1037</title>
 <g id="a_node1"><a xlink:title="Gibt den Wert des Platzhalters in der Logdatei aus.">
 <polygon fill="#bfbfbf" stroke="black" points="443,-41 443,-60 602,-60 602,-41 443,-41"/>
 <text text-anchor="middle" x="522.5" y="-48" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogPlaceholder</text>
 </a>
 </g>
 </g>
-<!-- Node1033 -->
-<g id="node2" class="node"><title>Node1033</title>
+<!-- Node1038 -->
+<g id="node2" class="node"><title>Node1038</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_e_n.html#a844eabbae811d794a7a7af0ef4335340" target="_top" xlink:title="Gibt den Wert des Platzhalters in der Logdatei aus.">
 <polygon fill="white" stroke="black" points="257,-66 257,-85 407,-85 407,-66 257,-66"/>
 <text text-anchor="middle" x="332" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.LogPlaceholder</text>
 </a>
 </g>
 </g>
-<!-- Node1032&#45;&gt;Node1033 -->
-<g id="edge1" class="edge"><title>Node1032&#45;&gt;Node1033</title>
+<!-- Node1037&#45;&gt;Node1038 -->
+<g id="edge1" class="edge"><title>Node1037&#45;&gt;Node1038</title>
 <path fill="none" stroke="midnightblue" d="M439.627,-61.3585C428.071,-62.8911 416.263,-64.4571 404.914,-65.9623"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="440.245,-64.8072 449.698,-60.0227 439.325,-57.868 440.245,-64.8072"/>
 </g>
-<!-- Node1037 -->
-<g id="node6" class="node"><title>Node1037</title>
+<!-- Node1042 -->
+<g id="node6" class="node"><title>Node1042</title>
 <g id="a_node6"><a xlink:href="classokw_1_1core_1_1_current_object___test.html#a7612d5c86296d54b1122346fd1117e8c" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode LogPlaceholder( &quot;FN&quot; ) im ChildObject.">
 <polygon fill="white" stroke="black" points="266.5,-6 266.5,-47 397.5,-47 397.5,-6 266.5,-6"/>
 <text text-anchor="start" x="274.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -40,13 +40,13 @@
 </a>
 </g>
 </g>
-<!-- Node1032&#45;&gt;Node1037 -->
-<g id="edge5" class="edge"><title>Node1032&#45;&gt;Node1037</title>
+<!-- Node1037&#45;&gt;Node1042 -->
+<g id="edge5" class="edge"><title>Node1037&#45;&gt;Node1042</title>
 <path fill="none" stroke="midnightblue" d="M436.75,-39.7095C423.614,-38.037 410.229,-36.3329 397.631,-34.7289"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="436.367,-43.189 446.729,-40.9801 437.251,-36.245 436.367,-43.189"/>
 </g>
-<!-- Node1034 -->
-<g id="node3" class="node"><title>Node1034</title>
+<!-- Node1039 -->
+<g id="node3" class="node"><title>Node1039</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#acdc4712f5ffcc5aeb5e5e2458ff4546d" target="_top" xlink:title="Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch LogPlaceholder ausgelöst wird,...">
 <polygon fill="white" stroke="black" points="-1.42109e-14,-120.5 -1.42109e-14,-172.5 221,-172.5 221,-120.5 -1.42109e-14,-120.5"/>
 <text text-anchor="start" x="8" y="-160.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWFrameObject</text>
@@ -56,13 +56,13 @@
 </a>
 </g>
 </g>
-<!-- Node1033&#45;&gt;Node1034 -->
-<g id="edge2" class="edge"><title>Node1033&#45;&gt;Node1034</title>
+<!-- Node1038&#45;&gt;Node1039 -->
+<g id="edge2" class="edge"><title>Node1038&#45;&gt;Node1039</title>
 <path fill="none" stroke="midnightblue" d="M292.491,-88.1751C271.39,-95.1022 244.767,-103.813 221,-111.5 211.98,-114.417 202.538,-117.457 193.14,-120.474"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="293.659,-91.4754 302.068,-85.0292 291.475,-84.825 293.659,-91.4754"/>
 </g>
-<!-- Node1035 -->
-<g id="node4" class="node"><title>Node1035</title>
+<!-- Node1040 -->
+<g id="node4" class="node"><title>Node1040</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a9030c505c8d7af535530c31fb0bffbfe" target="_top" xlink:title="Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von LogPlaceholder( FN ) ausgelöst wird.">
 <polygon fill="white" stroke="black" points="1.5,-49.5 1.5,-101.5 219.5,-101.5 219.5,-49.5 1.5,-49.5"/>
 <text text-anchor="start" x="9.5" y="-89.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWFrameObject</text>
@@ -72,13 +72,13 @@
 </a>
 </g>
 </g>
-<!-- Node1033&#45;&gt;Node1035 -->
-<g id="edge3" class="edge"><title>Node1033&#45;&gt;Node1035</title>
+<!-- Node1038&#45;&gt;Node1040 -->
+<g id="edge3" class="edge"><title>Node1038&#45;&gt;Node1040</title>
 <path fill="none" stroke="midnightblue" d="M246.959,-75.5C237.967,-75.5 228.731,-75.5 219.511,-75.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="246.993,-79.0001 256.993,-75.5 246.993,-72.0001 246.993,-79.0001"/>
 </g>
-<!-- Node1036 -->
-<g id="node5" class="node"><title>Node1036</title>
+<!-- Node1041 -->
+<g id="node5" class="node"><title>Node1041</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a67ca223a87eb755e98f5eabe69bb9005" target="_top" xlink:title="Teste das Schlüsselwort LogPlaceholder( FN ) eines SeInputText Prüfen.">
 <polygon fill="white" stroke="black" points="28,-0.5 28,-30.5 193,-30.5 193,-0.5 28,-0.5"/>
 <text text-anchor="start" x="36" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputField.SeInput</text>
@@ -86,8 +86,8 @@
 </a>
 </g>
 </g>
-<!-- Node1033&#45;&gt;Node1036 -->
-<g id="edge4" class="edge"><title>Node1033&#45;&gt;Node1036</title>
+<!-- Node1038&#45;&gt;Node1041 -->
+<g id="edge4" class="edge"><title>Node1038&#45;&gt;Node1041</title>
 <path fill="none" stroke="midnightblue" d="M279.047,-63.334C271.588,-61.2485 264.056,-58.9544 257,-56.5 240.463,-50.7473 237.613,-46.0301 221,-40.5 209.899,-36.8047 197.987,-33.4683 186.253,-30.5256"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="278.196,-66.7296 288.763,-65.9514 280.017,-59.9706 278.196,-66.7296"/>
 </g>

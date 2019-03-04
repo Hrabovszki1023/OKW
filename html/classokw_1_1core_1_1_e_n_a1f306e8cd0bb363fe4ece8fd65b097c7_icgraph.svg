@@ -9,16 +9,16 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 360.5)">
 <title>okw.core.EN.LogValue</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-360.5 364,-360.5 364,4 -4,4"/>
-<!-- Node1076 -->
-<g id="node1" class="node"><title>Node1076</title>
+<!-- Node1082 -->
+<g id="node1" class="node"><title>Node1082</title>
 <g id="a_node1"><a xlink:title="Dokumentiert den Standartwert eines Objekts.">
 <polygon fill="#bfbfbf" stroke="black" points="239,-163 239,-182 360,-182 360,-163 239,-163"/>
 <text text-anchor="middle" x="299.5" y="-170" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.LogValue</text>
 </a>
 </g>
 </g>
-<!-- Node1077 -->
-<g id="node2" class="node"><title>Node1077</title>
+<!-- Node1083 -->
+<g id="node2" class="node"><title>Node1083</title>
 <g id="a_node2"><a xlink:href="classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#a3bcbd88ed2b72f78d53746a78c1f4716" target="_top" xlink:title="Testet das Schlüsselwort LogTooltip( FN, Val ) eines SeBACK Prüfen.">
 <polygon fill="white" stroke="black" points="9.5,-315 9.5,-356 193.5,-356 193.5,-315 9.5,-315"/>
 <text text-anchor="start" x="17.5" y="-344" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeBACK.SeBACK_EN</text>
@@ -27,13 +27,13 @@
 </a>
 </g>
 </g>
-<!-- Node1076&#45;&gt;Node1077 -->
-<g id="edge1" class="edge"><title>Node1076&#45;&gt;Node1077</title>
+<!-- Node1082&#45;&gt;Node1083 -->
+<g id="edge1" class="edge"><title>Node1082&#45;&gt;Node1083</title>
 <path fill="none" stroke="midnightblue" d="M289.87,-191.613C275.821,-220.575 245.268,-275.383 203,-305.5 198.032,-309.04 192.643,-312.167 187.029,-314.928"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="293.205,-192.745 294.29,-182.206 286.87,-189.768 293.205,-192.745"/>
 </g>
-<!-- Node1078 -->
-<g id="node3" class="node"><title>Node1078</title>
+<!-- Node1084 -->
+<g id="node3" class="node"><title>Node1084</title>
 <g id="a_node3"><a xlink:href="classokw_1_1_se_button_1_1_se_button___e_n___test.html#acd5b9cd32ce2490c8224f1962139950b" target="_top" xlink:title="Test des Schlüsselwortes LogTooltip für den GUI&#45;Adapter SeButton.">
 <polygon fill="white" stroke="black" points="15.5,-255 15.5,-296 187.5,-296 187.5,-255 15.5,-255"/>
 <text text-anchor="start" x="23.5" y="-284" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeButton.SeButton</text>
@@ -42,13 +42,13 @@
 </a>
 </g>
 </g>
-<!-- Node1076&#45;&gt;Node1078 -->
-<g id="edge2" class="edge"><title>Node1076&#45;&gt;Node1078</title>
+<!-- Node1082&#45;&gt;Node1084 -->
+<g id="edge2" class="edge"><title>Node1082&#45;&gt;Node1084</title>
 <path fill="none" stroke="midnightblue" d="M281.345,-189.097C263.228,-205.785 233.162,-231.176 203,-246.5 196.929,-249.585 190.48,-252.388 183.894,-254.926"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="283.892,-191.506 288.785,-182.109 279.1,-186.404 283.892,-191.506"/>
 </g>
-<!-- Node1079 -->
-<g id="node4" class="node"><title>Node1079</title>
+<!-- Node1085 -->
+<g id="node4" class="node"><title>Node1085</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___test.html#ade2cc30b3adc3a8444cd0bcdc6b6e1f1" target="_top" xlink:title="Speichert ob ein vorhandenes objekt existiert.">
 <polygon fill="white" stroke="black" points="21,-206.5 21,-236.5 182,-236.5 182,-206.5 21,-206.5"/>
 <text text-anchor="start" x="29" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputCheckbox.SeInput</text>
@@ -56,13 +56,13 @@
 </a>
 </g>
 </g>
-<!-- Node1076&#45;&gt;Node1079 -->
-<g id="edge3" class="edge"><title>Node1076&#45;&gt;Node1079</title>
+<!-- Node1082&#45;&gt;Node1085 -->
+<g id="edge3" class="edge"><title>Node1082&#45;&gt;Node1085</title>
 <path fill="none" stroke="midnightblue" d="M252.705,-184.703C236.968,-188.839 219.23,-193.438 203,-197.5 191.167,-200.461 178.529,-203.543 166.349,-206.472"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="253.944,-187.996 262.721,-182.062 252.159,-181.227 253.944,-187.996"/>
 </g>
-<!-- Node1080 -->
-<g id="node5" class="node"><title>Node1080</title>
+<!-- Node1086 -->
+<g id="node5" class="node"><title>Node1086</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#acebe75b8eefa68a3a9fa519c176784f3" target="_top" xlink:title="Teste das Schlüsselwort LogValue( FN ) eines SeInputText Prüfen.">
 <polygon fill="white" stroke="black" points="33.5,-157.5 33.5,-187.5 169.5,-187.5 169.5,-157.5 33.5,-157.5"/>
 <text text-anchor="start" x="41.5" y="-175.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputField.SeInput</text>
@@ -70,13 +70,13 @@
 </a>
 </g>
 </g>
-<!-- Node1076&#45;&gt;Node1080 -->
-<g id="edge4" class="edge"><title>Node1076&#45;&gt;Node1080</title>
+<!-- Node1082&#45;&gt;Node1086 -->
+<g id="edge4" class="edge"><title>Node1082&#45;&gt;Node1086</title>
 <path fill="none" stroke="midnightblue" d="M228.718,-172.5C209.523,-172.5 188.749,-172.5 169.702,-172.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="228.895,-176 238.895,-172.5 228.895,-169 228.895,-176"/>
 </g>
-<!-- Node1081 -->
-<g id="node6" class="node"><title>Node1081</title>
+<!-- Node1087 -->
+<g id="node6" class="node"><title>Node1087</title>
 <g id="a_node6"><a xlink:href="classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a218a93e4888e4acbaf2b10f2b3302834" target="_top" xlink:title="Test des Schlüsselwortes LogTooltip für den GUI&#45;Adapter SeInputRadio.">
 <polygon fill="white" stroke="black" points="28.5,-108.5 28.5,-138.5 174.5,-138.5 174.5,-108.5 28.5,-108.5"/>
 <text text-anchor="start" x="36.5" y="-126.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputRadio.SeInput</text>
@@ -84,13 +84,13 @@
 </a>
 </g>
 </g>
-<!-- Node1076&#45;&gt;Node1081 -->
-<g id="edge5" class="edge"><title>Node1076&#45;&gt;Node1081</title>
+<!-- Node1082&#45;&gt;Node1087 -->
+<g id="edge5" class="edge"><title>Node1082&#45;&gt;Node1087</title>
 <path fill="none" stroke="midnightblue" d="M250.664,-160.455C235.431,-156.625 218.509,-152.378 203,-148.5 190.092,-145.273 176.25,-141.822 163.091,-138.547"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="249.847,-163.858 260.399,-162.903 251.554,-157.069 249.847,-163.858"/>
 </g>
-<!-- Node1082 -->
-<g id="node7" class="node"><title>Node1082</title>
+<!-- Node1088 -->
+<g id="node7" class="node"><title>Node1088</title>
 <g id="a_node7"><a xlink:href="classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test.html#a656f37792b6fa277684ff02fbcfb36d0" target="_top" xlink:title="Testet das Schlüsselwort LogTooltip( FN, Val ) eines SeMAXIMIZE Prüfen.">
 <polygon fill="white" stroke="black" points="-1.42109e-14,-49 -1.42109e-14,-90 203,-90 203,-49 -1.42109e-14,-49"/>
 <text text-anchor="start" x="8" y="-78" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeMAXIMIZE.SeMAXIMIZE</text>
@@ -99,13 +99,13 @@
 </a>
 </g>
 </g>
-<!-- Node1076&#45;&gt;Node1082 -->
-<g id="edge6" class="edge"><title>Node1076&#45;&gt;Node1082</title>
+<!-- Node1082&#45;&gt;Node1088 -->
+<g id="edge6" class="edge"><title>Node1082&#45;&gt;Node1088</title>
 <path fill="none" stroke="midnightblue" d="M280.98,-155.931C262.777,-139.521 232.829,-114.703 203,-99.5 196.186,-96.0271 188.903,-92.8863 181.488,-90.0621"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="278.742,-158.628 288.475,-162.815 283.477,-153.473 278.742,-158.628"/>
 </g>
-<!-- Node1083 -->
-<g id="node8" class="node"><title>Node1083</title>
+<!-- Node1089 -->
+<g id="node8" class="node"><title>Node1089</title>
 <g id="a_node8"><a xlink:href="classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___test.html#a46eb4cff82c18526c5009f3d0e3078f7" target="_top" xlink:title="Prüft die Methode SeRadioList.LogValue.">
 <polygon fill="white" stroke="black" points="26,-0.5 26,-30.5 177,-30.5 177,-0.5 26,-0.5"/>
 <text text-anchor="start" x="34" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeRadioList.SeRadioList</text>
@@ -113,8 +113,8 @@
 </a>
 </g>
 </g>
-<!-- Node1076&#45;&gt;Node1083 -->
-<g id="edge7" class="edge"><title>Node1076&#45;&gt;Node1083</title>
+<!-- Node1082&#45;&gt;Node1089 -->
+<g id="edge7" class="edge"><title>Node1082&#45;&gt;Node1089</title>
 <path fill="none" stroke="midnightblue" d="M290.273,-153.521C276.587,-124.284 246.3,-68.5697 203,-39.5 195.181,-34.2507 186.342,-30.145 177.231,-26.9347"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="287.248,-155.327 294.558,-162.997 293.627,-152.443 287.248,-155.327"/>
 </g>

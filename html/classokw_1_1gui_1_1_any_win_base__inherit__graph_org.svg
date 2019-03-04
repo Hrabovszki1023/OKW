@@ -79,9 +79,9 @@
 <path fill="none" stroke="midnightblue" d="M2459.92,-1352.1C2256.17,-1290.55 1739.46,-1134.45 1557.56,-1079.5"/>
 <polygon fill="none" stroke="midnightblue" points="2459.09,-1355.51 2469.68,-1355.05 2461.12,-1348.81 2459.09,-1355.51"/>
 </g>
-<!-- Node29 -->
-<g id="node30" class="node"><title>Node29</title>
-<g id="a_node30"><a xlink:href="classokw_1_1gui_1_1_any_window.html" target="_top" xlink:title="Description of AnyWin.">
+<!-- Node30 -->
+<g id="node31" class="node"><title>Node30</title>
+<g id="a_node31"><a xlink:href="classokw_1_1gui_1_1_any_window.html" target="_top" xlink:title="Description of AnyWin.">
 <polygon fill="white" stroke="black" points="3448,-970 3448,-1148 3582,-1148 3582,-970 3448,-970"/>
 <text text-anchor="middle" x="3515" y="-1136" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWindow</text>
 <polyline fill="none" stroke="black" points="3448,-1129 3582,-1129 "/>
@@ -102,8 +102,8 @@
 </a>
 </g>
 </g>
-<!-- Node0&#45;&gt;Node29 -->
-<g id="edge29" class="edge"><title>Node0&#45;&gt;Node29</title>
+<!-- Node0&#45;&gt;Node30 -->
+<g id="edge30" class="edge"><title>Node0&#45;&gt;Node30</title>
 <path fill="none" stroke="midnightblue" d="M2627.82,-1350.09C2817.3,-1288.14 3275.52,-1138.31 3447.91,-1081.94"/>
 <polygon fill="none" stroke="midnightblue" points="2626.6,-1346.81 2618.18,-1353.24 2628.77,-1353.46 2626.6,-1346.81"/>
 </g>
@@ -276,27 +276,27 @@
 <text text-anchor="start" x="1351" y="-808.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LM</text>
 <text text-anchor="start" x="1351" y="-797.5" font-family="Helvetica,sans-Serif" font-size="10.00"># iframeID</text>
 <polyline fill="none" stroke="black" points="1343,-790.5 1483,-790.5 "/>
-<text text-anchor="start" x="1351" y="-778.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIframeID()</text>
-<text text-anchor="start" x="1351" y="-767.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setIframeID()</text>
+<text text-anchor="start" x="1351" y="-778.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get_iframeID()</text>
+<text text-anchor="start" x="1351" y="-767.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ set_iframeID()</text>
 <text text-anchor="start" x="1351" y="-756.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyChildWindow()</text>
-<text text-anchor="start" x="1351" y="-745.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyChildWindow()</text>
-<text text-anchor="start" x="1351" y="-734.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
-<text text-anchor="start" x="1351" y="-723.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="1351" y="-712.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="1351" y="-701.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
-<text text-anchor="start" x="1351" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="1351" y="-679.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
-<text text-anchor="start" x="1351" y="-668.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
-<text text-anchor="start" x="1351" y="-657.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="1351" y="-646.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="1351" y="-635.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="1351" y="-624.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="1351" y="-613.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="1351" y="-602.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="1351" y="-591.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPlaceholder()</text>
-<text text-anchor="start" x="1351" y="-580.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="1351" y="-569.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="1351" y="-558.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 26 mehr ...</text>
+<text text-anchor="start" x="1351" y="-745.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
+<text text-anchor="start" x="1351" y="-734.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="1351" y="-723.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="1351" y="-712.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
+<text text-anchor="start" x="1351" y="-701.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="1351" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
+<text text-anchor="start" x="1351" y="-679.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
+<text text-anchor="start" x="1351" y="-668.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="1351" y="-657.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="1351" y="-646.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="1351" y="-635.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="1351" y="-624.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="1351" y="-613.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="1351" y="-602.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPlaceholder()</text>
+<text text-anchor="start" x="1351" y="-591.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="1351" y="-580.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="1351" y="-569.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Me()</text>
+<text text-anchor="start" x="1351" y="-558.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 25 mehr ...</text>
 </a>
 </g>
 </g>
@@ -305,9 +305,9 @@
 <path fill="none" stroke="midnightblue" d="M1459.33,-910.489C1455.65,-894.37 1451.9,-877.929 1448.2,-861.732"/>
 <polygon fill="none" stroke="midnightblue" points="1455.97,-911.509 1461.61,-920.479 1462.8,-909.951 1455.97,-911.509"/>
 </g>
-<!-- Node24 -->
-<g id="node25" class="node"><title>Node24</title>
-<g id="a_node25"><a xlink:href="classokw_1_1gui_1_1adapter_1_1_test___no_method___object.html" target="_top" xlink:title="Dieses GUI&#45;Objekt enthält keine OKW&#45;Methoden und dient damit der Überprüfung des &quot;OKWFrameObjectMetho...">
+<!-- Node25 -->
+<g id="node26" class="node"><title>Node25</title>
+<g id="a_node26"><a xlink:href="classokw_1_1gui_1_1adapter_1_1_test___no_method___object.html" target="_top" xlink:title="Dieses GUI&#45;Objekt enthält keine OKW&#45;Methoden und dient damit der Überprüfung des &quot;OKWFrameObjectMetho...">
 <polygon fill="white" stroke="black" points="1501.5,-672.5 1501.5,-740.5 1646.5,-740.5 1646.5,-672.5 1501.5,-672.5"/>
 <text text-anchor="start" x="1509.5" y="-728.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.Test</text>
 <text text-anchor="middle" x="1574" y="-717.5" font-family="Helvetica,sans-Serif" font-size="10.00">_NoMethod_Object</text>
@@ -318,14 +318,14 @@
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node24 -->
-<g id="edge24" class="edge"><title>Node1&#45;&gt;Node24</title>
+<!-- Node1&#45;&gt;Node25 -->
+<g id="edge25" class="edge"><title>Node1&#45;&gt;Node25</title>
 <path fill="none" stroke="midnightblue" d="M1527.1,-910.435C1541.63,-847.557 1557.29,-779.801 1566.34,-740.654"/>
 <polygon fill="none" stroke="midnightblue" points="1523.62,-909.948 1524.78,-920.479 1530.44,-911.524 1523.62,-909.948"/>
 </g>
-<!-- Node25 -->
-<g id="node26" class="node"><title>Node25</title>
-<g id="a_node26"><a xlink:href="classokw_1_1gui_1_1adapter_1_1_test___push_button.html" target="_top" xlink:title=" ">
+<!-- Node26 -->
+<g id="node27" class="node"><title>Node26</title>
+<g id="a_node27"><a xlink:href="classokw_1_1gui_1_1adapter_1_1_test___push_button.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="1664.5,-634 1664.5,-779 1807.5,-779 1807.5,-634 1664.5,-634"/>
 <text text-anchor="start" x="1672.5" y="-767" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.Test</text>
 <text text-anchor="middle" x="1736" y="-756" font-family="Helvetica,sans-Serif" font-size="10.00">_PushButton</text>
@@ -343,14 +343,14 @@
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node25 -->
-<g id="edge25" class="edge"><title>Node1&#45;&gt;Node25</title>
+<!-- Node1&#45;&gt;Node26 -->
+<g id="edge26" class="edge"><title>Node1&#45;&gt;Node26</title>
 <path fill="none" stroke="midnightblue" d="M1565.06,-990.869C1595.33,-960.217 1629.38,-922.261 1655,-884 1676.66,-851.642 1695.27,-812.554 1709.16,-779.396"/>
 <polygon fill="none" stroke="midnightblue" points="1562.43,-988.543 1557.86,-998.097 1567.39,-993.484 1562.43,-988.543"/>
 </g>
-<!-- Node27 -->
-<g id="node28" class="node"><title>Node27</title>
-<g id="a_node28"><a xlink:href="classokw_1_1gui_1_1adapter_1_1_test___text_field.html" target="_top" xlink:title=" ">
+<!-- Node28 -->
+<g id="node29" class="node"><title>Node28</title>
+<g id="a_node29"><a xlink:href="classokw_1_1gui_1_1adapter_1_1_test___text_field.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="1825.5,-612 1825.5,-801 1968.5,-801 1968.5,-612 1825.5,-612"/>
 <text text-anchor="start" x="1833.5" y="-789" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.Test</text>
 <text text-anchor="middle" x="1897" y="-778" font-family="Helvetica,sans-Serif" font-size="10.00">_TextField</text>
@@ -372,14 +372,14 @@
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node27 -->
-<g id="edge27" class="edge"><title>Node1&#45;&gt;Node27</title>
+<!-- Node1&#45;&gt;Node28 -->
+<g id="edge28" class="edge"><title>Node1&#45;&gt;Node28</title>
 <path fill="none" stroke="midnightblue" d="M1566.99,-1033.85C1638.75,-1007.16 1746.66,-957.912 1816,-884 1837.91,-860.64 1854.72,-830.312 1867.19,-801.404"/>
 <polygon fill="none" stroke="midnightblue" points="1565.73,-1030.59 1557.55,-1037.31 1568.14,-1037.16 1565.73,-1030.59"/>
 </g>
-<!-- Node28 -->
-<g id="node29" class="node"><title>Node28</title>
-<g id="a_node29"><a xlink:href="classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test_1_1my_testbutton.html" target="_top" xlink:title=" ">
+<!-- Node29 -->
+<g id="node30" class="node"><title>Node29</title>
+<g id="a_node30"><a xlink:href="classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test_1_1my_testbutton.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="1986.5,-667 1986.5,-746 2129.5,-746 2129.5,-667 1986.5,-667"/>
 <text text-anchor="start" x="1994.5" y="-734" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.FrmObjDict</text>
 <text text-anchor="middle" x="2058" y="-723" font-family="Helvetica,sans-Serif" font-size="10.00">Test.myTestbutton</text>
@@ -391,200 +391,192 @@
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node28 -->
-<g id="edge28" class="edge"><title>Node1&#45;&gt;Node28</title>
+<!-- Node1&#45;&gt;Node29 -->
+<g id="edge29" class="edge"><title>Node1&#45;&gt;Node29</title>
 <path fill="none" stroke="midnightblue" d="M1567.69,-1049.34C1671.52,-1033.67 1859.88,-991.547 1977,-884 2017.35,-846.943 2039.11,-785.815 2049.63,-746.105"/>
 <polygon fill="none" stroke="midnightblue" points="1566.99,-1045.91 1557.6,-1050.82 1568,-1052.83 1566.99,-1045.91"/>
 </g>
 <!-- Node7 -->
 <g id="node8" class="node"><title>Node7</title>
 <g id="a_node8"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;button&gt;&#45;Button, der mit Selenium angsteuert wird.">
-<polygon fill="white" stroke="black" points="0,-347.5 0,-448.5 140,-448.5 140,-347.5 0,-347.5"/>
-<text text-anchor="start" x="8" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="70" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeButton</text>
-<polyline fill="none" stroke="black" points="0,-418.5 140,-418.5 "/>
-<text text-anchor="middle" x="70" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="0,-399.5 140,-399.5 "/>
-<text text-anchor="start" x="8" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeButton()</text>
-<text text-anchor="start" x="8" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeButton()</text>
-<text text-anchor="start" x="8" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="8" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<polygon fill="white" stroke="black" points="0,-353 0,-443 140,-443 140,-353 0,-353"/>
+<text text-anchor="start" x="8" y="-431" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="70" y="-420" font-family="Helvetica,sans-Serif" font-size="10.00">SeButton</text>
+<polyline fill="none" stroke="black" points="0,-413 140,-413 "/>
+<text text-anchor="middle" x="70" y="-401" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="0,-394 140,-394 "/>
+<text text-anchor="start" x="8" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeButton()</text>
+<text text-anchor="start" x="8" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="8" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge7" class="edge"><title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M1351.22,-544.077C1345.65,-538.475 1339.59,-533.395 1333,-529 1223.47,-456.013 267.448,-550.384 149,-493 129.048,-483.334 112.269,-466.008 99.3776,-448.841"/>
+<path fill="none" stroke="midnightblue" d="M1351.22,-544.077C1345.65,-538.475 1339.59,-533.395 1333,-529 1223.47,-456.013 267.448,-550.384 149,-493 126.938,-482.312 108.755,-462.257 95.4184,-443.408"/>
 <polygon fill="none" stroke="midnightblue" points="1348.65,-546.46 1358.01,-551.44 1353.8,-541.715 1348.65,-546.46"/>
 </g>
 <!-- Node8 -->
 <g id="node9" class="node"><title>Node8</title>
 <g id="a_node9"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html" target="_top" xlink:title="Diese Klasse representiert einen.">
-<polygon fill="white" stroke="black" points="158,-347.5 158,-448.5 298,-448.5 298,-347.5 158,-347.5"/>
-<text text-anchor="start" x="166" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="228" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeImage</text>
-<polyline fill="none" stroke="black" points="158,-418.5 298,-418.5 "/>
-<text text-anchor="middle" x="228" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="158,-399.5 298,-399.5 "/>
-<text text-anchor="start" x="166" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeImage()</text>
-<text text-anchor="start" x="166" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeImage()</text>
-<text text-anchor="start" x="166" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="166" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<polygon fill="white" stroke="black" points="158,-353 158,-443 298,-443 298,-353 158,-353"/>
+<text text-anchor="start" x="166" y="-431" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="228" y="-420" font-family="Helvetica,sans-Serif" font-size="10.00">SeImage</text>
+<polyline fill="none" stroke="black" points="158,-413 298,-413 "/>
+<text text-anchor="middle" x="228" y="-401" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="158,-394 298,-394 "/>
+<text text-anchor="start" x="166" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeImage()</text>
+<text text-anchor="start" x="166" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="166" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node8 -->
 <g id="edge8" class="edge"><title>Node6&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M1351.19,-544.115C1345.63,-538.503 1339.58,-533.41 1333,-529 1238.22,-465.521 409.541,-542.974 307,-493 287.071,-483.287 270.296,-465.953 257.402,-448.792"/>
+<path fill="none" stroke="midnightblue" d="M1351.19,-544.115C1345.63,-538.503 1339.58,-533.41 1333,-529 1238.22,-465.521 409.541,-542.974 307,-493 284.963,-482.26 266.783,-462.2 253.441,-443.361"/>
 <polygon fill="none" stroke="midnightblue" points="1348.63,-546.497 1357.97,-551.49 1353.78,-541.759 1348.63,-546.497"/>
 </g>
 <!-- Node9 -->
 <g id="node10" class="node"><title>Node9</title>
 <g id="a_node10"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;input type=&quot;button&quot;&gt;&#45;Tag, der mit Selenium angsteuert wird.">
-<polygon fill="white" stroke="black" points="316,-347.5 316,-448.5 456,-448.5 456,-347.5 316,-347.5"/>
-<text text-anchor="start" x="324" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="386" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputButton</text>
-<polyline fill="none" stroke="black" points="316,-418.5 456,-418.5 "/>
-<text text-anchor="middle" x="386" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="316,-399.5 456,-399.5 "/>
-<text text-anchor="start" x="324" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputButton()</text>
-<text text-anchor="start" x="324" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputButton()</text>
-<text text-anchor="start" x="324" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="324" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<polygon fill="white" stroke="black" points="316,-353 316,-443 456,-443 456,-353 316,-353"/>
+<text text-anchor="start" x="324" y="-431" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="386" y="-420" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputButton</text>
+<polyline fill="none" stroke="black" points="316,-413 456,-413 "/>
+<text text-anchor="middle" x="386" y="-401" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="316,-394 456,-394 "/>
+<text text-anchor="start" x="324" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputButton()</text>
+<text text-anchor="start" x="324" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="324" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node9 -->
 <g id="edge9" class="edge"><title>Node6&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M1350.54,-543.548C1345.16,-538.165 1339.33,-533.268 1333,-529 1252.97,-475.028 551.636,-535.565 465,-493 445.102,-483.224 428.333,-465.877 415.434,-448.724"/>
+<path fill="none" stroke="midnightblue" d="M1350.54,-543.548C1345.16,-538.165 1339.33,-533.268 1333,-529 1252.97,-475.028 551.636,-535.565 465,-493 442.997,-482.19 424.82,-462.123 411.472,-443.297"/>
 <polygon fill="none" stroke="midnightblue" points="1348.24,-546.211 1357.6,-551.174 1353.38,-541.457 1348.24,-546.211"/>
 </g>
 <!-- Node10 -->
 <g id="node11" class="node"><title>Node10</title>
 <g id="a_node11"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;input type=&quot;checkbox&quot;&gt;&#45;Tag, der mit Selenium angsteuert wird.">
-<polygon fill="white" stroke="black" points="474,-325.5 474,-470.5 614,-470.5 614,-325.5 474,-325.5"/>
-<text text-anchor="start" x="482" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="544" y="-447.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputCheckbox</text>
-<polyline fill="none" stroke="black" points="474,-440.5 614,-440.5 "/>
-<text text-anchor="start" x="482" y="-428.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myOKW_Const</text>
-<polyline fill="none" stroke="black" points="474,-421.5 614,-421.5 "/>
-<text text-anchor="start" x="482" y="-409.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputCheckbox()</text>
-<text text-anchor="start" x="482" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputCheckbox()</text>
-<text text-anchor="start" x="482" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsSelected()</text>
-<text text-anchor="start" x="482" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ checking()</text>
-<text text-anchor="start" x="482" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="482" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
-<text text-anchor="start" x="482" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Select()</text>
-<text text-anchor="start" x="482" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ unchecking()</text>
+<polygon fill="white" stroke="black" points="474,-331 474,-465 614,-465 614,-331 474,-331"/>
+<text text-anchor="start" x="482" y="-453" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="544" y="-442" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputCheckbox</text>
+<polyline fill="none" stroke="black" points="474,-435 614,-435 "/>
+<text text-anchor="start" x="482" y="-423" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; myOKW_Const</text>
+<polyline fill="none" stroke="black" points="474,-416 614,-416 "/>
+<text text-anchor="start" x="482" y="-404" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputCheckbox()</text>
+<text text-anchor="start" x="482" y="-393" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsSelected()</text>
+<text text-anchor="start" x="482" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00">+ checking()</text>
+<text text-anchor="start" x="482" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="482" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
+<text text-anchor="start" x="482" y="-349" font-family="Helvetica,sans-Serif" font-size="10.00">+ Select()</text>
+<text text-anchor="start" x="482" y="-338" font-family="Helvetica,sans-Serif" font-size="10.00">+ unchecking()</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node10 -->
 <g id="edge10" class="edge"><title>Node6&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M1350.49,-543.62C1345.13,-538.218 1339.31,-533.297 1333,-529 1202.43,-440.065 764.469,-563.315 623,-493 611.928,-487.497 601.818,-479.662 592.802,-470.835"/>
+<path fill="none" stroke="midnightblue" d="M1350.49,-543.62C1345.13,-538.218 1339.31,-533.297 1333,-529 1202.43,-440.065 764.469,-563.315 623,-493 609.637,-486.358 597.676,-476.321 587.348,-465.241"/>
 <polygon fill="none" stroke="midnightblue" points="1348.19,-546.282 1357.53,-551.27 1353.34,-541.542 1348.19,-546.282"/>
 </g>
 <!-- Node11 -->
 <g id="node12" class="node"><title>Node11</title>
 <g id="a_node12"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html" target="_top" xlink:title="Diese Klasse representiert eine &lt;input type=&quot;radio&quot;&gt;&#45;Tag, der mit Selenium angsteuert wird.">
-<polygon fill="white" stroke="black" points="632,-320 632,-476 772,-476 772,-320 632,-320"/>
-<text text-anchor="start" x="640" y="-464" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="702" y="-453" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputRadio</text>
-<polyline fill="none" stroke="black" points="632,-446 772,-446 "/>
-<text text-anchor="middle" x="702" y="-434" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="632,-427 772,-427 "/>
-<text text-anchor="start" x="640" y="-415" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputRadio()</text>
-<text text-anchor="start" x="640" y="-404" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputRadio()</text>
-<text text-anchor="start" x="640" y="-393" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="640" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsSelected()</text>
-<text text-anchor="start" x="640" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="640" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
-<text text-anchor="start" x="640" y="-349" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
-<text text-anchor="start" x="640" y="-338" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetFocus()</text>
-<text text-anchor="start" x="640" y="-327" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKey()</text>
+<polygon fill="white" stroke="black" points="632,-325.5 632,-470.5 772,-470.5 772,-325.5 632,-325.5"/>
+<text text-anchor="start" x="640" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="702" y="-447.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputRadio</text>
+<polyline fill="none" stroke="black" points="632,-440.5 772,-440.5 "/>
+<text text-anchor="middle" x="702" y="-428.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="632,-421.5 772,-421.5 "/>
+<text text-anchor="start" x="640" y="-409.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputRadio()</text>
+<text text-anchor="start" x="640" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="640" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsSelected()</text>
+<text text-anchor="start" x="640" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="640" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
+<text text-anchor="start" x="640" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
+<text text-anchor="start" x="640" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetFocus()</text>
+<text text-anchor="start" x="640" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKey()</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node11 -->
 <g id="edge11" class="edge"><title>Node6&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M1350.42,-543.733C1345.07,-538.301 1339.28,-533.342 1333,-529 1231.9,-459.065 890.681,-548.508 781,-493 772.251,-488.572 764.095,-482.7 756.602,-476.047"/>
+<path fill="none" stroke="midnightblue" d="M1350.42,-543.733C1345.07,-538.301 1339.28,-533.342 1333,-529 1231.9,-459.065 890.681,-548.508 781,-493 769.968,-487.417 759.88,-479.539 750.874,-470.692"/>
 <polygon fill="none" stroke="midnightblue" points="1348.1,-546.393 1357.43,-551.421 1353.27,-541.675 1348.1,-546.393"/>
 </g>
 <!-- Node12 -->
 <g id="node13" class="node"><title>Node12</title>
 <g id="a_node13"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html" target="_top" xlink:title="Diese Klasse representiert ein HTML&#45;Textfeld, die mit Selenium angsteuert wird.">
-<polygon fill="white" stroke="black" points="790,-325.5 790,-470.5 930,-470.5 930,-325.5 790,-325.5"/>
-<text text-anchor="start" x="798" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="860" y="-447.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputText</text>
-<polyline fill="none" stroke="black" points="790,-440.5 930,-440.5 "/>
-<text text-anchor="middle" x="860" y="-428.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="790,-421.5 930,-421.5 "/>
-<text text-anchor="start" x="798" y="-409.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputText()</text>
-<text text-anchor="start" x="798" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputText()</text>
-<text text-anchor="start" x="798" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="798" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getMaxLength()</text>
-<text text-anchor="start" x="798" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getPlaceholder()</text>
-<text text-anchor="start" x="798" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="798" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ set__Attribute()</text>
-<text text-anchor="start" x="798" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
+<polygon fill="white" stroke="black" points="790,-331 790,-465 930,-465 930,-331 790,-331"/>
+<text text-anchor="start" x="798" y="-453" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="860" y="-442" font-family="Helvetica,sans-Serif" font-size="10.00">SeInputText</text>
+<polyline fill="none" stroke="black" points="790,-435 930,-435 "/>
+<text text-anchor="middle" x="860" y="-423" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="790,-416 930,-416 "/>
+<text text-anchor="start" x="798" y="-404" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeInputText()</text>
+<text text-anchor="start" x="798" y="-393" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="798" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00">+ getMaxLength()</text>
+<text text-anchor="start" x="798" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00">+ getPlaceholder()</text>
+<text text-anchor="start" x="798" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="798" y="-349" font-family="Helvetica,sans-Serif" font-size="10.00">+ set__Attribute()</text>
+<text text-anchor="start" x="798" y="-338" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node12 -->
 <g id="edge12" class="edge"><title>Node6&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M1350.03,-543.687C1344.79,-538.297 1339.13,-533.357 1333,-529 1261.35,-478.046 1016.92,-533.717 939,-493 928.231,-487.373 918.34,-479.591 909.472,-470.894"/>
+<path fill="none" stroke="midnightblue" d="M1350.03,-543.687C1344.79,-538.297 1339.13,-533.357 1333,-529 1261.35,-478.046 1016.92,-533.717 939,-493 925.963,-486.188 914.215,-476.219 904.008,-465.29"/>
 <polygon fill="none" stroke="midnightblue" points="1347.61,-546.231 1356.92,-551.302 1352.81,-541.536 1347.61,-546.231"/>
-</g>
-<!-- Node13 -->
-<g id="node14" class="node"><title>Node13</title>
-<g id="a_node14"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html" target="_top" xlink:title="Diese Klasse representiert einen &#45;Tag (Link), der mit Selenium angsteuert wird.">
-<polygon fill="white" stroke="black" points="948,-342 948,-454 1088,-454 1088,-342 948,-342"/>
-<text text-anchor="start" x="956" y="-442" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="1018" y="-431" font-family="Helvetica,sans-Serif" font-size="10.00">SeLink</text>
-<polyline fill="none" stroke="black" points="948,-424 1088,-424 "/>
-<text text-anchor="middle" x="1018" y="-412" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="948,-405 1088,-405 "/>
-<text text-anchor="start" x="956" y="-393" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeLink()</text>
-<text text-anchor="start" x="956" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeLink()</text>
-<text text-anchor="start" x="956" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="956" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="956" y="-349" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKey()</text>
-</a>
-</g>
-</g>
-<!-- Node6&#45;&gt;Node13 -->
-<g id="edge13" class="edge"><title>Node6&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M1348.88,-543.273C1343.96,-538.094 1338.68,-533.299 1333,-529 1248.43,-464.932 1189.52,-544.948 1097,-493 1080.27,-483.607 1065.54,-469.2 1053.47,-454.466"/>
-<polygon fill="none" stroke="midnightblue" points="1346.58,-545.954 1355.82,-551.123 1351.82,-541.315 1346.58,-545.954"/>
 </g>
 <!-- Node14 -->
 <g id="node15" class="node"><title>Node14</title>
-<g id="a_node15"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;select&gt;&#45;Tag, der mit Selenium angsteuert wird.">
-<polygon fill="white" stroke="black" points="1106,-325.5 1106,-470.5 1246,-470.5 1246,-325.5 1106,-325.5"/>
-<text text-anchor="start" x="1114" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="1176" y="-447.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeRadioList</text>
-<polyline fill="none" stroke="black" points="1106,-440.5 1246,-440.5 "/>
-<text text-anchor="start" x="1114" y="-428.5" font-family="Helvetica,sans-Serif" font-size="10.00">~ CO</text>
-<text text-anchor="start" x="1114" y="-417.5" font-family="Helvetica,sans-Serif" font-size="10.00">~ FOD</text>
-<text text-anchor="start" x="1114" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00">~ myRadioButtonFNs</text>
-<polyline fill="none" stroke="black" points="1106,-399.5 1246,-399.5 "/>
-<text text-anchor="start" x="1114" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeRadioList()</text>
-<text text-anchor="start" x="1114" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeRadioList()</text>
-<text text-anchor="start" x="1114" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
-<text text-anchor="start" x="1114" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Select()</text>
-<text text-anchor="start" x="1114" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="1114" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
+<g id="a_node15"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html" target="_top" xlink:title="Diese Klasse representiert einen &#45;Tag (Link), der mit Selenium angsteuert wird.">
+<polygon fill="white" stroke="black" points="948,-347.5 948,-448.5 1088,-448.5 1088,-347.5 948,-347.5"/>
+<text text-anchor="start" x="956" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="1018" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeLink</text>
+<polyline fill="none" stroke="black" points="948,-418.5 1088,-418.5 "/>
+<text text-anchor="middle" x="1018" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="948,-399.5 1088,-399.5 "/>
+<text text-anchor="start" x="956" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeLink()</text>
+<text text-anchor="start" x="956" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="956" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="956" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKey()</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node14 -->
 <g id="edge14" class="edge"><title>Node6&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M1345.65,-543.197C1341.65,-538.219 1337.43,-533.465 1333,-529 1306.09,-501.91 1285.35,-516.172 1255,-493 1246.36,-486.402 1238.03,-478.702 1230.22,-470.601"/>
+<path fill="none" stroke="midnightblue" d="M1348.88,-543.273C1343.96,-538.094 1338.68,-533.299 1333,-529 1248.43,-464.932 1189.52,-544.948 1097,-493 1078.04,-482.354 1061.65,-465.269 1048.79,-448.566"/>
+<polygon fill="none" stroke="midnightblue" points="1346.58,-545.954 1355.82,-551.123 1351.82,-541.315 1346.58,-545.954"/>
+</g>
+<!-- Node15 -->
+<g id="node16" class="node"><title>Node15</title>
+<g id="a_node16"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;select&gt;&#45;Tag, der mit Selenium angsteuert wird.">
+<polygon fill="white" stroke="black" points="1106,-331 1106,-465 1246,-465 1246,-331 1106,-331"/>
+<text text-anchor="start" x="1114" y="-453" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="1176" y="-442" font-family="Helvetica,sans-Serif" font-size="10.00">SeRadioList</text>
+<polyline fill="none" stroke="black" points="1106,-435 1246,-435 "/>
+<text text-anchor="start" x="1114" y="-423" font-family="Helvetica,sans-Serif" font-size="10.00">~ CO</text>
+<text text-anchor="start" x="1114" y="-412" font-family="Helvetica,sans-Serif" font-size="10.00">~ FOD</text>
+<text text-anchor="start" x="1114" y="-401" font-family="Helvetica,sans-Serif" font-size="10.00">~ myRadioButtonFNs</text>
+<polyline fill="none" stroke="black" points="1106,-394 1246,-394 "/>
+<text text-anchor="start" x="1114" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeRadioList()</text>
+<text text-anchor="start" x="1114" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
+<text text-anchor="start" x="1114" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00">+ Select()</text>
+<text text-anchor="start" x="1114" y="-349" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="1114" y="-338" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
+</a>
+</g>
+</g>
+<!-- Node6&#45;&gt;Node15 -->
+<g id="edge15" class="edge"><title>Node6&#45;&gt;Node15</title>
+<path fill="none" stroke="midnightblue" d="M1345.65,-543.197C1341.65,-538.219 1337.43,-533.465 1333,-529 1306.09,-501.91 1285.35,-516.172 1255,-493 1244.5,-484.979 1234.45,-475.329 1225.25,-465.311"/>
 <polygon fill="none" stroke="midnightblue" points="1342.91,-545.375 1351.76,-551.194 1348.47,-541.123 1342.91,-545.375"/>
 </g>
-<!-- Node16 -->
-<g id="node17" class="node"><title>Node16</title>
-<g id="a_node17"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;select&gt;&#45;Tag, der mit Selenium angsteuert wird.">
+<!-- Node17 -->
+<g id="node18" class="node"><title>Node17</title>
+<g id="a_node18"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html" target="_top" xlink:title="Diese Klasse representiert einen &lt;select&gt;&#45;Tag, der mit Selenium angsteuert wird.">
 <polygon fill="white" stroke="black" points="1264,-347.5 1264,-448.5 1404,-448.5 1404,-347.5 1264,-347.5"/>
 <text text-anchor="start" x="1272" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="1334" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeSelect</text>
@@ -598,14 +590,14 @@
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node16 -->
-<g id="edge16" class="edge"><title>Node6&#45;&gt;Node16</title>
+<!-- Node6&#45;&gt;Node17 -->
+<g id="edge17" class="edge"><title>Node6&#45;&gt;Node17</title>
 <path fill="none" stroke="midnightblue" d="M1370.68,-541.315C1361.96,-507.472 1353.42,-474.344 1346.78,-448.577"/>
 <polygon fill="none" stroke="midnightblue" points="1367.38,-542.542 1373.27,-551.352 1374.16,-540.795 1367.38,-542.542"/>
 </g>
-<!-- Node17 -->
-<g id="node18" class="node"><title>Node17</title>
-<g id="a_node18"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_table.html" target="_top" xlink:title="TODO: Description of SeTable.">
+<!-- Node18 -->
+<g id="node19" class="node"><title>Node18</title>
+<g id="a_node19"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_table.html" target="_top" xlink:title="TODO: Description of SeTable.">
 <polygon fill="white" stroke="black" points="1422,-364 1422,-432 1562,-432 1562,-364 1422,-364"/>
 <text text-anchor="start" x="1430" y="-420" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="1492" y="-409" font-family="Helvetica,sans-Serif" font-size="10.00">SeTable</text>
@@ -616,39 +608,38 @@
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node17 -->
-<g id="edge17" class="edge"><title>Node6&#45;&gt;Node17</title>
+<!-- Node6&#45;&gt;Node18 -->
+<g id="edge18" class="edge"><title>Node6&#45;&gt;Node18</title>
 <path fill="none" stroke="midnightblue" d="M1455.25,-541.599C1465.99,-499.922 1476.46,-459.301 1483.46,-432.145"/>
 <polygon fill="none" stroke="midnightblue" points="1451.84,-540.795 1452.73,-551.352 1458.62,-542.542 1451.84,-540.795"/>
 </g>
-<!-- Node18 -->
-<g id="node19" class="node"><title>Node18</title>
-<g id="a_node19"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html" target="_top" xlink:title="Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld .">
-<polygon fill="white" stroke="black" points="1580,-325.5 1580,-470.5 1720,-470.5 1720,-325.5 1580,-325.5"/>
-<text text-anchor="start" x="1588" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
-<text text-anchor="middle" x="1650" y="-447.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeTextarea</text>
-<polyline fill="none" stroke="black" points="1580,-440.5 1720,-440.5 "/>
-<text text-anchor="middle" x="1650" y="-428.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="1580,-421.5 1720,-421.5 "/>
-<text text-anchor="start" x="1588" y="-409.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeTextarea()</text>
-<text text-anchor="start" x="1588" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeTextarea()</text>
-<text text-anchor="start" x="1588" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ igetValue()</text>
-<text text-anchor="start" x="1588" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setAttribute()</text>
-<text text-anchor="start" x="1588" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getMaxLength()</text>
-<text text-anchor="start" x="1588" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getPlaceholder()</text>
-<text text-anchor="start" x="1588" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="1588" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
+<!-- Node19 -->
+<g id="node20" class="node"><title>Node19</title>
+<g id="a_node20"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html" target="_top" xlink:title="Diese Klasse implmenetiert die Methoden der IOKW_SimpleDataObj für ein Texfeld .">
+<polygon fill="white" stroke="black" points="1580,-331 1580,-465 1720,-465 1720,-331 1580,-331"/>
+<text text-anchor="start" x="1588" y="-453" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
+<text text-anchor="middle" x="1650" y="-442" font-family="Helvetica,sans-Serif" font-size="10.00">SeTextarea</text>
+<polyline fill="none" stroke="black" points="1580,-435 1720,-435 "/>
+<text text-anchor="middle" x="1650" y="-423" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="1580,-416 1720,-416 "/>
+<text text-anchor="start" x="1588" y="-404" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeTextarea()</text>
+<text text-anchor="start" x="1588" y="-393" font-family="Helvetica,sans-Serif" font-size="10.00">+ igetValue()</text>
+<text text-anchor="start" x="1588" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00">+ setAttribute()</text>
+<text text-anchor="start" x="1588" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00">+ getMaxLength()</text>
+<text text-anchor="start" x="1588" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00">+ getPlaceholder()</text>
+<text text-anchor="start" x="1588" y="-349" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="1588" y="-338" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node18 -->
-<g id="edge18" class="edge"><title>Node6&#45;&gt;Node18</title>
-<path fill="none" stroke="midnightblue" d="M1479.39,-543.172C1483.38,-538.201 1487.58,-533.455 1492,-529 1519.19,-501.625 1540.28,-516.343 1571,-493 1579.66,-486.423 1588,-478.735 1595.81,-470.641"/>
+<!-- Node6&#45;&gt;Node19 -->
+<g id="edge19" class="edge"><title>Node6&#45;&gt;Node19</title>
+<path fill="none" stroke="midnightblue" d="M1479.39,-543.172C1483.38,-538.201 1487.58,-533.455 1492,-529 1519.19,-501.625 1540.28,-516.343 1571,-493 1581.52,-485.004 1591.58,-475.368 1600.79,-465.354"/>
 <polygon fill="none" stroke="midnightblue" points="1476.58,-541.083 1473.31,-551.158 1482.15,-545.325 1476.58,-541.083"/>
 </g>
-<!-- Node19 -->
-<g id="node20" class="node"><title>Node19</title>
-<g id="a_node20"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html" target="_top" xlink:title="Klasse Implementiert das BACK&#45;Button der Browser.">
+<!-- Node20 -->
+<g id="node21" class="node"><title>Node20</title>
+<g id="a_node21"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html" target="_top" xlink:title="Klasse Implementiert das BACK&#45;Button der Browser.">
 <polygon fill="white" stroke="black" points="1738,-303.5 1738,-492.5 1926,-492.5 1926,-303.5 1738,-303.5"/>
 <text text-anchor="start" x="1746" y="-480.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.webdriver.</text>
 <text text-anchor="middle" x="1832" y="-469.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeBACK</text>
@@ -670,14 +661,14 @@
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node19 -->
-<g id="edge19" class="edge"><title>Node6&#45;&gt;Node19</title>
+<!-- Node6&#45;&gt;Node20 -->
+<g id="edge20" class="edge"><title>Node6&#45;&gt;Node20</title>
 <path fill="none" stroke="midnightblue" d="M1476.19,-543.28C1481.09,-538.099 1486.35,-533.302 1492,-529 1576.79,-464.493 1632.85,-538.885 1729,-493 1731.95,-491.592 1734.87,-490.072 1737.77,-488.454"/>
 <polygon fill="none" stroke="midnightblue" points="1473.26,-541.311 1469.29,-551.131 1478.52,-545.934 1473.26,-541.311"/>
 </g>
-<!-- Node20 -->
-<g id="node21" class="node"><title>Node20</title>
-<g id="a_node21"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html" target="_top" xlink:title="Klasse Implementiert den Knopf zur Fenster&#45;Maximierung eines Browsers.">
+<!-- Node21 -->
+<g id="node22" class="node"><title>Node21</title>
+<g id="a_node22"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html" target="_top" xlink:title="Klasse Implementiert den Knopf zur Fenster&#45;Maximierung eines Browsers.">
 <polygon fill="white" stroke="black" points="1944,-303.5 1944,-492.5 2132,-492.5 2132,-303.5 1944,-303.5"/>
 <text text-anchor="start" x="1952" y="-480.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.webdriver.</text>
 <text text-anchor="middle" x="2038" y="-469.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeMAXIMIZE</text>
@@ -699,14 +690,14 @@
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node20 -->
-<g id="edge20" class="edge"><title>Node6&#45;&gt;Node20</title>
+<!-- Node6&#45;&gt;Node21 -->
+<g id="edge21" class="edge"><title>Node6&#45;&gt;Node21</title>
 <path fill="none" stroke="midnightblue" d="M1474.99,-543.623C1480.22,-538.251 1485.88,-533.331 1492,-529 1572.64,-471.973 1844.43,-532.408 1935,-493 1938,-491.696 1940.96,-490.268 1943.9,-488.733"/>
 <polygon fill="none" stroke="midnightblue" points="1472.24,-541.45 1468.13,-551.217 1477.43,-546.143 1472.24,-541.45"/>
 </g>
-<!-- Node21 -->
-<g id="node22" class="node"><title>Node21</title>
-<g id="a_node22"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html" target="_top" xlink:title="Klasse implementiert ein virtuelles Eingabefeld der Browser.">
+<!-- Node22 -->
+<g id="node23" class="node"><title>Node22</title>
+<g id="a_node23"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html" target="_top" xlink:title="Klasse implementiert ein virtuelles Eingabefeld der Browser.">
 <polygon fill="white" stroke="black" points="2150,-320 2150,-476 2338,-476 2338,-320 2150,-320"/>
 <text text-anchor="start" x="2158" y="-464" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.webdriver.</text>
 <text text-anchor="middle" x="2244" y="-453" font-family="Helvetica,sans-Serif" font-size="10.00">SePOSITION</text>
@@ -725,14 +716,14 @@
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node21 -->
-<g id="edge21" class="edge"><title>Node6&#45;&gt;Node21</title>
+<!-- Node6&#45;&gt;Node22 -->
+<g id="edge22" class="edge"><title>Node6&#45;&gt;Node22</title>
 <path fill="none" stroke="midnightblue" d="M1474.61,-543.671C1479.94,-538.256 1485.73,-533.317 1492,-529 1611,-447.122 2007.82,-548.927 2141,-493 2151.38,-488.641 2161.39,-482.765 2170.81,-476.065"/>
 <polygon fill="none" stroke="midnightblue" points="1471.77,-541.59 1467.62,-551.338 1476.95,-546.306 1471.77,-541.59"/>
 </g>
-<!-- Node22 -->
-<g id="node23" class="node"><title>Node22</title>
-<g id="a_node23"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html" target="_top" xlink:title="Klasse Implementiert das URL&#45;Eingabefeld der Browser.">
+<!-- Node23 -->
+<g id="node24" class="node"><title>Node23</title>
+<g id="a_node24"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html" target="_top" xlink:title="Klasse Implementiert das URL&#45;Eingabefeld der Browser.">
 <polygon fill="white" stroke="black" points="2356,-320 2356,-476 2544,-476 2544,-320 2356,-320"/>
 <text text-anchor="start" x="2364" y="-464" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.webdriver.</text>
 <text text-anchor="middle" x="2450" y="-453" font-family="Helvetica,sans-Serif" font-size="10.00">SeSIZE</text>
@@ -751,14 +742,14 @@
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node22 -->
-<g id="edge22" class="edge"><title>Node6&#45;&gt;Node22</title>
+<!-- Node6&#45;&gt;Node23 -->
+<g id="edge23" class="edge"><title>Node6&#45;&gt;Node23</title>
 <path fill="none" stroke="midnightblue" d="M1474.54,-543.567C1479.89,-538.18 1485.7,-533.276 1492,-529 1570.69,-475.625 2259.09,-529.23 2347,-493 2357.41,-488.711 2367.43,-482.878 2376.87,-476.205"/>
 <polygon fill="none" stroke="midnightblue" points="1471.72,-541.468 1467.53,-551.199 1476.87,-546.204 1471.72,-541.468"/>
 </g>
-<!-- Node23 -->
-<g id="node24" class="node"><title>Node23</title>
-<g id="a_node24"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html" target="_top" xlink:title="Klasse Implementiert das URL&#45;Eingabefeld der Browser.">
+<!-- Node24 -->
+<g id="node25" class="node"><title>Node24</title>
+<g id="a_node25"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html" target="_top" xlink:title="Klasse Implementiert das URL&#45;Eingabefeld der Browser.">
 <polygon fill="white" stroke="black" points="2562,-320 2562,-476 2750,-476 2750,-320 2562,-320"/>
 <text text-anchor="start" x="2570" y="-464" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.webdriver.</text>
 <text text-anchor="middle" x="2656" y="-453" font-family="Helvetica,sans-Serif" font-size="10.00">SeURL</text>
@@ -777,14 +768,37 @@
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node23 -->
-<g id="edge23" class="edge"><title>Node6&#45;&gt;Node23</title>
+<!-- Node6&#45;&gt;Node24 -->
+<g id="edge24" class="edge"><title>Node6&#45;&gt;Node24</title>
 <path fill="none" stroke="midnightblue" d="M1474.26,-543.747C1479.68,-538.281 1485.58,-533.314 1492,-529 1589.89,-463.184 2443.76,-537.5 2553,-493 2563.54,-488.707 2573.68,-482.823 2583.21,-476.075"/>
 <polygon fill="none" stroke="midnightblue" points="1471.33,-541.762 1467.14,-551.497 1476.48,-546.495 1471.33,-541.762"/>
 </g>
-<!-- Node15 -->
-<g id="node16" class="node"><title>Node15</title>
-<g id="a_node16"><a xlink:href="classokw_1_1gui_1_1frames_1_1_se_radio_list_1_1frm_se_radio_list_1_1_pay_method.html" target="_top" xlink:title=" ">
+<!-- Node13 -->
+<g id="node14" class="node"><title>Node13</title>
+<g id="a_node14"><a xlink:href="classokw_1_1gui_1_1adapter_1_1my_textfield.html" target="_top" xlink:title="Diese Klasse representiert ein HTML&#45;Textfeld, die mit Selenium angsteuert wird.">
+<polygon fill="white" stroke="black" points="786.5,-72 786.5,-195 933.5,-195 933.5,-72 786.5,-72"/>
+<text text-anchor="middle" x="860" y="-183" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.myTextfield</text>
+<polyline fill="none" stroke="black" points="786.5,-176 933.5,-176 "/>
+<text text-anchor="middle" x="860" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="786.5,-157 933.5,-157 "/>
+<text text-anchor="start" x="794.5" y="-145" font-family="Helvetica,sans-Serif" font-size="10.00">+ myTextfield()</text>
+<text text-anchor="start" x="794.5" y="-134" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="794.5" y="-123" font-family="Helvetica,sans-Serif" font-size="10.00">+ getMaxLength()</text>
+<text text-anchor="start" x="794.5" y="-112" font-family="Helvetica,sans-Serif" font-size="10.00">+ getPlaceholder()</text>
+<text text-anchor="start" x="794.5" y="-101" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="794.5" y="-90" font-family="Helvetica,sans-Serif" font-size="10.00">+ set__Attribute()</text>
+<text text-anchor="start" x="794.5" y="-79" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
+</a>
+</g>
+</g>
+<!-- Node12&#45;&gt;Node13 -->
+<g id="edge13" class="edge"><title>Node12&#45;&gt;Node13</title>
+<path fill="none" stroke="midnightblue" d="M860,-320.551C860,-280.693 860,-232.617 860,-195.321"/>
+<polygon fill="none" stroke="midnightblue" points="856.5,-320.76 860,-330.76 863.5,-320.76 856.5,-320.76"/>
+</g>
+<!-- Node16 -->
+<g id="node17" class="node"><title>Node16</title>
+<g id="a_node17"><a xlink:href="classokw_1_1gui_1_1frames_1_1_se_radio_list_1_1frm_se_radio_list_1_1_pay_method.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="1093,-88.5 1093,-178.5 1259,-178.5 1259,-88.5 1093,-88.5"/>
 <text text-anchor="start" x="1101" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.SeRadioList.frm</text>
 <text text-anchor="middle" x="1176" y="-155.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeRadioList.PayMethod</text>
@@ -797,14 +811,14 @@
 </a>
 </g>
 </g>
-<!-- Node14&#45;&gt;Node15 -->
-<g id="edge15" class="edge"><title>Node14&#45;&gt;Node15</title>
-<path fill="none" stroke="midnightblue" d="M1176,-315.197C1176,-270.057 1176,-215.777 1176,-178.566"/>
-<polygon fill="none" stroke="midnightblue" points="1172.5,-315.271 1176,-325.271 1179.5,-315.271 1172.5,-315.271"/>
+<!-- Node15&#45;&gt;Node16 -->
+<g id="edge16" class="edge"><title>Node15&#45;&gt;Node16</title>
+<path fill="none" stroke="midnightblue" d="M1176,-320.519C1176,-274.5 1176,-217.534 1176,-178.853"/>
+<polygon fill="none" stroke="midnightblue" points="1172.5,-320.76 1176,-330.76 1179.5,-320.76 1172.5,-320.76"/>
 </g>
-<!-- Node26 -->
-<g id="node27" class="node"><title>Node26</title>
-<g id="a_node27"><a xlink:href="classokw_1_1gui_1_1frames_1_1frm_test_rechner_1_1_____taste__3.html" target="_top" xlink:title=" ">
+<!-- Node27 -->
+<g id="node28" class="node"><title>Node27</title>
+<g id="a_node28"><a xlink:href="classokw_1_1gui_1_1frames_1_1frm_test_rechner_1_1_____taste__3.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="2768.5,-358.5 2768.5,-437.5 2935.5,-437.5 2935.5,-358.5 2768.5,-358.5"/>
 <text text-anchor="start" x="2776.5" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.frmTestRechner.</text>
 <text text-anchor="middle" x="2852" y="-414.5" font-family="Helvetica,sans-Serif" font-size="10.00">__Taste_3</text>
@@ -816,14 +830,14 @@
 </a>
 </g>
 </g>
-<!-- Node25&#45;&gt;Node26 -->
-<g id="edge26" class="edge"><title>Node25&#45;&gt;Node26</title>
+<!-- Node26&#45;&gt;Node27 -->
+<g id="edge27" class="edge"><title>Node26&#45;&gt;Node27</title>
 <path fill="none" stroke="midnightblue" d="M1752.66,-624.067C1764.27,-588.803 1783.71,-550.698 1816,-529 1903.03,-470.515 2663.02,-535.223 2759,-493 2785.69,-481.26 2808.78,-458.034 2825.28,-437.607"/>
 <polygon fill="none" stroke="midnightblue" points="1749.22,-623.333 1749.59,-633.922 1755.9,-625.417 1749.22,-623.333"/>
 </g>
-<!-- Node30 -->
-<g id="node31" class="node"><title>Node30</title>
-<g id="a_node31"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html" target="_top" xlink:title="SeAnyWindow ist eine Fenster GUI&#45;Adapterklasse.">
+<!-- Node31 -->
+<g id="node32" class="node"><title>Node31</title>
+<g id="a_node32"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html" target="_top" xlink:title="SeAnyWindow ist eine Fenster GUI&#45;Adapterklasse.">
 <polygon fill="white" stroke="black" points="2954,-551.5 2954,-861.5 3094,-861.5 3094,-551.5 2954,-551.5"/>
 <text text-anchor="start" x="2962" y="-849.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="3024" y="-838.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeAnyWindow</text>
@@ -832,37 +846,37 @@
 <text text-anchor="start" x="2962" y="-808.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LM</text>
 <text text-anchor="start" x="2962" y="-797.5" font-family="Helvetica,sans-Serif" font-size="10.00"># iframeID</text>
 <polyline fill="none" stroke="black" points="2954,-790.5 3094,-790.5 "/>
-<text text-anchor="start" x="2962" y="-778.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIframeID()</text>
-<text text-anchor="start" x="2962" y="-767.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setiFrameID()</text>
+<text text-anchor="start" x="2962" y="-778.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get_iframeID()</text>
+<text text-anchor="start" x="2962" y="-767.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ set_iframeID()</text>
 <text text-anchor="start" x="2962" y="-756.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setLocator()</text>
-<text text-anchor="start" x="2962" y="-745.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setLocator()</text>
-<text text-anchor="start" x="2962" y="-734.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
-<text text-anchor="start" x="2962" y="-723.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="2962" y="-712.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="2962" y="-701.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
-<text text-anchor="start" x="2962" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="2962" y="-679.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
-<text text-anchor="start" x="2962" y="-668.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
-<text text-anchor="start" x="2962" y="-657.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="2962" y="-646.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="2962" y="-635.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="2962" y="-624.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="2962" y="-613.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="2962" y="-602.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="2962" y="-591.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="2962" y="-580.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="2962" y="-569.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Me()</text>
-<text text-anchor="start" x="2962" y="-558.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 21 mehr ...</text>
+<text text-anchor="start" x="2962" y="-745.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
+<text text-anchor="start" x="2962" y="-734.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="2962" y="-723.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="2962" y="-712.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
+<text text-anchor="start" x="2962" y="-701.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="2962" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
+<text text-anchor="start" x="2962" y="-679.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
+<text text-anchor="start" x="2962" y="-668.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="2962" y="-657.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="2962" y="-646.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="2962" y="-635.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="2962" y="-624.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="2962" y="-613.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="2962" y="-602.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="2962" y="-591.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="2962" y="-580.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Me()</text>
+<text text-anchor="start" x="2962" y="-569.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
+<text text-anchor="start" x="2962" y="-558.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 20 mehr ...</text>
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node30 -->
-<g id="edge30" class="edge"><title>Node29&#45;&gt;Node30</title>
+<!-- Node30&#45;&gt;Node31 -->
+<g id="edge31" class="edge"><title>Node30&#45;&gt;Node31</title>
 <path fill="none" stroke="midnightblue" d="M3437.72,-1043.33C3346.99,-1022.44 3196.99,-976.013 3103,-884 3096.04,-877.189 3089.65,-869.657 3083.78,-861.653"/>
 <polygon fill="none" stroke="midnightblue" points="3437.15,-1046.78 3447.67,-1045.57 3438.69,-1039.95 3437.15,-1046.78"/>
 </g>
-<!-- Node54 -->
-<g id="node40" class="node"><title>Node54</title>
+<!-- Node57 -->
+<g id="node40" class="node"><title>Node57</title>
 <g id="a_node40"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_chrome_app.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="3112,-645 3112,-768 3300,-768 3300,-645 3112,-645"/>
 <text text-anchor="start" x="3120" y="-756" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.webdriver.</text>
@@ -879,13 +893,13 @@
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node54 -->
-<g id="edge39" class="edge"><title>Node29&#45;&gt;Node54</title>
+<!-- Node30&#45;&gt;Node57 -->
+<g id="edge39" class="edge"><title>Node30&#45;&gt;Node57</title>
 <path fill="none" stroke="midnightblue" d="M3439.5,-1004.32C3397.89,-972.399 3347.12,-929.361 3309,-884 3279.33,-848.689 3253.23,-803.726 3234.73,-768.02"/>
 <polygon fill="none" stroke="midnightblue" points="3437.61,-1007.29 3447.69,-1010.56 3441.85,-1001.72 3437.61,-1007.29"/>
 </g>
-<!-- Node55 -->
-<g id="node41" class="node"><title>Node55</title>
+<!-- Node58 -->
+<g id="node41" class="node"><title>Node58</title>
 <g id="a_node41"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_firefox_app.html" target="_top" xlink:title="OKW Selenium FireFox BrowserWindow Klasse.">
 <polygon fill="white" stroke="black" points="3318,-639.5 3318,-773.5 3506,-773.5 3506,-639.5 3318,-639.5"/>
 <text text-anchor="start" x="3326" y="-761.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.webdriver.</text>
@@ -903,13 +917,13 @@
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node55 -->
-<g id="edge40" class="edge"><title>Node29&#45;&gt;Node55</title>
+<!-- Node30&#45;&gt;Node58 -->
+<g id="edge40" class="edge"><title>Node30&#45;&gt;Node58</title>
 <path fill="none" stroke="midnightblue" d="M3486.13,-959.763C3468.65,-900.277 3446.83,-826.014 3431.4,-773.51"/>
 <polygon fill="none" stroke="midnightblue" points="3482.83,-960.947 3489.01,-969.554 3489.55,-958.973 3482.83,-960.947"/>
 </g>
-<!-- Node56 -->
-<g id="node42" class="node"><title>Node56</title>
+<!-- Node59 -->
+<g id="node42" class="node"><title>Node59</title>
 <g id="a_node42"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="3524,-645 3524,-768 3712,-768 3712,-645 3524,-645"/>
 <text text-anchor="start" x="3532" y="-756" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.webdriver.</text>
@@ -926,13 +940,13 @@
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node56 -->
-<g id="edge41" class="edge"><title>Node29&#45;&gt;Node56</title>
+<!-- Node30&#45;&gt;Node59 -->
+<g id="edge41" class="edge"><title>Node30&#45;&gt;Node59</title>
 <path fill="none" stroke="midnightblue" d="M3543.85,-959.813C3561.95,-898.229 3584.71,-820.792 3600.2,-768.059"/>
 <polygon fill="none" stroke="midnightblue" points="3540.45,-958.973 3540.99,-969.554 3547.17,-960.947 3540.45,-958.973"/>
 </g>
-<!-- Node57 -->
-<g id="node43" class="node"><title>Node57</title>
+<!-- Node60 -->
+<g id="node43" class="node"><title>Node60</title>
 <g id="a_node43"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_safari_app.html" target="_top" xlink:title="OKW Selenium FireFox BrowserWindow Klasse.">
 <polygon fill="white" stroke="black" points="3730,-645 3730,-768 3918,-768 3918,-645 3730,-645"/>
 <text text-anchor="start" x="3738" y="-756" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.webdriver.</text>
@@ -949,13 +963,13 @@
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node57 -->
-<g id="edge42" class="edge"><title>Node29&#45;&gt;Node57</title>
+<!-- Node30&#45;&gt;Node60 -->
+<g id="edge42" class="edge"><title>Node30&#45;&gt;Node60</title>
 <path fill="none" stroke="midnightblue" d="M3590.5,-1004.32C3632.11,-972.399 3682.88,-929.361 3721,-884 3750.67,-848.689 3776.77,-803.726 3795.27,-768.02"/>
 <polygon fill="none" stroke="midnightblue" points="3588.15,-1001.72 3582.31,-1010.56 3592.39,-1007.29 3588.15,-1001.72"/>
 </g>
-<!-- Node59 -->
-<g id="node45" class="node"><title>Node59</title>
+<!-- Node62 -->
+<g id="node45" class="node"><title>Node62</title>
 <g id="a_node45"><a xlink:href="classokw_1_1gui_1_1adapter_1_1_test___window.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="3936.5,-584.5 3936.5,-828.5 4049.5,-828.5 4049.5,-584.5 3936.5,-584.5"/>
 <text text-anchor="start" x="3944.5" y="-816.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.Test</text>
@@ -983,13 +997,13 @@
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node59 -->
-<g id="edge44" class="edge"><title>Node29&#45;&gt;Node59</title>
+<!-- Node30&#45;&gt;Node62 -->
+<g id="edge44" class="edge"><title>Node30&#45;&gt;Node62</title>
 <path fill="none" stroke="midnightblue" d="M3592.12,-1044.58C3683.71,-1024.8 3835.57,-979.333 3927,-884 3942.06,-868.299 3953.75,-848.845 3962.8,-828.648"/>
 <polygon fill="none" stroke="midnightblue" points="3591.14,-1041.21 3582.08,-1046.7 3592.58,-1048.06 3591.14,-1041.21"/>
 </g>
-<!-- Node63 -->
-<g id="node49" class="node"><title>Node63</title>
+<!-- Node66 -->
+<g id="node49" class="node"><title>Node66</title>
 <g id="a_node49"><a xlink:href="classokw_1_1gui_1_1frames_1_1frm_window_with_out_methods.html" target="_top" xlink:title="Test&#45;Frame&#45;Klasse: Diese Klasse dient als Unittest&#45;Objekt.">
 <polygon fill="white" stroke="black" points="4067.5,-634 4067.5,-779 4210.5,-779 4210.5,-634 4067.5,-634"/>
 <text text-anchor="start" x="4075.5" y="-767" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.frmWindow</text>
@@ -1008,14 +1022,14 @@
 </a>
 </g>
 </g>
-<!-- Node29&#45;&gt;Node63 -->
-<g id="edge48" class="edge"><title>Node29&#45;&gt;Node63</title>
+<!-- Node30&#45;&gt;Node66 -->
+<g id="edge48" class="edge"><title>Node30&#45;&gt;Node66</title>
 <path fill="none" stroke="midnightblue" d="M3592.21,-1052.78C3707.26,-1041.12 3924.56,-1003.68 4059,-884 4089.78,-856.596 4109.42,-815.004 4121.54,-779.078"/>
 <polygon fill="none" stroke="midnightblue" points="3591.69,-1049.31 3582.07,-1053.76 3592.36,-1056.28 3591.69,-1049.31"/>
 </g>
-<!-- Node31 -->
-<g id="node32" class="node"><title>Node31</title>
-<g id="a_node32"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html" target="_top" xlink:title="TODO: class SeBrowserChild dokumentieren...">
+<!-- Node32 -->
+<g id="node33" class="node"><title>Node32</title>
+<g id="a_node33"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html" target="_top" xlink:title="TODO: class SeBrowserChild dokumentieren...">
 <polygon fill="white" stroke="red" points="2954,-336.5 2954,-459.5 3094,-459.5 3094,-336.5 2954,-336.5"/>
 <text text-anchor="start" x="2962" y="-447.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
 <text text-anchor="middle" x="3024" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeBrowserChild</text>
@@ -1031,13 +1045,13 @@
 </a>
 </g>
 </g>
-<!-- Node30&#45;&gt;Node31 -->
-<g id="edge31" class="edge"><title>Node30&#45;&gt;Node31</title>
+<!-- Node31&#45;&gt;Node32 -->
+<g id="edge32" class="edge"><title>Node31&#45;&gt;Node32</title>
 <path fill="none" stroke="midnightblue" d="M3024,-541.031C3024,-511.897 3024,-483.306 3024,-459.502"/>
 <polygon fill="none" stroke="midnightblue" points="3020.5,-541.352 3024,-551.352 3027.5,-541.352 3020.5,-541.352"/>
 </g>
-<!-- Node49 -->
-<g id="node39" class="node"><title>Node49</title>
+<!-- Node52 -->
+<g id="node39" class="node"><title>Node52</title>
 <g id="a_node39"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_window.html" target="_top" xlink:title="Abstrakte Basisklasse für SeBrowserTypen.">
 <polygon fill="white" stroke="red" points="3112,-342 3112,-454 3252,-454 3252,-342 3112,-342"/>
 <text text-anchor="start" x="3120" y="-442" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -1053,159 +1067,137 @@
 </a>
 </g>
 </g>
-<!-- Node30&#45;&gt;Node49 -->
-<g id="edge38" class="edge"><title>Node30&#45;&gt;Node49</title>
+<!-- Node31&#45;&gt;Node52 -->
+<g id="edge38" class="edge"><title>Node31&#45;&gt;Node52</title>
 <path fill="none" stroke="midnightblue" d="M3096.21,-542.184C3098.46,-537.726 3100.73,-533.324 3103,-529 3116.2,-503.863 3132.24,-476.914 3146.41,-454.107"/>
 <polygon fill="none" stroke="midnightblue" points="3092.94,-540.897 3091.59,-551.406 3099.19,-544.031 3092.94,-540.897"/>
 </g>
-<!-- Node32 -->
-<g id="node33" class="node"><title>Node32</title>
-<g id="a_node33"><a xlink:href="classokw_1_1gui_1_1frames_1_1frm_calculator_1_1frm_calculator.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="2518,-0.5 2518,-266.5 2692,-266.5 2692,-0.5 2518,-0.5"/>
-<text text-anchor="start" x="2526" y="-254.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.frmCalculator.frm</text>
-<text text-anchor="middle" x="2605" y="-243.5" font-family="Helvetica,sans-Serif" font-size="10.00">Calculator</text>
-<polyline fill="none" stroke="black" points="2518,-236.5 2692,-236.5 "/>
-<text text-anchor="start" x="2526" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ display</text>
-<text text-anchor="start" x="2526" y="-213.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n1</text>
-<text text-anchor="start" x="2526" y="-202.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n2</text>
-<text text-anchor="start" x="2526" y="-191.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n3</text>
-<text text-anchor="start" x="2526" y="-180.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n4</text>
-<text text-anchor="start" x="2526" y="-169.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n5</text>
-<text text-anchor="start" x="2526" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n6</text>
-<text text-anchor="start" x="2526" y="-147.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n7</text>
-<text text-anchor="start" x="2526" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n8</text>
-<text text-anchor="start" x="2526" y="-125.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n9</text>
-<text text-anchor="start" x="2526" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n0</text>
-<text text-anchor="start" x="2526" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ punkt</text>
-<text text-anchor="start" x="2526" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ plus</text>
-<text text-anchor="start" x="2526" y="-81.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ minus</text>
-<text text-anchor="start" x="2526" y="-70.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ durch</text>
-<text text-anchor="start" x="2526" y="-59.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ mal</text>
-<text text-anchor="start" x="2526" y="-48.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ gleich</text>
-<text text-anchor="start" x="2526" y="-37.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ clear</text>
-<text text-anchor="start" x="2526" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ sqrt</text>
-<polyline fill="none" stroke="black" points="2518,-19.5 2692,-19.5 "/>
-<text text-anchor="start" x="2526" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ frmCalculator()</text>
-</a>
-</g>
-</g>
-<!-- Node31&#45;&gt;Node32 -->
-<g id="edge32" class="edge"><title>Node31&#45;&gt;Node32</title>
-<path fill="none" stroke="midnightblue" d="M2977.25,-328.714C2967.66,-318.733 2956.83,-309.609 2945,-303 2849.69,-249.751 2795.48,-323.411 2702,-267 2698.58,-264.938 2695.25,-262.705 2692,-260.326"/>
-<polygon fill="none" stroke="midnightblue" points="2974.68,-331.091 2984.01,-336.11 2979.85,-326.368 2974.68,-331.091"/>
-</g>
 <!-- Node33 -->
 <g id="node34" class="node"><title>Node33</title>
-<g id="a_node34"><a xlink:href="classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="2710.5,-77.5 2710.5,-189.5 2849.5,-189.5 2849.5,-77.5 2710.5,-77.5"/>
-<text text-anchor="start" x="2718.5" y="-177.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.SeButton.</text>
-<text text-anchor="middle" x="2780" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">FrmButton</text>
-<polyline fill="none" stroke="black" points="2710.5,-159.5 2849.5,-159.5 "/>
-<text text-anchor="start" x="2718.5" y="-147.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Anzeige</text>
-<text text-anchor="start" x="2718.5" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ NichtVorhanden</text>
-<text text-anchor="start" x="2718.5" y="-125.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_1</text>
-<text text-anchor="start" x="2718.5" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_2</text>
-<text text-anchor="start" x="2718.5" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Button_3</text>
-<polyline fill="none" stroke="black" points="2710.5,-96.5 2849.5,-96.5 "/>
-<text text-anchor="start" x="2718.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ FrmButton()</text>
+<g id="a_node34"><a xlink:href="classokw_1_1gui_1_1frames_1_1frm_calculator_1_1frm_calculator.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="2602,-0.5 2602,-266.5 2776,-266.5 2776,-0.5 2602,-0.5"/>
+<text text-anchor="start" x="2610" y="-254.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.frmCalculator.frm</text>
+<text text-anchor="middle" x="2689" y="-243.5" font-family="Helvetica,sans-Serif" font-size="10.00">Calculator</text>
+<polyline fill="none" stroke="black" points="2602,-236.5 2776,-236.5 "/>
+<text text-anchor="start" x="2610" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ display</text>
+<text text-anchor="start" x="2610" y="-213.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n1</text>
+<text text-anchor="start" x="2610" y="-202.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n2</text>
+<text text-anchor="start" x="2610" y="-191.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n3</text>
+<text text-anchor="start" x="2610" y="-180.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n4</text>
+<text text-anchor="start" x="2610" y="-169.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n5</text>
+<text text-anchor="start" x="2610" y="-158.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n6</text>
+<text text-anchor="start" x="2610" y="-147.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n7</text>
+<text text-anchor="start" x="2610" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n8</text>
+<text text-anchor="start" x="2610" y="-125.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n9</text>
+<text text-anchor="start" x="2610" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ n0</text>
+<text text-anchor="start" x="2610" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ punkt</text>
+<text text-anchor="start" x="2610" y="-92.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ plus</text>
+<text text-anchor="start" x="2610" y="-81.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ minus</text>
+<text text-anchor="start" x="2610" y="-70.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ durch</text>
+<text text-anchor="start" x="2610" y="-59.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ mal</text>
+<text text-anchor="start" x="2610" y="-48.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ gleich</text>
+<text text-anchor="start" x="2610" y="-37.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ clear</text>
+<text text-anchor="start" x="2610" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ sqrt</text>
+<polyline fill="none" stroke="black" points="2602,-19.5 2776,-19.5 "/>
+<text text-anchor="start" x="2610" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ frmCalculator()</text>
 </a>
 </g>
 </g>
-<!-- Node31&#45;&gt;Node33 -->
-<g id="edge33" class="edge"><title>Node31&#45;&gt;Node33</title>
-<path fill="none" stroke="midnightblue" d="M2973.38,-328.623C2964.59,-319.276 2955.03,-310.375 2945,-303 2911.62,-278.449 2890.29,-294.16 2859,-267 2834.93,-246.11 2816.17,-216.011 2802.98,-189.778"/>
-<polygon fill="none" stroke="midnightblue" points="2970.94,-331.145 2980.26,-336.195 2976.12,-326.439 2970.94,-331.145"/>
+<!-- Node32&#45;&gt;Node33 -->
+<g id="edge33" class="edge"><title>Node32&#45;&gt;Node33</title>
+<path fill="none" stroke="midnightblue" d="M2976.17,-328.793C2966.79,-318.983 2956.31,-309.895 2945,-303 2883.13,-265.297 2846.58,-306.754 2786,-267 2782.66,-264.81 2779.4,-262.464 2776.22,-259.984"/>
+<polygon fill="none" stroke="midnightblue" points="2973.8,-331.385 2983.13,-336.411 2978.97,-326.666 2973.8,-331.385"/>
 </g>
 <!-- Node34 -->
 <g id="node35" class="node"><title>Node34</title>
-<g id="a_node35"><a xlink:href="classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button_not_activ.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="2867.5,-77.5 2867.5,-189.5 3006.5,-189.5 3006.5,-77.5 2867.5,-77.5"/>
-<text text-anchor="start" x="2875.5" y="-177.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.SeButton.</text>
-<text text-anchor="middle" x="2937" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">FrmButtonNotActiv</text>
-<polyline fill="none" stroke="black" points="2867.5,-159.5 3006.5,-159.5 "/>
-<text text-anchor="start" x="2875.5" y="-147.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Anzeige</text>
-<text text-anchor="start" x="2875.5" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ NichtVorhanden</text>
-<text text-anchor="start" x="2875.5" y="-125.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_1</text>
-<text text-anchor="start" x="2875.5" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_2</text>
-<text text-anchor="start" x="2875.5" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Button_3</text>
-<polyline fill="none" stroke="black" points="2867.5,-96.5 3006.5,-96.5 "/>
-<text text-anchor="start" x="2875.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ FrmButtonNotActiv()</text>
+<g id="a_node35"><a xlink:href="classokw_1_1gui_1_1frames_1_1iframe_1_1frm_iframe.html" target="_top" xlink:title="GUI&#45;Frame für die OKW&#45;Testseite http://test.openkeyword.de/iframe/iframe.htm">
+<polygon fill="white" stroke="black" points="2794.5,-77.5 2794.5,-189.5 2935.5,-189.5 2935.5,-77.5 2794.5,-77.5"/>
+<text text-anchor="start" x="2802.5" y="-177.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.iframe.frm</text>
+<text text-anchor="middle" x="2865" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">Iframe</text>
+<polyline fill="none" stroke="black" points="2794.5,-159.5 2935.5,-159.5 "/>
+<text text-anchor="start" x="2802.5" y="-147.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Anzeige</text>
+<text text-anchor="start" x="2802.5" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_1</text>
+<text text-anchor="start" x="2802.5" y="-125.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_2</text>
+<text text-anchor="start" x="2802.5" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ User</text>
+<text text-anchor="start" x="2802.5" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Password</text>
+<polyline fill="none" stroke="black" points="2794.5,-96.5 2935.5,-96.5 "/>
+<text text-anchor="start" x="2802.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ frmIframe()</text>
 </a>
 </g>
 </g>
-<!-- Node31&#45;&gt;Node34 -->
-<g id="edge34" class="edge"><title>Node31&#45;&gt;Node34</title>
-<path fill="none" stroke="midnightblue" d="M3000.77,-326.906C2986.53,-283.955 2968.57,-229.749 2955.34,-189.826"/>
-<polygon fill="none" stroke="midnightblue" points="2997.46,-328.056 3003.93,-336.448 3004.11,-325.854 2997.46,-328.056"/>
+<!-- Node32&#45;&gt;Node34 -->
+<g id="edge34" class="edge"><title>Node32&#45;&gt;Node34</title>
+<path fill="none" stroke="midnightblue" d="M2981.78,-327.605C2969.87,-308.015 2956.92,-286.677 2945,-267 2929.62,-241.603 2912.61,-213.444 2898.24,-189.64"/>
+<polygon fill="none" stroke="midnightblue" points="2978.8,-329.449 2986.99,-336.177 2984.79,-325.813 2978.8,-329.449"/>
 </g>
 <!-- Node35 -->
 <g id="node36" class="node"><title>Node35</title>
-<g id="a_node36"><a xlink:href="classokw_1_1gui_1_1frames_1_1_se_check_box_1_1frm_se_check_box.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="3025,-77.5 3025,-189.5 3195,-189.5 3195,-77.5 3025,-77.5"/>
-<text text-anchor="start" x="3033" y="-177.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.SeCheckBox.frm</text>
-<text text-anchor="middle" x="3110" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">SeCheckBox</text>
-<polyline fill="none" stroke="black" points="3025,-159.5 3195,-159.5 "/>
-<text text-anchor="start" x="3033" y="-147.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ NotExists</text>
-<text text-anchor="start" x="3033" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Pilze</text>
-<text text-anchor="start" x="3033" y="-125.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Salami</text>
-<text text-anchor="start" x="3033" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Sardellen</text>
-<text text-anchor="start" x="3033" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Disabled</text>
-<polyline fill="none" stroke="black" points="3025,-96.5 3195,-96.5 "/>
-<text text-anchor="start" x="3033" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ frmSeCheckBox()</text>
+<g id="a_node36"><a xlink:href="classokw_1_1gui_1_1frames_1_1iframe_1_1frm_i_frame_with_name.html" target="_top" xlink:title="GUI&#45;Frame für die OKW&#45;Testseite http://test.openkeyword.de/iframe/iframe.htm">
+<polygon fill="white" stroke="black" points="2953.5,-77.5 2953.5,-189.5 3094.5,-189.5 3094.5,-77.5 2953.5,-77.5"/>
+<text text-anchor="start" x="2961.5" y="-177.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.iframe.frm</text>
+<text text-anchor="middle" x="3024" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">IFrameWithName</text>
+<polyline fill="none" stroke="black" points="2953.5,-159.5 3094.5,-159.5 "/>
+<text text-anchor="start" x="2961.5" y="-147.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Anzeige</text>
+<text text-anchor="start" x="2961.5" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_1</text>
+<text text-anchor="start" x="2961.5" y="-125.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_2</text>
+<text text-anchor="start" x="2961.5" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ User</text>
+<text text-anchor="start" x="2961.5" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Password</text>
+<polyline fill="none" stroke="black" points="2953.5,-96.5 3094.5,-96.5 "/>
+<text text-anchor="start" x="2961.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ frmIFrameWithName()</text>
 </a>
 </g>
 </g>
-<!-- Node31&#45;&gt;Node35 -->
-<g id="edge35" class="edge"><title>Node31&#45;&gt;Node35</title>
-<path fill="none" stroke="midnightblue" d="M3046.96,-326.906C3061.04,-283.955 3078.79,-229.749 3091.87,-189.826"/>
-<polygon fill="none" stroke="midnightblue" points="3043.63,-325.855 3043.84,-336.448 3050.28,-328.034 3043.63,-325.855"/>
+<!-- Node32&#45;&gt;Node35 -->
+<g id="edge35" class="edge"><title>Node32&#45;&gt;Node35</title>
+<path fill="none" stroke="midnightblue" d="M3024,-326.364C3024,-283.499 3024,-229.581 3024,-189.826"/>
+<polygon fill="none" stroke="midnightblue" points="3020.5,-326.448 3024,-336.448 3027.5,-326.448 3020.5,-326.448"/>
 </g>
 <!-- Node36 -->
 <g id="node37" class="node"><title>Node36</title>
-<g id="a_node37"><a xlink:href="classokw_1_1gui_1_1frames_1_1_se_input_button_1_1frm_input_button.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="3213.5,-77.5 3213.5,-189.5 3392.5,-189.5 3392.5,-77.5 3213.5,-77.5"/>
-<text text-anchor="start" x="3221.5" y="-177.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.SeInputButton.frm</text>
-<text text-anchor="middle" x="3303" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">InputButton</text>
-<polyline fill="none" stroke="black" points="3213.5,-159.5 3392.5,-159.5 "/>
-<text text-anchor="start" x="3221.5" y="-147.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Anzeige</text>
-<text text-anchor="start" x="3221.5" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ NichtVorhanden</text>
-<text text-anchor="start" x="3221.5" y="-125.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_1</text>
-<text text-anchor="start" x="3221.5" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_2</text>
-<text text-anchor="start" x="3221.5" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Button_3</text>
-<polyline fill="none" stroke="black" points="3213.5,-96.5 3392.5,-96.5 "/>
-<text text-anchor="start" x="3221.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ frmInputButton()</text>
+<g id="a_node37"><a xlink:href="classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="3112.5,-77.5 3112.5,-189.5 3251.5,-189.5 3251.5,-77.5 3112.5,-77.5"/>
+<text text-anchor="start" x="3120.5" y="-177.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.SeButton.</text>
+<text text-anchor="middle" x="3182" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">FrmButton</text>
+<polyline fill="none" stroke="black" points="3112.5,-159.5 3251.5,-159.5 "/>
+<text text-anchor="start" x="3120.5" y="-147.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Anzeige</text>
+<text text-anchor="start" x="3120.5" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ NichtVorhanden</text>
+<text text-anchor="start" x="3120.5" y="-125.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_1</text>
+<text text-anchor="start" x="3120.5" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_2</text>
+<text text-anchor="start" x="3120.5" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Button_3</text>
+<polyline fill="none" stroke="black" points="3112.5,-96.5 3251.5,-96.5 "/>
+<text text-anchor="start" x="3120.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ FrmButton()</text>
 </a>
 </g>
 </g>
-<!-- Node31&#45;&gt;Node36 -->
-<g id="edge36" class="edge"><title>Node31&#45;&gt;Node36</title>
-<path fill="none" stroke="midnightblue" d="M3073.91,-328.511C3082.85,-319.091 3092.64,-310.197 3103,-303 3142.14,-275.812 3165.66,-295.297 3204,-267 3231.73,-246.539 3255.21,-216.147 3272.34,-189.629"/>
-<polygon fill="none" stroke="midnightblue" points="3071.09,-326.41 3066.94,-336.156 3076.26,-331.127 3071.09,-326.41"/>
+<!-- Node32&#45;&gt;Node36 -->
+<g id="edge36" class="edge"><title>Node32&#45;&gt;Node36</title>
+<path fill="none" stroke="midnightblue" d="M3066.97,-327.737C3079.03,-308.148 3092.09,-286.778 3104,-267 3119.21,-241.729 3135.82,-213.587 3149.79,-189.762"/>
+<polygon fill="none" stroke="midnightblue" points="3063.96,-325.956 3061.69,-336.305 3069.92,-329.628 3063.96,-325.956"/>
 </g>
 <!-- Node37 -->
 <g id="node38" class="node"><title>Node37</title>
-<g id="a_node38"><a xlink:href="classokw_1_1gui_1_1frames_1_1_se_input_button_1_1frm_input_button_not_activ.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="3410.5,-77.5 3410.5,-189.5 3589.5,-189.5 3589.5,-77.5 3410.5,-77.5"/>
-<text text-anchor="start" x="3418.5" y="-177.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.SeInputButton.frm</text>
-<text text-anchor="middle" x="3500" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">InputButtonNotActiv</text>
-<polyline fill="none" stroke="black" points="3410.5,-159.5 3589.5,-159.5 "/>
-<text text-anchor="start" x="3418.5" y="-147.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Anzeige</text>
-<text text-anchor="start" x="3418.5" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ NichtVorhanden</text>
-<text text-anchor="start" x="3418.5" y="-125.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_1</text>
-<text text-anchor="start" x="3418.5" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_2</text>
-<text text-anchor="start" x="3418.5" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Button_3</text>
-<polyline fill="none" stroke="black" points="3410.5,-96.5 3589.5,-96.5 "/>
-<text text-anchor="start" x="3418.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ frmInputButtonNotActiv()</text>
+<g id="a_node38"><a xlink:href="classokw_1_1gui_1_1frames_1_1_se_button_1_1_frm_button_not_activ.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="3269.5,-77.5 3269.5,-189.5 3408.5,-189.5 3408.5,-77.5 3269.5,-77.5"/>
+<text text-anchor="start" x="3277.5" y="-177.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.SeButton.</text>
+<text text-anchor="middle" x="3339" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">FrmButtonNotActiv</text>
+<polyline fill="none" stroke="black" points="3269.5,-159.5 3408.5,-159.5 "/>
+<text text-anchor="start" x="3277.5" y="-147.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Anzeige</text>
+<text text-anchor="start" x="3277.5" y="-136.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ NichtVorhanden</text>
+<text text-anchor="start" x="3277.5" y="-125.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_1</text>
+<text text-anchor="start" x="3277.5" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Text_2</text>
+<text text-anchor="start" x="3277.5" y="-103.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Button_3</text>
+<polyline fill="none" stroke="black" points="3269.5,-96.5 3408.5,-96.5 "/>
+<text text-anchor="start" x="3277.5" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ FrmButtonNotActiv()</text>
 </a>
 </g>
 </g>
-<!-- Node31&#45;&gt;Node37 -->
-<g id="edge37" class="edge"><title>Node31&#45;&gt;Node37</title>
-<path fill="none" stroke="midnightblue" d="M3070.24,-328.818C3079.93,-318.719 3090.93,-309.529 3103,-303 3220.73,-239.317 3286.31,-334.306 3402,-267 3432.67,-249.159 3456.62,-217.515 3473.16,-189.625"/>
-<polygon fill="none" stroke="midnightblue" points="3067.56,-326.56 3063.41,-336.307 3072.73,-331.276 3067.56,-326.56"/>
+<!-- Node32&#45;&gt;Node37 -->
+<g id="edge37" class="edge"><title>Node32&#45;&gt;Node37</title>
+<path fill="none" stroke="midnightblue" d="M3071.84,-328.806C3081.21,-318.995 3091.69,-309.903 3103,-303 3164.48,-265.481 3202.86,-309.512 3261,-267 3287.29,-247.778 3306.23,-216.784 3318.87,-189.605"/>
+<polygon fill="none" stroke="midnightblue" points="3069.04,-326.679 3064.88,-336.425 3074.21,-331.398 3069.04,-326.679"/>
 </g>
-<!-- Node58 -->
-<g id="node44" class="node"><title>Node58</title>
+<!-- Node61 -->
+<g id="node44" class="node"><title>Node61</title>
 <g id="a_node44"><a xlink:href="classokw_1_1gui_1_1frames_1_1frm_safari.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="3668.5,-369.5 3668.5,-426.5 3803.5,-426.5 3803.5,-369.5 3668.5,-369.5"/>
 <text text-anchor="middle" x="3736" y="-414.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.frmSafari</text>
@@ -1216,13 +1208,13 @@
 </a>
 </g>
 </g>
-<!-- Node57&#45;&gt;Node58 -->
-<g id="edge43" class="edge"><title>Node57&#45;&gt;Node58</title>
+<!-- Node60&#45;&gt;Node61 -->
+<g id="edge43" class="edge"><title>Node60&#45;&gt;Node61</title>
 <path fill="none" stroke="midnightblue" d="M3803.76,-635.007C3784.78,-568.896 3757.37,-473.434 3743.98,-426.781"/>
 <polygon fill="none" stroke="midnightblue" points="3800.49,-636.3 3806.61,-644.945 3807.22,-634.368 3800.49,-636.3"/>
 </g>
-<!-- Node60 -->
-<g id="node46" class="node"><title>Node60</title>
+<!-- Node63 -->
+<g id="node46" class="node"><title>Node63</title>
 <g id="a_node46"><a xlink:href="classokw_1_1gui_1_1frames_1_1frm_current_object_window.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="3821.5,-347.5 3821.5,-448.5 3980.5,-448.5 3980.5,-347.5 3821.5,-347.5"/>
 <text text-anchor="start" x="3829.5" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.frmCurrent</text>
@@ -1237,13 +1229,13 @@
 </a>
 </g>
 </g>
-<!-- Node59&#45;&gt;Node60 -->
-<g id="edge45" class="edge"><title>Node59&#45;&gt;Node60</title>
+<!-- Node62&#45;&gt;Node63 -->
+<g id="edge45" class="edge"><title>Node62&#45;&gt;Node63</title>
 <path fill="none" stroke="midnightblue" d="M3953.71,-574.598C3940.33,-530.019 3926.17,-482.862 3915.9,-448.654"/>
 <polygon fill="none" stroke="midnightblue" points="3950.41,-575.791 3956.64,-584.363 3957.12,-573.779 3950.41,-575.791"/>
 </g>
-<!-- Node61 -->
-<g id="node47" class="node"><title>Node61</title>
+<!-- Node64 -->
+<g id="node47" class="node"><title>Node64</title>
 <g id="a_node47"><a xlink:href="classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test.html" target="_top" xlink:title="frmObjDictTest ist eine Test&#45;Frame&#45;Klasse.">
 <polygon fill="white" stroke="black" points="3999,-347.5 3999,-448.5 4161,-448.5 4161,-347.5 3999,-347.5"/>
 <text text-anchor="middle" x="4080" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.FrmObjDictTest</text>
@@ -1258,13 +1250,13 @@
 </a>
 </g>
 </g>
-<!-- Node59&#45;&gt;Node61 -->
-<g id="edge46" class="edge"><title>Node59&#45;&gt;Node61</title>
+<!-- Node62&#45;&gt;Node64 -->
+<g id="edge46" class="edge"><title>Node62&#45;&gt;Node64</title>
 <path fill="none" stroke="midnightblue" d="M4030.16,-574.598C4042.81,-530.019 4056.2,-482.862 4065.91,-448.654"/>
 <polygon fill="none" stroke="midnightblue" points="4026.75,-573.787 4027.38,-584.363 4033.48,-575.699 4026.75,-573.787"/>
 </g>
-<!-- Node62 -->
-<g id="node48" class="node"><title>Node62</title>
+<!-- Node65 -->
+<g id="node48" class="node"><title>Node65</title>
 <g id="a_node48"><a xlink:href="classokw_1_1gui_1_1frames_1_1frm_test_rechner.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="4179.5,-303.5 4179.5,-492.5 4354.5,-492.5 4354.5,-303.5 4179.5,-303.5"/>
 <text text-anchor="middle" x="4267" y="-480.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.frmTestRechner</text>
@@ -1287,8 +1279,8 @@
 </a>
 </g>
 </g>
-<!-- Node59&#45;&gt;Node62 -->
-<g id="edge47" class="edge"><title>Node59&#45;&gt;Node62</title>
+<!-- Node62&#45;&gt;Node65 -->
+<g id="edge47" class="edge"><title>Node62&#45;&gt;Node65</title>
 <path fill="none" stroke="midnightblue" d="M4026.24,-574.681C4034.8,-557.765 4045.54,-541.88 4059,-529 4096.47,-493.147 4125.56,-519.738 4170,-493 4173.11,-491.126 4176.21,-489.134 4179.27,-487.046"/>
 <polygon fill="none" stroke="midnightblue" points="4022.86,-573.64 4021.7,-584.171 4029.17,-576.658 4022.86,-573.64"/>
 </g>

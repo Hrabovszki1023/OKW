@@ -69,6 +69,7 @@ var searchData=
   ['okwframeobjectwindownotsetexception',['OKWFrameObjectWindowNotSetException',['../classokw_1_1exceptions_1_1_o_k_w_frame_object_window_not_set_exception.html',1,'okw::exceptions']]],
   ['okwguiexception',['OKWGUIException',['../classokw_1_1exceptions_1_1_o_k_w_g_u_i_exception.html',1,'okw.exceptions.OKWGUIException'],['../classokw_1_1exceptions_1_1_o_k_w_g_u_i_exception.html#a3a5cf773c1383d773c0709d63b8751d0',1,'okw.exceptions.OKWGUIException.OKWGUIException()'],['../classokw_1_1exceptions_1_1_o_k_w_g_u_i_exception.html#a7e7488243b5dd7a2b7da959f0d38d899',1,'okw.exceptions.OKWGUIException.OKWGUIException(String message)']]],
   ['okwguiobjectnotfoundexception',['OKWGUIObjectNotFoundException',['../classokw_1_1exceptions_1_1_o_k_w_g_u_i_object_not_found_exception.html',1,'okw::exceptions']]],
+  ['okwguiobjectnotuniqueexception',['OKWGUIObjectNotUniqueException',['../classokw_1_1exceptions_1_1_o_k_w_g_u_i_object_not_unique_exception.html',1,'okw::exceptions']]],
   ['okwlanguage',['OKWLanguage',['../classokw_1_1_o_k_w_language.html',1,'okw']]],
   ['okwlanguagenotimplemntedexception',['OKWLanguageNotImplemntedException',['../classokw_1_1exceptions_1_1_o_k_w_language_not_implemnted_exception.html',1,'okw::exceptions']]],
   ['okwlocator',['OKWLocator',['../classokw_1_1gui_1_1_o_k_w_locator.html',1,'okw::gui']]],

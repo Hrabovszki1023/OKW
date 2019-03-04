@@ -1,7 +1,6 @@
 var classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list =
 [
     [ "SeRadioList", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a19633d61b7ce538f5fa3ceb3da9b66b5", null ],
-    [ "SeRadioList", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a793c9fd7670b1d77ee48996f7b287807", null ],
     [ "getLabel", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#ad4ef958d557fd0e526b1c20af767accf", null ],
     [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a2de5dcb9d606e72dbe9e5a9cbef481ad", null ],
     [ "Select", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#affa4549b0b141794eebb64825628c46a", null ],

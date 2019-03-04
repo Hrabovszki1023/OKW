@@ -9,8 +9,8 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 35)">
 <title>okw.core.IOKW_State.TypeKeyWindow</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-35 525,-35 525,4 -4,4"/>
-<!-- Node3474 -->
-<g id="node1" class="node"><title>Node3474</title>
+<!-- Node3494 -->
+<g id="node1" class="node"><title>Node3494</title>
 <g id="a_node1"><a xlink:title="Tastatureingabe in ein bestimmtes Fensterobjekt.">
 <polygon fill="#bfbfbf" stroke="black" points="381,-0.5 381,-30.5 521,-30.5 521,-0.5 381,-0.5"/>
 <text text-anchor="start" x="389" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.Type</text>
@@ -18,29 +18,29 @@
 </a>
 </g>
 </g>
-<!-- Node3475 -->
-<g id="node2" class="node"><title>Node3475</title>
+<!-- Node3495 -->
+<g id="node2" class="node"><title>Node3495</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_core.html#acfdd78869f2151c68f7cc9e4b8acd890" target="_top" xlink:title="Tastatureingabe in ein bestimmtes Fensterobjekt.">
 <polygon fill="white" stroke="black" points="186,-6 186,-25 345,-25 345,-6 186,-6"/>
 <text text-anchor="middle" x="265.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.TypeKeyWindow</text>
 </a>
 </g>
 </g>
-<!-- Node3474&#45;&gt;Node3475 -->
-<g id="edge1" class="edge"><title>Node3474&#45;&gt;Node3475</title>
+<!-- Node3494&#45;&gt;Node3495 -->
+<g id="edge1" class="edge"><title>Node3494&#45;&gt;Node3495</title>
 <path fill="none" stroke="midnightblue" d="M370.645,-15.5C362.173,-15.5 353.558,-15.5 345.095,-15.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="370.888,-19.0001 380.888,-15.5 370.888,-12.0001 370.888,-19.0001"/>
 </g>
-<!-- Node3476 -->
-<g id="node3" class="node"><title>Node3476</title>
+<!-- Node3496 -->
+<g id="node3" class="node"><title>Node3496</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_e_n.html#a26a7f06e28d3827614961408314625c7" target="_top" xlink:title="Tastatureingabe in ein bestimmtes Fensterobjekt.">
 <polygon fill="white" stroke="black" points="-1.42109e-14,-6 -1.42109e-14,-25 150,-25 150,-6 -1.42109e-14,-6"/>
 <text text-anchor="middle" x="75" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.TypeKeyWindow</text>
 </a>
 </g>
 </g>
-<!-- Node3475&#45;&gt;Node3476 -->
-<g id="edge2" class="edge"><title>Node3475&#45;&gt;Node3476</title>
+<!-- Node3495&#45;&gt;Node3496 -->
+<g id="edge2" class="edge"><title>Node3495&#45;&gt;Node3496</title>
 <path fill="none" stroke="midnightblue" d="M175.888,-15.5C167.3,-15.5 158.65,-15.5 150.223,-15.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="175.924,-19.0001 185.924,-15.5 175.924,-12.0001 175.924,-19.0001"/>
 </g>

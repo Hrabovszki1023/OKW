@@ -9,8 +9,8 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 357.5)">
 <title>okw.core.IOKW_State.MemorizePlaceholder</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-357.5 869,-357.5 869,4 -4,4"/>
-<!-- Node1093 -->
-<g id="node1" class="node"><title>Node1093</title>
+<!-- Node1098 -->
+<g id="node1" class="node"><title>Node1098</title>
 <g id="a_node1"><a xlink:title="Speirchert den aktuellen Wert der Platzhalters, und legt diesen unter fpsMemKeyName ab.">
 <polygon fill="#bfbfbf" stroke="black" points="698,-122.5 698,-152.5 865,-152.5 865,-122.5 698,-122.5"/>
 <text text-anchor="start" x="706" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.Memorize</text>
@@ -18,34 +18,34 @@
 </a>
 </g>
 </g>
-<!-- Node1094 -->
-<g id="node2" class="node"><title>Node1094</title>
+<!-- Node1099 -->
+<g id="node2" class="node"><title>Node1099</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_core.html#a5f007ae79e3d319dd205ac60a060e16b" target="_top" xlink:title="Speirchert den aktuellen Wert der Platzhalters, und legt diesen unter fpsMemKeyName ab.">
 <polygon fill="white" stroke="black" points="473,-128 473,-147 662,-147 662,-128 473,-128"/>
 <text text-anchor="middle" x="567.5" y="-135" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.MemorizePlaceholder</text>
 </a>
 </g>
 </g>
-<!-- Node1093&#45;&gt;Node1094 -->
-<g id="edge1" class="edge"><title>Node1093&#45;&gt;Node1094</title>
+<!-- Node1098&#45;&gt;Node1099 -->
+<g id="edge1" class="edge"><title>Node1098&#45;&gt;Node1099</title>
 <path fill="none" stroke="midnightblue" d="M687.659,-137.5C679.181,-137.5 670.59,-137.5 662.106,-137.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="687.928,-141 697.928,-137.5 687.928,-134 687.928,-141"/>
 </g>
-<!-- Node1095 -->
-<g id="node3" class="node"><title>Node1095</title>
+<!-- Node1100 -->
+<g id="node3" class="node"><title>Node1100</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_e_n.html#a42fab4331baad9e351962365e5f648ce" target="_top" xlink:title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab.">
 <polygon fill="white" stroke="black" points="257,-153 257,-172 437,-172 437,-153 257,-153"/>
 <text text-anchor="middle" x="347" y="-160" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.MemorizePlaceholder</text>
 </a>
 </g>
 </g>
-<!-- Node1094&#45;&gt;Node1095 -->
-<g id="edge2" class="edge"><title>Node1094&#45;&gt;Node1095</title>
+<!-- Node1099&#45;&gt;Node1100 -->
+<g id="edge2" class="edge"><title>Node1099&#45;&gt;Node1100</title>
 <path fill="none" stroke="midnightblue" d="M473.219,-148.173C459.309,-149.764 445.046,-151.396 431.359,-152.962"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="473.734,-151.637 483.271,-147.023 472.938,-144.682 473.734,-151.637"/>
 </g>
-<!-- Node1102 -->
-<g id="node10" class="node"><title>Node1102</title>
+<!-- Node1107 -->
+<g id="node10" class="node"><title>Node1107</title>
 <g id="a_node10"><a xlink:href="classokw_1_1core_1_1_current_object___test.html#a4fdb55b1d3766eb87352b0dd74d75a86" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode MemorizePlaceholder( FN, MemKey ) im ChildObject.">
 <polygon fill="white" stroke="black" points="266.5,-93 266.5,-134 427.5,-134 427.5,-93 266.5,-93"/>
 <text text-anchor="start" x="274.5" y="-122" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -54,13 +54,13 @@
 </a>
 </g>
 </g>
-<!-- Node1094&#45;&gt;Node1102 -->
-<g id="edge9" class="edge"><title>Node1094&#45;&gt;Node1102</title>
+<!-- Node1099&#45;&gt;Node1107 -->
+<g id="edge9" class="edge"><title>Node1099&#45;&gt;Node1107</title>
 <path fill="none" stroke="midnightblue" d="M469.701,-126.868C455.705,-125.33 441.434,-123.763 427.821,-122.267"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="469.507,-130.367 479.829,-127.98 470.271,-123.409 469.507,-130.367"/>
 </g>
-<!-- Node1096 -->
-<g id="node4" class="node"><title>Node1096</title>
+<!-- Node1101 -->
+<g id="node4" class="node"><title>Node1101</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html#a8e5ee6c91e29ab77bec0cceba823379b" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="27,-312 27,-353 194,-353 194,-312 27,-312"/>
 <text text-anchor="start" x="35" y="-341" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_Keywords</text>
@@ -69,13 +69,13 @@
 </a>
 </g>
 </g>
-<!-- Node1095&#45;&gt;Node1096 -->
-<g id="edge3" class="edge"><title>Node1095&#45;&gt;Node1096</title>
+<!-- Node1100&#45;&gt;Node1101 -->
+<g id="edge3" class="edge"><title>Node1100&#45;&gt;Node1101</title>
 <path fill="none" stroke="midnightblue" d="M334.874,-180.639C315.521,-210.637 272.737,-270.446 221,-302.5 212.706,-307.639 203.525,-311.912 194.111,-315.462"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="337.937,-182.344 340.316,-172.019 332.018,-178.607 337.937,-182.344"/>
 </g>
-<!-- Node1097 -->
-<g id="node5" class="node"><title>Node1097</title>
+<!-- Node1102 -->
+<g id="node5" class="node"><title>Node1102</title>
 <g id="a_node5"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#a0a304cdd897dea71f78183dfce38f334" target="_top" xlink:title="Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch MemorizePlaceholder ausgelöst wird,...">
 <polygon fill="white" stroke="black" points="-1.42109e-14,-240.5 -1.42109e-14,-292.5 221,-292.5 221,-240.5 -1.42109e-14,-240.5"/>
 <text text-anchor="start" x="8" y="-280.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWFrameObject</text>
@@ -85,13 +85,13 @@
 </a>
 </g>
 </g>
-<!-- Node1095&#45;&gt;Node1097 -->
-<g id="edge4" class="edge"><title>Node1095&#45;&gt;Node1097</title>
+<!-- Node1100&#45;&gt;Node1102 -->
+<g id="edge4" class="edge"><title>Node1100&#45;&gt;Node1102</title>
 <path fill="none" stroke="midnightblue" d="M322.044,-177.571C297.392,-192.632 257.536,-215.756 221,-231.5 213.76,-234.62 206.148,-237.61 198.45,-240.437"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="324.036,-180.454 330.71,-172.225 320.361,-174.497 324.036,-180.454"/>
 </g>
-<!-- Node1098 -->
-<g id="node6" class="node"><title>Node1098</title>
+<!-- Node1103 -->
+<g id="node6" class="node"><title>Node1103</title>
 <g id="a_node6"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#aab9bf3249a4d0b0e15a8b5d9c591850e" target="_top" xlink:title="Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von MemorizePlaceholder( FN,...">
 <polygon fill="white" stroke="black" points="4.5,-169.5 4.5,-221.5 216.5,-221.5 216.5,-169.5 4.5,-169.5"/>
 <text text-anchor="start" x="12.5" y="-209.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWFrameObject</text>
@@ -101,13 +101,13 @@
 </a>
 </g>
 </g>
-<!-- Node1095&#45;&gt;Node1098 -->
-<g id="edge5" class="edge"><title>Node1095&#45;&gt;Node1098</title>
+<!-- Node1100&#45;&gt;Node1103 -->
+<g id="edge5" class="edge"><title>Node1100&#45;&gt;Node1103</title>
 <path fill="none" stroke="midnightblue" d="M268.328,-173.43C251.741,-175.765 233.957,-178.267 216.536,-180.719"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="269.073,-176.86 278.487,-172.001 268.097,-169.928 269.073,-176.86"/>
 </g>
-<!-- Node1099 -->
-<g id="node7" class="node"><title>Node1099</title>
+<!-- Node1104 -->
+<g id="node7" class="node"><title>Node1104</title>
 <g id="a_node7"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a2a74391733b8c3131e625559e3adc26b" target="_top" xlink:title="Prüft ob &quot;${IGNORE} &quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst.">
 <polygon fill="white" stroke="black" points="2.5,-109 2.5,-150 218.5,-150 218.5,-109 2.5,-109"/>
 <text text-anchor="start" x="10.5" y="-138" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -116,13 +116,13 @@
 </a>
 </g>
 </g>
-<!-- Node1095&#45;&gt;Node1099 -->
-<g id="edge6" class="edge"><title>Node1095&#45;&gt;Node1099</title>
+<!-- Node1100&#45;&gt;Node1104 -->
+<g id="edge6" class="edge"><title>Node1100&#45;&gt;Node1104</title>
 <path fill="none" stroke="midnightblue" d="M268.236,-151.557C252.376,-149.325 235.424,-146.939 218.744,-144.592"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="268.097,-155.072 278.487,-152.999 269.073,-148.14 268.097,-155.072"/>
 </g>
-<!-- Node1100 -->
-<g id="node8" class="node"><title>Node1100</title>
+<!-- Node1105 -->
+<g id="node8" class="node"><title>Node1105</title>
 <g id="a_node8"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#aac81dc3f89dd8f9417932076fccf6030" target="_top" xlink:title="Prüft ob &quot;&quot;${IGNORE}${TCN}&quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst.">
 <polygon fill="white" stroke="black" points="2.5,-49 2.5,-90 218.5,-90 218.5,-49 2.5,-49"/>
 <text text-anchor="start" x="10.5" y="-78" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -131,13 +131,13 @@
 </a>
 </g>
 </g>
-<!-- Node1095&#45;&gt;Node1100 -->
-<g id="edge7" class="edge"><title>Node1095&#45;&gt;Node1100</title>
+<!-- Node1100&#45;&gt;Node1105 -->
+<g id="edge7" class="edge"><title>Node1100&#45;&gt;Node1105</title>
 <path fill="none" stroke="midnightblue" d="M267.929,-149.17C264.135,-147.496 260.467,-145.615 257,-143.5 235.429,-130.343 242.187,-113.267 221,-99.5 215.546,-95.9558 209.678,-92.8268 203.594,-90.0649"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="266.986,-152.559 277.575,-152.918 269.521,-146.034 266.986,-152.559"/>
 </g>
-<!-- Node1101 -->
-<g id="node9" class="node"><title>Node1101</title>
+<!-- Node1106 -->
+<g id="node9" class="node"><title>Node1106</title>
 <g id="a_node9"><a xlink:href="classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#acb693489ff268a48bee2955bc73062bb" target="_top" xlink:title="Testet ob das Schlüsselwort MemorizePlaceholder( FN, MemKey ) der Klasse SeInputText implementiert is...">
 <polygon fill="white" stroke="black" points="13,-0.5 13,-30.5 208,-30.5 208,-0.5 13,-0.5"/>
 <text text-anchor="start" x="21" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputField.SeInput</text>
@@ -145,8 +145,8 @@
 </a>
 </g>
 </g>
-<!-- Node1095&#45;&gt;Node1101 -->
-<g id="edge8" class="edge"><title>Node1095&#45;&gt;Node1101</title>
+<!-- Node1100&#45;&gt;Node1106 -->
+<g id="edge8" class="edge"><title>Node1100&#45;&gt;Node1106</title>
 <path fill="none" stroke="midnightblue" d="M262.455,-147.761C260.555,-146.448 258.731,-145.03 257,-143.5 220.354,-111.103 257.558,-71.9967 221,-39.5 217.073,-36.0089 212.756,-32.9873 208.175,-30.3749"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="260.823,-150.861 271.226,-152.868 264.346,-144.811 260.823,-150.861"/>
 </g>

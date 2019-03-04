@@ -1,9 +1,8 @@
 <map id="okw.core.Core.ClickOn" name="okw.core.Core.ClickOn">
-<area shape="rect" id="node1" title="Klickt auf das gegebene Objekt." alt="" coords="653,478,816,505"/>
+<area shape="rect" id="node1" title="Klickt auf das gegebene Objekt." alt="" coords="653,442,816,469"/>
 <area shape="rect" id="node2" href="$classokw_1_1core_1_1_e_n.html#aa0ea62b29e5e216241a5b757797f83bf" title="Klickt auf das gegebene Objekt." alt="" coords="429,383,579,410"/>
 <area shape="rect" id="node14" href="$classokw_1_1core_1_1_current_object___test.html#a2fe4ea5049e633182621aea87f5c2a8f" title="Testziel: Prüft den Aufruf der Methode ClickOn( &quot;FN&quot; ) im ChildObject." alt="" coords="403,435,605,476"/>
 <area shape="rect" id="node15" href="$classokw_1_1core_1_1_current_object___test.html#a6ba92c08d267a77ce11c133769c9b1b9" title="Ts the c_ select_ child object_ with out_ value." alt="" coords="405,499,603,555"/>
-<area shape="rect" id="node16" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a7dce83be09a4af05f50b0e74aa9d27f7" title="Ein SeInputButton IstkeinMenüobject! &#45;&gt; OKWFrameObjectMethodNotImplemented Auslösen!" alt="" coords="411,579,597,620"/>
 <area shape="rect" id="node3" href="$classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#ab400c3e29f8f6bd9f0e70df363ea5f35" title="Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch ClickOn ausgelöst wird,..." alt="" coords="58,5,302,76"/>
 <area shape="rect" id="node4" href="$classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a15c8a86e8cbeaf7d85283b979976bcad" title="Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von ClickOn() ausgelöst wird." alt="" coords="5,101,355,157"/>
 <area shape="rect" id="node5" href="$classbrowser_1_1_frm_browser_base___test.html#a89cb7ef0c50ef2010d3e5dafa639e54a" title="Testet das Schlüsselwort VerifyValueWCM( FN ) für das Virtuelle&#45;GUI&#45;Adapter URL Prüfen." alt="" coords="89,180,271,221"/>
