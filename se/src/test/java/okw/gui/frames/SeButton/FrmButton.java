@@ -41,14 +41,15 @@ import okw.gui.adapter.selenium.SeBrowserChild;
 import okw.gui.adapter.selenium.SeButton;
 import okw.gui.adapter.selenium.SeInputText;
 
-// \~german
-// \brief GUI-Frame für die OKW-Testseite <a href="http://test.openkeyword.de/Button/button.htm">test.openkeyword.de/Button/button.htm</a> 
-//
-// \~english
-// \brief GUI-Frame for the OKW-test page <a href="http://test.openkeyword.de/Button/button.htm">test.openkeyword.de/Button/button.htm</a> 
-// \~
-// \author Zoltán Hrabovszki
-// \date 2016.09.06
+/** \~german
+ * GUI-Frame für die OKW-Testseite <a href="http://test.openkeyword.de/Button/button.htm">test.openkeyword.de/Button/button.htm</a> 
+ *
+ * \~english
+ * GUI-Frame for the OKW-test page <a href="http://test.openkeyword.de/Button/button.htm">test.openkeyword.de/Button/button.htm</a> 
+ * \~
+ * @author Zoltán Hrabovszki
+ * @date 2016.09.06
+ */
 @OKW( FN = "Button" )
 public class FrmButton extends SeBrowserChild
 {
@@ -60,7 +61,7 @@ public class FrmButton extends SeBrowserChild
    * Display TextField: Contains values after you click the "Button 1" and "Button 2".
    */
   @OKW( FN = "Display", WaitForMe_PT= 500, WaitForMe_TO=1 )
-  public SeInputText   Anzeige        = new SeInputText( "//*[@data-4test='textarea']" );
+  public SeInputText   Anzeige        = new SeInputText( "$L1$//*[@data-4test='textarea']", this.getLOCATOR() );
 
   /*
    * \~german
@@ -78,7 +79,7 @@ public class FrmButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
            )
-  public SeButton NichtVorhanden = new SeButton( "//*[@name='NichtVorhanden']" );
+  public SeButton NichtVorhanden = new SeButton( "$L1$//*[@name='NichtVorhanden']", this.getLOCATOR() );
 
   @OKW( FN = "Button 1",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -89,7 +90,7 @@ public class FrmButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
           )
-  public SeButton Text_1         = new SeButton( "//*[@data-4test='Button 1']" );
+  public SeButton Text_1         = new SeButton( "$L1$//*[@data-4test='Button 1']", this.getLOCATOR() );
 
   @OKW( FN = "Button 2",
           VerifyLabel_PT=500, VerifyLabel_TO=3,
@@ -100,7 +101,7 @@ public class FrmButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=3,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=3
           )
-  public SeButton Text_2         = new SeButton( "//*[@data-4test='Button 2']" );
+  public SeButton Text_2         = new SeButton( "$L1$//*[@data-4test='Button 2']", this.getLOCATOR() );
 
   @OKW( FN = "Button 3",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -111,7 +112,7 @@ public class FrmButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
            )
-  public SeButton Button_3       = new SeButton( "//*[@data-4test='Button 3']" );
+  public SeButton Button_3       = new SeButton( "$L1$//*[@data-4test='Button 3']", this.getLOCATOR() );
 
   /**
    * URL des Fensters: http://test.openkeyword.de/InputButton/input_type-button.htm

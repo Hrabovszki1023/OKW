@@ -20,8 +20,9 @@ public class frmSeTextField extends SeBrowserChild
 	          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1,
 	          WaitForMe_PT=500, WaitForMe_TO=1
 	          )
-    public SeInputText NichtVorhanden = new SeInputText("//*[@data-4test='NichtVorhanden']");
+    public SeInputText NichtVorhanden = new SeInputText("$L1$//*[@data-4test='NichtVorhanden']", this.getLOCATOR() );
 
+	  
     @OKW (FN="Vorname",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
             VerifyIsActive_PT=500, VerifyIsActive_TO=1,
@@ -31,7 +32,7 @@ public class frmSeTextField extends SeBrowserChild
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeInputText Vorname = new SeInputText("//*[@data-4test='First Name']");
+    public SeInputText Vorname = new SeInputText("$L1$//*[@data-4test='First Name']", this.getLOCATOR() );
 
     @OKW (FN="Name",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -43,7 +44,7 @@ public class frmSeTextField extends SeBrowserChild
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1,
             VerifyMaxLength_PT=500, VerifyMaxLength_TO=1
             )
-    public SeInputText Zuname = new SeInputText("//*[@data-4test='Last Name']");
+    public SeInputText Zuname = new SeInputText("$L1$//*[@data-4test='Last Name']", this.getLOCATOR() );
 
     public frmSeTextField( )
     {

@@ -147,14 +147,7 @@ public abstract class AnyWinBase
    */  
   public void setLocator(String fpsLocator, OKWLocator... fpLocators )
   {
-      if ( fpLocators.length != 0 )
-      {
-          this._locator = new OKWLocator(fpsLocator, fpLocators);
-      }
-      else
-      {
-          this._locator = new OKWLocator(fpsLocator);
-      }
+          this._locator.setLocator( fpsLocator, fpLocators );
   }
 
  
