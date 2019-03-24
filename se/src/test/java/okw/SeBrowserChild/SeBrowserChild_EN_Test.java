@@ -29,10 +29,10 @@ public class SeBrowserChild_EN_Test
             EN.BeginTest( name.getMethodName() );
 
             EN.StartApp( ApplicationName );
-            EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+            EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypePassword.htm" );
 
-            EN.SelectWindow( "SeTextField" );
-            EN.VerifyValue("URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm");
+            EN.SelectWindow( "InputTypePassword" );
+            EN.VerifyValue("URL", "http://test.openkeyword.de/InputText/InputTypePassword.htm");
             
             EN.StopApp( ApplicationName );
             EN.EndTest();
@@ -48,9 +48,9 @@ public class SeBrowserChild_EN_Test
           EN.BeginTest( name.getMethodName() );
 
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypePassword.htm" );
 
-          EN.SelectWindow( "SeTextField" );
+          EN.SelectWindow( "InputTypePassword" );
           EN.VerifyValue("URL", "Falscher Wert");
         }
 
@@ -64,7 +64,7 @@ public class SeBrowserChild_EN_Test
           EN.BeginTest( name.getMethodName() );
 
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypePassword.htm" );
 
           EN.SelectWindow( "SeInputTextDisabled" );
         }

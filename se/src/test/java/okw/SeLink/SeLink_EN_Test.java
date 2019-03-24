@@ -20,7 +20,7 @@ import org.junit.rules.TestName;
 @Ignore
 public class SeLink_EN_Test
 {
-  String                  cvOKWObject = "SeLink" + "";
+  String                  cvOKWObject = "Link" + "";
 
   OKW_Memorize_Sngltn     myMM        = OKW_Memorize_Sngltn.getInstance();
 
@@ -36,13 +36,13 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.ClickOn( "Google" );
       EN.VerifyValue( "URL", "https://www.google.de/?gws_rd=ssl" );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
       EN.ClickOn( "Yahoo" );
       EN.VerifyValueWCM( "URL", "https://de.yahoo.com*" );
 
@@ -57,9 +57,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.LogCaption( "Google" );
       EN.LogCaption( "Yahoo" );
 
@@ -74,9 +74,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.LogLabel( "Google" );
       EN.LogLabel( "Yahoo" );
 
@@ -91,9 +91,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
 
       EN.LogValue( "Google" );
       EN.LogValue( "Yahoo" );
@@ -112,9 +112,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
 
       EN.LogExists( "Google" );
       EN.LogExists( "Yahoo" );
@@ -132,9 +132,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
 
       EN.LogHasFocus( "Google" );
 
@@ -156,9 +156,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
 
       EN.LogIsActive( "Google" );
 
@@ -180,9 +180,9 @@ public class SeLink_EN_Test
        EN.BeginTest( name.getMethodName() );
 
        EN.StartApp( ApplicationName );
-       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-       EN.SelectWindow( "SeLink" );
+       EN.SelectWindow( "Link" );
 
        EN.MemorizeIsActive( "Google", "Schlüssel" );
 
@@ -204,9 +204,9 @@ public class SeLink_EN_Test
         EN.BeginTest( name.getMethodName() );
 
         EN.StartApp( ApplicationName );
-        EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+        EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-        EN.SelectWindow( "SeLink" );
+        EN.SelectWindow( "Link" );
 
         EN.VerifyIsActive( "Google", "YES" );
 
@@ -224,9 +224,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
 
       EN.LogTooltip( "Google" );
       EN.LogTooltip( "Yahoo" );
@@ -242,9 +242,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.MemorizeCaption( "Google", "SeLink_MemorizeCaption_1" );
       assertEquals( "Google...", myMM.get( "SeLink_MemorizeCaption_1" ) );
 
@@ -262,9 +262,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.MemorizeLabel( "Google", "SeLink_MemorizeLabel_1" );
       assertEquals( "Label Google:", myMM.get( "SeLink_MemorizeLabel_1" ) );
 
@@ -282,9 +282,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.MemorizeValue( "Google", "SeLinkMemorizeValue1" );
 
       // Gemerkten Href-Wert als URL eingeben...
@@ -292,9 +292,9 @@ public class SeLink_EN_Test
 
       EN.VerifyValueWCM( "URL", "https://www.google.de*" );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.MemorizeValue( "Yahoo", "SeLinkMemorizeValue1" );
 
       EN.TypeKey( "URL", "${SeLinkMemorizeValue1}" );
@@ -314,9 +314,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.MemorizeExists( "Google", "SeLink_MemorizeExists_1" );
       assertEquals( "YES", myMM.get( "SeLink_MemorizeExists_1" ) );
 
@@ -339,9 +339,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.MemorizeHasFocus( "Yahoo", "SeLink_MemorizeHasFocus" );
       assertEquals( "NO", myMM.get( "SeLink_MemorizeHasFocus" ) );
 
@@ -362,9 +362,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.MemorizeTooltip( "Google", "SeLink_MemorizeTooltip_1" );
       assertEquals( "Title: Google", myMM.get( "SeLink_MemorizeTooltip_1" ) );
 
@@ -382,9 +382,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.SetFocus( "Google" );
 
       EN.VerifyHasFocus( "Google", "YES" );
@@ -406,9 +406,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.VerifyCaption( "Google", "Google..." );
       EN.VerifyCaption( "Yahoo", "Yahoo..." );
 
@@ -423,9 +423,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.VerifyCaptionWCM( "Google", "Google???" );
       EN.VerifyCaptionWCM( "Yahoo", "Yahoo???" );
 
@@ -440,9 +440,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.VerifyCaptionREGX( "Google", "Google\\W{3}" );
       EN.VerifyCaptionREGX( "Yahoo", "Yahoo\\W{3}" );
 
@@ -457,9 +457,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.VerifyLabel( "Google", "Label Google:" );
       EN.VerifyLabel( "Yahoo", "Label Yahoo:" );
 
@@ -474,9 +474,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.VerifyLabelWCM( "Google", "Label Google?" );
       EN.VerifyLabelWCM( "Yahoo", "Label Yahoo?" );
 
@@ -491,9 +491,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.VerifyLabelREGX( "Google", "Label Google:" );
       EN.VerifyLabelREGX( "Yahoo", "Label Yahoo:" );
 
@@ -508,11 +508,11 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
-      EN.VerifyValue( "Google", "http://www.google.de" );
-      EN.VerifyValue( "Yahoo", "http://www.yahoo.de" );
+      EN.SelectWindow( "Link" );
+      EN.VerifyValue( "Google", "http://www.google.de/" );
+      EN.VerifyValue( "Yahoo", "http://www.yahoo.de/" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -525,9 +525,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.VerifyValueWCM( "Google", "http?//www.google.de*" );
       EN.VerifyValueWCM( "Yahoo", "http?//www.yahoo.de*" );
 
@@ -542,9 +542,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.VerifyValueREGX( "Google", "http\\W//www.google.de.*" );
       EN.VerifyValueREGX( "Yahoo", "http\\W//www.yahoo.de.*" );
 
@@ -565,9 +565,9 @@ public class SeLink_EN_Test
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-      EN.SelectWindow( "SeLink" );
+      EN.SelectWindow( "Link" );
       EN.VerifyExists( "LinkNotExists", "NO" );
 
       EN.StopApp( ApplicationName );
@@ -588,9 +588,9 @@ public class SeLink_EN_Test
     EN.BeginTest( name.getMethodName() );
 
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-    EN.SelectWindow( "SeLink" );
+    EN.SelectWindow( "Link" );
     EN.VerifyExists( "Google", "NO" );
 
     EN.StopApp( ApplicationName );
@@ -608,9 +608,9 @@ public class SeLink_EN_Test
     EN.BeginTest( name.getMethodName() );
 
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-    EN.SelectWindow( "SeLink" );
+    EN.SelectWindow( "Link" );
     EN.VerifyExists( "Google", "YES" );
     EN.VerifyExists( "Yahoo", "YES" );
 
@@ -631,9 +631,9 @@ public class SeLink_EN_Test
     EN.BeginTest( name.getMethodName() );
 
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-    EN.SelectWindow( "SeLink" );
+    EN.SelectWindow( "Link" );
     EN.VerifyExists( "LinkNotExists", "YES" );
 
     EN.StopApp( ApplicationName );
@@ -646,9 +646,9 @@ public class SeLink_EN_Test
     EN.BeginTest( name.getMethodName() );
 
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-    EN.SelectWindow( "SeLink" );
+    EN.SelectWindow( "Link" );
     EN.VerifyTooltip( "Google", "Title: Google" );
     EN.VerifyTooltip( "Yahoo", "Title: Yahoo" );
 
@@ -662,9 +662,9 @@ public class SeLink_EN_Test
     EN.BeginTest( name.getMethodName() );
 
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-    EN.SelectWindow( "SeLink" );
+    EN.SelectWindow( "Link" );
     EN.VerifyTooltipWCM( "Google", "Title? Google" );
     EN.VerifyTooltipWCM( "Yahoo", "Title? Yahoo" );
 
@@ -678,9 +678,9 @@ public class SeLink_EN_Test
     EN.BeginTest( name.getMethodName() );
 
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-    EN.SelectWindow( "SeLink" );
+    EN.SelectWindow( "Link" );
     EN.VerifyTooltipREGX( "Google", "Title\\W Google" );
     EN.VerifyTooltipREGX( "Yahoo", "Title\\W Yahoo" );
 
@@ -702,9 +702,9 @@ public class SeLink_EN_Test
         EN.BeginTest( name.getMethodName() );
 
         EN.StartApp( ApplicationName );
-        EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+        EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-        EN.SelectWindow( "SeLink" );
+        EN.SelectWindow( "Link" );
 
         EN.DoubleClickOn( "Google");
     }
@@ -724,9 +724,9 @@ public class SeLink_EN_Test
           EN.BeginTest( name.getMethodName() );
 
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-          EN.SelectWindow( "SeLink" );
+          EN.SelectWindow( "Link" );
 
           EN.SetValue( "Google", "SetValue");
       }
@@ -745,9 +745,9 @@ public class SeLink_EN_Test
            EN.BeginTest( name.getMethodName() );
 
            EN.StartApp( ApplicationName );
-           EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+           EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-           EN.SelectWindow( "SeLink" );
+           EN.SelectWindow( "Link" );
 
            EN.Select( "Google", "SetValue");
        }
@@ -766,9 +766,9 @@ public class SeLink_EN_Test
             EN.BeginTest( name.getMethodName() );
 
             EN.StartApp( ApplicationName );
-            EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+            EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-            EN.SelectWindow( "SeLink" );
+            EN.SelectWindow( "Link" );
 
             EN.SelectMenu( "Google");
         }
@@ -787,9 +787,9 @@ public class SeLink_EN_Test
             EN.BeginTest( name.getMethodName() );
 
             EN.StartApp( ApplicationName );
-            EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+            EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-            EN.SelectWindow( "SeLink" );
+            EN.SelectWindow( "Link" );
 
             EN.SelectMenu( "Google", "SetValue");
         }
@@ -809,9 +809,9 @@ public class SeLink_EN_Test
              EN.BeginTest( name.getMethodName() );
 
              EN.StartApp( ApplicationName );
-             EN.TypeKey( "URL", "http://test.openkeyword.de/Link/a.htm" );
+             EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
 
-             EN.SelectWindow( "SeLink" );
+             EN.SelectWindow( "Link" );
 
              EN.TypeKey( "Google", "SetValue");
          }

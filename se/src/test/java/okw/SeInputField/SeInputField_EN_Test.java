@@ -62,6 +62,13 @@ public class SeInputField_EN_Test {
   @Rule
   public TestName         name  = new TestName();
 
+  /**
+   * SeTextField -> InputTypeText
+   * InputTypeText.htm -> InputTypeText.htm
+   * Vorame -> First Name
+   * Name -> Last Name
+   */
+  
   
   /**
    * Testet das Schlüsselwort LogExists( FN ) eines SeInputField Prüfen.
@@ -71,10 +78,10 @@ public class SeInputField_EN_Test {
 
     EN.BeginTest( name.getMethodName() );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-    EN.SelectWindow( "SeTextField" );
-    EN.LogExists( "Name" );
+    EN.SelectWindow( "InputTypeText" );
+    EN.LogExists( "Last Name" );
   
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -89,16 +96,16 @@ public class SeInputField_EN_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.ClickOn( "Name" );
-      EN.VerifyHasFocus( "Name", "YES" );
-      EN.VerifyHasFocus( "Vorname", "NO" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.ClickOn( "Last Name" );
+      EN.VerifyHasFocus( "Last Name", "YES" );
+      EN.VerifyHasFocus( "First Name", "NO" );
 
-      EN.ClickOn( "Vorname" );
-      EN.VerifyHasFocus( "Name", "NO" );
-      EN.VerifyHasFocus( "Vorname", "YES" );
+      EN.ClickOn( "First Name" );
+      EN.VerifyHasFocus( "Last Name", "NO" );
+      EN.VerifyHasFocus( "First Name", "YES" );
       
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -114,9 +121,9 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
-      EN.LogHasFocus( "Name" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.LogHasFocus( "Last Name" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -131,9 +138,9 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
-      EN.LogIsActive( "Name" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.LogIsActive( "Last Name" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -148,10 +155,10 @@ public class SeInputField_EN_Test {
 
     EN.BeginTest( name.getMethodName() );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-    EN.SelectWindow( "SeTextField" );
-    EN.LogLabel( "Name" );
+    EN.SelectWindow( "InputTypeText" );
+    EN.LogLabel( "Last Name" );
     
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -166,10 +173,10 @@ public class SeInputField_EN_Test {
 
     EN.BeginTest( name.getMethodName() );
     EN.StartApp( ApplicationName );
-    EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+    EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-    EN.SelectWindow( "SeTextField" );
-    EN.LogPlaceholder( "Name" );
+    EN.SelectWindow( "InputTypeText" );
+    EN.LogPlaceholder( "Last Name" );
     
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -184,10 +191,10 @@ public class SeInputField_EN_Test {
   
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.LogTooltip( "Name" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.LogTooltip( "Last Name" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -202,13 +209,13 @@ public class SeInputField_EN_Test {
 
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.LogValue( "Name" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.LogValue( "Last Name" );
 
-      EN.TypeKey( "Name", "Zoltan" );
-      EN.LogValue( "Name" );
+      EN.TypeKey( "Last Name", "Zoltan" );
+      EN.LogValue( "Last Name" );
       EN.StopApp( ApplicationName );
       EN.EndTest();
   }
@@ -222,12 +229,12 @@ public class SeInputField_EN_Test {
 
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.MemorizeExists( "Name", "SeTextField_MemorizeExists_1" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.MemorizeExists( "Last Name", "InputTypeText_MemorizeExists_1" );
 
-      assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().get("SeTextField_MemorizeExists_1" ) );
+      assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().get("InputTypeText_MemorizeExists_1" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -241,12 +248,12 @@ public class SeInputField_EN_Test {
 
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.MemorizeHasFocus( "Name", "SeTextField_MemorizeHasFocus" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.MemorizeHasFocus( "Last Name", "InputTypeText_MemorizeHasFocus" );
 
-      assertEquals( "NO", myMem.get( "SeTextField_MemorizeHasFocus" ) );
+      assertEquals( "NO", myMem.get( "InputTypeText_MemorizeHasFocus" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -261,12 +268,12 @@ public class SeInputField_EN_Test {
 
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.MemorizeIsActive( "Name", "SeTextField_MemorizeIsActive" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.MemorizeIsActive( "Last Name", "InputTypeText_MemorizeIsActive" );
 
-      assertEquals( "YES", myMem.get( "SeTextField_MemorizeIsActive" ) );
+      assertEquals( "YES", myMem.get( "InputTypeText_MemorizeIsActive" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -281,15 +288,15 @@ public class SeInputField_EN_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
+      EN.SelectWindow( "InputTypeText" );
       // /
-      EN.MemorizeLabel( "Name", "SeTextField_MemorizeLabel_1" );
-      EN.MemorizeLabel( "Vorname", "SeTextField_MemorizeLabel_2" );
+      EN.MemorizeLabel( "Last Name", "InputTypeText_MemorizeLabel_1" );
+      EN.MemorizeLabel( "First Name", "InputTypeText_MemorizeLabel_2" );
 
-      assertEquals( "Last Name:", myMem.get( "SeTextField_MemorizeLabel_1" ) );
-      assertEquals( "First Name:", myMem.get( "SeTextField_MemorizeLabel_2" ) );
+      assertEquals( "Last Name:", myMem.get( "InputTypeText_MemorizeLabel_1" ) );
+      assertEquals( "First Name:", myMem.get( "InputTypeText_MemorizeLabel_2" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -304,15 +311,15 @@ public class SeInputField_EN_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
+      EN.SelectWindow( "InputTypeText" );
       // /
-      EN.MemorizePlaceholder( "Name", "SeTextField_MemorizeLabel_1" );
-      EN.MemorizePlaceholder( "Vorname", "SeTextField_MemorizeLabel_2" );
+      EN.MemorizePlaceholder( "Last Name", "InputTypeText_MemorizeLabel_1" );
+      EN.MemorizePlaceholder( "First Name", "InputTypeText_MemorizeLabel_2" );
 
-      assertEquals( "Placeholder: Last Name", myMem.get( "SeTextField_MemorizeLabel_1" ) );
-      assertEquals( "Placeholder: First Name", myMem.get( "SeTextField_MemorizeLabel_2" ) );
+      assertEquals( "Placeholder: Last Name", myMem.get( "InputTypeText_MemorizeLabel_1" ) );
+      assertEquals( "Placeholder: First Name", myMem.get( "InputTypeText_MemorizeLabel_2" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -327,12 +334,12 @@ public class SeInputField_EN_Test {
 
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.MemorizeTooltip( "Name", "SeTextField_MemorizeTooltip" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.MemorizeTooltip( "Last Name", "InputTypeText_MemorizeTooltip" );
 
-      assertEquals( "Title: Last Name", myMem.get( "SeTextField_MemorizeTooltip" ) );
+      assertEquals( "Title: Last Name", myMem.get( "InputTypeText_MemorizeTooltip" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -347,17 +354,17 @@ public class SeInputField_EN_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
+      EN.SelectWindow( "InputTypeText" );
       // // test.openkeyword.de/select.htm
       // // EN.TypeKey("URL", "http://test.openkeyword.de/eingabe.htm");
-      EN.MemorizeValue( "Name", "SeTextField_LogValue_1" );
-      EN.TypeKey( "Name", "Zoltan" );
-      EN.MemorizeValue( "Name", "SeTextField_LogValue_2" );
+      EN.MemorizeValue( "Last Name", "InputTypeText_LogValue_1" );
+      EN.SetValue( "Last Name", "Zoltan" );
+      EN.MemorizeValue( "Last Name", "InputTypeText_LogValue_2" );
 
-      assertEquals( "", myMem.get( "SeTextField_LogValue_1" ) );
-      assertEquals( "Zoltan", myMem.get( "SeTextField_LogValue_2" ) );
+      assertEquals( "Jackson", myMem.get( "InputTypeText_LogValue_1" ) );
+      assertEquals( "Zoltan", myMem.get( "InputTypeText_LogValue_2" ) );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -372,16 +379,16 @@ public class SeInputField_EN_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.SetFocus( "Name" );
-      EN.VerifyHasFocus( "Name", "YES" );
-      EN.VerifyHasFocus( "Vorname", "NO" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.SetFocus( "Last Name" );
+      EN.VerifyHasFocus( "Last Name", "YES" );
+      EN.VerifyHasFocus( "First Name", "NO" );
 
-      EN.SetFocus( "Vorname" );
-      EN.VerifyHasFocus( "Name", "NO" );
-      EN.VerifyHasFocus( "Vorname", "YES" );
+      EN.SetFocus( "First Name" );
+      EN.VerifyHasFocus( "Last Name", "NO" );
+      EN.VerifyHasFocus( "First Name", "YES" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -423,21 +430,21 @@ public class SeInputField_EN_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.VerifyValue( "Name", "" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.VerifyValue( "Last Name", "" );
 
-      EN.SetValue( "Name", "Hrabovszki" );
-      EN.VerifyValue( "Name", "Hrabovszki" );
-      EN.SetValue( "Vorname", "Zoltan" );
-      EN.VerifyValue( "Vorname", "Zoltan" );
+      EN.SetValue( "Last Name", "Hrabovszki" );
+      EN.VerifyValue( "Last Name", "Hrabovszki" );
+      EN.SetValue( "First Name", "Zoltan" );
+      EN.VerifyValue( "First Name", "Zoltan" );
 
       // Neuen Wert Setzen, der alte Wert wird überschrieben
-      EN.SetValue( "Name", "Becker" );
-      EN.VerifyValue( "Name", "Becker" );
-      EN.SetValue( "Vorname", "Manu" );
-      EN.VerifyValue( "Vorname", "Manu" );
+      EN.SetValue( "Last Name", "Becker" );
+      EN.VerifyValue( "Last Name", "Becker" );
+      EN.SetValue( "First Name", "Manu" );
+      EN.VerifyValue( "First Name", "Manu" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -451,21 +458,21 @@ public class SeInputField_EN_Test {
   { 
      EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.VerifyValue( "Name", "" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.VerifyValue( "Last Name", "" );
 
-      EN.SetValue( "Name", "Hrabovszki" );
-      EN.VerifyValue( "Name", "Hrabovszki" );
-      EN.SetValue( "Vorname", "Zoltan" );
-      EN.VerifyValue( "Vorname", "Zoltan" );
+      EN.SetValue( "Last Name", "Hrabovszki" );
+      EN.VerifyValue( "Last Name", "Hrabovszki" );
+      EN.SetValue( "First Name", "Zoltan" );
+      EN.VerifyValue( "First Name", "Zoltan" );
 
       // Neuen Wert Setzen, der alte Wert wird überschrieben
-      EN.SetValue( "Name", "${IGNORE}" );
-      EN.VerifyValue( "Name", "Hrabovszki" );
-      EN.SetValue( "Vorname", "${IGNORE}" );
-      EN.VerifyValue( "Vorname", "Zoltan" );
+      EN.SetValue( "Last Name", "${IGNORE}" );
+      EN.VerifyValue( "Last Name", "Hrabovszki" );
+      EN.SetValue( "First Name", "${IGNORE}" );
+      EN.VerifyValue( "First Name", "Zoltan" );
       
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -479,17 +486,21 @@ public class SeInputField_EN_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.VerifyValue( "Name", "" );
-      EN.VerifyValue( "Vorname", "" );
+      EN.SelectWindow( "InputTypeText" );
+      
+      EN.SetValue( "Last Name", "${DELETE}" );
+      EN.SetValue( "First Name", "${DELETE}" );
+      
+      EN.VerifyValue( "Last Name", "${EMPTY}" );
+      EN.VerifyValue( "First Name", "${EMPTY}" );
 
-      EN.TypeKey( "Name", "Hrabovszki" );
-      EN.VerifyValue( "Name", "Hrabovszki" );
+      EN.TypeKey( "Last Name", "Hrabovszki" );
+      EN.VerifyValue( "Last Name", "Hrabovszki" );
 
-      EN.TypeKey( "Vorname", "Zoltan" );
-      EN.VerifyValue( "Vorname", "Zoltan" );
+      EN.TypeKey( "First Name", "Zoltan" );
+      EN.VerifyValue( "First Name", "Zoltan" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -509,17 +520,17 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      // First off all teh Name-Field is Empty
-      EN.VerifyValue( "Name", "${EMPTY}" );
+      // Make the field empty
+      EN.SetValue( "Last Name", "${DELETE}" );
       
       // First off all teh Name-Field is Empty
-      EN.VerifyCaption( "Name", "${EMPTY}" );
+      EN.VerifyCaption( "Last Name", "${EMPTY}" );
       
-      EN.SetValue( "Name", "Zoltan" );
-      EN.VerifyCaption( "Name", "Zoltan" );
+      EN.SetValue( "Last Name", "Zoltan" );
+      EN.VerifyCaption( "Last Name", "Zoltan" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -534,30 +545,33 @@ public class SeInputField_EN_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      
+      EN.SelectWindow( "InputTypeText" );
+      
+      EN.SetValue( "Last Name", "${DELETE}" );
+      EN.SetValue( "First Name", "${DELETE}" );
 
-      EN.SelectWindow( "SeTextField" );
+      EN.VerifyValue( "Last Name", "" );
+      EN.VerifyValue( "First Name", "" );
 
-      EN.VerifyValue( "Name", "" );
-      EN.VerifyValue( "Vorname", "" );
+      EN.TypeKey( "Last Name", "Hrabovszki" );
+      EN.TypeKey( "First Name", "Zoltan" );
 
-      EN.TypeKey( "Name", "Hrabovszki" );
-      EN.TypeKey( "Vorname", "Zoltan" );
+      EN.VerifyValue( "Last Name", "Hrabovszki" );
+      EN.VerifyValue( "First Name", "Zoltan" );
 
-      EN.VerifyValue( "Name", "Hrabovszki" );
-      EN.VerifyValue( "Vorname", "Zoltan" );
+      EN.TypeKey( "Last Name", "${IGNORE}" );
+      EN.TypeKey( "First Name", "${IGNORE}" );
 
-      EN.TypeKey( "Name", "${IGNORE}" );
-      EN.TypeKey( "Vorname", "${IGNORE}" );
+      EN.VerifyValue( "Last Name", "Hrabovszki" );
+      EN.VerifyValue( "First Name", "Zoltan" );
 
-      EN.VerifyValue( "Name", "Hrabovszki" );
-      EN.VerifyValue( "Vorname", "Zoltan" );
+      EN.TypeKey( "Last Name", "" );
+      EN.TypeKey( "First Name", "" );
 
-      EN.TypeKey( "Name", "" );
-      EN.TypeKey( "Vorname", "" );
-
-      EN.VerifyValue( "Name", "Hrabovszki" );
-      EN.VerifyValue( "Vorname", "Zoltan" );
+      EN.VerifyValue( "Last Name", "Hrabovszki" );
+      EN.VerifyValue( "First Name", "Zoltan" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -572,10 +586,10 @@ public class SeInputField_EN_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.VerifyExists( "NotExists", "NO" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.VerifyExists( "DoesNotExist", "NO" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -591,11 +605,11 @@ public class SeInputField_EN_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
   
-      EN.SelectWindow( "SeTextField" );
+      EN.SelectWindow( "InputTypeText" );
   
-      EN.VerifyExists( "NotExists", "YES" );
+      EN.VerifyExists( "DoesNotExist", "YES" );
   }
 
   // \brief
@@ -608,10 +622,10 @@ public class SeInputField_EN_Test {
 
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.VerifyExists( "Name", "NO" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.VerifyExists( "Last Name", "NO" );
   }
 
   // / \brief
@@ -623,10 +637,10 @@ public class SeInputField_EN_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
-      EN.VerifyExists( "Name", "YES" );
+      EN.SelectWindow( "InputTypeText" );
+      EN.VerifyExists( "Last Name", "YES" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -647,9 +661,9 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
 
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
-      EN.SelectWindow( "SeTextField" );
+      EN.SelectWindow( "InputTypeText" );
       EN.VerifyExists( "NichtVorhanden", "${IGNORE}" );
 
       EN.StopApp( ApplicationName );
@@ -665,12 +679,12 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyHasFocus( "Name", "NO" );
-      EN.SetFocus( "Name" );
-      EN.VerifyHasFocus( "Name", "YES" );
+      EN.VerifyHasFocus( "Last Name", "NO" );
+      EN.SetFocus( "Last Name" );
+      EN.VerifyHasFocus( "Last Name", "YES" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -685,12 +699,12 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyHasFocus( "Name", "NO" );
-      EN.SetFocus( "Name" );
-      EN.VerifyHasFocus( "Name", "NO" );
+      EN.VerifyHasFocus( "Last Name", "NO" );
+      EN.SetFocus( "Last Name" );
+      EN.VerifyHasFocus( "Last Name", "NO" );
   }
 
   // \brief
@@ -701,10 +715,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyHasFocus( "Name", "YES" );
+      EN.VerifyHasFocus( "Last Name", "YES" );
   }
 
   
@@ -726,21 +740,21 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
       EN.VerifyHasFocus( "NichtVorhanden", "${IGNORE}" );
       EN.StopApp( ApplicationName );
       EN.EndTest();
   }
 
-  // \~german
-  // \brief
-  // Prüft, ob die Methode VerifyIsActive für SeTextField implementiert ist.
-  //
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2014.12.03
+  /** \~german
+   *  Prüft, ob die Methode VerifyIsActive für SeTextField implementiert ist.
+   * 
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2014.12.03
+   */
   @Test
   public void tcVerifyIsActive() throws Exception
   {
@@ -748,18 +762,18 @@ public class SeInputField_EN_Test {
       EN.StartApp( ApplicationName );
 
       // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-      EN.TypeKey( "URL","http://test.openkeyword.de/InputText/input_type-text_disabled.htm" );
-      EN.SelectWindow( "SeInputTextDisabled" );
+      EN.TypeKey( "URL","http://test.openkeyword.de/InputText/InputTypeTextDisabled.htm" );
+      EN.SelectWindow( "InputTypeTextDisabled" );
 
       EN.VerifyIsActive( "Preis", "NO" );
       EN.VerifyIsActive( "MwSt", "NO" );
 
       // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyIsActive( "Name", "YES" );
-      EN.VerifyIsActive( "Vorname", "YES" );
+      EN.VerifyIsActive( "Last Name", "YES" );
+      EN.VerifyIsActive( "First Name", "YES" );
 
       // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
       EN.TypeKey( "URL",
@@ -789,11 +803,11 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyLabel( "Name", "Last Name:" );
-      EN.VerifyLabel( "Vorname", "First Name:" );
+      EN.VerifyLabel( "Last Name", "Last Name:" );
+      EN.VerifyLabel( "First Name", "First Name:" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -812,10 +826,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyLabel( "Name", "Xxxx:" );
+      EN.VerifyLabel( "Last Name", "Xxxx:" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -835,11 +849,11 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyLabelWCM( "Name", "Last Name?" );
-      EN.VerifyLabelWCM( "Vorname", "First Name?" );
+      EN.VerifyLabelWCM( "Last Name", "Last Name?" );
+      EN.VerifyLabelWCM( "First Name", "First Name?" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -859,10 +873,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyLabelWCM( "Name", "####:" );
+      EN.VerifyLabelWCM( "Last Name", "####:" );
   }
 
   
@@ -882,10 +896,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyMaxLength( "Name", "40" );
+      EN.VerifyMaxLength( "Last Name", "40" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -910,10 +924,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyMaxLength( "Name", "25" );
+      EN.VerifyMaxLength( "Last Name", "25" );
   }
 
   
@@ -930,10 +944,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyLabelREGX( "Name", "Last Name\\W" );
+      EN.VerifyLabelREGX( "Last Name", "Last Name\\W" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -953,10 +967,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyLabelREGX( "Name", "Xxxx:" );
+      EN.VerifyLabelREGX( "Last Name", "Xxxx:" );
   }
 
   
@@ -976,11 +990,11 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyPlaceholder( "Name", "Placeholder: Last Name" );
-      EN.VerifyPlaceholder( "Vorname", "Placeholder: First Name" );
+      EN.VerifyPlaceholder( "Last Name", "Placeholder: Last Name" );
+      EN.VerifyPlaceholder( "First Name", "Placeholder: First Name" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -999,10 +1013,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyLabel( "Name", "Placeholder: Last Nam" );
+      EN.VerifyLabel( "Last Name", "Placeholder: Last Nam" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -1022,11 +1036,11 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyPlaceholderWCM( "Name", "Placeholder: Last Nam?" );
-      EN.VerifyPlaceholderWCM( "Vorname", "Placeholder: First Nam?" );
+      EN.VerifyPlaceholderWCM( "Last Name", "Placeholder: Last Nam?" );
+      EN.VerifyPlaceholderWCM( "First Name", "Placeholder: First Nam?" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -1046,10 +1060,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyPlaceholderWCM( "Name", "####:" );
+      EN.VerifyPlaceholderWCM( "Last Name", "####:" );
   }
 
   
@@ -1066,10 +1080,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyPlaceholderREGX( "Name", "Placeholder: Last Nam\\w" );
+      EN.VerifyPlaceholderREGX( "Last Name", "Placeholder: Last Nam\\w" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -1089,10 +1103,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyPlaceholderREGX( "Name", "Placeholder: Xxxx" );
+      EN.VerifyPlaceholderREGX( "Last Name", "Placeholder: Xxxx" );
   }
   // \~german
   // \brief
@@ -1107,10 +1121,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyTooltip( "Name", "Title: Last Name" );
+      EN.VerifyTooltip( "Last Name", "Title: Last Name" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -1131,15 +1145,15 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
       
-      EN.VerifyTooltip( "Name", "Den Namen..." );
+      EN.VerifyTooltip( "Last Name", "Den Namen..." );
   }
 
   
   /** \~german
-   * Prüft, ob die Methode VerifyTooltipWCM für SeTextField implementiert ist.
+   * Prüft, ob die Methode VerifyTooltipWCM für InputTypeText implementiert ist.
    *
    * \~
    * \author Zoltan Hrabovszki
@@ -1151,10 +1165,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
   
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
   
-      EN.VerifyTooltipWCM( "Name", "?????: Last Name" );
+      EN.VerifyTooltipWCM( "Last Name", "?????: Last Name" );
   
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -1173,10 +1187,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyTooltipWCM( "Name", "#oltan" );
+      EN.VerifyTooltipWCM( "Last Name", "#oltan" );
   }
 
   
@@ -1193,10 +1207,11 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
   
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_inputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
   
-      EN.VerifyTooltipREGX( "Name", "\\witle: Last Name" );
+      // Test-Objekt
+      EN.VerifyTooltipREGX( "Last Name", "\\witle: Last Name" );
   
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -1215,10 +1230,10 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
-      EN.VerifyTooltipREGX( "Name", "#oltan" );
+      EN.VerifyTooltipREGX( "Last Name", "#oltan" );
   }
   
   
@@ -1235,14 +1250,15 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
+      EN.SetValue( "Last Name", "${DELETE}" );
       // First off all teh Name-Field is Empty
-      EN.VerifyValue( "Name", "${EMPTY}" );
+      EN.VerifyValue( "Last Name", "${EMPTY}" );
       
-      EN.SetValue( "Name", "Zoltan" );
-      EN.VerifyValue( "Name", "Zoltan" );
+      EN.SetValue( "Last Name", "Zoltan" );
+      EN.VerifyValue( "Last Name", "Zoltan" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -1263,14 +1279,14 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
   
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
   
-      EN.SetValue( "Name", "Zoltan" );
-      EN.VerifyValue( "Name", "Zoltan" );
+      EN.SetValue( "Last Name", "Zoltan" );
+      EN.VerifyValue( "Last Name", "Zoltan" );
   
-      EN.SetValue( "Name", "${DELETE}" );
-      EN.VerifyValue( "Name", "${EMPTY}" );
+      EN.SetValue( "Last Name", "${DELETE}" );
+      EN.VerifyValue( "Last Name", "${EMPTY}" );
   }
 
   // \~german
@@ -1286,14 +1302,14 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
       // First off all teh Name-Field is Empty
-      EN.VerifyValue( "Name", "${EMPTY}" );
+      EN.VerifyValue( "Last Name", "${EMPTY}" );
       
-      EN.SetValue( "Name", "Zoltan" );
-      EN.VerifyValue( "Name", "Soltan" );
+      EN.SetValue( "Last Name", "Zoltan" );
+      EN.VerifyValue( "Last Name", "Soltan" );
 
   }
 
@@ -1311,15 +1327,15 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
       // First off all teh Name-Field is Empty
-      EN.VerifyValue( "Name", "${EMPTY}" );
+      EN.VerifyValue( "Last Name", "Jackson" );
       
-      EN.SetValue( "Name", "Zoltan" );
-      EN.VerifyValueWCM( "Name", "??????" );
-      EN.VerifyValueWCM( "Name", "Z????n" );
+      EN.SetValue( "Last Name", "Zoltan" );
+      EN.VerifyValueWCM( "Last Name", "??????" );
+      EN.VerifyValueWCM( "Last Name", "Z????n" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -1341,14 +1357,14 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
   
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
   
-      EN.SetValue( "Name", "Zoltan" );
-      EN.VerifyValueWCM( "Name", "??????" );
+      EN.SetValue( "Last Name", "Zoltan" );
+      EN.VerifyValueWCM( "Last Name", "??????" );
   
-      EN.SetValue( "Name", "${DELETE}" );
-      EN.VerifyValueWCM( "Name", "${EMPTY}" );
+      EN.SetValue( "Last Name", "${DELETE}" );
+      EN.VerifyValueWCM( "Last Name", "${EMPTY}" );
   
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -1367,14 +1383,14 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
       // First off all teh Name-Field is Empty
-      EN.VerifyValueWCM( "Name", "${EMPTY}" );
+      EN.VerifyValueWCM( "Last Name", "${EMPTY}" );
       
-      EN.SetValue( "Name", "Zoltan" );
-      EN.VerifyValueWCM( "Name", "#oltan" );
+      EN.SetValue( "Last Name", "Zoltan" );
+      EN.VerifyValueWCM( "Last Name", "#oltan" );
   }
 
   
@@ -1391,14 +1407,14 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
       // First off all teh Name-Field is Empty
-      EN.VerifyValue( "Name", "${EMPTY}" );
+      EN.VerifyValue( "Last Name", "Jackson" );
       
-      EN.SetValue( "Name", "Zoltan" );
-      EN.VerifyValueREGX( "Name", ".oltan" );
+      EN.SetValue( "Last Name", "Zoltan" );
+      EN.VerifyValueREGX( "Last Name", ".oltan" );
       EN.StopApp( ApplicationName );
       EN.EndTest();
   }
@@ -1418,14 +1434,14 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
   
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
   
-      EN.SetValue( "Name", "Zoltan" );
-      EN.VerifyValueREGX( "Name", "\\woltan" );
+      EN.SetValue( "Last Name", "Zoltan" );
+      EN.VerifyValueREGX( "Last Name", "\\woltan" );
   
-      EN.SetValue( "Name", "${DELETE}" );
-      EN.VerifyValueREGX( "Name", "${EMPTY}" );
+      EN.SetValue( "Last Name", "${DELETE}" );
+      EN.VerifyValueREGX( "Last Name", "${EMPTY}" );
       EN.StopApp( ApplicationName );
       EN.EndTest();
   }
@@ -1444,14 +1460,14 @@ public class SeInputField_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-      EN.SelectWindow( "SeTextField" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+      EN.SelectWindow( "InputTypeText" );
 
       // First off all teh Name-Field is Empty
-      EN.VerifyValue( "Name", "${EMPTY}" );
+      EN.VerifyValue( "Last Name", "${EMPTY}" );
       
-      EN.SetValue( "Name", "Zoltan" );
-      EN.VerifyValueREGX( "Name", "Soltan" );
+      EN.SetValue( "Last Name", "Zoltan" );
+      EN.VerifyValueREGX( "Last Name", "Soltan" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
@@ -1462,10 +1478,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.ClickOn( "NotExists");
+          EN.ClickOn( "DoesNotExist");
   }
 
   /**
@@ -1477,10 +1493,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.Select( "NotExists", "abc");
+          EN.Select( "DoesNotExist", "abc");
   }
 
   @Test( expected = OKWGUIObjectNotFoundException.class )
@@ -1488,10 +1504,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.TypeKey( "NotExists", "abc");
+          EN.TypeKey( "DoesNotExist", "abc");
   }
   
   @Test( expected = OKWGUIObjectNotFoundException.class )
@@ -1499,10 +1515,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.SetValue( "NotExists", "abc");
+          EN.SetValue( "DoesNotExist", "abc");
   }
   
   @Test( expected = OKWGUIObjectNotFoundException.class )
@@ -1510,10 +1526,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.SetFocus( "NotExists");
+          EN.SetFocus( "DoesNotExist");
   }
   
   
@@ -1522,10 +1538,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.MemorizeCaption( "NotExists", "MemorizeCaption");
+          EN.MemorizeCaption( "DoesNotExist", "MemorizeCaption");
   }
 
   
@@ -1534,10 +1550,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.MemorizeHasFocus( "NotExists", "MemorizeHasFocus");
+          EN.MemorizeHasFocus( "DoesNotExist", "MemorizeHasFocus");
   }
   
   
@@ -1546,10 +1562,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.MemorizeIsActive( "NotExists", "MemorizeIsActive");
+          EN.MemorizeIsActive( "DoesNotExist", "MemorizeIsActive");
   }
   
   
@@ -1558,10 +1574,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.MemorizeLabel( "NotExists", "MemorizeLabel");
+          EN.MemorizeLabel( "DoesNotExist", "MemorizeLabel");
   }
   
   
@@ -1570,10 +1586,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.MemorizePlaceholder( "NotExists", "MemorizePlaceholder");
+          EN.MemorizePlaceholder( "DoesNotExist", "MemorizePlaceholder");
   }
   
   
@@ -1582,10 +1598,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.MemorizeTooltip( "NotExists", "MemorizeTooltip");
+          EN.MemorizeTooltip( "DoesNotExist", "MemorizeTooltip");
   }
 
   
@@ -1594,10 +1610,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.MemorizeValue( "NotExists", "MemorizeVale");
+          EN.MemorizeValue( "DoesNotExist", "MemorizeVale");
   }
 
   
@@ -1606,10 +1622,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.LogCaption( "NotExists");
+          EN.LogCaption( "DoesNotExist");
   }
 
   
@@ -1618,10 +1634,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.LogHasFocus( "NotExists");
+          EN.LogHasFocus( "DoesNotExist");
   }
   
   
@@ -1630,10 +1646,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.LogIsActive( "NotExists");
+          EN.LogIsActive( "DoesNotExist");
   }
   
   
@@ -1642,10 +1658,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.LogLabel( "NotExists");
+          EN.LogLabel( "DoesNotExist");
   }
   
   
@@ -1654,10 +1670,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.LogPlaceholder( "NotExists");
+          EN.LogPlaceholder( "DoesNotExist");
   }
   
   @Test( expected = OKWGUIObjectNotFoundException.class )
@@ -1665,10 +1681,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.LogTooltip( "NotExists");
+          EN.LogTooltip( "DoesNotExist");
   }
 
   
@@ -1677,20 +1693,20 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.LogValue( "NotExists");
+          EN.LogValue( "DoesNotExist");
   }
   @Test( expected = OKWGUIObjectNotFoundException.class )
   public void tcVerifyCaption_OKWGUIObjectNotFoundException() throws Exception
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.VerifyCaption( "NotExists", "aa");
+          EN.VerifyCaption( "DoesNotExist", "aa");
   }
 
   
@@ -1699,10 +1715,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.VerifyHasFocus( "NotExists", "YES");
+          EN.VerifyHasFocus( "DoesNotExist", "YES");
   }
   
   
@@ -1711,10 +1727,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.VerifyIsActive( "NotExists", "YES" );
+          EN.VerifyIsActive( "DoesNotExist", "YES" );
   }
   
   
@@ -1723,10 +1739,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.VerifyLabel( "NotExists", "aa" );
+          EN.VerifyLabel( "DoesNotExist", "aa" );
   }
   
   
@@ -1735,10 +1751,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.VerifyTooltip( "NotExists", "aa");
+          EN.VerifyTooltip( "DoesNotExist", "aa");
   }
 
   
@@ -1747,10 +1763,10 @@ public class SeInputField_EN_Test {
   {
           EN.BeginTest( name.getMethodName() );
           EN.StartApp( ApplicationName );
-          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
-          EN.SelectWindow( "SeTextField" );
+          EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
+          EN.SelectWindow( "InputTypeText" );
 
-          EN.VerifyValue( "NotExists", "aa");
+          EN.VerifyValue( "DoesNotExist", "aa");
   }
 
 }

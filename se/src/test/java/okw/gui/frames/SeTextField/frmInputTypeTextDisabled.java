@@ -39,12 +39,12 @@ package okw.gui.frames.SeTextField;
 import okw.OKW;
 import okw.gui.adapter.selenium.*;
 
-@OKW (FN="SeInputTextDisabled",
+@OKW (FN="InputTypeTextDisabled",
       WaitForMe_PT=500,
       WaitForMe_TO=5
      )
-public class frmSeInputTextDisabled extends SeBrowserChild
-    {
+public class frmInputTypeTextDisabled extends SeBrowserChild
+{
 	@OKW (FN="MwSt",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
           VerifyIsActive_PT=500, VerifyIsActive_TO=1,
@@ -52,9 +52,9 @@ public class frmSeInputTextDisabled extends SeBrowserChild
           VerifyTooltip_PT=500, VerifyTooltip_TO=1,
           VerifyCaption_PT=500, VerifyCaption_TO=1,
           VerifyExists_PT=500, VerifyExists_TO=1,
-          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
+          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1 
           )
-	public SeInputText MwSt = new SeInputText("//*[@name='mwst']");
+	public SeInputText MwSt = new SeInputText("//*[@data-4test='MwSt']");
 
 	@OKW (FN="Preis",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -65,11 +65,11 @@ public class frmSeInputTextDisabled extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
           )
-    public SeInputText Preis = new SeInputText("//*[@name='preis']");
+    public SeInputText Preis = new SeInputText("//*[@data-4test='Preis']");
 
 
-    public frmSeInputTextDisabled()
+    public frmInputTypeTextDisabled()
     {
-        setLocator("//title[contains(text(),'Textfield TestGUI 3 input_type-text_disabled')]/../..");
+        setLocator("//*[@data-4test='InputTypeTextDisabled']");
     }
 }

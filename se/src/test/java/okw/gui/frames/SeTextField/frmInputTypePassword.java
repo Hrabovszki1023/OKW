@@ -3,14 +3,14 @@ package okw.gui.frames.SeTextField;
 import okw.OKW;
 import okw.gui.adapter.selenium.*;
 
-@OKW (FN="SeTextField", 
+@OKW (FN="InputTypePassword", 
 WaitForMe_PT=500,
 WaitForMe_TO=5
 )
-public class frmSeTextField extends SeBrowserChild
+public class frmInputTypePassword extends SeBrowserChild
 {
   
-	  @OKW (FN="NotExists",
+	  @OKW (FN="DoesNotExist",
 	          VerifyLabel_PT=500, VerifyLabel_TO=1,
 	          VerifyIsActive_PT=500, VerifyIsActive_TO=1,
 	          VerifyValue_PT=500, VerifyValue_TO=1,
@@ -23,7 +23,7 @@ public class frmSeTextField extends SeBrowserChild
     public SeInputText NichtVorhanden = new SeInputText("$L1$//*[@data-4test='NichtVorhanden']", this.getLOCATOR() );
 
 	  
-    @OKW (FN="Vorname",
+    @OKW (FN="User",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
             VerifyIsActive_PT=500, VerifyIsActive_TO=1,
             VerifyValue_PT=500, VerifyValue_TO=1,
@@ -32,9 +32,9 @@ public class frmSeTextField extends SeBrowserChild
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeInputText Vorname = new SeInputText("$L1$//*[@data-4test='First Name']", this.getLOCATOR() );
+    public SeInputText Vorname = new SeInputText("$L1$//*[@data-4test='User']", this.getLOCATOR() );
 
-    @OKW (FN="Name",
+    @OKW (FN="Password",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
             VerifyIsActive_PT=500, VerifyIsActive_TO=1,
             VerifyValue_PT=500, VerifyValue_TO=1,
@@ -44,11 +44,11 @@ public class frmSeTextField extends SeBrowserChild
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1,
             VerifyMaxLength_PT=500, VerifyMaxLength_TO=1
             )
-    public SeInputText Zuname = new SeInputText("$L1$//*[@data-4test='Last Name']", this.getLOCATOR() );
+    public SeInputText Zuname = new SeInputText("$L1$//*[@data-4test='Password']", this.getLOCATOR() );
 
-    public frmSeTextField( )
+    public frmInputTypePassword( )
     {
-        setLocator("//*[@data-4test='input_type_all_InputText']");
+        setLocator("//*[@data-4test='InputTypePassword']");
     }
 
 }

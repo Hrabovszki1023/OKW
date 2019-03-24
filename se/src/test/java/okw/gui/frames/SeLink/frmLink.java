@@ -6,8 +6,8 @@ import okw.gui.adapter.selenium.*;
 /** \~german
  *  Selenium-Frame zur [Link-TestSeite](http://test.openkeyword.de/Link/Link.htm)
  */
-@OKW( FN = "SeLink" )
-public class frmSeLink extends SeBrowserChild {
+@OKW( FN = "Link" )
+public class frmLink extends SeBrowserChild {
 
     /** \~german
      *  Dieses Objekt dient zur Existenzprüfung eines _nicht_
@@ -24,13 +24,12 @@ public class frmSeLink extends SeBrowserChild {
             )
     public SeLink LinkNotExists = new SeLink( "//*[@value='upss']" );
 
-    // / \~german
-    // / \brief
-    // / SeLink nach [Google](http://www.yahoo.de), Testseite enthält folgenden
-    // Link:
-    // / <code><a href="http://www.google.de"
-    // name="Google_Link">Google...</a></code>
-    // /
+    /** \~german
+     *   SeLink nach [Google](http://www.yahoo.de), Testseite enthält folgenden
+     *   Link:
+     *   <code><a href="http://www.google.de"
+     *            data-4test="Google>Google...</a></code>
+     */
     @OKW( FN = "Google",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
             VerifyIsActive_PT=500, VerifyIsActive_TO=1,
@@ -40,7 +39,7 @@ public class frmSeLink extends SeBrowserChild {
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeLink Google = new SeLink( "%1$s//*[@name='Google_Link']", this.getLOCATOR() );
+    public SeLink Google = new SeLink( "$L1$//*[@data-4test='Google']", this.getLOCATOR() );
 
     // / \~german
     // / \brief
@@ -58,10 +57,10 @@ public class frmSeLink extends SeBrowserChild {
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeLink Yahoo = new SeLink( "%1$s//*[@name='Yahoo_Link']", getLOCATOR() );
+    public SeLink Yahoo = new SeLink( "$L1$//*[@data-4test='Yahoo']", this.getLOCATOR());
 
-    public frmSeLink()
+    public frmLink()
     {
-        setLocator( "//title[text()='OKW Link-Testpage']/../.." );
+        setLocator( "//*[@data-4test='Link']" );
     }
 }
