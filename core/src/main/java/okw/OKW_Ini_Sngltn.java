@@ -404,7 +404,7 @@ public class OKW_Ini_Sngltn
 	  System.out.println(this.getClass().getName() + ".Init...");
 		
 		//Get file from resources folder
-		ClassLoader classLoader = getClass().getClassLoader();
+		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
 		// ... und dann alles Initialisieren!
 			// 1. Ermittle xml-Verzeichniss in der Resource

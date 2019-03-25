@@ -426,7 +426,7 @@ public class FrameObjectDictionary_Sngltn
     String lvsNamespace = "okw.gui.frames";
     ArrayList<Class<?>> lvALReturn = new ArrayList<Class<?>>();
 
-    ClassLoader classLoader = FrameObjectDictionary_Sngltn.class.getClassLoader();
+    ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
     // 1. Hole alle Klassen, die sich im Package "okw.gui.frames" befinden
     ArrayList<String> lvALClassNames = OKW_GetJavaClass.getClasses( lvsNamespace );
