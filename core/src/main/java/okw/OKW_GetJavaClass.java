@@ -203,7 +203,7 @@ public class OKW_GetJavaClass
 
     public static Class<?> loadClass( String fpsClass )
     {
-        ClassLoader classLoader = ClassLoader.class.getClassLoader();
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         Class<?> aClass = null;
         
         try
@@ -315,7 +315,7 @@ public class OKW_GetJavaClass
       // String lvsNamespace = "okw.gui.frames";
       ArrayList<Class<?>> lvALReturn = new ArrayList<Class<?>>();
 
-      ClassLoader classLoader = FrameObjectDictionary_Sngltn.class.getClassLoader();
+      ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
       // 1. Hole alle Klassen, die sich im Package "okw.gui.frames" befinden
       ArrayList<String> lvALClassNames = OKW_GetJavaClass.getClasses( fpsNamespace );

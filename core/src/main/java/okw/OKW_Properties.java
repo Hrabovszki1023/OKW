@@ -137,7 +137,7 @@ public class OKW_Properties extends Properties
      */    
     private Boolean loadFromResource(String fpsResource )
     {
-        InputStream overwrites = OKW_Properties.class.getClassLoader().getResourceAsStream( fpsResource );
+        InputStream overwrites = Thread.currentThread().getContextClassLoader().getResourceAsStream( fpsResource );
         Boolean lvbReturn = false;
 
         try
