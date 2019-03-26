@@ -55,8 +55,8 @@ var sectionId = 'dynsection-1';
 <g id="viewport">
 <title>okw.gui.AnyWindow</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-1176 425.5,-1176 425.5,4 -4,4"/>
-<!-- Node40 -->
-<g id="node1" class="node"><title>Node40</title>
+<!-- Node41 -->
+<g id="node1" class="node"><title>Node41</title>
 <g id="a_node1"><a xlink:title="Description of AnyWin.">
 <polygon fill="#bfbfbf" stroke="black" points="166,-0.5 166,-178.5 300,-178.5 300,-0.5 166,-0.5"/>
 <text text-anchor="middle" x="233" y="-166.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWindow</text>
@@ -78,8 +78,8 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node41 -->
-<g id="node2" class="node"><title>Node41</title>
+<!-- Node42 -->
+<g id="node2" class="node"><title>Node42</title>
 <g id="a_node2"><a xlink:href="classokw_1_1gui_1_1_any_win_base.html" target="_top" xlink:title="Description of AnyWin.">
 <polygon fill="white" stroke="black" points="0,-216.5 0,-482.5 148,-482.5 148,-216.5 0,-216.5"/>
 <text text-anchor="middle" x="74" y="-470.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase</text>
@@ -109,13 +109,13 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node41&#45;&gt;Node40 -->
-<g id="edge1" class="edge"><title>Node41&#45;&gt;Node40</title>
+<!-- Node42&#45;&gt;Node41 -->
+<g id="edge1" class="edge"><title>Node42&#45;&gt;Node41</title>
 <path fill="none" stroke="midnightblue" d="M153.455,-219.572C161.987,-205.728 170.52,-191.882 178.66,-178.674"/>
 <polygon fill="none" stroke="midnightblue" points="150.414,-217.837 148.147,-228.187 156.373,-221.51 150.414,-217.837"/>
 </g>
-<!-- Node42 -->
-<g id="node3" class="node"><title>Node42</title>
+<!-- Node43 -->
+<g id="node3" class="node"><title>Node43</title>
 <g id="a_node3"><a xlink:href="classokw_1_1gui_1_1_o_k_w_locator.html" target="_top" xlink:title="Description of OKWLocator.">
 <polygon fill="white" stroke="black" points="136,-530.5 136,-609.5 248,-609.5 248,-530.5 136,-530.5"/>
 <text text-anchor="middle" x="192" y="-597.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.OKWLocator</text>
@@ -128,20 +128,20 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node42&#45;&gt;Node41 -->
-<g id="edge2" class="edge"><title>Node42&#45;&gt;Node41</title>
+<!-- Node43&#45;&gt;Node42 -->
+<g id="edge2" class="edge"><title>Node43&#45;&gt;Node42</title>
 <path fill="none" stroke="#404040" d="M171.176,-530.44C165.276,-519.516 158.484,-506.939 151.29,-493.618"/>
 <polygon fill="none" stroke="#404040" points="151.146,-493.35 144.775,-489.971 145.443,-482.791 151.814,-486.17 151.146,-493.35"/>
 <text text-anchor="middle" x="186" y="-504" font-family="Helvetica,sans-Serif" font-size="10.00"> #_locator</text>
 </g>
-<!-- Node42&#45;&gt;Node42 -->
-<g id="edge3" class="edge"><title>Node42&#45;&gt;Node42</title>
+<!-- Node43&#45;&gt;Node43 -->
+<g id="edge3" class="edge"><title>Node43&#45;&gt;Node43</title>
 <path fill="none" stroke="#404040" d="M248.146,-581.028C258.622,-579.67 266,-575.994 266,-570 266,-566.628 263.666,-563.99 259.758,-562.085"/>
 <polygon fill="none" stroke="#404040" points="259.737,-562.079 252.906,-564.389 248.146,-558.972 254.977,-556.662 259.737,-562.079"/>
 <text text-anchor="middle" x="296.5" y="-567.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;_Locatoren</text>
 </g>
-<!-- Node43 -->
-<g id="node4" class="node"><title>Node43</title>
+<!-- Node44 -->
+<g id="node4" class="node"><title>Node44</title>
 <g id="a_node4"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="25,-657.5 25,-1066.5 173,-1066.5 173,-657.5 25,-657.5"/>
 <text text-anchor="middle" x="99" y="-1054.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn</text>
@@ -184,26 +184,26 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node43&#45;&gt;Node41 -->
-<g id="edge7" class="edge"><title>Node43&#45;&gt;Node41</title>
+<!-- Node44&#45;&gt;Node42 -->
+<g id="edge7" class="edge"><title>Node44&#45;&gt;Node42</title>
 <path fill="none" stroke="#404040" d="M70.8417,-657.439C69.2988,-641.411 67.9811,-625.454 67,-610 64.7472,-574.516 66.3071,-565.549 67,-530 67.221,-518.66 67.5205,-506.92 67.8717,-495.122"/>
 <polygon fill="none" stroke="#404040" points="67.8812,-494.814 64.0702,-488.692 68.2553,-482.82 72.0663,-488.942 67.8812,-494.814"/>
 <text text-anchor="middle" x="97" y="-567.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
 </g>
-<!-- Node43&#45;&gt;Node42 -->
-<g id="edge4" class="edge"><title>Node43&#45;&gt;Node42</title>
+<!-- Node44&#45;&gt;Node43 -->
+<g id="edge4" class="edge"><title>Node44&#45;&gt;Node43</title>
 <path fill="none" stroke="#404040" d="M164.349,-657.224C168.486,-644.322 172.384,-632.167 175.876,-621.279"/>
 <polygon fill="none" stroke="#404040" points="175.972,-620.979 173.996,-614.044 179.637,-609.552 181.613,-616.487 175.972,-620.979"/>
 <text text-anchor="middle" x="199.5" y="-631" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myLogger</text>
 </g>
-<!-- Node43&#45;&gt;Node43 -->
-<g id="edge6" class="edge"><title>Node43&#45;&gt;Node43</title>
+<!-- Node44&#45;&gt;Node44 -->
+<g id="edge6" class="edge"><title>Node44&#45;&gt;Node44</title>
 <path fill="none" stroke="#404040" d="M173.36,-900.364C183.916,-894.159 191,-881.371 191,-862 191,-848.985 187.802,-838.942 182.502,-831.87"/>
 <polygon fill="none" stroke="#404040" points="182.277,-831.667 175.141,-830.624 173.36,-823.636 180.495,-824.679 182.277,-831.667"/>
 <text text-anchor="middle" x="215" y="-859.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;Instance</text>
 </g>
-<!-- Node44 -->
-<g id="node5" class="node"><title>Node44</title>
+<!-- Node45 -->
+<g id="node5" class="node"><title>Node45</title>
 <g id="a_node5"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="22,-1114.5 22,-1171.5 176,-1171.5 176,-1114.5 22,-1114.5"/>
 <text text-anchor="middle" x="99" y="-1159.5" font-family="Helvetica,sans-Serif" font-size="10.00">ArrayList&lt; okw.log.ILogger &gt;</text>
@@ -214,14 +214,14 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node44&#45;&gt;Node43 -->
-<g id="edge5" class="edge"><title>Node44&#45;&gt;Node43</title>
+<!-- Node45&#45;&gt;Node44 -->
+<g id="edge5" class="edge"><title>Node45&#45;&gt;Node44</title>
 <path fill="none" stroke="#404040" d="M99,-1114.48C99,-1104.54 99,-1092.39 99,-1078.86"/>
 <polygon fill="none" stroke="#404040" points="99.0001,-1078.62 95,-1072.62 99,-1066.62 103,-1072.62 99.0001,-1078.62"/>
 <text text-anchor="middle" x="127.5" y="-1088" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;LoggerList</text>
 </g>
-<!-- Node45 -->
-<g id="node6" class="node"><title>Node45</title>
+<!-- Node46 -->
+<g id="node6" class="node"><title>Node46</title>
 <g id="a_node6"><a xlink:href="interfaceokw_1_1gui_1_1_i_g_u_i_window.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="166,-271.5 166,-427.5 300,-427.5 300,-271.5 166,-271.5"/>
 <text text-anchor="middle" x="233" y="-415.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.IGUIWindow</text>
@@ -241,13 +241,13 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node40 -->
-<g id="edge8" class="edge"><title>Node45&#45;&gt;Node40</title>
+<!-- Node46&#45;&gt;Node41 -->
+<g id="edge8" class="edge"><title>Node46&#45;&gt;Node41</title>
 <path fill="none" stroke="midnightblue" d="M233,-261.398C233,-234.827 233,-205.595 233,-178.936"/>
 <polygon fill="none" stroke="midnightblue" points="229.5,-261.441 233,-271.441 236.5,-261.441 229.5,-261.441"/>
 </g>
-<!-- Node46 -->
-<g id="node7" class="node"><title>Node46</title>
+<!-- Node47 -->
+<g id="node7" class="node"><title>Node47</title>
 <g id="a_node7"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___f_n.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="318.5,-293.5 318.5,-405.5 421.5,-405.5 421.5,-293.5 318.5,-293.5"/>
 <text text-anchor="middle" x="370" y="-393.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_FN</text>
@@ -263,8 +263,8 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node46&#45;&gt;Node40 -->
-<g id="edge9" class="edge"><title>Node46&#45;&gt;Node40</title>
+<!-- Node47&#45;&gt;Node41 -->
+<g id="edge9" class="edge"><title>Node47&#45;&gt;Node41</title>
 <path fill="none" stroke="midnightblue" d="M342.137,-284.142C332.198,-262.257 320.584,-237.823 309,-216 302.491,-203.738 295.31,-191.009 288.036,-178.568"/>
 <polygon fill="none" stroke="midnightblue" points="338.988,-285.672 346.289,-293.35 345.369,-282.795 338.988,-285.672"/>
 </g>

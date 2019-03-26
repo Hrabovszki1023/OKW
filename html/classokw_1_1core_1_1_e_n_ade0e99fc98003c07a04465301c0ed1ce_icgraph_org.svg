@@ -9,16 +9,16 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 530)">
 <title>okw.core.EN.MemorizeExists</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-530 413,-530 413,4 -4,4"/>
-<!-- Node1113 -->
-<g id="node1" class="node"><title>Node1113</title>
+<!-- Node1115 -->
+<g id="node1" class="node"><title>Node1115</title>
 <g id="a_node1"><a xlink:title="Merkt sich den aktuell existierenden Zustand des Objekts.">
 <polygon fill="#bfbfbf" stroke="black" points="257,-236.5 257,-255.5 409,-255.5 409,-236.5 257,-236.5"/>
 <text text-anchor="middle" x="333" y="-243.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.MemorizeExists</text>
 </a>
 </g>
 </g>
-<!-- Node1114 -->
-<g id="node2" class="node"><title>Node1114</title>
+<!-- Node1116 -->
+<g id="node2" class="node"><title>Node1116</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a2d5e744cebcad10df3e1f28a5162e35c" target="_top" xlink:title="Prüft ob &quot;${IGNORE} &quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst.">
 <polygon fill="white" stroke="black" points="16.5,-484.5 16.5,-525.5 204.5,-525.5 204.5,-484.5 16.5,-484.5"/>
 <text text-anchor="start" x="24.5" y="-513.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -27,13 +27,13 @@
 </a>
 </g>
 </g>
-<!-- Node1113&#45;&gt;Node1114 -->
-<g id="edge1" class="edge"><title>Node1113&#45;&gt;Node1114</title>
+<!-- Node1115&#45;&gt;Node1116 -->
+<g id="edge1" class="edge"><title>Node1115&#45;&gt;Node1116</title>
 <path fill="none" stroke="midnightblue" d="M328.223,-265.611C318.64,-309.933 289.14,-418.367 221,-475 215.998,-479.158 210.465,-482.742 204.623,-485.831"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="331.702,-266.07 330.285,-255.57 324.845,-264.661 331.702,-266.07"/>
 </g>
-<!-- Node1115 -->
-<g id="node3" class="node"><title>Node1115</title>
+<!-- Node1117 -->
+<g id="node3" class="node"><title>Node1117</title>
 <g id="a_node3"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#af21c77e154bcd9e77b13bcf568e92060" target="_top" xlink:title="Prüft ob &quot;&quot;${IGNORE}${TCN}&quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst.">
 <polygon fill="white" stroke="black" points="16.5,-424.5 16.5,-465.5 204.5,-465.5 204.5,-424.5 16.5,-424.5"/>
 <text text-anchor="start" x="24.5" y="-453.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -42,13 +42,13 @@
 </a>
 </g>
 </g>
-<!-- Node1113&#45;&gt;Node1115 -->
-<g id="edge2" class="edge"><title>Node1113&#45;&gt;Node1115</title>
+<!-- Node1115&#45;&gt;Node1117 -->
+<g id="edge2" class="edge"><title>Node1115&#45;&gt;Node1117</title>
 <path fill="none" stroke="midnightblue" d="M324.704,-265.407C310.41,-300.736 275.296,-375.534 221,-415 215.898,-418.709 210.36,-421.959 204.576,-424.807"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="328.082,-266.381 328.47,-255.793 321.564,-263.828 328.082,-266.381"/>
 </g>
-<!-- Node1116 -->
-<g id="node4" class="node"><title>Node1116</title>
+<!-- Node1118 -->
+<g id="node4" class="node"><title>Node1118</title>
 <g id="a_node4"><a xlink:href="classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a90c645249c15192fc5dca1370bb1307e" target="_top" xlink:title="Prüft ob &quot;&quot;${IGNORE}${TCN}&quot; die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst.">
 <polygon fill="white" stroke="black" points="13,-364.5 13,-405.5 208,-405.5 208,-364.5 13,-364.5"/>
 <text text-anchor="start" x="21" y="-393.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN_OKWNotAllowed</text>
@@ -57,13 +57,13 @@
 </a>
 </g>
 </g>
-<!-- Node1113&#45;&gt;Node1116 -->
-<g id="edge3" class="edge"><title>Node1113&#45;&gt;Node1116</title>
+<!-- Node1115&#45;&gt;Node1118 -->
+<g id="edge3" class="edge"><title>Node1115&#45;&gt;Node1118</title>
 <path fill="none" stroke="midnightblue" d="M319.012,-263.465C300.113,-287.638 262.706,-331.018 221,-355 214.849,-358.537 208.262,-361.673 201.484,-364.45"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="321.811,-265.568 325.111,-255.5 316.253,-261.312 321.811,-265.568"/>
 </g>
-<!-- Node1117 -->
-<g id="node5" class="node"><title>Node1117</title>
+<!-- Node1119 -->
+<g id="node5" class="node"><title>Node1119</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#a216f20ac0d64b78675a285836ee8449a" target="_top" xlink:title="Testet das Schlüsselwort MemorizeExists( FN, Val ) eines SeBACK Prüfen.">
 <polygon fill="white" stroke="black" points="-1.42109e-14,-304.5 -1.42109e-14,-345.5 221,-345.5 221,-304.5 -1.42109e-14,-304.5"/>
 <text text-anchor="start" x="8" y="-333.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeBACK.SeBACK_EN</text>
@@ -72,13 +72,13 @@
 </a>
 </g>
 </g>
-<!-- Node1113&#45;&gt;Node1117 -->
-<g id="edge4" class="edge"><title>Node1113&#45;&gt;Node1117</title>
+<!-- Node1115&#45;&gt;Node1119 -->
+<g id="edge4" class="edge"><title>Node1115&#45;&gt;Node1119</title>
 <path fill="none" stroke="midnightblue" d="M303.997,-260.162C281.863,-270.974 249.976,-285.716 221,-296 212.567,-298.993 203.673,-301.838 194.748,-304.494"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="305.724,-263.212 313.141,-255.647 302.625,-256.936 305.724,-263.212"/>
 </g>
-<!-- Node1118 -->
-<g id="node6" class="node"><title>Node1118</title>
+<!-- Node1120 -->
+<g id="node6" class="node"><title>Node1120</title>
 <g id="a_node6"><a xlink:href="classokw_1_1_se_button_1_1_se_button___e_n___test.html#a20800e29ef36853176b5c9967a8b161b" target="_top" xlink:title="Test des Schlüsselwortes MemorizeExists für den GUI&#45;Adapter SeButton.">
 <polygon fill="white" stroke="black" points="37.5,-256 37.5,-286 183.5,-286 183.5,-256 37.5,-256"/>
 <text text-anchor="start" x="45.5" y="-274" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeButton.SeButton</text>
@@ -86,13 +86,13 @@
 </a>
 </g>
 </g>
-<!-- Node1113&#45;&gt;Node1118 -->
-<g id="edge5" class="edge"><title>Node1113&#45;&gt;Node1118</title>
+<!-- Node1115&#45;&gt;Node1120 -->
+<g id="edge5" class="edge"><title>Node1115&#45;&gt;Node1120</title>
 <path fill="none" stroke="midnightblue" d="M246.658,-255.676C225.903,-258.029 203.905,-260.523 183.82,-262.8"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="247.191,-259.138 256.733,-254.534 246.402,-252.183 247.191,-259.138"/>
 </g>
-<!-- Node1119 -->
-<g id="node7" class="node"><title>Node1119</title>
+<!-- Node1121 -->
+<g id="node7" class="node"><title>Node1121</title>
 <g id="a_node7"><a xlink:href="classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___test.html#ad65d7242329916eba19b5ee13e6e96b6" target="_top" xlink:title="Logget ob ein vorhandenes objekt existiert.">
 <polygon fill="white" stroke="black" points="14,-207 14,-237 207,-237 207,-207 14,-207"/>
 <text text-anchor="start" x="22" y="-225" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputCheckbox.SeInput</text>
@@ -100,13 +100,13 @@
 </a>
 </g>
 </g>
-<!-- Node1113&#45;&gt;Node1119 -->
-<g id="edge6" class="edge"><title>Node1113&#45;&gt;Node1119</title>
+<!-- Node1115&#45;&gt;Node1121 -->
+<g id="edge6" class="edge"><title>Node1115&#45;&gt;Node1121</title>
 <path fill="none" stroke="midnightblue" d="M246.496,-236.693C233.586,-235.288 220.198,-233.831 207.092,-232.405"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="246.413,-240.205 256.733,-237.808 247.171,-233.246 246.413,-240.205"/>
 </g>
-<!-- Node1120 -->
-<g id="node8" class="node"><title>Node1120</title>
+<!-- Node1122 -->
+<g id="node8" class="node"><title>Node1122</title>
 <g id="a_node8"><a xlink:href="classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a2a649957e3eb7b2a00fae75dd386ff6b" target="_top" xlink:title="Teste das Schlüsselwort MemorizeExists( FN, MemKey ) eines SeInputText Prüfen.">
 <polygon fill="white" stroke="black" points="14.5,-158 14.5,-188 206.5,-188 206.5,-158 14.5,-158"/>
 <text text-anchor="start" x="22.5" y="-176" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputField.SeInput</text>
@@ -114,13 +114,13 @@
 </a>
 </g>
 </g>
-<!-- Node1113&#45;&gt;Node1120 -->
-<g id="edge7" class="edge"><title>Node1113&#45;&gt;Node1120</title>
+<!-- Node1115&#45;&gt;Node1122 -->
+<g id="edge7" class="edge"><title>Node1115&#45;&gt;Node1122</title>
 <path fill="none" stroke="midnightblue" d="M303.628,-232.008C281.526,-221.533 249.854,-207.444 221,-198 209.788,-194.33 197.76,-190.999 185.927,-188.051"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="302.24,-235.224 312.771,-236.393 305.268,-228.913 302.24,-235.224"/>
 </g>
-<!-- Node1121 -->
-<g id="node9" class="node"><title>Node1121</title>
+<!-- Node1123 -->
+<g id="node9" class="node"><title>Node1123</title>
 <g id="a_node9"><a xlink:href="classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a4088c6ed9fe447694f55b854d4e26e7b" target="_top" xlink:title="Test des Schlüsselwortes MemorizeExists für den GUI&#45;Adapter SeInputRadio.">
 <polygon fill="white" stroke="black" points="21.5,-109 21.5,-139 199.5,-139 199.5,-109 21.5,-109"/>
 <text text-anchor="start" x="29.5" y="-127" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputRadio.SeInput</text>
@@ -128,13 +128,13 @@
 </a>
 </g>
 </g>
-<!-- Node1113&#45;&gt;Node1121 -->
-<g id="edge8" class="edge"><title>Node1113&#45;&gt;Node1121</title>
+<!-- Node1115&#45;&gt;Node1123 -->
+<g id="edge8" class="edge"><title>Node1115&#45;&gt;Node1123</title>
 <path fill="none" stroke="midnightblue" d="M317.273,-228.666C297.61,-206.677 260.629,-169.196 221,-149 213.356,-145.104 205.104,-141.809 196.68,-139.023"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="314.709,-231.05 323.931,-236.266 319.974,-226.438 314.709,-231.05"/>
 </g>
-<!-- Node1122 -->
-<g id="node10" class="node"><title>Node1122</title>
+<!-- Node1124 -->
+<g id="node10" class="node"><title>Node1124</title>
 <g id="a_node10"><a xlink:href="classokw_1_1_se_link_1_1_se_link___e_n___test.html#ad01a36c9b258f69ec17ebba1b0f85eac" target="_top" xlink:title="Prüft die Methode SeLink.MemorizeToolTip.">
 <polygon fill="white" stroke="black" points="34.5,-60 34.5,-90 186.5,-90 186.5,-60 34.5,-60"/>
 <text text-anchor="start" x="42.5" y="-78" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeLink.SeLink_EN</text>
@@ -142,13 +142,13 @@
 </a>
 </g>
 </g>
-<!-- Node1113&#45;&gt;Node1122 -->
-<g id="edge9" class="edge"><title>Node1113&#45;&gt;Node1122</title>
+<!-- Node1115&#45;&gt;Node1124 -->
+<g id="edge9" class="edge"><title>Node1115&#45;&gt;Node1124</title>
 <path fill="none" stroke="midnightblue" d="M323.236,-227.277C307.471,-195.758 271.229,-132.38 221,-100 210.675,-93.3438 198.8,-88.4497 186.764,-84.8534"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="320.108,-228.847 327.627,-236.311 326.404,-225.787 320.108,-228.847"/>
 </g>
-<!-- Node1123 -->
-<g id="node11" class="node"><title>Node1123</title>
+<!-- Node1125 -->
+<g id="node11" class="node"><title>Node1125</title>
 <g id="a_node11"><a xlink:href="classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test.html#a8f628d8a0b5dc48364458121ed12d463" target="_top" xlink:title="Testet das Schlüsselwort MemorizeExists( FN, Val ) eines SeMAXIMIZE Prüfen.">
 <polygon fill="white" stroke="black" points="-1.42109e-14,-0.5 -1.42109e-14,-41.5 221,-41.5 221,-0.5 -1.42109e-14,-0.5"/>
 <text text-anchor="start" x="8" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeMAXIMIZE.SeMAXIMIZE</text>
@@ -157,8 +157,8 @@
 </a>
 </g>
 </g>
-<!-- Node1113&#45;&gt;Node1123 -->
-<g id="edge10" class="edge"><title>Node1113&#45;&gt;Node1123</title>
+<!-- Node1115&#45;&gt;Node1125 -->
+<g id="edge10" class="edge"><title>Node1115&#45;&gt;Node1125</title>
 <path fill="none" stroke="midnightblue" d="M326.43,-226.368C314.2,-186.903 281.18,-97.7406 221,-51 216.408,-47.4332 211.42,-44.2901 206.188,-41.5204"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="323.122,-227.522 329.334,-236.105 329.83,-225.522 323.122,-227.522"/>
 </g>

@@ -9,24 +9,24 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 24)">
 <title>okw.core.Core.SelectChild</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-24 311,-24 311,4 -4,4"/>
-<!-- Node1298 -->
-<g id="node1" class="node"><title>Node1298</title>
+<!-- Node1300 -->
+<g id="node1" class="node"><title>Node1300</title>
 <g id="a_node1"><a xlink:title="Setzt den Wert von SELECTEDCHILD auf den Wert von FN.">
 <polygon fill="#bfbfbf" stroke="black" points="167,-0.5 167,-19.5 307,-19.5 307,-0.5 167,-0.5"/>
 <text text-anchor="middle" x="237" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.SelectChild</text>
 </a>
 </g>
 </g>
-<!-- Node1299 -->
-<g id="node2" class="node"><title>Node1299</title>
+<!-- Node1301 -->
+<g id="node2" class="node"><title>Node1301</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_e_n.html#aac639a580a5615fcd882126dac09e282" target="_top" xlink:title="Setzt den Wert von SELECTEDCHILD auf den Wert von FN.">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-19.5 131,-19.5 131,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="65.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.SelectChild</text>
 </a>
 </g>
 </g>
-<!-- Node1298&#45;&gt;Node1299 -->
-<g id="edge1" class="edge"><title>Node1298&#45;&gt;Node1299</title>
+<!-- Node1300&#45;&gt;Node1301 -->
+<g id="edge1" class="edge"><title>Node1300&#45;&gt;Node1301</title>
 <path fill="none" stroke="midnightblue" d="M156.342,-10C147.912,-10 139.415,-10 131.185,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="156.569,-13.5001 166.569,-10 156.569,-6.5001 156.569,-13.5001"/>
 </g>

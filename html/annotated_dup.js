@@ -140,7 +140,7 @@ var annotated_dup =
             [ "frmSeInputRadio", "classokw_1_1gui_1_1frames_1_1_se_input_radio_1_1frm_se_input_radio.html", "classokw_1_1gui_1_1frames_1_1_se_input_radio_1_1frm_se_input_radio" ]
           ] ],
           [ "SeLink", null, [
-            [ "frmSeLink", "classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_se_link.html", "classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_se_link" ]
+            [ "frmLink", "classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_link.html", "classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_link" ]
           ] ],
           [ "SeRadioList", null, [
             [ "frmSeRadioList", "classokw_1_1gui_1_1frames_1_1_se_radio_list_1_1frm_se_radio_list.html", "classokw_1_1gui_1_1frames_1_1_se_radio_list_1_1frm_se_radio_list" ]
@@ -155,9 +155,10 @@ var annotated_dup =
             [ "frmSeTextareaReadonly", "classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea_readonly.html", "classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea_readonly" ]
           ] ],
           [ "SeTextField", null, [
-            [ "frmSeInputTextDisabled", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_disabled.html", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_disabled" ],
-            [ "frmSeInputTextReadonly", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_readonly.html", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_readonly" ],
-            [ "frmSeTextField", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_text_field.html", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_text_field" ]
+            [ "frmInputTypePassword", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_input_type_password.html", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_input_type_password" ],
+            [ "frmInputTypeText", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_input_type_text.html", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_input_type_text" ],
+            [ "frmInputTypeTextDisabled", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_input_type_text_disabled.html", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_input_type_text_disabled" ],
+            [ "frmSeInputTextReadonly", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_readonly.html", "classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_readonly" ]
           ] ],
           [ "frmCurrentObjectWindow", "classokw_1_1gui_1_1frames_1_1frm_current_object_window.html", "classokw_1_1gui_1_1frames_1_1frm_current_object_window" ],
           [ "frmInternetExplorer", "classokw_1_1gui_1_1frames_1_1frm_internet_explorer.html", "classokw_1_1gui_1_1frames_1_1frm_internet_explorer" ],

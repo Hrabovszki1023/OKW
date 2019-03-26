@@ -9,8 +9,8 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1522)">
 <title>okw.gui.adapter.selenium.SeAnyWindow</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-1522 833,-1522 833,4 -4,4"/>
-<!-- Node30 -->
-<g id="node1" class="node"><title>Node30</title>
+<!-- Node31 -->
+<g id="node1" class="node"><title>Node31</title>
 <g id="a_node1"><a xlink:title="SeAnyWindow ist eine Fenster GUI&#45;Adapterklasse.">
 <polygon fill="#bfbfbf" stroke="black" points="270,-0.5 270,-288.5 410,-288.5 410,-0.5 270,-0.5"/>
 <text text-anchor="start" x="278" y="-276.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -42,8 +42,8 @@
 </a>
 </g>
 </g>
-<!-- Node31 -->
-<g id="node2" class="node"><title>Node31</title>
+<!-- Node32 -->
+<g id="node2" class="node"><title>Node32</title>
 <g id="a_node2"><a xlink:href="classokw_1_1gui_1_1_any_window.html" target="_top" xlink:title="Description of AnyWin.">
 <polygon fill="white" stroke="black" points="273,-336.5 273,-514.5 407,-514.5 407,-336.5 273,-336.5"/>
 <text text-anchor="middle" x="340" y="-502.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWindow</text>
@@ -65,13 +65,13 @@
 </a>
 </g>
 </g>
-<!-- Node31&#45;&gt;Node30 -->
-<g id="edge1" class="edge"><title>Node31&#45;&gt;Node30</title>
+<!-- Node32&#45;&gt;Node31 -->
+<g id="edge1" class="edge"><title>Node32&#45;&gt;Node31</title>
 <path fill="none" stroke="midnightblue" d="M340,-326.091C340,-313.889 340,-301.226 340,-288.525"/>
 <polygon fill="none" stroke="midnightblue" points="336.5,-326.223 340,-336.223 343.5,-326.223 336.5,-326.223"/>
 </g>
-<!-- Node32 -->
-<g id="node3" class="node"><title>Node32</title>
+<!-- Node33 -->
+<g id="node3" class="node"><title>Node33</title>
 <g id="a_node3"><a xlink:href="classokw_1_1gui_1_1_any_win_base.html" target="_top" xlink:title="Description of AnyWin.">
 <polygon fill="white" stroke="black" points="107,-562.5 107,-828.5 255,-828.5 255,-562.5 107,-562.5"/>
 <text text-anchor="middle" x="181" y="-816.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase</text>
@@ -101,13 +101,13 @@
 </a>
 </g>
 </g>
-<!-- Node32&#45;&gt;Node31 -->
-<g id="edge2" class="edge"><title>Node32&#45;&gt;Node31</title>
+<!-- Node33&#45;&gt;Node32 -->
+<g id="edge2" class="edge"><title>Node33&#45;&gt;Node32</title>
 <path fill="none" stroke="midnightblue" d="M260.315,-560.812C269.624,-545.122 278.936,-529.425 287.741,-514.584"/>
 <polygon fill="none" stroke="midnightblue" points="257.239,-559.137 255.147,-569.523 263.259,-562.709 257.239,-559.137"/>
 </g>
-<!-- Node33 -->
-<g id="node4" class="node"><title>Node33</title>
+<!-- Node34 -->
+<g id="node4" class="node"><title>Node34</title>
 <g id="a_node4"><a xlink:href="classokw_1_1gui_1_1_o_k_w_locator.html" target="_top" xlink:title="Description of OKWLocator.">
 <polygon fill="white" stroke="black" points="155,-876.5 155,-955.5 267,-955.5 267,-876.5 155,-876.5"/>
 <text text-anchor="middle" x="211" y="-943.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.OKWLocator</text>
@@ -120,20 +120,20 @@
 </a>
 </g>
 </g>
-<!-- Node33&#45;&gt;Node32 -->
-<g id="edge3" class="edge"><title>Node33&#45;&gt;Node32</title>
+<!-- Node34&#45;&gt;Node33 -->
+<g id="edge3" class="edge"><title>Node34&#45;&gt;Node33</title>
 <path fill="none" stroke="#404040" d="M205.706,-876.44C204.25,-865.84 202.581,-853.685 200.813,-840.803"/>
 <polygon fill="none" stroke="#404040" points="200.796,-840.68 196.017,-835.28 199.164,-828.791 203.943,-834.191 200.796,-840.68"/>
 <text text-anchor="middle" x="228" y="-850" font-family="Helvetica,sans-Serif" font-size="10.00"> #_locator</text>
 </g>
-<!-- Node33&#45;&gt;Node33 -->
-<g id="edge4" class="edge"><title>Node33&#45;&gt;Node33</title>
+<!-- Node34&#45;&gt;Node34 -->
+<g id="edge4" class="edge"><title>Node34&#45;&gt;Node34</title>
 <path fill="none" stroke="#404040" d="M267.146,-927.028C277.622,-925.67 285,-921.994 285,-916 285,-912.628 282.666,-909.99 278.758,-908.085"/>
 <polygon fill="none" stroke="#404040" points="278.737,-908.079 271.906,-910.389 267.146,-904.972 273.977,-902.662 278.737,-908.079"/>
 <text text-anchor="middle" x="315.5" y="-913.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;_Locatoren</text>
 </g>
-<!-- Node34 -->
-<g id="node5" class="node"><title>Node34</title>
+<!-- Node35 -->
+<g id="node5" class="node"><title>Node35</title>
 <g id="a_node5"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="3,-1003.5 3,-1412.5 151,-1412.5 151,-1003.5 3,-1003.5"/>
 <text text-anchor="middle" x="77" y="-1400.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn</text>
@@ -176,32 +176,32 @@
 </a>
 </g>
 </g>
-<!-- Node34&#45;&gt;Node30 -->
-<g id="edge17" class="edge"><title>Node34&#45;&gt;Node30</title>
+<!-- Node35&#45;&gt;Node31 -->
+<g id="edge17" class="edge"><title>Node35&#45;&gt;Node31</title>
 <path fill="none" stroke="#404040" d="M36.4574,-1003.26C33.1233,-974.413 31,-945.037 31,-917 31,-917 31,-917 31,-424.5 31,-301.691 167.123,-218.997 258.673,-177.268"/>
 <polygon fill="none" stroke="#404040" points="258.927,-177.155 262.773,-171.056 269.883,-172.261 266.036,-178.36 258.927,-177.155"/>
 <text text-anchor="middle" x="60" y="-693" font-family="Helvetica,sans-Serif" font-size="10.00"> #MyLogger</text>
 </g>
-<!-- Node34&#45;&gt;Node32 -->
-<g id="edge8" class="edge"><title>Node34&#45;&gt;Node32</title>
+<!-- Node35&#45;&gt;Node33 -->
+<g id="edge8" class="edge"><title>Node35&#45;&gt;Node33</title>
 <path fill="none" stroke="#404040" d="M67.8934,-1003.18C70.0559,-960.638 75.3707,-916.448 86,-876 89.999,-860.783 95.4904,-845.416 101.833,-830.415"/>
 <polygon fill="none" stroke="#404040" points="102.011,-830.01 100.762,-822.907 106.838,-819.023 108.086,-826.125 102.011,-830.01"/>
 <text text-anchor="middle" x="116" y="-913.5" font-family="Helvetica,sans-Serif" font-size="10.00"> ~myLogger</text>
 </g>
-<!-- Node34&#45;&gt;Node33 -->
-<g id="edge5" class="edge"><title>Node34&#45;&gt;Node33</title>
+<!-- Node35&#45;&gt;Node34 -->
+<g id="edge5" class="edge"><title>Node35&#45;&gt;Node34</title>
 <path fill="none" stroke="#404040" d="M151.055,-1046.73C164.518,-1017.6 177.596,-989.292 188.084,-966.595"/>
 <polygon fill="none" stroke="#404040" points="188.133,-966.487 187.019,-959.363 193.167,-955.594 194.281,-962.719 188.133,-966.487"/>
 <text text-anchor="middle" x="210.5" y="-977" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myLogger</text>
 </g>
-<!-- Node34&#45;&gt;Node34 -->
-<g id="edge7" class="edge"><title>Node34&#45;&gt;Node34</title>
+<!-- Node35&#45;&gt;Node35 -->
+<g id="edge7" class="edge"><title>Node35&#45;&gt;Node35</title>
 <path fill="none" stroke="#404040" d="M151.36,-1246.36C161.916,-1240.16 169,-1227.37 169,-1208 169,-1194.99 165.802,-1184.94 160.502,-1177.87"/>
 <polygon fill="none" stroke="#404040" points="160.277,-1177.67 153.141,-1176.62 151.36,-1169.64 158.495,-1170.68 160.277,-1177.67"/>
 <text text-anchor="middle" x="193" y="-1205.5" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;Instance</text>
 </g>
-<!-- Node35 -->
-<g id="node6" class="node"><title>Node35</title>
+<!-- Node36 -->
+<g id="node6" class="node"><title>Node36</title>
 <g id="a_node6"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="0,-1460.5 0,-1517.5 154,-1517.5 154,-1460.5 0,-1460.5"/>
 <text text-anchor="middle" x="77" y="-1505.5" font-family="Helvetica,sans-Serif" font-size="10.00">ArrayList&lt; okw.log.ILogger &gt;</text>
@@ -212,14 +212,14 @@
 </a>
 </g>
 </g>
-<!-- Node35&#45;&gt;Node34 -->
-<g id="edge6" class="edge"><title>Node35&#45;&gt;Node34</title>
+<!-- Node36&#45;&gt;Node35 -->
+<g id="edge6" class="edge"><title>Node36&#45;&gt;Node35</title>
 <path fill="none" stroke="#404040" d="M77,-1460.48C77,-1450.54 77,-1438.39 77,-1424.86"/>
 <polygon fill="none" stroke="#404040" points="77.0001,-1424.62 73,-1418.62 77,-1412.62 81,-1418.62 77.0001,-1424.62"/>
 <text text-anchor="middle" x="105.5" y="-1434" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;LoggerList</text>
 </g>
-<!-- Node36 -->
-<g id="node7" class="node"><title>Node36</title>
+<!-- Node37 -->
+<g id="node7" class="node"><title>Node37</title>
 <g id="a_node7"><a xlink:href="interfaceokw_1_1gui_1_1_i_g_u_i_window.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="273,-617.5 273,-773.5 407,-773.5 407,-617.5 273,-617.5"/>
 <text text-anchor="middle" x="340" y="-761.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.IGUIWindow</text>
@@ -239,13 +239,13 @@
 </a>
 </g>
 </g>
-<!-- Node36&#45;&gt;Node31 -->
-<g id="edge9" class="edge"><title>Node36&#45;&gt;Node31</title>
+<!-- Node37&#45;&gt;Node32 -->
+<g id="edge9" class="edge"><title>Node37&#45;&gt;Node32</title>
 <path fill="none" stroke="midnightblue" d="M340,-607.049C340,-577.508 340,-544.521 340,-514.907"/>
 <polygon fill="none" stroke="midnightblue" points="336.5,-607.343 340,-617.343 343.5,-607.343 336.5,-607.343"/>
 </g>
-<!-- Node37 -->
-<g id="node8" class="node"><title>Node37</title>
+<!-- Node38 -->
+<g id="node8" class="node"><title>Node38</title>
 <g id="a_node8"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___f_n.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="425.5,-639.5 425.5,-751.5 528.5,-751.5 528.5,-639.5 425.5,-639.5"/>
 <text text-anchor="middle" x="477" y="-739.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_FN</text>
@@ -261,13 +261,13 @@
 </a>
 </g>
 </g>
-<!-- Node37&#45;&gt;Node31 -->
-<g id="edge10" class="edge"><title>Node37&#45;&gt;Node31</title>
+<!-- Node38&#45;&gt;Node32 -->
+<g id="edge10" class="edge"><title>Node38&#45;&gt;Node32</title>
 <path fill="none" stroke="midnightblue" d="M448.583,-630.066C438.642,-608.273 427.168,-583.915 416,-562 408.101,-546.5 399.358,-530.209 390.697,-514.509"/>
 <polygon fill="none" stroke="midnightblue" points="445.424,-631.574 452.744,-639.234 451.798,-628.681 445.424,-631.574"/>
 </g>
-<!-- Node38 -->
-<g id="node9" class="node"><title>Node38</title>
+<!-- Node39 -->
+<g id="node9" class="node"><title>Node39</title>
 <g id="a_node9"><a xlink:href="classokw_1_1_log_messenger.html" target="_top" xlink:title="LogMessenger liest Log&#45;Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...">
 <polygon fill="white" stroke="black" points="470.5,-369.5 470.5,-481.5 577.5,-481.5 577.5,-369.5 470.5,-369.5"/>
 <text text-anchor="middle" x="524" y="-469.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger</text>
@@ -283,14 +283,14 @@
 </a>
 </g>
 </g>
-<!-- Node38&#45;&gt;Node30 -->
-<g id="edge11" class="edge"><title>Node38&#45;&gt;Node30</title>
+<!-- Node39&#45;&gt;Node31 -->
+<g id="edge11" class="edge"><title>Node39&#45;&gt;Node31</title>
 <path fill="none" stroke="#404040" d="M487.648,-369.379C467.448,-338.75 441.516,-299.429 417.036,-262.31"/>
 <polygon fill="none" stroke="#404040" points="416.782,-261.925 410.14,-259.119 410.176,-251.908 416.818,-254.714 416.782,-261.925"/>
 <text text-anchor="middle" x="461.5" y="-310" font-family="Helvetica,sans-Serif" font-size="10.00"> #LM</text>
 </g>
-<!-- Node39 -->
-<g id="node10" class="node"><title>Node39</title>
+<!-- Node40 -->
+<g id="node10" class="node"><title>Node40</title>
 <g id="a_node10"><a xlink:href="classokw_1_1_o_k_w___xml_reader.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="547,-645 547,-746 711,-746 711,-645 547,-645"/>
 <text text-anchor="middle" x="629" y="-734" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader</text>
@@ -305,14 +305,14 @@
 </a>
 </g>
 </g>
-<!-- Node39&#45;&gt;Node38 -->
-<g id="edge12" class="edge"><title>Node39&#45;&gt;Node38</title>
+<!-- Node40&#45;&gt;Node39 -->
+<g id="edge12" class="edge"><title>Node40&#45;&gt;Node39</title>
 <path fill="none" stroke="#404040" d="M609.496,-644.719C592.731,-601.927 568.415,-539.865 549.998,-492.857"/>
 <polygon fill="none" stroke="#404040" points="549.948,-492.728 544.035,-488.601 545.57,-481.555 551.483,-485.683 549.948,-492.728"/>
 <text text-anchor="middle" x="604.5" y="-536" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXmlReader</text>
 </g>
-<!-- Node40 -->
-<g id="node11" class="node"><title>Node40</title>
+<!-- Node41 -->
+<g id="node11" class="node"><title>Node41</title>
 <g id="a_node11"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="410,-887.5 410,-944.5 544,-944.5 544,-887.5 410,-887.5"/>
 <text text-anchor="middle" x="477" y="-932.5" font-family="Helvetica,sans-Serif" font-size="10.00">DocumentBuilderFactory</text>
@@ -323,14 +323,14 @@
 </a>
 </g>
 </g>
-<!-- Node40&#45;&gt;Node39 -->
-<g id="edge13" class="edge"><title>Node40&#45;&gt;Node39</title>
+<!-- Node41&#45;&gt;Node40 -->
+<g id="edge13" class="edge"><title>Node41&#45;&gt;Node40</title>
 <path fill="none" stroke="#404040" d="M495.852,-887.448C504.388,-875.045 514.642,-860.244 524,-847 529.695,-838.941 531.297,-837.053 537,-829 553.848,-805.21 572.206,-778.859 588.06,-755.963"/>
 <polygon fill="none" stroke="#404040" points="588.094,-755.914 588.218,-748.704 594.921,-746.046 594.797,-753.256 588.094,-755.914"/>
 <text text-anchor="middle" x="558.5" y="-850" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;mydbFactory</text>
 </g>
-<!-- Node41 -->
-<g id="node12" class="node"><title>Node41</title>
+<!-- Node42 -->
+<g id="node12" class="node"><title>Node42</title>
 <g id="a_node12"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="562,-887.5 562,-944.5 606,-944.5 606,-887.5 562,-887.5"/>
 <text text-anchor="middle" x="584" y="-932.5" font-family="Helvetica,sans-Serif" font-size="10.00">XPath</text>
@@ -341,14 +341,14 @@
 </a>
 </g>
 </g>
-<!-- Node41&#45;&gt;Node39 -->
-<g id="edge14" class="edge"><title>Node41&#45;&gt;Node39</title>
+<!-- Node42&#45;&gt;Node40 -->
+<g id="edge14" class="edge"><title>Node42&#45;&gt;Node40</title>
 <path fill="none" stroke="#404040" d="M589.699,-887.327C596.343,-855.066 607.528,-800.757 616.271,-758.308"/>
 <polygon fill="none" stroke="#404040" points="616.303,-758.151 613.596,-751.467 618.724,-746.397 621.431,-753.081 616.303,-758.151"/>
 <text text-anchor="middle" x="622.5" y="-850" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXPath</text>
 </g>
-<!-- Node42 -->
-<g id="node13" class="node"><title>Node42</title>
+<!-- Node43 -->
+<g id="node13" class="node"><title>Node43</title>
 <g id="a_node13"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="624,-887.5 624,-944.5 724,-944.5 724,-887.5 624,-887.5"/>
 <text text-anchor="middle" x="674" y="-932.5" font-family="Helvetica,sans-Serif" font-size="10.00">DocumentBuilder</text>
@@ -359,14 +359,14 @@
 </a>
 </g>
 </g>
-<!-- Node42&#45;&gt;Node39 -->
-<g id="edge15" class="edge"><title>Node42&#45;&gt;Node39</title>
+<!-- Node43&#45;&gt;Node40 -->
+<g id="edge15" class="edge"><title>Node43&#45;&gt;Node40</title>
 <path fill="none" stroke="#404040" d="M668.301,-887.327C661.657,-855.066 650.472,-800.757 641.729,-758.308"/>
 <polygon fill="none" stroke="#404040" points="641.697,-758.151 636.569,-753.081 639.276,-746.397 644.404,-751.467 641.697,-758.151"/>
 <text text-anchor="middle" x="692.5" y="-850" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;mydBuilder</text>
 </g>
-<!-- Node43 -->
-<g id="node14" class="node"><title>Node43</title>
+<!-- Node44 -->
+<g id="node14" class="node"><title>Node44</title>
 <g id="a_node14"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="742.5,-887.5 742.5,-944.5 809.5,-944.5 809.5,-887.5 742.5,-887.5"/>
 <text text-anchor="middle" x="776" y="-932.5" font-family="Helvetica,sans-Serif" font-size="10.00">Document</text>
@@ -377,8 +377,8 @@
 </a>
 </g>
 </g>
-<!-- Node43&#45;&gt;Node39 -->
-<g id="edge16" class="edge"><title>Node43&#45;&gt;Node39</title>
+<!-- Node44&#45;&gt;Node40 -->
+<g id="edge16" class="edge"><title>Node44&#45;&gt;Node40</title>
 <path fill="none" stroke="#404040" d="M757.382,-887.327C735.353,-854.583 698.042,-799.124 669.304,-756.407"/>
 <polygon fill="none" stroke="#404040" points="669.268,-756.354 662.6,-753.608 662.569,-746.397 669.237,-749.143 669.268,-756.354"/>
 <text text-anchor="middle" x="783" y="-850" font-family="Helvetica,sans-Serif" font-size="10.00"> &#45;myXMLDocument</text>

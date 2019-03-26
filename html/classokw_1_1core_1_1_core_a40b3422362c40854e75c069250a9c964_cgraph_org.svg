@@ -9,16 +9,16 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 111.5)">
 <title>okw.core.Core.LogExists</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-111.5 739,-111.5 739,4 -4,4"/>
-<!-- Node970 -->
-<g id="node1" class="node"><title>Node970</title>
+<!-- Node972 -->
+<g id="node1" class="node"><title>Node972</title>
 <g id="a_node1"><a xlink:title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus.">
 <polygon fill="#bfbfbf" stroke="black" points="0,-38.5 0,-57.5 131,-57.5 131,-38.5 0,-38.5"/>
 <text text-anchor="middle" x="65.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogExists</text>
 </a>
 </g>
 </g>
-<!-- Node971 -->
-<g id="node2" class="node"><title>Node971</title>
+<!-- Node973 -->
+<g id="node2" class="node"><title>Node973</title>
 <g id="a_node2"><a xlink:href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" target="_top" xlink:title="Ausgabe eines Schlüsselwortes.">
 <polygon fill="white" stroke="black" points="180,-77 180,-107 323,-107 323,-77 180,-77"/>
 <text text-anchor="start" x="188" y="-95" font-family="Helvetica,sans-Serif" font-size="10.00">okw.log.Logger_Sngltn.Log</text>
@@ -26,52 +26,52 @@
 </a>
 </g>
 </g>
-<!-- Node970&#45;&gt;Node971 -->
-<g id="edge1" class="edge"><title>Node970&#45;&gt;Node971</title>
+<!-- Node972&#45;&gt;Node973 -->
+<g id="edge1" class="edge"><title>Node972&#45;&gt;Node973</title>
 <path fill="none" stroke="midnightblue" d="M106.425,-57.5473C127.234,-62.5233 153.342,-68.7666 177.598,-74.5669"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="176.96,-78.0129 187.499,-76.9346 178.588,-71.2048 176.96,-78.0129"/>
 </g>
-<!-- Node972 -->
-<g id="node3" class="node"><title>Node972</title>
+<!-- Node974 -->
+<g id="node3" class="node"><title>Node974</title>
 <g id="a_node3"><a xlink:href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" target="_top" xlink:title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter.">
 <polygon fill="white" stroke="black" points="167,-38.5 167,-57.5 336,-57.5 336,-38.5 167,-38.5"/>
 <text text-anchor="middle" x="251.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.GetMessage</text>
 </a>
 </g>
 </g>
-<!-- Node970&#45;&gt;Node972 -->
-<g id="edge2" class="edge"><title>Node970&#45;&gt;Node972</title>
+<!-- Node972&#45;&gt;Node974 -->
+<g id="edge2" class="edge"><title>Node972&#45;&gt;Node974</title>
 <path fill="none" stroke="midnightblue" d="M131.113,-48C139.449,-48 148.114,-48 156.801,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="156.988,-51.5001 166.988,-48 156.988,-44.5001 156.988,-51.5001"/>
 </g>
-<!-- Node975 -->
-<g id="node6" class="node"><title>Node975</title>
+<!-- Node977 -->
+<g id="node6" class="node"><title>Node977</title>
 <g id="a_node6"><a xlink:href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a04432f21a91af5ea4df110b625934fb6" target="_top" xlink:title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus.">
 <polygon fill="white" stroke="black" points="169.5,-0.5 169.5,-19.5 333.5,-19.5 333.5,-0.5 169.5,-0.5"/>
 <text text-anchor="middle" x="251.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.IOKW_State.LogExists</text>
 </a>
 </g>
 </g>
-<!-- Node970&#45;&gt;Node975 -->
-<g id="edge5" class="edge"><title>Node970&#45;&gt;Node975</title>
+<!-- Node972&#45;&gt;Node977 -->
+<g id="edge5" class="edge"><title>Node972&#45;&gt;Node977</title>
 <path fill="none" stroke="midnightblue" d="M112.931,-38.411C137.649,-33.3061 168.239,-26.9887 194.292,-21.6082"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="195.317,-24.9703 204.403,-19.5201 193.902,-18.115 195.317,-24.9703"/>
 </g>
-<!-- Node973 -->
-<g id="node4" class="node"><title>Node973</title>
+<!-- Node975 -->
+<g id="node4" class="node"><title>Node975</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" target="_top" xlink:title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei.">
 <polygon fill="white" stroke="black" points="372,-38.5 372,-57.5 547,-57.5 547,-38.5 372,-38.5"/>
 <text text-anchor="middle" x="459.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.LogMessenger.ReadMessage</text>
 </a>
 </g>
 </g>
-<!-- Node972&#45;&gt;Node973 -->
-<g id="edge3" class="edge"><title>Node972&#45;&gt;Node973</title>
+<!-- Node974&#45;&gt;Node975 -->
+<g id="edge3" class="edge"><title>Node974&#45;&gt;Node975</title>
 <path fill="none" stroke="midnightblue" d="M336.288,-48C344.603,-48 353.092,-48 361.526,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="361.772,-51.5001 371.772,-48 361.772,-44.5001 361.772,-51.5001"/>
 </g>
-<!-- Node974 -->
-<g id="node5" class="node"><title>Node974</title>
+<!-- Node976 -->
+<g id="node5" class="node"><title>Node976</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" target="_top" xlink:title="Lies den TextContent eines Tag.">
 <polygon fill="white" stroke="black" points="583,-33 583,-63 735,-63 735,-33 583,-33"/>
 <text text-anchor="start" x="591" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">okw.OKW_XmlReader.getText</text>
@@ -79,8 +79,8 @@
 </a>
 </g>
 </g>
-<!-- Node973&#45;&gt;Node974 -->
-<g id="edge4" class="edge"><title>Node973&#45;&gt;Node974</title>
+<!-- Node975&#45;&gt;Node976 -->
+<g id="edge4" class="edge"><title>Node975&#45;&gt;Node976</title>
 <path fill="none" stroke="midnightblue" d="M547.126,-48C555.6,-48 564.195,-48 572.656,-48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="572.893,-51.5001 582.893,-48 572.892,-44.5001 572.893,-51.5001"/>
 </g>

@@ -921,8 +921,8 @@ var sectionId = 'dynsection-0';
 <path fill="none" stroke="midnightblue" d="M3437.72,-1043.33C3346.99,-1022.44 3196.99,-976.013 3103,-884 3096.04,-877.189 3089.65,-869.657 3083.78,-861.653"/>
 <polygon fill="none" stroke="midnightblue" points="3437.15,-1046.78 3447.67,-1045.57 3438.69,-1039.95 3437.15,-1046.78"/>
 </g>
-<!-- Node57 -->
-<g id="node40" class="node"><title>Node57</title>
+<!-- Node58 -->
+<g id="node40" class="node"><title>Node58</title>
 <g id="a_node40"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_chrome_app.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="3112,-645 3112,-768 3300,-768 3300,-645 3112,-645"/>
 <text text-anchor="start" x="3120" y="-756" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.webdriver.</text>
@@ -939,13 +939,13 @@ var sectionId = 'dynsection-0';
 </a>
 </g>
 </g>
-<!-- Node30&#45;&gt;Node57 -->
-<g id="edge39" class="edge"><title>Node30&#45;&gt;Node57</title>
+<!-- Node30&#45;&gt;Node58 -->
+<g id="edge39" class="edge"><title>Node30&#45;&gt;Node58</title>
 <path fill="none" stroke="midnightblue" d="M3439.5,-1004.32C3397.89,-972.399 3347.12,-929.361 3309,-884 3279.33,-848.689 3253.23,-803.726 3234.73,-768.02"/>
 <polygon fill="none" stroke="midnightblue" points="3437.61,-1007.29 3447.69,-1010.56 3441.85,-1001.72 3437.61,-1007.29"/>
 </g>
-<!-- Node58 -->
-<g id="node41" class="node"><title>Node58</title>
+<!-- Node59 -->
+<g id="node41" class="node"><title>Node59</title>
 <g id="a_node41"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_firefox_app.html" target="_top" xlink:title="OKW Selenium FireFox BrowserWindow Klasse.">
 <polygon fill="white" stroke="black" points="3318,-639.5 3318,-773.5 3506,-773.5 3506,-639.5 3318,-639.5"/>
 <text text-anchor="start" x="3326" y="-761.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.webdriver.</text>
@@ -963,13 +963,13 @@ var sectionId = 'dynsection-0';
 </a>
 </g>
 </g>
-<!-- Node30&#45;&gt;Node58 -->
-<g id="edge40" class="edge"><title>Node30&#45;&gt;Node58</title>
+<!-- Node30&#45;&gt;Node59 -->
+<g id="edge40" class="edge"><title>Node30&#45;&gt;Node59</title>
 <path fill="none" stroke="midnightblue" d="M3486.13,-959.763C3468.65,-900.277 3446.83,-826.014 3431.4,-773.51"/>
 <polygon fill="none" stroke="midnightblue" points="3482.83,-960.947 3489.01,-969.554 3489.55,-958.973 3482.83,-960.947"/>
 </g>
-<!-- Node59 -->
-<g id="node42" class="node"><title>Node59</title>
+<!-- Node60 -->
+<g id="node42" class="node"><title>Node60</title>
 <g id="a_node42"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="3524,-645 3524,-768 3712,-768 3712,-645 3524,-645"/>
 <text text-anchor="start" x="3532" y="-756" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.webdriver.</text>
@@ -986,13 +986,13 @@ var sectionId = 'dynsection-0';
 </a>
 </g>
 </g>
-<!-- Node30&#45;&gt;Node59 -->
-<g id="edge41" class="edge"><title>Node30&#45;&gt;Node59</title>
+<!-- Node30&#45;&gt;Node60 -->
+<g id="edge41" class="edge"><title>Node30&#45;&gt;Node60</title>
 <path fill="none" stroke="midnightblue" d="M3543.85,-959.813C3561.95,-898.229 3584.71,-820.792 3600.2,-768.059"/>
 <polygon fill="none" stroke="midnightblue" points="3540.45,-958.973 3540.99,-969.554 3547.17,-960.947 3540.45,-958.973"/>
 </g>
-<!-- Node60 -->
-<g id="node43" class="node"><title>Node60</title>
+<!-- Node61 -->
+<g id="node43" class="node"><title>Node61</title>
 <g id="a_node43"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_safari_app.html" target="_top" xlink:title="OKW Selenium FireFox BrowserWindow Klasse.">
 <polygon fill="white" stroke="black" points="3730,-645 3730,-768 3918,-768 3918,-645 3730,-645"/>
 <text text-anchor="start" x="3738" y="-756" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.webdriver.</text>
@@ -1009,13 +1009,13 @@ var sectionId = 'dynsection-0';
 </a>
 </g>
 </g>
-<!-- Node30&#45;&gt;Node60 -->
-<g id="edge42" class="edge"><title>Node30&#45;&gt;Node60</title>
+<!-- Node30&#45;&gt;Node61 -->
+<g id="edge42" class="edge"><title>Node30&#45;&gt;Node61</title>
 <path fill="none" stroke="midnightblue" d="M3590.5,-1004.32C3632.11,-972.399 3682.88,-929.361 3721,-884 3750.67,-848.689 3776.77,-803.726 3795.27,-768.02"/>
 <polygon fill="none" stroke="midnightblue" points="3588.15,-1001.72 3582.31,-1010.56 3592.39,-1007.29 3588.15,-1001.72"/>
 </g>
-<!-- Node62 -->
-<g id="node45" class="node"><title>Node62</title>
+<!-- Node63 -->
+<g id="node45" class="node"><title>Node63</title>
 <g id="a_node45"><a xlink:href="classokw_1_1gui_1_1adapter_1_1_test___window.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="3936.5,-584.5 3936.5,-828.5 4049.5,-828.5 4049.5,-584.5 3936.5,-584.5"/>
 <text text-anchor="start" x="3944.5" y="-816.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.Test</text>
@@ -1043,13 +1043,13 @@ var sectionId = 'dynsection-0';
 </a>
 </g>
 </g>
-<!-- Node30&#45;&gt;Node62 -->
-<g id="edge44" class="edge"><title>Node30&#45;&gt;Node62</title>
+<!-- Node30&#45;&gt;Node63 -->
+<g id="edge44" class="edge"><title>Node30&#45;&gt;Node63</title>
 <path fill="none" stroke="midnightblue" d="M3592.12,-1044.58C3683.71,-1024.8 3835.57,-979.333 3927,-884 3942.06,-868.299 3953.75,-848.845 3962.8,-828.648"/>
 <polygon fill="none" stroke="midnightblue" points="3591.14,-1041.21 3582.08,-1046.7 3592.58,-1048.06 3591.14,-1041.21"/>
 </g>
-<!-- Node66 -->
-<g id="node49" class="node"><title>Node66</title>
+<!-- Node67 -->
+<g id="node49" class="node"><title>Node67</title>
 <g id="a_node49"><a xlink:href="classokw_1_1gui_1_1frames_1_1frm_window_with_out_methods.html" target="_top" xlink:title="Test&#45;Frame&#45;Klasse: Diese Klasse dient als Unittest&#45;Objekt.">
 <polygon fill="white" stroke="black" points="4067.5,-634 4067.5,-779 4210.5,-779 4210.5,-634 4067.5,-634"/>
 <text text-anchor="start" x="4075.5" y="-767" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.frmWindow</text>
@@ -1068,8 +1068,8 @@ var sectionId = 'dynsection-0';
 </a>
 </g>
 </g>
-<!-- Node30&#45;&gt;Node66 -->
-<g id="edge48" class="edge"><title>Node30&#45;&gt;Node66</title>
+<!-- Node30&#45;&gt;Node67 -->
+<g id="edge48" class="edge"><title>Node30&#45;&gt;Node67</title>
 <path fill="none" stroke="midnightblue" d="M3592.21,-1052.78C3707.26,-1041.12 3924.56,-1003.68 4059,-884 4089.78,-856.596 4109.42,-815.004 4121.54,-779.078"/>
 <polygon fill="none" stroke="midnightblue" points="3591.69,-1049.31 3582.07,-1053.76 3592.36,-1056.28 3591.69,-1049.31"/>
 </g>
@@ -1096,8 +1096,8 @@ var sectionId = 'dynsection-0';
 <path fill="none" stroke="midnightblue" d="M3024,-541.031C3024,-511.897 3024,-483.306 3024,-459.502"/>
 <polygon fill="none" stroke="midnightblue" points="3020.5,-541.352 3024,-551.352 3027.5,-541.352 3020.5,-541.352"/>
 </g>
-<!-- Node52 -->
-<g id="node39" class="node"><title>Node52</title>
+<!-- Node53 -->
+<g id="node39" class="node"><title>Node53</title>
 <g id="a_node39"><a xlink:href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_window.html" target="_top" xlink:title="Abstrakte Basisklasse für SeBrowserTypen.">
 <polygon fill="white" stroke="red" points="3112,-342 3112,-454 3252,-454 3252,-342 3112,-342"/>
 <text text-anchor="start" x="3120" y="-442" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.adapter.selenium.</text>
@@ -1113,8 +1113,8 @@ var sectionId = 'dynsection-0';
 </a>
 </g>
 </g>
-<!-- Node31&#45;&gt;Node52 -->
-<g id="edge38" class="edge"><title>Node31&#45;&gt;Node52</title>
+<!-- Node31&#45;&gt;Node53 -->
+<g id="edge38" class="edge"><title>Node31&#45;&gt;Node53</title>
 <path fill="none" stroke="midnightblue" d="M3096.21,-542.184C3098.46,-537.726 3100.73,-533.324 3103,-529 3116.2,-503.863 3132.24,-476.914 3146.41,-454.107"/>
 <polygon fill="none" stroke="midnightblue" points="3092.94,-540.897 3091.59,-551.406 3099.19,-544.031 3092.94,-540.897"/>
 </g>
@@ -1242,8 +1242,8 @@ var sectionId = 'dynsection-0';
 <path fill="none" stroke="midnightblue" d="M3071.84,-328.806C3081.21,-318.995 3091.69,-309.903 3103,-303 3164.48,-265.481 3202.86,-309.512 3261,-267 3287.29,-247.778 3306.23,-216.784 3318.87,-189.605"/>
 <polygon fill="none" stroke="midnightblue" points="3069.04,-326.679 3064.88,-336.425 3074.21,-331.398 3069.04,-326.679"/>
 </g>
-<!-- Node61 -->
-<g id="node44" class="node"><title>Node61</title>
+<!-- Node62 -->
+<g id="node44" class="node"><title>Node62</title>
 <g id="a_node44"><a xlink:href="classokw_1_1gui_1_1frames_1_1frm_safari.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="3668.5,-369.5 3668.5,-426.5 3803.5,-426.5 3803.5,-369.5 3668.5,-369.5"/>
 <text text-anchor="middle" x="3736" y="-414.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.frmSafari</text>
@@ -1254,13 +1254,13 @@ var sectionId = 'dynsection-0';
 </a>
 </g>
 </g>
-<!-- Node60&#45;&gt;Node61 -->
-<g id="edge43" class="edge"><title>Node60&#45;&gt;Node61</title>
+<!-- Node61&#45;&gt;Node62 -->
+<g id="edge43" class="edge"><title>Node61&#45;&gt;Node62</title>
 <path fill="none" stroke="midnightblue" d="M3803.76,-635.007C3784.78,-568.896 3757.37,-473.434 3743.98,-426.781"/>
 <polygon fill="none" stroke="midnightblue" points="3800.49,-636.3 3806.61,-644.945 3807.22,-634.368 3800.49,-636.3"/>
 </g>
-<!-- Node63 -->
-<g id="node46" class="node"><title>Node63</title>
+<!-- Node64 -->
+<g id="node46" class="node"><title>Node64</title>
 <g id="a_node46"><a xlink:href="classokw_1_1gui_1_1frames_1_1frm_current_object_window.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="3821.5,-347.5 3821.5,-448.5 3980.5,-448.5 3980.5,-347.5 3821.5,-347.5"/>
 <text text-anchor="start" x="3829.5" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.frmCurrent</text>
@@ -1275,13 +1275,13 @@ var sectionId = 'dynsection-0';
 </a>
 </g>
 </g>
-<!-- Node62&#45;&gt;Node63 -->
-<g id="edge45" class="edge"><title>Node62&#45;&gt;Node63</title>
+<!-- Node63&#45;&gt;Node64 -->
+<g id="edge45" class="edge"><title>Node63&#45;&gt;Node64</title>
 <path fill="none" stroke="midnightblue" d="M3953.71,-574.598C3940.33,-530.019 3926.17,-482.862 3915.9,-448.654"/>
 <polygon fill="none" stroke="midnightblue" points="3950.41,-575.791 3956.64,-584.363 3957.12,-573.779 3950.41,-575.791"/>
 </g>
-<!-- Node64 -->
-<g id="node47" class="node"><title>Node64</title>
+<!-- Node65 -->
+<g id="node47" class="node"><title>Node65</title>
 <g id="a_node47"><a xlink:href="classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test.html" target="_top" xlink:title="frmObjDictTest ist eine Test&#45;Frame&#45;Klasse.">
 <polygon fill="white" stroke="black" points="3999,-347.5 3999,-448.5 4161,-448.5 4161,-347.5 3999,-347.5"/>
 <text text-anchor="middle" x="4080" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.FrmObjDictTest</text>
@@ -1296,13 +1296,13 @@ var sectionId = 'dynsection-0';
 </a>
 </g>
 </g>
-<!-- Node62&#45;&gt;Node64 -->
-<g id="edge46" class="edge"><title>Node62&#45;&gt;Node64</title>
+<!-- Node63&#45;&gt;Node65 -->
+<g id="edge46" class="edge"><title>Node63&#45;&gt;Node65</title>
 <path fill="none" stroke="midnightblue" d="M4030.16,-574.598C4042.81,-530.019 4056.2,-482.862 4065.91,-448.654"/>
 <polygon fill="none" stroke="midnightblue" points="4026.75,-573.787 4027.38,-584.363 4033.48,-575.699 4026.75,-573.787"/>
 </g>
-<!-- Node65 -->
-<g id="node48" class="node"><title>Node65</title>
+<!-- Node66 -->
+<g id="node48" class="node"><title>Node66</title>
 <g id="a_node48"><a xlink:href="classokw_1_1gui_1_1frames_1_1frm_test_rechner.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="4179.5,-303.5 4179.5,-492.5 4354.5,-492.5 4354.5,-303.5 4179.5,-303.5"/>
 <text text-anchor="middle" x="4267" y="-480.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.frames.frmTestRechner</text>
@@ -1325,8 +1325,8 @@ var sectionId = 'dynsection-0';
 </a>
 </g>
 </g>
-<!-- Node62&#45;&gt;Node65 -->
-<g id="edge47" class="edge"><title>Node62&#45;&gt;Node65</title>
+<!-- Node63&#45;&gt;Node66 -->
+<g id="edge47" class="edge"><title>Node63&#45;&gt;Node66</title>
 <path fill="none" stroke="midnightblue" d="M4026.24,-574.681C4034.8,-557.765 4045.54,-541.88 4059,-529 4096.47,-493.147 4125.56,-519.738 4170,-493 4173.11,-491.126 4176.21,-489.134 4179.27,-487.046"/>
 <polygon fill="none" stroke="midnightblue" points="4022.86,-573.64 4021.7,-584.171 4029.17,-576.658 4022.86,-573.64"/>
 </g>

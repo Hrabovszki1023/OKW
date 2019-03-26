@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resoursesproperties',['ResoursesProperties',['../classokw_1_1_o_k_w___properties.html#ac326e4635f05d96f0c4b1ee377d41096',1,'okw::OKW_Properties']]]
+  ['okw_5fmemorize_5fxml',['OKW_Memorize_xml',['../classokw_1_1_o_k_w___memorize___sngltn.html#ae4568ebcab6cfb4d758e56af41b45d07',1,'okw::OKW_Memorize_Sngltn']]]
 ];

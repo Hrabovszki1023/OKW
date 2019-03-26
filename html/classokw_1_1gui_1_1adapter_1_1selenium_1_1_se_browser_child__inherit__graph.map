@@ -1,5 +1,5 @@
 <map id="okw.gui.adapter.selenium.SeBrowserChild" name="okw.gui.adapter.selenium.SeBrowserChild">
-<area shape="rect" id="node1" title="TODO: class SeBrowserChild dokumentieren..." alt="" coords="2139,1188,2325,1353"/>
+<area shape="rect" id="node1" title="TODO: class SeBrowserChild dokumentieren..." alt="" coords="2272,1188,2459,1353"/>
 <area shape="rect" id="node7" href="$classokw_1_1gui_1_1frames_1_1frm_calculator_1_1frm_calculator.html" title=" " alt="" coords="5,1401,237,1757"/>
 <area shape="rect" id="node8" href="$classokw_1_1gui_1_1frames_1_1iframe_1_1frm_iframe.html" title="GUI&#45;Frame für die OKW&#45;Testseite http://test.openkeyword.de/iframe/iframe.htm" alt="" coords="262,1504,450,1655"/>
 <area shape="rect" id="node9" href="$classokw_1_1gui_1_1frames_1_1iframe_1_1frm_i_frame_with_name.html" title="GUI&#45;Frame für die OKW&#45;Testseite http://test.openkeyword.de/iframe/iframe.htm" alt="" coords="474,1504,662,1655"/>
@@ -9,19 +9,20 @@
 <area shape="rect" id="node13" href="$classokw_1_1gui_1_1frames_1_1_se_input_button_1_1frm_input_button.html" title=" " alt="" coords="1357,1504,1595,1655"/>
 <area shape="rect" id="node14" href="$classokw_1_1gui_1_1frames_1_1_se_input_button_1_1frm_input_button_not_activ.html" title=" " alt="" coords="1619,1504,1858,1655"/>
 <area shape="rect" id="node15" href="$classokw_1_1gui_1_1frames_1_1_se_input_radio_1_1frm_se_input_radio.html" title="TestFrame für den Test der Klasse SeInputRadio." alt="" coords="1882,1504,2113,1655"/>
-<area shape="rect" id="node16" href="$classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_se_link.html" title="Selenium&#45;Frame zur Link&#45;TestSeite" alt="" coords="2137,1519,2327,1640"/>
-<area shape="rect" id="node17" href="$classokw_1_1gui_1_1frames_1_1_se_radio_list_1_1frm_se_radio_list.html" title=" " alt="" coords="2351,1526,2572,1633"/>
-<area shape="rect" id="node18" href="$classokw_1_1gui_1_1frames_1_1_se_select_1_1frm___se_list_box.html" title=" " alt="" coords="2597,1511,2801,1647"/>
-<area shape="rect" id="node19" href="$classokw_1_1gui_1_1frames_1_1_se_select_1_1frm___se_list_box_multi_select.html" title=" " alt="" coords="2825,1533,3034,1625"/>
-<area shape="rect" id="node20" href="$classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea.html" title=" " alt="" coords="3059,1511,3277,1647"/>
-<area shape="rect" id="node21" href="$classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea_disabled.html" title=" " alt="" coords="3301,1526,3520,1633"/>
-<area shape="rect" id="node22" href="$classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea_readonly.html" title=" " alt="" coords="3544,1519,3763,1640"/>
-<area shape="rect" id="node23" href="$classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_disabled.html" title=" " alt="" coords="3787,1526,4005,1633"/>
-<area shape="rect" id="node24" href="$classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_readonly.html" title=" " alt="" coords="4029,1526,4246,1633"/>
-<area shape="rect" id="node25" href="$classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_text_field.html" title=" " alt="" coords="4270,1519,4487,1640"/>
-<area shape="rect" id="node2" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html" title="SeAnyWindow ist eine Fenster GUI&#45;Adapterklasse." alt="" coords="2139,725,2325,1140"/>
-<area shape="rect" id="node3" href="$classokw_1_1gui_1_1_any_window.html" title="Description of AnyWin." alt="" coords="2143,439,2321,677"/>
-<area shape="rect" id="node4" href="$classokw_1_1gui_1_1_any_win_base.html" title="Description of AnyWin." alt="" coords="1921,5,2119,391"/>
-<area shape="rect" id="node5" href="$interfaceokw_1_1gui_1_1_i_g_u_i_window.html" title=" " alt="" coords="2143,93,2321,303"/>
-<area shape="rect" id="node6" href="$interfaceokw_1_1core_1_1_i_o_k_w___f_n.html" title=" " alt="" coords="2346,123,2483,273"/>
+<area shape="rect" id="node16" href="$classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_link.html" title="Selenium&#45;Frame zur Link&#45;TestSeite" alt="" coords="2137,1526,2351,1633"/>
+<area shape="rect" id="node17" href="$classokw_1_1gui_1_1frames_1_1_se_radio_list_1_1frm_se_radio_list.html" title=" " alt="" coords="2376,1526,2597,1633"/>
+<area shape="rect" id="node18" href="$classokw_1_1gui_1_1frames_1_1_se_select_1_1frm___se_list_box.html" title=" " alt="" coords="2622,1511,2826,1647"/>
+<area shape="rect" id="node19" href="$classokw_1_1gui_1_1frames_1_1_se_select_1_1frm___se_list_box_multi_select.html" title=" " alt="" coords="2850,1533,3059,1625"/>
+<area shape="rect" id="node20" href="$classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea.html" title=" " alt="" coords="3084,1511,3303,1647"/>
+<area shape="rect" id="node21" href="$classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea_disabled.html" title=" " alt="" coords="3327,1526,3545,1633"/>
+<area shape="rect" id="node22" href="$classokw_1_1gui_1_1frames_1_1_se_textarea_1_1frm_se_textarea_readonly.html" title=" " alt="" coords="3569,1519,3788,1640"/>
+<area shape="rect" id="node23" href="$classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_input_type_password.html" title=" " alt="" coords="3813,1519,4030,1640"/>
+<area shape="rect" id="node24" href="$classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_input_type_text.html" title=" " alt="" coords="4054,1519,4271,1640"/>
+<area shape="rect" id="node25" href="$classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_input_type_text_disabled.html" title=" " alt="" coords="4295,1526,4513,1633"/>
+<area shape="rect" id="node26" href="$classokw_1_1gui_1_1frames_1_1_se_text_field_1_1frm_se_input_text_readonly.html" title=" " alt="" coords="4537,1526,4754,1633"/>
+<area shape="rect" id="node2" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html" title="SeAnyWindow ist eine Fenster GUI&#45;Adapterklasse." alt="" coords="2272,725,2459,1140"/>
+<area shape="rect" id="node3" href="$classokw_1_1gui_1_1_any_window.html" title="Description of AnyWin." alt="" coords="2276,439,2455,677"/>
+<area shape="rect" id="node4" href="$classokw_1_1gui_1_1_any_win_base.html" title="Description of AnyWin." alt="" coords="2055,5,2252,391"/>
+<area shape="rect" id="node5" href="$interfaceokw_1_1gui_1_1_i_g_u_i_window.html" title=" " alt="" coords="2276,93,2455,303"/>
+<area shape="rect" id="node6" href="$interfaceokw_1_1core_1_1_i_o_k_w___f_n.html" title=" " alt="" coords="2479,123,2617,273"/>
 </map>

@@ -55,29 +55,29 @@ var sectionId = 'dynsection-20';
 <g id="viewport">
 <title>okw.core.Core.LogIsActive</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-329 547,-329 547,4 -4,4"/>
-<!-- Node1008 -->
-<g id="node1" class="node"><title>Node1008</title>
+<!-- Node1010 -->
+<g id="node1" class="node"><title>Node1010</title>
 <g id="a_node1"><a xlink:title="Dokumentiert den Status des gegebenen Objekts.">
 <polygon fill="#bfbfbf" stroke="black" points="403,-131 403,-150 543,-150 543,-131 403,-131"/>
 <text text-anchor="middle" x="473" y="-138" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.Core.LogIsActive</text>
 </a>
 </g>
 </g>
-<!-- Node1009 -->
-<g id="node2" class="node"><title>Node1009</title>
+<!-- Node1011 -->
+<g id="node2" class="node"><title>Node1011</title>
 <g id="a_node2"><a xlink:href="classokw_1_1core_1_1_e_n.html#acbeecc6c0bfe7f092b7b612471f5e790" target="_top" xlink:title="Dokumentiert den Status des gegebenen Objekts.">
 <polygon fill="white" stroke="black" points="216,-153 216,-172 347,-172 347,-153 216,-153"/>
 <text text-anchor="middle" x="281.5" y="-160" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.EN.LogIsActive</text>
 </a>
 </g>
 </g>
-<!-- Node1008&#45;&gt;Node1009 -->
-<g id="edge1" class="edge"><title>Node1008&#45;&gt;Node1009</title>
+<!-- Node1010&#45;&gt;Node1011 -->
+<g id="edge1" class="edge"><title>Node1010&#45;&gt;Node1011</title>
 <path fill="none" stroke="midnightblue" d="M392.429,-149.738C377.325,-151.491 361.692,-153.306 347.121,-154.998"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="393.252,-153.166 402.782,-148.536 392.445,-146.213 393.252,-153.166"/>
 </g>
-<!-- Node1017 -->
-<g id="node10" class="node"><title>Node1017</title>
+<!-- Node1019 -->
+<g id="node10" class="node"><title>Node1019</title>
 <g id="a_node10"><a xlink:href="classokw_1_1core_1_1_current_object___test.html#ac58a25319b9eafc624904f3c2f262438" target="_top" xlink:title="Testziel: Prüft den Aufruf der Methode LogExists( &quot;FN&quot; ) im ChildObject.">
 <polygon fill="white" stroke="black" points="196,-103.5 196,-133.5 367,-133.5 367,-103.5 196,-103.5"/>
 <text text-anchor="start" x="204" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.core.CurrentObject</text>
@@ -85,13 +85,13 @@ var sectionId = 'dynsection-20';
 </a>
 </g>
 </g>
-<!-- Node1008&#45;&gt;Node1017 -->
-<g id="edge9" class="edge"><title>Node1008&#45;&gt;Node1017</title>
+<!-- Node1010&#45;&gt;Node1019 -->
+<g id="edge9" class="edge"><title>Node1010&#45;&gt;Node1019</title>
 <path fill="none" stroke="midnightblue" d="M392.576,-131.279C384.126,-130.298 375.508,-129.298 367.003,-128.31"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="392.445,-134.787 402.782,-132.464 393.252,-127.834 392.445,-134.787"/>
 </g>
-<!-- Node1010 -->
-<g id="node3" class="node"><title>Node1010</title>
+<!-- Node1012 -->
+<g id="node3" class="node"><title>Node1012</title>
 <g id="a_node3"><a xlink:href="classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#a87dcc43e21c2143369d3bb69360aaf70" target="_top" xlink:title="Teste das Schlüsselwort LogIsActive( FN ) eines SeBACK prüfen.">
 <polygon fill="white" stroke="black" points="11.5,-294.5 11.5,-324.5 148.5,-324.5 148.5,-294.5 11.5,-294.5"/>
 <text text-anchor="start" x="19.5" y="-312.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeBACK.SeBACK_EN</text>
@@ -99,13 +99,13 @@ var sectionId = 'dynsection-20';
 </a>
 </g>
 </g>
-<!-- Node1009&#45;&gt;Node1010 -->
-<g id="edge2" class="edge"><title>Node1009&#45;&gt;Node1010</title>
+<!-- Node1011&#45;&gt;Node1012 -->
+<g id="edge2" class="edge"><title>Node1011&#45;&gt;Node1012</title>
 <path fill="none" stroke="midnightblue" d="M267.64,-180.498C247.611,-207.244 206.412,-257.344 160,-285.5 154.363,-288.92 148.2,-291.886 141.884,-294.45"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="270.719,-182.218 273.816,-172.086 265.076,-178.076 270.719,-182.218"/>
 </g>
-<!-- Node1011 -->
-<g id="node4" class="node"><title>Node1011</title>
+<!-- Node1013 -->
+<g id="node4" class="node"><title>Node1013</title>
 <g id="a_node4"><a xlink:href="classokw_1_1_se_button_1_1_se_button___e_n___test.html#a4596fef9ffca45bceb0df680ef0e3ed7" target="_top" xlink:title="Test des Schlüsselwortes LogIsaCTIVE für den GUI&#45;Adapter SeButton.">
 <polygon fill="white" stroke="black" points="15,-245.5 15,-275.5 145,-275.5 145,-245.5 15,-245.5"/>
 <text text-anchor="start" x="23" y="-263.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeButton.SeButton</text>
@@ -113,13 +113,13 @@ var sectionId = 'dynsection-20';
 </a>
 </g>
 </g>
-<!-- Node1009&#45;&gt;Node1011 -->
-<g id="edge3" class="edge"><title>Node1009&#45;&gt;Node1011</title>
+<!-- Node1011&#45;&gt;Node1013 -->
+<g id="edge3" class="edge"><title>Node1011&#45;&gt;Node1013</title>
 <path fill="none" stroke="midnightblue" d="M258.932,-178.105C235.519,-194.469 196.564,-220.047 160,-236.5 152.68,-239.794 144.782,-242.795 136.909,-245.474"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="261.251,-180.752 267.392,-172.118 257.208,-175.037 261.251,-180.752"/>
 </g>
-<!-- Node1012 -->
-<g id="node5" class="node"><title>Node1012</title>
+<!-- Node1014 -->
+<g id="node5" class="node"><title>Node1014</title>
 <g id="a_node5"><a xlink:href="classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a3094b817b6e609d03d89ef5afec8c163" target="_top" xlink:title="Teste das Schlüsselwort LogIsActive( FN ) eines SeInputText Prüfen.">
 <polygon fill="white" stroke="black" points="7,-196.5 7,-226.5 153,-226.5 153,-196.5 7,-196.5"/>
 <text text-anchor="start" x="15" y="-214.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputField.SeInput</text>
@@ -127,13 +127,13 @@ var sectionId = 'dynsection-20';
 </a>
 </g>
 </g>
-<!-- Node1009&#45;&gt;Node1012 -->
-<g id="edge4" class="edge"><title>Node1009&#45;&gt;Node1012</title>
+<!-- Node1011&#45;&gt;Node1014 -->
+<g id="edge4" class="edge"><title>Node1011&#45;&gt;Node1014</title>
 <path fill="none" stroke="midnightblue" d="M231.585,-174.514C204.629,-181.135 170.913,-189.416 142.222,-196.463"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="232.684,-177.848 241.561,-172.064 231.015,-171.05 232.684,-177.848"/>
 </g>
-<!-- Node1013 -->
-<g id="node6" class="node"><title>Node1013</title>
+<!-- Node1015 -->
+<g id="node6" class="node"><title>Node1015</title>
 <g id="a_node6"><a xlink:href="classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a613a2bf42e3a5f6e86d751950dc79395" target="_top" xlink:title="Test des Schlüsselwortes LogIsActive für den GUI&#45;Adapter SeInputRadio.">
 <polygon fill="white" stroke="black" points="1.5,-147.5 1.5,-177.5 158.5,-177.5 158.5,-147.5 1.5,-147.5"/>
 <text text-anchor="start" x="9.5" y="-165.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeInputRadio.SeInput</text>
@@ -141,13 +141,13 @@ var sectionId = 'dynsection-20';
 </a>
 </g>
 </g>
-<!-- Node1009&#45;&gt;Node1013 -->
-<g id="edge5" class="edge"><title>Node1009&#45;&gt;Node1013</title>
+<!-- Node1011&#45;&gt;Node1015 -->
+<g id="edge5" class="edge"><title>Node1011&#45;&gt;Node1015</title>
 <path fill="none" stroke="midnightblue" d="M205.32,-162.5C190.069,-162.5 174.002,-162.5 158.667,-162.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="205.728,-166 215.728,-162.5 205.728,-159 205.728,-166"/>
 </g>
-<!-- Node1014 -->
-<g id="node7" class="node"><title>Node1014</title>
+<!-- Node1016 -->
+<g id="node7" class="node"><title>Node1016</title>
 <g id="a_node7"><a xlink:href="classokw_1_1_se_link_1_1_se_link___e_n___test.html#a84523639f4fecc375a608d6fede3ea23" target="_top" xlink:title="Prüft ob die LogIsActive die Ausnahme OKWFrameObjectMethodNotImplemented auslöst.">
 <polygon fill="white" stroke="black" points="18,-98.5 18,-128.5 142,-128.5 142,-98.5 18,-98.5"/>
 <text text-anchor="start" x="26" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeLink.SeLink_EN</text>
@@ -155,13 +155,13 @@ var sectionId = 'dynsection-20';
 </a>
 </g>
 </g>
-<!-- Node1009&#45;&gt;Node1014 -->
-<g id="edge6" class="edge"><title>Node1009&#45;&gt;Node1014</title>
+<!-- Node1011&#45;&gt;Node1016 -->
+<g id="edge6" class="edge"><title>Node1011&#45;&gt;Node1016</title>
 <path fill="none" stroke="midnightblue" d="M226.569,-150.661C216.4,-148.347 205.863,-145.895 196,-143.5 176.751,-138.827 155.767,-133.44 137.056,-128.531"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="226.051,-154.132 236.577,-152.921 227.593,-147.304 226.051,-154.132"/>
 </g>
-<!-- Node1015 -->
-<g id="node8" class="node"><title>Node1015</title>
+<!-- Node1017 -->
+<g id="node8" class="node"><title>Node1017</title>
 <g id="a_node8"><a xlink:href="classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test.html#a57e4b8d0279f8f18c8dbc0ac17428e29" target="_top" xlink:title="Teste das Schlüsselwort LogIsActive( FN ) eines SeMAXIMIZE prüfen.">
 <polygon fill="white" stroke="black" points="0,-49.5 0,-79.5 160,-79.5 160,-49.5 0,-49.5"/>
 <text text-anchor="start" x="8" y="-67.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeMAXIMIZE.SeMAXIMIZE</text>
@@ -169,13 +169,13 @@ var sectionId = 'dynsection-20';
 </a>
 </g>
 </g>
-<!-- Node1009&#45;&gt;Node1015 -->
-<g id="edge7" class="edge"><title>Node1009&#45;&gt;Node1015</title>
+<!-- Node1011&#45;&gt;Node1017 -->
+<g id="edge7" class="edge"><title>Node1011&#45;&gt;Node1017</title>
 <path fill="none" stroke="midnightblue" d="M206.344,-149.459C202.728,-147.712 199.253,-145.735 196,-143.5 172.226,-127.166 183.056,-106.833 160,-89.5 154.826,-85.61 149.029,-82.3151 142.99,-79.5263"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="205.005,-152.693 215.579,-153.348 207.721,-146.241 205.005,-152.693"/>
 </g>
-<!-- Node1016 -->
-<g id="node9" class="node"><title>Node1016</title>
+<!-- Node1018 -->
+<g id="node9" class="node"><title>Node1018</title>
 <g id="a_node9"><a xlink:href="classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___test.html#a4ba84c588853824c99cd27c7d8dfb86e" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="4.5,-0.5 4.5,-30.5 155.5,-30.5 155.5,-0.5 4.5,-0.5"/>
 <text text-anchor="start" x="12.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.SeRadioList.SeRadioList</text>
@@ -183,8 +183,8 @@ var sectionId = 'dynsection-20';
 </a>
 </g>
 </g>
-<!-- Node1009&#45;&gt;Node1016 -->
-<g id="edge8" class="edge"><title>Node1009&#45;&gt;Node1016</title>
+<!-- Node1011&#45;&gt;Node1018 -->
+<g id="edge8" class="edge"><title>Node1011&#45;&gt;Node1018</title>
 <path fill="none" stroke="midnightblue" d="M206.563,-150.95C202.78,-148.835 199.221,-146.37 196,-143.5 159.795,-111.239 194.796,-74.276 160,-40.5 155.974,-36.5923 151.342,-33.295 146.38,-30.5129"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="205.201,-154.177 215.739,-155.276 208.186,-147.846 205.201,-154.177"/>
 </g>

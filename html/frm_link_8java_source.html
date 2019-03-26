@@ -1,0 +1,132 @@
+<!-- HTML header for doxygen 1.8.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,400,400italic,600,700italic,700,600italic' rel='stylesheet' type='text/css'>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<title>OpenKeyWord: /home/travis/build/Hrabovszki1023/OKW/se/src/test/java/okw/gui/frames/SeLink/frmLink.java Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="OKW_doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">OpenKeyWord
+   &#160;<span id="projectnumber">Build_ID: 253, Datum: 03.26.2019 04:07:08</span>
+   </div>
+   <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('frm_link_8java_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">frmLink.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>okw.gui.frames.SeLink;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> okw.OKW;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> okw.gui.adapter.selenium.*;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;@<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a>( FN = <span class="stringliteral">&quot;Link&quot;</span> )</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_link.html">   10</a></span>&#160;public class <a class="code" href="classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_link.html">frmLink</a> extends <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html">SeBrowserChild</a> {</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    @<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a>( FN = <span class="stringliteral">&quot;LinkNotExists&quot;</span>,</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            VerifyLabel_PT=500, VerifyLabel_TO=1,</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            VerifyIsActive_PT=500, VerifyIsActive_TO=1,</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            VerifyValue_PT=500, VerifyValue_TO=1,</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            VerifyTooltip_PT=500, VerifyTooltip_TO=1,</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            VerifyCaption_PT=500, VerifyCaption_TO=1,</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            VerifyExists_PT=500, VerifyExists_TO=1,</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            )</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_link.html#a7e1ec64e82be274acba205fe17a06745">   25</a></span>&#160;    public <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html">SeLink</a> LinkNotExists = new <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html">SeLink</a>( &quot;<span class="comment">//*[@value=&#39;upss&#39;]&quot; );</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    @<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a>( FN = &quot;Google&quot;,</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            VerifyLabel_PT=500, VerifyLabel_TO=1,</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            VerifyIsActive_PT=500, VerifyIsActive_TO=1,</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            VerifyValue_PT=500, VerifyValue_TO=1,</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            VerifyTooltip_PT=500, VerifyTooltip_TO=1,</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            VerifyCaption_PT=500, VerifyCaption_TO=1,</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            VerifyExists_PT=500, VerifyExists_TO=1,</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            )</div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_link.html#af057497401971cbbe2852c8ace6f6320">   42</a></span>&#160;    public <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html">SeLink</a> Google = new <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html">SeLink</a>( &quot;$L1$<span class="comment">//*[@data-4test=&#39;Google&#39;]&quot;, this.getLOCATOR() );</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// / \~german</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// / \brief</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// / SeLink-Klasse nach [Yahoo](http://www.yahoo.de), Testseite enthält</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// folgenden Link:</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// / &lt;code&gt;&lt;a href=&quot;http://www.yahoo.de&quot;</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// name=&quot;Yahoo_Link&quot;&gt;Yahoo...&lt;/a&gt;&lt;/code&gt;</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// /</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    @<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a>( FN = &quot;Yahoo&quot;,</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            VerifyLabel_PT=500, VerifyLabel_TO=1,</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            VerifyIsActive_PT=500, VerifyIsActive_TO=1,</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            VerifyValue_PT=500, VerifyValue_TO=1,</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            VerifyTooltip_PT=500, VerifyTooltip_TO=1,</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            VerifyCaption_PT=500, VerifyCaption_TO=1,</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            VerifyExists_PT=500, VerifyExists_TO=1,</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            )</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    public <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html">SeLink</a> Yahoo = new <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html">SeLink</a>( &quot;$L1$<span class="comment">//*[@data-4test=&#39;Yahoo&#39;]&quot;, this.getLOCATOR());</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    public <a class="code" href="classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_link.html">frmLink</a>()</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        setLocator( <span class="stringliteral">&quot;//*[@data-4test=&#39;Link&#39;]&quot;</span> );</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div><div class="ttc" id="classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_link_html"><div class="ttname"><a href="classokw_1_1gui_1_1frames_1_1_se_link_1_1frm_link.html">okw.gui.frames.SeLink.frmLink</a></div><div class="ttdoc">Selenium-Frame zur Link-TestSeite</div><div class="ttdef"><b>Definition:</b> <a href="frm_link_8java_source.html#l00010">frmLink.java:10</a></div></div>
+<div class="ttc" id="interfaceokw_1_1_o_k_w_html"><div class="ttname"><a href="interfaceokw_1_1_o_k_w.html">okw.OKW</a></div><div class="ttdoc">Annotations-Klasses für die Zuordnung vonder FN -sWartezeiten für die Verify* -SchlüsselwörterWarteze...</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_8java_source.html#l00038">OKW.java:38</a></div></div>
+<div class="ttc" id="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link_html"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html">okw.gui.adapter.selenium.SeLink</a></div><div class="ttdoc">Diese Klasse representiert einen -Tag (Link), der mit Selenium angsteuert wird.</div><div class="ttdef"><b>Definition:</b> <a href="_se_link_8java_source.html#l00127">SeLink.java:127</a></div></div>
+<div class="ttc" id="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child_html"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html">okw.gui.adapter.selenium.SeBrowserChild</a></div><div class="ttdoc">TODO: class SeBrowserChild dokumentieren...</div><div class="ttdef"><b>Definition:</b> <a href="_se_browser_child_8java_source.html#l00055">SeBrowserChild.java:55</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_0c16530b5d264870aa4431e8a25214d3.html">se</a></li><li class="navelem"><a class="el" href="dir_be767b33c06e16aec676490308ce37bd.html">src</a></li><li class="navelem"><a class="el" href="dir_7d5519f44ba12571da3b48d813391a28.html">test</a></li><li class="navelem"><a class="el" href="dir_ce610f7c169990ce4f1a98d059042134.html">java</a></li><li class="navelem"><a class="el" href="dir_6f36be693120551096f5986c2567738f.html">okw</a></li><li class="navelem"><a class="el" href="dir_63bc72322fc42f19b75a459059fd1fba.html">gui</a></li><li class="navelem"><a class="el" href="dir_9a5987dde6e86233b079ccc3058b30ca.html">frames</a></li><li class="navelem"><a class="el" href="dir_e6b6567aff3f73df3bf29329de6a1580.html">SeLink</a></li><li class="navelem"><b>frmLink.java</b></li>
+    <li class="footer">Erzeugt am Die Mär 26 2019 04:22:53 für OpenKeyWord von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-593506-12']);
+  _gaq.push(['_setDomainName', 'openkeyword.de']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
