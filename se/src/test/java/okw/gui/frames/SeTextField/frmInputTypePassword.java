@@ -1,6 +1,7 @@
 package okw.gui.frames.SeTextField;
 
 import okw.OKW;
+import okw.gui.adapter.myTextfield;
 import okw.gui.adapter.selenium.*;
 
 @OKW (FN="InputTypePassword", 
@@ -32,7 +33,7 @@ public class frmInputTypePassword extends SeBrowserChild
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeInputText Vorname = new SeInputText("$L1$//*[@data-4test='User']", this.getLOCATOR() );
+    public myTextfield Vorname = new myTextfield("$L1$//*[@data-4test='User']", this.getLOCATOR() );
 
     @OKW (FN="Password",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
