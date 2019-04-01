@@ -1,6 +1,8 @@
 var group__group_selenium_window_g_u_i_adapter =
 [
     [ "SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html", [
+      [ "SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aacfeae9178c8ed0b4e92cdb2bc6adc72", null ],
+      [ "SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#af5832b9bfbff01844a845074fd8e47de", null ],
       [ "ClickOn", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aa12522740af84cd18ca60c08bec1ce47", null ],
       [ "get_iframeID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aad65286224d3546754351876ad77bf05", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ac628cf2651ecb5ac8104a8379a3fa06e", null ],
@@ -31,7 +33,7 @@ var group__group_selenium_window_g_u_i_adapter =
       [ "SelectMenu_Value", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aad1975ed00cf82773a5f195b3372c8d0", null ],
       [ "set_iframeID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a6e7da680555611d1d95f5f8ead2a95c3", null ],
       [ "SetFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a18cc21003d35c2cdcd17b78bf91f2045", null ],
-      [ "setLocator", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ab2d6a182ed8b31c8abe0668632e2671f", null ],
+      [ "setLocator", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a7be191c3d8b65df2514b61d65cf649c9", null ],
       [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a40816e3262cca2de59ecef3d7d90ef4c", null ],
       [ "TypeKey", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ab8c870d4fbe1a9eab110f75320991f64", null ],
       [ "VerifyCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a9ad73167da71aa8082d826f9d84ef288", null ],

@@ -4,6 +4,7 @@ var dir_cd7042f6567675755d2a7d20e8cf9ca8 =
     [ "gui", "dir_5a5a6fa27dafb8f26acdd352bb032bdf.html", "dir_5a5a6fa27dafb8f26acdd352bb032bdf" ],
     [ "parser", "dir_e974e34da16aeedc37146c51d53ddb1b.html", "dir_e974e34da16aeedc37146c51d53ddb1b" ],
     [ "AllTests.java", "_all_tests_8java_source.html", null ],
+    [ "fourTestLocatorTest.java", "four_test_locator_test_8java_source.html", null ],
     [ "OKW_Const_Boolean2YesNo.java", "_o_k_w___const___boolean2_yes_no_8java_source.html", null ],
     [ "OKW_Const_Concat_SEP_HSEP_VSEP.java", "_o_k_w___const___concat___s_e_p___h_s_e_p___v_s_e_p_8java_source.html", null ],
     [ "OKW_Const_GetConst4Internalname.java", "_o_k_w___const___get_const4_internalname_8java_source.html", null ],

@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['fourtestlocator',['fourTestLocator',['../classokw_1_1four_test_locator.html',1,'okw']]],
+  ['fourtestlocatortest',['fourTestLocatorTest',['../classokw_1_1four_test_locator_test.html',1,'okw']]],
   ['frameobjectdictionary_5fsngltn',['FrameObjectDictionary_Sngltn',['../classokw_1_1_frame_object_dictionary___sngltn.html',1,'okw']]],
   ['frameobjectdictionary_5ftest',['FrameObjectDictionary_Test',['../classokw_1_1core_1_1_frame_object_dictionary___test.html',1,'okw::core']]],
   ['frm_5fselistbox',['frm_SeListBox',['../classokw_1_1gui_1_1frames_1_1_se_select_1_1frm___se_list_box.html',1,'okw::gui::frames::SeSelect']]],

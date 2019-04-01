@@ -5,5 +5,7 @@ var dir_2ae7d242b893eafa24ddfe8057e2b984 =
     [ "AnyWindow.java", "_any_window_8java_source.html", null ],
     [ "IGUIChildwindow.java", "_i_g_u_i_childwindow_8java_source.html", null ],
     [ "IGUIWindow.java", "_i_g_u_i_window_8java_source.html", null ],
-    [ "OKWLocator.java", "_o_k_w_locator_8java_source.html", null ]
+    [ "OKWLocator.java", "_o_k_w_locator_8java_source.html", null ],
+    [ "OKWLocatorBase.java", "_o_k_w_locator_base_8java_source.html", null ],
+    [ "OKWLocatorXPath.java", "_o_k_w_locator_x_path_8java_source.html", null ]
 ];

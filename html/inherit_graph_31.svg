@@ -9,8 +9,8 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1698.5)">
 <title>Grafische Darstellung der Klassenhierarchie</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-1698.5 963,-1698.5 963,4 -4,4"/>
-<!-- Node241 -->
-<g id="node1" class="node"><title>Node241</title>
+<!-- Node246 -->
+<g id="node1" class="node"><title>Node246</title>
 <g id="a_node1"><a xlink:href="classokw_1_1gui_1_1_any_win_base.html" target="_top" xlink:title="Description of AnyWin.">
 <polygon fill="white" stroke="black" points="9,-1144.5 9,-1163.5 122,-1163.5 122,-1144.5 9,-1144.5"/>
 <text text-anchor="middle" x="65.5" y="-1151.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWinBase</text>
@@ -25,8 +25,8 @@
 </a>
 </g>
 </g>
-<!-- Node241&#45;&gt;Node1 -->
-<g id="edge1" class="edge"><title>Node241&#45;&gt;Node1</title>
+<!-- Node246&#45;&gt;Node1 -->
+<g id="edge1" class="edge"><title>Node246&#45;&gt;Node1</title>
 <path fill="none" stroke="midnightblue" d="M82.1839,-1171.41C116.052,-1208.99 195.108,-1296.72 221.639,-1326.17"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="84.6117,-1168.87 75.3174,-1163.79 79.4114,-1173.56 84.6117,-1168.87"/>
 </g>
@@ -38,8 +38,8 @@
 </a>
 </g>
 </g>
-<!-- Node241&#45;&gt;Node30 -->
-<g id="edge30" class="edge"><title>Node241&#45;&gt;Node30</title>
+<!-- Node246&#45;&gt;Node30 -->
+<g id="edge30" class="edge"><title>Node246&#45;&gt;Node30</title>
 <path fill="none" stroke="midnightblue" d="M77.8038,-1135.73C109.852,-1083.95 200.54,-937.411 224.587,-898.555"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="74.8177,-1133.91 72.5313,-1144.25 80.77,-1137.59 74.8177,-1133.91"/>
 </g>
@@ -945,29 +945,29 @@
 <path fill="none" stroke="midnightblue" d="M492.914,-775.922C516.365,-775.182 543.05,-774.341 567.64,-773.565"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="492.618,-772.429 482.733,-776.243 492.839,-779.426 492.618,-772.429"/>
 </g>
-<!-- Node202 -->
-<g id="node69" class="node"><title>Node202</title>
+<!-- Node205 -->
+<g id="node69" class="node"><title>Node205</title>
 <g id="a_node69"><a xlink:href="interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="0,-1326.5 0,-1345.5 131,-1345.5 131,-1326.5 0,-1326.5"/>
 <text text-anchor="middle" x="65.5" y="-1333.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.IGUIChildwindow</text>
 </a>
 </g>
 </g>
-<!-- Node202&#45;&gt;Node1 -->
-<g id="edge68" class="edge"><title>Node202&#45;&gt;Node1</title>
+<!-- Node205&#45;&gt;Node1 -->
+<g id="edge68" class="edge"><title>Node205&#45;&gt;Node1</title>
 <path fill="none" stroke="midnightblue" d="M141.587,-1336C150.066,-1336 158.645,-1336 166.958,-1336"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="141.317,-1332.5 131.317,-1336 141.317,-1339.5 141.317,-1332.5"/>
 </g>
-<!-- Node201 -->
-<g id="node70" class="node"><title>Node201</title>
+<!-- Node204 -->
+<g id="node70" class="node"><title>Node204</title>
 <g id="a_node70"><a xlink:href="interfaceokw_1_1gui_1_1_i_g_u_i_window.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="11,-879.5 11,-898.5 120,-898.5 120,-879.5 11,-879.5"/>
 <text text-anchor="middle" x="65.5" y="-886.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.IGUIWindow</text>
 </a>
 </g>
 </g>
-<!-- Node201&#45;&gt;Node30 -->
-<g id="edge69" class="edge"><title>Node201&#45;&gt;Node30</title>
+<!-- Node204&#45;&gt;Node30 -->
+<g id="edge69" class="edge"><title>Node204&#45;&gt;Node30</title>
 <path fill="none" stroke="midnightblue" d="M130.357,-889C146.057,-889 162.692,-889 177.798,-889"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="130.2,-885.5 120.2,-889 130.2,-892.5 130.2,-885.5"/>
 </g>

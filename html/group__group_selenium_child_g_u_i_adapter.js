@@ -1,7 +1,8 @@
 var group__group_selenium_child_g_u_i_adapter =
 [
     [ "SeAnyChildWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html", [
-      [ "SeAnyChildWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#af4a47c7add0143367e9f65f8e7e87a4c", null ],
+      [ "SeAnyChildWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a0d5a8eeb4ff90e6281cfabda5853921a", null ],
+      [ "SeAnyChildWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#afaaeb9e86dcea1b26630c4e85028d97a", null ],
       [ "ClickOn", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a16df325c8b8bb0e360ac9d9dbb50d91e", null ],
       [ "get_iframeID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a9450a95d7c49317af660102baec796a4", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a6dbc784267dbac3feef5e421ece9aced", null ],
@@ -51,17 +52,17 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "MyLogger", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ab8f0c80bfe825c89cef42f922a2e2ece", null ]
     ] ],
     [ "SeButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html", [
-      [ "SeButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html#a8abc86e4407278c4e4fa8df2bb0505f9", null ],
+      [ "SeButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html#ad5a121eb9e1270e6c99f149ebc59814f", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html#a4d658a6f764e2983da35ea25ee9c2412", null ],
       [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html#adf7b5e39f438dc8807b5e77a381da73a", null ]
     ] ],
     [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html", [
-      [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#a32e66076fa69afd7f671a7cf8ad5fbdd", null ],
+      [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#aec78b32d0692fbfe10531dea6046b25f", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#a44980a47d966e4bfd206ae5d5ac4399c", null ],
       [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#a143118b7b3b0cc7788cbf7c9238bc68f", null ]
     ] ],
     [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html", [
-      [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a0d77a9524916d6b148a8c80571bc2d30", null ],
+      [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a477262917aa8cb51f99dff5df3b7dd1a", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a3c2c309651daf767e1941b2b30d3fea5", null ],
       [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#aeaaf09d0f1c2c9524b27084c2f3d6639", null ]
     ] ],
@@ -76,7 +77,7 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "myOKW_Const", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a60653596de1657c7ecd90eb80176abb0", null ]
     ] ],
     [ "SeInputRadio", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html", [
-      [ "SeInputRadio", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a351e8d84c5545ab5c8072d7132c0dc38", null ],
+      [ "SeInputRadio", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a954280836ab7c706cb03a7287eee95c0", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a9c574897f7c6b64f68a1d98b8d9e14cf", null ],
       [ "getHasFocus", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a04a3ae0a5ab64fec76eecd609f921262", null ],
       [ "getIsSelected", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#a2bdc045186dd1244133cf6edaa2d45f1", null ],
@@ -86,7 +87,7 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "TypeKey", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html#adee900d87cc8e1c842a4510d23b3db1b", null ]
     ] ],
     [ "SeInputText", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html", [
-      [ "SeInputText", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#a105ff99c0a4f4aae6e092ef8b50b1fd4", null ],
+      [ "SeInputText", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#a32eae7147751d612e3669a3f8d35151e", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#abc6862817c8a8f7455110d6dbba6faf9", null ],
       [ "getMaxLength", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#abcef45ee901b75771500defc871ecea9", null ],
       [ "getPlaceholder", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#a5ce4d66e798549b18635bf35c1c33917", null ],
@@ -95,13 +96,13 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#ad8c33e44105dbec888046b752475aaa8", null ]
     ] ],
     [ "SeLink", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html", [
-      [ "SeLink", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html#a7dc7f49cc59089ce6330cf75a9d67132", null ],
+      [ "SeLink", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html#a2674040ee2558657b71ebda1b5377daa", null ],
       [ "getIsActive", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html#ac07906e995862490b82616c40d1340e7", null ],
       [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html#a5f07ff01898f066115ea23d3bcc10fd3", null ],
       [ "TypeKey", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html#a055ff2431b6ae1f7f445e2c88b8446ae", null ]
     ] ],
     [ "SeRadioList", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html", [
-      [ "SeRadioList", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a19633d61b7ce538f5fa3ceb3da9b66b5", null ],
+      [ "SeRadioList", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a7d108c4c6cf6b8824d15f67b7e14efd9", null ],
       [ "getLabel", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#ad4ef958d557fd0e526b1c20af767accf", null ],
       [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a2de5dcb9d606e72dbe9e5a9cbef481ad", null ],
       [ "Select", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#affa4549b0b141794eebb64825628c46a", null ],
@@ -187,7 +188,7 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "VerifyValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html#aadb20c277321299b91182cf10c99c1c6", null ]
     ] ],
     [ "myTextfield", "classokw_1_1gui_1_1adapter_1_1my_textfield.html", [
-      [ "myTextfield", "classokw_1_1gui_1_1adapter_1_1my_textfield.html#a400f8c25c54e94dcbdd4e134beeae197", null ],
+      [ "myTextfield", "classokw_1_1gui_1_1adapter_1_1my_textfield.html#a3c8bc0cd65fa1afcb3ae40a8789b3126", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1my_textfield.html#a9e9ca5d7323a441b9a76771657b30a88", null ],
       [ "getMaxLength", "classokw_1_1gui_1_1adapter_1_1my_textfield.html#afae430d5df39b490f3a544d7049884ac", null ],
       [ "getPlaceholder", "classokw_1_1gui_1_1adapter_1_1my_textfield.html#a802e9984479bae4fc79c864e323cfdbe", null ],

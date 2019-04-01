@@ -1,6 +1,6 @@
 <map id="okw.gui.adapter.selenium.SeInputCheckbox.unchecking" name="okw.gui.adapter.selenium.SeInputCheckbox.unchecking">
 <area shape="rect" id="node1" title="Method verlässt die Checkbox immer unangehakt, egal ob sie vorher angehakt war oder nicht." alt="" coords="5,204,215,245"/>
-<area shape="rect" id="node2" href="$classokw_1_1gui_1_1_any_win_base.html#abaab572bdbed7b471f659d5dd8c76853" title="Diese Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(fps_FunctionName),..." alt="" coords="535,112,765,153"/>
+<area shape="rect" id="node2" href="$classokw_1_1gui_1_1_any_win_base.html#abaab572bdbed7b471f659d5dd8c76853" title="Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(fps_FunctionName), und erweitert den g..." alt="" coords="535,112,765,153"/>
 <area shape="rect" id="node3" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#aa5351c44da27a9f8c63ccd0315922c82" title="Method liefert den aktuellen Zustand der Checkbox, &quot;angehakt&quot; oder &quot;nicht angehakt&quot;." alt="" coords="263,171,487,212"/>
 <area shape="rect" id="node13" href="$classokw_1_1gui_1_1_any_win_base.html#a51cf50ace21902b3a5359316f53a7f3e" title="Methode ruft die Methode Logger.Instance.LogFunctionEndDebug() auf." alt="" coords="535,243,765,284"/>
 <area shape="rect" id="node14" href="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a16df325c8b8bb0e360ac9d9dbb50d91e" title="Das ist die GUI&#45;Adapter Methode, die durch das Schlüsselwort ClickOn( FN ) aufgerufen wird." alt="" coords="279,236,470,277"/>

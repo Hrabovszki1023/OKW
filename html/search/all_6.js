@@ -4,6 +4,8 @@ var searchData=
   ['fileexists',['fileExists',['../classokw_1_1_o_k_w___file_helper.html#a86faaa4792bbe9d333c7bf2d2de275e3',1,'okw::OKW_FileHelper']]],
   ['fileproperties',['FileProperties',['../classokw_1_1_o_k_w___properties.html#add3a337406be501ff2052064e7367dc2',1,'okw::OKW_Properties']]],
   ['fn',['FN',['../interfaceokw_1_1_o_k_w.html#a95f6a6c8976dbbc79a8765a36e3545ff',1,'okw::OKW']]],
+  ['fourtestlocator',['fourTestLocator',['../classokw_1_1four_test_locator.html',1,'okw']]],
+  ['fourtestlocatortest',['fourTestLocatorTest',['../classokw_1_1four_test_locator_test.html',1,'okw']]],
   ['frameobjectdictionary_5fsngltn',['FrameObjectDictionary_Sngltn',['../classokw_1_1_frame_object_dictionary___sngltn.html',1,'okw.FrameObjectDictionary_Sngltn'],['../classokw_1_1_frame_object_dictionary___sngltn.html#aca3d4bf06ca665795304f02b1bbe24eb',1,'okw.FrameObjectDictionary_Sngltn.FrameObjectDictionary_Sngltn()']]],
   ['frameobjectdictionary_5ftest',['FrameObjectDictionary_Test',['../classokw_1_1core_1_1_frame_object_dictionary___test.html',1,'okw::core']]],
   ['framescan',['frameScan',['../classokw_1_1_frame_object_dictionary___sngltn.html#a1710d54e13c9ce591277209c898eec98',1,'okw::FrameObjectDictionary_Sngltn']]],

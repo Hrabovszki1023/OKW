@@ -78,7 +78,7 @@ var sectionId = 'dynsection-0';
 <polygon fill="white" stroke="black" points="1429.5,-920.5 1429.5,-1197.5 1558.5,-1197.5 1558.5,-920.5 1429.5,-920.5"/>
 <text text-anchor="middle" x="1494" y="-1185.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyChildwindow</text>
 <polyline fill="none" stroke="black" points="1429.5,-1178.5 1558.5,-1178.5 "/>
-<text text-anchor="start" x="1437.5" y="-1166.5" font-family="Helvetica,sans-Serif" font-size="10.00">~ myLogger</text>
+<text text-anchor="middle" x="1494" y="-1166.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 <polyline fill="none" stroke="black" points="1429.5,-1159.5 1558.5,-1159.5 "/>
 <text text-anchor="start" x="1437.5" y="-1147.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
 <text text-anchor="start" x="1437.5" y="-1136.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
@@ -112,29 +112,30 @@ var sectionId = 'dynsection-0';
 <!-- Node30 -->
 <g id="node31" class="node"><title>Node30</title>
 <g id="a_node31"><a xlink:href="classokw_1_1gui_1_1_any_window.html" target="_top" xlink:title="Description of AnyWin.">
-<polygon fill="white" stroke="black" points="3551,-970 3551,-1148 3685,-1148 3685,-970 3551,-970"/>
-<text text-anchor="middle" x="3618" y="-1136" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWindow</text>
-<polyline fill="none" stroke="black" points="3551,-1129 3685,-1129 "/>
-<text text-anchor="middle" x="3618" y="-1117" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="3551,-1110 3685,-1110 "/>
-<text text-anchor="start" x="3559" y="-1098" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWindow()</text>
-<text text-anchor="start" x="3559" y="-1087" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="3559" y="-1076" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="3559" y="-1065" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="3559" y="-1054" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKeyWindow()</text>
-<text text-anchor="start" x="3559" y="-1043" font-family="Helvetica,sans-Serif" font-size="10.00">+ SelectWindow()</text>
-<text text-anchor="start" x="3559" y="-1032" font-family="Helvetica,sans-Serif" font-size="10.00">+ StartApp()</text>
-<text text-anchor="start" x="3559" y="-1021" font-family="Helvetica,sans-Serif" font-size="10.00">+ StopApp()</text>
-<text text-anchor="start" x="3559" y="-1010" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowExists()</text>
-<text text-anchor="start" x="3559" y="-999" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyIsWindowActive()</text>
-<text text-anchor="start" x="3559" y="-988" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowCaption()</text>
-<text text-anchor="start" x="3559" y="-977" font-family="Helvetica,sans-Serif" font-size="10.00">+ WaitForMe()</text>
+<polygon fill="white" stroke="black" points="3551,-964.5 3551,-1153.5 3685,-1153.5 3685,-964.5 3551,-964.5"/>
+<text text-anchor="middle" x="3618" y="-1141.5" font-family="Helvetica,sans-Serif" font-size="10.00">okw.gui.AnyWindow</text>
+<polyline fill="none" stroke="black" points="3551,-1134.5 3685,-1134.5 "/>
+<text text-anchor="middle" x="3618" y="-1122.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="3551,-1115.5 3685,-1115.5 "/>
+<text text-anchor="start" x="3559" y="-1103.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWindow()</text>
+<text text-anchor="start" x="3559" y="-1092.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ AnyWindow()</text>
+<text text-anchor="start" x="3559" y="-1081.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="3559" y="-1070.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="3559" y="-1059.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="3559" y="-1048.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ TypeKeyWindow()</text>
+<text text-anchor="start" x="3559" y="-1037.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SelectWindow()</text>
+<text text-anchor="start" x="3559" y="-1026.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ StartApp()</text>
+<text text-anchor="start" x="3559" y="-1015.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ StopApp()</text>
+<text text-anchor="start" x="3559" y="-1004.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowExists()</text>
+<text text-anchor="start" x="3559" y="-993.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyIsWindowActive()</text>
+<text text-anchor="start" x="3559" y="-982.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ VerifyWindowCaption()</text>
+<text text-anchor="start" x="3559" y="-971.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ WaitForMe()</text>
 </a>
 </g>
 </g>
 <!-- Node0&#45;&gt;Node30 -->
 <g id="edge30" class="edge"><title>Node0&#45;&gt;Node30</title>
-<path fill="none" stroke="midnightblue" d="M3618,-1224.03C3618,-1200.49 3618,-1173.54 3618,-1148.37"/>
+<path fill="none" stroke="midnightblue" d="M3618,-1224.08C3618,-1202.2 3618,-1177.36 3618,-1153.76"/>
 <polygon fill="none" stroke="midnightblue" points="3614.5,-1224.24 3618,-1234.24 3621.5,-1224.24 3614.5,-1224.24"/>
 </g>
 <!-- Node67 -->
@@ -334,24 +335,24 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="1351" y="-778.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get_iframeID()</text>
 <text text-anchor="start" x="1351" y="-767.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ set_iframeID()</text>
 <text text-anchor="start" x="1351" y="-756.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyChildWindow()</text>
-<text text-anchor="start" x="1351" y="-745.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
-<text text-anchor="start" x="1351" y="-734.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="1351" y="-723.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="1351" y="-712.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
-<text text-anchor="start" x="1351" y="-701.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="1351" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
-<text text-anchor="start" x="1351" y="-679.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
-<text text-anchor="start" x="1351" y="-668.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="1351" y="-657.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="1351" y="-646.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="1351" y="-635.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="1351" y="-624.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="1351" y="-613.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="1351" y="-602.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPlaceholder()</text>
-<text text-anchor="start" x="1351" y="-591.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="1351" y="-580.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="1351" y="-569.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Me()</text>
-<text text-anchor="start" x="1351" y="-558.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 25 mehr ...</text>
+<text text-anchor="start" x="1351" y="-745.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyChildWindow()</text>
+<text text-anchor="start" x="1351" y="-734.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
+<text text-anchor="start" x="1351" y="-723.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="1351" y="-712.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="1351" y="-701.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
+<text text-anchor="start" x="1351" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="1351" y="-679.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
+<text text-anchor="start" x="1351" y="-668.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
+<text text-anchor="start" x="1351" y="-657.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="1351" y="-646.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="1351" y="-635.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="1351" y="-624.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="1351" y="-613.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="1351" y="-602.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="1351" y="-591.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogPlaceholder()</text>
+<text text-anchor="start" x="1351" y="-580.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="1351" y="-569.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="1351" y="-558.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 26 mehr ...</text>
 </a>
 </g>
 </g>
@@ -901,27 +902,27 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="2962" y="-808.5" font-family="Helvetica,sans-Serif" font-size="10.00"># LM</text>
 <text text-anchor="start" x="2962" y="-797.5" font-family="Helvetica,sans-Serif" font-size="10.00"># iframeID</text>
 <polyline fill="none" stroke="black" points="2954,-790.5 3094,-790.5 "/>
-<text text-anchor="start" x="2962" y="-778.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get_iframeID()</text>
-<text text-anchor="start" x="2962" y="-767.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ set_iframeID()</text>
-<text text-anchor="start" x="2962" y="-756.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setLocator()</text>
-<text text-anchor="start" x="2962" y="-745.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
-<text text-anchor="start" x="2962" y="-734.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
-<text text-anchor="start" x="2962" y="-723.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
-<text text-anchor="start" x="2962" y="-712.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
-<text text-anchor="start" x="2962" y="-701.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
-<text text-anchor="start" x="2962" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
-<text text-anchor="start" x="2962" y="-679.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
-<text text-anchor="start" x="2962" y="-668.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
-<text text-anchor="start" x="2962" y="-657.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
-<text text-anchor="start" x="2962" y="-646.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
-<text text-anchor="start" x="2962" y="-635.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
-<text text-anchor="start" x="2962" y="-624.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
-<text text-anchor="start" x="2962" y="-613.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
-<text text-anchor="start" x="2962" y="-602.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
-<text text-anchor="start" x="2962" y="-591.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
-<text text-anchor="start" x="2962" y="-580.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Me()</text>
-<text text-anchor="start" x="2962" y="-569.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ MemorizeExists()</text>
-<text text-anchor="start" x="2962" y="-558.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 20 mehr ...</text>
+<text text-anchor="start" x="2962" y="-778.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyWindow()</text>
+<text text-anchor="start" x="2962" y="-767.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SeAnyWindow()</text>
+<text text-anchor="start" x="2962" y="-756.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ get_iframeID()</text>
+<text text-anchor="start" x="2962" y="-745.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ set_iframeID()</text>
+<text text-anchor="start" x="2962" y="-734.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ setLocator()</text>
+<text text-anchor="start" x="2962" y="-723.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ClickOn()</text>
+<text text-anchor="start" x="2962" y="-712.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getCaption()</text>
+<text text-anchor="start" x="2962" y="-701.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getExists()</text>
+<text text-anchor="start" x="2962" y="-690.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getHasFocus()</text>
+<text text-anchor="start" x="2962" y="-679.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getIsActive()</text>
+<text text-anchor="start" x="2962" y="-668.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getLabel()</text>
+<text text-anchor="start" x="2962" y="-657.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getTooltip()</text>
+<text text-anchor="start" x="2962" y="-646.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getValue()</text>
+<text text-anchor="start" x="2962" y="-635.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogCaption()</text>
+<text text-anchor="start" x="2962" y="-624.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogExists()</text>
+<text text-anchor="start" x="2962" y="-613.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogHasFocus()</text>
+<text text-anchor="start" x="2962" y="-602.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogIsActive()</text>
+<text text-anchor="start" x="2962" y="-591.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogLabel()</text>
+<text text-anchor="start" x="2962" y="-580.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogTooltip()</text>
+<text text-anchor="start" x="2962" y="-569.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ LogValue()</text>
+<text text-anchor="start" x="2962" y="-558.5" font-family="Helvetica,sans-Serif" font-size="10.00">und 22 mehr ...</text>
 </a>
 </g>
 </g>
@@ -974,8 +975,8 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node30&#45;&gt;Node59 -->
 <g id="edge40" class="edge"><title>Node30&#45;&gt;Node59</title>
-<path fill="none" stroke="midnightblue" d="M3560.55,-961.192C3545.68,-936.073 3529.72,-909.042 3515,-884 3493.61,-847.602 3469.85,-806.905 3450.54,-773.77"/>
-<polygon fill="none" stroke="midnightblue" points="3557.65,-963.169 3565.76,-969.991 3563.68,-959.603 3557.65,-963.169"/>
+<path fill="none" stroke="midnightblue" d="M3557.03,-955.252C3543.19,-931.847 3528.56,-907.079 3515,-884 3493.61,-847.602 3469.85,-806.905 3450.54,-773.77"/>
+<polygon fill="none" stroke="midnightblue" points="3554.19,-957.325 3562.3,-964.148 3560.22,-953.76 3554.19,-957.325"/>
 </g>
 <!-- Node60 -->
 <g id="node42" class="node"><title>Node60</title>
@@ -997,8 +998,8 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node30&#45;&gt;Node60 -->
 <g id="edge41" class="edge"><title>Node30&#45;&gt;Node60</title>
-<path fill="none" stroke="midnightblue" d="M3618,-959.432C3618,-897.91 3618,-820.684 3618,-768.059"/>
-<polygon fill="none" stroke="midnightblue" points="3614.5,-959.554 3618,-969.554 3621.5,-959.554 3614.5,-959.554"/>
+<path fill="none" stroke="midnightblue" d="M3618,-953.708C3618,-893.164 3618,-819.025 3618,-768.018"/>
+<polygon fill="none" stroke="midnightblue" points="3614.5,-954.072 3618,-964.072 3621.5,-954.072 3614.5,-954.072"/>
 </g>
 <!-- Node61 -->
 <g id="node43" class="node"><title>Node61</title>
@@ -1020,8 +1021,8 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node30&#45;&gt;Node61 -->
 <g id="edge42" class="edge"><title>Node30&#45;&gt;Node61</title>
-<path fill="none" stroke="midnightblue" d="M3675.45,-961.192C3690.32,-936.073 3706.28,-909.042 3721,-884 3743.65,-845.461 3768.96,-802.102 3788.82,-768.004"/>
-<polygon fill="none" stroke="midnightblue" points="3672.32,-959.603 3670.24,-969.991 3678.35,-963.169 3672.32,-959.603"/>
+<path fill="none" stroke="midnightblue" d="M3678.97,-955.252C3692.81,-931.847 3707.44,-907.079 3721,-884 3743.65,-845.461 3768.96,-802.102 3788.82,-768.004"/>
+<polygon fill="none" stroke="midnightblue" points="3675.78,-953.76 3673.7,-964.148 3681.81,-957.325 3675.78,-953.76"/>
 </g>
 <!-- Node63 -->
 <g id="node45" class="node"><title>Node63</title>

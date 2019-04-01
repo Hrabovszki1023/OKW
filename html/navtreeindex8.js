@@ -1,5 +1,8 @@
 var NAVTREEINDEX8 =
 {
+"classokw_1_1core_1_1_e_n___verify_tooltip___o_k_w_verifying_fails_exception___test.html#afd2d3f8ba38ae6d7cd04aecbd34d62e8":[10,0,1,1,21,1],
+"classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html":[10,0,1,1,22],
+"classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#a0328bcfab7669758c43d9b1e7f00d29b":[10,0,1,1,22,9],
 "classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#a03f8b2e374e6d6a4a5f387d7fb29986a":[10,0,1,1,22,15],
 "classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#a1760ac92fcea63c47c9d05c5df0912b1":[10,0,1,1,22,4],
 "classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#a37bca28b78ed8238b8d03f07f7ef8271":[10,0,1,1,22,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX8 =
 "classokw_1_1exceptions_1_1_o_k_w_directory_does_not_exists_exception.html#a8a593024b797b81d00c128b69a4c52d8":[10,0,1,2,1,0],
 "classokw_1_1exceptions_1_1_o_k_w_directory_seperator_not_implemented_exception.html":[10,0,1,2,2],
 "classokw_1_1exceptions_1_1_o_k_w_directory_seperator_not_implemented_exception.html#a416986016dc6b1faa5b7e6e402c6d871":[10,0,1,2,2,0],
-"classokw_1_1exceptions_1_1_o_k_w_directory_seperator_not_implemented_exception.html#a45a0b51e1a20a72213c4ea68a4a609c5":[10,0,1,2,2,1],
-"classokw_1_1exceptions_1_1_o_k_w_enviroment_var_not_set_exception.html":[10,0,1,2,3],
-"classokw_1_1exceptions_1_1_o_k_w_enviroment_var_not_set_exception.html#a405d86426bb080c99b91cedd294948da":[10,0,1,2,3,0],
-"classokw_1_1exceptions_1_1_o_k_w_enviroment_var_not_set_exception.html#ae44d15da1e013a77fc296aba55fd95b1":[10,0,1,2,3,1]
+"classokw_1_1exceptions_1_1_o_k_w_directory_seperator_not_implemented_exception.html#a45a0b51e1a20a72213c4ea68a4a609c5":[10,0,1,2,2,1]
 };

@@ -115,6 +115,8 @@ var hierarchy =
     [ "okw.core.EN_VerifyTablecellValue_OKWVerifyingFailsException_Test", "classokw_1_1core_1_1_e_n___verify_tablecell_value___o_k_w_verifying_fails_exception___test.html", null ],
     [ "okw.core.EN_VerifyTooltip_OKWVerifyingFailsException_Test", "classokw_1_1core_1_1_e_n___verify_tooltip___o_k_w_verifying_fails_exception___test.html", null ],
     [ "okw.core.EN_VerifyValue_OKWVerifyingFailsException_Test", "classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html", null ],
+    [ "okw.fourTestLocator", "classokw_1_1four_test_locator.html", null ],
+    [ "okw.fourTestLocatorTest", "classokw_1_1four_test_locator_test.html", null ],
     [ "okw.FrameObjectDictionary_Sngltn", "classokw_1_1_frame_object_dictionary___sngltn.html", null ],
     [ "okw.core.FrameObjectDictionary_Test", "classokw_1_1core_1_1_frame_object_dictionary___test.html", null ],
     [ "browser.FrmBrowserBase_Test", "classbrowser_1_1_frm_browser_base___test.html", [
@@ -195,8 +197,13 @@ var hierarchy =
     [ "okw.OKW_XmlReader", "classokw_1_1_o_k_w___xml_reader.html", null ],
     [ "okw.OKW_XmlReaderTest", "classokw_1_1_o_k_w___xml_reader_test.html", null ],
     [ "okw.OKWLanguage", "classokw_1_1_o_k_w_language.html", null ],
-    [ "okw.gui.OKWLocator", "classokw_1_1gui_1_1_o_k_w_locator.html", null ],
+    [ "okw.gui.OKWLocatorBase", "classokw_1_1gui_1_1_o_k_w_locator_base.html", [
+      [ "okw.gui.OKWLocator", "classokw_1_1gui_1_1_o_k_w_locator.html", [
+        [ "okw.gui.OKWLocatorXPath", "classokw_1_1gui_1_1_o_k_w_locator_x_path.html", null ]
+      ] ]
+    ] ],
     [ "okw.gui.OKWLocatorTest", "classokw_1_1gui_1_1_o_k_w_locator_test.html", null ],
+    [ "okw.gui.OKWLocatorXPathTest", "classokw_1_1gui_1_1_o_k_w_locator_x_path_test.html", null ],
     [ "okw.parser.Parser", "classokw_1_1parser_1_1_parser.html", [
       [ "okw.parser.antlr4.OKW_Parser", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html", null ]
     ] ],

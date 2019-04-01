@@ -176,7 +176,10 @@ var annotated_dup =
         [ "IGUIChildwindow", "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html", "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow" ],
         [ "IGUIWindow", "interfaceokw_1_1gui_1_1_i_g_u_i_window.html", "interfaceokw_1_1gui_1_1_i_g_u_i_window" ],
         [ "OKWLocator", "classokw_1_1gui_1_1_o_k_w_locator.html", "classokw_1_1gui_1_1_o_k_w_locator" ],
-        [ "OKWLocatorTest", "classokw_1_1gui_1_1_o_k_w_locator_test.html", "classokw_1_1gui_1_1_o_k_w_locator_test" ]
+        [ "OKWLocatorBase", "classokw_1_1gui_1_1_o_k_w_locator_base.html", "classokw_1_1gui_1_1_o_k_w_locator_base" ],
+        [ "OKWLocatorTest", "classokw_1_1gui_1_1_o_k_w_locator_test.html", "classokw_1_1gui_1_1_o_k_w_locator_test" ],
+        [ "OKWLocatorXPath", "classokw_1_1gui_1_1_o_k_w_locator_x_path.html", "classokw_1_1gui_1_1_o_k_w_locator_x_path" ],
+        [ "OKWLocatorXPathTest", "classokw_1_1gui_1_1_o_k_w_locator_x_path_test.html", "classokw_1_1gui_1_1_o_k_w_locator_x_path_test" ]
       ] ],
       [ "IFrame", null, [
         [ "IFrame_EN_Chrome_Test", "classokw_1_1_i_frame_1_1_i_frame___e_n___chrome___test.html", "classokw_1_1_i_frame_1_1_i_frame___e_n___chrome___test" ],
@@ -275,6 +278,8 @@ var annotated_dup =
       [ "AllSe_EN_UnitDriverTests", "classokw_1_1_all_se___e_n___unit_driver_tests.html", null ],
       [ "AllTests", "classokw_1_1_all_tests.html", null ],
       [ "Copy", "classokw_1_1_copy.html", null ],
+      [ "fourTestLocator", "classokw_1_1four_test_locator.html", "classokw_1_1four_test_locator" ],
+      [ "fourTestLocatorTest", "classokw_1_1four_test_locator_test.html", "classokw_1_1four_test_locator_test" ],
       [ "FrameObjectDictionary_Sngltn", "classokw_1_1_frame_object_dictionary___sngltn.html", "classokw_1_1_frame_object_dictionary___sngltn" ],
       [ "LogMessenger", "classokw_1_1_log_messenger.html", "classokw_1_1_log_messenger" ],
       [ "OKW", "interfaceokw_1_1_o_k_w.html", "interfaceokw_1_1_o_k_w" ],

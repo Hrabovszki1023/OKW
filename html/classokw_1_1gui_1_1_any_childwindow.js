@@ -1,7 +1,7 @@
 var classokw_1_1gui_1_1_any_childwindow =
 [
     [ "AnyChildwindow", "classokw_1_1gui_1_1_any_childwindow.html#aeb56121e4636403c3fd2091396ee0f03", null ],
-    [ "AnyChildwindow", "classokw_1_1gui_1_1_any_childwindow.html#a76b8cf463d434c131c103655f4dd6ba8", null ],
+    [ "AnyChildwindow", "classokw_1_1gui_1_1_any_childwindow.html#a4ad164da15497027708ef94b01efaf11", null ],
     [ "ClickOn", "classokw_1_1gui_1_1_any_childwindow.html#a4070cc51919f8ae55a7c926f87eee4cf", null ],
     [ "DoubleClickOn", "classokw_1_1gui_1_1_any_childwindow.html#ad0fbeed89ea6f4ca5f7da7c6755e31ac", null ],
     [ "getCaption", "classokw_1_1gui_1_1_any_childwindow.html#a48a92973127e4d57771d504547ac4902", null ],
@@ -51,6 +51,5 @@ var classokw_1_1gui_1_1_any_childwindow =
     [ "VerifyTablecellValue", "classokw_1_1gui_1_1_any_childwindow.html#a0a2690a687afe8f19e8de62794db4109", null ],
     [ "VerifyTooltip", "classokw_1_1gui_1_1_any_childwindow.html#aa5c80143b09ffd00e5cb770c4cd46660", null ],
     [ "VerifyValue", "classokw_1_1gui_1_1_any_childwindow.html#a7e74d55e340107f32f522364005e2add", null ],
-    [ "WaitForMe", "classokw_1_1gui_1_1_any_childwindow.html#aafd5a3cba312fe0033c63e98d0247a82", null ],
-    [ "myLogger", "classokw_1_1gui_1_1_any_childwindow.html#a5ddd9effb87ff687bd5fea862fbcbb22", null ]
+    [ "WaitForMe", "classokw_1_1gui_1_1_any_childwindow.html#aafd5a3cba312fe0033c63e98d0247a82", null ]
 ];
