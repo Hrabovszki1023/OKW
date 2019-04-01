@@ -21,7 +21,7 @@ public class frmInputTypePassword extends SeBrowserChild
 	          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1,
 	          WaitForMe_PT=500, WaitForMe_TO=1
 	          )
-    public SeInputText NichtVorhanden = new SeInputText("$L1$//*[@data-4test='NichtVorhanden']", this.getLOCATOR() );
+    public SeInputText NichtVorhanden = new SeInputText("4T!NichtVorhanden", this.getLOCATOR() );
 
 	  
     @OKW (FN="User",
@@ -33,7 +33,7 @@ public class frmInputTypePassword extends SeBrowserChild
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public myTextfield Vorname = new myTextfield("$L1$//*[@data-4test='User']", this.getLOCATOR() );
+    public myTextfield Vorname = new myTextfield("4T!User", this.getLOCATOR() );
 
     @OKW (FN="Password",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -45,11 +45,11 @@ public class frmInputTypePassword extends SeBrowserChild
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1,
             VerifyMaxLength_PT=500, VerifyMaxLength_TO=1
             )
-    public SeInputText Zuname = new SeInputText("$L1$//*[@data-4test='Password']", this.getLOCATOR() );
+    public SeInputText Zuname = new SeInputText("4T!Password", this.getLOCATOR() );
 
     public frmInputTypePassword( )
     {
-        setLocator("//*[@data-4test='InputTypePassword']");
+        setLocator("4T!InputTypePassword");
     }
 
 }

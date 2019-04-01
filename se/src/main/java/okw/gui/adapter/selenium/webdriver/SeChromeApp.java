@@ -150,5 +150,6 @@ public class SeChromeApp extends AnyWindow
     public void StopApp()
     {
         SeDriver.getInstance().driver.close();
+        SeDriver.getInstance().driver.quit();
     }
 }

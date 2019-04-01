@@ -6,6 +6,7 @@ import javax.xml.xpath.XPathExpressionException;
 
 import okw.*;
 import okw.gui.AnyChildwindow;
+import okw.gui.OKWLocator;
 import okw.log.Logger_Sngltn;
 
 
@@ -22,9 +23,9 @@ import okw.log.Logger_Sngltn;
         private ArrayList<String> myALValue = new ArrayList<String>();
 
 
-        public AllMethods_SingleValue(String fps_Locator)
+        public AllMethods_SingleValue( String fpsLocator, OKWLocator... fpLocators )
         {
-            this.Locator = fps_Locator;
+            super( fpsLocator, fpLocators );
         }
 
         /**

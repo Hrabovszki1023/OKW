@@ -54,7 +54,7 @@ public class frmInputTypeTextDisabled extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1 
           )
-	public SeInputText MwSt = new SeInputText("//*[@data-4test='MwSt']");
+	public SeInputText MwSt = new SeInputText("4T!MwSt", this.getLOCATOR());
 
 	@OKW (FN="Preis",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -65,11 +65,11 @@ public class frmInputTypeTextDisabled extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
           )
-    public SeInputText Preis = new SeInputText("//*[@data-4test='Preis']");
+    public SeInputText Preis = new SeInputText("4T!Preis", this.getLOCATOR());
 
 
     public frmInputTypeTextDisabled()
     {
-        setLocator("//*[@data-4test='InputTypeTextDisabled']");
+        setLocator("4T!InputTypeTextDisabled");
     }
 }

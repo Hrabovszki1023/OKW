@@ -46,16 +46,21 @@ import okw.OKW_TimeOut;
 import okw.core.IOKW_FN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 
-/** \brief
+/** 
  * Description of AnyWin.
  */ 
 public class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_FN
 {
 
-  
-  public AnyWindow()
+    public AnyWindow( )
+    {
+        super();
+    }
+
+    
+  public AnyWindow( String fpsLocator, OKWLocator... fpLocators )
 	{
-	    this._locator = new OKWLocator("");
+       this.setLocator( fpsLocator, fpLocators );
 	}
 
 

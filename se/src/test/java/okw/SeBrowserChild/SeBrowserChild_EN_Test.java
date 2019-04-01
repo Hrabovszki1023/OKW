@@ -66,7 +66,7 @@ public class SeBrowserChild_EN_Test
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypePassword.htm" );
 
-          EN.SelectWindow( "SeInputTextDisabled" );
+          EN.SelectWindow( "InputTypeTextDisabled" );
         }
         
         

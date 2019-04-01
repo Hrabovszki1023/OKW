@@ -69,7 +69,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
 
         public SePOSITION()
         {
-          super("SePOSITION");
+          super();
         }
 
   

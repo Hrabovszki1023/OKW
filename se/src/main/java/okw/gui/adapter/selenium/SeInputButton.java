@@ -43,6 +43,7 @@ import java.util.ArrayList;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.gui.OKWLocator;
+import okw.gui.OKWLocatorBase;
 
 /**
  * @ingroup groupSeleniumChildGUIAdapter 
@@ -127,7 +128,7 @@ public class SeInputButton extends SeAnyChildWindow
      * @author Zoltán Hrabovszki
      * @date 2013.05.03
      */
-    public SeInputButton( String Locator, OKWLocator... Locators )
+    public SeInputButton( String Locator, OKWLocatorBase... Locators )
     {
         super( Locator, Locators );
     }

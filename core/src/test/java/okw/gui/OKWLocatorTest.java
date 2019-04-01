@@ -100,6 +100,8 @@ public class OKWLocatorTest
 		  OKWLocator Locator_2 = new OKWLocator("L2");
 		  OKWLocator Locator = new OKWLocator("L2=$L2$, L1=$L1$, L2=$L2$, L1=$L1$", Locator_1, Locator_2);
         
+          assertEquals("L1", Locator_1.getLocator());
+          assertEquals("L2", Locator_2.getLocator());		  
 		  assertEquals("L2=L2, L1=L1, L2=L2, L1=L1", Locator.getLocator());
     }
     
@@ -123,12 +125,55 @@ public class OKWLocatorTest
 		assertEquals("Locator1=>Locator1<//Locator2=>Locator2<", Locator_Summe.getLocator());
     }
 
+    @Test
+    public void TC_setLocator_2in1_Multiple()
+    {
+          OKWLocator Locator_1 = new OKWLocator("L1");
+          OKWLocator Locator_2 = new OKWLocator("L2");
+          OKWLocator Locator = new OKWLocator("Empty");
+        
+          Locator.setLocator( "L2=$L2$, L1=$L1$, L2=$L2$, L1=$L1$", Locator_1, Locator_2);
+          assertEquals("L2=L2, L1=L1, L2=L2, L1=L1", Locator.getLocator());
+    }
+    
+    @Test
+    public void TC_setLocator_2in1_ReverseOrder()
+    {
+        OKWLocator Locator_1 = new OKWLocator(">Locator1<");
+        OKWLocator Locator_2 = new OKWLocator(">Locator2<");
+        OKWLocator Locator_Summe = new OKWLocator("Locator2=$L2$//Locator1=$L1$");
+        
+        Locator_Summe.setLocator( "Locator2=$L2$//Locator1=$L1$", Locator_1, Locator_2);
+        assertEquals("Locator2=>Locator2<//Locator1=>Locator1<", Locator_Summe.getLocator());
+    }
+    
+    @Test
+    public void TC_setLocator_2in1()
+    {
+        OKWLocator Locator_1 = new OKWLocator(">Locator1<");
+        OKWLocator Locator_2 = new OKWLocator(">Locator2<");
+        OKWLocator Locator_Summe = new OKWLocator("Empty");
+
+        Locator_Summe.setLocator( "Locator1=$L1$//Locator2=$L2$", Locator_1, Locator_2 );
+        assertEquals("Locator1=>Locator1<//Locator2=>Locator2<", Locator_Summe.getLocator());
+    }
+
+	
 	@Test
     public void TC_Window()
     {
 		OKWLocator Locator_1 = new OKWLocator(">Locator1<");
 		assertEquals(">Locator1<", Locator_1.getLocator());
     }
+
+	   @Test
+	    public void TC_Window_setLocator()
+	    {
+	        OKWLocator Locator_1 = new OKWLocator("");
+            Locator_1.setLocator( ">Locator1<");
+	        
+	        assertEquals(">Locator1<", Locator_1.getLocator());
+	    }
 
 	@Test
     public void TC_Window_Child()

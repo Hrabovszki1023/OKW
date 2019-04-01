@@ -24,7 +24,7 @@ public class SeBrowserChild_EN_Chrome_Test extends SeBrowserChild_EN_Test
 
         myLog2HTML = new Log2HTML("target/OKWRResult_SeBrowserChild_EN_Chrome_Test.html");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(true);
+        Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
 	
@@ -36,14 +36,17 @@ public class SeBrowserChild_EN_Chrome_Test extends SeBrowserChild_EN_Test
 
   
 
-  @After
+  // @After
   public void afterChrome() throws Exception
   {
       Runtime rt = Runtime.getRuntime();
       
       if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) rt.exec("taskkill Chrome");
-      else rt.exec("pkill -f Chrome");
-        
+      else
+      {
+          rt.exec("pkill -f Chrome");
+          rt.exec("killall chromedriver");
+      } 
       Thread.sleep( 1000 );
   }
 }

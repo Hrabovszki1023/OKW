@@ -1,5 +1,7 @@
 package okw.gui.frames;
 
+import java.io.IOException;
+
 import javax.xml.xpath.XPathExpressionException;
 
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -95,5 +97,54 @@ public class FrmSeChrome extends SeBrowserWindow
     public void StopApp()
     {
         SeDriver.getInstance().driver.close();
+        SeDriver.getInstance().driver.quit();
+        
+        
+        try {
+            
+        Runtime rt = Runtime.getRuntime();
+        
+        if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1)
+        {
+            rt.exec("taskkill Chrome");
+        }
+        else
+        {
+            rt.exec("pkill -f Chrome");
+            rt.exec("killall chromedriver");
+        } 
+        Thread.sleep( 1000 );
+
+        }
+        catch (InterruptedException | IOException e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+finally
+{
     }
+
+    }
+    
+    @Override
+    protected void finalize() throws Throwable
+    {
+        
+        Runtime rt = Runtime.getRuntime();
+        
+        if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1)
+        {
+            rt.exec("taskkill Chrome");
+        }
+        else
+        {
+            rt.exec("pkill -f Chrome");
+            rt.exec("killall chromedriver");
+        } 
+        Thread.sleep( 1000 );
+
+        super.finalize();
+    }
+    
 }

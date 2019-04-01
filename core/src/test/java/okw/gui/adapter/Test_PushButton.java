@@ -49,6 +49,8 @@ import org.xml.sax.SAXException;
 
 import okw.OKW_TestClipboard;
 import okw.gui.AnyChildwindow;
+import okw.gui.OKWLocator;
+import okw.gui.OKWLocatorBase;
 import okw.log.*;
 
     // TODO Implemetierung einschalten : IOKW_LinkObj
@@ -84,29 +86,28 @@ import okw.log.*;
             return lvsReturn;
         }
         
-        /// \~german
-        /// \brief GUI-TestObjekt für ein Pushbotton
-        /// 
-        /// Objekt enthält keine Aktionen ist ein Mock für einen Pushbutten dar.
-        /// 
-        /// \param fpsLocator Locator des Objektes. Hier wird 
-        ///
-        /// \~english
-        /// \brief \todo TODO: Brief Description.
-        /// 
-        /// \todo TODO: Detailed Description
-        /// 
-        /// \param fpsLocator  \todo TODO: Parameter Description
-        ///
-        /// \~
-        /// \author Zoltán Hrabovszki
-        /// \date 2015.05.01
-        public Test_PushButton(String fpsLocator)
-        {
-            this.myLogger.LogFunctionStartDebug("TypeKey", "fpsLocator", fpsLocator);
-            this.Locator = fpsLocator;
-
-            this.myLogger.LogFunctionEndDebug();
+        /** \~german
+         *  GUI-TestObjekt für ein Pushbotton
+         * 
+         *  Objekt enthält keine Aktionen ist ein Mock für ein Button.
+         *  
+         *  \param fpsLocator Locator des Objektes
+         *  \param fpLocators Referenz auf Locatoren, die eigebunden werden sollen
+         * 
+         *  \~english
+         *  \todo TODO: Brief Description.
+         *  
+         *  \todo TODO: Detailed Description
+         *  
+         *  \param fpsLocator  \todo TODO: Parameter Description
+         * 
+         *  \~
+         *  \author Zoltán Hrabovszki
+         *  \date 2015.05.01
+         */
+        public Test_PushButton( String fpsLocator, OKWLocator... fpLocators )
+        {            
+            super( fpsLocator, fpLocators );
         }
 
         /// \~german

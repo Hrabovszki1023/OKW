@@ -36,7 +36,7 @@ In diesem speziellen Fall haben alle Elemente jeweils eine Eindeutige `id` als A
 D.h. wir finden _jedes_ GUI-Object im WP-Login nach dem Prinzip: "Suche das Element mit der 'id', die einen bestimmten Wert" hat.
 
 \par Hinweis:
-Die Objekt-Erkennungseigenschaft sollte über alle Releases des Produkte const. bleiben!
+Die Objekt-Erkennungseigenschaft sollte über alle Releases des Produktes const. bleiben!
 
 @subsection refTutorial03_C_A Konkretes Beispiel `Username`
 

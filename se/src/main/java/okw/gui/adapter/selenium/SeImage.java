@@ -41,6 +41,7 @@ package okw.gui.adapter.selenium;
 import java.util.ArrayList;
 
 import okw.gui.OKWLocator;
+import okw.gui.OKWLocatorBase;
 
 /**
  * \~
@@ -114,7 +115,7 @@ public class SeImage extends SeAnyChildWindow
     /**
      *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
      */
-    public SeImage( String Locator, OKWLocator... Locators )
+    public SeImage( String Locator, OKWLocatorBase... Locators )
     {
         super( Locator, Locators );
     }

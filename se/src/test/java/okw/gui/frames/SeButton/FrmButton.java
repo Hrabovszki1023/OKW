@@ -61,7 +61,7 @@ public class FrmButton extends SeBrowserChild
    * Display TextField: Contains values after you click the "Button 1" and "Button 2".
    */
   @OKW( FN = "Display", WaitForMe_PT= 500, WaitForMe_TO=1 )
-  public SeInputText   Anzeige        = new SeInputText( "$L1$//*[@data-4test='textarea']", this.getLOCATOR() );
+  public SeInputText   Anzeige        = new SeInputText( "4T!textarea", this.getLOCATOR() );
 
   /*
    * \~german
@@ -90,7 +90,7 @@ public class FrmButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
           )
-  public SeButton Text_1         = new SeButton( "$L1$//*[@data-4test='Button 1']", this.getLOCATOR() );
+  public SeButton Text_1         = new SeButton( "4T!Button 1", this.getLOCATOR() );
 
   @OKW( FN = "Button 2",
           VerifyLabel_PT=500, VerifyLabel_TO=3,
@@ -101,7 +101,7 @@ public class FrmButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=3,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=3
           )
-  public SeButton Text_2         = new SeButton( "$L1$//*[@data-4test='Button 2']", this.getLOCATOR() );
+  public SeButton Text_2         = new SeButton( "4T!Button 2", this.getLOCATOR() );
 
   @OKW( FN = "Button 3",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -112,13 +112,13 @@ public class FrmButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
            )
-  public SeButton Button_3       = new SeButton( "$L1$//*[@data-4test='Button 3']", this.getLOCATOR() );
+  public SeButton Button_3       = new SeButton( "4T!Button 3", this.getLOCATOR() );
 
   /**
    * URL des Fensters: http://test.openkeyword.de/InputButton/input_type-button.htm
    */
   public FrmButton()
   {
-    setLocator( "//*[@data-4test='button.htm']" );
+    this.setLocator( "4T!button.htm" );
   }
 }

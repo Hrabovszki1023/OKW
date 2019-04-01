@@ -1,0 +1,45 @@
+/**
+
+\~german
+
+@page refTutorial05 OKW Tutorial: Locator Muster
+
+@section refTutorial05_A Vorlage `data-4test='Business Name'`
+
+`data-4test` ist das Muster um die GUI Automatisierung mit 4TestDev radikal zu vereinfachen.
+Jedes testrelevante GUI Objekt erhält  mit `data-4test='Business Identifier'`
+eine eindeuteuge Kennzeichnung für den Test.
+
+Der `Business Identifier` verbindet
+
+1. die Anforderung: Feature und Categorie Bezeichnnung,
+2. mit der Testfall-Beschreibung: Im generierten Testfall in den GUI-Schlüsselwörten
+3. In der GUI-Oberfläche: Als Attribute `data-4test`
+
+
+
+\code{.java}
+@OKW(FN="Login")
+public class Login extends SeBrowserChild
+{
+
+    @OKW (FN="Username")
+    public SeInputText Username = new SeInputText( "4T!Username", this.getLOCATOR() );
+
+    @OKW (FN="Password")
+    public SeInputText Password = new SeInputText( "4T!Password", this.getLOCATOR() );
+
+
+    @OKW (FN="Login")
+    public SeInputButton Login = new SeInputText( "4T!Login", this.getLOCATOR() );
+
+    public Login()
+    {
+    	super( "4T!Login" );
+    }
+}
+\endcode
+
+
+
+*/

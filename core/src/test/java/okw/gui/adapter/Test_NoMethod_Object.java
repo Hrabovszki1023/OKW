@@ -39,6 +39,8 @@
 package okw.gui.adapter;
 
 import okw.gui.AnyChildwindow;
+import okw.gui.OKWLocator;
+import okw.gui.OKWLocatorBase;
 
 /// \brief
     /// Dieses GUI-Objekt enthält keine OKW-Methoden und
@@ -49,9 +51,9 @@ import okw.gui.AnyChildwindow;
 
         String Locator;
 
-        public Test_NoMethod_Object(String fps_Locator)
+        public Test_NoMethod_Object( String fpsLocator, OKWLocator... fpLocators )
         {
-            this.Locator = fps_Locator;
+            super( fpsLocator, fpLocators );
         }
 
     }

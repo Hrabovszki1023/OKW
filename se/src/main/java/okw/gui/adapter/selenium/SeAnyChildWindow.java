@@ -76,7 +76,9 @@ public class SeAnyChildWindow extends AnyChildwindow
     protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
 
     protected LogMessenger  LM       = new LogMessenger( "GUI" );
-
+    
+    //protected OKWLocatorXPath _locator = null;
+    
     /**
      * \~
      *  If iframeID IS null the iFrame is to be checked
@@ -126,10 +128,15 @@ public class SeAnyChildWindow extends AnyChildwindow
         this.MyLogger.LogFunctionEndDebug( );
     }
 
+    public SeAnyChildWindow( )
+    {
+        _locator = new OKWLocatorXPath( );
+    }
+    
     
    /** 
     * \~german
-    * Konstruktor der Klasse. iframeID wird auf den Wert "" (empty string) gesetzt.
+    *  Konstruktor der Klasse. Locator wir speziell in setLocator 
     *  
     *  @param Locator definiert die Objekterkennungseigenschaft des Objektes. Dieser wird als XPATH angegeben
     *  @param Locators Locatoren z.B. von Elternobjekten, die zu einem gesamt Locator verkettet werden sollen.
@@ -138,14 +145,14 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.05.03
+    *  @date 2019.03.27
     */
-    public SeAnyChildWindow( String Locator, OKWLocator... Locators )
+    public SeAnyChildWindow( String fpsLocator, OKWLocatorBase... locators )
     {
-        super( Locator, Locators );
+        _locator = new OKWLocatorXPath( fpsLocator,  locators );
         this.iframeID = null;
     }
-
+    
     
     /** \~german
      *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refClickOn aufgerufen wird.

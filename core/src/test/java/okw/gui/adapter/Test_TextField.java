@@ -45,6 +45,7 @@ import java.util.List;
 
 import okw.OKW_TestClipboard;
 import okw.gui.AnyChildwindow;
+import okw.gui.OKWLocator;
 import okw.log.*;
 
     // : IOKW_SimpleDataObj
@@ -58,9 +59,9 @@ import okw.log.*;
 
         String myValue = "";
 
-        public Test_TextField(String fps_Locator)
+        public Test_TextField( String fpsLocator, OKWLocator... fpLocators )
         {
-            this.Locator = fps_Locator;
+            super( fpsLocator, fpLocators );
         }
 
         public String getFN()

@@ -54,7 +54,9 @@ import okw.FrameObjectDictionary_Sngltn;
 import okw.OKW_Const_Sngltn;
 import okw.core.Core;
 import okw.core.OKW_CurrentObject_Sngltn;
+import okw.exceptions.OKWOnlySingleValueAllowedException;
 import okw.gui.OKWLocator;
+import okw.gui.OKWLocatorBase;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
 
 
@@ -240,7 +242,7 @@ public class SeRadioList extends SeAnyChildWindow
     /**
      *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
      */
-    public SeRadioList( String Locator, OKWLocator... Locators )
+    public SeRadioList( String Locator, OKWLocatorBase... Locators )
     {
         super( Locator, Locators );
 
@@ -296,13 +298,19 @@ public class SeRadioList extends SeAnyChildWindow
             else
             {
                 // \todo TODO: Ausnahme Meldung in LM_SeRadioList anlegen.
-                throw new okw.exceptions.OKWOnlySingleValueAllowedException( "SeRadioList: Only single value is allowed!" );
+                throw new OKWOnlySingleValueAllowedException( "SeRadioList: Only single value is allowed!" );
             }
         }
-        catch (Exception e)
+        /*catch (Exception e)
         {
             // TODO Auto-generated catch block
             throw new RuntimeException( e );
+        }
+        */
+        catch (Exception e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
         finally
         {

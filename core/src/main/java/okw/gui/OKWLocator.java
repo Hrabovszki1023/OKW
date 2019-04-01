@@ -42,42 +42,50 @@ package okw.gui;
 import okw.log.*;
 import org.stringtemplate.v4.*;
 
-
 /** <summary>
  * Description of OKWLocator.
  * </summary>
  */
-public class OKWLocator //: IOKWLocator
+public class OKWLocator extends OKWLocatorBase
 {
-    private String       _locator = null;
+    private String           _locator = null;
 
-    private OKWLocator[] _Locatoren;
+    private OKWLocatorBase[] _Locatoren;
 
     private Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 
-    public OKWLocator( String fpsLocator, OKWLocator... fpLocators )
-    {
-        _locator = fpsLocator;
 
-        if ( fpLocators != null )
-        {
-            _Locatoren = fpLocators;
-        }
+    public OKWLocator(  )
+    {
+    }
+    
+    
+    public OKWLocator( String fpsLocator, OKWLocatorBase... fpLocators )
+    {
+        myLogger.LogFunctionStartDebug( "OKWLocator.OKWLocator" );
+        
+        this.setLocator( fpsLocator, fpLocators );
+
+        myLogger.LogFunctionEndDebug();
     }
 
-
     /** \~german
-     *  Holt den vollständig (rekursiv) aufgelösten  (z.B. XPath-Wert) des Locators.
+     *  Holt den vollständig (rekursiv) aufgelösten (z.B. XPath-Wert) des Locators.
      *  
      *  Beim Aufruf dieser Methode wird der Locator jeweils vollständig neu berechnet 
      *  und der aktuelle Wert zurückgeliefert.
-     *  (Dynamischer Locator)
+     *  (dynamischer Locator)
      *  
      *  @return Aktueller Wert des Locators
      *  
      *  \~english
-     *  \brief
-     *  @todo TODO:  Übersetzung ins Englische fehlt...
+     *  Fetches the completely (recursively) resolved (e.g. XPath value) of the locator.
+     *  
+     *  When this method is called, the locator is recalculated
+     *  completely and the current value is returned.
+     *  (dynamic locator)
+     *  
+     *  @return Current value of the locator
      *  
      *  \~
      *  @author Zoltán Hrabovszki
@@ -88,32 +96,31 @@ public class OKWLocator //: IOKWLocator
         myLogger.LogFunctionStartDebug( "getLocator()" );
         String lvsReturn = "";
 
-        //ArrayList<String> myLocatoren = new ArrayList<String>();
-
         if ( _Locatoren != null )
-        {
-            ST st = new ST(_locator, '$', '$');
-
-            Integer i = 1;
-            
-            for ( OKWLocator Locator : _Locatoren )
             {
-                st.add("L" + i.toString() , Locator.getLocator());
-                i++;
-            }
+            System.out.println("_Locatoren length: " + _Locatoren.length);
+                ST st = new ST( _locator, '$', '$' );
 
-            lvsReturn = st.render();
-        }
-        else
+                    Integer i = 1;
+
+                    for ( OKWLocatorBase Locator : _Locatoren )
+                    {
+                        st.add( "L" + i.toString(), Locator.getLocator() );
+                        i++;
+                    }
+                    
+                    lvsReturn = st.render();
+                }
+         else
         {
-            lvsReturn = _locator;
+           lvsReturn = _locator;
         }
 
         myLogger.LogFunctionEndDebug( lvsReturn );
         return lvsReturn;
-    }    
-    
+    }
 
+    
     /** \~german
      *  Setzt den Wert (z.B. XPath-Wert) des Locators.
      *  
@@ -126,13 +133,13 @@ public class OKWLocator //: IOKWLocator
      *  @author Zoltán Hrabovszki
      *  @date 2014.04.27
      */
-    public void setLocator( String fpsLocator, OKWLocator... fpLocators )
+    public void setLocator( String fpsLocator, OKWLocatorBase... fpLocators )
     {
         myLogger.LogFunctionStartDebug( "OKWLocator.setLocator" );
 
         _locator = fpsLocator;
-        
-        if ( fpLocators != null )
+
+        if ( fpLocators.length != 0 )
         {
             _Locatoren = fpLocators;
         }

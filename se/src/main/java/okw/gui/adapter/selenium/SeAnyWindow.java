@@ -49,6 +49,7 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
 import okw.log.Logger_Sngltn;
 import okw.LogMessenger;
 import okw.OKW_Const_Sngltn;
+import okw.fourTestLocator;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -73,6 +74,19 @@ import org.openqa.selenium.WebElement;
  */
 public class SeAnyWindow extends AnyWindow
 {
+
+    public SeAnyWindow( )
+    {
+       super( );
+       _locator = new OKWLocatorXPath( );
+    }
+    
+    public SeAnyWindow( String fpsLocator, OKWLocatorBase... fpLocators )
+    {
+        _locator = new OKWLocatorXPath( fpsLocator,  fpLocators );
+        this.iframeID = null;
+    }
+
     // Logger Instance holen
     protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
 
@@ -125,9 +139,9 @@ public class SeAnyWindow extends AnyWindow
 
 
     @Override
-    public void setLocator( String Locator, OKWLocator... Locators )
+    public void setLocator( String Locator, OKWLocatorBase... Locators )
     {
-        super.setLocator( Locator, Locators );
+        this._locator.setLocator( Locator, Locators );
         this.iframeID = null;
     }
 

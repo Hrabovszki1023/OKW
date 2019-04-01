@@ -2,10 +2,10 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 import okw.OKW_Const_Sngltn;
-import okw.core.Core;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.gui.OKWLocator;
+import okw.gui.OKWLocatorBase;
 
 
 /**
@@ -103,9 +103,9 @@ public class SeInputRadio extends SeAnyChildWindow
    *  
    *  @date 2013.04.11
    */         
-  public SeInputRadio( String Locator, OKWLocator... Locators )
+  public SeInputRadio( String Locator, OKWLocatorBase... Locators )
   {
-    super(Locator, Locators);
+      super(Locator, Locators);
   }
 
    

@@ -12,6 +12,8 @@ import org.xml.sax.SAXException;
 
 import okw.*;
 import okw.gui.AnyChildwindow;
+import okw.gui.OKWLocator;
+import okw.gui.OKWLocatorBase;
 import okw.log.Logger_Sngltn;
 
 
@@ -28,9 +30,9 @@ import okw.log.Logger_Sngltn;
         String myValue = "";
 
 
-        public AllMethods_VerifyEmpty(String fps_Locator)
+        public AllMethods_VerifyEmpty( String fpsLocator, OKWLocatorBase... fpLocators )
         {
-            this.Locator = fps_Locator;
+            super( fpsLocator, fpLocators );
         }
 
         

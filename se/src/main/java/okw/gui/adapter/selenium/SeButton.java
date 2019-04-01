@@ -40,8 +40,7 @@
 package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
-
-import okw.gui.OKWLocator;
+import okw.gui.OKWLocatorBase;
 
 /**
  * @ingroup groupSeleniumChildGUIAdapter 
@@ -125,7 +124,7 @@ public class SeButton extends SeAnyChildWindow
      * @author Zoltán Hrabovszki
      * @date 2013.05.03
      */
-    public SeButton( String Locator, OKWLocator... Locators )
+    public SeButton( String Locator, OKWLocatorBase... Locators )
     {
         super( Locator, Locators );
     }

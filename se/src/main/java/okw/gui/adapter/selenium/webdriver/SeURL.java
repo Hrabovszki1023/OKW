@@ -67,7 +67,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
 
         public SeURL()
         {
-          super("SeURL");
+          super();
         }
 
   

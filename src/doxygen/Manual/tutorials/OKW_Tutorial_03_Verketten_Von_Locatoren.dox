@@ -12,10 +12,10 @@ So kann ein Eingabefeld wie `User`, aus dem Beispiel in Tutorial 3 @ref refTutor
 Erst in Verbindung mit dem Locator des Eltern-Objektes (=Fenster) kann eine Verwechselung des Kind-Objeks ausgeschlossen werden.
 
 
-
 @section refTutorial04_DRY DRY
 
-Nun könnte ohne Verkettung jedes Kind-Objekt einfach die Erkennungseigenschaft des Eltern Objektes mit eingebaut bekommen.
+Nun könnte ohne Verkettung jedes Kind-Objekt einfach die Erkennungseigenschaft
+des Eltern Objektes mit eingebaut bekommen.
 
 Das zieht jedoch immer dann einen Wartungsaufwand nach sich, wenn die Objekt-Erkennungseigenschaft des Eltern-Objektes sich ändert: Dann müssen alle Kind-Objekte angepasst werden, die eine Objekterkennungseigenschaft des Eltern-Objektes besitzen.
 

@@ -67,7 +67,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
 
         public SeBACK()
         {
-          super("SeBACK");
+          super();
         }
         
         

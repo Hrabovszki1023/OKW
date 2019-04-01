@@ -59,7 +59,6 @@ import okw.log.*;
  */ 
 public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwindow, IOKW_FN
 {
-	Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 	
   /** \~german
    *  Prüft die Existenz des aktuellen Objektes.
@@ -375,24 +374,19 @@ public ArrayList<String> MemorizeCaption( )
     }
 
     /**
-     *  @todo TODO: Wird dieser Konstruktor überhaupt benötigt?
+     *  Wir benötigt damit in den abgeleitetetn Klassen
+     *  'Implicit super constructor AnyChildwindow() is undefined. Must explicitly invoke another constructor'
      */
-    public AnyChildwindow()
+    public AnyChildwindow( )
     {
-        this._locator = new OKWLocator("");
+        super();
     }
-
     
-    public AnyChildwindow(String fpsLocator, OKWLocator... fpLocators )
+    
+    public AnyChildwindow( String fpsLocator, OKWLocatorBase... fpLocators )
     {
-        if ( fpLocators.length != 0 )
-        {
-            this._locator = new OKWLocator(fpsLocator, fpLocators);
-        }
-        else
-        {
-            this._locator = new OKWLocator(fpsLocator);
-        }
+        //this.setLocator( fpsLocator, fpLocators );
+        super (fpsLocator, fpLocators );
     }
    
 

@@ -71,7 +71,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
 
         public SeMAXIMIZE()
         {
-          super("SeMAXIMIZE");
+          super();
         }
 
         /** \~german

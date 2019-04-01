@@ -5,6 +5,7 @@ import java.util.List;
 
 import okw.*;
 import okw.gui.AnyChildwindow;
+import okw.gui.OKWLocator;
 import okw.log.Logger_Sngltn;
 
 
@@ -21,9 +22,9 @@ import okw.log.Logger_Sngltn;
         String myValue = "";
 
 
-        public CurrentChildObject_Allmethods(String fps_Locator)
+        public CurrentChildObject_Allmethods( String fpsLocator, OKWLocator... fpLocators )
         {
-            this.Locator = fps_Locator;
+            super( fpsLocator, fpLocators );
         }
 
         

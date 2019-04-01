@@ -69,7 +69,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
 
         public SeSIZE()
         {
-          super("SeSIZE");
+          super();
         }
 
   

@@ -47,9 +47,9 @@ import okw.log.*;
  */ 
 public abstract class AnyWinBase
 {
-	Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
+	private Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 	
-	protected OKWLocator _locator;
+	protected OKWLocator _locator = null;
 
   /** \~german
    *  FN - Funktionaler Name des aktuellen GUI-Objektes.
@@ -113,7 +113,7 @@ public abstract class AnyWinBase
    */
   public String getLocator()
   {
-          return this._locator.getLocator();
+          return _locator.getLocator();
   }
 
   
@@ -128,9 +128,9 @@ public abstract class AnyWinBase
    *  @author Zoltán Hrabovszki
    *  @date 2014.04.27
    */  
-  public OKWLocator getLOCATOR()
+  public OKWLocatorBase getLOCATOR()
   {
-          return this._locator;
+          return _locator;
   }
 
   
@@ -145,9 +145,9 @@ public abstract class AnyWinBase
    *  @author Zoltán Hrabovszki
    *  @date 2014.04.27
    */  
-  public void setLocator(String fpsLocator, OKWLocator... fpLocators )
+  public void setLocator( String fpsLocator, OKWLocatorBase... fpLocators )
   {
-          this._locator.setLocator( fpsLocator, fpLocators );
+          _locator.setLocator( fpsLocator, fpLocators );
   }
 
  
@@ -175,14 +175,13 @@ public abstract class AnyWinBase
     throw new OKWFrameObjectMethodNotImplemented("The method getExists() is not definden for you GUI-Object. Please define first the methode!");
   }
 
-  
-  public AnyWinBase()
-    {
-        this._locator = new OKWLocator("");
-    }
+  public AnyWinBase( )
+  {
+      _locator = new OKWLocator( );
+  }
 
 
-    public AnyWinBase(String fpsLocator, OKWLocator... fpLocators )
+    public AnyWinBase(String fpsLocator, OKWLocatorBase... fpLocators )
     {
         if ( fpLocators.length != 0 )
         {
@@ -195,30 +194,52 @@ public abstract class AnyWinBase
     }
    
     
-    /// \~german
-    /// \brief
-    /// Diese Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(fps_FunctionName),
-    /// und erweitert den gegebenen Methodenname in fps_FunctionName mit this.GetType().FullName um den Klassenbezeichner.
-    /// 
-    /// \param fpsMethodName Name der Method  nicht "full quolified reference".
-    /// 
-    /// \~english
-    /// \brief
-    /// \todo TODO:  Übersetzung ins Englische fehlt...
-    /// 
-    /// \param fpsMethodName
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2014.04.27
-    protected void LogFunctionStartDebug(String fpsMethodName)
+    /** \~german
+     *  Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(fps_FunctionName),
+     *  und erweitert den gegebenen Methodenname in fps_FunctionName mit this.getClass().getName() um den Klassenbezeichner.
+     *  
+     *  @param fpsMethodName Name der Method  nicht "full quolified reference".
+     *  
+     *  \~english
+     *  \todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  @param fpsMethodName
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2014.04.27
+     *  @param fpsMethodName
+     */
+    public void LogFunctionStartDebug(String fpsMethodName)
     {
     	myLogger.LogFunctionStartDebug(this.getClass().getName() + "." + fpsMethodName);
     }
+    
+    
+    /** \~german
+     *  Methode ruft die Methode Logger.Instance.LogFunctionStart(fps_FunctionName),
+     *  und erweitert den gegebenen Methodenname in fps_FunctionName mit this.getClass().getName() um den Klassenbezeichner.
+     *  
+     *  @param fpsMethodName Name der Method  nicht "full quolified reference".
+     *  
+     *  \~english
+     *  \todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  @param fpsMethodName
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2014.04.27
+     *  @param fpsMethodName
+     */
+    public void LogFunctionStart(String fpsMethodName)
+    {
+        myLogger.LogFunctionStartDebug(this.getClass().getName() + "." + fpsMethodName);
+    }
 
+    
     /** \~german
      *  \brief
      *  Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(string,string,string),
-     *  erweitert den gegebenen Methodenname in fps_FunctionName mit this.GetType().FullName um den Klassenbezeichner.
+     *  erweitert den gegebenen Methodenname in fps_FunctionName mit this.getClass().getName() um den Klassenbezeichner.
      *  
      *  @param fpsMethodName Name der Method, aber ohne Paket Angabe.
      *  @param P1_Name Name/Bezeichnung des (ersten) Parameters.
@@ -234,9 +255,33 @@ public abstract class AnyWinBase
      *  @author Zoltán Hrabovszki
      *  @date 2014.04.27
      */
-    protected void LogFunctionStartDebug(String fpsMethodName, String P1_Name, String P1_Value)
+    public void LogFunctionStartDebug( String fpsMethodName, String P1_Name, String P1_Value )
     {
     	myLogger.LogFunctionStartDebug(this.getClass().getName() + "." + fpsMethodName, P1_Name, P1_Value);
+    }
+
+    /** \~german
+     *  \brief
+     *  Methode ruft die Methode Logger.Instance.LogFunctionStart(string,string,string),
+     *  erweitert den gegebenen Methodenname in fps_FunctionName mit this.getClass().getName() um den Klassenbezeichner.
+     *  
+     *  @param fpsMethodName Name der Method, aber ohne Paket Angabe.
+     *  @param P1_Name Name/Bezeichnung des (ersten) Parameters.
+     *  @param P1_Value Wert des ersten Parameters.
+     * 
+     *  \~english
+     *  @todo TODO: LogFunctionStart(String fpsMethodName, String P1_Name, String P1_Value) Übersetzung ins Englische fehlt...
+     * 
+     *  @param fpsMethodName
+     *  @param P1_Name Name/Bezeichnung des ersten Parameters.
+     *  @param P1_Value Wert des ersten Parameters.
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2014.04.27
+     */
+    public void LogFunctionStart(String fpsMethodName, String P1_Name, String P1_Value)
+    {
+        myLogger.LogFunctionStart(this.getClass().getName() + "." + fpsMethodName, P1_Name, P1_Value);
     }
 
     /** \~german
@@ -250,13 +295,29 @@ public abstract class AnyWinBase
      *  @author Zoltán Hrabovszki
      *  @date 2015.01.18
      */
-    protected void LogFunctionEndDebug()
+    public void LogFunctionEndDebug()
     {
     	myLogger.LogFunctionEndDebug();
     }
 
     /** \~german
+     *  Methode ruft die Methode Logger.Instance.LogFunctionEnd() auf.
+     *  
+     *  \~english
      *  \brief
+     *  @todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2015.01.18
+     */
+    public void LogFunctionEnd()
+    {
+        myLogger.LogFunctionEnd();
+    }
+    
+    
+    /** \~german
      *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEndDebug(string) auf.
      *  
      *  @param fpsReturn Zu loggender Rückgabewert.
@@ -269,10 +330,34 @@ public abstract class AnyWinBase
      *  @author Zoltán Hrabovszki
      *  @date 2015.01.18
      */
-    protected void LogFunctionEndDebug(String fpReturn)
+    public void LogFunctionEndDebug(String fpReturn)
     {
-      if( fpReturn != null) myLogger.LogFunctionEndDebug(fpReturn);
-      else myLogger.LogFunctionEnd();
+      if( fpReturn != null)
+          myLogger.LogFunctionEndDebug(fpReturn);
+      else
+          myLogger.LogFunctionEndDebug();
+    }
+
+
+    /** \~german
+     *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEnd(string) auf.
+     *  
+     *  @param fpsReturn Zu loggender Rückgabewert.
+     *  
+     *  \~english
+     *  @todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  @param fpsReturn
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2015.01.18
+     */
+    public void LogFunctionEnd(String fpReturn)
+    {
+      if( fpReturn != null) 
+          myLogger.LogFunctionEnd(fpReturn);
+      else 
+          myLogger.LogFunctionEnd();
     }
 
     
@@ -289,11 +374,33 @@ public abstract class AnyWinBase
      *  @author Zoltán Hrabovszki
      *  @date 2015.01.18
      */
-    protected void LogFunctionEndDebug(Boolean fpReturn)
+    public void LogFunctionEndDebug(Boolean fpReturn)
     {
-      if( fpReturn != null) myLogger.LogFunctionEndDebug(fpReturn);
-      else myLogger.LogFunctionEnd();
+      if( fpReturn != null)
+          myLogger.LogFunctionEndDebug(fpReturn);
+      else
+          myLogger.LogFunctionEndDebug();
+    }
 
+    /** \~german
+     *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEnd(bool) auf.
+     *  
+     *  @param fpbReturn Zu loggender Rückgabewert.
+     *  
+     *  \~english
+     *  \brief
+     *  \todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2015.01.18
+     */
+    public void LogFunctionEnd(Boolean fpReturn)
+    {
+      if( fpReturn != null)
+          myLogger.LogFunctionEnd(fpReturn);
+      else
+          myLogger.LogFunctionEnd();
     }
 
     /**
@@ -309,10 +416,33 @@ public abstract class AnyWinBase
      *  @author Zoltán Hrabovszki
      *  @date 2015.01.18
      */
-    protected void LogFunctionEndDebug(ArrayList<String> fpReturn)
+    public void LogFunctionEndDebug(ArrayList<String> fpReturn)
     {
-      if( fpReturn != null) myLogger.LogFunctionEndDebug(fpReturn);
-      else myLogger.LogFunctionEnd();
+      if( fpReturn != null)
+          myLogger.LogFunctionEndDebug(fpReturn);
+      else
+          myLogger.LogFunctionEndDebug();
+    }
+
+    /**
+     *  \~german
+     *  Diese Methode ruft die Methode Logger.Instance.LogFunctionEnd(ArrayList&lt;string&gt;) auf.
+     *  
+     *  @param fpLsReturn Zu loggender Rückgabeert.
+     *  
+     *  \~english
+     *  @todo TODO:  Übersetzung ins Englische...
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2015.01.18
+     */
+    public void LogFunctionEnd(ArrayList<String> fpReturn)
+    {
+      if( fpReturn != null)
+          myLogger.LogFunctionEnd(fpReturn);
+      else
+          myLogger.LogFunctionEnd();
     }
 
     /** \~german

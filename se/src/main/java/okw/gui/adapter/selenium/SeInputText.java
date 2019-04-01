@@ -44,7 +44,7 @@ import java.util.ArrayList;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
-import okw.gui.OKWLocator;
+import okw.gui.OKWLocatorBase;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
 
 /**
@@ -119,7 +119,7 @@ public class SeInputText extends SeAnyChildWindow
     /**
      *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
      */
-    public SeInputText( String Locator, OKWLocator... Locators )
+    public SeInputText( String Locator, OKWLocatorBase... Locators )
     {
         super( Locator, Locators );
     }

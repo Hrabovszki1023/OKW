@@ -2,6 +2,7 @@ package okw.gui.frames.SeRadioList;
 
 import okw.OKW;
 import okw.gui.OKWLocator;
+import okw.gui.OKWLocatorBase;
 import okw.gui.adapter.selenium.SeBrowserChild;
 import okw.gui.adapter.selenium.SeInputRadio;
 import okw.gui.adapter.selenium.SeRadioList;
@@ -19,7 +20,7 @@ public class frmSeRadioList extends SeBrowserChild
     public class PayMethod extends SeRadioList
     {
 
-        public PayMethod( String Locator, OKWLocator... fpLocators )
+        public PayMethod( String Locator, OKWLocatorBase... fpLocators )
         {
             super( Locator, fpLocators );
         }

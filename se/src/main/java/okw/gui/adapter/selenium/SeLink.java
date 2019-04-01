@@ -41,6 +41,7 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 import okw.gui.OKWLocator;
+import okw.gui.OKWLocatorBase;
 
 /**
  * @ingroup groupSeleniumChildGUIAdapter 
@@ -130,7 +131,7 @@ public class SeLink extends SeAnyChildWindow
     /**
      *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
      */
-    public SeLink( String Locator, OKWLocator... Locators )
+    public SeLink( String Locator, OKWLocatorBase... Locators )
     {
         super( Locator, Locators );
     }
