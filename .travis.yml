@@ -20,7 +20,21 @@ env:
     - GH_REPO_REF: github.com/Hrabovszki1023/OKW.git
     - WORKSPACE: $TRAVIS_BUILD_DIR
     - BUILD_ID: $TRAVIS_BUILD_NUMBER
-    - BUILD_TIMESTAMP_DE=$(date +"%m.%d.%Y %T")
+    - BUILD_TIMESTAMP_DE: $(date +"%m.%d.%Y %T")
+
+   matrix:
+    - TestCase="okw.gui.OKWLocatorTest"
+      Package="core"
+    - TestCase="okw.core.AllCoreTests"
+      Package="core"
+    - TestCase="okw.AllTests"
+      Package="core"
+    - TestCase="okw.log.log2html.Log2HTMLCounterTest"
+      Package="log2html"
+    - okw.log.log2html.Log2HTMLTest"
+      Package="log2html"
+   #  - TestCase="okw.AllSeUnitDriverTests"
+   #  - TestCase="okw.AllSe_Firefox_Tests"
     
 addons:  
 #  firefox: latest
@@ -47,10 +61,9 @@ before_script:
 #   - sleep 3 # give xvfb some time to start
 
 script:
-# - ls
-  - mvn test -Dtest=okw.gui.OKWLocatorTest -Dgpg.skip=true -pl core
-  - mvn test -Dtest=okw.core.AllCoreTests -Dgpg.skip=true -pl core
-  - mvn test -Dtest=okw.AllTests -Dgpg.skip=true -pl core
+  - mvn test -Dtest=$TestCase -Dgpg.skip=true -pl $Package
+#  - mvn test -Dtest=okw.core.AllCoreTests -Dgpg.skip=true -pl core
+#  - mvn test -Dtest=okw.AllTests -Dgpg.skip=true -pl core
 #  - mvn test -Dtest=okw.log.log2html.Log2HTMLCounterTest,okw.log.log2html.Log2HTMLTest -Dgpg.skip=true -pl log2html
 #  - mvn test -Dtest=okw.AllSeUnitDriverTests -Dgpg.skip=true -pl se
 #  - mvn test -Dtest=okw.AllSe_Firefox_Tests -Dgpg.skip=true -pl se
