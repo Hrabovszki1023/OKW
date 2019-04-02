@@ -68,14 +68,17 @@ script:
 #  - mvn test -Dtest=okw.AllSe_Firefox_Tests -Dgpg.skip=true -pl se
 
 # Generate and deploy documentation
-after_success:
-  - cd $TRAVIS_BUILD_DIR
-  - chmod +x InstallDoxygen.sh
-  - ./InstallDoxygen.sh
-  - chmod +x generateDocumentationAndDeploy.sh
-  - ./generateDocumentationAndDeploy.sh
-  - cd $TRAVIS_BUILD_DIR/html
-#  - ls -sl
+jobs:
+  include:
+    - stage: doxygen
+      script: ls
+      after_success:
+        - cd $TRAVIS_BUILD_DIR
+        - chmod +x InstallDoxygen.sh
+        - ./InstallDoxygen.sh
+        - chmod +x generateDocumentationAndDeploy.sh
+        - ./generateDocumentationAndDeploy.sh
+        - cd $TRAVIS_BUILD_DIR/html
 
 notifications:
   email:
