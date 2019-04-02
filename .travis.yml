@@ -24,8 +24,8 @@ env:
   matrix:
     - TESTCASE="okw.gui.OKWLocatorTest"
       Package="core"
-    - TESTCASE="okw.core.AllCoreTests"
-      Package="core"
+#    - TESTCASE="okw.core.AllCoreTests"
+#      Package="core"
     - TESTCASE="okw.AllTests"
       Package="core"
     - TESTCASE="okw.log.log2html.Log2HTMLCounterTest"
