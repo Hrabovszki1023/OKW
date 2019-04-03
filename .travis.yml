@@ -57,7 +57,7 @@ install:
   - sudo chmod +x /usr/local/share/chromedriver
   - sudo ln -s /usr/local/share/chromedriver $OKWChromedriverPath
 #
-  - mvn install cobertura:instrument -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
 
 before_script:
   - "export DISPLAY=:99.0"
