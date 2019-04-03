@@ -30,6 +30,7 @@ env:
     - BUILD_ID: $TRAVIS_BUILD_NUMBER
     - BUILD_TIMESTAMP_DE: $(date +"%m.%d.%Y %T")
     - OKWChromedriverPath: "/usr/local/bin/chromedriver"
+    CODECOV_TOKEN="c6cfebdf-999f-483e-bf42-6befa68d656c"
   matrix:
     - TESTCASE="okw.gui.OKWLocatorTest"
       Package="core"
@@ -41,8 +42,8 @@ env:
       Package="log2html"
     - TESTCASE="okw.log.log2html.Log2HTMLTest"
       Package="log2html"
-    - TESTCASE="okw.SeButton.SeButton_EN_Chrome_Test"
-      Package="se"
+#    - TESTCASE="okw.SeButton.SeButton_EN_Chrome_Test"
+#      Package="se"
     
       
 # before_install:
@@ -68,7 +69,7 @@ script:
   - mvn test -Dtest=$TESTCASE -Dgpg.skip=true -pl $Package
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -t c6cfebdf-999f-483e-bf42-6befa68d656c
+  - bash <(curl -s https://codecov.io/bash)
 
 # Generate and deploy documentation
 jobs:
