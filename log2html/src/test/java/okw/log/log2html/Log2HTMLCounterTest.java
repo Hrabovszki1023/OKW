@@ -776,7 +776,7 @@ public class Log2HTMLCounterTest {
 		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
 		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
 		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
+		assertEquals( "1".toString(), LogBase.FunctionCount.toString() );
 		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
 		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
 	
