@@ -29,6 +29,7 @@ env:
     - WORKSPACE: $TRAVIS_BUILD_DIR
     - BUILD_ID: $TRAVIS_BUILD_NUMBER
     - BUILD_TIMESTAMP_DE: $(date +"%m.%d.%Y %T")
+    - OKWChromedriverPath: "/usr/local/bin/chromedriver"
   matrix:
     - TESTCASE="okw.gui.OKWLocatorTest"
       Package="core"
@@ -53,7 +54,7 @@ install:
   - rm ~/chromedriver_linux64.zip
   - sudo mv -f ~/chromedriver /usr/local/share/
   - sudo chmod +x /usr/local/share/chromedriver
-  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+  - sudo ln -s /usr/local/share/chromedriver $OKWChromedriverPath
 #
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
 

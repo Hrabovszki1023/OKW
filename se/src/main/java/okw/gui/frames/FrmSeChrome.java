@@ -73,6 +73,9 @@ public class FrmSeChrome extends SeBrowserWindow
                     case "Mac OS X":
                         System.setProperty( "webdriver.chrome.driver", "/Applications/chromedriver" );
                         break;
+                    case "Linux":
+                        System.setProperty( "webdriver.chrome.driver", "/Applications/chromedriver" );
+                        break;
                     default:
                         LOG.LogError( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
                         break;
