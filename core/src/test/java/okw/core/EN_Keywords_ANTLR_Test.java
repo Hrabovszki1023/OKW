@@ -795,7 +795,7 @@ public class EN_Keywords_ANTLR_Test
     * \author Zoltan Hrabovszki
     * \date 2018.12.26
     */
-    @Test
+    //@Test
     public void tc_VerifyMaxLength_EnviromentVar() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
