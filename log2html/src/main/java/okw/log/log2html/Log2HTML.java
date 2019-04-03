@@ -84,12 +84,12 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void LogPrintDebug( String fpsMessage )
 	{
-		/*
+		
 		PrintCount++;
 		AllCount++;
 		
 		Pointer2LogBaseStack.peek().myLogs.add( new LogPrintDebug(Pointer2LogBaseStack.peek(), fpsMessage) );
-		*/	
+		
 	}
 
 
@@ -122,42 +122,41 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void LogFunctionStart(String fps_FunctionName, String... fpsParameter)
     {
-		/*FunctionCount++;
+		FunctionCount++;
 		AllCount++;
 		
     	LogBase myLog = new LogFunction( Pointer2LogBaseStack.peek(), fps_FunctionName, fpsParameter);
 
     	// Timer starten
-    	myLog.myDuration.StartTimer();
+    	myLog.myDuration.startTimer();
     	
     	Pointer2LogBaseStack.peek().myLogs.add(myLog);
     	Pointer2LogBaseStack.push(myLog);
-    	*/
+    	
     }
 
 
 	public void LogFunctionStartDebug( String fps_FunctionName, String... fpsParameter )
 	{
-		/* FunctionCount++;
+		FunctionCount++;
 		AllCount++;
 		
     	LogBase myLog = new LogFunctionDebug( Pointer2LogBaseStack.peek(), fps_FunctionName, fpsParameter);
 
     	// Timer starten
-    	myLog.myDuration.StartTimer();
+    	myLog.myDuration.startTimer();
     	
     	Pointer2LogBaseStack.peek().myLogs.add(myLog);
     	Pointer2LogBaseStack.push(myLog);
-    	*/
+    	
 	}
 
 
     public void LogFunctionEnd()
 	{
-		/*
 		LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	myLog.myDuration.StopTimer();
+    	myLog.myDuration.stopTimer();
 
     	@SuppressWarnings( "unused" )
 		LogFunction myLogFunction = (LogFunction)myLog;
@@ -166,16 +165,14 @@ public class Log2HTML extends LogBase implements ILogger
     	{
     		FunctionPass++;
     	}
-    	*/
 	}
 
 
 	public void LogFunctionEndDebug()
 	{
-		/*
 		LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	myLog.myDuration.StopTimer();
+    	myLog.myDuration.stopTimer();
 
     	@SuppressWarnings( "unused" )
 		LogFunctionDebug myLogFunction = (LogFunctionDebug)myLog;
@@ -184,16 +181,14 @@ public class Log2HTML extends LogBase implements ILogger
     	{
     		FunctionPass++;
     	}
-    	*/
 	}
 
 
 	public void LogFunctionEndDebug( Boolean fpb_Return )
 	{
-		/*
 		LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	myLog.myDuration.StopTimer();
+    	myLog.myDuration.stopTimer();
     	
     	LogFunctionDebug myLogFunction = (LogFunctionDebug)myLog;
     	myLogFunction.setReturn( fpb_Return.toString());
@@ -202,16 +197,14 @@ public class Log2HTML extends LogBase implements ILogger
     	{
     		FunctionPass++;
     	}
-    	*/
 	}
 	
 
 	public void LogFunctionEnd(Boolean Return)
     {
-		/*
 		LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	myLog.myDuration.StopTimer();
+    	myLog.myDuration.stopTimer();
     	
     	LogFunction myLogFunction = (LogFunction)myLog;
     	myLogFunction.setReturn( Return.toString());
@@ -220,16 +213,14 @@ public class Log2HTML extends LogBase implements ILogger
     	{
     		FunctionPass++;
     	}
-    	*/
     }
 
 
 	public void LogFunctionEnd( String fps_Return )
 	{
-		/*
 		LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	myLog.myDuration.StopTimer();
+    	myLog.myDuration.stopTimer();
     	
     	LogFunction myLogFunction = (LogFunction)myLog;
     	myLogFunction.setReturn( fps_Return);
@@ -238,16 +229,14 @@ public class Log2HTML extends LogBase implements ILogger
     	{
     		FunctionPass++;
     	}
-    	*/
 	}
 
 	
 	public void LogFunctionEndDebug( String fps_Return )
 	{
-		/*
 		LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	myLog.myDuration.StopTimer();
+    	myLog.myDuration.stopTimer();
     	
     	LogFunctionDebug myLogFunction = (LogFunctionDebug)myLog;
     	myLogFunction.setReturn( fps_Return);
@@ -256,16 +245,14 @@ public class Log2HTML extends LogBase implements ILogger
     	{
     		FunctionPass++;
     	}
-    	*/
     }
 
 	
 	public void LogFunctionEnd( List<String> fps_Return )
 	{
-		/*
 		LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	myLog.myDuration.StopTimer();
+    	myLog.myDuration.stopTimer();
     	
     	LogFunction myLogFunction = (LogFunction)myLog;
     	
@@ -276,15 +263,13 @@ public class Log2HTML extends LogBase implements ILogger
     	{
     		FunctionPass++;
     	}
-    	*/
 	}
 
 	public void LogFunctionEndDebug( List<String> fps_Return )
 	{
-		/*
 		LogBase myLog = Pointer2LogBaseStack.pop();
     	// Timer Stoppen...
-    	myLog.myDuration.StopTimer();
+    	myLog.myDuration.stopTimer();
     	
     	LogFunctionDebug myLogFunction = (LogFunctionDebug)myLog;
     	
@@ -295,7 +280,6 @@ public class Log2HTML extends LogBase implements ILogger
     	{
     		FunctionPass++;
     	}
-    	*/
 	}
 
 	
