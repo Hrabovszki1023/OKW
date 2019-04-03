@@ -125,11 +125,13 @@ public class FrmSeChrome extends SeBrowserWindow
                  //rt.exec("killall chromedriver");
                  LOG.LogPrint( "after linux/osx pkill -f Chrome " );
              } 
+             
              LOG.LogPrint( "before Thread.sleep( 3000 );" );
-             Thread.sleep( 3000 );
+             //Thread.sleep( 3000 );
              LOG.LogPrint( "after Thread.sleep( 3000 );" );
         }
-        catch (InterruptedException | IOException e)
+        // catch (InterruptedException | IOException e)
+       catch ( IOException e)
         {
             LOG.LogPrint( "before catch (InterruptedException | IOException e)" );
             // TODO Auto-generated catch block
