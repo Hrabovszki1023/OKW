@@ -125,8 +125,9 @@ public class FrmSeChrome extends SeBrowserWindow
                  //rt.exec("killall chromedriver");
                  LOG.LogPrint( "after linux/osx pkill -f Chrome " );
              } 
-        
-             Thread.sleep( 1000 );
+             LOG.LogPrint( "before Thread.sleep( 3000 );" );
+             Thread.sleep( 3000 );
+             LOG.LogPrint( "after Thread.sleep( 3000 );" );
         }
         catch (InterruptedException | IOException e)
         {
