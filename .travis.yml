@@ -1,8 +1,8 @@
 language: java
-dist: xenial
+# dist: xenial
 
 # This will run on Travis' 'new' container-based infrastructure
-sudo: false
+# sudo: false
 
 # Blacklist
 branches:
@@ -11,6 +11,14 @@ branches:
     
 jdk:
   - openjdk8
+
+addons:  
+  chrome: stable
+  apt:
+    packages:
+      - texlive-latex-base
+      - perl
+      - graphviz
 
 # Environment variables
 env:
@@ -35,13 +43,6 @@ env:
     - TESTCASE="okw.SeButton.SeButton_EN_Chrome_Test"
       Package="se"
     
-addons:  
-  chrome: stable
-  apt:
-    packages:
-      - texlive-latex-base
-      - perl
-      - graphviz
       
 # before_install:
   
