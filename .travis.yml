@@ -38,6 +38,8 @@ env:
       Package="core"
     - TESTCASE="okw.AllTests"
       Package="core"
+    - TESTCASE="okw.parser.OKW_VisitorTest"
+      Package="core"
     - TESTCASE="okw.log.log2html.Log2HTMLCounterTest"
       Package="log2html"
     - TESTCASE="okw.log.log2html.Log2HTMLTest"
