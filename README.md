@@ -8,8 +8,6 @@
 
 <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png" width="150px" height="78px" />
 
-<img src="https://codecov.io/gh/Hrabovszki1023/OKW/commit/72cdbb8e5173b36b915d373688e89228154debd4/graphs/sunburst.svg"/>
-
 # OKW
 
 OKW - OpenKeyWord is a powerful extension to your existing test-framework such as 
@@ -141,7 +139,11 @@ public class frmCalculator extends SeBrowserChild {
   }
 }
 ```
+## Codecovereg
 
+<img src="https://codecov.io/gh/Hrabovszki1023/OKW/commit/72cdbb8e5173b36b915d373688e89228154debd4/graphs/sunburst.svg"/>
+
+* https://codecov.io/gh/Hrabovszki1023/OKW/commit/72cdbb8e5173b36b915d373688e89228154debd4/graphs/sunburst
 
 ## The Testcase with OKW Keywords
 
