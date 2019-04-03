@@ -122,7 +122,7 @@ public class FrmSeChrome extends SeBrowserWindow
              {
                  LOG.LogPrint( "before linux/osx pkill -f Chrome " );
                  rt.exec("pkill -f Chrome");
-                 rt.exec("killall chromedriver");
+                 //rt.exec("killall chromedriver");
                  LOG.LogPrint( "after linux/osx pkill -f Chrome " );
              } 
         
