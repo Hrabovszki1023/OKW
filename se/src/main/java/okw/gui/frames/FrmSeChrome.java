@@ -98,15 +98,15 @@ public class FrmSeChrome extends SeBrowserWindow
 
     public void StopApp()
     {
-        this.LogFunctionStart( "StopApp()" );
+        LOG.LogFunctionStart( "StopApp()" );
         
-        LOG.LogPass( "befor driver.close( )" );
+        LOG.LogPrint( "before driver.close( )" );
         SeDriver.getInstance().driver.close();
-        LOG.LogPass( "after driver.close( )" );
+        LOG.LogPrint( "after driver.close( )" );
         
-        LOG.LogPass( "befor driver.quit( )" );
+        LOG.LogPrint( "before driver.quit( )" );
         SeDriver.getInstance().driver.quit();
-        LOG.LogPass( "after driver.quit( )" );
+        LOG.LogPrint( "after driver.quit( )" );
         
         try
         {    
@@ -114,28 +114,35 @@ public class FrmSeChrome extends SeBrowserWindow
         
              if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1)
              {
+                 LOG.LogPrint( "before windows taskkill Chrome " );
                  rt.exec("taskkill Chrome");
+                 LOG.LogPrint( "after windows taskkill Chrome " );
              }
              else
              {
+                 LOG.LogPrint( "before linux/osx pkill -f Chrome " );
                  rt.exec("pkill -f Chrome");
                  rt.exec("killall chromedriver");
+                 LOG.LogPrint( "after linux/osx pkill -f Chrome " );
              } 
         
              Thread.sleep( 1000 );
         }
         catch (InterruptedException | IOException e)
         {
+            LOG.LogPrint( "before catch (InterruptedException | IOException e)" );
             // TODO Auto-generated catch block
             e.printStackTrace();
+            LOG.LogPrint( "after catch (InterruptedException | IOException e)" );
         }
         finally
         {
-            this.LogFunctionEnd();
+            LOG.LogPrint( "finaly.. " );
+            LOG.LogFunctionEnd();
         }
     }
     
-    @Override
+    /*@Override
     protected void finalize() throws Throwable
     {
         Runtime rt = Runtime.getRuntime();
@@ -155,5 +162,6 @@ public class FrmSeChrome extends SeBrowserWindow
 
         super.finalize();
     }
+    */
     
 }
