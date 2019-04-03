@@ -2,6 +2,8 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e53cf4dc539d4aac9c1f29b7320d28a8)](https://www.codacy.com/app/Hrabovszki1023/OKW?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Hrabovszki1023/OKW&amp;utm_campaign=Badge_Grade)
 
+[![codecov](https://codecov.io/gh/Hrabovszki1023/OKW/branch/master/graph/badge.svg)](https://codecov.io/gh/Hrabovszki1023/OKW)
+
 [![MV OKW Se](https://maven-badges.herokuapp.com/maven-central/de.openkeyword/se/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.openkeyword/se)
 
 [![MV OKW log2html](https://maven-badges.herokuapp.com/maven-central/de.openkeyword/log2html/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.openkeyword/log2html)
