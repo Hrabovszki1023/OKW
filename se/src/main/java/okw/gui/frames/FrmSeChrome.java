@@ -82,7 +82,6 @@ public class FrmSeChrome extends SeBrowserWindow
                 }
             }
 
-            LOG.LogPrint( "System Property: webdriver.chrome.driver='" + System.getProperty( "os.name" ) + "'" );
 
             SeDriver.getInstance().driver = new ChromeDriver();
         }
@@ -99,41 +98,46 @@ public class FrmSeChrome extends SeBrowserWindow
 
     public void StopApp()
     {
+        this.LogFunctionStart( "StopApp()" );
+        
+        LOG.LogPass( "befor driver.close( )" );
         SeDriver.getInstance().driver.close();
+        LOG.LogPass( "after driver.close( )" );
+        
+        LOG.LogPass( "befor driver.quit( )" );
         SeDriver.getInstance().driver.quit();
+        LOG.LogPass( "after driver.quit( )" );
         
+        try
+        {    
+             Runtime rt = Runtime.getRuntime();
         
-        try {
-            
-        Runtime rt = Runtime.getRuntime();
+             if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1)
+             {
+                 rt.exec("taskkill Chrome");
+             }
+             else
+             {
+                 rt.exec("pkill -f Chrome");
+                 rt.exec("killall chromedriver");
+             } 
         
-        if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1)
-        {
-            rt.exec("taskkill Chrome");
-        }
-        else
-        {
-            rt.exec("pkill -f Chrome");
-            rt.exec("killall chromedriver");
-        } 
-        Thread.sleep( 1000 );
-
+             Thread.sleep( 1000 );
         }
         catch (InterruptedException | IOException e)
         {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-finally
-{
-    }
-
+        finally
+        {
+            this.LogFunctionEnd();
+        }
     }
     
     @Override
     protected void finalize() throws Throwable
     {
-        
         Runtime rt = Runtime.getRuntime();
         
         if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1)
@@ -142,9 +146,11 @@ finally
         }
         else
         {
+            LOG.LogPrint( "Enviroment Variable 'OKWChromedriverPath' is not set!" );
             rt.exec("pkill -f Chrome");
             rt.exec("killall chromedriver");
-        } 
+        }
+        
         Thread.sleep( 1000 );
 
         super.finalize();
