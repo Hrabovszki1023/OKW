@@ -25,7 +25,8 @@ import org.junit.runners.Suite.SuiteClasses;
   OKW_Helper_StringSplitTest.class,
   OKW_HelperTest.class,
   OKW_IniTest.class,
-  OKW_XmlReaderTest.class } )
+  OKW_XmlReaderTest.class,
+  fourTestLocatorTest.class} )
 
 public class AllTests
 {
