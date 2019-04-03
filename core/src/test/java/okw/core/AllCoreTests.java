@@ -59,6 +59,7 @@ import org.junit.runners.Suite.SuiteClasses;
   EN_VerifyCaption_OKWVerifyingFailsException_Test.class,
   EN_VerifyExists_OKWVerifyingFailsException_Test.class,
   EN_VerifyLabel_OKWVerifyingFailsException_Test.class,
+  EN_VerifyMaxLength_OKWVerifyingFailsException_Test.class,
   EN_VerifyPlaceholder_OKWVerifyingFailsException_Test.class,
   EN_VerifySelectedValue_OKWVerifyingFailsException_Test.class,
   EN_VerifyTablecellValue_OKWVerifyingFailsException_Test.class,
