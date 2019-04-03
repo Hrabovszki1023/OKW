@@ -49,7 +49,7 @@ env:
   
 install: 
   # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
-  - wget -N http://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip -P ~/
+  - wget -N http://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip -P ~/
   - unzip ~/chromedriver_linux64.zip -d ~/
   - rm ~/chromedriver_linux64.zip
   - sudo mv -f ~/chromedriver /usr/local/share/
