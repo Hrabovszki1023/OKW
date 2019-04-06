@@ -21,10 +21,8 @@ public class Log2HTMLCounterTest {
 	@Test
 	public void tcTestcase_Normal_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/_Log2HTMLCounterTest-tcTestcase_Normal_Test.html" );
-				
+		Log2HTML myLog = new Log2HTML( "target/Log2HTMLCounterTest-tcTestcase_Normal_Test.html" );
+						
 		myLog.LogTestcaseStart( "tcTestcase_Normal_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
@@ -62,10 +60,8 @@ public class Log2HTMLCounterTest {
 	@Test
 	public void tcTestcase_Aborted_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_Aborted_Test.html" );
-				
+		Log2HTML myLog = new Log2HTML("target/Log2HTMLCounterTest-tcTestcase_Aborted_Test.html");
+						
 		myLog.LogTestcaseStart( "tcTestcase_Aborted_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
@@ -101,10 +97,8 @@ public class Log2HTMLCounterTest {
 	@Test
 	public void tcTestcase_KeyWordNormal_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_KeyWordNormal_Test.html" );
-				
+		Log2HTML myLog = new Log2HTML("target/Log2HTMLCounterTest-tcTestcase_KeyWordNormal_Test.html");
+						
 		myLog.LogTestcaseStart( "tcTestcase_KeyWordNormal_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
@@ -139,10 +133,8 @@ public class Log2HTMLCounterTest {
 	@Test
 	public void tcTestcase_KeyWordAborted_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_KeyWordAborted_Test.html" );
-				
+		Log2HTML myLog = new Log2HTML( "target/Log2HTMLCounterTest-tcTestcase_KeyWordAborted_Test.html" );
+						
 		myLog.LogTestcaseStart( "tcTestcase_KeyWordAborted_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");

@@ -669,16 +669,15 @@ public class Log2HTML extends LogBase implements ILogger
 	
 	public void ResOpenListDebug( String fps_ListHeader )
 	{
-		/*
 		AllCount++;
 		
     	LogBase myLog = new ResultListDebug( Pointer2LogBaseStack.peek(), fps_ListHeader);
 
     	// Timer starten
-    	myLog.myDuration.StartTimer();
+    	myLog.myDuration.startTimer();
     	
+        Pointer2LogBaseStack.peek().myLogs.add(myLog);
     	Pointer2LogBaseStack.push(myLog);
-    	*/
 	}
 
 	
@@ -716,10 +715,9 @@ public class Log2HTML extends LogBase implements ILogger
 	
 	public void ResCloseListDebug()
 	{
-		/*
 		LogBase myLog = Pointer2LogBaseStack.peek();
     	// Timer Stoppen...
-    	myLog.myDuration.StopTimer();
+    	myLog.myDuration.stopTimer();
     	
     	@SuppressWarnings( "unused" )
 		ResultListDebug myResultList = (ResultListDebug)myLog;
@@ -730,7 +728,6 @@ public class Log2HTML extends LogBase implements ILogger
     	}
 
 		Pointer2LogBaseStack.pop();
-		*/
     }
 
 
