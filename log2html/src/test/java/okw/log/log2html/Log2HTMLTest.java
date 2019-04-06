@@ -1,5 +1,8 @@
 package okw.log.log2html;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,8 +39,8 @@ public class Log2HTMLTest {
 	@Test
 	public void TC_LogPrintDebug_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "target/LogPrintDebug_Test.html" );
+		Log2HTML myLog = new Log2HTML( "target/LogPrintDebug_Test.html" );
+	    myLog.setDebugMode( true );
 				
 		myLog.LogTestcaseStart( "TC_LogPrintDebug_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -70,16 +73,18 @@ public class Log2HTMLTest {
 	}
 
 	@Test
-	public void TC_ResultListDebug_Test()
+	public void TC_ResultListDebug_Test( )
 	{	
-		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "target/ResultListDebug_Test.html" );
+		Log2HTML myLog = new Log2HTML("target/ResultListDebug_Test.html");
+		myLog.setDebugMode( true );
 				
 		myLog.LogTestcaseStart( "TC_ResultListDebug_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.ResOpenListDebug( "ResultOpenListDebug" );
 					myLog.LogPrintDebug( "Print im Schlüsselwort");
 					myLog.LogPrintDebug( "Das hier ist ein weiterern Print-Absatz im Schlüsselwort.");
+					myLog.LogError( "Error" );
+					myLog.LogPass( "Pass" );
 					myLog.ResCloseListDebug();
 				myLog.LogKeyWordEnd();
 			myLog.LogPrintDebug( "Print auf einer Ebene höher...");
@@ -133,6 +138,25 @@ public class Log2HTMLTest {
 		myLog.Result2HTML();
 	}
 	
+	   @Test
+	    public void TC_LogVerify_Test()
+	    {   
+	        Log2HTML myLog = new Log2HTML();
+	        myLog.setHTML_File( "target/LogPrint_Test.html" );
+	                
+	        myLog.LogTestcaseStart( "TC_LogPrint_Test" );
+	            myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+	            
+	            //myLog.LogV
+	            
+	                myLog.LogKeyWordEnd();
+	            myLog.LogPrint( "Print auf einer Ebene höher...");
+	        myLog.LogTestcaseEnd();
+	        
+	        myLog.Result2HTML();
+	    }
+
+	
 	@Test
 	public void TC_LogFunktion_Test() {
 
@@ -140,20 +164,16 @@ public class Log2HTMLTest {
 		myLog.setHTML_File( "target/LogFunktion_Test.html" );
 
 		myLog.LogTestcaseStart( "TC_LogFunktion_Test" );
-		
-		myLog.LogFunctionStart("FunctionName", "String", "Parameter 1");
-		
-		myLog.LogPrint("Das ist ein LogPrint...");
-
-		myLog.LogFunctionEnd();
-
+		    myLog.LogFunctionStart("FunctionName", "String", "Parameter 1");
+		        myLog.LogPrint("Das ist ein LogPrint...");
+		    myLog.LogFunctionEnd();
 		myLog.LogTestcaseEnd();
 
 		myLog.Result2HTML();
 	}
 
 	@Test
-	public void TC_LogFunktion2_Test() {
+	public void TC_LogFunktionErrorWarning_Test() {
 
 		Log2HTML myLog = new Log2HTML();
 		myLog.setHTML_File( "target/LogFunktion2_Test.html" );
@@ -161,6 +181,8 @@ public class Log2HTMLTest {
 		myLog.LogTestcaseStart( "TC_LogFunktion2_Test" );
 		    myLog.LogFunctionStart("FunctionName", "String", "Parameter 1", "String", "Parameter 2");
 		        myLog.LogPrint("Das ist ein LogPrint...");
+		        myLog.LogError( "Error" );
+	            myLog.LogError( "Warning" );
 		    myLog.LogFunctionEnd();
         myLog.LogTestcaseEnd();
 
@@ -170,38 +192,121 @@ public class Log2HTMLTest {
 	@Test
 	public void TC_LogFunktion_ReturnBoolean_Test() {
 
-		Log2HTML myLog = new Log2HTML();
+		Log2HTML myLog = new Log2HTML("target/LogFunktion_ReturnBoolean_Test.html");
 		myLog.setHTML_File( "target/LogFunktion_ReturnBoolean_Test.html" );
 
 		myLog.LogTestcaseStart( "TC_LogFunktion_ReturnBoolean_Test" );
-		
-		myLog.LogFunctionStart("FunctionName", "String", "Parameter 1", "String", "Parameter 2");
-		
-		myLog.LogPrint("Das ist ein LogPrint...");
-
-		myLog.LogFunctionEnd(true);
-
+		    myLog.LogFunctionStart("FunctionName", "String", "Parameter 1", "String", "Parameter 2");
+		        myLog.LogPrint("Das ist ein LogPrint...");
+		    myLog.LogFunctionEnd(true);
 		myLog.LogTestcaseEnd();
 
 		myLog.Result2HTML();
 	}
 
+	   @Test
+	    public void TC_LogFunktionDebug_ReturnBoolean_Test() {
+
+	        Log2HTML myLog = new Log2HTML("target/LogFunktionDebug_ReturnBoolean_Test.html");
+	        myLog.setHTML_File( "target/LogFunktion_ReturnBoolean_Test.html" );
+	        myLog.setDebugMode( true ); 
+
+	        myLog.LogTestcaseStart( "TC_LogFunktionDebug_ReturnBoolean_Test" );
+	            myLog.LogFunctionStartDebug( "FunctionName", "String", "Parameter 1", "String", "Parameter 2");
+	                myLog.LogPrintDebug("Das ist ein LogPrint...");
+	            myLog.LogFunctionEndDebug(true);
+	        myLog.LogTestcaseEnd();
+
+	        myLog.Result2HTML();
+	    }
+
+
+	    @Test
+	    public void TC_LogFunktion_ReturnString_Test() {
+
+	        Log2HTML myLog = new Log2HTML("target/LogFunktion_ReturnString_Test.html");
+
+	        myLog.LogTestcaseStart( "TC_LogFunktion_ReturnString_Test" );
+	            myLog.LogFunctionStart("FunctionName", "String", "Parameter 1", "String", "Parameter 2");
+	                myLog.LogPrint("Das ist ein LogPrint...");
+	            myLog.LogFunctionEnd( "Return String" );
+	        myLog.LogTestcaseEnd();
+
+	        myLog.Result2HTML();
+	    }
+
+	       @Test
+	        public void TC_LogFunktionDebug_ReturnString_Test() {
+
+	            Log2HTML myLog = new Log2HTML("target/LogFunktionDebug_ReturnString_Test.html");
+	            myLog.setDebugMode( true ); 
+
+	            myLog.LogTestcaseStart( "TC_LogFunktionDebug_ReturnString_Test" );
+	                myLog.LogFunctionStartDebug( "FunctionName", "String", "Parameter 1", "String", "Parameter 2");
+	                    myLog.LogPrintDebug("Das ist ein LogPrintDebug...");
+	                myLog.LogFunctionEndDebug( "Return String" );
+	            myLog.LogTestcaseEnd();
+
+	            myLog.Result2HTML();
+	        }	   
+	   
+
+	        @Test
+	        public void TC_LogFunktion_ReturnListString_Test() {
+
+	            Log2HTML myLog = new Log2HTML("target/LogFunktion_ReturnListString_Test.html");
+	            ArrayList<String> returnListString= new ArrayList<String>();
+	            
+	            returnListString.add( "String 1" );
+                returnListString.add( "String 2" );
+                returnListString.add( "String 3" );
+                
+	            myLog.LogTestcaseStart( "TC_LogFunktion_ReturnListString_Test" );
+	                myLog.LogFunctionStart("FunctionName", "String", "Parameter 1", "String", "Parameter 2");
+	                    myLog.LogPrint("Das ist ein LogPrint...");
+	                myLog.LogFunctionEnd( returnListString );
+	            myLog.LogTestcaseEnd();
+
+	            myLog.Result2HTML();
+	        }
+
+	           @Test
+	            public void TC_LogFunktionDebug_ReturnListString_Test() {
+
+	                ArrayList<String> returnListString= new ArrayList<String>();
+
+	                Log2HTML myLog = new Log2HTML("target/LogFunktionDebug_ReturnListString_Test.html");
+	                myLog.setDebugMode( true ); 
+	                
+	                returnListString.add( "String 1" );
+	                returnListString.add( "String 2" );
+	                returnListString.add( "String 3" );
+
+	                myLog.LogTestcaseStart( "TC_LogFunktionDebug_ReturnListString_Test" );
+	                    myLog.LogFunctionStartDebug( "FunctionName", "String", "Parameter 1", "String", "Parameter 2");
+	                        myLog.LogPrintDebug("Das ist ein LogPrint...");
+	                    myLog.LogFunctionEndDebug( returnListString );
+	                myLog.LogTestcaseEnd();
+
+	                myLog.Result2HTML();
+	            }      
 	@Test
 	public void TC_LogFunktionDebug_Test() {
 
-		Log2HTML myLog = new Log2HTML();
-		myLog.setHTML_File( "target/LogFunktionDebug_Test.html" );
+		Log2HTML myLog = new Log2HTML("target/LogFunktionDebug_Test.html");
+		myLog.setDebugMode( true );
 
 		myLog.LogTestcaseStart( "TC_LogFunktionDebug_Test" );
 		
-		myLog.LogFunctionStartDebug("FunctionName", "String", "Parameter 1");
+		    myLog.LogFunctionStartDebug("FunctionName", "String", "Parameter 1");
 		
-		myLog.LogPrintDebug("Das ist ein LogPrint...");
+		    myLog.LogPrintDebug("Das ist ein LogPrint...");
 		
 		myLog.ResOpenListDebug( "ResultOpenListDebug" );
 		myLog.LogPrintDebug( "Print im Schlüsselwort");
 		myLog.LogPrintDebug( "Das hier ist ein weiterern Print-Absatz im Schlüsselwort.");
 		myLog.LogError( "Fehler" );
+		myLog.LogWarning( "Warning" );
 		myLog.ResCloseListDebug();
 
 		myLog.LogFunctionEndDebug();
