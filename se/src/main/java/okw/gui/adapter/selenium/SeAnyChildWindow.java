@@ -89,7 +89,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      */
     protected String        iframeID = null;
 
-    public String get_iframeID()
+    public String get_iframeID() throws OKWGUIObjectNotFoundException
     {
         this.MyLogger.LogFunctionStartDebug( this.getClass().getSimpleName() + ".get_iframeID" );
 
@@ -221,7 +221,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  - Methode ist Selenium spezifisch.
     *  - Elementare Funktion, muss hier defiert werden.
     *  - Es wird nicht auf das Objekt gewarten!
-    *  - Es wird nur ein eizigesmal die Existenz geprüft.
+    *  - Es wird nur ein eiziges Mal die Existenz geprüft.
     *  - Es wird keine Ausnahme ausgelöst, wenn das Object nicht vorhanden ist.
     *  - Wenn Das Objekt nicht eindeitig ist wird false Zurückgeliefert.
     *  

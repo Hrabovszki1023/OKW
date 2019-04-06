@@ -69,9 +69,10 @@ public class OKWFrameObjectMethodNotImplemented extends RuntimeException
 
 	public OKWFrameObjectMethodNotImplemented()
     {
+	    super();
     }
 
-    public OKWFrameObjectMethodNotImplemented(String message)
+    public OKWFrameObjectMethodNotImplemented( String message )
     {
     	super(message);
     }

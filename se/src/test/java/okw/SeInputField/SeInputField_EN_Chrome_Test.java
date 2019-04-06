@@ -28,10 +28,10 @@ public class SeInputField_EN_Chrome_Test extends SeInputField_EN_Test
 
         //
         myLog2HTML = new Log2HTML();
-        myLog2HTML.setHTML_File( "target/SeInputField_EN_Chrome_Test.html" );
+        myLog2HTML.setHTML_File( "target/SeInputField_Chrome_Test.html" );
 
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(false);
+        Logger_Sngltn.getInstance().setDebugMode(true);
         
         
 	}
