@@ -161,7 +161,7 @@ public class Log2HTML extends LogBase implements ILogger
     	@SuppressWarnings( "unused" )
 		LogFunction myLogFunction = (LogFunction)myLog;
     	
-    	if ( (!myLog.bError)  || (!myLog.bException))
+        if ( !(myLog.bError || myLog.bException) )
     	{
     		FunctionPass++;
     	}
@@ -177,7 +177,7 @@ public class Log2HTML extends LogBase implements ILogger
     	@SuppressWarnings( "unused" )
 		LogFunctionDebug myLogFunction = (LogFunctionDebug)myLog;
     	
-    	if ( (!myLog.bError)  || (!myLog.bException))
+        if ( !(myLog.bError || myLog.bException) )
     	{
     		FunctionPass++;
     	}
@@ -193,8 +193,8 @@ public class Log2HTML extends LogBase implements ILogger
     	LogFunctionDebug myLogFunction = (LogFunctionDebug)myLog;
     	myLogFunction.setReturn( fpb_Return.toString());
 
-    	if ( (!myLog.bError)  || (!myLog.bException))
-    	{
+        if ( !(myLog.bError || myLog.bException) )
+        {
     		FunctionPass++;
     	}
 	}
@@ -209,7 +209,7 @@ public class Log2HTML extends LogBase implements ILogger
     	LogFunction myLogFunction = (LogFunction)myLog;
     	myLogFunction.setReturn( Return.toString());
 
-    	if ( (!myLog.bError)  || (!myLog.bException))
+        if ( !(myLog.bError || myLog.bException) )
     	{
     		FunctionPass++;
     	}
@@ -225,7 +225,7 @@ public class Log2HTML extends LogBase implements ILogger
     	LogFunction myLogFunction = (LogFunction)myLog;
     	myLogFunction.setReturn( fps_Return);
 
-    	if ( (!myLog.bError)  || (!myLog.bException))
+        if ( !(myLog.bError || myLog.bException) )
     	{
     		FunctionPass++;
     	}
@@ -241,7 +241,7 @@ public class Log2HTML extends LogBase implements ILogger
     	LogFunctionDebug myLogFunction = (LogFunctionDebug)myLog;
     	myLogFunction.setReturn( fps_Return);
 
-    	if ( (!myLog.bError)  || (!myLog.bException))
+        if ( !(myLog.bError || myLog.bException) )
     	{
     		FunctionPass++;
     	}
@@ -259,7 +259,7 @@ public class Log2HTML extends LogBase implements ILogger
     	// TODO: ein ResultListstring hier einhängen
     	myLogFunction.setReturn( fps_Return.toString());
 
-    	if ( (!myLog.bError)  || (!myLog.bException))
+   	    if ( !(myLog.bError || myLog.bException) )
     	{
     		FunctionPass++;
     	}
@@ -276,7 +276,7 @@ public class Log2HTML extends LogBase implements ILogger
     	// TODO: ein ResultListstring hier einhängen
     	myLogFunction.setReturn( fps_Return.toString());
 
-    	if ( (!myLog.bError)  || (!myLog.bException))
+    	if ( !(myLog.bError || myLog.bException) )
     	{
     		FunctionPass++;
     	}

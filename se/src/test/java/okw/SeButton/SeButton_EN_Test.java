@@ -640,6 +640,8 @@ import org.junit.rules.TestName;
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/button/button.htm");
                 
+                // EN.VerifyValue("URL", "http://test.openkeyword.de/button/button.htm");
+                 
                 EN.SelectWindow("Button");
                 
                 EN.VerifyCaptionREGX("Button 1", "Button 1");

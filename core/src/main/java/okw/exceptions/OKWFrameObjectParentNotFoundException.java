@@ -61,14 +61,11 @@ package okw.exceptions;
 
 public class OKWFrameObjectParentNotFoundException extends RuntimeException 
 {
-
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 5821431817030614044L;
 
 	public OKWFrameObjectParentNotFoundException()
     {
+	    super();
     }
 
     public OKWFrameObjectParentNotFoundException(String message)

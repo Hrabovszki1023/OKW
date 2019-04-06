@@ -1068,7 +1068,7 @@ public class OK implements IOKW_State
      */
     public void SelectWindow( String FN ) throws Exception
     {
-        Log.LogFunctionStartDebug( "SelectWindow", "FN", FN );
+        Log.LogFunctionStartDebug( "OK.SelectWindow", "FN", FN );
 
         try
         {
@@ -1080,7 +1080,7 @@ public class OK implements IOKW_State
         }
         finally
         {
-            Log.LogFunctionEndDebug();
+            Log.LogFunctionEndDebug(  );
         }
     }
 

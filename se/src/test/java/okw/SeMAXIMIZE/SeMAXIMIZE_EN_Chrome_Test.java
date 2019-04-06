@@ -28,7 +28,7 @@ public class SeMAXIMIZE_EN_Chrome_Test extends SeMAXIMIZE_EN_Test
 
         myLog2HTML = new Log2HTML("target/OKWResult_SeMAXIMIZE__Chrome_Test.html");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(false);
+        Logger_Sngltn.getInstance().setDebugMode(true);
 	}
 
 	@AfterClass

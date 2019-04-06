@@ -826,7 +826,7 @@ public class OKW_CurrentObject_Sngltn
             }
             else
             {
-                Log.LogFunctionEndDebug();
+                Log.LogFunctionEndDebug( );
             }
         }
         return lvoReturn;
@@ -980,7 +980,7 @@ public class OKW_CurrentObject_Sngltn
      */
     private void updateObject() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
     {
-        Log.LogFunctionStartDebug( "CurrentObject.UpdateObject" );
+        Log.LogFunctionStartDebug( "CurrentObject.updateObject" );
         try
         {
             if ( "".equals( cvsChildFN ) )
@@ -1006,7 +1006,7 @@ public class OKW_CurrentObject_Sngltn
         }
         finally
         {
-            Log.LogFunctionEndDebug();
+            Log.LogFunctionEndDebug( );
         }
     }
 

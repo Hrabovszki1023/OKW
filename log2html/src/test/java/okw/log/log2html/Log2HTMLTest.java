@@ -159,14 +159,10 @@ public class Log2HTMLTest {
 		myLog.setHTML_File( "target/LogFunktion2_Test.html" );
 
 		myLog.LogTestcaseStart( "TC_LogFunktion2_Test" );
-		
-		myLog.LogFunctionStart("FunctionName", "String", "Parameter 1", "String", "Parameter 2");
-		
-		myLog.LogPrint("Das ist ein LogPrint...");
-
-		myLog.LogFunctionEnd();
-
-		myLog.LogTestcaseEnd();
+		    myLog.LogFunctionStart("FunctionName", "String", "Parameter 1", "String", "Parameter 2");
+		        myLog.LogPrint("Das ist ein LogPrint...");
+		    myLog.LogFunctionEnd();
+        myLog.LogTestcaseEnd();
 
 		myLog.Result2HTML();
 	}

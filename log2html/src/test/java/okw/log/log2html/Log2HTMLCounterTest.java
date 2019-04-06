@@ -466,9 +466,9 @@ public class Log2HTMLCounterTest {
 		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
 		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
 		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
+		assertEquals( "1".toString(), LogBase.FunctionCount.toString() );
 		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
+		assertEquals( "1".toString(), LogBase.FunctionFail.toString() );
 
 		assertEquals( "1".toString(), LogBase.ErrorCount.toString() );
 		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
@@ -620,9 +620,9 @@ public class Log2HTMLCounterTest {
 		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
 		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
 		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
+		assertEquals( "1".toString(), LogBase.FunctionCount.toString() );
 		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
+		assertEquals( "1".toString(), LogBase.FunctionFail.toString() );
 	
 		assertEquals( "1".toString(), LogBase.PassedCount.toString() );
 		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
@@ -760,7 +760,13 @@ public class Log2HTMLCounterTest {
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
 				myLog.LogFunctionStartDebug("Funktion_1", "P1=", "P1");
-				myLog.LogException("Exception 1");
+                   myLog.LogPrint( "Print im Schlüsselwort");
+                   myLog.LogPass( "Pass" );
+				   myLog.LogException("Exception 1");
+                //myLog.LogFunctionEndDebug();
+            //myLog.LogKeyWordEnd();
+        //myLog.LogTestcaseEnd();
+                
 		
 		myLog.Result2HTML();
 			
@@ -778,14 +784,14 @@ public class Log2HTMLCounterTest {
 		
 		assertEquals( "1".toString(), LogBase.FunctionCount.toString() );
 		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
+		assertEquals( "1".toString(), LogBase.FunctionFail.toString() );
 	
-		assertEquals( "0".toString(), LogBase.PassedCount.toString() );
+		assertEquals( "1".toString(), LogBase.PassedCount.toString() );
 		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
 		assertEquals( "1".toString(), LogBase.ExceptionCount.toString() );
 		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
 		//assertEquals( "0".toString(), LogBase.Passed.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
+		assertEquals( "2".toString(), LogBase.PrintCount.toString() );				
 	}
 
 }

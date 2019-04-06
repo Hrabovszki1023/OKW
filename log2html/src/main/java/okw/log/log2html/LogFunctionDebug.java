@@ -33,7 +33,11 @@ public class LogFunctionDebug extends LogBase
 	
 	protected void SetFail()
 	{
-		FunctionFail++;
+	    //Nur Inkrementieren wenn dieser testfall noch nicht als Fail markiert wurde.
+        if(!(this.bError || this.bException) )
+        {
+            FunctionFail++;
+        }
 	}
 
 	protected void SetPass()

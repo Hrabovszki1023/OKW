@@ -186,7 +186,7 @@ public class SeDriver
      * Methode holt mit getIframesID() alle iframe-s der URL und durchsucht diese nach dem gegeben Locator fpsLocator.
      *
      * \note Einschränkung: Es wird aktuell nicht geprüft, ob ein Locator in mehrerern iFrame-s zu finden ist.
-     * Die Suche wird beendet sobald ein GUI-Objekt für den Lokator gefunden wurd
+     * Die Suche wird beendet sobald ein GUI-Objekt für den Lokator gefunden wurde
      *
      * @param fpsLocator Loacator des GUI-Objektes welches gesucht werden soll.
      * @return Frame ID des iframe´s, in dem sich das Objekt mit dem gegebene Locator fpsLocator befindet
@@ -198,12 +198,17 @@ public class SeDriver
      * @return
      * \~
      * @author Zoltán Hrabovszki
+     * @throws Exception 
      * @date 2019-02-23
      */
     public String getFrameID4Locator( String fpsLocator )
     {
         String return_iFrame = null;
         WebElement myWebElement = null;
+        
+        // Merkt sich die "gefundenen" Ausnahme in der Schleife
+        // und löst diesen ggf. nach der schleife aus.
+        Exception ExceptionFound = null;
 
         MyLogger.LogFunctionStartDebug( "SeDriver.getFrameID4Locator", "fpsLocator", fpsLocator );
         
@@ -213,7 +218,9 @@ public class SeDriver
         iframeIDs.add( currentiframeID );
         iframeIDs.addAll( getIframesID() );
 
-        // iframes(ID) jeweils nach dem GUI-Objekt durchsuchen. 
+        MyLogger.LogPrintDebug( "Number of iFrames found: " + ((Integer)iframeIDs.size()).toString() );
+        
+        // iframes(ID) jeweils nach dem GUI-Objekt durchsuchen.
         for ( String iframeID : iframeIDs )
         {
             try
@@ -226,25 +233,53 @@ public class SeDriver
                     break;
                 }
             }
-            catch (OKWGUIObjectNotFoundException e)
+            catch ( OKWGUIObjectNotFoundException e )
             {
+                ExceptionFound = e;
                 continue;
             }
-            finally
-            {
-                MyLogger.LogFunctionEndDebug();
-            }
-            
+            catch ( OKWGUIObjectNotUniqueException e )
+            {   // Hier wird z.B. abgefangen wenn zwei Locatoren
+                ExceptionFound = e;
+                break;
+            }            
+            catch ( Exception e )
+            {   // Other exceptions...
+                
+                ExceptionFound = e;
+                break;
+            }            
         }
 
-        MyLogger.LogFunctionEndDebug( "iFrame: '" + return_iFrame + "'");
+        if ( ExceptionFound instanceof OKWGUIObjectNotFoundException )
+        {
+            MyLogger.LogPrintDebug( "Object not found." );
+            MyLogger.LogFunctionEndDebug( );
+            throw new OKWGUIObjectNotFoundException( ExceptionFound.getMessage() );
+        }
+        else if ( ExceptionFound instanceof OKWGUIObjectNotUniqueException )
+        {
+            MyLogger.LogPrintDebug( "More than one Object found." );
+            MyLogger.LogFunctionEndDebug( );
+            throw new OKWGUIObjectNotUniqueException( ExceptionFound.getMessage() );
+        }
+        else if ( ExceptionFound != null )
+        {
+            MyLogger.LogPrintDebug( "Unknown Exception." );
+            MyLogger.LogFunctionEndDebug( );
+            throw new RuntimeException( ExceptionFound );
+        }
+        else
+        {
+            MyLogger.LogFunctionEndDebug( "iFrame: '" + return_iFrame + "'");            
+        }        
         return return_iFrame;
     }
     
     
     /**
      * \~german
-     * Ermittelt alle iFrames im aktuellen HTML und erstellet eine liste der iFrame-ID´s.
+     * Ermittelt alle iFrames im aktuellen HTML und erstellt eine liste der iFrame-ID´s.
      * @return
      * Liste der gefundenen iFrame-ID´s zur identifikation.
      * 
@@ -259,11 +294,13 @@ public class SeDriver
      */
     public ArrayList<String> getIframesID( )
     {
-        MyLogger.LogFunctionStartDebug( "SeDriver.getIframesID");
         
         ArrayList<String> lvReturn = new ArrayList<String>();
 
-        final List<WebElement> iframes = this.driver.findElements(By.tagName("iframe"));
+        MyLogger.LogFunctionStartDebug( "SeDriver.getIframesID");
+
+        //final
+        List<WebElement> iframes = this.driver.findElements(By.tagName("iframe"));
         
         MyLogger.ResOpenListDebug( "iFrames..." );
         
@@ -322,38 +359,47 @@ public class SeDriver
     {
         WebElement me = null;
         List<WebElement> meme = null;
-        
-        this.MyLogger.LogFunctionStartDebug( "SeDriver.getElement", "fpsFrameID", fpsFrameID, "fpsLocator", fpsLocator );
 
-        // 1. ggf Auf das richtige frame Setzen oder zurück auf default. 
-        this.swichToFrame( fpsFrameID );
-
-        // Element ggf. des richtigen Frames Holen.
-        meme = this.driver.findElements( By.xpath( fpsLocator ) );
-
-        if ( meme.size() == 0 )
+        try
         {
-            String lvsPrintMe = "GUI-Objekt nicht gefunden! IFrame: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
-            this.MyLogger.LogPrint( lvsPrintMe );
+            this.MyLogger.LogFunctionStartDebug( "SeDriver.getElement", "fpsFrameID", fpsFrameID, "fpsLocator", fpsLocator );
 
-            throw new OKWGUIObjectNotFoundException( lvsPrintMe );
+            // 1. ggf Auf das richtige frame Setzen oder zurück auf default. 
+            this.swichToFrame( fpsFrameID );
+
+            // Element ggf. des richtigen Frames Holen.
+            meme = this.driver.findElements( By.xpath( fpsLocator ) );
+
+            if ( meme.size() == 0 )
+            {
+                String lvsPrintMe = "GUI-Objekt nicht gefunden! IFrame: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
+                this.MyLogger.LogPrint( lvsPrintMe );
+
+                throw new OKWGUIObjectNotFoundException( lvsPrintMe );
+            }
+            else if ( meme.size() > 1 )
+            {
+                String lvsPrintMe = "Locator ist nicht eindeutig! IFrame: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
+
+                this.MyLogger.LogWarning( lvsPrintMe );
+
+                throw new OKWGUIObjectNotUniqueException( lvsPrintMe );
+            }
+            else
+            {
+                String lvsPrintMe = "GUI-Objekt gefunden IFrame: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
+                this.MyLogger.LogPrintDebug( lvsPrintMe );
+                me = meme.get( 0 );
+            }
         }
-        else if ( meme.size() > 1 )
+        finally
         {
-            String lvsPrintMe = "Locator ist nicht eindeutig! IFrame: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
-
-            this.MyLogger.LogWarning( lvsPrintMe );
-
-            throw new OKWGUIObjectNotUniqueException( lvsPrintMe );
+            // Logfunction schliessen...
+            if (me != null)
+               this.MyLogger.LogFunctionEndDebug( me.toString() );
+            else
+                this.MyLogger.LogFunctionEndDebug( );       
         }
-        else
-        {
-            String lvsPrintMe = "GUI-Objekt gefunden IFrame: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
-            this.MyLogger.LogPrintDebug( lvsPrintMe );
-            me = meme.get( 0 );
-        }
-        
-        this.MyLogger.LogFunctionEndDebug( me.toString() );
         
         return me;
     }

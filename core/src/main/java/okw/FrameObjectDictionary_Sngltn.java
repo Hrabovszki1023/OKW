@@ -153,7 +153,7 @@ public class FrameObjectDictionary_Sngltn
       }
     }
 
-    Log.LogFunctionEndDebug( "FrameObjectDictionary.getInstance" );
+    Log.LogFunctionEndDebug( );
 
     return Instance;
   }

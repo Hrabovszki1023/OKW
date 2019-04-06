@@ -49,7 +49,6 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
 import okw.log.Logger_Sngltn;
 import okw.LogMessenger;
 import okw.OKW_Const_Sngltn;
-import okw.fourTestLocator;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -102,15 +101,15 @@ public class SeAnyWindow extends AnyWindow
      */
     protected String        iframeID = null;
 
-    public String get_iframeID()
+    public String get_iframeID() 
     {
         this.MyLogger.LogFunctionStartDebug( this.getClass().getSimpleName() + ".get_iframeID" );
 
         // Wenn die iframeID 
         if ( iframeID == null )
         {
-            try
-            {   
+           try
+           {   
                 String myLocator = this.getLocator();
                 
                 this.MyLogger.LogPrintDebug( "Find iframe ID for the Locator: '" + myLocator + "'..." );
@@ -126,7 +125,10 @@ public class SeAnyWindow extends AnyWindow
                 this.MyLogger.LogFunctionEndDebug( iframeID );
             }
         }
-        
+        else
+        {
+            this.MyLogger.LogFunctionEndDebug( iframeID );
+        }
         return iframeID;
     }
 
@@ -243,7 +245,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            this.MyLogger.LogFunctionStartDebug( "getExists" );
+            this.MyLogger.LogFunctionStartDebug( "SeAnyWindow.getExists" );
             
             myLocator = this.getLocator();
 
