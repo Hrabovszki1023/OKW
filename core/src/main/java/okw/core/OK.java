@@ -1778,6 +1778,7 @@ public class OK implements IOKW_State
         }
         catch (Exception e)
         {
+            Log.LogPrint( e.getMessage() );
             this.handleException( e );
         }
         finally
