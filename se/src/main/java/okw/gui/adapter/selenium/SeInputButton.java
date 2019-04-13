@@ -185,14 +185,14 @@ public class SeInputButton extends SeAnyChildWindow
         // ArrayList<String> lvLsReturn = new ArrayList<String>();
         try
         {
-            MyLogger.LogFunctionStartDebug( "GetValue" );
+            LogFunctionStartDebug( "GetValue" );
 
             String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "getValue()" );
             throw new OKWFrameObjectMethodNotImplemented( lvsLM );
         }
         finally
         {
-            MyLogger.LogFunctionEndDebug();
+            LogFunctionEndDebug();
         }
         // return lvLsReturn;
     }

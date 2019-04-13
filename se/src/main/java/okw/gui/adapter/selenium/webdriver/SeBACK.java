@@ -166,7 +166,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
              Boolean lvbReturn = true;
         
              this.LogFunctionStartDebug( "getIsActive" );
-             this.MyLogger.LogPrintDebug( "Allways true" );
+             this.LogPrintDebug( "Allways true" );
              this.LogFunctionEndDebug( lvbReturn );
         
              return lvbReturn;
@@ -276,7 +276,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
             {
                 this.LogFunctionStartDebug( "ClickOn" );
 
-                SeDriver.getInstance().driver.navigate().back();
+                SeDriver.getInstance().getDriver().navigate().back();
             }
             finally
             {

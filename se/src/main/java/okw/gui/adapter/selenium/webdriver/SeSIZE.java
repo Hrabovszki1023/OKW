@@ -121,8 +121,8 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
 
             try
             {
-                Integer Width = SeDriver.getInstance().driver.manage().window().getSize().getWidth();
-                Integer Height = SeDriver.getInstance().driver.manage().window().getSize().getHeight();
+                Integer Width = SeDriver.getInstance().getDriver().manage().window().getSize().getWidth();
+                Integer Height = SeDriver.getInstance().getDriver().manage().window().getSize().getHeight();
                 
                 lvLsReturn.add( Width.toString() );
                 lvLsReturn.add( Height.toString() );
@@ -241,7 +241,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
                 Dimension myDimension = new Dimension(Width, Height);
                 
                 // Set dimension to 
-                SeDriver.getInstance().driver.manage().window().setSize(myDimension);
+                SeDriver.getInstance().getDriver().manage().window().setSize(myDimension);
 
             }
             finally

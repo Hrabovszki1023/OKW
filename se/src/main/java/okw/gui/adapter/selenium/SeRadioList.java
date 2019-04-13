@@ -415,13 +415,13 @@ public class SeRadioList extends SeAnyChildWindow
         Boolean bOK = false;
         try
         {
-            MyLogger.LogFunctionStartDebug( "GetLabel" );
+            this.LogFunctionStartDebug( "GetLabel" );
 
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
             this.WaitForMe();
 
             // 2.schritt nun den Tag-label finden und den Textinhalt ermitteln.
-            WebElement label = SeDriver.getInstance().driver.findElement( By.xpath( this.getLocator() + "//legend" ) );
+            WebElement label = SeDriver.getInstance().getDriver().findElement( By.xpath( this.getLocator() + "//legend" ) );
             lvLsReturn.add( label.getAttribute( "textContent" ) );
             bOK = true;
         }
@@ -429,11 +429,11 @@ public class SeRadioList extends SeAnyChildWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvLsReturn );
+                this.LogFunctionEndDebug( lvLsReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                this.LogFunctionEndDebug();
             }
         }
 

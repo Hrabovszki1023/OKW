@@ -266,9 +266,9 @@ public class SeInputText extends SeAnyChildWindow
     }
 
     
-    public void set__Attribute( WebElement elem, String value )
+    public void set____Attribute( WebElement elem, String value )
     {
-        JavascriptExecutor js = ( JavascriptExecutor ) SeDriver.getInstance().driver;
+        JavascriptExecutor js = ( JavascriptExecutor ) SeDriver.getInstance().getDriver();
 
         String scriptSetAttrValue = "arguments[0].setAttribute(arguments[1],arguments[2])";
 

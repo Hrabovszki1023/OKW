@@ -77,9 +77,9 @@ public class SeBrowserWindow extends SeAnyWindow
     {
         if ( !this.WaitForMe() )
         {
-            this.MyLogger.ResOpenList( "GUI-Object not found..." );
-            this.MyLogger.LogPrint( "Locator: '" + this.getLocator() + "'" );
-            this.MyLogger.ResCloseList();
+            this.ResOpenList( "GUI-Object not found..." );
+            this.LogPrint( "Locator: '" + this.getLocator() + "'" );
+            this.ResCloseList();
 
             throw new OKWGUIObjectNotFoundException( "BrowserChild not found!" );
         }

@@ -54,16 +54,16 @@ import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.exceptions.OKWGUIObjectNotUniqueException;
 import okw.log.Logger_Sngltn;
 
-/**  \brief
-*  Pattern Singelton
-*/
+/**
+ *  Pattern Singelton
+ */
 public class SeDriver
 {
 
     // Get the instance of Logger_Sngltn
     protected Logger_Sngltn MyLogger        = Logger_Sngltn.getInstance();
 
-    public WebDriver        driver = null;
+    private WebDriver        driver = null;
 
     /** 
      * ID des iframes, auf welches aktuell der Driver zeigt.
@@ -79,7 +79,7 @@ public class SeDriver
     /** 
      *  Singelton-Class: instanz hold the Object-Referenc of CurrentObject
      */
-    private static SeDriver instance        = new SeDriver();
+    private static SeDriver instance = new SeDriver();
 
     private SeDriver()
     {
@@ -104,12 +104,23 @@ public class SeDriver
         return instance;
     }
 
-    public void DriveChrome()
+    public void setDriver( WebDriver fpDriver )
+    {
+        this.driver = fpDriver;
+    }
+
+    public WebDriver getDriver( )
+    {
+        return this.driver;
+    }
+
+    
+    public void __DriveChrome()
     {
         this.driver = new ChromeDriver();
     }
 
-    public void DriveFireFox()
+    public void __DriveFireFox()
     {
         this.driver = new FirefoxDriver();
     }
@@ -119,7 +130,7 @@ public class SeDriver
         this.driver = new InternetExplorerDriver();
     }*/
 
-    public void DriveUnitDriver()
+    public void __DriveUnitDriver()
     {
         try
         {

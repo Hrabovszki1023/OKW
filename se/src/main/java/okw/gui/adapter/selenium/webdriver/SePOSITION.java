@@ -121,8 +121,8 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
 
             try
             {
-                Integer X = SeDriver.getInstance().driver.manage().window().getPosition().getX();
-                Integer Y = SeDriver.getInstance().driver.manage().window().getPosition().getY();
+                Integer X = SeDriver.getInstance().getDriver().manage().window().getPosition().getX();
+                Integer Y = SeDriver.getInstance().getDriver().manage().window().getPosition().getY();
                 
                 lvLsReturn.add( X.toString() );
                 lvLsReturn.add( Y.toString() );
@@ -241,7 +241,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
                 Point myPoint = new Point(X, Y);
                 
                 // Set dimension to 
-                SeDriver.getInstance().driver.manage().window().setPosition( myPoint );
+                SeDriver.getInstance().getDriver().manage().window().setPosition( myPoint );
 
             }
             finally

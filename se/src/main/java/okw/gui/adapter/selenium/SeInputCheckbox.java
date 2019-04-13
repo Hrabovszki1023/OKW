@@ -150,14 +150,14 @@ import okw.gui.*;
             
             try
             {
-                this.LogFunctionStartDebug("getIsSelected");
+                LogFunctionStartDebug("getIsSelected");
 
                 // Hole Zusand: "Häkschen" oder kein "Häkschen", das ist hier die Frage...
                 lvbReturn = this.Me().isSelected();
             }
             finally
             {
-                this.LogFunctionEndDebug(lvbReturn);
+                LogFunctionEndDebug(lvbReturn);
             }
             return lvbReturn;
         }
@@ -177,10 +177,11 @@ import okw.gui.*;
          */
         public void checking()
         {
-            this.LogFunctionStartDebug("Checking");
 
             try
             {
+                LogFunctionStartDebug("checking");
+
                 // Hab ich ein Häckchen?
                 if (!this.getIsSelected())
                 {
@@ -189,7 +190,7 @@ import okw.gui.*;
             }
             finally
             {
-                this.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
@@ -232,7 +233,7 @@ import okw.gui.*;
             }
             finally
             {
-                    this.LogFunctionEndDebug(lvls_Return);
+                    LogFunctionEndDebug(lvls_Return);
             }
 
             return lvls_Return;

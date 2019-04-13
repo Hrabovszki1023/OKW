@@ -124,7 +124,7 @@ public class SeInputRadio extends SeAnyChildWindow
       ArrayList<String> lvls_Return = new ArrayList<String>();
       try
       {
-          this.LogFunctionStartDebug("getValue");
+          LogFunctionStartDebug("getValue");
 
           // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
           this.WaitForMe();
@@ -142,7 +142,7 @@ public class SeInputRadio extends SeAnyChildWindow
       }
       finally
       {
-          this.LogFunctionEndDebug(lvls_Return);
+          LogFunctionEndDebug(lvls_Return);
       }
       
       return lvls_Return;
@@ -162,7 +162,7 @@ public class SeInputRadio extends SeAnyChildWindow
     {
         Boolean lvbReturn = false;
 
-        this.LogFunctionStartDebug( "IsSelected" );
+        LogFunctionStartDebug( "IsSelected" );
 
         try
         {
@@ -222,7 +222,7 @@ public class SeInputRadio extends SeAnyChildWindow
 
     try
     {
-      MyLogger.LogFunctionStartDebug( "SetValue" );
+      this.LogFunctionStartDebug( "SetValue" );
       
       // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
       this.WaitForMe();
@@ -247,13 +247,9 @@ public class SeInputRadio extends SeAnyChildWindow
           throw new OKWNotAllowedValueException(lvsLM);
       }
     }
-    //catch ( Exception e)
-    //{
-    //        throw new RuntimeException( e );
-    //}
     finally
     {
-      MyLogger.LogFunctionEndDebug();
+      this.LogFunctionEndDebug();
     }
   }
 

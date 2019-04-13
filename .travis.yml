@@ -46,8 +46,10 @@ env:
       Package="log2html"
     - TESTCASE="okw.log.log2html.Log2HTMLTest"
       Package="log2html"
-#    - TESTCASE="okw.SeButton.SeButton_EN_Chrome_Test"
-#      Package="se"
+    - TESTCASE="okw.SeButton.SeButton_EN_Chrome_Test"
+      Package="se"
+    - TESTCASE="okw.SeInputButton.SeInputButton_EN_Chrome_Test"
+      Package="se"
     
       
 # before_install:

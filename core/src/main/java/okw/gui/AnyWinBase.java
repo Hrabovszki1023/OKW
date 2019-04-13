@@ -232,7 +232,7 @@ public abstract class AnyWinBase
      */
     public void LogFunctionStart(String fpsMethodName)
     {
-        myLogger.LogFunctionStartDebug(this.getClass().getName() + "." + fpsMethodName);
+        myLogger.LogFunctionStart( this.getClass().getName() + "." + fpsMethodName );
     }
 
     
@@ -444,7 +444,48 @@ public abstract class AnyWinBase
       else
           myLogger.LogFunctionEnd();
     }
+    
+    public void ResOpenList( String fps_Name )
+    {
+        myLogger.ResOpenList( fps_Name );
+    }
 
+    public void ResOpenListDebug( String fps_Name )
+    {
+        myLogger.ResOpenListDebug( fps_Name );
+    }
+
+    public void ResCloseList( )
+    {
+        myLogger.ResCloseList( );
+    }
+
+    public void ResCloseListDebug( )
+    {
+        myLogger.ResCloseListDebug( );
+    }
+
+    public void LogPrint( String fps_Message )
+    {
+        myLogger.LogPrint( fps_Message );
+    }
+
+    public void LogPrintDebug( String fps_Message )
+    {
+        myLogger.LogPrintDebug( fps_Message );
+    }
+    
+    public void LogWarning( String fps_Message )
+    {
+        myLogger.LogWarning( fps_Message );
+    }
+
+    public void LogError( String fps_Message )
+    {
+        myLogger.LogError( fps_Message );
+    }
+
+    
     /** \~german
      *  Holt den funktionalen Name dws GUI-Objektes.
      * 
