@@ -111,7 +111,6 @@ import okw.log.Logger_Sngltn;
 //@OKW (FN="InternetExplorer")
 public class frmInternetExplorer extends SeBrowserWindow
 {
-    protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
 
     /** \~german
      * Konstruktor der Klasse, aktuell keine MethodenAufrufe.
@@ -125,8 +124,6 @@ public class frmInternetExplorer extends SeBrowserWindow
      *  @author Zoltán Hrabovszki
      *  @date 2015.05.12
      */
-
-    
     public void SelectWindow()
     {
     }
@@ -147,12 +144,12 @@ public class frmInternetExplorer extends SeBrowserWindow
      */
     public void StartApp()
     {
-        MyLogger.LogFunctionStartDebug("StartApp");
-
-        SeDriver.getInstance().DriveUnitDriver();
+        LogFunctionStartDebug("StartApp");
+        
+        //SeDriver.getInstance().setDriver( fpDriver );
         // this.Init();
 
-        MyLogger.LogFunctionEndDebug();
+        LogFunctionEndDebug();
     }
 
     
@@ -172,11 +169,11 @@ public class frmInternetExplorer extends SeBrowserWindow
      */
     public void StopApp()
     {
-        MyLogger.LogFunctionStartDebug("StopApp");
+        LogFunctionStartDebug("StopApp");
 
-        SeDriver.getInstance().driver.quit();
+        //SeDriver.getInstance().driver.quit();
 
-        MyLogger.LogFunctionEndDebug();
+        LogFunctionEndDebug();
     }
 
     public void TypeKey(ArrayList<String> fps_Values)

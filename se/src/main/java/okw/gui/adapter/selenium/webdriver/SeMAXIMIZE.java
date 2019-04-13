@@ -146,7 +146,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
              Boolean lvbReturn = true;
 
              this.LogFunctionStartDebug( "getIsActive" );
-             this.MyLogger.LogPrintDebug( "Allways true" );
+             this.LogPrintDebug( "Allways true" );
              this.LogFunctionEndDebug( lvbReturn );
 
              return lvbReturn;
@@ -279,19 +279,19 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
 
                 java.awt.Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
                 
-                this.MyLogger.ResOpenList( "Screen Dimension:" );
-                this.MyLogger.LogPrint( screenSize.toString() );
-                this.MyLogger.ResCloseList();
+                this.ResOpenList( "Screen Dimension:" );
+                this.LogPrint( screenSize.toString() );
+                this.ResCloseList();
                 
                 Dimension myDimension = new Dimension((int)screenSize.getWidth(), (int)screenSize.getHeight());
                 
                 // Set dimension to 
-                SeDriver.getInstance().driver.manage().window().setSize(myDimension);
+                SeDriver.getInstance().getDriver().manage().window().setSize(myDimension);
 
                 Point myPoint = new Point(0,0);
                 
                 // Set dimension to 
-                SeDriver.getInstance().driver.manage().window().setPosition( myPoint );
+                SeDriver.getInstance().getDriver().manage().window().setPosition( myPoint );
 
                 
                 // SeDriver.getInstance().driver.manage().window().maximize();

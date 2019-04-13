@@ -182,7 +182,7 @@ public class SeButton extends SeAnyChildWindow
         // ArrayList<String> lvLsReturn = new ArrayList<String>();
         try
         {
-            MyLogger.LogFunctionStartDebug( "GetValue" );
+            LogFunctionStartDebug( "GetValue" );
 
             // Warten auf das Objekt. Wenn es nicht existiert mit Exception
             // beenden...
@@ -193,7 +193,7 @@ public class SeButton extends SeAnyChildWindow
         }
         finally
         {
-            MyLogger.LogFunctionEndDebug();
+            LogFunctionEndDebug();
         }
         
         return lvLsReturn;

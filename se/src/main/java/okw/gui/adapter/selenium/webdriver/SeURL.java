@@ -120,7 +120,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
             try
             {
                 // Get Value from TextField and Putt this into theReturn ArrayList<String>
-                lvLsReturn.add(SeDriver.getInstance().driver.getCurrentUrl());
+                lvLsReturn.add(SeDriver.getInstance().getDriver().getCurrentUrl());
             }
             finally
             {
@@ -228,7 +228,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
 
             try
             {
-                SeDriver.getInstance().driver.navigate().to(fps_Values.get(0));
+                SeDriver.getInstance().getDriver().navigate().to(fps_Values.get(0));
             }
             finally
             {
@@ -254,7 +254,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
 
             try
             {
-            	WebDriver myDriver = SeDriver.getInstance().driver;
+            	WebDriver myDriver = SeDriver.getInstance().getDriver();
             	myDriver.navigate().to(fps_Values.get(0));
             }
             finally
@@ -283,7 +283,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
             {
                 this.LogFunctionStartDebug("VerifyValue");
 
-                lvLsReturn.add( SeDriver.getInstance().driver.getCurrentUrl() );
+                lvLsReturn.add( SeDriver.getInstance().getDriver().getCurrentUrl() );
                 
             }
             finally

@@ -44,7 +44,6 @@ import java.util.ArrayList;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
-import okw.gui.OKWLocator;
 import okw.gui.OKWLocatorBase;
 import okw.gui.adapter.selenium.SeInputText;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
@@ -270,7 +269,7 @@ public class myTextfield extends SeInputText
     
     public void set__Attribute( WebElement elem, String value )
     {
-        JavascriptExecutor js = ( JavascriptExecutor ) SeDriver.getInstance().driver;
+        JavascriptExecutor js = ( JavascriptExecutor ) SeDriver.getInstance().getDriver();
 
         String scriptSetAttrValue = "arguments[0].setAttribute(arguments[1],arguments[2])";
 

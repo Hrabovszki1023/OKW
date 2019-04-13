@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import okw.OKW;
 import okw.OKW_Memorize_Sngltn;
@@ -30,11 +31,7 @@ import okw.log.Logger_Sngltn;
 @OKW (FN="Chrome")
 public class FrmSeChrome extends SeBrowserWindow
 {
-    /**
-     *  \copydoc Logger_Sngltn
-     */
-    private static Logger_Sngltn       LOG = Logger_Sngltn.getInstance();
-
+    
     /**
      *  \copydoc OKW_Memorize_Sngltn
      */
@@ -46,9 +43,13 @@ public class FrmSeChrome extends SeBrowserWindow
     {
     }
 
+    
+    /**
+     * Chrome Options https://github.com/GoogleChrome/chrome-launcher/blob/master/docs/chrome-flags-for-tools.md
+     */
     public void StartApp()
     {
-        this.LogFunctionStartDebug( "StartApp" );
+        LogFunctionStartDebug( "StartApp" );
 
         try
         {
@@ -57,14 +58,14 @@ public class FrmSeChrome extends SeBrowserWindow
 
             if ( DriverPath != null )
             {
-                LOG.LogPrint( "EnvVar: OKWChromedriverPath='" + DriverPath + "'" );
+                LogPrint( "EnvVar: OKWChromedriverPath='" + DriverPath + "'" );
                 System.setProperty( "webdriver.chrome.driver", DriverPath );
                 MEM.set( "System.Property: webdriver.Chrome.driver", DriverPath );
                 MEM.set( "OKW EnvVar: OKWChromedriverPath", DriverPath );
             }
             else
             {
-                LOG.LogWarning( "Enviroment Variable 'OKWChromedriverPath' is not set!" );
+                LogWarning( "Enviroment Variable 'OKWChromedriverPath' is not set!" );
 
                 String os_name = System.getProperty( "os.name" );
 
@@ -77,13 +78,46 @@ public class FrmSeChrome extends SeBrowserWindow
                         System.setProperty( "webdriver.chrome.driver", "/Applications/chromedriver" );
                         break;
                     default:
-                        LOG.LogError( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
+                        LogError( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
                         break;
                 }
             }
 
+            
+            // Set options
+            ChromeOptions options = new ChromeOptions();  
 
-            SeDriver.getInstance().driver = new ChromeDriver();
+            // Using Headless Chrome?
+            options.setHeadless(true);
+            
+            // Hide the automation toolbar warning
+            options.addArguments( "disable-infobars" );
+            
+            //Start Chrome maximized
+            options.addArguments( "start-maximized" );
+            options.addArguments( "disable-logging" );
+            options.addArguments( "version" );
+            options.addArguments( "ignore-certificate-errors" );
+            
+            // options.addArguments( "disable-extensions");
+            
+
+            options.addArguments("disable-popup-blocking");
+            
+            options.addArguments("incognito");
+            
+            options.addArguments( "test-type" );
+            options.addArguments("start-maximized");
+            options.addArguments("window-size=1920,1080");
+            options.addArguments("enable-precise-memory-info");
+            options.addArguments("disable-popup-blocking");
+            options.addArguments("disable-default-apps");
+            options.addArguments( "test-type=browser" );
+            
+
+
+            mySeDriver.setDriver( new ChromeDriver(options) );
+            
         }
         catch (XPathExpressionException e)
         {
@@ -98,15 +132,10 @@ public class FrmSeChrome extends SeBrowserWindow
 
     public void StopApp()
     {
-        LOG.LogFunctionStart( "StopApp()" );
+        LogFunctionStartDebug( "StopApp()" );
         
-        LOG.LogPrint( "before driver.close( )" );
-        SeDriver.getInstance().driver.close();
-        LOG.LogPrint( "after driver.close( )" );
-        
-        LOG.LogPrint( "before driver.quit( )" );
-        SeDriver.getInstance().driver.quit();
-        LOG.LogPrint( "after driver.quit( )" );
+        mySeDriver.getDriver().close();
+        mySeDriver.getDriver().quit();
         
         try
         {    
@@ -114,57 +143,34 @@ public class FrmSeChrome extends SeBrowserWindow
         
              if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1)
              {
-                 LOG.LogPrint( "before windows taskkill Chrome " );
+                 LogPrintDebug( "before windows taskkill Chrome " );
                  rt.exec("taskkill Chrome");
-                 LOG.LogPrint( "after windows taskkill Chrome " );
+                 LogPrintDebug( "after windows taskkill Chrome " );
              }
              else
              {
-                 LOG.LogPrint( "before linux/osx pkill -f Chrome " );
+                 LogPrintDebug( "before linux/osx pkill -f Chrome " );
                  rt.exec("pkill -f Chrome");
                  //rt.exec("killall chromedriver");
-                 LOG.LogPrint( "after linux/osx pkill -f Chrome " );
+                 LogPrintDebug( "after linux/osx pkill -f Chrome " );
              } 
              
-             LOG.LogPrint( "before Thread.sleep( 3000 );" );
+             LogPrintDebug( "before Thread.sleep( 3000 );" );
              //Thread.sleep( 3000 );
-             LOG.LogPrint( "after Thread.sleep( 3000 );" );
+             LogPrintDebug( "after Thread.sleep( 3000 );" );
         }
         // catch (InterruptedException | IOException e)
        catch ( IOException e)
         {
-            LOG.LogPrint( "before catch (InterruptedException | IOException e)" );
+            LogPrintDebug( "before catch (InterruptedException | IOException e)" );
             // TODO Auto-generated catch block
             e.printStackTrace();
-            LOG.LogPrint( "after catch (InterruptedException | IOException e)" );
+            LogPrintDebug( "after catch (InterruptedException | IOException e)" );
         }
         finally
         {
-            LOG.LogPrint( "finaly.. " );
-            LOG.LogFunctionEnd();
+            LogPrintDebug( "finaly.. " );
+            LogFunctionEndDebug();
         }
-    }
-    
-    /*@Override
-    protected void finalize() throws Throwable
-    {
-        Runtime rt = Runtime.getRuntime();
-        
-        if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1)
-        {
-            rt.exec("taskkill Chrome");
-        }
-        else
-        {
-            LOG.LogPrint( "Enviroment Variable 'OKWChromedriverPath' is not set!" );
-            rt.exec("pkill -f Chrome");
-            rt.exec("killall chromedriver");
-        }
-        
-        Thread.sleep( 1000 );
-
-        super.finalize();
-    }
-    */
-    
+    }    
 }

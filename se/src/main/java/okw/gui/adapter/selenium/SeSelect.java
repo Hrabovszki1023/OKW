@@ -229,7 +229,7 @@ public class SeSelect extends SeAnyChildWindow
             else
             {
                 if ( fpsValues.size() > 1 )
-                    MyLogger.LogError( "ListBox erlaub keine Mehrfachauswahl." );
+                    this.LogError( "ListBox erlaub keine Mehrfachauswahl." );
                 // \todo TODO: Text in XML auslagern.
                 // \todo TODO: Exception für NichtErlaubte Mehrfachauswahl setzen.
 

@@ -22,10 +22,6 @@ import okw.OKW_Memorize_Sngltn;
 @OKW (FN="Firefox")
 public class FrmSeFirefox extends SeBrowserWindow
 {
-    /**
-     *  \copydoc Logger_Sngltn
-     */
-    private static Logger_Sngltn       LOG = Logger_Sngltn.getInstance();
 
     /**
      *  \copydoc OKW_Memorize_Sngltn
@@ -39,7 +35,7 @@ public class FrmSeFirefox extends SeBrowserWindow
 
     public void StartApp()
     {
-        this.LogFunctionStartDebug( "StartApp" );
+        LogFunctionStartDebug( "StartApp" );
 
         try
         {
@@ -48,7 +44,7 @@ public class FrmSeFirefox extends SeBrowserWindow
 
             if ( OKWGeckodriverPath != null )
             {
-                LOG.LogPrint( "EnvVar: OKWGeckodriverPath='" + OKWGeckodriverPath + "'" );
+                LogPrint( "EnvVar: OKWGeckodriverPath='" + OKWGeckodriverPath + "'" );
                 System.setProperty( "webdriver.gecko.driver", OKWGeckodriverPath );
 
                 MEM.set( "System.Property: webdriver.gecko.driver", OKWGeckodriverPath );
@@ -56,7 +52,7 @@ public class FrmSeFirefox extends SeBrowserWindow
             }
             else
             {
-                LOG.LogWarning( "Enviroment Variable 'OKWGeckodriverPath' is not set!" );
+                LogWarning( "Enviroment Variable 'OKWGeckodriverPath' is not set!" );
 
                 /*
                  * Properties systemProperties = System.getProperties();
@@ -86,15 +82,15 @@ public class FrmSeFirefox extends SeBrowserWindow
                         MEM.set( "System Propety: OKWGeckodriverPath", System.getProperty( "webdriver.gecko.driver" ) );
                         break;
                     default:
-                        LOG.LogError( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
+                        LogError( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
                         break;
                 }
 
             }
 
-            LOG.LogPrint( "System Property: webdriver.gecko.driver='" + System.getProperty( "os.name" ) + "'" );
+            LogPrint( "System Property: webdriver.gecko.driver='" + System.getProperty( "os.name" ) + "'" );
 
-            SeDriver.getInstance().driver = new FirefoxDriver();
+            mySeDriver.setDriver( new FirefoxDriver() );
         }
         catch (XPathExpressionException e)
         {
@@ -102,17 +98,18 @@ public class FrmSeFirefox extends SeBrowserWindow
         }
         finally
         {
-            this.LogFunctionEndDebug();
+            LogFunctionEndDebug();
         }
     }
 
     public void StopApp()
     {
-        this.LogFunctionStartDebug( "StopApp" );
+        LogFunctionStartDebug( "StopApp" );
 
-        SeDriver.getInstance().driver.quit();
+        mySeDriver.getDriver().close();
+        mySeDriver.getDriver().quit();
 
-        this.LogFunctionEndDebug();
+        LogFunctionEndDebug();
     }
 
     public void TypeKey( ArrayList<String> fps_Values )

@@ -74,6 +74,8 @@ import org.openqa.selenium.WebElement;
 public class SeAnyWindow extends AnyWindow
 {
 
+    protected SeDriver mySeDriver = SeDriver.getInstance();
+    
     public SeAnyWindow( )
     {
        super( );
@@ -87,7 +89,7 @@ public class SeAnyWindow extends AnyWindow
     }
 
     // Logger Instance holen
-    protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
+    // protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
 
     protected LogMessenger  LM       = new LogMessenger( "GUI" );
 
@@ -103,7 +105,7 @@ public class SeAnyWindow extends AnyWindow
 
     public String get_iframeID() 
     {
-        this.MyLogger.LogFunctionStartDebug( this.getClass().getSimpleName() + ".get_iframeID" );
+        LogFunctionStartDebug( "get_iframeID" );
 
         // Wenn die iframeID 
         if ( iframeID == null )
@@ -112,39 +114,41 @@ public class SeAnyWindow extends AnyWindow
            {   
                 String myLocator = this.getLocator();
                 
-                this.MyLogger.LogPrintDebug( "Find iframe ID for the Locator: '" + myLocator + "'..." );
+                LogPrintDebug( "Find iframe ID for the Locator: '" + myLocator + "'..." );
                 // ID ist noch nicht ermittelt -> ID Ermitteln
-                String myiframeID = SeDriver.getInstance().getFrameID4Locator( myLocator );
-                this.MyLogger.LogPrintDebug( "Frame ID found: '" + myiframeID + "'" );
+                String myiframeID = mySeDriver.getFrameID4Locator( myLocator );
+                LogPrintDebug( "Frame ID found: '" + myiframeID + "'" );
 
                 // Denn Aktuellen wert merken.
                 set_iframeID( myiframeID );
             }
             finally
             {
-                this.MyLogger.LogFunctionEndDebug( iframeID );
+                LogFunctionEndDebug( iframeID );
             }
         }
         else
         {
-            this.MyLogger.LogFunctionEndDebug( iframeID );
+            LogFunctionEndDebug( iframeID );
         }
         return iframeID;
     }
 
     public void set_iframeID( String iframeID )
     {
-        this.MyLogger.LogFunctionStartDebug( "SeAnyChildWindow.set_iframeID", "iframeID", iframeID );
+        LogFunctionStartDebug( "set_iframeID", "iframeID", iframeID );
         this.iframeID = iframeID;
-        this.MyLogger.LogFunctionEndDebug( );
+        LogFunctionEndDebug( );
     }
 
 
     @Override
     public void setLocator( String Locator, OKWLocatorBase... Locators )
     {
+        LogFunctionStartDebug( "setLocator", "Locator", Locator );
         this._locator.setLocator( Locator, Locators );
         this.iframeID = null;
+        LogFunctionEndDebug( );
     }
 
 
@@ -160,7 +164,7 @@ public class SeAnyWindow extends AnyWindow
     {
         try
         {
-            this.LogFunctionStartDebug( "ClickOn" );
+            LogFunctionStartDebug( "ClickOn" );
 
             // Wenn das Objekt nicht existiert mit Exception beenden...
             if ( !this.getExists() )
@@ -173,12 +177,11 @@ public class SeAnyWindow extends AnyWindow
         }
         finally
         {
-            this.LogFunctionEndDebug();
+            LogFunctionEndDebug();
         }
     }
 
     /** \~german
-     *  \brief
      *  Ermittelt den textuellen Inhalt der Überschrift eines HTML-Tags anhand des Attributee "textContent".
      *   
      *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
@@ -193,7 +196,7 @@ public class SeAnyWindow extends AnyWindow
         Boolean bOK = false;
         try
         {
-            MyLogger.LogFunctionStartDebug( "GetCaption" );
+            LogFunctionStartDebug( "GetCaption" );
 
             // Wenn das Objekt nicht existiert mit Exception beenden...
             if ( !this.getExists() )
@@ -210,11 +213,11 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvLsReturn );
+                LogFunctionEndDebug( lvLsReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
@@ -245,12 +248,12 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            this.MyLogger.LogFunctionStartDebug( "SeAnyWindow.getExists" );
+            LogFunctionStartDebug( "getExists" );
             
             myLocator = this.getLocator();
 
-            //meme = SeDriver.getInstance().driver.findElements(By.xpath(myLocator));
-            meme = SeDriver.getInstance().getElements( get_iframeID(), myLocator );
+            //meme = mySeDriver.driver.findElements(By.xpath(myLocator));
+            meme = mySeDriver.getElements( get_iframeID(), myLocator );
 
             if ( meme.size() == 0 )
             {
@@ -259,7 +262,7 @@ public class SeAnyWindow extends AnyWindow
             else if ( meme.size() > 1 )
             {
                 String lvsPrintMe = "Locator ist nicht eindeutig, es wurden mehrer GUI-Objekt gefunden:\n Locator: >>" + this.getLocator() + "<<";
-                this.MyLogger.LogWarning( lvsPrintMe );
+                LogWarning( lvsPrintMe );
 
                 lvbReturn = false;
             }
@@ -270,22 +273,21 @@ public class SeAnyWindow extends AnyWindow
         }
         catch (OKWGUIObjectNotFoundException e)
         {
-            this.MyLogger.LogPrintDebug( "NoSuchElementException" );
+            LogPrintDebug( "NoSuchElementException" );
             lvbReturn = false;
         }
         finally
         {
-            this.MyLogger.LogFunctionEndDebug( lvbReturn );
+            LogFunctionEndDebug( lvbReturn );
         }
         return lvbReturn;
     }
 
     /** \~german
-    * \brief
     *  Methode liefert den aktuellen Zustand Wert des Focus.
     *  Quelle: http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
     * 
-    *  \return
+    *  @return
     *  \~
     *  @author Zoltán Hrabovszki
     *  @date 2013.11.11
@@ -306,7 +308,7 @@ public class SeAnyWindow extends AnyWindow
                 throw new OKWGUIObjectNotFoundException( lvsLM );
             }
 
-            WebElement currentElement = SeDriver.getInstance().driver.switchTo().activeElement();
+            WebElement currentElement = mySeDriver.getDriver().switchTo().activeElement();
 
             lvbReturn = currentElement.equals( this.Me() );
             bOK = true;
@@ -315,25 +317,25 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvbReturn );
+                this.LogFunctionEndDebug( lvbReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                this.LogFunctionEndDebug();
             }
         }
 
         return lvbReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt, ob das aktuellen Objekt aktiv ist.
-    /// 
-    /// \returntrue, falls das Objekt aktive ist, sonst false\return
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2014.04.19
+    /** \~german
+     *   Ermittelt, ob das aktuellen Objekt aktiv ist.
+     *   
+     *   @return true, falls das Objekt aktive ist, sonst false
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2014.04.19
+     */
     public Boolean getIsActive()
     {
         Boolean lvbReturn = false;
@@ -342,7 +344,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            this.MyLogger.LogFunctionStartDebug( "getIsActive" );
+            LogFunctionStartDebug( "getIsActive" );
 
             // Wenn das Objekt nicht existiert mit Exception beenden...
             if ( !this.getExists() )
@@ -369,35 +371,36 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                this.MyLogger.LogFunctionEndDebug( lvbReturn );
+                LogFunctionEndDebug( lvbReturn );
             }
             else
             {
-                this.MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvbReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des Labels.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Labels.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2014.06.17
+    /** \~german
+     *  Ermittelt den textuellen Inhalt des Labels.
+     *  
+     *  @return
+     *  Rückgabe des Textuellen Inhaltes der Labels.
+     *  
+     *  \~english
+     *  @return
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2014.06.17
+     */
     public ArrayList<String> getLabel() throws Exception
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;
         try
         {
-            MyLogger.LogFunctionStartDebug( "GetLabel" );
+            LogFunctionStartDebug( "getLabel" );
 
             // Wenn das Objekt nicht existiert mit Exception beenden...
             if ( !this.getExists() )
@@ -410,7 +413,7 @@ public class SeAnyWindow extends AnyWindow
             String lvsID = this.Me().getAttribute( "id" );
 
             // 2.schritt nun Tag Label mit for= "${lvsID}" finden.
-            WebElement label = SeDriver.getInstance().driver.findElement( By.xpath( "//label[@for='" + lvsID + "']" ) );
+            WebElement label = mySeDriver.getDriver().findElement( By.xpath( "//label[@for='" + lvsID + "']" ) );
             lvLsReturn.add( label.getAttribute( "textContent" ) );
             bOK = true;
         }
@@ -418,35 +421,35 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvLsReturn );
+                LogFunctionEndDebug( lvLsReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvLsReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des ToolTips.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  Ermittelt den textuellen Inhalt des ToolTips.
+     *  
+     *  @return
+     *  Rückgabe des Textuellen Inhaltes der Tooltips.
+     *  @return
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public ArrayList<String> getTooltip() throws Exception
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;
         try
         {
-            MyLogger.LogFunctionStartDebug( "GetTooltip" );
+            LogFunctionStartDebug( "GetTooltip" );
 
             // Wenn das Objekt nicht existiert mit Exception beenden...
             if ( !this.getExists() )
@@ -463,11 +466,11 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvLsReturn );
+                LogFunctionEndDebug( lvLsReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
@@ -490,7 +493,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            this.LogFunctionStartDebug( "getValue" );
+            LogFunctionStartDebug( "getValue" );
 
             // Wenn das Objekt nicht existiert mit Exception beenden...
             if ( !this.getExists() )
@@ -507,11 +510,11 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                this.LogFunctionEndDebug( lvLsReturn.toString() );
+                LogFunctionEndDebug( lvLsReturn.toString() );
             }
             else
             {
-                this.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
         return lvLsReturn;
@@ -522,7 +525,7 @@ public class SeAnyWindow extends AnyWindow
     *  
     *  Diese Methode ist der Einstiegspunkt für LogCaption-Anpassungen durch Methoden überschreibung.
     *  
-    *  \return Rückgabe des Tooltiptextes.
+    *  @return Rückgabe des Tooltiptextes.
     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
     *  \~english
     *  \~
@@ -536,7 +539,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            MyLogger.LogFunctionStartDebug( "LogCaption" );
+            LogFunctionStartDebug( "LogCaption" );
 
             lvLsReturn = this.getCaption();
 
@@ -546,31 +549,31 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvLsReturn );
+                LogFunctionEndDebug( lvLsReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvLsReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des ToolTips.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips.
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  Ermittelt den textuellen Inhalt des ToolTips.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
+     *  
+     *  @return
+     *  Rückgabe des Textuellen Inhaltes der Tooltips.
+     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  @return
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public Boolean LogExists()
     {
         Boolean lvbReturn = false;
@@ -578,7 +581,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            this.MyLogger.LogFunctionStartDebug( "LogExists" );
+            LogFunctionStartDebug( "LogExists" );
 
             lvbReturn = this.getExists();
 
@@ -588,27 +591,29 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                this.MyLogger.LogFunctionEndDebug( lvbReturn );
+                LogFunctionEndDebug( lvbReturn );
             }
             else
             {
-                this.MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvbReturn;
     }
 
-    /// \brief
-    /// Ermittelt für LoggeWert, ob das aktuelle Objekt den Fokus hat.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für Loggewert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \return
-    /// true falls Objekt den Fokus hat, sonst false
-    /// \return
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.04.11
+
+    /**
+     *  Ermittelt für LoggeWert, ob das aktuelle Objekt den Fokus hat.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für Loggewert-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @return
+     *  true falls Objekt den Fokus hat, sonst false
+     *  @return
+     *  @author Zoltan Hrabovszki
+     *  @date 2013.04.11
+     */
     public Boolean LogHasFocus() throws Exception
     {
         Boolean lvbReturn = false;
@@ -616,7 +621,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            this.LogFunctionStartDebug( "LogHasFocus" );
+            LogFunctionStartDebug( "LogHasFocus" );
 
             lvbReturn = this.getHasFocus();
             bOK = true;
@@ -625,62 +630,62 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvbReturn );
+                LogFunctionEndDebug( lvbReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvbReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt, ob das aktuelle Objket Aktiv ist.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips.
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  Ermittelt, ob das aktuelle Objket Aktiv ist.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
+     *  
+     *  @return
+     *  Rückgabe des Textuellen Inhaltes der Tooltips.
+     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  @return
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public Boolean LogIsActive() throws Exception
     {
         Boolean lvbReturn = null;
 
         try
         {
-            this.LogFunctionStartDebug( "LogIsActive" );
+            LogFunctionStartDebug( "LogIsActive" );
             lvbReturn = this.getIsActive();
         }
         finally
         {
-            this.LogFunctionEndDebug( lvbReturn );
+            LogFunctionEndDebug( lvbReturn );
         }
 
         return lvbReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Logt den textuellen Inhalt des Labels eines Objektes.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips.
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  Logt den textuellen Inhalt des Labels eines Objektes.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
+     *  
+     *  @return
+     *  Rückgabe des Textuellen Inhaltes der Tooltips.
+     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  @return
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public ArrayList<String> LogLabel() throws Exception
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
@@ -688,7 +693,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            MyLogger.LogFunctionStartDebug( "LogLabel" );
+            LogFunctionStartDebug( "LogLabel" );
 
             lvLsReturn = this.getLabel();
 
@@ -698,44 +703,43 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvLsReturn );
+                LogFunctionEndDebug( lvLsReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
-
         return lvLsReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Logt den textuellen Inhalt des ToolTips.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips.
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  Logt den textuellen Inhalt des ToolTips.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methoden überschreibung.
+     *  
+     *  @return
+     *  Rückgabe des Textuellen Inhaltes der Tooltips.
+     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  @return
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public ArrayList<String> LogTooltip() throws Exception
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
 
         try
         {
-            this.LogFunctionStartDebug( "LogTooltip" );
+            LogFunctionStartDebug( "LogTooltip" );
 
             lvLsReturn = this.getTooltip();
         }
         finally
         {
-            this.LogFunctionEndDebug( lvLsReturn );
+            LogFunctionEndDebug( lvLsReturn );
         }
 
         return lvLsReturn;
@@ -743,7 +747,6 @@ public class SeAnyWindow extends AnyWindow
 
     /**
       *  Ermittelt den Wert des Objktes für das Schlüsselwort Loggewert.
-    
       *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen
       *  durch Methoden überschreibung.
       *  
@@ -758,12 +761,12 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            this.LogFunctionStartDebug( "LogValue" );
+            LogFunctionStartDebug( "LogValue" );
             lvLsReturn = this.getValue();
         }
         finally
         {
-            this.LogFunctionEndDebug( lvLsReturn );
+            LogFunctionEndDebug( lvLsReturn );
         }
 
         return lvLsReturn;
@@ -772,7 +775,7 @@ public class SeAnyWindow extends AnyWindow
     /** \~german
      *  Ermittelt aus dem gegebenen Locator das DOM-Elelement, welches das Objekt representiert.
      *  
-     *  \return Referenz auf das gefunde DOM-Element
+     *  @return Referenz auf das gefunde DOM-Element
      *  \~
      *  @author Zoltán Hrabovszki
      *  @date 2013.11.11
@@ -781,8 +784,14 @@ public class SeAnyWindow extends AnyWindow
     {
         WebElement me = null;
 
-        me = SeDriver.getInstance().getElement( get_iframeID(), this.getLocator() );
-
+        try {
+            LogFunctionStartDebug( "Me" );
+            me = mySeDriver.getElement( get_iframeID(), this.getLocator() );
+        }
+        finally
+        {
+            LogFunctionEndDebug( );            
+        }
         return me;
     }
 
@@ -792,10 +801,10 @@ public class SeAnyWindow extends AnyWindow
      *  Diese Methode ist der Einstiegspunkt für MemorizeExists-Anpassungen durch Methodenüberschreibung.
      *  
      *  @return Rückgabe des Textuellen Inhaltes der Tooltips.
-     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *          Interface schreibt ein Listen-Element als Rückgabewert vor.
      *  
      *  \~english
-     *  \return
+     *  @return
      *  \~
      *  @author Zoltán Hrabovszki
      *  @date 2013.12.07
@@ -807,7 +816,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            this.MyLogger.LogFunctionStartDebug( "MemorizeExists" );
+            LogFunctionStartDebug( "MemorizeExists" );
 
             lvbReturn = this.getExists();
             bOK = true;
@@ -816,28 +825,28 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                this.MyLogger.LogFunctionEndDebug( lvbReturn );
+                LogFunctionEndDebug( lvbReturn );
             }
             else
             {
-                this.MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvbReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt für das Schlüsselwort MerkeIstAktive, ob das aktuelle Objekt aktiv ist.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für MerkeIstAktive-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \return true, falls das aktuelle Objekt aktiv ist, sonst false/// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2014.04.19
+    /** \~german
+     *  Ermittelt für das Schlüsselwort MerkeIstAktive, ob das aktuelle Objekt aktiv ist.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für MerkeIstAktive-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @return true, falls das aktuelle Objekt aktiv ist, sonst false
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2014.04.19
+     */
     public Boolean MemorizeIsActive() throws Exception
     {
         Boolean bOK = false;
@@ -845,7 +854,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            this.MyLogger.LogFunctionStartDebug( "MemorizeIsActive" );
+            LogFunctionStartDebug( "MemorizeIsActive" );
 
             lvbReturn = this.getIsActive();
             bOK = true;
@@ -854,32 +863,33 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                this.MyLogger.LogFunctionEndDebug( lvbReturn );
+                LogFunctionEndDebug( lvbReturn );
             }
             else
             {
-                this.MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvbReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft die nicht Existenz des aktuellen Objektes.
-    /// __Anmerkung:__ Falls ein Objekt zunächst noch vorhand ist und dann aber verschwindet,
-    /// dann es sinnvoll sein eine gewisse Zeit(Timeout) zu prüfen, ob das Objekt existiert,
-    /// Erst wenn diese Zeit verstrichen ist, wird gemeldet, das das Objekt nicht vorhanden ist.
-    /// Diese Funktion ist der gegenspieler zu __Exists.
-    /// 
-    /// \returntrue, falls das Objekt NICHT vorhanden ist. Sonst false\return
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.11.11
+    /** \~german
+
+     *  Prüft die nicht Existenz des aktuellen Objektes.
+     *  __Anmerkung:__ Falls ein Objekt zunächst noch vorhand ist und dann aber verschwindet,
+     *  dann es sinnvoll sein eine gewisse Zeit(Timeout) zu prüfen, ob das Objekt existiert,
+     *  Erst wenn diese Zeit verstrichen ist, wird gemeldet, das das Objekt nicht vorhanden ist.
+     *  Diese Funktion ist der gegenspieler zu __Exists.
+     *  
+     *  @return true, falls das Objekt NICHT vorhanden ist. Sonst false
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.11.11
+     */
     public Boolean NotExists() throws Exception
     {
-        this.MyLogger.LogFunctionStartDebug( "NotExists" );
+        LogFunctionStartDebug( "NotExists" );
         Boolean lvb_Return = false;
         Boolean bOK = false;
 
@@ -891,7 +901,7 @@ public class SeAnyWindow extends AnyWindow
         }
         catch (NoSuchElementException e)
         {
-            this.MyLogger.LogPrint( "NoSuchElementException" );
+            LogPrint( "NoSuchElementException" );
             lvb_Return = true;
             bOK = true;
         }
@@ -899,32 +909,33 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                this.MyLogger.LogFunctionEndDebug( lvb_Return );
+                LogFunctionEndDebug( lvb_Return );
             }
             else
             {
-                this.MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvb_Return;
     }
 
-    /// \~german
-    /// \brief
-    /// Setzt den Focus auf das Objekt.
-    /// __Anmerkung:__ Kleiner Trick: Selenium kennt keine öffentliche c#-Methode
-    /// für das setzen des Fokus. So weit ich es verstanden habe, wird intern jedoch
-    /// methode SetFocus verwendt, wenn <tt>SendKeys</tt> aufgerufen wird.
-    /// Quelle: http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.11.11
+    /** \~german
+
+     *  Setzt den Focus auf das Objekt.
+     *  __Anmerkung:__ Kleiner Trick: Selenium kennt keine öffentliche c#-Methode
+     *  für das setzen des Fokus. So weit ich es verstanden habe, wird intern jedoch
+     *  methode SetFocus verwendt, wenn <tt>SendKeys</tt> aufgerufen wird.
+     *  Quelle: http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
+     *  
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.11.11
+     */
     public void SetFocus() throws Exception
     {
-        this.LogFunctionStartDebug( "SetFocus" );
+        LogFunctionStartDebug( "SetFocus" );
 
         try
         {
@@ -939,125 +950,124 @@ public class SeAnyWindow extends AnyWindow
         }
         finally
         {
-            this.LogFunctionEndDebug();
+            LogFunctionEndDebug();
         }
     }
 
-    // \~german
-    // \brief
-    // Muss in den Menü-Objekten Implementiert werden!
-    // Daher wird hier ein OKWFrameObjectMethodNotImplemented ausgelöst!
-    //
-    // \return
-    // \~english
-    // \brief
-    // A SeInputButton has no value! -> Trigger
-    // OKWFrameObjectMethodNotImplemented!
-    // \~
-    // \author Zoltán Hrabovszki
-    // \date 2016.10.06
+    /** \~german
+     *  Muss in den Menü-Objekten Implementiert werden!
+     *  Daher wird hier ein OKWFrameObjectMethodNotImplemented ausgelöst!
+     * 
+     *  @return
+     *  \~english
+     *  A SeInputButton has no value! -> Trigger
+     *  OKWFrameObjectMethodNotImplemented!
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2016.10.06
+     */
     public void SelectMenu_Value( ArrayList<String> Values )
     {
-        // ArrayList<String> lvLsReturn = new ArrayList<String>();
         try
         {
-            MyLogger.LogFunctionStartDebug( "SelectMenu_Value" );
+            LogFunctionStartDebug( "SelectMenu_Value" );
 
             String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "SelectMenu_Value()" );
             throw new OKWFrameObjectMethodNotImplemented( lvsLM );
         }
         finally
         {
-            MyLogger.LogFunctionEndDebug();
+            LogFunctionEndDebug();
         }
     }
 
-    // \~
-    // \author Zoltán Hrabovszki
-    // \date 2016.10.06
+    /**
+     * \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2016.10.06
+    */
     public void Select( ArrayList<String> Values ) throws Exception
     {
-        // ArrayList<String> lvLsReturn = new ArrayList<String>();
         try
         {
-            MyLogger.LogFunctionStartDebug( "Select" );
+            LogFunctionStartDebug( "Select" );
 
             String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "Select( ArrayList<String> )" );
             throw new OKWFrameObjectMethodNotImplemented( lvsLM );
         }
         finally
         {
-            MyLogger.LogFunctionEndDebug();
+            LogFunctionEndDebug();
         }
     }
 
-    // \~german
-    // \brief
-    // Muss in den Menü-Objekten Implementiert werden!
-    // Daher wird hier ein OKWFrameObjectMethodNotImplemented ausgelöst!
-    //
-    // \return
-    // \~english
-    // \brief
-    // A SeInputButton has no value! -> Trigger
-    // OKWFrameObjectMethodNotImplemented!
-    // \~
-    // \author Zoltán Hrabovszki
-    // \date 2016.10.06
+    /** \~german
+     *  Muss in den Menü-Objekten Implementiert werden!
+     *  Daher wird hier ein OKWFrameObjectMethodNotImplemented ausgelöst!
+     *
+     *  @return
+     *  \~english
+     *  
+     *  A SeInputButton has no value! -> Trigger
+     *  OKWFrameObjectMethodNotImplemented!
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2016.10.06
+     */
     public void SelectMenu()
     {
         // ArrayList<String> lvLsReturn = new ArrayList<String>();
         try
         {
-            MyLogger.LogFunctionStartDebug( "SelectMenu" );
+            LogFunctionStartDebug( "SelectMenu" );
 
             String lvsLM = this.LM.GetMessage( "Common", "OKWFrameObjectMethodNotImplemented", "SelectMenu()" );
             throw new OKWFrameObjectMethodNotImplemented( lvsLM );
         }
         finally
         {
-            MyLogger.LogFunctionEndDebug();
+            LogFunctionEndDebug();
         }
     }
 
-    // \~german
-    // \brief
-    // \return
-    // \~english
-    // \brief
-    // \~
-    // \author Zoltán Hrabovszki
-    // \date 2016.10.06
+    /** \~german
+     *   @return
+     *  \~english
+     *   @return
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2016.10.06
+     */
     public void SetValue( ArrayList<String> Values ) throws XPathExpressionException, Exception
     {
         // ArrayList<String> lvLsReturn = new ArrayList<String>();
         try
         {
-            MyLogger.LogFunctionStartDebug( "SetValue" );
+            LogFunctionStartDebug( "SetValue" );
 
             String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "SetValue()" );
             throw new OKWFrameObjectMethodNotImplemented( lvsLM );
         }
         finally
         {
-            MyLogger.LogFunctionEndDebug();
+            LogFunctionEndDebug();
         }
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des ToolTips für das Schlüsselwort MerkeWert.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips.
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  Ermittelt den textuellen Inhalt des ToolTips für das Schlüsselwort MerkeWert.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @return
+     *  Rückgabe des Textuellen Inhaltes der Tooltips.
+     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  @return
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public ArrayList<String> MemorizeTooltip() throws Exception
     {
         Boolean bOK = false;
@@ -1065,7 +1075,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            MyLogger.LogFunctionStartDebug( "MemorizeTooltip" );
+            LogFunctionStartDebug( "MemorizeTooltip" );
 
             lvLsReturn = this.getTooltip();
             bOK = true;
@@ -1074,31 +1084,31 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvLsReturn );
+                LogFunctionEndDebug( lvLsReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvLsReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des Labels für das Schlüsselwort MerkeWert.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips.
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  Ermittelt den textuellen Inhalt des Labels für das Schlüsselwort MerkeWert.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @return
+     *  Rückgabe des Textuellen Inhaltes der Tooltips.
+     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  @return
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public ArrayList<String> MemorizeLabel() throws Exception
     {
         Boolean bOK = false;
@@ -1106,7 +1116,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            MyLogger.LogFunctionStartDebug( "MemorizeLabel" );
+            LogFunctionStartDebug( "MemorizeLabel" );
 
             lvLsReturn = this.getLabel();
             bOK = true;
@@ -1115,30 +1125,30 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvLsReturn );
+                LogFunctionEndDebug( lvLsReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvLsReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt ob das Objekt den Fokus besitz und liefert diesen für das Schlüsselwort MerkeWert.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \return
-    ///  true falls Objekt den Fokus hat, sonst false
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  Ermittelt ob das Objekt den Fokus besitz und liefert diesen für das Schlüsselwort MerkeWert.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @return
+     *   true falls Objekt den Fokus hat, sonst false
+     *  @return
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public Boolean MemorizeHasFocus() throws Exception
     {
         Boolean lvbReturn = false;
@@ -1146,7 +1156,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            this.LogFunctionStartDebug( "MemorizeHasFocus" );
+            LogFunctionStartDebug( "MemorizeHasFocus" );
 
             lvbReturn = this.getHasFocus();
             bOK = true;
@@ -1155,11 +1165,11 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvbReturn );
+                LogFunctionEndDebug( lvbReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
@@ -1185,32 +1195,32 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            this.LogFunctionStartDebug( "MemorizeCaption" );
+            LogFunctionStartDebug( "MemorizeCaption" );
 
             lvLsReturn = this.getCaption();
         }
         finally
         {
-            this.LogFunctionEndDebug( lvLsReturn );
+            LogFunctionEndDebug( lvLsReturn );
         }
 
         return lvLsReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes
-    /// für das Schlüsselwort MerkeWert.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes des aktuellen Objektes.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.14
+    /** \~german
+     *  Ermittelt den Wert, im Allgemeinen den textuellen Inhalt eines Objektes
+     *  für das Schlüsselwort MerkeWert.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für MerkeWert-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @return
+     *  Rückgabe des Textuellen Inhaltes des aktuellen Objektes.
+     *  @return
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.14
+     */
     public ArrayList<String> MemorizeValue() throws Exception
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
@@ -1218,7 +1228,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            MyLogger.LogFunctionStartDebug( "Memorize" );
+            LogFunctionStartDebug( "Memorize" );
             lvLsReturn = this.getValue();
             bOK = true;
         }
@@ -1226,32 +1236,32 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvLsReturn );
+                LogFunctionEndDebug( lvLsReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvLsReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Tastatur Eingabe an das Objekt
-    /// 
-    /// \param fps_Values'>
-    /// Werte, die via Tastatur eingegeben werden sollen.
-    /// 
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.04.11
+    /** \~german
+     *  Tastatur Eingabe an das Objekt
+     *  
+     *  \param fps_Values'>
+     *  Werte, die via Tastatur eingegeben werden sollen.
+     *  
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2013.04.11
+     */
     public void TypeKey( ArrayList<String> fps_Values ) throws Exception
     {
         try
         {
-            this.LogFunctionStartDebug( "TypeKey", "fps_Values", fps_Values.toString() );
+            LogFunctionStartDebug( "TypeKey", "fps_Values", fps_Values.toString() );
 
             // Wenn das Objekt nicht existiert mit Exception beenden...
             if ( !this.getExists() )
@@ -1280,34 +1290,33 @@ public class SeAnyWindow extends AnyWindow
         }
         finally
         {
-            this.LogFunctionEndDebug();
+            LogFunctionEndDebug();
         }
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des ToolTips für Prüfewert.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  Ermittelt den textuellen Inhalt des ToolTips für Prüfewert.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @return
+     *  Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
+     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  @return
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public ArrayList<String> VerifyCaption() throws Exception
     {
-        MyLogger.LogFunctionStartDebug( "VerifyCaption" );
+        LogFunctionStartDebug( "VerifyCaption" );
 
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;
 
         try
         {
-
             // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
             lvLsReturn = this.getCaption();
 
@@ -1317,39 +1326,39 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvLsReturn );
+                LogFunctionEndDebug( lvLsReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvLsReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt/Prüft, ob das aktuelle Objekt existiert.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \param fpbExpectedValue Erwarteter Wert.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// 
-    /// \param fpbExpectedValue Erwarteter Wert.
-    /// 
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  Ermittelt/Prüft, ob das aktuelle Objekt existiert.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  \param fpbExpectedValue Erwarteter Wert.
+     *  
+     *  @return
+     *  Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
+     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  
+     *  \param fpbExpectedValue Erwarteter Wert.
+     *  
+     *  @return
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public Boolean VerifyExists() throws InterruptedException
     {
-        this.MyLogger.LogFunctionStartDebug( "VerifyExists" );
+        LogFunctionStartDebug( "VerifyExists" );
 
         Boolean lvbReturn = true;
         Boolean bOK = false;
@@ -1363,31 +1372,31 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                this.MyLogger.LogFunctionEndDebug( lvbReturn );
+                LogFunctionEndDebug( lvbReturn );
             }
             else
             {
-                this.MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvbReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt/Prüft, ob das aktuelle Objekt aktiv ist.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für PrüfeIstAktive-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \returntrue, falls das Objekt aktiv ist sonst false\return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  Ermittelt/Prüft, ob das aktuelle Objekt aktiv ist.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für PrüfeIstAktive-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @return true, falls das Objekt aktiv ist sonst false
+     *  \~english
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public Boolean VerifyIsActive() throws Exception
     {
-        this.MyLogger.LogFunctionStartDebug( "VerifyIsActive" );
+        LogFunctionStartDebug( "VerifyIsActive" );
 
         Boolean lvbReturn = true;
         Boolean bOK = false;
@@ -1404,32 +1413,32 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                this.MyLogger.LogFunctionEndDebug( lvbReturn );
+                LogFunctionEndDebug( lvbReturn );
             }
             else
             {
-                this.MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvbReturn;
     }
 
-    // \~german
-    // \brief
-    // Ermittelt ob das GUI-Objekt den Fokus hat.
-    // 
-    // Dies ist der Einstiegspunkt für die Anpassung der Methote VerifyHasFocus (Methodenüberschreibung).
-    // 
-    // \return
-    //  true falls Objekt den Fokus hat, sonst false.
-    // \~english
-    // \brief Determines whether the GUI object has the focus.
-    //
-    // This is the entry point for the adaptation of the method Verify Has Focus (method override).
-    // \~
-    // \author Zoltán Hrabovszki
-    // \date 2013.12.07
+    /** \~german
+     *  Ermittelt ob das GUI-Objekt den Fokus hat.
+     *  
+     *  Dies ist der Einstiegspunkt für die Anpassung der Methote VerifyHasFocus (Methodenüberschreibung).
+     *  
+     *  @return true falls Objekt den Fokus hat, sonst false.
+     *  
+     *  \~english
+     *  Determines whether the GUI object has the focus.
+     * 
+     *  This is the entry point for the adaptation of the method Verify Has Focus (method override).
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public Boolean VerifyHasFocus() throws Exception
     {
         Boolean lvbReturn = false;
@@ -1437,7 +1446,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            MyLogger.LogFunctionStartDebug( "VerifyHasFocus" );
+            LogFunctionStartDebug( "VerifyHasFocus" );
 
             // Nun mit dem erwarteten Sollwert und GetHasFocus ggf. auf den Wert Warten.
             lvbReturn = this.getHasFocus();
@@ -1447,38 +1456,37 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvbReturn );
+                LogFunctionEndDebug( lvbReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
         return lvbReturn;
     }
 
-    /// \~german
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des Labels für Prüfewert.
-    /// 
-    /// \remark Sollte der Erwartetet Wert zunächt nicht mit dem aktuellen Wert nicht übereinstimmen,
-    /// dann wird gewartet bis entweder der erwartete Wert sich im GUI objekt einstellt
-    /// oder der TimeOut erreicht wird.<br/>
-    /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \param fplsExpectedValue'>Erwarteter Wert, auf den ggf. bis zum TimeOut gewartet wird.
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes des Labels.
-    /// Interface schreibt ein Listen-Element als Rückgabewert vor.
-    /// \return
-    /// \~english
-    /// \~
-    /// \author Zoltán Hrabovszki
-    /// \date 2013.12.07
+    /** \~german
+     *  Ermittelt den textuellen Inhalt des Labels für Prüfewert.
+     *  
+     *  \remark Sollte der erwartetet Wert zunächt nicht mit dem aktuellen Wert nicht übereinstimmen,
+     *  dann wird gewartet bis entweder der erwartete Wert sich im GUI objekt einstellt
+     *  oder der TimeOut erreicht wird.<br/>
+     *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @return Rückgabe des Textuellen Inhaltes des Labels.
+     *          Interface schreibt ein Listen-Element als Rückgabewert vor.
+     *  
+     *  \~english
+     *  @return
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
+     */
     public ArrayList<String> VerifyLabel() throws Exception
     {
-        MyLogger.LogFunctionStartDebug( "VerifyLabel" );
+        LogFunctionStartDebug( "VerifyLabel" );
 
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;
@@ -1494,11 +1502,11 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvLsReturn );
+                LogFunctionEndDebug( lvLsReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
 
@@ -1510,23 +1518,23 @@ public class SeAnyWindow extends AnyWindow
      *  
      *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
      *  
-     *  \return Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
-     *  Interface schreibt ein Listen-Element als Rückgabewert vor.
-     *  \return
+     *  @return Rückgabe des Textuellen Inhaltes der Tooltips. Es wird immer der aktuelle Wert des Objektes zurückgeliefert
+     *          Interface schreibt ein Listen-Element als Rückgabewert vor.
      *  \~english
+     *  @return
      *  \~
-     *  \author Zoltán Hrabovszki
-     *  \date 2013.12.07
+     *  @author Zoltán Hrabovszki
+     *  @date 2013.12.07
      */
     public ArrayList<String> VerifyTooltip() throws Exception
     {
-        MyLogger.LogFunctionStartDebug( "VerifyTooltip" );
 
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         Boolean bOK = false;
 
         try
         {
+            LogFunctionStartDebug( "VerifyTooltip" );
             // Nun mit dem erwarteten Sollwert und GetValue_TOOLTIP ggf. auf den Wert Warten.
             lvLsReturn = this.getTooltip();
 
@@ -1536,27 +1544,27 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvLsReturn );
+                LogFunctionEndDebug( lvLsReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
-
         return lvLsReturn;
     }
 
-    /// \brief
-    /// Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
-    /// 
-    /// Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
-    /// 
-    /// \return
-    /// Rückgabe des Textuellen Inhaltes der markierten Textes.
-    /// Es wird (immer) der aktuelle Wert des Objektes zurückgeliefert.
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.14
+    /** \~german
+     *  Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert.
+     *  
+     *  Diese Methode ist der Einstiegspunkt für VerifyValue-Anpassungen durch Methodenüberschreibung.
+     *  
+     *  @return Rückgabe des Textuellen Inhaltes der markierten Textes.
+     *          Es wird (immer) der aktuelle Wert des Objektes zurückgeliefert.
+     *  \~english
+     *  @author Zoltan Hrabovszki
+     *  @date 2013.12.14
+     */  
     public ArrayList<String> VerifyValue() throws Exception
     {
         ArrayList<String> lvLsReturn = null;
@@ -1564,7 +1572,7 @@ public class SeAnyWindow extends AnyWindow
 
         try
         {
-            MyLogger.LogFunctionStartDebug( "VerifyValue" );
+            LogFunctionStartDebug( "VerifyValue" );
 
             // get the Actual Value.
             lvLsReturn = this.getValue();
@@ -1575,15 +1583,13 @@ public class SeAnyWindow extends AnyWindow
         {
             if ( bOK )
             {
-                MyLogger.LogFunctionEndDebug( lvLsReturn );
+                LogFunctionEndDebug( lvLsReturn );
             }
             else
             {
-                MyLogger.LogFunctionEndDebug();
+                LogFunctionEndDebug();
             }
         }
-
         return lvLsReturn;
     }
-
 }
