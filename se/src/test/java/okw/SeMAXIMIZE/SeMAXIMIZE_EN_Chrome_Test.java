@@ -28,16 +28,16 @@ public class SeMAXIMIZE_EN_Chrome_Test extends SeMAXIMIZE_EN_Test
 
         myLog2HTML = new Log2HTML("target/OKWResult_SeMAXIMIZE__Chrome_Test.html");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(true);
+        Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception
 	{
-		//myLog2HTML.Result2HTML();
+		myLog2HTML.Result2HTML();
 	}
 	
-    @After
+    /*@After
     public void FirefoxAfter() throws Exception
     {
     	Runtime rt = Runtime.getRuntime();
@@ -47,4 +47,5 @@ public class SeMAXIMIZE_EN_Chrome_Test extends SeMAXIMIZE_EN_Test
     	  
     	Thread.sleep( 1000 );
     }
+    */
 }

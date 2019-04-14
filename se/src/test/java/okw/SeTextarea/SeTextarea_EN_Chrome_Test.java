@@ -32,7 +32,7 @@ public class SeTextarea_EN_Chrome_Test extends SeTextarea_EN_Test
         Logger_Sngltn.getInstance().setDebugMode(true);
     }
 
-    @After
+   /* @After
     public void AfterAfter() throws Exception
     {
         Runtime rt = Runtime.getRuntime();
@@ -44,6 +44,7 @@ public class SeTextarea_EN_Chrome_Test extends SeTextarea_EN_Test
           
         Thread.sleep( 1000 );
     }
+    */
     
     @AfterClass
     public static void tearDownAfterClass() throws Exception

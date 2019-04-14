@@ -29,7 +29,7 @@ public class SeLink_EN_Chrome_Test extends SeLink_EN_Test
 
         myLog2HTML = new Log2HTML("target/SeLink_Chrome_Test.html");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(true);
+        Logger_Sngltn.getInstance().setDebugMode(false);
    }
 
   
@@ -39,7 +39,7 @@ public class SeLink_EN_Chrome_Test extends SeLink_EN_Test
       myLog2HTML.Result2HTML();
     }
 
-
+/*
    @After
    public void ChromeAfter() throws Exception
    {
@@ -50,4 +50,5 @@ public class SeLink_EN_Chrome_Test extends SeLink_EN_Test
          
        Thread.sleep( 1000 );
    }  
+   */
 }
