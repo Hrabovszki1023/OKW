@@ -14,11 +14,6 @@ jdk:
 
 addons:  
   chrome: stable
-  apt:
-    packages:
-      - texlive-latex-base
-      - perl
-      - graphviz
 
 # Environment variables
 env:
@@ -65,13 +60,12 @@ install:
 #
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
 
-before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
+#before_script:
+#  - "export DISPLAY=:99.0"
+#  - "sh -e /etc/init.d/xvfb start"
+#  - sleep 3 # give xvfb some time to start
   
 script:
-  # 
   - mvn test -Dtest=$TESTCASE -Dgpg.skip=true -pl $Package
 
 after_success:
@@ -81,6 +75,11 @@ after_success:
 jobs:
   include:
     - stage: doxygen
+      apt:
+        packages:
+          - texlive-latex-base
+          - perl
+          - graphviz
       script: ls
       after_success:
         - cd $TRAVIS_BUILD_DIR
