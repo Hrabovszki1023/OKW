@@ -144,20 +144,16 @@ public class FrmSeChrome extends SeBrowserWindow
              if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1)
              {
                  LogPrintDebug( "before windows taskkill Chrome " );
-                 rt.exec("taskkill Chrome");
-                 LogPrintDebug( "after windows taskkill Chrome " );
+                 //rt.exec("taskkill Chrome");
              }
              else
              {
                  LogPrintDebug( "before linux/osx pkill -f Chrome " );
-                 rt.exec("pkill -f Chrome");
+                 //rt.exec("pkill -f Chrome");
                  //rt.exec("killall chromedriver");
-                 LogPrintDebug( "after linux/osx pkill -f Chrome " );
              } 
              
-             LogPrintDebug( "before Thread.sleep( 3000 );" );
              //Thread.sleep( 3000 );
-             LogPrintDebug( "after Thread.sleep( 3000 );" );
         }
         // catch (InterruptedException | IOException e)
        catch ( IOException e)
