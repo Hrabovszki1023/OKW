@@ -29,10 +29,10 @@ public class SeInputRadio_EN_Chrome_Test extends SeInputRadio_EN_Test
         myLog2HTML = new Log2HTML("target/SeInputRadio_Chrome_Test.html");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
 
-        Logger_Sngltn.getInstance().setDebugMode(true);
+        Logger_Sngltn.getInstance().setDebugMode(false);
     }
 
-    @After
+    /* @After
     public void AfterAfter() throws Exception
     {
         Runtime rt = Runtime.getRuntime();
@@ -44,6 +44,7 @@ public class SeInputRadio_EN_Chrome_Test extends SeInputRadio_EN_Test
           
         Thread.sleep( 1000 );
     }
+    */
     
     @AfterClass
     public static void tearDownAfterClass() throws Exception

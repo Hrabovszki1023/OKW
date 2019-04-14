@@ -27,9 +27,10 @@ public class SeInputCheckbox_EN_Chrome_Test extends SeInputCheckbox_EN_Test
         myLog2HTML = new Log2HTML("target/SeInputCheckbox_Chrome_Test.html");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
 
-        Logger_Sngltn.getInstance().setDebugMode(true);
+        Logger_Sngltn.getInstance().setDebugMode(false);
     }
 
+    /*
     @After
     public void AfterAfter() throws Exception
     {
@@ -42,6 +43,7 @@ public class SeInputCheckbox_EN_Chrome_Test extends SeInputCheckbox_EN_Test
           
         Thread.sleep( 1000 );
     }
+    */
     
     @AfterClass
     public static void tearDownAfterClass() throws Exception

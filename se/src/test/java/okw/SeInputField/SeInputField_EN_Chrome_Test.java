@@ -31,7 +31,7 @@ public class SeInputField_EN_Chrome_Test extends SeInputField_EN_Test
         myLog2HTML.setHTML_File( "target/SeInputField_Chrome_Test.html" );
 
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(true);
+        Logger_Sngltn.getInstance().setDebugMode(false);
         
         
 	}
@@ -42,7 +42,7 @@ public class SeInputField_EN_Chrome_Test extends SeInputField_EN_Test
       myLog2HTML.Result2HTML();
     }
 	
-    @After
+    /* @After
     public void FirefoxAfter() throws Exception
     {
     	Runtime rt = Runtime.getRuntime();
@@ -52,4 +52,5 @@ public class SeInputField_EN_Chrome_Test extends SeInputField_EN_Test
     	  
     	Thread.sleep( 1000 );
     }
+    */
 }
