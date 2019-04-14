@@ -32,16 +32,16 @@ public class SeButton_EN_Chrome_Test extends SeButton_EN_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
-    @After
-    public void afterChrome() throws Exception
-    {
-    	Runtime rt = Runtime.getRuntime();
+    // @After
+    // public void afterChrome() throws Exception
+    // {
+    	// Runtime rt = Runtime.getRuntime();
     	
-    	if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) rt.exec("taskkill Chrome");
-    	else rt.exec("pkill -f Chrome");
+    	//# if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) rt.exec("taskkill Chrome");
+    	// else rt.exec("pkill -f Chrome");
     	  
-    	Thread.sleep( 1000 );
-    }
+    	// Thread.sleep( 1000 );
+    // }
     
     @AfterClass
     public static void tearDownAfterClass() throws Exception
