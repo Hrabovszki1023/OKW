@@ -32,7 +32,7 @@ public class SeSelect_EN_Chrome_Test extends SeSelect_EN_Test
         Logger_Sngltn.getInstance().setDebugMode(true);
     }
 
-    @After
+    /*@After
     public void AfterAfter() throws Exception
     {
         Runtime rt = Runtime.getRuntime();
@@ -44,6 +44,7 @@ public class SeSelect_EN_Chrome_Test extends SeSelect_EN_Test
           
         Thread.sleep( 1000 );
     }
+    */
     
     @AfterClass
     public static void tearDownAfterClass() throws Exception

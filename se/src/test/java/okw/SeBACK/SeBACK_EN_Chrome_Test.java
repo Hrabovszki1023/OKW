@@ -37,7 +37,7 @@ public class SeBACK_EN_Chrome_Test extends SeBACK_EN_Test
 		//myLog2HTML.Result2HTML();
 	}
 	
-    @After
+    /*@After
     public void FirefoxAfter() throws Exception
     {
     	Runtime rt = Runtime.getRuntime();
@@ -47,4 +47,5 @@ public class SeBACK_EN_Chrome_Test extends SeBACK_EN_Test
     	  
     	Thread.sleep( 1000 );
     }
+    */
 }
