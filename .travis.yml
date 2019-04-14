@@ -45,6 +45,17 @@ env:
       Package="se"
     - TESTCASE="okw.SeInputButton.SeInputButton_EN_Chrome_Test"
       Package="se"
+    - TESTCASE="okw.SeInputCheckbox.SeInputCheckbox_EN_Chrome_Test"
+      Package="se"
+    - TESTCASE="okw.SeInputField.SeInputField_EN_Chrome_Test"
+      Package="se"
+    - TESTCASE="okw.SeInputRadio.SeInputRadio_EN_Chrome_Test"
+      Package="se"
+
+#    - TESTCASE="okw.SeInputField.SeInputField_EN_Chrome_Test"
+#      Package="se"
+#    - TESTCASE="okw.SeInputField.SeInputField_EN_Chrome_Test"
+#      Package="se"
     
       
 # before_install:

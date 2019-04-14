@@ -29,7 +29,7 @@ public class SeInputButton_EN_Chrome_Test extends SeInputButton_EN_Test
         myLog2HTML = new Log2HTML("target/SeInputButton_Chrome_Test.html");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
 
-        Logger_Sngltn.getInstance().setDebugMode(true);
+        Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
     /** @After
