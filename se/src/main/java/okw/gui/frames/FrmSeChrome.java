@@ -156,7 +156,7 @@ public class FrmSeChrome extends SeBrowserWindow
              //Thread.sleep( 3000 );
         }
         // catch (InterruptedException | IOException e)
-       catch ( IOException e)
+       catch ( Exception e)
         {
             LogPrintDebug( "before catch (InterruptedException | IOException e)" );
             // TODO Auto-generated catch block
