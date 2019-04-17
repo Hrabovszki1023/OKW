@@ -277,7 +277,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
             {
                 this.LogFunctionStartDebug("ClickOn");
 
-                java.awt.Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+                /*java.awt.Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
                 
                 this.ResOpenList( "Screen Dimension:" );
                 this.LogPrint( screenSize.toString() );
@@ -292,9 +292,9 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
                 
                 // Set dimension to 
                 SeDriver.getInstance().getDriver().manage().window().setPosition( myPoint );
-
+*/
                 
-                // SeDriver.getInstance().driver.manage().window().maximize();
+                SeDriver.getInstance().getDriver().manage().window().maximize();
             }
             finally
             {

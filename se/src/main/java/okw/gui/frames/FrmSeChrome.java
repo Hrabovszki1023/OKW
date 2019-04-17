@@ -101,8 +101,6 @@ public class FrmSeChrome extends SeBrowserWindow
             
             // options.addArguments( "disable-extensions");
             
-
-            options.addArguments("disable-popup-blocking");
             
             options.addArguments("incognito");
             
@@ -112,13 +110,11 @@ public class FrmSeChrome extends SeBrowserWindow
             options.addArguments("enable-precise-memory-info");
             options.addArguments("disable-popup-blocking");
             options.addArguments("disable-default-apps");
-            options.addArguments( "test-type=browser" );
+            //options.addArguments( "test-type=browser" );
             
-
-
             mySeDriver.setDriver( new ChromeDriver(options) );
-            
-        }
+            //mySeDriver.setDriver( new ChromeDriver() );
+            }
         catch (XPathExpressionException e)
         {
             // TODO Auto-generated catch block

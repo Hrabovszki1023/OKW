@@ -98,7 +98,7 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test
+  //@Test
   public void tcClickOn() throws Exception
   {
       EN.BeginTest( name.getMethodName() );

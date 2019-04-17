@@ -57,11 +57,11 @@ env:
       Package="se"
     - TESTCASE="okw.SeLink.SeLink_EN_Chrome_Test"
       Package="se"
-    - TESTCASE="okw.SeMAXIMIZE.SeMAXIMIZE_EN_Chrome_Test"
-      Package="se"
+    # - TESTCASE="okw.SeMAXIMIZE.SeMAXIMIZE_EN_Chrome_Test"
+    #  Package="se"
     - TESTCASE="okw.SeSelect.SeSelect_EN_Chrome_Test"
       Package="se"
-    - TESTCASE="okw.SeTextarea.SeSeTextarea_EN_Chrome_Test"
+    - TESTCASE="okw.SeTextarea.SeTextarea_EN_Chrome_Test"
       Package="se"
     
       
