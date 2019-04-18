@@ -42,10 +42,6 @@ public class SeLink_EN_Test
       EN.ClickOn( "Google" );
       EN.VerifyValue( "URL", "https://www.google.de/?gws_rd=ssl" );
 
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
-      EN.ClickOn( "Yahoo" );
-      EN.VerifyValueWCM( "URL", "https://de.yahoo.com*" );
-
       EN.StopApp( ApplicationName );
       EN.EndTest();
   }
@@ -291,14 +287,6 @@ public class SeLink_EN_Test
       EN.TypeKey( "URL", "${SeLinkMemorizeValue1}" );
 
       EN.VerifyValueWCM( "URL", "https://www.google.de*" );
-
-      EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
-
-      EN.SelectWindow( "Link" );
-      EN.MemorizeValue( "Yahoo", "SeLinkMemorizeValue1" );
-
-      EN.TypeKey( "URL", "${SeLinkMemorizeValue1}" );
-      EN.VerifyValueWCM( "URL", "https://de.yahoo.com*" );
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
