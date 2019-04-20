@@ -8,7 +8,13 @@ import java.util.ArrayList;
 
 import javax.xml.xpath.XPathExpressionException;
 
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import okw.OKW;
 import okw.OKW_Memorize_Sngltn;
@@ -33,6 +39,15 @@ public class FrmSeFirefox extends SeBrowserWindow
     {
     }
 
+    /**
+     * https://github.com/mdn/headless-examples/blob/master/headlessfirefox-gradle/src/main/java/com/mozilla/example/HeadlessFirefoxSeleniumExample.java
+     * http://www.automationtestinghub.com/selenium-headless-chrome-firefox/
+     * 
+     * How to set Options
+     * http://www.automationtestinghub.com/disable-firefox-logs-selenium/
+     * 
+     * https://www.youtube.com/watch?v=7q8viGgiVSc
+     */
     public void StartApp()
     {
         LogFunctionStartDebug( "StartApp" );
@@ -54,25 +69,6 @@ public class FrmSeFirefox extends SeBrowserWindow
             {
                 LogWarning( "Enviroment Variable 'OKWGeckodriverPath' is not set!" );
 
-                /*
-                 * Properties systemProperties = System.getProperties();
-                 * Enumeration<?> enuProp = systemProperties.propertyNames();
-                 * 
-                 * List list= Collections.list(enuProp); // create list from
-                 * enumeration Collections.sort(list); enuProp =
-                 * Collections.enumeration(list);
-                 * 
-                 * 
-                 * MyLogger.ResOpenList("System.getProperties()... ");
-                 * 
-                 * while (enuProp.hasMoreElements()) { String propertyName =
-                 * (String) enuProp.nextElement(); String propertyValue =
-                 * systemProperties.getProperty(propertyName);
-                 * MyLogger.LogPrint(propertyName + ": " + propertyValue); }
-                 * 
-                 * MyLogger.ResCloseList();
-                 */
-
                 String os_name = System.getProperty( "os.name" );
 
                 switch ( os_name )
@@ -88,9 +84,13 @@ public class FrmSeFirefox extends SeBrowserWindow
 
             }
 
-            LogPrint( "System Property: webdriver.gecko.driver='" + System.getProperty( "os.name" ) + "'" );
-
-            mySeDriver.setDriver( new FirefoxDriver() );
+            FirefoxBinary firefoxBinary = new FirefoxBinary();
+            firefoxBinary.addCommandLineOptions("--headless");
+            //System.setProperty("webdriver.gecko.driver", "/opt/geckodriver");
+            FirefoxOptions firefoxOptions = new FirefoxOptions();
+            firefoxOptions.setBinary(firefoxBinary);
+                       
+            mySeDriver.setDriver( new FirefoxDriver(firefoxOptions) );
         }
         catch (XPathExpressionException e)
         {
@@ -106,7 +106,7 @@ public class FrmSeFirefox extends SeBrowserWindow
     {
         LogFunctionStartDebug( "StopApp" );
 
-        mySeDriver.getDriver().close();
+        //mySeDriver.getDriver().close();
         mySeDriver.getDriver().quit();
 
         LogFunctionEndDebug();

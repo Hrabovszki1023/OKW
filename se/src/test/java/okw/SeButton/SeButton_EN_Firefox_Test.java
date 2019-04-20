@@ -31,6 +31,7 @@ public class SeButton_EN_Firefox_Test extends SeButton_EN_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
+    /*
     @After
     public void afterFirefox() throws Exception
     {
@@ -41,6 +42,7 @@ public class SeButton_EN_Firefox_Test extends SeButton_EN_Test
     	     rt.exec("pkill -f firefox");
     	  Thread.sleep( 1000 );
     }
+    */
     
     @AfterClass
     public static void tearDownAfterClass() throws Exception
