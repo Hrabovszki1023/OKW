@@ -32,7 +32,7 @@ public class SeTextarea_EN_Firefox_Test extends SeTextarea_EN_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
    }
 
-  
+  /*
    @AfterClass
     public static void tearDownAfterClass() throws Exception
     {
@@ -50,4 +50,5 @@ public class SeTextarea_EN_Firefox_Test extends SeTextarea_EN_Test
           rt.exec("pkill -f firefox");
       Thread.sleep( 1000 );
     }
+    */
 }

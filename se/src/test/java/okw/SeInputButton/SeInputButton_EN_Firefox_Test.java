@@ -1,8 +1,9 @@
 package okw.SeInputButton;
 
 import okw.log.Logger_Sngltn;
+import okw.log.log2html.Log2HTML;
 
-import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
 /**
@@ -13,18 +14,28 @@ import org.junit.BeforeClass;
 */
 public class SeInputButton_EN_Firefox_Test extends SeInputButton_EN_Test
 {
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception
-	{
-		ApplicationName = "Firefox";
-		
+    static Log2HTML myLog2HTML = null;
+
+    @BeforeClass
+    public static void setUpBeforeClass() throws Exception
+    {
+        ApplicationName = "Firefox";
+
         Logger_Sngltn.getInstance();
-		// Reset des Loggers: Alle geladenen Instanzen löschen
+        // Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        Logger_Sngltn.getInstance().setDebugMode(false);
-	}
+        myLog2HTML = new Log2HTML( "target/SeInputButton_Firefox_Test.html" );
+        Logger_Sngltn.getInstance().addLogger( myLog2HTML );
+        Logger_Sngltn.getInstance().setDebugMode( false );
+    }
 
+    @AfterClass
+    public static void tearDownAfterClass() throws Exception
+    {
+        myLog2HTML.Result2HTML();
+    }
+    /*
     @After
     public void FirefoxAfter() throws Exception
     {
@@ -35,4 +46,5 @@ public class SeInputButton_EN_Firefox_Test extends SeInputButton_EN_Test
     	     rt.exec("pkill -f firefox");
     	  Thread.sleep( 1000 );
     }
+    */
 }

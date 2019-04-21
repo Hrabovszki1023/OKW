@@ -29,6 +29,7 @@ public class SeBACK_EN_Firefox_Test extends SeBACK_EN_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
+	/*
   @After
   public void FirefoxAfter() throws Exception
   {
@@ -41,6 +42,7 @@ public class SeBACK_EN_Firefox_Test extends SeBACK_EN_Test
     Thread.sleep( 1000 );
    
   }
+	*/
 	
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception

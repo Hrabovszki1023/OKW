@@ -39,7 +39,7 @@ public class SeLink_EN_Firefox_Test extends SeLink_EN_Test
       myLog2HTML.Result2HTML();
     }
 
-
+/*
     @After
     public void FirefoxAfter() throws Exception
     {
@@ -50,4 +50,5 @@ public class SeLink_EN_Firefox_Test extends SeLink_EN_Test
            rt.exec("pkill -f firefox");
         Thread.sleep( 1000 );  
     }
+    */
 }

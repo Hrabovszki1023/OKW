@@ -14,20 +14,28 @@ import org.junit.*;
 public class SeInputCheckbox_EN_Firefox_Test extends SeInputCheckbox_EN_Test
 {
 
-	static Log2HTML myLog2HTML = null;
+    static Log2HTML myLog2HTML = null;
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception
-	{
-		ApplicationName = "Firefox";
+    @BeforeClass
+    public static void setUpBeforeClass() throws Exception
+    {
+        ApplicationName = "Firefox";
 
         Logger_Sngltn.getInstance();
-		// Reset des Loggers: Alle geladenen Instanzen löschen
+        // Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        Logger_Sngltn.getInstance().setDebugMode(false);
-}
+        myLog2HTML = new Log2HTML( "target/SeInputCheckbox_Firefox_Test.html" );
+        Logger_Sngltn.getInstance().addLogger( myLog2HTML );
+        Logger_Sngltn.getInstance().setDebugMode( false );
+    }
 
+    @AfterClass
+    public static void tearDownAfterClass() throws Exception
+    {
+        myLog2HTML.Result2HTML();
+    }
+    /*
     @After
     public void FirefoxAfter() throws Exception
     {
@@ -39,6 +47,6 @@ public class SeInputCheckbox_EN_Firefox_Test extends SeInputCheckbox_EN_Test
     	     rt.exec("pkill -f Firefox");
       
     	Thread.sleep( 1000 );
-        
     }
+    */
 }
