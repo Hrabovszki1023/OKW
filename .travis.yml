@@ -12,9 +12,6 @@ branches:
 jdk:
   - openjdk8
 
-addons:  
-  chrome: stable
-
 # Environment variables
 env:
   global:
@@ -43,7 +40,7 @@ jobs:
   include:
     - stage: core
       install:
-          - "mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V"
+          "mvn install -Dgpg.skip=true -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
       env:
           TESTCASE="okw.gui.OKWLocatorTest"
           Package="core"
@@ -71,8 +68,10 @@ jobs:
 #
     - stage: chrome
       env:
-        - TESTCASE="okw.SeBrowserChild.SeBrowserChild_EN_Chrome_Test"
+          TESTCASE="okw.SeBrowserChild.SeBrowserChild_EN_Chrome_Test"
           Package="se"
+      addons:  
+          chrome: stable
       install:
           # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
           - wget -N http://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip -P ~/
