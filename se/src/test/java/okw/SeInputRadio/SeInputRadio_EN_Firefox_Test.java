@@ -37,7 +37,7 @@ public class SeInputRadio_EN_Firefox_Test extends SeInputRadio_EN_Test
 		myLog2HTML.Result2HTML();
 	}
 	
-	
+	/*
     @After
     public void FirefoxAfter() throws Exception
     {
@@ -49,4 +49,5 @@ public class SeInputRadio_EN_Firefox_Test extends SeInputRadio_EN_Test
     	  
     	Thread.sleep( 1000 );
     }
+    */
 }

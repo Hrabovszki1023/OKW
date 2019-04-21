@@ -86,12 +86,12 @@ jobs:
     - env:
           TESTCASE="okw.log.log2html.Log2HTMLTest"
           Package="log2html"
-    - env:
-          TESTCASE="okw.SeBACK.SeBACK_EN_Chrome_Test"
-          Package="se"
 #
     - stage: chrome
       env:
+          TESTCASE="okw.SeBACK.SeBACK_EN_Chrome_Test"
+          Package="se"
+    - env:
           TESTCASE="okw.SeBrowserChild.SeBrowserChild_EN_Chrome_Test"
           Package="se"
     - env:
@@ -122,8 +122,39 @@ jobs:
           Package="se"
         
 #    - stage: firefox
-#      install: 
-#        # Install FirefoxDriver (64bits; replace 64 with 32 for 32bits).
+    - stage: chrome
+      env:
+          TESTCASE="okw.SeBACK.SeBACK_EN_Firefox_Test"
+          Package="se"
+    - env:
+          TESTCASE="okw.SeBrowserChild.SeBrowserChild_EN_Firefox_Test"
+          Package="se"
+    - env:
+        - TESTCASE="okw.SeButton.SeButton_EN_Firefox_Test"
+          Package="se"
+    - env:
+        - TESTCASE="okw.SeInputButton.SeInputButton_EN_Firefox_Test"
+          Package="se"
+    - env:
+        - TESTCASE="okw.SeInputCheckbox.SeInputCheckbox_EN_Firefox_Test"
+          Package="se"
+    - env:
+        - TESTCASE="okw.SeInputField.SeInputField_EN_Firefox_Test"
+          Package="se"
+    - env:
+        - TESTCASE="okw.SeInputRadio.SeInputRadio_EN_Firefox_Test"
+          Package="se"
+    - env:
+        - TESTCASE="okw.SeLink.SeLink_EN_Firefox_Test"
+          Package="se"
+        # - TESTCASE="okw.SeMAXIMIZE.SeMAXIMIZE_EN_Chrome_Test"
+        #  Package="se"
+    - env:
+        - TESTCASE="okw.SeSelect.SeSelect_EN_Firefox_Test"
+          Package="se"
+    - env:
+        - TESTCASE="okw.SeTextarea.SeTextarea_EN_Firefox_Test"
+          Package="se"
         
     - stage: doxygen
       apt:
