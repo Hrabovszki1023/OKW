@@ -85,7 +85,7 @@ public class FrmSeFirefox extends SeBrowserWindow
             }
 
             FirefoxBinary firefoxBinary = new FirefoxBinary();
-            firefoxBinary.addCommandLineOptions("--headless");
+            // firefoxBinary.addCommandLineOptions("--headless");
             //System.setProperty("webdriver.gecko.driver", "/opt/geckodriver");
             FirefoxOptions firefoxOptions = new FirefoxOptions();
             firefoxOptions.setBinary(firefoxBinary);
