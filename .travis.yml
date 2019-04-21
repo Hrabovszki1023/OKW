@@ -27,7 +27,7 @@ env:
 
 addons:  
   chrome: stable
-  firefox: "60.6.1"
+  firefox: latest-esr
 
 install:
   # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
