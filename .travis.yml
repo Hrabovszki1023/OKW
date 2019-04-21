@@ -26,16 +26,19 @@ env:
 
 addons:  
   chrome: stable
-  firefox: stable
+  firefox: latest
 
 install:
   # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
-  - wget -N http://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip -P ~/
-  - unzip ~/chromedriver_linux64.zip -d ~/
-  - rm ~/chromedriver_linux64.zip
-  - sudo mv -f ~/chromedriver /usr/local/share/
-  - sudo chmod +x /usr/local/share/chromedriver
-  - sudo ln -s /usr/local/share/chromedriver $OKWChromedriverPath
+  #- wget -N http://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip -P ~/
+  #- unzip ~/chromedriver_linux64.zip -d ~/
+  #- rm ~/chromedriver_linux64.zip
+  #- sudo mv -f ~/chromedriver /usr/local/share/
+  #- sudo chmod +x /usr/local/share/chromedriver
+  #- sudo ln -s /usr/local/share/chromedriver $OKWChromedriverPath
+  - wget https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - sudo cp chromedriver /usr/bin
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V   
 
 
