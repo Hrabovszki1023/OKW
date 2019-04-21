@@ -127,39 +127,60 @@ jobs:
       env:
           TESTCASE="okw.SeBACK.SeBACK_EN_Firefox_Test"
           Package="se"
+
     - services:
           xvfb
       env:
          ESTCASE="okw.SeBrowserChild.SeBrowserChild_EN_Firefox_Test"
          Package="se"
+
     - services:
          xvfb
       env:
         - TESTCASE="okw.SeButton.SeButton_EN_Firefox_Test"
           Package="se"
+
     - services:
-        - xvfb
+          xvfb
       env:
         - TESTCASE="okw.SeInputButton.SeInputButton_EN_Firefox_Test"
           Package="se"
-    - env:
+
+    - services:
+          xvfb
+      env:
         - TESTCASE="okw.SeInputCheckbox.SeInputCheckbox_EN_Firefox_Test"
           Package="se"
-    - env:
+
+    - services:
+          xvfb
+      env:
         - TESTCASE="okw.SeInputField.SeInputField_EN_Firefox_Test"
           Package="se"
-    - env:
+
+    - services:
+          xvfb
+      env:
         - TESTCASE="okw.SeInputRadio.SeInputRadio_EN_Firefox_Test"
           Package="se"
-    - env:
+
+    - services:
+          xvfb
+      env:
         - TESTCASE="okw.SeLink.SeLink_EN_Firefox_Test"
           Package="se"
         # - TESTCASE="okw.SeMAXIMIZE.SeMAXIMIZE_EN_Chrome_Test"
         #  Package="se"
-    - env:
+
+    - services:
+          xvfb
+      env:
         - TESTCASE="okw.SeSelect.SeSelect_EN_Firefox_Test"
           Package="se"
-    - env:
+
+    - services:
+          xvfb
+      env:
         - TESTCASE="okw.SeTextarea.SeTextarea_EN_Firefox_Test"
           Package="se"
         
