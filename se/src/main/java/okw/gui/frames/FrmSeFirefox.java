@@ -104,15 +104,44 @@ public class FrmSeFirefox extends SeBrowserWindow
 
     public void StopApp()
     {
-        LogFunctionStartDebug( "StopApp" );
-
-        //mySeDriver.getDriver().close();
+        LogFunctionStartDebug( "StopApp()" );
+        
+        // mySeDriver.getDriver().close();
         mySeDriver.getDriver().quit();
+        
+        try
+        {    
+             Runtime rt = Runtime.getRuntime();
+        
+             if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1)
+             {
+                 LogPrintDebug( "before windows taskkill geckodriver " );
+                 //rt.exec("taskkill Chrome");
+             }
+             else
+             {
+                 LogPrintDebug( "before linux/osx pkill -f geckodriver" );
+                 Process p = rt.exec("pkill -f geckodriver");
+                 p.waitFor();
+                 //rt.exec("killall chromedriver");
+             } 
+             
+             //Thread.sleep( 3000 );
+        }
+        // catch (InterruptedException | IOException e)
+       catch ( Exception e)
+        {
+            LogPrintDebug( "before catch (InterruptedException | IOException e)" );
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            LogPrintDebug( "after catch (InterruptedException | IOException e)" );
+        }
+        finally
+        {
+            LogPrintDebug( "finaly.. " );
+            LogFunctionEndDebug();
+        }
+    }    
 
-        LogFunctionEndDebug();
-    }
 
-    public void TypeKey( ArrayList<String> fps_Values )
-    {
-    }
 }
