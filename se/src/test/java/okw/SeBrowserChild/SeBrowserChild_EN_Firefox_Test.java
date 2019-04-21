@@ -2,8 +2,6 @@ package okw.SeBrowserChild;
 
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
-
-import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
@@ -24,7 +22,7 @@ public class SeBrowserChild_EN_Firefox_Test extends SeBrowserChild_EN_Test
 
         myLog2HTML = new Log2HTML("target/SeBrowserChild_Firefox_Test.html");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(true);
+        Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
 	
