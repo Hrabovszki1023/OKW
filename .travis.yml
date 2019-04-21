@@ -55,6 +55,9 @@ install:
 #  - "sh -e /etc/init.d/xvfb start"
 #  - sleep 3 # give xvfb some time to start
 
+script:
+  - mvn test -Dtest=$TESTCASE -Dgpg.skip=true -pl $Package
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 
