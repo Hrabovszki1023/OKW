@@ -40,11 +40,13 @@ jobs:
   include:
     - stage: core
       install:
-          "mvn install -Dgpg.skip=true -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
+          mvn install -Dgpg.skip=true -DskipTests=true -Dmaven.javadoc.skip=true -B -V
       env:
           TESTCASE="okw.gui.OKWLocatorTest"
           Package="core"
-    - env:
+    - install:
+          mvn install -Dgpg.skip=true -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+      env:
           TESTCASE="okw.gui.OKWLocatorXPathTest"
           Package="core"
     - env:
