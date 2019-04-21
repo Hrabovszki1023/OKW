@@ -21,7 +21,7 @@ env:
     - WORKSPACE: $TRAVIS_BUILD_DIR
     - BUILD_ID: $TRAVIS_BUILD_NUMBER
     - BUILD_TIMESTAMP_DE: $(date +"%m.%d.%Y %T")
-    - OKWChromedriverPath: "/usr/local/bin/chromedriver"
+    - OKWChromedriverPath: "/usr/bin/chromedriver"
     - CODECOV_TOKEN: "c6cfebdf-999f-483e-bf42-6befa68d656c"
 
 addons:  
