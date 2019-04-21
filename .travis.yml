@@ -33,7 +33,7 @@ env:
 #  - sleep 3 # give xvfb some time to start
   
 script:
-  - mvn test -Dtest=$TESTCASE -Dgpg.skip=true -pl $Package
+  - "mvn test -Dtest=$TESTCASE -Dgpg.skip=true -pl $Package"
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
@@ -43,7 +43,7 @@ jobs:
   include:
     - stage: core
       install:
-          mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V
+          - "mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V"
       env:
           TESTCASE="okw.gui.OKWLocatorTest"
           Package="core"
@@ -81,7 +81,7 @@ jobs:
           - sudo mv -f ~/chromedriver /usr/local/share/
           - sudo chmod +x /usr/local/share/chromedriver
           - sudo ln -s /usr/local/share/chromedriver $OKWChromedriverPath
-          - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V   
+          - "mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V"   
     - env:
         - TESTCASE="okw.SeButton.SeButton_EN_Chrome_Test"
           Package="se"
