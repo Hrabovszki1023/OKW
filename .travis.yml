@@ -22,6 +22,7 @@ env:
     - BUILD_ID: $TRAVIS_BUILD_NUMBER
     - BUILD_TIMESTAMP_DE: $(date +"%m.%d.%Y %T")
     - OKWChromedriverPath: "/usr/bin/chromedriver"
+    - OKWGeckodriverPath: "/usr/bin/geckodriver"
     - CODECOV_TOKEN: "c6cfebdf-999f-483e-bf42-6befa68d656c"
 
 addons:  
@@ -30,15 +31,22 @@ addons:
 
 install:
   # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
-  #- wget -N http://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip -P ~/
-  #- unzip ~/chromedriver_linux64.zip -d ~/
-  #- rm ~/chromedriver_linux64.zip
-  #- sudo mv -f ~/chromedriver /usr/local/share/
-  #- sudo chmod +x /usr/local/share/chromedriver
-  #- sudo ln -s /usr/local/share/chromedriver $OKWChromedriverPath
+  # See: https://octopus.com/blog/selenium/21-travis-ci/travis-ci
   - wget https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip
-  - sudo cp chromedriver /usr/bin
+  - rm ~/chromedriver_linux64.zip
+  - sudo mv -f ~/chromedriver /usr/bin
+  - sudo chmod +x /usr/bin/chromedriver
+
+  # Install FirefoxDriver (64bits; replace 64 with 32 for 32bits).
+  # See: https://octopus.com/blog/selenium/21-travis-ci/travis-ci
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+  - tar -xzf geckodriver-v0.24.0-linux64.tar.gz
+  - rm ~/geckodriver-v0.24.0-linux64.tar.gz
+  - sudo mv -f ~/geckodriver /usr/bin
+  - sudo chmod +x /usr/bin/geckodriver
+
+  # compile OKW
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V   
 
 
