@@ -131,7 +131,7 @@ jobs:
     - services:
           xvfb
       env:
-         ESTCASE="okw.SeBrowserChild.SeBrowserChild_EN_Firefox_Test"
+         TESTCASE="okw.SeBrowserChild.SeBrowserChild_EN_Firefox_Test"
          Package="se"
 
     - services:
