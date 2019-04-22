@@ -1,0 +1,8 @@
+digraph "okw.gui.OKWLocatorTest"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{okw.gui.OKWLocatorTest\n||+ setUp()\l+ tearDown()\l+ TC_Kombiniert_2in1\l_Multiple()\l+ TC_Kombiniert_2in1\l_ReverseOrder()\l+ TC_Kombiniert_2in1()\l+ TC_setLocator_2in1\l_Multiple()\l+ TC_setLocator_2in1\l_ReverseOrder()\l+ TC_setLocator_2in1()\l+ TC_Window()\l+ TC_Window_setLocator()\l+ TC_Window_Child()\l+ setUpBeforeClass()\l+ tearDownAfterClass()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Prüft die Verküpfungen von Locatoren."];
+}

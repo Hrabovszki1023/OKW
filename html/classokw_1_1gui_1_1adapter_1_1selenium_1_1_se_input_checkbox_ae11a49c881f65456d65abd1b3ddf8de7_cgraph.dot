@@ -1,0 +1,65 @@
+digraph "okw.gui.adapter.selenium.SeInputCheckbox.SetValue"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node84 [label="okw.gui.adapter.selenium.\lSeInputCheckbox.SetValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node84 -> Node85 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node85 [label="okw.gui.AnyWinBase.LogFunction\lStartDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#abaab572bdbed7b471f659d5dd8c76853",tooltip="Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(fps_FunctionName), und erweitert den g..."];
+  Node84 -> Node86 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node86 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.WaitForMe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a72faf4aa1717b4178fae1b0570ca9b28",tooltip="Wartet auf das Objekt Wenn kein Fenster gefunden wird,."];
+  Node86 -> Node87 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node87 [label="okw.gui.AnyWinBase.getLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#a9929f6fae1f4e2c20df79d32d5bc79db",tooltip="Holt den vollständig (rekursiv) aufgelösten (z.B."];
+  Node87 -> Node88 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node88 [label="okw.gui.OKWLocator.getLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator.html#adc74fc2125dd048dc1cb84e011f47ec8",tooltip="Holt den vollständig (rekursiv) aufgelösten (z.B."];
+  Node86 -> Node89 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node89 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node89 -> Node90 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node90 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node90 -> Node91 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node91 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node84 -> Node92 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node92 [label="okw.OKW_Const_Sngltn.Get\lConst4Internalname",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7",tooltip="Methode ermittelt für Internalname und der aktuell eingestellten Sprache den Wert für Const."];
+  Node92 -> Node93 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node93 [label="okw.log.Logger_Sngltn.Log\lPrintDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4",tooltip="Loggt eine Nachricht."];
+  Node92 -> Node91 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node84 -> Node94 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node94 [label="okw.gui.adapter.selenium.\lSeInputCheckbox.checking",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#ab998b0c6ae99303c050c6a7fe417dd6d",tooltip="Method verlässt die Checkbox immer angehakt, egal ob diese vorher angehakt war oder nicht."];
+  Node94 -> Node85 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node94 -> Node95 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node95 [label="okw.gui.adapter.selenium.\lSeInputCheckbox.getIsSelected",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#aa5351c44da27a9f8c63ccd0315922c82",tooltip="Method liefert den aktuellen Zustand der Checkbox, \"angehakt\" oder \"nicht angehakt\"."];
+  Node95 -> Node85 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node95 -> Node96 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node96 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.Me",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a9a138af1fc6ff850d708d66f308a2525",tooltip="Ermittelt aus dem gegebenen Locator das DOM-Elelement, welches das Objekt representiert."];
+  Node96 -> Node97 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node97 [label="okw.gui.adapter.selenium.webdriver.\lSeDriver.getInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_driver.html#aee9e3f8a67f4ad1f8100a33ba71c926e",tooltip="Gibt die Instance für die einzige Instanz dieser Klasse zurück."];
+  Node96 -> Node98 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node98 [label="okw.gui.adapter.selenium.webdriver.\lSeDriver.getElement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_driver.html#a65a8400867355574525aa356a53d3ccf",tooltip="Ermittelt das Webelement mit der gegebenen frameID und dem gegebenen Locator."];
+  Node98 -> Node99 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node99 [label="okw.gui.adapter.selenium.webdriver.\lSeDriver.swichToFrame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_driver.html#a47eec72c911c05beb2127672daafb325",tooltip="Wechselt das aktuelle Frame auf das Frame mit der id=iframeID."];
+  Node98 -> Node100 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node100 [label="okw.log.Logger_Sngltn.Log\lPrint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c",tooltip="LogPrint Function: Prints the values of expressions to the results file."];
+  Node98 -> Node101 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node101 [label="okw.log.Logger_Sngltn.Log\lWarning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a2c15e9b2cd0c6266f4c67b8cb00d92e5",tooltip="LogWarning Function: Logs a warning to the results file."];
+  Node98 -> Node93 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node96 -> Node87 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node95 -> Node102 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node102 [label="okw.gui.AnyWinBase.LogFunction\lEndDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#a51cf50ace21902b3a5359316f53a7f3e",tooltip="Methode ruft die Methode Logger.Instance.LogFunctionEndDebug() auf."];
+  Node94 -> Node103 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node103 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.ClickOn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a16df325c8b8bb0e360ac9d9dbb50d91e",tooltip="Das ist die GUI-Adapter Methode, die durch das Schlüsselwort ClickOn( FN ) aufgerufen wird."];
+  Node103 -> Node85 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node103 -> Node86 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node103 -> Node96 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node103 -> Node102 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node94 -> Node102 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node84 -> Node104 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node104 [label="okw.gui.adapter.selenium.\lSeInputCheckbox.unchecking",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a9b2cd5dc1001157dcf168acb76779b6f",tooltip="Method verlässt die Checkbox immer unangehakt, egal ob sie vorher angehakt war oder nicht."];
+  Node104 -> Node85 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node104 -> Node95 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node104 -> Node103 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node104 -> Node102 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node84 -> Node89 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node84 -> Node102 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

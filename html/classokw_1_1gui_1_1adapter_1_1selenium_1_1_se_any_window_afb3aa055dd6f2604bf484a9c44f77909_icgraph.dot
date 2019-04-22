@@ -1,0 +1,15 @@
+digraph "okw.gui.adapter.selenium.SeAnyWindow.getTooltip"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node151 [label="okw.gui.adapter.selenium.\lSeAnyWindow.getTooltip",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Ermittelt den textuellen Inhalt des ToolTips."];
+  Node151 -> Node152 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node152 [label="okw.gui.adapter.selenium.\lSeAnyWindow.LogTooltip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#afc2a8c2aa64ef9cf5ea8b29e85d7d65c",tooltip="Logt den textuellen Inhalt des ToolTips."];
+  Node151 -> Node153 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node153 [label="okw.gui.adapter.selenium.\lSeAnyWindow.MemorizeTooltip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a20997f7ec363af3e52ded1d26822090c",tooltip="Ermittelt den textuellen Inhalt des ToolTips für das Schlüsselwort MerkeWert."];
+  Node151 -> Node154 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node154 [label="okw.gui.adapter.selenium.\lSeAnyWindow.VerifyTooltip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a6cf810f4712e4e7892f47722dd57a6f2",tooltip="Ermittelt den textuellen Inhalt des ToolTips für Prüfewert."];
+}

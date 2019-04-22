@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 263, Datum: 04.02.2019 14:27:06</span>
+   &#160;<span id="projectnumber">Build_ID: 327, Datum: 04.22.2019 08:42:14</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('classokw_1_1core_1_1_n_o_k.html','');}
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1core_1_1_n_o_k__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><!-- SVG 0 -->
 </div>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('classokw_1_1core_1_1_n_o_k.html','');}
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1core_1_1_n_o_k__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><!-- SVG 1 -->
 </div>
 </div>
 <table class="memberdecls">
@@ -382,7 +382,7 @@ Private Attribute</h2></td></tr>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classokw_1_1core_1_1_n_o_k_ace2d4cedddbf1969e282bc85987197b8_cgraph.svg" width="390" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><!-- SVG 2 -->
 </div>
 </div>
 
@@ -427,13 +427,13 @@ Private Attribute</h2></td></tr>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00091">91</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">try</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            Log.LogFunctionStartDebug( <span class="stringliteral">&quot;BeginTest&quot;</span>, <span class="stringliteral">&quot;fpsTestname&quot;</span>, fpsTestname );</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// Alles Initialisieren</span></div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            OKW_Ini_Sngltn.getInstance().Init();</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            OKW_CurrentObject_Sngltn.getInstance();</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            OKW_CurrentObject_Sngltn.init();</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="comment">// Memorize TestCaseName</span></div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            OKW_Memorize_Sngltn.getInstance().set( <span class="stringliteral">&quot;TCN&quot;</span>, fpsTestname );</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            Log.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c">LogPrint</a>( <span class="stringliteral">&quot;NOK -&gt; OK&quot;</span> );</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            this._Kernel.<a class="code" href="classokw_1_1core_1_1_core.html#aafe6e3d88e810dabf350b37058d4af97">SetCurrentState</a>( <span class="keyword">new</span> OK( this._Kernel ) );</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">catch</span> (XPathExpressionException | JAXBException | ParserConfigurationException | SAXException | IOException e)</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> RuntimeException( e );</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">finally</span></div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        {</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="comment">// Gute Frage was alles hier hingehört...</span></div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            Log.LogFunctionEndDebug();</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div><div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a8ebceaddd6cc6963ddb8e08c72ea808c"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c">okw.log.Logger_Sngltn.LogPrint</a></div><div class="ttdeci">void LogPrint(String fps_Message)</div><div class="ttdoc">LogPrint Function: Prints the values of expressions to the results file.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00438">Logger_Sngltn.java:438</a></div></div>
-<div class="ttc" id="classokw_1_1core_1_1_core_html_aafe6e3d88e810dabf350b37058d4af97"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#aafe6e3d88e810dabf350b37058d4af97">okw.core.Core.SetCurrentState</a></div><div class="ttdeci">void SetCurrentState(IOKW_State fp_CurrentState)</div><div class="ttdoc">Setter zum Setzen des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00643">Core.java:643</a></div></div>
+<div class="ttc" id="classokw_1_1core_1_1_core_html_aafe6e3d88e810dabf350b37058d4af97"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#aafe6e3d88e810dabf350b37058d4af97">okw.core.Core.SetCurrentState</a></div><div class="ttdeci">void SetCurrentState(IOKW_State fp_CurrentState)</div><div class="ttdoc">Setter zum Setzen des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00649">Core.java:649</a></div></div>
 </div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1core_1_1_n_o_k_a62d1765ea311e440d678cb57ca9dd2c2_cgraph.svg" width="100%" height="564"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><!-- SVG 3 -->
 </div>
 </div>
 
@@ -681,7 +681,7 @@ Private Attribute</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Autor</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'zh@'+'op'+'enk'+'ey'+'wor'+'d.'+'de'; return false;">zh@op<span style="display: none;">.nosp@m.</span>enke<span style="display: none;">.nosp@m.</span>yword<span style="display: none;">.nosp@m.</span>.de</a> </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2014-09-18/jnic </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Noch zu erledigen:</a></b></dt><dd>jnic--&gt;keine Beschreibung vorhanden </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Noch zu erledigen:</a></b></dt><dd>jnic--&gt;keine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac80485d56013384a4518b25e76b87637">okw.core.IOKW_State</a>.</p>
 
@@ -927,7 +927,7 @@ Private Attribute</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Autor</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'zh@'+'op'+'enk'+'ey'+'wor'+'d.'+'de'; return false;">zh@op<span style="display: none;">.nosp@m.</span>enke<span style="display: none;">.nosp@m.</span>yword<span style="display: none;">.nosp@m.</span>.de</a> </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2014-09-19 </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Noch zu erledigen:</a></b></dt><dd>Beschreibung überprüfen </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Noch zu erledigen:</a></b></dt><dd>Beschreibung überprüfen </dd></dl>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aed4fb79a0e38cdb3ec43e8bb9d2e3425">okw.core.IOKW_State</a>.</p>
 
@@ -1126,7 +1126,7 @@ Private Attribute</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Autor</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'zh@'+'op'+'enk'+'ey'+'wor'+'d.'+'de'; return false;">zh@op<span style="display: none;">.nosp@m.</span>enke<span style="display: none;">.nosp@m.</span>yword<span style="display: none;">.nosp@m.</span>.de</a> </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2014-09-19/jnic </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a064a961875018e9ce88379b1b5314fb1">okw.core.IOKW_State</a>.</p>
 
@@ -1301,7 +1301,7 @@ Private Attribute</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Autor</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'zh@'+'op'+'enk'+'ey'+'wor'+'d.'+'de'; return false;">zh@op<span style="display: none;">.nosp@m.</span>enke<span style="display: none;">.nosp@m.</span>yword<span style="display: none;">.nosp@m.</span>.de</a> </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2014-09-19/jnic </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Noch zu erledigen:</a></b></dt><dd>TODO:keine Beschreibung vorhanden </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Noch zu erledigen:</a></b></dt><dd>TODO:keine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a2e9dcf9b0e3ebe2645ed830e5c077e04">okw.core.IOKW_State</a>.</p>
 
@@ -1688,7 +1688,7 @@ Private Attribute</h2></td></tr>
 
 <p>Setzt den Kontext auf das gegebene Fenster. </p>
 <p>Das Fenster wird aktiviert und in den Vordergrund geholt. Alle nachfolgen GUI-Schlüssleworte (z.B. Gib ein) beziehen sich auf das gegeben Fenster. Der Kontext wechselt erst mit dem nächsten <em>Wähle aus Fenster</em> auf ein anderes Fenster.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Noch zu erledigen:</a></b></dt><dd>zh: jnic die englische Beschreibung für Selectwindow anpassen.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Noch zu erledigen:</a></b></dt><dd>zh: jnic die englische Beschreibung für Selectwindow anpassen.</dd></dl>
 <p><em>Beispiel: Auswahl des Fensters mit dem Namen "MeinFenster":</em> <br />
  </p><pre class="fragment">Wähle aus Fenster: "MeinFenster" </pre><dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
@@ -2124,7 +2124,7 @@ Private Attribute</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Autor</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'zh@'+'op'+'enk'+'ey'+'wor'+'d.'+'de'; return false;">zh@op<span style="display: none;">.nosp@m.</span>enke<span style="display: none;">.nosp@m.</span>yword<span style="display: none;">.nosp@m.</span>.de</a> </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21/jnic </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa078c7da434452f524816f58519b395b">okw.core.IOKW_State</a>.</p>
 
@@ -2171,7 +2171,7 @@ Private Attribute</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Autor</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'zh@'+'op'+'enk'+'ey'+'wor'+'d.'+'de'; return false;">zh@op<span style="display: none;">.nosp@m.</span>enke<span style="display: none;">.nosp@m.</span>yword<span style="display: none;">.nosp@m.</span>.de</a> </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21/jnic </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aef357868be62a11c185d5c73989c131a">okw.core.IOKW_State</a>.</p>
 
@@ -2222,7 +2222,7 @@ Private Attribute</h2></td></tr>
 </dl>
 <dl class="section author"><dt>Autor</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'zh@'+'op'+'enk'+'ey'+'wor'+'d.'+'de'; return false;">zh@op<span style="display: none;">.nosp@m.</span>enke<span style="display: none;">.nosp@m.</span>yword<span style="display: none;">.nosp@m.</span>.de</a> </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21/jnic </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a8f08ab9f441773a456ea6a0f87f2967f">okw.core.IOKW_State</a>.</p>
 
@@ -3387,7 +3387,7 @@ Private Attribute</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>core</b></li><li class="navelem"><a class="el" href="classokw_1_1core_1_1_n_o_k.html">NOK</a></li>
-    <li class="footer">Erzeugt am Die Apr 2 2019 14:48:03 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mon Apr 22 2019 09:02:11 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>

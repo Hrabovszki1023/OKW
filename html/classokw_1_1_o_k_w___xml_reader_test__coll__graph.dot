@@ -1,0 +1,8 @@
+digraph "okw.OKW_XmlReaderTest"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{okw.OKW_XmlReaderTest\n||+ TC_getXMLFile()\l+ TC_getXMLFil2e()\l+ TC_getXMLFile_FileNotFound\lException()\l+ TC_getTextContentAsList()\l+ TC_getTextContentAsList\l_Subfolder()\l+ TC_getTextContentSingleValue()\l+ TC_getTextContentSingleValue\l_Subfolder()\l+ MyTestFixtureSetUp()\l+ MyTestFixtureTearDown()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+}

@@ -48,8 +48,7 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "VerifyValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a61782ba77f680a08d43ec4f3c6491d2b", null ],
       [ "WaitForMe", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a72faf4aa1717b4178fae1b0570ca9b28", null ],
       [ "iframeID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a3fe8e63aa619e3493b6ff861db942b24", null ],
-      [ "LM", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a7c3ae19f79c61de87c8692f6b817fa09", null ],
-      [ "MyLogger", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ab8f0c80bfe825c89cef42f922a2e2ece", null ]
+      [ "LM", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a7c3ae19f79c61de87c8692f6b817fa09", null ]
     ] ],
     [ "SeButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html", [
       [ "SeButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html#ad5a121eb9e1270e6c99f149ebc59814f", null ],
@@ -92,7 +91,7 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "getMaxLength", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#abcef45ee901b75771500defc871ecea9", null ],
       [ "getPlaceholder", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#a5ce4d66e798549b18635bf35c1c33917", null ],
       [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#aca62fc718d6636750d210014eb6244d2", null ],
-      [ "set__Attribute", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#ac35952c2a9a13593c013a802d745af14", null ],
+      [ "set____Attribute", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#ad8f12dba8ca83edfaea5ff80bf4a36aa", null ],
       [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html#ad8c33e44105dbec888046b752475aaa8", null ]
     ] ],
     [ "SeLink", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html", [
@@ -123,7 +122,7 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "getPlaceholder", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#a73235d1d4d3117f96ae91e60b0921553", null ],
       [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#a144e35802cf11c6b714bf8513691cc22", null ],
       [ "igetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#ae561257a88aece7f85d04001b7ead2ae", null ],
-      [ "setAttribute", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#ae40ec0953db4d03ac54dd9aafbb56bcf", null ],
+      [ "set__Attribute", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#a3b31000198ffe296a0bd590bd6ce93b7", null ],
       [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#aa9f8884c932bcb113d2392ca5444e111", null ]
     ] ],
     [ "SeBACK", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html", [

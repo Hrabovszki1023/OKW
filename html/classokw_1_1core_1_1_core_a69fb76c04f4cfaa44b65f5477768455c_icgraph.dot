@@ -1,0 +1,31 @@
+digraph "okw.core.Core.MemorizeIsActive"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1166 [label="okw.core.Core.MemorizeIs\lActive",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Merkt sich den Zustand des gegebenen Objekts."];
+  Node1166 -> Node1167 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1167 [label="okw.core.EN.MemorizeIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a935b5a215e8176e6abda9bc268f107f4",tooltip="Merkt sich den Zustand des gegebenen Objekts."];
+  Node1167 -> Node1168 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1168 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
+  Node1167 -> Node1169 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1169 [label="okw.core.EN_OKWNotAllowed\lValueException_Keywords\l_IGNORE.tcMemorizeIsActiveIGNORE1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a6e44ea6f8c45474e652babb6966c380f",tooltip="Prüft ob \"${IGNORE} \" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst."];
+  Node1167 -> Node1170 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1170 [label="okw.core.EN_OKWNotAllowed\lValueException_Keywords\l_IGNORE.tcMemorizeIsActiveIGNORE2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#aecc232a734bfeaf3b7e1ca88028c6122",tooltip="Prüft ob \"\"${IGNORE}${TCN}\" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst."];
+  Node1167 -> Node1171 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1171 [label="okw.SeBACK.SeBACK_EN\l_Test.tcMemorizeIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#a6fec92f9be648729f1b3b40e7366fb5e",tooltip="Teste das Schlüsselwort MemorizeIsActive( FN, MemKey ) eines SeBACK Prüfen."];
+  Node1167 -> Node1172 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1172 [label="okw.SeButton.SeButton\l_EN_Test.tcMemorizeIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_button_1_1_se_button___e_n___test.html#a6598b01b18a4f5b518b5d610d1c8d290",tooltip="Test des Schlüsselwortes MemorizeIsActive für den GUI-Adapter SeButton."];
+  Node1167 -> Node1173 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1173 [label="okw.SeInputField.SeInput\lField_EN_Test.tcMemorizeIsActive_en",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a2b32a4338175e0f367218d82c92e7587",tooltip="Teste das Schlüsselwort MemorizeIsActive( FN, MemKey ) eines SeInputText Prüfen."];
+  Node1167 -> Node1174 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1174 [label="okw.SeInputRadio.SeInput\lRadio_EN_Test.tc_MemorizeIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a7810904e1268bdaf14922ba950527c06",tooltip="Test des Schlüsselwortes MemorizeIsActive für den GUI-Adapter SeInputRadio."];
+  Node1167 -> Node1175 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1175 [label="okw.SeLink.SeLink_EN\l_Test.tcMemorizeIsActive_en",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_link_1_1_se_link___e_n___test.html#a6790e3a557b34eef479a3306c331bc46",tooltip="Prüft ob die VerifyIsActive die Ausnahme OKWFrameObjectMethodNotImplemented auslöst."];
+  Node1167 -> Node1176 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1176 [label="okw.SeMAXIMIZE.SeMAXIMIZE\l_EN_Test.tcMemorizeIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test.html#af649d3166ca3d9bc4c1f3858089a0853",tooltip="Teste das Schlüsselwort MemorizeIsActive( FN, MemKey ) eines SeMAXIMIZE Prüfen."];
+  Node1166 -> Node1177 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1177 [label="okw.core.CurrentObject\l_Test.tc_MemorizeIsActive\l_ChildObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a071092391826959809ec74f3c4d2ec59",tooltip="Testziel: Prüft den Aufruf der Methode MemorizeIsActive( FN, MemKey ) im ChildObject."];
+}

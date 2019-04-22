@@ -47,6 +47,5 @@ var classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window =
     [ "VerifyValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a61782ba77f680a08d43ec4f3c6491d2b", null ],
     [ "WaitForMe", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a72faf4aa1717b4178fae1b0570ca9b28", null ],
     [ "iframeID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a3fe8e63aa619e3493b6ff861db942b24", null ],
-    [ "LM", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a7c3ae19f79c61de87c8692f6b817fa09", null ],
-    [ "MyLogger", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ab8f0c80bfe825c89cef42f922a2e2ece", null ]
+    [ "LM", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a7c3ae19f79c61de87c8692f6b817fa09", null ]
 ];

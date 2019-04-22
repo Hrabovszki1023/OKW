@@ -1,0 +1,18 @@
+digraph "okw.core.EN_OKWFrameObjectParentNotFoundException_Test"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{okw.core.EN_OKWFrameObject\lParentNotFoundException_Test\n||+ setUp()\l+ tearDown()\l+ tcSelectWindow_OKWFrameObject\lParentNotFoundException_Test()\l+ tcStartApp_OKWFrameObject\lParentNotFoundException_Test()\l+ tcStopApp_OKWFrameObject\lParentNotFoundException_Test()\l+ setUpBeforeClass()\l+ tearDownAfterClass()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" ~myClipBoard" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{okw.OKW_TestClipboard\n|- cvs_Method\l- cvs_ObjectName\l|+ getLogValue()\l+ getMethod()\l+ setMethod()\l+ getObjectName()\l+ setObjectName()\l+ getValue()\l+ setValue()\l+ Clear()\l+ LogValueAdd()\l+ getInstance()\l- OKW_TestClipboard()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___test_clipboard.html",tooltip=" "];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" -cvLs_LogValue\n-cvLs_Value" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{ArrayList\< String \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node2 [color="grey25",fontsize="10",style="solid",label=" -instanz" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" ~myLogger" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{okw.log.Logger_Sngltn\n|- cvbDebugMode\l|+ getDebugMode()\l+ setDebugMode()\l+ addLogger()\l+ reset()\l+ LogError()\l+ LogException()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionStart()\l+ LogFunctionStartDebug()\l+ LogKeyWordEnd()\l+ LogSequenceEnd()\l+ LogTestcaseEnd()\l+ LogKeyWordStart()\l+ LogSequenceStart()\l+ LogTestcaseStart()\l+ LogPass()\l+ LogPrint()\l+ LogPrintDebug()\l+ LogWarning()\l+ ResCloseList()\l+ ResCloseListDebug()\l+ ResOpenList()\l+ ResOpenListDebug()\l+ getInstance()\l+ init()\l- Logger_Sngltn()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html",tooltip=" "];
+  Node5 -> Node4 [color="grey25",fontsize="10",style="solid",label=" -LoggerList" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 [label="{ArrayList\< okw.log.ILogger \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node4 [color="grey25",fontsize="10",style="solid",label=" -Instance" ,arrowhead="odiamond",fontname="Helvetica"];
+}

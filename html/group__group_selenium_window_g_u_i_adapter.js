@@ -45,7 +45,7 @@ var group__group_selenium_window_g_u_i_adapter =
       [ "VerifyValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a22e71a15606b0dc55a2b2ded64043780", null ],
       [ "iframeID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a03067479c3d18f0a03ba96563c9da84c", null ],
       [ "LM", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a3f07ebd152e24aa97973170c6afdc847", null ],
-      [ "MyLogger", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a77626be8d12466f96db294687b5405cf", null ]
+      [ "mySeDriver", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a7fb30bbdc8c50f9c8bfeec917cd5b8de", null ]
     ] ],
     [ "SeBrowserChild", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html", [
       [ "SelectWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html#adb40bf9fab066a5066768ef1e0476576", null ],

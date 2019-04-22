@@ -1,0 +1,37 @@
+digraph "okw.core.IOKW_State.MemorizeLabel"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1103 [label="okw.core.IOKW_State.Memorize\lLabel",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab."];
+  Node1103 -> Node1104 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1104 [label="okw.core.Core.MemorizeLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a85d56eaf394a4e6a0f67979e5d3c58fa",tooltip="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab."];
+  Node1104 -> Node1105 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1105 [label="okw.core.EN.MemorizeLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aecb0b17c6683319633eec36e2646f3f5",tooltip="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab."];
+  Node1105 -> Node1106 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1106 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
+  Node1105 -> Node1107 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1107 [label="okw.core.EN_OKWNotAllowed\lValueException_Keywords\l_IGNORE.tcMemorizeLabelIGNORE1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a2a8cb99a9d1cc182f3bc3ccf5b52848f",tooltip="Prüft ob \"${IGNORE} \" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst."];
+  Node1105 -> Node1108 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1108 [label="okw.core.EN_OKWNotAllowed\lValueException_Keywords\l_IGNORE.tcMemorizeLabelIGNORE2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a15ebf4abb1c918d82e9def2e5eae825f",tooltip="Prüft ob \"\"${IGNORE}${TCN}\" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst."];
+  Node1105 -> Node1109 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1109 [label="okw.SeBACK.SeBACK_EN\l_Test.tcMemorizeLabel\l_OKWFrameObjectMethodNotImplemented",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#ab0bddf0bdf4a7017f461bfd9baa76624",tooltip="Teste das Schlüsselwort MemorizeLabel( FN, MemKey ) eines SeBACK Prüfen."];
+  Node1105 -> Node1110 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1110 [label="okw.SeButton.SeButton\l_EN_Test.tcMemorizeLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_button_1_1_se_button___e_n___test.html#abf28e6329df074217d8c0bc889fdb9b4",tooltip="Test des Schlüsselwortes MemorizeCaption für den GUI-Adapter SeButton."];
+  Node1105 -> Node1111 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1111 [label="okw.SeInputField.SeInput\lField_EN_Test.tcMemorizeLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a6ae8699a98d818972e564c77d818da20",tooltip="Teste das Schlüsselwort MemorizeLabel( FN, MemKey ) eines SeInputText Prüfen."];
+  Node1105 -> Node1112 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1112 [label="okw.SeInputRadio.SeInput\lRadio_EN_Test.tc_MemorizeLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a39fbafcc74d53e91efb523e129b67aa2",tooltip="Test des Schlüsselwortes MemorizeLabel für den GUI-Adapter SeInputRadio."];
+  Node1105 -> Node1113 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1113 [label="okw.SeMAXIMIZE.SeMAXIMIZE\l_EN_Test.tcMemorizeLabel\l_OKWFrameObjectMethodNotImplemented",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test.html#a7124f05d1703f310ef914e1bfd48fa51",tooltip="Teste das Schlüsselwort MemorizeLabel( FN, MemKey ) eines SeMAXIMIZE Prüfen."];
+  Node1105 -> Node1114 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1114 [label="okw.SeRadioList.SeRadioList\l_EN_Test.tcMemorizeLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___test.html#ab6da5e2d827c5e804768ff83bf7bb6ff",tooltip="Prüft die Methode SeRadioList.MemorizeValue."];
+  Node1105 -> Node1115 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1115 [label="okw.SeRadioList.SeRadioList\l_EN_Test.tcMemorizeLabel\l_IGNORE_OKWNotAllowedValueException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___test.html#a4303fc17d4342ecb5458f71b8696a83b",tooltip="Prüft die Methode SeRadioList.MemorizeLabel."];
+  Node1105 -> Node1116 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1116 [label="okw.SeRadioList.SeRadioList\l_EN_Test.tcMemorizeLabel\l_Empty_OKWNotAllowedValueException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___test.html#a6867860868e8cc03d7c683740c2876bd",tooltip="Prüft die Methode SeRadioList.MemorizeLabel."];
+  Node1104 -> Node1117 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1117 [label="okw.core.CurrentObject\l_Test.tc_MemorizeLabel\l_ChildObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a2d646495904f5919262132a7e3baae3c",tooltip="Testziel: Prüft den Aufruf der Methode MemorizeLabel( FN, MemKey ) im ChildObject."];
+}

@@ -1,0 +1,13 @@
+digraph "okw.OKW_HelperTest"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{okw.OKW_HelperTest\n||+ tcBoolean2String_false()\l+ tcBoolean2String_true()\l+ tcGetLeftFromDelimiterMultiple\lCharacterDelemeter()\l+ tcGetLeftFromDelimiterNumber()\l+ tcGetLeftFromDelimiterNumber_2()\l+ tcGetLeftFromDelimiterNumber_2a()\l+ tcGetLeftFromDelimiterNumber\l_OKWDelimiterCountOutOfRangeException()\l+ tcGetLeftFromDelimiterNumber\l_OKWDelimiterCountOutOfRangeException_0()\l+ tcGetLeftFromDelimiterNumber\l_OKWDelimiterIsEmptyException()\l+ tcGetRightFromDelimiterNumber\l_ExceptionEmptyDelemiter()\l+ tcGetRigthFromDelimiterNumber\l_OKWDelimiterCountOutOfRangeException()\l+ tcGetRigthFromDelimiterNumber\l_OKWDelimiterCountOutOfRangeException_0()\l+ tcListStringCompare\l_0_0_Wert()\l+ tcListStringCompare\l_10_9Werte()\l+ tcListStringCompare\l_1_0_Werte()\l+ tcListStringCompare\l_1_1_DiffWert_1()\l+ tcListStringCompare\l_1_1_Wert()\l+ tcListStringCompare\l_1_2_Werte()\l+ tcListStringCompare\l_2_1_Werte()\l+ tcListStringCompare\l_2_2_DiffWert_2()\lund 21 mehr ...\l+ myTestFixtureSetUp()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +Log" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{okw.log.Logger_Sngltn\n|- cvbDebugMode\l|+ getDebugMode()\l+ setDebugMode()\l+ addLogger()\l+ reset()\l+ LogError()\l+ LogException()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionEndDebug()\l+ LogFunctionStart()\l+ LogFunctionStartDebug()\l+ LogKeyWordEnd()\l+ LogSequenceEnd()\l+ LogTestcaseEnd()\l+ LogKeyWordStart()\l+ LogSequenceStart()\l+ LogTestcaseStart()\l+ LogPass()\l+ LogPrint()\l+ LogPrintDebug()\l+ LogWarning()\l+ ResCloseList()\l+ ResCloseListDebug()\l+ ResOpenList()\l+ ResOpenListDebug()\l+ getInstance()\l+ init()\l- Logger_Sngltn()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html",tooltip=" "];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" -LoggerList" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{ArrayList\< okw.log.ILogger \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node2 [color="grey25",fontsize="10",style="solid",label=" -Instance" ,arrowhead="odiamond",fontname="Helvetica"];
+}

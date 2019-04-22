@@ -1,0 +1,29 @@
+digraph "okw.core.IOKW_State.LogHasFocus"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node968 [label="okw.core.IOKW_State.LogHas\lFocus",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Dokumentiert den Fokus-Status des gegebenen Objekts."];
+  Node968 -> Node969 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node969 [label="okw.core.Core.LogHasFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a03c5ee5ec358b422d897b56c095d2613",tooltip="Dokumentiert den Fokus-Status des gegebenen Objekts."];
+  Node969 -> Node970 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node970 [label="okw.core.EN.LogHasFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a446ed81868f18ea11da1b531d5b2d152",tooltip="Dokumentiert den Fokus-Status des gegebenen Objekts."];
+  Node970 -> Node971 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node971 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
+  Node970 -> Node972 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node972 [label="okw.SeBACK.SeBACK_EN\l_Test.tcLogHasFocus_OKWFrame\lObjectMethodNotImplemented",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#aa5f68b22014a6f83a97bd865ee219771",tooltip="Testet das Schlüsselwort LogHasFocus( FN ) eines SeBACK Prüfen."];
+  Node970 -> Node973 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node973 [label="okw.SeButton.SeButton\l_EN_Test.tcLogHasFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_button_1_1_se_button___e_n___test.html#a49539de775afe7bca40d6f152ce1e99e",tooltip="Test des Schlüsselwortes LogHasFocus für den GUI-Adapter SeButton."];
+  Node970 -> Node974 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node974 [label="okw.SeInputField.SeInput\lField_EN_Test.tcLogHasFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#aea12edabe046d05661be0d10287ad9e7",tooltip="Testet das Schlüsselwort LogHasFocus( FN ) eines SeInputField Prüfen."];
+  Node970 -> Node975 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node975 [label="okw.SeInputRadio.SeInput\lRadio_EN_Test.tc_LogHasFocus\l_UnsupportedOperationException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a6488b26eb7784c8e4a8d87d086612a30",tooltip="Test des Schlüsselwortes LogHasFocus für den GUI-Adapter SeInputRadio."];
+  Node970 -> Node976 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node976 [label="okw.SeLink.SeLink_EN\l_Test.TC_LogHasFocus_en",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_link_1_1_se_link___e_n___test.html#ab2878c015058b11805698c41ee421c14",tooltip="Focus eines Textfeldes loggen."];
+  Node970 -> Node977 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node977 [label="okw.SeMAXIMIZE.SeMAXIMIZE\l_EN_Test.tcLogHasFocus\l_OKWFrameObjectMethodNotImplemented",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test.html#ac36a4777b1e4faa03e09a691f002dfd7",tooltip="Testet das Schlüsselwort LogHasFocus( FN ) eines SeMAXIMIZE Prüfen."];
+  Node969 -> Node978 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node978 [label="okw.core.CurrentObject\l_Test.tc_LogHasFocus_ChildObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a2d6b28ef6db7e3e30a236d2a9d3a1c5b",tooltip="Testziel: Prüft den Aufruf der Methode LogExists( \"FN\" ) im ChildObject."];
+}

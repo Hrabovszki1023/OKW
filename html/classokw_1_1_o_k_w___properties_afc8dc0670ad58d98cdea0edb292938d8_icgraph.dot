@@ -1,0 +1,17 @@
+digraph "okw.OKW_Properties.loadFromFile"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node16 [label="okw.OKW_Properties.loadFromFile",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Lädt die Liste OKW_Properties.ResoursesProperties hinzufügen."];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="okw.OKW_Properties.update\lProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#aaec0ed9838c553749dcc2514232f6a6c",tooltip="Aktualisert/Lädt die Properties in der unter OKW_Properties beschriebene Weise."];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="okw.OKW_Properties.addResource",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#ad170c832264ab27c615f6e1bf2e8e8d3",tooltip="Eine .Properties-Datei aus dem Resource-Verzeichniss zur Liste OKW_Properties.ResoursesProperties hin..."];
+  Node17 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="okw.OKW_Properties.addFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#aaa5b5e0b2825e95ec2e1e922b31df43f",tooltip="Eine *.Properties-Datei zur Liste OKW_Properties.FileProperties hinzufügen."];
+  Node17 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="okw.OKW_Properties.clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#ae6abfc9b12873c330e6d5479cd5d682c",tooltip="Löscht die Properties Listen."];
+}

@@ -1,0 +1,27 @@
+digraph "okw.core.CurrentObject_Test.tc_MemorizeTooltip_ChildObject"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node226 [label="okw.core.CurrentObject\l_Test.tc_MemorizeTooltip\l_ChildObject",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Testziel: Prüft den Aufruf der Methode MemorizeTooltip( FN, MemKey ) im ChildObject."];
+  Node226 -> Node227 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node227 [label="okw.core.Core.SelectWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314",tooltip="Setzt den Kontext auf das gegebene Fenster."];
+  Node227 -> Node228 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node228 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node227 -> Node229 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node229 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node229 -> Node230 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node230 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node230 -> Node231 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node231 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node227 -> Node232 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node232 [label="okw.core.IOKW_State.Select\lWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0",tooltip="Setzt den Kontext auf das gegebene Fenster."];
+  Node226 -> Node233 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node233 [label="okw.core.Core.MemorizeTooltip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a394fc596a02f7af416f4505a788301c1",tooltip="Dokumentiert den Tooltip-Text (Kurzinformation) des gegebenen Objekts."];
+  Node233 -> Node228 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node233 -> Node229 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node233 -> Node234 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node234 [label="okw.core.IOKW_State.Memorize\lTooltip",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a6e7e3d1a14c48c0485a7ef8741e90b8d",tooltip="Dokumentiert den Tooltip-Text (Kurzinformation) des gegebenen Objekts."];
+}

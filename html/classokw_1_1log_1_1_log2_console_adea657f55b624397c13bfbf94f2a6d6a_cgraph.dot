@@ -1,0 +1,17 @@
+digraph "okw.log.Log2Console.ResOpenListDebug"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node192 [label="okw.log.Log2Console.ResOpen\lListDebug",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Öffnet eine neue debug Ergenis-Ebene mit der gegebenen Überschrift."];
+  Node192 -> Node193 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node193 [label="okw.log.Log2Console.ResOpenList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#af99ba81cf4d8e14d5fe19070f12ae5cb",tooltip="LogFunctionStartDebug: Opens a debug outline level with the ."];
+  Node193 -> Node194 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node194 [label="okw.log.Log2Console.LogPrint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a76c2788140c26471575dfa92c118d1dc",tooltip="LogPrint: Prints the given message to the results."];
+  Node193 -> Node195 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node195 [label="okw.log.Log2Console.Blanks\lBefore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2",tooltip="Erzeugt die Einrücktiefe für die Console-Ausgabe."];
+  Node195 -> Node196 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node196 [label="okw.OKW_Helper.repeatString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper.html#ab5e676787808ed174e603c1e3bfcd176",tooltip=" "];
+}
