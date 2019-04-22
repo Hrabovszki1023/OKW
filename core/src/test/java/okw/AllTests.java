@@ -7,7 +7,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith( Suite.class )
 @SuiteClasses(
 {
-fourTestLocatorTest.class,
+  fourTestLocatorTest.class,
   OKW_Const_Boolean2YesNo.class,
   OKW_Const_Concat_SEP_HSEP_VSEP.class,
   OKW_Const_GetConst4Internalname.class,
