@@ -27,7 +27,7 @@ env:
 
 addons:  
   chrome: stable
-  firefox: latest-esr
+  #firefox: latest-esr
 
 install:
   # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
@@ -38,13 +38,13 @@ install:
   - sudo mv -f chromedriver /usr/bin
   - sudo chmod +x /usr/bin/chromedriver
 
-  # Install FirefoxDriver (64bits; replace 64 with 32 for 32bits).
-  # See: https://octopus.com/blog/selenium/21-travis-ci/travis-ci
-  - wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
-  - tar -xzf geckodriver-v0.24.0-linux64.tar.gz
-  - rm geckodriver-v0.24.0-linux64.tar.gz
-  - sudo mv -f geckodriver /usr/bin
-  - sudo chmod +x /usr/bin/geckodriver
+#  # Install FirefoxDriver (64bits; replace 64 with 32 for 32bits).
+#  # See: https://octopus.com/blog/selenium/21-travis-ci/travis-ci
+#  - wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+#  - tar -xzf geckodriver-v0.24.0-linux64.tar.gz
+#  - rm geckodriver-v0.24.0-linux64.tar.gz
+#  - sudo mv -f geckodriver /usr/bin
+#  - sudo chmod +x /usr/bin/geckodriver
 
   # compile OKW
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V   
@@ -121,59 +121,59 @@ jobs:
           TESTCASE="okw.SeTextarea.SeTextarea_EN_Chrome_Test"
           Package="se"
         
-    - stage: firefox
-      before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-      env:
-          TESTCASE="okw.SeBACK.SeBACK_EN_Firefox_Test"
-          Package="se"
-#   ====================================
-    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-      env:
-         TESTCASE="okw.SeBrowserChild.SeBrowserChild_EN_Firefox_Test"
-         Package="se"
-#   ====================================
-    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-      env:
-          TESTCASE="okw.SeButton.SeButton_EN_Firefox_Test"
-          Package="se"
-#   ====================================
-    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-      env:
-          TESTCASE="okw.SeInputButton.SeInputButton_EN_Firefox_Test"
-          Package="se"
-#   ====================================
-    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-      env:
-          TESTCASE="okw.SeInputCheckbox.SeInputCheckbox_EN_Firefox_Test"
-          Package="se"
-#   ====================================
-    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-      env:
-          TESTCASE="okw.SeInputField.SeInputField_EN_Firefox_Test"
-          Package="se"
-#   ====================================
-    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-      env:
-          TESTCASE="okw.SeInputRadio.SeInputRadio_EN_Firefox_Test"
-          Package="se"
-#   ====================================
-    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-      env:
-          TESTCASE="okw.SeLink.SeLink_EN_Firefox_Test"
-          Package="se"
-        # - TESTCASE="okw.SeMAXIMIZE.SeMAXIMIZE_EN_Chrome_Test"
-        #  Package="se"
-#   ====================================
-    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-      env:
-          TESTCASE="okw.SeSelect.SeSelect_EN_Firefox_Test"
-          Package="se"
-#   ====================================
-    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-      env:
-          TESTCASE="okw.SeTextarea.SeTextarea_EN_Firefox_Test"
-          Package="se"
-#   ====================================
+#    - stage: firefox
+#      before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+#      env:
+#          TESTCASE="okw.SeBACK.SeBACK_EN_Firefox_Test"
+#          Package="se"
+##   ====================================
+#    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+#      env:
+#         TESTCASE="okw.SeBrowserChild.SeBrowserChild_EN_Firefox_Test"
+#         Package="se"
+##   ====================================
+#    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+#      env:
+#          TESTCASE="okw.SeButton.SeButton_EN_Firefox_Test"
+#          Package="se"
+##   ====================================
+#    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+#      env:
+#          TESTCASE="okw.SeInputButton.SeInputButton_EN_Firefox_Test"
+#          Package="se"
+##   ====================================
+#    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+#      env:
+#          TESTCASE="okw.SeInputCheckbox.SeInputCheckbox_EN_Firefox_Test"
+#          Package="se"
+##   ====================================
+#    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+#      env:
+#          TESTCASE="okw.SeInputField.SeInputField_EN_Firefox_Test"
+#          Package="se"
+##   ====================================
+#    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+#      env:
+#          TESTCASE="okw.SeInputRadio.SeInputRadio_EN_Firefox_Test"
+#          Package="se"
+##   ====================================
+#    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+#      env:
+#          TESTCASE="okw.SeLink.SeLink_EN_Firefox_Test"
+#          Package="se"
+#        # - TESTCASE="okw.SeMAXIMIZE.SeMAXIMIZE_EN_Chrome_Test"
+#        #  Package="se"
+##   ====================================
+#    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+#      env:
+#          TESTCASE="okw.SeSelect.SeSelect_EN_Firefox_Test"
+#          Package="se"
+##   ====================================
+#    - before_install: "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+#      env:
+#          TESTCASE="okw.SeTextarea.SeTextarea_EN_Firefox_Test"
+#          Package="se"
+##   ====================================
     - stage: doxygen
       apt:
         packages:

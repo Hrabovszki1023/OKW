@@ -71,6 +71,11 @@ public class EN
     private static String        Language = "EN";
     private static Core          myKernel = new Core();
 
+    public static void SetKernaleStateNOK()
+    {
+        myKernel.SetKernaleStateNOK( );
+    }
+    
     /**
      *  \copydoc IOKW_State::BeginTest(String)
      */

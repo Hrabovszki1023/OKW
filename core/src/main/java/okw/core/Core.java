@@ -87,6 +87,12 @@ public class Core implements IOKW_State
      */
     private IOKW_State           CurrentState;
 
+    public void SetKernaleStateNOK( )
+    {
+        this.SetCurrentState( new NOK( this ) );
+    }
+    
+    
     /**
      *  \copydoc LogMessenger
      */

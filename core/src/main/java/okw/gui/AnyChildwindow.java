@@ -307,6 +307,12 @@ public ArrayList<String> MemorizeCaption( )
       throw new OKWFrameObjectMethodNotImplemented("The method 'public void TypeKey( ArrayList<String> Val ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
     }
 
+    public void TypeKeyTablecell( String COL, String ROW, ArrayList<String> Val )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public void TypeKeyTablecell( String COL, String ROW, ArrayList<String> Val ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+    }
+    
     public ArrayList<String> VerifyLabel( )
     {
       // TODO: /todo Meldung in xml-Auslagern

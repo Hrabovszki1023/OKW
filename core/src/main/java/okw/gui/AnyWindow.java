@@ -167,7 +167,7 @@ public class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_FN
       throw new OKWFrameObjectMethodNotImplemented("The method void StopApp() is not definden for this GUI-Object. Please define first this methode!");
   }
 
- 
+  
   public Boolean VerifyWindowExists()
   {
       // TODO: /todo Meldung in xml-Auslagern
