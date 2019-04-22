@@ -116,14 +116,7 @@ public class Logger_Sngltn
 
     private Logger_Sngltn()
     {
-        try
-        {
             LoggerList = new ArrayList<ILogger>();
-        }
-        catch (Exception e)
-        {
-            OKW_HandleException.StopRunning( e, Instance.getClass() );
-        }
     }
 
     /** \~german

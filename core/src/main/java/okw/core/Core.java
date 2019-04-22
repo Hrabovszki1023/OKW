@@ -627,12 +627,12 @@ public class Core implements IOKW_State
     {
         try
         {
-            Log.LogKeyWordStart( LM.GetMessage( "Sequence", "KeyWordName" ), FN, fpsSequenName, SEQID );
+            Log.LogSequenceStart( LM.GetMessage( "Sequence", "KeyWordName" ), FN, fpsSequenName, SEQID);
             this.CurrentState.Sequence( FN, fpsSequenName, SEQID );
         }
         finally
         {
-            Log.LogKeyWordEnd();
+            Log.LogSequenceEnd();
         }
     }
 
