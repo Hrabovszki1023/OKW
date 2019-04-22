@@ -81,6 +81,9 @@ jobs:
           TESTCASE="okw.parser.OKW_VisitorTest"
           Package="core"
     - env:
+          TESTCASE="okw.log.Logger_Test"
+          Package="core"
+    - env:
           TESTCASE="okw.log.log2html.Log2HTMLCounterTest"
           Package="log2html"
     - env:
