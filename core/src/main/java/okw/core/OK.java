@@ -1334,7 +1334,7 @@ public class OK implements IOKW_State
 
                 lvlsValue = Parser.ParseMe( lvlsValue );
 
-                CO.TypeKeyTablecell( FN, COL, ROW, lvlsValue );
+                ( ( IGUIChildwindow ) CO.setChildName( FN ) ).TypeKeyTablecell( COL, ROW, lvlsValue );
             }
         }
         catch (Exception e)
@@ -1367,7 +1367,7 @@ public class OK implements IOKW_State
                 ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
                 lvlsValue = Parser.ParseMe( lvlsValue );
 
-                CO.TypeKeyWindow( FN, lvlsValue );
+                ( ( IGUIWindow ) CO.setWindowName( FN ) ).TypeKeyWindow( lvlsValue );
             }
         }
         catch (Exception e)

@@ -66,7 +66,7 @@ import okw.log.Logger_Sngltn;
             this.myLogger.LogFunctionEndDebug();
         }
 
-        public void TypeKey(ArrayList<String> fpLs_Value)
+        public void TypeKeyWindow(ArrayList<String> fpLs_Value)
         {
             this.myLogger.LogFunctionStartDebug("TypeKey");
 

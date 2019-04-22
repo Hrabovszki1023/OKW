@@ -49,6 +49,8 @@ public interface IGUIChildwindow
     void SetValue( ArrayList<String> Val );
     void TypeKey( ArrayList<String> Val );
 
+    void TypeKeyTablecell( String COL, String ROW, ArrayList<String> Val );
+    
     ArrayList<String> VerifyLabel();
     ArrayList<String> VerifyPlaceholder();
     ArrayList<String> VerifyCaption();

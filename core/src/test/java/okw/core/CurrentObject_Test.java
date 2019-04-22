@@ -41,12 +41,14 @@ package okw.core;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import javax.xml.xpath.XPathExpressionException;
 
 import org.junit.*;
 
 import okw.*;
-import okw.exceptions.OKWFrameObjectWindowNotSetException;
+import okw.exceptions.*;
 import okw.log.*;
 
 public class CurrentObject_Test {
@@ -79,15 +81,8 @@ public class CurrentObject_Test {
 	                // Reset des Loggers: Alle geladenen Instanzen löschen
 	            	Logger_Sngltn.init();
 	                
-	                // Log2NUnit in den Logger laden.
-	            	//myLogger.AddLogger(new Log2NUnit());
-	                
-	                // Log2NUnit in den Logger laden.
-	            	//myLogger.AddLogger(new Log2Console());
-	                //myLogger.AddLogger(new Log2HTMLFile("C:\\temp\\Test_CurrentObject.htm"));
-
 	                // Debug-Modus des Logger -s abschalten.
-	            	myLogger.setDebugMode(false);
+	            	myLogger.setDebugMode(true);
 
 	                // Logmessenger Spracheinstellung auf "de" setzen.
 	                OKWLanguage.getInstance().setLanguage("en");
@@ -107,96 +102,160 @@ public class CurrentObject_Test {
 	    	   myLogger.LogFunctionEnd();
 	        }
 
-
-	/*
-	        /// \brief
-	        /// Testziel ist ob erlaubte Zeichen erkannt werden. Liefert ein true Zurück und es wir kein OKW_GUI_Exception ausgelöst.
-	        /// 
-	        /// \author Zoltan Hrabovszki
-	        /// \date 2012.12.16
-	    	@Test
-	        public void TC_CheckCharacter()
-	        {
-	            assertEquals(true, CO.CheckCharacter("abcdefghijklmnopqrstuvwxyz")); // > Alle kleinbuchstaben prüfen
-	            assertEquals(true, CO.CheckCharacter("a1234567890")); // > Alle kleinbuchstaben prüfen
-	            assertEquals(true, CO.CheckCharacter("ABCDEFGHIJKLMNOPQRSTUVWXYZ")); // > Alle GROßBUCHSTABEN prüfen
-	        }
-
-	        /// \brief
-	        /// Testziel: Wird ein OKWFrameObjectIllegalNameCharacterException ausgalöst, wenn ein unerlaubtes Zeichen übergeben wird?
-	        /// 
-	        /// \author Zoltan Hrabovszki
-	        /// \date 2012.12.16
-	    	@Test
-	        public void TC_CheckCharacter_Exception()
-	        {
-	            try
-	            {
-	                // Sonderzeichen? - Sollte ein Exception auslösen
-	                CO.CheckCharacter("&&");
-	                fail();
-	            }
-	            catch (OKWFrameObjectIllegalNameCharacterException e)
-	            {
-	                System.out.println("Print: >>" + e.getMessage() + "<<");
-	            }
-	        }
-
-	        @Test
-	        public void TC_LogObjectData_WindowAndChild()
-	        {
-	            ArrayList<String> SollWert = new ArrayList<String>();
-	            SollWert.add(" Object Data:");
-	            SollWert.add("      Name des Fensters: 'Rechner'");
-	            SollWert.add("  Name des Kindobjektes: 'Taste_3'");
-	            SollWert.add("        Name der Klasse: '__Taste_3'");
-	            SollWert.add("  Vollständiger Name des Objektes: 'Rechner.Taste_3'");
-	            SollWert.add("");
-
-	            // Fesnter setzen:
-	            CO.SetWindowName("Rechner");
-	            CO.SetChildName("Taste_3");
-
-	            Boolean DebugMode_Merker = myLogger.getDebugMode(); // Merken wir uns den Debug-Mode
-	            myLogger.setDebugMode(false); // Debug-Modus des Logger -s abschalten.
-	            //Log2NUnit_Console.GetInstance.Init();
-
-	            CO.LogObjectData();
-	            myLogger.setDebugMode(DebugMode_Merker); // Debug-Modus auf den Altenwert Zurücksetzten
-
-	            assertEquals(SollWert.Count, Log2NUnit_Console.GetInstance.LogValue.Count);
-	            assertEquals(SollWert, Log2NUnit_Console.GetInstance.LogValue);
-	        }
-
-	    	@Test
-	        public void TC_LogObjectData_Window_Only()
-	        {
-	            ArrayList<String> SollWert = new ArrayList<String>();
-
-	            SollWert.add(" Object Data:");
-	            SollWert.add("      Name des Fensters: 'Rechner'");
-	            SollWert.add("  Name des Kindobjektes: ''");
-	            SollWert.add("        Name der Klasse: 'Rechner'");
-	            SollWert.add("  Vollständiger Name des Objektes: 'Rechner'");
-	            SollWert.add("");
-
-	            // Fesnter setzen:
-	            CO.SetWindowName("Rechner");
-
-	            Boolean DebugMode_Merker = myLogger.getDebugMode(); // Merken wir uns den Debug-Mode
-	            myLogger.setDebugMode(false); // Debug-Modus des Logger -s abschalten.
-
-	            //Log2NUnit_Console.GetInstance.Init();
-	            CO.LogObjectData();
-	            myLogger.DebugMode = DebugMode_Merker; // Debug-Modus auf den Altenwert Zurücksetzten
-
-	            assertEquals(SollWert.Count, Log2NUnit_Console.GetInstance.LogValue.Count);
-	            assertEquals(SollWert, Log2NUnit_Console.GetInstance.LogValue);
-	        }
-
-	    	*/
-
+           @Test
+           public void tc_setWindowName() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+           {
+                CO.setWindowName( "CurrentObjectWindow" );
+                assertEquals( "CurrentObjectWindow", CO.getWindowFN() );
+                assertEquals( "", CO.getChildFN ( ) );
+                
+           }
 	       
+           @Test (expected = OKWFrameObjectParentNotFoundException.class )
+           public void tc_setWindowName_Doesnot_exists() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+           {
+                CO.setWindowName( "Uschi" );
+           }
+	       
+	       
+           @Test
+           public void tc_setChildName() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+           {
+                CO.setWindowName( "CurrentObjectWindow" );
+                assertEquals( "CurrentObjectWindow", CO.getWindowFN() );
+                assertEquals( "CurrentObjectWindow", CO.getObjectFN() );
+
+                CO.setChildName( "CurrentObjectAllMethodCallTypes" );
+                assertEquals( "CurrentObjectWindow", CO.getWindowFN() );
+                assertEquals( "CurrentObjectAllMethodCallTypes", CO.getChildFN() );
+                assertEquals( "CurrentObjectWindow.CurrentObjectAllMethodCallTypes", CO.getObjectFN() );
+           }
+           
+           @Test
+           public void tc_setChildName_SELECTEDCHILD() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+           {
+                CO.setWindowName( "CurrentObjectWindow" );
+                CO.setChildName( "CurrentObjectAllMethodCallTypes" );
+                CO.setChildName( "SELECTEDCHILD" );
+
+                assertEquals( "CurrentObjectWindow", CO.getWindowFN() );
+                assertEquals( "CurrentObjectAllMethodCallTypes", CO.getChildFN() );
+                assertEquals( "CurrentObjectWindow.CurrentObjectAllMethodCallTypes", CO.getObjectFN() );
+                assertEquals( "CurrentObjectWindow", CO.getWindowFN() );
+                assertEquals( "CurrentObjectAllMethodCallTypes", CO.getChildFN() );
+                assertEquals( "CurrentObjectWindow.CurrentObjectAllMethodCallTypes", CO.getObjectFN() );
+           }
+           
+           @Test (expected = OKWFrameObjectChildNotFoundException.class )
+           public void tc_setChildName_OKWFrameObjectChildNotFoundException() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+           {
+               CO.setWindowName( "CurrentObjectWindow" );
+               assertEquals( "CurrentObjectWindow", CO.getWindowFN() );
+               CO.setChildName( "MakeException" );
+           }
+	       
+           
+           @Test
+           public void tc_getChildName() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+           {
+               CO.setWindowName( "CurrentObjectWindow" );
+               assertEquals( "CurrentObjectWindow", CO.getWindowFN() );
+               CO.setChildName( "CurrentObjectAllMethodCallTypes" );
+               assertEquals( "CurrentObjectAllMethodCallTypes", CO.getChildFN() );
+           }	
+
+
+           @Test
+           public void tc_LogObjectDataParent() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+           {
+               CO.setWindowName( "CurrentObjectWindow" );
+               CO.LogObjectData();
+           }
+           
+
+           @Test
+           public void tc_LogObjectDataChild() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+           {
+               CO.setWindowName( "CurrentObjectWindow" );
+               CO.setChildName( "CurrentObjectAllMethodCallTypes" );
+               CO.LogObjectData();
+           }
+
+
+           @Test
+           public void tc_getCurrentObject_Parent() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+           {
+               CO.setWindowName( "CurrentObjectWindow" );
+               Object myObject = CO.getCurrentObject();
+               
+               assertEquals( "okw.gui.frames.frmCurrentObjectWindow", myObject.getClass().getName());
+           }
+           
+
+           @Test
+           public void tc_getCurrentObject_Child() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+           {
+               CO.setWindowName( "CurrentObjectWindow" );
+               CO.setChildName( "CurrentObjectAllMethodCallTypes" );
+               Object myObject = CO.getCurrentObject();
+               assertEquals( "okw.gui.adapter.CurrentChildObject_Allmethods", myObject.getClass().getName());
+           }
+
+           @Test
+           public void tc_ResetToWindow_Child() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
+           {
+               // Vorbereitung CO auf child setzten
+               CO.setWindowName( "CurrentObjectWindow" );
+               CO.setChildName( "CurrentObjectAllMethodCallTypes" );
+               Object myObject = CO.getCurrentObject();
+               assertEquals( "okw.gui.adapter.CurrentChildObject_Allmethods", myObject.getClass().getName());
+               assertEquals( "CurrentObjectWindow", CO.getWindowFN() );
+               assertEquals( "CurrentObjectAllMethodCallTypes", CO.getChildFN() );
+               
+               // Test: Nach dem resetToWindow ist das CurrentObjekt das Fenster
+               myObject = CO.resetToWindow();
+               assertEquals( "okw.gui.frames.frmCurrentObjectWindow", CO.getCurrentObject().getClass().getName());
+               assertEquals( "okw.gui.frames.frmCurrentObjectWindow", myObject.getClass().getName());
+               assertEquals( "CurrentObjectWindow", CO.getWindowFN() );
+               assertEquals( "", CO.getChildFN() );
+           }           
+
+           @Test
+           public void tc_getAllChildFNsOfParent() 
+           {
+               ArrayList<String> myChilds = CO.getAllChildFNsOfParent("CurrentObjectWindow" );
+
+               assertEquals( 3 , myChilds.size() );
+               assertEquals( true, myChilds.contains( "CurrentObjectWindow") );
+               assertEquals( true, myChilds.contains( "CurrentObjectWindow.CurrentObjectAllMethodCallTypes") );
+               assertEquals( true, myChilds.contains( "CurrentObjectWindow.AllMethod 2") );
+           }   
+           
+
+           @Test
+           public void tc_Sequence() throws Exception 
+           {
+               
+               CO.Sequence( "Rechner", "TestSequence_1", "TestID" );
+               
+               assertEquals( "Rechner", CO.getWindowFN() );
+               assertEquals( "", CO.getChildFN() );
+               
+               // Check the Name, Called Method and Value of Actuel object
+               assertEquals("TestID", myClipBoard.getValue().get(0));
+               assertEquals("Rechner", myClipBoard.getObjectName());
+               assertEquals("TestSequence_1()", myClipBoard.getMethod());
+           }  
+           
+
+           @Test (expected=OKWFrameObjectMethodNotFoundException.class)
+           public void tc_Sequence_OKWFrameObjectMethodNotFoundException() throws Exception 
+           {
+               CO.Sequence( "Rechner", "TestSequence_Nichtvorhanden", "TestID" );
+           }  
+
+           
+           
            /**
             *  Testziel: Prüft den Aufruf der Methode ClickOn( "FN" ) im ChildObject
             * @throws Exception

@@ -51,6 +51,7 @@ import org.junit.runners.Suite.SuiteClasses;
   EN_Keywords_Empty_Test.class,
   EN_Keywords_IGNORE_Test.class,
   EN_Keywords_Test.class,
+  EN_Keywords_NOK_Test.class,
   EN_OKWFrameObjectChildNotFoundException_Test.class,
   EN_OKWFrameObjectMethodNotImplemented_Test.class,
   EN_OKWFrameObjectParentNotFoundException_Test.class,
