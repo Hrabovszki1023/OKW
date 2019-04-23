@@ -1,7 +1,6 @@
-package okw.log;
+package okw.log.log2html;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -9,18 +8,26 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class Logger_Test
-{
+import okw.log.Logger_Sngltn;
+import okw.log.log2html.Log2HTML;
 
-    /*
+public class Logger2_Test
+{
+    private static Log2HTML myLog2HTML = null;
+    
     @BeforeClass
     public static void setUpBeforeClass() throws Exception
-    {
+    {  
+        myLog2HTML = new Log2HTML("Logger2_Test.html");
+        Logger_Sngltn.getInstance().addLogger(myLog2HTML);
+
+        Logger_Sngltn.getInstance().setDebugMode(false);
     }
 
     @AfterClass
     public static void tearDownAfterClass() throws Exception
     {
+        myLog2HTML.Result2HTML();
     }
 
     @Before
@@ -32,12 +39,8 @@ public class Logger_Test
     public void tearDown() throws Exception
     {
     }
-*/
-    
-    /**
-     * 
-     */
-    @Test
+
+   @Test
     public void tcGet2ndInstance()
     {
         Logger_Sngltn.getInstance().setDebugMode( false );
@@ -223,7 +226,7 @@ public class Logger_Test
         Logger_Sngltn.getInstance().LogTestcaseEnd();
     }
 
-    @Test
+    @Test (expected=ClassCastException.class)
     public void tcResultOpenList_ResultCloseList_LevelTest()
     {
         Logger_Sngltn.getInstance().setDebugMode( false );
@@ -773,5 +776,4 @@ public class Logger_Test
         
         Logger_Sngltn.getInstance().LogTestcaseEnd(); 
     }
-    
 }
