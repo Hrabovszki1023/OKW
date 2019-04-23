@@ -74,7 +74,7 @@ public @interface OKW
    * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyHasFocus.
    * Default ist 30s.
    */
-  public int VerifyHasFocus_TO() default 30;
+  public int VerifyHasFocus_TO() default 5;
 
   /**
    * \~german
@@ -91,7 +91,7 @@ public @interface OKW
    * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyIsActive.
    * Default ist 30s.
    */
-  public int VerifyIsActive_TO() default 30;
+  public int VerifyIsActive_TO() default 5;
 
   /**
    * \~german
@@ -108,7 +108,7 @@ public @interface OKW
    * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyLabel.
    * Default ist 30s.
    */
-  int VerifyLabel_TO() default 30;
+  int VerifyLabel_TO() default 5;
   
   /**
    * \~german
@@ -125,7 +125,7 @@ public @interface OKW
    * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyMaxLength.
    * Default ist 30s.
    */
-  int VerifyMaxLength_TO() default 30;
+  int VerifyMaxLength_TO() default 5;
 
   /**
    * \~german
@@ -151,7 +151,7 @@ public @interface OKW
    * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyPlaceholder.
    * Default ist 30s.
    */
-  int VerifyPlaceholder_TO() default 30;
+  int VerifyPlaceholder_TO() default 5;
 
   
   /**
@@ -159,7 +159,7 @@ public @interface OKW
    * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifySelectedValue.
    * Default ist 30s.
    */
-  int VerifySelectedValue_TO() default 30;
+  int VerifySelectedValue_TO() default 5;
 
   /**
    * \~german
@@ -176,7 +176,7 @@ public @interface OKW
    * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyTablecellValue.
    * Default ist 30s.
    */
-  int VerifyTablecellValue_TO() default 30;
+  int VerifyTablecellValue_TO() default 5;
 
   /**
    * \~german
@@ -193,7 +193,7 @@ public @interface OKW
    * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyTooltip.
    * Default ist 30s.
    */
-  int VerifyTooltip_TO() default 30;
+  int VerifyTooltip_TO() default 5;
   
   /**
    * \~german
@@ -209,7 +209,7 @@ public @interface OKW
    * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyValue.
    * Default ist 30s.
    */
-  public int VerifyValue_TO() default 30;
+  public int VerifyValue_TO() default 5;
 
   /**
    * \~german
@@ -225,7 +225,7 @@ public @interface OKW
    * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyCaption.
    * Default ist 30s.
    */
-  public int VerifyCaption_TO() default 30;
+  public int VerifyCaption_TO() default 5;
 
   /**
    * \~german
@@ -241,7 +241,7 @@ public @interface OKW
    * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyExists.
    * Default ist 30s.
    */
-  public int VerifyExists_TO() default 30;
+  public int VerifyExists_TO() default 5;
 
   /**
    * \~german
