@@ -38,7 +38,6 @@ var interfaceokw_1_1gui_1_1_i_g_u_i_childwindow =
     [ "SetFocus", "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#af4dab9b15d29feb4612fccd98ca739f6", null ],
     [ "SetValue", "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#ada7bea69e1a2864d8bcd0a062aaa1a3d", null ],
     [ "TypeKey", "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#a71821a79f397bbd89fad93b6144d8c42", null ],
-    [ "TypeKeyTablecell", "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#aa11a4f72dbbe4b81b216571b16381004", null ],
     [ "VerifyCaption", "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#aad340586fd9547bdf772951f4df94f9d", null ],
     [ "VerifyExists", "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#aa6198592ac21937ded0f6edf8f5c72db", null ],
     [ "VerifyHasFocus", "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html#af0e6095da6e844098f2835de8beb9421", null ],

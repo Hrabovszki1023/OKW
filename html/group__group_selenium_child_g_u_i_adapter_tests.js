@@ -26,8 +26,12 @@ var group__group_selenium_child_g_u_i_adapter_tests =
       [ "myMem", "classokw_1_1_i_frame_1_1_i_frame___e_n___test.html#ae7938a0d5ae36ebb594d663f9b5f35ab", null ],
       [ "name", "classokw_1_1_i_frame_1_1_i_frame___e_n___test.html#a948a960adb3460a6e485ba7b6e1b4a0f", null ]
     ] ],
-    [ "SeBACK_EN_Chrome_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___chrome___test.html", null ],
-    [ "SeBACK_EN_Firefox_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___firefox___test.html", null ],
+    [ "SeBACK_EN_Chrome_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___chrome___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___chrome___test.html#adb78a166bb035a5eb979c72fb1556ac9", null ]
+    ] ],
+    [ "SeBACK_EN_Firefox_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___firefox___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___firefox___test.html#ac9513bb557e527b6b20266364780aba5", null ]
+    ] ],
     [ "SeBACK_EN_HTMLUnitDriver_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___h_t_m_l_unit_driver___test.html", null ],
     [ "SeBACK_EN_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html", [
       [ "tcClickOn", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#a0e32291310df90adbd08934a4dafd595", null ],
@@ -64,8 +68,12 @@ var group__group_selenium_child_g_u_i_adapter_tests =
       [ "myMem", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#aa57f8f352d7b54749f0c93c6c94c5402", null ],
       [ "name", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html#a3ef10a67fc155dab932c4357c4d71aec", null ]
     ] ],
-    [ "SeButton_EN_Chrome_Test", "classokw_1_1_se_button_1_1_se_button___e_n___chrome___test.html", null ],
-    [ "SeButton_EN_Firefox_Test", "classokw_1_1_se_button_1_1_se_button___e_n___firefox___test.html", null ],
+    [ "SeButton_EN_Chrome_Test", "classokw_1_1_se_button_1_1_se_button___e_n___chrome___test.html", [
+      [ "afterChrome", "classokw_1_1_se_button_1_1_se_button___e_n___chrome___test.html#a4bf8cea16264800a11ab7e7d527f069f", null ]
+    ] ],
+    [ "SeButton_EN_Firefox_Test", "classokw_1_1_se_button_1_1_se_button___e_n___firefox___test.html", [
+      [ "afterFirefox", "classokw_1_1_se_button_1_1_se_button___e_n___firefox___test.html#a123794516c7e0d4c57a0ecc6325ab6f1", null ]
+    ] ],
     [ "SeButton_EN_HTMLUnitDriver_Test", "classokw_1_1_se_button_1_1_se_button___e_n___h_t_m_l_unit_driver___test.html", null ],
     [ "SeButton_EN_Test", "classokw_1_1_se_button_1_1_se_button___e_n___test.html", [
       [ "tcClickOn", "classokw_1_1_se_button_1_1_se_button___e_n___test.html#a98abeffc57ddad13d3ec78817622ec1b", null ],
@@ -113,8 +121,12 @@ var group__group_selenium_child_g_u_i_adapter_tests =
       [ "myMM", "classokw_1_1_se_button_1_1_se_button___e_n___test.html#ae7d6815ca45e15530e0bc88333c4bce8", null ],
       [ "name", "classokw_1_1_se_button_1_1_se_button___e_n___test.html#a5f0d942d395768c11dc2818ea717bb9a", null ]
     ] ],
-    [ "SeInputButton_EN_Chrome_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___chrome___test.html", null ],
-    [ "SeInputButton_EN_Firefox_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___firefox___test.html", null ],
+    [ "SeInputButton_EN_Chrome_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___chrome___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___chrome___test.html#a5f5df2462c30c32c0881fde0acbd5a72", null ]
+    ] ],
+    [ "SeInputButton_EN_Firefox_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___firefox___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___firefox___test.html#a99664e758f536a932f223944042fd229", null ]
+    ] ],
     [ "SeInputButton_EN_HTMLUnitDriver_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___h_t_m_l_unit_driver___test.html", null ],
     [ "SeInputButton_EN_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___test.html", [
       [ "tc_ClickOn", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___test.html#a56c8e858016fdb99d5f4c64ae2f9f958", null ],
@@ -159,8 +171,12 @@ var group__group_selenium_child_g_u_i_adapter_tests =
       [ "myMM", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___test.html#a7075d383528de30e1bcb92cc52906700", null ],
       [ "name", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___test.html#ad2e21013028766ce902ee16a23ee03d4", null ]
     ] ],
-    [ "SeInputCheckbox_EN_Chrome_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___chrome___test.html", null ],
-    [ "SeInputCheckbox_EN_Firefox_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___firefox___test.html", null ],
+    [ "SeInputCheckbox_EN_Chrome_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___chrome___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___chrome___test.html#a63e9905f3a500375656b2a55e1832db1", null ]
+    ] ],
+    [ "SeInputCheckbox_EN_Firefox_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___firefox___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___firefox___test.html#afda7eb95ee288656ebad40b73333c60d", null ]
+    ] ],
     [ "SeInputCheckbox_EN_HTMLUnitDriver_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___h_t_m_l_unit_driver___test.html", null ],
     [ "SeInputCheckbox_EN_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___test.html", [
       [ "tcClickOn", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___test.html#a09d7cc7b5e9f2e11d94c763865b81dd2", null ],
@@ -232,7 +248,9 @@ var group__group_selenium_child_g_u_i_adapter_tests =
       [ "myMM", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___test.html#a85fa4e9995fa4c3a2552f46f23c4dbc0", null ],
       [ "name", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___test.html#afab9e17ca6df5242a11bf33dfa478092", null ]
     ] ],
-    [ "SeInputField_EN_Chrome_Test", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___chrome___test.html", null ],
+    [ "SeInputField_EN_Chrome_Test", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___chrome___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___chrome___test.html#ac535d1253f47e3ee1eedf1ac5eec5164", null ]
+    ] ],
     [ "SeInputField_EN_Firefox_Test", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___firefox___test.html", [
       [ "FirefoxAfter", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___firefox___test.html#aba1b7be4d78278c595e4428b2de02583", null ]
     ] ],
@@ -327,8 +345,12 @@ var group__group_selenium_child_g_u_i_adapter_tests =
       [ "myMem", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a5d8aafcd9f203a169f8b04043897e715", null ],
       [ "name", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html#a96800efe034a3f06cc76a30902c21e92", null ]
     ] ],
-    [ "SeInputRadio_EN_Chrome_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___chrome___test.html", null ],
-    [ "SeInputRadio_EN_Firefox_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___firefox___test.html", null ],
+    [ "SeInputRadio_EN_Chrome_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___chrome___test.html", [
+      [ "After", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___chrome___test.html#a4299554bc8a5bc5cf61f0e85d10ea7db", null ]
+    ] ],
+    [ "SeInputRadio_EN_Firefox_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___firefox___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___firefox___test.html#a2f3b8c7db54adfa6b871b7def937bc27", null ]
+    ] ],
     [ "SeInputRadio_EN_HTMLUnitDriver_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___h_t_m_l_unit_driver___test.html", null ],
     [ "SeInputRadio_EN_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html", [
       [ "tc_ClickOn", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#af95992ddbd303a44c3b1137243ec4463", null ],
@@ -378,8 +400,12 @@ var group__group_selenium_child_g_u_i_adapter_tests =
       [ "myMM", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#adb0a141a7dc4ec40f138a84278ec02bb", null ],
       [ "name", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a70cc688f1675d663cc597d44a291d3ef", null ]
     ] ],
-    [ "SeLink_EN_Chrome_Test", "classokw_1_1_se_link_1_1_se_link___e_n___chrome___test.html", null ],
-    [ "SeLink_EN_Firefox_Test", "classokw_1_1_se_link_1_1_se_link___e_n___firefox___test.html", null ],
+    [ "SeLink_EN_Chrome_Test", "classokw_1_1_se_link_1_1_se_link___e_n___chrome___test.html", [
+      [ "ChromeAfter", "classokw_1_1_se_link_1_1_se_link___e_n___chrome___test.html#a5c5726368c1f3db4ad199663d71a567f", null ]
+    ] ],
+    [ "SeLink_EN_Firefox_Test", "classokw_1_1_se_link_1_1_se_link___e_n___firefox___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_link_1_1_se_link___e_n___firefox___test.html#a3bc93f27c51797071f2b2470dc4de9cd", null ]
+    ] ],
     [ "SeLink_EN_HTMLUnitDriver_Test", "classokw_1_1_se_link_1_1_se_link___e_n___h_t_m_l_unit_driver___test.html", null ],
     [ "SeLink_EN_Test", "classokw_1_1_se_link_1_1_se_link___e_n___test.html", [
       [ "TC_ClickOn", "classokw_1_1_se_link_1_1_se_link___e_n___test.html#ada332ac37234f09ec1237472e6ed274a", null ],
@@ -425,7 +451,9 @@ var group__group_selenium_child_g_u_i_adapter_tests =
       [ "myMM", "classokw_1_1_se_link_1_1_se_link___e_n___test.html#ac7b4d04a40e1e3ec8023db772956bfb9", null ],
       [ "name", "classokw_1_1_se_link_1_1_se_link___e_n___test.html#a1bfd3a6f779581211610b80e1a019f6c", null ]
     ] ],
-    [ "SeMAXIMIZE_EN_Chrome_Test", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___chrome___test.html", null ],
+    [ "SeMAXIMIZE_EN_Chrome_Test", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___chrome___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___chrome___test.html#a77bf58af8697ab9f53150172a6b5e945", null ]
+    ] ],
     [ "SeMAXIMIZE_EN_Firefox_Test", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___firefox___test.html", [
       [ "FirefoxAfter", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___firefox___test.html#adfe528f13bd408bce8d87f7052fe1ff2", null ]
     ] ],
@@ -524,8 +552,12 @@ var group__group_selenium_child_g_u_i_adapter_tests =
       [ "tcVerifyValueWCM_Fail_OKWVerifyingFailsException", "classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___test.html#ac44e7c669fcbe3e8186ab9a680c5498e", null ],
       [ "name", "classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___test.html#aa5906f3e45d97657b6dbbf7846bcac4f", null ]
     ] ],
-    [ "SeSelect_EN_Chrome_Test", "classokw_1_1_se_select_1_1_se_select___e_n___chrome___test.html", null ],
-    [ "SeSelect_EN_Firefox_Test", "classokw_1_1_se_select_1_1_se_select___e_n___firefox___test.html", null ],
+    [ "SeSelect_EN_Chrome_Test", "classokw_1_1_se_select_1_1_se_select___e_n___chrome___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_select_1_1_se_select___e_n___chrome___test.html#a2698084ea970a27e6e41015ddb229d0b", null ]
+    ] ],
+    [ "SeSelect_EN_Firefox_Test", "classokw_1_1_se_select_1_1_se_select___e_n___firefox___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_select_1_1_se_select___e_n___firefox___test.html#a1876f1a785ec07b2eba26da4c58438f2", null ]
+    ] ],
     [ "SeSelect_EN_HTMLUnitDriver_Test", "classokw_1_1_se_select_1_1_se_select___e_n___h_t_m_l_unit_driver___test.html", null ],
     [ "SeSelect_EN_Test", "classokw_1_1_se_select_1_1_se_select___e_n___test.html", [
       [ "tcLogToolTip_en", "classokw_1_1_se_select_1_1_se_select___e_n___test.html#a9bc0cdd34aa85c90d1e30b0caae2041b", null ],
@@ -564,8 +596,12 @@ var group__group_selenium_child_g_u_i_adapter_tests =
       [ "tcVerifyValueWCM_Fail_OKWVerifyingFailsException", "classokw_1_1_se_select_1_1_se_select___e_n___test.html#ae5bcdb897bda3e4cca20d76a9e60a95e", null ],
       [ "name", "classokw_1_1_se_select_1_1_se_select___e_n___test.html#abcf305c4d982fd8ee3afd14b1e8fb683", null ]
     ] ],
-    [ "SeTextarea_EN_Chrome_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___chrome___test.html", null ],
-    [ "SeTextarea_EN_Firefox_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___firefox___test.html", null ],
+    [ "SeTextarea_EN_Chrome_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___chrome___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___chrome___test.html#ab9c0b3f8fdc6a8346c0168c113d2df97", null ]
+    ] ],
+    [ "SeTextarea_EN_Firefox_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___firefox___test.html", [
+      [ "FirefoxAfter", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___firefox___test.html#aaabca7d9af88e74627f091939c840ffb", null ]
+    ] ],
     [ "SeTextarea_EN_HTMLUnitDriver_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___h_t_m_l_unit_driver___test.html", null ],
     [ "SeTextarea_EN_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___test.html", [
       [ "tcClickOn", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___test.html#a16533ea4e4b35b5c0ae7e9b7a36031f6", null ],

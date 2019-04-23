@@ -1,9 +1,0 @@
-digraph "Grafische Darstellung der Klassenhierarchie"
-{
- // INTERACTIVE_SVG=YES
- // LATEX_PDF_SIZE
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="EN_VerifyExists_OKWVerifying\lFailsException_Test",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_e_n___verify_exists___o_k_w_verifying_fails_exception___test.html",tooltip=" "];
-}

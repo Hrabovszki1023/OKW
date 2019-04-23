@@ -1,0 +1,52 @@
+<map id="okw.OKW_Const_Sngltn.OKW_Const_Sngltn" name="okw.OKW_Const_Sngltn.OKW_Const_Sngltn">
+<area shape="rect" id="node1" title="Privater Konstruktor ohne Parameter im Entwurfsmuster Singelton initialisiert die Klasse OKW_Const." alt="" coords="543,1219,745,1261"/>
+<area shape="rect" id="node2" href="$classokw_1_1_o_k_w___const___sngltn.html#afdb8f095b58cbd870dbb8eb353e3b0bf" title="Holt die einzige Instanz dieser Klasse." alt="" coords="300,1219,495,1261"/>
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238" title="Gibt die Existenz eines GUI&#45;Objektes mit YES/NO in den Testergebnissen aus." alt="" coords="47,5,210,32"/>
+<area shape="rect" id="node4" href="$classokw_1_1core_1_1_o_k.html#a1b8a5a3d583ffabc0063632ab9d981cf" title="Dokumentiert den Fokus&#45;Status des gegebenen Objekts." alt="" coords="35,56,223,83"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_o_k.html#ae44a6c32e26a7f93dd5c9f7b5765ee0d" title="Dokumentiert den Status des gegebenen Objekts." alt="" coords="41,107,216,133"/>
+<area shape="rect" id="node6" href="$classokw_1_1core_1_1_o_k.html#a661c650ca7824d1ea464d98b792ae712" title="Keine Beschreibung zu &quot;MemorizeCaption&quot; verfügbar." alt="" coords="21,157,236,184"/>
+<area shape="rect" id="node7" href="$classokw_1_1core_1_1_o_k.html#a61db6d17853d7c0913216708c2c29779" title="Merkt sich den aktuell existierenden Zustand des Objekts." alt="" coords="27,208,230,235"/>
+<area shape="rect" id="node8" href="$classokw_1_1core_1_1_o_k.html#aa18fa77383398b2a8242ca299938c24d" title="Keine Beschreibung zu &quot;MemorizeHasFocus&quot; verfügbar." alt="" coords="15,259,243,285"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_o_k.html#aed2c0c9e72b5b730b6b041ef641f3bdc" title="Merkt sich den Zustand des gegebenen Objekts." alt="" coords="21,309,236,336"/>
+<area shape="rect" id="node10" href="$classokw_1_1core_1_1_o_k.html#ad09ff6f6389ceb04f7ec338ea3c45e85" title="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab." alt="" coords="29,360,229,387"/>
+<area shape="rect" id="node11" href="$classokw_1_1core_1_1_o_k.html#ac9744fdc26e9049a0d0fe48b1ae9d11c" title="Speirchert den aktuellen Wert der Platzhalters, und legt diesen unter fpsMemKeyName ab." alt="" coords="9,411,249,437"/>
+<area shape="rect" id="node12" href="$classokw_1_1core_1_1_o_k.html#a7e8652a632b073da02222ee6e5e88266" title="Keine Beschreibung zu &quot;MemorizeSelectedValue&quot; verfügbar." alt="" coords="17,462,240,503"/>
+<area shape="rect" id="node13" href="$classokw_1_1core_1_1_o_k.html#ab7c819556f3b21faeea08fad5be32813" title="Merkt sich den Wert der gegebenen Zelle in der Tabelle. throws Exception" alt="" coords="19,527,238,569"/>
+<area shape="rect" id="node14" href="$classokw_1_1core_1_1_o_k.html#aad3ff1b462da844ccc53d2e177fb1def" title="Dokumentiert den Tooltip&#45;Text (Kurzinformation) des gegebenen Objekts." alt="" coords="25,593,232,620"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_o_k.html#a2d93a84a57295418131d219a5887094d" title="Merkt sich den Standartwert eines Objekts." alt="" coords="28,644,229,671"/>
+<area shape="rect" id="node16" href="$classokw_1_1core_1_1_o_k.html#a7ee0b387364c0c188f94099f14f2da43" title="Auswahl aller Zeilen einer Liste/Tabelle, welche die gegebenen Daten enthalten." alt="" coords="57,695,200,721"/>
+<area shape="rect" id="node17" href="$classokw_1_1core_1_1_o_k.html#a691dd78240ef7e8a609b05e431c54f8c" title="Wählt den gegebenen Menüeintrag aus." alt="" coords="39,745,218,772"/>
+<area shape="rect" id="node18" href="$classokw_1_1core_1_1_o_k.html#a4ce824499d5b8b9612beff9f5438c6a1" title="Ruft die Sequenz eines Fensters auf." alt="" coords="45,796,212,823"/>
+<area shape="rect" id="node19" href="$classokw_1_1core_1_1_o_k.html#a6af4fe0d34a701aefc8ce67657b3c432" title="Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert." alt="" coords="49,847,209,873"/>
+<area shape="rect" id="node20" href="$classokw_1_1core_1_1_o_k.html#a4600012e7b1fdbedcee36313d0397fd5" title="Tastatureingaben von Daten in das aktive Fensterobjekt." alt="" coords="52,897,205,924"/>
+<area shape="rect" id="node21" href="$classokw_1_1core_1_1_o_k.html#afbfb6cebd96c8087190627a4c0d0f7c4" title="Eingabe von Daten in eine gegebene Tabellenzelle über die Tastatur." alt="" coords="25,948,232,975"/>
+<area shape="rect" id="node22" href="$classokw_1_1core_1_1_o_k.html#ad91da46f1631eed55757d42061543e86" title="Tastatureingabe in ein bestimmtes Fensterobjekt." alt="" coords="29,999,229,1025"/>
+<area shape="rect" id="node23" href="$classokw_1_1core_1_1_o_k.html#afe1a1b392d59c5ceef93ed6d0cfd2e01" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)." alt="" coords="35,1049,222,1076"/>
+<area shape="rect" id="node24" href="$classokw_1_1core_1_1_o_k.html#a461f7511030e7975fe983b2509527529" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)." alt="" coords="19,1100,238,1127"/>
+<area shape="rect" id="node25" href="$classokw_1_1core_1_1_o_k.html#a7b0869a2a6df63be61899963dc35d768" title="Überprüft die Überschrift des Objektes." alt="" coords="18,1151,239,1177"/>
+<area shape="rect" id="node26" href="$classokw_1_1core_1_1_o_k.html#a9785853231d70946dcbbfcd44b509c25" title="Prüft, ob das gegebene Objekt existiert." alt="" coords="41,1201,216,1228"/>
+<area shape="rect" id="node27" href="$classokw_1_1core_1_1_o_k.html#a4950117cbe9cd2b769ae529bbdc1f897" title="Vergleicht den Fokus&#45;Zustand des gegebenen Objekts mit dem erwarteten Wert." alt="" coords="29,1252,229,1279"/>
+<area shape="rect" id="node28" href="$classokw_1_1core_1_1_o_k.html#a071aec5319238e209cfc6f1434ea13e8" title="copydoc IOKW_State::VerifyHasFocus(String,String)" alt="" coords="35,1303,222,1329"/>
+<area shape="rect" id="node29" href="$classokw_1_1core_1_1_o_k.html#a1bfa8ae24fc44958e4e3c4272c120bb8" title="Überprüft die Beschreibung des Objektes." alt="" coords="43,1353,215,1380"/>
+<area shape="rect" id="node30" href="$classokw_1_1core_1_1_o_k.html#a4187442dc3574358fda8af18cb03f15e" title="Überprüft die Beschreibung/Label des Objektes." alt="" coords="27,1404,230,1431"/>
+<area shape="rect" id="node31" href="$classokw_1_1core_1_1_o_k.html#aeedf0dfdfe514b50ad774eb187a8cc34" title="Überprüft die Überschrift des Objektes." alt="" coords="25,1455,232,1481"/>
+<area shape="rect" id="node32" href="$classokw_1_1core_1_1_o_k.html#a8c6275d39dbc5ce13caf907f511a9a64" title="Überprüft die Beschreibung des Objektes." alt="" coords="23,1505,235,1532"/>
+<area shape="rect" id="node33" href="$classokw_1_1core_1_1_o_k.html#a20ab85fe302c5b2fc61b94a8fe347f0c" title="Überprüft den Platzhalter des Objektes." alt="" coords="7,1556,250,1583"/>
+<area shape="rect" id="node34" href="$classokw_1_1core_1_1_o_k.html#af60e502babb048eec6adefd04dc9d349" title="Checks the maximum number of characters that can be entered." alt="" coords="25,1607,233,1633"/>
+<area shape="rect" id="node35" href="$classokw_1_1core_1_1_o_k.html#a52a7e12864bb2fbf5c8578d3d25aabb5" title="Überprüft den Platzhalter des Objektes." alt="" coords="5,1657,252,1684"/>
+<area shape="rect" id="node36" href="$classokw_1_1core_1_1_o_k.html#a648f371fccab2eded552b69adf164bbd" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert." alt="" coords="31,1709,226,1750"/>
+<area shape="rect" id="node37" href="$classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert." alt="" coords="31,1774,226,1815"/>
+<area shape="rect" id="node38" href="$classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f" title="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert." alt="" coords="31,1839,226,1881"/>
+<area shape="rect" id="node39" href="$classokw_1_1core_1_1_o_k.html#a3548a5a8ddfbf7f84bfe18ba200e1b35" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert." alt="" coords="33,1905,224,1946"/>
+<area shape="rect" id="node40" href="$classokw_1_1core_1_1_o_k.html#a30fc98c4004c99e3e37047deac6ad16f" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert." alt="" coords="33,1970,224,2011"/>
+<area shape="rect" id="node41" href="$classokw_1_1core_1_1_o_k.html#a84abe8cdf2426bde23d357c89a6822a6" title="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert." alt="" coords="33,2035,224,2077"/>
+<area shape="rect" id="node42" href="$classokw_1_1core_1_1_o_k.html#a9f5e0c09b6d74adf4265e3c84cf700d1" title="Prüft den Tooltip&#45;Text eines Objektes." alt="" coords="39,2101,218,2128"/>
+<area shape="rect" id="node43" href="$classokw_1_1core_1_1_o_k.html#adbf2e96978ec22c0d8febdee394a60e6" title="Prüft den Tooltip&#45;Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text)." alt="" coords="24,2152,233,2179"/>
+<area shape="rect" id="node44" href="$classokw_1_1core_1_1_o_k.html#a95d9d7b4bc22bd4deae5398394d90e3a" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)." alt="" coords="23,2203,235,2229"/>
+<area shape="rect" id="node45" href="$classokw_1_1core_1_1_o_k.html#a68529a54c5b950d3aa005bb87890b703" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)." alt="" coords="42,2253,215,2280"/>
+<area shape="rect" id="node46" href="$classokw_1_1core_1_1_o_k.html#a6aafc82b46b36f952f2dd61db0f124b8" title="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)." alt="" coords="27,2304,231,2331"/>
+<area shape="rect" id="node47" href="$classokw_1_1core_1_1_o_k.html#acb6c973210e73f47ee34f9df6eac7f83" title="Wichtig: Ein &quot;EMPTY&quot;&#45;Wert ist ein ArrayList String welche keine Array&#45;Elemte enthält,..." alt="" coords="25,2355,232,2381"/>
+<area shape="rect" id="node48" href="$classokw_1_1core_1_1_o_k.html#aef8ea8cabf9dfb28aef18611f69b5af3" title="Löscht die gegebene Datei." alt="" coords="46,2405,211,2432"/>
+<area shape="rect" id="node49" href="$classokw_1_1core_1_1_o_k.html#a8afdd9c8a47dc54aced5cce6226678ad" title="Prüft, ob die gegebene Datei existiert." alt="" coords="31,2456,226,2483"/>
+<area shape="rect" id="node50" href="$classokw_1_1core_1_1_o_k.html#aeec97e6090b2d4140c5961d81700b5cf" title="Prüft, ob das gegebene Verzeichnis existiert." alt="" coords="31,2507,227,2549"/>
+</map>

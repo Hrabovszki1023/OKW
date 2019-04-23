@@ -36,7 +36,6 @@ var classokw_1_1core_1_1_core =
     [ "Sequence", "classokw_1_1core_1_1_core.html#ab0cd601b3ec8b8e20755ed24a3d8680b", null ],
     [ "SetCurrentState", "classokw_1_1core_1_1_core.html#aafe6e3d88e810dabf350b37058d4af97", null ],
     [ "SetFocus", "classokw_1_1core_1_1_core.html#a343aac009274a866520db97ec9cc793a", null ],
-    [ "SetKernaleStateNOK", "classokw_1_1core_1_1_core.html#abefd56577fd6ba77c09765eb9084a481", null ],
     [ "setLanguage", "classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100", null ],
     [ "SetValue", "classokw_1_1core_1_1_core.html#a7088065564f2909025435c0c5594926c", null ],
     [ "StartApp", "classokw_1_1core_1_1_core.html#ac20a22275b6aea1c4e551dce1fd0c1e9", null ],

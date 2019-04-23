@@ -1,0 +1,25 @@
+<map id="okw.SeLink.SeLink_EN_Test.tcSelect_en" name="okw.SeLink.SeLink_EN_Test.tcSelect_en">
+<area shape="rect" id="node1" title="Prüft ob die Select die Ausnahme OKWFrameObjectMethodNotImplemented auslöst." alt="" coords="5,213,168,254"/>
+<area shape="rect" id="node2" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="229,321,393,348"/>
+<area shape="rect" id="node8" href="$classokw_1_1core_1_1_e_n.html#aaa7465ee7f135c724668d8b22dc2219f" title="Startet die gegebene Anwendung." alt="" coords="231,119,391,145"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#ae24d951e607b9b82af4f3b80e71285b9" title="Tastatureingaben von Daten in das aktive Fensterobjekt." alt="" coords="235,169,388,196"/>
+<area shape="rect" id="node18" href="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="216,220,407,247"/>
+<area shape="rect" id="node21" href="$classokw_1_1core_1_1_e_n.html#a3214b395b88cde7b880c3992c9c05763" title="Auswahl aller Zeilen einer Liste/Tabelle, welche die gegebenen Daten enthalten." alt="" coords="240,271,383,297"/>
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language." alt="" coords="457,245,655,272"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="468,392,644,419"/>
+<area shape="rect" id="node4" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)." alt="" coords="705,291,948,317"/>
+<area shape="rect" id="node6" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls." alt="" coords="731,443,922,485"/>
+<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="717,392,937,419"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#ac20a22275b6aea1c4e551dce1fd0c1e9" title="Startet die gegebene Anwendung." alt="" coords="470,93,642,120"/>
+<area shape="rect" id="node10" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes." alt="" coords="731,107,922,149"/>
+<area shape="rect" id="node11" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter." alt="" coords="714,173,939,200"/>
+<area shape="rect" id="node14" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0ec9b7c60041061f1b01d85b703a27a8" title="Startet die gegebene Anwendung." alt="" coords="719,5,935,32"/>
+<area shape="rect" id="node12" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei." alt="" coords="996,173,1229,200"/>
+<area shape="rect" id="node13" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag." alt="" coords="1277,166,1480,207"/>
+<area shape="rect" id="node16" href="$classokw_1_1core_1_1_core.html#ad09bf3a237b88913dbe9ebc228db1cf3" title="Tastatureingaben von Daten in das aktive Fensterobjekt." alt="" coords="473,144,639,171"/>
+<area shape="rect" id="node17" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0466b45ed636074a1b6cd52de6b5fdd6" title="Tastatureingaben von Daten in das aktive Fensterobjekt." alt="" coords="722,56,931,83"/>
+<area shape="rect" id="node19" href="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="455,195,657,221"/>
+<area shape="rect" id="node20" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0" title="Setzt den Kontext auf das gegebene Fenster." alt="" coords="727,225,926,266"/>
+<area shape="rect" id="node22" href="$classokw_1_1core_1_1_core.html#af118e712145af544f4045c3bf636311b" title="Auswahl aller Zeilen einer Liste/Tabelle, welche die gegebenen Daten enthalten." alt="" coords="479,296,633,323"/>
+<area shape="rect" id="node23" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#afab26cbca470df57025e32b4332328cf" title="Auswahl aller Zeilen einer Liste/Tabelle, welche die gegebenen Daten enthalten." alt="" coords="727,341,926,368"/>
+</map>

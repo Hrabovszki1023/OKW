@@ -1,0 +1,25 @@
+<map id="okw.SeMAXIMIZE.SeMAXIMIZE_EN_Test.tcVerifyIsActive" name="okw.SeMAXIMIZE.SeMAXIMIZE_EN_Test.tcVerifyIsActive">
+<area shape="rect" id="node1" title="Prüft, ob die Methode VerifyIsActive für MAXIMIZE implementiert ist." alt="" coords="5,267,219,309"/>
+<area shape="rect" id="node2" href="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="278,376,442,403"/>
+<area shape="rect" id="node8" href="$classokw_1_1core_1_1_e_n.html#aaa7465ee7f135c724668d8b22dc2219f" title="Startet die gegebene Anwendung." alt="" coords="280,173,440,200"/>
+<area shape="rect" id="node15" href="$classokw_1_1core_1_1_e_n.html#a67f59cc780c7b380127c430522ae6a62" title="Vergleicht den Fokus&#45;Status des gegebenen Objekts mit dem erwarteten Wert." alt="" coords="267,224,453,251"/>
+<area shape="rect" id="node18" href="$classokw_1_1core_1_1_e_n.html#aba06d28c60512e1dc55902403abbd3f6" title="Beendet eine gegebene Anwendung." alt="" coords="281,275,439,301"/>
+<area shape="rect" id="node21" href="$classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f" title="Signalisiert das Ende eines Testfalls." alt="" coords="284,325,436,352"/>
+<area shape="rect" id="node3" href="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100" title="Setzt die Sprache auf den gegebenen wert Language." alt="" coords="501,275,700,301"/>
+<area shape="rect" id="node5" href="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="513,392,689,419"/>
+<area shape="rect" id="node4" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097" title="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)." alt="" coords="748,291,991,317"/>
+<area shape="rect" id="node6" href="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb" title="Ausgabe des Testfalls." alt="" coords="774,443,965,485"/>
+<area shape="rect" id="node7" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13" title="Markiert den Anfang eines neuen Testfalls." alt="" coords="759,392,979,419"/>
+<area shape="rect" id="node9" href="$classokw_1_1core_1_1_core.html#ac20a22275b6aea1c4e551dce1fd0c1e9" title="Startet die gegebene Anwendung." alt="" coords="515,93,687,120"/>
+<area shape="rect" id="node10" href="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef" title="Ausgabe eines Schlüsselwortes." alt="" coords="774,57,965,98"/>
+<area shape="rect" id="node11" href="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2" title="Holt die Log&#45;Meldung für MethodeNmae/Textkey ohne weitere Parameter." alt="" coords="757,123,982,149"/>
+<area shape="rect" id="node14" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0ec9b7c60041061f1b01d85b703a27a8" title="Startet die gegebene Anwendung." alt="" coords="761,5,977,32"/>
+<area shape="rect" id="node12" href="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3" title="Interne Kernfunktion holt die Log&#45;Meldung mit Platzhaltern aus der XML&#45;Datei." alt="" coords="1039,123,1272,149"/>
+<area shape="rect" id="node13" href="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb" title="Lies den TextContent eines Tag." alt="" coords="1320,115,1523,157"/>
+<area shape="rect" id="node16" href="$classokw_1_1core_1_1_core.html#af9261f054d5a82396c678851ade66b1b" title="Vergleicht den Fokus&#45;Status des gegebenen Objekts mit dem erwarteten Wert." alt="" coords="501,163,700,189"/>
+<area shape="rect" id="node17" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad003bc140c032dc58f2f67bcc749990c" title="Vergleicht den Fokus&#45;Status des gegebenen Objekts mit dem erwarteten Wert." alt="" coords="772,174,967,215"/>
+<area shape="rect" id="node19" href="$classokw_1_1core_1_1_core.html#a13d953a145a5e1bc776785f8433ba69c" title="Beendet eine gegebene Anwendung." alt="" coords="515,217,686,244"/>
+<area shape="rect" id="node20" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a789e33be9253edfccfe5654f537cf52a" title="Beendet eine gegebene Anwendung." alt="" coords="762,240,977,267"/>
+<area shape="rect" id="node22" href="$classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c" title="Signalisiert das Ende eines Testfalls." alt="" coords="519,336,683,363"/>
+<area shape="rect" id="node23" href="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186" title="Signalisiert das Ende eines Testfalls." alt="" coords="765,341,973,368"/>
+</map>

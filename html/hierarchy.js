@@ -66,11 +66,16 @@ var hierarchy =
           ] ],
           [ "okw.gui.adapter.selenium.SeBrowserWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_window.html", [
             [ "okw.gui.frames.frmInternetExplorer", "classokw_1_1gui_1_1frames_1_1frm_internet_explorer.html", null ],
-            [ "okw.gui.frames.frmSafari", "classokw_1_1gui_1_1frames_1_1frm_safari.html", null ],
             [ "okw.gui.frames.FrmSeChrome", "classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html", null ],
             [ "okw.gui.frames.FrmSeFirefox", "classokw_1_1gui_1_1frames_1_1_frm_se_firefox.html", null ],
             [ "okw.gui.frames.FrmSeHTMLUnit", "classokw_1_1gui_1_1frames_1_1_frm_se_h_t_m_l_unit.html", null ]
           ] ]
+        ] ],
+        [ "okw.gui.adapter.selenium.webdriver.SeChromeApp", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_chrome_app.html", null ],
+        [ "okw.gui.adapter.selenium.webdriver.SeFirefoxApp", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_firefox_app.html", null ],
+        [ "okw.gui.adapter.selenium.webdriver.SeHtmlUnitDriver", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html", null ],
+        [ "okw.gui.adapter.selenium.webdriver.SeSafariApp", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_safari_app.html", [
+          [ "okw.gui.frames.frmSafari", "classokw_1_1gui_1_1frames_1_1frm_safari.html", null ]
         ] ],
         [ "okw.gui.adapter.Test_Window", "classokw_1_1gui_1_1adapter_1_1_test___window.html", [
           [ "okw.gui.frames.frmCurrentObjectWindow", "classokw_1_1gui_1_1frames_1_1frm_current_object_window.html", null ],
@@ -94,7 +99,6 @@ var hierarchy =
     [ "okw.core.EN_Keywords_DELETE_Test", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html", null ],
     [ "okw.core.EN_Keywords_Empty_Test", "classokw_1_1core_1_1_e_n___keywords___empty___test.html", null ],
     [ "okw.core.EN_Keywords_IGNORE_Test", "classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html", null ],
-    [ "okw.core.EN_Keywords_NOK_Test", "classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html", null ],
     [ "okw.core.EN_Keywords_Test", "classokw_1_1core_1_1_e_n___keywords___test.html", null ],
     [ "okw.core.EN_OKWFrameObjectChildNotFoundException_Test", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html", null ],
     [ "okw.core.EN_OKWFrameObjectMethodNotImplemented_Test", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html", null ],
@@ -189,7 +193,6 @@ var hierarchy =
     [ "okw.OKW_PropertiesTest", "classokw_1_1_o_k_w___properties_test.html", null ],
     [ "okw.OKW_TestClipboard", "classokw_1_1_o_k_w___test_clipboard.html", null ],
     [ "okw.OKW_TimeOut", "classokw_1_1_o_k_w___time_out.html", null ],
-    [ "okw.OKW_TimeOut_Test", "classokw_1_1_o_k_w___time_out___test.html", null ],
     [ "okw.parser.OKW_VisitorTest", "classokw_1_1parser_1_1_o_k_w___visitor_test.html", null ],
     [ "okw.OKW_XmlReader", "classokw_1_1_o_k_w___xml_reader.html", null ],
     [ "okw.OKW_XmlReaderTest", "classokw_1_1_o_k_w___xml_reader_test.html", null ],
