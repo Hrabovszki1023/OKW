@@ -50,7 +50,18 @@ public class fourTestLocatorTest {
     {
         assertEquals( -1, myLocator.seperateClassnameAndLocator( "myClass::myClass::MyLocator" ) );
     }
-
+    
+    
+    /**
+     * Suche Element mit Text und hole textfeld dazu
+     * @throws Exception
+     */
+    @Test
+    public void tc_4TAI_Locator() throws Exception
+    {
+        assertEquals( "//*[@AutomationID='MyLocator']", myLocator.get4TestLocator( "4TAI!MyLocator" )  );
+    }
+    
     
     /**
      * Suche Element mit Text und hole textfeld dazu

@@ -13,18 +13,19 @@ public class fourTestLocator
 
 	
     /**
-     * Erzeugt einen locator aus dem gegebene Wert, wenn fspL mit "4T!", "4T:" oder "4T?" anfängt, sonst wird fspL unver�ndert zur�ckgegeben.
+     * Erzeugt einen locator aus dem gegebenen Wert, wenn fspL mit "4T!", "4T:" oder "4T?" anfängt, sonst wird fspL unverändert zuräckgegeben.
      * 
      * @note
-     *  <code> fpsL = "//div[@ID='myID']"</code> -> <code>return = "//div[@ID='myID']"</code>
-     *  <code> fpsL = "4T!MyValue"</code> -> <code>return = "//*[@data-4Test='MyValue']"</code>
-     *  <code> fpsL = "4TNA!MyValue"</code> -> <code>return = "//*[contains( @name, 'MyValue']"</code>
-     *  <code> fpsL = "4TID!MyValue"</code> -> <code>return = "//*[contains( @ID, 'MyValue']"</code>
-     *  <code> fpsL = "4TLA!MyValue"</code> -> <code>return = "//label[contains(text(),'MyValue')]/following-sibling::input"</code>
-     *  <code> fpsL = "4TTX!MyValue"</code> -> <code>return = "//*[contains(text(),'MyValue')]"</code>
+     *  1. <code> fpsL = "//div[@ID='myID']"</code> -> <code>return = "//div[@ID='myID']"</code> - ohne "4T*!"- Präfix wird die XPath.Angabe unverändert durchgelassen
+     *  2. <code> fpsL = "4T!MyValue"</code> -> <code>return = "//*[@data-4Test='MyValue']"</code> - Locator mit dem Attribute "data-4Test" wird erzeugt.
+     *  3. <code> fpsL = "4TNA!MyValue"</code> -> <code>return = "//*[contains( @name, 'MyValue']"</code>  - Locator mit dem Attribute "name" wird erzeugt.
+     *  4. <code> fpsL = "4TAI!MyValue"</code> -> <code>return = "//*[contains( @AutomationID, 'MyValue']"</code> - Locator mit dem Attribute "AutomationID" wird erzeugt.
+     *  5. <code> fpsL = "4TID!MyValue"</code> -> <code>return = "//*[contains( @ID, 'MyValue']"</code> - Locator mit dem Attribute "ID" wird erzeugt.
+     *  6. <code> fpsL = "4TLA!MyValue"</code> -> <code>return = "//label[contains(text(),'MyValue')]/following-sibling::input"</code>
+     *  7. <code> fpsL = "4TTX!MyValue"</code> -> <code>return = "//*[contains(text(),'MyValue')]"</code> - Locator Tag mit dem gegebene Text wird erzeugt.
      *  
      * @param fspL Locator Parameter
-     * @return Erzeugter data-4Test Locator oder unver�nderter fpsL-Wert.
+     * @return Erzeugter data-4Test Locator oder unveränderter fpsL-Wert.
      */
     public String get4TestLocator( String fspL )
     {
@@ -38,6 +39,13 @@ public class fourTestLocator
     		seperateClassnameAndLocator( fspL.replaceFirst("4T!", "" ) );
     		lvsReturn = "//*[@data-4test='" +  this.cvsLocator + "']";
     	}
+        else if ( fspL.startsWith("4TAI!") )
+        {
+            // Find object with label than contains text
+            LogMessage = "Generate '@AutomationID' Locator";
+            seperateClassnameAndLocator( fspL.replaceFirst("4TAI!", "" ) );
+            lvsReturn = "//*[@AutomationID='" +  this.cvsLocator + "']";
+        }
     	else if ( fspL.startsWith("4TNA!") )
     	{
     		// Find object with label than contains text
@@ -66,9 +74,6 @@ public class fourTestLocator
     		seperateClassnameAndLocator( fspL.replaceFirst("4TTX!", "" ) );
     		lvsReturn = "//*[contains(text(),'" + this.cvsLocator + "')]";
     	}
-
-    	// System.out.println(LogMessage);
-    	// System.out.println( " - '" + fspL + "' -> '" + lvsReturn + "'");
     	
     	this.cvsLocator = lvsReturn;
     	
