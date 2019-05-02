@@ -12,7 +12,8 @@ import org.junit.Test;
 public class Logger_Test
 {
 
-    /*
+    Logger_Sngltn Log = Logger_Sngltn.getInstance();
+    
     @BeforeClass
     public static void setUpBeforeClass() throws Exception
     {
@@ -32,112 +33,111 @@ public class Logger_Test
     public void tearDown() throws Exception
     {
     }
-*/
-    
+
     /**
      * 
      */
     @Test
     public void tcGet2ndInstance()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
+        Log.setDebugMode( false );
 
         Logger_Sngltn my2nLog = Logger_Sngltn.getInstance();
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcBeginTest_EndTest" );
+        Log.LogTestcaseStart( "tcBeginTest_EndTest" );
         
         my2nLog.LogKeyWordStart( "LogKeyWordStart" );
         my2nLog.LogKeyWordEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     @Test
     public void tcLogTestcaseStart_LogTestcaseEnd()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
+        Log.setDebugMode( false );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcBeginTest_EndTest" );
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseStart( "tcBeginTest_EndTest" );
+        Log.LogTestcaseEnd();
 
-        Logger_Sngltn.getInstance().setDebugMode( true );
+        Log.setDebugMode( true );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcBeginTest_EndTest" );
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseStart( "tcBeginTest_EndTest" );
+        Log.LogTestcaseEnd();
 
     }
     
     @Test
     public void tcLogKeyWordStart_LogKeyWordEnd_NoParam()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
+        Log.setDebugMode( false );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd" );
+        Log.LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd" );
         
-        Logger_Sngltn.getInstance().LogKeyWordStart( "LogKeyWordStart" );
-        Logger_Sngltn.getInstance().LogKeyWordEnd();
+        Log.LogKeyWordStart( "LogKeyWordStart" );
+        Log.LogKeyWordEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
       
-        Logger_Sngltn.getInstance().setDebugMode( true );
+        Log.setDebugMode( true );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd" );
+        Log.LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd" );
         
-        Logger_Sngltn.getInstance().LogKeyWordStart( "LogKeyWordStart" );
-        Logger_Sngltn.getInstance().LogKeyWordEnd();
+        Log.LogKeyWordStart( "LogKeyWordStart" );
+        Log.LogKeyWordEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
 
     @Test
     public void tcLogKeyWordStart_LogKeyWordEnd_OneParam()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
+        Log.setDebugMode( false );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd_OneParam" );
+        Log.LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd_OneParam" );
         
-        Logger_Sngltn.getInstance().LogKeyWordStart( "LogKeyWordStart", "MEM_Key" );
-        Logger_Sngltn.getInstance().LogKeyWordEnd();
+        Log.LogKeyWordStart( "LogKeyWordStart", "MEM_Key" );
+        Log.LogKeyWordEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
       
-        Logger_Sngltn.getInstance().setDebugMode( true );
+        Log.setDebugMode( true );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd_OneParam" );
+        Log.LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd_OneParam" );
         
-        Logger_Sngltn.getInstance().LogKeyWordStart( "LogKeyWordStart", "MEM_Key" );
-        Logger_Sngltn.getInstance().LogKeyWordEnd();
+        Log.LogKeyWordStart( "LogKeyWordStart", "MEM_Key" );
+        Log.LogKeyWordEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
     }
 
     @Test
     public void tcLogKeyWordStart_LogKeyWordEnd_TwoParam()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
+        Log.setDebugMode( false );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd_TwoParam" );
+        Log.LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd_TwoParam" );
         
-        Logger_Sngltn.getInstance().LogKeyWordStart( "LogKeyWordStart", "Name", "Wert"  );
-        Logger_Sngltn.getInstance().LogKeyWordEnd();
+        Log.LogKeyWordStart( "LogKeyWordStart", "Name", "Wert"  );
+        Log.LogKeyWordEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
       
-        Logger_Sngltn.getInstance().setDebugMode( true );
+        Log.setDebugMode( true );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd_TwoParam" );
+        Log.LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd_TwoParam" );
         
-        Logger_Sngltn.getInstance().LogKeyWordStart( "LogKeyWordStart", "Name", "Wert"  );
-        Logger_Sngltn.getInstance().LogKeyWordEnd();
+        Log.LogKeyWordStart( "LogKeyWordStart", "Name", "Wert"  );
+        Log.LogKeyWordEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
     }
 
@@ -145,210 +145,210 @@ public class Logger_Test
     @Test
     public void tcLogKeyWordStart_LogKeyWordEnd_gt_TwoParam()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
+        Log.setDebugMode( false );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd_gt_TwoParam" );
+        Log.LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd_gt_TwoParam" );
         
-        Logger_Sngltn.getInstance().LogKeyWordStart( "LogKeyWordStart", "Param 1", "Param 2" , "Param 3"  );
-        Logger_Sngltn.getInstance().LogKeyWordEnd();
+        Log.LogKeyWordStart( "LogKeyWordStart", "Param 1", "Param 2" , "Param 3"  );
+        Log.LogKeyWordEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
       
-        Logger_Sngltn.getInstance().setDebugMode( true );
+        Log.setDebugMode( true );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd_gt_TwoParam" );
+        Log.LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd_gt_TwoParam" );
         
-        Logger_Sngltn.getInstance().LogKeyWordStart( "LogKeyWordStart", "Param 1", "Param 2" , "Param 3"  );
-        Logger_Sngltn.getInstance().LogKeyWordEnd();
+        Log.LogKeyWordStart( "LogKeyWordStart", "Param 1", "Param 2" , "Param 3"  );
+        Log.LogKeyWordEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
     }
     
     @Test
     public void tcLogSequenceStart_LogSequenceEnd_OhneParamater()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
+        Log.setDebugMode( false );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd" );
+        Log.LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd" );
         
-        Logger_Sngltn.getInstance().LogSequenceStart( "LogSequenceStart", "Window BN", "SEQ-Name", "SEQID" );
-        Logger_Sngltn.getInstance().LogSequenceEnd();
+        Log.LogSequenceStart( "LogSequenceStart", "Window BN", "SEQ-Name", "SEQID" );
+        Log.LogSequenceEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
         
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
+        Log.setDebugMode( true );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd" );
+        Log.LogTestcaseStart( "tcLogKeyWordStart_LogKeyWordEnd" );
         
-        Logger_Sngltn.getInstance().LogSequenceStart( "LogSequenceStart", "Window BN", "SEQ-Name", "SEQID" );
-        Logger_Sngltn.getInstance().LogSequenceEnd();
+        Log.LogSequenceStart( "LogSequenceStart", "Window BN", "SEQ-Name", "SEQID" );
+        Log.LogSequenceEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd(); 
+        Log.LogTestcaseEnd(); 
     }
     
     @Test
     public void tcResultOpenList_ResultCloseList()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
+        Log.setDebugMode( false );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
+        Log.LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
         
-        Logger_Sngltn.getInstance().ResOpenList( "ResOpenList L1" );
-        Logger_Sngltn.getInstance().ResOpenList( "ResOpenList L2" );
-        Logger_Sngltn.getInstance().LogPrint( "Eintrag 1" );
-        Logger_Sngltn.getInstance().LogPrint( "Eintrag 2" );
-        Logger_Sngltn.getInstance().LogPrint( "Eintrag 3" );
-        Logger_Sngltn.getInstance().ResCloseList();
-        Logger_Sngltn.getInstance().ResCloseList();
+        Log.ResOpenList( "ResOpenList L1" );
+        Log.ResOpenList( "ResOpenList L2" );
+        Log.LogPrint( "Eintrag 1" );
+        Log.LogPrint( "Eintrag 2" );
+        Log.LogPrint( "Eintrag 3" );
+        Log.ResCloseList();
+        Log.ResCloseList();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
+        Log.setDebugMode( true );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
+        Log.LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
         
-        Logger_Sngltn.getInstance().ResOpenList( "ResOpenList L1" );
-        Logger_Sngltn.getInstance().ResOpenList( "ResOpenList L2" );
-        Logger_Sngltn.getInstance().LogPrint( "Eintrag 1" );
-        Logger_Sngltn.getInstance().LogPrint( "Eintrag 2" );
-        Logger_Sngltn.getInstance().LogPrint( "Eintrag 3" );
-        Logger_Sngltn.getInstance().ResCloseList();
-        Logger_Sngltn.getInstance().ResCloseList();
+        Log.ResOpenList( "ResOpenList L1" );
+        Log.ResOpenList( "ResOpenList L2" );
+        Log.LogPrint( "Eintrag 1" );
+        Log.LogPrint( "Eintrag 2" );
+        Log.LogPrint( "Eintrag 3" );
+        Log.ResCloseList();
+        Log.ResCloseList();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
 
     @Test
     public void tcResultOpenList_ResultCloseList_LevelTest()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
+        Log.setDebugMode( false );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
+        Log.LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
         
-        Logger_Sngltn.getInstance().ResOpenList( "ResOpenList L1" );
-        Logger_Sngltn.getInstance().ResOpenList( "ResOpenList L2" );
-        Logger_Sngltn.getInstance().LogPrint( "Eintrag" );
-        Logger_Sngltn.getInstance().ResCloseList();
-        Logger_Sngltn.getInstance().ResCloseList();
-        Logger_Sngltn.getInstance().ResCloseList(); // one close more than open
+        Log.ResOpenList( "ResOpenList L1" );
+        Log.ResOpenList( "ResOpenList L2" );
+        Log.LogPrint( "Eintrag" );
+        Log.ResCloseList();
+        Log.ResCloseList();
+        Log.ResCloseList(); // one close more than open
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
+        Log.setDebugMode( true );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
+        Log.LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
         
-        Logger_Sngltn.getInstance().ResOpenList( "ResOpenList L1" );
-        Logger_Sngltn.getInstance().ResOpenList( "ResOpenList L2" );
-        Logger_Sngltn.getInstance().LogPrint( "Eintrag" );
-        Logger_Sngltn.getInstance().ResCloseList();
-        Logger_Sngltn.getInstance().ResCloseList();
-        Logger_Sngltn.getInstance().ResCloseList(); // one close more than open
+        Log.ResOpenList( "ResOpenList L1" );
+        Log.ResOpenList( "ResOpenList L2" );
+        Log.LogPrint( "Eintrag" );
+        Log.ResCloseList();
+        Log.ResCloseList();
+        Log.ResCloseList(); // one close more than open
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     @Test
     public void tcResultOpenListDebug_ResultCloseListDebug()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
         
-        Logger_Sngltn.getInstance().ResOpenListDebug( "ResOpenList" );
-        Logger_Sngltn.getInstance().LogPrintDebug( "Eintrag 1" );
-        Logger_Sngltn.getInstance().LogPrintDebug( "Eintrag 2" );
-        Logger_Sngltn.getInstance().LogPrintDebug( "Eintrag 3" );
-        Logger_Sngltn.getInstance().ResCloseListDebug();
+        Log.ResOpenListDebug( "ResOpenList" );
+        Log.LogPrintDebug( "Eintrag 1" );
+        Log.LogPrintDebug( "Eintrag 2" );
+        Log.LogPrintDebug( "Eintrag 3" );
+        Log.ResCloseListDebug();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
 
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
         
-        Logger_Sngltn.getInstance().ResOpenListDebug( "ResOpenList" );
-        Logger_Sngltn.getInstance().LogPrintDebug( "Eintrag 1" );
-        Logger_Sngltn.getInstance().LogPrintDebug( "Eintrag 2" );
-        Logger_Sngltn.getInstance().LogPrintDebug( "Eintrag 3" );
-        Logger_Sngltn.getInstance().ResCloseListDebug();
+        Log.ResOpenListDebug( "ResOpenList" );
+        Log.LogPrintDebug( "Eintrag 1" );
+        Log.LogPrintDebug( "Eintrag 2" );
+        Log.LogPrintDebug( "Eintrag 3" );
+        Log.ResCloseListDebug();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     @Test
     public void tcLogError()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogError" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogError" );
 
-        Logger_Sngltn.getInstance().LogError( "Error..." );
+        Log.LogError( "Error..." );
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogError" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogError" );
 
-        Logger_Sngltn.getInstance().LogError( "Error..." );
+        Log.LogError( "Error..." );
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     @Test
     public void tcLogPass()
     {
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogPass" );
+        Log.LogTestcaseStart( "tcLogPass" );
 
-        Logger_Sngltn.getInstance().LogPass( "Pass..." );
+        Log.LogPass( "Pass..." );
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     @Test
     public void tcLogWarning()
     {
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogWarning" );
+        Log.LogTestcaseStart( "tcLogWarning" );
 
-        Logger_Sngltn.getInstance().LogWarning( "Warning..." );
+        Log.LogWarning( "Warning..." );
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     @Test
     public void tcLogException()
     {
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogException" );
+        Log.LogTestcaseStart( "tcLogException" );
 
-        Logger_Sngltn.getInstance().LogException( "Exception 1" );
+        Log.LogException( "Exception 1" );
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     
     @Test
     public void tcLogPrint()
     {
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogPrint" );
+        Log.LogTestcaseStart( "tcLogPrint" );
 
-        Logger_Sngltn.getInstance().LogPrint( "Print hore something..." );
+        Log.LogPrint( "Print hore something..." );
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     @Test
     public void tcLogPrintDebug()
     {
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogPrintDebug" );
+        Log.LogTestcaseStart( "tcLogPrintDebug" );
 
-        Logger_Sngltn.getInstance().LogPrintDebug( "Print hore something..." );
+        Log.LogPrintDebug( "Print hore something..." );
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     
@@ -358,65 +358,65 @@ public class Logger_Test
     @Test
     public void tcLogFunctionEnd()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEnd" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd(  );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd(  );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEnd" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd(  );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd(  );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
 
     @Test
     public void tcLogFunctionEndDebug()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug(  );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug(  );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug(  );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug(  );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     
     @Test
     public void tcLogFunctionEnd_Boolean()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd_Boolean" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEnd_Boolean" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd( true );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd( true );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd_Boolean" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEnd_Boolean" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd( true );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd( true );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     
@@ -425,44 +425,44 @@ public class Logger_Test
     {
         Boolean Return = null;
         
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd_Booleannull" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEnd_Booleannull" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd( Return );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd( Return );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd_Booleannull" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEnd_Booleannull" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd( Return );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd( Return );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     
     @Test
     public void tcLogFunctionEndDebug_Boolean()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug_Boolean" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug_Boolean" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug( true );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug( true );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug_Boolean" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug_Boolean" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug( true );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug( true );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     
@@ -471,43 +471,43 @@ public class Logger_Test
     {
         Boolean Return = null;
         
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug_Booleannull" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug_Booleannull" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug( Return );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug( Return );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug_Booleannull" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug_Booleannull" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug( Return );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug( Return );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     @Test
     public void tcLogFunctionEnd_String()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd_String" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEnd_String" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd( "Return String" );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd( "Return String" );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd_String" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEnd_String" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd( "Return String" );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd( "Return String" );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     
@@ -516,44 +516,44 @@ public class Logger_Test
     {
         String ReturnString = null;
         
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd_Stringnull" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEnd_Stringnull" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd( ReturnString );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd( ReturnString );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd_Stringnull" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEnd_Stringnull" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd( ReturnString );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd( ReturnString );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     
     @Test
     public void tcLogFunctionEndDebug_String()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug_String" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug_String" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug( "Return String" );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug( "Return String" );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug_String" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug_String" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug( "Return String" );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug( "Return String" );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     
@@ -562,22 +562,22 @@ public class Logger_Test
     {
         String ReturnString = null;
         
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug_Stringnull" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug_Stringnull" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug( ReturnString );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug( ReturnString );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug_Stringnull" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug_Stringnull" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug( ReturnString );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug( ReturnString );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
 
     @Test
@@ -587,22 +587,22 @@ public class Logger_Test
         Return.add( "String Value 1" );
         Return.add( "String Value 2" );
         
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd_ListString" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEnd_ListString" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd( Return );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd( Return );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd_ListString" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEnd_ListString" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd( Return );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd( Return );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     
@@ -611,22 +611,22 @@ public class Logger_Test
     {
         ArrayList<String> Return = null;
         
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd_ListStringnull" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEnd_ListStringnull" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd( Return );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd( Return );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEnd_ListStringnull" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEnd_ListStringnull" );
 
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd( Return );
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd( Return );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     
@@ -636,22 +636,22 @@ public class Logger_Test
         ArrayList<String> Return = new ArrayList<String>();
         Return.add( "String Value 1" );
         Return.add( "String Value 2" );
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug_ListString" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug_ListString" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug( Return );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug( Return );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug_ListString" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug_ListString" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug( Return );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug( Return );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
     
@@ -660,118 +660,117 @@ public class Logger_Test
     {
         ArrayList<String> Return =  null;
         
-        Logger_Sngltn.getInstance().setDebugMode( false );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug_ListStringnull" );
+        Log.setDebugMode( false );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug_ListStringnull" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug( Return );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug( Return );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionEndDebug_ListStringnull" );
+        Log.setDebugMode( true );
+        Log.LogTestcaseStart( "tcLogFunctionEndDebug_ListStringnull" );
 
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug( Return );
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug( Return );
 
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
     }
     
 
     @Test
     public void tcLogFunctionStart_NoParam()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
+        Log.setDebugMode( false );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionStart_NoParam" );
+        Log.LogTestcaseStart( "tcLogFunctionStart_NoParam" );
         
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd();
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
   
 
-        Logger_Sngltn.getInstance().setDebugMode( true );
+        Log.setDebugMode( true );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionStart_NoParam" );
+        Log.LogTestcaseStart( "tcLogFunctionStart_NoParam" );
         
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart" );
-        Logger_Sngltn.getInstance().LogFunctionEnd();
+        Log.LogFunctionStart( "LogFunctionStart" );
+        Log.LogFunctionEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
     }
     
     @Test
     public void tcLogFunctionStartDebug_NoParam()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
+        Log.setDebugMode( false );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionStartDebug_NoParam" );
+        Log.LogTestcaseStart( "tcLogFunctionStartDebug_NoParam" );
         
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug();
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
         
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
+        Log.setDebugMode( true );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionStartDebug_NoParam" );
+        Log.LogTestcaseStart( "tcLogFunctionStartDebug_NoParam" );
         
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug();
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug" );
+        Log.LogFunctionEndDebug();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd(); 
+        Log.LogTestcaseEnd(); 
     }
 
 
     @Test
     public void tcLogFunctionStart_TwoParam()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
+        Log.setDebugMode( false );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionStart_TwoParam" );
+        Log.LogTestcaseStart( "tcLogFunctionStart_TwoParam" );
         
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart", "Param A1", "Param A2" );
-        Logger_Sngltn.getInstance().LogFunctionEnd();
+        Log.LogFunctionStart( "LogFunctionStart", "Param A1", "Param A2" );
+        Log.LogFunctionEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
   
 
-        Logger_Sngltn.getInstance().setDebugMode( true );
+        Log.setDebugMode( true );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionStart_TwoParam" );
+        Log.LogTestcaseStart( "tcLogFunctionStart_TwoParam" );
         
-        Logger_Sngltn.getInstance().LogFunctionStart( "LogFunctionStart", "Param A1", "Param A2" );
-        Logger_Sngltn.getInstance().LogFunctionEnd();
+        Log.LogFunctionStart( "LogFunctionStart", "Param A1", "Param A2" );
+        Log.LogFunctionEnd();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
 
     }
     
     @Test
     public void tcLogFunctionStartDebug_TwoParam()
     {
-        Logger_Sngltn.getInstance().setDebugMode( false );
+        Log.setDebugMode( false );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionStartDebug_TwoParam" );
+        Log.LogTestcaseStart( "tcLogFunctionStartDebug_TwoParam" );
         
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug", "Param A1", "Param A2" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug();
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug", "Param A1", "Param A2" );
+        Log.LogFunctionEndDebug();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+        Log.LogTestcaseEnd();
         
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
+        Log.setDebugMode( true );
         
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcLogFunctionStartDebug_TwoParam" );
+        Log.LogTestcaseStart( "tcLogFunctionStartDebug_TwoParam" );
         
-        Logger_Sngltn.getInstance().LogFunctionStartDebug( "LogFunctionStartDebug", "Param A1", "Param A2" );
-        Logger_Sngltn.getInstance().LogFunctionEndDebug();
+        Log.LogFunctionStartDebug( "LogFunctionStartDebug", "Param A1", "Param A2" );
+        Log.LogFunctionEndDebug();
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd(); 
+        Log.LogTestcaseEnd(); 
     }
-    
 }
