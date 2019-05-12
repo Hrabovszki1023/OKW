@@ -56,7 +56,7 @@ install:
 #  - sleep 3 # give xvfb some time to start
 
 script:
-  - mvn test -Dtest=$TESTCASE -Dgpg.skip=true -pl $Package
+  - mvn test -Dtest=$TESTCASE -DfrmSeChrome.option.headless=headless -Dgpg.skip=true -pl $Package
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
