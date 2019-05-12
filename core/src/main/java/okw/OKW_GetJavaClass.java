@@ -74,9 +74,9 @@ public class OKW_GetJavaClass
 
     /**
      * \~german
-     * Ermittel alle Class-Paths einer
+     * Ermittel alle Pfade aus classpath, die das Paket packegeName im aktuellen threads enthalten.
      * 
-     * @param packageName
+     * @param packageName Name des P
      *                  
      * @return
      *       Liste der Klassen-Pfade () im gegebenem package

@@ -1,6 +1,7 @@
 package okw.gui.frames;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.xml.xpath.XPathExpressionException;
 
@@ -9,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import okw.OKW;
 import okw.OKW_Memorize_Sngltn;
+import okw.OKW_Properties;
 // import okw.gui.adapter.selenium.webdriver.*;
 import okw.gui.adapter.selenium.SeBrowserWindow;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
@@ -32,6 +34,8 @@ import okw.log.Logger_Sngltn;
 public class FrmSeChrome extends SeBrowserWindow
 {
     
+    OKW_Properties OKW_Prop = OKW_Properties.getInstance();
+    
     /**
      *  \copydoc OKW_Memorize_Sngltn
      */
@@ -42,7 +46,6 @@ public class FrmSeChrome extends SeBrowserWindow
     public void SelectWindow()
     {
     }
-
     
     /**
      * Chrome Options https://github.com/GoogleChrome/chrome-launcher/blob/master/docs/chrome-flags-for-tools.md
@@ -53,7 +56,6 @@ public class FrmSeChrome extends SeBrowserWindow
 
         try
         {
-
             String DriverPath = System.getenv( "OKWChromedriverPath" );
 
             if ( DriverPath != null )
@@ -83,42 +85,22 @@ public class FrmSeChrome extends SeBrowserWindow
                 }
             }
 
+            // get ChromeOptions from frmSeChrome.Propreties <-- OKW_Properties
+            ArrayList<String> frmSeChrome_option = OKW_Properties.getInstance().getPropertiesForKeysStartswith( "frmSeChrome.option." );
             
-            // Set options
-            ChromeOptions options = new ChromeOptions();  
+            ChromeOptions options = new ChromeOptions().addArguments( frmSeChrome_option );
+            mySeDriver.setDriver( new ChromeDriver( options ) );
 
-            // Using Headless Chrome?
-            options.setHeadless(true);
-            
-            // Hide the automation toolbar warning
-            options.addArguments( "disable-infobars" );
-            
-            //Start Chrome maximized
-            options.addArguments( "start-maximized" );
-            options.addArguments( "disable-logging" );
-            options.addArguments( "version" );
-            options.addArguments( "ignore-certificate-errors" );
-            
-            // options.addArguments( "disable-extensions");
-            
-            
-            options.addArguments("incognito");
-            
-            options.addArguments( "test-type" );
-            options.addArguments("start-maximized");
-            options.addArguments("window-size=1920,1080");
-            options.addArguments("enable-precise-memory-info");
-            options.addArguments("disable-popup-blocking");
-            options.addArguments("disable-default-apps");
-            //options.addArguments( "test-type=browser" );
-            
-            mySeDriver.setDriver( new ChromeDriver(options) );
-            //mySeDriver.setDriver( new ChromeDriver() );
-            }
+        }
         catch (XPathExpressionException e)
         {
             // TODO Auto-generated catch block
             throw new RuntimeException( e );
+        }
+        catch (IOException e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
         finally
         {
@@ -145,8 +127,8 @@ public class FrmSeChrome extends SeBrowserWindow
              else
              {
                  LogPrintDebug( "before linux/osx pkill -f Chrome " );
-                 //rt.exec("pkill -f Chrome");
-                 //rt.exec("killall chromedriver");
+                 // rt.exec("pkill -f Chrome");
+                 // rt.exec("killall chromedriver");
              } 
              
              //Thread.sleep( 3000 );

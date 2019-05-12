@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class OKW_Properties_SetDOptionsTest {
 
-    OKW_Properties myProperties = new OKW_Properties();
+    OKW_Properties myProperties = OKW_Properties.getInstance();
 
     @Test
     public final void clear_Test() {

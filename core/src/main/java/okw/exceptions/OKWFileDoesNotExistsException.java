@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -39,19 +39,18 @@
 
 package okw.exceptions;
 
-/// \~german
-/// \brief
-/// <code>OKWFileDoesNotExistsException</code>-Ausnahme wird ausgelöst, 
-/// wenn eine Datei nicht gefunden worden ist.<br>
-/// 
-/// \~english
-/// \brief
-/// <code>OKWFileDoesNotExistsException</code>-Exeption is triggered, 
-/// if a data is not found.<br>
-/// 
-/// \~
-/// \author Zoltán Hrabovszki
-/// \date 2014.04.27/ jnic_2014_11_26
+/** \~german
+ *  <code>OKWFileDoesNotExistsException</code>-Ausnahme wird ausgelöst, 
+ *  wenn eine Datei nicht gefunden wird.<br>
+ *  
+ *  \~english
+ *  <code>OKWFileDoesNotExistsException</code>-Exeption is triggered, 
+ *  if a data is not found.<br>
+ *  
+ *  \~
+ *  \author Zoltán Hrabovszki
+ *  \date 2014.04.27
+ */
 
 public class OKWFileDoesNotExistsException extends RuntimeException {
 
@@ -60,8 +59,18 @@ public class OKWFileDoesNotExistsException extends RuntimeException {
 	public OKWFileDoesNotExistsException() {
 	}
 
-	public OKWFileDoesNotExistsException(String message) {
+	public OKWFileDoesNotExistsException(String message)
+	{
 		super(message);
 	}
-
+	
+	public OKWFileDoesNotExistsException( String message, Throwable cause )
+	{
+        super( message, cause );
+	}
+	
+	public OKWFileDoesNotExistsException( Throwable cause )
+	{
+	    super( cause );
+	}
 }

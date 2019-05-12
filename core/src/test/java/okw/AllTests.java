@@ -28,6 +28,7 @@ import org.junit.runners.Suite.SuiteClasses;
   OKW_IniTest.class,
   OKW_TimeOut_Test.class,
   OKW_XmlReaderTest.class,
+  OKW_PropertiesTest.class,
   } )
 
 public class AllTests
