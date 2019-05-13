@@ -1,0 +1,11 @@
+digraph "okw.core.Core.VerifyFileExists"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node3919 [label="okw.core.Core.VerifyFile\lExists",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Prüft, ob die gegebene Datei existiert."];
+  Node3919 -> Node3920 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3920 [label="okw.core.EN.VerifyFileExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#ac343826e3b37f19e531fc70d98018833",tooltip="Prüft, ob die gegebene Datei existiert."];
+}

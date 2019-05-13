@@ -1,0 +1,10 @@
+digraph "okw.exceptions.OKWGUIObjectNotFoundException"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="{okw.exceptions.OKWGUIObject\lNotFoundException\n|- serialVersionUID\l|+ OKWGUIObjectNotFoundException()\l+ OKWGUIObjectNotFoundException()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Diese Ausnahme wird ausgelöst, wenn ein GUI-Objekt zu den im Frame gegebenen Objekterkennungseigensch..."];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node1 [label="{RuntimeException\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

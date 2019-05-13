@@ -1,0 +1,23 @@
+digraph "okw.core.EN.SetFocus"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node2087 [label="okw.core.EN.SetFocus",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Setzt den Fokus auf das gegebene Fensterobjekt."];
+  Node2087 -> Node2088 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2088 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
+  Node2087 -> Node2089 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2089 [label="okw.core.EN_OKWFrameObject\lChildNotFoundException\l_Test.TC_SetFocus_OKWFrameObject\lChildNotFoundException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#a4b7ecafa2d100e1be21175716680672c",tooltip="Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch SetFocus ausgelöst wird,..."];
+  Node2087 -> Node2090 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2090 [label="okw.core.EN_OKWFrameObject\lMethodNotImplemented_Test.tc\l_SetFocus_OKWFrameObjectMethodNotImplemented",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a321092d8c4d819347dbef0ca14aa7581",tooltip="Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von SetFocus( FN ) ausgelöst wird."];
+  Node2087 -> Node2091 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2091 [label="okw.SeButton.SeButton\l_EN_Test.tcSetFocus_VerifyHas\lFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_button_1_1_se_button___e_n___test.html#aae80c3c05016ea5b9f387ee64c1efd1f",tooltip="Test des Schlüsselwortes SetFocus und VerifyHasFocus für den GUI-Adapter SeButton."];
+  Node2087 -> Node2092 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2092 [label="okw.SeInputCheckbox.SeInput\lCheckbox_EN_Test.tcSetFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___test.html#ad572d5badb79741c496835cbb5c2d6df",tooltip="Prüft die SetFocusFunktion bei Textfelder mit dem Attribute \"ReadOnly\"."];
+  Node2087 -> Node2093 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2093 [label="okw.SeInputRadio.SeInput\lRadio_EN_Test.tc_SetFocus\l_OKWFrameObjectMethodNotImplemented",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html#a03e86e4db1ffedbd01c1e73d682b2bb9",tooltip="Test des Schlüsselwortes SetFocus und VerifyHasFocus für den GUI-Adapter SeInputRadio."];
+  Node2087 -> Node2094 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2094 [label="okw.SeLink.SeLink_EN\l_Test.TC_MemorizeHasFocus_en",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_link_1_1_se_link___e_n___test.html#a62aa2dfe0475b6579877aa5ef89615c3",tooltip="Prüft die Methode SeLink.MemorizeFocus."];
+}

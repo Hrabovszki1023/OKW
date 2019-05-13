@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 331, Datum: 04.23.2019 07:25:02</span>
+   &#160;<span id="projectnumber">Build_ID: 336, Datum: 05.13.2019 14:22:10</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('classokw_1_1_o_k_w___get_java_class.ht
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1_o_k_w___get_java_class__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><!-- SVG 0 -->
 </div>
 </div>
 <table class="memberdecls">
@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('classokw_1_1_o_k_w___get_java_class.ht
 static ArrayList&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getClasses</b> (String fpsPackage)  throws IOException, XPathExpressionException     </td></tr>
 <tr class="separator:a9b1b8b3eb960993584e16852df9a88de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd71b0370b671387f5ce62a2c454fbf5"><td class="memItemLeft" align="right" valign="top">static ArrayList&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1_o_k_w___get_java_class.html#afd71b0370b671387f5ce62a2c454fbf5">getClassPaths</a> (String packageName)  throws IOException     </td></tr>
-<tr class="memdesc:afd71b0370b671387f5ce62a2c454fbf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ermittel alle Class-Paths einer.  <a href="#afd71b0370b671387f5ce62a2c454fbf5">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:afd71b0370b671387f5ce62a2c454fbf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ermittel alle Pfade aus classpath, die das Paket packegeName im aktuellen threads enthalten.  <a href="#afd71b0370b671387f5ce62a2c454fbf5">Mehr ...</a><br /></td></tr>
 <tr class="separator:afd71b0370b671387f5ce62a2c454fbf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80c0eb4261c027cf620c4d607a5dbd56"><td class="memItemLeft" align="right" valign="top"><a id="a80c0eb4261c027cf620c4d607a5dbd56"></a>
 static Class&lt;?&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>loadClass</b> (String fpsClass)</td></tr>
@@ -193,7 +193,7 @@ static <a class="el" href="classokw_1_1_log_messenger.html">LogMessenger</a>&#16
 
 <p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___get_java_class_8java_source.html#l00248">248</a> der Datei <a class="el" href="_o_k_w___get_java_class_8java_source.html">OKW_GetJavaClass.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    {</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      Object lvo_Obj = <span class="keyword">null</span>;</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      Boolean bOK = <span class="keyword">false</span>;</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      <a class="code" href="classokw_1_1_o_k_w___get_java_class.html#a058037d08ac83f8e5dad16d0d7ecd6bb">Log</a>.LogFunctionStartDebug( <span class="stringliteral">&quot;FrameObjectDictionary.CreateInstanceByObjectName&quot;</span>, <span class="stringliteral">&quot;fpParentClass&quot;</span>, fpParentType.getName() );</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      <span class="keywordflow">try</span></div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      {</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="comment">// lvo_Obj = Activator.CreateInstance(fpParentType, null);</span></div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        lvo_Obj = fpParentType.newInstance();</div><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___get_java_class.html#a058037d08ac83f8e5dad16d0d7ecd6bb">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4">LogPrintDebug</a>( <a class="code" href="classokw_1_1_o_k_w___get_java_class.html#a89e0ff2ab646c4d5d83554371160b156">LM</a>.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;CreateInstanceByObjectName&quot;</span>, <span class="stringliteral">&quot;InstanceWasCreated&quot;</span>, lvo_Obj.getClass().getName() ) );</div><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        bOK = <span class="keyword">true</span>;</div><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      }</div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      <span class="keywordflow">catch</span> (IllegalAccessException e)</div><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      {</div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="comment">// EXCEPTION: Pürfen was hier genau passiert. Exception weitergeben</span></div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">throw</span> <span class="keyword">new</span> OKWFrameObjectParentNotFoundException( <a class="code" href="classokw_1_1_o_k_w___get_java_class.html#a89e0ff2ab646c4d5d83554371160b156">LM</a>.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;CreateInstanceByObjectName&quot;</span>, <span class="stringliteral">&quot;InstanceWasCreated&quot;</span>, fpParentType.getName() ) );</div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      }</div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      <span class="keywordflow">finally</span></div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      {</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">if</span> ( bOK )</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        {</div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;          <span class="comment">// Wir sind ohne Exception durchgekommen und wir nehmen an,</span></div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;          <span class="comment">// dass lvo_Obj != null</span></div><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;          <span class="comment">// -&gt; wir geben den Namen des Objektes zurück...</span></div><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;          <a class="code" href="classokw_1_1_o_k_w___get_java_class.html#a058037d08ac83f8e5dad16d0d7ecd6bb">Log</a>.LogFunctionEndDebug( lvo_Obj.getClass().getName() );</div><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        }</div><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        {</div><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;          <span class="comment">// Irgend etwas ist faul wir rufen nur LogFunctionEndDebug</span></div><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;          <span class="comment">// auf...</span></div><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;          <a class="code" href="classokw_1_1_o_k_w___get_java_class.html#a058037d08ac83f8e5dad16d0d7ecd6bb">Log</a>.LogFunctionEndDebug();</div><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        }</div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      }</div><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      <span class="keywordflow">return</span> lvo_Obj;</div><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    }</div><div class="ttc" id="classokw_1_1_log_messenger_html_af225d1f037d47b3b085175c09d78bdd2"><div class="ttname"><a href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">okw.LogMessenger.GetMessage</a></div><div class="ttdeci">String GetMessage(String MethodName, String TextKey)</div><div class="ttdoc">Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter.</div><div class="ttdef"><b>Definition:</b> <a href="_log_messenger_8java_source.html#l00137">LogMessenger.java:137</a></div></div>
-<div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a313f97c79ba4662d9daaf7f537dd02f4"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4">okw.log.Logger_Sngltn.LogPrintDebug</a></div><div class="ttdeci">void LogPrintDebug(String fpsMessage)</div><div class="ttdoc">Loggt eine Nachricht.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00471">Logger_Sngltn.java:471</a></div></div>
+<div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a313f97c79ba4662d9daaf7f537dd02f4"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4">okw.log.Logger_Sngltn.LogPrintDebug</a></div><div class="ttdeci">void LogPrintDebug(String fpsMessage)</div><div class="ttdoc">Loggt eine Nachricht.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00464">Logger_Sngltn.java:464</a></div></div>
 <div class="ttc" id="classokw_1_1_o_k_w___get_java_class_html_a058037d08ac83f8e5dad16d0d7ecd6bb"><div class="ttname"><a href="classokw_1_1_o_k_w___get_java_class.html#a058037d08ac83f8e5dad16d0d7ecd6bb">okw.OKW_GetJavaClass.Log</a></div><div class="ttdeci">static Logger_Sngltn Log</div><div class="ttdoc">Zentrale Logger-Klasse stellt Logger-Methoden innerhalb von OKW zur Verfügung.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___get_java_class_8java_source.html#l00022">OKW_GetJavaClass.java:22</a></div></div>
 <div class="ttc" id="classokw_1_1_o_k_w___get_java_class_html_a89e0ff2ab646c4d5d83554371160b156"><div class="ttname"><a href="classokw_1_1_o_k_w___get_java_class.html#a89e0ff2ab646c4d5d83554371160b156">okw.OKW_GetJavaClass.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___get_java_class_8java_source.html#l00027">OKW_GetJavaClass.java:27</a></div></div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -201,7 +201,7 @@ static <a class="el" href="classokw_1_1_log_messenger.html">LogMessenger</a>&#16
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1_o_k_w___get_java_class_a10701221abeade4716d492e8db29a877_cgraph.svg" width="100%" height="383"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><!-- SVG 1 -->
 </div>
 </div>
 <div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -209,7 +209,7 @@ static <a class="el" href="classokw_1_1_log_messenger.html">LogMessenger</a>&#16
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classokw_1_1_o_k_w___get_java_class_a10701221abeade4716d492e8db29a877_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><!-- SVG 2 -->
 </div>
 </div>
 
@@ -348,10 +348,10 @@ static <a class="el" href="classokw_1_1_log_messenger.html">LogMessenger</a>&#16
 </table>
 </div><div class="memdoc">
 
-<p>Ermittel alle Class-Paths einer. </p>
+<p>Ermittel alle Pfade aus classpath, die das Paket packegeName im aktuellen threads enthalten. </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">packageName</td><td></td></tr>
+    <tr><td class="paramname">packageName</td><td>Name des P</td></tr>
   </table>
   </dd>
 </dl>
@@ -448,7 +448,7 @@ static <a class="el" href="classokw_1_1_log_messenger.html">LogMessenger</a>&#16
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><a class="el" href="classokw_1_1_o_k_w___get_java_class.html">OKW_GetJavaClass</a></li>
-    <li class="footer">Erzeugt am Die Apr 23 2019 08:07:04 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mon Mai 13 2019 14:42:46 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>

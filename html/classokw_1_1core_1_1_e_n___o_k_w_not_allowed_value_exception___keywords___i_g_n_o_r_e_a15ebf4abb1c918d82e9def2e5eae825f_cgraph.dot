@@ -1,0 +1,45 @@
+digraph "okw.core.EN_OKWNotAllowedValueException_Keywords_IGNORE.tcMemorizeLabelIGNORE2"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node162 [label="okw.core.EN_OKWNotAllowed\lValueException_Keywords\l_IGNORE.tcMemorizeLabelIGNORE2",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Prüft ob \"\"${IGNORE}${TCN}\" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst."];
+  Node162 -> Node163 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node163 [label="okw.core.EN.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69",tooltip="Markiert den Anfang eines neuen Testfalls."];
+  Node163 -> Node164 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node164 [label="okw.core.Core.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100",tooltip="Setzt die Sprache auf den gegebenen wert Language."];
+  Node164 -> Node165 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node165 [label="okw.core.IOKW_State.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097",tooltip="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)."];
+  Node163 -> Node166 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node166 [label="okw.core.Core.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8",tooltip="Markiert den Anfang eines neuen Testfalls."];
+  Node166 -> Node167 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node167 [label="okw.log.Logger_Sngltn.Log\lTestcaseStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb",tooltip="Ausgabe des Testfalls."];
+  Node166 -> Node168 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node168 [label="okw.core.IOKW_State.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13",tooltip="Markiert den Anfang eines neuen Testfalls."];
+  Node162 -> Node169 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node169 [label="okw.core.EN.SelectWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b",tooltip="Setzt den Kontext auf das gegebene Fenster."];
+  Node169 -> Node164 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node169 -> Node170 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node170 [label="okw.core.Core.SelectWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314",tooltip="Setzt den Kontext auf das gegebene Fenster."];
+  Node170 -> Node171 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node171 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node170 -> Node172 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node172 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node172 -> Node173 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node173 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node173 -> Node174 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node174 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node170 -> Node175 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node175 [label="okw.core.IOKW_State.Select\lWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0",tooltip="Setzt den Kontext auf das gegebene Fenster."];
+  Node162 -> Node176 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node176 [label="okw.core.EN.MemorizeLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aecb0b17c6683319633eec36e2646f3f5",tooltip="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab."];
+  Node176 -> Node164 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node176 -> Node177 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node177 [label="okw.core.Core.MemorizeLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a85d56eaf394a4e6a0f67979e5d3c58fa",tooltip="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab."];
+  Node177 -> Node171 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node177 -> Node172 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node177 -> Node178 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node178 [label="okw.core.IOKW_State.Memorize\lLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ab44d9c2c8f0b34496afcea31d6f6e6a9",tooltip="Speirchert den aktuellen Wert der Etikette, und legt diesen unter fpsMemKeyName ab."];
+}

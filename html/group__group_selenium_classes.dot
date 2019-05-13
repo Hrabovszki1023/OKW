@@ -1,0 +1,15 @@
+digraph "OKW Selenium Klassen"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node2 [label="JUnit-Testklassen für\l OKW Childwindow GUI\l-Adapterklassen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__group_selenium_child_g_u_i_adapter_tests.html",tooltip=" "];
+  Node0 [label="OKW Selenium Klassen",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node4 [label="OKW Frame-Klassen für\l Selenium",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__group_selenium_frames.html",tooltip="/todo Beschreibung..."];
+  Node1 [label="OKW Childwindow GUI\l-Adapterklassen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__group_selenium_child_g_u_i_adapter.html",tooltip=" "];
+  Node3 [label="OKW Window GUI-Adapterklassen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__group_selenium_window_g_u_i_adapter.html",tooltip=" "];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+}

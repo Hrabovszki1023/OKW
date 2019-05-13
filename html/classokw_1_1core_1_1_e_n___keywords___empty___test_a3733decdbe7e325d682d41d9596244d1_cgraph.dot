@@ -1,0 +1,47 @@
+digraph "okw.core.EN_Keywords_Empty_Test.tc_VerifyValueREGX_Empty"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node442 [label="okw.core.EN_Keywords\l_Empty_Test.tc_VerifyValueREGX_\lEmpty",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Prüft \"${EMPTY}\" für das Schlüsselwort VerifyValue(string,string)"];
+  Node442 -> Node443 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node443 [label="okw.core.EN.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69",tooltip="Markiert den Anfang eines neuen Testfalls."];
+  Node443 -> Node444 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node444 [label="okw.core.Core.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100",tooltip="Setzt die Sprache auf den gegebenen wert Language."];
+  Node444 -> Node445 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node445 [label="okw.core.IOKW_State.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097",tooltip="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)."];
+  Node443 -> Node446 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node446 [label="okw.core.Core.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8",tooltip="Markiert den Anfang eines neuen Testfalls."];
+  Node446 -> Node447 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node447 [label="okw.log.Logger_Sngltn.Log\lTestcaseStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb",tooltip="Ausgabe des Testfalls."];
+  Node446 -> Node448 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node448 [label="okw.core.IOKW_State.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13",tooltip="Markiert den Anfang eines neuen Testfalls."];
+  Node442 -> Node449 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node449 [label="okw.OKW_TestClipboard.Clear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___test_clipboard.html#a3d244f76e3d56d57e9b4b96378f9b293",tooltip="Resets all ClipBoard-Memmber to empty String = \"\" ."];
+  Node442 -> Node450 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node450 [label="okw.core.EN.SelectWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b",tooltip="Setzt den Kontext auf das gegebene Fenster."];
+  Node450 -> Node444 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node450 -> Node451 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node451 [label="okw.core.Core.SelectWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a6a68660eb5e34965522896e2a5c48314",tooltip="Setzt den Kontext auf das gegebene Fenster."];
+  Node451 -> Node452 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node452 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node451 -> Node453 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node453 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node453 -> Node454 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node454 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node454 -> Node455 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node455 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node451 -> Node456 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node456 [label="okw.core.IOKW_State.Select\lWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad4fc9610ed5b1176590a45b55e6ac7f0",tooltip="Setzt den Kontext auf das gegebene Fenster."];
+  Node442 -> Node457 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node457 [label="okw.core.EN.VerifyValueREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#ab906dfd1631d44567755a94585333973",tooltip="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)."];
+  Node457 -> Node444 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node457 -> Node458 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node458 [label="okw.core.Core.VerifyValueREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a19e8df9600c470e8b1ae1fe31c36f50a",tooltip="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)."];
+  Node458 -> Node452 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node458 -> Node453 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node458 -> Node459 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node459 [label="okw.core.IOKW_State.Verify\lValueREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a36827474765ec238f21d94609fcec76a",tooltip="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)."];
+}

@@ -1,0 +1,15 @@
+digraph "okw.gui.adapter.selenium.SeAnyChildWindow.getIsActive"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node92 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.getIsActive",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Ermittelt, ob das aktuellen Objekt aktiv ist."];
+  Node92 -> Node93 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node93 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.LogIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a2d019b7624f7ebc2714d0eb995623f58",tooltip="Das ist die GUI-Adapter Methode, die durch das Schlüsselwort refLogIsActive aufgerufen wird."];
+  Node92 -> Node94 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node94 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.MemorizeIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a2b1293256c4b07b0d3586101478df743",tooltip="Das ist die GUI-Adapter Methode, die durch das Schlüsselwort refMemorizeIsActive aufgerufen wird."];
+  Node92 -> Node95 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node95 [label="okw.gui.adapter.selenium.\lSeAnyChildWindow.VerifyIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ad43f179cd90bda6ef736ac80ff4dcdac",tooltip="Ermittelt/Prüft, ob das aktuelle Objekt aktiv ist."];
+}

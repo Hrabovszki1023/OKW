@@ -1,0 +1,19 @@
+digraph "okw.log.Logger_Sngltn.ResOpenListDebug"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node2467 [label="okw.log.Logger_Sngltn.Res\lOpenListDebug",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Erzeugt eine hierachische Log-Ebene in der Ergenbniss-Ausgabe."];
+  Node2467 -> Node2468 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2468 [label="okw.core.OK.LogCaption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0",tooltip="Gibt die Caption eines GUI-Objektes in den Testergebnissen aus."];
+  Node2467 -> Node2469 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2469 [label="okw.core.OK.LogTablecell\lValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a7c6a02d1f58952de8cc3591379cdfbe3",tooltip="Dokumentiert den Wert der ausgewählten Zelle."];
+  Node2467 -> Node2470 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2470 [label="okw.FrameObjectDictionary\l_Sngltn.init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_frame_object_dictionary___sngltn.html#a905bac544e5962ae15dfe1c1c50f2467",tooltip="Methode initialisiert diese Klasse."];
+  Node2467 -> Node2471 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2471 [label="okw.gui.adapter.selenium.webdriver.\lSeDriver.getIframesID",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_driver.html#af906ec51472e5852cc4c0ccec2b388a5",tooltip="Ermittelt alle iFrames im aktuellen HTML und erstellt eine liste der iFrame-ID´s."];
+  Node2471 -> Node2472 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2472 [label="okw.gui.adapter.selenium.webdriver.\lSeDriver.getFrameID4Locator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_driver.html#ab605fb006ccd0bae5a6684e18085de75",tooltip="Ermittelt die iFrame ID zum gegeben Lokator fpsLocator."];
+}

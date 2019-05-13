@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 331, Datum: 04.23.2019 07:25:02</span>
+   &#160;<span id="projectnumber">Build_ID: 336, Datum: 05.13.2019 14:22:10</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('graph_legend.html','');});
 <div class="contents">
 <p>Diese Seite erklärt die Interpretation der von doxygen erzeugten Graphen.</p>
 <p>Beispiel: </p><div class="fragment"><div class="line">/*! Wegen Verkürzung unsichtbare Klasse */</div><div class="line">class Invisible { };</div><div class="line"></div><div class="line">/*! Klasse verkürzt dargestellt, Vererbungsbeziehung ist versteckt */</div><div class="line">class Truncated : public Invisible { };</div><div class="line"></div><div class="line">/* Nicht mit doxygen-Kommentaren dokumentierte Klasse */</div><div class="line">class Undocumented { };</div><div class="line"></div><div class="line">/*! Mithilfe öffentlicher Vererbung vererbte Klasse */</div><div class="line">class PublicBase : public Truncated { };</div><div class="line"></div><div class="line">/*! Eine Template-Klasse */</div><div class="line">template&lt;class T&gt; class Templ { };</div><div class="line"></div><div class="line">/*! Mithilfe geschützter Vererbung vererbte Klasse */</div><div class="line">class ProtectedBase { };</div><div class="line"></div><div class="line">/*! Mithilfe privater Vererbung vererbte Klasse */</div><div class="line">class PrivateBase { };</div><div class="line"></div><div class="line">/*! Von der Klasse Inherited benutzte Klasse */</div><div class="line">class Used { };</div><div class="line"></div><div class="line">/*! Superklasse, die von mehreren anderen Klassen erbt */</div><div class="line">class Inherited : public PublicBase,</div><div class="line">                  protected ProtectedBase,</div><div class="line">                  private PrivateBase,</div><div class="line">                  public Undocumented,</div><div class="line">                  public Templ&lt;int&gt;</div><div class="line">{</div><div class="line">  private:</div><div class="line">    Used *m_usedClass;</div><div class="line">};</div></div><!-- fragment --><p> Dies liefert den folgenden Graphen:</p>
-<center><iframe scrolling="no" frameborder="0" src="graph_legend.svg" width="720" height="212"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe> </center><p>Die Rechtecke in obigem Graphen bedeuten: </p>
+<center>[!-- SVG 0 --] </center><p>Die Rechtecke in obigem Graphen bedeuten: </p>
 <ul>
 <li>
 Ein grau gefülltes Rechteck stellt die Struktur oder Klasse dar, für die der Graph erzeugt wurde. </li>
@@ -132,7 +132,7 @@ Ein gestrichelter gelber Pfeil kennzeichnet eine Verknüpfung zwischen einer Tem
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Erzeugt am Die Apr 23 2019 08:07:20 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mon Mai 13 2019 14:43:00 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>

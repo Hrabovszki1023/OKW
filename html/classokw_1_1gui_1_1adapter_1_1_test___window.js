@@ -11,7 +11,7 @@ var classokw_1_1gui_1_1adapter_1_1_test___window =
     [ "setParentFN", "classokw_1_1gui_1_1adapter_1_1_test___window.html#a2ed6b6a8e3d0b0a58ae6ba5e9edd9614", null ],
     [ "StartApp", "classokw_1_1gui_1_1adapter_1_1_test___window.html#aca682141fdf26c43850361c95b8dab37", null ],
     [ "StopApp", "classokw_1_1gui_1_1adapter_1_1_test___window.html#ab10d4ea7a9d53b74a938bf20a3682829", null ],
-    [ "TypeKey", "classokw_1_1gui_1_1adapter_1_1_test___window.html#a942b4dc3cdc0e5c50b71423e3fec2189", null ],
+    [ "TypeKeyWindow", "classokw_1_1gui_1_1adapter_1_1_test___window.html#a861b5cba0a267cb4be605e1509365403", null ],
     [ "Locator", "classokw_1_1gui_1_1adapter_1_1_test___window.html#a4371359a07713050106acb09b3708c75", null ],
     [ "myClipBoard", "classokw_1_1gui_1_1adapter_1_1_test___window.html#aea73b067f0af97dd3fbdcddd9878849f", null ],
     [ "myFN", "classokw_1_1gui_1_1adapter_1_1_test___window.html#a44134333deb75417ccf88a4d1fb2fe4d", null ],

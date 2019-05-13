@@ -1,0 +1,9 @@
+digraph "Grafische Darstellung der Klassenhierarchie"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="okw.gui.adapter.frmObjDict\lGuiContainer1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1frm_obj_dict_gui_container1.html",tooltip=" "];
+}

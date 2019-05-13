@@ -23,6 +23,7 @@ var annotated_dup =
         [ "EN_Keywords_DELETE_Test", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test" ],
         [ "EN_Keywords_Empty_Test", "classokw_1_1core_1_1_e_n___keywords___empty___test.html", "classokw_1_1core_1_1_e_n___keywords___empty___test" ],
         [ "EN_Keywords_IGNORE_Test", "classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html", "classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test" ],
+        [ "EN_Keywords_NOK_Test", "classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html", "classokw_1_1core_1_1_e_n___keywords___n_o_k___test" ],
         [ "EN_Keywords_Test", "classokw_1_1core_1_1_e_n___keywords___test.html", "classokw_1_1core_1_1_e_n___keywords___test" ],
         [ "EN_OKWFrameObjectChildNotFoundException_Test", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test" ],
         [ "EN_OKWFrameObjectMethodNotImplemented_Test", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test" ],
@@ -79,13 +80,9 @@ var annotated_dup =
           [ "selenium", null, [
             [ "webdriver", null, [
               [ "SeBACK", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k" ],
-              [ "SeChromeApp", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_chrome_app.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_chrome_app" ],
               [ "SeDriver", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_driver.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_driver" ],
-              [ "SeFirefoxApp", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_firefox_app.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_firefox_app" ],
-              [ "SeHtmlUnitDriver", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_html_unit_driver" ],
               [ "SeMAXIMIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e" ],
               [ "SePOSITION", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n" ],
-              [ "SeSafariApp", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_safari_app.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_safari_app" ],
               [ "SeSIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e" ],
               [ "SeURL", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l" ]
             ] ],
@@ -188,7 +185,8 @@ var annotated_dup =
       [ "log", null, [
         [ "ILogger", "interfaceokw_1_1log_1_1_i_logger.html", "interfaceokw_1_1log_1_1_i_logger" ],
         [ "Log2Console", "classokw_1_1log_1_1_log2_console.html", "classokw_1_1log_1_1_log2_console" ],
-        [ "Logger_Sngltn", "classokw_1_1log_1_1_logger___sngltn.html", "classokw_1_1log_1_1_logger___sngltn" ]
+        [ "Logger_Sngltn", "classokw_1_1log_1_1_logger___sngltn.html", "classokw_1_1log_1_1_logger___sngltn" ],
+        [ "Logger_Test", "classokw_1_1log_1_1_logger___test.html", "classokw_1_1log_1_1_logger___test" ]
       ] ],
       [ "parser", null, [
         [ "antlr4", null, [
@@ -202,55 +200,55 @@ var annotated_dup =
         [ "Parser", "classokw_1_1parser_1_1_parser.html", null ]
       ] ],
       [ "SeBACK", null, [
-        [ "SeBACK_EN_Chrome_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___chrome___test.html", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___chrome___test" ],
-        [ "SeBACK_EN_Firefox_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___firefox___test.html", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___firefox___test" ],
+        [ "SeBACK_EN_Chrome_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___chrome___test.html", null ],
+        [ "SeBACK_EN_Firefox_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___firefox___test.html", null ],
         [ "SeBACK_EN_HTMLUnitDriver_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeBACK_EN_Test", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test.html", "classokw_1_1_se_b_a_c_k_1_1_se_b_a_c_k___e_n___test" ]
       ] ],
       [ "SeBrowserChild", null, [
-        [ "SeBrowserChild_EN_Chrome_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___chrome___test.html", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___chrome___test" ],
-        [ "SeBrowserChild_EN_Firefox_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___firefox___test.html", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___firefox___test" ],
+        [ "SeBrowserChild_EN_Chrome_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___chrome___test.html", null ],
+        [ "SeBrowserChild_EN_Firefox_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___firefox___test.html", null ],
         [ "SeBrowserChild_EN_HTMLUnitDriver_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeBrowserChild_EN_Test", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___test.html", "classokw_1_1_se_browser_child_1_1_se_browser_child___e_n___test" ]
       ] ],
       [ "SeButton", null, [
-        [ "SeButton_EN_Chrome_Test", "classokw_1_1_se_button_1_1_se_button___e_n___chrome___test.html", "classokw_1_1_se_button_1_1_se_button___e_n___chrome___test" ],
-        [ "SeButton_EN_Firefox_Test", "classokw_1_1_se_button_1_1_se_button___e_n___firefox___test.html", "classokw_1_1_se_button_1_1_se_button___e_n___firefox___test" ],
+        [ "SeButton_EN_Chrome_Test", "classokw_1_1_se_button_1_1_se_button___e_n___chrome___test.html", null ],
+        [ "SeButton_EN_Firefox_Test", "classokw_1_1_se_button_1_1_se_button___e_n___firefox___test.html", null ],
         [ "SeButton_EN_HTMLUnitDriver_Test", "classokw_1_1_se_button_1_1_se_button___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeButton_EN_Test", "classokw_1_1_se_button_1_1_se_button___e_n___test.html", "classokw_1_1_se_button_1_1_se_button___e_n___test" ]
       ] ],
       [ "SeInputButton", null, [
-        [ "SeInputButton_EN_Chrome_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___chrome___test.html", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___chrome___test" ],
-        [ "SeInputButton_EN_Firefox_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___firefox___test.html", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___firefox___test" ],
+        [ "SeInputButton_EN_Chrome_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___chrome___test.html", null ],
+        [ "SeInputButton_EN_Firefox_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___firefox___test.html", null ],
         [ "SeInputButton_EN_HTMLUnitDriver_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeInputButton_EN_Test", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___test.html", "classokw_1_1_se_input_button_1_1_se_input_button___e_n___test" ]
       ] ],
       [ "SeInputCheckbox", null, [
-        [ "SeInputCheckbox_EN_Chrome_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___chrome___test.html", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___chrome___test" ],
-        [ "SeInputCheckbox_EN_Firefox_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___firefox___test.html", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___firefox___test" ],
+        [ "SeInputCheckbox_EN_Chrome_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___chrome___test.html", null ],
+        [ "SeInputCheckbox_EN_Firefox_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___firefox___test.html", null ],
         [ "SeInputCheckbox_EN_HTMLUnitDriver_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeInputCheckbox_EN_Test", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___test.html", "classokw_1_1_se_input_checkbox_1_1_se_input_checkbox___e_n___test" ]
       ] ],
       [ "SeInputField", null, [
-        [ "SeInputField_EN_Chrome_Test", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___chrome___test.html", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___chrome___test" ],
+        [ "SeInputField_EN_Chrome_Test", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___chrome___test.html", null ],
         [ "SeInputField_EN_Firefox_Test", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___firefox___test.html", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___firefox___test" ],
         [ "SeInputField_EN_HTMLUnitDriver_Test", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeInputField_EN_Test", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test.html", "classokw_1_1_se_input_field_1_1_se_input_field___e_n___test" ]
       ] ],
       [ "SeInputRadio", null, [
-        [ "SeInputRadio_EN_Chrome_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___chrome___test.html", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___chrome___test" ],
-        [ "SeInputRadio_EN_Firefox_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___firefox___test.html", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___firefox___test" ],
+        [ "SeInputRadio_EN_Chrome_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___chrome___test.html", null ],
+        [ "SeInputRadio_EN_Firefox_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___firefox___test.html", null ],
         [ "SeInputRadio_EN_HTMLUnitDriver_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeInputRadio_EN_Test", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test.html", "classokw_1_1_se_input_radio_1_1_se_input_radio___e_n___test" ]
       ] ],
       [ "SeLink", null, [
-        [ "SeLink_EN_Chrome_Test", "classokw_1_1_se_link_1_1_se_link___e_n___chrome___test.html", "classokw_1_1_se_link_1_1_se_link___e_n___chrome___test" ],
-        [ "SeLink_EN_Firefox_Test", "classokw_1_1_se_link_1_1_se_link___e_n___firefox___test.html", "classokw_1_1_se_link_1_1_se_link___e_n___firefox___test" ],
+        [ "SeLink_EN_Chrome_Test", "classokw_1_1_se_link_1_1_se_link___e_n___chrome___test.html", null ],
+        [ "SeLink_EN_Firefox_Test", "classokw_1_1_se_link_1_1_se_link___e_n___firefox___test.html", null ],
         [ "SeLink_EN_HTMLUnitDriver_Test", "classokw_1_1_se_link_1_1_se_link___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeLink_EN_Test", "classokw_1_1_se_link_1_1_se_link___e_n___test.html", "classokw_1_1_se_link_1_1_se_link___e_n___test" ]
       ] ],
       [ "SeMAXIMIZE", null, [
-        [ "SeMAXIMIZE_EN_Chrome_Test", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___chrome___test.html", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___chrome___test" ],
+        [ "SeMAXIMIZE_EN_Chrome_Test", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___chrome___test.html", null ],
         [ "SeMAXIMIZE_EN_Firefox_Test", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___firefox___test.html", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___firefox___test" ],
         [ "SeMAXIMIZE_EN_HTMLUnitDriver_Test", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeMAXIMIZE_EN_Test", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test.html", "classokw_1_1_se_m_a_x_i_m_i_z_e_1_1_se_m_a_x_i_m_i_z_e___e_n___test" ]
@@ -262,14 +260,14 @@ var annotated_dup =
         [ "SeRadioList_EN_Test", "classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___test.html", "classokw_1_1_se_radio_list_1_1_se_radio_list___e_n___test" ]
       ] ],
       [ "SeSelect", null, [
-        [ "SeSelect_EN_Chrome_Test", "classokw_1_1_se_select_1_1_se_select___e_n___chrome___test.html", "classokw_1_1_se_select_1_1_se_select___e_n___chrome___test" ],
-        [ "SeSelect_EN_Firefox_Test", "classokw_1_1_se_select_1_1_se_select___e_n___firefox___test.html", "classokw_1_1_se_select_1_1_se_select___e_n___firefox___test" ],
+        [ "SeSelect_EN_Chrome_Test", "classokw_1_1_se_select_1_1_se_select___e_n___chrome___test.html", null ],
+        [ "SeSelect_EN_Firefox_Test", "classokw_1_1_se_select_1_1_se_select___e_n___firefox___test.html", null ],
         [ "SeSelect_EN_HTMLUnitDriver_Test", "classokw_1_1_se_select_1_1_se_select___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeSelect_EN_Test", "classokw_1_1_se_select_1_1_se_select___e_n___test.html", "classokw_1_1_se_select_1_1_se_select___e_n___test" ]
       ] ],
       [ "SeTextarea", null, [
-        [ "SeTextarea_EN_Chrome_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___chrome___test.html", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___chrome___test" ],
-        [ "SeTextarea_EN_Firefox_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___firefox___test.html", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___firefox___test" ],
+        [ "SeTextarea_EN_Chrome_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___chrome___test.html", null ],
+        [ "SeTextarea_EN_Firefox_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___firefox___test.html", null ],
         [ "SeTextarea_EN_HTMLUnitDriver_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeTextarea_EN_Test", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___test.html", "classokw_1_1_se_textarea_1_1_se_textarea___e_n___test" ]
       ] ],
@@ -318,6 +316,7 @@ var annotated_dup =
       [ "OKW_PropertiesTest", "classokw_1_1_o_k_w___properties_test.html", "classokw_1_1_o_k_w___properties_test" ],
       [ "OKW_TestClipboard", "classokw_1_1_o_k_w___test_clipboard.html", "classokw_1_1_o_k_w___test_clipboard" ],
       [ "OKW_TimeOut", "classokw_1_1_o_k_w___time_out.html", "classokw_1_1_o_k_w___time_out" ],
+      [ "OKW_TimeOut_Test", "classokw_1_1_o_k_w___time_out___test.html", "classokw_1_1_o_k_w___time_out___test" ],
       [ "OKW_XmlReader", "classokw_1_1_o_k_w___xml_reader.html", "classokw_1_1_o_k_w___xml_reader" ],
       [ "OKW_XmlReaderTest", "classokw_1_1_o_k_w___xml_reader_test.html", "classokw_1_1_o_k_w___xml_reader_test" ],
       [ "OKWLanguage", "classokw_1_1_o_k_w_language.html", "classokw_1_1_o_k_w_language" ],

@@ -1,0 +1,9 @@
+digraph "Grafische Darstellung der Klassenhierarchie"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="okw.core.EN_Keywords\l_IGNORE_Test",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html",tooltip=" "];
+}

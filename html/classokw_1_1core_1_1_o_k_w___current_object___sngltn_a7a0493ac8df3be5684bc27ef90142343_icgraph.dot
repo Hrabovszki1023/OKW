@@ -1,0 +1,13 @@
+digraph "okw.core.OKW_CurrentObject_Sngltn.init"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node37 [label="okw.core.OKW_CurrentObject\l_Sngltn.init",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Führt die Initialisierung der Klasse durch: Es werden alle Felder der Klasse auf einen definierten An..."];
+  Node37 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node38 [label="okw.core.NOK.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_n_o_k.html#a62d1765ea311e440d678cb57ca9dd2c2",tooltip="Markiert den Anfang eines neuen Testfalls."];
+  Node37 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 [label="okw.core.CurrentObject\l_Test.TC_SetChildName\l_OKWFrameObjectWindowNotSetException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#ac47d14a9fc85ffe22e5626da790c32f7",tooltip="Testziel: Prüfen, ob OKW_Kernel_Exception in der Methode CurrentObject.SetChildName() ausglöst wird."];
+}

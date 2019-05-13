@@ -1,0 +1,14 @@
+digraph "okw.parser.antlr4.OKW_ParserBaseVisitor&lt; T &gt;"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="{okw.parser.antlr4.OKW\l_ParserBaseVisitor\< T \>\n||+ visitRoot()\l+ visitOkw_internal_var()\l+ visitOkw_typekey()\l+ visitKeyvalue()\l+ visitOkw_env_var()\l+ visitEnvvalue()\l+ visitText()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This class provides an empty implementation of OKW_ParserVisitor, which can be extended to create a v..."];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node1 [label="{org::antlr::v4::runtime\l::tree::AbstractParseTreeVisitor\< T \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{okw::parser::antlr4\l::OKW_ParserVisitor\< T \>\n||+ visitRoot()\l+ visitOkw_internal_var()\l+ visitOkw_typekey()\l+ visitKeyvalue()\l+ visitOkw_env_var()\l+ visitEnvvalue()\l+ visitText()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1parser_1_1antlr4_1_1_o_k_w___parser_visitor.html",tooltip="This interface defines a complete generic visitor for a parse tree produced by OKW_Parser."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{org::antlr::v4::runtime\l::tree::ParseTreeVisitor\< T \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

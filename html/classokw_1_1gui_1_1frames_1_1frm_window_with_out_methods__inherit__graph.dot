@@ -1,0 +1,17 @@
+digraph "okw.gui.frames.frmWindowWithOutMethods"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="{okw.gui.frames.frmWindow\lWithOutMethods\n|- myKN\l- myFN\l- myParentFN\l|+ setKN()\l+ getKN()\l+ setFN()\l+ getFN()\l+ setParentFN()\l+ getParentFN()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Test-Frame-Klasse: Diese Klasse dient als Unittest-Objekt."];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node1 [label="{okw.gui.AnyWindow\n||+ AnyWindow()\l+ AnyWindow()\l+ getExists()\l+ getCaption()\l+ getIsActive()\l+ TypeKeyWindow()\l+ SelectWindow()\l+ StartApp()\l+ StopApp()\l+ VerifyWindowExists()\l+ VerifyIsWindowActive()\l+ VerifyWindowCaption()\l+ WaitForMe()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_window.html",tooltip="Description of AnyWin."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{okw.gui.AnyWinBase\n|# _locator\l- myLogger\l- myFN\l- myKN\l- myParentFN\l|+ getLocator()\l+ getLOCATOR()\l+ setLocator()\l+ getExists()\l+ AnyWinBase()\l+ AnyWinBase()\l+ LogFunctionStartDebug()\l+ LogFunctionStart()\l+ LogFunctionStartDebug()\l+ LogFunctionStart()\l+ LogFunctionEndDebug()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEnd()\l+ LogFunctionEndDebug()\l+ LogFunctionEnd()\l+ ResOpenList()\l+ ResOpenListDebug()\lund 12 mehr ...\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html",tooltip="Description of AnyWin."];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{okw.gui.IGUIWindow\n||+ getCaption()\l+ getExists()\l+ getIsActive()\l+ TypeKeyWindow()\l+ SelectWindow()\l+ StartApp()\l+ StopApp()\l+ VerifyWindowExists()\l+ VerifyIsWindowActive()\l+ VerifyWindowCaption()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1gui_1_1_i_g_u_i_window.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node4 [label="{okw.core.IOKW_FN\n||+ setKN()\l+ setFN()\l+ setParentFN()\l+ getKN()\l+ getFN()\l+ getParentFN()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___f_n.html",tooltip=" "];
+  Node4 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+}
