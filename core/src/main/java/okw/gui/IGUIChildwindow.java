@@ -58,7 +58,8 @@ public interface IGUIChildwindow
     ArrayList<String> VerifyValue();
     ArrayList<String> VerifySelectedValue();
     ArrayList<String> VerifyTablecellValue(String COL, String ROW);
-
+    ArrayList<String> VerifyErrorMSG();
+    
     Boolean VerifyExists();
     Boolean VerifyIsActive();
     Boolean VerifyHasFocus();
