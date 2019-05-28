@@ -596,5 +596,32 @@
 				<de>Datei kopieren</de>
 			</Text>
 		</Method>
+		
+		<!-- Method: "VerifyErrorMSG"-->
+		<Method name="VerifyErrorMSG">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Error MSG</en>
+				<de>Prüfe Etikette</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyErrorMSG_WCM"-->
+		<Method name="VerifyErrorMSG_WCM">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Error MSG WCM</en>
+				<de>Prüfe Etikette WCM</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyErrorMSG_REGX"-->
+		<Method name="VerifyErrorMSG_REGX">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en> Verify Error MSG REGX</en>
+				<de>Prüfe Etikette REGX</de>
+			</Text>
+		</Method>
 	</Class>
 </LogMessages>

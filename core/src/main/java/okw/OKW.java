@@ -251,5 +251,20 @@ public @interface OKW
    * Default ist 1000ms (=1s).
    */
   public int VerifyExists_PT() default 1000;
+  /**
+   * \~german
+   * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyLabel.
+   * Default ist 30s.
+   */
+  int VerifyErrorMSG_TO() default 5;
+  
+  /**
+   * \~german
+   * <b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyLabel.
+   *
+   * Die Periodendauer des Pollens wird in Millisekunden angegeben.
+   * Default ist 1000ms (=1s).
+   */
+  int VerifyErrorMSG_PT() default 1000;
 
 }
