@@ -46,6 +46,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.xml.sax.SAXException;
@@ -422,7 +423,14 @@ public class SeRadioList extends SeAnyChildWindow
 
             // 2.schritt nun den Tag-label finden und den Textinhalt ermitteln.
             WebElement label = SeDriver.getInstance().getDriver().findElement( By.xpath( this.getLocator() + "//legend" ) );
-            lvLsReturn.add( label.getAttribute( "textContent" ) );
+            
+            // The Attribute "textContent" wird als Beschriftung angezeigt...
+            String myAttribute = label.getAttribute( "textContent" );
+            myAttribute = StringUtils.normalizeSpace( myAttribute );
+            
+            lvLsReturn.add( myAttribute );
+
+            
             bOK = true;
         }
         finally

@@ -41,6 +41,8 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 
+import org.apache.commons.lang3.StringUtils;
+
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.gui.OKWLocator;
 import okw.gui.OKWLocatorBase;
@@ -156,9 +158,12 @@ public class SeInputButton extends SeAnyChildWindow
             // Warten auf das Objekt. Wenn es nicht existiert mit Exception
             // beenden...
             this.WaitForMe();
-
+            
             // The Attribute "value" wird als Beschriftung angezeigt...
-            lvLsReturn.add( this.Me().getAttribute( "value" ) );
+            String myAttribute = this.Me().getAttribute( "value" );
+            myAttribute = StringUtils.normalizeSpace( myAttribute );
+            
+            lvLsReturn.add( myAttribute );
         }
         finally
         {

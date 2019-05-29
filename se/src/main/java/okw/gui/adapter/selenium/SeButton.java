@@ -41,6 +41,7 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 import okw.gui.OKWLocatorBase;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * @ingroup groupSeleniumChildGUIAdapter 
@@ -153,8 +154,11 @@ public class SeButton extends SeAnyChildWindow
             // beenden...
             this.WaitForMe();
 
-            // The Attribute "value" wird als Beschriftung angezeigt...
-            lvLsReturn.add( this.Me().getAttribute( "textContent" ) );
+            // The Attribute "textContent" wird als Beschriftung angezeigt...
+            String myAttribute = this.Me().getAttribute( "textContent" );
+            myAttribute = StringUtils.normalizeSpace( myAttribute );
+            
+            lvLsReturn.add( myAttribute );
         }
         finally
         {
@@ -168,7 +172,9 @@ public class SeButton extends SeAnyChildWindow
      * \~german Ein SeInputButton hat keinen Wert! ->
      * OKWFrameObjectMethodNotImplemented Auslösen!
      * 
-     * @return \~english A SeInputButton has no value! -> Trigger
+     * @return
+     * 
+     * \~english A SeInputButton has no value! -> Trigger
      *         OKWFrameObjectMethodNotImplemented! \~
      * @author Zoltán Hrabovszki
      * @date 2016.10.06
