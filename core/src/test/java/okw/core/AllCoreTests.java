@@ -70,6 +70,7 @@ import org.junit.runners.Suite.SuiteClasses;
   FrameObjectDictionary_Test.class,
   Matcher_LevenshteinDistanceTest.class,
   Matcher_LevenshteinMatchTest.class,
+  Matcher_LevRegxWild.class,
   Matcher_RegexMatcherTest.class,
   Matcher_WildcardMatcherTest.class } )
 
