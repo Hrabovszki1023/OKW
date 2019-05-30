@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 344, Datum: 05.30.2019 11:33:30</span>
+   &#160;<span id="projectnumber">Build_ID: 345, Datum: 05.30.2019 13:59:42</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -242,6 +242,15 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <tr class="memitem:a96f34e11f8d52127e6b6f39d3c15186b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a96f34e11f8d52127e6b6f39d3c15186b">TypeKeyWindow</a> (String FN, String Val)  throws Exception</td></tr>
 <tr class="memdesc:a96f34e11f8d52127e6b6f39d3c15186b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tastatureingabe in ein bestimmtes Fensterobjekt.  <a href="#a96f34e11f8d52127e6b6f39d3c15186b">Mehr ...</a><br /></td></tr>
 <tr class="separator:a96f34e11f8d52127e6b6f39d3c15186b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa390f7d42c39bfa86f8a8cb524f969b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa390f7d42c39bfa86f8a8cb524f969b8">VerifyBadge</a> (String BN, String ExpVal)  throws Exception</td></tr>
+<tr class="memdesc:aa390f7d42c39bfa86f8a8cb524f969b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überprüft den Badge des Objektes .  <a href="#aa390f7d42c39bfa86f8a8cb524f969b8">Mehr ...</a><br /></td></tr>
+<tr class="separator:aa390f7d42c39bfa86f8a8cb524f969b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a026455cbc85d02d4b5eec412447c74ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a026455cbc85d02d4b5eec412447c74ce">VerifyBadgeWCM</a> (String BN, String ExpVal)  throws Exception</td></tr>
+<tr class="memdesc:a026455cbc85d02d4b5eec412447c74ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überprüft den Badge des Objektes .  <a href="#a026455cbc85d02d4b5eec412447c74ce">Mehr ...</a><br /></td></tr>
+<tr class="separator:a026455cbc85d02d4b5eec412447c74ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1df341ffa462280e59005904fe867d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad1df341ffa462280e59005904fe867d8">VerifyBadgeREGX</a> (String BN, String ExpVal)  throws Exception</td></tr>
+<tr class="memdesc:ad1df341ffa462280e59005904fe867d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überprüft den Badge des Objektes .  <a href="#ad1df341ffa462280e59005904fe867d8">Mehr ...</a><br /></td></tr>
+<tr class="separator:ad1df341ffa462280e59005904fe867d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa078c7da434452f524816f58519b395b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa078c7da434452f524816f58519b395b">VerifyCaption</a> (String FN, String ExpVal)  throws Exception</td></tr>
 <tr class="memdesc:aa078c7da434452f524816f58519b395b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überprüft die Überschrift des Objektes.  <a href="#aa078c7da434452f524816f58519b395b">Mehr ...</a><br /></td></tr>
 <tr class="separator:aa078c7da434452f524816f58519b395b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2274,6 +2283,153 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 
 </div>
 </div>
+<a id="aa390f7d42c39bfa86f8a8cb524f969b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa390f7d42c39bfa86f8a8cb524f969b8">&#9670;&nbsp;</a></span>VerifyBadge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void okw.core.IOKW_State.VerifyBadge </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>BN</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>ExpVal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws Exception</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Überprüft den Badge des Objektes . </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Daniel Krüger </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2019-04-04 </dd></dl>
+
+<p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#ac2c25fc3fa5b40db4e95219582f11874">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a1ef41049d026a423f72c8e59770fd30e">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a4b8bc3fb3225320b660c3ebd438bafb3">okw.core.NOK</a>.</p>
+<div id="dynsection-42" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-42-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-42-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-42-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 42 -->
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad1df341ffa462280e59005904fe867d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1df341ffa462280e59005904fe867d8">&#9670;&nbsp;</a></span>VerifyBadgeREGX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void okw.core.IOKW_State.VerifyBadgeREGX </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>BN</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>ExpVal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws Exception</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Überprüft den Badge des Objektes . </p>
+<p>Mit RegulererAusdruck </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Daniel Krüger </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2019-04-04 </dd></dl>
+
+<p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a9e122d11d43dfbb7835c21a8b55b5759">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ac9669a0cd5d2b409a69ca0deb498397f">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a80b77bcfd0f4bf9a3a5065c19f27552e">okw.core.NOK</a>.</p>
+<div id="dynsection-43" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-43-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-43-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-43-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 43 -->
+</div>
+</div>
+
+</div>
+</div>
+<a id="a026455cbc85d02d4b5eec412447c74ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a026455cbc85d02d4b5eec412447c74ce">&#9670;&nbsp;</a></span>VerifyBadgeWCM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void okw.core.IOKW_State.VerifyBadgeWCM </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>BN</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>ExpVal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws Exception</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Überprüft den Badge des Objektes . </p>
+<p>Mit Wildcard-Match </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Daniel Krüger </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2019-04-04 </dd></dl>
+
+<p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a0bcee3fd07b44b54c13c14f0ff1080f0">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a12b2ff6667d864d7e2f831983f388b8c">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#ae2903a0eed4903897eca1aac96a63cac">okw.core.NOK</a>.</p>
+<div id="dynsection-44" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-44-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-44-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-44-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 44 -->
+</div>
+</div>
+
+</div>
+</div>
 <a id="aa078c7da434452f524816f58519b395b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa078c7da434452f524816f58519b395b">&#9670;&nbsp;</a></span>VerifyCaption()</h2>
 
@@ -2313,12 +2469,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#afe1a1b392d59c5ceef93ed6d0cfd2e01">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a742f7a967804814e172358e1ed9e3579">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a8a732f7aa969c0c5b6bed8a3c4145512">okw.core.NOK</a>.</p>
-<div id="dynsection-42" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-42-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-42-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-45" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-45-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-45-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-42-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 42 -->
+<div id="dynsection-45-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 45 -->
 </div>
 </div>
 
@@ -2366,12 +2522,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a7b0869a2a6df63be61899963dc35d768">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#adb7da11977acc1b851caac445eb37451">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a0c6eb502891dae5328872b07c558d8bf">okw.core.NOK</a>.</p>
-<div id="dynsection-43" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-43-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-43-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-46" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-46-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-46-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-43-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 43 -->
+<div id="dynsection-46-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 46 -->
 </div>
 </div>
 
@@ -2423,12 +2579,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Noch zu erledigen:</a></b></dt><dd>TODO: keine Beschreibung vorhanden </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a461f7511030e7975fe983b2509527529">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a1dc3f5a21cba756cd6448f88280342ec">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a99a94136ac134779c0829beb8f0a3e55">okw.core.NOK</a>.</p>
-<div id="dynsection-44" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-44-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-44-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-47" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-47-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-47-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-44-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 44 -->
+<div id="dynsection-47-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 47 -->
 </div>
 </div>
 
@@ -2472,12 +2628,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2015-06-26 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#aeec97e6090b2d4140c5961d81700b5cf">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ab9c07f0acb5bdf36c58bc3c3ae12768d">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a499ad6b680f5f32d3d94ca42cadef06e">okw.core.NOK</a>.</p>
-<div id="dynsection-45" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-45-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-45-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-48" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-48-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-48-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-45-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 45 -->
+<div id="dynsection-48-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 48 -->
 </div>
 </div>
 
@@ -2523,12 +2679,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a9785853231d70946dcbbfcd44b509c25">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a47af0e08b2bde199fc5d10dee040ac1b">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a6161473900747fe51b8ac29b72612339">okw.core.NOK</a>.</p>
-<div id="dynsection-46" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-46-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-46-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-49" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-49-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-49-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-46-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 46 -->
+<div id="dynsection-49-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 49 -->
 </div>
 </div>
 
@@ -2573,12 +2729,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2015-06-26 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a8afdd9c8a47dc54aced5cce6226678ad">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#aac1e5e5b59dc780f5fd75bd215b13dff">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#ac749086e6a2548a55dd943507b9bca10">okw.core.NOK</a>.</p>
-<div id="dynsection-47" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-47-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-47-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-50" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-50-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-50-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-47-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 47 -->
+<div id="dynsection-50-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 50 -->
 </div>
 </div>
 
@@ -2624,12 +2780,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a4950117cbe9cd2b769ae529bbdc1f897">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ade5d877223a28ce11b57c8b94ab1a2eb">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a4d2aa52c68350265f480a97496ae3314">okw.core.NOK</a>.</p>
-<div id="dynsection-48" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-48-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-48-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-51" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-51-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-51-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-48-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 48 -->
+<div id="dynsection-51-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 51 -->
 </div>
 </div>
 
@@ -2674,12 +2830,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21/jnic </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a071aec5319238e209cfc6f1434ea13e8">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#af9261f054d5a82396c678851ade66b1b">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a6bbe7604796f00fb1ccf3f6a367139ba">okw.core.NOK</a>.</p>
-<div id="dynsection-49" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-49-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-49-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-52" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-52-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-52-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-49-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 49 -->
+<div id="dynsection-52-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 52 -->
 </div>
 </div>
 
@@ -2723,12 +2879,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a1bfa8ae24fc44958e4e3c4272c120bb8">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a278a288682afcbfad17e90df17e3c53d">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#ab5817c363d1b01b85a2ebbdcf8138a9f">okw.core.NOK</a>.</p>
-<div id="dynsection-50" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-50-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-50-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-53" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-53-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-53-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-50-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 50 -->
+<div id="dynsection-53-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 53 -->
 </div>
 </div>
 
@@ -2775,12 +2931,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#aeedf0dfdfe514b50ad774eb187a8cc34">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a15bd6c1b810f32fe6efcc76ccb10a0ae">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a4c28bf955ff62013fef49c8d63d10355">okw.core.NOK</a>.</p>
-<div id="dynsection-51" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-51-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-51-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-54" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-54-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-54-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-51-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 51 -->
+<div id="dynsection-54-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 54 -->
 </div>
 </div>
 
@@ -2831,12 +2987,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a4187442dc3574358fda8af18cb03f15e">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a6e3d7fe88a78afa61a1a340dd2da88b7">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#af418e9cdaaa0198e88c926e7a1f4fbb2">okw.core.NOK</a>.</p>
-<div id="dynsection-52" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-52-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-52-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-55" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-55-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-55-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-52-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 52 -->
+<div id="dynsection-55-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 55 -->
 </div>
 </div>
 
@@ -2881,12 +3037,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2018-12-25 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#af60e502babb048eec6adefd04dc9d349">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#aca2a75d895266af56780569bacebc1ae">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#aa5a80e11999d4901847c99ddbac2866c">okw.core.NOK</a>.</p>
-<div id="dynsection-53" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-53-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-53-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-56" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-56-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-56-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-53-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 53 -->
+<div id="dynsection-56-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 56 -->
 </div>
 </div>
 
@@ -2931,12 +3087,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2018-10-03 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a8c6275d39dbc5ce13caf907f511a9a64">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a5ae79f939a3022df6ce6eaa07f6cef0f">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#adf4f9c6bcb5333bf52a04c24fc29470f">okw.core.NOK</a>.</p>
-<div id="dynsection-54" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-54-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-54-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-57" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-57-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-57-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-54-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 54 -->
+<div id="dynsection-57-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 57 -->
 </div>
 </div>
 
@@ -2983,12 +3139,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2018-10-03 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a52a7e12864bb2fbf5c8578d3d25aabb5">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#af3b789ccec9b017dcee68757496385a4">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a91dc802d2d74805f17d5f215859a8876">okw.core.NOK</a>.</p>
-<div id="dynsection-55" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-55-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-55-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-58" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-58-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-58-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-55-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 55 -->
+<div id="dynsection-58-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 58 -->
 </div>
 </div>
 
@@ -3040,12 +3196,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2018-10-03 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a20ab85fe302c5b2fc61b94a8fe347f0c">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a350cf4a9c66f2bed02b6f5f847b5ad49">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#afec11ad992904a323b407d36459e2045">okw.core.NOK</a>.</p>
-<div id="dynsection-56" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-56-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-56-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-59" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-59-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-59-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-56-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 56 -->
+<div id="dynsection-59-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 59 -->
 </div>
 </div>
 
@@ -3092,12 +3248,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a648f371fccab2eded552b69adf164bbd">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ab243fc4ed28faf2ee9e7cd3123b8f13c">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a0ad0c8de9843133c96de2f779aad880f">okw.core.NOK</a>.</p>
-<div id="dynsection-57" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-57-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-57-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-60" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-60-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-60-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-57-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 57 -->
+<div id="dynsection-60-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 60 -->
 </div>
 </div>
 
@@ -3144,12 +3300,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a53bc3562ca05078ebddbf5af03719d3f">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a34e7722cddcc1eae53b714f4883a02f2">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a0a62848307c85ba96ad832db82f8f499">okw.core.NOK</a>.</p>
-<div id="dynsection-58" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-58-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-58-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-61" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-61-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-61-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-58-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 58 -->
+<div id="dynsection-61-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 61 -->
 </div>
 </div>
 
@@ -3196,12 +3352,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ad0ff49c39bbe4fdc3477df1527bf7c58">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a51df04d0178308deafb1130afc1c7945">okw.core.NOK</a>.</p>
-<div id="dynsection-59" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-59-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-59-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-62" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-62-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-62-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-59-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 59 -->
+<div id="dynsection-62-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 62 -->
 </div>
 </div>
 
@@ -3259,12 +3415,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a3548a5a8ddfbf7f84bfe18ba200e1b35">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#ad15cc0817387e5b6db0ae8b11619226f">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a37a7b10a667ec77dc511cefcf1499693">okw.core.NOK</a>.</p>
-<div id="dynsection-60" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-60-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-60-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-63" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-63-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-63-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-60-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 60 -->
+<div id="dynsection-63-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 63 -->
 </div>
 </div>
 
@@ -3323,12 +3479,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a84abe8cdf2426bde23d357c89a6822a6">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a3c0af68470649d10f4143ac58398ef03">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#ac5016aa88a24d6364b1b289b00f33e75">okw.core.NOK</a>.</p>
-<div id="dynsection-61" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-61-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-61-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-64" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-64-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-64-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-61-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 61 -->
+<div id="dynsection-64-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 64 -->
 </div>
 </div>
 
@@ -3392,12 +3548,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a30fc98c4004c99e3e37047deac6ad16f">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#add884d5c22a8a05b762e3bc06a7ed02a">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#af07d71db8e2c2052f8ae794a3f6f8d0a">okw.core.NOK</a>.</p>
-<div id="dynsection-62" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-62-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-62-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-65" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-65-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-65-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-62-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 62 -->
+<div id="dynsection-65-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 65 -->
 </div>
 </div>
 
@@ -3442,12 +3598,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a9f5e0c09b6d74adf4265e3c84cf700d1">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#aa53c4a10dcd4eb1a6ae2c41eb9f23ee2">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a4da634853fd2fdef024d540f14647585">okw.core.NOK</a>.</p>
-<div id="dynsection-63" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-63-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-63-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-66" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-66-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-66-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-63-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 63 -->
+<div id="dynsection-66-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 66 -->
 </div>
 </div>
 
@@ -3494,12 +3650,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a95d9d7b4bc22bd4deae5398394d90e3a">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a32ef0062d4814e329183c7110d2918e2">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a153ee50279c2795015979757137a9b15">okw.core.NOK</a>.</p>
-<div id="dynsection-64" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-64-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-64-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-67" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-67-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-67-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-64-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 64 -->
+<div id="dynsection-67-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 67 -->
 </div>
 </div>
 
@@ -3551,12 +3707,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#adbf2e96978ec22c0d8febdee394a60e6">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a160aacb0d6817770fde1faeaf6749af3">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#aa8cc96dadd981676a49359add8e516e5">okw.core.NOK</a>.</p>
-<div id="dynsection-65" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-65-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-65-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-68" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-68-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-68-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-65-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 65 -->
+<div id="dynsection-68-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 68 -->
 </div>
 </div>
 
@@ -3603,12 +3759,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a68529a54c5b950d3aa005bb87890b703">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#aac0d21359cfabf641db830eadeb11721">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#aa101dafd795d6cf87a3835d16af931e3">okw.core.NOK</a>.</p>
-<div id="dynsection-66" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-66-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-66-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-69" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-69-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-69-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-66-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 66 -->
+<div id="dynsection-69-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 69 -->
 </div>
 </div>
 
@@ -3655,12 +3811,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#acb6c973210e73f47ee34f9df6eac7f83">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#a19e8df9600c470e8b1ae1fe31c36f50a">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a70d34ef288553bd4c8fa9a2dd0d6366e">okw.core.NOK</a>.</p>
-<div id="dynsection-67" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-67-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-67-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-70" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-70-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-70-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-67-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 67 -->
+<div id="dynsection-70-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 70 -->
 </div>
 </div>
 
@@ -3711,12 +3867,12 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
 <p>Implementiert in <a class="el" href="classokw_1_1core_1_1_o_k.html#a6aafc82b46b36f952f2dd61db0f124b8">okw.core.OK</a>, <a class="el" href="classokw_1_1core_1_1_core.html#aaf9b78aa2200f60eb453331116e53704">okw.core.Core</a> und <a class="el" href="classokw_1_1core_1_1_n_o_k.html#a42a907b7f01e22228ca87de50cb8be59">okw.core.NOK</a>.</p>
-<div id="dynsection-68" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-68-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-68-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-71" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-71-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-71-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-68-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 68 -->
+<div id="dynsection-71-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 71 -->
 </div>
 </div>
 
@@ -3732,7 +3888,7 @@ $(document).ready(function(){initNavTree('interfaceokw_1_1core_1_1_i_o_k_w___sta
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>core</b></li><li class="navelem"><a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html">IOKW_State</a></li>
-    <li class="footer">Erzeugt am Don Mai 30 2019 11:53:38 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Mai 30 2019 14:21:35 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>

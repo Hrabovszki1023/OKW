@@ -11,17 +11,19 @@ digraph "okw.core.Matcher.WildcardMatch"
   Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node7 [label="okw.core.OK.verifyWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a127f0328e514d1b9f8bc1a972269ecfc",tooltip=" "];
   Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 [label="okw.core.OK.VerifyCaptionWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a461f7511030e7975fe983b2509527529",tooltip="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)."];
+  Node8 [label="okw.core.OK.VerifyBadgeWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a0bcee3fd07b44b54c13c14f0ff1080f0",tooltip="Überprüft den Badge des Objektes ."];
   Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node9 [label="okw.core.OK.VerifyLabelWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a4187442dc3574358fda8af18cb03f15e",tooltip="Überprüft die Beschreibung/Label des Objektes."];
+  Node9 [label="okw.core.OK.VerifyCaptionWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a461f7511030e7975fe983b2509527529",tooltip="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)."];
   Node7 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node10 [label="okw.core.OK.VerifyPlaceholderWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a20ab85fe302c5b2fc61b94a8fe347f0c",tooltip="Überprüft den Platzhalter des Objektes."];
+  Node10 [label="okw.core.OK.VerifyLabelWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a4187442dc3574358fda8af18cb03f15e",tooltip="Überprüft die Beschreibung/Label des Objektes."];
   Node7 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node11 [label="okw.core.OK.VerifySelected\lValueWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b",tooltip="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert."];
+  Node11 [label="okw.core.OK.VerifyPlaceholderWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a20ab85fe302c5b2fc61b94a8fe347f0c",tooltip="Überprüft den Platzhalter des Objektes."];
   Node7 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node12 [label="okw.core.OK.VerifyTablecell\lValueWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a30fc98c4004c99e3e37047deac6ad16f",tooltip="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert."];
+  Node12 [label="okw.core.OK.VerifySelected\lValueWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a3264319aa4b0bc4ac7b204ae5d6a0a4b",tooltip="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert."];
   Node7 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node13 [label="okw.core.OK.VerifyTooltipWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#adbf2e96978ec22c0d8febdee394a60e6",tooltip="Prüft den Tooltip-Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text)."];
+  Node13 [label="okw.core.OK.VerifyTablecell\lValueWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a30fc98c4004c99e3e37047deac6ad16f",tooltip="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert."];
   Node7 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node14 [label="okw.core.OK.VerifyValueWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a6aafc82b46b36f952f2dd61db0f124b8",tooltip="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)."];
+  Node14 [label="okw.core.OK.VerifyTooltipWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#adbf2e96978ec22c0d8febdee394a60e6",tooltip="Prüft den Tooltip-Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text)."];
+  Node7 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="okw.core.OK.VerifyValueWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a6aafc82b46b36f952f2dd61db0f124b8",tooltip="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)."];
 }

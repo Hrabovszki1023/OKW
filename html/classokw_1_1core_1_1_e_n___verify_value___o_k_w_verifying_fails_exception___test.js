@@ -1,6 +1,9 @@
 var classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test =
 [
     [ "setUp", "classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#ae24e5c4e28a274f3b7730b8ebfda611e", null ],
+    [ "TC_VerifyBadge_OKWVerifyingFailsException_SV01", "classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#abd6e687e5304baa03c092206b7ba51ee", null ],
+    [ "TC_VerifyBadgeREGX_OKWVerifyingFailsException_SV01", "classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#aa3c89933a45b5d831d5fa1e1e014910d", null ],
+    [ "TC_VerifyBadgeWCM_OKWVerifyingFailsException_SV01", "classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#ae69f203fd1e8596e90a541efc5f35923", null ],
     [ "TC_VerifyValue_OKWVerifyingFailsException_MV01", "classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#ab4b3d6e5779c078ce4bfe7116d0cf96c", null ],
     [ "TC_VerifyValue_OKWVerifyingFailsException_MV02", "classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#ad4a9fd1fc57e02b0c78ceed0d8315de0", null ],
     [ "TC_VerifyValue_OKWVerifyingFailsException_MV03", "classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#a4a8fb8e242bfff36f1e9e3b390399d96", null ],

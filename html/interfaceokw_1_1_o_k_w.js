@@ -1,6 +1,8 @@
 var interfaceokw_1_1_o_k_w =
 [
     [ "FN", "interfaceokw_1_1_o_k_w.html#a95f6a6c8976dbbc79a8765a36e3545ff", null ],
+    [ "VerifyBadge_PT", "interfaceokw_1_1_o_k_w.html#a33560a4f4afe91c6fc95be846777ac55", null ],
+    [ "VerifyBadge_TO", "interfaceokw_1_1_o_k_w.html#a340ed46e5dca0eb1581b25f3296a59dd", null ],
     [ "VerifyCaption_PT", "interfaceokw_1_1_o_k_w.html#a05a951f068a3d3535a8df1fd883781a5", null ],
     [ "VerifyCaption_TO", "interfaceokw_1_1_o_k_w.html#a80b7b6bad92fee65679ca17819941e0b", null ],
     [ "VerifyExists_PT", "interfaceokw_1_1_o_k_w.html#a0463f41da2a22c0299661f0719b32018", null ],

@@ -5,15 +5,15 @@ digraph "okw.OKW_Const_Sngltn.ConcatHSEP"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node76 [label="okw.OKW_Const_Sngltn.ConcatHSEP",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Methode verbindet die einzelne Strings eines List<Strings> zu einem string und trennt diese mit der K..."];
-  Node76 -> Node77 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node77 [label="okw.OKW_Helper.concatList\lString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper.html#ac27bd4b709ec8ac0c87afb72ff7d12f9",tooltip="Wandelt List<String> in einen String um und trennt die Werte durch das vorgegebene Trennzeichen vonei..."];
-  Node76 -> Node78 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node78 [label="okw.OKW_Const_Sngltn.Get\lOKWConst4Internalname",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd",tooltip="Methode ermittelt für Internalname und der aktuell eingestellten Sprache den Wert für OKWConst."];
-  Node78 -> Node79 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node79 [label="okw.OKW_Const_Sngltn.Get\lConst4Internalname",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7",tooltip="Methode ermittelt für Internalname und der aktuell eingestellten Sprache den Wert für Const."];
+  Node79 [label="okw.OKW_Const_Sngltn.ConcatHSEP",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Methode verbindet die einzelne Strings eines List<Strings> zu einem string und trennt diese mit der K..."];
   Node79 -> Node80 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node80 [label="okw.log.Logger_Sngltn.Log\lPrintDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4",tooltip="Loggt eine Nachricht."];
+  Node80 [label="okw.OKW_Helper.concatList\lString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper.html#ac27bd4b709ec8ac0c87afb72ff7d12f9",tooltip="Wandelt List<String> in einen String um und trennt die Werte durch das vorgegebene Trennzeichen vonei..."];
   Node79 -> Node81 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node81 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node81 [label="okw.OKW_Const_Sngltn.Get\lOKWConst4Internalname",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd",tooltip="Methode ermittelt für Internalname und der aktuell eingestellten Sprache den Wert für OKWConst."];
+  Node81 -> Node82 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node82 [label="okw.OKW_Const_Sngltn.Get\lConst4Internalname",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7",tooltip="Methode ermittelt für Internalname und der aktuell eingestellten Sprache den Wert für Const."];
+  Node82 -> Node83 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node83 [label="okw.log.Logger_Sngltn.Log\lPrintDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4",tooltip="Loggt eine Nachricht."];
+  Node82 -> Node84 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node84 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
 }

@@ -33,6 +33,7 @@ var classokw_1_1gui_1_1adapter_1_1_all_methods___single_value =
     [ "SetValue", "classokw_1_1gui_1_1adapter_1_1_all_methods___single_value.html#a142310e60c12dffe2fb5500d84f6685f", null ],
     [ "TypeKey", "classokw_1_1gui_1_1adapter_1_1_all_methods___single_value.html#a00f03127e7a54609916477b979b5e05d", null ],
     [ "TypeKeyTablecell", "classokw_1_1gui_1_1adapter_1_1_all_methods___single_value.html#ae979f367f3bb7652223f60d053174f36", null ],
+    [ "VerifyBadge", "classokw_1_1gui_1_1adapter_1_1_all_methods___single_value.html#a8c1d2b73ec581094fe1ee642a04b3ae1", null ],
     [ "VerifyCaption", "classokw_1_1gui_1_1adapter_1_1_all_methods___single_value.html#aabb86e00d0a1fa97cf5a92568242234c", null ],
     [ "VerifyExists", "classokw_1_1gui_1_1adapter_1_1_all_methods___single_value.html#a0e08720cce519cef1ab262c2bf33f8fc", null ],
     [ "VerifyHasFocus", "classokw_1_1gui_1_1adapter_1_1_all_methods___single_value.html#ab32a88b9328b837d1e7aa46405c26cfc", null ],

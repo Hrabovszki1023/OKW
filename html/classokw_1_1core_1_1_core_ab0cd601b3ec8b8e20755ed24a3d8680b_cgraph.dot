@@ -5,13 +5,13 @@ digraph "okw.core.Core.Sequence"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node2084 [label="okw.core.Core.Sequence",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Ruft die Sequenz eines Fensters auf."];
-  Node2084 -> Node2085 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2085 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
-  Node2085 -> Node2086 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2086 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
-  Node2086 -> Node2087 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2087 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
-  Node2084 -> Node2088 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2088 [label="okw.core.IOKW_State.Sequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a33edc5c4d97bf7f4a35d75619985eac7",tooltip="Ruft die Sequenz eines Fensters auf."];
+  Node2122 [label="okw.core.Core.Sequence",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Ruft die Sequenz eines Fensters auf."];
+  Node2122 -> Node2123 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2123 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node2123 -> Node2124 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2124 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node2124 -> Node2125 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2125 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node2122 -> Node2126 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2126 [label="okw.core.IOKW_State.Sequence",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a33edc5c4d97bf7f4a35d75619985eac7",tooltip="Ruft die Sequenz eines Fensters auf."];
 }
