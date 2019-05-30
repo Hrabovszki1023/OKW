@@ -38,11 +38,9 @@ package okw.IFrame;
 
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
-import okw.exceptions.OKWFrameObjectMethodNotImplemented;
-import okw.exceptions.OKWVerifyingFailsException;
+
 
 import org.junit.*;
-import static org.junit.Assert.*;
 import org.junit.rules.TestName;
 
 /**

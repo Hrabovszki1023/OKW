@@ -13,8 +13,7 @@ import okw.OKW_Memorize_Sngltn;
 import okw.OKW_Properties;
 // import okw.gui.adapter.selenium.webdriver.*;
 import okw.gui.adapter.selenium.SeBrowserWindow;
-import okw.gui.adapter.selenium.webdriver.SeDriver;
-import okw.log.Logger_Sngltn;
+
 
 /**
  * \~
