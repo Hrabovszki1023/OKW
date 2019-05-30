@@ -4001,7 +4001,7 @@ public class OK implements IOKW_State
                 Log.LogPrintDebug( lsvLog );
 
                 // Basis-Funktion aufrufen...
-                OKW_FileHelper.deleteFiles( lvsPathAndFileName );
+                OKW_FileHelper.deleteFile( lvsPathAndFileName );
             }
         }
         catch (Exception e)
@@ -4031,8 +4031,8 @@ public class OK implements IOKW_State
                 Log.LogPrintDebug( LM.GetMessage( "VerifyFileExists", "Ignore" ) );
             }
             // Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-            else if ( ExpVal == OKW_Const_Sngltn.getInstance().GetConst4Internalname( "YES" )
-                            || ExpVal == OKW_Const_Sngltn.getInstance().GetConst4Internalname( "NO" ) )
+            else if ( ExpVal.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname( "YES" ) )
+                            || ExpVal.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "NO" ) ) )
             {
                 // Aktuellen Wert holen...
 
