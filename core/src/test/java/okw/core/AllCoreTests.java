@@ -46,6 +46,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith( Suite.class )
 @SuiteClasses(
 { CurrentObject_Test.class,
+  EN_FileKeywords_Test.class,
   EN_Keywords_ANTLR_Test.class,
   EN_Keywords_DELETE_Test.class,
   EN_Keywords_Empty_Test.class,
