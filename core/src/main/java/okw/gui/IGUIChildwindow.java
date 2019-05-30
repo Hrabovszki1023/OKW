@@ -52,6 +52,9 @@ public interface IGUIChildwindow
     void TypeKeyTablecell( String COL, String ROW, ArrayList<String> Val );
     
     ArrayList<String> VerifyLabel();
+    ArrayList<String> VerifyBadge();
+    ArrayList<String> VerifyBadgeWCM();
+    ArrayList<String> VerifyBadgeREGX();
     ArrayList<String> VerifyPlaceholder();
     ArrayList<String> VerifyCaption();
     ArrayList<String> VerifyTooltip();

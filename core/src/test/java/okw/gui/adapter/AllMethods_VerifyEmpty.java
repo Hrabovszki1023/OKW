@@ -41,7 +41,28 @@ import okw.log.Logger_Sngltn;
             return "Rechner.All_MethodsObj";
         }
         
-        public boolean VerifyExists(Boolean fpbExpectedValue) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+        public ArrayList<String> VerifyBadge()
+		{
+		    this.myLogger.LogFunctionStartDebug("VerifyBadge");
+		
+		    // ${EMPTY} => ArrayList mit einem Wert und ""
+		    ArrayList<String> lvLsReturn = new ArrayList<String>();
+		    lvLsReturn.add( "" );
+		
+		    myClipboard.Clear();
+		    String lvs_ObjectName = getFN();
+		    myClipboard.setObjectName(lvs_ObjectName);
+		    myClipboard.setMethod("VerifyBadge()");
+		
+		    myClipboard.getValue().clear();
+		
+		    this.myLogger.LogFunctionEndDebug();
+		
+		    return lvLsReturn;
+		}
+
+
+		public boolean VerifyExists(Boolean fpbExpectedValue) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
         {
             this.myLogger.LogFunctionStartDebug("VerifyExists", "fpbExpectedValue", fpbExpectedValue.toString());
 

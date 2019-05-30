@@ -71,6 +71,22 @@ public @interface OKW
   
   /**
    * \~german
+   * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyBadge.
+   * Default ist 30s.
+   */
+  int VerifyBadge_TO() default 5;
+
+/**
+   * \~german
+   * <b>P</b>olling <b>T</b>ime in [ms] für das Schlüsselwort VerifyBadge.
+   *
+   * Die Periodendauer des Pollens wird in Millisekunden angegeben.
+   * Default ist 1000ms (=1s).
+   */
+  int VerifyBadge_PT() default 1000;
+
+/**
+   * \~german
    * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das Schlüsselwort VerifyHasFocus.
    * Default ist 30s.
    */
@@ -251,5 +267,4 @@ public @interface OKW
    * Default ist 1000ms (=1s).
    */
   public int VerifyExists_PT() default 1000;
-
 }
