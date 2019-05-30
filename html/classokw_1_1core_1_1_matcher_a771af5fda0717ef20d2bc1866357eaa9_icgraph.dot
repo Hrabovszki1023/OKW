@@ -26,4 +26,10 @@ digraph "okw.core.Matcher.WildcardMatch"
   Node14 [label="okw.core.OK.VerifyTooltipWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#adbf2e96978ec22c0d8febdee394a60e6",tooltip="Prüft den Tooltip-Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text)."];
   Node7 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node15 [label="okw.core.OK.VerifyValueWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a6aafc82b46b36f952f2dd61db0f124b8",tooltip="Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text)."];
+  Node5 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="okw.core.Matcher_LevRegx\lWild.WildcardMatch_1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_matcher___lev_regx_wild.html#a38c4493f4e975ef2cb8247eaa127c8c4",tooltip="Passed."];
+  Node5 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="okw.core.Matcher_LevRegx\lWild.WildcardMatch_2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_matcher___lev_regx_wild.html#ab4ed0dc4817d88d1f2e481da912040a8",tooltip="fail"];
+  Node5 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="okw.core.Matcher_LevRegx\lWild.WildcardMatch_3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_matcher___lev_regx_wild.html#afb40b8a95c222b6d8bc9d56be7aead22",tooltip="fail"];
 }

@@ -46,6 +46,7 @@ var annotated_dup =
         [ "Matcher", "classokw_1_1core_1_1_matcher.html", null ],
         [ "Matcher_LevenshteinDistanceTest", "classokw_1_1core_1_1_matcher___levenshtein_distance_test.html", "classokw_1_1core_1_1_matcher___levenshtein_distance_test" ],
         [ "Matcher_LevenshteinMatchTest", "classokw_1_1core_1_1_matcher___levenshtein_match_test.html", "classokw_1_1core_1_1_matcher___levenshtein_match_test" ],
+        [ "Matcher_LevRegxWild", "classokw_1_1core_1_1_matcher___lev_regx_wild.html", "classokw_1_1core_1_1_matcher___lev_regx_wild" ],
         [ "Matcher_RegexMatcherTest", "classokw_1_1core_1_1_matcher___regex_matcher_test.html", "classokw_1_1core_1_1_matcher___regex_matcher_test" ],
         [ "Matcher_WildcardMatcherTest", "classokw_1_1core_1_1_matcher___wildcard_matcher_test.html", "classokw_1_1core_1_1_matcher___wildcard_matcher_test" ],
         [ "NOK", "classokw_1_1core_1_1_n_o_k.html", "classokw_1_1core_1_1_n_o_k" ],

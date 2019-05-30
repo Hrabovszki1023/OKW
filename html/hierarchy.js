@@ -150,6 +150,7 @@ var hierarchy =
     [ "okw.core.Matcher", "classokw_1_1core_1_1_matcher.html", null ],
     [ "okw.core.Matcher_LevenshteinDistanceTest", "classokw_1_1core_1_1_matcher___levenshtein_distance_test.html", null ],
     [ "okw.core.Matcher_LevenshteinMatchTest", "classokw_1_1core_1_1_matcher___levenshtein_match_test.html", null ],
+    [ "okw.core.Matcher_LevRegxWild", "classokw_1_1core_1_1_matcher___lev_regx_wild.html", null ],
     [ "okw.core.Matcher_RegexMatcherTest", "classokw_1_1core_1_1_matcher___regex_matcher_test.html", null ],
     [ "okw.core.Matcher_WildcardMatcherTest", "classokw_1_1core_1_1_matcher___wildcard_matcher_test.html", null ],
     [ "okw.OKW", "interfaceokw_1_1_o_k_w.html", null ],

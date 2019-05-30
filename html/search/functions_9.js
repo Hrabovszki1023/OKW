@@ -1,6 +1,11 @@
 var searchData=
 [
   ['levenshteinmatch',['LevenshteinMatch',['../classokw_1_1core_1_1_matcher.html#a240d99e5718bbcd5c936390194f8e679',1,'okw::core::Matcher']]],
+  ['levenshteinmatch_5f1',['LevenshteinMatch_1',['../classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1c3fc0ec4f88e5e4b71623120557f413',1,'okw::core::Matcher_LevRegxWild']]],
+  ['levenshteinmatch_5f1_5f1',['LevenshteinMatch_1_1',['../classokw_1_1core_1_1_matcher___lev_regx_wild.html#a89ddfe326f93f93fe0fb294c7b1d26e8',1,'okw::core::Matcher_LevRegxWild']]],
+  ['levenshteinmatch_5f2',['LevenshteinMatch_2',['../classokw_1_1core_1_1_matcher___lev_regx_wild.html#a064f96b33a6061c8d2dcddb712709b39',1,'okw::core::Matcher_LevRegxWild']]],
+  ['levenshteinmatch_5f3',['LevenshteinMatch_3',['../classokw_1_1core_1_1_matcher___lev_regx_wild.html#aa3bb39ade0edf094aac2ee54023b51f8',1,'okw::core::Matcher_LevRegxWild']]],
+  ['levenshteinmatch_5f4',['LevenshteinMatch_4',['../classokw_1_1core_1_1_matcher___lev_regx_wild.html#aee463eb189658b1eea0c558870b001b7',1,'okw::core::Matcher_LevRegxWild']]],
   ['loadfromfile',['loadFromFile',['../classokw_1_1_o_k_w___properties.html#afc8dc0670ad58d98cdea0edb292938d8',1,'okw::OKW_Properties']]],
   ['loadfromresource',['loadFromResource',['../classokw_1_1_o_k_w___properties.html#a71802fdc0a4666c9b93e4e3e4c2b66d7',1,'okw::OKW_Properties']]],
   ['logcaption',['LogCaption',['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a92bd154bf0387bd4044fb9065d8b6113',1,'okw.gui.adapter.selenium.SeAnyChildWindow.LogCaption()'],['../classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a592cca9ca404042c076ba6e114daf31d',1,'okw.gui.adapter.selenium.SeAnyWindow.LogCaption()'],['../classokw_1_1core_1_1_core.html#a0aa220ef8efe2df075093c4eb2a08212',1,'okw.core.Core.LogCaption()'],['../classokw_1_1core_1_1_e_n.html#a30ccb279c44093debc4e07686a193765',1,'okw.core.EN.LogCaption()'],['../interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac80485d56013384a4518b25e76b87637',1,'okw.core.IOKW_State.LogCaption()'],['../classokw_1_1core_1_1_n_o_k.html#a1d7880a68a3b872f59528d75e150565b',1,'okw.core.NOK.LogCaption()'],['../classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0',1,'okw.core.OK.LogCaption()']]],

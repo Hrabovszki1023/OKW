@@ -26,6 +26,7 @@ var dir_5a98338ef88f03639644ae0bd40cba1e =
     [ "FrameObjectDictionary_Test.java", "_frame_object_dictionary___test_8java_source.html", null ],
     [ "Matcher_LevenshteinDistanceTest.java", "_matcher___levenshtein_distance_test_8java_source.html", null ],
     [ "Matcher_LevenshteinMatchTest.java", "_matcher___levenshtein_match_test_8java_source.html", null ],
+    [ "Matcher_LevRegxWild.java", "_matcher___lev_regx_wild_8java_source.html", null ],
     [ "Matcher_RegexMatcherTest.java", "_matcher___regex_matcher_test_8java_source.html", null ],
     [ "Matcher_WildcardMatcherTest.java", "_matcher___wildcard_matcher_test_8java_source.html", null ]
 ];

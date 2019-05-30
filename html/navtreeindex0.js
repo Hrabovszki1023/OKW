@@ -24,6 +24,7 @@ var NAVTREEINDEX0 =
 ".html":[10,0,1,6,0],
 ".html":[10,0,1,7],
 ".html":[10,0,1,8],
+".html":[10,0,1],
 ".html":[10,0,1,9],
 ".html":[10,0,1,10],
 ".html":[10,0,1,11],
@@ -34,7 +35,6 @@ var NAVTREEINDEX0 =
 ".html":[10,0,1,16],
 ".html":[10,0,1,17],
 ".html":[10,0,1,18],
-".html":[10,0,1],
 ".html":[10,0,1,0],
 ".html":[10,0,1,1],
 "_all_core_tests_8java_source.html":[11,0,0,0,1,0,0,0,0],
@@ -104,10 +104,11 @@ var NAVTREEINDEX0 =
 "_logger___sngltn_8java_source.html":[11,0,0,0,0,0,0,3,2],
 "_logger___test_8java_source.html":[11,0,0,0,1,0,0,2,0],
 "_matcher_8java_source.html":[11,0,0,0,0,0,0,0,4],
+"_matcher___lev_regx_wild_8java_source.html":[11,0,0,0,1,0,0,0,26],
 "_matcher___levenshtein_distance_test_8java_source.html":[11,0,0,0,1,0,0,0,24],
 "_matcher___levenshtein_match_test_8java_source.html":[11,0,0,0,1,0,0,0,25],
-"_matcher___regex_matcher_test_8java_source.html":[11,0,0,0,1,0,0,0,26],
-"_matcher___wildcard_matcher_test_8java_source.html":[11,0,0,0,1,0,0,0,27],
+"_matcher___regex_matcher_test_8java_source.html":[11,0,0,0,1,0,0,0,27],
+"_matcher___wildcard_matcher_test_8java_source.html":[11,0,0,0,1,0,0,0,28],
 "_n_o_k_8java_source.html":[11,0,0,0,0,0,0,0,5],
 "_o_k_8java_source.html":[11,0,0,0,0,0,0,0,6],
 "_o_k_w_8java_source.html":[11,0,0,0,0,0,0,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "_se_select___e_n___test_8java_source.html":[11,0,1,0,1,0,1,13,3],
 "_se_table_8java_source.html":[11,0,1,0,0,0,0,0,0,0,14],
 "_se_textarea_8java_source.html":[11,0,1,0,0,0,0,0,0,0,15],
-"_se_textarea___e_n___chrome___test_8java_source.html":[11,0,1,0,1,0,1,14,0],
-"_se_textarea___e_n___firefox___test_8java_source.html":[11,0,1,0,1,0,1,14,1]
+"_se_textarea___e_n___chrome___test_8java_source.html":[11,0,1,0,1,0,1,14,0]
 };

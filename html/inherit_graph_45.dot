@@ -5,5 +5,5 @@ digraph "Grafische Darstellung der Klassenhierarchie"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="okw.gui.adapter.ArraList\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1_arra_list.html",tooltip=" "];
+  Node0 [label="okw.FrameObjectDictionary\l_Sngltn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_frame_object_dictionary___sngltn.html",tooltip="Verwaltet zentral die Frame-Klassen: Instanziert Frame-Klassen zu Frame-Objekten und liefert die Refe..."];
 }
