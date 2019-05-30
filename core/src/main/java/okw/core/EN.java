@@ -644,6 +644,16 @@ public class EN
     }
 
     /**
+     *  \copydoc IOKW_State::FileDelete(String)
+     */
+    public static void FileDelete( String fpsPathAndFileName ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.FileDelete( fpsPathAndFileName ); 
+    }
+    
+    
+    /**
      *  \copydoc IOKW_State::VerifyFileExists(String,String)
      */
     public static void VerifyFileExists( String fpsPathAndFileName, String ExpVal ) throws Exception
