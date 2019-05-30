@@ -7,7 +7,9 @@ digraph "okw.OKW_FileHelper.deleteFile"
   rankdir="RL";
   Node21 [label="okw.OKW_FileHelper.deleteFile",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Löscht die gegebene Datei fpsPaFiNa."];
   Node21 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node22 [label="okw.OKW_FileHelper.create\lEmptyDirectory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a3f1e666538681aaa975fde389b707ee7",tooltip=" "];
+  Node22 [label="okw.core.OK.FileDelete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#aef8ea8cabf9dfb28aef18611f69b5af3",tooltip="Löscht die gegebene Datei."];
   Node21 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node23 [label="okw.OKW_FileHelper.move",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a3002a43c90d8b9c368d68642d586defd",tooltip="Verschiebt die gegeben Quell-Datei zu einer neuen Ziel-Datei."];
+  Node23 [label="okw.OKW_FileHelper.create\lEmptyDirectory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a3f1e666538681aaa975fde389b707ee7",tooltip=" "];
+  Node21 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="okw.OKW_FileHelper.move",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a3002a43c90d8b9c368d68642d586defd",tooltip="Verschiebt die gegeben Quell-Datei zu einer neuen Ziel-Datei."];
 }

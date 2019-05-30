@@ -5,5 +5,5 @@ digraph "Grafische Darstellung der Klassenhierarchie"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="okw.core.EN_Keywords\l_ANTLR_Test",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html",tooltip="Testfälle für die Prüfung der ANTLR-Funktionalitäten der Schlüsselwörtern."];
+  Node0 [label="okw.core.EN_FileKeywords_Test",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___file_keywords___test.html",tooltip=" "];
 }

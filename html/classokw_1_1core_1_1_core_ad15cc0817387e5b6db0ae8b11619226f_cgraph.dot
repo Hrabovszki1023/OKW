@@ -5,15 +5,15 @@ digraph "okw.core.Core.VerifyTablecellValue"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node4262 [label="okw.core.Core.VerifyTablecell\lValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert."];
-  Node4262 -> Node4263 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4263 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
-  Node4262 -> Node4264 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4264 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
-  Node4264 -> Node4265 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4265 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
-  Node4265 -> Node4266 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4266 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
-  Node4262 -> Node4267 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4267 [label="okw.core.IOKW_State.Verify\lTablecellValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a08f78760818a6ad5c1fd14640de3d3b1",tooltip="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert."];
+  Node4274 [label="okw.core.Core.VerifyTablecell\lValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert."];
+  Node4274 -> Node4275 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4275 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node4274 -> Node4276 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4276 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node4276 -> Node4277 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4277 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node4277 -> Node4278 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4278 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node4274 -> Node4279 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4279 [label="okw.core.IOKW_State.Verify\lTablecellValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a08f78760818a6ad5c1fd14640de3d3b1",tooltip="Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert."];
 }
