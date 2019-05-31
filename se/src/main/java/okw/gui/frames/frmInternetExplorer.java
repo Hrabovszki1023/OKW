@@ -42,8 +42,6 @@ package okw.gui.frames;
 import java.util.ArrayList;
 
 import okw.gui.adapter.selenium.SeBrowserWindow;
-import okw.gui.adapter.selenium.webdriver.SeDriver;
-import okw.log.Logger_Sngltn;
 
 /**
 * @ingroup groupSeleniumDriverFrames

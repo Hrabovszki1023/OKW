@@ -403,6 +403,121 @@ public class EN_Keywords_ANTLR_Test
     }
 
     /**
+	 * \~german
+	 *
+	 * \~english
+	 * \~
+	 * \author Daniel Krüger
+	 * \date 2019.04.04
+	 */
+	 @Test
+	 public void tc_VerifyBadge_MemorizedValue() throws Exception
+	 {
+	     EN.BeginTest( name.getMethodName() );
+	
+	     // Testscript in Schlüsselwort-Notation
+	     EN.SelectWindow( "Rechner" );
+	
+	     // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+	     // Check the Name, Called Method and Value of Actuel object
+	     assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+	     assertEquals( 1, myClipBoard.getValue().size() );
+	     assertEquals( "Rechner", myClipBoard.getObjectName() );
+	     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+	
+	     // Set Value in "Memory"
+	     OKW_Memorize_Sngltn.getInstance().set( "Key1", "The one and only Value" );
+	
+	     EN.SetValue( "All_MethodsObj", "The one and only Value" );
+	     // Kommen auch mehrere Sollwerte im Objekt ab?
+	     EN.VerifyBadge( "All_MethodsObj", "${Key1}" );
+	
+	     // Check the Name, Called Method and Value of Actuel object
+	     //assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+	     assertEquals( 1, myClipBoard.getValue().size() );
+	
+	     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+	     assertEquals( "VerifyBadge()", myClipBoard.getMethod() );
+	 }
+
+	/**
+	 * \~german
+	 * \brief
+	 *
+	 * \~english
+	 * \~
+	 * \author Daniel KRüger
+	 * \date 2019.04.11
+	 */
+	 @Test
+	 public void tc_VerifyBadgeWCM_MemorizedValue() throws Exception
+	 {
+	     EN.BeginTest( name.getMethodName() );
+	
+	     // Testscript in Schlüsselwort-Notation
+	     EN.SelectWindow( "Rechner" );
+	
+	     // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+	     // Check the Name, Called Method and Value of Actuel object
+	     assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+	     assertEquals( 1, myClipBoard.getValue().size() );
+	     assertEquals( "Rechner", myClipBoard.getObjectName() );
+	     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+	
+	     // Set Value in "Memory"
+	     OKW_Memorize_Sngltn.getInstance().set( "Key1", "* one and * Value" );
+	
+	     // Wert in "All_MethodsObj" setzen.
+	     EN.SetValue( "All_MethodsObj", "The one and only Value" );
+	     // Prüfung des Schlüsselwortes?
+	     EN.VerifyBadgeWCM( "All_MethodsObj", "${Key1}" );
+	
+	     // Check the Name, Called Method and Value of Actuel object
+	     //assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+	     assertEquals( 1, myClipBoard.getValue().size() );
+	
+	     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+	     assertEquals( "VerifyBadge()", myClipBoard.getMethod() );
+	 }
+
+	/**
+	  * \~german
+	  *
+	  * \~english
+	  * \~ 
+	  * \author Daniel Krüger
+	  * \date 2019.04.11
+	  */
+	 @Test
+	 public void tc_VerifyBadgeREGX_MemorizedValue() throws Exception
+	 {
+	     EN.BeginTest( name.getMethodName() );
+	
+	     // Testscript in Schlüsselwort-Notation
+	     EN.SelectWindow( "Rechner" );
+	
+	     // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+	     // Check the Name, Called Method and Value of Actuel object
+	     assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+	     assertEquals( 1, myClipBoard.getValue().size() );
+	     assertEquals( "Rechner", myClipBoard.getObjectName() );
+	     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+	
+	     // Set Value in "Memory"
+	     OKW_Memorize_Sngltn.getInstance().set( "Key1", ".* one and .* Value" );
+	
+	     EN.SetValue( "All_MethodsObj", "The one and only Value" );
+	     EN.VerifyBadgeREGX( "All_MethodsObj", "${Key1}" );
+	
+	     // Check the Name, Called Method and Value of Actuel object
+	     // assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
+	     assertEquals( 1, myClipBoard.getValue().size() );
+	
+	     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+	     assertEquals( "VerifyBadge()", myClipBoard.getMethod() );
+	 }
+
+	/**
      *  \~german
      *  \brief
      * 

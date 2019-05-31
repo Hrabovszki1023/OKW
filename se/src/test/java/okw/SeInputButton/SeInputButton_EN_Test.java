@@ -280,10 +280,10 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("InputButton not Active");
 
                 EN.MemorizeLabel("Text_1", "SeInputButton_MemorizeLabel_1" );
-                assertEquals("Label für Button1: ", myMM.get("SeInputButton_MemorizeLabel_1"));
+                assertEquals("Label für Button1:", myMM.get("SeInputButton_MemorizeLabel_1"));
 
                 EN.MemorizeLabel("Text_2", "SeInputButton_MemorizeLabel_2");
-                assertEquals("Label für Button2: ", myMM.get("SeInputButton_MemorizeLabel_2"));
+                assertEquals("Label für Button2:", myMM.get("SeInputButton_MemorizeLabel_2"));
 
 
                 EN.StopApp( ApplicationName );
@@ -793,8 +793,8 @@ import org.junit.rules.TestName;
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
                 EN.SelectWindow("InputButton not Active");
 
-                EN.VerifyLabel("Text_1", "Label für Button1: ");
-                EN.VerifyLabel("Text_2", "Label für Button2: ");
+                EN.VerifyLabel("Text_1", "Label für Button1:");
+                EN.VerifyLabel("Text_2", "Label für Button2:");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -818,8 +818,8 @@ import org.junit.rules.TestName;
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
                 EN.SelectWindow("InputButton not Active");
 
-                EN.VerifyLabelWCM("Text_1", "Label für Button#: ");
-                EN.VerifyLabelWCM("Text_2", "Label für Button#: ");
+                EN.VerifyLabelWCM("Text_1", "Label für Button#:");
+                EN.VerifyLabelWCM("Text_2", "Label für Button#:");
                 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -843,8 +843,8 @@ import org.junit.rules.TestName;
               // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
                 EN.SelectWindow("InputButton not Active");
 
-                EN.VerifyLabelREGX("Text_1", "Label für Button1: ");
-                EN.VerifyLabelREGX("Text_2", "Label für Button2: ");
+                EN.VerifyLabelREGX("Text_1", "Label für Button1:");
+                EN.VerifyLabelREGX("Text_2", "Label für Button2:");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();

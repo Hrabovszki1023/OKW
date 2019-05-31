@@ -1,7 +1,6 @@
 package okw.gui.frames.SeRadioList;
 
 import okw.OKW;
-import okw.gui.OKWLocator;
 import okw.gui.OKWLocatorBase;
 import okw.gui.adapter.selenium.SeBrowserChild;
 import okw.gui.adapter.selenium.SeInputRadio;

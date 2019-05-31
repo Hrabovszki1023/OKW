@@ -198,6 +198,10 @@ public class EN_Keywords_NOK_Test
         EN.VerifyValueWCM( "All_MethodsObj", "??? one and only Value" );
         EN.VerifyValueREGX( "All_MethodsObj", "\\w{3} one and only Value" );
         
+        EN.VerifyBadge( "All_MethodsObj", "The one and only Value" );
+        EN.VerifyBadgeWCM( "All_MethodsObj", "??? one and only Value" );
+        EN.VerifyBadgeREGX( "All_MethodsObj", "\\w{3} one and only Value" );
+        
         // Datei Schlüsselwörter
         
         EN.EndTest();

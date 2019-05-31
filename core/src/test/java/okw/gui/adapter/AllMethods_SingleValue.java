@@ -720,7 +720,27 @@ import okw.log.Logger_Sngltn;
         }
 
 
-        public Boolean VerifyExists()
+        public ArrayList<String> VerifyBadge()
+		{
+		    ArrayList<String> lvLsReturn = new ArrayList<String>();
+		
+		    this.myLogger.LogFunctionStartDebug("VerifyBadge");
+		    
+		    lvLsReturn.addAll(this.myALValue);
+		
+		    myClipboard.Clear();
+		    String lvs_ObjectName = getKN();
+		    myClipboard.setObjectName(lvs_ObjectName);
+		    myClipboard.setMethod("VerifyBadge()");
+		
+		    myClipboard.getValue().addAll(this.myALValue);;
+		
+		    this.myLogger.LogFunctionEndDebug();
+		
+		    return lvLsReturn;
+		}
+
+		public Boolean VerifyExists()
         {
             this.myLogger.LogFunctionStartDebug("VerifyExists");
 

@@ -500,6 +500,36 @@ public class NOK implements IOKW_State
     }
 
     /**
+	 * \copydoc IOKW_State::VerifyBadge(String,String)
+	 */
+	public void VerifyBadge ( String BN, String ExpVal )
+	{
+	    Log.LogFunctionStartDebug( "VerifyBadge", "BN", BN, "ExpVal", ExpVal );
+	
+	    Log.LogFunctionEndDebug();
+	}
+
+	/**
+	 * \copydoc IOKW_State::VerifyBadgeWCM(String,String)
+	 */
+	public void VerifyBadgeWCM( String FN, String ExpVal )
+	{
+	    Log.LogFunctionStartDebug( "VerifyBadgeWCM", "FN", FN, "ExpVal", ExpVal );
+	
+	    Log.LogFunctionEndDebug();
+	}
+
+	/**
+	 * \copydoc IOKW_State::VerifyBadgeREGX(String,String)
+	 */
+	public void VerifyBadgeREGX( String FN, String ExpVal )
+	{
+	    Log.LogFunctionStartDebug( "VerifyBadgeREGX", "FN", FN, "ExpVal", ExpVal );
+	
+	    Log.LogFunctionEndDebug();
+	}
+
+	/**
      *  \copydoc IOKW_State::VerifyCaption(String,String)
      */
     public void VerifyCaption( String FN, String ExpVal )

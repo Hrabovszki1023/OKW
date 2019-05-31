@@ -46,7 +46,6 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import okw.OKW;
 import okw.gui.adapter.selenium.SeBrowserWindow;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
-import okw.log.Logger_Sngltn;
 
 /**
 * @ingroup groupSeleniumDriverFrames

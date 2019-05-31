@@ -779,6 +779,102 @@ public class Core implements IOKW_State
     }
 
     /**
+	 *  \copydoc IOKW_State::VerifyBadge(String,String)
+	 */
+	public void VerifyBadge( String BN, String ExpVal ) throws Exception
+	{
+	    try
+	    {
+	        Log.LogKeyWordStart( LM.GetMessage( "VerifyBadge", "KeyWordName" ), BN, ExpVal );
+	        this.CurrentState.VerifyBadge( BN, ExpVal );
+	    }
+	    finally
+	    {
+	        Log.LogKeyWordEnd();
+	    }
+	}
+
+	/**
+	 *  \copydoc IOKW_State::VerifyBadge(String,String)
+	 */
+	public void VerifyBadgeWCM( String BN, String ExpVal ) throws Exception
+	{
+	    try
+	    {
+	        Log.LogKeyWordStart( LM.GetMessage( "VerifyBadgeWCM", "KeyWordName" ), BN, ExpVal );
+	        this.CurrentState.VerifyBadgeWCM( BN, ExpVal );
+	    }
+	    finally
+	    {
+	        Log.LogKeyWordEnd();
+	    }
+	}
+
+	/**
+	 *  \copydoc IOKW_State::VerifyBadge(String,String)
+	 */
+	public void VerifyBadgeREGX( String BN, String ExpVal ) throws Exception
+	{
+	    try
+	    {
+	        Log.LogKeyWordStart( LM.GetMessage( "VerifyBadgeREGX", "KeyWordName" ), BN, ExpVal );
+	        this.CurrentState.VerifyBadgeREGX( BN, ExpVal );
+	    }
+	    finally
+	    {
+	        Log.LogKeyWordEnd();
+	    }
+	}
+
+	/**
+	 * \copydoc IOKW_State::VerifyCaption(String,String)
+	 */
+	public void VerifyCaption( String FN, String ExpVal ) throws Exception
+	{
+	    try
+	    {
+	        Log.LogKeyWordStart( LM.GetMessage( "VerifyCaption", "KeyWordName" ), FN, ExpVal );
+	        this.CurrentState.VerifyCaption( FN, ExpVal );
+	    }
+	    finally
+	    {
+	        Log.LogKeyWordEnd();
+	    }
+	}
+
+	/**
+	 * \copydoc IOKW_State::VerifyCaptionWCM(String,String)
+	 */
+	public void VerifyCaptionWCM( String FN, String ExpVal ) throws Exception
+	{
+	    try
+	    {
+	        Log.LogKeyWordStart( LM.GetMessage( "VerifyCaptionWCM", "KeyWordName" ), FN, ExpVal );
+	        this.CurrentState.VerifyCaptionWCM( FN, ExpVal );
+	    }
+	    finally
+	    {
+	        Log.LogKeyWordEnd();
+	    }
+	}
+
+	/**
+	 * \copydoc IOKW_State::VerifyCaptionREGX(String,String)
+	 */
+	public void VerifyCaptionREGX( String FN, String ExpVal ) throws Exception
+	{
+	    try
+	    {
+	        Log.LogKeyWordStart( LM.GetMessage( "VerifyCaptionREGX", "KeyWordName" ), FN, ExpVal );
+	        this.CurrentState.VerifyCaptionREGX( FN, ExpVal );
+	    }
+	    finally
+	    {
+	        Log.LogKeyWordEnd();
+	    }
+	}
+
+	/**
      *  \copydoc IOKW_State::VerifyExists(String,String)
      */
     public void VerifyExists( String FN, String ExpVal ) throws Exception
@@ -970,55 +1066,6 @@ public class Core implements IOKW_State
         }
     }
 
-
-    /**
-     * \copydoc IOKW_State::VerifyCaption(String,String)
-     */
-    public void VerifyCaption( String FN, String ExpVal ) throws Exception
-    {
-        try
-        {
-            Log.LogKeyWordStart( LM.GetMessage( "VerifyCaption", "KeyWordName" ), FN, ExpVal );
-            this.CurrentState.VerifyCaption( FN, ExpVal );
-        }
-        finally
-        {
-            Log.LogKeyWordEnd();
-        }
-    }
-
-
-    /**
-     * \copydoc IOKW_State::VerifyCaptionWCM(String,String)
-     */
-    public void VerifyCaptionWCM( String FN, String ExpVal ) throws Exception
-    {
-        try
-        {
-            Log.LogKeyWordStart( LM.GetMessage( "VerifyCaptionWCM", "KeyWordName" ), FN, ExpVal );
-            this.CurrentState.VerifyCaptionWCM( FN, ExpVal );
-        }
-        finally
-        {
-            Log.LogKeyWordEnd();
-        }
-    }
-
-    /**
-     * \copydoc IOKW_State::VerifyCaptionREGX(String,String)
-     */
-    public void VerifyCaptionREGX( String FN, String ExpVal ) throws Exception
-    {
-        try
-        {
-            Log.LogKeyWordStart( LM.GetMessage( "VerifyCaptionREGX", "KeyWordName" ), FN, ExpVal );
-            this.CurrentState.VerifyCaptionREGX( FN, ExpVal );
-        }
-        finally
-        {
-            Log.LogKeyWordEnd();
-        }
-    }
 
     /**
      *  \copydoc IOKW_State::VerifyLabel(String,String)

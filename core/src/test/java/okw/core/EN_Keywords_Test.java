@@ -1396,6 +1396,110 @@ public class EN_Keywords_Test
     }
 
     /**
+	 * \~german
+	 * "Normaler" Testfall für das Schlüsselwort EN.VerifyBadge(String,String).
+	 * 
+	 *  \~english
+	 *  \~
+	 *  "Normal" test case for the keyword EN.VerifyBadge(String,String).
+	 *  \author Daniel Krüger
+	 *  \date 2019.03.25
+	 */
+	@Test
+	public void tc_VerifyBadge() throws Exception
+	{
+	    EN.BeginTest( name.getMethodName() );
+	
+	    // Testscript in Schlüsselwort-Notation
+	    EN.SelectWindow( "Rechner" );
+	
+	    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+	    // Check the Name, Called Method and Value of Actuel object
+	    assertEquals( "Rechner", myClipBoard.getObjectName() );
+	    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+	
+	    myClipBoard.Clear();
+	    
+	    EN.SetValue( "All_MethodsObj", "The one and only VerifyBadge" );
+	    EN.VerifyBadge( "All_MethodsObj", "The one and only VerifyBadge" );
+	
+	    // Check the Name, Called Method and Value of Actuel object
+	    assertEquals( 1, myClipBoard.getValue().size() );
+	    assertEquals( "The one and only VerifyBadge", myClipBoard.getValue().get( 0 ) );
+	    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+	    assertEquals( "VerifyBadge()", myClipBoard.getMethod() );
+	}
+
+	/**
+	 * \~german
+	 * "Normaler" Testfall für das Schlüsselwort EN.VerifyLabelREGX(String,String).
+	 * 
+	 *  \~english
+	 *  \~
+	 *  "Normal" test case for the keyword EN.VerifyLabelREGX(String,String).
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2013.12.26
+	 */
+	@Test
+	public void tc_VerifyBadgeREGX() throws Exception
+	{
+	    EN.BeginTest( name.getMethodName() );
+	
+	    // Testscript in Schlüsselwort-Notation
+	    EN.SelectWindow( "Rechner" );
+	
+	    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+	    // Check the Name, Called Method and Value of Actuel object
+	    assertEquals( "Rechner", myClipBoard.getObjectName() );
+	    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+	
+	    EN.SetValue( "All_MethodsObj", "The one and only VerifyBadgeREGX" );
+	    myClipBoard.Clear();
+	    EN.VerifyBadgeREGX( "All_MethodsObj", "\\w{3} one and only VerifyBadgeREGX" );
+	
+	    // Check the Name, Called Method and Value of Actuel object
+	    assertEquals( 1, myClipBoard.getValue().size() );
+	    assertEquals( "The one and only VerifyBadgeREGX", myClipBoard.getValue().get( 0 ) );
+	    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+	    assertEquals( "VerifyBadge()", myClipBoard.getMethod() );
+	}
+
+	/**
+	 * \~german
+	 * "Normaler" Testfall für das Schlüsselwort EN.VerifyLabelWCM(String,String). 
+	 * 
+	 *  \~english
+	 *  "Normal" test case for the keyword EN.VerifyLabelWCM(String,String).
+	 *  \~
+	 *  "Normal" test case for the keyword EN.VerifyLabelWCM(String,String). 
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2013.12.26
+	 */
+	@Test
+	public void tc_VerifyBadgeWCM() throws Exception
+	{
+	    EN.BeginTest( name.getMethodName() );
+	
+	    // Testscript in Schlüsselwort-Notation
+	    EN.SelectWindow( "Rechner" );
+	
+	    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+	    // Check the Name, Called Method and Value of Actuel object
+	    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+	    assertEquals( "Rechner", myClipBoard.getObjectName() );
+	    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+	
+	    EN.SetValue( "All_MethodsObj", "The one and only VerifyBadgeWCM" );
+	    myClipBoard.Clear();
+	    EN.VerifyBadgeWCM( "All_MethodsObj", "??? one and only VerifyBadgeWCM" );
+	    // Check the Name, Called Method and Value of Actuel object
+	    assertEquals( 1, myClipBoard.getValue().size() );
+	    assertEquals( "The one and only VerifyBadgeWCM", myClipBoard.getValue().get( 0 ) );
+	    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+	    assertEquals( "VerifyBadge()", myClipBoard.getMethod() );
+	}
+
+	/**
      * \~german
      * \brief "Normaler" Testfall für das Schlüsselwort VerifyCaption. 
      * 

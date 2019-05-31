@@ -49,6 +49,7 @@ import okw.log.Logger_Sngltn;
 import okw.LogMessenger;
 import okw.OKW_Const_Sngltn;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -202,8 +203,11 @@ public class SeAnyChildWindow extends AnyChildwindow
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
             this.WaitForMe();
 
-            // The Attribute "value" wird als Beschriftung angezeigt...
-            lvLsReturn.add( this.Me().getAttribute( "textContent" ) );
+            // The Attribute "textContent" wird als Beschriftung angezeigt...
+            String myAttribute = this.Me().getAttribute( "textContent" );
+            myAttribute = StringUtils.normalizeSpace( myAttribute );
+            
+            lvLsReturn.add( myAttribute );
         }
         finally
         {
@@ -372,7 +376,12 @@ public class SeAnyChildWindow extends AnyChildwindow
 
             // 2.schritt nun Tag Label mit for= "${lvsID}" finden.
             WebElement label = SeDriver.getInstance().getDriver().findElement( By.xpath( "//label[@for='" + lvsID + "']" ) );
-            lvLsReturn.add( label.getAttribute( "textContent" ) );
+            
+            // The Attribute "textContent" wird als Beschriftung angezeigt...
+            String myAttribute = label.getAttribute( "textContent" );
+            myAttribute = StringUtils.normalizeSpace( myAttribute );
+            
+            lvLsReturn.add( myAttribute );
         }
         finally
         {
@@ -384,7 +393,6 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 
     /**  \~german
-    *  \brief
     *  Ermittelt den textuellen Inhalt des ToolTips.
     *  
     *  Es wird das Attribute "title" ausgelesen.
@@ -409,8 +417,11 @@ public class SeAnyChildWindow extends AnyChildwindow
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
             this.WaitForMe();
 
-            // The Attribute "Title" is shown as Tooltip...
-            lvLsReturn.add( this.Me().getAttribute( "title" ) );
+            // The Attribute "title" is shown as Tooltip...
+            String myAttribute = this.Me().getAttribute( "title" );
+            myAttribute = StringUtils.normalizeSpace( myAttribute );
+            
+            lvLsReturn.add( myAttribute );
         }
         finally
         {
