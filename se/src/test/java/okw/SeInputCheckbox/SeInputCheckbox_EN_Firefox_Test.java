@@ -13,8 +13,7 @@ import org.junit.*;
 */
 public class SeInputCheckbox_EN_Firefox_Test extends SeInputCheckbox_EN_Test
 {
-
-    static Log2HTML myLog2HTML = null;
+	protected static Log2HTML myLog2HTML = null;
 
     @BeforeClass
     public static void setUpBeforeClass() throws Exception

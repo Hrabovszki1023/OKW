@@ -13,7 +13,7 @@ import org.junit.*;
 */
 public class SeInputCheckbox_EN_Chrome_Test extends SeInputCheckbox_EN_Test
 {
-    private static Log2HTML myLog2HTML = null;
+	protected static Log2HTML myLog2HTML = null;
 
     @BeforeClass
     public static void setUpBeforeClass() throws Exception

@@ -13,7 +13,7 @@ import org.junit.*;
 */
 public class SeBACK_EN_Firefox_Test extends SeBACK_EN_Test
 {
-	static Log2HTML myLog2HTML = null;
+	protected static Log2HTML myLog2HTML = null;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception

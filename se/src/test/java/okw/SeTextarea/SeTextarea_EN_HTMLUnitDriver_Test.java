@@ -14,7 +14,7 @@ import org.junit.BeforeClass;
 */
 public class SeTextarea_EN_HTMLUnitDriver_Test extends SeTextarea_EN_Test
 {
-	static Log2HTML myLog2HTML = null;
+	protected static Log2HTML myLog2HTML = null;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception

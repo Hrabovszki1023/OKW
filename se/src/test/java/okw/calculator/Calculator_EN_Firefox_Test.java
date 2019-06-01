@@ -8,8 +8,6 @@ import org.junit.BeforeClass;
 
 public class Calculator_EN_Firefox_Test extends Calculator_EN_Test
 {
-	static Log2HTML myLog2HTML = null;
-
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception
 	{

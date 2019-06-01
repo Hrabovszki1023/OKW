@@ -15,7 +15,7 @@ import org.junit.BeforeClass;
 */
 public class SeMAXIMIZE_EN_Chrome_Test extends SeMAXIMIZE_EN_Test
 {
-	static Log2HTML myLog2HTML = null;
+	protected static Log2HTML myLog2HTML = null;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception

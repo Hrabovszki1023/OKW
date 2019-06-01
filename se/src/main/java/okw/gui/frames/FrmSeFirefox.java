@@ -26,7 +26,7 @@ public class FrmSeFirefox extends SeBrowserWindow
     /**
      *  \copydoc OKW_Memorize_Sngltn
      */
-    private static OKW_Memorize_Sngltn MEM = OKW_Memorize_Sngltn.getInstance();
+    protected static OKW_Memorize_Sngltn MEM = OKW_Memorize_Sngltn.getInstance();
 
     @Override
     public void SelectWindow()

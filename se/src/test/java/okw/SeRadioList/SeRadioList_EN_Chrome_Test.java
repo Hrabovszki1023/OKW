@@ -13,7 +13,7 @@ import org.junit.*;
 */
 public class SeRadioList_EN_Chrome_Test extends SeRadioList_EN_Test
 {
-  static Log2HTML myLog2HTML = null;
+	protected static Log2HTML myLog2HTML = null;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception

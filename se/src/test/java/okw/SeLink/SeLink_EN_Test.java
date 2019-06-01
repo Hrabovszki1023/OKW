@@ -22,7 +22,7 @@ public class SeLink_EN_Test
 {
   String                  cvOKWObject = "Link" + "";
 
-  OKW_Memorize_Sngltn     myMM        = OKW_Memorize_Sngltn.getInstance();
+  protected OKW_Memorize_Sngltn     myMM        = OKW_Memorize_Sngltn.getInstance();
 
   protected static String ApplicationName;
 

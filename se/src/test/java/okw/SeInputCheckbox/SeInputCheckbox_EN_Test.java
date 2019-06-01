@@ -20,7 +20,7 @@ public class SeInputCheckbox_EN_Test
 {
 	protected String cvsObjektName = "SeCheckBox";
 
-	OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
+	protected OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
 	
 	protected static String ApplicationName;
 	

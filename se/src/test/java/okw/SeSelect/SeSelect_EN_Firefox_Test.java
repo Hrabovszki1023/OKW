@@ -16,7 +16,7 @@ import org.junit.BeforeClass;
 public class SeSelect_EN_Firefox_Test extends SeSelect_EN_Test
 {
 
-  static Log2HTML myLog2HTML = null;
+	protected static Log2HTML myLog2HTML = null;
   
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception

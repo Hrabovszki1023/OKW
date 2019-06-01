@@ -2,7 +2,7 @@ package okw.SeTextarea;
 
 /*
  ==============================================================================
- Copyright © 2012 - 2017, 2016 IT-Beratung Hrabovszki
+ Copyright © 2012 - 2019, 2016 IT-Beratung Hrabovszki
  ============================================================================== 
 
  This file is part of OpenKeyWord.
@@ -56,7 +56,7 @@ import org.junit.rules.TestName;
 public class SeTextarea_EN_Test
 {
 
-    private OKW_Memorize_Sngltn myMem = OKW_Memorize_Sngltn.getInstance();
+    protected OKW_Memorize_Sngltn myMem = OKW_Memorize_Sngltn.getInstance();
 
     protected static String     ApplicationName;
 
@@ -210,7 +210,7 @@ public class SeTextarea_EN_Test
         EN.SelectWindow( "SeTextarea" );
         EN.MemorizeExists( "Textarea 1", "SeTextarea_MemorizeExists_1" );
 
-        assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().get( "SeTextarea_MemorizeExists_1" ) );
+        assertEquals( "YES", myMem.get( "SeTextarea_MemorizeExists_1" ) );
         EN.StopApp( ApplicationName );
         EN.EndTest();
     }

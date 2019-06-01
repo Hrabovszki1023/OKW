@@ -1,7 +1,7 @@
 package okw.SeInputButton;
 /*
 ==============================================================================
-Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+Copyright © 2012 - 2019 IT-Beratung Hrabovszki
 ============================================================================== 
 
 This file is part of OpenKeyWord.
@@ -64,7 +64,7 @@ import org.junit.rules.TestName;
     @Ignore("Ignoring the whole fixture")
     public class SeInputButton_EN_Test
     {
-    	OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
+    	protected OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
     	
     	protected static String ApplicationName;
     	

@@ -14,7 +14,7 @@ import org.junit.BeforeClass;
 */
 public class SeInputButton_EN_Firefox_Test extends SeInputButton_EN_Test
 {
-    static Log2HTML myLog2HTML = null;
+	protected static Log2HTML myLog2HTML = null;
 
     @BeforeClass
     public static void setUpBeforeClass() throws Exception

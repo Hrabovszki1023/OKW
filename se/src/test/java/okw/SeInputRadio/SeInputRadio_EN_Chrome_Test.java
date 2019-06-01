@@ -15,7 +15,7 @@ import org.junit.BeforeClass;
 */
 public class SeInputRadio_EN_Chrome_Test extends SeInputRadio_EN_Test
 {
-    private static Log2HTML myLog2HTML = null;
+	protected static Log2HTML myLog2HTML = null;
 
     @BeforeClass
     public static void setUpBeforeClass() throws Exception

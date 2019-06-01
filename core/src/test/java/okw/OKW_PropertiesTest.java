@@ -18,7 +18,7 @@ import okw.exceptions.OKWFileDoesNotExistsException;
 public class OKW_PropertiesTest
 {
 
-    OKW_Properties myProperties = OKW_Properties.getInstance();
+    protected OKW_Properties myProperties = OKW_Properties.getInstance();
 
     @Test
     public final void tc_clear()

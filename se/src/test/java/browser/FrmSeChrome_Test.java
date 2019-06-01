@@ -15,7 +15,6 @@ import org.junit.BeforeClass;
 */
 public class FrmSeChrome_Test extends FrmBrowserBase_Test
 {
-	static Log2HTML myLog2HTML = null;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception

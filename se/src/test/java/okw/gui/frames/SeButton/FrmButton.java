@@ -1,6 +1,6 @@
 /*
  ==============================================================================
- Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+ Copyright © 2012 - 2019 IT-Beratung Hrabovszki
  ============================================================================== 
 
  This file is part of OpenKeyWord.

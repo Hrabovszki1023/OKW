@@ -15,7 +15,7 @@ import org.junit.BeforeClass;
 */
 public class SeInputField_EN_Chrome_Test extends SeInputField_EN_Test
 {
-	static Log2HTML myLog2HTML = null;
+	protected static Log2HTML myLog2HTML = null;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception

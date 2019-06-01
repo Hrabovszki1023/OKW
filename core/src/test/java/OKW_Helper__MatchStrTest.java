@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -90,7 +90,7 @@ public class OKW_Helper__MatchStrTest
     	   }
     
 	/// \copydoc CurrentObject::Log()
-	public static Logger_Sngltn Log;
+    protected static Logger_Sngltn Log;
 
 		//@BeforeClass
         public static void myTestFixtureSetUp()
