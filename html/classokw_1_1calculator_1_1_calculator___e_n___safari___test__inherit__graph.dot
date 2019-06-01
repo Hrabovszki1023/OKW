@@ -4,7 +4,7 @@ digraph "okw.calculator.Calculator_EN_Safari_Test"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="{okw.calculator.Calculator\l_EN_Safari_Test\n|~ myLog2HTML\l|+ setUpBeforeClass()\l+ tearDownAfterClass()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node0 [label="{okw.calculator.Calculator\l_EN_Safari_Test\n||+ setUpBeforeClass()\l+ tearDownAfterClass()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node1 [label="{okw.calculator.Calculator\l_EN_Test\n|+ name\l# ApplicationName\l|+ myAfter()\l+ tc_Calculator_Addition_EN()\l+ tc_Calculator_Subtraktion_EN()\l+ tc_Calculator_Multiplikation_en()\l+ tc_Calculator_allkeys_en()\l+ tc_Taschenrechner_allkeyexists_en()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1calculator_1_1_calculator___e_n___test.html",tooltip=" "];
+  Node1 [label="{okw.calculator.Calculator\l_EN_Test\n|+ name\l# myLog2HTML\l# ApplicationName\l|+ myAfter()\l+ tc_Calculator_Addition_EN()\l+ tc_Calculator_Subtraktion_EN()\l+ tc_Calculator_Multiplikation_en()\l+ tc_Calculator_allkeys_en()\l+ tc_Taschenrechner_allkeyexists_en()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1calculator_1_1_calculator___e_n___test.html",tooltip=" "];
 }

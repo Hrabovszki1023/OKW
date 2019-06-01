@@ -62,9 +62,9 @@ digraph "okw.gui.AnyWindow"
   Node26 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
   Node28 [label="{okw.gui.frames.frmSafari\n|+ URL\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1frm_safari.html",tooltip=" "];
   Node26 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node29 [label="{okw.gui.frames.FrmSeChrome\n|~ OKW_Prop\l- MEM\l|+ SelectWindow()\l+ StartApp()\l+ StopApp()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html",tooltip=" "];
+  Node29 [label="{okw.gui.frames.FrmSeChrome\n|~ OKW_Prop\l# MEM\l|+ SelectWindow()\l+ StartApp()\l+ StopApp()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html",tooltip=" "];
   Node26 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node30 [label="{okw.gui.frames.FrmSeFirefox\n|- MEM\l|+ SelectWindow()\l+ StartApp()\l+ StopApp()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1_frm_se_firefox.html",tooltip=" "];
+  Node30 [label="{okw.gui.frames.FrmSeFirefox\n|# MEM\l|+ SelectWindow()\l+ StartApp()\l+ StopApp()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1_frm_se_firefox.html",tooltip=" "];
   Node26 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
   Node31 [label="{okw.gui.frames.FrmSeHTMLUnit\n||+ SelectWindow()\l+ StartApp()\l+ StopApp()\l+ TypeKey()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1_frm_se_h_t_m_l_unit.html",tooltip="Diese Klasse representiert den HTMLUnit-Driver, der mit Selenium angsteuert wird."];
   Node0 -> Node32 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];

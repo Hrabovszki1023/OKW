@@ -9,7 +9,7 @@ digraph "okw.SeInputButton.SeInputButton_EN_Firefox_Test"
   Node3 [label="{okw.SeInputButton.SeInput\lButton_EN_Test\n|# ApplicationName\l|+ tc_ClickOn()\l+ tc_LogCaption()\l+ tc_LogExists()\l+ tc_LogHasFocus()\l+ tc_LogToolTip()\l+ tc_LogValue_OKWFrameObject\lMethodNotImplemented()\l+ tc_LogIsActive()\l+ tc_MemorizeCaption()\l+ tc_MemorizeLabel()\l+ tc_MemorizeExists()\l+ tc_MemorizeHasFocus()\l+ tc_MemorizeIsActive()\l+ tc_MemorizeTooltip()\l+ tc_MemorizeValue_OKWFrame\lObjectMethodNotImplemented()\l+ tc_SetFocus_VerifyHasFocus()\l+ tc_SelectMenu_OKWFrameObject\lMethodNotImplemented()\l+ tc_SelectMenu2_OKWFrameObject\lMethodNotImplemented()\l+ tc_SetValue_OKWFrameObject\lMethodNotImplemented()\l+ tc_Select_OKWFrameObject\lMethodNotImplemented()\l+ tc_VerifyCaption()\lund 19 mehr ...\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_input_button_1_1_se_input_button___e_n___test.html",tooltip="Basisklasse für Test des GUI-Adapters SeInputButton."];
   Node4 -> Node3 [color="grey25",fontsize="10",style="solid",label=" +name" ,arrowhead="odiamond",fontname="Helvetica"];
   Node4 [label="{TestName\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node5 -> Node3 [color="grey25",fontsize="10",style="solid",label=" ~myMM" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 -> Node3 [color="grey25",fontsize="10",style="solid",label=" #myMM" ,arrowhead="odiamond",fontname="Helvetica"];
   Node5 [label="{okw.OKW_Memorize_Sngltn\n|+ OKW_Memorize_xml\l|+ exists()\l+ get()\l+ init()\l+ save()\l+ set()\l+ getInstance()\l+ reset()\l- OKW_Memorize_Sngltn()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___memorize___sngltn.html",tooltip="OKW_Memorize ist die Speicher-Klasse hinter den Merke*-Schlüsselwörter."];
   Node6 -> Node5 [color="grey25",fontsize="10",style="solid",label=" -LM" ,arrowhead="odiamond",fontname="Helvetica"];
   Node6 [label="{okw.LogMessenger\n|- cvsClassName\l|+ LogMessenger()\l+ GetMessage()\l+ GetMessage()\l+ GetMessage()\l+ GetMessage()\l- ReadMessage()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html",tooltip="LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh..."];
@@ -31,6 +31,6 @@ digraph "okw.SeInputButton.SeInputButton_EN_Firefox_Test"
   Node14 -> Node13 [color="grey25",fontsize="10",style="solid",label=" -LoggerList" ,arrowhead="odiamond",fontname="Helvetica"];
   Node14 [label="{ArrayList\< okw.log.ILogger \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node13 -> Node13 [color="grey25",fontsize="10",style="solid",label=" -Instance" ,arrowhead="odiamond",fontname="Helvetica"];
-  Node15 -> Node2 [color="grey25",fontsize="10",style="solid",label=" ~myLog2HTML" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node15 -> Node2 [color="grey25",fontsize="10",style="solid",label=" #myLog2HTML" ,arrowhead="odiamond",fontname="Helvetica"];
   Node15 [label="{Log2HTML\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

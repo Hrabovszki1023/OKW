@@ -4,7 +4,7 @@ digraph "okw.SeButton.SeButton_EN_HTMLUnitDriver_Test"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="{okw.SeButton.SeButton\l_EN_HTMLUnitDriver_Test\n|- myLog2HTML\l|+ setUpBeforeClass()\l+ tearDownAfterClass()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node0 [label="{okw.SeButton.SeButton\l_EN_HTMLUnitDriver_Test\n|# myLog2HTML\l|+ setUpBeforeClass()\l+ tearDownAfterClass()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
   Node1 [label="{okw.SeButton.SeButton\l_EN_Test\n|+ name\l# myMM\l# ApplicationName\l|+ tcClickOn()\l+ tcLogCaption()\l+ tcLogExists()\l+ tcLogHasFocus()\l+ tcLogToolTip()\l+ tcLogValue_OKWFrameObject\lMethodNotImplemented()\l+ tcLogIsActive()\l+ tcMemorizeCaption()\l+ tcMemorizeLabel()\l+ tcMemorizeExists()\l+ tcMemorizeHasFocus()\l+ tcMemorizeIsActive()\l+ tcMemorizeTooltip()\l+ tcMemorizeValue_OKWFrame\lObjectMethodNotImplemented()\l+ tcSetFocus_VerifyHasFocus()\l+ tcSelectMenu_OKWFrameObject\lMethodNotImplemented()\l+ tcSelectMenu2_OKWFrameObject\lMethodNotImplemented()\l+ tcSetValue_OKWFrameObject\lMethodNotImplemented()\l+ tcSelect_OKWFrameObjectMethod\lNotImplemented()\l+ tcVerifyCaption()\lund 22 mehr ...\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_se_button_1_1_se_button___e_n___test.html",tooltip="Basisklasse für Tests des GUI-Adapters SeButton."];
 }

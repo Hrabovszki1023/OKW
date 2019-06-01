@@ -1,7 +1,5 @@
 var NAVTREEINDEX15 =
 {
-"ref_glossary.html#refTN":[4,0,8,1],
-"ref_l_o_const.html":[1],
 "ref_l_o_const.html#refDELETE":[1,0],
 "ref_l_o_const.html#refEMPTY":[1,2],
 "ref_l_o_const.html#refHSEP_VSEP":[1,4],
