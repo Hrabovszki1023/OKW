@@ -1,0 +1,61 @@
+digraph "okw.semaximize.SeMAXIMIZE_EN_Test.tcVerifyIsActive"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node416 [label="okw.semaximize.SeMAXIMIZE\l_EN_Test.tcVerifyIsActive",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Prüft, ob die Methode VerifyIsActive für MAXIMIZE implementiert ist."];
+  Node416 -> Node417 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node417 [label="okw.core.EN.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69",tooltip="Markiert den Anfang eines neuen Testfalls."];
+  Node417 -> Node418 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node418 [label="okw.core.Core.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100",tooltip="Setzt die Sprache auf den gegebenen wert Language."];
+  Node418 -> Node419 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node419 [label="okw.core.IOKW_State.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097",tooltip="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)."];
+  Node417 -> Node420 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node420 [label="okw.core.Core.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8",tooltip="Markiert den Anfang eines neuen Testfalls."];
+  Node420 -> Node421 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node421 [label="okw.log.Logger_Sngltn.Log\lTestcaseStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb",tooltip="Ausgabe des Testfalls."];
+  Node420 -> Node422 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node422 [label="okw.core.IOKW_State.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13",tooltip="Markiert den Anfang eines neuen Testfalls."];
+  Node416 -> Node423 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node423 [label="okw.core.EN.StartApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aaa7465ee7f135c724668d8b22dc2219f",tooltip="Startet die gegebene Anwendung."];
+  Node423 -> Node418 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node423 -> Node424 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node424 [label="okw.core.Core.StartApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ac20a22275b6aea1c4e551dce1fd0c1e9",tooltip="Startet die gegebene Anwendung."];
+  Node424 -> Node425 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node425 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node424 -> Node426 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node426 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node426 -> Node427 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node427 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node427 -> Node428 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node428 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node424 -> Node429 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node429 [label="okw.core.IOKW_State.StartApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0ec9b7c60041061f1b01d85b703a27a8",tooltip="Startet die gegebene Anwendung."];
+  Node416 -> Node430 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node430 [label="okw.core.EN.VerifyIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a67f59cc780c7b380127c430522ae6a62",tooltip="Vergleicht den Fokus-Status des gegebenen Objekts mit dem erwarteten Wert."];
+  Node430 -> Node418 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node430 -> Node431 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node431 [label="okw.core.Core.VerifyIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#af9261f054d5a82396c678851ade66b1b",tooltip="Vergleicht den Fokus-Status des gegebenen Objekts mit dem erwarteten Wert."];
+  Node431 -> Node425 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node431 -> Node426 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node431 -> Node432 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node432 [label="okw.core.IOKW_State.Verify\lIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad003bc140c032dc58f2f67bcc749990c",tooltip="Vergleicht den Fokus-Status des gegebenen Objekts mit dem erwarteten Wert."];
+  Node416 -> Node433 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node433 [label="okw.core.EN.StopApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aba06d28c60512e1dc55902403abbd3f6",tooltip="Beendet eine gegebene Anwendung."];
+  Node433 -> Node418 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node433 -> Node434 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node434 [label="okw.core.Core.StopApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a13d953a145a5e1bc776785f8433ba69c",tooltip="Beendet eine gegebene Anwendung."];
+  Node434 -> Node425 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node434 -> Node426 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node434 -> Node435 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node435 [label="okw.core.IOKW_State.StopApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a789e33be9253edfccfe5654f537cf52a",tooltip="Beendet eine gegebene Anwendung."];
+  Node416 -> Node436 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node436 [label="okw.core.EN.EndTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f",tooltip="Signalisiert das Ende eines Testfalls."];
+  Node436 -> Node418 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node436 -> Node437 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node437 [label="okw.core.Core.EndTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c",tooltip="Signalisiert das Ende eines Testfalls."];
+  Node437 -> Node438 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node438 [label="okw.core.IOKW_State.EndTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186",tooltip="Signalisiert das Ende eines Testfalls."];
+}

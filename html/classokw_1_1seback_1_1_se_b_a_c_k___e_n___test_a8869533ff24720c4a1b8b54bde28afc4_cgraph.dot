@@ -1,0 +1,45 @@
+digraph "okw.seback.SeBACK_EN_Test.tcLogLabel_OKWFrameObjectMethodNotImplemented"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node96 [label="okw.seback.SeBACK_EN\l_Test.tcLogLabel_OKWFrameObject\lMethodNotImplemented",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Teste das Schlüsselwort LogLabel( FN ) eines SeBACK Prüfen."];
+  Node96 -> Node97 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node97 [label="okw.core.EN.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69",tooltip="Markiert den Anfang eines neuen Testfalls."];
+  Node97 -> Node98 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node98 [label="okw.core.Core.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100",tooltip="Setzt die Sprache auf den gegebenen wert Language."];
+  Node98 -> Node99 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node99 [label="okw.core.IOKW_State.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097",tooltip="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)."];
+  Node97 -> Node100 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node100 [label="okw.core.Core.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8",tooltip="Markiert den Anfang eines neuen Testfalls."];
+  Node100 -> Node101 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node101 [label="okw.log.Logger_Sngltn.Log\lTestcaseStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb",tooltip="Ausgabe des Testfalls."];
+  Node100 -> Node102 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node102 [label="okw.core.IOKW_State.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13",tooltip="Markiert den Anfang eines neuen Testfalls."];
+  Node96 -> Node103 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node103 [label="okw.core.EN.StartApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aaa7465ee7f135c724668d8b22dc2219f",tooltip="Startet die gegebene Anwendung."];
+  Node103 -> Node98 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node103 -> Node104 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node104 [label="okw.core.Core.StartApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ac20a22275b6aea1c4e551dce1fd0c1e9",tooltip="Startet die gegebene Anwendung."];
+  Node104 -> Node105 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node105 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node104 -> Node106 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node106 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node106 -> Node107 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node107 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node107 -> Node108 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node108 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node104 -> Node109 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node109 [label="okw.core.IOKW_State.StartApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0ec9b7c60041061f1b01d85b703a27a8",tooltip="Startet die gegebene Anwendung."];
+  Node96 -> Node110 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node110 [label="okw.core.EN.LogLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a5fcf39338e18d9d03d75197bc6b4ace2",tooltip="Gibt den Wert des Etikette/Label in der Logdatei aus."];
+  Node110 -> Node98 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node110 -> Node111 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node111 [label="okw.core.Core.LogLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a6d1157e91ec02c1f765d015ed03428b6",tooltip="Gibt den Wert des Etikette/Label in der Logdatei aus."];
+  Node111 -> Node105 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node111 -> Node106 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node111 -> Node112 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node112 [label="okw.core.IOKW_State.LogLabel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a7f76b6d18ebd45517d5a9afd0fdcb9d5",tooltip="Gibt den Wert des Etikette/Label in der Logdatei aus."];
+}
