@@ -685,4 +685,5 @@ public class EN
     {
         myKernel.setLanguage( Language );
         myKernel.VerifyErrorMSG_WCM( FN, ExpVal );
+    }
 }

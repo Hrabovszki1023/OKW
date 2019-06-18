@@ -4012,7 +4012,7 @@ public class OK implements IOKW_State
     /**
      *   \copydoc IOKW_State::VerifyErrorMSG_WCM(String,String)
      */
-    public void VerifyLabelWCM( String FN, String ExpVal ) throws Exception
+    public void VerifyErrorMSG_WCM( String FN, String ExpVal ) throws Exception
     {
 
         ArrayList<String> lvlsExpected = null;

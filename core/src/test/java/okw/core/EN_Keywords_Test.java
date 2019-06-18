@@ -2446,5 +2446,108 @@ public class EN_Keywords_Test
         assertEquals( "Rechner.AllMethods_MultipleValues", myClipBoard.getObjectName() );
         assertEquals( "VerifyValue()", myClipBoard.getMethod() );
     }
+    
+    /**
+     * \~german
+     * "Normaler" Testfall für das Schlüsselwort EN.VerifyErrorMSG(String,String).
+     * 
+     *  \~english
+     *  \~
+     *  "Normal" test case for the keyword EN.VerifyErrorMSG(String,String).
+     *  \author Daniel Krüger
+     *  \date 2019.05.31
+     */
+    @Test
+    public void tc_VerifyErrorMSG() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        myClipBoard.Clear();
+        
+        EN.SetValue( "All_MethodsObj", "The one and only VerifyBadge" );
+        EN.VerifyErrorMSG( "All_MethodsObj", "The one and only VerifyBadge" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "The one and only VerifyBadge", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyErrorMSG()", myClipBoard.getMethod() );
+    }
+    
+    /**
+     * \~german
+     * "Normaler" Testfall für das Schlüsselwort EN.VerifyErrorMSG_REGX(String,String).
+     * 
+     *  \~english
+     *  \~
+     *  "Normal" test case for the keyword EN.VerifyErrorMSG_REGX(String,String).
+     *  \author Daniel Krüger
+     *  \date 2019.05.31
+     */
+    @Test
+    public void tc_VerifyErrorMSG_REGX() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        EN.SetValue( "All_MethodsObj", "The one and only VerifyBadgeREGX" );
+        myClipBoard.Clear();
+        EN.VerifyErrorMSG_REGX( "All_MethodsObj", "\\w{3} one and only VerifyBadgeREGX" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "The one and only VerifyBadgeREGX", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyErrorMSG()", myClipBoard.getMethod() );
+    }
+
+    /**
+     * \~german
+     * "Normaler" Testfall für das Schlüsselwort EN.VerifyErrorMSG_WCM(String,String). 
+     * 
+     *  \~english
+     *  "Normal" test case for the keyword EN.VerifyErrorMSG_WCM(String,String).
+     *  
+     *  \author Daniel Krüger
+     *  \date 2019.05.31
+     */
+    @Test
+    public void tc_VerifyErrorMSG_WCM() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        EN.SetValue( "All_MethodsObj", "The one and only VerifyBadgeWCM" );
+        myClipBoard.Clear();
+        EN.VerifyErrorMSG_WCM( "All_MethodsObj", "??? one and only VerifyBadgeWCM" );
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "The one and only VerifyBadgeWCM", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyErrorMSG()", myClipBoard.getMethod() );
+    }
 
 }

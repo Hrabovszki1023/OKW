@@ -2966,5 +2966,201 @@ public class EN_Keywords_IGNORE_Test
 
         assertEquals( 0, myClipBoard.getValue().size() );
     }
+    
+	/**
+	 * \~german Prüft ob das Schlüsselwort VerifyErrorMSG( FN, "" ) nicht ausgeführt
+	 * wird
+	 * 
+	 * \~english Verifies if the keyword VerifyErrorMSG( FN, "" ) is not executed.
+	 * 
+	 * \~ \author Zoltan Hrabovszki \date 2013.12.26
+	 */
+	@Test
+	public void tcVerifyErrorMSG_IGNORE_EmptyString() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		// Testscript in Schlüsselwort-Notation
+		EN.SelectWindow("Rechner");
+
+		// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+		assertEquals(1, myClipBoard.getValue().size());
+		assertEquals("Rechner", myClipBoard.getObjectName());
+		assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+		myClipBoard.Clear();
+
+		EN.VerifyErrorMSG("All_MethodsObj", "");
+
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("", myClipBoard.getObjectName());
+		assertEquals("", myClipBoard.getMethod());
+
+		assertEquals(0, myClipBoard.getValue().size());
+	}
+	/**
+	 * \~german Prüft ob das Schlüsselwort VerifyErrorMSG( FN, "${IGNORE}" )
+	 * nicht ausgeführt wird
+	 * 
+	 * \~english Verifies if the keyword VerifyErrorMSG( FN, "${IGNORE}" ) is not
+	 * executed.
+	 * 
+	 * \~ \author Daniel Krüger \date 2019.05.31
+	 */
+	@Test
+	public void tcVerifyErrorMSG_IGNORE() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		// Testscript in Schlüsselwort-Notation
+		EN.SelectWindow("Rechner");
+
+		// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+		assertEquals(1, myClipBoard.getValue().size());
+		assertEquals("Rechner", myClipBoard.getObjectName());
+		assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+		myClipBoard.Clear();
+
+		EN.VerifyErrorMSG("All_MethodsObj", "${IGNORE}");
+
+		// Check the Name, Called Method and Value of Actual object
+		assertEquals("", myClipBoard.getObjectName());
+		assertEquals("", myClipBoard.getMethod());
+
+		assertEquals(0, myClipBoard.getValue().size());
+	}
+	
+	/**
+	 * \~german Prüft ob das Schlüsselwort VerifyErrorMSG_REGX( FN, "${IGNORE}" )
+	 * nicht ausgeführt wird
+	 * 
+	 * \~english Verifies if the keyword VerifyErrorMSG_REGX( FN, "${IGNORE}" ) is not
+	 * executed.
+	 * 
+	 * \~ \author Daniel Krüger \date 2019.05.31
+	 */
+	@Test
+	public void tcVerifyErrorMSG_REGX_IGNORE() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		// Testscript in Schlüsselwort-Notation
+		EN.SelectWindow("Rechner");
+
+		// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+		assertEquals(1, myClipBoard.getValue().size());
+		assertEquals("Rechner", myClipBoard.getObjectName());
+		assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+		myClipBoard.Clear();
+
+		EN.VerifyErrorMSG_REGX("All_MethodsObj", "${IGNORE}");
+
+		// Check the Name, Called Method and Value of Actual object
+		assertEquals("", myClipBoard.getObjectName());
+		assertEquals("", myClipBoard.getMethod());
+
+		assertEquals(0, myClipBoard.getValue().size());
+	}
+
+	/**
+	 * \~german \brief
+	 * 
+	 * 
+	 * \~english \~ \author Daniel Krüger \date 2019.05.31
+	 */
+	@Test
+	public void tcVerifyErrorMSG_REGX_IGNORE_EmptyString() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		// Testscript in Schlüsselwort-Notation
+		EN.SelectWindow("Rechner");
+
+		// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+		assertEquals(1, myClipBoard.getValue().size());
+		assertEquals("Rechner", myClipBoard.getObjectName());
+		assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+		myClipBoard.Clear();
+
+		EN.VerifyErrorMSG_REGX("All_MethodsObj", "");
+
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("", myClipBoard.getObjectName());
+		assertEquals("", myClipBoard.getMethod());
+
+		assertEquals(0, myClipBoard.getValue().size());
+	}
+
+	/**
+	 * \~german Prüft ob das Schlüsselwort VerifyErrorMSG_WCM( FN, "${IGNORE}" )
+	 * nicht ausgeführt wird
+	 * 
+	 * \~english Verifies if the keyword VerifyErrorMSG_WCM( FN, "${IGNORE}" ) is not
+	 * executed.
+	 * 
+	 * \~ \author Daniel Krüger \date 2019.05.31
+	 */
+	@Test
+	public void tcVerifyErrorMSG_WCM_IGNORE() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		// Testscript in Schlüsselwort-Notation
+		EN.SelectWindow("Rechner");
+
+		// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+		assertEquals(1, myClipBoard.getValue().size());
+		assertEquals("Rechner", myClipBoard.getObjectName());
+		assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+		myClipBoard.Clear();
+
+		EN.VerifyErrorMSG_WCM("All_MethodsObj", "${IGNORE}");
+
+		// Check the Name, Called Method and Value of Actual object
+		assertEquals("", myClipBoard.getObjectName());
+		assertEquals("", myClipBoard.getMethod());
+
+		assertEquals(0, myClipBoard.getValue().size());
+	}
+
+	/**
+	 * \~german
+	 * 
+	 * 
+	 * \~english \~ \author Zoltan Hrabovszki \date 2013.12.26
+	 */
+	@Test
+	public void tcVerifyErrorMSG_WCM_IGNORE_EmptyString() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		// Testscript in Schlüsselwort-Notation
+		EN.SelectWindow("Rechner");
+
+		// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+		assertEquals(1, myClipBoard.getValue().size());
+		assertEquals("Rechner", myClipBoard.getObjectName());
+		assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+		myClipBoard.Clear();
+
+		EN.VerifyErrorMSG_WCM("All_MethodsObj", "");
+
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("", myClipBoard.getObjectName());
+		assertEquals("", myClipBoard.getMethod());
+
+		assertEquals(0, myClipBoard.getValue().size());
+	}
 }
 	

@@ -1267,5 +1267,68 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
     EN.SelectWindow( "Rechner" );
     EN.MemorizePlaceholder( "All_MethodsObj", "${DELETE}" );
   }
+  
+  /* \~german
+  * Prüft "DELETE" für das Schlüsselwort VerifyErrorMSG(strng,string) ob die
+  * Ausname OKWNotAllowedValueException ausgelöst wird.
+  *
+  * \~english
+  * Checks "DELETE" for the keyword VerifyErrorMSG(strng,string)
+  * if the exception OKWNotAllowedValueException is thrown.
+  * \~
+  *author Daniel Krüger
+  *\date 2018.04.04
+  */ 
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifyErrorMSG_DELETE_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+
+    EN.VerifyErrorMSG( "All_MethodsObj", "${DELETE}" );
+
+  }
+  /* \~german
+  * Prüft "DELETE" für das Schlüsselwort VerifyErrorMSG_REGX(strng,string) ob die
+  * Ausname OKWNotAllowedValueException ausgelöst wird.
+  *
+  * \~english
+  * Checks "DELETE" for the keyword VerifyErrorMSG_REGX(strng,string)
+  * if the exception OKWNotAllowedValueException is thrown.
+  * \~
+  *author Daniel Krüger
+  *\date 2019.05.31
+  */ 
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifyErrorMSG_REGX_DELETE_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+
+    EN.VerifyErrorMSG_REGX( "All_MethodsObj", "${DELETE}" );
+
+  }
+
+  /* \~german
+   * Prüft "DELETE" für das Schlüsselwort VerifyErrorMSG_WCM(strng,string) ob die
+   * Ausname OKWNotAllowedValueException ausgelöst wird.
+   *
+   * \~english
+   * Checks "DELETE" for the keyword VerifyErrorMSG_WCM(strng,string)
+   * if the exception OKWNotAllowedValueException is thrown.
+   * \~
+   *author Daniel Krüger
+   *\date 2019.05.31
+   */ 
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifyErrorMSG_WCM_DELETE_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyErrorMSG_WCM ( "All_MethodsObj", "${DELETE}" );
+  }
 
 }

@@ -561,4 +561,47 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}.\\. Value${SEP}.\\. Value${SEP}.\\. Value" );
   }
+  
+	/**
+	 * \~german \brief Test auf das fehlerwerfen von VerifyErrorMSG.
+	 * 
+	 * Bedingung: 1. Value unterscheidet sich von der Vorgabe
+	 * 
+	 * \~english \~ \author Daniel Krüger \date 2019.04.04
+	 */
+	@Test(expected = OKWVerifyingFailsException.class)
+	public void TC_VerifyErrorMSG_OKWVerifyingFailsException_SV01() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		EN.SelectWindow("Rechner");
+		EN.VerifyErrorMSG("All_MethodsObj", "The one an only Value");
+	}
+	/**
+	 * \~german \brief Test auf das fehlerwerfen von VerifyErrorMSG_WCM.
+	 * 
+	 * Bedingung: 1. Value unterscheidet sich von der Vorgabe
+	 * 
+	 * \~english \~ \author Daniel Krüger \date 2019.04.04
+	 */
+	@Test(expected = OKWVerifyingFailsException.class)
+	public void TC_VerifyErrorMSG_WCM_OKWVerifyingFailsException_SV01() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		EN.SelectWindow("Rechner");
+		EN.VerifyErrorMSG_WCM("All_MethodsObj", "The one an only Value");
+	}
+	/**
+	 * \~german \brief Test auf das fehlerwerfen von VerifyErrorMSG_REGX.
+	 * 
+	 * Bedingung: 1. Value unterscheidet sich von der Vorgabe
+	 * 
+	 * \~english \~ \author Daniel Krüger \date 2019.04.04
+	 */
+	@Test(expected = OKWVerifyingFailsException.class)
+	public void TC_VerifyErrorMSG_REGX_OKWVerifyingFailsException_SV01() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		EN.SelectWindow("Rechner");
+		EN.VerifyErrorMSG_REGX("All_MethodsObj", "The one an only Value");
+	}
 }
