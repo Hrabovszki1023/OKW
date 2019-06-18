@@ -819,4 +819,15 @@ public class NOK implements IOKW_State
 
         Log.LogFunctionEndDebug();
     }
+    
+    /**
+     * \copydoc IOKW_State::VerifyMinLength(String,String)
+     */
+    public void VerifyMinLength( String FN, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifyMinLength", "FN", FN, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
+    
 }

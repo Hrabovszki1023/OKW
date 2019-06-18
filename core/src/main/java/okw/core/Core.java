@@ -1293,4 +1293,21 @@ public class Core implements IOKW_State
             Log.LogKeyWordEnd();
         }
     }
+    
+    /**
+     * \copydoc IOKW_State::VerifyMinLength(String,String)
+     */
+    public void VerifyMinLength( String FN, String ExpVal ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "VerifyMinLength", "KeyWordName" ), FN, ExpVal );
+            this.CurrentState.VerifyMinLength( FN, ExpVal );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+    
 }

@@ -67,4 +67,5 @@ public interface IGUIChildwindow
     Boolean VerifyHasFocus();
 
     Integer VerifyMaxLength();
+    Integer VerifyMinLength();
 }
