@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -54,8 +54,8 @@ import org.junit.rules.TestName;
 
 public class EN_VerifyExists_OKWVerifyingFailsException_Test {
 
-  static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
-  static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
+  protected static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
+  protected static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
   @Rule
   public TestName          name        = new TestName();

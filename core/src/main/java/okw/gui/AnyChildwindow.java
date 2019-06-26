@@ -2,7 +2,7 @@
 ==============================================================================
   Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-  Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+  Copyright © 2012 - 2019 IT-Beratung Hrabovszki
   www.OpenKeyWord.de
 ============================================================================== 
 
@@ -52,7 +52,7 @@ import okw.OKW;
 import okw.OKW_TimeOut;
 import okw.core.IOKW_FN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
-import okw.log.*;
+
 
 /** \brief
  * @todo TODO: Description of AnyWin.
@@ -319,7 +319,25 @@ public ArrayList<String> MemorizeCaption( )
       throw new OKWFrameObjectMethodNotImplemented("The method 'public void VerifyLabel( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
     }
 
-    public ArrayList<String> VerifyPlaceholder( )
+    public ArrayList<String> VerifyBadge( )
+	{
+	  // TODO: /todo Meldung in xml-Auslagern
+	  throw new OKWFrameObjectMethodNotImplemented("The method 'public void VerifyBadge( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+	}
+
+	public ArrayList<String> VerifyBadgeWCM( )
+	{
+	  // TODO: /todo Meldung in xml-Auslagern
+	  throw new OKWFrameObjectMethodNotImplemented("The method 'public void VerifyBadgeWCM( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+	}
+
+	public ArrayList<String> VerifyBadgeREGX( )
+	{
+	  // TODO: /todo Meldung in xml-Auslagern
+	  throw new OKWFrameObjectMethodNotImplemented("The method 'public void VerifyBadgeREGX( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+	}
+
+	public ArrayList<String> VerifyPlaceholder( )
     {
       // TODO: /todo Meldung in xml-Auslagern
       throw new OKWFrameObjectMethodNotImplemented("The method 'public void VerifyPlaceholder( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
@@ -450,4 +468,5 @@ public ArrayList<String> MemorizeCaption( )
 
         return lvbReturn;
     }
+
 }

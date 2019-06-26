@@ -1,6 +1,6 @@
 /*
  ==============================================================================
- Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+ Copyright © 2012 - 2019 IT-Beratung Hrabovszki
  ============================================================================== 
 
  This file is part of OpenKeyWord.
@@ -38,6 +38,7 @@ package browser;
 
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
+import okw.log.log2html.Log2HTML;
 
 import org.junit.*;
 import org.junit.rules.TestName;
@@ -51,7 +52,8 @@ import org.junit.rules.TestName;
 @Ignore
 public class FrmBrowserBase_Test {
 
-  OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
+  //OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
+	protected static Log2HTML myLog2HTML = null;
 
   protected static String ApplicationName;
 
@@ -138,5 +140,4 @@ public class FrmBrowserBase_Test {
       EN.StopApp( ApplicationName );
       EN.EndTest();
   }
-
 }

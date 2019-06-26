@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -1023,5 +1023,123 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyValue()", myClipBoard.getMethod());
+  }
+  
+
+  /**
+   *  \~german
+   *  Prüft "${EMPTY}" für das Schlüsslewort VerifyBadge(string,string)
+   * 
+   *  \~english
+   *  Checks "${EMPTY}" for the keyword VerifyBadge(string,string)
+   *  
+   *  \~
+   *  \author Daniel Krüger
+   *  \date 2019.03.28
+   */
+  @Test
+  public void tc_VerifyBadge_Empty() throws Exception {
+
+    EN.BeginTest( name.getMethodName() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+    
+    EN.VerifyBadge("All_MethodsObj_VerifyEmpty", "${EMPTY}");
+    
+    assertEquals( 0, myClipBoard.getValue().size() );
+    //assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+    assertEquals("VerifyBadge()", myClipBoard.getMethod());
+  }
+
+  /**
+   *  \~german
+   *  Prüft "${EMPTY}" für das Schlüsslewort VerifyBadge(string,string)
+   * 
+   *  \~english
+   *  Checks "${EMPTY}" for the keyword VerifyBadge(string,string)
+   *  
+   *  \~
+   *  \author Daniel Krüger
+   *  \date 2019.04.11
+   */
+  @Test
+  public void tc_VerifyBadgeREGX_Empty() throws Exception {
+
+    EN.BeginTest( name.getMethodName() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+    
+    EN.VerifyBadgeREGX("All_MethodsObj_VerifyEmpty", "${EMPTY}");
+    
+    assertEquals( 0, myClipBoard.getValue().size() );
+    //assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+    assertEquals("VerifyBadge()", myClipBoard.getMethod());
+  }
+
+  /**
+   *  \~german
+   *  Prüft "${EMPTY}" für das Schlüsslewort VerifyBadge(string,string)
+   * 
+   *  \~english
+   *  Checks "${EMPTY}" for the keyword VerifyBadge(string,string)
+   *  
+   *  \~
+   *  \author Daniel Krüger
+   *  \date 2019.04.11
+   */
+  @Test
+  public void tc_VerifyBadgeWCM_Empty() throws Exception {
+
+    EN.BeginTest( name.getMethodName() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+
+    // Testscript in Schlüsselwort-Notation
+    EN.SelectWindow( "Rechner" );
+
+    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+    // Check the Name, Called Method and Value of Actuel object
+    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+    assertEquals( "Rechner", myClipBoard.getObjectName() );
+    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+    // Löschen des Clipboards
+    myClipBoard.Clear();
+    
+    EN.VerifyBadgeWCM("All_MethodsObj_VerifyEmpty", "${EMPTY}");
+    
+    assertEquals( 0, myClipBoard.getValue().size() );
+    //assertEquals( "", myClipBoard.getValue().get( 0 ) );
+    assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
+    assertEquals("VerifyBadge()", myClipBoard.getMethod());
   }
 }

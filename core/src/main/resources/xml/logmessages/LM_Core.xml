@@ -470,6 +470,32 @@
 				<de>Prüfe Überschrift REGX</de>
 			</Text>
 		</Method>
+		<!-- Method: "VerifyBadge" -->
+		<Method name="VerifyBadge">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Badge</en>
+				<de>Prüfe Abzeichen</de>
+			</Text>
+		</Method>
+		
+		<!-- Method: "VerifyBadgeWCM" -->
+		<Method name="VerifyBadgeWCM">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Badge WCM</en>
+				<de>Prüfe Abzeichen WCM</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyBadgeREGX" -->
+		<Method name="VerifyBadgeREGX">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Badge REGX</en>
+				<de>Prüfe Abzeichen REGX</de>
+			</Text>
+		</Method>
 
 		<!-- Method: "VerifyLabel"-->
 		<Method name="VerifyLabel">

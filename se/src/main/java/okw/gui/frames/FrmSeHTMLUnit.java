@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -46,7 +46,6 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import okw.OKW;
 import okw.gui.adapter.selenium.SeBrowserWindow;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
-import okw.log.Logger_Sngltn;
 
 /**
 * @ingroup groupSeleniumDriverFrames

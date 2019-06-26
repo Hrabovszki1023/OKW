@@ -1,6 +1,6 @@
 /*
  ==============================================================================
- Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+ Copyright © 2012 - 2019 IT-Beratung Hrabovszki
  ============================================================================== 
 
  This file is part of OpenKeyWord.
@@ -49,7 +49,6 @@ import org.junit.*;
 */
 public class FrmSeFirefox_Test extends FrmBrowserBase_Test
 {
-	static Log2HTML myLog2HTML = null;
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception

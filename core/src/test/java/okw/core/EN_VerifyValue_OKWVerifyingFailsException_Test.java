@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -561,4 +561,47 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}.\\. Value${SEP}.\\. Value${SEP}.\\. Value" );
   }
+
+	/**
+	 * \~german \brief Test auf das fehlerwerfen von VerifyBadge.
+	 * 
+	 * Bedingung: 1. Value unterscheidet sich von der Vorgabe
+	 * 
+	 * \~english \~ \author Daniel Krüger \date 2019.04.04
+	 */
+	@Test(expected = OKWVerifyingFailsException.class)
+	public void TC_VerifyBadge_OKWVerifyingFailsException_SV01() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		EN.SelectWindow("Rechner");
+		EN.VerifyBadge("All_MethodsObj", "The one an only Value");
+	}
+	/**
+	 * \~german \brief Test auf das fehlerwerfen von VerifyBadge.
+	 * 
+	 * Bedingung: 1. Value unterscheidet sich von der Vorgabe
+	 * 
+	 * \~english \~ \author Daniel Krüger \date 2019.04.04
+	 */
+	@Test(expected = OKWVerifyingFailsException.class)
+	public void TC_VerifyBadgeWCM_OKWVerifyingFailsException_SV01() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		EN.SelectWindow("Rechner");
+		EN.VerifyBadgeWCM("All_MethodsObj", "The one an only Value");
+	}
+	/**
+	 * \~german \brief Test auf das fehlerwerfen von VerifyBadge.
+	 * 
+	 * Bedingung: 1. Value unterscheidet sich von der Vorgabe
+	 * 
+	 * \~english \~ \author Daniel Krüger \date 2019.04.04
+	 */
+	@Test(expected = OKWVerifyingFailsException.class)
+	public void TC_VerifyBadgeREGX_OKWVerifyingFailsException_SV01() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		EN.SelectWindow("Rechner");
+		EN.VerifyBadgeREGX("All_MethodsObj", "The one an only Value");
+	}
 }

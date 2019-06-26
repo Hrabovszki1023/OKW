@@ -1,20 +1,14 @@
 package okw.gui.frames;
 
 import okw.gui.adapter.selenium.SeBrowserWindow;
-import okw.gui.adapter.selenium.webdriver.SeDriver;
-import okw.log.Logger_Sngltn;
 
-import java.util.ArrayList;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import okw.OKW;
 import okw.OKW_Memorize_Sngltn;
@@ -32,7 +26,7 @@ public class FrmSeFirefox extends SeBrowserWindow
     /**
      *  \copydoc OKW_Memorize_Sngltn
      */
-    private static OKW_Memorize_Sngltn MEM = OKW_Memorize_Sngltn.getInstance();
+    protected static OKW_Memorize_Sngltn MEM = OKW_Memorize_Sngltn.getInstance();
 
     @Override
     public void SelectWindow()

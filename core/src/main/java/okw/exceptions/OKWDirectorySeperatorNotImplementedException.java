@@ -2,7 +2,7 @@
 ==============================================================================
   Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-  Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+  Copyright © 2012 - 2019 IT-Beratung Hrabovszki
   www.OpenKeyWord.de
 ============================================================================== 
 

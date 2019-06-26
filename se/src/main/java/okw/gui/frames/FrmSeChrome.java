@@ -13,8 +13,7 @@ import okw.OKW_Memorize_Sngltn;
 import okw.OKW_Properties;
 // import okw.gui.adapter.selenium.webdriver.*;
 import okw.gui.adapter.selenium.SeBrowserWindow;
-import okw.gui.adapter.selenium.webdriver.SeDriver;
-import okw.log.Logger_Sngltn;
+
 
 /**
  * \~
@@ -39,7 +38,7 @@ public class FrmSeChrome extends SeBrowserWindow
     /**
      *  \copydoc OKW_Memorize_Sngltn
      */
-    private static OKW_Memorize_Sngltn MEM = OKW_Memorize_Sngltn.getInstance();
+    protected static OKW_Memorize_Sngltn MEM = OKW_Memorize_Sngltn.getInstance();
 
 
     @Override

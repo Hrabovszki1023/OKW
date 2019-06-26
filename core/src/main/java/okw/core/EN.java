@@ -1,6 +1,6 @@
 /*
     ==============================================================================
-    Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+    Copyright © 2012 - 2019 IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -419,6 +419,33 @@ public class EN
     }
 
     /**
+	 *  \copydoc IOKW_State::VerifyBadge(String,String)
+	 */
+	public static void VerifyBadge ( String BN, String ExpVal )throws Exception
+	{
+	    myKernel.setLanguage( Language );
+	    myKernel.VerifyBadge( BN, ExpVal );
+	}
+
+	/**
+	 *  \copydoc IOKW_State::VerifyBadgeWCM(String,String)
+	 */
+	public static void VerifyBadgeWCM ( String BN, String ExpVal )throws Exception
+	{
+	    myKernel.setLanguage( Language );
+	    myKernel.VerifyBadgeWCM( BN, ExpVal );
+	}
+
+	/**
+	 *  \copydoc IOKW_State::VerifyBadgeREGX(String,String)
+	 */
+	public static void VerifyBadgeREGX ( String BN, String ExpVal )throws Exception
+	{
+	    myKernel.setLanguage( Language );
+	    myKernel.VerifyBadgeREGX( BN, ExpVal );
+	}
+
+	/**
      *  \copydoc IOKW_State::VerifyCaption(String,String)
      */
     public static void VerifyCaption( String FN, String fpsValue ) throws Exception
@@ -643,6 +670,16 @@ public class EN
         myKernel.VerifyValueREGX( FN, ExpVal );
     }
 
+    /**
+     *  \copydoc IOKW_State::FileDelete(String)
+     */
+    public static void FileDelete( String fpsPathAndFileName ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.FileDelete( fpsPathAndFileName ); 
+    }
+    
+    
     /**
      *  \copydoc IOKW_State::VerifyFileExists(String,String)
      */

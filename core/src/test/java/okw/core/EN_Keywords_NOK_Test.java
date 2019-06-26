@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -197,6 +197,10 @@ public class EN_Keywords_NOK_Test
         EN.VerifyValue( "All_MethodsObj", "The one and only Value" );
         EN.VerifyValueWCM( "All_MethodsObj", "??? one and only Value" );
         EN.VerifyValueREGX( "All_MethodsObj", "\\w{3} one and only Value" );
+        
+        EN.VerifyBadge( "All_MethodsObj", "The one and only Value" );
+        EN.VerifyBadgeWCM( "All_MethodsObj", "??? one and only Value" );
+        EN.VerifyBadgeREGX( "All_MethodsObj", "\\w{3} one and only Value" );
         
         // Datei Schlüsselwörter
         

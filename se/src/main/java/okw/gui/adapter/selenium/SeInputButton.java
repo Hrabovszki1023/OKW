@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -42,8 +42,9 @@ package okw.gui.adapter.selenium;
 import java.util.ArrayList;
 
 import org.openqa.selenium.support.ui.Select;
-
 import okw.OKW_Const_Sngltn;
+import org.apache.commons.lang3.StringUtils;
+
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.gui.OKWLocator;
 import okw.gui.OKWLocatorBase;
@@ -159,9 +160,12 @@ public class SeInputButton extends SeAnyChildWindow
             // Warten auf das Objekt. Wenn es nicht existiert mit Exception
             // beenden...
             this.WaitForMe();
-
+            
             // The Attribute "value" wird als Beschriftung angezeigt...
-            lvLsReturn.add( this.Me().getAttribute( "value" ) );
+            String myAttribute = this.Me().getAttribute( "value" );
+            myAttribute = StringUtils.normalizeSpace( myAttribute );
+            
+            lvLsReturn.add( myAttribute );
         }
         finally
         {

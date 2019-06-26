@@ -1158,6 +1158,69 @@ public interface IOKW_State
     void TypeKeyWindow( String FN, String Val ) throws Exception;
 
     /**
+	 *  \~german
+	 *  Überprüft den Badge des Objektes .
+	 *  
+	 *  @param FN Funktionaler Name des Objekts 
+	 *  @param ExpVal Erwarteter Wert 
+	 * 
+	 *  \~english
+	 *  Verifies the Badge of a GUI-object.
+	 *  
+	 *  @param FN Functional name of the object 
+	 *  @param ExpVal Expected Value 
+	 * 
+	 *  \~
+	 * \~
+	 * @author Daniel Krüger
+	 * @date 2019-04-04
+	 */
+	 void VerifyBadge( String BN, String ExpVal ) throws Exception;
+
+
+	/**
+	  *  \~german
+	  *  Überprüft den Badge des Objektes .
+	  *  Mit Wildcard-Match
+	  *  @param FN Funktionaler Name des Objekts 
+	  *  @param ExpVal Erwarteter Wert 
+	  * 
+	  *  \~english
+	  *  Verifies the Badge of a GUI-object.
+	  *  with Wildcard-Match
+	  *  @param FN Functional name of the object 
+	  *  @param ExpVal Expected Value 
+	  * 
+	  *  \~
+	  * \~
+	  * @author Daniel Krüger
+	  * @date 2019-04-04
+	  */
+	  void VerifyBadgeWCM( String BN, String ExpVal ) throws Exception;
+
+
+	/**
+	   *  \~german
+	   *  Überprüft den Badge des Objektes .
+	   *  Mit RegulererAusdruck
+	   *  @param FN Funktionaler Name des Objekts 
+	   *  @param ExpVal Erwarteter Wert 
+	   * 
+	   *  \~english
+	   *  Verifies the Badge of a GUI-object.
+	   *  with regular expression
+	   *  @param FN Functional name of the object 
+	   *  @param ExpVal Expected Value 
+	   * 
+	   *  \~
+	   * \~
+	   * @author Daniel Krüger
+	   * @date 2019-04-04
+	   */
+	   void VerifyBadgeREGX( String BN, String ExpVal ) throws Exception;
+
+
+	/**
      *  \~german
      *  Überprüft die Überschrift des Objektes.
      *  

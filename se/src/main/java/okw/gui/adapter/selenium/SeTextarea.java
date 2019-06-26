@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2017, 2016 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2019, 2016 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -40,6 +40,7 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
@@ -192,8 +193,11 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
                 // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
                 this.WaitForMe();
 
-                // Get Value from TextField and put this into the return ArrayList<String>
-                lvLsReturn.add( this.Me().getAttribute( "placeholder" ) );
+                // The Attribute "placeholder" wird als Beschriftung angezeigt...
+                String myAttribute = this.Me().getAttribute( "placeholder" );
+                myAttribute = StringUtils.normalizeSpace( myAttribute );
+                
+                lvLsReturn.add( myAttribute );
             }
             finally
             {

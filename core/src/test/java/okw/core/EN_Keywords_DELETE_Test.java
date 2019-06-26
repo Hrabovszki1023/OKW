@@ -1,6 +1,6 @@
 /*
     ==============================================================================
-    Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+    Copyright © 2012 - 2019 IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -820,6 +820,63 @@ public class EN_Keywords_DELETE_Test
   }
 
   // \~german
+  //
+  //
+  // \~english
+  // \~
+  // \author Daniel Krüger
+  // \date 2018.04.04
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifyBadge_DELETE_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+
+    EN.VerifyBadge( "All_MethodsObj", "${DELETE}" );
+
+  }
+
+// \~german
+  // \brief
+  //
+  //
+  // \~english
+  // \~
+  // \author Daniel Krüger
+  // \date 2018.04.11
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifyBadgeREGX_DELETE_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+
+    EN.VerifyBadgeREGX( "All_MethodsObj", "${DELETE}" );
+
+  }
+
+/** \~german
+   *  Kurzbeschreibung
+   *  
+   *  Langebeschreibung
+   *
+   * \~english
+   * \~
+   * \author Daniel Krüger
+   * \date 2018.04.11
+   * @throws Exception
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifyBadgeWCM_DELETE_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyBadgeWCM ( "All_MethodsObj", "${DELETE}" );
+  }
+
+// \~german
   // \brief
   //
   //
@@ -1267,5 +1324,4 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
     EN.SelectWindow( "Rechner" );
     EN.MemorizePlaceholder( "All_MethodsObj", "${DELETE}" );
   }
-
 }

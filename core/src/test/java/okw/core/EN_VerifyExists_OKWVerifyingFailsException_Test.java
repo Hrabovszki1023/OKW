@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -45,8 +45,6 @@ import okw.exceptions.OKWVerifyingFailsException;
 import okw.log.Logger_Sngltn;
 
 import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
@@ -54,8 +52,8 @@ import org.junit.rules.TestName;
 
 public class EN_VerifyExists_OKWVerifyingFailsException_Test {
 
-  static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
-  static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
+  protected static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
+  protected static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
   @Rule
   public TestName          name        = new TestName();
@@ -71,23 +69,19 @@ public class EN_VerifyExists_OKWVerifyingFailsException_Test {
     myLogger.setDebugMode( false );
   }
 
-  @AfterClass
-  public static void tearDownAfterClass() throws Exception {
-  }
 
-  // / \~german
-  // / \brief
-  // / Diese Methode wird immer vor jedem Test(fall) ausgeführt.
-  // /
-  @Before
+  /** \~german
+   *  Diese Methode wird immer vor jedem Test(fall) ausgeführt.
+   */
+  /* @Before
   public void setUp() throws Exception {
 
   }
-
-  // / \~german
-  // / \brief
-  // / Diese Methode wird immer nach jedem Test(fall) ausgeführt.
-  // /
+  */
+  
+  /** \~german
+   * Diese Methode wird immer nach jedem Test(fall) ausgeführt.
+   */
   @After
   public void tearDown() throws Exception {
     EN.EndTest();

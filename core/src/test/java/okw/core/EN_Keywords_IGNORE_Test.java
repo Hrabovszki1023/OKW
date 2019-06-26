@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2017 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -2966,5 +2966,196 @@ public class EN_Keywords_IGNORE_Test
 
         assertEquals( 0, myClipBoard.getValue().size() );
     }
+	
+	/**
+	 * \~german Prüft ob das Schlüsselwort VerifyLabel( FN, "" ) nicht ausgeführt
+	 * wird
+	 * 
+	 * \~english Verifies if the keyword VerifyLabel( FN, "" ) is not executed.
+	 * 
+	 * \~ \author Zoltan Hrabovszki \date 2013.12.26
+	 */
+	@Test
+	public void tcVerifyBadge_IGNORE_EmptyString() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		// Testscript in Schlüsselwort-Notation
+		EN.SelectWindow("Rechner");
+
+		// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+		assertEquals(1, myClipBoard.getValue().size());
+		assertEquals("Rechner", myClipBoard.getObjectName());
+		assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+		myClipBoard.Clear();
+
+		EN.VerifyBadge("All_MethodsObj", "");
+
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("", myClipBoard.getObjectName());
+		assertEquals("", myClipBoard.getMethod());
+
+		assertEquals(0, myClipBoard.getValue().size());
+	}
+
+	/**
+	 * \~german Prüft ob das Schlüsselwort VerifyVerifyBadge( FN, "${IGNORE}" )
+	 * nicht ausgeführt wird
+	 * 
+	 * \~english Verifies if the keyword VerifyVerifyBadge( FN, "${IGNORE}" ) is not
+	 * executed.
+	 * 
+	 * \~ \author Daniel Krüger \date 2019.03.27
+	 */
+	@Test
+	public void tcVerifyBadge_IGNORE() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		// Testscript in Schlüsselwort-Notation
+		EN.SelectWindow("Rechner");
+
+		// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+		assertEquals(1, myClipBoard.getValue().size());
+		assertEquals("Rechner", myClipBoard.getObjectName());
+		assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+		myClipBoard.Clear();
+
+		EN.VerifyBadge("All_MethodsObj", "${IGNORE}");
+
+		// Check the Name, Called Method and Value of Actual object
+		assertEquals("", myClipBoard.getObjectName());
+		assertEquals("", myClipBoard.getMethod());
+
+		assertEquals(0, myClipBoard.getValue().size());
+	}
+	
+	/**
+	 * \~german \brief
+	 * 
+	 * 
+	 * \~english \~ \author Zoltan Hrabovszki \date 2013.12.26
+	 */
+	@Test
+	public void tcVerifyBadgeREGX_IGNORE() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		// Testscript in Schlüsselwort-Notation
+		EN.SelectWindow("Rechner");
+
+		// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+		assertEquals(1, myClipBoard.getValue().size());
+		assertEquals("Rechner", myClipBoard.getObjectName());
+		assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+		myClipBoard.Clear();
+
+		EN.VerifyBadgeREGX("All_MethodsObj", "${IGNORE}");
+
+		// Check the Name, Called Method and Value of Actual object
+		assertEquals("", myClipBoard.getObjectName());
+		assertEquals("", myClipBoard.getMethod());
+
+		assertEquals(0, myClipBoard.getValue().size());
+	}
+
+	/**
+	 * \~german \brief
+	 * 
+	 * 
+	 * \~english \~ \author Zoltan Hrabovszki \date 2013.12.26
+	 */
+	@Test
+	public void tcVerifyBadgeREGX_IGNORE_EmptyString() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		// Testscript in Schlüsselwort-Notation
+		EN.SelectWindow("Rechner");
+
+		// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+		assertEquals(1, myClipBoard.getValue().size());
+		assertEquals("Rechner", myClipBoard.getObjectName());
+		assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+		myClipBoard.Clear();
+
+		EN.VerifyBadgeREGX("All_MethodsObj", "");
+
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("", myClipBoard.getObjectName());
+		assertEquals("", myClipBoard.getMethod());
+
+		assertEquals(0, myClipBoard.getValue().size());
+	}
+
+	/**
+	 * \~german \brief
+	 * 
+	 * 
+	 * \~english \~ \author Zoltan Hrabovszki \date 2013.12.26
+	 */
+	@Test
+	public void tcVerifyBadgeWCM_IGNORE() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		// Testscript in Schlüsselwort-Notation
+		EN.SelectWindow("Rechner");
+
+		// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+		assertEquals(1, myClipBoard.getValue().size());
+		assertEquals("Rechner", myClipBoard.getObjectName());
+		assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+		myClipBoard.Clear();
+
+		EN.VerifyBadgeWCM("All_MethodsObj", "${IGNORE}");
+
+		// Check the Name, Called Method and Value of Actual object
+		assertEquals("", myClipBoard.getObjectName());
+		assertEquals("", myClipBoard.getMethod());
+
+		assertEquals(0, myClipBoard.getValue().size());
+	}
+
+	/**
+	 * \~german
+	 * 
+	 * 
+	 * \~english \~ \author Zoltan Hrabovszki \date 2013.12.26
+	 */
+	@Test
+	public void tcVerifyBadgeWCM_IGNORE_EmptyString() throws Exception {
+		EN.BeginTest(name.getMethodName());
+
+		// Testscript in Schlüsselwort-Notation
+		EN.SelectWindow("Rechner");
+
+		// Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+		assertEquals(1, myClipBoard.getValue().size());
+		assertEquals("Rechner", myClipBoard.getObjectName());
+		assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+		myClipBoard.Clear();
+
+		EN.VerifyBadgeWCM("All_MethodsObj", "");
+
+		// Check the Name, Called Method and Value of Actuel object
+		assertEquals("", myClipBoard.getObjectName());
+		assertEquals("", myClipBoard.getMethod());
+
+		assertEquals(0, myClipBoard.getValue().size());
+	}
 }
 	
