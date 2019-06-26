@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"classokw_1_1core_1_1_matcher___lev_regx_wild.html#aee463eb189658b1eea0c558870b001b7":[10,0,1,1,31,4],
 "classokw_1_1core_1_1_matcher___lev_regx_wild.html#af75b325b0089fee5e35d2d58f9a0fc9e":[10,0,1,1,31,8],
 "classokw_1_1core_1_1_matcher___lev_regx_wild.html#afb40b8a95c222b6d8bc9d56be7aead22":[10,0,1,1,31,12],
 "classokw_1_1core_1_1_matcher___levenshtein_distance_test.html":[10,0,1,1,29],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "classokw_1_1exceptions_1_1_o_k_w_g_u_i_exception.html#a3a5cf773c1383d773c0709d63b8751d0":[10,0,1,2,12,0],
 "classokw_1_1exceptions_1_1_o_k_w_g_u_i_exception.html#a7e7488243b5dd7a2b7da959f0d38d899":[10,0,1,2,12,1],
 "classokw_1_1exceptions_1_1_o_k_w_g_u_i_object_not_found_exception.html":[10,0,1,2,13],
-"classokw_1_1exceptions_1_1_o_k_w_g_u_i_object_not_found_exception.html#a81523dfe6ed6c4066e9ccfe182126f66":[10,0,1,2,13,1],
-"classokw_1_1exceptions_1_1_o_k_w_g_u_i_object_not_found_exception.html#a8b064fab4d82b65b7739c2a340ba2311":[10,0,1,2,13,0]
+"classokw_1_1exceptions_1_1_o_k_w_g_u_i_object_not_found_exception.html#a81523dfe6ed6c4066e9ccfe182126f66":[10,0,1,2,13,1]
 };

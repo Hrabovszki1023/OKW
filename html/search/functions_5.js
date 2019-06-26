@@ -14,5 +14,6 @@ var searchData=
   ['frminputbutton',['frmInputButton',['../classokw_1_1gui_1_1frames_1_1seinputbutton_1_1frm_input_button.html#ae13b69b7aff443e4d3799d1beb9eb8cc',1,'okw::gui::frames::seinputbutton::frmInputButton']]],
   ['frminputbuttonnotactiv',['frmInputButtonNotActiv',['../classokw_1_1gui_1_1frames_1_1seinputbutton_1_1frm_input_button_not_activ.html#a00265d820ffd420eb3c9b4790e438bc2',1,'okw::gui::frames::seinputbutton::frmInputButtonNotActiv']]],
   ['frmobjdicttest',['FrmObjDictTest',['../classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test.html#ae2df0b7e37c8c47f94c6c631a595f181',1,'okw::gui::frames::FrmObjDictTest']]],
+  ['frmseimage',['frmSeImage',['../classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html#a7bbf9b304e37430efd937fbff5637997',1,'okw::gui::frames::SeImage::frmSeImage']]],
   ['frmtestrechner',['frmTestRechner',['../classokw_1_1gui_1_1frames_1_1frm_test_rechner.html#ae8e02f4551d6c0d595f69e562d22e523',1,'okw::gui::frames::frmTestRechner']]]
 ];

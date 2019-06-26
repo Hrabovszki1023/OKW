@@ -63,10 +63,11 @@ var group__group_selenium_child_g_u_i_adapter =
     [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html", [
       [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a477262917aa8cb51f99dff5df3b7dd1a", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a3c2c309651daf767e1941b2b30d3fea5", null ],
-      [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#aeaaf09d0f1c2c9524b27084c2f3d6639", null ]
+      [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#aeaaf09d0f1c2c9524b27084c2f3d6639", null ],
+      [ "Select", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a4dad04f0756ce7aab6d63ed836b29e5d", null ]
     ] ],
     [ "SeInputCheckbox", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html", [
-      [ "SeInputCheckbox", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a6e73dcc31ebb9e5e1d7d71ef93a6887e", null ],
+      [ "SeInputCheckbox", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#abeb09980b39db006513127c28b9e2e77", null ],
       [ "checking", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#ab998b0c6ae99303c050c6a7fe417dd6d", null ],
       [ "getIsSelected", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#aa5351c44da27a9f8c63ccd0315922c82", null ],
       [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html#a19bd403031cbdc003823a7b21c0cf12e", null ],
@@ -117,7 +118,7 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html#adadeaad5c5dbbe8c2f24e51a99de6012", null ]
     ] ],
     [ "SeTextarea", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html", [
-      [ "SeTextarea", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#a8303e52a36440c2b7fadb2e1b44c4cac", null ],
+      [ "SeTextarea", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#a88562418a9d568b01a7150967647af09", null ],
       [ "getMaxLength", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#afaa32280a8c58363ab177c08ea32a219", null ],
       [ "getPlaceholder", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#a73235d1d4d3117f96ae91e60b0921553", null ],
       [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html#a144e35802cf11c6b714bf8513691cc22", null ],

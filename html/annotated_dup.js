@@ -131,6 +131,9 @@ var annotated_dup =
           [ "secheckbox", null, [
             [ "frmSeCheckBox", "classokw_1_1gui_1_1frames_1_1secheckbox_1_1frm_se_check_box.html", "classokw_1_1gui_1_1frames_1_1secheckbox_1_1frm_se_check_box" ]
           ] ],
+          [ "SeImage", null, [
+            [ "frmSeImage", "classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html", "classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image" ]
+          ] ],
           [ "seinputbutton", null, [
             [ "frmInputButton", "classokw_1_1gui_1_1frames_1_1seinputbutton_1_1frm_input_button.html", "classokw_1_1gui_1_1frames_1_1seinputbutton_1_1frm_input_button" ],
             [ "frmInputButtonNotActiv", "classokw_1_1gui_1_1frames_1_1seinputbutton_1_1frm_input_button_not_activ.html", "classokw_1_1gui_1_1frames_1_1seinputbutton_1_1frm_input_button_not_activ" ]
