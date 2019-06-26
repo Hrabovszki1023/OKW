@@ -120,7 +120,7 @@ import okw.gui.*;
          *  
          *  @date 2017.02.17
          */         
-        public SeInputCheckbox( String Locator, OKWLocator... Locators )
+        public SeInputCheckbox( String Locator, OKWLocatorBase... Locators )
         {
             super(Locator, Locators);
             this.LM = new LogMessenger("GUI");

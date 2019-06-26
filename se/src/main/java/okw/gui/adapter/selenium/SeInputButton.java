@@ -41,6 +41,9 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 
+import org.openqa.selenium.support.ui.Select;
+
+import okw.OKW_Const_Sngltn;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.gui.OKWLocator;
 import okw.gui.OKWLocatorBase;
@@ -196,4 +199,49 @@ public class SeInputButton extends SeAnyChildWindow
         }
         // return lvLsReturn;
     }
+    
+
+    /** \~german
+     *  Methode wählt einen oder mehrere Werte in einer ListBox aus.
+     *  
+     *  Die Methode Select löscht bereits ausgewählte _nicht_.
+     *  
+     *  @param fps_Values Ein oder mehrere Werte, die ausgewählt werden sollen.
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2013.04.11
+     */
+    @Override
+    public void Select( ArrayList<String> fps_Values )
+    {
+        this.LogFunctionStartDebug( "Select", "fps_Values", fps_Values.toString() );
+
+        try
+        {
+            // Waiting for the object. 
+            // If it does not exist after TimeOut 
+            // then the exception OKWGUIObjectNotFoundException is raised and terminated...
+            this.WaitForMe();
+
+            //org.openqa.selenium.support.ui.Select
+            Select SelectList = new Select( this.Me() );
+
+            for ( String lvsValue : fps_Values )
+            {
+                if ( lvsValue.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+                {
+                    SelectList.deselectAll();
+                }
+                else
+                {
+                    SelectList.selectByVisibleText( lvsValue );
+                }
+            }
+        }
+        finally
+        {
+            this.LogFunctionEndDebug();
+        }
+    }
+
 }

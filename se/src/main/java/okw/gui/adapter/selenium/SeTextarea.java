@@ -44,7 +44,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import okw.OKW_Const_Sngltn;
-import okw.gui.OKWLocator;
+import okw.gui.OKWLocatorBase;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
 
 
@@ -65,7 +65,7 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
       /**
        *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
        */         
-       public SeTextarea(String Locator, OKWLocator... fpLocators)
+       public SeTextarea(String Locator, OKWLocatorBase... fpLocators)
         {
         	super(Locator, fpLocators);
         }
