@@ -265,7 +265,6 @@ public class OKWLocator extends OKWLocatorBase
     @Override
     public String getlocator()
     {
-        // TODO Auto-generated method stub
         return this._locator;
     }
 
@@ -283,7 +282,6 @@ public class OKWLocator extends OKWLocatorBase
     @Override
     public OKWLocatorBase[] getLocators()
     {
-        // TODO Auto-generated method stub
         return this._Locators;
     }
 }
