@@ -47,44 +47,25 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/// \~german
-/// \brief Prüft die Verküpfungen von Locatoren
-/// 
-/// Locatoren können nicht, einfach oder Mehrfach
-/// 
-/// \~english
-/// \brief \todo TODO: Brief Description.
-/// 
-/// \todo TODO: Detailed Description
-/// 
-/// \~
-/// \author Zoltán Hrabovszki
-/// \date 2015.07.12
+/** \~german
+ *   Prüft die Verküpfungen von Locatoren
+ *  
+ *  Locatoren können nicht, einfach oder Mehrfach
+ *  
+ *  \~english
+ *  \brief \todo TODO: Brief Description.
+ *  
+ *  \todo TODO: Detailed Description
+ *  
+ *  \~
+ *  \author Zoltán Hrabovszki
+ *  \date 2015.07.12
+ */
 public class OKWLocatorXPathTest
 {
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception
-	{
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception
-	{
-	}
-
-	@Before
-	public void setUp() throws Exception
-	{
-	}
-
-	@After
-	public void tearDown() throws Exception
-	{
-	}
-
 	
-    /* \~german
-     * \brief Mehrfach Verschachtelung: 2 Locatoren an zweistellen in einen dritten Locator einfügen. (einfach Verschachtelt)
+    /** \~german
+     *  Mehrfach Verschachtelung: 2 Locatoren an zweistellen in einen dritten Locator einfügen. (einfach Verschachtelt)
      * 
      *  \~english
      *  \brief \todo TODO: Brief Description.
@@ -276,7 +257,6 @@ public class OKWLocatorXPathTest
         assertEquals("//*[@data-4test='Window']", Window.getLocator());
         assertEquals("//*[@data-4test='Window']//*[contains(text(),'Child')]", Child.getLocator());
     }
-
 }
 
 

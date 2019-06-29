@@ -48,11 +48,11 @@ import org.stringtemplate.v4.*;
  */
 public class OKWLocator extends OKWLocatorBase
 {
-    private String           _locator = null;
+    protected String           _locator = null;
 
-    private OKWLocatorBase[] _Locatoren;
+    protected OKWLocatorBase[] _Locators = null;
 
-    private Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
+    protected Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 
 
     public OKWLocator(  )
@@ -62,11 +62,7 @@ public class OKWLocator extends OKWLocatorBase
     
     public OKWLocator( String fpsLocator, OKWLocatorBase... fpLocators )
     {
-        myLogger.LogFunctionStartDebug( "OKWLocator.OKWLocator" );
-        
-        this.setLocator( fpsLocator, fpLocators );
-
-        myLogger.LogFunctionEndDebug();
+        setLocator( fpsLocator, fpLocators );
     }
 
     /** \~german
@@ -96,14 +92,13 @@ public class OKWLocator extends OKWLocatorBase
         myLogger.LogFunctionStartDebug( "getLocator()" );
         String lvsReturn = "";
 
-        if ( _Locatoren != null )
+        if ( _Locators != null )
             {
-            System.out.println("_Locatoren length: " + _Locatoren.length);
                 ST st = new ST( _locator, '$', '$' );
 
                     Integer i = 1;
 
-                    for ( OKWLocatorBase Locator : _Locatoren )
+                    for ( OKWLocatorBase Locator : _Locators )
                     {
                         st.add( "L" + i.toString(), Locator.getLocator() );
                         i++;
@@ -122,11 +117,13 @@ public class OKWLocator extends OKWLocatorBase
 
     
     /** \~german
-     *  Setzt den Wert (z.B. XPath-Wert) des Locators.
+     *  Setzt den Wert (z.B. XPath-Wert) des Locators und die eingebtteten Referenzen
      *  
+     *  Hinweis: Durch weglassen von fpLocators wird nur fpsLocator gesetzt.
+     *  Wenn bereits fpLocators in der Klasse vorhanden sind dann werden diese nicht verändert.
+     *  Stichwort Dynamische Locatoren.
      *  
      *  \~english
-     *  \brief
      *  @todo TODO:  Übersetzung ins Englische fehlt...
      *  
      *  \~
@@ -141,9 +138,64 @@ public class OKWLocator extends OKWLocatorBase
 
         if ( fpLocators.length != 0 )
         {
-            _Locatoren = fpLocators;
+            this.setLocators( fpLocators );
         }
 
         myLogger.LogFunctionEndDebug();
+    }
+
+    
+    /** \~german
+     *  Setzt den Wert (z.B. XPath-Wert) des Locators.
+     *  
+     *  
+     *  \~english
+     *  \brief
+     *  @todo TODO:  Übersetzung ins Englische fehlt...
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2014.04.27
+     */
+    @Override
+    public void setLocators( OKWLocatorBase... fpLocators )
+    {
+        myLogger.LogFunctionStartDebug( "OKWLocator.setLocators" );
+
+        // if ( fpLocators.length != 0 )
+        if ( fpLocators != null )
+        {
+            _Locators = fpLocators;
+        }
+
+        myLogger.LogFunctionEndDebug();
+    }
+
+
+    @Override
+    public void copyLocator( OKWLocatorBase fpSource )
+    {
+        myLogger.LogFunctionStartDebug( "OKWLocator.copyLocator" );
+
+        this.setLocator( fpSource.getlocator() );
+        this.setLocators(fpSource.getLocators());
+
+        myLogger.LogFunctionEndDebug();
+    }
+
+    
+    @Override
+    public String getlocator()
+    {
+        // TODO Auto-generated method stub
+        return this._locator;
+    }
+
+
+    @Override
+    public OKWLocatorBase[] getLocators()
+    {
+        // TODO Auto-generated method stub
+        return this._Locators;
     }
 }
