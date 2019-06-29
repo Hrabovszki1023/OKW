@@ -1,0 +1,18 @@
+digraph "okw.gui.OKWLocator.setLocators"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node125 [label="okw.gui.OKWLocator.setLocators",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Setzt den Wert (z.B."];
+  Node125 -> Node126 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node126 [label="okw.gui.OKWLocator.setLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator.html#ae2ed146086e4f236bc0e133d164ba105",tooltip="Setzt den Wert (z.B."];
+  Node126 -> Node127 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node127 [label="okw.gui.AnyWinBase.setLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#a3194f519d53d24425a34f0433bc164a6",tooltip="Setzt den Locator für den aktuellen GUI-Adapter."];
+  Node126 -> Node128 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node128 [label="okw.gui.OKWLocator.copyLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator.html#a3f8e9de3291778c9c7a52dab2a1e08d0",tooltip="Copiert bzw, überträgt die Werte des fpSource Locators auf die Aktuelle Instanz."];
+  Node126 -> Node129 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node129 [label="okw.gui.OKWLocatorTest.TC\l_DynamicLocators",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator_test.html#ad8b291589037dc9118456dd1a9b90e3d",tooltip="Prüft, ob dynamische Locatoren möglich sind."];
+  Node125 -> Node128 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

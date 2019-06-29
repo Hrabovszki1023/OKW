@@ -1,5 +1,12 @@
 var NAVTREEINDEX14 =
 {
+"functions_func_v.html":[10,3,1,18],
+"functions_func_w.html":[10,3,1,19],
+"functions_func_y.html":[10,3,1,20],
+"functions_g.html":[10,3,0,7],
+"functions_h.html":[10,3,0,8],
+"functions_i.html":[10,3,0,9],
+"functions_l.html":[10,3,0,10],
 "functions_m.html":[10,3,0,11],
 "functions_n.html":[10,3,0,12],
 "functions_o.html":[10,3,0,13],
@@ -242,12 +249,5 @@ var NAVTREEINDEX14 =
 "ref_glossary.html#refExpVal":[4,0,2,0],
 "ref_glossary.html#refFN":[4,0,3,1],
 "ref_glossary.html#refFrame":[4,0,3,0],
-"ref_glossary.html#refGUIAdapter":[4,0,5,0],
-"ref_glossary.html#refGlossarA":[4,0,0],
-"ref_glossary.html#refGlossarC":[4,0,1],
-"ref_glossary.html#refGlossarE":[4,0,2],
-"ref_glossary.html#refGlossarF":[4,0,3],
-"ref_glossary.html#refGlossarG":[4,0,5],
-"ref_glossary.html#refGlossarK":[4,0,4],
-"ref_glossary.html#refGlossarM":[4,0,6]
+"ref_glossary.html#refGUIAdapter":[4,0,5,0]
 };

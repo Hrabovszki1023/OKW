@@ -4,5 +4,5 @@ digraph "okw.gui.OKWLocatorTest"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{okw.gui.OKWLocatorTest\n||+ setUp()\l+ tearDown()\l+ TC_Kombiniert_2in1\l_Multiple()\l+ TC_Kombiniert_2in1\l_ReverseOrder()\l+ TC_Kombiniert_2in1()\l+ TC_setLocator_2in1\l_Multiple()\l+ TC_setLocator_2in1\l_ReverseOrder()\l+ TC_setLocator_2in1()\l+ TC_Window()\l+ TC_Window_setLocator()\l+ TC_Window_Child()\l+ setUpBeforeClass()\l+ tearDownAfterClass()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Prüft die Verküpfungen von Locatoren."];
+  Node1 [label="{okw.gui.OKWLocatorTest\n||+ TC_Kombiniert_2in1\l_Multiple()\l+ TC_Kombiniert_2in1\l_ReverseOrder()\l+ TC_Kombiniert_2in1()\l+ TC_setL2in1_Multiple()\l+ TC_setL2in1_ReverseOrder()\l+ TC_setL2in1()\l+ TC_Window()\l+ TC_Window_setLocator()\l+ TC_Window_Child()\l+ TC_Copy__1Locators()\l+ TC_Copy_0Locators()\l+ TC_Copy_With_2Locators()\l+ TC_DynamicLocators()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Prüft die Verküpfungen von Locatoren."];
 }

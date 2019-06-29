@@ -1,6 +1,5 @@
 var classokw_1_1gui_1_1_o_k_w_locator_x_path_test =
 [
-    [ "setUp", "classokw_1_1gui_1_1_o_k_w_locator_x_path_test.html#ae22184392dac42e72ff7479bac05d7c6", null ],
     [ "TC_4T_Single", "classokw_1_1gui_1_1_o_k_w_locator_x_path_test.html#abfa361ac3be362df7b51a5c7876f13de", null ],
     [ "TC_4T_Window_Child", "classokw_1_1gui_1_1_o_k_w_locator_x_path_test.html#af2c851faa4e491d06d9f32068b8160d8", null ],
     [ "TC_4TID_Single", "classokw_1_1gui_1_1_o_k_w_locator_x_path_test.html#a53f1e4a55f853d08b75348f2ff5f69f6", null ],
@@ -19,6 +18,5 @@ var classokw_1_1gui_1_1_o_k_w_locator_x_path_test =
     [ "TC_setLocator_2in1_ReverseOrder", "classokw_1_1gui_1_1_o_k_w_locator_x_path_test.html#ae1b12e31611374944d21b898b6a369a7", null ],
     [ "TC_Window", "classokw_1_1gui_1_1_o_k_w_locator_x_path_test.html#a143422eca84d659b6baf8215f1ca8fcb", null ],
     [ "TC_Window_Child", "classokw_1_1gui_1_1_o_k_w_locator_x_path_test.html#a9d4ab943d0f45c68b7c793505411fc35", null ],
-    [ "TC_Window_setLocator", "classokw_1_1gui_1_1_o_k_w_locator_x_path_test.html#a80ba67da64a947b756b00d398c4f39af", null ],
-    [ "tearDown", "classokw_1_1gui_1_1_o_k_w_locator_x_path_test.html#aeb7876f3de2e10054eed1011d40fce73", null ]
+    [ "TC_Window_setLocator", "classokw_1_1gui_1_1_o_k_w_locator_x_path_test.html#a80ba67da64a947b756b00d398c4f39af", null ]
 ];
