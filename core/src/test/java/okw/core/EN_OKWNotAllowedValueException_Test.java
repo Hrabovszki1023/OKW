@@ -247,5 +247,82 @@ public class EN_OKWNotAllowedValueException_Test {
     EN.SelectWindow( "Rechner" );
     EN.VerifyMaxLength( "All_MethodsObj", "1,03" );
   }
+  
+  
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWNotAllowedValueException durch die
+   *  VerifyMinLength(String, String) ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void TC_VerifyMinLength_OKWNotAllowedValueException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMinLength( "IsNotDefindeInRechner", "Bandersnatch" );
+  }
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWNotAllowedValueException durch die
+   *  VerifyMinLength(String, String) ausgelöst wird, wenn das Frame-Kindobjekt vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void TC_VerifyMinLength_OKWNotAllowedValueException_2() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMinLength( "All_MethodsObj", "Bandersnatch" );
+  }
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWNotAllowedValueException durch die
+   *  VerifyMinLength(String, String) ausgelöst wird, wenn das Frame-Kindobjekt vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void TC_VerifyMinLength_OKWNotAllowedValueException_3() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMinLength( "All_MethodsObj", " 1" );
+  }
+
+  /**
+   * \~german
+   *  \brief
+   *  Prüft ob die Ausnahme OKWNotAllowedValueException durch die
+   *  VerifyMinLength(String, String) ausgelöst wird, wenn das Frame-Kindobjekt vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2016.05.07
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void TC_VerifyMinLength_OKWNotAllowedValueException_4() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMinLength( "All_MethodsObj", "1,03" );
+  }
 
 }

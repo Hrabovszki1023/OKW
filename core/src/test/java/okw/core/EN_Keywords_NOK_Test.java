@@ -173,6 +173,7 @@ public class EN_Keywords_NOK_Test
         EN.VerifyLabelWCM( "All_MethodsObj", "??? one and only VerifyLabel" );
 
         EN.VerifyMaxLength( "All_MethodsObj", "2" );
+        EN.VerifyMinLength( "All_MethodsObj", "2" );
 
         EN.VerifyPlaceholder( "All_MethodsObj", "The one and only VerifyPlaceholder" );
         EN.VerifyPlaceholderREGX( "All_MethodsObj", "\\w{3} one and only VerifyPlaceholder" );

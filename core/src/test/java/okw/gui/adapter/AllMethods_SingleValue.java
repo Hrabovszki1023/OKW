@@ -989,4 +989,25 @@ import okw.log.Logger_Sngltn;
 
             return lvLsReturn;
         }
+        
+        public Integer VerifyMinLength()
+        {
+            Integer lviReturn = 0;
+
+            this.myLogger.LogFunctionStartDebug("VerifyMinLength");
+            
+            lviReturn = Integer.valueOf( this.myALValue.get( 0 ) );
+
+            myClipboard.Clear();
+            String lvs_ObjectName = getKN();
+            myClipboard.setObjectName(lvs_ObjectName);
+            myClipboard.setMethod("VerifyMinLength()");
+
+            myClipboard.getValue().addAll(this.myALValue);;
+
+            this.myLogger.LogFunctionEndDebug();
+
+            return lviReturn;
+        }
+        
     }
