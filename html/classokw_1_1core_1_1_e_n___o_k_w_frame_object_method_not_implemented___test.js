@@ -23,6 +23,7 @@ var classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test 
     [ "TC_VerifyLabelREGX_OKWFrameObjectMethodNotImplemented", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#ac1b160b211d0a952829432cc809a575e", null ],
     [ "TC_VerifyLabelWCM_OKWFrameObjectMethodNotImplemented", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a62484fa5ac110f76c7871dff8cdc2395", null ],
     [ "TC_VerifyMaxLength_OKWFrameObjectMethodNotImplemented", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a20935050b85f5ba06822ce625a35e6f6", null ],
+    [ "TC_VerifyMinLength_OKWFrameObjectMethodNotImplemented", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#abb35175500d1839f32fa85183349e051", null ],
     [ "TC_VerifyPlaceholder_OKWFrameObjectMethodNotImplemented", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a5ec49242642726beb4f84e8a864c2239", null ],
     [ "TC_VerifyPlaceholderREGX_OKWFrameObjectMethodNotImplemented", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#ae37340cdcc40d709b7b3740c9c534f82", null ],
     [ "TC_VerifyPlaceholderWCM_OKWFrameObjectMethodNotImplemented", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a111596776b0372c8c042d5c674be2ec9", null ],

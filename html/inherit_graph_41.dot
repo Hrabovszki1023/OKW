@@ -5,5 +5,5 @@ digraph "Grafische Darstellung der Klassenhierarchie"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="okw.core.OKW_CurrentObject\l_Sngltn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k_w___current_object___sngltn.html",tooltip="Diese Klasse verwaltet das aktuelle GUI-Objekt."];
+  Node0 [label="okw.core.Matcher_Wildcard\lMatcherTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_matcher___wildcard_matcher_test.html",tooltip=" "];
 }

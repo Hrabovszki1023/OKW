@@ -5,5 +5,5 @@ digraph "Grafische Darstellung der Klassenhierarchie"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="okw.gui.OKWLocatorXPathTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator_x_path_test.html",tooltip="Prüft die Verküpfungen von Locatoren."];
+  Node0 [label="okw.gui.OKWLocatorTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator_test.html",tooltip="Prüft die Verküpfungen von Locatoren."];
 }

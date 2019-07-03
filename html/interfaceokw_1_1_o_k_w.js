@@ -15,6 +15,8 @@ var interfaceokw_1_1_o_k_w =
     [ "VerifyLabel_TO", "interfaceokw_1_1_o_k_w.html#a82cdf943baf6ca05d3dd4c27281a767e", null ],
     [ "VerifyMaxLength_PT", "interfaceokw_1_1_o_k_w.html#a946ca12e7fa5e26660514889f55bbea0", null ],
     [ "VerifyMaxLength_TO", "interfaceokw_1_1_o_k_w.html#af15873661409f8b1403baf03a1933074", null ],
+    [ "VerifyMinLength_PT", "interfaceokw_1_1_o_k_w.html#aa8220a14269214d486003a73275a182c", null ],
+    [ "VerifyMinLength_TO", "interfaceokw_1_1_o_k_w.html#a13f548f1e55017719f9d854b8d37ab42", null ],
     [ "VerifyPlaceholder_PT", "interfaceokw_1_1_o_k_w.html#a0bb0f6a539298d6d6e7a9f8960b93e8b", null ],
     [ "VerifyPlaceholder_TO", "interfaceokw_1_1_o_k_w.html#a8147b1ef8a75f2d220459cca6bd12420", null ],
     [ "VerifySelectedValue_PT", "interfaceokw_1_1_o_k_w.html#aa66dfee6a52c8f6dfc422159e47fdc1d", null ],

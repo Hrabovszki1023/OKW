@@ -5,7 +5,7 @@ digraph "okw.core.EN.TypeKeyWindow"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node2931 [label="okw.core.EN.TypeKeyWindow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
-  Node2931 -> Node2932 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2932 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
+  Node2971 [label="okw.core.EN.TypeKeyWindow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
+  Node2971 -> Node2972 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2972 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
 }

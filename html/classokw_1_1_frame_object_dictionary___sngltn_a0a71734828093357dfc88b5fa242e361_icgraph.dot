@@ -100,8 +100,8 @@ digraph "okw.FrameObjectDictionary_Sngltn.getChildObjectByName"
   Node70 [label="okw.core.OK.VerifyPlaceholder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a8c6275d39dbc5ce13caf907f511a9a64",tooltip="Überprüft die Beschreibung des Objektes."];
   Node26 -> Node71 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node71 [label="okw.core.OK.VerifyPlaceholderWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a20ab85fe302c5b2fc61b94a8fe347f0c",tooltip="Überprüft den Platzhalter des Objektes."];
-  Node24 -> Node89 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node89 [label="okw.core.OKW_CurrentObject\l_Sngltn.setWindowName",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#ad11e643efb1fe66ee4b6e5d4ea58ad24",tooltip="Hier wird der Kontext auf ein Fenster gesetzt."];
-  Node23 -> Node95 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node95 [label="okw.core.FrameObjectDictionary\l_Test.tc_CreatInstanceByObjectName\l__OKWFrameObjectWindowNotFoundException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_frame_object_dictionary___test.html#a143dfd109b0d1696479ca1e65b729df9",tooltip="Prüft ob eine OKWFrameObjectWindowNotFoundException ausgelöst wird, wenn das Fensterobjekt nicht exis..."];
+  Node24 -> Node90 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node90 [label="okw.core.OKW_CurrentObject\l_Sngltn.setWindowName",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k_w___current_object___sngltn.html#ad11e643efb1fe66ee4b6e5d4ea58ad24",tooltip="Hier wird der Kontext auf ein Fenster gesetzt."];
+  Node23 -> Node96 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node96 [label="okw.core.FrameObjectDictionary\l_Test.tc_CreatInstanceByObjectName\l__OKWFrameObjectWindowNotFoundException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_frame_object_dictionary___test.html#a143dfd109b0d1696479ca1e65b729df9",tooltip="Prüft ob eine OKWFrameObjectWindowNotFoundException ausgelöst wird, wenn das Fensterobjekt nicht exis..."];
 }

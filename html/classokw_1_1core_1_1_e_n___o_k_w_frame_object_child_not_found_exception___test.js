@@ -20,6 +20,7 @@ var classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___te
     [ "TC_VerifyLabelREGX_OKWFrameObjectChildNotFoundException", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#a1ab06ec8e7266ccd2351358cbd8acb56", null ],
     [ "TC_VerifyLabelWCM_OKWFrameObjectChildNotFoundException", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#a1f17a9b2071e2c989d6f13a17261d4c1", null ],
     [ "TC_VerifyMaxLength_OKWFrameObjectChildNotFoundException", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#a414dd4c1b718f8a8f8056d60a5c54727", null ],
+    [ "TC_VerifyMinLength_OKWFrameObjectChildNotFoundException", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#af64c2de3ed3f8ebd84c96d099c418dc6", null ],
     [ "TC_VerifyPlaceholder_OKWFrameObjectChildNotFoundException", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#a3a3732606b304999437df394a02af52b", null ],
     [ "TC_VerifyPlaceholderREGX_OKWFrameObjectChildNotFoundException", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#a5b9ed43b7ccadffcad3946a3368a045e", null ],
     [ "TC_VerifyPlaceholderWCM_OKWFrameObjectChildNotFoundException", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#adaa3abc213b8bb37d7904aaa5100f5f9", null ],
