@@ -4142,5 +4142,87 @@ public class OK implements IOKW_State
     }
     
     
+    /**
+     *   \copydoc IOKW_State::VerifyMinLength(String,String)
+     */
+    public void VerifyMinLength( String FN, String ExpVal ) throws Exception
+    {
+
+        Integer lviExpected = null;
+        Integer Actual = null;
+
+        Log.LogFunctionStartDebug( "VerifyMinLength", "FN", FN, "fpsExpected", ExpVal );
+
+        try
+        {
+            // Prüfen ob ignoriert werden muss...
+            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
+            {
+                // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            {
+                // Wenn ExpVal = IGNORE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
+            {
+                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "SEP" ) ) )
+            {
+                // Wenn ExpVal = SEP enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "VSEP" ) ) )
+            {
+                // Wenn ExpVal = VSEP enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
+            {
+                // Wenn ExpVal = VSEP enthält ist -> OKWNotAllowedValueException auslösen...
+                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+            }
+            else
+            {
+                try {
+                    String myExpVal = Parser.ParseMe( ExpVal );
+
+                    lviExpected = Integer.parseInt( myExpVal );
+                }
+                catch (NumberFormatException e) {
+                    // Wenn ExpVal = keine Zahl enthält -> OKWNotAllowedValueException auslösen...
+                    String msg = LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal );
+                    throw new OKWNotAllowedValueException( msg, e );
+                }
+
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
+
+                OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
+                OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyMinLength_TO(), myOKW.VerifyMinLength_PT() );
+
+                Actual = verify( TimeOut, lviExpected, () ->
+                {
+                    return MyObject.VerifyMinLength();
+                } );
+
+                verification( Actual, lviExpected );
+            }
+        }
+        catch (Exception e)
+        {
+            this.handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+    
+    
     
 }

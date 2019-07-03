@@ -1324,4 +1324,119 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
     EN.SelectWindow( "Rechner" );
     EN.MemorizePlaceholder( "All_MethodsObj", "${DELETE}" );
   }
+  
+
+  /** \~german
+   * DELETE ist ein nicht erlaubter Wert im Schlüsselwort EN.VerifyMinLength(String,String).
+   *
+   * Dieser Test Prüft, ob die Ausnahmen OKWNotAllowedValueException ausgelöst wird.
+   * 
+   * \~english
+   * DELETE is an illegal value in the keyword EN.VerifyMinLength(String,String).
+   * 
+   * This test verifies whether the exception OKWNotAllowedValueException is thrown.
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018.12.26
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifyMinLength_DELETE_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+  EN.VerifyMinLength( "All_MethodsObj", "${DELETE}" );
+  }
+  
+  
+  /** \~german
+   * SEP ist ein nicht erlaubter Wert im Schlüsselwort EN.VerifyMinLength(String,String).
+   *
+   * Dieser Test Prüft, ob die Ausnahmen OKWNotAllowedValueException ausgelöst wird.
+   * 
+   * \~english
+   * SEP is an illegal value in the keyword EN.VerifyMinLength(String,String).
+   * 
+   * This test verifies whether the exception OKWNotAllowedValueException is thrown.
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018.12.26
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifyMinLength_SEP_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMinLength( "All_MethodsObj", "1${SEP}2" );
+ 
+  }
+  /** \~german
+   * DELETE ist ein nicht erlaubter Wert im Schlüsselwort EN.VerifyMinLength(String,String).
+   *
+   * VSEP Test Prüft, ob die Ausnahmen OKWNotAllowedValueException ausgelöst wird.
+   * 
+   * \~english
+   * VSEP is an illegal value in the keyword EN.VerifyMinLength(String,String).
+   * 
+   * This test verifies whether the exception OKWNotAllowedValueException is thrown.
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018.12.26
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifyMinLength_VSEP_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMinLength( "All_MethodsObj", "1${VSEP}2" );
+
+  }
+  
+  /** \~german
+   * SEP ist ein nicht erlaubter Wert im Schlüsselwort EN.VerifyMaxLength(String,String).
+   *
+   * Dieser Test Prüft, ob die Ausnahmen OKWNotAllowedValueException ausgelöst wird.
+   * 
+   * \~english
+   * SEP is an illegal value in the keyword EN.VerifyMaxLength(String,String).
+   * 
+   * This test verifies whether the exception OKWNotAllowedValueException is thrown.
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018.12.26
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifyMaxLength_SEP_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMaxLength( "All_MethodsObj", "1${SEP}2" );
+
+  }
+  
+  /** \~german
+   * VSEP ist ein nicht erlaubter Wert im Schlüsselwort EN.VerifyMaxLength(String,String).
+   *
+   * Dieser Test Prüft, ob die Ausnahmen OKWNotAllowedValueException ausgelöst wird.
+   * 
+   * \~english
+   * VSEP is an illegal value in the keyword EN.VerifyMinLength(String,String).
+   * 
+   * This test verifies whether the exception OKWNotAllowedValueException is thrown.
+   * \~
+   * \author Zoltan Hrabovszki
+   * \date 2018.12.26
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcVerifyMaxLength_VSEP_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMaxLength( "All_MethodsObj", "1${VSEP}2" );
+
+  }
 }

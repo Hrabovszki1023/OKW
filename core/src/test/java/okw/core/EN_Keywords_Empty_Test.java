@@ -1142,4 +1142,27 @@ public class EN_Keywords_Empty_Test {
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyBadge()", myClipBoard.getMethod());
   }
+  
+  /** \~german
+   * EMPTY ist ein nicht erlaubter Wert im Schlüsselwort EN.VerifyMinLength(String,String).
+   *
+   * Dieser Test Prüft, ob die Ausnahmen OKWNotAllowedValueException ausgelöst wird.
+   * 
+   * \~english
+   * EMPTY is an illegal value in the keyword EN.VerifyMinLength(String,String).
+   * 
+   * This test verifies whether the exception OKWNotAllowedValueException is thrown.
+   * \~
+   * \author daniel KRüger
+   * \date 2019.06.18
+   */
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tc_VerifyMinLength_EMPTY_OKWNotAllowedValueException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+  
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMinLength( "All_MethodsObj", "${EMPTY}" );
+  }
+  
 }

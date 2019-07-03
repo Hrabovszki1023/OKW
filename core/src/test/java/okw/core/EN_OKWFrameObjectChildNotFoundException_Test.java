@@ -752,6 +752,28 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
     EN.SelectWindow( "Rechner" );
     EN.VerifySelectedValueREGX( "IsNotDefindeInRechner", "Value" );
   }
+  
+  /**
+   * \~german
+   *  \brief
+   *  Prüft, ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *  LFC-VerifyMinLength ausgelöst wird, wenn das Frame-Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  Checks whether the OKWFrameObjectChildNotFoundException exception is raised
+   *  by the LFC VerifyMinLength if the frame child object does not exist.
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2018.06.18
+   */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_VerifyMinLength_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.VerifyMinLength( "IsNotDefindeInRechner", "2" );
+  }
+
 
   
 }

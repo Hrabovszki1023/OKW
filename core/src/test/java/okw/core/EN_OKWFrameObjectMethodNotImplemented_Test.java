@@ -814,5 +814,28 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
         EN.SelectWindow( "Rechner" );
         EN.Sequence( "Rechner", "NoMethodObj", "SEQ_ID" );
     }
+    
+    /**
+     * \~german
+     *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
+     *  VerifyMinLength( FN, ExpVal ) ausgelöst wird,
+     *  wenn die Methode im GUI-Adapter nicht implementiert ist.
+     * 
+     *  \~english
+     *  Checks whether the OKWFrameObjectMethodNotImplemented exception is raised 
+     *  by VerifyMinLength( FN, ExpVal ),
+     *  if the method is not implemented in the GUI adapter.
+     *  \~
+     *  @author Daniel Krüger
+     *  @date 2019-06-18
+     */
+     @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+     public void TC_VerifyMinLength_OKWFrameObjectMethodNotImplemented() throws Exception
+     {
+         EN.BeginTest( name.getMethodName() );
+
+         EN.SelectWindow( "Rechner" );
+         EN.VerifyMinLength( "NoMethodObj", "2" );
+     }
 
 }

@@ -622,5 +622,15 @@
 				<de>Datei kopieren</de>
 			</Text>
 		</Method>
+		
+				<!-- Method: "VerifyMinLength"-->
+		<Method name="VerifyMinLength">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Verify Max Length</en>
+				<de>Prüfe maximale Länge</de>
+			</Text>
+		</Method>
+		
 	</Class>
 </LogMessages>
