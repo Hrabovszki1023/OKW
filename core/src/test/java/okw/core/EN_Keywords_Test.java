@@ -2550,5 +2550,40 @@ public class EN_Keywords_Test
         assertEquals( "Rechner.AllMethods_MultipleValues", myClipBoard.getObjectName() );
         assertEquals( "VerifyValue()", myClipBoard.getMethod() );
     }
+    
+    /**
+     * \~german
+     * "Normaler" Testfall für das Schlüsselwort EN.VerifyMinLength(String,String). 
+     * 
+     *  \~english
+     *  "Normal" test case for the keyword EN.VerifyMinLength(String,String).
+     *  \~
+     *  \author Daniel Krüger
+     *  \date 2019.06.18
+     */
+    @Test
+    public void tc_VerifyMinLength() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        EN.SetValue( "All_MethodsObj", "2" );
+        myClipBoard.Clear();
+        EN.VerifyMinLength( "All_MethodsObj", "2" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "2", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyMinLength()", myClipBoard.getMethod() );
+    }
 
 }

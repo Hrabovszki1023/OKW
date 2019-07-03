@@ -2011,4 +2011,33 @@ public interface IOKW_State
     * @date 2015-06-26
     */
     void VerifyDirectoryExists( String fpsPath, String ExpVal ) throws Exception;
+    
+    /**
+     *  \~german
+     *  Checks the minimum number of characters that has to be entert.
+     *  
+     *  _Beispiel:_ Prüfe, ob min. 3 Zeichen in ein das Objekt mit FN = "Name" 
+     *  eingeben wurden:
+     *  
+     *  \verbatim EN.VerifyMinLength( "Name", "3" ) \endverbatim
+     *  
+     *  @param FN Funktionaler Name des Objekts 
+     *  @param ExpVal Erwarteter Wert, als String Zahl 
+     * 
+     *  \~english
+     *  Verifies the placeholder of a GUI-object.
+     *  
+     *  _Example:_ Check if min. 3 characters in the object with FN = "Name" have be inserted:
+     *  
+     *  \verbatim EN.VerifyMinLength( "Name", "3" ) \endverbatim
+     *  
+     *  @param FN Functional name of the object 
+     *  @param ExpVal Expected Value as String with Numbers
+     * 
+     *  \~
+     *  @author Daniel Krüger
+     *  @date 2019.06.18
+     */
+    void VerifyMinLength( String FN, String ExpVal ) throws Exception;
+    
 }

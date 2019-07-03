@@ -697,4 +697,14 @@ public class EN
         myKernel.setLanguage( Language );
         myKernel.VerifyDirectoryExists( fpsPath, ExpVal );
     }
+    
+    /**
+     *  \copydoc IOKW_State::VerifyMinLength(String,String)
+     */
+    public static void VerifyMinLength( String FN, String ExpVal ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.VerifyMinLength( FN, ExpVal );
+    }
+    
 }

@@ -3157,5 +3157,80 @@ public class EN_Keywords_IGNORE_Test
 
 		assertEquals(0, myClipBoard.getValue().size());
 	}
+	
+	  /**
+     *  \~german
+     *  Prüft ob das Schlüsselwort VerifyMinLength( FN, "" ) nicht ausgeführt wird
+     *  
+     *  \~english
+     *  Verifies if the keyword VerifyMinLength( FN, "" ) is not executed.
+     *  
+     *  \~
+     *  \author Daniel Krüger
+     *  \date 2019.06.18
+     */
+    @Test
+    public void tcVerifyMinLength_IGNORE_EmptyString() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        myClipBoard.Clear();
+
+        EN.VerifyMinLength( "All_MethodsObj", "" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "", myClipBoard.getObjectName() );
+        assertEquals( "", myClipBoard.getMethod() );
+
+        assertEquals( 0, myClipBoard.getValue().size() );
+    }
+
+    /**
+     *  \~german
+     *  Prüft ob das Schlüsselwort VerifyMinLength( FN, "${IGNORE}" ) nicht ausgeführt wird
+     *  
+     *  \~english
+     *  Verifies if the keyword VerifyMinLength( FN, "${IGNORE}" ) is not executed.
+     *  
+     *  \~
+     *  \author Daniel Krüger
+     *  \date 2019.06.18
+     */
+    @Test
+    public void tcVerifyMinLength_IGNORE() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        myClipBoard.Clear();
+
+        EN.VerifyMinLength( "All_MethodsObj", "${IGNORE}" );
+
+        // Check the Name, Called Method and Value of Actual object
+        assertEquals( "", myClipBoard.getObjectName() );
+        assertEquals( "", myClipBoard.getMethod() );
+
+        assertEquals( 0, myClipBoard.getValue().size() );
+    }
+	
 }
 	
