@@ -1310,4 +1310,51 @@ public class Core implements IOKW_State
         }
     }
     
+    /**
+     *  \copydoc IOKW_State::VerifyErrorMSG(String,String)
+     */
+    public void VerifyErrorMSG( String FN, String ExpVal ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "VerifyErrorMSG", "KeyWordName" ), FN, ExpVal );
+            this.CurrentState.VerifyErrorMSG( FN, ExpVal );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+
+    /**
+     * \copydoc IOKW_State::VerifyErrorMSG_WCM(String,String)
+     */
+    public void VerifyErrorMSG_WCM( String FN, String ExpVal ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "VerifyErrorMSG_WCM", "KeyWordName" ), FN, ExpVal );
+            this.CurrentState.VerifyErrorMSG_WCM( FN, ExpVal );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+    /**
+     * \copydoc IOKW_State::VerifyErrorMSG_REGX(String,String)
+     */
+    public void VerifyErrorMSG_REGX( String FN, String ExpVal ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "VerifyErrorMSG_REGX", "KeyWordName" ), FN, ExpVal );
+            this.CurrentState.VerifyErrorMSG_REGX( FN, ExpVal );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+
 }

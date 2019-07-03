@@ -707,4 +707,30 @@ public class EN
         myKernel.VerifyMinLength( FN, ExpVal );
     }
     
+    /**
+     *  \copydoc IOKW_State::VerifyErrorMSG(String,String)
+     */
+    public static void VerifyErrorMSG( String FN, String ExpVal ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.VerifyErrorMSG( FN, ExpVal );
+    }
+
+    /**
+     *  \copydoc IOKW_State::VerifyErrorMSG_REGX(String,String)
+     */
+    public static void VerifyErrorMSG_REGX( String FN, String ExpVal ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.VerifyErrorMSG_REGX( FN, ExpVal );
+    }
+
+    /**
+     *  \copydoc IOKW_State::VerifyErrorMSG_WCM(String,String)
+     */
+    public static void VerifyErrorMSG_WCM( String FN, String ExpVal ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.VerifyErrorMSG_WCM( FN, ExpVal );
+    }
 }

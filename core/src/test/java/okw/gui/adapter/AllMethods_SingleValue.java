@@ -1010,4 +1010,24 @@ import okw.log.Logger_Sngltn;
             return lviReturn;
         }
         
+        
+        public ArrayList<String> VerifyErrorMSG()
+        {
+            ArrayList<String> lvLsReturn = new ArrayList<String>();
+
+            this.myLogger.LogFunctionStartDebug("VerifyErrorMSG");
+            
+            lvLsReturn.addAll(this.myALValue);
+
+            myClipboard.Clear();
+            String lvs_ObjectName = getKN();
+            myClipboard.setObjectName(lvs_ObjectName);
+            myClipboard.setMethod("VerifyErrorMSG()");
+
+            myClipboard.getValue().addAll(this.myALValue);;
+
+            this.myLogger.LogFunctionEndDebug();
+
+            return lvLsReturn;
+        }
     }

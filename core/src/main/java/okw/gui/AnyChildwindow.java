@@ -403,6 +403,11 @@ public ArrayList<String> MemorizeCaption( )
       throw new OKWFrameObjectMethodNotImplemented("The method 'public void VerifyMinLength( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
     }
 
+    public ArrayList<String> VerifyErrorMSG( )
+    {
+      // TODO: /todo Meldung in xml-Auslagern
+      throw new OKWFrameObjectMethodNotImplemented("The method 'public void VerifyErrorMSG( ) throws Exception' is not defined for you GUI-Object. Please define first the methode!");
+    }
 
     /**
      *  Wir benötigt damit in den abgeleitetetn Klassen
