@@ -2040,4 +2040,87 @@ public interface IOKW_State
      */
     void VerifyMinLength( String FN, String ExpVal ) throws Exception;
     
+    
+    /**
+     *  \~german
+     *   Überprüft Fehlermeldungen in mit Angular validierten Formularen.
+     *  
+     *  @param FN Funktionaler Name des Objekts 
+     *  @param ExpVal Erwarteter Wert 
+     * 
+     *  \~english
+     *   Checks error messages in forms validated with Angular.
+     *  
+     *  @param FN Functional name of the object 
+     *  @param ExpVal Expected Value 
+     * 
+     *  \~
+     *  @author Daniel Krüger
+     *  @date 2019-05-28
+     */
+    void VerifyErrorMSG( String FN, String ExpVal ) throws Exception;
+
+    /**
+     *  \~german
+     *  Überprüft Fehlermeldungen in mit Angular validierten Formularen.
+     *  Der Sollwert wird als Wildcard-Match angegeben.
+     *  
+     *  Folgende Platzhalter sind möglich:
+     *  * "?" - genau ein beliebiges Zeichen wird Maskiert
+     *  * "*" - (0-n) beliebiges Zeichen wird Maskiert
+     *  * "#" - genau eine Ziffer [0..9] kann maskiert werden
+     *  _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
+     *  Wert "\\.jango" entspricht:_ <br>
+     *  
+     *  
+     *  @param FN Funktionaler Name des Objekts 
+     *  @param ExpVal Erwarteter Wert 
+     * 
+     *  \~english
+     *  Checks error messages in forms validated with Angular.
+     *  The value is specified as a wildcard match.
+     * 
+     *  The following placeholders are possible:
+     *  "?" - exactly one character is masked
+     *  "*" - (0-n) any character is masked
+     *  "#" - exactly one digit [0..9] can be masked
+     *  Example: Check whether the value (text) of the object "MyObject" corresponds to the expected value.
+     *  Value "\\\.jango" corresponds to:_ <br>
+     *  
+     *  @param FN Functional name of the object 
+     *  @param ExpVal Expected Value 
+     *  \~
+     *  @author zh@openkeyword.de
+     *  @date 2014-09-21
+     */
+    void VerifyErrorMSG_WCM( String FN, String ExpVal ) throws Exception;
+
+    /**
+     *  \~german
+     *  Überprüft Fehlermeldungen in mit Angular validierten Formularen.
+     *  Reguläre aus drücke als sollwert sind erlaubt.
+     *  
+     *  _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
+     *  Wert "\\.jango" entspricht:_ <br>
+     *  
+     *  \verbatim PrüfeWertREGX: "MeinObjekt", "$Django" \endverbatim
+     *  
+     *  @param FN Funktionaler Name des Objekts 
+     *  @param ExpVal Erwarteter Wert 
+     * 
+     *  \~english
+     *  Regular expressions as setpoints are allowed.
+     *  Checks error messages in forms validated with Angular.
+     *  Example: Check whether the value (text) of the object "MyObject" corresponds to the expected value.
+     *  Value "\\.jango" corresponds to:_ <br>
+     *  \verbatim Checking VALUE REGX: "MyObject", "$Django" \endverbatim
+     *  
+     *  @param FN Functional name of the object 
+     *  @param ExpVal Expected Value 
+     * 
+     *  \~
+     *  @author zh@openkeyword.de
+     *  @date 2014-09-21
+     */
+    void VerifyErrorMSG_REGX( String FN, String ExpVal ) throws Exception;
 }

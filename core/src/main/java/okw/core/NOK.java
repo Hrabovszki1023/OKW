@@ -830,4 +830,36 @@ public class NOK implements IOKW_State
         Log.LogFunctionEndDebug();
     }
     
+    
+    /**
+     * \copydoc IOKW_State::VerifyErrorMSG(String,String)
+     */
+    public void VerifyErrorMSG( String FN, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifyErrorMSG", "FN", FN, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     * \copydoc IOKW_State::VerifyErrorMSG_WCM(String,String)
+     */
+    public void VerifyErrorMSG_WCM( String FN, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifyErrorMSG_WCM", "FN", FN, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     * \copydoc IOKW_State::VerifyErrorMSG_REGX(String,String)
+     */
+    public void VerifyErrorMSG_REGX( String FN, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifyErrorMSG_REGX", "FN", FN, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    
 }
