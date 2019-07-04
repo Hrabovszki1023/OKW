@@ -5,15 +5,15 @@ digraph "okw.core.Core.TypeKeyWindow"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node3901 [label="okw.core.Core.TypeKeyWindow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
-  Node3901 -> Node3902 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3902 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
-  Node3901 -> Node3903 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3903 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
-  Node3903 -> Node3904 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3904 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
-  Node3904 -> Node3905 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3905 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
-  Node3901 -> Node3906 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3906 [label="okw.core.IOKW_State.Type\lKeyWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a96f34e11f8d52127e6b6f39d3c15186b",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
+  Node3967 [label="okw.core.Core.TypeKeyWindow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
+  Node3967 -> Node3968 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3968 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node3967 -> Node3969 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3969 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node3969 -> Node3970 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3970 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node3970 -> Node3971 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3971 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node3967 -> Node3972 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3972 [label="okw.core.IOKW_State.Type\lKeyWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a96f34e11f8d52127e6b6f39d3c15186b",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
 }

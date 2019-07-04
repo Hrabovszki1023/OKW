@@ -4,6 +4,7 @@ var classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty =
     [ "getFN", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#a3ed0b1b431690623f7be8af1bc0bff85", null ],
     [ "VerifyBadge", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#adba0493565ed60ddf1736697582ae275", null ],
     [ "VerifyCaption", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#a47de529fb658e49b8dfd77c6d9ade199", null ],
+    [ "VerifyErrorMSG", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#ab486dd38c96280363af4d6031e9126e9", null ],
     [ "VerifyExists", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#a305fefeb38cb75eb4b7f86197a0c5ca4", null ],
     [ "VerifyHasFocus", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#a7dd4d78ca5fac89078501c1b9d8fb594", null ],
     [ "VerifyIsActive", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html#aeb1093eefccb6c4feca4b63aef31d8c3", null ],

@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 361, Datum: 07.03.2019 11:27:19</span>
+   &#160;<span id="projectnumber">Build_ID: 363, Datum: 07.04.2019 04:51:46</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -353,6 +353,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetKernaleStateNOK</b
 <tr class="memitem:a77a689ab1d62833cf0f8536155ca7636"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_core.html#a77a689ab1d62833cf0f8536155ca7636">VerifyMinLength</a> (String FN, String ExpVal)  throws Exception     </td></tr>
 <tr class="memdesc:a77a689ab1d62833cf0f8536155ca7636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the minimum number of characters that has to be entert.  <a href="#a77a689ab1d62833cf0f8536155ca7636">Mehr ...</a><br /></td></tr>
 <tr class="separator:a77a689ab1d62833cf0f8536155ca7636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03113b009e075e756f5aa6533a2053cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_core.html#a03113b009e075e756f5aa6533a2053cf">VerifyErrorMSG</a> (String FN, String ExpVal)  throws Exception     </td></tr>
+<tr class="memdesc:a03113b009e075e756f5aa6533a2053cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überprüft Fehlermeldungen in mit Angular validierten Formularen.  <a href="#a03113b009e075e756f5aa6533a2053cf">Mehr ...</a><br /></td></tr>
+<tr class="separator:a03113b009e075e756f5aa6533a2053cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef9f972c85b0326acf85844afc45e70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_core.html#a2ef9f972c85b0326acf85844afc45e70">VerifyErrorMSG_WCM</a> (String FN, String ExpVal)  throws Exception     </td></tr>
+<tr class="memdesc:a2ef9f972c85b0326acf85844afc45e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überprüft Fehlermeldungen in mit Angular validierten Formularen.  <a href="#a2ef9f972c85b0326acf85844afc45e70">Mehr ...</a><br /></td></tr>
+<tr class="separator:a2ef9f972c85b0326acf85844afc45e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad90b7cab76a5b09401c8b51e7aa01867"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_core.html#ad90b7cab76a5b09401c8b51e7aa01867">VerifyErrorMSG_REGX</a> (String FN, String ExpVal)  throws Exception     </td></tr>
+<tr class="memdesc:ad90b7cab76a5b09401c8b51e7aa01867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überprüft Fehlermeldungen in mit Angular validierten Formularen.  <a href="#ad90b7cab76a5b09401c8b51e7aa01867">Mehr ...</a><br /></td></tr>
+<tr class="separator:ad90b7cab76a5b09401c8b51e7aa01867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Öffentliche, statische Methoden</h2></td></tr>
@@ -3439,6 +3448,208 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 
 </div>
 </div>
+<a id="a03113b009e075e756f5aa6533a2053cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03113b009e075e756f5aa6533a2053cf">&#9670;&nbsp;</a></span>VerifyErrorMSG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void okw.core.Core.VerifyErrorMSG </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>FN</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>ExpVal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws Exception</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Überprüft Fehlermeldungen in mit Angular validierten Formularen. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Daniel Krüger </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2019-05-28 </dd></dl>
+
+<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a9d7ce1b5c08cfedf8689c4fda64862ab">okw.core.IOKW_State</a>.</p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_core_8java_source.html#l01316">1316</a> der Datei <a class="el" href="_core_8java_source.html">Core.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;    {</div><div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;        <span class="keywordflow">try</span></div><div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;        {</div><div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;            Log.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">LogKeyWordStart</a>( <a class="code" href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">LM</a>.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;VerifyErrorMSG&quot;</span>, <span class="stringliteral">&quot;KeyWordName&quot;</span> ), FN, ExpVal );</div><div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;            this.<a class="code" href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">CurrentState</a>.<a class="code" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a9d7ce1b5c08cfedf8689c4fda64862ab">VerifyErrorMSG</a>( FN, ExpVal );</div><div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;        }</div><div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;        <span class="keywordflow">finally</span></div><div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;        {</div><div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;            Log.LogKeyWordEnd();</div><div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;        }</div><div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;    }</div><div class="ttc" id="classokw_1_1_log_messenger_html_af225d1f037d47b3b085175c09d78bdd2"><div class="ttname"><a href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">okw.LogMessenger.GetMessage</a></div><div class="ttdeci">String GetMessage(String MethodName, String TextKey)</div><div class="ttdoc">Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter.</div><div class="ttdef"><b>Definition:</b> <a href="_log_messenger_8java_source.html#l00137">LogMessenger.java:137</a></div></div>
+<div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00099">Core.java:99</a></div></div>
+<div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a9d7ce1b5c08cfedf8689c4fda64862ab"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a9d7ce1b5c08cfedf8689c4fda64862ab">okw.core.IOKW_State.VerifyErrorMSG</a></div><div class="ttdeci">void VerifyErrorMSG(String FN, String ExpVal)</div><div class="ttdoc">Überprüft Fehlermeldungen in mit Angular validierten Formularen.</div></div>
+<div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
+<div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
+</div><!-- fragment --><div id="dynsection-97" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-97-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-97-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-97-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 97 -->
+</div>
+</div>
+<div id="dynsection-98" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-98-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-98-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-98-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 98 -->
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad90b7cab76a5b09401c8b51e7aa01867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad90b7cab76a5b09401c8b51e7aa01867">&#9670;&nbsp;</a></span>VerifyErrorMSG_REGX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void okw.core.Core.VerifyErrorMSG_REGX </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>FN</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>ExpVal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws Exception</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Überprüft Fehlermeldungen in mit Angular validierten Formularen. </p>
+<p>Reguläre aus drücke als sollwert sind erlaubt.</p>
+<p><em>Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten Wert "\\.jango" entspricht:</em> <br />
+</p>
+<pre class="fragment">PrüfeWertREGX: "MeinObjekt", "$Django" </pre><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'zh@'+'op'+'enk'+'ey'+'wor'+'d.'+'de'; return false;">zh@op<span style="display: none;">.nosp@m.</span>enke<span style="display: none;">.nosp@m.</span>yword<span style="display: none;">.nosp@m.</span>.de</a> </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
+
+<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a30334377a27d5fbc8b5ad63235a27238">okw.core.IOKW_State</a>.</p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_core_8java_source.html#l01347">1347</a> der Datei <a class="el" href="_core_8java_source.html">Core.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;    {</div><div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;        <span class="keywordflow">try</span></div><div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;        {</div><div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;            Log.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">LogKeyWordStart</a>( <a class="code" href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">LM</a>.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;VerifyErrorMSG_REGX&quot;</span>, <span class="stringliteral">&quot;KeyWordName&quot;</span> ), FN, ExpVal );</div><div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;            this.<a class="code" href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">CurrentState</a>.<a class="code" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a30334377a27d5fbc8b5ad63235a27238">VerifyErrorMSG_REGX</a>( FN, ExpVal );</div><div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;        }</div><div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;        <span class="keywordflow">finally</span></div><div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;        {</div><div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;            Log.LogKeyWordEnd();</div><div class="line"><a name="l01357"></a><span class="lineno"> 1357</span>&#160;        }</div><div class="line"><a name="l01358"></a><span class="lineno"> 1358</span>&#160;    }</div><div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a30334377a27d5fbc8b5ad63235a27238"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a30334377a27d5fbc8b5ad63235a27238">okw.core.IOKW_State.VerifyErrorMSG_REGX</a></div><div class="ttdeci">void VerifyErrorMSG_REGX(String FN, String ExpVal)</div><div class="ttdoc">Überprüft Fehlermeldungen in mit Angular validierten Formularen.</div></div>
+<div class="ttc" id="classokw_1_1_log_messenger_html_af225d1f037d47b3b085175c09d78bdd2"><div class="ttname"><a href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">okw.LogMessenger.GetMessage</a></div><div class="ttdeci">String GetMessage(String MethodName, String TextKey)</div><div class="ttdoc">Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter.</div><div class="ttdef"><b>Definition:</b> <a href="_log_messenger_8java_source.html#l00137">LogMessenger.java:137</a></div></div>
+<div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00099">Core.java:99</a></div></div>
+<div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
+<div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
+</div><!-- fragment --><div id="dynsection-99" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-99-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-99-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-99-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 99 -->
+</div>
+</div>
+<div id="dynsection-100" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-100-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-100-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-100-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 100 -->
+</div>
+</div>
+
+</div>
+</div>
+<a id="a2ef9f972c85b0326acf85844afc45e70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef9f972c85b0326acf85844afc45e70">&#9670;&nbsp;</a></span>VerifyErrorMSG_WCM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void okw.core.Core.VerifyErrorMSG_WCM </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>FN</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>ExpVal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> throws Exception</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Überprüft Fehlermeldungen in mit Angular validierten Formularen. </p>
+<p>Der Sollwert wird als Wildcard-Match angegeben.</p>
+<p>Folgende Platzhalter sind möglich:</p><ul>
+<li>"?" - genau ein beliebiges Zeichen wird Maskiert</li>
+<li>"*" - (0-n) beliebiges Zeichen wird Maskiert</li>
+<li>"#" - genau eine Ziffer [0..9] kann maskiert werden <em>Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten Wert "\\.jango" entspricht:</em> <br />
+</li>
+</ul>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'zh@'+'op'+'enk'+'ey'+'wor'+'d.'+'de'; return false;">zh@op<span style="display: none;">.nosp@m.</span>enke<span style="display: none;">.nosp@m.</span>yword<span style="display: none;">.nosp@m.</span>.de</a> </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
+
+<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a06ee7f10306bfd5f172529cca08dd000">okw.core.IOKW_State</a>.</p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_core_8java_source.html#l01332">1332</a> der Datei <a class="el" href="_core_8java_source.html">Core.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l01333"></a><span class="lineno"> 1333</span>&#160;    {</div><div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;        <span class="keywordflow">try</span></div><div class="line"><a name="l01335"></a><span class="lineno"> 1335</span>&#160;        {</div><div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;            Log.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">LogKeyWordStart</a>( <a class="code" href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">LM</a>.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;VerifyErrorMSG_WCM&quot;</span>, <span class="stringliteral">&quot;KeyWordName&quot;</span> ), FN, ExpVal );</div><div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;            this.<a class="code" href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">CurrentState</a>.<a class="code" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a06ee7f10306bfd5f172529cca08dd000">VerifyErrorMSG_WCM</a>( FN, ExpVal );</div><div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;        }</div><div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;        <span class="keywordflow">finally</span></div><div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;        {</div><div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;            Log.LogKeyWordEnd();</div><div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;        }</div><div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;    }</div><div class="ttc" id="classokw_1_1_log_messenger_html_af225d1f037d47b3b085175c09d78bdd2"><div class="ttname"><a href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">okw.LogMessenger.GetMessage</a></div><div class="ttdeci">String GetMessage(String MethodName, String TextKey)</div><div class="ttdoc">Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter.</div><div class="ttdef"><b>Definition:</b> <a href="_log_messenger_8java_source.html#l00137">LogMessenger.java:137</a></div></div>
+<div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00099">Core.java:99</a></div></div>
+<div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a06ee7f10306bfd5f172529cca08dd000"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a06ee7f10306bfd5f172529cca08dd000">okw.core.IOKW_State.VerifyErrorMSG_WCM</a></div><div class="ttdeci">void VerifyErrorMSG_WCM(String FN, String ExpVal)</div><div class="ttdoc">Überprüft Fehlermeldungen in mit Angular validierten Formularen.</div></div>
+<div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
+<div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
+</div><!-- fragment --><div id="dynsection-101" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-101-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-101-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-101-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 101 -->
+</div>
+</div>
+<div id="dynsection-102" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-102-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-102-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-102-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 102 -->
+</div>
+</div>
+
+</div>
+</div>
 <a id="a47af0e08b2bde199fc5d10dee040ac1b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a47af0e08b2bde199fc5d10dee040ac1b">&#9670;&nbsp;</a></span>VerifyExists()</h2>
 
@@ -3486,20 +3697,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00099">Core.java:99</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-97" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-97-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-97-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-103" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-103-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-103-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-97-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 97 -->
+<div id="dynsection-103-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 103 -->
 </div>
 </div>
-<div id="dynsection-98" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-98-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-98-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-104" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-104-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-104-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-98-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 98 -->
+<div id="dynsection-104-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 104 -->
 </div>
 </div>
 
@@ -3551,20 +3762,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00099">Core.java:99</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-99" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-99-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-99-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-105" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-105-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-105-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-99-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 99 -->
+<div id="dynsection-105-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 105 -->
 </div>
 </div>
-<div id="dynsection-100" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-100-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-100-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-106" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-106-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-106-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-100-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 100 -->
+<div id="dynsection-106-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 106 -->
 </div>
 </div>
 
@@ -3617,20 +3828,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a40877cd2c0183c22aa695cf4973ce37c"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a40877cd2c0183c22aa695cf4973ce37c">okw.core.IOKW_State.VerifyHasFocus</a></div><div class="ttdeci">void VerifyHasFocus(String FN, String ExpVal)</div><div class="ttdoc">Vergleicht den Fokus-Zustand des gegebenen Objekts mit dem erwarteten Wert.</div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-101" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-101-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-101-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-107" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-107-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-107-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-101-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 101 -->
+<div id="dynsection-107-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 107 -->
 </div>
 </div>
-<div id="dynsection-102" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-102-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-102-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-108" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-108-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-108-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-102-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 102 -->
+<div id="dynsection-108-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 108 -->
 </div>
 </div>
 
@@ -3682,20 +3893,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_ad003bc140c032dc58f2f67bcc749990c"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad003bc140c032dc58f2f67bcc749990c">okw.core.IOKW_State.VerifyIsActive</a></div><div class="ttdeci">void VerifyIsActive(String FN, String ExpVal)</div><div class="ttdoc">Vergleicht den Fokus-Status des gegebenen Objekts mit dem erwarteten Wert.</div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-103" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-103-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-103-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-109" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-109-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-109-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-103-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 103 -->
+<div id="dynsection-109-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 109 -->
 </div>
 </div>
-<div id="dynsection-104" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-104-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-104-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-110" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-110-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-110-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-104-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 104 -->
+<div id="dynsection-110-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 110 -->
 </div>
 </div>
 
@@ -3746,20 +3957,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a39449615efcf006fddf5389238470efc"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a39449615efcf006fddf5389238470efc">okw.core.IOKW_State.VerifyLabel</a></div><div class="ttdeci">void VerifyLabel(String FN, String ExpVal)</div><div class="ttdoc">Überprüft die Beschreibung des Objektes.</div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-105" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-105-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-105-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-111" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-111-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-111-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-105-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 105 -->
+<div id="dynsection-111-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 111 -->
 </div>
 </div>
-<div id="dynsection-106" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-106-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-106-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-112" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-112-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-112-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-106-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 106 -->
+<div id="dynsection-112-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 112 -->
 </div>
 </div>
 
@@ -3813,20 +4024,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a070f48adbb7a8148c8276ee965773a6d"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a070f48adbb7a8148c8276ee965773a6d">okw.core.IOKW_State.VerifyLabelREGX</a></div><div class="ttdeci">void VerifyLabelREGX(String FN, String ExpVal)</div><div class="ttdoc">Überprüft die Überschrift des Objektes.</div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-107" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-107-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-107-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-113" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-113-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-113-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-107-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 107 -->
+<div id="dynsection-113-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 113 -->
 </div>
 </div>
-<div id="dynsection-108" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-108-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-108-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-114" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-114-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-114-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-108-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 108 -->
+<div id="dynsection-114-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 114 -->
 </div>
 </div>
 
@@ -3884,20 +4095,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_aa2e12e52f5fd3c45a5006af52dd9a7db"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa2e12e52f5fd3c45a5006af52dd9a7db">okw.core.IOKW_State.VerifyLabelWCM</a></div><div class="ttdeci">void VerifyLabelWCM(String FN, String ExpVal)</div><div class="ttdoc">Überprüft die Beschreibung/Label des Objektes.</div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-109" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-109-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-109-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-115" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-115-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-115-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-109-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 109 -->
+<div id="dynsection-115-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 115 -->
 </div>
 </div>
-<div id="dynsection-110" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-110-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-110-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-116" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-116-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-116-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-110-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 110 -->
+<div id="dynsection-116-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 116 -->
 </div>
 </div>
 
@@ -3949,20 +4160,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a4aaa222daa949dd0401b3dfc1c5ab19d"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a4aaa222daa949dd0401b3dfc1c5ab19d">okw.core.IOKW_State.VerifyMaxLength</a></div><div class="ttdeci">void VerifyMaxLength(String FN, String ExpVal)</div><div class="ttdoc">Checks the maximum number of characters that can be entered.</div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-111" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-111-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-111-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-117" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-117-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-117-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-111-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 111 -->
+<div id="dynsection-117-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 117 -->
 </div>
 </div>
-<div id="dynsection-112" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-112-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-112-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-118" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-118-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-118-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-112-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 112 -->
+<div id="dynsection-118-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 118 -->
 </div>
 </div>
 
@@ -4014,20 +4225,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a168a06d8a3305e86fd7e4e269ba6b40e"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a168a06d8a3305e86fd7e4e269ba6b40e">okw.core.IOKW_State.VerifyMinLength</a></div><div class="ttdeci">void VerifyMinLength(String FN, String ExpVal)</div><div class="ttdoc">Checks the minimum number of characters that has to be entert.</div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-113" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-113-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-113-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-119" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-119-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-119-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-113-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 113 -->
+<div id="dynsection-119-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 119 -->
 </div>
 </div>
-<div id="dynsection-114" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-114-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-114-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-120" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-120-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-120-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-114-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 114 -->
+<div id="dynsection-120-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 120 -->
 </div>
 </div>
 
@@ -4079,20 +4290,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00099">Core.java:99</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-115" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-115-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-115-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-121" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-121-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-121-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-115-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 115 -->
+<div id="dynsection-121-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 121 -->
 </div>
 </div>
-<div id="dynsection-116" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-116-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-116-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-122" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-122-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-122-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-116-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 116 -->
+<div id="dynsection-122-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 122 -->
 </div>
 </div>
 
@@ -4146,20 +4357,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a15ddba3c9c71e79a7438590b958dfe0a"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a15ddba3c9c71e79a7438590b958dfe0a">okw.core.IOKW_State.VerifyPlaceholderREGX</a></div><div class="ttdeci">void VerifyPlaceholderREGX(String FN, String ExpVal)</div><div class="ttdoc">Überprüft den Platzhalter des Objektes.</div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-117" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-117-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-117-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-123" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-123-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-123-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-117-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 117 -->
+<div id="dynsection-123-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 123 -->
 </div>
 </div>
-<div id="dynsection-118" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-118-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-118-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-124" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-124-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-124-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-118-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 118 -->
+<div id="dynsection-124-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 124 -->
 </div>
 </div>
 
@@ -4218,20 +4429,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00099">Core.java:99</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-119" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-119-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-119-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-125" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-125-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-125-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-119-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 119 -->
+<div id="dynsection-125-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 125 -->
 </div>
 </div>
-<div id="dynsection-120" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-120-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-120-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-126" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-126-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-126-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-120-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 120 -->
+<div id="dynsection-126-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 126 -->
 </div>
 </div>
 
@@ -4285,20 +4496,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a804768212384c2b9b29f2664a5eb95d0"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a804768212384c2b9b29f2664a5eb95d0">okw.core.IOKW_State.VerifySelectedValue</a></div><div class="ttdeci">void VerifySelectedValue(String FN, String ExpVal)</div><div class="ttdoc">Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert.</div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-121" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-121-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-121-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-127" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-127-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-127-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-121-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 121 -->
+<div id="dynsection-127-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 127 -->
 </div>
 </div>
-<div id="dynsection-122" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-122-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-122-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-128" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-128-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-128-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-122-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 122 -->
+<div id="dynsection-128-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 128 -->
 </div>
 </div>
 
@@ -4352,20 +4563,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a7c72b9596aa356a729e3e5cb04e043bf"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a7c72b9596aa356a729e3e5cb04e043bf">okw.core.IOKW_State.VerifySelectedValueREGX</a></div><div class="ttdeci">void VerifySelectedValueREGX(String FN, String ExpVal)</div><div class="ttdoc">Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert.</div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-123" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-123-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-123-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-129" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-129-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-129-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-123-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 123 -->
+<div id="dynsection-129-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 129 -->
 </div>
 </div>
-<div id="dynsection-124" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-124-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-124-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-130" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-130-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-130-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-124-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 124 -->
+<div id="dynsection-130-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 130 -->
 </div>
 </div>
 
@@ -4419,20 +4630,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00099">Core.java:99</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-125" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-125-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-125-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-131" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-131-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-131-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-125-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 125 -->
+<div id="dynsection-131-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 131 -->
 </div>
 </div>
-<div id="dynsection-126" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-126-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-126-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-132" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-132-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-132-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-126-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 126 -->
+<div id="dynsection-132-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 132 -->
 </div>
 </div>
 
@@ -4497,20 +4708,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a08f78760818a6ad5c1fd14640de3d3b1"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a08f78760818a6ad5c1fd14640de3d3b1">okw.core.IOKW_State.VerifyTablecellValue</a></div><div class="ttdeci">void VerifyTablecellValue(String FN, String COL, String ROW, String ExpVal)</div><div class="ttdoc">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert.</div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-127" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-127-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-127-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-133" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-133-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-133-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-127-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 127 -->
+<div id="dynsection-133-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 133 -->
 </div>
 </div>
-<div id="dynsection-128" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-128-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-128-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-134" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-134-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-134-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-128-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 128 -->
+<div id="dynsection-134-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 134 -->
 </div>
 </div>
 
@@ -4576,20 +4787,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a4e452e946ec073b880a8e3d952b9340e"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a4e452e946ec073b880a8e3d952b9340e">okw.core.IOKW_State.VerifyTablecellValueREGX</a></div><div class="ttdeci">void VerifyTablecellValueREGX(String FN, String COL, String ROW, String ExpVal)</div><div class="ttdoc">Vergleicht den Inhalt der gegebenen Tabellenzelle mit dem erwarteten Wert.</div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-129" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-129-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-129-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-135" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-135-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-135-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-129-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 129 -->
+<div id="dynsection-135-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 135 -->
 </div>
 </div>
-<div id="dynsection-130" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-130-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-130-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-136" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-136-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-136-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-130-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 130 -->
+<div id="dynsection-136-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 136 -->
 </div>
 </div>
 
@@ -4660,20 +4871,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00099">Core.java:99</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-131" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-131-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-131-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-137" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-137-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-137-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-131-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 131 -->
+<div id="dynsection-137-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 137 -->
 </div>
 </div>
-<div id="dynsection-132" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-132-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-132-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-138" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-138-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-138-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-132-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 132 -->
+<div id="dynsection-138-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 138 -->
 </div>
 </div>
 
@@ -4725,20 +4936,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00099">Core.java:99</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-133" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-133-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-133-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-139" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-139-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-139-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-133-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 133 -->
+<div id="dynsection-139-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 139 -->
 </div>
 </div>
-<div id="dynsection-134" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-134-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-134-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-140" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-140-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-140-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-134-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 134 -->
+<div id="dynsection-140-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 140 -->
 </div>
 </div>
 
@@ -4792,20 +5003,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a651ce4c1a5bd9dcac256b3204548f3be"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a651ce4c1a5bd9dcac256b3204548f3be">okw.core.IOKW_State.VerifyTooltipREGX</a></div><div class="ttdeci">void VerifyTooltipREGX(String FN, String ExpVal)</div><div class="ttdoc">Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text).</div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-135" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-135-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-135-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-141" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-141-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-141-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-135-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 135 -->
+<div id="dynsection-141-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 141 -->
 </div>
 </div>
-<div id="dynsection-136" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-136-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-136-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-142" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-142-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-142-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-136-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 136 -->
+<div id="dynsection-142-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 142 -->
 </div>
 </div>
 
@@ -4864,20 +5075,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a5eeafdd7f415970cddcec31fa642da02"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a5eeafdd7f415970cddcec31fa642da02">okw.core.IOKW_State.VerifyTooltipWCM</a></div><div class="ttdeci">void VerifyTooltipWCM(String FN, String ExpVal)</div><div class="ttdoc">Prüft den Tooltip-Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text).</div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-137" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-137-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-137-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-143" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-143-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-143-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-137-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 137 -->
+<div id="dynsection-143-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 143 -->
 </div>
 </div>
-<div id="dynsection-138" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-138-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-138-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-144" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-144-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-144-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-138-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 138 -->
+<div id="dynsection-144-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 144 -->
 </div>
 </div>
 
@@ -4931,20 +5142,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="interfaceokw_1_1core_1_1_i_o_k_w___state_html_a7cc12f50a3b6af352a873d42d947813e"><div class="ttname"><a href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a7cc12f50a3b6af352a873d42d947813e">okw.core.IOKW_State.VerifyValue</a></div><div class="ttdeci">void VerifyValue(String FN, String ExpVal)</div><div class="ttdoc">Prüft den Standardwert eines Objektes (in den meisten Fällen ist dies der angezeigte Text).</div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-139" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-139-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-139-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-145" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-145-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-145-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-139-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 139 -->
+<div id="dynsection-145-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 145 -->
 </div>
 </div>
-<div id="dynsection-140" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-140-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-140-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-146" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-146-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-146-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-140-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 140 -->
+<div id="dynsection-146-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 146 -->
 </div>
 </div>
 
@@ -4998,20 +5209,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00099">Core.java:99</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-141" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-141-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-141-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-147" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-147-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-147-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-141-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 141 -->
+<div id="dynsection-147-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 147 -->
 </div>
 </div>
-<div id="dynsection-142" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-142-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-142-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-148" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-148-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-148-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-142-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 142 -->
+<div id="dynsection-148-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 148 -->
 </div>
 </div>
 
@@ -5069,20 +5280,20 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="ttc" id="classokw_1_1core_1_1_core_html_a3719173bd6e95cc6f1b54edbb2a629af"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#a3719173bd6e95cc6f1b54edbb2a629af">okw.core.Core.LM</a></div><div class="ttdeci">static LogMessenger LM</div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00099">Core.java:99</a></div></div>
 <div class="ttc" id="classokw_1_1core_1_1_core_html_abfb1a01e1140b3316bc85a5b1e00081b"><div class="ttname"><a href="classokw_1_1core_1_1_core.html#abfb1a01e1140b3316bc85a5b1e00081b">okw.core.Core.CurrentState</a></div><div class="ttdeci">IOKW_State CurrentState</div><div class="ttdoc">zeigt auf die Klasse des aktuellen Zustandes.</div><div class="ttdef"><b>Definition:</b> <a href="_core_8java_source.html#l00088">Core.java:88</a></div></div>
 <div class="ttc" id="classokw_1_1log_1_1_logger___sngltn_html_a70ec25e200e00ecefc544e8fd371d2ef"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">okw.log.Logger_Sngltn.LogKeyWordStart</a></div><div class="ttdeci">void LogKeyWordStart(String fpsKeyWordName, String... fpsParameter)</div><div class="ttdoc">Ausgabe eines Schlüsselwortes.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00366">Logger_Sngltn.java:366</a></div></div>
-</div><!-- fragment --><div id="dynsection-143" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-143-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-143-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-149" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-149-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-149-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-143-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 143 -->
+<div id="dynsection-149-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 149 -->
 </div>
 </div>
-<div id="dynsection-144" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-144-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
-<div id="dynsection-144-summary" class="dynsummary" style="display:block;">
+<div id="dynsection-150" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-150-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-150-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-144-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 144 -->
+<div id="dynsection-150-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 150 -->
 </div>
 </div>
 
@@ -5165,7 +5376,7 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>core</b></li><li class="navelem"><a class="el" href="classokw_1_1core_1_1_core.html">Core</a></li>
-    <li class="footer">Erzeugt am Mit Jul 3 2019 11:56:24 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Jul 4 2019 05:06:34 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>

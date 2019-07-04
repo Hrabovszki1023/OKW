@@ -5,16 +5,16 @@ digraph "okw.OKW_Const_Sngltn.YesNo2Boolean"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node375 [label="okw.OKW_Const_Sngltn.Yes\lNo2Boolean",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Konvertiert sprachabhängig Ja/Nein zu einem Booleanean Wert (Wahr/Falsch)."];
-  Node375 -> Node376 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node376 [label="okw.OKW_Const_Sngltn.Get\lConst4Internalname",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7",tooltip="Methode ermittelt für Internalname und der aktuell eingestellten Sprache den Wert für Const."];
-  Node376 -> Node377 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node377 [label="okw.log.Logger_Sngltn.Log\lPrintDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4",tooltip="Loggt eine Nachricht."];
-  Node376 -> Node378 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node378 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
-  Node375 -> Node379 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node379 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
-  Node379 -> Node380 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node380 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
-  Node380 -> Node378 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node390 [label="okw.OKW_Const_Sngltn.Yes\lNo2Boolean",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Konvertiert sprachabhängig Ja/Nein zu einem Booleanean Wert (Wahr/Falsch)."];
+  Node390 -> Node391 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node391 [label="okw.OKW_Const_Sngltn.Get\lConst4Internalname",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7",tooltip="Methode ermittelt für Internalname und der aktuell eingestellten Sprache den Wert für Const."];
+  Node391 -> Node392 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node392 [label="okw.log.Logger_Sngltn.Log\lPrintDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4",tooltip="Loggt eine Nachricht."];
+  Node391 -> Node393 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node393 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node390 -> Node394 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node394 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node394 -> Node395 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node395 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node395 -> Node393 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

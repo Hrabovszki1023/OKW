@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 361, Datum: 07.03.2019 11:27:19</span>
+   &#160;<span id="projectnumber">Build_ID: 363, Datum: 07.04.2019 04:51:46</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -344,6 +344,15 @@ $(document).ready(function(){initNavTree('classokw_1_1core_1_1_n_o_k.html','');}
 <tr class="memitem:a7c84bb091731421c6b9459567855f1d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_n_o_k.html#a7c84bb091731421c6b9459567855f1d8">VerifyMinLength</a> (String FN, String ExpVal)</td></tr>
 <tr class="memdesc:a7c84bb091731421c6b9459567855f1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the minimum number of characters that has to be entert.  <a href="#a7c84bb091731421c6b9459567855f1d8">Mehr ...</a><br /></td></tr>
 <tr class="separator:a7c84bb091731421c6b9459567855f1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a427be8df499fbf28b51cef9f8453ed4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_n_o_k.html#a427be8df499fbf28b51cef9f8453ed4f">VerifyErrorMSG</a> (String FN, String ExpVal)</td></tr>
+<tr class="memdesc:a427be8df499fbf28b51cef9f8453ed4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überprüft Fehlermeldungen in mit Angular validierten Formularen.  <a href="#a427be8df499fbf28b51cef9f8453ed4f">Mehr ...</a><br /></td></tr>
+<tr class="separator:a427be8df499fbf28b51cef9f8453ed4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cfd57f757c7b14be41a612c58d8dc94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_n_o_k.html#a3cfd57f757c7b14be41a612c58d8dc94">VerifyErrorMSG_WCM</a> (String FN, String ExpVal)</td></tr>
+<tr class="memdesc:a3cfd57f757c7b14be41a612c58d8dc94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überprüft Fehlermeldungen in mit Angular validierten Formularen.  <a href="#a3cfd57f757c7b14be41a612c58d8dc94">Mehr ...</a><br /></td></tr>
+<tr class="separator:a3cfd57f757c7b14be41a612c58d8dc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92c92c523d11686615edcd652def9da4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1core_1_1_n_o_k.html#a92c92c523d11686615edcd652def9da4">VerifyErrorMSG_REGX</a> (String FN, String ExpVal)</td></tr>
+<tr class="memdesc:a92c92c523d11686615edcd652def9da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Überprüft Fehlermeldungen in mit Angular validierten Formularen.  <a href="#a92c92c523d11686615edcd652def9da4">Mehr ...</a><br /></td></tr>
+<tr class="separator:a92c92c523d11686615edcd652def9da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attribute</h2></td></tr>
@@ -2414,6 +2423,145 @@ Private Attribute</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;    {</div><div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyDirectoryExists&quot;</span>, <span class="stringliteral">&quot;fpsPath&quot;</span>, fpsPath, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;</div><div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;    }</div></div><!-- fragment -->
 </div>
 </div>
+<a id="a427be8df499fbf28b51cef9f8453ed4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a427be8df499fbf28b51cef9f8453ed4f">&#9670;&nbsp;</a></span>VerifyErrorMSG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void okw.core.NOK.VerifyErrorMSG </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>FN</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>ExpVal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Überprüft Fehlermeldungen in mit Angular validierten Formularen. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd>Daniel Krüger </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2019-05-28 </dd></dl>
+
+<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a9d7ce1b5c08cfedf8689c4fda64862ab">okw.core.IOKW_State</a>.</p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00837">837</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;    {</div><div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyErrorMSG&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;</div><div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;    }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a92c92c523d11686615edcd652def9da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92c92c523d11686615edcd652def9da4">&#9670;&nbsp;</a></span>VerifyErrorMSG_REGX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void okw.core.NOK.VerifyErrorMSG_REGX </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>FN</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>ExpVal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Überprüft Fehlermeldungen in mit Angular validierten Formularen. </p>
+<p>Reguläre aus drücke als sollwert sind erlaubt.</p>
+<p><em>Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten Wert "\\.jango" entspricht:</em> <br />
+</p>
+<pre class="fragment">PrüfeWertREGX: "MeinObjekt", "$Django" </pre><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'zh@'+'op'+'enk'+'ey'+'wor'+'d.'+'de'; return false;">zh@op<span style="display: none;">.nosp@m.</span>enke<span style="display: none;">.nosp@m.</span>yword<span style="display: none;">.nosp@m.</span>.de</a> </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
+
+<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a30334377a27d5fbc8b5ad63235a27238">okw.core.IOKW_State</a>.</p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00857">857</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;    {</div><div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyErrorMSG_REGX&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;</div><div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;    }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a3cfd57f757c7b14be41a612c58d8dc94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cfd57f757c7b14be41a612c58d8dc94">&#9670;&nbsp;</a></span>VerifyErrorMSG_WCM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void okw.core.NOK.VerifyErrorMSG_WCM </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>FN</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>ExpVal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Überprüft Fehlermeldungen in mit Angular validierten Formularen. </p>
+<p>Der Sollwert wird als Wildcard-Match angegeben.</p>
+<p>Folgende Platzhalter sind möglich:</p><ul>
+<li>"?" - genau ein beliebiges Zeichen wird Maskiert</li>
+<li>"*" - (0-n) beliebiges Zeichen wird Maskiert</li>
+<li>"#" - genau eine Ziffer [0..9] kann maskiert werden <em>Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten Wert "\\.jango" entspricht:</em> <br />
+</li>
+</ul>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FN</td><td>Funktionaler Name des Objekts </td></tr>
+    <tr><td class="paramname">ExpVal</td><td>Erwarteter Wert</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Autor</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'zh@'+'op'+'enk'+'ey'+'wor'+'d.'+'de'; return false;">zh@op<span style="display: none;">.nosp@m.</span>enke<span style="display: none;">.nosp@m.</span>yword<span style="display: none;">.nosp@m.</span>.de</a> </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
+
+<p>Implementiert <a class="el" href="interfaceokw_1_1core_1_1_i_o_k_w___state.html#a06ee7f10306bfd5f172529cca08dd000">okw.core.IOKW_State</a>.</p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_n_o_k_8java_source.html#l00847">847</a> der Datei <a class="el" href="_n_o_k_8java_source.html">NOK.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;    {</div><div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;        Log.LogFunctionStartDebug( <span class="stringliteral">&quot;VerifyErrorMSG_WCM&quot;</span>, <span class="stringliteral">&quot;FN&quot;</span>, FN, <span class="stringliteral">&quot;ExpVal&quot;</span>, ExpVal );</div><div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;</div><div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        Log.LogFunctionEndDebug();</div><div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;    }</div></div><!-- fragment -->
+</div>
+</div>
 <a id="a6161473900747fe51b8ac29b72612339"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6161473900747fe51b8ac29b72612339">&#9670;&nbsp;</a></span>VerifyExists()</h2>
 
@@ -3572,7 +3720,7 @@ Private Attribute</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>core</b></li><li class="navelem"><a class="el" href="classokw_1_1core_1_1_n_o_k.html">NOK</a></li>
-    <li class="footer">Erzeugt am Mit Jul 3 2019 11:56:27 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Jul 4 2019 05:06:37 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>

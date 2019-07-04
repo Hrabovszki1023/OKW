@@ -5,6 +5,8 @@ var interfaceokw_1_1_o_k_w =
     [ "VerifyBadge_TO", "interfaceokw_1_1_o_k_w.html#a340ed46e5dca0eb1581b25f3296a59dd", null ],
     [ "VerifyCaption_PT", "interfaceokw_1_1_o_k_w.html#a05a951f068a3d3535a8df1fd883781a5", null ],
     [ "VerifyCaption_TO", "interfaceokw_1_1_o_k_w.html#a80b7b6bad92fee65679ca17819941e0b", null ],
+    [ "VerifyErrorMSG_PT", "interfaceokw_1_1_o_k_w.html#a8fd0222445e137e530e54bdd55468d9f", null ],
+    [ "VerifyErrorMSG_TO", "interfaceokw_1_1_o_k_w.html#ae9b06c1fa336155522df546330257ac9", null ],
     [ "VerifyExists_PT", "interfaceokw_1_1_o_k_w.html#a0463f41da2a22c0299661f0719b32018", null ],
     [ "VerifyExists_TO", "interfaceokw_1_1_o_k_w.html#a0a6d8b83e881ebb02d031955b0cc460e", null ],
     [ "VerifyHasFocus_PT", "interfaceokw_1_1_o_k_w.html#a1b87d4e6b44b93fbf858c3653c458d18", null ],

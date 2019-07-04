@@ -81,9 +81,15 @@ digraph "okw.OKW_Memorize_Sngltn.OKW_Memorize_Sngltn"
   Node2 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node38 [label="okw.core.EN_Keywords\l_ANTLR_Test.tc_VerifyMinLength\lMemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html#a57ea9a332844fa7dbf9994fae63099f6",tooltip=" "];
   Node2 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node39 [label="okw.parser.OKW_VisitorTest.\lTC_ParseMe_MemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1parser_1_1_o_k_w___visitor_test.html#a0859a9809c4c66da88c95311e732fa7a",tooltip="Prüft das lesen eines gemerkten Wertes."];
+  Node39 [label="okw.core.EN_Keywords\l_ANTLR_Test.tc_VerifyErrorMSG\l_MemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html#a9bc6bd328e5310eadfdafb24a2622dbd",tooltip=" "];
   Node2 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node40 [label="okw.parser.OKW_VisitorTest.\lTC_ParseMe_ArrayListString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1parser_1_1_o_k_w___visitor_test.html#a7480c7ffa9758fe572d0187c84a1ef86",tooltip="Testziel: OKW-Variable File_OKWConst_xml auslesen."];
+  Node40 [label="okw.core.EN_Keywords\l_ANTLR_Test.tc_VerifyErrorMSG\l_WCM_MemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html#a0b15a15feff087b424ebd884f853556c",tooltip=" "];
   Node2 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node41 [label="okw.seinputfield.SeInput\lField_EN_Test.TC_MemorizeExists_en",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seinputfield_1_1_se_input_field___e_n___test.html#a22177b2f1f991689df54b51f78971d34",tooltip="Teste das Schlüsselwort MemorizeExists( FN, MemKey ) eines SeInputText Prüfen."];
+  Node41 [label="okw.core.EN_Keywords\l_ANTLR_Test.tc_VerifyErrorMSG\l_REGX_MemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html#acf657a372c5162c9734eba720a0d6ae3",tooltip=" "];
+  Node2 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="okw.parser.OKW_VisitorTest.\lTC_ParseMe_MemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1parser_1_1_o_k_w___visitor_test.html#a0859a9809c4c66da88c95311e732fa7a",tooltip="Prüft das lesen eines gemerkten Wertes."];
+  Node2 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="okw.parser.OKW_VisitorTest.\lTC_ParseMe_ArrayListString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1parser_1_1_o_k_w___visitor_test.html#a7480c7ffa9758fe572d0187c84a1ef86",tooltip="Testziel: OKW-Variable File_OKWConst_xml auslesen."];
+  Node2 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="okw.seinputfield.SeInput\lField_EN_Test.TC_MemorizeExists_en",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seinputfield_1_1_se_input_field___e_n___test.html#a22177b2f1f991689df54b51f78971d34",tooltip="Teste das Schlüsselwort MemorizeExists( FN, MemKey ) eines SeInputText Prüfen."];
 }

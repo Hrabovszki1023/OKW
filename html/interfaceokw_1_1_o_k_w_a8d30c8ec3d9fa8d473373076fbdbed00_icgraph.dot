@@ -5,7 +5,7 @@ digraph "okw.OKW.VerifyIsActive_PT"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node37 [label="okw.OKW.VerifyIsActive_PT",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Polling Time in [ms] für das Schlüsselwort VerifyIsActive."];
-  Node37 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node38 [label="okw.core.OK.VerifyIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a071aec5319238e209cfc6f1434ea13e8",tooltip="copydoc IOKW_State::VerifyHasFocus(String,String)"];
+  Node47 [label="okw.OKW.VerifyIsActive_PT",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Polling Time in [ms] für das Schlüsselwort VerifyIsActive."];
+  Node47 -> Node48 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="okw.core.OK.VerifyIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a071aec5319238e209cfc6f1434ea13e8",tooltip="copydoc IOKW_State::VerifyHasFocus(String,String)"];
 }

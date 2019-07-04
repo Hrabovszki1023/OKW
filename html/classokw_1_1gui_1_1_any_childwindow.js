@@ -45,6 +45,7 @@ var classokw_1_1gui_1_1_any_childwindow =
     [ "VerifyBadgeREGX", "classokw_1_1gui_1_1_any_childwindow.html#a696d23ebed24285441bf67535e984479", null ],
     [ "VerifyBadgeWCM", "classokw_1_1gui_1_1_any_childwindow.html#a42466620645b28443eb84f6e5e003ee7", null ],
     [ "VerifyCaption", "classokw_1_1gui_1_1_any_childwindow.html#a79015b313362e6aa2011b9a54a412d35", null ],
+    [ "VerifyErrorMSG", "classokw_1_1gui_1_1_any_childwindow.html#a11d5c2bc7e3ac623ef58008cdfcfc7e7", null ],
     [ "VerifyExists", "classokw_1_1gui_1_1_any_childwindow.html#a038b4d3be57539181a4747bf3d9c68e7", null ],
     [ "VerifyHasFocus", "classokw_1_1gui_1_1_any_childwindow.html#ad3c87db64f26c189935fc82ee64ce02b", null ],
     [ "VerifyIsActive", "classokw_1_1gui_1_1_any_childwindow.html#a19599ea1f89538628668f810f099048c", null ],
