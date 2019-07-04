@@ -42,7 +42,8 @@ package okw.gui;
 import okw.log.*;
 import org.stringtemplate.v4.*;
 
-    /**  \~german
+    /** 
+     * \~german
      * 
      * Beispiel 1: Ein einfacher Locator
      * 

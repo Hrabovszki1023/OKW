@@ -623,23 +623,21 @@
 			</Text>
 		</Method>
 		
-<<<<<<< HEAD
-				<!-- Method: "VerifyMinLength"-->
+		<!-- Method: "VerifyMinLength"-->
 		<Method name="VerifyMinLength">
 			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
 			<Text key="KeyWordName">
-				<en>Verify Max Length</en>
-				<de>Prüfe maximale Länge</de>
+				<en>Verify Min Length</en>
+				<de>Prüfe minimale Länge</de>
 			</Text>
 		</Method>
 		
-=======
 		<!-- Method: "VerifyErrorMSG"-->
 		<Method name="VerifyErrorMSG">
 			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
 			<Text key="KeyWordName">
 				<en>Verify Error MSG</en>
-				<de>Prüfe Etikette</de>
+				<de>Prüfe Fehlermeldung</de>
 			</Text>
 		</Method>
 
@@ -648,7 +646,7 @@
 			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
 			<Text key="KeyWordName">
 				<en>Verify Error MSG WCM</en>
-				<de>Prüfe Etikette WCM</de>
+				<de>Prüfe Fehlermeldung WCM</de>
 			</Text>
 		</Method>
 
@@ -657,9 +655,8 @@
 			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
 			<Text key="KeyWordName">
 				<en> Verify Error MSG REGX</en>
-				<de>Prüfe Etikette REGX</de>
+				<de>Prüfe Fehlermeldung REGX</de>
 			</Text>
 		</Method>
->>>>>>> refs/heads/VerifyError_regx_wcm
 	</Class>
 </LogMessages>
