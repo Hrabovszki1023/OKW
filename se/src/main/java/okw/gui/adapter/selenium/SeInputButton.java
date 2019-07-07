@@ -215,8 +215,8 @@ public class SeInputButton extends SeAnyChildWindow
      *  @author Zoltan Hrabovszki
      *  @date 2013.04.11
      */
-    @Override
-    public void Select( ArrayList<String> fps_Values )
+    //@Override
+    public void __Select( ArrayList<String> fps_Values )
     {
         this.LogFunctionStartDebug( "Select", "fps_Values", fps_Values.toString() );
 
