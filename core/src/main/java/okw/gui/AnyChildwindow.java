@@ -127,6 +127,13 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
     throw new OKWFrameObjectMethodNotImplemented("The method getMaxLength() is not defined for your GUI-Object. Please define first the methode!");
   }
 
+  public Integer getMinLength()
+  {
+    // TODO: /todo Meldung in xml-Auslagern
+    throw new OKWFrameObjectMethodNotImplemented("The method getMinLength() is not defined for your GUI-Object. Please define first the methode!");
+  }
+
+  
   public ArrayList<String> getValue()
   {
     // TODO: /todo Meldung in xml-Auslagern

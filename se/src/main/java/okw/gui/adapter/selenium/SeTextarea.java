@@ -124,7 +124,7 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
         }
 
         
-        /** \~german
+          /** \~german
            *  Ermittelt den textuellen Inhalt des Labels.
            *  
            *  Es wird das Attribute "textContent" des mit "id" an das aktuelle Objekt angebunde "Laben" gelesen.
@@ -146,9 +146,7 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
                    // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
                    this.WaitForMe();
         
-                   
-                   // The Attribute "MaxLength" auslesen...
-                   
+                   // The Attribute "MaxLength" auslesen...                   
                    String lvsMaxLength = this.Me().getAttribute( "maxlength" );
         
                    if ( !okw.OKW_Helper.isStringNullOrEmpty( lvsMaxLength) )
@@ -164,7 +162,45 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
                return lviReturn;
            }
 
+           /** \~german
+            *  Ermittelt den textuellen Inhalt des Labels.
+            *  
+            *  Es wird das Attribute "minlength".
+            *  
+            *  @return Rückgabe des minlength-Wertes.
+            *  \~english
+            *  \~
+            *  @author Zoltán Hrabovszki
+            *  @date 07-07-2019
+            */
+            public Integer getMinLength()
+            {
+                Integer lviReturn = 0;
+         
+                try
+                {
+                    this.LogFunctionStartDebug( "getMinLength" );
+         
+                    // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+                    this.WaitForMe();
+         
+                    // The Attribute "MaxLength" auslesen...                   
+                    String lvsMaxLength = this.Me().getAttribute( "minlength" );
+         
+                    if ( !okw.OKW_Helper.isStringNullOrEmpty( lvsMaxLength) )
+                    {
+                        lviReturn = Integer.parseInt( lvsMaxLength );
+                    }
+                }
+                finally
+                {
+                    this.LogFunctionEndDebug( lviReturn.toString() );
+                }
+         
+                return lviReturn;
+            }
 
+           
         /** \~german
          *  Liest den Placeholder des TextAere-Tags aus.
          * 

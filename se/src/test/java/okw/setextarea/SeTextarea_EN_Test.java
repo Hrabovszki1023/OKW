@@ -63,10 +63,10 @@ public class SeTextarea_EN_Test
     @Rule
     public TestName             name  = new TestName();
 
-    // / \brief
-    // / Prüft ob ein vorhandenes objekt existiert.
-    // / Erwartet wird, dass das Objekt existiert.
-    // /
+    /**
+     *  Prüft ob ein vorhandenes objekt existiert.
+     *  Erwartet wird, dass das Objekt existiert.
+     */
     @Test
     public void tcLogExists() throws Exception
     {
@@ -82,9 +82,9 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \brief
-    // Teste das Schlüsselwort ClickOn( FN ) eines SeInputText Prüfen.
-    // 
+    /**
+     * Teste das Schlüsselwort ClickOn( FN ) eines SeInputText Prüfen.
+     */ 
     @Test
     public void tcClickOn() throws Exception
     {
@@ -805,8 +805,8 @@ public class SeTextarea_EN_Test
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
         EN.SelectWindow( "SeTextarea" );
 
-        EN.VerifyMinLength( "Textarea MinLength 0", "0" );
-        EN.VerifyMinLength( "Textarea MinLength 1", "1" );
+        EN.VerifyMinLength( "Textarea 2", "0" );
+        EN.VerifyMinLength( "Textarea MaxLength 40", "1" );
         
         EN.StopApp( ApplicationName );
         EN.EndTest();
@@ -833,7 +833,7 @@ public class SeTextarea_EN_Test
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
         EN.SelectWindow( "SeTextarea" );
 
-        EN.VerifyMinLength( "Textarea MinLength 0", "1" );
+        EN.VerifyMinLength( "Textarea 2", "1" );
 
         EN.StopApp( ApplicationName );
         EN.EndTest();

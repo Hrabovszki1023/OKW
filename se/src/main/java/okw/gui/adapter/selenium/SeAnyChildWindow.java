@@ -1437,8 +1437,44 @@ public class SeAnyChildWindow extends AnyChildwindow
 
          return lvLsReturn;
      }
-    
-    /**  
+
+     
+     /**  
+      * \~german
+      *  Ermittelt die monimale Lenge des Wertes für Prüfewert.
+      *  
+      *  @remark Sollte der erwartete Wert zunächt nicht mit dem aktuellen Wert nicht übereinstimmen,
+      *  dann wird gewartet bis entweder der erwartete Wert sich im GUI objekt einstellt
+      *  oder der TimeOut erreicht wird.<br/>
+      *  Diese Methode ist der Einstiegspunkt für PrüfeWert-Anpassungen durch Methodenüberschreibung.
+      *  
+      *  @return Rückgabe des Textuellen Inhaltes des Labels.
+      *  Interface schreibt ein Listen-Element als Rückgabewert vor.
+      *  \~english
+      *  \~
+      *  @author Zoltán Hrabovszki
+      *  @date 2018.12.27
+      */
+      @Override
+      public Integer VerifyMinLength()
+      {
+          Integer lvLsReturn = null;
+
+          try
+          {
+              this.LogFunctionStartDebug( "VerifyMinLength" );
+
+              lvLsReturn = this.getMinLength();
+          }
+          finally
+          {
+              this.LogFunctionEndDebug( lvLsReturn.toString( ) );
+          }
+
+          return lvLsReturn;
+      }     
+
+     /**  
      * \~german
      *  Ermittelt den Text-Inhalt des Platzhalter für VerifyPlaceholder().
      *  
