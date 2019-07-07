@@ -5,15 +5,15 @@ digraph "okw.OKW_Memorize_Sngltn.reset"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node134 [label="okw.OKW_Memorize_Sngltn.reset",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Methode setzt diese Klasse zurück."];
-  Node134 -> Node135 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node135 [label="okw.core.EN_Keywords\l_ANTLR_Test.tc_VerifyCaption\l_MemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html#af31f438ffbce92f023f86a4ce815cc66",tooltip=" "];
-  Node134 -> Node136 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node136 [label="okw.core.EN_Keywords\l_ANTLR_Test.tc_VerifyCaption\lREGX_MemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html#a1b63acea80fde6a7d214854cb2d00241",tooltip=" "];
-  Node134 -> Node137 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node137 [label="okw.core.EN_Keywords\l_ANTLR_Test.tc_VerifyCaption\lWCM_MemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html#a3f7653664be8e4b3d0394146907c0f53",tooltip=" "];
-  Node134 -> Node138 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node138 [label="okw.parser.OKW_VisitorTest.\lTC_ParseMe_MemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1parser_1_1_o_k_w___visitor_test.html#a0859a9809c4c66da88c95311e732fa7a",tooltip="Prüft das lesen eines gemerkten Wertes."];
-  Node134 -> Node139 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node139 [label="okw.parser.OKW_VisitorTest.\lTC_ParseMe_ArrayListString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1parser_1_1_o_k_w___visitor_test.html#a7480c7ffa9758fe572d0187c84a1ef86",tooltip="Testziel: OKW-Variable File_OKWConst_xml auslesen."];
+  Node138 [label="okw.OKW_Memorize_Sngltn.reset",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Methode setzt diese Klasse zurück."];
+  Node138 -> Node139 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node139 [label="okw.core.EN_Keywords\l_ANTLR_Test.tc_VerifyCaption\l_MemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html#af31f438ffbce92f023f86a4ce815cc66",tooltip=" "];
+  Node138 -> Node140 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node140 [label="okw.core.EN_Keywords\l_ANTLR_Test.tc_VerifyCaption\lREGX_MemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html#a1b63acea80fde6a7d214854cb2d00241",tooltip=" "];
+  Node138 -> Node141 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node141 [label="okw.core.EN_Keywords\l_ANTLR_Test.tc_VerifyCaption\lWCM_MemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___a_n_t_l_r___test.html#a3f7653664be8e4b3d0394146907c0f53",tooltip=" "];
+  Node138 -> Node142 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node142 [label="okw.parser.OKW_VisitorTest.\lTC_ParseMe_MemorizedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1parser_1_1_o_k_w___visitor_test.html#a0859a9809c4c66da88c95311e732fa7a",tooltip="Prüft das lesen eines gemerkten Wertes."];
+  Node138 -> Node143 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node143 [label="okw.parser.OKW_VisitorTest.\lTC_ParseMe_ArrayListString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1parser_1_1_o_k_w___visitor_test.html#a7480c7ffa9758fe572d0187c84a1ef86",tooltip="Testziel: OKW-Variable File_OKWConst_xml auslesen."];
 }

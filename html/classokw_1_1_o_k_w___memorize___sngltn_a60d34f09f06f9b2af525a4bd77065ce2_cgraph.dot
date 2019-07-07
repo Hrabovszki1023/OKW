@@ -5,13 +5,13 @@ digraph "okw.OKW_Memorize_Sngltn.init"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node127 [label="okw.OKW_Memorize_Sngltn.init",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Initialsiert die Klasse OKW.OKW_Memorize."];
-  Node127 -> Node128 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node128 [label="okw.OKW_Helper.isStringNull\lOrEmpty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper.html#a3a7ba0f42b29adf70574830688e72e4a",tooltip="Prüft ob der gegeben String fpsStrin null oder leer (\"\") ist."];
-  Node127 -> Node129 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node129 [label="okw.log.Logger_Sngltn.Log\lPrintDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4",tooltip="Loggt eine Nachricht."];
-  Node127 -> Node130 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node130 [label="okw.OKW_FileHelper.fileExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a86faaa4792bbe9d333c7bf2d2de275e3",tooltip="Prüft, ob die gegebene fpsPaFiNa Datei existiert."];
-  Node127 -> Node131 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node131 [label="okw.log.Logger_Sngltn.Log\lWarning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a2c15e9b2cd0c6266f4c67b8cb00d92e5",tooltip="LogWarning Function: Logs a warning to the results file."];
+  Node131 [label="okw.OKW_Memorize_Sngltn.init",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Initialsiert die Klasse OKW.OKW_Memorize."];
+  Node131 -> Node132 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node132 [label="okw.OKW_Helper.isStringNull\lOrEmpty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper.html#a3a7ba0f42b29adf70574830688e72e4a",tooltip="Prüft ob der gegeben String fpsStrin null oder leer (\"\") ist."];
+  Node131 -> Node133 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node133 [label="okw.log.Logger_Sngltn.Log\lPrintDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4",tooltip="Loggt eine Nachricht."];
+  Node131 -> Node134 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node134 [label="okw.OKW_FileHelper.fileExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a86faaa4792bbe9d333c7bf2d2de275e3",tooltip="Prüft, ob die gegebene fpsPaFiNa Datei existiert."];
+  Node131 -> Node135 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node135 [label="okw.log.Logger_Sngltn.Log\lWarning",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a2c15e9b2cd0c6266f4c67b8cb00d92e5",tooltip="LogWarning Function: Logs a warning to the results file."];
 }

@@ -5,9 +5,9 @@ digraph "okw.gui.AnyWinBase.setLocator"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node467 [label="okw.gui.AnyWinBase.setLocator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Setzt den Locator für den aktuellen GUI-Adapter."];
-  Node467 -> Node468 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node468 [label="okw.gui.OKWLocator.setLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator.html#ae2ed146086e4f236bc0e133d164ba105",tooltip="Setzt den Wert (z.B."];
-  Node468 -> Node469 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node469 [label="okw.gui.OKWLocator.setLocators",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator.html#ad1aab31e00c3fd856a8225b63cf3214a",tooltip="Setzt den Wert (z.B."];
+  Node472 [label="okw.gui.AnyWinBase.setLocator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Setzt den Locator für den aktuellen GUI-Adapter."];
+  Node472 -> Node473 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node473 [label="okw.gui.OKWLocator.setLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator.html#ae2ed146086e4f236bc0e133d164ba105",tooltip="Setzt den Wert (z.B."];
+  Node473 -> Node474 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node474 [label="okw.gui.OKWLocator.setLocators",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator.html#ad1aab31e00c3fd856a8225b63cf3214a",tooltip="Setzt den Wert (z.B."];
 }

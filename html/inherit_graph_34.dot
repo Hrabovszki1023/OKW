@@ -5,8 +5,8 @@ digraph "Grafische Darstellung der Klassenhierarchie"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node249 [label="okw.gui.AnyWinBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html",tooltip="Description of AnyWin."];
-  Node249 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node253 [label="okw.gui.AnyWinBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html",tooltip="Description of AnyWin."];
+  Node253 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 [label="okw.gui.AnyChildwindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_childwindow.html",tooltip=" "];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="okw.gui.adapter.AllMethods\l_MultipleValues",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1_all_methods___multiple_values.html",tooltip=" "];
@@ -64,7 +64,7 @@ digraph "Grafische Darstellung der Klassenhierarchie"
   Node28 [label="okw.gui.adapter.Test\l_TextField",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1_test___text_field.html",tooltip=" "];
   Node1 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node29 [label="okw.gui.frames.FrmObjDict\lTest.myTestbutton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test_1_1my_testbutton.html",tooltip=" "];
-  Node249 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node253 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node30 [label="okw.gui.AnyWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_window.html",tooltip="Description of AnyWin."];
   Node30 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node31 [label="okw.gui.adapter.selenium.\lSeAnyWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html",tooltip="SeAnyWindow ist eine Fenster GUI-Adapterklasse."];
@@ -134,10 +134,10 @@ digraph "Grafische Darstellung der Klassenhierarchie"
   Node63 [label="okw.gui.frames.frmTestRechner",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1frm_test_rechner.html",tooltip=" "];
   Node30 -> Node64 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node64 [label="okw.gui.frames.frmWindow\lWithOutMethods",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1frm_window_with_out_methods.html",tooltip="Test-Frame-Klasse: Diese Klasse dient als Unittest-Objekt."];
-  Node205 [label="okw.gui.IGUIChildwindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html",tooltip=" "];
-  Node205 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node204 [label="okw.gui.IGUIWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1gui_1_1_i_g_u_i_window.html",tooltip=" "];
-  Node204 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node209 [label="okw.gui.IGUIChildwindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html",tooltip=" "];
+  Node209 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node208 [label="okw.gui.IGUIWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1gui_1_1_i_g_u_i_window.html",tooltip=" "];
+  Node208 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node0 [label="okw.core.IOKW_FN",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___f_n.html",tooltip=" "];
   Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node0 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

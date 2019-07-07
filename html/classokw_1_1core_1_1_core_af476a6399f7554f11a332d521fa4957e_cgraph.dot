@@ -5,15 +5,15 @@ digraph "okw.core.Core.MemorizeHasFocus"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1205 [label="okw.core.Core.MemorizeHas\lFocus",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Keine Beschreibung zu \"MemorizeHasFocus\" verfügbar."];
-  Node1205 -> Node1206 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1206 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
-  Node1205 -> Node1207 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1207 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
-  Node1207 -> Node1208 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1208 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
-  Node1208 -> Node1209 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1209 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
-  Node1205 -> Node1210 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1210 [label="okw.core.IOKW_State.Memorize\lHasFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a064a961875018e9ce88379b1b5314fb1",tooltip="Keine Beschreibung zu \"MemorizeHasFocus\" verfügbar."];
+  Node1259 [label="okw.core.Core.MemorizeHas\lFocus",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Keine Beschreibung zu \"MemorizeHasFocus\" verfügbar."];
+  Node1259 -> Node1260 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1260 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node1259 -> Node1261 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1261 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node1261 -> Node1262 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1262 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node1262 -> Node1263 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1263 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node1259 -> Node1264 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1264 [label="okw.core.IOKW_State.Memorize\lHasFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a064a961875018e9ce88379b1b5314fb1",tooltip="Keine Beschreibung zu \"MemorizeHasFocus\" verfügbar."];
 }

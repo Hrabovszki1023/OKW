@@ -223,6 +223,12 @@ var annotated_dup =
         [ "SeButton_EN_HTMLUnitDriver_Test", "classokw_1_1sebutton_1_1_se_button___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeButton_EN_Test", "classokw_1_1sebutton_1_1_se_button___e_n___test.html", "classokw_1_1sebutton_1_1_se_button___e_n___test" ]
       ] ],
+      [ "seimage", null, [
+        [ "SeImage_EN_Chrome_Test", "classokw_1_1seimage_1_1_se_image___e_n___chrome___test.html", null ],
+        [ "SeImage_EN_Firefox_Test", "classokw_1_1seimage_1_1_se_image___e_n___firefox___test.html", null ],
+        [ "SeImage_EN_HTMLUnitDriver_Test", "classokw_1_1seimage_1_1_se_image___e_n___h_t_m_l_unit_driver___test.html", null ],
+        [ "SeImage_EN_Test", "classokw_1_1seimage_1_1_se_image___e_n___test.html", "classokw_1_1seimage_1_1_se_image___e_n___test" ]
+      ] ],
       [ "seinputbutton", null, [
         [ "SeInputButton_EN_Chrome_Test", "classokw_1_1seinputbutton_1_1_se_input_button___e_n___chrome___test.html", null ],
         [ "SeInputButton_EN_Firefox_Test", "classokw_1_1seinputbutton_1_1_se_input_button___e_n___firefox___test.html", null ],

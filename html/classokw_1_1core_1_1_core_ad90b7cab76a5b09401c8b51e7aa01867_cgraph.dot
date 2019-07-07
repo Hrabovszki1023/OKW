@@ -5,15 +5,15 @@ digraph "okw.core.Core.VerifyErrorMSG_REGX"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node4137 [label="okw.core.Core.VerifyError\lMSG_REGX",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Überprüft Fehlermeldungen in mit Angular validierten Formularen."];
-  Node4137 -> Node4138 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4138 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
-  Node4137 -> Node4139 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4139 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
-  Node4139 -> Node4140 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4140 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
-  Node4140 -> Node4141 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4141 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
-  Node4137 -> Node4142 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4142 [label="okw.core.IOKW_State.Verify\lErrorMSG_REGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a30334377a27d5fbc8b5ad63235a27238",tooltip="Überprüft Fehlermeldungen in mit Angular validierten Formularen."];
+  Node4322 [label="okw.core.Core.VerifyError\lMSG_REGX",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Überprüft Fehlermeldungen in mit Angular validierten Formularen."];
+  Node4322 -> Node4323 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4323 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node4322 -> Node4324 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4324 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node4324 -> Node4325 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4325 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node4325 -> Node4326 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4326 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node4322 -> Node4327 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4327 [label="okw.core.IOKW_State.Verify\lErrorMSG_REGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a30334377a27d5fbc8b5ad63235a27238",tooltip="Überprüft Fehlermeldungen in mit Angular validierten Formularen."];
 }

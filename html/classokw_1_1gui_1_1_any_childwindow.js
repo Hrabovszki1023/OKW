@@ -10,6 +10,7 @@ var classokw_1_1gui_1_1_any_childwindow =
     [ "getIsActive", "classokw_1_1gui_1_1_any_childwindow.html#a0a6dc69e19a520d98c2f996c2b4a6a33", null ],
     [ "getLabel", "classokw_1_1gui_1_1_any_childwindow.html#a64705771c69a0ce5950a8dcd9ef5a1ba", null ],
     [ "getMaxLength", "classokw_1_1gui_1_1_any_childwindow.html#af7d3dc16443aa4323abb19a986071379", null ],
+    [ "getMinLength", "classokw_1_1gui_1_1_any_childwindow.html#aa8253e831d00b9f6c7ff7ffefc7e507f", null ],
     [ "getPlaceholder", "classokw_1_1gui_1_1_any_childwindow.html#ac9dbede24be579a1e4d6ce183cc4d7ea", null ],
     [ "getTooltip", "classokw_1_1gui_1_1_any_childwindow.html#acd637e143bce60066f819ad8a2c9dbaf", null ],
     [ "getValue", "classokw_1_1gui_1_1_any_childwindow.html#a7f769acbe48ee424d9a1012eaf6715c2", null ],
