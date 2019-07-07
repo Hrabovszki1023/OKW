@@ -725,6 +725,8 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
+    
+    
     /**
      * \~german
      * Prüft, ob die Methode VerifyMaxValue für SeTextarea implementiert ist.
@@ -753,6 +755,7 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
+    
     /** \~german
      * Prüft, ob die Methode VerifyMaxValue für eine Abweichung eine OKWVerifyingFailsException - Ausnahme auslöst.
      *
@@ -778,7 +781,65 @@ public class SeTextarea_EN_Test
         EN.StopApp( ApplicationName );
         EN.EndTest();
     }
+    
+    
+    /**
+     * \~german
+     * Prüft, ob die Methode VerifyMaxValue für SeTextarea implementiert ist.
+     *
+     * \~english
+     * Verifies whether the VerifyMaxValue method is implemented for SeTextarea.
+     * 
+     * \~
+     * \author Zoltan Hrabovszki
+     * \date 2019.01.19
+     */
+    @Test
+    public void tcVerifyMinLength() throws Exception
+    {
 
+        EN.BeginTest( name.getMethodName() );
+        EN.StartApp( ApplicationName );
+
+        // Objekt ist "aktiv" prüfen
+        EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
+        EN.SelectWindow( "SeTextarea" );
+
+        EN.VerifyMinLength( "Textarea MinLength 0", "0" );
+        EN.VerifyMinLength( "Textarea MinLength 1", "1" );
+        
+        EN.StopApp( ApplicationName );
+        EN.EndTest();
+    }
+
+    
+    /** \~german
+     * Prüft, ob die Methode VerifyMinValue für eine Abweichung eine OKWVerifyingFailsException - Ausnahme auslöst.
+     *
+     * \~english
+     * Verifies whether the VerifyMinValue method throws an OKWVerifyingFailsException for a deviation.
+     * \~
+     * \author Zoltan Hrabovszki
+     * \date 2019.01.19
+     */
+    @Test( expected = OKWVerifyingFailsException.class )
+    public void tcVerifyMinLength_OKWVerifyingFailsException() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.StartApp( ApplicationName );
+
+        // Objekt ist "aktiv" prüfen
+        EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
+        EN.SelectWindow( "SeTextarea" );
+
+        EN.VerifyMinLength( "Textarea MinLength 0", "1" );
+
+        EN.StopApp( ApplicationName );
+        EN.EndTest();
+    }
+
+    
     /**
      * \~german
      * Prüft, ob die Methode VerifyLabel für SeTextarea implementiert ist.

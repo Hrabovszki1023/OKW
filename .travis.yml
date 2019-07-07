@@ -92,36 +92,39 @@ jobs:
 #
     - stage: chrome
       env:
-          TESTCASE="okw.SeBACK.SeBACK_EN_Chrome_Test"
+          TESTCASE="okw.seback.SeBACK_EN_Chrome_Test"
           Package="se"
     - env:
-          TESTCASE="okw.SeBrowserChild.SeBrowserChild_EN_Chrome_Test"
+          TESTCASE="okw.sebrowserchild.SeBrowserChild_EN_Chrome_Test"
           Package="se"
     - env:
-          TESTCASE="okw.SeButton.SeButton_EN_Chrome_Test"
+          TESTCASE="okw.sebutton.SeButton_EN_Chrome_Test"
           Package="se"
     - env:
-        - TESTCASE="okw.SeInputButton.SeInputButton_EN_Chrome_Test"
+        - TESTCASE="okw.seinputbutton.SeInputButton_EN_Chrome_Test"
           Package="se"
     - env:
-          TESTCASE="okw.SeInputCheckbox.SeInputCheckbox_EN_Chrome_Test"
+          TESTCASE="okw.seinputcheckbox.SeInputCheckbox_EN_Chrome_Test"
           Package="se"
     - env:
-          TESTCASE="okw.SeInputField.SeInputField_EN_Chrome_Test"
+          TESTCASE="okw.seinputfield.SeInputField_EN_Chrome_Test"
           Package="se"
     - env:
-          TESTCASE="okw.SeInputRadio.SeInputRadio_EN_Chrome_Test"
+          TESTCASE="okw.seinputradio.SeInputRadio_EN_Chrome_Test"
           Package="se"
     - env:
-        - TESTCASE="okw.SeLink.SeLink_EN_Chrome_Test"
+        - TESTCASE="okw.selink.SeLink_EN_Chrome_Test"
           Package="se"
-        # - TESTCASE="okw.SeMAXIMIZE.SeMAXIMIZE_EN_Chrome_Test"
+        # - TESTCASE="okw.semaximize.SeMAXIMIZE_EN_Chrome_Test"
         #  Package="se"
     - env:
-          TESTCASE="okw.SeSelect.SeSelect_EN_Chrome_Test"
+        - TESTCASE="okw.seimage.SeImage_EN_Chrome_Test"
           Package="se"
     - env:
-          TESTCASE="okw.SeTextarea.SeTextarea_EN_Chrome_Test"
+          TESTCASE="okw.seselect.SeSelect_EN_Chrome_Test"
+          Package="se"
+    - env:
+          TESTCASE="okw.setextarea.SeTextarea_EN_Chrome_Test"
           Package="se"
         
 #    - stage: firefox

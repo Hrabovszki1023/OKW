@@ -38,8 +38,8 @@ package okw.gui.frames.SeImage;
 
 import okw.OKW;
 import okw.gui.adapter.selenium.SeBrowserChild;
-import okw.gui.adapter.selenium.SeButton;
-import okw.gui.adapter.selenium.SeInputText;
+import okw.gui.adapter.selenium.SeImage;
+import okw.gui.adapter.selenium.SeTextarea;
 
 /** \~german
  * GUI-Frame für die OKW-Testseite <a href="http://test.openkeyword.de/Button/button.htm">test.openkeyword.de/Button/button.htm</a> 
@@ -50,25 +50,25 @@ import okw.gui.adapter.selenium.SeInputText;
  * @author Zoltán Hrabovszki
  * @date 2016.09.06
  */
-@OKW( FN = "Button" )
+@OKW( FN = "Image" )
 public class frmSeImage extends SeBrowserChild
 {
   /** \~german
-   * Anzeigefeld im Fenster: Enthält Werte nach dem Klick auf "Button 1" und "Button 2". Dient zur Prüfung der Button-Klicks geprüft werden.
+   * Anzeigefeld im Fenster: Enthält Werte nach dem Klick auf "Image 1" und "Image 2". Dient zur Prüfung der Button-Klicks geprüft werden.
    * 
    * \~english
    * \brief 
    * Display TextField: Contains values after you click the "Button 1" and "Button 2".
    */
   @OKW( FN = "Display", WaitForMe_PT= 500, WaitForMe_TO=1 )
-  public SeInputText   Anzeige        = new SeInputText( "4T!textarea", this.getLOCATOR() );
+  public SeTextarea   Anzeige        = new SeTextarea( "4T!Display", this.getLOCATOR() );
 
-  /*
+  /**
    * \~german
-   * Nicht vorhandes Button für eine nicht Existenz zu prüfen.
+   * Nicht vorhandes Image für eine "nicht Existenz" zu prüfen.
    *
    * \~english
-   * Not existing text box to verify the non-existence.
+   * Not existing Image to verify the non-existence.
    */
   @OKW( FN = "Does Not Exists",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -79,31 +79,9 @@ public class frmSeImage extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
            )
-  public SeButton NichtVorhanden = new SeButton( "$L1$//*[@name='NichtVorhanden']", this.getLOCATOR() );
+  public SeImage NichtVorhanden = new SeImage( "$L1$//*[@name='NichtVorhanden']", this.getLOCATOR() );
 
-  @OKW( FN = "Button 1",
-          VerifyLabel_PT=500, VerifyLabel_TO=1,
-          VerifyIsActive_PT=500, VerifyIsActive_TO=1,
-          VerifyValue_PT=500, VerifyValue_TO=1,
-          VerifyTooltip_PT=500, VerifyTooltip_TO=1,
-          VerifyCaption_PT=500, VerifyCaption_TO=1,
-          VerifyExists_PT=500, VerifyExists_TO=1,
-          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
-          )
-  public SeButton Text_1         = new SeButton( "4T!Button 1", this.getLOCATOR() );
-
-  @OKW( FN = "Button 2",
-          VerifyLabel_PT=500, VerifyLabel_TO=3,
-          VerifyIsActive_PT=500, VerifyIsActive_TO=3,
-          VerifyValue_PT=500, VerifyValue_TO=3,
-          VerifyTooltip_PT=500, VerifyTooltip_TO=3,
-          VerifyCaption_PT=500, VerifyCaption_TO=3,
-          VerifyExists_PT=500, VerifyExists_TO=3,
-          VerifyHasFocus_PT=500, VerifyHasFocus_TO=3
-          )
-  public SeButton Text_2         = new SeButton( "4T!Button 2", this.getLOCATOR() );
-
-  @OKW( FN = "Button 3",
+  @OKW( FN = "Image 1",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
           VerifyIsActive_PT=500, VerifyIsActive_TO=1,
           VerifyValue_PT=500, VerifyValue_TO=1,
@@ -112,13 +90,24 @@ public class frmSeImage extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
            )
-  public SeButton Button_3       = new SeButton( "4T!Button 3", this.getLOCATOR() );
+  public SeImage Image_1 = new SeImage( "4T!Image 1", this.getLOCATOR() );
+
+  @OKW( FN = "Image 2",
+                  VerifyLabel_PT=500, VerifyLabel_TO=1,
+                  VerifyIsActive_PT=500, VerifyIsActive_TO=1,
+                  VerifyValue_PT=500, VerifyValue_TO=1,
+                  VerifyTooltip_PT=500, VerifyTooltip_TO=1,
+                  VerifyCaption_PT=500, VerifyCaption_TO=1,
+                  VerifyExists_PT=500, VerifyExists_TO=1,
+                  VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
+                   )
+          public SeImage Image_2 = new SeImage( "4T!Image 2", this.getLOCATOR() );
 
   /**
    * URL des Fensters: http://test.openkeyword.de/InputButton/input_type-button.htm
    */
   public frmSeImage()
   {
-    this.setLocator( "4T!button.htm" );
+    this.setLocator( "4T!Image" );
   }
 }

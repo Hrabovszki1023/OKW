@@ -40,7 +40,7 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 
-import okw.gui.OKWLocator;
+import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.gui.OKWLocatorBase;
 
 /**
@@ -69,7 +69,7 @@ import okw.gui.OKWLocatorBase;
  * | ------------------------- | :-----------: | :----------- |
  * | `ClickOn( FN )`           | **JA**        |  |
  * | `DoubleClickOn( FN )`     | **NEIN**      | Ein Doppel-Klick ist auf ein Image nicht möglich -> throw OKWFrameObjectMethodNotImplemented | 
- * | `SetFocus( FN )`          | **JA**        |  |
+ * | `SetFocus( FN )`          | **NEIN**      | Image kann nicht focusiert werden.  -> throw OKWFrameObjectMethodNotImplemented |
  * | `SetValue( FN, Val )`     | **NEIN**      | Image hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented |
  * | `Select( FN, Val )`       | **NEIN**      | Image hat keinen änderbaren Wert. -> throw OKWFrameObjectMethodNotImplemented |
  * | `SelectMenu( FN )`        | **NEIN**      | -> throw OKWFrameObjectMethodNotImplemented |
@@ -180,5 +180,18 @@ public class SeImage extends SeAnyChildWindow
        }
        return lvLsReturn;
    }
-
+   
+   
+   public void SetFocus( ) throws Exception
+   {
+     // TODO: /todo Meldung in xml-Auslagern
+     throw new OKWFrameObjectMethodNotImplemented("The method 'public void SetFocus( ) throws Exception' is not defined for your GUI-Object. Please define first the methode!");
+   }
+   
+   
+   public void TypeKey(ArrayList<String> Val )
+   {
+     // TODO: /todo Meldung in xml-Auslagern
+     throw new OKWFrameObjectMethodNotImplemented("The method 'public void TypeKey( ArrayList<String> Val ) throws Exception' is not defined for your GUI-Object. Please define first the methode!");
+   }
 }
