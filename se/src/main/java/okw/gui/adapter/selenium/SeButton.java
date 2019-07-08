@@ -40,6 +40,8 @@
 package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
+
+import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.gui.OKWLocatorBase;
 import org.apache.commons.lang3.StringUtils;
 
@@ -97,7 +99,7 @@ import org.apache.commons.lang3.StringUtils;
  * | `VerifyCaption( FN, ExpVal )`,  <br>`VerifyCaptionWCM( FN, ExpVal )`, <br>`VerifyCaptionREGX( FN, ExpVal )`, <br/>`MemorizeCaption( FN, ExpVal )`, <br>`LogCaption( FN, ExpVal )` | **JA** | Als \ref refCaption wird das Attribute `textContent` verwendet.. Im Beispiel: `Button Caption` |
  * | `VerifyLabel( FN, ExpVal )`,    <br>`VerifyLabelWCM( FN, ExpVal )`,   <br>`VerifyLabelREGX( FN, ExpVal )`,   <br/>`MemorizeLabel( FN, ExpVal )`, <br>`LogLabel( FN, ExpVal )`     | **JA** |  |
  * | `VerifyTooltip( FN, ExpVal )`,  <br>`VerifyTooltipWCM( FN, ExpVal )`, <br>`VerifyTooltipREGX( FN, ExpVal )`, <br/>`MemorizeTooltip( FN, ExpVal )`, <br>`LogTooltip( FN, ExpVal )` | **JA** | Als Tooltip wird das Attribute `title` verwendet.  Im Beispiel: `Button title` |
- * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )`     | **JA** | Als Tooltip wird das Attribute `value` verwendet. |
+ * | `VerifyValue( FN, ExpVal )`,    <br>`VerifyValueWCM( FN, ExpVal )`,   <br>`VerifyValueREGX( FN, ExpVal )`,   <br/>`MemorizeValue( FN, ExpVal )`, <br>`LogValue( FN, ExpVal )`     | **NEIN** | Button hat keinen Wert. -> throw OKWFrameObjectMethodNotImplemented. |
  * 
  *  # Siehe auch:
  *  - okw.gui.adapter.selenium.SeButton - für button-tags 
@@ -169,8 +171,7 @@ public class SeButton extends SeAnyChildWindow
     }
 
     /**
-     * \~german Ein SeInputButton hat keinen Wert! ->
-     * OKWFrameObjectMethodNotImplemented Auslösen!
+     * \~german Ein SeInputButton hat keinen Wert! -> OKWFrameObjectMethodNotImplemented Auslösen!
      * 
      * @return
      * 
@@ -179,30 +180,9 @@ public class SeButton extends SeAnyChildWindow
      * @author Zoltán Hrabovszki
      * @date 2016.10.06
      */
-    
-    @Override
-    public ArrayList<String> getValue()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-        
-        // ArrayList<String> lvLsReturn = new ArrayList<String>();
-        try
+        @Override
+        public ArrayList<String> VerifyValue( )
         {
-            LogFunctionStartDebug( "GetValue" );
-
-            // Warten auf das Objekt. Wenn es nicht existiert mit Exception
-            // beenden...
-            this.WaitForMe();
-
-            // The Attribute "value" wird als Beschriftung angezeigt...
-            lvLsReturn.add( this.Me().getAttribute( "value" ) );
+          throw new OKWFrameObjectMethodNotImplemented("The method 'public ArrayList<String> VerifyValue( )' is not defined for your GUI-Object. Please define first the methode!");
         }
-        finally
-        {
-            LogFunctionEndDebug();
-        }
-        
-        return lvLsReturn;
-    }
-
 }

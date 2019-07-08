@@ -1074,6 +1074,7 @@ import org.junit.rules.TestName;
          * 
          * @author Zoltan Hrabovszki
          */
+        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcVerifyValue_OKWFrameObjectMethodNotImplemented() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
@@ -1098,6 +1099,7 @@ import org.junit.rules.TestName;
          * 
          * @author Zoltan Hrabovszki
          */
+        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcVerifyValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
@@ -1122,6 +1124,7 @@ import org.junit.rules.TestName;
          * 
          * @author Zoltan Hrabovszki
          */
+        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
         public void tcVerifyValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
         {
                 EN.BeginTest( name.getMethodName() );
