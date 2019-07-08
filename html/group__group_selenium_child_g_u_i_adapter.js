@@ -54,7 +54,7 @@ var group__group_selenium_child_g_u_i_adapter =
     [ "SeButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html", [
       [ "SeButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html#ad5a121eb9e1270e6c99f149ebc59814f", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html#a4d658a6f764e2983da35ea25ee9c2412", null ],
-      [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html#adf7b5e39f438dc8807b5e77a381da73a", null ]
+      [ "VerifyValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html#afc387e6dc68d463f83fcd445af85f225", null ]
     ] ],
     [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html", [
       [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html#aec78b32d0692fbfe10531dea6046b25f", null ],
@@ -65,7 +65,6 @@ var group__group_selenium_child_g_u_i_adapter =
     ] ],
     [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html", [
       [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a477262917aa8cb51f99dff5df3b7dd1a", null ],
-      [ "__Select", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a35f35e0deb2381f8b8b8140a188b5172", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a3c2c309651daf767e1941b2b30d3fea5", null ],
       [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#aeaaf09d0f1c2c9524b27084c2f3d6639", null ]
     ] ],

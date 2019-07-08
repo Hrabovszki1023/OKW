@@ -1,7 +1,6 @@
 var classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button =
 [
     [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a477262917aa8cb51f99dff5df3b7dd1a", null ],
-    [ "__Select", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a35f35e0deb2381f8b8b8140a188b5172", null ],
     [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a3c2c309651daf767e1941b2b30d3fea5", null ],
     [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#aeaaf09d0f1c2c9524b27084c2f3d6639", null ]
 ];

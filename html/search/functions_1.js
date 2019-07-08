@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['addlogger',['addLogger',['../classokw_1_1log_1_1_logger___sngltn.html#a2e4d734eff59dd09510fef50353c8672',1,'okw::log::Logger_Sngltn']]],
-  ['addpropertiesfile',['addPropertiesFile',['../classokw_1_1_o_k_w___properties.html#a78c9f44f14dbfc95dea240e06065120c',1,'okw::OKW_Properties']]],
-  ['addresource',['addResource',['../classokw_1_1_o_k_w___properties.html#ad170c832264ab27c615f6e1bf2e8e8d3',1,'okw::OKW_Properties']]],
-  ['anychildwindow',['AnyChildwindow',['../classokw_1_1gui_1_1_any_childwindow.html#aeb56121e4636403c3fd2091396ee0f03',1,'okw::gui::AnyChildwindow']]]
+  ['begintest',['BeginTest',['../classokw_1_1core_1_1_core.html#acfefe92468c9eb9e951846372726c4d8',1,'okw.core.Core.BeginTest()'],['../classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69',1,'okw.core.EN.BeginTest()'],['../interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13',1,'okw.core.IOKW_State.BeginTest()'],['../classokw_1_1core_1_1_n_o_k.html#a62d1765ea311e440d678cb57ca9dd2c2',1,'okw.core.NOK.BeginTest()'],['../classokw_1_1core_1_1_o_k.html#a594d5a3518a401240bc1868f5883a393',1,'okw.core.OK.BeginTest()']]],
+  ['blanksbefore',['BlanksBefore',['../classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2',1,'okw::log::Log2Console']]],
+  ['boolean2string',['Boolean2String',['../classokw_1_1_o_k_w___helper.html#a7164cf055768fd68a6474d7e327d042d',1,'okw::OKW_Helper']]],
+  ['boolean2yesno',['Boolean2YesNo',['../classokw_1_1_o_k_w___const___sngltn.html#afc1c3325b8bede60aa50b1d5ebfdddf1',1,'okw::OKW_Const_Sngltn']]]
 ];

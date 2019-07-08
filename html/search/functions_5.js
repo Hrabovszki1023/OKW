@@ -1,5 +1,19 @@
 var searchData=
 [
-  ['endtest',['EndTest',['../classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c',1,'okw.core.Core.EndTest()'],['../classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f',1,'okw.core.EN.EndTest()'],['../interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186',1,'okw.core.IOKW_State.EndTest()'],['../classokw_1_1core_1_1_n_o_k.html#ae844be2622110b000a33064dc6289724',1,'okw.core.NOK.EndTest()'],['../classokw_1_1core_1_1_o_k.html#acf6964570d145794325aad8d608db341',1,'okw.core.OK.EndTest()']]],
-  ['exists',['exists',['../classokw_1_1_o_k_w___memorize___sngltn.html#a2e256a4059fd11d87b3d5b0649756165',1,'okw::OKW_Memorize_Sngltn']]]
+  ['filedelete',['FileDelete',['../classokw_1_1core_1_1_core.html#aee3fa3a377a0b7a3487a1a3bf8a680a1',1,'okw.core.Core.FileDelete()'],['../classokw_1_1core_1_1_e_n.html#a6568fd28baaa73c4f39351e84dff86a4',1,'okw.core.EN.FileDelete()'],['../interfaceokw_1_1core_1_1_i_o_k_w___state.html#a254dfe876591f4cfeba173149e131ee4',1,'okw.core.IOKW_State.FileDelete()'],['../classokw_1_1core_1_1_n_o_k.html#a3aa19121a609565b6b17eb977015deb6',1,'okw.core.NOK.FileDelete()'],['../classokw_1_1core_1_1_o_k.html#aef8ea8cabf9dfb28aef18611f69b5af3',1,'okw.core.OK.FileDelete()'],['../classokw_1_1core_1_1_e_n___file_keywords___test.html#acb04e50447def00a22be9b52b5327aac',1,'okw.core.EN_FileKeywords_Test.FileDelete()']]],
+  ['filedelete_5fempty',['FileDelete_EMPTY',['../classokw_1_1core_1_1_e_n___file_keywords___test.html#ac1eeb5773fc9c3a4854198e37b2f5dea',1,'okw::core::EN_FileKeywords_Test']]],
+  ['fileexists',['fileExists',['../classokw_1_1_o_k_w___file_helper.html#a86faaa4792bbe9d333c7bf2d2de275e3',1,'okw::OKW_FileHelper']]],
+  ['fn',['FN',['../interfaceokw_1_1_o_k_w.html#a95f6a6c8976dbbc79a8765a36e3545ff',1,'okw::OKW']]],
+  ['frameobjectdictionary_5fsngltn',['FrameObjectDictionary_Sngltn',['../classokw_1_1_frame_object_dictionary___sngltn.html#aca3d4bf06ca665795304f02b1bbe24eb',1,'okw::FrameObjectDictionary_Sngltn']]],
+  ['framescan',['frameScan',['../classokw_1_1_frame_object_dictionary___sngltn.html#a1710d54e13c9ce591277209c898eec98',1,'okw::FrameObjectDictionary_Sngltn']]],
+  ['frmbutton',['FrmButton',['../classokw_1_1gui_1_1frames_1_1sebutton_1_1_frm_button.html#a331266c102af2911f2b6085768c03e53',1,'okw::gui::frames::sebutton::FrmButton']]],
+  ['frmbuttonnotactiv',['FrmButtonNotActiv',['../classokw_1_1gui_1_1frames_1_1sebutton_1_1_frm_button_not_activ.html#a51c39701c2c5cd44fe4d6cd21fdaea18',1,'okw::gui::frames::sebutton::FrmButtonNotActiv']]],
+  ['frmcurrentobjectwindow',['frmCurrentObjectWindow',['../classokw_1_1gui_1_1frames_1_1frm_current_object_window.html#adb34ad04853d9d29cddfa7d3c204439d',1,'okw::gui::frames::frmCurrentObjectWindow']]],
+  ['frmiframe',['frmIframe',['../classokw_1_1gui_1_1frames_1_1iframe_1_1frm_iframe.html#abaaf6cc660d86f3c2894d3a4b05764b9',1,'okw::gui::frames::iframe::frmIframe']]],
+  ['frmiframewithname',['frmIFrameWithName',['../classokw_1_1gui_1_1frames_1_1iframe_1_1frm_i_frame_with_name.html#ac9384fa2d99e61050c113ab86b4a4072',1,'okw::gui::frames::iframe::frmIFrameWithName']]],
+  ['frminputbutton',['frmInputButton',['../classokw_1_1gui_1_1frames_1_1seinputbutton_1_1frm_input_button.html#ae13b69b7aff443e4d3799d1beb9eb8cc',1,'okw::gui::frames::seinputbutton::frmInputButton']]],
+  ['frminputbuttonnotactiv',['frmInputButtonNotActiv',['../classokw_1_1gui_1_1frames_1_1seinputbutton_1_1frm_input_button_not_activ.html#a00265d820ffd420eb3c9b4790e438bc2',1,'okw::gui::frames::seinputbutton::frmInputButtonNotActiv']]],
+  ['frmobjdicttest',['FrmObjDictTest',['../classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test.html#ae2df0b7e37c8c47f94c6c631a595f181',1,'okw::gui::frames::FrmObjDictTest']]],
+  ['frmseimage',['frmSeImage',['../classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html#a7bbf9b304e37430efd937fbff5637997',1,'okw::gui::frames::SeImage::frmSeImage']]],
+  ['frmtestrechner',['frmTestRechner',['../classokw_1_1gui_1_1frames_1_1frm_test_rechner.html#ae8e02f4551d6c0d595f69e562d22e523',1,'okw::gui::frames::frmTestRechner']]]
 ];

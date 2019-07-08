@@ -5,7 +5,7 @@ digraph "okw.gui.AnyWinBase.getParentFN"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node118 [label="okw.gui.AnyWinBase.getParentFN",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Setzten des Parent-Objekt FN."];
-  Node118 -> Node119 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node119 [label="okw.gui.adapter.selenium.\lSeRadioList.getValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a2de5dcb9d606e72dbe9e5a9cbef481ad",tooltip="Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert."];
+  Node116 [label="okw.gui.AnyWinBase.getParentFN",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Setzten des Parent-Objekt FN."];
+  Node116 -> Node117 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node117 [label="okw.gui.adapter.selenium.\lSeRadioList.getValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a2de5dcb9d606e72dbe9e5a9cbef481ad",tooltip="Ermittelt den textuellen Inhalt des markierten Textes für Prüfewert."];
 }
