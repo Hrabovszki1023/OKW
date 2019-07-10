@@ -5,9 +5,9 @@ digraph "okw.core.EN.FileDelete"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node1070 [label="okw.core.EN.FileDelete",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Löscht die gegebene Datei."];
-  Node1070 -> Node1071 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1071 [label="okw.core.EN_FileKeywords\l_Test.FileDelete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___file_keywords___test.html#acb04e50447def00a22be9b52b5327aac",tooltip="Prüft das Schlüsselwort File."];
-  Node1070 -> Node1072 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1072 [label="okw.core.EN_FileKeywords\l_Test.FileDelete_EMPTY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___file_keywords___test.html#ac1eeb5773fc9c3a4854198e37b2f5dea",tooltip="Prüft das Schlüsselwort File."];
+  Node1084 [label="okw.core.EN.FileDelete",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Löscht die gegebene Datei."];
+  Node1084 -> Node1085 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1085 [label="okw.core.EN_FileKeywords\l_Test.FileDelete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___file_keywords___test.html#acb04e50447def00a22be9b52b5327aac",tooltip="Prüft das Schlüsselwort File."];
+  Node1084 -> Node1086 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1086 [label="okw.core.EN_FileKeywords\l_Test.FileDelete_EMPTY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___file_keywords___test.html#ac1eeb5773fc9c3a4854198e37b2f5dea",tooltip="Prüft das Schlüsselwort File."];
 }

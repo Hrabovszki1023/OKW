@@ -5,15 +5,15 @@ digraph "okw.core.Core.StopApp"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node3722 [label="okw.core.Core.StopApp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Beendet eine gegebene Anwendung."];
-  Node3722 -> Node3723 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3723 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
-  Node3722 -> Node3724 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3724 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
-  Node3724 -> Node3725 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3725 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
-  Node3725 -> Node3726 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3726 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
-  Node3722 -> Node3727 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3727 [label="okw.core.IOKW_State.StopApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a789e33be9253edfccfe5654f537cf52a",tooltip="Beendet eine gegebene Anwendung."];
+  Node3765 [label="okw.core.Core.StopApp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Beendet eine gegebene Anwendung."];
+  Node3765 -> Node3766 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3766 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node3765 -> Node3767 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3767 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node3767 -> Node3768 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3768 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node3768 -> Node3769 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3769 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node3765 -> Node3770 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3770 [label="okw.core.IOKW_State.StopApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a789e33be9253edfccfe5654f537cf52a",tooltip="Beendet eine gegebene Anwendung."];
 }

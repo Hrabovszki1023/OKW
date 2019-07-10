@@ -5,15 +5,15 @@ digraph "okw.core.Core.VerifyLabelWCM"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node4532 [label="okw.core.Core.VerifyLabelWCM",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Überprüft die Beschreibung/Label des Objektes."];
-  Node4532 -> Node4533 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4533 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
-  Node4532 -> Node4534 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4534 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
-  Node4534 -> Node4535 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4535 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
-  Node4535 -> Node4536 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4536 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
-  Node4532 -> Node4537 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4537 [label="okw.core.IOKW_State.Verify\lLabelWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa2e12e52f5fd3c45a5006af52dd9a7db",tooltip="Überprüft die Beschreibung/Label des Objektes."];
+  Node4589 [label="okw.core.Core.VerifyLabelWCM",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Überprüft die Beschreibung/Label des Objektes."];
+  Node4589 -> Node4590 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4590 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node4589 -> Node4591 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4591 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node4591 -> Node4592 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4592 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node4592 -> Node4593 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4593 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node4589 -> Node4594 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4594 [label="okw.core.IOKW_State.Verify\lLabelWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#aa2e12e52f5fd3c45a5006af52dd9a7db",tooltip="Überprüft die Beschreibung/Label des Objektes."];
 }
