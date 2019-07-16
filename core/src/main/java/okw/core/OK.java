@@ -644,7 +644,7 @@ public class OK implements IOKW_State
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
                 throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
             }            
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
+            else if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
                 // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
                 throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
@@ -4117,7 +4117,7 @@ public class OK implements IOKW_State
                 Log.LogPrintDebug( LM.GetMessage( "VerifyDirectoryExists", "VerifyValue" ) );
                 verification( lvsActual, ExpVal );
             }
-            // Beide Bedingungen sind nicht erfüllt -> Exception da kein anderer
+            // Beide Bedingungen sind nicht erfüllt -> Exception da kein anderera
             // Wert hier erlaubt ist.
             else
             {

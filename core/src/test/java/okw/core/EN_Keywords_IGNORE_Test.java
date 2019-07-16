@@ -3428,5 +3428,147 @@ public class EN_Keywords_IGNORE_Test
 
 		assertEquals(0, myClipBoard.getValue().size());
 	}
+	/// \~german
+    /// \brief
+    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyFileExists Übertragen wird.
+    /// 
+    /// \~english
+    /// \~
+    /// \author Zoltan Hrabovszki
+    /// \date 2013.12.26
+    @Test
+    public void tcVerifyFileExists_IGNORE() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+
+        EN.VerifyFileExists( "All_MethodsObj", "${IGNORE}" );
+
+    }
+
+    /// \~german
+    /// \brief
+    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyFileExists Übertragen wird.
+    /// 
+    /// \~english
+    /// \~
+    /// \author Zoltan Hrabovszki
+    /// \date 2013.12.26
+    @Test
+    public void tcVerifyFileExists_IGNORE_EmptyString() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+
+        EN.VerifyFileExists( "All_MethodsObj", "" );
+    }
+    
+  /// \~german
+    /// \brief
+    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an TypeKeyWindow Übertragen wird.
+    /// 
+    /// \~english
+    /// \~
+    /// \author Zoltan Hrabovszki
+    /// \date 2013.12.26
+    @Test
+    public void tcTypeKeyWindow_IGNORE() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+
+        EN.TypeKeyWindow( "All_MethodsObj", "${IGNORE}" );
+
+    }
+
+    /// \~german
+    /// \brief
+    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an TypeKeyWindow Übertragen wird.
+    /// 
+    /// \~english
+    /// \~
+    /// \author Zoltan Hrabovszki
+    /// \date 2013.12.26
+    @Test
+    public void tcTypeKeyWindow_IGNORE_EmptyString() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+
+        EN.TypeKeyWindow( "All_MethodsObj", "" );
+    }
+    
+    
+  /// \~german
+    /// \brief
+    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyDirectoryExists Übertragen wird.
+    /// 
+    /// \~english
+    /// \~
+    /// \author Zoltan Hrabovszki
+    /// \date 2013.12.26
+    @Test
+    public void tcVerifyDirectoryExists_IGNORE() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+
+        EN.VerifyDirectoryExists( "All_MethodsObj", "${IGNORE}" );
+
+    }
+
+    /// \~german
+    /// \brief
+    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyDirectoryExists Übertragen wird.
+    /// 
+    /// \~english
+    /// \~
+    /// \author Zoltan Hrabovszki
+    /// \date 2013.12.26
+    @Test
+    public void tcVerifyDirectoryExists_IGNORE_EmptyString() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SelectWindow( "Rechner" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+
+        EN.VerifyDirectoryExists( "All_MethodsObj", "" );
+    }
+    
 }
 	

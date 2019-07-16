@@ -1502,4 +1502,59 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
     EN.VerifyMaxLength( "All_MethodsObj", "1${VSEP}2" );
 
   }
+  
+//\~german
+ // \brief
+ //
+ //
+ // \~english
+ // \~
+ // \author Zoltan Hrabovszki
+ // \date 2016.09.24
+ @Test( expected = OKWNotAllowedValueException.class )
+ public void tcVerifyPlaceholder_DELETE_OKWNotAllowedValueException() throws Exception
+ {
+   EN.BeginTest( name.getMethodName() );
+
+   EN.SelectWindow( "Rechner" );
+
+   EN.VerifyPlaceholder( "All_MethodsObj", "${DELETE}" );
+ }
+
+ // \~german
+ // \brief
+ //
+ //
+ // \~english
+ // \~
+ // \author Zoltan Hrabovszki
+ // \date 2016.09.24
+ @Test( expected = OKWNotAllowedValueException.class )
+ public void tcVerifyPlaceholderREGX_DELETE_OKWNotAllowedValueException() throws Exception
+ {
+   EN.BeginTest( name.getMethodName() );
+
+   EN.SelectWindow( "Rechner" );
+
+   EN.VerifyPlaceholderREGX( "All_MethodsObj", "${DELETE}" );
+
+ }
+
+ // \~german
+ // \brief
+ //
+ //
+ // \~english
+ // \~
+ // \author Zoltan Hrabovszki
+ // \date 2016.09.24
+ @Test( expected = OKWNotAllowedValueException.class )
+ public void tcVerifyPlaceholderWCM_DELETE_OKWNotAllowedValueException() throws Exception
+ {
+   EN.BeginTest( name.getMethodName() );
+
+   EN.SelectWindow( "Rechner" );
+   EN.VerifyPlaceholderWCM( "All_MethodsObj", "${DELETE}" );
+ }
+
 }
