@@ -50,7 +50,7 @@ public class LogFunction extends LogBase
 	}
 	
 	@Override
-	protected String getResult()
+	protected String getHTMLResult()
 	{
 		StringBuilder sbResult = new StringBuilder();
 		
@@ -102,7 +102,7 @@ public class LogFunction extends LogBase
 		
 		for( LogBase myLog: this.myLogs )
 		{
-			sbResult.append( myLog.getResult() );
+			sbResult.append( myLog.getHTMLResult() );
 		}
 		
 		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div>Return: "+ this.myReturn +"</div>\n" ); // Return-Value at the end...

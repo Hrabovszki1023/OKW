@@ -608,7 +608,7 @@ public class Log2HTML extends LogBase implements ILogger
 			myResult.append(getStatistics());
     	
 			myResult.append("<h2>Result Log</h2>\n");
-			myResult.append(getResult());
+			myResult.append(getHTMLResult());
 			myResult.append(getHTMLFooter());
    
 
@@ -626,13 +626,13 @@ public class Log2HTML extends LogBase implements ILogger
     }
 
     
-	protected String getResult()
+	protected String getHTMLResult()
 	{
 		StringBuilder sbResult = new StringBuilder();
 	
 		for( LogBase myLog: this.myLogs )
 		{
-			sbResult.append( myLog.getResult() );
+			sbResult.append( myLog.getHTMLResult() );
 		}
 
 		return sbResult.toString();
