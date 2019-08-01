@@ -1,14 +1,24 @@
 package okw.log.log2html;
 
-public class LogFunction extends LogBase
+
+public class LogFunction extends LogBase4Gherkin
 {
 	
 	String myReturn = "";
+	
+    private String Function;
+    private String[] Parameter;
 	
 	LogFunction(LogBase Parent, String fpsFunctionName, String... fpsParameter)
 	{
 		setParent(Parent);
 		myID = AllCount;
+		
+	    Function = fpsFunctionName;
+        Parameter = fpsParameter;
+		
+        // inkrementieren FunctionCount
+        this.FunctionCount();
 		
 		StringBuilder StrBuilder = new StringBuilder();
 		
@@ -37,16 +47,6 @@ public class LogFunction extends LogBase
 	public void setReturn(String fpsReturn)
 	{
 		myReturn = fpsReturn;
-	}
-	
-	protected void SetFail()
-	{
-		FunctionFail++;
-	}
-
-	protected void SetPass()
-	{
-		FunctionPass++;
 	}
 	
 	@Override
@@ -114,5 +114,83 @@ public class LogFunction extends LogBase
 		
 		return sbResult.toString();
 	}
+	
+	
+    @Override
+    protected String getJSONResult()
+    {
+        StringBuilder myJSON = new StringBuilder();
 
+        myJSON.append( this.jsonElement( "Function", this.Function ) );
+
+        for ( Integer i = 0; i < Parameter.length; i++) { 
+            
+            myJSON.append( this.jsonElement( "Parameter" + i.toString(), Parameter[i] ) );
+        } 
+        
+        // Statistics...
+        myJSON.append( this.jsonStructre( "statistics", this.getJSONStatistics() ) );
+        
+        // Duration
+        if ( "false".equals( okw.OKW_Properties.getInstance().getProperty( "Log2HTML.Test", "false" ) ) )
+        {
+            myJSON.append( this.jsonElement( "duration", this.myDuration.getSeconds("#0.000") ) );
+        }
+        else
+        {
+            myJSON.append( this.jsonElement( "duration", "Duration TestMode" ) );
+        }
+       // Info
+        myJSON.append( this.jsonElement( "Info", this.Info ) );
+
+        Integer EC = 0;
+        
+        for( LogBase myLog: this.myLogs )
+        {
+            EC++;
+            String Element = myLog.getClass().getSimpleName();
+            myJSON.append( this.jsonStructre( Element + EC.toString(), myLog.getJSONResult() ) );
+        }
+
+        return myJSON.toString();
+    }
+
+
+    @Override
+    protected void ErrorCount()
+    {
+        ErrorCount++;
+        
+        this.FunctionFail();
+
+        this.bError = true;
+        
+        if ( myParent != null)
+        {
+            myParent.ErrorCount();
+        }
+    }
+    
+    
+    @Override
+    protected void ExceptionCount()
+    {
+        ExceptionCount++;
+
+        this.FunctionFail();
+        
+        this.bException = true;
+        
+        if ( myParent != null)
+        {
+            myParent.ExceptionCount();
+        }
+    }
+    
+
+    protected void FunctionFail()
+    {
+        if ( ! (this.bError || this.bException ) )
+           myParent.FunctionFail();
+    }
 }

@@ -106,6 +106,113 @@ public interface ILogger
 
     
     /**
+     *  LogAcceptanceCriteriaStart: Begin of AcceptanceCriteria.
+     *  
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     *  @param Gherkin Harmoni AC - basikali the name of Testcase.
+     *
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 201-07-25
+     */
+    void LogAcceptanceCriteriaStart( String Gherkin );
+
+
+    /**
+     * LogAcceptanceCriteriaEnd: Marks the end of the acceptance criterion.
+     * 
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     *  
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 201-07-25
+     */
+    void LogAcceptanceCriteriaEnd();
+
+
+    
+    /**
+     *  LogAcceptanceCriteriaStart: Begin of a gherkin Step.
+     *  
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     *  @param Gherkin  Gherkin expression.
+     *
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2019-07-25
+     */
+    void LogStepStart( String Gherkin );
+
+
+    /**
+     * LogAcceptanceCriteriaEnd: Marks the end of the acceptance criterion.
+     *  
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2019-07-25
+     */
+    void LogStepEnd();
+
+    
+    /**
+     *  LogAcceptanceCriteriaStart: Begin of precondition.
+     *  
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     *  @param Gherkin Gherkin expression.
+     *
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2019-07-25
+     */
+    void LogPreconditionStart( String Gherkin );
+
+
+    /**
+     * LogAcceptanceCriteriaEnd: Marks the end of precondition.
+     * 
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     *  
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2019-07-25
+     */
+    void LogPreconditionEnd();
+
+    
+    /**
+     *  LogAcceptanceCriteriaStart: Begin of postcondiotion.
+     *  
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     *  @param Gherkin  Gherkin expression.
+     *
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2019-07-25
+     */
+    void LogPostconditionStart( String Gherkin );
+
+
+    /**
+     *  LogAcceptanceCriteriaEnd: Marks the end of postcondiotion.
+     *  
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2019-07-25
+     */
+    void LogPostconditionEnd();
+
+    
+    /**
      *  LogSequenceStart: Begin of a Sequence. This log is used by the Sequence-keyword.
      *  
      *  @param KeyWordName In this case "Sequence" - language depended Log e.g. "Sequenz" in german.

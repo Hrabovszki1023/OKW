@@ -66,7 +66,6 @@ public class Log2HTML extends LogBase implements ILogger
 	
 	public void LogPass(String fpsMessage)
 	{
-		PassedCount++;
 		AllCount++;
 		
 		Pointer2LogBaseStack.peek().myLogs.add( new LogPass(Pointer2LogBaseStack.peek(), fpsMessage) ); 	
@@ -75,7 +74,6 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void LogPrint(String fpsMessage)
 	{
-		PrintCount++;
 		AllCount++;
 		
 		Pointer2LogBaseStack.peek().myLogs.add( new LogPrint(Pointer2LogBaseStack.peek(), fpsMessage) ); 	
@@ -84,18 +82,14 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void LogPrintDebug( String fpsMessage )
 	{
-		
-		PrintCount++;
 		AllCount++;
 		
 		Pointer2LogBaseStack.peek().myLogs.add( new LogPrintDebug(Pointer2LogBaseStack.peek(), fpsMessage) );
-		
 	}
 
 
 	public void LogWarning(String fpsMessage)
 	{
-		WarningCount++;
 		AllCount++;
 		
 		Pointer2LogBaseStack.peek().myLogs.add( new LogWarning(Pointer2LogBaseStack.peek(), fpsMessage) ); 	
@@ -104,7 +98,6 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void LogError(String fpsMessage)
 	{
-		ErrorCount++;
 		AllCount++;
 		
 		Pointer2LogBaseStack.peek().myLogs.add( new LogError(Pointer2LogBaseStack.peek(), fpsMessage) );
@@ -113,7 +106,6 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void LogException(String fpsMessage)
 	{
-		ExceptionCount++;
 		AllCount++;
 		
 		Pointer2LogBaseStack.peek().myLogs.add( new LogException(Pointer2LogBaseStack.peek(), fpsMessage) ); 	
@@ -122,7 +114,6 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void LogFunctionStart(String fps_FunctionName, String... fpsParameter)
     {
-		FunctionCount++;
 		AllCount++;
 		
     	LogBase myLog = new LogFunction( Pointer2LogBaseStack.peek(), fps_FunctionName, fpsParameter);
@@ -138,7 +129,6 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void LogFunctionStartDebug( String fps_FunctionName, String... fpsParameter )
 	{
-		FunctionCount++;
 		AllCount++;
 		
     	LogBase myLog = new LogFunctionDebug( Pointer2LogBaseStack.peek(), fps_FunctionName, fpsParameter);
@@ -148,7 +138,6 @@ public class Log2HTML extends LogBase implements ILogger
     	
     	Pointer2LogBaseStack.peek().myLogs.add(myLog);
     	Pointer2LogBaseStack.push(myLog);
-    	
 	}
 
 
@@ -285,7 +274,6 @@ public class Log2HTML extends LogBase implements ILogger
 	
     public void LogTestcaseStart(String fps_FunctionName)
 	{
-		TestcaseCount++;
 		AllCount++;
 		
 		StopAllTimerAndEmptyStack();
@@ -320,7 +308,6 @@ public class Log2HTML extends LogBase implements ILogger
     
     public void LogKeyWordStart(String fps_FunctionName, String... fpsParameter)
     {
-		KeyWordCount++;
 		AllCount++;
 		
     	LogBase myLog = new LogKeyword( Pointer2LogBaseStack.peek(), fps_FunctionName, fpsParameter);
@@ -344,16 +331,143 @@ public class Log2HTML extends LogBase implements ILogger
 
     	if ( !(myLog.bError  || myLog.bException))
     	{
-    		KeyWordPass++;
+            myLog.KeyWordPass( );
     	}
 
 		Pointer2LogBaseStack.pop();
 
     }
 
+    
+    public void LogAcceptanceCriteriaStart( String Gherkin )
+    {
+        AllCount++;
+        
+        LogBase myLog = new LogAcceptanceCriteria( Pointer2LogBaseStack.peek(), Gherkin );
+        
+        // Timer starten
+        myLog.myDuration.startTimer();
+
+        Pointer2LogBaseStack.peek().myLogs.add(myLog);
+        Pointer2LogBaseStack.push(myLog);
+    }
+
+    
+    public void LogAcceptanceCriteriaEnd()
+    {
+        LogBase myLog = Pointer2LogBaseStack.peek();
+        // Timer Stoppen...
+        myLog.myDuration.stopTimer();
+
+        @SuppressWarnings( "unused" )
+        LogAcceptanceCriteria myCheck = (LogAcceptanceCriteria)myLog;
+
+        if ( !(myLog.bError  || myLog.bException))
+        {
+            myLog.AcceptanceCriteriaPass( );
+        }
+
+        Pointer2LogBaseStack.pop();
+    }
+
+    
+    public void LogStepStart( String Gherkin )
+    {
+        AllCount++;
+        
+        LogBase myLog = new LogStep( Pointer2LogBaseStack.peek(), Gherkin );
+        
+        // Timer starten
+        myLog.myDuration.startTimer();
+
+        Pointer2LogBaseStack.peek().myLogs.add(myLog);
+        Pointer2LogBaseStack.push(myLog);
+    }
+    
+    
+    public void LogStepEnd()
+    {
+        LogBase myLog = Pointer2LogBaseStack.peek();
+        // Timer Stoppen...
+        myLog.myDuration.stopTimer();
+        
+        @SuppressWarnings( "unused" )
+        LogStep myCheck = (LogStep)myLog;
+        
+        if ( !(myLog.bError  || myLog.bException))
+        {
+            StepPass++;
+        }
+        
+        Pointer2LogBaseStack.pop();
+    }
+    
+    
+    public void LogSubStart( String Gherkin )
+    {
+        AllCount++;
+        
+        LogBase myLog = new LogSub( Pointer2LogBaseStack.peek(), Gherkin );
+        
+        // Timer starten
+        myLog.myDuration.startTimer();
+        
+        Pointer2LogBaseStack.peek().myLogs.add(myLog);
+        Pointer2LogBaseStack.push(myLog);
+    }
+
+    
+    public void LogSubEnd()
+    {
+        LogBase myLog = Pointer2LogBaseStack.peek();
+        // Timer Stoppen...
+        myLog.myDuration.stopTimer();
+
+        @SuppressWarnings( "unused" )
+        LogSub myCheck = (LogSub)myLog;
+
+        if ( !(myLog.bError  || myLog.bException))
+        {
+            myLog.SubPass();
+        }
+
+        Pointer2LogBaseStack.pop();
+    }
+
+    
+    public void LogPreconditionStart( String Gherkin )
+    {
+        AllCount++;
+        
+        LogPrecondition myLog = new LogPrecondition( Pointer2LogBaseStack.peek(), Gherkin );
+        
+        // Timer starten
+        myLog.myDuration.startTimer();
+
+        Pointer2LogBaseStack.peek().myLogs.add(myLog);
+        Pointer2LogBaseStack.push(myLog);
+    }
+
+    
+    public void LogPreconditionEnd()
+    {
+        LogBase myLog = Pointer2LogBaseStack.peek();
+        // Timer Stoppen...
+        myLog.myDuration.stopTimer();
+
+        @SuppressWarnings( "unused" )
+        LogPrecondition myCheck = (LogPrecondition)myLog;
+
+        if ( !(myLog.bError  || myLog.bException))
+        {
+            myLog.PreconditionPass();
+        }
+
+        Pointer2LogBaseStack.pop();
+    }
+    
     public void LogSequenceStart( String fpsKeywordName, String fpsWindowFN, String fps_SequensName, String... fpsParameter)
     {
-		SequensCount++;
 		AllCount++;
 		
     	LogBase myLog = new LogSequence( Pointer2LogBaseStack.peek(), fpsWindowFN, fps_SequensName, fpsParameter);
@@ -366,6 +480,36 @@ public class Log2HTML extends LogBase implements ILogger
     }
 
     
+    public void LogPostconditionEnd()
+    {
+        LogBase myLog = Pointer2LogBaseStack.peek();
+        // Timer Stoppen...
+        myLog.myDuration.stopTimer();
+
+        @SuppressWarnings( "unused" )
+        LogPostcondition myCheck = (LogPostcondition)myLog;
+
+        if ( !(myLog.bError  || myLog.bException))
+        {
+            myLog.PostconditionPass();
+        }
+
+        Pointer2LogBaseStack.pop();
+    }
+    
+    public void LogPostconditionStart( String Gherkin)
+    {
+        AllCount++;
+        
+        LogBase myLog = new LogPostcondition( Pointer2LogBaseStack.peek(), Gherkin);
+        
+        // Timer starten
+        myLog.myDuration.startTimer();
+
+        Pointer2LogBaseStack.peek().myLogs.add(myLog);
+        Pointer2LogBaseStack.push(myLog);
+    }
+    
     public void LogSequenceEnd()
     {
 		LogBase myLog = Pointer2LogBaseStack.peek();
@@ -377,7 +521,7 @@ public class Log2HTML extends LogBase implements ILogger
 
     	if ( !(myLog.bError  || myLog.bException))
     	{
-    		SequensPass++;
+    	    myLog.SequensPass();
     	}
 
 		Pointer2LogBaseStack.pop();
@@ -394,6 +538,7 @@ public class Log2HTML extends LogBase implements ILogger
     	return myResult.toString();
     }
 
+    
     private String getHTMLHeader() throws IOException
     {
     	StringBuilder myResult = new StringBuilder();
@@ -473,7 +618,7 @@ public class Log2HTML extends LogBase implements ILogger
     }
 
     
-    private String getStatistics()
+    private String getHTMLStatistics()
     {
     	StringBuilder myResult = new StringBuilder();
     	
@@ -605,7 +750,7 @@ public class Log2HTML extends LogBase implements ILogger
 			StopAllTimerAndEmptyStack();
 			
 			myResult.append(getHTMLHeader());
-			myResult.append(getStatistics());
+			myResult.append(getHTMLStatistics());
     	
 			myResult.append("<h2>Result Log</h2>\n");
 			myResult.append(getHTMLResult());
@@ -639,14 +784,139 @@ public class Log2HTML extends LogBase implements ILogger
 	}
 
 	
-	protected void SetFail()
-	{
-	}
+    public String Result2JSON( String fpsFileName )
+    {
+        StringBuilder myJSON = new StringBuilder();
+        
+        try
+        {
+            StopAllTimerAndEmptyStack();
+            
+            myJSON.append( getJSONHeader() );
+            myJSON.append( this.jsonStructre( "statistics", this.getJSONStatistics() ) );
+        
+            myJSON.append( this.jsonStructre( "result", this.getJSONResult() ));
+            myJSON.append( getJSONFooter());
+   
+            System.out.print( myJSON.toString() );           
+            FileWriter fw = new FileWriter( fpsFileName );
+            BufferedWriter bw = new BufferedWriter(fw);
 
-	
-	protected void SetPass()
-	{
-	}
+            bw.write( myJSON.toString() );
+
+            bw.close();
+         }
+            catch(Exception e)
+         {
+             System.out.print(e.getMessage());
+         }
+        
+        return myJSON.toString();
+    }
+
+    
+    private String getJSONHeader()
+    {
+        StringBuilder myResult = new StringBuilder();
+        
+        myResult.append("{\n");
+        
+        return myResult.toString();
+    }
+
+    
+    protected String getJSONResult()
+    {
+        StringBuilder myJSON = new StringBuilder();
+    
+        Integer EC = 0;
+        
+        for( LogBase myLog: this.myLogs )
+        {
+            EC++;
+            String Element = myLog.getClass().getSimpleName();
+            myJSON.append( this.jsonStructre( Element + EC.toString(), myLog.getJSONResult() ) );
+        }
+
+        return myJSON.toString();
+    }
+    
+    
+    private String getJSONStatistics()
+    {
+        StringBuilder myJSON = new StringBuilder();
+        
+        myJSON.append( this.jsonElement( "PassedCount", PassedCount.toString() ) );
+        myJSON.append( this.jsonElement( "ExceptionCount", ExceptionCount.toString() ) );
+        myJSON.append( this.jsonElement( "WarningCount", WarningCount.toString() ) );
+        myJSON.append( this.jsonElement( "ErrorCount", ErrorCount.toString() ) );
+        
+        // Test cases
+        myJSON.append( this.jsonElement( "TestcaseCount", TestcaseCount.toString() ) );
+        myJSON.append( this.jsonElement( "TestcasePass", TestcasePass.toString() ) );
+        myJSON.append( this.jsonElement( "TestcaseFail", TestcaseFail.toString() ) );
+ 
+        // Sequences
+        myJSON.append( this.jsonElement( "SequensCount", SequensCount.toString() ) );
+        myJSON.append( this.jsonElement( "SequensPass", SequensPass.toString() ) );
+        myJSON.append( this.jsonElement( "SequensFail", SequensFail.toString() ) );
+
+        // Precondition:
+        myJSON.append( this.jsonElement( "PreconditionCount", PreconditionCount.toString() ) );
+        myJSON.append( this.jsonElement( "PreconditionPass",  PreconditionPass.toString() ) );
+        myJSON.append( this.jsonElement( "PreconditionFail",  PreconditionFail.toString() ) );
+
+        // Sub
+        myJSON.append( this.jsonElement( "SubCount", SubCount.toString() ) );
+        myJSON.append( this.jsonElement( "SubPass", SubPass.toString() ) );
+        myJSON.append( this.jsonElement( "SubFail", SubFail.toString() ) );        
+
+        // Step
+        myJSON.append( this.jsonElement( "StepCount", StepCount.toString() ) );
+        myJSON.append( this.jsonElement( "StepPass", StepPass.toString() ) );
+        myJSON.append( this.jsonElement( "StepFail", StepFail.toString() ) );        
+        
+        // AcceptanceCriteria:
+        myJSON.append( this.jsonElement( "AcceptanceCriteriaCount", AcceptanceCriteriaCount.toString() ) );
+        myJSON.append( this.jsonElement( "AcceptanceCriteriaPass",  AcceptanceCriteriaPass.toString() ) );
+        myJSON.append( this.jsonElement( "AcceptanceCriteriaFail",  AcceptanceCriteriaFail.toString() ) );
+
+        // Postcondition:
+        myJSON.append( this.jsonElement( "PostconditionCount", PostconditionCount.toString() ) );
+        myJSON.append( this.jsonElement( "PostconditionPass",  PostconditionPass.toString() ) );
+        myJSON.append( this.jsonElement( "PostconditionFail",  PostconditionFail.toString() ) );
+        
+        // Keywords:
+        myJSON.append( this.jsonElement( "KeyWordCount", KeyWordCount.toString() ) );
+        myJSON.append( this.jsonElement( "KeyWordPass", KeyWordPass.toString() ) );
+        myJSON.append( this.jsonElement( "KeyWordFail", KeyWordFail.toString() ) );
+
+        // Timer:
+        // Für den Test wird das Abgeschaltet, weil veränderlich 
+        if ( "false".equals( okw.OKW_Properties.getInstance().getProperty( "Log2HTML.Test", "false" ) ) )
+        {
+            myJSON.append( this.jsonElement( "Start time", this.myDuration.getStartTime() ) );
+            myJSON.append( this.jsonElement( "End time", this.myDuration.getEndTime() ) );
+            myJSON.append( this.jsonElement( "duration", this.myDuration.getSeconds("#0.000") ) );
+        }
+        else
+        {
+            myJSON.append( this.jsonElement( "Start time", "Start time TestMode" ) );
+            myJSON.append( this.jsonElement( "End time", "End time TestMode" ) );
+            myJSON.append( this.jsonElement( "duration", "Duration TestMode" ) );
+        }
+
+        return myJSON.toString();
+    }
+    
+    private String getJSONFooter()
+    {
+        StringBuilder myResult = new StringBuilder();
+        
+        myResult.append("}\n");
+
+        return myResult.toString();
+    }
 	
 	protected void abort()
 	{
@@ -735,4 +1005,172 @@ public class Log2HTML extends LogBase implements ILogger
 	{
 		
 	}
+	
+	
+	@Override
+    protected void TestcaseCount()
+    {
+        this.TestcaseCount++;
+    }
+
+    @Override
+    protected void TestcaseFail()
+    {
+        this.TestcaseFail++;
+    }
+    
+    @Override
+    protected void TestcasePass()
+    {
+        this.TestcasePass++;
+    }
+
+    @Override
+    protected void FunctionCount()
+    {
+        this.FunctionCount++;
+    }
+
+    @Override
+    protected void FunctionFail()
+    {
+        this.FunctionFail++;
+    }
+
+    @Override
+    protected void FunctionPass()
+    {
+        this.FunctionPass++;
+    }
+    
+    @Override
+    protected void KeyWordCount()
+    {
+        this.KeyWordCount++;
+    }
+
+    @Override
+    protected void KeyWordFail()
+    {
+        this.KeyWordFail++;
+    }
+
+    @Override
+    protected void KeyWordPass()
+    {
+        this.KeyWordPass++;
+    }
+    
+    @Override
+    protected void SequensCount()
+    {
+        this.SequensCount++;
+    }
+
+    @Override
+    protected void SequensFail()
+    {
+        this.SequensFail++;
+    }
+
+    @Override
+    protected void SequensPass()
+    {
+        this.SequensPass++;
+    }
+
+    // Sub
+    @Override
+    protected void StepCount()
+    {
+        this.StepCount++;
+    }
+    
+    @Override
+    protected void StepFail()
+    {
+        this.StepFail++;
+    }
+    
+    @Override
+    protected void StepPass()
+    {
+        this.StepPass++;
+    }
+
+    // Sub
+    @Override
+    protected void SubCount()
+    {
+        this.SubCount++;
+    }
+    
+    @Override
+    protected void SubFail()
+    {
+        this.SubFail++;
+    }
+    
+    @Override
+    protected void SubPass()
+    {
+        this.SubPass++;
+    }
+    
+    // Precondition
+    @Override
+    protected void PreconditionCount()
+    {
+        this.PreconditionCount++;
+    }
+    
+    @Override
+    protected void PreconditionFail()
+    {
+        this.PreconditionFail++;
+    }
+    
+    @Override
+    protected void PreconditionPass()
+    {
+        this.PreconditionPass++;
+    }
+    
+    // Postcondition
+    @Override
+    protected void PostconditionCount()
+    {
+        this.PostconditionCount++;
+    }
+    
+    @Override
+    protected void PostconditionFail()
+    {
+        this.PostconditionFail++;
+    }
+    
+    @Override
+    protected void PostconditionPass()
+    {
+        this.PostconditionPass++;
+    }
+    
+    // AcceptanceCriteria
+    @Override
+    protected void AcceptanceCriteriaCount()
+    {
+        this.AcceptanceCriteriaCount++;
+    }
+    
+    @Override
+    protected void AcceptanceCriteriaFail()
+    {
+        this.AcceptanceCriteriaFail++;
+    }
+    
+    @Override
+    protected void AcceptanceCriteriaPass()
+    {
+        this.AcceptanceCriteriaPass++;
+    }
 }

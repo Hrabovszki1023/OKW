@@ -3,15 +3,16 @@ package okw.log.log2html;
 public class LogException extends LogBase
 {
 
-	public LogException(LogBase fpParent, String fpsInfo)
+    protected LogException(LogBase fpParent, String fpsInfo)
 	{
 		Info = fpsInfo;
 		myID = AllCount;
 		this.setParent(fpParent);		
-		setException();	
+		ExceptionCount();	
 	}
-	
-	protected String getResult()
+ 
+    @Override
+	protected String getHTMLResult()
 	{
 		StringBuilder sbResult = new StringBuilder();
 		
@@ -22,12 +23,14 @@ public class LogException extends LogBase
 		return sbResult.toString();
 	}
 	
-	protected void SetFail()
-	{
-	}
 
-	protected void SetPass()
-	{
-	}
+    protected String getJSONResult()
+     {
+         StringBuilder myJSON = new StringBuilder();
+                     
+         myJSON.append( this.jsonElement( "Exception",  this.Info ) );
+         
+         return myJSON.toString();
+     }
 
 }

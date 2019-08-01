@@ -7,10 +7,11 @@ public class LogPrintDebug extends LogBase
 	{
 		Info = fpsInfo;
 		myID = AllCount;
-		this.setParent(fpParent);		
+		this.setParent(fpParent);
+        PrintCount();
 	}
 	
-	protected String getResult()
+	protected String getHTMLResult()
 	{
 		StringBuilder sbResult = new StringBuilder();
 		
@@ -20,10 +21,22 @@ public class LogPrintDebug extends LogBase
 		
 		return sbResult.toString();
 	}
+
 	
+    protected String getJSONResult()
+    {
+        StringBuilder myJSON = new StringBuilder();
+                    
+        myJSON.append( this.jsonElement( "PrintDebug",  this.Info ) );
+        
+        return myJSON.toString();
+    }
+    
+    
 	protected void SetFail()
 	{
 	}
+
 
 	protected void SetPass()
 	{

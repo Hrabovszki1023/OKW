@@ -318,6 +318,7 @@ public class Logger_Sngltn
         }
     }
 
+    
     public void LogKeyWordEnd()
     {
         for ( ILogger myLogger : LoggerList )
@@ -325,7 +326,78 @@ public class Logger_Sngltn
             myLogger.LogKeyWordEnd();
         }
     }
+    
+    
+    public void LogAcceptanceCriteriaEnd()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogAcceptanceCriteriaEnd();
+        }
+    }
 
+    
+    public void LogAcceptanceCriteriaStart( String Gherkin )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogAcceptanceCriteriaStart( Gherkin  );
+        }
+    }
+    
+    
+    public void LogStepEnd()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogStepEnd();
+        }
+    }
+
+    
+    public void LogStepStart( String Gherkin )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogStepStart( Gherkin  );
+        }
+    }    
+    
+    
+    public void LogPreconditionEnd()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogPreconditionEnd();
+        }
+    }
+
+    
+    public void LogPreconditionStart( String Gherkin )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogPreconditionStart( Gherkin  );
+        }
+    }
+    
+    
+    public void LogPostconditionEnd()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogPostconditionEnd();
+        }
+    }
+
+    
+    public void LogPostconditionStart( String Gherkin )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogPostconditionStart( Gherkin  );
+        }
+    }
     public void LogSequenceEnd()
     {
         for ( ILogger myLogger : LoggerList )
@@ -333,6 +405,7 @@ public class Logger_Sngltn
             myLogger.LogSequenceEnd();
         }
     }
+
 
     public void LogTestcaseEnd()
     {

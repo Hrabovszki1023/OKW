@@ -212,7 +212,78 @@ public class Log2Console implements ILogger
 	            this.ResOpenList(String2Print);
 	        }
 
+	        
+            /**
+             *  \copydoc ILogger::LogAcceptanceCriteriaStart(String.)
+             */
+            public void LogAcceptanceCriteriaStart( String Gherkin )
+            {
+                this.ResOpenList( Gherkin );
+            }
 			
+            
+            /**
+             *  \copydoc ILogger::LogAcceptanceCriteriaEnd()
+             */
+            public void LogAcceptanceCriteriaEnd()
+            {
+                this.ResCloseList();
+            }
+
+            /**
+             *  \copydoc ILogger::LogStepStart(String.)
+             */
+            public void LogStepStart( String Gherkin )
+            {
+                this.ResOpenList( Gherkin );
+            }
+            
+            
+            /**
+             *  \copydoc ILogger::LogAcceptanceCriteriaEnd()
+             */
+            public void LogStepEnd()
+            {
+                this.ResCloseList();
+            }
+ 
+
+            /**
+             *  \copydoc ILogger::LogPreconditionStart(String.)
+             */
+            public void LogPreconditionStart( String Gherkin )
+            {
+                this.ResOpenList( Gherkin );
+            }
+            
+            
+            /**
+             *  \copydoc ILogger::LogPreconditionEnd()
+             */
+            public void LogPreconditionEnd()
+            {
+                this.ResCloseList();
+            }
+
+            
+
+            /**
+             *  \copydoc ILogger::LogPostconditionStart(String.)
+             */
+            public void LogPostconditionStart( String Gherkin )
+            {
+                this.ResOpenList( Gherkin );
+            }
+            
+            
+            /**
+             *  \copydoc ILogger::LogPostconditionCriteriaEnd()
+             */
+            public void LogPostconditionEnd()
+            {
+                this.ResCloseList();
+            }
+            
 			/**
 	         * \copydoc ILogger::LogPass(String)
 			 */

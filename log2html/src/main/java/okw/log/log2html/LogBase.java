@@ -7,41 +7,62 @@ public abstract class LogBase {
 	protected static Integer AllCount = 0;
 	protected Integer myID = 0;
 
-	// Statistics
-	protected static Integer ErrorCount = 0;	
-	protected static Integer ExceptionCount = 0;	
-	protected static Integer WarningCount = 0;
-	protected static Integer PassedCount = 0;
-	protected static Integer PrintCount = 0;
-	
-	
-	
-	protected static Integer TestcaseCount = 0;
-	protected static Integer TestcaseFail = 0;
-	protected static Integer TestcasePass = 0;
+	   // local Statistics
+    protected Integer ErrorCount = 0;
+    protected Integer ExceptionCount = 0;    
+    protected Integer WarningCount = 0;
+    protected Integer PassedCount = 0;
+    protected Integer PrintCount = 0;
+    
+    protected Integer TestcaseCount = 0;
+    protected Integer TestcaseFail = 0;
+    protected Integer TestcasePass = 0;
 
-	protected static Integer FunctionCount = 0;
-	protected static Integer FunctionFail = 0;
-	protected static Integer FunctionPass = 0;
+    protected Integer FunctionCount = 0;
+    protected Integer FunctionFail = 0;
+    protected Integer FunctionPass = 0;
+    
+    protected Integer KeyWordCount = 0;
+    protected Integer KeyWordFail = 0;
+    protected Integer KeyWordPass = 0;
+    
+    protected Integer StepCount = 0;
+    protected Integer StepFail = 0;
+    protected Integer StepPass = 0;
+    
+    protected Integer SequensCount = 0;
+    protected Integer SequensFail = 0;
+    protected Integer SequensPass = 0;
+
+    // Sub
+    protected Integer SubCount = 0;
+    protected Integer SubFail = 0;
+    protected Integer SubPass = 0;
 	
-	protected static Integer KeyWordCount = 0;
-	protected static Integer KeyWordFail = 0;
-	protected static Integer KeyWordPass = 0;
-	
-	protected static Integer SequensCount = 0;
-	protected static Integer SequensFail = 0;
-	protected static Integer SequensPass = 0;
-		
+    // Precondition
+    protected Integer PreconditionCount = 0;
+    protected Integer PreconditionFail = 0;
+    protected Integer PreconditionPass = 0;
+    
+    // Postcondition
+    protected Integer PostconditionCount = 0;
+    protected Integer PostconditionFail = 0;
+    protected Integer PostconditionPass = 0;
+    
+    // AcceptanceCriteria
+    protected Integer AcceptanceCriteriaCount = 0;
+    protected Integer AcceptanceCriteriaFail = 0;
+    protected Integer AcceptanceCriteriaPass = 0;
+    
 	protected String Info = "";
+	
+	protected String Gherkin = "";
 	
 	protected LogTimer myDuration = new LogTimer();
 	
 	protected LogBase myParent = null;
 
 	protected List<LogBase> myLogs= new ArrayList<LogBase>();
-
-	protected abstract void SetFail();
-	protected abstract void SetPass();
 	
 	public void setParent(LogBase fpParent)
 	{
@@ -58,7 +79,7 @@ public abstract class LogBase {
 		AllCount = 0;
 		myID = 0;
 
-		// Statistics
+		// Global Statistics
 		ErrorCount     = 0;
 		ExceptionCount = 0;
 		WarningCount   = 0;
@@ -80,10 +101,240 @@ public abstract class LogBase {
 		SequensCount = 0;
 		SequensFail = 0;
 		SequensPass = 0;
+
+		// Postcondition
+		PostconditionCount = 0;
+		PostconditionFail = 0;
+		PostconditionPass = 0;
 		
 		PrintCount = 0;
 	}
 
+    
+    // local Statistics
+  protected void ErrorCount()
+  {
+      ErrorCount++;
+      bError = true;
+      
+      if ( myParent != null)
+      {
+          myParent.ErrorCount();
+      }
+  }
+  
+  protected void ExceptionCount()
+  {
+      ExceptionCount++;
+      this.bException = true;
+      
+      if ( myParent != null)
+      {
+          myParent.ExceptionCount();
+      }
+  }
+  
+  protected void WarningCount()
+  {
+      WarningCount++;
+      this.bWarning = true;
+      
+      if ( myParent != null)
+      {
+          myParent.WarningCount();
+      }
+  }
+
+  protected void PassedCount()
+  {
+      PassedCount++;
+      
+      if ( myParent != null)
+      {
+          myParent.PassedCount();
+      }
+  }
+
+  protected void PrintCount()
+  {
+      PrintCount++;
+      
+      if ( myParent != null)
+      {
+          myParent.PrintCount();
+      }
+  }
+	
+    protected void TestcaseCount()
+    {
+        this.TestcaseCount++;
+        myParent.TestcaseCount();
+    }
+
+    protected void TestcaseFail()
+    {
+        this.TestcaseFail++;
+        myParent.TestcaseFail();
+    }
+    
+    protected void TestcasePass()
+    {
+        this.TestcasePass++;
+        myParent.TestcasePass();
+    }
+
+    protected void FunctionCount()
+    {
+        this.FunctionCount++;
+        myParent.FunctionCount();
+    }
+
+    protected void FunctionFail()
+    {
+        this.FunctionFail++;
+        myParent.FunctionFail();
+    }
+
+    protected void FunctionPass()
+    {
+        this.FunctionPass++;
+        myParent.FunctionPass();        
+    }
+    
+    protected void KeyWordCount()
+    {
+        this.KeyWordCount++;
+        myParent.KeyWordCount();
+    }
+
+    protected void KeyWordFail()
+    {
+        this.KeyWordFail++;
+        myParent.KeyWordFail();        
+    }
+
+    protected void KeyWordPass()
+    {
+        this.KeyWordPass++;
+        myParent.KeyWordPass();
+    }
+    
+    protected void SequensCount()
+    {
+        this.SequensCount++;
+        myParent.SequensCount();
+    }
+
+    protected void SequensFail()
+    {
+        this.SequensFail++;
+        myParent.SequensFail();
+    }
+
+    protected void SequensPass()
+    {
+        this.SequensPass++;
+        myParent.SequensPass();
+    }
+    
+    
+    // Step
+    protected void StepCount()
+    {
+        this.StepCount++;
+        myParent.StepCount();
+    }
+    
+    protected void StepFail()
+    {
+        this.StepFail++;
+        myParent.StepFail();
+    }
+    
+    protected void StepPass()
+    {
+        this.StepPass++;
+        myParent.StepPass();
+        
+    }
+    
+    // Sub
+    protected void SubCount()
+    {
+        this.SubCount++;
+        myParent.SubCount();
+    }
+    
+    protected void SubFail()
+    {
+        this.SubFail++;
+        myParent.SubFail();
+    }
+    
+    protected void SubPass()
+    {
+        this.SubPass++;
+        myParent.SubPass();
+        
+    }
+    
+    // Precondition
+    protected void PreconditionCount()
+    {
+        this.PreconditionCount++;
+        myParent.PreconditionCount();
+    }
+    
+    protected void PreconditionFail()
+    {
+        this.PreconditionFail++;
+        myParent.PreconditionFail();
+    }
+    
+    protected void PreconditionPass()
+    {
+        this.PreconditionPass++;
+        myParent.PreconditionPass();
+    }
+    
+    // Postcondition
+    protected void PostconditionCount()
+    {
+        this.PostconditionCount++;
+        myParent.PostconditionCount();
+    }
+    
+    protected void PostconditionFail()
+    {
+        this.PostconditionFail++;
+        myParent.PostconditionFail();
+    }
+    
+    protected void PostconditionPass()
+    {
+        this.PostconditionPass++;
+        myParent.PostconditionPass();
+    }
+    
+    // AcceptanceCriteria
+    protected void AcceptanceCriteriaCount()
+    {
+        this.AcceptanceCriteriaCount++;
+        myParent.AcceptanceCriteriaCount();
+    }
+    
+    protected void AcceptanceCriteriaFail()
+    {
+        this.AcceptanceCriteriaFail++;
+        myParent.AcceptanceCriteriaFail();        
+    }
+    
+    protected void AcceptanceCriteriaPass()
+    {
+        this.AcceptanceCriteriaPass++;
+        myParent.AcceptanceCriteriaPass();
+    }
+    
 	
 	public LogBase getParent()
 	{
@@ -92,7 +343,7 @@ public abstract class LogBase {
 
 	
 	protected int Level = -1;
-	protected String myIndentionBase = "  ";
+	protected String myIndentionBase = "    ";
 	
 	protected int getLevel()
 	{
@@ -134,6 +385,48 @@ public abstract class LogBase {
 		return myIndention.toString();
 	}
 
+    protected String getLevelIndention( int shift )
+    {
+        StringBuilder myIndention = new StringBuilder();
+        
+        int n = this.getLevel() + shift;
+        int i;
+        
+        for ( i=1; i<=n; i++ )
+        {
+            myIndention.append(myIndentionBase);
+        }
+        
+        return myIndention.toString();
+    }
+    
+	protected String jsonElement( String Key, String Value)
+	{
+	       StringBuilder lvReturn = new StringBuilder();
+	        
+	       lvReturn.append( " " + getLevelIndention() + "\"" + Key + "\": \"" + Value + "\",\n" );
+	        
+	       return lvReturn.toString();
+	}
+
+	   protected String jsonElement( String Key, Integer Value)
+	    {
+	           StringBuilder lvReturn = new StringBuilder();
+	            
+	           lvReturn.append( " " + getLevelIndention() + "\"" + Key + "\": \"" + Value.toString() + "\",\n" );
+	            
+	           return lvReturn.toString();
+	    }
+
+	   protected String jsonStructre( String Key, String Value)
+	    {
+	           StringBuilder lvReturn = new StringBuilder();
+	            
+	           lvReturn.append( " " + getLevelIndention( ) + "\"" + Key + "\": {\n" + Value + getLevelIndention() + " },\n" );
+	            
+	           return lvReturn.toString();
+	    }
+
 	
 	protected Boolean bWarning = false;
 	
@@ -163,7 +456,7 @@ public abstract class LogBase {
 	{
 		if (!bException)
 		{
-			SetFail();
+			//SetFail();
 			bException = true;
 		
 			if (myParent != null)
@@ -186,7 +479,7 @@ public abstract class LogBase {
 	{
 		if (!bError)
 		{			
-			SetFail();
+			// SetFail();
 			bError = true;
 
 			if (myParent != null)
@@ -264,4 +557,31 @@ public abstract class LogBase {
 		
 		return sbResult.toString();
 	}
+
+
+	   protected String getJSONResult()
+	    {
+        
+	        StringBuilder myJSON = new StringBuilder();
+	        
+	        // Duration
+	        if ( "false".equals( okw.OKW_Properties.getInstance().getProperty( "Log2HTML.Test", "false" ) ) )
+	        {
+	            myJSON.append( this.jsonElement( "duration", this.myDuration.getSeconds("#0.000") ) );
+	        }
+	        else
+	        {
+	            myJSON.append( this.jsonElement( "duration", "Duration TestMode" ) );
+	        }	        
+	        Integer EC = 0;
+	        
+	        for( LogBase myLog: this.myLogs )
+	        {
+	            EC++;
+	            String Element = myLog.getClass().getSimpleName();
+	            myJSON.append( this.jsonStructre( Element + EC.toString(), myLog.getJSONResult() ) );
+	        }
+	        
+	        return myJSON.toString();
+	    }
 }

@@ -1,17 +1,19 @@
 package okw.log.log2html;
 
+
 public class LogWarning extends LogBase
 {
 
-	public LogWarning(LogBase fpParent, String fpsInfo)
+	protected LogWarning(LogBase fpParent, String fpsInfo)
 	{
 		Info = fpsInfo;
 		myID = AllCount;
 		this.setParent(fpParent);		
-		setWarning();		
+		this.WarningCount();	
 	}
+
 	
-	protected String getResult()
+	protected String getHTMLResult()
 	{
 		StringBuilder sbResult = new StringBuilder();
 		
@@ -21,7 +23,17 @@ public class LogWarning extends LogBase
 		
 		return sbResult.toString();
 	}
-	
+
+    
+    protected String getJSONResult()
+    {
+        StringBuilder myJSON = new StringBuilder();
+                    
+        myJSON.append( this.jsonElement( "Warning",  this.Info ) );
+        
+        return myJSON.toString();
+    }
+    
 	protected void SetFail()
 	{
 	}
