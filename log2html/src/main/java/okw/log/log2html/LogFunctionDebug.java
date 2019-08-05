@@ -1,7 +1,7 @@
 package okw.log.log2html;
 
 
-public class LogFunctionDebug extends LogBase4Gherkin
+public class LogFunctionDebug extends LogBaseNode
 {
 	
 	String myReturn = "";

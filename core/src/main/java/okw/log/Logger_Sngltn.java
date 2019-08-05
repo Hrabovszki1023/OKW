@@ -41,7 +41,6 @@ package okw.log;
 
 import java.util.*;
 
-import okw.OKW_HandleException;
 import okw.OKW_Const_Sngltn;
 
 /**
@@ -52,7 +51,7 @@ import okw.OKW_Const_Sngltn;
  *  \~english
  *  Central Log-Classes offers the Logging-Methodes.
  */
-public class Logger_Sngltn
+public class Logger_Sngltn implements ILogger
 {
 
     private static Boolean            cvbDebugMode = false;
@@ -328,23 +327,13 @@ public class Logger_Sngltn
     }
     
     
-    public void LogAcceptanceCriteriaEnd()
+    public void LogStepStart( String categoryName, String choiceValue, String featureName, String localCategoryName, String sourceExcerpt )
     {
         for ( ILogger myLogger : LoggerList )
         {
-            myLogger.LogAcceptanceCriteriaEnd();
+            myLogger.LogStepStart( categoryName, choiceValue, featureName, localCategoryName, sourceExcerpt );
         }
-    }
-
-    
-    public void LogAcceptanceCriteriaStart( String Gherkin )
-    {
-        for ( ILogger myLogger : LoggerList )
-        {
-            myLogger.LogAcceptanceCriteriaStart( Gherkin  );
-        }
-    }
-    
+    }    
     
     public void LogStepEnd()
     {
@@ -355,49 +344,40 @@ public class Logger_Sngltn
     }
 
     
-    public void LogStepStart( String Gherkin )
+    public void LogLocalACCallStart( String Gherkin, String Type )
     {
         for ( ILogger myLogger : LoggerList )
         {
-            myLogger.LogStepStart( Gherkin  );
+            myLogger.LogLocalACCallStart(  Gherkin, Type );
         }
     }    
     
-    
-    public void LogPreconditionEnd()
+    public void LogLocalACCallEnd()
     {
         for ( ILogger myLogger : LoggerList )
         {
-            myLogger.LogPreconditionEnd();
-        }
-    }
-
-    
-    public void LogPreconditionStart( String Gherkin )
-    {
-        for ( ILogger myLogger : LoggerList )
-        {
-            myLogger.LogPreconditionStart( Gherkin  );
+            myLogger.LogLocalACCallEnd();
         }
     }
     
     
-    public void LogPostconditionEnd()
+    public void LogRemoteACCallStart( String Gherkin, String Type )
     {
         for ( ILogger myLogger : LoggerList )
         {
-            myLogger.LogPostconditionEnd();
+            myLogger.LogRemoteACCallStart(  Gherkin, Type );
         }
-    }
-
+    }    
     
-    public void LogPostconditionStart( String Gherkin )
+    public void LogRemoteACCallEnd()
     {
         for ( ILogger myLogger : LoggerList )
         {
-            myLogger.LogPostconditionStart( Gherkin  );
+            myLogger.LogRemoteACCallEnd();
         }
     }
+    
+    
     public void LogSequenceEnd()
     {
         for ( ILogger myLogger : LoggerList )
@@ -542,6 +522,7 @@ public class Logger_Sngltn
         }
     }
 
+    
     /**
      *  \brief
      *  LogWarning Function:
@@ -557,6 +538,24 @@ public class Logger_Sngltn
         }
     }
 
+
+    
+    /**
+     *  \brief
+     *  LogWarning Function:
+     *  Logs a warning to the results file.
+     * 
+     *  \param fps_Message
+     */
+    public void LogSourceLocation( String Start, String End, String featureName, String sourceType )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogSourceLocation( Start, End, featureName, sourceType );
+        }
+    }
+
+    
     /**
      *  \brief
      *  Closes a hierarchical level in the results file that was opened with

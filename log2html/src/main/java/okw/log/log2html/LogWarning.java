@@ -1,7 +1,7 @@
 package okw.log.log2html;
 
 
-public class LogWarning extends LogBase
+public class LogWarning extends LogBaseLeaf
 {
 
 	protected LogWarning(LogBase fpParent, String fpsInfo)

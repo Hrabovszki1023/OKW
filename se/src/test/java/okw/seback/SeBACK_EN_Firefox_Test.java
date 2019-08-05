@@ -24,7 +24,7 @@ public class SeBACK_EN_Firefox_Test extends SeBACK_EN_Test
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        myLog2HTML = new Log2HTML("target/SeBACK_Firefox_Test.html");
+        myLog2HTML = new Log2HTML( "SeBACK_EN_Firefox_Test" );
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
@@ -47,6 +47,6 @@ public class SeBACK_EN_Firefox_Test extends SeBACK_EN_Test
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception
 	{
-		myLog2HTML.Result2HTML();
+		myLog2HTML.Result2HTML("target/SeBACK_EN_Firefox_Test.html");
 	}
 }

@@ -15,7 +15,7 @@ import org.junit.BeforeClass;
 public class SeBACK_EN_Chrome_Test extends SeBACK_EN_Test
 {
 	protected static Log2HTML myLog2HTML = null;
-
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception
 	{
@@ -25,9 +25,10 @@ public class SeBACK_EN_Chrome_Test extends SeBACK_EN_Test
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        myLog2HTML = new Log2HTML("target/OKWResult_SeBACK_EN_Chrome_Test.html");
+        myLog2HTML = new Log2HTML( "SeBACK_EN_Chrome_Test" );
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
+        
 	}
 
 	@AfterClass

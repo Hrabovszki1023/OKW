@@ -1,7 +1,7 @@
 package okw.log.log2html;
 
 
-public class LogFunction extends LogBase4Gherkin
+public class LogFunction extends LogBaseNode
 {
 	
 	String myReturn = "";
@@ -9,7 +9,7 @@ public class LogFunction extends LogBase4Gherkin
     private String Function;
     private String[] Parameter;
 	
-	LogFunction(LogBase Parent, String fpsFunctionName, String... fpsParameter)
+	LogFunction( LogBase Parent, String fpsFunctionName, String... fpsParameter)
 	{
 		setParent(Parent);
 		myID = AllCount;

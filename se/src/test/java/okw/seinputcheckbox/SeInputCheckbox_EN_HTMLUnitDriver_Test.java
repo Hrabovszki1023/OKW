@@ -25,7 +25,7 @@ public class SeInputCheckbox_EN_HTMLUnitDriver_Test extends SeInputCheckbox_EN_T
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        myLog2HTML = new Log2HTML("target/OKWResult_SeCheckBox_HTMLUnitDriver_Test.html");
+        myLog2HTML = new Log2HTML( "OKWResult_SeCheckBox_HTMLUnitDriver_Test" );
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
@@ -33,6 +33,6 @@ public class SeInputCheckbox_EN_HTMLUnitDriver_Test extends SeInputCheckbox_EN_T
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception
 	{
-		myLog2HTML.Result2HTML();
+		myLog2HTML.Result2HTML( "target/OKWResult_SeCheckBox_HTMLUnitDriver_Test.html" );
 	}
 }

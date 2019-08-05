@@ -1,26 +1,29 @@
 package okw.log.log2html;
 
-public class LogSub  extends LogBase4Gherkin
+public class LogRemoteACCall extends LogBaseNode
 {
+    private String sourceExcerpt = "";
+    private String Type = "";
 	
-	LogSub(LogBase Parent, String Gherkin )
+    LogRemoteACCall(LogBase Parent, String sourceExcerpt, String Type)
 	{
         setParent(Parent);
         myID = AllCount;
                 
-        this.Gherkin = Gherkin;
+        this.sourceExcerpt = sourceExcerpt;
+        this.Type = Type;
         
-        // inkrementieren Sub
-        this.SubCount();
+        // inkrementieren AcceptanceCriteriaCount
+        this.RemoteACCallCount();
 	}
+	
 	   
-    
     @Override
     protected void ErrorCount()
     {
         ErrorCount++;
         
-        this.SubFail();
+        this.RemoteACCallFail();
 
         this.bError = true;
         
@@ -36,7 +39,7 @@ public class LogSub  extends LogBase4Gherkin
     {
         ExceptionCount++;
 
-        this.SubFail();
+        this.RemoteACCallFail();
         
         this.bException = true;
         
@@ -46,9 +49,10 @@ public class LogSub  extends LogBase4Gherkin
         }
     }
     
-    protected void SubFail()
+    @Override
+    protected void RemoteACCallFail()
     {
         if ( ! (this.bError || this.bException ) )
-           myParent.SubFail();
+           myParent.RemoteACCallFail();
     }
 }

@@ -1,6 +1,6 @@
 package okw.log.log2html;
 
-public class LogKeyword extends LogBase4Gherkin
+public class LogKeyword extends LogBaseNode
 {
     
     private String Keyword;
@@ -8,8 +8,6 @@ public class LogKeyword extends LogBase4Gherkin
 
 	LogKeyword( LogBase Parent, String fpsKeyword, String... fpsParameter )
 	{
-	    super( Parent, "");
-	    
 		setParent( Parent );
 		myID = AllCount;
 		

@@ -33,7 +33,7 @@ public class IFrame_EN_Chrome_Test extends IFrame_EN_Test
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception
 	{
-		myLog2HTML.Result2HTML();
+		myLog2HTML.Result2HTML( "IFrame_EN_Chrome_Test" );
 	}
 	
     @After

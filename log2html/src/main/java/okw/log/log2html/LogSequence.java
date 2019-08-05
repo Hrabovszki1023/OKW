@@ -1,6 +1,6 @@
 package okw.log.log2html;
 
-public class LogSequence  extends LogBase
+public class LogSequence  extends LogBaseNode
 {
 	
 	LogSequence(LogBase Parent, String fpsWindowFN, String fpsSequenName, String... fpsParameter)

@@ -1,9 +1,9 @@
 package okw.log.log2html;
 
-public class LogPrintDebug extends LogBase
+public class LogPrintDebug extends LogBaseLeaf
 {
 
-	public LogPrintDebug(LogBase fpParent, String fpsInfo)
+	public LogPrintDebug( LogBase fpParent, String fpsInfo )
 	{
 		Info = fpsInfo;
 		myID = AllCount;

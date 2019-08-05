@@ -1,6 +1,6 @@
 package okw.log.log2html;
 
-public class LogTestcase extends LogBase4Gherkin
+public class LogTestcase extends LogBaseNode
 {
 
 	protected LogTestcase( LogBase Parent, String fpsTestcaseName )

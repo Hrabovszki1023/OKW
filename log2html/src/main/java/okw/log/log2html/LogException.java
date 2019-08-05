@@ -1,9 +1,9 @@
 package okw.log.log2html;
 
-public class LogException extends LogBase
+public class LogException extends LogBaseLeaf
 {
 
-    protected LogException(LogBase fpParent, String fpsInfo)
+    protected LogException( LogBase fpParent, String fpsInfo )
 	{
 		Info = fpsInfo;
 		myID = AllCount;

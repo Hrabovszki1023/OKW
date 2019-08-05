@@ -1,16 +1,28 @@
 package okw.log.log2html;
 
-public class LogError extends LogBase
+public class LogError extends LogBaseLeaf
 {
 
     protected LogError( LogBase fpParent, String fpsInfo )
     {
         Info = fpsInfo;
         myID = AllCount;
-        this.setParent( fpParent );
+        setParent( fpParent );
+        
         ErrorCount();
     }
 
+    // local Statistics
+    protected void ErrorCount()
+    {
+        bError = true;
+
+        if ( myParent != null )
+        {
+            myParent.ErrorCount();
+        }
+    }
+    
     protected String getHTMLResult()
     {
         StringBuilder sbResult = new StringBuilder();

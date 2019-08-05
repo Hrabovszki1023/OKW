@@ -1,10 +1,10 @@
 package okw.log.log2html;
 
 
-public class LogPrint extends LogBase
+public class LogPrint extends LogBaseLeaf
 {
 
-	public LogPrint(LogBase fpParent, String fpsInfo)
+	public LogPrint( LogBase fpParent, String fpsInfo )
 	{
 		Info = fpsInfo;
 		myID = AllCount;

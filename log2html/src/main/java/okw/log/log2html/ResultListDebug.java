@@ -1,6 +1,6 @@
 package okw.log.log2html;
 
-public class ResultListDebug extends LogBase
+public class ResultListDebug extends LogBaseNode
 {
 	
 	String myReturn = "";

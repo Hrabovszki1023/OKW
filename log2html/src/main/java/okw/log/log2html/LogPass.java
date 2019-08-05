@@ -1,9 +1,10 @@
 package okw.log.log2html;
 
 
-public class LogPass extends LogBase{
+public class LogPass extends LogBaseLeaf
+{
 	
-	protected LogPass(LogBase fpParent, String fpsInfo)
+	protected LogPass( LogBase fpParent, String fpsInfo )
 	{
 		Info = fpsInfo;
 		myID = AllCount;

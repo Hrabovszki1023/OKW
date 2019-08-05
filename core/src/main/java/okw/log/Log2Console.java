@@ -214,30 +214,56 @@ public class Log2Console implements ILogger
 
 	        
             /**
-             *  \copydoc ILogger::LogAcceptanceCriteriaStart(String.)
+             *  \copydoc ILogger::LogAcceptanceCriteriaStart(String,String)
              */
-            public void LogAcceptanceCriteriaStart( String Gherkin )
+            public void LogLocalACCallStart( String sourceExcerpt, String Type )
             {
-                this.ResOpenList( Gherkin );
+                this.ResOpenList( sourceExcerpt );
+                this.LogPrint( "Type: " + Type );
             }
 			
             
             /**
              *  \copydoc ILogger::LogAcceptanceCriteriaEnd()
              */
-            public void LogAcceptanceCriteriaEnd()
+            public void LogLocalACCallEnd()
+            {
+                this.ResCloseList();
+            }
+
+            
+            /**
+             *  \copydoc ILogger::LogRemoteACCallStart(String, String)
+             */
+            public void LogRemoteACCallStart( String sourceExcerpt, String Type )
+            {
+                this.ResOpenList( sourceExcerpt );
+                this.LogPrint( "Type: " + Type );
+            }
+            
+            
+            /**
+             *  \copydoc ILogger::LogRemoteACCallEnd()
+             */
+            public void LogRemoteACCallEnd()
             {
                 this.ResCloseList();
             }
 
             /**
-             *  \copydoc ILogger::LogStepStart(String.)
+             *  \copydoc ILogger::LogStepStart(String,String,String,String,String)
              */
-            public void LogStepStart( String Gherkin )
+            public void LogStepStart( String categoryName, String choiceValue, String featureName, String localCategoryName, String sourceExcerpt )
             {
-                this.ResOpenList( Gherkin );
+                this.LogPrint( "Step: " + sourceExcerpt);
+                this.LevelCounter++;
+                this.LogPrint( "       Feature Name:" + featureName);
+                this.LogPrint( "      Category Name:" + categoryName );
+                this.LogPrint( "       Choice Value:" + choiceValue);
+                this.LogPrint( "Local Category Name:" + localCategoryName);
+                
+                this.BlanksBefore();
             }
-            
             
             /**
              *  \copydoc ILogger::LogAcceptanceCriteriaEnd()
@@ -303,7 +329,20 @@ public class Log2Console implements ILogger
 	            System.out.println(this.BlanksBefore + fps_Message);
 	        }
 
+
+            
+            /**
+             *  \copydoc ILogger::LogSourceLocation(String,String,String,String)
+             */
+            public void LogSourceLocation( String Start, String End, String featureName, String sourceType )
+            {
+                System.out.println(this.BlanksBefore + featureName);
+                System.out.println(this.BlanksBefore + Start);
+                System.out.println(this.BlanksBefore + End);
+                System.out.println(this.BlanksBefore + sourceType);
+            }
 			
+            
 			/**
 	         *  \copydoc ILogger::LogWarning(String)
 			 */
@@ -342,7 +381,7 @@ public class Log2Console implements ILogger
 	            this.LevelCounter++;
 	            this.BlanksBefore();
 	        }
-
+	        
 	        
 	        /**
 	         *  Erzeugt die Einrücktiefe für die Console-Ausgabe.
@@ -489,6 +528,7 @@ public class Log2Console implements ILogger
 				}
 			}
 
+			
 
 	        /**
 	         *  \copydoc ILogger::ResCloseListDebug()

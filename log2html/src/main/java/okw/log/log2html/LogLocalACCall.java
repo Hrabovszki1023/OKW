@@ -1,17 +1,20 @@
 package okw.log.log2html;
 
-public class LogAcceptanceCriteria  extends LogBase4Gherkin
+public class LogLocalACCall extends LogBaseNode
 {
+    private String sourceExcerpt = "";
+    private String Type = "";
 	
-	LogAcceptanceCriteria(LogBase Parent, String Gherkin)
+    LogLocalACCall(LogBase Parent, String sourceExcerpt, String Type)
 	{
         setParent(Parent);
         myID = AllCount;
                 
-        this.Gherkin = Gherkin;
+        this.sourceExcerpt = sourceExcerpt;
+        this.Type = Type;
         
         // inkrementieren AcceptanceCriteriaCount
-        this.AcceptanceCriteriaCount();
+        this.LocalACCallCount();
 	}
 	
 	   
@@ -20,7 +23,7 @@ public class LogAcceptanceCriteria  extends LogBase4Gherkin
     {
         ErrorCount++;
         
-        this.AcceptanceCriteriaFail();
+        this.LocalACCallFail();
 
         this.bError = true;
         
@@ -36,7 +39,7 @@ public class LogAcceptanceCriteria  extends LogBase4Gherkin
     {
         ExceptionCount++;
 
-        this.AcceptanceCriteriaFail();
+        this.LocalACCallFail();
         
         this.bException = true;
         
@@ -46,9 +49,10 @@ public class LogAcceptanceCriteria  extends LogBase4Gherkin
         }
     }
     
-    protected void AcceptanceCriteriaFail()
+    @Override
+    protected void LocalACCallFail()
     {
         if ( ! (this.bError || this.bException ) )
-           myParent.AcceptanceCriteriaFail();
+           myParent.LocalACCallFail();
     }
 }

@@ -20,7 +20,7 @@ public class SeBrowserChild_EN_Firefox_Test extends SeBrowserChild_EN_Test
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        myLog2HTML = new Log2HTML("target/SeBrowserChild_Firefox_Test.html");
+        myLog2HTML = new Log2HTML("SeBrowserChild_Firefox_Test");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
@@ -29,7 +29,7 @@ public class SeBrowserChild_EN_Firefox_Test extends SeBrowserChild_EN_Test
   @AfterClass
   public static void tearDownAfterClass() throws Exception
   {
-    myLog2HTML.Result2HTML();
+    myLog2HTML.Result2HTML( "target/SeBrowserChild_Firefox_Test.html" );
   }
 
   /*
