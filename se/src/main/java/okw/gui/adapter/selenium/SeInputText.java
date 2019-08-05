@@ -269,17 +269,7 @@ public class SeInputText extends SeAnyChildWindow
         return lvLsReturn;
     }
 
-    
-    public void set____Attribute( WebElement elem, String value )
-    {
-        JavascriptExecutor js = ( JavascriptExecutor ) SeDriver.getInstance().getDriver();
-
-        String scriptSetAttrValue = "arguments[0].setAttribute(arguments[1],arguments[2])";
-
-        js.executeScript( scriptSetAttrValue, elem, "value", value );
-
-    }
-
+ 
     /**
      *  \~german
      */

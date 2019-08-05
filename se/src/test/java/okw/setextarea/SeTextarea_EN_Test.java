@@ -1,5 +1,3 @@
-package okw.setextarea;
-
 /*
  ==============================================================================
  Copyright © 2012 - 2019, 2016 IT-Beratung Hrabovszki
@@ -36,7 +34,8 @@ package okw.setextarea;
  OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
 
-import static org.junit.Assert.*;
+package okw.setextarea;
+
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
@@ -45,6 +44,8 @@ import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+
+import static org.junit.Assert.*;
 
 /**
 * \~
@@ -57,7 +58,6 @@ public class SeTextarea_EN_Test
 {
 
     protected OKW_Memorize_Sngltn myMem = OKW_Memorize_Sngltn.getInstance();
-
     protected static String     ApplicationName;
 
     @Rule
@@ -123,9 +123,10 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \brief
-    // Teste das Schlüsselwort LogLabel( FN ) eines SeInputText Prüfen.
-    //
+    /**
+     *  Teste das Schlüsselwort LogLabel( FN ) eines SeInputText Prüfen.
+     * @throws Exception
+     */
     @Test
     public void tcLogIsActive() throws Exception
     {
@@ -141,9 +142,9 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \brief
-    // Teste das Schlüsselwort LogLabel( FN ) eines SeInputText Prüfen.
-    //
+    /**
+     *  Teste das Schlüsselwort LogLabel( FN ) eines SeInputText Prüfen.
+     */
     @Test
     public void tcLogLabel() throws Exception
     {
@@ -158,9 +159,9 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \brief
-    // Teste das Schlüsselwort LogLogToolTip( FN ) eines SeInputText Prüfen.
-    //
+    /**
+     *  Teste das Schlüsselwort LogLogToolTip( FN ) eines SeInputText Prüfen.
+     */
     @Test
     public void tcLogToolTip() throws Exception
     {
@@ -175,9 +176,9 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \brief
-    // Teste das Schlüsselwort LogLogValue( FN ) eines SeInputText Prüfen.
-    //
+    /**
+     *  Teste das Schlüsselwort LogLogValue( FN ) eines SeInputText Prüfen.
+     */
     @Test
     public void tcLogValue() throws Exception
     {
@@ -196,9 +197,9 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \brief
-    // Teste das Schlüsselwort MemorizeExists( FN, MemKey ) eines SeInputText Prüfen.
-    //
+    /**
+     * Teste das Schlüsselwort MemorizeExists( FN, MemKey ) eines SeInputText Prüfen.
+     */
     @Test
     public void tcMemorizeExists_en() throws Exception
     {
@@ -215,9 +216,9 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \brief
-    // Teste das Schlüsselwort MemorizeHasFocus( FN, MemKey ) eines SeInputText Prüfen.
-    //
+    /**
+     *  Teste das Schlüsselwort MemorizeHasFocus( FN, MemKey ) eines SeInputText Prüfen.
+     */
     @Test
     public void tcMemorizeHasFocus() throws Exception
     {
@@ -235,9 +236,9 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \brief
-    // Teste das Schlüsselwort MemorizeIsActive( FN, MemKey ) eines SeInputText Prüfen.
-    //
+    /**
+     *  Teste das Schlüsselwort MemorizeIsActive( FN, MemKey ) eines SeInputText Prüfen.
+     */
     @Test
     public void tcMemorizeIsActive_en() throws Exception
     {
@@ -255,9 +256,9 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \brief
-    // Teste das Schlüsselwort MemorizeLabel( FN, MemKey ) eines SeInputText Prüfen.
-    //
+    /**
+     *  Teste das Schlüsselwort MemorizeLabel( FN, MemKey ) eines SeInputText Prüfen.
+     */
     @Test
     public void tcMemorizeLabel() throws Exception
     {
@@ -870,7 +871,7 @@ public class SeTextarea_EN_Test
     // \~german
     // \brief
     // Prüft, ob die Methode VerifyLabel bei einer Soll/Ist Abweichung die Ausnahme 
-    // OKWVerifyingFailsException für SeInputField auslöst.  //
+    // OKWVerifyingFailsException für SeTextarea auslöst.  //
     // \~
     // \author Zoltan Hrabovszki
     // \date 2014.12.03
@@ -892,7 +893,7 @@ public class SeTextarea_EN_Test
 
     // \~german
     // \brief
-    // Prüft, ob die Methode VerifyLabelWCM für SeInputField implementiert ist.
+    // Prüft, ob die Methode VerifyLabelWCM für SeTextarea implementiert ist.
     //
     // \~
     // \author Zoltan Hrabovszki
@@ -917,7 +918,7 @@ public class SeTextarea_EN_Test
     // \~german
     // \brief
     // Prüft, ob die Methode VerifyLabelWCM bei einer Soll/Ist Abweichung die Ausnahme 
-    // OKWVerifyingFailsException für SeInputField auslöst.  //
+    // OKWVerifyingFailsException für SeTextarea auslöst.  //
     // \~
     // \author Zoltan Hrabovszki
     // \date 2014.12.03
@@ -939,7 +940,7 @@ public class SeTextarea_EN_Test
 
     // \~german
     // \brief
-    // Prüft, ob die Methode VerifyLabelREGX für SeInputField implementiert ist.
+    // Prüft, ob die Methode VerifyLabelREGX für SeTextarea implementiert ist.
     //
     // \~
     // \author Zoltan Hrabovszki
@@ -963,7 +964,7 @@ public class SeTextarea_EN_Test
     // \~german
     // \brief
     // Prüft, ob die Methode VerifyLabelREGX bei einer Soll/Ist Abweichung die Ausnahme 
-    // OKWVerifyingFailsException für SeInputField auslöst.  //
+    // OKWVerifyingFailsException für SeTextarea auslöst.  //
     // \~
     // \author Zoltan Hrabovszki
     // \date 2014.12.03
@@ -1006,14 +1007,14 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \~german
-    // \brief
-    // Prüft, ob die Methode VerifyTooltip bei einer Soll/Ist Abweichung die Ausnahme 
-    // OKWVerifyingFailsException für SeInputField auslöst.
-    //
-    // \~
-    // \author Zoltan Hrabovszki
-    // \date 2014.12.03
+    /** \~german
+     *  Prüft, ob die Methode VerifyTooltip bei einer Soll/Ist Abweichung die Ausnahme 
+     *  OKWVerifyingFailsException für SeTextarea auslöst.
+     *
+     *  \~english
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2014.12.03
     @Test( expected = OKWVerifyingFailsException.class )
     public void tcVerifyTooltip_OKWVerifyingFailsException() throws Exception
     {
@@ -1057,7 +1058,7 @@ public class SeTextarea_EN_Test
     // \~german
     // \brief
     // Prüft, ob die Methode VerifyTooltipWCM bei einer Soll/Ist Abweichung die Ausnahme 
-    // OKWVerifyingFailsException für SeInputField auslöst.  //
+    // OKWVerifyingFailsException für SeTextarea auslöst.  //
     // \~
     // \author Zoltan Hrabovszki
     // \date 2014.12.03
@@ -1103,7 +1104,7 @@ public class SeTextarea_EN_Test
     // \~german
     // \brief
     // Prüft, ob die Methode VerifyTooltipWCM bei einer Soll/Ist Abweichung die Ausnahme 
-    // OKWVerifyingFailsException für SeInputField auslöst.  //
+    // OKWVerifyingFailsException für SeTextarea auslöst.  //
     // \~
     // \author Zoltan Hrabovszki
     // \date 2014.12.03
@@ -1123,13 +1124,156 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \~german
-    // \brief
-    // Test des Schlüsselwortes "VerifyValue( FN, ExpVal ) für SeInputText.
-    //
-    // \~
-    // \author Zoltan Hrabovszki
-    // \date 2014.12.03
+    /** \~german
+     *  Prüft, ob die Methode VerifyPlaceholder für SeTextField implementiert ist.
+     *
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2014.12.03
+     */
+    @Test
+    public void tcVerifyPlaceholder() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.StartApp( ApplicationName );
+
+        EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
+        EN.SelectWindow( "SeTextarea" );
+
+        EN.VerifyPlaceholder( "Textarea 1", "Placeholder: Textarea 1" );
+
+        EN.StopApp( ApplicationName );
+        EN.EndTest();
+    }
+
+    /** \~german
+     *  Prüft, ob die Methode VerifyPlaceholder bei einer Soll/Ist Abweichung die Ausnahme 
+     *  OKWVerifyingFailsException für SeTextarea auslöst.
+     *
+     *  \~english
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2014.12.03
+     */
+    @Test( expected = OKWVerifyingFailsException.class )
+    public void tcVerifyPlaceholder_OKWVerifyingFailsException() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.StartApp( ApplicationName );
+
+        EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
+        EN.SelectWindow( "SeTextarea" );
+
+        EN.VerifyPlaceholder( "Textarea 1", "Placeholder: wrong" );
+
+        EN.StopApp( ApplicationName );
+        EN.EndTest();
+    }
+
+    /**
+     * \~german
+     * Prüft, ob die Methode VerifyPlaceholderWCM für SeTextField implementiert ist.
+     *
+     * \~
+     * \author Zoltan Hrabovszki
+     * \date 2014.12.03
+     */
+    @Test
+    public void tcVerifyPlaceholderWCM() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.StartApp( ApplicationName );
+
+        EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
+        EN.SelectWindow( "SeTextarea" );
+
+        EN.VerifyPlaceholderWCM( "Textarea 1", "Placeholder: Textarea 1" );
+
+        EN.StopApp( ApplicationName );
+        EN.EndTest();
+    }
+
+    /** \~german
+     *  Prüft, ob die Methode VerifyTooltipWCM bei einer Soll/Ist Abweichung die Ausnahme 
+     *  OKWVerifyingFailsException für SeTextarea auslöst.  //
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2014.12.03
+     */
+    @Test( expected = OKWVerifyingFailsException.class )
+    public void tcVerifyPlaceholderWCM_OKWVerifyingFailsException() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.StartApp( ApplicationName );
+
+        EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
+        EN.SelectWindow( "SeTextarea" );
+
+        EN.VerifyPlaceholderWCM( "Textarea 1", "Placeholder: error" );
+
+        EN.StopApp( ApplicationName );
+        EN.EndTest();
+    }
+
+    /** \~german
+     *  Prüft, ob die Methode VerifyPlaceholder für SeTextarea implementiert ist.
+     *
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2014-12-03
+     */
+    @Test
+    public void tcVerifyPlaceholderREGX() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.StartApp( ApplicationName );
+
+        EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
+        EN.SelectWindow( "SeTextarea" );
+
+        EN.VerifyPlaceholderREGX( "Textarea 1", "Placeholder: Textarea 1" );
+
+        EN.StopApp( ApplicationName );
+        EN.EndTest();
+    }
+
+    
+    /** \~german
+     *  Prüft, ob die Methode VerifyPlaceholderWCM bei einer Soll/Ist Abweichung die Ausnahme 
+     *  OKWVerifyingFailsException für SeTextarea auslöst.  //
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2014-12-03
+     */
+    @Test( expected = OKWVerifyingFailsException.class )
+    public void tcVerifyPlaceholderREGX_OKWVerifyingFailsException() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.StartApp( ApplicationName );
+
+        EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
+        EN.SelectWindow( "SeTextarea" );
+
+        EN.VerifyPlaceholderREGX( "Textarea 1", "Placeholder: error" );
+
+        EN.StopApp( ApplicationName );
+        EN.EndTest();
+    }
+    
+    
+    /** \~german
+     *  Test des Schlüsselwortes "VerifyValue( FN, ExpVal ) für SeInputText.
+     *
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2014-12-03
+     */
     @Test
     public void tcVerifyValue() throws Exception
     {
@@ -1150,16 +1294,15 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \~german
-    // \brief
-    // Prüft, ob die Methode VerifyValue die OKW-Konstanten ${DELETE} und ${EMPTY} für
-    // SeTextField implementiert ist.
-    //
-    // \~
-    // \author Zoltan Hrabovszki
-    // \date 2014.12.03
+    /** \~german
+     *  Prüft, ob die Methode VerifyValue die OKW-Konstanten ${DELETE} und ${EMPTY} für
+     *  SeTextField implementiert ist.
+     * 
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2014-12-03
+     */
     @Test
-    // @Ignore("Setvalue error")
     public void tcVerifyValue_DELETE_EMPTY() throws Exception
     {
 
@@ -1179,13 +1322,13 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \~german
-    // \brief
-    // Prüft, ob die Methode VerifyLabel bei einer Soll/Ist Abweichung die Ausnahme 
-    // OKWVerifyingFailsException für SeInputField auslöst.  //
-    // \~
-    // \author Zoltan Hrabovszki
-    // \date 2014.12.03
+    /** \~german
+     *  Prüft, ob die Methode VerifyLabel bei einer Soll/Ist Abweichung die Ausnahme 
+     *  OKWVerifyingFailsException für SeTextarea auslöst.  //
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2014-12-03
+     */
     @Test( expected = OKWVerifyingFailsException.class )
     public void tcVerifyValue_OKWVerifyingFailsException() throws Exception
     {
@@ -1206,13 +1349,13 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \~german
-    // \brief
-    // Test des Schlüsselwortes "VerifyValueWCM( FN, ExpValu ) für SeInputText.
-    //
-    // \~
-    // \author Zoltan Hrabovszki
-    // \date 2014.12.03
+    /** \~german
+     *  Test des Schlüsselwortes "VerifyValueWCM( FN, ExpValu ) für SeInputText.
+     * 
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2014-12-03
+     */
     @Test
     public void tcVerifyValueWCM() throws Exception
     {
@@ -1234,16 +1377,15 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \~german
-    // \brief
-    // Prüft, ob die Methode VerifyValue die OKW-Konstanten ${DELETE} und ${EMPTY} für
-    // SeTextField implementiert ist.
-    //
-    // \~
-    // \author Zoltan Hrabovszki
-    // \date 2014.12.03
+    /** \~german
+     *  Prüft, ob die Methode VerifyValue die OKW-Konstanten ${DELETE} und ${EMPTY} für
+     *  SeTextField implementiert ist.
+     * 
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2014.12.03
+     */
     @Test
-    // @Ignore("Setvalue error")
     public void tcVerifyValueWCM_DELETE_EMPTY() throws Exception
     {
 
@@ -1263,13 +1405,14 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \~german
-    // \brief
-    // Prüft, ob die Methode VerifyLabelWCM bei einer Soll/Ist Abweichung die Ausnahme 
-    // OKWVerifyingFailsException für SeInputField auslöst.  //
-    // \~
-    // \author Zoltan Hrabovszki
-    // \date 2014.12.03
+    /** \~german
+     *  \brief
+     *  Prüft, ob die Methode VerifyLabelWCM bei einer Soll/Ist Abweichung die Ausnahme 
+     *  OKWVerifyingFailsException für SeTextarea auslöst.  //
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2014-12-03
+     */
     @Test( expected = OKWVerifyingFailsException.class )
     public void tcVerifyValueWCM_OKWVerifyingFailsException() throws Exception
     {
@@ -1290,13 +1433,13 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \~german
-    // \brief
-    // Test des Schlüsselwortes "VerifyValueREGX( FN, ExpValu ) für SeInputText.
-    //
-    // \~
-    // \author Zoltan Hrabovszki
-    // \date 2014.12.03
+    /** \~german
+     *  Test des Schlüsselwortes "VerifyValueREGX( FN, ExpValu ) für SeInputText.
+     * 
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2014-12-03
+     */
     @Test
     public void tcVerifyValueREGX() throws Exception
     {
@@ -1317,16 +1460,15 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \~german
-    // \brief
-    // Testet VerifyValueREGX auf die OKW-Konstanten ${DELETE} und ${EMPTY} für
-    // SeInputField implementiert ist.
-    //
-    // \~
-    // \author Zoltan Hrabovszki
-    // \date 2014.12.03
+    /** \~german
+     *  Testet VerifyValueREGX auf die OKW-Konstanten ${DELETE} und ${EMPTY} für
+     *  SeTextarea implementiert ist.
+     * 
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2014-12-03
+     */
     @Test
-    // @Ignore("Setvalue error")
     public void tcVerifyValueREGX_DELETE_EMPTY() throws Exception
     {
 
@@ -1346,13 +1488,14 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \~german
-    // \brief
-    // Prüft, ob die Methode VerifyLabelREGX bei einer Soll/Ist Abweichung die Ausnahme 
-    // OKWVerifyingFailsException für SeInputField auslöst.  //
-    // \~
-    // \author Zoltan Hrabovszki
-    // \date 2014.12.03
+    /** \~german
+     *  Prüft, ob die Methode VerifyValueREGX bei einer Soll/Ist Abweichung die Ausnahme 
+     *  OKWVerifyingFailsException für SeTextarea auslöst.  //
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2014.12.03
+     * @throws Exception
+     */
     @Test( expected = OKWVerifyingFailsException.class )
     public void tcVerifyValueREGX_OKWVerifyingFailsException() throws Exception
     {

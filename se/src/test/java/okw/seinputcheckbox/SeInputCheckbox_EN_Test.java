@@ -5,6 +5,7 @@ import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.exceptions.OKWVerifyingFailsException;
+import okw.exceptions.OKWNotAllowedValueException;
 
 import org.junit.*;
 import org.junit.rules.TestName;
@@ -284,8 +285,9 @@ public class SeInputCheckbox_EN_Test
         }
 
         
-        /// \brief
-        /// Speichert ob ein vorhandenes objekt existiert.
+        /** 
+         *  Speichert ob ein vorhandenes objekt existiert.
+         */  
         @Test
         public void tcLogValue() throws Exception
         {
@@ -347,6 +349,21 @@ public class SeInputCheckbox_EN_Test
         }
 
         
+        @Test( expected = OKWNotAllowedValueException.class )
+        public void tcSetValue_OKWNotAllowedValueException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.SetValue("Salami", "Zoli");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+        
         @Test
         public void tcSelect() throws Exception
         {
@@ -392,6 +409,24 @@ public class SeInputCheckbox_EN_Test
                 EN.EndTest();
         }
 
+
+        
+        @Test( expected = OKWNotAllowedValueException.class )
+        public void tcSelect_OKWNotAllowedValueException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.Select("Salami", "Zoli");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        
         /// \brief
         /// Prüft die SetFocusFunktion bei Textfelder mit dem Attribute "ReadOnly"
         /// 

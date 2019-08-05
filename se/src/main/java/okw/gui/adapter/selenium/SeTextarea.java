@@ -41,12 +41,10 @@ package okw.gui.adapter.selenium;
 import java.util.ArrayList;
 
 import org.apache.commons.lang3.StringUtils;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import okw.OKW_Const_Sngltn;
 import okw.gui.OKWLocatorBase;
-import okw.gui.adapter.selenium.webdriver.SeDriver;
 
 
     /**  
@@ -70,59 +68,7 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
         {
         	super(Locator, fpLocators);
         }
-
         
-        /** \~german
-         *  Ermittelt den textuellen Inhalt eines Textfeldes.<br/>.
-         *  GUI-Automatisierungswerkzeug: Selenium.<br/>
-         *  
-         *  \return
-         *  Gibt den Textuellen Inhaltes eines DOM-TextField-s zurück.
-         *  Es korrespondieren je eine Zeile des GUI-Objektes mit jeweil einem Listen-Element.<br/>
-         *  Ein Textfield besteht aus einerZeile: Daher wird der Wert des Textfield-s im ListenElement[0] abgelegt.
-         *  Zurückgegeben.
-         *  \return
-         *  \~
-         *  \author Zoltan Hrabovszki
-         *  \date 2014.06.2014
-         * @throws Exception 
-         */
-        //@Override
-        public ArrayList<String> igetValue() throws Exception
-        {
-            ArrayList<String> lvLsReturn = new ArrayList<String>();
-
-            try
-            {
-                this.LogFunctionStartDebug("getValue");
-
-                // Get Value from TextField and put this into the return List<string>
-                // lvLsReturn.add(this.Me().getAttribute("value"));
-                String myText = this.Me().getText();
-                
-                if ( !myText.isEmpty() )
-                {
-                lvLsReturn.add(myText);
-                }
-            }
-            finally
-            {
-                    this.LogFunctionEndDebug(lvLsReturn.toString());
-            }
-
-            return lvLsReturn;
-        }
-        
-        public void set__Attribute( WebElement elem, String value )
-        {
-        	JavascriptExecutor js = (JavascriptExecutor) SeDriver.getInstance().getDriver(); 
-
-            String scriptSetAttrValue = "arguments[0].setAttribute(arguments[1],arguments[2])";
-
-            js.executeScript(scriptSetAttrValue, elem, "value", value);
-
-        }
-
         
           /** \~german
            *  Ermittelt den textuellen Inhalt des Labels.
