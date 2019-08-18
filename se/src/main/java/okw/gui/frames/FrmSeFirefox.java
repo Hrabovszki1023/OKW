@@ -49,10 +49,16 @@ public class FrmSeFirefox extends SeBrowserWindow
         try
         {
 
-            String OKWGeckodriverPath = System.getenv( "OKWGeckodriverPath" );
+            String OKWGeckodriverPath;
 
-            if ( OKWGeckodriverPath != null )
+            if ( ( OKWGeckodriverPath = System.getProperty( "webdriver.gecko.driver" ) ) != null )
             {
+                LogPrint( "System.Property: webdriver.gecko.driver is set: '" + OKWGeckodriverPath + "'" );
+                MEM.set( "System.Property: webdriver.gecko.driver", OKWGeckodriverPath );
+            }
+            else if ( ( OKWGeckodriverPath = System.getenv( "OKWGeckodriverPath" ) ) != null )
+            {
+                LogPrint( "System.Property: webdriver.gecko.driver is not set" );
                 LogPrint( "EnvVar: OKWGeckodriverPath='" + OKWGeckodriverPath + "'" );
                 System.setProperty( "webdriver.gecko.driver", OKWGeckodriverPath );
 
@@ -61,6 +67,7 @@ public class FrmSeFirefox extends SeBrowserWindow
             }
             else
             {
+                LogPrint( "System.Property: webdriver.gecko.driver is not set" );
                 LogWarning( "Enviroment Variable 'OKWGeckodriverPath' is not set!" );
 
                 String os_name = System.getProperty( "os.name" );

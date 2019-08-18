@@ -55,17 +55,24 @@ public class FrmSeChrome extends SeBrowserWindow
 
         try
         {
-            String DriverPath = System.getenv( "OKWChromedriverPath" );
+            String DriverPath;
 
-            if ( DriverPath != null )
+            if ( ( DriverPath = System.getProperty( "webdriver.chrome.driver" ) ) != null )
             {
+                LogPrint( "System.Property: webdriver.chrome.driver is set: '" + DriverPath + "'" );
+                MEM.set( "System.Property: webdriver.chrome.driver", DriverPath );
+            }
+            else if ( ( DriverPath = System.getenv( "OKWChromedriverPath" ) ) != null )
+            {
+                LogPrint( "System.Property: webdriver.chrome.driver is not set" );
                 LogPrint( "EnvVar: OKWChromedriverPath='" + DriverPath + "'" );
                 System.setProperty( "webdriver.chrome.driver", DriverPath );
-                MEM.set( "System.Property: webdriver.Chrome.driver", DriverPath );
+                MEM.set( "System.Property: webdriver.chrome.driver", DriverPath );
                 MEM.set( "OKW EnvVar: OKWChromedriverPath", DriverPath );
             }
             else
             {
+                LogPrint( "System.Property: webdriver.chrome.driver is not set" );
                 LogWarning( "Enviroment Variable 'OKWChromedriverPath' is not set!" );
 
                 String os_name = System.getProperty( "os.name" );
@@ -76,7 +83,7 @@ public class FrmSeChrome extends SeBrowserWindow
                         System.setProperty( "webdriver.chrome.driver", "/Applications/chromedriver" );
                         break;
                     case "Linux":
-                        System.setProperty( "webdriver.chrome.driver", "/Applications/chromedriver" );
+                        System.setProperty( "webdriver.chrome.driver", "/usr/bin/chromedriver" );
                         break;
                     default:
                         LogError( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
