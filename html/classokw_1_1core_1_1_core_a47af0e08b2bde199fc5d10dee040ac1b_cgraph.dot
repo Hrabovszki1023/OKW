@@ -5,15 +5,17 @@ digraph "okw.core.Core.VerifyExists"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node4409 [label="okw.core.Core.VerifyExists",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Prüft, ob das gegebene Objekt existiert."];
-  Node4409 -> Node4410 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4410 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
-  Node4409 -> Node4411 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4411 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
-  Node4411 -> Node4412 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4412 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
-  Node4412 -> Node4413 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4413 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
-  Node4409 -> Node4414 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4414 [label="okw.core.IOKW_State.Verify\lExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#aac781d7e7b1f3ea4ca2d138733f7f2f6",tooltip="Prüft, ob das gegebene Objekt existiert."];
+  Node4474 [label="okw.core.Core.VerifyExists",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Prüft, ob das gegebene Objekt existiert."];
+  Node4474 -> Node4475 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4475 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node4474 -> Node4476 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4476 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node4476 -> Node4477 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4477 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node4477 -> Node4478 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4478 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node4474 -> Node4479 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4479 [label="okw.core.IOKW_State.Verify\lExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#aac781d7e7b1f3ea4ca2d138733f7f2f6",tooltip="Prüft, ob das gegebene Objekt existiert."];
+  Node4474 -> Node4480 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4480 [label="okw.log.Logger_Sngltn.Log\lKeyWordEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#aa7d2da98631d21644da70c187f03155e",tooltip="LogKeyWordEnd:"];
 }

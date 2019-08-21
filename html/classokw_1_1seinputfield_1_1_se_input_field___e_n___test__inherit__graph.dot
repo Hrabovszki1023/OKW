@@ -8,7 +8,7 @@ digraph "okw.seinputfield.SeInputField_EN_Test"
   Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
   Node1 [label="{okw.seinputfield.SeInput\lField_EN_Chrome_Test\n|# myLog2HTML\l|+ setUpBeforeClass()\l+ tearDownAfterClass()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seinputfield_1_1_se_input_field___e_n___chrome___test.html",tooltip=" "];
   Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node2 [label="{okw.seinputfield.SeInput\lField_EN_Firefox_Test\n|# myLog2HTML\l|+ FirefoxAfter()\l+ setUpBeforeClass()\l+ tearDownAfterClass()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seinputfield_1_1_se_input_field___e_n___firefox___test.html",tooltip=" "];
+  Node2 [label="{okw.seinputfield.SeInput\lField_EN_Firefox_Test\n|# myLog2HTML\l|+ setUpBeforeClass()\l+ tearDownAfterClass()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seinputfield_1_1_se_input_field___e_n___firefox___test.html",tooltip=" "];
   Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
   Node3 [label="{okw.seinputfield.SeInput\lField_EN_HTMLUnitDriver_Test\n|# myLog2HTML\l|+ setUpBeforeClass()\l+ tearDownAfterClass()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seinputfield_1_1_se_input_field___e_n___h_t_m_l_unit_driver___test.html",tooltip=" "];
 }

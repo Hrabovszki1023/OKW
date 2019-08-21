@@ -1,0 +1,11 @@
+digraph "okw.gui.AnyWinBase.LogFunctionStart"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node310 [label="okw.gui.AnyWinBase.LogFunction\lStart",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Methode ruft die Methode Logger.Instance.LogFunctionStart(string,string,string), erweitert den gegebe..."];
+  Node310 -> Node311 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node311 [label="okw.log.Logger_Sngltn.Log\lFunctionStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#afc222fbc50587623c5cb7a5becf799d0",tooltip="LogFunctionStart:"];
+}

@@ -5,7 +5,17 @@ digraph "okw.OKW_FileHelper.isDirectoryEmpty"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node44 [label="okw.OKW_FileHelper.isDirectory\lEmpty",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Diese Methode prüft, ob das angegebene Vrzeicniss leer ist."];
-  Node44 -> Node45 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node45 [label="okw.OKW_FileHelper.directory\lExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a4feaa905b7b878f286058a06a81f3ce2",tooltip="Prüft, ob die gegebene fpsPaFiNa Datei existiert."];
+  Node63 [label="okw.OKW_FileHelper.isDirectory\lEmpty",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Diese Methode prüft, ob das angegebene Vrzeicniss leer ist."];
+  Node63 -> Node64 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node64 [label="okw.log.Logger_Sngltn.Log\lFunctionStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#afc222fbc50587623c5cb7a5becf799d0",tooltip="LogFunctionStart:"];
+  Node63 -> Node65 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node65 [label="okw.OKW_FileHelper.directory\lExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a4feaa905b7b878f286058a06a81f3ce2",tooltip="Prüft, ob die gegebene fpsPaFiNa Datei existiert."];
+  Node65 -> Node66 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node66 [label="okw.log.Logger_Sngltn.Log\lFunctionStartDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42",tooltip="LogFunctionStartDebug:"];
+  Node65 -> Node67 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node67 [label="okw.log.Logger_Sngltn.Log\lFunctionEndDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84",tooltip="LogFunctionEndDebug:"];
+  Node63 -> Node68 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node68 [label="okw.log.Logger_Sngltn.Log\lFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a0244bf1669504c69ba8a4fad67e00721",tooltip="LogFunctionEnd(String):"];
+  Node68 -> Node69 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node69 [label="okw.log.Logger_Sngltn.Log\lFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a2aa496c6543c0b15b27190b1ad58a6fc",tooltip="LogFunctionEnd:"];
 }

@@ -5,15 +5,17 @@ digraph "okw.core.Core.VerifySelectedValueREGX"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node4785 [label="okw.core.Core.VerifySelected\lValueREGX",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert."];
-  Node4785 -> Node4786 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4786 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
-  Node4785 -> Node4787 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4787 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
-  Node4787 -> Node4788 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4788 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
-  Node4788 -> Node4789 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4789 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
-  Node4785 -> Node4790 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4790 [label="okw.core.IOKW_State.Verify\lSelectedValueREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a7c72b9596aa356a729e3e5cb04e043bf",tooltip="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert."];
+  Node4863 [label="okw.core.Core.VerifySelected\lValueREGX",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert."];
+  Node4863 -> Node4864 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4864 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node4863 -> Node4865 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4865 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node4865 -> Node4866 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4866 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node4866 -> Node4867 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4867 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Lies den TextContent eines Tag."];
+  Node4863 -> Node4868 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4868 [label="okw.core.IOKW_State.Verify\lSelectedValueREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a7c72b9596aa356a729e3e5cb04e043bf",tooltip="Vergleicht den ausgewählten Wert des gegebenen Listenobjekts mit dem erwarteten Wert."];
+  Node4863 -> Node4869 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4869 [label="okw.log.Logger_Sngltn.Log\lKeyWordEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#aa7d2da98631d21644da70c187f03155e",tooltip="LogKeyWordEnd:"];
 }

@@ -2,7 +2,6 @@ var group__group_selenium_window_g_u_i_adapter =
 [
     [ "SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html", [
       [ "SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aacfeae9178c8ed0b4e92cdb2bc6adc72", null ],
-      [ "SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#af5832b9bfbff01844a845074fd8e47de", null ],
       [ "ClickOn", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aa12522740af84cd18ca60c08bec1ce47", null ],
       [ "get_iframeID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aad65286224d3546754351876ad77bf05", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#ac628cf2651ecb5ac8104a8379a3fa06e", null ],

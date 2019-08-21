@@ -5,7 +5,7 @@ digraph "okw.log.Log2Console.LogPrintDebug"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node126 [label="okw.log.Log2Console.LogPrint\lDebug",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="LogPrintDebug:"];
-  Node126 -> Node127 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node127 [label="okw.log.Log2Console.LogPrint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a76c2788140c26471575dfa92c118d1dc",tooltip="LogPrint: Prints the given message to the results."];
+  Node174 [label="okw.log.Log2Console.LogPrint\lDebug",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="LogPrintDebug:"];
+  Node174 -> Node175 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node175 [label="okw.log.Log2Console.LogPrint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a76c2788140c26471575dfa92c118d1dc",tooltip="LogPrint: Prints the given message to the results."];
 }

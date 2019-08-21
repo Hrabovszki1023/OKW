@@ -5,11 +5,11 @@ digraph "okw.OKW_FileHelper.deleteDirectory"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node15 [label="okw.OKW_FileHelper.delete\lDirectory",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Löschent rekursiv alle Dateien und Unterverzeichnisse und das gegebenen Verzeichniss selbst."];
-  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node16 [label="okw.OKW_FileHelper.create\lEmptyDirectory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a3f1e666538681aaa975fde389b707ee7",tooltip=" "];
-  Node15 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node17 [label="okw.OKW_FileHelper.moveDirectory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a8a031226863d889540a861a6e47c38b6",tooltip="Verzeichniss verschieben löschen des gegebenen Verzeichnisses."];
-  Node15 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node18 [label="okw.OKW_IniTest.tcCheckAll\lPathWithoutOKWXml",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___ini_test.html#af5b3adad4bba9822c7cde18d523ee4eb",tooltip="Umgebungsvariable ist gesetzt."];
+  Node26 [label="okw.OKW_FileHelper.delete\lDirectory",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Löschent rekursiv alle Dateien und Unterverzeichnisse und das gegebenen Verzeichniss selbst."];
+  Node26 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="okw.OKW_FileHelper.create\lEmptyDirectory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a3f1e666538681aaa975fde389b707ee7",tooltip=" "];
+  Node26 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="okw.OKW_FileHelper.moveDirectory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a8a031226863d889540a861a6e47c38b6",tooltip="Verzeichniss verschieben löschen des gegebenen Verzeichnisses."];
+  Node26 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="okw.OKW_IniTest.tcCheckAll\lPathWithoutOKWXml",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___ini_test.html#af5b3adad4bba9822c7cde18d523ee4eb",tooltip="Umgebungsvariable ist gesetzt."];
 }

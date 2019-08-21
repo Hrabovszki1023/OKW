@@ -5,9 +5,17 @@ digraph "okw.OKW_FileHelper.moveDirectory"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node51 [label="okw.OKW_FileHelper.moveDirectory",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Verzeichniss verschieben löschen des gegebenen Verzeichnisses."];
-  Node51 -> Node52 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node52 [label="okw.OKW_FileHelper.directory\lExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a4feaa905b7b878f286058a06a81f3ce2",tooltip="Prüft, ob die gegebene fpsPaFiNa Datei existiert."];
-  Node51 -> Node53 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node53 [label="okw.OKW_FileHelper.delete\lDirectory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#adf28af32c2d72be7bb599ec6e2222aba",tooltip="Löschent rekursiv alle Dateien und Unterverzeichnisse und das gegebenen Verzeichniss selbst."];
+  Node79 [label="okw.OKW_FileHelper.moveDirectory",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Verzeichniss verschieben löschen des gegebenen Verzeichnisses."];
+  Node79 -> Node80 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node80 [label="okw.log.Logger_Sngltn.Log\lFunctionStartDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42",tooltip="LogFunctionStartDebug:"];
+  Node79 -> Node81 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node81 [label="okw.OKW_FileHelper.directory\lExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a4feaa905b7b878f286058a06a81f3ce2",tooltip="Prüft, ob die gegebene fpsPaFiNa Datei existiert."];
+  Node81 -> Node80 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node81 -> Node82 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node82 [label="okw.log.Logger_Sngltn.Log\lFunctionEndDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84",tooltip="LogFunctionEndDebug:"];
+  Node79 -> Node83 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node83 [label="okw.OKW_FileHelper.delete\lDirectory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#adf28af32c2d72be7bb599ec6e2222aba",tooltip="Löschent rekursiv alle Dateien und Unterverzeichnisse und das gegebenen Verzeichniss selbst."];
+  Node83 -> Node80 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node83 -> Node82 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node79 -> Node82 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

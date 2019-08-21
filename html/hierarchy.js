@@ -134,7 +134,8 @@ var hierarchy =
       [ "okw.gui.AnyWindow", "classokw_1_1gui_1_1_any_window.html", null ]
     ] ],
     [ "okw.log.ILogger", "interfaceokw_1_1log_1_1_i_logger.html", [
-      [ "okw.log.Log2Console", "classokw_1_1log_1_1_log2_console.html", null ]
+      [ "okw.log.Log2Console", "classokw_1_1log_1_1_log2_console.html", null ],
+      [ "okw.log.Logger_Sngltn", "classokw_1_1log_1_1_logger___sngltn.html", null ]
     ] ],
     [ "okw.core.IOKW_FN", "interfaceokw_1_1core_1_1_i_o_k_w___f_n.html", [
       [ "okw.gui.AnyChildwindow", "classokw_1_1gui_1_1_any_childwindow.html", null ],
@@ -146,7 +147,6 @@ var hierarchy =
       [ "okw.core.NOK", "classokw_1_1core_1_1_n_o_k.html", null ],
       [ "okw.core.OK", "classokw_1_1core_1_1_o_k.html", null ]
     ] ],
-    [ "okw.log.Logger_Sngltn", "classokw_1_1log_1_1_logger___sngltn.html", null ],
     [ "okw.log.Logger_Test", "classokw_1_1log_1_1_logger___test.html", null ],
     [ "okw.LogMessenger", "classokw_1_1_log_messenger.html", null ],
     [ "okw.core.Matcher", "classokw_1_1core_1_1_matcher.html", null ],

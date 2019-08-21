@@ -5,13 +5,15 @@ digraph "okw.core.EN.EndTest"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node876 [label="okw.core.EN.EndTest",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Signalisiert das Ende eines Testfalls."];
-  Node876 -> Node877 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node877 [label="okw.core.Core.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100",tooltip="Setzt die Sprache auf den gegebenen wert Language."];
-  Node877 -> Node878 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node878 [label="okw.core.IOKW_State.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097",tooltip="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)."];
-  Node876 -> Node879 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node879 [label="okw.core.Core.EndTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c",tooltip="Signalisiert das Ende eines Testfalls."];
-  Node879 -> Node880 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node880 [label="okw.core.IOKW_State.EndTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186",tooltip="Signalisiert das Ende eines Testfalls."];
+  Node880 [label="okw.core.EN.EndTest",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Signalisiert das Ende eines Testfalls."];
+  Node880 -> Node881 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node881 [label="okw.core.Core.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100",tooltip="Setzt die Sprache auf den gegebenen wert Language."];
+  Node881 -> Node882 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node882 [label="okw.core.IOKW_State.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097",tooltip="Interne Methode zum setzen der Sprache für die sprachabhängigen Ausgaben der Dokumentation (Log)."];
+  Node880 -> Node883 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node883 [label="okw.core.Core.EndTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#abf0b4a4074d5292675319eb0045fcb9c",tooltip="Signalisiert das Ende eines Testfalls."];
+  Node883 -> Node884 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node884 [label="okw.core.IOKW_State.EndTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#ac0b681eddd02ac39ff0c4970a634a186",tooltip="Signalisiert das Ende eines Testfalls."];
+  Node883 -> Node885 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node885 [label="okw.log.Logger_Sngltn.Log\lTestcaseEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#ae13bdf71166d737786872ee9bcfaa15e",tooltip="LogTestcaseEnd:"];
 }

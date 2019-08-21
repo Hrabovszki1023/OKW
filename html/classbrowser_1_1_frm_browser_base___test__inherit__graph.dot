@@ -4,7 +4,7 @@ digraph "browser.FrmBrowserBase_Test"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="{browser.FrmBrowserBase_Test\n|+ name\l# myLog2HTML\l# ApplicationName\l|+ tcURL_TypeKey()\l+ tcURL_SetValue()\l+ tcURL_VerifyValue()\l+ tcURL_VerifyValueWCM()\l+ tcMAXIMIZE()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node0 [label="{browser.FrmBrowserBase_Test\n|+ name\l# myLog2HTML\l# ApplicationName\l|+ tcURL_TypeKey()\l+ tcURL_SetValue()\l+ tcURL_VerifyValue()\l+ tcURL_VerifyValueWCM()\l+ tcMAXIMIZE()\l+ tcURL_StartApp_ohne\l_OKWChromedriverPath()\l+ tcURL_StartApp_mit\l_OKWChromedriverPath()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
   Node1 [label="{browser.FrmSeChrome_Test\n||+ FirefoxAfter()\l+ setUpBeforeClass()\l+ tearDownAfterClass()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbrowser_1_1_frm_se_chrome___test.html",tooltip=" "];
   Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];

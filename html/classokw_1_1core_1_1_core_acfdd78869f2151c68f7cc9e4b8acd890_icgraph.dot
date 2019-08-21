@@ -5,9 +5,9 @@ digraph "okw.core.Core.TypeKeyWindow"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node4215 [label="okw.core.Core.TypeKeyWindow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
-  Node4215 -> Node4216 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4216 [label="okw.core.EN.TypeKeyWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a26a7f06e28d3827614961408314625c7",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
-  Node4216 -> Node4217 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4217 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
+  Node4270 [label="okw.core.Core.TypeKeyWindow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
+  Node4270 -> Node4271 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4271 [label="okw.core.EN.TypeKeyWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a26a7f06e28d3827614961408314625c7",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
+  Node4271 -> Node4272 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4272 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
 }
