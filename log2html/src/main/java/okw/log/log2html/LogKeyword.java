@@ -2,7 +2,7 @@ package okw.log.log2html;
 
 public class LogKeyword extends LogBaseNode
 {
-    
+    private String type = "KeyWord";
     private String Keyword;
     private String[] Parameter;
 
@@ -23,13 +23,13 @@ public class LogKeyword extends LogBaseNode
 
 		if ( fpsParameter.length == 2 )
 		{
-			StrBuilder.append( "\"" + fpsParameter[0] + "\" = \"" + fpsParameter[1] + "\"" );
+			StrBuilder.append( "'" + fpsParameter[0] + "' = '" + fpsParameter[1] + "'" );
 		}
 		else
 		{
 			for ( String sParameter : fpsParameter )
 			{
-				StrBuilder.append( " \"" + sParameter + "\"" );
+				StrBuilder.append( " '" + sParameter + "'" );
 			}
 		}
 
@@ -37,39 +37,19 @@ public class LogKeyword extends LogBaseNode
 
 	}
 
-    protected String getJSONResult()
+    @Override
+    protected String getJSONNodeProperties()
     {
         StringBuilder myJSON = new StringBuilder();
         
-        myJSON.append( this.jsonElement( "Keyword", this.Keyword ) );
+        myJSON.append( this.jsonElementComma( "type", this.type ) );
+        myJSON.append( this.jsonElementComma( "info", this.Info ) );
+        myJSON.append( this.jsonElementComma( "Keyword", this.Keyword ) );
 
         for ( Integer i = 0; i < Parameter.length; i++) { 
             
-            myJSON.append( this.jsonElement( "Parameter" + i.toString(), Parameter[i] ) );
+            myJSON.append( this.jsonElementComma( "Parameter" + i.toString(), Parameter[i] ) );
         } 
-        
-        // Statistics...
-        myJSON.append( this.jsonStructre( "statistics", this.getJSONStatistics() ) );
-        
-        // Duration
-        if ( "false".equals( okw.OKW_Properties.getInstance().getProperty( "Log2HTML.Test", "false" ) ) )
-        {
-            myJSON.append( this.jsonElement( "duration", this.myDuration.getSeconds("#0.000") ) );
-        }
-        else
-        {
-            myJSON.append( this.jsonElement( "duration", "Duration TestMode" ) );
-        }
-        
-        Integer EC = 0;
-        
-        for( LogBase myLog: this.myLogs )
-        {
-            EC++;
-            String Element = myLog.getClass().getSimpleName();
-            myJSON.append( this.jsonStructre( Element + EC.toString(), myLog.getJSONResult() ) );
-        }
-        
         return myJSON.toString();
     }
 	

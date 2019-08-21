@@ -327,11 +327,14 @@ public class Logger_Sngltn implements ILogger
     }
     
     
-    public void LogStepStart( String categoryName, String choiceValue, String featureName, String localCategoryName, String sourceExcerpt )
+    public void LogStepStart( String categoryName, String categoryType, 
+                    String choiceValue, String featureName,
+                    String localCategoryName, String sourceExcerpt,
+                    String type  )
     {
         for ( ILogger myLogger : LoggerList )
         {
-            myLogger.LogStepStart( categoryName, choiceValue, featureName, localCategoryName, sourceExcerpt );
+            myLogger.LogStepStart( categoryName, categoryType, choiceValue, featureName, localCategoryName, sourceExcerpt, type  );
         }
     }    
     

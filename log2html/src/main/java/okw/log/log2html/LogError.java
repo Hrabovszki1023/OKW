@@ -7,11 +7,12 @@ public class LogError extends LogBaseLeaf
     {
         Info = fpsInfo;
         myID = AllCount;
-        setParent( fpParent );
+        setParent(fpParent);
         
         ErrorCount();
     }
 
+    
     // local Statistics
     protected void ErrorCount()
     {
@@ -22,7 +23,8 @@ public class LogError extends LogBaseLeaf
             myParent.ErrorCount();
         }
     }
-    
+
+
     protected String getHTMLResult()
     {
         StringBuilder sbResult = new StringBuilder();

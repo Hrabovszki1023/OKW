@@ -87,7 +87,22 @@ jobs:
           TESTCASE="okw.log.log2html.Log2HTMLCounterTest"
           Package="log2html"
     - env:
-          TESTCASE="okw.log.log2html.Log2HTMLTest"
+          TESTCASE="okw.log.log2html.LogError_Test"
+          Package="log2html"
+    - env:
+          TESTCASE="okw.log.log2html.LogException_Test"
+          Package="log2html"
+    - env:
+          TESTCASE="okw.log.log2html.LogPass_Test"
+          Package="log2html"
+    - env:
+          TESTCASE="okw.log.log2html.LogPrint_Test"
+          Package="log2html"
+    - env:
+          TESTCASE="okw.log.log2html.LogPrintDebug_Test"
+          Package="log2html"
+    - env:
+          TESTCASE="okw.log.log2html.LogWarning_Test"
           Package="log2html"
 #
     - stage: chrome

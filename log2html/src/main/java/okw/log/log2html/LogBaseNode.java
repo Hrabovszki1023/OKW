@@ -26,9 +26,9 @@ public class LogBaseNode extends LogBase
   protected Integer StepFail = 0;
   protected Integer StepPass = 0;
   
-  protected Integer SequensCount = 0;
-  protected Integer SequensFail = 0;
-  protected Integer SequensPass = 0;
+  protected Integer SequenceCount = 0;
+  protected Integer SequenceFail = 0;
+  protected Integer SequencePass = 0;
   
   // RemoteACCall
   protected Integer RemoteACCallCount = 0;
@@ -50,76 +50,7 @@ public class LogBaseNode extends LogBase
 	{
 		setParent(Parent);
 		myID = AllCount;
-	}
-
-
-    
-    protected Boolean bWarning = false;
-    
-    protected void setWarning()
-    {
-        if (!bWarning)
-        {
-            bWarning = true;
-        
-        
-            if (myParent != null)
-            {
-                myParent.setWarning();
-            }
-        }
-    }
-
-    protected Boolean getWarning()
-    {
-        return bWarning;
-    }
-    
-    
-    protected Boolean bException = false;
-
-    protected void setException()
-    {
-        if (!bException)
-        {
-            //SetFail();
-            bException = true;
-        
-            if (myParent != null)
-            {
-                myParent.setException();
-            }
-        }
-    }
-
-
-    protected Boolean getException()
-    {
-        return bException;
-    }
-
-
-    protected Boolean bError = false;
-    
-    protected void setError()
-    {
-        if (!bError)
-        {           
-            // SetFail();
-            bError = true;
-
-            if (myParent != null)
-            {
-                myParent.setError();
-            }
-        }
-    }
-
-    protected Boolean getError()
-    {
-        return bError;
-    }
-    
+	}    
     
     public void reset()
     {
@@ -145,9 +76,9 @@ public class LogBaseNode extends LogBase
         KeyWordFail = 0;
         KeyWordPass = 0;
         
-        SequensCount = 0;
-        SequensFail = 0;
-        SequensPass = 0;
+        SequenceCount = 0;
+        SequenceFail = 0;
+        SequencePass = 0;
 
         // LocalACCall
         StepCount = 0;
@@ -286,24 +217,24 @@ public class LogBaseNode extends LogBase
     }
     
     @Override
-    protected void SequensCount()
+    protected void SequenceCount()
     {
-        this.SequensCount++;
-        myParent.SequensCount();
+        this.SequenceCount++;
+        myParent.SequenceCount();
     }
 
     @Override
-    protected void SequensFail()
+    protected void SequenceFail()
     {
-        this.SequensFail++;
-        myParent.SequensFail();
+        this.SequenceFail++;
+        myParent.SequenceFail();
     }
 
     @Override
-    protected void SequensPass()
+    protected void SequencePass()
     {
-        this.SequensPass++;
-        myParent.SequensPass();
+        this.SequencePass++;
+        myParent.SequencePass();
     }
     
     @Override
@@ -375,72 +306,87 @@ public class LogBaseNode extends LogBase
         StringBuilder myJSON = new StringBuilder();
         
         // local Statistics
-        myJSON.append( this.jsonElement( "ErrorCount", this.ErrorCount ) );
-        myJSON.append( this.jsonElement( "ExceptionCount", this.ExceptionCount ) );
-        myJSON.append( this.jsonElement( "WarningCount", this.WarningCount ) );
-        myJSON.append( this.jsonElement( "PassedCount", this.PassedCount ) );
-        myJSON.append( this.jsonElement( "PrintCount", this.PrintCount ) );
+        myJSON.append( this.jsonElementComma( "ErrorCount", this.ErrorCount ) );
+        myJSON.append( this.jsonElementComma( "ExceptionCount", this.ExceptionCount ) );
+        myJSON.append( this.jsonElementComma( "WarningCount", this.WarningCount ) );
+        myJSON.append( this.jsonElementComma( "PassedCount", this.PassedCount ) );
+        myJSON.append( this.jsonElementComma( "PrintCount", this.PrintCount ) );
         
-        myJSON.append( this.jsonElement( "FunctionCount", this.FunctionCount ) );
-        myJSON.append( this.jsonElement( "FunctionFail", this.FunctionFail ) );
-        myJSON.append( this.jsonElement( "FunctionPass", this.FunctionPass ) );
+        myJSON.append( this.jsonElementComma( "FunctionCount", this.FunctionCount ) );
+        myJSON.append( this.jsonElementComma( "FunctionFail", this.FunctionFail ) );
+        myJSON.append( this.jsonElementComma( "FunctionPass", this.FunctionPass ) );
         
-        myJSON.append( this.jsonElement( "SequensCount", this.SequensCount ) );
-        myJSON.append( this.jsonElement( "SequensFail", this.SequensFail ) );
-        myJSON.append( this.jsonElement( "SequensPass", this.SequensPass ) );
+        myJSON.append( this.jsonElementComma( "SequensCount", this.SequenceCount ) );
+        myJSON.append( this.jsonElementComma( "SequensFail", this.SequenceFail ) );
+        myJSON.append( this.jsonElementComma( "SequensPass", this.SequencePass ) );
 
-        myJSON.append( this.jsonElement( "LocalACCallCount", this.LocalACCallCount ) );
-        myJSON.append( this.jsonElement( "LocalACCallFail", this.LocalACCallFail ) );
-        myJSON.append( this.jsonElement( "LocalACCallPass", this.LocalACCallPass ) );
+        myJSON.append( this.jsonElementComma( "LocalACCallCount", this.LocalACCallCount ) );
+        myJSON.append( this.jsonElementComma( "LocalACCallFail", this.LocalACCallFail ) );
+        myJSON.append( this.jsonElementComma( "LocalACCallPass", this.LocalACCallPass ) );
         
-        myJSON.append( this.jsonElement( "RemoteACCallCount", this.RemoteACCallCount ) );
-        myJSON.append( this.jsonElement( "RemoteACCallFail", this.RemoteACCallFail ) );
-        myJSON.append( this.jsonElement( "RemoteACCallPass", this.RemoteACCallPass ) );        
+        myJSON.append( this.jsonElementComma( "RemoteACCallCount", this.RemoteACCallCount ) );
+        myJSON.append( this.jsonElementComma( "RemoteACCallFail", this.RemoteACCallFail ) );
+        myJSON.append( this.jsonElementComma( "RemoteACCallPass", this.RemoteACCallPass ) );        
         
-        myJSON.append( this.jsonElement( "StepCount", this.StepCount ) );
-        myJSON.append( this.jsonElement( "StepFail", this.StepFail ) );
-        myJSON.append( this.jsonElement( "StepPass", this.StepPass ) );
+        myJSON.append( this.jsonElementComma( "StepCount", this.StepCount ) );
+        myJSON.append( this.jsonElementComma( "StepFail", this.StepFail ) );
+        myJSON.append( this.jsonElementComma( "StepPass", this.StepPass ) );
 
-        myJSON.append( this.jsonElement( "KeyWordCount", this.KeyWordCount ) );
-        myJSON.append( this.jsonElement( "KeyWordFail", this.KeyWordFail ) );
-        myJSON.append( this.jsonElement( "KeyWordPass", this.KeyWordPass ) );
-        
-        return myJSON.toString();
-    }
-    
-    
-    protected String getJSONResult()
-    {
-    
-        StringBuilder myJSON = new StringBuilder();
-
-        // Statistics...
-        myJSON.append( this.jsonStructre( "statistics", this.getJSONStatistics() ) );
+        myJSON.append( this.jsonElementComma( "KeyWordCount", this.KeyWordCount ) );
+        myJSON.append( this.jsonElementComma( "KeyWordFail", this.KeyWordFail ) );
+        myJSON.append( this.jsonElementComma( "KeyWordPass", this.KeyWordPass ) );
         
         // Timer:
         // Für den Test wird das Abgeschaltet, weil veränderlich 
         if ( "false".equals( okw.OKW_Properties.getInstance().getProperty( "Log2HTML.Test", "false" ) ) )
         {
-            myJSON.append( this.jsonElement( "startedAt", this.myDuration.getStartTimeMillis().toString() ) );
-            myJSON.append( this.jsonElement( "finishedAt", this.myDuration.getEndTimeMillis().toString() ) );
+            myJSON.append( this.jsonElementComma( "startedAt", this.myDuration.getStartTimeMillis().toString() ) );
+            myJSON.append( this.jsonElementComma( "finishedAt", this.myDuration.getEndTimeMillis().toString() ) );
             myJSON.append( this.jsonElement( "duration", this.myDuration.getSeconds("#0.000") ) );
         }
         else
         {
-            myJSON.append( this.jsonElement( "startedAt", "Start time TestMode" ) );
-            myJSON.append( this.jsonElement( "finishedAt", "End time TestMode" ) );
+            myJSON.append( this.jsonElementComma( "startedAt", "Start time TestMode" ) );
+            myJSON.append( this.jsonElementComma( "finishedAt", "End time TestMode" ) );
             myJSON.append( this.jsonElement( "duration", "Duration TestMode" ) );
         }
         
-        Integer EC = 0;
+        return myJSON.toString();
+    }   
+    
+    protected String getJSONNodeProperties()
+    {
+        StringBuilder myJSON = new StringBuilder();
+        
+        myJSON.append(this.jsonElementComma( "info", this.Info ));
+        
+        return myJSON.toString();
+    }
+    
+    protected String getJSONResult()
+    {
+    
+        StringBuilder myJSON = new StringBuilder();
+        StringBuilder myJSONForLoop = new StringBuilder();
+        
+        myJSON.append( this.getJSONNodeProperties() );
+
+        // Statistics...
+        myJSON.append( this.jsonStructure( "statistics", this.getJSONStatistics() ) );
+
+        Boolean GreaterOne = false;
         
         for( LogBase myLog: this.myLogs )
         {
-            EC++;
-            String Element = myLog.getClass().getSimpleName();
-            myJSON.append( this.jsonStructre( Element + EC.toString(), myLog.getJSONResult() ) );
+            if (GreaterOne) myJSONForLoop.append( ", " ); 
+            else GreaterOne = true;
+            myJSONForLoop.append( this.jsonStructure( "element", myLog.getJSONResult() ) ) ;
+            
         }
         
+        if (GreaterOne) 
+        myJSON.append( ", " + this.jsonArray( "elements", myJSONForLoop.toString() ) );
+
         return myJSON.toString();
     }
 }

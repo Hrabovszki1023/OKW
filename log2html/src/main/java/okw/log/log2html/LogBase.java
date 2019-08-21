@@ -91,39 +91,50 @@ public abstract class LogBase {
         }
         
         return myIndention.toString();
-    }
-
+    }    
 
 	protected String jsonElement( String Key, String Value)
 	{
-	       StringBuilder lvReturn = new StringBuilder();
-	        
-	       lvReturn.append( " " + getLevelIndention() + "\"" + Key + "\": \"" + Value + "\",\n" );
-	        
-	       return lvReturn.toString();
+	       return "\"" + Key + "\": \"" + Value + "\"";
 	}
 
+    protected String jsonElementComma( String Key, String Value)
+    {
+        return "\"" + Key + "\": \"" + Value + "\",";
+    }
+    
+    protected String jsonElementComma( String Key, Integer Value )
+    {
+        return "\"" + Key + "\": \"" + Value.toString() + "\",";
+    }
+    
 
     protected String jsonElement( String Key, Integer Value )
     {
-        StringBuilder lvReturn = new StringBuilder();
-
-        lvReturn.append( " " + getLevelIndention() + "\"" + Key + "\": \"" + Value.toString() + "\",\n" );
-
-        return lvReturn.toString();
+         return "\"" + Key + "\": \""  + "\"";
     }
-
 	   
-    protected String jsonStructre( String Key, String Value )
+    protected String jsonStructure( String Key, String Value )
     {
-        StringBuilder lvReturn = new StringBuilder();
-
-        lvReturn.append( " " + getLevelIndention() + "\"" + Key + "\": {\n" + Value + getLevelIndention() + " },\n" );
-
-        return lvReturn.toString();
+        return  "\"" + Key + "\": {" + Value + " }";
     }
-
-	
+    
+    protected String jsonStructureComma( String Key, String Value )
+    {
+        return  "\"" + Key + "\": {" + Value + " },";
+    }
+    
+    protected String jsonArray( String Key, String Value )
+    {
+        StringBuilder myIndention = new StringBuilder();
+        
+        myIndention.append( "\"" + Key + "\": [ {" );
+        myIndention.append( Value );
+        myIndention.append( "} ]" );
+        
+        return  myIndention.toString();
+    }
+    
 	protected Boolean bWarning = false;
 	
 	protected void setWarning()
@@ -160,12 +171,6 @@ public abstract class LogBase {
 				myParent.setException();
 			}
 		}
-	}
-
-
-	protected Boolean getException()
-	{
-		return bException;
 	}
 
 
@@ -219,11 +224,11 @@ public abstract class LogBase {
 
     protected abstract void KeyWordPass();
     
-    protected abstract void SequensCount();
+    protected abstract void SequenceCount();
 
-    protected abstract void SequensFail();
+    protected abstract void SequenceFail();
 
-    protected abstract void SequensPass();
+    protected abstract void SequencePass();
 
     protected abstract void StepCount();
     
@@ -329,7 +334,7 @@ public abstract class LogBase {
 	        {
 	            EC++;
 	            String Element = myLog.getClass().getSimpleName();
-	            myJSON.append( this.jsonStructre( Element + EC.toString(), myLog.getJSONResult() ) );
+	            myJSON.append( this.jsonStructure( Element + EC.toString(), myLog.getJSONResult() ) );
 	        }
 	        
 	        return myJSON.toString();

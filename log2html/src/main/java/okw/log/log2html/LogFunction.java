@@ -5,17 +5,18 @@ public class LogFunction extends LogBaseNode
 {
 	
 	String myReturn = "";
-	
-    private String Function;
-    private String[] Parameter;
+
+	private String type = "Function";
+    private String functionName;
+    private String[] parameter;
 	
 	LogFunction( LogBase Parent, String fpsFunctionName, String... fpsParameter)
 	{
 		setParent(Parent);
 		myID = AllCount;
 		
-	    Function = fpsFunctionName;
-        Parameter = fpsParameter;
+	    functionName = fpsFunctionName;
+        parameter = fpsParameter;
 		
         // inkrementieren FunctionCount
         this.FunctionCount();
@@ -27,14 +28,8 @@ public class LogFunction extends LogBaseNode
 		Boolean GreaterOne = false;
 		for ( String sParameter : fpsParameter )
 		{
-			if (GreaterOne)
-			{
-				StrBuilder.append( ", " ); 
-			}
-			else
-			{
-				GreaterOne = true;
-			}
+			if (GreaterOne) StrBuilder.append( ", " ); 
+			else GreaterOne = true;
 			
 			StrBuilder.append( sParameter ); 
 		}
@@ -114,46 +109,6 @@ public class LogFunction extends LogBaseNode
 		
 		return sbResult.toString();
 	}
-	
-	
-    @Override
-    protected String getJSONResult()
-    {
-        StringBuilder myJSON = new StringBuilder();
-
-        myJSON.append( this.jsonElement( "Function", this.Function ) );
-
-        for ( Integer i = 0; i < Parameter.length; i++) { 
-            
-            myJSON.append( this.jsonElement( "Parameter" + i.toString(), Parameter[i] ) );
-        } 
-        
-        // Statistics...
-        myJSON.append( this.jsonStructre( "statistics", this.getJSONStatistics() ) );
-        
-        // Duration
-        if ( "false".equals( okw.OKW_Properties.getInstance().getProperty( "Log2HTML.Test", "false" ) ) )
-        {
-            myJSON.append( this.jsonElement( "duration", this.myDuration.getSeconds("#0.000") ) );
-        }
-        else
-        {
-            myJSON.append( this.jsonElement( "duration", "Duration TestMode" ) );
-        }
-       // Info
-        myJSON.append( this.jsonElement( "Info", this.Info ) );
-
-        Integer EC = 0;
-        
-        for( LogBase myLog: this.myLogs )
-        {
-            EC++;
-            String Element = myLog.getClass().getSimpleName();
-            myJSON.append( this.jsonStructre( Element + EC.toString(), myLog.getJSONResult() ) );
-        }
-
-        return myJSON.toString();
-    }
 
 
     @Override
@@ -192,5 +147,26 @@ public class LogFunction extends LogBaseNode
     {
         if ( ! (this.bError || this.bException ) )
            myParent.FunctionFail();
+    }
+    
+    
+    @Override
+    protected String getJSONNodeProperties()
+    {
+        StringBuilder myJSON = new StringBuilder();
+        
+        myJSON.append( this.jsonElementComma( "type", this.type ) );
+        // Info
+        myJSON.append( this.jsonElementComma( "Info", this.Info ) );
+        
+        
+        myJSON.append( this.jsonElementComma( "Function", this.functionName ) );
+
+        for ( Integer i = 0; i < this.parameter.length; i++) { 
+            
+            myJSON.append( this.jsonElementComma( "Parameter" + i.toString(), parameter[i] ) );
+        } 
+
+        return myJSON.toString();
     }
 }

@@ -1,0 +1,73 @@
+{
+  "statistics" : {
+    "ErrorCount" : "0",
+    "ExceptionCount" : "0",
+    "WarningCount" : "1",
+    "PassedCount" : "0",
+    "PrintCount" : "0",
+    "FunctionCount" : "0",
+    "FunctionFail" : "0",
+    "FunctionPass" : "0",
+    "SequensCount" : "0",
+    "SequensFail" : "0",
+    "SequensPass" : "0",
+    "LocalACCallCount" : "0",
+    "LocalACCallFail" : "0",
+    "LocalACCallPass" : "0",
+    "RemoteACCallCount" : "0",
+    "RemoteACCallFail" : "0",
+    "RemoteACCallPass" : "0",
+    "StepCount" : "0",
+    "StepFail" : "0",
+    "StepPass" : "0",
+    "KeyWordCount" : "0",
+    "KeyWordFail" : "0",
+    "KeyWordPass" : "0",
+    "startedAt" : "Start time TestMode",
+    "finishedAt" : "End time TestMode",
+    "duration" : "Duration TestMode"
+  },
+  "features" : [ {
+    "name" : "Log2HTML - tc_LogTestcaseStart_LogWarning_Normal_Test",
+    "result" : "",
+    "tests" : [ {
+      "test" : {
+        "name" : "tc_LogTestcaseStart_LogWarning_Normal_Test",
+        "type" : "TestCase",
+        "statistics" : {
+          "ErrorCount" : "0",
+          "ExceptionCount" : "0",
+          "WarningCount" : "1",
+          "PassedCount" : "0",
+          "PrintCount" : "0",
+          "FunctionCount" : "0",
+          "FunctionFail" : "0",
+          "FunctionPass" : "0",
+          "SequensCount" : "0",
+          "SequensFail" : "0",
+          "SequensPass" : "0",
+          "LocalACCallCount" : "0",
+          "LocalACCallFail" : "0",
+          "LocalACCallPass" : "0",
+          "RemoteACCallCount" : "0",
+          "RemoteACCallFail" : "0",
+          "RemoteACCallPass" : "0",
+          "StepCount" : "0",
+          "StepFail" : "0",
+          "StepPass" : "0",
+          "KeyWordCount" : "0",
+          "KeyWordFail" : "0",
+          "KeyWordPass" : "0",
+          "startedAt" : "Start time TestMode",
+          "finishedAt" : "End time TestMode",
+          "duration" : "Duration TestMode"
+        },
+        "elements" : [ {
+          "element" : {
+            "Warning" : "LogWarning"
+          }
+        } ]
+      }
+    } ]
+  } ]
+}

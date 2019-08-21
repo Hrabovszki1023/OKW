@@ -3,26 +3,48 @@ package okw.log.log2html;
 public class LogStep extends LogBaseNode
 {
 
+    
+    // "categoryName": "URL",
     private String categoryName = "";
+    
+    // "categoryType": "I",
+    private String categoryType = "";
+
+    // "choiceValue": "\"https://cloud.4test.io/pizza/\"",
     private String choiceValue = "";
+
+    // "featureName": "Main menu",
     private String featureName = "";
+    
+    // "localCategoryName": "URL",
     private String localCategoryName = "";
+
+    // "sourceExcerpt": "WHEN URL IS \"https://cloud.4test.io/pizza/\"",
     private String sourceExcerpt = "";
     
+    // "type": "TestStep"
+    private String type = "";
+    
     // Result is setted by Log2Html internaly!
+    //  "result": "ok",
     private String result = "";
     
 	
-    LogStep(LogBase Parent, String categoryName, String choiceValue, String featureName, String localCategoryName, String sourceExcerpt )
+    LogStep(LogBase Parent, String categoryName, String categoryType, 
+                            String choiceValue, String featureName,
+                            String localCategoryName, String sourceExcerpt,
+                            String type)
 	{
         setParent(Parent);
         myID = AllCount;
                 
         this.categoryName = categoryName;
+        this.categoryType = categoryType;
         this.choiceValue = choiceValue;
         this.featureName = featureName;
         this.localCategoryName = localCategoryName;
         this.sourceExcerpt = sourceExcerpt;
+        this.type = type;
         
         // inkrementieren StepCount
         this.StepCount();
@@ -65,48 +87,22 @@ public class LogStep extends LogBaseNode
 	      if ( ! (this.bError || this.bException ) )
 	         myParent.StepFail();
 	  }
+
 	  
-	    
-	    @Override
-	    protected String getJSONResult()
-	    {
-	    
-	        StringBuilder myJSON = new StringBuilder();
-
-	        // Statistics...
-	        myJSON.append( this.jsonStructre( "statistics", this.getJSONStatistics() ) );
-	        
-            myJSON.append( this.jsonElement( "categoryName", this.categoryName ) );
-            myJSON.append( this.jsonElement( "choiceValue", this.choiceValue ) );
-            myJSON.append( this.jsonElement( "featureName", this.featureName ) );
-            myJSON.append( this.jsonElement( "localCategoryName", this.localCategoryName ) );
-            myJSON.append( this.jsonElement( "sourceExcerpt", this.sourceExcerpt ) );
-            myJSON.append( this.jsonElement( "result", this.result ) );
-                        
-	        // Timer:
-	        // Für den Test wird das Abgeschaltet, weil veränderlich 
-	        if ( "false".equals( okw.OKW_Properties.getInstance().getProperty( "Log2HTML.Test", "false" ) ) )
-	        {
-	            myJSON.append( this.jsonElement( "startedAt", this.myDuration.getStartTimeMillis().toString() ) );
-	            myJSON.append( this.jsonElement( "finishedAt", this.myDuration.getEndTimeMillis().toString() ) );
-	            myJSON.append( this.jsonElement( "duration", this.myDuration.getSeconds("#0.000") ) );
-	        }
-	        else
-	        {
-	            myJSON.append( this.jsonElement( "startedAt", "Start time TestMode" ) );
-	            myJSON.append( this.jsonElement( "finishedAt", "End time TestMode" ) );
-	            myJSON.append( this.jsonElement( "duration", "Duration TestMode" ) );
-	        }
-
-	        Integer EC = 0;
-	        
-	        for( LogBase myLog: this.myLogs )
-	        {
-	            EC++;
-	            String Element = myLog.getClass().getSimpleName();
-	            myJSON.append( this.jsonStructre( Element + EC.toString(), myLog.getJSONResult() ) );
-	        }
-	        
-	        return myJSON.toString();
-	    }
+	  @Override
+	  protected String getJSONNodeProperties()
+	  {
+	      StringBuilder myJSON = new StringBuilder();
+	      
+	      myJSON.append( this.jsonElementComma( "type", this.type ) );
+	      myJSON.append( this.jsonElementComma( "categoryName", this.categoryName ) );
+	      myJSON.append( this.jsonElementComma( "categoryType", this.categoryType ) );
+	      myJSON.append( this.jsonElementComma( "choiceValue", this.choiceValue ) );
+	      myJSON.append( this.jsonElementComma( "featureName", this.featureName ) );
+	      myJSON.append( this.jsonElementComma( "localCategoryName", this.localCategoryName ) );
+	      myJSON.append( this.jsonElementComma( "sourceExcerpt", this.sourceExcerpt ) );
+	      myJSON.append( this.jsonElementComma( "result", this.result ) );
+	      
+	      return myJSON.toString();
+	  }	    
 }

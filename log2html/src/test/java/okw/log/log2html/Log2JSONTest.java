@@ -2,57 +2,23 @@ package okw.log.log2html;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
-import org.junit.After;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.TestName;
 
+import okw.junit.JUnitBase;
 import okw.log.log2html.Log2HTML;
 
-public class Log2JSONTest {
-
-    @Rule
-    public TestName name = new TestName();
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
-	public String loadFile(String filename){
-
-        StringBuilder myJSON = new StringBuilder();
-
-        try{
-
-          ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-          InputStream inputStream = classloader.getResourceAsStream(filename);
-          InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
-          BufferedReader reader = new BufferedReader(streamReader);
-          for (String line; (line = reader.readLine()) != null;) {
-              myJSON.append( line  + "\n" );
-          }
-
-        }catch(FileNotFoundException fnfe){
-          // process errors
-        }catch(IOException ioe){
-          // process errors
-        }
-        return myJSON.toString();
-      }
-	
+public class Log2JSONTest extends JUnitBase
+{
+    @Before
+    public void setUp() throws Exception
+    {
+        
+        okw.OKW_Properties.getInstance().setProperty( "Log2HTML.Test", "true" );
+    }
+    
 	   @Test
 	    public void TC_LogPrint_Simple_Test()
 	    {   
@@ -63,8 +29,11 @@ public class Log2JSONTest {
 	            myLog.LogPrint( "LogPrint 2" );
 	            myLog.LogPrint( "LogPrint 3" );
 	        myLog.LogTestcaseEnd();
-	        
-	        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+
+	        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+	        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );	        
+
+	        assertEquals( Expected, Current );
 	    }
 
 	@Test
@@ -79,9 +48,11 @@ public class Log2JSONTest {
 				myLog.LogKeyWordEnd();
 			myLog.LogPrint( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
-		
-		assertEquals( "", myLog.Result2JSON( "test.json" ) );
-		
+
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 
 	@Test
@@ -97,8 +68,11 @@ public class Log2JSONTest {
 				myLog.LogKeyWordEnd();
 			myLog.LogPrintDebug( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
-		
-        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 	
 	@Test
@@ -115,8 +89,11 @@ public class Log2JSONTest {
 				myLog.LogKeyWordEnd();
 			myLog.LogPrint( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
-		
-        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 
 	@Test
@@ -136,8 +113,11 @@ public class Log2JSONTest {
 				myLog.LogKeyWordEnd();
 			myLog.LogPrintDebug( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
-		
-        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 	
 	@Test
@@ -150,8 +130,11 @@ public class Log2JSONTest {
 				myLog.LogException( "Exception");
 				myLog.LogKeyWordEnd();
 		myLog.LogTestcaseEnd();
-		
-        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 
 	@Test
@@ -164,8 +147,11 @@ public class Log2JSONTest {
 				myLog.LogError("Error");
 				myLog.LogKeyWordEnd();
 		myLog.LogTestcaseEnd();
-		
-        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 	
 	@Test
@@ -178,8 +164,11 @@ public class Log2JSONTest {
 				myLog.LogWarning( "Warnung");
 				myLog.LogKeyWordEnd();
 		myLog.LogTestcaseEnd();
-		
-        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 	
 	   @Test
@@ -195,8 +184,11 @@ public class Log2JSONTest {
 	                myLog.LogKeyWordEnd();
 	            myLog.LogPrint( "Print auf einer Ebene höher...");
 	        myLog.LogTestcaseEnd();
-	        
-	        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+
+            String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+            String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+            assertEquals( Expected, Current );
 	    }
 
 	
@@ -211,7 +203,10 @@ public class Log2JSONTest {
 		    myLog.LogFunctionEnd();
 		myLog.LogTestcaseEnd();
 
-        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 
 	@Test
@@ -227,7 +222,10 @@ public class Log2JSONTest {
 		    myLog.LogFunctionEnd();
         myLog.LogTestcaseEnd();
 
-        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 
 	@Test
@@ -241,7 +239,10 @@ public class Log2JSONTest {
 		    myLog.LogFunctionEnd(true);
 		myLog.LogTestcaseEnd();
 
-        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 
 	   @Test
@@ -256,7 +257,10 @@ public class Log2JSONTest {
 	            myLog.LogFunctionEndDebug(true);
 	        myLog.LogTestcaseEnd();
 
-	        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+	        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+	        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+	        assertEquals( Expected, Current );
 	    }
 
 
@@ -271,7 +275,10 @@ public class Log2JSONTest {
 	            myLog.LogFunctionEnd( "Return String" );
 	        myLog.LogTestcaseEnd();
 
-	        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+	        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+	        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+	        assertEquals( Expected, Current );
 	    }
 
 	       @Test
@@ -286,7 +293,10 @@ public class Log2JSONTest {
 	                myLog.LogFunctionEndDebug( "Return String" );
 	            myLog.LogTestcaseEnd();
 
-	            assertEquals( "", myLog.Result2JSON( "test.json" ) );
+	            String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+	            String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+	            assertEquals( Expected, Current );
 	        }	   
 	   
 
@@ -306,7 +316,10 @@ public class Log2JSONTest {
 	                myLog.LogFunctionEnd( returnListString );
 	            myLog.LogTestcaseEnd();
 
-	            assertEquals( "", myLog.Result2JSON( "test.json" ) );
+	            String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+	            String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+	            assertEquals( Expected, Current );
 	        }
 
 	           @Test
@@ -327,7 +340,10 @@ public class Log2JSONTest {
 	                    myLog.LogFunctionEndDebug( returnListString );
 	                myLog.LogTestcaseEnd();
 
-	                assertEquals( "", myLog.Result2JSON( "test.json" ) );
+	                String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+	                String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+	                assertEquals( Expected, Current );
 	            }      
 	@Test
 	public void TC_LogFunktionDebug_Test() {
@@ -352,7 +368,10 @@ public class Log2JSONTest {
 
 		myLog.LogTestcaseEnd();
 
-        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 
 	@Test
@@ -383,11 +402,12 @@ public class Log2JSONTest {
 				myLog.LogKeyWordEnd();
 			
 			myLog.LogSequenceEnd();
-
-			
 		myLog.LogTestcaseEnd();
 
-        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 
 	@Test
@@ -406,8 +426,11 @@ public class Log2JSONTest {
 			myLog.LogKeyWordEnd();
 
 		myLog.LogTestcaseEnd();
-		
-        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 
 	
@@ -422,13 +445,19 @@ public class Log2JSONTest {
 			myLog.LogPrint("Das ist ein LogPrint...");
 			myLog.LogKeyWordEnd();
 			
-		myLog.LogKeyWordStart( "Mehrere Werte", "Name", "Zoltan", "Nachname", "Uschi");
-			myLog.LogPrint("Das ist ein LogPrint...");
-			myLog.LogKeyWordEnd();
+//		myLog.LogKeyWordStart( "Mehrere Werte", "Name", "Zoltan", "Nachname", "Uschi");
+//			myLog.LogPrint("Das ist ein LogPrint...");
+//			myLog.LogKeyWordEnd();
+	myLog.LogTestcaseEnd();	
+		
 
 		myLog.LogTestcaseStart( "This Test" );			
-	
-        assertEquals( "", myLog.Result2JSON( "test.json" ) );
+        myLog.LogTestcaseEnd(); 
+
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
 	}
 	
     @Test
@@ -450,76 +479,9 @@ public class Log2JSONTest {
             
         myLog.LogTestcaseEnd();
 
-        
-        String Expected = "{\n" + 
-                        " \"statistics\": {\n" + 
-                        " \"PassedCount\": \"0\",\n" + 
-                        " \"ExceptionCount\": \"0\",\n" + 
-                        " \"ExceptionCount\": \"0\",\n" + 
-                        " \"PassedCount\": \"0\",\n" + 
-                        " \"TestcaseCount\": \"1\",\n" + 
-                        " \"TestcasePass\": \"1\",\n" + 
-                        " \"TestcaseFail\": \"0\",\n" + 
-                        " \"SequensCount\": \"1\",\n" + 
-                        " \"SequensPass\": \"1\",\n" + 
-                        " \"SequensFail\": \"0\",\n" + 
-                        " \"KeyWordCount\": \"3\",\n" + 
-                        " \"KeyWordPass\": \"3\",\n" + 
-                        " \"KeyWordFail\": \"0\",\n" + 
-                        " \"Start time\": \"2019-Jul-27 07:58:05.492\",\n" + 
-                        " \"End time\": \"2019-Jul-27 07:58:05.493\",\n" + 
-                        " },\n" + 
-                        " \"result\": {\n" + 
-                        " \"LogTestcase1\": {\n" + 
-                        "     \"Info\": \"TC_LogPrecondition_Test\",\n" + 
-                        "     \"duration\": \"0,001\",\n" + 
-                        "     \"LogPrecondition1\": {\n" + 
-                        "         \"statistics\": {\n" + 
-                        "         \"ErrorCount\": \"0\",\n" + 
-                        "         \"ExceptionCount\": \"0\",\n" + 
-                        "         \"WarningCount\": \"0\",\n" + 
-                        "         \"PassedCount\": \"0\",\n" + 
-                        "         \"PrintCount\": \"0\",\n" + 
-                        "         \"FunctionCount\": \"0\",\n" + 
-                        "         \"FunctionFail\": \"0\",\n" + 
-                        "         \"FunctionPass\": \"0\",\n" + 
-                        "         \"SequensCount\": \"0\",\n" + 
-                        "         \"SequensFail\": \"0\",\n" + 
-                        "         \"SequensPass\": \"0\",\n" + 
-                        "         \"SubCount\": \"0\",\n" + 
-                        "         \"SubFail\": \"0\",\n" + 
-                        "         \"SubPass\": \"0\",\n" + 
-                        "         \"StepCountLocal\": \"0\",\n" + 
-                        "         \"StepFailLocal\": \"0\",\n" + 
-                        "         \"StepPassLocal\": \"0\",\n" + 
-                        "         \"KeyWordCountLocal\": \"3\",\n" + 
-                        "         \"KeyWordFailLocal\": \"3\",\n" + 
-                        "         \"KeyWordPassLocal\": \"0\",\n" + 
-                        "         },\n" + 
-                        "         \"duration\": \"0,000\",\n" + 
-                        "         \"gherkin\": \"WHEN myPrecondion IS Test\",\n" + 
-                        "         \"LogKeyword1\": {\n" + 
-                        "             \"Keyword\": \"Typekey\",\n" + 
-                        "             \"Parameter0\": \"Name\",\n" + 
-                        "             \"Parameter1\": \"Zoltan\",\n" + 
-                        "             \"duration\": \"0,000\",\n" + 
-                        "         },\n" + 
-                        "         \"LogKeyword2\": {\n" + 
-                        "             \"Keyword\": \"Typekey\",\n" + 
-                        "             \"Parameter0\": \"Password\",\n" + 
-                        "             \"Parameter1\": \"!?GhoKklA\",\n" + 
-                        "             \"duration\": \"0,000\",\n" + 
-                        "         },\n" + 
-                        "         \"LogKeyword3\": {\n" + 
-                        "             \"Keyword\": \"Click\",\n" + 
-                        "             \"Parameter0\": \"OK\",\n" + 
-                        "             \"duration\": \"0,000\",\n" + 
-                        "         },\n" + 
-                        "     },\n" + 
-                        " },\n" + 
-                        " },\n" + 
-                        "}\n" ;
-        
-        assertEquals( Expected, myLog.Result2JSON( "test.json" ) );
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+
+        assertEquals( Expected, Current );
     }
 }

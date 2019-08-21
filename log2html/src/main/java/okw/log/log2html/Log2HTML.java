@@ -8,6 +8,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Stack;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
 import okw.log.ILogger;
 
 
@@ -386,11 +389,14 @@ public class Log2HTML extends LogBaseNode implements ILogger
     * @author Zoltán Hrabovszki
     * @date 2019-08-05
     */
-    public void LogStepStart( String categoryName, String choiceValue, String featureName, String localCategoryName, String sourceExcerpt )
+    public void LogStepStart( String categoryName, String categoryType, 
+                    String choiceValue, String featureName,
+                    String localCategoryName, String sourceExcerpt,
+                    String type )
     {
         AllCount++;
 
-        LogBase myLog = new LogStep( Pointer2LogBaseStack.peek(), categoryName, choiceValue, featureName, localCategoryName, sourceExcerpt );
+        LogBase myLog = new LogStep( Pointer2LogBaseStack.peek(), categoryName, categoryType, choiceValue, featureName, localCategoryName, sourceExcerpt, type );
 
         // Timer starten
         myLog.myDuration.startTimer();
@@ -477,7 +483,7 @@ public class Log2HTML extends LogBaseNode implements ILogger
 
     	if ( !(myLog.bError  || myLog.bException))
     	{
-    	    myLog.SequensPass();
+    	    myLog.SequencePass();
     	}
 
 		Pointer2LogBaseStack.pop();
@@ -637,10 +643,10 @@ public class Log2HTML extends LogBaseNode implements ILogger
 
     	myResult.append("\t\t<tr>\n");    	
     	myResult.append("\t\t\t<td align='right'>Sequences:</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + SequensCount.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + SequensPass.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + SequensFail.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td >" + getFailPassBar(SequensFail, SequensCount - SequensFail) + "</td>\n");
+    	myResult.append("\t\t\t<td align='center'>" + SequenceCount.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td align='center'>" + SequencePass.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td align='center'>" + SequenceFail.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td >" + getFailPassBar(SequenceFail, SequenceCount - SequenceFail) + "</td>\n");
     	myResult.append("\t\t</tr>\n");
 
     	myResult.append("\t\t<tr>\n");    	
@@ -737,24 +743,27 @@ public class Log2HTML extends LogBaseNode implements ILogger
     public String Result2JSON( String fpsFileName )
     {
         StringBuilder myJSON = new StringBuilder();
+        String myJSONReturn = "";
         
         try
         {
             StopAllTimerAndEmptyStack();
             
             myJSON.append( getJSONHeader() );
-            myJSON.append( this.jsonStructre( "statistics", this.getJSONStatistics() ) );
+            myJSON.append( this.jsonStructureComma( "statistics", this.getJSONStatistics() ) );
         
-            myJSON.append( this.jsonStructre( "result", this.getJSONResult() ));
+            myJSON.append( this.jsonArray( "features", this.getJSONResult() ));
             myJSON.append( getJSONFooter());
    
+            myJSONReturn = this.beautify( myJSON.toString() );
+            
             System.out.print( myJSON.toString() );
             
             // Write jason-File
             FileWriter fw = new FileWriter( fpsFileName );
             BufferedWriter bw = new BufferedWriter(fw);
 
-            bw.write( myJSON.toString() );
+            bw.write( myJSONReturn );
 
             bw.close();
          }
@@ -763,7 +772,7 @@ public class Log2HTML extends LogBaseNode implements ILogger
              System.out.print(e.getMessage());
          }
         
-        return myJSON.toString();
+        return myJSONReturn;
     }
 
     
@@ -780,78 +789,28 @@ public class Log2HTML extends LogBaseNode implements ILogger
     protected String getJSONResult()
     {
         StringBuilder myJSON = new StringBuilder();
-    
-        Integer EC = 0;
-        
+        StringBuilder myJSONForLoop = new StringBuilder();
+
         // 
-        myJSON.append( this.jsonElement( "name", this.name) );
-        myJSON.append( this.jsonElement( "result", this.result) );
+        myJSON.append( this.jsonElementComma( "name", this.name ) );
+        myJSON.append( this.jsonElement( "result", this.result ) );
+        
+        Boolean GreaterOne = false;
         
         for( LogBase myLog: this.myLogs )
         {
-            EC++;
-            String Element = myLog.getClass().getSimpleName();
-            myJSON.append( this.jsonStructre( Element + EC.toString(), myLog.getJSONResult() ) );
+            if (GreaterOne) myJSONForLoop.append( ", " ); 
+            else GreaterOne = true;
+            myJSONForLoop.append( this.jsonStructure( "test", myLog.getJSONResult() ) ) ;
+            
         }
-
-        return myJSON.toString();
-    }
-    
-    
-    protected String getJSONStatistics()
-    {
-        StringBuilder myJSON = new StringBuilder();
         
-        myJSON.append( this.jsonElement( "PassedCount", PassedCount.toString() ) );
-        myJSON.append( this.jsonElement( "ExceptionCount", ExceptionCount.toString() ) );
-        myJSON.append( this.jsonElement( "WarningCount", WarningCount.toString() ) );
-        myJSON.append( this.jsonElement( "ErrorCount", ErrorCount.toString() ) );
+        if (GreaterOne) 
+        myJSON.append( ", " + this.jsonArray( "tests", myJSONForLoop.toString() ) );
         
-        // Test cases
-        myJSON.append( this.jsonElement( "TestcaseCount", TestcaseCount.toString() ) );
-        myJSON.append( this.jsonElement( "TestcasePass", TestcasePass.toString() ) );
-        myJSON.append( this.jsonElement( "TestcaseFail", TestcaseFail.toString() ) );
- 
-        // Sequences
-        myJSON.append( this.jsonElement( "SequensCount", SequensCount.toString() ) );
-        myJSON.append( this.jsonElement( "SequensPass", SequensPass.toString() ) );
-        myJSON.append( this.jsonElement( "SequensFail", SequensFail.toString() ) );
-
-        // Precondition:
-        myJSON.append( this.jsonElement( "LocalACCallCount", LocalACCallCount.toString() ) );
-        myJSON.append( this.jsonElement( "LocalACCallPass",  LocalACCallPass.toString() ) );
-        myJSON.append( this.jsonElement( "LocalACCallFail",  LocalACCallFail.toString() ) );
-
-        // Sub
-        myJSON.append( this.jsonElement( "RemoteACCallCount", RemoteACCallCount.toString() ) );
-        myJSON.append( this.jsonElement( "RemoteACCallPass", RemoteACCallPass.toString() ) );
-        myJSON.append( this.jsonElement( "RemoteACCallFail", RemoteACCallFail.toString() ) );        
-
-        // Step
-        myJSON.append( this.jsonElement( "StepCount", StepCount.toString() ) );
-        myJSON.append( this.jsonElement( "StepPass", StepPass.toString() ) );
-        myJSON.append( this.jsonElement( "StepFail", StepFail.toString() ) );        
         
-        // Keywords:
-        myJSON.append( this.jsonElement( "KeyWordCount", KeyWordCount.toString() ) );
-        myJSON.append( this.jsonElement( "KeyWordPass", KeyWordPass.toString() ) );
-        myJSON.append( this.jsonElement( "KeyWordFail", KeyWordFail.toString() ) );
-
-        // Timer:
-        // Für den Test wird das Abgeschaltet, weil veränderlich 
-        if ( "false".equals( okw.OKW_Properties.getInstance().getProperty( "Log2HTML.Test", "false" ) ) )
-        {
-            myJSON.append( this.jsonElement( "Start time", this.myDuration.getStartTime() ) );
-            myJSON.append( this.jsonElement( "End time", this.myDuration.getEndTime() ) );
-            myJSON.append( this.jsonElement( "duration", this.myDuration.getSeconds("#0.000") ) );
-        }
-        else
-        {
-            myJSON.append( this.jsonElement( "Start time", "Start time TestMode" ) );
-            myJSON.append( this.jsonElement( "End time", "End time TestMode" ) );
-            myJSON.append( this.jsonElement( "duration", "Duration TestMode" ) );
-        }
-
+        
+        
         return myJSON.toString();
     }
     
@@ -864,6 +823,29 @@ public class Log2HTML extends LogBaseNode implements ILogger
         return myResult.toString();
     }
 	
+    String beautify(String json) 
+{
+        
+        String myReturn = "";
+        
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+        Object obj;
+        try
+        {
+            obj = mapper.readValue(json, Object.class);
+            myReturn = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj);
+        }
+        catch ( Exception e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
+        
+        return myReturn;
+    }
+    
 	protected void abort()
 	{
 	}
@@ -1008,21 +990,21 @@ public class Log2HTML extends LogBaseNode implements ILogger
     }
     
     @Override
-    protected void SequensCount()
+    protected void SequenceCount()
     {
-        this.SequensCount++;
+        this.SequenceCount++;
     }
 
     @Override
-    protected void SequensFail()
+    protected void SequenceFail()
     {
-        this.SequensFail++;
+        this.SequenceFail++;
     }
 
     @Override
-    protected void SequensPass()
+    protected void SequencePass()
     {
-        this.SequensPass++;
+        this.SequencePass++;
     }
 
     // Sub

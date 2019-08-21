@@ -39,8 +39,6 @@
 
 package okw.core;
 
-import static org.junit.Assert.*;
-import okw.OKW_Memorize_Sngltn;
 import okw.OKW_TestClipboard;
 import okw.log.Logger_Sngltn;
 

@@ -10,47 +10,6 @@ public class LogBaseLeaf extends LogBase
   protected Integer PassedCount = 0;
   protected Integer PrintCount = 0;
   
-//    protected Integer TestcaseCount           = 0;
-//    protected Integer TestcaseFail            = 0;
-//    protected Integer TestcasePass            = 0;
-//
-//    protected Integer FunctionCount           = 0;
-//    protected Integer FunctionFail            = 0;
-//    protected Integer FunctionPass            = 0;
-//
-//    protected Integer KeyWordCount            = 0;
-//    protected Integer KeyWordFail             = 0;
-//    protected Integer KeyWordPass             = 0;
-//
-//    protected Integer StepCount               = 0;
-//    protected Integer StepFail                = 0;
-//    protected Integer StepPass                = 0;
-//
-//    protected Integer SequensCount            = 0;
-//    protected Integer SequensFail             = 0;
-//    protected Integer SequensPass             = 0;
-//
-//    // Sub
-//    protected Integer SubCount                = 0;
-//    protected Integer SubFail                 = 0;
-//    protected Integer SubPass                 = 0;
-//
-//    // Precondition
-//    protected Integer PreconditionCount       = 0;
-//    protected Integer PreconditionFail        = 0;
-//    protected Integer PreconditionPass        = 0;
-//
-//    // Postcondition
-//    protected Integer PostconditionCount      = 0;
-//    protected Integer PostconditionFail       = 0;
-//    protected Integer PostconditionPass       = 0;
-//
-//    // AcceptanceCriteria
-//    protected Integer AcceptanceCriteriaCount = 0;
-//    protected Integer AcceptanceCriteriaFail  = 0;
-//    protected Integer AcceptanceCriteriaPass  = 0;
-
-  
     public LogBaseLeaf( )
     {
     }
@@ -61,8 +20,6 @@ public class LogBaseLeaf extends LogBase
 		setParent(Parent);
 		myID = AllCount;
 	}
-
-
     
     protected Boolean bWarning = false;
     
@@ -142,29 +99,6 @@ public class LogBaseLeaf extends LogBase
         WarningCount   = 0;
         PassedCount    = 0;
         PrintCount     = 0;
-        
-//        TestcaseCount = 0;
-//        TestcaseFail = 0;
-//        TestcasePass = 0;
-//
-//        FunctionCount = 0;
-//        FunctionFail = 0;
-//        FunctionPass = 0;
-//        
-//        KeyWordCount = 0;
-//        KeyWordFail = 0;
-//        KeyWordPass = 0;
-//        
-//        SequensCount = 0;
-//        SequensFail = 0;
-//        SequensPass = 0;
-//
-//        // Postcondition
-//        PostconditionCount = 0;
-//        PostconditionFail = 0;
-//        PostconditionPass = 0;
-        
-        PrintCount = 0;
     }
 
     
@@ -273,17 +207,17 @@ public class LogBaseLeaf extends LogBase
     }
     
     @Override
-    protected void SequensCount()
+    protected void SequenceCount()
     {
     }
 
     @Override
-    protected void SequensFail()
+    protected void SequenceFail()
     {
     }
 
     @Override
-    protected void SequensPass()
+    protected void SequencePass()
     {
     }
     
@@ -347,38 +281,6 @@ public class LogBaseLeaf extends LogBase
         myJSON.append( this.jsonElement( "PassedCount", this.PassedCount ) );
         myJSON.append( this.jsonElement( "PrintCount", this.PrintCount ) );
         
-//        myJSON.append( this.jsonElement( "FunctionCount", this.FunctionCount ) );
-//        myJSON.append( this.jsonElement( "FunctionFail", this.FunctionFail ) );
-//        myJSON.append( this.jsonElement( "FunctionPass", this.FunctionPass ) );
-//        
-//        myJSON.append( this.jsonElement( "SequensCount", this.SequensCount ) );
-//        myJSON.append( this.jsonElement( "SequensFail", this.SequensFail ) );
-//        myJSON.append( this.jsonElement( "SequensPass", this.SequensPass ) );
-//        
-//        myJSON.append( this.jsonElement( "PreconditionCount", this.PreconditionCount ) );
-//        myJSON.append( this.jsonElement( "PreconditionFail", this.PreconditionFail ) );
-//        myJSON.append( this.jsonElement( "PreconditionPass", this.PreconditionPass ) );        
-//
-//        myJSON.append( this.jsonElement( "AcceptanceCriteriaCount", this.AcceptanceCriteriaCount ) );
-//        myJSON.append( this.jsonElement( "AcceptanceCriteriaFail", this.AcceptanceCriteriaFail ) );
-//        myJSON.append( this.jsonElement( "AcceptanceCriteriaPass", this.AcceptanceCriteriaPass ) );
-//        
-//        myJSON.append( this.jsonElement( "PostconditionCount", this.PostconditionCount ) );
-//        myJSON.append( this.jsonElement( "PostconditionFail", this.PostconditionFail ) );
-//        myJSON.append( this.jsonElement( "PostconditionPass", this.PostconditionPass ) );        
-//        
-//        myJSON.append( this.jsonElement( "SubCount", this.SubCount ) );
-//        myJSON.append( this.jsonElement( "SubFail", this.SubFail ) );
-//        myJSON.append( this.jsonElement( "SubPass", this.SubPass ) );
-//        
-//        myJSON.append( this.jsonElement( "StepCount", this.StepCount ) );
-//        myJSON.append( this.jsonElement( "StepFail", this.StepFail ) );
-//        myJSON.append( this.jsonElement( "StepPass", this.StepPass ) );
-//
-//        myJSON.append( this.jsonElement( "KeyWordCount", this.KeyWordCount ) );
-//        myJSON.append( this.jsonElement( "KeyWordFail", this.KeyWordFail ) );
-//        myJSON.append( this.jsonElement( "KeyWordPass", this.KeyWordPass ) );
-        
         return myJSON.toString();
     }
     
@@ -389,7 +291,7 @@ public class LogBaseLeaf extends LogBase
         StringBuilder myJSON = new StringBuilder();
 
         // Statistics...
-        myJSON.append( this.jsonStructre( "statistics", this.getJSONStatistics() ) );
+        myJSON.append( this.jsonArray( "statistics", this.getJSONStatistics() ) );
         
         // Timer:
         // Für den Test wird das Abgeschaltet, weil veränderlich 
@@ -413,7 +315,7 @@ public class LogBaseLeaf extends LogBase
         {
             EC++;
             String Element = myLog.getClass().getSimpleName();
-            myJSON.append( this.jsonStructre( Element + EC.toString(), myLog.getJSONResult() ) );
+            myJSON.append( this.jsonStructure( Element + EC.toString(), myLog.getJSONResult() ) );
         }
         
         return myJSON.toString();

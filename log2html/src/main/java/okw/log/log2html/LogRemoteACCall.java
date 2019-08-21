@@ -3,15 +3,15 @@ package okw.log.log2html;
 public class LogRemoteACCall extends LogBaseNode
 {
     private String sourceExcerpt = "";
-    private String Type = "";
+    private String type = "";
 	
-    LogRemoteACCall(LogBase Parent, String sourceExcerpt, String Type)
+    LogRemoteACCall(LogBase Parent, String sourceExcerpt, String type)
 	{
         setParent(Parent);
         myID = AllCount;
                 
         this.sourceExcerpt = sourceExcerpt;
-        this.Type = Type;
+        this.type = type;
         
         // inkrementieren AcceptanceCriteriaCount
         this.RemoteACCallCount();
@@ -54,5 +54,17 @@ public class LogRemoteACCall extends LogBaseNode
     {
         if ( ! (this.bError || this.bException ) )
            myParent.RemoteACCallFail();
+    }
+ 
+    
+    @Override
+    protected String getJSONNodeProperties()
+    {
+        StringBuilder myJSON = new StringBuilder();
+        
+        myJSON.append( this.jsonElementComma( "sourceExcerpt", this.sourceExcerpt ) );
+        myJSON.append( this.jsonElementComma( "type", this.type ) );
+  
+        return myJSON.toString();
     }
 }

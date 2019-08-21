@@ -2,7 +2,7 @@ package okw.log.log2html;
 
 public class ResultList extends LogBaseNode
 {
-	
+    private String type = "ResultList";
 	String myReturn = "";
 	
 	ResultList(LogBase Parent, String fpsListHeader)
@@ -66,32 +66,12 @@ public class ResultList extends LogBaseNode
 	
 
     @Override
-    protected String getJSONResult()
+    protected String getJSONNodeProperties()
     {
         StringBuilder myJSON = new StringBuilder();
         
-        // obj.put( "class", this.getClass().getSimpleName() );
-        // obj.put( "Info_ResultList", this.Info );
-
-        myJSON.append( this.jsonElement( "Resultlist", this.Info ) );
-        // Duration
-        if ( "false".equals( okw.OKW_Properties.getInstance().getProperty( "Log2HTML.Test", "false" ) ) )
-        {
-            myJSON.append( this.jsonElement( "duration", this.myDuration.getSeconds("#0.000") ) );
-        }
-        else
-        {
-            myJSON.append( this.jsonElement( "duration", "Duration TestMode" ) );
-        }
-  
-        Integer EC = 0;
-        
-        for( LogBase myLog: this.myLogs )
-        {
-            EC++;
-            String Element = myLog.getClass().getSimpleName();
-            myJSON.append( this.jsonStructre( Element + EC.toString(), myLog.Info ) );
-        }
+        myJSON.append( this.jsonElementComma( "type", this.type ) );
+        myJSON.append( this.jsonElementComma( "info", this.Info ) );
         
         return myJSON.toString();
     }

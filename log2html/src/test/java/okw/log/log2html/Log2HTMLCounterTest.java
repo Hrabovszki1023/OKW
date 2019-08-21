@@ -2,60 +2,28 @@ package okw.log.log2html;
 
 import static org.junit.Assert.*;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.TestName;
 
+import okw.junit.JUnitBase;
 import okw.log.log2html.Log2HTML;
 
-public class Log2HTMLCounterTest {
-
-    @Rule
-    public TestName name = new TestName();
+public class Log2HTMLCounterTest extends JUnitBase
+{
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() throws Exception
+	{
 	    
-	       okw.OKW_Properties.getInstance().setProperty( "Log2HTML.Test", "true" );
+	    okw.OKW_Properties.getInstance().setProperty( "Log2HTML.Test", "true" );
 	}
 
 	@After
 	public void tearDown() throws Exception {
 	}
 
-	public String loadFile(String filename){
 
-        StringBuilder myJSON = new StringBuilder();
-
-	    try{
-
-	      ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-	      InputStream inputStream = classloader.getResourceAsStream(filename);
-	      InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
-	      BufferedReader reader = new BufferedReader(streamReader);
-	      for (String line; (line = reader.readLine()) != null;) {
-	          myJSON.append( line  + "\n" );
-	      }
-
-	    }catch(FileNotFoundException fnfe){
-	      // process errors
-	    }catch(IOException ioe){
-	      // process errors
-	    }
-	    return myJSON.toString();
-	  }
-	
-	
 	@Test
 	public void tc_OK_Testcase_Normal_Test()
 	{	
@@ -71,7 +39,7 @@ public class Log2HTMLCounterTest {
 
         String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
         
-        String Expected = this.loadFile( name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
              
         assertEquals( Expected, Current );      
 
@@ -92,7 +60,7 @@ public class Log2HTMLCounterTest {
 		
             String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
             
-            String Expected = this.loadFile( name.getMethodName() + ".json" );
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
             
             assertEquals( Expected, Current );       
 	}
@@ -112,7 +80,7 @@ public class Log2HTMLCounterTest {
 
 			String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
             
-            String Expected = this.loadFile( name.getMethodName() + ".json" );
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
             
             assertEquals( Expected, Current );    
 
@@ -131,7 +99,7 @@ public class Log2HTMLCounterTest {
 		
 	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
 	            
-	            String Expected = this.loadFile( name.getMethodName() + ".json" );
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
 	                 
 	            assertEquals( Expected, Current );    
 	}
@@ -148,7 +116,7 @@ public class Log2HTMLCounterTest {
 		
 	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
 	            
-	            String Expected = this.loadFile( name.getMethodName() + ".json" );
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
 	            
 	            assertEquals( Expected, Current );       
 	}
@@ -167,7 +135,7 @@ public class Log2HTMLCounterTest {
 		
             String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
             
-            String Expected = this.loadFile( name.getMethodName() + ".json" );
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
             
             assertEquals( Expected, Current );
 	}
@@ -188,7 +156,7 @@ public class Log2HTMLCounterTest {
 		
             String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
             
-            String Expected = this.loadFile( name.getMethodName() + ".json" );
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
             
             assertEquals( Expected, Current );      
 
@@ -208,7 +176,7 @@ public class Log2HTMLCounterTest {
 		
 	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
 	            
-	            String Expected = this.loadFile( name.getMethodName() + ".json" );
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
 	            
 	            assertEquals( Expected, Current );      
 
@@ -228,7 +196,7 @@ public class Log2HTMLCounterTest {
 		
 	        String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
 	        
-            String Expected = this.loadFile( name.getMethodName() + ".json" );
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
 	        
 	        assertEquals( Expected, Current );		
 	}
@@ -250,7 +218,7 @@ public class Log2HTMLCounterTest {
 		
             String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
             
-            String Expected = this.loadFile( name.getMethodName() + ".json" );
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
             
             assertEquals( Expected, Current ); 
     }
@@ -267,7 +235,7 @@ public class Log2HTMLCounterTest {
 		
 	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
 	            
-	            String Expected = this.loadFile( name.getMethodName() + ".json" );
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
 	            
 	            assertEquals( Expected, Current );      
 
@@ -287,7 +255,7 @@ public class Log2HTMLCounterTest {
 		
 	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
 	            
-	            String Expected = this.loadFile( name.getMethodName() + ".json" );
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
 	            
 	            assertEquals( Expected, Current );      
 
@@ -310,7 +278,7 @@ public class Log2HTMLCounterTest {
 	        
 	                String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
 	                
-	                String Expected = this.loadFile( name.getMethodName() + ".json" );
+	                String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
 	                
 	                assertEquals( Expected, Current );      
 	    }
@@ -333,7 +301,7 @@ public class Log2HTMLCounterTest {
            
                    String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
                    
-                   String Expected = this.loadFile( name.getMethodName() + ".json" );
+                   String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
                    
                    assertEquals( Expected, Current );      
        }
@@ -353,7 +321,7 @@ public class Log2HTMLCounterTest {
 		
             String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
             
-            String Expected = this.loadFile( name.getMethodName() + ".json" );
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
             
             assertEquals( Expected, Current );      
 
@@ -374,7 +342,7 @@ public class Log2HTMLCounterTest {
 		
             String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
             
-            String Expected = this.loadFile( name.getMethodName() + ".json" );
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
             
             assertEquals( Expected, Current );      
 
@@ -392,7 +360,7 @@ public class Log2HTMLCounterTest {
 		
 	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
 	            
-	            String Expected = this.loadFile( name.getMethodName() + ".json" );
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
 	            
 	            assertEquals( Expected, Current );      
 
@@ -412,7 +380,7 @@ public class Log2HTMLCounterTest {
 		
 	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
 	            
-	            String Expected = this.loadFile( name.getMethodName() + ".json" );
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
 	            
 	            assertEquals( Expected, Current );      
 	
@@ -432,7 +400,7 @@ public class Log2HTMLCounterTest {
 		
             String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
             
-            String Expected = this.loadFile( name.getMethodName() + ".json" );
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
             
             assertEquals( Expected, Current );      
 
@@ -453,7 +421,7 @@ public class Log2HTMLCounterTest {
 		
 		String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
 		
-        String Expected = this.loadFile( name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
 		
 		assertEquals( Expected, Current );
 
@@ -471,7 +439,7 @@ public class Log2HTMLCounterTest {
 		
 	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
 	            
-	            String Expected = this.loadFile( name.getMethodName() + ".json" );
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
 	            
 	            assertEquals( Expected, Current );      
 
@@ -497,7 +465,7 @@ public class Log2HTMLCounterTest {
 		
 		            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
 		            
-		            String Expected = this.loadFile( name.getMethodName() + ".json" );
+		            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
 		            
 		            assertEquals( Expected, Current );      
 	}
@@ -543,7 +511,7 @@ public class Log2HTMLCounterTest {
         
                 String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
                 
-                String Expected = this.loadFile( name.getMethodName() + ".json" );
+                String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
                 
                 assertEquals( Expected, Current );      
     }
@@ -587,11 +555,12 @@ public class Log2HTMLCounterTest {
             myLog.LogLocalACCallEnd();
         myLog.LogTestcaseEnd( );
         
-                String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+        
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
                 
-                String Expected = this.loadFile( name.getMethodName() + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
                 
-                assertEquals( Expected, Current );      
+        assertEquals( Expected, Current );      
     }
     
     
@@ -601,7 +570,7 @@ public class Log2HTMLCounterTest {
         Log2HTML myLog = new Log2HTML(name.getMethodName());
         
         myLog.LogTestcaseStart( "tcAcceptanceCriteria_Print" );
-            myLog.LogStepStart( "myCat_1", "myChoice_1", "myFeature_1", "myLocalFeature_1", "WHEN myCat_1 IS myChoice_1" );
+            myLog.LogStepStart( "myCat_1", "myCatType_1", "myChoice_1", "myFeature_1", "myLocalFeature_1", "WHEN myCat_1 IS myChoice_1", "myType_1 TestStep" );
                 myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
                     myLog.LogPrint( "Print im Schlüsselwort");
                     myLog.LogKeyWordEnd( );
@@ -609,7 +578,7 @@ public class Log2HTMLCounterTest {
         myLog.LogTestcaseEnd( );
 
         myLog.LogTestcaseStart( "tcAcceptanceCriteria_Warning" );
-        myLog.LogStepStart( "myCat_2", "myChoice_2", "myFeature_2", "myLocalFeature_2", "WHEN myCat_2 IS myChoice_2" );
+        myLog.LogStepStart( "myCat_2", "myCatType_2", "myChoice_2", "myFeature_2", "myLocalFeature_2", "WHEN myCat_2 IS myChoice_2", "myType_2 TestStep" );
                 myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
                     myLog.LogWarning( "Warning im Schlüsselwort");
                 myLog.LogKeyWordEnd( );
@@ -617,7 +586,7 @@ public class Log2HTMLCounterTest {
         myLog.LogTestcaseEnd( );
         
         myLog.LogTestcaseStart( "tcAcceptanceCriteria_Error" );
-            myLog.LogStepStart( "myCat_3", "myChoice_3", "myFeature_3", "myLocalFeature_3", "WHEN myCat_3 IS myChoice_3" );
+            myLog.LogStepStart( "myCat_3", "myCatType_3", "myChoice_3", "myFeature_3", "myLocalFeature_3", "WHEN myCat_3 IS myChoice_3", "myType_3 TestStep" );
                 myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
                     myLog.LogError( "Error im Schlüsselwort");
                 myLog.LogKeyWordEnd( );
@@ -625,7 +594,7 @@ public class Log2HTMLCounterTest {
         myLog.LogTestcaseEnd( );
         
         myLog.LogTestcaseStart( "tcAcceptanceCriteria_Exception" );
-            myLog.LogStepStart( "myCat_4", "myChoice_4", "myFeature_4", "myLocalFeature_4", "WHEN myCat_4 IS myChoice_4" );
+            myLog.LogStepStart( "myCatName_4", "myCatType_4", "myChoice_4", "myFeature_4", "myLocalFeature_4", "WHEN myCat_4 IS myChoice_4", "myType_4 TestStep" );
                 myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
                     myLog.LogException( "Exception im Schlüsselwort");
                 myLog.LogKeyWordEnd( );
@@ -634,7 +603,7 @@ public class Log2HTMLCounterTest {
         
                 String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
                 
-                String Expected = this.loadFile( name.getMethodName() + ".json" );
+                String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
                 
                 assertEquals( Expected, Current );      
    }

@@ -7,7 +7,8 @@ public class LogException extends LogBaseLeaf
 	{
 		Info = fpsInfo;
 		myID = AllCount;
-		this.setParent(fpParent);		
+		setParent(fpParent);		
+		
 		ExceptionCount();	
 	}
  

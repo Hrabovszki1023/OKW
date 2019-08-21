@@ -205,7 +205,10 @@ public interface ILogger
      * @author Zoltan Hrabovszki
      * @date 2019-07-25
      */
-    void LogStepStart( String categoryName, String choiceValue, String featureName, String localCategoryName, String sourceExcerpt );
+    void LogStepStart( String categoryName, String categoryType, 
+                       String choiceValue, String featureName,
+                       String localCategoryName, String sourceExcerpt,
+                       String type );
 
     /**
      * LogStepEnd: Log End of (Test) Step.

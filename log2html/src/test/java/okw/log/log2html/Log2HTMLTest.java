@@ -1,7 +1,6 @@
 package okw.log.log2html;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;

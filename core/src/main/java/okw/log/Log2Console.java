@@ -251,17 +251,21 @@ public class Log2Console implements ILogger
             }
 
             /**
-             *  \copydoc ILogger::LogStepStart(String,String,String,String,String)
+             *  \copydoc ILogger::LogStepStart(String,String,String,String,String,String,String)
              */
-            public void LogStepStart( String categoryName, String choiceValue, String featureName, String localCategoryName, String sourceExcerpt )
+            public void LogStepStart( String categoryName, String categoryType, 
+                            String choiceValue, String featureName,
+                            String localCategoryName, String sourceExcerpt,
+                            String type )
             {
                 this.LogPrint( "Step: " + sourceExcerpt);
                 this.LevelCounter++;
                 this.LogPrint( "       Feature Name:" + featureName);
                 this.LogPrint( "      Category Name:" + categoryName );
-                this.LogPrint( "       Choice Value:" + choiceValue);
+                this.LogPrint( "      Category Type:" + categoryType );
+                this.LogPrint( "       Choice Value:" + choiceValue);  
                 this.LogPrint( "Local Category Name:" + localCategoryName);
-                
+                this.LogPrint( "               Type:" + type);
                 this.BlanksBefore();
             }
             
@@ -275,7 +279,7 @@ public class Log2Console implements ILogger
  
 
             /**
-             *  \copydoc ILogger::LogPreconditionStart(String.)
+             *  \copydoc ILogger::LogPreconditionStart(String)
              */
             public void LogPreconditionStart( String Gherkin )
             {
@@ -294,7 +298,7 @@ public class Log2Console implements ILogger
             
 
             /**
-             *  \copydoc ILogger::LogPostconditionStart(String.)
+             *  \copydoc ILogger::LogPostconditionStart(String)
              */
             public void LogPostconditionStart( String Gherkin )
             {
