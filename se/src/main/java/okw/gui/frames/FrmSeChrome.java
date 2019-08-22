@@ -22,12 +22,28 @@ import okw.gui.adapter.selenium.SeBrowserWindow;
  * /todo Beschreibung...
  */
 
-
 /**
  * @ingroup groupSeleniumFrames
- * 
- * @author zoltan
- *
+ * \~german
+ *  Frame Classe für Chrome implmentiert mit Chrome-Driver
+ *  
+ *  Zu diesem Frame gehört die Properties-Datei "frmSeChrome.properties".
+ *  Alle Chrome Properties/Eigenschaften können gesetzt werden. Diese müssen mit "frmSeChrome.option." beginnen.
+ *  
+ *  
+ *  Beispiel
+ *  Hide the automation toolbar warning:
+ *  frmSeChrome.option.disable-infobars=disable-infobars
+ *  bewirkt: 
+ *  ChromeOptions options = new ChromeOptions().addArguments( "disable-infobars" );
+ *  
+ *  Zusätzlich kann die Location der Chrome-Binär-datei als Property gesetzt werden:
+ *  frmSeChrome.setBinary="/path/to/chrome"
+ *  
+ * \~english
+ * \~
+ * @author zh@openkeyword.de
+ * @date 2019-08-22
  */
 @OKW (FN="Chrome")
 public class FrmSeChrome extends SeBrowserWindow
@@ -132,6 +148,12 @@ public class FrmSeChrome extends SeBrowserWindow
             ArrayList<String> frmSeChrome_option = OKW_Properties.getInstance().getPropertiesForKeysStartswith( "frmSeChrome.option." );
             
             ChromeOptions options = new ChromeOptions().addArguments( frmSeChrome_option );
+            
+            // get Property for Binary Location
+            if ( OKW_Properties.getInstance().getProperty( "frmSeChrome.setBinary" ) != null )
+                options.setBinary( OKW_Properties.getInstance().getProperty( "frmSeChrome.setBinary" ) ) ;
+            
+            
             mySeDriver.setDriver( new ChromeDriver( options ) );
 
         }

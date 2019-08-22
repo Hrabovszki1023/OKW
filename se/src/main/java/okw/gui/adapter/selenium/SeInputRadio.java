@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import okw.OKW_Const_Sngltn;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWNotAllowedValueException;
-import okw.gui.OKWLocator;
 import okw.gui.OKWLocatorBase;
 
 

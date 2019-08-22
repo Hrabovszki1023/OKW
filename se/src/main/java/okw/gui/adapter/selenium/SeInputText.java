@@ -40,13 +40,10 @@
 package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
-
 import org.apache.commons.lang3.StringUtils;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-
 import okw.gui.OKWLocatorBase;
-import okw.gui.adapter.selenium.webdriver.SeDriver;
+
 
 /**
  * @ingroup groupSeleniumChildGUIAdapter 

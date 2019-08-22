@@ -40,7 +40,6 @@ package okw.gui.adapter.selenium;
 */
 
 import java.util.ArrayList;
-import okw.gui.OKWLocator;
 import okw.gui.OKWLocatorBase;
 
 /**
