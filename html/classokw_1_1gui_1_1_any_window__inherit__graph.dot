@@ -64,7 +64,7 @@ digraph "okw.gui.AnyWindow"
   Node27 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
   Node29 [label="{okw.gui.frames.frmSafari\n|+ URL\l|}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1frm_safari.html",tooltip=" "];
   Node27 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
-  Node30 [label="{okw.gui.frames.FrmSeChrome\n|~ OKW_Prop\l# MEM\l|+ SelectWindow()\l+ StartApp()\l+ StopApp()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html",tooltip=" "];
+  Node30 [label="{okw.gui.frames.FrmSeChrome\n|~ OKW_Prop\l# MEM\l|+ SelectWindow()\l+ StartApp()\l+ StopApp()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html",tooltip="Frame Classe für Chrome implmentiert mit Chrome-Driver."];
   Node27 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
   Node31 [label="{okw.gui.frames.FrmSeFirefox\n|# MEM\l|+ SelectWindow()\l+ StartApp()\l+ StopApp()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1_frm_se_firefox.html",tooltip=" "];
   Node27 -> Node32 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];

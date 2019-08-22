@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 381, Datum: 08.22.2019 03:34:09</span>
+   &#160;<span id="projectnumber">Build_ID: 382, Datum: 08.22.2019 05:45:46</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -105,6 +105,9 @@ $(document).ready(function(){initNavTree('classokw_1_1gui_1_1frames_1_1_frm_se_c
 <div class="title">okw.gui.frames.FrmSeChrome Klassenreferenz<div class="ingroups"><a class="el" href="group__group_selenium_classes.html">OKW Selenium Klassen</a> &raquo; <a class="el" href="group__group_selenium_frames.html">OKW Frame-Klassen für Selenium</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Frame Classe für Chrome implmentiert mit Chrome-Driver.  
+ <a href="classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html#details">Mehr ...</a></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Klassendiagramm für okw.gui.frames.FrmSeChrome:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -454,9 +457,14 @@ Weitere Geerbte Elemente</h2></td></tr>
 <tr class="separator:aa683ac7d24411f0c95a46e4ccec59eeb inherit pro_attribs_classokw_1_1gui_1_1_any_win_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><dl class="section author"><dt>Autor</dt><dd>zoltan </dd></dl>
+<div class="textblock"><p>Frame Classe für Chrome implmentiert mit Chrome-Driver. </p>
+<p>Zu diesem Frame gehört die Properties-Datei "frmSeChrome.properties". Alle Chrome Properties/Eigenschaften können gesetzt werden. Diese müssen mit "frmSeChrome.option." beginnen.</p>
+<p>Beispiel Hide the automation toolbar warning: frmSeChrome.option.disable-infobars=disable-infobars bewirkt: ChromeOptions options = new ChromeOptions().addArguments( "disable-infobars" );</p>
+<p>Zusätzlich kann die Location der Chrome-Binär-datei als Property gesetzt werden: frmSeChrome.setBinary="/path/to/chrome"</p>
+<dl class="section author"><dt>Autor</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'zh@'+'op'+'enk'+'ey'+'wor'+'d.'+'de'; return false;">zh@op<span style="display: none;">.nosp@m.</span>enke<span style="display: none;">.nosp@m.</span>yword<span style="display: none;">.nosp@m.</span>.de</a> </dd></dl>
+<dl class="section date"><dt>Datum</dt><dd>2019-08-22 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_frm_se_chrome_8java_source.html#l00033">33</a> der Datei <a class="el" href="_frm_se_chrome_8java_source.html">FrmSeChrome.java</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_frm_se_chrome_8java_source.html#l00049">49</a> der Datei <a class="el" href="_frm_se_chrome_8java_source.html">FrmSeChrome.java</a>.</p>
 </div><h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
 <a id="a21dbb063d59b9c799af6b8a18172c322"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a21dbb063d59b9c799af6b8a18172c322">&#9670;&nbsp;</a></span>SelectWindow()</h2>
@@ -482,8 +490,8 @@ Weitere Geerbte Elemente</h2></td></tr>
 
 <p>Implementiert <a class="el" href="interfaceokw_1_1gui_1_1_i_g_u_i_window.html">okw.gui.IGUIWindow</a>.</p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_frm_se_chrome_8java_source.html#l00079">79</a> der Datei <a class="el" href="_frm_se_chrome_8java_source.html">FrmSeChrome.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="classokw_1_1gui_1_1_any_win_base.html#a4eae6cd76c43dc7c6ae3df4c48d261e0">LogFunctionStart</a>( <span class="stringliteral">&quot;SelectWindow&quot;</span> );</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        LogPrint( <span class="stringliteral">&quot;Do nothing here...&quot;</span> );</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="classokw_1_1gui_1_1_any_win_base.html#afc3cff59cf8744b2d6711b090e3f88e2">LogFunctionEnd</a>();</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div><div class="ttc" id="classokw_1_1gui_1_1_any_win_base_html_afc3cff59cf8744b2d6711b090e3f88e2"><div class="ttname"><a href="classokw_1_1gui_1_1_any_win_base.html#afc3cff59cf8744b2d6711b090e3f88e2">okw.gui.AnyWinBase.LogFunctionEnd</a></div><div class="ttdeci">void LogFunctionEnd()</div><div class="ttdoc">Methode ruft die Methode Logger.Instance.LogFunctionEnd() auf.</div><div class="ttdef"><b>Definition:</b> <a href="_any_win_base_8java_source.html#l00314">AnyWinBase.java:314</a></div></div>
+<p class="definition">Definiert in Zeile <a class="el" href="_frm_se_chrome_8java_source.html#l00095">95</a> der Datei <a class="el" href="_frm_se_chrome_8java_source.html">FrmSeChrome.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="classokw_1_1gui_1_1_any_win_base.html#a4eae6cd76c43dc7c6ae3df4c48d261e0">LogFunctionStart</a>( <span class="stringliteral">&quot;SelectWindow&quot;</span> );</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        LogPrint( <span class="stringliteral">&quot;Do nothing here...&quot;</span> );</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="classokw_1_1gui_1_1_any_win_base.html#afc3cff59cf8744b2d6711b090e3f88e2">LogFunctionEnd</a>();</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div><div class="ttc" id="classokw_1_1gui_1_1_any_win_base_html_afc3cff59cf8744b2d6711b090e3f88e2"><div class="ttname"><a href="classokw_1_1gui_1_1_any_win_base.html#afc3cff59cf8744b2d6711b090e3f88e2">okw.gui.AnyWinBase.LogFunctionEnd</a></div><div class="ttdeci">void LogFunctionEnd()</div><div class="ttdoc">Methode ruft die Methode Logger.Instance.LogFunctionEnd() auf.</div><div class="ttdef"><b>Definition:</b> <a href="_any_win_base_8java_source.html#l00314">AnyWinBase.java:314</a></div></div>
 <div class="ttc" id="classokw_1_1gui_1_1_any_win_base_html_a4eae6cd76c43dc7c6ae3df4c48d261e0"><div class="ttname"><a href="classokw_1_1gui_1_1_any_win_base.html#a4eae6cd76c43dc7c6ae3df4c48d261e0">okw.gui.AnyWinBase.LogFunctionStart</a></div><div class="ttdeci">void LogFunctionStart(String fpsMethodName)</div><div class="ttdoc">Methode ruft die Methode Logger.Instance.LogFunctionStart(fps_FunctionName), und erweitert den gegebe...</div><div class="ttdef"><b>Definition:</b> <a href="_any_win_base_8java_source.html#l00233">AnyWinBase.java:233</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -517,7 +525,7 @@ Weitere Geerbte Elemente</h2></td></tr>
 <div class="fragment"><div class="line">OKW.OKW_Memorrize.Instanz</div></div><!-- fragment --><dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013.12.06 \ </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_frm_se_chrome_8java_source.html#l00041">41</a> der Datei <a class="el" href="_frm_se_chrome_8java_source.html">FrmSeChrome.java</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_frm_se_chrome_8java_source.html#l00057">57</a> der Datei <a class="el" href="_frm_se_chrome_8java_source.html">FrmSeChrome.java</a>.</p>
 
 </div>
 </div>
@@ -531,7 +539,7 @@ Weitere Geerbte Elemente</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><b>frames</b></li><li class="navelem"><a class="el" href="classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html">FrmSeChrome</a></li>
-    <li class="footer">Erzeugt am Don Aug 22 2019 03:35:39 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Aug 22 2019 05:47:14 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
   </ul>
