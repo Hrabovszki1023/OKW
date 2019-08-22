@@ -1,14 +1,25 @@
 package okw.log.log2html;
 
-public class LogFunction extends LogBase
+
+public class LogFunction extends LogBaseNode
 {
 	
 	String myReturn = "";
+
+	private String type = "Function";
+    private String functionName;
+    private String[] parameter;
 	
-	LogFunction(LogBase Parent, String fpsFunctionName, String... fpsParameter)
+	LogFunction( LogBase Parent, String fpsFunctionName, String... fpsParameter)
 	{
 		setParent(Parent);
 		myID = AllCount;
+		
+	    functionName = fpsFunctionName;
+        parameter = fpsParameter;
+		
+        // inkrementieren FunctionCount
+        this.FunctionCount();
 		
 		StringBuilder StrBuilder = new StringBuilder();
 		
@@ -17,14 +28,8 @@ public class LogFunction extends LogBase
 		Boolean GreaterOne = false;
 		for ( String sParameter : fpsParameter )
 		{
-			if (GreaterOne)
-			{
-				StrBuilder.append( ", " ); 
-			}
-			else
-			{
-				GreaterOne = true;
-			}
+			if (GreaterOne) StrBuilder.append( ", " ); 
+			else GreaterOne = true;
 			
 			StrBuilder.append( sParameter ); 
 		}
@@ -39,18 +44,8 @@ public class LogFunction extends LogBase
 		myReturn = fpsReturn;
 	}
 	
-	protected void SetFail()
-	{
-		FunctionFail++;
-	}
-
-	protected void SetPass()
-	{
-		FunctionPass++;
-	}
-	
 	@Override
-	protected String getResult()
+	protected String getHTMLResult()
 	{
 		StringBuilder sbResult = new StringBuilder();
 		
@@ -102,7 +97,7 @@ public class LogFunction extends LogBase
 		
 		for( LogBase myLog: this.myLogs )
 		{
-			sbResult.append( myLog.getResult() );
+			sbResult.append( myLog.getHTMLResult() );
 		}
 		
 		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div>Return: "+ this.myReturn +"</div>\n" ); // Return-Value at the end...
@@ -115,4 +110,63 @@ public class LogFunction extends LogBase
 		return sbResult.toString();
 	}
 
+
+    @Override
+    protected void ErrorCount()
+    {
+        ErrorCount++;
+        
+        this.FunctionFail();
+
+        this.bError = true;
+        
+        if ( myParent != null)
+        {
+            myParent.ErrorCount();
+        }
+    }
+    
+    
+    @Override
+    protected void ExceptionCount()
+    {
+        ExceptionCount++;
+
+        this.FunctionFail();
+        
+        this.bException = true;
+        
+        if ( myParent != null)
+        {
+            myParent.ExceptionCount();
+        }
+    }
+    
+
+    protected void FunctionFail()
+    {
+        if ( ! (this.bError || this.bException ) )
+           myParent.FunctionFail();
+    }
+    
+    
+    @Override
+    protected String getJSONNodeProperties()
+    {
+        StringBuilder myJSON = new StringBuilder();
+        
+        myJSON.append( this.jsonElementComma( "type", this.type ) );
+        // Info
+        myJSON.append( this.jsonElementComma( "Info", this.Info ) );
+        
+        
+        myJSON.append( this.jsonElementComma( "Function", this.functionName ) );
+
+        for ( Integer i = 0; i < this.parameter.length; i++) { 
+            
+            myJSON.append( this.jsonElementComma( "Parameter" + i.toString(), parameter[i] ) );
+        } 
+
+        return myJSON.toString();
+    }
 }

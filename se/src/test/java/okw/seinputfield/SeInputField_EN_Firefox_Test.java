@@ -24,27 +24,27 @@ public class SeInputField_EN_Firefox_Test extends SeInputField_EN_Test
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        myLog2HTML = new Log2HTML("target/SeInputField_Firefox_Test.html");
+        myLog2HTML = new Log2HTML( "SeInputField_EN_Firefox_Test" );
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
-  @After
-  public void FirefoxAfter() throws Exception
-  {
-    Runtime rt = Runtime.getRuntime();
-    
-    if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) 
-       rt.exec("taskkill Firefox");
-    else rt.exec("pkill -f Firefox");
-      
-    Thread.sleep( 1000 );
-   
-  }
+//  @After
+//  public void FirefoxAfter() throws Exception
+//  {
+//    Runtime rt = Runtime.getRuntime();
+//    
+//    if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1) 
+//       rt.exec("taskkill Firefox");
+//    else rt.exec("pkill -f Firefox");
+//      
+//    Thread.sleep( 1000 );
+//   
+//  }
 	
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception
 	{
-		myLog2HTML.Result2HTML();
+		myLog2HTML.Result2HTML("target/SeInputField_EN_Firefox_Test.html");
 	}
 }

@@ -57,31 +57,41 @@ import okw.gui.adapter.selenium.webdriver.*;
  */
 public class SeBrowserWindow extends SeAnyWindow
 {
-    @OKW( FN = "URL", VerifyExists_TO=1, VerifyExists_PT=500 )
-    public SeURL URL = new SeURL();
-    
-    @OKW( FN = "BACK", VerifyExists_TO=1, VerifyExists_PT=500 )
-    public SeBACK BACK = new SeBACK();
+    @OKW( FN = "URL", VerifyExists_TO = 1, VerifyExists_PT = 500 )
+    public SeURL      URL      = new SeURL();
 
-    @OKW( FN = "MAXIMIZE", VerifyExists_TO=1, VerifyExists_PT=500 )
+    @OKW( FN = "BACK", VerifyExists_TO = 1, VerifyExists_PT = 500 )
+    public SeBACK     BACK     = new SeBACK();
+
+    @OKW( FN = "MAXIMIZE", VerifyExists_TO = 1, VerifyExists_PT = 500 )
     public SeMAXIMIZE MAXIMIZE = new SeMAXIMIZE();
 
-    @OKW( FN = "SIZE", VerifyExists_TO=1, VerifyExists_PT=500 )
-    public SeSIZE SIZE = new SeSIZE();
+    @OKW( FN = "SIZE", VerifyExists_TO = 1, VerifyExists_PT = 500 )
+    public SeSIZE     SIZE     = new SeSIZE();
 
-    @OKW( FN = "POSITION", VerifyExists_TO=1, VerifyExists_PT=500 )
+    @OKW( FN = "POSITION", VerifyExists_TO = 1, VerifyExists_PT = 500 )
     public SePOSITION POSITION = new SePOSITION();
-    
+
     @Override
     public void SelectWindow()
     {
-        if ( !this.WaitForMe() )
-        {
-            this.ResOpenList( "GUI-Object not found..." );
-            this.LogPrint( "Locator: '" + this.getLocator() + "'" );
-            this.ResCloseList();
+        this.LogFunctionStart( "SelectwWindow" );
 
-            throw new OKWGUIObjectNotFoundException( "BrowserChild not found!" );
+        try
+        {
+            if ( !this.WaitForMe() )
+            {
+                this.ResOpenList( "GUI-Object not found..." );
+                this.LogPrint( "Locator: '" + this.getLocator() + "'" );
+                this.ResCloseList();
+
+                throw new OKWGUIObjectNotFoundException( "SeBrowserWindow not found!" );
+            }
         }
+        finally
+        {
+            this.LogFunctionEnd();
+        }
+        return;
     }
 }

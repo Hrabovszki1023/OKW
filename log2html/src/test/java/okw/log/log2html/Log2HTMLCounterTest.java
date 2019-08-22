@@ -5,23 +5,29 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import okw.junit.JUnitBase;
 import okw.log.log2html.Log2HTML;
 
-public class Log2HTMLCounterTest {
-
+public class Log2HTMLCounterTest extends JUnitBase
+{
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() throws Exception
+	{
+	    
+	    okw.OKW_Properties.getInstance().setProperty( "Log2HTML.Test", "true" );
 	}
 
 	@After
 	public void tearDown() throws Exception {
 	}
 
+
 	@Test
-	public void tcTestcase_Normal_Test()
+	public void tc_OK_Testcase_Normal_Test()
 	{	
-		Log2HTML myLog = new Log2HTML( "target/Log2HTMLCounterTest-tcTestcase_Normal_Test.html" );
+		Log2HTML myLog = new Log2HTML( );
 						
 		myLog.LogTestcaseStart( "tcTestcase_Normal_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -31,36 +37,19 @@ public class Log2HTMLCounterTest {
 			myLog.LogPrint( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
 
-		myLog.Result2HTML();
-		
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "1".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "0".toString(), LogBase.TestcaseFail.toString() );
-
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "3".toString(), LogBase.PrintCount.toString() );		
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+        
+        String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+             
+        assertEquals( Expected, Current );      
 
 	}
 
 	
 	@Test
-	public void tcTestcase_Aborted_Test()
+	public void tc_OK_Testcase_Aborted_Test()
 	{	
-		Log2HTML myLog = new Log2HTML("target/Log2HTMLCounterTest-tcTestcase_Aborted_Test.html");
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 						
 		myLog.LogTestcaseStart( "tcTestcase_Aborted_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -69,35 +58,18 @@ public class Log2HTMLCounterTest {
 				myLog.LogKeyWordEnd();
 			myLog.LogPrint( "Print auf einer Ebene höher...");
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
-
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "3".toString(), LogBase.PrintCount.toString() );		
-		
+            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+            
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+            
+            assertEquals( Expected, Current );       
 	}
 
+	
 	@Test
-	public void tcTestcase_KeyWordNormal_Test()
+	public void tc_OK_Testcase_KeyWordNormal_Test()
 	{	
-		Log2HTML myLog = new Log2HTML("target/Log2HTMLCounterTest-tcTestcase_KeyWordNormal_Test.html");
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 						
 		myLog.LogTestcaseStart( "tcTestcase_KeyWordNormal_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -105,33 +77,18 @@ public class Log2HTMLCounterTest {
 				myLog.LogPrint( "Das hier ist ein weiterern Print-Absatz im Schlüsselwort.");
 				myLog.LogKeyWordEnd();
 			myLog.LogTestcaseEnd();
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "1".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "0".toString(), LogBase.TestcaseFail.toString() );
 
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
+			String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+            
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+            
+            assertEquals( Expected, Current );    
 
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "2".toString(), LogBase.PrintCount.toString() );	
 	}
 
 	
 	@Test
-	public void tcTestcase_KeyWordAborted_Test()
+	public void tc_OK_Testcase_KeyWordAborted_Test()
 	{	
 		Log2HTML myLog = new Log2HTML( "target/Log2HTMLCounterTest-tcTestcase_KeyWordAborted_Test.html" );
 						
@@ -140,72 +97,34 @@ public class Log2HTMLCounterTest {
 				myLog.LogPrint( "Print im Schlüsselwort");
 				myLog.LogPrint( "Das hier ist ein weiterern Print-Absatz im Schlüsselwort.");
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
-
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "2".toString(), LogBase.PrintCount.toString() );				
+	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+	            
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+	                 
+	            assertEquals( Expected, Current );    
 	}
 
 	@Test
-	public void tcTestcase_WarningAborted_Test()
+	public void tc_OK_Testcase_WarningAborted_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_WarningAborted_Test.html" );
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 				
 		myLog.LogTestcaseStart( "tcTestcase_WarningAborted_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
 				myLog.LogWarning("Warning 1");
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
-
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "1".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
+	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+	            
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+	            
+	            assertEquals( Expected, Current );       
 	}
 
 	@Test
-	public void tcTestcase_Warning_Test()
+	public void tc_OK_Testcase_Warning_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_Warning_Test.html" );
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 				
 		myLog.LogTestcaseStart( "tcTestcase_Warning_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -214,37 +133,18 @@ public class Log2HTMLCounterTest {
 				myLog.LogKeyWordEnd();
 			myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "1".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "0".toString(), LogBase.TestcaseFail.toString() );
-
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "1".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
+            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+            
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+            
+            assertEquals( Expected, Current );
 	}
 
 	
 	@Test
-	public void tcTestcase_Warning2_Test()
+	public void tc_OK_Testcase_Warning2_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_Warning2_Test.html" );
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 				
 		myLog.LogTestcaseStart( "tcTestcase_Warning2_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -254,74 +154,38 @@ public class Log2HTMLCounterTest {
 			myLog.LogWarning("Warning 1");
 			myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "1".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "0".toString(), LogBase.TestcaseFail.toString() );
+            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+            
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+            
+            assertEquals( Expected, Current );      
 
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "2".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
 	}
 
 	
 	@Test
-	public void tcTestcase_WarningAborted_TC_KW_F_Test()
+	public void tc_OK_Testcase_WarningAborted_TC_KW_F_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 		myLog.setDebugMode(true);
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_WarningAborted_TC_KW_F_Test.html" );
 				
 		myLog.LogTestcaseStart( "tcTestcase_WarningAborted_TC_KW_F_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
 				myLog.LogWarning("Warning 1");
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
-	
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-	
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "1".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
+	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+	            
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+	            
+	            assertEquals( Expected, Current );      
+
 	}
 
 	@Test
-	public void tcTestcase_Error_Test()
+	public void tc_OK_Testcase_Error_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_Error_Test.html" );
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 				
 		myLog.LogTestcaseStart( "tcTestcase_Error_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -330,150 +194,123 @@ public class Log2HTMLCounterTest {
 				myLog.LogKeyWordEnd();
 			myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
-
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-
-		assertEquals( "1".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
+	        String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+	        
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+	        
+	        assertEquals( Expected, Current );		
 	}
 	
 	
 	@Test
-	public void tcTestcase_Error2_Test()
+	public void tc_OK_Testcase_Error2_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_Error2_Test.html" );
 				
 		myLog.LogTestcaseStart( "tcTestcase_Error2_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
 				myLog.LogError("Error 1");
 				myLog.LogKeyWordEnd();
-			myLog.LogError("Error 2");
+			myLog.LogError("Error 2_Z");
 			myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
-
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-
-		assertEquals( "2".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
-	}
+            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+            
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+            
+            assertEquals( Expected, Current ); 
+    }
 
 	@Test
-	public void tcTestcase_ErrorAborted_Test()
+	public void tc_OK_Testcase_ErrorAborted_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_ErrorAborted_Test.html" );
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 				
 		myLog.LogTestcaseStart( "tcTestcase_ErrorAborted_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
 				myLog.LogError("Error 1");
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
+	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+	            
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+	            
+	            assertEquals( Expected, Current );      
 
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-
-		assertEquals( "1".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
 	}
 
 	@Test
-	public void tcTestcase_ErrorAborted_TC_KW_F_Test()
+	public void tc_OK_Testcase_ErrorAborted_TC_KW_F_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 		myLog.setDebugMode(true);
 		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_ErrorAborted_TC_KW_F_Test.html" );
-				
 		myLog.LogTestcaseStart( "tcTestcase_ErrorAborted_TC_KW_F_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
 				myLog.LogFunctionStartDebug("Funktion_1", "P1=", "P1");
 				myLog.LogError("Error 1");
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
+	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+	            
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+	            
+	            assertEquals( Expected, Current );      
 
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "1".toString(), LogBase.FunctionFail.toString() );
-
-		assertEquals( "1".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
 	}
 
+	   @Test
+	    public void tc_OK_Testcase_FunktionDebug_Test()
+	    {   
+	        Log2HTML myLog = new Log2HTML(name.getMethodName());
+	        myLog.setDebugMode(true);
+	        
+	        myLog.LogTestcaseStart( "tcTestcase_ErrorAborted_TC_KW_F_Test" );
+	            myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+	                myLog.LogPrint( "Print im Schlüsselwort");
+	                myLog.LogFunctionStartDebug("Funktion_1", "Param 1", "Value 1");
+	                    myLog.LogError("Error 1");
+	                    myLog.LogFunctionEndDebug( );
+	                myLog.LogKeyWordEnd( );
+	        myLog.LogTestcaseEnd( );
+	        
+	                String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+	                
+	                String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+	                
+	                assertEquals( Expected, Current );      
+	    }
+	   
+	   
+       @Test
+       public void tc_OK_Testcase_Funktion_Test()
+       {   
+           Log2HTML myLog = new Log2HTML(name.getMethodName());
+           myLog.setDebugMode(true);
+           
+           myLog.LogTestcaseStart( "tcTestcase_Funktion_Test" );
+               myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+                   myLog.LogPrint( "Print im Schlüsselwort");
+                   myLog.LogFunctionStart("Funktion_1", "Param 1", "Value 1");
+                       myLog.LogError("Error 1");
+                       myLog.LogFunctionEnd( );
+                   myLog.LogKeyWordEnd( );
+           myLog.LogTestcaseEnd( );
+           
+                   String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+                   
+                   String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+                   
+                   assertEquals( Expected, Current );      
+       }
+       
+       
 	@Test
-	public void tcTestcase_Passed_Test()
+	public void tc_OK_Testcase_Passed_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_Passed_Test.html" );
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 				
 		myLog.LogTestcaseStart( "tcTestcase_Passed_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -482,37 +319,18 @@ public class Log2HTMLCounterTest {
 				myLog.LogKeyWordEnd();
 			myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "1".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "0".toString(), LogBase.TestcaseFail.toString() );
-	
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-	
-		assertEquals( "1".toString(), LogBase.PassedCount.toString() );
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
+            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+            
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+            
+            assertEquals( Expected, Current );      
+
 	}
 
 	@Test
-	public void tcTestcase_Passed2_Test()
+	public void tc_OK_Testcase_Passed2_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_Passed2_Test.html" );
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 				
 		myLog.LogTestcaseStart( "tcTestcase_Passed2_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -522,75 +340,37 @@ public class Log2HTMLCounterTest {
 			myLog.LogPass("Passed 2");
 			myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "1".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "0".toString(), LogBase.TestcaseFail.toString() );
-	
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-	
-		assertEquals( "2".toString(), LogBase.PassedCount.toString() );
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
+            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+            
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+            
+            assertEquals( Expected, Current );      
+
 	}
 
 	@Test
-	public void tcTestcase_PassedAborted_Test()
+	public void tc_OK_Testcase_PassedAborted_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_PassedAborted_Test.html" );
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 				
 		myLog.LogTestcaseStart( "tcTestcase_PassedAborted_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
 				myLog.LogPass("Error 1");
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
-	
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.PassedCount.toString() );
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
+	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+	            
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+	            
+	            assertEquals( Expected, Current );      
+
 	}
 
 	@Test
-	public void tcTestcase_PassedAborted_TC_KW_F_Test()
+	public void tc_OK_Testcase_PassedAborted_TC_KW_F_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 		myLog.setDebugMode(true);
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_PassedAborted_TC_KW_F_Test.html" );
 				
 		myLog.LogTestcaseStart( "tcTestcase_PassedAborted_TC_KW_F_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -598,38 +378,18 @@ public class Log2HTMLCounterTest {
 				myLog.LogFunctionStartDebug("Funktion_1", "P1=", "P1");
 				myLog.LogPass("Pass 1");
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
+	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+	            
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+	            
+	            assertEquals( Expected, Current );      
 	
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "1".toString(), LogBase.FunctionFail.toString() );
-	
-		assertEquals( "1".toString(), LogBase.PassedCount.toString() );
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "0".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		//assertEquals( "0".toString(), LogBase.Passed.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
 	}
 
 	@Test
-	public void tcTestcase_Exception_Test()
+	public void tc_OK_Testcase_Exception_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_Exception_Test.html" );
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 				
 		myLog.LogTestcaseStart( "tcTestcase_Exception_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -638,37 +398,18 @@ public class Log2HTMLCounterTest {
 				myLog.LogKeyWordEnd();
 			myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
-	
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-	
-		assertEquals( "0".toString(), LogBase.PassedCount.toString() );
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "1".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );
+            String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
+            
+            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+            
+            assertEquals( Expected, Current );      
+
 	}
 
 	@Test
-	public void tcTestcase_Exception2_Test()
+	public void tc_OK_Testcase_Exception2_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_Exception2_Test.html" );
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 				
 		myLog.LogTestcaseStart( "tcTestcase_Exception2_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -678,75 +419,37 @@ public class Log2HTMLCounterTest {
 			myLog.LogException("Exception 2");
 			myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
-	
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
+		String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
 		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
+        String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
 		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-	
-		assertEquals( "0".toString(), LogBase.PassedCount.toString() );
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "2".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
+		assertEquals( Expected, Current );
+
 	}
 
 	@Test
-	public void tcTestcase_ExceptionAborted_Test()
+	public void tc_OK_Testcase_ExceptionAborted_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_PassedAborted_Test.html" );
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 				
 		myLog.LogTestcaseStart( "tcTestcase_PassedAborted_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
 				myLog.LogPrint( "Print im Schlüsselwort");
 				myLog.LogException("Exception 1");
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
-	
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "0".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionFail.toString() );
-	
-		assertEquals( "0".toString(), LogBase.PassedCount.toString() );
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "1".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		assertEquals( "1".toString(), LogBase.PrintCount.toString() );				
+	            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+	            
+	            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+	            
+	            assertEquals( Expected, Current );      
+
 	}
 
 	@Test
-	public void tcTestcase_ExceptionAborted_TC_KW_F_Test()
+	public void tc_OK_Testcase_ExceptionAborted_TC_KW_F_Test()
 	{	
-		Log2HTML myLog = new Log2HTML();
+		Log2HTML myLog = new Log2HTML(name.getMethodName());
 		myLog.setDebugMode(true);
-		
-		myLog.setHTML_File( "target/Log2HTMLCounterTest-tcTestcase_ExceptionAborted_TC_KW_F_Test.html" );
 				
 		myLog.LogTestcaseStart( "tcTestcase_ExceptionAborted_TC_KW_F_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -760,30 +463,148 @@ public class Log2HTMLCounterTest {
         //myLog.LogTestcaseEnd();
                 
 		
-		myLog.Result2HTML();
-			
-		assertEquals( "1".toString(), LogBase.TestcaseCount.toString() );
-		assertEquals( "0".toString(), LogBase.TestcasePass.toString() );
-		assertEquals( "1".toString(), LogBase.TestcaseFail.toString() );
-	
-		assertEquals( "0".toString(), LogBase.SequensCount.toString() );
-		assertEquals( "0".toString(), LogBase.SequensPass.toString() );
-		assertEquals( "0".toString(), LogBase.SequensFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.KeyWordCount.toString() );
-		assertEquals( "0".toString(), LogBase.KeyWordPass.toString() );
-		assertEquals( "1".toString(), LogBase.KeyWordFail.toString() );
-		
-		assertEquals( "1".toString(), LogBase.FunctionCount.toString() );
-		assertEquals( "0".toString(), LogBase.FunctionPass.toString() );
-		assertEquals( "1".toString(), LogBase.FunctionFail.toString() );
-	
-		assertEquals( "1".toString(), LogBase.PassedCount.toString() );
-		assertEquals( "0".toString(), LogBase.ErrorCount.toString() );
-		assertEquals( "1".toString(), LogBase.ExceptionCount.toString() );
-		assertEquals( "0".toString(), LogBase.WarningCount.toString() );
-		//assertEquals( "0".toString(), LogBase.Passed.toString() );
-		assertEquals( "2".toString(), LogBase.PrintCount.toString() );				
+		            String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+		            
+		            String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+		            
+		            assertEquals( Expected, Current );      
 	}
+    
+    
+    @Test
+    public void tc_LogRemoteACCall_Test()
+    {   
+        Log2HTML myLog = new Log2HTML(name.getMethodName());
+        myLog.setDebugMode(true);
+        
+        myLog.LogTestcaseStart( "tcAcceptanceCriteria_Print" );
+            myLog.LogRemoteACCallStart( "WHEN Gherkin IS myGherkin", "I" );
+                myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+                    myLog.LogPrint( "Print im Schlüsselwort");
+                    myLog.LogKeyWordEnd( );
+                myLog.LogRemoteACCallEnd();
+        myLog.LogTestcaseEnd( );
 
+        myLog.LogTestcaseStart( "tcAcceptanceCriteria_Warning" );
+            myLog.LogRemoteACCallStart( "WHEN Gherkin IS myGherkin", "I" );
+                myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+                    myLog.LogWarning( "Warning im Schlüsselwort");
+                myLog.LogKeyWordEnd( );
+            myLog.LogRemoteACCallEnd();
+        myLog.LogTestcaseEnd( );
+        
+        myLog.LogTestcaseStart( "tcAcceptanceCriteria_Error" );
+            myLog.LogRemoteACCallStart( "WHEN Gherkin IS myGherkin", "I" );
+                myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+                    myLog.LogError( "Error im Schlüsselwort");
+                myLog.LogKeyWordEnd( );
+            myLog.LogRemoteACCallEnd();
+        myLog.LogTestcaseEnd( );
+        
+        myLog.LogTestcaseStart( "tcAcceptanceCriteria_Exception" );
+            myLog.LogRemoteACCallStart( "WHEN Gherkin IS myGherkin", "I" );
+                myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+                    myLog.LogException( "Exception im Schlüsselwort");
+                myLog.LogKeyWordEnd( );
+            myLog.LogRemoteACCallEnd();
+        myLog.LogTestcaseEnd( );
+        
+                String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+                
+                String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+                
+                assertEquals( Expected, Current );      
+    }
+    
+    
+    @Test
+    public void tc_LocalACCall_Test()
+    {   
+        Log2HTML myLog = new Log2HTML(name.getMethodName());
+        myLog.setDebugMode(true);
+        
+        myLog.LogTestcaseStart( "tcAcceptanceCriteria_Print" );
+            myLog.LogLocalACCallStart( "WHEN Gherkin IS myGherkin", "I" );
+                myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+                    myLog.LogPrint( "Print im Schlüsselwort");
+                    myLog.LogKeyWordEnd( );
+                myLog.LogLocalACCallEnd();
+        myLog.LogTestcaseEnd( );
+
+        myLog.LogTestcaseStart( "tcAcceptanceCriteria_Warning" );
+            myLog.LogLocalACCallStart( "WHEN Gherkin IS myGherkin", "I" );
+                myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+                    myLog.LogWarning( "Warning im Schlüsselwort");
+                myLog.LogKeyWordEnd( );
+            myLog.LogLocalACCallEnd();
+        myLog.LogTestcaseEnd( );
+        
+        myLog.LogTestcaseStart( "tcAcceptanceCriteria_Error" );
+            myLog.LogLocalACCallStart( "WHEN Gherkin IS myGherkin", "I" );
+                myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+                    myLog.LogError( "Error im Schlüsselwort");
+                myLog.LogKeyWordEnd( );
+            myLog.LogLocalACCallEnd();
+        myLog.LogTestcaseEnd( );
+        
+        myLog.LogTestcaseStart( "tcAcceptanceCriteria_Exception" );
+            myLog.LogLocalACCallStart( "WHEN Gherkin IS myGherkin", "I" );
+                myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+                    myLog.LogException( "Exception im Schlüsselwort");
+                myLog.LogKeyWordEnd( );
+            myLog.LogLocalACCallEnd();
+        myLog.LogTestcaseEnd( );
+        
+        
+        String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+                
+        String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+                
+        assertEquals( Expected, Current );      
+    }
+    
+    
+    @Test
+    public void tc_Step_Test()
+    {   
+        Log2HTML myLog = new Log2HTML(name.getMethodName());
+        
+        myLog.LogTestcaseStart( "tcAcceptanceCriteria_Print" );
+            myLog.LogStepStart( "myCat_1", "myCatType_1", "myChoice_1", "myFeature_1", "myLocalFeature_1", "WHEN myCat_1 IS myChoice_1", "myType_1 TestStep" );
+                myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+                    myLog.LogPrint( "Print im Schlüsselwort");
+                    myLog.LogKeyWordEnd( );
+                myLog.LogStepEnd();
+        myLog.LogTestcaseEnd( );
+
+        myLog.LogTestcaseStart( "tcAcceptanceCriteria_Warning" );
+        myLog.LogStepStart( "myCat_2", "myCatType_2", "myChoice_2", "myFeature_2", "myLocalFeature_2", "WHEN myCat_2 IS myChoice_2", "myType_2 TestStep" );
+                myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+                    myLog.LogWarning( "Warning im Schlüsselwort");
+                myLog.LogKeyWordEnd( );
+            myLog.LogStepEnd();
+        myLog.LogTestcaseEnd( );
+        
+        myLog.LogTestcaseStart( "tcAcceptanceCriteria_Error" );
+            myLog.LogStepStart( "myCat_3", "myCatType_3", "myChoice_3", "myFeature_3", "myLocalFeature_3", "WHEN myCat_3 IS myChoice_3", "myType_3 TestStep" );
+                myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+                    myLog.LogError( "Error im Schlüsselwort");
+                myLog.LogKeyWordEnd( );
+            myLog.LogStepEnd();
+        myLog.LogTestcaseEnd( );
+        
+        myLog.LogTestcaseStart( "tcAcceptanceCriteria_Exception" );
+            myLog.LogStepStart( "myCatName_4", "myCatType_4", "myChoice_4", "myFeature_4", "myLocalFeature_4", "WHEN myCat_4 IS myChoice_4", "myType_4 TestStep" );
+                myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
+                    myLog.LogException( "Exception im Schlüsselwort");
+                myLog.LogKeyWordEnd( );
+            myLog.LogStepEnd();
+        myLog.LogTestcaseEnd( );
+        
+                String Current = myLog.Result2JSON( "target/" + name.getMethodName()+".json" );
+                
+                String Expected = this.loadUTF8FileFromResource( "Log2HTMLCounterTest/" + name.getMethodName() + ".json" );
+                
+                assertEquals( Expected, Current );      
+   }
 }

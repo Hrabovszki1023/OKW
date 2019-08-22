@@ -1,0 +1,150 @@
+{
+  "statistics" : {
+    "ErrorCount" : "1",
+    "ExceptionCount" : "1",
+    "WarningCount" : "1",
+    "PassedCount" : "0",
+    "PrintCount" : "1",
+    "FunctionCount" : "0",
+    "FunctionFail" : "0",
+    "FunctionPass" : "0",
+    "SequensCount" : "0",
+    "SequensFail" : "0",
+    "SequensPass" : "0",
+    "LocalACCallCount" : "0",
+    "LocalACCallFail" : "0",
+    "LocalACCallPass" : "0",
+    "RemoteACCallCount" : "0",
+    "RemoteACCallFail" : "0",
+    "RemoteACCallPass" : "0",
+    "StepCount" : "4",
+    "StepFail" : "2",
+    "StepPass" : "2",
+    "KeyWordCount" : "4",
+    "KeyWordFail" : "2",
+    "KeyWordPass" : "2",
+    "startedAt" : "Start time TestMode",
+    "finishedAt" : "End time TestMode",
+    "duration" : "Duration TestMode"
+  },
+  "features" : [ {
+    "name" : "tc_Step_Test",
+    "result" : "",
+    "tests" : [ {
+      "test" : {
+        "name" : "tcAcceptanceCriteria_Exception",
+        "type" : "TestCase",
+        "statistics" : {
+          "ErrorCount" : "0",
+          "ExceptionCount" : "1",
+          "WarningCount" : "0",
+          "PassedCount" : "0",
+          "PrintCount" : "0",
+          "FunctionCount" : "0",
+          "FunctionFail" : "0",
+          "FunctionPass" : "0",
+          "SequensCount" : "0",
+          "SequensFail" : "0",
+          "SequensPass" : "0",
+          "LocalACCallCount" : "0",
+          "LocalACCallFail" : "0",
+          "LocalACCallPass" : "0",
+          "RemoteACCallCount" : "0",
+          "RemoteACCallFail" : "0",
+          "RemoteACCallPass" : "0",
+          "StepCount" : "1",
+          "StepFail" : "1",
+          "StepPass" : "0",
+          "KeyWordCount" : "1",
+          "KeyWordFail" : "1",
+          "KeyWordPass" : "0",
+          "startedAt" : "Start time TestMode",
+          "finishedAt" : "End time TestMode",
+          "duration" : "Duration TestMode"
+        },
+        "elements" : [ {
+          "element" : {
+            "type" : "myType_4 TestStep",
+            "categoryName" : "myCatName_4",
+            "categoryType" : "myCatType_4",
+            "choiceValue" : "myChoice_4",
+            "featureName" : "myFeature_4",
+            "localCategoryName" : "myLocalFeature_4",
+            "sourceExcerpt" : "WHEN myCat_4 IS myChoice_4",
+            "result" : "",
+            "statistics" : {
+              "ErrorCount" : "0",
+              "ExceptionCount" : "1",
+              "WarningCount" : "0",
+              "PassedCount" : "0",
+              "PrintCount" : "0",
+              "FunctionCount" : "0",
+              "FunctionFail" : "0",
+              "FunctionPass" : "0",
+              "SequensCount" : "0",
+              "SequensFail" : "0",
+              "SequensPass" : "0",
+              "LocalACCallCount" : "0",
+              "LocalACCallFail" : "0",
+              "LocalACCallPass" : "0",
+              "RemoteACCallCount" : "0",
+              "RemoteACCallFail" : "0",
+              "RemoteACCallPass" : "0",
+              "StepCount" : "1",
+              "StepFail" : "0",
+              "StepPass" : "0",
+              "KeyWordCount" : "1",
+              "KeyWordFail" : "1",
+              "KeyWordPass" : "0",
+              "startedAt" : "Start time TestMode",
+              "finishedAt" : "End time TestMode",
+              "duration" : "Duration TestMode"
+            },
+            "elements" : [ {
+              "element" : {
+                "type" : "KeyWord",
+                "info" : "Gib ein: 'Name' = 'Zoltan'",
+                "Keyword" : "Gib ein",
+                "Parameter0" : "Name",
+                "Parameter1" : "Zoltan",
+                "statistics" : {
+                  "ErrorCount" : "0",
+                  "ExceptionCount" : "1",
+                  "WarningCount" : "0",
+                  "PassedCount" : "0",
+                  "PrintCount" : "0",
+                  "FunctionCount" : "0",
+                  "FunctionFail" : "0",
+                  "FunctionPass" : "0",
+                  "SequensCount" : "0",
+                  "SequensFail" : "0",
+                  "SequensPass" : "0",
+                  "LocalACCallCount" : "0",
+                  "LocalACCallFail" : "0",
+                  "LocalACCallPass" : "0",
+                  "RemoteACCallCount" : "0",
+                  "RemoteACCallFail" : "0",
+                  "RemoteACCallPass" : "0",
+                  "StepCount" : "0",
+                  "StepFail" : "0",
+                  "StepPass" : "0",
+                  "KeyWordCount" : "1",
+                  "KeyWordFail" : "1",
+                  "KeyWordPass" : "0",
+                  "startedAt" : "Start time TestMode",
+                  "finishedAt" : "End time TestMode",
+                  "duration" : "Duration TestMode"
+                },
+                "elements" : [ {
+                  "element" : {
+                    "Exception" : "Exception im Schlüsselwort"
+                  }
+                } ]
+              }
+            } ]
+          }
+        } ]
+      }
+    } ]
+  } ]
+}

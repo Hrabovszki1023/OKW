@@ -8,65 +8,46 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Stack;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
 import okw.log.ILogger;
 
 
 // http://www.java-blog-buch.de/d-plugin-entwicklung-in-java/
 
-public class Log2HTML extends LogBase implements ILogger
+public class Log2HTML extends LogBaseNode implements ILogger
 {
 
-	// Das ist das Root-Objekt, der Pointer wird im Konstruktor zunächst drauf gesetzt,
-	//LogBase Point2LogObject;
-	
+	// Das ist das Root-Objekt, der Pointer wird im Konstruktor zuerst auf den root/Wurzel gesetzt,
+	// LogBase Point2LogObject;
 	private Stack<LogBase> Pointer2LogBaseStack = new Stack<LogBase>();
 	
-	// Wo soll das ergebnissingescrieben werden
-	private String HTML_File = "";
-	
-	private Boolean bFinalize = false;
-	
-	public String getHTML_File()
-	{
-		return HTML_File;
-	}
 
-	public void setHTML_File( String hTML_File )
-	{
-		// Alle Zähler auf "0" setzen
-		this.reset();
-		HTML_File = hTML_File;
-	}
-
+	// name des Features, welches hier getestet wird.
+	private String name = "";
+	
+    // result - das Ergebniss des Features welche hier representiert wird.
+    private String result = ""; // mögliche Werte "success"
+	
 	public Log2HTML()
 	{
-		this.myDuration.startTimer();;
+		this.myDuration.startTimer();
 		Pointer2LogBaseStack.push(this);
 	}
 
-	public Log2HTML(String fpsOutputFilename)
-	{
-		bFinalize = true;
-		this.myDuration.startTimer();;
-		Pointer2LogBaseStack.push(this);
-		setHTML_File( fpsOutputFilename );
-	}
 
-	
-	protected void finalize( )
+	public Log2HTML( String featereName )
 	{
-		StopAllTimerAndEmptyStack();
-		
-		if (bFinalize)
-		{
-			Result2HTML();
-		}
+		this.myDuration.startTimer();;
+		this.name = featereName;
+
+		Pointer2LogBaseStack.push(this);
 	}
 
 	
 	public void LogPass(String fpsMessage)
 	{
-		PassedCount++;
 		AllCount++;
 		
 		Pointer2LogBaseStack.peek().myLogs.add( new LogPass(Pointer2LogBaseStack.peek(), fpsMessage) ); 	
@@ -75,7 +56,6 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void LogPrint(String fpsMessage)
 	{
-		PrintCount++;
 		AllCount++;
 		
 		Pointer2LogBaseStack.peek().myLogs.add( new LogPrint(Pointer2LogBaseStack.peek(), fpsMessage) ); 	
@@ -84,18 +64,14 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void LogPrintDebug( String fpsMessage )
 	{
-		
-		PrintCount++;
 		AllCount++;
 		
 		Pointer2LogBaseStack.peek().myLogs.add( new LogPrintDebug(Pointer2LogBaseStack.peek(), fpsMessage) );
-		
 	}
 
 
 	public void LogWarning(String fpsMessage)
 	{
-		WarningCount++;
 		AllCount++;
 		
 		Pointer2LogBaseStack.peek().myLogs.add( new LogWarning(Pointer2LogBaseStack.peek(), fpsMessage) ); 	
@@ -104,7 +80,6 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void LogError(String fpsMessage)
 	{
-		ErrorCount++;
 		AllCount++;
 		
 		Pointer2LogBaseStack.peek().myLogs.add( new LogError(Pointer2LogBaseStack.peek(), fpsMessage) );
@@ -113,16 +88,22 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void LogException(String fpsMessage)
 	{
-		ExceptionCount++;
 		AllCount++;
 		
 		Pointer2LogBaseStack.peek().myLogs.add( new LogException(Pointer2LogBaseStack.peek(), fpsMessage) ); 	
 	}
 
 
+    public void LogSourceLocation( String Start, String End, String featureName, String sourceType )
+    {
+        AllCount++;
+        
+        Pointer2LogBaseStack.peek().myLogs.add( new LogSourceLocation(Pointer2LogBaseStack.peek(), Start, End, featureName, sourceType) );    
+    }
+
+    
 	public void LogFunctionStart(String fps_FunctionName, String... fpsParameter)
     {
-		FunctionCount++;
 		AllCount++;
 		
     	LogBase myLog = new LogFunction( Pointer2LogBaseStack.peek(), fps_FunctionName, fpsParameter);
@@ -138,7 +119,6 @@ public class Log2HTML extends LogBase implements ILogger
 
 	public void LogFunctionStartDebug( String fps_FunctionName, String... fpsParameter )
 	{
-		FunctionCount++;
 		AllCount++;
 		
     	LogBase myLog = new LogFunctionDebug( Pointer2LogBaseStack.peek(), fps_FunctionName, fpsParameter);
@@ -148,7 +128,6 @@ public class Log2HTML extends LogBase implements ILogger
     	
     	Pointer2LogBaseStack.peek().myLogs.add(myLog);
     	Pointer2LogBaseStack.push(myLog);
-    	
 	}
 
 
@@ -285,7 +264,6 @@ public class Log2HTML extends LogBase implements ILogger
 	
     public void LogTestcaseStart(String fps_FunctionName)
 	{
-		TestcaseCount++;
 		AllCount++;
 		
 		StopAllTimerAndEmptyStack();
@@ -320,7 +298,6 @@ public class Log2HTML extends LogBase implements ILogger
     
     public void LogKeyWordStart(String fps_FunctionName, String... fpsParameter)
     {
-		KeyWordCount++;
 		AllCount++;
 		
     	LogBase myLog = new LogKeyword( Pointer2LogBaseStack.peek(), fps_FunctionName, fpsParameter);
@@ -344,16 +321,145 @@ public class Log2HTML extends LogBase implements ILogger
 
     	if ( !(myLog.bError  || myLog.bException))
     	{
-    		KeyWordPass++;
+            myLog.KeyWordPass( );
     	}
 
 		Pointer2LogBaseStack.pop();
 
     }
 
+    
+    public void LogLocalACCallStart( String sourceExcerpt, String Type )
+    {
+        AllCount++;
+        
+        LogBase myLog = new LogLocalACCall( Pointer2LogBaseStack.peek(), sourceExcerpt, Type );
+        
+        // Timer starten
+        myLog.myDuration.startTimer();
+
+        Pointer2LogBaseStack.peek().myLogs.add(myLog);
+        Pointer2LogBaseStack.push(myLog);
+    }
+
+    
+    public void LogLocalACCallEnd()
+    {
+        LogBase myLog = Pointer2LogBaseStack.peek();
+        // Timer Stoppen...
+        myLog.myDuration.stopTimer();
+
+        @SuppressWarnings( "unused" )
+        LogLocalACCall myCheck = (LogLocalACCall)myLog;
+
+        if ( !(myLog.bError  || myLog.bException))
+        {
+            myLog.LocalACCallPass( );
+        }
+
+        Pointer2LogBaseStack.pop();
+    }
+
+    /**
+    * \~german
+    * Log markiert den Start eines Steps.
+    * 
+    * Das ist ein [Harmony](https://cloud.4test.io/). spezifischer log
+    * und ist für den Code-Compiler von Harmony Reserviert
+    *
+    * @param categoryName Name der Kategorie (category)
+    * @param choiceValue Choice, also der zugeordnetter Wert der Categorie
+    * @param featureName 
+    * @param localCategoryName Lokalar Name der Kategorie 
+    * @param sourceExcerpt ist der Auszug, von der dieser Schritt abgeleitet wurde
+    * 
+    * \~english
+    * Log marks the start of a step.
+    * 
+    * Das ist ein [Harmony](https://cloud.4test.io/). spezifischer log
+    * und ist für den Code-Compiler von Harmony Reserviert
+    *
+    * @param categoryName Category name
+    * @param choiceValue Choice, i.e. the assigned value of the category
+    * @param featureName Feature Name
+    * @param localCategoryName Local name of category 
+    * @param sourceExcerpt is the excerpt from which this step was derived
+    * 
+    * \~
+    * @author Zoltán Hrabovszki
+    * @date 2019-08-05
+    */
+    public void LogStepStart( String categoryName, String categoryType, 
+                    String choiceValue, String featureName,
+                    String localCategoryName, String sourceExcerpt,
+                    String type )
+    {
+        AllCount++;
+
+        LogBase myLog = new LogStep( Pointer2LogBaseStack.peek(), categoryName, categoryType, choiceValue, featureName, localCategoryName, sourceExcerpt, type );
+
+        // Timer starten
+        myLog.myDuration.startTimer();
+
+        Pointer2LogBaseStack.peek().myLogs.add( myLog );
+        Pointer2LogBaseStack.push( myLog );
+    }
+    
+    
+    public void LogStepEnd()
+    {
+        LogBase myLog = Pointer2LogBaseStack.peek();
+        // Timer Stoppen...
+        myLog.myDuration.stopTimer();
+        
+        @SuppressWarnings( "unused" )
+        LogStep myCheck = (LogStep)myLog;
+        
+        if ( !(myLog.bError  || myLog.bException))
+        {
+            StepPass++;
+        }
+        
+        Pointer2LogBaseStack.pop();
+    }
+
+    
+
+    
+    public void LogRemoteACCallStart( String sourceExcerpt, String Type )
+    {
+        AllCount++;
+        
+        LogBase myLog = new LogRemoteACCall( Pointer2LogBaseStack.peek(), sourceExcerpt, Type );
+        
+        // Timer starten
+        myLog.myDuration.startTimer();
+
+        Pointer2LogBaseStack.peek().myLogs.add(myLog);
+        Pointer2LogBaseStack.push(myLog);
+    }
+    
+    
+    public void LogRemoteACCallEnd()
+    {
+        LogBase myLog = Pointer2LogBaseStack.peek();
+        // Timer Stoppen...
+        myLog.myDuration.stopTimer();
+        
+        @SuppressWarnings( "unused" )
+        LogRemoteACCall myCheck = (LogRemoteACCall)myLog;
+        
+        if ( !(myLog.bError  || myLog.bException))
+        {
+            StepPass++;
+        }
+        
+        Pointer2LogBaseStack.pop();
+    }
+    
+    
     public void LogSequenceStart( String fpsKeywordName, String fpsWindowFN, String fps_SequensName, String... fpsParameter)
     {
-		SequensCount++;
 		AllCount++;
 		
     	LogBase myLog = new LogSequence( Pointer2LogBaseStack.peek(), fpsWindowFN, fps_SequensName, fpsParameter);
@@ -377,7 +483,7 @@ public class Log2HTML extends LogBase implements ILogger
 
     	if ( !(myLog.bError  || myLog.bException))
     	{
-    		SequensPass++;
+    	    myLog.SequencePass();
     	}
 
 		Pointer2LogBaseStack.pop();
@@ -394,6 +500,7 @@ public class Log2HTML extends LogBase implements ILogger
     	return myResult.toString();
     }
 
+    
     private String getHTMLHeader() throws IOException
     {
     	StringBuilder myResult = new StringBuilder();
@@ -473,7 +580,7 @@ public class Log2HTML extends LogBase implements ILogger
     }
 
     
-    private String getStatistics()
+    private String getHTMLStatistics()
     {
     	StringBuilder myResult = new StringBuilder();
     	
@@ -536,10 +643,10 @@ public class Log2HTML extends LogBase implements ILogger
 
     	myResult.append("\t\t<tr>\n");    	
     	myResult.append("\t\t\t<td align='right'>Sequences:</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + SequensCount.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + SequensPass.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + SequensFail.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td >" + getFailPassBar(SequensFail, SequensCount - SequensFail) + "</td>\n");
+    	myResult.append("\t\t\t<td align='center'>" + SequenceCount.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td align='center'>" + SequencePass.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td align='center'>" + SequenceFail.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td >" + getFailPassBar(SequenceFail, SequenceCount - SequenceFail) + "</td>\n");
     	myResult.append("\t\t</tr>\n");
 
     	myResult.append("\t\t<tr>\n");    	
@@ -591,13 +698,7 @@ public class Log2HTML extends LogBase implements ILogger
     
     public void Result2HTML(String fpsFilename)
     {
-    	HTML_File = fpsFilename;
-    	Result2HTML();
-    }
-    
-    
-    public void Result2HTML()
-    {
+ 
     	StringBuilder myResult = new StringBuilder();
     	
 		try{
@@ -605,14 +706,14 @@ public class Log2HTML extends LogBase implements ILogger
 			StopAllTimerAndEmptyStack();
 			
 			myResult.append(getHTMLHeader());
-			myResult.append(getStatistics());
+			myResult.append(getHTMLStatistics());
     	
 			myResult.append("<h2>Result Log</h2>\n");
-			myResult.append(getResult());
+			myResult.append(getHTMLResult());
 			myResult.append(getHTMLFooter());
    
 
-		    FileWriter fw = new FileWriter(HTML_File);
+		    FileWriter fw = new FileWriter(fpsFilename);
 		    BufferedWriter bw = new BufferedWriter(fw);
 
 		    bw.write( myResult.toString() );
@@ -626,28 +727,125 @@ public class Log2HTML extends LogBase implements ILogger
     }
 
     
-	protected String getResult()
+	protected String getHTMLResult()
 	{
 		StringBuilder sbResult = new StringBuilder();
 	
 		for( LogBase myLog: this.myLogs )
 		{
-			sbResult.append( myLog.getResult() );
+			sbResult.append( myLog.getHTMLResult() );
 		}
 
 		return sbResult.toString();
 	}
 
 	
-	protected void SetFail()
-	{
-	}
+    public String Result2JSON( String fpsFileName )
+    {
+        StringBuilder myJSON = new StringBuilder();
+        String myJSONReturn = "";
+        
+        try
+        {
+            StopAllTimerAndEmptyStack();
+            
+            myJSON.append( getJSONHeader() );
+            myJSON.append( this.jsonStructureComma( "statistics", this.getJSONStatistics() ) );
+        
+            myJSON.append( this.jsonArray( "features", this.getJSONResult() ));
+            myJSON.append( getJSONFooter());
+   
+            myJSONReturn = this.beautify( myJSON.toString() );
+            
+            System.out.print( myJSON.toString() );
+            
+            // Write jason-File
+            FileWriter fw = new FileWriter( fpsFileName );
+            BufferedWriter bw = new BufferedWriter(fw);
 
+            bw.write( myJSONReturn );
+
+            bw.close();
+         }
+            catch(Exception e)
+         {
+             System.out.print(e.getMessage());
+         }
+        
+        return myJSONReturn;
+    }
+
+    
+    private String getJSONHeader()
+    {
+        StringBuilder myResult = new StringBuilder();
+        
+        myResult.append("{\n");
+        
+        return myResult.toString();
+    }
+
+    
+    protected String getJSONResult()
+    {
+        StringBuilder myJSON = new StringBuilder();
+        StringBuilder myJSONForLoop = new StringBuilder();
+
+        // 
+        myJSON.append( this.jsonElementComma( "name", this.name ) );
+        myJSON.append( this.jsonElement( "result", this.result ) );
+        
+        Boolean GreaterOne = false;
+        
+        for( LogBase myLog: this.myLogs )
+        {
+            if (GreaterOne) myJSONForLoop.append( ", " ); 
+            else GreaterOne = true;
+            myJSONForLoop.append( this.jsonStructure( "test", myLog.getJSONResult() ) ) ;
+            
+        }
+        
+        if (GreaterOne) 
+        myJSON.append( ", " + this.jsonArray( "tests", myJSONForLoop.toString() ) );
+        
+        
+        
+        
+        return myJSON.toString();
+    }
+    
+    private String getJSONFooter()
+    {
+        StringBuilder myResult = new StringBuilder();
+        
+        myResult.append("}\n");
+
+        return myResult.toString();
+    }
 	
-	protected void SetPass()
-	{
-	}
-	
+    String beautify(String json) 
+{
+        
+        String myReturn = "";
+        
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+        Object obj;
+        try
+        {
+            obj = mapper.readValue(json, Object.class);
+            myReturn = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj);
+        }
+        catch ( Exception e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
+        
+        return myReturn;
+    }
+    
 	protected void abort()
 	{
 	}
@@ -735,4 +933,135 @@ public class Log2HTML extends LogBase implements ILogger
 	{
 		
 	}
+	
+	
+	@Override
+    protected void TestcaseCount()
+    {
+        this.TestcaseCount++;
+    }
+
+    @Override
+    protected void TestcaseFail()
+    {
+        this.TestcaseFail++;
+    }
+    
+    @Override
+    protected void TestcasePass()
+    {
+        this.TestcasePass++;
+    }
+
+    @Override
+    protected void FunctionCount()
+    {
+        this.FunctionCount++;
+    }
+
+    @Override
+    protected void FunctionFail()
+    {
+        this.FunctionFail++;
+    }
+
+    @Override
+    protected void FunctionPass()
+    {
+        this.FunctionPass++;
+    }
+    
+    @Override
+    protected void KeyWordCount()
+    {
+        this.KeyWordCount++;
+    }
+
+    @Override
+    protected void KeyWordFail()
+    {
+        this.KeyWordFail++;
+    }
+
+    @Override
+    protected void KeyWordPass()
+    {
+        this.KeyWordPass++;
+    }
+    
+    @Override
+    protected void SequenceCount()
+    {
+        this.SequenceCount++;
+    }
+
+    @Override
+    protected void SequenceFail()
+    {
+        this.SequenceFail++;
+    }
+
+    @Override
+    protected void SequencePass()
+    {
+        this.SequencePass++;
+    }
+
+    // Sub
+    @Override
+    protected void StepCount()
+    {
+        this.StepCount++;
+    }
+    
+    @Override
+    protected void StepFail()
+    {
+        this.StepFail++;
+    }
+    
+    @Override
+    protected void StepPass()
+    {
+        this.StepPass++;
+    }
+
+    
+    // LocalACCall
+    @Override
+    protected void LocalACCallCount()
+    {
+        this.LocalACCallCount++;
+    }
+    
+    @Override
+    protected void LocalACCallFail()
+    {
+        this.LocalACCallFail++;
+    }
+    
+    @Override
+    protected void LocalACCallPass()
+    {
+        this.LocalACCallPass++;
+    }
+    
+    // RemoteACCall
+    @Override
+    protected void RemoteACCallCount()
+    {
+        this.RemoteACCallCount++;
+    }
+    
+    @Override
+    protected void RemoteACCallFail()
+    {
+        this.RemoteACCallFail++;
+    }
+    
+    @Override
+    protected void RemoteACCallPass()
+    {
+        this.RemoteACCallPass++;
+    }
 }

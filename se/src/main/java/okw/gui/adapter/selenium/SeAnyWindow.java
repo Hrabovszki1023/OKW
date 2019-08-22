@@ -82,11 +82,11 @@ public class SeAnyWindow extends AnyWindow
        _locator = new OKWLocatorXPath( );
     }
     
-    public SeAnyWindow( String fpsLocator, OKWLocatorBase... fpLocators )
+/*    public SeAnyWindow( String fpsLocator, OKWLocatorBase... fpLocators )
     {
         _locator = new OKWLocatorXPath( fpsLocator,  fpLocators );
         this.iframeID = null;
-    }
+    }*/
 
     // Logger Instance holen
     // protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();

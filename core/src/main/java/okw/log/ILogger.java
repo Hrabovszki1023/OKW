@@ -65,6 +65,95 @@ public interface ILogger
 
    
   /**
+     *  LogError: Logs an error message to the result.  @todo TODO: Add description.
+     *  
+     *  @param fps_Message Error message text.
+     *  
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */
+    void LogError(String Message);
+
+
+    /**
+     *  LogPass: Logs an error message to the result. @todo TODO: Add description.
+     *  
+     *  @param Message Pass message
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */
+    void LogPass(String Message);
+
+
+    /**
+    *  LogWarning: Logs an error message to the result.  @todo TODO: Add description.
+    *  
+    *  @param Message Warning message.
+    * \~
+    * @author Zoltan Hrabovszki
+    * @date 2016-10-23
+    */
+    void LogWarning(String Message);
+
+
+    /**
+     *  LogException: Logs an exception to the results.
+     *  
+     * @todo TODO: Add description to LogFunctionStart.
+     * 
+     *  @param Message
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */
+    void LogException(String Message);
+
+
+    /**
+     *  LogSourceLocation: Logs location of Source in Harmony.
+     *  
+     *  This is a special log for [Harmony](https://cloud.4test.io/).
+     *  Holds the Referenz to the Source in HArmony to create a Hyperlink from
+     *  Report to the source of Teststep.
+     *  
+     *  This log is only used for Harmoy.
+     *  
+     *  @param Start of the Source
+     *  @param End of the Source 
+     *  @param featureName the name of feature like "Main Menu"
+     *  @param sourceType The Type of the "ac"
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2019-08-03
+     */
+    void LogSourceLocation( String Start, String End, String featureName, String sourceType );
+    
+    
+    /**
+     * LogPrint: Prints the given message to the results.
+     *  
+     * @param Message Message to print.
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */
+    void LogPrint(String Message);
+
+
+    /**
+     *  LogPrintDebug: @todo TODO: Add description to LogPrintDebug.
+     * 
+     *  @param Message
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2016-10-23
+     */    
+    void LogPrintDebug(String Message);
+
+
+/**
    * LogTestcaseStart: @todo TODO: Add description to LogTestcaseStart
    *  
    * @param fpsTestcaseName
@@ -106,6 +195,89 @@ public interface ILogger
 
     
     /**
+     *  LogStepStart: Log Begin of (Test) Step.
+     *  
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     *  @param Gherkin  Gherkin expression.
+     *
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2019-07-25
+     */
+    void LogStepStart( String categoryName, String categoryType, 
+                       String choiceValue, String featureName,
+                       String localCategoryName, String sourceExcerpt,
+                       String type );
+
+    /**
+     * LogStepEnd: Log End of (Test) Step.
+     *  
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2019-07-25
+     */
+    void LogStepEnd();
+
+    
+    /**
+     *  LogLocalACCallStart: Start of a local AC call.
+     *  
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     *  @param Gherkin  Gherkin expression.
+     *
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2019-07-25
+     */
+    void LogLocalACCallStart( String sourceExcerpt, String Type );
+
+
+    /**
+     *  LogLocalACCallEnd: End of a local AC call.
+     *  
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2019-07-25
+     */
+    void LogLocalACCallEnd();
+
+    
+    /**
+     *  LogRemoteACCallStart: Start of a remote AC call.
+     *  
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     *  @param Gherkin  Gherkin expression.
+     *
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2019-07-25
+     */
+    void LogRemoteACCallStart( String sourceExcerpt, String Type );
+
+
+    /**
+     * LogRemoteACCallEnd: End of a remote AC call.
+     *  
+     *  This log is for [Harmony](https://cloud.4test.io/).
+     *  
+     * \~
+     * @author Zoltan Hrabovszki
+     * @date 2019-07-25
+     */
+    void LogRemoteACCallEnd();
+    
+    
+    
+    
+    
+    /**
      *  LogSequenceStart: Begin of a Sequence. This log is used by the Sequence-keyword.
      *  
      *  @param KeyWordName In this case "Sequence" - language depended Log e.g. "Sequenz" in german.
@@ -127,53 +299,6 @@ public interface ILogger
      * @date 2016-10-23
      */
     void LogSequenceEnd();
-    
-    /**
-     *  LogError: Logs an error message to the result.  @todo TODO: Add description.
-     *  
-     *  @param fps_Message Error message text.
-     *  
-     * \~
-     * @author Zoltan Hrabovszki
-     * @date 2016-10-23
-     */
-    void LogError(String Message);
-
-    
-    /**
-     *  LogPass: Logs an error message to the result. @todo TODO: Add description.
-     *  
-     *  @param Message Pass message
-     * \~
-     * @author Zoltan Hrabovszki
-     * @date 2016-10-23
-     */
-    void LogPass(String Message);
-
-    
-   /**
-    *  LogWarning: Logs an error message to the result.  @todo TODO: Add description.
-    *  
-    *  @param Message Warning message.
-    * \~
-    * @author Zoltan Hrabovszki
-    * @date 2016-10-23
-    */
-    void LogWarning(String Message);
-
-
-    /**
-     *  LogException: Logs an exception to the results.
-     *  
-     * @todo TODO: Add description to LogFunctionStart.
-     * 
-     *  @param Message
-     * \~
-     * @author Zoltan Hrabovszki
-     * @date 2016-10-23
-     */
-    void LogException(String Message);
-
     
     /**
      * LogFunctionStart: @todo TODO: Add description to LogFunctionStart.
@@ -281,27 +406,6 @@ public interface ILogger
      */    
     void LogFunctionEndDebug(List<String> Message);
     
-    
-    /**
-     * LogPrint: Prints the given message to the results.
-     *  
-     * @param Message Message to print.
-     * \~
-     * @author Zoltan Hrabovszki
-     * @date 2016-10-23
-     */
-    void LogPrint(String Message);
-
-
-    /**
-     *  LogPrintDebug: @todo TODO: Add description to LogPrintDebug.
-     * 
-     *  @param Message
-     * \~
-     * @author Zoltan Hrabovszki
-     * @date 2016-10-23
-     */    
-    void LogPrintDebug(String Message);
     
     /**
      *  LogFunctionStartDebug: Opens a debug outline level with the .

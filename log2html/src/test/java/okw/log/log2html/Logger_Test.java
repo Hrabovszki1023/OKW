@@ -11,14 +11,14 @@ import org.junit.Test;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-public class Logger2_Test
+public class Logger_Test
 {
     protected static Log2HTML myLog2HTML = null;
     
     @BeforeClass
     public static void setUpBeforeClass() throws Exception
     {  
-        myLog2HTML = new Log2HTML("Logger2_Test.html");
+        myLog2HTML = new Log2HTML("Logger2_Test");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
 
         Logger_Sngltn.getInstance().setDebugMode(false);
@@ -27,7 +27,7 @@ public class Logger2_Test
     @AfterClass
     public static void tearDownAfterClass() throws Exception
     {
-        myLog2HTML.Result2HTML();
+        myLog2HTML.Result2HTML("Logger2_Test.html");
     }
 
     @Before

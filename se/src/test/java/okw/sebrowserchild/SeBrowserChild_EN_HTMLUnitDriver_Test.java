@@ -19,7 +19,7 @@ public class SeBrowserChild_EN_HTMLUnitDriver_Test extends SeBrowserChild_EN_Tes
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        myLog2HTML = new Log2HTML("SeLink_EN_HTMLUnitDriver_Test.html");
+        myLog2HTML = new Log2HTML("SeLink_EN_HTMLUnitDriver_Test");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(true);
 	}
@@ -27,6 +27,6 @@ public class SeBrowserChild_EN_HTMLUnitDriver_Test extends SeBrowserChild_EN_Tes
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception
 	{
-		myLog2HTML.Result2HTML();
+		myLog2HTML.Result2HTML("target/SeLink_EN_HTMLUnitDriver_Test.html");
 	}
 }

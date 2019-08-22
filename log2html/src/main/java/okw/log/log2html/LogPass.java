@@ -1,16 +1,19 @@
 package okw.log.log2html;
 
-public class LogPass extends LogBase{
+
+public class LogPass extends LogBaseLeaf
+{
 	
-	protected LogPass(LogBase fpParent, String fpsInfo)
+	protected LogPass( LogBase fpParent, String fpsInfo )
 	{
 		Info = fpsInfo;
 		myID = AllCount;
 		this.setParent(fpParent);		
-		//setPass();	
+		PassedCount();	
 	}
 
-	protected String getResult()
+	
+	protected String getHTMLResult()
 	{
 		StringBuilder sbResult = new StringBuilder();
 		
@@ -20,13 +23,14 @@ public class LogPass extends LogBase{
 		
 		return sbResult.toString();
 	}
-	
-	protected void SetFail()
-	{
-	}
 
-	
-	protected void SetPass()
-	{
-	}
+    
+   protected String getJSONResult()
+    {
+        StringBuilder myJSON = new StringBuilder();
+                    
+        myJSON.append( this.jsonElement( "Passed",  this.Info ) );
+        
+        return myJSON.toString();
+    }
 }
