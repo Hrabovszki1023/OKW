@@ -3,6 +3,8 @@ package okw;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.net.URLDecoder;
+import java.nio.charset.Charset;
 import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -48,6 +50,9 @@ public class OKW_GetJavaClass
                 // nun rechts von "!" abschneiden incl. "!" weg!
                 // Ergebniss: "/some/path/myfile.jar"
                 lvClassPath = okw.OKW_Helper.getLeftFromDelimiterNumber( lvClassPath, "!", 1 );
+                
+                // Decode URI (e.g. spaces and international characters in file names)
+                lvClassPath = URLDecoder.decode(lvClassPath, Charset.defaultCharset().name());
             }
 
             File file = new File( lvClassPath );
