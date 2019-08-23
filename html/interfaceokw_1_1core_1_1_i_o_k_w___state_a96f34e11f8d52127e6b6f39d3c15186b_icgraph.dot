@@ -5,11 +5,15 @@ digraph "okw.core.IOKW_State.TypeKeyWindow"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node3996 [label="okw.core.IOKW_State.Type\lKeyWindow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
-  Node3996 -> Node3997 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3997 [label="okw.core.Core.TypeKeyWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#acfdd78869f2151c68f7cc9e4b8acd890",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
-  Node3997 -> Node3998 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3998 [label="okw.core.EN.TypeKeyWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a26a7f06e28d3827614961408314625c7",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
-  Node3998 -> Node3999 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3999 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
+  Node4038 [label="okw.core.IOKW_State.Type\lKeyWindow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
+  Node4038 -> Node4039 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4039 [label="okw.core.Core.TypeKeyWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#acfdd78869f2151c68f7cc9e4b8acd890",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
+  Node4039 -> Node4040 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4040 [label="okw.core.EN.TypeKeyWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a26a7f06e28d3827614961408314625c7",tooltip="Tastatureingabe in ein bestimmtes Fensterobjekt."];
+  Node4040 -> Node4041 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4041 [label="okw.core.EN_Keywords\l_IGNORE_Test.tcTypeKeyWindow\l_IGNORE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html#aac95b2e4fe0806c5636cd2a242592286",tooltip="Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an TypeKeyWindow Übertragen wird."];
+  Node4040 -> Node4042 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4042 [label="okw.core.EN_Keywords\l_IGNORE_Test.tcTypeKeyWindow\l_IGNORE_EmptyString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html#a84547a5e7b14ba4b2eb46ffb232bfb5a",tooltip="Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an TypeKeyWindow Übertragen wird."];
+  Node4040 -> Node4043 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4043 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
 }
