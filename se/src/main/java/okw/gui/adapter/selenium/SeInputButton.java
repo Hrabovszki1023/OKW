@@ -40,13 +40,8 @@
 package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
-
-import org.openqa.selenium.support.ui.Select;
-import okw.OKW_Const_Sngltn;
 import org.apache.commons.lang3.StringUtils;
-
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
-import okw.gui.OKWLocator;
 import okw.gui.OKWLocatorBase;
 
 /**

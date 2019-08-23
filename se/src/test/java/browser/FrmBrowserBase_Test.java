@@ -36,7 +36,6 @@
 
 package browser;
 
-import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.log.log2html.Log2HTML;
 
@@ -69,6 +68,8 @@ public class FrmBrowserBase_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
+      
+      EN.SelectWindow(ApplicationName);
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
 
       EN.VerifyValue( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -86,6 +87,8 @@ public class FrmBrowserBase_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
+      
+      EN.SelectWindow(ApplicationName);
       EN.SetValue( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
 
       EN.VerifyValue( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -102,6 +105,8 @@ public class FrmBrowserBase_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
+      
+      EN.SelectWindow(ApplicationName);
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
 
       EN.VerifyValueWCM( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.*" );
@@ -119,6 +124,8 @@ public class FrmBrowserBase_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
+      
+      EN.SelectWindow(ApplicationName);
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
 
       EN.VerifyValueWCM( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.*" );
@@ -135,7 +142,52 @@ public class FrmBrowserBase_Test {
   {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
+      
+      EN.SelectWindow(ApplicationName);
       EN.ClickOn( "MAXIMIZE" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+  }
+  
+  /**
+   * Testet das Schlüsselwort StartApp( AppName ). OKWChromedriverPath ist **nicht** gesetzt.
+   */ 
+  @Test
+  public void tcURL_StartApp_ohne_OKWChromedriverPath() throws Exception
+  {
+      EN.BeginTest( name.getMethodName() );
+      EN.StartApp( ApplicationName );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+  }
+  
+  /**
+   * Testet das Schlüsselwort StartApp( AppName ). OKWChromedriverPath ist nicht gesetzt.
+   */ 
+  @Test
+  public void tcURL_StartApp_mit_OKWChromedriverPath() throws Exception
+  {
+      
+      String os_name = System.getProperty( "os.name" );
+
+      switch ( os_name )
+      {
+          case "Mac OS X":
+              System.setProperty( "OKWChromedriverPath", "/Applications/chromedriver" );
+              okw.OKW_Properties.getInstance().setProperty( "OKWChromedriverPath", "/Applications/chromedriver" );
+              break;
+          case "Linux":
+              System.setProperty( "OKWChromedriverPath", "/Applications/chromedriver" );
+              okw.OKW_Properties.getInstance().setProperty( "OKWChromedriverPath", "/Applications/chromedriver" );
+              break;
+          default:
+             break;
+      }
+      
+      EN.BeginTest( name.getMethodName() );
+      EN.StartApp( ApplicationName );
       
       EN.StopApp( ApplicationName );
       EN.EndTest();

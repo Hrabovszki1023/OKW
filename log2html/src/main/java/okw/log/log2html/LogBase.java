@@ -5,45 +5,19 @@ import java.util.*;
 public abstract class LogBase {
 	
 	protected static Integer AllCount = 0;
+
 	protected Integer myID = 0;
 
-	// Statistics
-	protected static Integer ErrorCount = 0;	
-	protected static Integer ExceptionCount = 0;	
-	protected static Integer WarningCount = 0;
-	protected static Integer PassedCount = 0;
-	protected static Integer PrintCount = 0;
-	
-	
-	
-	protected static Integer TestcaseCount = 0;
-	protected static Integer TestcaseFail = 0;
-	protected static Integer TestcasePass = 0;
-
-	protected static Integer FunctionCount = 0;
-	protected static Integer FunctionFail = 0;
-	protected static Integer FunctionPass = 0;
-	
-	protected static Integer KeyWordCount = 0;
-	protected static Integer KeyWordFail = 0;
-	protected static Integer KeyWordPass = 0;
-	
-	protected static Integer SequensCount = 0;
-	protected static Integer SequensFail = 0;
-	protected static Integer SequensPass = 0;
-		
 	protected String Info = "";
 	
 	protected LogTimer myDuration = new LogTimer();
 	
+	// Ein Parent ist immer ein Knoten!
 	protected LogBase myParent = null;
 
 	protected List<LogBase> myLogs= new ArrayList<LogBase>();
-
-	protected abstract void SetFail();
-	protected abstract void SetPass();
 	
-	public void setParent(LogBase fpParent)
+	public void setParent( LogBase fpParent )
 	{
 		myParent = fpParent;
 	}
@@ -52,38 +26,7 @@ public abstract class LogBase {
 	{
 		setError();
 	}
-	
-	public void reset()
-	{
-		AllCount = 0;
-		myID = 0;
-
-		// Statistics
-		ErrorCount     = 0;
-		ExceptionCount = 0;
-		WarningCount   = 0;
-		PassedCount    = 0;
-		PrintCount     = 0;
-		
-		TestcaseCount = 0;
-		TestcaseFail = 0;
-		TestcasePass = 0;
-
-		FunctionCount = 0;
-		FunctionFail = 0;
-		FunctionPass = 0;
-		
-		KeyWordCount = 0;
-		KeyWordFail = 0;
-		KeyWordPass = 0;
-		
-		SequensCount = 0;
-		SequensFail = 0;
-		SequensPass = 0;
-		
-		PrintCount = 0;
-	}
-
+    
 	
 	public LogBase getParent()
 	{
@@ -92,7 +35,7 @@ public abstract class LogBase {
 
 	
 	protected int Level = -1;
-	protected String myIndentionBase = "  ";
+	protected String myIndentionBase = "    ";
 	
 	protected int getLevel()
 	{
@@ -118,7 +61,7 @@ public abstract class LogBase {
 		return myReturn;
 	}
 
-	
+
 	protected String getLevelIndention()
 	{
 		StringBuilder myIndention = new StringBuilder();
@@ -134,7 +77,64 @@ public abstract class LogBase {
 		return myIndention.toString();
 	}
 
-	
+
+    protected String getLevelIndention( int shift )
+    {
+        StringBuilder myIndention = new StringBuilder();
+        
+        int n = this.getLevel() + shift;
+        int i;
+        
+        for ( i=1; i<=n; i++ )
+        {
+            myIndention.append(myIndentionBase);
+        }
+        
+        return myIndention.toString();
+    }    
+
+	protected String jsonElement( String Key, String Value)
+	{
+	       return "\"" + Key + "\": \"" + Value + "\"";
+	}
+
+    protected String jsonElementComma( String Key, String Value)
+    {
+        return "\"" + Key + "\": \"" + Value + "\",";
+    }
+    
+    protected String jsonElementComma( String Key, Integer Value )
+    {
+        return "\"" + Key + "\": \"" + Value.toString() + "\",";
+    }
+    
+
+    protected String jsonElement( String Key, Integer Value )
+    {
+         return "\"" + Key + "\": \""  + "\"";
+    }
+	   
+    protected String jsonStructure( String Key, String Value )
+    {
+        return  "\"" + Key + "\": {" + Value + " }";
+    }
+    
+    protected String jsonStructureComma( String Key, String Value )
+    {
+        return  "\"" + Key + "\": {" + Value + " },";
+    }
+    
+    protected String jsonArray( String Key, String Value )
+    {
+        StringBuilder myIndention = new StringBuilder();
+        
+        myIndention.append( "\"" + Key + "\": [ {" );
+        myIndention.append( Value );
+        myIndention.append( "} ]" );
+        
+        return  myIndention.toString();
+    }
+    
 	protected Boolean bWarning = false;
 	
 	protected void setWarning()
@@ -163,7 +163,7 @@ public abstract class LogBase {
 	{
 		if (!bException)
 		{
-			SetFail();
+			//SetFail();
 			bException = true;
 		
 			if (myParent != null)
@@ -174,19 +174,13 @@ public abstract class LogBase {
 	}
 
 
-	protected Boolean getException()
-	{
-		return bException;
-	}
-
-
 	protected Boolean bError = false;
 	
 	protected void setError()
 	{
 		if (!bError)
 		{			
-			SetFail();
+			// SetFail();
 			bError = true;
 
 			if (myParent != null)
@@ -201,8 +195,62 @@ public abstract class LogBase {
 		return bError;
 	}
 
+    // Node Statistics
+    protected abstract void ErrorCount();
+ 
+    protected abstract void ExceptionCount();
+  
+    protected abstract void WarningCount();
 
-	protected String getResult()
+    protected abstract void PassedCount();
+
+    protected abstract void PrintCount();
+    
+    protected abstract void TestcaseCount();
+
+    protected abstract void TestcaseFail();
+    
+    protected abstract void TestcasePass();
+
+    protected abstract void FunctionCount();
+
+    protected abstract void FunctionFail();
+
+    protected abstract void FunctionPass();
+    
+    protected abstract void KeyWordCount();
+
+    protected abstract void KeyWordFail();
+
+    protected abstract void KeyWordPass();
+    
+    protected abstract void SequenceCount();
+
+    protected abstract void SequenceFail();
+
+    protected abstract void SequencePass();
+
+    protected abstract void StepCount();
+    
+    protected abstract void StepFail();
+    
+    protected abstract void StepPass();
+
+    // Precondition
+    protected abstract void LocalACCallCount();
+    
+    protected abstract void LocalACCallFail();
+    
+    protected abstract void LocalACCallPass();
+    
+    // Postcondition
+    protected abstract void RemoteACCallCount();
+    
+    protected abstract void RemoteACCallFail();
+    
+    protected abstract void RemoteACCallPass();
+
+	protected String getHTMLResult()
 	{
 		StringBuilder sbResult = new StringBuilder();
 		
@@ -254,7 +302,7 @@ public abstract class LogBase {
 		
 		for( LogBase myLog: this.myLogs )
 		{
-			sbResult.append( myLog.getResult() );
+			sbResult.append( myLog.getHTMLResult() );
 		}
 		
 		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "</div>\n" ); // end Body
@@ -264,4 +312,31 @@ public abstract class LogBase {
 		
 		return sbResult.toString();
 	}
+
+
+	   protected String getJSONResult()
+	    {
+        
+	        StringBuilder myJSON = new StringBuilder();
+	        
+	        // Duration
+	        if ( "false".equals( okw.OKW_Properties.getInstance().getProperty( "Log2HTML.Test", "false" ) ) )
+	        {
+	            myJSON.append( this.jsonElement( "duration", this.myDuration.getSeconds("#0.000") ) );
+	        }
+	        else
+	        {
+	            myJSON.append( this.jsonElement( "duration", "Duration TestMode" ) );
+	        }	        
+	        Integer EC = 0;
+	        
+	        for( LogBase myLog: this.myLogs )
+	        {
+	            EC++;
+	            String Element = myLog.getClass().getSimpleName();
+	            myJSON.append( this.jsonStructure( Element + EC.toString(), myLog.getJSONResult() ) );
+	        }
+	        
+	        return myJSON.toString();
+	    }
 }

@@ -39,10 +39,7 @@
 
 package okw.gui.adapter.selenium.webdriver;
 
-import java.awt.Toolkit;
 import java.util.ArrayList;
-
-import org.openqa.selenium.*;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.gui.adapter.selenium.SeAnyChildWindow;

@@ -31,7 +31,7 @@ public class OKW_PropertiesTest
         assertEquals( "Wert 3 aus properties_Test1", myProperties.get( "Wert3" ) );
         assertEquals( "Wert 4 aus properties_Test1", myProperties.get( "Wert4" ) );
         assertEquals( "Wert 5 aus properties_Test2", myProperties.get( "Wert5" ) );
-        assertEquals( "Oracle Corporation", myProperties.get( "java.vendor" ) );
+        //assertEquals( "okw.AllTests", myProperties.get( "TESTCASE" ) );
 
         myProperties.PrintProperties();
 
@@ -42,7 +42,7 @@ public class OKW_PropertiesTest
         assertEquals( null, myProperties.get( "Wert3" ) );
         assertEquals( null, myProperties.get( "Wert4" ) );
         assertEquals( null, myProperties.get( "Wert5" ) );
-        assertEquals( null, myProperties.get( "java.vendor" ) );
+        assertEquals( null, myProperties.get( "TESTCASE" ) );
         
     }
 

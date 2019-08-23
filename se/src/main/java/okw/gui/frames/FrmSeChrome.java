@@ -22,12 +22,28 @@ import okw.gui.adapter.selenium.SeBrowserWindow;
  * /todo Beschreibung...
  */
 
-
 /**
  * @ingroup groupSeleniumFrames
- * 
- * @author zoltan
- *
+ * \~german
+ *  Frame Classe für Chrome implmentiert mit Chrome-Driver
+ *  
+ *  Zu diesem Frame gehört die Properties-Datei "frmSeChrome.properties".
+ *  Alle Chrome Properties/Eigenschaften können gesetzt werden. Diese müssen mit "frmSeChrome.option." beginnen.
+ *  
+ *  
+ *  Beispiel
+ *  Hide the automation toolbar warning:
+ *  frmSeChrome.option.disable-infobars=disable-infobars
+ *  bewirkt: 
+ *  ChromeOptions options = new ChromeOptions().addArguments( "disable-infobars" );
+ *  
+ *  Zusätzlich kann die Location der Chrome-Binär-datei als Property gesetzt werden:
+ *  frmSeChrome.setBinary="/path/to/chrome"
+ *  
+ * \~english
+ * \~
+ * @author zh@openkeyword.de
+ * @date 2019-08-22
  */
 @OKW (FN="Chrome")
 public class FrmSeChrome extends SeBrowserWindow
@@ -40,10 +56,47 @@ public class FrmSeChrome extends SeBrowserWindow
      */
     protected static OKW_Memorize_Sngltn MEM = OKW_Memorize_Sngltn.getInstance();
 
-
+/**
+ * \~german
+ * Diese Methode ist gedacht um ein Fenster/Dialog in den Vordergrund zu holen. Bei Selenium ist das Nicht möglich.
+ * 
+ * Siehe dazu das folgende Zitat aus https://sqa.stackexchange.com/a/20035:
+ * 
+ * "Wenn Sie davon sprechen, das Browserfenster innerhalb des Betriebssystems in den Vordergrund zu rücken.
+ * Selenium kann das nicht. Sie müssen eine Bibliothek verwenden, die in der Lage ist, 
+ * Aktionen auf Betriebssystemebene zu automatisieren. 
+ * Selenium ist durch die gleiche Restriktion wie Javascript eingeschränkt.
+ * Sieht so aus, als ob du Java benutzt, also könntest du einen Blick auf awt.Robot werfen.
+ * Aber seien Sie sich bewusst, dass jede Lösung, die Sie mit Robot erfinden, wahrscheinlich schwierig ist...
+ * Der Code driver.switchTo().window(handle) ist nicht dazu gedacht, das aktive Fenster auf Betriebssystemebene zu wechseln.
+ * Es ändert nur, an welches Browserfenster Selenium seine Aktionen sendet.
+ * Selenium ist in der Lage, mit Browserfenstern zu kommunizieren, die hinter anderen Fenstern auf Ihrem Bildschirm versteckt sind."
+ * Zitiert aus https://sqa.stackexchange.com/a/20035
+ * 
+ * \~english
+ *  This method is intended to bring a window/dialog into the foreground. With Selenium this is not possible.
+ *  See the following quote from https://sqa.stackexchange.com/a/20035
+ *  "If you're talking about bringing the browser's window within the OS to the foreground. Selenium cannot do that.
+ *  
+ *  You need to introduce a library that is able to automate actions on an OS level.
+ *  Selenium is restricted by javascript's same origin policy. Looks like you're using Java, so you could take a look at awt.Robot.
+ *  But be aware that any solution you come up with using Robot will likely be finicky...
+ *  The driver.switchTo().window(handle) code is not meant to switch the active window on an OS level. 
+ *  It just changes which browser window selenium sends it's actions to. 
+ *  Selenium is able to communicate with browser windows that are hidden behind other windows on your screen.
+ *
+ * @param ? 
+ * @return
+ * \~
+ * @author Zoltán Hrabovszki
+ * @date 2019-07-16
+ */
     @Override
     public void SelectWindow()
     {
+        LogFunctionStart( "SelectWindow" );
+        LogPrint( "Do nothing here..." );
+        LogFunctionEnd();
     }
     
     /**
@@ -55,17 +108,24 @@ public class FrmSeChrome extends SeBrowserWindow
 
         try
         {
-            String DriverPath = System.getenv( "OKWChromedriverPath" );
+            String DriverPath;
 
-            if ( DriverPath != null )
+            if ( ( DriverPath = System.getProperty( "webdriver.chrome.driver" ) ) != null )
             {
+                LogPrint( "System.Property: webdriver.chrome.driver is set: '" + DriverPath + "'" );
+                MEM.set( "System.Property: webdriver.chrome.driver", DriverPath );
+            }
+            else if ( ( DriverPath = System.getenv( "OKWChromedriverPath" ) ) != null )
+            {
+                LogPrint( "System.Property: webdriver.chrome.driver is not set" );
                 LogPrint( "EnvVar: OKWChromedriverPath='" + DriverPath + "'" );
                 System.setProperty( "webdriver.chrome.driver", DriverPath );
-                MEM.set( "System.Property: webdriver.Chrome.driver", DriverPath );
+                MEM.set( "System.Property: webdriver.chrome.driver", DriverPath );
                 MEM.set( "OKW EnvVar: OKWChromedriverPath", DriverPath );
             }
             else
             {
+                LogPrint( "System.Property: webdriver.chrome.driver is not set" );
                 LogWarning( "Enviroment Variable 'OKWChromedriverPath' is not set!" );
 
                 String os_name = System.getProperty( "os.name" );
@@ -76,7 +136,7 @@ public class FrmSeChrome extends SeBrowserWindow
                         System.setProperty( "webdriver.chrome.driver", "/Applications/chromedriver" );
                         break;
                     case "Linux":
-                        System.setProperty( "webdriver.chrome.driver", "/Applications/chromedriver" );
+                        System.setProperty( "webdriver.chrome.driver", "/usr/bin/chromedriver" );
                         break;
                     default:
                         LogError( "Unknown Property: 'os.name'= '" + System.getProperty( "os.name" ) + "'" );
@@ -88,6 +148,12 @@ public class FrmSeChrome extends SeBrowserWindow
             ArrayList<String> frmSeChrome_option = OKW_Properties.getInstance().getPropertiesForKeysStartswith( "frmSeChrome.option." );
             
             ChromeOptions options = new ChromeOptions().addArguments( frmSeChrome_option );
+            
+            // get Property for Binary Location
+            if ( OKW_Properties.getInstance().getProperty( "frmSeChrome.setBinary" ) != null )
+                options.setBinary( OKW_Properties.getInstance().getProperty( "frmSeChrome.setBinary" ) ) ;
+            
+            
             mySeDriver.setDriver( new ChromeDriver( options ) );
 
         }
@@ -116,7 +182,7 @@ public class FrmSeChrome extends SeBrowserWindow
         
         try
         {    
-             Runtime rt = Runtime.getRuntime();
+             //Runtime rt = Runtime.getRuntime();
         
              if (System.getProperty("os.name").toLowerCase().indexOf("windows") > -1)
              {

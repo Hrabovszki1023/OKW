@@ -37,7 +37,6 @@
 package okw.core;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
@@ -52,7 +51,6 @@ import okw.LogMessenger;
 import okw.OKW_Helper;
 import okw.exceptions.*;
 import okw.log.*;
-import okw.gui.IGUIChildwindow;;
 
 /**
  * \~german Diese Klasse verwaltet das aktuelle GUI-Objekt.

@@ -76,13 +76,30 @@ public class LogTimer {
         	String lvsReturn = formatter.format( lvStartTime );
         	return lvsReturn;
         }
-
+        
+        public Long getStartTimeMillis()
+        {
+            long lvlReturn = TimerBegin;
+            
+            lvlReturn = TimeUnit.MILLISECONDS.convert(lvlReturn, TimeUnit.NANOSECONDS);
+           
+            return lvlReturn;
+        }
         
         public String getEndTime()
         {
             String lvsReturn = formatter.format( lvEndTime );
         	
         	return lvsReturn;
+        }
+        
+        public Long getEndTimeMillis()
+        {
+            long lvlReturn = TimerEnd;
+            
+            lvlReturn = TimeUnit.MILLISECONDS.convert(lvlReturn, TimeUnit.NANOSECONDS);
+           
+            return lvlReturn;
         }
 
 }

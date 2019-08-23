@@ -3,7 +3,6 @@ package okw.semaximize;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
@@ -26,7 +25,7 @@ public class SeMAXIMIZE_EN_Chrome_Test extends SeMAXIMIZE_EN_Test
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        myLog2HTML = new Log2HTML("target/OKWResult_SeMAXIMIZE__Chrome_Test.html");
+        myLog2HTML = new Log2HTML("SeMAXIMIZE_EN_Chrome_Test");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
@@ -34,7 +33,7 @@ public class SeMAXIMIZE_EN_Chrome_Test extends SeMAXIMIZE_EN_Test
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception
 	{
-		myLog2HTML.Result2HTML();
+		myLog2HTML.Result2HTML("target/OKWResult_SeMAXIMIZE__Chrome_Test.html");
 	}
 	
     /*@After

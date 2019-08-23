@@ -1,8 +1,10 @@
 package okw.log.log2html;
 
-public class ResultListDebug extends LogBase
+public class ResultListDebug extends LogBaseNode
 {
-	
+    
+    private String type = "ResultList";
+    
 	String myReturn = "";
 	
 	ResultListDebug( LogBase Parent, String fpsListHeader )
@@ -26,7 +28,7 @@ public class ResultListDebug extends LogBase
 	{
 	}
 	
-	protected String getResult()
+	protected String getHTMLResult()
 	{
 		StringBuilder sbResult = new StringBuilder();
 		
@@ -52,7 +54,7 @@ public class ResultListDebug extends LogBase
 		
 		for( LogBase myLog: this.myLogs )
 		{
-			sbResult.append( myLog.getResult() );
+			sbResult.append( myLog.getHTMLResult() );
 		}
 		
 		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "</div>\n" ); // end Body
@@ -62,5 +64,17 @@ public class ResultListDebug extends LogBase
 		
 		return sbResult.toString();
 	}
+    
 
+    @Override
+    protected String getJSONNodeProperties()
+    {
+        StringBuilder myJSON = new StringBuilder();
+        
+        myJSON.append( this.jsonElementComma( "type", this.type ) );
+        myJSON.append( this.jsonElementComma( "info", this.Info ) );
+        
+        return myJSON.toString();
+    }
+    
 }

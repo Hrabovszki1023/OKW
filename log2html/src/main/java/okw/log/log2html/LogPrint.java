@@ -1,16 +1,18 @@
 package okw.log.log2html;
 
-public class LogPrint extends LogBase
+
+public class LogPrint extends LogBaseLeaf
 {
 
-	public LogPrint(LogBase fpParent, String fpsInfo)
+	public LogPrint( LogBase fpParent, String fpsInfo )
 	{
 		Info = fpsInfo;
 		myID = AllCount;
-		this.setParent(fpParent);		
+		this.setParent(fpParent);
+        PrintCount();
 	}
 	
-	protected String getResult()
+	protected String getHTMLResult()
 	{
 		StringBuilder sbResult = new StringBuilder();
 		
@@ -21,6 +23,17 @@ public class LogPrint extends LogBase
 		return sbResult.toString();
 	}
 	
+	
+   protected String getJSONResult()
+    {
+        StringBuilder myJSON = new StringBuilder();
+                    
+        myJSON.append( this.jsonElement( "Print",  this.Info ) );
+        
+        return myJSON.toString();
+    }
+	
+    
 	protected void SetFail()
 	{
 	}

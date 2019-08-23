@@ -41,7 +41,6 @@ package okw.log;
 
 import java.util.*;
 
-import okw.OKW_HandleException;
 import okw.OKW_Const_Sngltn;
 
 /**
@@ -52,7 +51,7 @@ import okw.OKW_Const_Sngltn;
  *  \~english
  *  Central Log-Classes offers the Logging-Methodes.
  */
-public class Logger_Sngltn
+public class Logger_Sngltn implements ILogger
 {
 
     private static Boolean            cvbDebugMode = false;
@@ -318,6 +317,7 @@ public class Logger_Sngltn
         }
     }
 
+    
     public void LogKeyWordEnd()
     {
         for ( ILogger myLogger : LoggerList )
@@ -325,7 +325,62 @@ public class Logger_Sngltn
             myLogger.LogKeyWordEnd();
         }
     }
+    
+    
+    public void LogStepStart( String categoryName, String categoryType, 
+                    String choiceValue, String featureName,
+                    String localCategoryName, String sourceExcerpt,
+                    String type  )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogStepStart( categoryName, categoryType, choiceValue, featureName, localCategoryName, sourceExcerpt, type  );
+        }
+    }    
+    
+    public void LogStepEnd()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogStepEnd();
+        }
+    }
 
+    
+    public void LogLocalACCallStart( String Gherkin, String Type )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogLocalACCallStart(  Gherkin, Type );
+        }
+    }    
+    
+    public void LogLocalACCallEnd()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogLocalACCallEnd();
+        }
+    }
+    
+    
+    public void LogRemoteACCallStart( String Gherkin, String Type )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogRemoteACCallStart(  Gherkin, Type );
+        }
+    }    
+    
+    public void LogRemoteACCallEnd()
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogRemoteACCallEnd();
+        }
+    }
+    
+    
     public void LogSequenceEnd()
     {
         for ( ILogger myLogger : LoggerList )
@@ -333,6 +388,7 @@ public class Logger_Sngltn
             myLogger.LogSequenceEnd();
         }
     }
+
 
     public void LogTestcaseEnd()
     {
@@ -469,6 +525,7 @@ public class Logger_Sngltn
         }
     }
 
+    
     /**
      *  \brief
      *  LogWarning Function:
@@ -484,6 +541,24 @@ public class Logger_Sngltn
         }
     }
 
+
+    
+    /**
+     *  \brief
+     *  LogWarning Function:
+     *  Logs a warning to the results file.
+     * 
+     *  \param fps_Message
+     */
+    public void LogSourceLocation( String Start, String End, String featureName, String sourceType )
+    {
+        for ( ILogger myLogger : LoggerList )
+        {
+            myLogger.LogSourceLocation( Start, End, featureName, sourceType );
+        }
+    }
+
+    
     /**
      *  \brief
      *  Closes a hierarchical level in the results file that was opened with

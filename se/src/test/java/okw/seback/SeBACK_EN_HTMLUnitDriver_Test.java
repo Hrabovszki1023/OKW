@@ -33,6 +33,6 @@ public class SeBACK_EN_HTMLUnitDriver_Test extends SeBACK_EN_Test
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception
 	{
-		myLog2HTML.Result2HTML();
+		myLog2HTML.Result2HTML("target/SeBACK_EN_HTMLUnitDriver_Test.html");
 	}
 }
