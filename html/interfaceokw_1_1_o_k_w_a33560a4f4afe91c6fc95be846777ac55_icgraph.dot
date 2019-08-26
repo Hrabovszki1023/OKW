@@ -5,11 +5,11 @@ digraph "okw.OKW.VerifyBadge_PT"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node5 [label="okw.OKW.VerifyBadge_PT",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Polling Time in [ms] für das Schlüsselwort VerifyBadge."];
-  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="okw.core.OK.VerifyBadge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#ac2c25fc3fa5b40db4e95219582f11874",tooltip="Überprüft den Badge des Objektes ."];
-  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="okw.core.OK.VerifyBadgeWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a0bcee3fd07b44b54c13c14f0ff1080f0",tooltip="Überprüft den Badge des Objektes ."];
-  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 [label="okw.core.OK.VerifyBadgeREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a9e122d11d43dfbb7835c21a8b55b5759",tooltip="Überprüft den Badge des Objektes ."];
+  Node1 [label="okw.OKW.VerifyBadge_PT",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Polling Time in [ms] für das Schlüsselwort VerifyBadge."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.core.OK.VerifyBadge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#ac2c25fc3fa5b40db4e95219582f11874",tooltip="Überprüft den Badge des Objektes ."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.core.OK.VerifyBadgeREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a9e122d11d43dfbb7835c21a8b55b5759",tooltip="Überprüft den Badge des Objektes ."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="okw.core.OK.VerifyBadgeWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a0bcee3fd07b44b54c13c14f0ff1080f0",tooltip="Überprüft den Badge des Objektes ."];
 }

@@ -5,7 +5,7 @@ digraph "okw.OKW_Properties.getInstance"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node16 [label="okw.OKW_Properties.getInstance",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Holt die einzige Instanz dieser Klasse."];
-  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node17 [label="okw.gui.frames.FrmSeChrome.\lStartApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html#a40145eae9b35985b0448ce6eca964c17",tooltip="Chrome Options https://github.com/GoogleChrome/chrome-launcher/blob/master/docs/chrome-flags-for-tool..."];
+  Node1 [label="okw.OKW_Properties.getInstance",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Holt die einzige Instanz dieser Klasse."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.gui.frames.FrmSeChrome.\lStartApp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html#a40145eae9b35985b0448ce6eca964c17",tooltip="Chrome Options https://github.com/GoogleChrome/chrome-launcher/blob/master/docs/chrome-flags-for-tool..."];
 }

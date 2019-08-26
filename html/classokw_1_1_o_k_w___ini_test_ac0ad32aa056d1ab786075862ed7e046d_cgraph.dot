@@ -5,15 +5,15 @@ digraph "okw.OKW_IniTest.tcWindowsOKWEnvSetXmlExist"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node27 [label="okw.OKW_IniTest.tcWindows\lOKWEnvSetXmlExist",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Umgebungsvariable ist gesetzt."];
-  Node27 -> Node28 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node28 [label="okw.OKW_FileHelper.directory\lExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a4feaa905b7b878f286058a06a81f3ce2",tooltip="Prüft, ob die gegebene fpsPaFiNa Datei existiert."];
-  Node28 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node29 [label="okw.log.Logger_Sngltn.Log\lFunctionStartDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42",tooltip="LogFunctionStartDebug:"];
-  Node28 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node30 [label="okw.log.Logger_Sngltn.Log\lFunctionEndDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84",tooltip="LogFunctionEndDebug:"];
-  Node27 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node31 [label="okw.OKW_FileHelper.fileExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a86faaa4792bbe9d333c7bf2d2de275e3",tooltip="Prüft, ob die gegebene fpsPaFiNa Datei existiert."];
-  Node31 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node31 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="okw.OKW_IniTest.tcWindows\lOKWEnvSetXmlExist",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Umgebungsvariable ist gesetzt."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.OKW_FileHelper.directory\lExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a4feaa905b7b878f286058a06a81f3ce2",tooltip="Prüft, ob die gegebene fpsPaFiNa Datei existiert."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.log.Logger_Sngltn.Log\lFunctionEndDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84",tooltip="LogFunctionEndDebug:"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="okw.log.Logger_Sngltn.Log\lFunctionStartDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42",tooltip="LogFunctionStartDebug:"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.OKW_FileHelper.fileExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a86faaa4792bbe9d333c7bf2d2de275e3",tooltip="Prüft, ob die gegebene fpsPaFiNa Datei existiert."];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

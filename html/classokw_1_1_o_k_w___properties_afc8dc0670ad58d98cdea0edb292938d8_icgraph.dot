@@ -5,13 +5,13 @@ digraph "okw.OKW_Properties.loadFromFile"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node39 [label="okw.OKW_Properties.loadFromFile",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Lädt die Liste OKW_Properties.ResoursesProperties hinzufügen."];
-  Node39 -> Node40 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node40 [label="okw.OKW_Properties.update\lProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#aaec0ed9838c553749dcc2514232f6a6c",tooltip="Aktualisert/Lädt die Properties in der unter OKW_Properties beschriebene Weise."];
-  Node40 -> Node41 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node41 [label="okw.OKW_Properties.init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#a8a4294aa27bf9f4f49e9f1991022d5c8",tooltip="Initialisiert diese Klasse:"];
-  Node40 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node42 [label="okw.OKW_Properties.addResource",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#ad170c832264ab27c615f6e1bf2e8e8d3",tooltip="Eine .Properties-Datei aus dem Resource-Verzeichniss zur Liste OKW_Properties.ResoursesProperties hin..."];
-  Node40 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node43 [label="okw.OKW_Properties.addPropertiesFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#a78c9f44f14dbfc95dea240e06065120c",tooltip="Eine *.Properties-Datei zur Liste OKW_Properties.FileProperties hinzufügen."];
+  Node1 [label="okw.OKW_Properties.loadFromFile",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Lädt die Liste OKW_Properties.ResoursesProperties hinzufügen."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.OKW_Properties.update\lProperties",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#aaec0ed9838c553749dcc2514232f6a6c",tooltip="Aktualisert/Lädt die Properties in der unter OKW_Properties beschriebene Weise."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.OKW_Properties.addPropertiesFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#a78c9f44f14dbfc95dea240e06065120c",tooltip="Eine *.Properties-Datei zur Liste OKW_Properties.FileProperties hinzufügen."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="okw.OKW_Properties.addResource",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#ad170c832264ab27c615f6e1bf2e8e8d3",tooltip="Eine .Properties-Datei aus dem Resource-Verzeichniss zur Liste OKW_Properties.ResoursesProperties hin..."];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.OKW_Properties.init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#a8a4294aa27bf9f4f49e9f1991022d5c8",tooltip="Initialisiert diese Klasse:"];
 }

@@ -5,7 +5,7 @@
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,400,400italic,600,700italic,700,600italic' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
 <title>OpenKeyWord: Tutorial 1: Project mit Maven anlegen: (&quot;Hello Test&quot; - Teil 1)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 389, Datum: 08.26.2019 08:37:18</span>
+   &#160;<span id="projectnumber">Build_ID: 390, Datum: 08.26.2019 13:52:01</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -48,7 +48,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Erzeugt von Doxygen 1.8.15 -->
+<!-- Erzeugt von Doxygen 1.8.16 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
@@ -117,16 +117,61 @@ Vorraussetzung</h1>
 Reines OKW Testprojekt anlegen</h1>
 <h2><a class="anchor" id="refTutorial01_Ein_Neues_Maven_Projekt_Anlegen"></a>
 Ein neues Maven Projekt anlegen</h2>
-<div class="fragment"><div class="line">StartApp(<span class="stringliteral">&quot;Eclipse&quot;</span>);</div><div class="line">SelectWindow(<span class="stringliteral">&quot;Eclipse&quot;</span>)</div><div class="line">SelectMenu(&quot;File-&gt;New-&gt;Project...&quot;);</div><div class="line"></div><div class="line">SelectWindow(&quot;New Project&quot;);</div><div class="line">Select( &quot;Project Type&quot;, &quot;Maven/Maven Project&quot;);</div><div class="line">ClickOn( &quot;Next&quot;);</div><div class="line"></div><div class="line">Select(&quot;Create a Simple Project&quot;, &quot;CHECKED&quot;);</div><div class="line">Select(&quot;Use default&quot; Workspace set, &quot;CHECKED&quot;);</div><div class="line">ClickOn( &quot;Next&quot;);</div><div class="line"></div><div class="line">SetValue(&quot;Group Id&quot;, &quot;de.openkeyword&quot;);</div><div class="line">SetValue(&quot;Artifact Id&quot;, &quot;OKW_Tutorial&quot;);</div><div class="line">SetValue(&quot;Version&quot;, &quot;${IGNORE}<span class="stringliteral">&quot;) // =&gt; den &quot;</span>*Snapshot<span class="stringliteral">&quot;-wert übernehmen</span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral">// optional</span></div><div class="line"><span class="stringliteral">SetValue(&quot;</span>Name<span class="stringliteral">&quot;, &quot;</span>Add here Artifact Name<span class="stringliteral">&quot;);</span></div><div class="line"><span class="stringliteral">SetValue(&quot;</span>Description<span class="stringliteral">&quot;, &quot;</span>Add here your Artifact Description<span class="stringliteral">&quot;);</span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral">ClickOn( &quot;</span>Finish<span class="stringliteral">&quot;); </span></div></div><!-- fragment --><h2><a class="anchor" id="refTutorial01_Pom_Anpassen"></a>
+<div class="fragment"><div class="line">StartApp(<span class="stringliteral">&quot;Eclipse&quot;</span>);</div>
+<div class="line">SelectWindow(<span class="stringliteral">&quot;Eclipse&quot;</span>)</div>
+<div class="line">SelectMenu(&quot;File-&gt;New-&gt;Project...&quot;);</div>
+<div class="line"> </div>
+<div class="line">SelectWindow(&quot;New Project&quot;);</div>
+<div class="line">Select( &quot;Project Type&quot;, &quot;Maven/Maven Project&quot;);</div>
+<div class="line">ClickOn( &quot;Next&quot;);</div>
+<div class="line"> </div>
+<div class="line">Select(&quot;Create a Simple Project&quot;, &quot;CHECKED&quot;);</div>
+<div class="line">Select(&quot;Use default&quot; Workspace set, &quot;CHECKED&quot;);</div>
+<div class="line">ClickOn( &quot;Next&quot;);</div>
+<div class="line"> </div>
+<div class="line">SetValue(&quot;Group Id&quot;, &quot;de.openkeyword&quot;);</div>
+<div class="line">SetValue(&quot;Artifact Id&quot;, &quot;OKW_Tutorial&quot;);</div>
+<div class="line">SetValue(&quot;Version&quot;, &quot;${IGNORE}<span class="stringliteral">&quot;) // =&gt; den &quot;</span>*Snapshot<span class="stringliteral">&quot;-wert übernehmen</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">// optional</span></div>
+<div class="line"><span class="stringliteral">SetValue(&quot;</span>Name<span class="stringliteral">&quot;, &quot;</span>Add here Artifact Name<span class="stringliteral">&quot;);</span></div>
+<div class="line"><span class="stringliteral">SetValue(&quot;</span>Description<span class="stringliteral">&quot;, &quot;</span>Add here your Artifact Description<span class="stringliteral">&quot;);</span></div>
+<div class="line"><span class="stringliteral"></span> </div>
+<div class="line"><span class="stringliteral">ClickOn( &quot;</span>Finish<span class="stringliteral">&quot;); </span></div>
+</div><!-- fragment --><h2><a class="anchor" id="refTutorial01_Pom_Anpassen"></a>
 Entstandene pom.xml-Datei anpassen.</h2>
 <p>Dazu im <code>Project Explorer</code> die <code>pom.xml</code> öffnen:</p>
-<div class="fragment"><div class="line">DoubleClickOn(<span class="stringliteral">&quot;Project Explorer&quot;</span>, <span class="stringliteral">&quot;OKW_Tutorial/pom.xml)</span></div></div><!-- fragment --><h3><a class="anchor" id="refTutorial01_Java_8_Einstellen"></a>
+<div class="fragment"><div class="line">DoubleClickOn(<span class="stringliteral">&quot;Project Explorer&quot;</span>, <span class="stringliteral">&quot;OKW_Tutorial/pom.xml)</span></div>
+</div><!-- fragment --><h3><a class="anchor" id="refTutorial01_Java_8_Einstellen"></a>
 1. Java 8 einstellen</h3>
 <p>Die Java Version im <code>maven-compiler-plugin</code> Prüfen und ggf. einstellen. - Wir benötigen Java 1.8. Im pom-Editor unten den Reiter <code>pom.xml</code> auswählen. Wenn das Projekt frisch angelegt wurde, dann sollte der folgende Abschnitt nach <code>project/description&gt;</code> eingefügt werden. (einfach kopieren und unter <code>&lt;description&gt;</code> einfügen)</p>
-<div class="fragment"><div class="line">&lt;build&gt;</div><div class="line">    &lt;plugins&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;3.2&lt;/version&gt;</div><div class="line">            &lt;configuration&gt;</div><div class="line">                &lt;source&gt;1.8&lt;/source&gt;</div><div class="line">                &lt;target&gt;1.8&lt;/target&gt;</div><div class="line">            &lt;/configuration&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line">    &lt;/plugins&gt;</div><div class="line">&lt;/build&gt;</div></div><!-- fragment --><h3><a class="anchor" id="refTutorial01_OKW_Dependency_Eingeben"></a>
+<div class="fragment"><div class="line">&lt;build&gt;</div>
+<div class="line">    &lt;plugins&gt;</div>
+<div class="line">        &lt;plugin&gt;</div>
+<div class="line">            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</div>
+<div class="line">            &lt;version&gt;3.2&lt;/version&gt;</div>
+<div class="line">            &lt;configuration&gt;</div>
+<div class="line">                &lt;source&gt;1.8&lt;/source&gt;</div>
+<div class="line">                &lt;target&gt;1.8&lt;/target&gt;</div>
+<div class="line">            &lt;/configuration&gt;</div>
+<div class="line">        &lt;/plugin&gt;</div>
+<div class="line">    &lt;/plugins&gt;</div>
+<div class="line">&lt;/build&gt;</div>
+</div><!-- fragment --><h3><a class="anchor" id="refTutorial01_OKW_Dependency_Eingeben"></a>
 2. OKW Dependency eingeben</h3>
 <p>Nun auf den Reiter <code>Dependencies</code> gehen und dort</p>
-<div class="fragment"><div class="line">SelectWindow(<span class="stringliteral">&quot;Dependency Properties&quot;</span>)</div><div class="line">SetValue( &quot;Group Id&quot;, &quot;de.openkeyword&quot; )</div><div class="line">SetValue( &quot;Artifact Id&quot;, &quot;se&quot; )</div><div class="line">SetValue( &quot;Version&quot;, &quot;0.0.23&quot; )</div><div class="line"></div><div class="line"><span class="comment">// Alle anderen Werte werden nicht verändert.</span></div><div class="line"><span class="comment">// SetValue( &quot;Classifier&quot;, &quot;${IGNORE}&quot; )</span></div><div class="line"><span class="comment">// SetValue( &quot;Type&quot;, &quot;${IGNORE}&quot; )</span></div><div class="line"><span class="comment">// SetValue( &quot;Scope&quot;, &quot;${IGNORE}&quot; )</span></div><div class="line"><span class="comment">// SetValue( &quot;System Path&quot;, &quot;${IGNORE}&quot; )</span></div><div class="line"><span class="comment">// SetValue( &quot;Optional&quot;, &quot;${IGNORE}&quot; )</span></div></div><!-- fragment --><blockquote class="doxtable">
+<div class="fragment"><div class="line">SelectWindow(<span class="stringliteral">&quot;Dependency Properties&quot;</span>)</div>
+<div class="line">SetValue( &quot;Group Id&quot;, &quot;de.openkeyword&quot; )</div>
+<div class="line">SetValue( &quot;Artifact Id&quot;, &quot;se&quot; )</div>
+<div class="line">SetValue( &quot;Version&quot;, &quot;0.0.23&quot; )</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Alle anderen Werte werden nicht verändert.</span></div>
+<div class="line"><span class="comment">// SetValue( &quot;Classifier&quot;, &quot;${IGNORE}&quot; )</span></div>
+<div class="line"><span class="comment">// SetValue( &quot;Type&quot;, &quot;${IGNORE}&quot; )</span></div>
+<div class="line"><span class="comment">// SetValue( &quot;Scope&quot;, &quot;${IGNORE}&quot; )</span></div>
+<div class="line"><span class="comment">// SetValue( &quot;System Path&quot;, &quot;${IGNORE}&quot; )</span></div>
+<div class="line"><span class="comment">// SetValue( &quot;Optional&quot;, &quot;${IGNORE}&quot; )</span></div>
+</div><!-- fragment --><blockquote class="doxtable">
 <p><b>Anmerkung 1:</b> <code>Version</code> ggf. anpassen. </p>
 </blockquote>
 <blockquote class="doxtable">
@@ -134,29 +179,41 @@ Entstandene pom.xml-Datei anpassen.</h2>
 </blockquote>
 <p>D.h. OKW <code>core</code> wird automatisch durch Maven miteingebunden.</p>
 <p>Alternativ kann der Folgende block im Reiter <code>pom.xml</code> unter <code>dependencies</code> eingefügt werden:</p>
-<div class="fragment"><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;de.openkeyword&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;se&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;0.0.23&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></div><!-- fragment --><p>eingeben.</p>
+<div class="fragment"><div class="line">&lt;dependency&gt;</div>
+<div class="line">    &lt;groupId&gt;de.openkeyword&lt;/groupId&gt;</div>
+<div class="line">    &lt;artifactId&gt;se&lt;/artifactId&gt;</div>
+<div class="line">    &lt;version&gt;0.0.23&lt;/version&gt;</div>
+<div class="line">&lt;/dependency&gt;</div>
+</div><!-- fragment --><p>eingeben.</p>
 <h3><a class="anchor" id="refTutorial01_JUnit"></a>
 3. JUnit einbinden</h3>
 <p>JUnit wird wie OKW <code>se</code> eingebunden: Dazu müssen folgende Werte auf dem Tab Dependencies im pom-Editor eingeben: Wie bei OKW ggf. die Versions Nummer aktualisieren:</p>
-<div class="fragment"><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;junit&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;junit&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;4.12&lt;/version&gt;</div><div class="line">    &lt;scope&gt;test&lt;/scope&gt;</div><div class="line">&lt;/dependency&gt;</div></div><!-- fragment --><h2><a class="anchor" id="refTutorial01_Update_Projekt"></a>
+<div class="fragment"><div class="line">&lt;dependency&gt;</div>
+<div class="line">    &lt;groupId&gt;junit&lt;/groupId&gt;</div>
+<div class="line">    &lt;artifactId&gt;junit&lt;/artifactId&gt;</div>
+<div class="line">    &lt;version&gt;4.12&lt;/version&gt;</div>
+<div class="line">    &lt;scope&gt;test&lt;/scope&gt;</div>
+<div class="line">&lt;/dependency&gt;</div>
+</div><!-- fragment --><h2><a class="anchor" id="refTutorial01_Update_Projekt"></a>
 Update Projekt</h2>
-<div class="fragment"><div class="line">SelectContextMenu( <span class="stringliteral">&quot;Project Explorer&quot;</span>, <span class="stringliteral">&quot;OKW_Tutorial&quot;</span>, <span class="stringliteral">&quot;Maven-&gt;Update Project...&quot;</span> )</div></div><!-- fragment --><blockquote class="doxtable">
+<div class="fragment"><div class="line">SelectContextMenu( <span class="stringliteral">&quot;Project Explorer&quot;</span>, <span class="stringliteral">&quot;OKW_Tutorial&quot;</span>, <span class="stringliteral">&quot;Maven-&gt;Update Project...&quot;</span> )</div>
+</div><!-- fragment --><blockquote class="doxtable">
 <p><b>momobee</b> Maven Dependency zeigen: Benötigte Bibliotheken sind automatisch von Maven geladen worden. </p>
 </blockquote>
 <blockquote class="doxtable">
 <p>Projekt ist für die Erstellung von OKW-Testfälle vorbereitet. </p>
 </blockquote>
-</div></div><!-- PageDoc -->
-</div><!-- contents -->
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="index.html">OpenKeyWord</a></li><li class="navelem"><a class="el" href="ref_tutorials.html">OKW Anleitungen</a></li>
-    <li class="footer">Erzeugt am Mon Aug 26 2019 08:38:34 für OpenKeyWord von
+    <li class="navelem"><a class="el" href="ref_tutorials.html">OKW Anleitungen</a></li>
+    <li class="footer">Erzeugt am Mon Aug 26 2019 13:53:19 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>
 </div>
 <script type="text/javascript">

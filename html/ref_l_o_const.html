@@ -5,7 +5,7 @@
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,400,400italic,600,700italic,700,600italic' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
 <title>OpenKeyWord: Liste der reservierten OpenKeyWord Konstanten</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 389, Datum: 08.26.2019 08:37:18</span>
+   &#160;<span id="projectnumber">Build_ID: 390, Datum: 08.26.2019 13:52:01</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -48,7 +48,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Erzeugt von Doxygen 1.8.15 -->
+<!-- Erzeugt von Doxygen 1.8.16 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
@@ -131,41 +131,61 @@ $(document).ready(function(){initNavTree('ref_l_o_const.html','');});
 <h1><a class="anchor" id="refDELETE"></a>
 ${DELETE}</h1>
 <p>Der aktuelle Wert eines GUI-Objektes wird gelöscht.</p>
-<div class="fragment"><div class="line">EN.TypeKey( <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;${DELETE}&quot;</span> )</div><div class="line">EN.TypeKey( <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;${DELETE}${SEP}Second Value&quot;</span> )</div><div class="line"></div><div class="line">EN.SetValue( <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;${DELETE}&quot;</span> )</div><div class="line">EN.SetValue( <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;${DELETE}${SEP}Second Value&quot;</span> )</div><div class="line"></div><div class="line">EN.Select( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;${DELETE}&quot;</span> )</div><div class="line">EN.Select( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;${DELETE}${SEP}Frank Zappa${SEP}Rex Gildo&quot;</span> )</div></div><!-- fragment --><dl class="section note"><dt>Zu beachten</dt><dd>Wenn Werte in einem GUI-Objekt bereits Ausgewählt sind, dann können diese mit <code>${DELETE}</code> abgewählt werden.</dd></dl>
+<div class="fragment"><div class="line">EN.TypeKey( <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;${DELETE}&quot;</span> )</div>
+<div class="line">EN.TypeKey( <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;${DELETE}${SEP}Second Value&quot;</span> )</div>
+<div class="line"> </div>
+<div class="line">EN.SetValue( <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;${DELETE}&quot;</span> )</div>
+<div class="line">EN.SetValue( <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;${DELETE}${SEP}Second Value&quot;</span> )</div>
+<div class="line"> </div>
+<div class="line">EN.Select( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;${DELETE}&quot;</span> )</div>
+<div class="line">EN.Select( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;${DELETE}${SEP}Frank Zappa${SEP}Rex Gildo&quot;</span> )</div>
+</div><!-- fragment --><dl class="section note"><dt>Zu beachten</dt><dd>Wenn Werte in einem GUI-Objekt bereits Ausgewählt sind, dann können diese mit <code>${DELETE}</code> abgewählt werden.</dd></dl>
 <dl class="section user"><dt>Technischer Hinweis:</dt><dd>Das Löschen von Werten wird im GUI-Adapter implmentiert (z.B. SeTextField, SeListbox)</dd></dl>
 <p>Wenn das Löschen der Werte für ein GUI-Objekt nicht möglich ist (z.B. ListBox enthält keine \refEMPTY Auswahlmöglichkeit), dann muss die Implementierung des GUI-Adapters darauf geignet (z.B. auslösen von <a class="el" href="classokw_1_1exceptions_1_1_o_k_w_not_allowed_value_exception.html" title="OKWNotAllowedValueException-Ausnahme wird ausgelöst, wenn ein gegebener Wert im Schlüsselwort nicht e...">okw.exceptions.OKWNotAllowedValueException</a>) darauf reagieren.</p>
 <h1><a class="anchor" id="refIGNORE"></a>
 ${IGNORE}</h1>
 <p>OpenKeyWord überschpring ein Schlüsselwort, wenn als Wert <code>${IGNORE}</code> eingetragen ist.</p>
 <p>Diese Konstnate ist für wiederverwendbare Sequenzen wichtig. Mit ${IGNORE} können in Sequenzen die Ausführung einzelner Schlüsselwörter ein und ausgeschaltet werden.</p>
-<div class="fragment"><div class="line">EN.Select( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;${IGNORE}&quot;</span> )</div><div class="line">EN.TypeKey( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;${IGNORE}&quot;</span> )</div><div class="line">EN.VerifyValue( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;${IGNORE}&quot;</span> )</div></div><!-- fragment --><dl class="section user"><dt>Hinweis:</dt><dd>Ein leerer String <code>""</code> ist äquivalent mit <code>${IGNORE}</code>. Das folgende Beispiel ist mit dem vorhergen Beispiel gleichwertig:</dd></dl>
-<div class="fragment"><div class="line">EN.Select ( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;&quot;</span> )</div><div class="line">EN.TypeKey ( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;&quot;</span> )</div><div class="line">EN.VerifyValue ( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;&quot;</span> )</div></div><!-- fragment --><p><code>${IGNORE}</code> darf nicht mit anderen Werten kombiniert werden, sonst wir eine Ausnahme ausgelöst und der aktuelle Testfall wird beendet.</p>
+<div class="fragment"><div class="line">EN.Select( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;${IGNORE}&quot;</span> )</div>
+<div class="line">EN.TypeKey( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;${IGNORE}&quot;</span> )</div>
+<div class="line">EN.VerifyValue( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;${IGNORE}&quot;</span> )</div>
+</div><!-- fragment --><dl class="section user"><dt>Hinweis:</dt><dd>Ein leerer String <code>""</code> ist äquivalent mit <code>${IGNORE}</code>. Das folgende Beispiel ist mit dem vorhergen Beispiel gleichwertig:</dd></dl>
+<div class="fragment"><div class="line">EN.Select ( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;&quot;</span> )</div>
+<div class="line">EN.TypeKey ( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;&quot;</span> )</div>
+<div class="line">EN.VerifyValue ( <span class="stringliteral">&quot;Artist&quot;</span>, <span class="stringliteral">&quot;&quot;</span> )</div>
+</div><!-- fragment --><p><code>${IGNORE}</code> darf nicht mit anderen Werten kombiniert werden, sonst wir eine Ausnahme ausgelöst und der aktuelle Testfall wird beendet.</p>
 <dl class="section user"><dt>Technischer Hinweis:</dt><dd><code>${IGNORE}</code> wird in den Methoden der Klasse <a class="el" href="classokw_1_1core_1_1_o_k.html" title="Klasse OK representiert den Core Zustand OK.">okw.core.OK</a> ausgewertet. Eine OKW-Methode des GUI-Adapters wird im <code>${IGNORE}</code>-Fall nicht aufgerufen.</dd></dl>
 <h1><a class="anchor" id="refEMPTY"></a>
 ${EMPTY}</h1>
 <p>Die OKW Konstante <code>${EMPTY}</code> wird in den "VerifyValue"-Schlüsselwörtern verwendet:</p>
-<div class="fragment"><div class="line">EN.VerifyValue( <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;${EMPTY}&quot;</span> )</div></div><!-- fragment --><dl class="section note"><dt>Zu beachten</dt><dd><code>VerifyValue( "Name", "" )</code> ignoriert die Ausführung die Schlüsselwortes. Mit anderen Worten: Es wird nichts geprüft!</dd></dl>
+<div class="fragment"><div class="line">EN.VerifyValue( <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;${EMPTY}&quot;</span> )</div>
+</div><!-- fragment --><dl class="section note"><dt>Zu beachten</dt><dd><code>VerifyValue( "Name", "" )</code> ignoriert die Ausführung die Schlüsselwortes. Mit anderen Worten: Es wird nichts geprüft!</dd></dl>
 <dl class="section user"><dt>Technischer Hinweis:</dt><dd><code>${EMPTY}</code> wird in den Verify-Methoden der Klasse <a class="el" href="classokw_1_1core_1_1_o_k.html" title="Klasse OK representiert den Core Zustand OK.">okw.core.OK</a> ausgewertet.: <a class="el" href="classokw_1_1core_1_1_o_k.html" title="Klasse OK representiert den Core Zustand OK.">okw.core.OK</a> konvertiert <code>${EMPTY}</code> in einen leeren String <code>""</code> und vergleicht das mit dem aktuellen Wert des GUI objectes.</dd></dl>
 <h1><a class="anchor" id="refSEP"></a>
 ${SEP}</h1>
-<div class="fragment"><div class="line">EN.Select( <span class="stringliteral">&quot;Artist&quot;</span> = <span class="stringliteral">&quot;Frank Zappa${SEP}Rex Gildo&quot;</span> )</div></div><!-- fragment --><h1><a class="anchor" id="refHSEP_VSEP"></a>
+<div class="fragment"><div class="line">EN.Select( <span class="stringliteral">&quot;Artist&quot;</span> = <span class="stringliteral">&quot;Frank Zappa${SEP}Rex Gildo&quot;</span> )</div>
+</div><!-- fragment --><h1><a class="anchor" id="refHSEP_VSEP"></a>
 ${HSEP} ${VSEP}</h1>
 <p>refHSEP_VSEP</p>
-<div class="fragment"><div class="line">EN.Select( <span class="stringliteral">&quot;Artist&quot;</span> = <span class="stringliteral">&quot;Frank Zappa${SEP}Rex Gildo&quot;</span> )</div></div><!-- fragment --><h1><a class="anchor" id="refTCN"></a>
+<div class="fragment"><div class="line">EN.Select( <span class="stringliteral">&quot;Artist&quot;</span> = <span class="stringliteral">&quot;Frank Zappa${SEP}Rex Gildo&quot;</span> )</div>
+</div><!-- fragment --><h1><a class="anchor" id="refTCN"></a>
 ${TCN}</h1>
-<div class="fragment"><div class="line">EN.TestBegin( <span class="stringliteral">&quot;This is my first test case&quot;</span> ); <span class="comment">// The KeyWord TestBegin() sets TCN=&quot;This is my first test case&quot; </span></div><div class="line">EN.SelectWindow( <span class="stringliteral">&quot;MyWindow&quot;</span> );</div><div class="line">EN.SetValue( <span class="stringliteral">&quot;Comment&quot;</span>, <span class="stringliteral">&quot;${TCN}&quot;</span> ); <span class="comment">// GUI-Object with FN=&quot;Comment&quot; is set to &quot;This is my first test case&quot;</span></div><div class="line">EN.VerifyValue( <span class="stringliteral">&quot;Comment&quot;</span>, <span class="stringliteral">&quot;This is my first test case&quot;</span> )</div></div><!-- fragment --><dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
+<div class="fragment"><div class="line">EN.TestBegin( <span class="stringliteral">&quot;This is my first test case&quot;</span> ); <span class="comment">// The KeyWord TestBegin() sets TCN=&quot;This is my first test case&quot; </span></div>
+<div class="line">EN.SelectWindow( <span class="stringliteral">&quot;MyWindow&quot;</span> );</div>
+<div class="line">EN.SetValue( <span class="stringliteral">&quot;Comment&quot;</span>, <span class="stringliteral">&quot;${TCN}&quot;</span> ); <span class="comment">// GUI-Object with FN=&quot;Comment&quot; is set to &quot;This is my first test case&quot;</span></div>
+<div class="line">EN.VerifyValue( <span class="stringliteral">&quot;Comment&quot;</span>, <span class="stringliteral">&quot;This is my first test case&quot;</span> )</div>
+</div><!-- fragment --><dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2017-05-10 </dd></dl>
-</div></div><!-- PageDoc -->
-</div><!-- contents -->
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="index.html">OpenKeyWord</a></li>
-    <li class="footer">Erzeugt am Mon Aug 26 2019 08:38:34 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mon Aug 26 2019 13:53:19 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -1,7 +1,6 @@
 var ref_tutorials =
 [
     [ "Tutorial 1: Project mit Maven anlegen: (\"Hello Test\" - Teil 1)", "ref_tutorial01.html", [
-      [ "Radiolist", "ref_selenium_g_u_iadapter.html#refRadioList", null ],
       [ "Vorraussetzung", "ref_tutorial01.html#refTutorial01_Vorraussetzung", null ],
       [ "Reines OKW Testprojekt anlegen", "ref_tutorial01.html#refTutorial01_OKW_Testprojekt_Anlegen", [
         [ "Ein neues Maven Projekt anlegen", "ref_tutorial01.html#refTutorial01_Ein_Neues_Maven_Projekt_Anlegen", null ],

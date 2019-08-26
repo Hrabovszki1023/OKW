@@ -5,7 +5,7 @@ digraph "okw.core.OK.SelectMenu"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node736 [label="okw.core.OK.SelectMenu",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Wählt den gegebenen Menü-Eintrag aus."];
-  Node736 -> Node737 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node737 [label="okw.core.OK.SelectMenu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a691dd78240ef7e8a609b05e431c54f8c",tooltip="Wählt den gegebenen Menüeintrag aus."];
+  Node1 [label="okw.core.OK.SelectMenu",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Wählt den gegebenen Menü-Eintrag aus."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.core.OK.SelectMenu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a691dd78240ef7e8a609b05e431c54f8c",tooltip="Wählt den gegebenen Menüeintrag aus."];
 }

@@ -5,7 +5,7 @@ digraph "okw.gui.adapter.myTextfield.getValue"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node78 [label="okw.gui.adapter.myTextfield.get\lValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Ermittelt den Wert des Textfeldes, welches dem sichtbaren ."];
-  Node78 -> Node79 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node79 [label="okw.gui.adapter.myTextfield.get\lCaption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1my_textfield.html#a9e9ca5d7323a441b9a76771657b30a88",tooltip="Ermittelt den textuellen Inhalt der Überschrift eines Textfeldes."];
+  Node1 [label="okw.gui.adapter.myTextfield.get\lValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Ermittelt den Wert des Textfeldes, welches dem sichtbaren ."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.gui.adapter.myTextfield.get\lCaption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1my_textfield.html#a9e9ca5d7323a441b9a76771657b30a88",tooltip="Ermittelt den textuellen Inhalt der Überschrift eines Textfeldes."];
 }

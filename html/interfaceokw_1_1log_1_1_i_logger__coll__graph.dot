@@ -4,5 +4,5 @@ digraph "okw.log.ILogger"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node3 [label="{okw.log.ILogger\n||+ reset()\l+ LogError()\l+ LogPass()\l+ LogWarning()\l+ LogException()\l+ LogSourceLocation()\l+ LogPrint()\l+ LogPrintDebug()\l+ LogTestcaseStart()\l+ LogTestcaseEnd()\l+ LogKeyWordStart()\l+ LogKeyWordEnd()\l+ LogStepStart()\l+ LogStepEnd()\l+ LogLocalACCallStart()\l+ LogLocalACCallEnd()\l+ LogRemoteACCallStart()\l+ LogRemoteACCallEnd()\l+ LogSequenceStart()\l+ LogSequenceEnd()\lund 15 mehr ...\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Debug Logs are not a part of Interface."];
+  Node1 [label="{okw.log.ILogger\n||+ reset()\l+ LogError()\l+ LogPass()\l+ LogWarning()\l+ LogException()\l+ LogSourceLocation()\l+ LogPrint()\l+ LogPrintDebug()\l+ LogTestcaseStart()\l+ LogTestcaseEnd()\l+ LogKeyWordStart()\l+ LogKeyWordEnd()\l+ LogStepStart()\l+ LogStepEnd()\l+ LogLocalACCallStart()\l+ LogLocalACCallEnd()\l+ LogRemoteACCallStart()\l+ LogRemoteACCallEnd()\l+ LogSequenceStart()\l+ LogSequenceEnd()\lund 15 mehr ...\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Debug Logs are not a part of Interface."];
 }

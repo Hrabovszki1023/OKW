@@ -5,13 +5,13 @@ digraph "okw.core.OK.verifyREGX"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1702 [label="okw.core.OK.verifyREGX",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
-  Node1702 -> Node1703 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1703 [label="okw.log.Logger_Sngltn.Log\lFunctionStartDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42",tooltip="LogFunctionStartDebug:"];
-  Node1702 -> Node1704 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1704 [label="okw.OKW_TimeOut.getMaxCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___time_out.html#adf7b9cc33db065c1f284bb5db2227b51",tooltip="Anzahl der berechnetten Zyklen."];
-  Node1702 -> Node1705 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1705 [label="okw.OKW_TimeOut.getPT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___time_out.html#ab7142e5e6adc82f308a70177c71ced2c",tooltip="Wartezeit zwischen zwei Pollings in [ms]."];
-  Node1702 -> Node1706 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1706 [label="okw.log.Logger_Sngltn.Log\lFunctionEndDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84",tooltip="LogFunctionEndDebug:"];
+  Node1 [label="okw.core.OK.verifyREGX",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.OKW_TimeOut.getMaxCount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___time_out.html#adf7b9cc33db065c1f284bb5db2227b51",tooltip="Anzahl der berechnetten Zyklen."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.OKW_TimeOut.getPT",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___time_out.html#ab7142e5e6adc82f308a70177c71ced2c",tooltip="Wartezeit zwischen zwei Pollings in [ms]."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="okw.log.Logger_Sngltn.Log\lFunctionEndDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84",tooltip="LogFunctionEndDebug:"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.log.Logger_Sngltn.Log\lFunctionStartDebug",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42",tooltip="LogFunctionStartDebug:"];
 }

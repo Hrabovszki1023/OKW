@@ -5,9 +5,9 @@ digraph "okw.fourTestLocatorTest.tc_4TAI_Locator"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="okw.fourTestLocatorTest.tc\l_4TAI_Locator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Suche Element mit Text und hole textfeld dazu."];
-  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="okw.fourTestLocator.get4\lTestLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1four_test_locator.html#a72ef22482dd1e7424719d11311150d88",tooltip="Erzeugt einen locator aus dem gegebenen Wert, wenn fspL mit \"4T!\", \"4T:\" oder \"4T?..."];
+  Node1 [label="okw.fourTestLocatorTest.tc\l_4TAI_Locator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Suche Element mit Text und hole textfeld dazu."];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="okw.fourTestLocator.seperate\lClassnameAndLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1four_test_locator.html#a6ce001cb5b4694e70bd0a82c2a00eaaf",tooltip="Trennt den Klassenbezeichner vom Locator ab."];
+  Node2 [label="okw.fourTestLocator.get4\lTestLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1four_test_locator.html#a72ef22482dd1e7424719d11311150d88",tooltip="Erzeugt einen locator aus dem gegebenen Wert, wenn fspL mit \"4T!\", \"4T:\" oder \"4T?..."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.fourTestLocator.seperate\lClassnameAndLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1four_test_locator.html#a6ce001cb5b4694e70bd0a82c2a00eaaf",tooltip="Trennt den Klassenbezeichner vom Locator ab."];
 }

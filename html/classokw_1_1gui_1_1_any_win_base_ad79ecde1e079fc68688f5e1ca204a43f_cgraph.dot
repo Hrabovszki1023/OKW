@@ -5,9 +5,9 @@ digraph "okw.gui.AnyWinBase.LogFunctionEnd"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node123 [label="okw.gui.AnyWinBase.LogFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Diese Methode ruft die Methode Logger.Instance.LogFunctionEnd(string) auf."];
-  Node123 -> Node124 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node124 [label="okw.log.Logger_Sngltn.Log\lFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a0244bf1669504c69ba8a4fad67e00721",tooltip="LogFunctionEnd(String):"];
-  Node124 -> Node125 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node125 [label="okw.log.Logger_Sngltn.Log\lFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a2aa496c6543c0b15b27190b1ad58a6fc",tooltip="LogFunctionEnd:"];
+  Node1 [label="okw.gui.AnyWinBase.LogFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Diese Methode ruft die Methode Logger.Instance.LogFunctionEnd(string) auf."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.log.Logger_Sngltn.Log\lFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a0244bf1669504c69ba8a4fad67e00721",tooltip="LogFunctionEnd(String):"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.log.Logger_Sngltn.Log\lFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a2aa496c6543c0b15b27190b1ad58a6fc",tooltip="LogFunctionEnd:"];
 }

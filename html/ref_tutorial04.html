@@ -5,7 +5,7 @@
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,400,400italic,600,700italic,700,600italic' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
 <title>OpenKeyWord: OKW Tutorial: Verketten von Locatoren</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 389, Datum: 08.26.2019 08:37:18</span>
+   &#160;<span id="projectnumber">Build_ID: 390, Datum: 08.26.2019 13:52:01</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -48,7 +48,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Erzeugt von Doxygen 1.8.15 -->
+<!-- Erzeugt von Doxygen 1.8.16 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
@@ -102,7 +102,8 @@ $(document).ready(function(){initNavTree('ref_tutorial04.html','');});
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="refTutorial04_A"></a>
 Wozu die Verkettung von Lokatoren?</h1>
-<p>Eine Verkettung von Locatoren kann notwendig werden, wenn ein Kind-Objekt nur zusammen mit seinem Eltern-Objekt eindeutig erkannt werden kann.</p>
+<p>Eine Verkettung von Locatoren kann notwendig werden, wenn ein Kind-Objekt nur zusammen mit seinem Eltern-Objekt eindeutig erkannt werden kann. <br  />
+</p>
 <p>So kann ein Eingabefeld wie <code>User</code>, aus dem Beispiel in Tutorial 3 <a class="el" href="ref_tutorial03.html">Tutorial 3: Der Locator</a>, in mehreren Fenstern vorkommen. Erst in Verbindung mit dem Locator des Eltern-Objektes (=Fenster) kann eine Verwechselung des Kind-Objeks ausgeschlossen werden.</p>
 <h1><a class="anchor" id="refTutorial04_DRY"></a>
 DRY</h1>
@@ -120,29 +121,47 @@ Ziel</h2>
 <li>Eltern-Object Locator: <code>//body/div[@id='login']/..</code></li>
 <li>Kind-Object Locator: <code>//*[@id='user_login']</code></li>
 </ul>
-<dl class="section user"><dt>Ergebniss: Der zusammengestzte Locator sollte wie folgt aussehen:</dt><dd><div class="fragment"><div class="line"><span class="stringliteral">&quot;//body/div[@id=&#39;login&#39;]/..//*[@id=&#39;user_login&#39;]&quot;</span></div></div><!-- fragment --></dd></dl>
+<dl class="section user"><dt>Ergebniss: Der zusammengestzte Locator sollte wie folgt aussehen:</dt><dd><div class="fragment"><div class="line"><span class="stringliteral">&quot;//body/div[@id=&#39;login&#39;]/..//*[@id=&#39;user_login&#39;]&quot;</span></div>
+</div><!-- fragment --></dd></dl>
 <h2><a class="anchor" id="refTutorial04_C_B"></a>
 Die Methoden &lt;tt&gt;getLOCATOR()&lt;/tt&gt; und &lt;tt&gt;getLocator()&lt;/tt&gt;</h2>
 <p>Zunächst müssen wir zwei Methoden kennenlernen:</p>
 <ol type="1">
-<li>Die Methode <code>getLOCATOR()</code> holt die Referenz auf den Locator werden.<br />
+<li>Die Methode <code>getLOCATOR()</code> holt die Referenz auf den Locator werden.<br  />
  Hinweis:** Jede GUI-Adapter Klasse im Paket "se" besitzt ein Field vom Typ <code>OKWLocator</code>.</li>
 <li>Die Methode 'getLocator()' (man beachte die GROSS und klein Schreibung!), die (ggf. den vollständig rekursiv aufgelösten) aktuellen Wert des Locators (hier als XPath) zurückgibt.</li>
 </ol>
 <h2><a class="anchor" id="refTutorial04_C_C"></a>
 Der Locator des Eltern_Objectes</h2>
 <p>Wir lassen den Locator des Eltern-Objektes (<code>wp_login</code>) unverändert. Dieser wird im Konstruktor des Klasse definiert:</p>
-<div class="fragment"><div class="line"><span class="keyword">public</span> wp_login()</div><div class="line">{</div><div class="line">    super(<span class="stringliteral">&quot;//body/div[@id=&#39;login&#39;]/..&quot;</span>);</div><div class="line">}</div></div><!-- fragment --><p>Entscheidend ist hier der Ausdruck <code>super("//body/div[@id='login']/..");</code>. Hiermit wird in der XPATH Wert <code>//body/div[@id='login']/..</code> in der Locator Klasse des Fensters abgelegt.</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> wp_login()</div>
+<div class="line">{</div>
+<div class="line">    super(<span class="stringliteral">&quot;//body/div[@id=&#39;login&#39;]/..&quot;</span>);</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Entscheidend ist hier der Ausdruck <code>super("//body/div[@id='login']/..");</code>. Hiermit wird in der XPATH Wert <code>//body/div[@id='login']/..</code> in der Locator Klasse des Fensters abgelegt.</p>
 <h2><a class="anchor" id="refTutorial04_C_D"></a>
 Der Locator des Kind-Objektes</h2>
 <p>Wir erweitern nun den Locator des Kind-Objektes um den Locator des Eltern-Objektes:</p>
-<dl class="section user"><dt></dt><dd><div class="fragment"><div class="line"><span class="keyword">public</span> SeInputText Username = <span class="keyword">new</span> SeInputText(<span class="stringliteral">&quot;%1$s//*[@id=&#39;user_login&#39;]&quot;</span>, this.getLOCATOR() );</div></div><!-- fragment --></dd></dl>
+<dl class="section user"><dt></dt><dd><div class="fragment"><div class="line"><span class="keyword">public</span> SeInputText Username = <span class="keyword">new</span> SeInputText(<span class="stringliteral">&quot;%1$s//*[@id=&#39;user_login&#39;]&quot;</span>, this.getLOCATOR() );</div>
+</div><!-- fragment --></dd></dl>
 <ul>
 <li>Die <em>Referenz</em> des Eltern-Objekt Locators wird im Konstruktor des Kind-Objektes übergeben.</li>
 <li><code>%1$s</code> gibt an, an welcher Stelle, der <em>Wert</em> des Eltern-Objekt Locators ein gesetzt werden soll.</li>
 </ul>
 <p>Das Ganze nun im Überblick:</p>
-<div class="fragment"><div class="line">@OKW(FN=<span class="stringliteral">&quot;WP-Login&quot;</span>)</div><div class="line">public class wp_login extends SeBrowserChild</div><div class="line">{</div><div class="line"></div><div class="line">    @OKW (FN=<span class="stringliteral">&quot;Username&quot;</span>)</div><div class="line">    public SeInputText Username = new SeInputText(&quot;%1$s<span class="comment">//*[@id=&#39;user_login&#39;]&quot;, this.getLOCATOR() );</span></div><div class="line"></div><div class="line">    public wp_login()</div><div class="line">    {</div><div class="line">        super(<span class="stringliteral">&quot;//body/div[@id=&#39;login&#39;]/..&quot;</span>);</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>Das war´s auch schon prinzipiell: Wenn der Locator der Klasse <code>wp-login</code> geändert wird, dann bekommen die Verketteten Kind-Objekte automatisch die Änderung mit.</p>
+<div class="fragment"><div class="line">@OKW(FN=<span class="stringliteral">&quot;WP-Login&quot;</span>)</div>
+<div class="line">public class wp_login extends SeBrowserChild</div>
+<div class="line">{</div>
+<div class="line"> </div>
+<div class="line">    @OKW (FN=<span class="stringliteral">&quot;Username&quot;</span>)</div>
+<div class="line">    public SeInputText Username = new SeInputText(&quot;%1$s<span class="comment">//*[@id=&#39;user_login&#39;]&quot;, this.getLOCATOR() );</span></div>
+<div class="line"> </div>
+<div class="line">    public wp_login()</div>
+<div class="line">    {</div>
+<div class="line">        super(<span class="stringliteral">&quot;//body/div[@id=&#39;login&#39;]/..&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Das war´s auch schon prinzipiell: Wenn der Locator der Klasse <code>wp-login</code> geändert wird, dann bekommen die Verketteten Kind-Objekte automatisch die Änderung mit.</p>
 <h1><a class="anchor" id="refTutorial04_D"></a>
 Kombination mehrerer Locatoren</h1>
 <p>Es können prinzipiell beliebig viele Locatoren im Konstruktor mitgegeben werden.</p>
@@ -153,18 +172,23 @@ Kombination mehrerer Locatoren</h1>
 </ul>
 <p>Ein Eltern LOCATOR kann an mehreren Stellen in einem Kind-Locator eingesetzt werden.</p>
 <p>Im folgenden Beispiel (JUnit TestFall) werden zwei Locatorer (<code>Eltern_1</code> und <code>Eltern_2</code>) an mehreren Stellen (zwei) in ein Kind-Locator eingesetzt. Das erwartetet Ergebniss ist <code>L2=L2, L1=L1, L2=L2, L1=L1</code></p>
-<div class="fragment"><div class="line">OKWLocator Eltern_1 = <span class="keyword">new</span> OKWLocator(<span class="stringliteral">&quot;L1&quot;</span>);</div><div class="line">OKWLocator Eltern_2 = <span class="keyword">new</span> OKWLocator(<span class="stringliteral">&quot;L2&quot;</span>);</div><div class="line">OKWLocator Kind = <span class="keyword">new</span> OKWLocator(<span class="stringliteral">&quot;L2=%2$s, L1=%1$s, L2=%2$s, L1=%1$s&quot;</span>, Eltern_1, Eltern_2);</div><div class="line"></div><div class="line">assertEquals(<span class="stringliteral">&quot;L2=L2, L1=L1, L2=L2, L1=L1&quot;</span>, Kind.getLocator());</div></div><!-- fragment --><p>Damit sind wir mit diesem Tutorial auch schon fertig. </p>
-</div></div><!-- PageDoc -->
-</div><!-- contents -->
+<div class="fragment"><div class="line">OKWLocator Eltern_1 = <span class="keyword">new</span> OKWLocator(<span class="stringliteral">&quot;L1&quot;</span>);</div>
+<div class="line">OKWLocator Eltern_2 = <span class="keyword">new</span> OKWLocator(<span class="stringliteral">&quot;L2&quot;</span>);</div>
+<div class="line">OKWLocator Kind = <span class="keyword">new</span> OKWLocator(<span class="stringliteral">&quot;L2=%2$s, L1=%1$s, L2=%2$s, L1=%1$s&quot;</span>, Eltern_1, Eltern_2);</div>
+<div class="line"> </div>
+<div class="line">assertEquals(<span class="stringliteral">&quot;L2=L2, L1=L1, L2=L2, L1=L1&quot;</span>, Kind.getLocator());</div>
+</div><!-- fragment --><p>Damit sind wir mit diesem Tutorial auch schon fertig. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="index.html">OpenKeyWord</a></li><li class="navelem"><a class="el" href="ref_tutorials.html">OKW Anleitungen</a></li>
-    <li class="footer">Erzeugt am Mon Aug 26 2019 08:38:34 für OpenKeyWord von
+    <li class="navelem"><a class="el" href="ref_tutorials.html">OKW Anleitungen</a></li>
+    <li class="footer">Erzeugt am Mon Aug 26 2019 13:53:19 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>
 </div>
 <script type="text/javascript">

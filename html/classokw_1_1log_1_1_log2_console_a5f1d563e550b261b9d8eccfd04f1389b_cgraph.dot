@@ -5,15 +5,15 @@ digraph "okw.log.Log2Console.LogFunctionEndDebug"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node76 [label="okw.log.Log2Console.LogFunction\lEndDebug",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="LogFunctionEndDebug(String):"];
-  Node76 -> Node77 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node77 [label="okw.log.Log2Console.LogFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#ae5d97f0d2c5d086474b811f700e97eb1",tooltip="LogFunctionEnd:"];
-  Node77 -> Node78 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node78 [label="okw.log.Log2Console.LogPrint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a76c2788140c26471575dfa92c118d1dc",tooltip="LogPrint: Prints the given message to the results."];
-  Node77 -> Node79 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node79 [label="okw.log.Log2Console.ResCloseList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#ab2120d2a3c68dc03a6a62d02570bfbd6",tooltip="ResCloseList: Closes the outline level."];
-  Node79 -> Node80 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node80 [label="okw.log.Log2Console.Blanks\lBefore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2",tooltip="Erzeugt die Einrücktiefe für die Console-Ausgabe."];
-  Node80 -> Node81 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node81 [label="okw.OKW_Helper.repeatString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper.html#ab5e676787808ed174e603c1e3bfcd176",tooltip=" "];
+  Node1 [label="okw.log.Log2Console.LogFunction\lEndDebug",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="LogFunctionEndDebug(String):"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.log.Log2Console.LogFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#ae5d97f0d2c5d086474b811f700e97eb1",tooltip="LogFunctionEnd:"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.log.Log2Console.LogPrint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a76c2788140c26471575dfa92c118d1dc",tooltip="LogPrint: Prints the given message to the results."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="okw.log.Log2Console.ResCloseList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#ab2120d2a3c68dc03a6a62d02570bfbd6",tooltip="ResCloseList: Closes the outline level."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.log.Log2Console.Blanks\lBefore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2",tooltip="Erzeugt die Einrücktiefe für die Console-Ausgabe."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="okw.OKW_Helper.repeatString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper.html#ab5e676787808ed174e603c1e3bfcd176",tooltip=" "];
 }

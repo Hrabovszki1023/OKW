@@ -5,11 +5,11 @@ digraph "okw.log.Log2Console.LogSequenceEnd"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node188 [label="okw.log.Log2Console.LogSequenceEnd",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="LogSequenceEnd:"];
-  Node188 -> Node189 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node189 [label="okw.log.Log2Console.ResCloseList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#ab2120d2a3c68dc03a6a62d02570bfbd6",tooltip="ResCloseList: Closes the outline level."];
-  Node189 -> Node190 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node190 [label="okw.log.Log2Console.Blanks\lBefore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2",tooltip="Erzeugt die Einrücktiefe für die Console-Ausgabe."];
-  Node190 -> Node191 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node191 [label="okw.OKW_Helper.repeatString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper.html#ab5e676787808ed174e603c1e3bfcd176",tooltip=" "];
+  Node1 [label="okw.log.Log2Console.LogSequenceEnd",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="LogSequenceEnd:"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.log.Log2Console.ResCloseList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#ab2120d2a3c68dc03a6a62d02570bfbd6",tooltip="ResCloseList: Closes the outline level."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.log.Log2Console.Blanks\lBefore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html#a418e8bba5b89f56ddaf2fea089dd24b2",tooltip="Erzeugt die Einrücktiefe für die Console-Ausgabe."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="okw.OKW_Helper.repeatString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper.html#ab5e676787808ed174e603c1e3bfcd176",tooltip=" "];
 }

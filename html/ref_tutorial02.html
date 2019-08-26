@@ -5,7 +5,7 @@
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,400,400italic,600,700italic,700,600italic' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
 <title>OpenKeyWord: Tutorial 2: Einen Testfall mit OKW in JUnit erstellen (&quot;Hello Test&quot; - Teil 2)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 389, Datum: 08.26.2019 08:37:18</span>
+   &#160;<span id="projectnumber">Build_ID: 390, Datum: 08.26.2019 13:52:01</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -48,7 +48,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Erzeugt von Doxygen 1.8.15 -->
+<!-- Erzeugt von Doxygen 1.8.16 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
@@ -103,41 +103,87 @@ $(document).ready(function(){initNavTree('ref_tutorial02.html','');});
 <div class="textblock"><h1><a class="anchor" id="refTutorial02_JUnit_TestKlasse_Anlegen"></a>
 1. JUnit TestKlasse anlegen.</h1>
 <p>Eine JUnit Klasse wird folgender maßen angelegt:</p>
-<div class="fragment"><div class="line">EN.SelectWindow(<span class="stringliteral">&quot;EcLipse&quot;</span>);</div><div class="line">EN.SelectMenu(<span class="stringliteral">&quot;File-&gt;New-&gt;JUnit Test Case&quot;</span>);</div><div class="line"></div><div class="line">EN.SelectWindow(<span class="stringliteral">&quot;New JUnit Test Case&quot;</span>);</div><div class="line">EN.SetValue(<span class="stringliteral">&quot;New JUnit 4 test&quot;</span>)</div><div class="line">EN.SetValue(<span class="stringliteral">&quot;Source Folder&quot;</span>, <span class="stringliteral">&quot;OKW_Tutorial/src/test/java&quot;</span>)</div><div class="line"></div><div class="line">EN.SetValue(<span class="stringliteral">&quot;Package&quot;</span>, <span class="stringliteral">&quot;${IGNORE}&quot;</span>);</div><div class="line">EN.SetValue(<span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;Hello_OKW&quot;</span>);</div><div class="line">EN.SetValue(<span class="stringliteral">&quot;Superclass&quot;</span>, <span class="stringliteral">&quot;${IGNORE}&quot;</span>);</div><div class="line"></div><div class="line">EN.SetValue(<span class="stringliteral">&quot;setUpBeforeClass&quot;</span>, <span class="stringliteral">&quot;UNCHEKED&quot;</span>);</div><div class="line">EN.SetValue(<span class="stringliteral">&quot;setUp&quot;</span>, <span class="stringliteral">&quot;UNCHEKED&quot;</span>);</div><div class="line">EN.SetValue(<span class="stringliteral">&quot;tearDownAfterClass&quot;</span>, <span class="stringliteral">&quot;UNCHEKED&quot;</span>);</div><div class="line">EN.SetValue(<span class="stringliteral">&quot;tearAfter&quot;</span>, <span class="stringliteral">&quot;UNCHEKED&quot;</span>);</div></div><!-- fragment --><h1><a class="anchor" id="refTutorial02_a"></a>
+<div class="fragment"><div class="line">EN.SelectWindow(<span class="stringliteral">&quot;EcLipse&quot;</span>);</div>
+<div class="line">EN.SelectMenu(<span class="stringliteral">&quot;File-&gt;New-&gt;JUnit Test Case&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">EN.SelectWindow(<span class="stringliteral">&quot;New JUnit Test Case&quot;</span>);</div>
+<div class="line">EN.SetValue(<span class="stringliteral">&quot;New JUnit 4 test&quot;</span>)</div>
+<div class="line">EN.SetValue(<span class="stringliteral">&quot;Source Folder&quot;</span>, <span class="stringliteral">&quot;OKW_Tutorial/src/test/java&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line">EN.SetValue(<span class="stringliteral">&quot;Package&quot;</span>, <span class="stringliteral">&quot;${IGNORE}&quot;</span>);</div>
+<div class="line">EN.SetValue(<span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;Hello_OKW&quot;</span>);</div>
+<div class="line">EN.SetValue(<span class="stringliteral">&quot;Superclass&quot;</span>, <span class="stringliteral">&quot;${IGNORE}&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">EN.SetValue(<span class="stringliteral">&quot;setUpBeforeClass&quot;</span>, <span class="stringliteral">&quot;UNCHEKED&quot;</span>);</div>
+<div class="line">EN.SetValue(<span class="stringliteral">&quot;setUp&quot;</span>, <span class="stringliteral">&quot;UNCHEKED&quot;</span>);</div>
+<div class="line">EN.SetValue(<span class="stringliteral">&quot;tearDownAfterClass&quot;</span>, <span class="stringliteral">&quot;UNCHEKED&quot;</span>);</div>
+<div class="line">EN.SetValue(<span class="stringliteral">&quot;tearAfter&quot;</span>, <span class="stringliteral">&quot;UNCHEKED&quot;</span>);</div>
+</div><!-- fragment --><h1><a class="anchor" id="refTutorial02_a"></a>
 2. Eine Testcase-Methode einfügen.</h1>
 <p>Nachdem Anlegen sollte die erzeugte Klasse bzw. die Datei in Eclipse geöffnet und angezeigt werden.</p>
 <p>Als Testfall legen wir <code>tcHello_OKW()</code> an.</p>
-<div class="fragment"><div class="line">@Test</div><div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> tcHello_OKW() throws Exception</div><div class="line">{</div><div class="line">    EN.BeginTest( <span class="stringliteral">&quot;Hello Test&quot;</span> );</div><div class="line">    <span class="comment">// Add test steps here...   </span></div><div class="line">    EN.EndTest();</div><div class="line">}</div></div><!-- fragment --><p>Die beiden Schlüsselwörter bedeuten:</p>
-<p><code>EN.BeginTest( "Hello Test" );</code> - Initialisiert OKW: Wenn mehrere Testfälle hintereinander ausgeführt werden und einer der Testfälle schlägt fehl (z.B. wegen einer Abweichung oder Exception), dann wird mit BeginTest OKW wieder in den Initialzustand versetzt. Technisch wechselt ggf. OKW vom Zustand NOK nach OK.</p>
+<div class="fragment"><div class="line">@Test</div>
+<div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> tcHello_OKW() throws Exception</div>
+<div class="line">{</div>
+<div class="line">    EN.BeginTest( <span class="stringliteral">&quot;Hello Test&quot;</span> );</div>
+<div class="line">    <span class="comment">// Add test steps here...   </span></div>
+<div class="line">    EN.EndTest();</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Die beiden Schlüsselwörter bedeuten:</p>
+<p><code>EN.BeginTest( "Hello Test" );</code> - Initialisiert OKW: Wenn mehrere Testfälle hintereinander ausgeführt werden und einer der Testfälle schlägt fehl (z.B. wegen einer Abweichung oder Exception), dann wird mit BeginTest OKW wieder in den Initialzustand versetzt. Technisch wechselt ggf. OKW vom Zustand NOK nach OK. <br  />
+</p>
 <p><code>EN.EndTest();</code> - Löst Aufräum-Aktionen aus, sofern diese definiert worden sind und es wird dem Logging mit geteilt das nun der Testfall beendet ist.</p>
 <blockquote class="doxtable">
 <p>Das Verschachteln von BeginTest/EndTest ist nicht erlaubt. </p>
 </blockquote>
 <p>Nun wird der java-compiler <code>EN</code> anmeckern, weil wir OKW noch nicht der Klasse "vorgestellt" haben: Dazu vor oder nach (wie´s gefällt) <code>import org.junit.Test;</code> folgende Zeile einfügen:</p>
-<div class="fragment"><div class="line"><span class="keyword">import</span> okw.core.EN;</div></div><!-- fragment --><p>Alles zusammen sollte etwa so aussehen:</p>
-<div class="fragment"><div class="line"><span class="keyword">import</span> org.junit.Test;</div><div class="line"></div><div class="line"><span class="keyword">import</span> okw.core.EN;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">class </span>Hello_OKW{</div><div class="line"></div><div class="line">    @Test</div><div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> tcHello_OKW() throws Exception</div><div class="line">    {</div><div class="line">        EN.BeginTest( <span class="stringliteral">&quot;Hello Test&quot;</span> );</div><div class="line">        <span class="comment">// Add test steps here...   </span></div><div class="line">        EN.EndTest();</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>Damit ist schon ein minimal JUnit-Rahmen für die Erstellung und Ausführung von Testfällen mit OKW fertig.</p>
+<div class="fragment"><div class="line"><span class="keyword">import</span> okw.core.EN;</div>
+</div><!-- fragment --><p>Alles zusammen sollte etwa so aussehen:</p>
+<div class="fragment"><div class="line"><span class="keyword">import</span> org.junit.Test;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">import</span> okw.core.EN;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keyword">class </span>Hello_OKW{</div>
+<div class="line"> </div>
+<div class="line">    @Test</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> tcHello_OKW() throws Exception</div>
+<div class="line">    {</div>
+<div class="line">        EN.BeginTest( <span class="stringliteral">&quot;Hello Test&quot;</span> );</div>
+<div class="line">        <span class="comment">// Add test steps here...   </span></div>
+<div class="line">        EN.EndTest();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>Damit ist schon ein minimal JUnit-Rahmen für die Erstellung und Ausführung von Testfällen mit OKW fertig.</p>
 <h1><a class="anchor" id="refTutorial02_B"></a>
 3. Testfall &lt;tt&gt;tcHello_OKW&lt;/tt&gt; ausführen</h1>
-<div class="fragment"><div class="line">EN.SelectWindow(<span class="stringliteral">&quot;EcLipse&quot;</span>);</div><div class="line">EN.SelectContext(<span class="stringliteral">&quot;Project Explorer&quot;</span>, <span class="stringliteral">&quot;/OKW_Tutorial/src/test/java/(default package)/Hello_OKW.java&quot;</span>, );</div><div class="line">EN.SelectMenu(<span class="stringliteral">&quot;Run-&gt;Run As-&gt;JUnit Test&quot;</span>);</div></div><!-- fragment --><h1><a class="anchor" id="refTutorial02_Result"></a>
+<div class="fragment"><div class="line">EN.SelectWindow(<span class="stringliteral">&quot;EcLipse&quot;</span>);</div>
+<div class="line">EN.SelectContext(<span class="stringliteral">&quot;Project Explorer&quot;</span>, <span class="stringliteral">&quot;/OKW_Tutorial/src/test/java/(default package)/Hello_OKW.java&quot;</span>, );</div>
+<div class="line">EN.SelectMenu(<span class="stringliteral">&quot;Run-&gt;Run As-&gt;JUnit Test&quot;</span>);</div>
+</div><!-- fragment --><h1><a class="anchor" id="refTutorial02_Result"></a>
 Result</h1>
 <p>Das Result-Log von OKW ist etwas länger, so wird u.a. eine Liste der gefundenen Frames ausgegeben, aber die ent scheidende Ausgabe ist am Ende zu finden:</p>
-<div class="fragment"><div class="line">-------------------------------------------------------------------------</div><div class="line">Testcase: <span class="stringliteral">&quot;Hello Test&quot;</span></div><div class="line">  Memorize value of MemKey <span class="stringliteral">&#39;TCN&#39;</span>...</div><div class="line">    Value(<span class="stringliteral">&#39;TCN&#39;</span>) = <span class="stringliteral">&#39;Hello Test&#39;</span></div><div class="line">-------------------------------------------------------------------------</div></div><!-- fragment --><blockquote class="doxtable">
+<div class="fragment"><div class="line">-------------------------------------------------------------------------</div>
+<div class="line">Testcase: <span class="stringliteral">&quot;Hello Test&quot;</span></div>
+<div class="line">  Memorize value of MemKey <span class="stringliteral">&#39;TCN&#39;</span>...</div>
+<div class="line">    Value(<span class="stringliteral">&#39;TCN&#39;</span>) = <span class="stringliteral">&#39;Hello Test&#39;</span></div>
+<div class="line">-------------------------------------------------------------------------</div>
+</div><!-- fragment --><blockquote class="doxtable">
 <p>Die beiden Zeilen unter <code>Testcase: "Hello Test"</code> zeigen an, das OKW sich den Testfall-Namen gemerkt hat. </p>
 </blockquote>
 <p>mit <code>${TCN}</code> kann dieser in Schlüsselwörtern verwendet werden.</p>
 <p>Damit haben wir den ersten OKW Testfall erstellt.</p>
 <p>Im nächsten Tutorial werden wir einen einfachen aber etwas längeren Testfall in OKW Schlüsselwort-Notation erstellen. </p>
-</div></div><!-- PageDoc -->
-</div><!-- contents -->
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="index.html">OpenKeyWord</a></li><li class="navelem"><a class="el" href="ref_tutorials.html">OKW Anleitungen</a></li>
-    <li class="footer">Erzeugt am Mon Aug 26 2019 08:38:34 für OpenKeyWord von
+    <li class="navelem"><a class="el" href="ref_tutorials.html">OKW Anleitungen</a></li>
+    <li class="footer">Erzeugt am Mon Aug 26 2019 13:53:19 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>
 </div>
 <script type="text/javascript">

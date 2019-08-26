@@ -5,7 +5,7 @@ digraph "okw.OKW.VerifyHasFocus_PT"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node41 [label="okw.OKW.VerifyHasFocus_PT",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Polling Time in [ms] für das Schlüsselwort VerifyHasFocus."];
-  Node41 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node42 [label="okw.core.OK.VerifyHasFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a4950117cbe9cd2b769ae529bbdc1f897",tooltip="Vergleicht den Fokus-Zustand des gegebenen Objekts mit dem erwarteten Wert."];
+  Node1 [label="okw.OKW.VerifyHasFocus_PT",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Polling Time in [ms] für das Schlüsselwort VerifyHasFocus."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.core.OK.VerifyHasFocus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a4950117cbe9cd2b769ae529bbdc1f897",tooltip="Vergleicht den Fokus-Zustand des gegebenen Objekts mit dem erwarteten Wert."];
 }

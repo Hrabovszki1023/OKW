@@ -5,9 +5,9 @@ digraph "okw.OKW_GetJavaClass.createInstanceByType"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node7 [label="okw.OKW_GetJavaClass.create\lInstanceByType",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Die Methode erzeugt eine Instanz der Rahmenklasse (frame class) mit dem in 'fps_ParentClassName' gege..."];
-  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 [label="okw.FrameObjectDictionary\l_Sngltn.frameScan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_frame_object_dictionary___sngltn.html#a1710d54e13c9ce591277209c898eec98",tooltip="Liefert die Instanz der Klasse."];
-  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node9 [label="okw.FrameObjectDictionary\l_Sngltn.init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_frame_object_dictionary___sngltn.html#a905bac544e5962ae15dfe1c1c50f2467",tooltip="Methode initialisiert diese Klasse."];
+  Node1 [label="okw.OKW_GetJavaClass.create\lInstanceByType",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Die Methode erzeugt eine Instanz der Rahmenklasse (frame class) mit dem in 'fps_ParentClassName' gege..."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.FrameObjectDictionary\l_Sngltn.frameScan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_frame_object_dictionary___sngltn.html#a1710d54e13c9ce591277209c898eec98",tooltip="Liefert die Instanz der Klasse."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.FrameObjectDictionary\l_Sngltn.init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_frame_object_dictionary___sngltn.html#a905bac544e5962ae15dfe1c1c50f2467",tooltip="Methode initialisiert diese Klasse."];
 }
