@@ -51,9 +51,10 @@ public class OKW_GetJavaClass
                 // Ergebniss: "/some/path/myfile.jar"
                 lvClassPath = okw.OKW_Helper.getLeftFromDelimiterNumber( lvClassPath, "!", 1 );
                 
-                // Decode URI (e.g. spaces and international characters in file names)
-                lvClassPath = URLDecoder.decode(lvClassPath, Charset.defaultCharset().name());
             }
+
+            // Decode URI (e.g. spaces and international characters in file names)
+            lvClassPath = URLDecoder.decode(lvClassPath, Charset.defaultCharset().name());
 
             File file = new File( lvClassPath );
 

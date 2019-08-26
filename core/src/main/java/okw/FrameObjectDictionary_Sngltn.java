@@ -380,7 +380,7 @@ public class FrameObjectDictionary_Sngltn
 
       Collections.sort( myList );
 
-      Log.ResOpenListDebug( "Frames" );
+      Log.ResOpenListDebug( "Frames: " );
 
       for ( String Element : myList )
       {

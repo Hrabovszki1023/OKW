@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
@@ -12,6 +14,9 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
+
+import java.util.regex.Pattern;
+import java.util.Collection;
 
 import okw.exceptions.OKWFileDoesNotExistsException;
 import okw.log.Logger_Sngltn;
@@ -299,7 +304,7 @@ public class OKW_Properties extends Properties
     
     /**
      * \~german
-     * Erstellt eine Liste der Properties -Date
+     * Erstellt eine Liste der "*.properties"-Dateien des aktuellen Projektes
      *
      * @param ?
      * @return
@@ -313,12 +318,20 @@ public class OKW_Properties extends Properties
      * @date 2019-05-07
      */
     private ArrayList<String> getPropertiesFilesFromResources( String folder )
-    {
+    { 
        ArrayList<String> Return = new ArrayList<String>();
         
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
         URL url = loader.getResource( folder );
-        String path = url.getPath();
+        String path = "";
+
+        try {
+			path = URLDecoder.decode( url.getPath(), "UTF-8" );
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
 
         String urlResourceFolder = path.replaceAll( folder, "" );
         
@@ -346,6 +359,9 @@ public class OKW_Properties extends Properties
         
         return Return;
     }
+    
+    
+    
     /**
      * \~german
      * Lädt die Liste OKW_Properties.ResoursesProperties hinzufügen.
