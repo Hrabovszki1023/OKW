@@ -5,11 +5,11 @@ digraph "okw.core.Core.LogSelected"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node1222 [label="okw.core.Core.LogSelected",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Dokumentiert den markierten Text des gegebenen Objekts."];
-  Node1222 -> Node1223 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1223 [label="okw.core.EN.LogSelected",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a7c5b0f0e1a534035090bdd7c523d1486",tooltip="Dokumentiert den markierten Text des gegebenen Objekts."];
-  Node1223 -> Node1224 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1224 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
-  Node1222 -> Node1225 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1225 [label="okw.core.CurrentObject\l_Test.tc_LogSelected_ChildObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a8a0a39a42dd658626726e6b996fa0d10",tooltip="Testziel: Prüft den Aufruf der Methode LogCaption( \"FN\" ) im ChildObject."];
+  Node1208 [label="okw.core.Core.LogSelected",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Dokumentiert den markierten Text des gegebenen Objekts."];
+  Node1208 -> Node1209 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1209 [label="okw.core.EN.LogSelected",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a7c5b0f0e1a534035090bdd7c523d1486",tooltip="Dokumentiert den markierten Text des gegebenen Objekts."];
+  Node1209 -> Node1210 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1210 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
+  Node1208 -> Node1211 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1211 [label="okw.core.CurrentObject\l_Test.tc_LogSelected_ChildObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a8a0a39a42dd658626726e6b996fa0d10",tooltip="Testziel: Prüft den Aufruf der Methode LogCaption( \"FN\" ) im ChildObject."];
 }

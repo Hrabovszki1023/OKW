@@ -5,7 +5,7 @@ digraph "okw.log.Logger_Sngltn.setDebugMode"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node5017 [label="okw.log.Logger_Sngltn.set\lDebugMode",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="setDebugMode:"];
-  Node5017 -> Node5018 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5018 [label="okw.core.CurrentObject\l_Test.TestFixtureSetUp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a1acf13811dcb4ea83b56a78c2b2908cb",tooltip="Ziel des TestFixturesetup: Startbedingung für alle Testfälle herstellen."];
+  Node4975 [label="okw.log.Logger_Sngltn.set\lDebugMode",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="setDebugMode:"];
+  Node4975 -> Node4976 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4976 [label="okw.core.CurrentObject\l_Test.TestFixtureSetUp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a1acf13811dcb4ea83b56a78c2b2908cb",tooltip="Ziel des TestFixturesetup: Startbedingung für alle Testfälle herstellen."];
 }
