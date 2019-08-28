@@ -427,11 +427,11 @@ public class Logger_Sngltn implements ILogger
         }
     }
 
-    public void LogSequenceStart( String fps_KeyWordName, String fpsWinowFN, String fps_SequensName, String... fpsParameter )
+    public void LogSequenceStart( String fpsKeyWordName, String fpsWinowFN, String fpsSequenceName, String... fpsParameter )
     {
         for ( ILogger myLogger : LoggerList )
         {
-            myLogger.LogSequenceStart( fps_KeyWordName, fpsWinowFN, fps_SequensName, fpsParameter );
+            myLogger.LogSequenceStart( fpsKeyWordName, fpsWinowFN, fpsSequenceName, fpsParameter );
         }
     }
 

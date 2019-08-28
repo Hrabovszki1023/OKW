@@ -315,7 +315,7 @@ public class LogBaseLeaf extends LogBase
         {
             EC++;
             String Element = myLog.getClass().getSimpleName();
-            myJSON.append( this.jsonStructure( Element + EC.toString(), myLog.getJSONResult() ) );
+            myJSON.append( this.jsonArrayElement( myLog.getJSONResult() ) );
         }
         
         return myJSON.toString();

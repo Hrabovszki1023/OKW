@@ -8,9 +8,9 @@
     "FunctionCount" : "0",
     "FunctionFail" : "0",
     "FunctionPass" : "0",
-    "SequensCount" : "0",
-    "SequensFail" : "0",
-    "SequensPass" : "0",
+    "SequenceCount" : "0",
+    "SequenceFail" : "0",
+    "SequencePass" : "0",
     "LocalACCallCount" : "0",
     "LocalACCallFail" : "0",
     "LocalACCallPass" : "0",
@@ -31,11 +31,44 @@
     "name" : "tc_OK_Testcase_Error2_Test",
     "result" : "",
     "tests" : [ {
-      "test" : {
-        "name" : "tcTestcase_Error2_Test",
-        "type" : "TestCase",
+      "name" : "tcTestcase_Error2_Test",
+      "type" : "TestCase",
+      "statistics" : {
+        "ErrorCount" : "2",
+        "ExceptionCount" : "0",
+        "WarningCount" : "0",
+        "PassedCount" : "0",
+        "PrintCount" : "1",
+        "FunctionCount" : "0",
+        "FunctionFail" : "0",
+        "FunctionPass" : "0",
+        "SequenceCount" : "0",
+        "SequenceFail" : "0",
+        "SequencePass" : "0",
+        "LocalACCallCount" : "0",
+        "LocalACCallFail" : "0",
+        "LocalACCallPass" : "0",
+        "RemoteACCallCount" : "0",
+        "RemoteACCallFail" : "0",
+        "RemoteACCallPass" : "0",
+        "StepCount" : "0",
+        "StepFail" : "0",
+        "StepPass" : "0",
+        "KeyWordCount" : "1",
+        "KeyWordFail" : "1",
+        "KeyWordPass" : "0",
+        "startedAt" : "Start time TestMode",
+        "finishedAt" : "End time TestMode",
+        "duration" : "Duration TestMode"
+      },
+      "elements" : [ {
+        "type" : "Keyword",
+        "info" : "Gib ein: 'Name' = 'Zoltan'",
+        "Keyword" : "Gib ein",
+        "Parameter0" : "Name",
+        "Parameter1" : "Zoltan",
         "statistics" : {
-          "ErrorCount" : "2",
+          "ErrorCount" : "1",
           "ExceptionCount" : "0",
           "WarningCount" : "0",
           "PassedCount" : "0",
@@ -43,9 +76,9 @@
           "FunctionCount" : "0",
           "FunctionFail" : "0",
           "FunctionPass" : "0",
-          "SequensCount" : "0",
-          "SequensFail" : "0",
-          "SequensPass" : "0",
+          "SequenceCount" : "0",
+          "SequenceFail" : "0",
+          "SequencePass" : "0",
           "LocalACCallCount" : "0",
           "LocalACCallFail" : "0",
           "LocalACCallPass" : "0",
@@ -63,11 +96,13 @@
           "duration" : "Duration TestMode"
         },
         "elements" : [ {
-          "element" : {
-            "Error" : "Error 2_Z"
-          }
+          "Print" : "Print im Schlüsselwort"
+        }, {
+          "Error" : "Error 1"
         } ]
-      }
+      }, {
+        "Error" : "Error 2_Z"
+      } ]
     } ]
   } ]
 }

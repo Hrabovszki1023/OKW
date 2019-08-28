@@ -316,9 +316,9 @@ public class LogBaseNode extends LogBase
         myJSON.append( this.jsonElementComma( "FunctionFail", this.FunctionFail ) );
         myJSON.append( this.jsonElementComma( "FunctionPass", this.FunctionPass ) );
         
-        myJSON.append( this.jsonElementComma( "SequensCount", this.SequenceCount ) );
-        myJSON.append( this.jsonElementComma( "SequensFail", this.SequenceFail ) );
-        myJSON.append( this.jsonElementComma( "SequensPass", this.SequencePass ) );
+        myJSON.append( this.jsonElementComma( "SequenceCount", this.SequenceCount ) );
+        myJSON.append( this.jsonElementComma( "SequenceFail", this.SequenceFail ) );
+        myJSON.append( this.jsonElementComma( "SequencePass", this.SequencePass ) );
 
         myJSON.append( this.jsonElementComma( "LocalACCallCount", this.LocalACCallCount ) );
         myJSON.append( this.jsonElementComma( "LocalACCallFail", this.LocalACCallFail ) );
@@ -380,12 +380,11 @@ public class LogBaseNode extends LogBase
         {
             if (GreaterOne) myJSONForLoop.append( ", " ); 
             else GreaterOne = true;
-            myJSONForLoop.append( this.jsonStructure( "element", myLog.getJSONResult() ) ) ;
+            myJSONForLoop.append( this.jsonArrayElement(  myLog.getJSONResult() ) ) ;
             
         }
         
-        if (GreaterOne) 
-        myJSON.append( ", " + this.jsonArray( "elements", myJSONForLoop.toString() ) );
+        if (GreaterOne)  myJSON.append( ", " + this.jsonArray( "elements", myJSONForLoop.toString() ) );
 
         return myJSON.toString();
     }

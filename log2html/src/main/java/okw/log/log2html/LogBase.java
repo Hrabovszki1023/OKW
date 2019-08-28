@@ -128,9 +128,31 @@ public abstract class LogBase {
     {
         StringBuilder myIndention = new StringBuilder();
         
-        myIndention.append( "\"" + Key + "\": [ {" );
+        myIndention.append( "\"" + Key + "\": [" );
         myIndention.append( Value );
-        myIndention.append( "} ]" );
+        myIndention.append( "]" );
+        
+        return  myIndention.toString();
+    }
+    
+    protected String jsonArrayElement( String Value )
+    {
+        StringBuilder myIndention = new StringBuilder();
+        
+        myIndention.append( "{" );
+        myIndention.append( Value );
+        myIndention.append( "}" );
+        
+        return  myIndention.toString();
+    }
+    
+    protected String jsonArrayElementComma( String Value )
+    {
+        StringBuilder myIndention = new StringBuilder();
+        
+        myIndention.append( "{" );
+        myIndention.append( Value );
+        myIndention.append( "}," );
         
         return  myIndention.toString();
     }
