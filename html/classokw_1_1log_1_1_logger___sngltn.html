@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 390, Datum: 08.26.2019 13:52:01</span>
+   &#160;<span id="projectnumber">Build_ID: 391, Datum: 08.28.2019 07:35:41</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -202,9 +202,9 @@ Boolean&#160;</td><td class="memItemRight" valign="bottom"><b>getDebugMode</b> (
 <tr class="memitem:a70ec25e200e00ecefc544e8fd371d2ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">LogKeyWordStart</a> (String fpsKeyWordName, String... fpsParameter)</td></tr>
 <tr class="memdesc:a70ec25e200e00ecefc544e8fd371d2ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ausgabe eines Schlüsselwortes.  <a href="classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef">Mehr ...</a><br /></td></tr>
 <tr class="separator:a70ec25e200e00ecefc544e8fd371d2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa33115ed2cc1df4626fac79f1653def2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1log_1_1_logger___sngltn.html#aa33115ed2cc1df4626fac79f1653def2">LogSequenceStart</a> (String fps_KeyWordName, String fpsWinowFN, String fps_SequensName, String... fpsParameter)</td></tr>
-<tr class="memdesc:aa33115ed2cc1df4626fac79f1653def2"><td class="mdescLeft">&#160;</td><td class="mdescRight">LogSequenceStart: Begin of a Sequence.  <a href="classokw_1_1log_1_1_logger___sngltn.html#aa33115ed2cc1df4626fac79f1653def2">Mehr ...</a><br /></td></tr>
-<tr class="separator:aa33115ed2cc1df4626fac79f1653def2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5691ec87ede6bde9f85c673cf09915aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1log_1_1_logger___sngltn.html#a5691ec87ede6bde9f85c673cf09915aa">LogSequenceStart</a> (String fpsKeyWordName, String fpsWinowFN, String fpsSequenceName, String... fpsParameter)</td></tr>
+<tr class="memdesc:a5691ec87ede6bde9f85c673cf09915aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">LogSequenceStart: Begin of a Sequence.  <a href="classokw_1_1log_1_1_logger___sngltn.html#a5691ec87ede6bde9f85c673cf09915aa">Mehr ...</a><br /></td></tr>
+<tr class="separator:a5691ec87ede6bde9f85c673cf09915aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60f4ad59db847ae61df928f9920f3deb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb">LogTestcaseStart</a> (String fps_TestcaseName)</td></tr>
 <tr class="memdesc:a60f4ad59db847ae61df928f9920f3deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ausgabe des Testfalls.  <a href="classokw_1_1log_1_1_logger___sngltn.html#a60f4ad59db847ae61df928f9920f3deb">Mehr ...</a><br /></td></tr>
 <tr class="separator:a60f4ad59db847ae61df928f9920f3deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1309,8 +1309,8 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 
 </div>
 </div>
-<a id="aa33115ed2cc1df4626fac79f1653def2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa33115ed2cc1df4626fac79f1653def2">&#9670;&nbsp;</a></span>LogSequenceStart()</h2>
+<a id="a5691ec87ede6bde9f85c673cf09915aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5691ec87ede6bde9f85c673cf09915aa">&#9670;&nbsp;</a></span>LogSequenceStart()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1367,7 +1367,7 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div class="fragment"><div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    {</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        <span class="keywordflow">for</span> ( ILogger myLogger : LoggerList )</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        {</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;            myLogger.LogSequenceStart( fps_KeyWordName, fpsWinowFN, fps_SequensName, fpsParameter );</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;            myLogger.LogSequenceStart( fpsKeyWordName, fpsWinowFN, fpsSequenceName, fpsParameter );</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        }</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -1944,7 +1944,7 @@ static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngl
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>log</b></li><li class="navelem"><a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a></li>
-    <li class="footer">Erzeugt am Mon Aug 26 2019 13:53:23 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Aug 28 2019 07:37:20 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>
