@@ -5,5 +5,5 @@ digraph "Grafische Darstellung der Klassenhierarchie"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="okw.OKW",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1_o_k_w.html",tooltip="Annotations-Klasses für die Zuordnung von."];
+  Node0 [label="okw.OKW_Const_Concat\l_SEP_HSEP_VSEP",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const___concat___s_e_p___h_s_e_p___v_s_e_p.html",tooltip=" "];
 }

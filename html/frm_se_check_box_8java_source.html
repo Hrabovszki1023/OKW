@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 393, Datum: 08.29.2019 11:08:27</span>
+   &#160;<span id="projectnumber">Build_ID: 394, Datum: 08.29.2019 11:50:19</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -105,8 +105,8 @@ $(document).ready(function(){initNavTree('frm_se_check_box_8java_source.html',''
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> okw.OKW;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> okw.gui.adapter.selenium.*;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;@OKW(FN=<span class="stringliteral">&quot;SeCheckBox&quot;</span>)</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1frames_1_1secheckbox_1_1frm_se_check_box.html">    7</a></span>&#160;public class <a class="code" href="classokw_1_1gui_1_1frames_1_1secheckbox_1_1frm_se_check_box.html">frmSeCheckBox</a> extends SeBrowserChild</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;@<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a>(FN=<span class="stringliteral">&quot;SeCheckBox&quot;</span>)</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1frames_1_1secheckbox_1_1frm_se_check_box.html">    7</a></span>&#160;public class <a class="code" href="classokw_1_1gui_1_1frames_1_1secheckbox_1_1frm_se_check_box.html">frmSeCheckBox</a> extends <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html">SeBrowserChild</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment">// \brief</span></div>
@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('frm_se_check_box_8java_source.html',''
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1,</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            WaitForMe_PT = 500, WaitForMe_TO = 1</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            )</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span> SeInputCheckbox NotExists = <span class="keyword">new</span> SeInputCheckbox(<span class="stringliteral">&quot;//*[@value=&#39;upss&#39;]&quot;</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html">SeInputCheckbox</a> NotExists = <span class="keyword">new</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html">SeInputCheckbox</a>(<span class="stringliteral">&quot;//*[@value=&#39;upss&#39;]&quot;</span>);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    @<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a> (FN=<span class="stringliteral">&quot;Pilze&quot;</span>,</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            VerifyLabel_PT=500, VerifyLabel_TO=1,</div>
@@ -132,7 +132,7 @@ $(document).ready(function(){initNavTree('frm_se_check_box_8java_source.html',''
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            VerifyExists_PT=500, VerifyExists_TO=1,</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            )</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">public</span> SeInputCheckbox Pilze = <span class="keyword">new</span> SeInputCheckbox(<span class="stringliteral">&quot;//*[@value=&#39;pilze&#39;]&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">public</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html">SeInputCheckbox</a> Pilze = <span class="keyword">new</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html">SeInputCheckbox</a>(<span class="stringliteral">&quot;//*[@value=&#39;pilze&#39;]&quot;</span>);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    @<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a> (FN=<span class="stringliteral">&quot;Salami&quot;</span>,</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            VerifyLabel_PT=500, VerifyLabel_TO=1,</div>
@@ -143,7 +143,7 @@ $(document).ready(function(){initNavTree('frm_se_check_box_8java_source.html',''
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            VerifyExists_PT=500, VerifyExists_TO=1,</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            )</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">public</span> SeInputCheckbox Salami = <span class="keyword">new</span> SeInputCheckbox(<span class="stringliteral">&quot;//*[@value=&#39;salami&#39;]&quot;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">public</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html">SeInputCheckbox</a> Salami = <span class="keyword">new</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html">SeInputCheckbox</a>(<span class="stringliteral">&quot;//*[@value=&#39;salami&#39;]&quot;</span>);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    @<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a> (FN=<span class="stringliteral">&quot;Sardellen&quot;</span>,</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            VerifyLabel_PT=500, VerifyLabel_TO=1,</div>
@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('frm_se_check_box_8java_source.html',''
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            VerifyExists_PT=500, VerifyExists_TO=1,</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            )</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">public</span> SeInputCheckbox Sardellen = <span class="keyword">new</span> SeInputCheckbox(<span class="stringliteral">&quot;//*[@value=&#39;sardellen&#39;]&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">public</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html">SeInputCheckbox</a> Sardellen = <span class="keyword">new</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html">SeInputCheckbox</a>(<span class="stringliteral">&quot;//*[@value=&#39;sardellen&#39;]&quot;</span>);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    @<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a> (FN=<span class="stringliteral">&quot;Disabled&quot;</span>,</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            VerifyLabel_PT=500, VerifyLabel_TO=1,</div>
@@ -165,7 +165,7 @@ $(document).ready(function(){initNavTree('frm_se_check_box_8java_source.html',''
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            VerifyExists_PT=500, VerifyExists_TO=1,</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            VerifyHasFocus_PT=500, VerifyHasFocus_TO=1</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            )</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">public</span> SeInputCheckbox Disabled = <span class="keyword">new</span> SeInputCheckbox(<span class="stringliteral">&quot;//*[@id=&#39;ID_Disabled&#39;]&quot;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">public</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html">SeInputCheckbox</a> Disabled = <span class="keyword">new</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html">SeInputCheckbox</a>(<span class="stringliteral">&quot;//*[@id=&#39;ID_Disabled&#39;]&quot;</span>);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">public</span> <a class="code" href="classokw_1_1gui_1_1frames_1_1secheckbox_1_1frm_se_check_box.html">frmSeCheckBox</a>()</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
@@ -174,14 +174,16 @@ $(document).ready(function(){initNavTree('frm_se_check_box_8java_source.html',''
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child_html"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html">okw.gui.adapter.selenium.SeBrowserChild</a></div><div class="ttdef"><b>Definition:</b> <a href="_se_browser_child_8java_source.html#l00055">SeBrowserChild.java:55</a></div></div>
 <div class="ttc" id="ainterfaceokw_1_1_o_k_w_html"><div class="ttname"><a href="interfaceokw_1_1_o_k_w.html">okw.OKW</a></div><div class="ttdoc">Annotations-Klasses für die Zuordnung von.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_8java_source.html#l00038">OKW.java:38</a></div></div>
 <div class="ttc" id="aclassokw_1_1gui_1_1frames_1_1secheckbox_1_1frm_se_check_box_html"><div class="ttname"><a href="classokw_1_1gui_1_1frames_1_1secheckbox_1_1frm_se_check_box.html">okw.gui.frames.secheckbox.frmSeCheckBox</a></div><div class="ttdef"><b>Definition:</b> <a href="frm_se_check_box_8java_source.html#l00007">frmSeCheckBox.java:7</a></div></div>
+<div class="ttc" id="aclassokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox_html"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html">okw.gui.adapter.selenium.SeInputCheckbox</a></div><div class="ttdef"><b>Definition:</b> <a href="_se_input_checkbox_8java_source.html#l00113">SeInputCheckbox.java:113</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0c16530b5d264870aa4431e8a25214d3.html">se</a></li><li class="navelem"><a class="el" href="dir_be767b33c06e16aec676490308ce37bd.html">src</a></li><li class="navelem"><a class="el" href="dir_7d5519f44ba12571da3b48d813391a28.html">test</a></li><li class="navelem"><a class="el" href="dir_ce610f7c169990ce4f1a98d059042134.html">java</a></li><li class="navelem"><a class="el" href="dir_6f36be693120551096f5986c2567738f.html">okw</a></li><li class="navelem"><a class="el" href="dir_63bc72322fc42f19b75a459059fd1fba.html">gui</a></li><li class="navelem"><a class="el" href="dir_9a5987dde6e86233b079ccc3058b30ca.html">frames</a></li><li class="navelem"><a class="el" href="dir_35fa060a9529b333a5a9856b86998c32.html">secheckbox</a></li><li class="navelem"><b>frmSeCheckBox.java</b></li>
-    <li class="footer">Erzeugt am Don Aug 29 2019 11:09:51 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Aug 29 2019 11:51:39 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

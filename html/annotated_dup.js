@@ -80,6 +80,31 @@ var annotated_dup =
       ] ],
       [ "gui", null, [
         [ "adapter", null, [
+          [ "selenium", null, [
+            [ "webdriver", null, [
+              [ "SeBACK", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_b_a_c_k" ],
+              [ "SeDriver", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_driver.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_driver" ],
+              [ "SeMAXIMIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_m_a_x_i_m_i_z_e" ],
+              [ "SePOSITION", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_p_o_s_i_t_i_o_n" ],
+              [ "SeSIZE", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_s_i_z_e" ],
+              [ "SeURL", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1webdriver_1_1_se_u_r_l" ]
+            ] ],
+            [ "SeAnyChildWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window" ],
+            [ "SeAnyWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window" ],
+            [ "SeBrowserChild", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child" ],
+            [ "SeBrowserWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_window.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_window" ],
+            [ "SeButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_button" ],
+            [ "SeImage", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image" ],
+            [ "SeInputButton", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button" ],
+            [ "SeInputCheckbox", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_checkbox" ],
+            [ "SeInputRadio", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_radio" ],
+            [ "SeInputText", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_text" ],
+            [ "SeLink", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_link" ],
+            [ "SeRadioList", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list" ],
+            [ "SeSelect", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select" ],
+            [ "SeTable", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_table.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_table" ],
+            [ "SeTextarea", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea" ]
+          ] ],
           [ "AllMethods_MultipleValues", "classokw_1_1gui_1_1adapter_1_1_all_methods___multiple_values.html", "classokw_1_1gui_1_1adapter_1_1_all_methods___multiple_values" ],
           [ "AllMethods_SingleValue", "classokw_1_1gui_1_1adapter_1_1_all_methods___single_value.html", "classokw_1_1gui_1_1adapter_1_1_all_methods___single_value" ],
           [ "AllMethods_VerifyEmpty", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty.html", "classokw_1_1gui_1_1adapter_1_1_all_methods___verify_empty" ],
@@ -139,7 +164,12 @@ var annotated_dup =
             [ "frmSeInputTextReadonly", "classokw_1_1gui_1_1frames_1_1setextfield_1_1frm_se_input_text_readonly.html", "classokw_1_1gui_1_1frames_1_1setextfield_1_1frm_se_input_text_readonly" ]
           ] ],
           [ "frmCurrentObjectWindow", "classokw_1_1gui_1_1frames_1_1frm_current_object_window.html", "classokw_1_1gui_1_1frames_1_1frm_current_object_window" ],
+          [ "frmInternetExplorer", "classokw_1_1gui_1_1frames_1_1frm_internet_explorer.html", "classokw_1_1gui_1_1frames_1_1frm_internet_explorer" ],
           [ "FrmObjDictTest", "classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test.html", "classokw_1_1gui_1_1frames_1_1_frm_obj_dict_test" ],
+          [ "frmSafari", "classokw_1_1gui_1_1frames_1_1frm_safari.html", "classokw_1_1gui_1_1frames_1_1frm_safari" ],
+          [ "FrmSeChrome", "classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html", "classokw_1_1gui_1_1frames_1_1_frm_se_chrome" ],
+          [ "FrmSeFirefox", "classokw_1_1gui_1_1frames_1_1_frm_se_firefox.html", "classokw_1_1gui_1_1frames_1_1_frm_se_firefox" ],
+          [ "FrmSeHTMLUnit", "classokw_1_1gui_1_1frames_1_1_frm_se_h_t_m_l_unit.html", "classokw_1_1gui_1_1frames_1_1_frm_se_h_t_m_l_unit" ],
           [ "frmTestRechner", "classokw_1_1gui_1_1frames_1_1frm_test_rechner.html", "classokw_1_1gui_1_1frames_1_1frm_test_rechner" ],
           [ "frmWindowWithOutMethods", "classokw_1_1gui_1_1frames_1_1frm_window_with_out_methods.html", "classokw_1_1gui_1_1frames_1_1frm_window_with_out_methods" ]
         ] ],

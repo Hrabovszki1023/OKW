@@ -35,7 +35,11 @@ digraph "okw.core.Core.ClickOn"
   Node2 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node15 [label="browser.FrmBrowserBase\l_Test.tcMAXIMIZE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbrowser_1_1_frm_browser_base___test.html#a89cb7ef0c50ef2010d3e5dafa639e54a",tooltip="Testet das Schlüsselwort VerifyValueWCM( FN ) für das Virtuelle-GUI-Adapter URL Prüfen."];
   Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node16 [label="okw.core.CurrentObject\l_Test.tc_ClickOn_ChildObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a2fe4ea5049e633182621aea87f5c2a8f",tooltip="Testziel: Prüft den Aufruf der Methode ClickOn( \"FN\" ) im ChildObject."];
-  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node17 [label="okw.core.CurrentObject\l_Test.TC_Select_ChildObject\l_WithOut_Value",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a6ba92c08d267a77ce11c133769c9b1b9",tooltip="Ts the c_ select_ child object_ with out_ value."];
+  Node16 [label="okw.gui.adapter.selenium.\lSeRadioList.SetValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a8273b5ad0d317a383424b99b244801ed",tooltip=" "];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="okw.gui.adapter.selenium.\lSeRadioList.Select",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#affa4549b0b141794eebb64825628c46a",tooltip=" "];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="okw.core.CurrentObject\l_Test.tc_ClickOn_ChildObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a2fe4ea5049e633182621aea87f5c2a8f",tooltip="Testziel: Prüft den Aufruf der Methode ClickOn( \"FN\" ) im ChildObject."];
+  Node1 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="okw.core.CurrentObject\l_Test.TC_Select_ChildObject\l_WithOut_Value",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a6ba92c08d267a77ce11c133769c9b1b9",tooltip="Ts the c_ select_ child object_ with out_ value."];
 }

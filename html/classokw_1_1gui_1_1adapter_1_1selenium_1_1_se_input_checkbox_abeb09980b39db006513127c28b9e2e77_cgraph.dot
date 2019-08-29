@@ -1,0 +1,13 @@
+digraph "okw.gui.adapter.selenium.SeInputCheckbox.SeInputCheckbox"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="okw.gui.adapter.selenium.\lSeInputCheckbox.SeInputCheckbox",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.OKW_Const_Sngltn.get\lInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const___sngltn.html#afdb8f095b58cbd870dbb8eb353e3b0bf",tooltip="Holt die einzige Instanz dieser Klasse."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.OKW_Const_Sngltn.OKW\l_Const_Sngltn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const___sngltn.html#a8404c43fc549df30d37c369c7d6e89ae",tooltip="Privater Konstruktor ohne Parameter im Entwurfsmuster Singelton initialisiert die Klasse OKW_Const."];
+}

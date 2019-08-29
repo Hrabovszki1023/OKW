@@ -1,0 +1,239 @@
+<!-- HTML header for doxygen 1.8.9.1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,200italic,300,300italic,400,400italic,600,700italic,700,600italic' rel='stylesheet' type='text/css'>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<title>OpenKeyWord: /home/travis/build/Hrabovszki1023/OKW/se/src/main/java/okw/gui/adapter/selenium/SeInputButton.java Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="OKW_doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">OpenKeyWord
+   &#160;<span id="projectnumber">Build_ID: 394, Datum: 08.29.2019 11:50:19</span>
+   </div>
+   <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_se_input_button_8java_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">SeInputButton.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">    ==============================================================================</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">      Author: Zoltán Hrabovszki &lt;zh@openkeyword.de&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">      Copyright © 2012 - 2019 IT-Beratung Hrabovszki</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">      www.OpenKeyWord.de</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    ============================================================================== </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    This file is part of OpenKeyWord.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    OpenKeyWord is free software: you can redistribute it and/or modify</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    it under the terms of the GNU General Public License as published by</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    the Free Software Foundation, either version 3 of the License, or</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    (at your option) any later version.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">    OpenKeyWord is distributed in the hope that it will be useful,</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">    GNU General Public License for more details.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">    You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">    along with OpenKeyWord.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">    Diese Datei ist Teil von OpenKeyWord.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    OpenKeyWord ist Freie Software: Sie können es unter den Bedingungen</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">    der GNU General Public License, wie von der Free Software Foundation,</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder späteren</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    veröffentlichten Version, weiterverbreiten und/oder modifizieren.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    OpenKeyWord wird in der Hoffnung, dass es nützlich sein wird, aber</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    Siehe die GNU General Public License für weitere Details.</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    Sie sollten eine Kopie der GNU General Public License zusammen mit </span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    OpenKeyWord erhalten haben. Wenn nicht, siehe &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">package </span>okw.gui.adapter.selenium;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">import</span> org.apache.commons.lang3.StringUtils;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">import</span> okw.exceptions.OKWFrameObjectMethodNotImplemented;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">import</span> okw.gui.OKWLocatorBase;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html">  121</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html">SeInputButton</a> <span class="keyword">extends</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html">SeAnyChildWindow</a></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a477262917aa8cb51f99dff5df3b7dd1a">  130</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a477262917aa8cb51f99dff5df3b7dd1a">SeInputButton</a>( String Locator, <a class="code" href="classokw_1_1gui_1_1_o_k_w_locator_base.html">OKWLocatorBase</a>... Locators )</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        super( Locator, Locators );</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    @Override <span class="comment">// TODO define Prototype in BaseClass!</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a3c2c309651daf767e1941b2b30d3fea5">  148</a></span>&#160;    <span class="keyword">public</span> ArrayList&lt;String&gt; <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a3c2c309651daf767e1941b2b30d3fea5">getCaption</a>()</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        ArrayList&lt;String&gt; lvLsReturn = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            this.<a class="code" href="classokw_1_1gui_1_1_any_win_base.html#abaab572bdbed7b471f659d5dd8c76853">LogFunctionStartDebug</a>( <span class="stringliteral">&quot;GetCaption&quot;</span> );</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="comment">// Warten auf das Objekt. Wenn es nicht existiert mit Exception</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="comment">// beenden...</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            this.<a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a72faf4aa1717b4178fae1b0570ca9b28">WaitForMe</a>();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="comment">// The Attribute &quot;value&quot; wird als Beschriftung angezeigt...</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            String myAttribute = this.<a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a9a138af1fc6ff850d708d66f308a2525">Me</a>().getAttribute( <span class="stringliteral">&quot;value&quot;</span> );</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            myAttribute = StringUtils.normalizeSpace( myAttribute );</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            lvLsReturn.add( myAttribute );</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            this.<a class="code" href="classokw_1_1gui_1_1_any_win_base.html#a51cf50ace21902b3a5359316f53a7f3e">LogFunctionEndDebug</a>( lvLsReturn );</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    @Override</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#aeaaf09d0f1c2c9524b27084c2f3d6639">  185</a></span>&#160;    <span class="keyword">public</span> ArrayList&lt;String&gt; <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#aeaaf09d0f1c2c9524b27084c2f3d6639">getValue</a>()</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="comment">// ArrayList&lt;String&gt; lvLsReturn = new ArrayList&lt;String&gt;();</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <a class="code" href="classokw_1_1gui_1_1_any_win_base.html#abaab572bdbed7b471f659d5dd8c76853">LogFunctionStartDebug</a>( <span class="stringliteral">&quot;GetValue&quot;</span> );</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            String lvsLM = this.LM.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;Common&quot;</span>, <span class="stringliteral">&quot;OKWFrameObjectMethodNotImplemented&quot;</span>, <span class="stringliteral">&quot;getValue()&quot;</span> );</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classokw_1_1exceptions_1_1_o_k_w_frame_object_method_not_implemented.html">OKWFrameObjectMethodNotImplemented</a>( lvsLM );</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <a class="code" href="classokw_1_1gui_1_1_any_win_base.html#a51cf50ace21902b3a5359316f53a7f3e">LogFunctionEndDebug</a>();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="comment">// return lvLsReturn;</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclassokw_1_1gui_1_1_o_k_w_locator_base_html"><div class="ttname"><a href="classokw_1_1gui_1_1_o_k_w_locator_base.html">okw.gui.OKWLocatorBase</a></div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_locator_base_8java_source.html#l00003">OKWLocatorBase.java:3</a></div></div>
+<div class="ttc" id="aclassokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window_html_a72faf4aa1717b4178fae1b0570ca9b28"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a72faf4aa1717b4178fae1b0570ca9b28">okw.gui.adapter.selenium.SeAnyChildWindow.WaitForMe</a></div><div class="ttdeci">Boolean WaitForMe()</div><div class="ttdoc">Wartet auf das Objekt Wenn kein Fenster gefunden wird,.</div><div class="ttdef"><b>Definition:</b> <a href="_se_any_child_window_8java_source.html#l01582">SeAnyChildWindow.java:1582</a></div></div>
+<div class="ttc" id="aclassokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button_html_a3c2c309651daf767e1941b2b30d3fea5"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a3c2c309651daf767e1941b2b30d3fea5">okw.gui.adapter.selenium.SeInputButton.getCaption</a></div><div class="ttdeci">ArrayList&lt; String &gt; getCaption()</div><div class="ttdoc">Ermittelt den textuellen Inhalt der Caption/Überschrift des Objektes.</div><div class="ttdef"><b>Definition:</b> <a href="_se_input_button_8java_source.html#l00148">SeInputButton.java:148</a></div></div>
+<div class="ttc" id="aclassokw_1_1gui_1_1_any_win_base_html_a51cf50ace21902b3a5359316f53a7f3e"><div class="ttname"><a href="classokw_1_1gui_1_1_any_win_base.html#a51cf50ace21902b3a5359316f53a7f3e">okw.gui.AnyWinBase.LogFunctionEndDebug</a></div><div class="ttdeci">void LogFunctionEndDebug()</div><div class="ttdoc">Methode ruft die Methode Logger.Instance.LogFunctionEndDebug() auf.</div><div class="ttdef"><b>Definition:</b> <a href="_any_win_base_8java_source.html#l00298">AnyWinBase.java:298</a></div></div>
+<div class="ttc" id="aclassokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window_html"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html">okw.gui.adapter.selenium.SeAnyChildWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="_se_any_child_window_8java_source.html#l00074">SeAnyChildWindow.java:74</a></div></div>
+<div class="ttc" id="aclassokw_1_1exceptions_1_1_o_k_w_frame_object_method_not_implemented_html"><div class="ttname"><a href="classokw_1_1exceptions_1_1_o_k_w_frame_object_method_not_implemented.html">okw.exceptions.OKWFrameObjectMethodNotImplemented</a></div><div class="ttdoc">Die Ausnahme OKWFrameObjectMethodNotImplemented wird ausgelöst, wenn im Frame Objekt eine gegebene Me...</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_frame_object_method_not_implemented_8java_source.html#l00065">OKWFrameObjectMethodNotImplemented.java:65</a></div></div>
+<div class="ttc" id="aclassokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button_html_a477262917aa8cb51f99dff5df3b7dd1a"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#a477262917aa8cb51f99dff5df3b7dd1a">okw.gui.adapter.selenium.SeInputButton.SeInputButton</a></div><div class="ttdeci">SeInputButton(String Locator, OKWLocatorBase... Locators)</div><div class="ttdoc">\~</div><div class="ttdef"><b>Definition:</b> <a href="_se_input_button_8java_source.html#l00130">SeInputButton.java:130</a></div></div>
+<div class="ttc" id="aclassokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button_html_aeaaf09d0f1c2c9524b27084c2f3d6639"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html#aeaaf09d0f1c2c9524b27084c2f3d6639">okw.gui.adapter.selenium.SeInputButton.getValue</a></div><div class="ttdeci">ArrayList&lt; String &gt; getValue()</div><div class="ttdoc">Ein SeInputButton hat keinen Wert! -&gt; OKWFrameObjectMethodNotImplemented Auslösen!</div><div class="ttdef"><b>Definition:</b> <a href="_se_input_button_8java_source.html#l00185">SeInputButton.java:185</a></div></div>
+<div class="ttc" id="aclassokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button_html"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_input_button.html">okw.gui.adapter.selenium.SeInputButton</a></div><div class="ttdef"><b>Definition:</b> <a href="_se_input_button_8java_source.html#l00121">SeInputButton.java:121</a></div></div>
+<div class="ttc" id="aclassokw_1_1_log_messenger_html_af225d1f037d47b3b085175c09d78bdd2"><div class="ttname"><a href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">okw.LogMessenger.GetMessage</a></div><div class="ttdeci">String GetMessage(String MethodName, String TextKey)</div><div class="ttdoc">Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter.</div><div class="ttdef"><b>Definition:</b> <a href="_log_messenger_8java_source.html#l00137">LogMessenger.java:137</a></div></div>
+<div class="ttc" id="aclassokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window_html_a9a138af1fc6ff850d708d66f308a2525"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a9a138af1fc6ff850d708d66f308a2525">okw.gui.adapter.selenium.SeAnyChildWindow.Me</a></div><div class="ttdeci">WebElement Me()</div><div class="ttdoc">Ermittelt aus dem gegebenen Locator das DOM-Elelement, welches das Objekt representiert.</div><div class="ttdef"><b>Definition:</b> <a href="_se_any_child_window_8java_source.html#l00751">SeAnyChildWindow.java:751</a></div></div>
+<div class="ttc" id="aclassokw_1_1gui_1_1_any_win_base_html_abaab572bdbed7b471f659d5dd8c76853"><div class="ttname"><a href="classokw_1_1gui_1_1_any_win_base.html#abaab572bdbed7b471f659d5dd8c76853">okw.gui.AnyWinBase.LogFunctionStartDebug</a></div><div class="ttdeci">void LogFunctionStartDebug(String fpsMethodName)</div><div class="ttdoc">Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(fps_FunctionName), und erweitert den g...</div><div class="ttdef"><b>Definition:</b> <a href="_any_win_base_8java_source.html#l00212">AnyWinBase.java:212</a></div></div>
+<!-- HTML footer for doxygen 1.8.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_0c16530b5d264870aa4431e8a25214d3.html">se</a></li><li class="navelem"><a class="el" href="dir_be767b33c06e16aec676490308ce37bd.html">src</a></li><li class="navelem"><a class="el" href="dir_ac7924823df1a4b239407b3617e0970c.html">main</a></li><li class="navelem"><a class="el" href="dir_8f2c69962c4cc68c0210369b9c8eb521.html">java</a></li><li class="navelem"><a class="el" href="dir_42d5229922fd7034c842f15cabaad1f7.html">okw</a></li><li class="navelem"><a class="el" href="dir_2a7e58e4b12c9244601895cca3d2a1d6.html">gui</a></li><li class="navelem"><a class="el" href="dir_7a2d81c6f1465d53b0d2a4afc126ed2d.html">adapter</a></li><li class="navelem"><a class="el" href="dir_eb18fa8f90104c1fcffe3bd2c582d105.html">selenium</a></li><li class="navelem"><b>SeInputButton.java</b></li>
+    <li class="footer">Erzeugt am Don Aug 29 2019 11:51:39 für OpenKeyWord von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-593506-12']);
+  _gaq.push(['_setDomainName', 'openkeyword.de']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

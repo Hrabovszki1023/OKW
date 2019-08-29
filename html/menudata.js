@@ -23,6 +23,7 @@ for the JavaScript code in this file
 var menudata={children:[
 {text:"Hauptseite",url:"index.html"},
 {text:"Zusätzliche Informationen",url:"pages.html"},
+{text:"Module",url:"modules.html"},
 {text:"Klassen",url:"annotated.html",children:[
 {text:"Auflistung der Klassen",url:"annotated.html"},
 {text:"Klassen-Verzeichnis",url:"classes.html"},

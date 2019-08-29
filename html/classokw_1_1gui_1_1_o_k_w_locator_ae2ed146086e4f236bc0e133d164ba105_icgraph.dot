@@ -9,7 +9,9 @@ digraph "okw.gui.OKWLocator.setLocator"
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="okw.gui.OKWLocator.copyLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator.html#a3f8e9de3291778c9c7a52dab2a1e08d0",tooltip="Copiert bzw, überträgt die Werte des fpSource Locators auf die Aktuelle Instanz."];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="okw.gui.AnyWinBase.setLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#a3194f519d53d24425a34f0433bc164a6",tooltip="Setzt den Locator für den aktuellen GUI-Adapter."];
+  Node3 [label="okw.gui.adapter.selenium.\lSeAnyWindow.setLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#a7be191c3d8b65df2514b61d65cf649c9",tooltip="Setzt den Locator für den aktuellen GUI-Adapter."];
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="okw.gui.OKWLocatorTest.TC\l_DynamicLocators",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator_test.html#ad8b291589037dc9118456dd1a9b90e3d",tooltip="Prüft, ob dynamische Locatoren möglich sind."];
+  Node4 [label="okw.gui.AnyWinBase.setLocator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#a3194f519d53d24425a34f0433bc164a6",tooltip="Setzt den Locator für den aktuellen GUI-Adapter."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.gui.OKWLocatorTest.TC\l_DynamicLocators",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_o_k_w_locator_test.html#ad8b291589037dc9118456dd1a9b90e3d",tooltip="Prüft, ob dynamische Locatoren möglich sind."];
 }

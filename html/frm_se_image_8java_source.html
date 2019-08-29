@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 393, Datum: 08.29.2019 11:08:27</span>
+   &#160;<span id="projectnumber">Build_ID: 394, Datum: 08.29.2019 11:50:19</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -144,10 +144,10 @@ $(document).ready(function(){initNavTree('frm_se_image_8java_source.html','');})
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">import</span> okw.gui.adapter.selenium.SeTextarea;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;@OKW( FN = <span class="stringliteral">&quot;Image&quot;</span> )</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html">   54</a></span>&#160;public class <a class="code" href="classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html">frmSeImage</a> extends SeBrowserChild</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html">   54</a></span>&#160;public class <a class="code" href="classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html">frmSeImage</a> extends <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html">SeBrowserChild</a></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  @<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a>( FN = <span class="stringliteral">&quot;Display&quot;</span>, WaitForMe_PT= 500, WaitForMe_TO=1 )</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html#af353fec9a7e804daaf2353a0789653c7">   64</a></span>&#160;  public SeTextarea   Anzeige        = new SeTextarea( &quot;4T!Display&quot;, this.getLOCATOR() );</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html#af353fec9a7e804daaf2353a0789653c7">   64</a></span>&#160;  public <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html">SeTextarea</a>   Anzeige        = new <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html">SeTextarea</a>( &quot;4T!Display&quot;, this.getLOCATOR() );</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  @<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a>( FN = &quot;Does Not Exists&quot;,</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;          VerifyLabel_PT=500, VerifyLabel_TO=1,</div>
@@ -158,7 +158,7 @@ $(document).ready(function(){initNavTree('frm_se_image_8java_source.html','');})
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;          VerifyExists_PT=500, VerifyExists_TO=1,</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;           )</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html#aa62adb286cd16de1de5317b1e4002699">   82</a></span>&#160;  public SeImage NichtVorhanden = new SeImage( &quot;$L1$<span class="comment">//*[@name=&#39;NichtVorhanden&#39;]&quot;, this.getLOCATOR() );</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html#aa62adb286cd16de1de5317b1e4002699">   82</a></span>&#160;  public <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html">SeImage</a> NichtVorhanden = new <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html">SeImage</a>( &quot;$L1$<span class="comment">//*[@name=&#39;NichtVorhanden&#39;]&quot;, this.getLOCATOR() );</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  @<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a>( FN = &quot;Image 1&quot;,</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;          VerifyLabel_PT=500, VerifyLabel_TO=1,</div>
@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('frm_se_image_8java_source.html','');})
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;          VerifyExists_PT=500, VerifyExists_TO=1,</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;           )</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  public SeImage Image_1 = new SeImage( &quot;4T!Image 1&quot;, this.getLOCATOR() );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  public <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html">SeImage</a> Image_1 = new <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html">SeImage</a>( &quot;4T!Image 1&quot;, this.getLOCATOR() );</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  @<a class="code" href="interfaceokw_1_1_o_k_w.html">OKW</a>( FN = &quot;Image 2&quot;,</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                  VerifyLabel_PT=500, VerifyLabel_TO=1,</div>
@@ -180,7 +180,7 @@ $(document).ready(function(){initNavTree('frm_se_image_8java_source.html','');})
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                  VerifyExists_PT=500, VerifyExists_TO=1,</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                  VerifyHasFocus_PT=500, VerifyHasFocus_TO=1</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                   )</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;          public SeImage Image_2 = new SeImage( &quot;4T!Image 2&quot;, this.getLOCATOR() );</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;          public <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html">SeImage</a> Image_2 = new <a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html">SeImage</a>( &quot;4T!Image 2&quot;, this.getLOCATOR() );</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
 <div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html#a7bbf9b304e37430efd937fbff5637997">  109</a></span>&#160;  public <a class="code" href="classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html">frmSeImage</a>()</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  {</div>
@@ -189,14 +189,17 @@ $(document).ready(function(){initNavTree('frm_se_image_8java_source.html','');})
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child_html"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_browser_child.html">okw.gui.adapter.selenium.SeBrowserChild</a></div><div class="ttdef"><b>Definition:</b> <a href="_se_browser_child_8java_source.html#l00055">SeBrowserChild.java:55</a></div></div>
 <div class="ttc" id="aclassokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image_html"><div class="ttname"><a href="classokw_1_1gui_1_1frames_1_1_se_image_1_1frm_se_image.html">okw.gui.frames.SeImage.frmSeImage</a></div><div class="ttdoc">GUI-Frame für die OKW-Testseite test.openkeyword.de/Button/button.htm</div><div class="ttdef"><b>Definition:</b> <a href="frm_se_image_8java_source.html#l00054">frmSeImage.java:54</a></div></div>
+<div class="ttc" id="aclassokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea_html"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_textarea.html">okw.gui.adapter.selenium.SeTextarea</a></div><div class="ttdef"><b>Definition:</b> <a href="_se_textarea_8java_source.html#l00061">SeTextarea.java:61</a></div></div>
 <div class="ttc" id="ainterfaceokw_1_1_o_k_w_html"><div class="ttname"><a href="interfaceokw_1_1_o_k_w.html">okw.OKW</a></div><div class="ttdoc">Annotations-Klasses für die Zuordnung von.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_8java_source.html#l00038">OKW.java:38</a></div></div>
+<div class="ttc" id="aclassokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image_html"><div class="ttname"><a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_image.html">okw.gui.adapter.selenium.SeImage</a></div><div class="ttdef"><b>Definition:</b> <a href="_se_image_8java_source.html#l00112">SeImage.java:112</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0c16530b5d264870aa4431e8a25214d3.html">se</a></li><li class="navelem"><a class="el" href="dir_be767b33c06e16aec676490308ce37bd.html">src</a></li><li class="navelem"><a class="el" href="dir_7d5519f44ba12571da3b48d813391a28.html">test</a></li><li class="navelem"><a class="el" href="dir_ce610f7c169990ce4f1a98d059042134.html">java</a></li><li class="navelem"><a class="el" href="dir_6f36be693120551096f5986c2567738f.html">okw</a></li><li class="navelem"><a class="el" href="dir_63bc72322fc42f19b75a459059fd1fba.html">gui</a></li><li class="navelem"><a class="el" href="dir_9a5987dde6e86233b079ccc3058b30ca.html">frames</a></li><li class="navelem"><a class="el" href="dir_f8affc7dfafd42a403d9770ad571b2ab.html">SeImage</a></li><li class="navelem"><b>frmSeImage.java</b></li>
-    <li class="footer">Erzeugt am Don Aug 29 2019 11:09:51 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Aug 29 2019 11:51:39 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>
