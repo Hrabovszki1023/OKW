@@ -5,9 +5,21 @@ digraph "Grafische Darstellung der Klassenhierarchie"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="okw.log.ILogger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1log_1_1_i_logger.html",tooltip="Debug Logs are not a part of Interface."];
+  Node0 [label="okw.junit.JUnitBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1junit_1_1_j_unit_base.html",tooltip="OKW Basisklasse für OKW interne JUnit Test."];
   Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="okw.log.Log2Console",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_log2_console.html",tooltip="Klasse zur Ausgabe in die System.out."];
+  Node1 [label="okw.log.log2html.Log2HTMLCounterTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1log2html_1_1_log2_h_t_m_l_counter_test.html",tooltip=" "];
   Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="okw.log.Logger_Sngltn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html",tooltip=" "];
+  Node2 [label="okw.log.log2html.Log2JSONTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1log2html_1_1_log2_j_s_o_n_test.html",tooltip=" "];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.log.log2html.LogError_Test",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1log2html_1_1_log_error___test.html",tooltip=" "];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="okw.log.log2html.LogException_Test",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1log2html_1_1_log_exception___test.html",tooltip=" "];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.log.log2html.LogPass_Test",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1log2html_1_1_log_pass___test.html",tooltip=" "];
+  Node0 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="okw.log.log2html.LogPrint_Test",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1log2html_1_1_log_print___test.html",tooltip=" "];
+  Node0 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="okw.log.log2html.LogPrint\lDebug_Test",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1log2html_1_1_log_print_debug___test.html",tooltip=" "];
+  Node0 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="okw.log.log2html.LogWarning_Test",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1log2html_1_1_log_warning___test.html",tooltip=" "];
 }

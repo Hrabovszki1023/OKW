@@ -1,0 +1,12 @@
+digraph "okw.log.log2html.Log2HTMLCounterTest"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{okw.log.log2html.Log2HTMLCounterTest\n||+ setUp()\l+ tearDown()\l+ tc_OK_Testcase_Normal_Test()\l+ tc_OK_Testcase_Aborted_Test()\l+ tc_OK_Testcase_KeyWordNormal_Test()\l+ tc_OK_Testcase_KeyWordAborted_Test()\l+ tc_OK_Testcase_WarningAborted_Test()\l+ tc_OK_Testcase_Warning_Test()\l+ tc_OK_Testcase_Warning2_Test()\l+ tc_OK_Testcase_WarningAborted\l_TC_KW_F_Test()\l+ tc_OK_Testcase_Error_Test()\l+ tc_OK_Testcase_Error2_Test()\l+ tc_OK_Testcase_ErrorAborted_Test()\l+ tc_OK_Testcase_ErrorAborted\l_TC_KW_F_Test()\l+ tc_OK_Testcase_FunktionDebug_Test()\l+ tc_OK_Testcase_Funktion_Test()\l+ tc_OK_Testcase_Passed_Test()\l+ tc_OK_Testcase_Passed2_Test()\l+ tc_OK_Testcase_PassedAborted_Test()\l+ tc_OK_Testcase_PassedAborted\l_TC_KW_F_Test()\l+ tc_OK_Testcase_Exception_Test()\l+ tc_OK_Testcase_Exception2_Test()\l+ tc_OK_Testcase_Exception\lAborted_Test()\l+ tc_OK_Testcase_Exception\lAborted_TC_KW_F_Test()\l+ tc_LogRemoteACCall_Test()\l+ tc_LocalACCall_Test()\l+ tc_Step_Test()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{okw.junit.JUnitBase\n|~ ClassName\l|+ loadUTF8FileFromResource()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1junit_1_1_j_unit_base.html",tooltip="OKW Basisklasse für OKW interne JUnit Test."];
+  Node3 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +name" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{TestName\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

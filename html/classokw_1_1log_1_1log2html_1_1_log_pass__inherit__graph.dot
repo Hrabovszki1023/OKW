@@ -1,0 +1,12 @@
+digraph "okw.log.log2html.LogPass"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{okw.log.log2html.LogPass\n||# LogPass()\l# getHTMLResult()\l# getJSONResult()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{okw.log.log2html.LogBaseLeaf\n|# ErrorCount\l# ExceptionCount\l# WarningCount\l# PassedCount\l# PrintCount\l# bWarning\l# bException\l# bError\l|+ LogBaseLeaf()\l+ LogBaseLeaf()\l+ reset()\l# setWarning()\l# getWarning()\l# setException()\l# getException()\l# setError()\l# getError()\l# ErrorCount()\l# ExceptionCount()\l# WarningCount()\l# PassedCount()\l# PrintCount()\l# TestcaseCount()\l# TestcaseFail()\l# TestcasePass()\l# FunctionCount()\l# FunctionFail()\l# FunctionPass()\l# KeyWordCount()\l# KeyWordFail()\l# KeyWordPass()\lund 14 mehr ...\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1log2html_1_1_log_base_leaf.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node3 [label="{okw.log.log2html.LogBase\n|# myID\l# Info\l# myDuration\l# myParent\l# myLogs\l# Level\l# myIndentionBase\l# bWarning\l# bException\l# bError\l# AllCount\l|+ setParent()\l+ getParent()\l# abort()\l# getLevel()\l# getLevelIndention()\l# getLevelIndention()\l# jsonElement()\l# jsonElementComma()\l# jsonElementComma()\l# jsonElement()\l# jsonStructure()\l# jsonStructureComma()\l# jsonArray()\l# jsonArrayElement()\l# jsonArrayElementComma()\l# setWarning()\l# getWarning()\l# setException()\l# setError()\l# getError()\l# ErrorCount()\l# ExceptionCount()\lund 26 mehr ...\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1log2html_1_1_log_base.html",tooltip=" "];
+}

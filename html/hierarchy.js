@@ -135,6 +135,7 @@ var hierarchy =
     ] ],
     [ "okw.log.ILogger", "interfaceokw_1_1log_1_1_i_logger.html", [
       [ "okw.log.Log2Console", "classokw_1_1log_1_1_log2_console.html", null ],
+      [ "okw.log.log2html.Log2HTML", "classokw_1_1log_1_1log2html_1_1_log2_h_t_m_l.html", null ],
       [ "okw.log.Logger_Sngltn", "classokw_1_1log_1_1_logger___sngltn.html", null ]
     ] ],
     [ "okw.core.IOKW_FN", "interfaceokw_1_1core_1_1_i_o_k_w___f_n.html", [
@@ -147,8 +148,45 @@ var hierarchy =
       [ "okw.core.NOK", "classokw_1_1core_1_1_n_o_k.html", null ],
       [ "okw.core.OK", "classokw_1_1core_1_1_o_k.html", null ]
     ] ],
+    [ "okw.junit.JUnitBase", "classokw_1_1junit_1_1_j_unit_base.html", [
+      [ "okw.log.log2html.Log2HTMLCounterTest", "classokw_1_1log_1_1log2html_1_1_log2_h_t_m_l_counter_test.html", null ],
+      [ "okw.log.log2html.Log2JSONTest", "classokw_1_1log_1_1log2html_1_1_log2_j_s_o_n_test.html", null ],
+      [ "okw.log.log2html.LogError_Test", "classokw_1_1log_1_1log2html_1_1_log_error___test.html", null ],
+      [ "okw.log.log2html.LogException_Test", "classokw_1_1log_1_1log2html_1_1_log_exception___test.html", null ],
+      [ "okw.log.log2html.LogPass_Test", "classokw_1_1log_1_1log2html_1_1_log_pass___test.html", null ],
+      [ "okw.log.log2html.LogPrint_Test", "classokw_1_1log_1_1log2html_1_1_log_print___test.html", null ],
+      [ "okw.log.log2html.LogPrintDebug_Test", "classokw_1_1log_1_1log2html_1_1_log_print_debug___test.html", null ],
+      [ "okw.log.log2html.LogWarning_Test", "classokw_1_1log_1_1log2html_1_1_log_warning___test.html", null ]
+    ] ],
+    [ "okw.log.log2html.Log2HTMLTest", "classokw_1_1log_1_1log2html_1_1_log2_h_t_m_l_test.html", null ],
+    [ "okw.log.log2html.LogBase", "classokw_1_1log_1_1log2html_1_1_log_base.html", [
+      [ "okw.log.log2html.LogBaseLeaf", "classokw_1_1log_1_1log2html_1_1_log_base_leaf.html", [
+        [ "okw.log.log2html.LogError", "classokw_1_1log_1_1log2html_1_1_log_error.html", null ],
+        [ "okw.log.log2html.LogException", "classokw_1_1log_1_1log2html_1_1_log_exception.html", null ],
+        [ "okw.log.log2html.LogPass", "classokw_1_1log_1_1log2html_1_1_log_pass.html", null ],
+        [ "okw.log.log2html.LogPrint", "classokw_1_1log_1_1log2html_1_1_log_print.html", null ],
+        [ "okw.log.log2html.LogPrintDebug", "classokw_1_1log_1_1log2html_1_1_log_print_debug.html", null ],
+        [ "okw.log.log2html.LogSourceLocation", "classokw_1_1log_1_1log2html_1_1_log_source_location.html", null ],
+        [ "okw.log.log2html.LogWarning", "classokw_1_1log_1_1log2html_1_1_log_warning.html", null ]
+      ] ],
+      [ "okw.log.log2html.LogBaseNode", "classokw_1_1log_1_1log2html_1_1_log_base_node.html", [
+        [ "okw.log.log2html.Log2HTML", "classokw_1_1log_1_1log2html_1_1_log2_h_t_m_l.html", null ],
+        [ "okw.log.log2html.LogFunction", "classokw_1_1log_1_1log2html_1_1_log_function.html", null ],
+        [ "okw.log.log2html.LogFunctionDebug", "classokw_1_1log_1_1log2html_1_1_log_function_debug.html", null ],
+        [ "okw.log.log2html.LogKeyword", "classokw_1_1log_1_1log2html_1_1_log_keyword.html", null ],
+        [ "okw.log.log2html.LogLocalACCall", "classokw_1_1log_1_1log2html_1_1_log_local_a_c_call.html", null ],
+        [ "okw.log.log2html.LogRemoteACCall", "classokw_1_1log_1_1log2html_1_1_log_remote_a_c_call.html", null ],
+        [ "okw.log.log2html.LogSequence", "classokw_1_1log_1_1log2html_1_1_log_sequence.html", null ],
+        [ "okw.log.log2html.LogStep", "classokw_1_1log_1_1log2html_1_1_log_step.html", null ],
+        [ "okw.log.log2html.LogTestcase", "classokw_1_1log_1_1log2html_1_1_log_testcase.html", null ],
+        [ "okw.log.log2html.ResultList", "classokw_1_1log_1_1log2html_1_1_result_list.html", null ],
+        [ "okw.log.log2html.ResultListDebug", "classokw_1_1log_1_1log2html_1_1_result_list_debug.html", null ]
+      ] ]
+    ] ],
+    [ "okw.log.log2html.Logger_Test", "classokw_1_1log_1_1log2html_1_1_logger___test.html", null ],
     [ "okw.log.Logger_Test", "classokw_1_1log_1_1_logger___test.html", null ],
     [ "okw.LogMessenger", "classokw_1_1_log_messenger.html", null ],
+    [ "okw.log.log2html.LogTimer", "classokw_1_1log_1_1log2html_1_1_log_timer.html", null ],
     [ "okw.core.Matcher", "classokw_1_1core_1_1_matcher.html", null ],
     [ "okw.core.Matcher_LevenshteinDistanceTest", "classokw_1_1core_1_1_matcher___levenshtein_distance_test.html", null ],
     [ "okw.core.Matcher_LevenshteinMatchTest", "classokw_1_1core_1_1_matcher___levenshtein_match_test.html", null ],

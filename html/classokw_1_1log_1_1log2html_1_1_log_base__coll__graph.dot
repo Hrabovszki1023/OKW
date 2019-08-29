@@ -1,0 +1,17 @@
+digraph "okw.log.log2html.LogBase"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{okw.log.log2html.LogBase\n|# myID\l# Info\l# Level\l# myIndentionBase\l# bWarning\l# bException\l# bError\l# AllCount\l|+ setParent()\l+ getParent()\l# abort()\l# getLevel()\l# getLevelIndention()\l# getLevelIndention()\l# jsonElement()\l# jsonElementComma()\l# jsonElementComma()\l# jsonElement()\l# jsonStructure()\l# jsonStructureComma()\l# jsonArray()\l# jsonArrayElement()\l# jsonArrayElementComma()\l# setWarning()\l# getWarning()\l# setException()\l# setError()\l# getError()\l# ErrorCount()\l# ExceptionCount()\lund 26 mehr ...\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [color="grey25",fontsize="10",style="solid",label=" #myParent" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" #myLogs" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{List\< okw.log.log2html.Log\lBase \>\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" #myDuration" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{okw.log.log2html.LogTimer\n|- TimerBegin\l- TimerEnd\l|+ startTimer()\l+ stopTimer()\l+ getNanos()\l+ getMillis()\l+ getSeconds()\l+ getMilliSeconds()\l+ getStartTime()\l+ getStartTimeMillis()\l+ getEndTime()\l+ getEndTimeMillis()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1log2html_1_1_log_timer.html",tooltip=" "];
+  Node4 -> Node3 [color="grey25",fontsize="10",style="solid",label=" -lvStartTime\n-lvEndTime" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{Instant\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node3 [color="grey25",fontsize="10",style="solid",label=" ~formatter" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 [label="{DateTimeFormatter\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

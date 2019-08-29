@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['test_5fnomethod_5fobject_1707',['Test_NoMethod_Object',['../classokw_1_1gui_1_1adapter_1_1_test___no_method___object.html',1,'okw::gui::adapter']]],
-  ['test_5fpushbutton_1708',['Test_PushButton',['../classokw_1_1gui_1_1adapter_1_1_test___push_button.html',1,'okw::gui::adapter']]],
-  ['test_5ftextfield_1709',['Test_TextField',['../classokw_1_1gui_1_1adapter_1_1_test___text_field.html',1,'okw::gui::adapter']]],
-  ['test_5fwindow_1710',['Test_Window',['../classokw_1_1gui_1_1adapter_1_1_test___window.html',1,'okw::gui::adapter']]]
+  ['resultlist_1689',['ResultList',['../classokw_1_1log_1_1log2html_1_1_result_list.html',1,'okw::log::log2html']]],
+  ['resultlistdebug_1690',['ResultListDebug',['../classokw_1_1log_1_1log2html_1_1_result_list_debug.html',1,'okw::log::log2html']]]
 ];
