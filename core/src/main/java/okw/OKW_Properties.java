@@ -216,35 +216,49 @@ public class OKW_Properties extends Properties
      */
     public void updateProperties()
     {
-        super.clear();
+        // 1. Löschen des HProperty Hashs...
+    	super.clear();
     
         // 2. Laden der Core_Properties
+        
+        Log.ResOpenList( "Update Properties..." );
+        Log.ResOpenList( "Load OKW Core Properties..." );
         for( String s : this.CoreProperties )
         {
               loadFromResource(s);
         }        
+        Log.ResCloseList();
+        
         
         // Laden/Überladen projektspezifiescher Properties aus resourcen
+        Log.ResOpenList( "Load Project Properties..." );
         for( String s : this.ResoursesProperties )
         {
               loadFromResource(s);
         }
+        Log.ResCloseList();
     
-        
+
+        Log.ResOpenList( "Load File Properties..." );
         for( String s : this.FileProperties )
         {
               this.loadFromFile(s);
         }
-
+        Log.ResCloseList();
         
         
         // =========================================
         // run specific properties
         // =========================================
+        Log.ResOpenList( "Load System Enviroment Vars..." );       
         loadSystemEnviromentVars();
+        Log.ResCloseList();
         
+        Log.ResOpenList( "Load System Propertie..." );
         loadSystemProperties();
-
+        Log.ResCloseList();
+        
+        Log.ResCloseList(); // "Update Properties..." 
     }
 
 
@@ -321,7 +335,7 @@ public class OKW_Properties extends Properties
 
 		Log.LogFunctionStartDebug("OKW_Properties.getPropertiesFilesFromResources", "folder", folder);
 
-		System.out.println( "getPropertiesFilesFromResources( folder ): " + folder );
+		Log.ResOpenList( "Scan folder: " + folder );
 
 		ArrayList<String> Return = new ArrayList<String>();
 
@@ -349,16 +363,23 @@ public class OKW_Properties extends Properties
 					// Nur Aufnahmen wenn mit .properies endet
 					if (FolderOrFile.getName().endsWith((".properties")))
 					{
-						Log.LogPrint(FolderOrFile.getPath());
-						Return.add(folder + "/" + FolderOrFile.getName().replaceAll(urlResourceFolder, ""));
+						// Log.LogPrint( "Property-File: " + FolderOrFile.getPath());
+						
+						Log.LogPrint( folder + "/" + FolderOrFile.getName().replaceAll(urlResourceFolder, "") );
+						Return.add( folder + "/" + FolderOrFile.getName().replaceAll(urlResourceFolder, ""));
 					}
 				}
 			}
 
-		} catch (UnsupportedEncodingException e) {
+		}
+		catch (UnsupportedEncodingException e)
+		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
+		}
+		finally
+		{
+			Log.ResCloseList();
 			Log.LogFunctionEndDebug();
 		}
 		return Return;
@@ -388,22 +409,30 @@ public class OKW_Properties extends Properties
         InputStream overwrites = Thread.currentThread().getContextClassLoader().getResourceAsStream( fpsResource );
                 
         Boolean lvbReturn = false;
+        
+        String myLogPrint = "Load Resource: " + fpsResource;
 
         try
         {
             if (overwrites != null) 
             {
-                Log.LogPrint( fpsResource );
                 this.load(overwrites);
                 overwrites.close();
                 lvbReturn = true;
+                myLogPrint = myLogPrint + " - OK";
+            }
+            else
+            {
+            	myLogPrint = myLogPrint + " - not found!";
             }
         }
         catch (IOException e)
         {
             lvbReturn = false;
+            myLogPrint = myLogPrint + " - failed!";
         }
 
+        Log.LogPrint( myLogPrint );
         return lvbReturn;
     }
     

@@ -33,12 +33,16 @@ public class OKW_GetJavaClass
     {
         ArrayList<String> lvAsReturn = new ArrayList<String>();
 
+        Log.ResOpenList( "ClassPathes..." );
         // 1. Hole alle Klassen die das Packet fpsPackeg enthalten...
         ArrayList<String> lvClassPathes = getClassPaths( fpsPackage );
-
+        Log.ResCloseList( );
+        
         // Durchsuchen wir alle Pfade...
         for ( String lvClassPath : lvClassPathes )
         {
+        	// Decode URI (e.g. spaces and international characters in file names)
+        	lvClassPath = URLDecoder.decode(lvClassPath, Charset.defaultCharset().name());
 
             if ( lvClassPath.startsWith( "file:" ) )
             {
@@ -53,14 +57,10 @@ public class OKW_GetJavaClass
                 
             }
 
-            // Decode URI (e.g. spaces and international characters in file names)
-            lvClassPath = URLDecoder.decode(lvClassPath, Charset.defaultCharset().name());
-
             File file = new File( lvClassPath );
 
             if ( file.exists() )
             {
-
                 // 2. Ist ein die URL eine *.jar Datei?
                 if ( lvClassPath.endsWith( "jar" ) )
                 {
@@ -106,7 +106,7 @@ public class OKW_GetJavaClass
 
             /* replacedURL = replacedURL.replaceFirst( "/", "" ); */
 
-            System.out.println( ">>" + replacedURL + "<<" );
+            Log.LogPrint( "'" + replacedURL + "'" );
             ReturnList.add( replacedURL );
         }
 

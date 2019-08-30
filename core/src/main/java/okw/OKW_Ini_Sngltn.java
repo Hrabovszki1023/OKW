@@ -40,7 +40,9 @@
 package okw;
 
 import java.io.File;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.security.CodeSource;
 
 import javax.xml.bind.JAXBContext;
@@ -51,6 +53,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import okw.exceptions.OKWFileDoesNotExistsException;
+import okw.log.Logger_Sngltn;
 
 /*
 * \brief
@@ -194,6 +197,11 @@ import okw.exceptions.OKWFileDoesNotExistsException;
 @XmlRootElement
 public class OKW_Ini_Sngltn
 {
+	
+	/**
+     *  \copydoc Logger_Sngltn::getInstance()
+     */
+    private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
 	/*
 	 * \brief Dieses Feld hält den Abschnitt OKW_CustomSettings der OKW_Ini.xml
@@ -401,35 +409,43 @@ public class OKW_Ini_Sngltn
 	 */
 	public void Init()
 	{
-	  System.out.println(this.getClass().getName() + ".Init...");
 		
-		//Get file from resources folder
+		String myPath = "";
+		
+		// Get file from resources folder
 		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
 		// ... und dann alles Initialisieren!
 			// 1. Ermittle xml-Verzeichniss in der Resource
 		
-		  URL xml_resource_path = classLoader.getResource("xml/logmessages");
+		  URL xml_resource_path = classLoader.getResource( "xml/logmessages" );
 		  
 		  if(xml_resource_path != null)
-		  {
-		    OKW_Enviroment.setFolder_XML(xml_resource_path.getPath());
-		    System.out.println( "Path to resource/xml: '" + xml_resource_path + "'");
+		  { 
+			    try
+			    {
+				    myPath = URLDecoder.decode( xml_resource_path.getPath(), "UTF-8");
+				}
+			    catch (UnsupportedEncodingException e)
+			    {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
+		    	OKW_Enviroment.setFolder_XML( myPath );
+		    	Log.LogPrint( "Path to resource/xml: '" + myPath + "'");
 	    
-		    this.OKW_Enviroment.setFile_OKW_Ini_xml( xml_resource_path.getPath() );
+		    	this.OKW_Enviroment.setFile_OKW_Ini_xml( xml_resource_path.getPath() );
 
-		    this.OKW_Enviroment.setFolder_LogMessages( this.OKW_Enviroment.getFolder_XML() + "/logmessages" );
+		    	this.OKW_Enviroment.setFolder_LogMessages( this.OKW_Enviroment.getFolder_XML() + "/logmessages" );
 				
-				this.OKW_Enviroment.setFile_OKW_Ini_xml(OKW_Enviroment.getFolder_XML() + "/OKW_Ini.xml");
+		    	this.OKW_Enviroment.setFile_OKW_Ini_xml(OKW_Enviroment.getFolder_XML() + "/OKW_Ini.xml");
 			}
 			else
 			{
 				// Verzeichniss fehlt: Abbruch!
-				throw new OKWFileDoesNotExistsException(
-						"Directory not found: >>" + this.OKW_Enviroment.getFolder_XML() + "<<");
+				throw new OKWFileDoesNotExistsException( "Resource not found: >>" +"xml/logmessages" + "<<" );
 			}
-		  
-			System.out.println(" - OK.");
 	}
 
 	/*
