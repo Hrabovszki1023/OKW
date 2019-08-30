@@ -20,7 +20,7 @@ public class OKW_PropertiesTest
 
     protected OKW_Properties myProperties = OKW_Properties.getInstance();
 
-    @Test
+    //@Test
     public final void tc_clear()
     {
         myProperties.init();
@@ -47,7 +47,7 @@ public class OKW_PropertiesTest
     }
 
 
-    @Test
+    //@Test
     public final void tc_loadFromResourceTest()
     {
         myProperties.init();
