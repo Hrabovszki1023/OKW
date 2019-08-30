@@ -369,6 +369,8 @@ var annotated_dup =
       [ "OKW_XmlReader", "classokw_1_1_o_k_w___xml_reader.html", "classokw_1_1_o_k_w___xml_reader" ],
       [ "OKW_XmlReaderTest", "classokw_1_1_o_k_w___xml_reader_test.html", "classokw_1_1_o_k_w___xml_reader_test" ],
       [ "OKWLanguage", "classokw_1_1_o_k_w_language.html", "classokw_1_1_o_k_w_language" ],
+      [ "ResourceList", "classokw_1_1_resource_list.html", null ],
+      [ "ResourceList_Test", "classokw_1_1_resource_list___test.html", "classokw_1_1_resource_list___test" ],
       [ "seKeys", "classokw_1_1se_keys.html", null ]
     ] ],
     [ "EN_VerifyExists_OKWVerifyingFailsException_Test", "class_e_n___verify_exists___o_k_w_verifying_fails_exception___test.html", "class_e_n___verify_exists___o_k_w_verifying_fails_exception___test" ],

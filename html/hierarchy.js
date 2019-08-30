@@ -247,6 +247,8 @@ var hierarchy =
     [ "okw.parser.Parser", "classokw_1_1parser_1_1_parser.html", [
       [ "okw.parser.antlr4.OKW_Parser", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html", null ]
     ] ],
+    [ "okw.ResourceList", "classokw_1_1_resource_list.html", null ],
+    [ "okw.ResourceList_Test", "classokw_1_1_resource_list___test.html", null ],
     [ "RuntimeException", null, [
       [ "okw.exceptions.OKWConst4InternalnameNotFoundException", "classokw_1_1exceptions_1_1_o_k_w_const4_internalname_not_found_exception.html", null ],
       [ "okw.exceptions.OKWDirectoryDoesNotExistsException", "classokw_1_1exceptions_1_1_o_k_w_directory_does_not_exists_exception.html", null ],

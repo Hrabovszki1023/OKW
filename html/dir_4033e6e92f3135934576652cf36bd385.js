@@ -23,5 +23,6 @@ var dir_4033e6e92f3135934576652cf36bd385 =
     [ "OKW_TimeOut.java", "_o_k_w___time_out_8java_source.html", null ],
     [ "OKW_XmlReader.java", "_o_k_w___xml_reader_8java_source.html", null ],
     [ "OKWLanguage.java", "_o_k_w_language_8java_source.html", null ],
+    [ "ResourceList.java", "_resource_list_8java_source.html", null ],
     [ "seKeys.java", "se_keys_8java_source.html", null ]
 ];
