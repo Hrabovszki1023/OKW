@@ -43,6 +43,7 @@ import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLDecoder;
+import java.nio.charset.Charset;
 import java.security.CodeSource;
 
 import javax.xml.bind.JAXBContext;
@@ -424,7 +425,7 @@ public class OKW_Ini_Sngltn
 		  { 
 			    try
 			    {
-				    myPath = URLDecoder.decode( xml_resource_path.getPath(), "UTF-8");
+				    myPath = URLDecoder.decode( xml_resource_path.getPath(),  Charset.defaultCharset().name() );
 				}
 			    catch (UnsupportedEncodingException e)
 			    {

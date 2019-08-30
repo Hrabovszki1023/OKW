@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLDecoder;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
@@ -373,7 +374,7 @@ public class OKW_Properties extends Properties
 		String path = "";
 
 		try {
-			path = URLDecoder.decode(url.getPath(), "UTF-8");
+			path = URLDecoder.decode(url.getPath(), Charset.defaultCharset().name() );
 
 			String urlResourceFolder = path.replaceAll(folder, "");
 

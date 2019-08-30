@@ -42,7 +42,7 @@ public class OKW_GetJavaClass
         for ( String lvClassPath : lvClassPathes )
         {
         	// Decode URI (e.g. spaces and international characters in file names)
-        	lvClassPath = URLDecoder.decode(lvClassPath, Charset.defaultCharset().name());
+        	lvClassPath = URLDecoder.decode( lvClassPath, Charset.defaultCharset().name());
 
             if ( lvClassPath.startsWith( "file:" ) )
             {
