@@ -302,63 +302,67 @@ public class OKW_Properties extends Properties
         return;
     }
     
-    /**
-     * \~german
-     * Erstellt eine Liste der "*.properties"-Dateien des aktuellen Projektes
-     *
-     * @param ?
-     * @return
-     * \~english
-     *
-     *
-     * @param ? 
-     * @return
-     * \~
-     * @author Zoltán Hrabovszki
-     * @date 2019-05-07
-     */
-    private ArrayList<String> getPropertiesFilesFromResources( String folder )
-    { 
-       ArrayList<String> Return = new ArrayList<String>();
-        
-        ClassLoader loader = Thread.currentThread().getContextClassLoader();
-        URL url = loader.getResource( folder );
-        String path = "";
+	/**
+	 * \~german Erstellt eine Liste der "*.properties"-Dateien des aktuellen
+	 * Projektes
+	 * 
+	 * Ist eine rekursive Methode
+	 *
+	 * @param ?
+	 * @return \~english
+	 *
+	 *
+	 * @param ?
+	 * @return \~
+	 * @author Zoltán Hrabovszki
+	 * @date 2019-05-07
+	 */
+	private ArrayList<String> getPropertiesFilesFromResources(String folder) {
 
-        try {
-			path = URLDecoder.decode( url.getPath(), "UTF-8" );
+		Log.LogFunctionStartDebug("OKW_Properties.getPropertiesFilesFromResources", "folder", folder);
+
+		System.out.println( "getPropertiesFilesFromResources( folder ): " + folder );
+
+		ArrayList<String> Return = new ArrayList<String>();
+
+		ClassLoader loader = Thread.currentThread().getContextClassLoader();
+		URL url = loader.getResource(folder);
+		String path = "";
+
+		try {
+			path = URLDecoder.decode(url.getPath(), "UTF-8");
+
+			String urlResourceFolder = path.replaceAll(folder, "");
+
+			File[] FoldersAndFiles = new File(path).listFiles();
+
+			for (File FolderOrFile : FoldersAndFiles) {
+				// Wenn es sich um ein Verzeichniss handelt
+				if (FolderOrFile.isDirectory())
+				{
+					// System.out.println( "Folder:" + FolderOrFile.getPath() );
+					String Folder = FolderOrFile.getPath().replaceAll(urlResourceFolder, "");
+					Return.addAll(getPropertiesFilesFromResources(Folder));
+				}
+				else if (FolderOrFile.isFile())
+				{
+					// Nur Aufnahmen wenn mit .properies endet
+					if (FolderOrFile.getName().endsWith((".properties")))
+					{
+						Log.LogPrint(FolderOrFile.getPath());
+						Return.add(folder + "/" + FolderOrFile.getName().replaceAll(urlResourceFolder, ""));
+					}
+				}
+			}
+
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			Log.LogFunctionEndDebug();
 		}
-        
-
-        String urlResourceFolder = path.replaceAll( folder, "" );
-        
-        File[] FoldersAndFiles = new File( path ).listFiles();
-                
-        for (File FolderOrFile : FoldersAndFiles)
-        {
-            // Wenn es sich um ein Verzeichniss handelt
-            if ( FolderOrFile.isDirectory() )
-            {
-                //System.out.println( "Folder:" + FolderOrFile.getPath() );
-                String Folder = FolderOrFile.getPath().replaceAll( urlResourceFolder, "" );
-                Return.addAll( getPropertiesFilesFromResources( Folder ) );
-            }
-            else if ( FolderOrFile.isFile() )
-            {
-                // Nur Aufnahmen wenn mit .properies endet
-                if (FolderOrFile.getName().endsWith((".properties")))
-                {
-                    Log.LogPrint( FolderOrFile.getPath() );
-                    Return.add( folder + "/" + FolderOrFile.getName().replaceAll( urlResourceFolder, "" ) );
-                }
-            }
-        }
-        
-        return Return;
-    }
+		return Return;
+	}
     
     
     
