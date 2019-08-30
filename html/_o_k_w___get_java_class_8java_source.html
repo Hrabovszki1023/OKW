@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 398, Datum: 08.30.2019 07:56:06</span>
+   &#160;<span id="projectnumber">Build_ID: 399, Datum: 08.30.2019 12:08:26</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -129,34 +129,34 @@ $(document).ready(function(){initNavTree('_o_k_w___get_java_class_8java_source.h
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        ArrayList&lt;String&gt; lvAsReturn = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">// 1. Hole alle Klassen die das Packet fpsPackeg enthalten...</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        ArrayList&lt;String&gt; lvClassPathes = <a class="code" href="classokw_1_1_o_k_w___get_java_class.html#afd71b0370b671387f5ce62a2c454fbf5">getClassPaths</a>( fpsPackage );</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// Durchsuchen wir alle Pfade...</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">for</span> ( String lvClassPath : lvClassPathes )</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> ( lvClassPath.startsWith( <span class="stringliteral">&quot;file:&quot;</span> ) )</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="comment">// Hier handelt es sch um eine *.jar Datei</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="comment">// &quot;file:/some/path/myfile.jar!/okw/gui/frames&quot;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                lvClassPath = okw.OKW_Helper.getRightFromDelimiterNumber( lvClassPath, <span class="stringliteral">&quot;file:&quot;</span>, 1 );</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="comment">// nun rechts von &quot;!&quot; abschneiden incl. &quot;!&quot; weg!</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="comment">// Ergebniss: &quot;/some/path/myfile.jar&quot;</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                lvClassPath = okw.OKW_Helper.getLeftFromDelimiterNumber( lvClassPath, <span class="stringliteral">&quot;!&quot;</span>, 1 );</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="comment">// Decode URI (e.g. spaces and international characters in file names)</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            lvClassPath = URLDecoder.decode(lvClassPath, Charset.defaultCharset().name());</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            File file = <span class="keyword">new</span> File( lvClassPath );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span> ( file.exists() )</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___get_java_class.html#a058037d08ac83f8e5dad16d0d7ecd6bb">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#ab4fc711bb4c754f251372ff3b14ab9c9">ResOpenList</a>( <span class="stringliteral">&quot;ClassPathes...&quot;</span> );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// 1. Hole alle Klassen die das Packet fpsPackeg enthalten...</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        ArrayList&lt;String&gt; lvClassPathes = <a class="code" href="classokw_1_1_o_k_w___get_java_class.html#afd71b0370b671387f5ce62a2c454fbf5">getClassPaths</a>( fpsPackage );</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___get_java_class.html#a058037d08ac83f8e5dad16d0d7ecd6bb">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a9b54104f7e0b4c0a473877b19dfaed56">ResCloseList</a>( );</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// Durchsuchen wir alle Pfade...</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">for</span> ( String lvClassPath : lvClassPathes )</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="comment">// Decode URI (e.g. spaces and international characters in file names)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            lvClassPath = URLDecoder.decode(lvClassPath, Charset.defaultCharset().name());</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span> ( lvClassPath.startsWith( <span class="stringliteral">&quot;file:&quot;</span> ) )</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="comment">// Hier handelt es sch um eine *.jar Datei</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="comment">// &quot;file:/some/path/myfile.jar!/okw/gui/frames&quot;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                lvClassPath = okw.OKW_Helper.getRightFromDelimiterNumber( lvClassPath, <span class="stringliteral">&quot;file:&quot;</span>, 1 );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="comment">// nun rechts von &quot;!&quot; abschneiden incl. &quot;!&quot; weg!</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="comment">// Ergebniss: &quot;/some/path/myfile.jar&quot;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                lvClassPath = okw.OKW_Helper.getLeftFromDelimiterNumber( lvClassPath, <span class="stringliteral">&quot;!&quot;</span>, 1 );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            File file = <span class="keyword">new</span> File( lvClassPath );</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">if</span> ( file.exists() )</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            {</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="comment">// 2. Ist ein die URL eine *.jar Datei?</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">if</span> ( lvClassPath.endsWith( <span class="stringliteral">&quot;jar&quot;</span> ) )</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                {</div>
@@ -192,7 +192,7 @@ $(document).ready(function(){initNavTree('_o_k_w___get_java_class_8java_source.h
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="comment">/* replacedURL = replacedURL.replaceFirst( &quot;/&quot;, &quot;&quot; ); */</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            System.out.println( <span class="stringliteral">&quot;&gt;&gt;&quot;</span> + replacedURL + <span class="stringliteral">&quot;&lt;&lt;&quot;</span> );</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___get_java_class.html#a058037d08ac83f8e5dad16d0d7ecd6bb">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c">LogPrint</a>( <span class="stringliteral">&quot;&#39;&quot;</span> + replacedURL + <span class="stringliteral">&quot;&#39;&quot;</span> );</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            ReturnList.add( replacedURL );</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
@@ -358,6 +358,7 @@ $(document).ready(function(){initNavTree('_o_k_w___get_java_class_8java_source.h
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_ab4fc711bb4c754f251372ff3b14ab9c9"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#ab4fc711bb4c754f251372ff3b14ab9c9">okw.log.Logger_Sngltn.ResOpenList</a></div><div class="ttdeci">void ResOpenList(String fps_Name)</div><div class="ttdoc">Creates a new hierarchical level in the results file.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00614">Logger_Sngltn.java:614</a></div></div>
 <div class="ttc" id="aclassokw_1_1_log_messenger_html"><div class="ttname"><a href="classokw_1_1_log_messenger.html">okw.LogMessenger</a></div><div class="ttdoc">LogMessenger liest Log-Meldungen sprachspezifisch für die im Konstruktor gegeben Klasse aus der Zugeh...</div><div class="ttdef"><b>Definition:</b> <a href="_log_messenger_8java_source.html#l00084">LogMessenger.java:84</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___get_java_class_html_a058037d08ac83f8e5dad16d0d7ecd6bb"><div class="ttname"><a href="classokw_1_1_o_k_w___get_java_class.html#a058037d08ac83f8e5dad16d0d7ecd6bb">okw.OKW_GetJavaClass.Log</a></div><div class="ttdeci">static Logger_Sngltn Log</div><div class="ttdoc">Zentrale Logger-Klasse stellt Logger-Methoden innerhalb von OKW zur Verfügung.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___get_java_class_8java_source.html#l00024">OKW_GetJavaClass.java:24</a></div></div>
 <div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a91b192a4e0381f6d02b791693d0fab84"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">okw.log.Logger_Sngltn.LogFunctionEndDebug</a></div><div class="ttdeci">void LogFunctionEndDebug()</div><div class="ttdoc">LogFunctionEndDebug:</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00249">Logger_Sngltn.java:249</a></div></div>
@@ -366,6 +367,8 @@ $(document).ready(function(){initNavTree('_o_k_w___get_java_class_8java_source.h
 <div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a2d4c3d22d2a52b92873ee2f3853d9c42"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">okw.log.Logger_Sngltn.LogFunctionStartDebug</a></div><div class="ttdeci">void LogFunctionStartDebug(String fps_FunctionName, String... fpsParameter)</div><div class="ttdoc">LogFunctionStartDebug:</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00311">Logger_Sngltn.java:311</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___get_java_class_html_a9200523523a49a49e005b36037785847"><div class="ttname"><a href="classokw_1_1_o_k_w___get_java_class.html#a9200523523a49a49e005b36037785847">okw.OKW_GetJavaClass.getClassesFromDirectory</a></div><div class="ttdeci">static ArrayList&lt; String &gt; getClassesFromDirectory(String fpsdirectory, String packageName)</div><div class="ttdoc">Recursive method used to find all classes in a given directory and subdirs.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___get_java_class_8java_source.html#l00127">OKW_GetJavaClass.java:127</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___get_java_class_html"><div class="ttname"><a href="classokw_1_1_o_k_w___get_java_class.html">okw.OKW_GetJavaClass</a></div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___get_java_class_8java_source.html#l00019">OKW_GetJavaClass.java:19</a></div></div>
+<div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a8ebceaddd6cc6963ddb8e08c72ea808c"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c">okw.log.Logger_Sngltn.LogPrint</a></div><div class="ttdeci">void LogPrint(String fps_Message)</div><div class="ttdoc">LogPrint Function: Prints the values of expressions to the results file.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00487">Logger_Sngltn.java:487</a></div></div>
+<div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a9b54104f7e0b4c0a473877b19dfaed56"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a9b54104f7e0b4c0a473877b19dfaed56">okw.log.Logger_Sngltn.ResCloseList</a></div><div class="ttdeci">void ResCloseList()</div><div class="ttdoc">Closes a hierarchical level in the results file that was opened with ResOpenList.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00574">Logger_Sngltn.java:574</a></div></div>
 <div class="ttc" id="aclassokw_1_1exceptions_1_1_o_k_w_frame_object_parent_not_found_exception_html"><div class="ttname"><a href="classokw_1_1exceptions_1_1_o_k_w_frame_object_parent_not_found_exception.html">okw.exceptions.OKWFrameObjectParentNotFoundException</a></div><div class="ttdoc">Die Ausnahme OKWFrameObjectWindowNotFoundException wird ausgelöst, wenn ein Fenster-Frame-Objekt mit ...</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_frame_object_parent_not_found_exception_8java_source.html#l00062">OKWFrameObjectParentNotFoundException.java:62</a></div></div>
 <div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a313f97c79ba4662d9daaf7f537dd02f4"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4">okw.log.Logger_Sngltn.LogPrintDebug</a></div><div class="ttdeci">void LogPrintDebug(String fpsMessage)</div><div class="ttdoc">Loggt eine Nachricht.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00520">Logger_Sngltn.java:520</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___get_java_class_html_a10701221abeade4716d492e8db29a877"><div class="ttname"><a href="classokw_1_1_o_k_w___get_java_class.html#a10701221abeade4716d492e8db29a877">okw.OKW_GetJavaClass.createInstanceByType</a></div><div class="ttdeci">static Object createInstanceByType(Class&lt;?&gt; fpParentType)</div><div class="ttdoc">Die Methode erzeugt eine Instanz der Rahmenklasse (frame class) mit dem in 'fps_ParentClassName' gege...</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___get_java_class_8java_source.html#l00254">OKW_GetJavaClass.java:254</a></div></div>
@@ -379,7 +382,7 @@ $(document).ready(function(){initNavTree('_o_k_w___get_java_class_8java_source.h
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_90fd98a0ba30abf7a6068a44995d2d6b.html">src</a></li><li class="navelem"><a class="el" href="dir_3fdb55be625affb78b03858da3433959.html">main</a></li><li class="navelem"><a class="el" href="dir_6d0f1805523af42a675fba128cf43f17.html">java</a></li><li class="navelem"><a class="el" href="dir_4033e6e92f3135934576652cf36bd385.html">okw</a></li><li class="navelem"><b>OKW_GetJavaClass.java</b></li>
-    <li class="footer">Erzeugt am Fre Aug 30 2019 07:57:22 für OpenKeyWord von
+    <li class="footer">Erzeugt am Fre Aug 30 2019 12:09:43 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

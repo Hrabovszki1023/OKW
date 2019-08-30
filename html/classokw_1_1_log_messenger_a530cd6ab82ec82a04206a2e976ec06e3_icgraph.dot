@@ -9,9 +9,9 @@ digraph "okw.LogMessenger.ReadMessage"
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="okw.core.Core.ClickOn",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a3e601b16ed5c18b3daa279cf61044504",tooltip="Klickt auf das gegebene Objekt."];
-  Node2 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node22 [label="okw.gui.adapter.selenium.\lSeAnyWindow.ClickOn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aa12522740af84cd18ca60c08bec1ce47",tooltip="Klickt auf das aktuelle Objekt."];
+  Node3 [label="okw.gui.adapter.selenium.\lSeAnyWindow.ClickOn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_window.html#aa12522740af84cd18ca60c08bec1ce47",tooltip="Klickt auf das aktuelle Objekt."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="okw.core.Core.ClickOn",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a3e601b16ed5c18b3daa279cf61044504",tooltip="Klickt auf das gegebene Objekt."];
   Node2 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node23 [label="okw.core.Core.CopyFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a9eaef26bb78a9014d69cac3f0e669ee4",tooltip="Copiert die gegebene Quelldatei zur Zieldatei."];
   Node2 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
@@ -54,10 +54,10 @@ digraph "okw.LogMessenger.ReadMessage"
   Node2 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 -> Node186 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node186 [label="okw.core.Core.LogCaption",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a0aa220ef8efe2df075093c4eb2a08212",tooltip="Gibt die Caption eines GUI-Objektes in den Testergebnissen aus."];
-  Node2 -> Node191 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node191 [label="okw.core.Core.LogExists",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a40b3422362c40854e75c069250a9c964",tooltip="Gibt die Existenz eines GUI-Objektes mit YES/NO in den Testergebnissen aus."];
   Node2 -> Node91 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node91 [label="okw.core.OK.LogExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238",tooltip="Gibt die Existenz eines GUI-Objektes mit YES/NO in den Testergebnissen aus."];
+  Node2 -> Node191 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node191 [label="okw.core.Core.LogExists",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a40b3422362c40854e75c069250a9c964",tooltip="Gibt die Existenz eines GUI-Objektes mit YES/NO in den Testergebnissen aus."];
   Node2 -> Node204 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node204 [label="okw.core.Core.LogHasFocus",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a03c5ee5ec358b422d897b56c095d2613",tooltip="Dokumentiert den Fokus-Status des gegebenen Objekts."];
   Node2 -> Node92 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
