@@ -16,10 +16,10 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 import java.util.regex.Pattern;
-import java.util.Collection;
-
 import okw.exceptions.OKWFileDoesNotExistsException;
 import okw.log.Logger_Sngltn;
+
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * \~german
@@ -41,6 +41,8 @@ import okw.log.Logger_Sngltn;
 public class OKW_Properties extends Properties
 {
     private static OKW_Properties Instance;
+    
+    String PropPath = "";
     
     /**
      *  \copydoc Logger_Sngltn::getInstance()
@@ -172,7 +174,11 @@ public class OKW_Properties extends Properties
      */
     public void init()
     {
-        // Zurücksetzen...
+    	String loadResoure = "";
+    	String Sep = System.getProperty( "file.separator" );
+    	this.PropPath =  "okw" + Sep + "properties" + Sep;
+
+    	// Zurücksetzen...
         this.clear();
         
         // =========================================
@@ -180,19 +186,42 @@ public class OKW_Properties extends Properties
         // =========================================
         //
         // -----------------------------------------        
-        // Core-Properties
+        // okw-Properties
         //
-        this.CoreProperties.add( "core.properties" );
+		Pattern pattern = Pattern.compile(".*okw.*properties.*.properties");
+        ArrayList<String> myList= (ArrayList<String>) ResourceList.getResources(pattern);
+        
+        
+		for ( String element : myList)
+		{
+			Log.ResOpenList( element );
+			
+			if ( StringUtils.startsWith( element, PropPath) )
+			{
+				loadResoure = element;
+			}
+			else
+			{
+				loadResoure =  PropPath + StringUtils.splitByWholeSeparator( element, PropPath )[1];
+			}
+			
+			Log.LogPrint( "--> " + loadResoure );
+			this.CoreProperties.add( loadResoure );
+
+			Log.ResCloseList();
+		}
+		
+        
 
         // -----------------------------------------
         // Se-Properties
-        this.CoreProperties.add( "frmSeChrome.properties" );
+        //this.CoreProperties.add( "frmSeChrome.properties" );
 
         // =========================================
         // project specific properties
         // =========================================
-        ArrayList<String> someProperties = getPropertiesFilesFromResources( "" );
-        this.ResoursesProperties.addAll( someProperties );
+        // ArrayList<String> someProperties = getPropertiesFilesFromResources( "" );
+        // this.ResoursesProperties.addAll( someProperties );
 
         // =========================================
         // Read system properties and environment Vars...
