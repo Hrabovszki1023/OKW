@@ -458,11 +458,11 @@ public class Log2HTML extends LogBaseNode implements ILogger
     }
     
     
-    public void LogSequenceStart( String fpsKeywordName, String fpsWindowFN, String fps_SequensName, String... fpsParameter)
+    public void LogSequenceStart( String fpsKeywordName, String fpsWindowFN, String fpsSequenceName, String... fpsParameter)
     {
 		AllCount++;
 		
-    	LogBase myLog = new LogSequence( Pointer2LogBaseStack.peek(), fpsWindowFN, fps_SequensName, fpsParameter);
+    	LogBase myLog = new LogSequence( Pointer2LogBaseStack.peek(), fpsWindowFN, fpsSequenceName, fpsParameter);
     	
     	// Timer starten
     	myLog.myDuration.startTimer();
@@ -752,7 +752,7 @@ public class Log2HTML extends LogBaseNode implements ILogger
             myJSON.append( getJSONHeader() );
             myJSON.append( this.jsonStructureComma( "statistics", this.getJSONStatistics() ) );
         
-            myJSON.append( this.jsonArray( "features", this.getJSONResult() ));
+            myJSON.append( this.jsonArray( "features", this.jsonArrayElement( this.getJSONResult() )));
             myJSON.append( getJSONFooter());
    
             myJSONReturn = this.beautify( myJSON.toString() );
@@ -780,7 +780,7 @@ public class Log2HTML extends LogBaseNode implements ILogger
     {
         StringBuilder myResult = new StringBuilder();
         
-        myResult.append("{\n");
+        myResult.append("{");
         
         return myResult.toString();
     }
@@ -801,7 +801,7 @@ public class Log2HTML extends LogBaseNode implements ILogger
         {
             if (GreaterOne) myJSONForLoop.append( ", " ); 
             else GreaterOne = true;
-            myJSONForLoop.append( this.jsonStructure( "test", myLog.getJSONResult() ) ) ;
+            myJSONForLoop.append( this.jsonArrayElement( myLog.getJSONResult() ) ) ;
             
         }
         
@@ -818,7 +818,7 @@ public class Log2HTML extends LogBaseNode implements ILogger
     {
         StringBuilder myResult = new StringBuilder();
         
-        myResult.append("}\n");
+        myResult.append("}");
 
         return myResult.toString();
     }

@@ -4,7 +4,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
+import java.net.URLDecoder;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
@@ -13,8 +16,11 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import java.util.regex.Pattern;
 import okw.exceptions.OKWFileDoesNotExistsException;
 import okw.log.Logger_Sngltn;
+
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * \~german
@@ -36,6 +42,8 @@ import okw.log.Logger_Sngltn;
 public class OKW_Properties extends Properties
 {
     private static OKW_Properties Instance;
+    
+    String PropPath = "";
     
     /**
      *  \copydoc Logger_Sngltn::getInstance()
@@ -167,7 +175,11 @@ public class OKW_Properties extends Properties
      */
     public void init()
     {
-        // Zurücksetzen...
+    	String loadResoure = "";
+    	String Sep = System.getProperty( "file.separator" );
+    	this.PropPath =  "okw" + Sep + "properties" + Sep;
+
+    	// Zurücksetzen...
         this.clear();
         
         // =========================================
@@ -175,19 +187,42 @@ public class OKW_Properties extends Properties
         // =========================================
         //
         // -----------------------------------------        
-        // Core-Properties
+        // okw-Properties
         //
-        this.CoreProperties.add( "core.properties" );
+		Pattern pattern = Pattern.compile(".*okw.*properties.*.properties");
+        ArrayList<String> myList= (ArrayList<String>) ResourceList.getResources(pattern);
+        
+        
+		for ( String element : myList)
+		{
+			Log.ResOpenList( element );
+			
+			if ( StringUtils.startsWith( element, PropPath) )
+			{
+				loadResoure = element;
+			}
+			else
+			{
+				loadResoure =  PropPath + StringUtils.splitByWholeSeparator( element, PropPath )[1];
+			}
+			
+			Log.LogPrint( "--> " + loadResoure );
+			this.CoreProperties.add( loadResoure );
+
+			Log.ResCloseList();
+		}
+		
+        
 
         // -----------------------------------------
         // Se-Properties
-        this.CoreProperties.add( "frmSeChrome.properties" );
+        //this.CoreProperties.add( "frmSeChrome.properties" );
 
         // =========================================
         // project specific properties
         // =========================================
-        ArrayList<String> someProperties = getPropertiesFilesFromResources( "" );
-        this.ResoursesProperties.addAll( someProperties );
+        // ArrayList<String> someProperties = getPropertiesFilesFromResources( "" );
+        // this.ResoursesProperties.addAll( someProperties );
 
         // =========================================
         // Read system properties and environment Vars...
@@ -211,35 +246,49 @@ public class OKW_Properties extends Properties
      */
     public void updateProperties()
     {
-        super.clear();
+        // 1. Löschen des HProperty Hashs...
+    	super.clear();
     
         // 2. Laden der Core_Properties
+        
+        Log.ResOpenList( "Update Properties..." );
+        Log.ResOpenList( "Load OKW Core Properties..." );
         for( String s : this.CoreProperties )
         {
               loadFromResource(s);
         }        
+        Log.ResCloseList();
+        
         
         // Laden/Überladen projektspezifiescher Properties aus resourcen
+        Log.ResOpenList( "Load Project Properties..." );
         for( String s : this.ResoursesProperties )
         {
               loadFromResource(s);
         }
+        Log.ResCloseList();
     
-        
+
+        Log.ResOpenList( "Load File Properties..." );
         for( String s : this.FileProperties )
         {
               this.loadFromFile(s);
         }
-
+        Log.ResCloseList();
         
         
         // =========================================
         // run specific properties
         // =========================================
+        Log.ResOpenList( "Load System Enviroment Vars..." );       
         loadSystemEnviromentVars();
+        Log.ResCloseList();
         
+        Log.ResOpenList( "Load System Propertie..." );
         loadSystemProperties();
-
+        Log.ResCloseList();
+        
+        Log.ResCloseList(); // "Update Properties..." 
     }
 
 
@@ -297,55 +346,77 @@ public class OKW_Properties extends Properties
         return;
     }
     
-    /**
-     * \~german
-     * Erstellt eine Liste der Properties -Date
-     *
-     * @param ?
-     * @return
-     * \~english
-     *
-     *
-     * @param ? 
-     * @return
-     * \~
-     * @author Zoltán Hrabovszki
-     * @date 2019-05-07
-     */
-    private ArrayList<String> getPropertiesFilesFromResources( String folder )
-    {
-       ArrayList<String> Return = new ArrayList<String>();
-        
-        ClassLoader loader = Thread.currentThread().getContextClassLoader();
-        URL url = loader.getResource( folder );
-        String path = url.getPath();
+	/**
+	 * \~german Erstellt eine Liste der "*.properties"-Dateien des aktuellen
+	 * Projektes
+	 * 
+	 * Ist eine rekursive Methode
+	 *
+	 * @param ?
+	 * @return \~english
+	 *
+	 *
+	 * @param ?
+	 * @return \~
+	 * @author Zoltán Hrabovszki
+	 * @date 2019-05-07
+	 */
+	private ArrayList<String> getPropertiesFilesFromResources(String folder) {
 
-        String urlResourceFolder = path.replaceAll( folder, "" );
-        
-        File[] FoldersAndFiles = new File( path ).listFiles();
-                
-        for (File FolderOrFile : FoldersAndFiles)
-        {
-            // Wenn es sich um ein Verzeichniss handelt
-            if ( FolderOrFile.isDirectory() )
-            {
-                //System.out.println( "Folder:" + FolderOrFile.getPath() );
-                String Folder = FolderOrFile.getPath().replaceAll( urlResourceFolder, "" );
-                Return.addAll( getPropertiesFilesFromResources( Folder ) );
-            }
-            else if ( FolderOrFile.isFile() )
-            {
-                // Nur Aufnahmen wenn mit .properies endet
-                if (FolderOrFile.getName().endsWith((".properties")))
-                {
-                    Log.LogPrint( FolderOrFile.getPath() );
-                    Return.add( folder + "/" + FolderOrFile.getName().replaceAll( urlResourceFolder, "" ) );
-                }
-            }
-        }
-        
-        return Return;
-    }
+		Log.LogFunctionStartDebug("OKW_Properties.getPropertiesFilesFromResources", "folder", folder);
+
+		Log.ResOpenList( "Scan folder: " + folder );
+
+		ArrayList<String> Return = new ArrayList<String>();
+
+		ClassLoader loader = Thread.currentThread().getContextClassLoader();
+		URL url = loader.getResource(folder);
+		String path = "";
+
+		try {
+			path = URLDecoder.decode(url.getPath(), Charset.defaultCharset().name() );
+
+			String urlResourceFolder = path.replaceAll(folder, "");
+
+			File[] FoldersAndFiles = new File(path).listFiles();
+
+			for (File FolderOrFile : FoldersAndFiles) {
+				// Wenn es sich um ein Verzeichniss handelt
+				if (FolderOrFile.isDirectory())
+				{
+					// System.out.println( "Folder:" + FolderOrFile.getPath() );
+					String Folder = FolderOrFile.getPath().replaceAll(urlResourceFolder, "");
+					Return.addAll(getPropertiesFilesFromResources(Folder));
+				}
+				else if (FolderOrFile.isFile())
+				{
+					// Nur Aufnahmen wenn mit .properies endet
+					if (FolderOrFile.getName().endsWith((".properties")))
+					{
+						// Log.LogPrint( "Property-File: " + FolderOrFile.getPath());
+						
+						Log.LogPrint( folder + "/" + FolderOrFile.getName().replaceAll(urlResourceFolder, "") );
+						Return.add( folder + "/" + FolderOrFile.getName().replaceAll(urlResourceFolder, ""));
+					}
+				}
+			}
+
+		}
+		catch (UnsupportedEncodingException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally
+		{
+			Log.ResCloseList();
+			Log.LogFunctionEndDebug();
+		}
+		return Return;
+	}
+    
+    
+    
     /**
      * \~german
      * Lädt die Liste OKW_Properties.ResoursesProperties hinzufügen.
@@ -368,22 +439,30 @@ public class OKW_Properties extends Properties
         InputStream overwrites = Thread.currentThread().getContextClassLoader().getResourceAsStream( fpsResource );
                 
         Boolean lvbReturn = false;
+        
+        String myLogPrint = "Load Resource: " + fpsResource;
 
         try
         {
             if (overwrites != null) 
             {
-                Log.LogPrint( fpsResource );
                 this.load(overwrites);
                 overwrites.close();
                 lvbReturn = true;
+                myLogPrint = myLogPrint + " - OK";
+            }
+            else
+            {
+            	myLogPrint = myLogPrint + " - not found!";
             }
         }
         catch (IOException e)
         {
             lvbReturn = false;
+            myLogPrint = myLogPrint + " - failed!";
         }
 
+        Log.LogPrint( myLogPrint );
         return lvbReturn;
     }
     

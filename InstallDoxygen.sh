@@ -3,7 +3,7 @@
 
 set -ex
 
-DOXYGEN_VER=doxygen-1.8.15
+DOXYGEN_VER=doxygen-1.8.16
 DOXYGEN_TAR=${DOXYGEN_VER}.linux.bin.tar.gz
 DOXYGEN_URL="http://doxygen.nl/files//${DOXYGEN_TAR}"
 

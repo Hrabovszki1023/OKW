@@ -8,9 +8,9 @@
     "FunctionCount" : "0",
     "FunctionFail" : "0",
     "FunctionPass" : "0",
-    "SequensCount" : "0",
-    "SequensFail" : "0",
-    "SequensPass" : "0",
+    "SequenceCount" : "0",
+    "SequenceFail" : "0",
+    "SequencePass" : "0",
     "LocalACCallCount" : "0",
     "LocalACCallFail" : "0",
     "LocalACCallPass" : "0",
@@ -31,9 +31,45 @@
     "name" : "tc_LogStep_LogPrintDebug_Test",
     "result" : "",
     "tests" : [ {
-      "test" : {
-        "name" : "TestCase = tc_LogStep_LogPrintDebug_Test",
-        "type" : "TestCase",
+      "name" : "TestCase = tc_LogStep_LogPrintDebug_Test",
+      "type" : "TestCase",
+      "statistics" : {
+        "ErrorCount" : "0",
+        "ExceptionCount" : "0",
+        "WarningCount" : "0",
+        "PassedCount" : "0",
+        "PrintCount" : "1",
+        "FunctionCount" : "0",
+        "FunctionFail" : "0",
+        "FunctionPass" : "0",
+        "SequenceCount" : "0",
+        "SequenceFail" : "0",
+        "SequencePass" : "0",
+        "LocalACCallCount" : "0",
+        "LocalACCallFail" : "0",
+        "LocalACCallPass" : "0",
+        "RemoteACCallCount" : "0",
+        "RemoteACCallFail" : "0",
+        "RemoteACCallPass" : "0",
+        "StepCount" : "1",
+        "StepFail" : "0",
+        "StepPass" : "0",
+        "KeyWordCount" : "0",
+        "KeyWordFail" : "0",
+        "KeyWordPass" : "0",
+        "startedAt" : "Start time TestMode",
+        "finishedAt" : "End time TestMode",
+        "duration" : "Duration TestMode"
+      },
+      "elements" : [ {
+        "type" : "TestStep",
+        "categoryName" : "mycategoryName",
+        "categoryType" : "mycategoryType",
+        "choiceValue" : "mychoiceValue",
+        "featureName" : "myfeatureName",
+        "localCategoryName" : "mylocalCategoryName",
+        "sourceExcerpt" : "mysourceExcerpt",
+        "result" : "",
         "statistics" : {
           "ErrorCount" : "0",
           "ExceptionCount" : "0",
@@ -43,9 +79,9 @@
           "FunctionCount" : "0",
           "FunctionFail" : "0",
           "FunctionPass" : "0",
-          "SequensCount" : "0",
-          "SequensFail" : "0",
-          "SequensPass" : "0",
+          "SequenceCount" : "0",
+          "SequenceFail" : "0",
+          "SequencePass" : "0",
           "LocalACCallCount" : "0",
           "LocalACCallFail" : "0",
           "LocalACCallPass" : "0",
@@ -63,51 +99,9 @@
           "duration" : "Duration TestMode"
         },
         "elements" : [ {
-          "element" : {
-            "type" : "TestStep",
-            "categoryName" : "mycategoryName",
-            "categoryType" : "mycategoryType",
-            "choiceValue" : "mychoiceValue",
-            "featureName" : "myfeatureName",
-            "localCategoryName" : "mylocalCategoryName",
-            "sourceExcerpt" : "mysourceExcerpt",
-            "result" : "",
-            "statistics" : {
-              "ErrorCount" : "0",
-              "ExceptionCount" : "0",
-              "WarningCount" : "0",
-              "PassedCount" : "0",
-              "PrintCount" : "1",
-              "FunctionCount" : "0",
-              "FunctionFail" : "0",
-              "FunctionPass" : "0",
-              "SequensCount" : "0",
-              "SequensFail" : "0",
-              "SequensPass" : "0",
-              "LocalACCallCount" : "0",
-              "LocalACCallFail" : "0",
-              "LocalACCallPass" : "0",
-              "RemoteACCallCount" : "0",
-              "RemoteACCallFail" : "0",
-              "RemoteACCallPass" : "0",
-              "StepCount" : "1",
-              "StepFail" : "0",
-              "StepPass" : "0",
-              "KeyWordCount" : "0",
-              "KeyWordFail" : "0",
-              "KeyWordPass" : "0",
-              "startedAt" : "Start time TestMode",
-              "finishedAt" : "End time TestMode",
-              "duration" : "Duration TestMode"
-            },
-            "elements" : [ {
-              "element" : {
-                "PrintDebug" : "LogPrintDebug"
-              }
-            } ]
-          }
+          "PrintDebug" : "LogPrintDebug"
         } ]
-      }
+      } ]
     } ]
   } ]
 }

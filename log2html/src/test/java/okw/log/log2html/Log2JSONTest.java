@@ -358,10 +358,10 @@ public class Log2JSONTest extends JUnitBase
 		    myLog.LogPrintDebug("Das ist ein LogPrint...");
 		
 		myLog.ResOpenListDebug( "ResultOpenListDebug" );
-		myLog.LogPrintDebug( "Print im Schlüsselwort");
-		myLog.LogPrintDebug( "Das hier ist ein weiterern Print-Absatz im Schlüsselwort.");
-		myLog.LogError( "Fehler" );
-		myLog.LogWarning( "Warning" );
+		   myLog.LogPrintDebug( "Print im Schlüsselwort");
+		   myLog.LogPrintDebug( "Das hier ist ein weiterern Print-Absatz im Schlüsselwort.");
+		   myLog.LogError( "Fehler" );
+		   myLog.LogWarning( "Warning" );
 		myLog.ResCloseListDebug();
 
 		myLog.LogFunctionEndDebug();
