@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 404, Datum: 08.30.2019 23:46:28</span>
+   &#160;<span id="projectnumber">Build_ID: 405, Datum: 08.31.2019 07:48:32</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('classokw_1_1_resource_list.html','');}
   <div class="summary">
 <a href="#pub-static-methods">Öffentliche, statische Methoden</a> &#124;
 <a href="#pri-static-methods">Private, statische Methoden</a> &#124;
+<a href="#pri-static-attribs">Statische, private Attribute</a> &#124;
 <a href="classokw_1_1_resource_list-members.html">Aufstellung aller Elemente</a>  </div>
   <div class="headertitle">
 <div class="title">okw.ResourceList Klassenreferenz</div>  </div>
@@ -136,11 +137,17 @@ static Collection&lt; String &gt;&#160;</td><td class="memItemRight" valign="bot
 <tr class="memitem:a47adfdacb9b1ffd8c58b5ec1a3e20d3e"><td class="memItemLeft" align="right" valign="top"><a id="a47adfdacb9b1ffd8c58b5ec1a3e20d3e"></a>
 static Collection&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getResourcesFromDirectory</b> (final File directory, final Pattern pattern)</td></tr>
 <tr class="separator:a47adfdacb9b1ffd8c58b5ec1a3e20d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Statische, private Attribute</h2></td></tr>
+<tr class="memitem:aecb5f57c66bf99c215345da5fb3f2f87"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1_resource_list.html#aecb5f57c66bf99c215345da5fb3f2f87">Log</a> = <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html#a525771433356af73ed6e94b35f31b541">Logger_Sngltn.getInstance</a>()</td></tr>
+<tr class="memdesc:aecb5f57c66bf99c215345da5fb3f2f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zentrale Logger-Klasse stellt Logger-Methoden innerhalb von <a class="el" href="interfaceokw_1_1_o_k_w.html" title="Annotations-Klasses für die Zuordnung von.">OKW</a> zur Verfügung.  <a href="classokw_1_1_resource_list.html#aecb5f57c66bf99c215345da5fb3f2f87">Mehr ...</a><br /></td></tr>
+<tr class="separator:aecb5f57c66bf99c215345da5fb3f2f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
 <div class="textblock"><p>list resources available from the classpath @ * </p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_resource_list_8java_source.html#l00016">16</a> der Datei <a class="el" href="_resource_list_8java_source.html">ResourceList.java</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_resource_list_8java_source.html#l00018">18</a> der Datei <a class="el" href="_resource_list_8java_source.html">ResourceList.java</a>.</p>
 </div><h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
 <a id="ab5ff31b4dfa13bac57193c489aebd261"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5ff31b4dfa13bac57193c489aebd261">&#9670;&nbsp;</a></span>getResources()</h2>
@@ -175,25 +182,40 @@ static Collection&lt; String &gt;&#160;</td><td class="memItemRight" valign="bot
 </dl>
 <dl class="section return"><dt>Rückgabe</dt><dd>the resources in the order they are found </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_resource_list_8java_source.html#l00026">26</a> der Datei <a class="el" href="_resource_list_8java_source.html">ResourceList.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">final</span> ArrayList&lt;String&gt; retval = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">final</span> String classPath = System.getProperty(<span class="stringliteral">&quot;java.class.path&quot;</span>, <span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">final</span> String[] classPathElements = classPath.split(System.getProperty(<span class="stringliteral">&quot;path.separator&quot;</span>));</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">final</span> String element : classPathElements) {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            retval.addAll(<a class="code" href="classokw_1_1_resource_list.html#ab5ff31b4dfa13bac57193c489aebd261">getResources</a>(element, pattern));</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> retval;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_resource_list_8java_source.html#l00034">34</a> der Datei <a class="el" href="_resource_list_8java_source.html">ResourceList.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">final</span> ArrayList&lt;String&gt; retval = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">final</span> String classPath = System.getProperty(<span class="stringliteral">&quot;java.class.path&quot;</span>, <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">final</span> String[] classPathElements = classPath.split(System.getProperty(<span class="stringliteral">&quot;path.separator&quot;</span>));</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="classokw_1_1_resource_list.html#aecb5f57c66bf99c215345da5fb3f2f87">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#ab4fc711bb4c754f251372ff3b14ab9c9">ResOpenList</a>( <span class="stringliteral">&quot;Class Path...&quot;</span> ); </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">final</span> String element : classPathElements)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="classokw_1_1_resource_list.html#aecb5f57c66bf99c215345da5fb3f2f87">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c">LogPrint</a>( element );</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            retval.addAll(<a class="code" href="classokw_1_1_resource_list.html#ab5ff31b4dfa13bac57193c489aebd261">getResources</a>(element, pattern));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="classokw_1_1_resource_list.html#aecb5f57c66bf99c215345da5fb3f2f87">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a9b54104f7e0b4c0a473877b19dfaed56">ResCloseList</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> retval;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><!-- SVG 1 -->
+</div>
+</div>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 2 -->
 </div>
 </div>
 
@@ -231,27 +253,54 @@ static Collection&lt; String &gt;&#160;</td><td class="memItemRight" valign="bot
   </dd>
 </dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_resource_list_8java_source.html#l00112">112</a> der Datei <a class="el" href="_resource_list_8java_source.html">ResourceList.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                                 {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        Pattern pattern;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span> (args.length &lt; 1) {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            pattern = Pattern.compile(<span class="stringliteral">&quot;.*&quot;</span>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            pattern = Pattern.compile(args[0]);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keyword">final</span> Collection&lt;String&gt; list = ResourceList.getResources(pattern);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">final</span> String name : list) {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            System.out.println(name);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<p class="definition">Definiert in Zeile <a class="el" href="_resource_list_8java_source.html#l00127">127</a> der Datei <a class="el" href="_resource_list_8java_source.html">ResourceList.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                                                 {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        Pattern pattern;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">if</span> (args.length &lt; 1) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            pattern = Pattern.compile(<span class="stringliteral">&quot;.*&quot;</span>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            pattern = Pattern.compile(args[0]);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keyword">final</span> Collection&lt;String&gt; list = ResourceList.getResources(pattern);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">final</span> String name : list) {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            System.out.println(name);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div>
+</div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 2 -->
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 3 -->
 </div>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="aecb5f57c66bf99c215345da5fb3f2f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecb5f57c66bf99c215345da5fb3f2f87">&#9670;&nbsp;</a></span>Log</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a> okw.ResourceList.Log = <a class="el" href="classokw_1_1log_1_1_logger___sngltn.html#a525771433356af73ed6e94b35f31b541">Logger_Sngltn.getInstance</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zentrale Logger-Klasse stellt Logger-Methoden innerhalb von <a class="el" href="interfaceokw_1_1_o_k_w.html" title="Annotations-Klasses für die Zuordnung von.">OKW</a> zur Verfügung. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_resource_list_8java_source.html#l00024">24</a> der Datei <a class="el" href="_resource_list_8java_source.html">ResourceList.java</a>.</p>
 
 </div>
 </div>
@@ -260,13 +309,17 @@ static Collection&lt; String &gt;&#160;</td><td class="memItemRight" valign="bot
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassokw_1_1_resource_list_html_ab5ff31b4dfa13bac57193c489aebd261"><div class="ttname"><a href="classokw_1_1_resource_list.html#ab5ff31b4dfa13bac57193c489aebd261">okw.ResourceList.getResources</a></div><div class="ttdeci">static Collection&lt; String &gt; getResources(final Pattern pattern)</div><div class="ttdoc">for all elements of java.class.path get a Collection of resources Pattern pattern = Pattern....</div><div class="ttdef"><b>Definition:</b> <a href="_resource_list_8java_source.html#l00026">ResourceList.java:26</a></div></div>
+<div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_ab4fc711bb4c754f251372ff3b14ab9c9"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#ab4fc711bb4c754f251372ff3b14ab9c9">okw.log.Logger_Sngltn.ResOpenList</a></div><div class="ttdeci">void ResOpenList(String fps_Name)</div><div class="ttdoc">Creates a new hierarchical level in the results file.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00614">Logger_Sngltn.java:614</a></div></div>
+<div class="ttc" id="aclassokw_1_1_resource_list_html_aecb5f57c66bf99c215345da5fb3f2f87"><div class="ttname"><a href="classokw_1_1_resource_list.html#aecb5f57c66bf99c215345da5fb3f2f87">okw.ResourceList.Log</a></div><div class="ttdeci">static Logger_Sngltn Log</div><div class="ttdoc">Zentrale Logger-Klasse stellt Logger-Methoden innerhalb von OKW zur Verfügung.</div><div class="ttdef"><b>Definition:</b> <a href="_resource_list_8java_source.html#l00024">ResourceList.java:24</a></div></div>
+<div class="ttc" id="aclassokw_1_1_resource_list_html_ab5ff31b4dfa13bac57193c489aebd261"><div class="ttname"><a href="classokw_1_1_resource_list.html#ab5ff31b4dfa13bac57193c489aebd261">okw.ResourceList.getResources</a></div><div class="ttdeci">static Collection&lt; String &gt; getResources(final Pattern pattern)</div><div class="ttdoc">for all elements of java.class.path get a Collection of resources Pattern pattern = Pattern....</div><div class="ttdef"><b>Definition:</b> <a href="_resource_list_8java_source.html#l00034">ResourceList.java:34</a></div></div>
+<div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a8ebceaddd6cc6963ddb8e08c72ea808c"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c">okw.log.Logger_Sngltn.LogPrint</a></div><div class="ttdeci">void LogPrint(String fps_Message)</div><div class="ttdoc">LogPrint Function: Prints the values of expressions to the results file.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00487">Logger_Sngltn.java:487</a></div></div>
+<div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a9b54104f7e0b4c0a473877b19dfaed56"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a9b54104f7e0b4c0a473877b19dfaed56">okw.log.Logger_Sngltn.ResCloseList</a></div><div class="ttdeci">void ResCloseList()</div><div class="ttdoc">Closes a hierarchical level in the results file that was opened with ResOpenList.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00574">Logger_Sngltn.java:574</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><a class="el" href="classokw_1_1_resource_list.html">ResourceList</a></li>
-    <li class="footer">Erzeugt am Fre Aug 30 2019 23:47:53 für OpenKeyWord von
+    <li class="footer">Erzeugt am Sam Aug 31 2019 07:49:52 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>
