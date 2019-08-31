@@ -176,7 +176,7 @@ public class OKW_Properties extends Properties
     public void init()
     {
     	String loadResoure = "";
-    	String Sep = System.getProperty( "file.separator" );
+    	String Sep = "/"; //System.getProperty( "file.separator" );
     	this.PropPath =  "okw" + Sep + "properties" + Sep;
 
     	// Zurücksetzen...
