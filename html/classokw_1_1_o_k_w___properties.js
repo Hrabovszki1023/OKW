@@ -18,5 +18,6 @@ var classokw_1_1_o_k_w___properties =
     [ "CoreProperties", "classokw_1_1_o_k_w___properties.html#a0e7c1de083950e409418836d3686b4f0", null ],
     [ "FileProperties", "classokw_1_1_o_k_w___properties.html#add3a337406be501ff2052064e7367dc2", null ],
     [ "PropPath", "classokw_1_1_o_k_w___properties.html#a075d22fa124d83025982e5e65d30fc54", null ],
+    [ "PropPathWin", "classokw_1_1_o_k_w___properties.html#a224643afd2ed70860e967d51a07cdb1e", null ],
     [ "ResoursesProperties", "classokw_1_1_o_k_w___properties.html#ac326e4635f05d96f0c4b1ee377d41096", null ]
 ];
