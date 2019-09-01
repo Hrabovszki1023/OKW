@@ -72,7 +72,7 @@ public class OKW_PropertiesTest
     public final void tc_loadFromResource_OVERLOAD_Test()
     {
         myProperties.clear();
-        myProperties.addResource( "okw/properties/OKW_PropertiesTest/properties_Test1.properties" );
+        myProperties.addResource( "okw/default/properties/OKW_PropertiesTest/properties_Test1.properties" );
         
         assertEquals( "Wert 0 aus properties_Test1", myProperties.get( "Wert0" ) );
         assertEquals( "Wert 1 aus properties_Test1", myProperties.get( "Wert1" ) );
@@ -81,7 +81,7 @@ public class OKW_PropertiesTest
         assertEquals( "Wert 4 aus properties_Test1", myProperties.get( "Wert4" ) );
         assertEquals( null, myProperties.get( "Wert5" ) );
         
-        myProperties.addResource( "okw/properties/OKW_PropertiesTest/properties_Test2.properties" );
+        myProperties.addResource( "okw/default/properties/OKW_PropertiesTest/properties_Test2.properties" );
         assertEquals( "Wert 0 aus properties_Test1", myProperties.get( "Wert0" ) );
         assertEquals( "Wert 1 aus properties_Test2", myProperties.get( "Wert1" ) );
         assertEquals( "Wert 2 aus properties_Test2", myProperties.get( "Wert2" ) );
@@ -125,7 +125,7 @@ public class OKW_PropertiesTest
     public final void tc_getPropertiesForKeysStartswith() throws IOException
     {
         myProperties.clear();
-        myProperties.addResource( "okw/properties/OKW_PropertiesTest/properties_Test1.properties" );
+        myProperties.addResource( "okw/default/properties/OKW_PropertiesTest/properties_Test1.properties" );
         
         assertEquals( "Wert 0 aus properties_Test1", myProperties.get( "Wert0" ) );
         assertEquals( "Wert 1 aus properties_Test1", myProperties.get( "Wert1" ) );
@@ -153,7 +153,7 @@ public class OKW_PropertiesTest
     public final void tc_getKeysStartswith() throws IOException
     {
         myProperties.clear();
-        myProperties.addResource( "okw/properties/OKW_PropertiesTest/properties_Test1.properties" );
+        myProperties.addResource( "okw/default/properties/OKW_PropertiesTest/properties_Test1.properties" );
         
         assertEquals( "Wert 0 aus properties_Test1", myProperties.get( "Wert0" ) );
         assertEquals( "Wert 1 aus properties_Test1", myProperties.get( "Wert1" ) );
