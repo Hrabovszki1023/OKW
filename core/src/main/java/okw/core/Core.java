@@ -129,7 +129,15 @@ public class Core implements IOKW_State
             // Init all Singelton...
             Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
-            Log.ResOpenList("Start OKW... ");
+            Log.LogPrint( "--------------------------------------------------------" );
+            Log.LogPrint( " OKW - OpenKeyWord" );
+            Log.LogPrint( "--------------------------------------------------------" );
+            Log.LogPrint( " Version: 0.1.42" );
+            Log.LogPrint( "     WEB: www.openkeyword.de" );
+            Log.LogPrint( "   Email: info@.openkeyword.de" );
+            Log.LogPrint( "--------------------------------------------------------" );
+            
+            Log.ResOpenList("Start OKW...");
             
             Log.ResOpenList("OKW_Ini...");
             OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();

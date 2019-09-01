@@ -176,70 +176,103 @@ public class OKW_Properties extends Properties
      */
     public void init()
     {
-    	String loadResoure = "";
     	String Sep = System.getProperty( "file.separator" );
-    	this.PropPath =  "okw" + Sep + "properties" + Sep;
-    	this.PropPathWin =  "okw/properties/";
     	
     	// Zurücksetzen...
         this.clear();
         
+        Log.ResOpenList( "Find Properties..." );
+        
         // =========================================
-        // !. JAR - *.properties Dateien einlesen
+        // !. JAR - */okw/default/*/*.properties Dateien einlesen
         // =========================================
         //
         // -----------------------------------------        
-        // okw-Properties
+        // okw-Dafault-Properties
         //
-		Pattern pattern = Pattern.compile(".*okw.*properties.*.properties");
-        ArrayList<String> myList= (ArrayList<String>) ResourceList.getResources(pattern);
-        
-        
-		for ( String element : myList)
-		{
-			Log.ResOpenList( element );
-			
-			if ( StringUtils.startsWith( element, PropPath) )
-			{
-				loadResoure = element;
-			}
-			else if ( StringUtils.startsWith( element, PropPathWin) )
-			{
-				loadResoure = element;
-			}
-			else
-			{
-				loadResoure =  PropPath + StringUtils.splitByWholeSeparator( element, PropPath )[1];
-			}
-			
-			Log.LogPrint( "--> " + loadResoure );
-			this.CoreProperties.add( loadResoure );
-
-			Log.ResCloseList();
-		}
+        Log.ResOpenList( "Find OKW Core Properties..." );
 		
+		String PropPattern = ".*okw.default.properties.*\\.properties";
+		String PropPath = "okw" + Sep + "default" + Sep + "properties" + Sep;
+		String PropPathWin = "okw/default/properties/";
+		
+        ArrayList<String> someProperties = getPropertyFiles( PropPattern, PropPath, PropPathWin);
+        this.CoreProperties.addAll( someProperties );
         
-
-        // -----------------------------------------
-        // Se-Properties
-        //this.CoreProperties.add( "frmSeChrome.properties" );
+        Log.ResCloseList();
 
         // =========================================
-        // project specific properties
+        // project specific properties 
         // =========================================
-        // ArrayList<String> someProperties = getPropertiesFilesFromResources( "" );
-        // this.ResoursesProperties.addAll( someProperties );
+        // 
+        Log.ResOpenList( "Find Project Properties..." );
+        
+        PropPattern = ".*okw.properties.*\\.properties";
+        PropPath = "okw" + Sep + "properties" + Sep;
+        PropPathWin = "okw/properties/";
+        
+        ArrayList<String> some3Properties = getPropertyFiles( PropPattern, PropPath, PropPathWin);
+        this.ResoursesProperties.addAll( some3Properties );
+        
+        Log.ResCloseList();
 
+        Log.ResCloseList();
+        
         // =========================================
         // Read system properties and environment Vars...
         // and Update Properties-list
         // =========================================
         this.updateProperties();
 
-        PrintPropertiesSources();
+        //PrintPropertiesSources();
     }
     
+    /**
+     * \~german
+     * Es werden die Properties aus dem reasource Verzeichniss geladen. 
+     *
+     * \~english
+     *
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2018-03-08
+     */    
+    protected ArrayList<String> getPropertyFiles( String Patternstring, String PropPath, String PropPathWin )
+    {
+        String loadResoure = "";
+        ArrayList<String> myReturn = new ArrayList<String>();
+        
+        Pattern pattern = Pattern.compile( Patternstring );
+        ArrayList<String> myList = (ArrayList<String>) ResourceList.getResources(pattern);
+        
+        
+        for ( String element : myList)
+        {
+            Log.ResOpenList( element );
+            
+            if ( StringUtils.startsWith( element, PropPath) )
+            {
+                loadResoure = element;
+            }
+            else if ( StringUtils.startsWith( element, PropPathWin) )
+            {
+                loadResoure = element;
+            }
+            else
+            {
+                loadResoure =  PropPath + StringUtils.splitByWholeSeparator( element, PropPath )[1];
+            }
+            
+            Log.LogPrint( "--> " + loadResoure );
+            myReturn.add( loadResoure );
+
+            Log.ResCloseList();
+        }
+        
+        return myReturn;
+    }
     
+       
     /**
      * \~german
      * Aktualisert/Lädt die Properties in der unter OKW_Properties beschriebene Weise. 

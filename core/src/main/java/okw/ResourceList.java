@@ -39,15 +39,15 @@ public class ResourceList
 		
 		final String[] classPathElements = classPath.split(System.getProperty("path.separator"));
 		
-		Log.ResOpenList( "Class Path..." ); 
+		Log.ResOpenListDebug( "Class Path..." ); 
 		
 		for (final String element : classPathElements)
 		{
-			Log.LogPrint( element );
+			Log.LogPrintDebug( element );
 			retval.addAll(getResources(element, pattern));
 		}
 		
-		Log.ResCloseList();
+		Log.ResCloseListDebug();
 		
 		return retval;
 	}
