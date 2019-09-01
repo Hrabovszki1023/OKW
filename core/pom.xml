@@ -4,7 +4,7 @@
   <parent>
     <groupId>de.openkeyword</groupId>
     <artifactId>okw</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.42</version>
   </parent>
   <artifactId>core</artifactId>
   <description>This is the core-module of OpenKeyWord. This module is automatically integrated by the adapters. In GUI automation, the core module is automatically integrated by the GUI modules (dependencies).</description>
