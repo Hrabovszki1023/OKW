@@ -44,6 +44,7 @@ public class OKW_Properties extends Properties
     private static OKW_Properties Instance;
     
     String PropPath = "";
+    String PropPathWin = "";
     
     /**
      *  \copydoc Logger_Sngltn::getInstance()
@@ -176,9 +177,10 @@ public class OKW_Properties extends Properties
     public void init()
     {
     	String loadResoure = "";
-    	String Sep = "/"; //System.getProperty( "file.separator" );
+    	String Sep = System.getProperty( "file.separator" );
     	this.PropPath =  "okw" + Sep + "properties" + Sep;
-
+    	this.PropPathWin =  "okw/properties/";
+    	
     	// Zurücksetzen...
         this.clear();
         
@@ -198,6 +200,10 @@ public class OKW_Properties extends Properties
 			Log.ResOpenList( element );
 			
 			if ( StringUtils.startsWith( element, PropPath) )
+			{
+				loadResoure = element;
+			}
+			else if ( StringUtils.startsWith( element, PropPathWin) )
 			{
 				loadResoure = element;
 			}
