@@ -132,7 +132,7 @@ public class Core implements IOKW_State
             Log.LogPrint( "--------------------------------------------------------" );
             Log.LogPrint( " OKW - OpenKeyWord" );
             Log.LogPrint( "--------------------------------------------------------" );
-            Log.LogPrint( " Version: 0.1.42" );
+            Log.LogPrint( " Version: " );
             Log.LogPrint( "     WEB: www.openkeyword.de" );
             Log.LogPrint( "   Email: info@.openkeyword.de" );
             Log.LogPrint( "--------------------------------------------------------" );
