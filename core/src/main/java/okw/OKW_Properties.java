@@ -9,6 +9,8 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;
@@ -62,7 +64,7 @@ public class OKW_Properties extends Properties
      * @author Zoltán Hrabovszki
      * @date 2018-03-08
      */
-    protected ArrayList<String> CoreProperties = new ArrayList<>();
+    protected ArrayList<String> CoreProperties = new ArrayList<String>();
     
 
     /**
@@ -75,7 +77,7 @@ public class OKW_Properties extends Properties
      * @author Zoltán Hrabovszki
      * @date 2018-03-08
      */
-    protected ArrayList<String> ResoursesProperties = new ArrayList<>();
+    protected ArrayList<String> ResoursesProperties = new ArrayList<String>();
     
 
     /**
@@ -88,7 +90,7 @@ public class OKW_Properties extends Properties
      * @author Zoltán Hrabovszki
      * @date 2018-03-08
      */
-    protected ArrayList<String> FileProperties = new ArrayList<>();
+    protected ArrayList<String> FileProperties = new ArrayList<String>();
 
     /**
      */
@@ -292,6 +294,13 @@ public class OKW_Properties extends Properties
         
         Log.ResOpenList( "Update Properties..." );
         Log.ResOpenList( "Load OKW Core Properties..." );
+        
+        Collections.sort( this.CoreProperties, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                return s1.compareToIgnoreCase(s2);
+            } } );
+        
         for( String s : this.CoreProperties )
         {
               loadFromResource(s);
@@ -301,6 +310,13 @@ public class OKW_Properties extends Properties
         
         // Laden/Überladen projektspezifiescher Properties aus resourcen
         Log.ResOpenList( "Load Project Properties..." );
+        
+        Collections.sort( this.ResoursesProperties, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                return s1.compareToIgnoreCase(s2);
+            } } );
+        
         for( String s : this.ResoursesProperties )
         {
               loadFromResource(s);
@@ -365,7 +381,7 @@ public class OKW_Properties extends Properties
      * \~german
      * Eine *.Properties-Datei zur Liste OKW_Properties.FileProperties hinzufügen.
      * 
-     * Die hinzugefügten Dateien updateProperties
+     * Die hinzugefügten Dateien werden mit updateProperties()  neugeladen.
      *
      * @param fpsFileName 
      * @return
