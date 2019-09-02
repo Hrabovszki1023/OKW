@@ -582,12 +582,12 @@ public class OKW_Properties extends Properties
               String value = env.get(key);
               if (this.containsKey(key))
               {
-                 Log.LogPrint( "Überschreibe: " + key + ": '" + this.get(key) + "'");
-                 Log.LogPrint( "         mit: " + key + ": '" + value + "'");
+                 Log.LogPrint( "Override: " + key + ": '" + this.get(key) + "'");
+                 Log.LogPrint( "    with: " + key + ": '" + value + "'");
               }
               else
               {
-                 Log.LogPrint( "    Schreibe: " + key + ": '" + value + "'");
+                 Log.LogPrint( "   Write: " + key + ": '" + value + "'");
               }
               this.setProperty(key, value);
           }
@@ -611,12 +611,12 @@ public class OKW_Properties extends Properties
               
               if ( this.containsKey( key ) )
               {
-                 Log.LogPrint( "Überschreibe: " + key + ": '" + this.get(key) + "'" );
-                 Log.LogPrint( "         mit: " + key + ": '" + value + "'" );
+                 Log.LogPrint( "Override: " + key + ": '" + this.get(key) + "'" );
+                 Log.LogPrint( "    with: " + key + ": '" + value + "'" );
               }
               else
               {
-                 Log.LogPrint( "    Schreibe: " + key + ": '" + value + "'" );
+                 Log.LogPrint( "   Write: " + key + ": '" + value + "'" );
               }
               
               this.setProperty(key, value);

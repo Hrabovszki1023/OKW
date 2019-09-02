@@ -37,6 +37,12 @@
 package okw.core;
 
 import okw.log.Logger_Sngltn;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 import okw.*;
 
 /** \~german
@@ -121,6 +127,30 @@ public class Core implements IOKW_State
         }
     }
 
+    protected static void readVersionTxt()
+    {
+        InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream( "okw/version.txt" );
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+        String line;
+
+        try
+        {
+			while ((line = reader.readLine()) != null)
+			{
+				Log.LogPrint("-" + line);
+			}
+			reader.close();
+			
+		}
+        catch (IOException e)
+        {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
+    
     @SuppressWarnings( "unused" )
     public static void Init()
     {
@@ -129,13 +159,7 @@ public class Core implements IOKW_State
             // Init all Singelton...
             Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
-            Log.LogPrint( "--------------------------------------------------------" );
-            Log.LogPrint( " OKW - OpenKeyWord" );
-            Log.LogPrint( "--------------------------------------------------------" );
-            Log.LogPrint( " Version: " );
-            Log.LogPrint( "     WEB: www.openkeyword.de" );
-            Log.LogPrint( "   Email: info@.openkeyword.de" );
-            Log.LogPrint( "--------------------------------------------------------" );
+            readVersionTxt();
             
             Log.ResOpenList("Start OKW...");
             

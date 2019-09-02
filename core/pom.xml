@@ -21,14 +21,16 @@
       <filtering>true</filtering>
       <includes>
         <include>okw/version.txt</include>
+        <include>okw/default/properties/core.properties</include>
       </includes>
     </resource>
         <resource>
       <directory>src/main/resources</directory>
       <filtering>false</filtering>
-      <includes>
-        <include>okw/version.txt</include>
-      </includes>
+      <excludes>
+        <exclude>okw/version.txt</exclude>
+        <exclude>okw/default/properties/core.properties</exclude>
+      </excludes>
     </resource>
   </resources>
 </build>
