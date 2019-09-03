@@ -12,4 +12,8 @@ digraph "okw.core.Core.VerifyFileExists"
   Node3 [label="okw.core.EN_FileKeywords\l_Test.FileDelete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___file_keywords___test.html#acb04e50447def00a22be9b52b5327aac",tooltip="Prüft das Schlüsselwort File."];
   Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="okw.core.EN_FileKeywords\l_Test.FileDelete_EMPTY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___file_keywords___test.html#ac1eeb5773fc9c3a4854198e37b2f5dea",tooltip="Prüft das Schlüsselwort File."];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.core.EN_Keywords\l_IGNORE_Test.tcVerifyFileExists\l_IGNORE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html#a7002e100d88df90e40621bcc5e60fc39",tooltip="Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyFileExists Übertragen wird."];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="okw.core.EN_Keywords\l_IGNORE_Test.tcVerifyFileExists\l_IGNORE_EmptyString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html#a532a5d51791d179f821eddb95e4050c5",tooltip="Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyFileExists Übertragen wird."];
 }
