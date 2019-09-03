@@ -2,7 +2,7 @@ package okw.log.log2html;
 
 public class LogKeyword extends LogBaseNode
 {
-    private String type = "KeyWord";
+    private String type = "Keyword";
     private String Keyword;
     private String[] Parameter;
 
@@ -34,7 +34,6 @@ public class LogKeyword extends LogBaseNode
 		}
 
 		this.Info = StrBuilder.toString();
-
 	}
 
     @Override
@@ -84,5 +83,4 @@ public class LogKeyword extends LogBaseNode
           myParent.ExceptionCount();
       }
   }
-
 }

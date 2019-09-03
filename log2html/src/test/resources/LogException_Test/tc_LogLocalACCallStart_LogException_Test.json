@@ -8,9 +8,9 @@
     "FunctionCount" : "0",
     "FunctionFail" : "0",
     "FunctionPass" : "0",
-    "SequensCount" : "0",
-    "SequensFail" : "0",
-    "SequensPass" : "0",
+    "SequenceCount" : "0",
+    "SequenceFail" : "0",
+    "SequencePass" : "0",
     "LocalACCallCount" : "1",
     "LocalACCallFail" : "1",
     "LocalACCallPass" : "0",
@@ -31,43 +31,39 @@
     "name" : "tc_LogLocalACCallStart_LogException_Test",
     "result" : "",
     "tests" : [ {
-      "test" : {
-        "sourceExcerpt" : "my source excerpt",
-        "type" : "my Local AC Type",
-        "statistics" : {
-          "ErrorCount" : "0",
-          "ExceptionCount" : "1",
-          "WarningCount" : "0",
-          "PassedCount" : "0",
-          "PrintCount" : "0",
-          "FunctionCount" : "0",
-          "FunctionFail" : "0",
-          "FunctionPass" : "0",
-          "SequensCount" : "0",
-          "SequensFail" : "0",
-          "SequensPass" : "0",
-          "LocalACCallCount" : "1",
-          "LocalACCallFail" : "0",
-          "LocalACCallPass" : "0",
-          "RemoteACCallCount" : "0",
-          "RemoteACCallFail" : "0",
-          "RemoteACCallPass" : "0",
-          "StepCount" : "0",
-          "StepFail" : "0",
-          "StepPass" : "0",
-          "KeyWordCount" : "0",
-          "KeyWordFail" : "0",
-          "KeyWordPass" : "0",
-          "startedAt" : "Start time TestMode",
-          "finishedAt" : "End time TestMode",
-          "duration" : "Duration TestMode"
-        },
-        "elements" : [ {
-          "element" : {
-            "Exception" : "LogException"
-          }
-        } ]
-      }
+      "sourceExcerpt" : "my source excerpt",
+      "type" : "my Local AC Type",
+      "statistics" : {
+        "ErrorCount" : "0",
+        "ExceptionCount" : "1",
+        "WarningCount" : "0",
+        "PassedCount" : "0",
+        "PrintCount" : "0",
+        "FunctionCount" : "0",
+        "FunctionFail" : "0",
+        "FunctionPass" : "0",
+        "SequenceCount" : "0",
+        "SequenceFail" : "0",
+        "SequencePass" : "0",
+        "LocalACCallCount" : "1",
+        "LocalACCallFail" : "0",
+        "LocalACCallPass" : "0",
+        "RemoteACCallCount" : "0",
+        "RemoteACCallFail" : "0",
+        "RemoteACCallPass" : "0",
+        "StepCount" : "0",
+        "StepFail" : "0",
+        "StepPass" : "0",
+        "KeyWordCount" : "0",
+        "KeyWordFail" : "0",
+        "KeyWordPass" : "0",
+        "startedAt" : "Start time TestMode",
+        "finishedAt" : "End time TestMode",
+        "duration" : "Duration TestMode"
+      },
+      "elements" : [ {
+        "Exception" : "LogException"
+      } ]
     } ]
   } ]
 }

@@ -10,4 +10,28 @@
   <description>This is the core-module of OpenKeyWord. This module is automatically integrated by the adapters. In GUI automation, the core module is automatically integrated by the GUI modules (dependencies).</description>
   <name>OKW - OpenKeyWord</name>
   <url>www.openkeyword.de</url>
+  <properties>
+   <timestamp>${maven.build.timestamp}</timestamp>
+   <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+</properties>
+  <build>
+  <resources>
+    <resource>
+      <directory>src/main/resources</directory>
+      <filtering>true</filtering>
+      <includes>
+        <include>okw/version.txt</include>
+        <include>okw/default/properties/core.properties</include>
+      </includes>
+    </resource>
+        <resource>
+      <directory>src/main/resources</directory>
+      <filtering>false</filtering>
+      <excludes>
+        <exclude>okw/version.txt</exclude>
+        <exclude>okw/default/properties/core.properties</exclude>
+      </excludes>
+    </resource>
+  </resources>
+</build>
 </project>

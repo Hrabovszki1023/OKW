@@ -8,9 +8,9 @@
     "FunctionCount" : "0",
     "FunctionFail" : "0",
     "FunctionPass" : "0",
-    "SequensCount" : "0",
-    "SequensFail" : "0",
-    "SequensPass" : "0",
+    "SequenceCount" : "0",
+    "SequenceFail" : "0",
+    "SequencePass" : "0",
     "LocalACCallCount" : "0",
     "LocalACCallFail" : "0",
     "LocalACCallPass" : "0",
@@ -31,9 +31,7 @@
     "name" : "tc_Logerror_Test",
     "result" : "",
     "tests" : [ {
-      "test" : {
-        "Error" : "LogError"
-      }
+      "Error" : "LogError"
     } ]
   } ]
 }

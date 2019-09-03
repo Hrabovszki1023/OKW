@@ -37,6 +37,12 @@
 package okw.core;
 
 import okw.log.Logger_Sngltn;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 import okw.*;
 
 /** \~german
@@ -121,6 +127,30 @@ public class Core implements IOKW_State
         }
     }
 
+    protected static void readVersionTxt()
+    {
+        InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream( "okw/version.txt" );
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+        String line;
+
+        try
+        {
+			while ((line = reader.readLine()) != null)
+			{
+				Log.LogPrint("-" + line);
+			}
+			reader.close();
+			
+		}
+        catch (IOException e)
+        {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+    
+    
     @SuppressWarnings( "unused" )
     public static void Init()
     {
@@ -129,14 +159,36 @@ public class Core implements IOKW_State
             // Init all Singelton...
             Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
+            readVersionTxt();
+            
+            Log.ResOpenList("Start OKW...");
+            
+            Log.ResOpenList("OKW_Ini...");
             OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
-
+            Log.ResCloseList(); // OKW_Ini...
+            
+            Log.ResOpenList("OKW_Const...");
             OKW_Const_Sngltn myOKW_Const = OKW_Const_Sngltn.getInstance();
+            Log.ResCloseList(); // OKW_Const...
+            
+            Log.ResOpenList("OKWLanguage...");
             OKWLanguage CL = OKWLanguage.getInstance();
+            Log.ResCloseList(); // OKWLanguage...
+            
+            Log.ResOpenList("OKW_Memorize...");
             OKW_Memorize_Sngltn myOKW_Memorize = OKW_Memorize_Sngltn.getInstance();
-
+            Log.ResCloseList(); // OKW_Memorize...
+            
+            Log.ResOpenList("OKW_Properties...");
+            OKW_Properties myProperties = OKW_Properties.getInstance();
+            Log.ResCloseList(); // OKW_Properties...
+            
+            Log.ResOpenList("Load Frames...");
             FrameObjectDictionary_Sngltn myFrameObjectDictionary = FrameObjectDictionary_Sngltn.getInstance();
-
+            Log.ResCloseList(); // Load Frames...
+            
+            Log.ResCloseList(); // "Start OKW... "
+            
             OKW_CurrentObject_Sngltn myCurrentObject = OKW_CurrentObject_Sngltn.getInstance();
             LM = new LogMessenger( "Core" );
         }

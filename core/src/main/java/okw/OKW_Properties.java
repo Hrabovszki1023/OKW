@@ -4,8 +4,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
+import java.net.URLDecoder;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;
@@ -13,8 +18,11 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import java.util.regex.Pattern;
 import okw.exceptions.OKWFileDoesNotExistsException;
 import okw.log.Logger_Sngltn;
+
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * \~german
@@ -37,6 +45,9 @@ public class OKW_Properties extends Properties
 {
     private static OKW_Properties Instance;
     
+    String PropPath = "";
+    String PropPathWin = "";
+    
     /**
      *  \copydoc Logger_Sngltn::getInstance()
      */
@@ -53,7 +64,7 @@ public class OKW_Properties extends Properties
      * @author Zoltán Hrabovszki
      * @date 2018-03-08
      */
-    protected ArrayList<String> CoreProperties = new ArrayList<>();
+    protected ArrayList<String> CoreProperties = new ArrayList<String>();
     
 
     /**
@@ -66,7 +77,7 @@ public class OKW_Properties extends Properties
      * @author Zoltán Hrabovszki
      * @date 2018-03-08
      */
-    protected ArrayList<String> ResoursesProperties = new ArrayList<>();
+    protected ArrayList<String> ResoursesProperties = new ArrayList<String>();
     
 
     /**
@@ -79,7 +90,7 @@ public class OKW_Properties extends Properties
      * @author Zoltán Hrabovszki
      * @date 2018-03-08
      */
-    protected ArrayList<String> FileProperties = new ArrayList<>();
+    protected ArrayList<String> FileProperties = new ArrayList<String>();
 
     /**
      */
@@ -167,38 +178,103 @@ public class OKW_Properties extends Properties
      */
     public void init()
     {
-        // Zurücksetzen...
+    	String Sep = System.getProperty( "file.separator" );
+    	
+    	// Zurücksetzen...
         this.clear();
         
+        Log.ResOpenList( "Find Properties..." );
+        
         // =========================================
-        // !. JAR - *.properties Dateien einlesen
+        // !. JAR - */okw/default/*/*.properties Dateien einlesen
         // =========================================
         //
         // -----------------------------------------        
-        // Core-Properties
+        // okw-Dafault-Properties
         //
-        this.CoreProperties.add( "core.properties" );
-
-        // -----------------------------------------
-        // Se-Properties
-        this.CoreProperties.add( "frmSeChrome.properties" );
+        Log.ResOpenList( "Find OKW Core Properties..." );
+		
+		String PropPattern = ".*okw.default.properties.*\\.properties";
+		String PropPath = "okw" + Sep + "default" + Sep + "properties" + Sep;
+		String PropPathWin = "okw/default/properties/";
+		
+        ArrayList<String> someProperties = getPropertyFiles( PropPattern, PropPath, PropPathWin);
+        this.CoreProperties.addAll( someProperties );
+        
+        Log.ResCloseList();
 
         // =========================================
-        // project specific properties
+        // project specific properties 
         // =========================================
-        ArrayList<String> someProperties = getPropertiesFilesFromResources( "" );
-        this.ResoursesProperties.addAll( someProperties );
+        // 
+        Log.ResOpenList( "Find Project Properties..." );
+        
+        PropPattern = ".*okw.properties.*\\.properties";
+        PropPath = "okw" + Sep + "properties" + Sep;
+        PropPathWin = "okw/properties/";
+        
+        ArrayList<String> some3Properties = getPropertyFiles( PropPattern, PropPath, PropPathWin);
+        this.ResoursesProperties.addAll( some3Properties );
+        
+        Log.ResCloseList();
 
+        Log.ResCloseList();
+        
         // =========================================
         // Read system properties and environment Vars...
         // and Update Properties-list
         // =========================================
         this.updateProperties();
 
-        PrintPropertiesSources();
+        //PrintPropertiesSources();
     }
     
+    /**
+     * \~german
+     * Es werden die Properties aus dem reasource Verzeichniss geladen. 
+     *
+     * \~english
+     *
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2018-03-08
+     */    
+    protected ArrayList<String> getPropertyFiles( String Patternstring, String PropPath, String PropPathWin )
+    {
+        String loadResoure = "";
+        ArrayList<String> myReturn = new ArrayList<String>();
+        
+        Pattern pattern = Pattern.compile( Patternstring );
+        ArrayList<String> myList = (ArrayList<String>) ResourceList.getResources(pattern);
+        
+        
+        for ( String element : myList)
+        {
+            Log.ResOpenList( element );
+            
+            if ( StringUtils.startsWith( element, PropPath) )
+            {
+                loadResoure = element;
+            }
+            else if ( StringUtils.startsWith( element, PropPathWin) )
+            {
+                loadResoure = element;
+            }
+            else
+            {
+                loadResoure =  PropPath + StringUtils.splitByWholeSeparator( element, PropPath )[1];
+            }
+            
+            Log.LogPrint( "--> " + loadResoure );
+            myReturn.add( loadResoure );
+
+            Log.ResCloseList();
+        }
+        
+        return myReturn;
+    }
     
+       
     /**
      * \~german
      * Aktualisert/Lädt die Properties in der unter OKW_Properties beschriebene Weise. 
@@ -211,35 +287,63 @@ public class OKW_Properties extends Properties
      */
     public void updateProperties()
     {
-        super.clear();
+        // 1. Löschen des HProperty Hashs...
+    	super.clear();
     
         // 2. Laden der Core_Properties
+        
+        Log.ResOpenList( "Update Properties..." );
+        Log.ResOpenList( "Load OKW Core Properties..." );
+        
+        Collections.sort( this.CoreProperties, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                return s1.compareToIgnoreCase(s2);
+            } } );
+        
         for( String s : this.CoreProperties )
         {
               loadFromResource(s);
         }        
+        Log.ResCloseList();
+        
         
         // Laden/Überladen projektspezifiescher Properties aus resourcen
+        Log.ResOpenList( "Load Project Properties..." );
+        
+        Collections.sort( this.ResoursesProperties, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                return s1.compareToIgnoreCase(s2);
+            } } );
+        
         for( String s : this.ResoursesProperties )
         {
               loadFromResource(s);
         }
+        Log.ResCloseList();
     
-        
+
+        Log.ResOpenList( "Load File Properties..." );
         for( String s : this.FileProperties )
         {
               this.loadFromFile(s);
         }
-
+        Log.ResCloseList();
         
         
         // =========================================
         // run specific properties
         // =========================================
+        Log.ResOpenList( "Load System Enviroment Vars..." );       
         loadSystemEnviromentVars();
+        Log.ResCloseList();
         
+        Log.ResOpenList( "Load System Propertie..." );
         loadSystemProperties();
-
+        Log.ResCloseList();
+        
+        Log.ResCloseList(); // "Update Properties..." 
     }
 
 
@@ -277,7 +381,7 @@ public class OKW_Properties extends Properties
      * \~german
      * Eine *.Properties-Datei zur Liste OKW_Properties.FileProperties hinzufügen.
      * 
-     * Die hinzugefügten Dateien updateProperties
+     * Die hinzugefügten Dateien werden mit updateProperties()  neugeladen.
      *
      * @param fpsFileName 
      * @return
@@ -297,55 +401,77 @@ public class OKW_Properties extends Properties
         return;
     }
     
-    /**
-     * \~german
-     * Erstellt eine Liste der Properties -Date
-     *
-     * @param ?
-     * @return
-     * \~english
-     *
-     *
-     * @param ? 
-     * @return
-     * \~
-     * @author Zoltán Hrabovszki
-     * @date 2019-05-07
-     */
-    private ArrayList<String> getPropertiesFilesFromResources( String folder )
-    {
-       ArrayList<String> Return = new ArrayList<String>();
-        
-        ClassLoader loader = Thread.currentThread().getContextClassLoader();
-        URL url = loader.getResource( folder );
-        String path = url.getPath();
+	/**
+	 * \~german Erstellt eine Liste der "*.properties"-Dateien des aktuellen
+	 * Projektes
+	 * 
+	 * Ist eine rekursive Methode
+	 *
+	 * @param ?
+	 * @return \~english
+	 *
+	 *
+	 * @param ?
+	 * @return \~
+	 * @author Zoltán Hrabovszki
+	 * @date 2019-05-07
+	 */
+	private ArrayList<String> getPropertiesFilesFromResources(String folder) {
 
-        String urlResourceFolder = path.replaceAll( folder, "" );
-        
-        File[] FoldersAndFiles = new File( path ).listFiles();
-                
-        for (File FolderOrFile : FoldersAndFiles)
-        {
-            // Wenn es sich um ein Verzeichniss handelt
-            if ( FolderOrFile.isDirectory() )
-            {
-                //System.out.println( "Folder:" + FolderOrFile.getPath() );
-                String Folder = FolderOrFile.getPath().replaceAll( urlResourceFolder, "" );
-                Return.addAll( getPropertiesFilesFromResources( Folder ) );
-            }
-            else if ( FolderOrFile.isFile() )
-            {
-                // Nur Aufnahmen wenn mit .properies endet
-                if (FolderOrFile.getName().endsWith((".properties")))
-                {
-                    Log.LogPrint( FolderOrFile.getPath() );
-                    Return.add( folder + "/" + FolderOrFile.getName().replaceAll( urlResourceFolder, "" ) );
-                }
-            }
-        }
-        
-        return Return;
-    }
+		Log.LogFunctionStartDebug("OKW_Properties.getPropertiesFilesFromResources", "folder", folder);
+
+		Log.ResOpenList( "Scan folder: " + folder );
+
+		ArrayList<String> Return = new ArrayList<String>();
+
+		ClassLoader loader = Thread.currentThread().getContextClassLoader();
+		URL url = loader.getResource(folder);
+		String path = "";
+
+		try {
+			path = URLDecoder.decode(url.getPath(), Charset.defaultCharset().name() );
+
+			String urlResourceFolder = path.replaceAll(folder, "");
+
+			File[] FoldersAndFiles = new File(path).listFiles();
+
+			for (File FolderOrFile : FoldersAndFiles) {
+				// Wenn es sich um ein Verzeichniss handelt
+				if (FolderOrFile.isDirectory())
+				{
+					// System.out.println( "Folder:" + FolderOrFile.getPath() );
+					String Folder = FolderOrFile.getPath().replaceAll(urlResourceFolder, "");
+					Return.addAll(getPropertiesFilesFromResources(Folder));
+				}
+				else if (FolderOrFile.isFile())
+				{
+					// Nur Aufnahmen wenn mit .properies endet
+					if (FolderOrFile.getName().endsWith((".properties")))
+					{
+						// Log.LogPrint( "Property-File: " + FolderOrFile.getPath());
+						
+						Log.LogPrint( folder + "/" + FolderOrFile.getName().replaceAll(urlResourceFolder, "") );
+						Return.add( folder + "/" + FolderOrFile.getName().replaceAll(urlResourceFolder, ""));
+					}
+				}
+			}
+
+		}
+		catch (UnsupportedEncodingException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally
+		{
+			Log.ResCloseList();
+			Log.LogFunctionEndDebug();
+		}
+		return Return;
+	}
+    
+    
+    
     /**
      * \~german
      * Lädt die Liste OKW_Properties.ResoursesProperties hinzufügen.
@@ -368,22 +494,30 @@ public class OKW_Properties extends Properties
         InputStream overwrites = Thread.currentThread().getContextClassLoader().getResourceAsStream( fpsResource );
                 
         Boolean lvbReturn = false;
+        
+        String myLogPrint = "Load Resource: " + fpsResource;
 
         try
         {
             if (overwrites != null) 
             {
-                Log.LogPrint( fpsResource );
                 this.load(overwrites);
                 overwrites.close();
                 lvbReturn = true;
+                myLogPrint = myLogPrint + " - OK";
+            }
+            else
+            {
+            	myLogPrint = myLogPrint + " - not found!";
             }
         }
         catch (IOException e)
         {
             lvbReturn = false;
+            myLogPrint = myLogPrint + " - failed!";
         }
 
+        Log.LogPrint( myLogPrint );
         return lvbReturn;
     }
     
@@ -448,12 +582,12 @@ public class OKW_Properties extends Properties
               String value = env.get(key);
               if (this.containsKey(key))
               {
-                 Log.LogPrint( "Überschreibe: " + key + ": '" + this.get(key) + "'");
-                 Log.LogPrint( "         mit: " + key + ": '" + value + "'");
+                 Log.LogPrint( "Override: " + key + ": '" + this.get(key) + "'");
+                 Log.LogPrint( "    with: " + key + ": '" + value + "'");
               }
               else
               {
-                 Log.LogPrint( "    Schreibe: " + key + ": '" + value + "'");
+                 Log.LogPrint( "   Write: " + key + ": '" + value + "'");
               }
               this.setProperty(key, value);
           }
@@ -477,12 +611,12 @@ public class OKW_Properties extends Properties
               
               if ( this.containsKey( key ) )
               {
-                 Log.LogPrint( "Überschreibe: " + key + ": '" + this.get(key) + "'" );
-                 Log.LogPrint( "         mit: " + key + ": '" + value + "'" );
+                 Log.LogPrint( "Override: " + key + ": '" + this.get(key) + "'" );
+                 Log.LogPrint( "    with: " + key + ": '" + value + "'" );
               }
               else
               {
-                 Log.LogPrint( "    Schreibe: " + key + ": '" + value + "'" );
+                 Log.LogPrint( "   Write: " + key + ": '" + value + "'" );
               }
               
               this.setProperty(key, value);

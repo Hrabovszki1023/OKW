@@ -3,6 +3,8 @@ package okw;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.net.URLDecoder;
+import java.nio.charset.Charset;
 import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.Enumeration;
@@ -31,12 +33,16 @@ public class OKW_GetJavaClass
     {
         ArrayList<String> lvAsReturn = new ArrayList<String>();
 
+        Log.ResOpenList( "ClassPathes..." );
         // 1. Hole alle Klassen die das Packet fpsPackeg enthalten...
         ArrayList<String> lvClassPathes = getClassPaths( fpsPackage );
-
+        Log.ResCloseList( );
+        
         // Durchsuchen wir alle Pfade...
         for ( String lvClassPath : lvClassPathes )
         {
+        	// Decode URI (e.g. spaces and international characters in file names)
+        	lvClassPath = URLDecoder.decode( lvClassPath, Charset.defaultCharset().name());
 
             if ( lvClassPath.startsWith( "file:" ) )
             {
@@ -48,13 +54,13 @@ public class OKW_GetJavaClass
                 // nun rechts von "!" abschneiden incl. "!" weg!
                 // Ergebniss: "/some/path/myfile.jar"
                 lvClassPath = okw.OKW_Helper.getLeftFromDelimiterNumber( lvClassPath, "!", 1 );
+                
             }
 
             File file = new File( lvClassPath );
 
             if ( file.exists() )
             {
-
                 // 2. Ist ein die URL eine *.jar Datei?
                 if ( lvClassPath.endsWith( "jar" ) )
                 {
@@ -100,7 +106,7 @@ public class OKW_GetJavaClass
 
             /* replacedURL = replacedURL.replaceFirst( "/", "" ); */
 
-            System.out.println( ">>" + replacedURL + "<<" );
+            Log.LogPrint( "'" + replacedURL + "'" );
             ReturnList.add( replacedURL );
         }
 

@@ -105,8 +105,8 @@ public class LogMessenger
 		try
 		{
 			this.cvsClassName = fpsClassname;
-	    String myXMLFile = "/xml/logmessages/LM_" + this.cvsClassName + ".xml";
-	    myXmlReader = new OKW_XmlReader(myXMLFile);
+			String myXMLFile = "/xml/logmessages/LM_" + this.cvsClassName + ".xml";
+			myXmlReader = new OKW_XmlReader(myXMLFile);
 		}
 		catch (Exception e)
 		{
