@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 417, Datum: 09.03.2019 04:30:12</span>
+   &#160;<span id="projectnumber">Build_ID: 418, Datum: 09.11.2019 07:53:32</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -146,7 +146,7 @@ $(document).ready(function(){initNavTree('_frm_se_chrome_8java_source.html','');
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                LogPrint( <span class="stringliteral">&quot;System.Property: webdriver.chrome.driver is set: &#39;&quot;</span> + DriverPath + <span class="stringliteral">&quot;&#39;&quot;</span> );</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                MEM.<a class="code" href="classokw_1_1_o_k_w___memorize___sngltn.html#a77acdbf6b56b381439a16f96b54e6fbd">set</a>( <span class="stringliteral">&quot;System.Property: webdriver.chrome.driver&quot;</span>, DriverPath );</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( ( DriverPath = System.getenv( <span class="stringliteral">&quot;OKWChromedriverPath&quot;</span> ) ) != <span class="keyword">null</span> )</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( ( DriverPath = System.getenv( <span class="stringliteral">&quot;webdriver.chrome.driver&quot;</span> ) ) != <span class="keyword">null</span> )</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            {</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                LogPrint( <span class="stringliteral">&quot;System.Property: webdriver.chrome.driver is not set&quot;</span> );</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                LogPrint( <span class="stringliteral">&quot;EnvVar: OKWChromedriverPath=&#39;&quot;</span> + DriverPath + <span class="stringliteral">&quot;&#39;&quot;</span> );</div>
@@ -158,7 +158,7 @@ $(document).ready(function(){initNavTree('_frm_se_chrome_8java_source.html','');
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            {</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                LogPrint( <span class="stringliteral">&quot;System.Property: webdriver.chrome.driver is not set&quot;</span> );</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                LogWarning( <span class="stringliteral">&quot;Enviroment Variable &#39;OKWChromedriverPath&#39; is not set!&quot;</span> );</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                </div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                String os_name = System.getProperty( <span class="stringliteral">&quot;os.name&quot;</span> );</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordflow">switch</span> ( os_name )</div>
@@ -180,7 +180,7 @@ $(document).ready(function(){initNavTree('_frm_se_chrome_8java_source.html','');
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            </div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            ChromeOptions options = <span class="keyword">new</span> ChromeOptions().addArguments( frmSeChrome_option );</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="comment">// get Property for Binary Location</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="comment">// Sets the path to the Chrome executable.</span></div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="keywordflow">if</span> ( <a class="code" href="classokw_1_1_o_k_w___properties.html">OKW_Properties</a>.<a class="code" href="classokw_1_1_o_k_w___properties.html#acb03fc1059f1b6fa86d254bb9e7af550">getInstance</a>().getProperty( <span class="stringliteral">&quot;frmSeChrome.setBinary&quot;</span> ) != null )</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                options.setBinary( <a class="code" href="classokw_1_1_o_k_w___properties.html">OKW_Properties</a>.<a class="code" href="classokw_1_1_o_k_w___properties.html#acb03fc1059f1b6fa86d254bb9e7af550">getInstance</a>().getProperty( <span class="stringliteral">&quot;frmSeChrome.setBinary&quot;</span> ) ) ;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            </div>
@@ -261,7 +261,7 @@ $(document).ready(function(){initNavTree('_frm_se_chrome_8java_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0c16530b5d264870aa4431e8a25214d3.html">se</a></li><li class="navelem"><a class="el" href="dir_be767b33c06e16aec676490308ce37bd.html">src</a></li><li class="navelem"><a class="el" href="dir_ac7924823df1a4b239407b3617e0970c.html">main</a></li><li class="navelem"><a class="el" href="dir_8f2c69962c4cc68c0210369b9c8eb521.html">java</a></li><li class="navelem"><a class="el" href="dir_42d5229922fd7034c842f15cabaad1f7.html">okw</a></li><li class="navelem"><a class="el" href="dir_2a7e58e4b12c9244601895cca3d2a1d6.html">gui</a></li><li class="navelem"><a class="el" href="dir_ef0c40a70b606478736254c4b30fffe0.html">frames</a></li><li class="navelem"><b>FrmSeChrome.java</b></li>
-    <li class="footer">Erzeugt am Die Sep 3 2019 04:31:32 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Sep 11 2019 07:54:55 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

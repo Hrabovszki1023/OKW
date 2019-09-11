@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 417, Datum: 09.03.2019 04:30:12</span>
+   &#160;<span id="projectnumber">Build_ID: 418, Datum: 09.11.2019 07:53:32</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -119,31 +119,31 @@ $(document).ready(function(){initNavTree('frm_se_chrome_8properties_source.html'
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;#  @ingroup  groupPropertiesSelenium </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;#  Using Headless Chrome?</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;#  options.setHeadless(true);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;#  frmSeChrome.option.headless=headless</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;#frmSeChrome.option.headless=headless</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;## Hide the automation toolbar warning</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;frmSeChrome.option.disable-infobars=disable-infobars</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;## Start Chrome maximized</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;frmSeChrome.option.start-maximized=start-maximized</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;#frmSeChrome.option.disable-logging=disable-logging</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;#frmSeChrome.option.version=version</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;frmSeChrome.option.ignore-certificate-errors=ignore-certificate-errors</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;#frmSeChrome.option.disable-logging=disable-logging</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;#frmSeChrome.option.version=version</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;frmSeChrome.option.ignore-certificate-errors=ignore-certificate-errors</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;# frmSeChrome.disable-extensions&quot;);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;#frmSeChrome.option.incognito=incognito</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;# frmSeChrome.disable-extensions&quot;);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;#frmSeChrome.option.incognito=incognito</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;## Start Chrome maximized</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;frmSeChrome.option.start-maximized=start-maximized</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;#frmSeChrome.option.window-size=&quot;window-size=1920,1080&quot;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;frmSeChrome.option.start-maximized=start-maximized</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;frmSeChrome.option.window-size=&quot;window-size\=1920,1080&quot;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;frmSeChrome.option.enable-precise-memory-info=enable-precise-memory-info</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;frmSeChrome.option.disable-popup-blocking=disable-popup-blocking</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;frmSeChrome.option.disable-default-apps=disable-default-apps</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;frmSeChrome.option.test-type=test-type</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;frmSeChrome.option.test-type-browser=test-type\=browser</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;frmSeChrome.option.enable-precise-memory-info=enable-precise-memory-info</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;frmSeChrome.option.disable-popup-blocking=disable-popup-blocking</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;frmSeChrome.option.disable-default-apps=disable-default-apps</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;frmSeChrome.option.test-type=test-type</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;frmSeChrome.option.test-type-browser=test-type\=browser</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.9.1-->
@@ -151,7 +151,7 @@ $(document).ready(function(){initNavTree('frm_se_chrome_8properties_source.html'
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_0c16530b5d264870aa4431e8a25214d3.html">se</a></li><li class="navelem"><a class="el" href="dir_be767b33c06e16aec676490308ce37bd.html">src</a></li><li class="navelem"><a class="el" href="dir_ac7924823df1a4b239407b3617e0970c.html">main</a></li><li class="navelem"><a class="el" href="dir_aadb1d49e5019366c5f21c493a6437b2.html">resources</a></li><li class="navelem"><a class="el" href="dir_afb9b9e915a56e43bba213dd83095b95.html">okw</a></li><li class="navelem"><a class="el" href="dir_03f21a60274dde8821e5c04793950a0a.html">properties</a></li><li class="navelem"><b>frmSeChrome.properties</b></li>
-    <li class="footer">Erzeugt am Die Sep 3 2019 04:31:32 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Sep 11 2019 07:54:55 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

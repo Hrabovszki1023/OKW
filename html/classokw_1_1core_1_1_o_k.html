@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 417, Datum: 09.03.2019 04:30:12</span>
+   &#160;<span id="projectnumber">Build_ID: 418, Datum: 09.11.2019 07:53:32</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -1989,7 +1989,7 @@ static <a class="el" href="classokw_1_1_o_k_w___memorize___sngltn.html">OKW_Memo
 <div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;                <span class="comment">// Wenn ExpVal = DELETE enthält ist -&gt; OKWNotAllowedValueException auslösen...</span></div>
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classokw_1_1exceptions_1_1_o_k_w_not_allowed_value_exception.html">OKWNotAllowedValueException</a>( LM.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;MemorizeIsActive&quot;</span>, <span class="stringliteral">&quot;OKWNotAllowedValueException&quot;</span>, MemKey ) );</div>
 <div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;            }            </div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( MemKey.equals( <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html">OKW_Const_Sngltn</a>.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#afdb8f095b58cbd870dbb8eb353e3b0bf">getInstance</a>().<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;DELETE&quot;</span> ) ) )</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( MemKey.contains( <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html">OKW_Const_Sngltn</a>.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#afdb8f095b58cbd870dbb8eb353e3b0bf">getInstance</a>().<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;IGNORE&quot;</span> ) ) )</div>
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;            {</div>
 <div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;                <span class="comment">// Wenn ExpVal = DELETE enthält ist -&gt; OKWNotAllowedValueException auslösen...</span></div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classokw_1_1exceptions_1_1_o_k_w_not_allowed_value_exception.html">OKWNotAllowedValueException</a>( LM.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;MemorizeIsActive&quot;</span>, <span class="stringliteral">&quot;OKWNotAllowedValueException&quot;</span>, MemKey ) );</div>
@@ -4933,7 +4933,7 @@ static <a class="el" href="classokw_1_1_o_k_w___memorize___sngltn.html">OKW_Memo
 <div class="line"><a name="l04117"></a><span class="lineno"> 4117</span>&#160;                Log.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4">LogPrintDebug</a>( LM.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;VerifyDirectoryExists&quot;</span>, <span class="stringliteral">&quot;VerifyValue&quot;</span> ) );</div>
 <div class="line"><a name="l04118"></a><span class="lineno"> 4118</span>&#160;                verification( lvsActual, ExpVal );</div>
 <div class="line"><a name="l04119"></a><span class="lineno"> 4119</span>&#160;            }</div>
-<div class="line"><a name="l04120"></a><span class="lineno"> 4120</span>&#160;            <span class="comment">// Beide Bedingungen sind nicht erfüllt -&gt; Exception da kein anderera</span></div>
+<div class="line"><a name="l04120"></a><span class="lineno"> 4120</span>&#160;            <span class="comment">// Beide Bedingungen sind nicht erfüllt -&gt; Exception da kein anderer</span></div>
 <div class="line"><a name="l04121"></a><span class="lineno"> 4121</span>&#160;            <span class="comment">// Wert hier erlaubt ist.</span></div>
 <div class="line"><a name="l04122"></a><span class="lineno"> 4122</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l04123"></a><span class="lineno"> 4123</span>&#160;            {</div>
@@ -8604,7 +8604,7 @@ static <a class="el" href="classokw_1_1_o_k_w___memorize___sngltn.html">OKW_Memo
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>core</b></li><li class="navelem"><a class="el" href="classokw_1_1core_1_1_o_k.html">OK</a></li>
-    <li class="footer">Erzeugt am Die Sep 3 2019 04:31:35 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Sep 11 2019 07:54:58 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>
