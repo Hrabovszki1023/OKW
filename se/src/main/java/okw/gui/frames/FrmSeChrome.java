@@ -115,7 +115,7 @@ public class FrmSeChrome extends SeBrowserWindow
                 LogPrint( "System.Property: webdriver.chrome.driver is set: '" + DriverPath + "'" );
                 MEM.set( "System.Property: webdriver.chrome.driver", DriverPath );
             }
-            else if ( ( DriverPath = System.getenv( "OKWChromedriverPath" ) ) != null )
+            else if ( ( DriverPath = System.getenv( "webdriver.chrome.driver" ) ) != null )
             {
                 LogPrint( "System.Property: webdriver.chrome.driver is not set" );
                 LogPrint( "EnvVar: OKWChromedriverPath='" + DriverPath + "'" );
@@ -127,7 +127,7 @@ public class FrmSeChrome extends SeBrowserWindow
             {
                 LogPrint( "System.Property: webdriver.chrome.driver is not set" );
                 LogWarning( "Enviroment Variable 'OKWChromedriverPath' is not set!" );
-
+                
                 String os_name = System.getProperty( "os.name" );
 
                 switch ( os_name )
@@ -149,7 +149,7 @@ public class FrmSeChrome extends SeBrowserWindow
             
             ChromeOptions options = new ChromeOptions().addArguments( frmSeChrome_option );
             
-            // get Property for Binary Location
+            // Sets the path to the Chrome executable.
             if ( OKW_Properties.getInstance().getProperty( "frmSeChrome.setBinary" ) != null )
                 options.setBinary( OKW_Properties.getInstance().getProperty( "frmSeChrome.setBinary" ) ) ;
             
