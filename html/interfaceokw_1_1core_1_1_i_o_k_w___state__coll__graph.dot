@@ -4,5 +4,5 @@ digraph "okw.core.IOKW_State"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{okw.core.IOKW_State\n||+ BeginTest()\l+ ClickOn()\l+ DoubleClickOn()\l+ EndTest()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogPlaceholder()\l+ LogSelected()\l+ LogTablecellValue()\l+ LogTooltip()\l+ LogValue()\l+ MemorizeCaption()\l+ MemorizeExists()\l+ MemorizeHasFocus()\l+ MemorizeIsActive()\l+ MemorizeLabel()\l+ MemorizePlaceholder()\lund 55 mehr ...\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="IOKW_State ist die Schnittstelle der OKW-Klasse."];
+  Node1 [label="{okw.core.IOKW_State\n||+ BeginTest()\l+ ClickOn()\l+ DoubleClickOn()\l+ EndTest()\l+ LogCaption()\l+ LogExists()\l+ LogHasFocus()\l+ LogIsActive()\l+ LogLabel()\l+ LogPlaceholder()\l+ LogSelected()\l+ LogTablecellValue()\l+ LogTooltip()\l+ LogValue()\l+ MemorizeCaption()\l+ MemorizeExists()\l+ MemorizeHasFocus()\l+ MemorizeIsActive()\l+ MemorizeLabel()\l+ MemorizePlaceholder()\lund 56 mehr ...\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="IOKW_State ist die Schnittstelle der OKW-Klasse."];
 }

@@ -19,7 +19,9 @@ digraph "okw.core.Core.VerifyBadgeREGX"
   Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node7 [label="okw.core.EN_VerifyValue\l_OKWVerifyingFailsException\l_Test.TC_VerifyBadgeREGX_OKWVerifying\lFailsException_SV01",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___verify_value___o_k_w_verifying_fails_exception___test.html#aa3c89933a45b5d831d5fa1e1e014910d",tooltip="Test auf das fehlerwerfen von VerifyBadge."];
   Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 [label="okw.core.EN_Keywords\l_IGNORE_Test.tcVerifyBadgeREGX\l_IGNORE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html#affe7f81ca3ea4f9ff482822c36f37399",tooltip=" "];
+  Node8 [label="okw.core.EN_OKWNotAllowed\lValueException_Keywords\l_IGNORE.tcVerifyBadgeREGX2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___o_k_w_not_allowed_value_exception___keywords___i_g_n_o_r_e.html#a5e425d05cf14460e9f532daa34d84268",tooltip="Prüft ob \"\"${IGNORE}${TCN}\" die Ausnahme okw.exceptions.OKWNotAllowedValueException auslöst."];
   Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node9 [label="okw.core.EN_Keywords\l_IGNORE_Test.tcVerifyBadgeREGX\l_IGNORE_EmptyString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html#a23c08b6543cf579c151697a2760523f1",tooltip=" "];
+  Node9 [label="okw.core.EN_Keywords\l_IGNORE_Test.tcVerifyBadgeREGX\l_IGNORE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html#affe7f81ca3ea4f9ff482822c36f37399",tooltip=" "];
+  Node2 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="okw.core.EN_Keywords\l_IGNORE_Test.tcVerifyBadgeREGX\l_IGNORE_EmptyString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___i_g_n_o_r_e___test.html#a23c08b6543cf579c151697a2760523f1",tooltip=" "];
 }
