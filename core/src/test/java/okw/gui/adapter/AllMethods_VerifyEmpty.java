@@ -12,7 +12,6 @@ import org.xml.sax.SAXException;
 
 import okw.*;
 import okw.gui.AnyChildwindow;
-import okw.gui.OKWLocator;
 import okw.gui.OKWLocatorBase;
 import okw.log.Logger_Sngltn;
 

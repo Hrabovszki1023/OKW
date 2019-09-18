@@ -967,6 +967,28 @@ public class EN_Keywords_Test
         assertEquals( 1, myClipBoard.getValue().size() );
     }
 
+    /** \~german
+     *
+     *
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2019.09.18
+     */
+    @Test
+    public void tc_SelectContext() throws Exception
+    {
+    	OKW_CurrentObject_Sngltn CO = OKW_CurrentObject_Sngltn.getInstance();
+
+    	EN.BeginTest( name.getMethodName() );
+
+        EN.SelectContext( "Rechner" );
+        
+        
+        assertEquals( "Rechner", CO.getWindowFN() );
+        assertEquals( "", CO.getChildFN ( ) );
+    }
+    
     // \~german
     // \brief
     //

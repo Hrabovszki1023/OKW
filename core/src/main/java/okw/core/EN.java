@@ -338,6 +338,15 @@ public class EN
     }
 
     /**
+     *  \copydoc IOKW_State::SelectContext(String)
+     */
+    public static void SelectContext( String FN ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.SelectContext( FN );
+    }
+    
+    /**
      *  \copydoc IOKW_State::SelectChild(String)
      */
     public static void SelectChild( String FN ) throws Exception

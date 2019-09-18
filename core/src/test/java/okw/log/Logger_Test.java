@@ -1,7 +1,6 @@
 package okw.log;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.junit.After;
 import org.junit.AfterClass;

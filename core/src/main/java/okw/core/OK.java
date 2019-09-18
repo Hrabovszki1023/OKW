@@ -1106,6 +1106,26 @@ public class OK implements IOKW_State
         }
     }
 
+    /**
+     *  \copydoc IOKW_State::SelectContext(String)
+     */
+    public void SelectContext( String FN ) throws Exception
+    {
+        Log.LogFunctionStartDebug( "OK.SelectContext", "FN", FN );
+
+        try
+        {
+            CO.setWindowName( FN );
+        }
+        catch (Exception e)
+        {
+            this.handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug(  );
+        }
+    }
     
     /**
      *  \copydoc IOKW_State::Sequence(String,String,String)

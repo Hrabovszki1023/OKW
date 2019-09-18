@@ -79,7 +79,7 @@ public class ResourceList
 			throw new Error(e);
 		}
 		
-		final Enumeration e = zf.entries();
+		final Enumeration<?> e = zf.entries();
 		while (e.hasMoreElements()) {
 			final ZipEntry ze = (ZipEntry) e.nextElement();
 			final String fileName = ze.getName();

@@ -99,9 +99,9 @@ public class OKW_XmlReaderTest
 	  {
 	      OKW_XmlReader myXlReader = new OKW_XmlReader("DoesNotExists.xml");
 
-	      String Actuell = myXlReader.getXMLFile();
-
-	      //Assert.assertEquals("Ein Wert wird erwartet:", "OKW_XmlReaderTestXML.xml", Actuell);
+	      //Löst Ausname aus.
+	      @SuppressWarnings("unused")
+		  String Actuell =  myXlReader.getXMLFile();
 	  }
 
 	// Test

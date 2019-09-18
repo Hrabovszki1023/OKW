@@ -50,7 +50,6 @@ import org.xml.sax.SAXException;
 import okw.OKW_TestClipboard;
 import okw.gui.AnyChildwindow;
 import okw.gui.OKWLocator;
-import okw.gui.OKWLocatorBase;
 import okw.log.*;
 
     // TODO Implemetierung einschalten : IOKW_LinkObj

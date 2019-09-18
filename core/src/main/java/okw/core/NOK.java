@@ -399,6 +399,16 @@ public class NOK implements IOKW_State
     }
 
     /**
+     *  \copydoc IOKW_State::SelectContext(String)
+     */
+    public void SelectContext( String FN )
+    {
+        Log.LogFunctionStartDebug( "SelectContext", "FN", FN );
+
+        Log.LogFunctionEndDebug();
+    }
+    
+    /**
      *  \copydoc IOKW_State::SelectChild(String)
      */
     public void SelectChild( String FN )

@@ -671,6 +671,21 @@ public class Core implements IOKW_State
         }
     }
 
+    /**
+     * \copydoc IOKW_State::SelectContext(String)
+     */
+    public void SelectContext( String FN ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "SelectContext", "KeyWordName" ), FN );
+            this.CurrentState.SelectContext( FN );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
     
     /**
      * \copydoc IOKW_State::Sequence(String,String,String)

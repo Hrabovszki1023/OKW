@@ -40,7 +40,6 @@ package okw.gui.adapter;
 
 import okw.gui.AnyChildwindow;
 import okw.gui.OKWLocator;
-import okw.gui.OKWLocatorBase;
 
 /// \brief
     /// Dieses GUI-Objekt enthält keine OKW-Methoden und

@@ -229,6 +229,25 @@
 			</Text>
 		</Method>
 
+		<!-- Method: "SelectChild"-->
+		<Method name="SelectChild">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Select Child</en>
+				<de>Wähle Kindobject</de>
+			</Text>
+		</Method>
+
+
+		<!-- Method: "SelectContext"-->
+		<Method name="SelectContext">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Select Context</en>
+				<de>Wähle Kontext</de>
+			</Text>
+		</Method>
+
 		<!-- Method: "SelectMenu"-->
 		<Method name="SelectMenu">
 			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
@@ -253,15 +272,6 @@
 			<Text key="KeyWordName">
 				<en>Select Window</en>
 				<de>Wähle Fenster</de>
-			</Text>
-		</Method>
-
-		<!-- Method: "SelectChild"-->
-		<Method name="SelectChild">
-			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
-			<Text key="KeyWordName">
-				<en>Select Child</en>
-				<de>Wähle Kindobject</de>
 			</Text>
 		</Method>
 

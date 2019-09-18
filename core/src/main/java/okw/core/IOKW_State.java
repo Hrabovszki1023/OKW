@@ -815,6 +815,48 @@ public interface IOKW_State
      *  @date 2018-10-02
      */
     void SelectChild( String FN ) throws Exception;   
+
+    /** 
+     * \~german
+     *  Setzt den Context auf FN.
+     *  
+     *  SelectContext() ist wie SelectWindow(String) zu verwenden. Der Unterschied zu SelectWindow(String) ist, dass SelectContext(String) keine
+     *  Interaktionen, wie Existenzprüfung oder Fenster in den Vordergrund holen, auslöst. Technisch wird lediglich das Frame mit
+     *  dem gegebenen Namen ausgewählt.
+     *  
+     *  _Beispiel:_
+     *  \code{java}
+     *  EN.SelectContext( "Login" )
+     *  EN.SetValue("User", "MyUser")
+     *  EN.SetValue("Password", "MyPassword")
+     *  EN.ClickOn("OK")
+     *  \endcode
+     *  
+     *  @param FN Funktionaler Name des Parentobjektes 
+     * 
+     *  \~english
+     *  Sets the context to FN.
+     *
+     *  SelectContext() is to be used like SelectWindow(String).
+     *  The difference to SelectWindow(String) is that SelectContext(String)
+     *  does not trigger any interactions, such as existence check or bringing windows to the foreground.
+     *  Technically, only the frame with the given name is selected.
+     *  
+     *  _Example:_ 
+     *  \code{java}
+     *  EN.SelectContext( "Login" )
+     *  EN.SetValue("User", "MyUser")
+     *  EN.SetValue("Password", "MyPassword")
+     *  EN.ClickOn("OK")
+     *  \endcode
+     *  
+     *  @param FN Functional Name of parent object 
+     * 
+     *  \~
+     *  @author zh@openkeyword.de
+     *  @date 2018-10-02
+     */
+    void SelectContext( String FN ) throws Exception;
     
     /** \~german
      *  Ruft die Sequenz eines Fensters auf.
