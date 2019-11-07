@@ -115,7 +115,7 @@ public class FrmSeChrome extends SeBrowserWindow
                 LogPrint( "System.Property: webdriver.chrome.driver is set: '" + DriverPath + "'" );
                 MEM.set( "System.Property: webdriver.chrome.driver", DriverPath );
             }
-            else if ( ( DriverPath = System.getenv( "webdriver.chrome.driver" ) ) != null )
+            else if ( ( DriverPath = System.getenv( "OKWChromedriverPath" ) ) != null )
             {
                 LogPrint( "System.Property: webdriver.chrome.driver is not set" );
                 LogPrint( "EnvVar: OKWChromedriverPath='" + DriverPath + "'" );
