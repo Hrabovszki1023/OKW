@@ -1039,7 +1039,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     * @throws Exception 
      *  @date 2013.11.11
      */
-    public Boolean NotExists() throws Exception
+    public Boolean _NotExists() throws Exception
     {
         LogFunctionStartDebug( "NotExists" );
         Boolean lvb_Return = null;

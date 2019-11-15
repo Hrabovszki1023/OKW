@@ -2,6 +2,7 @@ package okw;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Constructor;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.charset.Charset;
@@ -14,6 +15,8 @@ import java.util.jar.JarFile;
 import javax.xml.xpath.XPathExpressionException;
 
 import okw.exceptions.OKWFrameObjectParentNotFoundException;
+import okw.gui.AnyChildwindow;
+import okw.gui.OKWLocator;
 import okw.log.Logger_Sngltn;
 
 public class OKW_GetJavaClass
@@ -27,8 +30,97 @@ public class OKW_GetJavaClass
      *  \copybrief LogMessenger
      */
     private static LogMessenger  LM = new LogMessenger( "FrameObjectDictionary" );
+    
+    /**
+     * \~german
+     * Methode sucht die Klasse fpsClassName im Namensraum "okw.gui.adapter".
+     * 
+     * Es wird der Vollqualifizerte Namen der Klasse zurück gegeben.
+     * Wird die gegebene Klasse nicht gefunden, dann wir "" zurückgegeben.
+     * 
+     * Der Namansraum, in dem gesucht wird, kann mit dem Property "okw.gui.adapter" geändert werden.
+     *
+     * @param fpsClassName Name der Klasse die gesucht werden soll.
+     * 
+     * @return vollqualifizierte Name der Klasse.
+     * 
+     * \~english
+     * Method searches for the class fpsClassName in the namespace fpsNameSpace.
+     * 
+     * The fully qualified name of the class is returned.
+     * If the given class is not found, "" is returned.
+     * 
+     * The namespace in which the search is executed can be changed with the property "okw.gui.adapter".
+     *
+     * @param fpsClassName Name of the class to be searched for.
+     * @return fully qualified name of the class.
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 02.11.2019
+     */
+    public static String findClassGuiAdapter( String fpsClassName )
+    {
+        String OKW_GuiAdapteNameSpace = OKW_Properties.getInstance().getProperty( "okw.gui.adapter", "okw.gui.adapter" );
+        return findClass( fpsClassName, OKW_GuiAdapteNameSpace );
+    }
 
+    
+    /**
+     * \~german
+     * Methode sucht die Klasse fpsClassName im Namensraum fpsNameSpace.
+     * 
+     * Es wird der Vollqualifizerte Namen der Klasse zurück gegeben.
+     * Wird die gegebene Klasse nicht gefunden, dann wir "" zurückgegeben.
+     *
+     * @param fpsClassName Name der Klasse die gesucht werden soll.
+     * @param fpsNameSpace Name-Space, in dem die Klasse gesucht werden soll.
+     * 
+     * @return vollqualifizierte Name der Klasse
+     * 
+     * \~english
+     * Method searches for the class fpsClassName in the namespace fpsNameSpace.
+     * 
+     * The fully qualified name of the class is returned.
+     * If the given class is not found, "" is returned.
+     *
+     * @param fpsClassName Name of the class to be searched for.
+     * @param fpsNameSpace Name space in which the class is to be searched.
+     * @return
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 02.11.2019
+     */
+    public static String findClass( String fpsClassName, String fpsNameSpace )
+    {
+        String returnGUIAdapter = "";
 
+        try
+        {
+            ArrayList<String> allAdapter = getClasses( fpsNameSpace );
+
+            for ( String Adapter : allAdapter )
+            {
+                if ( Adapter.matches( ".*" + fpsClassName ) )
+                {
+                    returnGUIAdapter = Adapter;
+                    break;
+                }
+            }
+        }
+        catch (XPathExpressionException | IOException e)
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        finally
+        {
+
+        }
+
+        return returnGUIAdapter;
+    }
+    
+    
     public static ArrayList<String> getClasses( String fpsPackage ) throws IOException, XPathExpressionException
     {
         ArrayList<String> lvAsReturn = new ArrayList<String>();
