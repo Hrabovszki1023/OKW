@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 423, Datum: 09.18.2019 08:08:11</span>
+   &#160;<span id="projectnumber">Build_ID: 431, Datum: 11.16.2019 05:46:08</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -207,9 +207,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_iframeID</b> (Str
 <tr class="memitem:a34e6e2cd7b15f0e05c4272941d3248cf"><td class="memItemLeft" align="right" valign="top">ArrayList&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a34e6e2cd7b15f0e05c4272941d3248cf">MemorizeValue</a> ()</td></tr>
 <tr class="memdesc:a34e6e2cd7b15f0e05c4272941d3248cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Das ist die GUI-Adapter Methode, die durch das Schlüsselwort refMemorizeValue aufgerufen wird.  <a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a34e6e2cd7b15f0e05c4272941d3248cf">Mehr ...</a><br /></td></tr>
 <tr class="separator:a34e6e2cd7b15f0e05c4272941d3248cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bac3a56e303599b56c3a1b254d19a84"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a3bac3a56e303599b56c3a1b254d19a84">NotExists</a> ()  throws Exception     </td></tr>
-<tr class="memdesc:a3bac3a56e303599b56c3a1b254d19a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prüft die nicht Existenz des aktuellen Objektes.  <a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a3bac3a56e303599b56c3a1b254d19a84">Mehr ...</a><br /></td></tr>
-<tr class="separator:a3bac3a56e303599b56c3a1b254d19a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f6c58072daacf058736c1cd38595a9"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a42f6c58072daacf058736c1cd38595a9">_NotExists</a> ()  throws Exception     </td></tr>
+<tr class="memdesc:a42f6c58072daacf058736c1cd38595a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prüft die nicht Existenz des aktuellen Objektes.  <a href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a42f6c58072daacf058736c1cd38595a9">Mehr ...</a><br /></td></tr>
+<tr class="separator:a42f6c58072daacf058736c1cd38595a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27518c19c8e202cbe0cc06f734bd303c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a27518c19c8e202cbe0cc06f734bd303c">Select</a> (ArrayList&lt; String &gt; Values)</td></tr>
 <tr class="separator:a27518c19c8e202cbe0cc06f734bd303c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8046dcf37366c008ab52a177ec62792"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ab8046dcf37366c008ab52a177ec62792">SelectMenu</a> ()</td></tr>
@@ -491,6 +491,65 @@ Geschützte Attribute</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a42f6c58072daacf058736c1cd38595a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42f6c58072daacf058736c1cd38595a9">&#9670;&nbsp;</a></span>_NotExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Boolean okw.gui.adapter.selenium.SeAnyChildWindow._NotExists </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> throws Exception</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prüft die nicht Existenz des aktuellen Objektes. </p>
+<p><b>Anmerkung:</b> Falls ein Objekt zunächst noch vorhand ist und dann aber verschwindet, dann es sinnvoll sein eine gewisse Zeit(Timeout) zu prüfen, ob das Objekt existiert, Erst wenn diese Zeit verstrichen ist, wird gemeldet, das das Objekt nicht vorhanden ist. Diese Funktion ist der gegenspieler zu __Exists.</p>
+<dl class="section return"><dt>Rückgabe</dt><dd>true, falls das Objekt NICHT vorhanden ist. Sonst false</dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
+<dl class="exception"><dt>Ausnahmebehandlung</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section date"><dt>Datum</dt><dd>2013.11.11 </dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_se_any_child_window_8java_source.html#l01042">1042</a> der Datei <a class="el" href="_se_any_child_window_8java_source.html">SeAnyChildWindow.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;    {</div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;        <a class="code" href="classokw_1_1gui_1_1_any_win_base.html#abaab572bdbed7b471f659d5dd8c76853">LogFunctionStartDebug</a>( <span class="stringliteral">&quot;NotExists&quot;</span> );</div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;        Boolean lvb_Return = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160; </div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;        {</div>
+<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;            this.<a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a9a138af1fc6ff850d708d66f308a2525">Me</a>();</div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;            lvb_Return = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;        }</div>
+<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;        <span class="keywordflow">catch</span> (NoSuchElementException e)</div>
+<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;        {</div>
+<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;            LogPrint( <span class="stringliteral">&quot;NoSuchElementException&quot;</span> );</div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;            lvb_Return = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;        }</div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;        {</div>
+<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;            <a class="code" href="classokw_1_1gui_1_1_any_win_base.html#a51cf50ace21902b3a5359316f53a7f3e">LogFunctionEndDebug</a>( lvb_Return );</div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;        }</div>
+<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;        <span class="keywordflow">return</span> lvb_Return;</div>
+<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;    }</div>
+</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 2 -->
+</div>
+</div>
+
+</div>
+</div>
 <a id="a16df325c8b8bb0e360ac9d9dbb50d91e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a16df325c8b8bb0e360ac9d9dbb50d91e">&#9670;&nbsp;</a></span>ClickOn()</h2>
 
@@ -535,20 +594,20 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            this.<a class="code" href="classokw_1_1gui_1_1_any_win_base.html#a51cf50ace21902b3a5359316f53a7f3e">LogFunctionEndDebug</a>();</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 2 -->
-</div>
-</div>
-<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+</div><!-- fragment --><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><!-- SVG 3 -->
+</div>
+</div>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 4 -->
 </div>
 </div>
 
@@ -601,20 +660,20 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        }</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 4 -->
-</div>
-</div>
-<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+</div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><!-- SVG 5 -->
+</div>
+</div>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 6 -->
 </div>
 </div>
 
@@ -695,20 +754,20 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        }</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">return</span> lvbReturn;</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 6 -->
-</div>
-</div>
-<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+</div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-7-content" class="dyncontent" style="display:none;">
 <div class="center"><!-- SVG 7 -->
+</div>
+</div>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 8 -->
 </div>
 </div>
 
@@ -761,20 +820,20 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">return</span> lvbReturn;</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-8-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 8 -->
-</div>
-</div>
-<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+</div><!-- fragment --><div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-9-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-9-content" class="dyncontent" style="display:none;">
 <div class="center"><!-- SVG 9 -->
+</div>
+</div>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 10 -->
 </div>
 </div>
 
@@ -836,20 +895,20 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <span class="keywordflow">return</span> lvbReturn;</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-10-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 10 -->
-</div>
-</div>
-<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+</div><!-- fragment --><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-11-content" class="dyncontent" style="display:none;">
 <div class="center"><!-- SVG 11 -->
+</div>
+</div>
+<div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-12-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 12 -->
 </div>
 </div>
 
@@ -910,20 +969,20 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-12-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-12-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 12 -->
-</div>
-</div>
-<div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+</div><!-- fragment --><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-13-content" class="dyncontent" style="display:none;">
 <div class="center"><!-- SVG 13 -->
+</div>
+</div>
+<div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-14-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 14 -->
 </div>
 </div>
 
@@ -980,20 +1039,20 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160; </div>
 <div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-14" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-14-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-14-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-14-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 14 -->
-</div>
-</div>
-<div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+</div><!-- fragment --><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-15-content" class="dyncontent" style="display:none;">
 <div class="center"><!-- SVG 15 -->
+</div>
+</div>
+<div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-16-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 16 -->
 </div>
 </div>
 
@@ -1044,20 +1103,20 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160; </div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-16-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-16-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 16 -->
-</div>
-</div>
-<div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+</div><!-- fragment --><div id="dynsection-17" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-17-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-17-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-17-content" class="dyncontent" style="display:none;">
 <div class="center"><!-- SVG 17 -->
+</div>
+</div>
+<div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-18-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 18 -->
 </div>
 </div>
 
@@ -1103,12 +1162,12 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        }</div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-18" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-18-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-18-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-18-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 18 -->
+<div id="dynsection-19-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 19 -->
 </div>
 </div>
 
@@ -1155,12 +1214,12 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160; </div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        <span class="keywordflow">return</span> lvbReturn;</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-19" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-19-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-19-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-19-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 19 -->
+<div id="dynsection-20-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 20 -->
 </div>
 </div>
 
@@ -1207,12 +1266,12 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160; </div>
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;        <span class="keywordflow">return</span> lvbReturn;</div>
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-20" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-20-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-20-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-20-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 20 -->
+<div id="dynsection-21-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 21 -->
 </div>
 </div>
 
@@ -1259,12 +1318,12 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160; </div>
 <div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;        <span class="keywordflow">return</span> lvbReturn;</div>
 <div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-21" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-21-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-21-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-21-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 21 -->
+<div id="dynsection-22-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 22 -->
 </div>
 </div>
 
@@ -1311,12 +1370,12 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160; </div>
 <div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-22" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-22-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-22-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-22-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 22 -->
+<div id="dynsection-23-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 23 -->
 </div>
 </div>
 
@@ -1363,12 +1422,12 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160; </div>
 <div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-23" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-23-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-23-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-24-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-23-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 23 -->
+<div id="dynsection-24-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 24 -->
 </div>
 </div>
 
@@ -1415,12 +1474,12 @@ Geschützte Attribute</h2></td></tr>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160; </div>
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-24" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-24-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-24-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-25-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-24-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 24 -->
+<div id="dynsection-25-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 25 -->
 </div>
 </div>
 
@@ -1471,12 +1530,12 @@ Rückgabe des Textuellen Inhaltes der markierten Textes. </dd></dl>
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160; </div>
 <div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-25" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-25-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-25-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-26-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-25-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 25 -->
+<div id="dynsection-26-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 26 -->
 </div>
 </div>
 
@@ -1516,20 +1575,20 @@ Rückgabe des Textuellen Inhaltes der markierten Textes. </dd></dl>
 <div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160; </div>
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;        <span class="keywordflow">return</span> me;</div>
 <div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-26" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-26-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-26-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-26-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 26 -->
-</div>
-</div>
-<div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+</div><!-- fragment --><div id="dynsection-27" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-27-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-27-summary" class="dynsummary" style="display:block;">
 </div>
 <div id="dynsection-27-content" class="dyncontent" style="display:none;">
 <div class="center"><!-- SVG 27 -->
+</div>
+</div>
+<div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-28-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 28 -->
 </div>
 </div>
 
@@ -1576,12 +1635,12 @@ Rückgabe des Textuellen Inhaltes der markierten Textes. </dd></dl>
 <div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160; </div>
 <div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-28" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-28-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-28-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-29-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-28-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 28 -->
+<div id="dynsection-29-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 29 -->
 </div>
 </div>
 
@@ -1628,12 +1687,12 @@ Rückgabe des Textuellen Inhaltes der markierten Textes. </dd></dl>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160; </div>
 <div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;        <span class="keywordflow">return</span> lvbReturn;</div>
 <div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-29" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-29-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-29-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-30-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-30-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-29-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 29 -->
+<div id="dynsection-30-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 30 -->
 </div>
 </div>
 
@@ -1680,12 +1739,12 @@ Rückgabe des Textuellen Inhaltes der markierten Textes. </dd></dl>
 <div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160; </div>
 <div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;        <span class="keywordflow">return</span> lvbReturn;</div>
 <div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-30" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-30-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-30-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-31-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-30-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 30 -->
+<div id="dynsection-31-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 31 -->
 </div>
 </div>
 
@@ -1732,12 +1791,12 @@ Rückgabe des Textuellen Inhaltes der markierten Textes. </dd></dl>
 <div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160; </div>
 <div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        <span class="keywordflow">return</span> lvbReturn;</div>
 <div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-31" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-31-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-31-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-32-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-32-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-31-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 31 -->
+<div id="dynsection-32-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 32 -->
 </div>
 </div>
 
@@ -1784,12 +1843,12 @@ Rückgabe des Textuellen Inhaltes der markierten Textes. </dd></dl>
 <div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160; </div>
 <div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-32" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-32-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-32-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-33" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-33-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-33-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-32-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 32 -->
+<div id="dynsection-33-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 33 -->
 </div>
 </div>
 
@@ -1836,12 +1895,12 @@ Rückgabe des Textuellen Inhaltes der markierten Textes. </dd></dl>
 <div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160; </div>
 <div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-33" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-33-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-33-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-34" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-34-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-34-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-33-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 33 -->
+<div id="dynsection-34-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 34 -->
 </div>
 </div>
 
@@ -1888,12 +1947,12 @@ Rückgabe des Textuellen Inhaltes der markierten Textes. </dd></dl>
 <div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160; </div>
 <div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-34" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-34-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-34-summary" class="dynsummary" style="display:block;">
+</div><!-- fragment --><div id="dynsection-35" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-35-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div id="dynsection-35-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-34-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 34 -->
+<div id="dynsection-35-content" class="dyncontent" style="display:none;">
+<div class="center"><!-- SVG 35 -->
 </div>
 </div>
 
@@ -1942,65 +2001,6 @@ Rückgabe des Textuellen Inhaltes der markierten Textes. </dd></dl>
 <div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160; </div>
 <div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;        <span class="keywordflow">return</span> lvLsReturn;</div>
 <div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;    }</div>
-</div><!-- fragment --><div id="dynsection-35" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-35-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
-<div id="dynsection-35-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-35-content" class="dyncontent" style="display:none;">
-<div class="center"><!-- SVG 35 -->
-</div>
-</div>
-
-</div>
-</div>
-<a id="a3bac3a56e303599b56c3a1b254d19a84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bac3a56e303599b56c3a1b254d19a84">&#9670;&nbsp;</a></span>NotExists()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Boolean okw.gui.adapter.selenium.SeAnyChildWindow.NotExists </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> throws Exception</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Prüft die nicht Existenz des aktuellen Objektes. </p>
-<p><b>Anmerkung:</b> Falls ein Objekt zunächst noch vorhand ist und dann aber verschwindet, dann es sinnvoll sein eine gewisse Zeit(Timeout) zu prüfen, ob das Objekt existiert, Erst wenn diese Zeit verstrichen ist, wird gemeldet, das das Objekt nicht vorhanden ist. Diese Funktion ist der gegenspieler zu __Exists.</p>
-<dl class="section return"><dt>Rückgabe</dt><dd>true, falls das Objekt NICHT vorhanden ist. Sonst false</dd></dl>
-<dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
-<dl class="exception"><dt>Ausnahmebehandlung</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">Exception</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section date"><dt>Datum</dt><dd>2013.11.11 </dd></dl>
-
-<p class="definition">Definiert in Zeile <a class="el" href="_se_any_child_window_8java_source.html#l01042">1042</a> der Datei <a class="el" href="_se_any_child_window_8java_source.html">SeAnyChildWindow.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;    {</div>
-<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;        <a class="code" href="classokw_1_1gui_1_1_any_win_base.html#abaab572bdbed7b471f659d5dd8c76853">LogFunctionStartDebug</a>( <span class="stringliteral">&quot;NotExists&quot;</span> );</div>
-<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;        Boolean lvb_Return = <span class="keyword">null</span>;</div>
-<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160; </div>
-<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;        {</div>
-<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;            this.<a class="code" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a9a138af1fc6ff850d708d66f308a2525">Me</a>();</div>
-<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160;            lvb_Return = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160;        }</div>
-<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;        <span class="keywordflow">catch</span> (NoSuchElementException e)</div>
-<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;        {</div>
-<div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160;            LogPrint( <span class="stringliteral">&quot;NoSuchElementException&quot;</span> );</div>
-<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;            lvb_Return = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;        }</div>
-<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;        <span class="keywordflow">finally</span></div>
-<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;        {</div>
-<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;            <a class="code" href="classokw_1_1gui_1_1_any_win_base.html#a51cf50ace21902b3a5359316f53a7f3e">LogFunctionEndDebug</a>( lvb_Return );</div>
-<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;        }</div>
-<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;        <span class="keywordflow">return</span> lvb_Return;</div>
-<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-36" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-36-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-36-summary" class="dynsummary" style="display:block;">
@@ -2925,7 +2925,7 @@ Rückgabe des Textuellen Inhaltes der markierten Textes. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><b>adapter</b></li><li class="navelem"><b>selenium</b></li><li class="navelem"><a class="el" href="classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html">SeAnyChildWindow</a></li>
-    <li class="footer">Erzeugt am Mit Sep 18 2019 08:09:47 für OpenKeyWord von
+    <li class="footer">Erzeugt am Sam Nov 16 2019 05:47:39 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

@@ -1,0 +1,11 @@
+digraph "okw.OKW_GetJavaClass.findClass"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="okw.OKW_GetJavaClass.find\lClass",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Methode sucht die Klasse fpsClassName im Namensraum fpsNameSpace."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.OKW_GetJavaClass.find\lClassGuiAdapter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___get_java_class.html#a10a3dbe047e93c4b9ec28fa4183a104e",tooltip="Methode sucht die Klasse fpsClassName im Namensraum \"okw.gui.adapter\"."];
+}

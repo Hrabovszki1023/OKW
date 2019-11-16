@@ -3,6 +3,7 @@ var group__group_selenium_child_g_u_i_adapter =
     [ "SeAnyChildWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html", [
       [ "SeAnyChildWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a0d5a8eeb4ff90e6281cfabda5853921a", null ],
       [ "SeAnyChildWindow", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#afaaeb9e86dcea1b26630c4e85028d97a", null ],
+      [ "_NotExists", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a42f6c58072daacf058736c1cd38595a9", null ],
       [ "ClickOn", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a16df325c8b8bb0e360ac9d9dbb50d91e", null ],
       [ "get_iframeID", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a9450a95d7c49317af660102baec796a4", null ],
       [ "getCaption", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a6dbc784267dbac3feef5e421ece9aced", null ],
@@ -29,7 +30,6 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "MemorizePlaceholder", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a0e7b884b11f2fdec8a72fa54c4d547ad", null ],
       [ "MemorizeTooltip", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a9d8a7b5b58c3eb991d7052a82a834f29", null ],
       [ "MemorizeValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a34e6e2cd7b15f0e05c4272941d3248cf", null ],
-      [ "NotExists", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a3bac3a56e303599b56c3a1b254d19a84", null ],
       [ "Select", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#a27518c19c8e202cbe0cc06f734bd303c", null ],
       [ "SelectMenu", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#ab8046dcf37366c008ab52a177ec62792", null ],
       [ "SelectMenu", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_any_child_window.html#aaf1bff2683c6bf37c7a89d0ecf6af9f4", null ],
@@ -113,7 +113,7 @@ var group__group_selenium_child_g_u_i_adapter =
       [ "myRadioButtonFNs", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_radio_list.html#a95dbb0e31ce47bd7ae2f30eb482fa6a0", null ]
     ] ],
     [ "SeSelect", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html", [
-      [ "SeSelect", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html#ab4425f4ee9947803cf18ebafc4ecb1eb", null ],
+      [ "SeSelect", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html#ad7fa9d75546d8ebe39f3019c92d5aa3e", null ],
       [ "getValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html#a9b794180edef1f6d5d11cad9f6e7e136", null ],
       [ "Select", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html#afdad05e1d4413b4cdce12d38b67def23", null ],
       [ "SetValue", "classokw_1_1gui_1_1adapter_1_1selenium_1_1_se_select.html#adadeaad5c5dbbe8c2f24e51a99de6012", null ]
