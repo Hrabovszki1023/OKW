@@ -3,7 +3,7 @@ package okw.gui.frames.setextarea;
 import okw.OKW;
 import okw.gui.adapter.selenium.*;
 
-@OKW (FN="SeTextarea Proxy")
+@OKW (FN="SeTextarea")
 // http://test.openkeyword.de/Textarea/textarea.htm
 public class frmSeTextarea extends SeBrowserChild
 {

@@ -535,10 +535,9 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
-    // \brief
-    // Prüft ob ein vorhandenes Objekt nicht existiert.
-    // Hier wird wird geprüft auf das default timout exception getriggert wird.
-    //
+    /** Prüft ob ein vorhandenes Objekt nicht existiert.
+     *  Hier wird wird geprüft auf das default timout exception getriggert wird.
+     */
     @Test( expected = OKWVerifyingFailsException.class )
     public void tcVerifyExists_ExistsYesExpectedNo_OKWVerifyingFailsException() throws Exception
     {
