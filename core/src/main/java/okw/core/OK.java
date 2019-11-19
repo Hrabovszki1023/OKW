@@ -147,17 +147,19 @@ public class OK implements IOKW_State
         if ( e instanceof okw.exceptions.OKWVerifyingFailsException )
         {
             Boolean lvbAbbort = myOKW_Properties.getProperty2Boolean( "core.AbbortOnVerifyFail", "false" );
+            _Kernel.setNOK_Reason( e );
             
             if ( lvbAbbort )
             {
                 // Change State to NOK if Property core.AbbortOnVerifyFail is true
                 logException( e, e_Wrapped );
                 this._Kernel.SetCurrentState( new NOK( this._Kernel ) );
-                _Kernel.setNOK_Reason( e );
             }
             else
-            {
+            {   // Wenn nicht abbgebrochen werden soll dann bleiben wir im State OK!
+                // Loggen zur Abbweichung die Objektdaten
                 logException( e, e_Wrapped );
+                // Und/Aber Merken uns dass wir einen VerifyFehler hatte mit this.VerifyFail = true
                 this.VerifyFail = true;
             }
         }
@@ -223,26 +225,29 @@ public class OK implements IOKW_State
 
     /**
      *  \copydoc IOKW_State::EndTest()
+     * @throws Exception 
      */
-    public void EndTest()
+    public void EndTest() throws Exception
     {
         Log.LogFunctionStartDebug( "EndTest" );
         
         String msg = "";
-        
+        try {
         if ( this.VerifyFail )
         { 
-            msg = myOKW_Properties.getProperty( "ok.endtest.verifyfail.msg" );
-            
-            throw new OKWVerifyingFailsException( msg );
+            throw _Kernel.getNOK_Reason();
         }
         else
         {
             msg = myOKW_Properties.getProperty( "ok.endtest.verifypass.msg" );
             Log.LogPrint( msg );
         }
-
-        Log.LogFunctionEndDebug();
+        }
+        finally
+        {           
+            Log.LogFunctionEndDebug();
+        }
+        
     }
 
     /**
