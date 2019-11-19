@@ -65,6 +65,8 @@ import okw.gui.IGUIWindow;
 public class OK implements IOKW_State
 {
 
+    private okw.OKW_Properties myOKW_Properties = okw.OKW_Properties.getInstance();
+
     // \copydoc OKWLanguage
     private static OKWLanguage              CL;
 
@@ -80,10 +82,11 @@ public class OK implements IOKW_State
     // \copydoc OKW_Memorize_Sngltn
     private static OKW_Memorize_Sngltn      MEM;
 
-    private Boolean                                 UNITTEST = true;
+    private Core                           _Kernel;
 
-    private Core                                    _Kernel;
-
+    // 
+    protected Boolean                      VerifyFail = false;
+    
     /** \~german
      * Klasse representiert den Zustand "OK" des OKW-Kerns im Ausführungsmodus.
      *
@@ -102,22 +105,100 @@ public class OK implements IOKW_State
             LM = new LogMessenger( "OK" );
             CO = OKW_CurrentObject_Sngltn.getInstance();
             MEM = OKW_Memorize_Sngltn.getInstance();
-
+    
             this._Kernel = fp_OKW;
         }
         catch (Exception e)
         {
             final ByteArrayOutputStream stream = new ByteArrayOutputStream();
             e.printStackTrace( new PrintStream( stream ) );
-
+    
             System.out.println( "=================================================================================" );
             System.out.println( "= Exception during initialization of Class >>OK<<! Stop running!" );
             System.out.println( "=================================================================================" );
             System.out.println( stream );
-
+    
             System.exit( 1 );
         }
     }
+
+    /**
+     *  \~german
+     * Methode zur Zentrale Exception-Auswertung.
+     *
+     * Methode führt folge Aktivitäten aus:
+     * -# Exception wird als Log ausgegeben.
+     * -# Daten des aktuellen Objektes werden für eine Fehler-Analyse ausgegeben (CO.LogObjectData()).
+     * -# Wenn es sich um eine OKWVerifyingFailsException handelt, dann geht der Status von VerifyFail nach true
+     * -# Wechselt den Zustand auf NOK.
+     * dann wird an das Unittest-Framework die Exception weitergereicht.
+     *
+     * \param e Exception aus der OK-Schlüsselwort-Methode
+     * \~english
+     * \~
+     * \author Zoltán Hrabovszki
+     * \date 02.03.2013
+     * @throws Exception 
+     */
+    protected void handleException( Exception e ) throws Exception
+    {
+        Exception e_Wrapped = null;
+    
+        if ( e instanceof okw.exceptions.OKWVerifyingFailsException )
+        {
+            Boolean lvbAbbort = myOKW_Properties.getProperty2Boolean( "core.AbbortOnVerifyFail", "false" );
+            
+            if ( lvbAbbort )
+            {
+                // Change State to NOK if Property core.AbbortOnVerifyFail is true
+                logException( e, e_Wrapped );
+                this._Kernel.SetCurrentState( new NOK( this._Kernel ) );
+                _Kernel.setNOK_Reason( e );
+            }
+            else
+            {
+                logException( e, e_Wrapped );
+                this.VerifyFail = true;
+            }
+        }
+        // if we have an InvocationTargetException...
+        else if ( e instanceof InvocationTargetException )
+        {
+            // ... then get the origin exception.
+            e = ( Exception ) e.getCause();
+            logException( e, e_Wrapped );
+            this._Kernel.SetCurrentState( new NOK( this._Kernel ) );
+            _Kernel.setNOK_Reason( e );
+        }
+        else if ( e instanceof RuntimeException )
+        {
+            // ... then get the origin exception.
+            e_Wrapped = ( Exception ) e.getCause();
+            logException( e, e_Wrapped );
+            this._Kernel.SetCurrentState( new NOK( this._Kernel ) );
+            _Kernel.setNOK_Reason( e );
+        }
+    }
+
+    protected void logException( Exception e, Exception e_Wrapped )
+    {
+        Log.LogPrint( "==========================================================================" );
+        Log.LogException( e.getMessage() );
+    
+        if ( e_Wrapped != null )
+        {
+            Log.ResOpenList( "Trigger of the exception..." );
+            Log.LogPrint( "--------------------------------------------------------------------------" );
+            Log.LogPrint( "Exception: " + e_Wrapped.toString() );
+            Log.LogPrint( "--------------------------------------------------------------------------" );
+            Log.ResCloseList();
+        }
+
+        Log.LogPrint( "==========================================================================" );
+        CO.LogObjectData();
+        Log.LogPrint( "==========================================================================" );
+    }
+    
 
     /**
      *  \copydoc IOKW_State::BeginTest()
@@ -138,6 +219,30 @@ public class OK implements IOKW_State
         {
             Log.LogFunctionEndDebug();
         }
+    }
+
+    /**
+     *  \copydoc IOKW_State::EndTest()
+     */
+    public void EndTest()
+    {
+        Log.LogFunctionStartDebug( "EndTest" );
+        
+        String msg = "";
+        
+        if ( this.VerifyFail )
+        { 
+            msg = myOKW_Properties.getProperty( "ok.endtest.verifyfail.msg" );
+            
+            throw new OKWVerifyingFailsException( msg );
+        }
+        else
+        {
+            msg = myOKW_Properties.getProperty( "ok.endtest.verifypass.msg" );
+            Log.LogPrint( msg );
+        }
+
+        Log.LogFunctionEndDebug();
     }
 
     /**
@@ -180,16 +285,6 @@ public class OK implements IOKW_State
         {
             Log.LogFunctionEndDebug();
         }
-    }
-
-    /**
-     *  \copydoc IOKW_State::EndTest()
-     */
-    public void EndTest()
-    {
-        Log.LogFunctionStartDebug( "EndTest" );
-
-        Log.LogFunctionEndDebug();
     }
 
     /**
@@ -2048,6 +2143,8 @@ public class OK implements IOKW_State
     private void verification( ArrayList<String> Actual, ArrayList<String> Expected )
     {
 
+        String msg = "";
+        
         Boolean bFail = false;
 
         Integer ActualSize = new Integer( Actual.size() );
@@ -2072,6 +2169,8 @@ public class OK implements IOKW_State
                     Log.LogPrint( "Expected: " + Expected.get( i ) );
                     Log.ResCloseList();
 
+                    msg = this.myOKW_Properties.getProperty( "OK.verification.UnexpectedValue" );
+
                     bFail = true;
                 }
             }
@@ -2080,18 +2179,20 @@ public class OK implements IOKW_State
         {
             Log.LogError( Actual.size() + " \u2260 " + Expected.size() );
             Log.ResOpenList( "Details..." );
-            Log.LogPrint( "  Actual: " + Actual.size() );
-            Log.LogPrint( "Expected: " + Expected.size() );
+            Log.LogPrint( "  Actual size: " + Actual.size() );
+            Log.LogPrint( "Expected size: " + Expected.size() );
             Log.ResCloseList();
-
+            
+            msg = this.myOKW_Properties.getProperty( "OK.verification.UnexpectedSize" );
             bFail = true;
         }
 
         if ( bFail )
         {
             // Fehler Ausnahme auslösen
-            throw new OKWVerifyingFailsException();
+            throw new OKWVerifyingFailsException( msg );
         }
+        return;
     }
 
     private void verificationWCM( ArrayList<String> Actual, ArrayList<String> Expected )
@@ -3920,76 +4021,6 @@ public class OK implements IOKW_State
         finally
         {
             Log.LogFunctionEndDebug();
-        }
-    }
-
-    /**
-     *  \~german
-     * Zentrale Exception-Behandlung.
-     *
-     * Methode führt folge Aktivitäten aus:
-     * -# Exception wird als Log ausgegeben.
-     * -# Daten des aktuellen Objektes werden für eine Fehler-Analyse
-     * ausgegeben (CO.LogObjectData()).
-     * -# Wechselt den Zustand auf NOK.
-     * -# Wenn OKW in NUNIT/UNIT aufgerufen wird (this.UNITTEST = true sein)
-     * dann wird an das Unittest-Framework die Exception weitergereicht.
-     *
-     * \param e Exception aus der OK-Schlüsselwort-Methode
-     * \~english
-     * \~
-     * \author Zoltán Hrabovszki
-     * \date 02.03.2013
-     * @throws Exception 
-     */
-    private void handleException( Exception e ) throws Exception
-    {
-        Exception e_Wrapped = null;
-
-        // if we have an InvocationTargetException...
-        if ( e instanceof InvocationTargetException )
-        {
-            // ... then get the origin exception.
-            e = ( Exception ) e.getCause();
-        }
-        else if ( e instanceof RuntimeException )
-        {
-            // ... then get the origin exception.
-            e_Wrapped = ( Exception ) e.getCause();
-        }
-
-        Log.LogPrint( "==========================================================================" );
-        Log.LogException( e.getMessage() );
-
-        if ( e_Wrapped != null )
-        {
-            Log.ResOpenList( "Trigger of the exception..." );
-            Log.LogPrint( "--------------------------------------------------------------------------" );
-            Log.LogPrint( "Exception: " + e_Wrapped.toString() );
-            Log.LogPrint( "--------------------------------------------------------------------------" );
-            Log.ResCloseList();
-        }
-        Log.LogPrint( "==========================================================================" );
-
-        CO.LogObjectData();
-        /*
-         * Log.LogPrintDebug("--------"); Log.LogPrintDebug(" Message:");
-         * Log.LogException(e.getMessage());
-         * 
-         * Log.LogPrintDebug("-------"); Log.LogPrintDebug(" Source:");
-         * Log.LogException(String.Format("{0}", e. Source));
-         * 
-         * Log.LogPrintDebug("-------"); Log.LogPrintDebug(" TargetSite:");
-         * Log.LogException(String.Format("{0}", e.TargetSite));
-         */
-        Log.LogPrint( "==========================================================================" );
-
-        // Change State to NOK
-        this._Kernel.SetCurrentState( new NOK( this._Kernel ) );
-
-        if ( this.UNITTEST )
-        {
-            throw e;
         }
     }
 

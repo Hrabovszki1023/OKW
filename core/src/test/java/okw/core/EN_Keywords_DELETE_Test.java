@@ -41,14 +41,15 @@ import okw.OKW_TestClipboard;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EN_Keywords_DELETE_Test
 {
 
@@ -73,26 +74,6 @@ public class EN_Keywords_DELETE_Test
   {
   }
 
-  // / \~german
-  // / \brief
-  // / Diese Methode wird immer vor jedem Test(fall) ausgeführt.
-  // /
-  @Before
-  public void setUp() throws Exception
-  {
-
-  }
-
-  // / \~german
-  // / \brief
-  // / Diese Methode wird immer nach jedem Test(fall) ausgeführt.
-  // /
-  @After
-  public void tearDown() throws Exception
-  {
-    EN.EndTest();
-  }
-
   // \~german
   // \brief
   // Prüft "DELETE" für das Schlüsselwort MemorizeCaption(strng,string) ob die
@@ -102,14 +83,15 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test( expected = okw.exceptions.OKWNotAllowedValueException.class )
   public void tcMemorizeCaption_DELETE_OKWNotAllowedValueException() throws Exception
   {
-
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeCaption( "All_MethodsObj", "${DELETE}" );
+
+    EN.EndTest();
   }
 
   // \~german
@@ -129,7 +111,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeCaption( "All_MethodsObj", "abc${DELETE}abc" );
-
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -150,6 +133,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeExists( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -171,6 +156,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeExists( "All_MethodsObj", "abc${DELETE}efg" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -191,6 +178,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeHasFocus( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -212,6 +201,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeHasFocus( "All_MethodsObj", "abc${DELETE}efg" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -232,6 +223,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeIsActive( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -253,6 +246,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeIsActive( "All_MethodsObj", "abc${DELETE}efg" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -267,11 +262,12 @@ public class EN_Keywords_DELETE_Test
   @Test( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeLabel_DELETE_OKWNotAllowedValueException() throws Exception
   {
-
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeLabel( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -291,7 +287,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeLabel( "All_MethodsObj", "abc${DELETE}abc" );
-
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -307,11 +304,12 @@ public class EN_Keywords_DELETE_Test
   @Test( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeSelectedValue_DELETE_OKWNotAllowedValueException() throws Exception
   {
-
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeSelectedValue( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -331,7 +329,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeSelectedValue( "All_MethodsObj", "abc${DELETE}abc" );
-
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -347,11 +346,12 @@ public class EN_Keywords_DELETE_Test
   @Test( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeTablecellValue_DELETE_OKWNotAllowedValueException() throws Exception
   {
-
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeTablecellValue( "All_MethodsObj", "1", "2", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -371,7 +371,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeTablecellValue( "All_MethodsObj", "1", "2", "abc${DELETE}abc" );
-
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -386,11 +387,12 @@ public class EN_Keywords_DELETE_Test
   @Test( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeTooltip_DELETE_OKWNotAllowedValueException() throws Exception
   {
-
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeTooltip( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -410,7 +412,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeTooltip( "All_MethodsObj", "abc${DELETE}abc" );
-
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -425,11 +428,12 @@ public class EN_Keywords_DELETE_Test
   @Test( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeValue_DELETE_OKWNotAllowedValueException() throws Exception
   {
-
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeValue( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -449,7 +453,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeValue( "All_MethodsObj", "abc${DELETE}abc" );
-
+    
+    EN.EndTest();
   }
 
   // / \~german
@@ -483,7 +488,8 @@ public class EN_Keywords_DELETE_Test
     assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "SelectMenu(ArrayList<String>)", myClipBoard.getMethod() );
-
+    
+    EN.EndTest();
   }
 
   /**
@@ -519,7 +525,8 @@ public class EN_Keywords_DELETE_Test
     assertEquals( 2, myClipBoard.getValue().size() );
     assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Value", myClipBoard.getValue().get( 1 ) );
-
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -551,6 +558,8 @@ public class EN_Keywords_DELETE_Test
     assertEquals( "SelectMenu(ArrayList<String>)", myClipBoard.getMethod() );
     assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
+    
+    EN.EndTest();
   }
 
 
@@ -584,6 +593,8 @@ public class EN_Keywords_DELETE_Test
 
     assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
+    
+    EN.EndTest();
   }
 
   // / \~german
@@ -619,7 +630,8 @@ public class EN_Keywords_DELETE_Test
     assertEquals( 2, myClipBoard.getValue().size() );
     assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Value", myClipBoard.getValue().get( 1 ) );
-
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -633,8 +645,11 @@ public class EN_Keywords_DELETE_Test
   public void tcSequence_DELETE_OKWNotAllowedValueException() throws Exception
   {
     EN.BeginTest( name.getMethodName() );
+
     EN.SelectWindow( "Rechner" );
     EN.Sequence( "Rechner", "TestSequence", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -662,7 +677,8 @@ public class EN_Keywords_DELETE_Test
     assertEquals( "SetValue()", myClipBoard.getMethod() );
     assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "", myClipBoard.getValue().get( 0 ) );
-
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -693,6 +709,8 @@ public class EN_Keywords_DELETE_Test
     assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "", myClipBoard.getValue().get( 0 ) );
     //assertEquals( "Value", myClipBoard.getValue().get( 1 ) );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -724,6 +742,8 @@ public class EN_Keywords_DELETE_Test
     assertEquals( "1", myClipBoard.getValue().get( 0 ) );
     assertEquals( "2", myClipBoard.getValue().get( 1 ) );
     assertEquals( "${DELETE}", myClipBoard.getValue().get( 2 ) );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -757,6 +777,8 @@ public class EN_Keywords_DELETE_Test
     assertEquals( "2", myClipBoard.getValue().get( 1 ) );
     assertEquals( "${DELETE}", myClipBoard.getValue().get( 2 ) );
     assertEquals( "Value", myClipBoard.getValue().get( 3 ) );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -786,7 +808,8 @@ public class EN_Keywords_DELETE_Test
     assertEquals( "TypeKey(List<String> fpLs_Value)", myClipBoard.getMethod() );
     assertEquals( 1, myClipBoard.getValue().size() );
     assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
-
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -817,6 +840,8 @@ public class EN_Keywords_DELETE_Test
     assertEquals( 2, myClipBoard.getValue().size() );
     assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Value", myClipBoard.getValue().get( 1 ) );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -832,9 +857,9 @@ public class EN_Keywords_DELETE_Test
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-
     EN.VerifyBadge( "All_MethodsObj", "${DELETE}" );
-
+    
+    EN.EndTest();
   }
 
 // \~german
@@ -851,9 +876,9 @@ public class EN_Keywords_DELETE_Test
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-
     EN.VerifyBadgeREGX( "All_MethodsObj", "${DELETE}" );
-
+    
+    EN.EndTest();
   }
 
 /** \~german
@@ -874,6 +899,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyBadgeWCM ( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
 // \~german
@@ -890,9 +917,9 @@ public class EN_Keywords_DELETE_Test
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-
     EN.VerifyCaption( "All_MethodsObj", "${DELETE}" );
-
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -907,9 +934,11 @@ public class EN_Keywords_DELETE_Test
   public void tcVerifyCaptionREGX_DELETE_OKWNotAllowedValueException() throws Exception
   {
     EN.BeginTest( name.getMethodName() );
-    EN.SelectWindow( "Rechner" );
 
+    EN.SelectWindow( "Rechner" );
     EN.VerifyCaptionREGX( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -927,6 +956,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyCaptionWCM( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -943,8 +974,9 @@ public class EN_Keywords_DELETE_Test
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-
     EN.VerifyLabel( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -961,9 +993,9 @@ public class EN_Keywords_DELETE_Test
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-
     EN.VerifyLabelREGX( "All_MethodsObj", "${DELETE}" );
-
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -981,6 +1013,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyLabelWCM( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   /** \~german
@@ -1003,6 +1037,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMaxLength( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -1020,6 +1056,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyExists( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -1034,9 +1072,11 @@ public class EN_Keywords_DELETE_Test
   public void tcVerifyHasFocus_DELETE_OKWNotAllowedValueException() throws Exception
   {
     EN.BeginTest( name.getMethodName() );
-    EN.SelectWindow( "Rechner" );
 
+    EN.SelectWindow( "Rechner" );
     EN.VerifyHasFocus( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -1054,6 +1094,8 @@ public class EN_Keywords_DELETE_Test
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyIsActive( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -1070,9 +1112,9 @@ public class EN_Keywords_DELETE_Test
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-
     EN.VerifySelectedValue( "All_MethodsObj", "${DELETE}" );
-
+    
+    EN.EndTest();
   }
 
   /** \~german
@@ -1089,9 +1131,9 @@ public class EN_Keywords_DELETE_Test
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-
     EN.VerifySelectedValueREGX( "All_MethodsObj", "${DELETE}" );
-
+    
+    EN.EndTest();
   }
 
   /** \~german
@@ -1110,7 +1152,8 @@ public class EN_Keywords_DELETE_Test
     EN.SelectWindow( "Rechner" );
 
     EN.VerifySelectedValueWCM( "All_MethodsObj", "${DELETE}" );
-
+    
+    EN.EndTest();
   }
 
   
@@ -1130,7 +1173,8 @@ public class EN_Keywords_DELETE_Test
     EN.SelectWindow( "Rechner" );
 
     EN.VerifyTablecellValue( "All_MethodsObj", "Col", "Row", "${DELETE}" );
-
+    
+    EN.EndTest();
   }
 
   /** \~german
@@ -1149,7 +1193,8 @@ public class EN_Keywords_DELETE_Test
    EN.SelectWindow( "Rechner" );
 
    EN.VerifyTablecellValueREGX( "All_MethodsObj", "Col", "Row", "${DELETE}" );
-
+   
+   EN.EndTest();
  }
 
  /** \~german
@@ -1166,13 +1211,13 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
   EN.BeginTest( name.getMethodName() );
 
   EN.SelectWindow( "Rechner" );
-
   EN.VerifyTablecellValueWCM( "All_MethodsObj", "Col", "Row", "${DELETE}" );
-
+  
+  EN.EndTest();
 }
 
 
-// \~german
+  // \~german
   // \brief
   //
   //
@@ -1186,9 +1231,9 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-
     EN.VerifyTooltip( "All_MethodsObj", "${DELETE}" );
-
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -1205,8 +1250,9 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-
     EN.VerifyTooltipREGX( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -1225,6 +1271,8 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
     EN.SelectWindow( "Rechner" );
 
     EN.VerifyTooltipWCM( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -1243,6 +1291,8 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
     EN.SelectWindow( "Rechner" );
 
     EN.VerifyValue( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -1261,6 +1311,8 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
     EN.SelectWindow( "Rechner" );
 
     EN.VerifyValueREGX( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
 
   // \~german
@@ -1279,7 +1331,8 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
     EN.SelectWindow( "Rechner" );
 
     EN.VerifyValueWCM( "All_MethodsObj", "${DELETE}" );
-
+    
+    EN.EndTest();
   }
 
   /* \~german
@@ -1301,7 +1354,8 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizePlaceholder( "All_MethodsObj", "abc${DELETE}abc" );
-
+    
+    EN.EndTest();
   }
 
   /* \~german
@@ -1323,6 +1377,8 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizePlaceholder( "All_MethodsObj", "${DELETE}" );
+    
+    EN.EndTest();
   }
   
   
@@ -1345,9 +1401,11 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
     EN.SelectWindow( "Rechner" );
 
     EN.VerifyErrorMSG( "All_MethodsObj", "${DELETE}" );
-
+    
+    EN.EndTest();
   }
-  /* \~german
+  
+  /** \~german
   * Prüft "DELETE" für das Schlüsselwort VerifyErrorMSG_REGX(strng,string) ob die
   * Ausname OKWNotAllowedValueException ausgelöst wird.
   *
@@ -1355,8 +1413,8 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
   * Checks "DELETE" for the keyword VerifyErrorMSG_REGX(strng,string)
   * if the exception OKWNotAllowedValueException is thrown.
   * \~
-  *author Daniel Krüger
-  *\date 2019.05.31
+  * \author Daniel Krüger
+  * \date 2019.05.31
   */ 
   @Test( expected = OKWNotAllowedValueException.class )
   public void tcVerifyErrorMSG_REGX_DELETE_OKWNotAllowedValueException() throws Exception
@@ -1364,12 +1422,12 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-
     EN.VerifyErrorMSG_REGX( "All_MethodsObj", "${DELETE}" );
-
+ 
+    EN.EndTest();
   }
 
-  /* \~german
+  /** \~german
    * Prüft "DELETE" für das Schlüsselwort VerifyErrorMSG_WCM(strng,string) ob die
    * Ausname OKWNotAllowedValueException ausgelöst wird.
    *
@@ -1377,8 +1435,8 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
    * Checks "DELETE" for the keyword VerifyErrorMSG_WCM(strng,string)
    * if the exception OKWNotAllowedValueException is thrown.
    * \~
-   *author Daniel Krüger
-   *\date 2019.05.31
+   * author Daniel Krüger
+   * \date 2019.05.31
    */ 
   @Test( expected = OKWNotAllowedValueException.class )
   public void tcVerifyErrorMSG_WCM_DELETE_OKWNotAllowedValueException() throws Exception
@@ -1387,7 +1445,9 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyErrorMSG_WCM ( "All_MethodsObj", "${DELETE}" );
-  }
+    
+    EN.EndTest();
+    }
 
   /** \~german
    * DELETE ist ein nicht erlaubter Wert im Schlüsselwort EN.VerifyMinLength(String,String).
@@ -1408,7 +1468,9 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-  EN.VerifyMinLength( "All_MethodsObj", "${DELETE}" );
+    EN.VerifyMinLength( "All_MethodsObj", "${DELETE}" );
+  
+    EN.EndTest();
   }
   
   
@@ -1432,8 +1494,11 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMinLength( "All_MethodsObj", "1${SEP}2" );
- 
+    
+    EN.EndTest();
   }
+
+  
   /** \~german
    * DELETE ist ein nicht erlaubter Wert im Schlüsselwort EN.VerifyMinLength(String,String).
    *
@@ -1454,7 +1519,8 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMinLength( "All_MethodsObj", "1${VSEP}2" );
-
+    
+    EN.EndTest();
   }
   
   /** \~german
@@ -1477,7 +1543,8 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMaxLength( "All_MethodsObj", "1${SEP}2" );
-
+    
+    EN.EndTest();
   }
   
   /** \~german
@@ -1500,10 +1567,11 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMaxLength( "All_MethodsObj", "1${VSEP}2" );
-
+    
+    EN.EndTest();
   }
   
-//\~german
+ //\~german
  // \brief
  //
  //
@@ -1519,6 +1587,8 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
    EN.SelectWindow( "Rechner" );
 
    EN.VerifyPlaceholder( "All_MethodsObj", "${DELETE}" );
+   
+   EN.EndTest();
  }
 
  // \~german
@@ -1537,7 +1607,8 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
    EN.SelectWindow( "Rechner" );
 
    EN.VerifyPlaceholderREGX( "All_MethodsObj", "${DELETE}" );
-
+   
+   EN.EndTest();
  }
 
  // \~german
@@ -1555,6 +1626,8 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
 
    EN.SelectWindow( "Rechner" );
    EN.VerifyPlaceholderWCM( "All_MethodsObj", "${DELETE}" );
+   
+   EN.EndTest();
  }
 
 }

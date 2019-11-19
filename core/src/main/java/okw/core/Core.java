@@ -67,7 +67,7 @@ import okw.*;
  *  NOK --> Core: core
  *  IOKW_State <|.. OK
  *  IOKW_State <|.. NOK
- * @enduml
+ *  @enduml
  * 
  *  # Quellen/Links
  * [State-Pattern](https://www.philipphauer.de/study/se/design-pattern/state.php)
@@ -84,7 +84,7 @@ public class Core implements IOKW_State
     private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
     /** \~german
-     * zeigt auf die Klasse des aktuellen Zustandes.
+     *    Zeigt auf die Klasse des aktuellen Zustandes.
      *  \~english
      *  
      *  \~
@@ -92,23 +92,83 @@ public class Core implements IOKW_State
      *  @date 2014-01-09
      */
     private IOKW_State           CurrentState;
-
+    
+    /**
+     * \~german
+     *  Enthält die Exception, weshalb die Ausführung des Testfalls abgebrochen worden ist.
+     *
+     * \~english
+     *
+     *
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2019-11-19
+     */
+    protected static Exception NOK_Reason;
+    
+    /**
+     * @return the nOK_Reason
+     */
+    public Exception getNOK_Reason()
+    {
+        return NOK_Reason;
+    }
+    
+    /**
+     * @param nOK_Reason the nOK_Reason to set
+     */
+    public void setNOK_Reason( Exception nOK_Reason )
+    {
+        NOK_Reason = nOK_Reason;
+    }
+    
     public void SetKernaleStateNOK( )
     {
         this.SetCurrentState( new NOK( this ) );
     }
     
-    
+    /**
+     * \~german 
+     * Setter zum Setzen des aktuellen Zustandes.
+     * 
+     * \~english 
+     * 
+     * \~ 
+     * @author Zoltán Hrabovszki
+     * @date 2014.01.09
+     */
+    public void SetCurrentState( IOKW_State fp_CurrentState )
+    {
+        this.CurrentState = fp_CurrentState;
+    }
+
+
+    /**
+     *  \~german
+     *  Setzt die Sprache auf den gegebenen wert Language.
+     *
+     *  \~english
+     *
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2014.01.09
+     */
+    public void setLanguage( String Language )
+    {
+        this.CurrentState.setLanguage( Language );
+    }
+
+
     /**
      *  \copydoc LogMessenger
      */
     private static LogMessenger  LM;
 
     /** \~german
-     * OKW-Konstuktor: Setzt den Default-Zustand auf OKW.OK.
+     * OKW-Konstuktor: Setzt den Default-Zustand auf OKW.OK
      *
      * \~english
-     *
+     * OKW constructor: Sets the default state to OKW.OK
      * \~
      * @author Zoltán Hrabovszki
      * @date 2014.01.09
@@ -127,6 +187,23 @@ public class Core implements IOKW_State
         }
     }
 
+    /**
+     * \~german
+     * Logt den Versions-Text beim Start eines Skriptes.
+     * 
+     * Die Information wird aus der Resourcen-Datei "okw/version.txt" gelesen
+     * und mit Logger_Sngltn geloggt.
+     *
+     * \~english
+     * Logs the version text when starting a script.
+     * 
+     * The information is read from the resource file "okw/version.txt"
+     * and logged with Logger_Sngltn.
+     * 
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2019-11-17
+     */
     protected static void readVersionTxt()
     {
         InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream( "okw/version.txt" );
@@ -704,21 +781,6 @@ public class Core implements IOKW_State
     }
 
     /**
-     * \~german 
-     * Setter zum Setzen des aktuellen Zustandes.
-     * 
-     * \~english 
-     * 
-     * \~ 
-     * @author Zoltán Hrabovszki
-     * @date 2014.01.09
-     */
-    public void SetCurrentState( IOKW_State fp_CurrentState )
-    {
-        this.CurrentState = fp_CurrentState;
-    }
-
-    /**
      * \copydoc IOKW_State::SetFocus(String)
      */
     public void SetFocus( String FN ) throws Exception
@@ -732,21 +794,6 @@ public class Core implements IOKW_State
         {
             Log.LogKeyWordEnd();
         }
-    }
-
-    /**
-     *  \~german
-     *  Setzt die Sprache auf den gegebenen wert Language.
-     *
-     *  \~english
-     *
-     * \~
-     * @author Zoltán Hrabovszki
-     * @date 2014.01.09
-     */
-    public void setLanguage( String Language )
-    {
-        this.CurrentState.setLanguage( Language );
     }
 
     /**

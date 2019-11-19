@@ -416,7 +416,7 @@ public class OKW_Properties extends Properties
 	 * @author Zoltán Hrabovszki
 	 * @date 2019-05-07
 	 */
-	private ArrayList<String> getPropertiesFilesFromResources(String folder) {
+	protected ArrayList<String> getPropertiesFilesFromResources(String folder) {
 
 		Log.LogFunctionStartDebug("OKW_Properties.getPropertiesFilesFromResources", "folder", folder);
 
@@ -778,5 +778,32 @@ public class OKW_Properties extends Properties
             }
         }
         return Return;
+    }
+
+    
+    /**
+     * \~german
+     * Ermittelt den aktuellen Wert des Propertys gegeben mit dem Schlüssel fpsKey.
+     * 
+     * @param fpsKey Property Schlüssel des Boolean Propertys.
+     * @param fpsDefault Default-Wert des Boolean Propertys als String. Mögliche Werte "false"/"true".
+     * @return Wert des Schlüssels als Boolean true/false
+     * \~english
+     * Returns the current value of the propertys given with the fpsKey key.
+     *
+     * @param fpsKey Property key of the Boolean Propertys.
+     * @param fpsDefault Default value of the Boolean Propertys as string. Possible values "false"/"true"
+     * @return Value of the key as Boolean true/false
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2019-11-17
+     */
+   public Boolean getProperty2Boolean(String fpsKey, String fpsDefault )
+   {
+        Boolean lvbReturn = false;
+ 
+        lvbReturn = Boolean.parseBoolean( getProperty( fpsKey, fpsDefault ) );
+        
+        return lvbReturn;
     }
 }

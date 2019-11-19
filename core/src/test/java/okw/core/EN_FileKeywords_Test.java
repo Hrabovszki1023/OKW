@@ -47,10 +47,13 @@ import okw.log.Logger_Sngltn;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EN_FileKeywords_Test
 {
     static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();

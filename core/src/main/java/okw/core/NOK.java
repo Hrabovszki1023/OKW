@@ -118,6 +118,22 @@ public class NOK implements IOKW_State
     }
 
     /**
+     *  \copydoc IOKW_State::EndTest()
+     * @throws Exception 
+     */
+    public void EndTest() throws Exception
+    {
+        // TODO: Aufräumen  Kill... usw aufrufen
+        Log.LogFunctionStartDebug( "EndTest" );
+        
+        Log.LogFunctionEndDebug();
+
+        Exception e = _Kernel.getNOK_Reason();
+        
+        throw e;
+    }
+
+    /**
      *  \copydoc IOKW_State::ClickOn(String)
      */
     public void ClickOn( String FN )
@@ -133,17 +149,6 @@ public class NOK implements IOKW_State
     public void DoubleClickOn( String FN )
     {
         Log.LogFunctionStartDebug( "DoubleClickOn", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::EndTest()
-     */
-    public void EndTest()
-    {
-        // TODO: Aufräumen  Kill... usw aufrufen
-        Log.LogFunctionStartDebug( "EndTest" );
 
         Log.LogFunctionEndDebug();
     }

@@ -44,14 +44,15 @@ import okw.exceptions.OKWFrameObjectMethodNotFoundException;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.log.Logger_Sngltn;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EN_OKWFrameObjectMethodNotImplemented_Test
 {
 
@@ -79,26 +80,6 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     }
 
     /**
-     * \brief
-     * Diese Methode wird immer vor jedem Test(fall) ausgeführt.
-     */
-    @Before
-    public void setUp() throws Exception
-    {
-        // EN.BeginTest( "TestContext.CurrentContext.Test.Name" );
-    }
-
-    // / \~german
-    // / \brief
-    // / Diese Methode wird immer nach jedem Test(fall) ausgeführt.
-    // /
-    @After
-    public void tearDown() throws Exception
-    {
-        EN.EndTest();
-    }
-
-    /**
      *  \~german
      *  Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von ClickOn() ausgelöst wird.
      * 
@@ -114,6 +95,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     
         EN.SelectWindow( "Rechner" );
         EN.ClickOn( "NoMethodObj" );
+        
+        EN.EndTest();
     }
 
     /**
@@ -134,6 +117,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     
         EN.SelectWindow( "Rechner" );
         EN.DoubleClickOn( "NoMethodObj" );
+        
+        EN.EndTest();
     }
 
     /**
@@ -152,6 +137,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     
         EN.SelectWindow( "Rechner" );
         EN.Select( "NoMethodObj", "NoValue" );
+        
+        EN.EndTest();
     }
 
     /**
@@ -172,6 +159,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     
         EN.SelectWindow( "Rechner" );
         EN.SelectMenu( "NoMethodObj" );
+        
+        EN.EndTest();
     }
 
     /**
@@ -191,6 +180,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.SetFocus( "NoMethodObj" );
+        
+        EN.EndTest();
     }
 
     /**
@@ -207,6 +198,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.SetValue( "NoMethodObj", "NoValue" );
+        
+        EN.EndTest();
     }
 
     /**
@@ -223,6 +216,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.LogPlaceholder( "NoMethodObj" );
+        
+        EN.EndTest();
     }
 
     /**
@@ -239,6 +234,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.MemorizePlaceholder( "NoMethodObj", "myKey" );
+        
+        EN.EndTest();
     }
 
     /**
@@ -254,23 +251,26 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     
         EN.SelectWindow( "Rechner" );
         EN.TypeKey( "NoMethodObj", "NoValue" );
+        
+        EN.EndTest();
     }
 
-    // / \~german
-    // / \brief
-    // / Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
-    // SelectWindow ausgelöst wird.
-    // /
-    // / \~english
-    // / \~
-    // / @author Zoltan Hrabovszki
-    // / @date 2016.05.07
+    /** \~german
+     *   Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented von
+     *   SelectWindow ausgelöst wird.
+     * 
+     *  \~english
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2016.05.07
+     */
     @Test( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_Select_Window_OKWFrameObjectMethodNotImplemented_Test() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
     
         EN.SelectWindow( "WindowWithoutMethods" );
+        EN.EndTest();
     }
 
     /**
@@ -291,6 +291,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
         EN.BeginTest( name.getMethodName() );
 
         EN.StartApp( "WindowWithoutMethods" );
+        
+        EN.EndTest();
     }
 
     /**
@@ -311,6 +313,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
         EN.BeginTest( name.getMethodName() );
 
         EN.StopApp( "WindowWithoutMethods" );
+
+        EN.EndTest();
     }
 
     /**
@@ -331,6 +335,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyHasFocus( "NoMethodObj", "YES" );
+
+        EN.EndTest();
     }
 
     /**
@@ -351,6 +357,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyIsActive( "NoMethodObj", "YES" );
+
+        EN.EndTest();
     }
 
     /**
@@ -371,6 +379,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyCaption( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -391,6 +401,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyCaptionREGX( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -411,6 +423,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyCaptionWCM( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -430,6 +444,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyLabel( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -450,6 +466,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyLabelREGX( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -470,6 +488,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyLabelWCM( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -493,6 +513,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyMaxLength( "NoMethodObj", "2" );
+
+        EN.EndTest();
     }
 
     /**
@@ -512,6 +534,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyPlaceholder( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -532,6 +556,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyPlaceholderREGX( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -555,6 +581,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyLabelWCM( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -575,6 +603,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltip( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -595,6 +625,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltipREGX( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -615,6 +647,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltipWCM( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -635,6 +669,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyValue( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -655,6 +691,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyValueREGX( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -674,6 +712,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyValueWCM( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -694,6 +734,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTablecellValue( "NoMethodObj", "X", "Y", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -714,6 +756,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTablecellValueREGX( "NoMethodObj", "X", "Y", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -733,6 +777,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTablecellValueWCM( "NoMethodObj", "X", "Y", "NoValue" );
+
+        EN.EndTest();
     }
 
     
@@ -754,6 +800,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifySelectedValue( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -774,6 +822,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyValueREGX( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     /**
@@ -793,6 +843,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.VerifySelectedValueWCM( "NoMethodObj", "NoValue" );
+
+        EN.EndTest();
     }
 
     
@@ -813,6 +865,8 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
         EN.SelectWindow( "Rechner" );
         EN.Sequence( "Rechner", "NoMethodObj", "SEQ_ID" );
+
+        EN.EndTest();
     }
     
     /**
@@ -836,6 +890,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
 
          EN.SelectWindow( "Rechner" );
          EN.VerifyMinLength( "NoMethodObj", "2" );
-     }
 
+         EN.EndTest();
+     }
 }

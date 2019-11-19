@@ -44,14 +44,15 @@ import okw.core.EN;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EN_OKWNotAllowedValueException_Test {
 
   static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
@@ -71,29 +72,6 @@ public class EN_OKWNotAllowedValueException_Test {
     myLogger.setDebugMode( false );
   }
 
-  @AfterClass
-  public static void tearDownAfterClass() throws Exception {
-  }
-
-  // / \~german
-  // / \brief
-  // / Diese Methode wird immer vor jedem Test(fall) ausgeführt.
-  // /
-  @Before
-  public void setUp() throws Exception {
-
-  }
-
-  // / \~german
-  // / \brief
-  // / Diese Methode wird immer nach jedem Test(fall) ausgeführt.
-  // /
-  @After
-  public void tearDown() throws Exception {
-    EN.EndTest();
-  }
-
-  
   /**
    * \~german
    *  \brief
@@ -111,6 +89,8 @@ public class EN_OKWNotAllowedValueException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyExists( "IsNotDefindeInRechner", "Bandersnatch" );
+    
+    EN.EndTest();
   }
  
   /**
@@ -130,6 +110,8 @@ public class EN_OKWNotAllowedValueException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyHasFocus( "IsNotDefindeInRechner", "Bandersnatch" );
+    
+    EN.EndTest();
   }
 
   
@@ -150,6 +132,8 @@ public class EN_OKWNotAllowedValueException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyHasFocus( "All_MethodsObj", "Bandersnatch" );
+    
+    EN.EndTest();
   }
 
   
@@ -170,6 +154,8 @@ public class EN_OKWNotAllowedValueException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyIsActive( "IsNotDefindeInRechner", "Bandersnatch" );
+    
+    EN.EndTest();
   }
 
   /**
@@ -189,6 +175,8 @@ public class EN_OKWNotAllowedValueException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMaxLength( "IsNotDefindeInRechner", "Bandersnatch" );
+    
+    EN.EndTest();
   }
 
   /**
@@ -208,6 +196,8 @@ public class EN_OKWNotAllowedValueException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMaxLength( "All_MethodsObj", "Bandersnatch" );
+    
+    EN.EndTest();
   }
 
   /**
@@ -227,6 +217,8 @@ public class EN_OKWNotAllowedValueException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMaxLength( "All_MethodsObj", " 1" );
+    
+    EN.EndTest();
   }
 
   /**
@@ -246,6 +238,8 @@ public class EN_OKWNotAllowedValueException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMaxLength( "All_MethodsObj", "1,03" );
+    
+    EN.EndTest();
   }
   
   
@@ -266,6 +260,8 @@ public class EN_OKWNotAllowedValueException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMinLength( "IsNotDefindeInRechner", "Bandersnatch" );
+    
+    EN.EndTest();
   }
 
   /**
@@ -285,6 +281,8 @@ public class EN_OKWNotAllowedValueException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMinLength( "All_MethodsObj", "Bandersnatch" );
+    
+    EN.EndTest();
   }
 
   /**
@@ -304,6 +302,8 @@ public class EN_OKWNotAllowedValueException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMinLength( "All_MethodsObj", " 1" );
+    
+    EN.EndTest();
   }
 
   /**
@@ -323,6 +323,7 @@ public class EN_OKWNotAllowedValueException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMinLength( "All_MethodsObj", "1,03" );
+    
+    EN.EndTest();
   }
-
 }
