@@ -18,7 +18,7 @@ public class Logger_Test
     @BeforeClass
     public static void setUpBeforeClass() throws Exception
     {  
-        myLog2HTML = new Log2HTML("Logger2_Test");
+        myLog2HTML = new Log2HTML("Logger_Test");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
 
         Logger_Sngltn.getInstance().setDebugMode(false);
@@ -27,7 +27,7 @@ public class Logger_Test
     @AfterClass
     public static void tearDownAfterClass() throws Exception
     {
-        myLog2HTML.Result2HTML("Logger2_Test.html");
+        myLog2HTML.Result2HTML("target/Logger_Test.html");
     }
 
     @Before
