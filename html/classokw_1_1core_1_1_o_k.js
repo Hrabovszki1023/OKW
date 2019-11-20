@@ -9,6 +9,7 @@ var classokw_1_1core_1_1_o_k =
     [ "FileDelete", "classokw_1_1core_1_1_o_k.html#aef8ea8cabf9dfb28aef18611f69b5af3", null ],
     [ "handleException", "classokw_1_1core_1_1_o_k.html#a5a6db6a457bcb71c893f5d4eb615b2b7", null ],
     [ "LogCaption", "classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0", null ],
+    [ "logException", "classokw_1_1core_1_1_o_k.html#a50d693f5642cf3498ccd39592947dddd", null ],
     [ "LogExists", "classokw_1_1core_1_1_o_k.html#ac20bd936e2181f94529469c6fc130238", null ],
     [ "LogHasFocus", "classokw_1_1core_1_1_o_k.html#a1b8a5a3d583ffabc0063632ab9d981cf", null ],
     [ "LogIsActive", "classokw_1_1core_1_1_o_k.html#ae44a6c32e26a7f93dd5c9f7b5765ee0d", null ],
@@ -92,5 +93,6 @@ var classokw_1_1core_1_1_o_k =
     [ "verifyWCM", "classokw_1_1core_1_1_o_k.html#a7f5d71ec7eb518d201715fcbffe4bef2", null ],
     [ "verifyWCM", "classokw_1_1core_1_1_o_k.html#a127f0328e514d1b9f8bc1a972269ecfc", null ],
     [ "_Kernel", "classokw_1_1core_1_1_o_k.html#a4d82871bc255f963190bcdb3bb90ab3f", null ],
-    [ "UNITTEST", "classokw_1_1core_1_1_o_k.html#af2059175b46e05b2cb534e1dc7735046", null ]
+    [ "myOKW_Properties", "classokw_1_1core_1_1_o_k.html#a44821ec260b46b299d90db9a10fbbf55", null ],
+    [ "VerifyFail", "classokw_1_1core_1_1_o_k.html#a4a75f26af73f393569c148b841a35d55", null ]
 ];

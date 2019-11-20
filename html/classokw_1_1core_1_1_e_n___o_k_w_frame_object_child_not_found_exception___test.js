@@ -1,6 +1,5 @@
 var classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test =
 [
-    [ "setUp", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#a54f082aee6bf85bbfd1dbb234f8237a2", null ],
     [ "TC_ClickOn_OKWFrameObjectChildNotFoundException", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#ab400c3e29f8f6bd9f0e70df363ea5f35", null ],
     [ "tc_DoubleClickOn_OKWFrameObjectChildNotFoundException", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#ad165e477549c4bf24fa9d42e4cf5c927", null ],
     [ "TC_LogPlaceholder_OKWFrameObjectChildNotFoundException", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#acdc4712f5ffcc5aeb5e5e2458ff4546d", null ],
@@ -36,6 +35,5 @@ var classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___te
     [ "TC_VerifyValueREGX_OKWFrameObjectChildNotFoundException", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#a3ce915e27e00719101106ce7a153b0ab", null ],
     [ "TC_VerifyValueWCM_OKWFrameObjectChildNotFoundException", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#aaef560ba92da037187a978233be33a08", null ],
     [ "TCVerifyTablecellValueREGX_OKWFrameObjectChildNotFoundException", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#a511a8f03251336a3d77065ce6ca35c4f", null ],
-    [ "tearDown", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#ace4efde34d50ee7aee79ab343e0a3950", null ],
     [ "name", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#a713995bd5d496544e30cf2f3bfe2b5d3", null ]
 ];

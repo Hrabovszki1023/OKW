@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 436, Datum: 11.17.2019 06:16:28</span>
+   &#160;<span id="projectnumber">Build_ID: 439, Datum: 11.20.2019 05:57:15</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -106,246 +106,229 @@ $(document).ready(function(){initNavTree('_matcher___lev_regx_wild_8java_source.
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> java.util.ArrayList;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">import</span> org.junit.After;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> org.junit.AfterClass;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> org.junit.Before;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">import</span> org.junit.BeforeClass;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">import</span> org.junit.Test;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html">   13</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html">Matcher_LevRegxWild</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">import</span> org.junit.FixMethodOrder;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> org.junit.Test;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> org.junit.runners.MethodSorters;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;@FixMethodOrder(MethodSorters.NAME_ASCENDING)</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html">   13</a></span>&#160;public class <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html">Matcher_LevRegxWild</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    @BeforeClass</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> setUpBeforeClass() <span class="keywordflow">throws</span> Exception {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    @AfterClass</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> tearDownAfterClass() <span class="keywordflow">throws</span> Exception {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    @Before</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> setUp() <span class="keywordflow">throws</span> Exception {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    @After</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> tearDown() <span class="keywordflow">throws</span> Exception {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    @Test</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1c3fc0ec4f88e5e4b71623120557f413">   35</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1c3fc0ec4f88e5e4b71623120557f413">LevenshteinMatch_1</a>() </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zolo&quot;</span> );</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;mona&quot;</span> );</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanno&quot;</span> );</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    @Test</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1c3fc0ec4f88e5e4b71623120557f413">   19</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1c3fc0ec4f88e5e4b71623120557f413">LevenshteinMatch_1</a>() </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zolo&quot;</span> );</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;mona&quot;</span> );</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanno&quot;</span> );</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        assertEquals( <span class="keyword">true</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.LevenshteinMatch( fpALActuell, fpALExpected, 1 ) );</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    @Test</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a89ddfe326f93f93fe0fb294c7b1d26e8">   39</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a89ddfe326f93f93fe0fb294c7b1d26e8">LevenshteinMatch_1_1</a>() </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        assertEquals( <span class="keyword">true</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.LevenshteinMatch( fpALActuell, fpALExpected, 1 ) );</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    @Test</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a89ddfe326f93f93fe0fb294c7b1d26e8">   56</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a89ddfe326f93f93fe0fb294c7b1d26e8">LevenshteinMatch_1_1</a>() </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        assertEquals( <span class="keyword">true</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.LevenshteinMatch( fpALActuell, fpALExpected, 1 ) );</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    @Test</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a064f96b33a6061c8d2dcddb712709b39">   60</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a064f96b33a6061c8d2dcddb712709b39">LevenshteinMatch_2</a>() </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zolo&quot;</span> );</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;mona&quot;</span> );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanno&quot;</span> );</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        assertEquals( <span class="keyword">true</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.LevenshteinMatch( fpALActuell, fpALExpected, 1 ) );</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    @Test</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a064f96b33a6061c8d2dcddb712709b39">   77</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a064f96b33a6061c8d2dcddb712709b39">LevenshteinMatch_2</a>() </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zolo&quot;</span> );</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;mona&quot;</span> );</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanno&quot;</span> );</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;ZoliI&quot;</span> );</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;ZoliI&quot;</span> );</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.LevenshteinMatch( fpALActuell, fpALExpected, 1 ) );</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    @Test</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#aa3bb39ade0edf094aac2ee54023b51f8">   81</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#aa3bb39ade0edf094aac2ee54023b51f8">LevenshteinMatch_3</a>() </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zolo&quot;</span> );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;mona&quot;</span> );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanno&quot;</span> );</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.LevenshteinMatch( fpALActuell, fpALExpected, 1 ) );</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    @Test</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#aa3bb39ade0edf094aac2ee54023b51f8">   98</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#aa3bb39ade0edf094aac2ee54023b51f8">LevenshteinMatch_3</a>() </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zolo&quot;</span> );</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;mona&quot;</span> );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanno&quot;</span> );</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.LevenshteinMatch( fpALActuell, fpALExpected, 0 ) );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    @Test</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#aee463eb189658b1eea0c558870b001b7">  102</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#aee463eb189658b1eea0c558870b001b7">LevenshteinMatch_4</a>() </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanno&quot;</span> );</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.LevenshteinMatch( fpALActuell, fpALExpected, 0 ) );</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    @Test</div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#aee463eb189658b1eea0c558870b001b7">  119</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#aee463eb189658b1eea0c558870b001b7">LevenshteinMatch_4</a>() </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanno&quot;</span> );</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.LevenshteinMatch( fpALActuell, fpALExpected, 0 ) );</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    @Test</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1ba68b83f152341d7532a3ab5de8586a">  122</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1ba68b83f152341d7532a3ab5de8586a">RegexMatch_1</a>() </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.LevenshteinMatch( fpALActuell, fpALExpected, 0 ) );</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    @Test</div>
-<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1ba68b83f152341d7532a3ab5de8586a">  139</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1ba68b83f152341d7532a3ab5de8586a">RegexMatch_1</a>() </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        assertEquals( <span class="keyword">true</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.RegexMatch( fpALActuell, fpALExpected ) );</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    @Test</div>
-<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a411d0ffece5af45a91d30038b64cf508">  160</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a411d0ffece5af45a91d30038b64cf508">RegexMatch_2</a>() </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        assertEquals( <span class="keyword">true</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.RegexMatch( fpALActuell, fpALExpected ) );</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    @Test</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a411d0ffece5af45a91d30038b64cf508">  143</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a411d0ffece5af45a91d30038b64cf508">RegexMatch_2</a>() </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.RegexMatch( fpALActuell, fpALExpected ) );</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    @Test</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a819cef25c905740c0c7a7491b98e1a41">  163</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a819cef25c905740c0c7a7491b98e1a41">RegexMatch_3</a>() </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.RegexMatch( fpALActuell, fpALExpected ) );</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    @Test</div>
-<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a819cef25c905740c0c7a7491b98e1a41">  180</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a819cef25c905740c0c7a7491b98e1a41">RegexMatch_3</a>() </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    {</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;.*oli&quot;</span> );</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;.*ono&quot;</span> );</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;.*anna&quot;</span> );</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.RegexMatch( fpALActuell, fpALExpected ) );</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    </div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    @Test</div>
-<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a38c4493f4e975ef2cb8247eaa127c8c4">  200</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a38c4493f4e975ef2cb8247eaa127c8c4">WildcardMatch_1</a>() </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        assertEquals( <span class="keyword">true</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.<a class="code" href="classokw_1_1core_1_1_matcher.html#a771af5fda0717ef20d2bc1866357eaa9">WildcardMatch</a>(fpALActuell, fpALExpected ) );</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    }</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    @Test</div>
-<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#ab4ed0dc4817d88d1f2e481da912040a8">  221</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#ab4ed0dc4817d88d1f2e481da912040a8">WildcardMatch_2</a>() </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        </div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;.*oli&quot;</span> );</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;.*ono&quot;</span> );</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;.*anna&quot;</span> );</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.RegexMatch( fpALActuell, fpALExpected ) );</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    @Test</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a38c4493f4e975ef2cb8247eaa127c8c4">  183</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a38c4493f4e975ef2cb8247eaa127c8c4">WildcardMatch_1</a>() </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        assertEquals( <span class="keyword">true</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.<a class="code" href="classokw_1_1core_1_1_matcher.html#a771af5fda0717ef20d2bc1866357eaa9">WildcardMatch</a>(fpALActuell, fpALExpected ) );</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    @Test</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#ab4ed0dc4817d88d1f2e481da912040a8">  204</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#ab4ed0dc4817d88d1f2e481da912040a8">WildcardMatch_2</a>() </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.<a class="code" href="classokw_1_1core_1_1_matcher.html#a771af5fda0717ef20d2bc1866357eaa9">WildcardMatch</a>( fpALActuell, fpALExpected ) );</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    @Test</div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#afb40b8a95c222b6d8bc9d56be7aead22">  224</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#afb40b8a95c222b6d8bc9d56be7aead22">WildcardMatch_3</a>() </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.<a class="code" href="classokw_1_1core_1_1_matcher.html#a771af5fda0717ef20d2bc1866357eaa9">WildcardMatch</a>( fpALActuell, fpALExpected ) );</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    @Test</div>
-<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#afb40b8a95c222b6d8bc9d56be7aead22">  241</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#afb40b8a95c222b6d8bc9d56be7aead22">WildcardMatch_3</a>() </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    {</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        ArrayList&lt;String&gt; fpALActuell = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        ArrayList&lt;String&gt; fpALExpected = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Zoli&quot;</span> );</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Mona&quot;</span> );</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        fpALActuell.add( <span class="stringliteral">&quot;Hanna&quot;</span> );</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zol*&quot;</span> );</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;*ono&quot;</span> );</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;*anna&quot;</span> );</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.<a class="code" href="classokw_1_1core_1_1_matcher.html#a771af5fda0717ef20d2bc1866357eaa9">WildcardMatch</a>( fpALActuell, fpALExpected ) );</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;}</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;Zol*&quot;</span> );</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;*ono&quot;</span> );</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        fpALExpected.add( <span class="stringliteral">&quot;*anna&quot;</span> );</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        assertEquals( <span class="keyword">false</span>, <a class="code" href="classokw_1_1core_1_1_matcher.html">Matcher</a>.<a class="code" href="classokw_1_1core_1_1_matcher.html#a771af5fda0717ef20d2bc1866357eaa9">WildcardMatch</a>( fpALActuell, fpALExpected ) );</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a38c4493f4e975ef2cb8247eaa127c8c4"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a38c4493f4e975ef2cb8247eaa127c8c4">okw.core.Matcher_LevRegxWild.WildcardMatch_1</a></div><div class="ttdeci">void WildcardMatch_1()</div><div class="ttdoc">Passed.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00200">Matcher_LevRegxWild.java:200</a></div></div>
+<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a38c4493f4e975ef2cb8247eaa127c8c4"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a38c4493f4e975ef2cb8247eaa127c8c4">okw.core.Matcher_LevRegxWild.WildcardMatch_1</a></div><div class="ttdeci">void WildcardMatch_1()</div><div class="ttdoc">Passed.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00183">Matcher_LevRegxWild.java:183</a></div></div>
 <div class="ttc" id="aclassokw_1_1core_1_1_matcher_html_a771af5fda0717ef20d2bc1866357eaa9"><div class="ttname"><a href="classokw_1_1core_1_1_matcher.html#a771af5fda0717ef20d2bc1866357eaa9">okw.core.Matcher.WildcardMatch</a></div><div class="ttdeci">static boolean WildcardMatch(String fpsActuell, String fpsExpected)</div><div class="ttdef"><b>Definition:</b> <a href="_matcher_8java_source.html#l00116">Matcher.java:116</a></div></div>
-<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_aa3bb39ade0edf094aac2ee54023b51f8"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#aa3bb39ade0edf094aac2ee54023b51f8">okw.core.Matcher_LevRegxWild.LevenshteinMatch_3</a></div><div class="ttdeci">void LevenshteinMatch_3()</div><div class="ttdoc">Fail: Array-Size is OK but one String has diffs in L-distance.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00098">Matcher_LevRegxWild.java:98</a></div></div>
-<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a89ddfe326f93f93fe0fb294c7b1d26e8"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a89ddfe326f93f93fe0fb294c7b1d26e8">okw.core.Matcher_LevRegxWild.LevenshteinMatch_1_1</a></div><div class="ttdeci">void LevenshteinMatch_1_1()</div><div class="ttdoc">Passed.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00056">Matcher_LevRegxWild.java:56</a></div></div>
-<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_aee463eb189658b1eea0c558870b001b7"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#aee463eb189658b1eea0c558870b001b7">okw.core.Matcher_LevRegxWild.LevenshteinMatch_4</a></div><div class="ttdeci">void LevenshteinMatch_4()</div><div class="ttdoc">Fail: Array-Size is OK but one String has diffs in L-distance.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00119">Matcher_LevRegxWild.java:119</a></div></div>
-<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_afb40b8a95c222b6d8bc9d56be7aead22"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#afb40b8a95c222b6d8bc9d56be7aead22">okw.core.Matcher_LevRegxWild.WildcardMatch_3</a></div><div class="ttdeci">void WildcardMatch_3()</div><div class="ttdoc">fail</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00241">Matcher_LevRegxWild.java:241</a></div></div>
+<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_aa3bb39ade0edf094aac2ee54023b51f8"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#aa3bb39ade0edf094aac2ee54023b51f8">okw.core.Matcher_LevRegxWild.LevenshteinMatch_3</a></div><div class="ttdeci">void LevenshteinMatch_3()</div><div class="ttdoc">Fail: Array-Size is OK but one String has diffs in L-distance.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00081">Matcher_LevRegxWild.java:81</a></div></div>
+<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a89ddfe326f93f93fe0fb294c7b1d26e8"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a89ddfe326f93f93fe0fb294c7b1d26e8">okw.core.Matcher_LevRegxWild.LevenshteinMatch_1_1</a></div><div class="ttdeci">void LevenshteinMatch_1_1()</div><div class="ttdoc">Passed.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00039">Matcher_LevRegxWild.java:39</a></div></div>
+<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_aee463eb189658b1eea0c558870b001b7"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#aee463eb189658b1eea0c558870b001b7">okw.core.Matcher_LevRegxWild.LevenshteinMatch_4</a></div><div class="ttdeci">void LevenshteinMatch_4()</div><div class="ttdoc">Fail: Array-Size is OK but one String has diffs in L-distance.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00102">Matcher_LevRegxWild.java:102</a></div></div>
+<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_afb40b8a95c222b6d8bc9d56be7aead22"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#afb40b8a95c222b6d8bc9d56be7aead22">okw.core.Matcher_LevRegxWild.WildcardMatch_3</a></div><div class="ttdeci">void WildcardMatch_3()</div><div class="ttdoc">fail</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00224">Matcher_LevRegxWild.java:224</a></div></div>
 <div class="ttc" id="aclassokw_1_1core_1_1_matcher_html"><div class="ttname"><a href="classokw_1_1core_1_1_matcher.html">okw.core.Matcher</a></div><div class="ttdef"><b>Definition:</b> <a href="_matcher_8java_source.html#l00041">Matcher.java:41</a></div></div>
 <div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html">okw.core.Matcher_LevRegxWild</a></div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00013">Matcher_LevRegxWild.java:13</a></div></div>
-<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a064f96b33a6061c8d2dcddb712709b39"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a064f96b33a6061c8d2dcddb712709b39">okw.core.Matcher_LevRegxWild.LevenshteinMatch_2</a></div><div class="ttdeci">void LevenshteinMatch_2()</div><div class="ttdoc">Fail: Array-Size is OK but one String has diffs in L-distance.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00077">Matcher_LevRegxWild.java:77</a></div></div>
-<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a411d0ffece5af45a91d30038b64cf508"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a411d0ffece5af45a91d30038b64cf508">okw.core.Matcher_LevRegxWild.RegexMatch_2</a></div><div class="ttdeci">void RegexMatch_2()</div><div class="ttdoc">fail</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00160">Matcher_LevRegxWild.java:160</a></div></div>
-<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a1ba68b83f152341d7532a3ab5de8586a"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1ba68b83f152341d7532a3ab5de8586a">okw.core.Matcher_LevRegxWild.RegexMatch_1</a></div><div class="ttdeci">void RegexMatch_1()</div><div class="ttdoc">Passed.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00139">Matcher_LevRegxWild.java:139</a></div></div>
-<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_ab4ed0dc4817d88d1f2e481da912040a8"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#ab4ed0dc4817d88d1f2e481da912040a8">okw.core.Matcher_LevRegxWild.WildcardMatch_2</a></div><div class="ttdeci">void WildcardMatch_2()</div><div class="ttdoc">fail</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00221">Matcher_LevRegxWild.java:221</a></div></div>
-<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a819cef25c905740c0c7a7491b98e1a41"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a819cef25c905740c0c7a7491b98e1a41">okw.core.Matcher_LevRegxWild.RegexMatch_3</a></div><div class="ttdeci">void RegexMatch_3()</div><div class="ttdoc">fail</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00180">Matcher_LevRegxWild.java:180</a></div></div>
-<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a1c3fc0ec4f88e5e4b71623120557f413"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1c3fc0ec4f88e5e4b71623120557f413">okw.core.Matcher_LevRegxWild.LevenshteinMatch_1</a></div><div class="ttdeci">void LevenshteinMatch_1()</div><div class="ttdoc">Passed.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00035">Matcher_LevRegxWild.java:35</a></div></div>
+<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a064f96b33a6061c8d2dcddb712709b39"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a064f96b33a6061c8d2dcddb712709b39">okw.core.Matcher_LevRegxWild.LevenshteinMatch_2</a></div><div class="ttdeci">void LevenshteinMatch_2()</div><div class="ttdoc">Fail: Array-Size is OK but one String has diffs in L-distance.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00060">Matcher_LevRegxWild.java:60</a></div></div>
+<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a411d0ffece5af45a91d30038b64cf508"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a411d0ffece5af45a91d30038b64cf508">okw.core.Matcher_LevRegxWild.RegexMatch_2</a></div><div class="ttdeci">void RegexMatch_2()</div><div class="ttdoc">fail</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00143">Matcher_LevRegxWild.java:143</a></div></div>
+<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a1ba68b83f152341d7532a3ab5de8586a"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1ba68b83f152341d7532a3ab5de8586a">okw.core.Matcher_LevRegxWild.RegexMatch_1</a></div><div class="ttdeci">void RegexMatch_1()</div><div class="ttdoc">Passed.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00122">Matcher_LevRegxWild.java:122</a></div></div>
+<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_ab4ed0dc4817d88d1f2e481da912040a8"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#ab4ed0dc4817d88d1f2e481da912040a8">okw.core.Matcher_LevRegxWild.WildcardMatch_2</a></div><div class="ttdeci">void WildcardMatch_2()</div><div class="ttdoc">fail</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00204">Matcher_LevRegxWild.java:204</a></div></div>
+<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a819cef25c905740c0c7a7491b98e1a41"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a819cef25c905740c0c7a7491b98e1a41">okw.core.Matcher_LevRegxWild.RegexMatch_3</a></div><div class="ttdeci">void RegexMatch_3()</div><div class="ttdoc">fail</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00163">Matcher_LevRegxWild.java:163</a></div></div>
+<div class="ttc" id="aclassokw_1_1core_1_1_matcher___lev_regx_wild_html_a1c3fc0ec4f88e5e4b71623120557f413"><div class="ttname"><a href="classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1c3fc0ec4f88e5e4b71623120557f413">okw.core.Matcher_LevRegxWild.LevenshteinMatch_1</a></div><div class="ttdeci">void LevenshteinMatch_1()</div><div class="ttdoc">Passed.</div><div class="ttdef"><b>Definition:</b> <a href="_matcher___lev_regx_wild_8java_source.html#l00019">Matcher_LevRegxWild.java:19</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_90fd98a0ba30abf7a6068a44995d2d6b.html">src</a></li><li class="navelem"><a class="el" href="dir_221f38c42018e66bcc4731adbda1f302.html">test</a></li><li class="navelem"><a class="el" href="dir_7d11d078bf54f621f2f9e0dbb4b23dab.html">java</a></li><li class="navelem"><a class="el" href="dir_cd7042f6567675755d2a7d20e8cf9ca8.html">okw</a></li><li class="navelem"><a class="el" href="dir_5a98338ef88f03639644ae0bd40cba1e.html">core</a></li><li class="navelem"><b>Matcher_LevRegxWild.java</b></li>
-    <li class="footer">Erzeugt am Son Nov 17 2019 06:17:48 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Nov 20 2019 05:58:40 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

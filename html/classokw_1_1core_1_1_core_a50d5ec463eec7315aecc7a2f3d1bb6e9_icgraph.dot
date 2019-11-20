@@ -9,11 +9,11 @@ digraph "okw.core.Core.LogIsActive"
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="okw.core.EN.LogIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#acbeecc6c0bfe7f092b7b612471f5e790",tooltip="Dokumentiert den Status des gegebenen Objekts."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="okw.seinputradio.SeInput\lRadio_EN_Test.tc_LogIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seinputradio_1_1_se_input_radio___e_n___test.html#a3dc55902db9aca23a595a7e585b58d3a",tooltip="Test des Schlüsselwortes LogIsActive für den GUI-Adapter SeInputRadio."];
+  Node3 [label="okw.core.EN_Keywords\l_NOK_Test.tc_A_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#accf1c3d2b1258a59b77ae759a7ee0aeb",tooltip="Prüft methoden aufruf für einen einfachen Click."];
   Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="okw.seimage.SeImage\l_EN_Test.tc_LogIsActive_en",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seimage_1_1_se_image___e_n___test.html#a404d55862157c613a05faf626f525f19",tooltip="Prüft LogIsActive."];
+  Node4 [label="okw.seinputradio.SeInput\lRadio_EN_Test.tc_LogIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seinputradio_1_1_se_input_radio___e_n___test.html#a3dc55902db9aca23a595a7e585b58d3a",tooltip="Test des Schlüsselwortes LogIsActive für den GUI-Adapter SeInputRadio."];
   Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
+  Node5 [label="okw.seimage.SeImage\l_EN_Test.tc_LogIsActive_en",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seimage_1_1_se_image___e_n___test.html#a404d55862157c613a05faf626f525f19",tooltip="Prüft LogIsActive."];
   Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="okw.setextarea.SeTextarea\l_EN_Test.tcLogIsActive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1setextarea_1_1_se_textarea___e_n___test.html#a0c3a222be8b0494c512d2e8d55540da4",tooltip="Teste das Schlüsselwort LogLabel( FN ) eines SeInputText Prüfen."];
   Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

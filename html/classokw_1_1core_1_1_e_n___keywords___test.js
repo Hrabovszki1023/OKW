@@ -1,6 +1,5 @@
 var classokw_1_1core_1_1_e_n___keywords___test =
 [
-    [ "setUp", "classokw_1_1core_1_1_e_n___keywords___test.html#a8157a5a30f73953133d0c1316aa98aed", null ],
     [ "tc_ClickOn", "classokw_1_1core_1_1_e_n___keywords___test.html#a768d2b28a5c3243afa6f95531f58a47c", null ],
     [ "tc_DoubleClickOn", "classokw_1_1core_1_1_e_n___keywords___test.html#a0c778ede2b790dc869d6a3ec5b5aad7d", null ],
     [ "tc_LogCaption", "classokw_1_1core_1_1_e_n___keywords___test.html#a5e0878761afd157b90ecc31112d0e137", null ],
@@ -80,6 +79,5 @@ var classokw_1_1core_1_1_e_n___keywords___test =
     [ "tc_VerifyValueREGX_MultipleValues", "classokw_1_1core_1_1_e_n___keywords___test.html#a98fccde7dbc4b3f7770e7acac0ed8b30", null ],
     [ "tc_VerifyValueWCM", "classokw_1_1core_1_1_e_n___keywords___test.html#a58b68d3cc96183dd2ca9a4eee78fc409", null ],
     [ "tc_VerifyValueWCM_MultipleValues", "classokw_1_1core_1_1_e_n___keywords___test.html#ab12d01ec6e1714261c26aef0c2a40df6", null ],
-    [ "tearDown", "classokw_1_1core_1_1_e_n___keywords___test.html#a6d3648a65cb45c64c3d2591e1b5d156d", null ],
     [ "name", "classokw_1_1core_1_1_e_n___keywords___test.html#a9dbf28ae9dabb151451e59d62599fe1e", null ]
 ];

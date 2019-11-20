@@ -9,7 +9,7 @@ digraph "okw.core.Core.VerifyBadge"
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="okw.core.EN.VerifyBadge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a3e6f852b199a67adc840960a96a9e6b3",tooltip="Überprüft den Badge des Objektes ."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
+  Node3 [label="okw.core.EN_Keywords\l_NOK_Test.tc_A_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#accf1c3d2b1258a59b77ae759a7ee0aeb",tooltip="Prüft methoden aufruf für einen einfachen Click."];
   Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="okw.core.EN_Keywords\l_Test.tc_VerifyBadge",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___test.html#a99e3b8b468e9a49cbdc4fdd7cfe89ac5",tooltip="\"Normaler\" Testfall für das Schlüsselwort EN.VerifyBadge(String,String)."];
   Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

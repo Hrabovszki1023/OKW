@@ -1,6 +1,5 @@
 var classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test =
 [
-    [ "setUp", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a369962b87d15bc121a77c3f59bce05be", null ],
     [ "tc_ClickOn_OKWFrameObjectMethodNotImplemented", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a15c8a86e8cbeaf7d85283b979976bcad", null ],
     [ "tc_DoubleClickOn_OKWFrameObjectMethodNotImplemented", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#ad7eb79bf7a39002a83a5d1d452cda82b", null ],
     [ "tc_LogPlaceholder_OKWFrameObjectMethodNotImplemented", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a9030c505c8d7af535530c31fb0bffbfe", null ],
@@ -39,6 +38,5 @@ var classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test 
     [ "TC_VerifyValue_OKWFrameObjectMethodNotImplemented", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#ab6b25943f057a3fee5f94ddd0bbebcbe", null ],
     [ "TC_VerifyValueREGX_OKWFrameObjectMethodNotImplemented", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a5eb78b9e1cab928e96403c3c852a2071", null ],
     [ "TC_VerifyValueWCM_OKWFrameObjectMethodNotImplemented", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a871f31309255e4dc9807870b6decb789", null ],
-    [ "tearDown", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a0200bded01600fae2553b52dab6568ea", null ],
     [ "name", "classokw_1_1core_1_1_e_n___o_k_w_frame_object_method_not_implemented___test.html#a97198bb3ff09c54df93d14ec27740850", null ]
 ];

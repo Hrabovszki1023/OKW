@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 436, Datum: 11.17.2019 06:16:28</span>
+   &#160;<span id="projectnumber">Build_ID: 439, Datum: 11.20.2019 05:57:15</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -287,37 +287,46 @@ $(document).ready(function(){initNavTree('_o_k_w___properties_test_8java_source.
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    </div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    @Test</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keywordtype">void</span> tc_addPropertiesFile() <span class="keywordflow">throws</span> IOException</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="comment">// Create Precondition:</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="comment">// delete destination file</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        okw.OKW_FileHelper.deleteFile( <span class="stringliteral">&quot;testPropertiesExpected.properties&quot;</span> );</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        Properties newProperties = <span class="keyword">new</span> Properties(); </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        newProperties.setProperty( <span class="stringliteral">&quot;Wert 0&quot;</span>, <span class="stringliteral">&quot;Wert 0 aus testPropertiesExpected.properties&quot;</span> );</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        newProperties.setProperty( <span class="stringliteral">&quot;Wert 1&quot;</span>, <span class="stringliteral">&quot;Wert 1 aus testPropertiesExpected.properties&quot;</span> );</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        newProperties.setProperty( <span class="stringliteral">&quot;Wert 2&quot;</span>, <span class="stringliteral">&quot;Wert 2 aus testPropertiesExpected.properties&quot;</span> );</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        newProperties.setProperty( <span class="stringliteral">&quot;Wert 3&quot;</span>, <span class="stringliteral">&quot;Wert 3 aus testPropertiesExpected.properties&quot;</span> );</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        newProperties.setProperty( <span class="stringliteral">&quot;Wert 4&quot;</span>, <span class="stringliteral">&quot;Wert 4 aus testPropertiesExpected.properties&quot;</span> );</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="comment">// Write new destination file</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        newProperties.store( <span class="keyword">new</span> FileOutputStream(<span class="stringliteral">&quot;testPropertiesExpected.properties&quot;</span>), <span class="keyword">null</span> );</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    @Test</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keywordtype">void</span> tc_addPropertiesFile() <span class="keywordflow">throws</span> IOException</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="comment">// Create Precondition:</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="comment">// delete destination file</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        okw.OKW_FileHelper.deleteFile( <span class="stringliteral">&quot;testPropertiesExpected.properties&quot;</span> );</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        Properties newProperties = <span class="keyword">new</span> Properties(); </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        newProperties.setProperty( <span class="stringliteral">&quot;Wert 0&quot;</span>, <span class="stringliteral">&quot;Wert 0 aus testPropertiesExpected.properties&quot;</span> );</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        newProperties.setProperty( <span class="stringliteral">&quot;Wert 1&quot;</span>, <span class="stringliteral">&quot;Wert 1 aus testPropertiesExpected.properties&quot;</span> );</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        newProperties.setProperty( <span class="stringliteral">&quot;Wert 2&quot;</span>, <span class="stringliteral">&quot;Wert 2 aus testPropertiesExpected.properties&quot;</span> );</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        newProperties.setProperty( <span class="stringliteral">&quot;Wert 3&quot;</span>, <span class="stringliteral">&quot;Wert 3 aus testPropertiesExpected.properties&quot;</span> );</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        newProperties.setProperty( <span class="stringliteral">&quot;Wert 4&quot;</span>, <span class="stringliteral">&quot;Wert 4 aus testPropertiesExpected.properties&quot;</span> );</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="comment">// Write new destination file</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        newProperties.store( <span class="keyword">new</span> FileOutputStream(<span class="stringliteral">&quot;testPropertiesExpected.properties&quot;</span>), <span class="keyword">null</span> );</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        </div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="comment">// Testcase</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        myProperties.<a class="code" href="classokw_1_1_o_k_w___properties.html#a8a4294aa27bf9f4f49e9f1991022d5c8">init</a>();</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        myProperties.<a class="code" href="classokw_1_1_o_k_w___properties.html#a78c9f44f14dbfc95dea240e06065120c">addPropertiesFile</a>( <span class="stringliteral">&quot;testPropertiesExpected.properties&quot;</span> );</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        assertEquals( <span class="stringliteral">&quot;Wert 0 aus testPropertiesExpected.properties&quot;</span>, myProperties.get( <span class="stringliteral">&quot;Wert 0&quot;</span> ) );</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        assertEquals( <span class="stringliteral">&quot;Wert 1 aus testPropertiesExpected.properties&quot;</span>, myProperties.get( <span class="stringliteral">&quot;Wert 1&quot;</span> ) );</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        assertEquals( <span class="stringliteral">&quot;Wert 2 aus testPropertiesExpected.properties&quot;</span>, myProperties.get( <span class="stringliteral">&quot;Wert 2&quot;</span> ) );</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        assertEquals( <span class="stringliteral">&quot;Wert 3 aus testPropertiesExpected.properties&quot;</span>, myProperties.get( <span class="stringliteral">&quot;Wert 3&quot;</span> ) );</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        assertEquals( <span class="stringliteral">&quot;Wert 4 aus testPropertiesExpected.properties&quot;</span>, myProperties.get( <span class="stringliteral">&quot;Wert 4&quot;</span> ) );</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="comment">// Testcase</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        myProperties.<a class="code" href="classokw_1_1_o_k_w___properties.html#a8a4294aa27bf9f4f49e9f1991022d5c8">init</a>();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        myProperties.<a class="code" href="classokw_1_1_o_k_w___properties.html#a78c9f44f14dbfc95dea240e06065120c">addPropertiesFile</a>( <span class="stringliteral">&quot;testPropertiesExpected.properties&quot;</span> );</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        assertEquals( <span class="stringliteral">&quot;Wert 0 aus testPropertiesExpected.properties&quot;</span>, myProperties.get( <span class="stringliteral">&quot;Wert 0&quot;</span> ) );</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        assertEquals( <span class="stringliteral">&quot;Wert 1 aus testPropertiesExpected.properties&quot;</span>, myProperties.get( <span class="stringliteral">&quot;Wert 1&quot;</span> ) );</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        assertEquals( <span class="stringliteral">&quot;Wert 2 aus testPropertiesExpected.properties&quot;</span>, myProperties.get( <span class="stringliteral">&quot;Wert 2&quot;</span> ) );</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        assertEquals( <span class="stringliteral">&quot;Wert 3 aus testPropertiesExpected.properties&quot;</span>, myProperties.get( <span class="stringliteral">&quot;Wert 3&quot;</span> ) );</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        assertEquals( <span class="stringliteral">&quot;Wert 4 aus testPropertiesExpected.properties&quot;</span>, myProperties.get( <span class="stringliteral">&quot;Wert 4&quot;</span> ) );</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    @Test</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keyword">public</span> <span class="keyword">final</span> <span class="keywordtype">void</span> tc_getProperty2Boolean() <span class="keywordflow">throws</span> IOException</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        assertEquals(  <span class="keyword">false</span>, myProperties.<a class="code" href="classokw_1_1_o_k_w___properties.html#aa57f3f3356c91b5ebc60d493ce5920d5">getProperty2Boolean</a>( <span class="stringliteral">&quot;core.AbbortOnVerifyFail&quot;</span>, <span class="stringliteral">&quot;false&quot;</span> ) );</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        assertEquals(  <span class="keyword">false</span>, myProperties.<a class="code" href="classokw_1_1_o_k_w___properties.html#aa57f3f3356c91b5ebc60d493ce5920d5">getProperty2Boolean</a>( <span class="stringliteral">&quot;propertyDoesNotExist&quot;</span>, <span class="stringliteral">&quot;false&quot;</span> ) );</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        assertEquals(  <span class="keyword">true</span>,  myProperties.<a class="code" href="classokw_1_1_o_k_w___properties.html#aa57f3f3356c91b5ebc60d493ce5920d5">getProperty2Boolean</a>( <span class="stringliteral">&quot;core.propertyDoesNotExist&quot;</span>, <span class="stringliteral">&quot;true&quot;</span> ) );</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassokw_1_1_o_k_w___properties_html"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html">okw.OKW_Properties</a></div><div class="ttdoc">Reihenfolge der Resourcen-&quot;Beladung&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00044">OKW_Properties.java:44</a></div></div>
@@ -327,6 +336,7 @@ $(document).ready(function(){initNavTree('_o_k_w___properties_test_8java_source.
 <div class="ttc" id="aclassokw_1_1_o_k_w___properties_html_ae6abfc9b12873c330e6d5479cd5d682c"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html#ae6abfc9b12873c330e6d5479cd5d682c">okw.OKW_Properties.clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Löscht alle Properties-Listen.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00154">OKW_Properties.java:154</a></div></div>
 <div class="ttc" id="aclassokw_1_1exceptions_1_1_o_k_w_file_does_not_exists_exception_html"><div class="ttname"><a href="classokw_1_1exceptions_1_1_o_k_w_file_does_not_exists_exception.html">okw.exceptions.OKWFileDoesNotExistsException</a></div><div class="ttdoc">OKWFileDoesNotExistsException-Ausnahme wird ausgelöst, wenn eine Datei nicht gefunden wird.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_file_does_not_exists_exception_8java_source.html#l00055">OKWFileDoesNotExistsException.java:55</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___properties_html_a0ebb8b3abc34c58218bb5c347eb5d3e5"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html#a0ebb8b3abc34c58218bb5c347eb5d3e5">okw.OKW_Properties.getPropertiesForKeysStartswith</a></div><div class="ttdeci">ArrayList&lt; String &gt; getPropertiesForKeysStartswith(String Startwith)</div><div class="ttdoc">Ermittelt alle Properties der keys, die mit dem gegebenen String Startwitth Anfangen.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00767">OKW_Properties.java:767</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w___properties_html_aa57f3f3356c91b5ebc60d493ce5920d5"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html#aa57f3f3356c91b5ebc60d493ce5920d5">okw.OKW_Properties.getProperty2Boolean</a></div><div class="ttdeci">Boolean getProperty2Boolean(String fpsKey, String fpsDefault)</div><div class="ttdoc">Ermittelt den aktuellen Wert des Propertys gegeben mit dem Schlüssel fpsKey.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00801">OKW_Properties.java:801</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___properties_test_html"><div class="ttname"><a href="classokw_1_1_o_k_w___properties_test.html">okw.OKW_PropertiesTest</a></div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_test_8java_source.html#l00018">OKW_PropertiesTest.java:18</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___properties_html_a8a4294aa27bf9f4f49e9f1991022d5c8"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html#a8a4294aa27bf9f4f49e9f1991022d5c8">okw.OKW_Properties.init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initialisiert diese Klasse:</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00179">OKW_Properties.java:179</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___properties_html_a8489ce026a782d28ef1854eaf65dc92e"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html#a8489ce026a782d28ef1854eaf65dc92e">okw.OKW_Properties.getKeysStartswith</a></div><div class="ttdeci">ArrayList&lt; String &gt; getKeysStartswith(String Startwitth)</div><div class="ttdoc">Ermittelt alle Properties die mit dem gegebenen String Anfangen.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00730">OKW_Properties.java:730</a></div></div>
@@ -335,7 +345,7 @@ $(document).ready(function(){initNavTree('_o_k_w___properties_test_8java_source.
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_90fd98a0ba30abf7a6068a44995d2d6b.html">src</a></li><li class="navelem"><a class="el" href="dir_221f38c42018e66bcc4731adbda1f302.html">test</a></li><li class="navelem"><a class="el" href="dir_7d11d078bf54f621f2f9e0dbb4b23dab.html">java</a></li><li class="navelem"><a class="el" href="dir_cd7042f6567675755d2a7d20e8cf9ca8.html">okw</a></li><li class="navelem"><b>OKW_PropertiesTest.java</b></li>
-    <li class="footer">Erzeugt am Son Nov 17 2019 06:17:48 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Nov 20 2019 05:58:41 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

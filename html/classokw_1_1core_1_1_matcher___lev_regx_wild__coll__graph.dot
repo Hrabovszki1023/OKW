@@ -4,5 +4,5 @@ digraph "okw.core.Matcher_LevRegxWild"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{okw.core.Matcher_LevRegxWild\n||+ setUp()\l+ tearDown()\l+ LevenshteinMatch_1()\l+ LevenshteinMatch_1_1()\l+ LevenshteinMatch_2()\l+ LevenshteinMatch_3()\l+ LevenshteinMatch_4()\l+ RegexMatch_1()\l+ RegexMatch_2()\l+ RegexMatch_3()\l+ WildcardMatch_1()\l+ WildcardMatch_2()\l+ WildcardMatch_3()\l+ setUpBeforeClass()\l+ tearDownAfterClass()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{okw.core.Matcher_LevRegxWild\n||+ LevenshteinMatch_1()\l+ LevenshteinMatch_1_1()\l+ LevenshteinMatch_2()\l+ LevenshteinMatch_3()\l+ LevenshteinMatch_4()\l+ RegexMatch_1()\l+ RegexMatch_2()\l+ RegexMatch_3()\l+ WildcardMatch_1()\l+ WildcardMatch_2()\l+ WildcardMatch_3()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
 }

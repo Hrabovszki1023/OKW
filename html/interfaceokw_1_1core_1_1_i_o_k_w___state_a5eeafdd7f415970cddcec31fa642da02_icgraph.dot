@@ -11,7 +11,7 @@ digraph "okw.core.IOKW_State.VerifyTooltipWCM"
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="okw.core.EN.VerifyTooltipWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aab0f2e51f9be09e36fbd27a5c8c88511",tooltip="Prüft den Tooltip-Text eines Objektes (in den meisten Fällen ist dies der angezeigte Text)."];
   Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
+  Node4 [label="okw.core.EN_Keywords\l_NOK_Test.tc_A_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#accf1c3d2b1258a59b77ae759a7ee0aeb",tooltip="Prüft methoden aufruf für einen einfachen Click."];
   Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node5 [label="okw.seinputradio.SeInput\lRadio_EN_Test.tc_VerifyToolTipWCM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seinputradio_1_1_se_input_radio___e_n___test.html#a44fa0a72a640af1b0e57bd3443a1cc1b",tooltip="Test des Schlüsselwortes VerifyToolTipWCM für den GUI-Adapter SeInputRadio."];
   Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

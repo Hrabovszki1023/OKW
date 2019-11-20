@@ -7,9 +7,9 @@ digraph "okw.core.EN.LogValue"
   rankdir="RL";
   Node1 [label="okw.core.EN.LogValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Dokumentiert den Standartwert eines Objekts."];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="okw.seinputradio.SeInput\lRadio_EN_Test.tc_LogValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seinputradio_1_1_se_input_radio___e_n___test.html#aaae5b3c914a61fbf7e10692457040432",tooltip="Test des Schlüsselwortes LogTooltip für den GUI-Adapter SeInputRadio."];
+  Node2 [label="okw.core.EN_Keywords\l_NOK_Test.tc_A_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#accf1c3d2b1258a59b77ae759a7ee0aeb",tooltip="Prüft methoden aufruf für einen einfachen Click."];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="okw.core.EN_Keywords\l_NOK_Test.tc_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#a81a960a2341dfb0e27da7871291c84dc",tooltip="Prüft methoden aufruf für einen einfachen Click."];
+  Node3 [label="okw.seinputradio.SeInput\lRadio_EN_Test.tc_LogValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seinputradio_1_1_se_input_radio___e_n___test.html#aaae5b3c914a61fbf7e10692457040432",tooltip="Test des Schlüsselwortes LogTooltip für den GUI-Adapter SeInputRadio."];
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="okw.setextarea.SeTextarea\l_EN_Test.tcLogValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1setextarea_1_1_se_textarea___e_n___test.html#a0365394ad7d0c2fc05c902bab053ab5b",tooltip="Teste das Schlüsselwort LogLogValue( FN ) eines SeInputText Prüfen."];
   Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

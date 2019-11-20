@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 436, Datum: 11.17.2019 06:16:28</span>
+   &#160;<span id="projectnumber">Build_ID: 439, Datum: 11.20.2019 05:57:15</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -146,78 +146,63 @@ $(document).ready(function(){initNavTree('_e_n___verify_min_length___o_k_w_verif
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">import</span> okw.exceptions.OKWVerifyingFailsException;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">import</span> okw.log.Logger_Sngltn;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">import</span> org.junit.After;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">import</span> org.junit.AfterClass;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">import</span> org.junit.Before;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">import</span> org.junit.BeforeClass;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">import</span> org.junit.Rule;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">import</span> org.junit.Test;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">import</span> org.junit.rules.TestName;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">import</span> org.junit.AfterClass;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">import</span> org.junit.BeforeClass;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">import</span> org.junit.FixMethodOrder;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">import</span> org.junit.Rule;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">import</span> org.junit.Test;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">import</span> org.junit.rules.TestName;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">import</span> org.junit.runners.MethodSorters;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_e_n___verify_min_length___o_k_w_verifying_fails_exception___test.html">   55</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classokw_1_1core_1_1_e_n___verify_min_length___o_k_w_verifying_fails_exception___test.html">EN_VerifyMinLength_OKWVerifyingFailsException_Test</a> {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">static</span> <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a>     myLogger    = <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a525771433356af73ed6e94b35f31b541">getInstance</a>();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">static</span> <a class="code" href="classokw_1_1_o_k_w___test_clipboard.html">OKW_TestClipboard</a> myClipBoard = <a class="code" href="classokw_1_1_o_k_w___test_clipboard.html">OKW_TestClipboard</a>.getInstance();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  @Rule</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">public</span> TestName          name        = <span class="keyword">new</span> TestName();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  @BeforeClass</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> setUpBeforeClass() <span class="keywordflow">throws</span> Exception {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a> myLogger = <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a525771433356af73ed6e94b35f31b541">getInstance</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// Reset/init the Logger</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a>.init();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">// myLogger.AddLogger(new Log2Console());</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    myLogger.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a6796ba5135984457b710934c2d2f18b6">setDebugMode</a>( <span class="keyword">false</span> );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  @AfterClass</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> tearDownAfterClass() <span class="keywordflow">throws</span> Exception {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="comment">// / \~german</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="comment">// / \brief</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">// / Diese Methode wird immer vor jedem Test(fall) ausgeführt.</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="comment">// /</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  @Before</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> setUp() <span class="keywordflow">throws</span> Exception {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="comment">// / \~german</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="comment">// / \brief</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// / Diese Methode wird immer nach jedem Test(fall) ausgeführt.</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="comment">// /</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  @After</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">public</span> <span class="keywordtype">void</span> tearDown() <span class="keywordflow">throws</span> Exception {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="classokw_1_1core_1_1_e_n.html">EN</a>.<a class="code" href="classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f">EndTest</a>();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;   </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  @Test( expected = <a class="code" href="classokw_1_1exceptions_1_1_o_k_w_verifying_fails_exception.html">OKWVerifyingFailsException</a>.class )</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_e_n___verify_min_length___o_k_w_verifying_fails_exception___test.html#a4c594f80e9dc18904ba2615d18200507">  109</a></span>&#160;  public <span class="keywordtype">void</span> <a class="code" href="classokw_1_1core_1_1_e_n___verify_min_length___o_k_w_verifying_fails_exception___test.html#a4c594f80e9dc18904ba2615d18200507">tc_VerifyExists_ExistsYESExpectedNO_OKWVerifyingFailsException</a>() throws Exception {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="classokw_1_1core_1_1_e_n.html">EN</a>.<a class="code" href="classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69">BeginTest</a>( name.getMethodName() );</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classokw_1_1core_1_1_e_n.html">EN</a>.<a class="code" href="classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b">SelectWindow</a>( <span class="stringliteral">&quot;Rechner&quot;</span> );</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="classokw_1_1core_1_1_e_n.html">EN</a>.<a class="code" href="classokw_1_1core_1_1_e_n.html#a3de04697f1873ab6773a068a3159f1d1">SetValue</a>( <span class="stringliteral">&quot;All_MethodsObj&quot;</span>, <span class="stringliteral">&quot;2&quot;</span> );</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="classokw_1_1core_1_1_e_n.html">EN</a>.<a class="code" href="classokw_1_1core_1_1_e_n.html#abad2ee7e3f29c5de4cf2cff6c6a887ea">VerifyMinLength</a>( <span class="stringliteral">&quot;All_MethodsObj&quot;</span>, <span class="stringliteral">&quot;3&quot;</span> );</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;@FixMethodOrder(MethodSorters.NAME_ASCENDING)</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_e_n___verify_min_length___o_k_w_verifying_fails_exception___test.html">   57</a></span>&#160;public class <a class="code" href="classokw_1_1core_1_1_e_n___verify_min_length___o_k_w_verifying_fails_exception___test.html">EN_VerifyMinLength_OKWVerifyingFailsException_Test</a> {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">static</span> <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a>     myLogger    = <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a525771433356af73ed6e94b35f31b541">getInstance</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">static</span> <a class="code" href="classokw_1_1_o_k_w___test_clipboard.html">OKW_TestClipboard</a> myClipBoard = <a class="code" href="classokw_1_1_o_k_w___test_clipboard.html">OKW_TestClipboard</a>.getInstance();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  @Rule</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">public</span> TestName          name        = <span class="keyword">new</span> TestName();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  @BeforeClass</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> setUpBeforeClass() <span class="keywordflow">throws</span> Exception {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a> myLogger = <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a525771433356af73ed6e94b35f31b541">getInstance</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">// Reset/init the Logger</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classokw_1_1log_1_1_logger___sngltn.html">Logger_Sngltn</a>.init();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// myLogger.AddLogger(new Log2Console());</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    myLogger.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a6796ba5135984457b710934c2d2f18b6">setDebugMode</a>( <span class="keyword">false</span> );</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  @AfterClass</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> tearDownAfterClass() <span class="keywordflow">throws</span> Exception {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;   </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  @Test( expected = <a class="code" href="classokw_1_1exceptions_1_1_o_k_w_verifying_fails_exception.html">OKWVerifyingFailsException</a>.class )</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classokw_1_1core_1_1_e_n___verify_min_length___o_k_w_verifying_fails_exception___test.html#a4c594f80e9dc18904ba2615d18200507">   93</a></span>&#160;  public <span class="keywordtype">void</span> tc_VerifyExists_ExistsYESExpectedNO_OKWVerifyingFailsException() throws Exception {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="classokw_1_1core_1_1_e_n.html">EN</a>.<a class="code" href="classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69">BeginTest</a>( name.getMethodName() );</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="classokw_1_1core_1_1_e_n.html">EN</a>.<a class="code" href="classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b">SelectWindow</a>( <span class="stringliteral">&quot;Rechner&quot;</span> );</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="classokw_1_1core_1_1_e_n.html">EN</a>.<a class="code" href="classokw_1_1core_1_1_e_n.html#a3de04697f1873ab6773a068a3159f1d1">SetValue</a>( <span class="stringliteral">&quot;All_MethodsObj&quot;</span>, <span class="stringliteral">&quot;2&quot;</span> );</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="classokw_1_1core_1_1_e_n.html">EN</a>.<a class="code" href="classokw_1_1core_1_1_e_n.html#abad2ee7e3f29c5de4cf2cff6c6a887ea">VerifyMinLength</a>( <span class="stringliteral">&quot;All_MethodsObj&quot;</span>, <span class="stringliteral">&quot;3&quot;</span> );</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="classokw_1_1core_1_1_e_n.html">EN</a>.<a class="code" href="classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f">EndTest</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a6796ba5135984457b710934c2d2f18b6"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a6796ba5135984457b710934c2d2f18b6">okw.log.Logger_Sngltn.setDebugMode</a></div><div class="ttdeci">void setDebugMode(Boolean fpbDebugMode)</div><div class="ttdoc">setDebugMode:</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00068">Logger_Sngltn.java:68</a></div></div>
 <div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a525771433356af73ed6e94b35f31b541"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a525771433356af73ed6e94b35f31b541">okw.log.Logger_Sngltn.getInstance</a></div><div class="ttdeci">static Logger_Sngltn getInstance()</div><div class="ttdoc">Zentrale Logger-Klasse stellt Logger-Methoden innerhalb von OKW zur Verfügung.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00088">Logger_Sngltn.java:88</a></div></div>
-<div class="ttc" id="aclassokw_1_1core_1_1_e_n___verify_min_length___o_k_w_verifying_fails_exception___test_html"><div class="ttname"><a href="classokw_1_1core_1_1_e_n___verify_min_length___o_k_w_verifying_fails_exception___test.html">okw.core.EN_VerifyMinLength_OKWVerifyingFailsException_Test</a></div><div class="ttdef"><b>Definition:</b> <a href="_e_n___verify_min_length___o_k_w_verifying_fails_exception___test_8java_source.html#l00055">EN_VerifyMinLength_OKWVerifyingFailsException_Test.java:55</a></div></div>
+<div class="ttc" id="aclassokw_1_1core_1_1_e_n___verify_min_length___o_k_w_verifying_fails_exception___test_html"><div class="ttname"><a href="classokw_1_1core_1_1_e_n___verify_min_length___o_k_w_verifying_fails_exception___test.html">okw.core.EN_VerifyMinLength_OKWVerifyingFailsException_Test</a></div><div class="ttdef"><b>Definition:</b> <a href="_e_n___verify_min_length___o_k_w_verifying_fails_exception___test_8java_source.html#l00057">EN_VerifyMinLength_OKWVerifyingFailsException_Test.java:57</a></div></div>
 <div class="ttc" id="aclassokw_1_1core_1_1_e_n_html_abad2ee7e3f29c5de4cf2cff6c6a887ea"><div class="ttname"><a href="classokw_1_1core_1_1_e_n.html#abad2ee7e3f29c5de4cf2cff6c6a887ea">okw.core.EN.VerifyMinLength</a></div><div class="ttdeci">static void VerifyMinLength(String FN, String ExpVal)</div><div class="ttdoc">Checks the minimum number of characters that has to be entert.</div><div class="ttdef"><b>Definition:</b> <a href="_e_n_8java_source.html#l00713">EN.java:713</a></div></div>
 <div class="ttc" id="aclassokw_1_1core_1_1_e_n_html_aef613b0a3e6bb8a9623984db145cae69"><div class="ttname"><a href="classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69">okw.core.EN.BeginTest</a></div><div class="ttdeci">static void BeginTest(String Testname)</div><div class="ttdoc">Markiert den Anfang eines neuen Testfalls.</div><div class="ttdef"><b>Definition:</b> <a href="_e_n_8java_source.html#l00082">EN.java:82</a></div></div>
 <div class="ttc" id="aclassokw_1_1core_1_1_e_n_html"><div class="ttname"><a href="classokw_1_1core_1_1_e_n.html">okw.core.EN</a></div><div class="ttdoc">okw.core.EN ist die englische Implementation von OKW.</div><div class="ttdef"><b>Definition:</b> <a href="_e_n_8java_source.html#l00068">EN.java:68</a></div></div>
-<div class="ttc" id="aclassokw_1_1core_1_1_e_n___verify_min_length___o_k_w_verifying_fails_exception___test_html_a4c594f80e9dc18904ba2615d18200507"><div class="ttname"><a href="classokw_1_1core_1_1_e_n___verify_min_length___o_k_w_verifying_fails_exception___test.html#a4c594f80e9dc18904ba2615d18200507">okw.core.EN_VerifyMinLength_OKWVerifyingFailsException_Test.tc_VerifyExists_ExistsYESExpectedNO_OKWVerifyingFailsException</a></div><div class="ttdeci">void tc_VerifyExists_ExistsYESExpectedNO_OKWVerifyingFailsException()</div><div class="ttdoc">Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.</div><div class="ttdef"><b>Definition:</b> <a href="_e_n___verify_min_length___o_k_w_verifying_fails_exception___test_8java_source.html#l00109">EN_VerifyMinLength_OKWVerifyingFailsException_Test.java:109</a></div></div>
 <div class="ttc" id="aclassokw_1_1core_1_1_e_n_html_a3de04697f1873ab6773a068a3159f1d1"><div class="ttname"><a href="classokw_1_1core_1_1_e_n.html#a3de04697f1873ab6773a068a3159f1d1">okw.core.EN.SetValue</a></div><div class="ttdeci">static void SetValue(String FN, String fpsValue)</div><div class="ttdoc">Setzt den Wert des gegebenen Fensterobjekts auf den gegebenen Wert.</div><div class="ttdef"><b>Definition:</b> <a href="_e_n_8java_source.html#l00379">EN.java:379</a></div></div>
-<div class="ttc" id="aclassokw_1_1core_1_1_e_n_html_aa51cc1227f749efca4fd2801f5cb664f"><div class="ttname"><a href="classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f">okw.core.EN.EndTest</a></div><div class="ttdeci">static void EndTest()</div><div class="ttdoc">Signalisiert das Ende eines Testfalls.</div><div class="ttdef"><b>Definition:</b> <a href="_e_n_8java_source.html#l00109">EN.java:109</a></div></div>
+<div class="ttc" id="aclassokw_1_1core_1_1_e_n_html_aa51cc1227f749efca4fd2801f5cb664f"><div class="ttname"><a href="classokw_1_1core_1_1_e_n.html#aa51cc1227f749efca4fd2801f5cb664f">okw.core.EN.EndTest</a></div><div class="ttdeci">static void EndTest()</div><div class="ttdoc">Signalisiert das Ende eines Testfalls.</div><div class="ttdef"><b>Definition:</b> <a href="_e_n_8java_source.html#l00091">EN.java:91</a></div></div>
 <div class="ttc" id="aclassokw_1_1core_1_1_e_n_html_a2b61c2b39a9cfdbdfd25fe0e3d43785b"><div class="ttname"><a href="classokw_1_1core_1_1_e_n.html#a2b61c2b39a9cfdbdfd25fe0e3d43785b">okw.core.EN.SelectWindow</a></div><div class="ttdeci">static void SelectWindow(String FN)</div><div class="ttdoc">Setzt den Kontext auf das gegebene Fenster.</div><div class="ttdef"><b>Definition:</b> <a href="_e_n_8java_source.html#l00334">EN.java:334</a></div></div>
-<div class="ttc" id="aclassokw_1_1exceptions_1_1_o_k_w_verifying_fails_exception_html"><div class="ttname"><a href="classokw_1_1exceptions_1_1_o_k_w_verifying_fails_exception.html">okw.exceptions.OKWVerifyingFailsException</a></div><div class="ttdoc">OKWVerifyingFailsException-Ausnahme wird ausgelöst, wenn ein Soll-Ist-Vergleich fehlschlägt.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_verifying_fails_exception_8java_source.html#l00053">OKWVerifyingFailsException.java:53</a></div></div>
+<div class="ttc" id="aclassokw_1_1exceptions_1_1_o_k_w_verifying_fails_exception_html"><div class="ttname"><a href="classokw_1_1exceptions_1_1_o_k_w_verifying_fails_exception.html">okw.exceptions.OKWVerifyingFailsException</a></div><div class="ttdoc">OKWVerifyingFailsException-Ausnahme wird ausgelöst, wenn ein Soll-Ist-Vergleich fehlschlägt.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_verifying_fails_exception_8java_source.html#l00055">OKWVerifyingFailsException.java:55</a></div></div>
 <div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html">okw.log.Logger_Sngltn</a></div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00054">Logger_Sngltn.java:54</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___test_clipboard_html"><div class="ttname"><a href="classokw_1_1_o_k_w___test_clipboard.html">okw.OKW_TestClipboard</a></div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___test_clipboard_8java_source.html#l00044">OKW_TestClipboard.java:44</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
@@ -225,7 +210,7 @@ $(document).ready(function(){initNavTree('_e_n___verify_min_length___o_k_w_verif
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_90fd98a0ba30abf7a6068a44995d2d6b.html">src</a></li><li class="navelem"><a class="el" href="dir_221f38c42018e66bcc4731adbda1f302.html">test</a></li><li class="navelem"><a class="el" href="dir_7d11d078bf54f621f2f9e0dbb4b23dab.html">java</a></li><li class="navelem"><a class="el" href="dir_cd7042f6567675755d2a7d20e8cf9ca8.html">okw</a></li><li class="navelem"><a class="el" href="dir_5a98338ef88f03639644ae0bd40cba1e.html">core</a></li><li class="navelem"><b>EN_VerifyMinLength_OKWVerifyingFailsException_Test.java</b></li>
-    <li class="footer">Erzeugt am Son Nov 17 2019 06:17:48 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Nov 20 2019 05:58:40 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

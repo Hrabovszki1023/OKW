@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 436, Datum: 11.17.2019 06:16:28</span>
+   &#160;<span id="projectnumber">Build_ID: 439, Datum: 11.20.2019 05:57:15</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -349,7 +349,7 @@ $(document).ready(function(){initNavTree('_o_k_w___properties_8java_source.html'
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    }</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    </div>
-<div class="line"><a name="l00419"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w___properties.html#ac4b7b1ed4cbd9340dfe426d85dee6d9a">  419</a></span>&#160;    <span class="keyword">private</span> ArrayList&lt;String&gt; <a class="code" href="classokw_1_1_o_k_w___properties.html#ac4b7b1ed4cbd9340dfe426d85dee6d9a">getPropertiesFilesFromResources</a>(String folder) {</div>
+<div class="line"><a name="l00419"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w___properties.html#ac4b7b1ed4cbd9340dfe426d85dee6d9a">  419</a></span>&#160;    <span class="keyword">protected</span> ArrayList&lt;String&gt; <a class="code" href="classokw_1_1_o_k_w___properties.html#ac4b7b1ed4cbd9340dfe426d85dee6d9a">getPropertiesFilesFromResources</a>(String folder) {</div>
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___properties.html#a4a5949d85a49e52e8d3ee17f6d58cfbb">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>(<span class="stringliteral">&quot;OKW_Properties.getPropertiesFilesFromResources&quot;</span>, <span class="stringliteral">&quot;folder&quot;</span>, folder);</div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160; </div>
@@ -632,7 +632,17 @@ $(document).ready(function(){initNavTree('_o_k_w___properties_8java_source.html'
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;        }</div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;        <span class="keywordflow">return</span> Return;</div>
 <div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    }</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;}</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160; </div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    </div>
+<div class="line"><a name="l00801"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w___properties.html#aa57f3f3356c91b5ebc60d493ce5920d5">  801</a></span>&#160;   <span class="keyword">public</span> Boolean <a class="code" href="classokw_1_1_o_k_w___properties.html#aa57f3f3356c91b5ebc60d493ce5920d5">getProperty2Boolean</a>(String fpsKey, String fpsDefault )</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;   {</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;        Boolean lvbReturn = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160; </div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;        lvbReturn = Boolean.parseBoolean( getProperty( fpsKey, fpsDefault ) );</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;        </div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;        <span class="keywordflow">return</span> lvbReturn;</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    }</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassokw_1_1_o_k_w___properties_html_a4a5949d85a49e52e8d3ee17f6d58cfbb"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html#a4a5949d85a49e52e8d3ee17f6d58cfbb">okw.OKW_Properties.Log</a></div><div class="ttdeci">static Logger_Sngltn Log</div><div class="ttdoc">Zentrale Logger-Klasse stellt Logger-Methoden innerhalb von OKW zur Verfügung.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00054">OKW_Properties.java:54</a></div></div>
@@ -657,6 +667,7 @@ $(document).ready(function(){initNavTree('_o_k_w___properties_8java_source.html'
 <div class="ttc" id="aclassokw_1_1exceptions_1_1_o_k_w_file_does_not_exists_exception_html"><div class="ttname"><a href="classokw_1_1exceptions_1_1_o_k_w_file_does_not_exists_exception.html">okw.exceptions.OKWFileDoesNotExistsException</a></div><div class="ttdoc">OKWFileDoesNotExistsException-Ausnahme wird ausgelöst, wenn eine Datei nicht gefunden wird.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_file_does_not_exists_exception_8java_source.html#l00055">OKWFileDoesNotExistsException.java:55</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___properties_html_a0ebb8b3abc34c58218bb5c347eb5d3e5"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html#a0ebb8b3abc34c58218bb5c347eb5d3e5">okw.OKW_Properties.getPropertiesForKeysStartswith</a></div><div class="ttdeci">ArrayList&lt; String &gt; getPropertiesForKeysStartswith(String Startwith)</div><div class="ttdoc">Ermittelt alle Properties der keys, die mit dem gegebenen String Startwitth Anfangen.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00767">OKW_Properties.java:767</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___properties_html_a0d96699d0da3d5db7e742b78e7a33b8f"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html#a0d96699d0da3d5db7e742b78e7a33b8f">okw.OKW_Properties.PrintPropertiesSources</a></div><div class="ttdeci">void PrintPropertiesSources()</div><div class="ttdoc">Druckt die Gefundenen Propertie Quellen.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00659">OKW_Properties.java:659</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w___properties_html_aa57f3f3356c91b5ebc60d493ce5920d5"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html#aa57f3f3356c91b5ebc60d493ce5920d5">okw.OKW_Properties.getProperty2Boolean</a></div><div class="ttdeci">Boolean getProperty2Boolean(String fpsKey, String fpsDefault)</div><div class="ttdoc">Ermittelt den aktuellen Wert des Propertys gegeben mit dem Schlüssel fpsKey.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00801">OKW_Properties.java:801</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___properties_html_a8a4294aa27bf9f4f49e9f1991022d5c8"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html#a8a4294aa27bf9f4f49e9f1991022d5c8">okw.OKW_Properties.init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initialisiert diese Klasse:</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00179">OKW_Properties.java:179</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___properties_html_a71802fdc0a4666c9b93e4e3e4c2b66d7"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html#a71802fdc0a4666c9b93e4e3e4c2b66d7">okw.OKW_Properties.loadFromResource</a></div><div class="ttdeci">Boolean loadFromResource(String fpsResource)</div><div class="ttdoc">Lädt die Liste OKW_Properties.ResoursesProperties hinzufügen.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00492">OKW_Properties.java:492</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___properties_html_ac326e4635f05d96f0c4b1ee377d41096"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html#ac326e4635f05d96f0c4b1ee377d41096">okw.OKW_Properties.ResoursesProperties</a></div><div class="ttdeci">ArrayList&lt; String &gt; ResoursesProperties</div><div class="ttdoc">Liste der einzubindenen *.properties Dateien, die aus den Resourcen Verzeichnissen.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00080">OKW_Properties.java:80</a></div></div>
@@ -668,7 +679,7 @@ $(document).ready(function(){initNavTree('_o_k_w___properties_8java_source.html'
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_90fd98a0ba30abf7a6068a44995d2d6b.html">src</a></li><li class="navelem"><a class="el" href="dir_3fdb55be625affb78b03858da3433959.html">main</a></li><li class="navelem"><a class="el" href="dir_6d0f1805523af42a675fba128cf43f17.html">java</a></li><li class="navelem"><a class="el" href="dir_4033e6e92f3135934576652cf36bd385.html">okw</a></li><li class="navelem"><b>OKW_Properties.java</b></li>
-    <li class="footer">Erzeugt am Son Nov 17 2019 06:17:48 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Nov 20 2019 05:58:40 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

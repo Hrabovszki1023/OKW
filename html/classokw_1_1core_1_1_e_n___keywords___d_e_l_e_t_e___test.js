@@ -1,6 +1,5 @@
 var classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test =
 [
-    [ "setUp", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#a5fd83d007eae481de40a119b422c4e14", null ],
     [ "tcMemorizeCaption_DELETE_2_OKWNotAllowedValueException", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#a2369f91bd040d11da45370ebf45e345f", null ],
     [ "tcMemorizeCaption_DELETE_OKWNotAllowedValueException", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#adc641dc77f86b9137438b9c3350029bc", null ],
     [ "tcMemorizeExists_DELETE_2_OKWNotAllowedValueException", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#a028b95cbc55ff7e8ce2388ddad9fb0c2", null ],
@@ -69,6 +68,5 @@ var classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test =
     [ "tcVerifyValue_DELETE_OKWNotAllowedValueException", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#aae602982b426a943d82429e91439b45f", null ],
     [ "tcVerifyValueREGX_DELETE_OKWNotAllowedValueException", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#a4aa1bb061c379ae1df0d71f030a7d4f7", null ],
     [ "tcVerifyValueWCM_DELETE_OKWNotAllowedValueException", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#aa4c47815f67146ffdf5bc4025189bf1c", null ],
-    [ "tearDown", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#ad2fe30389b1a5cc36f911a356eb7ac3b", null ],
     [ "name", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#a9e0e7e6ac6687b5cc015c9f9f64a2f28", null ]
 ];

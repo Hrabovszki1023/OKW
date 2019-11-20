@@ -8,8 +8,6 @@ var classokw_1_1core_1_1_matcher___lev_regx_wild =
     [ "RegexMatch_1", "classokw_1_1core_1_1_matcher___lev_regx_wild.html#a1ba68b83f152341d7532a3ab5de8586a", null ],
     [ "RegexMatch_2", "classokw_1_1core_1_1_matcher___lev_regx_wild.html#a411d0ffece5af45a91d30038b64cf508", null ],
     [ "RegexMatch_3", "classokw_1_1core_1_1_matcher___lev_regx_wild.html#a819cef25c905740c0c7a7491b98e1a41", null ],
-    [ "setUp", "classokw_1_1core_1_1_matcher___lev_regx_wild.html#af75b325b0089fee5e35d2d58f9a0fc9e", null ],
-    [ "tearDown", "classokw_1_1core_1_1_matcher___lev_regx_wild.html#a290924f6002d5a828aa50237eb07b794", null ],
     [ "WildcardMatch_1", "classokw_1_1core_1_1_matcher___lev_regx_wild.html#a38c4493f4e975ef2cb8247eaa127c8c4", null ],
     [ "WildcardMatch_2", "classokw_1_1core_1_1_matcher___lev_regx_wild.html#ab4ed0dc4817d88d1f2e481da912040a8", null ],
     [ "WildcardMatch_3", "classokw_1_1core_1_1_matcher___lev_regx_wild.html#afb40b8a95c222b6d8bc9d56be7aead22", null ]
