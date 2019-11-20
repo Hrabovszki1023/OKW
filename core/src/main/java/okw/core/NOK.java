@@ -104,7 +104,7 @@ public class NOK implements IOKW_State
             OKW_Memorize_Sngltn.getInstance().set( "TCN", fpsTestname );
 
             Log.LogPrint( "NOK -> OK" );
-            this._Kernel.SetCurrentState( new OK( this._Kernel ) );
+            this._Kernel.SetCoreStateOK();
         }
         catch (XPathExpressionException | JAXBException | ParserConfigurationException | SAXException | IOException e)
         {

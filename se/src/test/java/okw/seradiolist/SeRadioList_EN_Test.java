@@ -1,12 +1,16 @@
 package okw.seradiolist;
 
 import static org.junit.Assert.*;
+
+import org.junit.FixMethodOrder;
+
 import okw.core.EN;
 import okw.exceptions.*;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
 
 /**
@@ -27,6 +31,7 @@ import org.junit.rules.TestName;
  * @author Zoltan Hrabovszki
  * @date 2014.12.03
  */
+@FixMethodOrder( MethodSorters.NAME_ASCENDING )
 public class SeRadioList_EN_Test
 {
 	/** 

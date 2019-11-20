@@ -37,6 +37,9 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 
 
 import static org.junit.Assert.*;
+
+import org.junit.FixMethodOrder;
+
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
@@ -46,6 +49,7 @@ import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
      /**
      * \~
@@ -62,6 +66,7 @@ import org.junit.rules.TestName;
      *
      */
     @Ignore("Ignoring the whole fixture")
+    @FixMethodOrder( MethodSorters.NAME_ASCENDING )
     public class SeInputButton_EN_Test
     {
     	protected OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
@@ -634,6 +639,8 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("InputButton");
                 EN.VerifyExists("Does Not Exists", "YES");
+                
+                EN.EndTest();
         }
 
         // \~german
@@ -653,6 +660,8 @@ import org.junit.rules.TestName;
             
             EN.SelectWindow("InputButton");
             EN.VerifyExists("Text_1", "NO");
+            
+            EN.EndTest();
         }
 
   // \~german

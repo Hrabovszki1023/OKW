@@ -9,6 +9,7 @@ import okw.exceptions.OKWNotAllowedValueException;
 
 import org.junit.*;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
 
 /**
@@ -17,6 +18,7 @@ import org.junit.rules.TestName;
 * 
 * @author zoltan
 */
+@FixMethodOrder( MethodSorters.NAME_ASCENDING )
 public class SeInputCheckbox_EN_Test
 {
 	protected String cvsObjektName = "SeCheckBox";
@@ -148,6 +150,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.VerifyIsActive("Pilze", "NO");
+
+                EN.EndTest();
         }
 
         // \brief
@@ -162,6 +166,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.VerifyIsActive("Disabled", "YES");
+
+                EN.EndTest();
         }
 
         // \brief
@@ -509,6 +515,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.VerifyExists("Salami", "NO");
+                
+                EN.EndTest();
         }
 
         // \brief
@@ -607,6 +615,8 @@ public class SeInputCheckbox_EN_Test
 
                 EN.SelectWindow("SeCheckBox");
                 EN.VerifyTooltip("Salami", "XXXTitle: Salami");
+
+                EN.EndTest();
         }
 
         @Test
@@ -633,6 +643,8 @@ public class SeInputCheckbox_EN_Test
 
                 EN.SelectWindow("SeCheckBox");
                 EN.VerifyTooltipWCM("Salami", "#itle: Salami");
+
+                EN.EndTest();
         }
         
         
@@ -660,6 +672,8 @@ public class SeInputCheckbox_EN_Test
 
                 EN.SelectWindow("SeCheckBox");
                 EN.VerifyTooltipREGX("Salami", "\\Witle: Salami");
+
+                EN.EndTest();
         }
 
         
@@ -685,14 +699,14 @@ public class SeInputCheckbox_EN_Test
 
                 EN.SelectWindow("SeCheckBox");
                 EN.VerifyLabel("Salami", "Sulami");
+
+                EN.EndTest();
         }
 
 
         @Test
         public void tcVerifyLabelWCM() throws Exception
         {
-            try
-            {
                 EN.BeginTest( name.getMethodName() );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
@@ -700,14 +714,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
                 EN.VerifyLabelWCM("Salami", "?alami");
 
-                // ImplementationMatrix.Instance.SetImplementation(cvsObjektName, "VerifyTooltip", "P");
-            }
-            catch ( Exception e )
-            {
-                // ImplementationMatrix.Instance.SetImplementation(cvsObjektName, "VerifyTooltip", "F");
-                throw e;
-            }
-        }
+                EN.EndTest();
+         }
 
         
         @Test( expected = OKWVerifyingFailsException.class )
@@ -719,6 +727,8 @@ public class SeInputCheckbox_EN_Test
 
                 EN.SelectWindow("SeCheckBox");
                 EN.VerifyLabelWCM("Salami", "?ulami");
+
+                EN.EndTest();
         }
        
         
@@ -841,6 +851,7 @@ public class SeInputCheckbox_EN_Test
                 EN.VerifyValue("Salami", "CHECKED");
 
                 EN.StopApp( ApplicationName );
+                
                 EN.EndTest();
         }
 
@@ -855,6 +866,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.ClickOn( "NotExists");
+                
+                EN.EndTest();
         }
 
         @Test( expected = OKWGUIObjectNotFoundException.class )
@@ -867,6 +880,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.Select( "NotExists", "abc");
+                
+                EN.EndTest();
         }
 
         @Test( expected = OKWGUIObjectNotFoundException.class )
@@ -879,6 +894,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.TypeKey( "NotExists", "abc");
+                
+                EN.EndTest();
         }
         
         @Test( expected = OKWGUIObjectNotFoundException.class )
@@ -891,6 +908,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.SetValue( "NotExists", "abc");
+                
+                EN.EndTest();
         }
         
         @Test( expected = OKWGUIObjectNotFoundException.class )
@@ -903,6 +922,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.SetFocus( "NotExists");
+                
+                EN.EndTest();
         }
         
         
@@ -916,6 +937,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.MemorizeCaption( "NotExists", "MemorizeCaption");
+                
+                EN.EndTest();
         }
 
         
@@ -929,7 +952,9 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.MemorizeHasFocus( "NotExists", "MemorizeHasFocus");
-        }
+                
+                EN.EndTest();
+       }
         
         
         @Test( expected = OKWGUIObjectNotFoundException.class )
@@ -942,6 +967,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.MemorizeIsActive( "NotExists", "MemorizeIsActive");
+                
+                EN.EndTest();
         }
         
         
@@ -955,6 +982,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.MemorizeLabel( "NotExists", "MemorizeLabel");
+                
+                EN.EndTest();
         }
         
         
@@ -968,6 +997,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.MemorizeTooltip( "NotExists", "MemorizeTooltip");
+                
+                EN.EndTest();
         }
 
         
@@ -981,6 +1012,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.MemorizeValue( "NotExists", "MemorizeVale");
+                
+                EN.EndTest();
         }
 
         
@@ -994,6 +1027,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.LogCaption( "NotExists");
+                
+                EN.EndTest();
         }
 
         
@@ -1007,6 +1042,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.LogHasFocus( "NotExists");
+                
+                EN.EndTest();
         }
         
         
@@ -1020,6 +1057,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.LogIsActive( "NotExists");
+                
+                EN.EndTest();
         }
         
         
@@ -1033,6 +1072,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.LogLabel( "NotExists");
+                
+                EN.EndTest();
         }
         
         
@@ -1046,6 +1087,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.LogTooltip( "NotExists");
+                
+                EN.EndTest();
         }
 
         
@@ -1059,7 +1102,10 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.LogValue( "NotExists");
+                
+                EN.EndTest();
         }
+
         @Test( expected = OKWGUIObjectNotFoundException.class )
         public void tcVerifyCaption_OKWGUIObjectNotFoundException() throws Exception
         {
@@ -1070,6 +1116,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.VerifyCaption( "NotExists", "aa");
+                
+                EN.EndTest();
         }
 
         
@@ -1083,6 +1131,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.VerifyHasFocus( "NotExists", "YES");
+                
+                EN.EndTest();
         }
         
         
@@ -1096,6 +1146,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.VerifyIsActive( "NotExists", "YES" );
+                
+                EN.EndTest();
         }
         
         
@@ -1109,6 +1161,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.VerifyLabel( "NotExists", "aa" );
+                
+                EN.EndTest();
         }
         
         
@@ -1122,6 +1176,8 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.VerifyTooltip( "NotExists", "aa");
+                
+                EN.EndTest();
         }
 
         
@@ -1135,5 +1191,7 @@ public class SeInputCheckbox_EN_Test
                 EN.SelectWindow("SeCheckBox");
 
                 EN.VerifyValue( "NotExists", "aa");
+                
+                EN.EndTest();
         }
 }

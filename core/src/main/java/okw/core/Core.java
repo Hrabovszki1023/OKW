@@ -93,6 +93,26 @@ public class Core implements IOKW_State
      */
     private IOKW_State           CurrentState;
     
+    // 
+    private static Boolean     VerifyFail = false;
+    
+    /**
+     * @return the verifyFail
+     */
+    public  Boolean getVerifyFail()
+    {
+        return VerifyFail;
+    }
+
+    /**
+     * @param verifyFail the verifyFail to set
+     */
+    public void setVerifyFail( Boolean verifyFail )
+    {
+        VerifyFail = verifyFail;
+    }
+
+
     /**
      * \~german
      *  Enthält die Exception, weshalb die Ausführung des Testfalls abgebrochen worden ist.
@@ -104,7 +124,7 @@ public class Core implements IOKW_State
      * @author Zoltán Hrabovszki
      * @date 2019-11-19
      */
-    protected static Exception NOK_Reason;
+    protected static Exception NOK_Reason = null;
     
     /**
      * @return the nOK_Reason
@@ -122,10 +142,20 @@ public class Core implements IOKW_State
         NOK_Reason = nOK_Reason;
     }
     
-    public void SetKernaleStateNOK( )
+ 
+    public void SetCoreStateNOK( )
     {
         this.SetCurrentState( new NOK( this ) );
     }
+    
+    
+    public void SetCoreStateOK( )
+    {
+        this.SetCurrentState( new OK( this ) );
+        this.setVerifyFail( false );
+        this.setNOK_Reason( null );
+    }
+    
     
     /**
      * \~german 
@@ -137,7 +167,7 @@ public class Core implements IOKW_State
      * @author Zoltán Hrabovszki
      * @date 2014.01.09
      */
-    public void SetCurrentState( IOKW_State fp_CurrentState )
+    private void SetCurrentState( IOKW_State fp_CurrentState )
     {
         this.CurrentState = fp_CurrentState;
     }
@@ -178,7 +208,6 @@ public class Core implements IOKW_State
         try
         {
             Init();
-
             this.SetCurrentState( new OK( this ) );
         }
         catch (Exception e)

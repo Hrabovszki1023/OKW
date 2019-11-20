@@ -71,9 +71,9 @@ public class EN
     private static String        Language = "EN";
     private static Core          myKernel = new Core();
 
-    public static void SetKernaleStateNOK()
+    public static void SetCoreStateNOK()
     {
-        myKernel.SetKernaleStateNOK( );
+        myKernel.SetCoreStateNOK( );
     }
     
     /**
@@ -83,6 +83,15 @@ public class EN
     {
         myKernel.setLanguage( Language );
         myKernel.BeginTest( Testname );
+    }
+
+    /**
+     *  \copydoc IOKW_State::EndTest()
+     */
+    public static void EndTest() throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.EndTest();
     }
 
     /**
@@ -101,15 +110,6 @@ public class EN
     {
         myKernel.setLanguage( Language );
         myKernel.DoubleClickOn( FN );
-    }
-
-    /**
-     *  \copydoc IOKW_State::EndTest()
-     */
-    public static void EndTest() throws Exception
-    {
-        myKernel.setLanguage( Language );
-        myKernel.EndTest();
     }
 
     /**

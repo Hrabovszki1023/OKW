@@ -153,7 +153,7 @@ public class OK implements IOKW_State
             {
                 // Change State to NOK if Property core.AbbortOnVerifyFail is true
                 logException( e, e_Wrapped );
-                this._Kernel.SetCurrentState( new NOK( this._Kernel ) );
+                this._Kernel.SetCoreStateNOK( );
             }
             else
             {   // Wenn nicht abbgebrochen werden soll dann bleiben wir im State OK!
@@ -169,7 +169,7 @@ public class OK implements IOKW_State
             // ... then get the origin exception.
             e = ( Exception ) e.getCause();
             logException( e, e_Wrapped );
-            this._Kernel.SetCurrentState( new NOK( this._Kernel ) );
+            this._Kernel.SetCoreStateNOK( );
             _Kernel.setNOK_Reason( e );
         }
         else if ( e instanceof RuntimeException )
@@ -177,7 +177,7 @@ public class OK implements IOKW_State
             // ... then get the origin exception.
             e_Wrapped = ( Exception ) e.getCause();
             logException( e, e_Wrapped );
-            this._Kernel.SetCurrentState( new NOK( this._Kernel ) );
+            this._Kernel.SetCoreStateNOK( );
             _Kernel.setNOK_Reason( e );
         }
     }
@@ -212,6 +212,8 @@ public class OK implements IOKW_State
         try
         {
             OKW_Memorize_Sngltn.getInstance().set( "TCN", fpsTestname );
+            
+            this._Kernel.SetCoreStateOK();
         }
         catch (Exception e)
         {
