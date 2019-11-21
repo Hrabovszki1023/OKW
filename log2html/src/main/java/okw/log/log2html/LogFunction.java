@@ -1,5 +1,6 @@
 package okw.log.log2html;
 
+import org.apache.commons.text.StringEscapeUtils;
 
 public class LogFunction extends LogBaseNode
 {
@@ -58,7 +59,7 @@ public class LogFunction extends LogBaseNode
 		
 		if (!this.myLogs.isEmpty())
 		{
-			sbResult.append( lvsIndention + myIndentionBase +  myIndentionBase + "<div class='FoldMe' href='javascript:/' onClick='div_change(" + myID.toString() + ")'></div>\n" );
+			sbResult.append( lvsIndention + myIndentionBase +  myIndentionBase + "<div class='FoldMe' onClick='div_change(" + myID.toString() + ")'></div>\n" );
 		}
 		
 		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Duration'>" + this.myDuration.getSeconds("#0.000") + " s</div>" );
@@ -82,12 +83,12 @@ public class LogFunction extends LogBaseNode
 
 		if (this.bException || this.bError )
 		{
-			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_Fail'>" + this.Info + "</div>\n" );
+			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_Fail'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</div>\n" );
 		}
 		else
 		{
 			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='SuccessSign' title='Success...'></div>\n" );
-			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_Pass'>" + this.Info + "</div>\n" );
+			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_Pass'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</div>\n" );
 		}
 
 		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "</div>\n" ); // end Header
@@ -100,7 +101,7 @@ public class LogFunction extends LogBaseNode
 			sbResult.append( myLog.getHTMLResult() );
 		}
 		
-		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div>Return: "+ this.myReturn +"</div>\n" ); // Return-Value at the end...
+		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div>Return: "+ StringEscapeUtils.escapeHtml4(this.myReturn) +"</div>\n" ); // Return-Value at the end...
 		
 		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "</div>\n" ); // end Body
 		

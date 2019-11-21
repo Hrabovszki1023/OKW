@@ -1,4 +1,4 @@
-<script language='JavaScript'>
+<script>
 	function div_change()
 	{
 		for (i = 0; i < div_change.arguments.length; i++)

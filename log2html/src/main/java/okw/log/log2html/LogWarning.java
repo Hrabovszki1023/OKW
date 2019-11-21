@@ -1,5 +1,6 @@
 package okw.log.log2html;
 
+import org.apache.commons.text.StringEscapeUtils;
 
 public class LogWarning extends LogBaseLeaf
 {
@@ -19,7 +20,7 @@ public class LogWarning extends LogBaseLeaf
 		
 		String lvsIndention = this.getLevelIndention();
 		
-		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogWarning'>" + this.Info + "</p>\n" );
+		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogWarning'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</p>\n" );
 		
 		return sbResult.toString();
 	}

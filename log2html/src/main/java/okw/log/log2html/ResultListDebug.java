@@ -1,5 +1,7 @@
 package okw.log.log2html;
 
+import org.apache.commons.text.StringEscapeUtils;
+
 public class ResultListDebug extends LogBaseNode
 {
     
@@ -42,10 +44,10 @@ public class ResultListDebug extends LogBaseNode
 		// Aufklappen wenn myLogs Werte enthält...
 		if (!this.myLogs.isEmpty())
 		{
-			sbResult.append( lvsIndention + myIndentionBase +  myIndentionBase + "<div class='FoldMe' href='javascript:/' onClick='div_change(" + myID.toString() + ")'></div>\n" );
+			sbResult.append( lvsIndention + myIndentionBase +  myIndentionBase + "<div class='FoldMe' onClick='div_change(" + myID.toString() + ")'></div>\n" );
 		}
 		
-		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_ResultListDebug'>" + this.Info + "</div>\n" );
+		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_ResultListDebug'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</div>\n" );
 		
 		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "</div>\n" ); // end Header
 		

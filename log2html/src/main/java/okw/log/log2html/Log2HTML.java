@@ -1,9 +1,13 @@
 package okw.log.log2html;
 
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.util.List;
 import java.util.Locale;
 import java.util.Stack;
@@ -505,9 +509,8 @@ public class Log2HTML extends LogBaseNode implements ILogger
     {
     	StringBuilder myResult = new StringBuilder();
     	
-    	myResult.append("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n");
-    	myResult.append("<html xmlns=\"http://www.w3.org/1999/xhtml\">\n");
-
+    	myResult.append("<!DOCTYPE html>\n");
+    	myResult.append("<html lang=\"en\">\n");
     	myResult.append("<head>\n");
     	myResult.append("\t<title>TestPage Titel</title>\n");
     	
@@ -520,22 +523,11 @@ public class Log2HTML extends LogBaseNode implements ILogger
         
     	myResult.append( "\t<style>\n" );
     	myResult.append( getStyleSheet() );
-    	myResult.append( getFoldScript() );
     	myResult.append( "\t</style>\n" );
-    	
-    	// -----------------------------------------
-    	// Log2HTML in HTML einbinden...
-    	myResult.append("\t<script language='JavaScript'>\n");
-    	myResult.append("\tfunction div_change() {\n");
-    	myResult.append("\t\tfor (i = 0; i < div_change.arguments.length; i++) {\n");
-    	myResult.append("\t\tvar _id = div_change.arguments[i];\n");
-    	myResult.append("\t\tdocument.getElementById(_id).style.display = (document.getElementById(_id).style.display == 'none' ) ? 'block' : 'none';\n");
-    	myResult.append("\t\t}\n");
-    	myResult.append("\t}\n");
-    	myResult.append("\t</script>\n");
     	
     	myResult.append("</head>\n");
     	myResult.append("<body>\n");
+    	myResult.append( getFoldScript() );
     	myResult.append("<div class=OKW_Logo title='www.openkeyword.de'></div>\n");
     	myResult.append("<h1>OpenKeyWord Testlog</h1>\n");
     	return myResult.toString();
@@ -587,7 +579,7 @@ public class Log2HTML extends LogBaseNode implements ILogger
     	myResult.append("<h2>Test Statistics</h2>\n");
  
     	
-    	myResult.append("<p><table class='statistics'>\n");   	
+    	myResult.append("<table class='statistics'>\n");   	
 
     	myResult.append("\t<thead  class='statistics'>\n");
     	myResult.append("\t\t<tr class='statistics'>\n");    	
@@ -598,62 +590,60 @@ public class Log2HTML extends LogBaseNode implements ILogger
     	myResult.append("\t</thead>\n");
 
     	
-    	myResult.append("\t<tbody>\n");
+    	// myResult.append("\t<tbody>\n");
     	
     	myResult.append("\t\t<tr>\n");    	
-    	myResult.append("\t\t\t<td align='right'>Errors:</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + ErrorCount.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td class='right'>Errors:</td>\n");
+    	myResult.append("\t\t\t<td class='center'>" + ErrorCount.toString() + "</td>\n");
     	myResult.append("\t\t\t<td colspan='3'></td>\n");
     	myResult.append("\t\t</tr>\n");
     	
     	myResult.append("\t\t<tr>\n");    	
-    	myResult.append("\t\t\t<td align='right'>Exceptions:</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + ExceptionCount.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td class='right'>Exceptions:</td>\n");
+    	myResult.append("\t\t\t<td class='center'>" + ExceptionCount.toString() + "</td>\n");
        	myResult.append("\t\t\t<td colspan='3'></td>\n");    	myResult.append("\t\t</tr>\n");
 
     	myResult.append("\t\t<tr>\n");    	
-    	myResult.append("\t\t\t<td align='right'>Warnings:</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + WarningCount.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td class='right'>Warnings:</td>\n");
+    	myResult.append("\t\t\t<td class='center'>" + WarningCount.toString() + "</td>\n");
        	myResult.append("\t\t\t<td colspan='3'></td>\n");    	myResult.append("\t\t</tr>\n");
 
     	myResult.append("\t\t<tr>\n");    	
-    	myResult.append("\t\t\t<td align='right'>Passed:</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + PassedCount.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td class='right'>Passed:</td>\n");
+    	myResult.append("\t\t\t<td class='center'>" + PassedCount.toString() + "</td>\n");
        	myResult.append("\t\t\t<td colspan='3'></td>\n");    	myResult.append("\t\t</tr>\n");
 
        	
-    	myResult.append("\t<thead  class='statistics'>\n");
     	myResult.append("\t\t<tr class='statistics'>\n");    	
     	myResult.append("\t\t\t<th></th>\n");
-    	myResult.append("\t\t\t<th width='60px'>Count</th>\n");
-    	myResult.append("\t\t\t<th width='60px'>Pass</th>\n");
-    	myResult.append("\t\t\t<th width='60px'>Fail</th>\n");
+    	myResult.append("\t\t\t<th class='widthfix'>Count</th>\n");
+    	myResult.append("\t\t\t<th class='widthfix'>Pass</th>\n");
+    	myResult.append("\t\t\t<th class='widthfix'>Fail</th>\n");
     	myResult.append("\t\t\t<th>Pass-Fail-Rate</th>\n");
     	myResult.append("\t\t</tr>\n");
-    	myResult.append("\t</thead>\n");
     	
     	myResult.append("\t\t<tr>\n");    	
-    	myResult.append("\t\t\t<td align='right'>Test cases:</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + TestcaseCount.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + TestcasePass.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + TestcaseFail.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td class='right'>Test cases:</td>\n");
+    	myResult.append("\t\t\t<td class='center'>" + TestcaseCount.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td class='center'>" + TestcasePass.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td class='center'>" + TestcaseFail.toString() + "</td>\n");
     	myResult.append("\t\t\t<td>" + getFailPassBar(TestcaseFail, TestcaseCount - TestcaseFail) + "</td>\n");
     	myResult.append("\t\t</tr>\n");
 
 
     	myResult.append("\t\t<tr>\n");    	
-    	myResult.append("\t\t\t<td align='right'>Sequences:</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + SequenceCount.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + SequencePass.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + SequenceFail.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td class='right'>Sequences:</td>\n");
+    	myResult.append("\t\t\t<td class='center'>" + SequenceCount.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td class='center'>" + SequencePass.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td class='center'>" + SequenceFail.toString() + "</td>\n");
     	myResult.append("\t\t\t<td >" + getFailPassBar(SequenceFail, SequenceCount - SequenceFail) + "</td>\n");
     	myResult.append("\t\t</tr>\n");
 
     	myResult.append("\t\t<tr>\n");    	
-    	myResult.append("\t\t\t<td align='right'>Keywords:</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + KeyWordCount.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + KeyWordPass.toString() + "</td>\n");
-    	myResult.append("\t\t\t<td align='center'>" + KeyWordFail.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td class='right'>Keywords:</td>\n");
+    	myResult.append("\t\t\t<td class='center'>" + KeyWordCount.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td class='center'>" + KeyWordPass.toString() + "</td>\n");
+    	myResult.append("\t\t\t<td class='center'>" + KeyWordFail.toString() + "</td>\n");
     	myResult.append("\t\t\t<td>" + getFailPassBar(KeyWordFail, KeyWordCount-KeyWordFail) + "</td>\n");
     	myResult.append("\t\t</tr>\n");
 
@@ -663,15 +653,15 @@ public class Log2HTML extends LogBaseNode implements ILogger
     	
     	
     	myResult.append("\t\t<tr>\n");    	
-    	myResult.append("\t\t\t<td align='right'>Start time:</td>\n");
-    	myResult.append("\t\t\t<td align='center' colspan='4'>" + this.myDuration.getStartTime() + "</td>\n");
+    	myResult.append("\t\t\t<td class='right'>Start time:</td>\n");
+    	myResult.append("\t\t\t<td class='center' colspan='4'>" + this.myDuration.getStartTime() + "</td>\n");
     	myResult.append("\t\t</tr>\n");
     	
     	myResult.append("\t\t<tr>\n");    	
-    	myResult.append("\t\t\t<td align='right'>End time:</td>\n");
-    	myResult.append("\t\t\t<td align='center' colspan='4'>" + this.myDuration.getEndTime() + "</td>\n");
+    	myResult.append("\t\t\t<td class='right'>End time:</td>\n");
+    	myResult.append("\t\t\t<td class='center' colspan='4'>" + this.myDuration.getEndTime() + "</td>\n");
     	myResult.append("\t\t</tr>\n");
-    	myResult.append("</table></p>\n");
+    	myResult.append("</table>\n");
     	
        	return myResult.toString();
     }
@@ -696,7 +686,7 @@ public class Log2HTML extends LogBaseNode implements ILogger
     }
     
     
-    public void Result2HTML(String fpsFilename)
+    public void old_Result2HTML(String fpsFilename)
     {
  
     	StringBuilder myResult = new StringBuilder();
@@ -712,20 +702,50 @@ public class Log2HTML extends LogBaseNode implements ILogger
 			myResult.append(getHTMLResult());
 			myResult.append(getHTMLFooter());
    
+	        File fileDir = new File( fpsFilename );
+            
+	        Writer out = new BufferedWriter(new OutputStreamWriter( new FileOutputStream(fileDir), "UTF8"));
 
-		    FileWriter fw = new FileWriter(fpsFilename);
-		    BufferedWriter bw = new BufferedWriter(fw);
-
-		    bw.write( myResult.toString() );
-
-		    bw.close();
-			}
+	        out.append(myResult.toString());
+	        
+	        out.flush();
+	        out.close();
+	        }
 			catch(Exception e)
 			{
 			 System.out.print(e.getMessage());
 			}
     }
 
+    public void Result2HTML( String fpsFilename )
+    {
+
+        StringBuilder myResult = new StringBuilder();
+
+        try
+        {
+
+            StopAllTimerAndEmptyStack();
+
+            myResult.append( getHTMLHeader() );
+            myResult.append( getHTMLStatistics() );
+
+            myResult.append( "<h2>Result Log</h2>\n" );
+            myResult.append( getHTMLResult() );
+            myResult.append( getHTMLFooter() );
+
+            FileWriter fw = new FileWriter( fpsFilename );
+            BufferedWriter bw = new BufferedWriter( fw );
+
+            bw.write( myResult.toString() );
+
+            bw.close();
+        }
+        catch (Exception e)
+        {
+            System.out.print( e.getMessage() );
+        }
+    }
     
 	protected String getHTMLResult()
 	{

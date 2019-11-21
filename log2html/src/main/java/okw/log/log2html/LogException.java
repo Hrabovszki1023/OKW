@@ -1,5 +1,7 @@
 package okw.log.log2html;
 
+import org.apache.commons.text.StringEscapeUtils;
+
 public class LogException extends LogBaseLeaf
 {
 
@@ -19,7 +21,7 @@ public class LogException extends LogBaseLeaf
 		
 		String lvsIndention = this.getLevelIndention();
 		
-		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogException'>" + this.Info + "</p>\n" );
+		sbResult.append( lvsIndention + myIndentionBase + "<p class='LogException'>" + StringEscapeUtils.escapeHtml4(this.Info) + "</p>\n" );
 		
 		return sbResult.toString();
 	}
