@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 442, Datum: 11.20.2019 20:01:53</span>
+   &#160;<span id="projectnumber">Build_ID: 443, Datum: 11.21.2019 07:38:58</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -102,52 +102,54 @@ $(document).ready(function(){initNavTree('_log_exception_8java_source.html','');
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>okw.log.log2html;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classokw_1_1log_1_1log2html_1_1_log_exception.html">    3</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classokw_1_1log_1_1log2html_1_1_log_exception.html">LogException</a> <span class="keyword">extends</span> <a class="code" href="classokw_1_1log_1_1log2html_1_1_log_base_leaf.html">LogBaseLeaf</a></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keyword">protected</span> <a class="code" href="classokw_1_1log_1_1log2html_1_1_log_exception.html">LogException</a>( <a class="code" href="classokw_1_1log_1_1log2html_1_1_log_base.html">LogBase</a> fpParent, String fpsInfo )</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        Info = fpsInfo;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        myID = AllCount;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        setParent(fpParent);        </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        ExceptionCount();   </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    @Override</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">protected</span> String getHTMLResult()</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        StringBuilder sbResult = <span class="keyword">new</span> StringBuilder();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        String lvsIndention = this.getLevelIndention();</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> org.apache.commons.text.StringEscapeUtils;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classokw_1_1log_1_1log2html_1_1_log_exception.html">    5</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classokw_1_1log_1_1log2html_1_1_log_exception.html">LogException</a> <span class="keyword">extends</span> <a class="code" href="classokw_1_1log_1_1log2html_1_1_log_base_leaf.html">LogBaseLeaf</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">protected</span> <a class="code" href="classokw_1_1log_1_1log2html_1_1_log_exception.html">LogException</a>( <a class="code" href="classokw_1_1log_1_1log2html_1_1_log_base.html">LogBase</a> fpParent, String fpsInfo )</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        Info = fpsInfo;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        myID = AllCount;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        setParent(fpParent);        </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        ExceptionCount();   </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    @Override</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">protected</span> String getHTMLResult()</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        StringBuilder sbResult = <span class="keyword">new</span> StringBuilder();</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        sbResult.append( lvsIndention + myIndentionBase + <span class="stringliteral">&quot;&lt;p class=&#39;LogException&#39;&gt;&quot;</span> + this.Info + <span class="stringliteral">&quot;&lt;/p&gt;\n&quot;</span> );</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        String lvsIndention = this.getLevelIndention();</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> sbResult.toString();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">protected</span> String getJSONResult()</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;     {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;         StringBuilder myJSON = <span class="keyword">new</span> StringBuilder();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                     </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;         myJSON.append( this.jsonElement( <span class="stringliteral">&quot;Exception&quot;</span>,  this.Info ) );</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;         </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;         <span class="keywordflow">return</span> myJSON.toString();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;     }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        sbResult.append( lvsIndention + myIndentionBase + <span class="stringliteral">&quot;&lt;p class=&#39;LogException&#39;&gt;&quot;</span> + StringEscapeUtils.escapeHtml4(<span class="keyword">this</span>.Info) + <span class="stringliteral">&quot;&lt;/p&gt;\n&quot;</span> );</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> sbResult.toString();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">protected</span> String getJSONResult()</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;     {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;         StringBuilder myJSON = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                     </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;         myJSON.append( this.jsonElement( <span class="stringliteral">&quot;Exception&quot;</span>,  this.Info ) );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;         </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;         <span class="keywordflow">return</span> myJSON.toString();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;     }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassokw_1_1log_1_1log2html_1_1_log_exception_html"><div class="ttname"><a href="classokw_1_1log_1_1log2html_1_1_log_exception.html">okw.log.log2html.LogException</a></div><div class="ttdef"><b>Definition:</b> <a href="_log_exception_8java_source.html#l00003">LogException.java:3</a></div></div>
-<div class="ttc" id="aclassokw_1_1log_1_1log2html_1_1_log_base_html"><div class="ttname"><a href="classokw_1_1log_1_1log2html_1_1_log_base.html">okw.log.log2html.LogBase</a></div><div class="ttdef"><b>Definition:</b> <a href="_log_base_8java_source.html#l00005">LogBase.java:5</a></div></div>
+<div class="ttc" id="aclassokw_1_1log_1_1log2html_1_1_log_exception_html"><div class="ttname"><a href="classokw_1_1log_1_1log2html_1_1_log_exception.html">okw.log.log2html.LogException</a></div><div class="ttdef"><b>Definition:</b> <a href="_log_exception_8java_source.html#l00005">LogException.java:5</a></div></div>
+<div class="ttc" id="aclassokw_1_1log_1_1log2html_1_1_log_base_html"><div class="ttname"><a href="classokw_1_1log_1_1log2html_1_1_log_base.html">okw.log.log2html.LogBase</a></div><div class="ttdef"><b>Definition:</b> <a href="_log_base_8java_source.html#l00007">LogBase.java:7</a></div></div>
 <div class="ttc" id="aclassokw_1_1log_1_1log2html_1_1_log_base_leaf_html"><div class="ttname"><a href="classokw_1_1log_1_1log2html_1_1_log_base_leaf.html">okw.log.log2html.LogBaseLeaf</a></div><div class="ttdef"><b>Definition:</b> <a href="_log_base_leaf_8java_source.html#l00003">LogBaseLeaf.java:3</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2331256fa230e52e8c3852b0645811d0.html">log2html</a></li><li class="navelem"><a class="el" href="dir_6ff0dc70255697b805f4916ec41b19c9.html">src</a></li><li class="navelem"><a class="el" href="dir_1766676e53155aab039afeb7c30c9582.html">main</a></li><li class="navelem"><a class="el" href="dir_d717ae75f5e61c87a1e2df2201b09cfb.html">java</a></li><li class="navelem"><a class="el" href="dir_87ad73dea16ebb87025cb5014ae597ae.html">okw</a></li><li class="navelem"><a class="el" href="dir_ca26d802d000d319dfd82bdb0a90faf5.html">log</a></li><li class="navelem"><a class="el" href="dir_7280f62ee8aac9fc3390a3e902c97284.html">log2html</a></li><li class="navelem"><b>LogException.java</b></li>
-    <li class="footer">Erzeugt am Mit Nov 20 2019 20:03:13 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Nov 21 2019 07:40:33 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

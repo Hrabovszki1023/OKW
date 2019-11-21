@@ -52,6 +52,7 @@ var classokw_1_1log_1_1log2html_1_1_log2_h_t_m_l =
     [ "LogTestcaseEnd", "classokw_1_1log_1_1log2html_1_1_log2_h_t_m_l.html#a77e625a539f3b896057084fe5d9fafe6", null ],
     [ "LogTestcaseStart", "classokw_1_1log_1_1log2html_1_1_log2_h_t_m_l.html#a8ac08d3386201962443f62d6746a056f", null ],
     [ "LogWarning", "classokw_1_1log_1_1log2html_1_1_log2_h_t_m_l.html#a0ca2e9e3f478ca6aa4cd5c8ce76693de", null ],
+    [ "old_Result2HTML", "classokw_1_1log_1_1log2html_1_1_log2_h_t_m_l.html#a31fb476e9c92fc07846eaa18b56e1a7a", null ],
     [ "RemoteACCallCount", "classokw_1_1log_1_1log2html_1_1_log2_h_t_m_l.html#a8363c0f278d907c7ba995ff4a848b429", null ],
     [ "RemoteACCallFail", "classokw_1_1log_1_1log2html_1_1_log2_h_t_m_l.html#aefa6d53abce0250ce69388e9e6172800", null ],
     [ "RemoteACCallPass", "classokw_1_1log_1_1log2html_1_1_log2_h_t_m_l.html#a73f5a5e960fa4de5ee60a6a627ce827c", null ],
