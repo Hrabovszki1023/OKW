@@ -437,7 +437,7 @@ public class OK implements IOKW_State
      */
     public void LogPlaceholder( String FN ) throws Exception
     {
-        Log.LogFunctionStartDebug( "LogLabel", "FN", FN );
+        Log.LogFunctionStartDebug( "LogPlaceholder", "FN", FN );
 
         try
         {

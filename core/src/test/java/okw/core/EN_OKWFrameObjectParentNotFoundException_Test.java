@@ -40,6 +40,7 @@
 package okw.core;
 
 import okw.OKW_TestClipboard;
+import okw.exceptions.OKWFrameObjectChildNotFoundException;
 import okw.exceptions.OKWFrameObjectParentNotFoundException;
 import okw.log.Logger_Sngltn;
 
@@ -89,6 +90,30 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
       
     EN.EndTest();
   }
+	
+	  
+
+	  /**
+	   *  \~german
+	   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+	   *  durch okw.core.OK.SelectContext(String) ausgelöst wird,
+	   *  wenn das Kinobjekt nicht vorhanden ist.
+	   * 
+	   *  \~english
+	   *  \~
+	   *  \author Zoltan Hrabovszki
+	   *  \date 2019-11-22
+	  */
+	  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+	  public void TC_SelectContext_OKWFrameObjectChildNotFoundException() throws Exception
+	  {
+	    EN.BeginTest( "TC_SelectContext_OKWFrameObjectChildNotFoundException" );
+
+	    EN.SelectWindow( "Rechner" );
+	    EN.SelectContext( "IsNotDefindeInRechner" );
+	    
+	    EN.EndTest();
+	  }
 
 	/**
    * \~german

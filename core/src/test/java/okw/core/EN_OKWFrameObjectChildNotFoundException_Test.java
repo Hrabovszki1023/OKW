@@ -78,7 +78,6 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
 
   /**
    *  \~german
-   *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch ClickOn
    *  ausgelöst wird, wenn das Kindobjekt nicht vorhanden ist.
    * 
@@ -124,7 +123,6 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
   
   /**
    *  \~german
-   *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch DoubleClickOn()
    *  ausgelöst wird, wenn das Kindobjekt nicht vorhanden ist.
    * 
@@ -134,8 +132,7 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \date 2016.05.07
   */
   @Test( expected = OKWFrameObjectChildNotFoundException.class )
-  public void tc_DoubleClickOn_OKWFrameObjectChildNotFoundException()
-      throws Exception {
+  public void tc_DoubleClickOn_OKWFrameObjectChildNotFoundException() throws Exception {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
@@ -145,15 +142,16 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
   }
 
   
-  // / \~german
-  // / \brief
-  // / Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
-  // LFC-Select ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
-  // /
-  // / \~english
-  // / \~
-  // / \author Zoltan Hrabovszki
-  // / \date 2016.05.07
+  /** \~german
+   *   \brief
+   *   Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
+   *   LFC-Select ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
+   *  
+   *   \~english
+   *   \~
+   *   \author Zoltan Hrabovszki
+   *   \date 2016.05.07
+   */
   @Test( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_Select_OKWFrameObjectChildNotFoundException()
       throws Exception {
@@ -188,16 +186,123 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
     EN.EndTest();
   }
 
+
   /**
    *  \~german
-   *  \brief
-   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch LogPlaceholder
-   *  ausgelöst wird, wenn das Kindobjekt nicht vorhanden ist.
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.LogCaption(String) ausgelöst wird,
+   *  wenn das Kindobjekt nicht vorhanden ist.
    * 
    *  \~english
    *  \~
    *  \author Zoltan Hrabovszki
-   *  \date 2016.05.07
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_LogCaption_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.LogCaption( "IsNotDefindeInRechner" );
+    
+    EN.EndTest();
+  } 
+  
+
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.LogExists(String) ausgelöst wird,
+   *  wenn das Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_LogExists_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.LogExists( "IsNotDefindeInRechner" );
+    
+    EN.EndTest();
+  } 
+  
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.LogHasFocus(String) ausgelöst wird,
+   *  wenn das Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_LogHasFocus_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.LogHasFocus( "IsNotDefindeInRechner" );
+    
+    EN.EndTest();
+  } 
+  
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.LogIsActive(String) ausgelöst wird,
+   *  wenn das Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_LogIsActive_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.LogIsActive( "IsNotDefindeInRechner" );
+    
+    EN.EndTest();
+  }   
+  
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.LogLabel(String) ausgelöst wird,
+   *  wenn das Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_LogLabel_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.LogLabel( "IsNotDefindeInRechner" );
+    
+    EN.EndTest();
+  }   
+  
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.LogPlaceholder(String) ausgelöst wird,
+   *  wenn das Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019.05.07
   */
   @Test( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_LogPlaceholder_OKWFrameObjectChildNotFoundException() throws Exception {
@@ -208,6 +313,200 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
     
     EN.EndTest();
   }
+
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.LogSelected(String) ausgelöst wird,
+   *  wenn das Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_LogSelected_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.LogSelected( "IsNotDefindeInRechner" );
+    
+    EN.EndTest();
+  }
+
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.LogTablecellValue(String,String,String) ausgelöst wird,
+   *  wenn das Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_LogTablecellValue_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.LogTablecellValue( "IsNotDefindeInRechner", "1", "1" );
+    
+    EN.EndTest();
+  }
+
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.LogTooltip(String) ausgelöst wird,
+   *  wenn das Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_LogTooltip_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.LogTooltip( "IsNotDefindeInRechner" );
+    
+    EN.EndTest();
+  }
+
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.LogValue(String) ausgelöst wird,
+   *  wenn das Kindobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_LogValue_OKWFrameObjectChildNotFoundException() throws Exception {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.LogValue( "IsNotDefindeInRechner" );
+    
+    EN.EndTest();
+  }
+  
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.OK.MemorizeCaption(String,String) ausgelöst wird,
+   *  wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_MemorizeCaption_OKWFrameObjectChildNotFoundException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.MemorizeCaption( "IsNotDefindeInRechner", "Key" );
+    
+    EN.EndTest();
+  }
+
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.OK.MemorizeExists(String,String) ausgelöst wird,
+   *  wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_MemorizeExists_OKWFrameObjectChildNotFoundException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.MemorizeExists( "IsNotDefindeInRechner", "Key" );
+    
+    EN.EndTest();
+  }  
+
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.OK.MemorizeHasFocus(String,String) ausgelöst wird,
+   *  wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_MemorizeHasFocus_OKWFrameObjectChildNotFoundException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.MemorizeHasFocus( "IsNotDefindeInRechner", "Key" );
+    
+    EN.EndTest();
+  }    
+
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.OK.IsActive(String,String) ausgelöst wird,
+   *  wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_IsActive_OKWFrameObjectChildNotFoundException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.MemorizeIsActive( "IsNotDefindeInRechner", "Key" );
+    
+    EN.EndTest();
+  }    
+
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.OK.MemorizeLabel(String,String) ausgelöst wird,
+   *  wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_MemorizeLabel_OKWFrameObjectChildNotFoundException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.MemorizeLabel( "IsNotDefindeInRechner", "Key" );
+    
+    EN.EndTest();
+  }    
 
   /**
    *  \~german
@@ -231,6 +530,118 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
     EN.EndTest();
   }
 
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.OK.MemorizeTablecellValue(String,String,String,String) ausgelöst wird,
+   *  wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_MemorizeTablecellValue_OKWFrameObjectChildNotFoundException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.MemorizeTablecellValue( "IsNotDefindeInRechner", "1", "1", "Key" );
+    
+    EN.EndTest();
+  }
+
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.OK.MemorizeTooltip(String,String) ausgelöst wird,
+   *  wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_MemorizeTooltip_OKWFrameObjectChildNotFoundException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.MemorizeTooltip( "IsNotDefindeInRechner", "Key" );
+    
+    EN.EndTest();
+  }
+
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.OK.MemorizeSelectedValue(String,String) ausgelöst wird,
+   *  wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_MemorizeSelectedValue_OKWFrameObjectChildNotFoundException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.MemorizeSelectedValue( "IsNotDefindeInRechner", "Key" );
+    
+    EN.EndTest();
+  }
+
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.OK.MemorizeValue(String,String) ausgelöst wird,
+   *  wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_MemorizeValue_OKWFrameObjectChildNotFoundException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.MemorizeValue( "IsNotDefindeInRechner", "Key" );
+    
+    EN.EndTest();
+  }
+  
+
+  /**
+   *  \~german
+   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+   *  durch okw.core.OK.SelectChild(String) ausgelöst wird,
+   *  wenn das Kinobjekt nicht vorhanden ist.
+   * 
+   *  \~english
+   *  \~
+   *  \author Zoltan Hrabovszki
+   *  \date 2019-11-22
+  */
+  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  public void TC_SelectChild_OKWFrameObjectChildNotFoundException() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.SelectChild( "IsNotDefindeInRechner" );
+    
+    EN.EndTest();
+  }
+
+  
   /**
    *  \~german
    *  \brief
