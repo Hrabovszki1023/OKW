@@ -66,81 +66,78 @@ jobs:
   include:
     - stage: core
       env:
-          TESTCASE="okw.setextarea.SeTextarea_EN_Chrome_Test"
+          TESTCASE="okw.gui.OKWLocatorTest"
+          Package="core"
+    - env:
+          TESTCASE="okw.gui.OKWLocatorXPathTest"
+          Package="core"
+    - env:
+          TESTCASE="okw.core.AllCoreTests"
+          Package="core"
+    - env:
+          TESTCASE="okw.AllTests"
+          Package="core"
+    - env:
+          TESTCASE="okw.parser.OKW_VisitorTest"
+          Package="core"
+    - env:
+          TESTCASE="okw.log.Logger_Test"
+          Package="core"
+    - env:
+          TESTCASE="okw.log.log2html.Log2HTMLCounterTest"
+          Package="log2html"
+    - env:
+          TESTCASE="okw.log.log2html.LogError_Test"
+          Package="log2html"
+    - env:
+          TESTCASE="okw.log.log2html.LogException_Test"
+          Package="log2html"
+    - env:
+          TESTCASE="okw.log.log2html.LogPass_Test"
+          Package="log2html"
+    - env:
+          TESTCASE="okw.log.log2html.LogPrint_Test"
+          Package="log2html"
+    - env:
+          TESTCASE="okw.log.log2html.LogPrintDebug_Test"
+          Package="log2html"
+    - env:
+          TESTCASE="okw.log.log2html.LogWarning_Test"
+          Package="log2html"
+#
+    - stage: chrome
+      env:
+          TESTCASE="okw.seback.SeBACK_EN_Chrome_Test"
           Package="se"
-#      env:
-#          TESTCASE="okw.gui.OKWLocatorTest"
-#          Package="core"
-#    - env:
-#          TESTCASE="okw.gui.OKWLocatorXPathTest"
-#          Package="core"
-#    - env:
-#          TESTCASE="okw.core.AllCoreTests"
-#          Package="core"
-#    - env:
-#          TESTCASE="okw.AllTests"
-#          Package="core"
-#    - env:
-#          TESTCASE="okw.parser.OKW_VisitorTest"
-#          Package="core"
-#    - env:
-#          TESTCASE="okw.log.Logger_Test"
-#          Package="core"
-#    - env:
-#          TESTCASE="okw.log.log2html.Log2HTMLCounterTest"
-#          Package="log2html"
-#    - env:
-#          TESTCASE="okw.log.log2html.LogError_Test"
-#          Package="log2html"
-#    - env:
-#          TESTCASE="okw.log.log2html.LogException_Test"
-#          Package="log2html"
-#    - env:
-#          TESTCASE="okw.log.log2html.LogPass_Test"
-#          Package="log2html"
-#    - env:
-#          TESTCASE="okw.log.log2html.LogPrint_Test"
-#          Package="log2html"
-#    - env:
-#          TESTCASE="okw.log.log2html.LogPrintDebug_Test"
-#          Package="log2html"
-#    - env:
-#          TESTCASE="okw.log.log2html.LogWarning_Test"
-#          Package="log2html"
-##
-#    - stage: chrome
-#      env:
-#          TESTCASE="okw.seback.SeBACK_EN_Chrome_Test"
-#          Package="se"
-#    - env:
-#          TESTCASE="okw.sebrowserchild.SeBrowserChild_EN_Chrome_Test"
-#          Package="se"
-#    - env:
-#          TESTCASE="okw.sebutton.SeButton_EN_Chrome_Test"
-#          Package="se"
-#    - env:
-#        - TESTCASE="okw.seinputbutton.SeInputButton_EN_Chrome_Test"
-#          Package="se"
-#    - env:
-#          TESTCASE="okw.seinputcheckbox.SeInputCheckbox_EN_Chrome_Test"
-#          Package="se"
-#    - env:
-#          TESTCASE="okw.seinputfield.SeInputField_EN_Chrome_Test"
-#          Package="se"
-#    - env:
-#          TESTCASE="okw.seinputradio.SeInputRadio_EN_Chrome_Test"
-#          Package="se"
-#    - env:
-#        - TESTCASE="okw.selink.SeLink_EN_Chrome_Test"
-#          Package="se"
-#        # - TESTCASE="okw.semaximize.SeMAXIMIZE_EN_Chrome_Test"
-#        #  Package="se"
-#    - env:
-#        - TESTCASE="okw.seimage.SeImage_EN_Chrome_Test"
-#          Package="se"
-#    - env:
-#          TESTCASE="okw.seselect.SeSelect_EN_Chrome_Test"
-#          Package="se"
+    - env:
+          TESTCASE="okw.sebrowserchild.SeBrowserChild_EN_Chrome_Test"
+          Package="se"
+    - env:
+          TESTCASE="okw.sebutton.SeButton_EN_Chrome_Test"
+          Package="se"
+    - env:
+        - TESTCASE="okw.seinputbutton.SeInputButton_EN_Chrome_Test"
+          Package="se"
+    - env:
+          TESTCASE="okw.seinputcheckbox.SeInputCheckbox_EN_Chrome_Test"
+          Package="se"
+    - env:
+          TESTCASE="okw.seinputfield.SeInputField_EN_Chrome_Test"
+          Package="se"
+    - env:
+          TESTCASE="okw.seinputradio.SeInputRadio_EN_Chrome_Test"
+          Package="se"
+    - env:
+        - TESTCASE="okw.selink.SeLink_EN_Chrome_Test"
+          Package="se"
+        # - TESTCASE="okw.semaximize.SeMAXIMIZE_EN_Chrome_Test"
+        #  Package="se"
+    - env:
+        - TESTCASE="okw.seimage.SeImage_EN_Chrome_Test"
+          Package="se"
+    - env:
+          TESTCASE="okw.seselect.SeSelect_EN_Chrome_Test"
+          Package="se"
     - env:
           TESTCASE="okw.setextarea.SeTextarea_EN_Chrome_Test"
           Package="se"
@@ -198,20 +195,20 @@ jobs:
 #          TESTCASE="okw.SeTextarea.SeTextarea_EN_Firefox_Test"
 #          Package="se"
 ##   ====================================
-#    - stage: doxygen
-#      apt:
-#        packages:
-#          - texlive-latex-base
-#          - perl
-#          - graphviz
-#      script: ls
-#      after_success:
-#        - cd $TRAVIS_BUILD_DIR
-#        - chmod +x InstallDoxygen.sh
-#        - ./InstallDoxygen.sh
-#        - chmod +x generateDocumentationAndDeploy.sh
-#        - ./generateDocumentationAndDeploy.sh
-#        - cd $TRAVIS_BUILD_DIR/html
+    - stage: doxygen
+      apt:
+        packages:
+          - texlive-latex-base
+          - perl
+          - graphviz
+      script: ls
+      after_success:
+        - cd $TRAVIS_BUILD_DIR
+        - chmod +x InstallDoxygen.sh
+        - ./InstallDoxygen.sh
+        - chmod +x generateDocumentationAndDeploy.sh
+        - ./generateDocumentationAndDeploy.sh
+        - cd $TRAVIS_BUILD_DIR/html
 
 notifications:
   email:
