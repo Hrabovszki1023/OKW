@@ -617,6 +617,7 @@ var group__group_selenium_child_g_u_i_adapter_tests =
     [ "SeTextarea_EN_Firefox_Test", "classokw_1_1setextarea_1_1_se_textarea___e_n___firefox___test.html", null ],
     [ "SeTextarea_EN_HTMLUnitDriver_Test", "classokw_1_1setextarea_1_1_se_textarea___e_n___h_t_m_l_unit_driver___test.html", null ],
     [ "SeTextarea_EN_Test", "classokw_1_1setextarea_1_1_se_textarea___e_n___test.html", [
+      [ "tc_TypeKey_Delete", "classokw_1_1setextarea_1_1_se_textarea___e_n___test.html#ad6865744f42e7870df8f46d66aaffc9e", null ],
       [ "tcClickOn", "classokw_1_1setextarea_1_1_se_textarea___e_n___test.html#afa909d4f58a487410d7e283508f486e4", null ],
       [ "tcLogExists", "classokw_1_1setextarea_1_1_se_textarea___e_n___test.html#ae2d9a3fa540d1b540b6f78e0f966ceb7", null ],
       [ "tcLogHasFocus", "classokw_1_1setextarea_1_1_se_textarea___e_n___test.html#acef3050b5dcff3bee8119cb966483466", null ],

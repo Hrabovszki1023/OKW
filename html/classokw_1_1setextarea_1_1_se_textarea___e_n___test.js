@@ -1,5 +1,6 @@
 var classokw_1_1setextarea_1_1_se_textarea___e_n___test =
 [
+    [ "tc_TypeKey_Delete", "classokw_1_1setextarea_1_1_se_textarea___e_n___test.html#ad6865744f42e7870df8f46d66aaffc9e", null ],
     [ "tcClickOn", "classokw_1_1setextarea_1_1_se_textarea___e_n___test.html#afa909d4f58a487410d7e283508f486e4", null ],
     [ "tcLogExists", "classokw_1_1setextarea_1_1_se_textarea___e_n___test.html#ae2d9a3fa540d1b540b6f78e0f966ceb7", null ],
     [ "tcLogHasFocus", "classokw_1_1setextarea_1_1_se_textarea___e_n___test.html#acef3050b5dcff3bee8119cb966483466", null ],

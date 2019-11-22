@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"interfaceokw_1_1core_1_1_i_o_k_w___state.html#afae3e61812b8d0ae0bc4a741ed2e7be8":[10,0,1,1,28,28],
 "interfaceokw_1_1core_1_1_i_o_k_w___state.html#afb81a5b87f50e267a98ed3902297b420":[10,0,1,1,28,75],
 "interfaceokw_1_1core_1_1_i_o_k_w___state.html#afdad3bb294ebbc2e30b17e81a6b1f378":[10,0,1,1,28,1],
 "interfaceokw_1_1gui_1_1_i_g_u_i_childwindow.html":[10,0,1,3,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "ref_verify_tooltip_r_e_g_x.html":[0,2,3],
 "ref_verify_value.html":[0,2,4],
 "ref_verify_value_r_e_g_x.html":[0,2,5],
-"ref_verify_value_w_c_m.html":[0,2,6],
-"ref_veryfying.html":[0,2]
+"ref_verify_value_w_c_m.html":[0,2,6]
 };
