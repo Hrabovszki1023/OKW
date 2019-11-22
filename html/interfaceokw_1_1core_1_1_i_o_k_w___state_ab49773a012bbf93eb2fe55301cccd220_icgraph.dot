@@ -12,4 +12,6 @@ digraph "okw.core.IOKW_State.SelectChild"
   Node3 [label="okw.core.EN.SelectChild",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aac639a580a5615fcd882126dac09e282",tooltip="Setzt den Wert von SELECTEDCHILD auf den Wert von FN."];
   Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="okw.core.EN_Keywords\l_NOK_Test.tc_A_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#accf1c3d2b1258a59b77ae759a7ee0aeb",tooltip="Prüft methoden aufruf für einen einfachen Click."];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.core.EN_OKWFrameObject\lChildNotFoundException\l_Test.TC_SelectChild_OKWFrameObject\lChildNotFoundException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#abcd3598ef10860055499c7dbb17af330",tooltip="Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch okw.core.OK.SelectChild(String) ausg..."];
 }

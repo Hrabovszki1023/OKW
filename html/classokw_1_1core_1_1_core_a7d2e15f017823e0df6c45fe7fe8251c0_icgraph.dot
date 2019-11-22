@@ -10,6 +10,8 @@ digraph "okw.core.Core.LogSelected"
   Node2 [label="okw.core.EN.LogSelected",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a7c5b0f0e1a534035090bdd7c523d1486",tooltip="Dokumentiert den markierten Text des gegebenen Objekts."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="okw.core.EN_Keywords\l_NOK_Test.tc_A_NOK_AllKeyWords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___keywords___n_o_k___test.html#accf1c3d2b1258a59b77ae759a7ee0aeb",tooltip="Prüft methoden aufruf für einen einfachen Click."];
-  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="okw.core.CurrentObject\l_Test.tc_LogSelected_ChildObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a8a0a39a42dd658626726e6b996fa0d10",tooltip="Testziel: Prüft den Aufruf der Methode LogCaption( \"FN\" ) im ChildObject."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="okw.core.EN_OKWFrameObject\lChildNotFoundException\l_Test.TC_LogSelected_OKWFrameObject\lChildNotFoundException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#a5c1ed73a3addb9830edcef5e967de2a7",tooltip="Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch okw.core.LogSelected(String) ausgelö..."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.core.CurrentObject\l_Test.tc_LogSelected_ChildObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a8a0a39a42dd658626726e6b996fa0d10",tooltip="Testziel: Prüft den Aufruf der Methode LogCaption( \"FN\" ) im ChildObject."];
 }

@@ -13,7 +13,9 @@ digraph "okw.core.Core.LogCaption"
   Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="okw.seinputradio.SeInput\lRadio_EN_Test.tc_LogCaption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1seinputradio_1_1_se_input_radio___e_n___test.html#a44ad152e14c7ff171d658436fefa2e38",tooltip="Test des Schlüsselwortes LogCaption für den GUI-Adapter SeInputRadio."];
   Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="okw.sebutton.SeButton\l_EN_Test.tcLogCaption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1sebutton_1_1_se_button___e_n___test.html#a8fe328fb1f79caaa269b43131a3d4baa",tooltip="Test des Schlüsselwortes LogCaption für den GUI-Adapter SeButton."];
-  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="okw.core.CurrentObject\l_Test.tc_LogCaption_ChildObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a9d18006717bf17ef3f3fbbe1fdf35a63",tooltip="Testziel: Prüft den Aufruf der Methode LogCaption( \"FN\" ) im ChildObject."];
+  Node5 [label="okw.core.EN_OKWFrameObject\lChildNotFoundException\l_Test.TC_LogCaption_OKWFrameObject\lChildNotFoundException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n___o_k_w_frame_object_child_not_found_exception___test.html#a6a7f88df548b046f2ead937c1d92df62",tooltip="Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch okw.core.LogCaption(String) ausgelös..."];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="okw.sebutton.SeButton\l_EN_Test.tcLogCaption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1sebutton_1_1_se_button___e_n___test.html#a8fe328fb1f79caaa269b43131a3d4baa",tooltip="Test des Schlüsselwortes LogCaption für den GUI-Adapter SeButton."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="okw.core.CurrentObject\l_Test.tc_LogCaption_ChildObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a9d18006717bf17ef3f3fbbe1fdf35a63",tooltip="Testziel: Prüft den Aufruf der Methode LogCaption( \"FN\" ) im ChildObject."];
 }
