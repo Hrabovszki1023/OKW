@@ -104,7 +104,7 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
 	   *  \author Zoltan Hrabovszki
 	   *  \date 2019-11-22
 	  */
-	  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+	  @Test( expected = OKWFrameObjectParentNotFoundException.class )
 	  public void TC_SelectContext_OKWFrameObjectChildNotFoundException() throws Exception
 	  {
 	    EN.BeginTest( "TC_SelectContext_OKWFrameObjectChildNotFoundException" );
