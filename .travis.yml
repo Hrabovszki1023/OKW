@@ -65,6 +65,9 @@ after_success:
 jobs:
   include:
     - stage: core
+      env:
+          TESTCASE="okw.setextarea.SeTextarea_EN_Chrome_Test"
+          Package="se"
 #      env:
 #          TESTCASE="okw.gui.OKWLocatorTest"
 #          Package="core"
