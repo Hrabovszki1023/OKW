@@ -457,9 +457,19 @@ public class NOK implements IOKW_State
     /**
      *  \copydoc IOKW_State::SetValue(String,String)
      */
-    public void SetValue( String FN, String fpsValue )
+    public void SetValue( String FN, String Val )
     {
-        Log.LogFunctionStartDebug( "SetValue", "FN", FN );
+        Log.LogFunctionStartDebug( "SetValue", "FN", FN, "Val", Val );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     *  \copydoc IOKW_State::SetVar(String,String)
+     */
+    public void SetVar( String VN, String Val )
+    {
+        Log.LogFunctionStartDebug( "SetVar", "VN", VN, "Val", Val );
 
         Log.LogFunctionEndDebug();
     }

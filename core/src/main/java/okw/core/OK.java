@@ -1344,6 +1344,29 @@ public class OK implements IOKW_State
         }
     }
 
+
+    /**
+     *   \copydoc IOKW_State::SetVar(String,String)
+     */
+    public void SetVar( String VN, String Val ) throws Exception
+    {
+        Log.LogFunctionStartDebug( "SetVar", "VN", VN );
+
+        try
+        {
+             OKW_Memorize_Sngltn.getInstance().set( VN, Val );
+        }
+        catch (Exception e)
+        {
+            this.handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+    
     /**
      *  \copydoc IOKW_State::StartApp(String)
      */

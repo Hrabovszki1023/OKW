@@ -1263,6 +1263,71 @@ public class EN_Keywords_Test
         EN.EndTest();
     }
 
+    /**
+     * \~german
+     * Prüfung des Schlüsselwortes SetVar. 
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+    @Test
+    public void tc_SetVar() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SetVar( "myKey", "myVal" );
+        
+        EN.SelectWindow( "Rechner" );
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        EN.SetValue( "All_MethodsObj", "${myKey}" );
+
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "myVal", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "SetValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
+    }
+
+
+    /**
+     * \~german
+     * Prüfung des Schlüsselwortes SetVar. 
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+    @Test
+    public void tc_SetVar_MV() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SetVar( "myKey1", "myVal1" );
+        EN.SetVar( "myKey2", "myVal2" );
+        
+        EN.SelectWindow( "Rechner" );
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        EN.SetValue( "All_MethodsObj", "${myKey1} + ${myKey2}" );
+
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "myVal1 + myVal2", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "SetValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
+    }
+
+    
     // \~german
     // \brief
     // Prüft den Methodenaufruf StartApp.

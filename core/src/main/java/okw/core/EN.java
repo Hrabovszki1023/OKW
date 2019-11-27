@@ -383,6 +383,15 @@ public class EN
     }
 
     /**
+     *  \copydoc IOKW_State::SetVar(String,String)
+     */
+    public static void SetVar( String VN, String Val ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.SetVar( VN, Val );
+    }
+
+    /**
      *  \copydoc IOKW_State::StartApp(String)
      */
     public static void StartApp( String fpsApplicationName ) throws Exception

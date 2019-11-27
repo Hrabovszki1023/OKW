@@ -842,6 +842,22 @@ public class Core implements IOKW_State
     }
 
     /**
+     * \copydoc IOKW_State::SetVar(String,String)
+     */
+    public void SetVar( String VN, String Val ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "SetVar", "KeyWordName" ), VN, Val );
+            this.CurrentState.SetVar( VN, Val );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+
+    /**
      *  \copydoc IOKW_State::StartApp(String)
      */
     public void StartApp( String fpsApplicationName ) throws Exception

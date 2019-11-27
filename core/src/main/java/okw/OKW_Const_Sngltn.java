@@ -42,6 +42,9 @@ package okw;
 import java.util.ArrayList;
 
 import javax.xml.xpath.XPathExpressionException;
+
+import okw.exceptions.OKWConst4InternalnameNotFoundException;
+import okw.exceptions.OKWMessageNotFoundException;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
@@ -492,16 +495,16 @@ public class OKW_Const_Sngltn
      *  sprachabhängige Konstante umgestetzt wird. (_Internalname_ -> _Const_)
      * 
      *  @return Liefert die Sprachabhängige Konstante des 
-    *  @exception Wird für fpsInternalname kein Wert gefunden, dann wird die
-    *  Ausnahme OKWConst4InternalnameNotFoundException ausgelöst.
-    *
+     *  @exception Wird für fpsInternalname kein Wert gefunden, dann wird die
+     *  Ausnahme OKWConst4InternalnameNotFoundException ausgelöst.
+     *
      *  \~english
      *  Method detects the value for __Const__ for the __internalname__ and the actual selected language.
      * 
      *  GetConst4Internalname is the core method of this class and detects for
-    *  <ul>
-    *    <li>fpsInternalname and - CL.Language corresponds to</li>
-    *  </ul>
+     *  <ul>
+     *    <li>fpsInternalname and - CL.Language corresponds to</li>
+     *  </ul>
      *  OKWLanguage.Instance.Language
      * 
      *  the language dependent constant.
@@ -522,7 +525,7 @@ public class OKW_Const_Sngltn
     {
         Log.LogFunctionStartDebug( this.getClass().getName() + ".ReadConst", "fpsInternalname", fpsInternalname );
 
-        String lvsReturn = null;
+        String lvsReturn = "";
 
         try
         {
@@ -532,6 +535,10 @@ public class OKW_Const_Sngltn
             Log.LogPrintDebug( "XPath: >>" + myXPathExpression + "<<" );
 
             lvsReturn = myXmlReader.getTextContentSingleValue( myXPathExpression );
+        }
+        catch( OKWMessageNotFoundException e )
+        {
+            throw new OKWConst4InternalnameNotFoundException( e.getMessage() );
         }
         finally
         {
