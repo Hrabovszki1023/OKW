@@ -1,6 +1,6 @@
 var interfaceokw_1_1core_1_1_i_o_k_w___state =
 [
-    [ "BeginTest", "interfaceokw_1_1core_1_1_i_o_k_w___state.html#ae5480ddb1fc37eade5d899d335bc4b13", null ],
+    [ "BeginTest", "interfaceokw_1_1core_1_1_i_o_k_w___state.html#a17b1c573a12683a39e2036be98e38bcd", null ],
     [ "ClickOn", "interfaceokw_1_1core_1_1_i_o_k_w___state.html#afdad3bb294ebbc2e30b17e81a6b1f378", null ],
     [ "CopyFile", "interfaceokw_1_1core_1_1_i_o_k_w___state.html#ab291a70d5a1e6c8900390828dd61e7eb", null ],
     [ "DoubleClickOn", "interfaceokw_1_1core_1_1_i_o_k_w___state.html#a2a40e1cd33ca5c30f57c15e655cc1fc0", null ],
@@ -37,6 +37,7 @@ var interfaceokw_1_1core_1_1_i_o_k_w___state =
     [ "SetFocus", "interfaceokw_1_1core_1_1_i_o_k_w___state.html#aae538e656d521d0fbe7ee57765b3e3cb", null ],
     [ "setLanguage", "interfaceokw_1_1core_1_1_i_o_k_w___state.html#a866baa0bde08a47418f54d63bdb56097", null ],
     [ "SetValue", "interfaceokw_1_1core_1_1_i_o_k_w___state.html#a301021976f71d79ff9054052b3b9ca38", null ],
+    [ "SetVar", "interfaceokw_1_1core_1_1_i_o_k_w___state.html#ad7fe26716069123081a624b0a036ac67", null ],
     [ "StartApp", "interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0ec9b7c60041061f1b01d85b703a27a8", null ],
     [ "StopApp", "interfaceokw_1_1core_1_1_i_o_k_w___state.html#a789e33be9253edfccfe5654f537cf52a", null ],
     [ "TypeKey", "interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0466b45ed636074a1b6cd52de6b5fdd6", null ],

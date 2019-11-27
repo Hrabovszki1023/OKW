@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 451, Datum: 11.22.2019 20:38:13</span>
+   &#160;<span id="projectnumber">Build_ID: 452, Datum: 11.27.2019 14:38:35</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -536,11 +536,9 @@ Weitere Geerbte Elemente</h2></td></tr>
 </div><div class="memdoc">
 
 <p>OKW_Memorize ist die Speicher-Klasse hinter den Merke*-Schlüsselwörter. </p>
-<p>Die Daten werden vie Serialisierung in eine XML Datei geschrieben. Zur Serialisierung wird die Klasse System.Xml.XmlSerializer verwendet.</p>
-<p>Pfad und Name der XML-Datei. Dies wird in der XML/OKW_Ini.xml vorgegeben: <code>XPATH: OKW_Ini/OKW_Enviroment/OKW_Memorize_xml</code></p>
-<p>Diese Klasse ist nach denm Singelton-Muster aufgebaut.</p>
-<p>Die Instanz der Klasse wird wie folgt abgerufen:</p>
-<div class="fragment"><div class="line">OKW.OKW_Memorrize.Instanz</div>
+<p>Mit Memorize*( "BN", "myKeyname" ) wird ein Wert</p>
+<p>Diese Klasse ist nach dem Singelton-Pattern aufgebaut. Eine Instanz der Klasse wird wie folgt erstellt:</p>
+<div class="fragment"><div class="line">OKW.OKW_Memorrize.getInstance()</div>
 </div><!-- fragment --><dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013.12.06 \ </dd></dl>
 
@@ -555,14 +553,14 @@ Weitere Geerbte Elemente</h2></td></tr>
 </div><!-- doc-content -->
 <div class="ttc" id="aclassokw_1_1gui_1_1frames_1_1_frm_se_firefox_html_a9b8b1db0f6604dd77646cfa0a102c4ea"><div class="ttname"><a href="classokw_1_1gui_1_1frames_1_1_frm_se_firefox.html#a9b8b1db0f6604dd77646cfa0a102c4ea">okw.gui.frames.FrmSeFirefox.MEM</a></div><div class="ttdeci">static OKW_Memorize_Sngltn MEM</div><div class="ttdoc">OKW_Memorize ist die Speicher-Klasse hinter den Merke*-Schlüsselwörter.</div><div class="ttdef"><b>Definition:</b> <a href="_frm_se_firefox_8java_source.html#l00029">FrmSeFirefox.java:29</a></div></div>
 <div class="ttc" id="aclassokw_1_1gui_1_1_any_win_base_html_a51cf50ace21902b3a5359316f53a7f3e"><div class="ttname"><a href="classokw_1_1gui_1_1_any_win_base.html#a51cf50ace21902b3a5359316f53a7f3e">okw.gui.AnyWinBase.LogFunctionEndDebug</a></div><div class="ttdeci">void LogFunctionEndDebug()</div><div class="ttdoc">Methode ruft die Methode Logger.Instance.LogFunctionEndDebug() auf.</div><div class="ttdef"><b>Definition:</b> <a href="_any_win_base_8java_source.html#l00298">AnyWinBase.java:298</a></div></div>
-<div class="ttc" id="aclassokw_1_1_o_k_w___memorize___sngltn_html_a77acdbf6b56b381439a16f96b54e6fbd"><div class="ttname"><a href="classokw_1_1_o_k_w___memorize___sngltn.html#a77acdbf6b56b381439a16f96b54e6fbd">okw.OKW_Memorize_Sngltn.set</a></div><div class="ttdeci">void set(String fpsKey, String fpsValue)</div><div class="ttdoc">Setzt/Merkt sich das MemKey/Value-Paar.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___memorize___sngltn_8java_source.html#l00433">OKW_Memorize_Sngltn.java:433</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w___memorize___sngltn_html_a77acdbf6b56b381439a16f96b54e6fbd"><div class="ttname"><a href="classokw_1_1_o_k_w___memorize___sngltn.html#a77acdbf6b56b381439a16f96b54e6fbd">okw.OKW_Memorize_Sngltn.set</a></div><div class="ttdeci">void set(String fpsKey, String fpsValue)</div><div class="ttdoc">Setzt/Merkt sich das MemKey/Value-Paar.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___memorize___sngltn_8java_source.html#l00452">OKW_Memorize_Sngltn.java:452</a></div></div>
 <div class="ttc" id="aclassokw_1_1gui_1_1_any_win_base_html_abaab572bdbed7b471f659d5dd8c76853"><div class="ttname"><a href="classokw_1_1gui_1_1_any_win_base.html#abaab572bdbed7b471f659d5dd8c76853">okw.gui.AnyWinBase.LogFunctionStartDebug</a></div><div class="ttdeci">void LogFunctionStartDebug(String fpsMethodName)</div><div class="ttdoc">Methode ruft die Methode Logger.Instance.LogFunctionStartDebug(fps_FunctionName), und erweitert den g...</div><div class="ttdef"><b>Definition:</b> <a href="_any_win_base_8java_source.html#l00212">AnyWinBase.java:212</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><b>frames</b></li><li class="navelem"><a class="el" href="classokw_1_1gui_1_1frames_1_1_frm_se_firefox.html">FrmSeFirefox</a></li>
-    <li class="footer">Erzeugt am Fre Nov 22 2019 20:39:49 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Nov 27 2019 14:40:11 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

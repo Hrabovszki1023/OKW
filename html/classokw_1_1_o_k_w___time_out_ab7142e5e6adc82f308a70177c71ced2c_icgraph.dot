@@ -41,7 +41,7 @@ digraph "okw.OKW_TimeOut.getPT"
   Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node18 [label="okw.core.OK.VerifyBadgeREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a9e122d11d43dfbb7835c21a8b55b5759",tooltip="Überprüft den Badge des Objektes ."];
   Node17 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node19 [label="okw.core.OK.VerifyCaptionREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a7b0869a2a6df63be61899963dc35d768",tooltip="Überprüft die Überschrift des Objektes."];
+  Node19 [label="okw.core.OK.VerifyCaptionREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a7b0869a2a6df63be61899963dc35d768",tooltip="Überprüft die Überschrift eines Objektes, Reguläre-Ausdrücke als Sollwert sind erlaubt."];
   Node17 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node20 [label="okw.core.OK.VerifyErrorMSG_REGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a1ab77bd52ba1644e70037f179b5f10e4",tooltip="Überprüft Fehlermeldungen in mit Angular validierten Formularen."];
   Node17 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

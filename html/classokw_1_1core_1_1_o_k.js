@@ -40,6 +40,7 @@ var classokw_1_1core_1_1_o_k =
     [ "SetFocus", "classokw_1_1core_1_1_o_k.html#a2ec62170b8430a0ea58e919d8d46a7c0", null ],
     [ "setLanguage", "classokw_1_1core_1_1_o_k.html#af17725c4ae8c2ec68359b066b7d9517a", null ],
     [ "SetValue", "classokw_1_1core_1_1_o_k.html#a6af4fe0d34a701aefc8ce67657b3c432", null ],
+    [ "SetVar", "classokw_1_1core_1_1_o_k.html#a8d5a9d559296006d73118301a01a0f07", null ],
     [ "StartApp", "classokw_1_1core_1_1_o_k.html#a38d47241f9746791eecaf7a45fcabb80", null ],
     [ "StopApp", "classokw_1_1core_1_1_o_k.html#adbb934e4f20a0c451b4720a67c6cf99a", null ],
     [ "TypeKey", "classokw_1_1core_1_1_o_k.html#a4600012e7b1fdbedcee36313d0397fd5", null ],

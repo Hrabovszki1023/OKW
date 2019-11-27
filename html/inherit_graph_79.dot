@@ -5,5 +5,5 @@ digraph "Grafische Darstellung der Klassenhierarchie"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="okw.OKW_Helper_GetRightFrom\lDelimiterNumberTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper___get_right_from_delimiter_number_test.html",tooltip=" "];
+  Node0 [label="okw.OKW_Helper_MatchStrIgnore\lCaseTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___helper___match_str_ignore_case_test.html",tooltip=" "];
 }

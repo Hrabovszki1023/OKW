@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 451, Datum: 11.22.2019 20:38:13</span>
+   &#160;<span id="projectnumber">Build_ID: 452, Datum: 11.27.2019 14:38:35</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -133,7 +133,7 @@ Funktionsweise der GUI-Objekterkennung</h2>
 </dd></dl>
 <h2><a class="anchor" id="refObjekteErkennen"></a>
 Objekte erkennen</h2>
-<p>Hier stellen wir Selenium vor. Selenium automatisiert Browser, insbesondere für die Automatisierung von Web-Applikationen zu Testzwecken. Es ist nativer Bestandteil vieler gängiger Webbrowser. (weiterführende Infos in engl. Sprache unter \url <a href="http://www.seleniumhq.org/">http://www.seleniumhq.org/</a> ) </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000057">Noch zu erledigen:</a></b></dt><dd>eingefügten Text prüfen</dd></dl>
+<p>Hier stellen wir Selenium vor. Selenium automatisiert Browser, insbesondere für die Automatisierung von Web-Applikationen zu Testzwecken. Es ist nativer Bestandteil vieler gängiger Webbrowser. (weiterführende Infos in engl. Sprache unter \url <a href="http://www.seleniumhq.org/">http://www.seleniumhq.org/</a> ) </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000056">Noch zu erledigen:</a></b></dt><dd>eingefügten Text prüfen</dd></dl>
 <p>Hier zu nächst ein typisches Beispiel für Selenium:</p>
 <p>\begin{lstlisting}[caption={Selenium Beispiel für die Objekterkennung //Quelle: \url{<a href="http://www.anujchaudhary.com/2012/11/selenium-automating-ui-testing-for.html">http://www.anujchaudhary.com/2012/11/selenium-automating-ui-testing-for.html</a>}}, label=SeleniumObjectRecognition] [TestMethod] public void TestBing()</p>
 <p>{ Test Case Steps _webDriver.Navigate().GoToUrl("http://www.bing.com");</p>
@@ -211,13 +211,13 @@ Sequenzen</h1>
 Einleitung</h1>
 <p>Bestehende Software zu testen <em>muss</em> schnell vorgenommen werden können. Der Einfluss von Erweiterungen und Änderungen an den Objekten des Projektes muss idealerweise <em>sofort</em> und ohne größere Umstände zu testen sein. Ein Testlauf darf keinen hohen Arbeitsaufwand fordern, sonst wird gänzlich auf einen Test verzichtet.</p>
 <p>Unittests müssen durch den Entwickler <em>sofort</em> durchführbar sein. Der Unittest muss innnerhalb von Sekunden ablaufen können. Es muss unmittelbar geprüft werden können welche Auswirkungen die Änderungen haben.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000058">Noch zu erledigen:</a></b></dt><dd>jnic - neuer Text =BEGINN=</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000057">Noch zu erledigen:</a></b></dt><dd>jnic - neuer Text =BEGINN=</dd></dl>
 <p>Wenn das nicht möglich ist steht zu vermuten, dass die Regeln des Clean Code nicht beachtet worden sind.</p>
 <dl class="section note"><dt>Zu beachten</dt><dd>Clean Code ist ein Begriff aus der Softwaretechnik, der seinen Ursprung im gleichnamigen Buch von Robert C. Martin hat. Als „sauber“ bezeichnen Software-Entwickler in erster Linie den Quellcode, aber auch Dokumente, Konzepte, Regeln und Verfahren, die intuitiv verständlich sind. Als intuitiv verständlich gilt alles, was mit wenig Aufwand und in kurzer Zeit richtig verstanden werden kann. Vorteile von Clean Code sind stabilere und effizient wartbarere Programme, d. h. kürzere Entwicklungszeiten bei Funktionserweiterung und Fehlerbehebungen. Die Bedeutung wächst mit der Beobachtung, dass im Schnitt 80 % der Lebensdauer einer Software auf den Wartungszeitraum entfällt. (Aus Wikipedia: \url <a href="http://de.wikipedia.org/wiki/Clean_Code">http://de.wikipedia.org/wiki/Clean_Code</a>)</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000059">Noch zu erledigen:</a></b></dt><dd>jnic--&gt;ZH =bitte neuen Text übrprüfen=</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000058">Noch zu erledigen:</a></b></dt><dd>jnic--&gt;ZH =bitte neuen Text übrprüfen=</dd></dl>
 <p>Effizientes automatisiertes Testen erfordert die Reduzierung auf eine einzige Stelle, damit erfolgt die Reduzierung des Erstellungs- und Pflegeaufwands auf <em>DAS MINIMUM</em>.</p>
 <p>Klonen, bzw. Kopieren von Testfällen oder von Skriptabschnitten erzeugt bei kleinen Änderungen viel Arbeit im Bereich Anpassung. Wenn kleine Änderungen im "Software under Test (SUT)" vorgenommen werden, dann kann das einen großen Aufwand für die Testautomatisierung bedeuten.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000060">Noch zu erledigen:</a></b></dt><dd>jnic--&gt;ZH =bitte neuen Text übrprüfen=</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000059">Noch zu erledigen:</a></b></dt><dd>jnic--&gt;ZH =bitte neuen Text übrprüfen=</dd></dl>
 <p>\begin{Beispiel} Beispiel . \end{Beispiel}</p>
 <p>Die nun folgenden Absätze verfolgen alle das Ziel das Testen <em>effizient</em> zu machen und befassen sich mit der Aufwandsreduzierung bei der Erstellung von funktionalen, fachlichen GUI Tests.</p>
 <h1><a class="anchor" id="refGrundsätzlicheÜberlegungen"></a>
@@ -228,9 +228,9 @@ Grundsätzliche Überlegungen</h1>
 <li>Reduktion auf eine Stelle ist grundsätzlich möglich!</li>
 </ol>
 <p>Dem steht entgegen, dass jeder Test einen Einzelfall darstellt, der <em>EINZELN SPEZIFIZIERT WERDEN MUSS</em>! Führt man die vorbeschriebenen Maßnahmen aber konsequent durch, bedeutet das eine enorme Reduzierung des Erstellungs- und Pflegeaufwandes.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000061">Noch zu erledigen:</a></b></dt><dd>jnic--&gt;ZH =vorstehenden neuen Text überprüfen=</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000060">Noch zu erledigen:</a></b></dt><dd>jnic--&gt;ZH =vorstehenden neuen Text überprüfen=</dd></dl>
 <p>Zur besseren Beherrschung der Testumgebung emfpiehlt es sich eine Synchronisation in die Testumgebung einzubauen. Hierbei ist auch eine gute Benennung der Klassen, Methoden und Sequenzen wichtig. Erst hierdurch wird dann letztlich die Lesbarkeit des Skripts und dessen Nachvollziehbarkeit verwirklicht.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000062">Noch zu erledigen:</a></b></dt><dd>jnic--&gt;ZH =vorstehenden neuen Text überprüfen=</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000061">Noch zu erledigen:</a></b></dt><dd>jnic--&gt;ZH =vorstehenden neuen Text überprüfen=</dd></dl>
 <h1><a class="anchor" id="refTestfallErstellung"></a>
 Testfallerstellung</h1>
 <p>Bei der üblichen Erstellung von Testfällen fallen folgende Arbeiten an:</p>
@@ -276,7 +276,7 @@ Pflege der Objekt-Erkennungseigenschaft</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="ref_anwenderhandbuch.html">Anwenderhandbuch</a></li>
-    <li class="footer">Erzeugt am Fre Nov 22 2019 20:39:44 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Nov 27 2019 14:40:06 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

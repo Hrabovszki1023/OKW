@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 451, Datum: 11.22.2019 20:38:13</span>
+   &#160;<span id="projectnumber">Build_ID: 452, Datum: 11.27.2019 14:38:35</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -228,12 +228,12 @@ static <a class="el" href="classokw_1_1_o_k_w___const___sngltn.html">OKW_Const_S
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013_12_22 <br  />
  Reviews:(2014_12_18_jnic, 2014_12_22_zh, 2014_12_22_jnic) </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000044">Noch zu erledigen:</a></b></dt><dd><p class="startdd">(Zeile 22) Zukünftige Funktionalität: Nachricht auf einen anderen Tag weiterverlinken. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000043">Noch zu erledigen:</a></b></dt><dd><p class="startdd">(Zeile 22) Zukünftige Funktionalität: Nachricht auf einen anderen Tag weiterverlinken. </p>
 <p class="interdd">(Zeile 41) Tabellenüberschrift wird als Verlinkung gelesen und blau auf blau dargestellt - OKWConst/DE </p>
 <p class="enddd">(Zeile 75) Tabellenüberschrift wird als Verlinkung gelesen und blau auf blau dargestellt - OKWConst/EN </p>
 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00124">124</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00127">127</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
 </div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
 <a id="a8404c43fc549df30d37c369c7d6e89ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8404c43fc549df30d37c369c7d6e89ae">&#9670;&nbsp;</a></span>OKW_Const_Sngltn()</h2>
@@ -283,31 +283,31 @@ des Skriptes beendet. endif</p>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013.12.22 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00232">232</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        {</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#ad31c41f692cf45672822df888816bbdd">LM</a> = <span class="keyword">new</span> LogMessenger( <span class="stringliteral">&quot;OKW_Const&quot;</span> );</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a1d728edaa90cfa9f5c1612b51a9c1d7c">myXmlReader</a> = <span class="keyword">new</span> OKW_XmlReader( <span class="stringliteral">&quot;/xml/OKW_Const.xml&quot;</span> );</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="comment">/*if (OKW_FileHelper.FileExists(lvsOKW_Const_xml))</span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment">                {</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="comment">                    myXmlReader = new OKW_XmlReader(&quot;xml/OKW_Const.xml&quot;);</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="comment">                }</span></div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="comment">                else</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="comment">                {</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment">                    String lvsMessage = LM.GetMessage(&quot;OKW_Const&quot;, &quot;FileNotFoundException&quot;, lvsOKW_Const_xml);</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">                    throw new FileNotFoundException(lvsMessage);</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">                }</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment">            */</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        }</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">catch</span> (Exception e)</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        {</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            OKW_HandleException.StopRunning( e, this.getClass() );</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        }</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00235">235</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#ad31c41f692cf45672822df888816bbdd">LM</a> = <span class="keyword">new</span> LogMessenger( <span class="stringliteral">&quot;OKW_Const&quot;</span> );</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a1d728edaa90cfa9f5c1612b51a9c1d7c">myXmlReader</a> = <span class="keyword">new</span> OKW_XmlReader( <span class="stringliteral">&quot;/xml/OKW_Const.xml&quot;</span> );</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="comment">/*if (OKW_FileHelper.FileExists(lvsOKW_Const_xml))</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="comment">                {</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="comment">                    myXmlReader = new OKW_XmlReader(&quot;xml/OKW_Const.xml&quot;);</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="comment">                }</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;<span class="comment">                else</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">                {</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment">                    String lvsMessage = LM.GetMessage(&quot;OKW_Const&quot;, &quot;FileNotFoundException&quot;, lvsOKW_Const_xml);</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">                    throw new FileNotFoundException(lvsMessage);</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment">                }</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment">            */</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">catch</span> (Exception e)</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            OKW_HandleException.StopRunning( e, this.getClass() );</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
 <div id="dynsection-1-summary" class="dynsummary" style="display:block;">
@@ -348,32 +348,32 @@ des Skriptes beendet. endif</p>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013_12_22 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00308">308</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        String lvs_Return = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.Boolean2YesNo&quot;</span>, <span class="stringliteral">&quot;fpbTrueOrFalse&quot;</span>, fpbTrueOrFalse.toString() );</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">if</span> ( fpbTrueOrFalse )</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                <span class="comment">// If TRUE -&gt; YES</span></div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                lvs_Return = this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( <span class="stringliteral">&quot;YES&quot;</span> );</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            }</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            {</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                <span class="comment">// Else FALSE -&gt; NO</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                lvs_Return = this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( <span class="stringliteral">&quot;NO&quot;</span> );</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            }</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        }</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">finally</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        {</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvs_Return );</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        }</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordflow">return</span> lvs_Return;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    }</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00311">311</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        String lvs_Return = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        {</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.Boolean2YesNo&quot;</span>, <span class="stringliteral">&quot;fpbTrueOrFalse&quot;</span>, fpbTrueOrFalse.toString() );</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            <span class="keywordflow">if</span> ( fpbTrueOrFalse )</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                <span class="comment">// If TRUE -&gt; YES</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                lvs_Return = this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( <span class="stringliteral">&quot;YES&quot;</span> );</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                <span class="comment">// Else FALSE -&gt; NO</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                lvs_Return = this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( <span class="stringliteral">&quot;NO&quot;</span> );</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        }</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        {</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvs_Return );</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keywordflow">return</span> lvs_Return;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-2-summary" class="dynsummary" style="display:block;">
@@ -421,23 +421,23 @@ des Skriptes beendet. endif</p>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013_12_22 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00365">365</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    {</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.ConcatHSEP&quot;</span>, <span class="stringliteral">&quot;fpLs_ListString2Concat&quot;</span>, fpLs_ListString2Concat.toString() );</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        String lvs_Return = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        {</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            lvs_Return = OKW_Helper.concatListString( fpLs_ListString2Concat, this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;HSEP&quot;</span> ) );</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        }</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordflow">finally</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        {</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvs_Return );</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        }</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">return</span> lvs_Return;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    }</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00368">368</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    {</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.ConcatHSEP&quot;</span>, <span class="stringliteral">&quot;fpLs_ListString2Concat&quot;</span>, fpLs_ListString2Concat.toString() );</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        String lvs_Return = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        {</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            lvs_Return = OKW_Helper.concatListString( fpLs_ListString2Concat, this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;HSEP&quot;</span> ) );</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvs_Return );</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        }</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">return</span> lvs_Return;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-4-summary" class="dynsummary" style="display:block;">
@@ -477,23 +477,23 @@ des Skriptes beendet. endif</p>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013_12_22 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00413">413</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    {</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.ConcatSEP&quot;</span>, <span class="stringliteral">&quot;fpLs_ListString2Concat&quot;</span>, fpLs_ListString2Concat.toString() );</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        String lvs_Return = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        {</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            lvs_Return = OKW_Helper.concatListString( fpLs_ListString2Concat, this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;SEP&quot;</span> ) );</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        }</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        <span class="keywordflow">finally</span></div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        {</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvs_Return );</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        }</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        <span class="keywordflow">return</span> lvs_Return;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    }</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00416">416</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    {</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.ConcatSEP&quot;</span>, <span class="stringliteral">&quot;fpLs_ListString2Concat&quot;</span>, fpLs_ListString2Concat.toString() );</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        String lvs_Return = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        {</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;            lvs_Return = OKW_Helper.concatListString( fpLs_ListString2Concat, this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;SEP&quot;</span> ) );</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        }</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        {</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvs_Return );</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        }</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160; </div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <span class="keywordflow">return</span> lvs_Return;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-5-summary" class="dynsummary" style="display:block;">
@@ -541,23 +541,23 @@ des Skriptes beendet. endif</p>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013_12_22 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00461">461</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    {</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.ConcatVSEP&quot;</span>, <span class="stringliteral">&quot;fpLs_ListString2Concat&quot;</span>, fpLs_ListString2Concat.toString() );</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160; </div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        String lvs_Return = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160; </div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        {</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            lvs_Return = OKW_Helper.concatListString( fpLs_ListString2Concat, this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;VSEP&quot;</span> ) );</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        }</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        <span class="keywordflow">finally</span></div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        {</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvs_Return );</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        }</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160; </div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="keywordflow">return</span> lvs_Return;</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    }</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00464">464</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    {</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.ConcatVSEP&quot;</span>, <span class="stringliteral">&quot;fpLs_ListString2Concat&quot;</span>, fpLs_ListString2Concat.toString() );</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        String lvs_Return = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160; </div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        {</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;            lvs_Return = OKW_Helper.concatListString( fpLs_ListString2Concat, this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;VSEP&quot;</span> ) );</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        }</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        {</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvs_Return );</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        }</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160; </div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        <span class="keywordflow">return</span> lvs_Return;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-7-summary" class="dynsummary" style="display:block;">
@@ -608,28 +608,32 @@ fpsInternalname und - CL.Language enstpricht OKWLanguage.Instance.Language </li>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013-12-22 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00521">521</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;    {</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.ReadConst&quot;</span>, <span class="stringliteral">&quot;fpsInternalname&quot;</span>, fpsInternalname );</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160; </div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;        String lvsReturn = <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160; </div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        {</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00524">524</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    {</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.ReadConst&quot;</span>, <span class="stringliteral">&quot;fpsInternalname&quot;</span>, fpsInternalname );</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160; </div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        String lvsReturn = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160; </div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;            String myXPathExpression = <span class="stringliteral">&quot;//okwconst[@internalname=&#39;&quot;</span> + fpsInternalname + <span class="stringliteral">&quot;&#39;]/name/&quot;</span> + <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62b03a776d71c8955db34ef52a5c1e68">CL</a>.getLanguage();</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160; </div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4">LogPrintDebug</a>( <span class="stringliteral">&quot;XPath: &gt;&gt;&quot;</span> + myXPathExpression + <span class="stringliteral">&quot;&lt;&lt;&quot;</span> );</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160; </div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;            lvsReturn = <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a1d728edaa90cfa9f5c1612b51a9c1d7c">myXmlReader</a>.<a class="code" href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb">getTextContentSingleValue</a>( myXPathExpression );</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        }</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        <span class="keywordflow">finally</span></div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        {</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvsReturn );</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        }</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160; </div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;        <span class="keywordflow">return</span> lvsReturn;</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;    }</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        {</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160; </div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;            String myXPathExpression = <span class="stringliteral">&quot;//okwconst[@internalname=&#39;&quot;</span> + fpsInternalname + <span class="stringliteral">&quot;&#39;]/name/&quot;</span> + <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62b03a776d71c8955db34ef52a5c1e68">CL</a>.getLanguage();</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160; </div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4">LogPrintDebug</a>( <span class="stringliteral">&quot;XPath: &gt;&gt;&quot;</span> + myXPathExpression + <span class="stringliteral">&quot;&lt;&lt;&quot;</span> );</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160; </div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;            lvsReturn = <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a1d728edaa90cfa9f5c1612b51a9c1d7c">myXmlReader</a>.<a class="code" href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb">getTextContentSingleValue</a>( myXPathExpression );</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        }</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        <span class="keywordflow">catch</span>( OKWMessageNotFoundException e )</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        {</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> OKWConst4InternalnameNotFoundException( e.getMessage() );</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        }</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        {</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvsReturn );</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;        }</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160; </div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        <span class="keywordflow">return</span> lvsReturn;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-8-summary" class="dynsummary" style="display:block;">
@@ -680,22 +684,22 @@ fpsInternalname und - CL.Language enstpricht OKWLanguage.Instance.Language </li>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013.12.22 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00274">274</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="comment">// Lazy Initialization (If required then only)</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">if</span> ( Instance == <span class="keyword">null</span> )</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        {</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="comment">// Thread Safe. Might be costly operation in some case</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <span class="keyword">synchronized</span> ( <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a8404c43fc549df30d37c369c7d6e89ae">OKW_Const_Sngltn</a>.class )</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            {</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                <span class="keywordflow">if</span> ( Instance == <span class="keyword">null</span> )</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                    Instance = <span class="keyword">new</span> <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a8404c43fc549df30d37c369c7d6e89ae">OKW_Const_Sngltn</a>();</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                }</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            }</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        }</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">return</span> Instance;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00277">277</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="comment">// Lazy Initialization (If required then only)</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordflow">if</span> ( Instance == <span class="keyword">null</span> )</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="comment">// Thread Safe. Might be costly operation in some case</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="keyword">synchronized</span> ( <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a8404c43fc549df30d37c369c7d6e89ae">OKW_Const_Sngltn</a>.class )</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                <span class="keywordflow">if</span> ( Instance == <span class="keyword">null</span> )</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                {</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                    Instance = <span class="keyword">new</span> <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a8404c43fc549df30d37c369c7d6e89ae">OKW_Const_Sngltn</a>();</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">return</span> Instance;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-10-summary" class="dynsummary" style="display:block;">
@@ -756,23 +760,23 @@ fpsInternalname und - CL.Language enstpricht OKWLanguage.Instance.Language </li>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013_12_22 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00601">601</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    {</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;        String lvsReturn = <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160; </div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.GetOKWConst4Internalname&quot;</span>, <span class="stringliteral">&quot;fpsInternalname&quot;</span>, fpsInternalname );</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160; </div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;        {</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;            lvsReturn = this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( <span class="stringliteral">&quot;LEFTBRACE&quot;</span> ) + this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( fpsInternalname ) + this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( <span class="stringliteral">&quot;RIGHTBRACE&quot;</span> );</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;        }</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;        <span class="keywordflow">finally</span></div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;        {</div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvsReturn );</div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;        }</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160; </div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;        <span class="keywordflow">return</span> lvsReturn;</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    }</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00608">608</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;    {</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;        String lvsReturn = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160; </div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.GetOKWConst4Internalname&quot;</span>, <span class="stringliteral">&quot;fpsInternalname&quot;</span>, fpsInternalname );</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160; </div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;        {</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;            lvsReturn = this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( <span class="stringliteral">&quot;LEFTBRACE&quot;</span> ) + this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( fpsInternalname ) + this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( <span class="stringliteral">&quot;RIGHTBRACE&quot;</span> );</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;        }</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;        {</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvsReturn );</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;        }</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160; </div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;        <span class="keywordflow">return</span> lvsReturn;</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-11-summary" class="dynsummary" style="display:block;">
@@ -819,23 +823,23 @@ fpsInternalname und - CL.Language enstpricht OKWLanguage.Instance.Language </li>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013.12.22 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00661">661</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    {</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;        ArrayList&lt;String&gt; lvls_2Plit = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160; </div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.SplitHSEP&quot;</span>, <span class="stringliteral">&quot;fpsString2Split&quot;</span>, fpsString2Split );</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160; </div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;        {</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;            lvls_2Plit = OKW_Helper.splitString( fpsString2Split, this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;HSEP&quot;</span> ) );</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;        }</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;        <span class="keywordflow">finally</span></div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;        {</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvls_2Plit.toString() );</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;        }</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160; </div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;        <span class="keywordflow">return</span> lvls_2Plit;</div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    }</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00668">668</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    {</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;        ArrayList&lt;String&gt; lvls_2Plit = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160; </div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.SplitHSEP&quot;</span>, <span class="stringliteral">&quot;fpsString2Split&quot;</span>, fpsString2Split );</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160; </div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;        {</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;            lvls_2Plit = OKW_Helper.splitString( fpsString2Split, this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;HSEP&quot;</span> ) );</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;        }</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;        {</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvls_2Plit.toString() );</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;        }</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160; </div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        <span class="keywordflow">return</span> lvls_2Plit;</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-12" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-12-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-12-summary" class="dynsummary" style="display:block;">
@@ -882,22 +886,22 @@ fpsInternalname und - CL.Language enstpricht OKWLanguage.Instance.Language </li>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013.12.22 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00720">720</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;    {</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        ArrayList&lt;String&gt; lvls_2Plit = <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.SplitSEP&quot;</span>, <span class="stringliteral">&quot;fpsString2Split&quot;</span>, fpsString2Split );</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160; </div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        {</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;            lvls_2Plit = OKW_Helper.splitString( fpsString2Split, this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;SEP&quot;</span> ) );</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        }</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;        <span class="keywordflow">finally</span></div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        {</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvls_2Plit.toString() );</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        }</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160; </div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        <span class="keywordflow">return</span> lvls_2Plit;</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    }</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00727">727</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    {</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;        ArrayList&lt;String&gt; lvls_2Plit = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.SplitSEP&quot;</span>, <span class="stringliteral">&quot;fpsString2Split&quot;</span>, fpsString2Split );</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160; </div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        {</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;            lvls_2Plit = OKW_Helper.splitString( fpsString2Split, this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;SEP&quot;</span> ) );</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;        }</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;        {</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvls_2Plit.toString() );</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        }</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160; </div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        <span class="keywordflow">return</span> lvls_2Plit;</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-13" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-13-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-13-summary" class="dynsummary" style="display:block;">
@@ -953,23 +957,23 @@ fpsInternalname und - CL.Language enstpricht OKWLanguage.Instance.Language </li>
 <dl class="section date"><dt>Datum</dt><dd>2013_12_22 <br  />
  Reviews:(2014_12_18_jnic, 2014_12_22_zh, 2014_12_26_jnic) </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00780">780</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    {</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;        ArrayList&lt;String&gt; lvls_2Plit = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160; </div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.SplitHSEP&quot;</span>, <span class="stringliteral">&quot;fps_String2Split&quot;</span>, fps_String2Split );</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160; </div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;        {</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;            lvls_2Plit = OKW_Helper.splitString( fps_String2Split, this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;VSEP&quot;</span> ) );</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        }</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;        <span class="keywordflow">finally</span></div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        {</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvls_2Plit.toString() );</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        }</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160; </div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;        <span class="keywordflow">return</span> lvls_2Plit;</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    }</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00787">787</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    {</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;        ArrayList&lt;String&gt; lvls_2Plit = <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160; </div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.SplitHSEP&quot;</span>, <span class="stringliteral">&quot;fps_String2Split&quot;</span>, fps_String2Split );</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160; </div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;        {</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;            lvls_2Plit = OKW_Helper.splitString( fps_String2Split, this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">GetOKWConst4Internalname</a>( <span class="stringliteral">&quot;VSEP&quot;</span> ) );</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;        }</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;        {</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvls_2Plit.toString() );</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;        }</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160; </div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;        <span class="keywordflow">return</span> lvls_2Plit;</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-15" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-15-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-15-summary" class="dynsummary" style="display:block;">
@@ -1021,42 +1025,42 @@ fpsInternalname und - CL.Language enstpricht OKWLanguage.Instance.Language </li>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013.12.09 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00833">833</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;    {</div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.YesNo2Boolean&quot;</span>, <span class="stringliteral">&quot;fpsYesOrNo&quot;</span>, fpsYesOrNo );</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;        Boolean lvb_Return = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160; </div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;        String lvs_Yes = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        String lvs_No = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160; </div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;        {</div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            lvs_Yes = this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( <span class="stringliteral">&quot;YES&quot;</span> ).toUpperCase();</div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;            lvs_No = this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( <span class="stringliteral">&quot;NO&quot;</span> ).toUpperCase();</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160; </div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;            <span class="keywordflow">if</span> ( lvs_Yes.equals( fpsYesOrNo.toUpperCase() ) )</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;            {</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;                lvb_Return = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;            }</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( lvs_No.equals( fpsYesOrNo.toUpperCase() ) )</div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;            {</div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;                lvb_Return = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;            }</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;            {</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;                <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>();</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160; </div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;                String lvsMessage = <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#ad31c41f692cf45672822df888816bbdd">LM</a>.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;YesNo2Boolean&quot;</span>, <span class="stringliteral">&quot;ValueNotAllowed&quot;</span>, fpsYesOrNo, lvs_Yes + <span class="stringliteral">&quot;&#39;/&#39;&quot;</span> + lvs_No );</div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> OKWNotAllowedValueException( lvsMessage );</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00840">840</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;    {</div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;        <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">LogFunctionStartDebug</a>( this.getClass().getName() + <span class="stringliteral">&quot;.YesNo2Boolean&quot;</span>, <span class="stringliteral">&quot;fpsYesOrNo&quot;</span>, fpsYesOrNo );</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;        Boolean lvb_Return = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160; </div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;        String lvs_Yes = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;        String lvs_No = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160; </div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;        <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;        {</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;            lvs_Yes = this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( <span class="stringliteral">&quot;YES&quot;</span> ).toUpperCase();</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;            lvs_No = this.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">GetConst4Internalname</a>( <span class="stringliteral">&quot;NO&quot;</span> ).toUpperCase();</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160; </div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;            <span class="keywordflow">if</span> ( lvs_Yes.equals( fpsYesOrNo.toUpperCase() ) )</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;            {</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;                lvb_Return = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;            }</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( lvs_No.equals( fpsYesOrNo.toUpperCase() ) )</div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;            {</div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;                lvb_Return = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;            }</div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;        }</div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;        <span class="keywordflow">finally</span></div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;        {</div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvb_Return );</div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;        }</div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160; </div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;        <span class="keywordflow">return</span> lvb_Return;</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    }</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;            {</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;                <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>();</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160; </div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;                String lvsMessage = <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#ad31c41f692cf45672822df888816bbdd">LM</a>.<a class="code" href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">GetMessage</a>( <span class="stringliteral">&quot;YesNo2Boolean&quot;</span>, <span class="stringliteral">&quot;ValueNotAllowed&quot;</span>, fpsYesOrNo, lvs_Yes + <span class="stringliteral">&quot;&#39;/&#39;&quot;</span> + lvs_No );</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;                <span class="keywordflow">throw</span> <span class="keyword">new</span> OKWNotAllowedValueException( lvsMessage );</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;            }</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        }</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        <span class="keywordflow">finally</span></div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        {</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">Log</a>.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">LogFunctionEndDebug</a>( lvb_Return );</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        }</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160; </div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        <span class="keywordflow">return</span> lvb_Return;</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;    }</div>
 </div><!-- fragment --><div id="dynsection-16" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-16-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
 <div id="dynsection-16-summary" class="dynsummary" style="display:block;">
@@ -1103,7 +1107,7 @@ fpsInternalname und - CL.Language enstpricht OKWLanguage.Instance.Language </li>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013_12_22 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00148">148</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00151">151</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
 
 </div>
 </div>
@@ -1131,7 +1135,7 @@ fpsInternalname und - CL.Language enstpricht OKWLanguage.Instance.Language </li>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013.12.22 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00162">162</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00165">165</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1161,7 @@ fpsInternalname und - CL.Language enstpricht OKWLanguage.Instance.Language </li>
 
 <p></p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00130">130</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00133">133</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
 
 </div>
 </div>
@@ -1183,7 +1187,7 @@ fpsInternalname und - CL.Language enstpricht OKWLanguage.Instance.Language </li>
 
 <p></p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00167">167</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___const___sngltn_8java_source.html#l00170">170</a> der Datei <a class="el" href="_o_k_w___const___sngltn_8java_source.html">OKW_Const_Sngltn.java</a>.</p>
 
 </div>
 </div>
@@ -1192,24 +1196,24 @@ fpsInternalname und - CL.Language enstpricht OKWLanguage.Instance.Language </li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_a51cde06bf07e855ba4d69ff36b9a27f7"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">okw.OKW_Const_Sngltn.GetConst4Internalname</a></div><div class="ttdeci">String GetConst4Internalname(String fpsInternalname)</div><div class="ttdoc">Methode ermittelt für Internalname und der aktuell eingestellten Sprache den Wert für Const.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00521">OKW_Const_Sngltn.java:521</a></div></div>
-<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_a62b03a776d71c8955db34ef52a5c1e68"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#a62b03a776d71c8955db34ef52a5c1e68">okw.OKW_Const_Sngltn.CL</a></div><div class="ttdeci">OKWLanguage CL</div><div class="ttdoc">Aktuelle Spracheinstellung (Current Language) wird in der Klasse OKWLanguage verwaltet.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00148">OKW_Const_Sngltn.java:148</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_a51cde06bf07e855ba4d69ff36b9a27f7"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#a51cde06bf07e855ba4d69ff36b9a27f7">okw.OKW_Const_Sngltn.GetConst4Internalname</a></div><div class="ttdeci">String GetConst4Internalname(String fpsInternalname)</div><div class="ttdoc">Methode ermittelt für Internalname und der aktuell eingestellten Sprache den Wert für Const.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00524">OKW_Const_Sngltn.java:524</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_a62b03a776d71c8955db34ef52a5c1e68"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#a62b03a776d71c8955db34ef52a5c1e68">okw.OKW_Const_Sngltn.CL</a></div><div class="ttdeci">OKWLanguage CL</div><div class="ttdoc">Aktuelle Spracheinstellung (Current Language) wird in der Klasse OKWLanguage verwaltet.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00151">OKW_Const_Sngltn.java:151</a></div></div>
 <div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a91b192a4e0381f6d02b791693d0fab84"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a91b192a4e0381f6d02b791693d0fab84">okw.log.Logger_Sngltn.LogFunctionEndDebug</a></div><div class="ttdeci">void LogFunctionEndDebug()</div><div class="ttdoc">LogFunctionEndDebug:</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00249">Logger_Sngltn.java:249</a></div></div>
-<div class="ttc" id="aclassokw_1_1_o_k_w___xml_reader_html_ab920b5335a2e1429c14cc5f8e79f39eb"><div class="ttname"><a href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb">okw.OKW_XmlReader.getTextContentSingleValue</a></div><div class="ttdeci">String getTextContentSingleValue(String fpsXPathExpression)</div><div class="ttdoc">Lies den TextContent eines Tag.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___xml_reader_8java_source.html#l00102">OKW_XmlReader.java:102</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w___xml_reader_html_ab920b5335a2e1429c14cc5f8e79f39eb"><div class="ttname"><a href="classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb">okw.OKW_XmlReader.getTextContentSingleValue</a></div><div class="ttdeci">String getTextContentSingleValue(String fpsXPathExpression)</div><div class="ttdoc">Liest den TextContent eines Tag.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___xml_reader_8java_source.html#l00103">OKW_XmlReader.java:103</a></div></div>
 <div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a2d4c3d22d2a52b92873ee2f3853d9c42"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a2d4c3d22d2a52b92873ee2f3853d9c42">okw.log.Logger_Sngltn.LogFunctionStartDebug</a></div><div class="ttdeci">void LogFunctionStartDebug(String fps_FunctionName, String... fpsParameter)</div><div class="ttdoc">LogFunctionStartDebug:</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00311">Logger_Sngltn.java:311</a></div></div>
-<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_ad31c41f692cf45672822df888816bbdd"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#ad31c41f692cf45672822df888816bbdd">okw.OKW_Const_Sngltn.LM</a></div><div class="ttdeci">LogMessenger LM</div><div class="ttdoc">Referenz auf OKW.Log.LogMessenger.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00162">OKW_Const_Sngltn.java:162</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_ad31c41f692cf45672822df888816bbdd"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#ad31c41f692cf45672822df888816bbdd">okw.OKW_Const_Sngltn.LM</a></div><div class="ttdeci">LogMessenger LM</div><div class="ttdoc">Referenz auf OKW.Log.LogMessenger.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00165">OKW_Const_Sngltn.java:165</a></div></div>
 <div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a313f97c79ba4662d9daaf7f537dd02f4"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a313f97c79ba4662d9daaf7f537dd02f4">okw.log.Logger_Sngltn.LogPrintDebug</a></div><div class="ttdeci">void LogPrintDebug(String fpsMessage)</div><div class="ttdoc">Loggt eine Nachricht.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00520">Logger_Sngltn.java:520</a></div></div>
 <div class="ttc" id="aclassokw_1_1_log_messenger_html_af225d1f037d47b3b085175c09d78bdd2"><div class="ttname"><a href="classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2">okw.LogMessenger.GetMessage</a></div><div class="ttdeci">String GetMessage(String MethodName, String TextKey)</div><div class="ttdoc">Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter.</div><div class="ttdef"><b>Definition:</b> <a href="_log_messenger_8java_source.html#l00137">LogMessenger.java:137</a></div></div>
-<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_a62f300fef546dc9860639ed884752cb4"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">okw.OKW_Const_Sngltn.Log</a></div><div class="ttdeci">static Logger_Sngltn Log</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00130">OKW_Const_Sngltn.java:130</a></div></div>
-<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_a8404c43fc549df30d37c369c7d6e89ae"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#a8404c43fc549df30d37c369c7d6e89ae">okw.OKW_Const_Sngltn.OKW_Const_Sngltn</a></div><div class="ttdeci">OKW_Const_Sngltn()</div><div class="ttdoc">Privater Konstruktor ohne Parameter im Entwurfsmuster Singelton initialisiert die Klasse OKW_Const.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00232">OKW_Const_Sngltn.java:232</a></div></div>
-<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_a02c05c79f7ea6e862a81a64ce23941fd"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">okw.OKW_Const_Sngltn.GetOKWConst4Internalname</a></div><div class="ttdeci">String GetOKWConst4Internalname(String fpsInternalname)</div><div class="ttdoc">Methode ermittelt für Internalname und der aktuell eingestellten Sprache den Wert für OKWConst.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00601">OKW_Const_Sngltn.java:601</a></div></div>
-<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_a1d728edaa90cfa9f5c1612b51a9c1d7c"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#a1d728edaa90cfa9f5c1612b51a9c1d7c">okw.OKW_Const_Sngltn.myXmlReader</a></div><div class="ttdeci">OKW_XmlReader myXmlReader</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00167">OKW_Const_Sngltn.java:167</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_a62f300fef546dc9860639ed884752cb4"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#a62f300fef546dc9860639ed884752cb4">okw.OKW_Const_Sngltn.Log</a></div><div class="ttdeci">static Logger_Sngltn Log</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00133">OKW_Const_Sngltn.java:133</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_a8404c43fc549df30d37c369c7d6e89ae"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#a8404c43fc549df30d37c369c7d6e89ae">okw.OKW_Const_Sngltn.OKW_Const_Sngltn</a></div><div class="ttdeci">OKW_Const_Sngltn()</div><div class="ttdoc">Privater Konstruktor ohne Parameter im Entwurfsmuster Singelton initialisiert die Klasse OKW_Const.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00235">OKW_Const_Sngltn.java:235</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_a02c05c79f7ea6e862a81a64ce23941fd"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#a02c05c79f7ea6e862a81a64ce23941fd">okw.OKW_Const_Sngltn.GetOKWConst4Internalname</a></div><div class="ttdeci">String GetOKWConst4Internalname(String fpsInternalname)</div><div class="ttdoc">Methode ermittelt für Internalname und der aktuell eingestellten Sprache den Wert für OKWConst.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00608">OKW_Const_Sngltn.java:608</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_a1d728edaa90cfa9f5c1612b51a9c1d7c"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#a1d728edaa90cfa9f5c1612b51a9c1d7c">okw.OKW_Const_Sngltn.myXmlReader</a></div><div class="ttdeci">OKW_XmlReader myXmlReader</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00170">OKW_Const_Sngltn.java:170</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><a class="el" href="classokw_1_1_o_k_w___const___sngltn.html">OKW_Const_Sngltn</a></li>
-    <li class="footer">Erzeugt am Fre Nov 22 2019 20:39:44 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Nov 27 2019 14:40:06 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

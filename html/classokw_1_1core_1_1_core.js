@@ -44,6 +44,7 @@ var classokw_1_1core_1_1_core =
     [ "setLanguage", "classokw_1_1core_1_1_core.html#ab4e0f723d27cb11c944ec4c82c426100", null ],
     [ "setNOK_Reason", "classokw_1_1core_1_1_core.html#a284fb362631a91378c2c113bc07f4c39", null ],
     [ "SetValue", "classokw_1_1core_1_1_core.html#a7088065564f2909025435c0c5594926c", null ],
+    [ "SetVar", "classokw_1_1core_1_1_core.html#aac1c9434f51ee8c251171e3bbf43ec14", null ],
     [ "setVerifyFail", "classokw_1_1core_1_1_core.html#a401b4b842a116a1bb3203aab5d909955", null ],
     [ "StartApp", "classokw_1_1core_1_1_core.html#ac20a22275b6aea1c4e551dce1fd0c1e9", null ],
     [ "StopApp", "classokw_1_1core_1_1_core.html#a13d953a145a5e1bc776785f8433ba69c", null ],

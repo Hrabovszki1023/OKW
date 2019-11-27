@@ -5,9 +5,9 @@ digraph "okw.core.IOKW_State.VerifyCaptionREGX"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node1 [label="okw.core.IOKW_State.Verify\lCaptionREGX",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Überprüft die Überschrift des Objektes."];
+  Node1 [label="okw.core.IOKW_State.Verify\lCaptionREGX",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Überprüft die Überschrift eines Objektes, Reguläre-Ausdrücke als Sollwert sind erlaubt."];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="okw.core.Core.VerifyCaptionREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#adb7da11977acc1b851caac445eb37451",tooltip="Überprüft die Überschrift des Objektes."];
+  Node2 [label="okw.core.Core.VerifyCaptionREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#adb7da11977acc1b851caac445eb37451",tooltip="Überprüft die Überschrift eines Objektes, Reguläre-Ausdrücke als Sollwert sind erlaubt."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="okw.core.EN.VerifyCaptionREGX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#ab155161cbaa50ebad79b1695f1f504fa",tooltip="Überprüft die Überschrift des Objektes."];
   Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

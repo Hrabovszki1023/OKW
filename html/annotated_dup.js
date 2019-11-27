@@ -337,9 +337,7 @@ var annotated_dup =
       [ "OKW_Const_Sngltn", "classokw_1_1_o_k_w___const___sngltn.html", "classokw_1_1_o_k_w___const___sngltn" ],
       [ "OKW_Const_Split_SEP_HSEP_VSEP", "classokw_1_1_o_k_w___const___split___s_e_p___h_s_e_p___v_s_e_p.html", "classokw_1_1_o_k_w___const___split___s_e_p___h_s_e_p___v_s_e_p" ],
       [ "OKW_Const_YesNo2Boolean", "classokw_1_1_o_k_w___const___yes_no2_boolean.html", "classokw_1_1_o_k_w___const___yes_no2_boolean" ],
-      [ "OKW_ConstExceptionTest", "classokw_1_1_o_k_w___const_exception_test.html", [
-        [ "OKW_Const_Test_", "classokw_1_1_o_k_w___const_exception_test_1_1_o_k_w___const___test__.html", "classokw_1_1_o_k_w___const_exception_test_1_1_o_k_w___const___test__" ]
-      ] ],
+      [ "OKW_ConstExceptionTest", "classokw_1_1_o_k_w___const_exception_test.html", "classokw_1_1_o_k_w___const_exception_test" ],
       [ "OKW_CustomSettings", "classokw_1_1_o_k_w___custom_settings.html", "classokw_1_1_o_k_w___custom_settings" ],
       [ "OKW_Enviroment", "classokw_1_1_o_k_w___enviroment.html", "classokw_1_1_o_k_w___enviroment" ],
       [ "OKW_FileHelper", "classokw_1_1_o_k_w___file_helper.html", null ],

@@ -200,7 +200,6 @@ var hierarchy =
     [ "okw.OKW_Const_GetOKWConst4Internalname", "classokw_1_1_o_k_w___const___get_o_k_w_const4_internalname.html", null ],
     [ "okw.OKW_Const_Sngltn", "classokw_1_1_o_k_w___const___sngltn.html", null ],
     [ "okw.OKW_Const_Split_SEP_HSEP_VSEP", "classokw_1_1_o_k_w___const___split___s_e_p___h_s_e_p___v_s_e_p.html", null ],
-    [ "okw.OKW_ConstExceptionTest.OKW_Const_Test_", "classokw_1_1_o_k_w___const_exception_test_1_1_o_k_w___const___test__.html", null ],
     [ "okw.OKW_Const_YesNo2Boolean", "classokw_1_1_o_k_w___const___yes_no2_boolean.html", null ],
     [ "okw.OKW_ConstExceptionTest", "classokw_1_1_o_k_w___const_exception_test.html", null ],
     [ "okw.core.OKW_CurrentObject_Sngltn", "classokw_1_1core_1_1_o_k_w___current_object___sngltn.html", null ],

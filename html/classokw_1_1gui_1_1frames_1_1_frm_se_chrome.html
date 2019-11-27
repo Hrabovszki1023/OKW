@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 451, Datum: 11.22.2019 20:38:13</span>
+   &#160;<span id="projectnumber">Build_ID: 452, Datum: 11.27.2019 14:38:35</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -490,11 +490,9 @@ Weitere Geerbte Elemente</h2></td></tr>
 </div><div class="memdoc">
 
 <p>OKW_Memorize ist die Speicher-Klasse hinter den Merke*-Schlüsselwörter. </p>
-<p>Die Daten werden vie Serialisierung in eine XML Datei geschrieben. Zur Serialisierung wird die Klasse System.Xml.XmlSerializer verwendet.</p>
-<p>Pfad und Name der XML-Datei. Dies wird in der XML/OKW_Ini.xml vorgegeben: <code>XPATH: OKW_Ini/OKW_Enviroment/OKW_Memorize_xml</code></p>
-<p>Diese Klasse ist nach denm Singelton-Muster aufgebaut.</p>
-<p>Die Instanz der Klasse wird wie folgt abgerufen:</p>
-<div class="fragment"><div class="line">OKW.OKW_Memorrize.Instanz</div>
+<p>Mit Memorize*( "BN", "myKeyname" ) wird ein Wert</p>
+<p>Diese Klasse ist nach dem Singelton-Pattern aufgebaut. Eine Instanz der Klasse wird wie folgt erstellt:</p>
+<div class="fragment"><div class="line">OKW.OKW_Memorrize.getInstance()</div>
 </div><!-- fragment --><dl class="section author"><dt>Autor</dt><dd>Zoltán Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2013.12.06 \ </dd></dl>
 
@@ -514,7 +512,7 @@ Weitere Geerbte Elemente</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>gui</b></li><li class="navelem"><b>frames</b></li><li class="navelem"><a class="el" href="classokw_1_1gui_1_1frames_1_1_frm_se_chrome.html">FrmSeChrome</a></li>
-    <li class="footer">Erzeugt am Fre Nov 22 2019 20:39:49 für OpenKeyWord von
+    <li class="footer">Erzeugt am Mit Nov 27 2019 14:40:11 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

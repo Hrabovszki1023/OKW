@@ -36,6 +36,8 @@ var classokw_1_1core_1_1_e_n___keywords___test =
     [ "tc_SetFocus", "classokw_1_1core_1_1_e_n___keywords___test.html#aecd21694605a0109a71aa8c01a177d86", null ],
     [ "tc_SetValue_MultipleValues", "classokw_1_1core_1_1_e_n___keywords___test.html#a95ed51772a2056c531f4a5dd9139a2ba", null ],
     [ "tc_SetValue_SV", "classokw_1_1core_1_1_e_n___keywords___test.html#aa18345af1dd86689b4a74a48a64aac9b", null ],
+    [ "tc_SetVar", "classokw_1_1core_1_1_e_n___keywords___test.html#a7fbdc2c7e30a776975e312b214058b57", null ],
+    [ "tc_SetVar_MV", "classokw_1_1core_1_1_e_n___keywords___test.html#afc842d7b8f55f308ad71a9be58257156", null ],
     [ "tc_StartApp", "classokw_1_1core_1_1_e_n___keywords___test.html#a4a2ab2ce3967009411d46ca6d60911bb", null ],
     [ "tc_StopApp", "classokw_1_1core_1_1_e_n___keywords___test.html#a2838d054311a05fa0b0b13872fb627fd", null ],
     [ "tc_TypeKey_MultipleValues", "classokw_1_1core_1_1_e_n___keywords___test.html#a91e986ab5de73b7a717ffb26bdf25923", null ],
