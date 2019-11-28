@@ -1,13 +1,13 @@
 var classokw_1_1parser_1_1_o_k_w___visitor_test =
 [
-    [ "MySetUp", "classokw_1_1parser_1_1_o_k_w___visitor_test.html#a2677a9bb1ef3eacab11efaf7929f60c2", null ],
-    [ "MyTearDown", "classokw_1_1parser_1_1_o_k_w___visitor_test.html#aef0779993ca241fd823bbad2084a8393", null ],
     [ "TC_ParseMe_ArrayListString", "classokw_1_1parser_1_1_o_k_w___visitor_test.html#a7480c7ffa9758fe572d0187c84a1ef86", null ],
     [ "TC_ParseMe_ArrayListString_Empty", "classokw_1_1parser_1_1_o_k_w___visitor_test.html#a6c0e9a16fb4e684687350cf5f29f6586", null ],
     [ "TC_ParseMe_ArrayListString_OneValue", "classokw_1_1parser_1_1_o_k_w___visitor_test.html#ad99a3cdb38d12e26a6924c282c04d263", null ],
     [ "TC_ParseMe_EnvVar", "classokw_1_1parser_1_1_o_k_w___visitor_test.html#aa57f488f8b52d383e2c71f2650ad06fe", null ],
     [ "TC_ParseMe_FILE_OKWKEYMAPS_XML", "classokw_1_1parser_1_1_o_k_w___visitor_test.html#af36205d7d29ebe3811638506e402f0a5", null ],
     [ "TC_ParseMe_MemorizedValue", "classokw_1_1parser_1_1_o_k_w___visitor_test.html#a0859a9809c4c66da88c95311e732fa7a", null ],
+    [ "TC_ParseMe_MemorizedValue_Underscore", "classokw_1_1parser_1_1_o_k_w___visitor_test.html#abe7bdabd2dd1e259374741ba6da6dc13", null ],
+    [ "TC_ParseMe_MemorizedValue_WithDot", "classokw_1_1parser_1_1_o_k_w___visitor_test.html#ab58106352f3765205c280e1c97a4bb0c", null ],
     [ "TC_ParseMe_OKW_Consts", "classokw_1_1parser_1_1_o_k_w___visitor_test.html#abe4eab99003c908b2a012b1ae43ad2b7", null ],
     [ "TC_ParseMe_StringWithBlank", "classokw_1_1parser_1_1_o_k_w___visitor_test.html#a34367df494773831ac61cce4eecf2644", null ],
     [ "TC_ParseMe_TextPlusEnvVar", "classokw_1_1parser_1_1_o_k_w___visitor_test.html#acaf244b0afd90c3ea823d949fab938e9", null ],
