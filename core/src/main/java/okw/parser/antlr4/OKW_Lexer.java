@@ -1,4 +1,4 @@
-// Generated from OKW_Lexer.g4 by ANTLR 4.7
+// Generated from OKW_Lexer.g4 by ANTLR 4.7.2
 
 package okw.parser.antlr4;
 
@@ -13,7 +13,7 @@ import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class OKW_Lexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -33,25 +33,34 @@ public class OKW_Lexer extends Lexer {
 		"DEFAULT_MODE", "KLAMMER_MODE"
 	};
 
-	public static final String[] ruleNames = {
-		"KLAMMERAUF", "TEXT", "WS", "KLAMMERZU", "FOLDER_LOGMESSAGES", "FOLDER_XML", 
-		"FILE_OKW_CONST_XML", "FILE_OKW_DOCU_XML", "FILE_OKW_IMPLEMENTATIONMATRIX_XML", 
-		"FILE_OKW_INI_XML", "FILE_OKW_KEYMAPS_XML", "FILE_OKW_MEMORIZE_XML", "KEYPREFIX", 
-		"KEYVALUE", "ENVVAL", "VALUE"
-	};
+	private static String[] makeRuleNames() {
+		return new String[] {
+			"KLAMMERAUF", "TEXT", "WS", "KLAMMERZU", "FOLDER_LOGMESSAGES", "FOLDER_XML", 
+			"FILE_OKW_CONST_XML", "FILE_OKW_DOCU_XML", "FILE_OKW_IMPLEMENTATIONMATRIX_XML", 
+			"FILE_OKW_INI_XML", "FILE_OKW_KEYMAPS_XML", "FILE_OKW_MEMORIZE_XML", 
+			"KEYPREFIX", "KEYVALUE", "ENVVAL", "VALUE"
+		};
+	}
+	public static final String[] ruleNames = makeRuleNames();
 
-	private static final String[] _LITERAL_NAMES = {
-		null, "'${'", null, null, "'}'", "'Folder_LogMessages'", "'Folder_XML'", 
-		"'File_OKW_Const_xml'", "'File_OKW_Docu_xml'", "'File_OKW_ImplementationMatrix_xml'", 
-		"'File_OKW_Ini_xml'", "'File_OKW_Keymaps_xml'", "'File_OKW_Memorize_xml'", 
-		"'Taste.'"
-	};
-	private static final String[] _SYMBOLIC_NAMES = {
-		null, "KLAMMERAUF", "TEXT", "WS", "KLAMMERZU", "FOLDER_LOGMESSAGES", "FOLDER_XML", 
-		"FILE_OKW_CONST_XML", "FILE_OKW_DOCU_XML", "FILE_OKW_IMPLEMENTATIONMATRIX_XML", 
-		"FILE_OKW_INI_XML", "FILE_OKW_KEYMAPS_XML", "FILE_OKW_MEMORIZE_XML", "KEYPREFIX", 
-		"KEYVALUE", "ENVVAL", "VALUE"
-	};
+	private static String[] makeLiteralNames() {
+		return new String[] {
+			null, "'${'", null, null, "'}'", "'Folder_LogMessages'", "'Folder_XML'", 
+			"'File_OKW_Const_xml'", "'File_OKW_Docu_xml'", "'File_OKW_ImplementationMatrix_xml'", 
+			"'File_OKW_Ini_xml'", "'File_OKW_Keymaps_xml'", "'File_OKW_Memorize_xml'", 
+			"'Taste.'"
+		};
+	}
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static String[] makeSymbolicNames() {
+		return new String[] {
+			null, "KLAMMERAUF", "TEXT", "WS", "KLAMMERZU", "FOLDER_LOGMESSAGES", 
+			"FOLDER_XML", "FILE_OKW_CONST_XML", "FILE_OKW_DOCU_XML", "FILE_OKW_IMPLEMENTATIONMATRIX_XML", 
+			"FILE_OKW_INI_XML", "FILE_OKW_KEYMAPS_XML", "FILE_OKW_MEMORIZE_XML", 
+			"KEYPREFIX", "KEYVALUE", "ENVVAL", "VALUE"
+		};
+	}
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
 	/**

@@ -1,4 +1,4 @@
-// Generated from OKW_Parser.g4 by ANTLR 4.7
+// Generated from OKW_Parser.g4 by ANTLR 4.7.2
 
 package okw.parser.antlr4;
 
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class OKW_Parser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -26,23 +26,32 @@ public class OKW_Parser extends Parser {
 	public static final int
 		RULE_root = 0, RULE_okw_internal_var = 1, RULE_okw_typekey = 2, RULE_keyvalue = 3, 
 		RULE_okw_env_var = 4, RULE_envvalue = 5, RULE_text = 6;
-	public static final String[] ruleNames = {
-		"root", "okw_internal_var", "okw_typekey", "keyvalue", "okw_env_var", 
-		"envvalue", "text"
-	};
+	private static String[] makeRuleNames() {
+		return new String[] {
+			"root", "okw_internal_var", "okw_typekey", "keyvalue", "okw_env_var", 
+			"envvalue", "text"
+		};
+	}
+	public static final String[] ruleNames = makeRuleNames();
 
-	private static final String[] _LITERAL_NAMES = {
-		null, "'${'", null, null, "'}'", "'Folder_LogMessages'", "'Folder_XML'", 
-		"'File_OKW_Const_xml'", "'File_OKW_Docu_xml'", "'File_OKW_ImplementationMatrix_xml'", 
-		"'File_OKW_Ini_xml'", "'File_OKW_Keymaps_xml'", "'File_OKW_Memorize_xml'", 
-		"'Taste.'"
-	};
-	private static final String[] _SYMBOLIC_NAMES = {
-		null, "KLAMMERAUF", "TEXT", "WS", "KLAMMERZU", "FOLDER_LOGMESSAGES", "FOLDER_XML", 
-		"FILE_OKW_CONST_XML", "FILE_OKW_DOCU_XML", "FILE_OKW_IMPLEMENTATIONMATRIX_XML", 
-		"FILE_OKW_INI_XML", "FILE_OKW_KEYMAPS_XML", "FILE_OKW_MEMORIZE_XML", "KEYPREFIX", 
-		"KEYVALUE", "ENVVAL", "VALUE"
-	};
+	private static String[] makeLiteralNames() {
+		return new String[] {
+			null, "'${'", null, null, "'}'", "'Folder_LogMessages'", "'Folder_XML'", 
+			"'File_OKW_Const_xml'", "'File_OKW_Docu_xml'", "'File_OKW_ImplementationMatrix_xml'", 
+			"'File_OKW_Ini_xml'", "'File_OKW_Keymaps_xml'", "'File_OKW_Memorize_xml'", 
+			"'Taste.'"
+		};
+	}
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static String[] makeSymbolicNames() {
+		return new String[] {
+			null, "KLAMMERAUF", "TEXT", "WS", "KLAMMERZU", "FOLDER_LOGMESSAGES", 
+			"FOLDER_XML", "FILE_OKW_CONST_XML", "FILE_OKW_DOCU_XML", "FILE_OKW_IMPLEMENTATIONMATRIX_XML", 
+			"FILE_OKW_INI_XML", "FILE_OKW_KEYMAPS_XML", "FILE_OKW_MEMORIZE_XML", 
+			"KEYPREFIX", "KEYVALUE", "ENVVAL", "VALUE"
+		};
+	}
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
 	/**
@@ -92,6 +101,7 @@ public class OKW_Parser extends Parser {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
+
 	public static class RootContext extends ParserRuleContext {
 		public List<Okw_internal_varContext> okw_internal_var() {
 			return getRuleContexts(Okw_internal_varContext.class);
