@@ -224,6 +224,7 @@ var hierarchy =
     [ "okw.OKW_Ini_Sngltn", "classokw_1_1_o_k_w___ini___sngltn.html", null ],
     [ "okw.OKW_IniTest", "classokw_1_1_o_k_w___ini_test.html", null ],
     [ "okw.OKW_Memorize_Sngltn", "classokw_1_1_o_k_w___memorize___sngltn.html", null ],
+    [ "okw.OKW_Memorize_Sngltn_Test", "classokw_1_1_o_k_w___memorize___sngltn___test.html", null ],
     [ "okw.parser.antlr4.OKW_ParserBaseVisitor< String >", "classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser_base_visitor.html", [
       [ "okw.parser.OKW_Visitor", "classokw_1_1parser_1_1_o_k_w___visitor.html", null ]
     ] ],

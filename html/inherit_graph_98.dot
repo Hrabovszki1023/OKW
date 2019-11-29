@@ -5,5 +5,5 @@ digraph "Grafische Darstellung der Klassenhierarchie"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="okw.OKWLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w_language.html",tooltip="http://de.wikipedia.org/wiki/ISO-3166-1-Kodierliste"];
+  Node0 [label="okw.OKW_XmlReaderTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader_test.html",tooltip=" "];
 }

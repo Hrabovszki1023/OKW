@@ -358,6 +358,7 @@ var annotated_dup =
       [ "OKW_Ini_Sngltn", "classokw_1_1_o_k_w___ini___sngltn.html", "classokw_1_1_o_k_w___ini___sngltn" ],
       [ "OKW_IniTest", "classokw_1_1_o_k_w___ini_test.html", "classokw_1_1_o_k_w___ini_test" ],
       [ "OKW_Memorize_Sngltn", "classokw_1_1_o_k_w___memorize___sngltn.html", "classokw_1_1_o_k_w___memorize___sngltn" ],
+      [ "OKW_Memorize_Sngltn_Test", "classokw_1_1_o_k_w___memorize___sngltn___test.html", "classokw_1_1_o_k_w___memorize___sngltn___test" ],
       [ "OKW_Properties", "classokw_1_1_o_k_w___properties.html", "classokw_1_1_o_k_w___properties" ],
       [ "OKW_Properties_SetDOptionsTest", "classokw_1_1_o_k_w___properties___set_d_options_test.html", "classokw_1_1_o_k_w___properties___set_d_options_test" ],
       [ "OKW_PropertiesTest", "classokw_1_1_o_k_w___properties_test.html", "classokw_1_1_o_k_w___properties_test" ],

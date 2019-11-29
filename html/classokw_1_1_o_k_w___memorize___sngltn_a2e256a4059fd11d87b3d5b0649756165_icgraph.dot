@@ -1,0 +1,11 @@
+digraph "okw.OKW_Memorize_Sngltn.exists"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="okw.OKW_Memorize_Sngltn.exists",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Prüft ob es eine Eintrag zum Schlüssel fpsKey vorhanden ist."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.OKW_Memorize_Sngltn\l_Test.tc_exists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___memorize___sngltn___test.html#a1ea27c511e1bc6d1b4e42af2fa360916",tooltip="Prüft die Methoden OKW_Memorize_Sngltn.exist(String)"];
+}

@@ -1,5 +1,11 @@
 var NAVTREEINDEX13 =
 {
+"classokw_1_1log_1_1log2html_1_1_log_exception___test.html#a9bd23ebd31a11ce0184c249eaec83843":[10,0,1,6,0,10,16],
+"classokw_1_1log_1_1log2html_1_1_log_exception___test.html#aa1fde7982b95e07324e687f2b32a26e7":[10,0,1,6,0,10,3],
+"classokw_1_1log_1_1log2html_1_1_log_exception___test.html#aa7e0c0bfda030e94d5407a24556ef567":[10,0,1,6,0,10,10],
+"classokw_1_1log_1_1log2html_1_1_log_exception___test.html#ab03f9c9ea44ba196868e0673e1af939d":[10,0,1,6,0,10,11],
+"classokw_1_1log_1_1log2html_1_1_log_exception___test.html#abfd4a9afa1f04cb2327211cceb0d32b1":[10,0,1,6,0,10,4],
+"classokw_1_1log_1_1log2html_1_1_log_exception___test.html#ac182c715a0f70044e5106ed479e9db12":[10,0,1,6,0,10,18],
 "classokw_1_1log_1_1log2html_1_1_log_exception___test.html#ace3f5254528dca615f451f2c6eb89906":[10,0,1,6,0,10,13],
 "classokw_1_1log_1_1log2html_1_1_log_exception___test.html#ad279ed94ab6efac238f4e4198fd5dfd8":[10,0,1,6,0,10,12],
 "classokw_1_1log_1_1log2html_1_1_log_exception___test.html#ad8425708426a969ca435150c9b692985":[10,0,1,6,0,10,17],
@@ -243,11 +249,5 @@ var NAVTREEINDEX13 =
 "classokw_1_1log_1_1log2html_1_1_logger___test.html#ae4e3b635579196c36f0fd52606fd7fad":[10,0,1,6,0,13,14],
 "classokw_1_1log_1_1log2html_1_1_logger___test.html#aef7f01812c11c43f25d630bc9aca0303":[10,0,1,6,0,13,16],
 "classokw_1_1log_1_1log2html_1_1_logger___test.html#af08dceaf81dd1592c67a3f2844e0cba2":[10,0,1,6,0,13,27],
-"classokw_1_1log_1_1log2html_1_1_logger___test.html#af53b6ce08285cb027258942690a31024":[10,0,1,6,0,13,18],
-"classokw_1_1log_1_1log2html_1_1_logger___test.html#af6effd211e01447d3b427be57a3468b9":[10,0,1,6,0,13,10],
-"classokw_1_1log_1_1log2html_1_1_result_list.html":[10,0,1,6,0,30],
-"classokw_1_1log_1_1log2html_1_1_result_list.html#a21f9b738f765b6cef9fa6c9f6c2fc0c2":[10,0,1,6,0,30,6],
-"classokw_1_1log_1_1log2html_1_1_result_list.html#a588fc1175d79edbf6ce32d622a224612":[10,0,1,6,0,30,7],
-"classokw_1_1log_1_1log2html_1_1_result_list.html#a75e21955a0dcfd722d23d50c791adacd":[10,0,1,6,0,30,0],
-"classokw_1_1log_1_1log2html_1_1_result_list.html#ad366c5b07fc5363431de811042494cf3":[10,0,1,6,0,30,1]
+"classokw_1_1log_1_1log2html_1_1_logger___test.html#af53b6ce08285cb027258942690a31024":[10,0,1,6,0,13,18]
 };
