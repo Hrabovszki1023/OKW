@@ -40,15 +40,18 @@
 package okw.core;
 
 import okw.OKW_TestClipboard;
+import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.log.Logger_Sngltn;
 
-import org.junit.After;
-import org.junit.Before;
+
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EN_Keywords_NOK_Test
 {
     static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
@@ -84,17 +87,6 @@ public class EN_Keywords_NOK_Test
     }
     */
 
-    @Before
-    public void setUp() throws Exception
-    {
-    }
-
-    @After
-    public void tearDown() throws Exception
-    {
-        EN.EndTest();
-    }
-
     /** \~german
      * Prüft methoden aufruf für einen einfachen Click.
      *
@@ -105,14 +97,15 @@ public class EN_Keywords_NOK_Test
      * 
      * @throws Exception
      */
-    @Test
-    public void tc_NOK_AllKeyWords() throws Exception
+    @Test (expected= OKWFrameObjectMethodNotImplemented.class)
+    public void tc_A_NOK_AllKeyWords() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
+
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
-        EN.SetKernaleStateNOK( );
-
+        EN.ClickOn( "NoMethodObj" );
+        //
         EN.ClickOn( "All_MethodsObj" );
         EN.DoubleClickOn( "All_MethodsObj" );
         
@@ -208,9 +201,19 @@ public class EN_Keywords_NOK_Test
         // Datei Schlüsselwörter
         
         EN.EndTest();
-        
-        EN.BeginTest( "2.Test" );
-        EN.EndTest();
-        
     }
+    
+    @Test 
+    public void tc_B_OK_AllKeyWords() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        //
+        EN.ClickOn( "All_MethodsObj" );
+        EN.EndTest();
+}
+
 }

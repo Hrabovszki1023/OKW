@@ -40,15 +40,17 @@
 package okw.core;
 
 import okw.OKW_TestClipboard;
+import okw.exceptions.OKWFrameObjectChildNotFoundException;
 import okw.exceptions.OKWFrameObjectParentNotFoundException;
 import okw.log.Logger_Sngltn;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EN_OKWFrameObjectParentNotFoundException_Test
 {
 
@@ -67,32 +69,8 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
         myLogger.setDebugMode(false);
 	}
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception
-	{
-	}
 
-    /// \~german
-    /// \brief
-    /// Diese Methode wird immer vor jedem Test(fall) ausgeführt.
-    /// 
-	@Before
-	public void setUp() throws Exception
-	{
-        //EN.BeginTest( "TestContext.CurrentContext.Test.Name" );
-	}
-
-    /// \~german
-    /// \brief
-    /// Diese Methode wird immer nach jedem Test(fall) ausgeführt.
-    /// 
-	@After
-	public void tearDown() throws Exception
-	{
-        EN.EndTest();
-	}
-
-	/**
+  /**
    * \~german
    * \brief Prüft ob die Ausnahme OKWFrameObjectParentNotFoundException ausgelöst wird,
    *        wenn das FensterObjekt zum FN nicht gefunden wird. 
@@ -109,7 +87,33 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
     {
         EN.BeginTest( "TC_Select_Window_OKWFrameObjectParentNotFoundException_Test" );
         EN.SelectWindow( "WindowDoesNotExists" );
-    }
+      
+    EN.EndTest();
+  }
+	
+	  
+
+	  /**
+	   *  \~german
+	   *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException
+	   *  durch okw.core.OK.SelectContext(String) ausgelöst wird,
+	   *  wenn das Kinobjekt nicht vorhanden ist.
+	   * 
+	   *  \~english
+	   *  \~
+	   *  \author Zoltan Hrabovszki
+	   *  \date 2019-11-22
+	  */
+	  @Test( expected = OKWFrameObjectParentNotFoundException.class )
+	  public void TC_SelectContext_OKWFrameObjectChildNotFoundException() throws Exception
+	  {
+	    EN.BeginTest( "TC_SelectContext_OKWFrameObjectChildNotFoundException" );
+
+	    EN.SelectWindow( "Rechner" );
+	    EN.SelectContext( "IsNotDefindeInRechner" );
+	    
+	    EN.EndTest();
+	  }
 
 	/**
    * \~german
@@ -128,7 +132,9 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
     {
         EN.BeginTest( "TC_Select_Window_OKWFrameObjectParentNotFoundException_Test" );
         EN.StartApp( "WindowDoesNotExists" );
-    }
+      
+    EN.EndTest();
+  }
 
   /**
    * \~german
@@ -147,6 +153,8 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
     {
         EN.BeginTest( "TC_Select_Window_OKWFrameObjectParentNotFoundException_Test" );
         EN.StopApp( "WindowDoesNotExists" );
-    }
+      
+    EN.EndTest();
+  }
 }
 	

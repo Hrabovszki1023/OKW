@@ -28,7 +28,7 @@ public class SeSelect_EN_Chrome_Test extends SeSelect_EN_Test
         myLog2HTML = new Log2HTML("SeSelect_EN_Chrome_Test");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
 
-        Logger_Sngltn.getInstance().setDebugMode(true);
+        Logger_Sngltn.getInstance().setDebugMode(false);
     }
 
     /*@After

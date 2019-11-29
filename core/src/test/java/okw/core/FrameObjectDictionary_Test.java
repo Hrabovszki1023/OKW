@@ -47,7 +47,9 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import okw.*;
 import okw.exceptions.*;
@@ -57,6 +59,7 @@ import okw.log.*;
 /// This is a test class for FrameObjectDictionaryTest and is intended
 /// to contain all FrameObjectDictionaryTest Unit Tests
 /// 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class FrameObjectDictionary_Test
 {
 

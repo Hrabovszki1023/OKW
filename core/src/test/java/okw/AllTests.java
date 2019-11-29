@@ -14,6 +14,7 @@ import org.junit.runners.Suite.SuiteClasses;
   OKW_Const_GetOKWConst4Internalname.class,
   OKW_Const_Split_SEP_HSEP_VSEP.class,
   OKW_Const_YesNo2Boolean.class,
+  OKW_ConstExceptionTest.class,
   OKW_FileHelperTest.class,
   OKW_Helper_GetLeftFromDelimiterNumberTest.class,
   OKW_Helper_GetRightFromDelimiterNumberTest.class,
@@ -26,9 +27,9 @@ import org.junit.runners.Suite.SuiteClasses;
   OKW_Helper_StringSplitTest.class,
   OKW_HelperTest.class,
   OKW_IniTest.class,
-  OKW_TimeOut_Test.class,
-  OKW_XmlReaderTest.class,
   OKW_PropertiesTest.class,
+  OKW_TimeOut_Test.class,
+  OKW_XmlReaderTest.class
   } )
 
 public class AllTests

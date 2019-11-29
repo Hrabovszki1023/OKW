@@ -1,6 +1,9 @@
 package okw.seimage;
 
 import static org.junit.Assert.*;
+
+import org.junit.FixMethodOrder;
+
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
@@ -10,6 +13,7 @@ import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
 /**
 * \~
@@ -18,6 +22,7 @@ import org.junit.rules.TestName;
 * @author zoltan
 */
 @Ignore
+@FixMethodOrder( MethodSorters.NAME_ASCENDING )
 public class SeImage_EN_Test
 {
   String cvOKWObject = "Link" + "";
@@ -348,6 +353,8 @@ public class SeImage_EN_Test
 
       EN.SelectWindow( "Image" );
       EN.SetFocus( "Image 1" );
+
+      EN.EndTest();
   }
 
 
@@ -707,6 +714,8 @@ public class SeImage_EN_Test
 
         EN.SelectWindow( "Image" );
         EN.DoubleClickOn( "Image 1");
+        
+        EN.EndTest();
     }
    
     
@@ -729,6 +738,7 @@ public class SeImage_EN_Test
           EN.SelectWindow( "Image" );
 
           EN.SetValue( "Image 1", "SetValue");
+          EN.EndTest();
       }
      
      /**
@@ -750,6 +760,7 @@ public class SeImage_EN_Test
            EN.SelectWindow( "Image" );
 
            EN.Select( "Image 1", "Set a Value");
+           EN.EndTest();
        }
 
       /**
@@ -771,6 +782,7 @@ public class SeImage_EN_Test
             EN.SelectWindow( "Image" );
 
             EN.SelectMenu( "Image 1");
+            EN.EndTest();
         }
       
       /**
@@ -792,6 +804,7 @@ public class SeImage_EN_Test
             EN.SelectWindow( "Image" );
 
             EN.SelectMenu( "Image 1", "SetValue");
+            EN.EndTest();
         }
        
        
@@ -815,6 +828,8 @@ public class SeImage_EN_Test
              EN.SelectWindow( "Image" );
 
              EN.TypeKey( "Image 1", "SetValue");
+             
+             EN.EndTest();
          }
 
 }

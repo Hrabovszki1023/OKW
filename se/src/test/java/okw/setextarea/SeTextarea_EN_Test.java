@@ -44,8 +44,11 @@ import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
 import static org.junit.Assert.*;
+
+import org.junit.FixMethodOrder;
 
 /**
 * \~
@@ -54,6 +57,7 @@ import static org.junit.Assert.*;
 * @author zoltan
 */
 @Ignore
+@FixMethodOrder( MethodSorters.NAME_ASCENDING )
 public class SeTextarea_EN_Test
 {
 
@@ -461,6 +465,31 @@ public class SeTextarea_EN_Test
         EN.EndTest();
     }
 
+    // \brief
+    // Testet das Schlüsselwort TypeKey( FN ) eines SeInputText-es.
+    //
+    @Test
+    public void tc_TypeKey_Delete() throws Exception
+    {
+
+        EN.BeginTest( name.getMethodName() );
+        EN.StartApp( ApplicationName );
+        EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
+
+        EN.SelectWindow( "SeTextarea" );
+        EN.VerifyValue( "Textarea 1", "" );
+
+        EN.TypeKey( "Textarea 1", "Hrabovszki" );
+        EN.VerifyValue( "Textarea 1", "Hrabovszki" );
+
+        // Text wird hinten agehängt 
+        EN.TypeKey( "Textarea 1", "${DELETE}${SEP}Zoltan" );
+        EN.VerifyValue( "Textarea 1", "Zoltan" );
+
+        EN.StopApp( ApplicationName );
+        EN.EndTest();
+    }
+    
     // \brief
     // Testet das Schlüsselwort TypeKey( FN ) mit ${IGNORE} eines SeInputText-es.
     //

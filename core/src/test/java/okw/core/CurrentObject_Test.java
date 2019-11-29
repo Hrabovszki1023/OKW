@@ -46,11 +46,13 @@ import java.util.ArrayList;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.junit.*;
+import org.junit.runners.MethodSorters;
 
 import okw.*;
 import okw.exceptions.*;
 import okw.log.*;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CurrentObject_Test {
 
 
@@ -594,6 +596,8 @@ public class CurrentObject_Test {
                assertEquals("NO VALUE", myClipBoard.getValue().get(0));
                assertEquals("CurrentObjectWindow", myClipBoard.getObjectName());
                assertEquals("SelectWindow()", myClipBoard.getMethod());
+
+               myClipBoard.Clear();
         
                this.myKernel.SetValue("AllMethod 2", "YES");
                this.myKernel.MemorizeExists("AllMethod 2", "tc_MemorizeExists_ChildObject");
@@ -620,10 +624,13 @@ public class CurrentObject_Test {
                assertEquals("CurrentObjectWindow", myClipBoard.getObjectName());
                assertEquals("SelectWindow()", myClipBoard.getMethod());
         
+               myClipBoard.Clear();
+
+               this.myKernel.SetValue("AllMethod 2", "YES");
                this.myKernel.MemorizeHasFocus("AllMethod 2", "tc_MemorizeHasFocus_ChildObject");
         
                // Check the Name, Called Method and Value of Actuel object
-               assertEquals("NO VALUE", myClipBoard.getValue().get(0));
+               assertEquals("YES", myClipBoard.getValue().get(0));
                assertEquals("CurrentObjectWindow.AllMethod 2", myClipBoard.getObjectName());
                assertEquals("MemorizeHasFocus()", myClipBoard.getMethod());
            }

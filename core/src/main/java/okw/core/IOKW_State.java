@@ -51,37 +51,44 @@ public interface IOKW_State
 
     /**
       * \~german
-      * Markiert den Anfang eines neuen Testfalls. 
+      * Kennzeichnet den Anfang eines Testfalls. 
       *
-      * Beschreibung des Handlungsablaufes
+      * Dieses Schlüsselwort ist obligatorisch:
+      * OKW Testfälle müssen mit EN.BeginTest(String) beginnen und mit EN.EndTest() aufhören
+      * zwischen diesen Schlüsselwörten wird der Testfall beschrieben.
       * 
-      * \note Alle Testfälle sollten mit BeginneTest afangen: 
-      * Dieses Schlüsselwort initialisiert OKW und versetz diesen in einen initialen Zustand, d.h. als wäre OKW neu gestartet.
+      * \note EN.BeginTest(String) initialisiert OKW: 
+      * -# Versetz OKW in den Zustand okw.core.OK
+      * -# Name des Testfalls wird in ${TCN} abgelegt
       * 
-      * @param fpsTestname Name oder Bezeichnung des Testfalls.
+      * @param TCN Name oder Bezeichnung des Testfalls
       *
       * \~english
-      * Begins a test.
+      * Indicates the begin of a test case.
       *
-      * Description of the allgorithm
-      * \note Keyword initalis
+      * This keyword is mandatory:
+      * OKW test cases must begin with EN.BeginTest(String) and
+      * end with EN.EndTest() between these keywords the test case is described.
       * 
-      * @param fpsTestname No explanation available 
+      * \note EN.BeginTest(String) initializes OKW:
+      * -# Set OKW to the state okw.core.OK
+      * -# The name of the test case is written to ${TCN}
+      * 
+      * @param TCN name Name or description of the test case
       *
       * \~
       * @author zh@openkeyword.de
-      * @throws Exception 
       * @date 2014-09-18
       */
-    void BeginTest( String fpsTestname ) throws Exception;
+    void BeginTest( String TCN ) throws Exception;
 
     
     /**
      * \~german
      * Klickt auf das gegebene Objekt.
      * 
-     * _Beispiel: Klicke auf das Objekt mit Namen "MeinObjekt":_<br>
-     * \verbatim Klicke auf: "MeinObjekt" \endverbatim
+     * _Beispiel:_ Klicke auf das Objekt mit Namen "MeinObjekt"<br>
+     * \verbatim EN.ClickOn( "MeinObjekt" ) \endverbatim
      * 
      * @param FN Funktionaler Name des Objekts 
      *
@@ -95,10 +102,9 @@ public interface IOKW_State
      *
      * _Example: Click on "My Object":_
      * 
-     * \verbatim click on: "MyObject" \endverbatim
+     * \verbatim EN.ClickOn( "MyObject" ) \endverbatim
      * 
      * @param FN Functional name of the object 
-     * 
      *
      * \~
      * @author zh@openkeyword.de
@@ -965,6 +971,35 @@ public interface IOKW_State
     void SetValue( String FN, String Val ) throws Exception;
 
     /**
+     *  \~german
+     *  Setzt den Wert der gegebenen Variablen VN auf den gegebenen Wert Val.
+     *  
+     *  __Beispiel:__ Setze den Wert der Variablen "myVar" auf den Wert "myValue": <br>
+     *  \verbatim EN.SetVar( "myVar", "myValue" ) \endverbatim
+     *  
+     *  Die Variable kann nun in den Schlüsselwörter Werten verwendet werden:
+     *  
+     *  \verbatim EN.SetValue( "myObject", "${myVar}" ) \endverbatim
+     *  
+     *  @param VN Name der Var, die du definieren möchtest 
+     *  @param Val Wert, der dem Var-Namen zuzuordnen ist.
+     * 
+     *  \~english
+     *  Sets the value of the given variable VN to the given value Val.
+     * 
+     *  __Example:__ Set the value of the variable "myVar" to the value "myValue": <br>
+     *  \verbatim EN.SetVar( "myVar", "myValue" ) \endverbatim
+     *  
+     *  @param VN Var Name: Name of the Var you vant to define 
+     *  @param Val Value to be assinged to the Var Name 
+     * 
+     *  \~
+     *  @author zh@openkeyword.de
+    * @date 2019-11-26
+    */
+    void SetVar( String VN, String Val ) throws Exception;
+
+    /**
     * \~german
     * Startet die gegebene Anwendung.
     * 
@@ -1146,9 +1181,9 @@ public interface IOKW_State
     * \verbatim Type Key Tablecell: "MyTable", "#1", "42", "HiHo" \endverbatim
     * 
     * @param FN Functional name of the object 
-    * @param Val Resulting value 
     * @param ROW Row number of cell to be selected, starting with 1. 
     * @param COL Column number of cell to be selected, starting with 1. 
+    * @param Val Resulting value 
     *
     * \~
     * @author zh@openkeyword.de
@@ -1173,7 +1208,7 @@ public interface IOKW_State
     * \verbatim Gib ein Fenster: "MeinFensterObjekt", "Eingabewert1{SEP}Eingabewert2" \endverbatim
     * 
     * @param FN Funktionaler Name des Objekts 
-    * @param Val Sich ergebender Wert 
+    * @param Val Einzugebender gebender Wert 
     *
     * \~english
     * @brief
@@ -1195,7 +1230,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-21/jnic
+    * @date 2014-09-21
      */
     void TypeKeyWindow( String FN, String Val ) throws Exception;
 
@@ -1219,7 +1254,6 @@ public interface IOKW_State
 	 */
 	 void VerifyBadge( String BN, String ExpVal ) throws Exception;
 
-
 	/**
 	  *  \~german
 	  *  Überprüft den Badge des Objektes .
@@ -1239,7 +1273,6 @@ public interface IOKW_State
 	  * @date 2019-04-04
 	  */
 	  void VerifyBadgeWCM( String BN, String ExpVal ) throws Exception;
-
 
 	/**
 	   *  \~german
@@ -1313,34 +1346,34 @@ public interface IOKW_State
 
     /**
      *  \~german
-     *  Überprüft die Überschrift des Objektes.
-     *  Reguläre aus drücke als sollwert sind erlaubt.
+     *  Überprüft die Überschrift eines Objektes,  Reguläre-Ausdrücke als Sollwert sind erlaubt.
      *  
-     *  _Beispiel: Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" dem erwarteten
-     *  Wert "\\.jango" entspricht:_ <br>
+     *  _Beispiel:_ Prüfe, ob der Wert (Text) des Objekts "MeinObjekt" mit dem erwarteten Wert "Django" begint:
      *  
-     *  \verbatim PrüfeWertREGX: "MeinObjekt", "$Django" \endverbatim
+     *  \verbatim EN.VerifyCaptionREGX( "MeinObjekt", "^Django.*" ) \endverbatim
      *  
      *  @param FN Funktionaler Name des Objekts 
      *  @param ExpVal Erwarteter Wert 
      * 
      *  \~english
-     *  No description for "VerifyCaption" available
+     *  Verifies the heading of an object, regular expressions are allowed as expected values.
+     *  
+     *  _Example:_ Check if the value (text) of the object "MyObject" starts with the expected value "Django":
+     *  
+     *  \verbatim EN.VerifyCaptionREGX( "myObject", "^Django.*" ) \endverbatim
      *  
      *  @param FN Functional name of the object 
      *  @param ExpVal Expected Value 
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21/jnic
-     *  \todo TODO: keine Beschreibung vorhanden
+     *  @date 2014-09-21
      */
     void VerifyCaptionREGX( String FN, String ExpVal ) throws Exception;
 
     /**
     * \~german
     * Prüft, ob das gegebene Objekt existiert.
-    * 
     * 
     * _Beispiel 1: Prüfe, ob das Objekt "MeinObjekt" existiert:_ <br>
     * \verbatim Prüfe Existiert: "MeinObjekt", "JA" \endverbatim
@@ -1426,19 +1459,20 @@ public interface IOKW_State
      *  \~german
      *  Überprüft den Platzhalter des Objektes.
      *  
-     *  _Beispiel: Prüfe, ob der Platzhalter (Text) des Objekts "MeinObjekt" dem erwarteten Wert "Jango" übereinstimmt:_
+     *  _Beispiel: Prüfe, ob der Platzhalter (Text) des Objekts "MeinObjekt"
+     *  dem erwarteten Wert "Django" übereinstimmt:_
      *  
-     *  \verbatim VerifyPlaceholderWCM: "MeinObjekt", "Jango" \endverbatim
+     *  \verbatim EN.VerifyPlaceholderWCM( "MeinObjekt", "Django" ) \endverbatim
      *  
-     *  @param FN Funktionaler Name des Objekts 
+     *  @param FN Funktionaler Name des GUI-Objektes 
      *  @param ExpVal Erwarteter Wert 
      * 
      *  \~english
      *  Verifies the placeholder of a GUI-object.
      *  
-     *  Example: Check whether the placeholder (text) of the object "MyObject" matches the expected value "Jango
+     *  Example: Check whether the placeholder (text) of the object "MyObject" matches the expected value "Django":
      *  
-     *  \verbatim VerifyPlaceholderWCM: "MyObjekt", "Jango" \endverbatim
+     *  \verbatim EN.VerifyPlaceholderWCM: "MyObjekt", "Django" \endverbatim
      *  
      *  @param FN Functional name of the object 
      *  @param ExpVal Expected Value 

@@ -2,6 +2,8 @@ package okw.log.log2html;
 
 import java.util.*;
 
+import org.apache.commons.text.StringEscapeUtils;
+
 public abstract class LogBase {
 	
 	protected static Integer AllCount = 0;
@@ -285,7 +287,7 @@ public abstract class LogBase {
 		
 		if (!this.myLogs.isEmpty())
 		{
-			sbResult.append( lvsIndention + myIndentionBase +  myIndentionBase + "<div class='FoldMe' href='javascript:/' onClick='div_change(" + myID.toString() + ")'></div>\n" );
+			sbResult.append( lvsIndention + myIndentionBase +  myIndentionBase + "<div class='FoldMe' onClick='div_change(" + myID.toString() + ")'></div>\n" );
 		}
 		
 		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Duration'>" + this.myDuration.getSeconds("#0.000") + " s</div>" );
@@ -309,12 +311,12 @@ public abstract class LogBase {
 
 		if (this.bException || this.bError )
 		{
-			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_Fail'>" + this.Info + "</div>\n" );
+			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_Fail'>" + StringEscapeUtils.escapeHtml4( this.Info ) + "</div>\n" );
 		}
 		else
 		{
 			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='SuccessSign' title='Success...'></div>\n" );
-			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_Pass'>" + this.Info + "</div>\n" );
+			sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "<div class='Info_Pass'>" + StringEscapeUtils.escapeHtml4( this.Info ) + "</div>\n" );
 		}
 
 		sbResult.append( lvsIndention + myIndentionBase + myIndentionBase + "</div>\n" ); // end Header

@@ -45,6 +45,7 @@ import okw.exceptions.OKWVerifyingFailsException;
 import org.junit.*;
 import static org.junit.Assert.*;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
 /**
 * \~
@@ -53,6 +54,7 @@ import org.junit.rules.TestName;
 * @author zoltan
 */
 @Ignore
+@FixMethodOrder( MethodSorters.NAME_ASCENDING )
 public class SeInputField_EN_Test {
 
   protected OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
@@ -216,6 +218,7 @@ public class SeInputField_EN_Test {
 
       EN.TypeKey( "Last Name", "Zoltan" );
       EN.LogValue( "Last Name" );
+      
       EN.StopApp( ApplicationName );
       EN.EndTest();
   }
@@ -610,6 +613,9 @@ public class SeInputField_EN_Test {
       EN.SelectWindow( "InputTypeText" );
   
       EN.VerifyExists( "DoesNotExist", "YES" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \brief
@@ -626,6 +632,9 @@ public class SeInputField_EN_Test {
 
       EN.SelectWindow( "InputTypeText" );
       EN.VerifyExists( "Last Name", "NO" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // / \brief
@@ -705,6 +714,9 @@ public class SeInputField_EN_Test {
       EN.VerifyHasFocus( "Last Name", "NO" );
       EN.SetFocus( "Last Name" );
       EN.VerifyHasFocus( "Last Name", "NO" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   // \brief
@@ -719,6 +731,9 @@ public class SeInputField_EN_Test {
       EN.SelectWindow( "InputTypeText" );
 
       EN.VerifyHasFocus( "Last Name", "YES" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -744,6 +759,7 @@ public class SeInputField_EN_Test {
       EN.SelectWindow( "InputTypeText" );
 
       EN.VerifyHasFocus( "NichtVorhanden", "${IGNORE}" );
+      
       EN.StopApp( ApplicationName );
       EN.EndTest();
   }
@@ -877,6 +893,9 @@ public class SeInputField_EN_Test {
       EN.SelectWindow( "InputTypeText" );
 
       EN.VerifyLabelWCM( "Last Name", "####:" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -928,6 +947,9 @@ public class SeInputField_EN_Test {
       EN.SelectWindow( "InputTypeText" );
 
       EN.VerifyMaxLength( "Last Name", "25" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -971,6 +993,9 @@ public class SeInputField_EN_Test {
       EN.SelectWindow( "InputTypeText" );
 
       EN.VerifyLabelREGX( "Last Name", "Xxxx:" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -1064,6 +1089,9 @@ public class SeInputField_EN_Test {
       EN.SelectWindow( "InputTypeText" );
 
       EN.VerifyPlaceholderWCM( "Last Name", "####:" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -1107,7 +1135,11 @@ public class SeInputField_EN_Test {
       EN.SelectWindow( "InputTypeText" );
 
       EN.VerifyPlaceholderREGX( "Last Name", "Placeholder: Xxxx" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
+
   // \~german
   // \brief
   // Prüft, ob die Methode VerifyToolTip für SeTextField implementiert ist.
@@ -1149,6 +1181,9 @@ public class SeInputField_EN_Test {
       EN.SelectWindow( "InputTypeText" );
       
       EN.VerifyTooltip( "Last Name", "Den Namen..." );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -1191,6 +1226,9 @@ public class SeInputField_EN_Test {
       EN.SelectWindow( "InputTypeText" );
 
       EN.VerifyTooltipWCM( "Last Name", "#oltan" );
+      
+     EN.StopApp( ApplicationName );
+     EN.EndTest();
   }
 
   
@@ -1234,6 +1272,9 @@ public class SeInputField_EN_Test {
       EN.SelectWindow( "InputTypeText" );
 
       EN.VerifyTooltipREGX( "Last Name", "#oltan" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
   
   
@@ -1287,6 +1328,10 @@ public class SeInputField_EN_Test {
   
       EN.SetValue( "Last Name", "${DELETE}" );
       EN.VerifyValue( "Last Name", "${EMPTY}" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+
   }
 
   // \~german
@@ -1310,7 +1355,9 @@ public class SeInputField_EN_Test {
       
       EN.SetValue( "Last Name", "Zoltan" );
       EN.VerifyValue( "Last Name", "Soltan" );
-
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
 
@@ -1339,8 +1386,7 @@ public class SeInputField_EN_Test {
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
-      
-  }
+ }
   
   
   // \~german
@@ -1391,6 +1437,9 @@ public class SeInputField_EN_Test {
       
       EN.SetValue( "Last Name", "Zoltan" );
       EN.VerifyValueWCM( "Last Name", "#oltan" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -1415,6 +1464,7 @@ public class SeInputField_EN_Test {
       
       EN.SetValue( "Last Name", "Zoltan" );
       EN.VerifyValueREGX( "Last Name", ".oltan" );
+      
       EN.StopApp( ApplicationName );
       EN.EndTest();
   }
@@ -1442,6 +1492,7 @@ public class SeInputField_EN_Test {
   
       EN.SetValue( "Last Name", "${DELETE}" );
       EN.VerifyValueREGX( "Last Name", "${EMPTY}" );
+      
       EN.StopApp( ApplicationName );
       EN.EndTest();
   }
@@ -1482,6 +1533,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.ClickOn( "DoesNotExist");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
 
   /**
@@ -1497,6 +1551,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.Select( "DoesNotExist", "abc");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
 
   @Test( expected = OKWGUIObjectNotFoundException.class )
@@ -1508,6 +1565,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.TypeKey( "DoesNotExist", "abc");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
   
   @Test( expected = OKWGUIObjectNotFoundException.class )
@@ -1519,6 +1579,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.SetValue( "DoesNotExist", "abc");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
   
   @Test( expected = OKWGUIObjectNotFoundException.class )
@@ -1530,6 +1593,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.SetFocus( "DoesNotExist");
+
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
   
   
@@ -1537,11 +1603,15 @@ public class SeInputField_EN_Test {
   public void tcMemorizeCaption_OKWGUIObjectNotFoundException() throws Exception
   {
           EN.BeginTest( name.getMethodName() );
+
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
 
           EN.MemorizeCaption( "DoesNotExist", "MemorizeCaption");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
 
   
@@ -1554,6 +1624,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.MemorizeHasFocus( "DoesNotExist", "MemorizeHasFocus");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
   
   
@@ -1566,6 +1639,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.MemorizeIsActive( "DoesNotExist", "MemorizeIsActive");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
   
   
@@ -1578,6 +1654,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.MemorizeLabel( "DoesNotExist", "MemorizeLabel");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
   
   
@@ -1590,6 +1669,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.MemorizePlaceholder( "DoesNotExist", "MemorizePlaceholder");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
   
   
@@ -1602,6 +1684,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.MemorizeTooltip( "DoesNotExist", "MemorizeTooltip");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
 
   
@@ -1614,6 +1699,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.MemorizeValue( "DoesNotExist", "MemorizeVale");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
 
   
@@ -1626,6 +1714,10 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.LogCaption( "DoesNotExist");
+
+          EN.StopApp( ApplicationName );
+          
+          EN.EndTest();
   }
 
   
@@ -1638,6 +1730,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.LogHasFocus( "DoesNotExist");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
   
   
@@ -1650,6 +1745,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.LogIsActive( "DoesNotExist");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
   
   
@@ -1662,6 +1760,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.LogLabel( "DoesNotExist");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
   
   
@@ -1674,6 +1775,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.LogPlaceholder( "DoesNotExist");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
   
   @Test( expected = OKWGUIObjectNotFoundException.class )
@@ -1685,6 +1789,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.LogTooltip( "DoesNotExist");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
 
   
@@ -1697,7 +1804,11 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.LogValue( "DoesNotExist");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
+
   @Test( expected = OKWGUIObjectNotFoundException.class )
   public void tcVerifyCaption_OKWGUIObjectNotFoundException() throws Exception
   {
@@ -1707,6 +1818,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.VerifyCaption( "DoesNotExist", "aa");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
 
   
@@ -1719,6 +1833,8 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.VerifyHasFocus( "DoesNotExist", "YES");
+          
+          EN.EndTest();
   }
   
   
@@ -1731,6 +1847,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.VerifyIsActive( "DoesNotExist", "YES" );
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
   
   
@@ -1743,6 +1862,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.VerifyLabel( "DoesNotExist", "aa" );
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
   
   
@@ -1755,6 +1877,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.VerifyTooltip( "DoesNotExist", "aa");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
 
   
@@ -1767,6 +1892,9 @@ public class SeInputField_EN_Test {
           EN.SelectWindow( "InputTypeText" );
 
           EN.VerifyValue( "DoesNotExist", "aa");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
   }
 
 }

@@ -12,7 +12,6 @@ import org.junit.*;
 
 import static org.junit.Assert.*;
 
-    //[TestFixture]
 	public class OKW_VisitorTest
     {
         String myOKW_Xml = "";
@@ -23,25 +22,6 @@ import static org.junit.Assert.*;
         
         //@Rule public TestName name = new TestName();
                 
-        /// \brief
-        /// Initialisierung vor jedem Test:
-        ///  * CurrentObject initialisieren.
-        /// 
-        /// \author Zoltan Hrabovszki
-        /// \date 2012.12.16
-        @Before
-        public void MySetUp( )
-        {
-
-        }
-
-        @After
-        public void MyTearDown()
-        {
-            /* Environment.SetEnvironmentVariable("OKW_Xml", this.myOKW_Xml);
-        	 Log.LogFunctionEnd(TestContext.CurrentContext.Test.Name);
-        	 */
-        }
 
         /// \brief
         /// 
@@ -90,6 +70,44 @@ import static org.junit.Assert.*;
             assertEquals(sExpected, sActual);
         }
 
+        /**
+         *  Prüft einen "Schlüssel.Mit.Punkt"
+         *  
+         *  \author Zoltan Hrabovszki
+         *  \date 2019.11.28
+         */
+        @Test
+        public void TC_ParseMe_MemorizedValue_WithDot() throws XPathExpressionException
+        {
+            
+            OKW_Memorize_Sngltn.reset();
+            
+            OKW_Memorize_Sngltn.getInstance().set("Schluessel.1", "Wert des Schlüssels 1.");
+            OKW_Memorize_Sngltn.getInstance().set("Schluessel.2", "Wert des Schlüssels 2.");
+             
+            assertEquals( "Wert des Schlüssels 1.", Parser.ParseMe( "${Schluessel.1}" ) );
+            assertEquals( "Wert des Schlüssels 2.", Parser.ParseMe( "${Schluessel.2}" ) );
+        }
+ 
+        /**
+         *  Prüft einen "Schlüssel_Mit_Underscore".
+         *  
+         *  \author Zoltan Hrabovszki
+         *  \date 2019.11.28
+         */
+        @Test
+        public void TC_ParseMe_MemorizedValue_Underscore() throws XPathExpressionException
+        {
+            
+            OKW_Memorize_Sngltn.reset();
+            
+            OKW_Memorize_Sngltn.getInstance().set("Schluessel_1", "Wert des Schlüssels 1.");
+            OKW_Memorize_Sngltn.getInstance().set("Schluessel_2", "Wert des Schlüssels 2.");
+             
+            assertEquals( "Wert des Schlüssels 1.", Parser.ParseMe( "${Schluessel_1}" ) );
+            assertEquals( "Wert des Schlüssels 2.", Parser.ParseMe( "${Schluessel_2}" ) );
+        }
+        
   // \brief String ohne Ersätzung, Länge Größer "0"
   //
   // \author Zoltan Hrabovszki

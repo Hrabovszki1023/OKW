@@ -44,14 +44,15 @@ import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
 import okw.log.Logger_Sngltn;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
   static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
@@ -75,33 +76,16 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
   public static void tearDownAfterClass() throws Exception {
   }
 
-  // / \~german
-  // / \brief
-  // / Diese Methode wird immer vor jedem Test(fall) ausgeführt.
-  // /
-  @Before
-  public void setUp() throws Exception {
-
-  }
-
-  // / \~german
-  // / \brief
-  // / Diese Methode wird immer nach jedem Test(fall) ausgeführt.
-  // /
-  @After
-  public void tearDown() throws Exception {
-    EN.EndTest();
-  }
   
-   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : nichtvorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist gleich
-   *  3. Abweichung: Ein Zeichen ist anders.
+   *  
+   *  -# Trenner ${SEP} : nichtvorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist gleich
+   *  -# Abweichung: Ein Zeichen ist anders.
    * 
    *  \~english
    *  \~
@@ -113,17 +97,22 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
+    
+    EN.SetValue( "All_MethodsObj", "The one and only Value" );
     EN.VerifyValue( "All_MethodsObj", "Tha one and only Value" );
+    
+    EN.EndTest();
   }
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : nichtvorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist unterschiedlich
-   *  3. Abweichung: Ein zusätzliches Zeichen im Sollwert.
+   *  
+   *  -# Trenner ${SEP} : nichtvorhanden.
+   *  -# Anzahl der Zeichen : Soll/Ist unterschiedlich.
+   *  -# Abweichung: Ein zusätzliches Zeichen im Sollwert.
    * 
    *  \~english
    *  \~
@@ -131,22 +120,28 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValue_OKWVerifyingFailsException_SV02() throws Exception {
+  public void TC_VerifyValue_OKWVerifyingFailsException_SV02() throws Exception
+  {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
+    
+    EN.SetValue( "All_MethodsObj", "The one and only Value" );
     EN.VerifyValue( "All_MethodsObj", "The one andX only Value" );
+    
+    EN.EndTest();
   }
  
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : nichtvorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist unterschiedlich
-   *  3. Abweichung: Ein Zeichen zu wenig im Sollwert.
+   *  
+   *  -# Trenner ${SEP} : nichtvorhanden.
+   *  -# Anzahl der Zeichen : Soll/Ist unterschiedlich.
+   *  -# Abweichung: Ein Zeichen zu wenig im Sollwert.
    * 
    *  \~english
    *  \~
@@ -154,22 +149,28 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValue_OKWVerifyingFailsException_SV03() throws Exception {
+  public void TC_VerifyValue_OKWVerifyingFailsException_SV03() throws Exception
+  {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
+
+    EN.SetValue(    "All_MethodsObj", "The one and only Value" );
     EN.VerifyValue( "All_MethodsObj", "The one an only Value" );
+    
+    EN.EndTest();
   }
 
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : zwei ${SEP} Vorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist gleich
-   *  3. Abweichung: Ein Wert im zweiten Block verschieden.
+   *  
+   *  -# Trenner ${SEP} : zwei ${SEP} Vorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist gleich
+   *  -# Abweichung: Ein Wert im zweiten Block verschieden.
    * 
    *  \~english
    *  \~
@@ -177,22 +178,27 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValue_OKWVerifyingFailsException_MV01() throws Exception {
+  public void TC_VerifyValue_OKWVerifyingFailsException_MV01() throws Exception
+  {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
+
+    EN.SetValue(               "All_MethodsObj", "1. Value${SEP}2. Value${SEP}3. Value" );
     EN.VerifyValue( "AllMethods_MultipleValues", "1. Value${SEP}X. Value${SEP}3. Value" );
+    
+    EN.EndTest();
   }
 
 
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : Sollwert 1 x ${SEP}, Istwert 2 x ${SEP} 
-   *  2. Anzahl der Zeichen : Soll/Ist unterschiedlich
-   *  3. Abweichung: Unterschiedliche Block-Anzahl. Die ersten zwei Blöcke sind gleich.
+   *  -# Trenner ${SEP} : Sollwert 1 x ${SEP}, Istwert 2 x ${SEP} 
+   *  -# Anzahl der Zeichen : Soll/Ist unterschiedlich
+   *  -# Abweichung: Im Sollwert ein Block weniger. Die ersten zwei Blöcke sind gleich.
    * 
    *  \~english
    *  \~
@@ -200,21 +206,26 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
    *  \date 2016.05.07
    */
   @Test( expected = OKWVerifyingFailsException.class )
-  public void TC_VerifyValue_OKWVerifyingFailsException_MV02() throws Exception {
+  public void TC_VerifyValue_OKWVerifyingFailsException_MV02() throws Exception
+  {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
+    
+    EN.SetValue(               "All_MethodsObj", "1. Value${SEP}2. Value${SEP}3. Value" );
     EN.VerifyValue( "AllMethods_MultipleValues", "1. Value${SEP}2. Value" );
+    
+    EN.EndTest();
   }
 
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : Sollwert 3 x ${SEP}, Istwert 2 x ${SEP} 
-   *  2. Anzahl der Zeichen : Soll/Ist unterschiedlich
-   *  3. Abweichung: Unterschiedliche Block-Anzahl. Die ersten drei Blöcke sind gleich.
+   *  -# Trenner ${SEP} : Sollwert 3 x ${SEP}, Istwert 2 x ${SEP} 
+   *  -# Anzahl der Zeichen : Soll/Ist unterschiedlich
+   *  -# Abweichung: Unterschiedliche Block-Anzahl. Die ersten drei Blöcke sind gleich.
    * 
    *  \~english
    *  \~
@@ -227,16 +238,18 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValue( "AllMethods_MultipleValues", "1. Value${SEP}2. Value${SEP}3. Value${SEP}4. Value" );
+    
+    EN.EndTest();
   }
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : nichtvorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist gleich
-   *  3. Abweichung: Ein Zeichen ist anders.
+   *  -# Trenner ${SEP} : nichtvorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist gleich
+   *  -# Abweichung: Ein Zeichen ist anders.
    * 
    *  \~english
    *  \~
@@ -248,19 +261,22 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
+
+    EN.SetValue(       "All_MethodsObj", "The one and only Value" );
     EN.VerifyValueWCM( "All_MethodsObj", "Tha one and only Value" );
-//  EN.VerifyValueWCM( "All_MethodsObj", "Tha one and only Value" );
+    
+    EN.EndTest();
   }
   
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : nichtvorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist gleich
-   *  3. Abweichung: Ein Zeichen ist anders.
+   *  -# Trenner ${SEP} : nichtvorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist gleich
+   *  -# Abweichung: Ein zusätzliches Zeichen im Soll.
    * 
    *  \~english
    *  \~
@@ -272,17 +288,21 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
     EN.BeginTest( name.getMethodName() );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyValueWCM( "All_MethodsObj","Tha one and only Value" );
+
+    EN.SetValue(       "All_MethodsObj", "The one andX only Value" );
+    EN.VerifyValueWCM( "All_MethodsObj","The one and only Value" );
+    
+    EN.EndTest();
   }
 
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : nichtvorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist unterschiedlich
-   *  3. Abweichung: Ein Zeichen ist anders.
+   *  -# Trenner ${SEP} : nichtvorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist unterschiedlich
+   *  -# Abweichung: Ein Zeichen ist anders.
    * 
    *  \~english
    *  \~
@@ -295,16 +315,18 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueWCM( "All_MethodsObj","The oneX and only Value" );
+    
+    EN.EndTest();
   }
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : Sollwert hat einen ${SEP}, Istwert keinen ${SEP}
-   *  2. Anzahl der Zeichen : Soll/Ist unterschiedlich
-   *  3. Abweichung: Wert Nach ${SEP} Fehlt.
+   *  -# Trenner ${SEP} : Sollwert hat einen ${SEP}, Istwert keinen ${SEP}
+   *  -# Anzahl der Zeichen : Soll/Ist unterschiedlich
+   *  -# Abweichung: Wert Nach ${SEP} Fehlt.
    * 
    *  \~english
    *  \~
@@ -317,16 +339,18 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueWCM( "All_MethodsObj", "The one and only Value${SEP}The one and only Value" );
+    
+    EN.EndTest();
   }
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : zwei ${SEP} Vorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist gleich
-   *  3. Abweichung: ein Wert im zweiten Block verschieden.
+   *  -# Trenner ${SEP} : zwei ${SEP} Vorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist gleich
+   *  -# Abweichung: ein Wert im zweiten Block verschieden.
    * 
    *  \~english
    *  \~
@@ -339,16 +363,18 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueWCM( "AllMethods_MultipleValues", "?. Value${SEP}X. Value${SEP}?. Value" );
+    
+    EN.EndTest();
   }
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : zwei ${SEP} Vorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist gleich
-   *  3. Abweichung: ein Wert im zweiten Block verschieden.
+   *  -# Trenner ${SEP} : zwei ${SEP} Vorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist gleich
+   *  -# Abweichung: ein Wert im zweiten Block verschieden.
    * 
    *  \~english
    *  \~
@@ -361,16 +387,18 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueWCM( "AllMethods_MultipleValues", "?. XValue${SEP}?. X Value${SEP}?. XValue" );
+    
+    EN.EndTest();
   }
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : Soll-Wert ein ${SEP} Vorhanden / Ist-Wert zwei ${SEP} Vorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist gleich
-   *  3. Abweichung: ein Wert im zweiten Block verschieden.
+   *  -# Trenner ${SEP} : Soll-Wert ein ${SEP} Vorhanden / Ist-Wert zwei ${SEP} Vorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist gleich
+   *  -# Abweichung: ein Wert im zweiten Block verschieden.
    * 
    *  \~english
    *  \~
@@ -383,16 +411,18 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueWCM( "AllMethods_MultipleValues", "?. Value${SEP}?. Value" );
+    
+    EN.EndTest();
   }
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : Soll-Wert ein ${SEP} Vorhanden / Ist-Wert zwei ${SEP} Vorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist gleich
-   *  3. Abweichung: ein Wert im zweiten Block verschieden.
+   *  -# Trenner ${SEP} : Soll-Wert ein ${SEP} Vorhanden / Ist-Wert zwei ${SEP} Vorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist gleich
+   *  -# Abweichung: ein Wert im zweiten Block verschieden.
    * 
    *  \~english
    *  \~
@@ -405,17 +435,19 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueWCM( "AllMethods_MultipleValues", "?. Value${SEP}?. Value${SEP}?. Value${SEP}?. Value" );
+    
+    EN.EndTest();
   }
   
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : nichtvorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist gleich
-   *  3. Abweichung: Ein Zeichen ist anders.
+   *  -# Trenner ${SEP} : nichtvorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist gleich
+   *  -# Abweichung: Ein Zeichen ist anders.
    * 
    *  \~english
    *  \~
@@ -428,16 +460,18 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueREGX( "All_MethodsObj", "Tha one and only Value" );
+    
+    EN.EndTest();
   }
 
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : nichtvorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist unterschiedlich
-   *  3. Abweichung: Ein Zeichen ist anders.
+   *  -# Trenner ${SEP} : nichtvorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist unterschiedlich
+   *  -# Abweichung: Ein Zeichen ist anders.
    * 
    *  \~english
    *  \~
@@ -450,16 +484,18 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueREGX( "All_MethodsObj", "The oneX and only Value" );
+    
+    EN.EndTest();
   }
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : Sollwert hat einen ${SEP}, Istwert keinen ${SEP}
-   *  2. Anzahl der Zeichen : Soll/Ist unterschiedlich
-   *  3. Abweichung: Wert Nach ${SEP} Fehlt.
+   *  -# Trenner ${SEP} : Sollwert hat einen ${SEP}, Istwert keinen ${SEP}
+   *  -# Anzahl der Zeichen : Soll/Ist unterschiedlich
+   *  -# Abweichung: Wert Nach ${SEP} Fehlt.
    * 
    *  \~english
    *  \~
@@ -472,16 +508,18 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueREGX( "All_MethodsObj", "The one and only Value${SEP}The one and only Value" );
+    
+    EN.EndTest();
   }
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : zwei ${SEP} Vorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist gleich
-   *  3. Abweichung: ein Wert im zweiten Block verschieden.
+   *  -# Trenner ${SEP} : zwei ${SEP} Vorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist gleich
+   *  -# Abweichung: ein Wert im zweiten Block verschieden.
    * 
    *  \~english
    *  \~
@@ -494,16 +532,18 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}X. Value${SEP}.\\. Value" );
+    
+    EN.EndTest();
   }
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : zwei ${SEP} Vorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist gleich
-   *  3. Abweichung: ein Wert im zweiten Block verschieden.
+   *  -# Trenner ${SEP} : zwei ${SEP} Vorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist gleich
+   *  -# Abweichung: ein Wert im zweiten Block verschieden.
    * 
    *  \~english
    *  \~
@@ -516,16 +556,18 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueREGX( "AllMethods_MultipleValues", ".\\. XValue${SEP}.\\. X Value${SEP}.\\. XValue" );
+    
+    EN.EndTest();
   }
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : Soll-Wert ein ${SEP} Vorhanden / Ist-Wert zwei ${SEP} Vorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist gleich
-   *  3. Abweichung: ein Wert im zweiten Block verschieden.
+   *  -# Trenner ${SEP} : Soll-Wert ein ${SEP} Vorhanden / Ist-Wert zwei ${SEP} Vorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist gleich
+   *  -# Abweichung: ein Wert im zweiten Block verschieden.
    * 
    *  \~english
    *  \~
@@ -538,16 +580,18 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}.\\. Value" );
+    
+    EN.EndTest();
   }
   
   /**
    * \~german
-   *  \brief Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
+   *  Prüft, ob die Ausnahme OKWVerifyingFailsException bei einem Soll/Ist-Vergleich ausgelöst wird.
    *  
    *  Bedingung:
-   *  1. Trenner ${SEP} : Soll-Wert ein ${SEP} Vorhanden / Ist-Wert zwei ${SEP} Vorhanden
-   *  2. Anzahl der Zeichen : Soll/Ist gleich
-   *  3. Abweichung: ein Wert im zweiten Block verschieden.
+   *  -# Trenner ${SEP} : Soll-Wert ein ${SEP} Vorhanden / Ist-Wert zwei ${SEP} Vorhanden
+   *  -# Anzahl der Zeichen : Soll/Ist gleich
+   *  -# Abweichung: ein Wert im zweiten Block verschieden.
    * 
    *  \~english
    *  \~
@@ -560,6 +604,8 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyValueREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}.\\. Value${SEP}.\\. Value${SEP}.\\. Value" );
+    
+    EN.EndTest();
   }
 
 	/**
@@ -575,7 +621,10 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
 		EN.SelectWindow("Rechner");
 		EN.VerifyBadge("All_MethodsObj", "The one an only Value");
+	    
+	    EN.EndTest();
 	}
+
 	/**
 	 * \~german \brief Test auf das fehlerwerfen von VerifyBadge.
 	 * 
@@ -589,7 +638,10 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
 		EN.SelectWindow("Rechner");
 		EN.VerifyBadgeWCM("All_MethodsObj", "The one an only Value");
+	      
+        EN.EndTest();
 	}
+
 	/**
 	 * \~german \brief Test auf das fehlerwerfen von VerifyBadge.
 	 * 
@@ -603,6 +655,8 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
 		EN.SelectWindow("Rechner");
 		EN.VerifyBadgeREGX("All_MethodsObj", "The one an only Value");
+	    
+	    EN.EndTest();
 	}
   
 	/**
@@ -618,6 +672,8 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
 		EN.SelectWindow("Rechner");
 		EN.VerifyErrorMSG("All_MethodsObj", "The one an only Value");
+	    
+	    EN.EndTest();
 	}
 	/**
 	 * \~german \brief Test auf das fehlerwerfen von VerifyErrorMSG_WCM.
@@ -632,6 +688,8 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
 		EN.SelectWindow("Rechner");
 		EN.VerifyErrorMSG_WCM("All_MethodsObj", "The one an only Value");
+	    
+	    EN.EndTest();
 	}
 	/**
 	 * \~german \brief Test auf das fehlerwerfen von VerifyErrorMSG_REGX.
@@ -646,5 +704,7 @@ public class EN_VerifyValue_OKWVerifyingFailsException_Test {
 
 		EN.SelectWindow("Rechner");
 		EN.VerifyErrorMSG_REGX("All_MethodsObj", "The one an only Value");
+	    
+	    EN.EndTest();
 	}
 }

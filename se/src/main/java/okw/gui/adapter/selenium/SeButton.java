@@ -144,8 +144,8 @@ public class SeButton extends SeAnyChildWindow
      * @throws Exception
      * @date 2013.12.07
      */
-    @Override // TODO define Prototype in BaseClass!
-    public ArrayList<String> getCaption()
+    //@Override // TODO define Prototype in BaseClass!
+    public ArrayList<String> __getCaption()
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
         try

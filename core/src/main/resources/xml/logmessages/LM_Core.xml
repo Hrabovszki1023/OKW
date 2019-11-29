@@ -302,6 +302,15 @@
 			</Text>
 		</Method>
 
+		<!-- Method: "SetVar"-->
+		<Method name="SetVar">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>Set Variable</en>
+				<de>Setze Variable</de>
+			</Text>
+		</Method>
+
 		<!-- Method: "StartApp"-->
 		<Method name="StartApp">
 			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->

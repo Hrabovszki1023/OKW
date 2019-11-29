@@ -6,23 +6,24 @@ import javax.xml.xpath.XPathExpressionException;
 
 import okw.exceptions.*;
 import okw.log.Logger_Sngltn;
-import org.junit.Test;
 
+import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+@FixMethodOrder( MethodSorters.NAME_ASCENDING )
 public class OKW_ConstExceptionTest
 {
 
-    public class OKW_Const_Test_
-    {
-
-        private OKW_Const_Sngltn myOKW_Const;
+        public static OKW_Const_Sngltn myOKW_Const;
 
         // / \copydoc CurrentObject::Log()
-        private Logger_Sngltn    Log = Logger_Sngltn.getInstance();
+        private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
-        // [TestFixtureSetUp]
-        public void mySetUp()
+        @BeforeClass
+        public static void mySetUp()
         {
-
             myOKW_Const = OKW_Const_Sngltn.getInstance();
 
             // Reset des Loggers: Alle geladenen Instanzen löschen
@@ -105,32 +106,14 @@ public class OKW_ConstExceptionTest
          *  Prüft ob ein Tippfehler eine OKWNotAllowedValueException-Exception
          *  auslöst.
          */
-        @Test
-        public void tcYesNoToBoolean_OKWNotAllowedValueException_Msg_de()
+        @Test(expected=OKWNotAllowedValueException.class)
+        public void tcYesNoToBoolean_OKWNotAllowedValueException_Msg_de() throws XPathExpressionException
         {
 
-            try
-            {
                 OKWLanguage.getInstance().setLanguage( "de" );
 
                 // Call with expected Exception...
                 myOKW_Const.YesNo2Boolean( "NON" );
-
-                // Wenn folgende zeile Ausgeführt wird kam die exception nicht.
-                fail( "Exception wurde nicht ausgelöst" );
-            }
-            catch (OKWNotAllowedValueException e)
-            {
-                Log.LogPrint( "Erwartete Exception wurde ausgelöst." );
-                assertEquals( "Dieser Wert ist hier nicht erlaubt: 'NON'! - Folgende Werte sind erlaubt: 'JA'/'NEIN'", e.getMessage() );
-            }
-            catch (Exception e)
-            {
-                Log.LogPrint( "Ausgelöste Ausnahme: " + e.getClass().getName() );
-                Log.LogPrint( "          Nachricht: " + e.getMessage() );
-                Log.LogError( "Fehler, weil nicht die erwartetet Exception(KernelException) kam." );
-                fail( "Fehler, weil nicht die arwartetet Exception kam." );
-            }
         }
 
         /**
@@ -180,5 +163,4 @@ public class OKW_ConstExceptionTest
             // Call with expected Exception...
             myOKW_Const.YesNo2Boolean( "NotAllowedValue" );
         }
-    }
 }
