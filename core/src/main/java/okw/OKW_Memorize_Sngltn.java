@@ -55,18 +55,13 @@ import okw.log.Logger_Sngltn;
 /** \~german
  *  OKW_Memorize ist die Speicher-Klasse hinter den Merke*-Schlüsselwörter.
  *  
- *  Die Daten werden vie Serialisierung in eine XML Datei geschrieben.
- *  Zur Serialisierung wird die Klasse System.Xml.XmlSerializer verwendet.
+ *  Mit Memorize*( "BN", "myKeyname" ) wird ein Wert 
  *  
- *  Pfad und Name der XML-Datei. Dies wird in der XML/OKW_Ini.xml vorgegeben:
- *  <code>XPATH: OKW_Ini/OKW_Enviroment/OKW_Memorize_xml</code>
+ *  Diese Klasse ist nach dem Singelton-Pattern aufgebaut.
+ *  Eine Instanz der Klasse wird wie folgt erstellt:
  *  
- *  Diese Klasse ist nach denm Singelton-Muster aufgebaut.
- *  
- *  Die Instanz der Klasse wird wie folgt abgerufen:
- *  
- *  ~~~~~~~~~~~~~{.py}
- *  OKW.OKW_Memorrize.Instanz
+ *  ~~~~~~~~~~~~~{.java}
+ *  OKW.OKW_Memorrize.getInstance()
  *  ~~~~~~~~~~~~~
  *  
  *  \~english
@@ -89,27 +84,49 @@ public class OKW_Memorize_Sngltn
 
 	 /**  \~german
 	 *  Dictionary speichert die Schlüssel-Wert Paare.
+	 *  
+	 *  Die Hier gespeicherten werte sind nicht persistent.
 	 * 
-	 *  @note Dieses Feld _muss_ wegen der Serialisierung _public_ sein.
-	 *   http://howtodoinjava.com/2013/07/30/jaxb-example-marshalling-and-unmarshalling-hashmap-in-java/
 	 *  \~english
 	 *  \brief
 	 *  \~
 	 *  \author Zoltán Hrabovszki
 	 *  @date 2013.11.28
 	 */
-	public Map<String, String>	_Value	= new HashMap<String, String>();
+	protected Map<String, String> Value = new HashMap<String, String>();
 
-	 /**  \~german
+    /**  \~german
+    *  Dictionary speichert Schlüssel-Wert Paare.
+    *  
+    *  Die Hier gespeicherten werte sind persistent.
+    *  Die Werte werden aus/in die Datei gespeichert
+    *  der Datei
+    * 
+    *  \~english
+    *  \brief
+    *  \~
+    *  \author Zoltán Hrabovszki
+    *  @date 2019.11.25
+    */
+   protected Map<String, String> ValuePersistent = new HashMap<String, String>();
+
+	
+	/**  \~german
 	 *  Singelton spezifisch: Dieses Feld speichert die einzige Instanz dieser
 	 *  Klasse.
+	 *  
+	 *  Es wird die Properties Datein geladen, die im OKW-Property "OKW_Memorize.properties" angegeben ist
+	 *  Der Default Wert ist "OKW_Memorize.properties".
+	 *  
+	 *  Diese Datei wird automatisch beim Initialisieren der Klasse geladen
+	 *  und bei jedem Setzen des wertes in der Datei, gegeben in "OKW_Memorize.properties", gespeichert.
 	 * 
 	 *  \~english
 	 *  \~
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.11.28
 	 */
-	private static OKW_Memorize_Sngltn	Instance;
+	protected static OKW_Memorize_Sngltn	Instance;
 
 	
 	/** \~german
@@ -120,7 +137,7 @@ public class OKW_Memorize_Sngltn
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2014.12.28
 	 */
-	private LogMessenger LM	= null;
+	protected LogMessenger LM	= null;
 
 	 /**  \~german
 	 *  Referenz auf die einzige Instanz des Klasse OKW.Logger.
@@ -130,8 +147,10 @@ public class OKW_Memorize_Sngltn
 	 *  @author Zoltán Hrabovszki
 	 *  @date 2013.11.28
 	 */
-	private Logger_Sngltn									Log					= Logger_Sngltn.getInstance();
+	protected Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
+	protected OKW_Properties Properties  = OKW_Properties.getInstance();
+	
 	 /**  \~german
 	 *  Privater Konstruktor dieser Klasse.
 	 * 
@@ -187,6 +206,7 @@ public class OKW_Memorize_Sngltn
 				if (Instance == null)
 				{
 					Instance = new OKW_Memorize_Sngltn();
+					Instance.init();
 				}
 			}
 		}
@@ -208,6 +228,7 @@ public class OKW_Memorize_Sngltn
 	public static void reset()
 	{
 		Instance = null;
+		getInstance();
 	}
 
 	/**  \~german
@@ -229,9 +250,13 @@ public class OKW_Memorize_Sngltn
 
 		Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Exists", "String fpsKey", fpsKey);
 
-		if (_Value.containsKey(fpsKey))
+		if ( Value.containsKey(fpsKey))
 		{
 			lvbReturn = true;
+		}
+		else
+		{
+	        lvbReturn = false;
 		}
 
 		Log.LogFunctionEndDebug(lvbReturn);
@@ -264,9 +289,9 @@ public class OKW_Memorize_Sngltn
 
 		try
 		{
-			if (_Value.containsKey(fpsKey))
+			if ( Value.containsKey(fpsKey))
 			{
-				lvsReturn = _Value.get(fpsKey);
+				lvsReturn = Value.get(fpsKey);
 			}
 			else
 			{
@@ -319,8 +344,9 @@ public class OKW_Memorize_Sngltn
 		Log.LogFunctionStartDebug(this.getClass().getName() + ".Init");
 
 		// Klassen Variablen erst löschen...
-		Instance.OKW_Memorize_xml = "";
-		Instance._Value.clear();
+		
+	    Instance.OKW_Memorize_xml = "";
+        Instance.Value.clear();
 
 		// ... und dann alles Initialisieren!
 		// 1. Setze Pfad und
@@ -348,34 +374,34 @@ public class OKW_Memorize_Sngltn
 		Log.LogFunctionEndDebug();
 	}
 
-//	/** \~german
-//	 *  Liest die Werte der Klasse OKW_Memorize aus einer Datei,
-//	 *  gegeben in OKW.OKW_Ini.Xml_Ini_xml, ein.
-//	 *  Es wird eine XML Datei gelesen. Hierzu wird die Klasse OKW_Memorize mit
-//	 *  System.Xml.XmlSerializer deserialisiert.
-//	 * 
-//	 *  \~english
-//   *  \~
-//	 *  @author Zoltán Hrabovszki
-//	 *  @date 2013.11.28
-//	 */
-	//	public void read()
-	//	{
-	//		Log.LogFunctionStartDebug(Instance.getClass().getName() + "Read()");
-	//
-	//		try
-	//		{
-	//			OKW_XmlReader myXMLReader = new OKW_XmlReader("xml/OKW_Memorize.xml");			
-	//		}
-	//		catch(Exception e)
-	//		{
-	//			Log.LogPrintDebug(e.getMessage());
-	//		}
-	//		finally
-	//		{
-	//			Log.LogFunctionEndDebug();
-	//		}
-	//	}
+	/** \~german
+	 *  Liest die Werte der Klasse OKW_Memorize aus einer Datei,
+	 *  gegeben in OKW.OKW_Ini.Xml_Ini_xml, ein.
+	 *  Es wird eine XML Datei gelesen. Hierzu wird die Klasse OKW_Memorize mit
+	 *  System.Xml.XmlSerializer deserialisiert.
+	 * 
+	 *  \~english
+     *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  @date 2013.11.28
+	 */
+		public void load()
+		{
+			Log.LogFunctionStartDebug(Instance.getClass().getName() + "load()");
+	
+			try
+			{
+				OKW_XmlReader myXMLReader = new OKW_XmlReader("xml/OKW_Memorize.xml");			
+			}
+			catch(Exception e)
+			{
+				Log.LogPrintDebug(e.getMessage());
+			}
+			finally
+			{
+				Log.LogFunctionEndDebug();
+			}
+		}
 
 	/** \~german
 	 *  Schreibt die Felder (fields) der Klasse OKW_Memorize in eine Datei.
@@ -394,21 +420,14 @@ public class OKW_Memorize_Sngltn
 	 */
 	public void save()
 	{
-		Log.LogFunctionStartDebug(Instance.getClass().getName() + ".Save");
+		Log.LogFunctionStartDebug( Instance.getClass().getName() + ".save");
 
 		try
 		{
-/*			XmlSerializer serializer = new XmlSerializer(typeof(OKW_Memorize_Sngltn));
-			StreamWriter fs = new StreamWriter(this.OKW_Memorize_xml, false);
-			serializer.Serialize(fs, Instance);
-			fs.Close();
-			
-			
-			JAXBContext context = JAXBContext.newInstance( Player.class );
-			Marshaller m = context.createMarshaller();
-			m.setProperty( Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE );
-			m.marshal( johnPeel, System.out );
-*/			
+		    // Hint: The Name of Property with the Path nad Filename of the Properties-file
+		    // to be loaded is "OKW_Memorize.properties"
+		    Properties.getProperty( "OKW_Memorize.properties", "OKW_Memorize.properties" );
+		    
 		}
 		finally
 		{
@@ -438,10 +457,10 @@ public class OKW_Memorize_Sngltn
 		try
 		{
 			// Are we overwriting an existing MemKey?
-			if (_Value.containsKey(fpsKey))
+			if (Value.containsKey(fpsKey))
 			{
 				String lvsOverwriteKey = LM.GetMessage("Set", "OverwriteKey", fpsKey);
-				String lvsOldValue = LM.GetMessage("Set", "OldValue", _Value.get(fpsKey));
+				String lvsOldValue = LM.GetMessage("Set", "OldValue", Value.get(fpsKey));
 				String lvsNewValue = LM.GetMessage("Set", "NewValue", fpsValue);
 				
 				if (!lvsOldValue.equals( lvsNewValue ))
@@ -451,11 +470,11 @@ public class OKW_Memorize_Sngltn
 				    Log.LogPrint(lvsNewValue);
 				    Log.ResCloseList();
 				}
-				Instance._Value.put(fpsKey, fpsValue);
+				Instance.Value.put(fpsKey, fpsValue);
 			}
 			else
 			{
-				Instance._Value.put(fpsKey, fpsValue);
+				Instance.Value.put(fpsKey, fpsValue);
 
 				Log.ResOpenList(LM.GetMessage("Set", "SetValue", fpsKey, fpsValue));
 				String lvsMessage = LM.GetMessage("Set", "SetKeyAndValue", fpsKey, fpsValue);

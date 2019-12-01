@@ -47,10 +47,13 @@ import okw.log.Logger_Sngltn;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EN_FileKeywords_Test
 {
     static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
@@ -99,7 +102,9 @@ public class EN_FileKeywords_Test
 
     
     /** \~german
-     *  Prüft das Schlüsselwort File.
+     *  Prüft das Schlüsselwort FileDelete.
+     *  
+     *  Prüft ob eine existierende Datei Gelöscht wird.
      *
      *  \~english
      *  \~
@@ -132,15 +137,16 @@ public class EN_FileKeywords_Test
     }
     
     /** \~german
-     *  Prüft das Schlüsselwort File.
+     *  Prüft das Schlüsselwort FileDelete, ob bei "${IGNORE}" _nichts_ passiert.
      *
      *  \~english
+     *  Checks the FileDelete keyword to see if "${IGNORE}" does _nothing_ happen.
      *  \~
      *  \author Zoltan Hrabovszki
      *  \date 2019-05-17
      */
     @Test
-    public void FileDelete_EMPTY() throws Exception
+    public void FileDelete_IGNORE() throws Exception
     {
         String myFile = "myFileDelete.txt";
         
@@ -158,7 +164,7 @@ public class EN_FileKeywords_Test
         EN.VerifyFileExists( myFile, "YES" );
         
         // Test State 
-        EN.FileDelete( "IGNOR" );
+        EN.FileDelete( "${IGNORE}" );
         EN.VerifyFileExists( myFile, "YES" );
 
         // Test State 
@@ -166,7 +172,6 @@ public class EN_FileKeywords_Test
         EN.VerifyFileExists( myFile, "YES" );
 
         EN.EndTest();
-
     }
 
 }

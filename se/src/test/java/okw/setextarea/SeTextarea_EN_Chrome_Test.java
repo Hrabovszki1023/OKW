@@ -25,10 +25,10 @@ public class SeTextarea_EN_Chrome_Test extends SeTextarea_EN_Test
         // Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        myLog2HTML = new Log2HTML( "SeTextarea_EN_Chrome_Test" );
+        myLog2HTML = new Log2HTML(  );
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
 
-        Logger_Sngltn.getInstance().setDebugMode(true);
+        Logger_Sngltn.getInstance().setDebugMode(false);
     }
 
    /* @After

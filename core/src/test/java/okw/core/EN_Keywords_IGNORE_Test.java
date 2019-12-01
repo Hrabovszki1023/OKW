@@ -46,8 +46,9 @@ import okw.log.Logger_Sngltn;
 
 import org.junit.*;
 import org.junit.rules.TestName;
-import org.omg.CORBA.SystemException;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EN_Keywords_IGNORE_Test
 {
 
@@ -67,33 +68,6 @@ public class EN_Keywords_IGNORE_Test
         myLogger.setDebugMode( false );
     }
 
-    /*@AfterClass
-    public static void tearDownAfterClass() throws Exception
-    {
-    }
-    
-    
-    /** \~german
-     * \brief
-     *  Diese Methode wird immer vor jedem Test(fall) ausgeführt.
-      
-    @Before
-    public void setUp() throws Exception
-    {
-    
-    }
-    */
-
-    /// \~german
-    /// \brief
-    /// Diese Methode wird immer nach jedem Test(fall) ausgeführt.
-    /// 
-    @After
-    public void tearDown() throws Exception
-    {
-        EN.EndTest();
-    }
-
     /// \~german
     /// \brief
     /// Prüft "IGNORIEREN" für das Schlüsslewort MemorizeCaption(strng,string)
@@ -102,7 +76,7 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeCaption_IGNORE() throws Exception
     {
 
@@ -112,32 +86,9 @@ public class EN_Keywords_IGNORE_Test
         myClipBoard.Clear();
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
+        EN.MemorizeCaption( "All_MethodsObj", "${IGNORE}" );
 
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        // Löschen des Clipboards
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeCaption( "All_MethodsObj", "${IGNORE}" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
+        EN.EndTest();
     }
 
     /// \~german
@@ -148,7 +99,7 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeCaption_IGNORE_StringEmpty() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
@@ -157,33 +108,9 @@ public class EN_Keywords_IGNORE_Test
         myClipBoard.Clear();
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
+        EN.MemorizeCaption( "All_MethodsObj", "" );
 
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        // Löschen des Clipboards
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeCaption( "All_MethodsObj", "" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
-
+        EN.EndTest();
     }
 
     /// \~german
@@ -194,42 +121,16 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeExists_IGNORE() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
-        // Löschen des Clipboards
-        myClipBoard.Clear();
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
+        EN.MemorizeExists( "All_MethodsObj", "${IGNORE}" );
 
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        // Löschen des Clipboards
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeExists( "All_MethodsObj", "${IGNORE}" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
-
+        EN.EndTest();
     }
 
     /// \~german
@@ -240,41 +141,16 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeExists_IGNORE_StringEmpty() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
-        // Löschen des Clipboards
-        myClipBoard.Clear();
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
-
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        // Löschen des Clipboards
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeExists( "All_MethodsObj", "" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
+        EN.MemorizeExists( "All_MethodsObj", "" );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -285,42 +161,15 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeHasFocus_IGNORE() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
-
-        // Löschen des Clipboards
-        myClipBoard.Clear();
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
+        EN.MemorizeHasFocus( "All_MethodsObj", "${IGNORE}" );
 
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        // Löschen des Clipboards
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeHasFocus( "All_MethodsObj", "${IGNORE}" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
-
+        EN.EndTest();
     }
 
     /// \~german
@@ -331,41 +180,17 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeHasFocus_IGNORE_StringEmpty() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
-        // Löschen des Clipboards
-        myClipBoard.Clear();
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
 
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+        EN.MemorizeHasFocus( "All_MethodsObj", "" );
 
-        // Löschen des Clipboards
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeHasFocus( "All_MethodsObj", "" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
+        EN.EndTest();
     }
 
     /// \~german
@@ -376,38 +201,16 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2014.01.04
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeIsActive_IGNORE() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
-
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeIsActive( "All_MethodsObj", "${IGNORE}" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
+        EN.MemorizeIsActive( "All_MethodsObj", "${IGNORE}" );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -418,7 +221,7 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2014.01.04
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeIsActive_IGNORE_StringEmpty() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
@@ -426,30 +229,9 @@ public class EN_Keywords_IGNORE_Test
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
 
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+        EN.MemorizeIsActive( "All_MethodsObj", "" );
 
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeIsActive( "All_MethodsObj", "" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
+        EN.EndTest();
     }
 
     /// \~german
@@ -460,7 +242,7 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeLabel_IGNORE() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
@@ -468,30 +250,9 @@ public class EN_Keywords_IGNORE_Test
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
 
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+        EN.MemorizeLabel( "All_MethodsObj", "${IGNORE}" );
 
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeLabel( "All_MethodsObj", "${IGNORE}" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
+        EN.EndTest();
     }
 
     /// \~german
@@ -502,84 +263,36 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeLabel_IGNORE_StringEmpty() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
-
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeLabel( "All_MethodsObj", "" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
-
+        EN.MemorizeLabel( "All_MethodsObj", "" );
+        
+        EN.EndTest();
     }
 
     /* \~german
-     * 
-     * 
      * \~english
      * \~
      * \author Zoltan Hrabovszki
      * \date 2018-10-04
      */
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizePlaceholde_IGNORE() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
-        // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
-
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizePlaceholder( "All_MethodsObj", "${IGNORE}" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
+        EN.MemorizePlaceholder( "All_MethodsObj", "${IGNORE}" );
+        
+        EN.EndTest();
     }
 
-    /* \~german
+    /** \~german
      * 
      * 
      * \~english
@@ -587,42 +300,19 @@ public class EN_Keywords_IGNORE_Test
      * \author Zoltan Hrabovszki
      * \date 2018-10-04
      */
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizePlaceholder_IGNORE_StringEmpty() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
-
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizePlaceholder( "All_MethodsObj", "" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
-
+        EN.MemorizePlaceholder( "All_MethodsObj", "" );
+        
+        EN.EndTest();
     }
 
-    /* \~german
+    /** \~german
      * 
      * 
      * \~english
@@ -630,81 +320,34 @@ public class EN_Keywords_IGNORE_Test
      * \author Zoltan Hrabovszki
      * \date 2018-10-04
      */
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeSelectedValue_IGNORE() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
-
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeSelectedValue( "All_MethodsObj", "${IGNORE}" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
+        EN.MemorizeSelectedValue( "All_MethodsObj", "${IGNORE}" );
+        
+        EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test
+    /** \~german
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     * \date 2013.12.26
+     */
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeSelectedValue_IGNORE_StringEmpty() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
+        EN.MemorizeSelectedValue( "All_MethodsObj", "" );
 
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeSelectedValue( "All_MethodsObj", "" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
-
+        EN.EndTest();
     }
 
     /// \~german
@@ -715,38 +358,16 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeTablecellValue_IGNORE() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
+        EN.MemorizeTablecellValue( "All_MethodsObj", "Col", "Row", "${IGNORE}" );
 
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeTablecellValue( "All_MethodsObj", "Col", "Row", "${IGNORE}" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Falsche Ausnahme wurde ausgelöst: " + e.getMessage() );
-        }
+        EN.EndTest();
     }
 
     /// \~german
@@ -757,38 +378,16 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeTablecellValue_IGNORE_StringEmpty() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
-
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeTablecellValue( "All_MethodsObj", "Col", "Row", "" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Falsche Ausnahme wurde ausgelöst: " + e.getMessage() );
-        }
+        EN.MemorizeTablecellValue( "All_MethodsObj", "Col", "Row", "" );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -799,38 +398,16 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeTooltip_IGNORE() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
-
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeTooltip( "All_MethodsObj", "${IGNORE}" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Falsche Ausnahme wurde ausgelöst: " + e.getMessage() );
-        }
+        EN.MemorizeTooltip( "All_MethodsObj", "${IGNORE}" );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -841,38 +418,16 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeTooltip_IGNORE_StringEmpty() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
-
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeTooltip( "All_MethodsObj", "" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Falsche Ausnahme wurde ausgelöst: " + e.getMessage() );
-        }
+        EN.MemorizeTooltip( "All_MethodsObj", "" );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -883,39 +438,16 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeValue_IGNORE() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
+        EN.MemorizeValue( "All_MethodsObj", "${IGNORE}" );
 
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeValue( "All_MethodsObj", "${IGNORE}" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst: " + e.getMessage() );
-        }
-
+        EN.EndTest();
     }
 
     /// \~german
@@ -926,38 +458,16 @@ public class EN_Keywords_IGNORE_Test
     /// \~
     /// \author Zoltan Hrabovszki
     /// \date 2013.12.26
-    @Test
+    @Test (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeValue_IGNORE_StringEmpty() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
+        EN.MemorizeValue( "All_MethodsObj", "" );
 
-        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-        // Check the Name, Called Method and Value of Actuel object
-        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-        assertEquals( "Rechner", myClipBoard.getObjectName() );
-        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-
-        myClipBoard.Clear();
-
-        try
-        {
-            EN.MemorizeValue( "All_MethodsObj", "" );
-            fail( "Erwartetet Ausnahme wurde nicht ausgelöst" );
-        }
-        catch (OKWNotAllowedValueException e)
-        {
-            // Check the Name, Called Method and Value of Actuel object
-            assertEquals( 0, myClipBoard.getValue().size() );
-            assertEquals( "", myClipBoard.getObjectName() );
-            assertEquals( "", myClipBoard.getMethod() );
-        }
-        catch (SystemException e)
-        {
-            fail( "Unerwartetet Ausnahme wurde ausgelöst: " + e.getMessage() );
-        }
+        EN.EndTest();
     }
 
     /// \~german
@@ -989,7 +499,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( 0, myClipBoard.getValue().size() );
         assertEquals( "", myClipBoard.getObjectName() );
         assertEquals( "", myClipBoard.getMethod() );
-
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -1021,6 +532,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( 0, myClipBoard.getValue().size() );
         assertEquals( "", myClipBoard.getObjectName() );
         assertEquals( "", myClipBoard.getMethod() );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -1052,6 +565,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( 0, myClipBoard.getValue().size() );
         assertEquals( "", myClipBoard.getObjectName() );
         assertEquals( "", myClipBoard.getMethod() );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -1083,6 +598,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( 0, myClipBoard.getValue().size() );
         assertEquals( "", myClipBoard.getObjectName() );
         assertEquals( "", myClipBoard.getMethod() );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -1115,6 +632,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -1147,6 +666,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -1177,6 +698,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( 0, myClipBoard.getValue().size() );
         assertEquals( "", myClipBoard.getObjectName() );
         assertEquals( "", myClipBoard.getMethod() );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -1207,7 +730,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( 0, myClipBoard.getValue().size() );
         assertEquals( "", myClipBoard.getObjectName() );
         assertEquals( "", myClipBoard.getMethod() );
-
+  
+        EN.EndTest();
     }
 
     /// \~german
@@ -1230,6 +754,7 @@ public class EN_Keywords_IGNORE_Test
 
         EN.SetValue( "All_MethodsObj", "${IGNORE}" );
 
+        EN.EndTest();
     }
 
     /// \~german
@@ -1252,7 +777,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         EN.SetValue( "All_MethodsObj", "" );
-
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -1276,6 +802,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
 
         EN.TypeKeyTablecell( "All_MethodsObj", "1", "1", "${IGNORE}" );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -1299,6 +827,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
 
         EN.TypeKeyTablecell( "All_MethodsObj", "1", "1", "" );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -1322,7 +852,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
 
         EN.TypeKey( "All_MethodsObj", "${IGNORE}" );
-
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -1346,6 +877,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
 
         EN.TypeKey( "All_MethodsObj", "" );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1382,6 +915,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1418,6 +953,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1454,6 +991,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1490,6 +1029,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1526,6 +1067,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1562,6 +1105,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1599,6 +1144,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1636,6 +1183,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1672,6 +1221,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1708,6 +1259,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1744,6 +1297,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1779,6 +1334,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1816,6 +1373,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1853,6 +1412,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1888,6 +1449,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1923,6 +1486,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1958,6 +1523,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -1993,6 +1560,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2028,6 +1597,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2063,6 +1634,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2098,6 +1671,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -2131,6 +1706,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -2164,7 +1741,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
-
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -2196,7 +1774,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
-
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -2228,7 +1807,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
-
+        
+        EN.EndTest();
     }
 
     /** \~german
@@ -2254,6 +1834,8 @@ public class EN_Keywords_IGNORE_Test
 
         // Einzelner Wert
         EN.VerifySelectedValue( "All_MethodsObj", "${IGNORE}" );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -2280,6 +1862,8 @@ public class EN_Keywords_IGNORE_Test
 
         // Einzelner Wert
         EN.VerifySelectedValue( "All_MethodsObj", "" );
+        
+        EN.EndTest();
     }
 
     /** \~german
@@ -2305,6 +1889,8 @@ public class EN_Keywords_IGNORE_Test
 
         // Einzelner Wert
         EN.VerifySelectedValueREGX( "All_MethodsObj", "${IGNORE}" );
+        
+        EN.EndTest();
     }
 
     /** \~german
@@ -2330,6 +1916,8 @@ public class EN_Keywords_IGNORE_Test
 
         // Einzelner Wert
         EN.VerifySelectedValueREGX( "All_MethodsObj", "" );
+        
+        EN.EndTest();
     }
 
     /** \~german
@@ -2355,6 +1943,8 @@ public class EN_Keywords_IGNORE_Test
 
         // Einzelner Wert
         EN.VerifySelectedValueWCM( "All_MethodsObj", "${IGNORE}" );
+        
+        EN.EndTest();
     }
 
     /** \~german
@@ -2380,6 +1970,8 @@ public class EN_Keywords_IGNORE_Test
 
         // Einzelner Wert
         EN.VerifySelectedValueWCM( "All_MethodsObj", "" );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -2405,7 +1997,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         EN.VerifyTablecellValue( "All_MethodsObj", "Col", "Row", "${IGNORE}" );
-
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -2431,7 +2024,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         EN.VerifyTablecellValueREGX( "All_MethodsObj", "Col", "Row", "${IGNORE}" );
-
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -2457,7 +2051,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         EN.VerifyTablecellValueWCM( "All_MethodsObj", "Col", "Row", "${IGNORE}" );
-
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -2483,6 +2078,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         EN.VerifyTablecellValue( "All_MethodsObj", "Col", "Row", "" );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -2508,6 +2105,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         EN.VerifyTablecellValueREGX( "All_MethodsObj", "Col", "Row", "" );
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -2533,6 +2132,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         EN.VerifyTablecellValueWCM( "All_MethodsObj", "Col", "Row", "" );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2569,6 +2170,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2605,6 +2208,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2641,6 +2246,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2677,6 +2284,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2713,6 +2322,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2749,6 +2360,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2785,6 +2398,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2821,6 +2436,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2857,6 +2474,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2893,6 +2512,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2929,6 +2550,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -2965,6 +2588,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 	
 	/**
@@ -2998,6 +2623,8 @@ public class EN_Keywords_IGNORE_Test
 		assertEquals("", myClipBoard.getMethod());
 
 		assertEquals(0, myClipBoard.getValue().size());
+        
+        EN.EndTest();
 	}
 
 	/**
@@ -3032,6 +2659,8 @@ public class EN_Keywords_IGNORE_Test
 		assertEquals("", myClipBoard.getMethod());
 
 		assertEquals(0, myClipBoard.getValue().size());
+        
+        EN.EndTest();
 	}
 	
 	/**
@@ -3063,6 +2692,8 @@ public class EN_Keywords_IGNORE_Test
 		assertEquals("", myClipBoard.getMethod());
 
 		assertEquals(0, myClipBoard.getValue().size());
+        
+        EN.EndTest();
 	}
 
 	/**
@@ -3094,6 +2725,8 @@ public class EN_Keywords_IGNORE_Test
 		assertEquals("", myClipBoard.getMethod());
 
 		assertEquals(0, myClipBoard.getValue().size());
+        
+        EN.EndTest();
 	}
 
 	/**
@@ -3125,6 +2758,8 @@ public class EN_Keywords_IGNORE_Test
 		assertEquals("", myClipBoard.getMethod());
 
 		assertEquals(0, myClipBoard.getValue().size());
+        
+        EN.EndTest();
 	}
 
 	/**
@@ -3156,6 +2791,8 @@ public class EN_Keywords_IGNORE_Test
 		assertEquals("", myClipBoard.getMethod());
 
 		assertEquals(0, myClipBoard.getValue().size());
+        
+        EN.EndTest();
 	}
 	
 	  /**
@@ -3193,6 +2830,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 
     /**
@@ -3230,6 +2869,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "", myClipBoard.getMethod() );
 
         assertEquals( 0, myClipBoard.getValue().size() );
+        
+        EN.EndTest();
     }
 	
     
@@ -3264,7 +2905,10 @@ public class EN_Keywords_IGNORE_Test
 		assertEquals("", myClipBoard.getMethod());
 
 		assertEquals(0, myClipBoard.getValue().size());
+        
+        EN.EndTest();
 	}
+
 	/**
 	 * \~german Prüft ob das Schlüsselwort VerifyErrorMSG( FN, "${IGNORE}" )
 	 * nicht ausgeführt wird
@@ -3297,6 +2941,8 @@ public class EN_Keywords_IGNORE_Test
 		assertEquals("", myClipBoard.getMethod());
 
 		assertEquals(0, myClipBoard.getValue().size());
+        
+        EN.EndTest();
 	}
 	
 	/**
@@ -3331,6 +2977,8 @@ public class EN_Keywords_IGNORE_Test
 		assertEquals("", myClipBoard.getMethod());
 
 		assertEquals(0, myClipBoard.getValue().size());
+        
+        EN.EndTest();
 	}
 
 	/**
@@ -3362,6 +3010,8 @@ public class EN_Keywords_IGNORE_Test
 		assertEquals("", myClipBoard.getMethod());
 
 		assertEquals(0, myClipBoard.getValue().size());
+        
+        EN.EndTest();
 	}
 
 	/**
@@ -3396,6 +3046,8 @@ public class EN_Keywords_IGNORE_Test
 		assertEquals("", myClipBoard.getMethod());
 
 		assertEquals(0, myClipBoard.getValue().size());
+        
+        EN.EndTest();
 	}
 
 	/**
@@ -3427,7 +3079,10 @@ public class EN_Keywords_IGNORE_Test
 		assertEquals("", myClipBoard.getMethod());
 
 		assertEquals(0, myClipBoard.getValue().size());
+        
+        EN.EndTest();
 	}
+
 	/// \~german
     /// \brief
     /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyFileExists Übertragen wird.
@@ -3449,8 +3104,9 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
 
         EN.VerifyFileExists( "All_MethodsObj", "${IGNORE}" );
-
-    }
+        
+        EN.EndTest();
+   }
 
     /// \~german
     /// \brief
@@ -3473,6 +3129,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
 
         EN.VerifyFileExists( "All_MethodsObj", "" );
+        
+        EN.EndTest();
     }
     
   /// \~german
@@ -3497,6 +3155,7 @@ public class EN_Keywords_IGNORE_Test
 
         EN.TypeKeyWindow( "All_MethodsObj", "${IGNORE}" );
 
+        EN.EndTest();
     }
 
     /// \~german
@@ -3520,6 +3179,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
 
         EN.TypeKeyWindow( "All_MethodsObj", "" );
+        
+        EN.EndTest();
     }
     
     
@@ -3544,7 +3205,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
 
         EN.VerifyDirectoryExists( "All_MethodsObj", "${IGNORE}" );
-
+        
+        EN.EndTest();
     }
 
     /// \~german
@@ -3568,6 +3230,8 @@ public class EN_Keywords_IGNORE_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
 
         EN.VerifyDirectoryExists( "All_MethodsObj", "" );
+        
+        EN.EndTest();
     }
     
 }

@@ -44,6 +44,7 @@ import okw.exceptions.OKWVerifyingFailsException;
 import org.junit.*;
 import static org.junit.Assert.*;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
 /**
 * \~
@@ -60,6 +61,7 @@ import org.junit.rules.TestName;
 *  @date 2017-07-23
 */
 @Ignore
+@FixMethodOrder( MethodSorters.NAME_ASCENDING )
 public class SeMAXIMIZE_EN_Test {
 
   protected OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
@@ -128,6 +130,9 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.LogHasFocus( "MAXIMIZE" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   /** 
@@ -168,6 +173,10 @@ public class SeMAXIMIZE_EN_Test {
     EN.StartApp( ApplicationName );
 
     EN.LogLabel( "MAXIMIZE" );
+    
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
+
   }
 
   /**
@@ -187,6 +196,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.SetValue( "MAXIMIZE", "Hrabovszki" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+
   }
 
 
@@ -208,6 +221,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "MAXIMIZE", "Hrabovszki" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+
   }
 
   
@@ -227,6 +244,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.LogTooltip( "MAXIMIZE" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+
   }
 
  
@@ -247,6 +268,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.LogValue( "MAXIMIZE" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+
   }
 
   /**
@@ -288,7 +313,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.MemorizeHasFocus( "MAXIMIZE", "SeTextField_MemorizeHasFocus" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+  } 
 
   
   /** 
@@ -332,6 +360,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.MemorizeLabel( "MAXIMIZE", "SeTextField_MemorizeLabel_1" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+
    }
 
    
@@ -351,6 +383,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.MemorizeTooltip( "MAXIMIZE", "SeTextField_MemorizeTooltip" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+
   }
 
 
@@ -371,6 +407,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.MemorizeValue( "MAXIMIZE", "SeTextField_LogValue_2" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+
   }
 
 
@@ -391,6 +431,9 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyCaption( "MAXIMIZE", "Abc" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   /**
@@ -410,6 +453,9 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyCaptionWCM( "MAXIMIZE", "${EMPTY}" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
 
@@ -430,6 +476,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyCaptionREGX( "MAXIMIZE", "${EMPTY}" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+
   }
 
 
@@ -452,6 +502,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
       
       EN.VerifyExists( "MAXIMIZE", "NO" );
+      
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   /**
@@ -495,6 +549,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyHasFocus( "MAXIMIZE", "NO" );
+      
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
   
 
@@ -536,6 +594,9 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyLabel( "MAXIMIZE", "Name:" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -556,6 +617,9 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyLabelWCM( "MAXIMIZE", "Name?" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
   
@@ -576,6 +640,9 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyLabelREGX( "MAXIMIZE", "Name\\W" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
 
@@ -596,6 +663,9 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyTooltip( "MAXIMIZE", "Den Namen eingeben" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
 
@@ -616,7 +686,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
   
       EN.VerifyTooltipWCM( "MAXIMIZE", "??? Namen eingeben" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+ }
 
 
   /**
@@ -636,6 +709,9 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
   
       EN.VerifyTooltipREGX( "MAXIMIZE", "\\wen Namen eingeben" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 
 
@@ -656,7 +732,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyValue( "MAXIMIZE", "Zoltan" );
-  }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+}
   
   
   /**
@@ -676,7 +755,10 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyValueWCM( "MAXIMIZE", "Abc" );
-   }
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+  }
   
    
   /**
@@ -696,5 +778,8 @@ public class SeMAXIMIZE_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyValueREGX( "MAXIMIZE", ".oltan" );
+      
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
 }

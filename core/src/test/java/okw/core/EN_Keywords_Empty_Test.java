@@ -44,14 +44,15 @@ import okw.OKW_TestClipboard;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EN_Keywords_Empty_Test {
 
   static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
@@ -73,25 +74,6 @@ public class EN_Keywords_Empty_Test {
   public static void tearDownAfterClass() throws Exception {
   }
 
-  // / \~german
-  // / \brief
-  // / Diese Methode wird immer vor jedem Test(fall) ausgeführt.
-  // /
-  @Before
-  public void setUp() throws Exception {
-
-  }
-
-  // / \~german
-  // / \brief
-  // / Diese Methode wird immer nach jedem Test(fall) ausgeführt.
-  // /
-  @After
-  public void tearDown() throws Exception {
-    EN.EndTest();
-  }
-
-  
   /**
    * \~german
    * \brief
@@ -117,6 +99,8 @@ public class EN_Keywords_Empty_Test {
     assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "SetValue()", myClipBoard.getMethod() );
+    
+    EN.EndTest();
   }
 
   
@@ -145,6 +129,8 @@ public class EN_Keywords_Empty_Test {
     assertEquals( "${DELETE}", myClipBoard.getValue().get( 0 ) );
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
     assertEquals( "TypeKey(List<String> fpLs_Value)", myClipBoard.getMethod() );
+
+    EN.EndTest();
   }
 
 
@@ -184,6 +170,8 @@ public class EN_Keywords_Empty_Test {
     // assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyCaption()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
  
   /**
@@ -222,6 +210,8 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyCaption()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
 
   
@@ -262,6 +252,7 @@ public class EN_Keywords_Empty_Test {
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyCaption()", myClipBoard.getMethod());
 
+    EN.EndTest();
   }
 
   /**
@@ -300,6 +291,8 @@ public class EN_Keywords_Empty_Test {
     // assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifySelectedValue()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
  
   /**
@@ -338,6 +331,8 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifySelectedValue()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
 
 
@@ -378,7 +373,8 @@ public class EN_Keywords_Empty_Test {
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifySelectedValue()", myClipBoard.getMethod());
 
-  }  
+    EN.EndTest();
+ }  
   
 
   /**
@@ -417,6 +413,8 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyLabel()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
  
   /**
@@ -456,7 +454,8 @@ public class EN_Keywords_Empty_Test {
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyLabel()", myClipBoard.getMethod());
 
-  }
+    EN.EndTest();
+   }
 
   /**
    *  \~german
@@ -495,6 +494,7 @@ public class EN_Keywords_Empty_Test {
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyLabel()", myClipBoard.getMethod());
 
+    EN.EndTest();
   }
   
 
@@ -534,6 +534,8 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyPlaceholder()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
  
   /**
@@ -573,6 +575,7 @@ public class EN_Keywords_Empty_Test {
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyPlaceholder()", myClipBoard.getMethod());
 
+    EN.EndTest();
   }
 
   /**
@@ -612,6 +615,7 @@ public class EN_Keywords_Empty_Test {
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyPlaceholder()", myClipBoard.getMethod());
 
+    EN.EndTest();
   }
 
   /** \~german
@@ -634,6 +638,8 @@ public class EN_Keywords_Empty_Test {
   
     EN.SelectWindow( "Rechner" );
     EN.VerifyMaxLength( "All_MethodsObj", "${EMPTY}" );
+
+    EN.EndTest();
   }
 
   /**
@@ -672,6 +678,8 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyTooltip()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
   
   /**
@@ -710,6 +718,8 @@ public class EN_Keywords_Empty_Test {
     // assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyTooltip()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
   
   /**
@@ -748,6 +758,8 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyTooltip()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
   
   /**
@@ -788,6 +800,8 @@ public class EN_Keywords_Empty_Test {
     assertEquals( "Y", myClipBoard.getValue().get( 2 ) );    
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyTablecellValue()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
   
   /**
@@ -828,6 +842,8 @@ public class EN_Keywords_Empty_Test {
     assertEquals( "Y", myClipBoard.getValue().get( 2 ) );    
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyTablecellValue()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
   
   /**
@@ -868,6 +884,8 @@ public class EN_Keywords_Empty_Test {
     assertEquals( "Y", myClipBoard.getValue().get( 2 ) );    
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyTablecellValue()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
 
 
@@ -886,6 +904,8 @@ public class EN_Keywords_Empty_Test {
   
     EN.SelectWindow( "Rechner" );
     EN.VerifyExists( "All_MethodsObj", "${EMPTY}" );
+
+    EN.EndTest();
   }
 
   /** \~german
@@ -908,6 +928,8 @@ public class EN_Keywords_Empty_Test {
   
     EN.SelectWindow( "Rechner" );
     EN.VerifyIsActive( "All_MethodsObj", "${EMPTY}" );
+
+    EN.EndTest();
   }
 
 /**
@@ -946,6 +968,8 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyValue()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
 
 /**
@@ -985,6 +1009,8 @@ public class EN_Keywords_Empty_Test {
 
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyValue()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
 
 /**
@@ -1023,6 +1049,8 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyValue()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
   
 
@@ -1063,6 +1091,8 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyBadge()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
 
   /**
@@ -1102,6 +1132,8 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyBadge()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
 
   /**
@@ -1141,6 +1173,8 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyBadge()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
   
   /** \~german
@@ -1163,6 +1197,8 @@ public class EN_Keywords_Empty_Test {
   
     EN.SelectWindow( "Rechner" );
     EN.VerifyMinLength( "All_MethodsObj", "${EMPTY}" );
+
+    EN.EndTest();
   }
   
   /**
@@ -1202,7 +1238,10 @@ public class EN_Keywords_Empty_Test {
     //assertEquals( "", myClipBoard.getValue().get( 0 ) );
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyErrorMSG()", myClipBoard.getMethod());
+
+    EN.EndTest();
   }
+
   /**
    *  \~german
    *  Prüft "${EMPTY}" für das Schlüsslewort VerifyBadge(string,string)
@@ -1241,6 +1280,7 @@ public class EN_Keywords_Empty_Test {
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyErrorMSG()", myClipBoard.getMethod());
 
+    EN.EndTest();
   }
 
   /**
@@ -1281,5 +1321,6 @@ public class EN_Keywords_Empty_Test {
     assertEquals("Rechner.All_MethodsObj", myClipBoard.getObjectName());
     assertEquals("VerifyErrorMSG()", myClipBoard.getMethod());
 
+    EN.EndTest();
   }
 }

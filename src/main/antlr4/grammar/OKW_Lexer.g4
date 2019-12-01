@@ -17,7 +17,6 @@ TEXT     :  ~'$'+ ;
 
 WS	   : [\r]+ -> skip ;
 
-
 mode KLAMMER_MODE;
 
 KLAMMERZU        : '}'  -> mode(DEFAULT_MODE) ;
@@ -39,5 +38,4 @@ KEYVALUE     : 'Abbruch'
              | 'Return' ;
 
 ENVVAL       :  VALUE ;
-VALUE        : [a-zA-Z0-9] [a-zA-Z0-9]* ;
-
+VALUE        : [a-zA-Z0-9_.]+ ;

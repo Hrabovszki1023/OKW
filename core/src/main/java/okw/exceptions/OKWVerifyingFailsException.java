@@ -39,17 +39,19 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 
 package okw.exceptions;
 
-/// \~german
-/// \brief
-/// <code>OKWVerifyingFailsException</code>-Ausnahme wird ausgelöst, wenn ein Soll-Ist-Vergleich fehlschlägt.<br>
-/// 
-/// \~english
-/// \brief
-/// <code>OKWVerifyingFailsException</code>-Exception is triggered, if an actuel-expected-verification fails.<br>
-/// 
-/// \~
-/// \author Zoltán Hrabovszki
-/// \date 2014.04.27
+/** \~german
+ *  \brief
+ *  <code>OKWVerifyingFailsException</code>-Ausnahme wird ausgelöst,
+ *  wenn ein Soll-Ist-Vergleich fehlschlägt.<br>
+ * 
+ *  \~english
+ *  <code>OKWVerifyingFailsException</code>-Exception is triggered, 
+ *  if an actuel-expected-verification fails.<br>
+ *  
+ *  \~
+ *  \author Zoltán Hrabovszki
+ *  \date 2014.04.27
+ */
 public class OKWVerifyingFailsException extends RuntimeException
 {
 

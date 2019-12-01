@@ -136,6 +136,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.LogHasFocus( "BACK" );
+      EN.EndTest();
   }
 
   /** 
@@ -174,6 +175,7 @@ public class SeBACK_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.LogTooltip( "BACK" );
+      EN.EndTest();
   }
 
 
@@ -195,6 +197,7 @@ public class SeBACK_EN_Test {
     EN.StartApp( ApplicationName );
 
     EN.LogLabel( "BACK" );
+    EN.EndTest();
   }
 
   /**
@@ -214,6 +217,7 @@ public class SeBACK_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.LogValue( "BACK" );
+      EN.EndTest();
   }
 
 
@@ -234,6 +238,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.SetValue( "BACK", "Hrabovszki" );
+      EN.EndTest();
   }
 
 
@@ -255,6 +260,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "BACK", "Hrabovszki" );
+      EN.EndTest();
   }
 
   
@@ -297,6 +303,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.MemorizeHasFocus( "BACK", "SeBACK_MemorizeHasFocus" );
+      EN.EndTest();
   }
 
   
@@ -341,6 +348,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.MemorizeLabel( "BACK", "SeBACK_MemorizeLabel_1" );
+      EN.EndTest();
    }
 
    
@@ -360,6 +368,7 @@ public class SeBACK_EN_Test {
       EN.BeginTest( name.getMethodName() );
       EN.StartApp( ApplicationName );
       EN.MemorizeTooltip( "BACK", "SeBACK_MemorizeTooltip" );
+      EN.EndTest();
   }
 
 
@@ -380,6 +389,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.MemorizeValue( "BACK", "SeBACK_LogValue_2" );
+      EN.EndTest();
   }
 
 
@@ -400,6 +410,8 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyCaption( "BACK", "Abc" );
+      EN.EndTest();
+
   }
 
   /**
@@ -419,6 +431,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyCaptionWCM( "BACK", "${EMPTY}" );
+      EN.EndTest();
   }
 
 
@@ -439,6 +452,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyCaptionREGX( "BACK", "${EMPTY}" );
+      EN.EndTest();
   }
 
 
@@ -461,6 +475,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
       
       EN.VerifyExists( "BACK", "NO" );
+      EN.EndTest();
   }
 
   /**
@@ -504,6 +519,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyHasFocus( "BACK", "NO" );
+      EN.EndTest();
   }
   
 
@@ -545,6 +561,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyLabel( "BACK", "Name:" );
+      EN.EndTest();
   }
 
   
@@ -565,6 +582,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyLabelWCM( "BACK", "Name?" );
+      EN.EndTest();
   }
 
   
@@ -585,6 +603,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyLabelREGX( "BACK", "Name\\W" );
+      EN.EndTest();
   }
 
 
@@ -605,6 +624,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyTooltip( "BACK", "Den Namen eingeben" );
+      EN.EndTest();
   }
 
 
@@ -625,6 +645,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
   
       EN.VerifyTooltipWCM( "BACK", "??? Namen eingeben" );
+      EN.EndTest();
   }
 
 
@@ -645,6 +666,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
   
       EN.VerifyTooltipREGX( "BACK", "\\wen Namen eingeben" );
+      EN.EndTest();
   }
 
 
@@ -665,6 +687,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyValue( "BACK", "Zoltan" );
+      EN.EndTest();
   }
   
   
@@ -685,6 +708,7 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyValueWCM( "BACK", "Abc" );
+      EN.EndTest();
    }
   
    
@@ -705,5 +729,6 @@ public class SeBACK_EN_Test {
       EN.StartApp( ApplicationName );
 
       EN.VerifyValueREGX( "BACK", ".oltan" );
+      EN.EndTest();
   }
 }

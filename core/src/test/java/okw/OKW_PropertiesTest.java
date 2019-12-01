@@ -185,7 +185,6 @@ public class OKW_PropertiesTest
     }
     
     
-    
     @Test
     public final void tc_addPropertiesFile() throws IOException
     {
@@ -215,4 +214,14 @@ public class OKW_PropertiesTest
         assertEquals( "Wert 3 aus testPropertiesExpected.properties", myProperties.get( "Wert 3" ) );
         assertEquals( "Wert 4 aus testPropertiesExpected.properties", myProperties.get( "Wert 4" ) );
     }
+
+    
+    @Test
+    public final void tc_getProperty2Boolean() throws IOException
+    {
+        assertEquals(  false, myProperties.getProperty2Boolean( "core.AbbortOnVerifyFail", "false" ) );
+        assertEquals(  false, myProperties.getProperty2Boolean( "propertyDoesNotExist", "false" ) );
+        assertEquals(  true,  myProperties.getProperty2Boolean( "core.propertyDoesNotExist", "true" ) );
+    }
+
 }
