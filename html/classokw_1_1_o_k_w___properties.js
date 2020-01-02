@@ -7,6 +7,8 @@ var classokw_1_1_o_k_w___properties =
     [ "getKeysStartswith", "classokw_1_1_o_k_w___properties.html#a8489ce026a782d28ef1854eaf65dc92e", null ],
     [ "getPropertiesFilesFromResources", "classokw_1_1_o_k_w___properties.html#ac4b7b1ed4cbd9340dfe426d85dee6d9a", null ],
     [ "getPropertiesForKeysStartswith", "classokw_1_1_o_k_w___properties.html#a0ebb8b3abc34c58218bb5c347eb5d3e5", null ],
+    [ "getProperty", "classokw_1_1_o_k_w___properties.html#a2ba33a97851016137b2f7658e83af82e", null ],
+    [ "getProperty", "classokw_1_1_o_k_w___properties.html#a095318e3113edb35b1014d4da91737be", null ],
     [ "getProperty2Boolean", "classokw_1_1_o_k_w___properties.html#aa57f3f3356c91b5ebc60d493ce5920d5", null ],
     [ "getPropertyFiles", "classokw_1_1_o_k_w___properties.html#ae142680bdd0cbb29887c374bc8659b0b", null ],
     [ "init", "classokw_1_1_o_k_w___properties.html#a8a4294aa27bf9f4f49e9f1991022d5c8", null ],

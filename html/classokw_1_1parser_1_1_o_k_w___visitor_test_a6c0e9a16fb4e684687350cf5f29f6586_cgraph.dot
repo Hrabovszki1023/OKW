@@ -9,5 +9,5 @@ digraph "okw.parser.OKW_VisitorTest.TC_ParseMe_ArrayListString_Empty"
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="okw.log.Logger_Sngltn.Log\lPrint",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c",tooltip="LogPrint Function: Prints the values of expressions to the results file."];
   Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="okw.parser.Parser.ParseMe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3",tooltip="Parst einen _List&lt string&gt, ersetzt die Parser-Schlüsslewörter durch Werte."];
+  Node3 [label="okw.parser.Parser.ParseMe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3",tooltip="Parst einen ArayList&lt string&gt, ersetzt die Parser-Schlüsslewörter durch Werte."];
 }

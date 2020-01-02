@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 456, Datum: 11.29.2019 05:04:41</span>
+   &#160;<span id="projectnumber">Build_ID: 457, Datum: 01.02.2020 07:45:48</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -216,7 +216,7 @@ $(document).ready(function(){initNavTree('_o_k_w___const___yes_no2_boolean_8java
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        Boolean actual;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        Boolean expected = ExpectedValue;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="classokw_1_1_o_k_w_language.html">OKWLanguage</a>.getInstance().setLanguage( SelectLanguage );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="classokw_1_1_o_k_w_language.html">OKWLanguage</a>.getInstance().<a class="code" href="classokw_1_1_o_k_w_language.html#aa8b063236cb149ca03696df56b256dfc">setLanguage</a>( SelectLanguage );</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        actual = <a class="code" href="classokw_1_1_o_k_w___const___sngltn.html">OKW_Const_Sngltn</a>.<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#afdb8f095b58cbd870dbb8eb353e3b0bf">getInstance</a>().<a class="code" href="classokw_1_1_o_k_w___const___sngltn.html#a99d340fb7556d8b20de03fbf1da17d77">YesNo2Boolean</a>( InputValue_1 );</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        assertEquals( expected, actual );</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
@@ -226,8 +226,9 @@ $(document).ready(function(){initNavTree('_o_k_w___const___yes_no2_boolean_8java
 <div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a6796ba5135984457b710934c2d2f18b6"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a6796ba5135984457b710934c2d2f18b6">okw.log.Logger_Sngltn.setDebugMode</a></div><div class="ttdeci">void setDebugMode(Boolean fpbDebugMode)</div><div class="ttdoc">setDebugMode:</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00068">Logger_Sngltn.java:68</a></div></div>
 <div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a525771433356af73ed6e94b35f31b541"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a525771433356af73ed6e94b35f31b541">okw.log.Logger_Sngltn.getInstance</a></div><div class="ttdeci">static Logger_Sngltn getInstance()</div><div class="ttdoc">Zentrale Logger-Klasse stellt Logger-Methoden innerhalb von OKW zur Verfügung.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00088">Logger_Sngltn.java:88</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___const___yes_no2_boolean_html"><div class="ttname"><a href="classokw_1_1_o_k_w___const___yes_no2_boolean.html">okw.OKW_Const_YesNo2Boolean</a></div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___yes_no2_boolean_8java_source.html#l00062">OKW_Const_YesNo2Boolean.java:62</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w_language_html_aa8b063236cb149ca03696df56b256dfc"><div class="ttname"><a href="classokw_1_1_o_k_w_language.html#aa8b063236cb149ca03696df56b256dfc">okw.OKWLanguage.setLanguage</a></div><div class="ttdeci">void setLanguage(String value)</div><div class="ttdoc">Wählt die sprache von OKW, default Sprache ist &quot;en&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_language_8java_source.html#l00106">OKWLanguage.java:106</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_a99d340fb7556d8b20de03fbf1da17d77"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#a99d340fb7556d8b20de03fbf1da17d77">okw.OKW_Const_Sngltn.YesNo2Boolean</a></div><div class="ttdeci">Boolean YesNo2Boolean(String fpsYesOrNo)</div><div class="ttdoc">Konvertiert sprachabhängig Ja/Nein zu einem Booleanean Wert (Wahr/Falsch).</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00840">OKW_Const_Sngltn.java:840</a></div></div>
-<div class="ttc" id="aclassokw_1_1_o_k_w_language_html"><div class="ttname"><a href="classokw_1_1_o_k_w_language.html">okw.OKWLanguage</a></div><div class="ttdoc">http://de.wikipedia.org/wiki/ISO-3166-1-Kodierliste</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_language_8java_source.html#l00048">OKWLanguage.java:48</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w_language_html"><div class="ttname"><a href="classokw_1_1_o_k_w_language.html">okw.OKWLanguage</a></div><div class="ttdoc">http://de.wikipedia.org/wiki/ISO-3166-1-Kodierliste</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_language_8java_source.html#l00047">OKWLanguage.java:47</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html_afdb8f095b58cbd870dbb8eb353e3b0bf"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html#afdb8f095b58cbd870dbb8eb353e3b0bf">okw.OKW_Const_Sngltn.getInstance</a></div><div class="ttdeci">static OKW_Const_Sngltn getInstance()</div><div class="ttdoc">Holt die einzige Instanz dieser Klasse.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00277">OKW_Const_Sngltn.java:277</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___const___sngltn_html"><div class="ttname"><a href="classokw_1_1_o_k_w___const___sngltn.html">okw.OKW_Const_Sngltn</a></div><div class="ttdoc">OKW_Const verwaltet die sprachabhängigen OKW-Konstanten.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___const___sngltn_8java_source.html#l00127">OKW_Const_Sngltn.java:127</a></div></div>
 <div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html">okw.log.Logger_Sngltn</a></div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00054">Logger_Sngltn.java:54</a></div></div>
@@ -237,7 +238,7 @@ $(document).ready(function(){initNavTree('_o_k_w___const___yes_no2_boolean_8java
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_90fd98a0ba30abf7a6068a44995d2d6b.html">src</a></li><li class="navelem"><a class="el" href="dir_221f38c42018e66bcc4731adbda1f302.html">test</a></li><li class="navelem"><a class="el" href="dir_7d11d078bf54f621f2f9e0dbb4b23dab.html">java</a></li><li class="navelem"><a class="el" href="dir_cd7042f6567675755d2a7d20e8cf9ca8.html">okw</a></li><li class="navelem"><b>OKW_Const_YesNo2Boolean.java</b></li>
-    <li class="footer">Erzeugt am Fre Nov 29 2019 05:06:14 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Jan 2 2020 07:47:04 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

@@ -12,10 +12,12 @@ digraph "okw.log.Logger_Sngltn.LogFunctionEnd"
   Node3 [label="okw.OKW_FileHelper.create\lEmptyDirectory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a3f1e666538681aaa975fde389b707ee7",tooltip=" "];
   Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="okw.OKW_FileHelper.createFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a971febc29814ec065a22940729d7eeb7",tooltip="Legt eine Leere Datei an."];
-  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="okw.OKW_FileHelper.isDirectory\lEmpty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a60cde3f4abccd6a69a43045c6e8d0ef9",tooltip="Diese Methode prüft, ob das angegebene Vrzeicniss leer ist."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.core.OK.FileCreate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a82e973f595da245ed6afc8bb18233c87",tooltip="Legt das gegebene Verzeichniss an."];
   Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="okw.gui.AnyWinBase.LogFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#afc3cff59cf8744b2d6711b090e3f88e2",tooltip="Methode ruft die Methode Logger.Instance.LogFunctionEnd() auf."];
+  Node6 [label="okw.OKW_FileHelper.isDirectory\lEmpty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#ace01ea18f378aa32a472a80918057ed0",tooltip="Diese Methode prüft, ob das gegebene Verzeichniss existiert und leer ist."];
   Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="okw.OKW_FileHelper.move",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a3002a43c90d8b9c368d68642d586defd",tooltip="Verschiebt die gegeben Quell-Datei zu einer neuen Ziel-Datei."];
+  Node7 [label="okw.gui.AnyWinBase.LogFunctionEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#afc3cff59cf8744b2d6711b090e3f88e2",tooltip="Methode ruft die Methode Logger.Instance.LogFunctionEnd() auf."];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="okw.OKW_FileHelper.move",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a3002a43c90d8b9c368d68642d586defd",tooltip="Verschiebt die gegeben Quell-Datei zu einer neuen Ziel-Datei."];
 }

@@ -66,18 +66,14 @@ digraph "okw.core.EN_Keywords_ANTLR_Test.tc_Typekey_MemorizedValue"
   Node27 [label="okw.log.Logger_Sngltn.Res\lCloseList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a9b54104f7e0b4c0a473877b19dfaed56",tooltip="Closes a hierarchical level in the results file that was opened with ResOpenList."];
   Node25 -> Node28 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node28 [label="okw.log.Logger_Sngltn.Res\lOpenList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#ab4fc711bb4c754f251372ff3b14ab9c9",tooltip="Creates a new hierarchical level in the results file."];
-  Node25 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node29 [label="okw.OKW_Memorize_Sngltn.save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___memorize___sngltn.html#a3ff14b0c6e596369e1437c59888a104f",tooltip="Schreibt die Felder (fields) der Klasse OKW_Memorize in eine Datei."];
-  Node29 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node29 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node30 [label="okw.core.EN.TypeKey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#ae24d951e607b9b82af4f3b80e71285b9",tooltip="Tastatureingaben von Daten in das aktive Fensterobjekt."];
-  Node30 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="okw.core.EN.TypeKey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#ae24d951e607b9b82af4f3b80e71285b9",tooltip="Tastatureingaben von Daten in das aktive Fensterobjekt."];
+  Node29 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="okw.core.Core.TypeKey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ad09bf3a237b88913dbe9ebc228db1cf3",tooltip="Tastatureingaben von Daten in das aktive Fensterobjekt."];
+  Node30 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node30 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node31 [label="okw.core.Core.TypeKey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#ad09bf3a237b88913dbe9ebc228db1cf3",tooltip="Tastatureingaben von Daten in das aktive Fensterobjekt."];
-  Node31 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node31 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node31 -> Node23 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node31 -> Node32 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node32 [label="okw.core.IOKW_State.TypeKey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0466b45ed636074a1b6cd52de6b5fdd6",tooltip="Tastatureingaben von Daten in das aktive Fensterobjekt."];
+  Node31 [label="okw.core.IOKW_State.TypeKey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a0466b45ed636074a1b6cd52de6b5fdd6",tooltip="Tastatureingaben von Daten in das aktive Fensterobjekt."];
 }

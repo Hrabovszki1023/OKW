@@ -1,0 +1,29 @@
+digraph "okw.OKWLanguage.setLanguage"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="okw.OKWLanguage.setLanguage",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Wählt die sprache von OKW, default Sprache ist \"en\"."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.core.NOK.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_n_o_k.html#a5e8d582dc6afaeb9f93e8aad43a988c2",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.core.OK.setLanguage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#af17725c4ae8c2ec68359b066b7d9517a",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="okw.OKW_ConstExceptionTest.tc\lGetConst4Internalname_OKWConst4Internalname\lNotFoundException_Msg_en",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const_exception_test.html#ad0732d4ddcfc9a59aaa6ad18ac9a30c0",tooltip="Prüft ob der sprachabhängige Hinweis zu der Exception \"OKWConst4InternalnameNotFoundException\" ausgeg..."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.OKW_ConstExceptionTest.tc\lGetConst4InternalnameOKWConst4Internalname\lNotFoundException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const_exception_test.html#aad3175a3fabb6eab6fe038ae1a0206cb",tooltip="Prüft ob die Exception \"OKWConst4InternalnameNotFoundException\" ausgelöst wird, wenn ein nicht vorhan..."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="okw.OKW_ConstExceptionTest.tc\lGetConst4InternalnameOKWConst4Internalname\lNotFoundException_Msg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const_exception_test.html#a1f7eb86b3be0a0c76b36bea49101e327",tooltip="Prüft, ob der sprachabhängige Hinweis zu der Exception \"OKWConst4InternalnameNotFoundException\" ausge..."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="okw.OKW_ConstExceptionTest.tc\lYesNoToBoolean_OKWConst4Internalname\lNotFoundException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const_exception_test.html#afbcd75dfaa09283a82adc2dbc3308c50",tooltip="Prüft ob eine die fehlende Sprache(hurtz) eine Exception auslöst."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="okw.OKW_ConstExceptionTest.tc\lYesNoToBoolean_OKWNotAllowedValue\lException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const_exception_test.html#a8c6f429c03ab82e784705ac319f27cf8",tooltip="Prüft ob ein Tippfehler eine Kernel-Exception auslöst."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="okw.OKW_ConstExceptionTest.tc\lYesNoToBoolean_OKWNotAllowedValue\lException_Msg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const_exception_test.html#afa6eff9fcb878e1f1faa6c36c839c0a2",tooltip="Prüft ob ein Tippfehler eine OKWNotAllowedValueException-Exception auslöst."];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="okw.OKW_ConstExceptionTest.tc\lYesNoToBoolean_OKWNotAllowedValue\lException_Msg_de",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___const_exception_test.html#af2431cc677007a6982978199f3bedae9",tooltip="Prüft ob ein Tippfehler eine OKWNotAllowedValueException-Exception auslöst."];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="okw.core.CurrentObject\l_Test.TestFixtureSetUp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_current_object___test.html#a1acf13811dcb4ea83b56a78c2b2908cb",tooltip="Ziel des TestFixturesetup: Startbedingung für alle Testfälle herstellen."];
+}

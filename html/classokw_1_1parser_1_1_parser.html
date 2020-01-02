@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 456, Datum: 11.29.2019 05:04:41</span>
+   &#160;<span id="projectnumber">Build_ID: 457, Datum: 01.02.2020 07:45:48</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -123,10 +123,10 @@ $(document).ready(function(){initNavTree('classokw_1_1parser_1_1_parser.html',''
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Öffentliche, statische Methoden</h2></td></tr>
 <tr class="memitem:a46afb901847316c744413ce473ecada3"><td class="memItemLeft" align="right" valign="top">static ArrayList&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a> (ArrayList&lt; String &gt; fpLsString2Parse)</td></tr>
-<tr class="memdesc:a46afb901847316c744413ce473ecada3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parst einen _List&amp;lt string&amp;gt, ersetzt die Parser-Schlüsslewörter durch Werte.  <a href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:a46afb901847316c744413ce473ecada3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parst einen ArayList&amp;lt string&amp;gt, ersetzt die Parser-Schlüsslewörter durch Werte.  <a href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">Mehr ...</a><br /></td></tr>
 <tr class="separator:a46afb901847316c744413ce473ecada3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb5029f987f014639921eaa325978b7a"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classokw_1_1parser_1_1_parser.html#acb5029f987f014639921eaa325978b7a">ParseMe</a> (String fpsString2Parse)</td></tr>
-<tr class="memdesc:acb5029f987f014639921eaa325978b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parst einen _string und ersetzt die Parser-Schlüsslewörter durch Werte.  <a href="classokw_1_1parser_1_1_parser.html#acb5029f987f014639921eaa325978b7a">Mehr ...</a><br /></td></tr>
+<tr class="memdesc:acb5029f987f014639921eaa325978b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Das ist die Parser-methode um einen string zu parsen und die Parser-Schlüsselwörter durch Werte zu ersetzten .  <a href="classokw_1_1parser_1_1_parser.html#acb5029f987f014639921eaa325978b7a">Mehr ...</a><br /></td></tr>
 <tr class="separator:acb5029f987f014639921eaa325978b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
@@ -157,37 +157,35 @@ $(document).ready(function(){initNavTree('classokw_1_1parser_1_1_parser.html',''
 </table>
 </div><div class="memdoc">
 
-<p>Parst einen _List&amp;lt string&amp;gt, ersetzt die Parser-Schlüsslewörter durch Werte. </p>
+<p>Parst einen ArayList&amp;lt string&amp;gt, ersetzt die Parser-Schlüsslewörter durch Werte. </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fpLsString2Parse</td><td>Liste, die geparst werden muss. </td></tr>
+    <tr><td class="paramname">fpLsString2Parse</td><td>ArayList&amp;lt string&amp;gt, die geparst werden soll. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Rückgabe</dt><dd><a class="el" href="classokw_1_1parser_1_1_parser.html">Parser</a> Schlüssel sind durch Werte ersetzt.</dd>
-<dd>
-</dd></dl>
+<dl class="section return"><dt>Rückgabe</dt><dd><a class="el" href="classokw_1_1parser_1_1_parser.html">Parser</a> Schlüssel sind durch Werte ersetzt.</dd></dl>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_parser_8java_source.html#l00031">31</a> der Datei <a class="el" href="_parser_8java_source.html">Parser.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            ArrayList&lt;String&gt; lvLsReturn =  <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">for</span> (String Value : fpLsString2Parse )</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">if</span> (Value.equals( <span class="stringliteral">&quot;&quot;</span> ))</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                  lvLsReturn.add(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                  lvLsReturn.add(<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>(Value));</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">return</span> lvLsReturn;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_parser_8java_source.html#l00032">32</a> der Datei <a class="el" href="_parser_8java_source.html">Parser.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            ArrayList&lt;String&gt; lvLsReturn =  <span class="keyword">new</span> ArrayList&lt;String&gt;();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">for</span> (String Value : fpLsString2Parse )</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">if</span> (<span class="stringliteral">&quot;&quot;</span>.equals( Value ))</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                  lvLsReturn.add(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                  lvLsReturn.add(<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>(Value));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span> lvLsReturn;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -215,32 +213,30 @@ $(document).ready(function(){initNavTree('classokw_1_1parser_1_1_parser.html',''
 </table>
 </div><div class="memdoc">
 
-<p>Parst einen _string und ersetzt die Parser-Schlüsslewörter durch Werte. </p>
+<p>Das ist die Parser-methode um einen string zu parsen und die Parser-Schlüsselwörter durch Werte zu ersetzten . </p>
 <dl class="params"><dt>Parameter</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fpsString2Parse</td><td>String, der geparst werden muss. </td></tr>
+    <tr><td class="paramname">fpsString2Parse</td><td>String, der geparst werden soll. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Rückgabe</dt><dd><a class="el" href="classokw_1_1parser_1_1_parser.html">Parser</a> Schlüssel sind durch Werte ersetzt.</dd>
-<dd>
-</dd></dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Rückgabe des geparsten Strings: <a class="el" href="classokw_1_1parser_1_1_parser.html">Parser</a> Schlüssel sind durch Werte ersetzt.</dd></dl>
 <dl class="section author"><dt>Autor</dt><dd>Zoltan Hrabovszki </dd></dl>
 <dl class="section date"><dt>Datum</dt><dd>2014-09-21 </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_parser_8java_source.html#l00065">65</a> der Datei <a class="el" href="_parser_8java_source.html">Parser.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="comment">// StringReader inputStream = new StringReader(fpsString2Parse);</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            ANTLRInputStream input = <span class="keyword">new</span> ANTLRInputStream(fpsString2Parse);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="classokw_1_1parser_1_1antlr4_1_1_o_k_w___lexer.html">OKW_Lexer</a> lexer = <span class="keyword">new</span> <a class="code" href="classokw_1_1parser_1_1antlr4_1_1_o_k_w___lexer.html">OKW_Lexer</a>(input);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            CommonTokenStream tokens = <span class="keyword">new</span> CommonTokenStream(lexer);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html">OKW_Parser</a> parser = <span class="keyword">new</span> <a class="code" href="classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html">OKW_Parser</a>(tokens);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            RootContext tree = parser.root();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="comment">//Console.WriteLine( tree.ToStringTree(parser));</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            OKW_Visitor visitor = <span class="keyword">new</span> OKW_Visitor();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">return</span> visitor.visit(tree);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<p class="definition">Definiert in Zeile <a class="el" href="_parser_8java_source.html#l00067">67</a> der Datei <a class="el" href="_parser_8java_source.html">Parser.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="comment">// StringReader inputStream = new StringReader(fpsString2Parse);</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            ANTLRInputStream input = <span class="keyword">new</span> ANTLRInputStream(fpsString2Parse);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="classokw_1_1parser_1_1antlr4_1_1_o_k_w___lexer.html">OKW_Lexer</a> lexer = <span class="keyword">new</span> <a class="code" href="classokw_1_1parser_1_1antlr4_1_1_o_k_w___lexer.html">OKW_Lexer</a>(input);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            CommonTokenStream tokens = <span class="keyword">new</span> CommonTokenStream(lexer);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <a class="code" href="classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html">OKW_Parser</a> parser = <span class="keyword">new</span> <a class="code" href="classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html">OKW_Parser</a>(tokens);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            RootContext tree = parser.root();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="comment">//Console.WriteLine( tree.ToStringTree(parser));</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            OKW_Visitor visitor = <span class="keyword">new</span> OKW_Visitor();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">return</span> visitor.visit(tree);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -251,13 +247,13 @@ $(document).ready(function(){initNavTree('classokw_1_1parser_1_1_parser.html',''
 </div><!-- doc-content -->
 <div class="ttc" id="aclassokw_1_1parser_1_1antlr4_1_1_o_k_w___parser_html"><div class="ttname"><a href="classokw_1_1parser_1_1antlr4_1_1_o_k_w___parser.html">okw.parser.antlr4.OKW_Parser</a></div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___parser_8java_source.html#l00015">OKW_Parser.java:15</a></div></div>
 <div class="ttc" id="aclassokw_1_1parser_1_1antlr4_1_1_o_k_w___lexer_html"><div class="ttname"><a href="classokw_1_1parser_1_1antlr4_1_1_o_k_w___lexer.html">okw.parser.antlr4.OKW_Lexer</a></div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___lexer_8java_source.html#l00015">OKW_Lexer.java:15</a></div></div>
-<div class="ttc" id="aclassokw_1_1parser_1_1_parser_html_a46afb901847316c744413ce473ecada3"><div class="ttname"><a href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">okw.parser.Parser.ParseMe</a></div><div class="ttdeci">static ArrayList&lt; String &gt; ParseMe(ArrayList&lt; String &gt; fpLsString2Parse)</div><div class="ttdoc">Parst einen _List&amp;lt string&amp;gt, ersetzt die Parser-Schlüsslewörter durch Werte.</div><div class="ttdef"><b>Definition:</b> <a href="_parser_8java_source.html#l00031">Parser.java:31</a></div></div>
+<div class="ttc" id="aclassokw_1_1parser_1_1_parser_html_a46afb901847316c744413ce473ecada3"><div class="ttname"><a href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">okw.parser.Parser.ParseMe</a></div><div class="ttdeci">static ArrayList&lt; String &gt; ParseMe(ArrayList&lt; String &gt; fpLsString2Parse)</div><div class="ttdoc">Parst einen ArayList&amp;lt string&amp;gt, ersetzt die Parser-Schlüsslewörter durch Werte.</div><div class="ttdef"><b>Definition:</b> <a href="_parser_8java_source.html#l00032">Parser.java:32</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>parser</b></li><li class="navelem"><a class="el" href="classokw_1_1parser_1_1_parser.html">Parser</a></li>
-    <li class="footer">Erzeugt am Fre Nov 29 2019 05:06:20 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Jan 2 2020 07:47:10 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

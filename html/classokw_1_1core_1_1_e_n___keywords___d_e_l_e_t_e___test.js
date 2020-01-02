@@ -26,6 +26,7 @@ var classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test =
     [ "tcSelectMenu_Value_MV_DELETE_EmptyString", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#a0e62a17933f21dc8c45b22def98ac192", null ],
     [ "tcSelectMenu_Value_SV_DELETE", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#aa42773460e168ad33ab2939491e59f2a", null ],
     [ "tcSequence_DELETE_OKWNotAllowedValueException", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#a8bdb8ee7cc2363fd308499910fd6f36d", null ],
+    [ "tcSequence_DELETE_OKWNotAllowedValueException_2", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#a790696750d28fb6d2a324afbf14da631", null ],
     [ "tcSetValue_DELETE", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#a1e03a02682984b5889eac13ddff1149e", null ],
     [ "tcSetValue_DELETE_MV", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#a6170eb0ea43f72093bacf34728068c66", null ],
     [ "tcTypeKey_DELETE", "classokw_1_1core_1_1_e_n___keywords___d_e_l_e_t_e___test.html#aec66647e75745c830e6347cb620b1e0b", null ],

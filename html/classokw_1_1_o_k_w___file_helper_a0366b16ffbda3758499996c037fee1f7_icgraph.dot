@@ -1,0 +1,11 @@
+digraph "okw.OKW_FileHelper.deleteFiles"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="okw.OKW_FileHelper.delete\lFiles",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Löscht alle Dateien des gegebenen Musters im gegebenen Verzeichniss Rekursive."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.core.OK.FilesDelete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a08635be4720fed863b93fa985c0b4be2",tooltip="Löscht die gegebene Datei."];
+}

@@ -1,0 +1,13 @@
+digraph "okw.core.IOKW_State.FilesDelete"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="okw.core.IOKW_State.Files\lDelete",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Löscht die gegebene Datei."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.core.Core.FilesDelete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a5987c100c94f5ac5fc14cf8c40bc8473",tooltip="Löscht die gegebene Datei."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.core.EN.FilesDelete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a6d445781569cc37ca71911848a1c5b1b",tooltip="Löscht die gegebene Datei."];
+}

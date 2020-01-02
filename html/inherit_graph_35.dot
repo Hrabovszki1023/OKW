@@ -11,5 +11,5 @@ digraph "Grafische Darstellung der Klassenhierarchie"
   Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="okw.core.NOK",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_n_o_k.html",tooltip="Klasse NOK representiert den Core Zustand NOK im Ausführungs-Modus."];
   Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="okw.core.OK",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html",tooltip="Klasse OK representiert den Core Zustand OK."];
+  Node3 [label="okw.core.OK",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html",tooltip="Klasse OK representiert den Core Zustand \"OK\"."];
 }

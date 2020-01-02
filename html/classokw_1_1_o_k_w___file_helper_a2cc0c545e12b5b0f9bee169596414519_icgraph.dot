@@ -1,0 +1,13 @@
+digraph "okw.OKW_FileHelper.isFile"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="okw.OKW_FileHelper.isFile",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Prüft, ob der gegebene PATH eine Datei ist."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.core.OK.VerifyIsDirectory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#aaee6364b88f95994db7e5fa40c405f83",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.core.OK.VerifyIsFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a85f49ae672b09450d8634f2d4cf854f7",tooltip="Prüft, ob es sich bei dem gegebenen Pfad um eine Datei handelt."];
+}

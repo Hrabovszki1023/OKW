@@ -76,8 +76,4 @@ digraph "okw.core.EN_Keywords_ANTLR_Test.tc_Select_MemorizedValue"
   Node30 [label="okw.log.Logger_Sngltn.Res\lCloseList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a9b54104f7e0b4c0a473877b19dfaed56",tooltip="Closes a hierarchical level in the results file that was opened with ResOpenList."];
   Node28 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node31 [label="okw.log.Logger_Sngltn.Res\lOpenList",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#ab4fc711bb4c754f251372ff3b14ab9c9",tooltip="Creates a new hierarchical level in the results file."];
-  Node28 -> Node32 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node32 [label="okw.OKW_Memorize_Sngltn.save",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___memorize___sngltn.html#a3ff14b0c6e596369e1437c59888a104f",tooltip="Schreibt die Felder (fields) der Klasse OKW_Memorize in eine Datei."];
-  Node32 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node32 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

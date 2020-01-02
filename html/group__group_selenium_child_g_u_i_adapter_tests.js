@@ -573,6 +573,14 @@ var group__group_selenium_child_g_u_i_adapter_tests =
       [ "tcVerifyValueWCM_Fail_OKWVerifyingFailsException", "classokw_1_1seradiolist_1_1_se_radio_list___e_n___test.html#a6ba5259678559e53ae297756b34a719f", null ],
       [ "name", "classokw_1_1seradiolist_1_1_se_radio_list___e_n___test.html#a598e31fb7fac9f6772fee6ada4a10e01", null ]
     ] ],
+    [ "SeScrollIntoView_Chrome_Test", "classokw_1_1sescrollintoview_1_1_se_scroll_into_view___chrome___test.html", null ],
+    [ "SeScrollIntoView_Firefox_Test", "classokw_1_1sescrollintoview_1_1_se_scroll_into_view___firefox___test.html", null ],
+    [ "SeScrollIntoView_HTMLUnitDriver_Test", "classokw_1_1sescrollintoview_1_1_se_scroll_into_view___h_t_m_l_unit_driver___test.html", null ],
+    [ "SeScrollIntoView_Test", "classokw_1_1sescrollintoview_1_1_se_scroll_into_view___test.html", [
+      [ "tcSetValue", "classokw_1_1sescrollintoview_1_1_se_scroll_into_view___test.html#a26f4260aeef233bf5e30efea510e4d4d", null ],
+      [ "myMem", "classokw_1_1sescrollintoview_1_1_se_scroll_into_view___test.html#a8189dfaf704364ccf08c034074495027", null ],
+      [ "name", "classokw_1_1sescrollintoview_1_1_se_scroll_into_view___test.html#a0627a5549bdbd1ae0ca599ff0b147beb", null ]
+    ] ],
     [ "SeSelect_EN_Chrome_Test", "classokw_1_1seselect_1_1_se_select___e_n___chrome___test.html", null ],
     [ "SeSelect_EN_Firefox_Test", "classokw_1_1seselect_1_1_se_select___e_n___firefox___test.html", null ],
     [ "SeSelect_EN_HTMLUnitDriver_Test", "classokw_1_1seselect_1_1_se_select___e_n___h_t_m_l_unit_driver___test.html", null ],

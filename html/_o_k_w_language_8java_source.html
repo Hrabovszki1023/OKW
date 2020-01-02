@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 456, Datum: 11.29.2019 05:04:41</span>
+   &#160;<span id="projectnumber">Build_ID: 457, Datum: 01.02.2020 07:45:48</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -144,9 +144,10 @@ $(document).ready(function(){initNavTree('_o_k_w_language_8java_source.html','')
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">import</span> okw.exceptions.OKWLanguageNotImplemntedException;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w_language.html">   48</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classokw_1_1_o_k_w_language.html">OKWLanguage</a> {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="classokw_1_1_o_k_w_language.html">OKWLanguage</a>      Instance;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w_language.html">   47</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classokw_1_1_o_k_w_language.html">OKWLanguage</a> {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="classokw_1_1_o_k_w_language.html">OKWLanguage</a>      Instance;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">protected</span> <span class="keyword">static</span> <a class="code" href="classokw_1_1_o_k_w___properties.html">OKW_Properties</a> PROP = <a class="code" href="classokw_1_1_o_k_w___properties.html">OKW_Properties</a>.<a class="code" href="classokw_1_1_o_k_w___properties.html#acb03fc1059f1b6fa86d254bb9e7af550">getInstance</a>();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="classokw_1_1_o_k_w_language.html">OKWLanguage</a> getInstance()</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
@@ -171,34 +172,46 @@ $(document).ready(function(){initNavTree('_o_k_w_language_8java_source.html','')
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="classokw_1_1_o_k_w_language.html#aa9ff2cfa45509e63b006a2d9ea34ae33">cvLsLanguagesImplemented</a>.add(<span class="stringliteral">&quot;en&quot;</span>);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classokw_1_1_o_k_w_language.html#aa9ff2cfa45509e63b006a2d9ea34ae33">cvLsLanguagesImplemented</a>.add(<span class="stringliteral">&quot;de&quot;</span>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w_language.html#a5a88b904f37eaaa24a770a2a1321760e">   82</a></span>&#160;    <span class="keyword">private</span> String <a class="code" href="classokw_1_1_o_k_w_language.html#a5a88b904f37eaaa24a770a2a1321760e">Language</a> = <span class="stringliteral">&quot;en&quot;</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">public</span> String getLanguage() {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span> this.Language.toLowerCase();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> setLanguage(String value) {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">if</span> (-1 &lt; <a class="code" href="classokw_1_1_o_k_w_language.html#aa9ff2cfa45509e63b006a2d9ea34ae33">cvLsLanguagesImplemented</a>.indexOf(value.toLowerCase())) {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            this.Language = value.toLowerCase();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> OKWLanguageNotImplemntedException();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        PROP.setProperty( <span class="stringliteral">&quot;LANGUAGE&quot;</span>, this.<a class="code" href="classokw_1_1_o_k_w_language.html#a5a88b904f37eaaa24a770a2a1321760e">Language</a> );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w_language.html#a5a88b904f37eaaa24a770a2a1321760e">   84</a></span>&#160;    <span class="keyword">private</span> String <a class="code" href="classokw_1_1_o_k_w_language.html#a5a88b904f37eaaa24a770a2a1321760e">Language</a> = <span class="stringliteral">&quot;en&quot;</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">public</span> String getLanguage()</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> this.Language.toLowerCase();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classokw_1_1_o_k_w_language.html#aa8b063236cb149ca03696df56b256dfc">  106</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classokw_1_1_o_k_w_language.html#aa8b063236cb149ca03696df56b256dfc">setLanguage</a>( String value )</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span> ( -1 &lt; <a class="code" href="classokw_1_1_o_k_w_language.html#aa9ff2cfa45509e63b006a2d9ea34ae33">cvLsLanguagesImplemented</a>.indexOf( value.toLowerCase() ) )</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            this.Language = value.toLowerCase();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            PROP.setProperty( <span class="stringliteral">&quot;LANGUAGE&quot;</span>, this.Language );</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="classokw_1_1exceptions_1_1_o_k_w_language_not_implemnted_exception.html">OKWLanguageNotImplemntedException</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassokw_1_1_o_k_w___properties_html"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html">okw.OKW_Properties</a></div><div class="ttdoc">Reihenfolge der Resourcen-&quot;Beladung&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00046">OKW_Properties.java:46</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w_language_html_aa9ff2cfa45509e63b006a2d9ea34ae33"><div class="ttname"><a href="classokw_1_1_o_k_w_language.html#aa9ff2cfa45509e63b006a2d9ea34ae33">okw.OKWLanguage.cvLsLanguagesImplemented</a></div><div class="ttdeci">static ArrayList&lt; String &gt; cvLsLanguagesImplemented</div><div class="ttdoc">Enthält die Liste der implemntierten Sprachen.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_language_8java_source.html#l00071">OKWLanguage.java:71</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___ini___sngltn_html"><div class="ttname"><a href="classokw_1_1_o_k_w___ini___sngltn.html">okw.OKW_Ini_Sngltn</a></div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___ini___sngltn_8java_source.html#l00199">OKW_Ini_Sngltn.java:199</a></div></div>
-<div class="ttc" id="aclassokw_1_1_o_k_w_language_html"><div class="ttname"><a href="classokw_1_1_o_k_w_language.html">okw.OKWLanguage</a></div><div class="ttdoc">http://de.wikipedia.org/wiki/ISO-3166-1-Kodierliste</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_language_8java_source.html#l00048">OKWLanguage.java:48</a></div></div>
-<div class="ttc" id="aclassokw_1_1_o_k_w_language_html_a5a88b904f37eaaa24a770a2a1321760e"><div class="ttname"><a href="classokw_1_1_o_k_w_language.html#a5a88b904f37eaaa24a770a2a1321760e">okw.OKWLanguage.Language</a></div><div class="ttdeci">String Language</div><div class="ttdoc">Gets or sets a string property.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_language_8java_source.html#l00082">OKWLanguage.java:82</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w___properties_html_acb03fc1059f1b6fa86d254bb9e7af550"><div class="ttname"><a href="classokw_1_1_o_k_w___properties.html#acb03fc1059f1b6fa86d254bb9e7af550">okw.OKW_Properties.getInstance</a></div><div class="ttdeci">static OKW_Properties getInstance()</div><div class="ttdoc">Holt die einzige Instanz dieser Klasse.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___properties_8java_source.html#l00116">OKW_Properties.java:116</a></div></div>
+<div class="ttc" id="aclassokw_1_1exceptions_1_1_o_k_w_language_not_implemnted_exception_html"><div class="ttname"><a href="classokw_1_1exceptions_1_1_o_k_w_language_not_implemnted_exception.html">okw.exceptions.OKWLanguageNotImplemntedException</a></div><div class="ttdoc">Diese Ausnahme wird ausgelöst, wenn eine nicht implementierte Sprache ausgewählt worden ist.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_language_not_implemnted_exception_8java_source.html#l00056">OKWLanguageNotImplemntedException.java:56</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w_language_html_aa8b063236cb149ca03696df56b256dfc"><div class="ttname"><a href="classokw_1_1_o_k_w_language.html#aa8b063236cb149ca03696df56b256dfc">okw.OKWLanguage.setLanguage</a></div><div class="ttdeci">void setLanguage(String value)</div><div class="ttdoc">Wählt die sprache von OKW, default Sprache ist &quot;en&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_language_8java_source.html#l00106">OKWLanguage.java:106</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w_language_html"><div class="ttname"><a href="classokw_1_1_o_k_w_language.html">okw.OKWLanguage</a></div><div class="ttdoc">http://de.wikipedia.org/wiki/ISO-3166-1-Kodierliste</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_language_8java_source.html#l00047">OKWLanguage.java:47</a></div></div>
+<div class="ttc" id="aclassokw_1_1_o_k_w_language_html_a5a88b904f37eaaa24a770a2a1321760e"><div class="ttname"><a href="classokw_1_1_o_k_w_language.html#a5a88b904f37eaaa24a770a2a1321760e">okw.OKWLanguage.Language</a></div><div class="ttdeci">String Language</div><div class="ttdoc">Gets or sets a string property.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w_language_8java_source.html#l00084">OKWLanguage.java:84</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4270bfced15e0e73154b13468c7c9ad9.html">core</a></li><li class="navelem"><a class="el" href="dir_90fd98a0ba30abf7a6068a44995d2d6b.html">src</a></li><li class="navelem"><a class="el" href="dir_3fdb55be625affb78b03858da3433959.html">main</a></li><li class="navelem"><a class="el" href="dir_6d0f1805523af42a675fba128cf43f17.html">java</a></li><li class="navelem"><a class="el" href="dir_4033e6e92f3135934576652cf36bd385.html">okw</a></li><li class="navelem"><b>OKWLanguage.java</b></li>
-    <li class="footer">Erzeugt am Fre Nov 29 2019 05:06:13 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Jan 2 2020 07:47:04 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

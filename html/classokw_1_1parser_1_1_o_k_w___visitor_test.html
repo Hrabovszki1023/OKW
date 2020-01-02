@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="OKW_200x105.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenKeyWord
-   &#160;<span id="projectnumber">Build_ID: 456, Datum: 11.29.2019 05:04:41</span>
+   &#160;<span id="projectnumber">Build_ID: 457, Datum: 01.02.2020 07:45:48</span>
    </div>
    <div id="projectbrief">Dont repeat yourself. - Do it once and only once!</div>
   </td>
@@ -213,7 +213,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                fail(e.getMessage());</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            }</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            </div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            ArrayList&lt;String&gt; LsActual = Parser.ParseMe(LsInput);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            ArrayList&lt;String&gt; LsActual = <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>(LsInput);</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            String sExpected_1 = <span class="stringliteral">&quot;PATHXML: &gt;&gt;&quot;</span> + myOKW_Ini.OKW_Enviroment.getFolder_XML() + <span class="stringliteral">&quot;&lt;&lt;&quot;</span>;</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            String sExpected_2 = <span class="stringliteral">&quot;Wert des Schlüssels.&quot;</span>;</div>
@@ -266,7 +266,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      LsInput.add(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                  </div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      ArrayList&lt;String&gt; LsActual = Parser.ParseMe(LsInput);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      ArrayList&lt;String&gt; LsActual = <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>(LsInput);</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      String sExpected_1 = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
@@ -313,7 +313,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            LsInput.add(<span class="stringliteral">&quot;PATHXML: &gt;&gt;${Folder_XML}&lt;&lt;&quot;</span>);</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                        </div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            ArrayList&lt;String&gt; LsActual = Parser.ParseMe(LsInput);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            ArrayList&lt;String&gt; LsActual = <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>(LsInput);</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            String sExpected_1 = <span class="stringliteral">&quot;PATHXML: &gt;&gt;&quot;</span> + myOKW_Ini.OKW_Enviroment.getFolder_XML() + <span class="stringliteral">&quot;&lt;&lt;&quot;</span>;</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
@@ -356,7 +356,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 <div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="comment">// Environment.SetEnvironmentVariable(&quot;TestEnvVar&quot;, &quot;TestWert&quot;);</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            String sActual = Parser.ParseMe(<span class="stringliteral">&quot;${TestEnvVar}&quot;</span>);            </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            String sActual = <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>(<span class="stringliteral">&quot;${TestEnvVar}&quot;</span>);            </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            String sExpected = <span class="stringliteral">&quot;TestWert&quot;</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            assertEquals(sExpected, sActual);</div>
@@ -395,7 +395,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 
 <p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___visitor_test_8java_source.html#l00259">259</a> der Datei <a class="el" href="_o_k_w___visitor_test_8java_source.html">OKW_VisitorTest.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        {</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            String sActual = Parser.ParseMe(<span class="stringliteral">&quot;File_okwkeymaps_xml: &gt;&gt;${File_OKW_Keymaps_xml}&lt;&lt;&quot;</span>);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            String sActual = <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>(<span class="stringliteral">&quot;File_okwkeymaps_xml: &gt;&gt;${File_OKW_Keymaps_xml}&lt;&lt;&quot;</span>);</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="comment">//System.Console.WriteLine(sActual);</span></div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            String sExpected = <span class="stringliteral">&quot;File_okwkeymaps_xml: &gt;&gt;&quot;</span> + myOKW_Ini.OKW_Enviroment.getFile_OKW_Keymaps_xml() + <span class="stringliteral">&quot;&lt;&lt;&quot;</span>;</div>
@@ -449,7 +449,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            {</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                fail(e.getMessage());</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            String sActual = Parser.ParseMe(<span class="stringliteral">&quot;${Schluessel}&quot;</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            String sActual = <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>(<span class="stringliteral">&quot;${Schluessel}&quot;</span>);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            String sExpected = <span class="stringliteral">&quot;Wert des Schlüssels.&quot;</span>;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            Log.<a class="code" href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c">LogPrint</a>( <span class="stringliteral">&quot;  Aktual Value: &quot;</span> + sActual);</div>
@@ -496,8 +496,8 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___memorize___sngltn.html">OKW_Memorize_Sngltn</a>.<a class="code" href="classokw_1_1_o_k_w___memorize___sngltn.html#a108813fb1dfa22043cdf1156513a57d3">getInstance</a>().<a class="code" href="classokw_1_1_o_k_w___memorize___sngltn.html#a77acdbf6b56b381439a16f96b54e6fbd">set</a>(<span class="stringliteral">&quot;Schluessel_1&quot;</span>, <span class="stringliteral">&quot;Wert des Schlüssels 1.&quot;</span>);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___memorize___sngltn.html">OKW_Memorize_Sngltn</a>.<a class="code" href="classokw_1_1_o_k_w___memorize___sngltn.html#a108813fb1dfa22043cdf1156513a57d3">getInstance</a>().<a class="code" href="classokw_1_1_o_k_w___memorize___sngltn.html#a77acdbf6b56b381439a16f96b54e6fbd">set</a>(<span class="stringliteral">&quot;Schluessel_2&quot;</span>, <span class="stringliteral">&quot;Wert des Schlüssels 2.&quot;</span>);</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;             </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            assertEquals( <span class="stringliteral">&quot;Wert des Schlüssels 1.&quot;</span>, Parser.ParseMe( <span class="stringliteral">&quot;${Schluessel_1}&quot;</span> ) );</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            assertEquals( <span class="stringliteral">&quot;Wert des Schlüssels 2.&quot;</span>, Parser.ParseMe( <span class="stringliteral">&quot;${Schluessel_2}&quot;</span> ) );</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            assertEquals( <span class="stringliteral">&quot;Wert des Schlüssels 1.&quot;</span>, <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>( <span class="stringliteral">&quot;${Schluessel_1}&quot;</span> ) );</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            assertEquals( <span class="stringliteral">&quot;Wert des Schlüssels 2.&quot;</span>, <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>( <span class="stringliteral">&quot;${Schluessel_2}&quot;</span> ) );</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div>
 </div><!-- fragment --><div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
@@ -537,8 +537,8 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___memorize___sngltn.html">OKW_Memorize_Sngltn</a>.<a class="code" href="classokw_1_1_o_k_w___memorize___sngltn.html#a108813fb1dfa22043cdf1156513a57d3">getInstance</a>().<a class="code" href="classokw_1_1_o_k_w___memorize___sngltn.html#a77acdbf6b56b381439a16f96b54e6fbd">set</a>(<span class="stringliteral">&quot;Schluessel.1&quot;</span>, <span class="stringliteral">&quot;Wert des Schlüssels 1.&quot;</span>);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___memorize___sngltn.html">OKW_Memorize_Sngltn</a>.<a class="code" href="classokw_1_1_o_k_w___memorize___sngltn.html#a108813fb1dfa22043cdf1156513a57d3">getInstance</a>().<a class="code" href="classokw_1_1_o_k_w___memorize___sngltn.html#a77acdbf6b56b381439a16f96b54e6fbd">set</a>(<span class="stringliteral">&quot;Schluessel.2&quot;</span>, <span class="stringliteral">&quot;Wert des Schlüssels 2.&quot;</span>);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;             </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            assertEquals( <span class="stringliteral">&quot;Wert des Schlüssels 1.&quot;</span>, Parser.ParseMe( <span class="stringliteral">&quot;${Schluessel.1}&quot;</span> ) );</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            assertEquals( <span class="stringliteral">&quot;Wert des Schlüssels 2.&quot;</span>, Parser.ParseMe( <span class="stringliteral">&quot;${Schluessel.2}&quot;</span> ) );</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            assertEquals( <span class="stringliteral">&quot;Wert des Schlüssels 1.&quot;</span>, <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>( <span class="stringliteral">&quot;${Schluessel.1}&quot;</span> ) );</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            assertEquals( <span class="stringliteral">&quot;Wert des Schlüssels 2.&quot;</span>, <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>( <span class="stringliteral">&quot;${Schluessel.2}&quot;</span> ) );</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
 </div><!-- fragment --><div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
@@ -573,7 +573,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 <p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___visitor_test_8java_source.html#l00151">151</a> der Datei <a class="el" href="_o_k_w___visitor_test_8java_source.html">OKW_VisitorTest.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        {</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            String sActual = Parser.ParseMe(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            String sActual = <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>(<span class="stringliteral">&quot; &quot;</span>);</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            </div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            String sExpected = <span class="stringliteral">&quot; &quot;</span>;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
@@ -615,7 +615,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 <div class="fragment"><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        {</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="comment">//Environment.SetEnvironmentVariable(&quot;TestEnvVar&quot;, &quot;TestWert&quot;);</span></div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            String sActual = Parser.ParseMe(<span class="stringliteral">&quot;Text vorher ${TestEnvVar} Text danach.&quot;</span>);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            String sActual = <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>(<span class="stringliteral">&quot;Text vorher ${TestEnvVar} Text danach.&quot;</span>);</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            String sExpected = <span class="stringliteral">&quot;Text vorher TestWert Text danach.&quot;</span>;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            </div>
@@ -660,7 +660,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 
 <p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___visitor_test_8java_source.html#l00239">239</a> der Datei <a class="el" href="_o_k_w___visitor_test_8java_source.html">OKW_VisitorTest.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            String sActual = Parser.ParseMe(<span class="stringliteral">&quot;File_OKWMemorize_xml: &gt;&gt;${File_OKW_Memorize_xml}&lt;&lt;&quot;</span>);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            String sActual = <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>(<span class="stringliteral">&quot;File_OKWMemorize_xml: &gt;&gt;${File_OKW_Memorize_xml}&lt;&lt;&quot;</span>);</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="comment">//System.Console.WriteLine(sActual);</span></div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            String sExpected = <span class="stringliteral">&quot;File_OKWMemorize_xml: &gt;&gt;&quot;</span> + myOKW_Ini.OKW_Enviroment.getFile_OKW_Memorize_xml() + <span class="stringliteral">&quot;&lt;&lt;&quot;</span>;</div>
@@ -705,7 +705,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 <div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        {</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <a class="code" href="classokw_1_1_o_k_w___ini___sngltn.html">OKW_Ini_Sngltn</a> myOKW_Ini = <a class="code" href="classokw_1_1_o_k_w___ini___sngltn.html">OKW_Ini_Sngltn</a>.getInstance();</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            String sActual = Parser.ParseMe(<span class="stringliteral">&quot;PATHXML: &gt;&gt;${Folder_XML}&lt;&lt;&quot;</span>);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            String sActual = <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>(<span class="stringliteral">&quot;PATHXML: &gt;&gt;${Folder_XML}&lt;&lt;&quot;</span>);</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            String sExpected = <span class="stringliteral">&quot;PATHXML: &gt;&gt;&quot;</span> + myOKW_Ini.OKW_Enviroment.getFolder_XML() + <span class="stringliteral">&quot;&lt;&lt;&quot;</span>;</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            </div>
@@ -748,7 +748,7 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 
 <p class="definition">Definiert in Zeile <a class="el" href="_o_k_w___visitor_test_8java_source.html#l00218">218</a> der Datei <a class="el" href="_o_k_w___visitor_test_8java_source.html">OKW_VisitorTest.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            String sActual = Parser.ParseMe(<span class="stringliteral">&quot;Folder LogMessages: &gt;&gt;${Folder_LogMessages}&lt;&lt;&quot;</span>);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            String sActual = <a class="code" href="classokw_1_1parser_1_1_parser.html">Parser</a>.<a class="code" href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">ParseMe</a>(<span class="stringliteral">&quot;Folder LogMessages: &gt;&gt;${Folder_LogMessages}&lt;&lt;&quot;</span>);</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="comment">//System.Console.WriteLine(sActual);</span></div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            String sExpected = <span class="stringliteral">&quot;Folder LogMessages: &gt;&gt;&quot;</span> + myOKW_Ini.OKW_Enviroment.getFolder_LogMessages() + <span class="stringliteral">&quot;&lt;&lt;&quot;</span>;</div>
@@ -777,16 +777,18 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>myOKW_Xml</b> = &qu
 </div><!-- doc-content -->
 <div class="ttc" id="aclassokw_1_1_o_k_w___ini___sngltn_html"><div class="ttname"><a href="classokw_1_1_o_k_w___ini___sngltn.html">okw.OKW_Ini_Sngltn</a></div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___ini___sngltn_8java_source.html#l00199">OKW_Ini_Sngltn.java:199</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___memorize___sngltn_html"><div class="ttname"><a href="classokw_1_1_o_k_w___memorize___sngltn.html">okw.OKW_Memorize_Sngltn</a></div><div class="ttdoc">OKW_Memorize ist die Speicher-Klasse hinter den Merke*-Schlüsselwörter.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___memorize___sngltn_8java_source.html#l00073">OKW_Memorize_Sngltn.java:73</a></div></div>
+<div class="ttc" id="aclassokw_1_1parser_1_1_parser_html"><div class="ttname"><a href="classokw_1_1parser_1_1_parser.html">okw.parser.Parser</a></div><div class="ttdef"><b>Definition:</b> <a href="_parser_8java_source.html#l00014">Parser.java:14</a></div></div>
 <div class="ttc" id="aclassokw_1_1log_1_1_logger___sngltn_html_a8ebceaddd6cc6963ddb8e08c72ea808c"><div class="ttname"><a href="classokw_1_1log_1_1_logger___sngltn.html#a8ebceaddd6cc6963ddb8e08c72ea808c">okw.log.Logger_Sngltn.LogPrint</a></div><div class="ttdeci">void LogPrint(String fps_Message)</div><div class="ttdoc">LogPrint Function: Prints the values of expressions to the results file.</div><div class="ttdef"><b>Definition:</b> <a href="_logger___sngltn_8java_source.html#l00487">Logger_Sngltn.java:487</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___memorize___sngltn_html_a77acdbf6b56b381439a16f96b54e6fbd"><div class="ttname"><a href="classokw_1_1_o_k_w___memorize___sngltn.html#a77acdbf6b56b381439a16f96b54e6fbd">okw.OKW_Memorize_Sngltn.set</a></div><div class="ttdeci">void set(String fpsKey, String fpsValue)</div><div class="ttdoc">Setzt/Merkt sich das MemKey/Value-Paar.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___memorize___sngltn_8java_source.html#l00452">OKW_Memorize_Sngltn.java:452</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___memorize___sngltn_html_a108813fb1dfa22043cdf1156513a57d3"><div class="ttname"><a href="classokw_1_1_o_k_w___memorize___sngltn.html#a108813fb1dfa22043cdf1156513a57d3">okw.OKW_Memorize_Sngltn.getInstance</a></div><div class="ttdeci">static OKW_Memorize_Sngltn getInstance()</div><div class="ttdoc">Diese Methode gibt die einzige Instanz dieser Klasse zurück.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___memorize___sngltn_8java_source.html#l00198">OKW_Memorize_Sngltn.java:198</a></div></div>
 <div class="ttc" id="aclassokw_1_1_o_k_w___memorize___sngltn_html_a874ab899dcd005dbc572965c695ce346"><div class="ttname"><a href="classokw_1_1_o_k_w___memorize___sngltn.html#a874ab899dcd005dbc572965c695ce346">okw.OKW_Memorize_Sngltn.reset</a></div><div class="ttdeci">static void reset()</div><div class="ttdoc">Methode setzt diese Klasse zurück.</div><div class="ttdef"><b>Definition:</b> <a href="_o_k_w___memorize___sngltn_8java_source.html#l00228">OKW_Memorize_Sngltn.java:228</a></div></div>
+<div class="ttc" id="aclassokw_1_1parser_1_1_parser_html_a46afb901847316c744413ce473ecada3"><div class="ttname"><a href="classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3">okw.parser.Parser.ParseMe</a></div><div class="ttdeci">static ArrayList&lt; String &gt; ParseMe(ArrayList&lt; String &gt; fpLsString2Parse)</div><div class="ttdoc">Parst einen ArayList&amp;lt string&amp;gt, ersetzt die Parser-Schlüsslewörter durch Werte.</div><div class="ttdef"><b>Definition:</b> <a href="_parser_8java_source.html#l00032">Parser.java:32</a></div></div>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>okw</b></li><li class="navelem"><b>parser</b></li><li class="navelem"><a class="el" href="classokw_1_1parser_1_1_o_k_w___visitor_test.html">OKW_VisitorTest</a></li>
-    <li class="footer">Erzeugt am Fre Nov 29 2019 05:06:20 für OpenKeyWord von
+    <li class="footer">Erzeugt am Don Jan 2 2020 07:47:10 für OpenKeyWord von
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
   </ul>

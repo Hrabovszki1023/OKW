@@ -5,9 +5,13 @@ digraph "okw.core.OK.handleException"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="okw.core.OK.handleException",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Methode zur Zentrale Exception-Auswertung."];
+  Node1 [label="okw.core.OK.handleException",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="In dieser Methode werden zentral die Exceptions ausgewertet."];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="okw.OKW_Properties.getProperty2\lBoolean",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#aa57f3f3356c91b5ebc60d493ce5920d5",tooltip="Ermittelt den aktuellen Wert des Propertys gegeben mit dem Schlüssel fpsKey."];
-  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="okw.core.Core.setNOK\l_Reason",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a284fb362631a91378c2c113bc07f4c39",tooltip=" "];
+  Node2 [label="okw.OKW_Properties.getProperty2\lBoolean",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#aa57f3f3356c91b5ebc60d493ce5920d5",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="okw.OKW_Properties.getProperty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#a2ba33a97851016137b2f7658e83af82e",tooltip="Ermittelt den aktuellen Wert des Propertys gegeben mit dem Schlüssel fpsKey."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="okw.parser.Parser.ParseMe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3",tooltip="Parst einen ArayList&lt string&gt, ersetzt die Parser-Schlüsslewörter durch Werte."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.core.Core.setNOK\l_Reason",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#a284fb362631a91378c2c113bc07f4c39",tooltip=" "];
 }

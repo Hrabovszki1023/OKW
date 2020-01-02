@@ -10,4 +10,8 @@ digraph "okw.OKW_GetJavaClass.findClassGuiAdapter"
   Node2 [label="okw.OKW_GetJavaClass.find\lClass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___get_java_class.html#a636c99d7c291cd355d17be1e0a197229",tooltip="Methode sucht die Klasse fpsClassName im Namensraum fpsNameSpace."];
   Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="okw.OKW_Properties.getInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#acb03fc1059f1b6fa86d254bb9e7af550",tooltip="Holt die einzige Instanz dieser Klasse."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="okw.OKW_Properties.getProperty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___properties.html#a2ba33a97851016137b2f7658e83af82e",tooltip="Ermittelt den aktuellen Wert des Propertys gegeben mit dem Schlüssel fpsKey."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="okw.parser.Parser.ParseMe",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1parser_1_1_parser.html#a46afb901847316c744413ce473ecada3",tooltip="Parst einen ArayList&lt string&gt, ersetzt die Parser-Schlüsslewörter durch Werte."];
 }

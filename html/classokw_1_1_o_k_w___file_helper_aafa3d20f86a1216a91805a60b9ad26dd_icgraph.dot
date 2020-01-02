@@ -1,0 +1,11 @@
+digraph "okw.OKW_FileHelper.DirectoryCreate"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="okw.OKW_FileHelper.Directory\lCreate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Erstellt ein Verzeichnis, einschließlich aller notwendigen, aber nicht vorhandenen übergeordneten Ver..."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="okw.core.OK.DirectoryCreate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a122babae6454659d8dcdcd2cd5bb5f90",tooltip="Legt das gegebene Verzeichniss an."];
+}

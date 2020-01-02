@@ -161,6 +161,7 @@ var annotated_dup =
             [ "frmInputTypePassword", "classokw_1_1gui_1_1frames_1_1setextfield_1_1frm_input_type_password.html", "classokw_1_1gui_1_1frames_1_1setextfield_1_1frm_input_type_password" ],
             [ "frmInputTypeText", "classokw_1_1gui_1_1frames_1_1setextfield_1_1frm_input_type_text.html", "classokw_1_1gui_1_1frames_1_1setextfield_1_1frm_input_type_text" ],
             [ "frmInputTypeTextDisabled", "classokw_1_1gui_1_1frames_1_1setextfield_1_1frm_input_type_text_disabled.html", "classokw_1_1gui_1_1frames_1_1setextfield_1_1frm_input_type_text_disabled" ],
+            [ "frmInputTypeTextScrollIntoView", "classokw_1_1gui_1_1frames_1_1setextfield_1_1frm_input_type_text_scroll_into_view.html", "classokw_1_1gui_1_1frames_1_1setextfield_1_1frm_input_type_text_scroll_into_view" ],
             [ "frmSeInputTextReadonly", "classokw_1_1gui_1_1frames_1_1setextfield_1_1frm_se_input_text_readonly.html", "classokw_1_1gui_1_1frames_1_1setextfield_1_1frm_se_input_text_readonly" ]
           ] ],
           [ "frmCurrentObjectWindow", "classokw_1_1gui_1_1frames_1_1frm_current_object_window.html", "classokw_1_1gui_1_1frames_1_1frm_current_object_window" ],
@@ -307,6 +308,12 @@ var annotated_dup =
         [ "SeRadioList_EN_Firefox_Test", "classokw_1_1seradiolist_1_1_se_radio_list___e_n___firefox___test.html", "classokw_1_1seradiolist_1_1_se_radio_list___e_n___firefox___test" ],
         [ "SeRadioList_EN_HTMLUnitDriver_Test", "classokw_1_1seradiolist_1_1_se_radio_list___e_n___h_t_m_l_unit_driver___test.html", null ],
         [ "SeRadioList_EN_Test", "classokw_1_1seradiolist_1_1_se_radio_list___e_n___test.html", "classokw_1_1seradiolist_1_1_se_radio_list___e_n___test" ]
+      ] ],
+      [ "sescrollintoview", null, [
+        [ "SeScrollIntoView_Chrome_Test", "classokw_1_1sescrollintoview_1_1_se_scroll_into_view___chrome___test.html", null ],
+        [ "SeScrollIntoView_Firefox_Test", "classokw_1_1sescrollintoview_1_1_se_scroll_into_view___firefox___test.html", null ],
+        [ "SeScrollIntoView_HTMLUnitDriver_Test", "classokw_1_1sescrollintoview_1_1_se_scroll_into_view___h_t_m_l_unit_driver___test.html", null ],
+        [ "SeScrollIntoView_Test", "classokw_1_1sescrollintoview_1_1_se_scroll_into_view___test.html", "classokw_1_1sescrollintoview_1_1_se_scroll_into_view___test" ]
       ] ],
       [ "seselect", null, [
         [ "SeSelect_EN_Chrome_Test", "classokw_1_1seselect_1_1_se_select___e_n___chrome___test.html", null ],

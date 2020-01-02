@@ -1,11 +1,11 @@
-digraph "okw.core.EN_FileKeywords_Test.FileDelete_EMPTY"
+digraph "okw.core.EN_FileKeywords_Test.VerifyFileExists_OKWNotAllowedValueException"
 {
  // INTERACTIVE_SVG=YES
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="okw.core.EN_FileKeywords\l_Test.FileDelete_EMPTY",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Prüft das Schlüsselwort File."];
+  Node1 [label="okw.core.EN_FileKeywords\l_Test.VerifyFileExists\l_OKWNotAllowedValueException",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Prüft das Schlüsselwort EN.VerifyFileExists(String), ob bei \"${IGNORE}\" nichts passiert."];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="okw.core.EN.BeginTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#aef613b0a3e6bb8a9623984db145cae69",tooltip="Kennzeichnet den Anfang eines Testfalls."];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
@@ -28,30 +28,20 @@ digraph "okw.core.EN_FileKeywords_Test.FileDelete_EMPTY"
   Node11 [label="okw.log.Logger_Sngltn.Log\lTestcaseEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#ae13bdf71166d737786872ee9bcfaa15e",tooltip="LogTestcaseEnd:"];
   Node8 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node12 [label="okw.core.EN.FileDelete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#a6568fd28baaa73c4f39351e84dff86a4",tooltip="Löscht die gegebene Datei."];
-  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node13 [label="okw.core.Core.FileDelete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#aee3fa3a377a0b7a3487a1a3bf8a680a1",tooltip="Löscht die gegebene Datei."];
-  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node14 [label="okw.core.IOKW_State.File\lDelete",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a254dfe876591f4cfeba173149e131ee4",tooltip="Löscht die gegebene Datei."];
-  Node13 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node15 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
-  Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node16 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
-  Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node17 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Liest den TextContent eines Tag."];
-  Node13 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node18 [label="okw.log.Logger_Sngltn.Log\lKeyWordEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#aa7d2da98631d21644da70c187f03155e",tooltip="LogKeyWordEnd:"];
-  Node13 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node19 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node12 [label="okw.core.EN.VerifyFileExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#ac343826e3b37f19e531fc70d98018833",tooltip="Prüft, ob die gegebene Datei existiert."];
   Node12 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node20 [label="okw.core.EN.VerifyFileExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_e_n.html#ac343826e3b37f19e531fc70d98018833",tooltip="Prüft, ob die gegebene Datei existiert."];
-  Node20 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node20 -> Node21 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node21 [label="okw.core.Core.VerifyFile\lExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#aac1e5e5b59dc780f5fd75bd215b13dff",tooltip="Prüft, ob die gegebene Datei existiert."];
-  Node21 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node21 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node21 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node21 -> Node22 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node22 [label="okw.core.IOKW_State.Verify\lFileExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a210b00e532545680e8859179c41e1888",tooltip="Prüft, ob die gegebene Datei existiert."];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="okw.core.Core.VerifyFile\lExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_core.html#aac1e5e5b59dc780f5fd75bd215b13dff",tooltip="Prüft, ob die gegebene Datei existiert."];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="okw.LogMessenger.GetMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#af225d1f037d47b3b085175c09d78bdd2",tooltip="Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter."];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="okw.LogMessenger.ReadMessage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_log_messenger.html#a530cd6ab82ec82a04206a2e976ec06e3",tooltip="Interne Kernfunktion holt die Log-Meldung mit Platzhaltern aus der XML-Datei."];
+  Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="okw.OKW_XmlReader.getText\lContentSingleValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___xml_reader.html#ab920b5335a2e1429c14cc5f8e79f39eb",tooltip="Liest den TextContent eines Tag."];
+  Node13 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="okw.log.Logger_Sngltn.Log\lKeyWordEnd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#aa7d2da98631d21644da70c187f03155e",tooltip="LogKeyWordEnd:"];
+  Node13 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="okw.log.Logger_Sngltn.Log\lKeyWordStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1log_1_1_logger___sngltn.html#a70ec25e200e00ecefc544e8fd371d2ef",tooltip="Ausgabe eines Schlüsselwortes."];
+  Node13 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="okw.core.IOKW_State.Verify\lFileExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interfaceokw_1_1core_1_1_i_o_k_w___state.html#a210b00e532545680e8859179c41e1888",tooltip="Prüft, ob die gegebene Datei existiert."];
 }

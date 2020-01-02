@@ -4,7 +4,7 @@ digraph "okw.core.EN_FileKeywords_Test"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="{okw.core.EN_FileKeywords_Test\n||+ setUp()\l+ tearDown()\l+ FileDelete()\l+ FileDelete_EMPTY()\l+ setUpBeforeClass()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="{okw.core.EN_FileKeywords_Test\n||+ FileDelete()\l+ FileDelete_Wildcard()\l+ FileDelete_WildCard()\l+ FileDelete_Not_Exists()\l+ FileDelete_IGNORE()\l+ VerifyFileExists_OKWNotAllowed\lValueException()\l+ VerifyIsFile()\l+ VerifyIsFile_No()\l+ VerifyIsFile_OKWVerifying\lFailsException()\l+ VerifyIsFile_OKWFileDoes\lNotExistsException()\l+ DirectoryCreate()\l+ setUpBeforeClass()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +name" ,arrowhead="odiamond",fontname="Helvetica"];
   Node2 [label="{TestName\n||}",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" ~myClipBoard" ,arrowhead="odiamond",fontname="Helvetica"];

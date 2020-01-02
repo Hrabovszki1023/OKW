@@ -22,6 +22,4 @@ digraph "okw.log.Logger_Sngltn.ResCloseListDebug"
   Node8 [label="okw.FrameObjectDictionary\l_Sngltn.init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_frame_object_dictionary___sngltn.html#a905bac544e5962ae15dfe1c1c50f2467",tooltip="Methode initialisiert diese Klasse."];
   Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node9 [label="okw.core.OK.LogCaption",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a2469f6149bc2c4540c48edd8facbb5c0",tooltip="Gibt die Caption eines GUI-Objektes in den Testergebnissen aus."];
-  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node10 [label="okw.core.OK.LogTablecell\lValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1core_1_1_o_k.html#a7c6a02d1f58952de8cc3591379cdfbe3",tooltip="Dokumentiert den Wert der ausgewählten Zelle."];
 }

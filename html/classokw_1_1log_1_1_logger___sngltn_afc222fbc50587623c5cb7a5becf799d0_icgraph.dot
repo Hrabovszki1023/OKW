@@ -9,7 +9,7 @@ digraph "okw.log.Logger_Sngltn.LogFunctionStart"
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="okw.OKW_FileHelper.create\lEmptyDirectory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a3f1e666538681aaa975fde389b707ee7",tooltip=" "];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="okw.OKW_FileHelper.isDirectory\lEmpty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#a60cde3f4abccd6a69a43045c6e8d0ef9",tooltip="Diese Methode prüft, ob das angegebene Vrzeicniss leer ist."];
+  Node3 [label="okw.OKW_FileHelper.isDirectory\lEmpty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1_o_k_w___file_helper.html#ace01ea18f378aa32a472a80918057ed0",tooltip="Diese Methode prüft, ob das gegebene Verzeichniss existiert und leer ist."];
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="okw.gui.AnyWinBase.LogFunction\lStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classokw_1_1gui_1_1_any_win_base.html#a4eae6cd76c43dc7c6ae3df4c48d261e0",tooltip="Methode ruft die Methode Logger.Instance.LogFunctionStart(fps_FunctionName), und erweitert den gegebe..."];
 }
