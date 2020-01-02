@@ -219,9 +219,92 @@ public class OKW_PropertiesTest
     @Test
     public final void tc_getProperty2Boolean() throws IOException
     {
-        assertEquals(  false, myProperties.getProperty2Boolean( "core.AbbortOnVerifyFail", "false" ) );
-        assertEquals(  false, myProperties.getProperty2Boolean( "propertyDoesNotExist", "false" ) );
+        //assertEquals(  false, myProperties.getProperty2Boolean( "core.AbbortOnVerifyFail", "false" ) );
+        //assertEquals(  false, myProperties.getProperty2Boolean( "propertyDoesNotExist", "false" ) );
         assertEquals(  true,  myProperties.getProperty2Boolean( "core.propertyDoesNotExist", "true" ) );
+    }
+
+    
+    @Test
+    public final void tc_getProperty_CombindValues() throws IOException
+    {
+        //assertEquals(  "Wert 1", myProperties.getProperty( "Value_1" ) );
+        //assertEquals(  "Wert 2", myProperties.getProperty( "Value_2" ) );
+        
+        assertEquals(  "Wert 1", myProperties.getProperty( "CombineValues.One_Value" ) );
+        assertEquals(  "Wert 1; Wert 2", myProperties.getProperty( "CombineValues.Two_Values" ) );
+    }
+
+
+    @Test
+    public final void tc_getProperty_With_Paramaters() throws IOException
+    {
+        /*
+        # Properties mit Parametern
+        ParamaterValues.One_Param = P1: $P1$
+        ParamaterValues.Two_Params_1 = P1: $P1$; P2: $P2$
+        ParamaterValues.Two_Params_2 = P2: $P2$; P1: $P1$
+        */
+        
+        assertEquals(  "P1: Param1", myProperties.getProperty( "ParamaterValues.One_Param", null, "Param1" ) );
+        assertEquals(  "P1: Param1; P2: Param2", myProperties.getProperty( "ParamaterValues.Two_Params_1", null, "Param1", "Param2" ) );
+        assertEquals(  "P2: Param2; P1: Param1", myProperties.getProperty( "ParamaterValues.Two_Params_2", null, "Param1", "Param2" ) );
+    }
+
+
+    @Test
+    public final void tc_getProperty_With_Paramaters_Param_NotExist_1P() throws IOException
+    {
+        assertEquals( "", myProperties.getProperty( "ParamaterValues.One_Param_Notexists", null, "Param1" ) );
+    }
+
+
+    @Test
+    public final void tc_getProperty_With_Paramaters_Param_NotExist_2P() throws IOException
+    {
+        
+        assertEquals( "", myProperties.getProperty( "ParamaterValues.Two_Params_1_Notexists", null, "Param1", "Param2" ) );
+    }
+
+    
+    @Test
+    public final void tc_getProperty_With_ParamatersAndDefaultValues() throws IOException
+    {
+        /*
+        # Properties mit Parametern
+        ParamaterValues.One_Param = P1: $P1$
+        ParamaterValues.Two_Params_1 = P1: $P1$; P2: $P2$
+        ParamaterValues.Two_Params_2 = P2: $P2$; P1: $P1$
+        */
+        
+        assertEquals(  "P1: Param1", myProperties.getProperty( "ParamaterValues.One_Param", "With DefaultValue P1: %P1%", "Param1" ) );
+        assertEquals(  "P1: Param1; P2: Param2", myProperties.getProperty( "ParamaterValues.Two_Params_1", "With DefaultValue P1: %P1%; P2: %P2%", "Param1", "Param2" ) );
+
+        assertEquals(  "With DefaultValue P1: Param1", myProperties.getProperty( "ParamaterValues.One_Param_NotExist", "With DefaultValue P1: %P1%", "Param1" ) );
+        assertEquals(  "With DefaultValue P1: Param1; P2: Param2", myProperties.getProperty( "ParamaterValues.Two_Params_1_NotExist", "With DefaultValue P1: %P1%; P2: %P2%", "Param1", "Param2" ) );
+
+    }
+
+
+    @Test
+    public final void tc_getProperty_With_ParamatersAndDefaultValuesPropertiesNotExist() throws IOException
+    {
+        /*
+        # Properties mit Parametern
+        ParamaterValues.One_Param = P1: $P1$
+        ParamaterValues.Two_Params_1 = P1: $P1$; P2: $P2$
+        ParamaterValues.Two_Params_2 = P2: $P2$; P1: $P1$
+        */
+        
+        assertEquals(  "With DefaultValue P1: Param1", myProperties.getProperty( "ParamaterValues.One_Param_NotExist", "With DefaultValue P1: %P1%", "Param1" ) );
+        assertEquals(  "With DefaultValue P1: Param1; P2: Param2", myProperties.getProperty( "ParamaterValues.Two_Params_1_NotExist", "With DefaultValue P1: %P1%; P2: %P2%", "Param1", "Param2" ) );
+
+    }
+    
+    @Test
+    public final void tc_PrintPropertiesSources() throws IOException
+    {
+        myProperties.PrintPropertiesSources();
     }
 
 }

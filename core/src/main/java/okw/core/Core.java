@@ -1390,6 +1390,22 @@ public class Core implements IOKW_State
     }
 
     /**
+     *  \copydoc IOKW_State::FileCreate(String)
+     */
+    public void FileCreate( String PATH ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "FileCreate", "KeyWordName" ),  PATH );
+            this.CurrentState.FileCreate( PATH );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+    
+    /**
      *  \copydoc IOKW_State::FileDelete(String)
      */
     public void FileDelete( String fpsPathAndFileName ) throws Exception
@@ -1398,6 +1414,54 @@ public class Core implements IOKW_State
         {
             Log.LogKeyWordStart( LM.GetMessage( "FileDelete", "KeyWordName" ), fpsPathAndFileName );
             this.CurrentState.FileDelete( fpsPathAndFileName );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+  
+
+    /**
+     *  \copydoc IOKW_State::FilesDelete(String, String)
+     */
+    public void FilesDelete( String fpsDirPath, String fpsFileMatch ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "FilesDelete", "KeyWordName" ), fpsDirPath, fpsFileMatch );
+            this.CurrentState.FilesDelete( fpsDirPath, fpsFileMatch );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+    /**
+     *  \copydoc IOKW_State::DirectoryDelete(String)
+     */
+    public void DirectoryDelete( String PATH ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "DirectoryDelete", "KeyWordName" ),  PATH );
+            this.CurrentState.DirectoryDelete( PATH );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+
+    /**
+     *  \copydoc IOKW_State::DirectoryCreate(String)
+     */
+    public void DirectoryCreate( String PATH ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "DirectoryCreate", "KeyWordName" ),  PATH );
+            this.CurrentState.DirectoryCreate( PATH );
         }
         finally
         {
@@ -1421,6 +1485,24 @@ public class Core implements IOKW_State
         }
     }
 
+
+    /**
+     *  \copydoc IOKW_State::VerifyIsFile(String,String)
+     */
+    public void VerifyIsFile( String fpsPathAndFileName, String ExpVal ) throws Exception
+    {
+        try
+        {
+            Log.LogKeyWordStart( LM.GetMessage( "VerifyIsFile", "KeyWordName" ), fpsPathAndFileName, ExpVal );
+            this.CurrentState.VerifyIsFile( fpsPathAndFileName, ExpVal );
+        }
+        finally
+        {
+            Log.LogKeyWordEnd();
+        }
+    }
+
+    
     /**
      *  \copydoc IOKW_State::VerifyDirectoryExists(String,String)
      */

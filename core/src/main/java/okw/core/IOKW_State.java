@@ -2006,6 +2006,31 @@ public interface IOKW_State
     */
     void CopyFile( String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName ) throws Exception;
 
+    
+    /**
+     * \~german
+     *  Legt das gegebene Verzeichniss an.
+     * 
+     *  Nachdem Ausführen des Schlüsselwortes ist die gegebene Datei vorhanden.
+     *  -# Wenn die Datei existiert, dann passiert nicht weiter.
+     *  -# Wenn die Datei nicht existiert, dann wird diese mit allen Eltern-Verzeichnissen angelegt.
+     *
+     * @param PATH Datei, welches angelegt werden soll.
+     * 
+     * \~english
+     *  Creates the given directory.
+     * 
+     *  After executing the keyword, the given file is exist.
+     *  -# If the file exists, then does not happen further.
+     *  -# If the file does not exist, it will be created with all parent directories.
+     *
+     * @param PATH File to be created.
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2019-12-18
+     */
+    void FileCreate( String PATH ) throws Exception;
+    
     /**
     * \~german
     * Löscht die gegebene Datei.
@@ -2028,8 +2053,6 @@ public interface IOKW_State
     * - Core::FileDelete(string)
     * - OK::FileDelete(string)
     * - NOK::FileDelete(string)
-    * - OK_TRY::FileDelete(string)
-    * - NOK_TRY::FileDelete(string)
     * - IOKW_State::FileDelete(string)
     * 
     * @param fpsPathAndFileName Vollständiger Pfad und Dateiname.
@@ -2050,6 +2073,124 @@ public interface IOKW_State
     */
     void FileDelete( String fpsPathAndFileName ) throws Exception;
 
+
+    /**
+    * \~german
+    * Löscht die gegebene Datei.
+    * 
+    * In der Pfadangabe sind 
+    * - OKW-Parser angaben sind erlaubt ```${umgebungsvariable}```, ```${merkewertschlüssel}```.
+    * - im Dateinamen sind Wildcards ```*``` + ```?``` erlaubt.
+    * 
+    * \note
+    * Dieses Schlüsselwort stellt sicher, dass _nach_ der Ausführung die angegebene Datei oder Dateien nicht (mehr) existiert/existieren.
+    * Falls die gegebene Datei _nicht_ existiert, dann wird _ohne Fehlermeldung_ und auslösen einer Ausnahme
+    * das Schlüsselwort beendet.
+    * 
+    * \par Beispiel
+    * DE.LöscheDatei( "C:\temp\meineDatei.txt" ) - Löscht die Datei <code>meineDatei.txt</code> im Verzeichniss <code>C:\temp</code>
+    * DE.LöscheDatei( "C:\temp\*.*" ) - Löscht alle Dateien im Verzeichniss <code>C:\temp</code>
+    * 
+    * \par Siehe auch
+    * - EN::FileDelete(string)
+    * - Core::FileDelete(string)
+    * - OK::FileDelete(string)
+    * - NOK::FileDelete(string)
+    * - IOKW_State::FileDelete(string)
+    * 
+    * @param fpsPathAndFileName Vollständiger Pfad und Dateiname.
+    *
+    * \~english
+    * Deletes the given file.
+    * 
+    * If the file does not exist, then this keyword ends without error message and an exception will not rais.
+    * 
+    * - OKW-Parser is included.
+    * - widcards are in the filename allowed.
+    * 
+    * @param fpsPathAndFileName Full path of teh File
+    *
+    * \~
+    * @author Zoltán Hrabovszki
+    * @date 2019.12.16
+    */
+    void FilesDelete( String fpsDirPath, String fpsFileMatch ) throws Exception;
+
+    /**
+    * \~german
+    * Löscht die gegebene Datei.
+    * 
+    * In der Pfadangabe sind 
+    * - OKW-Parser angaben sind erlaubt ```${umgebungsvariable}```, ```${merkewertschlüssel}```.
+    * - im Dateinamen sind Wildcards ```*``` + ```?``` erlaubt.
+    * 
+    * \note
+    * Dieses Schlüsselwort stellt sicher, dass _nach_ der Ausführung die angegebene Datei oder Dateien nicht (mehr) existiert/existieren.
+    * Falls die gegebene Datei _nicht_ existiert, dann wird _ohne Fehlermeldung_ und auslösen einer Ausnahme
+    * das Schlüsselwort beendet.
+    * 
+    * 
+    * \par Siehe auch
+    * - EN::DirectoryDelete(string)
+    * - Core::DirectoryDelete(string)
+    * - OK::DirectoryDelete(string)
+    * - NOK::DirectoryDelete(string)
+    * - IOKW_State::DirectoryDelete(string)
+    * 
+    * @param PATH Vollständiger Pfad und Dateiname.
+    *
+    * \~english
+    * Deletes the given file.
+    * 
+    * If the file does not exist, then this keyword ends without error message and an exception will not rais.
+    * 
+    * - OKW-Parser is included.
+    * - widcards are in the filename allowed.
+    * 
+    * \note
+    * This keyword ensures that _after_ execution, the specified file or files do not (no longer) exist.
+    * If the given file _not_ exists, _the keyword is terminated without an error message_ and an exception is raised.
+    * 
+    * 
+    * \par Siehe auch
+    * - EN::DirectoryDelete(string)
+    * - Core::DirectoryDelete(string)
+    * - OK::DirectoryDelete(string)
+    * - NOK::DirectoryDelete(string)
+    * - IOKW_State::DirectoryDelete(string)
+    * 
+    * @param PATH Full path of th File
+    *
+    * \~
+    * @author Zoltán Hrabovszki
+    * @date 2019.12.01
+    */
+    void DirectoryDelete( String PATH ) throws Exception;
+    
+    /**
+     * \~german
+     *  Legt das gegebene Verzeichniss an.
+     * 
+     *  Nachdem Ausführen des Schlüsselwortes ist das gegebene Verzeichniss vorhanden.
+     *  -# wenn das Verzeichniss existiert, dann passiert nicht weiter.
+     *  -# Wenn das Verzeichniss nicht existiert, dann wird diese mit allen Eltern-Verzeicnissen angelegt  
+     *
+     * @param PATH Verzeichniss welches angelegt werden soll
+     * 
+     * \~english
+     *  Creates the given directory.
+     * 
+     *  After executing the keyword, the given directory is available.
+     *  -# if the directory exists, then does not happen further.
+     *  -# If the directory does not exist, it will be created with all parent directories.  
+     *
+     * @param PATH Directory to be created
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2019-12-01
+     */
+    void DirectoryCreate( String PATH ) throws Exception;
+
     /**
     *\~german
        * Prüft, ob die gegebene Datei existiert.
@@ -2057,10 +2198,11 @@ public interface IOKW_State
        * @param fpsPathAndFileName Pfad und Name der Datei, die Geprüft werden soll 
        * @param ExpVal Erwarteter Wert. Möglich Werte sind: "JA"/"NEIN"/"${IGNORIERE}"
        *
-       * /exception OKWFileDoesNotExistsException
+       * @exception OKWFileDoesNotExistsException
        *            Wenn die gegeben Datei ein Verzeichniss ist, also eben keine Datei, dann wird ein OKWFileDoesNotExistsException ausgelöst.
        * \~english
-       * 
+       * Verifies that the given file exists.
+       *       
        * @param fpsPath Path and name of the file. 
        * @param ExpVal Expected Value. ExpVal: "YES"/"NO"/"${IGNORE}"
        *
@@ -2069,6 +2211,28 @@ public interface IOKW_State
        * @date 2015-06-26
        */
     void VerifyFileExists( String fpsPathAndFileName, String ExpVal ) throws Exception;
+
+
+    /**
+    *\~german
+       * Prüft, ob es sich bei dem gegebenen Pfad um eine Datei handelt.
+       * 
+       * @param fpsPathAndFileName Pfad und Name der Datei, die geprüft werden soll.
+       * @param ExpVal Erwarteter Wert. Möglich Werte sind: "JA"/"NEIN"/"${IGNORIERE}"
+       *
+       * @exception OKWFileDoesNotExistsException
+       *            Wenn die gegeben Datei ein Verzeichniss ist, also eben keine Datei, dann wird ein OKWFileDoesNotExistsException ausgelöst.
+       * \~english
+       * Checks whether the given path is a file.
+       *       
+       * @param fpsPathAndFileName Path and name of the file to be checked.
+       * @param ExpVal Expected value. Possible values are: "YES"/"NO"/"${IGNORE}"
+       * 
+       * \~
+       * @author zh@openkeyword.de
+       * @date 2019-01-12
+       */
+    void VerifyIsFile( String fpsPathAndFileName, String ExpVal ) throws Exception;
 
     /**
     * \~german

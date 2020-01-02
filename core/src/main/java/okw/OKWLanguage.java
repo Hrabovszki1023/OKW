@@ -42,12 +42,12 @@ import java.util.ArrayList;
 
 import okw.exceptions.OKWLanguageNotImplemntedException;
 
-/// \brief
 /// http://de.wikipedia.org/wiki/ISO-3166-1-Kodierliste
 /// 
 public class OKWLanguage {
 
 	private static OKWLanguage		Instance;
+	protected static OKW_Properties PROP = OKW_Properties.getInstance();
 
 	public static OKWLanguage getInstance()
 	{
@@ -74,6 +74,8 @@ public class OKWLanguage {
 
 		cvLsLanguagesImplemented.add("en");
 		cvLsLanguagesImplemented.add("de");
+		
+        PROP.setProperty( "LANGUAGE", this.Language );
 	}
 
 	/// \brief
@@ -81,15 +83,36 @@ public class OKWLanguage {
 	///
 	private String Language = "en";
 
-	public String getLanguage() {
+	public String getLanguage()
+	{
 		return this.Language.toLowerCase();
 	}
 
-	public void setLanguage(String value) {
-		if (-1 < cvLsLanguagesImplemented.indexOf(value.toLowerCase())) {
-			this.Language = value.toLowerCase();
-		} else {
-			throw new OKWLanguageNotImplemntedException();
-		}
-	}
+    /**
+     * \~german
+     * Wählt die sprache von OKW, default Sprache ist "en"
+     *
+     * @param value Sprache die gewählt weden soll. - Mmögliche Werte "en", "de"
+     * 
+     * \~english
+     *
+     *
+     * @param ? 
+     * @return
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2019-12-30
+     */
+    public void setLanguage( String value )
+    {
+        if ( -1 < cvLsLanguagesImplemented.indexOf( value.toLowerCase() ) )
+        {
+            this.Language = value.toLowerCase();
+            PROP.setProperty( "LANGUAGE", this.Language );
+        }
+        else
+        {
+            throw new OKWLanguageNotImplemntedException();
+        }
+    }
 }

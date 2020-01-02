@@ -483,7 +483,8 @@ public class OKW_Memorize_Sngltn
 			}
 
 			// persistentes Speichern aller Daten...
-			Instance.save();
+			// TODO: Prüfen: das wurde ebntfern. Frage soll hier eine Persisntes eingebaut werden?
+			// Instance.save();
 		}
 		finally
 		{

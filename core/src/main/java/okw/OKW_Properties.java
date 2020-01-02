@@ -21,8 +21,10 @@ import java.util.TreeMap;
 import java.util.regex.Pattern;
 import okw.exceptions.OKWFileDoesNotExistsException;
 import okw.log.Logger_Sngltn;
+import okw.parser.Parser;
 
 import org.apache.commons.lang3.StringUtils;
+import org.stringtemplate.v4.ST;
 
 /**
  * \~german
@@ -59,7 +61,7 @@ public class OKW_Properties extends Properties
      * Liste der einzubindenen *.properties Dateien, die aus dem Resourcen Verzeichniss der Core.
      *
      * \~english
-     *
+     * List of the *.properties files to include, which are taken from the resources directory of the Core.
      * \~
      * @author Zoltán Hrabovszki
      * @date 2018-03-08
@@ -402,10 +404,11 @@ public class OKW_Properties extends Properties
     }
     
 	/**
-	 * \~german Erstellt eine Liste der "*.properties"-Dateien des aktuellen
+	 * \~german
+	 * Erstellt eine Liste der "*.properties"-Dateien des aktuellen
 	 * Projektes
 	 * 
-	 * Ist eine rekursive Methode
+	 * Hinweis: Das ist eine rekursive Methode
 	 *
 	 * @param ?
 	 * @return \~english
@@ -785,6 +788,142 @@ public class OKW_Properties extends Properties
      * \~german
      * Ermittelt den aktuellen Wert des Propertys gegeben mit dem Schlüssel fpsKey.
      * 
+     * @param fpsKey Schlüssel des Propertys.
+     * @return Wert des Schlüssels als String.
+     * 
+     * \~english
+     * Returns the current value of the property given with the key fpsKey.
+     *
+     * @param fpsKey Key of Propertys.
+     * @return Value of the key as string.
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2019-12-21
+     */
+   @Override
+   public String getProperty(String fpsKey)
+   {
+        String lvsReturn = "";
+        String lvsKey = "";
+        
+        lvsKey = Parser.ParseMe( fpsKey );
+
+        lvsReturn = super.getProperty( lvsKey );
+        if ( lvsReturn == null )
+            okw.log.Logger_Sngltn.getInstance().LogWarning( "Propertykey (parsed) not found: '" + lvsKey + "'" );
+        else
+            lvsReturn = Parser.ParseMe( lvsReturn );
+        
+        return lvsReturn;
+    }
+    
+    
+    /**
+     * \~german
+     * Ermittelt den aktuellen Wert des Propertys gegeben mit dem Schlüssel fpsKey und es wird $P1$ mit dem Wert von Parameter_1 ersetzt.
+     * 
+     * @param fpsKey Schlüssel des Propertys.
+     * @param fpsDefault Default Wert, falls kein Property gefunden wird. Wenn zwingend ein Propertiwert gelesen werden soll, dann diesen wert auf null setzen.
+     * @param Parameter_1 Wert, der für $P1$ eingesetzt wird.
+     * 
+     * @return Wert des Properties gegeben als fpsKey und $P1$ ist mit dem Wert von Parameter_1 ersetzt.
+     * 
+     *  \~english
+     * Get the current value of the property given with the key fpsKey and it will replace $P1$ with the value of parameter_1.
+     * 
+     * @param fpsKey Key of Propertys.
+     * @param fpsDefault Default value if no property is found. If a properti value must be read, then set this value to zero.
+     * @param Parameter_1 Value to be put in for $P1$.
+     * 
+     * @return Value of property given as fpsKey and $P1$ is replaced with the value of parameter_1.
+     * 
+     *  \~
+     *  @author Zoltan Hrabovszki
+     *  @date 2019-12-21
+     */
+    public String getProperty( String fpsKey, String fpsDefault, Object... Parameters )
+    {
+        String lvsReturn = "";
+        String lvsTemplate = "";
+
+        if (fpsDefault == null)
+        {
+           lvsTemplate = this.getProperty( fpsKey );
+        }
+        else
+        {
+           lvsTemplate = this.getProperty( fpsKey, fpsDefault );
+        }
+
+        if ( lvsTemplate == null )
+            okw.log.Logger_Sngltn.getInstance().LogWarning( "Propertykey not found: '" + fpsKey + "'" );
+        else
+        {
+            // Iterieren wir über alle Parameters...
+            ST st = new ST( lvsTemplate, '%', '%' );
+
+            for ( Integer i=0; i<Parameters.length; i++ )
+            {
+                Integer J = i+1;
+                String PName = "P" + J.toString();
+                Object Value = Parameters[i];
+                st.add( PName, Value );
+            }
+
+            lvsReturn = st.render();
+        }
+
+        return lvsReturn;
+    }
+    
+//
+//
+//    /**
+//     * \~german
+//     * Ermittelt den aktuellen Wert des Propertys gegeben mit dem Schlüssel fpsKey und es werdem $P1$ mit Parameter_1 und $P2$ mit Parameter_2 ersetzt.
+//     * 
+//     * @param fpsKey Schlüssel des Propertys.
+//     * @param Parameter_1 Wert, der für $P1$ eingesetzt wird.
+//     * @param Parameter_2 Wert, der für $P2$ eingesetzt wird.
+//     * 
+//     * @return Wert des Properties gegeben als fpsKey und $P1$, $P2$ wird mit den Werten von Parameter_1, Parameter_2 ersetzt.
+//     * 
+//     *  \~english
+//     * Ermittelt den aktuellen Wert des Propertys gegeben mit dem Schlüssel fpsKey und es werdem $P1$ mit Parameter_1 und $P2$ mit Parameter_2 ersetzt.
+//     * 
+//     * @param fpsKey Key of Propertys.
+//     * @param Parameter_1 Value that is used for $P1$.
+//     * @param Parameter_2 Value that is used for $P2$.
+//     * 
+//     * @return Value of the property given as fpsKey and $P1$, $P2$ will be replaced with the values of parameter_1, parameter_2
+//     * 
+//     *  \~
+//     *  @author Zoltan Hrabovszki
+//     *  @date 2019-12-21
+//     */
+//    public String getProperty( String fpsKey, String fpsDefault, Object Parameter_1, Object Parameter_2 )
+//    {
+//        String lvsReturn = "";
+//        String lvsTemplate = "";
+//    
+//        lvsTemplate = this.getProperty( fpsKey );
+//        
+//        if ( lvsTemplate == null )
+//            okw.log.Logger_Sngltn.getInstance().LogWarning( "Propertykey not found: '" + lvsTemplate + "'" );
+//        else
+//        {
+//        ST st = new ST( lvsTemplate, '%', '%' );
+//        st.add( "P1", Parameter_1 );
+//        st.add( "P2", Parameter_2 );
+//        lvsReturn = st.render();
+//        }
+//        return lvsReturn;
+//    }
+
+    /**
+     * \~german
+     * Ermittelt den aktuellen Wert des Propertys gegeben mit dem Schlüssel fpsKey.
+     * 
      * @param fpsKey Property Schlüssel des Boolean Propertys.
      * @param fpsDefault Default-Wert des Boolean Propertys als String. Mögliche Werte "false"/"true".
      * @return Wert des Schlüssels als Boolean true/false
@@ -801,9 +940,11 @@ public class OKW_Properties extends Properties
    public Boolean getProperty2Boolean(String fpsKey, String fpsDefault )
    {
         Boolean lvbReturn = false;
- 
-        lvbReturn = Boolean.parseBoolean( getProperty( fpsKey, fpsDefault ) );
+        String lvsReturn = "";       
         
+        lvsReturn = this.getProperty( fpsKey, fpsDefault );
+        lvbReturn = Boolean.parseBoolean( lvsReturn );
+
         return lvbReturn;
     }
 }

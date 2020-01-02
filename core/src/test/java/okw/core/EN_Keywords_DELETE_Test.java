@@ -655,6 +655,24 @@ public class EN_Keywords_DELETE_Test
   // \~german
   // \brief
   //
+  // \~english
+  // \~
+  // \author Zoltan Hrabovszki
+  // \date 2013.12.26
+  @Test( expected = OKWNotAllowedValueException.class )
+  public void tcSequence_DELETE_OKWNotAllowedValueException_2() throws Exception
+  {
+    EN.BeginTest( name.getMethodName() );
+
+    EN.SelectWindow( "Rechner" );
+    EN.Sequence( "Rechner", "TestSequence", "${DELETE}" );
+    
+    EN.EndTest();
+  }
+
+// \~german
+  // \brief
+  //
   //
   // \~english
   // \~
