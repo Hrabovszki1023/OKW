@@ -296,6 +296,7 @@ public class SeDriver
         
         return lvReturn;
     }
+
     
     /** \~german
      *  Ermittelt das Webelement mit der gegebenen frameID und dem gegebenen Locator.
@@ -358,10 +359,70 @@ public class SeDriver
         return me;
     }
 
+    
+    /** \~german
+     *  Ermittelt das Webelement für den gegebenen Locator.
+     *  
+     *  Diese Methode für die Elementsuche wird von GUI-Drivern benötigt, die keine iFrames kenn, wie z.B. WinAppDriver vom MS
+     *  
+     *  @param fpsLocator Lokator des GUI-Objektes. Siehe auch Parameter fpsFrameID
+     *  
+     *  @return Liefert das WebElemnt
+     *  
+     *  @exception OKWGUIObjectNotFoundException Wenn kein GUI-Objekt gefunden wird.
+     *  
+     *  @exception OKWGUIObjectNotUniqueException Wenn mehrere GUI-Objekte gefunden werden,
+     *             d.h wenn der Locator kein eindeutiges Ergebnis, d.h. genau ein GUI-Objekt, liefert.
+     *  
+     *  \~english
+     *  todo TODO: Brief Description.
+     *  
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2019.06.12
+     */
+    public WebElement getElement( String fpsLocator )
+    {
+        WebElement me = null;
+        List<WebElement> meme = null;
+        
+        this.MyLogger.LogFunctionStartDebug( "SeDriver.getElement", "fpsLocator", fpsLocator );
+
+        // Element ggf. des richtigen Frames Holen.
+        meme = this.driver.findElements( By.xpath( fpsLocator ) );
+
+        if ( meme.size() == 0 )
+        {
+            String lvsPrintMe = "GUI-Objekt nicht gefunden! Locator: '" + fpsLocator + "'";
+            this.MyLogger.LogPrint( lvsPrintMe );
+
+            throw new OKWGUIObjectNotFoundException( lvsPrintMe );
+        }
+        else if ( meme.size() > 1 )
+        {
+            String lvsPrintMe = "Locator ist nicht eindeutig! Locator: '" + fpsLocator + "'";
+
+            this.MyLogger.LogWarning( lvsPrintMe );
+
+            throw new OKWGUIObjectNotUniqueException( lvsPrintMe );
+        }
+        else
+        {
+            String lvsPrintMe = "GUI-Objekt gefunden Locator: '" + fpsLocator + "'";
+            this.MyLogger.LogPrintDebug( lvsPrintMe );
+            me = meme.get( 0 );
+        }
+        
+        this.MyLogger.LogFunctionEndDebug( me.toString() );
+        
+        return me;
+    }    
+
+    
     /** \~german
      *  Ermittelt das Webelement mit der gegebenen frameID und dem gegebenen Locator
-     *  
-     *  
+     *       *  
      *  \~english
      *  \todo TODO: Brief Description.
      *  
@@ -391,6 +452,37 @@ public class SeDriver
         return meme;
     }
 
+    
+    /** \~german
+     *  Ermittelt alle WWB-Elemente zum gegebenen Locator.
+     *       *  
+     *  \~english
+     *  \todo TODO: Brief Description.
+     *  
+     *  
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  @date 2015.05.12
+     */
+    public List<WebElement> getElements(String fpsLocator )
+    {
+        List<WebElement> meme = null;
+        
+        this.MyLogger.LogFunctionStartDebug( "SeDriver.getElement", "fpsLocator", fpsLocator );
+
+        try
+        {
+            // Elemente im Frame finden.
+            meme = this.driver.findElements( By.xpath( fpsLocator ) );
+        }
+        finally
+        {
+            this.MyLogger.LogFunctionEndDebug(); ;    
+        }
+        return meme;
+    }
+
+    
     /*
     /** \~german
      *  Erzeugt eine Instanz des HTMLnitDrivers
