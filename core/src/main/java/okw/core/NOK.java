@@ -104,7 +104,7 @@ public class NOK implements IOKW_State
             OKW_Memorize_Sngltn.getInstance().set( "TCN", fpsTestname );
 
             Log.LogPrint( "NOK -> OK" );
-            this._Kernel.SetCurrentState( new OK( this._Kernel ) );
+            this._Kernel.SetCoreStateOK();
         }
         catch (XPathExpressionException | JAXBException | ParserConfigurationException | SAXException | IOException e)
         {
@@ -115,6 +115,22 @@ public class NOK implements IOKW_State
             // Gute Frage was alles hier hingehört...
             Log.LogFunctionEndDebug();
         }
+    }
+
+    /**
+     *  \copydoc IOKW_State::EndTest()
+     * @throws Exception 
+     */
+    public void EndTest() throws Exception
+    {
+        // TODO: Aufräumen  Kill... usw aufrufen
+        Log.LogFunctionStartDebug( "EndTest" );
+        
+        Log.LogFunctionEndDebug();
+
+        Exception e = _Kernel.getNOK_Reason();
+        
+        throw e;
     }
 
     /**
@@ -133,17 +149,6 @@ public class NOK implements IOKW_State
     public void DoubleClickOn( String FN )
     {
         Log.LogFunctionStartDebug( "DoubleClickOn", "FN", FN );
-
-        Log.LogFunctionEndDebug();
-    }
-
-    /**
-     *  \copydoc IOKW_State::EndTest()
-     */
-    public void EndTest()
-    {
-        // TODO: Aufräumen  Kill... usw aufrufen
-        Log.LogFunctionStartDebug( "EndTest" );
 
         Log.LogFunctionEndDebug();
     }
@@ -452,9 +457,19 @@ public class NOK implements IOKW_State
     /**
      *  \copydoc IOKW_State::SetValue(String,String)
      */
-    public void SetValue( String FN, String fpsValue )
+    public void SetValue( String FN, String Val )
     {
-        Log.LogFunctionStartDebug( "SetValue", "FN", FN );
+        Log.LogFunctionStartDebug( "SetValue", "FN", FN, "Val", Val );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     *  \copydoc IOKW_State::SetVar(String,String)
+     */
+    public void SetVar( String VN, String Val )
+    {
+        Log.LogFunctionStartDebug( "SetVar", "VN", VN, "Val", Val );
 
         Log.LogFunctionEndDebug();
     }

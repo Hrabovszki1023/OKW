@@ -1,6 +1,9 @@
 package okw.selink;
 
 import static org.junit.Assert.*;
+
+import org.junit.FixMethodOrder;
+
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
@@ -10,6 +13,7 @@ import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
 /**
 * \~
@@ -18,6 +22,7 @@ import org.junit.rules.TestName;
 * @author zoltan
 */
 @Ignore
+@FixMethodOrder( MethodSorters.NAME_ASCENDING )
 public class SeLink_EN_Test
 {
   String                  cvOKWObject = "Link" + "";
@@ -158,8 +163,8 @@ public class SeLink_EN_Test
 
       EN.LogIsActive( "Google" );
 
-      //EN.StopApp( ApplicationName );
-      //EN.EndTest();
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
   }
   
  /**
@@ -182,9 +187,9 @@ public class SeLink_EN_Test
 
        EN.MemorizeIsActive( "Google", "Schlüssel" );
 
-       //EN.StopApp( ApplicationName );
-       //EN.EndTest();
-   }
+       EN.StopApp( ApplicationName );
+       EN.EndTest();
+  }
   
   /**
    * \~german
@@ -195,7 +200,7 @@ public class SeLink_EN_Test
    * @author Zoltán Hrabovszki
    * @date 2017-04-30
    */  @Test(expected= UnsupportedOperationException.class)
-    public void tcVerifyIsActive_en() throws Exception
+    public void tcVerifyIsActive_UnsupportedOperationException() throws Exception
     {
         EN.BeginTest( name.getMethodName() );
 
@@ -206,8 +211,8 @@ public class SeLink_EN_Test
 
         EN.VerifyIsActive( "Google", "YES" );
 
-        //EN.StopApp( ApplicationName );
-        //EN.EndTest();
+        EN.StopApp( ApplicationName );
+        EN.EndTest();
     }
 
  
@@ -695,6 +700,9 @@ public class SeLink_EN_Test
         EN.SelectWindow( "Link" );
 
         EN.DoubleClickOn( "Google");
+
+        EN.StopApp( ApplicationName );
+        EN.EndTest();
     }
    
     
@@ -707,7 +715,7 @@ public class SeLink_EN_Test
      * @author Zoltán Hrabovszki
      * @date 2017-04-30
      */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
-      public void tcSetValue_en() throws Exception
+      public void tcSetValue_OKWFrameObjectMethodNotImplemented() throws Exception
       {
           EN.BeginTest( name.getMethodName() );
 
@@ -717,6 +725,9 @@ public class SeLink_EN_Test
           EN.SelectWindow( "Link" );
 
           EN.SetValue( "Google", "SetValue");
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
       }
      
      /**
@@ -728,7 +739,7 @@ public class SeLink_EN_Test
       * @author Zoltán Hrabovszki
       * @date 2017-04-30
       */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
-       public void tcSelect_en() throws Exception
+       public void tcSelect_OKWFrameObjectMethodNotImplemented() throws Exception
        {
            EN.BeginTest( name.getMethodName() );
 
@@ -738,6 +749,9 @@ public class SeLink_EN_Test
            EN.SelectWindow( "Link" );
 
            EN.Select( "Google", "SetValue");
+
+           EN.StopApp( ApplicationName );
+           EN.EndTest();
        }
 
       /**
@@ -748,8 +762,9 @@ public class SeLink_EN_Test
        * \~
        * @author Zoltán Hrabovszki
        * @date 2017-04-30
-       */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
-        public void tcSelectMenu2_en() throws Exception
+       */  
+        @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+        public void tcSelectMenu2_OKWFrameObjectMethodNotImplemented() throws Exception
         {
             EN.BeginTest( name.getMethodName() );
 
@@ -759,6 +774,9 @@ public class SeLink_EN_Test
             EN.SelectWindow( "Link" );
 
             EN.SelectMenu( "Google");
+            
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
       
       /**
@@ -770,7 +788,7 @@ public class SeLink_EN_Test
        * @author Zoltán Hrabovszki
        * @date 2017-04-30
        */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
-        public void tcSelectMenu_en() throws Exception
+        public void tcSelectMenu_OKWFrameObjectMethodNotImplemented() throws Exception
         {
             EN.BeginTest( name.getMethodName() );
 
@@ -780,6 +798,9 @@ public class SeLink_EN_Test
             EN.SelectWindow( "Link" );
 
             EN.SelectMenu( "Google", "SetValue");
+
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
         }
        
        
@@ -792,7 +813,7 @@ public class SeLink_EN_Test
         * @author Zoltán Hrabovszki
         * @date 2017-04-30
         */  @Test(expected= UnsupportedOperationException.class)
-         public void tcTypeKey_en() throws Exception
+         public void tcTypeKey_UnsupportedOperationException() throws Exception
          {
              EN.BeginTest( name.getMethodName() );
 
@@ -802,6 +823,9 @@ public class SeLink_EN_Test
              EN.SelectWindow( "Link" );
 
              EN.TypeKey( "Google", "SetValue");
+
+             EN.StopApp( ApplicationName );
+             EN.EndTest();
          }
 
 }

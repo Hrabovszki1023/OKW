@@ -37,6 +37,9 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 
 
 import static org.junit.Assert.*;
+
+import org.junit.FixMethodOrder;
+
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
@@ -47,6 +50,7 @@ import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
      /**
      * \~
@@ -62,6 +66,7 @@ import org.junit.rules.TestName;
      * @date 2016.12.11
      */
     @Ignore("Ignoring the whole fixture")
+    @FixMethodOrder( MethodSorters.NAME_ASCENDING )
     public class SeInputRadio_EN_Test
     {
     	protected OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
@@ -126,6 +131,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("SeInputRadioTestFrame");
 
                 EN.DoubleClickOn( "Visa");
+                
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
         
         /** \~german
@@ -194,6 +202,10 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("SeInputRadioTestFrame");
                 EN.LogHasFocus("Visa");
+                
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+
         }
 
         /** \~german
@@ -367,6 +379,9 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("SeInputRadioTestFrame");
                 EN.MemorizeHasFocus("Visa", "SeInputRadio_MemorizeHasFocus");
+                
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         
@@ -474,6 +489,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("SeInputRadioTestFrame");
                 
                 EN.VerifyHasFocus( "Visa", "YES" );
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         
@@ -495,6 +513,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("SeInputRadioTestFrame");
                 
                 EN.SetFocus( "Visa" );
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
         
         
@@ -516,6 +537,8 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("SeInputRadioTestFrame");
 
                 EN.SelectMenu("Visa");
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
         
@@ -537,6 +560,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("SeInputRadioTestFrame");
 
                 EN.SelectMenu("Visa", "What ever...");
+                
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
 
 
@@ -597,6 +623,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("SeInputRadioTestFrame");
 
                 EN.SetValue("Visa", "UNCHECKED");
+                
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
  
         /** \~german
@@ -619,6 +648,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("SeInputRadioTestFrame");
 
                 EN.SetValue("Visa", "Ajhdttg");
+                
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
         
         /** \~german
@@ -664,6 +696,9 @@ import org.junit.rules.TestName;
                 EN.SelectWindow("SeInputRadioTestFrame");
 
                 EN.TypeKey( "Visa", "What ever...");
+                
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
         }
         
         /** \~german

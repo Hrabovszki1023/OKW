@@ -44,12 +44,14 @@ import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
 import okw.log.Logger_Sngltn;
 
-import org.junit.After;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EN_VerifyExists_OKWVerifyingFailsException_Test {
 
   protected static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
@@ -69,24 +71,6 @@ public class EN_VerifyExists_OKWVerifyingFailsException_Test {
     myLogger.setDebugMode( false );
   }
 
-
-  /** \~german
-   *  Diese Methode wird immer vor jedem Test(fall) ausgeführt.
-   */
-  /* @Before
-  public void setUp() throws Exception {
-
-  }
-  */
-  
-  /** \~german
-   * Diese Methode wird immer nach jedem Test(fall) ausgeführt.
-   */
-  @After
-  public void tearDown() throws Exception {
-    EN.EndTest();
-  }
-  
    
   /**
    * \~german
@@ -109,6 +93,8 @@ public class EN_VerifyExists_OKWVerifyingFailsException_Test {
     EN.SelectWindow( "Rechner" );
     EN.SetValue( "All_MethodsObj", "YES" );
     EN.VerifyExists( "All_MethodsObj", "NO" );
+    
+    EN.EndTest();
   }
   
   /**
@@ -132,5 +118,7 @@ public class EN_VerifyExists_OKWVerifyingFailsException_Test {
     EN.SelectWindow( "Rechner" );
     EN.SetValue( "All_MethodsObj", "NO" );
     EN.VerifyExists( "All_MethodsObj", "YES" );
+    
+    EN.EndTest();
   }
 }

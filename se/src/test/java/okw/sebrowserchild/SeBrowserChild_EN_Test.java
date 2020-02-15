@@ -52,6 +52,8 @@ public class SeBrowserChild_EN_Test
 
           EN.SelectWindow( "InputTypePassword" );
           EN.VerifyValue("URL", "Falscher Wert");
+          
+          EN.EndTest();
         }
 
         
@@ -67,6 +69,8 @@ public class SeBrowserChild_EN_Test
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypePassword.htm" );
 
           EN.SelectWindow( "InputTypeTextDisabled" );
+          
+          EN.EndTest();
         }
         
         

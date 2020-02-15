@@ -4,6 +4,7 @@ import okw.OKW;
 import okw.gui.adapter.selenium.*;
 
 @OKW (FN="SeTextarea")
+// http://test.openkeyword.de/Textarea/textarea.htm
 public class frmSeTextarea extends SeBrowserChild
 {
   
@@ -49,7 +50,7 @@ public class frmSeTextarea extends SeBrowserChild
                     VerifyHasFocus_PT=500, VerifyHasFocus_TO=1,
                     VerifyMaxLength_PT=500, VerifyMaxLength_TO=1
                     )
-            public SeTextarea Textarea_3 = new SeTextarea("//*[@data-4test='Textarea MaxLength 40']");
+    public SeTextarea Textarea_3 = new SeTextarea("//*[@data-4test='Textarea MaxLength 40']");
 
     public frmSeTextarea( )
     {

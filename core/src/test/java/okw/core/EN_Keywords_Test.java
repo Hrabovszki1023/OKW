@@ -40,17 +40,19 @@
 package okw.core;
 
 import static org.junit.Assert.*;
+
 import okw.OKW_Memorize_Sngltn;
 import okw.OKW_TestClipboard;
 import okw.log.Logger_Sngltn;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder( MethodSorters.NAME_ASCENDING )
 public class EN_Keywords_Test
 {
     static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
@@ -86,17 +88,6 @@ public class EN_Keywords_Test
     }
     */
 
-    @Before
-    public void setUp() throws Exception
-    {
-    }
-
-    @After
-    public void tearDown() throws Exception
-    {
-        EN.EndTest();
-    }
-
     // \~german
     // \brief
     // Prüft methoden aufruf für einen einfachen Click.
@@ -125,6 +116,8 @@ public class EN_Keywords_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "ClickOn()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -157,6 +150,8 @@ public class EN_Keywords_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "DoubleClickOn()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -188,6 +183,8 @@ public class EN_Keywords_Test
         assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "LogExists()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -219,6 +216,8 @@ public class EN_Keywords_Test
         assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "LogHasFocus()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -250,6 +249,8 @@ public class EN_Keywords_Test
         assertEquals( "No", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "LogIsActive()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -279,6 +280,8 @@ public class EN_Keywords_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "LogSelected()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -310,6 +313,8 @@ public class EN_Keywords_Test
         assertEquals( "Row", myClipBoard.getValue().get( 1 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "LogTablecellValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -339,6 +344,8 @@ public class EN_Keywords_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "LogTooltip()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -369,8 +376,10 @@ public class EN_Keywords_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "LogPlaceholder()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
-    
+
     // \~german
     //
     //
@@ -399,6 +408,8 @@ public class EN_Keywords_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "LogLabel()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -429,6 +440,8 @@ public class EN_Keywords_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "LogCaption()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -460,6 +473,8 @@ public class EN_Keywords_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "LogValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -492,6 +507,8 @@ public class EN_Keywords_Test
         assertEquals( "MemorizeExists()", myClipBoard.getMethod() );
 
         assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().get( "Key_TC_MemorizeExists" ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -525,6 +542,8 @@ public class EN_Keywords_Test
         assertEquals( "MemorizeHasFocus()", myClipBoard.getMethod() );
 
         assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().get( "Key_TC_Memorize_Focus" ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -557,6 +576,8 @@ public class EN_Keywords_Test
         assertEquals( "MemorizeIsActive()", myClipBoard.getMethod() );
 
         assertEquals( "YES", OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizeIsActive" ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -590,6 +611,8 @@ public class EN_Keywords_Test
 
         assertEquals( "MemorizeSelectedValue_Return_1${SEP}MemorizeSelectedValue_Return_2",
                         OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizeSelectedValue_Key_1" ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -624,6 +647,8 @@ public class EN_Keywords_Test
         assertEquals( "MemorizeTablecellValue()", myClipBoard.getMethod() );
 
         assertEquals( "MemorizeTablecellValue_1", OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizeTablecellVelue_Key_1" ) );
+
+        EN.EndTest();
     }
 
     /* \~german
@@ -657,6 +682,8 @@ public class EN_Keywords_Test
         assertEquals( "MemorizeTooltip()", myClipBoard.getMethod() );
 
         assertEquals( "MemorizeTooltip_Return_1${SEP}MemorizeTooltip_Return_2", OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizeTooltip_Key_1" ) );
+
+        EN.EndTest();
     }
 
     /* \~german
@@ -666,96 +693,102 @@ public class EN_Keywords_Test
     * \~
     * \author Zoltan Hrabovszki
     * \date 2013.12.26
-   */
-   @Test
-   public void tc_MemorizeCaption() throws Exception
-   {
-       EN.BeginTest( name.getMethodName() );
+    */
+    @Test
+    public void tc_MemorizeCaption() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
 
-       // Testscript in Schlüsselwort-Notation
-       EN.SelectWindow( "Rechner" );
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
 
-       // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-       // Check the Name, Called Method and Value of Actuel object
-       assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-       assertEquals( "Rechner", myClipBoard.getObjectName() );
-       assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-       myClipBoard.Clear();
-       EN.MemorizeCaption( "All_MethodsObj", "TC_MemorizeCaption_Key_1" );
+        myClipBoard.Clear();
+        EN.MemorizeCaption( "All_MethodsObj", "TC_MemorizeCaption_Key_1" );
 
-       // Check the Name, Called Method and Value of Actuel object
-       assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-       assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-       assertEquals( "MemorizeCaption()", myClipBoard.getMethod() );
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "MemorizeCaption()", myClipBoard.getMethod() );
 
-       assertEquals( "MemorizeCaption_Return_1${SEP}MemorizeCaption_Return_2", OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizeCaption_Key_1" ) );
-   }
+        assertEquals( "MemorizeCaption_Return_1${SEP}MemorizeCaption_Return_2", OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizeCaption_Key_1" ) );
 
-   /* \~german
-   *
-   * \~english
-   * 
-   * \~
-   * \author Zoltan Hrabovszki
-   * \date 2013.12.26
-  */
-  @Test
-  public void tc_MemorizePlaceholder() throws Exception
-  {
-      EN.BeginTest( name.getMethodName() );
+        EN.EndTest();
+    }
 
-      // Testscript in Schlüsselwort-Notation
-      EN.SelectWindow( "Rechner" );
+    /* \~german
+    *
+    * \~english
+    * 
+    * \~
+    * \author Zoltan Hrabovszki
+    * \date 2013.12.26
+    */
+    @Test
+    public void tc_MemorizePlaceholder() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
 
-      // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-      // Check the Name, Called Method and Value of Actuel object
-      assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-      assertEquals( "Rechner", myClipBoard.getObjectName() );
-      assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
 
-      myClipBoard.Clear();
-      EN.MemorizePlaceholder( "All_MethodsObj", "TC_MemorizePlaceholder_Key_1" );
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-      // Check the Name, Called Method and Value of Actuel object
-      assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-      assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-      assertEquals( "MemorizePlaceholder()", myClipBoard.getMethod() );
+        myClipBoard.Clear();
+        EN.MemorizePlaceholder( "All_MethodsObj", "TC_MemorizePlaceholder_Key_1" );
 
-      assertEquals( "MemorizePlaceholder_Return_1${SEP}MemorizePlaceholder_Return_2", OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizePlaceholder_Key_1" ) );
-  }
-  /* \~german
-  *
-  * \~english
-  * 
-  * \~
-  * \author Zoltan Hrabovszki
-  * \date 2013.12.26
- */
- @Test
- public void tc_MemorizeLabel() throws Exception
- {
-     EN.BeginTest( name.getMethodName() );
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "MemorizePlaceholder()", myClipBoard.getMethod() );
 
-     // Testscript in Schlüsselwort-Notation
-     EN.SelectWindow( "Rechner" );
+        assertEquals( "MemorizePlaceholder_Return_1${SEP}MemorizePlaceholder_Return_2",
+                        OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizePlaceholder_Key_1" ) );
 
-     // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-     // Check the Name, Called Method and Value of Actuel object
-     assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-     assertEquals( "Rechner", myClipBoard.getObjectName() );
-     assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+        EN.EndTest();
+    }
 
-     myClipBoard.Clear();
-     EN.MemorizeLabel( "All_MethodsObj", "TC_MemorizeLabel_Key_1" );
+    /* \~german
+    *
+    * \~english
+    * 
+    * \~
+    * \author Zoltan Hrabovszki
+    * \date 2013.12.26
+    */
+    @Test
+    public void tc_MemorizeLabel() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
 
-     // Check the Name, Called Method and Value of Actuel object
-     assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-     assertEquals( "MemorizeLabel()", myClipBoard.getMethod() );
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
 
-     assertEquals( "MemorizeLabel_Return_1${SEP}MemorizeLabel_Return_2", OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizeLabel_Key_1" ) );
- }
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        myClipBoard.Clear();
+        EN.MemorizeLabel( "All_MethodsObj", "TC_MemorizeLabel_Key_1" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "MemorizeLabel()", myClipBoard.getMethod() );
+
+        assertEquals( "MemorizeLabel_Return_1${SEP}MemorizeLabel_Return_2", OKW_Memorize_Sngltn.getInstance().get( "TC_MemorizeLabel_Key_1" ) );
+    }
 
     // \~german
     // \brief
@@ -787,6 +820,8 @@ public class EN_Keywords_Test
         assertEquals( "MemorizeValue()", myClipBoard.getMethod() );
 
         assertEquals( "MemorizeValue_Return_1", OKW_Memorize_Sngltn.getInstance().get( "TC_Memorize_Key_1" ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -818,6 +853,8 @@ public class EN_Keywords_Test
         assertEquals( "No Value", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "SelectMenu()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -850,6 +887,8 @@ public class EN_Keywords_Test
         assertEquals( "Wert 3", myClipBoard.getValue().get( 2 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "SelectMenu(ArrayList<String>)", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -880,6 +919,8 @@ public class EN_Keywords_Test
         assertEquals( "Hanna", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "SelectMenu(ArrayList<String>)", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -913,6 +954,8 @@ public class EN_Keywords_Test
         assertEquals( "COL", myClipBoard.getValue().get( 0 ) );
         assertEquals( "ROW", myClipBoard.getValue().get( 1 ) );
         assertEquals( "tc_SelectTablecell", myClipBoard.getValue().get( 2 ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -936,6 +979,8 @@ public class EN_Keywords_Test
 
         assertEquals( 1, myClipBoard.getValue().size() );
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -965,6 +1010,8 @@ public class EN_Keywords_Test
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "SetFocus()", myClipBoard.getMethod() );
         assertEquals( 1, myClipBoard.getValue().size() );
+
+        EN.EndTest();
     }
 
     /** \~german
@@ -978,17 +1025,18 @@ public class EN_Keywords_Test
     @Test
     public void tc_SelectContext() throws Exception
     {
-    	OKW_CurrentObject_Sngltn CO = OKW_CurrentObject_Sngltn.getInstance();
+        OKW_CurrentObject_Sngltn CO = OKW_CurrentObject_Sngltn.getInstance();
 
-    	EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( name.getMethodName() );
 
         EN.SelectContext( "Rechner" );
-        
-        
+
         assertEquals( "Rechner", CO.getWindowFN() );
-        assertEquals( "", CO.getChildFN ( ) );
+        assertEquals( "", CO.getChildFN() );
+
+        EN.EndTest();
     }
-    
+
     // \~german
     // \brief
     //
@@ -1016,9 +1064,10 @@ public class EN_Keywords_Test
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "SetFocus()", myClipBoard.getMethod() );
         assertEquals( 1, myClipBoard.getValue().size() );
+
+        EN.EndTest();
     }
 
-    
     // \~german
     // \brief
     // Prüft den Methodenaufruf Select mit einem einzelnen Wert.
@@ -1050,6 +1099,8 @@ public class EN_Keywords_Test
         assertEquals( 2, myClipBoard.getValue().size() );
         assertEquals( "Hanna", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Zoltan", myClipBoard.getValue().get( 1 ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -1082,6 +1133,8 @@ public class EN_Keywords_Test
 
         assertEquals( 1, myClipBoard.getValue().size() );
         assertEquals( "Hanna", myClipBoard.getValue().get( 0 ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -1115,6 +1168,8 @@ public class EN_Keywords_Test
         assertEquals( "SEQID_Test", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "TestSequence_1()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -1145,6 +1200,7 @@ public class EN_Keywords_Test
         assertEquals( "SetFocus()", myClipBoard.getMethod() );
         assertEquals( 1, myClipBoard.getValue().size() );
 
+        EN.EndTest();
     }
 
     // \~german
@@ -1173,6 +1229,8 @@ public class EN_Keywords_Test
         assertEquals( "Wert 3", myClipBoard.getValue().get( 2 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "SetValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -1201,8 +1259,75 @@ public class EN_Keywords_Test
         assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "SetValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
+    /**
+     * \~german
+     * Prüfung des Schlüsselwortes SetVar. 
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+    @Test
+    public void tc_SetVar() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SetVar( "myKey", "myVal" );
+        
+        EN.SelectWindow( "Rechner" );
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        EN.SetValue( "All_MethodsObj", "${myKey}" );
+
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "myVal", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "SetValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
+    }
+
+
+    /**
+     * \~german
+     * Prüfung des Schlüsselwortes SetVar. 
+     * 
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+    @Test
+    public void tc_SetVar_MV() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        EN.SetVar( "myKey1", "myVal1" );
+        EN.SetVar( "myKey2", "myVal2" );
+        
+        EN.SelectWindow( "Rechner" );
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        EN.SetValue( "All_MethodsObj", "${myKey1} + ${myKey2}" );
+
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "myVal1 + myVal2", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "SetValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
+    }
+
+    
     // \~german
     // \brief
     // Prüft den Methodenaufruf StartApp.
@@ -1222,6 +1347,8 @@ public class EN_Keywords_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "StartApp()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -1243,6 +1370,8 @@ public class EN_Keywords_Test
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "StopApp()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -1274,6 +1403,8 @@ public class EN_Keywords_Test
         assertEquals( 2, myClipBoard.getValue().size() );
         assertEquals( "CTRL-C", myClipBoard.getValue().get( 0 ) );
         assertEquals( "CTRL-V", myClipBoard.getValue().get( 1 ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -1306,6 +1437,8 @@ public class EN_Keywords_Test
         assertEquals( "1", myClipBoard.getValue().get( 0 ) );
         assertEquals( "2", myClipBoard.getValue().get( 1 ) );
         assertEquals( "CTRL A", myClipBoard.getValue().get( 2 ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -1337,6 +1470,8 @@ public class EN_Keywords_Test
         assertEquals( 2, myClipBoard.getValue().size() );
         assertEquals( "CTRL-C", myClipBoard.getValue().get( 0 ) );
         assertEquals( "CTRL-V", myClipBoard.getValue().get( 1 ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -1367,6 +1502,8 @@ public class EN_Keywords_Test
         assertEquals( "TypeKey(List<String> fpLs_Value)", myClipBoard.getMethod() );
         assertEquals( 1, myClipBoard.getValue().size() );
         assertEquals( "CTRL A", myClipBoard.getValue().get( 0 ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -1392,6 +1529,8 @@ public class EN_Keywords_Test
         assertEquals( "Wert 1", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Wert 2", myClipBoard.getValue().get( 1 ) );
         assertEquals( "Wert 3", myClipBoard.getValue().get( 2 ) );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -1415,113 +1554,115 @@ public class EN_Keywords_Test
 
         assertEquals( 1, myClipBoard.getValue().size() );
         assertEquals( "Wert", myClipBoard.getValue().get( 0 ) );
+
+        EN.EndTest();
     }
 
     /**
-	 * \~german
-	 * "Normaler" Testfall für das Schlüsselwort EN.VerifyBadge(String,String).
-	 * 
-	 *  \~english
-	 *  \~
-	 *  "Normal" test case for the keyword EN.VerifyBadge(String,String).
-	 *  \author Daniel Krüger
-	 *  \date 2019.03.25
-	 */
-	@Test
-	public void tc_VerifyBadge() throws Exception
-	{
-	    EN.BeginTest( name.getMethodName() );
-	
-	    // Testscript in Schlüsselwort-Notation
-	    EN.SelectWindow( "Rechner" );
-	
-	    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-	    // Check the Name, Called Method and Value of Actuel object
-	    assertEquals( "Rechner", myClipBoard.getObjectName() );
-	    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-	
-	    myClipBoard.Clear();
-	    
-	    EN.SetValue( "All_MethodsObj", "The one and only VerifyBadge" );
-	    EN.VerifyBadge( "All_MethodsObj", "The one and only VerifyBadge" );
-	
-	    // Check the Name, Called Method and Value of Actuel object
-	    assertEquals( 1, myClipBoard.getValue().size() );
-	    assertEquals( "The one and only VerifyBadge", myClipBoard.getValue().get( 0 ) );
-	    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-	    assertEquals( "VerifyBadge()", myClipBoard.getMethod() );
-	}
+     * \~german
+     * "Normaler" Testfall für das Schlüsselwort EN.VerifyBadge(String,String).
+     * 
+     *  \~english
+     *  \~
+     *  "Normal" test case for the keyword EN.VerifyBadge(String,String).
+     *  \author Daniel Krüger
+     *  \date 2019.03.25
+     */
+    @Test
+    public void tc_VerifyBadge() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
 
-	/**
-	 * \~german
-	 * "Normaler" Testfall für das Schlüsselwort EN.VerifyLabelREGX(String,String).
-	 * 
-	 *  \~english
-	 *  \~
-	 *  "Normal" test case for the keyword EN.VerifyLabelREGX(String,String).
-	 *  \author Zoltan Hrabovszki
-	 *  \date 2013.12.26
-	 */
-	@Test
-	public void tc_VerifyBadgeREGX() throws Exception
-	{
-	    EN.BeginTest( name.getMethodName() );
-	
-	    // Testscript in Schlüsselwort-Notation
-	    EN.SelectWindow( "Rechner" );
-	
-	    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-	    // Check the Name, Called Method and Value of Actuel object
-	    assertEquals( "Rechner", myClipBoard.getObjectName() );
-	    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-	
-	    EN.SetValue( "All_MethodsObj", "The one and only VerifyBadgeREGX" );
-	    myClipBoard.Clear();
-	    EN.VerifyBadgeREGX( "All_MethodsObj", "\\w{3} one and only VerifyBadgeREGX" );
-	
-	    // Check the Name, Called Method and Value of Actuel object
-	    assertEquals( 1, myClipBoard.getValue().size() );
-	    assertEquals( "The one and only VerifyBadgeREGX", myClipBoard.getValue().get( 0 ) );
-	    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-	    assertEquals( "VerifyBadge()", myClipBoard.getMethod() );
-	}
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
 
-	/**
-	 * \~german
-	 * "Normaler" Testfall für das Schlüsselwort EN.VerifyLabelWCM(String,String). 
-	 * 
-	 *  \~english
-	 *  "Normal" test case for the keyword EN.VerifyLabelWCM(String,String).
-	 *  \~
-	 *  "Normal" test case for the keyword EN.VerifyLabelWCM(String,String). 
-	 *  \author Zoltan Hrabovszki
-	 *  \date 2013.12.26
-	 */
-	@Test
-	public void tc_VerifyBadgeWCM() throws Exception
-	{
-	    EN.BeginTest( name.getMethodName() );
-	
-	    // Testscript in Schlüsselwort-Notation
-	    EN.SelectWindow( "Rechner" );
-	
-	    // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-	    // Check the Name, Called Method and Value of Actuel object
-	    assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-	    assertEquals( "Rechner", myClipBoard.getObjectName() );
-	    assertEquals( "SelectWindow()", myClipBoard.getMethod() );
-	
-	    EN.SetValue( "All_MethodsObj", "The one and only VerifyBadgeWCM" );
-	    myClipBoard.Clear();
-	    EN.VerifyBadgeWCM( "All_MethodsObj", "??? one and only VerifyBadgeWCM" );
-	    // Check the Name, Called Method and Value of Actuel object
-	    assertEquals( 1, myClipBoard.getValue().size() );
-	    assertEquals( "The one and only VerifyBadgeWCM", myClipBoard.getValue().get( 0 ) );
-	    assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-	    assertEquals( "VerifyBadge()", myClipBoard.getMethod() );
-	}
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-	/**
+        myClipBoard.Clear();
+
+        EN.SetValue( "All_MethodsObj", "The one and only VerifyBadge" );
+        EN.VerifyBadge( "All_MethodsObj", "The one and only VerifyBadge" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "The one and only VerifyBadge", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyBadge()", myClipBoard.getMethod() );
+    }
+
+    /**
+     * \~german
+     * "Normaler" Testfall für das Schlüsselwort EN.VerifyLabelREGX(String,String).
+     * 
+     *  \~english
+     *  \~
+     *  "Normal" test case for the keyword EN.VerifyLabelREGX(String,String).
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+    @Test
+    public void tc_VerifyBadgeREGX() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        EN.SetValue( "All_MethodsObj", "The one and only VerifyBadgeREGX" );
+        myClipBoard.Clear();
+        EN.VerifyBadgeREGX( "All_MethodsObj", "\\w{3} one and only VerifyBadgeREGX" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "The one and only VerifyBadgeREGX", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyBadge()", myClipBoard.getMethod() );
+    }
+
+    /**
+     * \~german
+     * "Normaler" Testfall für das Schlüsselwort EN.VerifyLabelWCM(String,String). 
+     * 
+     *  \~english
+     *  "Normal" test case for the keyword EN.VerifyLabelWCM(String,String).
+     *  \~
+     *  "Normal" test case for the keyword EN.VerifyLabelWCM(String,String). 
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+    @Test
+    public void tc_VerifyBadgeWCM() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
+
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
+
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+
+        EN.SetValue( "All_MethodsObj", "The one and only VerifyBadgeWCM" );
+        myClipBoard.Clear();
+        EN.VerifyBadgeWCM( "All_MethodsObj", "??? one and only VerifyBadgeWCM" );
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( 1, myClipBoard.getValue().size() );
+        assertEquals( "The one and only VerifyBadgeWCM", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifyBadge()", myClipBoard.getMethod() );
+    }
+
+    /**
      * \~german
      * \brief "Normaler" Testfall für das Schlüsselwort VerifyCaption. 
      * 
@@ -1551,6 +1692,8 @@ public class EN_Keywords_Test
         assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyCaption()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -1583,6 +1726,8 @@ public class EN_Keywords_Test
         assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyCaption()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -1616,6 +1761,8 @@ public class EN_Keywords_Test
         assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyCaption()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -1649,6 +1796,8 @@ public class EN_Keywords_Test
         assertEquals( "The one and only VerifyLabel", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyLabel()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -1682,6 +1831,8 @@ public class EN_Keywords_Test
         assertEquals( "The one and only VerifyLabel", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyLabel()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -1717,6 +1868,8 @@ public class EN_Keywords_Test
         assertEquals( "The one and only VerifyLabel", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyLabel()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -1752,6 +1905,8 @@ public class EN_Keywords_Test
         assertEquals( "2", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyMaxLength()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -1785,6 +1940,8 @@ public class EN_Keywords_Test
         assertEquals( "The one and only VerifyPlaceholder", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyPlaceholder()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -1818,6 +1975,8 @@ public class EN_Keywords_Test
         assertEquals( "The one and only VerifyPlaceholder", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyPlaceholder()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -1852,6 +2011,8 @@ public class EN_Keywords_Test
         assertEquals( "The one and only VerifyPlaceholder", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyPlaceholder()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -1887,6 +2048,8 @@ public class EN_Keywords_Test
         assertEquals( "YES", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyExists()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     // \~german
@@ -1931,6 +2094,7 @@ public class EN_Keywords_Test
         //    assertEquals( "VerifyHasFocus()", myClipBoard.getMethod() );
         //    assertEquals( 1, myClipBoard.getValue().size() );
 
+        EN.EndTest();
     }
 
     /**
@@ -1976,9 +2140,9 @@ public class EN_Keywords_Test
         //    assertEquals( "VerifyIsActive()", myClipBoard.getMethod() );
         //    assertEquals( 1, myClipBoard.getValue().size() );
 
+        EN.EndTest();
     }
 
-    
     /** \~german
      *
      *
@@ -2019,6 +2183,8 @@ public class EN_Keywords_Test
         assertEquals( "Sollwert_2", myClipBoard.getValue().get( 1 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /** \~german
@@ -2029,85 +2195,87 @@ public class EN_Keywords_Test
     *  @author Zoltan Hrabovszki
     *  @date 2013-12-26
     */
-   @Test
-   public void tc_VerifySelectedValueWCM() throws Exception
-   {
-       EN.BeginTest( name.getMethodName() );
+    @Test
+    public void tc_VerifySelectedValueWCM() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
 
-       // Testscript in Schlüsselwort-Notation
-       EN.SelectWindow( "Rechner" );
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
 
-       // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-       // Check the Name, Called Method and Value of Actuel object
-       assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-       assertEquals( "Rechner", myClipBoard.getObjectName() );
-       assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-       EN.SetValue( "All_MethodsObj", "Sollwert_Einstellen" );
-       // Einzelner Wert
-       EN.VerifySelectedValueWCM( "All_MethodsObj", "?ollwert_Einstellen" );
+        EN.SetValue( "All_MethodsObj", "Sollwert_Einstellen" );
+        // Einzelner Wert
+        EN.VerifySelectedValueWCM( "All_MethodsObj", "?ollwert_Einstellen" );
 
-       // Check the Name, Called Method and Value of Actuel object
-       assertEquals( "Sollwert_Einstellen", myClipBoard.getValue().get( 0 ) );
-       assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-       assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Sollwert_Einstellen", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
 
-       // Mehrerer Werte
-       EN.SetValue( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
-       EN.VerifySelectedValueWCM( "All_MethodsObj", "?ollwert_1${SEP}?ollwert_2" );
+        // Mehrerer Werte
+        EN.SetValue( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
+        EN.VerifySelectedValueWCM( "All_MethodsObj", "?ollwert_1${SEP}?ollwert_2" );
 
-       // Check the Name, Called Method and Value of Actuel object
-       assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
-       assertEquals( "Sollwert_2", myClipBoard.getValue().get( 1 ) );
-       assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-       assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
-   }
-   
-   
-   /** \~german
-   *
-   *
-   *  \~english
-   *  \~
-   *  @author Zoltan Hrabovszki
-   *  @date 2013-12-26
-   */
-  @Test
-  public void tc_VerifySelectedValueREGX() throws Exception
-  {
-      EN.BeginTest( name.getMethodName() );
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Sollwert_2", myClipBoard.getValue().get( 1 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
 
-      // Testscript in Schlüsselwort-Notation
-      EN.SelectWindow( "Rechner" );
+        EN.EndTest();
+    }
 
-      // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
-      // Check the Name, Called Method and Value of Actuel object
-      assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
-      assertEquals( "Rechner", myClipBoard.getObjectName() );
-      assertEquals( "SelectWindow()", myClipBoard.getMethod() );
+    /** \~german
+    *
+    *
+    *  \~english
+    *  \~
+    *  @author Zoltan Hrabovszki
+    *  @date 2013-12-26
+    */
+    @Test
+    public void tc_VerifySelectedValueREGX() throws Exception
+    {
+        EN.BeginTest( name.getMethodName() );
 
-      EN.SetValue( "All_MethodsObj", "Sollwert_Einstellen" );
-      // Einzelner Wert
-      EN.VerifySelectedValueREGX( "All_MethodsObj", "Sollwert_Einstellen" );
+        // Testscript in Schlüsselwort-Notation
+        EN.SelectWindow( "Rechner" );
 
-      // Check the Name, Called Method and Value of Actuel object
-      assertEquals( "Sollwert_Einstellen", myClipBoard.getValue().get( 0 ) );
-      assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-      assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
+        // Soll/Ist-Vergleich: Ist das Richtige Fenster gesetzt?
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner", myClipBoard.getObjectName() );
+        assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-      // Mehrerer Werte
-      EN.SetValue( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
-      EN.VerifySelectedValueREGX( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
+        EN.SetValue( "All_MethodsObj", "Sollwert_Einstellen" );
+        // Einzelner Wert
+        EN.VerifySelectedValueREGX( "All_MethodsObj", "Sollwert_Einstellen" );
 
-      // Check the Name, Called Method and Value of Actuel object
-      assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
-      assertEquals( "Sollwert_2", myClipBoard.getValue().get( 1 ) );
-      assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
-      assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
-  }
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Sollwert_Einstellen", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
 
-  
-   /** \~german
+        // Mehrerer Werte
+        EN.SetValue( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
+        EN.VerifySelectedValueREGX( "All_MethodsObj", "Sollwert_1${SEP}Sollwert_2" );
+
+        // Check the Name, Called Method and Value of Actuel object
+        assertEquals( "Sollwert_1", myClipBoard.getValue().get( 0 ) );
+        assertEquals( "Sollwert_2", myClipBoard.getValue().get( 1 ) );
+        assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
+        assertEquals( "VerifySelectedValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
+    }
+
+    /** \~german
      * 
      *
      *  \~english
@@ -2154,8 +2322,9 @@ public class EN_Keywords_Test
 
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyTablecellValue()", myClipBoard.getMethod() );
-    }
 
+        EN.EndTest();
+    }
 
     /** \~german
      * 
@@ -2204,9 +2373,10 @@ public class EN_Keywords_Test
 
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyTablecellValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
-    
     /** \~german
      * 
      *
@@ -2254,9 +2424,10 @@ public class EN_Keywords_Test
 
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyTablecellValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
-    
     /**
      * \~german
      * \brief "Normaler" Testfall für das Schlüsselwort VerifyCaption. 
@@ -2280,6 +2451,9 @@ public class EN_Keywords_Test
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+        EN.SetValue( "All_MethodsObj", "The one and only Value" );
+        myClipBoard.Clear();
+
         EN.VerifyTooltip( "All_MethodsObj", "The one and only Value" );
 
         // Check the Name, Called Method and Value of Actuel object
@@ -2287,6 +2461,8 @@ public class EN_Keywords_Test
         assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyTooltip()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -2313,6 +2489,8 @@ public class EN_Keywords_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
+        myClipBoard.Clear();
+
         EN.VerifyTooltipREGX( "All_MethodsObj", "\\w{3} one and only Value" );
 
         // Check the Name, Called Method and Value of Actuel object
@@ -2320,6 +2498,8 @@ public class EN_Keywords_Test
         assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyTooltip()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -2345,7 +2525,9 @@ public class EN_Keywords_Test
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
-        EN.SetValue("All_MethodsObj", "The one and only Value" );
+        EN.SetValue( "All_MethodsObj", "The one and only Value" );
+        myClipBoard.Clear();
+
         EN.VerifyTooltipWCM( "All_MethodsObj", "??? one and only Value" );
 
         // Check the Name, Called Method and Value of Actuel object
@@ -2353,6 +2535,8 @@ public class EN_Keywords_Test
         assertEquals( "The one and only Value", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyTooltip()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -2378,6 +2562,8 @@ public class EN_Keywords_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
+        myClipBoard.Clear();
+
         EN.VerifyValue( "All_MethodsObj", "The one and only Value" );
 
         // Check the Name, Called Method and Value of Actuel object
@@ -2386,6 +2572,8 @@ public class EN_Keywords_Test
 
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /** 
@@ -2412,6 +2600,8 @@ public class EN_Keywords_Test
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+        myClipBoard.Clear();
+
         // Kommen auch mehrere Sollwerte im Objekt ab?
         EN.VerifyValue( "AllMethods_MultipleValues", "1. Value${SEP}2. Value${SEP}3. Value" );
 
@@ -2424,6 +2614,8 @@ public class EN_Keywords_Test
 
         assertEquals( "Rechner.AllMethods_MultipleValues", myClipBoard.getObjectName() );
         assertEquals( "VerifyValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -2449,6 +2641,8 @@ public class EN_Keywords_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
+        myClipBoard.Clear();
+
         EN.VerifyValueWCM( "All_MethodsObj", "??? one and only Value" );
 
         // Check the Name, Called Method and Value of Actuel object
@@ -2461,6 +2655,8 @@ public class EN_Keywords_Test
         EN.VerifyValueWCM( "All_MethodsObj", "The one and only Value" );
         EN.VerifyValueWCM( "All_MethodsObj", "??? ??? ??? ???? ?????" );
         EN.VerifyValueWCM( "All_MethodsObj", "* * * * *" );
+
+        EN.EndTest();
     }
 
     /** 
@@ -2487,6 +2683,8 @@ public class EN_Keywords_Test
         assertEquals( "Rechner", myClipBoard.getObjectName() );
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
+        myClipBoard.Clear();
+
         // Kommen auch mehrere Sollwerte im Objekt ab?
         EN.VerifyValueWCM( "AllMethods_MultipleValues", "#. Value${SEP}#. Value${SEP}#. Value" );
 
@@ -2499,6 +2697,8 @@ public class EN_Keywords_Test
 
         assertEquals( "Rechner.AllMethods_MultipleValues", myClipBoard.getObjectName() );
         assertEquals( "VerifyValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -2524,6 +2724,8 @@ public class EN_Keywords_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
+        myClipBoard.Clear();
+
         EN.VerifyValueREGX( "All_MethodsObj", "\\w{3} one and only Value" );
 
         // Check the Name, Called Method and Value of Actuel object
@@ -2533,6 +2735,7 @@ public class EN_Keywords_Test
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyValue()", myClipBoard.getMethod() );
 
+        EN.EndTest();
     }
 
     /** 
@@ -2571,8 +2774,10 @@ public class EN_Keywords_Test
 
         assertEquals( "Rechner.AllMethods_MultipleValues", myClipBoard.getObjectName() );
         assertEquals( "VerifyValue()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
-    
+
     /**
      * \~german
      * "Normaler" Testfall für das Schlüsselwort EN.VerifyMinLength(String,String). 
@@ -2606,8 +2811,10 @@ public class EN_Keywords_Test
         assertEquals( "2", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyMinLength()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
-    
+
     /**
      * \~german
      * "Normaler" Testfall für das Schlüsselwort EN.VerifyErrorMSG(String,String).
@@ -2632,7 +2839,7 @@ public class EN_Keywords_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         myClipBoard.Clear();
-        
+
         EN.SetValue( "All_MethodsObj", "The one and only VerifyBadge" );
         EN.VerifyErrorMSG( "All_MethodsObj", "The one and only VerifyBadge" );
 
@@ -2641,8 +2848,10 @@ public class EN_Keywords_Test
         assertEquals( "The one and only VerifyBadge", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyErrorMSG()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
-    
+
     /**
      * \~german
      * "Normaler" Testfall für das Schlüsselwort EN.VerifyErrorMSG_REGX(String,String).
@@ -2675,6 +2884,8 @@ public class EN_Keywords_Test
         assertEquals( "The one and only VerifyBadgeREGX", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyErrorMSG()", myClipBoard.getMethod() );
+
+        EN.EndTest();
     }
 
     /**
@@ -2702,6 +2913,7 @@ public class EN_Keywords_Test
         assertEquals( "SelectWindow()", myClipBoard.getMethod() );
 
         EN.SetValue( "All_MethodsObj", "The one and only VerifyBadgeWCM" );
+        
         myClipBoard.Clear();
         EN.VerifyErrorMSG_WCM( "All_MethodsObj", "??? one and only VerifyBadgeWCM" );
         // Check the Name, Called Method and Value of Actuel object
@@ -2709,6 +2921,7 @@ public class EN_Keywords_Test
         assertEquals( "The one and only VerifyBadgeWCM", myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "VerifyErrorMSG()", myClipBoard.getMethod() );
-    }
 
+        EN.EndTest();
+    }
 }

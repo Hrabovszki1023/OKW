@@ -1,12 +1,16 @@
 package okw.seselect;
 
 import static org.junit.Assert.*;
+
+import org.junit.FixMethodOrder;
+
 import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
 /**
 * \~
@@ -14,6 +18,7 @@ import org.junit.rules.TestName;
 * 
 * @author zoltan
 */
+@FixMethodOrder( MethodSorters.NAME_ASCENDING )
 public class SeSelect_EN_Test
 {
   protected static String ApplicationName;
@@ -300,6 +305,8 @@ public class SeSelect_EN_Test
     EN.SelectWindow( "SeListBox" );
     EN.VerifyExists( "NichtVorhanden", "YES" );
 
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   // \~german
@@ -424,6 +431,9 @@ public class SeSelect_EN_Test
 
     // Actuall Value: "Wähle eine Blume aus"
     EN.VerifyTooltip( "Künstler", "Title: Artis" );
+
+    EN.StopApp( ApplicationName );
+    EN.EndTest();
   }
 
   @Test

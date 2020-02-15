@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import okw.OKW_Const_Sngltn;
 import okw.gui.OKWLocator;
+import okw.gui.OKWLocatorBase;
 
 /*
     ==============================================================================
@@ -143,7 +144,7 @@ public class SeSelect extends SeAnyChildWindow
     /**
      *  @copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
      */
-    public SeSelect( String Locator, OKWLocator... Locators )
+    public SeSelect( String Locator, OKWLocatorBase... Locators )
     {
         super( Locator, Locators );
     }

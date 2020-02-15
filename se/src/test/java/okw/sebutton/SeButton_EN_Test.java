@@ -37,6 +37,9 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 
 
 import static org.junit.Assert.*;
+
+import org.junit.FixMethodOrder;
+
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
@@ -46,6 +49,7 @@ import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
     /**
      * \~
@@ -66,6 +70,7 @@ import org.junit.rules.TestName;
      * @author Zoltan Hrabovszki
      */
     @Ignore("Ignoring the whole fixture")
+    @FixMethodOrder( MethodSorters.NAME_ASCENDING )
     public class SeButton_EN_Test
     {
     	protected OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
@@ -246,7 +251,6 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("Button");
                 EN.LogIsActive("Button 1");
-
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -688,6 +692,7 @@ import org.junit.rules.TestName;
                 
                 EN.SelectWindow("Button");
                 EN.VerifyExists("Does Not Exists", "YES");
+                EN.EndTest();
         }
 
         /** \~german
@@ -709,6 +714,7 @@ import org.junit.rules.TestName;
             
             EN.SelectWindow("Button");
             EN.VerifyExists("Button 1", "NO");
+            EN.EndTest();
         }
 
   /** \~german
@@ -942,6 +948,7 @@ import org.junit.rules.TestName;
                EN.SelectWindow("Button not Active");
 
                EN.VerifyPlaceholder("Button 1", "Label für Button1: ");
+               EN.EndTest();
        }
 
        /** \~german
@@ -964,6 +971,7 @@ import org.junit.rules.TestName;
                EN.SelectWindow("Button not Active");
 
                EN.VerifyPlaceholderWCM("Button 1", "Label für Button#: ");
+               EN.EndTest();
        }
 
        /** \~german
@@ -987,6 +995,7 @@ import org.junit.rules.TestName;
                EN.SelectWindow("Button not Active");
 
                EN.VerifyPlaceholderREGX("Button 1", "Label für Button1: ");
+               EN.EndTest();
        }
 
         /** \~german

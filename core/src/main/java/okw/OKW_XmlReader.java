@@ -80,25 +80,26 @@ public class OKW_XmlReader // extends ClassLoader
 			}
 	}
 
-	/// \~german
-	/// \brief Lies den TextContent eines Tag.
-	///
-	/// \param fpsXPathExpression XPath des Tags, welches gelesen werden soll
-	///
-	/// \exception OKWMessageNotFoundException Wird ausgelöst wenn nicht genau ein Wert gefunden wird.
-	///
-	/// \~english
-	/// \brief
-	///
-	/// \param ClassName Name of the Class.
-	///
-	/// \return Rreturns the Message for the given language or default language
-	/// if given languae does not exist<br/>
-	/// _"Message Not Found!"_ will be returnd, if a doesn´s exist.
-	///
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2016_02_07
+	/** \~german
+	 *  Liest den TextContent eines Tag.
+	 * 
+	 *  @param fpsXPathExpression XPath des Tags, welches gelesen werden soll
+	 *  @return
+	 * 
+	 *  @exception OKWMessageNotFoundException Wird ausgelöst wenn nicht genau ein Wert gefunden wird.
+	 * 
+	 *  \~english
+	 * 
+	 *  \param ClassName Name of the Class.
+	 * 
+	 *  \return Rreturns the Message for the given language or default language
+	 *  if given languae does not exist<br/>
+	 *  _"Message Not Found!"_ will be returnd, if a doesn´s exist.
+	 * 
+	 *  \~
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2016_02_07
+	 */
 	public String getTextContentSingleValue( String fpsXPathExpression )
 	{
 		String lvsReturn = "Message Not Found!";
@@ -115,12 +116,17 @@ public class OKW_XmlReader // extends ClassLoader
 				Node myNode = myNodeList.item(0);
 				lvsReturn = myNode.getTextContent();
 			}
-			else
+			else if (myNodeList.getLength() < 1)
 			{
 				throw new OKWMessageNotFoundException("TextContent not Found!: " + fpsXPathExpression );
 			}
+			else
+	        {
+	            throw new OKWMessageNotFoundException("TextContent not Unique!: " + fpsXPathExpression );
+	        }
 		}
-		catch (OKWMessageNotFoundException | XPathExpressionException e)
+		 // OKWMessageNotFoundException
+		catch (XPathExpressionException e)
 		{
 			OKW_HandleException.StopRunning(e, this.getClass());
 		}

@@ -46,6 +46,7 @@ import okw.log.Logger_Sngltn;
 
 import org.junit.*;
 import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
 
 /** \~german
@@ -66,6 +67,7 @@ import org.junit.rules.TestName;
  * \author Zoltan Hrabovszki
  * \date 2016-05-07
  */
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EN_Keywords_ANTLR_Test
 {
     private static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
