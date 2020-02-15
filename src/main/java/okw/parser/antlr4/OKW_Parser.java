@@ -11,7 +11,8 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.ArrayList;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
+//@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
+
 public class OKW_Parser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.3", RuntimeMetaData.VERSION); }
 

@@ -14,7 +14,7 @@ public interface OKW_ParserListener extends ParseTreeListener {
 	 * Enter a parse tree produced by {@link OKW_Parser#okw_env_var}.
 	 * @param ctx the parse tree
 	 */
-	void enterOkw_env_var(@NotNull OKW_Parser.Okw_env_varContext ctx);
+	void enterOkw_env_var( OKW_Parser.Okw_env_varContext ctx);
 	/**
 	 * Exit a parse tree produced by {@link OKW_Parser#okw_env_var}.
 	 * @param ctx the parse tree
