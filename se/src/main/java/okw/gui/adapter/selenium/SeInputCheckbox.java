@@ -47,7 +47,6 @@ import okw.exceptions.OKWNotAllowedValueException;
 import okw.gui.*;
 
     /**
-     * 
      * @ingroup groupSeleniumChildGUIAdapter 
      * 
      * \~german
@@ -134,7 +133,8 @@ import okw.gui.*;
          *  
          *  Alle Methoden dieser Klasse verwenden diese Methode um den aktuellen Zustand zu ermitteln.
          *  
-         *  \note WaitForMe() wird inder aufrufenden Methode ausgeführt.
+         *  \note WaitForMe() wird bereits in der aufrufenden Methode ausgeführt, d.h. wenn diese Methode aufgerufen wird, 
+         *  dann ist das korrespondiere GUI-Objket bereit gefunden worden.
          *  
          *  @return true falls angehakt, sonst false
          *  

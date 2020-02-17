@@ -1,0 +1,825 @@
+package okw.material8.mat_checkbox;
+
+import static org.junit.Assert.*;
+import okw.OKW_Memorize_Sngltn;
+import okw.core.EN;
+import okw.exceptions.OKWVerifyingFailsException;
+import okw.exceptions.OKWNotAllowedValueException;
+
+import org.junit.*;
+import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
+
+
+/**
+* \~
+* @ingroup groupSeleniumChildGUIAdapterTests
+* 
+* @author zoltan
+*/
+@FixMethodOrder( MethodSorters.NAME_ASCENDING )
+public class mat_checkbox_Test
+{
+	// protected String _cvsObjektName = "SeCheckBox";
+
+	protected OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
+	
+	protected static String ApplicationName;
+	
+    @Rule
+    public TestName name = new TestName();
+	
+
+	@Test
+    public void tcClickOn() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "https://tomastrajan.github.io/angular-ngrx-material-starter#/examples/form");
+
+                // Set precondition: Set Checkboxes to "CHECKED" 
+                EN.SelectWindow("REACTIVE FORM USING A FORM BUILDER");
+
+                EN.SetValue("Request a gift", "CHECKED");
+                EN.VerifyValue("Request a gift", "CHECKED");
+
+                EN.ClickOn("Request a gift");
+                EN.VerifyValue("Request a gift", "UNCHECKED");
+
+                EN.ClickOn("Request a gift");
+                EN.VerifyValue("Request a gift", "CHECKED");
+
+                
+                EN.SetValue("Auto Save", "CHECKED");
+                EN.VerifyValue("Auto Save", "CHECKED");
+
+                EN.ClickOn("Auto Save");
+                EN.VerifyValue("Auto Save", "UNCHECKED");
+
+                EN.ClickOn("Auto Save");
+                EN.VerifyValue("Auto Save", "CHECKED");
+                
+                EN.SetValue( "Username", "Username");
+                EN.SetValue( "Password", "Password");
+                EN.SetValue( "Email", "Email@email.com");
+                EN.SetValue( "Description", "Description");
+
+                EN.VerifyValue( "Username", "Username");
+                EN.VerifyValue( "Password", "Password");
+                EN.VerifyValue( "Email", "Email@email.com");
+                EN.VerifyValue( "Description", "Description");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+	/*
+	@Test
+	public void tcLogExists() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.LogExists("Request a gift");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+         
+        }
+
+        @Test
+        public void tcLogHasFocus() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.LogHasFocus("Request a gift");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+         }
+
+
+        @Test
+        public void tcLogIsActive() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.LogIsActive("Request a gift");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+        
+        
+        // \brief
+        @Test
+        public void tcVerifyIsActive_ActualYesExpectedYes() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyIsActive("Request a gift", "YES");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        @Test
+        public void tcVerifyIsActive_ActualNoExpectedNo() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyIsActive("Disabled", "NO");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+        
+
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tcVerifyIsActive_ActuelYesExpectedNO_OKWVerifyingFailsException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyIsActive("Pilze", "NO");
+
+                EN.EndTest();
+        }
+
+        // \brief
+        // 
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tcVerifyIsActive_ActuelNoExpectedYes_OKWVerifyingFailsException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyIsActive("Disabled", "YES");
+
+                EN.EndTest();
+        }
+
+        // \brief
+        @Test
+        public void tcMemorizeIsActive() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.SetFocus("Pilze");
+
+                EN.MemorizeIsActive("Salami", "SeCheckBox_MemorizeIsActive_Salami");
+
+                assertEquals("YES", myMM.get("SeCheckBox_MemorizeIsActive_Salami"));
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        
+        // @Test
+        public void tcLogTooltip() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.LogTooltip("Salami");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        /// \brief
+        /// Logget ob ein vorhandenes objekt existiert.
+        /// 
+        @Test
+        public void tcMemorizeExists() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.MemorizeExists("Salami", "SeCheckBox_MemorizeExists_1");
+
+                assertEquals("YES", myMM.get("SeCheckBox_MemorizeExists_1"));
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        // \brief
+        @Test
+        public void tcMemorizeHasFocus() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.SetFocus("Pilze");
+
+                EN.MemorizeHasFocus("Salami", "SeCheckBox_MemorizeHasFocus_Salami");
+                EN.MemorizeHasFocus("Pilze", "SeCheckBox_MemorizeHasFocus_Pilze");
+
+                assertEquals("NO", myMM.get("SeCheckBox_MemorizeHasFocus_Salami"));
+                assertEquals("YES", myMM.get("SeCheckBox_MemorizeHasFocus_Pilze"));
+
+                EN.SetFocus("Salami");
+
+                EN.MemorizeHasFocus("Salami", "SeCheckBox_MemorizeHasFocus_Salami");
+                EN.MemorizeHasFocus("Pilze", "SeCheckBox_MemorizeHasFocus_Pilze");
+
+                assertEquals("YES", myMM.get("SeCheckBox_MemorizeHasFocus_Salami"));
+                assertEquals("NO", myMM.get("SeCheckBox_MemorizeHasFocus_Pilze"));
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        /// \brief
+        /// Speichert ob ein vorhandenes objekt existiert.
+        @Test
+        public void tcMemorizeTooltip() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.MemorizeTooltip("Salami", "SeCheckBox_MemorizeTooltip_1");
+
+                assertEquals("title: Salami", myMM.get("SeCheckBox_MemorizeTooltip_1"));
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        /// \brief
+        /// Speichert ob ein vorhandenes objekt existiert.
+        @Test
+        public void tcMemorizeValue() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.MemorizeValue("Salami", "SeCheckBox_MemorizeValue_1");
+
+                assertEquals("UNCHECKED", myMM.get("SeCheckBox_MemorizeValue_1"));
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        @Test
+        public void tcLogValue() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.LogValue("Salami");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        @Test
+        public void tcSetValue() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.SetValue("Salami", "CHECKED");
+                EN.SetValue("Pilze", "CHECKED");
+                EN.SetValue("Sardellen", "CHECKED");
+
+                EN.VerifyValue("Salami", "CHECKED");
+                EN.VerifyValue("Pilze", "CHECKED");
+                EN.VerifyValue("Sardellen", "CHECKED");
+
+                EN.SetValue("Salami", "UnChecked");
+                EN.SetValue("Pilze", "UnChecked");
+                EN.SetValue("Sardellen", "UnChecked");
+
+                EN.VerifyValue("Salami", "UNCHECKED");
+                EN.VerifyValue("Pilze", "UNCHECKED");
+                EN.VerifyValue("Sardellen", "UNCHECKED");
+
+                EN.SetValue("Salami", "Checked");
+                EN.SetValue("Pilze", "Checked");
+                EN.SetValue("Sardellen", "Checked");
+
+                EN.VerifyValue("Salami", "CHECKED");
+                EN.VerifyValue("Pilze", "CHECKED");
+                EN.VerifyValue("Sardellen", "CHECKED");
+
+                EN.SetValue("Salami", "UnChecked");
+                EN.SetValue("Pilze", "UnChecked");
+                EN.SetValue("Sardellen", "UnChecked");
+
+                EN.VerifyValue("Salami", "UNCHECKED");
+                EN.VerifyValue("Pilze", "UNCHECKED");
+                EN.VerifyValue("Sardellen", "UNCHECKED");
+
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        
+        @Test( expected = OKWNotAllowedValueException.class )
+        public void tcSetValue_OKWNotAllowedValueException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.SetValue("Salami", "Zoli");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+        
+        @Test
+        public void tcSelect() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.Select("Salami", "CHECKED");
+                EN.Select("Pilze", "CHECKED");
+                EN.Select("Sardellen", "CHECKED");
+
+                EN.VerifyValue("Salami", "CHECKED");
+                EN.VerifyValue("Pilze", "CHECKED");
+                EN.VerifyValue("Sardellen", "CHECKED");
+
+                EN.Select("Salami", "UnChecked");
+                EN.Select("Pilze", "UnChecked");
+                EN.Select("Sardellen", "UnChecked");
+
+                EN.VerifyValue("Salami", "UNCHECKED");
+                EN.VerifyValue("Pilze", "UNCHECKED");
+                EN.VerifyValue("Sardellen", "UNCHECKED");
+
+                EN.Select("Salami", "Checked");
+                EN.Select("Pilze", "Checked");
+                EN.Select("Sardellen", "Checked");
+
+                EN.VerifyValue("Salami", "CHECKED");
+                EN.VerifyValue("Pilze", "CHECKED");
+                EN.VerifyValue("Sardellen", "CHECKED");
+
+                EN.Select("Salami", "UnChecked");
+                EN.Select("Pilze", "UnChecked");
+                EN.Select("Sardellen", "UnChecked");
+
+                EN.VerifyValue("Salami", "UNCHECKED");
+                EN.VerifyValue("Pilze", "UNCHECKED");
+                EN.VerifyValue("Sardellen", "UNCHECKED");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+
+        
+        @Test( expected = OKWNotAllowedValueException.class )
+        public void tcSelect_OKWNotAllowedValueException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.Select("Salami", "Zoli");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        
+        /// \brief
+        /// Prüft die SetFocusFunktion bei Textfelder mit dem Attribute "ReadOnly"
+        /// 
+        @Test
+        public void tcSetFocus() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.SetFocus("Salami");
+                EN.VerifyHasFocus("Salami", "YES");
+                EN.VerifyHasFocus("Pilze", "NO");
+
+                EN.SetFocus("Pilze");
+                EN.VerifyHasFocus("Salami", "NO");
+                EN.VerifyHasFocus("Pilze", "YES");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        
+        @Test
+        public void tcVerifyExists_ExistsNoExpectedNo() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyExists("NotExists", "NO");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tcVerifyExists_ExistsNoExpectedYes_OKWVerifyingFailsException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyExists("NotExists", "YES");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        @Test
+        public void tcVerifyExists_ExistsYesExpectedYes() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyExists("Salami", "YES");
+
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tcVerifyExists_ExistsYesExpectedNo_OKWVerifyingFailsException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.VerifyExists("Salami", "NO");
+                
+                EN.EndTest();
+        }
+
+        // \brief
+        // Prüft die SetFocusFunktion bei Textfelder mit dem Attribute "ReadOnly"
+        // 
+        @Test
+        public void tcVerifyHasFocus() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.SetFocus("Pilze");
+                EN.VerifyHasFocus("Pilze", "YES");
+                EN.VerifyHasFocus("Salami", "NO");
+
+                EN.SetFocus("Salami");
+                EN.VerifyHasFocus("Salami", "YES");
+                EN.VerifyHasFocus("Pilze", "NO");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        // \brief
+        // 
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tcVerifyHasFocus_ActualYesExpectedNo_OKWVerifyingFailsException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.SetFocus("Pilze");
+                EN.VerifyHasFocus("Salami", "NO");
+                EN.VerifyHasFocus("Pilze", "NO");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        // \brief
+        // 
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tcVerifyHasFocus_ActualNoExpectedYes_OKWVerifyingFailsException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.SetFocus("Salami");
+                EN.VerifyHasFocus("Salami", "YES");
+                
+                // Expected Exception...
+                EN.VerifyHasFocus("Pilze", "YES");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        
+        @Test
+        public void tcVerifyTooltip() throws Exception
+        {
+            try
+            {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.VerifyTooltip("Salami", "title: Salami");
+
+                // ImplementationMatrix.Instance.SetImplementation(cvsObjektName, "VerifyTooltip", "P");
+            }
+            catch ( Exception e )
+            {
+                // ImplementationMatrix.Instance.SetImplementation(cvsObjektName, "VerifyTooltip", "F");
+                throw e;
+            }
+        }
+
+        
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tcVerifyTooltip_OKWVerifyingFailsException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.VerifyTooltip("Salami", "XXXTitle: Salami");
+
+                EN.EndTest();
+        }
+
+        @Test
+        public void tcVerifyTooltipWCM() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.VerifyTooltipWCM("Salami", "title: Salami");
+
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tcVerifyTooltipWCM_OKWVerifyingFailsException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.VerifyTooltipWCM("Salami", "#itle: Salami");
+
+                EN.EndTest();
+        }
+        
+        
+        @Test
+        public void tcVerifyTooltipREGX() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.VerifyTooltipREGX("Salami", "title: Salami");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tcVerifyTooltipREGX_OKWVerifyingFailsException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.VerifyTooltipREGX("Salami", "\\Witle: Salami");
+
+                EN.EndTest();
+        }
+
+        
+        @Test
+        public void tcVerifyLabel() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.VerifyLabel("Salami", "Salami");
+
+        }
+
+        
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tcVerifyLabel_OKWVerifyingFailsException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.VerifyLabel("Salami", "Sulami");
+
+                EN.EndTest();
+        }
+
+
+        @Test
+        public void tcVerifyLabelWCM() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.VerifyLabelWCM("Salami", "?alami");
+
+                EN.EndTest();
+         }
+
+        
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tcVerifyLabelWCM_OKWVerifyingFailsException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.VerifyLabelWCM("Salami", "?ulami");
+
+                EN.EndTest();
+        }
+       
+        
+        @Test
+        public void tcVerifyLabelREGX() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.VerifyLabelREGX("Salami", "Salami");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        @Test( expected = OKWVerifyingFailsException.class )
+        public void tcVerifyLabelREGX_OKWVerifyingFailsException() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.VerifyLabelREGX("Salami", ".ulami");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        @Test
+        public void tcVerifyValue() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+
+                EN.SetValue("Salami", "CHECKED");
+
+                EN.VerifyValue("Salami", "CHECKED");
+
+                EN.SetValue("Salami", "UNCHECKED");
+
+                EN.VerifyValue("Salami", "UNCHECKED");
+
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        @Test
+        public void tcMemorizeLabel() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.MemorizeLabel("Salami", "SeCheckBox_MemorizeLabel_1");
+
+                assertEquals("Salami", myMM.get("SeCheckBox_MemorizeLabel_1"));
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+
+        @Test
+        public void tcLogLabel() throws Exception
+        {
+                EN.BeginTest( name.getMethodName() );
+                EN.StartApp( ApplicationName );
+                EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
+
+                EN.SelectWindow("SeCheckBox");
+                EN.LogLabel("Salami");
+
+                EN.StopApp( ApplicationName );
+                EN.EndTest();
+        }
+*/
+        
+ 
+}
