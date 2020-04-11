@@ -1,65 +1,65 @@
-// Generated from OKW_Parser.g4 by ANTLR 4.7.2
+// Generated from OKWCoreParser.g4 by ANTLR 4.8
 
-package okw.parser.antlr4;
+package okw.parser.antlr4.core;
 
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
- * This class provides an empty implementation of {@link OKW_ParserVisitor},
+ * This class provides an empty implementation of {@link OKWCoreParserVisitor},
  * which can be extended to create a visitor which only needs to handle a subset
  * of the available methods.
  *
  * @param <T> The return type of the visit operation. Use {@link Void} for
  * operations with no return type.
  */
-public class OKW_ParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements OKW_ParserVisitor<T> {
+public class OKWCoreParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements OKWCoreParserVisitor<T> {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitRoot(OKW_Parser.RootContext ctx) { return visitChildren(ctx); }
+	@Override public T visitRoot(OKWCoreParser.RootContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitOkw_internal_var(OKW_Parser.Okw_internal_varContext ctx) { return visitChildren(ctx); }
+	@Override public T visitOkw_internal_var(OKWCoreParser.Okw_internal_varContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitOkw_typekey(OKW_Parser.Okw_typekeyContext ctx) { return visitChildren(ctx); }
+	@Override public T visitOkw_typekey(OKWCoreParser.Okw_typekeyContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitKeyvalue(OKW_Parser.KeyvalueContext ctx) { return visitChildren(ctx); }
+	@Override public T visitKeyvalue(OKWCoreParser.KeyvalueContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitOkw_env_var(OKW_Parser.Okw_env_varContext ctx) { return visitChildren(ctx); }
+	@Override public T visitOkw_env_var(OKWCoreParser.Okw_env_varContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnvvalue(OKW_Parser.EnvvalueContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEnvvalue(OKWCoreParser.EnvvalueContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitText(OKW_Parser.TextContext ctx) { return visitChildren(ctx); }
+	@Override public T visitText(OKWCoreParser.TextContext ctx) { return visitChildren(ctx); }
 }

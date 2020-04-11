@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-parser grammar OKW_Parser;
+parser grammar OKWSeParser;
 
 @header {
-package okw.parser.antlr4;
+package okw.parser.antlr4.se;
 }
-options { tokenVocab=OKW_Lexer; } 
 
+options { tokenVocab=OKWSeLexer; }
 
 /*
  * Parser Rules
@@ -17,11 +17,11 @@ options { tokenVocab=OKW_Lexer; }
 root : ( okw_internal_var
        | okw_env_var
        | okw_typekey
-       | text 
+       | text
        )+ ;
 
 // OKW variablen
-okw_internal_var   : KLAMMERAUF 
+okw_internal_var   : KLAMMERAUF
                    ( FOLDER_LOGMESSAGES
                    | FOLDER_XML
                    | FILE_OKW_CONST_XML
@@ -32,11 +32,11 @@ okw_internal_var   : KLAMMERAUF
                    | FILE_OKW_MEMORIZE_XML ) KLAMMERZU
                    ;
 
-okw_typekey        : KLAMMERAUF KEYPREFIX keyvalue  KLAMMERZU ;
+okw_typekey        : KLAMMERAUF keyvalue ( '+' keyvalue )* KLAMMERZU ;
 keyvalue           : KEYVALUE ;
 
 okw_env_var        : KLAMMERAUF envvalue KLAMMERZU;
 
 envvalue           : ENVVAL ;
-                     
+
 text               : TEXT ;

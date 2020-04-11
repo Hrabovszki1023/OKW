@@ -41,11 +41,12 @@ import static org.junit.Assert.*;
             // Environment.SetEnvironmentVariable("TestEnvVar", "");
         }
 
-        /// \brief
-        /// Prüft das lesen eines gemerkten Wertes.
-        /// 
-        /// \author Zoltan Hrabovszki
-        /// \date 2014.01.14
+    /**
+     *  Prüft das Einfügen eines gemerkten Wertes mit den Schlüsselwörtern MEM.
+     * 
+     *  @author Zoltan Hrabovszki
+     *  @date 2014.01.14
+     */
         @Test
         public void TC_ParseMe_MemorizedValue()
         {
@@ -71,7 +72,15 @@ import static org.junit.Assert.*;
         }
 
         /**
-         *  Prüft einen "Schlüssel.Mit.Punkt"
+         *  Prüft das Einfügen eines gemerkten Wertes mit einem "Schlüssel.Mit.Punkten"
+         *  
+         *  Akzeptanz Kriterium als Gherkin++:
+         *   
+         *  WHEN Value IS "myValue" AND 
+         *       Value IS #Memorize "Key.1" AND
+         *       ParsMe is "${Key.1}"
+         *  THEN ReturnOfParse IS "myValue" 
+         *   
          *  
          *  \author Zoltan Hrabovszki
          *  \date 2019.11.28
@@ -82,11 +91,11 @@ import static org.junit.Assert.*;
             
             OKW_Memorize_Sngltn.reset();
             
-            OKW_Memorize_Sngltn.getInstance().set("Schluessel.1", "Wert des Schlüssels 1.");
-            OKW_Memorize_Sngltn.getInstance().set("Schluessel.2", "Wert des Schlüssels 2.");
+            OKW_Memorize_Sngltn.getInstance().set("Key.1", "myValue 1.");
+            OKW_Memorize_Sngltn.getInstance().set("Key.2", "myValue 2.");
              
-            assertEquals( "Wert des Schlüssels 1.", Parser.ParseMe( "${Schluessel.1}" ) );
-            assertEquals( "Wert des Schlüssels 2.", Parser.ParseMe( "${Schluessel.2}" ) );
+            assertEquals( "myValue 1.", Parser.ParseMe( "${Key.1}" ) );
+            assertEquals( "myValue 2.", Parser.ParseMe( "${Key.2}" ) );
         }
  
         /**
@@ -125,11 +134,16 @@ import static org.junit.Assert.*;
     assertEquals( sExpected, sActual );
   }
 
-  // \brief Prüft ob die OKW-Constanten nicht verändert werden.
-  // Die OKW 
-  //
-  // \author Zoltan Hrabovszki
-  // \date 2014.10.14
+  /** Prüft ob die OKW-Konstanten nicht verändert werden.
+   *  
+   *  Akzeptanzkriterium Gherkin++:
+   *  
+   *  WHEN ParsMe IS "${IGNORE}" | "${DELETE}" | "${EMPTY}" | "${SEP}" | "${VSEP}" | "${HSEP}"
+   *  THEN ReturnOf ParsMe IS "${IGNORE}" | "${DELETE}" | "${EMPTY}" | "${SEP}" | "${VSEP}" | "${HSEP}"
+   *
+   *  @author Zoltan Hrabovszki
+   *  @date 2014.10.14
+   */
   @Test
   public void TC_ParseMe_OKW_Consts()
   {
@@ -143,10 +157,16 @@ import static org.junit.Assert.*;
     assertEquals( sExpected, sActual );
   }
   
-        /// \brief Prüft, ob ein leerer String verarbeitet wird.
-        /// 
-        /// \author Zoltan Hrabovszki
-        /// \date 2014.10.14
+  /** Prüft, ob ein leerer String verarbeitet wird.
+         * 
+         *  Akzeptance Kriterion:
+         *  
+         *  WHEN StringToParse IS " "
+         *  THEN ParsedString IS " "
+         * 
+         *  @author Zoltan Hrabovszki
+         *  @date 2014.10.14
+         */
         @Test
         public void TC_ParseMe_StringWithBlank()
         {

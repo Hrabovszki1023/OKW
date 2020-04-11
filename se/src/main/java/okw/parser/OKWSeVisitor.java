@@ -4,15 +4,15 @@ package okw.parser;
 // import org.antlr.v4.runtime.tree.*;
 
 import okw.*;
-import okw.parser.antlr4.core.*;
-//import okw.parser.antlr4.core.OKWCoreParser.KeyvalueContext;
+import okw.parser.antlr4.se.*;
+import okw.parser.antlr4.se.OKWSeParser;
 
 
-    public class OKW_Visitor extends OKWCoreParserBaseVisitor<String>
+    public class OKWSeVisitor extends OKWSeParserBaseVisitor<String>
     {
         
     	@Override
-        public String visitOkw_env_var( OKWCoreParser.Okw_env_varContext context)
+        public String visitOkw_env_var( OKWSeParser.Okw_env_varContext context)
         {
             String lvsReturn = context.getChild(1).getText();
             
@@ -53,7 +53,7 @@ import okw.parser.antlr4.core.*;
         }
 
     	@Override
-        public String visitOkw_internal_var( OKWCoreParser.Okw_internal_varContext context)
+        public String visitOkw_internal_var( OKWSeParser.Okw_internal_varContext context)
         {
             String lvsReturn = context.getChild(1).getText();
             
@@ -98,7 +98,7 @@ import okw.parser.antlr4.core.*;
         }
 
     	@Override
-    	public String visitKeyvalue( OKWCoreParser.KeyvalueContext context )
+    	public String visitKeyvalue( OKWSeParser.KeyvalueContext context )
     	{
            String lvsReturn = context.getChild(0).getText();
             
@@ -122,7 +122,7 @@ import okw.parser.antlr4.core.*;
     	}
     	
     	@Override
-        public String visitText( OKWCoreParser.TextContext context )
+        public String visitText( OKWSeParser.TextContext context )
         {
             String lvsReturn = context.getText();
 

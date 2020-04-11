@@ -3,31 +3,30 @@ package okw.parser;
 import java.util.ArrayList;
 
 import org.antlr.v4.runtime.*;
-//import org.antlr.v4.runtime.Misc;
-//import Antlr4.Runtime.Tree;
 
-import okw.parser.antlr4.*;
-import okw.parser.antlr4.OKW_Parser.RootContext;
+import okw.parser.antlr4.core.*;
+import okw.parser.antlr4.core.OKWCoreParser.RootContext;
 
 
 
     public class Parser
     {
-        /// \~german
-        /// \brief
-        /// Parst einen _List&lt string&gt, ersetzt die Parser-Schlüsslewörter durch Werte.
-        /// 
-        /// \param fpLsString2Parse Liste, die geparst werden muss.
-        /// \return Parser Schlüssel sind durch Werte ersetzt.\return
-        /// \~english
-        /// \brief
-        /// 
-        /// 
-        /// \param fpLsString2Parse Functional name of the object
-        ///
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014-09-21
+        /** \~german
+         *  Parst einen List&lt string&gt und ersetzt die Parser-Schlüsselewörter durch Werte.
+         *  
+         *  @param fpLsString2Parse Liste, die geparst werden soll.
+         *  @return Parser Schlüssel sind durch Werte ersetzt.
+         *  
+         *  \~english
+         *  Parses a List&lt string&gt and replaces the parser keywords with values.
+         *  
+         *  \param fpLsString2Parse List to be parsed.
+         * @return Parser keys are replaced by values.
+         * 
+         *  \~
+         *  \author Zoltan Hrabovszki
+         *  \date 2014-09-21
+         */
         public static ArrayList<String> ParseMe( ArrayList<String> fpLsString2Parse )
         {
             ArrayList<String> lvLsReturn =  new ArrayList<String>();
@@ -47,29 +46,28 @@ import okw.parser.antlr4.OKW_Parser.RootContext;
             return lvLsReturn;
         }
         
-        /// \~german
-        /// \brief
-        /// Parst einen _string und ersetzt die Parser-Schlüsslewörter durch Werte.
-        /// 
-        /// \param fpsString2Parse String, der geparst werden muss.
-        /// \return Parser Schlüssel sind durch Werte ersetzt.\return
-        /// \~english
-        /// \brief
-        /// 
-        /// 
-        /// \param fpsString2Parse Functional name of the object.
-        ///
-        /// \~
-        /// \author Zoltan Hrabovszki
-        /// \date 2014-09-21
+        /** \~german
+         *  Parst einen _string und ersetzt die Parser-Schlüsslewörter durch Werte.
+         *  
+         *  @param fpsString2Parse String, der geparst werden muss.
+         *  @return Parser Schlüssel sind durch Werte ersetzt.
+         *  
+         *  \~english
+         *  
+         *  @param fpsString2Parse Functional name of the object.
+         * 
+         *  \~
+         *  @author Zoltan Hrabovszki
+         *  @date 2014-09-21
+         */
         public static String ParseMe( String fpsString2Parse )
         
         {
             // StringReader inputStream = new StringReader(fpsString2Parse);
             ANTLRInputStream input = new ANTLRInputStream(fpsString2Parse);
-            OKW_Lexer lexer = new OKW_Lexer(input);
+            OKWCoreLexer lexer = new OKWCoreLexer(input);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
-            OKW_Parser parser = new OKW_Parser(tokens);
+            OKWCoreParser parser = new OKWCoreParser(tokens);
             RootContext tree = parser.root();
 
             //Console.WriteLine( tree.ToStringTree(parser));

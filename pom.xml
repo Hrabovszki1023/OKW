@@ -13,34 +13,46 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<additionalparam>-Xdoclint:none</additionalparam>
+<!-- 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
+		<antlr.version>4.8-1</antlr.version>
+		<junit.version>4.12</junit.version>
 	</properties>
 
 	<build>
 		<!-- To define the plugin version in your parent POM -->
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.antlr</groupId>
-					<artifactId>antlr4-maven-plugin</artifactId>
-					<version>4.7.2</version>
-					<configuration>
-						<listener>true</listener>
-						<visitor>true</visitor>
-						<!-- <includes>**./*.g4</includes>  -->
-						<outputDirectory>${basedir}/src/main/java/okw/parser/antlr4</outputDirectory>
-						<sourceDirectory>${basedir}/src/main/antlr4/grammar</sourceDirectory>
-					</configuration>
-				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.20.1</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+<!-- 		<pluginManagement> -->
+<!-- 			<plugins> -->
+<!-- 				<plugin> -->
+<!-- 					<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 					<artifactId>maven-surefire-plugin</artifactId> -->
+<!-- 					<version>2.20.1</version> -->
+<!-- 				</plugin> -->
+<!-- 			</plugins> -->
+<!-- 		</pluginManagement> -->
 		<!-- To use the plugin goals in your POM or parent POM -->
 		<plugins>
+			<plugin>
+				<groupId>org.antlr</groupId>
+				<artifactId>antlr4-maven-plugin</artifactId>
+				<version>${antlr.version}</version>
+				<executions>
+					<execution>
+						<id>antlr</id>
+						<goals>
+							<goal>antlr4</goal>
+						</goals>
+						<configuration>
+							<listener>true</listener>
+							<visitor>true</visitor>
+							<includes>**./*.g4</includes>
+							<outputDirectory>${basedir}/src/main/java/okw/parser/antlr4</outputDirectory>
+							<sourceDirectory>${basedir}/src/main/antlr4</sourceDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
 			<plugin>
 				<groupId>com.github.igoryeremin</groupId>
 				<artifactId>doxygen-report-maven-plugin</artifactId>
@@ -163,7 +175,9 @@
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>antlr4-runtime</artifactId>
-			<version>4.7.2</version>
+			<version>4.8-1</version>
+			<type>jar</type>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.antlr</groupId>
