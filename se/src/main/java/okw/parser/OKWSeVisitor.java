@@ -1,130 +1,100 @@
 
 package okw.parser;
 
-// import org.antlr.v4.runtime.tree.*;
 
-import okw.*;
+import okw.gui.adapter.selenium.SeTypeKeysCharSequence;
 import okw.parser.antlr4.se.*;
 import okw.parser.antlr4.se.OKWSeParser;
-
+import okw.parser.antlr4.se.OKWSeParser.RootContext;
+import okw.parser.antlr4.se.OKWSeParser.ValueContext;
 
     public class OKWSeVisitor extends OKWSeParserBaseVisitor<String>
     {
+        SeTypeKeysCharSequence myCharSequence = new SeTypeKeysCharSequence();
+        
+        @Override
+        public String visitAlt(OKWSeParser.AltContext ctx) { 
+            
+            String lvsReturn = visitChildren(ctx);
+            
+            System.out.println( "Modifier: ALT: \"" + lvsReturn + "\"" );
+            
+            myCharSequence.setALT();
+            
+            return lvsReturn;
+        }
+
+        @Override
+        public String visitCommand(OKWSeParser.CommandContext ctx) { 
+            
+            String lvsReturn = visitChildren(ctx);
+            
+            System.out.println( "Modifier: COMMAND" );
+            
+            myCharSequence.setCOMMAND();
+            
+            return lvsReturn;
+        }
+
+        @Override
+        public String visitShift(OKWSeParser.ShiftContext ctx) { 
+            
+            String lvsReturn = visitChildren(ctx);
+            
+            System.out.println( "Modifier: SHIFT" );
+
+            myCharSequence.setSHIFT();
+            
+            return lvsReturn;
+        }
+
+        @Override
+        public String visitCtrl(OKWSeParser.CtrlContext ctx) { 
+            
+            String lvsReturn = visitChildren(ctx);
+            
+            System.out.println( "Modifier: CTRL" );
+
+            myCharSequence.setCTRL();
+            
+            return lvsReturn;
+        }
+        
+        
+        @Override
+        public String visitKeyvalue( OKWSeParser.KeyvalueContext ctx )
+        {
+            String lvsReturn = visitChildren(ctx);
+            
+            System.out.println( "Keyvalue: " + ctx.getText() );
+            
+            myCharSequence.setKeyvalue( ctx.getText() );
+
+            return lvsReturn;
+        }
+        
+        @Override
+        public String visitValue( ValueContext ctx )
+        {
+            String lvsReturn = visitChildren(ctx);
+            
+            lvsReturn = lvsReturn + ctx.getText();
+            System.out.println( "Value: " + lvsReturn );
+            
+            myCharSequence.setText( lvsReturn );
+
+            return lvsReturn;
+        }
         
     	@Override
-        public String visitOkw_env_var( OKWSeParser.Okw_env_varContext context)
+        public String visitText( OKWSeParser.TextContext ctx )
         {
-            String lvsReturn = context.getChild(1).getText();
+            String lvsReturn = visitChildren(ctx);
             
-            if (OKW_Memorize_Sngltn.getInstance().exists( lvsReturn ))
-                lvsReturn = OKW_Memorize_Sngltn.getInstance().get( lvsReturn);
-            else
-            {
-              if( lvsReturn.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "DELETE" )) )
-              {
-                lvsReturn = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" );
-              }
-              else if ( lvsReturn.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "EMPTY" )) )
-              {
-                lvsReturn = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" );
-              }
-              else if ( lvsReturn.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "IGNORE" )) )
-              {
-                lvsReturn = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" );
-              }
-              else if ( lvsReturn.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "SEP" )) )
-              {
-                lvsReturn = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "SEP" );
-              }
-              else if ( lvsReturn.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "VSEP" )) )
-              {
-                lvsReturn = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "VSEP" );
-              }
-              else if ( lvsReturn.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "HSEP" )) )
-              {
-                lvsReturn = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "HSEP" );
-              }
-              else
-              {
-                lvsReturn = System.getenv( lvsReturn );
-              }
-            }
-            return lvsReturn;
-        }
-
-    	@Override
-        public String visitOkw_internal_var( OKWSeParser.Okw_internal_varContext context)
-        {
-            String lvsReturn = context.getChild(1).getText();
+            lvsReturn = lvsReturn + ctx.getText();
+            System.out.println( "Text: " + lvsReturn );
             
-            switch (lvsReturn)
-            {
-                    
-                case "Folder_LogMessages":
-                    lvsReturn = OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFolder_LogMessages();
-                    break;
-
-                case "Folder_XML":
-                    lvsReturn = OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFolder_XML();
-                    break;
-
-                case "File_OKW_Const_xml":
-                    lvsReturn = OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFile_OKW_Const_xml();
-                    break;
-
-                case "File_OKW_Docu_xml":
-                    lvsReturn = OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFile_OKW_Docu_xml();
-                    break;
-
-                case "File_OKW_ImplementationMatrix_xml":
-                    lvsReturn = OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFile_OKW_ImplementationMatrix_xml();
-                    break;
-
-                case "File_OKW_Ini_xml":
-                    lvsReturn = OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFile_OKW_Ini_xml();
-                    break;
-
-                case "File_OKW_Keymaps_xml":
-                    lvsReturn = OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFile_OKW_Keymaps_xml();
-                    break;
-
-                case "File_OKW_Memorize_xml":
-                    lvsReturn = OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFile_OKW_Memorize_xml();
-                    break;
-            }
-            
-            return lvsReturn;
-            
-        }
-
-    	@Override
-    	public String visitKeyvalue( OKWSeParser.KeyvalueContext context )
-    	{
-           String lvsReturn = context.getChild(0).getText();
-            
-            switch (lvsReturn)
-            {       
-                case "ALT":
-                    lvsReturn = "!!DEL";
-                    break;
-                case "SHIFT":
-                    lvsReturn = "!!CONTROL";
-                    break;
-                case "CTRL":
-                    lvsReturn = "!!CONTROL";
-                    break;
-                default :
-                    lvsReturn = Keys.valueOf( lvsReturn ).toString();
-                    break;
-            }
-            
-            return lvsReturn;
-    	}
-    	
-    	@Override
-        public String visitText( OKWSeParser.TextContext context )
-        {
-            String lvsReturn = context.getText();
+            myCharSequence.setText( lvsReturn );
 
             return lvsReturn;
         }
@@ -142,4 +112,20 @@ import okw.parser.antlr4.se.OKWSeParser;
             
             return lvsReturn;
         }
+    	
+
+        @Override
+        public String visitRoot( RootContext ctx )
+        {
+            String lvsReturn = "";
+                            
+            super.visitChildren(ctx);
+            
+            System.out.println( "Root: " + ctx.getText() );
+            
+            lvsReturn = myCharSequence.getCharSequenze();
+            
+            return lvsReturn;
+        }
+    	
     }

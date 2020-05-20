@@ -16,7 +16,7 @@ options { tokenVocab=OKWCoreLexer; }
  */
 root : ( okw_internal_var
        | okw_env_var
-       | okw_typekey
+//       | okw_typekey
        | text
        )+ ;
 
@@ -32,8 +32,8 @@ okw_internal_var   : KLAMMERAUF
                    | FILE_OKW_MEMORIZE_XML ) KLAMMERZU
                    ;
 
-okw_typekey        : KLAMMERAUF keyvalue ( '+' keyvalue )* KLAMMERZU ;
-keyvalue           : KEYVALUE ;
+//okw_typekey        : KLAMMERAUF keyvalue ( '+' keyvalue )* KLAMMERZU ;
+//keyvalue           : KEYVALUE ;
 
 okw_env_var        : KLAMMERAUF envvalue KLAMMERZU;
 

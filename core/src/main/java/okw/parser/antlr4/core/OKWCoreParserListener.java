@@ -30,26 +30,6 @@ public interface OKWCoreParserListener extends ParseTreeListener {
 	 */
 	void exitOkw_internal_var(OKWCoreParser.Okw_internal_varContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link OKWCoreParser#okw_typekey}.
-	 * @param ctx the parse tree
-	 */
-	void enterOkw_typekey(OKWCoreParser.Okw_typekeyContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link OKWCoreParser#okw_typekey}.
-	 * @param ctx the parse tree
-	 */
-	void exitOkw_typekey(OKWCoreParser.Okw_typekeyContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link OKWCoreParser#keyvalue}.
-	 * @param ctx the parse tree
-	 */
-	void enterKeyvalue(OKWCoreParser.KeyvalueContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link OKWCoreParser#keyvalue}.
-	 * @param ctx the parse tree
-	 */
-	void exitKeyvalue(OKWCoreParser.KeyvalueContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link OKWCoreParser#okw_env_var}.
 	 * @param ctx the parse tree
 	 */

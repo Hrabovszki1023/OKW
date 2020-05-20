@@ -14,29 +14,19 @@ options { tokenVocab=OKWSeLexer; }
 /*
  * Parser Rules
  */
-root : ( okw_internal_var
-       | okw_env_var
-       | okw_typekey
-       | text
-       )+ ;
+root : ( typekey | keyvalue | modifierkey | text )+;
+//root : ( typekey | text )+;
 
-// OKW variablen
-okw_internal_var   : KLAMMERAUF
-                   ( FOLDER_LOGMESSAGES
-                   | FOLDER_XML
-                   | FILE_OKW_CONST_XML
-                   | FILE_OKW_DOCU_XML
-                   | FILE_OKW_IMPLEMENTATIONMATRIX_XML
-                   | FILE_OKW_INI_XML
-                   | FILE_OKW_KEYMAPS_XML
-                   | FILE_OKW_MEMORIZE_XML ) KLAMMERZU
-                   ;
+//typekey		: KLAMMERAUF (modifierkey)? ( PLUS modifierkey )* ( PLUS keyvalue )* KLAMMERZU ;
+typekey		: KLAMMERAUF (modifierkey)? ( PLUS modifierkey )* ( PLUS keyvalue )* ( PLUS value )*  KLAMMERZU;
 
-okw_typekey        : KLAMMERAUF keyvalue ( '+' keyvalue )* KLAMMERZU ;
-keyvalue           : KEYVALUE ;
+keyvalue    : KEYVALUE        ;
 
-okw_env_var        : KLAMMERAUF envvalue KLAMMERZU;
-
-envvalue           : ENVVAL ;
-
-text               : TEXT ;
+modifierkey : ALT       #Alt
+			| CTRL      #Ctrl
+			| SHIFT     #Shift
+			| COMMAND   #Command
+			;
+value       : VALUE;
+			
+text        : TEXT;

@@ -42,30 +42,6 @@ public class OKWCoreParserBaseListener implements OKWCoreParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterOkw_typekey(OKWCoreParser.Okw_typekeyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitOkw_typekey(OKWCoreParser.Okw_typekeyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterKeyvalue(OKWCoreParser.KeyvalueContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitKeyvalue(OKWCoreParser.KeyvalueContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterOkw_env_var(OKWCoreParser.Okw_env_varContext ctx) { }
 	/**
 	 * {@inheritDoc}

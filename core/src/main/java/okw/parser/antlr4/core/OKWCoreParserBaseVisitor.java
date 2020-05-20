@@ -1,4 +1,4 @@
-// Generated from OKWCoreParser.g4 by ANTLR 4.8
+// Generated from OKWCoreParser.g4 by ANTLR 4.7.2
 
 package okw.parser.antlr4.core;
 
@@ -27,20 +27,6 @@ public class OKWCoreParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> imp
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
 	@Override public T visitOkw_internal_var(OKWCoreParser.Okw_internal_varContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	@Override public T visitOkw_typekey(OKWCoreParser.Okw_typekeyContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	@Override public T visitKeyvalue(OKWCoreParser.KeyvalueContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

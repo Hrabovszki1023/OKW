@@ -10,13 +10,12 @@
 	<artifactId>se</artifactId>
 	<build>
 		<plugins>
-		
 			<plugin>
 				<groupId>org.antlr</groupId>
 				<artifactId>antlr4-maven-plugin</artifactId>
 				<version>${antlr.version}</version>
 				<configuration>
-					<listener>true</listener>
+					<listener>false</listener>
 					<visitor>true</visitor>
 					<grammars>OKWSeLexer.g4</grammars>
 					<outputDirectory>${basedir}/src/main/java/okw/parser/antlr4/se</outputDirectory>
@@ -30,7 +29,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			
 		</plugins>
 	</build>
 	<dependencies>

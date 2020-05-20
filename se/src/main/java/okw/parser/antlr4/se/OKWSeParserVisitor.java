@@ -19,17 +19,11 @@ public interface OKWSeParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitRoot(OKWSeParser.RootContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link OKWSeParser#okw_internal_var}.
+	 * Visit a parse tree produced by {@link OKWSeParser#typekey}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOkw_internal_var(OKWSeParser.Okw_internal_varContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link OKWSeParser#okw_typekey}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitOkw_typekey(OKWSeParser.Okw_typekeyContext ctx);
+	T visitTypekey(OKWSeParser.TypekeyContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link OKWSeParser#keyvalue}.
 	 * @param ctx the parse tree
@@ -37,17 +31,39 @@ public interface OKWSeParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitKeyvalue(OKWSeParser.KeyvalueContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link OKWSeParser#okw_env_var}.
+	 * Visit a parse tree produced by the {@code Alt}
+	 * labeled alternative in {@link OKWSeParser#modifierkey}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitOkw_env_var(OKWSeParser.Okw_env_varContext ctx);
+	T visitAlt(OKWSeParser.AltContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link OKWSeParser#envvalue}.
+	 * Visit a parse tree produced by the {@code Ctrl}
+	 * labeled alternative in {@link OKWSeParser#modifierkey}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitEnvvalue(OKWSeParser.EnvvalueContext ctx);
+	T visitCtrl(OKWSeParser.CtrlContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code Shift}
+	 * labeled alternative in {@link OKWSeParser#modifierkey}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitShift(OKWSeParser.ShiftContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code Command}
+	 * labeled alternative in {@link OKWSeParser#modifierkey}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCommand(OKWSeParser.CommandContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link OKWSeParser#value}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitValue(OKWSeParser.ValueContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link OKWSeParser#text}.
 	 * @param ctx the parse tree

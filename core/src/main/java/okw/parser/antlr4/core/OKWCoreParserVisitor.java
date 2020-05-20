@@ -1,4 +1,4 @@
-// Generated from OKWCoreParser.g4 by ANTLR 4.8
+// Generated from OKWCoreParser.g4 by ANTLR 4.7.2
 
 package okw.parser.antlr4.core;
 
@@ -24,18 +24,6 @@ public interface OKWCoreParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitOkw_internal_var(OKWCoreParser.Okw_internal_varContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link OKWCoreParser#okw_typekey}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitOkw_typekey(OKWCoreParser.Okw_typekeyContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link OKWCoreParser#keyvalue}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitKeyvalue(OKWCoreParser.KeyvalueContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link OKWCoreParser#okw_env_var}.
 	 * @param ctx the parse tree
