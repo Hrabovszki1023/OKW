@@ -48,6 +48,8 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
 import okw.log.Logger_Sngltn;
 import okw.LogMessenger;
 import okw.OKW_Const_Sngltn;
+import okw.parser.*;
+
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
@@ -1174,10 +1176,8 @@ public class SeAnyChildWindow extends AnyChildwindow
     }
 
     /** \~german
-     *  \brief
-     *  @return
+     *  Methode kann hier nicht allgemein gültig implementiert werden. 
      *  \~english
-     *  \brief
      *  \~
      *  @author Zoltán Hrabovszki
      *  @date 2016.10.06
@@ -1232,6 +1232,7 @@ public class SeAnyChildWindow extends AnyChildwindow
                 }
                 else
                 {
+                    Value = okw.parser.SeKeyParser.ParseMe( Value );
                     lv_WebElement.sendKeys( Value );
                 }
             }
@@ -1593,4 +1594,5 @@ public class SeAnyChildWindow extends AnyChildwindow
             throw new OKWGUIObjectNotFoundException( lvsLM );
         }
         return lvbReturn;
-    }}
+    }
+}

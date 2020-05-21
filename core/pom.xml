@@ -1,37 +1,83 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>de.openkeyword</groupId>
-    <artifactId>okw</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>core</artifactId>
-  <description>This is the core-module of OpenKeyWord. This module is automatically integrated by the adapters. In GUI automation, the core module is automatically integrated by the GUI modules (dependencies).</description>
-  <name>OKW - OpenKeyWord</name>
-  <url>www.openkeyword.de</url>
-  <properties>
-   <timestamp>${maven.build.timestamp}</timestamp>
-   <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
-</properties>
-  <build>
-  <resources>
-    <resource>
-      <directory>src/main/resources</directory>
-      <filtering>true</filtering>
-      <includes>
-        <include>okw/version.txt</include>
-        <include>okw/default/properties/core.properties</include>
-      </includes>
-    </resource>
-        <resource>
-      <directory>src/main/resources</directory>
-      <filtering>false</filtering>
-      <excludes>
-        <exclude>okw/version.txt</exclude>
-        <exclude>okw/default/properties/core.properties</exclude>
-      </excludes>
-    </resource>
-  </resources>
-</build>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>de.openkeyword</groupId>
+		<artifactId>okw</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>core</artifactId>
+	<description>This is the core-module of OpenKeyWord. This module is automatically integrated by the adapters. In GUI automation, the core module is automatically integrated by the GUI modules (dependencies).</description>
+	<name>OKW - OpenKeyWord</name>
+	<url>www.openkeyword.de</url>
+	<properties>
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+	</properties>
+	<build>
+		<plugins> 
+			<plugin>
+				<groupId>org.antlr</groupId>
+				<artifactId>antlr4-maven-plugin</artifactId>
+				<version>${antlr.version}</version>
+				<configuration>
+					<listener>true</listener>
+					<visitor>true</visitor>
+					<grammars>OKWCoreLexer.g4</grammars>
+					<outputDirectory>${basedir}/src/main/java/okw/parser/antlr4/core</outputDirectory>
+					<sourceDirectory>${basedir}/src/main/antlr4/core</sourceDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>antlr4</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+<!-- 		<pluginManagement> -->
+<!-- 			<plugins> -->
+<!-- 				<plugin> -->
+<!-- 					<groupId>org.antlr</groupId> -->
+<!-- 					<artifactId>antlr4-maven-plugin</artifactId> -->
+<!-- 					<version>4.8-1</version> -->
+<!-- 					<executions> -->
+<!-- 						<execution> -->
+<!-- 							<id>antlr</id> -->
+<!-- 							<goals> -->
+<!-- 								<goal>antlr4</goal> -->
+<!-- 							</goals> -->
+<!-- 							<configuration> -->
+<!-- 								<listener>true</listener> -->
+<!-- 								<visitor>true</visitor> -->
+<!-- 								<includes>**./*.g4</includes> -->
+<!-- 								<outputDirectory>${basedir}/src/main/java/okw/parser/antlr4</outputDirectory> -->
+<!-- 								<sourceDirectory>${basedir}/src/main/antlr4/grammar</sourceDirectory> -->
+<!-- 							</configuration> -->
+<!-- 						</execution> -->
+<!-- 					</executions> -->
+<!-- 				</plugin> -->
+<!-- 			</plugins> -->
+<!-- 		</pluginManagement> -->
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>okw/version.txt</include>
+					<include>okw/default/properties/core.properties</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+				<excludes>
+					<exclude>okw/version.txt</exclude>
+					<exclude>okw/default/properties/core.properties</exclude>
+				</excludes>
+			</resource>
+		</resources>
+	</build>
 </project>
