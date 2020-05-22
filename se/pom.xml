@@ -62,6 +62,11 @@
 			<artifactId>htmlunit-driver</artifactId>
 			<version>2.40.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.5</version>
+		</dependency>
 	</dependencies>
 	<description>This is the OpenKeyWord Selenium GUI-Adapter-module. Se defines default  GUI-Adapter ( Pushbutton, Link, Textfield...)
 
