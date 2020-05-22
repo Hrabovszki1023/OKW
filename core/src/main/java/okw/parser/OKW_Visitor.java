@@ -1,18 +1,18 @@
 
 package okw.parser;
 
-import org.antlr.v4.runtime.tree.*;
-//import org.omg.CORBA.Environment;
+// import org.antlr.v4.runtime.tree.*;
 
 import okw.*;
-import okw.parser.antlr4.*;
+import okw.parser.antlr4.core.*;
+//import okw.parser.antlr4.core.OKWCoreParser.KeyvalueContext;
 
 
-    public class OKW_Visitor extends OKW_ParserBaseVisitor<String>
+    public class OKW_Visitor extends OKWCoreParserBaseVisitor<String>
     {
         
     	@Override
-        public String visitOkw_env_var( OKW_Parser.Okw_env_varContext context)
+        public String visitOkw_env_var( OKWCoreParser.Okw_env_varContext context)
         {
             String lvsReturn = context.getChild(1).getText();
             
@@ -53,7 +53,7 @@ import okw.parser.antlr4.*;
         }
 
     	@Override
-        public String visitOkw_internal_var( OKW_Parser.Okw_internal_varContext context)
+        public String visitOkw_internal_var( OKWCoreParser.Okw_internal_varContext context)
         {
             String lvsReturn = context.getChild(1).getText();
             
@@ -97,8 +97,32 @@ import okw.parser.antlr4.*;
             
         }
 
+//    	@Override
+//    	public String visitKeyvalue( OKWCoreParser.KeyvalueContext context )
+//    	{
+//           String lvsReturn = context.getChild(0).getText();
+//            
+//            switch (lvsReturn)
+//            {       
+//                case "ALT":
+//                    lvsReturn = "!!DEL";
+//                    break;
+//                case "SHIFT":
+//                    lvsReturn = "!!CONTROL";
+//                    break;
+//                case "CTRL":
+//                    lvsReturn = "!!CONTROL";
+//                    break;
+//                default :
+//                    lvsReturn = Keys.valueOf( lvsReturn ).toString();
+//                    break;
+//            }
+//            
+//            return lvsReturn;
+//    	}
+    	
     	@Override
-        public String visitText( OKW_Parser.TextContext context )
+        public String visitText( OKWCoreParser.TextContext context )
         {
             String lvsReturn = context.getText();
 
