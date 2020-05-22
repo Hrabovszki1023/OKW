@@ -10,4 +10,4 @@ release:
   script: |
     mvn versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
-    mvn clean -DskipTests deploy -Dfile.encoding=UTF-8 -Pfoo -Psonatype --settings /home/r/settings.xml
+    mvn clean -DskipTests deploy -Dfile.encoding=UTF-8 -Pfoo -Psonatype --settings /home/r/settings.xml -e
