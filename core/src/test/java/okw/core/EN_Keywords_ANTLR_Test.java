@@ -585,7 +585,7 @@ public class EN_Keywords_ANTLR_Test
 
         OKW_Memorize_Sngltn.getInstance();
         // Set Value in "Memory"
-        OKW_Memorize_Sngltn.reset();
+        OKW_Memorize_Sngltn.getInstance().reset();
         OKW_Memorize_Sngltn.getInstance().set( "Key1", "The one and only Value" );
 
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
@@ -626,7 +626,7 @@ public class EN_Keywords_ANTLR_Test
 
         OKW_Memorize_Sngltn.getInstance();
         // Set Value in "Memory"
-        OKW_Memorize_Sngltn.reset();
+        OKW_Memorize_Sngltn.getInstance().reset();
         OKW_Memorize_Sngltn.getInstance().set( "Key1", "\\w{3} one and only Value" );
 
         EN.SetValue( "All_MethodsObj", "The one and only Value" );
@@ -667,7 +667,7 @@ public class EN_Keywords_ANTLR_Test
 
         OKW_Memorize_Sngltn.getInstance();
         // Set Value in "Memory"
-        OKW_Memorize_Sngltn.reset();
+        OKW_Memorize_Sngltn.getInstance().reset();
         OKW_Memorize_Sngltn.getInstance().set( "Key1", "??? one and only Value" );
 
         EN.SetValue( "All_MethodsObj", "The one and only Value" );

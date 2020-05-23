@@ -40,7 +40,6 @@
 package okw.core;
 
 import okw.OKW_TestClipboard;
-import okw.exceptions.OKWFrameObjectChildNotFoundException;
 import okw.exceptions.OKWFrameObjectParentNotFoundException;
 import okw.log.Logger_Sngltn;
 

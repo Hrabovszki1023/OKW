@@ -2,8 +2,6 @@ package okw.gui.frames.keyboardtester;
 
 import java.util.ArrayList;
 
-import javax.xml.xpath.XPathExpressionException;
-
 import okw.OKW;
 import okw.gui.adapter.selenium.*;
 

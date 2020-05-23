@@ -2,7 +2,6 @@ package okw;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Constructor;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.charset.Charset;
@@ -15,8 +14,6 @@ import java.util.jar.JarFile;
 import javax.xml.xpath.XPathExpressionException;
 
 import okw.exceptions.OKWFrameObjectParentNotFoundException;
-import okw.gui.AnyChildwindow;
-import okw.gui.OKWLocator;
 import okw.log.Logger_Sngltn;
 
 public class OKW_GetJavaClass

@@ -225,7 +225,7 @@ public class OKW_Memorize_Sngltn
 	 *  @author Zoltan Hrabovszki
 	 *  @date 2013.11.25
 	 */
-	public static void reset()
+	public void reset()
 	{
 		Instance = null;
 		getInstance();
@@ -391,7 +391,7 @@ public class OKW_Memorize_Sngltn
 	
 			try
 			{
-				OKW_XmlReader myXMLReader = new OKW_XmlReader("xml/OKW_Memorize.xml");			
+				//OKW_XmlReader myXMLReader = new OKW_XmlReader("xml/OKW_Memorize.xml");			
 			}
 			catch(Exception e)
 			{

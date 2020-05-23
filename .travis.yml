@@ -47,7 +47,7 @@ install:
 #  - sudo chmod +x /usr/bin/geckodriver
 
   # compile OKW
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V   
+  - mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip=true -B -V   
 
 
 #before_script:
@@ -65,7 +65,7 @@ after_success:
 jobs:
   include:
     - stage: core
-    - env:
+      env:
           TESTCASE="okw.core.AllCoreTests"
           Package="core"
     - env:

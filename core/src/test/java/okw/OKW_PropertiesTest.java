@@ -99,11 +99,11 @@ public class OKW_PropertiesTest
         myProperties.clear();
         myProperties.init();
 
-        Method mymethod = OKW_Properties.class.getDeclaredMethod( "loadSystemEnviromentVars", null);
+        Method mymethod = OKW_Properties.class.getDeclaredMethod( "loadSystemEnviromentVars");
         mymethod.setAccessible(true);
         
-        mymethod.invoke( myProperties, null);
-        mymethod.invoke( myProperties, null);
+        mymethod.invoke( myProperties);
+        mymethod.invoke( myProperties);
     }
 
 
@@ -114,11 +114,11 @@ public class OKW_PropertiesTest
         myProperties.clear();
         myProperties.init();
 
-        Method mymethod = OKW_Properties.class.getDeclaredMethod( "loadSystemProperties", null);
+        Method mymethod = OKW_Properties.class.getDeclaredMethod( "loadSystemProperties");
         mymethod.setAccessible(true);
         
-        mymethod.invoke( myProperties, null);
-        mymethod.invoke( myProperties, null);
+        mymethod.invoke( myProperties);
+        mymethod.invoke( myProperties);
     }
 
     @Test

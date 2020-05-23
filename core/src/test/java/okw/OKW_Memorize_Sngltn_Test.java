@@ -42,8 +42,8 @@ public class OKW_Memorize_Sngltn_Test
         @Test
         public void tc_get_set() throws XPathExpressionException
         {
-            myOKW_Memorize.reset();
             myOKW_Memorize = OKW_Memorize_Sngltn.getInstance();
+            myOKW_Memorize.reset();
             
             myOKW_Memorize.set( "Key 1", "Value 1" );
             String myValue = myOKW_Memorize.get( "Key 1" );

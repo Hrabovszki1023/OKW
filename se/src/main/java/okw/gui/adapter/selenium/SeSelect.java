@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import okw.OKW_Const_Sngltn;
-import okw.gui.OKWLocator;
 import okw.gui.OKWLocatorBase;
 
 /*
