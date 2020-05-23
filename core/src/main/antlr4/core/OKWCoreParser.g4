@@ -5,9 +5,7 @@
  */
 parser grammar OKWCoreParser;
 
-@header {
-package okw.parser.antlr4.core;
-}
+@header { package okw.parser.antlr4.core; }
 
 options { tokenVocab=OKWCoreLexer; }
 

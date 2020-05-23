@@ -9,9 +9,9 @@ lexer grammar OKWCoreLexer;
  * Lexer Rules
  */
 
-@header {
-package okw.parser.antlr4.core;
-}
+ @header {
+ package okw.parser.antlr4.core;
+ }
 
 // mode DEFAULT_MODE;
 KLAMMERAUF : '${' -> mode(KLAMMER_MODE) ;

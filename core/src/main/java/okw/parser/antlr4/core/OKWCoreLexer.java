@@ -1,7 +1,7 @@
 // Generated from OKWCoreLexer.g4 by ANTLR 4.7.2
 
-package okw.parser.antlr4.core;
-
+ package okw.parser.antlr4.core;
+ 
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

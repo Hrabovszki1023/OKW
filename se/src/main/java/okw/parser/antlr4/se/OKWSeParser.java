@@ -1,7 +1,5 @@
-// Generated from OKWSeParser.g4 by ANTLR 4.8
-
-package okw.parser.antlr4.se;
-
+// Generated from OKWSeParser.g4 by ANTLR 4.7.2
+ package okw.parser.antlr4.se; 
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -13,7 +11,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class OKWSeParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =

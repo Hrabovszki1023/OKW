@@ -22,7 +22,7 @@ import java.util.regex.Pattern;
 import okw.exceptions.OKWFileDoesNotExistsException;
 import okw.log.Logger_Sngltn;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.*;
 
 /**
  * \~german

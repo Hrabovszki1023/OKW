@@ -14,19 +14,33 @@ import static org.junit.Assert.*;
         OKW_Ini_Sngltn myOKW_Ini = OKW_Ini_Sngltn.getInstance();
                 
         /**
-         *  Prüft die Tastatureingabe "DEL"
+         *  Prüft die Tastatureingabe "DEL" als einzelner Wert
          *  @author Zoltan Hrabovszki
          *  @date 2014.01.14
          */
         @Test
         public void TC_DEL()
         {
-            String sActual = Parser.ParseMe("${DEL}");            
-            String sExpected = "!!DEL";
+            String sActual = Parser.ParseMe("#{DEL}");            
+            String sExpected = "#{DEL}";
 
             assertEquals(sExpected, sActual);
         }
 
+        /**
+         *  Prüft die Tastatureingabe "DEL" in einem Text eingebbetet.
+         *  @author Zoltan Hrabovszki
+         *  @date 2014.01.14
+         */
+        @Test
+        public void TC_DEL_2()
+        {
+            String sActual = Parser.ParseMe("Brunsbüttel#{DEL}Hamburg");            
+            String sExpected = "Brunsbüttel#{DEL}Hamburg";
+
+            assertEquals(sExpected, sActual);
+        }
+        
         /**
          *  Prüft die Tastatureingabe "SHFT" / Shift
          *  @author Zoltan Hrabovszki
@@ -35,8 +49,8 @@ import static org.junit.Assert.*;
         @Test
         public void TC_SHFT()
         {
-            String sActual = Parser.ParseMe("${SHIFT}");            
-            String sExpected = "!!SHIFT";
+            String sActual = Parser.ParseMe("#{SHIFT}");            
+            String sExpected = "#{SHIFT}";
 
             assertEquals(sExpected, sActual);
         }
@@ -49,13 +63,11 @@ import static org.junit.Assert.*;
         @Test
         public void TC_CONTROL()
         {
-            String sExpected = "!!CONTROL";
+            String sExpected = "#{CONTROL}";
 
-            String sActual = Parser.ParseMe("${CONTROL}");            
+            String sActual = Parser.ParseMe("#{CONTROL}");            
             assertEquals(sExpected, sActual);
 
-            sActual = Parser.ParseMe("${CTRL}");            
-            assertEquals(sExpected, sActual);
         }
         
 /*        'ADD';

@@ -3,6 +3,7 @@ package okw;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+// FIXME: Testfalle laufen nicht. -> beheben!
 public class OKW_Properties_SetDOptionsTest {
 
     protected OKW_Properties myProperties = OKW_Properties.getInstance();

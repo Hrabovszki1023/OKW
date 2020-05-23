@@ -27,9 +27,22 @@ import org.junit.runners.Suite.SuiteClasses;
   OKW_Helper_StringSplitTest.class,
   OKW_HelperTest.class,
   OKW_IniTest.class,
+  // okw.OKW_Properties_SetDOptionsTest.class,
   OKW_PropertiesTest.class,
   OKW_TimeOut_Test.class,
-  OKW_XmlReaderTest.class
+  OKW_XmlReaderTest.class,
+  okw.ResourceList_Test.class,
+  
+  // okw Logger
+  okw.log.Logger_Test.class,
+  
+  // gui tests
+  okw.gui.OKWLocatorTest.class,
+  okw.gui.OKWLocatorXPathTest.class,
+  
+  // Parser
+  okw.parser.OKW_Visitor_Keys_Test.class,
+  okw.parser.OKW_VisitorTest.class
   } )
 
 public class AllTests

@@ -6,7 +6,6 @@ import org.junit.Test;
 public class OKW_TimeOut_Test {
 
 	@Test
-
 	public final void tc_Konstruktor()
 
 	{
@@ -25,7 +24,6 @@ public class OKW_TimeOut_Test {
 	}
 
 	@Test
-
 	public final void tc_Konstruktor_1()
 
 	{
@@ -44,7 +42,6 @@ public class OKW_TimeOut_Test {
 	}
 
 	@Test
-
 	public final void tc_Konstruktor_3()
 
 	{
@@ -63,7 +60,6 @@ public class OKW_TimeOut_Test {
 	}
 
 	@Test
-
 	public final void tc_setTO()
 
 	{
@@ -83,9 +79,7 @@ public class OKW_TimeOut_Test {
 	}
 
 	@Test
-
 	public final void tc_setPT()
-
 	{
 
 		OKW_TimeOut myUschi = new OKW_TimeOut(2, 500);
@@ -103,11 +97,9 @@ public class OKW_TimeOut_Test {
 	}
 
 	@Test
-
 	public final void tc_toString()
 
 	{
-
 		OKW_TimeOut myUschi = new OKW_TimeOut(1, 500);
 		assertEquals("PT: 500ms, TO: 1s", myUschi.toString());
 
@@ -118,5 +110,4 @@ public class OKW_TimeOut_Test {
 		assertEquals("PT: 2000ms, TO: 1s", myUschi.toString());
 
 	}
-
 }

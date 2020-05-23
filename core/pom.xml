@@ -14,15 +14,15 @@
 	<properties>
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
-	</properties>
+	</properties>	
+	
 	<build>
-		<plugins> 
+		<plugins>
 			<plugin>
 				<groupId>org.antlr</groupId>
 				<artifactId>antlr4-maven-plugin</artifactId>
-				<version>${antlr.version}</version>
 				<configuration>
-					<listener>true</listener>
+					<listener>false</listener>
 					<visitor>true</visitor>
 					<grammars>OKWCoreLexer.g4</grammars>
 					<outputDirectory>${basedir}/src/main/java/okw/parser/antlr4/core</outputDirectory>
@@ -60,7 +60,6 @@
 <!-- 					</executions> -->
 <!-- 				</plugin> -->
 <!-- 			</plugins> -->
-<!-- 		</pluginManagement> -->
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>

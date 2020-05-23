@@ -1,7 +1,5 @@
-// Generated from OKWSeParser.g4 by ANTLR 4.8
-
-package okw.parser.antlr4.se;
-
+// Generated from OKWSeParser.g4 by ANTLR 4.7.2
+ package okw.parser.antlr4.se; 
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
