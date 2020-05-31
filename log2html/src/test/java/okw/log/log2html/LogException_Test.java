@@ -9,6 +9,7 @@ import org.junit.jupiter.api.*;
 import okw.junit.JUnitBase;
 import okw.log.log2html.Log2HTML;
 
+@Tag("Log2HTML")
 public class LogException_Test extends JUnitBase
 {
 

@@ -4,16 +4,11 @@ import java.util.ArrayList;
 
 import org.junit.jupiter.api.*;
 
+import okw.junit.JUnitBase;
 import okw.log.log2html.Log2HTML;
 
-public class Log2HTMLTest {
-    public String TestName;
-
-    @BeforeEach
-    void init(TestInfo testInfo)
-    {
-        TestName = testInfo.getTestMethod().get().getName();
-    }
+@Tag("Log2HTML")
+public class Log2HTMLTest  extends JUnitBase {
     
 	@Test
 	public void TC_LogPrint_Test()

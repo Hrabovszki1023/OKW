@@ -8,6 +8,7 @@ import org.junit.jupiter.api.*;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
+@Tag("Log2HTML")
 public class Logger_Test
 {
     protected static Log2HTML myLog2HTML = null;
