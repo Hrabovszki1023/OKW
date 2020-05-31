@@ -56,7 +56,7 @@ install:
 #  - sleep 3 # give xvfb some time to start
 
 script:
-  - mvn test -Dtest=$TESTCASE -DfrmSeChrome.option.headless=headless -DfailIfNoTests=false -Dgpg.skip=true -pl $Package
+  - mvn test -Dgroups=$TAG -DfrmSeChrome.option.headless=headless -DfailIfNoTests=false -Dgpg.skip=true -pl $Package
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
@@ -66,31 +66,13 @@ jobs:
   include:
     - stage: core
       env:
-          TESTCASE="okw.core.AllCoreTests"
+          TAG="AllCoreTests"
           Package="core"
+#    - env:
+#          TAG="AllTests"
+#          Package="core"
     - env:
-          TESTCASE="okw.AllTests"
-          Package="core"
-    - env:
-          TESTCASE="okw.log.log2html.Log2HTMLCounterTest"
-          Package="log2html"
-    - env:
-          TESTCASE="okw.log.log2html.LogError_Test"
-          Package="log2html"
-    - env:
-          TESTCASE="okw.log.log2html.LogException_Test"
-          Package="log2html"
-    - env:
-          TESTCASE="okw.log.log2html.LogPass_Test"
-          Package="log2html"
-    - env:
-          TESTCASE="okw.log.log2html.LogPrint_Test"
-          Package="log2html"
-    - env:
-          TESTCASE="okw.log.log2html.LogPrintDebug_Test"
-          Package="log2html"
-    - env:
-          TESTCASE="okw.log.log2html.LogWarning_Test"
+          TAG="Log2HTML"
           Package="log2html"
 #
     - stage: chrome
