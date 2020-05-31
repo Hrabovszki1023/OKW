@@ -3,7 +3,7 @@ package okw.semaximize;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
 
 /**
 * \~
@@ -15,7 +15,7 @@ public class SeMAXIMIZE_EN_Firefox_Test extends SeMAXIMIZE_EN_Test
 {
 	protected static Log2HTML myLog2HTML = null;
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception
 	{
 		ApplicationName = "Firefox";
@@ -29,7 +29,7 @@ public class SeMAXIMIZE_EN_Firefox_Test extends SeMAXIMIZE_EN_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
-  @After
+  @AfterEach
   public void FirefoxAfter() throws Exception
   {
     Runtime rt = Runtime.getRuntime();
@@ -42,7 +42,7 @@ public class SeMAXIMIZE_EN_Firefox_Test extends SeMAXIMIZE_EN_Test
    
   }
 	
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception
 	{
 		myLog2HTML.Result2HTML("target/SeMAXIMIZE_Firefox_Test.html");

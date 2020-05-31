@@ -2,34 +2,20 @@ package okw.log;
 
 import java.util.ArrayList;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
 
 public class Logger_Test
 {
 
     Logger_Sngltn Log = Logger_Sngltn.getInstance();
     
-    @BeforeClass
+    @BeforeAll
     public static void setUpBeforeClass() throws Exception
     {
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownAfterClass() throws Exception
-    {
-    }
-
-    @Before
-    public void setUp() throws Exception
-    {
-    }
-
-    @After
-    public void tearDown() throws Exception
     {
     }
 

@@ -3,7 +3,7 @@ package okw.setextarea;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
 
 
 /**
@@ -16,7 +16,7 @@ public class SeTextarea_EN_Chrome_Test extends SeTextarea_EN_Test
 {
     protected  static Log2HTML myLog2HTML = null;
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpBeforeClass() throws Exception
     {
         ApplicationName = "Chrome";
@@ -45,7 +45,7 @@ public class SeTextarea_EN_Chrome_Test extends SeTextarea_EN_Test
     }
     */
     
-    @AfterClass
+    @AfterAll
     public static void tearDownAfterClass() throws Exception
     {
         myLog2HTML.Result2HTML( "target/SeTextarea_EN_Chrome_Test.html" );

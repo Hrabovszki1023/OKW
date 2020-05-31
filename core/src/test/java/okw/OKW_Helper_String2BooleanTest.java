@@ -45,15 +45,17 @@ import java.util.Collection;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Tag;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import okw.log.*;
 
 @RunWith(Parameterized.class)
+@Tag("AllCoreHelperTests")
 public class OKW_Helper_String2BooleanTest
     {
     @Parameters
@@ -88,7 +90,7 @@ public class OKW_Helper_String2BooleanTest
 	/// \copydoc CurrentObject::Log()
 	public static Logger_Sngltn Log;
 
-		//@BeforeClass
+		//@BeforeAll
         public static void myTestFixtureSetUp()
         {
 			Log = Logger_Sngltn.getInstance();

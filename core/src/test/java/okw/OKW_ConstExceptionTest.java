@@ -1,18 +1,15 @@
 package okw;
 
-import static org.junit.Assert.*;
-
 import javax.xml.xpath.XPathExpressionException;
 
+import okw.core.EN;
 import okw.exceptions.*;
 import okw.log.Logger_Sngltn;
 
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
-@FixMethodOrder( MethodSorters.NAME_ASCENDING )
+@Tag("AllCoreHelperTests")
 public class OKW_ConstExceptionTest
 {
 
@@ -21,7 +18,7 @@ public class OKW_ConstExceptionTest
         // / \copydoc CurrentObject::Log()
         private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
-        @BeforeClass
+        @BeforeAll
         public static void mySetUp()
         {
             myOKW_Const = OKW_Const_Sngltn.getInstance();
@@ -37,11 +34,15 @@ public class OKW_ConstExceptionTest
          *  Prüft ob die Exception "OKWConst4InternalnameNotFoundException" ausgelöst wird,
          *  wenn ein nicht vorhandener Internalname verwendet wird.<br/>
          */
-        @Test( expected = OKWConst4InternalnameNotFoundException.class )
+        @Test
         public void tcGetConst4InternalnameOKWConst4InternalnameNotFoundException()
         {
             OKWLanguage.getInstance().setLanguage( "en" );
-            myOKW_Const.GetConst4Internalname( "NotExist" );
+            
+            Assertions.assertThrows( OKWConst4InternalnameNotFoundException.class, () ->
+            {
+                myOKW_Const.GetConst4Internalname( "NotExist" );
+            });
         }
 
         /**
@@ -51,27 +52,16 @@ public class OKW_ConstExceptionTest
          *  Wenn ein nicht vorhadener Internalname verwendet wird.<br/>
          *  Sprache "de"
          */
-        @Test( expected = OKWConst4InternalnameNotFoundException.class )
+        @Test
         public void tcGetConst4InternalnameOKWConst4InternalnameNotFoundException_Msg()
         {
 
             OKWLanguage.getInstance().setLanguage( "de" );
-            myOKW_Const.GetConst4Internalname( "NotExist" );
-        }
 
-        
-        /**
-         *  Prüft ob der sprachabhängige Hinweis zu der Exception
-         *  "OKWConst4InternalnameNotFoundException"
-         *  ausgegeben wird, wenn ein nicht vorhandener Internalname verwendet
-         *  wird.<br/>
-         *  Sprache "EN"
-         */
-        @Test( expected = OKWConst4InternalnameNotFoundException.class )
-        public void tcGetConst4Internalname_OKWConst4InternalnameNotFoundException_Msg_en()
-        {
-            OKWLanguage.getInstance().setLanguage( "en" );
-            myOKW_Const.GetConst4Internalname( "NotExist" );
+            Assertions.assertThrows( OKWConst4InternalnameNotFoundException.class, () ->
+            {
+                myOKW_Const.GetConst4Internalname( "NotExist" );
+            });
         }
 
         /**
@@ -81,39 +71,47 @@ public class OKW_ConstExceptionTest
          *  ANmerkung die Sprache existiert nicht, d.h. es wird en als deafult
          *  verwendet.
          */
-        @Test( expected = OKWLanguageNotImplemntedException.class )
+        @Test
         public void tcYesNoToBoolean_OKWConst4InternalnameNotFoundException() throws XPathExpressionException
         {
             OKWLanguage.getInstance().setLanguage( "hurtz" );
 
-            // Call with expected Exception...
-            myOKW_Const.YesNo2Boolean( "YES" );
+            Assertions.assertThrows( OKWLanguageNotImplemntedException.class, () ->
+            {
+                // Call with expected Exception...
+                myOKW_Const.YesNo2Boolean( "YES" );
+            });
         }
 
         /**
          * Prüft ob ein Tippfehler eine Kernel-Exception auslöst.
          */
-        @Test( expected = OKWNotAllowedValueException.class )
+        @Test
         public void tcYesNoToBoolean_OKWNotAllowedValueException() throws XPathExpressionException
         {
             OKWLanguage.getInstance().setLanguage( "en" );
 
-            // Call with expected Exception...
-            myOKW_Const.YesNo2Boolean( "NON" );
+            Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+            {
+                // Call with expected Exception...
+                myOKW_Const.YesNo2Boolean( "NON" );
+            });
         }
 
         /**
          *  Prüft ob ein Tippfehler eine OKWNotAllowedValueException-Exception
          *  auslöst.
          */
-        @Test(expected=OKWNotAllowedValueException.class)
+        @Test
         public void tcYesNoToBoolean_OKWNotAllowedValueException_Msg_de() throws XPathExpressionException
         {
-
                 OKWLanguage.getInstance().setLanguage( "de" );
 
-                // Call with expected Exception...
-                myOKW_Const.YesNo2Boolean( "NON" );
+                Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+                {
+                    // Call with expected Exception...
+                    myOKW_Const.YesNo2Boolean( "NON" );
+                });
         }
 
         /**
@@ -123,44 +121,37 @@ public class OKW_ConstExceptionTest
         @Test
         public void tcYesNoToBoolean_OKWNotAllowedValueException_Msg()
         {
-
-            try
-            {
                 OKWLanguage.getInstance().setLanguage( "en" );
 
-                // Call with expected Exception...
-                myOKW_Const.YesNo2Boolean( "NON" );
-
-                // Wenn folgende zeile Ausgeführt wird kam die exception nicht.
-                fail( "Exception wurde nicht ausgelöst" );
-            }
-            catch (OKWNotAllowedValueException e)
-            {
-                Log.LogPrint( "Erwartete Exception wurde ausgelöst." );
-                assertEquals( "This value is not allowed here: 'NON'! - Following values are possible: 'YES'/'NO'", e.getMessage() );
-            }
-            catch (Exception e)
-            {
-                fail( "Fehler, weil nicht die arwartetet Exception kam." );
-            }
+                Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+                {
+                    // Call with expected Exception...
+                    myOKW_Const.YesNo2Boolean( "NON" );
+                });
         }
 
-        @Test( expected = OKWNotAllowedValueException.class )
+        @Test
         public void tcYesNoToBoolean_OKWNotAllowedValueException_en() throws XPathExpressionException
         {
             OKWLanguage.getInstance().setLanguage( "en" );
 
-            // Call with expected Exception...
-            myOKW_Const.YesNo2Boolean( "NotAllowedValue" );
+            Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+            {
+                // Call with expected Exception...
+                myOKW_Const.YesNo2Boolean( "NotAllowedValue" );
+            });
         }
 
-        @Test( expected = OKWNotAllowedValueException.class )
+        @Test
         public void tcYesNoToBoolean_OKWNotAllowedValueException_de() throws XPathExpressionException
         {
 
             OKWLanguage.getInstance().setLanguage( "de" );
 
-            // Call with expected Exception...
-            myOKW_Const.YesNo2Boolean( "NotAllowedValue" );
+            Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+            {
+                // Call with expected Exception...
+                myOKW_Const.YesNo2Boolean( "NotAllowedValue" );
+            });
         }
 }

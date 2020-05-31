@@ -3,8 +3,8 @@ package okw.selink;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.*;
+
 
 /**
 * \~
@@ -17,7 +17,7 @@ public class SeLink_EN_Chrome_Test extends SeLink_EN_Test
 
 	protected static Log2HTML myLog2HTML = null;
   
-  @BeforeClass
+  @BeforeAll
   public static void setUpBeforeClass() throws Exception
   {
     ApplicationName = "Chrome";
@@ -32,7 +32,7 @@ public class SeLink_EN_Chrome_Test extends SeLink_EN_Test
    }
 
   
-   @AfterClass
+   @AfterAll
     public static void tearDownAfterClass() throws Exception
     {
       myLog2HTML.Result2HTML("target/SeLink_Chrome_Test.html");

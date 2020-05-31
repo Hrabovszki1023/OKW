@@ -39,7 +39,7 @@ package browser;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
 
 /**
 * \~
@@ -50,7 +50,7 @@ import org.junit.*;
 public class FrmSeFirefox_Test extends FrmBrowserBase_Test
 {
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception
 	{
 		ApplicationName = "Firefox";
@@ -64,7 +64,7 @@ public class FrmSeFirefox_Test extends FrmBrowserBase_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
-  @After
+  @AfterEach
   public void FirefoxAfter() throws Exception
   {
     Runtime rt = Runtime.getRuntime();
@@ -77,7 +77,7 @@ public class FrmSeFirefox_Test extends FrmBrowserBase_Test
    
   }
 	
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception
 	{
 		myLog2HTML.Result2HTML( "target/FrmSeFirefox_Test.html" );

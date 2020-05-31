@@ -1,9 +1,10 @@
 package okw;
 
-import static org.junit.Assert.*;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
 // FIXME: Testfalle laufen nicht. -> beheben!
+@Tag("AllCoreHelperTests")
 public class OKW_Properties_SetDOptionsTest {
 
     protected OKW_Properties myProperties = OKW_Properties.getInstance();

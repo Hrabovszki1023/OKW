@@ -35,21 +35,14 @@ Sie sollten eine Kopie der GNU General Public License zusammen mit
 OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
-
-import static org.junit.Assert.*;
-
-import org.junit.FixMethodOrder;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
+import okw.core.OKWTestBase;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWVerifyingFailsException;
-
-import org.junit.Ignore;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
 
      /**
      * \~
@@ -65,19 +58,14 @@ import org.junit.runners.MethodSorters;
      * @author zoltan
      *
      */
-    @Ignore("Ignoring the whole fixture")
-    @FixMethodOrder( MethodSorters.NAME_ASCENDING )
-    public class SeInputButton_EN_Test
+    @Disabled("Ignoring the whole fixture")
+
+    public class SeInputButton_EN_Test extends OKWTestBase
     {
     	protected OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
     	
     	protected static String ApplicationName;
     	
-        @Rule
-        public TestName name = new TestName();
-    	
-
-        
         // \~german
         // \brief
         // Test des Schlüsselwortes ClickOn für den GUI-Adapter SeInputButton.
@@ -88,7 +76,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_ClickOn() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -114,7 +102,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_LogCaption() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
 
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
@@ -139,7 +127,7 @@ import org.junit.runners.MethodSorters;
         public void tc_LogExists() throws Exception
         {
 
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -162,7 +150,7 @@ import org.junit.runners.MethodSorters;
         public void tc_LogHasFocus() throws Exception
         {
 
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -185,7 +173,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_LogToolTip() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -203,10 +191,10 @@ import org.junit.runners.MethodSorters;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_LogValue_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -214,7 +202,11 @@ import org.junit.runners.MethodSorters;
                 EN.LogValue("Text_1");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         // \~german
@@ -227,7 +219,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_LogIsActive() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -250,7 +242,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_MemorizeCaption() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -278,7 +270,7 @@ import org.junit.runners.MethodSorters;
         public void tc_MemorizeLabel() throws Exception
         {
 
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
                 
@@ -306,7 +298,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_MemorizeExists() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -329,7 +321,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_MemorizeHasFocus() throws Exception
         {
-               EN.BeginTest( name.getMethodName() );
+               EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -352,7 +344,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_MemorizeIsActive() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -377,7 +369,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_MemorizeTooltip() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                
@@ -400,10 +392,10 @@ import org.junit.runners.MethodSorters;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_MemorizeValue_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -411,7 +403,11 @@ import org.junit.runners.MethodSorters;
                 EN.MemorizeValue("Text_1", "SePushButton_MemorizeTooltip_1");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
@@ -426,7 +422,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_SetFocus_VerifyHasFocus() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -453,10 +449,10 @@ import org.junit.runners.MethodSorters;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_SelectMenu_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -465,7 +461,11 @@ import org.junit.runners.MethodSorters;
                 EN.SelectMenu("Text_1");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         // \~german
@@ -475,10 +475,10 @@ import org.junit.runners.MethodSorters;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_SelectMenu2_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -487,7 +487,11 @@ import org.junit.runners.MethodSorters;
                 EN.SelectMenu("Text_1", "What ever...");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
 
@@ -498,10 +502,10 @@ import org.junit.runners.MethodSorters;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_SetValue_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -510,7 +514,11 @@ import org.junit.runners.MethodSorters;
                 EN.SetValue("Text_1", "What ever...");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         // \~german
@@ -520,10 +528,10 @@ import org.junit.runners.MethodSorters;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_Select_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -532,7 +540,11 @@ import org.junit.runners.MethodSorters;
                 EN.Select("Text_1", "What ever...");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         // \~german
@@ -545,7 +557,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyCaption() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -569,7 +581,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyCaptionWCM() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -593,7 +605,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyCaptionREGX() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -616,7 +628,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyExists_ExsistsNOExpectedNO() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
@@ -630,17 +642,20 @@ import org.junit.runners.MethodSorters;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tc_VerifyExists_ExistsNOExpectedYES() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
                 
                 EN.SelectWindow("InputButton");
                 EN.VerifyExists("Does Not Exists", "YES");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         // \~german
@@ -651,17 +666,20 @@ import org.junit.runners.MethodSorters;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test //( expected = OKWVerifyingFailsException.class )
         public void tc_VerifyExists_ExistsYESExpectedNO() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
             
             EN.SelectWindow("InputButton");
             EN.VerifyExists("Text_1", "NO");
             
-            EN.EndTest();
+            Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+            {
+                EN.EndTest();
+            });
         }
 
   // \~german
@@ -675,7 +693,7 @@ import org.junit.runners.MethodSorters;
   @Test
   public void tc_VerifyExists_ExistsYESExpectedYES() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputButton/input_type-button.htm" );
 
@@ -698,7 +716,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyIsActive_ActiveYESExpectedYES() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
 
@@ -720,10 +738,10 @@ import org.junit.runners.MethodSorters;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test(expected=OKWVerifyingFailsException.class)
+        @Test // (expected=OKWVerifyingFailsException.class)
         public void tc_VerifyIsActive_ActiveYESExpectedNO() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
 
@@ -733,7 +751,11 @@ import org.junit.runners.MethodSorters;
                 EN.VerifyIsActive("Text_1", "NO");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         // \~german
@@ -747,7 +769,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyIsActive_ActiveNOExpectedNO() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
 
@@ -768,10 +790,10 @@ import org.junit.runners.MethodSorters;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test(expected=OKWVerifyingFailsException.class)
+        @Test // (expected=OKWVerifyingFailsException.class)
         public void tc_VerifyIsActive_ActiveNOExpectedYES() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
 
@@ -781,7 +803,11 @@ import org.junit.runners.MethodSorters;
                 EN.VerifyIsActive("Text_2", "YES");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         // \~german
@@ -795,7 +821,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyLabel() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
 
@@ -820,7 +846,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyLabelWCM() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
 
@@ -845,7 +871,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyLabelREGX() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button_disabled.htm");
 
@@ -869,7 +895,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyToolTip() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
 
@@ -892,7 +918,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyToolTipWCM() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
 
@@ -915,7 +941,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyToolTipREGX() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
 
@@ -936,10 +962,10 @@ import org.junit.runners.MethodSorters;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_VerifyValue_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
 
@@ -948,7 +974,11 @@ import org.junit.runners.MethodSorters;
                 EN.VerifyValue("Text_1", "Button 1 Tooltip/title");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
@@ -959,10 +989,10 @@ import org.junit.runners.MethodSorters;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_VerifyValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
 
@@ -971,7 +1001,11 @@ import org.junit.runners.MethodSorters;
                 EN.VerifyValueWCM("Text_1", "?utton # Tooltip/title");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
 
@@ -982,10 +1016,10 @@ import org.junit.runners.MethodSorters;
         // \~
         // \author Zoltán Hrabovszki
         // \date 2015.02.28
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_VerifyValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputButton/input_type-button.htm");
 
@@ -994,7 +1028,11 @@ import org.junit.runners.MethodSorters;
                 EN.VerifyValueREGX("Text_1", "Button 1 Tooltip/title");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
     }
 

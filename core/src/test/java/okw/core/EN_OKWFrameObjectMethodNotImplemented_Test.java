@@ -44,25 +44,24 @@ import okw.exceptions.OKWFrameObjectMethodNotFoundException;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.log.Logger_Sngltn;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Tag("AllCoreTests")
 public class EN_OKWFrameObjectMethodNotImplemented_Test
 {
 
     static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
     static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
-    @Rule
-    public TestName          name        = new TestName();
+    public String TestName;
 
-    @BeforeClass
+    @BeforeEach
+    void init(TestInfo testInfo)
+    {
+        TestName = testInfo.getTestMethod().get().getName();
+    }    
+
+    @BeforeAll
     public static void setUpBeforeClass() throws Exception
     {
         Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
@@ -74,7 +73,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
         myLogger.setDebugMode( false );
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownAfterClass() throws Exception
     {
     }
@@ -88,15 +87,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2013.12.26
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_ClickOn_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
     
         EN.SelectWindow( "Rechner" );
         EN.ClickOn( "NoMethodObj" );
-        
-        EN.EndTest();
+
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -110,15 +112,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2013.12.26
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_DoubleClickOn_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
     
         EN.SelectWindow( "Rechner" );
         EN.DoubleClickOn( "NoMethodObj" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -130,15 +135,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      * @author Zoltan Hrabovszki
      * @date 2013.12.26
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_Select_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
     
         EN.SelectWindow( "Rechner" );
         EN.Select( "NoMethodObj", "NoValue" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -152,15 +160,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2013.12.26
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_SelectMenu_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
     
         EN.SelectWindow( "Rechner" );
         EN.SelectMenu( "NoMethodObj" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -173,15 +184,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2013.12.26
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_SetFocus_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.SetFocus( "NoMethodObj" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -191,15 +205,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      * 
      * \~english \~ @author Zoltan Hrabovszki @date 2013.12.26
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_SetValue_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.SetValue( "NoMethodObj", "NoValue" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -209,15 +226,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      * 
      * \~english \~ @author Zoltan Hrabovszki @date 2013.12.26
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_LogPlaceholder_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.LogPlaceholder( "NoMethodObj" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -227,15 +247,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      * 
      * \~english \~ @author Zoltan Hrabovszki @date 2013.12.26
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_MemorizePlaceholder_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.MemorizePlaceholder( "NoMethodObj", "myKey" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -244,15 +267,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      * 
      * \~english \~ @author Zoltan Hrabovszki @date 2013.12.26
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_TypeKey_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
     
         EN.SelectWindow( "Rechner" );
         EN.TypeKey( "NoMethodObj", "NoValue" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /** \~german
@@ -264,13 +290,16 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016.05.07
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_Select_Window_OKWFrameObjectMethodNotImplemented_Test() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
     
         EN.SelectWindow( "WindowWithoutMethods" );
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -285,14 +314,17 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016.06.18
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_StartApp_OKWFrameObjectMethodNotImplemented_Test() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.StartApp( "WindowWithoutMethods" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -307,14 +339,17 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016.06.18
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_StopApp_OKWFrameObjectMethodNotImplemented_Test() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.StopApp( "WindowWithoutMethods" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -328,15 +363,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016.05.07
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyHasFocus( "NoMethodObj", "YES" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -350,15 +388,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016.05.07
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyIsActive_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyIsActive( "NoMethodObj", "YES" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -372,15 +413,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  @author Zoltan Hrabovszki
     *  @date 2016.05.07
     */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyCaption_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyCaption( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -394,15 +438,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  @author Zoltan Hrabovszki
     *  @date 2016.05.07
     */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyCaptionREGX_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyCaptionREGX( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -416,15 +463,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  @author Zoltan Hrabovszki
     *  @date 2016.05.07
     */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyCaptionWCM_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyCaptionWCM( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -437,15 +487,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  @author Zoltan Hrabovszki
     *  @date 2016.05.07
     **/
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyLabel_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyLabel( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -459,15 +512,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  @author Zoltan Hrabovszki
     *  @date 2016.05.07
     */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyLabelREGX_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyLabelREGX( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -481,15 +537,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  @author Zoltan Hrabovszki
     *  @date 2016.05.07
     */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyLabelWCM_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyLabelWCM( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -506,15 +565,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  @author Zoltan Hrabovszki
     *  @date 2018-12-26
     */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyMaxLength_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyMaxLength( "NoMethodObj", "2" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -527,15 +589,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  @author Zoltan Hrabovszki
     *  @date 2018-10-04
     **/
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyPlaceholder_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyPlaceholder( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -549,15 +614,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  @author Zoltan Hrabovszki
     *  @date 2018-10-04
     */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyPlaceholderREGX_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyPlaceholderREGX( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -574,15 +642,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  @author Zoltan Hrabovszki
     *  @date 2018-10-04
     */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyPlaceholderWCM_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyLabelWCM( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -596,15 +667,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016.05.07
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyTooltip_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltip( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -618,15 +692,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016.05.07
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyTooltipREGX_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltipREGX( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -640,15 +717,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016.05.07
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyTooltipWCM_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltipWCM( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -662,15 +742,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016.05.07
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyValue_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyValue( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -684,15 +767,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016.05.07
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyValueREGX( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -705,15 +791,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016.05.07
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyValueWCM( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -727,15 +816,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016-05-21
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyTablecellValue_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTablecellValue( "NoMethodObj", "X", "Y", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -749,15 +841,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016-05-21
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyTablecellValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTablecellValueREGX( "NoMethodObj", "X", "Y", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -770,15 +865,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016-05-21
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyTablecellValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTablecellValueWCM( "NoMethodObj", "X", "Y", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     
@@ -793,15 +891,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016-05-21
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifySelectedValue_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifySelectedValue( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -815,15 +916,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016-05-21
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifySelectedValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyValueREGX( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /**
@@ -836,15 +940,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2016-05-21
      */
-    @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+    @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifySelectedValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifySelectedValueWCM( "NoMethodObj", "NoValue" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     
@@ -858,15 +965,18 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Zoltan Hrabovszki
      *  @date 2013.12.26
      */
-    @Test( expected = OKWFrameObjectMethodNotFoundException.class )
+    @Test // ( expected = OKWFrameObjectMethodNotFoundException.class )
     public void TC_Sequence_OKWFrameObjectMethodNotImplemented() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.Sequence( "Rechner", "NoMethodObj", "SEQ_ID" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotFoundException.class, () ->
+        {
+            EN.EndTest();
+        });
     }
     
     /**
@@ -883,14 +993,17 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  @author Daniel Krüger
      *  @date 2019-06-18
      */
-     @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
      public void TC_VerifyMinLength_OKWFrameObjectMethodNotImplemented() throws Exception
      {
-         EN.BeginTest( name.getMethodName() );
+         EN.BeginTest( TestName );
 
          EN.SelectWindow( "Rechner" );
          EN.VerifyMinLength( "NoMethodObj", "2" );
 
-         EN.EndTest();
+         Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
      }
 }

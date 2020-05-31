@@ -2,11 +2,8 @@ package okw.log.log2html;
 
 import java.util.ArrayList;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
+
 
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
@@ -15,7 +12,7 @@ public class Logger_Test
 {
     protected static Log2HTML myLog2HTML = null;
     
-    @BeforeClass
+    @BeforeAll
     public static void setUpBeforeClass() throws Exception
     {  
         myLog2HTML = new Log2HTML("Logger_Test");
@@ -24,21 +21,12 @@ public class Logger_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
     }
 
-    @AfterClass
+    @AfterAll
     public static void tearDownAfterClass() throws Exception
     {
         myLog2HTML.Result2HTML("target/Logger_Test.html");
     }
 
-    @Before
-    public void setUp() throws Exception
-    {
-    }
-
-    @After
-    public void tearDown() throws Exception
-    {
-    }
 
    @Test
     public void tcGet2ndInstance()
@@ -226,7 +214,7 @@ public class Logger_Test
         Logger_Sngltn.getInstance().LogTestcaseEnd();
     }
 
-    @Test (expected=ClassCastException.class)
+    @Test // (expected=ClassCastException.class)
     public void tcResultOpenList_ResultCloseList_LevelTest()
     {
         Logger_Sngltn.getInstance().setDebugMode( false );

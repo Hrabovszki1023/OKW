@@ -2,31 +2,23 @@ package okw.log.log2html;
 
 import java.util.ArrayList;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
+import org.junit.jupiter.api.*;
 
 import okw.log.log2html.Log2HTML;
 
 public class Log2HTMLTest {
+    public String TestName;
 
-    @Rule
-    public TestName name = new TestName();
+    @BeforeEach
+    void init(TestInfo testInfo)
+    {
+        TestName = testInfo.getTestMethod().get().getName();
+    }
     
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
 	@Test
 	public void TC_LogPrint_Test()
 	{	
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 				
 		myLog.LogTestcaseStart( "TC_LogPrint_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -36,13 +28,13 @@ public class Log2HTMLTest {
 			myLog.LogPrint( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 
 	@Test
 	public void TC_LogPrintDebug_Test()
 	{	
-		Log2HTML myLog = new Log2HTML( name.getMethodName() );
+		Log2HTML myLog = new Log2HTML( TestName );
 	    myLog.setDebugMode( true );
 				
 		myLog.LogTestcaseStart( "TC_LogPrintDebug_Test" );
@@ -53,13 +45,13 @@ public class Log2HTMLTest {
 			myLog.LogPrintDebug( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 	
 	@Test
 	public void TC_ResultList_Test()
 	{	
-		Log2HTML myLog = new Log2HTML( name.getMethodName() );
+		Log2HTML myLog = new Log2HTML( TestName );
 				
 		myLog.LogTestcaseStart( "TC_ResultListPrint_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -71,13 +63,13 @@ public class Log2HTMLTest {
 			myLog.LogPrint( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 
 	@Test
 	public void TC_ResultListDebug_Test( )
 	{	
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 		myLog.setDebugMode( true );
 				
 		myLog.LogTestcaseStart( "TC_ResultListDebug_Test" );
@@ -92,13 +84,13 @@ public class Log2HTMLTest {
 			myLog.LogPrintDebug( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 	
 	@Test
 	public void TC_LogException_Test()
 	{	
-		Log2HTML myLog = new Log2HTML( name.getMethodName() );
+		Log2HTML myLog = new Log2HTML( TestName );
 				
 		myLog.LogTestcaseStart( "TC_LogException_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -106,13 +98,13 @@ public class Log2HTMLTest {
 				myLog.LogKeyWordEnd();
 		myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 
 	@Test
 	public void TC_LogError_Test()
 	{	
-		Log2HTML myLog = new Log2HTML( name.getMethodName() );
+		Log2HTML myLog = new Log2HTML( TestName );
 				
 		myLog.LogTestcaseStart( "TC_LogError_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -120,13 +112,13 @@ public class Log2HTMLTest {
 				myLog.LogKeyWordEnd();
 		myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 	
 	@Test
 	public void TC_LogWarning_Test()
 	{	
-		Log2HTML myLog = new Log2HTML( name.getMethodName() );
+		Log2HTML myLog = new Log2HTML( TestName );
 				
 		myLog.LogTestcaseStart( "TC_LogWarning_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -134,13 +126,13 @@ public class Log2HTMLTest {
 				myLog.LogKeyWordEnd();
 		myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 	
 	   @Test
 	    public void TC_LogVerify_Test()
 	    {   
-	        Log2HTML myLog = new Log2HTML( name.getMethodName() );
+	        Log2HTML myLog = new Log2HTML( TestName );
 	                
 	        myLog.LogTestcaseStart( "TC_LogPrint_Test" );
 	            myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -151,14 +143,14 @@ public class Log2HTMLTest {
 	            myLog.LogPrint( "Print auf einer Ebene höher...");
 	        myLog.LogTestcaseEnd();
 	        
-	        myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+	        myLog.Result2HTML( "target/" + TestName + ".html" );
 	    }
 
 	
 	@Test
 	public void TC_LogFunktion_Test() {
 
-		Log2HTML myLog = new Log2HTML( name.getMethodName() );
+		Log2HTML myLog = new Log2HTML( TestName );
 
 		myLog.LogTestcaseStart( "TC_LogFunktion_Test" );
 		    myLog.LogFunctionStart("FunctionName", "String", "Parameter 1");
@@ -166,13 +158,13 @@ public class Log2HTMLTest {
 		    myLog.LogFunctionEnd();
 		myLog.LogTestcaseEnd();
 
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 
 	@Test
 	public void TC_LogFunktionErrorWarning_Test() {
 
-		Log2HTML myLog = new Log2HTML( name.getMethodName() );
+		Log2HTML myLog = new Log2HTML( TestName );
 
 		myLog.LogTestcaseStart( "TC_LogFunktion2_Test" );
 		    myLog.LogFunctionStart("FunctionName", "String", "Parameter 1", "String", "Parameter 2");
@@ -182,13 +174,13 @@ public class Log2HTMLTest {
 		    myLog.LogFunctionEnd();
         myLog.LogTestcaseEnd();
 
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 
 	@Test
 	public void TC_LogFunktion_ReturnBoolean_Test() {
 
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 
 		myLog.LogTestcaseStart( "TC_LogFunktion_ReturnBoolean_Test" );
 		    myLog.LogFunctionStart("FunctionName", "String", "Parameter 1", "String", "Parameter 2");
@@ -196,13 +188,13 @@ public class Log2HTMLTest {
 		    myLog.LogFunctionEnd(true);
 		myLog.LogTestcaseEnd();
 
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 
 	   @Test
 	    public void TC_LogFunktionDebug_ReturnBoolean_Test() {
 
-	        Log2HTML myLog = new Log2HTML(name.getMethodName());
+	        Log2HTML myLog = new Log2HTML(TestName);
 	        
 	        myLog.setDebugMode( true ); 
 
@@ -212,7 +204,7 @@ public class Log2HTMLTest {
 	            myLog.LogFunctionEndDebug(true);
 	        myLog.LogTestcaseEnd();
 
-	        myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+	        myLog.Result2HTML( "target/" + TestName + ".html" );
 	    }
 
 
@@ -220,7 +212,7 @@ public class Log2HTMLTest {
 	    public void TC_LogFunktion_ReturnString_Test()
 	    {
 
-	        Log2HTML myLog = new Log2HTML(name.getMethodName());
+	        Log2HTML myLog = new Log2HTML(TestName);
 
 	        myLog.LogTestcaseStart( "TC_LogFunktion_ReturnString_Test" );
 	            myLog.LogFunctionStart("FunctionName", "String", "Parameter 1", "String", "Parameter 2");
@@ -228,14 +220,14 @@ public class Log2HTMLTest {
 	            myLog.LogFunctionEnd( "Return String" );
 	        myLog.LogTestcaseEnd();
 
-	        myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+	        myLog.Result2HTML( "target/" + TestName + ".html" );
 	    }
 
 	       @Test
 	        public void TC_LogFunktionDebug_ReturnString_Test()
 	       {
 
-	            Log2HTML myLog = new Log2HTML(name.getMethodName());
+	            Log2HTML myLog = new Log2HTML(TestName);
 	            myLog.setDebugMode( true ); 
 
 	            myLog.LogTestcaseStart( "TC_LogFunktionDebug_ReturnString_Test" );
@@ -244,14 +236,14 @@ public class Log2HTMLTest {
 	                myLog.LogFunctionEndDebug( "Return String" );
 	            myLog.LogTestcaseEnd();
 
-	            myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+	            myLog.Result2HTML( "target/" + TestName + ".html" );
 	        }	   
 	   
 
 	        @Test
 	        public void TC_LogFunktion_ReturnListString_Test() {
 
-	            Log2HTML myLog = new Log2HTML(name.getMethodName());
+	            Log2HTML myLog = new Log2HTML(TestName);
 	            ArrayList<String> returnListString= new ArrayList<String>();
 	            
 	            returnListString.add( "String 1" );
@@ -264,7 +256,7 @@ public class Log2HTMLTest {
 	                myLog.LogFunctionEnd( returnListString );
 	            myLog.LogTestcaseEnd();
 
-	            myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+	            myLog.Result2HTML( "target/" + TestName + ".html" );
 	        }
 
 	           @Test
@@ -272,7 +264,7 @@ public class Log2HTMLTest {
 
 	                ArrayList<String> returnListString= new ArrayList<String>();
 
-	                Log2HTML myLog = new Log2HTML(name.getMethodName());
+	                Log2HTML myLog = new Log2HTML(TestName);
 	                myLog.setDebugMode( true ); 
 	                
 	                returnListString.add( "String 1" );
@@ -285,12 +277,12 @@ public class Log2HTMLTest {
 	                    myLog.LogFunctionEndDebug( returnListString );
 	                myLog.LogTestcaseEnd();
 
-	                myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+	                myLog.Result2HTML( "target/" + TestName + ".html" );
 	            }      
 	@Test
 	public void TC_LogFunktionDebug_Test() {
 
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 		myLog.setDebugMode( true );
 
 		myLog.LogTestcaseStart( "TC_LogFunktionDebug_Test" );
@@ -310,13 +302,13 @@ public class Log2HTMLTest {
 
 		myLog.LogTestcaseEnd();
 
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 
 	@Test
 	public void TC_LogSequence_Test() {
 
-		Log2HTML myLog = new Log2HTML( name.getMethodName() );
+		Log2HTML myLog = new Log2HTML( TestName );
 
 		myLog.LogTestcaseStart( "TC_LogSequence_Test" );
 		
@@ -345,13 +337,13 @@ public class Log2HTMLTest {
 			
 		myLog.LogTestcaseEnd();
 
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 
 	@Test
 	public void TC_LogKeyWord_Test() {
 
-		Log2HTML myLog = new Log2HTML( name.getMethodName() );
+		Log2HTML myLog = new Log2HTML( TestName );
 
 		myLog.LogTestcaseStart( "TC_LogSequence_Test" );
 		
@@ -365,14 +357,14 @@ public class Log2HTMLTest {
 
 		myLog.LogTestcaseEnd();
 		
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 
 	
 	@Test
 	public void TC_Reset_Test() {
 
-		Log2HTML myLog = new Log2HTML( name.getMethodName() );
+		Log2HTML myLog = new Log2HTML( TestName );
 
 		myLog.LogTestcaseStart( "TC_Reset_Test" );
 		
@@ -386,7 +378,7 @@ public class Log2HTMLTest {
 
 		myLog.LogTestcaseStart( "This Test" );			
 	
-		myLog.Result2HTML( "target/" + name.getMethodName() + ".html" );
+		myLog.Result2HTML( "target/" + TestName + ".html" );
 	}
 
 }

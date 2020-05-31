@@ -4,8 +4,8 @@ import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
 import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.*;
+
 
 /**
 * \~
@@ -16,7 +16,7 @@ import org.junit.BeforeClass;
 public class FrmSeChrome_Test extends FrmBrowserBase_Test
 {
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception
 	{
 		ApplicationName = "Chrome";
@@ -30,7 +30,7 @@ public class FrmSeChrome_Test extends FrmBrowserBase_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception
 	{
 		myLog2HTML.Result2HTML( "target/FrmSeChrome_Test.html" );

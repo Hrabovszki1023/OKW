@@ -42,72 +42,48 @@ package okw;
 
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Collection;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
-import org.junit.*;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.*;
+import org.junit.jupiter.params.provider.CsvSource;
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.xml.sax.SAXException;
 
-import static org.junit.Assert.*;
 import okw.log.*;
 
-@RunWith(Parameterized.class)
 public class OKW_Const_Boolean2YesNo
 {
-@Parameters( name = "{index} {1}: {0} = GetOKWConst4Internalname[>>{2}<<] " )
-public static Collection<Object[]> data() {
-    return Arrays.asList(new Object[][] {     
-    		//Separatoren
-    		{ "JA",     "de",   true },
-    		{ "YES",    "en",   true },
-    		
-    		{ "NEIN",    "de",   false  },
-    		{ "NO",      "en",   false  },
-       });
-}
+    public static Logger_Sngltn Log;
 
-private String ExpectedValue;
-
-private String SelectLanguage;
-private Boolean InputValue_1;
-
-public OKW_Const_Boolean2YesNo(String ExpectedValue, String SelectLanguage, Boolean InputValue_1) {
-	
-	   this.ExpectedValue  = ExpectedValue;
-	   
-	   this.SelectLanguage = SelectLanguage;
-	   this.InputValue_1   = InputValue_1;
-	   }
-
-/// \copydoc CurrentObject::Log()
-public static Logger_Sngltn Log;
-
-	//@BeforeClass
+    @BeforeAll
     public static void myTestFixtureSetUp()
     {
-		Log = Logger_Sngltn.getInstance();
+        Log = Logger_Sngltn.getInstance();
         // Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
         //Log.AddLogger(new Log2Console());
-        Log.setDebugMode(false);
+        Log.setDebugMode( false );
     }
 
-    @Test
-    public void TC_MatchStr() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+    @ParameterizedTest
+    @CsvSource( value =
+    { "'JA',   'de',   true ", 
+      "'YES',  'en',   true ", 
+      "'NEIN', 'de',   false", 
+      "'NO',   'en',   false" }, delimiter = ',' )
+    public void TC_MatchStr( String expected, String SelectLanguage, Boolean InputValue )
+                    throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
     {
         String actual = "";
-        String expected = ExpectedValue;
-        
-		OKWLanguage.getInstance().setLanguage(SelectLanguage);
-        actual = OKW_Const_Sngltn.getInstance().Boolean2YesNo(InputValue_1);
-        assertEquals(expected, actual);
+
+        OKWLanguage.getInstance().setLanguage( SelectLanguage );
+        actual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( InputValue );
+        assertEquals( expected, actual );
     }
 }

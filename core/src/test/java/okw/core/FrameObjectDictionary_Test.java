@@ -39,39 +39,32 @@
 
 package okw.core;
 
-import static org.junit.Assert.*;
-
 import javax.xml.xpath.XPathExpressionException;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import okw.*;
 import okw.exceptions.*;
 import okw.log.*;
 
-/// \brief
-/// This is a test class for FrameObjectDictionaryTest and is intended
-/// to contain all FrameObjectDictionaryTest Unit Tests
-/// 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+/**
+ *  This is a test class for FrameObjectDictionaryTest and is intended
+ *  to contain all FrameObjectDictionaryTest Unit Tests
+ */ 
+@Tag("AllCoreTests")
 public class FrameObjectDictionary_Test
 {
 
-  // / \brief
-  // / This is a test class for FrameObjectDictionaryTest and is intended
-  // / to contain all FrameObjectDictionaryTest Unit Tests
-  // /
+  /** 
+   *  This is a test class for FrameObjectDictionaryTest and is intended
+   *  to contain all FrameObjectDictionaryTest Unit Tests
+   */
   static FrameObjectDictionary_Sngltn target; // = new
 
   // FrameObjectDictionary();
 
-  @BeforeClass
+  @BeforeAll
   public static void setUpBeforeClass() throws Exception
   {
 
@@ -88,23 +81,8 @@ public class FrameObjectDictionary_Test
     target = FrameObjectDictionary_Sngltn.getInstance();
   }
 
-  @AfterClass
-  public static void tearDownAfterClass() throws Exception
-  {
-  }
-
-  @Before
-  public void setUp() throws Exception
-  {
-  }
-
-  @After
-  public void tearDown() throws Exception
-  {
-  }
 
   // / \~german
-  // / \brief
   // / Prüft die Initialisierung der Klasse FrameObjectDictionary.
   // /
   // / Vorgehen: Klasse wird im ersten Schritt mit Frames geladen,

@@ -42,15 +42,17 @@ package okw;
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Tag;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import okw.log.*;
 
 @RunWith( Parameterized.class )
+@Tag("AllCoreHelperTests")
 public class OKW_Helper_RemoveBeginQuotationsTest
 {
 
@@ -84,7 +86,7 @@ public class OKW_Helper_RemoveBeginQuotationsTest
         this.InputValue_1 = InputValue_1;
     }
 
-    //@BeforeClass
+    //@BeforeAll
     public static void myTestFixtureSetUp()
     {
         Log = Logger_Sngltn.getInstance();

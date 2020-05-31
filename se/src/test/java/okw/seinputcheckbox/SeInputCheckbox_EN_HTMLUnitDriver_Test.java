@@ -3,8 +3,8 @@ package okw.seinputcheckbox;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.*;
+
 
 /**
 * \~
@@ -16,7 +16,7 @@ public class SeInputCheckbox_EN_HTMLUnitDriver_Test extends SeInputCheckbox_EN_T
 {
 	protected static Log2HTML myLog2HTML = null;
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception
 	{
 		ApplicationName = "HTMLUnit";
@@ -30,7 +30,7 @@ public class SeInputCheckbox_EN_HTMLUnitDriver_Test extends SeInputCheckbox_EN_T
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception
 	{
 		myLog2HTML.Result2HTML( "target/OKWResult_SeCheckBox_HTMLUnitDriver_Test.html" );

@@ -7,8 +7,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-import org.junit.Rule;
-import org.junit.rules.TestName;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.TestInfo;
+
 
 
 /**
@@ -35,8 +36,13 @@ public class JUnitBase
 
     String ClassName = this.getClass().getSimpleName();
     
-    @Rule
-    public TestName name = new TestName();
+    public String TestName;
+
+    @BeforeEach
+    void init(TestInfo testInfo)
+    {
+        TestName = testInfo.getTestMethod().get().getName();
+    }
 
     /**
      * \~german

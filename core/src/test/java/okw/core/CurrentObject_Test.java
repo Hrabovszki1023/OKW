@@ -39,20 +39,19 @@
 
 package okw.core;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import org.junit.*;
-import org.junit.runners.MethodSorters;
-
 import okw.*;
 import okw.exceptions.*;
 import okw.log.*;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Tag("AllCoreTests")
 public class CurrentObject_Test {
 
 
@@ -63,19 +62,20 @@ public class CurrentObject_Test {
 	        
 	        Core myKernel= new Core();
 
-	        /// \brief
-	        /// Ziel des TestFixturesetup: Startbedingung für alle Testfälle herstellen.
-	        /// Der Aufruf erfolgt genau einmal vor allen Testfällen.
-	        /// 
-	        /// Folgende Aktivitäten werden durchgeführt:
-	        /// * Log2NUnit in den Logger laden.
-	        /// * Debug-Modus des Logger -s abschalten.
-	        /// * Logmessanger Spracheinstellung auf DE setzen.
-	        /// 
-	        /// 
-	        /// \author Zoltan Hrabovszki
-	        /// \date 2012.12.16
-	        @BeforeClass
+	        /** Ziel des TestFixturesetup: Startbedingung für alle Testfälle herstellen.
+	         *  Der Aufruf erfolgt genau einmal vor allen Testfällen.
+	         *  
+	         *  Folgende Aktivitäten werden durchgeführt:
+	         *  * Log2NUnit in den Logger laden.
+	         *  * Debug-Modus des Logger -s abschalten.
+	         *  * Logmessanger Spracheinstellung auf DE setzen.
+	         *  
+	         *  
+	         *  \author Zoltan Hrabovszki
+	         *  \date 2012.12.16
+	         * 
+	         */
+	        @BeforeAll
 	        public static void TestFixtureSetUp()
 	        {
 	            try
@@ -98,7 +98,7 @@ public class CurrentObject_Test {
 	            }
 	        }
 
-	       @After
+	       @AfterEach
 	        public void MyTearDown()
 	        {
 	    	   myLogger.LogFunctionEnd();
@@ -113,10 +113,12 @@ public class CurrentObject_Test {
                 
            }
 	       
-           @Test (expected = OKWFrameObjectParentNotFoundException.class )
+           @Test
            public void tc_setWindowName_Doesnot_exists() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
            {
-                CO.setWindowName( "Uschi" );
+                Assertions.assertThrows( OKWFrameObjectParentNotFoundException.class, () -> {
+                    CO.setWindowName( "Uschi" );
+                  });
            }
 	       
 	       
@@ -148,12 +150,13 @@ public class CurrentObject_Test {
                 assertEquals( "CurrentObjectWindow.CurrentObjectAllMethodCallTypes", CO.getObjectFN() );
            }
            
-           @Test (expected = OKWFrameObjectChildNotFoundException.class )
+           @Test
            public void tc_setChildName_OKWFrameObjectChildNotFoundException() throws XPathExpressionException, IllegalArgumentException, IllegalAccessException
            {
                CO.setWindowName( "CurrentObjectWindow" );
                assertEquals( "CurrentObjectWindow", CO.getWindowFN() );
-               CO.setChildName( "MakeException" );
+               
+               Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () -> { CO.setChildName( "MakeException" ); });
            }
 	       
            
@@ -250,10 +253,10 @@ public class CurrentObject_Test {
            }  
            
 
-           @Test (expected=OKWFrameObjectMethodNotFoundException.class)
+           @Test
            public void tc_Sequence_OKWFrameObjectMethodNotFoundException() throws Exception 
            {
-               CO.Sequence( "Rechner", "TestSequence_Nichtvorhanden", "TestID" );
+               Assertions.assertThrows( OKWFrameObjectMethodNotFoundException.class, () -> { CO.Sequence( "Rechner", "TestSequence_Nichtvorhanden", "TestID" ); });
            }  
 
            

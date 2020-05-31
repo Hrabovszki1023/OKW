@@ -3,12 +3,12 @@ package okw.calculator;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.*;
+
 
 public class Calculator_EN_HTMLUnitDriver_Test extends Calculator_EN_Test
 {
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception
 	{
 		ApplicationName = "HTMLUnit";
@@ -22,7 +22,7 @@ public class Calculator_EN_HTMLUnitDriver_Test extends Calculator_EN_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception
 	{
 		myLog2HTML.Result2HTML( "target/Calculator_EN_HTMLUnitDriver_Test.html" );

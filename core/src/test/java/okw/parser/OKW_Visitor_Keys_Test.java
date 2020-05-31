@@ -3,9 +3,9 @@ package okw.parser;
 
 import okw.*;
 
-import org.junit.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
-import static org.junit.Assert.*;
 
 	public class OKW_Visitor_Keys_Test
     {

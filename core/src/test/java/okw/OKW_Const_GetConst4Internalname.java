@@ -48,81 +48,25 @@ import java.util.Collection;
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
-
-import org.junit.*;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
 import org.xml.sax.SAXException;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.*;
+import org.junit.jupiter.params.provider.CsvSource;
+import static org.junit.jupiter.api.Assertions.*;
+
 import okw.log.*;
 
-@RunWith(Parameterized.class)
+@Tag("AllCoreHelperTests")
 public class OKW_Const_GetConst4Internalname
 {
-@Parameters( name = "{index} {1}: {0} = GetOKWConst4Internalname[>>{2}<<] " )
-public static Collection<Object[]> data() {
-    return Arrays.asList(new Object[][] {     
-    		//Separatoren
-    		{ "HSEP",     "de",   "HSEP" },
-    		{ "HSEP",     "en",   "HSEP" },
-    		
-    		{ "SEP",      "de",   "SEP"  },
-    		{ "SEP",      "en",   "SEP"  },
-    		
-    		{ "VSEP",      "de",   "VSEP"  },
-    		{ "VSEP",      "en",   "VSEP"  },
-
-    		{ "${",       "de",   "LEFTBRACE"  },
-    		{ "}",        "en",   "RIGHTBRACE" },
-    		
-    		
-    		// Werte
-    		{ "JA",            "de", "YES"},
-    		{ "YES",           "en", "YES"},
-    		
-    		{ "NEIN",          "de",   "NO" },
-    		{ "NO",            "en",   "NO" },
-    		
-    		{ "ABGEWÄHLT",     "de", "UNCHECKED"},
-    		{ "UNCHECKED",     "en", "UNCHECKED"},
-    		
-    		{ "ANGEWÄHLT",     "de", "CHECKED"},
-    		{ "CHECKED",       "en", "CHECKED"},
-
-    		
-    		// Befehle
-    		{ "LÖSCHEN",    "de", "DELETE"},
-    		{ "DELETE",     "en", "DELETE"},
-    		
-    		{ "IGNORIEREN", "de", "IGNORE"},
-    		{ "IGNORE",     "en", "IGNORE"},
-    		
-    		{ "LEER",       "de", "EMPTY"},
-    		{ "EMPTY",      "en", "EMPTY"}
-       });
-}
-
-private String ExpectedValue;
-
-private String SelectLanguage;
-private String InputValue_1;
-
-public OKW_Const_GetConst4Internalname(String ExpectedValue, String SelectLanguage, String InputValue_1) {
-	
-	   this.ExpectedValue  = ExpectedValue;
-	   
-	   this.SelectLanguage = SelectLanguage;
-	   this.InputValue_1   = InputValue_1;
-	   }
 
 /**
  *  \copydoc CurrentObject::Log()
  */
 public static Logger_Sngltn Log;
 
-	//@BeforeClass
+	//@BeforeAll
     public static void myTestFixtureSetUp()
     {
 		Log = Logger_Sngltn.getInstance();
@@ -133,8 +77,47 @@ public static Logger_Sngltn Log;
         Log.setDebugMode(false);
     }
 
-    @Test
-    public void TC_MatchStr() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
+    @ParameterizedTest
+    @CsvSource( value = {
+    "'HSEP',     'de',   'HSEP'",
+    "'HSEP',     'en',   'HSEP'",
+    
+    "'SEP',      'de',   'SEP'",
+    "'SEP',      'en',   'SEP'",
+    
+    "'VSEP',      'de',   'VSEP'",
+    "'VSEP',      'en',   'VSEP'",
+
+    "'${',       'de',   'LEFTBRACE'",
+    "'}',        'en',   'RIGHTBRACE'",
+    
+    // Werte
+    "'JA',            'de', 'YES'",
+    "'YES',           'en', 'YES'",
+    
+    "'NEIN',          'de',   'NO'",
+    "'NO',            'en',   'NO'",
+    
+    "'ABGEWÄHLT',     'de', 'UNCHECKED'",
+    "'UNCHECKED',     'en', 'UNCHECKED'",
+    
+    "'ANGEWÄHLT',     'de', 'CHECKED'",
+    "'CHECKED',       'en', 'CHECKED'",
+    
+    // Befehle
+    "'LÖSCHEN',    'de', 'DELETE'",
+    "'DELETE',     'en', 'DELETE'",
+
+    "'IGNORIEREN', 'de', 'IGNORE'",
+    "'IGNORE',     'en', 'IGNORE'",
+
+    "'LEER',       'de', 'EMPTY'",
+    "'EMPTY',      'en', 'EMPTY'"}, delimiter = ',' )
+    public void TC_MatchStr(
+                        String ExpectedValue,
+                        String SelectLanguage,
+                        String InputValue_1
+                    ) throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
     {
         String actual = "";
         String expected = ExpectedValue;

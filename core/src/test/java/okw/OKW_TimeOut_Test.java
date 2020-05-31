@@ -1,8 +1,9 @@
 package okw;
 
-import static org.junit.Assert.*;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("AllCoreHelperTests")
 public class OKW_TimeOut_Test {
 
 	@Test

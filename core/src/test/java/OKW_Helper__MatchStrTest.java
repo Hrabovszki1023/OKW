@@ -43,12 +43,12 @@
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 import okw.OKW_Helper;
 import okw.log.*;
 
@@ -92,7 +92,7 @@ public class OKW_Helper__MatchStrTest
 	/// \copydoc CurrentObject::Log()
     protected static Logger_Sngltn Log;
 
-		//@BeforeClass
+		//@BeforeAll
         public static void myTestFixtureSetUp()
         {
 			Log = Logger_Sngltn.getInstance();

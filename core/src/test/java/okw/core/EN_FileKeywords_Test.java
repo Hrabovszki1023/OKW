@@ -44,25 +44,23 @@ import java.io.File;
 import okw.OKW_TestClipboard;
 import okw.log.Logger_Sngltn;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Tag("AllCoreTests")
 public class EN_FileKeywords_Test
 {
     static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
     static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
-    @Rule
-    public TestName          name        = new TestName();
+    public String TestName;
 
-    @BeforeClass
+    @BeforeEach
+    void init(TestInfo testInfo)
+    {
+        TestName = testInfo.getTestMethod().get().getName();
+    }
+
+    @BeforeAll
     public static void setUpBeforeClass() throws Exception
     {
 
@@ -78,7 +76,7 @@ public class EN_FileKeywords_Test
     }
 
     /*
-    @AfterClass
+    @AfterAll
     public static void tearDownAfterClass() throws Exception
     {
         System.out.println( "===========================================================================" );
@@ -89,12 +87,7 @@ public class EN_FileKeywords_Test
     }
     */
 
-    @Before
-    public void setUp() throws Exception
-    {
-    }
-
-    @After
+    @AfterEach
     public void tearDown() throws Exception
     {
         EN.EndTest();
@@ -114,7 +107,7 @@ public class EN_FileKeywords_Test
     {
         String myFile = "myFileDelete.txt";
         
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         // Testscript in Schlüsselwort-Notation
         //
         
@@ -147,7 +140,7 @@ public class EN_FileKeywords_Test
     {
         String myFile = "myFileDelete.txt";
         
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         // Testscript in Schlüsselwort-Notation
         //
         

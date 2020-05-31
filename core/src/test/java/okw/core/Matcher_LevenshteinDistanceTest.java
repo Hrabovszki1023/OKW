@@ -39,17 +39,19 @@
 
 package okw.core;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
 import java.util.Collection;
 
 import org.junit.Test;
+import org.junit.jupiter.api.Tag;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
+@Tag("AllCoreTests")
 public class Matcher_LevenshteinDistanceTest {
 
   @Parameters(name = "{index}: LevenshteinDistance(>{0}<, >{1}< ) = >{2}<")

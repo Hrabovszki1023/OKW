@@ -8,9 +8,9 @@ import okw.*;
 // import okw.parser.*;
 import okw.log.*;
 
-import org.junit.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
-import static org.junit.Assert.*;
 
 	public class OKW_VisitorTest
     {
@@ -27,7 +27,7 @@ import static org.junit.Assert.*;
         /// 
         /// \author Zoltan Hrabovszki
         /// \date 2014.01.14
-        @Ignore
+        @Disabled
         @Test
         public void TC_ParseMe_EnvVar()
         {
@@ -183,11 +183,10 @@ import static org.junit.Assert.*;
         }
         
         
-        /// \brief
         /// 
         /// \author Zoltan Hrabovszki
         /// \date 2014.10.14
-        @Ignore
+        @Disabled
         @Test
         public void TC_ParseMe_TextPlusEnvVar()
         {

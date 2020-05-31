@@ -1,16 +1,12 @@
 package okw.seselect;
 
-import static org.junit.Assert.*;
-
-import org.junit.FixMethodOrder;
-
 import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import okw.core.OKWTestBase;
+
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
 * \~
@@ -18,14 +14,9 @@ import org.junit.runners.MethodSorters;
 * 
 * @author zoltan
 */
-@FixMethodOrder( MethodSorters.NAME_ASCENDING )
-public class SeSelect_EN_Test
+public class SeSelect_EN_Test extends OKWTestBase
 {
   protected static String ApplicationName;
-
-  @Rule
-  public TestName         name = new TestName();
-
 
   // \~german
   // \brief
@@ -37,7 +28,7 @@ public class SeSelect_EN_Test
   @Test
   public void tcSelect_SingelValue() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
 
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
@@ -65,7 +56,7 @@ public class SeSelect_EN_Test
   @Test
   public void tcSelect_MultipleValues() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/t/select_size-5_multiple.htm" );
 
@@ -89,7 +80,7 @@ public class SeSelect_EN_Test
   @Test
   public void tcSelect_MultipleValues_DELETE() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/select_size-5_multiple.htm" );
 
@@ -117,7 +108,7 @@ public class SeSelect_EN_Test
   @Test
   public void tcSelect_MultipleValues_IGNORE() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/t/select_size-5_multiple.htm" );
 
@@ -152,7 +143,7 @@ public class SeSelect_EN_Test
   @Test
   public void tcSetValue_SingelValue() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
 
@@ -181,7 +172,7 @@ public class SeSelect_EN_Test
   @Test
   public void tcSetValue_SingelValue_IGNORE() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
 
@@ -221,7 +212,7 @@ public class SeSelect_EN_Test
   @Test
   public void tcVerifyExists_ExistsYesExpectedYes() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
 
@@ -248,7 +239,7 @@ public class SeSelect_EN_Test
   public void tcVerifyExists_ExistsNoExpectedNo() throws Exception
   {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
 
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
@@ -270,10 +261,10 @@ public class SeSelect_EN_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.20
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyExists_ExistsYesExpectedNo_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
 
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
@@ -281,7 +272,11 @@ public class SeSelect_EN_Test
     EN.VerifyExists( "Künstler", "NO" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -294,10 +289,10 @@ public class SeSelect_EN_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.20
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyExists_ExistsNoExpectedYes_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     
@@ -306,7 +301,11 @@ public class SeSelect_EN_Test
     EN.VerifyExists( "NichtVorhanden", "YES" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -321,7 +320,7 @@ public class SeSelect_EN_Test
   @Test
   public void tcVerifyIsActive_IsActiveYesExpectedYes() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
 
@@ -348,7 +347,7 @@ public class SeSelect_EN_Test
   public void tcVerifyIsActive_IsActiveNoExpectedNo() throws Exception
   {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
 
@@ -369,10 +368,10 @@ public class SeSelect_EN_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.20
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyIsActive_IsActiveYesExpectedNo_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
 
@@ -380,7 +379,11 @@ public class SeSelect_EN_Test
     EN.VerifyIsActive( "Künstler", "NO" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
 }
 
   // \~german
@@ -392,10 +395,10 @@ public class SeSelect_EN_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.20
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyIsActive_IsActiveNoExpectedYes_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -403,13 +406,17 @@ public class SeSelect_EN_Test
     EN.VerifyIsActive( "Fahrzeug", "YES" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   @Test
   public void tcVerifyToolTip() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -421,10 +428,10 @@ public class SeSelect_EN_Test
     EN.EndTest();
 }
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyToolTip_Fail_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -433,13 +440,17 @@ public class SeSelect_EN_Test
     EN.VerifyTooltip( "Künstler", "Title: Artis" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   @Test
   public void tcVerifyToolTipWCM() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -451,10 +462,10 @@ public class SeSelect_EN_Test
     EN.EndTest();
   }
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyToolTipWCM_Fail_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -463,13 +474,17 @@ public class SeSelect_EN_Test
     EN.VerifyTooltipWCM( "Künstler", "Wähle Interpret" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
 }
 
   @Test
   public void tcVerifyToolTipREGX() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -481,10 +496,10 @@ public class SeSelect_EN_Test
     EN.EndTest();
 }
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyToolTipREGX_Fail_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -493,13 +508,17 @@ public class SeSelect_EN_Test
     EN.VerifyTooltipREGX( "Künstler", "Title: Künstker" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   @Test
   public void tcVerifyLabel() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -511,10 +530,10 @@ public class SeSelect_EN_Test
     EN.EndTest();
   }
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabel_Fail_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -523,13 +542,17 @@ public class SeSelect_EN_Test
     EN.VerifyLabel( "Künstler", "Wähle Interpret" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
 }
 
   @Test
   public void tcVerifyLabelWCM() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -541,10 +564,10 @@ public class SeSelect_EN_Test
     EN.EndTest();
 }
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabelWCM_Fail_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -553,13 +576,17 @@ public class SeSelect_EN_Test
     EN.VerifyTooltipWCM( "Künstler", "Wähle Interpret" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
 }
 
   @Test
   public void tcVerifyLabelREGX() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -571,10 +598,10 @@ public class SeSelect_EN_Test
     EN.EndTest();
 }
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabelREGX_Fail_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -583,7 +610,11 @@ public class SeSelect_EN_Test
     EN.VerifyLabelREGX( "Künstler", "Wähle Interpret" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
 }
 
   // / \brief
@@ -592,7 +623,7 @@ public class SeSelect_EN_Test
   @Test
   public void tcMemorizeToolTip() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -613,7 +644,7 @@ public class SeSelect_EN_Test
   @Test
   public void tcLogToolTip_en() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -627,7 +658,7 @@ public class SeSelect_EN_Test
   @Test
   public void tcVerifyValue() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -639,10 +670,10 @@ public class SeSelect_EN_Test
     EN.EndTest();
   }
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyValue_Fail_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -651,13 +682,17 @@ public class SeSelect_EN_Test
     EN.VerifyValue( "Künstler", "Wähle Interpret" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   @Test
   public void tcVerifyValueWCM() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
 
@@ -669,10 +704,10 @@ public class SeSelect_EN_Test
     EN.EndTest();
 }
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyValueWCM_Fail_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -681,13 +716,17 @@ public class SeSelect_EN_Test
     EN.VerifyValueWCM( "Künstler", "Wähle Interpret" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
 }
 
   @Test
   public void tcVerifyValueREGX() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -699,10 +738,10 @@ public class SeSelect_EN_Test
     EN.EndTest();
   }
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyValueREGX_Fail_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Select/Select.htm" );
     EN.SelectWindow( "SeListBox" );
@@ -711,6 +750,10 @@ public class SeSelect_EN_Test
     EN.VerifyValueREGX( "Künstler", "Wähle Interpret" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 }

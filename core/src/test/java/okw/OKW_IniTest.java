@@ -5,19 +5,18 @@ import java.lang.reflect.Field;
 import java.nio.file.Paths;
 import java.util.Map;
 
-import org.junit.*;
-import org.junit.rules.TestName;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
-import static org.junit.Assert.*;
 import okw.core.EN;
+import okw.core.OKWTestBase;
 import okw.exceptions.OKWFileDoesNotExistsException;
 import okw.log.Logger_Sngltn;
 
 
-public class OKW_IniTest
+@Tag("AllCoreHelperTests")
+public class OKW_IniTest extends OKWTestBase
 {
-	@Rule
-	public TestName	name = new TestName();
     
 	private static Logger_Sngltn myLogger  = Logger_Sngltn.getInstance();
 
@@ -42,19 +41,19 @@ public class OKW_IniTest
 
 	}
 
-	@After
+	@AfterEach
 	public void myTestFixtureTearDown() throws Exception
 	{
 		EN.EndTest();
 	}
 
-	@Before
+	@BeforeEach
 	public void myTestFixtureSetUp() throws Exception
 	{
-		EN.BeginTest( name.getMethodName() );
+		EN.BeginTest( TestName );
 	}
 
-	@BeforeClass
+	@BeforeAll
 	public static void mySetUp()
 	{
         // Reset des Loggers: Alle Instanzen löschen
@@ -79,7 +78,7 @@ public class OKW_IniTest
 	 * 
 	 */
 	@Test
-	@Ignore
+	@Disabled
 	public void tcWindowsOKWEnvSetXmlExist()
 	{
 		String OKW_Xml = "";
@@ -123,7 +122,7 @@ public class OKW_IniTest
 	 * @date 2013.11.25
      */
 	@Test
-	@Ignore
+	@Disabled
 	public void tcCheckAllPathWithOKWXml()
 	{
 		String OKW_Xml_Path_Expected = "";
@@ -149,20 +148,21 @@ public class OKW_IniTest
 				myOKW_Ini.OKW_Enviroment.getFile_OKW_Memorize_xml());
 	}
 
-	/// \~german
-	/// \brief
-	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
-	/// * Umgebungsvariable setzten.
-	/// * OKW_Ini Instanzieren.
-	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
-	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
-	/// * OKW_Ini Eigenschaften Prüfen.
-	///
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.11.25
+	/** \~german
+	 *  Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	 * 
+	 *  * Umgebungsvariable setzten.
+	 *  * OKW_Ini Instanzieren.
+	 *  * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	 *  * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	 *  * OKW_Ini Eigenschaften Prüfen.
+	 * 
+	 *  \~
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2013.11.25
+	 */
 	@Test
-	@Ignore
+	@Disabled
 	public void tcCheckAllPathWithoutOKWXml()
 	{
 		String OKW_Xml_original = "";
@@ -227,25 +227,25 @@ public class OKW_IniTest
 		}
 	}
 
-	/// \~german
-	/// \brief
-	/// Umgebungsvariable ist gesetzt, OKW_Ini_Sngltn.XML existiert jedoch nicht
-	/// im Verzeichniss..
-	///
-	/// Ziel der Prüfung ist ob die richtige Exception ausgelöst wird,
-	/// wenn die Umgebungsvariable auf einen falschen Pfad zeigt.
-	///
-	/// Umgebungsvariable ist gesetzt zeigt auf ein nicht vorhandenes
-	/// Verzeichniss.
-	///
-	/// Erwartet wird dass eine "OKWFileDoesNotExistsException"-Ausnahme
-	/// ausglöst wird.
-	/// Geprüft wird auch ob richtige Meldung kommt.
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.11.25
+	/** \~german
+	 *  Umgebungsvariable ist gesetzt, OKW_Ini_Sngltn.XML existiert jedoch nicht
+	 *  im Verzeichniss..
+	 * 
+	 *  Ziel der Prüfung ist ob die richtige Exception ausgelöst wird,
+	 *  wenn die Umgebungsvariable auf einen falschen Pfad zeigt.
+	 * 
+	 *  Umgebungsvariable ist gesetzt zeigt auf ein nicht vorhandenes
+	 *  Verzeichniss.
+	 * 
+	 *  Erwartet wird dass eine "OKWFileDoesNotExistsException"-Ausnahme
+	 *  ausglöst wird.
+	 *  Geprüft wird auch ob richtige Meldung kommt.
+	 *  \~
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2013.11.25
+	*/
 	@Test
-	@Ignore
+	@Disabled
 	public void tcWindowsOKWEnvSetXMLNotExistException()
 	{
 		// 1. Merken wir den aktuellen OKW_Xml Wert
@@ -282,14 +282,14 @@ public class OKW_IniTest
 	}
 
 	
-	/* \~german Prüft alle Pfade als gegen Ressorce verzeichniss.
-	/// \brief
-	///
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.11.25
+	/** \~german Prüft alle Pfade als gegen Ressorce verzeichniss.
+	 * 
+	 *  \~
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2013.11.25
+	 */
 	@Test
-	@Ignore
+	@Disabled
 	public void tcVerifyFolderXML()
 	{
 		
@@ -309,22 +309,22 @@ public class OKW_IniTest
 
 		assertEquals(ExpectedDir, Actuell);
 	}
-	*/
+	// */
 
 	
-	/// \~german
-	/// \brief
-	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
-	/// * Umgebungsvariable setzten.
-	/// * OKW_Ini Instanzieren.
-	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
-	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
-	/// * OKW_Ini Eigenschaften Prüfen.
-	///
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.11.25
-	// [Category("WIN")]
+	/** \~german
+	 *  Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	 *  * Umgebungsvariable setzten.
+	 *  * OKW_Ini Instanzieren.
+	 *  * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	 *  * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	 *  * OKW_Ini Eigenschaften Prüfen.
+	 * 
+	 *  \~
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2013.11.25
+	 *  [Category("WIN")
+	 */
 	@Test
 	public void tcCheckPathOKWConst()
 	{
@@ -344,19 +344,19 @@ public class OKW_IniTest
 
 	}
 
-	/// \~german
-	/// \brief
-	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
-	/// * Umgebungsvariable setzten.
-	/// * OKW_Ini Instanzieren.
-	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
-	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
-	/// * OKW_Ini Eigenschaften Prüfen.
-	///
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.11.25
-	// [Category("WIN")]
+	/** \~german
+	 *  Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	 *  * Umgebungsvariable setzten.
+	 *  * OKW_Ini Instanzieren.
+	 *  * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	 *  * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	 *  * OKW_Ini Eigenschaften Prüfen.
+	 * 
+	 *  \~
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2013.11.25
+	 *  [Category("WIN")]
+	 */
 	@Test
 	public void tcCheckPathOKWDocu()
 	{
@@ -375,19 +375,19 @@ public class OKW_IniTest
         assertEquals(sExpected, sActual);
 	}
 	
-	/// \~german
-	/// \brief
-	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
-	/// * Umgebungsvariable setzten.
-	/// * OKW_Ini Instanzieren.
-	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
-	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
-	/// * OKW_Ini Eigenschaften Prüfen.
-	///
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.11.25
-	// [Category("WIN")]
+	/** \~german
+	 *  Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	 *  * Umgebungsvariable setzten.
+	 *  * OKW_Ini Instanzieren.
+	 *  * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	 *  * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	 *  * OKW_Ini Eigenschaften Prüfen.
+	 * 
+	 *  \~
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2013.11.25
+	 *  [Category("WIN")]
+	 */
 	@Test
 	public void tcCheckPathOKWImplementationMatrix()
 	{
@@ -407,19 +407,19 @@ public class OKW_IniTest
 	}
 
 	
-	/// \~german
-	/// \brief
-	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
-	/// * Umgebungsvariable setzten.
-	/// * OKW_Ini Instanzieren.
-	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
-	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
-	/// * OKW_Ini Eigenschaften Prüfen.
-	///
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.11.25
-	// [Category("WIN")]
+	/** \~german
+	 *  Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	 *  * Umgebungsvariable setzten.
+	 *  * OKW_Ini Instanzieren.
+	 *  * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	 *  * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	 *  * OKW_Ini Eigenschaften Prüfen.
+	 * 
+	 *  \~
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2013.11.25
+	 *  [Category("WIN")]
+	 */
 	@Test
 	public void tcCheckPathOKWIni()
 	{
@@ -438,19 +438,19 @@ public class OKW_IniTest
         
 	}
 	
-	/// \~german
-	/// \brief
-	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
-	/// * Umgebungsvariable setzten.
-	/// * OKW_Ini Instanzieren.
-	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
-	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
-	/// * OKW_Ini Eigenschaften Prüfen.
-	///
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.11.25
-	// [Category("WIN")]
+	/** \~german
+	 *  Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	 *  * Umgebungsvariable setzten.
+	 *  * OKW_Ini Instanzieren.
+	 *  * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	 *  * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	 *  * OKW_Ini Eigenschaften Prüfen.
+	 * 
+	 *  \~
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2013.11.25
+	 *  [Category("WIN")]
+	 */
 	@Test
 	public void tcCheckPathOKWKeymaps()
 	{
@@ -469,19 +469,19 @@ public class OKW_IniTest
 
 	}
 	
-	/// \~german
-	/// \brief
-	/// Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
-	/// * Umgebungsvariable setzten.
-	/// * OKW_Ini Instanzieren.
-	/// * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
-	/// * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
-	/// * OKW_Ini Eigenschaften Prüfen.
-	///
-	/// \~
-	/// \author Zoltan Hrabovszki
-	/// \date 2013.11.25
-	// [Category("WIN")]
+	/** \~german
+	 *  Umgebungsvariable ist gesetzt. Prüfung ob Wert aus OKW_Ini gelesen wird.
+	 *  * Umgebungsvariable setzten.
+	 *  * OKW_Ini Instanzieren.
+	 *  * OKW_Ini_Sngltn.xml existiert und ist an der Richtigen stelle.
+	 *  * OKW_Ini_Sngltn.OKW_Ini_Xml Prüfen.
+	 *  * OKW_Ini Eigenschaften Prüfen.
+	 * 
+	 *  \~
+	 *  \author Zoltan Hrabovszki
+	 *  \date 2013.11.25
+	 *  [Category("WIN")]
+	 */
 	@Test
 	public void tcCheckPathOKWMemorize()
 	{

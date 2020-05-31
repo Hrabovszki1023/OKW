@@ -41,26 +41,26 @@ package okw.core;
 
 import okw.OKW_TestClipboard;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
+import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
+import org.junit.jupiter.api.*;
 
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
-
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Tag("AllCoreTests")
 public class EN_Keywords_NOK_Test
 {
     static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
     static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
-    @Rule
-    public TestName          name        = new TestName();
+    public String TestName;
 
-    @BeforeClass
+    @BeforeEach
+    void init(TestInfo testInfo)
+    {
+        TestName = testInfo.getTestMethod().get().getName();
+    }
+
+    @BeforeAll
     public static void setUpBeforeClass() throws Exception
     {
 
@@ -76,7 +76,7 @@ public class EN_Keywords_NOK_Test
     }
 
     /*
-    @AfterClass
+    @AfterAll
     public static void tearDownAfterClass() throws Exception
     {
         System.out.println( "===========================================================================" );
@@ -97,10 +97,10 @@ public class EN_Keywords_NOK_Test
      * 
      * @throws Exception
      */
-    @Test (expected= OKWFrameObjectMethodNotImplemented.class)
+    @Test // (expected= OKWFrameObjectMethodNotImplemented.class)
     public void tc_A_NOK_AllKeyWords() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -199,14 +199,17 @@ public class EN_Keywords_NOK_Test
         EN.VerifyErrorMSG_REGX( "All_MethodsObj", "\\w{3} one and only Value" );
         
         // Datei Schlüsselwörter
-        
-        EN.EndTest();
+
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
     
     @Test 
     public void tc_B_OK_AllKeyWords() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );

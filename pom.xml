@@ -20,10 +20,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<additionalparam>-Xdoclint:none</additionalparam>
 		<!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
-		<junit.version>4.12</junit.version>
-		
 		<maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<build>
@@ -39,131 +37,119 @@
 		<!-- </pluginManagement> -->
 		<!-- To use the plugin goals in your POM or parent POM -->
 		<pluginManagement>
-		<plugins>
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.antlr</groupId> -->
-<!-- 				<artifactId>antlr4-maven-plugin</artifactId> -->
-<!-- 				<version>${antlr.version}</version> -->
-<!-- 				<executions> -->
-<!-- 					<execution> -->
-<!-- 						<id>antlr</id> -->
-<!-- 						<goals> -->
-<!-- 							<goal>antlr4</goal> -->
-<!-- 						</goals> -->
-<!-- 						<configuration> -->
-<!-- 							<listener>true</listener> -->
-<!-- 							<visitor>true</visitor> -->
-<!-- 							<includes>**./*.g4</includes> -->
-<!-- 							<outputDirectory>${basedir}/src/main/java/okw/parser/antlr4</outputDirectory> -->
-<!-- 							<sourceDirectory>${basedir}/src/main/antlr4</sourceDirectory> -->
-<!-- 						</configuration> -->
-<!-- 					</execution> -->
-<!-- 				</executions> -->
-<!-- 			</plugin> -->
+			<plugins>
+				<!-- <plugin> -->
+				<!-- <groupId>org.antlr</groupId> -->
+				<!-- <artifactId>antlr4-maven-plugin</artifactId> -->
+				<!-- <version>${antlr.version}</version> -->
+				<!-- <executions> -->
+				<!-- <execution> -->
+				<!-- <id>antlr</id> -->
+				<!-- <goals> -->
+				<!-- <goal>antlr4</goal> -->
+				<!-- </goals> -->
+				<!-- <configuration> -->
+				<!-- <listener>true</listener> -->
+				<!-- <visitor>true</visitor> -->
+				<!-- <includes>**./*.g4</includes> -->
+				<!-- <outputDirectory>${basedir}/src/main/java/okw/parser/antlr4</outputDirectory> -->
+				<!-- <sourceDirectory>${basedir}/src/main/antlr4</sourceDirectory> -->
+				<!-- </configuration> -->
+				<!-- </execution> -->
+				<!-- </executions> -->
+				<!-- </plugin> -->
 
 
-<!-- 			<plugin> -->
-<!-- 				<groupId>com.github.igoryeremin</groupId> -->
-<!-- 				<artifactId>doxygen-report-maven-plugin</artifactId> -->
-<!-- 				<version>1.0</version> -->
-<!-- 			</plugin> -->
+				<!-- <plugin> -->
+				<!-- <groupId>com.github.igoryeremin</groupId> -->
+				<!-- <artifactId>doxygen-report-maven-plugin</artifactId> -->
+				<!-- <version>1.0</version> -->
+				<!-- </plugin> -->
 
-<!-- 			<plugin> -->
-<!-- 				<artifactId>maven-compiler-plugin</artifactId> -->
-<!-- 				<configuration> -->
-<!-- 					<source>1.8</source> -->
-<!-- 					<target>1.8</target> -->
-<!-- 				</configuration> -->
-<!-- 			</plugin> -->
+				<!-- <plugin> -->
+				<!-- <artifactId>maven-compiler-plugin</artifactId> -->
+				<!-- <configuration> -->
+				<!-- <source>1.8</source> -->
+				<!-- <target>1.8</target> -->
+				<!-- </configuration> -->
+				<!-- </plugin> -->
 
-<!-- 			<plugin> -->
-<!-- 				Generate -javadoc.jar artifact, required by Maven Central. -->
-<!-- 				<artifactId>maven-javadoc-plugin</artifactId> -->
-<!-- 				<version>3.0.0</version> -->
-<!-- 				<configuration> -->
-<!-- 					<additionalparam>-Xdoclint:none</additionalparam> -->
-<!-- 					<doclint>none</doclint> -->
-<!-- 				</configuration> -->
-<!-- 				<executions> -->
-<!-- 					<execution> -->
-<!-- 						<id>jcabi-javadoc</id> -->
-<!-- 						<phase>package</phase> -->
-<!-- 						<goals> -->
-<!-- 							<goal>jar</goal> -->
-<!-- 						</goals> -->
-<!-- 					</execution> -->
-<!-- 				</executions> -->
-<!-- 			</plugin> -->
+				<!-- <plugin> -->
+				<!-- Generate -javadoc.jar artifact, required by Maven Central. -->
+				<!-- <artifactId>maven-javadoc-plugin</artifactId> -->
+				<!-- <version>3.0.0</version> -->
+				<!-- <configuration> -->
+				<!-- <additionalparam>-Xdoclint:none</additionalparam> -->
+				<!-- <doclint>none</doclint> -->
+				<!-- </configuration> -->
+				<!-- <executions> -->
+				<!-- <execution> -->
+				<!-- <id>jcabi-javadoc</id> -->
+				<!-- <phase>package</phase> -->
+				<!-- <goals> -->
+				<!-- <goal>jar</goal> -->
+				<!-- </goals> -->
+				<!-- </execution> -->
+				<!-- </executions> -->
+				<!-- </plugin> -->
 
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
-<!-- 				<artifactId>maven-source-plugin</artifactId> -->
-<!-- 				<version>3.0.1</version> -->
-<!-- 				<executions> -->
-<!-- 					<execution> -->
-<!-- 						<id>attach-sources</id> -->
-<!-- 						<goals> -->
-<!-- 							<goal>jar</goal> -->
-<!-- 						</goals> -->
-<!-- 					</execution> -->
-<!-- 				</executions> -->
-<!-- 			</plugin> -->
+				<!-- <plugin> -->
+				<!-- <groupId>org.apache.maven.plugins</groupId> -->
+				<!-- <artifactId>maven-source-plugin</artifactId> -->
+				<!-- <version>3.0.1</version> -->
+				<!-- <executions> -->
+				<!-- <execution> -->
+				<!-- <id>attach-sources</id> -->
+				<!-- <goals> -->
+				<!-- <goal>jar</goal> -->
+				<!-- </goals> -->
+				<!-- </execution> -->
+				<!-- </executions> -->
+				<!-- </plugin> -->
 
-			<plugin>
-				<artifactId>maven-gpg-plugin</artifactId>
-				<version>1.6</version>
-				<executions>
-					<execution>
-						<id>sign-artifacts</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>sign</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+				<plugin>
+					<artifactId>maven-gpg-plugin</artifactId>
+					<version>1.6</version>
+					<executions>
+						<execution>
+							<id>sign-artifacts</id>
+							<phase>verify</phase>
+							<goals>
+								<goal>sign</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
 
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.codehaus.mojo</groupId> -->
-<!-- 				<artifactId>versions-maven-plugin</artifactId> -->
-<!-- 				<version>2.5</version> -->
-<!-- 				<configuration> -->
-<!-- 					<generateBackupPoms>false</generateBackupPoms> -->
-<!-- 				</configuration> -->
-<!-- 			</plugin> -->
+				<!-- <plugin> -->
+				<!-- <groupId>org.codehaus.mojo</groupId> -->
+				<!-- <artifactId>versions-maven-plugin</artifactId> -->
+				<!-- <version>2.5</version> -->
+				<!-- <configuration> -->
+				<!-- <generateBackupPoms>false</generateBackupPoms> -->
+				<!-- </configuration> -->
+				<!-- </plugin> -->
 
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-<!-- 				<version>0.8.2</version> -->
-				<executions>
-					<execution>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>report</id>
-						<phase>test</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			  <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>3.0.0-M3</version>
-    <dependencies>
-      <dependency>
-        <groupId>org.apache.maven.surefire</groupId>
-        <artifactId>surefire-junit47</artifactId>
-        <version>3.0.0-M3</version>
-      </dependency>
-    </dependencies>
-  </plugin>
-		</plugins>
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<!-- <version>0.8.2</version> -->
+					<executions>
+						<execution>
+							<goals>
+								<goal>prepare-agent</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>report</id>
+							<phase>test</phase>
+							<goals>
+								<goal>report</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
 		</pluginManagement>
 	</build>
 	<reporting>
@@ -180,11 +166,11 @@
 			<!-- </configuration> -->
 			<!-- </plugin> -->
 
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
-<!-- 				<artifactId>maven-surefire-report-plugin</artifactId> -->
-<!-- 				<version>2.20.1</version> -->
-<!-- 			</plugin> -->
+			<!-- <plugin> -->
+			<!-- <groupId>org.apache.maven.plugins</groupId> -->
+			<!-- <artifactId>maven-surefire-report-plugin</artifactId> -->
+			<!-- <version>2.20.1</version> -->
+			<!-- </plugin> -->
 		</plugins>
 	</reporting>
 	<dependencies>
@@ -202,18 +188,12 @@
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>ST4</artifactId>
-			<version>4.2</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
+			<version>4.3</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-core</artifactId>
-			<version>2.3.0.1</version>
+			<version>3.0.0-M3</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
@@ -222,24 +202,25 @@
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-impl</artifactId>
-			<version>2.3.2</version>
+			<version>3.0.0-M3</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-jxc</artifactId>
-			<version>2.3.2</version>
+			<version>3.0.0-M3</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-xjc</artifactId>
-			<version>2.3.2</version>
+			<version>3.0.0-M3</version>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.codehaus.mojo/versions-maven-plugin -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.codehaus.mojo</groupId> -->
-<!-- 			<artifactId>versions-maven-plugin</artifactId> -->
-<!-- 			<version>2.7</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.codehaus.mojo</groupId> -->
+		<!-- <artifactId>versions-maven-plugin</artifactId> -->
+		<!-- <version>2.7</version> -->
+		<!-- </dependency> -->
 	</dependencies>
 	<issueManagement>
 		<system>github</system>

@@ -39,14 +39,12 @@
 
 package okw.core;
 
-import static org.junit.Assert.*;
 import okw.OKW_Memorize_Sngltn;
 import okw.OKW_TestClipboard;
 import okw.log.Logger_Sngltn;
 
-import org.junit.*;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
 
 /** \~german
@@ -67,16 +65,21 @@ import org.junit.runners.MethodSorters;
  * \author Zoltan Hrabovszki
  * \date 2016-05-07
  */
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Tag("AllCoreTests")
 public class EN_Keywords_ANTLR_Test
 {
     private static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
     private static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
-    @Rule
-    public TestName          name        = new TestName();
+    public String TestName;
 
-    @BeforeClass
+    @BeforeEach
+    void init(TestInfo testInfo)
+    {
+        TestName = testInfo.getTestMethod().get().getName();
+    }
+
+    @BeforeAll
     public static void setUpBeforeClass() throws Exception
     {
         Logger_Sngltn.getInstance();
@@ -86,21 +89,7 @@ public class EN_Keywords_ANTLR_Test
         myLogger.setDebugMode( false );
     }
 
-    /* @AfterClass
-    public static void tearDownAfterClass() throws Exception
-    {
-
-    }
-    */
-
-    /*
-    @Before
-    public void setUp() throws Exception
-    {
-    }
-    */
-
-    @After
+    @AfterEach
     public void myAfter() throws Exception
     {
         EN.EndTest();
@@ -118,8 +107,8 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_BeginTest_TestCaseName() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
-        assertEquals( name.getMethodName(), OKW_Memorize_Sngltn.getInstance().get( "TCN" ) );
+        EN.BeginTest( TestName );
+        assertEquals( TestName, OKW_Memorize_Sngltn.getInstance().get( "TCN" ) );
     }
 
     /** \~german
@@ -135,7 +124,7 @@ public class EN_Keywords_ANTLR_Test
     public void tc_Select_MemorizedValue() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Set Memorize Values
         OKW_Memorize_Sngltn.getInstance().set( "myValue", "ValueToFind" );
@@ -173,7 +162,7 @@ public class EN_Keywords_ANTLR_Test
     public void tc_Select_EnviromentVar() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Set Memorize Values
 
@@ -193,7 +182,7 @@ public class EN_Keywords_ANTLR_Test
 
         // Check the Name, Called Method and Value of Actuel object
         assertEquals( 1, myClipBoard.getValue().size() );
-        assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+        assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "Select()", myClipBoard.getMethod() );
     }
@@ -211,7 +200,7 @@ public class EN_Keywords_ANTLR_Test
     public void tc_Typekey_MemorizedValue() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Set Memorize Values
         OKW_Memorize_Sngltn.getInstance().set( "myValue", "ValueToFind" );
@@ -248,7 +237,7 @@ public class EN_Keywords_ANTLR_Test
     public void tc_TypeKey_EnviromentVar() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Set Memorize Values
         String myUser = System.getenv( "USER" );
@@ -283,7 +272,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyExists_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -323,7 +312,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyHasFocus_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -376,7 +365,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyIsActive_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -415,7 +404,7 @@ public class EN_Keywords_ANTLR_Test
 	 @Test
 	 public void tc_VerifyBadge_MemorizedValue() throws Exception
 	 {
-	     EN.BeginTest( name.getMethodName() );
+	     EN.BeginTest( TestName );
 	
 	     // Testscript in Schlüsselwort-Notation
 	     EN.SelectWindow( "Rechner" );
@@ -454,7 +443,7 @@ public class EN_Keywords_ANTLR_Test
 	 @Test
 	 public void tc_VerifyBadgeWCM_MemorizedValue() throws Exception
 	 {
-	     EN.BeginTest( name.getMethodName() );
+	     EN.BeginTest( TestName );
 	
 	     // Testscript in Schlüsselwort-Notation
 	     EN.SelectWindow( "Rechner" );
@@ -493,7 +482,7 @@ public class EN_Keywords_ANTLR_Test
 	 @Test
 	 public void tc_VerifyBadgeREGX_MemorizedValue() throws Exception
 	 {
-	     EN.BeginTest( name.getMethodName() );
+	     EN.BeginTest( TestName );
 	
 	     // Testscript in Schlüsselwort-Notation
 	     EN.SelectWindow( "Rechner" );
@@ -535,7 +524,7 @@ public class EN_Keywords_ANTLR_Test
         // Set Memorize Values
         String myUser = System.getenv( "USER" );
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -571,7 +560,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyCaption_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -612,7 +601,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyCaptionREGX_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -653,7 +642,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyCaptionWCM_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -693,7 +682,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyLabel_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -732,7 +721,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyLabelWCM_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -771,7 +760,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyLabelREGX_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -808,7 +797,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyPlaceholder_EnviromentVar() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
     
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -844,7 +833,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyPlaceholderWCM_EnviromentVar() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
     
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -880,7 +869,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyPlaceholderREGX_EnviromentVar() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
     
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -915,7 +904,7 @@ public class EN_Keywords_ANTLR_Test
     //@Test
     public void tc_VerifyMaxLength_EnviromentVar() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
     
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -951,7 +940,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyMaxLengthMemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
     
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -988,7 +977,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyPlaceholder_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1027,7 +1016,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyPlaceholderWCM_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1066,7 +1055,7 @@ public class EN_Keywords_ANTLR_Test
     @Test
     public void tc_VerifyPlaceholderREGX_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1104,7 +1093,7 @@ public class EN_Keywords_ANTLR_Test
   @Test
   public void tc__VerifySelectedValue_EnviromentValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       // Testscript in Schlüsselwort-Notation
       EN.SelectWindow( "Rechner" );
@@ -1121,7 +1110,7 @@ public class EN_Keywords_ANTLR_Test
       EN.VerifySelectedValue( "All_MethodsObj", "${TCN}" );
 
       // Check the Name, Called Method and Value of Actuel object
-      assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+      assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
       assertEquals( 1, myClipBoard.getValue().size() );
 
       assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
@@ -1141,7 +1130,7 @@ public class EN_Keywords_ANTLR_Test
   public void tc__VerifySelectedValueREGX_EnviromentVar() throws Exception
   {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       // Testscript in Schlüsselwort-Notation
       EN.SelectWindow( "Rechner" );
@@ -1159,7 +1148,7 @@ public class EN_Keywords_ANTLR_Test
       EN.VerifySelectedValueREGX( "All_MethodsObj", "${TCN}" );
 
       // Check the Name, Called Method and Value of Actuel object
-      assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+      assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
       assertEquals( 1, myClipBoard.getValue().size() );
 
       assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
@@ -1179,7 +1168,7 @@ public class EN_Keywords_ANTLR_Test
   public void tc__VerifySelectedValueWCM_EnviromentVar() throws Exception
   {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       // Testscript in Schlüsselwort-Notation
       EN.SelectWindow( "Rechner" );
@@ -1197,7 +1186,7 @@ public class EN_Keywords_ANTLR_Test
       EN.VerifySelectedValueREGX( "All_MethodsObj", "${TCN}" );
 
       // Check the Name, Called Method and Value of Actuel object
-      assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+      assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
       assertEquals( 1, myClipBoard.getValue().size() );
 
       assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
@@ -1217,7 +1206,7 @@ public class EN_Keywords_ANTLR_Test
   @Test
   public void tc_VerifySelectedValue_MemorizedValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       // Testscript in Schlüsselwort-Notation
       EN.SelectWindow( "Rechner" );
@@ -1257,7 +1246,7 @@ public class EN_Keywords_ANTLR_Test
   @Test
   public void tc_VerifySelectedValueWCM_MemorizedValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       // Testscript in Schlüsselwort-Notation
       EN.SelectWindow( "Rechner" );
@@ -1297,7 +1286,7 @@ public class EN_Keywords_ANTLR_Test
   @Test
   public void tc_VerifySelectedValueREGX_MemorizedValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       // Testscript in Schlüsselwort-Notation
       EN.SelectWindow( "Rechner" );
@@ -1336,7 +1325,7 @@ public class EN_Keywords_ANTLR_Test
   @Test
   public void tc__VerifyTablecellValue_EnviromentValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       // Testscript in Schlüsselwort-Notation
       EN.SelectWindow( "Rechner" );
@@ -1354,7 +1343,7 @@ public class EN_Keywords_ANTLR_Test
 
       // Check the Name, Called Method and Value of Actuel object
       assertEquals( 3, myClipBoard.getValue().size() );
-      assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+      assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
       assertEquals( "X", myClipBoard.getValue().get( 1 ) );
       assertEquals( "Y", myClipBoard.getValue().get( 2 ) );
 
@@ -1376,7 +1365,7 @@ public class EN_Keywords_ANTLR_Test
   public void tc__VerifyTablecellValueREGX_EnviromentVar() throws Exception
   {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       // Testscript in Schlüsselwort-Notation
       EN.SelectWindow( "Rechner" );
@@ -1395,7 +1384,7 @@ public class EN_Keywords_ANTLR_Test
 
       // Check the Name, Called Method and Value of Actuel object
       assertEquals( 3, myClipBoard.getValue().size() );
-      assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+      assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
       assertEquals( "X", myClipBoard.getValue().get( 1 ) );
       assertEquals( "Y", myClipBoard.getValue().get( 2 ) );
 
@@ -1416,7 +1405,7 @@ public class EN_Keywords_ANTLR_Test
   public void tc__VerifyTablecellValueWCM_EnviromentVar() throws Exception
   {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       // Testscript in Schlüsselwort-Notation
       EN.SelectWindow( "Rechner" );
@@ -1435,7 +1424,7 @@ public class EN_Keywords_ANTLR_Test
 
       // Check the Name, Called Method and Value of Actuel object
       assertEquals( 3, myClipBoard.getValue().size() );
-      assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+      assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
       assertEquals( "X", myClipBoard.getValue().get( 1 ) );
       assertEquals( "Y", myClipBoard.getValue().get( 2 ) );
 
@@ -1456,7 +1445,7 @@ public class EN_Keywords_ANTLR_Test
   @Test
   public void tc_VerifyTablecellValue_MemorizedValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       // Testscript in Schlüsselwort-Notation
       EN.SelectWindow( "Rechner" );
@@ -1498,7 +1487,7 @@ public class EN_Keywords_ANTLR_Test
   @Test
   public void tc_VerifyTablecellValueWCM_MemorizedValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       // Testscript in Schlüsselwort-Notation
       EN.SelectWindow( "Rechner" );
@@ -1540,7 +1529,7 @@ public class EN_Keywords_ANTLR_Test
   @Test
   public void tc_VerifyTablecellValueREGX_MemorizedValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       // Testscript in Schlüsselwort-Notation
       EN.SelectWindow( "Rechner" );
@@ -1581,7 +1570,7 @@ public class EN_Keywords_ANTLR_Test
 @Test
 public void tc__VerifyTooltip_EnviromentValue() throws Exception
 {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Testscript in Schlüsselwort-Notation
     EN.SelectWindow( "Rechner" );
@@ -1598,7 +1587,7 @@ public void tc__VerifyTooltip_EnviromentValue() throws Exception
     EN.VerifyTooltip( "All_MethodsObj", "${TCN}" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+    assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
     assertEquals( 1, myClipBoard.getValue().size() );
 
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
@@ -1618,7 +1607,7 @@ public void tc__VerifyTooltip_EnviromentValue() throws Exception
 public void tc__VerifyTooltipREGX_EnviromentVar() throws Exception
 {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Testscript in Schlüsselwort-Notation
     EN.SelectWindow( "Rechner" );
@@ -1636,7 +1625,7 @@ public void tc__VerifyTooltipREGX_EnviromentVar() throws Exception
     EN.VerifyTooltipREGX( "All_MethodsObj", "${TCN}" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+    assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
     assertEquals( 1, myClipBoard.getValue().size() );
 
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
@@ -1656,7 +1645,7 @@ public void tc__VerifyTooltipREGX_EnviromentVar() throws Exception
 public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
 {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Testscript in Schlüsselwort-Notation
     EN.SelectWindow( "Rechner" );
@@ -1674,7 +1663,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
     EN.VerifyTooltipREGX( "All_MethodsObj", "${TCN}" );
 
     // Check the Name, Called Method and Value of Actuel object
-    assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+    assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
     assertEquals( 1, myClipBoard.getValue().size() );
 
     assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
@@ -1693,7 +1682,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
     @Test
     public void tc_VerifyTooltip_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1733,7 +1722,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
     @Test
     public void tc_VerifyTooltipWCM_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1773,7 +1762,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
     @Test
     public void tc_VerifyTooltipREGX_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1813,7 +1802,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
     @Test
     public void tc__VerifyValue_EnviromentValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1830,7 +1819,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
         EN.VerifyValue( "All_MethodsObj", "${TCN}" );
 
         // Check the Name, Called Method and Value of Actuel object
-        assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+        assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
         assertEquals( 1, myClipBoard.getValue().size() );
 
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
@@ -1850,7 +1839,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
     public void tc__VerifyValueREGX_EnviromentVar() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1868,7 +1857,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
         EN.VerifyValueREGX( "All_MethodsObj", "${TCN}" );
 
         // Check the Name, Called Method and Value of Actuel object
-        assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+        assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
         assertEquals( 1, myClipBoard.getValue().size() );
 
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
@@ -1888,7 +1877,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
     public void tc__VerifyValueWCM_EnviromentVar() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1906,7 +1895,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
         EN.VerifyValueREGX( "All_MethodsObj", "${TCN}" );
 
         // Check the Name, Called Method and Value of Actuel object
-        assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+        assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
         assertEquals( 1, myClipBoard.getValue().size() );
 
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
@@ -1926,7 +1915,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
     @Test
     public void tc_VerifyValue_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1966,7 +1955,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
     @Test
     public void tc_VerifyValueWCM_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2006,7 +1995,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
     @Test
     public void tc_VerifyValueREGX_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2044,7 +2033,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
     @Test
     public void tc_SetValue_MemorizedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Set Memorize Values
         OKW_Memorize_Sngltn.getInstance().set( "myValue", "ValueToFind" );
@@ -2082,7 +2071,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
     public void tc__SetValue_EnviromentVar() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2097,7 +2086,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
 
         // Check the Name, Called Method and Value of Actuel object
         assertEquals( 1, myClipBoard.getValue().size() );
-        assertEquals( name.getMethodName(), myClipBoard.getValue().get( 0 ) );
+        assertEquals( TestName, myClipBoard.getValue().get( 0 ) );
         assertEquals( "Rechner.All_MethodsObj", myClipBoard.getObjectName() );
         assertEquals( "SetValue()", myClipBoard.getMethod() );
     }
@@ -2114,7 +2103,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
      //@Test
      public void tc_VerifyMinLength_EnviromentVar() throws Exception
      {
-         EN.BeginTest( name.getMethodName() );
+         EN.BeginTest( TestName );
      
          // Testscript in Schlüsselwort-Notation
          EN.SelectWindow( "Rechner" );
@@ -2150,7 +2139,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
      @Test
      public void tc_VerifyMinLengthMemorizedValue() throws Exception
      {
-         EN.BeginTest( name.getMethodName() );
+         EN.BeginTest( TestName );
      
          // Testscript in Schlüsselwort-Notation
          EN.SelectWindow( "Rechner" );
@@ -2187,7 +2176,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
      @Test
      public void tc_VerifyErrorMSG_MemorizedValue() throws Exception
      {
-         EN.BeginTest( name.getMethodName() );
+         EN.BeginTest( TestName );
 
          // Testscript in Schlüsselwort-Notation
          EN.SelectWindow( "Rechner" );
@@ -2227,7 +2216,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
      @Test
      public void tc_VerifyErrorMSG_WCM_MemorizedValue() throws Exception
      {
-         EN.BeginTest( name.getMethodName() );
+         EN.BeginTest( TestName );
 
          // Testscript in Schlüsselwort-Notation
          EN.SelectWindow( "Rechner" );
@@ -2266,7 +2255,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
      @Test
      public void tc_VerifyErrorMSG_REGX_MemorizedValue() throws Exception
      {
-         EN.BeginTest( name.getMethodName() );
+         EN.BeginTest( TestName );
 
          // Testscript in Schlüsselwort-Notation
          EN.SelectWindow( "Rechner" );

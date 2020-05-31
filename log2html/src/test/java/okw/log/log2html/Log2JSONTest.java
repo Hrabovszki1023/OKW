@@ -1,28 +1,25 @@
 package okw.log.log2html;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.ArrayList;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
 import okw.junit.JUnitBase;
 import okw.log.log2html.Log2HTML;
 
 public class Log2JSONTest extends JUnitBase
 {
-    @Before
+    @BeforeEach
     public void setUp() throws Exception
     {
-        
         okw.OKW_Properties.getInstance().setProperty( "Log2HTML.Test", "true" );
     }
     
 	   @Test
 	    public void TC_LogPrint_Simple_Test()
 	    {   
-	        Log2HTML myLog = new Log2HTML( name.getMethodName() );
+	        Log2HTML myLog = new Log2HTML( TestName );
 	                
 	        myLog.LogTestcaseStart( "TC_LogPrint_Simple_Test" );
 	            myLog.LogPrint( "LogPrint 1" );
@@ -30,8 +27,8 @@ public class Log2JSONTest extends JUnitBase
 	            myLog.LogPrint( "LogPrint 3" );
 	        myLog.LogTestcaseEnd();
 
-	        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-	        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );	        
+	        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+	        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );	        
 
 	        assertEquals( Expected, Current );
 	    }
@@ -39,7 +36,7 @@ public class Log2JSONTest extends JUnitBase
 	@Test
 	public void TC_LogPrint_Test()
 	{	
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 				
 		myLog.LogTestcaseStart( "TC_LogPrint_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -49,8 +46,8 @@ public class Log2JSONTest extends JUnitBase
 			myLog.LogPrint( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -58,7 +55,7 @@ public class Log2JSONTest extends JUnitBase
 	@Test
 	public void TC_LogPrintDebug_Test()
 	{	
-		Log2HTML myLog = new Log2HTML( name.getMethodName() );
+		Log2HTML myLog = new Log2HTML( TestName );
 	    myLog.setDebugMode( true );
 				
 		myLog.LogTestcaseStart( "TC_LogPrintDebug_Test" );
@@ -69,8 +66,8 @@ public class Log2JSONTest extends JUnitBase
 			myLog.LogPrintDebug( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -78,7 +75,7 @@ public class Log2JSONTest extends JUnitBase
 	@Test
 	public void TC_ResultList_Test()
 	{	
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 				
 		myLog.LogTestcaseStart( "TC_ResultListPrint_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -90,8 +87,8 @@ public class Log2JSONTest extends JUnitBase
 			myLog.LogPrint( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -99,7 +96,7 @@ public class Log2JSONTest extends JUnitBase
 	@Test
 	public void TC_ResultListDebug_Test( )
 	{	
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 		myLog.setDebugMode( true );
 				
 		myLog.LogTestcaseStart( "TC_ResultListDebug_Test" );
@@ -114,8 +111,8 @@ public class Log2JSONTest extends JUnitBase
 			myLog.LogPrintDebug( "Print auf einer Ebene höher...");
 		myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -123,7 +120,7 @@ public class Log2JSONTest extends JUnitBase
 	@Test
 	public void TC_LogException_Test()
 	{	
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 				
 		myLog.LogTestcaseStart( "TC_LogException_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -131,8 +128,8 @@ public class Log2JSONTest extends JUnitBase
 				myLog.LogKeyWordEnd();
 		myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -140,7 +137,7 @@ public class Log2JSONTest extends JUnitBase
 	@Test
 	public void TC_LogError_Test()
 	{	
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 				
 		myLog.LogTestcaseStart( "TC_LogError_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -148,8 +145,8 @@ public class Log2JSONTest extends JUnitBase
 				myLog.LogKeyWordEnd();
 		myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -157,7 +154,7 @@ public class Log2JSONTest extends JUnitBase
 	@Test
 	public void TC_LogWarning_Test()
 	{	
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 				
 		myLog.LogTestcaseStart( "TC_LogWarning_Test" );
 			myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -165,8 +162,8 @@ public class Log2JSONTest extends JUnitBase
 				myLog.LogKeyWordEnd();
 		myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -174,7 +171,7 @@ public class Log2JSONTest extends JUnitBase
 	   @Test
 	    public void TC_LogVerify_Test()
 	    {   
-	        Log2HTML myLog = new Log2HTML(name.getMethodName());
+	        Log2HTML myLog = new Log2HTML(TestName);
 	                
 	        myLog.LogTestcaseStart( "TC_LogPrint_Test" );
 	            myLog.LogKeyWordStart( "Gib ein", "Name", "Zoltan" );
@@ -185,8 +182,8 @@ public class Log2JSONTest extends JUnitBase
 	            myLog.LogPrint( "Print auf einer Ebene höher...");
 	        myLog.LogTestcaseEnd();
 
-            String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-            String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+            String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+            String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
             assertEquals( Expected, Current );
 	    }
@@ -195,7 +192,7 @@ public class Log2JSONTest extends JUnitBase
 	@Test
 	public void TC_LogFunktion_Test() {
 
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 
 		myLog.LogTestcaseStart( "TC_LogFunktion_Test" );
 		    myLog.LogFunctionStart("FunctionName", "String", "Parameter 1");
@@ -203,8 +200,8 @@ public class Log2JSONTest extends JUnitBase
 		    myLog.LogFunctionEnd();
 		myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -212,7 +209,7 @@ public class Log2JSONTest extends JUnitBase
 	@Test
 	public void TC_LogFunktionErrorWarning_Test() {
 
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 
 		myLog.LogTestcaseStart( "TC_LogFunktion2_Test" );
 		    myLog.LogFunctionStart("FunctionName", "String", "Parameter 1", "String", "Parameter 2");
@@ -222,8 +219,8 @@ public class Log2JSONTest extends JUnitBase
 		    myLog.LogFunctionEnd();
         myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -231,7 +228,7 @@ public class Log2JSONTest extends JUnitBase
 	@Test
 	public void TC_LogFunktion_ReturnBoolean_Test() {
 
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 
 		myLog.LogTestcaseStart( "TC_LogFunktion_ReturnBoolean_Test" );
 		    myLog.LogFunctionStart("FunctionName", "String", "Parameter 1", "String", "Parameter 2");
@@ -239,8 +236,8 @@ public class Log2JSONTest extends JUnitBase
 		    myLog.LogFunctionEnd(true);
 		myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -248,7 +245,7 @@ public class Log2JSONTest extends JUnitBase
 	   @Test
 	    public void TC_LogFunktionDebug_ReturnBoolean_Test() {
 
-	        Log2HTML myLog = new Log2HTML(name.getMethodName());
+	        Log2HTML myLog = new Log2HTML(TestName);
 	        myLog.setDebugMode( true ); 
 
 	        myLog.LogTestcaseStart( "TC_LogFunktionDebug_ReturnBoolean_Test" );
@@ -257,8 +254,8 @@ public class Log2JSONTest extends JUnitBase
 	            myLog.LogFunctionEndDebug(true);
 	        myLog.LogTestcaseEnd();
 
-	        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-	        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+	        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+	        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
 	        assertEquals( Expected, Current );
 	    }
@@ -267,7 +264,7 @@ public class Log2JSONTest extends JUnitBase
 	    @Test
 	    public void TC_LogFunktion_ReturnString_Test() {
 
-	        Log2HTML myLog = new Log2HTML(name.getMethodName());
+	        Log2HTML myLog = new Log2HTML(TestName);
 
 	        myLog.LogTestcaseStart( "TC_LogFunktion_ReturnString_Test" );
 	            myLog.LogFunctionStart("FunctionName", "String", "Parameter 1", "String", "Parameter 2");
@@ -275,8 +272,8 @@ public class Log2JSONTest extends JUnitBase
 	            myLog.LogFunctionEnd( "Return String" );
 	        myLog.LogTestcaseEnd();
 
-	        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-	        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+	        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+	        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
 	        assertEquals( Expected, Current );
 	    }
@@ -284,7 +281,7 @@ public class Log2JSONTest extends JUnitBase
 	       @Test
 	        public void TC_LogFunktionDebug_ReturnString_Test() {
 
-	            Log2HTML myLog = new Log2HTML(name.getMethodName());
+	            Log2HTML myLog = new Log2HTML(TestName);
 	            myLog.setDebugMode( true ); 
 
 	            myLog.LogTestcaseStart( "TC_LogFunktionDebug_ReturnString_Test" );
@@ -293,8 +290,8 @@ public class Log2JSONTest extends JUnitBase
 	                myLog.LogFunctionEndDebug( "Return String" );
 	            myLog.LogTestcaseEnd();
 
-	            String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-	            String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+	            String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+	            String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
 	            assertEquals( Expected, Current );
 	        }	   
@@ -303,7 +300,7 @@ public class Log2JSONTest extends JUnitBase
 	        @Test
 	        public void TC_LogFunktion_ReturnListString_Test() {
 
-	            Log2HTML myLog = new Log2HTML(name.getMethodName());
+	            Log2HTML myLog = new Log2HTML(TestName);
 	            ArrayList<String> returnListString= new ArrayList<String>();
 	            
 	            returnListString.add( "String 1" );
@@ -316,8 +313,8 @@ public class Log2JSONTest extends JUnitBase
 	                myLog.LogFunctionEnd( returnListString );
 	            myLog.LogTestcaseEnd();
 
-	            String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-	            String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+	            String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+	            String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
 	            assertEquals( Expected, Current );
 	        }
@@ -327,7 +324,7 @@ public class Log2JSONTest extends JUnitBase
 
 	                ArrayList<String> returnListString= new ArrayList<String>();
 
-	                Log2HTML myLog = new Log2HTML(name.getMethodName());
+	                Log2HTML myLog = new Log2HTML(TestName);
 	                myLog.setDebugMode( true ); 
 	                
 	                returnListString.add( "String 1" );
@@ -340,15 +337,15 @@ public class Log2JSONTest extends JUnitBase
 	                    myLog.LogFunctionEndDebug( returnListString );
 	                myLog.LogTestcaseEnd();
 
-	                String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-	                String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+	                String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+	                String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
 	                assertEquals( Expected, Current );
 	            }      
 	@Test
 	public void TC_LogFunktionDebug_Test() {
 
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 		myLog.setDebugMode( true );
 
 		myLog.LogTestcaseStart( "TC_LogFunktionDebug_Test" );
@@ -368,8 +365,8 @@ public class Log2JSONTest extends JUnitBase
 
 		myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -377,7 +374,7 @@ public class Log2JSONTest extends JUnitBase
 	@Test
 	public void TC_LogSequence_Test() {
 
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 
 		myLog.LogTestcaseStart( "TC_LogSequence_Test" );
 		
@@ -404,8 +401,8 @@ public class Log2JSONTest extends JUnitBase
 			myLog.LogSequenceEnd();
 		myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -413,7 +410,7 @@ public class Log2JSONTest extends JUnitBase
 	@Test
 	public void TC_LogKeyWord_Test() {
 
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 
 		myLog.LogTestcaseStart( "TC_LogSequence_Test" );
 		
@@ -427,8 +424,8 @@ public class Log2JSONTest extends JUnitBase
 
 		myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -437,7 +434,7 @@ public class Log2JSONTest extends JUnitBase
 	@Test
 	public void TC_Reset_Test() {
 
-		Log2HTML myLog = new Log2HTML(name.getMethodName());
+		Log2HTML myLog = new Log2HTML(TestName);
 
 		myLog.LogTestcaseStart( "TC_Reset_Test" );
 		
@@ -454,8 +451,8 @@ public class Log2JSONTest extends JUnitBase
 		myLog.LogTestcaseStart( "This Test" );			
         myLog.LogTestcaseEnd(); 
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
 	}
@@ -463,7 +460,7 @@ public class Log2JSONTest extends JUnitBase
     @Test
     public void TC_LogLocalACCall_Test() {
 
-        Log2HTML myLog = new Log2HTML(name.getMethodName());
+        Log2HTML myLog = new Log2HTML(TestName);
 
         myLog.LogTestcaseStart( "TC_LogPrecondition_Test" );
         
@@ -479,8 +476,8 @@ public class Log2JSONTest extends JUnitBase
             
         myLog.LogTestcaseEnd();
 
-        String Current = myLog.Result2JSON( "target/" + name.getMethodName() + ".json" );
-        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + name.getMethodName() + ".json" );            
+        String Current = myLog.Result2JSON( "target/" + TestName + ".json" );
+        String Expected = this.loadUTF8FileFromResource( "Log2JSONTest/" + TestName + ".json" );            
 
         assertEquals( Expected, Current );
     }

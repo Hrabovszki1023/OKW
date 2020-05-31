@@ -1,19 +1,16 @@
 package okw.seimage;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
 import org.junit.FixMethodOrder;
 
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
+import okw.core.OKWTestBase;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWVerifyingFailsException;
 
-import org.junit.Ignore;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
 
 /**
 * \~
@@ -21,9 +18,8 @@ import org.junit.runners.MethodSorters;
 * 
 * @author zoltan
 */
-@Ignore
-@FixMethodOrder( MethodSorters.NAME_ASCENDING )
-public class SeImage_EN_Test
+@Disabled
+public class SeImage_EN_Test extends OKWTestBase
 {
   String cvOKWObject = "Link" + "";
 
@@ -31,14 +27,11 @@ public class SeImage_EN_Test
 
   protected static String ApplicationName;
 
-  @Rule
-  public TestName name = new TestName();
-
   
   @Test
   public void tc_ClickOn() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -60,7 +53,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_LogCaption() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -76,7 +69,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_LogLabel() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -92,7 +85,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_LogValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -112,7 +105,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_LogExists_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -131,7 +124,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_LogHasFocus_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -156,7 +149,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_LogIsActive_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -175,7 +168,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_LogToolTip_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -201,7 +194,7 @@ public class SeImage_EN_Test
   @Test
    public void tc_MemorizeIsActive() throws Exception
    {
-       EN.BeginTest( name.getMethodName() );
+       EN.BeginTest( TestName );
 
        EN.StartApp( ApplicationName );
        EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -219,7 +212,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_MemorizeCaption() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -237,7 +230,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_MemorizeLabel() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -257,7 +250,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_MemorizeValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -281,7 +274,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_MemorizeExists_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -306,7 +299,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_MemorizeHasFocus_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -326,7 +319,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_MemorizeToolTip_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -343,10 +336,10 @@ public class SeImage_EN_Test
   }
 
   
-  @Test (expected=OKWFrameObjectMethodNotImplemented.class)
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
   public void tc_SetFocus() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -354,14 +347,17 @@ public class SeImage_EN_Test
       EN.SelectWindow( "Image" );
       EN.SetFocus( "Image 1" );
 
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
 
   @Test
   public void tc_VerifyHasFocus() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -386,7 +382,7 @@ public class SeImage_EN_Test
    @Test // (expected= UnsupportedOperationException.class)
     public void tc_VerifyIsActive_en() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -403,7 +399,7 @@ public class SeImage_EN_Test
    @Test
   public void tc_VerifyCaption() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -419,7 +415,7 @@ public class SeImage_EN_Test
    @Test
   public void tc_VerifyCaptionWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -435,7 +431,7 @@ public class SeImage_EN_Test
    @Test
   public void tc_VerifyCaptionREGX() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -451,7 +447,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_VerifyLabel() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -468,7 +464,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_VerifyLabelWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -485,7 +481,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_VerifyLabelREGX() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -506,7 +502,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_VerifyValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -526,7 +522,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_VerifyValueWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -546,7 +542,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_VerifyValueREGX() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -568,7 +564,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_VerifyExists_NO() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -590,10 +586,10 @@ public class SeImage_EN_Test
    *  ist.
    *  -> Exception muss ausgelöst werden.
    */
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tc_VerifyExists_NO_YesObject() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -602,7 +598,10 @@ public class SeImage_EN_Test
     EN.VerifyExists( "Image 1", "NO" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   /**
@@ -613,7 +612,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_VerifyExists_YES() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -632,11 +631,11 @@ public class SeImage_EN_Test
    *  Objekt ist _nicht_ vorhanden. Erwartet wird, dass das Objekt _vorhanden_
    *  ist.
    */
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tc_VerifyExists_YES_NoObject() throws Exception
   {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -645,13 +644,16 @@ public class SeImage_EN_Test
     EN.VerifyExists( "Does Not Exists", "YES" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   @Test
   public void tc_VerifyToolTip() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -667,7 +669,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_VerifyToolTipWCM() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -683,7 +685,7 @@ public class SeImage_EN_Test
   @Test
   public void tc_VerifyToolTipREGX() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -704,10 +706,11 @@ public class SeImage_EN_Test
    * \~
    * @author Zoltán Hrabovszki
    * @date 2019-07-07
-   */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+   */
+   @Test //(expected= OKWFrameObjectMethodNotImplemented.class)
     public void tcDoubleClickOn_en() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -715,7 +718,10 @@ public class SeImage_EN_Test
         EN.SelectWindow( "Image" );
         EN.DoubleClickOn( "Image 1");
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
    
     
@@ -727,10 +733,11 @@ public class SeImage_EN_Test
      * \~
      * @author Zoltán Hrabovszki
      * @date 2019-07-07
-     */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+     */ 
+   @Test // (expected= OKWFrameObjectMethodNotImplemented.class)
       public void tcSetValue_en() throws Exception
       {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
 
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -738,7 +745,10 @@ public class SeImage_EN_Test
           EN.SelectWindow( "Image" );
 
           EN.SetValue( "Image 1", "SetValue");
-          EN.EndTest();
+          Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+          {
+              EN.EndTest();
+          });
       }
      
      /**
@@ -749,10 +759,10 @@ public class SeImage_EN_Test
       * \~
       * @author Zoltán Hrabovszki
       * @date 2019-07-07
-      */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+      */  @Test // (expected= OKWFrameObjectMethodNotImplemented.class)
        public void tcSelect_en() throws Exception
        {
-           EN.BeginTest( name.getMethodName() );
+           EN.BeginTest( TestName );
 
            EN.StartApp( ApplicationName );
            EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -760,7 +770,10 @@ public class SeImage_EN_Test
            EN.SelectWindow( "Image" );
 
            EN.Select( "Image 1", "Set a Value");
-           EN.EndTest();
+           Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+           {
+               EN.EndTest();
+           });
        }
 
       /**
@@ -771,10 +784,10 @@ public class SeImage_EN_Test
        * \~
        * @author Zoltán Hrabovszki
        * @date 2019-07-07
-       */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+       */  @Test // (expected= OKWFrameObjectMethodNotImplemented.class)
         public void tcSelectMenu2_en() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
 
             EN.StartApp( ApplicationName );
             EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -782,7 +795,10 @@ public class SeImage_EN_Test
             EN.SelectWindow( "Image" );
 
             EN.SelectMenu( "Image 1");
-            EN.EndTest();
+            Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+            {
+                EN.EndTest();
+            });
         }
       
       /**
@@ -793,10 +809,10 @@ public class SeImage_EN_Test
        * \~
        * @author Zoltán Hrabovszki
        * @date 2019-07-07
-       */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+       */  @Test // (expected= OKWFrameObjectMethodNotImplemented.class)
         public void tcSelectMenu_en() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
 
             EN.StartApp( ApplicationName );
             EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -804,7 +820,10 @@ public class SeImage_EN_Test
             EN.SelectWindow( "Image" );
 
             EN.SelectMenu( "Image 1", "SetValue");
-            EN.EndTest();
+            Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+            {
+                EN.EndTest();
+            });
         }
        
        
@@ -817,10 +836,10 @@ public class SeImage_EN_Test
         * @author Zoltán Hrabovszki
         * @date 2019-07-07
         */
-       @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+       @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
          public void tcTypeKey_en() throws Exception
          {
-             EN.BeginTest( name.getMethodName() );
+             EN.BeginTest( TestName );
 
              EN.StartApp( ApplicationName );
              EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
@@ -829,7 +848,10 @@ public class SeImage_EN_Test
 
              EN.TypeKey( "Image 1", "SetValue");
              
-             EN.EndTest();
+             Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+             {
+                 EN.EndTest();
+             });
          }
 
 }

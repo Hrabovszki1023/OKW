@@ -44,20 +44,21 @@ import java.util.ArrayList;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import org.junit.*;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
 import okw.exceptions.*;
 import okw.log.*;
 
 
+@Tag("AllCoreHelperTests")
 public class OKW_HelperTest
     {
 
 	/// \copydoc CurrentObject::Log()
 	public static Logger_Sngltn Log;
 
-		//@BeforeClass
+		//@BeforeAll
         public static void myTestFixtureSetUp()
         {
 			Log = Logger_Sngltn.getInstance();

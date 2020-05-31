@@ -40,26 +40,20 @@
 package okw.calculator;
 
 import okw.core.EN;
+import okw.core.OKWTestBase;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.After;
-import org.junit.Ignore;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
+import org.junit.jupiter.api.*;
 
-@Ignore( "Ignore the whole testfixture" )
-public class Calculator_EN_Test {
+@Disabled( "Ignore the whole testfixture" )
+public class Calculator_EN_Test extends OKWTestBase {
 
   // OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
   protected static Log2HTML myLog2HTML = null;
 	
   protected static String ApplicationName;
 
-  @Rule
-  public TestName         name = new TestName();
-
-  @After
+  @AfterEach
   public void myAfter() throws Exception {
     EN.StopApp( ApplicationName );
     EN.EndTest();
@@ -67,7 +61,7 @@ public class Calculator_EN_Test {
 
   @Test
   public void tc_Calculator_Addition_EN() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.SetValue(
         "URL",
@@ -84,7 +78,7 @@ public class Calculator_EN_Test {
 
   @Test
   public void tc_Calculator_Subtraktion_EN() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey(
         "URL",
@@ -103,7 +97,7 @@ public class Calculator_EN_Test {
 
   @Test
   public void tc_Calculator_Multiplikation_en() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey(
         "URL",
@@ -124,7 +118,7 @@ public class Calculator_EN_Test {
 
   @Test
   public void tc_Calculator_allkeys_en() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey(
         "URL",
@@ -148,7 +142,7 @@ public class Calculator_EN_Test {
   //
   @Test
   public void tc_Taschenrechner_allkeyexists_en() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey(
         "URL",

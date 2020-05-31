@@ -39,8 +39,9 @@ package browser;
 import okw.core.EN;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.*;
-import org.junit.rules.TestName;
+import okw.core.OKWTestBase;
+
+import org.junit.jupiter.api.*;
 
 /**
 * \~
@@ -48,16 +49,13 @@ import org.junit.rules.TestName;
 * 
 * @author zoltan
 */
-@Ignore
-public class FrmBrowserBase_Test {
+@Disabled
+public class FrmBrowserBase_Test extends OKWTestBase {
 
   //OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
 	protected static Log2HTML myLog2HTML = null;
 
   protected static String ApplicationName;
-
-  @Rule
-  public TestName         name  = new TestName();
 
   
   /**
@@ -66,7 +64,7 @@ public class FrmBrowserBase_Test {
   @Test
   public void tcURL_TypeKey() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       
       EN.SelectWindow(ApplicationName);
@@ -85,7 +83,7 @@ public class FrmBrowserBase_Test {
   @Test
   public void tcURL_SetValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       
       EN.SelectWindow(ApplicationName);
@@ -103,7 +101,7 @@ public class FrmBrowserBase_Test {
   @Test
   public void tcURL_VerifyValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       
       EN.SelectWindow(ApplicationName);
@@ -122,7 +120,7 @@ public class FrmBrowserBase_Test {
   @Test
   public void tcURL_VerifyValueWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       
       EN.SelectWindow(ApplicationName);
@@ -140,7 +138,7 @@ public class FrmBrowserBase_Test {
   @Test
   public void tcMAXIMIZE() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       
       EN.SelectWindow(ApplicationName);
@@ -156,7 +154,7 @@ public class FrmBrowserBase_Test {
   @Test
   public void tcURL_StartApp_ohne_OKWChromedriverPath() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       
       EN.StopApp( ApplicationName );
@@ -186,7 +184,7 @@ public class FrmBrowserBase_Test {
              break;
       }
       
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       
       EN.StopApp( ApplicationName );

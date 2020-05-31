@@ -43,20 +43,24 @@ import okw.OKW_TestClipboard;
 import okw.exceptions.OKWFrameObjectParentNotFoundException;
 import okw.log.Logger_Sngltn;
 
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
 
-
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Tag("AllCoreTests")
 public class EN_OKWFrameObjectParentNotFoundException_Test
 {
 
 	static Logger_Sngltn            myLogger        = Logger_Sngltn.getInstance();
 	static OKW_TestClipboard        myClipBoard     = OKW_TestClipboard.getInstance();
 
-	@BeforeClass
+	public String TestName;
+
+    @BeforeEach
+    void init(TestInfo testInfo)
+    {
+        TestName = testInfo.getTestMethod().get().getName();
+    }    
+
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception
 	{
         Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
@@ -81,13 +85,16 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
    * 
 	 * @throws Exception
 	 */
-	@Test(expected = OKWFrameObjectParentNotFoundException.class)
+	@Test // (expected = OKWFrameObjectParentNotFoundException.class)
     public void tcSelectWindow_OKWFrameObjectParentNotFoundException_Test() throws Exception
     {
-        EN.BeginTest( "TC_Select_Window_OKWFrameObjectParentNotFoundException_Test" );
+        EN.BeginTest( TestName );
         EN.SelectWindow( "WindowDoesNotExists" );
       
-    EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectParentNotFoundException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 	
 	  
@@ -103,15 +110,18 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
 	   *  \author Zoltan Hrabovszki
 	   *  \date 2019-11-22
 	  */
-	  @Test( expected = OKWFrameObjectParentNotFoundException.class )
+	  @Test // ( expected = OKWFrameObjectParentNotFoundException.class )
 	  public void TC_SelectContext_OKWFrameObjectChildNotFoundException() throws Exception
 	  {
-	    EN.BeginTest( "TC_SelectContext_OKWFrameObjectChildNotFoundException" );
+	    EN.BeginTest( TestName );
 
 	    EN.SelectWindow( "Rechner" );
 	    EN.SelectContext( "IsNotDefindeInRechner" );
 	    
-	    EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectParentNotFoundException.class, () ->
+        {
+            EN.EndTest();
+        });
 	  }
 
 	/**
@@ -126,13 +136,16 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
    * 
    * @throws Exception
    */
-  @Test(expected = OKWFrameObjectParentNotFoundException.class)
+  @Test // (expected = OKWFrameObjectParentNotFoundException.class)
     public void tcStartApp_OKWFrameObjectParentNotFoundException_Test() throws Exception
     {
-        EN.BeginTest( "TC_Select_Window_OKWFrameObjectParentNotFoundException_Test" );
+        EN.BeginTest( TestName );
         EN.StartApp( "WindowDoesNotExists" );
       
-    EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectParentNotFoundException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 
   /**
@@ -147,13 +160,16 @@ public class EN_OKWFrameObjectParentNotFoundException_Test
    * 
    * @throws Exception
    */
-  @Test(expected = OKWFrameObjectParentNotFoundException.class)
+  @Test // (expected = OKWFrameObjectParentNotFoundException.class)
     public void tcStopApp_OKWFrameObjectParentNotFoundException_Test() throws Exception
     {
-        EN.BeginTest( "TC_Select_Window_OKWFrameObjectParentNotFoundException_Test" );
+        EN.BeginTest( TestName );
         EN.StopApp( "WindowDoesNotExists" );
       
-    EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectParentNotFoundException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 }
 	

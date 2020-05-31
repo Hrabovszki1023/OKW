@@ -38,10 +38,10 @@ package okw.parser;
 
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
+import okw.core.OKWTestBase;
 
-import org.junit.*;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
+
 
 /**
 * \~
@@ -49,16 +49,12 @@ import org.junit.runners.MethodSorters;
 * 
 * @author zoltan
 */
-@Ignore
-@FixMethodOrder( MethodSorters.NAME_ASCENDING )
-public class SeInputField_SeParser_Test {
+@Disabled
+public class SeInputField_SeParser_Test extends OKWTestBase{
 
   protected OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
 
   protected static String ApplicationName;
-
-  @Rule
-  public TestName         name  = new TestName();
 
   /**
    * Testet das Schlüsselwort LogExists( FN ) eines SeInputField Prüfen.
@@ -66,7 +62,7 @@ public class SeInputField_SeParser_Test {
   @Test
   public void tc_ALT_a_Test() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "https://www.keyboardtester.com/tester.html" );
 
@@ -120,7 +116,7 @@ public class SeInputField_SeParser_Test {
   @Test
   public void tc_CTRL_b_Test() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "https://www.keyboardtester.com/tester.html" );
 
@@ -178,7 +174,7 @@ public class SeInputField_SeParser_Test {
   @Test
   public void tc_SHUFT_c_Test() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "https://www.keyboardtester.com/tester.html" );
 
@@ -239,7 +235,7 @@ public class SeInputField_SeParser_Test {
   @Test
   public void tc_AltCtrlCommend_Test() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "https://www.keyboardtester.com/tester.html" );
 
@@ -293,7 +289,7 @@ public class SeInputField_SeParser_Test {
   @Test
   public void tc_c_Test() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "https://www.keyboardtester.com/tester.html" );
 
@@ -350,7 +346,7 @@ public class SeInputField_SeParser_Test {
   @Test
   public void tc_absdef_Test() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "https://www.keyboardtester.com/tester.html" );
 
@@ -430,7 +426,7 @@ public class SeInputField_SeParser_Test {
   @Test
   public void a() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "https://www.keyboardtester.com/tester.html" );
 
