@@ -41,7 +41,6 @@ package okw.core;
 
 import okw.OKW_TestClipboard;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
-import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
 import org.junit.jupiter.api.*;

@@ -39,87 +39,49 @@
 
 package okw;
 
-
-import java.util.Arrays;
-import java.util.Collection;
-
 import javax.xml.xpath.XPathExpressionException;
 
-import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.Tag;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
-
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import okw.log.*;
 
-@RunWith(Parameterized.class)
-@Tag("AllCoreHelperTests")
+@Tag( "AllCoreHelperTests" )
 public class OKW_Helper_GetLeftFromDelimiterNumberTest
-    {
-    
-    private String ExpectedValue;
-    
-    private String InputSource;
-    private String InputDelimiter;
-    private int    InputCount;
-    
+{
     /**
      *  \copydoc CurrentObject::Log()
      */
     public static Logger_Sngltn Log;
 
-    @Parameters( name = "{index}: {0} = GetRigthFromDelimiterNumber[\"{1}\", \"{2}\", \"{3}\"] " )
-    public static Collection<Object[]> data() {
-        return Arrays.asList(new Object[][] {     
-        		{ "AAAA",       "AAAAGGBBBBGGDDDD", "GG", 1 },
-        		{ "AAAAGGBBBB", "AAAAGGBBBBGGDDDD", "GG", 2},
+    //@BeforeAll
+    public static void myTestFixtureSetUp()
+    {
+        Log = Logger_Sngltn.getInstance();
+        // Reset des Loggers: Alle geladenen Instanzen löschen
+        Logger_Sngltn.init();
 
-        		{ "AAAA",       "AAAACBBBB", "C", 1},
-
-        		{ "AAAACBBBB",  "AAAACBBBBCDDDD", "C", 2},
-        		{ "AAAA",       "AAAACBBBBCDDDD", "C", 1 },
-
-        		{ "AAA",             "AAA/BBB/CCC/DDD/EEE", "/", 1 },
-        		{ "AAA/BBB",         "AAA/BBB/CCC/DDD/EEE", "/", 2 },
-        		{ "AAA/BBB/CCC",    "AAA/BBB/CCC/DDD/EEE", "/", 3 },
-        		{ "AAA/BBB/CCC/DDD", "AAA/BBB/CCC/DDD/EEE", "/", 4 }
-           });
+        //Log.AddLogger(new Log2Console());
+        Log.setDebugMode( false );
     }
 
-    public OKW_Helper_GetLeftFromDelimiterNumberTest(String ExpectedValue, String InputSource, String InputDelimiter, int InputCount) {
-    	
-    	   this.ExpectedValue  = ExpectedValue;
-    	    
-    	   this.InputSource    = InputSource;
-    	   this.InputDelimiter = InputDelimiter;
-    	   this.InputCount     = InputCount;
-    	   }
-    
+    @ParameterizedTest
+    @CsvSource( value = { "'AAAA',       'AAAAGGBBBBGGDDDD', 'GG', 1 ",
+                    "'AAAAGGBBBB', 'AAAAGGBBBBGGDDDD', 'GG', 2 ",
+                    "'AAAA',       'AAAACBBBB', 'C', 1 ",
+                    "'AAAACBBBB',  'AAAACBBBBCDDDD', 'C', 2 ",
+                    "'AAAA',       'AAAACBBBBCDDDD', 'C', 1 ",
+                    "'AAA',             'AAA/BBB/CCC/DDD/EEE', '/', 1 ",
+                    "'AAA/BBB',         'AAA/BBB/CCC/DDD/EEE', '/', 2 ",
+                    "'AAA/BBB/CCC',     'AAA/BBB/CCC/DDD/EEE', '/', 3 ",
+                    "'AAA/BBB/CCC/DDD', 'AAA/BBB/CCC/DDD/EEE', '/', 4 " } )
+    public void tcMatchStr( String ExpectedValue, String InputSource, String InputDelimiter, int InputCount ) throws XPathExpressionException
+    {
+        String actual = "";
+        actual = OKW_Helper.getLeftFromDelimiterNumber( InputSource, InputDelimiter, InputCount );
 
-		//@BeforeAll
-        public static void myTestFixtureSetUp()
-        {
-			Log = Logger_Sngltn.getInstance();
-            // Reset des Loggers: Alle geladenen Instanzen löschen
-            Logger_Sngltn.init();
-
-            //Log.AddLogger(new Log2Console());
-            Log.setDebugMode(false);
-        }
-
-        @Test
-        public void tcMatchStr() throws XPathExpressionException
-        {
-            String actual = "";
-            String expected = ExpectedValue;
-
-            actual = OKW_Helper.getLeftFromDelimiterNumber( InputSource, InputDelimiter, InputCount);
-            assertEquals(expected, actual);
-        }
+        assertEquals( ExpectedValue, actual );
+    }
 }
-
-
-
-

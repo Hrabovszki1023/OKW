@@ -1,16 +1,10 @@
 package okw.core;
 
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
 
-import org.junit.FixMethodOrder;
-import org.junit.Test;
-import org.junit.jupiter.api.Tag;
-import org.junit.runners.MethodSorters;
-
-
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @Tag("AllCoreTests")
 public class Matcher_LevRegxWild {
 
