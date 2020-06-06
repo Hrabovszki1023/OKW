@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>com.jcabi</groupId>
 		<artifactId>parent</artifactId>
-		<!-- check the latest version at http://parent.jcabi.com -->
+		<!-- check the latest version at http://parent.jcabi.com-->
 		<version>0.50.0</version>
 	</parent>
 	<groupId>de.openkeyword</groupId>
@@ -175,6 +175,10 @@
 	</reporting>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+<dependency>
+	<groupId>org.junit.jupiter</groupId>
+	<artifactId>junit-jupiter-engine</artifactId>
+</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
