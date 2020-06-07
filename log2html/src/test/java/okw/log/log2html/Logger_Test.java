@@ -1,5 +1,7 @@
 package okw.log.log2html;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.*;
@@ -225,23 +227,26 @@ public class Logger_Test
         Logger_Sngltn.getInstance().LogPrint( "Eintrag" );
         Logger_Sngltn.getInstance().ResCloseList();
         Logger_Sngltn.getInstance().ResCloseList();
-        Logger_Sngltn.getInstance().ResCloseList(); // one close more than open
         
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
-
+        assertThrows( ClassCastException.class, () ->
+        		Logger_Sngltn.getInstance().ResCloseList() // one close more than open
+        		);
         
-        Logger_Sngltn.getInstance().setDebugMode( true );
-        
-        Logger_Sngltn.getInstance().LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
-        
-        Logger_Sngltn.getInstance().ResOpenList( "ResOpenList L1" );
-        Logger_Sngltn.getInstance().ResOpenList( "ResOpenList L2" );
-        Logger_Sngltn.getInstance().LogPrint( "Eintrag" );
-        Logger_Sngltn.getInstance().ResCloseList();
-        Logger_Sngltn.getInstance().ResCloseList();
-        Logger_Sngltn.getInstance().ResCloseList(); // one close more than open
-        
-        Logger_Sngltn.getInstance().LogTestcaseEnd();
+//        Logger_Sngltn.getInstance().LogTestcaseEnd();
+//
+//        
+//        Logger_Sngltn.getInstance().setDebugMode( true );
+//        
+//        Logger_Sngltn.getInstance().LogTestcaseStart( "tcResultOpenList_ResultCloseList" );
+//        
+//        Logger_Sngltn.getInstance().ResOpenList( "ResOpenList L1" );
+//        Logger_Sngltn.getInstance().ResOpenList( "ResOpenList L2" );
+//        Logger_Sngltn.getInstance().LogPrint( "Eintrag" );
+//        Logger_Sngltn.getInstance().ResCloseList();
+//        Logger_Sngltn.getInstance().ResCloseList();
+//        Logger_Sngltn.getInstance().ResCloseList(); // one close more than open
+//        
+//        Logger_Sngltn.getInstance().LogTestcaseEnd();
     }
     
     @Test
