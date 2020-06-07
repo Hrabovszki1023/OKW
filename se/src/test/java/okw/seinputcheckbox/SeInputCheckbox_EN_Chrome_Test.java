@@ -11,6 +11,7 @@ import org.junit.jupiter.api.*;
 * 
 * @author zoltan
 */
+@Tag("SeInputCheckbox_EN_Chrome_Test")
 public class SeInputCheckbox_EN_Chrome_Test extends SeInputCheckbox_EN_Test
 {
 	protected static Log2HTML myLog2HTML = null;

@@ -12,6 +12,7 @@ import org.junit.jupiter.api.*;
 * 
 * @author zoltan
 */
+@Tag("SeInputButton_EN_Chrome_Test")
 public class SeInputButton_EN_Chrome_Test extends SeInputButton_EN_Test
 {
 	protected static Log2HTML myLog2HTML = null;

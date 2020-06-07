@@ -5,7 +5,7 @@ import okw.log.log2html.Log2HTML;
 
 import org.junit.jupiter.api.*;
 
-
+@Tag("SeBrowserChild_EN_Chrome_Test")
 public class SeBrowserChild_EN_Chrome_Test extends SeBrowserChild_EN_Test
 {
 

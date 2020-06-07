@@ -12,6 +12,7 @@ import org.junit.jupiter.api.*;
 * 
 * @author zoltan
 */
+@Tag("SeKeyParserTest")
 public class SeInputField_SeParser_Chrome_Test extends SeInputField_SeParser_Test
 {
 	protected static Log2HTML myLog2HTML = null;

@@ -12,6 +12,7 @@ import org.junit.jupiter.api.*;
 * 
 * @author zoltan
 */
+@Tag("SeBACK_EN_Chrome_Test")
 public class SeBACK_EN_Chrome_Test extends SeBACK_EN_Test
 {
 	protected static Log2HTML myLog2HTML = null;
@@ -31,13 +32,14 @@ public class SeBACK_EN_Chrome_Test extends SeBACK_EN_Test
         
 	}
 
+	/*
 	@AfterAll
 	public static void tearDownAfterClass() throws Exception
 	{
 		//myLog2HTML.Result2HTML();
 	}
 	
-    /*@After
+     @After
     public void FirefoxAfter() throws Exception
     {
     	Runtime rt = Runtime.getRuntime();

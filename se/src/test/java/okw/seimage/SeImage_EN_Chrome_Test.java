@@ -13,6 +13,7 @@ import org.junit.jupiter.api.*;
 * 
 * @author zoltan
 */
+@Tag("SeImage_EN_Chrome_Test")
 public class SeImage_EN_Chrome_Test extends SeImage_EN_Test
 {
 

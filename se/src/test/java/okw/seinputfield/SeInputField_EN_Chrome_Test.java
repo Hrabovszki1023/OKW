@@ -12,6 +12,7 @@ import org.junit.jupiter.api.*;
 * 
 * @author zoltan
 */
+@Tag("SeInputField_EN_Chrome_Test")
 public class SeInputField_EN_Chrome_Test extends SeInputField_EN_Test
 {
 	protected static Log2HTML myLog2HTML = null;

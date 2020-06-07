@@ -12,6 +12,7 @@ import org.junit.jupiter.api.*;
 * 
 * @author zoltan
 */
+@Tag("SeSelect_EN_Chrome_Test")
 public class SeSelect_EN_Chrome_Test extends SeSelect_EN_Test
 {
 	protected static Log2HTML myLog2HTML = null;

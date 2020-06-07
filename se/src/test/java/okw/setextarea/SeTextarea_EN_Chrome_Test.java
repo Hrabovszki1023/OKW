@@ -12,6 +12,7 @@ import org.junit.jupiter.api.*;
 * 
 * @author zoltan
 */
+@Tag("SeTextarea_EN_Chrome_Test")
 public class SeTextarea_EN_Chrome_Test extends SeTextarea_EN_Test
 {
     protected  static Log2HTML myLog2HTML = null;

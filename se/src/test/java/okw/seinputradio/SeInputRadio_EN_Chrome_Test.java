@@ -11,6 +11,7 @@ import org.junit.jupiter.api.*;
 * 
 * @author zoltan
 */
+@Tag("SeInputRadio_EN_Chrome_Test")
 public class SeInputRadio_EN_Chrome_Test extends SeInputRadio_EN_Test
 {
 	protected static Log2HTML myLog2HTML = null;

@@ -12,6 +12,7 @@ import org.junit.jupiter.api.*;
 * 
 * @author zoltan
 */
+@Tag("SeLink_EN_Chrome_Test")
 public class SeLink_EN_Chrome_Test extends SeLink_EN_Test
 {
 

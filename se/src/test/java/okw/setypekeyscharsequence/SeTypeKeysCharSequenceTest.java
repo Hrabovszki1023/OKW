@@ -7,6 +7,7 @@ import org.openqa.selenium.Keys;
 
 import okw.gui.adapter.selenium.SeTypeKeysCharSequence;
 
+@Tag("SeTypeKeysCharSequenceTest")
 public class SeTypeKeysCharSequenceTest
 {
     @Test
