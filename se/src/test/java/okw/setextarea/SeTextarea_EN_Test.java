@@ -36,11 +36,10 @@
 
 package okw.setextarea;
 
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
-
-import okw.core.OKWTestBase;
 
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;

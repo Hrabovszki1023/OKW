@@ -3,11 +3,9 @@ package okw.seimage;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 
-import org.junit.FixMethodOrder;
-
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
-import okw.core.OKWTestBase;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWVerifyingFailsException;
 

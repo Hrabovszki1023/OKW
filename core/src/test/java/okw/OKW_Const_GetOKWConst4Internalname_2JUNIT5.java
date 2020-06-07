@@ -40,19 +40,19 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 
 package okw;
 
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.Collection;
+//import java.io.IOException;
+//import java.util.Arrays;
+//import java.util.Collection;
 
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
+//import javax.xml.bind.JAXBException;
+//import javax.xml.parsers.ParserConfigurationException;
+//import javax.xml.xpath.XPathExpressionException;
 
 import org.junit.jupiter.api.*;
 
-import org.xml.sax.SAXException;
-
-import okw.log.*;
+//import org.xml.sax.SAXException;
+//
+//import okw.log.*;
 
 
 @Tag("AllCoreHelperTests")

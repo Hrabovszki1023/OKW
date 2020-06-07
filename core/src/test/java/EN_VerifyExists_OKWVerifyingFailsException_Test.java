@@ -44,7 +44,6 @@ import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
 import okw.log.Logger_Sngltn;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 
 

@@ -39,8 +39,8 @@
 
 package okw.core;
 
+import okw.OKWTestBase;
 import okw.OKW_TestClipboard;
-import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
 import okw.log.Logger_Sngltn;
 

@@ -3,7 +3,6 @@ package browser;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.After;
 import org.junit.jupiter.api.*;
 
 
@@ -36,7 +35,7 @@ public class FrmSeChrome_Test extends FrmBrowserBase_Test
 		myLog2HTML.Result2HTML( "target/FrmSeChrome_Test.html" );
 	}
 	
-    @After
+    @AfterEach
     public void FirefoxAfter() throws Exception
     {
     	Runtime rt = Runtime.getRuntime();

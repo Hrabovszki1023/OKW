@@ -40,54 +40,20 @@
 package okw;
 
 
-import java.util.Arrays;
-import java.util.Collection;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import javax.xml.xpath.XPathExpressionException;
 
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.Tag;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.*;
-import okw.log.*;
+import okw.log.Logger_Sngltn;
 
-@RunWith(Parameterized.class)
 @Tag("AllCoreHelperTests")
-public class OKW_Helper_String2BooleanTest
-    {
-    @Parameters
-    public static Collection<Object[]> data() {
-        return Arrays.asList(new Object[][] {     
-        		{ false, "false" },
-        		{ false, "False" }, 
-        		{ false, "fAlse" },
-        		{ false, "falsE" },
-        		{ false, "FaLsE" },
-        		{ false, "FALSE" },
+public class OKW_Helper_String2BooleanTest {
 
-        		{ true, "true" },
-        		{ true, "True" },
-        		{ true, "tRue" },
-        		{ true, "truE" },
-        		{ true, "TruE" },
-        		{ true, "TRUE" }
-           });
-    }
-    
-    private Boolean ExpectedValue;
-    
-    private String InputValue_1;
-
-    public OKW_Helper_String2BooleanTest(Boolean ExpectedValue, String InputValue_1 ) {
-    	
-    	   this.ExpectedValue = ExpectedValue;
-    	   this.InputValue_1 = InputValue_1;
-    	   }
-    
-	/// \copydoc CurrentObject::Log()
+	// \copydoc CurrentObject::Log()
 	public static Logger_Sngltn Log;
 
 		//@BeforeAll
@@ -101,8 +67,21 @@ public class OKW_Helper_String2BooleanTest
             Log.setDebugMode(false);
         }
 
-        @Test
-        public void TC_MatchStr() throws XPathExpressionException
+        @ParameterizedTest
+        @CsvSource( value = {  " false, 'false' ",
+                               " false, 'False' ", 
+                               " false, 'fAlse' ",
+                               " false, 'falsE' ",
+                               " false, 'FaLsE' ",
+                               " false, 'FALSE' ",
+            
+                               " true, 'true' ",
+                               " true, 'True' ",
+                               " true, 'tRue' ",
+                               " true, 'truE' ",
+                               " true, 'TruE' ",
+                               " true, 'TRUE' " })
+        public void TC_MatchStr( Boolean ExpectedValue, String InputValue_1 ) throws XPathExpressionException
         {
             Boolean actual = false;
             Boolean expected = ExpectedValue;

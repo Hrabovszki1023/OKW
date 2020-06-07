@@ -40,7 +40,7 @@
 package okw.core;
 
 import okw.OKW_TestClipboard;
-import okw.core.EN;
+
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 

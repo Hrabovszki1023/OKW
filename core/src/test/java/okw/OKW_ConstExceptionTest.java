@@ -2,11 +2,9 @@ package okw;
 
 import javax.xml.xpath.XPathExpressionException;
 
-import okw.core.EN;
 import okw.exceptions.*;
 import okw.log.Logger_Sngltn;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 
 @Tag("AllCoreHelperTests")

@@ -39,8 +39,8 @@
 
 package okw.calculator;
 
+import okw.OKWTestBase;
 import okw.core.EN;
-import okw.core.OKWTestBase;
 import okw.log.log2html.Log2HTML;
 
 import org.junit.jupiter.api.*;

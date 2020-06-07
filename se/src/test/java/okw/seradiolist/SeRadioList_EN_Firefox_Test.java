@@ -3,7 +3,6 @@ package okw.seradiolist;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.After;
 import org.junit.jupiter.api.*;
 
 
@@ -38,7 +37,7 @@ public class SeRadioList_EN_Firefox_Test extends SeRadioList_EN_Test
 		myLog2HTML.Result2HTML("target/SeRadioList_EN_Firefox_Test.html");
 	}
 	
-    @After
+    @AfterEach
     public void FirefoxAfter() throws Exception
     {
     	Runtime rt = Runtime.getRuntime();

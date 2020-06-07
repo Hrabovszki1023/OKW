@@ -39,61 +39,21 @@
 
 package okw;
 
-
-import java.util.Arrays;
-import java.util.Collection;
-
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.Tag;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
-
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import okw.log.*;
 
-@RunWith(Parameterized.class)
 @Tag("AllCoreHelperTests")
 public class OKW_Helper_MatchStrTest
     {
     
-    private Boolean ExpectedValue;
-    
-    private String InputValue_1;
-    private String InputValue_2;
-    
-    /// \copydoc CurrentObject::Log()
+    // \copydoc CurrentObject::Log()
     public static Logger_Sngltn Log;
     
-    @Parameters( name = "{index}: {0} = MatchStr[\"{1}\", \"{2}\"] " )
-    public static Collection<Object[]> data() {
-        return Arrays.asList(new Object[][] {     
-        		{ false, "Hase",         "hase" },
-        		{ false, "Fux*Bär",      "Fux, hase, bär" },
-        		{ false, "Fux, hase*",   "Fux, Hase, Bär" },
-        		{ false, "*Hase, bär",   "Fux, Hase, Bär" },
-        		{ false, "Fux*Hase*Bär", "Fux, hase, bär" },
 
-        		{ true, "Hase",         "Hase" },
-        		{ true, "Hase*",        "Hase" },
-        		{ true, "*Hase",        "Hase" },
-        		{ true, "*Hase*",       "Hase" },
-        		
-        		{ true, "Fux, Hase*",   "Fux, Hase, Bär" },
-        		{ true, "Fux*Bär",      "Fux, Hase, Bär" },
-
-        		{ false, "*Hase*",     "Fux, hASE, bär" },
-        		{ false, "*Hase, bär", "Fux, Hase, Bär" }
-        });
-    }
-    
-    public OKW_Helper_MatchStrTest(Boolean ExpectedValue, String InputValue_1, String InputValue_2) {
-    	
-    	   this.ExpectedValue = ExpectedValue;
-    	    
-    	   this.InputValue_1 = InputValue_1;
-    	   this.InputValue_2 = InputValue_2;
-    	   }
     
 		//@BeforeAll
         public static void myTestFixtureSetUp()
@@ -106,8 +66,26 @@ public class OKW_Helper_MatchStrTest
             Log.setDebugMode(false);
         }
 
-        @Test
-        public void tcMatchStr()
+        @ParameterizedTest
+        @CsvSource( value = {     
+                        " false, 'Hase',         'hase' ",
+                        " false, 'Fux*Bär',      'Fux, hase, bär' ",
+                        " false, 'Fux, hase*',   'Fux, Hase, Bär' ",
+                        " false, '*Hase, bär',   'Fux, Hase, Bär' ",
+                        " false, 'Fux*Hase*Bär', 'Fux, hase, bär' ",
+                        
+                        " true, 'Hase',         'Hase' ",
+                        " true, 'Hase*',        'Hase' ",
+                        " true, '*Hase',        'Hase' ",
+                        " true, '*Hase*',       'Hase' ",
+                        
+                        " true, 'Fux, Hase*',   'Fux, Hase, Bär' ",
+                        " true, 'Fux*Bär',      'Fux, Hase, Bär' ",
+                        
+                        " false, '*Hase*',     'Fux, hASE, bär' ",
+                        " false, '*Hase, bär', 'Fux, Hase, Bär' "
+        })
+        public void tcMatchStr(Boolean ExpectedValue, String InputValue_1, String InputValue_2)
         {
             Boolean actual = false;
             Boolean expected = ExpectedValue;

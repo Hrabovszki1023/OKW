@@ -1,4 +1,4 @@
-package okw.core;
+package okw;
 
 import org.junit.jupiter.api.*;
 
@@ -13,7 +13,7 @@ public class OKWTestBase
     }
     public OKWTestBase()
     {
-        // TODO Auto-generated constructor stub
+
     }
 
 }

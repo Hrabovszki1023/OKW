@@ -39,20 +39,15 @@
 
 package okw;
 
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-
-import javax.xml.bind.JAXBException;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
+//import javax.xml.bind.JAXBException;
+//import javax.xml.parsers.ParserConfigurationException;
+//import javax.xml.xpath.XPathExpressionException;
 
 import org.junit.jupiter.api.*;
-import org.xml.sax.SAXException;
 
-import okw.log.*;
+//import org.xml.sax.SAXException;
+//
+//import okw.log.*;
 
 @Tag("AllCoreHelperTests")
 public class OKW_Const_Split_SEP_HSEP_VSEP_2JUNIT5

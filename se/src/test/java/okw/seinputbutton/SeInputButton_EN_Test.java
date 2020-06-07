@@ -38,9 +38,9 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
-import okw.core.OKWTestBase;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWVerifyingFailsException;
 

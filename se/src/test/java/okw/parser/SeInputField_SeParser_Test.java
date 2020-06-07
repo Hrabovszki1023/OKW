@@ -36,9 +36,9 @@
 
 package okw.parser;
 
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
-import okw.core.OKWTestBase;
 
 import org.junit.jupiter.api.*;
 

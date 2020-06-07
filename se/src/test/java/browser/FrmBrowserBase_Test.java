@@ -36,10 +36,9 @@
 
 package browser;
 
+import okw.OKWTestBase;
 import okw.core.EN;
 import okw.log.log2html.Log2HTML;
-
-import okw.core.OKWTestBase;
 
 import org.junit.jupiter.api.*;
 

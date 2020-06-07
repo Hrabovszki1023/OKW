@@ -2,34 +2,12 @@ package okw.parser;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.After;
 import org.junit.jupiter.api.*;
 
 import org.openqa.selenium.Keys;
 
 public class SeKeyParserTest
 {
-
-    @BeforeAll
-    public static void setUpBeforeClass() throws Exception
-    {
-    }
-
-    @AfterAll
-    public static void tearDownAfterClass() throws Exception
-    {
-    }
-
-    @BeforeEach
-    public void setUp() throws Exception
-    {
-    }
-
-    @After
-    public void tearDown() throws Exception
-    {
-    }
-
     @Test
     public void test()
     {

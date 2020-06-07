@@ -41,64 +41,25 @@ package okw;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.Tag;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
-
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
 import okw.log.*;
 
-@RunWith(Parameterized.class)
 @Tag("AllCoreHelperTests")
 public class OKW_Helper_StringSplitTest
     {
-    
-    private ArrayList<String> ExpectedValue;
-    
-    private String InputValue_1;
-    private String InputValue_2;
 
     /**
      *  \copydoc CurrentObject::Log()
      */
     public static Logger_Sngltn Log;
 
-    @Parameters
-    public static Collection<Object[]> data() {
-        return Arrays.asList(new Object[][] {     
-        		
-        		{ new ArrayList<String>(Arrays.asList("")),                                      "",                             "/" },
-        		{ new ArrayList<String>(Arrays.asList("Root")),                                  "Root",                         "/" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "")),                              "Root/",                        "/" },
-        		{ new ArrayList<String>(Arrays.asList("", "SubDir_1")),                           "/SubDir_1",                    "/" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "SubDir_1")),                      "Root/SubDir_1",                "/" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "", "Datei")),                     "Root//Datei",                  "/" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "SubDir_1", "SubDir_2", "Datei")), "Root/SubDir_1/SubDir_2/Datei", "/" },
-
-        		{ new ArrayList<String>(Arrays.asList("")),                                      "",                                               "${WERT}" },
-        		{ new ArrayList<String>(Arrays.asList("Root")),                                  "Root",                                           "${WERT}" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "")),                              "Root${WERT}",                                    "${WERT}" },
-        		{ new ArrayList<String>(Arrays.asList("", "SubDir_1")),                          "${WERT}SubDir_1",                                "${WERT}" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "SubDir_1")),                      "Root${WERT}SubDir_1",                            "${WERT}" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "", "Datei")),                     "Root${WERT}${WERT}Datei",                        "${WERT}" },
-        		{ new ArrayList<String>(Arrays.asList("Root", "SubDir_1", "SubDir_2", "Datei")), "Root${WERT}SubDir_1${WERT}SubDir_2${WERT}Datei", "${WERT}" }
-           });
-    }
+  
     
-    public OKW_Helper_StringSplitTest(ArrayList<String> ExpectedValue, String InputValue_1, String InputValue_2) {
-    	
-    	   this.ExpectedValue = ExpectedValue;
-    	    
-    	   this.InputValue_1 = InputValue_1;
-    	   this.InputValue_2 = InputValue_2;
-    	   }
-    
-
 		//@BeforeAll
         public static void myTestFixtureSetUp()
         {
@@ -110,8 +71,26 @@ public class OKW_Helper_StringSplitTest
             Log.setDebugMode(false);
         }
 
-        @Test
-        public void tcMatchStr()
+        @ParameterizedTest
+        @CsvSource( value = {     
+                        
+                        " new ArrayList<String>(Arrays.asList(\"\")),                                          '',                             '/' ",
+                        " new ArrayList<String>(Arrays.asList(\"Root\")),                                      'Root',                         '/' ",
+                        " new ArrayList<String>(Arrays.asList(\"Root\", \"\")),                                'Root/',                        '/' ",
+                        " new ArrayList<String>(Arrays.asList(\"\", \"SubDir_1\")),                            '/SubDir_1',                    '/' ",
+                        " new ArrayList<String>(Arrays.asList(\"Root\", \"SubDir_1\")),                        'Root/SubDir_1',                '/' ",
+                        " new ArrayList<String>(Arrays.asList(\"Root\", \"\", \"Datei\")),                     'Root//Datei',                  '/' ",
+                        " new ArrayList<String>(Arrays.asList(\"Root\", \"SubDir_1\", \"SubDir_2\", \"Datei\")), 'Root/SubDir_1/SubDir_2/Datei', '/' ",
+                        
+                        " new ArrayList<String>(Arrays.asList(\"\")),                                        '',                                               '${WERT}' ",
+                        " new ArrayList<String>(Arrays.asList(\"Root\")),                                    'Root',                                           '${WERT}' ",
+                        " new ArrayList<String>(Arrays.asList(\"Root\", \"\")),                              'Root${WERT}',                                    '${WERT}' ",
+                        " new ArrayList<String>(Arrays.asList(\"\", \"SubDir_1\")),                          '${WERT}SubDir_1',                                '${WERT}' ",
+                        " new ArrayList<String>(Arrays.asList(\"Root\", \"SubDir_1\")),                      'Root${WERT}SubDir_1',                            '${WERT}' ",
+                        " new ArrayList<String>(Arrays.asList(\"Root\", \"\", \"Datei\")),                     'Root${WERT}${WERT}Datei',                        '${WERT}' ",
+                        " new ArrayList<String>(Arrays.asList(\"Root\", \"SubDir_1\", \"SubDir_2\", \"Datei\")), 'Root${WERT}SubDir_1${WERT}SubDir_2${WERT}Datei', '${WERT}' "
+        })
+        public void tcMatchStr( ArrayList<String> ExpectedValue, String InputValue_1, String InputValue_2 )
         {
         	ArrayList<String> actual;
             ArrayList<String> expected = ExpectedValue;

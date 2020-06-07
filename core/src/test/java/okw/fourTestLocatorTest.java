@@ -3,8 +3,6 @@ package okw;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 
-import okw.fourTestLocator;
-
  /*  <code> fpsL = "//div[@ID='myID']"</code> -> <code>return = "//div[@ID='myID']"</code>
   *  <code> fpsL = "4T!MyValue"</code> -> <code>return = "//*[@data-4Test='MyValue']"</code>
   *  <code> fpsL = "4TNA!MyValue"</code> -> <code>return = "//*[contains( @name, 'MyValue']"</code>

@@ -1,9 +1,8 @@
 package okw.seselect;
 
+import okw.OKWTestBase;
 import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
-
-import okw.core.OKWTestBase;
 
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;

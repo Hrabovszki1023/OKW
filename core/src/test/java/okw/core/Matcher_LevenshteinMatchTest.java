@@ -71,10 +71,8 @@ public class Matcher_LevenshteinMatchTest {
                   " 'Hrabovszki', 'HraboXszki', 1, true " })
   public void tc_LevenshteinDistance_1(String String1, String String2,
                   int DistanceTolerance, boolean expectedResult)
-  {
-
-    assertEquals( expectedResult,
-                  Matcher.LevenshteinMatch( String1, String2, DistanceTolerance));
-  }
-
+      {
+        assertEquals( expectedResult,
+                      Matcher.LevenshteinMatch( String1, String2, DistanceTolerance));
+      }
 }

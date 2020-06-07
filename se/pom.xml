@@ -9,6 +9,7 @@
 	</parent>
 	<artifactId>se</artifactId>
 	<build>
+	    <pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.antlr</groupId>
@@ -29,6 +30,7 @@
 				</executions>
 			</plugin>
 		</plugins>
+		    </pluginManagement>
 	</build>
 	<dependencies>
 		<dependency>

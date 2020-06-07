@@ -35,9 +35,9 @@ Sie sollten eine Kopie der GNU General Public License zusammen mit
 OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
-import okw.core.OKWTestBase;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.exceptions.OKWVerifyingFailsException;

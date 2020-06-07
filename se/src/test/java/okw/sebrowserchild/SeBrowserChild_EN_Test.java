@@ -1,8 +1,8 @@
 package okw.sebrowserchild;
 
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
-import okw.core.OKWTestBase;
 import okw.exceptions.*;
 
 import org.junit.jupiter.api.*;
