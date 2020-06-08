@@ -54,13 +54,6 @@
 				<!-- </executions> -->
 				<!-- </plugin> -->
 
-
-				<!-- <plugin> -->
-				<!-- <groupId>com.github.igoryeremin</groupId> -->
-				<!-- <artifactId>doxygen-report-maven-plugin</artifactId> -->
-				<!-- <version>1.0</version> -->
-				<!-- </plugin> -->
-
 	<plugin>
 		<artifactId>maven-compiler-plugin</artifactId>
 		<configuration>
@@ -69,38 +62,56 @@
 		</configuration>
 	</plugin>
 
-				<!-- <plugin> -->
-				<!-- Generate -javadoc.jar artifact, required by Maven Central. -->
-				<!-- <artifactId>maven-javadoc-plugin</artifactId> -->
-				<!-- <version>3.0.0</version> -->
-				<!-- <configuration> -->
-				<!-- <additionalparam>-Xdoclint:none</additionalparam> -->
-				<!-- <doclint>none</doclint> -->
-				<!-- </configuration> -->
-				<!-- <executions> -->
-				<!-- <execution> -->
-				<!-- <id>jcabi-javadoc</id> -->
-				<!-- <phase>package</phase> -->
-				<!-- <goals> -->
-				<!-- <goal>jar</goal> -->
-				<!-- </goals> -->
-				<!-- </execution> -->
-				<!-- </executions> -->
-				<!-- </plugin> -->
-
-				<!-- <plugin> -->
-				<!-- <groupId>org.apache.maven.plugins</groupId> -->
-				<!-- <artifactId>maven-source-plugin</artifactId> -->
-				<!-- <version>3.0.1</version> -->
-				<!-- <executions> -->
-				<!-- <execution> -->
-				<!-- <id>attach-sources</id> -->
-				<!-- <goals> -->
-				<!-- <goal>jar</goal> -->
-				<!-- </goals> -->
-				<!-- </execution> -->
-				<!-- </executions> -->
-				<!-- </plugin> -->
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>package-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>package-javadoc</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6</version>
+        <extensions>true</extensions>
+        <configuration>
+          <serverId>oss.sonatype.org</serverId>
+          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+          <description>${project.version}</description>
+        </configuration>
+        <executions>
+          <execution>
+            <id>deploy-to-sonatype</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+              <goal>release</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 
 				<plugin>
 					<artifactId>maven-gpg-plugin</artifactId>
@@ -115,16 +126,14 @@
 						</execution>
 					</executions>
 				</plugin>
-
-				<!-- <plugin> -->
-				<!-- <groupId>org.codehaus.mojo</groupId> -->
-				<!-- <artifactId>versions-maven-plugin</artifactId> -->
-				<!-- <version>2.5</version> -->
-				<!-- <configuration> -->
-				<!-- <generateBackupPoms>false</generateBackupPoms> -->
-				<!-- </configuration> -->
-				<!-- </plugin> -->
-
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>versions-maven-plugin</artifactId>
+					<version>2.5</version>
+					<configuration>
+						<generateBackupPoms>false</generateBackupPoms>
+					</configuration>
+				</plugin>
 				<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
