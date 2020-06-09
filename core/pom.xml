@@ -17,26 +17,26 @@
 	</properties>	
 	
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.antlr</groupId>
-				<artifactId>antlr4-maven-plugin</artifactId>
-				<configuration>
-					<listener>false</listener>
-					<visitor>true</visitor>
-					<grammars>OKWCoreLexer.g4</grammars>
-					<outputDirectory>${basedir}/src/main/java/okw/parser/antlr4/core</outputDirectory>
-					<sourceDirectory>${basedir}/src/main/antlr4/core</sourceDirectory>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>antlr4</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
+<!-- 		<plugins> -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.antlr</groupId> -->
+<!-- 				<artifactId>antlr4-maven-plugin</artifactId> -->
+<!-- 				<configuration> -->
+<!-- 					<listener>false</listener> -->
+<!-- 					<visitor>true</visitor> -->
+<!-- 					<grammars>OKWCoreLexer.g4</grammars> -->
+<!-- 					<outputDirectory>${basedir}/src/main/java/okw/parser/antlr4/core</outputDirectory> -->
+<!-- 					<sourceDirectory>${basedir}/src/main/antlr4/core</sourceDirectory> -->
+<!-- 				</configuration> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<goals> -->
+<!-- 							<goal>antlr4</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 			</plugin> -->
+<!-- 		</plugins> -->
 <!-- 		<pluginManagement> -->
 <!-- 			<plugins> -->
 <!-- 				<plugin> -->

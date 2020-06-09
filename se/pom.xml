@@ -8,30 +8,30 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>se</artifactId>
-	<build>
-	    <pluginManagement>
-		<plugins>
-			<plugin>
-				<groupId>org.antlr</groupId>
-				<artifactId>antlr4-maven-plugin</artifactId>
-				<configuration>
-					<listener>false</listener>
-					<visitor>true</visitor>
-					<grammars>OKWSeLexer.g4</grammars>
-					<outputDirectory>${basedir}/src/main/java/okw/parser/antlr4/se</outputDirectory>
-					<sourceDirectory>${basedir}/src/main/antlr4/se</sourceDirectory>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>antlr4</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-		    </pluginManagement>
-	</build>
+<!-- 	<build> -->
+<!-- 	    <pluginManagement> -->
+<!-- 		<plugins> -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.antlr</groupId> -->
+<!-- 				<artifactId>antlr4-maven-plugin</artifactId> -->
+<!-- 				<configuration> -->
+<!-- 					<listener>false</listener> -->
+<!-- 					<visitor>true</visitor> -->
+<!-- 					<grammars>OKWSeLexer.g4</grammars> -->
+<!-- 					<outputDirectory>${basedir}/src/main/java/okw/parser/antlr4/se</outputDirectory> -->
+<!-- 					<sourceDirectory>${basedir}/src/main/antlr4/se</sourceDirectory> -->
+<!-- 				</configuration> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<goals> -->
+<!-- 							<goal>antlr4</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 			</plugin> -->
+<!-- 		</plugins> -->
+<!-- 		    </pluginManagement> -->
+<!-- 	</build> -->
 	<dependencies>
 		<dependency>
 			<groupId>de.openkeyword</groupId>
