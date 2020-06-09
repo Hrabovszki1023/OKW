@@ -808,8 +808,8 @@ public class OKW_Const_Sngltn
      * Wert (Wahr/Falsch).<br>
      *
      * Beispiele: Sprache ist "de": Eingabe "JA" -> Ausgabe Wahr <br>
-     * Sprache ist "de": Eingabe "NEIN" -> Ausgabe Falsch <br> Sprache ist "en":
-     * Eingabe "JA" oder "NEIN" -> löst die Exception
+     * Sprache ist "de": Eingabe "NEIN" - Ausgabe Falsch <br> Sprache ist "en":
+     * Eingabe "JA" oder "NEIN" - löst die Exception
      * OKWNotAllowedValueException aus.
      *
      * Beim der Eingabe muss die GROSS- und kleinschreibung nicht beachtet

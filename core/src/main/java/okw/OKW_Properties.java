@@ -62,7 +62,7 @@ public class OKW_Properties extends Properties
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2018-03-08
+     * \date 2018-03-08
      */
     protected ArrayList<String> CoreProperties = new ArrayList<String>();
     
