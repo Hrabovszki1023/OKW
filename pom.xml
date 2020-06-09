@@ -59,16 +59,16 @@
 
 			<plugin>
 				<!-- Generate -javadoc.jar artifact, required by Maven Central. -->
-				<groupId>org.apache.maven.plugins</groupId>
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.10.4</version>
-				<configuration>
-					<!-- <additionalparam>-Xdoclint:none</additionalparam> -->
-					<doclint>none</doclint>
-				</configuration>
+<!-- 				<version>2.10.4</version> -->
+<!-- 				<configuration> -->
+<!-- 					<additionalparam>-Xdoclint:none</additionalparam> -->
+<!-- 					<doclint>none</doclint> -->
+<!-- 				</configuration> -->
 				<executions>
 					<execution>
-						<id>jcabi-javadoc</id>
+						<id>package-javadoc</id>
 						<phase>package</phase>
 						<goals>
 							<goal>jar</goal>
@@ -107,12 +107,12 @@
 		      </plugin>
 
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
 				<artifactId>maven-source-plugin</artifactId>
 <!-- 				<version>3.2.1</version> -->
 				<executions>
 					<execution>
-						<id>attach-sources</id>
+						<id>package-sources</id>
 						<goals>
 							<goal>jar</goal>
 						</goals>
