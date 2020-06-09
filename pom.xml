@@ -33,6 +33,7 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.0.0-M4</version>
 				</plugin>
+
 				<!-- <plugin> -->
 				<!-- <groupId>org.antlr</groupId> -->
 				<!-- <artifactId>antlr4-maven-plugin</artifactId> -->
@@ -53,7 +54,9 @@
 				<!-- </execution> -->
 				<!-- </executions> -->
 				<!-- </plugin> -->
-
+			</plugins>
+		</pluginManagement>
+					<plugins>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
@@ -166,8 +169,7 @@
 						</execution>
 					</executions>
 				</plugin>
-			</plugins>
-		</pluginManagement>
+		</plugins>
 	</build>
 	<reporting>
 		<plugins>
@@ -203,7 +205,6 @@
 			<version>5.6.2</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
