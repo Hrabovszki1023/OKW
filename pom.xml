@@ -41,11 +41,11 @@
 		</pluginManagement>
 		<!-- To use the plugin goals in your POM or parent POM -->
 		<plugins>
-			<plugin>
-				<groupId>com.github.igoryeremin</groupId>
-				<artifactId>doxygen-report-maven-plugin</artifactId>
-				<version>1.0</version>
-			</plugin>
+<!-- 			<plugin> -->
+<!-- 				<groupId>com.github.igoryeremin</groupId> -->
+<!-- 				<artifactId>doxygen-report-maven-plugin</artifactId> -->
+<!-- 				<version>1.0</version> -->
+<!-- 			</plugin> -->
 
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
