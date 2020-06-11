@@ -121,19 +121,19 @@
 	        </executions>
 	      </plugin>
 			
-<!-- 			<plugin> -->
-<!-- 				<artifactId>maven-gpg-plugin</artifactId> -->
-<!-- 				<version>1.5</version> -->
-<!-- 				<executions> -->
-<!-- 					<execution> -->
-<!-- 						<id>sign-artifacts</id> -->
-<!-- 						<phase>verify</phase> -->
-<!-- 						<goals> -->
-<!-- 							<goal>sign</goal> -->
-<!-- 						</goals> -->
-<!-- 					</execution> -->
-<!-- 				</executions> -->
-<!-- 			</plugin> -->
+			<plugin>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -260,19 +260,14 @@
 		<module>autoit</module>
 	</modules>
 	<distributionManagement>
-    <repository>
-      <id>ossrh</id>
-      <name>Central Repository OSSRH</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-<!-- 		<repository> -->
-<!-- 			<id>oss.sonatype.org</id> -->
-<!-- 			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url> -->
-<!-- 		</repository> -->
-<!-- 		<snapshotRepository> -->
-<!-- 			<id>oss.sonatype.org</id> -->
-<!-- 			<url>https://oss.sonatype.org/content/repositories/snapshots</url> -->
-<!-- 		</snapshotRepository> -->
+		<repository>
+			<id>oss.sonatype.org</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+		<snapshotRepository>
+			<id>oss.sonatype.org</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
 	</distributionManagement>
 	<organization>
 		<url>www.openkeyword.de</url>
