@@ -22,5 +22,4 @@ jobs:
           gpg_private_key: ${{ secrets.gpg_private_key }}
           gpg_passphrase: ${{ secrets.gpg_passphrase }}
           nexus_username: ${{ secrets.nexus_username }}
-          nexus_password: ${{ secrets.nexus_password }}
-          maven_args: -DskipTests -Dfile.encoding=UTF-8        
+          nexus_password: ${{ secrets.nexus_password }}        
