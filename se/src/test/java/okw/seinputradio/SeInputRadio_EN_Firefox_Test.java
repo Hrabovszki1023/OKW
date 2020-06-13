@@ -2,8 +2,8 @@ package okw.seinputradio;
 
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.*;
+
 
 /**
 * \~
@@ -15,7 +15,7 @@ public class SeInputRadio_EN_Firefox_Test extends SeInputRadio_EN_Test
 {
 	protected static Log2HTML myLog2HTML = null;
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception
 	{
 		ApplicationName = "Firefox";
@@ -29,7 +29,7 @@ public class SeInputRadio_EN_Firefox_Test extends SeInputRadio_EN_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception
 	{
 		myLog2HTML.Result2HTML( "target/SeInputRadio_EN_Firefox_Test.html" );

@@ -1,7 +1,5 @@
 package okw;
 
-import static org.junit.Assert.*;
-
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -11,10 +9,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Properties;
 
-import org.junit.Test;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import okw.exceptions.OKWFileDoesNotExistsException;
 
+@Tag("AllCoreHelperTests")
 public class OKW_PropertiesTest
 {
 
@@ -99,11 +99,11 @@ public class OKW_PropertiesTest
         myProperties.clear();
         myProperties.init();
 
-        Method mymethod = OKW_Properties.class.getDeclaredMethod( "loadSystemEnviromentVars", null);
+        Method mymethod = OKW_Properties.class.getDeclaredMethod( "loadSystemEnviromentVars");
         mymethod.setAccessible(true);
         
-        mymethod.invoke( myProperties, null);
-        mymethod.invoke( myProperties, null);
+        mymethod.invoke( myProperties);
+        mymethod.invoke( myProperties);
     }
 
 
@@ -114,11 +114,11 @@ public class OKW_PropertiesTest
         myProperties.clear();
         myProperties.init();
 
-        Method mymethod = OKW_Properties.class.getDeclaredMethod( "loadSystemProperties", null);
+        Method mymethod = OKW_Properties.class.getDeclaredMethod( "loadSystemProperties");
         mymethod.setAccessible(true);
         
-        mymethod.invoke( myProperties, null);
-        mymethod.invoke( myProperties, null);
+        mymethod.invoke( myProperties);
+        mymethod.invoke( myProperties);
     }
 
     @Test
@@ -177,11 +177,16 @@ public class OKW_PropertiesTest
     }
     
     
-    @Test ( expected=OKWFileDoesNotExistsException.class )
+    @Test
     public final void tc_addPropertiesFile_OKWFileDoesNotExistsException() throws IOException
     {
         okw.OKW_FileHelper.deleteFile( "testPropertiesExpected.properties" );
-        myProperties.addPropertiesFile( "testPropertiesExpected.properties" );
+        
+        Assertions.assertThrows( OKWFileDoesNotExistsException.class, () ->
+        {
+            myProperties.addPropertiesFile( "testPropertiesExpected.properties" );
+        }); 
+        
     }
     
     

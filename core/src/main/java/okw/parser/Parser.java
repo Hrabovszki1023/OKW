@@ -64,7 +64,9 @@ import okw.parser.antlr4.core.OKWCoreParser.RootContext;
         
         {
             // StringReader inputStream = new StringReader(fpsString2Parse);
-            ANTLRInputStream input = new ANTLRInputStream(fpsString2Parse);
+            // ANTLRInputStream input = new ANTLRInputStream(fpsString2Parse);
+            CharStream input = CharStreams.fromString(fpsString2Parse);
+            
             OKWCoreLexer lexer = new OKWCoreLexer(input);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             OKWCoreParser parser = new OKWCoreParser(tokens);

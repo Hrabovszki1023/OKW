@@ -48,11 +48,12 @@ import java.util.ArrayList;
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-//import junit.framework.TestCase;
-import org.junit.*;
 import org.xml.sax.SAXException;
 
+@Tag("AllCoreHelperTests")
 public class OKW_XmlReaderTest
 {
 	@Test
@@ -65,12 +66,12 @@ public class OKW_XmlReaderTest
 
 			String Actuell = myXlReader.getXMLFile();
 
-			Assert.assertEquals("Ein Wert wird erwartet:", "/OKW_XmlReaderTestXML.xml", Actuell);
+			assertEquals("Ein Wert wird erwartet:", "/OKW_XmlReaderTestXML.xml", Actuell);
 
 		}
 		catch (JAXBException | ParserConfigurationException | SAXException | IOException e)
 		{
-			Assert.fail(e.getMessage());
+			fail(e.getMessage());
 		}
 	}
 
@@ -84,24 +85,26 @@ public class OKW_XmlReaderTest
 
 	            String Actuell = myXlReader.getXMLFile();
 
-	            Assert.assertEquals("Ein Wert wird erwartet:", "/xml/OKW_Ini.xml", Actuell);
+	            assertEquals("Ein Wert wird erwartet:", "/xml/OKW_Ini.xml", Actuell);
 
 	        }
 	        catch (JAXBException | ParserConfigurationException | SAXException | IOException e)
 	        {
-	            Assert.fail(e.getMessage());
+	            fail(e.getMessage());
 	        }
 	    }
 
 	
-	 @Test(expected=FileNotFoundException.class)
+	 @Test
 	  public void TC_getXMLFile_FileNotFoundException() throws JAXBException, ParserConfigurationException, SAXException, IOException
 	  {
 	      OKW_XmlReader myXlReader = new OKW_XmlReader("DoesNotExists.xml");
 
 	      //Löst Ausname aus.
-	      @SuppressWarnings("unused")
-		  String Actuell =  myXlReader.getXMLFile();
+	      Assertions.assertThrows( FileNotFoundException.class, () ->
+	      {
+	          myXlReader.getXMLFile();
+	      });
 	  }
 
 	// Test
@@ -113,13 +116,13 @@ public class OKW_XmlReaderTest
 			OKW_XmlReader myXlReader = new OKW_XmlReader("/OKW_XmlReaderTestXML.xml");
 
 			ArrayList<String> Actuell = myXlReader.getTextContentAsList("//value");
-			Assert.assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell.get(0));
-			Assert.assertEquals("Ein Wert wird erwartet:", "Wert 2", Actuell.get(1));
-			Assert.assertEquals("Ein Wert wird erwartet:", "Wert 3", Actuell.get(2));
+			assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell.get(0));
+			assertEquals("Ein Wert wird erwartet:", "Wert 2", Actuell.get(1));
+			assertEquals("Ein Wert wird erwartet:", "Wert 3", Actuell.get(2));
 		}
 		catch (JAXBException | ParserConfigurationException | SAXException | IOException e)
 		{
-			Assert.fail(e.getMessage());
+			fail(e.getMessage());
 		}
 	}
 
@@ -132,13 +135,13 @@ public class OKW_XmlReaderTest
       OKW_XmlReader myXlReader = new OKW_XmlReader("/SubFolder4Test/OKW_XmlReaderTestXML2.xml");
 
       ArrayList<String> Actuell = myXlReader.getTextContentAsList("//value");
-      Assert.assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell.get(0));
-      Assert.assertEquals("Ein Wert wird erwartet:", "Wert 2", Actuell.get(1));
-      Assert.assertEquals("Ein Wert wird erwartet:", "Wert 3", Actuell.get(2));
+      assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell.get(0));
+      assertEquals("Ein Wert wird erwartet:", "Wert 2", Actuell.get(1));
+      assertEquals("Ein Wert wird erwartet:", "Wert 3", Actuell.get(2));
     }
     catch (JAXBException | ParserConfigurationException | SAXException | IOException e)
     {
-      Assert.fail(e.getMessage());
+      fail(e.getMessage());
     }
   }
 
@@ -150,17 +153,17 @@ public class OKW_XmlReaderTest
 			OKW_XmlReader myXlReader = new OKW_XmlReader("/OKW_XmlReaderTestXML.xml");
 
 			String Actuell = myXlReader.getTextContentSingleValue("//value[1]");
-			Assert.assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell);
+			assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell);
 			
 			Actuell = myXlReader.getTextContentSingleValue("//value[2]");
-			Assert.assertEquals("Ein Wert wird erwartet:", "Wert 2", Actuell);
+			assertEquals("Ein Wert wird erwartet:", "Wert 2", Actuell);
 
 			Actuell = myXlReader.getTextContentSingleValue("//value[3]");
-			Assert.assertEquals("Ein Wert wird erwartet:", "Wert 3", Actuell);
+			assertEquals("Ein Wert wird erwartet:", "Wert 3", Actuell);
 		}
 		catch (JAXBException | ParserConfigurationException | SAXException | IOException e)
 		{
-			Assert.fail(e.getMessage());
+			fail(e.getMessage());
 		}
 	}
 
@@ -173,20 +176,20 @@ public class OKW_XmlReaderTest
       OKW_XmlReader myXlReader = new OKW_XmlReader("/SubFolder4Test/OKW_XmlReaderTestXML2.xml");
 
       String Actuell = myXlReader.getTextContentSingleValue("//value[1]");
-      Assert.assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell);
+      assertEquals("Ein Wert wird erwartet:", "Wert 1", Actuell);
       
       Actuell = myXlReader.getTextContentSingleValue("//value[2]");
-      Assert.assertEquals("Ein Wert wird erwartet:", "Wert 2", Actuell);
+      assertEquals("Ein Wert wird erwartet:", "Wert 2", Actuell);
 
       Actuell = myXlReader.getTextContentSingleValue("//value[3]");
-      Assert.assertEquals("Ein Wert wird erwartet:", "Wert 3", Actuell);
+      assertEquals("Ein Wert wird erwartet:", "Wert 3", Actuell);
     }
     catch (JAXBException | ParserConfigurationException | SAXException | IOException e)
     {
-      Assert.fail(e.getMessage());
+      fail(e.getMessage());
     }
   }	
-	@BeforeClass
+	@BeforeAll
 	public static void MyTestFixtureSetUp()
 	{
 		StringBuffer sbf = new StringBuffer();
@@ -214,11 +217,11 @@ public class OKW_XmlReaderTest
 		}
 		catch (IOException e)
 		{
-			Assert.fail(e.getMessage());
+			fail(e.getMessage());
 		}
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void MyTestFixtureTearDown()
 	{
 		// TODO: Add tear down code.

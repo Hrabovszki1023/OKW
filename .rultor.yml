@@ -8,6 +8,8 @@ decrypt:
   secring.gpg: "repo/secring.gpg.asc"
 release:
   script: |
-    mvn versions:set "-DnewVersion=${tag}"
+    mvn versions:set "-DnewVersion=${tag}" -e -X
     git commit -am "${tag}"
-    mvn clean -DskipTests deploy -Dfile.encoding=UTF-8 -Pfoo -Psonatype --settings /home/r/settings.xml
+    pwd
+    mvn clean deploy -DskipTests -Dfile.encoding=UTF-8 -Pjcabi -Pfoo -Psonatype --settings ../settings.xml -e -X
+    

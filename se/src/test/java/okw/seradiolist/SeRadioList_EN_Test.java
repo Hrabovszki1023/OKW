@@ -1,17 +1,11 @@
 package okw.seradiolist;
 
-import static org.junit.Assert.*;
-
-import org.junit.FixMethodOrder;
-
+import okw.OKWTestBase;
 import okw.core.EN;
 import okw.exceptions.*;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
-
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
 * \~
@@ -31,8 +25,7 @@ import org.junit.runners.MethodSorters;
  * @author Zoltan Hrabovszki
  * @date 2014.12.03
  */
-@FixMethodOrder( MethodSorters.NAME_ASCENDING )
-public class SeRadioList_EN_Test
+public class SeRadioList_EN_Test extends OKWTestBase
 {
 	/** 
 	 *  \~german
@@ -44,18 +37,6 @@ public class SeRadioList_EN_Test
 	 */
 	protected static String ApplicationName;
 
-  /** 
-   *  \~german
-   *  Enthält den Namen des aktuellen junit Testfalls.
-   *  
-   * @see:   org.junit.rules.TestName
-   * \~
-   * @author Zoltan Hrabovszki
-   * @date 2014.12.03
-   */
-	@Rule
-	public TestName name = new TestName();
-    
   /**
    *  \~german
    *  Testziel: Prüft, ob ein einzelner Wert gewählt wird.
@@ -67,7 +48,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcSelect_SingelValue() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
 
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
@@ -85,7 +66,6 @@ public class SeRadioList_EN_Test
     
     EN.StopApp( ApplicationName );
     EN.EndTest();
-
   }
   
   
@@ -101,10 +81,10 @@ public class SeRadioList_EN_Test
    * 
    * @throws Exception Here is no Exception expected!
    */
-  @Test( expected = OKWOnlySingleValueAllowedException.class )
+  @Test // ( expected = OKWOnlySingleValueAllowedException.class )
   public void tcSelect_OKWOnlySingleValueAllowedException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -113,7 +93,10 @@ public class SeRadioList_EN_Test
     EN.Select( "Pay Method", "Visa${SEP}Mastercard" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    Assertions.assertThrows( OKWOnlySingleValueAllowedException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
   
 
@@ -132,16 +115,21 @@ public class SeRadioList_EN_Test
    *  @author Zoltan Hrabovszki
    *  @date 2014.12.03
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void tcSelect_SingleValue_DELETE() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
 	    EN.SelectWindow( "SeRadioList" );
 	    
 	    EN.Select( "Pay Method", "${DELETE}" );
+
+	    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+	    {
+	        EN.EndTest();
+	    });
   }
 
   /** \~german
@@ -155,7 +143,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcSelect_SingleValue_IGNORE() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -187,7 +175,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcSelect_SingleValue_EmptyString() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -223,7 +211,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcSetValue_SingelValue() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -257,16 +245,22 @@ public class SeRadioList_EN_Test
    *  @author Zoltan Hrabovszki
    *  @date 2014.12.03
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void tcSetValue_SingleValue_DELETE() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
 	    EN.SelectWindow( "SeRadioList" );
 	    
 	    EN.SetValue( "Pay Method", "${DELETE}" );
+	    
+	    
+	    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+	        {
+	            EN.EndTest();
+	        });
   }
 
   
@@ -282,10 +276,10 @@ public class SeRadioList_EN_Test
    * 
    * @throws Exception The OKWOnlySingleValueAllowedException is expected!
    */
-  @Test( expected = OKWOnlySingleValueAllowedException.class )
+  @Test // ( expected = OKWOnlySingleValueAllowedException.class )
   public void tcSetValue_OKWOnlySingleValueAllowedException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -294,7 +288,11 @@ public class SeRadioList_EN_Test
     EN.SetValue( "Pay Method", "Visa${SEP}Mastercard" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWOnlySingleValueAllowedException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 
   
@@ -311,7 +309,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcSetValue_SingelValue_IGNORE() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -344,7 +342,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcVerifyExists_ExistsYesExpectedYes() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -371,7 +369,7 @@ public class SeRadioList_EN_Test
   public void tcVerifyExists_ExistsNoExpectedNo() throws Exception
   {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
 
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
@@ -395,16 +393,21 @@ public class SeRadioList_EN_Test
    *  @author Zoltan Hrabovszki
    *  @date 2016.12.20
    */
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyExists_ExistsYesExpectedNo_OKWVerifyingFailsException() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
 	    EN.SelectWindow( "SeRadioList" );
 	    
 	    EN.VerifyExists( "Pay Method", "NO" );
+	    
+	    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+	    {
+	        EN.EndTest();
+	    });
   }
 
   
@@ -418,16 +421,21 @@ public class SeRadioList_EN_Test
   *  @author Zoltan Hrabovszki
   *  @date 2016.12.20
   */
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyExists_ExistsNoExpectedYes_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
     EN.SelectWindow( "SeRadioList" );
     
     EN.VerifyExists( "Does Not Exist", "NO" );
+    
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   
@@ -443,7 +451,7 @@ public class SeRadioList_EN_Test
   public void tcLogExists_ExistsNo() throws Exception
   {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
 
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
@@ -469,7 +477,7 @@ public class SeRadioList_EN_Test
   public void tcLogExists_ExistsYes() throws Exception
   {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
 
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
@@ -495,7 +503,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcVerifyIsActive_IsActiveYesExpectedYes() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -519,7 +527,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcMemorizeValue() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -545,7 +553,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcLogValue() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -568,10 +576,10 @@ public class SeRadioList_EN_Test
    *  @author Zoltan Hrabovszki
    *  @date 2016.12.23
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeValue_IGNORE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -583,6 +591,11 @@ public class SeRadioList_EN_Test
 
     EN.Select( "Pay Method", "American Express");
     EN.MemorizeValue( "Pay Method", "${IGNORE}" );
+    
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   
@@ -595,10 +608,10 @@ public class SeRadioList_EN_Test
    *  @author Zoltan Hrabovszki
    *  @date 2016.12.23
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeValue_Empty_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -610,6 +623,11 @@ public class SeRadioList_EN_Test
 
     EN.Select( "Pay Method", "American Express");
     EN.MemorizeValue( "Pay Method", "" );
+    
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
   
   
@@ -625,7 +643,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcVerifyIsActive_IsActiveNoExpectedNo() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
 
@@ -647,10 +665,10 @@ public class SeRadioList_EN_Test
    *  @author Zoltan Hrabovszki
    *  @date 2016.09.20
    */
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyIsActive_IsActiveYesExpectedNo_OKWVerifyingFailsException() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -659,7 +677,11 @@ public class SeRadioList_EN_Test
 	    EN.VerifyIsActive( "Pay Method", "NO" );
 
 	    EN.StopApp( ApplicationName );
-	    EN.EndTest();
+	    
+	    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+	    {
+	        EN.EndTest();
+	    });
   }
 
   
@@ -673,10 +695,10 @@ public class SeRadioList_EN_Test
    *  @author Zoltan Hrabovszki
    *  @date 2016.09.20
    */
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyIsActive_IsActiveNoExpectedYes_OKWVerifyingFailsException() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -685,7 +707,11 @@ public class SeRadioList_EN_Test
 	    EN.VerifyIsActive( "Pay Method", "NO" );
 
 	    EN.StopApp( ApplicationName );
-	    EN.EndTest();
+	    
+	    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+	    {
+	        EN.EndTest();
+	    });
   }
 
   /** \~german
@@ -697,7 +723,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcLogIsActive() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
 
@@ -713,7 +739,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcVerifyToolTip() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
 
@@ -726,10 +752,10 @@ public class SeRadioList_EN_Test
   }
 
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyToolTip_Fail_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
 
@@ -738,14 +764,18 @@ public class SeRadioList_EN_Test
     EN.VerifyTooltip( "Pay Method", "Wrong Value" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
 
   @Test
   public void tcVerifyToolTipWCM() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
 
@@ -758,10 +788,10 @@ public class SeRadioList_EN_Test
 }
 
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyToolTipWCM_Fail_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
 
@@ -770,14 +800,18 @@ public class SeRadioList_EN_Test
     EN.VerifyTooltip( "Pay Method", "Wrong Value" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
  }
 
 
   @Test
   public void tcVerifyToolTipREGX() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
 
@@ -790,10 +824,10 @@ public class SeRadioList_EN_Test
 }
 
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyToolTipREGX_Fail_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
 
@@ -802,13 +836,17 @@ public class SeRadioList_EN_Test
     EN.VerifyTooltipREGX( "Pay Method", "Wrong Value" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   @Test
   public void tcVerifyLabel() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -821,10 +859,10 @@ public class SeRadioList_EN_Test
 	    EN.EndTest();
 	  }
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabel_Fail_OKWVerifyingFailsException() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -832,12 +870,17 @@ public class SeRadioList_EN_Test
 	    
 	    EN.Select( "Pay Method", "American Express" );
 	    EN.VerifyLabel( "Pay Method", "Schnick-Schnack" );
-  	}
+
+	    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+	    {
+	        EN.EndTest();
+	    });
+	}
 
   @Test
   public void tcVerifyLabelWCM() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -850,10 +893,10 @@ public class SeRadioList_EN_Test
 	    EN.EndTest();
 }
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabelWCM_Fail_OKWVerifyingFailsException() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -863,12 +906,16 @@ public class SeRadioList_EN_Test
 	    EN.VerifyLabelWCM( "Pay Method", "Schnick*" );
 
 	    EN.StopApp( ApplicationName );
-	    EN.EndTest();}
+
+	    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+	    {
+	        EN.EndTest();
+	    });	    }
 
   @Test
   public void tcVerifyLabelREGX() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -881,10 +928,10 @@ public class SeRadioList_EN_Test
 	    EN.EndTest();
   }
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabelREGX_Fail_OKWVerifyingFailsException() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -894,7 +941,11 @@ public class SeRadioList_EN_Test
 	    EN.VerifyLabelREGX( "Pay Method", "Sch.*" );
 
 	    EN.StopApp( ApplicationName );
-	    EN.EndTest();
+
+	    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+	    {
+	        EN.EndTest();
+	    });
 }
 
   /** \~german
@@ -908,7 +959,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcMemorizeLabel() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -933,7 +984,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcLogLabel() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -956,10 +1007,10 @@ public class SeRadioList_EN_Test
    *  @author Zoltan Hrabovszki
    *  @date 2016.12.23
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeLabel_IGNORE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -967,6 +1018,12 @@ public class SeRadioList_EN_Test
 
     EN.Select( "Pay Method", "Visa");
     EN.MemorizeLabel( "Pay Method", "${IGNORE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
+    
   }
 
   
@@ -979,15 +1036,20 @@ public class SeRadioList_EN_Test
    *  @author Zoltan Hrabovszki
    *  @date 2016.12.23
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeLabel_Empty_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
     EN.SelectWindow( "SeRadioList" );
     EN.MemorizeLabel( "Pay Method", "" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
   
   // / \brief
@@ -996,7 +1058,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcMemorizeToolTip() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio_inactive.htm" );
 
@@ -1015,7 +1077,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcLogToolTip() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
@@ -1039,7 +1101,7 @@ public class SeRadioList_EN_Test
   @Test
   public void tcVerifyValue_EMPTY() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
@@ -1050,10 +1112,10 @@ public class SeRadioList_EN_Test
 }
 
   
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyValue_Fail_OKWVerifyingFailsException() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
@@ -1062,13 +1124,18 @@ public class SeRadioList_EN_Test
 	    
 	    EN.Select( "Pay Method", "Visa" );
 	    EN.VerifyValue( "Pay Method", "American Express" );
+
+	    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+	    {
+	        EN.EndTest();
+	    });
 }
 
   
   @Test
   public void tcVerifyValueWCM() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -1082,10 +1149,10 @@ public class SeRadioList_EN_Test
 }
 
 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyValueWCM_Fail_OKWVerifyingFailsException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -1095,14 +1162,18 @@ public class SeRadioList_EN_Test
     EN.VerifyValueWCM( "Pay Method", "Vis*" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
+        EN.EndTest();
+    });
 }
 
   
   @Test
   public void tcVerifyValueREGX() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -1116,10 +1187,10 @@ public class SeRadioList_EN_Test
   }
 
   
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyValueREGX_Fail_OKWVerifyingFailsException() throws Exception
   {
-	    EN.BeginTest( name.getMethodName() );
+	    EN.BeginTest( TestName );
 	    EN.StartApp( ApplicationName );
 	    EN.TypeKey( "URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm" );
 
@@ -1129,6 +1200,10 @@ public class SeRadioList_EN_Test
 	    EN.VerifyValueREGX( "Pay Method", "Vis.*" );
 
 	    EN.StopApp( ApplicationName );
-	    EN.EndTest();
+
+	    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+	    {
+	        EN.EndTest();
+	    });
   }
 }

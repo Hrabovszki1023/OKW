@@ -1,16 +1,16 @@
 package okw.seinputcheckbox;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Assertions;
+
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.exceptions.OKWVerifyingFailsException;
 import okw.exceptions.OKWNotAllowedValueException;
-
-import org.junit.*;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
-
 
 /**
 * \~
@@ -18,8 +18,7 @@ import org.junit.runners.MethodSorters;
 * 
 * @author zoltan
 */
-@FixMethodOrder( MethodSorters.NAME_ASCENDING )
-public class SeInputCheckbox_EN_Test
+public class SeInputCheckbox_EN_Test extends OKWTestBase
 {
 	protected String cvsObjektName = "SeCheckBox";
 
@@ -27,14 +26,12 @@ public class SeInputCheckbox_EN_Test
 	
 	protected static String ApplicationName;
 	
-    @Rule
-    public TestName name = new TestName();
-	
+
 
 	@Test
     public void tcClickOn() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -63,7 +60,7 @@ public class SeInputCheckbox_EN_Test
 	@Test
 	public void tcLogExists() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -79,7 +76,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcLogHasFocus() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -94,7 +91,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcLogIsActive() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -105,12 +102,11 @@ public class SeInputCheckbox_EN_Test
                 EN.EndTest();
         }
         
-        
-        // \brief
+
         @Test
         public void tcVerifyIsActive_ActualYesExpectedYes() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -122,11 +118,11 @@ public class SeInputCheckbox_EN_Test
                 EN.EndTest();
         }
 
-        // \brief
+
         @Test
         public void tcVerifyIsActive_ActualNoExpectedNo() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -137,13 +133,12 @@ public class SeInputCheckbox_EN_Test
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
         }
-        
-        // \brief
-        // 
-        @Test( expected = OKWVerifyingFailsException.class )
+
+
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyIsActive_ActuelYesExpectedNO_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -151,15 +146,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.VerifyIsActive("Pilze", "NO");
 
-                EN.EndTest();
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
-        // \brief
-        // 
-        @Test( expected = OKWVerifyingFailsException.class )
+        
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyIsActive_ActuelNoExpectedYes_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -167,14 +164,16 @@ public class SeInputCheckbox_EN_Test
 
                 EN.VerifyIsActive("Disabled", "YES");
 
-                EN.EndTest();
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
-        // \brief
         @Test
         public void tcMemorizeIsActive() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -194,7 +193,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcLogTooltip() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -211,7 +210,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcMemorizeExists() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -228,7 +227,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcMemorizeHasFocus() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -259,7 +258,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcMemorizeTooltip() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -277,7 +276,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcMemorizeValue() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -297,7 +296,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcLogValue() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -311,7 +310,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcSetValue() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -355,10 +354,10 @@ public class SeInputCheckbox_EN_Test
         }
 
         
-        @Test( expected = OKWNotAllowedValueException.class )
+        @Test //( expected = OKWNotAllowedValueException.class )
         public void tcSetValue_OKWNotAllowedValueException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -367,13 +366,17 @@ public class SeInputCheckbox_EN_Test
                 EN.SetValue("Salami", "Zoli");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         @Test
         public void tcSelect() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -412,15 +415,16 @@ public class SeInputCheckbox_EN_Test
                 EN.VerifyValue("Sardellen", "UNCHECKED");
 
                 EN.StopApp( ApplicationName );
+                
                 EN.EndTest();
         }
 
 
         
-        @Test( expected = OKWNotAllowedValueException.class )
+        @Test // ( expected = OKWNotAllowedValueException.class )
         public void tcSelect_OKWNotAllowedValueException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -429,7 +433,11 @@ public class SeInputCheckbox_EN_Test
                 EN.Select("Salami", "Zoli");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
@@ -439,7 +447,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcSetFocus() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -461,7 +469,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcVerifyExists_ExistsNoExpectedNo() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -474,10 +482,10 @@ public class SeInputCheckbox_EN_Test
         }
 
         
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyExists_ExistsNoExpectedYes_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -486,13 +494,17 @@ public class SeInputCheckbox_EN_Test
                 EN.VerifyExists("NotExists", "YES");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         @Test
         public void tcVerifyExists_ExistsYesExpectedYes() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -505,10 +517,10 @@ public class SeInputCheckbox_EN_Test
                 EN.EndTest();
         }
 
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyExists_ExistsYesExpectedNo_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -516,7 +528,10 @@ public class SeInputCheckbox_EN_Test
 
                 EN.VerifyExists("Salami", "NO");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         // \brief
@@ -525,7 +540,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcVerifyHasFocus() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -545,10 +560,10 @@ public class SeInputCheckbox_EN_Test
 
         // \brief
         // 
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyHasFocus_ActualYesExpectedNo_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -559,15 +574,19 @@ public class SeInputCheckbox_EN_Test
                 EN.VerifyHasFocus("Pilze", "NO");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         // \brief
         // 
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyHasFocus_ActualNoExpectedYes_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -580,7 +599,11 @@ public class SeInputCheckbox_EN_Test
                 EN.VerifyHasFocus("Pilze", "YES");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
@@ -589,7 +612,7 @@ public class SeInputCheckbox_EN_Test
         {
             try
             {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -606,23 +629,26 @@ public class SeInputCheckbox_EN_Test
         }
 
         
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyTooltip_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
                 EN.SelectWindow("SeCheckBox");
                 EN.VerifyTooltip("Salami", "XXXTitle: Salami");
 
-                EN.EndTest();
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         @Test
         public void tcVerifyTooltipWCM() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -634,24 +660,27 @@ public class SeInputCheckbox_EN_Test
                 EN.EndTest();
         }
 
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyTooltipWCM_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
                 EN.SelectWindow("SeCheckBox");
                 EN.VerifyTooltipWCM("Salami", "#itle: Salami");
 
-                EN.EndTest();
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         
         @Test
         public void tcVerifyTooltipREGX() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -663,24 +692,27 @@ public class SeInputCheckbox_EN_Test
         }
 
         
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyTooltipREGX_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
                 EN.SelectWindow("SeCheckBox");
                 EN.VerifyTooltipREGX("Salami", "\\Witle: Salami");
 
-                EN.EndTest();
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
         @Test
         public void tcVerifyLabel() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -690,24 +722,27 @@ public class SeInputCheckbox_EN_Test
         }
 
         
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyLabel_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
                 EN.SelectWindow("SeCheckBox");
                 EN.VerifyLabel("Salami", "Sulami");
 
-                EN.EndTest();
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
 
         @Test
         public void tcVerifyLabelWCM() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -718,24 +753,27 @@ public class SeInputCheckbox_EN_Test
          }
 
         
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyLabelWCM_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
                 EN.SelectWindow("SeCheckBox");
                 EN.VerifyLabelWCM("Salami", "?ulami");
 
-                EN.EndTest();
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
        
         
         @Test
         public void tcVerifyLabelREGX() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -747,10 +785,10 @@ public class SeInputCheckbox_EN_Test
                 EN.EndTest();
         }
 
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyLabelREGX_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -758,13 +796,17 @@ public class SeInputCheckbox_EN_Test
                 EN.VerifyLabelREGX("Salami", ".ulami");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         @Test
         public void tcVerifyValue() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -793,7 +835,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcMemorizeLabel() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -809,7 +851,7 @@ public class SeInputCheckbox_EN_Test
         @Test
         public void tcLogLabel() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -821,10 +863,10 @@ public class SeInputCheckbox_EN_Test
         }
 
         
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyValue_ActuelCHECKED_ExpectedUNCHECKED_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -834,14 +876,18 @@ public class SeInputCheckbox_EN_Test
                 EN.VerifyValue("Salami", "UNCHECKED");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcVerifyValue_ActuelUNCHECKED_ExpectedCHECKED_OKWVerifyingFailsException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -852,14 +898,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.StopApp( ApplicationName );
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcClickOn_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -867,13 +916,16 @@ public class SeInputCheckbox_EN_Test
 
                 EN.ClickOn( "NotExists");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcSelect_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -881,13 +933,16 @@ public class SeInputCheckbox_EN_Test
 
                 EN.Select( "NotExists", "abc");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcTypeKey_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -895,13 +950,16 @@ public class SeInputCheckbox_EN_Test
 
                 EN.TypeKey( "NotExists", "abc");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcSetValue_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -909,13 +967,16 @@ public class SeInputCheckbox_EN_Test
 
                 EN.SetValue( "NotExists", "abc");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcSetFocus_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -923,14 +984,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.SetFocus( "NotExists");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcMemorizeCaption_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -938,14 +1002,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.MemorizeCaption( "NotExists", "MemorizeCaption");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcMemorizeHasFocus_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -953,14 +1020,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.MemorizeHasFocus( "NotExists", "MemorizeHasFocus");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
        }
         
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcMemorizeIsActive_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -968,14 +1038,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.MemorizeIsActive( "NotExists", "MemorizeIsActive");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcMemorizeLabel_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -983,14 +1056,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.MemorizeLabel( "NotExists", "MemorizeLabel");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcMemorizeTooltip_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -998,14 +1074,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.MemorizeTooltip( "NotExists", "MemorizeTooltip");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcMemorizeValue_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -1013,14 +1092,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.MemorizeValue( "NotExists", "MemorizeVale");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcLogCaption_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -1028,14 +1110,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.LogCaption( "NotExists");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcLogHasFocus_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -1043,14 +1128,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.LogHasFocus( "NotExists");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcLogIsActive_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -1058,14 +1146,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.LogIsActive( "NotExists");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcLogLabel_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -1073,14 +1164,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.LogLabel( "NotExists");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcLogTooltip_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -1088,14 +1182,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.LogTooltip( "NotExists");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcLogValue_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -1103,13 +1200,16 @@ public class SeInputCheckbox_EN_Test
 
                 EN.LogValue( "NotExists");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcVerifyCaption_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -1117,14 +1217,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.VerifyCaption( "NotExists", "aa");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcVerifyHasFocus_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -1132,14 +1235,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.VerifyHasFocus( "NotExists", "YES");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcVerifyIsActive_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -1147,14 +1253,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.VerifyIsActive( "NotExists", "YES" );
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcVerifyLabel_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -1162,14 +1271,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.VerifyLabel( "NotExists", "aa" );
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcVerifyTooltip_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -1177,14 +1289,17 @@ public class SeInputCheckbox_EN_Test
 
                 EN.VerifyTooltip( "NotExists", "aa");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcVerifyValue_OKWGUIObjectNotFoundException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputCheckbox/Input_type-checkbox.htm");
 
@@ -1192,6 +1307,9 @@ public class SeInputCheckbox_EN_Test
 
                 EN.VerifyValue( "NotExists", "aa");
                 
-                EN.EndTest();
+                Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 }

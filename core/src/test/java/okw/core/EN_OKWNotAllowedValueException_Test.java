@@ -40,28 +40,27 @@
 package okw.core;
 
 import okw.OKW_TestClipboard;
-import okw.core.EN;
+
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
 
-
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Tag("AllCoreTests")
 public class EN_OKWNotAllowedValueException_Test {
 
   static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
   static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
-  @Rule
-  public TestName          name        = new TestName();
+  public String TestName;
 
-  @BeforeClass
+  @BeforeEach
+  void init(TestInfo testInfo)
+  {
+      TestName = testInfo.getTestMethod().get().getName();
+  }
+
+  @BeforeAll
   public static void setUpBeforeClass() throws Exception {
     Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 
@@ -83,14 +82,17 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test //  // ( expected = OKWNotAllowedValueException.class )
   public void TC_VerifyExists_OKWNotAllowedValueException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyExists( "IsNotDefindeInRechner", "Bandersnatch" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
  
   /**
@@ -104,14 +106,17 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test //  // ( expected = OKWNotAllowedValueException.class )
   public void TC_VerifyHasFocus_OKWNotAllowedValueException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyHasFocus( "IsNotDefindeInRechner", "Bandersnatch" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 
   
@@ -126,14 +131,18 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test //  // ( expected = OKWNotAllowedValueException.class )
   public void TC_VerifyHasFocus_OKWNotAllowedValueException_2() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.VerifyHasFocus( "All_MethodsObj", "Bandersnatch" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 
   
@@ -148,14 +157,17 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void TC_VerifyIsActive_OKWNotAllowedValueException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyIsActive( "IsNotDefindeInRechner", "Bandersnatch" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 
   /**
@@ -169,14 +181,17 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void TC_VerifyMaxLength_OKWNotAllowedValueException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMaxLength( "IsNotDefindeInRechner", "Bandersnatch" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 
   /**
@@ -190,14 +205,17 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void TC_VerifyMaxLength_OKWNotAllowedValueException_2() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMaxLength( "All_MethodsObj", "Bandersnatch" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 
   /**
@@ -211,14 +229,17 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void TC_VerifyMaxLength_OKWNotAllowedValueException_3() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMaxLength( "All_MethodsObj", " 1" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 
   /**
@@ -232,14 +253,17 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void TC_VerifyMaxLength_OKWNotAllowedValueException_4() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMaxLength( "All_MethodsObj", "1,03" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
   
   
@@ -254,14 +278,17 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void TC_VerifyMinLength_OKWNotAllowedValueException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMinLength( "IsNotDefindeInRechner", "Bandersnatch" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 
   /**
@@ -275,14 +302,17 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void TC_VerifyMinLength_OKWNotAllowedValueException_2() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMinLength( "All_MethodsObj", "Bandersnatch" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 
   /**
@@ -296,14 +326,17 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void TC_VerifyMinLength_OKWNotAllowedValueException_3() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMinLength( "All_MethodsObj", " 1" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 
   /**
@@ -317,13 +350,16 @@ public class EN_OKWNotAllowedValueException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // ( expected = OKWNotAllowedValueException.class )
   public void TC_VerifyMinLength_OKWNotAllowedValueException_4() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     EN.VerifyMinLength( "All_MethodsObj", "1,03" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 }

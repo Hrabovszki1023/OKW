@@ -8,9 +8,9 @@ import okw.*;
 // import okw.parser.*;
 import okw.log.*;
 
-import org.junit.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
-import static org.junit.Assert.*;
 
 	public class OKW_VisitorTest
     {
@@ -27,7 +27,7 @@ import static org.junit.Assert.*;
         /// 
         /// \author Zoltan Hrabovszki
         /// \date 2014.01.14
-        @Ignore
+        @Disabled
         @Test
         public void TC_ParseMe_EnvVar()
         {
@@ -51,7 +51,7 @@ import static org.junit.Assert.*;
         public void TC_ParseMe_MemorizedValue()
         {
         	
-        	OKW_Memorize_Sngltn.reset();
+        	OKW_Memorize_Sngltn.getInstance().reset();
         	
             try
             {
@@ -89,7 +89,7 @@ import static org.junit.Assert.*;
         public void TC_ParseMe_MemorizedValue_WithDot() throws XPathExpressionException
         {
             
-            OKW_Memorize_Sngltn.reset();
+            OKW_Memorize_Sngltn.getInstance().reset();
             
             OKW_Memorize_Sngltn.getInstance().set("Key.1", "myValue 1.");
             OKW_Memorize_Sngltn.getInstance().set("Key.2", "myValue 2.");
@@ -108,7 +108,7 @@ import static org.junit.Assert.*;
         public void TC_ParseMe_MemorizedValue_Underscore() throws XPathExpressionException
         {
             
-            OKW_Memorize_Sngltn.reset();
+            OKW_Memorize_Sngltn.getInstance().reset();
             
             OKW_Memorize_Sngltn.getInstance().set("Schluessel_1", "Wert des Schlüssels 1.");
             OKW_Memorize_Sngltn.getInstance().set("Schluessel_2", "Wert des Schlüssels 2.");
@@ -183,11 +183,10 @@ import static org.junit.Assert.*;
         }
         
         
-        /// \brief
         /// 
         /// \author Zoltan Hrabovszki
         /// \date 2014.10.14
-        @Ignore
+        @Disabled
         @Test
         public void TC_ParseMe_TextPlusEnvVar()
         {
@@ -303,7 +302,7 @@ import static org.junit.Assert.*;
             LsInput.add("PATHXML: >>${Folder_XML}<<");
             LsInput.add("${Schluessel}");
             
-            OKW_Memorize_Sngltn.reset();
+            OKW_Memorize_Sngltn.getInstance().reset();
             OKW_Memorize_Sngltn myOKW_Memorize= OKW_Memorize_Sngltn.getInstance();
 
             try

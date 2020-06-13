@@ -39,13 +39,12 @@
 
 package okw;
 
-import static org.junit.Assert.*;
-
-import org.junit.BeforeClass;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
 import okw.log.*;
 
+@Tag("AllCoreHelperTests")
 public class OKW_Helper_StringIsNullOrEmpty
 {
 
@@ -59,7 +58,7 @@ public class OKW_Helper_StringIsNullOrEmpty
      */
     public static Logger_Sngltn Log;
 
-    @BeforeClass
+    @BeforeAll
     public static void myTestFixtureSetUp()
     {
         Log = Logger_Sngltn.getInstance();

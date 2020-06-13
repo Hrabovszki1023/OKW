@@ -39,58 +39,23 @@
 
 package okw;
 
+import org.junit.jupiter.api.*;
 
-import java.util.Arrays;
-import java.util.Collection;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.*;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import okw.log.*;
 
-@RunWith(Parameterized.class)
+@Tag("AllCoreHelperTests")
 public class OKW_Helper_MatchStrIgnoreCaseTest
     {
-
-    private Boolean ExpectedValue;
-    
-    private String InputValue_1;
-    private String InputValue_2;
     
     /// \copydoc CurrentObject::Log()
     public static Logger_Sngltn Log;
 
-    @Parameters( name = "{index}: {0} = MatchStrIgnoreCase[\"{1}\", \"{2}\"] ")
-    public static Collection<Object[]> data() {
-        return Arrays.asList(new Object[][] {     
-        		{ true, "Fux, Hase*",   "Fux, Hase, Bär"},
-        		{ true, "Fux*Bär",      "Fux, Hase, Bär"},
-        		{ true, "Fux*Hase*Bär", "Fux, Hase, Bär"},
-        		{ true, "Fux*Hase*Bär", "Fux, hase, bär"},
-        		{ true, "Fux*Bär",      "Fux, hase, bär"},
-        		{ true, "Fux, hase*",   "Fux, Hase, Bär"},
-        		{ true, "Hase",         "hase"},
-        		{ true, "*Hase, Bär",   "Fux, Hase, Bär"},
-        		{ true, "*Hase*",       "Fux, Hase, Bär"},
-        		{ true, "*Hase*",       "Fux, hASE, bär"},
-        		{ true, "*Hase, bär",   "Fux, Hase, Bär"}
-
-           });
-    }
     
-    public OKW_Helper_MatchStrIgnoreCaseTest(Boolean ExpectedValue, String InputValue_1, String InputValue_2) {
-    	
-    	   this.ExpectedValue = ExpectedValue;
-    	    
-    	   this.InputValue_1 = InputValue_1;
-    	   this.InputValue_2 = InputValue_2;
-    	   }
-
-    
-		//@BeforeClass
+		//@BeforeAll
         public static void myTestFixtureSetUp()
         {
 			Log = Logger_Sngltn.getInstance();
@@ -101,8 +66,21 @@ public class OKW_Helper_MatchStrIgnoreCaseTest
             Log.setDebugMode(false);
         }
 
-        @Test
-        public void tcMatchStr()
+        @ParameterizedTest
+        @CsvSource( value = {     
+                        " true, 'Fux, Hase*',   'Fux, Hase, Bär' ",
+                        " true, 'Fux*Bär',      'Fux, Hase, Bär' ",
+                        " true, 'Fux*Hase*Bär', 'Fux, Hase, Bär' ",
+                        " true, 'Fux*Hase*Bär', 'Fux, hase, bär' ",
+                        " true, 'Fux*Bär',      'Fux, hase, bär' ",
+                        " true, 'Fux, hase*',   'Fux, Hase, Bär' ",
+                        " true, 'Hase',         'hase' ",
+                        " true, '*Hase, Bär',   'Fux, Hase, Bär' ",
+                        " true, '*Hase*',       'Fux, Hase, Bär' ",
+                        " true, '*Hase*',       'Fux, hASE, bär' ",
+                        " true, '*Hase, bär',   'Fux, Hase, Bär' "
+        })
+        public void tcMatchStr( Boolean ExpectedValue, String InputValue_1, String InputValue_2 )
         {
             Boolean actual = false;
             Boolean expected = ExpectedValue;

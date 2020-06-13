@@ -39,26 +39,29 @@
 
 package okw.core;
 
-import static org.junit.Assert.*;
 import okw.OKW_TestClipboard;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
-import org.junit.*;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Tag("AllCoreTests")
 public class EN_Keywords_IGNORE_Test
 {
 
     private static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
     private static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
-    @Rule
-    public TestName                  name        = new TestName();
+    public String TestName;
 
-    @BeforeClass
+    @BeforeEach
+    void init(TestInfo testInfo)
+    {
+        TestName = testInfo.getTestMethod().get().getName();
+    }    
+   
+    @BeforeAll
     public static void setUpBeforeClass() throws Exception
     {
         // Reset des Loggers: Alle Geladenen Instanzen löschen
@@ -68,19 +71,19 @@ public class EN_Keywords_IGNORE_Test
         myLogger.setDebugMode( false );
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft "IGNORIEREN" für das Schlüsslewort MemorizeCaption(strng,string)
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  Prüft "IGNORIEREN" für das Schlüsslewort MemorizeCaption(strng,string)
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+    @Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeCaption_IGNORE() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Löschen des Clipboards
         myClipBoard.Clear();
@@ -88,21 +91,24 @@ public class EN_Keywords_IGNORE_Test
         EN.SelectWindow( "Rechner" );
         EN.MemorizeCaption( "All_MethodsObj", "${IGNORE}" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft "IGNORIEREN" als string.empty.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  Prüft "IGNORIEREN" als string.empty.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+	@Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeCaption_IGNORE_StringEmpty() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Löschen des Clipboards
         myClipBoard.Clear();
@@ -110,186 +116,222 @@ public class EN_Keywords_IGNORE_Test
         EN.SelectWindow( "Rechner" );
         EN.MemorizeCaption( "All_MethodsObj", "" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft "IGNORIEREN" für das Schlüsslewort MemorizeExists(strng,string)
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  Prüft "IGNORIEREN" für das Schlüsslewort MemorizeExists(strng,string)
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+	@Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeExists_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizeExists( "All_MethodsObj", "${IGNORE}" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft "IGNORIEREN" als string.empty.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  Prüft "IGNORIEREN" als string.empty.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+	@Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeExists_IGNORE_StringEmpty() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizeExists( "All_MethodsObj", "" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+	@Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeHasFocus_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizeHasFocus( "All_MethodsObj", "${IGNORE}" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+	@Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeHasFocus_IGNORE_StringEmpty() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
 
         EN.MemorizeHasFocus( "All_MethodsObj", "" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2014.01.04
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2014.01.04
+     */
+	@Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeIsActive_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizeIsActive( "All_MethodsObj", "${IGNORE}" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2014.01.04
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2014.01.04
+     */
+	@Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeIsActive_IGNORE_StringEmpty() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
 
         EN.MemorizeIsActive( "All_MethodsObj", "" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+	@Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeLabel_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
 
         EN.MemorizeLabel( "All_MethodsObj", "${IGNORE}" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+    @Test //(expected=OKWNotAllowedValueException.class)
     public void tcMemorizeLabel_IGNORE_StringEmpty() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizeLabel( "All_MethodsObj", "" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
-    /* \~german
+    /** \~german
      * \~english
      * \~
      * \author Zoltan Hrabovszki
      * \date 2018-10-04
      */
-    @Test (expected=OKWNotAllowedValueException.class)
+    @Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizePlaceholde_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.MemorizePlaceholder( "All_MethodsObj", "${IGNORE}" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     /** \~german
@@ -300,16 +342,20 @@ public class EN_Keywords_IGNORE_Test
      * \author Zoltan Hrabovszki
      * \date 2018-10-04
      */
-    @Test (expected=OKWNotAllowedValueException.class)
+    @Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizePlaceholder_IGNORE_StringEmpty() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizePlaceholder( "All_MethodsObj", "" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     /** \~german
@@ -320,16 +366,20 @@ public class EN_Keywords_IGNORE_Test
      * \author Zoltan Hrabovszki
      * \date 2018-10-04
      */
-    @Test (expected=OKWNotAllowedValueException.class)
+    @Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeSelectedValue_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizeSelectedValue( "All_MethodsObj", "${IGNORE}" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     /** \~german
@@ -338,150 +388,176 @@ public class EN_Keywords_IGNORE_Test
      *  \author Zoltan Hrabovszki
      * \date 2013.12.26
      */
-    @Test (expected=OKWNotAllowedValueException.class)
+    @Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeSelectedValue_IGNORE_StringEmpty() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizeSelectedValue( "All_MethodsObj", "" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
+    @Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeTablecellValue_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizeTablecellValue( "All_MethodsObj", "Col", "Row", "${IGNORE}" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
+    @Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeTablecellValue_IGNORE_StringEmpty() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizeTablecellValue( "All_MethodsObj", "Col", "Row", "" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
+    @Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeTooltip_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizeTooltip( "All_MethodsObj", "${IGNORE}" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
+    @Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeTooltip_IGNORE_StringEmpty() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizeTooltip( "All_MethodsObj", "" );
         
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
+    @Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeValue_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizeValue( "All_MethodsObj", "${IGNORE}" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test (expected=OKWNotAllowedValueException.class)
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
+    @Test // (expected=OKWNotAllowedValueException.class)
     public void tcMemorizeValue_IGNORE_StringEmpty() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
         EN.MemorizeValue( "All_MethodsObj", "" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcSelectMenu_Value_MV_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -503,18 +579,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcSelectMenu_Value_MV_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -536,18 +612,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcSelectMenu_Value_SV_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -569,18 +645,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcSelectMenu_Value_SV_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -602,19 +678,19 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft den Methodenaufruf Select mit einem einzelnen Wert.
-    /// Prüft Ziel es darf nur ein Wert im List of string übergabe Parameter enthalten sein.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  Prüft den Methodenaufruf Select mit einem einzelnen Wert.
+     *  Prüft Ziel es darf nur ein Wert im List of string übergabe Parameter enthalten sein.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcSelect_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -636,19 +712,19 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft den Methodenaufruf Select mit einem einzelnen Wert.
-    /// Prüft Ziel es darf nur ein Wert im List of string übergabe Parameter enthalten sein.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  Prüft den Methodenaufruf Select mit einem einzelnen Wert.
+     *  Prüft Ziel es darf nur ein Wert im List of string übergabe Parameter enthalten sein.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcSelect_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -670,18 +746,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcSequence_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -702,18 +778,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcSequence_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -734,18 +810,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcSetValue_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
@@ -757,19 +833,19 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcSetValue_IGNORE_EmptyString() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
@@ -781,18 +857,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Typekey Übertragen wird.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Typekey Übertragen wird.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcTypeKeyTablecell_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -806,18 +882,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Typekey Übertragen wird.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Typekey Übertragen wird.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcTypeKeyTablecell_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -831,18 +907,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Typekey Übertragen wird.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Typekey Übertragen wird.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcTypeKey_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -856,18 +932,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Typekey Übertragen wird.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an Typekey Übertragen wird.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+         */
     @Test
     public void tcTypeKey_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -883,7 +959,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -894,7 +969,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyCaption_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -921,7 +996,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -932,7 +1006,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyCaption_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -959,7 +1033,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -970,7 +1043,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyCaptionREGX_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -997,7 +1070,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -1008,7 +1080,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyCaptionREGX_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1035,7 +1107,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -1046,7 +1117,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyCaptionWCM_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1073,7 +1144,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -1084,7 +1154,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyCaptionWCM_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1123,7 +1193,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyLabel_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1162,7 +1232,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyLabel_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1189,7 +1259,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -1200,7 +1269,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyLabelREGX_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1227,7 +1296,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -1238,7 +1306,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyLabelREGX_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1265,7 +1333,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -1276,7 +1343,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyLabelWCM_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1313,7 +1380,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyLabelWCM_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1352,7 +1419,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyMaxLength_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1391,7 +1458,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyMaxLength_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1428,7 +1495,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyPlaceholder_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1465,7 +1532,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyPlaceholderREGX_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1502,7 +1569,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyPlaceholderREGX_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1539,7 +1606,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyPlaceholderWCM_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1576,7 +1643,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyPlaceholderWCM_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1614,7 +1681,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyExists_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1651,7 +1718,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyExists_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1675,18 +1742,17 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
     @Test
     public void tcVerifyHasFocus_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1710,18 +1776,17 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
     @Test
     public void tcVerifyHasFocus_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1745,18 +1810,17 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
     @Test
     public void tcVerifyIsActive_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -1778,18 +1842,17 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
     @Test
     public void tcVerifyIsActive_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -1821,7 +1884,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifySelectedValue_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1838,18 +1901,17 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
     @Test
     public void tcVerifySelectedValue_IGNORE_EMptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1876,7 +1938,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifySelectedValueREGX_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1903,7 +1965,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifySelectedValueREGX_IGNORE_EMptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1930,7 +1992,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifySelectedValueWCM_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1957,7 +2019,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifySelectedValueWCM_IGNORE_EMptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1974,17 +2036,16 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
     @Test
     public void tcVerifyTablecellValue_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2001,17 +2062,16 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
     @Test
     public void tcVerifyTablecellValueREGX_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2028,17 +2088,16 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
     @Test
     public void tcVerifyTablecellValueWCM_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2055,17 +2114,16 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
     @Test
     public void tcVerifyTablecellValue_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2082,17 +2140,16 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
     @Test
     public void tcVerifyTablecellValueREGX_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2109,17 +2166,16 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
+    /** \~german
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
     @Test
     public void tcVerifyTablecellValueWCM_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2138,7 +2194,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -2149,7 +2204,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyTooltip_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2176,7 +2231,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -2187,7 +2241,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyTooltipREGX_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2214,7 +2268,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -2225,7 +2278,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyTooltipREGX_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2252,7 +2305,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -2263,7 +2315,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyTooltipWCM_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2290,7 +2342,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -2301,7 +2352,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyTooltipWCM_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2328,7 +2379,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -2339,7 +2389,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyTooltip_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2366,7 +2416,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -2377,7 +2426,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyValue_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2404,7 +2453,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -2415,7 +2463,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyValueREGX_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2442,7 +2490,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -2453,7 +2500,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyValueREGX_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2480,7 +2527,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -2491,7 +2537,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyValueWCM_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2518,7 +2564,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -2529,7 +2574,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyValueWCM_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2556,7 +2601,6 @@ public class EN_Keywords_IGNORE_Test
 
     /**
      *  \~german
-     *  \brief
      *  
      *  
      *  \~english
@@ -2567,7 +2611,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyValue_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2602,7 +2646,7 @@ public class EN_Keywords_IGNORE_Test
 	 */
 	@Test
 	public void tcVerifyBadge_IGNORE_EmptyString() throws Exception {
-		EN.BeginTest(name.getMethodName());
+		EN.BeginTest(TestName);
 
 		// Testscript in Schlüsselwort-Notation
 		EN.SelectWindow("Rechner");
@@ -2638,7 +2682,7 @@ public class EN_Keywords_IGNORE_Test
 	 */
 	@Test
 	public void tcVerifyBadge_IGNORE() throws Exception {
-		EN.BeginTest(name.getMethodName());
+		EN.BeginTest(TestName);
 
 		// Testscript in Schlüsselwort-Notation
 		EN.SelectWindow("Rechner");
@@ -2671,7 +2715,7 @@ public class EN_Keywords_IGNORE_Test
 	 */
 	@Test
 	public void tcVerifyBadgeREGX_IGNORE() throws Exception {
-		EN.BeginTest(name.getMethodName());
+		EN.BeginTest(TestName);
 
 		// Testscript in Schlüsselwort-Notation
 		EN.SelectWindow("Rechner");
@@ -2704,7 +2748,7 @@ public class EN_Keywords_IGNORE_Test
 	 */
 	@Test
 	public void tcVerifyBadgeREGX_IGNORE_EmptyString() throws Exception {
-		EN.BeginTest(name.getMethodName());
+		EN.BeginTest(TestName);
 
 		// Testscript in Schlüsselwort-Notation
 		EN.SelectWindow("Rechner");
@@ -2737,7 +2781,7 @@ public class EN_Keywords_IGNORE_Test
 	 */
 	@Test
 	public void tcVerifyBadgeWCM_IGNORE() throws Exception {
-		EN.BeginTest(name.getMethodName());
+		EN.BeginTest(TestName);
 
 		// Testscript in Schlüsselwort-Notation
 		EN.SelectWindow("Rechner");
@@ -2770,7 +2814,7 @@ public class EN_Keywords_IGNORE_Test
 	 */
 	@Test
 	public void tcVerifyBadgeWCM_IGNORE_EmptyString() throws Exception {
-		EN.BeginTest(name.getMethodName());
+		EN.BeginTest(TestName);
 
 		// Testscript in Schlüsselwort-Notation
 		EN.SelectWindow("Rechner");
@@ -2809,7 +2853,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyMinLength_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2848,7 +2892,7 @@ public class EN_Keywords_IGNORE_Test
     @Test
     public void tcVerifyMinLength_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2884,7 +2928,7 @@ public class EN_Keywords_IGNORE_Test
 	 */
 	@Test
 	public void tcVerifyErrorMSG_IGNORE_EmptyString() throws Exception {
-		EN.BeginTest(name.getMethodName());
+		EN.BeginTest(TestName);
 
 		// Testscript in Schlüsselwort-Notation
 		EN.SelectWindow("Rechner");
@@ -2920,7 +2964,7 @@ public class EN_Keywords_IGNORE_Test
 	 */
 	@Test
 	public void tcVerifyErrorMSG_IGNORE() throws Exception {
-		EN.BeginTest(name.getMethodName());
+		EN.BeginTest(TestName);
 
 		// Testscript in Schlüsselwort-Notation
 		EN.SelectWindow("Rechner");
@@ -2956,7 +3000,7 @@ public class EN_Keywords_IGNORE_Test
 	 */
 	@Test
 	public void tcVerifyErrorMSG_REGX_IGNORE() throws Exception {
-		EN.BeginTest(name.getMethodName());
+		EN.BeginTest(TestName);
 
 		// Testscript in Schlüsselwort-Notation
 		EN.SelectWindow("Rechner");
@@ -2989,7 +3033,7 @@ public class EN_Keywords_IGNORE_Test
 	 */
 	@Test
 	public void tcVerifyErrorMSG_REGX_IGNORE_EmptyString() throws Exception {
-		EN.BeginTest(name.getMethodName());
+		EN.BeginTest(TestName);
 
 		// Testscript in Schlüsselwort-Notation
 		EN.SelectWindow("Rechner");
@@ -3025,7 +3069,7 @@ public class EN_Keywords_IGNORE_Test
 	 */
 	@Test
 	public void tcVerifyErrorMSG_WCM_IGNORE() throws Exception {
-		EN.BeginTest(name.getMethodName());
+		EN.BeginTest(TestName);
 
 		// Testscript in Schlüsselwort-Notation
 		EN.SelectWindow("Rechner");
@@ -3058,7 +3102,7 @@ public class EN_Keywords_IGNORE_Test
 	 */
 	@Test
 	public void tcVerifyErrorMSG_WCM_IGNORE_EmptyString() throws Exception {
-		EN.BeginTest(name.getMethodName());
+		EN.BeginTest(TestName);
 
 		// Testscript in Schlüsselwort-Notation
 		EN.SelectWindow("Rechner");
@@ -3083,18 +3127,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
 	}
 
-	/// \~german
-    /// \brief
-    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyFileExists Übertragen wird.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test
+	/** \~german
+     *  Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyFileExists Übertragen wird.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+	@Test
     public void tcVerifyFileExists_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -3108,18 +3152,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
    }
 
-    /// \~german
-    /// \brief
-    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyFileExists Übertragen wird.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test
+    /** \~german
+     *  Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyFileExists Übertragen wird.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+	@Test
     public void tcVerifyFileExists_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -3133,18 +3177,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
     
-  /// \~german
-    /// \brief
-    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an TypeKeyWindow Übertragen wird.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test
+  /** \~german
+     *  Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an TypeKeyWindow Übertragen wird.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+	@Test
     public void tcTypeKeyWindow_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -3158,18 +3202,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an TypeKeyWindow Übertragen wird.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test
+    /** \~german
+     *  Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an TypeKeyWindow Übertragen wird.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+	@Test
     public void tcTypeKeyWindow_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -3184,18 +3228,18 @@ public class EN_Keywords_IGNORE_Test
     }
     
     
-  /// \~german
-    /// \brief
-    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyDirectoryExists Übertragen wird.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test
+  /** \~german
+     *  Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyDirectoryExists Übertragen wird.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+	@Test
     public void tcVerifyDirectoryExists_IGNORE() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -3209,18 +3253,18 @@ public class EN_Keywords_IGNORE_Test
         EN.EndTest();
     }
 
-    /// \~german
-    /// \brief
-    /// Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyDirectoryExists Übertragen wird.
-    /// 
-    /// \~english
-    /// \~
-    /// \author Zoltan Hrabovszki
-    /// \date 2013.12.26
-    @Test
+    /** \~german
+     *  Prüft, ob ein einzelner Wert, oder ein einzelne Zeile an VerifyDirectoryExists Übertragen wird.
+     *  
+     *  \~english
+     *  \~
+     *  \author Zoltan Hrabovszki
+     *  \date 2013.12.26
+     */
+	@Test
     public void tcVerifyDirectoryExists_IGNORE_EmptyString() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 

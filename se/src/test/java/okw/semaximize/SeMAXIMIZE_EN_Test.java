@@ -36,15 +36,14 @@
 
 package okw.semaximize;
 
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWVerifyingFailsException;
 
-import org.junit.*;
-import static org.junit.Assert.*;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
 * \~
@@ -60,18 +59,13 @@ import org.junit.runners.MethodSorters;
 *  @author Zoltan Hrabovszki
 *  @date 2017-07-23
 */
-@Ignore
-@FixMethodOrder( MethodSorters.NAME_ASCENDING )
-public class SeMAXIMIZE_EN_Test {
+@Disabled
+public class SeMAXIMIZE_EN_Test extends OKWTestBase {
 
   protected OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
 
   protected static String ApplicationName;
 
-  @Rule
-  public TestName         name  = new TestName();
-
-  
   /**
    * \~german
    * Testet das Schlüsselwort LogExists( FN ) eines SeMAXIMIZE Prüfen.
@@ -83,7 +77,7 @@ public class SeMAXIMIZE_EN_Test {
   @Test
   public void tcLogExists() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.LogExists( "MAXIMIZE" );
   
@@ -103,7 +97,7 @@ public class SeMAXIMIZE_EN_Test {
   //@Test
   public void tcClickOn() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.ClickOn( "MAXIMIZE" );
@@ -123,16 +117,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected = OKWFrameObjectMethodNotImplemented.class )
   public void tcLogHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.LogHasFocus( "MAXIMIZE" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
   }
 
   /** 
@@ -146,7 +144,7 @@ public class SeMAXIMIZE_EN_Test {
   @Test
   public void tcLogIsActive() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.LogIsActive( "MAXIMIZE" );
@@ -165,17 +163,21 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected = OKWFrameObjectMethodNotImplemented.class )
   public void tcLogLabel_OKWFrameObjectMethodNotImplemented() throws Exception
   {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
 
     EN.LogLabel( "MAXIMIZE" );
     
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
 
   }
 
@@ -189,16 +191,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+  @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcSetValue_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.SetValue( "MAXIMIZE", "Hrabovszki" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
 
   }
 
@@ -214,16 +220,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+  @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcTypeKey_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "MAXIMIZE", "Hrabovszki" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
 
   }
 
@@ -238,15 +248,19 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
- @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+ @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcLogToolTip_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.LogTooltip( "MAXIMIZE" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
 
   }
 
@@ -261,16 +275,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
- @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+ @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcLogValue_OKWFrameObjectMethodNotImplemented() throws Exception
   {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.LogValue( "MAXIMIZE" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
 
   }
 
@@ -286,7 +304,7 @@ public class SeMAXIMIZE_EN_Test {
   public void tcMemorizeExists_OKWFrameObjectMethodNotImplemented() throws Exception
   {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.MemorizeExists( "MAXIMIZE", "SeTextField_MemorizeExists_1" );
 
@@ -306,16 +324,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+  @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcMemorizeHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.MemorizeHasFocus( "MAXIMIZE", "SeTextField_MemorizeHasFocus" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
   } 
 
   
@@ -332,7 +354,7 @@ public class SeMAXIMIZE_EN_Test {
   @Test
   public void tcMemorizeIsActive() throws Exception {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.MemorizeIsActive( "MAXIMIZE", "SeMAXIMIZE_MemorizeIsActive" );
 
@@ -353,16 +375,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-   @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+   @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
    public void tcMemorizeLabel_OKWFrameObjectMethodNotImplemented() throws Exception
    {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.MemorizeLabel( "MAXIMIZE", "SeTextField_MemorizeLabel_1" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
 
    }
 
@@ -377,15 +403,19 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-   @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+   @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
    public void tcMemorizeToolTip_OKWFrameObjectMethodNotImplemented() throws Exception
    {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.MemorizeTooltip( "MAXIMIZE", "SeTextField_MemorizeTooltip" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
 
   }
 
@@ -400,16 +430,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcMemorizeValue_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.MemorizeValue( "MAXIMIZE", "SeTextField_LogValue_2" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
 
   }
 
@@ -424,16 +458,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyCaption_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyCaption( "MAXIMIZE", "Abc" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
   }
 
   /**
@@ -446,16 +484,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyCaptionWCM_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyCaptionWCM( "MAXIMIZE", "${EMPTY}" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
   }
 
 
@@ -469,16 +511,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyCaptionREGX_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyCaptionREGX( "MAXIMIZE", "${EMPTY}" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
 
   }
 
@@ -495,17 +541,21 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // (expected = OKWVerifyingFailsException.class )
   public void tcVerifyExists_ExistsYesExpectedNo_OKWVerifyingFailsException()  throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       
       EN.VerifyExists( "MAXIMIZE", "NO" );
       
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
   }
 
   /**
@@ -522,12 +572,13 @@ public class SeMAXIMIZE_EN_Test {
   @Test
   public void tcVerifyExists_ExistsYesExpectedYes() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyExists( "MAXIMIZE", "YES" );
 
       EN.StopApp( ApplicationName );
+
       EN.EndTest();
   }
 
@@ -542,17 +593,21 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+  @Test // (expected= OKWFrameObjectMethodNotImplemented.class)
   public void tcVerifyHasFocus() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyHasFocus( "MAXIMIZE", "NO" );
       
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
   }
   
 
@@ -567,7 +622,7 @@ public class SeMAXIMIZE_EN_Test {
   @Test
   public void tcVerifyIsActive() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyIsActive( "MAXIMIZE", "YES" );
@@ -587,16 +642,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyLabel() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyLabel( "MAXIMIZE", "Name:" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
   }
 
   
@@ -610,16 +669,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyLabelWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyLabelWCM( "MAXIMIZE", "Name?" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
   }
 
   
@@ -633,16 +696,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyLabelREGX() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyLabelREGX( "MAXIMIZE", "Name\\W" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
   }
 
 
@@ -656,16 +723,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyTooltip() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyTooltip( "MAXIMIZE", "Den Namen eingeben" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
   }
 
 
@@ -679,16 +750,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyTooltipWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
   
       EN.VerifyTooltipWCM( "MAXIMIZE", "??? Namen eingeben" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
  }
 
 
@@ -702,16 +777,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyTooltipREGX() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
   
       EN.VerifyTooltipREGX( "MAXIMIZE", "\\wen Namen eingeben" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
   }
 
 
@@ -725,16 +804,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyValue( "MAXIMIZE", "Zoltan" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
 }
   
   
@@ -748,16 +831,20 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyValueWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyValueWCM( "MAXIMIZE", "Abc" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
   }
   
    
@@ -771,15 +858,19 @@ public class SeMAXIMIZE_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyValueREGX() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyValueREGX( "MAXIMIZE", ".oltan" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
   }
 }

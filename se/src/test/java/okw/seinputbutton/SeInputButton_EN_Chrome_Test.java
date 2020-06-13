@@ -3,8 +3,8 @@ package okw.seinputbutton;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.*;
+
 
 /**
 * \~
@@ -12,11 +12,12 @@ import org.junit.BeforeClass;
 * 
 * @author zoltan
 */
+@Tag("SeInputButton_EN_Chrome_Test")
 public class SeInputButton_EN_Chrome_Test extends SeInputButton_EN_Test
 {
 	protected static Log2HTML myLog2HTML = null;
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception
 	{
 		ApplicationName = "Chrome";
@@ -45,7 +46,7 @@ public class SeInputButton_EN_Chrome_Test extends SeInputButton_EN_Test
     }
     */
     
-    @AfterClass
+    @AfterAll
     public static void tearDownAfterClass() throws Exception
     {
         myLog2HTML.Result2HTML("target/SeInputButton_Chrome_Test.html");

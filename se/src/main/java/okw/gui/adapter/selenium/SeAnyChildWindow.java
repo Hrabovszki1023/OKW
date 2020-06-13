@@ -48,8 +48,6 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
 import okw.log.Logger_Sngltn;
 import okw.LogMessenger;
 import okw.OKW_Const_Sngltn;
-import okw.parser.*;
-
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;

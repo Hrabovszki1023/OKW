@@ -39,29 +39,30 @@
 
 package okw.core;
 
-import static org.junit.Assert.*;
+
 
 import okw.OKW_Memorize_Sngltn;
 import okw.OKW_TestClipboard;
 import okw.log.Logger_Sngltn;
 
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-@FixMethodOrder( MethodSorters.NAME_ASCENDING )
+@Tag("AllCoreTests")
 public class EN_Keywords_Test
 {
     static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
     static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
-    @Rule
-    public TestName          name        = new TestName();
+    public String TestName;
 
-    @BeforeClass
+    @BeforeEach
+    void init(TestInfo testInfo)
+    {
+        TestName = testInfo.getTestMethod().get().getName();
+    }
+
+    @BeforeAll
     public static void setUpBeforeClass() throws Exception
     {
 
@@ -77,7 +78,7 @@ public class EN_Keywords_Test
     }
 
     /*
-    @AfterClass
+    @AfterAll
     public static void tearDownAfterClass() throws Exception
     {
         System.out.println( "===========================================================================" );
@@ -99,7 +100,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_ClickOn() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
 
@@ -132,7 +133,7 @@ public class EN_Keywords_Test
     public void tc_DoubleClickOn() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
 
@@ -166,7 +167,7 @@ public class EN_Keywords_Test
     public void tc_LogExists() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
 
@@ -198,7 +199,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_LogHasFocus() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -231,7 +232,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_LogIsActive() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -264,7 +265,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_LogSelected() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -295,7 +296,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_LogTablecellValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -327,7 +328,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_LogTooltip() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -358,7 +359,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_LogPlaceholder() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -390,7 +391,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_LogLabel() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -422,7 +423,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_LogCaption() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -455,7 +456,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_LogValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -488,7 +489,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_MemorizeExists() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -522,7 +523,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_MemorizeHasFocus() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -557,7 +558,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_MemorizeIsActive() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -591,7 +592,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_MemorizeSelectedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -626,7 +627,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_MemorizeTablecellValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -662,7 +663,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_MemorizeTooltip() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -697,7 +698,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_MemorizeCaption() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -732,7 +733,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_MemorizePlaceholder() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -768,7 +769,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_MemorizeLabel() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -801,7 +802,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_MemorizeValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -835,7 +836,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_SelectMenu() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -868,7 +869,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_SelectMenu_Value_MV() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -902,7 +903,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_SelectMenu_Value_SV() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -934,7 +935,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_SelectTablecell() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -969,7 +970,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_SelectWindow() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -994,7 +995,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_SelectChild() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
@@ -1027,7 +1028,7 @@ public class EN_Keywords_Test
     {
         OKW_CurrentObject_Sngltn CO = OKW_CurrentObject_Sngltn.getInstance();
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectContext( "Rechner" );
 
@@ -1048,7 +1049,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_SELECTEDCHILD() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
@@ -1081,7 +1082,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_Select_MultipleValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -1116,7 +1117,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_Select_SingleValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -1148,7 +1149,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_Sequence() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1183,7 +1184,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_SetFocus() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
@@ -1214,7 +1215,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_SetValue_MultipleValues() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
@@ -1246,7 +1247,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_SetValue_SV() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
@@ -1275,7 +1276,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_SetVar() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SetVar( "myKey", "myVal" );
         
@@ -1307,7 +1308,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_SetVar_MV() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SetVar( "myKey1", "myVal1" );
         EN.SetVar( "myKey2", "myVal2" );
@@ -1339,7 +1340,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_StartApp() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.StartApp( "Rechner" );
 
@@ -1362,7 +1363,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_StopApp() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.StopApp( "Rechner" );
 
@@ -1386,7 +1387,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_TypeKeyTablecell_MultipleValues() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -1419,7 +1420,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_TypeKeyTablecell_SingelValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -1453,7 +1454,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_TypeKey_MultipleValues() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -1486,7 +1487,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_TypeKey_SingelValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -1517,7 +1518,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_TypeKeyWindow_MV() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.TypeKeyWindow( "Rechner", "Wert 1${SEP}Wert 2${SEP}Wert 3" );
 
@@ -1544,7 +1545,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_TypeKeyWindowWindow_SV() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.TypeKeyWindow( "Rechner", "Wert" );
 
@@ -1571,7 +1572,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyBadge() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1606,7 +1607,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyBadgeREGX() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1641,7 +1642,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyBadgeWCM() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1674,7 +1675,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyCaption() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1708,7 +1709,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyCaptionREGX() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1742,7 +1743,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyCaptionWCM() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1777,7 +1778,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyLabel() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1812,7 +1813,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyLabelREGX() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1848,7 +1849,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyLabelWCM() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1885,7 +1886,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyMaxLength() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1921,7 +1922,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyPlaceholder() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1956,7 +1957,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyPlaceholderREGX() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -1991,7 +1992,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyPlaceholderWCM() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2029,7 +2030,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyExists() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2063,7 +2064,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyHasFocus() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2110,7 +2111,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyIsActive() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -2154,7 +2155,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifySelectedValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2198,7 +2199,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifySelectedValueWCM() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2242,7 +2243,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifySelectedValueREGX() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2286,7 +2287,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyTablecellValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -2337,7 +2338,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyTablecellValueREGX() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -2388,7 +2389,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyTablecellValueWCM() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
 
@@ -2440,7 +2441,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyTooltip() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2477,7 +2478,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyTooltipREGX() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2514,7 +2515,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyTooltipWCM() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2551,7 +2552,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyValue() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2588,7 +2589,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyValue_MultipleValues() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2630,7 +2631,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyValueWCM() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2671,7 +2672,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyValueWCM_MultipleValues() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2713,7 +2714,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyValueREGX() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2750,7 +2751,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyValueREGX_MultipleValues() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2791,7 +2792,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyMinLength() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2828,7 +2829,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyErrorMSG() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2865,7 +2866,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyErrorMSG_REGX() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );
@@ -2901,7 +2902,7 @@ public class EN_Keywords_Test
     @Test
     public void tc_VerifyErrorMSG_WCM() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         // Testscript in Schlüsselwort-Notation
         EN.SelectWindow( "Rechner" );

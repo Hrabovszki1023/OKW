@@ -1,19 +1,13 @@
 package okw.selink;
 
-import static org.junit.Assert.*;
-
-import org.junit.FixMethodOrder;
-
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWVerifyingFailsException;
 
-import org.junit.Ignore;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
 * \~
@@ -21,9 +15,8 @@ import org.junit.runners.MethodSorters;
 * 
 * @author zoltan
 */
-@Ignore
-@FixMethodOrder( MethodSorters.NAME_ASCENDING )
-public class SeLink_EN_Test
+@Disabled
+public class SeLink_EN_Test extends OKWTestBase
 {
   String                  cvOKWObject = "Link" + "";
 
@@ -31,14 +24,10 @@ public class SeLink_EN_Test
 
   protected static String ApplicationName;
 
-  @Rule
-  public TestName         name        = new TestName();
-
-  
   @Test
   public void TC_ClickOn() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -55,7 +44,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_LogCaption() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -72,7 +61,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_LogLabel() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -89,7 +78,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_LogValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -110,7 +99,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_LogExists_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -130,7 +119,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_LogHasFocus_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -151,10 +140,10 @@ public class SeLink_EN_Test
  * \~
  * @author Zoltán Hrabovszki
  * @date 2017-04-30
- */  @Test(expected= UnsupportedOperationException.class)
+ */  @Test // ( expected= UnsupportedOperationException.class)
   public void tcLogIsActive_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -164,7 +153,10 @@ public class SeLink_EN_Test
       EN.LogIsActive( "Google" );
 
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      Assertions.assertThrows( UnsupportedOperationException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
   
  /**
@@ -175,10 +167,10 @@ public class SeLink_EN_Test
   * \~
   * @author Zoltán Hrabovszki
   * @date 2017-04-30
-  */  @Test(expected= UnsupportedOperationException.class)
+  */  @Test // ( expected= UnsupportedOperationException.class)
    public void tcMemorizeIsActive_en() throws Exception
    {
-       EN.BeginTest( name.getMethodName() );
+       EN.BeginTest( TestName );
 
        EN.StartApp( ApplicationName );
        EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -188,7 +180,10 @@ public class SeLink_EN_Test
        EN.MemorizeIsActive( "Google", "Schlüssel" );
 
        EN.StopApp( ApplicationName );
-       EN.EndTest();
+       Assertions.assertThrows( UnsupportedOperationException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
   
   /**
@@ -199,10 +194,10 @@ public class SeLink_EN_Test
    * \~
    * @author Zoltán Hrabovszki
    * @date 2017-04-30
-   */  @Test(expected= UnsupportedOperationException.class)
+   */  @Test // ( expected= UnsupportedOperationException.class)
     public void tcVerifyIsActive_UnsupportedOperationException() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -212,7 +207,10 @@ public class SeLink_EN_Test
         EN.VerifyIsActive( "Google", "YES" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        Assertions.assertThrows( UnsupportedOperationException.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
  
@@ -222,7 +220,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_LogToolTip_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -240,7 +238,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_MemorizeCaption() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -260,7 +258,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_MemorizeLabel() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -280,7 +278,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_MemorizeValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -304,7 +302,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_MemorizeExists_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -329,7 +327,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_MemorizeHasFocus_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -352,7 +350,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_MemorizeToolTip_en() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -372,7 +370,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_SetFocus_VerifyHasFocus() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -396,7 +394,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_VerifyCaption() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -413,7 +411,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_VerifyCaptionWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -430,7 +428,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_VerifyCaptionREGX() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -447,7 +445,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_VerifyLabel() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -464,7 +462,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_VerifyLabelWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -481,7 +479,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_VerifyLabelREGX() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -498,7 +496,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_VerifyValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -515,7 +513,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_VerifyValueWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -532,7 +530,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_VerifyValueREGX() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -555,7 +553,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_VerifyExists_NO() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -575,10 +573,10 @@ public class SeLink_EN_Test
   /// ist.
   /// -> Exception muss ausgelöst werden.
   ///
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void TC_VerifyExists_NO_YesObject() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -587,7 +585,10 @@ public class SeLink_EN_Test
     EN.VerifyExists( "Google", "NO" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 
   /// \brief
@@ -598,7 +599,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_VerifyExists_YES() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -617,11 +618,11 @@ public class SeLink_EN_Test
   /// Objekt ist _nicht_ vorhanden. Erwartet wird, dass das Objekt _vorhanden_
   /// ist.
   ///
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void TC_VerifyExists_YES_NoObject() throws Exception
   {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -630,13 +631,16 @@ public class SeLink_EN_Test
     EN.VerifyExists( "LinkNotExists", "YES" );
 
     EN.StopApp( ApplicationName );
-    EN.EndTest();
+    Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
   }
 
   @Test
   public void TC_VerifyToolTip() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -652,7 +656,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_VerifyToolTipWCM() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -668,7 +672,7 @@ public class SeLink_EN_Test
   @Test
   public void TC_VerifyToolTipREGX() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -689,10 +693,10 @@ public class SeLink_EN_Test
    * \~
    * @author Zoltán Hrabovszki
    * @date 2017-04-30
-   */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+   */  @Test // ( expected= OKWFrameObjectMethodNotImplemented.class)
     public void tcDoubleClickOn_en() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -702,7 +706,10 @@ public class SeLink_EN_Test
         EN.DoubleClickOn( "Google");
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
     }
    
     
@@ -714,10 +721,10 @@ public class SeLink_EN_Test
      * \~
      * @author Zoltán Hrabovszki
      * @date 2017-04-30
-     */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+     */  @Test // ( expected= OKWFrameObjectMethodNotImplemented.class)
       public void tcSetValue_OKWFrameObjectMethodNotImplemented() throws Exception
       {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
 
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -727,7 +734,10 @@ public class SeLink_EN_Test
           EN.SetValue( "Google", "SetValue");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
       }
      
      /**
@@ -738,10 +748,10 @@ public class SeLink_EN_Test
       * \~
       * @author Zoltán Hrabovszki
       * @date 2017-04-30
-      */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+      */  @Test // ( expected= OKWFrameObjectMethodNotImplemented.class)
        public void tcSelect_OKWFrameObjectMethodNotImplemented() throws Exception
        {
-           EN.BeginTest( name.getMethodName() );
+           EN.BeginTest( TestName );
 
            EN.StartApp( ApplicationName );
            EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -751,7 +761,10 @@ public class SeLink_EN_Test
            EN.Select( "Google", "SetValue");
 
            EN.StopApp( ApplicationName );
-           EN.EndTest();
+           Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
        }
 
       /**
@@ -763,10 +776,10 @@ public class SeLink_EN_Test
        * @author Zoltán Hrabovszki
        * @date 2017-04-30
        */  
-        @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+        @Test // ( expected= OKWFrameObjectMethodNotImplemented.class)
         public void tcSelectMenu2_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
 
             EN.StartApp( ApplicationName );
             EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -776,7 +789,10 @@ public class SeLink_EN_Test
             EN.SelectMenu( "Google");
             
             EN.StopApp( ApplicationName );
+            Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
             EN.EndTest();
+        });
         }
       
       /**
@@ -787,10 +803,10 @@ public class SeLink_EN_Test
        * \~
        * @author Zoltán Hrabovszki
        * @date 2017-04-30
-       */  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+       */  @Test // ( expected= OKWFrameObjectMethodNotImplemented.class)
         public void tcSelectMenu_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
 
             EN.StartApp( ApplicationName );
             EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -800,7 +816,10 @@ public class SeLink_EN_Test
             EN.SelectMenu( "Google", "SetValue");
 
             EN.StopApp( ApplicationName );
+            Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
             EN.EndTest();
+        });
         }
        
        
@@ -812,10 +831,10 @@ public class SeLink_EN_Test
         * \~
         * @author Zoltán Hrabovszki
         * @date 2017-04-30
-        */  @Test(expected= UnsupportedOperationException.class)
+        */  @Test // ( expected= UnsupportedOperationException.class)
          public void tcTypeKey_UnsupportedOperationException() throws Exception
          {
-             EN.BeginTest( name.getMethodName() );
+             EN.BeginTest( TestName );
 
              EN.StartApp( ApplicationName );
              EN.TypeKey( "URL", "http://test.openkeyword.de/Link/Link.htm" );
@@ -825,7 +844,10 @@ public class SeLink_EN_Test
              EN.TypeKey( "Google", "SetValue");
 
              EN.StopApp( ApplicationName );
-             EN.EndTest();
+             Assertions.assertThrows( UnsupportedOperationException.class, () ->
+        {
+            EN.EndTest();
+        });
          }
 
 }

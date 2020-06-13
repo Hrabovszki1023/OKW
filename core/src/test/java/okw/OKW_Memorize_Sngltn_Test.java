@@ -1,18 +1,15 @@
 package okw;
 
-import static org.junit.Assert.*;
 
 import javax.xml.xpath.XPathExpressionException;
 
 import okw.exceptions.*;
 import okw.log.Logger_Sngltn;
 
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
-@FixMethodOrder( MethodSorters.NAME_ASCENDING )
+@Tag("AllCoreHelperTests")
 public class OKW_Memorize_Sngltn_Test
 {
 
@@ -21,7 +18,7 @@ public class OKW_Memorize_Sngltn_Test
         // / \copydoc CurrentObject::Log()
         private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
-        @BeforeClass
+        @BeforeAll
         public static void mySetUp()
         {
             myOKW_Memorize = OKW_Memorize_Sngltn.getInstance();
@@ -42,8 +39,8 @@ public class OKW_Memorize_Sngltn_Test
         @Test
         public void tc_get_set() throws XPathExpressionException
         {
-            myOKW_Memorize.reset();
             myOKW_Memorize = OKW_Memorize_Sngltn.getInstance();
+            myOKW_Memorize.reset();
             
             myOKW_Memorize.set( "Key 1", "Value 1" );
             String myValue = myOKW_Memorize.get( "Key 1" );
@@ -56,7 +53,7 @@ public class OKW_Memorize_Sngltn_Test
          *  wenn ein nicht vorhandener Internalname verwendet wird.<br/>
          * @throws XPathExpressionException 
          */
-        @Test(expected=OKWMemorizeKeyNotExistsException.class)
+        @Test
         public void tc_get_OKWMemorizeKeyNotExistsException() throws XPathExpressionException
         {
             myOKW_Memorize.reset();
@@ -66,8 +63,10 @@ public class OKW_Memorize_Sngltn_Test
             String myValue = myOKW_Memorize.get( "Key 1" );
             assertEquals( "Value 1", myValue );
             
-            myValue = myOKW_Memorize.get( "Key 2" );
-            
+            Assertions.assertThrows( OKWMemorizeKeyNotExistsException.class, () ->
+            {
+                myOKW_Memorize.get( "Key 2" );
+            });
         }
         
         /**

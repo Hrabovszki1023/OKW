@@ -39,30 +39,21 @@
 
 package okw.core;
 
+import okw.OKWTestBase;
 import okw.OKW_TestClipboard;
-import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
 import okw.log.Logger_Sngltn;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
+@Tag("AllCoreTests_2")
+public class EN_VerifyTooltip_OKWVerifyingFailsException_Test extends OKWTestBase
 {
 
     static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
     static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
-    @Rule
-    public TestName          name        = new TestName();
-
-    @BeforeClass
+    @BeforeAll
     public static void setUpBeforeClass() throws Exception
     {
         Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
@@ -72,11 +63,6 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
         // myLogger.AddLogger(new Log2Console());
 
         myLogger.setDebugMode( false );
-    }
-
-    @AfterClass
-    public static void tearDownAfterClass() throws Exception
-    {
     }
 
     /**
@@ -93,15 +79,20 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
     *  \author Zoltan Hrabovszki
     *  \date 2016.05.07
     */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltip_OKWVerifyingFailsException_SV01() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
+        
+        EN.SetValue( "All_MethodsObj", "The one and only Value" );
         EN.VerifyTooltip( "All_MethodsObj", "Tha one and only Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -118,15 +109,20 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltip_OKWVerifyingFailsException_SV02() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
+        
+        EN.SetValue( "All_MethodsObj", "The one and only Value" );
         EN.VerifyTooltip( "All_MethodsObj", "The one andX only Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -143,15 +139,20 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltip_OKWVerifyingFailsException_SV03() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
+        
+        EN.SetValue( "All_MethodsObj", "The one and only Value" );
         EN.VerifyTooltip( "All_MethodsObj", "The one an only Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -168,15 +169,18 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltip_OKWVerifyingFailsException_MV01() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltip( "AllMethods_MultipleValues", "1. Value${SEP}X. Value${SEP}3. Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -193,15 +197,18 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltip_OKWVerifyingFailsException_MV02() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltip( "AllMethods_MultipleValues", "1. Value${SEP}2. Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -218,15 +225,18 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltip_OKWVerifyingFailsException_MV03() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltip( "AllMethods_MultipleValues", "1. Value${SEP}2. Value${SEP}3. Value${SEP}4. Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -243,16 +253,20 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipWCM_OKWVerifyingFailsException_M01() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
+
+        EN.SetValue( "All_MethodsObj",         "The one and only Value" );
         EN.VerifyTooltipWCM( "All_MethodsObj", "Tha one and only Value" );
-        //  EN.VerifyTooltipWCM( "All_MethodsObj", "Tha one and only Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -269,15 +283,20 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipWCM_OKWVerifyingFailsException_SV01() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
+        
+        EN.SetValue( "All_MethodsObj", "The one and only Value" );
         EN.VerifyTooltipWCM( "All_MethodsObj", "Tha one and only Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -294,15 +313,20 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipWCM_OKWVerifyingFailsException_SV02() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
+        
+        EN.SetValue( "All_MethodsObj", "The one and only Value" );
         EN.VerifyTooltipWCM( "All_MethodsObj", "The oneX and only Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -319,15 +343,20 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipWCM_OKWVerifyingFailsException_SV03() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
+        
+        EN.SetValue( "All_MethodsObj", "The one and only Value" );
         EN.VerifyTooltipWCM( "All_MethodsObj", "The one and only Value${SEP}The one and only Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -344,15 +373,18 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipWCM_OKWVerifyingFailsException_MV01() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltipWCM( "AllMethods_MultipleValues", "?. Value${SEP}X. Value${SEP}?. Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -369,15 +401,18 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipWCM_OKWVerifyingFailsException_MV02() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltipWCM( "AllMethods_MultipleValues", "?. XValue${SEP}?. X Value${SEP}?. XValue" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -394,15 +429,18 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipWCM_OKWVerifyingFailsException_MV03() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltipWCM( "AllMethods_MultipleValues", "?. Value${SEP}?. Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -419,15 +457,18 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipWCM_OKWVerifyingFailsException_MV04() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltipWCM( "AllMethods_MultipleValues", "?. Value${SEP}?. Value${SEP}?. Value${SEP}?. Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -444,15 +485,20 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipREGX_OKWVerifyingFailsException_SV01() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
+        
+        EN.SetValue( "All_MethodsObj", "The one and only Value" );
         EN.VerifyTooltipREGX( "All_MethodsObj", "Tha one and only Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -469,15 +515,20 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipREGX_OKWVerifyingFailsException_SV02() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
+        
+        EN.SetValue( "All_MethodsObj", "The one and only Value" );
         EN.VerifyTooltipREGX( "All_MethodsObj", "The oneX and only Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -494,15 +545,20 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipREGX_OKWVerifyingFailsException_SV03() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
+        
+        EN.SetValue( "All_MethodsObj", "The one and only Value" );
         EN.VerifyTooltipREGX( "All_MethodsObj", "The one and only Value${SEP}The one and only Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -519,15 +575,18 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipREGX_OKWVerifyingFailsException_MV01() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltipREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}X. Value${SEP}.\\. Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -544,15 +603,18 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipREGX_OKWVerifyingFailsException_MV02() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltipREGX( "AllMethods_MultipleValues", ".\\. XValue${SEP}.\\. X Value${SEP}.\\. XValue" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -569,15 +631,18 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipREGX_OKWVerifyingFailsException_MV03() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltipREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}.\\. Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 
     /**
@@ -594,14 +659,17 @@ public class EN_VerifyTooltip_OKWVerifyingFailsException_Test
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tc_VerifyTooltipREGX_OKWVerifyingFailsException_MV04() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
         EN.VerifyTooltipREGX( "AllMethods_MultipleValues", ".\\. Value${SEP}.\\. Value${SEP}.\\. Value${SEP}.\\. Value" );
         
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+    {
         EN.EndTest();
+    });
     }
 }

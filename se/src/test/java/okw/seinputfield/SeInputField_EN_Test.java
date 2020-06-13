@@ -36,16 +36,16 @@
 
 package okw.seinputfield;
 
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.exceptions.OKWVerifyingFailsException;
 
-import org.junit.*;
-import static org.junit.Assert.*;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
 * \~
@@ -53,16 +53,13 @@ import org.junit.runners.MethodSorters;
 * 
 * @author zoltan
 */
-@Ignore
-@FixMethodOrder( MethodSorters.NAME_ASCENDING )
-public class SeInputField_EN_Test {
+@Disabled
+public class SeInputField_EN_Test extends OKWTestBase
+{
 
   protected OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
 
   protected static String ApplicationName;
-
-  @Rule
-  public TestName         name  = new TestName();
 
   /**
    * SeTextField -> InputTypeText
@@ -78,7 +75,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcLogExists() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -96,7 +93,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcClickOn() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -120,7 +117,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcLogHasFocus() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -137,7 +134,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcLogIsActive() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -155,7 +152,7 @@ public class SeInputField_EN_Test {
   public void tcLogLabel() throws Exception
   {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -173,7 +170,7 @@ public class SeInputField_EN_Test {
   public void tcLogPlaceholder() throws Exception
   {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -191,7 +188,7 @@ public class SeInputField_EN_Test {
   public void tcLogToolTip() throws Exception
   {
   
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -209,7 +206,7 @@ public class SeInputField_EN_Test {
   public void tcLogValue() throws Exception
   {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -230,7 +227,7 @@ public class SeInputField_EN_Test {
   public void TC_MemorizeExists_en() throws Exception
   {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -249,7 +246,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcMemorizeHasFocus() throws Exception {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -269,7 +266,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcMemorizeIsActive_en() throws Exception {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -289,7 +286,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcMemorizeLabel() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -312,7 +309,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcMemorizePlaceholder() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -335,7 +332,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcMemorizeToolTip() throws Exception {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -355,7 +352,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcMemorizeValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -380,7 +377,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcSetFocus_ReadableAndEnabled() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -407,7 +404,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcSetFocus_ReadonlyAndEnabled() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/inputText/input_type-text_readonly.htm" );
 
@@ -431,7 +428,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcSetValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -459,7 +456,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcSetValue_IGNORE() throws Exception
   { 
-     EN.BeginTest( name.getMethodName() );
+     EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -487,7 +484,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcTypeKey() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -520,7 +517,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyCaption() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -546,7 +543,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcTypeKey_IGNORE() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
       
@@ -587,7 +584,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyExists_ExistsNoExpectedNo() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -603,10 +600,10 @@ public class SeInputField_EN_Test {
   // Erwartet wird, dass das Objekt existiert.
   // Es wird geprüft auf das default timout exception getriggert wird.
   //
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test //  // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyExists_ExistsNoExpectedYes_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
   
@@ -615,18 +612,22 @@ public class SeInputField_EN_Test {
       EN.VerifyExists( "DoesNotExist", "YES" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   // \brief
   // Prüft ob ein vorhandenes Objekt nicht existiert.
   // Hier wird wird geprüft auf das default timout exception getriggert wird.
   //
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyExists_ExistsYesExpectedNo_OKWVerifyingFailsException()  throws Exception
   {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -634,7 +635,11 @@ public class SeInputField_EN_Test {
       EN.VerifyExists( "Last Name", "NO" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   // / \brief
@@ -644,7 +649,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyExists_ExistsYesExpectedYes() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
 
@@ -667,7 +672,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyExists_IGNORE() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
 
       EN.StartApp( ApplicationName );
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -685,7 +690,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyHasFocus() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -702,10 +707,10 @@ public class SeInputField_EN_Test {
   // \brief
   // Focus eines Textfeldes prüfen.
   //
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyHasFocus_HasFocusYesExpectedNo_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -716,15 +721,19 @@ public class SeInputField_EN_Test {
       EN.VerifyHasFocus( "Last Name", "NO" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   // \brief
   // Focus eines Textfeldes prüfen.
   //
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyHasFocus_HasFocusNoExpectedYes_OKWVerifyingFailsException() throws Exception {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -733,7 +742,11 @@ public class SeInputField_EN_Test {
       EN.VerifyHasFocus( "Last Name", "YES" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   
@@ -752,7 +765,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyHasFocus_IGNORE() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -774,7 +787,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyIsActive() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
@@ -816,7 +829,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyLabel() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -836,10 +849,10 @@ public class SeInputField_EN_Test {
    * \author Zoltan Hrabovszki
    * \date 2014.12.03
    */
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabel_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -848,7 +861,11 @@ public class SeInputField_EN_Test {
       EN.VerifyLabel( "Last Name", "Xxxx:" );
 
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   
@@ -862,7 +879,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyLabelWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -883,10 +900,10 @@ public class SeInputField_EN_Test {
   // \~
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabelWCM_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -895,7 +912,11 @@ public class SeInputField_EN_Test {
       EN.VerifyLabelWCM( "Last Name", "####:" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   
@@ -912,7 +933,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyMaxLength() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -937,10 +958,10 @@ public class SeInputField_EN_Test {
    * \author Zoltan Hrabovszki
    * \date 2018.12.28
    */
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyMaxLength_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -949,7 +970,11 @@ public class SeInputField_EN_Test {
       EN.VerifyMaxLength( "Last Name", "25" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   
@@ -963,7 +988,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyLabelREGX() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -983,10 +1008,10 @@ public class SeInputField_EN_Test {
   // \~
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyLabelREGX_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -995,7 +1020,11 @@ public class SeInputField_EN_Test {
       EN.VerifyLabelREGX( "Last Name", "Xxxx:" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   
@@ -1012,7 +1041,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyPlaceholder() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1032,10 +1061,10 @@ public class SeInputField_EN_Test {
    * \author Zoltan Hrabovszki
    * \date 2018-10-18
    */
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyPlaceholder_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1044,7 +1073,11 @@ public class SeInputField_EN_Test {
       EN.VerifyLabel( "Last Name", "Placeholder: Last Nam" );
 
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   
@@ -1058,7 +1091,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tc_VerifyPlaceholderWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1079,10 +1112,10 @@ public class SeInputField_EN_Test {
    * \author Zoltan Hrabovszki
    * \date 2018-10-18
    */
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyPlaceholderWCM_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1091,7 +1124,11 @@ public class SeInputField_EN_Test {
       EN.VerifyPlaceholderWCM( "Last Name", "####:" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   
@@ -1105,7 +1142,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyPlaceholderREGX() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1125,10 +1162,10 @@ public class SeInputField_EN_Test {
    * \author Zoltan Hrabovszki
    * \date 2018-10-18
    */
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyPlaceholderREGX_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1137,7 +1174,11 @@ public class SeInputField_EN_Test {
       EN.VerifyPlaceholderREGX( "Last Name", "Placeholder: Xxxx" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   // \~german
@@ -1150,7 +1191,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyTooltip() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1171,10 +1212,10 @@ public class SeInputField_EN_Test {
   // \~
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyTooltip_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1183,7 +1224,11 @@ public class SeInputField_EN_Test {
       EN.VerifyTooltip( "Last Name", "Den Namen..." );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   
@@ -1197,7 +1242,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyTooltipWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
   
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1216,10 +1261,10 @@ public class SeInputField_EN_Test {
   // \~
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyTooltipWCM_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1228,7 +1273,11 @@ public class SeInputField_EN_Test {
       EN.VerifyTooltipWCM( "Last Name", "#oltan" );
       
      EN.StopApp( ApplicationName );
-     EN.EndTest();
+     
+     Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+     {
+         EN.EndTest();
+     });
   }
 
   
@@ -1242,7 +1291,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyTooltipREGX() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
   
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1262,10 +1311,10 @@ public class SeInputField_EN_Test {
   // \~
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyTooltipREGX_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1274,7 +1323,11 @@ public class SeInputField_EN_Test {
       EN.VerifyTooltipREGX( "Last Name", "#oltan" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
   
   
@@ -1288,7 +1341,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyValue() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1317,7 +1370,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyValue_DELETE_EMPTY() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
   
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1341,10 +1394,10 @@ public class SeInputField_EN_Test {
   // \~
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyValue_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1357,7 +1410,11 @@ public class SeInputField_EN_Test {
       EN.VerifyValue( "Last Name", "Soltan" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
 
@@ -1371,7 +1428,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyValueWCM() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1400,7 +1457,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyValueWCM_DELETE_EMPTY() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
   
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1423,10 +1480,10 @@ public class SeInputField_EN_Test {
   // \~
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyValueWCM_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1439,7 +1496,11 @@ public class SeInputField_EN_Test {
       EN.VerifyValueWCM( "Last Name", "#oltan" );
       
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   
@@ -1453,7 +1514,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyValueREGX() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1481,7 +1542,7 @@ public class SeInputField_EN_Test {
   @Test
   public void tcVerifyValueREGX_DELETE_EMPTY() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
   
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1505,10 +1566,10 @@ public class SeInputField_EN_Test {
   // \~
   // \author Zoltan Hrabovszki
   // \date 2014.12.03
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyValueREGX_OKWVerifyingFailsException() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1521,13 +1582,17 @@ public class SeInputField_EN_Test {
       EN.VerifyValueREGX( "Last Name", "Soltan" );
 
       EN.StopApp( ApplicationName );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcClickOn_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1535,17 +1600,21 @@ public class SeInputField_EN_Test {
           EN.ClickOn( "DoesNotExist");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
 
   /**
    * 
    * @throws Exception
    */
-  @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+  @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
   public void tcSelect_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1553,13 +1622,17 @@ public class SeInputField_EN_Test {
           EN.Select( "DoesNotExist", "abc");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+          {
+              EN.EndTest();
+          });
   }
 
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcTypeKey_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1567,13 +1640,17 @@ public class SeInputField_EN_Test {
           EN.TypeKey( "DoesNotExist", "abc");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcSetValue_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1581,13 +1658,17 @@ public class SeInputField_EN_Test {
           EN.SetValue( "DoesNotExist", "abc");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcSetFocus_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1595,14 +1676,18 @@ public class SeInputField_EN_Test {
           EN.SetFocus( "DoesNotExist");
 
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcMemorizeCaption_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
 
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
@@ -1611,14 +1696,18 @@ public class SeInputField_EN_Test {
           EN.MemorizeCaption( "DoesNotExist", "MemorizeCaption");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
 
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcMemorizeHasFocus_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1626,14 +1715,18 @@ public class SeInputField_EN_Test {
           EN.MemorizeHasFocus( "DoesNotExist", "MemorizeHasFocus");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcMemorizeIsActive_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1641,14 +1734,18 @@ public class SeInputField_EN_Test {
           EN.MemorizeIsActive( "DoesNotExist", "MemorizeIsActive");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcMemorizeLabel_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1656,14 +1753,18 @@ public class SeInputField_EN_Test {
           EN.MemorizeLabel( "DoesNotExist", "MemorizeLabel");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcMemorizePlaceholder_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1671,14 +1772,18 @@ public class SeInputField_EN_Test {
           EN.MemorizePlaceholder( "DoesNotExist", "MemorizePlaceholder");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcMemorizeTooltip_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1686,14 +1791,18 @@ public class SeInputField_EN_Test {
           EN.MemorizeTooltip( "DoesNotExist", "MemorizeTooltip");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
 
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcMemorizeValue_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1701,14 +1810,18 @@ public class SeInputField_EN_Test {
           EN.MemorizeValue( "DoesNotExist", "MemorizeVale");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
 
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcLogCaption_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1717,14 +1830,17 @@ public class SeInputField_EN_Test {
 
           EN.StopApp( ApplicationName );
           
-          EN.EndTest();
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
 
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcLogHasFocus_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1732,14 +1848,18 @@ public class SeInputField_EN_Test {
           EN.LogHasFocus( "DoesNotExist");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcLogIsActive_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1747,14 +1867,18 @@ public class SeInputField_EN_Test {
           EN.LogIsActive( "DoesNotExist");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcLogLabel_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1762,14 +1886,18 @@ public class SeInputField_EN_Test {
           EN.LogLabel( "DoesNotExist");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcLogPlaceholder_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1777,13 +1905,17 @@ public class SeInputField_EN_Test {
           EN.LogPlaceholder( "DoesNotExist");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcLogTooltip_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1791,14 +1923,18 @@ public class SeInputField_EN_Test {
           EN.LogTooltip( "DoesNotExist");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
 
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcLogValue_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1806,13 +1942,17 @@ public class SeInputField_EN_Test {
           EN.LogValue( "DoesNotExist");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
 
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcVerifyCaption_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1820,28 +1960,35 @@ public class SeInputField_EN_Test {
           EN.VerifyCaption( "DoesNotExist", "aa");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
 
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcVerifyHasFocus_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
 
           EN.VerifyHasFocus( "DoesNotExist", "YES");
           
-          EN.EndTest();
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcVerifyIsActive_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1849,14 +1996,18 @@ public class SeInputField_EN_Test {
           EN.VerifyIsActive( "DoesNotExist", "YES" );
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcVerifyLabel_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1864,14 +2015,18 @@ public class SeInputField_EN_Test {
           EN.VerifyLabel( "DoesNotExist", "aa" );
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
   
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcVerifyTooltip_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1879,14 +2034,18 @@ public class SeInputField_EN_Test {
           EN.VerifyTooltip( "DoesNotExist", "aa");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
 
   
-  @Test( expected = OKWGUIObjectNotFoundException.class )
+  @Test // ( expected = OKWGUIObjectNotFoundException.class )
   public void tcVerifyValue_OKWGUIObjectNotFoundException() throws Exception
   {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypeText.htm" );
           EN.SelectWindow( "InputTypeText" );
@@ -1894,7 +2053,11 @@ public class SeInputField_EN_Test {
           EN.VerifyValue( "DoesNotExist", "aa");
           
           EN.StopApp( ApplicationName );
-          EN.EndTest();
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
   }
 
 }

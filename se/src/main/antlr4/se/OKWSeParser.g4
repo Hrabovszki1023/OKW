@@ -5,9 +5,7 @@
  */
 parser grammar OKWSeParser;
 
-@header {
-package okw.parser.antlr4.se;
-}
+@header { package okw.parser.antlr4.se; }
 
 options { tokenVocab=OKWSeLexer; }
 

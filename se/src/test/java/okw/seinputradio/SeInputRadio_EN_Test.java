@@ -35,22 +35,15 @@ Sie sollten eine Kopie der GNU General Public License zusammen mit
 OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 */
 
-
-import static org.junit.Assert.*;
-
-import org.junit.FixMethodOrder;
-
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.exceptions.OKWVerifyingFailsException;
 
-import org.junit.Ignore;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
      /**
      * \~
@@ -65,17 +58,12 @@ import org.junit.runners.MethodSorters;
      * @author Zoltán Hrabovszki
      * @date 2016.12.11
      */
-    @Ignore("Ignoring the whole fixture")
-    @FixMethodOrder( MethodSorters.NAME_ASCENDING )
-    public class SeInputRadio_EN_Test
+    @Disabled("Ignoring the whole fixture")
+    public class SeInputRadio_EN_Test  extends OKWTestBase
     {
     	protected OKW_Memorize_Sngltn myMM = OKW_Memorize_Sngltn.getInstance();
     	
     	protected static String ApplicationName;
-    	
-        @Rule
-        public TestName name = new TestName();
-    	
 
         /** \~german
          * \brief
@@ -88,7 +76,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_ClickOn() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -121,10 +109,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
          */
-        @Test (expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_DoubleClickOn_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -133,7 +121,11 @@ import org.junit.runners.MethodSorters;
                 EN.DoubleClickOn( "Visa");
                 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         /** \~german
@@ -146,10 +138,10 @@ import org.junit.runners.MethodSorters;
         * @author Zoltán Hrabovszki
         * @date 2016.12.11
         */
-        @Test (expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_LogCaption() throws Exception
         {
-           EN.BeginTest( name.getMethodName() );
+           EN.BeginTest( TestName );
 
            EN.StartApp( ApplicationName );
            EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
@@ -158,7 +150,11 @@ import org.junit.runners.MethodSorters;
            EN.LogCaption("Visa");
 
            EN.StopApp( ApplicationName );
-           EN.EndTest();
+           
+           Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+           {
+               EN.EndTest();
+           });
         }
 
         
@@ -173,7 +169,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_LogExists() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                      
@@ -193,10 +189,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=UnsupportedOperationException.class)
+        @Test // (expected=UnsupportedOperationException.class)
         public void tc_LogHasFocus_UnsupportedOperationException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -204,7 +200,10 @@ import org.junit.runners.MethodSorters;
                 EN.LogHasFocus("Visa");
                 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                Assertions.assertThrows( UnsupportedOperationException.class, () ->
+                {
+                    EN.EndTest();
+                });
 
         }
 
@@ -219,7 +218,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_LogToolTip() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -243,7 +242,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_LogValue() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -268,7 +267,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_LogIsActive() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -290,10 +289,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test (expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_MemorizeCaption() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                      
@@ -302,7 +301,10 @@ import org.junit.runners.MethodSorters;
                 EN.MemorizeCaption("Visa", "SeInputRadio_MemorizeCaption_1" );
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
 
         }
 
@@ -316,7 +318,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_MemorizeLabel() throws Exception
         {
-                    EN.BeginTest( name.getMethodName() );
+                    EN.BeginTest( TestName );
                     EN.StartApp( ApplicationName );
                     EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                              
@@ -348,7 +350,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_MemorizeExists() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -370,10 +372,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=UnsupportedOperationException.class)
+        @Test // (expected=UnsupportedOperationException.class)
         public void tc_MemorizeHasFocus_UnsupportedOperationException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -381,7 +383,10 @@ import org.junit.runners.MethodSorters;
                 EN.MemorizeHasFocus("Visa", "SeInputRadio_MemorizeHasFocus");
                 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                Assertions.assertThrows( UnsupportedOperationException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
@@ -396,7 +401,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_MemorizeIsActive() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -425,7 +430,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_MemorizeTooltip() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -452,7 +457,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_MemorizeValue() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -479,10 +484,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
 		*/
-        @Test(expected=UnsupportedOperationException.class)
+        @Test // (expected=UnsupportedOperationException.class)
         public void tc_VerifyHasFocus_UnsupportedOperationException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -491,7 +496,10 @@ import org.junit.runners.MethodSorters;
                 EN.VerifyHasFocus( "Visa", "YES" );
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                Assertions.assertThrows( UnsupportedOperationException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
@@ -503,10 +511,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
 		*/
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_SetFocus_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -515,7 +523,11 @@ import org.junit.runners.MethodSorters;
                 EN.SetFocus( "Visa" );
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         
@@ -527,10 +539,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_SelectMenu_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -538,7 +550,10 @@ import org.junit.runners.MethodSorters;
 
                 EN.SelectMenu("Visa");
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
@@ -550,10 +565,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_SelectMenu2_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -562,7 +577,11 @@ import org.junit.runners.MethodSorters;
                 EN.SelectMenu("Visa", "What ever...");
                 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
 
@@ -577,7 +596,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_SetValue() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -613,10 +632,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWNotAllowedValueException.class)
+        @Test // (expected=OKWNotAllowedValueException.class)
         public void tc_SetValue_OKWNotAllowedValueException_UNCHECKED() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -625,7 +644,11 @@ import org.junit.runners.MethodSorters;
                 EN.SetValue("Visa", "UNCHECKED");
                 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
  
         /** \~german
@@ -638,10 +661,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWNotAllowedValueException.class)
+        @Test // (expected=OKWNotAllowedValueException.class)
         public void tc_SetValue_OKWNotAllowedValueException() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -650,7 +673,11 @@ import org.junit.runners.MethodSorters;
                 EN.SetValue("Visa", "Ajhdttg");
                 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         /** \~german
@@ -663,10 +690,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_Select_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -675,7 +702,11 @@ import org.junit.runners.MethodSorters;
                 EN.Select("Visa", "CHECKED");
                 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
 }
 
         /** \~german
@@ -686,10 +717,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=UnsupportedOperationException.class)
+        @Test // (expected=UnsupportedOperationException.class)
         public void tc_TypeKey_OKWFrameObjectMethodNotImplemented() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -698,7 +729,11 @@ import org.junit.runners.MethodSorters;
                 EN.TypeKey( "Visa", "What ever...");
                 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( UnsupportedOperationException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
         
         /** \~german
@@ -711,10 +746,10 @@ import org.junit.runners.MethodSorters;
         * @author Zoltán Hrabovszki
         * @date 2016.12.11
         */
-        @Test (expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_VerifyCaption() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
 
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
@@ -724,7 +759,11 @@ import org.junit.runners.MethodSorters;
                 EN.VerifyCaption("Visa", "ABC");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         
@@ -738,10 +777,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
          */
-        @Test (expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_VerifyCaptionWCM() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
 
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
@@ -751,7 +790,11 @@ import org.junit.runners.MethodSorters;
             EN.VerifyCaptionWCM("Visa", "?ABC#");
 
             EN.StopApp( ApplicationName );
-            EN.EndTest();
+            
+            Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+            {
+                EN.EndTest();
+            });
         }
 
         
@@ -765,10 +808,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
          */
-        @Test (expected=OKWFrameObjectMethodNotImplemented.class)
+        @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_VerifyCaptionREGX() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
 
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
@@ -778,7 +821,11 @@ import org.junit.runners.MethodSorters;
             EN.VerifyCaptionREGX("Visa", "ABC");
 
             EN.StopApp( ApplicationName );
-            EN.EndTest();
+            
+            Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+            {
+                EN.EndTest();
+            });
         }
 
         /** \~german
@@ -791,7 +838,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyExists_ExsistsNOExpectedNO() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -809,10 +856,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // (expected = OKWVerifyingFailsException.class )
         public void tc_VerifyExists_ExistsNOExpectedYES() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -820,7 +867,11 @@ import org.junit.runners.MethodSorters;
                 EN.VerifyExists("Does Not Exists", "YES");
 
                 EN.StopApp( ApplicationName );
-                EN.EndTest();
+                
+                Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+                {
+                    EN.EndTest();
+                });
         }
 
         /** \~german
@@ -832,10 +883,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // (expected = OKWVerifyingFailsException.class )
         public void tc_VerifyExists_ExistsYESExpectedNO() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
             
@@ -843,7 +894,11 @@ import org.junit.runners.MethodSorters;
             EN.VerifyExists("Visa", "NO");
 
             EN.StopApp( ApplicationName );
-            EN.EndTest();
+            
+            Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+            {
+                EN.EndTest();
+            });
         }
 
   /** \~german
@@ -858,7 +913,7 @@ import org.junit.runners.MethodSorters;
   @Test
   public void tc_VerifyExists_ExistsYESExpectedYES() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
     
@@ -882,7 +937,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyIsActive_ActiveYESExpectedYES() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                      
@@ -905,10 +960,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWVerifyingFailsException.class)
+        @Test // (expected=OKWVerifyingFailsException.class)
         public void tc_VerifyIsActive_ActiveYESExpectedNO() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                      
@@ -917,7 +972,11 @@ import org.junit.runners.MethodSorters;
             EN.VerifyIsActive("Visa", "NO");
 
             EN.StopApp( ApplicationName );
-            EN.EndTest();
+            
+            Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+            {
+                EN.EndTest();
+            });
         }
         
         /** \~german
@@ -932,7 +991,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyIsActive_ActiveNOExpectedNO() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                      
@@ -953,10 +1012,10 @@ import org.junit.runners.MethodSorters;
          * @author Zoltán Hrabovszki
          * @date 2016.12.11
         */
-        @Test(expected=OKWVerifyingFailsException.class)
+        @Test // (expected=OKWVerifyingFailsException.class)
         public void tc_VerifyIsActive_ActiveNOExpectedYES() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                      
@@ -965,7 +1024,11 @@ import org.junit.runners.MethodSorters;
             EN.VerifyIsActive("Inactive", "YES");
 
             EN.StopApp( ApplicationName );
-            EN.EndTest();
+            
+            Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+            {
+                EN.EndTest();
+            });
         }
 
         /** \~german
@@ -979,7 +1042,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyLabel() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                      
@@ -1003,7 +1066,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyLabelWCM() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                      
@@ -1029,7 +1092,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyLabelREGX() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                      
@@ -1055,7 +1118,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyToolTip() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
             
@@ -1081,7 +1144,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyToolTipWCM() throws Exception
         {
-                EN.BeginTest( name.getMethodName() );
+                EN.BeginTest( TestName );
                 EN.StartApp( ApplicationName );
                 EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
                 
@@ -1107,7 +1170,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyToolTipREGX() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
             
@@ -1148,7 +1211,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyValueWCM() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
             
@@ -1185,7 +1248,7 @@ import org.junit.runners.MethodSorters;
         @Test
         public void tc_VerifyValueREGX() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
             EN.StartApp( ApplicationName );
             EN.TypeKey("URL", "http://test.openkeyword.de/InputRadioButton/input_type-radio.htm");
             

@@ -4,6 +4,7 @@ import java.util.*;
 
 import org.apache.commons.text.StringEscapeUtils;
 
+
 public abstract class LogBase {
 	
 	protected static Integer AllCount = 0;

@@ -1,10 +1,7 @@
 package okw;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
-
-import okw.fourTestLocator;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
  /*  <code> fpsL = "//div[@ID='myID']"</code> -> <code>return = "//div[@ID='myID']"</code>
   *  <code> fpsL = "4T!MyValue"</code> -> <code>return = "//*[@data-4Test='MyValue']"</code>
@@ -13,6 +10,7 @@ import okw.fourTestLocator;
   *  <code> fpsL = "4TLA!MyValue"</code> -> <code>return = "//label[contains(text(),'MyValue')]/following-sibling::input"</code>
   *  <code> fpsL = "4TTX!MyValue"</code> -> <code>return = "//*[contains(text(),'MyValue')]"</code>
   */
+@Tag("AllCoreHelperTests")
 public class fourTestLocatorTest {
 	private fourTestLocator myLocator = new fourTestLocator("");
 	

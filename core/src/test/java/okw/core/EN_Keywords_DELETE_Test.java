@@ -36,30 +36,29 @@
 
 package okw.core;
 
-import static org.junit.Assert.*;
 import okw.OKW_TestClipboard;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Tag("AllCoreTests")
 public class EN_Keywords_DELETE_Test
 {
 
   static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
   static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
-  @Rule
-  public TestName          name        = new TestName();
+  public String TestName;
 
-  @BeforeClass
+  @BeforeEach
+  void init(TestInfo testInfo)
+  {
+      TestName = testInfo.getTestMethod().get().getName();
+  }
+
+  @BeforeAll
   public static void setUpBeforeClass() throws Exception
   {
     // Reset des Loggers: Alle Geladenen Instanzen löschen
@@ -69,29 +68,32 @@ public class EN_Keywords_DELETE_Test
     myLogger.setDebugMode( false );
   }
 
-  @AfterClass
-  public static void tearDownAfterClass() throws Exception
-  {
-  }
+  
 
-  // \~german
-  // \brief
-  // Prüft "DELETE" für das Schlüsselwort MemorizeCaption(strng,string) ob die
-  // Ausname OKWNotAllowedValueException ausgelöst wird.
-  //
-  // \~english
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2016.09.23
-  @Test( expected = okw.exceptions.OKWNotAllowedValueException.class )
+  /** \~german
+   *  Prüft "DELETE" für das Schlüsselwort MemorizeCaption(strng,string) ob die
+   *  Ausname OKWNotAllowedValueException ausgelöst wird.
+   * 
+   *  \~english
+   *  \~
+   *  expected: okw.exceptions.OKWNotAllowedValueException
+   *  
+   *  @author Zoltan Hrabovszki
+   *  @date 2016.09.23
+   */
+  @Test 
   public void tcMemorizeCaption_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.MemorizeCaption( "All_MethodsObj", "${DELETE}" );
 
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -104,19 +106,22 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeCaption_DELETE_2_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.MemorizeCaption( "All_MethodsObj", "abc${DELETE}abc" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
-  // \~german
-  // \brief
+  /** \~german
   // Prüft "${DELETE}" für das Schlüsslewort MemorizeExists(strng,string).
   //
   // "${DELETE}" ist ein nicht erlaubter Wert und muss die Ausnamhme
@@ -124,17 +129,24 @@ public class EN_Keywords_DELETE_Test
   //
   // \~english
   // \~
-  // \author Zoltan Hrabovszki
-  // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  //
+  // expected = OKWNotAllowedValueException
+  // @author Zoltan Hrabovszki
+  // @date 2016.09.23
+   */
+  @Test 
   public void tcMemorizeExists_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.MemorizeExists( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.MemorizeExists( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -149,15 +161,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeExists_DELETE_2_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.MemorizeExists( "All_MethodsObj", "abc${DELETE}efg" );
     
-    EN.EndTest();
+    EN.MemorizeExists( "All_MethodsObj", "abc${DELETE}efg" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -171,15 +187,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test // // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeHasFocus_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.MemorizeHasFocus( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -194,19 +214,22 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeHasFocus_DELETE_2_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.MemorizeHasFocus( "All_MethodsObj", "abc${DELETE}efg" );
     
-    EN.EndTest();
+    EN.MemorizeHasFocus( "All_MethodsObj", "abc${DELETE}efg" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
-  // \brief
   // Prüft "${DELETE}" für das Schlüsselwort MemorizeIsActive(strng,string).
   //
   // "${DELETE}" ist ein nicht erlaubter Wert und muss die Ausnamhme
@@ -216,15 +239,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeIsActive_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.MemorizeIsActive( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.MemorizeIsActive( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -239,15 +266,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeIsActive_DELETE_2_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.MemorizeIsActive( "All_MethodsObj", "abc${DELETE}efg" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -259,15 +290,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeLabel_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.MemorizeLabel( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.MemorizeLabel( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -280,15 +315,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeLabel_DELETE_2_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.MemorizeLabel( "All_MethodsObj", "abc${DELETE}abc" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -301,15 +340,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeSelectedValue_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.MemorizeSelectedValue( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -322,15 +365,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeSelectedValue_DELETE_2_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.MemorizeSelectedValue( "All_MethodsObj", "abc${DELETE}abc" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -343,15 +390,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeTablecellValue_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.MemorizeTablecellValue( "All_MethodsObj", "1", "2", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -364,15 +415,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeTablecellValue_DELETE_2_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.MemorizeTablecellValue( "All_MethodsObj", "1", "2", "abc${DELETE}abc" );
     
-    EN.EndTest();
+    EN.MemorizeTablecellValue( "All_MethodsObj", "1", "2", "abc${DELETE}abc" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -384,36 +439,46 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeTooltip_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.MemorizeTooltip( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
-  // \~german
-  // \brief
-  // Prüft "DELETE" mit zusätlich Zeichen für das Schlüsselwort
-  // MemorizeTooltip(strng,string) ob die
-  // Ausname OKWNotAllowedValueException ausgelöst wird.
-  //
-  // \~english
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  /** \~german
+   *  Prüft "DELETE" mit zusätlich Zeichen für das Schlüsselwort
+   *  MemorizeTooltip(strng,string) ob die
+   *  Ausname OKWNotAllowedValueException ausgelöst wird.
+   *
+   *  \~english
+   *  \~
+   *  expected: OKWNotAllowedValueException
+   *  
+   *  @author Zoltan Hrabovszki
+   *  @date 2016.09.23
+   */
+  @Test
   public void tcMemorizeTooltip_DELETE_2_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.MemorizeTooltip( "All_MethodsObj", "abc${DELETE}abc" );
     
-    EN.EndTest();
+    EN.MemorizeTooltip( "All_MethodsObj", "abc${DELETE}abc" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -423,21 +488,25 @@ public class EN_Keywords_DELETE_Test
   //
   // \~english
   // \~
+  // expected: OKWNotAllowedValueException
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test
   public void tcMemorizeValue_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.MemorizeValue( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
-  // \~german
-  // \brief
+  /** \~german
   // Prüft "DELETE" mit zusätlich Zeichen für das Schlüsselwort
   // MemorizeValue(strng,string) ob die
   // Ausname OKWNotAllowedValueException ausgelöst wird.
@@ -446,15 +515,21 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.23
-  @Test( expected = OKWNotAllowedValueException.class )
+   */
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeValue_DELETE_2_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.MemorizeValue( "All_MethodsObj", "abc${DELETE}abc" );
     
-    EN.EndTest();
+    EN.MemorizeValue( "All_MethodsObj", "abc${DELETE}abc" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
+
   }
 
   // / \~german
@@ -468,7 +543,7 @@ public class EN_Keywords_DELETE_Test
   @Test
   public void tcSelectMenu_DELETE() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Testscript in Schlüsselwort-Notation
     EN.SelectWindow( "Rechner" );
@@ -505,7 +580,7 @@ public class EN_Keywords_DELETE_Test
   @Test
   public void tcSelectMenu_Value_MV_DELETE_EmptyString() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Testscript in Schlüsselwort-Notation
     EN.SelectWindow( "Rechner" );
@@ -539,7 +614,7 @@ public class EN_Keywords_DELETE_Test
   @Test
   public void tcSelectMenu_Value_SV_DELETE() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Testscript in Schlüsselwort-Notation
     EN.SelectWindow( "Rechner" );
@@ -574,7 +649,7 @@ public class EN_Keywords_DELETE_Test
   @Test
   public void tcSelect_DELETE() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
 
@@ -610,7 +685,7 @@ public class EN_Keywords_DELETE_Test
   @Test
   public void tcSelect_DELETE_MV() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
 
@@ -634,22 +709,28 @@ public class EN_Keywords_DELETE_Test
     EN.EndTest();
   }
 
-  // \~german
-  // \brief
-  //
-  // \~english
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2013.12.26
-  @Test( expected = OKWNotAllowedValueException.class )
+  /** \~german
+   * 
+   *  \~english
+   *  \~
+   *  expected: OKWNotAllowedValueException
+   *  
+   *  @author Zoltan Hrabovszki
+   *  @date 2013.12.26
+   */
+  @Test
   public void tcSequence_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.Sequence( "Rechner", "TestSequence", "${DELETE}" );
     
-    EN.EndTest();
+    EN.Sequence( "Rechner", "TestSequence", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -663,7 +744,7 @@ public class EN_Keywords_DELETE_Test
   @Test
   public void tcSetValue_DELETE() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
@@ -693,7 +774,7 @@ public class EN_Keywords_DELETE_Test
   public void tcSetValue_DELETE_MV() throws Exception
   {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
@@ -724,7 +805,7 @@ public class EN_Keywords_DELETE_Test
   @Test
   public void tcTypeKeyTablecell_DELETE() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
 
@@ -757,7 +838,7 @@ public class EN_Keywords_DELETE_Test
   @Test
   public void tcTypeKeyTablecell_DELETE_MV() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
 
@@ -792,7 +873,7 @@ public class EN_Keywords_DELETE_Test
   @Test
   public void tcTypeKey_DELETE() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
 
@@ -823,7 +904,7 @@ public class EN_Keywords_DELETE_Test
   @Test
   public void tcTypeKey_DELETE_MV() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
 
@@ -851,18 +932,22 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Daniel Krüger
   // \date 2018.04.04
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyBadge_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.VerifyBadge( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
-// \~german
+  // \~german
   // \brief
   //
   //
@@ -870,15 +955,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Daniel Krüger
   // \date 2018.04.11
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyBadgeREGX_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyBadgeREGX( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyBadgeREGX( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
 /** \~german
@@ -888,19 +977,24 @@ public class EN_Keywords_DELETE_Test
    *
    * \~english
    * \~
-   * \author Daniel Krüger
-   * \date 2018.04.11
-   * @throws Exception
+   * expected = OKWNotAllowedValueException.class )
+   * 
+   * @author Daniel Krüger
+   * @date 2018.04.11
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test
   public void tcVerifyBadgeWCM_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyBadgeWCM ( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyBadgeWCM ( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
 // \~german
@@ -911,34 +1005,42 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyCaption_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyCaption( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyCaption( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
-  // \~german
-  // \brief
-  //
-  //
-  // \~english
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  /** \~german
+   *
+   * \~english
+   * expected = OKWNotAllowedValueException
+   * \~
+   * @author Zoltan Hrabovszki
+   * @date 2016.09.24
+   */
+  @Test
   public void tcVerifyCaptionREGX_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyCaptionREGX( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyCaptionREGX( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -949,15 +1051,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyCaptionWCM_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.VerifyCaptionWCM( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -968,15 +1074,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyLabel_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabel( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyLabel( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -987,15 +1097,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyLabelREGX_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.VerifyLabelREGX( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -1006,15 +1120,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyLabelWCM_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyLabelWCM( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyLabelWCM( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   /** \~german
@@ -1030,15 +1148,19 @@ public class EN_Keywords_DELETE_Test
    * \author Zoltan Hrabovszki
    * \date 2018.12.26
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyMaxLength_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.VerifyMaxLength( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -1049,34 +1171,43 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyExists_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.VerifyExists( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
-  // \~german
-  // \brief
-  //
-  //
-  // \~english
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  /** \~german
+   *
+   *  \~english
+   *  \~
+   *  expected: OKWNotAllowedValueException
+   *  @author Zoltan Hrabovszki
+   *  @date 2016.09.24
+   *  */
+  @Test
   public void tcVerifyHasFocus_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyHasFocus( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyHasFocus( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
+
   }
 
   // \~german
@@ -1087,15 +1218,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyIsActive_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyIsActive( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyIsActive( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -1106,15 +1241,19 @@ public class EN_Keywords_DELETE_Test
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifySelectedValue_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.VerifySelectedValue( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   /** \~german
@@ -1125,15 +1264,19 @@ public class EN_Keywords_DELETE_Test
   * @author Zoltan Hrabovszki
   * @date 2017-05-21
   */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifySelectedValueREGX_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.VerifySelectedValueREGX( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   /** \~german
@@ -1141,19 +1284,24 @@ public class EN_Keywords_DELETE_Test
   *
   * \~english
   * \~
+  *  expected: OKWNotAllowedValueException
+  *  
   * @author Zoltan Hrabovszki
   * @date 2017-05-21
   */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test
   public void tcVerifySelectedValueWCM_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-
+    
     EN.VerifySelectedValueWCM( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   
@@ -1165,16 +1313,19 @@ public class EN_Keywords_DELETE_Test
    * @author Zoltan Hrabovszki
    * @date 2016-09-24
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyTablecellValue_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-
+    
     EN.VerifyTablecellValue( "All_MethodsObj", "Col", "Row", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   /** \~german
@@ -1185,16 +1336,18 @@ public class EN_Keywords_DELETE_Test
   * @author Zoltan Hrabovszki
   * @date 2017-05-21
   */
- @Test( expected = OKWNotAllowedValueException.class )
+ @Test// ( expected = OKWNotAllowedValueException.class )
  public void tcVerifyTablecellValueREGX_DELETE_OKWNotAllowedValueException() throws Exception
  {
-   EN.BeginTest( name.getMethodName() );
+   EN.BeginTest( TestName );
 
    EN.SelectWindow( "Rechner" );
-
-   EN.VerifyTablecellValueREGX( "All_MethodsObj", "Col", "Row", "${DELETE}" );
    
-   EN.EndTest();
+   EN.VerifyTablecellValueREGX( "All_MethodsObj", "Col", "Row", "${DELETE}" );
+   Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+   {
+       EN.EndTest();
+   });
  }
 
  /** \~german
@@ -1202,38 +1355,49 @@ public class EN_Keywords_DELETE_Test
  *
  * \~english
  * \~
+ * expected OKWNotAllowedValueException
+ * 
  * @author Zoltan Hrabovszki
  * @date 2016-09-24
  */
-@Test( expected = OKWNotAllowedValueException.class )
+ @Test
 public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throws Exception
 {
-  EN.BeginTest( name.getMethodName() );
+  EN.BeginTest( TestName );
 
   EN.SelectWindow( "Rechner" );
-  EN.VerifyTablecellValueWCM( "All_MethodsObj", "Col", "Row", "${DELETE}" );
   
-  EN.EndTest();
+  EN.VerifyTablecellValueWCM( "All_MethodsObj", "Col", "Row", "${DELETE}" );
+
+  Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+  {
+      EN.EndTest();
+  });
 }
 
 
-  // \~german
-  // \brief
-  //
-  //
-  // \~english
-  // \~
-  // \author Zoltan Hrabovszki
-  // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  /** \~german
+   *
+   * \~english
+   * \~
+   *  expected = OKWNotAllowedValueException
+   *  
+   * @author Zoltan Hrabovszki
+   * @date 2016.09.24
+   */
+  @Test
   public void tcVerifyTooltip_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyTooltip( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyTooltip( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -1244,15 +1408,19 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyTooltipREGX_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyTooltipREGX( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyTooltipREGX( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -1263,16 +1431,19 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyTooltipWCM_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-
-    EN.VerifyTooltipWCM( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyTooltipWCM( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -1283,16 +1454,19 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyValue_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-
+    
     EN.VerifyValue( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -1303,16 +1477,19 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
   // \~
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyValueREGX_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-
-    EN.VerifyValueREGX( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyValueREGX( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   // \~german
@@ -1321,18 +1498,23 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
   //
   // \~english
   // \~
+  // expected: OKWNotAllowedValueException
+  //
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test
   public void tcVerifyValueWCM_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-
-    EN.VerifyValueWCM( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyValueWCM( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   /* \~german
@@ -1347,15 +1529,19 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
    * \author Zoltan Hrabovszki
    * \date 2018.10.05
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizePlaceholder_DELETE_2_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.MemorizePlaceholder( "All_MethodsObj", "abc${DELETE}abc" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   /* \~german
@@ -1369,16 +1555,21 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
    * \author Zoltan Hrabovszki
    * \date 2018.10.04
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizePlaceholder_DELETE_OKWNotAllowedValueException() throws Exception
   {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.MemorizePlaceholder( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.MemorizePlaceholder( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
+
   }
   
   
@@ -1393,16 +1584,19 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
   *author Daniel Krüger
   *\date 2018.04.04
   */ 
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyErrorMSG_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-
-    EN.VerifyErrorMSG( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyErrorMSG( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
   
   /** \~german
@@ -1416,15 +1610,19 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
   * \author Daniel Krüger
   * \date 2019.05.31
   */ 
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyErrorMSG_REGX_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.VerifyErrorMSG_REGX( "All_MethodsObj", "${DELETE}" );
- 
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   /** \~german
@@ -1435,18 +1633,25 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
    * Checks "DELETE" for the keyword VerifyErrorMSG_WCM(strng,string)
    * if the exception OKWNotAllowedValueException is thrown.
    * \~
-   * author Daniel Krüger
-   * \date 2019.05.31
+   * 
+   * expected: OKWNotAllowedValueException
+   * 
+   * @author Daniel Krüger
+   * @date 2019.05.31
    */ 
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test
   public void tcVerifyErrorMSG_WCM_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyErrorMSG_WCM ( "All_MethodsObj", "${DELETE}" );
     
-    EN.EndTest();
+    EN.VerifyErrorMSG_WCM ( "All_MethodsObj", "${DELETE}" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
     }
 
   /** \~german
@@ -1462,15 +1667,19 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
    * \author Zoltan Hrabovszki
    * \date 2018.12.26
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyMinLength_DELETE_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.VerifyMinLength( "All_MethodsObj", "${DELETE}" );
-  
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
   
   
@@ -1484,18 +1693,24 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
    * 
    * This test verifies whether the exception OKWNotAllowedValueException is thrown.
    * \~
+   * expected = OKWNotAllowedValueException.class )
+   * 
    * \author Zoltan Hrabovszki
    * \date 2018.12.26
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test 
   public void tcVerifyMinLength_SEP_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyMinLength( "All_MethodsObj", "1${SEP}2" );
     
-    EN.EndTest();
+    EN.VerifyMinLength( "All_MethodsObj", "1${SEP}2" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   
@@ -1512,15 +1727,19 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
    * \author Zoltan Hrabovszki
    * \date 2018.12.26
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyMinLength_VSEP_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyMinLength( "All_MethodsObj", "1${VSEP}2" );
     
-    EN.EndTest();
+    EN.VerifyMinLength( "All_MethodsObj", "1${VSEP}2" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
   
   /** \~german
@@ -1536,15 +1755,19 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
    * \author Zoltan Hrabovszki
    * \date 2018.12.26
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyMaxLength_SEP_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+    
     EN.VerifyMaxLength( "All_MethodsObj", "1${SEP}2" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
   
   /** \~german
@@ -1560,15 +1783,19 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
    * \author Zoltan Hrabovszki
    * \date 2018.12.26
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyMaxLength_VSEP_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
-    EN.VerifyMaxLength( "All_MethodsObj", "1${VSEP}2" );
     
-    EN.EndTest();
+    EN.VerifyMaxLength( "All_MethodsObj", "1${VSEP}2" );
+
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
   
  //\~german
@@ -1579,16 +1806,19 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
  // \~
  // \author Zoltan Hrabovszki
  // \date 2016.09.24
- @Test( expected = OKWNotAllowedValueException.class )
+ @Test// ( expected = OKWNotAllowedValueException.class )
  public void tcVerifyPlaceholder_DELETE_OKWNotAllowedValueException() throws Exception
  {
-   EN.BeginTest( name.getMethodName() );
+   EN.BeginTest( TestName );
 
    EN.SelectWindow( "Rechner" );
-
+   
    EN.VerifyPlaceholder( "All_MethodsObj", "${DELETE}" );
    
-   EN.EndTest();
+   Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+   {
+       EN.EndTest();
+   });
  }
 
  // \~german
@@ -1599,17 +1829,20 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
  // \~
  // \author Zoltan Hrabovszki
  // \date 2016.09.24
- @Test( expected = OKWNotAllowedValueException.class )
+ @Test// ( expected = OKWNotAllowedValueException.class )
  public void tcVerifyPlaceholderREGX_DELETE_OKWNotAllowedValueException() throws Exception
  {
-   EN.BeginTest( name.getMethodName() );
+   EN.BeginTest( TestName );
 
    EN.SelectWindow( "Rechner" );
-
-   EN.VerifyPlaceholderREGX( "All_MethodsObj", "${DELETE}" );
    
-   EN.EndTest();
- }
+   EN.VerifyPlaceholderREGX( "All_MethodsObj", "${DELETE}" );
+
+   Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+   {
+       EN.EndTest();
+   });
+}
 
  // \~german
  // \brief
@@ -1619,15 +1852,19 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
  // \~
  // \author Zoltan Hrabovszki
  // \date 2016.09.24
- @Test( expected = OKWNotAllowedValueException.class )
+ @Test// ( expected = OKWNotAllowedValueException.class )
  public void tcVerifyPlaceholderWCM_DELETE_OKWNotAllowedValueException() throws Exception
  {
-   EN.BeginTest( name.getMethodName() );
+   EN.BeginTest( TestName );
 
    EN.SelectWindow( "Rechner" );
+   
    EN.VerifyPlaceholderWCM( "All_MethodsObj", "${DELETE}" );
    
-   EN.EndTest();
+   Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+   {
+       EN.EndTest();
+   });
  }
 
 }

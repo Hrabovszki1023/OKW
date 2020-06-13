@@ -22,7 +22,7 @@ import java.util.regex.Pattern;
 import okw.exceptions.OKWFileDoesNotExistsException;
 import okw.log.Logger_Sngltn;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.*;
 
 /**
  * \~german
@@ -62,7 +62,7 @@ public class OKW_Properties extends Properties
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2018-03-08
+     * \date 2018-03-08
      */
     protected ArrayList<String> CoreProperties = new ArrayList<String>();
     

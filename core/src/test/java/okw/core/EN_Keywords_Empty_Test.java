@@ -39,29 +39,28 @@
 
 package okw.core;
 
-import static org.junit.Assert.*;
 import okw.OKW_TestClipboard;
 import okw.exceptions.OKWNotAllowedValueException;
 import okw.log.Logger_Sngltn;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Tag("AllCoreTests")
 public class EN_Keywords_Empty_Test {
 
   static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
   static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
-  @Rule
-  public TestName          name        = new TestName();
+  public String TestName;
 
-  @BeforeClass
+  @BeforeEach
+  void init(TestInfo testInfo)
+  {
+      TestName = testInfo.getTestMethod().get().getName();
+  }
+
+  @BeforeAll
   public static void setUpBeforeClass() throws Exception {
     // Reset des Loggers: Alle Geladenen Instanzen löschen
     Logger_Sngltn.init();
@@ -70,7 +69,7 @@ public class EN_Keywords_Empty_Test {
     myLogger.setDebugMode( false );
   }
 
-  @AfterClass
+  @AfterAll
   public static void tearDownAfterClass() throws Exception {
   }
 
@@ -86,7 +85,7 @@ public class EN_Keywords_Empty_Test {
    */
   @Test
   public void tc_SetValue_SV() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
@@ -116,7 +115,7 @@ public class EN_Keywords_Empty_Test {
    */
   @Test
   public void tc_TypeKey_SV() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     assertEquals( "NO VALUE", myClipBoard.getValue().get( 0 ) );
@@ -147,7 +146,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyCaption_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -187,7 +186,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyCaptionREGX_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -228,7 +227,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyCaptionWCM_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -268,7 +267,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifySelectedValue_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -308,7 +307,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifySelectedValueREGX_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -349,7 +348,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifySelectedValueWCM_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -390,7 +389,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyLabel_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -430,7 +429,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyLabelREGX_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -470,7 +469,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyLabelWCM_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -511,7 +510,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyPlaceholder_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -551,7 +550,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyPlaceholderREGX_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -591,7 +590,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyPlaceholderWCM_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -628,18 +627,23 @@ public class EN_Keywords_Empty_Test {
    * 
    * This test verifies whether the exception OKWNotAllowedValueException is thrown.
    * \~
+   *  ( expected = OKWNotAllowedValueException.class )
    * \author Zoltan Hrabovszki
    * \date 2018.12.26
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test
   public void tc_VerifyMaxLength_EMPTY_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
   
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyMaxLength( "All_MethodsObj", "${EMPTY}" );
 
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   /**
@@ -655,7 +659,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyTooltip_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -695,7 +699,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyTooltipREGX_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -735,7 +739,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyTooltipWCM_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -775,7 +779,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyTablecellValue_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -817,7 +821,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyTablecellValueREGX_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -859,7 +863,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyTablecellValueWCM_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -889,23 +893,27 @@ public class EN_Keywords_Empty_Test {
   }
 
 
-  // \~german
-  // \brief
+  /** \~german
   //
   //
   // \~english
   // \~
+  // ( expected = OKWNotAllowedValueException.class )
   // \author Zoltan Hrabovszki
   // \date 2016.09.24
-  @Test( expected = OKWNotAllowedValueException.class )
+   */
+  @Test
   public void tc_VerifyExists_EMPTY_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
   
     EN.SelectWindow( "Rechner" );
-    EN.VerifyExists( "All_MethodsObj", "${EMPTY}" );
 
-    EN.EndTest();
+    EN.VerifyExists( "All_MethodsObj", "${EMPTY}" );
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   /** \~german
@@ -918,18 +926,23 @@ public class EN_Keywords_Empty_Test {
    * 
    * This test verifies whether the exception OKWNotAllowedValueException is thrown.
    * \~
+   * expected: OKWNotAllowedValueException
    * \author Zoltan Hrabovszki
    * \date 2016.09.24
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test
   public void tc_VerifyIsActive_EMPTY_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
   
     EN.SelectWindow( "Rechner" );
     EN.VerifyIsActive( "All_MethodsObj", "${EMPTY}" );
 
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
+
   }
 
 /**
@@ -945,7 +958,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyValue_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -985,7 +998,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyValueREGX_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -1026,7 +1039,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyValueWCM_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -1068,7 +1081,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyBadge_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -1109,7 +1122,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyBadgeREGX_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -1150,7 +1163,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyBadgeWCM_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -1190,15 +1203,20 @@ public class EN_Keywords_Empty_Test {
    * \author daniel KRüger
    * \date 2019.06.18
    */
-  @Test( expected = OKWNotAllowedValueException.class )
+  @Test
+ // ( expected = OKWNotAllowedValueException.class )
   public void tc_VerifyMinLength_EMPTY_OKWNotAllowedValueException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
   
     EN.SelectWindow( "Rechner" );
     EN.VerifyMinLength( "All_MethodsObj", "${EMPTY}" );
 
-    EN.EndTest();
+    Assertions.assertThrows( OKWNotAllowedValueException.class, () ->
+    {
+        EN.EndTest();
+    });
+
   }
   
   /**
@@ -1215,7 +1233,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyErrorMSG_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -1256,7 +1274,7 @@ public class EN_Keywords_Empty_Test {
   @Test
   public void tc_VerifyErrorMSG_REGX_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();
@@ -1294,10 +1312,10 @@ public class EN_Keywords_Empty_Test {
    *  \author Daniel Krüger
    *  \\date 2019.05.31
    */
-  @Test
+   @Test
   public void tc_VerifyErrorMSG_WCM_Empty() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     // Löschen des Clipboards
     myClipBoard.Clear();

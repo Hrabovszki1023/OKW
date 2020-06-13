@@ -7,7 +7,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>autoit</artifactId>
-	<!-- http://mvnrepository.com/artifact/net.sf.jacob-project/jacob -->
+<!-- http://mvnrepository.com/artifact/net.sf.jacob-project/jacob -->
 	<dependencies>
 		<dependency>
 			<groupId>net.sf.jacob-project</groupId>

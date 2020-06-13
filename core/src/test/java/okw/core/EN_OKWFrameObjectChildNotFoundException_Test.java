@@ -40,28 +40,26 @@
 package okw.core;
 
 import okw.OKW_TestClipboard;
-import okw.core.EN;
 import okw.exceptions.OKWFrameObjectChildNotFoundException;
 import okw.log.Logger_Sngltn;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
+import org.junit.jupiter.api.*;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Tag("AllCoreTests")
 public class EN_OKWFrameObjectChildNotFoundException_Test {
 
   static Logger_Sngltn     myLogger    = Logger_Sngltn.getInstance();
   static OKW_TestClipboard myClipBoard = OKW_TestClipboard.getInstance();
 
-  @Rule
-  public TestName          name        = new TestName();
+  public String TestName;
 
-  @BeforeClass
+  @BeforeEach
+  void init(TestInfo testInfo)
+  {
+      TestName = testInfo.getTestMethod().get().getName();
+  }
+
+  @BeforeAll
   public static void setUpBeforeClass() throws Exception {
     Logger_Sngltn myLogger = Logger_Sngltn.getInstance();
 
@@ -72,7 +70,7 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
     myLogger.setDebugMode( false );
   }
 
-  @AfterClass
+  @AfterAll
   public static void tearDownAfterClass() throws Exception {
   }
 
@@ -86,21 +84,24 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_ClickOn_OKWFrameObjectChildNotFoundException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.ClickOn( "IsNotDefindeInRechner" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
 
   /**
    *  \~german
-   *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch SelectMenu
    *  ausgelöst wird, wenn das Kindobjekt nicht vorhanden ist.
    * 
@@ -109,15 +110,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_SelectMenu_OKWFrameObjectChildNotFoundException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.SelectMenu( "IsNotDefindeInRechner" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   
@@ -131,19 +136,22 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void tc_DoubleClickOn_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.DoubleClickOn( "IsNotDefindeInRechner" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   
   /** \~german
-   *   \brief
    *   Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch die
    *   LFC-Select ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
    *  
@@ -152,21 +160,24 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *   \author Zoltan Hrabovszki
    *   \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_Select_OKWFrameObjectChildNotFoundException()
       throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.Select( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
   
   
   /**
    *  \~german
-   *  \brief
    *  Prüft ob die Ausnahme OKWFrameObjectChildNotFoundException durch SetFocus
    *  ausgelöst wird, wenn das Kinobjekt nicht vorhanden ist.
    * 
@@ -175,15 +186,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_SetFocus_OKWFrameObjectChildNotFoundException()
       throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.SetFocus( "IsNotDefindeInRechner" );
-    
-    EN.EndTest();
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
 
@@ -198,14 +212,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_LogCaption_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.LogCaption( "IsNotDefindeInRechner" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   } 
   
 
@@ -220,14 +238,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_LogExists_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.LogExists( "IsNotDefindeInRechner" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   } 
   
   /**
@@ -241,14 +263,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_LogHasFocus_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.LogHasFocus( "IsNotDefindeInRechner" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   } 
   
   /**
@@ -262,14 +288,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_LogIsActive_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.LogIsActive( "IsNotDefindeInRechner" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }   
   
   /**
@@ -283,14 +313,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_LogLabel_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.LogLabel( "IsNotDefindeInRechner" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }   
   
   /**
@@ -304,14 +338,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019.05.07
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_LogPlaceholder_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.LogPlaceholder( "IsNotDefindeInRechner" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -325,14 +363,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_LogSelected_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.LogSelected( "IsNotDefindeInRechner" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -346,14 +388,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_LogTablecellValue_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.LogTablecellValue( "IsNotDefindeInRechner", "1", "1" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -367,14 +413,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_LogTooltip_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.LogTooltip( "IsNotDefindeInRechner" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -388,14 +438,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_LogValue_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.LogValue( "IsNotDefindeInRechner" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
   
   /**
@@ -409,15 +463,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_MemorizeCaption_OKWFrameObjectChildNotFoundException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.MemorizeCaption( "IsNotDefindeInRechner", "Key" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -431,15 +489,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_MemorizeExists_OKWFrameObjectChildNotFoundException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.MemorizeExists( "IsNotDefindeInRechner", "Key" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }  
 
   /**
@@ -453,15 +515,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_MemorizeHasFocus_OKWFrameObjectChildNotFoundException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.MemorizeHasFocus( "IsNotDefindeInRechner", "Key" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }    
 
   /**
@@ -475,15 +541,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_IsActive_OKWFrameObjectChildNotFoundException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.MemorizeIsActive( "IsNotDefindeInRechner", "Key" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }    
 
   /**
@@ -497,15 +567,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_MemorizeLabel_OKWFrameObjectChildNotFoundException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.MemorizeLabel( "IsNotDefindeInRechner", "Key" );
     
-    EN.EndTest();
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }    
 
   /**
@@ -519,15 +593,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_MemorizePlaceholder_OKWFrameObjectChildNotFoundException()
       throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.MemorizePlaceholder( "IsNotDefindeInRechner", "Key" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -541,15 +619,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_MemorizeTablecellValue_OKWFrameObjectChildNotFoundException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.MemorizeTablecellValue( "IsNotDefindeInRechner", "1", "1", "Key" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -563,15 +645,20 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_MemorizeTooltip_OKWFrameObjectChildNotFoundException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.MemorizeTooltip( "IsNotDefindeInRechner", "Key" );
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
     
-    EN.EndTest();
   }
 
   /**
@@ -585,15 +672,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_MemorizeSelectedValue_OKWFrameObjectChildNotFoundException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
     EN.MemorizeSelectedValue( "IsNotDefindeInRechner", "Key" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -607,15 +697,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_MemorizeValue_OKWFrameObjectChildNotFoundException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.MemorizeValue( "IsNotDefindeInRechner", "Key" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
   
 
@@ -630,15 +724,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2019-11-22
   */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_SelectChild_OKWFrameObjectChildNotFoundException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.SelectChild( "IsNotDefindeInRechner" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   
@@ -653,15 +751,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_SetValue_OKWFrameObjectChildNotFoundException()
       throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.SetValue( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
 
@@ -676,15 +778,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_TypeKey_OKWFrameObjectChildNotFoundException()
       throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.TypeKey( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
   
   /**
@@ -698,14 +804,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyCaption_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyCaption( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
   
   /**
@@ -719,14 +829,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyCaptionWCM_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyCaptionWCM( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -740,14 +854,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyCaptionREGX_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyCaptionREGX( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
     /**
@@ -760,15 +878,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWFrameObjectChildNotFoundException.class )
+    @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
     public void TC_VerifyLabel_OKWFrameObjectChildNotFoundException() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
+
         EN.VerifyLabel( "IsNotDefindeInRechner", "Value" );
-        
-        EN.EndTest();
+
+        Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+        {
+            EN.EndTest();
+        });    
     }
   
   /**
@@ -781,14 +903,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyLabelWCM_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyLabelWCM( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -804,14 +930,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyLabelREGX_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyLabelREGX( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -827,14 +957,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyMaxLength_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyMaxLength( "IsNotDefindeInRechner", "2" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -847,15 +981,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyPlaceholder_OKWFrameObjectChildNotFoundException() throws Exception
   {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyPlaceholder( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
   
   /**
@@ -868,14 +1006,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyPlaceholderWCM_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyPlaceholderWCM( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -889,14 +1031,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyPlaceholderREGX_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyPlaceholderREGX( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -910,14 +1056,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyExists_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyExists( "IsNotDefindeInRechner", "YES" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   
@@ -932,15 +1082,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWFrameObjectChildNotFoundException.class )
+    @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
     public void TC_VerifyHasFocus_OKWFrameObjectChildNotFoundException() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
+
         EN.VerifyHasFocus( "IsNotDefindeInRechner", "YES" );
 
-        EN.EndTest();
+        Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+        {
+            EN.EndTest();
+        });    
     }  
 
   
@@ -955,15 +1109,19 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
      *  \author Zoltan Hrabovszki
      *  \date 2016.05.07
      */
-    @Test( expected = OKWFrameObjectChildNotFoundException.class )
+    @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
     public void TC_VerifyIsActive_OKWFrameObjectChildNotFoundException() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.SelectWindow( "Rechner" );
+
         EN.VerifyIsActive( "IsNotDefindeInRechner", "YES" );
-        
-        EN.EndTest();
+
+        Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+        {
+            EN.EndTest();
+        });    
     }
 
   /**
@@ -977,14 +1135,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyTooltip_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyTooltip( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -998,14 +1160,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyTooltipWCM_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyTooltipWCM( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -1019,14 +1185,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyTooltipREGX_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyTooltipREGX( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -1040,14 +1210,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyValue_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyValue( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -1061,14 +1235,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyValueWCM_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyValueWCM( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -1082,14 +1260,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyValueREGX_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyValueREGX( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -1103,14 +1285,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyTabelcellValue_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyTablecellValue( "IsNotDefindeInRechner", "X", "Y", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -1124,14 +1310,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyTablecellValueWCM_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyTablecellValueWCM( "IsNotDefindeInRechner", "x", "Y", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
   
   
@@ -1146,14 +1336,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TCVerifyTablecellValueREGX_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyTablecellValueREGX( "IsNotDefindeInRechner", "X", "Y", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -1167,14 +1361,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifySelectedValue_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifySelectedValue( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -1188,14 +1386,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifySelectedWCM_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifySelectedValueWCM( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 
   /**
@@ -1209,14 +1411,18 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2016.05.07
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifySelectedValueREGX_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifySelectedValueREGX( "IsNotDefindeInRechner", "Value" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
   
   /**
@@ -1232,13 +1438,17 @@ public class EN_OKWFrameObjectChildNotFoundException_Test {
    *  \author Zoltan Hrabovszki
    *  \date 2018.06.18
    */
-  @Test( expected = OKWFrameObjectChildNotFoundException.class )
+  @Test// ( expected = OKWFrameObjectChildNotFoundException.class )
   public void TC_VerifyMinLength_OKWFrameObjectChildNotFoundException() throws Exception {
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
 
     EN.SelectWindow( "Rechner" );
+
     EN.VerifyMinLength( "IsNotDefindeInRechner", "2" );
-    
-    EN.EndTest();
+
+    Assertions.assertThrows( OKWFrameObjectChildNotFoundException.class, () ->
+    {
+        EN.EndTest();
+    });    
   }
 }

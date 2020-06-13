@@ -36,14 +36,14 @@
 
 package okw.seback;
 
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWVerifyingFailsException;
 
-import org.junit.*;
-import static org.junit.Assert.*;
-import org.junit.rules.TestName;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
 * \~
@@ -59,17 +59,13 @@ import org.junit.rules.TestName;
 *  @author Zoltan Hrabovszki
 *  @date 2017-07-23
 */
-@Ignore
-public class SeBACK_EN_Test {
+@Disabled
+public class SeBACK_EN_Test extends OKWTestBase{
 
   protected OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
 
   protected static String ApplicationName;
 
-  @Rule
-  public TestName         name  = new TestName();
-
-  
   /**
    * \~german
    * Testet die Implementierung des Schlüsselwortes ClickOn( FN ) für Klasse SeBACK .
@@ -81,7 +77,7 @@ public class SeBACK_EN_Test {
   @Test
   public void tcClickOn() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       
       EN.SetValue( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
@@ -110,7 +106,7 @@ public class SeBACK_EN_Test {
   @Test
   public void tcLogExists() throws Exception {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
     EN.LogExists( "BACK" );
   
@@ -129,14 +125,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+  @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
   public void tcLogHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.LogHasFocus( "BACK" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   /** 
@@ -150,7 +150,7 @@ public class SeBACK_EN_Test {
   @Test
   public void tcLogIsActive() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.LogIsActive( "BACK" );
@@ -169,13 +169,17 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
- @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+ @Test //(expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcLogToolTip_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.LogTooltip( "BACK" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
 
@@ -189,15 +193,19 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test( expected = OKWFrameObjectMethodNotImplemented.class )
+  @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
   public void tcLogLabel_OKWFrameObjectMethodNotImplemented() throws Exception
   {
 
-    EN.BeginTest( name.getMethodName() );
+    EN.BeginTest( TestName );
     EN.StartApp( ApplicationName );
 
     EN.LogLabel( "BACK" );
-    EN.EndTest();
+    
+    Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+    {
+        EN.EndTest();
+    });
   }
 
   /**
@@ -210,14 +218,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
- @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+ @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcLogValue_OKWFrameObjectMethodNotImplemented() throws Exception
   {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.LogValue( "BACK" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
 
@@ -231,14 +243,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+  @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcSetValue_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.SetValue( "BACK", "Hrabovszki" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
 
@@ -253,14 +269,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+  @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcTypeKey_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.TypeKey( "BACK", "Hrabovszki" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   
@@ -276,13 +296,14 @@ public class SeBACK_EN_Test {
   public void tcMemorizeExists_OKWFrameObjectMethodNotImplemented() throws Exception
   {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.MemorizeExists( "BACK", "SeBACK_MemorizeExists_1" );
 
       assertEquals( "YES", myMem.get("SeBACK_MemorizeExists_1" ) );
 
       EN.StopApp( ApplicationName );
+      
       EN.EndTest();
   }
 
@@ -296,14 +317,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+  @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcMemorizeHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.MemorizeHasFocus( "BACK", "SeBACK_MemorizeHasFocus" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   
@@ -320,13 +345,14 @@ public class SeBACK_EN_Test {
   @Test
   public void tcMemorizeIsActive() throws Exception {
 
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.MemorizeIsActive( "BACK", "SeBACK_MemorizeIsActive" );
 
       assertEquals( "YES", myMem.get( "SeBACK_MemorizeIsActive" ) );
 
       EN.StopApp( ApplicationName );
+      
       EN.EndTest();
   }
 
@@ -341,14 +367,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-   @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+   @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
    public void tcMemorizeLabel_OKWFrameObjectMethodNotImplemented() throws Exception
    {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.MemorizeLabel( "BACK", "SeBACK_MemorizeLabel_1" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
    }
 
    
@@ -362,13 +392,17 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-   @Test (expected = OKWFrameObjectMethodNotImplemented.class)
+   @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
    public void tcMemorizeToolTip_OKWFrameObjectMethodNotImplemented() throws Exception
    {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       EN.MemorizeTooltip( "BACK", "SeBACK_MemorizeTooltip" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
 
@@ -382,14 +416,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcMemorizeValue_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.MemorizeValue( "BACK", "SeBACK_LogValue_2" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
 
@@ -403,15 +441,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyCaption_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyCaption( "BACK", "Abc" );
-      EN.EndTest();
-
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   /**
@@ -424,14 +465,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyCaptionWCM_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyCaptionWCM( "BACK", "${EMPTY}" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
 
@@ -445,14 +490,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyCaptionREGX_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyCaptionREGX( "BACK", "${EMPTY}" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
 
@@ -468,14 +517,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test( expected = OKWVerifyingFailsException.class )
+  @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyExists_ExistsYesExpectedNo_OKWVerifyingFailsException()  throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       
       EN.VerifyExists( "BACK", "NO" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   /**
@@ -492,7 +545,7 @@ public class SeBACK_EN_Test {
   @Test
   public void tcVerifyExists_ExistsYesExpectedYes() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyExists( "BACK", "YES" );
@@ -512,14 +565,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected= OKWFrameObjectMethodNotImplemented.class)
+  @Test // (expected= OKWFrameObjectMethodNotImplemented.class)
   public void tcVerifyHasFocus() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyHasFocus( "BACK", "NO" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
   
 
@@ -534,7 +591,7 @@ public class SeBACK_EN_Test {
   @Test
   public void tcVerifyIsActive() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyIsActive( "BACK", "YES" );
@@ -554,14 +611,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyLabel_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyLabel( "BACK", "Name:" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   
@@ -575,14 +636,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyLabelWCM_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyLabelWCM( "BACK", "Name?" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
   
@@ -596,14 +661,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyLabelREGX_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyLabelREGX( "BACK", "Name\\W" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
 
@@ -617,14 +686,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyTooltip_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyTooltip( "BACK", "Den Namen eingeben" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
 
@@ -638,14 +711,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyTooltipWCM_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
   
       EN.VerifyTooltipWCM( "BACK", "??? Namen eingeben" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
 
@@ -659,14 +736,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyTooltipREGX_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
   
       EN.VerifyTooltipREGX( "BACK", "\\wen Namen eingeben" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 
 
@@ -680,14 +761,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyValue_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyValue( "BACK", "Zoltan" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
   
   
@@ -701,14 +786,18 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyValueWCM( "BACK", "Abc" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
    }
   
    
@@ -722,13 +811,17 @@ public class SeBACK_EN_Test {
    *  @author Zoltan Hrabovszki
    *  @date 2017-07-23
    */ 
-  @Test(expected=OKWFrameObjectMethodNotImplemented.class )
+  @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
 
       EN.VerifyValueREGX( "BACK", ".oltan" );
-      EN.EndTest();
+      
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+      {
+          EN.EndTest();
+      });
   }
 }

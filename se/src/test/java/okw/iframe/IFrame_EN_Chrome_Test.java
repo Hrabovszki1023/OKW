@@ -3,9 +3,8 @@ package okw.iframe;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.*;
+
 
 /**
 * \~
@@ -16,7 +15,7 @@ import org.junit.BeforeClass;
 public class IFrame_EN_Chrome_Test extends IFrame_EN_Test
 {
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception
 	{
 		ApplicationName = "Chrome";
@@ -30,13 +29,13 @@ public class IFrame_EN_Chrome_Test extends IFrame_EN_Test
         Logger_Sngltn.getInstance().setDebugMode(true);
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception
 	{
 		myLog2HTML.Result2HTML( "IFrame_EN_Chrome_Test" );
 	}
 	
-    @After
+    @AfterEach
     public void AfterTest() throws Exception
     {
     	Runtime rt = Runtime.getRuntime();

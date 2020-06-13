@@ -36,19 +36,13 @@
 
 package okw.setextarea;
 
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.OKWVerifyingFailsException;
 
-import org.junit.Ignore;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TestName;
-import org.junit.runners.MethodSorters;
-
-import static org.junit.Assert.*;
-
-import org.junit.FixMethodOrder;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
 * \~
@@ -56,16 +50,12 @@ import org.junit.FixMethodOrder;
 * 
 * @author zoltan
 */
-@Ignore
-@FixMethodOrder( MethodSorters.NAME_ASCENDING )
-public class SeTextarea_EN_Test
+@Disabled
+public class SeTextarea_EN_Test extends OKWTestBase
 {
 
     protected OKW_Memorize_Sngltn myMem = OKW_Memorize_Sngltn.getInstance();
     protected static String     ApplicationName;
-
-    @Rule
-    public TestName             name  = new TestName();
 
     /**
      *  Prüft ob ein vorhandenes objekt existiert.
@@ -75,7 +65,7 @@ public class SeTextarea_EN_Test
     public void tcLogExists() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -92,7 +82,7 @@ public class SeTextarea_EN_Test
     @Test
     public void tcClickOn() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -116,7 +106,7 @@ public class SeTextarea_EN_Test
     public void tcLogHasFocus() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -135,7 +125,7 @@ public class SeTextarea_EN_Test
     public void tcLogIsActive() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -152,7 +142,7 @@ public class SeTextarea_EN_Test
     @Test
     public void tcLogLabel() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -169,7 +159,7 @@ public class SeTextarea_EN_Test
     @Test
     public void tcLogToolTip() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -187,7 +177,7 @@ public class SeTextarea_EN_Test
     public void tcLogValue() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -208,7 +198,7 @@ public class SeTextarea_EN_Test
     public void tcMemorizeExists_en() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -227,7 +217,7 @@ public class SeTextarea_EN_Test
     public void tcMemorizeHasFocus() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -247,7 +237,7 @@ public class SeTextarea_EN_Test
     public void tcMemorizeIsActive_en() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -267,7 +257,7 @@ public class SeTextarea_EN_Test
     public void tcMemorizeLabel() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -291,7 +281,7 @@ public class SeTextarea_EN_Test
     public void tcMemorizeToolTip() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -311,7 +301,7 @@ public class SeTextarea_EN_Test
     public void tcMemorizeValue() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -334,7 +324,7 @@ public class SeTextarea_EN_Test
     public void tcSetFocus_ReadableAndEnabled() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -359,11 +349,11 @@ public class SeTextarea_EN_Test
     // * disable ist abgeschaltet
     //
     @Test
-    // @Ignore( "Frame for 'SeInputTextReadonly' not found" )
+    // @Disabled( "Frame for 'SeInputTextReadonly' not found" )
     public void tcSetFocus_ReadonlyAndEnabled() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea_readonly.htm" );
 
@@ -388,7 +378,7 @@ public class SeTextarea_EN_Test
     public void tcSetValue() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -418,7 +408,7 @@ public class SeTextarea_EN_Test
     public void tcSetValue_IGNORE() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -447,7 +437,7 @@ public class SeTextarea_EN_Test
     public void tcTypeKey() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -472,7 +462,7 @@ public class SeTextarea_EN_Test
     public void tc_TypeKey_Delete() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -497,7 +487,7 @@ public class SeTextarea_EN_Test
     public void tcTypeKey_IGNORE() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -536,7 +526,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyExists_ExistsNoExpectedNo() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -549,10 +539,10 @@ public class SeTextarea_EN_Test
     // Erwartet wird, dass das Objekt existiert.
     // Es wird geprüft auf das default timout exception getriggert wird.
     //
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyExists_ExistsNoExpectedYes_OKWVerifyingFailsException() throws Exception
     {
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -561,17 +551,21 @@ public class SeTextarea_EN_Test
         EN.VerifyExists( "ObjectNotExists", "YES" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     /** Prüft ob ein vorhandenes Objekt nicht existiert.
      *  Hier wird wird geprüft auf das default timout exception getriggert wird.
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyExists_ExistsYesExpectedNo_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -579,7 +573,12 @@ public class SeTextarea_EN_Test
         EN.VerifyExists( "Textarea 1", "NO" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     // / \brief
@@ -590,7 +589,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyExists_ExistsYesExpectedYes() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
 
@@ -614,7 +613,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyExists_IGNORE() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
 
         EN.StartApp( ApplicationName );
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -633,7 +632,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyHasFocus() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -650,11 +649,11 @@ public class SeTextarea_EN_Test
     // \brief
     // Focus eines Textfeldes prüfen.
     //
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyHasFocus_HasFocusYesExpectedNo_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -665,17 +664,22 @@ public class SeTextarea_EN_Test
         EN.VerifyHasFocus( "Textarea 2", "NO" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     // \brief
     // Focus eines Textfeldes prüfen.
     //
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyHasFocus_HasFocusNoExpectedYes_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -685,7 +689,12 @@ public class SeTextarea_EN_Test
         EN.VerifyHasFocus( "Textarea 1", "YES" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     // \~german
@@ -704,7 +713,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyHasFocus_IGNORE() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -727,7 +736,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyIsActive() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         // Objekt auf "nicht aktiv"(attribut disabled gesetzt) prüfen
@@ -771,7 +780,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyMaxLength() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         // Objekt ist "aktiv" prüfen
@@ -794,11 +803,11 @@ public class SeTextarea_EN_Test
      * \author Zoltan Hrabovszki
      * \date 2019.01.19
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyMaxLength_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         // Objekt ist "aktiv" prüfen
@@ -808,7 +817,12 @@ public class SeTextarea_EN_Test
         EN.VerifyMaxLength( "Textarea MaxLength 40", "41" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
     
     
@@ -827,7 +841,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyMinLength() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         // Objekt ist "aktiv" prüfen
@@ -851,11 +865,11 @@ public class SeTextarea_EN_Test
      * \author Zoltan Hrabovszki
      * \date 2019.01.19
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyMinLength_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         // Objekt ist "aktiv" prüfen
@@ -865,7 +879,12 @@ public class SeTextarea_EN_Test
         EN.VerifyMinLength( "Textarea 2", "1" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     
@@ -883,7 +902,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyLabel() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -903,11 +922,11 @@ public class SeTextarea_EN_Test
     // \~
     // \author Zoltan Hrabovszki
     // \date 2014.12.03
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyLabel_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -916,7 +935,12 @@ public class SeTextarea_EN_Test
         EN.VerifyLabel( "Textarea 1", "Xxxx:" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     // \~german
@@ -930,7 +954,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyLabelWCM() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -950,11 +974,11 @@ public class SeTextarea_EN_Test
     // \~
     // \author Zoltan Hrabovszki
     // \date 2014.12.03
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyLabelWCM_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -963,7 +987,12 @@ public class SeTextarea_EN_Test
         EN.VerifyLabelWCM( "Textarea 1", "####:" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     // \~german
@@ -977,7 +1006,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyLabelREGX() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -986,6 +1015,7 @@ public class SeTextarea_EN_Test
         EN.VerifyLabelREGX( "Textarea 1", "Textarea 1\\W" );
 
         EN.StopApp( ApplicationName );
+        
         EN.EndTest();
     }
 
@@ -996,11 +1026,11 @@ public class SeTextarea_EN_Test
     // \~
     // \author Zoltan Hrabovszki
     // \date 2014.12.03
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyLabelREGX_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1009,7 +1039,12 @@ public class SeTextarea_EN_Test
         EN.VerifyLabelREGX( "Textarea 1", "Label Textarea\\w" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     // \~german
@@ -1023,7 +1058,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyTooltip() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1047,7 +1082,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyTooltip_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1071,7 +1106,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyTooltipWCM() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1080,8 +1115,9 @@ public class SeTextarea_EN_Test
         EN.VerifyTooltipWCM( "Textarea 1", "Title: Textarea #" );
 
         EN.StopApp( ApplicationName );
+        
         EN.EndTest();
-    }
+     }
 
     // \~german
     // \brief
@@ -1090,11 +1126,11 @@ public class SeTextarea_EN_Test
     // \~
     // \author Zoltan Hrabovszki
     // \date 2014.12.03
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyTooltipWCM_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1103,7 +1139,11 @@ public class SeTextarea_EN_Test
         EN.VerifyTooltipWCM( "Textarea 1", "#oltan" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
     }
 
     // \~german
@@ -1117,7 +1157,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyTooltipREGX() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1136,11 +1176,11 @@ public class SeTextarea_EN_Test
     // \~
     // \author Zoltan Hrabovszki
     // \date 2014.12.03
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyTooltipREGX_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1149,7 +1189,12 @@ public class SeTextarea_EN_Test
         EN.VerifyTooltipREGX( "Textarea 1", "\\Witle Textarea 1" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     /** \~german
@@ -1163,7 +1208,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyPlaceholder() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1184,11 +1229,11 @@ public class SeTextarea_EN_Test
      * @author Zoltan Hrabovszki
      * @date 2014.12.03
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyPlaceholder_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1197,7 +1242,12 @@ public class SeTextarea_EN_Test
         EN.VerifyPlaceholder( "Textarea 1", "Placeholder: wrong" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     /**
@@ -1212,7 +1262,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyPlaceholderWCM() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1221,6 +1271,7 @@ public class SeTextarea_EN_Test
         EN.VerifyPlaceholderWCM( "Textarea 1", "Placeholder: Textarea 1" );
 
         EN.StopApp( ApplicationName );
+        
         EN.EndTest();
     }
 
@@ -1231,11 +1282,11 @@ public class SeTextarea_EN_Test
      *  \author Zoltan Hrabovszki
      *  \date 2014.12.03
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyPlaceholderWCM_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1244,7 +1295,12 @@ public class SeTextarea_EN_Test
         EN.VerifyPlaceholderWCM( "Textarea 1", "Placeholder: error" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     /** \~german
@@ -1258,7 +1314,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyPlaceholderREGX() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1278,11 +1334,11 @@ public class SeTextarea_EN_Test
      *  @author Zoltan Hrabovszki
      *  @date 2014-12-03
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyPlaceholderREGX_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1291,7 +1347,12 @@ public class SeTextarea_EN_Test
         EN.VerifyPlaceholderREGX( "Textarea 1", "Placeholder: error" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
     
     
@@ -1306,7 +1367,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyValue() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1334,7 +1395,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyValue_DELETE_EMPTY() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1357,11 +1418,11 @@ public class SeTextarea_EN_Test
      *  @author Zoltan Hrabovszki
      *  @date 2014-12-03
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyValue_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1374,7 +1435,12 @@ public class SeTextarea_EN_Test
         EN.VerifyValue( "Textarea 1", "Soltan" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     /** \~german
@@ -1388,7 +1454,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyValueWCM() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1417,7 +1483,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyValueWCM_DELETE_EMPTY() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1441,11 +1507,11 @@ public class SeTextarea_EN_Test
      *  @author Zoltan Hrabovszki
      *  @date 2014-12-03
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyValueWCM_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1458,7 +1524,12 @@ public class SeTextarea_EN_Test
         EN.VerifyValueWCM( "Textarea 1", "#oltan" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 
     /** \~german
@@ -1472,7 +1543,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyValueREGX() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1500,7 +1571,7 @@ public class SeTextarea_EN_Test
     public void tcVerifyValueREGX_DELETE_EMPTY() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1524,11 +1595,11 @@ public class SeTextarea_EN_Test
      *  \date 2014.12.03
      * @throws Exception
      */
-    @Test( expected = OKWVerifyingFailsException.class )
+    @Test // ( expected = OKWVerifyingFailsException.class )
     public void tcVerifyValueREGX_OKWVerifyingFailsException() throws Exception
     {
 
-        EN.BeginTest( name.getMethodName() );
+        EN.BeginTest( TestName );
         EN.StartApp( ApplicationName );
 
         EN.TypeKey( "URL", "http://test.openkeyword.de/Textarea/textarea.htm" );
@@ -1541,6 +1612,11 @@ public class SeTextarea_EN_Test
         EN.VerifyValueREGX( "Textarea 1", "Soltan" );
 
         EN.StopApp( ApplicationName );
-        EN.EndTest();
+        
+        Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+        {
+            EN.EndTest();
+        });
+
     }
 }

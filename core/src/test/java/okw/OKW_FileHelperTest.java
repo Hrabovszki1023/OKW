@@ -38,26 +38,12 @@
 */
 package okw;
 
-//import junit.framework.TestCase;
-import org.junit.*;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
+@Tag("AllCoreHelperTests")
 public class OKW_FileHelperTest
 {
-
-    /**    @BeforeClass
-    public static void myBeforeClass()
-    {
-        // TODO: Add Init code.
-    }
-    
-    @AfterClass
-    public static void myAfterClass()
-    {
-        // TODO: Add tear down code.
-    }
-    */
-
     @Test
     public void tcDosPath2UnixPath()
     {

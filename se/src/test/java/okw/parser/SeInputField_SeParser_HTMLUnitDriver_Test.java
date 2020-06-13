@@ -3,8 +3,8 @@ package okw.parser;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.*;
+
 
 /**
 * \~
@@ -16,7 +16,7 @@ public class SeInputField_SeParser_HTMLUnitDriver_Test extends SeInputField_SePa
 {
 	protected static Log2HTML myLog2HTML = null;
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception
 	{
 		ApplicationName = "HTMLUnit";
@@ -30,7 +30,7 @@ public class SeInputField_SeParser_HTMLUnitDriver_Test extends SeInputField_SePa
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception
 	{
 		myLog2HTML.Result2HTML( "target/SeInputField_SeParser_HTMLUnitDriver_Test.html" );

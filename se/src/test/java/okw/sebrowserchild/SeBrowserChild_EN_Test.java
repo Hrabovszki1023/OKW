@@ -1,14 +1,13 @@
 package okw.sebrowserchild;
 
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.exceptions.*;
 
-import org.junit.*;
+import org.junit.jupiter.api.*;
 
-import org.junit.rules.TestName;
-
-public class SeBrowserChild_EN_Test
+public class SeBrowserChild_EN_Test  extends OKWTestBase
     {
 
 	String cvOKWObject = "SeBrowserChild" + "";
@@ -17,16 +16,13 @@ public class SeBrowserChild_EN_Test
 	
 	protected static String ApplicationName;
 	
-    @Rule
-    public TestName name = new TestName();
-
-        /** \brief
+        /**
          * 
          */ 
         @Test
         public void tcSeBrowserChild_URL_VerifyValue() throws Exception
         {
-            EN.BeginTest( name.getMethodName() );
+            EN.BeginTest( TestName );
 
             EN.StartApp( ApplicationName );
             EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypePassword.htm" );
@@ -42,10 +38,10 @@ public class SeBrowserChild_EN_Test
         /**
          *  Prüfen ob URL-Implemnetierung im BrowserChild vorhanden.
          */ 
-        @Test( expected = OKWVerifyingFailsException.class )
+        @Test // ( expected = OKWVerifyingFailsException.class )
         public void tcBrowserChild_URL_OKWVerifyingFailsException() throws Exception
         {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
 
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypePassword.htm" );
@@ -53,24 +49,30 @@ public class SeBrowserChild_EN_Test
           EN.SelectWindow( "InputTypePassword" );
           EN.VerifyValue("URL", "Falscher Wert");
           
-          EN.EndTest();
+          Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+          {
+              EN.EndTest();
+          });
         }
 
         
         /**
          *  Prüft ob bei nicht vorhandenem Browserchild die Exception "" ausgelöst wird.
          */ 
-        @Test( expected = OKWGUIObjectNotFoundException.class )
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
         public void tcBrowserChild_SelectWindowL_OKWGUIObjectNotFoundException() throws Exception
         {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
 
           EN.StartApp( ApplicationName );
           EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InputTypePassword.htm" );
 
           EN.SelectWindow( "InputTypeTextDisabled" );
           
-          EN.EndTest();
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
         }
         
         
@@ -80,7 +82,7 @@ public class SeBrowserChild_EN_Test
         @Test
         public void tcBrowserChild_BACK() throws Exception
         {
-          EN.BeginTest( name.getMethodName() );
+          EN.BeginTest( TestName );
 
           EN.StartApp( ApplicationName );
           EN.SetValue( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );

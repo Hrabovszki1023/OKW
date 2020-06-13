@@ -36,12 +36,13 @@
 
 package okw.iframe;
 
+import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.*;
-import org.junit.rules.TestName;
+import org.junit.jupiter.api.*;
+
 
 /**
 * \~
@@ -57,8 +58,9 @@ import org.junit.rules.TestName;
 *  @author Zoltan Hrabovszki
 *  @date 2017-07-23
 */
-@Ignore
-public class IFrame_EN_Test {
+@Disabled
+public class IFrame_EN_Test extends OKWTestBase
+{
 
   protected static Log2HTML myLog2HTML = null;
 
@@ -66,10 +68,6 @@ public class IFrame_EN_Test {
 
   protected static String ApplicationName;
 
-  @Rule
-  public TestName         name  = new TestName();
-
-  
   /**
    * \~german
    * Testet die Implementierung des Schlüsselwortes ClickOn( FN ) für Klasse SeBACK .
@@ -81,7 +79,7 @@ public class IFrame_EN_Test {
   @Test
   public void tcFind_iFrameWithID() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       
       EN.SetValue( "URL", "http://test.openkeyword.de/iframe/iframeWithID.htm" );
@@ -115,7 +113,7 @@ public class IFrame_EN_Test {
   @Test
   public void tcFind_iFrameWithName() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       
       EN.SetValue( "URL", "http://test.openkeyword.de/iframe/iframeWithName.htm" );
@@ -150,7 +148,7 @@ public class IFrame_EN_Test {
   @Test
   public void tcFind_iFrameWithID_WindowEmbeded() throws Exception
   {
-      EN.BeginTest( name.getMethodName() );
+      EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
       
       EN.SetValue( "URL", "http://test.openkeyword.de/iframe/iframeWithID.htm" );

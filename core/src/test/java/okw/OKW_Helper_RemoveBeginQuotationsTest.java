@@ -39,52 +39,34 @@
 
 package okw;
 
-import java.util.Arrays;
-import java.util.Collection;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Tag;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
-import org.junit.*;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
-
-import static org.junit.Assert.*;
 import okw.log.*;
 
-@RunWith( Parameterized.class )
+@Tag("AllCoreHelperTests")
 public class OKW_Helper_RemoveBeginQuotationsTest
 {
-
-    private String              ExpectedValue;
-    private String              InputValue_1;
 
     /*
      *  \copydoc CurrentObject::Log()
      */
     public static Logger_Sngltn Log;
 
-    @Parameters( name = "{index}: {0} = RemoveBeginEndQuotations[>>{1}<<] " )
-    public static Collection<Object[]> data()
-    {
-        return Arrays.asList( new Object[][]
-        {
-                        { "", "\"\"" },
-                        { "A", "\"A\"" },
-                        { "ABC", "\"ABC\"" },
-                        { "\"", "\"\"\"" },
-                        { "A\"", "\"A\"\"" },
-                        { "Fuchs \"liebt\" Hase", "Fuchs \"liebt\" Hase" },
-                        { "Fuchs \"liebt\" Hase", "\"Fuchs \"liebt\" Hase\"" } } );
-    }
+    @ParameterizedTest
+    @CsvSource( value = {
+                        " '', '\"\"' ",
+                        " 'A', '\"A\"' ",
+                        " 'ABC', '\"ABC\"' ",
+                        " '\"', '\"\"\"' ",
+                        " 'A\"', '\"A\"\"' ",
+                        " 'Fuchs \"liebt\" Hase', 'Fuchs \"liebt\" Hase' ",
+                        " 'Fuchs \"liebt\" Hase', '\"Fuchs \"liebt\" Hase\"' " } )
 
-    public OKW_Helper_RemoveBeginQuotationsTest( String ExpectedValue, String InputValue_1 )
-    {
-
-        this.ExpectedValue = ExpectedValue;
-
-        this.InputValue_1 = InputValue_1;
-    }
-
-    //@BeforeClass
+    //@BeforeAll
     public static void myTestFixtureSetUp()
     {
         Log = Logger_Sngltn.getInstance();
@@ -96,7 +78,7 @@ public class OKW_Helper_RemoveBeginQuotationsTest
     }
 
     @Test
-    public void tcMatchStr()
+    public void tcMatchStr( String ExpectedValue, String InputValue_1 )
     {
         String actual = "";
         String expected = ExpectedValue;

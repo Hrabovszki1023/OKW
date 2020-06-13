@@ -3,8 +3,8 @@ package browser;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.*;
+
 
 /**
 * \~
@@ -14,7 +14,7 @@ import org.junit.BeforeClass;
 */
 public class FrmSeHTMLUnitDriver_Test extends FrmBrowserBase_Test
 {
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception
 	{
 		ApplicationName = "HTMLUnit";
@@ -28,7 +28,7 @@ public class FrmSeHTMLUnitDriver_Test extends FrmBrowserBase_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception
 	{
 		myLog2HTML.Result2HTML("target/OKWResult_FrmSeHTMLUnitDriver_Test.html");

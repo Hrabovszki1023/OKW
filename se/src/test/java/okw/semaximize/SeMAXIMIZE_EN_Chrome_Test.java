@@ -3,8 +3,8 @@ package okw.semaximize;
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.*;
+
 
 /**
 * \~
@@ -16,7 +16,7 @@ public class SeMAXIMIZE_EN_Chrome_Test extends SeMAXIMIZE_EN_Test
 {
 	protected static Log2HTML myLog2HTML = null;
 
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception
 	{
 		ApplicationName = "Chrome";
@@ -30,7 +30,7 @@ public class SeMAXIMIZE_EN_Chrome_Test extends SeMAXIMIZE_EN_Test
         Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception
 	{
 		myLog2HTML.Result2HTML("target/OKWResult_SeMAXIMIZE__Chrome_Test.html");

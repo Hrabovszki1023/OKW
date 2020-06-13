@@ -1,39 +1,15 @@
 package okw.setypekeyscharsequence;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.*;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.openqa.selenium.Keys;
 
 import okw.gui.adapter.selenium.SeTypeKeysCharSequence;
 
+@Tag("SeTypeKeysCharSequenceTest")
 public class SeTypeKeysCharSequenceTest
 {
-
-    @BeforeClass
-    public static void setUpBeforeClass() throws Exception
-    {
-    }
-
-    @AfterClass
-    public static void tearDownAfterClass() throws Exception
-    {
-    }
-
-    @Before
-    public void setUp() throws Exception
-    {
-    }
-
-    @After
-    public void tearDown() throws Exception
-    {
-    }
-
     @Test
     public void test_setALT()
     {
