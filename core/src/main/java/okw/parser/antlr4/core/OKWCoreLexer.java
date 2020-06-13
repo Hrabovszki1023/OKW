@@ -1,4 +1,4 @@
-// Generated from OKWCoreLexer.g4 by ANTLR 4.7.2
+// Generated from OKWCoreLexer.g4 by ANTLR 4.8
 
 package okw.parser.antlr4.core;
 
@@ -13,7 +13,7 @@ import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class OKWCoreLexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =

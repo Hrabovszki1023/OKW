@@ -1,4 +1,4 @@
-// Generated from OKWCoreParser.g4 by ANTLR 4.7.2
+// Generated from OKWCoreParser.g4 by ANTLR 4.8
 
 package okw.parser.antlr4.core;
 
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class OKWCoreParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -125,6 +125,14 @@ public class OKWCoreParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_root; }
 		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof OKWCoreParserListener ) ((OKWCoreParserListener)listener).enterRoot(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof OKWCoreParserListener ) ((OKWCoreParserListener)listener).exitRoot(this);
+		}
+		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof OKWCoreParserVisitor ) return ((OKWCoreParserVisitor<? extends T>)visitor).visitRoot(this);
 			else return visitor.visitChildren(this);
@@ -199,6 +207,14 @@ public class OKWCoreParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_okw_internal_var; }
 		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof OKWCoreParserListener ) ((OKWCoreParserListener)listener).enterOkw_internal_var(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof OKWCoreParserListener ) ((OKWCoreParserListener)listener).exitOkw_internal_var(this);
+		}
+		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof OKWCoreParserVisitor ) return ((OKWCoreParserVisitor<? extends T>)visitor).visitOkw_internal_var(this);
 			else return visitor.visitChildren(this);
@@ -250,6 +266,14 @@ public class OKWCoreParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_okw_env_var; }
 		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof OKWCoreParserListener ) ((OKWCoreParserListener)listener).enterOkw_env_var(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof OKWCoreParserListener ) ((OKWCoreParserListener)listener).exitOkw_env_var(this);
+		}
+		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof OKWCoreParserVisitor ) return ((OKWCoreParserVisitor<? extends T>)visitor).visitOkw_env_var(this);
 			else return visitor.visitChildren(this);
@@ -288,6 +312,14 @@ public class OKWCoreParser extends Parser {
 		}
 		@Override public int getRuleIndex() { return RULE_envvalue; }
 		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof OKWCoreParserListener ) ((OKWCoreParserListener)listener).enterEnvvalue(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof OKWCoreParserListener ) ((OKWCoreParserListener)listener).exitEnvvalue(this);
+		}
+		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof OKWCoreParserVisitor ) return ((OKWCoreParserVisitor<? extends T>)visitor).visitEnvvalue(this);
 			else return visitor.visitChildren(this);
@@ -321,6 +353,14 @@ public class OKWCoreParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_text; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof OKWCoreParserListener ) ((OKWCoreParserListener)listener).enterText(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof OKWCoreParserListener ) ((OKWCoreParserListener)listener).exitText(this);
+		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof OKWCoreParserVisitor ) return ((OKWCoreParserVisitor<? extends T>)visitor).visitText(this);

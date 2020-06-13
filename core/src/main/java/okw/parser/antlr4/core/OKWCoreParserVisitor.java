@@ -1,4 +1,4 @@
-// Generated from OKWCoreParser.g4 by ANTLR 4.7.2
+// Generated from OKWCoreParser.g4 by ANTLR 4.8
 
 package okw.parser.antlr4.core;
 
