@@ -696,7 +696,35 @@ public class EN
         myKernel.setLanguage( Language );
         myKernel.FileDelete( fpsPathAndFileName ); 
     }
+
+
+    /**
+     *  \copydoc IOKW_State::FilesDelete(String,String)
+     */
+    public static void FilesDelete( String fpsDirPath, String fpsFileMatch ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.FilesDelete( fpsDirPath, fpsFileMatch ); 
+    }
     
+    
+    /**
+     *  \copydoc IOKW_State::DirectoryDelete(String)
+     */
+    public static void DirectoryDelete( String PATH ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.DirectoryDelete( PATH ); 
+    }    
+
+    /**
+     *  \copydoc IOKW_State::DirectoryCreate(String)
+     */
+    public static void DirectoryCreate( String PATH ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.DirectoryCreate( PATH ); 
+    }
     
     /**
      *  \copydoc IOKW_State::VerifyFileExists(String,String)
@@ -705,6 +733,17 @@ public class EN
     {
         myKernel.setLanguage( Language );
         myKernel.VerifyFileExists( fpsPathAndFileName, ExpVal );
+    }
+
+    
+    
+    /**
+     *  \copydoc IOKW_State::VerifyFileExists(String,String)
+     */
+    public static void VerifyIsFile( String fpsPathAndFileName, String ExpVal ) throws Exception
+    {
+        myKernel.setLanguage( Language );
+        myKernel.VerifyIsFile( fpsPathAndFileName, ExpVal );
     }
 
     /**

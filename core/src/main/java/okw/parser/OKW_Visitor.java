@@ -44,6 +44,8 @@ import okw.parser.antlr4.core.*;
               {
                 lvsReturn = OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "HSEP" );
               }
+              else if ( okw.OKW_Properties.getInstance().containsKey( lvsReturn ))
+                  lvsReturn = okw.OKW_Properties.getInstance().getProperty( lvsReturn );
               else
               {
                 lvsReturn = System.getenv( lvsReturn );
@@ -59,7 +61,6 @@ import okw.parser.antlr4.core.*;
             
             switch (lvsReturn)
             {
-                    
                 case "Folder_LogMessages":
                     lvsReturn = OKW_Ini_Sngltn.getInstance().OKW_Enviroment.getFolder_LogMessages();
                     break;

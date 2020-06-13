@@ -615,12 +615,48 @@
 			</Text>
 		</Method>
 
+		<!-- Method: "DirectoryDelete"-->
+		<Method name="DirectoryDelete">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>DirectoryDelete</en>
+				<de>VerzeichnisLöschen</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "DirectoryCreate"-->
+		<Method name="DirectoryCreate">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>DirectoryCreate</en>
+				<de>VerzeichnisAnlegen</de>
+			</Text>
+		</Method>
+
 		<!-- Method: "VerifyFileExists"-->
 		<Method name="VerifyFileExists">
 			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
 			<Text key="KeyWordName">
 				<en>Verify File Exists</en>
 				<de>Prüfe Datei Vorhanden</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyIsFile"-->
+		<Method name="VerifyIsFile">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>VerifyIsFile</en>
+				<de>PrüfeIstDatei</de>
+			</Text>
+		</Method>
+
+		<!-- Method: "VerifyIsDirectory"-->
+		<Method name="VerifyIsDirectory">
+			<!-- Meldungen zu Vergleich der List<T> Längen(count) -->
+			<Text key="KeyWordName">
+				<en>VerifyIsDirectory</en>
+				<de>PrüfeIstVerzeichnis</de>
 			</Text>
 		</Method>
 

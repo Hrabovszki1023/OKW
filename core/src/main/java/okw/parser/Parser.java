@@ -12,6 +12,7 @@ import okw.parser.antlr4.core.OKWCoreParser.RootContext;
     public class Parser
     {
         /** \~german
+<<<<<<< HEAD
          *  Parst einen List&lt string&gt und ersetzt die Parser-Schlüsselewörter durch Werte.
          *  
          *  @param fpLsString2Parse Liste, die geparst werden soll.
@@ -22,6 +23,18 @@ import okw.parser.antlr4.core.OKWCoreParser.RootContext;
          *  
          *  \param fpLsString2Parse List to be parsed.
          * @return Parser keys are replaced by values.
+=======
+         *  Parst einen ArayList&lt string&gt, ersetzt die Parser-Schlüsslewörter durch Werte.
+         *  
+         *  \param fpLsString2Parse ArayList&lt string&gt, die geparst werden soll.
+         *  \return Parser Schlüssel sind durch Werte ersetzt.
+         *  
+         *  \~english
+         *  Parses an ArayList&lt string&gt, replaces the parser keywords with values.
+         *  
+         *  \param fpLsString2Parse ArayList&lt string&gt that should be parsed.
+         *  \return Parser Keys are replaced by values.
+>>>>>>> refs/heads/FileKeyWords
          * 
          *  \~
          *  \author Zoltan Hrabovszki
@@ -33,7 +46,7 @@ import okw.parser.antlr4.core.OKWCoreParser.RootContext;
             
             for (String Value : fpLsString2Parse )
             {
-                if (Value.equals( "" ))
+                if ("".equals( Value ))
                 {
                   lvLsReturn.add("");
                 }
@@ -47,6 +60,7 @@ import okw.parser.antlr4.core.OKWCoreParser.RootContext;
         }
         
         /** \~german
+<<<<<<< HEAD
          *  Parst einen _string und ersetzt die Parser-Schlüsslewörter durch Werte.
          *  
          *  @param fpsString2Parse String, der geparst werden muss.
@@ -55,6 +69,18 @@ import okw.parser.antlr4.core.OKWCoreParser.RootContext;
          *  \~english
          *  
          *  @param fpsString2Parse Functional name of the object.
+=======
+         *  Das ist die Parser-methode um einen string zu parsen und die Parser-Schlüsselwörter durch Werte zu ersetzten .
+         *  
+         *  @param fpsString2Parse String, der geparst werden soll.
+         *  @return Rückgabe des geparsten Strings: Parser Schlüssel sind durch Werte ersetzt.
+         *  
+         *  \~english
+         *  Das ist die Parser-methode um einen string zu parsen und die Parser-Schlüsselwörter durch Werte zu ersetzten .
+         *  
+         *  @param fpsString2Parse String to be parsed. 
+         *  @return Return of the parsed string: Parser keys are replaced by values.
+>>>>>>> refs/heads/FileKeyWords
          * 
          *  \~
          *  @author Zoltan Hrabovszki

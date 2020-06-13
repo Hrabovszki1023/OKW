@@ -733,7 +733,7 @@ public class EN_Keywords_DELETE_Test
     });
   }
 
-  // \~german
+// \~german
   // \brief
   //
   //

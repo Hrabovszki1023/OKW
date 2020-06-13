@@ -53,9 +53,11 @@ import okw.gui.IGUIChildwindow;
 import okw.gui.IGUIWindow;
 
 /** \~german
- * Klasse OK representiert den Core Zustand OK.
+ * Klasse OK representiert den Core Zustand "OK".
  * 
  * Testausführung mit GUI-Aktivität und es ist keine Exception ausgelöst worden.
+ * 
+ * 2019-12-27 - LogMessenger + LM_Ok.xml auf ok.properties umgestellt.
  * 
  * \~english
  * \~
@@ -64,17 +66,13 @@ import okw.gui.IGUIWindow;
  */
 public class OK implements IOKW_State
 {
-
-    private okw.OKW_Properties myOKW_Properties = okw.OKW_Properties.getInstance();
-
     // \copydoc OKWLanguage
     private static OKWLanguage              CL;
 
     // \copydoc Logger_Sngltn
     private static Logger_Sngltn            Log;
 
-    // \copydoc LogMessenger
-    private static LogMessenger             LM;
+    private static OKW_Properties           PROP;
 
     // \copydoc OKW_CurrentObject_Sngltn
     private static OKW_CurrentObject_Sngltn CO;
@@ -102,7 +100,9 @@ public class OK implements IOKW_State
         {
             CL = OKWLanguage.getInstance();
             Log = Logger_Sngltn.getInstance();
-            LM = new LogMessenger( "OK" );
+            
+            PROP = OKW_Properties.getInstance();
+            
             CO = OKW_CurrentObject_Sngltn.getInstance();
             MEM = OKW_Memorize_Sngltn.getInstance();
     
@@ -124,7 +124,7 @@ public class OK implements IOKW_State
 
     /**
      *  \~german
-     * Methode zur Zentrale Exception-Auswertung.
+     * In dieser Methode werden zentral die Exceptions ausgewertet.
      *
      * Methode führt folge Aktivitäten aus:
      * -# Exception wird als Log ausgegeben.
@@ -135,9 +135,20 @@ public class OK implements IOKW_State
      *
      * \param e Exception aus der OK-Schlüsselwort-Methode
      * \~english
+     * In this method the exceptions are evaluated centrally.
+     *
+     * method executes the following activities:
+     * -# Exception is displayed as a log.
+     * -# Data of the current object is output for an error analysis (CO.LogObjectData()).
+     * -# If it is an OKWVerifyingFailsException, the status is "VerifyFail=true".
+     * -# Changes the state to NOK.
+     * then the exception is passed on to the Unittest framework.
+     *
+     * \param e Exception from the OK keyword method
+
      * \~
      * \author Zoltán Hrabovszki
-     * \date 02.03.2013
+     * \date 2013-03-02
      * @throws Exception 
      */
     protected void handleException( Exception e ) throws Exception
@@ -146,7 +157,7 @@ public class OK implements IOKW_State
     
         if ( e instanceof okw.exceptions.OKWVerifyingFailsException )
         {
-            Boolean lvbAbbort = myOKW_Properties.getProperty2Boolean( "core.AbbortOnVerifyFail", "false" );
+            Boolean lvbAbbort = PROP.getProperty2Boolean( "core.AbbortOnVerifyFail", "false" );
             _Kernel.setNOK_Reason( e );
             
             if ( lvbAbbort )
@@ -156,8 +167,8 @@ public class OK implements IOKW_State
                 this._Kernel.SetCoreStateNOK( );
             }
             else
-            {   // Wenn nicht abbgebrochen werden soll dann bleiben wir im State OK!
-                // Loggen zur Abbweichung die Objektdaten
+            {   // If we don't want to abort, then we stay at State OK!
+                // Loggen zur Abbweichung die Objektdaten.
                 logException( e, e_Wrapped );
                 // Und/Aber Merken uns dass wir einen VerifyFehler hatte mit this.VerifyFail = true
                 this.VerifyFail = true;
@@ -241,7 +252,7 @@ public class OK implements IOKW_State
         }
         else
         {
-            msg = myOKW_Properties.getProperty( "ok.endtest.verifypass.msg" );
+            msg = PROP.getProperty( "ok.endtest.verifypass.msg.${LANGUAGE}" );
             Log.LogPrint( msg );
         }
         }
@@ -336,8 +347,9 @@ public class OK implements IOKW_State
             Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogExists();
             String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-            String lvsLM = LM.GetMessage( "LogExists", "LogValue", lvsActual );
-
+            // String lvsLM = LM.GetMessage( "LogExists", "LogValue", lvsActual );
+            // Print: "Value found: '%P1%'"
+            String lvsLM = PROP.getProperty( "ok.Log.ValueFound.${LANGUAGE}", lvsActual );
             Log.LogPrint( lvsLM );
         }
         catch (Exception e)
@@ -362,8 +374,9 @@ public class OK implements IOKW_State
             Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogHasFocus();
             String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-            String lvsLM = LM.GetMessage( "LogHasFocus", "LogValue", lvsActual );
-
+            // String lvsLM = LM.GetMessage( "LogHasFocus", "LogValue", lvsActual );
+            // Print: "Value found: '%P1%'"
+            String lvsLM = PROP.getProperty( "ok.Log.ValueFound.${LANGUAGE}", lvsActual );
             Log.LogPrint( lvsLM );
         }
         catch (Exception e)
@@ -388,8 +401,9 @@ public class OK implements IOKW_State
             Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogIsActive();
             String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-            String lvsLM = LM.GetMessage( "LogIsActive", "LogValue", lvsActual );
-
+            //String lvsLM = LM.GetMessage( "LogIsActive", "LogValue", lvsActual );
+            // Print: "Value found: '%P1%'"
+            String lvsLM = PROP.getProperty( "ok.Log.ValueFound.${LANGUAGE}", lvsActual );
             Log.LogPrint( lvsLM );
         }
         catch (Exception e)
@@ -474,10 +488,10 @@ public class OK implements IOKW_State
         {
             ArrayList<String> actualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogSelected();
 
-            String lvsLM = LM.GetMessage( "LogSelected", "LogValue" );
+            // String lvsLM = LM.GetMessage( "LogSelected", "LogValue" );
 
-            Log.LogPrintDebug( lvsLM );
-
+            // String lvsLM = LM.GetMessage( "LogSelected", "LogValue" );
+            String lvsLM = PROP.getProperty( "ok.Log.ListValuesFound.${LANGUAGE}" );
             Log.ResOpenList( lvsLM );
 
             for ( String Value : actualValues )
@@ -508,14 +522,15 @@ public class OK implements IOKW_State
         {
             ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogTablecellValue( COL, ROW );
 
-            Log.ResOpenListDebug( "Log... " );
+            String lvsLM = PROP.getProperty( "ok.Log.ListValuesFound.${LANGUAGE}" );
+            Log.ResOpenList( lvsLM );
 
             for ( String Value : ActualValues )
             {
-                Log.LogPrintDebug( ">>" + Value + "<<" );
+                Log.LogPrint( ">>" + Value + "<<" );
             }
 
-            Log.ResCloseListDebug();
+            Log.ResCloseList();
         }
         catch (Exception e)
         {
@@ -538,7 +553,8 @@ public class OK implements IOKW_State
         {
             ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogTooltip();
 
-            Log.ResOpenList( "Log... " );
+            String lvsLM = PROP.getProperty( "ok.Log.ListValuesFound.${LANGUAGE}" );
+            Log.ResOpenList( lvsLM );
 
             for ( String Value : ActualValues )
             {
@@ -568,7 +584,8 @@ public class OK implements IOKW_State
         {
             ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).LogValue();
 
-            Log.ResOpenList( "Log... " );
+            String lvsLM = PROP.getProperty( "ok.Log.ListValuesFound.${LANGUAGE}" );
+            Log.ResOpenList( lvsLM );
 
             for ( String Value : ActualValues )
             {
@@ -600,21 +617,15 @@ public class OK implements IOKW_State
             {
                 // Wenn fpsMemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeCaption", "OKWNotAllowedValueException" ) );
-            }
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }            
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn fpsMemKeyName = DELETE enthält ist ->
-                // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+                
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+                throw new OKWNotAllowedValueException( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeCaption();
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
@@ -646,21 +657,14 @@ public class OK implements IOKW_State
             {
                 // Wenn fpsMemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeExists", "OKWNotAllowedValueException", MemKey ) );
-            }
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }            
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn fpsMemKeyName = DELETE enthält ist ->
-                // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+                throw new OKWNotAllowedValueException( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+
                 Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeExists();
 
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
@@ -692,22 +696,14 @@ public class OK implements IOKW_State
             {
                 // Wenn fps_MemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeHasFocus", "OKWNotAllowedValueException", MemKey ) );
-            }
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }            
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn fpsMemKeyName = DELETE enthält ->
-                // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }
-
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+                throw new OKWNotAllowedValueException( lvsLM );
+                }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+
                 Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeHasFocus();
 
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
@@ -739,25 +735,13 @@ public class OK implements IOKW_State
             {
                 // Wenn fpsMemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }            
-            else if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }            
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+                throw new OKWNotAllowedValueException( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( MemKey, "IGNORE", "DELETE" );                
 
                 Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeIsActive();
 
@@ -789,21 +773,14 @@ public class OK implements IOKW_State
             {
                 // Wenn fps_MemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeLabel", "OKWNotAllowedValueException", MemKey ) );
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+                throw new OKWNotAllowedValueException( lvsLM );
             }
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }            
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }
-
             else
             {
+                // If One of the Give OKW-Const-Values is contained in MemVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeLabel();
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
@@ -834,21 +811,14 @@ public class OK implements IOKW_State
             {
                 // Wenn fps_MemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeLabel", "OKWNotAllowedValueException", MemKey ) );
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+                throw new OKWNotAllowedValueException( lvsLM );
             }
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }            
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }
-
             else
             {
+                // If One of the Give OKW-Const-Values is contained in MemVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizePlaceholder();
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
@@ -879,21 +849,14 @@ public class OK implements IOKW_State
             {
                 // Wenn fps_MemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeSelectedValue", "OKWNotAllowedValueException", MemKey ) );
-            }
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }            
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn fpsMemKeyName = DELETE enthält ist ->
-                // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+                throw new OKWNotAllowedValueException( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in MemVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeSelectedValue();
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
@@ -925,21 +888,14 @@ public class OK implements IOKW_State
             {
                 // Wenn fpsMemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException(
-                                LM.GetMessage( "MemorizeTablecellValue", "OKWNotAllowedValueException", MemKey ) );
-            }
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }            
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn fpsMemKeyName = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+                throw new OKWNotAllowedValueException( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in MemVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( MemKey, "IGNORE", "DELETE" );
+
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeTablecellValue( COL, ROW );
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
@@ -970,20 +926,15 @@ public class OK implements IOKW_State
             {
                 // Wenn fpsMemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeTooltip", "OKWNotAllowedValueException", MemKey ) );
-            }
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }            
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+                throw new OKWNotAllowedValueException( lvsLM );
+
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in MemVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeTooltip();
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
@@ -1014,20 +965,15 @@ public class OK implements IOKW_State
             {
                 // Wenn fpsMemKeyName = IGNORE oder "" ist ->
                 // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeValue", "OKWNotAllowedValueException", MemKey ) );
-            }
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
-            }            
-            else if ( MemKey.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", MemKey ) );
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
+                throw new OKWNotAllowedValueException( lvsLM );
+
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in MemVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeValue();
 
                 String lvsToMemorize = OKW_Const_Sngltn.getInstance().ConcatSEP( ActualValues );
@@ -1057,16 +1003,15 @@ public class OK implements IOKW_State
             if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || "".equals( Val ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> Abbrechen...
-                // \todo TODO: Meldung sprachabhägig auslagern!
-                Log.LogPrint( "Ignore..." );
+                // Print: "KeyWord was ignored!'"
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
-            else if ( Val.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", Val ) );
-            }            
             else
             {
+                // If One of the Give OKW-Const-Values is contained in Val ->  trigger OKWNotAllowedValueException
+                this.newMethod( Val, "IGNORE" );                
+
                 // Sonst Methode des Objektes aufrufen....
                 ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
 
@@ -1119,16 +1064,15 @@ public class OK implements IOKW_State
             if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || Val.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> Abbrechen...
-                // \todo TODO: Meldung sprachabhägig auslagern!
-                Log.LogPrintDebug( "Ignore..." );
+                // Print: "KeyWord was ignored!'"
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
-            else if ( Val.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", Val ) );
-            }            
             else
             {
+                // If One of the Give OKW-Const-Values is contained in Val ->  trigger OKWNotAllowedValueException
+                this.newMethod( Val, "IGNORE" );                
+
                 ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
 
                 ( ( IGUIChildwindow ) CO.setChildName( FN ) ).SelectMenu( lvlsValue );
@@ -1242,22 +1186,15 @@ public class OK implements IOKW_State
             if ( SEQ_ID.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || "".equals( SEQ_ID ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> Abbrechen...
-                // \todo TODO: Meldung sprachabhägig auslagern!
-                Log.LogPrint( "Ignore" );
-            }
-            else if ( SEQ_ID.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal neben dem Wert `${IGNORE}` weitere Zeichen enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", SEQ_ID ) );
-            }            
-            else if ( SEQ_ID.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn SEQ_ID = DELETE enthält ist ->
-                // OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", SEQ_ID ) );
+                // Print: "KeyWord was ignored!'"
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in SEQ_ID ->  trigger OKWNotAllowedValueException
+                this.newMethod( SEQ_ID, "IGNORE", "DELETE" );                
+
                 CO.Sequence( FN, SEQ_Name, SEQ_ID );
             }
         }
@@ -1318,15 +1255,16 @@ public class OK implements IOKW_State
             if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || Val.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "SetValue", "Ignore" ) );
+                // Print: "KeyWord was ignored!'"
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
+
             }
-            else if ( Val.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", Val ) );
-            }            
             else
-            {
+            {   
+                // If One of the Give OKW-Const-Values is contained in Val ->  trigger OKWNotAllowedValueException
+                this.newMethod( Val, "IGNORE" );                
+
                 lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
 
                 lvlsValue = Parser.ParseMe( lvlsValue );
@@ -1351,10 +1289,14 @@ public class OK implements IOKW_State
     public void SetVar( String VN, String Val ) throws Exception
     {
         Log.LogFunctionStartDebug( "SetVar", "VN", VN );
+        
+        String lvsValue = "";
 
         try
         {
-             OKW_Memorize_Sngltn.getInstance().set( VN, Val );
+            lvsValue = Parser.ParseMe( Val );
+            Log.LogPrint( VN + "= \"" + lvsValue + "\"" );
+            OKW_Memorize_Sngltn.getInstance().set( VN, lvsValue );
         }
         catch (Exception e)
         {
@@ -1424,15 +1366,15 @@ public class OK implements IOKW_State
             if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || Val.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "TypeKey", "Ignore" ) );
+                // Print: "KeyWord was ignored!'"
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
-            else if ( Val.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", Val ) );
-            }            
             else
             {
+                // If One of the Give OKW-Const-Values is contained in Val ->  trigger OKWNotAllowedValueException
+                this.newMethod( Val, "IGNORE" );                
+                
                 lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
 
                 lvlsValue = Parser.ParseMe( lvlsValue );
@@ -1465,15 +1407,15 @@ public class OK implements IOKW_State
             if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || Val.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "TypeKeyTablecell", "Ignore" ) );
+                // Print: "KeyWord was ignored!'"
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
-            else if ( Val.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", Val ) );
-            }            
             else
             {
+                // If One of the Give OKW-Const-Values is contained in Val ->  trigger OKWNotAllowedValueException
+                this.newMethod( Val, "IGNORE" );                
+
                 // Werte in Val separieren
                 lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
 
@@ -1505,10 +1447,15 @@ public class OK implements IOKW_State
             if ( Val.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || Val.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "TypeKeyWindow", "Ignore" ) );
+                // Print: "KeyWord was ignored!'"
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in Val ->  trigger OKWNotAllowedValueException
+                this.newMethod( Val, "IGNORE" );                
+
                 ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
                 lvlsValue = Parser.ParseMe( lvlsValue );
 
@@ -1541,21 +1488,15 @@ public class OK implements IOKW_State
 	        if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
 	        {
 	            // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-	            Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-	        }
-	        else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-	        {
-	            // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-	            throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-	        }            
-	        else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-	        {
-	            // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
-	            // auslösen...
-	            throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                // Print: "KeyWord was ignored!'"
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
 	        }
 	        else
 	        {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
 	            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
 	            {
 	                lvlsExpected = new ArrayList<String>();
@@ -1607,20 +1548,16 @@ public class OK implements IOKW_State
 	        if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
 	        {
 	            // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-	            Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-	        }
-	        else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-	        {
-	            // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-	            throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-	        }            
-	        else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-	        {
-	            // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-	            throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                // Print: "KeyWord was ignored!'"
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
+
 	        }
 	        else
 	        {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
 	            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
 	            {
 	                lvlsExpected = new ArrayList<String>();
@@ -1673,20 +1610,15 @@ public class OK implements IOKW_State
 	        if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
 	        {
 	            // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-	            Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-	        }
-	        else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-	        {
-	            // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-	            throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-	        }            
-	        else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-	        {
-	            // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-	            throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                // Print: "KeyWord was ignored!'"
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
 	        }
 	        else
 	        {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
 	            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
 	            {
 	                lvlsExpected = new ArrayList<String>();
@@ -1739,21 +1671,15 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || "".equals( ExpVal ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyCaption", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
-                // auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                // Print: "KeyWord was ignored!'"
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -1804,21 +1730,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyCaption", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
-                // auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
 
@@ -1872,20 +1791,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
 
@@ -1932,30 +1845,21 @@ public class OK implements IOKW_State
 
         try
         {
-            // Hier sind nur drei werte erlaubt: YES/NO/IGNORE
-
-            // Prüfen ob ignoriert werden muss...
+            // Only three values are possible here: YES/NO/IGNORE
+            // 1. check if you need to ignore...
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyExists", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
-            {
-
+            {   // 2. Dann den wert durch den Parser laufenlassen, danach darf nur Nun darf nur ...
                 String lvsExpected = Parser.ParseMe( ExpVal );
 
-                // Püfen ob YES/NO als Sollwert vorgegeben worden ist.
                 if ( lvsExpected.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "YES" ) )
                                 || lvsExpected.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "NO" ) ) )
                 {
-
-                    // Sprachabhängiges YES/NO nach Boolean transformieren
                     Boolean lvbExpectedValue = OKW_Const_Sngltn.getInstance().YesNo2Boolean( lvsExpected );
 
                     IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
@@ -1972,13 +1876,11 @@ public class OK implements IOKW_State
 
                     verification( lvsActual, lvsExpected );
                 }
-                // Beide Bedingungen sind nicht erfüllt -> Exception da
-                // keinanderer
-                // Wert hier erlaubt ist.
                 else
                 {
-                    String ExceptionLog = LM.GetMessage( "VerifyExists", "OKWNotAllowedValueException", ExpVal );
-                    throw new OKWNotAllowedValueException( ExceptionLog );
+                    // Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
+                    String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+                    throw new OKWNotAllowedValueException( lvsLM );
                 }
             }
         }
@@ -2007,17 +1909,11 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyHasFocus", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
-                // auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
-
                 String lvsExpected = Parser.ParseMe( ExpVal );
 
                 // Püfen ob YES/NO als Sollwert vorgegeben worden ist.
@@ -2042,13 +1938,11 @@ public class OK implements IOKW_State
 
                     verification( lvsActual, lvsExpected );
                 }
-                // Beide Bedingungen sind nicht erfüllt -> Exception da
-                // keinanderer
-                // Wert hier erlaubt ist.
                 else
                 {
-                    String ExceptionLog = LM.GetMessage( "VerifyHasFocus", "OKWNotAllowedValueException", ExpVal );
-                    throw new OKWNotAllowedValueException( ExceptionLog );
+                    // Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
+                    String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+                    throw new OKWNotAllowedValueException( lvsLM );
                 }
             }
         }
@@ -2077,7 +1971,8 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyHasFocus", "Ignore" ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
@@ -2104,17 +1999,13 @@ public class OK implements IOKW_State
 
                     String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-                    // Soll/Ist Vergleich...
-                    Log.LogPrintDebug( LM.GetMessage( "VerifyIsActive", "VerifyValue" ) );
-
                     verification( lvsActual, lvsExpected );
                 }
                 else
                 {
-                    // Beide Bedingungen sind nicht erfüllt -> Exception da
-                    // kein anderer Wert hier erlaubt ist.
-                    String ExceptionLog = LM.GetMessage( "VerifyIsActive", "OKWNotAllowedValueException", ExpVal );
-                    throw new OKWNotAllowedValueException( ExceptionLog );
+                    // Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
+                    String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+                    throw new OKWNotAllowedValueException( lvsLM );
                 }
             }
         }
@@ -2137,14 +2028,11 @@ public class OK implements IOKW_State
         }
         else
         {
-            Log.LogError( fpsActual + " \u2260 " + fpsExpected );
-            Log.ResOpenList( "Details..." );
-            Log.LogPrint( "  Actual: " + fpsActual );
-            Log.LogPrint( "Expected: " + fpsExpected );
-            Log.ResCloseList();
-
+            LogVerifyError( fpsExpected, fpsActual );;
+            
             // Trigger OKWVerifyingFailsException!
-            throw new OKWVerifyingFailsException();
+            String lvsLM = PROP.getProperty( "OKWVerifyingFailsException.${LANGUAGE}", fpsExpected, fpsActual );
+            throw new OKWVerifyingFailsException( lvsLM );
         }
     }
 
@@ -2158,21 +2046,17 @@ public class OK implements IOKW_State
             Log.LogPass( fpsActual + " = " + fpsExpected );
         }
         else
-        {
-            Log.LogError( fpsActual + " \u2260 " + fpsExpected );
-            Log.ResOpenList( "Details..." );
-            Log.LogPrint( "  Actual: " + fpsActual );
-            Log.LogPrint( "Expected: " + fpsExpected );
-            Log.ResCloseList();
+        {   
+            LogVerifyError( fpsExpected, fpsActual );
 
             // Trigger OKWVerifyingFailsException!
-            throw new OKWVerifyingFailsException();
+            String lvsLM = PROP.getProperty( "OKWVerifyingFailsException.${LANGUAGE}", fpsExpected, fpsActual );
+            throw new OKWVerifyingFailsException( lvsLM );
         }
     }
 
     private void verification( ArrayList<String> Actual, ArrayList<String> Expected )
     {
-
         String msg = "";
         
         Boolean bFail = false;
@@ -2182,7 +2066,7 @@ public class OK implements IOKW_State
 
         if ( ActualSize.equals( ExpectedSize ) )
         {
-            Log.LogPass( "Size is OK!" );
+            Log.LogPass( PROP.getProperty( "ok.SizeIsOK.${LANGUAGE}" ) );
 
             for ( int i = 0; i < Actual.size(); i++ )
             {
@@ -2192,28 +2076,20 @@ public class OK implements IOKW_State
                     Log.LogPass( Actual.get( i ) + " = " + Expected.get( i ) );
                 }
                 else
-                {
-                    Log.LogError( Actual.get( i ) + " \u2260 " + Expected.get( i ) );
-                    Log.ResOpenList( "Details..." );
-                    Log.LogPrint( "  Actual: " + Actual.get( i ) );
-                    Log.LogPrint( "Expected: " + Expected.get( i ) );
-                    Log.ResCloseList();
+                {   
+                    LogVerifyError( Expected.get( i ), Actual.get( i ) );
 
-                    msg = this.myOKW_Properties.getProperty( "OK.verification.UnexpectedValue" );
-
+                    msg = PROP.getProperty( "ok.verification.exception.unexpectedvalue.${LANGUAGE}" );
                     bFail = true;
+                    
                 }
             }
         }
         else
-        {
-            Log.LogError( Actual.size() + " \u2260 " + Expected.size() );
-            Log.ResOpenList( "Details..." );
-            Log.LogPrint( "  Actual size: " + Actual.size() );
-            Log.LogPrint( "Expected size: " + Expected.size() );
-            Log.ResCloseList();
+        {               
+            LogVerifyError( ((Integer)Expected.size()).toString(), ((Integer)Actual.size()).toString() );
             
-            msg = this.myOKW_Properties.getProperty( "OK.verification.UnexpectedSize" );
+            msg = PROP.getProperty( "ok.verification.exception.unexpectedsize.${LANGUAGE}" );
             bFail = true;
         }
 
@@ -2227,15 +2103,15 @@ public class OK implements IOKW_State
 
     private void verificationWCM( ArrayList<String> Actual, ArrayList<String> Expected )
     {
-
         Boolean bFail = false;
+        String msg = "";
 
         Integer ActualSize = new Integer( Actual.size() );
         Integer ExpectedSize = new Integer( Expected.size() );
 
         if ( ActualSize.equals( ExpectedSize ) )
         {
-            Log.LogPass( "Size is OK!" );
+            Log.LogPass( PROP.getProperty( "ok.SizeIsOK.${LANGUAGE}" ) );
 
             for ( int i = 0; i < Actual.size(); i++ )
             {
@@ -2245,46 +2121,39 @@ public class OK implements IOKW_State
                     Log.LogPass( Actual.get( i ) + " = " + Expected.get( i ) );
                 }
                 else
-                {
-                    Log.LogError( Actual.get( i ) + " \u2260 " + Expected.get( i ) );
-                    Log.ResOpenList( "Details..." );
-                    Log.LogPrint( "  Actual: " + Actual.get( i ) );
-                    Log.LogPrint( "Expected: " + Expected.get( i ) );
-                    Log.ResCloseList();
-
+                {   
+                    LogVerifyError( Expected.get( i ), Actual.get( i ) );
+                    
+                    msg = PROP.getProperty( "ok.verification.exception.unexpectedvalue.${LANGUAGE}" );
                     bFail = true;
                 }
             }
         }
         else
-        {
-            Log.LogError( Actual.size() + " \u2260 " + Expected.size() );
-            Log.ResOpenList( "Details..." );
-            Log.LogPrint( "  Actual: " + Actual.size() );
-            Log.LogPrint( "Expected: " + Expected.size() );
-            Log.ResCloseList();
-
+        {   
+            LogVerifyError( ((Integer)Expected.size()).toString(), ((Integer)Actual.size()).toString() );
+            msg = PROP.getProperty( "ok.verification.exception.unexpectedsize.${LANGUAGE}" );
             bFail = true;
         }
 
         if ( bFail )
         {
             // Fehler Ausnahme auslösen
-            throw new OKWVerifyingFailsException();
+            throw new OKWVerifyingFailsException(msg);
         }
     }
 
     private void verificationREGX( ArrayList<String> Actual, ArrayList<String> Expected )
     {
-
         Boolean bFail = false;
+        String msg = "";
 
         Integer ActualSize = new Integer( Actual.size() );
         Integer ExpectedSize = new Integer( Expected.size() );
 
         if ( ActualSize.equals( ExpectedSize ) )
-        {
-            Log.LogPass( "Size is OK!" );
+        { 
+            Log.LogPass( PROP.getProperty( "ok.SizeIsOK.${LANGUAGE}" ) );
 
             for ( int i = 0; i < Actual.size(); i++ )
             {
@@ -2294,42 +2163,54 @@ public class OK implements IOKW_State
                     Log.LogPass( Actual.get( i ) + " = " + Expected.get( i ) );
                 }
                 else
-                {
-                    Log.LogError( Actual.get( i ) + " \u2260 " + Expected.get( i ) );
-                    Log.ResOpenList( "Details..." );
-                    Log.LogPrint( "  Actual: " + Actual.get( i ) );
-                    Log.LogPrint( "Expected: " + Expected.get( i ) );
-                    Log.ResCloseList();
+                {   
+                    LogVerifyError( Expected.get( i ), Actual.get( i ) );
 
+                    msg = PROP.getProperty( "ok.verification.exception.unexpectedvalue.${LANGUAGE}" );
                     bFail = true;
                 }
             }
         }
         else
-        {
-            Log.LogError( Actual.size() + " \u2260 " + Expected.size() );
-            Log.ResOpenList( "Details..." );
-            Log.LogPrint( "  Actual: " + Actual.size() );
-            Log.LogPrint( "Expected: " + Expected.size() );
-            Log.ResCloseList();
-
+        {   
+            LogVerifyError( ((Integer)Expected.size()).toString(), ((Integer)Actual.size()).toString() );
+            msg = PROP.getProperty( "ok.verification.exception.unexpectedsize.${LANGUAGE}" );
+            
             bFail = true;
         }
 
         if ( bFail )
         {
-            // Fehler Ausnahme auslösen
-            throw new OKWVerifyingFailsException();
+            // Fehler: Ausnahme auslösen...
+            throw new OKWVerifyingFailsException(msg);
         }
     }
 
+    
     /**
+     * \~german
+     *  Prüft ob der gegebene boolische Wert "fpbExpected" innerhalb des Time Out "timeout" durch
+     *  die gegebene Methode Method2Call gefunden wird.
+     *  
+     *  Die Absicht dieser Methode ist _nicht_ ein Soll/Ist vergleich, sondern das warten auf einen Werten,
+     *  der sich einstellen sollte, wenn ein Testfall wie geplant abläuft. Der Soll-/Istvergleich wird in der jeweiligen
+     *  okw.core.IOKW_State methode, die diese Methode ruft, durchgeführt.
+     *  
+     *  Die Methode wird aus folgenden zwei Gründen beendet:
+     *  -# der erwartet Wert fpbExpected wurde gefunden
+     *  -# der Time Out timeout ist erreicht
      * 
      * \see https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
-     * @param timeout Entält Timeout Daten.
-     * @param fpbExpected Erwaretetr Wert
-     * @param Method2Call Functions eferenz auf die aufzurufende Methode
-     * @return
+     * @param timeout Enthält die Timeout Daten.
+     * @param fpbExpected Erwarteter Wert, der sich einstellen sollte.
+     * @param Method2Call Functions Referenz auf die aufzurufende Methode
+     * @return Liefert den gefundenen aktuellen Wert zurück.
+     * 
+     * \~english
+     * 
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2014-01-09
      */
     private Boolean verify( OKW_TimeOut timeout, Boolean fpbExpected, Supplier<Boolean> Method2Call )
     {
@@ -2338,8 +2219,6 @@ public class OK implements IOKW_State
         Boolean lvbReturn = false;
         Boolean bOK = false;
 
-        //Log.LogFunctionStartDebug( "Verify", "String", "OKW_TimeOut", timeout.toString(), "fpbExpected", fpbExpected.toString() );
-        
         Log.LogFunctionStartDebug( "verify", "timeout", timeout.toString(), "fpbExpected", fpbExpected.toString() );
 
         try
@@ -2360,7 +2239,6 @@ public class OK implements IOKW_State
                 }
                 Count++;
             }
-
             bOK = true;
         }
         catch (IllegalArgumentException | InterruptedException e)
@@ -2381,13 +2259,31 @@ public class OK implements IOKW_State
         return lvbReturn;
     }
 
+    
     /**
+     * \~german
+     *  Prüft ob der gegebene integer Wert "fpiExpected" innerhalb des Time Out "timeout" durch
+     *  die gegebene Methode Method2Call gefunden wird.
+     *  
+     *  Die Absicht dieser Methode ist _nicht_ ein Soll/Ist vergleich, sondern das warten auf einen Werten,
+     *  der sich einstellen sollte, wenn ein Testfall wie geplant abläuft. Der Soll-/Istvergleich wird in der jeweiligen
+     *  okw.core.IOKW_State methode, die diese Methode ruft, durchgeführt.
+     *  
+     *  Die Methode wird aus folgenden zwei Gründen beendet:
+     *  -# der erwartet Wert fpiExpected wurde gefunden
+     *  -# der Time Out timeout ist erreicht
      * 
      * \see https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
-     * @param timeout Entält Timeout Daten.
-     * @param fpiExpected Erwarteter Wert
-     * @param Method2Call Functionsreferenz auf die aufzurufende Methode
-     * @return
+     * @param timeout Enthält die Timeout Daten.
+     * @param fpiExpected Erwarteter Wert, der sich einstellen sollte.
+     * @param Method2Call Functions Referenz auf die aufzurufende Methode
+     * @return Liefert den gefundenen aktuellen Wert zurück.
+     * 
+     * \~english
+     * 
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2014-01-09
      */
     private Integer verify( OKW_TimeOut timeout, Integer fpiExpected, Supplier<Integer> Method2Call )
     {
@@ -2448,6 +2344,7 @@ public class OK implements IOKW_State
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
+    // TODO: DocyGen-Doku schreiben
     private ArrayList<String> verify( OKW_TimeOut timeout, String COL, String ROW, ArrayList<String> fpALExpected, BiFunction<String, String, ArrayList<String>> Method2Call )
     {
         Integer Count = 0;
@@ -2501,6 +2398,7 @@ public class OK implements IOKW_State
      * @param Method2Call Functions eferenz auf die aufzurufende Methode
      * @return
      */
+    // TODO: DocyGen-Doku schreiben
     private ArrayList<String> verifyWCM( OKW_TimeOut timeout, String COL, String ROW, ArrayList<String> fpALExpectedWCM, BiFunction<String, String, ArrayList<String>> Method2Call )
     {
         Integer Count = 0;
@@ -2597,14 +2495,31 @@ public class OK implements IOKW_State
         return lvLsReturn;
     }
 
+
     /**
+     * \~german
+     *  Prüft ob der gegebene ArrayList<String> Wert "fpALExpected" innerhalb des Time Out "timeout" durch
+     *  die gegebene Methode Method2Call gefunden wird.
+     *  
+     *  Die Absicht dieser Methode ist _nicht_ ein Soll/Ist vergleich, sondern das warten auf einen Werten,
+     *  der sich einstellen sollte, wenn ein Testfall wie geplant abläuft. Der Soll-/Istvergleich wird in der jeweiligen
+     *  okw.core.IOKW_State methode, die diese Methode ruft, durchgeführt.
+     *  
+     *  Die Methode wird aus folgenden zwei Gründen beendet:
+     *  -# der erwartet Wert fpALExpected wurde gefunden
+     *  -# der Time Out timeout ist erreicht
      * 
      * \see https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
+     * @param timeout Enthält die Timeout Daten.
+     * @param fpALExpected Erwarteter Wert, der sich einstellen sollte.
+     * @param Method2Call Functions Referenz auf die aufzurufende Methode
+     * @return Liefert den gefundenen aktuellen Wert zurück.
      * 
-     * @param timeout Entält Timeout Daten.
-     * @param fpALExpected Erwaretetr Wert
-     * @param Method2Call Functions eferenz auf die aufzurufende Methode
-     * @return
+     * \~english
+     * 
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2014-01-09
      */
     private ArrayList<String> verify( OKW_TimeOut timeout, ArrayList<String> fpALExpected, Supplier<ArrayList<String>> Method2Call )
     {
@@ -2660,13 +2575,29 @@ public class OK implements IOKW_State
     }
 
     /**
+     * \~german
+     *  Prüft ob der gegebene ArrayList<String> Wert "fpALExpected" als WCM innerhalb des Time Out "timeout" durch
+     *  die gegebene Methode Method2Call gefunden wird.
+     *  
+     *  Die Absicht dieser Methode ist _nicht_ ein Soll/Ist vergleich, sondern das warten auf einen Werten,
+     *  der sich einstellen sollte, wenn ein Testfall wie geplant abläuft. Der Soll-/Istvergleich wird in der jeweiligen
+     *  okw.core.IOKW_State methode, die diese Methode ruft, durchgeführt.
+     *  
+     *  Die Methode wird aus folgenden zwei Gründen beendet:
+     *  -# der erwartet Wert fpALExpected wurde gefunden
+     *  -# der Time Out timeout ist erreicht
      * 
      * \see https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
+     * @param timeout Enthält die Timeout Daten.
+     * @param fpALExpected Erwarteter Wert, der sich einstellen sollte.
+     * @param Method2Call Functions Referenz auf die aufzurufende Methode
+     * @return Liefert den gefundenen aktuellen Wert zurück.
      * 
-     * @param timeout Entält Timeout Daten.
-     * @param fpALExpectedWCMs Erwaretetr Wert
-     * @param Method2Call Functions eferenz auf die aufzurufende Methode
-     * @return
+     * \~english
+     * 
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2014-01-09
      */
     private ArrayList<String> verifyWCM( OKW_TimeOut timeout, ArrayList<String> fpALExpectedWCMs, Supplier<ArrayList<String>> Method2Call )
     {
@@ -2722,13 +2653,29 @@ public class OK implements IOKW_State
     }
 
     /**
+     * \~german
+     *  Prüft ob der gegebene ArrayList<String> Wert "fpALExpected" als REGX innerhalb des Time Out "timeout" durch
+     *  die gegebene Methode Method2Call gefunden wird.
+     *  
+     *  Die Absicht dieser Methode ist _nicht_ ein Soll/Ist vergleich, sondern das warten auf einen Werten,
+     *  der sich einstellen sollte, wenn ein Testfall wie geplant abläuft. Der Soll-/Istvergleich wird in der jeweiligen
+     *  okw.core.IOKW_State methode, die diese Methode ruft, durchgeführt.
+     *  
+     *  Die Methode wird aus folgenden zwei Gründen beendet:
+     *  -# der erwartet Wert fpALExpected wurde gefunden
+     *  -# der Time Out timeout ist erreicht
      * 
      * \see https://www.codementor.io/eh3rrera/using-java-8-method-reference-du10866vx
+     * @param timeout Enthält die Timeout Daten.
+     * @param fpALExpected Erwarteter Wert, der sich einstellen sollte.
+     * @param Method2Call Functions Referenz auf die aufzurufende Methode
+     * @return Liefert den gefundenen aktuellen Wert zurück.
      * 
-     * @param timeout Entält Timeout Daten.
-     * @param fpALExpectedREGXs Erwaretetr Wert
-     * @param Method2Call Functions eferenz auf die aufzurufende Methode
-     * @return
+     * \~english
+     * 
+     * \~
+     * @author Zoltán Hrabovszki
+     * @date 2014-01-09
      */
     private ArrayList<String> verifyREGX( OKW_TimeOut timeout, ArrayList<String> fpALExpectedREGXs, Supplier<ArrayList<String>> Method2Call )
     {
@@ -2799,21 +2746,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
-                // auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -2865,20 +2805,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -2931,20 +2865,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -2997,21 +2925,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
-                // auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -3064,20 +2985,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -3131,44 +3046,25 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = IGNORE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "SEP" ) ) )
-            {
-                // Wenn ExpVal = SEP enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "VSEP" ) ) )
-            {
-                // Wenn ExpVal = VSEP enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
-            {
-                // Wenn ExpVal = VSEP enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE",  "SEP", "VSEP", "HSEP", "EMPTY" );                
+
                 try {
                     String myExpVal = Parser.ParseMe( ExpVal );
 
                     lviExpected = Integer.parseInt( myExpVal );
                 }
-                catch (NumberFormatException e) {
+                catch (NumberFormatException e)
+                {
                     // Wenn ExpVal = keine Zahl enthält -> OKWNotAllowedValueException auslösen...
-                    String msg = LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal );
-                    throw new OKWNotAllowedValueException( msg, e );
+                    // OKWNotAllowedValueException.IntegerOnly
+                    String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.IntegerOnly.${LANGUAGE}", ExpVal );
+                    throw new OKWNotAllowedValueException( lvsLM );
                 }
 
                 IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
@@ -3212,20 +3108,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -3277,21 +3167,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifySelectedValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
-                // auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -3344,21 +3227,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifySelectedValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
-                // auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -3411,21 +3287,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifySelectedValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
-                // auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -3477,20 +3346,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyTablecellValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -3542,20 +3405,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyTablecellValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -3607,20 +3464,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyTablecellValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn fpsMemKeyName = DELETE oder "" ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -3672,20 +3523,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -3737,20 +3582,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyTooltip", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
 
@@ -3804,20 +3643,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyTooltip", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -3869,20 +3702,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -3935,20 +3762,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -4003,21 +3824,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
-                // auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
 
@@ -4054,6 +3868,48 @@ public class OK implements IOKW_State
         }
     }
 
+
+    /**
+     *  \copydoc IOKW_State::FileCreate(String)
+     */
+    public void FileCreate( String PATH ) throws Exception
+    {
+        String lvsPATH = "";
+
+        Log.LogFunctionStartDebug( "FileCreate", "PATH", PATH );
+        try
+        {
+            // Prüfen ob ignoriert werden muss...
+            if ( PATH.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || "".equals( PATH ) )
+            {
+                // Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
+            }
+            else
+            {
+                // 1. Parsen der Pfad-Eingabe
+                lvsPATH = Parser.ParseMe( PATH );
+                // 2. Konvertieren des Pfad separators.
+                lvsPATH = OKW_FileHelper.convertDirectorySeperator( lvsPATH );
+
+                String lsvLog = PROP.getProperty( "ok.FileCreate.ResolvedPath.${LANGUAGE}", lvsPATH );
+                Log.LogPrint( lsvLog );
+
+                OKW_FileHelper.createFile( lvsPATH );
+            }
+        }
+        catch (Exception e)
+        {
+            handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+    
     /**
      *  \copydoc IOKW_State::FileDelete(String)
      */
@@ -4068,7 +3924,8 @@ public class OK implements IOKW_State
             if ( fpsPathAndFileName.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || "".equals( fpsPathAndFileName ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "FileDelete", "Ignore" ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             // Püfen ob YES/NO als Sollwert vorgegeben worden ist.
             else
@@ -4078,11 +3935,146 @@ public class OK implements IOKW_State
                 // 2. Konvertieren des Pfad separators.
                 lvsPathAndFileName = OKW_FileHelper.convertDirectorySeperator( lvsPathAndFileName );
 
-                String lsvLog = LM.GetMessage( "FileDelete", "ResolvedPath", lvsPathAndFileName );
-                Log.LogPrintDebug( lsvLog );
+                String lsvLog = PROP.getProperty( "ok.FileDelete.ResolvedPath.${LANGUAGE}", lvsPathAndFileName );
+                Log.LogPrint( lsvLog );
 
                 // Basis-Funktion aufrufen...
                 OKW_FileHelper.deleteFile( lvsPathAndFileName );
+            }
+        }
+        catch (Exception e)
+        {
+            handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+    
+    /**
+     *  \copydoc IOKW_State::FilesDelete(String,String)
+     */
+    public void FilesDelete( String fpsDirPath, String fpsFileMatch ) throws Exception
+    {
+        String lvsDirPath = "";
+        String lvsFileMatch = "";
+
+        Log.LogFunctionStartDebug( "FilesDelete", "fpsDirPath", fpsDirPath, "fpsFileMatch", fpsFileMatch );
+        try
+        {
+            // Check if you need to ignore...
+            // FIXME: Testfall für fpsFileMatch schreiben
+            if ( fpsDirPath.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) )
+                 || "".equals( fpsDirPath )
+                 || fpsFileMatch.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) )
+                 || "".equals( fpsFileMatch ))
+            {
+                // Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
+            }
+            else
+            {
+                // 1. Parsen der Pfad-Eingabe
+                lvsDirPath = Parser.ParseMe( fpsDirPath );
+                lvsFileMatch = Parser.ParseMe( fpsDirPath );
+                
+                // 2. Konvertieren des Pfad separators.
+                lvsDirPath = OKW_FileHelper.convertDirectorySeperator( lvsDirPath );
+                lvsFileMatch = OKW_FileHelper.convertDirectorySeperator( lvsFileMatch );
+
+                String lsvLog = PROP.getProperty( "ok.FileDelete.ResolvedPath.${LANGUAGE}", lvsFileMatch );
+                Log.LogPrint( lsvLog );
+
+                // Basis-Funktion aufrufen...
+                OKW_FileHelper.deleteFiles( lvsDirPath );
+            }
+        }
+        catch (Exception e)
+        {
+            handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+    
+    /**
+     *  \copydoc IOKW_State::DirectoryDelete(String)
+     */
+    public void DirectoryDelete( String PATH ) throws Exception
+    {
+        String lvsPATH = "";
+
+        Log.LogFunctionStartDebug( "FileDelete", "PATH", PATH );
+        try
+        {
+            // Prüfen ob ignoriert werden muss...
+            if ( PATH.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || "".equals( PATH ) )
+            {
+                // Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
+                String lvsLM = PROP.getProperty( "ok.Ignore" );
+                Log.LogPrint( lvsLM );
+            }
+            // Püfen ob YES/NO als Sollwert vorgegeben worden ist.
+            else
+            {
+                // 1. Parsen der Pfad-Eingabe
+                lvsPATH = Parser.ParseMe( PATH );
+                // 2. Konvertieren des Pfad separators.
+                lvsPATH = OKW_FileHelper.convertDirectorySeperator( lvsPATH );
+
+                String lsvLog = PROP.getProperty( "ok.DirectoryDelete.ResolvedPath.${LANGUAGE}", lvsPATH );
+                Log.LogPrint( lsvLog );
+
+                // Basis-Funktion aufrufen...
+                OKW_FileHelper.deleteDirectory( lvsPATH );
+            }
+        }
+        catch (Exception e)
+        {
+            handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+
+    /**
+     *  \copydoc IOKW_State::DirectoryCreate(String)
+     */
+    public void DirectoryCreate( String PATH ) throws Exception
+    {
+        String lvsPATH = "";
+
+        Log.LogFunctionStartDebug( "DirectoryCreate", "PATH", PATH );
+        try
+        {
+            // Prüfen ob ignoriert werden muss...
+            if ( PATH.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || "".equals( PATH ) )
+            {
+                // Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
+                String lvsLM = PROP.getProperty( "ok.Ignore" );
+                Log.LogPrint( lvsLM );
+            }
+            // Püfen ob YES/NO als Sollwert vorgegeben worden ist.
+            else
+            {
+                // 1. Parsen der Pfad-Eingabe
+                lvsPATH = Parser.ParseMe( PATH );
+                // 2. Konvertieren des Pfad separators.
+                lvsPATH = OKW_FileHelper.convertDirectorySeperator( lvsPATH );
+
+                String lsvLog = PROP.getProperty( "ok.DirectoryCreate.ResolvedPath.${LANGUAGE}", lvsPATH );
+                Log.LogPrint( lsvLog );
+                
+                // Basis-Funktion aufrufen...
+                OKW_FileHelper.DirectoryCreate( lvsPATH );
             }
         }
         catch (Exception e)
@@ -4109,7 +4101,8 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyFileExists", "Ignore" ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             // Püfen ob YES/NO als Sollwert vorgegeben worden ist.
             else if ( ExpVal.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname( "YES" ) )
@@ -4122,8 +4115,8 @@ public class OK implements IOKW_State
                 // 2. Konvertieren des Pfad separators.
                 lvsPathAndFileName = OKW_FileHelper.convertDirectorySeperator( lvsPathAndFileName );
 
-                String lsvLog = LM.GetMessage( "VerifyFileExists", "ResolvedPath", lvsPathAndFileName );
-                Log.LogPrintDebug( lsvLog );
+                String lsvLog = PROP.getProperty( "ok.VerifyFileExists.ResolvedPath.${LANGUAGE}", lvsPathAndFileName );
+                Log.LogPrint( lsvLog );
 
                 // Basis-Funkton aufrufen...
                 Boolean lvbActual = OKW_FileHelper.fileExists( lvsPathAndFileName );
@@ -4131,16 +4124,13 @@ public class OK implements IOKW_State
                 // Aktuellen Wert nach YES/NO, Sprachabhänging, wandel...
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-                // Soll/Ist Vergleich...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyIsActive", "VerifyValue" ) );
                 verification( lvsActual, ExpVal );
             }
-            // Beide Bedingungen sind nicht erfüllt -> Exception da kein anderer
-            // Wert hier erlaubt ist.
             else
             {
-                String ExceptionLog = LM.GetMessage( "VerifyFileExists", "OKWNotAllowedValueException", ExpVal );
-                throw new OKWNotAllowedValueException( ExceptionLog );
+                // Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+                throw new OKWNotAllowedValueException( lvsLM );
             }
         }
         catch (Exception e)
@@ -4153,6 +4143,120 @@ public class OK implements IOKW_State
         }
     }
 
+    
+    /**
+     *  \copydoc IOKW_State::VerifyIsFile(String,String)
+     */
+    public void VerifyIsFile( String fpsPathAndFileName, String ExpVal ) throws Exception
+    {
+        String lvsPathAndFileName = "";
+
+        Log.LogFunctionStartDebug( "VerifyIsFile", "fpsPathAndFileName", fpsPathAndFileName, "ExpVal", ExpVal );
+        try
+        {
+            // Prüfen ob ignoriert werden muss...
+            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
+            {
+                // Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
+            }
+            // Püfen ob YES/NO als Sollwert vorgegeben worden ist.
+            else if ( ExpVal.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname( "YES" ) )
+                            || ExpVal.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "NO" ) ) )
+            {
+                // Aktuellen Wert holen...
+
+                // 1. Parsen der Pfad-Eingabe
+                lvsPathAndFileName = Parser.ParseMe( fpsPathAndFileName );
+                // 2. Konvertieren des Pfad separators.
+                lvsPathAndFileName = OKW_FileHelper.convertDirectorySeperator( lvsPathAndFileName );
+
+                String lsvLog = PROP.getProperty( "ok.VerifyIsFile.ResolvedPath.${LANGUAGE}", lvsPathAndFileName );
+                Log.LogPrint( lsvLog );
+
+                // Basis-Funkton aufrufen...
+                Boolean lvbActual = OKW_FileHelper.isFile( lvsPathAndFileName );
+
+                // Aktuellen Wert nach YES/NO, Sprachabhänging, wandel...
+                String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
+
+                verification( lvsActual, ExpVal );
+            }
+            else
+            {
+                // Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+                throw new OKWNotAllowedValueException( lvsLM );
+            }
+        }
+        catch (Exception e)
+        {
+            this.handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }
+
+    
+    /**
+     *  \copydoc IOKW_State::VerifyIsDirectory(String,String)
+     */
+    public void VerifyIsDirectory( String fpsPathAndFileName, String ExpVal ) throws Exception
+    {
+        String lvsPathAndFileName = "";
+
+        Log.LogFunctionStartDebug( "VerifyIsDirectory", "fpsPathAndFileName", fpsPathAndFileName, "ExpVal", ExpVal );
+        try
+        {
+            // Prüfen ob ignoriert werden muss...
+            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
+            {
+                // Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
+            }
+            // Püfen ob YES/NO als Sollwert vorgegeben worden ist.
+            else if ( ExpVal.equals(OKW_Const_Sngltn.getInstance().GetConst4Internalname( "YES" ) )
+                            || ExpVal.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "NO" ) ) )
+            {
+                // Aktuellen Wert holen...
+
+                // 1. Parsen der Pfad-Eingabe
+                lvsPathAndFileName = Parser.ParseMe( fpsPathAndFileName );
+                // 2. Konvertieren des Pfad separators.
+                lvsPathAndFileName = OKW_FileHelper.convertDirectorySeperator( lvsPathAndFileName );
+
+                String lsvLog = PROP.getProperty( "ok.VerifyIsDirectory.ResolvedPath.${LANGUAGE}", lvsPathAndFileName );
+                Log.LogPrint( lsvLog );
+
+                // Basis-Funkton aufrufen...
+                Boolean lvbActual = OKW_FileHelper.isFile( lvsPathAndFileName );
+
+                // Aktuellen Wert nach YES/NO, Sprachabhänging, wandel...
+                String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
+
+                verification( lvsActual, ExpVal );
+            }
+            else
+            {
+                // Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+                throw new OKWNotAllowedValueException( lvsLM );
+            }
+        }
+        catch (Exception e)
+        {
+            this.handleException( e );
+        }
+        finally
+        {
+            Log.LogFunctionEndDebug();
+        }
+    }    
+    
     /**
      *  \copydoc IOKW_State::VerifyDirectoryExists(String,String)
      */
@@ -4167,16 +4271,12 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine Weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyDirectoryExists", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             // Püfen ob YES/NO als Sollwert vorgegeben worden ist.
-            else if ( ExpVal == OKW_Const_Sngltn.getInstance().GetConst4Internalname( "YES" )
-                            || ExpVal == OKW_Const_Sngltn.getInstance().GetConst4Internalname( "NO" ) )
+            else if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "YES" ) )
+                            || ExpVal.equals( OKW_Const_Sngltn.getInstance().GetConst4Internalname( "NO" )) )
             {
                 // Aktuellen Wert holen...
 
@@ -4185,25 +4285,22 @@ public class OK implements IOKW_State
                 // 2. Konvertieren des Pfad separators.
                 lvsPath = OKW_FileHelper.convertDirectorySeperator( lvsPath );
 
-                String lsvLog = LM.GetMessage( "VerifyDirectoryExists", "ResolvedPath", lvsPath );
-                Log.LogPrintDebug( lsvLog );
-
+                String lsvLog = PROP.getProperty( "ok.VerifyDirectoryExists.ResolvedPath.${LANGUAGE}", lvsPath );
+                Log.LogPrint( lsvLog );
+                
                 // Basis-Funkton aufrufen...
                 Boolean lvbActual = OKW_FileHelper.directoryExists( lvsPath );
 
                 // Aktuellen Wert nach YES/NO, Sprachabhänging, wandel...
                 String lvsActual = OKW_Const_Sngltn.getInstance().Boolean2YesNo( lvbActual );
 
-                // Soll/Ist Vergleich...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyDirectoryExists", "VerifyValue" ) );
                 verification( lvsActual, ExpVal );
             }
-            // Beide Bedingungen sind nicht erfüllt -> Exception da kein anderera
-            // Wert hier erlaubt ist.
             else
             {
-                String ExceptionLog = LM.GetMessage( "VerifyDirectoryExists", "OKWNotAllowedValueException", ExpVal );
-                throw new OKWNotAllowedValueException( ExceptionLog );
+                // Both conditions are not fulfilled: An exception must be thrown since no other value is allowed here.
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.YesNoIgnore.${LANGUAGE}", ExpVal );
+                throw new OKWNotAllowedValueException( lvsLM );
             }
         }
         catch (Exception e)
@@ -4240,44 +4337,25 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = IGNORE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "SEP" ) ) )
-            {
-                // Wenn ExpVal = SEP enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "VSEP" ) ) )
-            {
-                // Wenn ExpVal = VSEP enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
-            {
-                // Wenn ExpVal = VSEP enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
-                try {
-                    String myExpVal = Parser.ParseMe( ExpVal );
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE",  "SEP", "VSEP", "HSEP", "EMPTY" );                
 
+                try
+                {
+                    String myExpVal = Parser.ParseMe( ExpVal );
                     lviExpected = Integer.parseInt( myExpVal );
                 }
-                catch (NumberFormatException e) {
+                catch (NumberFormatException e)
+                {
                     // Wenn ExpVal = keine Zahl enthält -> OKWNotAllowedValueException auslösen...
-                    String msg = LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal );
-                    throw new OKWNotAllowedValueException( msg, e );
+                    // OKWNotAllowedValueException.IntegerOnly
+                    String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.IntegerOnly.${LANGUAGE}", ExpVal );
+                    throw new OKWNotAllowedValueException( lvsLM );
                 }
 
                 IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
@@ -4302,9 +4380,6 @@ public class OK implements IOKW_State
             Log.LogFunctionEndDebug();
         }
     }
-
-    
-    
     
     
     /**
@@ -4323,21 +4398,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException
-                // auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the given OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -4389,20 +4457,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the given OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -4455,20 +4517,14 @@ public class OK implements IOKW_State
             if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || ExpVal.equals( "" ) )
             {
                 // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
-                Log.LogPrintDebug( LM.GetMessage( "VerifyValue", "Ignore" ) );
-            }
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
-            }            
-            else if ( ExpVal.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
-            {
-                // Wenn ExpVal = DELETE enthält ist -> OKWNotAllowedValueException auslösen...
-                throw new OKWNotAllowedValueException( LM.GetMessage( "MemorizeIsActive", "OKWNotAllowedValueException", ExpVal ) );
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
+                // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
+                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
                     lvlsExpected = new ArrayList<String>();
@@ -4504,4 +4560,30 @@ public class OK implements IOKW_State
         }
     }
     
+    protected void newMethod( String ValueToAnalyse, String... NotAllowedValues )
+    {
+        
+        String NotAllowedValue = "";
+        
+        for(int i=0; i< NotAllowedValues.length; i++)
+        {
+            NotAllowedValue = NotAllowedValues[i];
+            
+            if ( ValueToAnalyse.contains( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( NotAllowedValue ) ) )
+            {
+                // Wenn ValueToAnalyse einen wert aus NotAllowedValue enthält -> OKWNotAllowedValueException auslösen...
+                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", null, ValueToAnalyse );
+                throw new OKWNotAllowedValueException( lvsLM );
+            }
+            else continue;
+        }
+    }
+    protected void LogVerifyError( String fpsExpected,  String fpsActual )
+    {
+        Log.LogError( PROP.getProperty( "ok.LogVerifyError.ExpectedActuel.${LANGUAGE}", fpsExpected,  fpsActual ) );
+        Log.ResOpenList( PROP.getProperty( "ok.LogVerifyError.Details.${LANGUAGE}" ) );
+           Log.LogPrint( PROP.getProperty( "ok.LogVerifyError.Expected.${LANGUAGE}", null, fpsExpected ) );
+           Log.LogPrint( PROP.getProperty( "ok.LogVerifyError.Actuel.${LANGUAGE}", null, fpsActual ) );
+        Log.ResCloseList();
+    }
 }

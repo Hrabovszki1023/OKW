@@ -805,11 +805,51 @@ public class NOK implements IOKW_State
     }
 
     /**
+     *  \copydoc IOKW_State::FileCreate(String)
+     */
+    public void FileCreate( String PATH )
+    {
+        Log.LogFunctionStartDebug( "FileCreate", "PATH", PATH );
+
+        Log.LogFunctionEndDebug();
+    }
+    
+    /**
      *  \copydoc IOKW_State::FileDelete(String)
      */
     public void FileDelete( String fpsPathAndFileName )
     {
         Log.LogFunctionStartDebug( "FileDelete", "fpsPathAndFileName", fpsPathAndFileName );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     *  \copydoc IOKW_State::FilesDelete(String, String)
+     */
+    public void FilesDelete( String fpsDirPath, String fpsFileMatch )
+    {
+        Log.LogFunctionStartDebug( "FilesDelete", "fpsDirPath", fpsDirPath, "fpsFileMatch", fpsFileMatch );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     *  \copydoc IOKW_State::DirectoryDelete(String)
+     */
+    public void DirectoryDelete( String PATH )
+    {
+        Log.LogFunctionStartDebug( "DirectoryDelete", "PATH", PATH );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     *  \copydoc IOKW_State::DirectoryCreate(String)
+     */
+    public void DirectoryCreate( String PATH )
+    {
+        Log.LogFunctionStartDebug( "DirectoryDelete", "PATH", PATH );
 
         Log.LogFunctionEndDebug();
     }
@@ -824,6 +864,26 @@ public class NOK implements IOKW_State
         Log.LogFunctionEndDebug();
     }
 
+    /**
+     *  \copydoc IOKW_State::VerifyIsFile(String,String)
+     */
+    public void VerifyIsFile( String fpsPathAndFileName, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifyIsFile", "fpsPathAndFileName", fpsPathAndFileName, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
+
+    /**
+     *  \copydoc IOKW_State::VerifyIsDirectory(String,String)
+     */
+    public void VerifyIsDirectory( String fpsPathAndFileName, String ExpVal )
+    {
+        Log.LogFunctionStartDebug( "VerifyIsDirectory", "fpsPathAndFileName", fpsPathAndFileName, "ExpVal", ExpVal );
+
+        Log.LogFunctionEndDebug();
+    }
+    
     /**
      *  \copydoc IOKW_State::VerifyDirectoryExists(String,String)
      */

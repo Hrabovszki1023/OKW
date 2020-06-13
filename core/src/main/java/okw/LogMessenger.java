@@ -113,7 +113,7 @@ public class LogMessenger
 			OKW_HandleException.StopRunning(e, this.getClass());
 		}
 	}
-
+	
 	/**
 	 * \~german
 	 *  Holt die Log-Meldung für MethodeNmae/Textkey ohne weitere Parameter.
