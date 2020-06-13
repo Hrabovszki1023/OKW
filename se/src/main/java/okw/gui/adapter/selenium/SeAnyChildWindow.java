@@ -51,6 +51,7 @@ import okw.OKW_Const_Sngltn;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 
 /**
@@ -265,7 +266,12 @@ public class SeAnyChildWindow extends AnyChildwindow
         }
         catch (OKWGUIObjectNotFoundException e)
         {
-            LogPrintDebug( "OKWGUIObjectNotFoundException" );
+            LogPrint( "OKWGUIObjectNotFoundException..." );
+            lvbReturn = false;
+        }
+        catch ( StaleElementReferenceException e )
+        {
+            LogPrint( "StaleElementReferenceException..." );
             lvbReturn = false;
         }
         finally
