@@ -364,7 +364,7 @@ public class SeDriver
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.05.12
+     *  \date 2015.05.12
      */
     public WebElement getElement( String fpsFrameID, String fpsLocator )
     {

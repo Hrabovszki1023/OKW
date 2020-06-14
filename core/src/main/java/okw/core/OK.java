@@ -245,16 +245,20 @@ public class OK implements IOKW_State
         Log.LogFunctionStartDebug( "EndTest" );
         
         String msg = "";
+        
         try {
-        if ( this.VerifyFail )
-        { 
-            throw _Kernel.getNOK_Reason();
-        }
-        else
-        {
-            msg = PROP.getProperty( "ok.endtest.verifypass.msg.${LANGUAGE}" );
-            Log.LogPrint( msg );
-        }
+	        if ( this.VerifyFail )
+	        { 
+	            msg = PROP.getProperty( "ok.endtest.verifyfail.msg.${LANGUAGE}" );
+	            Log.LogPrint( msg );
+
+	        	throw _Kernel.getNOK_Reason();
+	        }
+	        else
+	        {
+	            msg = PROP.getProperty( "ok.endtest.verifypass.msg.${LANGUAGE}" );
+	            Log.LogPrint( msg );
+	        }
         }
         finally
         {           

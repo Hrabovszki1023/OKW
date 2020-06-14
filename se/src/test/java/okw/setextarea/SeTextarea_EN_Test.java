@@ -535,7 +535,7 @@ public class SeTextarea_EN_Test extends OKWTestBase
     }
 
     // \brief
-    // Prüft ob ein nicht vorhandenes objekt existiert.
+    // Prüft ob ein "nicht existierendes objekt" existiert.
     // Erwartet wird, dass das Objekt existiert.
     // Es wird geprüft auf das default timout exception getriggert wird.
     //
