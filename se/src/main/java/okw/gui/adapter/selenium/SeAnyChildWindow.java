@@ -39,20 +39,30 @@
 
 package okw.gui.adapter.selenium;
 
+import java.io.IOException;
 import java.util.*;
+
+import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.*;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
 import okw.log.Logger_Sngltn;
+import okw.FrameObjectDictionary_Sngltn;
 import okw.LogMessenger;
+import okw.OKW;
 import okw.OKW_Const_Sngltn;
+import okw.OKW_TimeOut;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+import org.xml.sax.SAXException;
 
 /**
  * @defgroup groupSeleniumClasses OKW Selenium Klassen
@@ -175,8 +185,12 @@ public class SeAnyChildWindow extends AnyChildwindow
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
             this.WaitForMe();
 
-            this.Me().click();
+            this.WaitForInteraction( () -> {this.Me().click();} );
+            
         }
+        catch (Exception e) {
+			// TODO: handle exception
+		}
         finally
         {
             this.LogFunctionEndDebug();
@@ -1171,7 +1185,8 @@ public class SeAnyChildWindow extends AnyChildwindow
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
             this.WaitForMe();
 
-            this.Me().sendKeys( "" );
+            this.WaitForInteraction( () -> {this.Me().sendKeys( "" );} );
+
         }
         finally
         {
@@ -1232,12 +1247,12 @@ public class SeAnyChildWindow extends AnyChildwindow
 
                 if ( Value.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
                 {
-                    lv_WebElement.clear();
+                    this.WaitForInteraction( () -> {lv_WebElement.clear();} );
                 }
                 else
                 {
-                    Value = okw.parser.SeKeyParser.ParseMe( Value );
-                    lv_WebElement.sendKeys( Value );
+                    String resolvedValue = okw.parser.SeKeyParser.ParseMe( Value );
+                    this.WaitForInteraction( (  ) -> {lv_WebElement.sendKeys( resolvedValue );} );
                 }
             }
         }
@@ -1599,4 +1614,72 @@ public class SeAnyChildWindow extends AnyChildwindow
         }
         return lvbReturn;
     }
+    
+
+    /** \~german
+     *  Methode Versucht eine Interaktion mit dem Se-GUI-Objekt auszuführen und warten ggf. WaitForMe_TO und versucht alle WaitForMe_PT die Interaktionn z wiederholen.
+     *  
+     *  @return true, wenn das Objekt vorhanden ist, sonst false.
+     *  \~
+     * 
+     *  @author Zoltán Hrabovszki
+     * @throws IOException 
+     * @throws SAXException 
+     * @throws ParserConfigurationException 
+     * @throws JAXBException 
+     * @throws XPathExpressionException 
+     *  @date 2020.06.18
+     */
+    public void WaitForInteraction( Runnable Method2Call )
+    {
+    	// Variables
+    	Integer Count = 0;
+    	RuntimeException TimeOutException = null;
+    	boolean isExecuted = false;
+
+    	try
+    	{
+            OKW myOKW = FrameObjectDictionary_Sngltn.getInstance().getOKW( this.getKN() );
+
+            // TimeOut-Werte ermitteln
+            OKW_TimeOut timeout = new OKW_TimeOut( myOKW.WaitForMe_TO(), myOKW.WaitForMe_PT() );
+
+            Count = 0;
+
+            while ( Count <= timeout.getMaxCount() )
+            {
+            	try
+            	{
+            		Method2Call.run();
+                    
+            		// No mistake: Get out of the loop.
+            		isExecuted = true;
+            		break;
+                }
+            	catch ( InvalidElementStateException e)
+            	{
+            		TimeOutException = new RuntimeException( e );
+            	}
+
+                Count++;
+            }
+            
+            if (isExecuted)
+            {
+            	LogPrint( "Interaction succesfull executed" );
+            }
+            else
+            {
+            	throw TimeOutException;
+            }
+
+    	}
+    	catch( XPathExpressionException | JAXBException | ParserConfigurationException | SAXException | IOException e )
+    	{
+    		throw new RuntimeException( e );
+    	}
+            
+        return;
+    }
+    
 }

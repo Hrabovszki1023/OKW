@@ -40,6 +40,7 @@ package okw.gui;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.function.Supplier;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;
@@ -434,7 +435,7 @@ public ArrayList<String> MemorizeCaption( )
    
 
     /** \~german
-     *  Methode wartet auf die Existenz des aktuellen Objectes.
+     *  Methode wartet auf die Existenz des aktuellen Objektes.
      *  
      *  Wichtig: Methode löst keine Exception aus, wenn das Objekt nicht erscheint!
      *  
@@ -487,5 +488,4 @@ public ArrayList<String> MemorizeCaption( )
 
         return lvbReturn;
     }
-
 }

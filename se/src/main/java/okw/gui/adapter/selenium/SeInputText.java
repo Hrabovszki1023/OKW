@@ -235,7 +235,7 @@ public class SeInputText extends SeAnyChildWindow
      *  Ein Textfield besteht aus einerZeile: Daher wird der Wert des Textfield-s im ListenElement[0] zurückgegeben.
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2014.06.2014
+     *  /date 2014.06.2014
      */
     @Override
     public ArrayList<String> getValue()
@@ -286,11 +286,12 @@ public class SeInputText extends SeAnyChildWindow
 
             if ( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )
             {
-                myMe.clear();
+                this.WaitForInteraction( () -> {myMe.clear();} );
             }
             else
             {
-                myMe.sendKeys( Val.get( 0 ) );
+                String resolvedValue = Val.get( 0 );
+                this.WaitForInteraction( (  ) -> { myMe.sendKeys( resolvedValue ); } );
             }
         }
         finally

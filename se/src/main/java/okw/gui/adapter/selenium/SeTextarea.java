@@ -235,35 +235,35 @@ import okw.gui.OKWLocatorBase;
         }
         
         
-  // / \~german
-  public void SetValue( ArrayList<String> Values )
-  {
-    this.LogFunctionStartDebug( "SetValue", "Val", Values.toString() );
-
-    try
-    {
-      // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-      this.WaitForMe();
-
-      WebElement myMe = this.Me();
-      myMe.clear();
-      
-      for (String Value : Values)
-      {
-        if (Value.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
-        {
-          myMe.clear();
-        }
-        else
-        {
-          myMe.sendKeys( Value );
-        }
-      }
-    }
-    finally
-    {
-      this.LogFunctionEndDebug();
-    }
-  }
+  // FIXME: [ZOLI] Kann etnfernt werden, wird von AnyChildWindow verwendet
+//  public void SetValue( ArrayList<String> Values )
+//  {
+//    this.LogFunctionStartDebug( "SetValue", "Val", Values.toString() );
+//
+//    try
+//    {
+//      // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+//      this.WaitForMe();
+//
+//      WebElement myMe = this.Me();
+//      myMe.clear();
+//      
+//      for (String Value : Values)
+//      {
+//        if (Value.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ))
+//        {
+//          myMe.clear();
+//        }
+//        else
+//        {
+//          myMe.sendKeys( Value );
+//        }
+//      }
+//    }
+//    finally
+//    {
+//      this.LogFunctionEndDebug();
+//    }
+//  }
 
 }
