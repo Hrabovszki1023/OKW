@@ -186,11 +186,7 @@ public class SeAnyChildWindow extends AnyChildwindow
             this.WaitForMe();
 
             this.WaitForInteraction( () -> {this.Me().click();} );
-            
         }
-        catch (Exception e) {
-			// TODO: handle exception
-		}
         finally
         {
             this.LogFunctionEndDebug();
