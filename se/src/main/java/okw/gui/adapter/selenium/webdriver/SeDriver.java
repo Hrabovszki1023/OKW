@@ -190,127 +190,214 @@ public class SeDriver
     }
 
     
-    /**
+	/**
+	 * \~german Ermittelt die iFrame ID zum gegeben Lokator fpsLocator.
+	 *
+	 * Methode holt mit getIframesID() alle iframe-s der URL und durchsucht diese
+	 * nach dem gegeben Locator fpsLocator.
+	 *
+	 * \note Einschränkung: Es wird aktuell nicht geprüft, ob ein Locator in
+	 * mehrerern iFrame-s zu finden ist. Die Suche wird beendet sobald ein
+	 * GUI-Objekt für den Lokator gefunden wurde
+	 *
+	 * @param fpsLocator Loacator des GUI-Objektes welches gesucht werden soll.
+	 * @return Frame ID des iframe´s, in dem sich das Objekt mit dem gegebene
+	 *         Locator fpsLocator befindet
+	 * 
+	 *         \~english
+	 *
+	 *
+	 * @param ?
+	 * @return \~
+	 * @author Zoltán Hrabovszki
+	 * @throws Exception
+	 * @date 2019-02-23
+	 */
+	public WebElement getWebElement( String fpsLocator ) {
+
+		// Variables:
+		WebElement myWebElement = null;
+
+		// Liste der Frame-ID´s ermitteln, die sich im aktuellen Fenster befinden
+		ArrayList<String> iframeIDs = new ArrayList<String>();
+
+		ArrayList<WebElement> WebElements = new ArrayList<WebElement>();
+
+		// Action:
+		try {
+
+			MyLogger.LogFunctionStartDebug("SeDriver.getWebElement", "fpsLocator", fpsLocator);
+
+			// iframeIDs.add( currentiframeID ); FIXME: Wozu? Denke kann weg
+			iframeIDs.addAll(getIframesID());
+
+			MyLogger.LogPrintDebug("Number of iFrames found: " + ((Integer) iframeIDs.size()).toString());
+
+			// Alle iframes (ID) jeweils nach Webelementen durchsuchen. die zum gegebene
+			// Lokator fpsLocator passen.
+			for (String iframeID : iframeIDs) {
+				try
+				{   // Note: Wenn mehr als ein WenEement gefunden wird, dann löst das hier schon eine ausnahme aus
+					myWebElement = this.getWebElement(iframeID, fpsLocator);
+
+					if (myWebElement != null) {
+						WebElements.add(myWebElement);
+						continue;
+					}
+				} catch (OKWGUIObjectNotFoundException e) {
+					// OKWGUIObjectNotFoundException abfangen und im nächsten iFrame locator-Match
+					// suchen...
+					// Alle anderen Exception Durchlassen
+					// Die Exception OKWGUIObjectNotFoundException wird nachder Schleife unten
+					// ausgelöst
+					// wenn keiner der iFrames ein Objekt passend zum Locator fpsLocator enthält.
+					continue;
+				}
+			}
+
+			// Error handling...
+			if (WebElements.size() == 0)
+			{   // Wenn in keinem der Frames ein Webelement zum gegebenem Locator gefunden wurde,
+			    // dann die Ausnamhe OKWGUIObjectNotFoundException auslösen.
+				throw new OKWGUIObjectNotFoundException(
+						"Kein iFrame enthält ein Webelement passend zum Locator \"" + fpsLocator + "\"");
+			}
+			else if (WebElements.size() > 1)
+			{   // Wenn in mehr als einem Frame Webelemente zum gegebenem Locator
+				// gefunden wurden, dann OKWGUIObjectNotFoundException auslösen.
+				throw new OKWGUIObjectNotUniqueException(
+						"Mehrere iFrames enthalten Webelemente passend zum Locator \"" + fpsLocator + "\"");
+			}
+		}
+		finally
+		{
+			// edal wie LogFunction Level schließen...
+			MyLogger.LogFunctionEndDebug();
+		}
+		return WebElements.get(0);
+	}
+    
+//    /**
+//     * \~german
+//     * Ermittelt die iFrame ID zum gegeben Lokator fpsLocator.
+//     *
+//     * Methode holt mit getIframesID() alle iframe-s der URL und durchsucht diese nach dem gegeben Locator fpsLocator.
+//     *
+//     * \note Es wird aktuell nicht geprüft, ob ein Locator in mehrerern iFrame-s zu finden ist.
+//     * Die Suche wird beendet sobald ein GUI-Objekt für den Lokator gefunden wurde
+//     *
+//     * @param fpsLocator Loacator des GUI-Objektes welches gesucht werden soll.
+//     * @return Frame ID des iframe´s, in dem sich das Objekt mit dem gegebene Locator fpsLocator befindet
+//     * 
+//     * \~english
+//     *
+//     *
+//     * @param ? 
+//     * @return
+//     * \~
+//     * @author Zoltán Hrabovszki
+//     * @throws Exception 
+//     * @date 2019-02-23
+//     */
+//    public String getFrameID4Locator_old( String fpsLocator )
+//    {
+//        String return_iFrame = null;
+//        WebElement myWebElement = null;
+//        
+//        // Merkt sich die "gefundenen" Ausnahme in der Schleife
+//        // und löst diesen ggf. nach der schleife aus.
+//        Exception ExceptionFound = null;
+//
+//        MyLogger.LogFunctionStartDebug( "SeDriver.getFrameID4Locator", "fpsLocator", fpsLocator );
+//        
+//        // Liste der Frame-ID´s ermitteln, die sich im aktuellen Fenster befinden
+//        ArrayList<String> iframeIDs = new ArrayList<String>();
+//
+//        iframeIDs.add( currentiframeID );
+//        iframeIDs.addAll( getIframesID() );
+//
+//        MyLogger.LogPrintDebug( "Number of iFrames found: " + ((Integer)iframeIDs.size()).toString() );
+//        
+//        // iframes(ID) jeweils nach dem GUI-Objekt durchsuchen.
+//        for ( String iframeID : iframeIDs )
+//        {
+//            try
+//            {
+//                myWebElement = this.getElement( iframeID, fpsLocator );
+//
+//                if ( myWebElement != null )
+//                {
+//                    return_iFrame = currentiframeID;
+//                    break;
+//                }
+//            }
+//            catch ( OKWGUIObjectNotFoundException e )
+//            {
+//                ExceptionFound = e;
+//                continue;
+//            }
+//            catch ( OKWGUIObjectNotUniqueException e )
+//            {   // Hier wird z.B. abgefangen wenn zwei Locatoren
+//                ExceptionFound = e;
+//                break;
+//            }            
+//            catch ( Exception e )
+//            {   // Other exceptions...
+//                
+//                ExceptionFound = e;
+//                break;
+//            }            
+//        }
+//
+//        if ( ExceptionFound instanceof OKWGUIObjectNotFoundException )
+//        {
+//            MyLogger.LogPrintDebug( "Object not found." );
+//            MyLogger.LogFunctionEndDebug( );
+//            throw new OKWGUIObjectNotFoundException( ExceptionFound.getMessage() );
+//        }
+//        else if ( ExceptionFound instanceof OKWGUIObjectNotUniqueException )
+//        {
+//            MyLogger.LogPrintDebug( "More than one Object found." );
+//            MyLogger.LogFunctionEndDebug( );
+//            throw new OKWGUIObjectNotUniqueException( ExceptionFound.getMessage() );
+//        }
+//        else if ( ExceptionFound != null )
+//        {
+//            MyLogger.LogPrintDebug( "Unknown Exception." );
+//            MyLogger.LogFunctionEndDebug( );
+//            throw new RuntimeException( ExceptionFound );
+//        }
+//        else
+//        {
+//            MyLogger.LogFunctionEndDebug( "iFrame: '" + return_iFrame + "'");            
+//        }        
+//        return return_iFrame;
+//    }
+
+	/**
      * \~german
-     * Ermittelt die iFrame ID zum gegeben Lokator fpsLocator.
-     *
-     * Methode holt mit getIframesID() alle iframe-s der URL und durchsucht diese nach dem gegeben Locator fpsLocator.
-     *
-     * \note Einschränkung: Es wird aktuell nicht geprüft, ob ein Locator in mehrerern iFrame-s zu finden ist.
-     * Die Suche wird beendet sobald ein GUI-Objekt für den Lokator gefunden wurde
-     *
-     * @param fpsLocator Loacator des GUI-Objektes welches gesucht werden soll.
-     * @return Frame ID des iframe´s, in dem sich das Objekt mit dem gegebene Locator fpsLocator befindet
+     * Ermittelt <b>alle</b> iFrames im aktuellen HTML und erstellt eine liste der iFrame-ID´s.
+     * 
+     * @return Liste aller gefundenen iFrame-ID´s.
      * 
      * \~english
-     *
-     *
-     * @param ? 
-     * @return
-     * \~
-     * @author Zoltán Hrabovszki
-     * @throws Exception 
-     * @date 2019-02-23
-     */
-    public String getFrameID4Locator( String fpsLocator )
-    {
-        String return_iFrame = null;
-        WebElement myWebElement = null;
-        
-        // Merkt sich die "gefundenen" Ausnahme in der Schleife
-        // und löst diesen ggf. nach der schleife aus.
-        Exception ExceptionFound = null;
-
-        MyLogger.LogFunctionStartDebug( "SeDriver.getFrameID4Locator", "fpsLocator", fpsLocator );
-        
-        // Liste der Frame-ID´s ermitteln, die sich im aktuellen Fenster befinden
-        ArrayList<String> iframeIDs = new ArrayList<String>();
-
-        iframeIDs.add( currentiframeID );
-        iframeIDs.addAll( getIframesID() );
-
-        MyLogger.LogPrintDebug( "Number of iFrames found: " + ((Integer)iframeIDs.size()).toString() );
-        
-        // iframes(ID) jeweils nach dem GUI-Objekt durchsuchen.
-        for ( String iframeID : iframeIDs )
-        {
-            try
-            {
-                myWebElement = this.getElement( iframeID, fpsLocator );
-
-                if ( myWebElement != null )
-                {
-                    return_iFrame = currentiframeID;
-                    break;
-                }
-            }
-            catch ( OKWGUIObjectNotFoundException e )
-            {
-                ExceptionFound = e;
-                continue;
-            }
-            catch ( OKWGUIObjectNotUniqueException e )
-            {   // Hier wird z.B. abgefangen wenn zwei Locatoren
-                ExceptionFound = e;
-                break;
-            }            
-            catch ( Exception e )
-            {   // Other exceptions...
-                
-                ExceptionFound = e;
-                break;
-            }            
-        }
-
-        if ( ExceptionFound instanceof OKWGUIObjectNotFoundException )
-        {
-            MyLogger.LogPrintDebug( "Object not found." );
-            MyLogger.LogFunctionEndDebug( );
-            throw new OKWGUIObjectNotFoundException( ExceptionFound.getMessage() );
-        }
-        else if ( ExceptionFound instanceof OKWGUIObjectNotUniqueException )
-        {
-            MyLogger.LogPrintDebug( "More than one Object found." );
-            MyLogger.LogFunctionEndDebug( );
-            throw new OKWGUIObjectNotUniqueException( ExceptionFound.getMessage() );
-        }
-        else if ( ExceptionFound != null )
-        {
-            MyLogger.LogPrintDebug( "Unknown Exception." );
-            MyLogger.LogFunctionEndDebug( );
-            throw new RuntimeException( ExceptionFound );
-        }
-        else
-        {
-            MyLogger.LogFunctionEndDebug( "iFrame: '" + return_iFrame + "'");            
-        }        
-        return return_iFrame;
-    }
-    
-    
-    /**
-     * \~german
-     * Ermittelt alle iFrames im aktuellen HTML und erstellt eine liste der iFrame-ID´s.
-     * @return
-     * Liste der gefundenen iFrame-ID´s zur identifikation.
+     * Returns <b>all</b> iFrames in the current HTML and creates a list of the iFrameID´s.
      * 
-     * \~english
-     * Returns all iFrames in the current HTML and creates a list of the iFrameID´s.
-     * @return
-     * List of found iFrame-ID´s for identification.
+     * @return List of found iFrame-ID´s for identification.
      * 
      * \~
      * @author Zoltán Hrabovszki
      * @date 2019-02-23
      */
-    public ArrayList<String> getIframesID( )
+    protected ArrayList<String> getIframesID( )
     {
         
         ArrayList<String> lvReturn = new ArrayList<String>();
-
+        lvReturn.add(""); // Default iframe
+        
         MyLogger.LogFunctionStartDebug( "SeDriver.getIframesID");
 
-        //final
+        //f
         List<WebElement> iframes = this.driver.findElements(By.tagName("iframe"));
         
         MyLogger.ResOpenListDebug( "iFrames..." );
@@ -322,7 +409,8 @@ public class SeDriver
             if ( ! okw.OKW_Helper.isStringNullOrEmpty( myID ) )
             {
                 lvReturn.add( myID );
-                MyLogger.LogPrintDebug( "ID='" + myID + "'" );            }
+                MyLogger.LogPrintDebug( "ID='" + myID + "'" );
+            }
             else
             {
                 myID = iframe.getAttribute("name");
@@ -346,7 +434,7 @@ public class SeDriver
     }
     
     /** \~german
-     *  Ermittelt das Webelement mit der gegebenen frameID und dem gegebenen Locator.
+     *  Ermittelt ein WebElement zu der gegebenen frameID und Locator.
      *  
      *  @param fpsFrameID Frame-ID des Frames, in dem nach dem GUI-Objekt mit dem Lokator fpsLocator gesucht werden soll.
      *  @param fpsLocator Lokator des GUI-Objektes. Siehe auch Parameter fpsFrameID
@@ -366,10 +454,10 @@ public class SeDriver
      *  @author Zoltán Hrabovszki
      *  \date 2015.05.12
      */
-    public WebElement getElement( String fpsFrameID, String fpsLocator )
+    protected WebElement getWebElement( String fpsFrameID, String fpsLocator )
     {
-        WebElement me = null;
-        List<WebElement> meme = null;
+        WebElement webElement = null;
+        List<WebElement> webElements = null;
 
         try
         {
@@ -379,16 +467,16 @@ public class SeDriver
             this.swichToFrame( fpsFrameID );
 
             // Element ggf. des richtigen Frames Holen.
-            meme = this.driver.findElements( By.xpath( fpsLocator ) );
+            webElements = this.driver.findElements( By.xpath( fpsLocator ) );
 
-            if ( meme.size() == 0 )
+            if ( webElements.size() == 0 )
             {
                 String lvsPrintMe = "GUI-Objekt nicht gefunden! IFrame: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
                 this.MyLogger.LogPrint( lvsPrintMe );
 
                 throw new OKWGUIObjectNotFoundException( lvsPrintMe );
             }
-            else if ( meme.size() > 1 )
+            else if ( webElements.size() > 1 )
             {
                 String lvsPrintMe = "Locator ist nicht eindeutig! IFrame: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
 
@@ -400,52 +488,52 @@ public class SeDriver
             {
                 String lvsPrintMe = "GUI-Objekt gefunden IFrame: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
                 this.MyLogger.LogPrintDebug( lvsPrintMe );
-                me = meme.get( 0 );
+                webElement = webElements.get( 0 );
             }
         }
         finally
         {
             // Logfunction schliessen...
-            if (me != null)
-               this.MyLogger.LogFunctionEndDebug( me.toString() );
+            if (webElement != null)
+               this.MyLogger.LogFunctionEndDebug( webElement.toString() );
             else
                 this.MyLogger.LogFunctionEndDebug( );       
         }
         
-        return me;
+        return webElement;
     }
 
     /** \~german
-     *  Ermittelt das Webelement mit der gegebenen frameID und dem gegebenen Locator
+     *  Ermittelt alle WebElemente, die in fpsFrameID mit dem Locator fpsLocator gefunden werden.
      *  
      *  
      *  \~english
-     *  \todo TODO: Brief Description.
+     *  Returns all WebElements found in fpsFrameID with the locator fpsLocator
      *  
      *  
      *  \~
      *  @author Zoltán Hrabovszki
      *  @date 2015.05.12
      */
-    public List<WebElement> getElements( String fpsFrameID, String fpsLocator )
+    protected List<WebElement> __getWebElements( String fpsFrameID, String fpsLocator )
     {
-        List<WebElement> meme = null;
+        List<WebElement> WebElements = null;
         
-        this.MyLogger.LogFunctionStartDebug( "SeDriver.getElement", "fpsFrameID", fpsFrameID, "fpsLocator", fpsLocator );
-
         try
         {
-            // 1. Auf das richtige frame Setzen oder zurück auf default. 
+        	this.MyLogger.LogFunctionStartDebug( "SeDriver.getElement", "fpsFrameID", fpsFrameID, "fpsLocator", fpsLocator );
+
+        	// 1. Auf das richtige frame Setzen oder zurück auf default. 
             this.swichToFrame( fpsFrameID );
 
             // 2. Element im Frame finden.
-            meme = this.driver.findElements( By.xpath( fpsLocator ) );
+            WebElements = this.driver.findElements( By.xpath( fpsLocator ) );
         }
         finally
         {
             this.MyLogger.LogFunctionEndDebug(); ;    
         }
-        return meme;
+        return WebElements;
     }
 
     /*

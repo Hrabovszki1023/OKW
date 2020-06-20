@@ -48,6 +48,7 @@ import javax.xml.xpath.XPathExpressionException;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWGUIObjectNotFoundException;
+import okw.exceptions.OKWGUIObjectNotUniqueException;
 import okw.gui.*;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
 import okw.log.Logger_Sngltn;
@@ -88,55 +89,6 @@ public class SeAnyChildWindow extends AnyChildwindow
     
     //protected OKWLocatorXPath _locator = null;
     
-    /**
-     * \~
-     *  If iframeID IS null the iFrame is to be checked
-     *  else if iframeID IS "" then iFrame is switchTo "default"
-     *  else switchTo is iframeID
-     *  @author zoltan
-     *  @date 2019.03.03
-     */
-    protected String        iframeID = null;
-
-    public String get_iframeID() throws OKWGUIObjectNotFoundException
-    {
-        LogFunctionStartDebug( this.getClass().getSimpleName() + ".get_iframeID" );
-
-        // Wenn die iframeID 
-        if ( iframeID == null )
-        {
-            try
-            {   
-                String myLocator = this.getLocator();
-                
-                LogPrintDebug( "Find iframe ID for the Locator: '" + myLocator + "'..." );
-                // ID ist noch nicht ermittelt -> ID Ermitteln
-                String myiframeID = SeDriver.getInstance().getFrameID4Locator( myLocator );
-                LogPrintDebug( "Frame ID found: '" + myiframeID + "'" );
-
-                // Denn Aktuellen wert merken.
-                set_iframeID( myiframeID );
-            }
-            finally
-            {
-                LogFunctionEndDebug( iframeID );
-            }
-        }
-        else
-        {
-            LogFunctionEndDebug( iframeID );
-        }
-        
-        return iframeID;
-    }
-
-    public void set_iframeID( String iframeID )
-    {
-        LogFunctionStartDebug( "SeAnyChildWindow.set_iframeID", "iframeID", iframeID );
-        this.iframeID = iframeID;
-        LogFunctionEndDebug( );
-    }
-
     public SeAnyChildWindow( )
     {
         _locator = new OKWLocatorXPath( );
@@ -159,7 +111,6 @@ public class SeAnyChildWindow extends AnyChildwindow
     public SeAnyChildWindow( String fpsLocator, OKWLocatorBase... locators )
     {
         _locator = new OKWLocatorXPath( fpsLocator,  locators );
-        this.iframeID = null;
     }
     
     
@@ -245,7 +196,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     public Boolean getExists()
     {
         Boolean lvbReturn = false;
-        List<WebElement> meme = null;
+        WebElement webElement = null;
 
         String myLocator = null;
 
@@ -254,26 +205,16 @@ public class SeAnyChildWindow extends AnyChildwindow
             LogFunctionStartDebug( "getExists" );
 
             myLocator = this.getLocator();
+            webElement = SeDriver.getInstance().getWebElement( myLocator );
 
-            // Wenn iframe gesetz umschalten auf das iframe sonst zurücksetzten auf default.
-            meme = SeDriver.getInstance().getElements( get_iframeID(), myLocator );
-
-            if ( meme.size() == 0 )
-            {
-                lvbReturn = false;
-            }
-            else if ( meme.size() > 1 )
-            {
-                String lvsPrintMe = "Locator ist nicht eindeutig, es wurden mehrer GUI-Objekt gefunden: Locator: >>" + this.getLocator() + "<<";
-                LogWarning( lvsPrintMe );
-
-                lvbReturn = false;
-            }
-            else
-            {
                 lvbReturn = true;
-            }
         }
+        catch ( OKWGUIObjectNotUniqueException e )
+        {
+            LogPrint( "OKWGUIObjectNotUniqueException..." );
+            lvbReturn = false;
+        }
+        
         catch (OKWGUIObjectNotFoundException e)
         {
             LogPrint( "OKWGUIObjectNotFoundException..." );
@@ -768,7 +709,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     {
         WebElement me = null;
 
-        me = SeDriver.getInstance().getElement( get_iframeID(), this.getLocator() );
+        me = SeDriver.getInstance().getWebElement( this.getLocator() );
 
         return me;
     }

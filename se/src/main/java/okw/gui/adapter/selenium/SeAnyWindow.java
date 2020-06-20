@@ -44,6 +44,7 @@ import javax.xml.xpath.XPathExpressionException;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWGUIObjectNotFoundException;
+import okw.exceptions.OKWGUIObjectNotUniqueException;
 import okw.gui.*;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
 import okw.log.Logger_Sngltn;
@@ -90,56 +91,7 @@ public class SeAnyWindow extends AnyWindow
 
     // Logger Instance holen
     // protected Logger_Sngltn MyLogger = Logger_Sngltn.getInstance();
-
     protected LogMessenger  LM       = new LogMessenger( "GUI" );
-
-    /**
-     * \~
-     *  If iframeID IS null the iFrame is to be checked
-     *  else if iframeID IS "" then iFrame is switchTo "default"
-     *  else switchTo is iframeID
-     *  @author zoltan
-     *  @date 2019.03.03
-     */
-    protected String        iframeID = null;
-
-    public String get_iframeID() 
-    {
-        LogFunctionStartDebug( "get_iframeID" );
-
-        // Wenn die iframeID 
-        if ( iframeID == null )
-        {
-           try
-           {   
-                String myLocator = this.getLocator();
-                
-                LogPrintDebug( "Find iframe ID for the Locator: '" + myLocator + "'..." );
-                // ID ist noch nicht ermittelt -> ID Ermitteln
-                String myiframeID = mySeDriver.getFrameID4Locator( myLocator );
-                LogPrintDebug( "Frame ID found: '" + myiframeID + "'" );
-
-                // Denn Aktuellen wert merken.
-                set_iframeID( myiframeID );
-            }
-            finally
-            {
-                LogFunctionEndDebug( iframeID );
-            }
-        }
-        else
-        {
-            LogFunctionEndDebug( iframeID );
-        }
-        return iframeID;
-    }
-
-    public void set_iframeID( String iframeID )
-    {
-        LogFunctionStartDebug( "set_iframeID", "iframeID", iframeID );
-        this.iframeID = iframeID;
-        LogFunctionEndDebug( );
-    }
 
 
     @Override
@@ -147,7 +99,6 @@ public class SeAnyWindow extends AnyWindow
     {
         LogFunctionStartDebug( "setLocator", "Locator", Locator );
         this._locator.setLocator( Locator, Locators );
-        this.iframeID = null;
         LogFunctionEndDebug( );
     }
 
@@ -242,7 +193,8 @@ public class SeAnyWindow extends AnyWindow
     public Boolean getExists()
     {
         Boolean lvbReturn = false;
-        List<WebElement> meme = null;
+        
+        WebElement webElement = null;
 
         String myLocator = null;
 
@@ -253,23 +205,14 @@ public class SeAnyWindow extends AnyWindow
             myLocator = this.getLocator();
 
             //meme = mySeDriver.driver.findElements(By.xpath(myLocator));
-            meme = mySeDriver.getElements( get_iframeID(), myLocator );
+            webElement = mySeDriver.getWebElement( myLocator );
 
-            if ( meme.size() == 0 )
-            {
-                lvbReturn = false;
-            }
-            else if ( meme.size() > 1 )
-            {
-                String lvsPrintMe = "Locator ist nicht eindeutig, es wurden mehrer GUI-Objekt gefunden:\n Locator: >>" + this.getLocator() + "<<";
-                LogWarning( lvsPrintMe );
-
-                lvbReturn = false;
-            }
-            else
-            {
-                lvbReturn = true;
-            }
+            lvbReturn = true;
+        }
+        catch (OKWGUIObjectNotUniqueException e )
+        {
+            LogPrintDebug( "NoSuchElementException" );
+            lvbReturn = false;
         }
         catch (OKWGUIObjectNotFoundException e)
         {
@@ -786,7 +729,7 @@ public class SeAnyWindow extends AnyWindow
 
         try {
             LogFunctionStartDebug( "Me" );
-            me = mySeDriver.getElement( get_iframeID(), this.getLocator() );
+            me = mySeDriver.getWebElement( this.getLocator() );
         }
         finally
         {
