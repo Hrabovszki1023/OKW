@@ -26,7 +26,7 @@ public class IFrame_EN_Chrome_Test extends IFrame_EN_Test
 
         myLog2HTML = new Log2HTML("target/IFrame_EN_Chrome_Test.html");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(true);
+        Logger_Sngltn.getInstance().setDebugMode(false);
 	}
 
 	@AfterAll

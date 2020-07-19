@@ -64,7 +64,7 @@ public class IFrame_EN_Test extends OKWTestBase
 
   protected static Log2HTML myLog2HTML = null;
 
-  protected OKW_Memorize_Sngltn     myMem = OKW_Memorize_Sngltn.getInstance();
+  protected OKW_Memorize_Sngltn  myMem = OKW_Memorize_Sngltn.getInstance();
 
   protected static String ApplicationName;
 
@@ -83,7 +83,7 @@ public class IFrame_EN_Test extends OKWTestBase
       EN.StartApp( ApplicationName );
       
       EN.SetValue( "URL", "http://test.openkeyword.de/iframe/iframeWithID.htm" );
-      EN.VerifyValue( "URL", "http://test.openkeyword.de/iframe/iframeWithID.htm" );
+      //EN.VerifyValue( "URL", "http://test.openkeyword.de/iframe/iframeWithID.htm" );
 
       EN.SelectWindow( "IFrameWithID" );
       EN.VerifyExists( "Button 1", "YES" );
@@ -163,6 +163,38 @@ public class IFrame_EN_Test extends OKWTestBase
 
       EN.StopApp( ApplicationName );
       EN.EndTest();
+  }
+
+  
+  /**
+   * \~german
+   * Exception Test: Objekt <code>Button 1</code> Existiert für den definierten XPATH <code>//*[@data-4test='Button 1']</code> in mehreren iframe.
+   * [Testseite]: http://test.openkeyword.de/iframe/iframe4NotUniqueXpathError.htm        "iframe4NotUniqueXpathError"
+   * 
+   * Dieser Testfall muss die Ausnahme okw.exceptions.OKWGUIObjectNotUniqueException auslösen, 
+   * weil <code>Button 1</code> nicht eindeutig identifiziert werden kann.
+   * 
+   *  \~
+   *  @author Zoltan Hrabovszki
+   *  @date 2020-07-19
+   */ 
+  @Test
+  public void tcFind_() throws Exception
+  {
+      EN.BeginTest( TestName );
+      EN.StartApp( ApplicationName );
+      
+      EN.SetValue( "URL", "http://test.openkeyword.de/iframe/iframe4NotUniqueXpathError.htm" );
+
+      EN.SelectWindow( "IFrameWithName" );
+      EN.VerifyExists( "Button 1", "YES" );
+      
+      EN.StopApp( ApplicationName );
+      
+      Assertions.assertThrows(okw.exceptions.OKWGUIObjectNotUniqueException.class, () -> {
+    	      EN.EndTest();
+    	  });
+
   }
 
 }

@@ -160,9 +160,6 @@ public class SeDriver
     public void swichToFrame( String iframeID )
     {
 
-        // Nur etwas Unternehmen wenn iframeID sich geändert hat
-        if ( !currentiframeID.equalsIgnoreCase( iframeID ) )
-        {
             // first reset to default
             driver.switchTo().defaultContent();
 
@@ -172,10 +169,6 @@ public class SeDriver
                 try
                 {
                     driver.switchTo().frame( iframeID );
-
-                    // Neuenwert merken wenn Fehlerfrei ge-Switchto wurde... 
-                    currentiframeID = iframeID;
-
                 }
                 catch (NoSuchFrameException e)
                 {
@@ -186,7 +179,6 @@ public class SeDriver
                     System.out.println( "Unable to navigate to frame with id " + iframeID + e.getStackTrace() );
                 }
             }
-        }
     }
 
     
@@ -242,6 +234,7 @@ public class SeDriver
 
 					if (myWebElement != null) {
 						WebElements.add(myWebElement);
+						this.currentiframeID = iframeID;
 						continue;
 					}
 				} catch (OKWGUIObjectNotFoundException e) {
@@ -260,14 +253,21 @@ public class SeDriver
 			{   // Wenn in keinem der Frames ein Webelement zum gegebenem Locator gefunden wurde,
 			    // dann die Ausnamhe OKWGUIObjectNotFoundException auslösen.
 				throw new OKWGUIObjectNotFoundException(
-						"Kein iFrame enthält ein Webelement passend zum Locator \"" + fpsLocator + "\"");
+						"GUI object was not found. Locator: \"" + fpsLocator + "\"");
 			}
 			else if (WebElements.size() > 1)
 			{   // Wenn in mehr als einem Frame Webelemente zum gegebenem Locator
 				// gefunden wurden, dann OKWGUIObjectNotFoundException auslösen.
 				throw new OKWGUIObjectNotUniqueException(
-						"Mehrere iFrames enthalten Webelemente passend zum Locator \"" + fpsLocator + "\"");
+						"Object was not uniquely found. Several objects match the locator: \"" + fpsLocator + "\"");
 			}
+			else
+			{
+				// Wenn genua ein elemnt gefunden wird wird der Contxt auf das iFrame 
+				// gesetzt in dem sich das Objekt befindet.
+				this.swichToFrame(this.currentiframeID);
+			}
+			
 		}
 		finally
 		{
@@ -398,6 +398,7 @@ public class SeDriver
         MyLogger.LogFunctionStartDebug( "SeDriver.getIframesID");
 
         //f
+        this.swichToFrame(""); // TODO ZH tem eingabut
         List<WebElement> iframes = this.driver.findElements(By.tagName("iframe"));
         
         MyLogger.ResOpenListDebug( "iFrames..." );
@@ -461,7 +462,7 @@ public class SeDriver
 
         try
         {
-            this.MyLogger.LogFunctionStartDebug( "SeDriver.getElement", "fpsFrameID", fpsFrameID, "fpsLocator", fpsLocator );
+            this.MyLogger.LogFunctionStartDebug( "SeDriver.getWebElement", "fpsFrameID", fpsFrameID, "fpsLocator", fpsLocator );
 
             // 1. ggf Auf das richtige frame Setzen oder zurück auf default. 
             this.swichToFrame( fpsFrameID );
@@ -471,22 +472,22 @@ public class SeDriver
 
             if ( webElements.size() == 0 )
             {
-                String lvsPrintMe = "GUI-Objekt nicht gefunden! IFrame: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
-                this.MyLogger.LogPrint( lvsPrintMe );
+                String lvsPrintMe = "GUI object was not found. Locator: \"" + fpsLocator + "\"";
+                this.MyLogger.LogPrintDebug( lvsPrintMe );
 
                 throw new OKWGUIObjectNotFoundException( lvsPrintMe );
             }
             else if ( webElements.size() > 1 )
             {
-                String lvsPrintMe = "Locator ist nicht eindeutig! IFrame: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
-
+                String lvsPrintMe = "Object was not uniquely found. Several objects match the locator: \"" + fpsLocator + "\"";
+                
                 this.MyLogger.LogWarning( lvsPrintMe );
 
                 throw new OKWGUIObjectNotUniqueException( lvsPrintMe );
             }
             else
             {
-                String lvsPrintMe = "GUI-Objekt gefunden IFrame: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
+                String lvsPrintMe = "GUI object was found. iframe: '" + fpsFrameID + "' Locator: '" + fpsLocator + "'";
                 this.MyLogger.LogPrintDebug( lvsPrintMe );
                 webElement = webElements.get( 0 );
             }

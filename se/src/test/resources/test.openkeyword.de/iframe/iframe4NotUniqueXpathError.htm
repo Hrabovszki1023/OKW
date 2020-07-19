@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body data-4test="iframeWithName.htm">
+
+  <p>Hinweis: Die Seite enthält zwei "iframes" und objekte im  "defaul frame"
+  <ol>
+    <li>default frame:</li>
+	<ol>
+      <li>textarea: data-4test='textarea'</li>
+      <li>button: data-4test='Button 1'</li>
+      <li>button: data-4test='default frame Button 2'</li>
+    </ol>
+    <li>frame 1: name = 'nameframe1'</li>
+	<ol>
+      <li>textarea: data-4test='nameframe1'</li>
+      <li>button: data-4test='Button 1'</li>
+      <li>button: data-4test='default frame Button 2'</li>
+    </ol>
+    <li>frame 2: name = 'nameframe2'</li>
+	<ol>
+      <li>textarea: data-4test='nameframe2'</li>
+      <li>button: data-4test='Button 1'</li>
+      <li>button: data-4test='default frame Button 2'</li>
+    </ol>
+  </ol>
+  </p>
+
+  <p>
+    <textarea
+           id="default_frame_textarea"
+           cols="20"
+           rows="4"
+           data-4test="textarea"></textarea>
+    <button
+           data-4test="Button 1"
+           name="Button 1"
+           title="Button 1 Tooltip/title"
+           value="Button 1 value"
+           onclick="myFunction1()">Button 1</button>
+    <button
+           data-4test="default frame Button 2"
+           name="Button 2"
+           title="Button 2 Tooltip/title"
+           value="Button 2 value"
+           onclick="myFunction2()">Button 2 is Unique</button>
+  </p>
+  <script>
+function myFunction1() {
+    document.getElementById("default_frame_textarea").value = 'Ich bin Button 1 - im default iframe';
+}
+
+function myFunction2() {
+    document.getElementById("default_frame_textarea").value = 'Ich bin Button 2 - im default iframe';
+}
+
+  </script>
+
+
+	<p>frame1:</p>
+	<iframe src="../button/button.htm" width="90%" height="400" name="nameframe1">
+	</iframe>
+	
+	<p>frame2:</p>
+	<iframe src="../button/button.htm" width="90%" height="400" name="nameframe2">
+	</iframe>
+</body>
+</html>

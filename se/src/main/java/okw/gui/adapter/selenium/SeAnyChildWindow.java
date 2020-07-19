@@ -166,7 +166,8 @@ public class SeAnyChildWindow extends AnyChildwindow
             this.WaitForMe();
 
             // The Attribute "textContent" wird als Beschriftung angezeigt...
-            String myAttribute = this.Me().getAttribute( "textContent" );
+            WebElement MeME= this.Me();
+            String myAttribute = MeME.getAttribute( "textContent" );
             myAttribute = StringUtils.normalizeSpace( myAttribute );
             
             lvLsReturn.add( myAttribute );
@@ -209,11 +210,11 @@ public class SeAnyChildWindow extends AnyChildwindow
 
                 lvbReturn = true;
         }
-        catch ( OKWGUIObjectNotUniqueException e )
-        {
-            LogPrint( "OKWGUIObjectNotUniqueException..." );
-            lvbReturn = false;
-        }
+//        catch ( OKWGUIObjectNotUniqueException e )
+//        {
+//            LogPrint( "OKWGUIObjectNotUniqueException..." );
+//            lvbReturn = false;
+//        }
         
         catch (OKWGUIObjectNotFoundException e)
         {
