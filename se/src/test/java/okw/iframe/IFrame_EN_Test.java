@@ -197,4 +197,34 @@ public class IFrame_EN_Test extends OKWTestBase
 
   }
 
+  /**
+   * \~german
+   * xpath des Fenster enthält "/*" als locator.
+   * In diesem Fall 
+   *    1. wird keine iframe suche durchgeführt.
+   *    2. muss der Locator des Kindobjektes sein WebElement eindeutig identifizieren könne.
+   * 
+   * Für diesen Test wird die Frame/GUIAdaper Klasse frmIFrameHarmonyRootLocator benötigt.
+   * In diesem ist der Locator des Frames auf "/*" gesetzt.
+   * 
+   *  \~
+   *  @author Zoltan Hrabovszki
+   *  @date 2020-07-23
+   */ 
+  @Test
+  public void tcHarmonyRootID_() throws Exception
+  {
+     EN.BeginTest( TestName );
+     EN.StartApp( ApplicationName );
+      
+     EN.SetValue( "URL", "http://test.openkeyword.de/iframe/iframeWithID.htm" );
+
+     EN.SelectWindow( "IFrameHarmonyRootLocator" );
+     EN.VerifyExists( "Button 1", "YES" );
+      
+     EN.StopApp( ApplicationName );
+      
+     EN.EndTest();
+
+  }
 }

@@ -183,7 +183,7 @@ public class SeDriver
 
     
 	/**
-	 * \~german Ermittelt die iFrame ID zum gegeben Lokator fpsLocator.
+	 * \~german Holt das aktuelle WebElement zum gegeben Lokator fpsLocator.
 	 *
 	 * Methode holt mit getIframesID() alle iframe-s der URL und durchsucht diese
 	 * nach dem gegeben Locator fpsLocator.
@@ -196,14 +196,15 @@ public class SeDriver
 	 * @return Frame ID des iframe´s, in dem sich das Objekt mit dem gegebene
 	 *         Locator fpsLocator befindet
 	 * 
-	 *         \~english
+	 * \~english
 	 *
 	 *
 	 * @param ?
-	 * @return \~
+	 * @return
+	 * \~
 	 * @author Zoltán Hrabovszki
 	 * @throws Exception
-	 * @date 2019-02-23
+	 * /date 2019-02-23
 	 */
 	public WebElement getWebElement( String fpsLocator ) {
 
@@ -215,14 +216,28 @@ public class SeDriver
 
 		ArrayList<WebElement> WebElements = new ArrayList<WebElement>();
 
+		// Haben wir eine Root locator? - Das ist Harmony spezifisch baer nicht nur.
+		// Ist true wenn fpsLocator auf "/*" gesetzt ist.
+		boolean isRoot = "/*".equals(fpsLocator);
+		
 		// Action:
 		try {
 
 			MyLogger.LogFunctionStartDebug("SeDriver.getWebElement", "fpsLocator", fpsLocator);
 
-			// iframeIDs.add( currentiframeID ); FIXME: Wozu? Denke kann weg
-			iframeIDs.addAll(getIframesID());
-
+			// Wenn der locator allgemein auf die Wurzel/root zeigt ("/*"),
+			// dann wird nur der defaultpage als Webelement ermittelt und nicht in weiteren
+			// möglichen iframes nach dem Locator fpsLocator gesucht
+			MyLogger.LogPrint( "Locator" + fpsLocator );
+			if ( isRoot )
+			{
+				MyLogger.LogPrint( "root" );
+				iframeIDs.add( "" );
+			}
+			else{
+				MyLogger.LogPrint( "no root" );
+				iframeIDs.addAll(getIframesID());
+			}
 			MyLogger.LogPrintDebug("Number of iFrames found: " + ((Integer) iframeIDs.size()).toString());
 
 			// Alle iframes (ID) jeweils nach Webelementen durchsuchen. die zum gegebene

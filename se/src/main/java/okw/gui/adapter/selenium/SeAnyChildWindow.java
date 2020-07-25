@@ -134,8 +134,11 @@ public class SeAnyChildWindow extends AnyChildwindow
             this.LogFunctionStartDebug( "ClickOn" );
 
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
+            this.LogPrint( "vor WaitForMe()");
             this.WaitForMe();
-
+            
+            this.LogPrint( "Vor WaitForInteraction()");
+            
             this.WaitForInteraction( () -> {this.Me().click();} );
         }
         finally
