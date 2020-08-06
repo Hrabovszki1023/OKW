@@ -224,7 +224,7 @@ public class OKW_PropertiesTest
     @Test
     public final void tc_getProperty2Boolean() throws IOException
     {
-        //assertEquals(  false, myProperties.getProperty2Boolean( "core.AbbortOnVerifyFail", "false" ) );
+        //assertEquals(  false, myProperties.getProperty2Boolean( "core.AbortOnVerifyFail", "false" ) );
         //assertEquals(  false, myProperties.getProperty2Boolean( "propertyDoesNotExist", "false" ) );
         assertEquals(  true,  myProperties.getProperty2Boolean( "core.propertyDoesNotExist", "true" ) );
     }

@@ -26,13 +26,13 @@ public class IFrame_EN_Chrome_Test extends IFrame_EN_Test
 
         myLog2HTML = new Log2HTML("target/IFrame_EN_Chrome_Test.html");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(false);
+        Logger_Sngltn.getInstance().setDebugMode(true);
 	}
 
 	@AfterAll
 	public static void tearDownAfterClass() throws Exception
 	{
-		myLog2HTML.Result2HTML( "IFrame_EN_Chrome_Test" );
+		myLog2HTML.Result2HTML( "target/IFrame_EN_Chrome_Test.html" );
 	}
 	
     @AfterEach

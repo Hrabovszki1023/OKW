@@ -23,7 +23,7 @@ public class SeBrowserChild_EN_Chrome_Test extends SeBrowserChild_EN_Test
 
         myLog2HTML = new Log2HTML("SeBrowserChild_EN_Chrome_Test");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(false);
+        Logger_Sngltn.getInstance().setDebugMode(true);
 	}
 
 	

@@ -6,10 +6,37 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.Keys;
 
 import okw.gui.adapter.selenium.SeTypeKeysCharSequence;
+import okw.log.Logger_Sngltn;
+import okw.log.log2html.Log2HTML;
 
 @Tag("SeTypeKeysCharSequenceTest")
 public class SeTypeKeysCharSequenceTest
 {
+	  protected static Log2HTML myLog2HTML = null;
+	  protected static String ApplicationName = null;
+	  
+	@BeforeAll
+	public static void setUpBeforeClass() throws Exception
+	{
+		ApplicationName = "Chrome";
+
+        Logger_Sngltn.getInstance();
+		// Reset des Loggers: Alle geladenen Instanzen löschen
+        Logger_Sngltn.init();
+
+        //
+        myLog2HTML = new Log2HTML( );
+
+        Logger_Sngltn.getInstance().addLogger(myLog2HTML);
+        Logger_Sngltn.getInstance().setDebugMode(true);        
+	}
+
+    @AfterAll
+    public static void tearDownAfterClass() throws Exception
+    {
+      myLog2HTML.Result2HTML( "target/SeTypeKeysCharSequenceTest.html" );
+    }
+	
     @Test
     public void test_setALT()
     {

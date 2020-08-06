@@ -28,15 +28,13 @@ public class SeScrollIntoView_Chrome_Test extends SeScrollIntoView_Test
         myLog2HTML = new Log2HTML( );
 
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(false);
-        
-        
+        Logger_Sngltn.getInstance().setDebugMode(true);        
 	}
 
     @AfterAll
     public static void tearDownAfterClass() throws Exception
     {
-      myLog2HTML.Result2HTML( "target/SeScrollIntoView_Test.html" );
+      myLog2HTML.Result2HTML( "target/SeScrollIntoView_Chrome_Test.html" );
     }
 	
     /* @AfterEach

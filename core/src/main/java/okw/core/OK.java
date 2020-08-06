@@ -157,12 +157,12 @@ public class OK implements IOKW_State
     
         if ( e instanceof okw.exceptions.OKWVerifyingFailsException )
         {
-            Boolean lvbAbbort = PROP.getProperty2Boolean( "core.AbbortOnVerifyFail", "false" );
+            Boolean lvbAbort = PROP.getProperty2Boolean( "core.AbortOnVerifyFail", "false" );
             _Kernel.setNOK_Reason( e );
             
-            if ( lvbAbbort )
+            if ( lvbAbort )
             {
-                // Change State to NOK if Property core.AbbortOnVerifyFail is true
+                // Change State to NOK if Property core.AbortOnVerifyFail is true
                 logException( e, e_Wrapped );
                 this._Kernel.SetCoreStateNOK( );
             }

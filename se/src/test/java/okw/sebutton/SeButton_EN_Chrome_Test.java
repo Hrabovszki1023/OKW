@@ -27,9 +27,9 @@ public class SeButton_EN_Chrome_Test extends SeButton_EN_Test
 		// Reset des Loggers: Alle geladenen Instanzen löschen
         Logger_Sngltn.init();
 
-        myLog2HTML = new Log2HTML("SeButton_Chrome_Test");
+        myLog2HTML = new Log2HTML("target/SeButton_Chrome_Test.html");
         Logger_Sngltn.getInstance().addLogger(myLog2HTML);
-        Logger_Sngltn.getInstance().setDebugMode(false);
+        Logger_Sngltn.getInstance().setDebugMode(true);
 	}
 
     // @After
