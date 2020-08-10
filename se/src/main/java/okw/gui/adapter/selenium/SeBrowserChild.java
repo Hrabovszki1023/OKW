@@ -42,6 +42,10 @@ package okw.gui.adapter.selenium;
 import okw.OKW;
 import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
+import okw.gui.adapter.selenium.webdriver.SeALERTACCEPT;
+import okw.gui.adapter.selenium.webdriver.SeALERTDATA;
+import okw.gui.adapter.selenium.webdriver.SeALERTDISMISS;
+import okw.gui.adapter.selenium.webdriver.SeALERTMESSAGE;
 import okw.gui.adapter.selenium.webdriver.SeBACK;
 import okw.gui.adapter.selenium.webdriver.SeMAXIMIZE;
 import okw.gui.adapter.selenium.webdriver.SePOSITION;
@@ -71,6 +75,22 @@ public class SeBrowserChild extends SeAnyWindow
 
     @OKW( FN = "POSITION")
     public SePOSITION POSITION = new SePOSITION();
+    
+    
+    // Implement Alert Handling
+    @OKW( FN = "ALERT MESSAGE")
+    public SeALERTMESSAGE ALERTMESSAGE = new SeALERTMESSAGE();
+
+    @OKW( FN = "ALERT DATA")
+    public SeALERTDATA ALERTDATA = new SeALERTDATA();
+    
+    @OKW( FN = "ALERT CANCEL")
+    public SeALERTDISMISS ALERTDISMISS = new SeALERTDISMISS();
+
+    @OKW( FN = "ALERT OK")
+    public SeALERTACCEPT ALERTACCEPT = new SeALERTACCEPT();
+    
+    
     
     @Override
     public void SelectWindow()
