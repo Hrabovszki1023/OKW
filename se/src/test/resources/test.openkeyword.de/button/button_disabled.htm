@@ -4,7 +4,7 @@
 	<title>Button enabled / disabled</title>
 	<link href="../okw.css" type="text/css" rel="stylesheet">
 </head>
-<body data-4test="button_disabled">
+<body data-harmony-id="button_disabled">
     <img src="https://www.openkeyword.de/images/OKW_Logos/150x78/okw_color_msoffice_nobackground.png"
          width="150"
          alt="OpenKeyWord Logo">
@@ -15,10 +15,10 @@
 <form action="input_button.htm">
   <p>
     <label for="textfeld">Textfield: </label>
-    <textarea cols="20" rows="4" id="textfeld" name="textfeld" data-4test="textfeld"></textarea><br>
+    <textarea cols="20" rows="4" id="textfeld" name="textfeld" data-harmony-id="textfeld"></textarea><br>
     <label for="ID_Botton_1">Label für Button1: </label>
     <button type="button"
-           data-4test="ID_Botton_1"
+           data-harmony-id="ID_Botton_1"
            id="ID_Botton_1"
            name="Button 1"
            title="Button 1 Tooltip/title"
@@ -26,7 +26,7 @@
            onclick="this.form.textfeld.value='Button 1 und rückwärts seltsam geschrieben ich bin.'">Button 1</button><br>
     <label for="ID_Botton_2">Label für Button2: </label>
     <button type="button"
-           data-4test="ID_Botton_2"
+           data-harmony-id="ID_Botton_2"
            id="ID_Botton_2"
            name="Button 2"
            title="Button 2 Tooltip/title"
