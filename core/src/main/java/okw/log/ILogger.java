@@ -115,7 +115,7 @@ public interface ILogger
      *  LogSourceLocation: Logs location of Source in Harmony.
      *  
      *  This is a special log for [Harmony](https://cloud.4test.io/).
-     *  Holds the Referenz to the Source in HArmony to create a Hyperlink from
+     *  Holds the Referenz to the Source in Harmony to create a Hyperlink from
      *  Report to the source of Teststep.
      *  
      *  This log is only used for Harmoy.

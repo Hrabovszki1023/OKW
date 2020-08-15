@@ -25,16 +25,16 @@ public class fourTestLocatorTest {
     @Test
     public void tc_4T_Locator() throws Exception
     {
-    	assertEquals( "//*[@data-4test='MyLocator']", myLocator.get4TestLocator( "4T!MyLocator" )  );
+    	assertEquals( "//*[@data-harmony-id=\"MyLocator\"]", myLocator.get4TestLocator( "4T!MyLocator" )  );
     }
 
     
     @Test
     public void tc_4T_LocatorMitClass() throws Exception
     {
-    	assertEquals( "//*[@data-4test='MyLocator']", myLocator.get4TestLocator( "4T!myClass::MyLocator" )  );
+    	assertEquals( "//*[@data-harmony-id=\"MyLocator\"]", myLocator.get4TestLocator( "4T!myClass::MyLocator" )  );
         assertEquals( "myClass", myLocator.getGUIClass() );
-        assertEquals( "//*[@data-4test='MyLocator']", myLocator.getLocator() );
+        assertEquals( "//*[@data-harmony-id=\"MyLocator\"]", myLocator.getLocator() );
     }
 
     @Test
