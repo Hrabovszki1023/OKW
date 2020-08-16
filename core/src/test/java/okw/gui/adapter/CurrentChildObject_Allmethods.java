@@ -67,7 +67,7 @@ import okw.log.Logger_Sngltn;
         }
 
         
-        public String getFN()
+        public String getCAT()
         {        	
         	String lvsReturn = "CurrentObjectWindow.CurrentObjectAllMethodCallTypes";
         	
@@ -91,7 +91,7 @@ import okw.log.Logger_Sngltn;
 
             Boolean bReturn = true;
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethodReturn_rB_pMN");
             myClipboard.getValue().clear();
             myClipboard.getValue().add("NO VALUE");
@@ -108,7 +108,7 @@ import okw.log.Logger_Sngltn;
 
             Boolean bReturn = pB;
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethodReturn_rB_pMN_pB");
             myClipboard.getValue().clear();
             myClipboard.getValue().add(OKW_Helper.Boolean2String(bReturn));
@@ -126,7 +126,7 @@ import okw.log.Logger_Sngltn;
 
             int liReturn = 23101963;
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethodReturn_rI_pMN");
             myClipboard.getValue().clear();
             myClipboard.getValue().add("NO VALUE");
@@ -146,7 +146,7 @@ import okw.log.Logger_Sngltn;
             LSReturn.add("Wert 2");
             LSReturn.add("Wert 3");
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethodReturn_rLS_pMN");
             myClipboard.getValue().clear();
             myClipboard.getValue().add("NO VALUE");
@@ -164,7 +164,7 @@ import okw.log.Logger_Sngltn;
 
             List<String> LSReturn = pLS;
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethodReturn_rLS_pMN_pLS");
             myClipboard.getValue().clear();
 
@@ -186,7 +186,7 @@ import okw.log.Logger_Sngltn;
             LSReturn.add(Param1);
             LSReturn.add(Param2);
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethodReturn_rLS_pMN_pS_pS");
             myClipboard.getValue().clear();
             myClipboard.getValue().add(Param1);
@@ -209,7 +209,7 @@ import okw.log.Logger_Sngltn;
             LSReturn.add(pLS.get(1));
             LSReturn.add(pLS.get(2));
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethodReturn_rLS_pMN_pS_pS_pLS");
             myClipboard.getValue().clear();
 
@@ -232,7 +232,7 @@ import okw.log.Logger_Sngltn;
 
             String lsReturn = "Wert 1";
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethodReturn_rS_pMN");
             myClipboard.getValue().clear();
             myClipboard.getValue().add("Wert 1");
@@ -250,7 +250,7 @@ import okw.log.Logger_Sngltn;
 
             String lsReturn = pS;
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethodReturn_rS_pMN_pS");
             myClipboard.getValue().clear();
             myClipboard.getValue().add(pS);
@@ -266,7 +266,7 @@ import okw.log.Logger_Sngltn;
             myLogger.LogFunctionStart("CallMethod_pMN");
             myLogger.LogPrintDebug("Locator: " + this.Locator);
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethod_MN");
             myClipboard.getValue().clear();
             myClipboard.getValue().add("NO VALUE");
@@ -281,7 +281,7 @@ import okw.log.Logger_Sngltn;
             myLogger.LogFunctionStart("CallMethodReturn_rLS_pMN_pLS", "List<String> pLS", pLS.toString());
             myLogger.LogPrint("Locator: " + this.Locator);
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethod_pMN_pLS");
             myClipboard.getValue().clear();
 
@@ -299,7 +299,7 @@ import okw.log.Logger_Sngltn;
             myLogger.LogFunctionStart("CallMethodReturn_rLS_pMN_pLS", "List<String> pLS", pLS.toString());
             myLogger.LogPrint("Locator: " + this.Locator);
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethod_pMN_pLS_pS");
             myClipboard.getValue().clear();
 
@@ -319,7 +319,7 @@ import okw.log.Logger_Sngltn;
             myLogger.LogFunctionStart("CallMethod_pMN_pS_pS", "String psParameter_1", psParameter_1 );
             myLogger.LogPrint("Locator: " + this.Locator);
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethod_pMN_pS");
             myClipboard.getValue().clear();
 
@@ -334,7 +334,7 @@ import okw.log.Logger_Sngltn;
             myLogger.LogFunctionStart("CallMethod_pMN_pS_pS", "String psParameter_1", psParameter_1, "String psParameter_2", psParameter_2);
             myLogger.LogPrint("Locator: " + this.Locator);
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethod_pMN_pS_pS");
             myClipboard.getValue().clear();
 
@@ -351,7 +351,7 @@ import okw.log.Logger_Sngltn;
             myLogger.LogFunctionStart("CallMethod_pMN_pS_pS", "String psParameter_1", psParameter_1, "String psParameter_2", psParameter_2, "String psParameter_3", psParameter_3);
             myLogger.LogPrint("Locator: " + this.Locator);
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethod_pMN_pS_pS_pS");
             myClipboard.getValue().clear();
 
@@ -369,7 +369,7 @@ import okw.log.Logger_Sngltn;
             myLogger.LogFunctionStart("CallMethod_pMN_pS_pS_pLS", "String psParameter_1", psParameter_1, "String psParameter_2", psParameter_2);
             myLogger.LogPrint("Locator: " + Locator);
 
-            myClipboard.setObjectName(getFN());
+            myClipboard.setObjectName(getCAT());
             myClipboard.setMethod("CallMethod_pMN_pS_pS_pLS");
             myClipboard.getValue().clear();
 

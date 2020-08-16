@@ -68,7 +68,7 @@ import okw.log.Logger_Sngltn;
         }
 
         /**
-        public String getFN()
+        public String getCAT()
         {
             return "Rechner.All_MethodsObj";
         }

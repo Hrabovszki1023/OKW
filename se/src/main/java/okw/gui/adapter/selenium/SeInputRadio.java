@@ -271,7 +271,7 @@ public class SeInputRadio extends SeAnyChildWindow
       if ( Value.equals(myCHECKED) )
       {
           //Core myCore = new Core();
-          //myCore.ClickOn( this.getFN() );
+          //myCore.ClickOn( this.getCAT() );
           this.ClickOn();
       }
       else if ( Value.equals(myUNCHECKED) )

@@ -282,7 +282,7 @@ public class SeRadioList extends SeAnyChildWindow
                 else
                 {
                     // Get my FN
-                    String myFN = this.getFN();
+                    String myFN = this.getCAT();
 
                     // Radiolist enthällt nur einen wert
                     String myChildFN = myFN + "." + Val.get( 0 );
@@ -363,7 +363,7 @@ public class SeRadioList extends SeAnyChildWindow
             String isChecked = OKW_Const_Sngltn.getInstance().GetConst4Internalname( "CHECKED" );
 
             // 1. Get the List of RadioButtons
-            myRadioButtonKeys = OKW_CurrentObject_Sngltn.getInstance().getAllChildFNsOfParent( this.getParentFN() + "." + this.getFN() + "." );
+            myRadioButtonKeys = OKW_CurrentObject_Sngltn.getInstance().getAllChildFNsOfParent( this.getParentFN() + "." + this.getCAT() + "." );
 
             for ( String lvsRadioButtonFN : myRadioButtonKeys )
             {
@@ -373,7 +373,7 @@ public class SeRadioList extends SeAnyChildWindow
                 if ( isChecked.equals( Actuel.get( 0 ) ) )
                 {
 
-                    String CurrentValue = okw.OKW_Helper.getRightFromDelimiterNumber( lvsRadioButtonFN, this.getFN() + ".", 1 );
+                    String CurrentValue = okw.OKW_Helper.getRightFromDelimiterNumber( lvsRadioButtonFN, this.getCAT() + ".", 1 );
                     lvLsReturn.add( CurrentValue );
 
                     break;

@@ -66,7 +66,7 @@ import okw.log.*;
 
         String myValue = "";
         
-        public String getFN()
+        public String getCAT()
         {
             String lvsReturn = "";
             
@@ -125,7 +125,7 @@ import okw.log.*;
             this.myValue = "NO VALUE";
             
             //String lvs_ObjectName = myCurrentObject.GetObjectName();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
             
             this.myLogger.LogFunctionStartDebug("ClickOn");
 
@@ -152,7 +152,7 @@ import okw.log.*;
             this.myValue = "NO VALUE";
             this.myLogger.LogFunctionStartDebug("ClickOn_DOUBLECLICK");
             
-            String lvs_ObjectName = getFN();;
+            String lvs_ObjectName = getCAT();;
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("ClickOn_DOUBLECLICK()");
@@ -184,7 +184,7 @@ import okw.log.*;
             this.myValue = fpLsValue.get(0);
             myLogger.LogFunctionStartDebug("TypeKey");
             
-            String lvs_ObjectName = getFN();;
+            String lvs_ObjectName = getCAT();;
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("TypeKey()");

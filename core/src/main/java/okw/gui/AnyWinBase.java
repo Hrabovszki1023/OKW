@@ -52,19 +52,18 @@ public abstract class AnyWinBase
 	protected OKWLocator _locator = null;
 
   /** \~german
-   *  FN - Funktionaler Name des aktuellen GUI-Objektes.
+   *  CAT - Categorie Name des aktuellen GUI-Objektes.
    *  
    *  Wert wird 
    *  
    *  \~english
-   *  \brief
-   *  @todo TODO:  Übersetzung ins Englische fehlt...
+   *  CAT - Category Name of the current GUI object.
    *  
    *  \~
    *  @author Zoltán Hrabovszki
    *  \date 2014.04.27
    */    
-  private String myFN = "";
+  private String myCAT = "";
 
   
   /** \~german
@@ -487,24 +486,24 @@ public abstract class AnyWinBase
 
     
     /** \~german
-     *  Holt den funktionalen Name dws GUI-Objektes.
+     *  Holt den Categorie Namen des GUI-Objektes.
      * 
-     *  Hinweis: Jeder GUI-Adapter kennt seinen eigenen funktionalen Namen.
-     *  Dieser wird beim instanzieren der Frame-Objecte währen des Frame-Classen-Scans in der Methode FrameObjectDictionary_Sngltn.FrameScan()
-     *  mitgeteilt.
-     *  Wert wird 
+     *  Hinweis: Die GUI-Adapter kennen ihre eigenen Kategorie-Namen.
+     *  Dieser wird beim Instanzieren der Frame-Objekte während des Frame-Klassen-Skans
+     *  in der Methode FrameObjectDictionary_Sngltn.FrameScan() gelesen und im Objekt gespeichet.
      *  
      *  \~english
-     *  \brief
-     *  @todo TODO:  Übersetzung ins Englische fehlt...
+     *  Note: The GUI adapters know their own category names.
+     *  This is read in the method FrameObjectDictionary_Sngltn.FrameScan()
+     *  when the frame objects are instantiated during the frame class scan and stored in the object.
      *  
      *  \~
      *  @author Zoltán Hrabovszki
      *  \date 2014.04.27
      */  
-    public String getFN( )
+    public String getCAT( )
     {
-      return this.myFN;
+      return this.myCAT;
     }
 
     /** \~german
@@ -513,7 +512,6 @@ public abstract class AnyWinBase
      *  @return KN des Objektes.
      *  
      *  \~english
-     *  \brief
      *  @todo TODO:  Übersetzung ins Englische fehlt...
      *  
      *  \~
@@ -543,9 +541,10 @@ public abstract class AnyWinBase
       return this.myParentFN;
     }
 
-    public void setFN(String fpsFN)
+    
+    public void setCAT(String fpsCAT)
     {
-      this.myFN =  fpsFN;
+      this.myCAT =  fpsCAT;
     }
 
     /** \~german

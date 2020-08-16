@@ -125,7 +125,7 @@ public class frmWindowWithOutMethods extends okw.gui.AnyWindow implements IOKW_F
    */    
   private String myFN = "";
   
-  public void setFN(String fpsFN)
+  public void setCAT(String fpsFN)
   {
     this.myFN =  fpsFN;
   }
@@ -147,7 +147,7 @@ public class frmWindowWithOutMethods extends okw.gui.AnyWindow implements IOKW_F
    *  @author Zoltán Hrabovszki
    *  \date 2014.04.27
    */  
-  public String getFN( )
+  public String getCAT( )
   {
     return this.myFN;
   }

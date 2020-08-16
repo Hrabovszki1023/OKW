@@ -71,7 +71,7 @@ import okw.log.Logger_Sngltn;
         {
             this.myLogger.LogFunctionStartDebug("SelectWindow");
             
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
             
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("SelectWindow()");
@@ -84,7 +84,7 @@ import okw.log.Logger_Sngltn;
         public void StartApp()
         {
             this.myLogger.LogFunctionStartDebug("StartApp");
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("StartApp()");
@@ -96,7 +96,7 @@ import okw.log.Logger_Sngltn;
         public void StopApp()
         {
             this.myLogger.LogFunctionStartDebug("StopApp");
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
             
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("StopApp()");
@@ -111,7 +111,7 @@ import okw.log.Logger_Sngltn;
 
             try
             {
-                String lvs_ObjectName = getFN();
+                String lvs_ObjectName = getCAT();
 
                 myClipBoard.setObjectName(lvs_ObjectName);
                 myClipBoard.setMethod("TypeKey(List<String> fpLs_Value)");
@@ -196,7 +196,7 @@ import okw.log.Logger_Sngltn;
          */    
         private String myFN = "";
         
-        public void setFN(String fpsFN)
+        public void setCAT(String fpsFN)
         {
           this.myFN =  fpsFN;
         }
@@ -218,7 +218,7 @@ import okw.log.Logger_Sngltn;
          *  @author Zoltán Hrabovszki
          *  \date 2014.04.27
          */  
-        public String getFN( )
+        public String getCAT( )
         {
           return this.myFN;
         }

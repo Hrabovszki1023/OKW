@@ -64,7 +64,7 @@ import okw.log.*;
             super( fpsLocator, fpLocators );
         }
 
-        public String getFN()
+        public String getCAT()
         {
             // return Test_PushButton.class.getAnnotation(OKW_FN.class).FN();
             return "Test_Textfield";
@@ -74,7 +74,7 @@ import okw.log.*;
         {
             this.myValue = "NO VALUE";
             this.myLogger.LogFunctionStartDebug("ClickOn");
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("ClickOn()");
@@ -87,7 +87,7 @@ import okw.log.*;
         {
             this.myValue = "NO VALUE";
             this.myLogger.LogFunctionStartDebug("ClickOn_DOUBLECLICK");
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("ClickOn_DOUBLECLICK()");
@@ -103,7 +103,7 @@ import okw.log.*;
             myLogger.LogFunctionStartDebug(this.getClass().getName() + ".GetValue");
             lvLsReturn.add(this.myValue);
 
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("OKW_GetValue()");
@@ -122,7 +122,7 @@ import okw.log.*;
             myLogger.LogFunctionStartDebug(this.getClass().getName() + ".GetValue_TOOLTIP");
             lvLsReturn.add(this.myValue);
 
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
             
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("OKW_GetValue_TOOLTIP()");
@@ -138,7 +138,7 @@ import okw.log.*;
         {
             this.myValue = "";
             myLogger.LogFunctionStartDebug(this.getClass().getName() + ".Set_Focus");
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("Set_Focus()");
@@ -151,7 +151,7 @@ import okw.log.*;
             this.myValue = fpLs_Value.get(0);
             myLogger.LogFunctionStartDebug(this.getClass().getName() + ".TypeKey");
             
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
 
             myClipBoard.setObjectName(lvs_ObjectName);
             myClipBoard.setMethod("OKW_TypeKey(List<String> fpLs_Value)");
@@ -178,7 +178,7 @@ import okw.log.*;
           this.myValue = fplsExpectedValue.get(0);
           myLogger.LogFunctionStartDebug(this.getClass().getName() + ".VerifyValue");
           
-          String lvs_ObjectName = getFN();
+          String lvs_ObjectName = getCAT();
 
           myClipBoard.setObjectName(lvs_ObjectName);
           myClipBoard.setMethod("VerifyValue(ArrayList<String> fplsExpectedValue)");

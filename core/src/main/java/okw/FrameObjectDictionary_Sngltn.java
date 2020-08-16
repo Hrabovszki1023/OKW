@@ -499,7 +499,7 @@ public class FrameObjectDictionary_Sngltn
           Log.ResOpenList( "Parent: '" + lvsFNWindow + "'" );
           Log.LogPrint( "Type: '" + lvTypeInstanceAsObject.getClass().getName() + "'" );
 
-          ((IOKW_FN)lvTypeInstanceAsObject).setFN( lvsFNWindow );
+          ((IOKW_FN)lvTypeInstanceAsObject).setCAT( lvsFNWindow );
           ((IOKW_FN)lvTypeInstanceAsObject).setKN( lvsFNWindow );
           
           myFrameObjectDictionary.put( lvsFNWindow, lvTypeInstanceAsObject );
@@ -538,7 +538,7 @@ public class FrameObjectDictionary_Sngltn
                 {
                 	 // Now here we tell the GUI-Adapter his FN and his Parent-FN...
                    (( IOKW_FN ) lvFieldInstance).setKN( lvsChildKey );
-                   (( IOKW_FN ) lvFieldInstance).setFN( lvsFNChild );
+                   (( IOKW_FN ) lvFieldInstance).setCAT( lvsFNChild );
                    (( IOKW_FN ) lvFieldInstance).setParentFN( lvsFNWindow );
                    myFrameObjectDictionary.put( lvsChildKey, lvFieldInstance );
                    
@@ -612,7 +612,7 @@ public class FrameObjectDictionary_Sngltn
               myAnnotationDictionary.put( lvsKey, myFN );
               
               (( IOKW_FN ) lvFieldInstance).setKN( lvsKey );
-              (( IOKW_FN ) lvFieldInstance).setFN( lvsFNChild );
+              (( IOKW_FN ) lvFieldInstance).setCAT( lvsFNChild );
               (( IOKW_FN ) lvFieldInstance).setParentFN( fpsWindowName );
               
               myFrameObjectDictionary.put( lvsKey, lvFieldInstance );

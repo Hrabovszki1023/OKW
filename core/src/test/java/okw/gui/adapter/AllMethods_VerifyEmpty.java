@@ -74,7 +74,7 @@ import okw.log.Logger_Sngltn;
         }
 
         
-        public String getFN()
+        public String getCAT()
         {
             return "Rechner.All_MethodsObj";
         }
@@ -88,7 +88,7 @@ import okw.log.Logger_Sngltn;
 		    lvLsReturn.add( "" );
 		
 		    myClipboard.Clear();
-		    String lvs_ObjectName = getFN();
+		    String lvs_ObjectName = getCAT();
 		    myClipboard.setObjectName(lvs_ObjectName);
 		    myClipboard.setMethod("VerifyBadge()");
 		
@@ -105,7 +105,7 @@ import okw.log.Logger_Sngltn;
             this.myLogger.LogFunctionStartDebug("VerifyExists", "fpbExpectedValue", fpbExpectedValue.toString());
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyExists()");
@@ -123,7 +123,7 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.Clear();
             
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyHasFocus()");
@@ -140,7 +140,7 @@ import okw.log.Logger_Sngltn;
             this.myLogger.LogFunctionStartDebug("VerifyIsActive");
 
             myClipboard.Clear();   
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyIsActive()");
@@ -161,7 +161,7 @@ import okw.log.Logger_Sngltn;
 
             myClipboard.Clear();
             
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifySelectedValue()");
@@ -182,7 +182,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add( "" );
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyTablecellValue()");
@@ -205,7 +205,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add( "" );
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyTooltip()");
 
@@ -228,7 +228,7 @@ import okw.log.Logger_Sngltn;
 
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
 
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyCaption()");
@@ -248,7 +248,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add( "" );
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyLabel()");
 
@@ -268,7 +268,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add( "" );
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyPlaceholder()");
 
@@ -288,7 +288,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add( "" );
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyValue()");
 
@@ -308,7 +308,7 @@ import okw.log.Logger_Sngltn;
             lvLsReturn.add( "" );
 
             myClipboard.Clear();
-            String lvs_ObjectName = getFN();
+            String lvs_ObjectName = getCAT();
             myClipboard.setObjectName(lvs_ObjectName);
             myClipboard.setMethod("VerifyErrorMSG()");
 
