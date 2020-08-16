@@ -48,7 +48,6 @@ import javax.xml.xpath.XPathExpressionException;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.exceptions.OKWGUIObjectNotFoundException;
-import okw.exceptions.OKWGUIObjectNotUniqueException;
 import okw.gui.*;
 import okw.gui.adapter.selenium.webdriver.SeDriver;
 import okw.log.Logger_Sngltn;
@@ -200,7 +199,8 @@ public class SeAnyChildWindow extends AnyChildwindow
     public Boolean getExists()
     {
         Boolean lvbReturn = false;
-        WebElement webElement = null;
+        
+        // WebElement webElement = null; // FIXME: Wird das benötigt? Sonst Entfernen
 
         String myLocator = null;
 
@@ -209,9 +209,11 @@ public class SeAnyChildWindow extends AnyChildwindow
             LogFunctionStartDebug( "getExists" );
 
             myLocator = this.getLocator();
-            webElement = SeDriver.getInstance().getWebElement( myLocator );
+            
+            // webElement = SeDriver.getInstance().getWebElement( myLocator );
+            SeDriver.getInstance().getWebElement( myLocator );
 
-                lvbReturn = true;
+            lvbReturn = true;
         }
 //        catch ( OKWGUIObjectNotUniqueException e )
 //        {

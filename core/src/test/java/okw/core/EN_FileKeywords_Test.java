@@ -42,7 +42,7 @@ package okw.core;
 import java.io.File;
 
 import okw.OKWTestBase;
-import okw.OKW_FileHelper;
+//import okw.OKW_FileHelper;
 import okw.OKW_Memorize_Sngltn;
 import okw.OKW_TestClipboard;
 import okw.exceptions.OKWFileDoesNotExistsException;
@@ -50,7 +50,6 @@ import okw.exceptions.OKWNotAllowedValueException;
 import okw.exceptions.OKWVerifyingFailsException;
 import okw.log.Logger_Sngltn;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
 
 @Tag("AllCoreTests")
@@ -118,9 +117,8 @@ public class EN_FileKeywords_Test extends OKWTestBase
     @Test
     public void FileDelete() throws Exception
     {
-        String myFile = "myFileDelete.txt";
-        
-        EN.BeginTest( TestName );
+
+    	EN.BeginTest( TestName );
         
         EN.SetVar( "TestBaseDir", "target/${TCN}" );
         EN.SetVar( "TargetFile", "${TestBaseDir}/myFileDelete.txt" );
@@ -182,22 +180,22 @@ public class EN_FileKeywords_Test extends OKWTestBase
     
     
     //@Test FIXME: Testfall einschalten
-    public void FileDelete_WildCard() throws Exception
-    {
-        EN.DirectoryCreate( "target/FileDelete_WildCard/mydir" );
-
-        // Create file
-        File f = new File( "target/FileDelete_WildCard/sample_1.txt" );
-        f.createNewFile();
-
-        f = new File( "target/FileDelete_WildCard/sample_2.txt" );
-        f.createNewFile();
-
-        f = new File( "target/FileDelete_WildCard/mydir/sample_3.txt" );
-        f.createNewFile();
-        
-        File[] myFiles = ( File[] ) OKW_FileHelper.ListFiles( "target/FileDelete_WildCard").toArray();
-        
+//    public void FileDelete_WildCard() throws Exception
+//    {
+//        EN.DirectoryCreate( "target/FileDelete_WildCard/mydir" );
+//
+//        // Create file
+//        File f = new File( "target/FileDelete_WildCard/sample_1.txt" );
+//        f.createNewFile();
+//
+//        f = new File( "target/FileDelete_WildCard/sample_2.txt" );
+//        f.createNewFile();
+//
+//        f = new File( "target/FileDelete_WildCard/mydir/sample_3.txt" );
+//        f.createNewFile();
+//        
+//        File[] myFiles = ( File[] ) OKW_FileHelper.ListFiles( "target/FileDelete_WildCard").toArray();
+//        
 //        for (int i=0; i<myFiles.length; i++) {
 //
 //            File f = dirs[i];
@@ -205,8 +203,8 @@ public class EN_FileKeywords_Test extends OKWTestBase
 //                File[] files = dir.listFiles(new WildcardFileFilter("sample*.java"));
 //            }
 //         }
-        
-    }
+//        
+//    }
     
     /** \~german
      *  Prüft das Schlüsselwort EN.FileDelete(String).

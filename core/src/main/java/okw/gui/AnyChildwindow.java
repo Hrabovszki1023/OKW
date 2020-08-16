@@ -40,7 +40,6 @@ package okw.gui;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.function.Supplier;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.parsers.ParserConfigurationException;

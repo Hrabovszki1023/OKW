@@ -194,7 +194,7 @@ public class SeAnyWindow extends AnyWindow
     {
         Boolean lvbReturn = false;
         
-        WebElement webElement = null;
+        // FIXME: Wird das benötigt? Sonst entfernen - WebElement webElement = null;
 
         String myLocator = null;
 
@@ -204,8 +204,10 @@ public class SeAnyWindow extends AnyWindow
             
             myLocator = this.getLocator();
 
-            //meme = mySeDriver.driver.findElements(By.xpath(myLocator));
-            webElement = mySeDriver.getWebElement( myLocator );
+            // meme = mySeDriver.driver.findElements(By.xpath(myLocator));
+            // FIXME: Wird das benötigt? Sonst entfernen - webElement = mySeDriver.getWebElement( myLocator );
+            
+            mySeDriver.getWebElement( myLocator );
 
             lvbReturn = true;
         }

@@ -39,10 +39,8 @@ package okw.ElementNotInteractableException;
 import okw.OKWTestBase;
 import okw.OKW_Memorize_Sngltn;
 import okw.core.EN;
-import okw.exceptions.OKWVerifyingFailsException;
 
 import org.junit.jupiter.api.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
 * \~
