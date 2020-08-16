@@ -2,7 +2,7 @@
 ==============================================================================
   Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-  Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+  Copyright © 2012 - 2020, IT-Beratung Hrabovszki
   www.OpenKeyWord.de
 ============================================================================== 
 
@@ -80,7 +80,7 @@ public class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_FN
    *  @return true, falls das eindeutig Objekt gefunden worden ist ist, sonst false.
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2017.01.31
+   *  \date 2017.01.31
    */  
   public Boolean getExists()
   {
@@ -105,7 +105,7 @@ public class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_FN
    *  \~
    *  @author Zoltán Hrabovszki
    * @throws Exception 
-   *  @date 2017.01.31
+   *  \date 2017.01.31
    */  
   public ArrayList<String> getCaption()
   {
@@ -131,7 +131,7 @@ public class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_FN
    *  \~
    *  @author Zoltán Hrabovszki
    *  @throws Exception 
-   *  @date 2017.01.31
+   *  \date 2017.01.31
    */  
   public Boolean getIsActive()
   {
@@ -204,7 +204,7 @@ public class AnyWindow extends AnyWinBase implements IGUIWindow, IOKW_FN
 	 *  \~
 	 * @throws RuntimeException 
      * @author Zoltán Hrabovszki
- 	 * @date 2017.01.31
+ 	 * \date 2017.01.31
 	 */
 	public Boolean WaitForMe()
 	{

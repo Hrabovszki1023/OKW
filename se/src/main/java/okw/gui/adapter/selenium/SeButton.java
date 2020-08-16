@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -116,7 +116,7 @@ import org.apache.commons.lang3.StringUtils;
  *  
  *  \~
  * @author Zoltán Hrabovszki
- * @date 2016.09.05
+ * \date 2016.09.05
  */
 public class SeButton extends SeAnyChildWindow
 {
@@ -125,7 +125,7 @@ public class SeButton extends SeAnyChildWindow
      * \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...) \~
      * 
      * @author Zoltán Hrabovszki
-     * @date 2013.05.03
+     * \date 2013.05.03
      */
     public SeButton( String Locator, OKWLocatorBase... Locators )
     {
@@ -142,7 +142,7 @@ public class SeButton extends SeAnyChildWindow
      * \~
      * @author Zoltán Hrabovszki
      * @throws Exception
-     * @date 2013.12.07
+     * \date 2013.12.07
      */
     //@Override // TODO define Prototype in BaseClass!
     public ArrayList<String> __getCaption()
@@ -178,7 +178,7 @@ public class SeButton extends SeAnyChildWindow
      * \~english A SeInputButton has no value! -> Trigger
      *         OKWFrameObjectMethodNotImplemented! \~
      * @author Zoltán Hrabovszki
-     * @date 2016.10.06
+     * \date 2016.10.06
      */
         @Override
         public ArrayList<String> VerifyValue( )

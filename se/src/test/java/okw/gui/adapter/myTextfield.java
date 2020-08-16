@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -112,7 +112,7 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
  *  
  *  \~
  * @author Zoltán Hrabovszki
- * @date 2016.09.05
+ * \date 2016.09.05
  */
 public class myTextfield extends SeInputText
 {
@@ -136,7 +136,7 @@ public class myTextfield extends SeInputText
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013-12-07
+     *  \date 2013-12-07
      */
     @Override
     public ArrayList<String> getCaption()
@@ -154,7 +154,7 @@ public class myTextfield extends SeInputText
    *  \~english
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2018.12.27
+   *  \date 2018.12.27
    */
    public Integer getMaxLength()
    {
@@ -201,7 +201,7 @@ public class myTextfield extends SeInputText
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2018.10.28
+     *  \date 2018.10.28
      */
     public ArrayList<String> getPlaceholder()
     {
@@ -235,7 +235,7 @@ public class myTextfield extends SeInputText
      *  Ein Textfield besteht aus einerZeile: Daher wird der Wert des Textfield-s im ListenElement[0] zurückgegeben.
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2014.06.2014
+     *  \date 2014.06.2014
      */
     @Override
     public ArrayList<String> getValue()

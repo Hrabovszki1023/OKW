@@ -2,7 +2,7 @@
 ==============================================================================
   Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-  Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+  Copyright © 2012 - 2020, IT-Beratung Hrabovszki
   www.OpenKeyWord.de
 ============================================================================== 
 
@@ -62,7 +62,7 @@ public abstract class AnyWinBase
    *  
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2014.04.27
+   *  \date 2014.04.27
    */    
   private String myFN = "";
 
@@ -76,7 +76,7 @@ public abstract class AnyWinBase
    *  
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2016.11.20
+   *  \date 2016.11.20
    */    
   private String myKN = "";
 
@@ -90,7 +90,7 @@ public abstract class AnyWinBase
    *  
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2016.11.20
+   *  \date 2016.11.20
    */    
   private String myParentFN = "";
 
@@ -109,7 +109,7 @@ public abstract class AnyWinBase
    *  
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2014.04.27
+   *  \date 2014.04.27
    */
   public String getLocator()
   {
@@ -126,7 +126,7 @@ public abstract class AnyWinBase
    *  
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2014.04.27
+   *  \date 2014.04.27
    */  
   public OKWLocatorBase getLOCATOR()
   {
@@ -143,7 +143,7 @@ public abstract class AnyWinBase
    *  
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2014.04.27
+   *  \date 2014.04.27
    */  
   public void setLocator( String fpsLocator, OKWLocatorBase... fpLocators )
   {
@@ -167,7 +167,7 @@ public abstract class AnyWinBase
    *  @return true, falls das eindeutig Objekt gefunden worden ist ist, sonst false.
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2017.01.31
+   *  \date 2017.01.31
    */  
   public Boolean getExists()
   {
@@ -206,7 +206,7 @@ public abstract class AnyWinBase
      *  @param fpsMethodName
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2014.04.27
+     *  \date 2014.04.27
      *  @param fpsMethodName
      */
     public void LogFunctionStartDebug(String fpsMethodName)
@@ -227,7 +227,7 @@ public abstract class AnyWinBase
      *  @param fpsMethodName
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2014.04.27
+     *  \date 2014.04.27
      *  @param fpsMethodName
      */
     public void LogFunctionStart(String fpsMethodName)
@@ -253,7 +253,7 @@ public abstract class AnyWinBase
      *  @param P1_Value Wert des ersten Parameters.
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2014.04.27
+     *  \date 2014.04.27
      */
     public void LogFunctionStartDebug( String fpsMethodName, String P1_Name, String P1_Value )
     {
@@ -277,7 +277,7 @@ public abstract class AnyWinBase
      *  @param P1_Value Wert des ersten Parameters.
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2014.04.27
+     *  \date 2014.04.27
      */
     public void LogFunctionStart(String fpsMethodName, String P1_Name, String P1_Value)
     {
@@ -293,7 +293,7 @@ public abstract class AnyWinBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.01.18
+     *  \date 2015.01.18
      */
     public void LogFunctionEndDebug()
     {
@@ -309,7 +309,7 @@ public abstract class AnyWinBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.01.18
+     *  \date 2015.01.18
      */
     public void LogFunctionEnd()
     {
@@ -328,7 +328,7 @@ public abstract class AnyWinBase
      *  @param fpsReturn
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.01.18
+     *  \date 2015.01.18
      */
     public void LogFunctionEndDebug(String fpReturn)
     {
@@ -350,7 +350,7 @@ public abstract class AnyWinBase
      *  @param fpsReturn
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.01.18
+     *  \date 2015.01.18
      */
     public void LogFunctionEnd(String fpReturn)
     {
@@ -372,7 +372,7 @@ public abstract class AnyWinBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.01.18
+     *  \date 2015.01.18
      */
     public void LogFunctionEndDebug(Boolean fpReturn)
     {
@@ -393,7 +393,7 @@ public abstract class AnyWinBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.01.18
+     *  \date 2015.01.18
      */
     public void LogFunctionEnd(Boolean fpReturn)
     {
@@ -414,7 +414,7 @@ public abstract class AnyWinBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.01.18
+     *  \date 2015.01.18
      */
     public void LogFunctionEndDebug(ArrayList<String> fpReturn)
     {
@@ -435,7 +435,7 @@ public abstract class AnyWinBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.01.18
+     *  \date 2015.01.18
      */
     public void LogFunctionEnd(ArrayList<String> fpReturn)
     {
@@ -500,7 +500,7 @@ public abstract class AnyWinBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2014.04.27
+     *  \date 2014.04.27
      */  
     public String getFN( )
     {
@@ -518,7 +518,7 @@ public abstract class AnyWinBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2016.11.20
+     *  \date 2016.11.20
      */ 
     public String getKN( )
     {
@@ -536,7 +536,7 @@ public abstract class AnyWinBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2016.11.20
+     *  \date 2016.11.20
      */ 
     public String getParentFN( )
     {
@@ -559,7 +559,7 @@ public abstract class AnyWinBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2016.11.20
+     *  \date 2016.11.20
      */    
     public void setKN(String fpsKN)
     {
@@ -577,7 +577,7 @@ public abstract class AnyWinBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2016.11.20
+     *  \date 2016.11.20
      */    
     public void setParentFN(String fpsParentFN)
     {

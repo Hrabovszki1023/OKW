@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -108,7 +108,7 @@ import okw.gui.*;
      *  
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013.04.11
+     *  \date 2013.04.11
      */
     public class SeInputCheckbox extends SeAnyChildWindow
     {
@@ -118,7 +118,7 @@ import okw.gui.*;
         /**
          *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
          *  
-         *  @date 2017.02.17
+         *  \date 2017.02.17
          */         
         public SeInputCheckbox( String Locator, OKWLocatorBase... Locators )
         {
@@ -142,7 +142,7 @@ import okw.gui.*;
          *  
          *  \~
          *  @author Zoltan Hrabovszki
-         *  @date 2013.04.11
+         *  \date 2013.04.11
          */
         public Boolean getIsSelected()
         {
@@ -173,7 +173,7 @@ import okw.gui.*;
          *  \~
          *  @author Zoltan Hrabovszki
          *  @throws Exception 
-         *  @date 2013.04.11
+         *  \date 2013.04.11
          */
         public void checking()
         {
@@ -207,7 +207,7 @@ import okw.gui.*;
          *  
          *  \~
          * @author Zoltán Hrabovszki
-         * @date 2013.04.11
+         * \date 2013.04.11
          */
         @Override
         public ArrayList<String> getValue()
@@ -247,7 +247,7 @@ import okw.gui.*;
          *  \~
          *  
          *  @author Zoltan Hrabovszki
-         *  @date 2013.04.11
+         *  \date 2013.04.11
          */
         @Override
         public void SetValue(ArrayList<String> fps_Values)
@@ -297,7 +297,7 @@ import okw.gui.*;
          *  \~  
          *  \copydoc SeAnyChildWindow::Select(ArrayList<String>)
          *  @author Zoltan Hrabovszki
-         *  @date 2013.04.11
+         *  \date 2013.04.11
          */
         @Override
         public void Select(ArrayList<String> fps_Values)
@@ -344,7 +344,7 @@ import okw.gui.*;
          *  \note Die Eigenschaft Element.Selected() ist nicht beschreibar. Daher wird ggf. die Methode Click() verwendet.
          *  
          *  @author Zoltan Hrabovszki
-         *  @date 2013.04.11
+         *  \date 2013.04.11
          */
         public void unchecking()
         {

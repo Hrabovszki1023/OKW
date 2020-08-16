@@ -1,7 +1,7 @@
 package okw.sebutton;
 /*
 ==============================================================================
-Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+Copyright © 2012 - 2020, IT-Beratung Hrabovszki
 ============================================================================== 
 
 This file is part of OpenKeyWord.
@@ -58,7 +58,7 @@ import static org.junit.jupiter.api.Assertions.*;
      * 
      * \~
      * \author Zoltán Hrabovszki
-     * @date 2017-06-18
+     * \date 2017-06-18
      * 
      * @author Zoltan Hrabovszki
      */
@@ -75,7 +75,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * \author Zoltán Hrabovszki
-        * @date 2017-06-18
+        * \date 2017-06-18
         * 
         * @author Zoltan Hrabovszki
         */
@@ -102,7 +102,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes LogCaption für den GUI-Adapter SeButton.
          * 
          * \~
-        * @date 2017-06-18
+        * \date 2017-06-18
         * 
         * @author Zoltan Hrabovszki
         */
@@ -129,7 +129,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes LogExists für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -154,7 +154,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes LogHasFocus für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -180,7 +180,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes LogTooltip für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -203,7 +203,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes LogTooltip für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -225,7 +225,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes LogIsaCTIVE für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -249,7 +249,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes MemorizeCaption für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -278,7 +278,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes MemorizeCaption für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -309,7 +309,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes MemorizeExists für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -334,7 +334,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes MemorizeHasFocus für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -359,7 +359,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes MemorizeIsActive für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -386,7 +386,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes MemorizeTooltip für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -413,7 +413,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes MemorizeValue für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -439,7 +439,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes SetFocus und VerifyHasFocus für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -471,7 +471,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes SelectMenu( FN ) für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -498,7 +498,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes SelectMenu( FN, Val ) für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -526,7 +526,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes SetValue( FN, Val ) für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -553,7 +553,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes Select( FN, Val ) für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -580,7 +580,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes VerifyCaption für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -606,7 +606,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes VerifyCaptionWCM für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -632,7 +632,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes VerifyCaptionREGX für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -659,7 +659,7 @@ import static org.junit.jupiter.api.Assertions.*;
          *
          * Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeButton.
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -678,7 +678,7 @@ import static org.junit.jupiter.api.Assertions.*;
          *
          * Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeButton.
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -703,7 +703,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * Prüfung: Sollwert Nein  Istwert Ja.
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -728,7 +728,7 @@ import static org.junit.jupiter.api.Assertions.*;
    *
    * Prüfung: Sollwert Ja. Istwert Ja.
    * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -753,7 +753,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Button 1 ist active (_nicht_ "disabled")
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -780,7 +780,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Button 1 ist active (_nicht_ "disabled")
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -809,7 +809,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -835,7 +835,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -864,7 +864,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -891,7 +891,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -918,7 +918,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -944,7 +944,7 @@ import static org.junit.jupiter.api.Assertions.*;
         * Schlüsselwortes VerifyPlaceholder für SeButton sollte OKWFrameObjectMethodNotImplemented auslösen
         * 
         * \~
-        * @date 2017-06-18
+        * \date 2017-06-18
         * 
         * @author Zoltan Hrabovszki
         */
@@ -970,7 +970,7 @@ import static org.junit.jupiter.api.Assertions.*;
         * Schlüsselwortes VerifyPlaceholderWCM für SeButton sollte OKWFrameObjectMethodNotImplemented auslösen
         * 
         * \~
-        * @date 2017-06-18
+        * \date 2017-06-18
         * 
         * @author Zoltan Hrabovszki
         */
@@ -997,7 +997,7 @@ import static org.junit.jupiter.api.Assertions.*;
         * 
         * 
         * \~
-        * @date 2018-10-28
+        * \date 2018-10-28
         * 
         * @author Zoltan Hrabovszki
         */
@@ -1023,7 +1023,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes VerifyToolTip für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -1048,7 +1048,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes VerifyToolTipWCM für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -1073,7 +1073,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes VerifyToolTip für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -1099,7 +1099,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes VerifyValue für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -1127,7 +1127,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes VerifyValueWCM für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */
@@ -1155,7 +1155,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes VerifyValueREGX für den GUI-Adapter SeButton.
          * 
          * \~
-         * @date 2017-06-18
+         * \date 2017-06-18
          * 
          * @author Zoltan Hrabovszki
          */

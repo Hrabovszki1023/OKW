@@ -45,7 +45,7 @@ import org.junit.jupiter.api.*;
      *  Prüft das Einfügen eines gemerkten Wertes mit den Schlüsselwörtern MEM.
      * 
      *  @author Zoltan Hrabovszki
-     *  @date 2014.01.14
+     *  \date 2014.01.14
      */
         @Test
         public void TC_ParseMe_MemorizedValue()
@@ -142,7 +142,7 @@ import org.junit.jupiter.api.*;
    *  THEN ReturnOf ParsMe IS "${IGNORE}" | "${DELETE}" | "${EMPTY}" | "${SEP}" | "${VSEP}" | "${HSEP}"
    *
    *  @author Zoltan Hrabovszki
-   *  @date 2014.10.14
+   *  \date 2014.10.14
    */
   @Test
   public void TC_ParseMe_OKW_Consts()
@@ -165,7 +165,7 @@ import org.junit.jupiter.api.*;
          *  THEN ParsedString IS " "
          * 
          *  @author Zoltan Hrabovszki
-         *  @date 2014.10.14
+         *  \date 2014.10.14
          */
         @Test
         public void TC_ParseMe_StringWithBlank()

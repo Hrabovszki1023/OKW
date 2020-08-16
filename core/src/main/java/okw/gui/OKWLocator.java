@@ -4,7 +4,7 @@ package okw.gui;
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -99,7 +99,7 @@ import org.stringtemplate.v4.*;
      *  \~english
      * Description of OKWLocator.
      *  @author Zoltán Hrabovszki
-     *  @date 2014.04.27
+     *  \date 2014.04.27
      */
 public class OKWLocator extends OKWLocatorBase
 {
@@ -146,7 +146,7 @@ public class OKWLocator extends OKWLocatorBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2014.04.27
+     *  \date 2014.04.27
      */
     public String getLocator()
     {
@@ -189,7 +189,7 @@ public class OKWLocator extends OKWLocatorBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2014.04.27
+     *  \date 2014.04.27
      */
     public void setLocator( String fpsLocator, OKWLocatorBase... fpLocators )
     {
@@ -216,7 +216,7 @@ public class OKWLocator extends OKWLocatorBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2014.04.27
+     *  \date 2014.04.27
      */
     @Override
     public void setLocators( OKWLocatorBase... fpLocators )
@@ -240,7 +240,7 @@ public class OKWLocator extends OKWLocatorBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2019.06.27
+     *  \date 2019.06.27
      */
     @Override
     public void copyLocator( OKWLocatorBase fpSource )
@@ -261,7 +261,7 @@ public class OKWLocator extends OKWLocatorBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2019.06.27
+     *  \date 2019.06.27
      */        
     @Override
     public String getlocator()
@@ -278,7 +278,7 @@ public class OKWLocator extends OKWLocatorBase
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2019.06.27
+     *  \date 2019.06.27
      */    
     @Override
     public OKWLocatorBase[] getLocators()

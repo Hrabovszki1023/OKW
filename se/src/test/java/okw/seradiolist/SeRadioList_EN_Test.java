@@ -1,3 +1,41 @@
+	/*
+	    ==============================================================================
+	      Author: Zoltán Hrabovszki <zh@openkeyword.de>
+
+	      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
+	      www.OpenKeyWord.de
+	    ============================================================================== 
+
+	    This file is part of OpenKeyWord.
+
+	    OpenKeyWord is free software: you can redistribute it and/or modify
+	    it under the terms of the GNU General Public License as published by
+	    the Free Software Foundation, either version 3 of the License, or
+	    (at your option) any later version.
+
+	    OpenKeyWord is distributed in the hope that it will be useful,
+	    but WITHOUT ANY WARRANTY; without even the implied warranty of
+	    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	    GNU General Public License for more details.
+
+	    You should have received a copy of the GNU General Public License
+	    along with OpenKeyWord.  If not, see <http://www.gnu.org/licenses/>.
+
+	    Diese Datei ist Teil von OpenKeyWord.
+
+	    OpenKeyWord ist Freie Software: Sie können es unter den Bedingungen
+	    der GNU General Public License, wie von der Free Software Foundation,
+	    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder späteren
+	    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+
+	    OpenKeyWord wird in der Hoffnung, dass es nützlich sein wird, aber
+	    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+	    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+	    Siehe die GNU General Public License für weitere Details.
+
+	    Sie sollten eine Kopie der GNU General Public License zusammen mit 
+	    OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
+	*/
 package okw.seradiolist;
 
 import okw.OKWTestBase;
@@ -23,7 +61,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *  </ul>
  * \~
  * @author Zoltan Hrabovszki
- * @date 2014.12.03
+ * \date 2014.12.03
  */
 public class SeRadioList_EN_Test extends OKWTestBase
 {
@@ -33,7 +71,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
 	 *  
 	 * \~
 	 * @author Zoltan Hrabovszki
-	 * @date 2016.12.25
+	 * \date 2016.12.25
 	 */
 	protected static String ApplicationName;
 
@@ -43,7 +81,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *
    * \~
    * @author Zoltan Hrabovszki
-   * @date 2014.12.03
+   * \date 2014.12.03
    */
   @Test
   public void tcSelect_SingelValue() throws Exception
@@ -77,7 +115,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * Checks whether the OKWOnlySingleValueAllowedException is thrown by EN.Select(), if more than one value is passed to SeRadioList.
    * \~
    * @author Zoltan Hrabovszki
-   * @date 2014.12.03
+   * \date 2014.12.03
    * 
    * @throws Exception Here is no Exception expected!
    */
@@ -113,7 +151,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * If you want a specific button to be unchecked, you need to check another button in the set: this will automatically uncheck the button you wanted unchecked.
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2014.12.03
+   *  \date 2014.12.03
    */
   @Test // ( expected = OKWNotAllowedValueException.class )
   public void tcSelect_SingleValue_DELETE() throws Exception
@@ -138,7 +176,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2014.12.03
+   *  \date 2014.12.03
    */
   @Test
   public void tcSelect_SingleValue_IGNORE() throws Exception
@@ -170,7 +208,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2014.12.03
+   *  \date 2014.12.03
    */
   @Test
   public void tcSelect_SingleValue_EmptyString() throws Exception
@@ -204,7 +242,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * Reviews the  Methode SetValue of the Class SeRadioList for singel value selection in SeRadioList.
    * \~
    * @author Zoltan Hrabovszki
-   * @date 2014.12.03
+   * \date 2014.12.03
    * 
    * @throws Exception Here is no Exception expected!
    */
@@ -243,7 +281,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * If you want a specific button to be unchecked, you need to check another button in the set: this will automatically uncheck the button you wanted unchecked.
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2014.12.03
+   *  \date 2014.12.03
    */
   @Test // ( expected = OKWNotAllowedValueException.class )
   public void tcSetValue_SingleValue_DELETE() throws Exception
@@ -272,7 +310,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * Checks whether the OKWOnlySingleValueAllowedException is thrown by EN.SetValue(), if more than one value is passed to SeRadioList.
    * \~
    * @author Zoltan Hrabovszki
-   * @date 2014.12.03
+   * \date 2014.12.03
    * 
    * @throws Exception The OKWOnlySingleValueAllowedException is expected!
    */
@@ -302,7 +340,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  \~english
    * \~
    * @author Zoltan Hrabovszki
-   * @date 2016.12.24
+   * \date 2016.12.24
    * 
    * @throws Exception Here is no Exception expected!
    */
@@ -337,7 +375,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.20
+   *  \date 2016.12.20
    */
   @Test
   public void tcVerifyExists_ExistsYesExpectedYes() throws Exception
@@ -363,7 +401,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.20
+   *  \date 2016.12.20
    */
   @Test
   public void tcVerifyExists_ExistsNoExpectedNo() throws Exception
@@ -391,7 +429,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.20
+   *  \date 2016.12.20
    */
   @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyExists_ExistsYesExpectedNo_OKWVerifyingFailsException() throws Exception
@@ -419,7 +457,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
   * 
   *  \~
   *  @author Zoltan Hrabovszki
-  *  @date 2016.12.20
+  *  \date 2016.12.20
   */
   @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyExists_ExistsNoExpectedYes_OKWVerifyingFailsException() throws Exception
@@ -445,7 +483,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
   * 
   *  \~
   *  @author Zoltan Hrabovszki
-  *  @date 2016.12.25
+  *  \date 2016.12.25
   */
   @Test
   public void tcLogExists_ExistsNo() throws Exception
@@ -471,7 +509,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
   * 
   *  \~
   *  @author Zoltan Hrabovszki
-  *  @date 2016.12.25
+  *  \date 2016.12.25
   */
   @Test
   public void tcLogExists_ExistsYes() throws Exception
@@ -498,7 +536,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.23
+   *  \date 2016.12.23
    */
   @Test
   public void tcVerifyIsActive_IsActiveYesExpectedYes() throws Exception
@@ -522,7 +560,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * Prüft ob der aktuell Wert eingespeichert wird. 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.23
+   *  \date 2016.12.23
    */
   @Test
   public void tcMemorizeValue() throws Exception
@@ -548,7 +586,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * Prüft ob der aktuell Wert "gelogged" wird. 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.23
+   *  \date 2016.12.23
    */
   @Test
   public void tcLogValue() throws Exception
@@ -574,7 +612,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.23
+   *  \date 2016.12.23
    */
   @Test // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeValue_IGNORE_OKWNotAllowedValueException() throws Exception
@@ -606,7 +644,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.23
+   *  \date 2016.12.23
    */
   @Test // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeValue_Empty_OKWNotAllowedValueException() throws Exception
@@ -638,7 +676,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.23
+   *  \date 2016.12.23
    */
   @Test
   public void tcVerifyIsActive_IsActiveNoExpectedNo() throws Exception
@@ -663,7 +701,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.09.20
+   *  \date 2016.09.20
    */
   @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyIsActive_IsActiveYesExpectedNo_OKWVerifyingFailsException() throws Exception
@@ -693,7 +731,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * @exception OKWVerifyingFailsException wird erwartet.
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.09.20
+   *  \date 2016.09.20
    */
   @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyIsActive_IsActiveNoExpectedYes_OKWVerifyingFailsException() throws Exception
@@ -718,7 +756,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    *  
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.23
+   *  \date 2016.12.23
    */
   @Test
   public void tcLogIsActive() throws Exception
@@ -954,7 +992,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * Prüft ob der aktuell Wert eingespeichert wird. 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.23
+   *  \date 2016.12.23
    */
   @Test
   public void tcMemorizeLabel() throws Exception
@@ -979,7 +1017,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * Prüft ob der aktuell Wert "gelogged" wird. 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.23
+   *  \date 2016.12.23
    */
   @Test
   public void tcLogLabel() throws Exception
@@ -1005,7 +1043,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.23
+   *  \date 2016.12.23
    */
   @Test // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeLabel_IGNORE_OKWNotAllowedValueException() throws Exception
@@ -1034,7 +1072,7 @@ public class SeRadioList_EN_Test extends OKWTestBase
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2016.12.23
+   *  \date 2016.12.23
    */
   @Test // ( expected = OKWNotAllowedValueException.class )
   public void tcMemorizeLabel_Empty_OKWNotAllowedValueException() throws Exception

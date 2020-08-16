@@ -1,6 +1,6 @@
 /*
  ==============================================================================
- Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+ Copyright © 2012 - 2020, IT-Beratung Hrabovszki
  ============================================================================== 
 
  This file is part of OpenKeyWord.
@@ -49,7 +49,7 @@ import okw.gui.adapter.selenium.SeInputText;
  * GUI-Frame for the OKW-test page <a href="http://test.openkeyword.de/Button/button.htm">test.openkeyword.de/Button/button.htm</a> 
  * \~
  * @author Zoltán Hrabovszki
- * @date 2016.09.06
+ * \date 2016.09.06
  */
 @OKW( FN = "WaitForHiddenObjekt" )
 public class FrmWaitForHiddenObjekt extends SeBrowserChild

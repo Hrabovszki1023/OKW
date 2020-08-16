@@ -4,7 +4,7 @@ package okw.gui.adapter;
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -112,7 +112,7 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
  *  
  *  \~
  * @author Zoltán Hrabovszki
- * @date 2016.09.05
+ * \date 2016.09.05
  */
 public class SeDiv4CtrlKeyTest extends SeAnyChildWindow
 {
@@ -136,7 +136,7 @@ public class SeDiv4CtrlKeyTest extends SeAnyChildWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013-12-07
+     *  \date 2013-12-07
      */
     @Override
     public ArrayList<String> getCaption()
@@ -154,7 +154,7 @@ public class SeDiv4CtrlKeyTest extends SeAnyChildWindow
    *  \~english
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2018.12.27
+   *  \date 2018.12.27
    */
    public Integer getMaxLength()
    {
@@ -201,7 +201,7 @@ public class SeDiv4CtrlKeyTest extends SeAnyChildWindow
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2018.10.28
+     *  \date 2018.10.28
      */
     public ArrayList<String> getPlaceholder()
     {
@@ -236,7 +236,7 @@ public class SeDiv4CtrlKeyTest extends SeAnyChildWindow
      *  - wenn weder die eine classe noch die andere existiert, dann wir "Value= 'unknown State or Wrong Type of GUI-Objekt'" zurück gegeben.
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2020.03.01
+     *  \date 2020.03.01
      */
     @Override
     public ArrayList<String> getValue()

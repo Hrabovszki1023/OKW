@@ -2,7 +2,7 @@
 ==============================================================================
   Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-  Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+  Copyright © 2012 - 2020, IT-Beratung Hrabovszki
   www.OpenKeyWord.de
 ============================================================================== 
 
@@ -78,7 +78,7 @@ public abstract class AnyChildwindow extends AnyWinBase implements IGUIChildwind
    *  @return true, falls das eindeutig Objekt gefunden worden ist ist, sonst false.
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2017.01.31
+   *  \date 2017.01.31
    */  
   public Boolean getExists()
   {
@@ -449,7 +449,7 @@ public ArrayList<String> MemorizeCaption( )
      * @throws XPathExpressionException 
      * 
      *  @author Zoltán Hrabovszki
-     *  @date 2013.11.11
+     *  \date 2013.11.11
      */
     public Boolean WaitForMe()
     {

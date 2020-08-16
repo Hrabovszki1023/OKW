@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -58,7 +58,7 @@ import okw.log.Logger_Sngltn;
  *  \~english
  *  \~
  *  @author Zoltan Hrabovszki
- *  @date 2013-12-30
+ *  \date 2013-12-30
  */
 public class OKW_FileHelper
 {
@@ -69,7 +69,7 @@ public class OKW_FileHelper
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2017-07-06
+     *  \date 2017-07-06
      */
     private static Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
@@ -105,7 +105,7 @@ public class OKW_FileHelper
     
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013-12-30
+     *  \date 2013-12-30
      */
     public static Boolean createEmptyDirectory( String fpsPath )
     {
@@ -163,7 +163,7 @@ public class OKW_FileHelper
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013-12-30
+     *  \date 2013-12-30
      */
     public static void deleteDirectory( String Path )
     {
@@ -722,7 +722,7 @@ public class OKW_FileHelper
      *  @exception OKW.Exceptions.OKWDirectoryDoesNotExistsException is raised if the given path does not point to an existing directory.
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013-12-30
+     *  \date 2013-12-30
      */
     public static Boolean isDirectoryEmpty( String PATH )
     {
@@ -773,7 +773,7 @@ public class OKW_FileHelper
      *  
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013.12.30
+     *  \date 2013.12.30
      */
     public static String convertDirectorySeperator( String fpsPath )
     {
@@ -824,7 +824,7 @@ public class OKW_FileHelper
      * \~
      * @author Zoltán Hrabovszki
      * @throws IOException 
-     * @date 2019-12-01
+     * \date 2019-12-01
      */
     public static void DirectoryCreate( String PATH ) throws IOException
     {

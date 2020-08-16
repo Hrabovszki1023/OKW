@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -101,7 +101,7 @@ public class OKWLanguage {
      * @return
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-12-30
+     * \date 2019-12-30
      */
     public void setLanguage( String value )
     {

@@ -2,7 +2,7 @@
 ==============================================================================
   Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-  Copyright © 2012 - 2019, 2016 IT-Beratung Hrabovszki
+  Copyright © 2012 - 2020, 2016 IT-Beratung Hrabovszki
   www.OpenKeyWord.de
 ============================================================================== 
 
@@ -47,7 +47,7 @@ import java.util.*;
  * void LogPrintDebug();
  * \~
  * @author Zoltan Hrabovszki
- * @date 2016-10-23
+ * \date 2016-10-23
  */
 
 
@@ -59,7 +59,7 @@ public interface ILogger
 	   * 
 	   * \~
 	   * @author Zoltan Hrabovszki
-	   * @date 2016-10-23
+	   * \date 2016-10-23
 	   */
    void reset();
 
@@ -71,7 +71,7 @@ public interface ILogger
      *  
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */
     void LogError(String Message);
 
@@ -82,7 +82,7 @@ public interface ILogger
      *  @param Message Pass message
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */
     void LogPass(String Message);
 
@@ -93,7 +93,7 @@ public interface ILogger
     *  @param Message Warning message.
     * \~
     * @author Zoltan Hrabovszki
-    * @date 2016-10-23
+    * \date 2016-10-23
     */
     void LogWarning(String Message);
 
@@ -106,7 +106,7 @@ public interface ILogger
      *  @param Message
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */
     void LogException(String Message);
 
@@ -126,7 +126,7 @@ public interface ILogger
      *  @param sourceType The Type of the "ac"
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-08-03
+     * \date 2019-08-03
      */
     void LogSourceLocation( String Start, String End, String featureName, String sourceType );
     
@@ -137,7 +137,7 @@ public interface ILogger
      * @param Message Message to print.
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */
     void LogPrint(String Message);
 
@@ -148,7 +148,7 @@ public interface ILogger
      *  @param Message
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */    
     void LogPrintDebug(String Message);
 
@@ -159,7 +159,7 @@ public interface ILogger
    * @param fpsTestcaseName
    * \~
    * @author Zoltan Hrabovszki
-   * @date 2016-10-23
+   * \date 2016-10-23
    */
    void LogTestcaseStart(String fpsTestcaseName);
 
@@ -168,7 +168,7 @@ public interface ILogger
     *  
     * \~
     * @author Zoltan Hrabovszki
-    * @date 2016-10-23
+    * \date 2016-10-23
     */
     void LogTestcaseEnd();
 	
@@ -180,7 +180,7 @@ public interface ILogger
      *  
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */
     void LogKeyWordStart(String KeyWordName, String... Params);
 
@@ -189,7 +189,7 @@ public interface ILogger
      *  
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */
     void LogKeyWordEnd();
 
@@ -203,7 +203,7 @@ public interface ILogger
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2019-07-25
+     * \date 2019-07-25
      */
     void LogStepStart( String categoryName, String categoryType, 
                        String choiceValue, String featureName,
@@ -217,7 +217,7 @@ public interface ILogger
      *  
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2019-07-25
+     * \date 2019-07-25
      */
     void LogStepEnd();
 
@@ -231,7 +231,7 @@ public interface ILogger
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2019-07-25
+     * \date 2019-07-25
      */
     void LogLocalACCallStart( String sourceExcerpt, String Type );
 
@@ -243,7 +243,7 @@ public interface ILogger
      *  
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2019-07-25
+     * \date 2019-07-25
      */
     void LogLocalACCallEnd();
 
@@ -257,7 +257,7 @@ public interface ILogger
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2019-07-25
+     * \date 2019-07-25
      */
     void LogRemoteACCallStart( String sourceExcerpt, String Type );
 
@@ -269,7 +269,7 @@ public interface ILogger
      *  
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2019-07-25
+     * \date 2019-07-25
      */
     void LogRemoteACCallEnd();
     
@@ -286,7 +286,7 @@ public interface ILogger
      *  @param Params Optional Parameter of the Sequence
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */
     void LogSequenceStart(String KeyWordName, String FN, String SEQName, String... Params);
 
@@ -296,7 +296,7 @@ public interface ILogger
      *  
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */
     void LogSequenceEnd();
     
@@ -307,7 +307,7 @@ public interface ILogger
      *  @param Params
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */
     void LogFunctionStart(String FunctionName, String... Params);
 
@@ -319,7 +319,7 @@ public interface ILogger
      *  @param Params
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */    
     void LogFunctionStartDebug(String FunctionName, String... Params);
 
@@ -328,7 +328,7 @@ public interface ILogger
      * 
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */    
     void LogFunctionEnd();
 
@@ -337,7 +337,7 @@ public interface ILogger
      * 
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */    
     void LogFunctionEndDebug();
 
@@ -347,7 +347,7 @@ public interface ILogger
      * @param Message
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */    
     void LogFunctionEnd(Boolean Message);
 
@@ -358,7 +358,7 @@ public interface ILogger
      * @param Message
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */    
      void LogFunctionEndDebug(Boolean Message);
 
@@ -369,7 +369,7 @@ public interface ILogger
       * @param Message
       * \~
       * @author Zoltan Hrabovszki
-      * @date 2016-10-23
+      * \date 2016-10-23
       */    
       void LogFunctionEnd(String Message);
 
@@ -380,7 +380,7 @@ public interface ILogger
        *  @param Message
        * \~
        * @author Zoltan Hrabovszki
-       * @date 2016-10-23
+       * \date 2016-10-23
        */    
       void LogFunctionEndDebug(String Message);
 
@@ -391,7 +391,7 @@ public interface ILogger
        *  @param Message
        * \~
        * @author Zoltan Hrabovszki
-       * @date 2016-10-23
+       * \date 2016-10-23
        */    
     void LogFunctionEnd(List<String> Message);    
 
@@ -402,7 +402,7 @@ public interface ILogger
      *  @param Message
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */    
     void LogFunctionEndDebug(List<String> Message);
     
@@ -414,7 +414,7 @@ public interface ILogger
      *  @param LevelHeader
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */    
     void ResOpenList(String ListHeader);
 
@@ -431,7 +431,7 @@ public interface ILogger
      *  @param ListHeader
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */    
     void ResOpenListDebug(String ListHeader); 
     
@@ -444,7 +444,7 @@ public interface ILogger
      *  @param fpsParameter
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */    
     void ResCloseList();
 
@@ -454,7 +454,7 @@ public interface ILogger
      * 
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */    
     void ResCloseListDebug();
 
@@ -465,7 +465,7 @@ public interface ILogger
      *  @param fpbDebugMode If true the DebugMode ist on. Else if false the DebugMode is off. 
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2016-10-23
+     * \date 2016-10-23
      */    
     void setDebugMode( Boolean fpbDebugMode );
 

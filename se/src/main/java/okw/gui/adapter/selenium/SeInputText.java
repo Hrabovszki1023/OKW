@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -109,7 +109,7 @@ import okw.gui.OKWLocatorBase;
  *  
  *  \~
  * @author Zoltán Hrabovszki
- * @date 2016.09.05
+ * \date 2016.09.05
  */
 public class SeInputText extends SeAnyChildWindow
 {
@@ -133,7 +133,7 @@ public class SeInputText extends SeAnyChildWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013-12-07
+     *  \date 2013-12-07
      */
     @Override
     public ArrayList<String> getCaption()
@@ -151,7 +151,7 @@ public class SeInputText extends SeAnyChildWindow
    *  \~english
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2018.12.27
+   *  \date 2018.12.27
    */
    public Integer getMaxLength()
    {
@@ -198,7 +198,7 @@ public class SeInputText extends SeAnyChildWindow
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2018.10.28
+     *  \date 2018.10.28
      */
     public ArrayList<String> getPlaceholder()
     {

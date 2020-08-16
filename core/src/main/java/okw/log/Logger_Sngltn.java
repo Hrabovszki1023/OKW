@@ -2,7 +2,7 @@
 ==============================================================================
   Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-  Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+  Copyright © 2012 - 2020, IT-Beratung Hrabovszki
   www.OpenKeyWord.de
 ============================================================================== 
 
@@ -153,7 +153,7 @@ public class Logger_Sngltn implements ILogger
      * 
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.05.01
+     *  \date 2015.05.01
      */
     public void reset()
     {

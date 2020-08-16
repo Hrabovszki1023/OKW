@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -102,7 +102,7 @@ public class EN_Keywords_ANTLR_Test
      *  Checks the keyword "BeginTest" with the test objective that the current test case name is stored under the MemKey "TCN" (TestCaseName).
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016-05-07
+     *  \date 2016-05-07
      */
     @Test
     public void tc_BeginTest_TestCaseName() throws Exception
@@ -118,7 +118,7 @@ public class EN_Keywords_ANTLR_Test
      *  Checks the keyword Select() with the test objective of whether the memorized values are used correctly.
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016-05-07
+     *  \date 2016-05-07
      */
     @Test
     public void tc_Select_MemorizedValue() throws Exception
@@ -2028,7 +2028,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016-05-07
+     *  \date 2016-05-07
      */
     @Test
     public void tc_SetValue_MemorizedValue() throws Exception
@@ -2065,7 +2065,7 @@ public void tc__VerifyTooltipWCM_EnviromentVar() throws Exception
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  \date 2016.05.07
      */
     @Test
     public void tc__SetValue_EnviromentVar() throws Exception

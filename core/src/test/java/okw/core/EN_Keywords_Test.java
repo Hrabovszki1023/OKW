@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -2150,7 +2150,7 @@ public class EN_Keywords_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013-12-26
+     *  \date 2013-12-26
      */
     @Test
     public void tc_VerifySelectedValue() throws Exception
@@ -2194,7 +2194,7 @@ public class EN_Keywords_Test
     *  \~english
     *  \~
     *  @author Zoltan Hrabovszki
-    *  @date 2013-12-26
+    *  \date 2013-12-26
     */
     @Test
     public void tc_VerifySelectedValueWCM() throws Exception
@@ -2238,7 +2238,7 @@ public class EN_Keywords_Test
     *  \~english
     *  \~
     *  @author Zoltan Hrabovszki
-    *  @date 2013-12-26
+    *  \date 2013-12-26
     */
     @Test
     public void tc_VerifySelectedValueREGX() throws Exception
@@ -2282,7 +2282,7 @@ public class EN_Keywords_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013-12-26
+     *  \date 2013-12-26
      */
     @Test
     public void tc_VerifyTablecellValue() throws Exception
@@ -2333,7 +2333,7 @@ public class EN_Keywords_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013-12-26
+     *  \date 2013-12-26
      */
     @Test
     public void tc_VerifyTablecellValueREGX() throws Exception
@@ -2384,7 +2384,7 @@ public class EN_Keywords_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013-12-26
+     *  \date 2013-12-26
      */
     @Test
     public void tc_VerifyTablecellValueWCM() throws Exception

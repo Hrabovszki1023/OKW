@@ -1,6 +1,6 @@
 /*
  ==============================================================================
- Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+ Copyright © 2012 - 2020, IT-Beratung Hrabovszki
  ============================================================================== 
 
  This file is part of OpenKeyWord.
@@ -48,7 +48,7 @@ import okw.gui.adapter.selenium.SeInputText;
  *  GUI-Frame for the OKW-test page <a href="http://test.openkeyword.de/iframe/iframe.htm">http://test.openkeyword.de/iframe/iframe.htm</a> 
  *  \~
  *  @author Zoltán Hrabovszki
- *  @date 2019.02.28
+ *  \date 2019.02.28
  */
 @OKW( FN = "IFrameWithName" )
 public class frmIFrameWithName extends SeBrowserChild

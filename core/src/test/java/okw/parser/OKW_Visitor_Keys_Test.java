@@ -16,7 +16,7 @@ import org.junit.jupiter.api.*;
         /**
          *  Prüft die Tastatureingabe "DEL" als einzelner Wert
          *  @author Zoltan Hrabovszki
-         *  @date 2014.01.14
+         *  \date 2014.01.14
          */
         @Test
         public void TC_DEL()
@@ -30,7 +30,7 @@ import org.junit.jupiter.api.*;
         /**
          *  Prüft die Tastatureingabe "DEL" in einem Text eingebbetet.
          *  @author Zoltan Hrabovszki
-         *  @date 2014.01.14
+         *  \date 2014.01.14
          */
         @Test
         public void TC_DEL_2()
@@ -44,7 +44,7 @@ import org.junit.jupiter.api.*;
         /**
          *  Prüft die Tastatureingabe "SHFT" / Shift
          *  @author Zoltan Hrabovszki
-         *  @date 2014.01.14
+         *  \date 2014.01.14
          */
         @Test
         public void TC_SHFT()
@@ -58,7 +58,7 @@ import org.junit.jupiter.api.*;
         /**
          *  Prüft die Tastatureingabe "CONTROL" / CTRL
          *  @author Zoltan Hrabovszki
-         *  @date 2014.01.14
+         *  \date 2014.01.14
          */
         @Test
         public void TC_CONTROL()

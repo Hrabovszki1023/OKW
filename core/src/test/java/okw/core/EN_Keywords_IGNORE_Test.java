@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -1879,7 +1879,7 @@ public class EN_Keywords_IGNORE_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013-12-26
+     *  \date 2013-12-26
      */
     @Test
     public void tcVerifySelectedValue_IGNORE() throws Exception
@@ -1933,7 +1933,7 @@ public class EN_Keywords_IGNORE_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013-12-26
+     *  \date 2013-12-26
      */
     @Test
     public void tcVerifySelectedValueREGX_IGNORE() throws Exception
@@ -1960,7 +1960,7 @@ public class EN_Keywords_IGNORE_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013-12-26
+     *  \date 2013-12-26
      */
     @Test
     public void tcVerifySelectedValueREGX_IGNORE_EMptyString() throws Exception
@@ -1987,7 +1987,7 @@ public class EN_Keywords_IGNORE_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013-12-26
+     *  \date 2013-12-26
      */
     @Test
     public void tcVerifySelectedValueWCM_IGNORE() throws Exception

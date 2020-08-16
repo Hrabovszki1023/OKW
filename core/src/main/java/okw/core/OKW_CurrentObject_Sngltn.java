@@ -1,6 +1,6 @@
 /*
     ==============================================================================
-    Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+    Copyright © 2012 - 2020, IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -209,7 +209,7 @@ public class OKW_CurrentObject_Sngltn
      *
      * \~ 
      * @author Zoltan Hrabovszki
-     * @date 2012.11.29
+     * \date 2012.11.29
      */
     private static OKW_CurrentObject_Sngltn Instance;
 
@@ -228,7 +228,7 @@ public class OKW_CurrentObject_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2012.12.02
+     * \date 2012.12.02
      */
     private OKW_CurrentObject_Sngltn()
     {
@@ -273,7 +273,7 @@ public class OKW_CurrentObject_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2012.11.01
+     * \date 2012.11.01
      */
     public Object getCurrentObject()
     {
@@ -300,7 +300,7 @@ public class OKW_CurrentObject_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2012.11.01
+     * \date 2012.11.01
      */
     public String getObjectFN()
     {
@@ -333,7 +333,7 @@ public class OKW_CurrentObject_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2012.11.01
+     * \date 2012.11.01
      */
     public String getWindowFN()
     {
@@ -366,7 +366,7 @@ public class OKW_CurrentObject_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2012.11.01
+     * \date 2012.11.01
      */
     public String getChildFN()
     {
@@ -395,7 +395,7 @@ public class OKW_CurrentObject_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki 
-     * @date 2012.12.15
+     * \date 2012.12.15
      */
     public static void init() throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
     {
@@ -434,7 +434,7 @@ public class OKW_CurrentObject_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2012.11.01
+     * \date 2012.11.01
      */
     public void LogObjectData()
     {
@@ -515,7 +515,7 @@ public class OKW_CurrentObject_Sngltn
        *
        * \~
        * @author Zoltan Hrabovszki
-       * @date 2012.11.01
+       * \date 2012.11.01
        * @throws IllegalAccessException 
        * @throws IllegalArgumentException 
        */
@@ -582,7 +582,7 @@ public class OKW_CurrentObject_Sngltn
      *
      * \~ 
      * @author Zoltan Hrabovszki
-     * @date 2012.11.01
+     * \date 2012.11.01
      * @throws IllegalAccessException 
      * @throws IllegalArgumentException 
      */
@@ -638,7 +638,7 @@ public class OKW_CurrentObject_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2012.11.01
+     * \date 2012.11.01
      * @throws IllegalAccessException 
      * @throws IllegalArgumentException 
      */
@@ -693,7 +693,7 @@ public class OKW_CurrentObject_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2012.11.01
+     * \date 2012.11.01
      */
     public void Sequence( String FN, String fpsMethodName, String fpsParameter_1 ) throws Exception
     {

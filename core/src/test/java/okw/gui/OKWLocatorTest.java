@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -170,7 +170,7 @@ public class OKWLocatorTest
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-06-28
+     * \date 2019-06-28
      */
     @Test
     public void TC_Copy__1Locators()
@@ -201,7 +201,7 @@ public class OKWLocatorTest
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-06-28
+     * \date 2019-06-28
      */
     @Test
     public void TC_Copy_0Locators()
@@ -230,7 +230,7 @@ public class OKWLocatorTest
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-06-28
+     * \date 2019-06-28
      */
     @Test
     public void TC_Copy_With_2Locators()
@@ -261,7 +261,7 @@ public class OKWLocatorTest
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-06-28
+     * \date 2019-06-28
      */
     @Test
     public void TC_DynamicLocators()

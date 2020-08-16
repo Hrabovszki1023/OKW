@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -92,7 +92,7 @@ public class EN_Keywords_NOK_Test
      * \~english
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013.12.26
+     * \date 2013.12.26
      * 
      * @throws Exception
      */

@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -107,7 +107,7 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
  * 
  * \~
  * @author Zoltán Hrabovszki
- * @date 2015-05-12
+ * \date 2015-05-12
  * @author zoltan
  */
 @OKW (FN="HTMLUnit")
@@ -124,7 +124,7 @@ public class FrmSeHTMLUnit extends SeBrowserWindow
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.05.12
+     *  \date 2015.05.12
      */
 
     

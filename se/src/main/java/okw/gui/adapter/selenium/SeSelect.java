@@ -12,7 +12,7 @@ import okw.gui.OKWLocatorBase;
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -135,7 +135,7 @@ import okw.gui.OKWLocatorBase;
  *  
  *  \~
  * @author Zoltán Hrabovszki
- * @date 2016.09.05
+ * \date 2016.09.05
  */
 public class SeSelect extends SeAnyChildWindow
 {
@@ -156,7 +156,7 @@ public class SeSelect extends SeAnyChildWindow
      *  @param fps_Values Ein oder mehrere Werte, die ausgewählt werden sollen.
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013.04.11
+     *  \date 2013.04.11
      */
     @Override
     public void Select( ArrayList<String> fps_Values )
@@ -205,7 +205,7 @@ public class SeSelect extends SeAnyChildWindow
      *  @param fpsValues Werte, die in der Listbox ausgwählt werden sollen.
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013.04.11
+     *  \date 2013.04.11
      */
     @Override
     public void SetValue( ArrayList<String> fpsValues )
@@ -256,7 +256,7 @@ public class SeSelect extends SeAnyChildWindow
      *  @return Liste der ausgewählten Werte\return
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2014.12.04
+     *  \date 2014.12.04
      */
     @Override
     public ArrayList<String> getValue()

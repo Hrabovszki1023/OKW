@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -70,7 +70,7 @@ import org.openqa.selenium.WebElement;
  *  \~english
  *  \~
  *  @author Zoltán Hrabovszki
- *  @date 2017-06-05
+ *  \date 2017-06-05
  */
 public class SeAnyWindow extends AnyWindow
 {
@@ -109,7 +109,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.11.11
+     *  \date 2013.11.11
      */
     public void ClickOn()
     {
@@ -139,7 +139,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public ArrayList<String> getCaption()
     {
@@ -188,7 +188,7 @@ public class SeAnyWindow extends AnyWindow
     *  @return true, falls das Objekt eindeutig gefunden worden ist ist, sonst false.
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2017.01.31
+    *  \date 2017.01.31
     */
     public Boolean getExists()
     {
@@ -233,7 +233,7 @@ public class SeAnyWindow extends AnyWindow
     *  @return
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.11.11
+    *  \date 2013.11.11
     */
     public Boolean getHasFocus()
     {
@@ -277,7 +277,7 @@ public class SeAnyWindow extends AnyWindow
      *   @return true, falls das Objekt aktive ist, sonst false
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2014.04.19
+     *  \date 2014.04.19
      */
     public Boolean getIsActive()
     {
@@ -335,7 +335,7 @@ public class SeAnyWindow extends AnyWindow
      *  @return
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2014.06.17
+     *  \date 2014.06.17
      */
     public ArrayList<String> getLabel() throws Exception
     {
@@ -384,7 +384,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public ArrayList<String> getTooltip() throws Exception
     {
@@ -427,7 +427,7 @@ public class SeAnyWindow extends AnyWindow
      *
      *  @return
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.14
+     *  \date 2013.12.14
      */
     public ArrayList<String> getValue() throws Exception
     {
@@ -473,7 +473,7 @@ public class SeAnyWindow extends AnyWindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public ArrayList<String> LogCaption() throws Exception
     {
@@ -515,7 +515,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public Boolean LogExists()
     {
@@ -555,7 +555,7 @@ public class SeAnyWindow extends AnyWindow
      *  true falls Objekt den Fokus hat, sonst false
      *  @return
      *  @author Zoltan Hrabovszki
-     *  @date 2013.04.11
+     *  \date 2013.04.11
      */
     public Boolean LogHasFocus() throws Exception
     {
@@ -596,7 +596,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public Boolean LogIsActive() throws Exception
     {
@@ -627,7 +627,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public ArrayList<String> LogLabel() throws Exception
     {
@@ -668,7 +668,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public ArrayList<String> LogTooltip() throws Exception
     {
@@ -695,7 +695,7 @@ public class SeAnyWindow extends AnyWindow
       *  
       *  @return Rückgabe des Textuellen Inhaltes der markierten Textes.
       *  @author Zoltan Hrabovszki
-      *  @date 2013.12.14
+      *  \date 2013.12.14
       * @throws Exception 
       */
     public ArrayList<String> LogValue() throws Exception
@@ -721,7 +721,7 @@ public class SeAnyWindow extends AnyWindow
      *  @return Referenz auf das gefunde DOM-Element
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.11.11
+     *  \date 2013.11.11
      */
     public WebElement Me()
     {
@@ -750,7 +750,7 @@ public class SeAnyWindow extends AnyWindow
      *  @return
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public Boolean MemorizeExists()
     {
@@ -788,7 +788,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2014.04.19
+     *  \date 2014.04.19
      */
     public Boolean MemorizeIsActive() throws Exception
     {
@@ -828,7 +828,7 @@ public class SeAnyWindow extends AnyWindow
      *  @return true, falls das Objekt NICHT vorhanden ist. Sonst false
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.11.11
+     *  \date 2013.11.11
      */
     public Boolean NotExists() throws Exception
     {
@@ -874,7 +874,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.11.11
+     *  \date 2013.11.11
      */
     public void SetFocus() throws Exception
     {
@@ -907,7 +907,7 @@ public class SeAnyWindow extends AnyWindow
      *  OKWFrameObjectMethodNotImplemented!
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2016.10.06
+     *  \date 2016.10.06
      */
     public void SelectMenu_Value( ArrayList<String> Values )
     {
@@ -927,7 +927,7 @@ public class SeAnyWindow extends AnyWindow
     /**
      * \~
      *  @author Zoltán Hrabovszki
-     *  @date 2016.10.06
+     *  \date 2016.10.06
     */
     public void Select( ArrayList<String> Values ) throws Exception
     {
@@ -955,7 +955,7 @@ public class SeAnyWindow extends AnyWindow
      *  OKWFrameObjectMethodNotImplemented!
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2016.10.06
+     *  \date 2016.10.06
      */
     public void SelectMenu()
     {
@@ -979,7 +979,7 @@ public class SeAnyWindow extends AnyWindow
      *   @return
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2016.10.06
+     *  \date 2016.10.06
      */
     public void SetValue( ArrayList<String> Values ) throws XPathExpressionException, Exception
     {
@@ -1009,7 +1009,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public ArrayList<String> MemorizeTooltip() throws Exception
     {
@@ -1050,7 +1050,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public ArrayList<String> MemorizeLabel() throws Exception
     {
@@ -1090,7 +1090,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public Boolean MemorizeHasFocus() throws Exception
     {
@@ -1130,7 +1130,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public ArrayList<String> MemorizeCaption() throws Exception
     {
@@ -1162,7 +1162,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.14
+     *  \date 2013.12.14
      */
     public ArrayList<String> MemorizeValue() throws Exception
     {
@@ -1198,7 +1198,7 @@ public class SeAnyWindow extends AnyWindow
      *  
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013.04.11
+     *  \date 2013.04.11
      */
     public void TypeKey( ArrayList<String> fps_Values ) throws Exception
     {
@@ -1249,7 +1249,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public ArrayList<String> VerifyCaption() throws Exception
     {
@@ -1297,7 +1297,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public Boolean VerifyExists() throws InterruptedException
     {
@@ -1335,7 +1335,7 @@ public class SeAnyWindow extends AnyWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public Boolean VerifyIsActive() throws Exception
     {
@@ -1380,7 +1380,7 @@ public class SeAnyWindow extends AnyWindow
      *  This is the entry point for the adaptation of the method Verify Has Focus (method override).
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public Boolean VerifyHasFocus() throws Exception
     {
@@ -1425,7 +1425,7 @@ public class SeAnyWindow extends AnyWindow
      *  @return
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public ArrayList<String> VerifyLabel() throws Exception
     {
@@ -1467,7 +1467,7 @@ public class SeAnyWindow extends AnyWindow
      *  @return
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public ArrayList<String> VerifyTooltip() throws Exception
     {
@@ -1506,7 +1506,7 @@ public class SeAnyWindow extends AnyWindow
      *          Es wird (immer) der aktuelle Wert des Objektes zurückgeliefert.
      *  \~english
      *  @author Zoltan Hrabovszki
-     *  @date 2013.12.14
+     *  \date 2013.12.14
      */  
     public ArrayList<String> VerifyValue() throws Exception
     {

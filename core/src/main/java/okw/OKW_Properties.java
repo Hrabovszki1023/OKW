@@ -1,3 +1,41 @@
+	/*
+	    ==============================================================================
+	      Author: Zoltán Hrabovszki <zh@openkeyword.de>
+
+	      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
+	      www.OpenKeyWord.de
+	    ============================================================================== 
+
+	    This file is part of OpenKeyWord.
+
+	    OpenKeyWord is free software: you can redistribute it and/or modify
+	    it under the terms of the GNU General Public License as published by
+	    the Free Software Foundation, either version 3 of the License, or
+	    (at your option) any later version.
+
+	    OpenKeyWord is distributed in the hope that it will be useful,
+	    but WITHOUT ANY WARRANTY; without even the implied warranty of
+	    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	    GNU General Public License for more details.
+
+	    You should have received a copy of the GNU General Public License
+	    along with OpenKeyWord.  If not, see <http://www.gnu.org/licenses/>.
+
+	    Diese Datei ist Teil von OpenKeyWord.
+
+	    OpenKeyWord ist Freie Software: Sie können es unter den Bedingungen
+	    der GNU General Public License, wie von der Free Software Foundation,
+	    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder späteren
+	    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+
+	    OpenKeyWord wird in der Hoffnung, dass es nützlich sein wird, aber
+	    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+	    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+	    Siehe die GNU General Public License für weitere Details.
+
+	    Sie sollten eine Kopie der GNU General Public License zusammen mit 
+	    OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
+	*/
 package okw;
 
 import java.io.File;
@@ -41,7 +79,7 @@ import org.stringtemplate.v4.ST;
  *
  * \~
  * @author Zoltán Hrabovszki
- * @date 2018-03-08
+ * \date 2018-03-08
  */
 public class OKW_Properties extends Properties
 {
@@ -77,7 +115,7 @@ public class OKW_Properties extends Properties
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2018-03-08
+     * \date 2018-03-08
      */
     protected ArrayList<String> ResoursesProperties = new ArrayList<String>();
     
@@ -90,7 +128,7 @@ public class OKW_Properties extends Properties
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2018-03-08
+     * \date 2018-03-08
      */
     protected ArrayList<String> FileProperties = new ArrayList<String>();
 
@@ -111,7 +149,7 @@ public class OKW_Properties extends Properties
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013.12.22
+     * \date 2013.12.22
      */
     public static OKW_Properties getInstance()
     //throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
@@ -151,7 +189,7 @@ public class OKW_Properties extends Properties
      * @return
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2018-03-08
+     * \date 2018-03-08
      */         
     public void clear()
     {
@@ -176,7 +214,7 @@ public class OKW_Properties extends Properties
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-05-07
+     * \date 2019-05-07
      */
     public void init()
     {
@@ -239,7 +277,7 @@ public class OKW_Properties extends Properties
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2018-03-08
+     * \date 2018-03-08
      */    
     protected ArrayList<String> getPropertyFiles( String Patternstring, String PropPath, String PropPathWin )
     {
@@ -285,7 +323,7 @@ public class OKW_Properties extends Properties
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2018-03-08
+     * \date 2018-03-08
      */
     public void updateProperties()
     {
@@ -365,7 +403,7 @@ public class OKW_Properties extends Properties
      * @return
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2018-03-08
+     * \date 2018-03-08
      */    
     public Boolean addResource(String fpsResourceName)
     {
@@ -394,7 +432,7 @@ public class OKW_Properties extends Properties
      * @return
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2018-03-08
+     * \date 2018-03-08
      */
     public void addPropertiesFile(String fpsFileName)
     {
@@ -417,7 +455,7 @@ public class OKW_Properties extends Properties
 	 * @param ?
 	 * @return \~
 	 * @author Zoltán Hrabovszki
-	 * @date 2019-05-07
+	 * \date 2019-05-07
 	 */
 	protected ArrayList<String> getPropertiesFilesFromResources(String folder) {
 
@@ -490,7 +528,7 @@ public class OKW_Properties extends Properties
      * @return
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2018-03-08
+     * \date 2018-03-08
      */    
     private Boolean loadFromResource(String fpsResource )
     {
@@ -538,7 +576,7 @@ public class OKW_Properties extends Properties
      * @return
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2018-03-08
+     * \date 2018-03-08
      */      
     private Boolean loadFromFile(String fpsPropertiesFile)
     {
@@ -657,7 +695,7 @@ public class OKW_Properties extends Properties
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-05-07
+     * \date 2019-05-07
      */ 
     public void PrintPropertiesSources()
     {
@@ -728,7 +766,7 @@ public class OKW_Properties extends Properties
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-05-07
+     * \date 2019-05-07
      */
     public ArrayList<String> getKeysStartswith( String Startwitth ) throws IOException
     {
@@ -765,7 +803,7 @@ public class OKW_Properties extends Properties
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-05-07
+     * \date 2019-05-07
      */
     public ArrayList<String> getPropertiesForKeysStartswith( String Startwith ) throws IOException
     {
@@ -798,7 +836,7 @@ public class OKW_Properties extends Properties
      * @return Value of the key as string.
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-12-21
+     * \date 2019-12-21
      */
    @Override
    public String getProperty(String fpsKey)
@@ -839,7 +877,7 @@ public class OKW_Properties extends Properties
      * 
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2019-12-21
+     *  \date 2019-12-21
      */
     public String getProperty( String fpsKey, String fpsDefault, Object... Parameters )
     {
@@ -899,7 +937,7 @@ public class OKW_Properties extends Properties
 //     * 
 //     *  \~
 //     *  @author Zoltan Hrabovszki
-//     *  @date 2019-12-21
+//     *  \date 2019-12-21
 //     */
 //    public String getProperty( String fpsKey, String fpsDefault, Object Parameter_1, Object Parameter_2 )
 //    {
@@ -935,7 +973,7 @@ public class OKW_Properties extends Properties
      * @return Value of the key as Boolean true/false
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-11-17
+     * \date 2019-11-17
      */
    public Boolean getProperty2Boolean(String fpsKey, String fpsDefault )
    {

@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -78,7 +78,7 @@ public class OKW_Memorize_Sngltn
 	 *  \~english
 	 *  \~
 	 *  @author Zoltán Hrabovszki
-	 *  @date 2013.11.28
+	 *  \date 2013.11.28
 	 */
 	public String OKW_Memorize_xml	= "";
 
@@ -91,7 +91,7 @@ public class OKW_Memorize_Sngltn
 	 *  \brief
 	 *  \~
 	 *  \author Zoltán Hrabovszki
-	 *  @date 2013.11.28
+	 *  \date 2013.11.28
 	 */
 	protected Map<String, String> Value = new HashMap<String, String>();
 
@@ -106,7 +106,7 @@ public class OKW_Memorize_Sngltn
     *  \brief
     *  \~
     *  \author Zoltán Hrabovszki
-    *  @date 2019.11.25
+    *  \date 2019.11.25
     */
    protected Map<String, String> ValuePersistent = new HashMap<String, String>();
 
@@ -124,7 +124,7 @@ public class OKW_Memorize_Sngltn
 	 *  \~english
 	 *  \~
 	 *  @author Zoltán Hrabovszki
-	 *  @date 2013.11.28
+	 *  \date 2013.11.28
 	 */
 	protected static OKW_Memorize_Sngltn	Instance;
 
@@ -135,7 +135,7 @@ public class OKW_Memorize_Sngltn
 	 *  \~english
 	 *  \~
 	 *  @author Zoltán Hrabovszki
-	 *  @date 2014.12.28
+	 *  \date 2014.12.28
 	 */
 	protected LogMessenger LM	= null;
 
@@ -145,7 +145,7 @@ public class OKW_Memorize_Sngltn
 	 *  \~english
 	 *  \~
 	 *  @author Zoltán Hrabovszki
-	 *  @date 2013.11.28
+	 *  \date 2013.11.28
 	 */
 	protected Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
@@ -162,7 +162,7 @@ public class OKW_Memorize_Sngltn
 	 *  \~english
 	 *  \~
 	 *  @author Zoltán Hrabovszki
-	 *  @date 2014.14.27
+	 *  \date 2014.14.27
 	 */
 	private OKW_Memorize_Sngltn()
 	{
@@ -193,7 +193,7 @@ public class OKW_Memorize_Sngltn
 	 *  \~english
 	 *  \~
 	 *  @author Zoltán Hrabovszki
-	 *  @date 2014.14.27
+	 *  \date 2014.14.27
 	 */
 	public static OKW_Memorize_Sngltn getInstance()
 	{
@@ -223,7 +223,7 @@ public class OKW_Memorize_Sngltn
 	 * 
 	 *  \~
 	 *  @author Zoltan Hrabovszki
-	 *  @date 2013.11.25
+	 *  \date 2013.11.25
 	 */
 	public void reset()
 	{
@@ -242,7 +242,7 @@ public class OKW_Memorize_Sngltn
 	 *  \returntrue, falls der gegeben schlüssel existiert, sonst false\return
 	 *  \~
 	 *  @author Zoltan Hrabovszki
-	 *  @date 2013.11.25
+	 *  \date 2013.11.25
 	 */
 	public Boolean exists( String fpsKey )
 	{
@@ -279,7 +279,7 @@ public class OKW_Memorize_Sngltn
 	 *  \~english
 	 *  \~
 	 *  @author Zoltán Hrabovszki
-	 *  @date 2014.12.27
+	 *  \date 2014.12.27
 	 */
 	public String get( String fpsKey )
 	{
@@ -383,7 +383,7 @@ public class OKW_Memorize_Sngltn
 	 *  \~english
      *  \~
 	 *  @author Zoltán Hrabovszki
-	 *  @date 2013.11.28
+	 *  \date 2013.11.28
 	 */
 		public void load()
 		{

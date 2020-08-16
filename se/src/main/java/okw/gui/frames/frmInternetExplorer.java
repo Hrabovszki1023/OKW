@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -103,7 +103,7 @@ import okw.gui.adapter.selenium.SeBrowserWindow;
  * 
  * \~
  * @author Zoltán Hrabovszki
- * @date 2015-05-12
+ * \date 2015-05-12
  * @author zoltan
  */
 //@OKW (FN="InternetExplorer")
@@ -120,7 +120,7 @@ public class frmInternetExplorer extends SeBrowserWindow
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.05.12
+     *  \date 2015.05.12
      */
     public void SelectWindow()
     {

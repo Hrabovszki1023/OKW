@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -60,7 +60,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2014.04.19
+     *  \date 2014.04.19
      */
     public class SeBACK extends SeAnyChildWindow
     {
@@ -78,7 +78,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
              *  \~english
              *  \~
              *  @author Zoltán Hrabovszki
-             *  @date 2013.12.07
+             *  \date 2013.12.07
              */
            public ArrayList<String> getCaption()
            {
@@ -106,7 +106,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
         *  @return true, immer!
         *  \~
         *  @author Zoltán Hrabovszki
-        *  @date 2017.01.31
+        *  \date 2017.01.31
         */
         public Boolean getExists()
         {
@@ -130,7 +130,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
           * 
           *  \~
           *  @author Zoltán Hrabovszki
-          *  @date 2017.07.28
+          *  \date 2017.07.28
           */
          public Boolean getHasFocus()
          {
@@ -159,7 +159,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
          *  @return true, und zwar immer!
          *  \~
          *  @author Zoltán Hrabovszki
-         *  @date 2014.04.19
+         *  \date 2014.04.19
          */
          public Boolean getIsActive()
          {
@@ -181,7 +181,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
          *  \~english
          *  \~
          *  @author Zoltan Hrabovszki
-         *  @date 2017.07.23
+         *  \date 2017.07.23
         */
         public ArrayList<String> getLabel()
         {
@@ -210,7 +210,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
          *  \~english
          *  \~
          *  @author Zoltan Hrabovszki
-         *  @date 2017.07.23
+         *  \date 2017.07.23
          */
         public ArrayList<String> getTooltip()
         {
@@ -239,7 +239,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
           *  \~english
           *  \~
           *  @author Zoltan Hrabovszki
-          *  @date 2017.07.28
+          *  \date 2017.07.28
           */
         public ArrayList<String> getValue()
         {
@@ -268,7 +268,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
          *  \~english
          *  \~
          *  @author Zoltán Hrabovszki
-         *  @date 2013.11.11
+         *  \date 2013.11.11
          */
         public void ClickOn()
         {
@@ -293,7 +293,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
          *  \~english
          *  \~
          *  @author Zoltan Hrabovszki
-         *  @date 2014.04.19
+         *  \date 2014.04.19
          */
         public void SetFocus()
         {
@@ -319,7 +319,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
          *  \~english
          *  \~
          *  @author Zoltan Hrabovszki
-         *  @date 2014.04.19
+         *  \date 2014.04.19
          */
         public void SetValue(ArrayList<String> fps_Values)
         {
@@ -347,7 +347,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
          *  \~english
          *  \~
          *  @author Zoltan Hrabovszki
-         *  @date 2014.04.19
+         *  \date 2014.04.19
          */
         public void TypeKey(ArrayList<String> fps_Values)
         {

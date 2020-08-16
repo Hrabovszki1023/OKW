@@ -1,3 +1,41 @@
+	/*
+	    ==============================================================================
+	      Author: Zoltán Hrabovszki <zh@openkeyword.de>
+
+	      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
+	      www.OpenKeyWord.de
+	    ============================================================================== 
+
+	    This file is part of OpenKeyWord.
+
+	    OpenKeyWord is free software: you can redistribute it and/or modify
+	    it under the terms of the GNU General Public License as published by
+	    the Free Software Foundation, either version 3 of the License, or
+	    (at your option) any later version.
+
+	    OpenKeyWord is distributed in the hope that it will be useful,
+	    but WITHOUT ANY WARRANTY; without even the implied warranty of
+	    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	    GNU General Public License for more details.
+
+	    You should have received a copy of the GNU General Public License
+	    along with OpenKeyWord.  If not, see <http://www.gnu.org/licenses/>.
+
+	    Diese Datei ist Teil von OpenKeyWord.
+
+	    OpenKeyWord ist Freie Software: Sie können es unter den Bedingungen
+	    der GNU General Public License, wie von der Free Software Foundation,
+	    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder späteren
+	    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+
+	    OpenKeyWord wird in der Hoffnung, dass es nützlich sein wird, aber
+	    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+	    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+	    Siehe die GNU General Public License für weitere Details.
+
+	    Sie sollten eine Kopie der GNU General Public License zusammen mit 
+	    OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
+	*/
 package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
@@ -92,7 +130,7 @@ import okw.gui.OKWLocatorBase;
  *  
  *  \~
  *  @author Zoltan Hrabovszki
- *  @date 2013.04.11
+ *  \date 2013.04.11
  */
 public class SeInputRadio extends SeAnyChildWindow
 {
@@ -100,7 +138,7 @@ public class SeInputRadio extends SeAnyChildWindow
   /**
    *  \copydoc SeAnyChildWindow::SeAnyChildWindow(String,OKWLocator...)
    *  
-   *  @date 2013.04.11
+   *  \date 2013.04.11
    */         
   public SeInputRadio( String Locator, OKWLocatorBase... Locators )
   {
@@ -115,7 +153,7 @@ public class SeInputRadio extends SeAnyChildWindow
    * @return Liefert im ersten Wert des ArrayList&lt;String&gt; sprachabhängig CHECKED/UNCHECKED zurück.
    * @author Zoltan Hrabovszki
    * @throws Exception 
-   * @date 2013.04.11
+   * \date 2013.04.11
    */
   @Override
   public ArrayList<String> getValue()
@@ -155,7 +193,7 @@ public class SeInputRadio extends SeAnyChildWindow
      *  @return Wenn Ausgewählt: true, sonst false
      *  @author Zoltan Hrabovszki
      *  @throws Exception 
-     *  @date 2013.04.11
+     *  \date 2013.04.11
      */
     public Boolean getIsSelected()
     {
@@ -186,7 +224,7 @@ public class SeInputRadio extends SeAnyChildWindow
    *  \~english
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2013.12.07
+   *  \date 2013.12.07
    */
   @Override
   public ArrayList<String> getCaption()
@@ -213,7 +251,7 @@ public class SeInputRadio extends SeAnyChildWindow
    *  OKWFrameObjectMethodNotImplemented!
    * \~
    * @author Zoltán Hrabovszki
-   * @date 2016.10.06
+   * \date 2016.10.06
    */
   @Override
   public void SetValue( ArrayList<String> Values )
@@ -260,7 +298,7 @@ public class SeInputRadio extends SeAnyChildWindow
    *  
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2016.12.20
+   *  \date 2016.12.20
    */
   @Override
   public Boolean getHasFocus()
@@ -284,7 +322,7 @@ public class SeInputRadio extends SeAnyChildWindow
    *  \~english
    *  \~
    *  @author Zoltán Hrabovszki
-   *  @date 2013.11.11
+   *  \date 2013.11.11
    */
   @Override
   public void SetFocus()
@@ -308,7 +346,7 @@ public class SeInputRadio extends SeAnyChildWindow
    *  
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2013-04-11
+   *  \date 2013-04-11
    */
   public void TypeKey(ArrayList<String> fps_Values)
   {

@@ -4,7 +4,7 @@ package okw.gui.adapter.selenium;
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -121,7 +121,7 @@ import okw.gui.OKWLocatorBase;
  *  \~english
  *  \~
  *  @author Zoltan Hrabovszki
- *  @date 2013.04.11
+ *  \date 2013.04.11
  */
 
 public class SeLink extends SeAnyChildWindow
@@ -142,7 +142,7 @@ public class SeLink extends SeAnyChildWindow
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2014.11.26
+     *  \date 2014.11.26
      */
     @Override
     public Boolean getIsActive()
@@ -178,7 +178,7 @@ public class SeLink extends SeAnyChildWindow
      *  @enduml
      *  
      *  @author Zoltán Hrabovszki
-     *  @date 2014.11.26
+     *  \date 2014.11.26
      */
     @Override
     public ArrayList<String> getValue()
@@ -214,7 +214,7 @@ public class SeLink extends SeAnyChildWindow
      *  \~
      *  @author Zoltan Hrabovszki
      *  @throws Exception 
-     *  @date 2013.04.11
+     *  \date 2013.04.11
      */
     @Override
     public void TypeKey(ArrayList<String> fps_Values)

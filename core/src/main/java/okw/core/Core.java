@@ -1,6 +1,6 @@
 /*
     ==============================================================================
-    Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+    Copyright © 2012 - 2020, IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -76,7 +76,7 @@ import okw.*;
  *  
  *  \~
  *  @author Zoltán Hrabovszki
- *  @date 2014-01-09
+ *  \date 2014-01-09
  */
 public class Core implements IOKW_State
 {
@@ -89,7 +89,7 @@ public class Core implements IOKW_State
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2014-01-09
+     *  \date 2014-01-09
      */
     private IOKW_State           CurrentState;
     
@@ -122,7 +122,7 @@ public class Core implements IOKW_State
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-11-19
+     * \date 2019-11-19
      */
     protected static Exception NOK_Reason = null;
     
@@ -165,7 +165,7 @@ public class Core implements IOKW_State
      * 
      * \~ 
      * @author Zoltán Hrabovszki
-     * @date 2014.01.09
+     * \date 2014.01.09
      */
     private void SetCurrentState( IOKW_State fp_CurrentState )
     {
@@ -181,7 +181,7 @@ public class Core implements IOKW_State
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2014.01.09
+     * \date 2014.01.09
      */
     public void setLanguage( String Language )
     {
@@ -201,7 +201,7 @@ public class Core implements IOKW_State
      * OKW constructor: Sets the default state to OKW.OK
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2014.01.09
+     * \date 2014.01.09
      */
     public Core()
     {
@@ -231,7 +231,7 @@ public class Core implements IOKW_State
      * 
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-11-17
+     * \date 2019-11-17
      */
     protected static void readVersionTxt()
     {

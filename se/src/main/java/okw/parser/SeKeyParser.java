@@ -21,7 +21,7 @@ import okw.parser.antlr4.se.OKWSeParser.RootContext;
          * 
          *  \~
          *  @author Zoltan Hrabovszki
-         *  @date 2014-09-21
+         *  \date 2014-09-21
          */
         public static ArrayList<String> ParseMe( ArrayList<String> fpLsString2Parse )
         {

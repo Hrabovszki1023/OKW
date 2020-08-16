@@ -1,7 +1,7 @@
 package okw.seinputradio;
 /*
 ==============================================================================
-Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+Copyright © 2012 - 2020, IT-Beratung Hrabovszki
 ============================================================================== 
 
 This file is part of OpenKeyWord.
@@ -56,7 +56,7 @@ import static org.junit.jupiter.api.Assertions.*;
      * SeInputRadio_Chrome_Test, SeInputRadio_FireFox_Test usw. werden von diese Klasse abgeleitet.
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2016.12.11
+     * \date 2016.12.11
      */
     @Disabled("Ignoring the whole fixture")
     public class SeInputRadio_EN_Test  extends OKWTestBase
@@ -71,7 +71,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
          */
         @Test
         public void tc_ClickOn() throws Exception
@@ -107,7 +107,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
          */
         @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_DoubleClickOn_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -136,7 +136,7 @@ import static org.junit.jupiter.api.Assertions.*;
         * 
         * \~
         * @author Zoltán Hrabovszki
-        * @date 2016.12.11
+        * \date 2016.12.11
         */
         @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_LogCaption() throws Exception
@@ -164,7 +164,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_LogExists() throws Exception
@@ -187,7 +187,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test // (expected=UnsupportedOperationException.class)
         public void tc_LogHasFocus_UnsupportedOperationException() throws Exception
@@ -213,7 +213,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_LogToolTip() throws Exception
@@ -237,7 +237,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_LogValue() throws Exception
@@ -262,7 +262,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_LogIsActive() throws Exception
@@ -287,7 +287,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_MemorizeCaption() throws Exception
@@ -313,7 +313,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_MemorizeLabel() throws Exception
@@ -345,7 +345,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_MemorizeExists() throws Exception
@@ -370,7 +370,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test // (expected=UnsupportedOperationException.class)
         public void tc_MemorizeHasFocus_UnsupportedOperationException() throws Exception
@@ -396,7 +396,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_MemorizeIsActive() throws Exception
@@ -425,7 +425,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_MemorizeTooltip() throws Exception
@@ -452,7 +452,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_MemorizeValue() throws Exception
@@ -482,7 +482,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
 		*/
         @Test // (expected=UnsupportedOperationException.class)
         public void tc_VerifyHasFocus_UnsupportedOperationException() throws Exception
@@ -509,7 +509,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
 		*/
         @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_SetFocus_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -537,7 +537,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_SelectMenu_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -563,7 +563,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_SelectMenu2_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -591,7 +591,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_SetValue() throws Exception
@@ -630,7 +630,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test // (expected=OKWNotAllowedValueException.class)
         public void tc_SetValue_OKWNotAllowedValueException_UNCHECKED() throws Exception
@@ -659,7 +659,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test // (expected=OKWNotAllowedValueException.class)
         public void tc_SetValue_OKWNotAllowedValueException() throws Exception
@@ -688,7 +688,7 @@ import static org.junit.jupiter.api.Assertions.*;
          *         
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_Select_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -715,7 +715,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test // (expected=UnsupportedOperationException.class)
         public void tc_TypeKey_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -744,7 +744,7 @@ import static org.junit.jupiter.api.Assertions.*;
         * 
         * \~
         * @author Zoltán Hrabovszki
-        * @date 2016.12.11
+        * \date 2016.12.11
         */
         @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_VerifyCaption() throws Exception
@@ -775,7 +775,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
          */
         @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_VerifyCaptionWCM() throws Exception
@@ -806,7 +806,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
          */
         @Test // (expected=OKWFrameObjectMethodNotImplemented.class)
         public void tc_VerifyCaptionREGX() throws Exception
@@ -833,7 +833,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputRadio.
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_VerifyExists_ExsistsNOExpectedNO() throws Exception
@@ -854,7 +854,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Test des Schlüsselwortes VerifyExists für den GUI-Adapter SeInputRadio.
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test // (expected = OKWVerifyingFailsException.class )
         public void tc_VerifyExists_ExistsNOExpectedYES() throws Exception
@@ -881,7 +881,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * Prüfung: Sollwert = "Nein"  Istwert = Ja.
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test // (expected = OKWVerifyingFailsException.class )
         public void tc_VerifyExists_ExistsYESExpectedNO() throws Exception
@@ -908,7 +908,7 @@ import static org.junit.jupiter.api.Assertions.*;
   // Prüfung: Sollwert Ja. Istwert Ja.
   // \~
   // @author Zoltán Hrabovszki
-  // @date 2016.12.11
+  // \date 2016.12.11
   */
   @Test
   public void tc_VerifyExists_ExistsYESExpectedYES() throws Exception
@@ -932,7 +932,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_VerifyIsActive_ActiveYESExpectedYES() throws Exception
@@ -958,7 +958,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test // (expected=OKWVerifyingFailsException.class)
         public void tc_VerifyIsActive_ActiveYESExpectedNO() throws Exception
@@ -986,7 +986,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_VerifyIsActive_ActiveNOExpectedNO() throws Exception
@@ -1010,7 +1010,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test // (expected=OKWVerifyingFailsException.class)
         public void tc_VerifyIsActive_ActiveNOExpectedYES() throws Exception
@@ -1037,7 +1037,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_VerifyLabel() throws Exception
@@ -1061,7 +1061,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.16
+         * \date 2016.12.16
         */
         @Test
         public void tc_VerifyLabelWCM() throws Exception
@@ -1087,7 +1087,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_VerifyLabelREGX() throws Exception
@@ -1113,7 +1113,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_VerifyToolTip() throws Exception
@@ -1139,7 +1139,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_VerifyToolTipWCM() throws Exception
@@ -1165,7 +1165,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_VerifyToolTipREGX() throws Exception
@@ -1191,7 +1191,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_VerifyValue() throws Exception
@@ -1206,7 +1206,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_VerifyValueWCM() throws Exception
@@ -1243,7 +1243,7 @@ import static org.junit.jupiter.api.Assertions.*;
          * 
          * \~
          * @author Zoltán Hrabovszki
-         * @date 2016.12.11
+         * \date 2016.12.11
         */
         @Test
         public void tc_VerifyValueREGX() throws Exception

@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -312,7 +312,7 @@ public class SeDriver
 //     * \~
 //     * @author Zoltán Hrabovszki
 //     * @throws Exception 
-//     * @date 2019-02-23
+//     * \date 2019-02-23
 //     */
 //    public String getFrameID4Locator_old( String fpsLocator )
 //    {
@@ -402,7 +402,7 @@ public class SeDriver
 	 * 
 	 *         \~
 	 * @author Zoltán Hrabovszki
-	 * @date 2019-02-23
+	 * \date 2019-02-23
 	 */
 	protected ArrayList<String> getIframesID() {
 
@@ -519,7 +519,7 @@ public class SeDriver
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.05.12
+     *  \date 2015.05.12
      */
     protected List<WebElement> __getWebElements( String fpsFrameID, String fpsLocator )
     {
@@ -555,7 +555,7 @@ public class SeDriver
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2015.05.12
+     *  \date 2015.05.12
      * /
     public void DriveRemote()
     {

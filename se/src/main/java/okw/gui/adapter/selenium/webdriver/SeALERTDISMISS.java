@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -73,7 +73,7 @@ public class SeALERTDISMISS extends SeDRIVERBASE
 	 *  \~english
 	 *  \~
 	 *  @author Zoltán Hrabovszki
-	 *  @date 2013.11.11
+	 *  \date 2013.11.11
 	 */
 	@Override
 	public void ClickOn()

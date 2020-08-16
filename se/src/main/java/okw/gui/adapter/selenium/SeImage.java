@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -107,7 +107,7 @@ import okw.gui.OKWLocatorBase;
  *  \~english
  * \~
  * @author Zoltán Hrabovszki
- * @date 2016.09.05
+ * \date 2016.09.05
  */
 public class SeImage extends SeAnyChildWindow
 {
@@ -126,7 +126,7 @@ public class SeImage extends SeAnyChildWindow
      * 
      *  @return
      *  @author Zoltán Hrabovszki
-     *  @date 2017-06-18
+     *  \date 2017-06-18
      */
     @Override
     public ArrayList<String> getValue()
@@ -158,7 +158,7 @@ public class SeImage extends SeAnyChildWindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2017-06-18
+     *  \date 2017-06-18
      */
    public ArrayList<String> getCaption()
    {

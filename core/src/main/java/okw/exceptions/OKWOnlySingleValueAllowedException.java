@@ -3,7 +3,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -62,7 +62,7 @@ package okw.exceptions;
  *  - In the call hierarchy, the GUI adapter shows how many values can be selected in a GUI object.
  *  \~
  *  @author Zoltán Hrabovszki
- *  @date 2016.11.11
+ *  \date 2016.11.11
  */
 public class OKWOnlySingleValueAllowedException extends RuntimeException {
 

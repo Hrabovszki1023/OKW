@@ -1,6 +1,6 @@
 /*
  ==============================================================================
- Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+ Copyright © 2012 - 2020, IT-Beratung Hrabovszki
  ============================================================================== 
 
  This file is part of OpenKeyWord.
@@ -57,7 +57,7 @@ import static org.junit.jupiter.api.Assertions.*;
 *  - HTMLUnit: okw.SeBACK.SeBACK_HTMLUnit_Test
 * 
 *  @author Zoltan Hrabovszki
-*  @date 2017-07-23
+*  \date 2017-07-23
 */
 @Disabled
 public class SeBACK_EN_Test extends OKWTestBase{
@@ -72,7 +72,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test
   public void tcClickOn() throws Exception
@@ -100,7 +100,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
 
   @Test
@@ -123,7 +123,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
   public void tcLogHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -145,7 +145,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test
   public void tcLogIsActive() throws Exception
@@ -167,7 +167,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
  @Test //(expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcLogToolTip_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -191,7 +191,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
   public void tcLogLabel_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -216,7 +216,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
  @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcLogValue_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -241,7 +241,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcSetValue_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -267,7 +267,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcTypeKey_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -290,7 +290,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
  @Test
   public void tcMemorizeExists_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -315,7 +315,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
   public void tcMemorizeHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception {
@@ -340,7 +340,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test
   public void tcMemorizeIsActive() throws Exception {
@@ -365,7 +365,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
    @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
    public void tcMemorizeLabel_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -390,7 +390,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
    @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
    public void tcMemorizeToolTip_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -414,7 +414,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcMemorizeValue_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -439,7 +439,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyCaption_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -463,7 +463,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyCaptionWCM_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -488,7 +488,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyCaptionREGX_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -515,7 +515,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    *  
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // ( expected = OKWVerifyingFailsException.class )
   public void tcVerifyExists_ExistsYesExpectedNo_OKWVerifyingFailsException()  throws Exception
@@ -540,7 +540,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */
   @Test
   public void tcVerifyExists_ExistsYesExpectedYes() throws Exception
@@ -563,7 +563,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected= OKWFrameObjectMethodNotImplemented.class)
   public void tcVerifyHasFocus() throws Exception
@@ -586,7 +586,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-30
+   *  \date 2017-07-30
   */
   @Test
   public void tcVerifyIsActive() throws Exception
@@ -609,7 +609,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyLabel_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -634,7 +634,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyLabelWCM_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -659,7 +659,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyLabelREGX_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -684,7 +684,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyTooltip_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -709,7 +709,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyTooltipWCM_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -734,7 +734,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyTooltipREGX_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -759,7 +759,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyValue_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -784,7 +784,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -809,7 +809,7 @@ public class SeBACK_EN_Test extends OKWTestBase{
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-07-23
+   *  \date 2017-07-23
    */ 
   @Test // (expected=OKWFrameObjectMethodNotImplemented.class )
   public void tcVerifyValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception

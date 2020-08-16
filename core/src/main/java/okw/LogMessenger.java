@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -79,7 +79,7 @@ import org.stringtemplate.v4.*;
  *  
  *  \~
  *  @author Zoltan Hrabovszki
- *  @date 2013_12_22
+ *  \date 2013_12_22
  */
 public class LogMessenger
 {
@@ -98,7 +98,7 @@ public class LogMessenger
 	 * \~english
 	 * \~
 	 * @author Zoltan Hrabovszki
-	 * @date 2013_12_22
+	 * \date 2013_12_22
 	 */
 	public LogMessenger(String fpsClassname)
 	{
@@ -132,7 +132,7 @@ public class LogMessenger
 	 *  @return Log-Message for the given Parameter.
 	 *  \~
 	 *  @author Zoltan Hrabovszki
-	 *  @date 2013.12.22
+	 *  \date 2013.12.22
 	 */
 	public String GetMessage( String MethodName, String TextKey )
 	{
@@ -170,7 +170,7 @@ public class LogMessenger
 	 *  @return Log-Message for the given Parameter.
 	 *  \~
 	 *  @author Zoltan Hrabovszki
-	 *  @date 2013.12.22
+	 *  \date 2013.12.22
 	 */
 	public String GetMessage( String MethodName, String TextKey, Object Parameter_1 )
 	{
@@ -214,7 +214,7 @@ public class LogMessenger
 	 *  @return Log-Message for the given Parameter.
 	 *  \~
 	 *  @author Zoltan Hrabovszki
-	 *  @date 2013.12.22
+	 *  \date 2013.12.22
 	 */
 	public String GetMessage( String MethodName, String TextKey, Object Parameter_1, Object Parameter_2 )
   {
@@ -262,7 +262,7 @@ public class LogMessenger
 	 *  @return Log-Message for the given Parameter.
 	 *  \~
 	 *  @author Zoltan Hrabovszki
-	 *  @date 2013.12.22
+	 *  \date 2013.12.22
 	 */
 	public String GetMessage( String MethodName, String TextKey, Object Parameter_1, Object Parameter_2,
 			Object Parameter_3 )
@@ -316,7 +316,7 @@ public class LogMessenger
 	 * 
 	 *  \~
 	 *  @author Zoltan Hrabovszki
-	 *  @date 2013_12_22
+	 *  \date 2013_12_22
 	 */
 	private String ReadMessage( String ClassName, String MethodName, String TextKey )
 	{

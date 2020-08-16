@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -61,7 +61,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
  *  \~english
  *  \~
  *  @author Zoltan Hrabovszki
- *  @date 2014.04.19
+ *  \date 2014.04.19
  */
 public class SeALERTDATA extends SeAnyChildWindow
 {
@@ -79,7 +79,7 @@ public class SeALERTDATA extends SeAnyChildWindow
 	 *  \~english
 	 *  \~
 	 *  @author Zoltan Hrabovszki
-	 *  @date 2014.04.19
+	 *  \date 2014.04.19
 	 */
 	@Override
 	public void SetValue(ArrayList<String> fps_Values)
@@ -105,7 +105,7 @@ public class SeALERTDATA extends SeAnyChildWindow
 	 *  \~english
 	 *  \~
 	 *  @author Zoltan Hrabovszki
-	 *  @date 2014.04.19
+	 *  \date 2014.04.19
 	 */
 	@Override
 	public void TypeKey(ArrayList<String> fps_Values)

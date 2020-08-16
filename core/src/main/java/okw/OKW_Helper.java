@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -94,7 +94,7 @@ public class OKW_Helper
 	 * 
 	 *  \~
 	 *  @author Zoltán Hrabovszki
-	 *  @date 2013.05.03
+	 *  \date 2013.05.03
 	 */
 	public static String Boolean2String( Boolean fpbTrueOrFalse )
 	{
@@ -634,7 +634,7 @@ public class OKW_Helper
 	 *
 	 * \~
 	 * @author Zoltán Hrabovszki
-	 * @date 2013-05-03
+	 * \date 2013-05-03
 	 */
 	public static ArrayList<String> StringArray2ListStr( String[] fpsStringArray )
 	{
@@ -848,7 +848,7 @@ public class OKW_Helper
  * @return returns `true`, if the given String is empty or `null`, else `false`
  * \~
  * @author Zoltán Hrabovszki
- * @date 2017-04-27
+ * \date 2017-04-27
  */
 	public static Boolean isStringNullOrEmpty( String fpsString)
 	{

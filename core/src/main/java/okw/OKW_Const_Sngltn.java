@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -118,7 +118,7 @@ import okw.log.Logger_Sngltn;
  * 
  * \~
  * @author Zoltan Hrabovszki
- * @date 2013_12_22 <br>
+ * \date 2013_12_22 <br>
  * Reviews:(2014_12_18_jnic, 2014_12_22_zh, 2014_12_22_jnic)
  * \todo (Zeile 22) Zukünftige Funktionalität: Nachricht auf einen anderen Tag weiterverlinken.
  * \todo (Zeile 41) Tabellenüberschrift wird als Verlinkung gelesen und blau auf blau dargestellt - OKWConst/DE
@@ -146,7 +146,7 @@ public class OKW_Const_Sngltn
      * http: *en.wikipedia.org/wiki/ISO_3166-1
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013_12_22
+     * \date 2013_12_22
      */
     private OKWLanguage CL = OKWLanguage.getInstance();
 
@@ -160,7 +160,7 @@ public class OKW_Const_Sngltn
      * \~
      *
      * @author Zoltan Hrabovszki
-     * @date 2013.12.22
+     * \date 2013.12.22
      */
     private LogMessenger LM = null;
 
@@ -230,7 +230,7 @@ public class OKW_Const_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013.12.22
+     * \date 2013.12.22
      */
     protected OKW_Const_Sngltn()
     {
@@ -272,7 +272,7 @@ public class OKW_Const_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013.12.22
+     * \date 2013.12.22
      */
     public static OKW_Const_Sngltn getInstance()
     //throws XPathExpressionException, JAXBException, ParserConfigurationException, SAXException, IOException
@@ -306,7 +306,7 @@ public class OKW_Const_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013_12_22
+     * \date 2013_12_22
      */
     public String Boolean2YesNo( Boolean fpbTrueOrFalse ) throws XPathExpressionException
     {
@@ -363,7 +363,7 @@ public class OKW_Const_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013_12_22
+     * \date 2013_12_22
      */
     public String ConcatHSEP( ArrayList<String> fpLs_ListString2Concat ) throws XPathExpressionException
     {
@@ -411,7 +411,7 @@ public class OKW_Const_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013_12_22
+     * \date 2013_12_22
      */
     public String ConcatSEP( ArrayList<String> fpLs_ListString2Concat ) throws XPathExpressionException
     {
@@ -459,7 +459,7 @@ public class OKW_Const_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013_12_22
+     * \date 2013_12_22
      */
     public String ConcatVSEP( ArrayList<String> fpLs_ListString2Concat ) throws XPathExpressionException
     {
@@ -519,7 +519,7 @@ public class OKW_Const_Sngltn
      * 
      *  \~
      *  @author Zoltan Hrabovszki 
-     *  @date 2013-12-22
+     *  \date 2013-12-22
     */
     public String GetConst4Internalname( String fpsInternalname )
     {
@@ -603,7 +603,7 @@ public class OKW_Const_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013_12_22
+     * \date 2013_12_22
      */
     public String GetOKWConst4Internalname( String fpsInternalname )
     {
@@ -663,7 +663,7 @@ public class OKW_Const_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013.12.22
+     * \date 2013.12.22
      */
     public ArrayList<String> SplitHSEP( String fpsString2Split ) throws XPathExpressionException
     {
@@ -722,7 +722,7 @@ public class OKW_Const_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013.12.22
+     * \date 2013.12.22
      */
     public ArrayList<String> SplitSEP( String fpsString2Split ) throws XPathExpressionException
     {
@@ -781,7 +781,7 @@ public class OKW_Const_Sngltn
      *
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013_12_22 <br>
+     * \date 2013_12_22 <br>
      * Reviews:(2014_12_18_jnic, 2014_12_22_zh, 2014_12_26_jnic)
     */
     public ArrayList<String> SplitVSEP( String fps_String2Split ) throws XPathExpressionException

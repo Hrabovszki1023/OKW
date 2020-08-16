@@ -1,6 +1,6 @@
 /*
  ==============================================================================
- Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+ Copyright © 2012 - 2020, IT-Beratung Hrabovszki
  ============================================================================== 
 
  This file is part of OpenKeyWord.
@@ -1423,7 +1423,7 @@ public class SeInputField_EN_Test extends OKWTestBase
    *
    * \~
    * @author Zoltan Hrabovszki
-   * @date 2014.12.03
+   * \date 2014.12.03
    */
   @Test
   public void tcVerifyValueWCM() throws Exception

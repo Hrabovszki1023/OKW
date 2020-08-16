@@ -1,39 +1,41 @@
 /*
-    ==============================================================================
-    Copyright © 2012 - 2018 IT-Beratung Hrabovszki
-    ============================================================================== 
+	    ==============================================================================
+	      Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-    This file is part of OpenKeyWord.
+	      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
+	      www.OpenKeyWord.de
+	    ============================================================================== 
 
-    OpenKeyWord is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+	    This file is part of OpenKeyWord.
 
-    OpenKeyWord is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+	    OpenKeyWord is free software: you can redistribute it and/or modify
+	    it under the terms of the GNU General Public License as published by
+	    the Free Software Foundation, either version 3 of the License, or
+	    (at your option) any later version.
 
-    You should have received a copy of the GNU General Public License
-    along with OpenKeyWord.  If not, see <http://www.gnu.org/licenses/>.
+	    OpenKeyWord is distributed in the hope that it will be useful,
+	    but WITHOUT ANY WARRANTY; without even the implied warranty of
+	    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	    GNU General Public License for more details.
 
-    Diese Datei ist Teil von OpenKeyWord.
+	    You should have received a copy of the GNU General Public License
+	    along with OpenKeyWord.  If not, see <http://www.gnu.org/licenses/>.
 
-    OpenKeyWord ist Freie Software: Sie können es unter den Bedingungen
-    der GNU General Public License, wie von der Free Software Foundation,
-    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder späteren
-    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
+	    Diese Datei ist Teil von OpenKeyWord.
 
-    OpenKeyWord wird in der Hoffnung, dass es nützlich sein wird, aber
-    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
-    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
-    Siehe die GNU General Public License für weitere Details.
+	    OpenKeyWord ist Freie Software: Sie können es unter den Bedingungen
+	    der GNU General Public License, wie von der Free Software Foundation,
+	    Version 3 der Lizenz oder (nach Ihrer Wahl) jeder späteren
+	    veröffentlichten Version, weiterverbreiten und/oder modifizieren.
 
-    Sie sollten eine Kopie der GNU General Public License zusammen mit 
-    OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+	    OpenKeyWord wird in der Hoffnung, dass es nützlich sein wird, aber
+	    OHNE JEDE GEWÄHRLEISTUNG, bereitgestellt; sogar ohne die implizite
+	    Gewährleistung der MARKTFÄHIGKEIT oder EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.
+	    Siehe die GNU General Public License für weitere Details.
 
+	    Sie sollten eine Kopie der GNU General Public License zusammen mit 
+	    OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
+	*/
 package okw.core;
 
 /**
@@ -78,7 +80,7 @@ public interface IOKW_State
       *
       * \~
       * @author zh@openkeyword.de
-      * @date 2014-09-18
+      * \date 2014-09-18
       */
     void BeginTest( String TCN ) throws Exception;
 
@@ -108,7 +110,7 @@ public interface IOKW_State
      *
      * \~
      * @author zh@openkeyword.de
-     * @date 2014-09-18
+     * \date 2014-09-18
      * @throws Exception 
      */
     void ClickOn( String FN ) throws Exception;
@@ -132,7 +134,7 @@ public interface IOKW_State
      *
      * \~
      * @author zh@openkeyword.de
-     * @date 2014-09-18
+     * \date 2014-09-18
      * @throws Exception 
      */
     void DoubleClickOn( String FN ) throws Exception;
@@ -156,7 +158,7 @@ public interface IOKW_State
      *
      * \~
      * @author zh@openkeyword.de
-     * @date 2014-09-18
+     * \date 2014-09-18
      * @throws Exception 
      */
     void EndTest() throws Exception;
@@ -174,7 +176,7 @@ public interface IOKW_State
      *
      * \~
      * @author zh@openkeyword.de
-     * @date 2014-09-18/jnic
+     * \date 2014-09-18/jnic
      * \todo jnic-->keine Beschreibung vorhanden
      */
     void LogCaption( String FN ) throws Exception;
@@ -198,7 +200,7 @@ public interface IOKW_State
      *
      * \~
      * @author zh@openkeyword.de
-     * @date 2014-09-18
+     * \date 2014-09-18
      */
     void LogExists( String FN ) throws Exception;
 
@@ -221,7 +223,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
     */
     void LogHasFocus( String FN ) throws Exception;
 
@@ -244,7 +246,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
     */
     void LogIsActive( String FN ) throws Exception;
 
@@ -261,7 +263,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
     */
     void LogLabel( String FN ) throws Exception;
 
@@ -278,7 +280,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
     */
     void LogPlaceholder( String FN ) throws Exception;
 
@@ -295,7 +297,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
     */
     void LogSelected( String FN ) throws Exception;
 
@@ -317,7 +319,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
     * \todo Beschreibung überprüfen
     */
     void LogTablecellValue( String FN, String COL, String ROW ) throws Exception;
@@ -341,7 +343,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
     */
     void LogTooltip( String FN ) throws Exception;
 
@@ -368,7 +370,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
     */
     void LogValue( String FN ) throws Exception;
 
@@ -387,7 +389,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
      */
     void MemorizeCaption( String FN, String fpsMemKeyName ) throws Exception;
 
@@ -416,7 +418,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
     */
     void MemorizeExists( String FN, String fpsMemKeyName ) throws Exception;
 
@@ -435,7 +437,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19/jnic
+    * \date 2014-09-19/jnic
     * @todo TODO: keine Beschreibung vorhanden
     */
     void MemorizeHasFocus( String FN, String fpsMemKeyName ) throws Exception;
@@ -463,7 +465,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date TODO: 2014-09-19
+    * \date TODO: 2014-09-19
      */
     void MemorizeIsActive( String FN, String fpsMemKeyName ) throws Exception;
 
@@ -482,7 +484,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
      */
     void MemorizeLabel( String FN, String fpsMemKeyName ) throws Exception;
 
@@ -501,7 +503,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
      */
     void MemorizePlaceholder( String FN, String fpsMemKeyName ) throws Exception;
 
@@ -520,7 +522,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19/jnic
+    * \date 2014-09-19/jnic
     * @todo TODO:keine Beschreibung vorhanden
      */
     void MemorizeSelectedValue( String FN, String fpsMemKeyName ) throws Exception;
@@ -568,7 +570,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19/jnic
+    * \date 2014-09-19/jnic
      */
     void MemorizeTooltip( String FN, String fpsMemKeyName ) throws Exception;
 
@@ -598,7 +600,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
      */
     void MemorizeValue( String FN, String fpsMemKeyName ) throws Exception;
 
@@ -648,7 +650,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
      */
     void Select( String FN, String Val ) throws Exception;
 
@@ -671,7 +673,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014.09.19
+     *  \date 2014.09.19
      */
     void SelectMenu( String FN ) throws Exception;
 
@@ -696,7 +698,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    *  @date 2014.09.19
+    *  \date 2014.09.19
     */
     void SelectMenu( String FN, String Val ) throws Exception;
 
@@ -751,7 +753,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-19
+    * \date 2014-09-19
     */
     void SelectTablecell( String FN, String COL, String ROW ) throws Exception;
 
@@ -781,7 +783,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-19
+     *  \date 2014-09-19
      */
     void SelectWindow( String FN ) throws Exception;
 
@@ -818,7 +820,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2018-10-02
+     *  \date 2018-10-02
      */
     void SelectChild( String FN ) throws Exception;   
 
@@ -860,7 +862,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2018-10-02
+     *  \date 2018-10-02
      */
     void SelectContext( String FN ) throws Exception;
     
@@ -892,7 +894,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void Sequence( String FN, String fpsSequenceName, String SEQ_ID ) throws Exception;
 
@@ -909,7 +911,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void SetFocus( String FN ) throws Exception;
 
@@ -932,7 +934,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-21
+    * \date 2014-09-21
      */
     void setLanguage( String Language );
 
@@ -966,7 +968,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-    * @date 2014-09-21
+    * \date 2014-09-21
     */
     void SetValue( String FN, String Val ) throws Exception;
 
@@ -995,7 +997,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-    * @date 2019-11-26
+    * \date 2019-11-26
     */
     void SetVar( String VN, String Val ) throws Exception;
 
@@ -1030,7 +1032,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-21
+    * \date 2014-09-21
     */
     void StartApp( String fpsApplicationName ) throws Exception;
 
@@ -1064,7 +1066,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-21
+    * \date 2014-09-21
     */
     void StopApp( String fpsApplicationName ) throws Exception;
 
@@ -1113,7 +1115,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-21/jnic         
+    * \date 2014-09-21/jnic         
     */
     void TypeKey( String FN, String Val ) throws Exception;
 
@@ -1187,7 +1189,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-21/jnic
+    * \date 2014-09-21/jnic
      */
     void TypeKeyTablecell( String FN, String COL, String ROW, String Val ) throws Exception;
 
@@ -1230,7 +1232,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-21
+    * \date 2014-09-21
      */
     void TypeKeyWindow( String FN, String Val ) throws Exception;
 
@@ -1250,7 +1252,7 @@ public interface IOKW_State
 	 *  \~
 	 * \~
 	 * @author Daniel Krüger
-	 * @date 2019-04-04
+	 * \date 2019-04-04
 	 */
 	 void VerifyBadge( String BN, String ExpVal ) throws Exception;
 
@@ -1270,7 +1272,7 @@ public interface IOKW_State
 	  *  \~
 	  * \~
 	  * @author Daniel Krüger
-	  * @date 2019-04-04
+	  * \date 2019-04-04
 	  */
 	  void VerifyBadgeWCM( String BN, String ExpVal ) throws Exception;
 
@@ -1290,7 +1292,7 @@ public interface IOKW_State
 	   *  \~
 	   * \~
 	   * @author Daniel Krüger
-	   * @date 2019-04-04
+	   * \date 2019-04-04
 	   */
 	   void VerifyBadgeREGX( String BN, String ExpVal ) throws Exception;
 
@@ -1310,7 +1312,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21/jnic
+     *  \date 2014-09-21/jnic
      *  \todo TODO: keine Beschreibung vorhanden
      */
     void VerifyCaption( String FN, String ExpVal ) throws Exception;
@@ -1339,7 +1341,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21/jnic
+     *  \date 2014-09-21/jnic
      *  \todo  TODO: keine Beschreibung vorhanden
      */
     void VerifyCaptionWCM( String FN, String ExpVal ) throws Exception;
@@ -1367,7 +1369,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void VerifyCaptionREGX( String FN, String ExpVal ) throws Exception;
 
@@ -1397,7 +1399,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-21
+    * \date 2014-09-21
      */
     void VerifyExists( String FN, String ExpVal ) throws Exception;
 
@@ -1426,7 +1428,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void VerifyHasFocus( String FN, String ExpVal ) throws Exception;
 
@@ -1451,7 +1453,7 @@ public interface IOKW_State
      *
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21/jnic
+     *  \date 2014-09-21/jnic
     */
     void VerifyIsActive( String FN, String ExpVal ) throws Exception;
 
@@ -1479,7 +1481,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2018-10-03
+     *  \date 2018-10-03
      */
     void VerifyPlaceholder( String FN, String ExpVal ) throws Exception;
 
@@ -1508,7 +1510,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2018-12-25
+     *  \date 2018-12-25
      */
     void VerifyMaxLength( String FN, String ExpVal ) throws Exception;
 
@@ -1549,7 +1551,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2018-10-03
+     *  \date 2018-10-03
      */
     void VerifyPlaceholderWCM( String FN, String ExpVal ) throws Exception;
 
@@ -1579,7 +1581,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2018-10-03
+     *  \date 2018-10-03
      */
     void VerifyPlaceholderREGX( String FN, String ExpVal ) throws Exception;    
     
@@ -1598,7 +1600,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void VerifyLabel( String FN, String ExpVal ) throws Exception;
 
@@ -1626,7 +1628,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void VerifyLabelWCM( String FN, String ExpVal ) throws Exception;
 
@@ -1651,7 +1653,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void VerifyLabelREGX( String FN, String ExpVal ) throws Exception;
 
@@ -1687,7 +1689,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-21
+    * \date 2014-09-21
     */
     void VerifySelectedValue( String FN, String ExpVal ) throws Exception;
     
@@ -1720,7 +1722,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-21
+    * \date 2014-09-21
     */
     void VerifyTablecellValue( String FN, String COL, String ROW, String ExpVal ) throws Exception;
     
@@ -1750,7 +1752,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-21
+    * \date 2014-09-21
     */
     void VerifyTablecellValueWCM( String FN, String COL, String ROW, String ExpVal ) throws Exception;
 
@@ -1776,7 +1778,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2014-09-21
+    * \date 2014-09-21
     */    void VerifyTablecellValueREGX( String FN, String COL, String ROW, String ExpVal ) throws Exception;
     
     /** \~german
@@ -1795,7 +1797,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void VerifyTooltip( String FN, String ExpVal ) throws Exception;
 
@@ -1823,7 +1825,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void VerifyTooltipREGX( String FN, String ExpVal ) throws Exception;
 
@@ -1861,7 +1863,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void VerifyTooltipWCM( String FN, String ExpVal ) throws Exception;
 
@@ -1891,7 +1893,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void VerifyValue( String FN, String ExpVal ) throws Exception;
 
@@ -1919,7 +1921,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void VerifyValueREGX( String FN, String ExpVal ) throws Exception;
 
@@ -1956,7 +1958,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void VerifyValueWCM( String FN, String ExpVal ) throws Exception;
 
@@ -2002,7 +2004,7 @@ public interface IOKW_State
     *
     * \~
     * @author Zoltán Hrabovszki
-    * @date 2015.08.20
+    * \date 2015.08.20
     */
     void CopyFile( String fpsSourcePathAndFileName, String fpsDestinationPathAndFileName ) throws Exception;
 
@@ -2027,7 +2029,7 @@ public interface IOKW_State
      * @param PATH File to be created.
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-12-18
+     * \date 2019-12-18
      */
     void FileCreate( String PATH ) throws Exception;
     
@@ -2069,7 +2071,7 @@ public interface IOKW_State
     *
     * \~
     * @author Zoltán Hrabovszki
-    * @date 2015.08.20
+    * \date 2015.08.20
     */
     void FileDelete( String fpsPathAndFileName ) throws Exception;
 
@@ -2112,7 +2114,7 @@ public interface IOKW_State
     *
     * \~
     * @author Zoltán Hrabovszki
-    * @date 2019.12.16
+    * \date 2019.12.16
     */
     void FilesDelete( String fpsDirPath, String fpsFileMatch ) throws Exception;
 
@@ -2163,7 +2165,7 @@ public interface IOKW_State
     *
     * \~
     * @author Zoltán Hrabovszki
-    * @date 2019.12.01
+    * \date 2019.12.01
     */
     void DirectoryDelete( String PATH ) throws Exception;
     
@@ -2187,7 +2189,7 @@ public interface IOKW_State
      * @param PATH Directory to be created
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2019-12-01
+     * \date 2019-12-01
      */
     void DirectoryCreate( String PATH ) throws Exception;
 
@@ -2208,7 +2210,7 @@ public interface IOKW_State
        *
        * \~
        * @author zh@openkeyword.de
-       * @date 2015-06-26
+       * \date 2015-06-26
        */
     void VerifyFileExists( String fpsPathAndFileName, String ExpVal ) throws Exception;
 
@@ -2230,7 +2232,7 @@ public interface IOKW_State
        * 
        * \~
        * @author zh@openkeyword.de
-       * @date 2019-01-12
+       * \date 2019-01-12
        */
     void VerifyIsFile( String fpsPathAndFileName, String ExpVal ) throws Exception;
 
@@ -2248,7 +2250,7 @@ public interface IOKW_State
     *
     * \~
     * @author zh@openkeyword.de
-    * @date 2015-06-26
+    * \date 2015-06-26
     */
     void VerifyDirectoryExists( String fpsPath, String ExpVal ) throws Exception;
     
@@ -2276,7 +2278,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author Daniel Krüger
-     *  @date 2019.06.18
+     *  \date 2019.06.18
      */
     void VerifyMinLength( String FN, String ExpVal ) throws Exception;
     
@@ -2296,7 +2298,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author Daniel Krüger
-     *  @date 2019-05-28
+     *  \date 2019-05-28
      */
     void VerifyErrorMSG( String FN, String ExpVal ) throws Exception;
 
@@ -2331,7 +2333,7 @@ public interface IOKW_State
      *  @param ExpVal Expected Value 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void VerifyErrorMSG_WCM( String FN, String ExpVal ) throws Exception;
 
@@ -2360,7 +2362,7 @@ public interface IOKW_State
      * 
      *  \~
      *  @author zh@openkeyword.de
-     *  @date 2014-09-21
+     *  \date 2014-09-21
      */
     void VerifyErrorMSG_REGX( String FN, String ExpVal ) throws Exception;
 }

@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -222,7 +222,7 @@ import okw.gui.adapter.selenium.webdriver.SeDriver;
  *  
  *  \~
  * @author Zoltán Hrabovszki
- * @date 2017.07.02
+ * \date 2017.07.02
  */
 public class SeRadioList extends SeAnyChildWindow
 {
@@ -345,7 +345,7 @@ public class SeRadioList extends SeAnyChildWindow
      *  Es wird (immer) der aktuelle Wert des Objektes zurückgeliefert.
      *  @author Zoltan Hrabovszki
      * @throws Exception 
-     *  @date 2013.12.14
+     *  \date 2013.12.14
      */
     public ArrayList<String> getValue()
     {

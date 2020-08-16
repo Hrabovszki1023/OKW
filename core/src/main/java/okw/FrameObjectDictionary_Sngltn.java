@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -121,7 +121,7 @@ public class FrameObjectDictionary_Sngltn
    * 
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2014.10.10
+   *  \date 2014.10.10
    */
   private FrameObjectDictionary_Sngltn()
   {
@@ -352,7 +352,7 @@ public class FrameObjectDictionary_Sngltn
    * 
    * \~ 
    * @author Zoltan Hrabovszki
-   * @date 2014.10.10
+   * \date 2014.10.10
    */
   public static void init() throws ClassNotFoundException, InstantiationException, JAXBException, ParserConfigurationException, SAXException, IOException,
           XPathExpressionException, IllegalArgumentException, IllegalAccessException
@@ -467,7 +467,7 @@ public class FrameObjectDictionary_Sngltn
    *  \~
    *  @author Zoltan Hrabovszki
    *  @throws IOException 
-   *  @date 2015.01.28
+   *  \date 2015.01.28
    *  \todo TODO: rename lvsFNParent to lvsFNWindow (Parent is not correct in all cases)
    */
   private static void frameScan(  ) throws InstantiationException, XPathExpressionException,
@@ -748,7 +748,7 @@ public class FrameObjectDictionary_Sngltn
    *  @return property value
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2014-10-10
+   *  \date 2014-10-10
    * 
    * @throws XPathExpressionException
    */
@@ -822,7 +822,7 @@ public class FrameObjectDictionary_Sngltn
    *  @return property value
    *  \~
    *  @author Zoltan Hrabovszki
-   *  @date 2017-02-11
+   *  \date 2017-02-11
    * 
    * @throws XPathExpressionException
    */

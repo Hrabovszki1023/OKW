@@ -2,7 +2,7 @@
 ==============================================================================
   Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-  Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+  Copyright © 2012 - 2020, IT-Beratung Hrabovszki
   www.OpenKeyWord.de
 ============================================================================== 
 
@@ -62,7 +62,7 @@ package okw.exceptions;
  * 
  *  \~
  *  @author Zoltán Hrabovszki
- *  @date 2019.04.24
+ *  \date 2019.04.24
  */
 public class OKWGUIObjectNotUniqueException extends RuntimeException 
 {

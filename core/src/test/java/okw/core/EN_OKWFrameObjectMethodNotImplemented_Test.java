@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -85,7 +85,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013.12.26
+     *  \date 2013.12.26
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_ClickOn_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -110,7 +110,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013.12.26
+     *  \date 2013.12.26
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_DoubleClickOn_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -133,7 +133,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      * \~english
      * \~
      * @author Zoltan Hrabovszki
-     * @date 2013.12.26
+     * \date 2013.12.26
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_Select_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -158,7 +158,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013.12.26
+     *  \date 2013.12.26
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_SelectMenu_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -182,7 +182,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013.12.26
+     *  \date 2013.12.26
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_SetFocus_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -203,7 +203,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      * Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented
      * von SetValue( FN, Val ) ausgelöst wird.
      * 
-     * \~english \~ @author Zoltan Hrabovszki @date 2013.12.26
+     * \~english \~ @author Zoltan Hrabovszki \date 2013.12.26
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_SetValue_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -224,7 +224,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      * Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented
      * von LogPlaceholder( FN ) ausgelöst wird.
      * 
-     * \~english \~ @author Zoltan Hrabovszki @date 2013.12.26
+     * \~english \~ @author Zoltan Hrabovszki \date 2013.12.26
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_LogPlaceholder_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -245,7 +245,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      * Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented
      * von MemorizePlaceholder( FN, MemKey ) ausgelöst wird.
      * 
-     * \~english \~ @author Zoltan Hrabovszki @date 2013.12.26
+     * \~english \~ @author Zoltan Hrabovszki \date 2013.12.26
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_MemorizePlaceholder_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -265,7 +265,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      * \~german \brief Prüft ob die Ausnahme OKWFrameObjectMethodNotImplemented
      * von TypeKey( FN, Val ) ausgelöst wird.
      * 
-     * \~english \~ @author Zoltan Hrabovszki @date 2013.12.26
+     * \~english \~ @author Zoltan Hrabovszki \date 2013.12.26
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_TypeKey_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -288,7 +288,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  \date 2016.05.07
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_Select_Window_OKWFrameObjectMethodNotImplemented_Test() throws Exception
@@ -312,7 +312,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.06.18
+     *  \date 2016.06.18
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_StartApp_OKWFrameObjectMethodNotImplemented_Test() throws Exception
@@ -337,7 +337,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.06.18
+     *  \date 2016.06.18
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void tc_StopApp_OKWFrameObjectMethodNotImplemented_Test() throws Exception
@@ -361,7 +361,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  \date 2016.05.07
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyHasFocus_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -386,7 +386,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  \date 2016.05.07
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyIsActive_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -411,7 +411,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  \~english
     *  \~
     *  @author Zoltan Hrabovszki
-    *  @date 2016.05.07
+    *  \date 2016.05.07
     */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyCaption_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -436,7 +436,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  \~english
     *  \~
     *  @author Zoltan Hrabovszki
-    *  @date 2016.05.07
+    *  \date 2016.05.07
     */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyCaptionREGX_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -461,7 +461,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  \~english
     *  \~
     *  @author Zoltan Hrabovszki
-    *  @date 2016.05.07
+    *  \date 2016.05.07
     */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyCaptionWCM_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -485,7 +485,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  \~english
     *  \~
     *  @author Zoltan Hrabovszki
-    *  @date 2016.05.07
+    *  \date 2016.05.07
     **/
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyLabel_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -510,7 +510,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  \~english
     *  \~
     *  @author Zoltan Hrabovszki
-    *  @date 2016.05.07
+    *  \date 2016.05.07
     */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyLabelREGX_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -535,7 +535,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  \~english
     *  \~
     *  @author Zoltan Hrabovszki
-    *  @date 2016.05.07
+    *  \date 2016.05.07
     */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyLabelWCM_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -563,7 +563,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  if the method is not implemented in the GUI adapter.
     *  \~
     *  @author Zoltan Hrabovszki
-    *  @date 2018-12-26
+    *  \date 2018-12-26
     */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyMaxLength_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -587,7 +587,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  \~english
     *  \~
     *  @author Zoltan Hrabovszki
-    *  @date 2018-10-04
+    *  \date 2018-10-04
     **/
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyPlaceholder_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -612,7 +612,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  \~english
     *  \~
     *  @author Zoltan Hrabovszki
-    *  @date 2018-10-04
+    *  \date 2018-10-04
     */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyPlaceholderREGX_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -640,7 +640,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
     *  if the method is not implemented in the GUI adapter.
     *  \~
     *  @author Zoltan Hrabovszki
-    *  @date 2018-10-04
+    *  \date 2018-10-04
     */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyPlaceholderWCM_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -665,7 +665,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  \date 2016.05.07
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyTooltip_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -690,7 +690,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  \date 2016.05.07
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyTooltipREGX_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -715,7 +715,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  \date 2016.05.07
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyTooltipWCM_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -740,7 +740,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  \date 2016.05.07
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyValue_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -765,7 +765,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  \date 2016.05.07
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -789,7 +789,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016.05.07
+     *  \date 2016.05.07
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -814,7 +814,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016-05-21
+     *  \date 2016-05-21
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyTablecellValue_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -839,7 +839,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016-05-21
+     *  \date 2016-05-21
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyTablecellValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -863,7 +863,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016-05-21
+     *  \date 2016-05-21
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifyTablecellValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -889,7 +889,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016-05-21
+     *  \date 2016-05-21
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifySelectedValue_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -914,7 +914,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016-05-21
+     *  \date 2016-05-21
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifySelectedValueREGX_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -938,7 +938,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2016-05-21
+     *  \date 2016-05-21
      */
     @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
     public void TC_VerifySelectedValueWCM_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -963,7 +963,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2013.12.26
+     *  \date 2013.12.26
      */
     @Test // ( expected = OKWFrameObjectMethodNotFoundException.class )
     public void TC_Sequence_OKWFrameObjectMethodNotImplemented() throws Exception
@@ -991,7 +991,7 @@ public class EN_OKWFrameObjectMethodNotImplemented_Test
      *  if the method is not implemented in the GUI adapter.
      *  \~
      *  @author Daniel Krüger
-     *  @date 2019-06-18
+     *  \date 2019-06-18
      */
      @Test // ( expected = OKWFrameObjectMethodNotImplemented.class )
      public void TC_VerifyMinLength_OKWFrameObjectMethodNotImplemented() throws Exception

@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -62,7 +62,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
      *  \~english
      *  \~
      *  @author Zoltan Hrabovszki
-     *  @date 2017-07-22
+     *  \date 2017-07-22
      */
     public class SePOSITION extends SeAnyChildWindow
     {
@@ -83,7 +83,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
          *  \~english
          *  \~
          *  @author Zoltan Hrabovszki
-         *  @date 2017-07-22
+         *  \date 2017-07-22
          */
         public ArrayList<String> getTooltip()
         {
@@ -111,7 +111,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
           *  \~english
           *  \~
           *  @author Zoltan Hrabovszki
-          *  @date 2017-07-22
+          *  \date 2017-07-22
           */
         public ArrayList<String> getValue()
         {
@@ -144,7 +144,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
          *  @return Rückgabe des Textuellen Inhaltes der markierten Textes.
          *  
          *  @author Zoltan Hrabovszki
-         *  @date 2017-07-22
+         *  \date 2017-07-22
          */
         public ArrayList<String> LogValue()
         {
@@ -174,7 +174,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
          *  \~english
          *  \~
          *  @author Zoltán Hrabovszki
-         *  @date 2017-07-22
+         *  \date 2017-07-22
          */
         public ArrayList<String> MemorizeValue()
         {
@@ -201,7 +201,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
          *  \~english
          *  \~
          *  @author Zoltan Hrabovszki
-         *  @date 2017-07-22
+         *  \date 2017-07-22
          */
         public void SetFocus()
         {
@@ -226,7 +226,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
          *  \~english
          *  \~
          *  @author Zoltan Hrabovszki
-         *  @date 2017-07-22
+         *  \date 2017-07-22
          */
         public void SetValue(ArrayList<String> fpsValues)
         {
@@ -260,7 +260,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
          *  \~english
          *  \~
          *  @author Zoltan Hrabovszki
-         *  @date 2017-07-22
+         *  \date 2017-07-22
          */
         public void TypeKey(ArrayList<String> fpsValues)
         {
@@ -286,7 +286,7 @@ import okw.gui.adapter.selenium.SeAnyChildWindow;
           *  Es wird immer der aktuelle Wert des Objektes zurückgeliefert.
           *  
           *  @author Zoltan Hrabovszki
-          *  @date 2017-07-22
+          *  \date 2017-07-22
           */
         public ArrayList<String> VerifyValue()
         {

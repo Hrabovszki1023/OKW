@@ -48,7 +48,7 @@ import okw.gui.adapter.selenium.SeTextarea;
  * GUI-Frame for the OKW-test page <a href="http://test.openkeyword.de/Button/button.htm">test.openkeyword.de/Button/button.htm</a> 
  * \~
  * @author Zoltán Hrabovszki
- * @date 2016.09.06
+ * \date 2016.09.06
  */
 @OKW( FN = "Image" )
 public class frmSeImage extends SeBrowserChild

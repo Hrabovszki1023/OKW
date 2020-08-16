@@ -1,6 +1,6 @@
 /*
     ==============================================================================
-    Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+    Copyright © 2012 - 2020, IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -57,7 +57,7 @@ import okw.log.*;
  *  \~english
  *  \~
  *  @author Zoltán Hrabovszki
- *  @date 2013.03.02
+ *  \date 2013.03.02
  */
 public class NOK implements IOKW_State
 {
@@ -77,7 +77,7 @@ public class NOK implements IOKW_State
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 02.03.2013
+     *  \date 02.03.2013
      */
     public NOK( Core fp_OKW )
     {
@@ -447,7 +447,7 @@ public class NOK implements IOKW_State
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 02.03.2013
+     *  \date 02.03.2013
      */ 
     public void setLanguage( String Language )
     {

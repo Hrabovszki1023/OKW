@@ -1,6 +1,6 @@
 /*
     ==============================================================================
-    Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+    Copyright © 2012 - 2020, IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -79,7 +79,7 @@ public class EN_Keywords_DELETE_Test
    *  expected: okw.exceptions.OKWNotAllowedValueException
    *  
    *  @author Zoltan Hrabovszki
-   *  @date 2016.09.23
+   *  \date 2016.09.23
    */
   @Test 
   public void tcMemorizeCaption_DELETE_OKWNotAllowedValueException() throws Exception
@@ -132,7 +132,7 @@ public class EN_Keywords_DELETE_Test
   //
   // expected = OKWNotAllowedValueException
   // @author Zoltan Hrabovszki
-  // @date 2016.09.23
+  // \date 2016.09.23
    */
   @Test 
   public void tcMemorizeExists_DELETE_OKWNotAllowedValueException() throws Exception
@@ -464,7 +464,7 @@ public class EN_Keywords_DELETE_Test
    *  expected: OKWNotAllowedValueException
    *  
    *  @author Zoltan Hrabovszki
-   *  @date 2016.09.23
+   *  \date 2016.09.23
    */
   @Test
   public void tcMemorizeTooltip_DELETE_2_OKWNotAllowedValueException() throws Exception
@@ -716,7 +716,7 @@ public class EN_Keywords_DELETE_Test
    *  expected: OKWNotAllowedValueException
    *  
    *  @author Zoltan Hrabovszki
-   *  @date 2013.12.26
+   *  \date 2013.12.26
    */
   @Test
   public void tcSequence_DELETE_OKWNotAllowedValueException() throws Exception
@@ -980,7 +980,7 @@ public class EN_Keywords_DELETE_Test
    * expected = OKWNotAllowedValueException.class )
    * 
    * @author Daniel Krüger
-   * @date 2018.04.11
+   * \date 2018.04.11
    */
   @Test
   public void tcVerifyBadgeWCM_DELETE_OKWNotAllowedValueException() throws Exception
@@ -1026,7 +1026,7 @@ public class EN_Keywords_DELETE_Test
    * expected = OKWNotAllowedValueException
    * \~
    * @author Zoltan Hrabovszki
-   * @date 2016.09.24
+   * \date 2016.09.24
    */
   @Test
   public void tcVerifyCaptionREGX_DELETE_OKWNotAllowedValueException() throws Exception
@@ -1192,7 +1192,7 @@ public class EN_Keywords_DELETE_Test
    *  \~
    *  expected: OKWNotAllowedValueException
    *  @author Zoltan Hrabovszki
-   *  @date 2016.09.24
+   *  \date 2016.09.24
    *  */
   @Test
   public void tcVerifyHasFocus_DELETE_OKWNotAllowedValueException() throws Exception
@@ -1262,7 +1262,7 @@ public class EN_Keywords_DELETE_Test
   * \~english
   * \~
   * @author Zoltan Hrabovszki
-  * @date 2017-05-21
+  * \date 2017-05-21
   */
   @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifySelectedValueREGX_DELETE_OKWNotAllowedValueException() throws Exception
@@ -1287,7 +1287,7 @@ public class EN_Keywords_DELETE_Test
   *  expected: OKWNotAllowedValueException
   *  
   * @author Zoltan Hrabovszki
-  * @date 2017-05-21
+  * \date 2017-05-21
   */
   @Test
   public void tcVerifySelectedValueWCM_DELETE_OKWNotAllowedValueException() throws Exception
@@ -1311,7 +1311,7 @@ public class EN_Keywords_DELETE_Test
    * \~english
    * \~
    * @author Zoltan Hrabovszki
-   * @date 2016-09-24
+   * \date 2016-09-24
    */
   @Test// ( expected = OKWNotAllowedValueException.class )
   public void tcVerifyTablecellValue_DELETE_OKWNotAllowedValueException() throws Exception
@@ -1334,7 +1334,7 @@ public class EN_Keywords_DELETE_Test
   * \~english
   * \~
   * @author Zoltan Hrabovszki
-  * @date 2017-05-21
+  * \date 2017-05-21
   */
  @Test// ( expected = OKWNotAllowedValueException.class )
  public void tcVerifyTablecellValueREGX_DELETE_OKWNotAllowedValueException() throws Exception
@@ -1358,7 +1358,7 @@ public class EN_Keywords_DELETE_Test
  * expected OKWNotAllowedValueException
  * 
  * @author Zoltan Hrabovszki
- * @date 2016-09-24
+ * \date 2016-09-24
  */
  @Test
 public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throws Exception
@@ -1383,7 +1383,7 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
    *  expected = OKWNotAllowedValueException
    *  
    * @author Zoltan Hrabovszki
-   * @date 2016.09.24
+   * \date 2016.09.24
    */
   @Test
   public void tcVerifyTooltip_DELETE_OKWNotAllowedValueException() throws Exception
@@ -1637,7 +1637,7 @@ public void tcVerifyTablecellValueWCM_DELETE_OKWNotAllowedValueException() throw
    * expected: OKWNotAllowedValueException
    * 
    * @author Daniel Krüger
-   * @date 2019.05.31
+   * \date 2019.05.31
    */ 
   @Test
   public void tcVerifyErrorMSG_WCM_DELETE_OKWNotAllowedValueException() throws Exception

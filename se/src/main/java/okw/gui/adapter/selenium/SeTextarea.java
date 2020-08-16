@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019, 2016 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, 2016 IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -55,7 +55,7 @@ import okw.gui.OKWLocatorBase;
  * 
  *          \~
  * @author Zoltan Hrabovszki
- * @date 2014.06.2014
+ * \date 2014.06.2014
  */
 public class SeTextarea extends SeAnyChildWindow {
 
@@ -74,7 +74,7 @@ public class SeTextarea extends SeAnyChildWindow {
 	 * 
 	 * @return Rückgabe des Label-Textes. \~english \~
 	 * @author Zoltán Hrabovszki
-	 * @date 2018.12.27
+	 * \date 2018.12.27
 	 */
 	public Integer getMaxLength() {
 		Integer lviReturn = 0;
@@ -106,7 +106,7 @@ public class SeTextarea extends SeAnyChildWindow {
 	 * 
 	 * @return Rückgabe des minlength-Wertes. \~english \~
 	 * @author Zoltán Hrabovszki
-	 * @date 07-07-2019
+	 * \date 07-07-2019
 	 */
 	public Integer getMinLength() {
 		Integer lviReturn = 0;
@@ -146,7 +146,7 @@ public class SeTextarea extends SeAnyChildWindow {
 	 * 
 	 *         \~
 	 * @author Zoltán Hrabovszki
-	 * @date 2018.10.28
+	 * \date 2018.10.28
 	 */
 	public ArrayList<String> getPlaceholder() {
 		ArrayList<String> lvLsReturn = new ArrayList<String>();

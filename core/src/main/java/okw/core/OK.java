@@ -1,6 +1,6 @@
 /*
     ==============================================================================
-    Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+    Copyright © 2012 - 2020, IT-Beratung Hrabovszki
     ============================================================================== 
 
     This file is part of OpenKeyWord.
@@ -62,7 +62,7 @@ import okw.gui.IGUIWindow;
  * \~english
  * \~
  * @author Zoltán Hrabovszki
- * @date 2013.03.02
+ * \date 2013.03.02
  */
 public class OK implements IOKW_State
 {
@@ -92,7 +92,7 @@ public class OK implements IOKW_State
      *
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2014.01.09
+     * \date 2014.01.09
      */
     public OK( Core fp_OKW )
     {
@@ -1237,7 +1237,7 @@ public class OK implements IOKW_State
      * \~english
      * \~
      * @author Zoltán Hrabovszki
-     * @date 02.03.2013
+     * \date 02.03.2013
      */
     public void setLanguage( String Language )
     {
@@ -2214,7 +2214,7 @@ public class OK implements IOKW_State
      * 
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2014-01-09
+     * \date 2014-01-09
      */
     private Boolean verify( OKW_TimeOut timeout, Boolean fpbExpected, Supplier<Boolean> Method2Call )
     {
@@ -2287,7 +2287,7 @@ public class OK implements IOKW_State
      * 
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2014-01-09
+     * \date 2014-01-09
      */
     private Integer verify( OKW_TimeOut timeout, Integer fpiExpected, Supplier<Integer> Method2Call )
     {
@@ -2523,7 +2523,7 @@ public class OK implements IOKW_State
      * 
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2014-01-09
+     * \date 2014-01-09
      */
     private ArrayList<String> verify( OKW_TimeOut timeout, ArrayList<String> fpALExpected, Supplier<ArrayList<String>> Method2Call )
     {
@@ -2601,7 +2601,7 @@ public class OK implements IOKW_State
      * 
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2014-01-09
+     * \date 2014-01-09
      */
     private ArrayList<String> verifyWCM( OKW_TimeOut timeout, ArrayList<String> fpALExpectedWCMs, Supplier<ArrayList<String>> Method2Call )
     {
@@ -2679,7 +2679,7 @@ public class OK implements IOKW_State
      * 
      * \~
      * @author Zoltán Hrabovszki
-     * @date 2014-01-09
+     * \date 2014-01-09
      */
     private ArrayList<String> verifyREGX( OKW_TimeOut timeout, ArrayList<String> fpALExpectedREGXs, Supplier<ArrayList<String>> Method2Call )
     {

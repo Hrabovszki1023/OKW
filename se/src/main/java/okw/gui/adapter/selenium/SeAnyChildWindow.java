@@ -2,7 +2,7 @@
     ==============================================================================
       Author: Zoltán Hrabovszki <zh@openkeyword.de>
 
-      Copyright © 2012 - 2019 IT-Beratung Hrabovszki
+      Copyright © 2012 - 2020, IT-Beratung Hrabovszki
       www.OpenKeyWord.de
     ============================================================================== 
 
@@ -106,7 +106,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2019.03.27
+    *  \date 2019.03.27
     */
     public SeAnyChildWindow( String fpsLocator, OKWLocatorBase... locators )
     {
@@ -125,7 +125,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.11.11
+     *  \date 2013.11.11
      */
     public void ClickOn()
     {
@@ -155,7 +155,7 @@ public class SeAnyChildWindow extends AnyChildwindow
       *  \~english
       *  \~
       *  @author Zoltán Hrabovszki
-      *  @date 2013.12.07
+      *  \date 2013.12.07
       */
     public ArrayList<String> getCaption()
     {
@@ -195,7 +195,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  @return true, falls das Objekt eindeutig gefunden worden ist ist, sonst false.
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2017.01.31
+    *  \date 2017.01.31
     */
     public Boolean getExists()
     {
@@ -244,7 +244,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  @return true, if has focus else false
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.11.11
+     *  \date 2013.11.11
      */
     public Boolean getHasFocus()
     {
@@ -275,7 +275,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  @return true, falls das Objekt aktive ist, sonst false
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2014.04.19
+    *  \date 2014.04.19
     */
     public Boolean getIsActive()
     {
@@ -319,7 +319,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2014.06.17
+    *  \date 2014.06.17
     */
     public ArrayList<String> getLabel()
     {
@@ -364,7 +364,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public ArrayList<String> getTooltip()
 
@@ -407,7 +407,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.14
+     *  \date 2013.12.14
      */
     public ArrayList<String> getValue()
     {
@@ -445,7 +445,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public ArrayList<String> LogCaption()
     {
@@ -478,7 +478,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public boolean LogExists()
     {
@@ -512,7 +512,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltan Hrabovszki
-    *  @date 2013.04.11
+    *  \date 2013.04.11
     */
     public boolean LogHasFocus()
     {
@@ -546,7 +546,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public boolean LogIsActive()
     {
@@ -579,7 +579,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public ArrayList<String> LogLabel()
     {
@@ -612,7 +612,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public ArrayList<String> LogPlaceholder()
     {
@@ -645,7 +645,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public ArrayList<String> LogTooltip()
     {
@@ -680,7 +680,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  
     *  @return Rückgabe des Textuellen Inhaltes der markierten Textes.
     *  @author Zoltan Hrabovszki
-    *  @date 2013.12.14
+    *  \date 2013.12.14
     */
     public ArrayList<String> LogValue()
     {
@@ -707,7 +707,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  \~
      *  @author Zoltán Hrabovszki
      *  @throws Exception 
-     *  @date 2013.11.11
+     *  \date 2013.11.11
      */
     public WebElement Me()
     {
@@ -731,7 +731,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public ArrayList<String> MemorizeCaption()
     {
@@ -765,7 +765,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public boolean MemorizeExists()
     {
@@ -798,7 +798,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public boolean MemorizeHasFocus()
     {
@@ -833,7 +833,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  \~english
      *  \~
      *   @author Zoltán Hrabovszki
-     *  @date 2014.04.19
+     *  \date 2014.04.19
      */
     public boolean MemorizeIsActive()
     {
@@ -866,7 +866,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public ArrayList<String> MemorizeLabel()
     {
@@ -899,7 +899,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2018.10.19
+    *  \date 2018.10.19
     */
     public ArrayList<String> MemorizePlaceholder()
     {
@@ -934,7 +934,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public ArrayList<String> MemorizeTooltip()
     {
@@ -966,7 +966,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.14
+    *  \date 2013.12.14
     */
     public ArrayList<String> MemorizeValue()
     {
@@ -998,7 +998,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  \~
      *  @author Zoltán Hrabovszki
     * @throws Exception 
-     *  @date 2013.11.11
+     *  \date 2013.11.11
      */
     public Boolean _NotExists() throws Exception
     {
@@ -1029,7 +1029,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 
      * \~
      *  @author Zoltán Hrabovszki
-     *  @date 2016.10.06
+     *  \date 2016.10.06
      */
     public void Select( ArrayList<String> Values )
     {
@@ -1058,7 +1058,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  OKWFrameObjectMethodNotImplemented!
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2016.10.06
+     *  \date 2016.10.06
      */
     public void SelectMenu()
     {
@@ -1084,7 +1084,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  OKWFrameObjectMethodNotImplemented!
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2016.10.06
+     *  \date 2016.10.06
      */
     public void SelectMenu( ArrayList<String> Values )
     {
@@ -1114,7 +1114,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  \~
      *  @author Zoltán Hrabovszki
      * @throws Exception 
-     *  @date 2013.11.11
+     *  \date 2013.11.11
      */
     public void SetFocus() throws Exception
     {
@@ -1140,7 +1140,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2016.10.06
+     *  \date 2016.10.06
      */
     public void SetValue( ArrayList<String> Values )
     {
@@ -1167,7 +1167,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  \~
      *  @author Zoltan Hrabovszki
      * @throws Exception 
-     *  @date 2013.04.11
+     *  \date 2013.04.11
      */
     public void TypeKey( ArrayList<String> fps_Values )
     {
@@ -1214,7 +1214,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public ArrayList<String> VerifyCaption()
     {
@@ -1246,7 +1246,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public Boolean VerifyExists()
     {
@@ -1276,7 +1276,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public Boolean VerifyIsActive()
     {
@@ -1310,7 +1310,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  This is the entry point for the adaptation of the method Verify Has Focus (method override).
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public Boolean VerifyHasFocus()
     {
@@ -1343,7 +1343,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
     *  @author Zoltán Hrabovszki
-    *  @date 2013.12.07
+    *  \date 2013.12.07
     */
     public ArrayList<String> VerifyLabel()
     {
@@ -1378,7 +1378,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  \~english
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2018.12.27
+     *  \date 2018.12.27
      */
      @Override
      public Integer VerifyMaxLength()
@@ -1414,7 +1414,7 @@ public class SeAnyChildWindow extends AnyChildwindow
       *  \~english
       *  \~
       *  @author Zoltán Hrabovszki
-      *  @date 2018.12.27
+      *  \date 2018.12.27
       */
       @Override
       public Integer VerifyMinLength()
@@ -1456,7 +1456,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  This method is the entry point for CheckPlacholder() adjustments by method overwriting.
      *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2018.10.05
+     *  \date 2018.10.05
      */
      public ArrayList<String> VerifyPlaceholder()
      {
@@ -1487,7 +1487,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  \~english
     *  \~
      *  @author Zoltán Hrabovszki
-     *  @date 2013.12.07
+     *  \date 2013.12.07
      */
     public ArrayList<String> VerifyTooltip()
     {
@@ -1515,7 +1515,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     *  
     *  @return Rückgabe des aktuellen Objekt-Wert.
     *  @author Zoltan Hrabovszki
-    *  @date 2013.12.14
+    *  \date 2013.12.14
     */
     public ArrayList<String> VerifyValue()
     {
@@ -1569,7 +1569,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      * @throws ParserConfigurationException 
      * @throws JAXBException 
      * @throws XPathExpressionException 
-     *  @date 2020.06.18
+     *  \date 2020.06.18
      */
     public void WaitForInteraction( Runnable Method2Call )
     {
