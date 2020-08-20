@@ -886,9 +886,7 @@ import static org.junit.jupiter.api.Assertions.*;
         }
 
         /** \~german
-         *
-         * Test des Schlüsselwortes VerifyLabel für den GUI-Adapter SeButton.
-         * 
+         * Test des Schlüsselwortes VerifyLabelWCN für den GUI-Adapter SeButton.
          * 
          * \~
          * \date 2017-06-18

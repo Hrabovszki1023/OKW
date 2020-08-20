@@ -60,25 +60,25 @@ public class frmIFrameWithName extends SeBrowserChild
      * Display TextField: Contains values after you click the "Button 1" and "Button 2".
      */
     @OKW( FN = "Display", WaitForMe_PT = 500, WaitForMe_TO = 1 )
-    public SeInputText Anzeige  = new SeInputText( "//*[@data-4test='textarea']" );
+    public SeInputText Anzeige  = new SeInputText( "//*[@data-harmony-id='textarea']" );
 
     @OKW( FN = "Button 1", VerifyLabel_PT = 500, VerifyLabel_TO = 1, VerifyIsActive_PT = 500, VerifyIsActive_TO = 1, VerifyValue_PT = 500, VerifyValue_TO = 1, VerifyTooltip_PT = 500, VerifyTooltip_TO = 1, VerifyCaption_PT = 500, VerifyCaption_TO = 1, VerifyExists_PT = 500, VerifyExists_TO = 1, VerifyHasFocus_PT = 500, VerifyHasFocus_TO = 1 )
-    public SeButton    Text_1   = new SeButton( "//*[@data-4test='Button 1']" );
+    public SeButton    Text_1   = new SeButton( "//*[@data-harmony-id='Button 1']" );
 
     @OKW( FN = "Button 2", VerifyLabel_PT = 500, VerifyLabel_TO = 3, VerifyIsActive_PT = 500, VerifyIsActive_TO = 3, VerifyValue_PT = 500, VerifyValue_TO = 3, VerifyTooltip_PT = 500, VerifyTooltip_TO = 3, VerifyCaption_PT = 500, VerifyCaption_TO = 3, VerifyExists_PT = 500, VerifyExists_TO = 3, VerifyHasFocus_PT = 500, VerifyHasFocus_TO = 3 )
-    public SeButton    Text_2   = new SeButton( "//*[@data-4test='Button 2']" );
+    public SeButton    Text_2   = new SeButton( "//*[@data-harmony-id='Button 2']" );
 
     @OKW( FN = "User", WaitForMe_PT = 500, WaitForMe_TO = 1, VerifyLabel_PT = 500, VerifyLabel_TO = 3, VerifyIsActive_PT = 500, VerifyIsActive_TO = 3, VerifyValue_PT = 500, VerifyValue_TO = 3, VerifyTooltip_PT = 500, VerifyTooltip_TO = 3, VerifyCaption_PT = 500, VerifyCaption_TO = 3, VerifyExists_PT = 500, VerifyExists_TO = 3, VerifyHasFocus_PT = 500, VerifyHasFocus_TO = 3 )
-    public SeInputText User     = new SeInputText( "//*[@data-4test='User']" );
+    public SeInputText User     = new SeInputText( "//*[@data-harmony-id='User']" );
 
     @OKW( FN = "Password", WaitForMe_PT = 500, WaitForMe_TO = 1, VerifyLabel_PT = 500, VerifyLabel_TO = 3, VerifyIsActive_PT = 500, VerifyIsActive_TO = 3, VerifyValue_PT = 500, VerifyValue_TO = 3, VerifyTooltip_PT = 500, VerifyTooltip_TO = 3, VerifyCaption_PT = 500, VerifyCaption_TO = 3, VerifyExists_PT = 500, VerifyExists_TO = 3, VerifyHasFocus_PT = 500, VerifyHasFocus_TO = 3 )
-    public SeInputText Password = new SeInputText( "//*[@data-4test='Password']" );
+    public SeInputText Password = new SeInputText( "//*[@data-harmony-id='Password']" );
 
     /**
      * URL des Fensters: http://test.openkeyword.de/InputButton/input_type-button.htm
      */
     public frmIFrameWithName()
     {
-        setLocator( "//*[@data-4test='iframeWithName.htm']" );
+        setLocator( "//*[@data-harmony-id='iframeWithName.htm']" );
     }
 }

@@ -71,7 +71,7 @@ public class FrmWaitForHiddenObjekt extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=5,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
            )
-  public SeInputText Name = new SeInputText( "$L1$//*[@data-4test='Name']", this.getLOCATOR() );
+  public SeInputText Name = new SeInputText( "$L1$//*[@data-harmony-id='Name']", this.getLOCATOR() );
 
   
   /**
@@ -90,7 +90,7 @@ public class FrmWaitForHiddenObjekt extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=3,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
           )
-  public SeButton OK         = new SeButton( "$L1$//*[@data-4test='OK']", this.getLOCATOR() );
+  public SeButton OK         = new SeButton( "$L1$//*[@data-harmony-id='OK']", this.getLOCATOR() );
 
   
   @OKW( FN = "Message",
@@ -102,7 +102,7 @@ public class FrmWaitForHiddenObjekt extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=3,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
           )
-  public SeAnyChildWindow Message = new SeAnyChildWindow( "$L1$//*[@data-4test='Message']", this.getLOCATOR() );
+  public SeAnyChildWindow Message = new SeAnyChildWindow( "$L1$//*[@data-harmony-id='Message']", this.getLOCATOR() );
 
 
   /**
@@ -110,6 +110,6 @@ public class FrmWaitForHiddenObjekt extends SeBrowserChild
    */
   public FrmWaitForHiddenObjekt()
   {
-    this.setLocator( "//*[@data-4test='Hello form']" );
+    this.setLocator( "//*[@data-harmony-id='Hello form']" );
   }
 }

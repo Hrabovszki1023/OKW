@@ -213,6 +213,7 @@ public class OK implements IOKW_State
     }
     
 
+
     /**
      *  \copydoc IOKW_State::BeginTest()
      */
@@ -223,8 +224,10 @@ public class OK implements IOKW_State
         try
         {
             OKW_Memorize_Sngltn.getInstance().set( "TCN", fpsTestname );
-            
             this._Kernel.SetCoreStateOK();
+            Log.ResOpenList("Version...");
+            Log.LogVersionTxt();
+            Log.ResCloseList();
         }
         catch (Exception e)
         {

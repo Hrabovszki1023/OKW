@@ -39,6 +39,10 @@ OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 
 package okw.log;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.*;
 
 import okw.OKW_Const_Sngltn;
@@ -118,6 +122,48 @@ public class Logger_Sngltn implements ILogger
             LoggerList = new ArrayList<ILogger>();
     }
 
+    
+    /**
+     * \~german
+     * Logt den Versions-Text beim Start eines Skriptes.
+     * 
+     * Die Information wird aus der Resourcen-Datei "okw/version.txt" gelesen
+     * und mit Logger_Sngltn geloggt.
+     *
+     * \~english
+     * Logs the version text when starting a script.
+     * 
+     * The information is read from the resource file "okw/version.txt"
+     * and logged with Logger_Sngltn.
+     * 
+     * \~
+     * @author Zoltán Hrabovszki
+     * \date 2019-11-17, 2020-08-17
+     */
+    public void LogVersionTxt()
+    {
+        InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream( "okw/version.txt" );
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+        String line;
+
+        try
+        {
+			while ((line = reader.readLine()) != null)
+			{
+				this.LogPrint("-" + line );
+			}
+			reader.close();
+			
+		}
+        catch (IOException e)
+        {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    }
+
+    
     /** \~german
      *  \brief Fügt einen ILogger der Logger-Liste Logger.LoggerList
      * 

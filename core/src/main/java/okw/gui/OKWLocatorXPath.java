@@ -61,7 +61,7 @@ public class OKWLocatorXPath extends OKWLocator
      *  
      *  @note
      *  <code> fpsLocator = "//div[@ID='myID']"</code> -> <code>"//div[@ID='myID']"</code>
-     *  <code> fpsLocator = "4T!MyValue"</code> -> <code>"//*[@data-4Test='MyValue']"</code>
+     *  <code> fpsLocator = "4T!MyValue"</code> -> <code>"//*[@data-harmony-id='MyValue']"</code>
      *  <code> fpsLocator = "4TNA!MyValue"</code> -> <code>"//*[contains( @name, 'MyValue']"</code>
      *  <code> fpsLocator = "4TID!MyValue"</code> -> <code>"//*[contains( @ID, 'MyValue']"</code>
      *  <code> fpsLocator = "4TLA!MyValue"</code> -> <code>"//label[contains(text(),'MyValue')]/following-sibling::input"</code>

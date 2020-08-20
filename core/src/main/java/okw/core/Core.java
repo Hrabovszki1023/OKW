@@ -38,11 +38,6 @@ package okw.core;
 
 import okw.log.Logger_Sngltn;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
 import okw.*;
 
 /** \~german
@@ -215,46 +210,6 @@ public class Core implements IOKW_State
             OKW_HandleException.StopRunning( e, this.getClass() );
         }
     }
-
-    /**
-     * \~german
-     * Logt den Versions-Text beim Start eines Skriptes.
-     * 
-     * Die Information wird aus der Resourcen-Datei "okw/version.txt" gelesen
-     * und mit Logger_Sngltn geloggt.
-     *
-     * \~english
-     * Logs the version text when starting a script.
-     * 
-     * The information is read from the resource file "okw/version.txt"
-     * and logged with Logger_Sngltn.
-     * 
-     * \~
-     * @author Zoltán Hrabovszki
-     * \date 2019-11-17
-     */
-    protected static void readVersionTxt()
-    {
-        InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream( "okw/version.txt" );
-
-        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-        String line;
-
-        try
-        {
-			while ((line = reader.readLine()) != null)
-			{
-				Log.LogPrint("-" + line);
-			}
-			reader.close();
-			
-		}
-        catch (IOException e)
-        {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    }
     
     
     @SuppressWarnings( "unused" )
@@ -265,7 +220,7 @@ public class Core implements IOKW_State
             // Init all Singelton...
             Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
-            readVersionTxt();
+            Log.LogVersionTxt();
             
             Log.ResOpenList("Start OKW...");
             

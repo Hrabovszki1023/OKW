@@ -39,7 +39,7 @@ public class frmLink extends SeBrowserChild {
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeLink Google = new SeLink( "$L1$//*[@data-4test='Google']", this.getLOCATOR() );
+    public SeLink Google = new SeLink( "$L1$//*[@data-harmony-id='Google']", this.getLOCATOR() );
 
     // / \~german
     // / \brief
@@ -57,10 +57,10 @@ public class frmLink extends SeBrowserChild {
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeLink Yahoo = new SeLink( "$L1$//*[@data-4test='Yahoo']", this.getLOCATOR());
+    public SeLink Yahoo = new SeLink( "$L1$//*[@data-harmony-id='Yahoo']", this.getLOCATOR());
 
     public frmLink()
     {
-        setLocator( "//*[@data-4test='Link']" );
+        setLocator( "//*[@data-harmony-id='Link']" );
     }
 }

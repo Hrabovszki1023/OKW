@@ -41,14 +41,15 @@ import okw.gui.adapter.selenium.SeBrowserChild;
 import okw.gui.adapter.selenium.SeInputButton;
 import okw.gui.adapter.selenium.SeInputText;
 
-// \~german
-// \brief GUI-Frame für die OKW-Testseite <a href="http://test.openkeyword.de/InputButton/input_type-button.htm">test.openkeyword.de/InputButton/input_type-button.htm</a> 
-//
-// \~english
-// \brief GUI-Frame for the OKW-test page <a href="http://test.openkeyword.de/InputButton/input_type-button.htm">test.openkeyword.de/InputButton/input_type-button.htm</a> 
-// \~
-// \author Zoltán Hrabovszki
-// \date 2016.09.06
+/** \~german
+ * GUI-Frame für die OKW-Testseite <a href="http://test.openkeyword.de/InputButton/input_type-button.htm">test.openkeyword.de/InputButton/input_type-button.htm</a> 
+ *
+ * \~english
+ * GUI-Frame for the OKW-test page <a href="http://test.openkeyword.de/InputButton/input_type-button.htm">test.openkeyword.de/InputButton/input_type-button.htm</a> 
+ * \~
+ * @author Zoltán Hrabovszki
+ * \date 2016.09.06
+ */
 @OKW( FN = "Button not Active" )
 public class FrmButtonNotActiv extends SeBrowserChild
 {
@@ -84,6 +85,6 @@ public class FrmButtonNotActiv extends SeBrowserChild
      */
     public FrmButtonNotActiv()
     {
-        setLocator( "//*[@data-4test='button_disabled']" );
+        setLocator( "//*[@data-harmony-id='button_disabled']" );
     }
 }

@@ -27,7 +27,7 @@ public class frmSeTextarea extends SeBrowserChild
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeTextarea Textarea = new SeTextarea("//*[@data-4test='Textarea 1']");
+    public SeTextarea Textarea = new SeTextarea("//*[@data-harmony-id='Textarea 1']");
 
     @OKW (FN="Textarea 2",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -38,7 +38,7 @@ public class frmSeTextarea extends SeBrowserChild
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeTextarea Textarea_2 = new SeTextarea("//*[@data-4test='Textarea 2']");
+    public SeTextarea Textarea_2 = new SeTextarea("//*[@data-harmony-id='Textarea 2']");
 
     @OKW (FN="Textarea MaxLength 40",
                     VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -50,10 +50,10 @@ public class frmSeTextarea extends SeBrowserChild
                     VerifyHasFocus_PT=500, VerifyHasFocus_TO=1,
                     VerifyMaxLength_PT=500, VerifyMaxLength_TO=1
                     )
-    public SeTextarea Textarea_3 = new SeTextarea("//*[@data-4test='Textarea MaxLength 40']");
+    public SeTextarea Textarea_3 = new SeTextarea("//*[@data-harmony-id='Textarea MaxLength 40']");
 
     public frmSeTextarea( )
     {
-      setLocator("//body[@data-4test='textarea']");
+      setLocator("//body[@data-harmony-id='textarea']");
     }
 }

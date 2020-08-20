@@ -168,7 +168,7 @@ public class IFrame_EN_Test extends OKWTestBase
   
   /**
    * \~german
-   * Exception Test: Objekt <code>Button 1</code> Existiert für den definierten XPATH <code>//*[@data-4test='Button 1']</code> in mehreren iframe.
+   * Exception Test: Objekt <code>Button 1</code> Existiert für den definierten XPATH <code>//*[@data-harmony-id='Button 1']</code> in mehreren iframe.
    * [Testseite]: http://test.openkeyword.de/iframe/iframe4NotUniqueXpathError.htm        "iframe4NotUniqueXpathError"
    * 
    * Dieser Testfall muss die Ausnahme okw.exceptions.OKWGUIObjectNotUniqueException auslösen, 
