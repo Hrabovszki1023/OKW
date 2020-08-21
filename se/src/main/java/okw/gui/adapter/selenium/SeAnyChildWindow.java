@@ -422,8 +422,11 @@ public class SeAnyChildWindow extends AnyChildwindow
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
             this.WaitForMe();
 
-            // Get Value from TextField and put this into the return ArrayList<String>
-            lvLsReturn.add( this.Me().getAttribute( "textContent" ) );
+            // The Attribute "title" is shown as Tooltip...
+            String myAttribute = this.Me().getAttribute( "textContent" );
+            myAttribute = StringUtils.normalizeSpace( myAttribute );
+            
+            lvLsReturn.add( myAttribute );
         }
         finally
         {
