@@ -67,7 +67,7 @@ import java.lang.annotation.Target;
 
 @Target(
 { 
-  ElementType.TYPE, // Usable in Class-es
+  ElementType.TYPE, // Usable in Classes
   ElementType.FIELD } )
 
 // Usable in Field-s
@@ -95,7 +95,7 @@ public @interface OKW
    * <b>T</b>ime<b>O</b>ut in Sekunden [s] für das erscheinen des aktuellen Objektes.
    * Default ist 30s.
    */
-  public int WaitForMe_TO() default 30;
+  public int WaitForMe_TO() default 12;
 
   /**
    * \~german
@@ -104,7 +104,7 @@ public @interface OKW
    * Die Periodendauer des Pollens wird in Millisekunden angegeben.
    * Default ist 1000ms (=1s).
    */
-  public int WaitForMe_PT() default 1000;
+  public int WaitForMe_PT() default 500;
 
   
   /**
