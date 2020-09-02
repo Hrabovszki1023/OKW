@@ -58,6 +58,9 @@ import okw.gui.adapter.selenium.webdriver.*;
 public class SeBrowserWindow extends SeAnyWindow
 {
     @OKW( FN = "URL", VerifyExists_TO = 1, VerifyExists_PT = 500 )
+    public SeURL      URLold      = new SeURL();
+
+    @OKW( FN = "#URL", VerifyExists_TO = 1, VerifyExists_PT = 500 )
     public SeURL      URL      = new SeURL();
 
     @OKW( FN = "BACK", VerifyExists_TO = 1, VerifyExists_PT = 500 )
@@ -72,6 +75,20 @@ public class SeBrowserWindow extends SeAnyWindow
     @OKW( FN = "POSITION", VerifyExists_TO = 1, VerifyExists_PT = 500 )
     public SePOSITION POSITION = new SePOSITION();
 
+    // Implement Alert Handling
+    @OKW( FN = "#Alert message")
+    public SeALERTMESSAGE ALERTMESSAGE = new SeALERTMESSAGE();
+
+    @OKW( FN = "#Alert input")
+    public SeALERTDATA ALERTDATA = new SeALERTDATA();
+    
+    @OKW( FN = "#Alert Cancel")
+    public SeALERTDISMISS ALERTDISMISS = new SeALERTDISMISS();
+
+    @OKW( FN = "#Alert OK")
+    public SeALERTACCEPT ALERTACCEPT = new SeALERTACCEPT();
+    
+    
     @Override
     public void SelectWindow()
     {

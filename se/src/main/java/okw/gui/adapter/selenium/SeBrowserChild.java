@@ -62,7 +62,10 @@ public class SeBrowserChild extends SeAnyWindow
     public OKWLocator locator;
 
     @OKW( FN = "URL" )
-    public SeURL URL = new SeURL();
+    public SeURL URLold = new SeURL();
+
+    @OKW( FN = "#URL", VerifyExists_TO = 1, VerifyExists_PT = 500 )
+    public SeURL      URL      = new SeURL();
     
     @OKW( FN = "BACK")
     public SeBACK BACK = new SeBACK();
@@ -76,20 +79,18 @@ public class SeBrowserChild extends SeAnyWindow
     @OKW( FN = "POSITION")
     public SePOSITION POSITION = new SePOSITION();
     
-    
     // Implement Alert Handling
-    @OKW( FN = "ALERT MESSAGE")
+    @OKW( FN = "#Alert message")
     public SeALERTMESSAGE ALERTMESSAGE = new SeALERTMESSAGE();
 
-    @OKW( FN = "ALERT DATA")
+    @OKW( FN = "#Alert input")
     public SeALERTDATA ALERTDATA = new SeALERTDATA();
     
-    @OKW( FN = "ALERT CANCEL")
+    @OKW( FN = "#Alert CANCEL")
     public SeALERTDISMISS ALERTDISMISS = new SeALERTDISMISS();
 
-    @OKW( FN = "ALERT OK")
+    @OKW( FN = "#Alert OK")
     public SeALERTACCEPT ALERTACCEPT = new SeALERTACCEPT();
-    
     
     
     @Override

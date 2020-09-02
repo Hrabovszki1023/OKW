@@ -74,6 +74,25 @@ public class SeBrowserChild_EN_Test  extends OKWTestBase
 
 
         /**
+         * 
+         */ 
+        @Test
+        public void tcSeBrowserChild_URLneu_VerifyValue() throws Exception
+        {
+            EN.BeginTest( TestName );
+
+            EN.StartApp( ApplicationName );
+            EN.TypeKey( "#URL", "http://test.openkeyword.de/InputText/InputTypePassword.htm" );
+
+            EN.SelectWindow( "InputTypePassword" );
+            EN.VerifyValue("#URL", "http://test.openkeyword.de/InputText/InputTypePassword.htm");
+            
+            EN.StopApp( ApplicationName );
+            EN.EndTest();
+       }
+
+
+        /**
          *  Prüfen ob URL-Implemnetierung im BrowserChild vorhanden.
          */ 
         @Test // ( expected = OKWVerifyingFailsException.class )
@@ -93,7 +112,28 @@ public class SeBrowserChild_EN_Test  extends OKWTestBase
           });
         }
 
+
+        /**
+         *  Prüfen ob URL-Implemnetierung im BrowserChild vorhanden.
+         */ 
+        @Test // ( expected = OKWVerifyingFailsException.class )
+        public void tcBrowserChild_URLnew_OKWVerifyingFailsException() throws Exception
+        {
+          EN.BeginTest( TestName );
+
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "#URL", "http://test.openkeyword.de/InputText/InputTypePassword.htm" );
+
+          EN.SelectWindow( "InputTypePassword" );
+          EN.VerifyValue("#URL", "Falscher Wert");
+          
+          Assertions.assertThrows( OKWVerifyingFailsException.class, () ->
+          {
+              EN.EndTest();
+          });
+        }
         
+
         /**
          *  Prüft ob bei nicht vorhandenem Browserchild die Exception "" ausgelöst wird.
          */ 
@@ -113,6 +153,25 @@ public class SeBrowserChild_EN_Test  extends OKWTestBase
           });
         }
         
+
+        /**
+         *  Prüft ob bei nicht vorhandenem Browserchild die Exception "" ausgelöst wird.
+         */ 
+        @Test // ( expected = OKWGUIObjectNotFoundException.class )
+        public void tcBrowserChild_URLneu_SelectWindowL_OKWGUIObjectNotFoundException() throws Exception
+        {
+          EN.BeginTest( TestName );
+
+          EN.StartApp( ApplicationName );
+          EN.TypeKey( "#URL", "http://test.openkeyword.de/InputText/InputTypePassword.htm" );
+
+          EN.SelectWindow( "InputTypeTextDisabled" );
+          
+          Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
+          {
+              EN.EndTest();
+          });
+        }
         
         /**
          *  Prüft ob bei nicht vorhandenem Browserchild die Exception "" ausgelöst wird.
@@ -131,6 +190,30 @@ public class SeBrowserChild_EN_Test  extends OKWTestBase
 
           EN.ClickOn( "BACK" );
           EN.VerifyValue( "URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          
+          EN.StopApp( ApplicationName );
+          EN.EndTest();
+
+        }
+        
+        
+        /**
+         *  Prüft ob bei nicht vorhandenem Browserchild die Exception "" ausgelöst wird.
+         */ 
+        @Test
+        public void tcBrowserChild_URLneu_BACK() throws Exception
+        {
+          EN.BeginTest( TestName );
+
+          EN.StartApp( ApplicationName );
+          EN.SetValue( "#URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+          EN.VerifyValue( "#URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
+
+          EN.SetValue( "#URL", "http://test.openkeyword.de/Link/a.htm" );
+          EN.VerifyValue( "#URL", "http://test.openkeyword.de/Link/a.htm" );
+
+          EN.ClickOn( "BACK" );
+          EN.VerifyValue( "#URL", "http://test.openkeyword.de/InputText/input_type_all_InputText.htm" );
           
           EN.StopApp( ApplicationName );
           EN.EndTest();
