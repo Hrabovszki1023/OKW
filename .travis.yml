@@ -32,7 +32,7 @@ addons:
 install:
   # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
   # See: https://octopus.com/blog/selenium/21-travis-ci/travis-ci
-  - wget https://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_linux64.zip
+  - wget https://chromedriver.storage.googleapis.com/85.0.4183.87/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip
   - rm chromedriver_linux64.zip
   - sudo mv -f chromedriver /usr/bin
