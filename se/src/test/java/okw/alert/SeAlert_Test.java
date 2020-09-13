@@ -28,7 +28,7 @@ public class SeAlert_Test extends OKWTestBase {
 		EN.SelectWindow("Alert");
 		EN.ClickOn("Try it");
 		
-		EN.ClickOn("ALERT CANCEL");
+		EN.ClickOn("#Alert CANCEL");
 		
 		EN.VerifyValue( "Anzeige", "User cancelled the prompt.");
 
@@ -49,7 +49,7 @@ public class SeAlert_Test extends OKWTestBase {
 		EN.SelectWindow("Alert");
 		EN.ClickOn("Try it");
 		
-		EN.ClickOn("ALERT OK");
+		EN.ClickOn("#Alert OK");
 		
 		EN.VerifyValue( "Anzeige", "Hello Harry Potter! How are you today?");
 
@@ -70,9 +70,9 @@ public class SeAlert_Test extends OKWTestBase {
 		EN.SelectWindow("Alert");
 		EN.ClickOn("Try it");
 		
-		EN.VerifyValue( "ALERT MESSAGE", "Please enter your name:");
+		EN.VerifyValue( "#Alert message", "Please enter your name:");
 		
-		EN.ClickOn("ALERT OK");
+		EN.ClickOn("#Alert OK");
 		
 		EN.VerifyValue( "Anzeige", "Hello Harry Potter! How are you today?");
 
@@ -93,9 +93,9 @@ public class SeAlert_Test extends OKWTestBase {
 		EN.SelectWindow("Alert");
 		EN.ClickOn("Try it");
 		
-		EN.SetValue( "ALERT DATA", "Uschi" );
+		EN.SetValue( "#Alert input", "Uschi" );
 		
-		EN.ClickOn("ALERT OK");
+		EN.ClickOn("#Alert OK");
 		
 		EN.VerifyValue( "Anzeige", "Hello Uschi! How are you today?");
 

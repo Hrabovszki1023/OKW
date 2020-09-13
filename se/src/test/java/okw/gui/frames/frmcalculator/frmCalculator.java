@@ -46,7 +46,7 @@ import okw.gui.adapter.selenium.*;
 public class frmCalculator extends SeBrowserChild {
   
   @OKW( FN = "Display" )
-  public SeInputText  display = new SeInputText( "//INPUT[@name='Display']" );
+  public SeInputText  display = new SeInputText( "//input[@name='Display']" );
 
   @OKW( FN = "1" )
   public SeInputButton n1 = new SeInputButton( "//input[@value='  1   ']");
