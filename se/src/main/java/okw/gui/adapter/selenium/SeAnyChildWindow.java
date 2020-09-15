@@ -414,7 +414,7 @@ public class SeAnyChildWindow extends AnyChildwindow
     public ArrayList<String> getValue()
     {
         ArrayList<String> lvLsReturn = new ArrayList<String>();
-
+        String myAttribute = null;
         try
         {
             this.LogFunctionStartDebug( "getValue" );
@@ -422,10 +422,18 @@ public class SeAnyChildWindow extends AnyChildwindow
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
             this.WaitForMe();
 
-            // The Attribute "title" is shown as Tooltip...
-            String myAttribute = this.Me().getAttribute( "textContent" );
-            myAttribute = StringUtils.normalizeSpace( myAttribute );
-            
+            // Wurde data-harmony-value definiert?
+            if ( null == this.Me().getAttribute( "data-harmony-value" ) )
+            {
+            	// Nein: "Normal" Weiter 
+            	myAttribute = this.Me().getAttribute( "textContent" );
+            	myAttribute = StringUtils.normalizeSpace( myAttribute );
+            }
+            else
+            {   
+            	// Ja: Auslesen
+            	myAttribute = this.Me().getAttribute( "data-harmony-value" );
+            }
             lvLsReturn.add( myAttribute );
         }
         finally
