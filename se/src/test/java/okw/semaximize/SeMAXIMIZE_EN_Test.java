@@ -94,7 +94,7 @@ public class SeMAXIMIZE_EN_Test extends OKWTestBase {
    *  @author Zoltan Hrabovszki
    *  \date 2017-07-23
    */ 
-  //@Test
+  @Test
   public void tcClickOn() throws Exception
   {
       EN.BeginTest( TestName );
@@ -183,15 +183,14 @@ public class SeMAXIMIZE_EN_Test extends OKWTestBase {
 
   /**
    * \~german
-   * Testet das Schlüsselwort SetValue( FN ) eines SeMAXIMIZE Prüfen.
+   * Testet das Schlüsselwort SetValue( CAT ) eines SeMAXIMIZE.
    * 
    * @par Methode ist nicht Implementiert -> OKWFrameObjectMethodNotImplemented
-   * 
    *  \~
    *  @author Zoltan Hrabovszki
    *  \date 2017-07-23
    */ 
-  @Test // (expected = OKWFrameObjectMethodNotImplemented.class)
+  @Test
   public void tcSetValue_OKWFrameObjectMethodNotImplemented() throws Exception
   {
       EN.BeginTest( TestName );
@@ -208,6 +207,32 @@ public class SeMAXIMIZE_EN_Test extends OKWTestBase {
 
   }
 
+  /**
+   * \~german
+   * Testet das Schlüsselwort SetFocus( CAT ) eines SeMAXIMIZE.
+   * 
+   * @par Methode ist nicht Implementiert -> OKWFrameObjectMethodNotImplemented
+   * 
+   *  \~
+   *  @author Zoltan Hrabovszki
+   *  \date 2020.09.13
+   */ 
+  @Test
+  public void tcSetFocus_OKWFrameObjectMethodNotImplemented() throws Exception
+  {
+      EN.BeginTest( TestName );
+      EN.StartApp( ApplicationName );
+
+      EN.SetFocus( "MAXIMIZE" );
+      
+      EN.StopApp( ApplicationName );
+      Assertions.assertThrows( OKWFrameObjectMethodNotImplemented.class, () ->
+        {
+            EN.EndTest();
+        });
+
+
+  }
 
   /**
    * \~german
