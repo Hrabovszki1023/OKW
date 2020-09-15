@@ -3340,12 +3340,12 @@ public class OK implements IOKW_State
     /**
      *  \copydoc IOKW_State::VerifyTablecellValue(String,String,String,String)
      */
-    public void VerifyTablecellValue( String FN, String COL, String ROW, String ExpVal ) throws Exception
+    public void VerifyTablecellValue( String CAT, String COL, String ROW, String ExpVal ) throws Exception
     {
         ArrayList<String> lvlsExpected = null;
         ArrayList<String> Actual = null;
 
-        Log.LogFunctionStartDebug( "VerifyTablecellValue", "FN", FN, "COL", COL, "ROW", ROW, "fpsExpected", ExpVal );
+        Log.LogFunctionStartDebug( "VerifyTablecellValue", "CAT", CAT, "COL", COL, "ROW", ROW, "fpsExpected", ExpVal );
 
         try
         {
@@ -3373,7 +3373,7 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( CAT ) );
 
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTablecellValue_TO(), myOKW.VerifyTablecellValue_PT() );
@@ -3399,12 +3399,12 @@ public class OK implements IOKW_State
     /**
      *  \copydoc IOKW_State::VerifyTablecellValueWCM(String,String,String,String)
      */
-    public void VerifyTablecellValueWCM( String FN, String COL, String ROW, String ExpVal ) throws Exception
+    public void VerifyTablecellValueWCM( String CAT, String COL, String ROW, String ExpVal ) throws Exception
     {
         ArrayList<String> lvlsExpected = null;
         ArrayList<String> Actual = null;
 
-        Log.LogFunctionStartDebug( "VerifyTablecellValue", "FN", FN, "COL", COL, "ROW", ROW, "fpsExpected", ExpVal );
+        Log.LogFunctionStartDebug( "VerifyTablecellValue", "CAT", CAT, "COL", COL, "ROW", ROW, "fpsExpected", ExpVal );
 
         try
         {
@@ -3432,7 +3432,7 @@ public class OK implements IOKW_State
                     lvlsExpected = Parser.ParseMe( lvlsExpected );
                 }
 
-                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( FN ) );
+                IGUIChildwindow MyObject = ( ( IGUIChildwindow ) CO.setChildName( CAT ) );
 
                 OKW myOKW = okw.FrameObjectDictionary_Sngltn.myAnnotationDictionary.get( CO.getObjectFN() );
                 OKW_TimeOut TimeOut = new OKW_TimeOut( myOKW.VerifyTablecellValue_TO(), myOKW.VerifyTablecellValue_PT() );
