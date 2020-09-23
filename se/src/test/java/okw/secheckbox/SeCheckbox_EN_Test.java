@@ -36,7 +36,7 @@
 	    Sie sollten eine Kopie der GNU General Public License zusammen mit 
 	    OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 	*/
-package okw.seinputcheckbox;
+package okw.secheckbox;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -56,7 +56,7 @@ import okw.exceptions.OKWNotAllowedValueException;
 * 
 * @author zoltan
 */
-public class SeInputCheckbox_EN_Test extends OKWTestBase
+public class SeCheckbox_EN_Test extends OKWTestBase
 {
 	protected String cvsObjektName = "SeCheckBox";
 

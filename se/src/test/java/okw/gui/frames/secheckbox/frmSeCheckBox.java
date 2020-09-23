@@ -19,7 +19,7 @@ public class frmSeCheckBox extends SeBrowserChild
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1,
             WaitForMe_PT = 500, WaitForMe_TO = 1
             )
-    public SeInputCheckbox NotExists = new SeInputCheckbox("//*[@value='upss']");
+    public SeCheckbox NotExists = new SeCheckbox("//*[@value='upss']");
 
     @OKW (FN="Pilze",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -30,7 +30,7 @@ public class frmSeCheckBox extends SeBrowserChild
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeInputCheckbox Pilze = new SeInputCheckbox("//*[@value='pilze']");
+    public SeCheckbox Pilze = new SeCheckbox("//*[@value='pilze']");
 
     @OKW (FN="Salami",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -41,7 +41,7 @@ public class frmSeCheckBox extends SeBrowserChild
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeInputCheckbox Salami = new SeInputCheckbox("//*[@value='salami']");
+    public SeCheckbox Salami = new SeCheckbox("//*[@value='salami']");
 
     @OKW (FN="Sardellen",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -52,7 +52,7 @@ public class frmSeCheckBox extends SeBrowserChild
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeInputCheckbox Sardellen = new SeInputCheckbox("//*[@value='sardellen']");
+    public SeCheckbox Sardellen = new SeCheckbox("//*[@value='sardellen']");
 
     @OKW (FN="Disabled",
             VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -63,7 +63,7 @@ public class frmSeCheckBox extends SeBrowserChild
             VerifyExists_PT=500, VerifyExists_TO=1,
             VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
             )
-    public SeInputCheckbox Disabled = new SeInputCheckbox("//*[@id='ID_Disabled']");
+    public SeCheckbox Disabled = new SeCheckbox("//*[@id='ID_Disabled']");
 
     public frmSeCheckBox()
     {

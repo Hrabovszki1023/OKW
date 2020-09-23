@@ -110,7 +110,7 @@ import okw.gui.*;
      *  @author Zoltan Hrabovszki
      *  \date 2013.04.11
      */
-    public class SeInputCheckbox extends SeAnyChildWindow
+    public class SeCheckbox extends SeAnyChildWindow
     {
     	
     	private OKW_Const_Sngltn myOKW_Const = null;
@@ -120,7 +120,7 @@ import okw.gui.*;
          *  
          *  \date 2017.02.17
          */         
-        public SeInputCheckbox( String Locator, OKWLocatorBase... Locators )
+        public SeCheckbox( String Locator, OKWLocatorBase... Locators )
         {
             super(Locator, Locators);
             this.LM = new LogMessenger("GUI");
