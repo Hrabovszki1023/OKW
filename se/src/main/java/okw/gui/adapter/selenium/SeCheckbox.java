@@ -110,7 +110,7 @@ import okw.gui.*;
      *  @author Zoltan Hrabovszki
      *  \date 2013.04.11
      */
-    public class SeInputCheckbox extends SeAnyChildWindow
+    public class SeCheckbox extends SeAnyChildWindow
     {
     	
     	private OKW_Const_Sngltn myOKW_Const = null;
@@ -120,7 +120,7 @@ import okw.gui.*;
          *  
          *  \date 2017.02.17
          */         
-        public SeInputCheckbox( String Locator, OKWLocatorBase... Locators )
+        public SeCheckbox( String Locator, OKWLocatorBase... Locators )
         {
             super(Locator, Locators);
             this.LM = new LogMessenger("GUI");
@@ -128,35 +128,39 @@ import okw.gui.*;
         }
 
         
-	/**
-	 * \~german Method liefert den aktuellen Zustand der Checkbox, "angehakt" oder
-	 * "nicht angehakt".
-	 * 
-	 * Alle Methoden dieser Klasse verwenden diese Methode um den aktuellen Zustand
-	 * zu ermitteln.
-	 * 
-	 * \note WaitForMe() wird inder aufrufenden Methode ausgeführt.
-	 * 
-	 * @return true falls angehakt, sonst false
-	 * 
-	 *         \~english
-	 * 
-	 *         \~
-	 * @author Zoltan Hrabovszki \date 2013.04.11
-	 */
-	public Boolean getIsSelected() {
-		Boolean lvbReturn = false;
+        /**
+         * \~german
+         *  Method liefert den aktuellen Zustand der Checkbox, "angehakt" oder "nicht angehakt".
+         *  
+         *  Alle Methoden dieser Klasse verwenden diese Methode um den aktuellen Zustand zu ermitteln.
+         *  
+         *  \note WaitForMe() wird inder aufrufenden Methode ausgeführt.
+         *  
+         *  @return true falls angehakt, sonst false
+         *  
+         *  \~english
+         *  
+         *  \~
+         *  @author Zoltan Hrabovszki
+         *  \date 2013.04.11
+         */
+        public Boolean getIsSelected()
+        {
+            Boolean lvbReturn = false;
+            
+            try
+            {
+                LogFunctionStartDebug("getIsSelected");
 
-		try {
-			LogFunctionStartDebug("getIsSelected");
-
-			// Hole Zusand: "Häkschen" oder kein "Häkschen", das ist hier die Frage...
-			lvbReturn = this.Me().isSelected();
-		} finally {
-			LogFunctionEndDebug(lvbReturn);
-		}
-		return lvbReturn;
-	}
+                // Hole Zusand: "Häkschen" oder kein "Häkschen", das ist hier die Frage...
+                lvbReturn = this.Me().isSelected();
+            }
+            finally
+            {
+                LogFunctionEndDebug(lvbReturn);
+            }
+            return lvbReturn;
+        }
         
 
         /**

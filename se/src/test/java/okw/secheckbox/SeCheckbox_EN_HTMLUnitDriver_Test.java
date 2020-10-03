@@ -36,7 +36,7 @@
 	    Sie sollten eine Kopie der GNU General Public License zusammen mit 
 	    OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
 	*/
-package okw.seinputcheckbox;
+package okw.secheckbox;
 
 import okw.log.Logger_Sngltn;
 import okw.log.log2html.Log2HTML;
@@ -50,7 +50,7 @@ import org.junit.jupiter.api.*;
 * 
 * @author zoltan
 */
-public class SeInputCheckbox_EN_HTMLUnitDriver_Test extends SeInputCheckbox_EN_Test
+public class SeCheckbox_EN_HTMLUnitDriver_Test extends SeCheckbox_EN_Test
 {
 	protected static Log2HTML myLog2HTML = null;
 
