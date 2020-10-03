@@ -128,39 +128,35 @@ import okw.gui.*;
         }
 
         
-        /**
-         * \~german
-         *  Method liefert den aktuellen Zustand der Checkbox, "angehakt" oder "nicht angehakt".
-         *  
-         *  Alle Methoden dieser Klasse verwenden diese Methode um den aktuellen Zustand zu ermitteln.
-         *  
-         *  \note WaitForMe() wird inder aufrufenden Methode ausgeführt.
-         *  
-         *  @return true falls angehakt, sonst false
-         *  
-         *  \~english
-         *  
-         *  \~
-         *  @author Zoltan Hrabovszki
-         *  \date 2013.04.11
-         */
-        public Boolean getIsSelected()
-        {
-            Boolean lvbReturn = false;
-            
-            try
-            {
-                LogFunctionStartDebug("getIsSelected");
+	/**
+	 * \~german Method liefert den aktuellen Zustand der Checkbox, "angehakt" oder
+	 * "nicht angehakt".
+	 * 
+	 * Alle Methoden dieser Klasse verwenden diese Methode um den aktuellen Zustand
+	 * zu ermitteln.
+	 * 
+	 * \note WaitForMe() wird inder aufrufenden Methode ausgeführt.
+	 * 
+	 * @return true falls angehakt, sonst false
+	 * 
+	 *         \~english
+	 * 
+	 *         \~
+	 * @author Zoltan Hrabovszki \date 2013.04.11
+	 */
+	public Boolean getIsSelected() {
+		Boolean lvbReturn = false;
 
-                // Hole Zusand: "Häkschen" oder kein "Häkschen", das ist hier die Frage...
-                lvbReturn = this.Me().isSelected();
-            }
-            finally
-            {
-                LogFunctionEndDebug(lvbReturn);
-            }
-            return lvbReturn;
-        }
+		try {
+			LogFunctionStartDebug("getIsSelected");
+
+			// Hole Zusand: "Häkschen" oder kein "Häkschen", das ist hier die Frage...
+			lvbReturn = this.Me().isSelected();
+		} finally {
+			LogFunctionEndDebug(lvbReturn);
+		}
+		return lvbReturn;
+	}
         
 
         /**

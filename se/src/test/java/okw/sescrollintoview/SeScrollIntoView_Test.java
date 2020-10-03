@@ -66,18 +66,87 @@ public class SeScrollIntoView_Test  extends OKWTestBase
    * Name -> Last Name
    */
   
-  // \brief
-  // Testet das Schlüsselwort SetValue( FN ) eines SeInputText-es.
-  //
+  /**
+   * Testet das Scrollen für ein InputButton.
+   */
+  @Test
+  public void tcInputTypeButtonScroll() throws Exception
+  {
+      EN.BeginTest( TestName );
+      EN.StartApp( ApplicationName );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/scrollintoview/InputTypeButtonScroll.htm" );
+
+      EN.SelectWindow( "Scroll Into View InputTypeButton" );
+      EN.VerifyValue( "Textfield unten", "${EMPTY}" );
+      EN.VerifyValue( "Textfield oben", "${EMPTY}" );
+      
+      EN.ClickOn("Button 1 unten");
+      EN.VerifyValue( "Textfield unten", "Ich bin Button 1 unten" );
+      EN.VerifyValue( "Textfield oben", "${EMPTY}" );
+
+      EN.ClickOn("Button 1 oben");
+      EN.VerifyValue( "Textfield unten", "Ich bin Button 1 unten" );
+      EN.VerifyValue( "Textfield oben", "Ich bin Button 1 oben" );
+
+      EN.ClickOn("Button 2 unten");
+      EN.VerifyValue( "Textfield unten", "Ich bin Button 2 unten" );
+      EN.VerifyValue( "Textfield oben", "Ich bin Button 1 oben" );
+
+      EN.ClickOn("Button 2 oben");
+      EN.VerifyValue( "Textfield unten", "Ich bin Button 2 unten" );
+      EN.VerifyValue( "Textfield oben", "Ich bin Button 2 oben" );
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+  }
+
+  /**
+   * Testet das Scrollen für ein InputButton.
+   */
+  @Test
+  public void tcButtonScroll() throws Exception
+  {
+      EN.BeginTest( TestName );
+      EN.StartApp( ApplicationName );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/scrollintoview/ButtonScroll.htm" );
+
+      EN.SelectWindow( "Scroll Into View Button" );
+      EN.VerifyValue( "Textfield unten", "${EMPTY}" );
+      EN.VerifyValue( "Textfield oben", "${EMPTY}" );
+      
+      EN.ClickOn("Button 1 unten");
+      EN.VerifyValue( "Textfield unten", "Ich bin Button 1 unten" );
+      EN.VerifyValue( "Textfield oben", "${EMPTY}" );
+
+      EN.ClickOn("Button 1 oben");
+      EN.VerifyValue( "Textfield unten", "Ich bin Button 1 unten" );
+      EN.VerifyValue( "Textfield oben", "Ich bin Button 1 oben" );
+
+      EN.ClickOn("Button 2 unten");
+      EN.VerifyValue( "Textfield unten", "Ich bin Button 2 unten" );
+      EN.VerifyValue( "Textfield oben", "Ich bin Button 1 oben" );
+
+      EN.ClickOn("Button 2 oben");
+      EN.VerifyValue( "Textfield unten", "Ich bin Button 2 unten" );
+      EN.VerifyValue( "Textfield oben", "Ich bin Button 2 oben" );
+
+      EN.StopApp( ApplicationName );
+      EN.EndTest();
+  }
+
+  
+  /**
+   * Testet das Schlüsselwort SetValue( FN ) eines SeInputText-es.
+   */
   @Test
   public void tcSetValue() throws Exception
   {
       EN.BeginTest( TestName );
       EN.StartApp( ApplicationName );
-      EN.TypeKey( "URL", "http://test.openkeyword.de/InputText/InpuTypeTextscrollIntoView.htm" );
+      EN.TypeKey( "URL", "http://test.openkeyword.de/scrollintoview/InpuTypeTextscrollIntoView.htm" );
 
       EN.SelectWindow( "Scroll Into View InputTypeText" );
-      EN.VerifyValue( "Last Name", "" );
+      EN.VerifyValue( "Last Name", "" ); // FIXME: expected is: "${EMPTY}"
 
       EN.SetValue( "Last Name", "Hrabovszki" );
       EN.VerifyValue( "Last Name", "Hrabovszki" );
@@ -93,4 +162,5 @@ public class SeScrollIntoView_Test  extends OKWTestBase
       EN.StopApp( ApplicationName );
       EN.EndTest();
   }
+
 }

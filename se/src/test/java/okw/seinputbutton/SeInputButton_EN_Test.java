@@ -83,10 +83,10 @@ import okw.exceptions.OKWVerifyingFailsException;
                 EN.SelectWindow("InputButton");
 
                 EN.ClickOn("Text_1");
-                EN.VerifyValue("Display", "Ich bin Button 1 - ganz normal");
+                EN.VerifyValue("Display", "Ich bin Button 1");
 
                 EN.ClickOn("Text_2");
-                EN.VerifyValue("Display", "Ich bin Button 2 - ganz normal");
+                EN.VerifyValue("Display", "Ich bin Button 2");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -377,8 +377,8 @@ import okw.exceptions.OKWVerifyingFailsException;
                 EN.MemorizeTooltip("Text_1", "SePushButton_MemorizeTooltip_1");
                 EN.MemorizeTooltip("Text_2", "SePushButton_MemorizeTooltip_2");
 
-                assertEquals("Button 1 Tooltip/title", myMM.get("SePushButton_MemorizeTooltip_1"));
-                assertEquals("Button 2 Tooltip/title", myMM.get("SePushButton_MemorizeTooltip_2"));
+                assertEquals("title: Button 1", myMM.get("SePushButton_MemorizeTooltip_1"));
+                assertEquals("title: Button 2", myMM.get("SePushButton_MemorizeTooltip_2"));
 
 
                 EN.StopApp( ApplicationName );
@@ -885,13 +885,13 @@ import okw.exceptions.OKWVerifyingFailsException;
                 EN.EndTest();
         }
 
-        // \~german
-        // \brief
+        /** \~german
         // Test des Schlüsselwortes VerifyToolTip für den GUI-Adapter SeInputButton.
         // 
         // \~
-        // \author Zoltán Hrabovszki
+        // @author Zoltán Hrabovszki
         // \date 2015.02.28
+         */
         @Test
         public void tc_VerifyToolTip() throws Exception
         {
@@ -901,20 +901,20 @@ import okw.exceptions.OKWVerifyingFailsException;
 
                 EN.SelectWindow("InputButton");
 
-                EN.VerifyTooltip("Text_1", "Button 1 Tooltip/title");
-                EN.VerifyTooltip("Text_2", "Button 2 Tooltip/title");
+                EN.VerifyTooltip("Text_1", "title: Button 1");
+                EN.VerifyTooltip("Text_2", "title: Button 2");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
         }
  
-        // \~german
-        // \brief
-        // Test des Schlüsselwortes VerifyToolTipWCM für den GUI-Adapter SeInputButton.
-        // 
-        // \~
-        // \author Zoltán Hrabovszki
-        // \date 2015.02.28
+        /** \~german
+         * Test des Schlüsselwortes VerifyToolTipWCM für den GUI-Adapter SeInputButton.
+         * 
+         * \~
+         * \author Zoltán Hrabovszki
+         * \date 2015.02.28
+         */
         @Test
         public void tc_VerifyToolTipWCM() throws Exception
         {
@@ -924,8 +924,8 @@ import okw.exceptions.OKWVerifyingFailsException;
 
                 EN.SelectWindow("InputButton");
 
-                EN.VerifyTooltipWCM("Text_1", "?utton # Tooltip/title");
-                EN.VerifyTooltipWCM("Text_2", "?utton # Tooltip/title");
+                EN.VerifyTooltipWCM("Text_1", "title: ?utton #");
+                EN.VerifyTooltipWCM("Text_2", "title: ?utton #");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();
@@ -947,8 +947,8 @@ import okw.exceptions.OKWVerifyingFailsException;
 
                 EN.SelectWindow("InputButton");
 
-                EN.VerifyTooltipREGX("Text_1", "Button 1 Tooltip/title");
-                EN.VerifyTooltipREGX("Text_2", "Button 2 Tooltip/title");
+                EN.VerifyTooltipREGX("Text_1", "title: Button 1");
+                EN.VerifyTooltipREGX("Text_2", "title: Button 2");
 
                 EN.StopApp( ApplicationName );
                 EN.EndTest();

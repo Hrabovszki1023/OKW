@@ -86,7 +86,7 @@ public class SeBrowserChild extends SeAnyWindow
     @OKW( FN = "#Alert input")
     public SeALERTDATA ALERTDATA = new SeALERTDATA();
     
-    @OKW( FN = "#Alert CANCEL")
+    @OKW( FN = "#Alert Cancel")
     public SeALERTDISMISS ALERTDISMISS = new SeALERTDISMISS();
 
     @OKW( FN = "#Alert OK")

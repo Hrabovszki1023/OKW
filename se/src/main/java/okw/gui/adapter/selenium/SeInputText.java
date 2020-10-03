@@ -282,6 +282,7 @@ public class SeInputText extends SeAnyChildWindow
             this.WaitForMe();
 
             WebElement myMe = this.Me();
+            
             myMe.clear();
 
             if ( Val.get( 0 ).equals( okw.OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "DELETE" ) ) )

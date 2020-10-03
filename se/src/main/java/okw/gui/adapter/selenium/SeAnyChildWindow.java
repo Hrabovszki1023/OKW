@@ -62,6 +62,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.xml.sax.SAXException;
 
 /**
@@ -135,6 +136,8 @@ public class SeAnyChildWindow extends AnyChildwindow
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
             this.LogPrint( "vor WaitForMe()");
             this.WaitForMe();
+            
+            scrollIntoView();
             
             this.LogPrint( "Vor WaitForInteraction()");
             
@@ -731,6 +734,27 @@ public class SeAnyChildWindow extends AnyChildwindow
         return me;
     }
 
+
+    /** \~german
+     *  Verschiebt das aktuelle Element in den sichtbaren Bereich.
+     *  
+     *  @return Refernz auf das gefunde DOM-Element
+     *  \~
+     *  @author Zoltán Hrabovszki
+     *  \date 2020.10.02
+     */
+    public void scrollIntoView()
+    {
+        WebElement me = SeDriver.getInstance().getWebElement( this.getLocator() );
+        
+        Actions actions = new Actions(SeDriver.getInstance().getDriver());
+        actions.moveToElement(me);
+        actions.perform();
+
+        return;
+    }
+
+    
     /** \~german
     *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refMemorizeCaption aufgerufen wird.
     *  
@@ -1162,7 +1186,7 @@ public class SeAnyChildWindow extends AnyChildwindow
         {
             LogFunctionStartDebug( "SetValue" );
 
-            String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "SetValue()" );
+            String lvsLM = this.LM.GetMessage( "Common", "OKWGUIObjectNotFoundException", "SetValue()" ); // FIXME Flasche Fehlemeldung? Prüfen
             throw new OKWFrameObjectMethodNotImplemented( lvsLM );
         }
         finally

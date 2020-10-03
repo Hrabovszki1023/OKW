@@ -76,7 +76,7 @@ public class frmInputButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
            )
-  public SeInputButton NichtVorhanden = new SeInputButton( "//*[@name='NichtVorhanden']" );
+  public SeInputButton NichtVorhanden = new SeInputButton( "//*[@data-harmony-id='NichtVorhanden']" );
 
   @OKW( FN = "Text_1",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -87,7 +87,7 @@ public class frmInputButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
           )
-  public SeInputButton Text_1         = new SeInputButton( "//*[@name='Button 1']" );
+  public SeInputButton Text_1         = new SeInputButton( "//*[@data-harmony-id='Button 1']" );
 
   @OKW( FN = "Text_2",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -98,7 +98,7 @@ public class frmInputButton extends SeBrowserChild
           VerifyExists_PT=500, VerifyExists_TO=1,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
           )
-  public SeInputButton Text_2         = new SeInputButton( "//*[@name='Button 2']" );
+  public SeInputButton Text_2         = new SeInputButton( "//*[@data-harmony-id='Button 2']" );
 
   @OKW( FN = "Button_3",
           VerifyLabel_PT=500, VerifyLabel_TO=1,
@@ -120,6 +120,6 @@ public class frmInputButton extends SeBrowserChild
    */
   public frmInputButton()
   {
-      setLocator( "//title[contains(text(),'This is the page-title of input_type-button.htm')]/../.." );
+      setLocator( "//*[@data-harmony-id='input_type-button']" );
   }
 }

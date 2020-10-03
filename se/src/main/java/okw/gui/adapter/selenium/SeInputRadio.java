@@ -244,7 +244,7 @@ public class SeInputRadio extends SeAnyChildWindow
   /**
    * \~german
    *  Ein SeInputButton IstkeinMenüobject! -> OKWFrameObjectMethodNotImplemented
-   *  Auslösen!
+   *  auslösen!
    *
    * \~english
    *  A SeInputButton has no value! -> Trigger
