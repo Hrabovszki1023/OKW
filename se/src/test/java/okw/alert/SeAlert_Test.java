@@ -28,7 +28,7 @@ public class SeAlert_Test extends OKWTestBase {
 		EN.SelectWindow("Alert");
 		EN.ClickOn("Try it");
 		
-		EN.ClickOn("#Alert CANCEL");
+		EN.ClickOn("#Alert Cancel");
 		
 		EN.VerifyValue( "Anzeige", "User cancelled the prompt.");
 
