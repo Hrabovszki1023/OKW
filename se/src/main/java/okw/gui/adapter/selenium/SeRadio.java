@@ -132,7 +132,7 @@ import okw.gui.OKWLocatorBase;
  *  @author Zoltan Hrabovszki
  *  \date 2013.04.11
  */
-public class SeInputRadio extends SeAnyChildWindow
+public class SeRadio extends SeAnyChildWindow
 {
 
   /**
@@ -140,7 +140,7 @@ public class SeInputRadio extends SeAnyChildWindow
    *  
    *  \date 2013.04.11
    */         
-  public SeInputRadio( String Locator, OKWLocatorBase... Locators )
+  public SeRadio( String Locator, OKWLocatorBase... Locators )
   {
       super(Locator, Locators);
   }

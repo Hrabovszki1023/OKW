@@ -368,7 +368,7 @@ public class SeRadioList extends SeAnyChildWindow
             for ( String lvsRadioButtonFN : myRadioButtonKeys )
             {
 
-                ArrayList<String> Actuel = ( ( SeInputRadio ) FOD.getParentObjectByName( lvsRadioButtonFN ) ).getValue();
+                ArrayList<String> Actuel = ( ( SeRadio ) FOD.getParentObjectByName( lvsRadioButtonFN ) ).getValue();
 
                 if ( isChecked.equals( Actuel.get( 0 ) ) )
                 {

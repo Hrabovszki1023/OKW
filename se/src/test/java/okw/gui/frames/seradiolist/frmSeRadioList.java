@@ -3,7 +3,7 @@ package okw.gui.frames.seradiolist;
 import okw.OKW;
 import okw.gui.OKWLocatorBase;
 import okw.gui.adapter.selenium.SeBrowserChild;
-import okw.gui.adapter.selenium.SeInputRadio;
+import okw.gui.adapter.selenium.SeRadio;
 import okw.gui.adapter.selenium.SeRadioList;
 
 @OKW( FN = "SeRadioList" )
@@ -25,13 +25,13 @@ public class frmSeRadioList extends SeBrowserChild
         }
 
         @OKW( FN = "Pay Method.Visa" )
-        public SeInputRadio myVisa            = new SeInputRadio( "//input[@id='id_visa']", this.getLOCATOR() );
+        public SeRadio myVisa            = new SeRadio( "//input[@id='id_visa']", this.getLOCATOR() );
 
         @OKW( FN = "Pay Method.American Express" )
-        public SeInputRadio myAmericanExpress = new SeInputRadio( "//input[@id='id_american_express']", this.getLOCATOR() );
+        public SeRadio myAmericanExpress = new SeRadio( "//input[@id='id_american_express']", this.getLOCATOR() );
 
         @OKW( FN = "Pay Method.Mastercard" )
-        public SeInputRadio myMastercard      = new SeInputRadio( "//input[@id='id_mastercard']", this.getLOCATOR() );
+        public SeRadio myMastercard      = new SeRadio( "//input[@id='id_mastercard']", this.getLOCATOR() );
 
     };
 
