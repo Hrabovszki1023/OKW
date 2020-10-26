@@ -35,7 +35,7 @@
 
     Sie sollten eine Kopie der GNU General Public License zusammen mit 
     OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
-*/
+ */
 package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
@@ -210,10 +210,9 @@ public class SeTextarea extends SeAnyChildWindow {
 	public void SetValue(ArrayList<String> Values) {
 		this.LogFunctionStartDebug("SetValue", "Val", Values.toString());
 
-		try {
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit
-			// OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
+		try
+		{
+			SetFocus();
 
 			WebElement myMe = this.Me();
 			myMe.clear();
@@ -222,12 +221,12 @@ public class SeTextarea extends SeAnyChildWindow {
 			{
 				if (Value.equals(OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname("DELETE")))
 				{
-                    this.WaitForInteraction( () -> {myMe.clear();} );
+					this.WaitForInteraction( () -> {myMe.clear();} );
 				}
 				else
 				{
-                    String resolvedValue = okw.parser.SeKeyParser.ParseMe( Value );
-                    this.WaitForInteraction( (  ) -> {myMe.sendKeys( resolvedValue );} );
+					String resolvedValue = okw.parser.SeKeyParser.ParseMe( Value );
+					this.WaitForInteraction( (  ) -> {myMe.sendKeys( resolvedValue );} );
 				}
 			}
 		}

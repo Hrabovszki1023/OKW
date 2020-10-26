@@ -115,12 +115,14 @@ public class SeAnyChildWindow extends AnyChildwindow
     
     
     /** \~german
-     *  Das ist die GUI-Adapter Methode, die durch das Schlüsselwort \ref refClickOn aufgerufen wird.
+     *  Das ist die GUI-Adapter Methode, durch das Schlüsselwort \ref refClickOn aufgerufen wird.
      *  
      *  Diese Methode:
      *  
      *  -# Wartet zunächst, bis das Objekt existiert.
-     *  -# Klickt dann auf das aktuelle Objekt.
+     *  -# Setzt den Fokus mit SetFocus() auf das Objekt, damit ggf. ein Trigger beim Verlassen eines anderen GUI-Objektes ausgelöst wird.
+     *     
+     *  -# Klickt danach auf das aktuelle Objekt.
      *  
      *  \~english
      *  \~
@@ -134,10 +136,8 @@ public class SeAnyChildWindow extends AnyChildwindow
             this.LogFunctionStartDebug( "ClickOn" );
 
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-            this.LogPrint( "vor WaitForMe()");
-            this.WaitForMe();
-            
-            scrollIntoView();
+            // Fokus wird gesetzt.
+            this.SetFocus();
             
             this.LogPrint( "Vor WaitForInteraction()");
             
@@ -1063,7 +1063,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      * \~german
      * 
      * \~english
-
+     * 
      * \~
      *  @author Zoltán Hrabovszki
      *  \date 2016.10.06
@@ -1144,7 +1144,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      *  
      *  __Anmerkung:__ Kleiner Trick: Selenium kennt keine öffentliche Methode
      *  für das setzen des Fokus. So weit ich es verstanden habe, wird intern jedoch
-     *  methode SetFocus verwendt, wenn <tt>SendKeys</tt> aufgerufen wird.
+     *  Methode SetFocus verwendt, wenn <tt>SendKeys</tt> aufgerufen wird.
      *  Quelle: http://stackoverflow.com/questions/7491806/in-selenium-how-do-i-find-the-current-object
      *  
      *  \~english
@@ -1153,7 +1153,7 @@ public class SeAnyChildWindow extends AnyChildwindow
      * @throws Exception 
      *  \date 2013.11.11
      */
-    public void SetFocus() throws Exception
+    public void SetFocus() // throws Exception
     {
 
         try
@@ -1163,6 +1163,8 @@ public class SeAnyChildWindow extends AnyChildwindow
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
             this.WaitForMe();
 
+            scrollIntoView();
+            
             this.WaitForInteraction( () -> {this.Me().sendKeys( "" );} );
 
         }
@@ -1213,8 +1215,8 @@ public class SeAnyChildWindow extends AnyChildwindow
             LogFunctionStartDebug( "TypeKey", "fps_Values", fps_Values.toString() );
 
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-            this.WaitForMe();
-
+            SetFocus();
+            
             // We are using a local-Variable to prevent multiple call of Me() in foreach-loop
             WebElement lv_WebElement = this.Me();
 

@@ -2,8 +2,9 @@ package okw.gui.adapter.selenium;
 
 import okw.gui.OKWLocatorBase;
 
-public class SeAriaCheckbox extends SeCheckbox {
-	public SeAriaCheckbox(String Locator, OKWLocatorBase[] Locators) {
+public class SeAriaCheckbox extends SeCheckbox
+{
+	public SeAriaCheckbox( String Locator, OKWLocatorBase... Locators ) {
 		super(Locator, Locators);
 	}
 

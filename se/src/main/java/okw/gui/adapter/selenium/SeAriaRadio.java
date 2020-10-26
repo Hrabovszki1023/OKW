@@ -2,8 +2,10 @@ package okw.gui.adapter.selenium;
 
 import okw.gui.OKWLocatorBase;
 
-public class SeAriaRadio extends SeRadio {
-	public SeAriaRadio(String Locator, OKWLocatorBase[] Locators) {
+public class SeAriaRadio extends SeRadio
+{
+	public SeAriaRadio( String Locator, OKWLocatorBase... Locators )
+	{
 		super(Locator, Locators);
 	}
 

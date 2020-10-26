@@ -168,7 +168,7 @@ public class SeSelect extends SeAnyChildWindow
             // Waiting for the object. 
             // If it does not exist after TimeOut 
             // then the exception OKWGUIObjectNotFoundException is raised and terminated...
-            this.WaitForMe();
+            SetFocus();
 
             //org.openqa.selenium.support.ui.Select
             Select SelectList = new Select( this.Me() );
@@ -217,8 +217,8 @@ public class SeSelect extends SeAnyChildWindow
             // Waiting for the object. 
             // If it does not exist after TimeOut 
             // then the exception OKWGUIObjectNotFoundException is raised and terminated...
-            this.WaitForMe();
-
+            SetFocus();
+            
             Select SelectList = new Select( this.Me() );
 
             // Zunächst alle ausgwählten Werte der Listbox löschen, wenn eine mehrfachauswahl möglich ist...

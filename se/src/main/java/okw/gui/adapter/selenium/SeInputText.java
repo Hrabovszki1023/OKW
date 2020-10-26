@@ -279,7 +279,7 @@ public class SeInputText extends SeAnyChildWindow
             this.LogFunctionStartDebug( "SetValue", "Val", Val.toString() );
 
             // Wenn GUI-Objekt nicht gefunden wird, mit OKWGUIObjectNotFoundException aussteigen
-            this.WaitForMe();
+            this.SetFocus();
 
             WebElement myMe = this.Me();
             
