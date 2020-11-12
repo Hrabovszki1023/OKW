@@ -60,6 +60,7 @@ import okw.OKW_TimeOut;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.InvalidElementStateException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -747,10 +748,12 @@ public class SeAnyChildWindow extends AnyChildwindow
     {
         WebElement me = SeDriver.getInstance().getWebElement( this.getLocator() );
         
-        Actions actions = new Actions(SeDriver.getInstance().getDriver());
-        actions.moveToElement(me);
-        actions.perform();
-
+        if (!me.isDisplayed())
+        {
+            ((JavascriptExecutor) SeDriver.getInstance().getDriver())
+                .executeScript("arguments[0].scrollIntoView({block:'nearest'})", me);
+        }
+        
         return;
     }
 
