@@ -34,7 +34,7 @@
  OpenKeyWord erhalten haben. Wenn nicht, siehe <http://www.gnu.org/licenses/>.
  */
 
-package okw.harmonyNotUniqueError;
+package okw.harmony;
 
 import okw.OKWTestBase;
 import okw.core.EN;

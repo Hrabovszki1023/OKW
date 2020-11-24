@@ -750,10 +750,24 @@ public class SeAnyChildWindow extends AnyChildwindow
         
         if (!me.isDisplayed())
         {
+        	this.LogPrint("Objekt ist nicht sichtbar: Scrollen...");
+        	
             ((JavascriptExecutor) SeDriver.getInstance().getDriver())
                 .executeScript("arguments[0].scrollIntoView({block:'nearest'})", me);
+            
+            try {
+            	this.LogPrint(" und warte 1s...");
+    			Thread.sleep(2000);
+    		} catch (InterruptedException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
         }
-        
+        else
+        {
+        	this.LogPrint("Objekt ist sichtbar.");
+        }
+                
         return;
     }
 
@@ -1167,7 +1181,7 @@ public class SeAnyChildWindow extends AnyChildwindow
             this.WaitForMe();
 
             scrollIntoView();
-            
+                        
             this.WaitForInteraction( () -> {this.Me().sendKeys( "" );} );
 
         }

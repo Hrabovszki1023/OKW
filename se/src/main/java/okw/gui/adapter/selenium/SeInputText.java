@@ -280,7 +280,7 @@ public class SeInputText extends SeAnyChildWindow
 
             // Wenn GUI-Objekt nicht gefunden wird, mit OKWGUIObjectNotFoundException aussteigen
             this.SetFocus();
-
+            
             WebElement myMe = this.Me();
             
             myMe.clear();
