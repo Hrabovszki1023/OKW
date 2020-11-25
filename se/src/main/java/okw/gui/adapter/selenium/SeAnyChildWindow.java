@@ -138,9 +138,12 @@ public class SeAnyChildWindow extends AnyChildwindow
 
             // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
             // Fokus wird gesetzt.
-            this.SetFocus();
+            this.WaitForMe();
             
-            this.LogPrint( "Vor WaitForInteraction()");
+            // this.SetFocus();
+
+            scrollIntoView();
+            
             
             this.WaitForInteraction( () -> {this.Me().click();} );
         }
