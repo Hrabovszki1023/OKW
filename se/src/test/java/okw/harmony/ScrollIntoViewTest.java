@@ -119,9 +119,11 @@ public class ScrollIntoViewTest extends OKWTestBase
     EN.ClickOn("Organization users");
     
     EN.ClickOn( "checkbbox" );
-    EN.ClickOn( "checkbbox" );
-    EN.ClickOn( "checkbbox" );
-    EN.ClickOn( "checkbbox" );
+    
+    EN.SetValue( "checkbbox", "UNCHECKED" );
+    EN.SetValue( "checkbbox", "CHECKED" );
+    EN.SetValue( "checkbbox", "UNCHECKED" );
+    EN.SetValue( "checkbbox", "CHECKED" );
 
     
     // EN.StopApp( "Chrome" );

@@ -261,7 +261,8 @@ public class SeCheckbox extends SeAnyChildWindow
 
 			// Warten auf das Objekt und Den Focus setzten.
 			// Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			this.SetFocus();
+			// this.SetFocus();
+			
 
 			// Sprachabhängige Werte holen
 			String lvsCHECKED = myOKW_Const.GetConst4Internalname("CHECKED");
@@ -315,7 +316,7 @@ public class SeCheckbox extends SeAnyChildWindow
 		try
 		{
 			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			this.SetFocus();
+			// this.SetFocus();
 
 			// Sprachabhängige Werte holen
 			String lvsCHECKED = myOKW_Const.GetConst4Internalname("CHECKED");
