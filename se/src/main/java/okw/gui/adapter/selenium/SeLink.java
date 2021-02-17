@@ -40,6 +40,7 @@ package okw.gui.adapter.selenium;
 */
 
 import java.util.ArrayList;
+
 import okw.gui.OKWLocatorBase;
 
 /**
@@ -189,11 +190,11 @@ public class SeLink extends SeAnyChildWindow
         {
             this.LogFunctionStartDebug( "getValue" );
     
-            // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-            this.WaitForMe();
-    
             // The Attribute "value" wird als Beschriftung angezeigt...
-            lvLsReturn.add( this.Me().getAttribute( "href" ) );
+			String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "href" ); } );
+
+			// Wert des Attributes "src" wird als Wert zurückgegeben
+			lvLsReturn.add( myAttribute ) ;
         }
         finally
         {

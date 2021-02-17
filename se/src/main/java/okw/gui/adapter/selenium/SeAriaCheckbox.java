@@ -15,7 +15,8 @@ public class SeAriaCheckbox extends SeCheckbox
 		try {
 			LogFunctionStartDebug("getIsSelected");
 
-			lvbReturn = this.Me().getAttribute("aria-checked").equalsIgnoreCase("true");
+			lvbReturn = this.WaitForInteractionReturnBoolean( () -> { return this.Me().getAttribute("aria-checked").equalsIgnoreCase("true"); } );
+			
 		} finally {
 			LogFunctionEndDebug(lvbReturn);
 		}

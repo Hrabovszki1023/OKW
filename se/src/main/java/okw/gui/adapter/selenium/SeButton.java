@@ -43,7 +43,7 @@ import java.util.ArrayList;
 
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.gui.OKWLocatorBase;
-import org.apache.commons.lang3.StringUtils;
+
 
 /**
  * @ingroup groupSeleniumChildGUIAdapter 
@@ -133,42 +133,42 @@ public class SeButton extends SeAnyChildWindow
     }
 
 
-    /**
-     * \~german Ermittelt den textuellen Inhalt der Caption/Überschrift des
-     * Objektes.
-     * 
-     * @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
-     * \~english
-     * \~
-     * @author Zoltán Hrabovszki
-     * @throws Exception
-     * \date 2013.12.07
-     */
-    //@Override // TODO define Prototype in BaseClass!
-    public ArrayList<String> __getCaption()
-    {
-        ArrayList<String> lvLsReturn = new ArrayList<String>();
-        try
-        {
-            this.LogFunctionStartDebug( "GetCaption" );
-
-            // Warten auf das Objekt. Wenn es nicht existiert mit Exception
-            // beenden...
-            this.WaitForMe();
-
-            // The Attribute "textContent" wird als Beschriftung angezeigt...
-            String myAttribute = this.Me().getAttribute( "textContent" );
-            myAttribute = StringUtils.normalizeSpace( myAttribute );
-            
-            lvLsReturn.add( myAttribute );
-        }
-        finally
-        {
-            this.LogFunctionEndDebug( lvLsReturn );
-        }
-
-        return lvLsReturn;
-    }
+//    /**
+//     * \~german Ermittelt den textuellen Inhalt der Caption/Überschrift des
+//     * Objektes.
+//     * 
+//     * @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
+//     * \~english
+//     * \~
+//     * @author Zoltán Hrabovszki
+//     * @throws Exception
+//     * \date 2013.12.07
+//     */
+//    //@Override // TODO define Prototype in BaseClass!
+//    public ArrayList<String> __getCaption()
+//    {
+//        ArrayList<String> lvLsReturn = new ArrayList<String>();
+//        try
+//        {
+//            this.LogFunctionStartDebug( "GetCaption" );
+//
+//            // Warten auf das Objekt. Wenn es nicht existiert mit Exception
+//            // beenden...
+//            this.WaitForMe();
+//
+//            // The Attribute "textContent" wird als Beschriftung angezeigt...
+//            String myAttribute = this.Me().getAttribute( "textContent" );
+//            myAttribute = StringUtils.normalizeSpace( myAttribute );
+//            
+//            lvLsReturn.add( myAttribute );
+//        }
+//        finally
+//        {
+//            this.LogFunctionEndDebug( lvLsReturn );
+//        }
+//
+//        return lvLsReturn;
+//    }
 
     /**
      * \~german Ein SeInputButton hat keinen Wert! -> OKWFrameObjectMethodNotImplemented Auslösen!

@@ -631,7 +631,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+                this.isValueAllowed( MemKey, "IGNORE", "DELETE" );                
 
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeCaption();
 
@@ -662,15 +662,14 @@ public class OK implements IOKW_State
             // Prüfen ob ignoriert werden muss...
             if ( MemKey.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "IGNORE" ) ) || MemKey.equals( "" ) )
             {
-                // Wenn fpsMemKeyName = IGNORE oder "" ist ->
-                // OKWNotAllowedValueException auslösen...
-                String lvsLM = PROP.getProperty( "OKWNotAllowedValueException.${LANGUAGE}", MemKey );
-                throw new OKWNotAllowedValueException( lvsLM );
+                // Wenn der 1. Wert = IGNORE ist -> keine weitere Aktion...
+                String lvsLM = PROP.getProperty( "ok.Ignore.${LANGUAGE}" );
+                Log.LogPrint( lvsLM );
             }
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+                this.isValueAllowed( MemKey, "IGNORE", "EMPTY", "DELETE" );                
 
                 Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeExists();
 
@@ -709,7 +708,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+                this.isValueAllowed( MemKey, "IGNORE", "DELETE" );                
 
                 Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeHasFocus();
 
@@ -748,7 +747,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+                this.isValueAllowed( MemKey, "IGNORE", "DELETE" );                
 
                 Boolean lvbActual = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeIsActive();
 
@@ -786,7 +785,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in MemVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+                this.isValueAllowed( MemKey, "IGNORE", "DELETE" );                
 
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeLabel();
 
@@ -824,7 +823,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in MemVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+                this.isValueAllowed( MemKey, "IGNORE", "DELETE" );                
 
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizePlaceholder();
 
@@ -862,7 +861,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in MemVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+                this.isValueAllowed( MemKey, "IGNORE", "DELETE" );                
 
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeSelectedValue();
 
@@ -901,7 +900,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in MemVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( MemKey, "IGNORE", "DELETE" );
+                this.isValueAllowed( MemKey, "IGNORE", "DELETE" );
 
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeTablecellValue( COL, ROW );
 
@@ -940,7 +939,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in MemVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+                this.isValueAllowed( MemKey, "IGNORE", "DELETE" );                
 
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeTooltip();
 
@@ -979,7 +978,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in MemVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( MemKey, "IGNORE", "DELETE" );                
+                this.isValueAllowed( MemKey, "IGNORE", "DELETE" );                
 
                 ArrayList<String> ActualValues = ( ( IGUIChildwindow ) CO.setChildName( FN ) ).MemorizeValue();
 
@@ -1017,7 +1016,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in Val ->  trigger OKWNotAllowedValueException
-                this.newMethod( Val, "IGNORE" );                
+                this.isValueAllowed( Val, "IGNORE" );                
 
                 // Sonst Methode des Objektes aufrufen....
                 ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
@@ -1078,7 +1077,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in Val ->  trigger OKWNotAllowedValueException
-                this.newMethod( Val, "IGNORE" );                
+                this.isValueAllowed( Val, "IGNORE" );                
 
                 ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
 
@@ -1200,7 +1199,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in SEQ_ID ->  trigger OKWNotAllowedValueException
-                this.newMethod( SEQ_ID, "IGNORE", "DELETE" );                
+                this.isValueAllowed( SEQ_ID, "IGNORE", "DELETE" );                
 
                 CO.Sequence( FN, SEQ_Name, SEQ_ID );
             }
@@ -1270,7 +1269,7 @@ public class OK implements IOKW_State
             else
             {   
                 // If One of the Give OKW-Const-Values is contained in Val ->  trigger OKWNotAllowedValueException
-                this.newMethod( Val, "IGNORE" );                
+                this.isValueAllowed( Val, "IGNORE", "EMPTY" );                
 
                 lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
 
@@ -1380,7 +1379,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in Val ->  trigger OKWNotAllowedValueException
-                this.newMethod( Val, "IGNORE" );                
+                this.isValueAllowed( Val, "IGNORE", "EMPTY" );                
                 
                 lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
 
@@ -1421,7 +1420,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in Val ->  trigger OKWNotAllowedValueException
-                this.newMethod( Val, "IGNORE" );                
+                this.isValueAllowed( Val, "IGNORE" );                
 
                 // Werte in Val separieren
                 lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
@@ -1461,7 +1460,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in Val ->  trigger OKWNotAllowedValueException
-                this.newMethod( Val, "IGNORE" );                
+                this.isValueAllowed( Val, "IGNORE" );                
 
                 ArrayList<String> lvlsValue = OKW_Const_Sngltn.getInstance().SplitSEP( Val );
                 lvlsValue = Parser.ParseMe( lvlsValue );
@@ -1502,7 +1501,7 @@ public class OK implements IOKW_State
 	        else
 	        {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
 	            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
 	            {
@@ -1563,7 +1562,7 @@ public class OK implements IOKW_State
 	        else
 	        {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
 	            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
 	            {
@@ -1624,7 +1623,7 @@ public class OK implements IOKW_State
 	        else
 	        {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
 	            if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
 	            {
@@ -1685,7 +1684,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -1743,7 +1742,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -1804,7 +1803,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -2759,7 +2758,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -2818,7 +2817,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -2878,7 +2877,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -2938,7 +2937,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -2998,7 +2997,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -3059,7 +3058,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE",  "SEP", "VSEP", "HSEP", "EMPTY" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE",  "SEP", "VSEP", "HSEP", "EMPTY" );                
 
                 try {
                     String myExpVal = Parser.ParseMe( ExpVal );
@@ -3121,7 +3120,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -3180,7 +3179,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -3240,7 +3239,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -3300,7 +3299,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -3359,7 +3358,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -3418,7 +3417,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -3477,7 +3476,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -3536,7 +3535,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -3595,7 +3594,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -3656,7 +3655,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -3715,7 +3714,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -3775,7 +3774,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -3837,7 +3836,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -4350,7 +4349,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE",  "SEP", "VSEP", "HSEP", "EMPTY" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE",  "SEP", "VSEP", "HSEP", "EMPTY" );                
 
                 try
                 {
@@ -4411,7 +4410,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the given OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -4470,7 +4469,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the given OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -4530,7 +4529,7 @@ public class OK implements IOKW_State
             else
             {
                 // If One of the Give OKW-Const-Values is contained in ExpVal ->  trigger OKWNotAllowedValueException
-                this.newMethod( ExpVal, "IGNORE", "DELETE" );                
+                this.isValueAllowed( ExpVal, "IGNORE", "DELETE" );                
                 
                 if ( ExpVal.equals( OKW_Const_Sngltn.getInstance().GetOKWConst4Internalname( "EMPTY" ) ) )
                 {
@@ -4566,8 +4565,9 @@ public class OK implements IOKW_State
             Log.LogFunctionEndDebug();
         }
     }
+
     
-    protected void newMethod( String ValueToAnalyse, String... NotAllowedValues )
+    protected void isValueAllowed( String ValueToAnalyse, String... NotAllowedValues )
     {
         
         String NotAllowedValue = "";
@@ -4585,6 +4585,7 @@ public class OK implements IOKW_State
             else continue;
         }
     }
+    
     protected void LogVerifyError( String fpsExpected,  String fpsActual )
     {
         Log.LogError( PROP.getProperty( "ok.LogVerifyError.ExpectedActuel.${LANGUAGE}", fpsExpected,  fpsActual ) );

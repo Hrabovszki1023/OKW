@@ -165,10 +165,7 @@ public class SeSelect extends SeAnyChildWindow
 
         try
         {
-            // Waiting for the object. 
-            // If it does not exist after TimeOut 
-            // then the exception OKWGUIObjectNotFoundException is raised and terminated...
-            SetFocus();
+            this.SetFocus();
 
             //org.openqa.selenium.support.ui.Select
             Select SelectList = new Select( this.Me() );
@@ -222,14 +219,14 @@ public class SeSelect extends SeAnyChildWindow
             Select SelectList = new Select( this.Me() );
 
             // Zunächst alle ausgwählten Werte der Listbox löschen, wenn eine mehrfachauswahl möglich ist...
-            if ( SelectList.isMultiple() )
+            if ( WaitForInteractionReturnBoolean( () -> { return SelectList.isMultiple(); } ) )
             {
-                SelectList.deselectAll();
+                WaitForInteraction(() -> { SelectList.deselectAll();});
             }
             else
             {
                 if ( fpsValues.size() > 1 )
-                    this.LogError( "ListBox erlaub keine Mehrfachauswahl." );
+                    this.LogError( "This ListBox does not allow multiple selection." );
                 // \todo TODO: Text in XML auslagern.
                 // \todo TODO: Exception für NichtErlaubte Mehrfachauswahl setzen.
 
@@ -238,7 +235,7 @@ public class SeSelect extends SeAnyChildWindow
             // Danach die gegebene Werte auswählen
             for ( String lvsValue : fpsValues )
             {
-                SelectList.selectByVisibleText( lvsValue );
+                WaitForInteraction(() -> { SelectList.selectByVisibleText( lvsValue );});
             }
         }
         finally
@@ -271,6 +268,8 @@ public class SeSelect extends SeAnyChildWindow
             // Waiting for the object. 
             // If it does not exist after TimeOut 
             // then the exception OKWGUIObjectNotFoundException is raised and terminated...
+            // ========================================
+            // Remeljük hogy ez itt eleg lesz...
             this.WaitForMe();
 
             Select SelectList = new Select( this.Me() );

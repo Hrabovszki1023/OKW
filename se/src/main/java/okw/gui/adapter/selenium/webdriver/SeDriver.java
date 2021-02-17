@@ -235,8 +235,8 @@ public class SeDriver
 
 		ArrayList<WebElement> WebElements = new ArrayList<WebElement>();
 
-		// Haben wir eine Root locator? - Das ist Harmony spezifisch baer nicht nur.
-		// Ist true wenn fpsLocator auf "/*" gesetzt ist.
+		// Haben wir eine Root locator? - Das ist Harmony spezifisch aber nicht nur.
+		// Ist true, wenn fpsLocator auf "/*" gesetzt ist.
 		boolean isRoot = "/*".equals(fpsLocator);
 
 		// Action:

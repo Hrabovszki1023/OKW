@@ -17,7 +17,8 @@ public class SeAriaRadio extends SeRadio
 		{
 			LogFunctionStartDebug("getIsSelected");
 
-			lvbReturn = this.Me().getAttribute("aria-checked").equalsIgnoreCase("true");
+			lvbReturn = this.WaitForInteractionReturnBoolean( () -> { return this.Me().getAttribute("aria-checked").equalsIgnoreCase("true"); } );
+
 		}
 		finally
 		{

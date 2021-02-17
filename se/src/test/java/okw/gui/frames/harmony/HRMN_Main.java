@@ -63,7 +63,7 @@ public class HRMN_Main extends SeBrowserChild
           VerifyValue_PT=500, VerifyValue_TO=1,
           VerifyTooltip_PT=500, VerifyTooltip_TO=1,
           VerifyCaption_PT=500, VerifyCaption_TO=1,
-          VerifyExists_PT=500, VerifyExists_TO=1,
+          VerifyExists_PT=500, VerifyExists_TO=12,
           VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
           )
   public SeAnyChildWindow OrgUsers = new SeLink( "$L1$//*[@data-harmony-id=\"Organization users\"]", this.getLOCATOR() ) ;

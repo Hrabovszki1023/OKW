@@ -47,35 +47,35 @@ public class HRMN_Login extends SeBrowserChild
 {
 
   @OKW( FN = "Email",
-          VerifyLabel_PT=500, VerifyLabel_TO=1,
-          VerifyIsActive_PT=500, VerifyIsActive_TO=1,
-          VerifyValue_PT=500, VerifyValue_TO=1,
-          VerifyTooltip_PT=500, VerifyTooltip_TO=1,
-          VerifyCaption_PT=500, VerifyCaption_TO=1,
-          VerifyExists_PT=500, VerifyExists_TO=1,
-          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
+          VerifyLabel_PT=500, VerifyLabel_TO=10,
+          VerifyIsActive_PT=500, VerifyIsActive_TO=10,
+          VerifyValue_PT=500, VerifyValue_TO=10,
+          VerifyTooltip_PT=500, VerifyTooltip_TO=10,
+          VerifyCaption_PT=500, VerifyCaption_TO=10,
+          VerifyExists_PT=500, VerifyExists_TO=10,
+          VerifyHasFocus_PT=500, VerifyHasFocus_TO=10
           )
   public SeAnyChildWindow Email = new SeInputText( "$L1$//*[@name=\"email\"]", this.getLOCATOR() ) ;
 
   @OKW( FN = "Password",
-          VerifyLabel_PT=500, VerifyLabel_TO=1,
-          VerifyIsActive_PT=500, VerifyIsActive_TO=1,
-          VerifyValue_PT=500, VerifyValue_TO=1,
-          VerifyTooltip_PT=500, VerifyTooltip_TO=1,
-          VerifyCaption_PT=500, VerifyCaption_TO=1,
-          VerifyExists_PT=500, VerifyExists_TO=1,
-          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
+          VerifyLabel_PT=500, VerifyLabel_TO=10,
+          VerifyIsActive_PT=500, VerifyIsActive_TO=10,
+          VerifyValue_PT=500, VerifyValue_TO=10,
+          VerifyTooltip_PT=500, VerifyTooltip_TO=10,
+          VerifyCaption_PT=500, VerifyCaption_TO=10,
+          VerifyExists_PT=500, VerifyExists_TO=10,
+          VerifyHasFocus_PT=500, VerifyHasFocus_TO=10
           )
   public SeAnyChildWindow Password = new SeInputText( "$L1$//*[@name=\"password\"]", this.getLOCATOR() ) ;
 
   @OKW( FN = "Log In",
-          VerifyLabel_PT=500, VerifyLabel_TO=1,
-          VerifyIsActive_PT=500, VerifyIsActive_TO=1,
-          VerifyValue_PT=500, VerifyValue_TO=1,
-          VerifyTooltip_PT=500, VerifyTooltip_TO=1,
-          VerifyCaption_PT=500, VerifyCaption_TO=1,
-          VerifyExists_PT=500, VerifyExists_TO=1,
-          VerifyHasFocus_PT=500, VerifyHasFocus_TO=1
+          VerifyLabel_PT=500, VerifyLabel_TO=10,
+          VerifyIsActive_PT=500, VerifyIsActive_TO=10,
+          VerifyValue_PT=500, VerifyValue_TO=10,
+          VerifyTooltip_PT=500, VerifyTooltip_TO=10,
+          VerifyCaption_PT=500, VerifyCaption_TO=10,
+          VerifyExists_PT=500, VerifyExists_TO=10,
+          VerifyHasFocus_PT=500, VerifyHasFocus_TO=10
           )
   public SeAnyChildWindow LogIn = new SeButton( "$L1$//*[@name=\"submit\"]", this.getLOCATOR() ) ;
   

@@ -40,6 +40,8 @@ package okw.gui.adapter.selenium;
 
 import java.util.ArrayList;
 
+import org.apache.commons.lang3.StringUtils;
+
 import okw.exceptions.OKWFrameObjectMethodNotImplemented;
 import okw.gui.OKWLocatorBase;
 
@@ -124,7 +126,8 @@ public class SeImage extends SeAnyChildWindow
 	/**
 	 *  Der Wert eines img ist der Wert des Attributtes `src`.
 	 * 
-	 *  @return
+	 *  @return Normalisierter Wert des Attributes SRC
+	 *  
 	 *  @author Zoltán Hrabovszki
 	 *  \date 2017-06-18
 	 */
@@ -137,11 +140,10 @@ public class SeImage extends SeAnyChildWindow
 		{
 			this.LogFunctionStartDebug( "getValue" );
 
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
+			String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "src" ); } );
 
-			// Get Value from TextField and put this into the return ArrayList<String>
-			lvLsReturn.add( this.Me().getAttribute( "src" ) );
+			// Wert des Attributes "src" wird als Wert zurückgegeben
+			lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
 		}
 		finally
 		{
@@ -155,6 +157,7 @@ public class SeImage extends SeAnyChildWindow
 	 *  Ermittelt den textuellen Inhalt der \ref refCaption. Für ein img-Tags ist die \ref refCaption das Attribut "alt".
 	 *   
 	 *  @return Rückgabe des Textuellen Inhaltes der \ref refCaption.
+	 *  
 	 *  \~english
 	 *  Returns the textual content of the \ref refCaption. For an img tag the \ref refCaption is the attribute "alt".
 	 *  
@@ -170,13 +173,12 @@ public class SeImage extends SeAnyChildWindow
 
 		try
 		{
-			this.LogFunctionStartDebug( "GetCaption" );
+			this.LogFunctionStartDebug( "getCaption" );
 
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
+			String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "alt" ); } );
 
-			// The Attribute "value" wird als Beschriftung angezeigt...
-			lvLsReturn.add( this.Me().getAttribute( "alt" ) );
+			// Attributes "alt" is displayed as caption when the image is missing, and therefore is supplied as caption...
+			lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
 		}
 		finally
 		{
@@ -189,7 +191,7 @@ public class SeImage extends SeAnyChildWindow
 	public void SetFocus( ) // throws Exception
 	{
 		// TODO: /todo Meldung in xml-Auslagern
-		// throw new OKWFrameObjectMethodNotImplemented("The method 'public void SetFocus( ) throws Exception' is not defined for your GUI-Object. Please define first the methode!");
+	   throw new OKWFrameObjectMethodNotImplemented("The method 'public void SetFocus( ) throws Exception' is not defined for your GUI-Object. Please define first the methode!");
 	}
 
 

@@ -72,7 +72,7 @@ import okw.log.Logger_Sngltn;
  */
 public class OKW_Memorize_Sngltn
 {
-	 /**  \~german
+	/**  \~german
 	 *  Variable hält Pfad und Dateinamen der OKW_Memorize.xml.
 	 * 
 	 *  \~english
@@ -82,7 +82,7 @@ public class OKW_Memorize_Sngltn
 	 */
 	public String OKW_Memorize_xml	= "";
 
-	 /**  \~german
+	/**  \~german
 	 *  Dictionary speichert die Schlüssel-Wert Paare.
 	 *  
 	 *  Die Hier gespeicherten werte sind nicht persistent.
@@ -95,22 +95,22 @@ public class OKW_Memorize_Sngltn
 	 */
 	protected Map<String, String> Value = new HashMap<String, String>();
 
-    /**  \~german
-    *  Dictionary speichert Schlüssel-Wert Paare.
-    *  
-    *  Die Hier gespeicherten werte sind persistent.
-    *  Die Werte werden aus/in die Datei gespeichert
-    *  der Datei
-    * 
-    *  \~english
-    *  \brief
-    *  \~
-    *  \author Zoltán Hrabovszki
-    *  \date 2019.11.25
-    */
-   protected Map<String, String> ValuePersistent = new HashMap<String, String>();
+	/**  \~german
+	 *  Dictionary speichert Schlüssel-Wert Paare.
+	 *  
+	 *  Die Hier gespeicherten werte sind persistent.
+	 *  Die Werte werden aus/in die Datei gespeichert
+	 *  der Datei
+	 * 
+	 *  \~english
+	 *  \brief
+	 *  \~
+	 *  \author Zoltán Hrabovszki
+	 *  \date 2019.11.25
+	 */
+	protected Map<String, String> ValuePersistent = new HashMap<String, String>();
 
-	
+
 	/**  \~german
 	 *  Singelton spezifisch: Dieses Feld speichert die einzige Instanz dieser
 	 *  Klasse.
@@ -128,7 +128,7 @@ public class OKW_Memorize_Sngltn
 	 */
 	protected static OKW_Memorize_Sngltn	Instance;
 
-	
+
 	/** \~german
 	 *  Eine lokale Instanz des OKW.Log.LogMssenger.
 	 * 
@@ -139,7 +139,7 @@ public class OKW_Memorize_Sngltn
 	 */
 	protected LogMessenger LM	= null;
 
-	 /**  \~german
+	/**  \~german
 	 *  Referenz auf die einzige Instanz des Klasse OKW.Logger.
 	 * 
 	 *  \~english
@@ -150,8 +150,8 @@ public class OKW_Memorize_Sngltn
 	protected Logger_Sngltn Log = Logger_Sngltn.getInstance();
 
 	protected OKW_Properties Properties  = OKW_Properties.getInstance();
-	
-	 /**  \~german
+
+	/**  \~german
 	 *  Privater Konstruktor dieser Klasse.
 	 * 
 	 *  @note Der Konstruktor _muss private_ da Singelton.
@@ -210,7 +210,7 @@ public class OKW_Memorize_Sngltn
 				}
 			}
 		}
-		
+
 		return Instance;
 	}
 
@@ -256,7 +256,7 @@ public class OKW_Memorize_Sngltn
 		}
 		else
 		{
-	        lvbReturn = false;
+			lvbReturn = false;
 		}
 
 		Log.LogFunctionEndDebug(lvbReturn);
@@ -266,7 +266,7 @@ public class OKW_Memorize_Sngltn
 
 	/** \~german
 	 *
-	 *  Holt den Aktuellen Wert eines Schlüssels.
+	 *  Holt den aktuellen Wert des gegebennen Schlüssels.
 	 * 
 	 *  Kernfunktion dieser Klasse. Holt zum gegeben Schlüssel _fpsKey_ den
 	 *  aktuellwert aus OKW_Memmorize._Value.
@@ -307,6 +307,31 @@ public class OKW_Memorize_Sngltn
 		return lvsReturn;
 	}
 
+	/** \~german
+	 *
+	 *  Holt die aktuelle Anzahl der gespeicherten Werte.
+	 * 
+	 *  \~english
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2014.12.27
+	 */
+	public Integer getKeysCount( )
+	{
+		Integer lvnReturn = 0;
+
+		Log.LogFunctionStartDebug(Instance.getClass().getName() + ".getKeysCount");
+
+		lvnReturn = Value.size();
+		lvnReturn = lvnReturn + this.ValuePersistent.size();
+		
+		Log.LogFunctionEndDebug( lvnReturn.toString() );
+		
+
+		return lvnReturn;
+	}
+
+
 	/**  \~german
 	 *  Initialsiert die Klasse OKW.OKW_Memorize
 	 * 
@@ -344,9 +369,9 @@ public class OKW_Memorize_Sngltn
 		Log.LogFunctionStartDebug(this.getClass().getName() + ".Init");
 
 		// Klassen Variablen erst löschen...
-		
-	    Instance.OKW_Memorize_xml = "";
-        Instance.Value.clear();
+
+		Instance.OKW_Memorize_xml = "";
+		Instance.Value.clear();
 
 		// ... und dann alles Initialisieren!
 		// 1. Setze Pfad und
@@ -381,27 +406,27 @@ public class OKW_Memorize_Sngltn
 	 *  System.Xml.XmlSerializer deserialisiert.
 	 * 
 	 *  \~english
-     *  \~
+	 *  \~
 	 *  @author Zoltán Hrabovszki
 	 *  \date 2013.11.28
 	 */
-		public void load()
+	public void load()
+	{
+		Log.LogFunctionStartDebug(Instance.getClass().getName() + "load()");
+
+		try
 		{
-			Log.LogFunctionStartDebug(Instance.getClass().getName() + "load()");
-	
-			try
-			{
-				//OKW_XmlReader myXMLReader = new OKW_XmlReader("xml/OKW_Memorize.xml");			
-			}
-			catch(Exception e)
-			{
-				Log.LogPrintDebug(e.getMessage());
-			}
-			finally
-			{
-				Log.LogFunctionEndDebug();
-			}
+			//OKW_XmlReader myXMLReader = new OKW_XmlReader("xml/OKW_Memorize.xml");			
 		}
+		catch(Exception e)
+		{
+			Log.LogPrintDebug(e.getMessage());
+		}
+		finally
+		{
+			Log.LogFunctionEndDebug();
+		}
+	}
 
 	/** \~german
 	 *  Schreibt die Felder (fields) der Klasse OKW_Memorize in eine Datei.
@@ -424,10 +449,10 @@ public class OKW_Memorize_Sngltn
 
 		try
 		{
-		    // Hint: The Name of Property with the Path nad Filename of the Properties-file
-		    // to be loaded is "OKW_Memorize.properties"
-		    Properties.getProperty( "OKW_Memorize.properties", "OKW_Memorize.properties" );
-		    
+			// Hint: The Name of Property with the Path nad Filename of the Properties-file
+			// to be loaded is "OKW_Memorize.properties"
+			Properties.getProperty( "OKW_Memorize.properties", "OKW_Memorize.properties" );
+
 		}
 		finally
 		{
@@ -438,13 +463,13 @@ public class OKW_Memorize_Sngltn
 	/** \~german
 	 * Setzt/Merkt sich das MemKey/Value-Paar.
 	 * 
-     * @param fpsKey MemKey - Schlüssel für den Zugriff auf den Wert.
-     * @param fpsValue Wert, der gemerkt werden soll.
-     * @throws XPathExpressionException 
+	 * @param fpsKey MemKey - Schlüssel für den Zugriff auf den Wert.
+	 * @param fpsValue Wert, der gemerkt werden soll.
+	 * @throws XPathExpressionException 
 	 *  \~english
 	 * @param fpsKey
-     * @param fpsValue
-     * @throws XPathExpressionException
+	 * @param fpsValue
+	 * @throws XPathExpressionException
 	 *  \~
 	 *  \author Zoltán Hrabovszki
 	 *  \date 2014.12.27
@@ -462,13 +487,13 @@ public class OKW_Memorize_Sngltn
 				String lvsOverwriteKey = LM.GetMessage("Set", "OverwriteKey", fpsKey);
 				String lvsOldValue = LM.GetMessage("Set", "OldValue", Value.get(fpsKey));
 				String lvsNewValue = LM.GetMessage("Set", "NewValue", fpsValue);
-				
+
 				if (!lvsOldValue.equals( lvsNewValue ))
 				{
-				    Log.ResOpenList(lvsOverwriteKey);
-				    Log.LogPrint(lvsOldValue);
-				    Log.LogPrint(lvsNewValue);
-				    Log.ResCloseList();
+					Log.ResOpenList(lvsOverwriteKey);
+					Log.LogPrint(lvsOldValue);
+					Log.LogPrint(lvsNewValue);
+					Log.ResCloseList();
 				}
 				Instance.Value.put(fpsKey, fpsValue);
 			}

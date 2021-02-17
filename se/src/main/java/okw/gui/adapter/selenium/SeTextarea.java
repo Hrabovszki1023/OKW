@@ -82,12 +82,8 @@ public class SeTextarea extends SeAnyChildWindow {
 		try {
 			this.LogFunctionStartDebug("getMaxLength");
 
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit
-			// OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
-
-			// The Attribute "MaxLength" auslesen...
-			String lvsMaxLength = this.Me().getAttribute("maxlength");
+            // The Attribute "MaxLength" auslesen...
+	        String lvsMaxLength = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "maxlength" );} );
 
 			if (!okw.OKW_Helper.isStringNullOrEmpty(lvsMaxLength)) {
 				lviReturn = Integer.parseInt(lvsMaxLength);
@@ -114,12 +110,8 @@ public class SeTextarea extends SeAnyChildWindow {
 		try {
 			this.LogFunctionStartDebug("getMinLength");
 
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit
-			// OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
-
-			// The Attribute "MaxLength" auslesen...
-			String lvsMaxLength = this.Me().getAttribute("minlength");
+            // The Attribute "MaxLength" auslesen...
+	        String lvsMaxLength = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "minlength" );} );
 
 			if (!okw.OKW_Helper.isStringNullOrEmpty(lvsMaxLength)) {
 				lviReturn = Integer.parseInt(lvsMaxLength);
@@ -154,16 +146,15 @@ public class SeTextarea extends SeAnyChildWindow {
 		try {
 			this.LogFunctionStartDebug("getPlaceholder");
 
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit
-			// OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
+            // The Attribute "placeholder" wird als Beschriftung angezeigt...
+            String myAttribute = this.WaitForInteractionReturnString( () -> {return this.Me().getAttribute( "placeholder" );} );
 
-			// The Attribute "placeholder" wird als Beschriftung angezeigt...
-			String myAttribute = this.Me().getAttribute("placeholder");
-			myAttribute = StringUtils.normalizeSpace(myAttribute);
+            myAttribute = StringUtils.normalizeSpace(myAttribute);
 
 			lvLsReturn.add(myAttribute);
-		} finally {
+		} 
+		finally 
+		{
 			this.LogFunctionEndDebug(lvLsReturn);
 		}
 

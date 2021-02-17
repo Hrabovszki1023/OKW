@@ -73,7 +73,7 @@ public class SeImage_EN_Test extends OKWTestBase
       EN.TypeKey( "URL", "http://test.openkeyword.de/Image/img.htm" );
 
       EN.SelectWindow( "Image" );
-      EN.SetValue( "Display", "${EMPTY}" );
+      EN.SetValue( "Display", "${DELETE}" );
       
       EN.ClickOn( "Image 1" );
       EN.VerifyValue( "Display", "Image 1" );

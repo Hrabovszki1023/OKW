@@ -1,6 +1,6 @@
 /*
  ==============================================================================
- Copyright © 2012 - 2020, 2016 IT-Beratung Hrabovszki
+ Copyright © 2012 - 2020 IT-Beratung Hrabovszki
  ============================================================================== 
 
  This file is part of OpenKeyWord.
@@ -126,7 +126,7 @@ public abstract class SeOKWChildWindowBaseTest extends OKWTestBase
 	}
 
 	/** 
-	 *  Teste das Schlüsselwort VerifyExists( CAT, DELETE ).
+	 *  Teste das Schlüsselwort MemorizeExists( CAT, DELETE ).
 	 */
 	@Test
 	public void tcMemorizeExists_DELETE( ) throws Exception
@@ -135,7 +135,7 @@ public abstract class SeOKWChildWindowBaseTest extends OKWTestBase
 	}
 
 	/** 
-	 *  Teste das Schlüsselwort VerifyExists( CAT, EMPTY ).
+	 *  Teste das Schlüsselwort MemorizeExists( CAT, EMPTY ).
 	 */
 	@Test
 	public void tcMemorizeExists_EMPTY( ) throws Exception
@@ -144,7 +144,7 @@ public abstract class SeOKWChildWindowBaseTest extends OKWTestBase
 	}
 
 	/** 
-	 *  Teste das Schlüsselwort VerifyExists( CAT, "IGNORE" ).
+	 *  Teste das Schlüsselwort MemorizeExists( CAT, IGNORE ).
 	 */
 	@Test
 	public void tcMemorizeExists_IGNORE( ) throws Exception

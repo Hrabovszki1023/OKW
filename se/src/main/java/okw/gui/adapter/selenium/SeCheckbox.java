@@ -134,8 +134,6 @@ public class SeCheckbox extends SeAnyChildWindow
 	 *  
 	 *  Alle Methoden dieser Klasse verwenden diese Methode um den aktuellen Zustand zu ermitteln.
 	 *  
-	 *  \note WaitForMe() wird inder aufrufenden Methode ausgeführt.
-	 *  
 	 *  @return true falls angehakt, sonst false
 	 *  
 	 *  \~english
@@ -153,7 +151,8 @@ public class SeCheckbox extends SeAnyChildWindow
 			LogFunctionStartDebug("getIsSelected");
 
 			// Hole Zusand: "Häkschen" oder kein "Häkschen", das ist hier die Frage...
-			lvbReturn = this.Me().isSelected();
+			lvbReturn = this.WaitForInteractionReturnBoolean( () -> { return this.Me().isSelected(); } );
+
 		}
 		finally
 		{
@@ -165,10 +164,10 @@ public class SeCheckbox extends SeAnyChildWindow
 
 	/**
 	 * \~german
-	 *  Method verlässt die Checkbox immer angehakt, egal ob diese vorher angehakt war oder nicht.
-	 *  
+	 *  Diese Method verlässt die Checkbox immer angehakt, egal ob diese vorher angehakt war oder nicht.
 	 *  
 	 *  \~english
+	 *  This Method always leaves the checkbox checked, regardless of whether it was previously checked or not.
 	 *  
 	 *  \~
 	 *  @author Zoltan Hrabovszki
@@ -216,11 +215,6 @@ public class SeCheckbox extends SeAnyChildWindow
 		try
 		{
 			this.LogFunctionStartDebug("getValue");
-
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
-			
-			
 
 			if (this.getIsSelected())
 			{

@@ -424,7 +424,7 @@ public class SeRadioList extends SeAnyChildWindow
             WebElement label = SeDriver.getInstance().getDriver().findElement( By.xpath( this.getLocator() + "//legend" ) );
             
             // The Attribute "textContent" wird als Beschriftung angezeigt...
-            String myAttribute = label.getAttribute( "textContent" );
+            String myAttribute = WaitForInteractionReturnString(() -> { return label.getAttribute( "textContent" );} );
             myAttribute = StringUtils.normalizeSpace( myAttribute );
             
             lvLsReturn.add( myAttribute );

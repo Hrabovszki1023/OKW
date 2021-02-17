@@ -152,15 +152,11 @@ public class SeInputButton extends SeAnyChildWindow
         {
             this.LogFunctionStartDebug( "GetCaption" );
 
-            // Warten auf das Objekt. Wenn es nicht existiert mit Exception
-            // beenden...
-            this.WaitForMe();
-            
             // The Attribute "value" wird als Beschriftung angezeigt...
-            String myAttribute = this.Me().getAttribute( "value" );
-            myAttribute = StringUtils.normalizeSpace( myAttribute );
-            
-            lvLsReturn.add( myAttribute );
+			String myAttribute = this.WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "value" ); } );
+
+			// Wert des Attributes "src" wird als Wert zurückgegeben
+			lvLsReturn.add( StringUtils.normalizeSpace( myAttribute ) );
         }
         finally
         {
@@ -184,7 +180,6 @@ public class SeInputButton extends SeAnyChildWindow
     @Override
     public ArrayList<String> getValue()
     {
-        // ArrayList<String> lvLsReturn = new ArrayList<String>();
         try
         {
             LogFunctionStartDebug( "GetValue" );

@@ -203,15 +203,13 @@ public class SeRadio extends SeAnyChildWindow
 	{
 		Boolean lvbReturn = false;
 
-		LogFunctionStartDebug( "IsSelected" );
 
 		try
 		{
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
+			LogFunctionStartDebug( "getIsSelected" );
 
 			// Hole Zusand: Häckchen oder kein Häckchen, das ist hier die Frage?
-			lvbReturn = this.Me().isSelected();
+			lvbReturn = this.WaitForInteractionReturnBoolean( () -> { return this.Me().isSelected(); } );
 		}
 		finally
 		{
@@ -251,9 +249,11 @@ public class SeRadio extends SeAnyChildWindow
 				lvLsReturn.addAll( super.getLabel() );
 			}
 			catch( NoSuchElementException e )
-			{   // No, label is defined, then get the "textContent" of WebElement
-	            String myAttribute = this.Me().getAttribute( "textContent" );
+			{   
+				// No, label is defined, then get the "textContent" of WebElement is the "Caption"
+	            String myAttribute = WaitForInteractionReturnString( () -> { return this.Me().getAttribute( "textContent" ); } );
 	            myAttribute = StringUtils.normalizeSpace( myAttribute );
+	            
 	            lvLsReturn.add( myAttribute );
 			}			            
 		}
@@ -268,7 +268,7 @@ public class SeRadio extends SeAnyChildWindow
 
 	/** \~german
 	 *  \brief
-	 *  Ermittelt den textuellen Inhalt des Labels, SeRadio hat jedoch kein Label.
+	 *  Ermittelt den textuellen Inhalt des Labels, SeRadio hat Jedoch kein Label.
 	 *   
 	 *  @return Rückgabe des Textuellen Inhaltes der Caption/Überschrift.
 	 *  \~english
@@ -281,7 +281,7 @@ public class SeRadio extends SeAnyChildWindow
 	{
 		try
 		{
-			this.LogFunctionStartDebug("getCaption");
+			this.LogFunctionStartDebug("getLabel");
 			// String lvsLM = this.LM.GetMessage("Common", "OKWGUIObjectNotFoundException", "GetCaption()");
 			throw new OKWFrameObjectMethodNotImplemented("Radiobutton/SeRadion has no label! - See Caption...");
 		}
@@ -308,27 +308,9 @@ public class SeRadio extends SeAnyChildWindow
 		try
 		{
 			this.LogFunctionStartDebug( "SetValue" );
+			
+			this.Select(Values);
 
-			// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-			this.WaitForMe();
-
-			String Value = Values.get(0);
-			String myCHECKED = OKW_Const_Sngltn.getInstance().GetConst4Internalname("CHECKED");
-			String myUNCHECKED = OKW_Const_Sngltn.getInstance().GetConst4Internalname("UNCHECKED");
-
-			if ( Value.equals(myCHECKED) )
-			{
-				this.ClickOn();
-			}
-			else if ( Value.equals(myUNCHECKED) )
-			{
-				throw new OKWNotAllowedValueException("RadioButton is not UNCHECKE-able!");
-			}
-			else
-			{
-				String lvsLM = LM.GetMessage("Common", "OKWNotAllowedValueException", Value);
-				throw new OKWNotAllowedValueException(lvsLM);
-			}
 		}
 		finally
 		{
@@ -338,12 +320,12 @@ public class SeRadio extends SeAnyChildWindow
 
 		/**
 		 * \~german
-		 *  Ein SeInputButton IstkeinMenüobject! -> OKWFrameObjectMethodNotImplemented
-		 *  auslösen!
+		 * 
+		 * Hinweis: Auf die Existenz des GUI-Objekte wird in der MethodeClickon gewartet!
 		 *
 		 * \~english
-		 *  A SeInputButton has no value! -> Trigger
-		 *  OKWFrameObjectMethodNotImplemented!
+		 * 
+		 *  Note: The existence of the GUI object is waited for in the Clickon method!
 		 * \~
 		 * @author Zoltán Hrabovszki
 		 * \date 2016.10.06
@@ -356,9 +338,6 @@ public class SeRadio extends SeAnyChildWindow
 			{
 				this.LogFunctionStartDebug( "SetValue" );
 
-				// Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-				this.WaitForMe();
-
 				String Value = Values.get(0);
 				String myCHECKED = OKW_Const_Sngltn.getInstance().GetConst4Internalname("CHECKED");
 				String myUNCHECKED = OKW_Const_Sngltn.getInstance().GetConst4Internalname("UNCHECKED");
@@ -369,7 +348,7 @@ public class SeRadio extends SeAnyChildWindow
 				}
 				else if ( Value.equals(myUNCHECKED) )
 				{
-					throw new OKWNotAllowedValueException("RadioButton is not UNCHECKE-able!");
+					throw new OKWNotAllowedValueException("RadioButton is not UNCHECK-able!");
 				}
 				else
 				{
