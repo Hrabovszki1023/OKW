@@ -130,7 +130,7 @@ public class OKW_Const_Sngltn
     /**
      *  \copydoc CurrentObject::Log()
      */
-    private static Logger_Sngltn    Log       = Logger_Sngltn.getInstance();
+    // private static Logger_Sngltn    Log       = Logger_Sngltn.getInstance();
 
     private static OKW_Const_Sngltn Instance;
 
@@ -314,7 +314,7 @@ public class OKW_Const_Sngltn
 
         try
         {
-            Log.LogFunctionStartDebug( this.getClass().getName() + ".Boolean2YesNo", "fpbTrueOrFalse", fpbTrueOrFalse.toString() );
+            // Log.LogFunctionStartDebug( this.getClass().getName() + ".Boolean2YesNo", "fpbTrueOrFalse", fpbTrueOrFalse.toString() );
 
             if ( fpbTrueOrFalse )
             {
@@ -329,7 +329,7 @@ public class OKW_Const_Sngltn
         }
         finally
         {
-            Log.LogFunctionEndDebug( lvs_Return );
+            // Log.LogFunctionEndDebug( lvs_Return );
         }
 
         return lvs_Return;
@@ -367,7 +367,7 @@ public class OKW_Const_Sngltn
      */
     public String ConcatHSEP( ArrayList<String> fpLs_ListString2Concat ) throws XPathExpressionException
     {
-        Log.LogFunctionStartDebug( this.getClass().getName() + ".ConcatHSEP", "fpLs_ListString2Concat", fpLs_ListString2Concat.toString() );
+        // Log.LogFunctionStartDebug( this.getClass().getName() + ".ConcatHSEP", "fpLs_ListString2Concat", fpLs_ListString2Concat.toString() );
 
         String lvs_Return = "";
 
@@ -377,7 +377,7 @@ public class OKW_Const_Sngltn
         }
         finally
         {
-            Log.LogFunctionEndDebug( lvs_Return );
+            // Log.LogFunctionEndDebug( lvs_Return );
         }
 
         return lvs_Return;
@@ -415,7 +415,7 @@ public class OKW_Const_Sngltn
      */
     public String ConcatSEP( ArrayList<String> fpLs_ListString2Concat ) throws XPathExpressionException
     {
-        Log.LogFunctionStartDebug( this.getClass().getName() + ".ConcatSEP", "fpLs_ListString2Concat", fpLs_ListString2Concat.toString() );
+        // Log.LogFunctionStartDebug( this.getClass().getName() + ".ConcatSEP", "fpLs_ListString2Concat", fpLs_ListString2Concat.toString() );
 
         String lvs_Return = "";
 
@@ -425,7 +425,7 @@ public class OKW_Const_Sngltn
         }
         finally
         {
-            Log.LogFunctionEndDebug( lvs_Return );
+            // Log.LogFunctionEndDebug( lvs_Return );
         }
 
         return lvs_Return;
@@ -463,7 +463,7 @@ public class OKW_Const_Sngltn
      */
     public String ConcatVSEP( ArrayList<String> fpLs_ListString2Concat ) throws XPathExpressionException
     {
-        Log.LogFunctionStartDebug( this.getClass().getName() + ".ConcatVSEP", "fpLs_ListString2Concat", fpLs_ListString2Concat.toString() );
+        //Log.LogFunctionStartDebug( this.getClass().getName() + ".ConcatVSEP", "fpLs_ListString2Concat", fpLs_ListString2Concat.toString() );
 
         String lvs_Return = "";
 
@@ -473,7 +473,7 @@ public class OKW_Const_Sngltn
         }
         finally
         {
-            Log.LogFunctionEndDebug( lvs_Return );
+            // Log.LogFunctionEndDebug( lvs_Return );
         }
 
         return lvs_Return;
@@ -523,7 +523,7 @@ public class OKW_Const_Sngltn
     */
     public String GetConst4Internalname( String fpsInternalname )
     {
-        Log.LogFunctionStartDebug( this.getClass().getName() + ".ReadConst", "fpsInternalname", fpsInternalname );
+        //Log.LogFunctionStartDebug( this.getClass().getName() + ".ReadConst", "fpsInternalname", fpsInternalname );
 
         String lvsReturn = "";
 
@@ -532,7 +532,7 @@ public class OKW_Const_Sngltn
 
             String myXPathExpression = "//okwconst[@internalname='" + fpsInternalname + "']/name/" + CL.getLanguage();
 
-            Log.LogPrintDebug( "XPath: >>" + myXPathExpression + "<<" );
+            // Log.LogPrintDebug( "XPath: >>" + myXPathExpression + "<<" );
 
             lvsReturn = myXmlReader.getTextContentSingleValue( myXPathExpression );
         }
@@ -542,7 +542,7 @@ public class OKW_Const_Sngltn
         }
         finally
         {
-            Log.LogFunctionEndDebug( lvsReturn );
+            // Log.LogFunctionEndDebug( lvsReturn );
         }
 
         return lvsReturn;
@@ -609,7 +609,7 @@ public class OKW_Const_Sngltn
     {
         String lvsReturn = null;
 
-        Log.LogFunctionStartDebug( this.getClass().getName() + ".GetOKWConst4Internalname", "fpsInternalname", fpsInternalname );
+        // Log.LogFunctionStartDebug( this.getClass().getName() + ".GetOKWConst4Internalname", "fpsInternalname", fpsInternalname );
 
         try
         {
@@ -617,7 +617,7 @@ public class OKW_Const_Sngltn
         }
         finally
         {
-            Log.LogFunctionEndDebug( lvsReturn );
+            // Log.LogFunctionEndDebug( lvsReturn );
         }
 
         return lvsReturn;
@@ -669,7 +669,7 @@ public class OKW_Const_Sngltn
     {
         ArrayList<String> lvls_2Plit = new ArrayList<String>();
 
-        Log.LogFunctionStartDebug( this.getClass().getName() + ".SplitHSEP", "fpsString2Split", fpsString2Split );
+        // Log.LogFunctionStartDebug( this.getClass().getName() + ".SplitHSEP", "fpsString2Split", fpsString2Split );
 
         try
         {
@@ -677,7 +677,7 @@ public class OKW_Const_Sngltn
         }
         finally
         {
-            Log.LogFunctionEndDebug( lvls_2Plit.toString() );
+            // Log.LogFunctionEndDebug( lvls_2Plit.toString() );
         }
 
         return lvls_2Plit;
@@ -727,7 +727,7 @@ public class OKW_Const_Sngltn
     public ArrayList<String> SplitSEP( String fpsString2Split ) throws XPathExpressionException
     {
         ArrayList<String> lvls_2Plit = null;
-        Log.LogFunctionStartDebug( this.getClass().getName() + ".SplitSEP", "fpsString2Split", fpsString2Split );
+        // Log.LogFunctionStartDebug( this.getClass().getName() + ".SplitSEP", "fpsString2Split", fpsString2Split );
 
         try
         {
@@ -735,7 +735,7 @@ public class OKW_Const_Sngltn
         }
         finally
         {
-            Log.LogFunctionEndDebug( lvls_2Plit.toString() );
+            // Log.LogFunctionEndDebug( lvls_2Plit.toString() );
         }
 
         return lvls_2Plit;
@@ -788,7 +788,7 @@ public class OKW_Const_Sngltn
     {
         ArrayList<String> lvls_2Plit = new ArrayList<String>();
 
-        Log.LogFunctionStartDebug( this.getClass().getName() + ".SplitHSEP", "fps_String2Split", fps_String2Split );
+        // Log.LogFunctionStartDebug( this.getClass().getName() + ".SplitHSEP", "fps_String2Split", fps_String2Split );
 
         try
         {
@@ -796,7 +796,7 @@ public class OKW_Const_Sngltn
         }
         finally
         {
-            Log.LogFunctionEndDebug( lvls_2Plit.toString() );
+            // Log.LogFunctionEndDebug( lvls_2Plit.toString() );
         }
 
         return lvls_2Plit;
@@ -839,7 +839,7 @@ public class OKW_Const_Sngltn
      */
     public Boolean YesNo2Boolean( String fpsYesOrNo ) throws XPathExpressionException
     {
-        Log.LogFunctionStartDebug( this.getClass().getName() + ".YesNo2Boolean", "fpsYesOrNo", fpsYesOrNo );
+        // Log.LogFunctionStartDebug( this.getClass().getName() + ".YesNo2Boolean", "fpsYesOrNo", fpsYesOrNo );
         Boolean lvb_Return = false;
 
         String lvs_Yes = "";
@@ -860,7 +860,7 @@ public class OKW_Const_Sngltn
             }
             else
             {
-                Log.LogFunctionEndDebug();
+                // Log.LogFunctionEndDebug();
 
                 String lvsMessage = LM.GetMessage( "YesNo2Boolean", "ValueNotAllowed", fpsYesOrNo, lvs_Yes + "'/'" + lvs_No );
                 throw new OKWNotAllowedValueException( lvsMessage );
@@ -868,7 +868,7 @@ public class OKW_Const_Sngltn
         }
         finally
         {
-            Log.LogFunctionEndDebug( lvb_Return );
+            // Log.LogFunctionEndDebug( lvb_Return );
         }
 
         return lvb_Return;

@@ -60,9 +60,12 @@ import okw.OKW_TimeOut;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebElement;
 import org.xml.sax.SAXException;
 
@@ -1695,10 +1698,15 @@ public class SeAnyChildWindow extends AnyChildwindow
 				}
 
 				// Exception handling when the object is not yet ready for interaction....
+				// includes also
+				//  * ElementNotVisibleException
+				//  * ElementClickInterceptedException
+				//  * ElementNotVisibleException
 				catch ( InvalidElementStateException e)
 				{
 					TimeOutException = new RuntimeException( e );
-					LogPrint( "InvalidElementStateException: WebElement is currently not ready for interaction. - wait and retry..." );
+					LogPrint( "InvalidElementStateException: WebElement is currently not ready for interaction. - scroll, wait and retry..." );
+					this.scrollIntoView();
 				}
 
 				// Ausnahme behandel, wenn das Objekt nicht mehr existiert...
@@ -1707,9 +1715,6 @@ public class SeAnyChildWindow extends AnyChildwindow
 					TimeOutException = new RuntimeException( e );
 					LogPrint( "StaleElementReferenceException: Update WebElement reference to the DOM. -  wait and try ..." );
 				}	
-
-				// Ausnahmebehandeln wenn Objekt unsichtbar
-				// this.scrollIntoView();
 
 				try
 				{
@@ -1825,10 +1830,15 @@ public class SeAnyChildWindow extends AnyChildwindow
 				}
 
 				// Exception handling when the object is not yet ready for interaction....
+				// includes also
+				//  * ElementNotVisibleException
+				//  * ElementClickInterceptedException
+				//  * ElementNotVisibleException
 				catch ( InvalidElementStateException e)
 				{
 					TimeOutException = new RuntimeException( e );
-					LogPrint( "InvalidElementStateException: WebElement is currently not ready for interaction. - wait and retry..." );
+					LogPrint( "InvalidElementStateException: WebElement is currently not ready for interaction. - scroll, wait and retry..." );
+					this.scrollIntoView();
 				}
 
 				// Ausnahme behandel, wenn das Objekt nicht mehr existiert...
@@ -1837,9 +1847,6 @@ public class SeAnyChildWindow extends AnyChildwindow
 					TimeOutException = new RuntimeException( e );
 					LogPrint( "StaleElementReferenceException: Update WebElement reference to the DOM. -  wait and retry ..." );
 				}	
-
-				// Ausnahmebehandeln wenn Objekt unsichtbar
-				// this.scrollIntoView();
 
 				try
 				{
@@ -1954,10 +1961,15 @@ public class SeAnyChildWindow extends AnyChildwindow
 				}
 
 				// Exception handling when the object is not yet ready for interaction....
+				// includes also
+				//  * ElementNotVisibleException
+				//  * ElementClickInterceptedException
+				//  * ElementNotVisibleException
 				catch ( InvalidElementStateException e)
 				{
 					TimeOutException = new RuntimeException( e );
-					LogPrint( "InvalidElementStateException: WebElement is currently not ready for interaction. - wait and retry..." );
+					LogPrint( "InvalidElementStateException: WebElement is currently not ready for interaction. - scroll, wait and retry..." );
+					this.scrollIntoView();
 				}
 
 				// Ausnahme behandel, wenn das Objekt nicht mehr existiert...
