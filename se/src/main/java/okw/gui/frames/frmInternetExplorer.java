@@ -124,6 +124,9 @@ public class frmInternetExplorer extends SeBrowserWindow
      */
     public void SelectWindow()
     {
+        LogFunctionStart( "SelectWindow" );
+        LogPrint( "Do nothing here..." );
+        LogFunctionEnd();
     }
 
     /** \~german

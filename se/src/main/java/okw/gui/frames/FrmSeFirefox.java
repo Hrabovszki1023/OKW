@@ -69,6 +69,9 @@ public class FrmSeFirefox extends SeBrowserWindow
     @Override
     public void SelectWindow()
     {
+        LogFunctionStart( "SelectWindow" );
+        LogPrint( "Do nothing here..." );
+        LogFunctionEnd();
     }
 
     /**

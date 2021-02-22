@@ -40,7 +40,6 @@
 package okw.gui.adapter.selenium;
 
 import okw.OKW;
-import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.OKWLocator;
 import okw.gui.adapter.selenium.webdriver.SeALERTACCEPT;
 import okw.gui.adapter.selenium.webdriver.SeALERTDATA;
@@ -92,17 +91,4 @@ public class SeBrowserChild extends SeAnyWindow
     @OKW( FN = "#Alert OK")
     public SeALERTACCEPT ALERTACCEPT = new SeALERTACCEPT();
     
-    
-    @Override
-    public void SelectWindow()
-    {
-        if ( !this.WaitForMe() )
-        {
-            ResOpenList( "GUI-Object not found..." );
-            LogPrint( "Locator: '" + this.getLocator() + "'" );
-            ResCloseList();
-
-            throw new OKWGUIObjectNotFoundException( "BrowserChild not found!" );
-        }
-    }
 }

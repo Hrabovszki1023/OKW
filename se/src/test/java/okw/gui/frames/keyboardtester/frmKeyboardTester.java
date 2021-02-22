@@ -86,11 +86,10 @@ public class frmKeyboardTester extends SeBrowserChild
            {
                this.LogFunctionStartDebug( "getValue" );
 
-               // Warten auf das Objekt. Wenn es nicht existiert wird mit OKWGUIObjectNotFoundException beendet...
-               this.WaitForMe();
-
                // Get Value from TextField and put this into the return ArrayList<String>
-               String ValueRaw = this.Me().getAttribute( "class" );
+               String ValueRaw = this.WaitForInteractionReturnString(() -> this.Me().getAttribute( "class" ) );
+               
+               
                
                System.out.println( "---------------------------------------------" );
                System.out.println( "class=" + ValueRaw );

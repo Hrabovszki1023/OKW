@@ -40,7 +40,6 @@
 package okw.gui.adapter.selenium;
 
 import okw.OKW;
-import okw.exceptions.OKWGUIObjectNotFoundException;
 import okw.gui.adapter.selenium.webdriver.*;
 
 /** 
@@ -88,27 +87,4 @@ public class SeBrowserWindow extends SeAnyWindow
     @OKW( FN = "#Alert OK")
     public SeALERTACCEPT ALERTACCEPT = new SeALERTACCEPT();
     
-    
-    @Override
-    public void SelectWindow()
-    {
-        this.LogFunctionStart( "SelectwWindow" );
-
-        try
-        {
-            if ( !this.WaitForMe() )
-            {
-                this.ResOpenList( "GUI-Object not found..." );
-                this.LogPrint( "Locator: '" + this.getLocator() + "'" );
-                this.ResCloseList();
-
-                throw new OKWGUIObjectNotFoundException( "SeBrowserWindow not found!" );
-            }
-        }
-        finally
-        {
-            this.LogFunctionEnd();
-        }
-        return;
-    }
 }

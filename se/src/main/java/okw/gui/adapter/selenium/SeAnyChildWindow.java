@@ -63,9 +63,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.ElementNotInteractableException;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebElement;
 import org.xml.sax.SAXException;
 
@@ -726,46 +723,6 @@ public class SeAnyChildWindow extends AnyChildwindow
 		me = SeDriver.getInstance().getWebElement( this.getLocator() );
 
 		return me;
-	}
-
-
-	/** \~german
-	 *  Verschiebt das aktuelle Element in den sichtbaren Bereich.
-	 *  
-	 *  @return Refernz auf das gefunde DOM-Element
-	 *  \~
-	 *  @author Zoltán Hrabovszki
-	 *  \date 2020.10.02
-	 */
-	public Boolean scrollIntoView()
-	{
-		Boolean lvbReturn = false;
-
-		if (!Me().isDisplayed())
-		{
-			this.LogPrint("Objekt ist nicht sichtbar: Scrollen...");
-
-			((JavascriptExecutor) SeDriver.getInstance().getDriver())
-			.executeScript("arguments[0].scrollIntoView({block:'nearest'})", Me());
-
-			try
-			{
-				this.LogPrint(" und warte 1s...");
-				Thread.sleep(2000);
-				lvbReturn = true;
-			}
-			catch (InterruptedException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		else
-		{
-			this.LogPrint("Objekt ist sichtbar.");
-		}
-
-		return lvbReturn;
 	}
 
 
@@ -1642,6 +1599,45 @@ public class SeAnyChildWindow extends AnyChildwindow
 
 
 	/** \~german
+	 *  Verschiebt das aktuelle Element in den sichtbaren Bereich.
+	 *  
+	 *  @return true, wenn erfolgreich sonst false
+	 *  
+	 * \~english
+	 *  Moves the current element into the visible area.
+	 *  
+	 *  @return true if successful, false otherwise
+	 *  \~
+	 *  @author Zoltán Hrabovszki
+	 *  \date 2020.10.02
+	 */
+	public Boolean scrollIntoView()
+	{
+		Boolean lvbReturn = false;
+
+			this.LogPrint("Scrolling the object into the visible area...");
+
+			((JavascriptExecutor) SeDriver.getInstance().getDriver())
+			.executeScript("arguments[0].scrollIntoView({block:'nearest'})", Me());
+
+			try
+			{
+				this.LogPrint("... und warte 1s.");
+				// TODO: ScrollWait in Properties auslagern.
+				Thread.sleep(1000);
+				lvbReturn = true;
+			}
+			catch (InterruptedException e)
+			{
+				this.LogWarning("Unexpected exception InterruptedException during ScrollWait, we ignore that..." );
+				e.printStackTrace();
+			}
+
+		return lvbReturn;
+	}
+	
+	
+	/** \~german
 	 *  Methode versucht die gegebene Interaktion Method2Call gegen das aktuelle GUI-Objekt auszuführen und warten ggf. 
 	 *  
 	 *  Es wird WaitForMe_TO gewartet und während dieser Zeit alle WaitForMe_PT versucht die Interaktion zu wiederholen.
@@ -1693,7 +1689,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 				
 				catch ( OKWGUIObjectNotFoundException e)
 				{
-					TimeOutException = new RuntimeException( e );
+					TimeOutException = e;
 					LogPrint( "OKWGUIObjectNotFoundException: WebElement currently does not not exist. - wait and retry..." );
 				}
 
@@ -1825,7 +1821,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 				
 				catch ( OKWGUIObjectNotFoundException e)
 				{
-					TimeOutException = new RuntimeException( e );
+					TimeOutException = e;
 					LogPrint( "OKWGUIObjectNotFoundException: WebElement currently does not not exist. - wait and retry..." );
 				}
 
@@ -1956,7 +1952,7 @@ public class SeAnyChildWindow extends AnyChildwindow
 				
 				catch ( OKWGUIObjectNotFoundException e)
 				{
-					TimeOutException = new RuntimeException( e );
+					TimeOutException = e;
 					LogPrint( "OKWGUIObjectNotFoundException: WebElement currently does not not exist. - wait and retry..." );
 				}
 

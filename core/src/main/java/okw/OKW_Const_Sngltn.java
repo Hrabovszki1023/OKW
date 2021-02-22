@@ -46,7 +46,6 @@ import javax.xml.xpath.XPathExpressionException;
 import okw.exceptions.OKWConst4InternalnameNotFoundException;
 import okw.exceptions.OKWMessageNotFoundException;
 import okw.exceptions.OKWNotAllowedValueException;
-import okw.log.Logger_Sngltn;
 
 /** \~german
  *  OKW_Const verwaltet die sprachabhängigen OKW-Konstanten.

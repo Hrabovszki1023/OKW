@@ -969,7 +969,7 @@ public class SeCheckbox_EN_Test extends OKWTestBase
 
                 EN.SelectWindow("SeCheckBox");
 
-                EN.Select( "NotExists", "abc");
+                EN.Select( "NotExists", "CHECKED");
                 
                 Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
                 {
@@ -986,7 +986,7 @@ public class SeCheckbox_EN_Test extends OKWTestBase
 
                 EN.SelectWindow("SeCheckBox");
 
-                EN.TypeKey( "NotExists", "abc");
+                EN.TypeKey( "NotExists", " ");
                 
                 Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
                 {
@@ -1003,7 +1003,7 @@ public class SeCheckbox_EN_Test extends OKWTestBase
 
                 EN.SelectWindow("SeCheckBox");
 
-                EN.SetValue( "NotExists", "abc");
+                EN.SetValue( "NotExists", "CHECKED");
                 
                 Assertions.assertThrows( OKWGUIObjectNotFoundException.class, () ->
                 {
